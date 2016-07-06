@@ -8,6 +8,8 @@
 #include <sstream>
 #include <iostream>
 #include <limits>
+#include <climits>
+#include <cfloat>
 #include <cmath>
 #include <map>
 #include <vector>
@@ -61,17 +63,19 @@ namespace Rivet {
   using std::isnan;
   using std::isinf;
 
-  const double MAXDOUBLE = std::numeric_limits<double>::max();
-  const double MAXINT = std::numeric_limits<int>::max();
+  /// Pre-defined numeric type limits
+  /// @deprecated Prefer the standard DBL/INT_MAX
+  static const double MAXDOUBLE = DBL_MAX; // was std::numeric_limits<double>::max(); -- warns in GCC5
+  static const double MAXINT = INT_MAX; // was std::numeric_limits<int>::max(); -- warns in GCC5
 
   /// A pre-defined value of \f$ \pi \f$.
-  const double PI = M_PI;
+  static const double PI = M_PI;
 
   /// A pre-defined value of \f$ 2\pi \f$.
-  const double TWOPI = 2*M_PI;
+  static const double TWOPI = 2*M_PI;
 
   /// A pre-defined value of \f$ \pi/2 \f$.
-  const double HALFPI = M_PI_2;
+  static const double HALFPI = M_PI_2;
 
   /// Enum for signs of numbers.
   enum Sign { MINUS = -1, ZERO = 0, PLUS = 1 };

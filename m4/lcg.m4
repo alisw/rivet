@@ -15,10 +15,10 @@ AC_DEFUN([AC_LCG_TAG], [
     if `echo $distribution | grep -i "Linux" &> /dev/null`; then os=LINUX; fi
     if test -e "/etc/redhat-release"; then
       distribution="redhat"
-      sltest=`cat /etc/redhat-release | grep "Scientific Linux" 2> /dev/null`
+      sltest=`lsb_release -is | grep "Scientific" 2> /dev/null`
       if test -n "$sltest"; then
         os=SLC
-        sl_version=`cat /etc/redhat-release | cut -f5 -d" "`
+        sl_version=`lsb_release -rs`
         sl_major=`echo $sl_version | cut -f1 -d.`
         distribution="slc${sl_major}"
       fi

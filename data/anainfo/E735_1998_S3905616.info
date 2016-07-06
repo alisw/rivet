@@ -4,7 +4,7 @@ Summary: Charged particle multiplicity in ppbar collisions at $\sqrt{s} = 1.8\;\
 Experiment: E735
 Collider: Tevatron
 SpiresID: 3905616
-Status: UNVALIDATED - need trigger etc.
+Status: VALIDATED
 Authors:
  - Holger Schulz <holger.schulz@physik.hu-berlin.de>
  - Andy Buckley <andy.buckley@cern.ch>
@@ -19,7 +19,9 @@ Beams: [p-, p+]
 Energies: [1800]
 PtCuts: [0]
 Description:
-  A measurement of the charged multiplicity distribution at $\sqrt{s} = 1.8\;\TeV$.
+  A measurement of the charged multiplicity distribution at $\sqrt{s} = 1.8\;\TeV$. The
+  analysis is reproduced to the best of abilities. There is no theory curve in the paper
+  to compare to.
 BibKey: Alexopoulos:1998bi
 BibTeX: '@Article{Alexopoulos:1998bi,
      author    = "Alexopoulos, T. and others",

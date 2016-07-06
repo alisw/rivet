@@ -4,7 +4,7 @@ Summary: B-jets search for supersymmetry with 0-leptons
 Experiment: ATLAS
 Collider: LHC
 SpiresID:
-Status: UNVALIDATED
+Status: OBSOLETE
 Authors:
  - Angela Chen <aqchen@fas.harvard.edu>
 References:
@@ -21,4 +21,3 @@ Description:
   $m_eff>500$\,GeV; 2 b-jets, $m_eff>700$\,GeV) are implemented as one-bin histograms.
   Histograms for missing transverse energy, effective mass, and pT of the leading jet are
   implemented for the 1 b-tag and 2 b-tag signal regions.'
-

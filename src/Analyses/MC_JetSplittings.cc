@@ -19,14 +19,16 @@ namespace Rivet {
 
   // Book histograms
   void MC_JetSplittings::init() {
+    const double sqrts = sqrtS() ? sqrtS() : 14000.*GeV;
+
     for (size_t i = 0; i < m_njet; ++i) {
       string dname = "log10_d_" + to_str(i) + to_str(i+1);
-      _h_log10_d[i] = bookHisto1D(dname, 100, 0.2, log10(0.5*sqrtS()/GeV));
+      _h_log10_d[i] = bookHisto1D(dname, 100, 0.2, log10(0.5*sqrts/GeV));
       string Rname = "log10_R_" + to_str(i);
-      _h_log10_R[i] = bookScatter2D(Rname, 50, 0.2, log10(0.5*sqrtS()/GeV));
+      _h_log10_R[i] = bookScatter2D(Rname, 50, 0.2, log10(0.5*sqrts/GeV));
     }
     string Rname = "log10_R_" + to_str(m_njet);
-    _h_log10_R[m_njet] = bookScatter2D(Rname, 50, 0.2, log10(0.5*sqrtS()/GeV));
+    _h_log10_R[m_njet] = bookScatter2D(Rname, 50, 0.2, log10(0.5*sqrts/GeV));
   }
 
 

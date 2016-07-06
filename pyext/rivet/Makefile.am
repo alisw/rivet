@@ -1,6 +1,7 @@
 EXTRA_DIST = \
-	__init__.py util.py \
-    plotinfo.py spiresbib.py \
+	__init__.py \
+    spiresbib.py util.py \
+    plotinfo.py aopaths.py \
     core.pyx rivet.pxd \
     core.cpp
 
@@ -8,7 +9,7 @@ EXTRA_DIST = \
 if WITH_CYTHON
 RIVETINCLUDE = $(top_srcdir)/include/Rivet/
 core.cpp: core.pyx rivet.pxd $(RIVETINCLUDE)/Analysis.hh $(RIVETINCLUDE)/AnalysisHandler.hh $(RIVETINCLUDE)/AnalysisLoader.hh $(RIVETINCLUDE)/Run.hh
-	cython core.pyx --cplus
+	cython $(srcdir)/core.pyx --cplus -o $@
 else
 core.cpp:
 	@echo "Not (re)generating core.cpp since Cython is not installed"
@@ -21,7 +22,7 @@ endif
 
 all-local: fix-out-of-source
 
-FIXSOURCES = $(EXTRA_DIST) 
+FIXSOURCES = $(EXTRA_DIST)
 
 fix-out-of-source: $(FIXSOURCES)
 	rm -f $@

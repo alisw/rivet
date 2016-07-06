@@ -168,10 +168,10 @@ namespace Rivet {
 
       // Get b hadrons with pT > 5 GeV
       /// @todo This is a hack -- replace with UnstableFinalState
-      vector<HepMC::GenParticle*> B_hadrons;
-      vector<HepMC::GenParticle*> allParticles = particles(event.genEvent());
+      vector<GenParticle const *> B_hadrons;
+      vector<GenParticle const *> allParticles = particles(event.genEvent());
       for (size_t i = 0; i < allParticles.size(); i++) {
-        GenParticle* p = allParticles[i];
+        const GenParticle* p = allParticles[i];
         if (!PID::isHadron(p->pdg_id()) || !PID::hasBottom(p->pdg_id())) continue;
         if (p->momentum().perp() < 5*GeV) continue;
         B_hadrons.push_back(p);
@@ -179,9 +179,9 @@ namespace Rivet {
 
       // For each of the good jets, check whether any are b-jets (via dR matching)
       vector<const Jet*> b_jets;
-      foreach(const Jet* j, good_jets) {
+      foreach (const Jet* j, good_jets) {
         bool isbJet = false;
-        foreach(HepMC::GenParticle* b, B_hadrons) {
+        foreach (const GenParticle* b, B_hadrons) {
           if (deltaR(j->momentum(), FourMomentum(b->momentum())) < 0.3) isbJet = true;
         }
         if (isbJet) b_jets.push_back(j);
@@ -192,9 +192,9 @@ namespace Rivet {
       // i.e. those which are not either of the 2 highest pT b-jets
       vector<const Jet*> veto_jets;
       int n_bjets_matched = 0;
-      foreach(const Jet* j, good_jets) {
+      foreach (const Jet* j, good_jets) {
         bool isBJet = false;
-        foreach(const Jet* b, b_jets) {
+        foreach (const Jet* b, b_jets) {
           if (n_bjets_matched == 2) break;
           if (b == j){isBJet = true; ++ n_bjets_matched;}
         }

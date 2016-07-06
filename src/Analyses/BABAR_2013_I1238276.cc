@@ -31,25 +31,24 @@ namespace Rivet {
       MSG_DEBUG("CMS Energy sqrt s = " << beamproj.sqrtS());
 
       foreach (const Particle& p, fs.particles()) {
-	// check if prompt or not
-	const GenParticle* pmother = p.genParticle();
-	GenVertex* ivertex = pmother->production_vertex();
-	bool prompt = true;
-	while (ivertex) {
-	  int n_inparts = ivertex->particles_in_size();
-	  if(n_inparts<1) break;
-	  const HepMC::GenVertex::particles_in_const_iterator iPart_invtx = ivertex->particles_in_const_begin();
-	  pmother = (*iPart_invtx);                   // first mother particle
-	  int mother_pid = abs(pmother->pdg_id());
-	  if(mother_pid==PID::K0S || mother_pid==PID::LAMBDA) {
-	    prompt = false;
-	    break;
-	  }
-	  else if (mother_pid<6) {
-	    break;
-	  }
-	  ivertex = pmother->production_vertex();
-	}
+        // check if prompt or not
+        const GenParticle* pmother = p.genParticle();
+        const GenVertex* ivertex = pmother->production_vertex();
+        bool prompt = true;
+        while (ivertex) {
+          int n_inparts = ivertex->particles_in_size();
+          if (n_inparts < 1) break;
+          pmother = particles(ivertex, HepMC::parents)[0]; // first mother particle
+          int mother_pid = abs(pmother->pdg_id());
+          if (mother_pid==PID::K0S || mother_pid==PID::LAMBDA) {
+            prompt = false;
+            break;
+          }
+          else if (mother_pid<6) {
+            break;
+          }
+          ivertex = pmother->production_vertex();
+        }
 
 
         // momentum in CMS frame
@@ -57,19 +56,19 @@ namespace Rivet {
         const int PdgId = p.abspid();
         MSG_DEBUG("pdgID = " << PdgId << " Momentum = " << mom);
         switch (PdgId) {
-	case PID::PIPLUS:
-	  if(prompt) _histPion_no_dec->fill(mom,weight);
-	  _histPion_dec   ->fill(mom,weight);
-	  break;
-	case PID::KPLUS:
-	  if(prompt) _histKaon_no_dec->fill(mom,weight);
-	  _histKaon_dec   ->fill(mom,weight);
-	  break;
-	case PID::PROTON:
-	  if(prompt) _histProton_no_dec->fill(mom,weight);
-	  _histProton_dec   ->fill(mom,weight);
-	default :
-	  break;
+        case PID::PIPLUS:
+          if(prompt) _histPion_no_dec->fill(mom,weight);
+          _histPion_dec   ->fill(mom,weight);
+          break;
+        case PID::KPLUS:
+          if(prompt) _histKaon_no_dec->fill(mom,weight);
+          _histKaon_dec   ->fill(mom,weight);
+          break;
+        case PID::PROTON:
+          if(prompt) _histProton_no_dec->fill(mom,weight);
+          _histProton_dec   ->fill(mom,weight);
+        default :
+          break;
         }
       }
     } // analyze

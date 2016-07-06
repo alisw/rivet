@@ -41,15 +41,15 @@ setenv TEXMFCNF "@datadir@/Rivet/texmf/cnf:"
 endif
 
 if ($?TEXINPUTS) then
-setenv TEXINPUTS "@datadir@/Rivet/texmf/tex:$TEXINPUTS"
+setenv TEXINPUTS "@datadir@/Rivet/texmf/tex//:$TEXINPUTS"
 else
-setenv TEXINPUTS "@datadir@/Rivet/texmf/tex:"
+setenv TEXINPUTS "@datadir@/Rivet/texmf/tex//:"
 endif
 
 if ($?LATEXINPUTS) then
-setenv LATEXINPUTS "@datadir@/Rivet/texmf/tex:$LATEXINPUTS"
+setenv LATEXINPUTS "@datadir@/Rivet/texmf/tex//:$LATEXINPUTS"
 else
-setenv LATEXINPUTS "@datadir@/Rivet/texmf/tex:"
+setenv LATEXINPUTS "@datadir@/Rivet/texmf/tex//:"
 endif
 
 unset YODA_PYTHONPATH

@@ -4,39 +4,44 @@
 
 namespace Rivet {
 
+
   /// @internal Forward declaration of helper class. Not for end users.
   class CuttableBase;
 
   /// @internal Base class for cut objects.
   /// @note End users should always use the @ref Cut typedef instead.
   class CutBase;
+
   /// Main cut object
   typedef boost::shared_ptr<CutBase> Cut;
+
 
   class CutBase {
   public:
     /// Main work method.
-    /// @internal Forwards the received object to @ref accept_,
-    /// wrapped in the Cuttable converter
-    template <typename ClassToCheck> bool accept(const ClassToCheck &) const;
+    /// @internal Forwards the received object to @ref accept_, wrapped in the Cuttable converter
+    template <typename ClassToCheck> bool accept(const ClassToCheck&) const;
     /// Comparison to another Cut
-    virtual bool operator==(const Cut & c) const = 0;
+    virtual bool operator==(const Cut&) const = 0;
     /// Default destructor
     virtual ~CutBase() {}
   protected:
     /// @internal Actual accept implementation, overloadable by various cut combiners
-    virtual bool _accept(const CuttableBase &) const = 0;
+    virtual bool _accept(const CuttableBase&) const = 0;
   };
 
-  // compare two cuts for equality, forwards to the cut-specific implementation
-  inline bool operator==(const Cut & a, const Cut & b) { return *a == b; }
+
+  /// Compare two cuts for equality, forwards to the cut-specific implementation
+  inline bool operator == (const Cut& a, const Cut& b) { return *a == b; }
+
 
   /// Namespace used for ambiguous identifiers.
   namespace Cuts {
+
     /// Available categories of cut objects
     enum Quantity { pT=0, pt=0, Et=1, et=1, mass, rap, absrap, eta, abseta, phi };
     /// Fully open cut singleton, accepts everything
-    const Cut & open();
+    const Cut& open();
 
     /// @name Shortcuts for common cuts
     //@{
@@ -49,7 +54,9 @@ namespace Rivet {
     inline Cut etIn(double m, double n) { return range(Et,m,n); }
     inline Cut massIn(double m, double n) { return range(mass,m,n); }
     //@}
+
   }
+
 
   /// @name Cut constructors
   //@{
@@ -67,6 +74,7 @@ namespace Rivet {
   //@}
 
   //@}
+
 
   /// @name Cut combiners
   //@{
@@ -88,7 +96,9 @@ namespace Rivet {
   Cut operator ~ (const Cut & cptr);
   /// Logical XOR operation on two cuts
   Cut operator ^ (const Cut & aptr, const Cut & bptr);
+
   //@}
+
 
 }
 

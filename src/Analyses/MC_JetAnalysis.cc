@@ -24,10 +24,11 @@ namespace Rivet {
 
   // Book histograms
   void MC_JetAnalysis::init() {
+    const double sqrts = sqrtS() ? sqrtS() : 14000.*GeV;
 
     for (size_t i = 0; i < _njet; ++i) {
       const string pTname = "jet_pT_" + to_str(i+1);
-      const double pTmax = 1.0/(double(i)+2.0) * sqrtS()/GeV/2.0;
+      const double pTmax = 1.0/(double(i)+2.0) * sqrts/GeV/2.0;
       const int nbins_pT = 100/(i+1);
       _h_pT_jet[i] = bookHisto1D(pTname, logspace(nbins_pT, 10.0, pTmax));
 
@@ -63,7 +64,7 @@ namespace Rivet {
     _h_jet_multi_exclusive = bookHisto1D("jet_multi_exclusive", _njet+3, -0.5, _njet+3-0.5);
     _h_jet_multi_inclusive = bookHisto1D("jet_multi_inclusive", _njet+3, -0.5, _njet+3-0.5);
     _h_jet_multi_ratio = bookScatter2D("jet_multi_ratio");
-    _h_jet_HT = bookHisto1D("jet_HT", logspace(50, _jetptcut, sqrtS()/GeV/2.0));
+    _h_jet_HT = bookHisto1D("jet_HT", logspace(50, _jetptcut, sqrts/GeV/2.0));
   }
 
 

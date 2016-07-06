@@ -20,13 +20,13 @@ namespace Rivet {
     /// @note A particle without info is useless. This only exists to keep STL containers happy.
     Particle()
       : ParticleBase(),
-        _original(0), _id(0), _momentum()
+        _original(0), _id(0)
     { }
 
     /// Constructor without GenParticle.
-    Particle(PdgId pid, const FourMomentum& mom)
+    Particle(PdgId pid, const FourMomentum& mom, const FourVector& pos=FourVector())
       : ParticleBase(),
-        _original(0), _id(pid), _momentum(mom)
+        _original(0), _id(pid), _momentum(mom), _origin(pos)
     { }
 
     /// Constructor from a HepMC GenParticle.
@@ -34,14 +34,22 @@ namespace Rivet {
       : ParticleBase(),
         _original(&gp), _id(gp.pdg_id()),
         _momentum(gp.momentum())
-    { }
+    {
+      const GenVertex* vprod = gp.production_vertex();
+      if (vprod != NULL)
+        setOrigin(vprod->position().t(), vprod->position().x(), vprod->position().y(), vprod->position().z());
+    }
 
     /// Constructor from a HepMC GenParticle pointer.
     Particle(const GenParticle* gp)
       : ParticleBase(),
         _original(gp), _id(gp->pdg_id()),
         _momentum(gp->momentum())
-    { }
+    {
+      const GenVertex* vprod = gp->production_vertex();
+      if (vprod != NULL)
+        setOrigin(vprod->position().t(), vprod->position().x(), vprod->position().y(), vprod->position().z());
+    }
 
 
   public:
@@ -60,7 +68,7 @@ namespace Rivet {
     /// @name Basic particle specific properties
     //@{
 
-    /// Get a const reference to the original GenParticle.
+    /// Get a const pointer to the original GenParticle.
     const GenParticle* genParticle() const {
       return _original;
     }
@@ -75,6 +83,26 @@ namespace Rivet {
     /// Set the momentum.
     Particle& setMomentum(const FourMomentum& momentum) {
       _momentum = momentum;
+      return *this;
+    }
+    /// Set the momentum via components.
+    Particle& setMomentum(double E, double px, double py, double pz) {
+      _momentum = FourMomentum(E, px, py, pz);
+      return *this;
+    }
+
+    /// The origin position.
+    const FourVector& origin() const {
+      return _origin;
+    }
+    /// Set the origin position.
+    Particle& setOrigin(const FourVector& position) {
+      _origin = position;
+      return *this;
+    }
+    /// Set the origin position via components.
+    Particle& setOrigin(double t, double x, double y, double z) {
+      _origin = FourMomentum(t, x, y, z);
       return *this;
     }
 
@@ -102,7 +130,13 @@ namespace Rivet {
     double charge() const {
       return PID::charge(pid());
     }
+
     /// Three times the charge of this Particle (i.e. integer multiple of smallest quark charge).
+    int charge3() const {
+      return PID::charge3(pid());
+    }
+    /// Alias for charge3
+    /// @deprecated Use charge3
     int threeCharge() const {
       return PID::threeCharge(pid());
     }
@@ -130,6 +164,9 @@ namespace Rivet {
 
     // /// Does this (hadron) contain an s quark?
     // bool hasStrange() const { return PID::hasStrange(pid()); }
+
+    /// Is this particle potentially visible in a detector?
+    bool isVisible() const;
 
     //@}
 
@@ -209,67 +246,21 @@ namespace Rivet {
     //@{
 
     /// Whether this particle is stable according to the generator
-    bool isStable() const {
-      return genParticle() != NULL && genParticle()->status() == 1 && genParticle()->end_vertex() == NULL;
-    }
+    bool isStable() const;
 
     /// Get a list of the direct descendants from the current particle
-    vector<Particle> children() const {
-      vector<Particle> rtn;
-      if (isStable()) return rtn;
-      /// @todo Remove this const mess crap when HepMC doesn't suck
-      HepMC::GenVertex* gv = const_cast<HepMC::GenVertex*>( genParticle()->end_vertex() );
-      /// @todo Would like to do this, but the range objects are broken
-      // foreach (const GenParticle* gp, gv->particles(HepMC::children))
-      //   rtn += Particle(gp);
-      for (GenVertex::particle_iterator it = gv->particles_begin(HepMC::children); it != gv->particles_end(HepMC::children); ++it)
-        rtn += Particle(*it);
-      return rtn;
-    }
+    vector<Particle> children() const;
 
     /// Get a list of all the descendants (including duplication of parents and children) from the current particle
-    /// @todo Use recursion through replica-avoiding MCUtils functions to avoid bookkeeping duplicates
-    /// @todo Insist that the current particle is post-hadronization, otherwise throw an exception?
-    vector<Particle> allDescendants() const {
-      vector<Particle> rtn;
-      if (isStable()) return rtn;
-      /// @todo Remove this const mess crap when HepMC doesn't suck
-      HepMC::GenVertex* gv = const_cast<HepMC::GenVertex*>( genParticle()->end_vertex() );
-      /// @todo Would like to do this, but the range objects are broken
-      // foreach (const GenParticle* gp, gv->particles(HepMC::descendants))
-      //   rtn += Particle(gp);
-      for (GenVertex::particle_iterator it = gv->particles_begin(HepMC::descendants); it != gv->particles_end(HepMC::descendants); ++it)
-        rtn += Particle(*it);
-      return rtn;
-    }
+    vector<Particle> allDescendants() const;
 
     /// Get a list of all the stable descendants from the current particle
     /// @todo Use recursion through replica-avoiding MCUtils functions to avoid bookkeeping duplicates
     /// @todo Insist that the current particle is post-hadronization, otherwise throw an exception?
-    vector<Particle> stableDescendants() const {
-      vector<Particle> rtn;
-      if (isStable()) return rtn;
-      /// @todo Remove this const mess crap when HepMC doesn't suck
-      HepMC::GenVertex* gv = const_cast<HepMC::GenVertex*>( genParticle()->end_vertex() );
-      /// @todo Would like to do this, but the range objects are broken
-      // foreach (const GenParticle* gp, gv->particles(HepMC::descendants))
-      //   if (gp->status() == 1 && gp->end_vertex() == NULL)
-      //     rtn += Particle(gp);
-      for (GenVertex::particle_iterator it = gv->particles_begin(HepMC::descendants); it != gv->particles_end(HepMC::descendants); ++it)
-        if ((*it)->status() == 1 && (*it)->end_vertex() == NULL)
-          rtn += Particle(*it);
-      return rtn;
-    }
+    vector<Particle> stableDescendants() const;
 
     /// Flight length (divide by mm or cm to get the appropriate units)
-    double flightLength() const {
-      if (isStable()) return -1;
-      if (genParticle() == NULL) return 0;
-      if (genParticle()->production_vertex() == NULL) return 0;
-      const HepMC::FourVector v1 = genParticle()->production_vertex()->position();
-      const HepMC::FourVector v2 = genParticle()->end_vertex()->position();
-      return sqrt(sqr(v2.x()-v1.x()) + sqr(v2.y()-v1.y()) + sqr(v2.z()-v1.z()));
-    }
+    double flightLength() const;
 
     //@}
 
@@ -282,8 +273,11 @@ namespace Rivet {
     /// The PDG ID code for this Particle.
     PdgId _id;
 
-    /// The momentum of this projection of the Particle.
+    /// The momentum of this particle.
     FourMomentum _momentum;
+
+    /// The creation position of this particle.
+    FourVector _origin;
 
   };
 

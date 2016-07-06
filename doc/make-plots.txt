@@ -132,8 +132,10 @@ YCustomMajorTicks=<list>
 ZCustomMajorTicks=<list>
 --------------------
 To specify major ticks at arbitrary positions and/or with arbitrary labels.
-`<list>` is a tab separated list of format `value1 <tab> label1 <tab> value2
-<tab> label2 ...`.
+`<list>` is a whitespace-separated list of format `value1 <spaces_or_tabs> label1 <spaces_or_tabs> value2
+<spaces_or_tabs> label2 ...`.
+
+TODO: allow use of YAML-style list syntax to clarify delimiters?
 
 --------------------
 XCustomMinorTicks=<list>

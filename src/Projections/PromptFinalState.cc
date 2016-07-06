@@ -29,8 +29,7 @@ namespace Rivet {
 
   bool PromptFinalState::isPrompt(const Particle& p) const {
     if (p.genParticle() == NULL) return false; // no HepMC connection, give up! Throw UserError exception?
-    /// @todo Shouldn't a const vertex be being returned? Ah, HepMC...
-    GenVertex* prodVtx = p.genParticle()->production_vertex();
+    const GenVertex* prodVtx = p.genParticle()->production_vertex();
     if (prodVtx == NULL) return false; // orphaned particle, has to be assume false
     const pair<GenParticle*, GenParticle*> beams = prodVtx->parent_event()->beam_particles();
 

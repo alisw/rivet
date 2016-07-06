@@ -11,7 +11,7 @@ References:
  - arXiv:1203.5015 [hep-ex]
  - Eur.Phys.J. C72 (2012) 2043
 RunInfo:
-  Require dileptonic ttbar events at 7TeV.
+  Require dileptonic ttbar events at 7TeV. It is important to not include semileptonic decay channels in the runs, as they can not be vetoed in the analysis in a generator-independent fashion but have been subtracted from the particle level measurement. The tau decay channels also count as leptonic.
 NumEvents: 1000000
 Beams: [p+, p+]
 Energies: [7000]

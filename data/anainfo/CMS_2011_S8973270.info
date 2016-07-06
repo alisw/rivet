@@ -10,7 +10,7 @@ Authors:
 References:
  - JHEP 1103 136
  - doi:10.1007/JHEP03(2011)136
- - arXiv:hep-ex/1102.3194
+ - arXiv:1102.3194
 RunInfo:
    Inclusive QCD at 7 TeV. A $\hat{\pT}$ cut (or similar) is recommended since
    a leading jet $\pT > 56$ GeV is required.

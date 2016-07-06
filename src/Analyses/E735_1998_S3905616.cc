@@ -23,8 +23,6 @@ namespace Rivet {
 
     void init() {
       // Projections
-      /// @todo E735 trigger?
-      //addProjection(TriggerCDFRun0Run1(), "Trigger");
       addProjection(TriggerUA5(), "Trigger");
       addProjection(ChargedFinalState(), "FS");
 
@@ -34,7 +32,6 @@ namespace Rivet {
 
 
     void analyze(const Event& event) {
-      //const bool trigger = applyProjection<TriggerCDFRun0Run1>(event, "Trigger").minBiasDecision();
       const bool trigger = applyProjection<TriggerUA5>(event, "Trigger").nsdDecision();
       if (!trigger) vetoEvent;
       const double weight = event.weight();

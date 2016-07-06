@@ -1,9 +1,6 @@
 // -*- C++ -*-
-#include <iostream>
 #include "Rivet/Analysis.hh"
-#include "Rivet/Projections/Beam.hh"
 #include "Rivet/Projections/UnstableFinalState.hh"
-#include "Rivet/ParticleName.hh"
 
 namespace Rivet {
 
@@ -20,7 +17,6 @@ namespace Rivet {
 
 
     void init() {
-      addProjection(Beam(), "Beams");
       addProjection(UnstableFinalState(), "UFS");
 
       _mult_cont_Omega     = bookHisto1D( 1, 1, 1);
@@ -55,15 +51,11 @@ namespace Rivet {
 
       _hist_cont_Omega     = bookHisto1D(13, 1, 1);
       _hist_Ups1_Omega     = bookHisto1D(14, 1, 1);
-    } // init
+    }
 
 
     void analyze(const Event& e) {
       const double weight = e.weight();
-
-      const Beam beamproj = applyProjection<Beam>(e, "Beams");
-      const double s = sqr(beamproj.sqrtS());
-      const double roots = sqrt(s);
 
       // Find the upsilons
       Particles upsilons;
@@ -73,14 +65,13 @@ namespace Rivet {
         if (p.pid() == 300553 || p.pid() == 553) upsilons.push_back(p);
       // Then in whole event if that failed
       if (upsilons.empty()) {
-        foreach (GenParticle* p, Rivet::particles(e.genEvent())) {
+        foreach (const GenParticle* p, Rivet::particles(e.genEvent())) {
           if (p->pdg_id() != 300553 && p->pdg_id() != 553) continue;
           const GenVertex* pv = p->production_vertex();
           bool passed = true;
           if (pv) {
-            /// @todo Use better looping
-            for (GenVertex::particles_in_const_iterator pp = pv->particles_in_const_begin() ; pp != pv->particles_in_const_end() ; ++pp) {
-              if ( p->pdg_id() == (*pp)->pdg_id() ) {
+            foreach (const GenParticle* pp, particles_in(pv)) {
+              if ( p->pdg_id() == pp->pdg_id() ) {
                 passed = false;
                 break;
               }
@@ -90,24 +81,24 @@ namespace Rivet {
         }
       }
 
-      // continuum
-      if (upsilons.empty()) {
+      if (upsilons.empty()) { // continuum
+
         _weightSum_cont += weight;
-        unsigned int nOmega(0),nRho0(0),nKStar0(0),nKStarPlus(0),nPhi(0);
+        unsigned int nOmega(0), nRho0(0), nKStar0(0), nKStarPlus(0), nPhi(0);
         foreach (const Particle& p, ufs.particles()) {
           int id = p.abspid();
-          double xp = 2.*p.E()/roots;
+          double xp = 2.*p.E()/sqrtS();
           double beta = p.p3().mod()/p.E();
           if (id == 113) {
-            _hist_cont_Rho0->fill(xp,weight/beta);
+            _hist_cont_Rho0->fill(xp, weight/beta);
             ++nRho0;
           }
           else if (id == 313) {
-            _hist_cont_KStar0->fill(xp,weight/beta);
+            _hist_cont_KStar0->fill(xp, weight/beta);
             ++nKStar0;
           }
           else if (id == 223) {
-            _hist_cont_Omega->fill(xp,weight/beta);
+            _hist_cont_Omega->fill(xp, weight/beta);
             ++nOmega;
           }
           else if (id == 323) {
@@ -119,23 +110,21 @@ namespace Rivet {
           }
         }
         /// @todo Replace with Counters and fill one-point Scatters at the end
-        _mult_cont_Omega    ->fill(10.45,weight*nOmega    );
-        _mult_cont_Rho0     ->fill(10.45,weight*nRho0     );
-        _mult_cont_KStar0   ->fill(10.45,weight*nKStar0   );
-        _mult_cont_KStarPlus->fill(10.45,weight*nKStarPlus);
-        _mult_cont_Phi      ->fill(10.45,weight*nPhi      );
-      }
-      else {
-        // find an upsilon
+        _mult_cont_Omega    ->fill(10.45, weight*nOmega    );
+        _mult_cont_Rho0     ->fill(10.45, weight*nRho0     );
+        _mult_cont_KStar0   ->fill(10.45, weight*nKStar0   );
+        _mult_cont_KStarPlus->fill(10.45, weight*nKStarPlus);
+        _mult_cont_Phi      ->fill(10.45, weight*nPhi      );
+
+      } else { // found an upsilon
+
         foreach (const Particle& ups, upsilons) {
-          int parentId = ups.pid();
-          if (parentId == 553)
-            _weightSum_Ups1 += weight;
-          else
-            _weightSum_Ups4 += weight;
+          const int parentId = ups.pid();
+          (parentId == 553 ? _weightSum_Ups1 : _weightSum_Ups4) += weight;
           Particles unstable;
-          // find the decay products we want
+          // Find the decay products we want
           findDecayProducts(ups.genParticle(),unstable);
+          /// @todo Update to new LT mk* functions
           LorentzTransform cms_boost;
           if (ups.p3().mod() > 0.001)
             cms_boost = LorentzTransform(-ups.momentum().boostVector());
@@ -185,7 +174,8 @@ namespace Rivet {
           }
         }
       }
-    } // analyze
+
+    }
 
 
     void finalize() {
@@ -224,44 +214,19 @@ namespace Rivet {
         scale(_hist_Ups4_KStar0   , 1./_weightSum_Ups4);
         scale(_hist_Ups4_Rho0     , 1./_weightSum_Ups4);
       }
-    } // finalize
+    }
 
 
   private:
 
     //@{
-    Histo1DPtr _mult_cont_Omega    ;
-    Histo1DPtr _mult_cont_Rho0     ;
-    Histo1DPtr _mult_cont_KStar0   ;
-    Histo1DPtr _mult_cont_KStarPlus;
-    Histo1DPtr _mult_cont_Phi      ;
-
-    Histo1DPtr _mult_Ups1_Omega    ;
-    Histo1DPtr _mult_Ups1_Rho0     ;
-    Histo1DPtr _mult_Ups1_KStar0   ;
-    Histo1DPtr _mult_Ups1_KStarPlus;
-    Histo1DPtr _mult_Ups1_Phi      ;
-
-    Histo1DPtr _mult_Ups4_Omega    ;
-    Histo1DPtr _mult_Ups4_Rho0     ;
-    Histo1DPtr _mult_Ups4_KStar0   ;
-    Histo1DPtr _mult_Ups4_KStarPlus;
-    Histo1DPtr _mult_Ups4_Phi      ;
-
-    Histo1DPtr _hist_cont_KStarPlus;
-    Histo1DPtr _hist_Ups1_KStarPlus;
-    Histo1DPtr _hist_Ups4_KStarPlus;
-
-    Histo1DPtr _hist_cont_KStar0   ;
-    Histo1DPtr _hist_Ups1_KStar0   ;
-    Histo1DPtr _hist_Ups4_KStar0   ;
-
-    Histo1DPtr _hist_cont_Rho0     ;
-    Histo1DPtr _hist_Ups1_Rho0     ;
-    Histo1DPtr _hist_Ups4_Rho0     ;
-
-    Histo1DPtr _hist_cont_Omega    ;
-    Histo1DPtr _hist_Ups1_Omega    ;
+    Histo1DPtr _mult_cont_Omega, _mult_cont_Rho0, _mult_cont_KStar0, _mult_cont_KStarPlus, _mult_cont_Phi;
+    Histo1DPtr _mult_Ups1_Omega, _mult_Ups1_Rho0, _mult_Ups1_KStar0, _mult_Ups1_KStarPlus, _mult_Ups1_Phi;
+    Histo1DPtr _mult_Ups4_Omega, _mult_Ups4_Rho0, _mult_Ups4_KStar0, _mult_Ups4_KStarPlus, _mult_Ups4_Phi;
+    Histo1DPtr _hist_cont_KStarPlus, _hist_Ups1_KStarPlus, _hist_Ups4_KStarPlus;
+    Histo1DPtr _hist_cont_KStar0, _hist_Ups1_KStar0, _hist_Ups4_KStar0   ;
+    Histo1DPtr _hist_cont_Rho0, _hist_Ups1_Rho0,  _hist_Ups4_Rho0;
+    Histo1DPtr _hist_cont_Omega, _hist_Ups1_Omega;
 
     double _weightSum_cont,_weightSum_Ups1,_weightSum_Ups4;
     //@}
@@ -280,6 +245,7 @@ namespace Rivet {
           findDecayProducts(*pp, unstable);
       }
     }
+
 
   };
 

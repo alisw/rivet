@@ -4,7 +4,6 @@
 
 namespace Rivet {
 
-  
 
 
   /// @brief MC validation analysis for inclusive W events
@@ -12,9 +11,12 @@ namespace Rivet {
   public:
 
     /// Default constructor
-    MC_WINC()
-      : Analysis("MC_WINC")
-    {    }
+    MC_WINC(string name="MC_WINC")
+      : Analysis(name)
+    {
+		 _dR=0.2;
+		 _lepton=PID::ELECTRON;
+	 }
 
 
     /// @name Analysis methods
@@ -23,17 +25,18 @@ namespace Rivet {
     /// Book histograms
     void init() {
       FinalState fs;
-      WFinder wfinder(fs, Cuts::abseta < 3.5 && Cuts::pT > 25*GeV, PID::ELECTRON, 60.0*GeV, 100.0*GeV, 25.0*GeV, 0.2);
+      WFinder wfinder(fs, Cuts::abseta < 3.5 && Cuts::pT > 25*GeV, _lepton, 60.0*GeV, 100.0*GeV, 25.0*GeV, _dR);
       addProjection(wfinder, "WFinder");
 
+      double sqrts = sqrtS()>0. ? sqrtS() : 14000.;
       _h_W_mass = bookHisto1D("W_mass", 50, 55.0, 105.0);
-      _h_W_pT = bookHisto1D("W_pT", logspace(100, 1.0, 0.5*sqrtS()));
+      _h_W_pT = bookHisto1D("W_pT", logspace(100, 1.0, 0.5*sqrts));
       _h_W_pT_peak = bookHisto1D("W_pT_peak", 25, 0.0, 125.0);
       _h_W_y = bookHisto1D("W_y", 40, -4.0, 4.0);
       _h_W_phi = bookHisto1D("W_phi", 25, 0.0, TWOPI);
-      _h_Wplus_pT = bookHisto1D("Wplus_pT", logspace(25, 10.0, 0.5*sqrtS()));
-      _h_Wminus_pT = bookHisto1D("Wminus_pT", logspace(25, 10.0, 0.5*sqrtS()));
-      _h_lepton_pT = bookHisto1D("lepton_pT", logspace(100, 10.0, 0.25*sqrtS()));
+      _h_Wplus_pT = bookHisto1D("Wplus_pT", logspace(25, 10.0, 0.5*sqrts));
+      _h_Wminus_pT = bookHisto1D("Wminus_pT", logspace(25, 10.0, 0.5*sqrts));
+      _h_lepton_pT = bookHisto1D("lepton_pT", logspace(100, 10.0, 0.25*sqrts));
       _h_lepton_eta = bookHisto1D("lepton_eta", 40, -4.0, 4.0);
       _htmp_dsigminus_deta = bookHisto1D("lepton_dsigminus_deta", 20, 0.0, 4.0);
       _htmp_dsigplus_deta  = bookHisto1D("lepton_dsigplus_deta", 20, 0.0, 4.0);
@@ -106,10 +109,19 @@ namespace Rivet {
       divide(_h_Wplus_pT, _h_Wminus_pT,
              _h_asym_pT);
 
-      scale(_h_Wplus_pT, crossSection()/sumOfWeights());
-      scale(_h_Wminus_pT, crossSection()/sumOfWeights());
+      scale(_h_Wplus_pT, crossSection()/picobarn/sumOfWeights());
+      scale(_h_Wminus_pT, crossSection()/picobarn/sumOfWeights());
     }
 
+    //@}
+
+
+  protected:
+
+    /// @name Parameters for specialised e/mu and dressed/bare subclassing
+    //@{
+    double _dR;
+    PdgId _lepton;
     //@}
 
 
@@ -138,7 +150,42 @@ namespace Rivet {
 
 
 
-  // The hook for the plugin system
+  struct MC_WINC_EL : public MC_WINC {
+    MC_WINC_EL() : MC_WINC("MC_WINC_EL") {
+      _dR = 0.2;
+      _lepton = PID::ELECTRON;
+    }
+  };
+
+  struct MC_WINC_EL_BARE : public MC_WINC {
+    MC_WINC_EL_BARE() : MC_WINC("MC_WINC_EL_BARE") {
+      _dR = 0;
+      _lepton = PID::ELECTRON;
+    }
+  };
+
+  struct MC_WINC_MU : public MC_WINC {
+    MC_WINC_MU() : MC_WINC("MC_WINC_MU") {
+      _dR = 0.2;
+      _lepton = PID::MUON;
+    }
+  };
+
+  struct MC_WINC_MU_BARE : public MC_WINC {
+    MC_WINC_MU_BARE() : MC_WINC("MC_WINC_MU_BARE") {
+      _dR = 0;
+      _lepton = PID::MUON;
+    }
+  };
+
+
+
+  // The hooks for the plugin system
   DECLARE_RIVET_PLUGIN(MC_WINC);
+  DECLARE_RIVET_PLUGIN(MC_WINC_EL);
+  DECLARE_RIVET_PLUGIN(MC_WINC_EL_BARE);
+  DECLARE_RIVET_PLUGIN(MC_WINC_MU);
+  DECLARE_RIVET_PLUGIN(MC_WINC_MU_BARE);
+
 
 }

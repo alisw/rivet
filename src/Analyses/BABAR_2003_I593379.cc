@@ -25,16 +25,16 @@ namespace Rivet {
       // First in unstable final state
       const UnstableFinalState& ufs = applyProjection<UnstableFinalState>(e, "UFS");
       foreach (const Particle& p, ufs.particles())
-        if (p.pid()==300553) upsilons.push_back(p);
+        if (p.pid() == 300553) upsilons.push_back(p);
       // Then in whole event if fails
       if (upsilons.empty()) {
-        foreach (GenParticle* p, Rivet::particles(e.genEvent())) {
-          if (p->pdg_id()!=300553) continue;
+        foreach (const GenParticle* p, Rivet::particles(e.genEvent())) {
+          if (p->pdg_id() != 300553) continue;
           const GenVertex* pv = p->production_vertex();
           bool passed = true;
           if (pv) {
-            for (GenVertex::particles_in_const_iterator pp = pv->particles_in_const_begin(); pp != pv->particles_in_const_end(); ++pp) {
-              if ( p->pdg_id() == (*pp)->pdg_id() ) {
+            foreach (const GenParticle* pp, particles_in(pv)) {
+              if ( p->pdg_id() == pp->pdg_id() ) {
                 passed = false;
                 break;
               }
@@ -48,7 +48,7 @@ namespace Rivet {
       foreach (const Particle& p, upsilons) {
         _weightSum += weight;
         // find the charmonium resonances
-        vector<GenParticle *> allJpsi, primaryJpsi, Psiprime,
+        vector<const GenParticle*> allJpsi, primaryJpsi, Psiprime,
           all_chi_c1, all_chi_c2, primary_chi_c1, primary_chi_c2;
         findDecayProducts(p.genParticle(), allJpsi, primaryJpsi, Psiprime,
                           all_chi_c1, all_chi_c2, primary_chi_c1, primary_chi_c2);
@@ -139,11 +139,11 @@ namespace Rivet {
     //@}
 
     void findDecayProducts(const GenParticle* p,
-                           vector<GenParticle*>& allJpsi,
-                           vector<GenParticle*>& primaryJpsi,
-                           vector<GenParticle*>& Psiprime,
-                           vector<GenParticle*>& all_chi_c1, vector<GenParticle*>& all_chi_c2,
-                           vector<GenParticle*>& primary_chi_c1, vector<GenParticle*>& primary_chi_c2) {
+                           vector<const GenParticle*>& allJpsi,
+                           vector<const GenParticle*>& primaryJpsi,
+                           vector<const GenParticle*>& Psiprime,
+                           vector<const GenParticle*>& all_chi_c1, vector<const GenParticle*>& all_chi_c2,
+                           vector<const GenParticle*>& primary_chi_c1, vector<const GenParticle*>& primary_chi_c2) {
       const GenVertex* dv = p->end_vertex();
       bool isOnium = false;
       /// @todo Use better looping

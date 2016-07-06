@@ -1,5 +1,7 @@
 #! /usr/bin/env bash
 
+set -x
+
 if [[ -z "$PYTHON_BUILD_DIR" ]]; then
     echo "\$PYTHON_BUILD_DIR must be defined" 1>&2
     exit 1

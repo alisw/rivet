@@ -76,12 +76,12 @@ namespace Rivet {
         if (PID::hasBottom(pid)) {
 
           bool good_B = false;
-          const HepMC::GenParticle* pgen = p.genParticle();
-          HepMC::GenVertex* vgen = pgen -> end_vertex();
+          const GenParticle* pgen = p.genParticle();
+          const GenVertex* vgen = pgen -> end_vertex();
 
           // Loop over the decay products of each unstable particle.
           // Look for a couple of B hadrons.
-          for (HepMC::GenVertex::particles_out_const_iterator it = vgen->particles_out_const_begin(); it !=  vgen->particles_out_const_end(); ++it) {
+          for (GenVertex::particles_out_const_iterator it = vgen->particles_out_const_begin(); it !=  vgen->particles_out_const_end(); ++it) {
             // If the particle produced has a bottom quark do not count it and go to the next loop cycle.
             if (!( PID::hasBottom( (*it)->pdg_id() ) ) ) {
               good_B = true;
@@ -100,7 +100,7 @@ namespace Rivet {
       if (Bmom.size() != 2 ) vetoEvent;
 
       // Calculate the observables
-      double dphiBB = fabs(Bmom[0].phi() - Bmom[1].phi());
+      double dphiBB = deltaPhi(Bmom[0], Bmom[1]);
       double dRBB = deltaR(Bmom[0], Bmom[1]);
 
       const FourMomentum& pZ = z[0].momentum();

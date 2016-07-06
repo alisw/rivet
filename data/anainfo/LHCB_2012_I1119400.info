@@ -5,7 +5,7 @@ Experiment: LHCb
 Collider: LHC
 SpireID: 9635220
 InspireID: 1119400
-Status: UNVALIDATED
+Status: VALIDATED
 Authors:
  - Andrea Contu <Andrea.Contu@cern.ch>
  - Alex Grecu <Alex.Grecu@cern.ch>
@@ -19,7 +19,9 @@ Beams: [p+, p+]
 Energies: [900, 7000]
 PtCuts: [0]
 Description:
-  'Measurement of the production ratios of prompt charged particles (protons,
+  'WARNING --- particle map is incomplete for determination of promptness,
+   assume unknown particles to have a life time of 0 ---
+   Measurement of the production ratios of prompt charged particles (protons,
    pions and kaons). Promptness is defined as originating from the primary
    interaction, either directly, or through the subsequent decay of a
    resonance.'

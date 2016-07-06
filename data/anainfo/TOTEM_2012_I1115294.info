@@ -3,7 +3,7 @@ Year: 2012
 Summary: Forward $\mathrm{d}N/\mathrm{d}\eta$ at 7\;TeV
 Experiment: TOTEM
 Collider: LHC
-#InspireID: 
+InspireID: 1115294
 Status: VALIDATED
 Authors:
  - Hendrik Hoeth <hendrik.hoeth@cern.ch>

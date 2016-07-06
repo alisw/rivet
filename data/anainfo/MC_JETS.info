@@ -9,6 +9,6 @@ RunInfo:
 NumEvents: 1000000
 PtCuts: [15]
 Description:
-  Jets with $p_\perp>20$ GeV are constructed with a $k_\perp$ jet finder with
-  $D=0.7$ and projected onto many different observables.
+  Jets with $p_\perp>20$ GeV are constructed with an anti-$k_\perp$ jet finder with
+  $R=0.4$ and projected onto many different observables.
 NeedCrossSection: yes

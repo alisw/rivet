@@ -30,4 +30,14 @@ namespace Rivet {
   }
 
 
+  const FourMomentum MissingMomentum::visibleMomentum(double mass) const {
+    /// @todo Couldn't we just reset the internal _momentum's mass and return by value? Would require mutable, though
+    FourMomentum p4 = _momentum;
+    const double pmod2 = p4.p3().mod2();
+    const double new_energy = sqrt(pmod2 + sqr(mass));
+    p4.setE(new_energy);
+    return p4;
+  }
+
+
 }

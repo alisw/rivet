@@ -18,7 +18,7 @@ namespace Rivet {
     vetoIds += 22; // status 2 photons don't count!
     vetoIds += 110; vetoIds += 990; vetoIds += 9990; // Reggeons
     //vetoIds += 9902210; // something weird from PYTHIA6
-    foreach (GenParticle* p, Rivet::particles(e.genEvent())) {
+    foreach (const GenParticle* p, Rivet::particles(e.genEvent())) {
       const int st = p->status();
       bool passed =
         (st == 1 || (st == 2 && !contains(vetoIds, abs(p->pdg_id())))) &&

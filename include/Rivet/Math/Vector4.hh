@@ -196,6 +196,13 @@ namespace Rivet {
       return result;
     }
 
+    /// Multiply space components only by -1.
+    FourVector reverse() const {
+      FourVector result = -*this;
+      result.setT(-result.t());
+      return result;
+    }
+
   };
 
 
@@ -417,13 +424,13 @@ namespace Rivet {
     /// Struct for sorting by increasing energy
     struct byEAscending {
       bool operator()(const FourMomentum& left, const FourMomentum& right) const{
-        double pt2left = left.E();
-        double pt2right = right.E();
+        const double pt2left = left.E();
+        const double pt2right = right.E();
         return pt2left < pt2right;
       }
 
       bool operator()(const FourMomentum* left, const FourMomentum* right) const{
-        return (*this)(left, right);
+        return (*this)(*left, *right);
       }
     };
 
@@ -434,7 +441,7 @@ namespace Rivet {
       }
 
       bool operator()(const FourMomentum* left, const FourVector* right) const{
-        return (*this)(left, right);
+        return (*this)(*left, *right);
       }
     };
 
@@ -467,6 +474,13 @@ namespace Rivet {
     FourMomentum operator-() const {
       FourMomentum result;
       result._vec = -_vec;
+      return result;
+    }
+
+    /// Multiply space components only by -1.
+    FourMomentum reverse() const {
+      FourMomentum result = -*this;
+      result.setE(-result.E());
       return result;
     }
 
@@ -904,6 +918,15 @@ namespace Rivet {
   /// Comparison to give a sorting by increasing energy
   inline bool cmpMomByAscE(const FourMomentum& a, const FourMomentum& b) {
     return a.E() < b.E();
+  }
+
+  /// Comparison to give a sorting by decreasing mass
+  inline bool cmpMomByMass(const FourMomentum& a, const FourMomentum& b) {
+    return a.mass() > b.mass();
+  }
+  /// Comparison to give a sorting by increasing mass
+  inline bool cmpMomByAscMass(const FourMomentum& a, const FourMomentum& b) {
+    return a.mass() < b.mass();
   }
 
   /// Comparison to give a sorting by increasing eta (pseudorapidity)

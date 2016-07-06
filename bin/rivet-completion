@@ -27,8 +27,8 @@ function _rivet() {
     cur="${COMP_WORDS[COMP_CWORD]}"
     prev="${COMP_WORDS[COMP_CWORD-1]}"
 
-    opts="--help --verbose --quiet --version --nevts --cross-section"
-    opts="$opts --analysis --runname --list-analyses --show-analysis"
+    opts="--help --verbose --quiet --version --nevts --nskip --cross-section"
+    opts="$opts --analysis --analyses --runname --list-analyses --show-analysis" #< intentionally skip --show-analyses alias
     opts="$opts --analysis-path --analysis-path-append --pwd"
     opts="$opts --histo-file --histo-interval --event-timeout"
     opts="$opts -a -A -n -h -x -H -l -v -q"
@@ -39,7 +39,7 @@ function _rivet() {
         fi
     fi
 
-    if (echo ${prev} | egrep -- "-\<a\>|--\<analysis\>|--\<show-analysis\>|--\<list-analyses\>" &> /dev/null); then
+    if (echo ${prev} | egrep -- "-\<a\>|--\<analysis\>|--\<analyses\>|--\<show-analysis\>|--\<show-analyses\>|--\<list-analyses\>" &> /dev/null); then
         anas=$(rivet --list-analyses --quiet)
         COMPREPLY=( $(compgen -W "$anas" -- ${cur}) )
         return 0
@@ -98,6 +98,36 @@ function _rivet_config() {
 
 
 complete -F _rivet_config rivet-config
+
+
+##########################
+
+
+function _rivet_buildplugin() {
+    local cur prev commands options command
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
+
+    opts="--help -h --with-root --cmd --dry-run"
+    if [[ ${cur} == -* ]] ; then
+        COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
+        if test -n "$COMPREPLY"; then
+            return 0
+        fi
+    fi
+
+    # COMPREPLY=( $(compgen -W "$opts" -- ${cur}) )
+    # if test -n "$COMPREPLY"; then
+    #     return 0
+    # fi
+
+    _filedir
+    return 0
+}
+
+
+complete -F _rivet_buildplugin rivet-buildplugin
 
 
 ##############################

@@ -21,24 +21,25 @@ namespace Rivet {
   }
 
 
-  std::map<std::string, Scatter2DPtr> getRefData(const string& papername) {
+  map<string, AnalysisObjectPtr> getRefData(const string& papername) {
     const string datafile = getDatafilePath(papername);
 
     // Make an appropriate data file reader and read the data objects
-    YODA::Reader& reader = (datafile.find(".yoda") != string::npos) ? \
+    YODA::Reader& reader = (datafile.find(".yoda") != string::npos) ?   \
       YODA::ReaderYODA::create() : YODA::ReaderAIDA::create();
     vector<YODA::AnalysisObject *> aovec;
     reader.read(datafile, aovec);
 
     // Return value, to be populated
-    std::map<std::string, Scatter2DPtr> rtn;
+    map<string, AnalysisObjectPtr> rtn;
     foreach ( YODA::AnalysisObject* ao, aovec ) {
-      Scatter2DPtr refdata( dynamic_cast<Scatter2D *>(ao) );
+      // Scatter2DPtr refdata( dynamic_cast<Scatter2D*>(ao) );
+      AnalysisObjectPtr refdata(ao);
       if (!refdata) continue;
       string plotpath = refdata->path();
 
       // Split path at "/" and only return the last field, i.e. the histogram ID
-      std::vector<string> pathvec;
+      vector<string> pathvec;
       split( pathvec, plotpath, is_any_of("/"), token_compress_on );
       plotpath = pathvec.back();
 

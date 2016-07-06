@@ -123,7 +123,7 @@ namespace Rivet {
         const double weight = event.weight();
         _sumW += weight;
 
-        _h_mult_total->fill(LHCbcountAll);
+        _h_mult_total->fill(LHCbcountAll, weight);
 
         _h_mult_eta[0]->fill(LHCbcountEta[0], weight);
         _h_mult_eta[1]->fill(LHCbcountEta[1], weight);
@@ -196,10 +196,10 @@ namespace Rivet {
       double plft = 0.;
       const GenParticle* part = p.genParticle();
       if ( 0 == part ) return -1;
-      GenVertex* ivtx = part->production_vertex();
+      const GenVertex* ivtx = part->production_vertex();
       while(ivtx) {
         if (ivtx->particles_in_size() < 1) { lftSum = -1.; break; };
-        const HepMC::GenVertex::particles_in_const_iterator iPart_invtx = ivtx->particles_in_const_begin();
+        const GenVertex::particles_in_const_iterator iPart_invtx = ivtx->particles_in_const_begin();
         part = (*iPart_invtx);
         if ( !(part) ) { lftSum = -1.; break; };
         ivtx = part->production_vertex();

@@ -2,16 +2,16 @@
 #include "Rivet/Projections/WFinder.hh"
 #include "Rivet/Projections/ChargedFinalState.hh"
 #include "Rivet/Projections/InvMassFinalState.hh"
-#include "Rivet/Projections/MissingMomentum.hh"
 #include "Rivet/Projections/MergedFinalState.hh"
 #include "Rivet/Projections/DressedLeptons.hh"
 #include "Rivet/Projections/VetoedFinalState.hh"
+#include "Rivet/Projections/Beam.hh"
 
 namespace Rivet {
 
 
   WFinder::WFinder(const FinalState& inputfs,
-                   const Cut& fsCut,
+                   const Cut& leptoncuts,
                    PdgId pid,
                    double minmass, double maxmass,
                    double missingET,
@@ -34,23 +34,18 @@ namespace Rivet {
     _nu_pid = abs(_pid) + 1;
     assert(abs(_nu_pid) == PID::NU_E || abs(_nu_pid) == PID::NU_MU);
 
-    // Don't make pT or eta cuts on the neutrino
-    IdentifiedFinalState neutrinos(inputfs);
-    neutrinos.acceptNeutrinos();
-    addProjection(neutrinos, "Neutrinos");
-
     // Lepton clusters
     IdentifiedFinalState bareleptons(inputfs);
     bareleptons.acceptIdPair(pid);
     const bool doClustering = (clusterPhotons != NOCLUSTER);
     const bool useDecayPhotons = (clusterPhotons == CLUSTERALL);
-    DressedLeptons leptons(inputfs, bareleptons, dRmax, fsCut, doClustering, useDecayPhotons);
+    DressedLeptons leptons(inputfs, bareleptons, dRmax, leptoncuts, doClustering, useDecayPhotons);
     addProjection(leptons, "DressedLeptons");
 
     // Add MissingMomentum proj to calc MET
     MissingMomentum vismom(inputfs);
     addProjection(vismom, "MissingET");
-    // Set ETmiss
+    // Set ETmiss cut
     _etMiss = missingET;
 
     VetoedFinalState remainingFS;
@@ -62,8 +57,13 @@ namespace Rivet {
   /////////////////////////////////////////////////////
 
 
-  const FinalState& WFinder::remainingFinalState() const {
-    return getProjection<FinalState>("RFS");
+  const VetoedFinalState& WFinder::remainingFinalState() const {
+    return getProjection<VetoedFinalState>("RFS");
+  }
+
+
+  const MissingMomentum& WFinder::missingMom() const {
+    return getProjection<MissingMomentum>("MissingET");
   }
 
 
@@ -82,18 +82,41 @@ namespace Rivet {
   void WFinder::project(const Event& e) {
     clear();
 
+    // Beam beam;
+    // beam.project(e);
+    // const double sqrtS = beam.sqrtS();
+
+    // Check missing ET
+    const MissingMomentum& missmom = applyProjection<MissingMomentum>(e, "MissingET");
+    //const FourMomentum& pmiss = FourMomentum(sqrtS,0,0,0) + missmom.missingMomentum();
+
+    const double met = missmom.vectorEt().mod();
+    MSG_TRACE("MET = " << met/GeV << " GeV vs. required = " << _etMiss/GeV << " GeV");
+    if (met < _etMiss) {
+      MSG_DEBUG("Not enough missing ET: " << met/GeV << " GeV vs. " << _etMiss/GeV << " GeV");
+      return;
+    }
+
     const DressedLeptons& leptons = applyProjection<DressedLeptons>(e, "DressedLeptons");
-    const FinalState& neutrinos = applyProjection<FinalState>(e, "Neutrinos");
+    if ( leptons.dressedLeptons().empty() ) {
+      MSG_DEBUG("No dressed leptons.");
+      return;
+    }
+
+    MSG_DEBUG("Found at least one dressed lepton: " << leptons.dressedLeptons()[0].momentum() );
+    const FourMomentum pmiss = missmom.missingMomentum(0*GeV);
+    MSG_DEBUG("Found missing 4-momentum: " << pmiss);
 
     // Make and register an invariant mass final state for the W decay leptons
     vector<pair<PdgId, PdgId> > l_nu_ids;
-    l_nu_ids += make_pair(abs(_pid), -abs(_nu_pid));
-    l_nu_ids += make_pair(-abs(_pid), abs(_nu_pid));
+    l_nu_ids += make_pair(abs(_pid), -_nu_pid);
+    l_nu_ids += make_pair(-abs(_pid), _nu_pid);
     InvMassFinalState imfs(l_nu_ids, _minmass, _maxmass, _masstarget);
     imfs.useTransverseMass(_useTransverseMass);
     Particles tmp;
     tmp.insert(tmp.end(), leptons.dressedLeptons().begin(), leptons.dressedLeptons().end());
-    tmp.insert(tmp.end(), neutrinos.particles().begin(), neutrinos.particles().end());
+    tmp.push_back(Particle( _nu_pid, pmiss)); // fake neutrino from Et miss vector
+    tmp.push_back(Particle(-_nu_pid, pmiss)); // fake antineutrino from Et miss vector
     imfs.calc(tmp);
 
     if (imfs.particlePairs().size() < 1) return;
@@ -117,29 +140,20 @@ namespace Rivet {
     stringstream msg;
     string wsign = (wcharge == 1) ? "+" : "-";
     string wstr = "W" + wsign;
-    msg << wstr << " reconstructed from: " << "\n"
+    msg << wstr << " " << pW << " reconstructed from: " << "\n"
         << "   " << p1.momentum() << " " << p1.pid() << "\n"
         << " + " << p2.momentum() << " " << p2.pid();
     MSG_DEBUG(msg.str());
-
-    // Check missing ET
-    const MissingMomentum& vismom = applyProjection<MissingMomentum>(e, "MissingET");
-    const double met = vismom.vectorEt().mod();
-    MSG_TRACE("MET = " << met/GeV << " GeV vs. required = " << _etMiss/GeV << " GeV");
-    if (met < _etMiss) {
-      MSG_DEBUG("Not enough missing ET: " << met/GeV << " GeV vs. " << _etMiss/GeV << " GeV");
-      return;
-    }
 
     // Make W Particle and insert into particles list
     const PdgId wpid = (wcharge == 1) ? PID::WPLUSBOSON : PID::WMINUSBOSON;
     _bosons.push_back(Particle(wpid, pW));
 
-    // Find the DressedLeptons and neutrinos which survived the IMFS cut such that we can
+    // Find the DressedLeptons which survived the IMFS cut such that we can
     // extract their original particles
-    foreach (const Particle& p, _constituentNeutrinos) {
-      _theParticles.push_back(p);
-    }
+
+    // TODO: do we need to add all used invisibles to _theParticles ?
+
     foreach (const Particle& p, _constituentLeptons) {
       foreach (const DressedLepton& l, leptons.dressedLeptons()) {
         if (p.pid() == l.pid() && p.momentum() == l.momentum()) {

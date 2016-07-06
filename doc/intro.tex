@@ -18,12 +18,12 @@ analyses operating on the generic ``HepMC'' event record.
 The simplest way to use Rivet is via the \kbd{rivet} command line tool, which
 analyses textual HepMC event records as they are generated and produces output
 distributions in a structured textual format. The input events are generated
-using the generator's own steering program, if one is provided; for generators
-which provide no default way to produce HepMC output, the AGILe generator
-interface library, and in particular the \kbd{agile-runmc} command which it
-provides, may be useful. For those who wish to embed their analyses in some
-larger framework, Rivet can also be used as a library to run programmatically
-on HepMC event objects with no special executable being required.
+using the generator's own steering program, which is typically provided for
+modern codes; for older generators which have no default way to produce HepMC
+output, the AGILe generator interface library and \kbd{agile-runmc} command may
+be useful. For those who wish to embed their analyses in some larger framework,
+Rivet can also be used as a library to run programmatically on HepMC event
+objects with no special executable being required.
 
 Before we get started, a declaration of intent: this manual is intended to be a
 guide to using Rivet, rather than a comprehensive and painstakingly maintained

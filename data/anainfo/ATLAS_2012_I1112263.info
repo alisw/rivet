@@ -3,6 +3,7 @@ Year: 2012
 Summary: 3 lepton plus missing transverse energy SUSY search
 Experiment: ATLAS
 Collider: LHC
+InspireID: 1112263
 Status: VALIDATED
 Authors:
  - Peter Richardson <peter.richardson@durham.ac.uk>

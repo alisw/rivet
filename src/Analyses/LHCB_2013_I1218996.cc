@@ -70,6 +70,7 @@ namespace Rivet {
 
         // We're only interested in charm hadrons
         if (!p.isHadron() || !p.hasCharm()) continue;
+
         // Kinematic acceptance
         const double y = p.absrap(); ///< Double analysis efficiency with a "two-sided LHCb"
         const double pT = p.pT();
@@ -98,12 +99,13 @@ namespace Rivet {
           break;
         }
       }
+
     }
 
 
     /// Normalise histograms etc., after the run
     void finalize() {
-      const double scale_factor = crossSection()/microbarn / sumOfWeights();
+      const double scale_factor = 0.5 * crossSection()/microbarn / sumOfWeights();
       /// Avoid the implicit division by the bin width in the BinnedHistogram::scale method.
       foreach (Histo1DPtr h, _h_pdg411_Dplus_pT_y.getHistograms()) h->scaleW(scale_factor);
       foreach (Histo1DPtr h, _h_pdg421_Dzero_pT_y.getHistograms()) h->scaleW(scale_factor);

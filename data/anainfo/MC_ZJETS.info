@@ -10,8 +10,8 @@ RunInfo:
 NumEvents: 1000000
 PtCuts: [0]
 Description:
-  Available observables are Z mass, pT of jets 1-4, jet multiplicity,
+  Available observables are the pT of jets 1-4, jet multiplicity,
   $\Delta\eta(Z, \text{jet1})$, $\Delta R(\text{jet2}, \text{jet3})$,
-  differential jet rates 0->1, 1->2, 2->3, 3->4, integrated 0--4 jet
-  rates.
+  differential jet rates 0->1, 1->2, 2->3, 3->4, and integrated 0--4
+  jet rates.
 NeedCrossSection: yes

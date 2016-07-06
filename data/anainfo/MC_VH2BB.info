@@ -1,7 +1,7 @@
 Name: MC_VH2BB
 Summary: MC unboosted VH2bb validation plots
 Collider: LHC
-Status: UNVALIDATED
+Status: VALIDATED
 Authors:
  - Ben Smart <bsmart@cern.ch>
  - Andy Buckley <andy.buckley@cern.ch>

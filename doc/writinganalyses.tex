@@ -514,34 +514,30 @@ hopefully self-evident, and angular range-mapping functions such as
 \subsection{Histogramming}
 \label{section:histogramming}
 
-Rivet's histogramming uses the AIDA interfaces, composed of abstract classes
-\code{IHistogram1D}, \code{IProfile1D}, \code{IDataPointSet} etc. which are
-built by a factories system. Since it's our feeling that much of the factory
-infrastructure constitutes an abstraction overload, we provide histogram booking
-functions as part of the \code{Analysis} class, so that in the \code{init}
-method of your analysis you should book histograms with function calls like:
-%
-% Should this be recommended without titles/labels, or is this what we want for
-% plugin analyses?
+Rivet's histogramming uses the YODA system, composed of ``analysis object''
+classes \code{Histo1D}, \code{Profile1D}, \code{Scatter2D}, and less-used 2D
+histograms and profiles, and 1D and 3D scatter plots. These can be created
+directly in the analysis code, but to hook fully into the multiple-event-weight
+and other machinery in Rivet it's normal to book them through \code{Analysis} class methods, to be called in the \code{init}
+step of your analysis routine:
 %
 \begin{snippet}
   void init() {
-    _h_one = bookHistogram1D(2,1,1);
-    _h_two = bookProfile1D(3,1,2);
-    _h_three = bookHistogram1D("d00-x00-y00", 50, 0.0, 1.0);
+    _h_one = bookHisto1D(2, 1, 1);
+    _h_two = bookProfile1D(3, 1, 2);
+    _h_three = bookHisto1D("d00-x00-y00", logscale(50, 1.0, 100.0));
   }
 \end{snippet}
 %
 Here the first two bookings have a rather cryptic 3-integer sequence as the
-first arguments. This is the recommended scheme, as it makes use of the exported
-data files from HepData, in which 1D histograms are constructed from a
-combination of $x$ and $y$ axes in a dataset $d$, corresponding to names of the
-form \kbd{d\val{d}-x\val{x}-y\val{y}}. This auto-booking of histograms saves you
-from having to copy out reams of bin edges and values into your code, and makes
-sure that any data fixes in HepData are easily propagated to Rivet. The
-reference data files which are used for these booking methods are distributed
-and installed with Rivet, you can find them in the
-\kbd{\val{installdir}/share/Rivet} directory of your installation. The third
+first arguments. This is the recommended scheme, which corresponds to the
+HepData structure of 1D histograms as a combination of $x$ and $y$ axes in a
+dataset $d$, giving names of the form \kbd{d\val{d}-x\val{x}-y\val{y}}. This
+auto-booking of histograms saves you from having to copy out reams of bin edges
+and values into your code, and makes sure that any data bug-fixes in HepData are
+easily propagated to Rivet. The reference data files which are used for these
+booking methods are distributed and installed with Rivet, you can find them in
+the \kbd{\val{installdir}/share/Rivet} directory of your installation. The third
 booking is for a histogram for which there is no such HepData entry: it uses the
 usual scheme of specifying the name, number of bins and the min/max $x$-axis
 limits manually.
@@ -861,7 +857,7 @@ int main() {
 
   // Finalize Rivet and generator
   rivet.finalize();
-  rivet.writeData("out.aida");
+  rivet.writeData("out.yoda");
   generator->finalize();
 
   return 0;

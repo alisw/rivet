@@ -122,28 +122,34 @@ namespace Rivet {
       return _analyses;
     }
 
-    /// Add an analysis to the run list using its name. The actual Analysis
-    /// to be used will be obtained via AnalysisHandler::getAnalysis(string).
-    /// If no matching analysis is found, no analysis is added (i.e. the
-    /// null pointer is checked and discarded.
+    /// Get a registered analysis by name.
+    const AnaHandle analysis(const std::string& analysisname) const;
+
+
+    /// Add an analysis to the run list by object
+    AnalysisHandler& addAnalysis(Analysis* analysis);
+
+    /// @brief Add an analysis to the run list using its name.
+    ///
+    /// The actual Analysis to be used will be obtained via
+    /// AnalysisLoader::getAnalysis(string).  If no matching analysis is found,
+    /// no analysis is added (i.e. the null pointer is checked and discarded.
     AnalysisHandler& addAnalysis(const std::string& analysisname);
+
+    /// @brief Add analyses to the run list using their names.
+    ///
+    /// The actual {@link Analysis}' to be used will be obtained via
+    /// AnalysisHandler::addAnalysis(string), which in turn uses
+    /// AnalysisLoader::getAnalysis(string). If no matching analysis is found
+    /// for a given name, no analysis is added, but also no error is thrown.
+    AnalysisHandler& addAnalyses(const std::vector<std::string>& analysisnames);
+
 
     /// Remove an analysis from the run list using its name.
     AnalysisHandler& removeAnalysis(const std::string& analysisname);
 
-
-    /// Add analyses to the run list using their names. The actual {@link
-    /// Analysis}' to be used will be obtained via
-    /// AnalysisHandler::addAnalysis(string), which in turn uses
-    /// AnalysisHandler::getAnalysis(string). If no matching analysis is found
-    /// for a given name, no analysis is added, but also no error is thrown.
-    AnalysisHandler& addAnalyses(const std::vector<std::string>& analysisnames);
-
     /// Remove analyses from the run list using their names.
     AnalysisHandler& removeAnalyses(const std::vector<std::string>& analysisnames);
-
-    /// Add an analysis to the run list by object
-    AnalysisHandler& addAnalysis(Analysis* analysis);
 
     //@}
 
@@ -154,9 +160,17 @@ namespace Rivet {
     /// Initialize a run, with the run beams taken from the example event.
     void init(const GenEvent& event);
 
-    /// Analyze the given \a event. This function will call the
-    /// AnalysisBase::analyze() function of all included analysis objects.
+    /// @brief Analyze the given \a event by reference.
+    ///
+    /// This function will call the AnalysisBase::analyze() function of all
+    /// included analysis objects.
     void analyze(const GenEvent& event);
+
+    /// @brief Analyze the given \a event by pointer.
+    ///
+    /// This function will call the AnalysisBase::analyze() function of all
+    /// included analysis objects, after checking the event pointer validity.
+    void analyze(const GenEvent* event);
 
     /// Finalize a run. This function calls the AnalysisBase::finalize()
     /// functions of all included analysis objects.
@@ -190,13 +204,14 @@ namespace Rivet {
     std::string _runname;
 
     /// Number of events seen.
+    /// @todo Replace by a counter
     unsigned int _numEvents;
-
     /// Sum of event weights seen.
-    double _sumOfWeights;
+    /// @todo Replace by a counter
+    double _sumOfWeights, _sumOfWeightsSq;
 
     /// Cross-section known to AH
-    double _xs;
+    double _xs, _xserr;
 
     /// Beams used by this run.
     ParticlePair _beams;

@@ -219,10 +219,20 @@ namespace Rivet {
 
 
   /// Return 3 times the charge (3 x quark charge is an int)
+  PARTICLE_TO_PID_INTFN(charge3)
+
+  /// Return 3 times the absolute charge (3 x quark charge is an int)
+  PARTICLE_TO_PID_INTFN(abscharge3)
+
+  /// Return 3 times the charge (3 x quark charge is an int)
+  /// @deprecated Prefer charge3
   PARTICLE_TO_PID_INTFN(threeCharge)
 
   /// Return the charge
   PARTICLE_TO_PID_DBLFN(charge)
+
+  /// Return the absolute charge
+  PARTICLE_TO_PID_DBLFN(abscharge)
 
   //@}
 
@@ -233,30 +243,30 @@ namespace Rivet {
   /// @brief Return true if Particles @a a and @a b have the opposite charge sign
   /// @note Two neutrals returns false
   inline bool oppSign(const Particle& a, const Particle& b) {
-    return sign(a.threeCharge()) == -sign(b.threeCharge()) && sign(a.threeCharge()) != ZERO;
+    return sign(a.charge3()) == -sign(b.charge3()) && sign(a.charge3()) != ZERO;
   }
 
   /// Return true if Particles @a a and @a b have the same charge sign
   /// @note Two neutrals returns true
   inline bool sameSign(const Particle& a, const Particle& b) {
-    return sign(a.threeCharge()) == sign(b.threeCharge());
+    return sign(a.charge3()) == sign(b.charge3());
   }
 
   /// Return true if Particles @a a and @a b have the exactly opposite charge
   /// @note Two neutrals returns false
   inline bool oppCharge(const Particle& a, const Particle& b) {
-    return a.threeCharge() == -b.threeCharge() && a.threeCharge() != 0;
+    return a.charge3() == -b.charge3() && a.charge3() != 0;
   }
 
   /// Return true if Particles @a a and @a b have the same charge (including neutral)
   /// @note Two neutrals returns true
   inline bool sameCharge(const Particle& a, const Particle& b) {
-    return a.threeCharge() == b.threeCharge();
+    return a.charge3() == b.charge3();
   }
 
   /// Return true if Particles @a a and @a b have a different (not necessarily opposite) charge
   inline bool diffCharge(const Particle& a, const Particle& b) {
-    return a.threeCharge() != b.threeCharge();
+    return a.charge3() != b.charge3();
   }
 
   //@}

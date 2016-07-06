@@ -41,7 +41,7 @@ namespace Rivet {
       _h_Ptgamma = bookHisto1D("Ptgamma", logspace(50, 0.01, 30));
       _h_Egamma = bookHisto1D("Egamma", logspace(50, 0.01, 200));
       _h_sumPtgamma = bookHisto1D("sumPtgamma", 50, 0, 100);
-      _h_sumEgamma = bookHisto1D("sumEgamma", 50, 0, sqrtS()/GeV/5.0);
+      _h_sumEgamma = bookHisto1D("sumEgamma", 50, 0, (sqrtS()>0.?sqrtS():14000.)/GeV/5.0);
       _h_DelR = bookHisto1D("DeltaR", 50, 0, 2);
       _h_DelR_weighted = bookHisto1D("DeltaR_ptweighted", 50, 0, 2);
       _h_DelR_R = bookHisto1D("DeltaR_R", 50, 0, 2);

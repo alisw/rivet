@@ -18,7 +18,7 @@ LegendYPos=0.9
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2014_I1312627/d01
-XCustomMajorTicks=0.5	$\geq 0$	1.5	$\geq 1$	2.5	$\geq 2$	3.5	$\geq 3$	4.5	$\geq 4$
+XCustomMajorTicks=0.5	$\geq0$	1.5	$\geq1$	2.5	$\geq2$	3.5	$\geq3$	4.5	$\geq4$
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2014_I1312627/d04
@@ -104,4 +104,3 @@ YLabel=$(\text{d}\sigma_{W + \geq 2j} / \text{d}y^j) / (\text{d}\sigma_{Z + \geq
 XLabel=$|y^j|$ (3rd leading jet)
 YLabel=$(\text{d}\sigma_{W + \geq 3j} / \text{d}y^j) / (\text{d}\sigma_{Z + \geq 3j} / \text{d}y^j)$
 # END PLOT
-

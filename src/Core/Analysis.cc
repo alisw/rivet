@@ -187,13 +187,27 @@ namespace Rivet {
       MSG_ERROR("Can't find reference histogram " << hname);
       throw Exception("Reference data " + hname + " not found.");
     }
-    return *_refdata[hname];
+    return dynamic_cast<Scatter2D&>(*_refdata[hname]);
   }
 
 
   const Scatter2D& Analysis::refData(unsigned int datasetId, unsigned int xAxisId, unsigned int yAxisId) const {
     const string hname = makeAxisCode(datasetId, xAxisId, yAxisId);
     return refData(hname);
+  }
+
+
+  CounterPtr Analysis::bookCounter(const string& cname,
+                                   const string& title) {
+                                   // const string& xtitle,
+                                   // const string& ytitle) {
+    const string path = histoPath(cname);
+    CounterPtr ctr( new Counter(path, title) );
+    addAnalysisObject(ctr);
+    MSG_TRACE("Made counter " << cname << " for " << name());
+    // hist->setAnnotation("XLabel", xtitle);
+    // hist->setAnnotation("YLabel", ytitle);
+    return ctr;
   }
 
 
@@ -651,7 +665,7 @@ namespace Rivet {
 
   void Analysis::normalize(Histo1DPtr histo, double norm, bool includeoverflows) {
     if (!histo) {
-      MSG_ERROR("Failed to normalize histo=NULL in analysis " << name() << " (norm=" << norm << ")");
+      MSG_WARNING("Failed to normalize histo=NULL in analysis " << name() << " (norm=" << norm << ")");
       return;
     }
     MSG_TRACE("Normalizing histo " << histo->path() << " to " << norm);
@@ -666,11 +680,11 @@ namespace Rivet {
 
   void Analysis::scale(Histo1DPtr histo, double scale) {
     if (!histo) {
-      MSG_ERROR("Failed to scale histo=NULL in analysis " << name() << " (scale=" << scale << ")");
+      MSG_WARNING("Failed to scale histo=NULL in analysis " << name() << " (scale=" << scale << ")");
       return;
     }
     if (std::isnan(scale) || std::isinf(scale)) {
-      MSG_ERROR("Failed to scale histo=" << histo->path() << " in analysis: " << name() << " (invalid scale factor = " << scale << ")");
+      MSG_WARNING("Failed to scale histo=" << histo->path() << " in analysis: " << name() << " (invalid scale factor = " << scale << ")");
       scale = 0;
     }
     MSG_TRACE("Scaling histo " << histo->path() << " by factor " << scale);

@@ -273,13 +273,11 @@ namespace Rivet {
     assert(nbins > 0);
     vector<double> rtn;
     const double interval = (end-start)/static_cast<double>(nbins);
-    double edge = start;
     for (size_t i = 0; i < nbins; ++i) {
-      rtn.push_back(edge);
-      edge += interval;
+      rtn.push_back(start + i*interval);
     }
     assert(rtn.size() == nbins);
-    if (include_end) rtn.push_back(end); // exact end, not result of n * interval
+    if (include_end) rtn.push_back(end); //< exact end, not result of n * interval
     return rtn;
   }
 
@@ -295,15 +293,15 @@ namespace Rivet {
     assert(nbins > 0);
     const double logstart = std::log(start);
     const double logend = std::log(end);
-    const vector<double> logvals = linspace(nbins, logstart, logend);
-    assert(logvals.size() == nbins+1);
-    vector<double> rtn; rtn.reserve(logvals.size());
-    rtn.push_back(start);
-    for (size_t i = 1; i < logvals.size()-1; ++i) {
+    const vector<double> logvals = linspace(nbins, logstart, logend, false);
+    assert(logvals.size() == nbins);
+    vector<double> rtn; rtn.reserve(nbins+1);
+    rtn.push_back(start); //< exact start, not exp(log(start))
+    for (size_t i = 1; i < logvals.size(); ++i) {
       rtn.push_back(std::exp(logvals[i]));
     }
     assert(rtn.size() == nbins);
-    if (include_end) rtn.push_back(end);
+    if (include_end) rtn.push_back(end); //< exact end, not exp(n * loginterval)
     return rtn;
   }
 

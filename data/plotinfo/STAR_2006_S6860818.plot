@@ -58,7 +58,7 @@ FullRange=1
 Title=Anti-baryon over baryon ratio vs strangeness
 XLabel=strangeness
 YLabel=anti-baryon/baryon ratio
-XCustomMajorTicks=0	0 ($\bar p / p$)	1	1 ($\bar \Lambda / \Lambda$)	2	2 ($\bar \Xi / \Xi$)	3	3 ($\bar \Omega / \Omega$)
+XCustomMajorTicks=0	0~($\bar{p}/p$)	 1 1~($\bar{\Lambda}/\Lambda$)  2 2~($\bar{\Xi}/\Xi$)  3 3~($\bar{\Omega}/\Omega$)
 LogY=0
 ShowZero=0
 # END PLOT
@@ -109,4 +109,3 @@ PolyMarker=o
 \rput[B]\physicscoor(1.520, 0.14){\small $\Lambda$}
 \rput[B]\physicscoor(1.672, 0.14){\small $(\Omega + \bar\Omega)$}
 # END SPECIAL
-

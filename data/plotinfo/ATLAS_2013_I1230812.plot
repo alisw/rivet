@@ -271,3 +271,6 @@ YLabel=$\sigma(Z/\gamma^*(\to \mu^+\mu^-)+ N_\text{jet})$ [pb]
 YLabel=$\sigma(Z/\gamma^*(\to \mu^+\mu^-)+ N_\text{jet})$ [pb]
 # END PLOT
 
+# BEGIN PLOT /ATLAS_2013_I1230812_MU/d01-x01-y01
+CustomLegend=$Z/\gamma^*\to \mu^+\mu^-$ First data bin read from plot
+# END PLOT

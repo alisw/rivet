@@ -138,14 +138,9 @@ namespace Rivet {
     /// Normalise histograms etc., after the run
     void finalize() {
 
-      /// Print summary info
-      const double xs_pb(crossSection() / picobarn);
-      const double sumw(sumOfWeights());
-      MSG_INFO("Cross-Section/pb: " << xs_pb      );
-      MSG_INFO("Sum of weights  : " << sumw       );
-      MSG_INFO("nEvents         : " << numEvents());
-
-      const double sf(xs_pb / sumw);
+      const double xs_fb = crossSection()/femtobarn;
+      const double sumw = sumOfWeights();
+      const double sf = xs_fb / sumw;
 
       scale(_hist_EgammaT_excl, sf);
       scale(_hist_EgammaT_incl, sf);
@@ -177,6 +172,7 @@ namespace Rivet {
 
   };
 
+
   class ATLAS_2013_I1217863_W_EL : public ATLAS_2013_I1217863_W {
   public:
     ATLAS_2013_I1217863_W_EL()
@@ -185,6 +181,7 @@ namespace Rivet {
       _mode = 2;
     }
   };
+
 
   class ATLAS_2013_I1217863_W_MU : public ATLAS_2013_I1217863_W {
   public:
@@ -195,8 +192,9 @@ namespace Rivet {
     }
   };
 
-  // The hook for the plugin system
+
   DECLARE_RIVET_PLUGIN(ATLAS_2013_I1217863_W);
   DECLARE_RIVET_PLUGIN(ATLAS_2013_I1217863_W_EL);
   DECLARE_RIVET_PLUGIN(ATLAS_2013_I1217863_W_MU);
+
 }

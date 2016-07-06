@@ -17,11 +17,7 @@ namespace Rivet {
 
     /// Constructor
     ATLAS_2013_I1230812(string name="ATLAS_2013_I1230812")
-      : Analysis(name),
-        _weights_incl(7, 0.0),
-        _weights_excl(7, 0.0),
-        _weights_excl_pt150(7, 0.0),
-        _weights_excl_vbf(7, 0.0)
+      : Analysis(name)
     {
       // This class uses the combined e+mu mode
       _mode = 1;
@@ -59,34 +55,34 @@ namespace Rivet {
       jets.useInvisibles(true);
       addProjection(jets, "jets");
 
-      _h_njet_incl  = bookHisto1D (1,  1, _mode);
-      _h_njet_incl_ratio = bookScatter2D(2,  1, _mode, true);
-      _h_njet_excl  = bookHisto1D (3,  1, _mode);
-      _h_njet_excl_ratio  = bookScatter2D (4,  1, _mode, true);
-      _h_njet_excl_pt150  = bookHisto1D (5,  1, _mode);
-      _h_njet_excl_pt150_ratio  = bookScatter2D (6,  1, _mode, true);
-      _h_njet_excl_vbf  = bookHisto1D (7,  1, _mode);
-      _h_njet_excl_vbf_ratio  = bookScatter2D (8,  1, _mode, true);
-      _h_ptlead      = bookHisto1D (9,  1, _mode);
-      _h_ptseclead  = bookHisto1D (10,  1, _mode);
-      _h_ptthirdlead  = bookHisto1D (11,  1, _mode);
-      _h_ptfourthlead  = bookHisto1D (12,  1, _mode);
-      _h_ptlead_excl      = bookHisto1D (13,  1, _mode);
-      _h_pt_ratio      = bookHisto1D (14,  1, _mode);
-      _h_pt_z      = bookHisto1D (15,  1, _mode);
-      _h_pt_z_excl      = bookHisto1D (16,  1, _mode);
-      _h_ylead      = bookHisto1D (17,  1, _mode);
-      _h_yseclead   = bookHisto1D (18,  1, _mode);
-      _h_ythirdlead   = bookHisto1D (19,  1, _mode);
-      _h_yfourthlead   = bookHisto1D (20,  1, _mode);
-      _h_deltay     = bookHisto1D (21, 1, _mode);
-      _h_mass       = bookHisto1D (22,  1, _mode);
-      _h_deltaphi   = bookHisto1D (23, 1, _mode);
-      _h_deltaR     = bookHisto1D (24, 1, _mode);
-      _h_ptthirdlead_vbf  = bookHisto1D (25,  1, _mode);
-      _h_ythirdlead_vbf   = bookHisto1D (26,  1, _mode);
-      _h_ht     = bookHisto1D (27, 1, _mode);
-      _h_st     = bookHisto1D (28, 1, _mode);
+      _h_njet_incl              = bookHisto1D(  1, 1, _mode);
+      _h_njet_incl_ratio        = bookScatter2D(2, 1, _mode, true);
+      _h_njet_excl              = bookHisto1D(  3, 1, _mode);
+      _h_njet_excl_ratio        = bookScatter2D(4, 1, _mode, true);
+      _h_njet_excl_pt150        = bookHisto1D(  5, 1, _mode);
+      _h_njet_excl_pt150_ratio  = bookScatter2D(6, 1, _mode, true);
+      _h_njet_excl_vbf          = bookHisto1D ( 7, 1, _mode);
+      _h_njet_excl_vbf_ratio    = bookScatter2D(8, 1, _mode, true);
+      _h_ptlead                 = bookHisto1D(  9, 1, _mode);
+      _h_ptseclead              = bookHisto1D( 10, 1, _mode);
+      _h_ptthirdlead            = bookHisto1D( 11, 1, _mode);
+      _h_ptfourthlead           = bookHisto1D( 12, 1, _mode);
+      _h_ptlead_excl            = bookHisto1D( 13, 1, _mode);
+      _h_pt_ratio               = bookHisto1D( 14, 1, _mode);
+      _h_pt_z                   = bookHisto1D( 15, 1, _mode);
+      _h_pt_z_excl              = bookHisto1D( 16, 1, _mode);
+      _h_ylead                  = bookHisto1D( 17, 1, _mode);
+      _h_yseclead               = bookHisto1D( 18, 1, _mode);
+      _h_ythirdlead             = bookHisto1D( 19, 1, _mode);
+      _h_yfourthlead            = bookHisto1D( 20, 1, _mode);
+      _h_deltay                 = bookHisto1D( 21, 1, _mode);
+      _h_mass                   = bookHisto1D( 22, 1, _mode);
+      _h_deltaphi               = bookHisto1D( 23, 1, _mode);
+      _h_deltaR                 = bookHisto1D( 24, 1, _mode);
+      _h_ptthirdlead_vbf        = bookHisto1D( 25, 1, _mode);
+      _h_ythirdlead_vbf         = bookHisto1D( 26, 1, _mode);
+      _h_ht                     = bookHisto1D( 27, 1, _mode);
+      _h_st                     = bookHisto1D( 28, 1, _mode);
     }
 
 
@@ -112,13 +108,8 @@ namespace Rivet {
 
       const double weight = event.weight();
 
-      if (jets.size() < 7) _weights_excl[jets.size()] += weight;
-      for (size_t i = 0; i < 7; ++i) {
-        if (jets.size() >= i) _weights_incl[i] += weight;
-      }
-
       // Fill jet multiplicities
-      for (size_t ijet = 1; ijet <= jets.size(); ++ijet) {
+      for (size_t ijet = 0; ijet <= jets.size(); ++ijet) {
         _h_njet_incl->fill(ijet, weight);
       }
       _h_njet_excl->fill(jets.size(), weight);
@@ -133,10 +124,7 @@ namespace Rivet {
         _h_ylead ->fill(yabslead, weight);
         _h_pt_z  ->fill(ptz, weight);
         // Fill jet multiplicities
-        if (ptlead > 150) {
-          _h_njet_excl_pt150->fill(jets.size(), weight);
-          if (jets.size()<7) _weights_excl_pt150[jets.size()] += weight;
-        }
+        if (ptlead > 150)  _h_njet_excl_pt150->fill(jets.size(), weight);
 
         // Loop over selected jets, fill inclusive distributions
         double st=0;
@@ -163,24 +151,21 @@ namespace Rivet {
         const double pt2ndlead   = jets[1].pT()/GeV;
         const double ptratio     = pt2ndlead/ptlead;
         const double yabs2ndlead = fabs(jets[1].rapidity());
-        _h_ptseclead ->fill(pt2ndlead,   weight);
-        _h_yseclead  ->fill(yabs2ndlead, weight);
-        _h_pt_ratio  ->fill(ptratio, weight);
+        _h_ptseclead->fill(pt2ndlead,   weight);
+        _h_yseclead->fill( yabs2ndlead, weight);
+        _h_pt_ratio->fill( ptratio,     weight);
 
         // Dijet histos
         const double deltaphi = fabs(deltaPhi(jets[1], jets[0]));
         const double deltarap = fabs(jets[0].rapidity() - jets[1].rapidity()) ;
         const double deltar   = fabs(deltaR(jets[0], jets[1], RAPIDITY));
         const double mass     = (jets[0].momentum() + jets[1].momentum()).mass()/GeV;
-        _h_mass     ->fill(mass,     weight);
-        _h_deltay   ->fill(deltarap, weight);
-        _h_deltaphi ->fill(deltaphi, weight);
-        _h_deltaR   ->fill(deltar,   weight);
+        _h_mass->fill(    mass,     weight);
+        _h_deltay->fill(  deltarap, weight);
+        _h_deltaphi->fill(deltaphi, weight);
+        _h_deltaR->fill(  deltar,   weight);
 
-        if (mass > 350 && deltarap > 3) {
-          _h_njet_excl_vbf->fill(jets.size(), weight);
-          if (jets.size()<7) _weights_excl_vbf[jets.size()] += weight;
-        }
+        if (mass > 350 && deltarap > 3)  _h_njet_excl_vbf->fill(jets.size(), weight);
       }
 
       // Require at least three jets
@@ -188,15 +173,15 @@ namespace Rivet {
         // Third jet histos
         const double pt3rdlead   = jets[2].pT()/GeV;
         const double yabs3rdlead = fabs(jets[2].rapidity());
-        _h_ptthirdlead ->fill(pt3rdlead,   weight);
-        _h_ythirdlead  ->fill(yabs3rdlead, weight);
+        _h_ptthirdlead->fill(pt3rdlead,   weight);
+        _h_ythirdlead->fill( yabs3rdlead, weight);
 
         //Histos after VBF preselection
         const double deltarap = fabs(jets[0].rapidity() - jets[1].rapidity()) ;
         const double mass     = (jets[0].momentum() + jets[1].momentum()).mass();
         if (mass > 350 && deltarap > 3) {
-          _h_ptthirdlead_vbf ->fill(pt3rdlead,   weight);
-          _h_ythirdlead_vbf  ->fill(yabs3rdlead, weight);
+          _h_ptthirdlead_vbf->fill(pt3rdlead,   weight);
+          _h_ythirdlead_vbf->fill( yabs3rdlead, weight);
         }
       }
 
@@ -205,44 +190,49 @@ namespace Rivet {
         // Fourth jet histos
         const double pt4thlead   = jets[3].pT()/GeV;
         const double yabs4thlead = fabs(jets[3].rapidity());
-        _h_ptfourthlead ->fill(pt4thlead,   weight);
-        _h_yfourthlead  ->fill(yabs4thlead, weight);
+        _h_ptfourthlead->fill(pt4thlead,   weight);
+        _h_yfourthlead->fill( yabs4thlead, weight);
       }
     }
 
     /// @name Ratio calculator util functions
     //@{
 
-    /// Calculate the ratio, being careful about div-by-zero
-    double ratio(double a, double b) {
-      return (b != 0) ? a/b : 0;
+    /// Calculate the efficiency error, being careful about div-by-zero
+    double err_incl(const HistoBin1D &M, const HistoBin1D &N, bool hasWeights) {
+      double r = safediv(M.sumW(), N.sumW()); 
+      if (hasWeights) { // use F. James's approximation for weighted events
+        return sqrt( safediv((1 - 2 * r) * M.sumW2() + r * r * N.sumW2(), N.sumW() * N.sumW()) );
+      }
+      return sqrt( safediv(r * (1 - r), N.sumW()) );
     }
 
     /// Calculate the ratio error, being careful about div-by-zero
-    double ratio_err_incl(double a, double b) {
-      return (b != 0) ? sqrt(a/b*(1-a/b)/b) : 0;
+    double err_excl(const HistoBin1D &A, const HistoBin1D &B) {
+      double r = safediv(A.sumW(), B.sumW()); 
+      double dAsquared = safediv(A.sumW2(), A.sumW() * A.sumW()); // squared relative error of A
+      double dBsquared = safediv(B.sumW2(), B.sumW() * B.sumW()); // squared relative error of B
+      return r * sqrt(dAsquared + dBsquared);
     }
-
-    /// Calculate the ratio error, being careful about div-by-zero
-    double ratio_err_excl(double a, double b) {
-      return (b != 0) ? sqrt(a/sqr(b) + sqr(a)/(b*b*b)) : 0;
-    }
+    
 
     //@}
 
     void finalize() {
+      bool hasWeights = _h_njet_incl->effNumEntries() != _h_njet_incl->numEntries();
       for (size_t i = 0; i < 6; ++i) {
-        _h_njet_incl_ratio->point(i).setY(ratio(_weights_incl[i+1], _weights_incl[i]),
-                                          ratio_err_incl(_weights_incl[i+1], _weights_incl[i]));
-        _h_njet_excl_ratio->point(i).setY(ratio(_weights_excl[i+1], _weights_excl[i]),
-                                          ratio_err_excl(_weights_excl[i+1], _weights_excl[i]));
-        if (i>=1) _h_njet_excl_pt150_ratio->point(i-1).setY
-                    (ratio(_weights_excl_pt150[i+1], _weights_excl_pt150[i]),
-                     ratio_err_excl(_weights_excl_pt150[i+1], _weights_excl_pt150[i]));
-
-        if (i>=2) _h_njet_excl_vbf_ratio->point(i-2).setY
-                    (ratio(_weights_excl_vbf[i+1], _weights_excl_vbf[i]),
-                     ratio_err_excl(_weights_excl_vbf[i+1], _weights_excl_vbf[i]));
+        _h_njet_incl_ratio->point(i).setY(safediv(_h_njet_incl->bin(i + 1).sumW(), _h_njet_incl->bin(i).sumW()),
+                                          err_incl(_h_njet_incl->bin(i + 1), _h_njet_incl->bin(i), hasWeights));
+        _h_njet_excl_ratio->point(i).setY(safediv(_h_njet_excl->bin(i + 1).sumW(), _h_njet_excl->bin(i).sumW()),
+                                          err_excl(_h_njet_excl->bin(i + 1), _h_njet_excl->bin(i)));
+        if (i >= 1) {
+          _h_njet_excl_pt150_ratio->point(i - 1).setY(safediv(_h_njet_excl_pt150->bin(i).sumW(), _h_njet_excl_pt150->bin(i - 1).sumW()),
+                                                      err_excl(_h_njet_excl_pt150->bin(i), _h_njet_excl_pt150->bin(i - 1)));
+          if (i >= 2) {
+            _h_njet_excl_vbf_ratio->point(i - 2).setY(safediv(_h_njet_excl_vbf->bin(i).sumW(), _h_njet_excl_vbf->bin(i - 1).sumW()),
+                                                      err_excl(_h_njet_excl_vbf->bin(i), _h_njet_excl_vbf->bin(i - 1)));
+          }
+        }
       }
 
       const double xs = crossSectionPerEvent()/picobarn;
@@ -281,11 +271,6 @@ namespace Rivet {
 
 
   private:
-
-    vector<double> _weights_incl;
-    vector<double> _weights_excl;
-    vector<double> _weights_excl_pt150;
-    vector<double> _weights_excl_vbf;
 
     Scatter2DPtr _h_njet_incl_ratio;
     Scatter2DPtr _h_njet_excl_ratio;

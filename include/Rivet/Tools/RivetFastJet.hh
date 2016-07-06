@@ -8,6 +8,7 @@
 #include "fastjet/ClusterSequence.hh"
 #include "fastjet/ClusterSequenceArea.hh"
 #include "fastjet/PseudoJet.hh"
+#include "fastjet/tools/Filter.hh"
 
 namespace Rivet {
 

@@ -53,16 +53,12 @@ namespace Rivet {
 
   vector<string> getAnalysisLibPaths() {
     vector<string> dirs;
-    char* env = 0;
-    env = getenv("RIVET_ANALYSIS_PATH");
-    if (env) {
-      // Use the Rivet analysis path variable if set...
-      dirs += pathsplit(env);
-    }
+    // Use the Rivet analysis path variable if set...
+    const char* env = getenv("RIVET_ANALYSIS_PATH");
+    if (env) dirs += pathsplit(env);
     // ... otherwise fall back to the Rivet library install path unless the path ends in ::
-    if (!env || strlen(env) < 2 || string(env).substr(strlen(env)-2) != "::") {
+    if (!env || strlen(env) < 2 || string(env).substr(strlen(env)-2) != "::")
       dirs += getLibPath();
-    }
     return dirs;
   }
 
@@ -71,14 +67,11 @@ namespace Rivet {
   }
 
 
-  vector<string> getAnalysisRefPaths() {
+  vector<string> getAnalysisDataPaths() {
     vector<string> dirs;
-    char* env = 0;
-    env = getenv("RIVET_REF_PATH");
-    if (env) {
-      // Use the Rivet analysis path variable if set...
-      dirs += pathsplit(env);
-    }
+    // Use the Rivet data path variable if set...
+    const char* env = getenv("RIVET_DATA_PATH");
+    if (env) dirs += pathsplit(env);
     // ... then, unless the path ends in :: ...
     if (!env || strlen(env) < 2 || string(env).substr(strlen(env)-2) != "::") {
       // ... fall back to the Rivet data install path...
@@ -86,6 +79,24 @@ namespace Rivet {
       // ... and also add any analysis plugin search dirs for convenience
       dirs += getAnalysisLibPaths();
     }
+    return dirs;
+  }
+
+  string findAnalysisDataFile(const string& filename,
+                              const vector<string>& pathprepend, const vector<string>& pathappend) {
+    const vector<string> paths = pathprepend + getAnalysisDataPaths() + pathappend;
+    return _findFile(filename, paths);
+  }
+
+
+  vector<string> getAnalysisRefPaths() {
+    vector<string> dirs;
+    // Use the Rivet ref path variable if set...
+    const char* env = getenv("RIVET_REF_PATH");
+    if (env) dirs += pathsplit(env);
+    // ... and append the universal Rivet data paths, unless the env path ends in ::
+    if (!env || strlen(env) < 2 || string(env).substr(strlen(env)-2) != "::")
+      dirs += getAnalysisDataPaths();
     return dirs;
   }
 
@@ -98,19 +109,12 @@ namespace Rivet {
 
   vector<string> getAnalysisInfoPaths() {
     vector<string> dirs;
-    char* env = 0;
-    env = getenv("RIVET_INFO_PATH");
-    if (env) {
-      // Use the Rivet analysis path variable if set...
-      dirs += pathsplit(env);
-    }
-    // ... then, unless the path ends in :: ...
-    if (!env || strlen(env) < 2 || string(env).substr(strlen(env)-2) != "::") {
-      // ... fall back to the Rivet data install path...
-      dirs += getRivetDataPath();
-      // ... and also add any analysis plugin search dirs for convenience
-      dirs += getAnalysisLibPaths();
-    }
+    // Use the Rivet info path variable if set...
+    const char* env = getenv("RIVET_INFO_PATH");
+    if (env) dirs += pathsplit(env);
+    // ... and append the universal Rivet data paths, unless the env path ends in ::
+    if (!env || strlen(env) < 2 || string(env).substr(strlen(env)-2) != "::")
+      dirs += getAnalysisDataPaths();
     return dirs;
   }
 
@@ -123,19 +127,12 @@ namespace Rivet {
 
   vector<string> getAnalysisPlotPaths() {
     vector<string> dirs;
-    char* env = 0;
-    env = getenv("RIVET_PLOT_PATH");
-    if (env) {
-      // Use the Rivet analysis path variable if set...
-      dirs += pathsplit(env);
-    }
-    // ... then, unless the path ends in :: ...
-    if (!env || strlen(env) < 2 || string(env).substr(strlen(env)-2) != "::") {
-      // ... fall back to the Rivet data install path...
-      dirs += getRivetDataPath();
-      // ... and also add any analysis plugin search dirs for convenience
-      dirs += getAnalysisLibPaths();
-    }
+    // Use the Rivet plot path variable if set...
+    const char* env = getenv("RIVET_PLOT_PATH");
+    if (env) dirs += pathsplit(env);
+    // ... and append the universal Rivet data paths, unless the env path ends in ::
+    if (!env || strlen(env) < 2 || string(env).substr(strlen(env)-2) != "::")
+      dirs += getAnalysisDataPaths();
     return dirs;
   }
 

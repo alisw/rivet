@@ -174,11 +174,11 @@ using namespace std;
       double longest_ctau = 0.;
       double mother_ctau;
       int mother_pid, n_inparts;
-      GenVertex* ivertex = pmother->production_vertex();
+      const GenVertex* ivertex = pmother->production_vertex();
       while (ivertex) {
         n_inparts = ivertex->particles_in_size();
         if (n_inparts < 1) {ret = NULL; break;}    // error: should never happen!
-        const HepMC::GenVertex::particles_in_const_iterator iPart_invtx = ivertex->particles_in_const_begin();
+        const GenVertex::particles_in_const_iterator iPart_invtx = ivertex->particles_in_const_begin();
         pmother = (*iPart_invtx);                   // first mother particle
         mother_pid = pmother->pdg_id();
         ivertex = pmother->production_vertex();     // get next vertex

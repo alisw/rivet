@@ -25,7 +25,7 @@ namespace Rivet {
 
     for (size_t i = 0; i < _nparts; ++i) {
       const string ptname = _pname + "_pt_" + to_str(i+1);
-      const double ptmax = 1.0/(double(i)+2.0) * sqrtS()/GeV/2.0;
+      const double ptmax = 1.0/(double(i)+2.0) * (sqrtS()>0.?sqrtS():14000.)/GeV/2.0;
       const int nbins_pt = 100/(i+1);
       _h_pt[i] = bookHisto1D(ptname, logspace(nbins_pt, 1.0, ptmax));
 
@@ -56,6 +56,10 @@ namespace Rivet {
     _h_multi_exclusive = bookHisto1D(_pname + "_multi_exclusive", _nparts+3, -0.5, _nparts+3-0.5);
     _h_multi_inclusive = bookHisto1D(_pname + "_multi_inclusive", _nparts+3, -0.5, _nparts+3-0.5);
     _h_multi_ratio = bookScatter2D(_pname + "_multi_ratio");
+
+    _h_multi_exclusive_prompt = bookHisto1D(_pname + "_multi_exclusive_prompt", _nparts+3, -0.5, _nparts+3-0.5);
+    _h_multi_inclusive_prompt = bookHisto1D(_pname + "_multi_inclusive_prompt", _nparts+3, -0.5, _nparts+3-0.5);
+    _h_multi_ratio_prompt = bookScatter2D(_pname + "_multi_ratio_prompt");
   }
 
 
@@ -73,12 +77,12 @@ namespace Rivet {
       // Eta
       const double eta_i = particles[i].eta();
       _h_eta[i]->fill(eta_i, weight);
-      (eta_i > 0.0 ? _h_eta_plus : _h_eta_minus)[i]->fill(eta_i, weight);
+      (eta_i > 0.0 ? _h_eta_plus : _h_eta_minus)[i]->fill(fabs(eta_i), weight);
 
       // Rapidity
       const double rap_i = particles[i].rapidity();
       _h_rap[i]->fill(rap_i, weight);
-      (rap_i > 0.0 ? _h_rap_plus : _h_rap_minus)[i]->fill(rap_i, weight);
+      (rap_i > 0.0 ? _h_rap_plus : _h_rap_minus)[i]->fill(fabs(rap_i), weight);
 
       // Inter-particle properties
       for (size_t j = i+1; j < min(size_t(3),_nparts); ++j) {

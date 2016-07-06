@@ -5,24 +5,17 @@
 #include "Rivet/Projections/ChargedFinalState.hh"
 #include "Rivet/Particle.hh"
 
-//#include <iostream>
-
 namespace Rivet {
 
 
   class ATLAS_2012_I1188891 : public Analysis {
-
   public:
 
 
     ATLAS_2012_I1188891()
       : Analysis("ATLAS_2012_I1188891")
-    {
-    }
+    {    }
 
-
-
-  public:
 
     void init() {
 
@@ -52,11 +45,10 @@ namespace Rivet {
       vector<FourMomentum> leadjets;
 
       //get b/c-hadrons
-      std::vector<HepMC::GenParticle*> B_hadrons;
-      std::vector<HepMC::GenParticle*> C_hadrons;
-      std::vector<HepMC::GenParticle*> allParticles = particles(event.genEvent());
-      for(unsigned int i = 0; i < allParticles.size(); i++) {
-        GenParticle* p = allParticles.at(i);
+      vector<GenParticle const *> B_hadrons, C_hadrons;
+      vector<GenParticle const *> allParticles = particles(event.genEvent());
+      for (size_t i = 0; i < allParticles.size(); i++) {
+        const GenParticle* p = allParticles.at(i);
         if(p->momentum().perp()*GeV < 5) continue;
         if ( (Rivet::PID::isHadron ( p->pdg_id() ) &&
               Rivet::PID::hasBottom( p->pdg_id() )    ) ) {
@@ -147,6 +139,8 @@ namespace Rivet {
     Scatter2DPtr _h_results[6];
   };
 
+
   DECLARE_RIVET_PLUGIN(ATLAS_2012_I1188891);
+
 
 }

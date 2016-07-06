@@ -1,34 +1,10 @@
 // -*- C++ -*-
 #include "Rivet/Analysis.hh"
 #include "Rivet/Projections/Beam.hh"
-#include "HepMC/GenParticle.h"
-#include "HepMC/GenVertex.h"
 #include "Rivet/Projections/ChargedFinalState.hh"
 #include "Rivet/Projections/UnstableFinalState.hh"
 
-
-bool hasDecayedTo(const HepMC::GenParticle* p, int id1, int id2) {
-  bool decision = false;
-  HepMC::GenVertex* decV  = p->end_vertex();
-  std::vector<int> decids;
-  if (decV->particles_out_size() == 2) {
-    for (HepMC::GenVertex::particles_out_const_iterator pp = decV->particles_out_const_begin() ;
-         pp != decV->particles_out_const_end() ; ++pp) {
-      decids.push_back(abs((*pp)->pdg_id()));
-    }
-    if ( (decids[0] == abs(id1) && decids[1] == abs(id2)) || (decids[1] == abs(id1) && decids[0] == abs(id2)) ) decision = true;
-
-  };
-  return decision;
-}
-
-bool hasDecayedTo(const Rivet::Particle& p, int id1, int id2) {
-  return hasDecayedTo(p.genParticle(), id1, id2);
-}
-
-
 namespace Rivet {
-
 
   class ALEPH_1999_S4193598 : public Analysis {
   public:

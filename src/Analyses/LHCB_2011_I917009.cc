@@ -158,11 +158,10 @@ namespace Rivet {
       double lftSum = 0.;
       double plft = 0.;
       const GenParticle* part = p.genParticle();
-      GenVertex* ivtx = part->production_vertex();
-      while(ivtx)
-        {
+      const GenVertex* ivtx = part->production_vertex();
+      while (ivtx) {
           if (ivtx->particles_in_size() < 1) { lftSum = -1.; break; };
-          const HepMC::GenVertex::particles_in_const_iterator iPart_invtx = ivtx->particles_in_const_begin();
+          const GenVertex::particles_in_const_iterator iPart_invtx = ivtx->particles_in_const_begin();
           part = (*iPart_invtx);
           if ( !(part) ) { lftSum = -1.; break; };
           ivtx = part->production_vertex();

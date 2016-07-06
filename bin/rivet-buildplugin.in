@@ -21,6 +21,7 @@ if test $# -lt 1 || test -n "$tmp"; then
     echo "Options:"
     echo "  -h | --help: display this help message"
     echo "  --with-root: add ROOT link options (requires root-config on system)"
+    echo "  --cmd|--dry-run: just print the generated compiler command, do not execute"
     echo
     echo "TODO:"
     echo "  * is there a GCC option to parallelise the single-command compilation?"
@@ -107,9 +108,9 @@ set $tmp #< Set positional params
 
 
 ## Just show the compiler command rather than execute it, if requested
-only_show=$(echo $* | egrep -- '--\<cmd\>') #-\<n\>')
+only_show=$(echo $* | egrep -- '--\<cmd\>|--\<dry-run\>')
 # echo $only_show
-tmp=${@//--cmd/}
+tmp=$(echo $@ | sed -e 's/--cmd//g' -e 's/--dry-run//g')
 set $tmp #< Set positional params
 
 

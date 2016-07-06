@@ -1,7 +1,7 @@
 ## Process this file with autoconf to produce a configure script.
 
 AC_PREREQ(2.59)
-AC_INIT([Rivet], [2.2.1], [rivet@projects.hepforge.org], [Rivet])
+AC_INIT([Rivet],[2.4.3],[rivet@projects.hepforge.org],[Rivet])
 
 ## Check and block installation into the src/build dir
 if test "$prefix" = "$PWD"; then
@@ -48,7 +48,7 @@ dnl this block can go once we decide to have C++11 always on
 AC_MSG_CHECKING([whether to include C++11 flag for testing])
 AC_ARG_ENABLE(stdcxx11,
         AC_HELP_STRING([--enable-stdcxx11],
-        [turn on C++11 flag (only for testing, do not use in production!)]),
+        [turn on C++11 flag]),
         [],
         [enable_stdcxx11=no]
         )
@@ -87,8 +87,8 @@ if test -f "$YODACONFIG"; then
   YODA_VERSION2=[`echo $YODA_VERSION | cut -d. -f2 | sed -e 's/\([0-9]*\).*/\1/g'`]
   YODA_VERSION3=[`echo $YODA_VERSION | cut -d. -f3 | sed -e 's/\([0-9]*\).*/\1/g'`]
   let YODA_VERSION_INT=YODA_VERSION1*10000+YODA_VERSION2*100+YODA_VERSION3
-  if test $YODA_VERSION_INT -lt 10100; then
-    AC_MSG_ERROR([YODA version isn't sufficient: at least version 1.1.0 required])
+  if test $YODA_VERSION_INT -lt 10500; then
+    AC_MSG_ERROR([YODA version isn't sufficient: at least version 1.5.0 required])
   fi
   AC_MSG_CHECKING([YODA Python path using yoda-config])
   YODA_PYTHONPATH=`$YODACONFIG --pythonpath`
@@ -171,7 +171,7 @@ CPPFLAGS=$oldCPPFLAGS
 
 
 ## Boost utility library
-BOOST_REQUIRE([1.40.0])
+BOOST_REQUIRE([1.55.0])
 BOOST_FOREACH
 BOOST_SMART_PTR
 BOOST_FIND_HEADER([boost/lexical_cast.hpp])
@@ -290,7 +290,7 @@ AM_CONDITIONAL(ENABLE_PYEXT, [test x$enable_pyext == xyes])
 
 
 ## Set extra Python extension build flags (to cope with Cython output code oddities)
-PYEXT_CXXFLAGS=
+PYEXT_CXXFLAGS="$CXXFLAGS"
 AC_CEDAR_CHECKCXXFLAG([-Wno-unused-but-set-variable], [PYEXT_CXXFLAGS="$PYEXT_CXXFLAGS -Wno-unused-but-set-variable"])
 AC_CEDAR_CHECKCXXFLAG([-Wno-sign-compare], [PYEXT_CXXFLAGS="$PYEXT_CXXFLAGS -Wno-sign-compare"])
 AC_SUBST(PYEXT_CXXFLAGS)
@@ -326,6 +326,7 @@ AC_CEDAR_CHECKCXXFLAG([-ansi], [AM_CXXFLAGS="$AM_CXXFLAGS -ansi"])
 AC_CEDAR_CHECKCXXFLAG([-Wall], [AM_CXXFLAGS="$AM_CXXFLAGS -Wall"])
 AC_CEDAR_CHECKCXXFLAG([-Wno-long-long], [AM_CXXFLAGS="$AM_CXXFLAGS -Wno-long-long"])
 AC_CEDAR_CHECKCXXFLAG([-Wno-format], [AM_CXXFLAGS="$AM_CXXFLAGS -Wno-format"])
+dnl AC_CEDAR_CHECKCXXFLAG([-Wno-unused-variable], [AM_CXXFLAGS="$AM_CXXFLAGS -Wno-unused-variable"])
 AC_CEDAR_CHECKCXXFLAG([-Werror=uninitialized], [AM_CXXFLAGS="$AM_CXXFLAGS -Werror=uninitialized"])
 AC_CEDAR_CHECKCXXFLAG([-Werror=delete-non-virtual-dtor], [AM_CXXFLAGS="$AM_CXXFLAGS -Werror=delete-non-virtual-dtor"])
 

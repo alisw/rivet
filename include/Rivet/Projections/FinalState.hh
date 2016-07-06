@@ -7,10 +7,14 @@
 
 namespace Rivet {
 
-
   /// @brief Project out all final-state particles in an event.
   /// Probably the most important projection in Rivet!
   class FinalState : public ParticleFinder {
+  private:
+    // hide lossy copy constructors for all classes derived from FinalState
+    template<typename T> FinalState(const T& rhs);
+    template<typename T> FinalState const& operator=(T const& rhs);
+
   public:
 
     /// @name Standard constructors etc.

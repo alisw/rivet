@@ -8,7 +8,7 @@ namespace Rivet {
 
     bool FinalPartons::accept(const Particle& p) const {
 
-        // if *not* a parton, photon, electron, or muon: reject.
+        // reject if *not* a parton
         if (!isParton(p))
             return false;
 

@@ -1,6 +1,6 @@
 # BEGIN PLOT /ATLAS_2014_I1325553/d.*-x01-y.*
 XLabel=$p_\text{T}$ [GeV]
-YLabel=$\text{d}^2\sigma / \text{d}p_\text{T}\text{d}|y|$ [pb/GeV]
+YLabel=$\text{d}^2\sigma / \text{d}p_\text{T}\text{d}y$ [pb/GeV]
 LogY=1
 LogX=1
 # END PLOT

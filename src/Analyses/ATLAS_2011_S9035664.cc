@@ -49,7 +49,7 @@ namespace Rivet {
 
       foreach (const Particle& p, ufs.particles()) {
         if (p.abspid() != 443) continue;
-        HepMC::GenVertex* gv = p.genParticle()->production_vertex();
+        const GenVertex* gv = p.genParticle()->production_vertex();
         bool nonPrompt = false;
         if (gv) {
           foreach (const GenParticle* pi, Rivet::particles(gv, HepMC::ancestors)) {
@@ -60,26 +60,26 @@ namespace Rivet {
             }
           }
         }
-        double rapidity = p.rapidity();
+        double absrap = p.absrap();
         double xp = p.perp();
 
-        if (rapidity<=2.4 and rapidity>2.) {
+        if (absrap<=2.4 and absrap>2.) {
           if (nonPrompt) _nonPrRapHigh->fill(xp, weight);
           else if (!nonPrompt) _PrRapHigh->fill(xp, weight);
           _IncRapHigh->fill(xp, weight);
         }
-        else if (rapidity<=2. and rapidity>1.5) {
+        else if (absrap<=2. and absrap>1.5) {
           if (nonPrompt) _nonPrRapMedHigh->fill(xp, weight);
           else if (!nonPrompt) _PrRapMedHigh->fill(xp, weight);
           _IncRapMedHigh->fill(xp, weight);
         }
-        else if (rapidity<=1.5 and rapidity>0.75) {
+        else if (absrap<=1.5 and absrap>0.75) {
           if (nonPrompt) _nonPrRapMedLow->fill(xp, weight);
           else if (!nonPrompt) _PrRapMedLow->fill(xp, weight);
           _IncRapMedLow->fill(xp, weight);
         }
 
-        else if (rapidity<=0.75) {
+        else if (absrap<=0.75) {
           if (nonPrompt) _nonPrRapLow->fill(xp, weight);
           else if (!nonPrompt) _PrRapLow->fill(xp, weight);
           _IncRapLow->fill(xp, weight);

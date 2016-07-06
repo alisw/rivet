@@ -4,25 +4,16 @@
 
 namespace Rivet {
 
-  
-
 
   /// @author Andy Buckley
   class MC_PRINTEVENT : public Analysis {
   public:
-
-    /// @name Constructors etc.
-    //@{
 
     /// Constructor
     MC_PRINTEVENT()
       : Analysis("MC_PRINTEVENT")
     {    }
 
-    //@}
-
-
-  public:
 
     /// @name Analysis methods
     //@{
@@ -162,9 +153,9 @@ namespace Rivet {
 
       // Weights
       cout << "Weights(" << evt->weights().size() << ")=";
-      for (HepMC::WeightContainer::const_iterator wgt = evt->weights().begin(); wgt != evt->weights().end(); ++wgt) {
-        cout << *wgt << " ";
-      }
+      /// @todo Re-enable
+      // foreach (double w,  evt->weights())
+      //   cout << w << " ";
       cout << "\n"
            << "EventScale " << evt->event_scale()
            << " [energy] \t alphaQCD=" << evt->alphaQCD()

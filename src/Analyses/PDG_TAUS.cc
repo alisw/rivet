@@ -1,7 +1,6 @@
 // -*- C++ -*-
 #include "Rivet/Analysis.hh"
 #include "Rivet/Projections/TauFinder.hh"
-#include <boost/assign/list_of.hpp>
 
 namespace Rivet {
 
@@ -121,16 +120,16 @@ namespace Rivet {
 
     // Set up a lookup table for decays
     void populateDecayMap() {
-      decay_pids["muids"]     = boost::assign::list_of(13)(14)(16);
-      decay_pids["elids"]     = boost::assign::list_of(11)(12)(16);
-      decay_pids["pinu"]      = boost::assign::list_of(211)(16);
-      decay_pids["Kpnu"]      = boost::assign::list_of(321)(16);
-      decay_pids["pipinu"]    = boost::assign::list_of(111)(211)(16);
-      decay_pids["Kppinu"]    = boost::assign::list_of(111)(321)(16);
-      decay_pids["pipipinu"]  = boost::assign::list_of(111)(111)(211)(16);
-      decay_pids["KSpinu"]    = boost::assign::list_of(211)(310)(16);
-      decay_pids["KLpinu"]    = boost::assign::list_of(211)(130)(16);
-      decay_pids["3pipipinu"] = boost::assign::list_of(211)(211)(211)(16);
+      decay_pids["muids"]     += 13,14,16;
+      decay_pids["elids"]     += 11,12,16;
+      decay_pids["pinu"]      += 211,16;
+      decay_pids["Kpnu"]      += 321,16;
+      decay_pids["pipinu"]    += 111,211,16;
+      decay_pids["Kppinu"]    += 111,321,16;
+      decay_pids["pipipinu"]  += 111,111,211,16;
+      decay_pids["KSpinu"]    += 211,310,16;
+      decay_pids["KLpinu"]    += 211,130,16;
+      decay_pids["3pipipinu"] += 211,211,211,16;
     }
 
 

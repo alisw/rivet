@@ -94,26 +94,26 @@ LegendXPos=0.30
 
 # BEGIN PLOT /MC_ELECTRONS/electron_eta_pmratio_1
 Title=Pseudorapidity $+/-$ ratio of first electron
-XLabel=$\eta(\text{e1})_+/\eta(\text{e1})_-$
-YLabel=$|\eta(\text{e1}|$
+XLabel=$|\eta(\text{e1}|$
+YLabel=$\eta(\text{e1})_+/\eta(\text{e1})_-$
 # END PLOT
 
 # BEGIN PLOT /MC_ELECTRONS/electron_eta_pmratio_2
 Title=Pseudorapidity $+/-$ ratio of second electron
-XLabel=$\eta(\text{e2})_+/\eta(\text{e2})_-$
-YLabel=$|\eta(\text{e2}|$
+XLabel=$|\eta(\text{e2}|$
+YLabel=$\eta(\text{e2})_+/\eta(\text{e2})_-$
 # END PLOT
 
 # BEGIN PLOT /MC_ELECTRONS/electron_eta_pmratio_3
 Title=Pseudorapidity $+/-$ ratio of third electron
-XLabel=$\eta(\text{e3})_+/\eta(\text{e3})_-$
-YLabel=$|\eta(\text{e3}|$
+XLabel=$|\eta(\text{e3}|$
+YLabel=$\eta(\text{e3})_+/\eta(\text{e3})_-$
 # END PLOT
 
 # BEGIN PLOT /MC_ELECTRONS/electron_eta_pmratio_4
 Title=Pseudorapidity $+/-$ ratio of fourth electron
-XLabel=$\eta(\text{e4})_+/\eta(\text{e4})_-$
-YLabel=$|\eta(\text{e4}|$
+XLabel=$|\eta(\text{e4}|$
+YLabel=$\eta(\text{e4})_+/\eta(\text{e4})_-$
 # END PLOT
 
 # BEGIN PLOT /MC_ELECTRONS/electron_y_1
@@ -142,30 +142,39 @@ YLabel=$\text{d}\sigma/\text{d}y(\text{e4})$ [pb]
 
 # BEGIN PLOT /MC_ELECTRONS/electron_y_pmratio_1
 Title=Rapidity $+/-$ ratio of first electron
-XLabel=$y(\text{e1})_+/y(\text{e1})_-$
-YLabel=$|y(\text{e1}|$
+XLabel=$|y(\text{e1}|$
+YLabel=$y(\text{e1})_+/y(\text{e1})_-$
 # END PLOT
 
 # BEGIN PLOT /MC_ELECTRONS/electron_y_pmratio_2
 Title=Rapidity $+/-$ ratio of second electron
-XLabel=$y(\text{e2})_+/y(\text{e2})_-$
-YLabel=$|y(\text{e2}|$
+XLabel=$|y(\text{e2}|$
+YLabel=$y(\text{e2})_+/y(\text{e2})_-$
 # END PLOT
 
 # BEGIN PLOT /MC_ELECTRONS/electron_y_pmratio_3
 Title=Rapidity $+/-$ ratio of third electron
-XLabel=$y(\text{e3})_+/y(\text{e3})_-$
-YLabel=$|y(\text{e3}|$
+XLabel=$|y(\text{e3}|$
+YLabel=$y(\text{e3})_+/y(\text{e3})_-$
 # END PLOT
 
 # BEGIN PLOT /MC_ELECTRONS/electron_y_pmratio_4
 Title=Rapidity $+/-$ ratio of fourth electron
-XLabel=$y(\text{e4})_+/y(\text{e4})_-$
-YLabel=$|y(\text{e4}|$
+XLabel=$|y(\text{e4}|$
+YLabel=$y(\text{e4})_+/y(\text{e4})_-$
 # END PLOT
 
 # BEGIN PLOT /MC_ELECTRONS/electron_multi_exclusive
 Title=Exclusive electron multiplicity
+XLabel=$N_{\text{electron}}$
+YLabel=$\sigma(N_{\text{electron}})$ [pb]
+XMajorTickMarks=10
+XMinorTickMarks=0
+ErrorBands=1
+# END PLOT
+
+# BEGIN PLOT /MC_ELECTRONS/electron_multi_exclusive_prompt
+Title=Exclusive prompt electron multiplicity
 XLabel=$N_{\text{electron}}$
 YLabel=$\sigma(N_{\text{electron}})$ [pb]
 XMajorTickMarks=10
@@ -182,8 +191,27 @@ XMinorTickMarks=0
 ErrorBands=1
 # END PLOT
 
+# BEGIN PLOT /MC_ELECTRONS/electron_multi_inclusive_prompt
+Title=Inclusive prompt electron multiplicity
+XLabel=$N_{\text{electron}}$
+YLabel=$\sigma(\geq N_{\text{electron}})$ [pb]
+XMajorTickMarks=10
+XMinorTickMarks=0
+ErrorBands=1
+# END PLOT
+
 # BEGIN PLOT /MC_ELECTRONS/electron_multi_ratio
 Title=Ratio of electron multiplicity
+XLabel=$N_{\text{electron}}$
+YLabel=$\sigma(\geq N_{\text{electron}})/\sigma(\geq N_{\text{electron}}-1)$
+XMajorTickMarks=10
+XMinorTickMarks=0
+LogY=0
+ErrorBands=1
+# END PLOT
+
+# BEGIN PLOT /MC_ELECTRONS/electron_multi_ratio_prompt
+Title=Ratio of prompt electron multiplicity
 XLabel=$N_{\text{electron}}$
 YLabel=$\sigma(\geq N_{\text{electron}})/\sigma(\geq N_{\text{electron}}-1)$
 XMajorTickMarks=10

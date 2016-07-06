@@ -1,9 +1,6 @@
 // -*- C++ -*-
-#include <iostream>
 #include "Rivet/Analysis.hh"
-#include "Rivet/Projections/Beam.hh"
 #include "Rivet/Projections/UnstableFinalState.hh"
-#include "Rivet/ParticleName.hh"
 
 namespace Rivet {
 
@@ -14,7 +11,8 @@ namespace Rivet {
   public:
 
     ARGUS_1993_S2653028()
-      : Analysis("ARGUS_1993_S2653028"), _weightSum(0.)
+      : Analysis("ARGUS_1993_S2653028"),
+        _weightSum(0.)
     { }
 
 
@@ -30,14 +28,13 @@ namespace Rivet {
       }
       // Then in whole event if that failed
       if (upsilons.empty()) {
-        foreach (GenParticle* p, Rivet::particles(e.genEvent())) {
+        foreach (const GenParticle* p, particles(e.genEvent())) {
           if (p->pdg_id() != 300553) continue;
           const GenVertex* pv = p->production_vertex();
           bool passed = true;
           if (pv) {
-            /// @todo Use better looping
-            for (GenVertex::particles_in_const_iterator pp = pv->particles_in_const_begin(); pp != pv->particles_in_const_end() ; ++pp) {
-              if ( p->pdg_id() == (*pp)->pdg_id() ) {
+            foreach (const GenParticle* pp, particles_in(pv)) {
+              if ( p->pdg_id() == pp->pdg_id() ) {
                 passed = false;
                 break;
               }
@@ -135,6 +132,7 @@ namespace Rivet {
     Histo1DPtr _multPiA, _multPiB, _multK, _multpA, _multpB;
     //@}
 
+
     void findDecayProducts(const GenParticle* p,
                            vector<GenParticle*>& pionsA, vector<GenParticle*>& pionsB,
                            vector<GenParticle*>& protonsA, vector<GenParticle*>& protonsB,
@@ -168,6 +166,8 @@ namespace Rivet {
           findDecayProducts(*pp, pionsA, pionsB, protonsA, protonsB, kaons);
       }
     }
+
+
   };
 
 

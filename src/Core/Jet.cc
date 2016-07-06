@@ -118,7 +118,7 @@ namespace Rivet {
       if (abs(pid) == PID::CQUARK) return true;
       if (PID::isHadron(pid) && PID::hasCharm(pid)) return true;
       if (include_decay_products) {
-        HepMC::GenVertex* gv = p.genParticle()->production_vertex();
+        const HepMC::GenVertex* gv = p.genParticle()->production_vertex();
         if (gv) {
           foreach (const GenParticle* pi, Rivet::particles(gv, HepMC::ancestors)) {
             const PdgId pid2 = pi->pdg_id();
@@ -137,7 +137,7 @@ namespace Rivet {
       if (abs(pid) == PID::BQUARK) return true;
       if (PID::isHadron(pid) && PID::hasBottom(pid)) return true;
       if (include_decay_products) {
-        HepMC::GenVertex* gv = p.genParticle()->production_vertex();
+        const HepMC::GenVertex* gv = p.genParticle()->production_vertex();
         if (gv) {
           foreach (const GenParticle* pi, Rivet::particles(gv, HepMC::ancestors)) {
             const PdgId pid2 = pi->pdg_id();
@@ -147,6 +147,43 @@ namespace Rivet {
       }
     }
     return false;
+  }
+
+
+  Particles Jet::tags(const Cut& c) const {
+    Particles rtn;
+    foreach (const Particle& p, tags()) {
+      if (c->accept(p)) rtn.push_back(p);
+    }
+    return rtn;
+  }
+
+
+  Particles Jet::bTags(const Cut& c) const {
+    Particles rtn;
+    foreach (const Particle& tp, tags()) {
+      if (hasBottom(tp) && c->accept(tp)) rtn.push_back(tp);
+    }
+    return rtn;
+  }
+
+
+  Particles Jet::cTags(const Cut& c) const {
+    Particles rtn;
+    foreach (const Particle& tp, tags()) {
+      /// @todo Is making b and c tags exclusive the right thing to do?
+      if (hasCharm(tp) && !hasBottom(tp) && c->accept(tp)) rtn.push_back(tp);
+    }
+    return rtn;
+  }
+
+
+  Particles Jet::tauTags(const Cut& c) const {
+    Particles rtn;
+    foreach (const Particle& tp, tags()) {
+      if (isTau(tp) && c->accept(tp)) rtn.push_back(tp);
+    }
+    return rtn;
   }
 
 

@@ -4,14 +4,14 @@ Summary: 0-lepton squark and gluino search
 Experiment: ATLAS
 Collider: LHC
 InspireID: 1125961
-Status: UNVALIDATED
+Status: OBSOLETE
 Authors:
  - Peter Richardson <Peter.Richardson@durham.ac.uk>
  - David Grellscheid <david.grellscheid@durham.ac.uk>
  - Chris Wymant <c.m.wymant@durham.ac.uk>
 References:
  - arXiv:1208.0949
- - ATLAS-CONF-2012-109 
+ - ATLAS-CONF-2012-109
 RunInfo:
   BSM signal events at 8000 GeV.
 NumEvents: 10000 for BSM signals

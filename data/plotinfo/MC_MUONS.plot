@@ -94,26 +94,26 @@ LegendXPos=0.30
 
 # BEGIN PLOT /MC_MUONS/muon_eta_pmratio_1
 Title=Pseudorapidity $+/-$ ratio of first muon
-XLabel=$\eta(\text{$\mu$1})_+/\eta(\text{$\mu$1})_-$
-YLabel=$|\eta(\text{$\mu$1}|$
+XLabel=$|\eta(\text{$\mu$1}|$
+YLabel=$\eta(\text{$\mu$1})_+/\eta(\text{$\mu$1})_-$
 # END PLOT
 
 # BEGIN PLOT /MC_MUONS/muon_eta_pmratio_2
 Title=Pseudorapidity $+/-$ ratio of second muon
-XLabel=$\eta(\text{$\mu$2})_+/\eta(\text{$\mu$2})_-$
-YLabel=$|\eta(\text{$\mu$2}|$
+XLabel=$|\eta(\text{$\mu$2}|$
+YLabel=$\eta(\text{$\mu$2})_+/\eta(\text{$\mu$2})_-$
 # END PLOT
 
 # BEGIN PLOT /MC_MUONS/muon_eta_pmratio_3
 Title=Pseudorapidity $+/-$ ratio of third muon
-XLabel=$\eta(\text{$\mu$3})_+/\eta(\text{$\mu$3})_-$
-YLabel=$|\eta(\text{$\mu$3}|$
+XLabel=$|\eta(\text{$\mu$3}|$
+YLabel=$\eta(\text{$\mu$3})_+/\eta(\text{$\mu$3})_-$ 
 # END PLOT
 
 # BEGIN PLOT /MC_MUONS/muon_eta_pmratio_4
 Title=Pseudorapidity $+/-$ ratio of fourth muon
-XLabel=$\eta(\text{$\mu$4})_+/\eta(\text{$\mu$4})_-$
-YLabel=$|\eta(\text{$\mu$4}|$
+XLabel=$|\eta(\text{$\mu$4}|$
+YLabel=$\eta(\text{$\mu$4})_+/\eta(\text{$\mu$4})_-$
 # END PLOT
 
 # BEGIN PLOT /MC_MUONS/muon_y_1
@@ -142,30 +142,39 @@ YLabel=$\text{d}\sigma/\text{d}y(\text{$\mu$4})$ [pb]
 
 # BEGIN PLOT /MC_MUONS/muon_y_pmratio_1
 Title=Rapidity $+/-$ ratio of first muon
-XLabel=$y(\text{$\mu$1})_+/y(\text{$\mu$1})_-$
-YLabel=$|y(\text{$\mu$1}|$
+XLabel=$|y(\text{$\mu$1}|$
+YLabel=$y(\text{$\mu$1})_+/y(\text{$\mu$1})_-$
 # END PLOT
 
 # BEGIN PLOT /MC_MUONS/muon_y_pmratio_2
 Title=Rapidity $+/-$ ratio of second muon
-XLabel=$y(\text{$\mu$2})_+/y(\text{$\mu$2})_-$
-YLabel=$|y(\text{$\mu$2}|$
+XLabel=$|y(\text{$\mu$2}|$
+YLabel=$y(\text{$\mu$2})_+/y(\text{$\mu$2})_-$
 # END PLOT
 
 # BEGIN PLOT /MC_MUONS/muon_y_pmratio_3
 Title=Rapidity $+/-$ ratio of third muon
-XLabel=$y(\text{$\mu$3})_+/y(\text{$\mu$3})_-$
-YLabel=$|y(\text{$\mu$3}|$
+XLabel=$|y(\text{$\mu$3}|$
+YLabel=$y(\text{$\mu$3})_+/y(\text{$\mu$3})_-$
 # END PLOT
 
 # BEGIN PLOT /MC_MUONS/muon_y_pmratio_4
 Title=Rapidity $+/-$ ratio of fourth muon
-XLabel=$y(\text{$\mu$4})_+/y(\text{$\mu$4})_-$
-YLabel=$|y(\text{$\mu$4}|$
+XLabel=$|y(\text{$\mu$4}|$
+YLabel=$y(\text{$\mu$4})_+/y(\text{$\mu$4})_-$
 # END PLOT
 
 # BEGIN PLOT /MC_MUONS/muon_multi_exclusive
 Title=Exclusive muon multiplicity
+XLabel=$N_{\text{muon}}$
+YLabel=$\sigma(N_{\text{muon}})$ [pb]
+XMajorTickMarks=10
+XMinorTickMarks=0
+ErrorBands=1
+# END PLOT
+
+# BEGIN PLOT /MC_MUONS/muon_multi_exclusive_prompt
+Title=Exclusive prompt muon multiplicity
 XLabel=$N_{\text{muon}}$
 YLabel=$\sigma(N_{\text{muon}})$ [pb]
 XMajorTickMarks=10
@@ -182,8 +191,27 @@ XMinorTickMarks=0
 ErrorBands=1
 # END PLOT
 
+# BEGIN PLOT /MC_MUONS/muon_multi_inclusive_prompt
+Title=Inclusive prompt muon multiplicity
+XLabel=$N_{\text{muon}}$
+YLabel=$\sigma(\geq N_{\text{muon}})$ [pb]
+XMajorTickMarks=10
+XMinorTickMarks=0
+ErrorBands=1
+# END PLOT
+
 # BEGIN PLOT /MC_MUONS/muon_multi_ratio
 Title=Ratio of muon multiplicity
+XLabel=$N_{\text{muon}}$
+YLabel=$\sigma(\geq N_{\text{muon}})/\sigma(\geq N_{\text{muon}}-1)$
+XMajorTickMarks=10
+XMinorTickMarks=0
+LogY=0
+ErrorBands=1
+# END PLOT
+
+# BEGIN PLOT /MC_MUONS/muon_multi_ratio_prompt
+Title=Ratio of prompt muon multiplicity
 XLabel=$N_{\text{muon}}$
 YLabel=$\sigma(\geq N_{\text{muon}})/\sigma(\geq N_{\text{muon}}-1)$
 XMajorTickMarks=10

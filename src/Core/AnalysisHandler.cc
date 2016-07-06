@@ -6,10 +6,12 @@
 #include "Rivet/BeamConstraint.hh"
 #include "Rivet/Tools/Logging.hh"
 #include "Rivet/Projections/Beam.hh"
+#include "YODA/WriterYODA.h"
 
 namespace Rivet {
 
 
+  /// @todo Replace with a lambda when we can use C++11
   namespace {
     inline bool cmpAOByPath(const AnalysisObjectPtr a, const AnalysisObjectPtr b) {
       return a->path() < b->path();
@@ -22,6 +24,7 @@ namespace Rivet {
       _sumOfWeights(0.0), _xs(NAN),
       _initialised(false), _ignoreBeams(false)
   {}
+
 
   AnalysisHandler::~AnalysisHandler()
   {}
@@ -40,6 +43,7 @@ namespace Rivet {
     MSG_DEBUG("Initialising the analysis handler");
     _numEvents = 0;
     _sumOfWeights = 0.0;
+    _sumOfWeightsSq = 0.0;
 
     // Check that analyses are beam-compatible, and remove those that aren't
     const size_t num_anas_requested = analysisNames().size();
@@ -93,9 +97,7 @@ namespace Rivet {
 
   void AnalysisHandler::analyze(const GenEvent& ge) {
     // Call init with event as template if not already initialised
-    if (!_initialised) {
-      init(ge);
-    }
+    if (!_initialised) init(ge);
     assert(_initialised);
 
     // Ensure that beam details match those from the first event
@@ -109,18 +111,21 @@ namespace Rivet {
     }
 
     // Create the Rivet event wrapper
+    /// @todo Filter/normalize the event here
     Event event(ge);
 
     // Weights
     /// @todo Drop this / just report first weight when we support multiweight events
     _numEvents += 1;
     _sumOfWeights += event.weight();
+    _sumOfWeightsSq += sqr(event.weight());
     MSG_DEBUG("Event #" << _numEvents << " weight = " << event.weight());
 
     // Cross-section
     #ifdef HEPMC_HAS_CROSS_SECTION
     if (ge.cross_section()) {
       _xs = ge.cross_section()->cross_section();
+      _xserr = ge.cross_section()->cross_section_error();
     }
     #endif
 
@@ -138,6 +143,15 @@ namespace Rivet {
   }
 
 
+  void AnalysisHandler::analyze(const GenEvent* ge) {
+    if (ge == NULL) {
+      MSG_ERROR("AnalysisHandler received null pointer to GenEvent");
+      //throw Error("AnalysisHandler received null pointer to GenEvent");
+    }
+    analyze(*ge);
+  }
+
+
   void AnalysisHandler::finalize() {
     if (!_initialised) return;
     MSG_INFO("Finalising analyses");
@@ -146,8 +160,7 @@ namespace Rivet {
       try {
         a->finalize();
       } catch (const Error& err) {
-        cerr << "Error in " << a->name() << "::finalize method: "
-             << err.what() << endl;
+        cerr << "Error in " << a->name() << "::finalize method: " << err.what() << endl;
         exit(1);
       }
     }
@@ -208,6 +221,9 @@ namespace Rivet {
 
   vector<AnalysisObjectPtr> AnalysisHandler::getData() const {
     vector<AnalysisObjectPtr> rtn;
+    rtn.push_back( AnalysisObjectPtr(new Counter(YODA::Dbn0D(_numEvents, _sumOfWeights, _sumOfWeightsSq), "/_EVTCOUNT")) );
+    YODA::Scatter1D::Points pts; pts.insert(YODA::Point1D(_xs, _xserr));
+    rtn.push_back( AnalysisObjectPtr(new Scatter1D(pts, "/_XSEC")) );
     foreach (const AnaHandle a, analyses()) {
       vector<AnalysisObjectPtr> aos = a->analysisObjects();
       // MSG_WARNING(a->name() << " " << aos.size());
@@ -218,6 +234,7 @@ namespace Rivet {
         rtn.push_back(ao);
       }
     }
+    /// @todo Use lambda in C++11
     sort(rtn.begin(), rtn.end(), cmpAOByPath);
     return rtn;
   }
@@ -225,7 +242,11 @@ namespace Rivet {
 
   void AnalysisHandler::writeData(const string& filename) const {
     const vector<AnalysisObjectPtr> aos = getData();
-    WriterYODA::write(filename, aos.begin(), aos.end());
+    try {
+      YODA::WriterYODA::write(filename, aos.begin(), aos.end());
+    } catch (...) { /// @todo Move to specific YODA::WriteError type when YODA >= 1.5.0 is well-established
+      throw UserError("Unexpected error in writing file to: " + filename);
+    }
   }
 
 
@@ -245,6 +266,13 @@ namespace Rivet {
       rtn.push_back(a->name());
     }
     return rtn;
+  }
+
+
+  const AnaHandle AnalysisHandler::analysis(const std::string& analysisname) const {
+    foreach (const AnaHandle a, analyses())
+      if (a->name() == analysisname) return a;
+    throw Error("No analysis named '" + analysisname + "' registered in AnalysisHandler");
   }
 
 

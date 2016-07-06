@@ -29,8 +29,8 @@ namespace Rivet {
       ifs.acceptId(PID::PHOTON);
       addProjection(ifs, "IFS");
 
-      _h_m_PP = bookHisto1D("m_PP", logspace(50, 1.0, 0.25*sqrtS()));
-      _h_pT_PP = bookHisto1D("pT_PP", logspace(50, 1.0, 0.25*sqrtS()));
+      _h_m_PP = bookHisto1D("m_PP", logspace(50, 1.0, 0.25*(sqrtS()>0.?sqrtS():14000.)));
+      _h_pT_PP = bookHisto1D("pT_PP", logspace(50, 1.0, 0.25*(sqrtS()>0.?sqrtS():14000.)));
       _h_pT_P1 = bookHisto1D("pT_P1", 50, 0.0, 70.0);
       _h_pT_P2 = bookHisto1D("pT_P2", 50, 0.0, 70.0);
       _h_dphi_PP = bookHisto1D("dphi_PP", 20, 0.0, M_PI);

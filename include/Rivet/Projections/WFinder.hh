@@ -3,14 +3,16 @@
 #define RIVET_WFinder_HH
 
 #include "Rivet/Projections/FinalState.hh"
+#include "Rivet/Projections/MissingMomentum.hh"
+#include "Rivet/Projections/VetoedFinalState.hh"
 
 namespace Rivet {
 
 
-  /// @brief Convenience finder of leptonically decaying Ws
+  /// @brief Convenience finder of leptonically decaying W
   ///
-  /// Chain together different projections as convenience for finding W's
-  /// from two leptons in the final state, including photon clustering.
+  /// Chain together different projections as convenience for finding one W
+  /// from one lepton and the missing E 4-vector in the final state, including photon clustering.
   ///
   /// @todo Inherit directly from ParticleFinder, not FinalState
   class WFinder : public FinalState {
@@ -25,22 +27,22 @@ namespace Rivet {
 
     /// Constructor taking cuts object
     /// @param inputfs Input final state
-    /// @param cuts charged lepton cuts
-    /// @param pid type of the charged lepton
-    /// @param minmass,maxmass (transverse) mass window
-    /// @param missingET minimal amount of missing ET (neutrinos) required
-    /// @param dRmax maximum dR of photons around charged lepton to take into account
+    /// @param leptoncuts Charged lepton cuts
+    /// @param pid Type of the charged lepton
+    /// @param minmass,maxmass (Transverse) mass window
+    /// @param missingET Minimal amount of missing ET (neutrinos) required
+    /// @param dRmax Maximum dR of photons around charged lepton to take into account
     ///  for W reconstruction (only relevant if one of the following are true)
-    /// @param clusterPhotons whether such photons are supposed to be
+    /// @param clusterPhotons Whether such photons are supposed to be
     ///  clustered to the lepton object and thus W mom
-    /// @param trackPhotons whether such photons should be added to _theParticles
-    /// @param masstype whether mass window should be applied using m or mT
+    /// @param trackPhotons Whether such photons should be added to _theParticles
+    /// @param masstype Whether mass window should be applied using m or mT
     WFinder(const FinalState& inputfs,
-            const Cut & cuts,
+            const Cut& leptoncuts,
             PdgId pid,
             double minmass, double maxmass,
             double missingET,
-            double dRmax=0.1, 
+            double dRmax=0.1,
             ClusterPhotons clusterPhotons=CLUSTERNODECAY,
             PhotonTracking trackPhotons=NOTRACK,
             MassWindow masstype=MASS,
@@ -63,28 +65,33 @@ namespace Rivet {
     const Particle& boson() const { return _bosons[0]; }
 
 
-    /// Access to the W constituent clustered leptons
+    /// Access to the Ws' constituent clustered leptons
     ///
     /// @note Either size 0 if no boson was found or 1 if one boson was found
     const Particles& constituentLeptons() const { return _constituentLeptons; }
 
-    /// Access to the W constituent clustered lepton (assuming it exists)
+    /// Access to the W's constituent clustered lepton (assuming it exists)
     const Particle& constituentLepton() const { return _constituentLeptons[0]; }
 
 
-    /// Access to the W constituent neutrinos
+    /// Access to the Ws' constituent neutrinos
     ///
     /// @note Either size 0 if no boson was found or 1 if one boson was found
+    /// @note The neutrino can't be perfecly reconstructed -- this is a pseudo-nu from the MET.
     const Particles& constituentNeutrinos() const { return _constituentNeutrinos; }
 
-    /// Access to the W constituent neutrinos
+    /// Access to the W's constituent neutrino (assuming it exists)
+    /// @note The neutrino can't be perfecly reconstructed -- this is a pseudo-nu from the MET.
     const Particle& constituentNeutrino() const { return _constituentNeutrinos[0]; }
 
 
     /// Access to the particles other than the W leptons and clustered photons
     ///
     /// Useful for e.g. input to a jet finder
-    const FinalState& remainingFinalState() const;
+    const VetoedFinalState& remainingFinalState() const;
+
+    /// Access to the missing momentum projection used to find the "neutrino"
+    const MissingMomentum& missingMom() const;
 
     /// @brief Calculate the transverse mass of the W, from the charged lepton and neutrino
     ///

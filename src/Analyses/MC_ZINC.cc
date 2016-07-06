@@ -4,7 +4,6 @@
 
 namespace Rivet {
 
-  
 
 
   /// @brief MC validation analysis for Z events
@@ -12,9 +11,11 @@ namespace Rivet {
   public:
 
     /// Default constructor
-    MC_ZINC()
-      : Analysis("MC_ZINC")
-    {    }
+    MC_ZINC(string name="MC_ZINC")
+		 : Analysis(name) {
+		 _dR=0.2;
+		 _lepton=PID::ELECTRON;
+	 }
 
 
     /// @name Analysis methods
@@ -24,15 +25,15 @@ namespace Rivet {
     void init() {
       FinalState fs;
       Cut cut = Cuts::abseta < 3.5 && Cuts::pT > 25*GeV;
-      ZFinder zfinder(fs, cut, PID::ELECTRON, 65.0*GeV, 115.0*GeV, 0.2, ZFinder::CLUSTERNODECAY, ZFinder::TRACK);
+      ZFinder zfinder(fs, cut, _lepton, 65.0*GeV, 115.0*GeV, _dR, ZFinder::CLUSTERNODECAY, ZFinder::TRACK);
       addProjection(zfinder, "ZFinder");
 
       _h_Z_mass = bookHisto1D("Z_mass", 50, 66.0, 116.0);
-      _h_Z_pT = bookHisto1D("Z_pT", logspace(100, 1.0, 0.5*sqrtS()/GeV));
+      _h_Z_pT = bookHisto1D("Z_pT", logspace(100, 1.0, 0.5*(sqrtS()>0.?sqrtS():14000.)/GeV));
       _h_Z_pT_peak = bookHisto1D("Z_pT_peak", 25, 0.0, 25.0);
       _h_Z_y = bookHisto1D("Z_y", 40, -4.0, 4.0);
       _h_Z_phi = bookHisto1D("Z_phi", 25, 0.0, TWOPI);
-      _h_lepton_pT = bookHisto1D("lepton_pT", logspace(100, 10.0, 0.25*sqrtS()/GeV));
+      _h_lepton_pT = bookHisto1D("lepton_pT", logspace(100, 10.0, 0.25*(sqrtS()>0.?sqrtS():14000.)/GeV));
       _h_lepton_eta = bookHisto1D("lepton_eta", 40, -4.0, 4.0);
 
     }
@@ -62,16 +63,25 @@ namespace Rivet {
 
     /// Finalize
     void finalize() {
-      const double xsec = crossSection()/picobarn;
-      normalize(_h_Z_mass, xsec);
-      normalize(_h_Z_pT, xsec);
-      normalize(_h_Z_pT_peak, xsec);
-      normalize(_h_Z_y, xsec);
-      normalize(_h_Z_phi, xsec);
-      normalize(_h_lepton_pT, xsec);
-      normalize(_h_lepton_eta, xsec);
+      const double s = crossSection()/picobarn/sumOfWeights();
+      scale(_h_Z_mass, s);
+      scale(_h_Z_pT, s);
+      scale(_h_Z_pT_peak, s);
+      scale(_h_Z_y, s);
+      scale(_h_Z_phi, s);
+      scale(_h_lepton_pT, s);
+      scale(_h_lepton_eta, s);
     }
 
+    //@}
+
+
+  protected:
+
+    /// @name Parameters for specialised e/mu and dressed/bare subclassing
+    //@{
+    double _dR;
+    PdgId _lepton;
     //@}
 
 
@@ -92,7 +102,42 @@ namespace Rivet {
 
 
 
-  // The hook for the plugin system
+  struct MC_ZINC_EL : public MC_ZINC {
+    MC_ZINC_EL() : MC_ZINC("MC_ZINC_EL") {
+      _dR = 0.2;
+      _lepton = PID::ELECTRON;
+    }
+  };
+
+  struct MC_ZINC_EL_BARE : public MC_ZINC {
+    MC_ZINC_EL_BARE() : MC_ZINC("MC_ZINC_EL_BARE") {
+      _dR = 0;
+      _lepton = PID::ELECTRON;
+    }
+  };
+
+  struct MC_ZINC_MU : public MC_ZINC {
+    MC_ZINC_MU() : MC_ZINC("MC_ZINC_MU") {
+      _dR = 0.2;
+      _lepton = PID::MUON;
+    }
+  };
+
+  struct MC_ZINC_MU_BARE : public MC_ZINC {
+    MC_ZINC_MU_BARE() : MC_ZINC("MC_ZINC_MU_BARE") {
+      _dR = 0;
+      _lepton = PID::MUON;
+    }
+  };
+
+
+
+  // The hooks for the plugin system
   DECLARE_RIVET_PLUGIN(MC_ZINC);
+  DECLARE_RIVET_PLUGIN(MC_ZINC_EL);
+  DECLARE_RIVET_PLUGIN(MC_ZINC_EL_BARE);
+  DECLARE_RIVET_PLUGIN(MC_ZINC_MU);
+  DECLARE_RIVET_PLUGIN(MC_ZINC_MU_BARE);
+
 
 }

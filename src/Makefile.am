@@ -1,8 +1,6 @@
 SUBDIRS = Core Tools Projections
-if ENABLE_ANALYSES
 SUBDIRS += Analyses
 ANA_LIBADD = Analyses/libRivetAnalysisTools.la
-endif
 
 lib_LTLIBRARIES = libRivet.la
 libRivet_la_SOURCES =

@@ -161,9 +161,11 @@ namespace Rivet {
         if (tau.genParticle()->end_vertex() == 0) continue;
 
         // Calculate visible tau pT from pT of tau neutrino in tau decay for pT and |eta| cuts
-        const FourMomentum tau_neutrino_mom = get_tau_neutrino_mom(tau);
-        const FourMomentum visible_tau_mom = tau.momentum() - tau_neutrino_mom;
-        if (visible_tau_mom.pT() < 15*GeV || visible_tau_mom.abseta() > 2.5) continue;
+        FourMomentum daughter_tau_neutrino_momentum = get_tau_neutrino_mom(tau);
+        Particle tau_vis = tau;
+        tau_vis.setMomentum(tau.momentum()-daughter_tau_neutrino_momentum);
+        // keep only taus in certain eta region and above 15 GeV of visible tau pT
+        if ( tau_vis.pT() <= 15.0*GeV || tau_vis.abseta() > 2.5) continue;
 
         // Get prong number (number of tracks) in tau decay and check if tau decays leptonically
         unsigned int nprong = 0;
@@ -176,11 +178,11 @@ namespace Rivet {
         else if (nprong == 3) tau_id = 16;
 
         // Get fiducial lepton efficiency simulate reco efficiency
-        const double eff = (_use_fiducial_lepton_efficiency) ? apply_reco_eff(tau_id, tau) : 1.0;
+        const double eff = (_use_fiducial_lepton_efficiency) ? apply_reco_eff(tau_id, tau_vis) : 1.0;
         const bool keep_tau = rand()/static_cast<double>(RAND_MAX) <= eff;
 
         // Keep tau if nprong = 1, it decays hadronically, and it's reconstructed by the detector
-        if ( !lep_decaying_tau && nprong == 1 && keep_tau) tau_candidates.push_back(tau);
+        if ( !lep_decaying_tau && nprong == 1 && keep_tau) tau_candidates.push_back(tau_vis);
       }
 
 
@@ -625,7 +627,7 @@ namespace Rivet {
       const GenVertex* dv = p.genParticle()->end_vertex();
       assert(dv != NULL);
       for (GenVertex::particles_out_const_iterator pp = dv->particles_out_const_begin(); pp != dv->particles_out_const_end(); ++pp) {
-        if ((*pp)->pdg_id() == PID::NU_TAU) return FourMomentum((*pp)->momentum());
+        if (abs((*pp)->pdg_id()) == PID::NU_TAU) return FourMomentum((*pp)->momentum());
       }
       return FourMomentum();
     }

@@ -179,7 +179,7 @@ namespace Rivet {
       // non-b-tagged jets. The pair which best matches the W mass is used. We start
       // with an always terrible 4-vector estimate which should always be "beaten" by
       // a real jet pair.
-      FourMomentum W(10*sqrtS(), 0, 0, 0);
+      FourMomentum W(10*(sqrtS()>0.?sqrtS():14000.), 0, 0, 0);
       for (size_t i = 0; i < ljets.size()-1; ++i) {
         for (size_t j = i + 1; j < ljets.size(); ++j) {
           const FourMomentum Wcand = ljets[i].momentum() + ljets[j].momentum();

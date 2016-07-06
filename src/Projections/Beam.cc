@@ -73,5 +73,18 @@ namespace Rivet {
   }
 
 
+  FourVector Beam::pv() const {
+    HepMC::FourVector v1, v2;
+    ParticlePair bpair = beams();
+    if (bpair.first.genParticle() != NULL && bpair.first.genParticle()->end_vertex() != NULL)
+      v1 = bpair.first.genParticle()->end_vertex()->position();
+    if (bpair.second.genParticle() != NULL && bpair.second.genParticle()->end_vertex() != NULL)
+      v2 = bpair.second.genParticle()->end_vertex()->position();
+    const FourVector rtn = (v1 == v2) ? FourVector(v1.t(), v1.x(), v1.y(), v1.z()) : FourVector();
+    MSG_DEBUG("Beam PV 4-position = " << rtn);
+    return rtn;
+  }
+
+
 
 }

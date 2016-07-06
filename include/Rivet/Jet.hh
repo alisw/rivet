@@ -5,6 +5,7 @@
 #include "Rivet/Config/RivetCommon.hh"
 #include "Rivet/Jet.fhh"
 #include "Rivet/Particle.hh"
+#include "Rivet/Cuts.hh"
 #include "Rivet/Tools/ParticleUtils.hh"
 #include "fastjet/PseudoJet.hh"
 #include <numeric>
@@ -73,65 +74,47 @@ namespace Rivet {
     /// Nicer alias for containsParticleId
     bool containsPID(const vector<PdgId>& pids) const { return containsParticleId(pids); }
 
+    //@}
+
+
+    /// @name Tagging
+    ///
+    /// @note General sources of tag particles are planned. The default jet finding
+    /// adds b-hadron, c-hadron, and tau tags by ghost association.
+    //@{
 
     /// @brief Particles which have been tag-matched to this jet
-    ///
-    /// General sources of tag particles are planned. The default jet finding
-    /// adds b-hadron, c-hadron, and tau tags by ghost association.
     Particles& tags() { return _tags; }
     /// @brief Particles which have been tag-matched to this jet (const version)
-    ///
-    /// General sources of tag particles are planned. The default jet finding
-    /// adds b-hadron, c-hadron, and tau tags by ghost association.
     const Particles& tags() const { return _tags; }
+    /// @brief Particles which have been tag-matched to this jet _and_ pass a Cut
+    ///
+    /// @note Note the less efficient return by value, due to the cut-pass filtering.
+    Particles tags(const Cut& c) const;
 
 
-    /// @brief b particles which have been tag-matched to this jet
+    /// @brief b particles which have been tag-matched to this jet (and pass an optional Cut)
     ///
     /// The default jet finding adds b-hadron tags by ghost association.
-    Particles bTags() const {
-      Particles rtn;
-      foreach (const Particle& tp, _tags) {
-        if (hasBottom(tp)) rtn.push_back(tp);
-      }
-      return rtn;
-    }
-    /// Does this jet have at least one b-tag?
-    bool bTagged() const {
-      return !bTags().empty();
-    }
+    Particles bTags(const Cut& c=Cuts::open()) const;
+    /// Does this jet have at least one b-tag (that passes an optional Cut)?
+    bool bTagged(const Cut& c=Cuts::open()) const { return !bTags(c).empty(); }
 
 
-    /// @brief c particles which have been tag-matched to this jet by some external means
+    /// @brief c (and not b) particles which have been tag-matched to this jet (and pass an optional Cut)
     ///
     /// The default jet finding adds c-hadron tags by ghost association.
-    Particles cTags() const {
-      Particles rtn;
-      foreach (const Particle& tp, _tags) {
-        if (hasCharm(tp)) rtn.push_back(tp);
-      }
-      return rtn;
-    }
-    /// Does this jet have at least one c-tag?
-    bool cTagged() const {
-      return !cTags().empty();
-    }
+    Particles cTags(const Cut& c=Cuts::open()) const;
+    /// Does this jet have at least one c-tag (that passes an optional Cut)?
+    bool cTagged(const Cut& c=Cuts::open()) const { return !cTags(c).empty(); }
 
 
-    /// @brief Tau particles which have been tag-matched to this jet by some external means
+    /// @brief Tau particles which have been tag-matched to this jet (and pass an optional Cut)
     ///
     /// The default jet finding adds tau tags by ghost association.
-    Particles tauTags() const {
-      Particles rtn;
-      foreach (const Particle& tp, _tags) {
-        if (isTau(tp)) rtn.push_back(tp);
-      }
-      return rtn;
-    }
-    /// Does this jet have at least one tau-tag?
-    bool tauTagged() const {
-      return !tauTags().empty();
-    }
+    Particles tauTags(const Cut& c=Cuts::open()) const;
+    /// Does this jet have at least one tau-tag (that passes an optional Cut)?
+    bool tauTagged(const Cut& c=Cuts::open()) const { return !tauTags(c).empty(); }
 
 
     /// @brief Check whether this jet contains a bottom-flavoured hadron.
@@ -212,10 +195,6 @@ namespace Rivet {
     /// @deprecated Prefer the 4-mom first-arg versions
     DEPRECATED("Prefer the 4-mom first-arg versions")
     Jet& setState(const Particles& particles, const FourMomentum& mom) { return setState(mom, particles); }
-
-    // /// Set the effective 4-momentum of the jet.
-    // /// @todo Update for PseudoJet -- should momentum be separated from the cseq, etc.?
-    // Jet& setMomentum(const FourMomentum& momentum);
 
     /// @brief Set the particles collection with full particle information.
     ///

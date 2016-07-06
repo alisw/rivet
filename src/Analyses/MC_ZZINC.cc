@@ -33,25 +33,26 @@ namespace Rivet {
       addProjection(zmmfinder, "ZmmFinder");
 
       // Properties of the pair momentum
-      _h_ZZ_pT = bookHisto1D("ZZ_pT", logspace(100, 1.0, 0.5*sqrtS()/GeV));
+      double sqrts = sqrtS()>0. ? sqrtS() : 14000.;
+      _h_ZZ_pT = bookHisto1D("ZZ_pT", logspace(100, 1.0, 0.5*sqrts/GeV));
       _h_ZZ_pT_peak = bookHisto1D("ZZ_pT_peak", 25, 0.0, 25.0);
       _h_ZZ_eta = bookHisto1D("ZZ_eta", 40, -7.0, 7.0);
       _h_ZZ_phi = bookHisto1D("ZZ_phi", 25, 0.0, TWOPI);
-      _h_ZZ_m = bookHisto1D("ZZ_m", logspace(100, 150.0, 180.0 + 0.25*sqrtS()/GeV));
+      _h_ZZ_m = bookHisto1D("ZZ_m", logspace(100, 150.0, 180.0 + 0.25*sqrts/GeV));
 
       // Correlations between the ZZ
       _h_ZZ_dphi = bookHisto1D("ZZ_dphi", 25, 0.0, PI);  /// @todo non-linear?
       _h_ZZ_deta = bookHisto1D("ZZ_deta", 25, -7.0, 7.0);
       _h_ZZ_dR = bookHisto1D("ZZ_dR", 25, 0.5, 7.0);
-      _h_ZZ_dpT = bookHisto1D("ZZ_dpT", logspace(100, 1.0, 0.5*sqrtS()/GeV));
+      _h_ZZ_dpT = bookHisto1D("ZZ_dpT", logspace(100, 1.0, 0.5*sqrts/GeV));
       _h_ZZ_costheta_planes = bookHisto1D("ZZ_costheta_planes", 25, -1.0, 1.0);
 
       // Properties of the Z bosons
-      _h_Z_pT = bookHisto1D("Z_pT", logspace(100, 10.0, 0.25*sqrtS()/GeV));
+      _h_Z_pT = bookHisto1D("Z_pT", logspace(100, 10.0, 0.25*sqrts/GeV));
       _h_Z_eta = bookHisto1D("Z_eta", 70, -7.0, 7.0);
 
       // Properties of the leptons
-      _h_Zl_pT = bookHisto1D("Zl_pT", logspace(100, 30.0, 0.1*sqrtS()/GeV));
+      _h_Zl_pT = bookHisto1D("Zl_pT", logspace(100, 30.0, 0.1*sqrts/GeV));
       _h_Zl_eta = bookHisto1D("Zl_eta", 40, -3.5, 3.5);
 
       // Correlations between the opposite charge leptons
@@ -124,25 +125,25 @@ namespace Rivet {
 
     /// Finalize
     void finalize() {
-      const double norm = crossSection()/picobarn;
-      normalize(_h_ZZ_pT, norm);
-      normalize(_h_ZZ_pT_peak, norm);
-      normalize(_h_ZZ_eta, norm);
-      normalize(_h_ZZ_phi, norm);
-      normalize(_h_ZZ_m, norm);
-      normalize(_h_ZZ_dphi, norm);
-      normalize(_h_ZZ_deta, norm);
-      normalize(_h_ZZ_dR, norm);
-      normalize(_h_ZZ_dpT, norm);
-      normalize(_h_ZZ_costheta_planes, norm);
-      normalize(_h_Z_pT, norm);
-      normalize(_h_Z_eta, norm);
-      normalize(_h_Zl_pT, norm);
-      normalize(_h_Zl_eta, norm);
-      normalize(_h_ZeZm_dphi, norm);
-      normalize(_h_ZeZm_deta, norm);
-      normalize(_h_ZeZm_dR, norm);
-      normalize(_h_ZeZm_m, norm);
+      const double s = crossSection()/picobarn/sumOfWeights();
+      scale(_h_ZZ_pT, s);
+      scale(_h_ZZ_pT_peak, s);
+      scale(_h_ZZ_eta, s);
+      scale(_h_ZZ_phi, s);
+      scale(_h_ZZ_m, s);
+      scale(_h_ZZ_dphi, s);
+      scale(_h_ZZ_deta, s);
+      scale(_h_ZZ_dR, s);
+      scale(_h_ZZ_dpT, s);
+      scale(_h_ZZ_costheta_planes, s);
+      scale(_h_Z_pT, s);
+      scale(_h_Z_eta, s);
+      scale(_h_Zl_pT, s);
+      scale(_h_Zl_eta, s);
+      scale(_h_ZeZm_dphi, s);
+      scale(_h_ZeZm_deta, s);
+      scale(_h_ZeZm_dR, s);
+      scale(_h_ZeZm_m, s);
     }
 
     //@}

@@ -44,7 +44,7 @@ namespace Rivet {
       _h_Ze_jet1_dR = bookHisto1D("Ze_jet1_dR", 25, 0.0, 7.0);
 
       // Global stuff
-      _h_HT = bookHisto1D("HT", logspace(100, 100.0, 0.5*sqrtS()/GeV));
+      _h_HT = bookHisto1D("HT", logspace(100, 100.0, 0.5*(sqrtS()>0.?sqrtS():14000.)/GeV));
 
       MC_JetAnalysis::init();
     }
@@ -89,11 +89,11 @@ namespace Rivet {
 
     /// Finalize
     void finalize() {
-      const double norm = crossSection()/picobarn;
-      normalize(_h_ZZ_jet1_deta, norm);
-      normalize(_h_ZZ_jet1_dR, norm);
-      normalize(_h_Ze_jet1_dR, norm);
-      normalize(_h_HT, norm);
+      const double s = crossSection()/picobarn/sumOfWeights();
+      scale(_h_ZZ_jet1_deta, s);
+      scale(_h_ZZ_jet1_dR, s);
+      scale(_h_Ze_jet1_dR, s);
+      scale(_h_HT, s);
       MC_JetAnalysis::finalize();
     }
 

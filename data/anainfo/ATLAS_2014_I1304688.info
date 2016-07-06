@@ -12,7 +12,7 @@ References:
  - CERN-PH-EP-2014-114
  - arXiv:1407.0891[hep-ex]
 RunInfo:
-  ttbar events with at least one lepton in the ttbar final state at 7 TeV
+  ttbar events with at least one lepton in the ttbar final state at 7 TeV, i.e. both semileptonic and dileptonic decays should be enabled. The tau decay channels also count as leptonic.
 Beams: [p+, p+]
 Energies: [7000]
 NeedCrossSection: True

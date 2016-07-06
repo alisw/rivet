@@ -1,7 +1,6 @@
 // -*- C++ -*-
 #include "Rivet/Projections/ZFinder.hh"
 #include "Rivet/Projections/InvMassFinalState.hh"
-#include "Rivet/Projections/DressedLeptons.hh"
 #include "Rivet/Projections/VetoedFinalState.hh"
 
 namespace Rivet {
@@ -40,8 +39,8 @@ namespace Rivet {
   /////////////////////////////////////////////////////
 
 
-  const FinalState& ZFinder::remainingFinalState() const {
-    return getProjection<FinalState>("RFS");
+  const VetoedFinalState& ZFinder::remainingFinalState() const {
+    return getProjection<VetoedFinalState>("RFS");
   }
 
 
@@ -77,11 +76,16 @@ namespace Rivet {
     assert(threeCharge(l1) + threeCharge(l2) == 0);
 
     stringstream msg;
-    msg << "Z reconstructed from: \n"
+    msg << "Z " << pZ << " reconstructed from: \n"
         << "   " << l1.momentum() << " " << l1.pid() << "\n"
         << " + " << l2.momentum() << " " << l2.pid();
     MSG_DEBUG(msg.str());
     _bosons.push_back(Particle(PID::ZBOSON, pZ));
+
+    // Keep the DressedLeptons found by the ZFinder
+    foreach (DressedLepton l, leptons.dressedLeptons()) {
+      _allLeptons.push_back(l);
+    }
 
     // Find the DressedLeptons which survived the IMFS cut such that we can
     // extract their original particles

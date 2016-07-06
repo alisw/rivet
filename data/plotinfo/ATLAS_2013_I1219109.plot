@@ -12,7 +12,7 @@ LogY=0
 LegendXPos=0.20
 YLabel=$\sigma_\text{fiducial}$ [pb]
 XMinorTickMarks=0
-XCustomMajorTicks=1	1 jet	2	2 jet	3	1+2 jet
+XCustomMajorTicks=1	1~jet	2	2~jet	3	1+2~jet
 Title=electron channel, dressed level
 # END PLOT
 
@@ -31,4 +31,3 @@ RatioPlotYMin=0.4
 # BEGIN PLOT /ATLAS_2013_I1219109/d02-x02-y01
 Title=$N_\text{jet} = 2$, electron channel, dressed level
 # END PLOT
-

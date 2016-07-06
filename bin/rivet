@@ -11,10 +11,7 @@ Examples:
 ENVIRONMENT:
  * RIVET_ANALYSIS_PATH: list of paths to be searched for plugin
      analysis libraries at runtime
- * RIVET_REF_PATH: list of paths to be searched for reference
-     data files
- * RIVET_INFO_PATH: list of paths to be searched for analysis
-     metadata files
+ * RIVET_DATA_PATH: list of paths to be searched for data files
 """
 
 import os, sys
@@ -35,7 +32,7 @@ except:
         import rivet
     except:
         sys.stderr.write("The rivet Python module could not be loaded: is your PYTHONPATH set correctly?\n")
-        sys.exit(1)
+        sys.exit(5)
 
 rivet.util.check_python_version()
 rivet.util.set_process_name("rivet")
@@ -47,40 +44,45 @@ from optparse import OptionParser, OptionGroup
 parser = OptionParser(usage=__doc__, version="rivet v%s" % rivet.version())
 
 anagroup = OptionGroup(parser, "Analysis handling")
-anagroup.add_option("-a", "--analysis", dest="ANALYSES", action="append",
+anagroup.add_option("-a", "--analysis", "--analyses", dest="ANALYSES", action="append",
                     default=[], metavar="ANA",
-                    help="add an analysis to the processing list.")
+                    help="add an analysis (or comma-separated list of analyses) to the processing list.")
 anagroup.add_option("--list-analyses", "--list", dest="LIST_ANALYSES", action="store_true",
                     default=False, help="show the list of available analyses' names. With -v, it shows the descriptions, too")
 anagroup.add_option("--list-used-analyses", action="store_true", dest="LIST_USED_ANALYSES",
                     default=False, help="list the analyses used by this command (after subtraction of inappropriate ones)")
 anagroup.add_option("--show-analysis", "--show-analyses", "--show", dest="SHOW_ANALYSES", action="append",
                     default=[], help="show the details of an analysis")
+anagroup.add_option("--show-bibtex", dest="SHOW_BIBTEX", action="store_true",
+                    default=False, help="show BibTeX entries for all used analyses")
 anagroup.add_option("--analysis-path", dest="ANALYSIS_PATH", metavar="PATH", default=None,
                     help="specify the analysis search path (cf. $RIVET_ANALYSIS_PATH).")
 # TODO: remove/deprecate the append?
 anagroup.add_option("--analysis-path-append", dest="ANALYSIS_PATH_APPEND", metavar="PATH", default=None,
                     help="append to the analysis search path (cf. $RIVET_ANALYSIS_PATH).")
 anagroup.add_option("--pwd", dest="ANALYSIS_PATH_PWD", action="store_true", default=False,
-                    help="append the current directory (pwd) to the analysis search path (cf. $RIVET_ANALYSIS_PATH).")
+                    help="append the current directory (pwd) to the analysis/data search paths (cf. $RIVET_ANALYSIS_PATH).")
 # TODO: add control for more paths?
 parser.add_option_group(anagroup)
 
 
 extragroup = OptionGroup(parser, "Extra run settings")
-extragroup.add_option("-H", "--histo-file", dest="HISTOFILE",
+extragroup.add_option("-o", "-H", "--histo-file", dest="HISTOFILE",
                       default="Rivet.yoda", help="specify the output histo file path (default = %default)")
 extragroup.add_option("-x", "--cross-section", dest="CROSS_SECTION",
                       default=None, metavar="XS",
                       help="specify the signal process cross-section in pb")
 extragroup.add_option("-n", "--nevts", dest="MAXEVTNUM", type="int",
                       default=None, metavar="NUM",
-                      help="restrict the max number of events to read.")
+                      help="restrict the max number of events to process")
+extragroup.add_option("--nskip", dest="EVTSKIPNUM", type="int",
+                      default=0, metavar="NUM",
+                      help="skip NUM events read from input before beginning processing")
 extragroup.add_option("--runname", dest="RUN_NAME", default=None, metavar="NAME",
                       help="give an optional run name, to be prepended as a 'top level directory' in histo paths")
 extragroup.add_option("--ignore-beams", dest="IGNORE_BEAMS", action="store_true", default=False,
                       help="Ignore input event beams when checking analysis compatibility. "
-                      "Warning: some analyses may not work with incorrect beams")
+                      "Warning: analyses may not work correctly, or at all, with inappropriate beams")
 parser.add_option_group(extragroup)
 
 
@@ -94,8 +96,8 @@ timinggroup.add_option("--run-timeout", dest="RUN_TIMEOUT", type="int",
                        "as the LCG Grid where tokens expire on a fixed wall-clock and can render long Rivet runs unable to write "
                        "out the final histogram file (default = unlimited)")
 timinggroup.add_option("--histo-interval", dest="HISTO_WRITE_INTERVAL", type=int,
-                       default=None, help="[experimental!] specify the number of events between histogram file updates. "
-                       "Default is to only write out at the end of the run. Note that intermediate histograms will be those "
+                       default=10000, help="[experimental!] specify the number of events between histogram file updates. "
+                       "Set to 0 to only write out at the end of the run. Note that intermediate histograms will be those "
                        "from the analyze step only: analysis finalizing is currently not executed until the end of the run.")
 parser.add_option_group(timinggroup)
 
@@ -113,7 +115,6 @@ opts, args = parser.parse_args()
 
 ## Configure logging
 logging.basicConfig(level=opts.LOGLEVEL, format="%(message)s")
-
 
 ## Control native Rivet library logger
 for l in opts.NATIVE_LOG_STRS:
@@ -133,6 +134,17 @@ for l in opts.NATIVE_LOG_STRS:
         rivet.setLogLevel(name, level)
     except:
         logging.warning("Couldn't process logging string '%s'" % l)
+
+
+## We allow comma-separated lists of analysis names -- normalise the list here
+newanas = []
+for a in opts.ANALYSES:
+    if "," in a:
+        newanas += a.split(",")
+    else:
+        newanas.append(a)
+opts.ANALYSES = newanas
+
 
 ## Parse supplied cross-section
 if opts.CROSS_SECTION is not None:
@@ -212,22 +224,32 @@ if opts.LIST_ANALYSES:
     if args:
         import re
         regexes = [re.compile(arg, re.I) for arg in args]
-    for aname in all_analyses:
-        if not regexes:
-            toshow = True
-        else:
-            toshow = False
-            for regex in regexes:
-                if regex.search(aname):
-                    toshow = True
-                    break
-        if toshow:
-            msg = aname
-            if opts.LOGLEVEL <= logging.INFO:
-                a = rivet.AnalysisLoader.getAnalysis(aname)
-                st = "" if a.status() == "VALIDATED" else ("[" + a.status() + "] ")
-                msg = "%-25s   %s" % (aname, st + rivet.util.detex(a.summary()))
-            print msg
+    try:
+        # import tempfile, subprocess
+        # tf, tfpath = tempfile.mkstemp(prefix="rivet-list.")
+        for aname in all_analyses:
+            if not regexes:
+                toshow = True
+            else:
+                toshow = False
+                for regex in regexes:
+                    if regex.search(aname):
+                        toshow = True
+                        break
+            if toshow:
+                msg = aname
+                if opts.LOGLEVEL <= logging.INFO:
+                    a = rivet.AnalysisLoader.getAnalysis(aname)
+                    st = "" if a.status() == "VALIDATED" else ("[" + a.status() + "] ")
+                    msg = "%-25s   %s" % (aname, st + rivet.util.detex(a.summary()))
+                print msg
+                #os.write(tf, msg + "\n")
+        # if os.path.getsize(tfpath) > 0:
+        #     pager = subprocess.Popen(["less", "-FX", tfpath]) #, stdin=subprocess.PIPE)
+        #     pager.communicate()
+    finally:
+        # os.unlink(tfpath) #< always clean up
+        pass
     sys.exit(0)
 
 
@@ -246,48 +268,46 @@ if len(opts.SHOW_ANALYSES) > 0:
                 if regex.search(ana) and a_up not in toshow:
                     toshow.append(ana)
 
-    ## Show the matching analyses' details
-    import textwrap
+    msgs = []
     for i, name in enumerate(sorted(toshow)):
+        import textwrap
         ana = rivet.AnalysisLoader.getAnalysis(name)
-        print ""
-        print name
-        print len(name) * "="
-        print ""
-        print rivet.util.detex(ana.summary())
-        print ""
-        print "Status: %s" % ana.status()
-        print ""
 
+        msg = ""
+        msg += name + "\n"
+        msg += (len(name) * "=") + "\n\n"
+        msg += rivet.util.detex(ana.summary()) + "\n\n"
+        msg += "Status: " + ana.status() + "\n\n"
+
+        # TODO: reduce to only show Inspire in v3
         if ana.inspireId():
-            print "Inspire ID: %s" % ana.inspireId()
-            print "Inspire URL: http://inspire-hep.net/record/%s" % ana.inspireId()
-            print "HepData URL: http://hepdata.cedar.ac.uk/view/ins%s" % ana.inspireId()
+            msg += "Inspire ID: " + ana.inspireId() + "\n"
+            msg += "Inspire URL: http://inspire-hep.net/record/" + ana.inspireId() + "\n"
+            msg += "HepData URL: http://hepdata.cedar.ac.uk/view/ins" + ana.inspireId() + "\n"
         elif ana.spiresId():
-            print "Spires ID: %s" % ana.spiresId()
-            print "Inspire URL: http://inspire-hep.net/search?p=find+key+%s" % ana.spiresId()
-            print "HepData URL: http://hepdata.cedar.ac.uk/view/irn%s" % ana.spiresId()
+            msg += "Spires ID: " + ana.spiresId() + "\n"
+            msg += "Inspire URL: http://inspire-hep.net/search?p=find+key+" + ana.spiresId() + "\n"
+            msg += "HepData URL: http://hepdata.cedar.ac.uk/view/irn" + ana.spiresId() + "\n"
 
         if ana.experiment():
-            print "Experiment: %s" % ana.experiment(),
+            msg += "Experiment: " + ana.experiment()
             if ana.collider():
-                print "(%s)" % ana.collider()
+                msg += "(%s)" % ana.collider()
+            msg += "\n"
 
         if ana.year():
-            print "Year of publication: %s" % ana.year()
+            msg += "Year of publication: " + ana.year() + "\n"
 
-        print "Authors:"
+        msg += "Authors:\n"
         for a in ana.authors():
-            print "  " + a
+            msg += "  " + a + "\n"
+        msg += "\n"
 
-        print ""
-
-        print "Description:"
+        msg += "Description:\n"
         twrap = textwrap.TextWrapper(width=75, initial_indent=2*" ", subsequent_indent=2*" ")
-        print twrap.fill(rivet.util.detex(ana.description()))
+        msg += twrap.fill(rivet.util.detex(ana.description())) + "\n\n"
 
-        print ""
-
+        # TODO: move this formatting into Analysis or a helper function?
         if ana.requiredBeams():
             def pid_to_str(pid):
                 if pid == 11:
@@ -305,22 +325,21 @@ if len(opts.SHOW_ANALYSES) > 0:
             beamstrs = []
             for bp in ana.requiredBeams():
                 beamstrs.append(pid_to_str(bp[0]) + " " + pid_to_str(bp[1]))
-            print "Beams:", ", ".join(beamstrs)
+            msg += "Beams:" + ", ".join(beamstrs) + "\n"
 
         if ana.requiredEnergies():
-            print "Beam energies:", "; ".join(["(%0.1f, %0.1f)" % (epair[0], epair[1]) for epair in ana.requiredEnergies()]), "GeV"
+            msg += "Beam energies: %s GeV\n" + "; ".join(["(%0.1f, %0.1f)" % (epair[0], epair[1]) for epair in ana.requiredEnergies()])
         else:
-            print "Beam energies: ANY"
+            msg += "Beam energies: ANY\n"
 
         if ana.runInfo():
-            print "Run details:"
+            msg += "Run details:\n"
             twrap = textwrap.TextWrapper(width=75, initial_indent=2*" ", subsequent_indent=4*" ")
             for l in ana.runInfo().split("\n"):
-                print twrap.fill(l)
+                msg += twrap.fill(l) + "\n"
 
         if ana.references():
-            print ""
-            print "References:"
+            msg += "\n" + "References:"
             for r in ana.references():
                 url = None
                 if r.startswith("arXiv:"):
@@ -331,10 +350,27 @@ if len(opts.SHOW_ANALYSES) > 0:
                     url = "http://dx.doi.org/" + code
                 if url is not None:
                     r += " - " + url
-                print "  %s" % r
+                msg += "  " + r + "\n"
 
-        if i+1 < len(toshow):
-            print "\n"
+        ## Add to the output
+        msgs.append(msg)
+
+
+    ## Write the combined messages to a temporary file and page it
+    if msgs:
+        try:
+            import tempfile, subprocess
+            tffd, tfpath = tempfile.mkstemp(prefix="rivet-show.")
+            os.write(tffd, "\n\n".join(msgs))
+            if sys.stdout.isatty():
+                pager = subprocess.Popen(["less", "-FX", tfpath]) #, stdin=subprocess.PIPE)
+                pager.communicate()
+            else:
+                f = open(tfpath)
+                print f.read()
+                f.close()
+        finally:
+            os.unlink(tfpath) #< always clean up
     sys.exit(0)
 
 
@@ -368,6 +404,16 @@ def logNEvt(n, starttime, maxevtnum):
     #                 (n, elapsedtime, remainingtime, eta))
 
 
+## Do some checks on output histo file, before we stat the event loop
+histo_parentdir = os.path.dirname(os.path.abspath(opts.HISTOFILE))
+if not os.path.exists(histo_parentdir):
+  logging.error('Parent path of output histogram file does not exist: %s\nExiting.' % histo_parentdir)
+  sys.exit(4)
+if not os.access(histo_parentdir,os.W_OK):
+  logging.error('Insufficient permissions to write output histogram file to directory %s\nExiting.' % histo_parentdir)
+  sys.exit(4)
+
+
 ## Set up analysis handler
 RUNNAME = opts.RUN_NAME or ""
 ah = rivet.AnalysisHandler(RUNNAME)
@@ -382,6 +428,19 @@ for a in opts.ANALYSES:
         sys.exit(1)
     logging.debug("Adding analysis '%s'" % a)
     ah.addAnalysis(a)
+
+
+if opts.SHOW_BIBTEX:
+    bibs = []
+    for aname in sorted(ah.analysisNames()):
+        ana = rivet.AnalysisLoader.getAnalysis(aname)
+        bibs.append("% " + aname + "\n" + ana.bibTeX())
+    if bibs:
+        print "\nBibTeX for used Rivet analyses:\n"
+        print "% --------------------------\n"
+        print "\n\n".join(bibs) + "\n"
+        print "% --------------------------\n"
+
 
 ## Read and process events
 run = rivet.Run(ah)
@@ -447,18 +506,28 @@ for fileidx, hepmcfile in enumerate(HEPMCFILES):
     if ":" in hepmcfile:
         hepmcfile, hepmcfileweight = hepmcfile.rsplit(":", 1)
         hepmcfileweight = float(hepmcfileweight)
+
     ## Open next HepMC file (NB. this doesn't apply to the first file: it was already used for the run init)
     if fileidx > 0:
         run.openFile(hepmcfile, hepmcfileweight)
         if not run.readEvent():
             logging.warning("Could not read events from '%s'" % hepmcfile)
             continue
+    ## Announce new file
     msg = "Reading events from '%s'" % hepmcfile
     if hepmcfileweight != 1.0:
         msg += " (file weight = %e)" % hepmcfileweight
     logging.info(msg)
-    while opts.MAXEVTNUM is None or evtnum < opts.MAXEVTNUM:
+
+    ## The event loop
+    while opts.MAXEVTNUM is None or evtnum-opts.EVTSKIPNUM <= opts.MAXEVTNUM:
         evtnum += 1
+
+        ## Optional event skipping
+        if evtnum <= opts.EVTSKIPNUM:
+            continue
+
+        ## Only log the event number once we're actually processing
         logNEvt(evtnum, starttime, opts.MAXEVTNUM)
 
         ## Process this event
@@ -489,14 +558,17 @@ for fileidx, hepmcfile in enumerate(HEPMCFILES):
             sys.exit(3)
 
         ## Write a histo file snapshot if appropriate
-        if opts.HISTO_WRITE_INTERVAL is not None:
+        if opts.HISTO_WRITE_INTERVAL is not None and opts.HISTO_WRITE_INTERVAL > 0:
             if evtnum % opts.HISTO_WRITE_INTERVAL == 0:
                 ah.writeData(opts.HISTOFILE)
 
+
+## Print end-of-loop messages
 loopendtime = datetime.datetime.now().replace(microsecond=0)
 logging.info("Finished event loop at %s" % str(loopendtime))
 logging.info("Cross-section = %e pb" % ah.crossSection())
 print
+
 
 ## Finalize and write out data file
 run.finalize()
@@ -504,3 +576,5 @@ ah.writeData(opts.HISTOFILE)
 print
 endtime = datetime.datetime.now().replace(microsecond=0)
 logging.info("Rivet run completed at %s, time elapsed = %s" % (str(endtime), str(endtime-starttime)))
+print
+logging.info("Histograms written to %s" % os.path.abspath(opts.HISTOFILE))

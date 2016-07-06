@@ -17,13 +17,13 @@ Beams: [p+, p+]
 Energies: [200]
 PtCuts:
 Description:
-  'Charged Mulitplicity and identified charged particle spectra'
+  'Charged multiplicity and identified charged particle spectra'
 BibKey: :2008ez
 BibTeX: '@Article{:2008ez,
      author    = "Abelev, B. I. and others",
  collaboration = "STAR",
-     title     = "{Systematic Measurements of Identified Particle Spectra in
-                  $p p, d^+$ Au and Au+Au Collisions from STAR}",
+     title     = "{Systematic measurements of identified particle spectra in
+                  $p p$, $d^+$ Au and Au+Au collisions from STAR}",
      journal   = "Phys. Rev.",
      volume    = "C79",
      year      = "2009",

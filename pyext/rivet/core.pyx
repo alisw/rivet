@@ -18,6 +18,18 @@ cdef class AnalysisHandler:
         self._ptr.addAnalysis(name)
         return self
 
+    def analysisNames(self):
+        anames = self._ptr.analysisNames()
+        return [a for a in anames]
+
+    # def analysis(self, aname):
+    #     cdef c.Analysis* ptr = self._ptr.analysis(aname)
+    #     cdef Analysis pyobj = Analysis.__new__(Analysis)
+    #     if not ptr:
+    #         return None
+    #     pyobj._ptr = ptr
+    #     return pyobj
+
     def writeData(self, name):
         self._ptr.writeData(name)
 
@@ -136,27 +148,46 @@ cdef class AnalysisLoader:
         if not ptr:
             return None
         pyobj._ptr = ptr
-        # Create python object
         return pyobj
 
-
-def addAnalysisLibPath(path):
-    c.addAnalysisLibPath(path)
-
-def findAnalysisRefFile(q):
-    return c.findAnalysisRefFile(q)
-
-def getAnalysisPlotPaths():
-    return c.getAnalysisPlotPaths()
-
-def getAnalysisRefPaths():
-    return c.getAnalysisRefPaths()
 
 def getAnalysisLibPaths():
     return c.getAnalysisLibPaths()
 
 def setAnalysisLibPaths(xs):
     c.setAnalysisLibPaths(xs)
+
+def addAnalysisLibPath(path):
+    c.addAnalysisLibPath(path)
+
+
+def getAnalysisRefPaths():
+    return c.getAnalysisRefPaths()
+
+def findAnalysisRefFile(q):
+    return c.findAnalysisRefFile(q)
+
+
+def getAnalysisDataPaths():
+    return c.getAnalysisDataPaths()
+
+def findAnalysisDataFile(q):
+    return c.findAnalysisDataFile(q)
+
+
+def getAnalysisInfoPaths():
+    return c.getAnalysisInfoPaths()
+
+def findAnalysisInfoFile(q):
+    return c.findAnalysisInfoFile(q)
+
+
+def getAnalysisPlotPaths():
+    return c.getAnalysisPlotPaths()
+
+def findAnalysisPlotFile(q):
+    return c.findAnalysisPlotFile(q)
+
 
 def version():
     return c.version()

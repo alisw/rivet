@@ -48,7 +48,7 @@ namespace Rivet {
     /// @brief Get the final-state particles, with optional cuts.
     /// @note Returns a copy rather than a reference, due to cuts
     /// @todo Can't this be a const Cut& arg?
-    Particles particles(const Cut & c) const {
+    Particles particles(const Cut& c) const {
       // Just return a copy of particles() if the cut is open
       if (c == Cuts::open()) return particles();
       // If there is a non-trivial cut...

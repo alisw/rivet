@@ -28,7 +28,7 @@ mostlyclean-local:
 	@rm -rf $(top_builddir)/doxy
 uninstall-local:
 	@rm -rf $(DESTDIR)$(pkgdatadir)/doc; \
-	test ! -d $(DESTDIR)$(pkgdatadir) || rmdir --ignore-fail-on-non-empty $(DESTDIR)$(pkgdatadir)
+	test ! -d $(DESTDIR)$(pkgdatadir) || rmdir $(DESTDIR)$(pkgdatadir) || true
 endif
 
 

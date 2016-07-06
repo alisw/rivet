@@ -6,19 +6,30 @@
 
 namespace Rivet {
 
-    class FinalPartons : public FinalState {
-        public:
-            FinalPartons(Cut c=Cuts::open()) : FinalState(c) { }
 
-            const Projection* clone() const {
-                return new FinalPartons(*this);
-            }
+  class FinalPartons : public FinalState {
+  public:
 
-            void project(const Event& e);
+    /// Constructor
+    FinalPartons(const Cut& c=Cuts::open())
+      : FinalState(c) { }
 
-        protected:
-            bool accept(const Particle& p) const;
-    };
+    /// Clone method
+    const Projection* clone() const {
+      return new FinalPartons(*this);
+    }
+
+    /// Do the calculation
+    void project(const Event& e);
+
+
+  protected:
+
+    /// Cut-applying method overload
+    bool accept(const Particle& p) const;
+
+  };
+
 
 }
 

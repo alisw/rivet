@@ -175,8 +175,9 @@ namespace Rivet {
         lft = (*pPartLft).second;
       }
       if (lft < 0.0 && PID::isHadron(pid)) {
-        MSG_ERROR("Could not determine lifetime for particle with PID " << pid
-            << "... This will be considered unprompt!");
+        MSG_WARNING("Lifetime map imcomplete --- " << pid
+            << "... assume zero lifetime");
+        lft = 0.0;
       }
       return lft;
     }
@@ -187,11 +188,11 @@ namespace Rivet {
       double lftSum = 0.;
       double plft = 0.;
       const GenParticle* part = p.genParticle();
-      GenVertex* ivtx = part->production_vertex();
+      const GenVertex* ivtx = part->production_vertex();
       while(ivtx)
       {
         if (ivtx->particles_in_size() < 1) { lftSum = -1.; break; };
-        const HepMC::GenVertex::particles_in_const_iterator iPart_invtx = ivtx->particles_in_const_begin();
+        const GenVertex::particles_in_const_iterator iPart_invtx = ivtx->particles_in_const_begin();
         part = (*iPart_invtx);
         if ( !(part) ) { lftSum = -1.; break; };
         ivtx = part->production_vertex();

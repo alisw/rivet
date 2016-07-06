@@ -1,3 +1,532 @@
+2016-07-01  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Fix pandoc interface flag version detection.
+
+2016-06-28  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Release version 2.4.3
+
+	* Add ATLAS_2016_I1468168 early ttbar fully leptonic fiducial
+	cross-section analysis at 13 TeV.
+
+2016-06-21  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add ATLAS_2016_I1457605 inclusive photon analysis at 8 TeV.
+
+2016-06-15  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add a --show-bibtex option to the rivet script, for convenient
+	outputting of a BibTeX db for the used analyses.
+
+2016-06-10  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Adding ATLAS_2015_I1397635 Wt at 8 TeV analysis.
+
+	* Adding ATLAS_2015_I1390114 tt+b(b) at 8 TeV analysis.
+
+2016-06-09  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Downgrade some non-fatal error messages from ERROR to WARNING
+	status, because *sigh* ATLAS's software treats any appearance of
+	the word 'ERROR' in its log file as a reason to report the job as
+	failed (facepalm).
+
+2016-06-07  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Adding ATLAS 13 TeV minimum bias analysis, ATLAS_2016_I1419652.
+
+2016-05-30  Andy Buckley  <andy.buckley@cern.ch>
+
+	* pyext/rivet/util.py: Add pandoc --wrap/--no-wrap CLI detection
+	and batch conversion.
+
+	* bin/rivet: add -o as a more standard 'output' option flag alias to -H.
+
+2016-05-23  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Remove the last ref-data bin from table 16 of
+	ATLAS_2010_S8918562, due to data corruption. The corresponding
+	HepData record will be amended by ATLAS.
+
+2016-05-12  Holger Schulz  <holger.schulz@durham.ac.uk>
+
+        * Mark ATLAS_2012_I1082009 as validated after exhaustive tests with
+	Pythia8 and Sherpa in inclusive QCD mode.
+
+2016-05-11  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Specialise return error codes from the rivet script.
+
+2016-05-05  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Version 2.4.2 release!
+
+	* Update SLD_2002_S4869273 ref data to match publication erratum,
+	now updated in HepData. Thanks to Peter Skands for the report and
+	Mike Whalley / Graeme Watt for the quick fix and heads-up.
+
+2016-04-27  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add CMS_2014_I1305624 event shapes analysis, with standalone
+	variable calculation struct embedded in an unnamed namespace.
+
+2016-04-17  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add null GenVertex protection in Particle children & descendants methods.
+
+2016-04-15  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add ATLAS_2015_I1397637, ATLAS 8 TeV boosted top cross-section vs. pT
+
+2016-04-13  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add ATLAS_2015_I1351916 (8 TeV Z FB asymmetry) and
+	ATLAS_2015_I1408516 (8 TeV Z phi* and pT) analyses, and their _EL,
+	_MU variants.
+
+2016-04-12  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Patch PID utils for ordering issues in baryon decoding.
+
+2016-04-08  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add a --guess-prefix flag to rivet-config, cf. fastjet-config.
+
+	* Add RIVET_DATA_PATH variable and related functions in C++ and
+	Python as a common first-fallback for RIVET_REF_PATH,
+	RIVET_INFO_PATH, and RIVET_PLOT_PATH.
+
+	* Add --pwd options to rivet-mkhtml and rivet-cmphistos
+
+2016-03-25  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Bug-fix in semi-leptonic top selection of CMS_2015_I1370682.
+
+2016-03-12  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Allow multi-line major tick labels on make-plots linear x and y
+	axes. Linebreaks are indicated by \n in the .dat file.
+
+2016-03-09  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Release 2.4.1
+
+2016-03-03  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add a --nskip flag to the rivet command-line tool, to allow
+	processing to begin in the middle of an event file (useful for
+	batched processing of large files, in combination with --nevts)
+
+2016-03-03  Holger Schulz  <holger.schulz@durham.ac.uk>
+
+	* Add ATLAS 7 TeV event shapes in Z+jets analysis (ATLAS_2016_I1424838)
+
+2016-02-29  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Update make-plots to use multiprocessing rather than threading.
+
+	* Add FastJets::trimJet method, thanks to James Monk for the
+	suggestion and patch.
+
+	* Add new preferred name PID::charge3 in place of
+	PID::threeCharge, and also convenience PID::abscharge and
+	PID::abscharge3 functions -- all derived from changes in external
+	HEPUtils.
+
+	* Add analyze(const GenEvent*) and analysis(string&) methods to
+	AnalysisHandler, plus some docstring improvements.
+
+2016-02-23  Andy Buckley  <andy.buckley@cern.ch>
+
+	* New ATLAS_2015_I1394679 analysis.
+
+	* New MC_HHJETS analysis from Andreas Papaefstathiou.
+
+	* Ref data updates for ATLAS_2013_I1219109, ATLAS_2014_I1312627,
+	and ATLAS_2014_I1319490.
+
+	* Add automatic output paging to 'rivet --show-analyses'
+
+2016-02-16  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Apply cross-section unit fixes and plot styling improvements to
+	ATLAS_2013_I1217863 analyses, thanks to Christian Gutschow.
+
+	* Fix to rivet-cmphistos to avoid overwriting RatioPlotYLabel if
+	already set via e.g. the PLOT pseudo-file. Thanks to Johann Felix
+	v. Soden-Fraunhofen.
+
+2016-02-15  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add Analysis::bookCounter and some machinery in rivet-cmphistos
+	to avoid getting tripped up by unplottable (for now) data types.
+
+	* Add --font and --format options to rivet-mkhtml and make-plots,
+	to replace the individual flags used for that purpose. Not fully
+	cleaned up, but a necessary step.
+
+	* Add new plot styling options to rivet-cmphistos and
+	rivet-mkhtml. Thanks to Gavin Hesketh.
+
+	* Modify rivet-cmphistos and rivet-mkhtml to apply plot hiding if
+	*any* path component is hidden by an underscore prefix, as
+	implemented in AOPath, plus other tidying using new AOPath
+	methods.
+
+	* Add pyext/rivet/aopaths.py, containing AOPath object for central
+	& standard decoding of Rivet-standard analysis object path
+	structures.
+
+2016-02-12  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Update ParticleIdUtils.hh (i.e. PID:: functions) to use the
+	functions from the latest version of MCUtils' PIDUtils.h.
+
+2016-01-15  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Change rivet-cmphistos path matching logic from match to search
+	(user can add explicit ^ marker if they want match semantics).
+
+2015-12-20  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Improve linspace (and hence also logspace) precision errors by
+	using multiplication rather than repeated addition to build edge
+	list (thanks to Holger Schulz for the suggestion).
+
+2015-12-15  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add cmphistos and make-plots machinery for handling 'suffix'
+	variations on plot paths, currently just by plotting every line,
+	with the variations in a 70% faded tint.
+
+	* Add Beam::pv() method for finding the beam interaction primary
+	vertex 4-position.
+
+	* Add a new Particle::setMomentum(E,x,y,z) method, and an origin
+	position member which is automatically populated from the
+	GenParticle, with access methods corresponding to the momentum
+	ones.
+
+2015-12-10  Andy Buckley  <andy.buckley@cern.ch>
+
+	* make-plots: improve custom tick attribute handling, allowing
+	empty lists. Also, any whitespace now counts as a tick separator
+	-- explicit whitespace in labels should be done via ~ or similar
+	LaTeX markup.
+
+2015-12-04  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Pro-actively use -m/-M arguments when initially loading
+	histograms in mkhtml, *before* passing them to cmphistos.
+
+2015-12-03  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Move contains() and has_key() functions on STL containers from std to Rivet namespaces.
+
+	* Adding IsRef attributes to all YODA refdata files; this will be
+	used to replace the /REF prefix in Rivet v3 onwards. The migration
+	has also removed leading # characters from BEGIN/END blocks, as
+	per YODA format evolution: new YODA versions as required by
+	current Rivet releases are able to read both the old and new
+	formats.
+
+2015-12-02  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add handling of a command-line PLOT 'file' argument to rivet-mkhtml, cf. rivet-cmphistos.
+
+	* Improvements to rivet-mkhtml behaviour re. consistency with
+	rivet-cmphistos in how muti-part histo paths are decomposed into
+	analysis-name + histo name, and removal of 'NONE' strings.
+
+2015-11-30  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Relax rivet/plotinfo.py pattern matching on .plot file
+	components, to allow leading whitespace and around = signs, and to
+	make the leading # optional on BEGIN/END blocks.
+
+2015-11-26  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Write out intermediate histogram files by default, with event interval of 10k.
+
+2015-11-25  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Protect make-plots against lock-up due to partial pstricks command when there are no data points.
+
+2015-11-17  Andy Buckley  <andy.buckley@cern.ch>
+
+	* rivet-cmphistos: Use a ratio label that doesn't mention 'data' when plotting MC vs. MC.
+
+2015-11-12  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Tweak plot and subplot sizing defaults in make-plots so the
+	total canvas is always the same size by default.
+
+2015-11-10  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Handle 2D histograms better in rivet-cmphistos (since they can't be overlaid)
+
+2015-11-05  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Allow comma-separated analysis name lists to be passed to a single -a/--analysis/--analyses option.
+
+	* Convert namespace-global const variables to be static, to suppress compiler warnings.
+
+	* Use standard MAX_DBL and MAX_INT macros as a source for MAXDOUBLE and MAXINT, to suppress GCC5 warnings.
+
+2015-11-04  Holger Schulz  <holger.schulz@durham.ac.uk>
+
+	* Adding LHCB inelastic xsection measurement (LHCB_2015_I1333223)
+
+	* Adding ATLAS colour flow in ttbar->semileptonic measurement (ATLAS_2015_I1376945)
+
+2015-10-07  Chris Pollard  <cpollard@cern.ch>
+
+	* Release 2.4.0
+
+2015-10-06  Holger Schulz  <holger.schulz@durham.ac.uk>
+
+	* Adding CMS_2015_I1327224 dijet analysis (Mjj>2 TeV)
+
+2015-10-03  Holger Schulz  <holger.schulz@durham.ac.uk>
+
+	* Adding CMS_2015_I1346843 Z+gamma
+
+2015-09-30  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Important improvement in FourVector & FourMomentum: new reverse()
+	method to return a 4-vector in which only the spatial component
+	has been inverted cf. operator- which flips the t/E component as
+	well.
+
+2015-09-28  Holger Schulz  <holger.schulz@durham.ac.uk>
+
+	* Adding D0_2000_I503361 ZPT at 1800 GeV
+
+2015-09-29  Chris Pollard  <cpollard@cern.ch>
+
+	* Adding ATLAS_2015_CONF_2015_041
+
+2015-09-29  Chris Pollard  <cpollard@cern.ch>
+
+	* Adding ATLAS_2015_I1387176
+
+2015-09-29  Chris Pollard  <cpollard@cern.ch>
+
+	* Adding ATLAS_2014_I1327229
+
+2015-09-28  Chris Pollard  <cpollard@cern.ch>
+
+	* Adding ATLAS_2014_I1326641
+
+2015-09-28  Holger Schulz  <holger.schulz@durham.ac.uk>
+
+	* Adding CMS_2013_I1122847 FB assymetry in DY analysis
+
+2015-09-28  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Adding CMS_2015_I1385107 LHA pp 2.76 TeV track-jet underlying event.
+
+2015-09-27  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Adding CMS_2015_I1384119 LHC Run 2 minimum bias dN/deta with no B field.
+
+2015-09-25  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Adding TOTEM_2014_I1328627 forward charged density in eta analysis.
+
+2015-09-23  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add CMS_2015_I1310737 Z+jets analysis.
+
+	* Allow running MC_{W,Z}INC, MC_{W,Z}JETS as separate bare lepton
+	analyses.
+
+2015-09-23  Andy Buckley  <andy.buckley@cern.ch>
+
+	* FastJets now allows use of FastJet pure ghosts, by excluding
+	them from the constituents of Rivet Jet objects. Thanks to James
+	Monk for raising the issue and providing a patch.
+
+2015-09-15  Andy Buckley  <andy.buckley@cern.ch>
+
+	* More MissingMomentum changes: add optional 'mass target'
+	argument when retrieving the vector sum as a 4-momentum, with the
+	mass defaulting to 0 rather than sqrt(sum(E)^2 - sum(p)^2).
+
+	* Require Boost 1.55 for robust compilation, as pointed out by
+	Andrii Verbytskyi.
+
+2015-09-10  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Allow access to MissingMomentum projection via WFinder.
+
+	* Adding extra methods to MissingMomentum, to make it more user-friendly.
+
+2015-09-09  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Fix factor of 2 in LHCB_2013_I1218996 normalisation, thanks to
+	Felix Riehn for the report.
+
+2015-08-20  Frank Siegert  <frank.siegert@cern.ch>
+
+	* Add function to ZFinder to retrieve all fiducial dressed
+	leptons, e.g. to allow vetoing on a third one (proposed by
+	Christian Gutschow).
+
+2015-08-18  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Rename xs and counter AOs to start with underscores, and modify
+	rivet-cmphistos to skip AOs whose basenames start with _.
+
+2015-08-17  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add writing out of cross-section and total event counter by
+	default. Need to add some name protection to avoid them being
+	plotted.
+
+2015-08-16  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add templated versions of Analysis::refData() to use data types
+	other than Scatter2DPtr, and convert the cached ref data store to
+	generic AnalysisObjectPtrs to make it possible.
+
+2015-07-29  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add optional Cut arguments to all the Jet tag methods.
+
+	* Add exception handling and pre-emptive testing for a
+	non-writeable output directory (based on patch from Lukas
+	Heinrich).
+
+2015-07-24  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Version 2.3.0 release.
+
+2015-07-02  Holger Schulz  <holger.schulz@durham.ac.uk>
+
+	* Tidy up ATLAS higgs combination analysis.
+	* Add ALICE kaon, pion analysis (ALICE_2015_I1357424)
+	* Add ALICE strange baryon analysis (ALICE_2014_I1300380)
+	* Add CDF ZpT measurement in Z->ee events analysis (CDF_2012_I1124333)
+	* Add validated ATLAS W+charm measurement (ATLAS_2014_I1282447)
+	* Add validated CMS jet and dijet analysis (CMS_2013_I1208923)
+
+2015-07-01  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Define a private virtual operator= on Projection, to block
+	'sliced' accidental value copies of derived class instances.
+
+	* Add new muon-in-jet options to FastJet constructors, pass that
+	and invisibles enums correctly to JetAlg, tweak the default
+	strategies, and add a FastJets constructor from a
+	fastjet::JetDefinition (while deprecating the plugin-by-reference
+	constructor).
+
+2015-07-01  Holger Schulz  <holger.schulz@durham.ac.uk>
+
+	* Add D0 phi* measurement (D0_2015_I1324946).
+
+	* Remove WUD and MC_PHOTONJETUE analyses
+
+	* Don't abort ATLAS_2015_I1364361 if there is no stable Higgs
+	  print a warning instead and veto event
+
+2015-07-01  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add all, none, from-decay muon filtering options to JetAlg and
+	FastJets.
+
+	* Rename NONPROMPT_INVISIBLES to DECAY_INVISIBLES for clarity &
+	extensibility.
+
+	* Remove FastJets::ySubJet, splitJet, and filterJet methods --
+	they're BDRS-paper-specific and you can now use the FastJet
+	objects directly to do this and much more.
+
+	* Adding InvisiblesStrategy to JetAlg, using it rather than a bool
+	in the useInvisibles method, and updating FastJets to use this
+	approach for its particle filtering and to optionally use the enum
+	in the constructor arguments. The new default invisibles-using
+	behaviour is to still exclude _prompt_ invisibles, and the default
+	is still to exclude them all. Only one analysis
+	(src/Analyses/STAR_2006_S6870392.cc) required updating, since it
+	was the only one to be using the FastJets legacy seed_threshold
+	constructor argument.
+
+	* Adding isVisible method to Particle, taken from
+	VisibleFinalState (which now uses this).
+
+2015-06-30  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Marking many old & superseded ATLAS analyses as obsolete.
+
+	* Adding cmpMomByMass and cmpMomByAscMass sorting functors.
+
+	* Bump version to 2.3.0 and require YODA > 1.4.0 (current head at
+	time of development).
+2015-06-08  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add handling of -m/-M flags on rivet-cmphistos and rivet-mkhtml,
+	moving current rivet-mkhtml -m/-M to -a/-A (for analysis name
+	pattern matching). Requires YODA head (will be YODA 1.3.2 of
+	1.4.0).
+
+	* src/Analyses/ATLAS_2015_I1364361.cc: Now use the built-in prompt
+	photon selecting functions.
+
+	* Tweak legend positions in MC_JETS .plot file.
+
+	* Add a bit more debug output from ZFinder and WFinder.
+
+2015-05-24  Holger Schulz  <holger.schulz@durham.ac.uk>
+
+	* Normalisation discussion concerning ATLAS_2014_I1325553
+	is resolved. Changed YLabel accordingly.
+
+2015-05-19  Holger Schulz  <holger.schulz@durham.ac.uk>
+
+	* Add (preliminary) ATLAS combined Higgs analysis
+	(ATLAS_2015_I1364361). Data will be updated and more
+	histos added as soon as paper is published in journal.
+	For now using data taken from public ressource
+	https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PAPERS/HIGG-2014-11/
+
+2015-05-19  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Fix ATLAS_2014_I1325553 normalisation of histograms was wrong by
+	factor of two |y| vs y problem
+
+2015-05-01  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Fix MC_HJETS/HINC/HKTSPLITTINGS analyses to (ab)use the ZFinder
+	with a mass range of 115-135 GeV and a mass target of 125 GeV (was
+	previously 115-125 and mass target of mZ)
+
+2015-04-30  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Removing uses of boost::assign::list_of, preferring the existing
+	comma-based assign override for now, for C++11 compatibility.
+
+	* Convert MC_Z* analysis finalize methods to use scale() rather than normalize().
+
+2015-04-01  Holger Schulz  <holger.schulz@durham.ac.uk>
+
+	* Add CMS 7 TeV rapidity gap analysis (CMS_2015_I1356998).
+
+	* Remove FinalState Projection.
+
+2015-03-30  Holger Schulz  <holger.schulz@durham.ac.uk>
+
+	* Add ATLAS 7 TeV photon + jets analysis (ATLAS_2013_I1244522).
+
+2015-03-26  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Updates for HepMC 2.07 interface constness improvements.
+
+2015-03-25  Holger Schulz  <holger.schulz@durham.ac.uk>
+
+	* Add ATLAS double parton scattering in W+2j analysis (ATLAS_2013_I1216670).
+
 2015-03-24  Andy Buckley  <andy.buckley@cern.ch>
 
 	* 2.2.1 release!
@@ -532,7 +1061,7 @@
 	becomes mandatory (in version 2.2.0?). Anyone who wants C++11 can
 	explicitly set the CXXFLAGS (and DYLDFLAGS for pre-Mavericks Macs)
 
-2014-01-21  Leif Lönnblad  <Leif.Lonnblad@thep.lu.se>
+2014-01-21  Leif Lonnblad  <Leif.Lonnblad@thep.lu.se>
 
 	* src/Core/Analysis.cc: Fixed bug in Analysis::isCompatible where
 	an 'abs' was left out when checking that beam energes does not
@@ -1920,7 +2449,7 @@
 	paths match a regex. Writing a negative lookahead regex with
 	positive matching was far too awkward!
 
-2011-03-18  Leif Lönnblad  <Leif.Lonnblad@thep.lu.se>
+2011-03-18  Leif Lonnblad  <Leif.Lonnblad@thep.lu.se>
 
 	* src/Core/AnalysisHandler.cc (AnalysisHandler::removeAnalysis):
 	Fixed strange shared pointer assignment that caused seg-fault.
@@ -4178,7 +4707,7 @@
 
 	* Added bash color escapes to the logger system.
 
-2007-12-21  Leif Lönnblad  <Leif.Lonnblad@thep.lu.se>
+2007-12-21  Leif Lonnblad  <Leif.Lonnblad@thep.lu.se>
 
 	* include/LWH/ManagedObject.h: Fixed infinite loop in
 	encodeForXML cf. ticket #135.
@@ -4273,7 +4802,7 @@
 
 	* Merged replacement vectors, matrices and boosts into trunk.
 
-2007-11-15  Leif Lönnblad  <Leif.Lonnblad@thep.lu.se>
+2007-11-15  Leif Lonnblad  <Leif.Lonnblad@thep.lu.se>
 
 	* src/Analysis.cc, include/Rivet/Analysis.hh: Introduced normalize
 	function. See ticket #126.
@@ -4418,7 +4947,7 @@
 	* include/Rivet/Projections/*.hh: Removed the private restrictions
 	on copy-assignment operators.
 
-2007-06-18  Leif Lönnblad  <Leif.Lonnblad@thep.lu.se>
+2007-06-18  Leif Lonnblad  <Leif.Lonnblad@thep.lu.se>
 
 	* include/LWH/Tree.h: Fixed minor bug in listObjectNames.
 
@@ -4429,7 +4958,7 @@
 	* include/LWH/DataPoint.h: Added constructor taking a vector of
 	measuremts.
 
-2007-06-16  Leif Lönnblad  <Leif.Lonnblad@thep.lu.se>
+2007-06-16  Leif Lonnblad  <Leif.Lonnblad@thep.lu.se>
 
 	* include/LWH/Tree.h: Implemented the listObjectNames and ls
 	functions.
@@ -4442,7 +4971,7 @@
 	* include/Rivet/Projections/FinalState.hh: Made _theParticles
 	protected.
 
-2007-06-13  Leif Lönnblad  <Leif.Lonnblad@thep.lu.se>
+2007-06-13  Leif Lonnblad  <Leif.Lonnblad@thep.lu.se>
 
 	* src/Projections/FinalStateHCM.cc,
 	src/Projections/DISKinematics.cc: Equality checks using
@@ -4459,7 +4988,7 @@
 	final state projection to limit searching for scattered
 	lepton. Still not properly tested.
 
-2007-06-08  Leif Lönnblad  <Leif.Lonnblad@thep.lu.se>
+2007-06-08  Leif Lonnblad  <Leif.Lonnblad@thep.lu.se>
 
 	* include/Rivet/Projections/PVertex.hh,
 	src/Projections/PVertex.cc: Fixed the projection to simply get the
@@ -4477,7 +5006,7 @@
 
 	* Fixed initialization of VetoedFinalStateProjection in ExampleTree
 
-2007-05-27  Leif Lönnblad  <Leif.Lonnblad@thep.lu.se>
+2007-05-27  Leif Lonnblad  <Leif.Lonnblad@thep.lu.se>
 
 	* include/Rivet/Projections/KtJets.*: Make sure the KtEvent is
 	deleted properly.
@@ -4499,7 +5028,7 @@
 	* src/Analysis/Analysis.cc: Fixed a bug in the AIDA path building.
 	Histogram auto-booking now works.
 
-2007-05-23  Leif Lönnblad  <Leif.Lonnblad@thep.lu.se>
+2007-05-23  Leif Lonnblad  <Leif.Lonnblad@thep.lu.se>
 
 	* src/Analysis/HepEx9506012.cc: Now uses the histogram booking
 	function in the Analysis class.
@@ -4558,7 +5087,7 @@
 	* Added a preliminary version of the Rick Field UE analysis, under
 	the name PRD65092002.
 
-2007-04-19  Leif Lönnblad  <Leif.Lonnblad@thep.lu.se>
+2007-04-19  Leif Lonnblad  <Leif.Lonnblad@thep.lu.se>
 
 	* src/Analysis/HepEx0409040.cc: The reason this did not compile
 	under gcc-4 is that some iterators into a vector were wrongly
@@ -4583,7 +5112,7 @@
 	* Added "rivet" executable which can read in HepMC ASCII dump
 	files and apply Rivet analyses on the events.
 
-2007-02-24  Leif Lönnblad  <Leif.Lonnblad@thep.lu.se>
+2007-02-24  Leif Lonnblad  <Leif.Lonnblad@thep.lu.se>
 
 	* src/Projections/KtJets.cc: Added comparison of member variables
 	in compare() function
@@ -4591,7 +5120,7 @@
 	* all: Merged changes from polymorphic-projections branch into
 	trunk
 
-2007-02-17  Leif Lönnblad  <Leif.Lonnblad@thep.lu.se>
+2007-02-17  Leif Lonnblad  <Leif.Lonnblad@thep.lu.se>
 
 	* all: projections and analysis handlers: All projections which
 	uses other projctions now has a pointer rather than a copy of
@@ -4599,14 +5128,14 @@
 	also been changed to require the used projections themselves,
 	rather than the arguments needed to construct them.
 
-2007-02-17  Leif Lönnblad  <Leif.Lonnblad@thep.lu.se>
+2007-02-17  Leif Lonnblad  <Leif.Lonnblad@thep.lu.se>
 
 	* src/Projections/FinalState.cc,
 	include/Rivet/Projections/FinalState.icc (Rivet),
 	include/Rivet/Projections/FinalState.hh: Added cut in transverse
 	momentum on the particles to be included in the final state.
 
-2007-02-06  Leif Lönnblad  <Leif.Lonnblad@thep.lu.se>
+2007-02-06  Leif Lonnblad  <Leif.Lonnblad@thep.lu.se>
 
 	* include/LWH/HistogramFactory.h: Fixed divide-by-zero in divide
 	function. Also fixed bug in error calculation in divide
@@ -4616,7 +5145,7 @@
 	* include/LWH/Histogram1D.h: In normalize(double), do not do anything
 	if the sum of the bins are zero to avoid dividing by zero.
 
-2007-01-20  Leif Lönnblad  <Leif.Lonnblad@thep.lu.se>
+2007-01-20  Leif Lonnblad  <Leif.Lonnblad@thep.lu.se>
 
 	* src/Test/testLWH.cc: Modified to output files using the Tree.
 
@@ -4665,7 +5194,7 @@
 
 	* Moving things around: all sources now in directories under src
 
-2006-06-04  Leif Lönnblad  <Leif.Lonnblad@thep.lu.se>
+2006-06-04  Leif Lonnblad  <Leif.Lonnblad@thep.lu.se>
 
 	* Analysis/Examples/HZ95108.*: Now uses CentralEtHCM. Also set GeV
 	units on the relevant histograms.
@@ -4674,7 +5203,7 @@
 	out one number - the summed Et in the central rapidity bin - may
 	seem like an overkill. But in case some one else might nees it...
 
-2006-06-03  Leif Lönnblad  <Leif.Lonnblad@thep.lu.se>
+2006-06-03  Leif Lonnblad  <Leif.Lonnblad@thep.lu.se>
 
 	* Analysis/Examples/HZ95108.*: Added the hz95108 energy flow
 	analysis from HZtool.
@@ -4694,7 +5223,7 @@
 	* Analysis/AnalysisBase.*: Added access to the RivetHandler and
 	its AIDA factories.
 
-2005-12-27  Leif Lönnblad  <Leif.Lonnblad@thep.lu.se>
+2005-12-27  Leif Lonnblad  <Leif.Lonnblad@thep.lu.se>
 
 	* configure.ac: Added -I$THEPEGPATH/include to AM_CPPFLAGS.
 

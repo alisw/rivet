@@ -9,6 +9,9 @@ References:
 RunInfo:
   Inclusive diphoton $+ X$ events at $\sqrt{s} = 7$~TeV.
 NumEvents: 1000000
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1199269
 Beams: [p+, p+]
 Energies: [7000]
 PtCuts: [25, 22]

@@ -102,20 +102,18 @@ namespace Rivet {
       _theParticles.erase(*p);
     }
 
-    /// @todo Improve!
-    for (ParentVetos::const_iterator vIt = _parentVetoes.begin(); vIt != _parentVetoes.end(); ++vIt) {
-      for (Particles::iterator p = _theParticles.begin(); p != _theParticles.end(); ++p) {
-        GenVertex* startVtx = p->genParticle()->production_vertex();
-        bool veto = false;
-        if (startVtx!=0) {
-          /// @todo Use better HepMC iteration
-          for (GenVertex::particle_iterator pIt = startVtx->particles_begin(HepMC::ancestors);
-                   pIt != startVtx->particles_end(HepMC::ancestors) && !veto; ++pIt) {
-            if (*vIt == (*pIt)->pdg_id()) {
-              veto = true;
-              p = _theParticles.erase(p);
-              --p;
-            }
+    // Remove particles whose parents match entries in the parent veto PDG ID codes list
+    /// @todo There must be a nice way to do this -- an STL algorithm (or we provide a nicer wrapper)
+    foreach (PdgId vetoid, _parentVetoes) {
+      for (Particles::iterator ip = _theParticles.begin(); ip != _theParticles.end(); ++ip) {
+        const GenVertex* startVtx = ip->genParticle()->production_vertex();
+        if (startVtx == NULL) continue;
+        // Loop over parents and test their IDs
+        /// @todo Could use any() here?
+        foreach (const GenParticle* parent, Rivet::particles(startVtx, HepMC::ancestors)) {
+          if (vetoid == parent->pdg_id()) {
+            ip = _theParticles.erase(ip); --ip; //< Erase this _theParticles entry
+            break;
           }
         }
       }

@@ -1,3 +1,8 @@
+# BEGIN PLOT /ATLAS_2014_I1306615/.*
+RatioPlotYMin=0.0
+RatioPlotYMax=2.49999
+# END PLOT
+
 # BEGIN PLOT /ATLAS_2014_I1306615/d01-x01-y01
 Title=Diphoton transverse momentum
 XLabel=$p_T^{\gamma\gamma}$ [GeV]

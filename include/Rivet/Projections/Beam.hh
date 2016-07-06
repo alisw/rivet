@@ -65,6 +65,9 @@ namespace Rivet {
     /// Get centre of mass energy, \f$ \sqrt{s} \f$.
     double sqrtS() const;
 
+    /// Get the beam interaction primary vertex (PV) position.
+    FourVector pv() const;
+
 
   public:
 

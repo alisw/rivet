@@ -18,7 +18,7 @@ namespace Rivet {
         continue;
       }
       // There are ancestors -- check them for status=2 hadronic content
-      const vector<GenParticle*> ancestors = particles_in(p.genParticle(), HepMC::ancestors);
+      const vector<GenParticle const *> ancestors = particles_in(p.genParticle(), HepMC::ancestors);
       bool has_hadron_parent = false;
       foreach (const GenParticle* pa, ancestors) {
         if (pa->status() != 2) continue;

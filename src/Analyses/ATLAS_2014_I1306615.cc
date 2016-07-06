@@ -12,28 +12,27 @@
 #include "Rivet/Projections/FastJets.hh"
 
 namespace Rivet {
-  
+
   class ATLAS_2014_I1306615 : public Analysis {
   public:
-    
+
     // Constructor
     ATLAS_2014_I1306615()
       : Analysis("ATLAS_2014_I1306615")
     {    }
-    
+
   public:
-    
+
     // Book histograms and initialise projections before the run
     void init() {
-      
+
       // Final state
       // All particles within |eta| < 5.0
       const FinalState FS(Cuts::abseta<5.0);
       addProjection(FS,"FS");
 
       // Project photons with pT > 25 GeV and |eta| < 2.37
-      //IdentifiedFinalState ph_FS(-2.37, 2.37, 25.0*GeV);
-      IdentifiedFinalState ph_FS(Cuts::abseta<2.47 && Cuts::pT>25.0*GeV);
+      IdentifiedFinalState ph_FS(Cuts::abseta<2.37 && Cuts::pT>25.0*GeV);
       ph_FS.acceptIdPair(PID::PHOTON);
       addProjection(ph_FS, "PH_FS");
 
@@ -58,7 +57,7 @@ namespace Rivet {
       //DressedLeptons mu_dressed_FS(ph_dressing_FS, mu_bare_FS, 0.1, true, -2.47, 2.47, 15.0*GeV, false);
       DressedLeptons mu_dressed_FS(ph_dressing_FS, mu_bare_FS, 0.1, Cuts::abseta < 2.47 && Cuts::pT > 15*GeV, true, false);
       addProjection(mu_dressed_FS,"MU_DRESSED_FS");
-      
+
       // Final state excluding muons and neutrinos (for jet building and photon isolation)
       VetoedFinalState veto_mu_nu_FS(FS);
       veto_mu_nu_FS.vetoNeutrinos();
@@ -68,7 +67,7 @@ namespace Rivet {
       // Build the anti-kT R=0.4 jets, using FinalState particles (vetoing muons and neutrinos)
       FastJets jets(veto_mu_nu_FS, FastJets::ANTIKT, 0.4);
       addProjection(jets, "JETS");
-      
+
       // Book histograms
       // 1D distributions
       _h_pT_yy         = bookHisto1D(1,1,1);
@@ -108,14 +107,14 @@ namespace Rivet {
       // Fiducial regions
       _h_fidXSecs = bookHisto1D(29,1,1);
     }
-    
+
     // Perform the per-event analysis
     void analyze(const Event& event) {
-      
+
       const double weight = event.weight();
       _weight = weight;
-      
-      // Get final state particles 
+
+      // Get final state particles
       const ParticleVector& FS_ptcls          = applyProjection<FinalState>(event, "FS").particles();
       const ParticleVector& ptcls_veto_mu_nu  = applyProjection<VetoedFinalState>(event, "VETO_MU_NU_FS").particles();
       const ParticleVector& photons           = applyProjection<IdentifiedFinalState>(event, "PH_FS").particlesByPt();
@@ -142,10 +141,10 @@ namespace Rivet {
 	  if ( deltaR(ph.momentum(), p.momentum()) < dR_iso )
 	    ET_iso += p.momentum();
 	}
-	
+
 	// Check isolation
 	if ( ET_iso.Et() > ETcut_iso ) continue;
-	
+
 	// Fill vector of photons passing fiducial selection
 	fid_photons.push_back(&ph);
       }
@@ -169,7 +168,7 @@ namespace Rivet {
 
       // Electron selection
       vector<const Particle*> good_el;
-      foreach(const DressedLepton& els, el_dressed)  { 
+      foreach(const DressedLepton& els, el_dressed)  {
 
 	const Particle& el = els.constituentLepton();
 	if ( el.momentum().pT()        < 15   ) continue;
@@ -182,7 +181,7 @@ namespace Rivet {
 
       // Muon selection
       vector<const Particle*> good_mu;
-      foreach(const DressedLepton& mus, mu_dressed)  { 
+      foreach(const DressedLepton& mus, mu_dressed)  {
 
 	const Particle& mu = mus.constituentLepton();
 	if ( mu.momentum().pT()        < 15   ) continue;
@@ -221,7 +220,7 @@ namespace Rivet {
       vector<const Jet*> jets_25;
       vector<const Jet*> jets_30;
       vector<const Jet*> jets_50;
-      
+
       foreach (const Jet& jet, jets) {
 
 	bool passOverlap = true;
@@ -232,14 +231,14 @@ namespace Rivet {
 	// Overlap with good electrons
 	foreach (const Particle* el, good_el)
 	  if ( deltaR(el->momentum(), jet.momentum()) < 0.2 ) passOverlap = false;
-	
+
 	if ( ! passOverlap ) continue;
-		
+
 	if ( fabs(jet.momentum().eta()) < 2.4 || ( fabs(jet.momentum().eta()) > 2.4 && jet.momentum().pT() > 30 ) ) jets_25.push_back(&jet);
 	if ( jet.momentum().pT() > 30 ) jets_30.push_back(&jet);
 	if ( jet.momentum().pT() > 50 ) jets_50.push_back(&jet);
       }
- 
+
       // Fiducial regions
       _h_fidXSecs->fill(1,_weight);
       if ( jets_30.size() >= 1 ) _h_fidXSecs->fill(2, _weight);
@@ -268,7 +267,7 @@ namespace Rivet {
 
       _HT = 0.0;
       foreach (const Jet* jet, jets_30)
-	_HT += jet->momentum().pT(); 
+	_HT += jet->momentum().pT();
 
       _tau_jet     = tau_jet_max(y1 + y2, jets_25);
       _sum_tau_jet = sum_tau_jet(y1 + y2, jets_25);
@@ -297,14 +296,14 @@ namespace Rivet {
       if ( jets_30.size() >= 2 ) {
 	FourMomentum j1 = jets_30[0]->momentum();
 	FourMomentum j2 = jets_30[1]->momentum();
-	
+
 	_Dy_jj      = fabs( deltaRap(j1, j2) );
 	_Dphi_jj    = fabs( deltaPhi(j1, j2) );
 	_Dphi_yy_jj = fabs( deltaPhi(y1 + y2, j1 + j2) );
 	_m_jj       = (j1 + j2).mass();
 	_pT_yy_jj   = (y1 + y2 + j1 + j2).pT();
 	_y_j2       = fabs( j2.rapidity() );
-	
+
 	_h_Dy_jj      ->fill(_Dy_jj     ,_weight);
 	_h_Dphi_jj    ->fill(_Dphi_jj   ,_weight);
 	_h_Dphi_yy_jj ->fill(_Dphi_yy_jj,_weight);
@@ -314,14 +313,14 @@ namespace Rivet {
 	_h_y_j2       ->fill(_y_j2      ,_weight);
       }
 
-      // 2D distributions of cosTS_CS x pT_yy 
+      // 2D distributions of cosTS_CS x pT_yy
       if ( _pT_yy < 80 )
 	_h_cosTS_pTyy_low->fill(_cosTS_CS, _weight);
       else if ( _pT_yy > 80 && _pT_yy < 200 )
 	_h_cosTS_pTyy_high->fill(_cosTS_CS,_weight);
       else if ( _pT_yy > 200 )
 	_h_cosTS_pTyy_rest->fill(_cosTS_CS,_weight);
-      
+
       // 2D distributions of pT_yy x Njets
       if ( _Njets30 == 0 )
 	_h_pTyy_Njets0->fill(_pT_yy, _weight);
@@ -329,11 +328,11 @@ namespace Rivet {
 	_h_pTyy_Njets1->fill(_pT_yy, _weight);
       else if ( _Njets30 >= 2 )
 	_h_pTyy_Njets2->fill(_pT_yy, _weight);
-      
+
       if ( _Njets30 == 1 ) _h_pTj1_excl->fill(_pT_j1, _weight);
 
     }
-    
+
     // Normalise histograms after the run
     void finalize() {
 
@@ -373,13 +372,12 @@ namespace Rivet {
     // Trace event record to see if particle came from a hadron (or a tau from a hadron decay)
     // Based on fromDecay() function
     bool fromHadronDecay(const Particle& p ) {
-
-      GenVertex* prodVtx = p.genParticle()->production_vertex();
+      const GenVertex* prodVtx = p.genParticle()->production_vertex();
       if (prodVtx == NULL) return false;
       foreach (const GenParticle* ancestor, particles(prodVtx, HepMC::ancestors)) {
-	const PdgId pid = ancestor->pdg_id();
-	if (ancestor->status() == 2 && PID::isHadron(pid)) return true;
-	if (ancestor->status() == 2 && (abs(pid) == PID::TAU && fromHadronDecay(ancestor))) return true;
+        const PdgId pid = ancestor->pdg_id();
+        if (ancestor->status() == 2 && PID::isHadron(pid)) return true;
+        if (ancestor->status() == 2 && (abs(pid) == PID::TAU && fromHadronDecay(ancestor))) return true;
       }
       return false;
     }
@@ -388,7 +386,7 @@ namespace Rivet {
     bool passVBFCuts(const FourMomentum &H, const FourMomentum &j1, const FourMomentum &j2) {
       return ( fabs(deltaRap(j1, j2)) > 2.8 && (j1 + j2).mass() > 400 && fabs(deltaPhi(H, j1 + j2)) > 2.6 );
     }
-    
+
     // Cosine of the decay angle in the Collins-Soper frame
     double cosTS_CS(const FourMomentum &y1, const FourMomentum &y2) {
       return fabs( ( (y1.E() + y1.pz())* (y2.E() - y2.pz()) - (y1.E() - y1.pz()) * (y2.E() + y2.pz()) )
@@ -429,7 +427,7 @@ namespace Rivet {
     }
 
   private:
-    
+
     Histo1DPtr _h_pT_yy;
     Histo1DPtr _h_y_yy;
     Histo1DPtr _h_Njets30;
@@ -482,7 +480,7 @@ namespace Rivet {
     double _tau_jet;
     double _sum_tau_jet;
   };
-  
+
   // The hook for the plugin system
   DECLARE_RIVET_PLUGIN(ATLAS_2014_I1306615);
 

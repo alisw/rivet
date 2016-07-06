@@ -6,7 +6,8 @@ from glob import glob
 
 ## Extension definition
 import os.path
-incdir = os.path.abspath("@top_srcdir@/include")
+srcincdir = os.path.abspath("@top_srcdir@/include")
+buildincdir = os.path.abspath("@top_builddir@/include")
 srcdir = os.path.abspath("@top_srcdir@/src")
 libdir = os.path.abspath("@top_builddir@/src/.libs")
 
@@ -31,7 +32,7 @@ def ext(name, depends=[], statics=[]):
         ["rivet/%s.cpp" % name] + statics,
         language="C++",
         depends=depends,
-        include_dirs=[incdir, "rivet"],
+        include_dirs=[srcincdir, buildincdir],
         extra_compile_args= "-I@prefix@/include @BOOST_CPPFLAGS@ @PYEXT_CXXFLAGS@ @HEPMCCPPFLAGS@ @FASTJETCPPFLAGS@ @YODACPPFLAGS@ @GSLCPPFLAGS@".split(),
         library_dirs=lookupdirs,
         runtime_library_dirs=lookupdirs[1:],

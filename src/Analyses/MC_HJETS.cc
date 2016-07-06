@@ -5,10 +5,8 @@
 
 namespace Rivet {
 
-  
 
-
-  /// @brief MC validation analysis for higgs [-> tau tau] + jets events
+  /// @brief MC validation analysis for Higgs [-> tau tau] + jets events
   class MC_HJETS : public MC_JetAnalysis {
   public:
 
@@ -23,9 +21,9 @@ namespace Rivet {
 
     /// Book histograms
     void init() {
-      /// @todo Urk, abuse! Need explicit HiggsFinder (and TauFinder?)
       Cut cut = Cuts::abseta < 3.5 && Cuts::pT > 25*GeV;
-      ZFinder hfinder(FinalState(), cut, PID::TAU, 115*GeV, 125*GeV, 0.0, ZFinder::NOCLUSTER);
+      /// @todo Urk, abuse! Need explicit HiggsFinder (and TauFinder?)
+      ZFinder hfinder(FinalState(), cut, PID::TAU, 115*GeV, 135*GeV, 0.0, ZFinder::NOCLUSTER, ZFinder::NOTRACK, 125*GeV);
       addProjection(hfinder, "Hfinder");
       FastJets jetpro(hfinder.remainingFinalState(), FastJets::ANTIKT, 0.4);
       addProjection(jetpro, "Jets");

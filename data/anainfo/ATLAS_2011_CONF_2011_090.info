@@ -4,7 +4,7 @@ Summary: Single lepton search for supersymmetry
 Experiment: ATLAS
 Collider: LHC
 SpiresID:
-Status: VALIDATED
+Status: OBSOLETE
 Authors:
  - Angela Chen <aqchen@fas.harvard.edu>
 References:
@@ -19,4 +19,3 @@ Description:
   Event counts in electron and muon signal regions are implemented as one-bin histograms.
   Histograms for missing transverse energy and effective mass are implemented for the two
   signal regions.'
-

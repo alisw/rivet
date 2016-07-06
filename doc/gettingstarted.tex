@@ -39,7 +39,7 @@ full details of how to build Rivet by hand, please consult the Rivet Web page.
 \paragraph{Bootstrap script}
 
 We have written a bootstrapping
-script which will download tarballs of Rivet, AGILe and the other required
+script which will download tarballs of Rivet and the other required
 libraries, expand them and build them in the right order with the correct build
 flags. This is generally nicer than doing it all by hand, and virtually
 essential if you want to use the existing versions of FastJet, HepMC, generator
@@ -55,13 +55,15 @@ installation area you can do so without difficulties.
 
 Now, change directory to your build area (you may also want to make this,
 e.g. \kbd{\home/build}), and download the script:\\
-\inp{wget \url{http://rivet.hepforge.org/svn/bootstrap/rivet-bootstrap}}\\
+%\inp{wget \url{http://rivet.hepforge.org/svn/bootstrap/rivet-bootstrap}}\\
+\inp{wget \url{http://rivet.hepforge.org/hg/bootstrap/raw-file/X.Y.Z/rivet-bootstrap}}\\
+(where X.Y.Z is the release that you want to install)\\
 \inp{chmod +x rivet-bootstrap}\\
 Now run it to get some help:
 \inp{./rivet-bootstrap --help}\\
-Now to actually do the install: for example, to bootstrap Rivet and AGILe
+Now to actually do the install: for example, to bootstrap Rivet %and AGILe
 to the install area specified as the prefix argument, run this:\\
-\inp{./rivet-bootstrap --install-agile --prefix=\val{localdir}}
+\inp{./rivet-bootstrap --prefix=\val{localdir}}
 
 If you are running on a system where the CERN AFS area is mounted as
 \path{/afs/cern.ch}, then the bootstrap script will attempt to use the pre-built
@@ -72,8 +74,8 @@ environment settings which will make the system useable. You can source this
 file, e.g. \kbd{source rivetenv.sh} to make your current shell ready-to-go
 for a Rivet run (use \kbd{rivetenv.csh} if you are a C shell user).
 
-You now have a working, installed copy of the Rivet and AGILe libraries, and the
-\kbd{rivet} and \kbd{agile-runmc} executables: respectively these are the
+You now have a working, installed copy of the Rivet library, and the
+\kbd{rivet}, \kbd{rivet-*}, and \kbd{yoda*} executables: respectively these are the
 command-line frontend to the Rivet analysis library, and a convenient steering
 command for generators which do not provide their own main program with HepMC
 output. To test that they work as expected, source the setup scripts as above,
@@ -81,49 +83,53 @@ if you've not already done so, and run this:\\
 \inp{rivet --help}\\
 %
 This should print a quick-reference user guide for the \kbd{rivet} command to
-the terminal. Similarly, for \kbd{agile-runmc},\\
-\inp{agile-runmc --help}\\
-\inp{agile-runmc --list-gens}\\
-\inp{agile-runmc --beams=pp:14000 Pythia6:425}\\
-which should respectively print the help, list the available generators and make
-10 LHC-type events using the Fortran Pythia\cite{Sjostrand:2006za} 6.423 generator. You're on your
-way! If no generators are listed, you probably need to install a local
-Genser-type generator repository: see \SectionRef{sec:genser}.
+the terminal.
+%
+% Similarly, for \kbd{agile-runmc},\\
+% \inp{agile-runmc --help}\\
+% \inp{agile-runmc --list-gens}\\
+% \inp{agile-runmc --beams=pp:14000 Pythia6:425}\\
+% which should respectively print the help, list the available generators and make
+% 10 LHC-type events using the Fortran Pythia\cite{Sjostrand:2006za} 6.423 generator. You're on your
+% way! If no generators are listed, you probably need to install a local
+% Genser-type generator repository: see \SectionRef{sec:genser}.
 
-In this manual, because of its convenience, we will use \kbd{agile-runmc} as our
-canonical way of producing a stream of HepMC event data; if your interest is in
-running a generator like Sherpa\cite{Gleisberg:2008ta},
-Pythia~8\cite{Sjostrand:2007gs,Sjostrand:2008vc}, or Herwig++\cite{Bahr:2008pv}
-which provides their own native way to make HepMC output, or a generator like
-PHOJET which is not currently supported by AGILe, then substitute the
-appropriate command in what follows.  We'll discuss using these commands in
-detail in \SectionRef{sec:agile-runmc}.
+In this manual we will use a dummy \kbd{generator} command as our way of
+producing a stream of HepMC event data. In practice you should run a generator
+like Pythia~8\cite{Sjostrand:2007gs,Sjostrand:2008vc},
+Herwig++\cite{Bahr:2008pv} or Sherpa\cite{Gleisberg:2008ta} which provide their
+own native way to make HepMC output -- and the latter two can also call the
+Rivet library directly via their own configuration interfaces. To use these, or
+perhaps older Fortran generators via the AGILe interface, substitute the
+appropriate command in what follows.\footnote{For largely historical reference,
+  use of the AGILe commands is documented in
+\SectionRef{app:agilerunrunmc}.}
 
 
-\subsection{Getting generators for AGILe}
-\label{sec:genser}
+% \subsection{Getting generators for AGILe}
+% \label{sec:genser}
 
-One last thing before continuing, though: the generators themselves. Again, if
-you're running on a system with the CERN LCG AFS area mounted, then
-\kbd{agile-runmc} will attempt to automatically use the generators packaged by the
-LCG Genser team.
+% One last thing before continuing, though: the generators themselves. Again, if
+% you're running on a system with the CERN LCG AFS area mounted, then
+% \kbd{agile-runmc} will attempt to automatically use the generators packaged by the
+% LCG Genser team.
 
-Otherwise, you'll have to build your own mirror of the LCG generators. This
-process is evolving with time, and so, rather than provide information in this
-manual which will be outdated by the time you read it, we simply refer you to
-the relevant page on the Rivet wiki:
-\url{http://rivet.hepforge.org/trac/wiki/GenserMirror}.
+% Otherwise, you'll have to build your own mirror of the LCG generators. This
+% process is evolving with time, and so, rather than provide information in this
+% manual which will be outdated by the time you read it, we simply refer you to
+% the relevant page on the Rivet wiki:
+% \url{http://rivet.hepforge.org/trac/wiki/GenserMirror}.
 
-If you are interested in using a generator not currently supported by AGILe,
-which does not output HepMC events in its native state, then please contact the
-authors (via the Rivet developer contact email address) and hopefully we can
-help.
+% If you are interested in using a generator not currently supported by AGILe,
+% which does not output HepMC events in its native state, then please contact the
+% authors (via the Rivet developer contact email address) and hopefully we can
+% help.
 
 
 \subsection{Command completion}
 
 A final installation point worth considering is using the supplied bash-shell
-programmable completion setup for the \kbd{rivet} and \kbd{agile-runmc}
+programmable completion setup for the \kbd{rivet} and generator %\kbd{agile-runmc}
 commands. Despite being cosmetic and semi-trivial, programmable completion makes
 using \kbd{rivet} positively pleasant, especially since you no longer need to
 remember the somewhat cryptic analysis names\footnote{Standard Rivet analyses
@@ -133,12 +139,12 @@ remember the somewhat cryptic analysis names\footnote{Standard Rivet analyses
 To use programmable completion, source the appropriate files from the install
 location:\\
 \inp{. \val{localdir}/share/Rivet/rivet-completion}\\
-\inp{. \val{localdir}/share/AGILe/agile-completion}\\
+% \inp{. \val{localdir}/share/AGILe/agile-completion}\\
 (if you are using the setup script \kbd{rivetenv.sh} this is automatically
 done for you).
 If there is already a \kbd{\val{localdir}/etc/bash_completion.d} directory in
-your install path, Rivet and AGILe's installation scripts will install extra
-copies into that location, since automatically sourcing all completion files in
+your install path, Rivet's installation script will install an extra
+copy into that location, since automatically sourcing all completion files in
 such a path is quite standard.
 
 % Apologies to \{C,k,z,\dots\}-shell users, but this feature is currently only
@@ -168,10 +174,10 @@ building of huge files: a 1M event LHC run would occupy $\sim 60 GB$ on disk,
 and typically it takes twice as long to make and analyse the events when the
 filesystem is involved! Here is an example:\\
 \inp{mkfifo fifo.hepmc}\\
-\inp{agile-runmc Pythia6:425 -o fifo.hepmc \&}\\
+\inp{generator -o fifo.hepmc \&}\\
 \inp{rivet -a EXAMPLE fifo.hepmc}\\
 %
-Note that the generator process (\kbd{agile-runmc} in this case) is
+Note that the generator process (\kbd{generator} in this case) is
 \emph{backgrounded} before \kbd{rivet} is run.
 
 Notably, \kbd{mkfifo} will not work if applied to a directory mounted via the
@@ -182,8 +188,8 @@ streaming process.
 
 In the following command examples, we will assume that a generator has been set
 up to write to the \kbd{fifo.hepmc} FIFO, and just list the \kbd{rivet} command
-that reads from that location. Some typical \kbd{agile-runmc} commands are
-listed in \ref{app:agilerunmc}.
+that reads from that location. % Some typical \kbd{agile-runmc} commands are
+% listed in \ref{app:agilerunmc}.
 
 
 \subsection{Analysis status}
@@ -310,12 +316,13 @@ plotting, validation and tuning.
 
 \subsection{Histogram formats}
 
-Rivet produces output data in the YODA text-based format. This is a significant
-change from versions of Rivet before 2.0.0, which used the AIDA programming
-interface and XML format. If you do not want to use the plotting tools that come
-with Rivet (cf.\ Sec.~\ref{sec:plotting}), you might wish to convert the YODA
-files to a different format for plotting: the YODA package itself provides
-several scripts for this purpose.
+Rivet produces output data in the YODA text-based format -- see
+\url{http://yoda.hepforge.org}. This is a significant change from versions of
+Rivet before 2.0.0, which used the AIDA programming interface and XML format. If
+you do not want to use the plotting tools that come with Rivet (cf.\
+Sec.~\ref{sec:plotting}), you might wish to convert the YODA files to a
+different format for plotting: the YODA package itself provides several scripts
+for this purpose.
 
 \paragraph{Conversion to ROOT}
 
@@ -355,8 +362,8 @@ checking the contents of an YODA file, with \kbd{yoda2flat Rivet.yoda - | less}.
   and plotting. Rivet's not using ROOT was originally historical, but is now a
   matter of our requirements. ROOT is a very monolithic system, and when we
   started writing Rivet, many theorists (who we needed to be on-side) were
-  unhappy about introducing such a large dependency -- so we settled on using
-  the AIDA/LWH system, which could be fully embedded in the Rivet code.
+  unhappy about introducing such a large dependency -- so we at first settled on
+  using the AIDA/LWH system, which could be fully embedded in the Rivet code.
 
   Eventually we decided that AIDA had run its course, due to such things as the
   awkwardness of histogram addition and division, confusion between bin heights
@@ -441,83 +448,83 @@ events. Run \kbd{yodamerge -h} to get instructions on using the script.
 \end{warning}
 
 
-\section{Outdated information for AIDA in Rivet 1.x}
+% \section{Outdated information for AIDA in Rivet~1.x}
 
-\begin{change}
-  The following information applies to the Rivet 1.x series and the tools
-  provided for AIDA histogramming. YODA should make many of these features
-  unnecessary, since its Python interface is far more powerful and precise\dots
-  but this is subject to evolution.
-\end{change}
+% \begin{change}
+%   The following information applies to the Rivet~1.x series and the tools
+%   provided for AIDA histogramming. YODA should make many of these features
+%   unnecessary, since its Python interface is far more powerful and precise\dots
+%   but this is subject to evolution.
+% \end{change}
 
-\subsection{Chopping histograms}
-\newcommand{\chophisto}{\kbd{rivet-chopbins}\xspace} In some cases you don't
-want to keep the complete histograms produced by Rivet.  For generator tuning
-purposes, for example, you want to get rid of the bins you already know your
-generator is incapable of describing. You can use the script \chophisto to
-specify those bin-ranges you want to keep individually for each histogram in a
-Rivet output-file. The bin-ranges have to be specified using the corresponding
-x-values of that histogram.  The usage is very simple. You can specify bin
-ranges of histograms to keep on the command-line via the \kbd{-b}
-switch, which can be given multiple times, e.g.\\
-\kbd{\chophisto -b /CDF\_2001\_S4751469/d03-x01-y01:5:13 Rivet.aida}\\
-%
-will chop all bins with $x<5$ and $x>13$ from the histogram
-\kbd{/CDF\_2001\_S4751469/d03\-x01\-y01} in the file \kbd{Rivet.aida}. (In
-this particular case, $x$ would be a leading jet \pT.)
+% \subsection{Chopping histograms}
+% \newcommand{\chophisto}{\kbd{rivet-chopbins}\xspace} In some cases you don't
+% want to keep the complete histograms produced by Rivet.  For generator tuning
+% purposes, for example, you want to get rid of the bins you already know your
+% generator is incapable of describing. You can use the script \chophisto to
+% specify those bin-ranges you want to keep individually for each histogram in a
+% Rivet output-file. The bin-ranges have to be specified using the corresponding
+% x-values of that histogram.  The usage is very simple. You can specify bin
+% ranges of histograms to keep on the command-line via the \kbd{-b}
+% switch, which can be given multiple times, e.g.\\
+% \kbd{\chophisto -b /CDF\_2001\_S4751469/d03-x01-y01:5:13 Rivet.aida}\\
+% %
+% will chop all bins with $x<5$ and $x>13$ from the histogram
+% \kbd{/CDF\_2001\_S4751469/d03\-x01\-y01} in the file \kbd{Rivet.aida}. (In
+% this particular case, $x$ would be a leading jet \pT.)
 
-\subsection{Normalising histograms}
-\newcommand{\normhisto}{\kbd{rivet-rescale }} Sometimes you want to
-use histograms normalised to, e.g., the generator cross-section or the area of
-a reference-data histogram. The script \normhisto was designed for these
-purposes. The usage is the following:\\
-\kbd{\normhisto -O observables -r RIVETDATA -o normalised Rivet.aida}\\
-%
-By default, the normalised histograms are written to file in the AIDA-XML
-format. You can also give the \kbd{-f} switch on the command line to produce
-flat histograms.
+% \subsection{Normalising histograms}
+% \newcommand{\normhisto}{\kbd{rivet-rescale }} Sometimes you want to
+% use histograms normalised to, e.g., the generator cross-section or the area of
+% a reference-data histogram. The script \normhisto was designed for these
+% purposes. The usage is the following:\\
+% \kbd{\normhisto -O observables -r RIVETDATA -o normalised Rivet.aida}\\
+% %
+% By default, the normalised histograms are written to file in the AIDA-XML
+% format. You can also give the \kbd{-f} switch on the command line to produce
+% flat histograms.
 
-\paragraph{Normalising to reference data} You will need an output-file of
-Rivet, \kbd{Rivet.aida}, a folder that contains the reference-data histograms
-(e.g. \kbd{rivet-config --datadir}) and optionally, a text-file,
-\kbd{observables} that contains the names of the histograms you would like to
-normalise - those not given in the file will remain un-normalised. These
-are examples of how your \kbd{observables} file might look like:
-%
-\begin{snippet}
-/CDF_2000_S4155203/d01-x01-y01
-\end{snippet}
+% \paragraph{Normalising to reference data} You will need an output-file of
+% Rivet, \kbd{Rivet.aida}, a folder that contains the reference-data histograms
+% (e.g. \kbd{rivet-config --datadir}) and optionally, a text-file,
+% \kbd{observables} that contains the names of the histograms you would like to
+% normalise - those not given in the file will remain un-normalised. These
+% are examples of how your \kbd{observables} file might look like:
+% %
+% \begin{snippet}
+% /CDF_2000_S4155203/d01-x01-y01
+% \end{snippet}
 
-If a histogram \kbd{/CDF\_2000\_S4155203/d01-x01-y01} is found in one of the
-reference-data files in the folder specified via the \kbd{-r} switch, then this
-will result in a histogram \kbd{/CDF\_2000\_S4155203/d01-x01-y01} being
-normalised to the area of the corresponding reference-data histogram.  You can
-further specify a certain range of bins to normalise:
-%
-\begin{snippet}
-/CDF_2000_S4155203/d01-x01-y01:2:35
-\end{snippet}
-%
-\noindent will chop off the bins
-with $x<2$ and $x>35$ of both, the histogram in your \kbd{Rivet.aida} and the
-reference-data histogram. The remaining MC histogram is then normalised to the
-remaining area of the reference-data histogram.
+% If a histogram \kbd{/CDF\_2000\_S4155203/d01-x01-y01} is found in one of the
+% reference-data files in the folder specified via the \kbd{-r} switch, then this
+% will result in a histogram \kbd{/CDF\_2000\_S4155203/d01-x01-y01} being
+% normalised to the area of the corresponding reference-data histogram.  You can
+% further specify a certain range of bins to normalise:
+% %
+% \begin{snippet}
+% /CDF_2000_S4155203/d01-x01-y01:2:35
+% \end{snippet}
+% %
+% \noindent will chop off the bins
+% with $x<2$ and $x>35$ of both, the histogram in your \kbd{Rivet.aida} and the
+% reference-data histogram. The remaining MC histogram is then normalised to the
+% remaining area of the reference-data histogram.
 
-\paragraph{Normalising to arbitrary areas}%
-In the file \kbd{observables} you
-can further specify an arbitrary number, e.g. a generator cross-section, as
-follows:
-%
-\begin{snippet}
-/CDF_2000_S4155203/d01-x01-y01  1.0
-\end{snippet}
-\noindent will result in the histogram \kbd{/CDF\_2000\_S4155203/d01-x01-y01} being
-normalised to 1.0, and
-%
-\begin{snippet}
-/CDF_2000_S4155203/d01-x01-y01:2:35  1.0
-\end{snippet}
-%
-\noindent will chop off the bins with $x<2$ and $x>35$ of the histogram\\
-\kbd{/CDF\_2000\_S4155203/d01-x01-y01} first and normalise the remaining
-histogram to one.
+% \paragraph{Normalising to arbitrary areas}%
+% In the file \kbd{observables} you
+% can further specify an arbitrary number, e.g. a generator cross-section, as
+% follows:
+% %
+% \begin{snippet}
+% /CDF_2000_S4155203/d01-x01-y01  1.0
+% \end{snippet}
+% \noindent will result in the histogram \kbd{/CDF\_2000\_S4155203/d01-x01-y01} being
+% normalised to 1.0, and
+% %
+% \begin{snippet}
+% /CDF_2000_S4155203/d01-x01-y01:2:35  1.0
+% \end{snippet}
+% %
+% \noindent will chop off the bins with $x<2$ and $x>35$ of the histogram\\
+% \kbd{/CDF\_2000\_S4155203/d01-x01-y01} first and normalise the remaining
+% histogram to one.

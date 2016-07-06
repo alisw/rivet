@@ -27,7 +27,7 @@ namespace Rivet {
       }
       // There are descendants -- check them for b or c content
       /// @todo What about charm hadrons coming from bottom hadron decays?
-      const vector<GenParticle*> children = particles_out(p.genParticle(), HepMC::children);
+      const vector<GenParticle const *> children = particles_out(p.genParticle(), HepMC::children);
       if (hasBottom(p)) {
         bool has_b_child = false;
         foreach (const GenParticle* p2, children) {

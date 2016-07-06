@@ -15,7 +15,7 @@ RunInfo:
   $e^+ e^-$ at the $\Upsilon(4S)$ resonance, with CoM boosts of
   8.0 GeV~($e^-$) and 3.5~GeV~($e^+$)
 NumEvents: 1000000
-InSpireID: 786560
+InspireID: 786560
 Beams: [e+, e-]
 Energies: [[3.5, 8.0]]
 PtCuts: [0]

@@ -129,7 +129,7 @@ namespace Rivet {
     Histo1DPtr _jet1_bPt;
     Histo1DPtr _jet2_bPt;
 
-    bool _isMuon;
+    //bool _isMuon;
 
   };
 
