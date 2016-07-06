@@ -1,0 +1,12 @@
+Name: MC_HFJETS
+Summary:
+Status: VALIDATED
+Authors:
+ - Andy Buckley <andy.buckley@cern.ch>
+RunInfo:
+  Run any events which will produce jets above 20 GeV. Of most interest for processes
+  where c and b hadrons can be produced (either hard or soft) of course!
+NumEvents: 100000
+Description:
+  'Plots to study theoretical tagging and fragmentation of heavy flavour hadrons
+  in jets.'
