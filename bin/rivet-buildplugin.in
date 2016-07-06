@@ -140,21 +140,16 @@ fi
 
 ## Get Rivet system C++ compiler (fall back to $CXX and then g++ if needed)
 mycxx=g++
-rivetcxx=$(which $(echo "@RIVETCXX@" | awk '{print $1}') 2> /dev/null)
+rivetcxx=$(which g++ 2> /dev/null)
 abscxx=$(which "$CXX" 2> /dev/null)
 if [[ -x "$rivetcxx" ]]; then
-	mycxx="@CXX@"
+    mycxx=$(which g++)
 elif [[ -x "$abscxx" ]]; then
 	mycxx="$CXX"
 fi
 
 ## Get Rivet system C++ compiler flags
-if [[ -n "@AM_CXXFLAGS@" ]]; then
-	mycxxflags="@AM_CXXFLAGS@"
-fi
-if [[ -n "@RIVETCXXFLAGS@" ]]; then
-	mycxxflags="$mycxxflags @RIVETCXXFLAGS@"
-fi
+mycxxflags="@AM_CXXFLAGS@ -std=c++11"
 
 ## Get Rivet system C preprocessor flags (duplicating that in rivet-config.in)
 if [[ -n "$RIVET_BUILDPLUGIN_BEFORE_INSTALL" ]]; then
@@ -163,16 +158,21 @@ else
     irivet="@includedir@"
 fi
 test -n "$irivet" && mycppflags="$mycppflags -I${irivet}"
-iyoda="@YODAINCPATH@"
-test -n "$iyoda" && mycppflags="$mycppflags -I${iyoda}"
-ihepmc="@HEPMCINCPATH@"
+ihepmc="$HEPMC_ROOT/include"
 test -n "$ihepmc" && mycppflags="$mycppflags -I${ihepmc}"
-ifastjet="@FASTJETINCPATH@"
+iyoda="$YODA_ROOT/include"
+test -n "$iyoda" && mycppflags="$mycppflags -I${iyoda}"
+ifastjet="$FASTJET_ROOT/include"
 test -n "$ifastjet" && mycppflags="$mycppflags -I${ifastjet}"
-# igsl="@GSLINCPATH@"
-# test -n "$igsl" && mycppflags="$mycppflags -I${igsl}"
-# iboost="@BOOST_CPPFLAGS@"
-# test -n "$iboost" && mycppflags="$mycppflags ${iboost}"
+if [[ "$GSL_ROOT" != '' ]]; then
+  igsl="$GSL_ROOT/include"
+  test -n "$igsl" && mycppflags="$mycppflags -I${igsl}"
+fi
+if [[ "$BOOST_ROOT" != '' ]]; then
+  # Mind the -I
+  iboost="-I$BOOST_ROOT/include"
+  test -n "$iboost" && mycppflags="$mycppflags ${iboost}"
+fi
 
 ## Get Rivet system linker flags (duplicating that in rivet-config.in)
 myldflags=""
@@ -182,11 +182,11 @@ else
     lrivet="@libdir@"
 fi
 test -n "$lrivet" && myldflags="$myldflags -L${lrivet}"
-lhepmc="@HEPMCLIBPATH@"
+lhepmc="$HEPMC_ROOT/lib"
 test -n "$lhepmc" && myldflags="$myldflags -L${lhepmc}"
-lyoda="@YODALIBPATH@"
+lyoda="$YODA_ROOT/lib"
 test -n "$lyoda" && myldflags="$myldflags -L${lyoda}"
-lfastjet="@FASTJETCONFIGLIBADD@"
+lfastjet="${CGAL_ROOT:+-L$CGAL_ROOT/lib} ${GMP_ROOT:+-L$GMP_ROOT/lib} $(fastjet-config --plugins --shared --libs)"
 test -n "$lfastjet" && myldflags="$myldflags ${lfastjet}"
 ## Detect whether the linker accepts the --no-as-needed flag and prepend the linker flag with it if possible
 if (cd /tmp && echo -e 'int main() { return 0; }' > $$.cc; $mycxx -Wl,--no-as-needed $$.cc -o $$ 2> /dev/null); then
