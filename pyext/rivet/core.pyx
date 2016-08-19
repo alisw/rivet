@@ -1,6 +1,12 @@
+# distutils: language = c++
+
 cimport rivet as c
+from cython.operator cimport dereference as deref
 # Need to be careful with memory management -- perhaps use the base object that
 # we used in YODA?
+
+cdef extern from "<utility>" namespace "std" nogil:
+    cdef c.unique_ptr[c.Analysis] move(c.unique_ptr[c.Analysis])
 
 cdef class AnalysisHandler:
     cdef c.AnalysisHandler *_ptr
@@ -66,6 +72,9 @@ cdef class Run:
     def readEvent(self):
         return self._ptr.readEvent()
 
+    def skipEvent(self):
+        return self._ptr.skipEvent()
+
     def processEvent(self):
         return self._ptr.processEvent()
 
@@ -74,60 +83,58 @@ cdef class Run:
 
 
 cdef class Analysis:
-    cdef c.Analysis *_ptr
+    cdef c.unique_ptr[c.Analysis] _ptr
 
     def __init__(self):
         raise RuntimeError('This class cannot be instantiated')
-    def __del__(self):
-        del self._ptr
 
     def requiredBeams(self):
-        return self._ptr.requiredBeams()
+        return deref(self._ptr).requiredBeams()
 
     def requiredEnergies(self):
-        return self._ptr.requiredEnergies()
+        return deref(self._ptr).requiredEnergies()
 
     def authors(self):
-        return self._ptr.authors()
+        return deref(self._ptr).authors()
 
     def bibKey(self):
-        return self._ptr.bibKey()
+        return deref(self._ptr).bibKey()
 
     def name(self):
-        return self._ptr.name()
+        return deref(self._ptr).name()
 
     def bibTeX(self):
-        return self._ptr.bibTeX()
+        return deref(self._ptr).bibTeX()
 
     def references(self):
-        return self._ptr.references()
+        return deref(self._ptr).references()
 
     def collider(self):
-        return self._ptr.collider()
+        return deref(self._ptr).collider()
 
     def description(self):
-        return self._ptr.description()
+        return deref(self._ptr).description()
 
     def experiment(self):
-        return self._ptr.experiment()
+        return deref(self._ptr).experiment()
 
     def inspireId(self):
-        return self._ptr.inspireId()
+        return deref(self._ptr).inspireId()
 
     def spiresId(self):
-        return self._ptr.spiresId()
+        return deref(self._ptr).spiresId()
 
     def runInfo(self):
-        return self._ptr.runInfo()
+        return deref(self._ptr).runInfo()
 
     def status(self):
-        return self._ptr.status()
+        return deref(self._ptr).status()
 
     def summary(self):
-        return self._ptr.summary()
+        return deref(self._ptr).summary()
 
     def year(self):
-        return self._ptr.year()
+        return deref(self._ptr).year()
 
 
 #cdef object
@@ -143,11 +150,12 @@ cdef class AnalysisLoader:
 
     @staticmethod
     def getAnalysis(name):
-        cdef c.Analysis* ptr = c.AnalysisLoader_getAnalysis(name)
+        cdef c.unique_ptr[c.Analysis] ptr = c.AnalysisLoader_getAnalysis(name)
         cdef Analysis pyobj = Analysis.__new__(Analysis)
         if not ptr:
             return None
-        pyobj._ptr = ptr
+        pyobj._ptr = move(ptr)
+        # Create python object
         return pyobj
 
 
@@ -161,18 +169,24 @@ def addAnalysisLibPath(path):
     c.addAnalysisLibPath(path)
 
 
-def getAnalysisRefPaths():
-    return c.getAnalysisRefPaths()
+def setAnalysisDataPaths(xs):
+    c.setAnalysisDataPaths(xs)
 
-def findAnalysisRefFile(q):
-    return c.findAnalysisRefFile(q)
-
+def addAnalysisDataPath(path):
+    c.addAnalysisDataPath(path)
 
 def getAnalysisDataPaths():
     return c.getAnalysisDataPaths()
 
 def findAnalysisDataFile(q):
     return c.findAnalysisDataFile(q)
+
+
+def getAnalysisRefPaths():
+    return c.getAnalysisRefPaths()
+
+def findAnalysisRefFile(q):
+    return c.findAnalysisRefFile(q)
 
 
 def getAnalysisInfoPaths():

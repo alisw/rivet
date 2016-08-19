@@ -112,7 +112,7 @@ namespace Rivet {
     /// Book histograms and initialise projections before the run
     void init() {
       const FastJets jets(FinalState(Cuts::abseta < 2.6), FastJets::ANTIKT, 0.5);
-      addProjection(jets, "Jets");
+      declare(jets, "Jets");
 
       for (int ij=0; ij < NJETPTMN; ij++) {
         _h_thrustc[ij] = bookHisto1D(1, 1, ij+1);
@@ -139,7 +139,7 @@ namespace Rivet {
     /// Perform the per-event analysis
     void analyze(const Event& event) {
 
-      const Jets& jets = applyProjection<FastJets>(event, "Jets").jetsByPt(30.0*GeV);
+      const Jets& jets = apply<FastJets>(event, "Jets").jetsByPt(30.0*GeV);
       if (jets.size() < 2) vetoEvent;
       if (jets[0].abseta() > 2.4 || jets[1].abseta() > 2.4) vetoEvent;
 

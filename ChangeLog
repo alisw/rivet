@@ -1,3 +1,140 @@
+2016-08-09  Holger Schulz  <holger.schulz@cern.ch>
+        
+	* Release 2.5.1
+
+2016-08-08  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add a simple MC_MET analysis for out-of-the-box MET distribution testing.
+
+2016-08-08  Holger Schulz  <holger.schulz@cern.ch>
+
+	* Add DELPHI_2011_I890503 b-quark fragmentation function measurement,
+	which superseded DELPHI_2002_069_CONF_603. The latter is marked
+	OBSOLETE.
+
+2016-08-05  Holger Schulz  <holger.schulz@cern.ch>
+
+	* Use Jet mass and energy smearing in CDF_1997_... six-jet analysis,
+	mark validated.
+
+	* Mark CDF_2001_S4563131 validated
+
+	* D0_1996_S3214044 --- cut on jet Et rather than pT, fix filling of
+	costheta and theta plots, mark validated. Concerning the jet
+	algorithm, I tried with the implementation of fastjet
+	fastjet/D0RunIConePlugin.hh but that really does not help.
+
+	* D0_1996_S3324664 --- fix normalisations, sorting jets properly now,
+	cleanup and mark validated.
+
+
+2016-08-04  Holger Schulz  <holger.schulz@cern.ch>
+
+	* Use Jet mass and energy smearing in CDF_1996_S310 ... jet properties
+	analysis. Cleanup analysis and mark validated. Added some more run info.
+	The same for CDF_1996_S334... (pretty much the same cuts, different
+	observables).
+
+	* Minor fixes in SmearedJets projection
+
+2016-08-03  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Protect SmearedJets against loss of tagging information if a
+	momentum smearing function is used (rather than a dedicated Jet
+	smearing fn) via implicit casts.
+
+2016-08-02  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add SmearedMET projection, wrapping MissingMomentum.
+
+	* Include base truth-level projections in SmearedParticles/Jets compare() methods.
+
+2016-07-29  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Rename TOTEM_2012_002 to proper TOTEM_2012_I1220862 name.
+
+	* Remove conditional building of obsolete, preliminary and
+	unvalidated analyses. Now always built, since there are sufficient
+	warnings.
+
+2016-07-28  Holger Schulz  <holger.schulz@cern.ch>
+
+        * Mark D0_2000... W pT analysis validated
+
+	* Mark LHCB_2011_S919... phi meson analysis validated
+
+2016-07-25  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add unbound accessors for momentum properties of ParticleBase objects.
+
+	* Add Rivet/Tools/ParticleBaseUtils.hh to collect tools like functors for particle & jet filtering.
+
+	* Add vector<ptr> versions of Analysis::scale() and ::normalize(), for batched scaling.
+
+	* Add Analysis::scale() and Analysis::divide() methods for Counter types.
+
+	* Utils.hh: add a generic sum() function for containers, and use auto in loop to support arrays.
+
+	* Set data path as well as lib path in scripts with --pwd option, and use abs path to $PWD.
+
+	* Add setAnalysisDataPaths and addAnalysisDataPath to RivetPaths.hh/cc and Python.
+
+	* Pass absolutized RIVET_DATA_PATH from rivet-mkhtml to rivet-cmphistos.
+
+2016-07-24  Holger Schulz  <holger.schulz@cern.ch>
+
+        * Mark CDF_2008_S77... b jet shapes validated
+
+	* Added protection against low stats yoda exception
+	  in finalize for that analysis
+
+2016-07-22  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Fix newly introduced bug in make-plots which led to data point
+	markers being skipped for all but the last bin.
+
+2016-07-21  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add pid, abspid, charge, abscharge, charge3, and abscharge3 Cut
+	enums, handled by Particle cut targets.
+
+	* Add abscharge() and abscharge3() methods to Particle.
+
+	* Add optional Cut and duplicate-removal flags to Particle children & descendants methods.
+
+	* Add unbound versions of Particle is* and from* methods, for easier functor use.
+
+	* Add Particle::isPrompt() as a member rather than unbound function.
+
+	* Add protections against -ve mass from numerical precision errors in smearing functions.
+
+2016-07-20  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Move several internal system headers into the include/Rivet/Tools directory.
+
+	* Fix median-computing safety logic in ATLAS_2010_S8914702 and
+	tidy this and @todo markers in several similar analyses.
+
+	* Add to_str/toString and stream functions for Particle, and a bit
+	of Particle util function reorganisation.
+
+	* Add isStrange/Charm/Bottom PID and Particle functions.
+
+	* Add RangeError exception throwing from MathUtils.hh stats
+	functions if given empty/mismatched datasets.
+
+	* Add Rivet/Tools/PrettyPrint.hh, based on https://louisdx.github.io/cxx-prettyprint/
+
+	* Allow use of path regex group references in .plot file keyed values.
+
+2016-07-20  Holger Schulz  <holger.schulz@cern.ch>
+
+	* Fix the --nskip behaviour on the main rivet script.
+
+2016-07-07  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Release version 2.5.0
+
 2016-07-01  Andy Buckley  <andy.buckley@cern.ch>
 
 	* Fix pandoc interface flag version detection.
@@ -17,6 +154,35 @@
 
 	* Add a --show-bibtex option to the rivet script, for convenient
 	outputting of a BibTeX db for the used analyses.
+
+2016-06-14  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add and rename 4-vector boost calculation methods: new methods
+	beta, betaVec, gamma & gammaVec are now preferred to the
+	deprecated boostVector method.
+
+2016-06-13  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add and use projection handling methods declare(proj, pname) and
+	apply<PROJ>(evt, pname) rather than the longer and explicitly
+	'projectiony' addProjection & applyProjection.
+
+	* Start using the DEFAULT_RIVET_ANALYSIS_CTOR macro (newly created
+	preferred alias to long-present DEFAULT_RIVET_ANA_CONSTRUCTOR)
+
+	* Add a DEFAULT_RIVET_PROJ_CLONE macro for implementing the
+	clone() method boiler-plate code in projections.
+
+2016-06-10  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add a NonPromptFinalState projection, and tweak the
+	PromptFinalState and unbound Particle functions a little in
+	response. May need some more finessing.
+
+	* Add user-facing aliases to ProjectionApplier add, get, and apply
+	methods... the templated versions of which can now be called
+	without using the word 'projection', which makes the function
+	names a bit shorter and pithier, and reduces semantic repetition.
 
 2016-06-10  Andy Buckley  <andy.buckley@cern.ch>
 
@@ -57,6 +223,12 @@
 
 	* Specialise return error codes from the rivet script.
 
+2016-05-11  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add Event::allParticles() to provide neater (but not *helpful*)
+	access to Rivet-wrapped versions of the raw particles in the
+	Event::genEvent() record, and hence reduce HepMC digging.
+
 2016-05-05  Andy Buckley  <andy.buckley@cern.ch>
 
 	* Version 2.4.2 release!
@@ -70,6 +242,17 @@
 	* Add CMS_2014_I1305624 event shapes analysis, with standalone
 	variable calculation struct embedded in an unnamed namespace.
 
+2016-04-19  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Various clean-ups and fixes in ATLAS analyses using isolated
+	photons with median pT density correction.
+
+2016-04-18  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add transformBy(LT) methods to Particle and Jet.
+
+	* Add mkObjectTransform and mkFrameTransform factory methods to LorentzTransform.
+
 2016-04-17  Andy Buckley  <andy.buckley@cern.ch>
 
 	* Add null GenVertex protection in Particle children & descendants methods.
@@ -77,6 +260,10 @@
 2016-04-15  Andy Buckley  <andy.buckley@cern.ch>
 
 	* Add ATLAS_2015_I1397637, ATLAS 8 TeV boosted top cross-section vs. pT
+
+2016-04-14  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add a --no-histos argument to the rivet script.
 
 2016-04-13  Andy Buckley  <andy.buckley@cern.ch>
 
@@ -88,6 +275,10 @@
 
 	* Patch PID utils for ordering issues in baryon decoding.
 
+2016-04-11  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Actually implement ZEUS_2001_S4815815... only 10 years late!
+
 2016-04-08  Andy Buckley  <andy.buckley@cern.ch>
 
 	* Add a --guess-prefix flag to rivet-config, cf. fastjet-config.
@@ -97,6 +288,73 @@
 	RIVET_INFO_PATH, and RIVET_PLOT_PATH.
 
 	* Add --pwd options to rivet-mkhtml and rivet-cmphistos
+
+2016-04-07  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Remove implicit conventional event rotation for HERA -- this
+	needs to be done explicitly from now.
+
+	* Add comBoost functions and methods to Beam.hh, and tidy
+	LorentzTransformation.
+
+	* Restructure Beam projection functions for beam particle and
+	sqrtS extraction, and add asqrtS functions.
+
+	* Rename and improve PID and Particle Z,A,lambda functions ->
+	nuclZ,nuclA,nuclNlambda.
+
+2016-04-05  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Improve binIndex function, with an optional argument to allow
+	overflow lookup, and add it to testMath.
+
+	* Adding setPE, setPM, setPtEtaPhiM, etc. methods and
+	corresponding mk* static methods to FourMomentum, as well as
+	adding more convenience aliases and vector attributes for
+	completeness. Coordinate conversion functions taken from
+	HEPUtils::P4. New attrs also mapped to ParticleBase.
+
+2016-03-29  Andy Buckley  <andy.buckley@cern.ch>
+
+	* ALEPH_1996_S3196992.cc, ATLAS_2010_S8914702.cc,
+	ATLAS_2011_I921594.cc, ATLAS_2011_S9120807.cc,
+	ATLAS_2012_I1093738.cc, ATLAS_2012_I1199269.cc,
+	ATLAS_2013_I1217867.cc, ATLAS_2013_I1244522.cc,
+	ATLAS_2013_I1263495.cc, ATLAS_2014_I1307756.cc,
+	ATLAS_2015_I1364361.cc, CDF_2008_S7540469.cc,
+	CMS_2015_I1370682.cc, MC_JetSplittings.cc, STAR_2006_S6870392.cc:
+	Updates for new FastJets interface, and other cleaning.
+
+	* Deprecate 'standalone' FastJets constructors -- they are
+	misleading.
+
+	* More improvements around jets, including unbound conversion and
+	filtering routines between collections of Particles, Jets, and
+	PseudoJets.
+
+	* Place 'Cut' forward declaration in a new Cuts.fhh header.
+
+	* Adding a Cuts::OPEN extern const (a bit more standard- and
+	constant-looking than Cuts::open())
+
+2016-03-28  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Improvements to FastJets constructors, including specification
+	of optional AreaDefinition as a constructor arg, disabling dodgy
+	no-FS constructors which I suspect don't work properly in the
+	brave new world of automatic ghost tagging, using a bit of
+	judicious constructor delegation, and completing/exposing use of
+	shared_ptr for internal memory management.
+
+2016-03-26  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Remove Rivet/Tools/RivetBoost.hh and Boost references from
+	rivet-config, rivet-buildplugin, and configure.ac. It's gone ;-)
+
+	* Replace Boost assign usage with C++11 brace initialisers. All
+	Boost use is gone from Rivet!
+
+	* Replace Boost lexical_cast and string algorithms.
 
 2016-03-25  Andy Buckley  <andy.buckley@cern.ch>
 

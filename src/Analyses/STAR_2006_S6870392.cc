@@ -22,8 +22,10 @@ namespace Rivet {
     /// Book projections and histograms
     void init() {
       FinalState fs(-2.0, 2.0);
-      addProjection(fs, "FS");
-      addProjection(FastJets(fs, FastJets::CDFMIDPOINT, 0.4, JetAlg::ALL_MUONS, JetAlg::NO_INVISIBLES, 0.5), "MidpointJets");
+      declare(fs, "FS");
+      declare(FastJets(fs, FastJets::CDFMIDPOINT, 0.4,
+                             JetAlg::ALL_MUONS, JetAlg::NO_INVISIBLES,
+                             nullptr, 0.5), "MidpointJets");
 
       _h_jet_pT_MB = bookHisto1D(1, 1, 1);
       _h_jet_pT_HT = bookHisto1D(2, 1, 1);
@@ -35,14 +37,14 @@ namespace Rivet {
       const double weight = event.weight();
 
       // Skip if the event is empty
-      const FinalState& fs = applyProjection<FinalState>(event, "FS");
+      const FinalState& fs = apply<FinalState>(event, "FS");
       if (fs.empty()) {
         MSG_DEBUG("Skipping event " << numEvents() << " because no final state found ");
         vetoEvent;
       }
 
       // Find jets
-      const FastJets& jetpro = applyProjection<FastJets>(event, "MidpointJets");
+      const FastJets& jetpro = apply<FastJets>(event, "MidpointJets");
       const Jets& jets = jetpro.jetsByPt();
       if (!jets.empty()) {
         const Jet& j1 = jets.front();

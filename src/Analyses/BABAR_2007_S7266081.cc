@@ -2,7 +2,6 @@
 #include <iostream>
 #include "Rivet/Analysis.hh"
 #include "Rivet/Projections/UnstableFinalState.hh"
-#include "Rivet/ParticleName.hh"
 
 namespace Rivet {
 
@@ -20,7 +19,7 @@ namespace Rivet {
 
 
     void init() {
-      addProjection(UnstableFinalState(), "UFS");
+      declare(UnstableFinalState(), "UFS");
       _hist_pipipi_pipipi = bookHisto1D( 1, 1, 1);
       _hist_pipipi_pipi   = bookHisto1D( 2, 1, 1);
       _hist_Kpipi_Kpipi   = bookHisto1D( 3, 1, 1);
@@ -37,17 +36,17 @@ namespace Rivet {
     void analyze(const Event& e) {
       // Find the taus
       Particles taus;
-      const UnstableFinalState& ufs = applyProjection<UnstableFinalState>(e, "UFS");
+      const UnstableFinalState& ufs = apply<UnstableFinalState>(e, "UFS");
       foreach (const Particle& p, ufs.particles()) {
         if (p.abspid() != PID::TAU) continue;
         _weight_total += 1.;
         Particles pip, pim, Kp, Km;
         unsigned int nstable = 0;
-        // get the boost to the rest frame
+        // Get the boost to the rest frame
         LorentzTransform cms_boost;
         if (p.p3().mod() > 1*MeV)
-          cms_boost = LorentzTransform(-p.momentum().boostVector());
-        // find the decay products we want
+          cms_boost = LorentzTransform::mkFrameTransformFromBeta(p.momentum().betaVec());
+        // Find the decay products we want
         findDecayProducts(p.genParticle(), nstable, pip, pim, Kp, Km);
         if (p.pid() < 0) {
           swap(pip, pim);

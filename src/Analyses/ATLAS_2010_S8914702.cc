@@ -1,21 +1,8 @@
 // -*- C++ -*-
-#include <iostream>
-#include <sstream>
-#include <string>
-
 #include "Rivet/Analysis.hh"
 #include "Rivet/Projections/FinalState.hh"
-
 #include "Rivet/Projections/LeadingParticlesFinalState.hh"
-#include "Rivet/Jet.hh"
 #include "Rivet/Projections/FastJets.hh"
-
-#include "fastjet/internal/base.hh"
-#include "fastjet/JetDefinition.hh"
-#include "fastjet/AreaDefinition.hh"
-#include "fastjet/ClusterSequence.hh"
-#include "fastjet/ClusterSequenceArea.hh"
-#include "fastjet/PseudoJet.hh"
 
 namespace Rivet {
 
@@ -26,35 +13,24 @@ namespace Rivet {
     /// Constructor
     ATLAS_2010_S8914702()
       : Analysis("ATLAS_2010_S8914702")
-    {
-      _eta_bins.push_back( 0.00);
-      _eta_bins.push_back( 0.60);
-      _eta_bins.push_back( 1.37);
-      _eta_bins.push_back( 1.52);
-      _eta_bins.push_back( 1.81);
-
-      _eta_bins_areaoffset.push_back(0.0);
-      _eta_bins_areaoffset.push_back(1.5);
-      _eta_bins_areaoffset.push_back(3.0);
-    }
+    {    }
 
 
     /// Book histograms and initialise projections before the run
     void init() {
       FinalState fs;
-      addProjection(fs, "FS");
+      declare(fs, "FS");
 
       FastJets fj(fs, FastJets::KT, 0.5);
-      _area_def = new fastjet::AreaDefinition(fastjet::VoronoiAreaSpec());
-      fj.useJetArea(_area_def);
-      addProjection(fj, "KtJetsD05");
+      fj.useJetArea(new fastjet::AreaDefinition(fastjet::VoronoiAreaSpec()));
+      declare(fj, "KtJetsD05");
 
-      LeadingParticlesFinalState photonfs(FinalState(-1.81, 1.81, 15.0*GeV));
+      LeadingParticlesFinalState photonfs(FinalState(Cuts::abseta < 1.81 && Cuts::pT > 15*GeV));
       photonfs.addParticleId(PID::PHOTON);
-      addProjection(photonfs, "LeadingPhoton");
+      declare(photonfs, "LeadingPhoton");
 
-      int hist_bin = 0;
-      for (int i = 0; i < (int)_eta_bins.size()-1; ++i) {
+      size_t hist_bin = 0;
+      for (size_t i = 0; i < _eta_bins.size()-1; ++i) {
         if (fabs(_eta_bins[i] - 1.37) < .0001) continue;
         _h_Et_photon[i] = bookHisto1D(1, 1, hist_bin+1);
         hist_bin += 1;
@@ -62,118 +38,68 @@ namespace Rivet {
     }
 
 
-    int getEtaBin(double eta_w, bool area_eta) const {
-      double eta = fabs(eta_w);
-      int v_iter = 0;
-      if (!area_eta) {
-        for (v_iter=0; v_iter < (int)_eta_bins.size()-1; ++v_iter) {
-          if (eta >= _eta_bins.at(v_iter) && eta < _eta_bins.at(v_iter+1)) break;
-        }
-	return min(v_iter,(int)_eta_bins.size()-2);
-      } else {
-        for (v_iter=0; v_iter < (int)_eta_bins_areaoffset.size()-1; ++v_iter) {
-          if (eta >= _eta_bins_areaoffset.at(v_iter) && eta < _eta_bins_areaoffset.at(v_iter+1)) break;
-        }
-	return v_iter;
-      }
+    size_t getEtaBin(double eta, bool area_eta) const {
+      return (!area_eta) ? binIndex(fabs(eta), _eta_bins) : binIndex(fabs(eta), _eta_bins_areaoffset);
     }
 
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-      const double weight = event.weight();
+      Particles photons = apply<LeadingParticlesFinalState>(event, "LeadingPhoton").particles();
+      if (photons.size() != 1) vetoEvent;
 
-      Particles photons = applyProjection<LeadingParticlesFinalState>(event, "LeadingPhoton").particles();
-      if (photons.size() != 1) {
-        vetoEvent;
-      }
+      const Particle& leadingPhoton = photons[0];
+      if (inRange(leadingPhoton.abseta(), 1.37, 1.52)) vetoEvent;
+      const int eta_bin = getEtaBin(leadingPhoton.abseta(), false);
 
-      FourMomentum leadingPhoton = photons[0].momentum();
-      double eta_P = leadingPhoton.eta();
-      double phi_P = leadingPhoton.phi();
-
-      if(fabs(eta_P)>=1.37 && fabs(eta_P)<1.52){
-        vetoEvent;
-      }
-
-      int eta_bin = getEtaBin(eta_P,false);
-
-      Particles fs = applyProjection<FinalState>(event, "FS").particles();
+      const Particles& fs = apply<FinalState>(event, "FS").particles();
       FourMomentum mom_in_EtCone;
-      foreach (const Particle& p, fs) {
-        // check if it's in the cone of .4
-        if (deltaR(eta_P, phi_P, p.eta(), p.phi()) >= 0.4) continue;
-
-        // check if it's in the 5x7 central core
-        if (fabs(eta_P-p.eta()) < .025*5.0*0.5 &&
-            fabs(phi_P-p.phi()) < (PI/128.)*7.0*0.5) continue;
+      for (const Particle& p : fs) {
+        // Check if it's in the cone of .4
+        if (deltaR(leadingPhoton, p) >= 0.4) continue;
+        // Check if it's in the 5x7 central core
+        if (fabs(deltaEta(leadingPhoton, p)) < .025*5.0*0.5 &&
+            fabs(deltaPhi(leadingPhoton, p)) < (PI/128.)*7.0*0.5) continue;
+        // Increment
         mom_in_EtCone += p.momentum();
       }
-      MSG_DEBUG("Done with initial EtCone.");
+      MSG_DEBUG("Done with initial Et cone");
 
-      // Now compute the median energy density
-      _ptDensity.clear();
-      _sigma.clear();
-      _Njets.clear();
-
-      std::vector< std::vector<double> > ptDensities;
-      std::vector<double> emptyVec;
-      ptDensities.assign(_eta_bins_areaoffset.size()-1,emptyVec);
-
-      FastJets fast_jets = applyProjection<FastJets>(event, "KtJetsD05");
-      const fastjet::ClusterSequenceArea* clust_seq_area = fast_jets.clusterSeqArea();
-      foreach (const fastjet::PseudoJet& jet, fast_jets.pseudoJets(0.0*GeV)) {
-        //const double y = jet.absrap();
-        const double eta = fabs(jet.eta());
-        const double pt = fabs(jet.perp());
-
-        // Get the cluster sequence
-        double area = clust_seq_area->area(jet);
-
-        if (area > 10e-4 && fabs(eta)<_eta_bins_areaoffset[_eta_bins_areaoffset.size()-1]) {
-          ptDensities.at(getEtaBin(fabs(eta),true)).push_back(pt/area);
+      // Get the jet pT densities
+      vector< vector<double> > ptDensities(_eta_bins_areaoffset.size()-1);
+      FastJets fastjets = apply<FastJets>(event, "KtJetsD05");
+      const shared_ptr<fastjet::ClusterSequenceArea> clust_seq_area = fastjets.clusterSeqArea();
+      for (const Jet& jet : fastjets.jets()) {
+        const double area = clust_seq_area->area(jet); //< Implicit call to pseudojet()
+        if (area > 1e-4 && jet.abseta() < _eta_bins_areaoffset.back()) {
+          ptDensities.at(getEtaBin(jet.abseta(), true)) += jet.pT()/area;
         }
       }
 
-      for (int b = 0; b < (int)_eta_bins_areaoffset.size()-1; ++b) {
-        double median = 0.0;
-        double sigma = 0.0;
-        int Njets = 0;
-        if (ptDensities[b].size() > 0) {
-          std::sort(ptDensities[b].begin(), ptDensities[b].end());
-          int nDens = ptDensities[b].size();
-          if (nDens % 2 == 0) {
-            median = (ptDensities[b][nDens/2]+ptDensities[b][(nDens-2)/2])/2;
-          } else {
-            median = ptDensities[b][(nDens-1)/2];
-          }
-          sigma = ptDensities[b][(int)(.15865*nDens)];
-          Njets = nDens;
-        }
-        _ptDensity.push_back(median);
-        _sigma.push_back(sigma);
-        _Njets.push_back(Njets);
+      // Now compute the median energy densities
+      vector<double> ptDensity;
+      for (size_t b = 0; b < _eta_bins_areaoffset.size()-1; ++b) {
+        ptDensity += ptDensities[b].empty() ? 0 : median(ptDensities[b]);
       }
 
       // Now figure out the correction
-      float EtCone_area = PI*.4*.4 - (7.0*.025)*(5.0*PI/128.);
-      float correction = _ptDensity[getEtaBin(eta_P,true)]*EtCone_area;
-      MSG_DEBUG("Jet area correction done.");
+      const double ETCONE_AREA = PI*.4*.4 - (7.0*.025)*(5.0*PI/128.);
+      const double correction = ptDensity[getEtaBin(leadingPhoton.abseta(), true)]*ETCONE_AREA;
+      MSG_DEBUG("Jet area correction done");
 
       // Shouldn't need to subtract photon
       // NB. Using expected cut at hadron/particle level, not cut at reco level
-      if (mom_in_EtCone.Et() - correction/*-leadingPhoton.Et()*/ > 4.0*GeV) {
-        vetoEvent;
-      }
-      MSG_DEBUG("Passed isolation cut.");
+      if (mom_in_EtCone.Et() - correction/*-leadingPhoton.Et()*/ > 4.0*GeV) vetoEvent;
+      MSG_DEBUG("Passed isolation cut");
 
-      _h_Et_photon[eta_bin]->fill(leadingPhoton.Et(), weight);
+      // Fill histogram
+      _h_Et_photon[eta_bin]->fill(leadingPhoton.Et()/GeV, event.weight());
     }
 
 
     /// Normalise histograms etc., after the run
     void finalize() {
-      for (int i = 0; i < (int)_eta_bins.size()-1; ++i) {
+      for (size_t i = 0; i < _eta_bins.size()-1; ++i) {
         if (fabs(_eta_bins[i] - 1.37) < .0001) continue;
         scale(_h_Et_photon[i], crossSection()/sumOfWeights());
       }
@@ -184,14 +110,9 @@ namespace Rivet {
 
     Histo1DPtr _h_Et_photon[6];
 
-    fastjet::AreaDefinition* _area_def;
+    const vector<double> _eta_bins = {0.00, 0.60, 1.37, 1.52, 1.81};
+    const vector<double> _eta_bins_areaoffset = {0.0, 1.5, 3.0};
 
-    std::vector<float> _eta_bins;
-    std::vector<float> _eta_bins_areaoffset;
-
-    std::vector<float> _ptDensity;
-    std::vector<float> _sigma;
-    std::vector<float> _Njets;
   };
 
 

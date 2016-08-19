@@ -48,19 +48,19 @@ namespace Rivet {
     //@{
 
     void init() {
-      addProjection(Beam(), "Beams");
+      declare(Beam(), "Beams");
       // Don't try to introduce a pT or eta cut here. It's all corrected
       // back. (See Section 2 of the paper.)
       const ChargedFinalState cfs;
-      addProjection(cfs, "FS");
-      addProjection(UnstableFinalState(), "UFS");
-      addProjection(FastJets(cfs, FastJets::JADE, 0.7), "JadeJets");
-      addProjection(FastJets(cfs, FastJets::DURHAM, 0.7), "DurhamJets");
-      addProjection(Sphericity(cfs), "Sphericity");
-      addProjection(ParisiTensor(cfs), "Parisi");
+      declare(cfs, "FS");
+      declare(UnstableFinalState(), "UFS");
+      declare(FastJets(cfs, FastJets::JADE, 0.7), "JadeJets");
+      declare(FastJets(cfs, FastJets::DURHAM, 0.7), "DurhamJets");
+      declare(Sphericity(cfs), "Sphericity");
+      declare(ParisiTensor(cfs), "Parisi");
       const Thrust thrust(cfs);
-      addProjection(thrust, "Thrust");
-      addProjection(Hemispheres(thrust), "Hemispheres");
+      declare(thrust, "Thrust");
+      declare(Hemispheres(thrust), "Hemispheres");
 
       _histPtTIn = bookHisto1D(1, 1, 1);
       _histPtTOut = bookHisto1D(2, 1, 1);
@@ -145,7 +145,7 @@ namespace Rivet {
 
     void analyze(const Event& e) {
       // First, veto on leptonic events by requiring at least 4 charged FS particles
-      const FinalState& fs = applyProjection<FinalState>(e, "FS");
+      const FinalState& fs = apply<FinalState>(e, "FS");
       const size_t numParticles = fs.particles().size();
       // Even if we only generate hadronic events, we still need a cut on numCharged >= 2.
       if (numParticles < 2) {
@@ -158,22 +158,22 @@ namespace Rivet {
       _weightedTotalPartNum += numParticles * weight;
 
       // Get beams and average beam momentum
-      const ParticlePair& beams = applyProjection<Beam>(e, "Beams").beams();
+      const ParticlePair& beams = apply<Beam>(e, "Beams").beams();
       const double meanBeamMom = ( beams.first.p3().mod() +
                                    beams.second.p3().mod() ) / 2.0;
       MSG_DEBUG("Avg beam momentum = " << meanBeamMom);
 
       // Thrusts
       MSG_DEBUG("Calculating thrust");
-      const Thrust& thrust = applyProjection<Thrust>(e, "Thrust");
+      const Thrust& thrust = apply<Thrust>(e, "Thrust");
       _hist1MinusT->fill(1 - thrust.thrust(), weight);
       _histTMajor->fill(thrust.thrustMajor(), weight);
       _histTMinor->fill(thrust.thrustMinor(), weight);
       _histOblateness->fill(thrust.oblateness(), weight);
 
       // Jets
-      const FastJets& durjet = applyProjection<FastJets>(e, "DurhamJets");
-      const FastJets& jadejet = applyProjection<FastJets>(e, "JadeJets");
+      const FastJets& durjet = apply<FastJets>(e, "DurhamJets");
+      const FastJets& jadejet = apply<FastJets>(e, "JadeJets");
       if (numParticles >= 3) {
         _passedCut3WeightSum += weight;
         if (durjet.clusterSeq()) _histDiffRate2Durham->fill(durjet.clusterSeq()->exclusive_ymerge_max(2), weight);
@@ -192,20 +192,20 @@ namespace Rivet {
 
       // Sphericities
       MSG_DEBUG("Calculating sphericity");
-      const Sphericity& sphericity = applyProjection<Sphericity>(e, "Sphericity");
+      const Sphericity& sphericity = apply<Sphericity>(e, "Sphericity");
       _histSphericity->fill(sphericity.sphericity(), weight);
       _histAplanarity->fill(sphericity.aplanarity(), weight);
       _histPlanarity->fill(sphericity.planarity(), weight);
 
       // C & D params
       MSG_DEBUG("Calculating Parisi params");
-      const ParisiTensor& parisi = applyProjection<ParisiTensor>(e, "Parisi");
+      const ParisiTensor& parisi = apply<ParisiTensor>(e, "Parisi");
       _histCParam->fill(parisi.C(), weight);
       _histDParam->fill(parisi.D(), weight);
 
       // Hemispheres
       MSG_DEBUG("Calculating hemisphere variables");
-      const Hemispheres& hemi = applyProjection<Hemispheres>(e, "Hemispheres");
+      const Hemispheres& hemi = apply<Hemispheres>(e, "Hemispheres");
       _histHemiMassH->fill(hemi.scaledM2high(), weight);
       _histHemiMassL->fill(hemi.scaledM2low(), weight);
       _histHemiMassD->fill(hemi.scaledM2diff(), weight);
@@ -278,7 +278,7 @@ namespace Rivet {
 
 
       // Final state of unstable particles to get particle spectra
-      const UnstableFinalState& ufs = applyProjection<UnstableFinalState>(e, "UFS");
+      const UnstableFinalState& ufs = apply<UnstableFinalState>(e, "UFS");
 
       foreach (const Particle& p, ufs.particles()) {
         int id = p.abspid();

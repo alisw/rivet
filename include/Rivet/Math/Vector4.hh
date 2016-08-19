@@ -17,6 +17,8 @@ namespace Rivet {
 
 
   /// @brief Specialisation of VectorN to a general (non-momentum) Lorentz 4-vector.
+  ///
+  /// @todo Add composite set/mk methods from different coord systems
   class FourVector : public Vector<4> {
     friend FourVector multiply(const double a, const FourVector& v);
     friend FourVector multiply(const FourVector& v, const double a);
@@ -36,7 +38,7 @@ namespace Rivet {
     }
 
     FourVector(const Vector<4>& other)
-    : Vector<4>(other) { }
+      : Vector<4>(other) { }
 
     FourVector(const double t, const double x, const double y, const double z) {
       this->setT(t);
@@ -50,12 +52,19 @@ namespace Rivet {
   public:
 
     double t() const { return get(0); }
-    double x() const { return get(1); }
-    double y() const { return get(2); }
-    double z() const { return get(3); }
+    double t2() const { return sqr(t()); }
     FourVector& setT(const double t) { set(0, t); return *this; }
+
+    double x() const { return get(1); }
+    double x2() const { return sqr(x()); }
     FourVector& setX(const double x) { set(1, x); return *this; }
+
+    double y() const { return get(2); }
+    double y2() const { return sqr(y()); }
     FourVector& setY(const double y) { set(2, y); return *this; }
+
+    double z() const { return get(3); }
+    double z2() const { return sqr(z()); }
     FourVector& setZ(const double z) { set(3, z); return *this; }
 
     double invariant() const {
@@ -63,11 +72,14 @@ namespace Rivet {
       return (t() + z())*(t() - z()) - x()*x() - y()*y();
     }
 
+    bool isNull() const {
+      return Rivet::isZero(invariant());
+    }
+
     /// Angle between this vector and another
     double angle(const FourVector& v) const {
       return vector3().angle( v.vector3() );
     }
-
     /// Angle between this vector and another (3-vector)
     double angle(const Vector3& v3) const {
       return vector3().angle(v3);
@@ -79,12 +91,10 @@ namespace Rivet {
     double polarRadius2() const {
       return vector3().polarRadius2();
     }
-
     /// Synonym for polarRadius2
     double perp2() const {
       return vector3().perp2();
     }
-
     /// Synonym for polarRadius2
     double rho2() const {
       return vector3().rho2();
@@ -94,12 +104,10 @@ namespace Rivet {
     double polarRadius() const {
       return vector3().polarRadius();
     }
-
     /// Synonym for polarRadius
     double perp() const {
       return vector3().perp();
     }
-
     /// Synonym for polarRadius
     double rho() const {
       return vector3().rho();
@@ -109,7 +117,6 @@ namespace Rivet {
     double azimuthalAngle(const PhiMapping mapping=ZERO_2PI) const {
       return vector3().azimuthalAngle(mapping);
     }
-
     /// Synonym for azimuthalAngle.
     double phi(const PhiMapping mapping=ZERO_2PI) const {
       return vector3().phi(mapping);
@@ -119,7 +126,6 @@ namespace Rivet {
     double polarAngle() const {
       return vector3().polarAngle();
     }
-
     /// Synonym for polarAngle.
     double theta() const {
       return vector3().theta();
@@ -129,7 +135,6 @@ namespace Rivet {
     double pseudorapidity() const {
       return vector3().pseudorapidity();
     }
-
     /// Synonym for pseudorapidity.
     double eta() const {
       return vector3().eta();
@@ -137,7 +142,6 @@ namespace Rivet {
 
     /// Get the \f$ |\eta| \f$ directly.
     double abspseudorapidity() const { return fabs(eta()); }
-
     /// Get the \f$ |\eta| \f$ directly (alias).
     double abseta() const { return fabs(eta()); }
 
@@ -308,34 +312,232 @@ namespace Rivet {
     ~FourMomentum() {}
 
   public:
+
+
+    /// @name Coordinate setters
+    //@{
+
+    /// Set energy \f$ E \f$ (time component of momentum).
+    FourMomentum& setE(double E) {
+      setT(E);
+      return *this;
+    }
+
+    /// Set x-component of momentum \f$ p_x \f$.
+    FourMomentum& setPx(double px) {
+      setX(px);
+      return *this;
+    }
+
+    /// Set y-component of momentum \f$ p_y \f$.
+    FourMomentum& setPy(double py) {
+      setY(py);
+      return *this;
+    }
+
+    /// Set z-component of momentum \f$ p_z \f$.
+    FourMomentum& setPz(double pz) {
+      setZ(pz);
+      return *this;
+    }
+
+
+    /// Set the p coordinates and energy simultaneously
+    FourMomentum& setPE(double px, double py, double pz, double E) {
+      if (E < 0)
+        throw std::invalid_argument("Negative energy given as argument: " + to_str(E));
+      setPx(px); setPy(py); setPz(pz); setE(E);
+      return *this;
+    }
+    /// Alias for setPE
+    FourMomentum& setXYZE(double px, double py, double pz, double E) {
+      return setPE(px, py, pz, E);
+    }
+    // /// Near-alias with switched arg order
+    // FourMomentum& setEP(double E, double px, double py, double pz) {
+    //   return setPE(px, py, pz, E);
+    // }
+    // /// Alias for setEP
+    // FourMomentum& setEXYZ(double E, double px, double py, double pz) {
+    //   return setEP(E, px, py, pz);
+    // }
+
+
+    /// Set the p coordinates and mass simultaneously
+    FourMomentum& setPM(double px, double py, double pz, double mass) {
+      if (mass < 0)
+        throw std::invalid_argument("Negative mass given as argument: " + to_str(mass));
+      const double E = sqrt( sqr(mass) + sqr(px) + sqr(py) + sqr(pz) );
+      // setPx(px); setPy(py); setPz(pz); setE(E);
+      return setPE(px, py, pz, E);
+    }
+    /// Alias for setPM
+    FourMomentum& setXYZM(double px, double py, double pz, double mass) {
+      return setPM(px, py, pz, mass);
+    }
+
+
+    /// Set the vector state from (eta,phi,energy) coordinates and the mass
+    ///
+    /// eta = -ln(tan(theta/2))
+    /// -> theta = 2 atan(exp(-eta))
+    FourMomentum& setEtaPhiME(double eta, double phi, double mass, double E) {
+      if (mass < 0)
+        throw std::invalid_argument("Negative mass given as argument");
+      if (E < 0)
+        throw std::invalid_argument("Negative energy given as argument");
+      const double theta = 2 * atan(exp(-eta));
+      if (theta < 0 || theta > M_PI)
+        throw std::domain_error("Polar angle outside 0..pi in calculation");
+      setThetaPhiME(theta, phi, mass, E);
+      return *this;
+    }
+
+    /// Set the vector state from (eta,phi,pT) coordinates and the mass
+    ///
+    /// eta = -ln(tan(theta/2))
+    /// -> theta = 2 atan(exp(-eta))
+    FourMomentum& setEtaPhiMPt(double eta, double phi, double mass, double pt) {
+      if (mass < 0)
+        throw std::invalid_argument("Negative mass given as argument");
+      if (pt < 0)
+        throw std::invalid_argument("Negative transverse momentum given as argument");
+      const double theta = 2 * atan(exp(-eta));
+      if (theta < 0 || theta > M_PI)
+        throw std::domain_error("Polar angle outside 0..pi in calculation");
+      const double p = pt / sin(theta);
+      const double E = sqrt( sqr(p) + sqr(mass) );
+      setThetaPhiME(theta, phi, mass, E);
+      return *this;
+    }
+
+    /// Set the vector state from (y,phi,energy) coordinates and the mass
+    ///
+    /// y = 0.5 * ln((E+pz)/(E-pz))
+    /// -> (E^2 - pz^2) exp(2y) = (E+pz)^2
+    ///  & (E^2 - pz^2) exp(-2y) = (E-pz)^2
+    /// -> E = sqrt(pt^2 + m^2) cosh(y)
+    /// -> pz = sqrt(pt^2 + m^2) sinh(y)
+    /// -> sqrt(pt^2 + m^2) = E / cosh(y)
+    FourMomentum& setRapPhiME(double y, double phi, double mass, double E) {
+      if (mass < 0)
+        throw std::invalid_argument("Negative mass given as argument");
+      if (E < 0)
+        throw std::invalid_argument("Negative energy given as argument");
+      const double sqrt_pt2_m2 = E / cosh(y);
+      const double pt = sqrt( sqr(sqrt_pt2_m2) - sqr(mass) );
+      if (pt < 0)
+        throw std::domain_error("Negative transverse momentum in calculation");
+      const double pz = sqrt_pt2_m2 * sinh(y);
+      const double px = pt * cos(phi);
+      const double py = pt * sin(phi);
+      setPE(px, py, pz, E);
+      return *this;
+    }
+
+    /// Set the vector state from (y,phi,pT) coordinates and the mass
+    ///
+    /// y = 0.5 * ln((E+pz)/(E-pz))
+    /// -> E = sqrt(pt^2 + m^2) cosh(y)  [see above]
+    FourMomentum& setRapPhiMPt(double y, double phi, double mass, double pt) {
+      if (mass < 0)
+        throw std::invalid_argument("Negative mass given as argument");
+      if (pt < 0)
+        throw std::invalid_argument("Negative transverse mass given as argument");
+      const double E = sqrt( sqr(pt) + sqr(mass) ) * cosh(y);
+      if (E < 0)
+        throw std::domain_error("Negative energy in calculation");
+      setRapPhiME(y, phi, mass, E);
+      return *this;
+    }
+
+    /// Set the vector state from (theta,phi,energy) coordinates and the mass
+    ///
+    /// p = sqrt(E^2 - mass^2)
+    /// pz = p cos(theta)
+    /// pt = p sin(theta)
+    FourMomentum& setThetaPhiME(double theta, double phi, double mass, double E) {
+      if (theta < 0 || theta > M_PI)
+        throw std::invalid_argument("Polar angle outside 0..pi given as argument");
+      if (mass < 0)
+        throw std::invalid_argument("Negative mass given as argument");
+      if (E < 0)
+        throw std::invalid_argument("Negative energy given as argument");
+      const double p = sqrt( sqr(E) - sqr(mass) );
+      const double pz = p * cos(theta);
+      const double pt = p * sin(theta);
+      if (pt < 0)
+        throw std::invalid_argument("Negative transverse momentum in calculation");
+      const double px = pt * cos(phi);
+      const double py = pt * sin(phi);
+      setPE(px, py, pz, E);
+      return *this;
+    }
+
+    /// Set the vector state from (theta,phi,pT) coordinates and the mass
+    ///
+    /// p = pt / sin(theta)
+    /// pz = p cos(theta)
+    /// E = sqrt(p^2 + mass^2)
+    FourMomentum& setThetaPhiMPt(double theta, double phi, double mass, double pt) {
+      if (theta < 0 || theta > M_PI)
+        throw std::invalid_argument("Polar angle outside 0..pi given as argument");
+      if (mass < 0)
+        throw std::invalid_argument("Negative mass given as argument");
+      if (pt < 0)
+        throw std::invalid_argument("Negative transverse momentum given as argument");
+      const double p = pt / sin(theta);
+      const double px = pt * cos(phi);
+      const double py = pt * sin(phi);
+      const double pz = p * cos(theta);
+      const double E = sqrt( sqr(p) + sqr(mass) );
+      setPE(px, py, pz, E);
+      return *this;
+    }
+
+    /// Set the vector state from (pT,phi,energy) coordinates and the mass
+    ///
+    /// pz = sqrt(E^2 - mass^2 - pt^2)
+    FourMomentum& setPtPhiME(double pt, double phi, double mass, double E) {
+      if (pt < 0)
+        throw std::invalid_argument("Negative transverse momentum given as argument");
+      if (mass < 0)
+        throw std::invalid_argument("Negative mass given as argument");
+      if (E < 0)
+        throw std::invalid_argument("Negative energy given as argument");
+      const double px = pt * cos(phi);
+      const double py = pt * sin(phi);
+      const double pz = sqrt(sqr(E) - sqr(mass) - sqr(pt));
+      setPE(px, py, pz, E);
+      return *this;
+    }
+
+    //@}
+
+
+    /// @name Accessors
+    //@{
+
     /// Get energy \f$ E \f$ (time component of momentum).
     double E() const { return t(); }
-
-    /// Get 3-momentum part, \f$ p \f$.
-    Vector3 p3() const { return vector3(); }
-    /// Get 3-momentum part, \f$ p \f$ (alias).
-    // Vector3 p() const { return vector3(); }
+    /// Get energy-squared \f$ E^2 \f$.
+    double E2() const { return t2(); }
 
     /// Get x-component of momentum \f$ p_x \f$.
     double px() const { return x(); }
+    /// Get x-squared \f$ p_x^2 \f$.
+    double px2() const { return x2(); }
 
     /// Get y-component of momentum \f$ p_y \f$.
     double py() const { return y(); }
+    /// Get y-squared \f$ p_y^2 \f$.
+    double py2() const { return y2(); }
 
     /// Get z-component of momentum \f$ p_z \f$.
     double pz() const { return z(); }
+    /// Get z-squared \f$ p_z^2 \f$.
+    double pz2() const { return z2(); }
 
-    /// Set energy \f$ E \f$ (time component of momentum).
-    FourMomentum& setE(double E)   { setT(E); return *this; }
-
-    /// Set x-component of momentum \f$ p_x \f$.
-    FourMomentum& setPx(double px) { setX(px); return *this; }
-
-    /// Set y-component of momentum \f$ p_y \f$.
-    FourMomentum& setPy(double py) { setY(py); return *this; }
-
-    /// Set z-component of momentum \f$ p_z \f$.
-    FourMomentum& setPz(double pz) { setZ(pz); return *this; }
 
     /// @brief Get the mass \f$ m = \sqrt{E^2 - p^2} \f$ (the Lorentz self-invariant).
     ///
@@ -355,11 +557,25 @@ namespace Rivet {
       return invariant();
     }
 
+
+    /// Get 3-momentum part, \f$ p \f$.
+    Vector3 p3() const { return vector3(); }
+
+    /// Get the modulus of the 3-momentum
+    double p() const {
+      return p3().mod();
+    }
+
+    /// Get the modulus-squared of the 3-momentum
+    double p2() const {
+      return p3().mod2();
+    }
+
+
     /// Calculate the rapidity.
     double rapidity() const {
       return 0.5 * std::log( (E() + pz()) / (E() - pz()) );
     }
-
     /// Alias for rapidity.
     double rap() const {
       return rapidity();
@@ -369,7 +585,6 @@ namespace Rivet {
     double absrapidity() const {
       return fabs(rapidity());
     }
-
     /// Absolute rapidity.
     double absrap() const {
       return fabs(rap());
@@ -379,7 +594,6 @@ namespace Rivet {
     double pT2() const {
       return vector3().polarRadius2();
     }
-
     /// Calculate the squared transverse momentum \f$ p_T^2 \f$.
     double pt2() const {
       return vector3().polarRadius2();
@@ -389,7 +603,6 @@ namespace Rivet {
     double pT() const {
       return sqrt(pT2());
     }
-
     /// Calculate the transverse momentum \f$ p_T \f$.
     double pt() const {
       return sqrt(pT2());
@@ -399,27 +612,54 @@ namespace Rivet {
     double Et2() const {
       return Et() * Et();
     }
-
     /// Calculate the transverse energy \f$ E_T = E \sin{\theta} \f$.
     double Et() const {
       return E() * sin(polarAngle());
     }
 
-    /// Calculate the boost vector (in units of \f$ \beta \f$).
-    Vector3 boostVector() const {
-      // const Vector3 p3 = vector3();
-      // const double m2 = mass2();
-      // if (Rivet::isZero(m2)) return p3.unit();
-      // else {
-      //   // Could also do this via beta = tanh(rapidity), but that's
-      //   // probably more messy from a numerical hygiene point of view.
-      //   const double p2 = p3.mod2();
-      //   const double beta = sqrt( p2 / (m2 + p2) );
-      //   return beta * p3.unit();
-      // }
-      /// @todo Be careful about c=1 convention...
-      return Vector3(px()/E(), py()/E(), pz()/E());
+    //@}
+
+
+    /// @name Lorentz boost factors and vectors
+    //@{
+
+    /// Calculate the boost factor \f$ \gamma \f$.
+    /// @note \f$ \gamma = E/mc^2 \f$ so we rely on the c=1 convention
+    double gamma() const {
+      return sqrt(E2()/mass2());
     }
+
+    /// Calculate the boost vector \f$ \vec{\gamma} \f$.
+    /// @note \f$ \gamma = E/mc^2 \f$ so we rely on the c=1 convention
+    Vector3 gammaVec() const {
+      return gamma() * p3().unit();
+    }
+
+    /// Calculate the boost factor \f$ \beta \f$.
+    /// @note \f$ \beta = pc/E \f$ so we rely on the c=1 convention
+    double beta() const {
+      return p()/E();
+    }
+
+    /// Calculate the boost vector \f$ \vec{\beta} \f$.
+    /// @note \f$ \beta = pc/E \f$ so we rely on the c=1 convention
+    Vector3 betaVec() const {
+      // return Vector3(px()/E(), py()/E(), pz()/E());
+      return p3()/E();
+    }
+
+    /// @brief Deprecated alias for betaVec
+    /// @deprecated This will be removed; use betaVec() instead
+    Vector3 boostVector() const { return betaVec(); }
+
+    //@}
+
+
+    ////////////////////////////////////////
+
+
+    /// @name Sorting helpers
+    //@{
 
     /// Struct for sorting by increasing energy
     struct byEAscending {
@@ -434,6 +674,7 @@ namespace Rivet {
       }
     };
 
+
     /// Struct for sorting by decreasing energy
     struct byEDescending {
       bool operator()(const FourMomentum& left, const FourMomentum& right) const{
@@ -445,6 +686,14 @@ namespace Rivet {
       }
     };
 
+    //@}
+
+
+    ////////////////////////////////////////
+
+
+    /// @name Arithmetic operators
+    //@{
 
     /// Multiply by a scalar
     FourMomentum& operator*=(double a) {
@@ -484,8 +733,65 @@ namespace Rivet {
       return result;
     }
 
+    //@}
+
+
+    ////////////////////////////////////////
+
+
+    /// @name Factory functions
+    //@{
+
+    /// Make a vector from (px,py,pz,E) coordinates
+    static FourMomentum mkXYZE(double px, double py, double pz, double E) {
+      return FourMomentum().setPE(px, py, pz, E);
+    }
+
+    /// Make a vector from (px,py,pz) coordinates and the mass
+    static FourMomentum mkXYZM(double px, double py, double pz, double mass) {
+      return FourMomentum().setPM(px, py, pz, mass);
+    }
+
+    /// Make a vector from (eta,phi,energy) coordinates and the mass
+    static FourMomentum mkEtaPhiME(double eta, double phi, double mass, double E) {
+      return FourMomentum().setEtaPhiME(eta, phi, mass, E);
+    }
+
+    /// Make a vector from (eta,phi,pT) coordinates and the mass
+    static FourMomentum mkEtaPhiMPt(double eta, double phi, double mass, double pt) {
+      return FourMomentum().setEtaPhiMPt(eta, phi, mass, pt);
+    }
+
+    /// Make a vector from (y,phi,energy) coordinates and the mass
+    static FourMomentum mkRapPhiME(double y, double phi, double mass, double E) {
+      return FourMomentum().setRapPhiME(y, phi, mass, E);
+    }
+
+    /// Make a vector from (y,phi,pT) coordinates and the mass
+    static FourMomentum mkRapPhiMPt(double y, double phi, double mass, double pt) {
+      return FourMomentum().setRapPhiMPt(y, phi, mass, pt);
+    }
+
+    /// Make a vector from (theta,phi,energy) coordinates and the mass
+    static FourMomentum mkThetaPhiME(double theta, double phi, double mass, double E) {
+      return FourMomentum().setThetaPhiME(theta, phi, mass, E);
+    }
+
+    /// Make a vector from (theta,phi,pT) coordinates and the mass
+    static FourMomentum mkThetaPhiMPt(double theta, double phi, double mass, double pt) {
+      return FourMomentum().setThetaPhiMPt(theta, phi, mass, pt);
+    }
+
+    /// Make a vector from (pT,phi,energy) coordinates and the mass
+    static FourMomentum mkPtPhiME(double pt, double phi, double mass, double E) {
+      return FourMomentum().setPtPhiME(pt, phi, mass, E);
+    }
+
+    //@}
+
 
   };
+
 
 
   inline FourMomentum multiply(const double a, const FourMomentum& v) {
@@ -1093,6 +1399,15 @@ namespace Rivet {
     return out;
   }
 
+  //@}
+
+
+  /// @name Typedefs of vector types to short names
+  /// @todo Switch canonical and alias names
+  //@{
+  //typedef FourVector V4; //< generic
+  typedef FourVector X4; //< spatial
+  typedef FourMomentum P4; //< momentum
   //@}
 
 

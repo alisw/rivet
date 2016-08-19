@@ -12,7 +12,7 @@ namespace Rivet {
 
   /// @brief Get charged final-state leptons
   ///
-  /// NB. This is just electrons and muons, unless you set taus stable!
+  /// @todo This is just electrons and muons, unless you set taus stable!
   class ChargedLeptons : public FinalState {
   public:
 
@@ -24,9 +24,8 @@ namespace Rivet {
     }
 
     /// Clone on the heap.
-    virtual const Projection* clone() const {
-      return new ChargedLeptons(*this);
-    }
+    DEFAULT_RIVET_PROJ_CLONE(ChargedLeptons);
+
 
   protected:
 

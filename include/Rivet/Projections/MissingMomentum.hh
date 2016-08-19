@@ -37,12 +37,8 @@ namespace Rivet {
 
 
     /// Clone on the heap.
-    virtual const Projection* clone() const {
-      return new MissingMomentum(*this);
-    }
+    DEFAULT_RIVET_PROJ_CLONE(MissingMomentum);
 
-
-  public:
 
     /// The vector-summed visible four-momentum in the event.
     ///

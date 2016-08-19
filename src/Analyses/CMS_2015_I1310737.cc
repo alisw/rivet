@@ -1,3 +1,4 @@
+// -*- C++ -*-
 #include "Rivet/Analysis.hh"
 #include "Rivet/Projections/FastJets.hh"
 #include "Rivet/Projections/ChargedFinalState.hh"
@@ -13,9 +14,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    CMS_2015_I1310737()
-      : Analysis("CMS_2015_I1310737")
-    {  }
+    DEFAULT_RIVET_ANALYSIS_CTOR(CMS_2015_I1310737);
 
 
     /// Book histograms and initialise projections before the run
@@ -25,17 +24,17 @@ namespace Rivet {
       VisibleFinalState visfs(fs);
 
       ZFinder zeeFinder(fs, Cuts::abseta < 2.4 && Cuts::pT > 20*GeV, PID::ELECTRON, 71.0*GeV, 111.0*GeV);
-      addProjection(zeeFinder, "ZeeFinder");
+      declare(zeeFinder, "ZeeFinder");
 
       ZFinder zmumuFinder(fs, Cuts::abseta < 2.4 && Cuts::pT > 20*GeV, PID::MUON, 71.0*GeV, 111.0*GeV);
-      addProjection(zmumuFinder, "ZmumuFinder");
+      declare(zmumuFinder, "ZmumuFinder");
 
       VetoedFinalState jetConstits(visfs);
       jetConstits.addVetoOnThisFinalState(zeeFinder);
       jetConstits.addVetoOnThisFinalState(zmumuFinder);
 
       FastJets akt05Jets(jetConstits, FastJets::ANTIKT, 0.5);
-      addProjection(akt05Jets, "AntiKt05Jets");
+      declare(akt05Jets, "AntiKt05Jets");
 
 
       _h_excmult_jets_tot = bookHisto1D(1, 1, 1);
@@ -58,8 +57,8 @@ namespace Rivet {
     /// Perform the per-event analysis
     void analyze(const Event& event) {;
 
-      const ZFinder& zeeFS = applyProjection<ZFinder>(event, "ZeeFinder");
-      const ZFinder& zmumuFS = applyProjection<ZFinder>(event, "ZmumuFinder");
+      const ZFinder& zeeFS = apply<ZFinder>(event, "ZeeFinder");
+      const ZFinder& zmumuFS = apply<ZFinder>(event, "ZmumuFinder");
 
       const Particles& zees = zeeFS.bosons();
       const Particles& zmumus = zmumuFS.bosons();
@@ -75,7 +74,7 @@ namespace Rivet {
 
       // Cluster jets
       // NB. Veto has already been applied on leptons and photons used for dressing
-      const FastJets& fj = applyProjection<FastJets>(event, "AntiKt05Jets");
+      const FastJets& fj = apply<FastJets>(event, "AntiKt05Jets");
       const Jets& jets = fj.jetsByPt(Cuts::abseta < 2.4 && Cuts::pT > 30*GeV);
 
       // Perform lepton-jet overlap and HT calculation

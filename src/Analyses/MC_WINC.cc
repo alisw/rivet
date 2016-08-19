@@ -26,7 +26,7 @@ namespace Rivet {
     void init() {
       FinalState fs;
       WFinder wfinder(fs, Cuts::abseta < 3.5 && Cuts::pT > 25*GeV, _lepton, 60.0*GeV, 100.0*GeV, 25.0*GeV, _dR);
-      addProjection(wfinder, "WFinder");
+      declare(wfinder, "WFinder");
 
       double sqrts = sqrtS()>0. ? sqrtS() : 14000.;
       _h_W_mass = bookHisto1D("W_mass", 50, 55.0, 105.0);
@@ -51,7 +51,7 @@ namespace Rivet {
     void analyze(const Event & e) {
       const double weight = e.weight();
 
-      const WFinder& wfinder = applyProjection<WFinder>(e, "WFinder");
+      const WFinder& wfinder = apply<WFinder>(e, "WFinder");
       if (wfinder.bosons().size() != 1) {
         vetoEvent;
       }

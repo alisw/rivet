@@ -3,6 +3,7 @@ from libcpp.pair cimport pair
 from libcpp.vector cimport vector
 from libcpp cimport bool
 from libcpp.string cimport string
+from libcpp.memory cimport unique_ptr
 
 ctypedef int PdgId
 ctypedef pair[PdgId,PdgId] PdgIdPair
@@ -25,6 +26,7 @@ cdef extern from "Rivet/Run.hh" namespace "Rivet":
         bool init(string, double) # $2=1.0
         bool openFile(string, double) # $2=1.0
         bool readEvent()
+        bool skipEvent()
         bool processEvent()
         bool finalize()
 
@@ -59,7 +61,7 @@ cdef extern from "Rivet/Analysis.hh" namespace "Rivet":
 
 cdef extern from "Rivet/AnalysisLoader.hh":
     vector[string] AnalysisLoader_analysisNames "Rivet::AnalysisLoader::analysisNames" ()
-    Analysis* AnalysisLoader_getAnalysis "Rivet::AnalysisLoader::getAnalysis" (string)
+    unique_ptr[Analysis] AnalysisLoader_getAnalysis "Rivet::AnalysisLoader::getAnalysis" (string)
 
 cdef extern from "Rivet/Tools/RivetPaths.hh" namespace "Rivet":
     vector[string] getAnalysisLibPaths()
@@ -67,10 +69,12 @@ cdef extern from "Rivet/Tools/RivetPaths.hh" namespace "Rivet":
     void addAnalysisLibPath(string)
 
     vector[string] getAnalysisDataPaths()
-    string findAnalysisRefFile(string)
+    void setAnalysisDataPaths(vector[string])
+    void addAnalysisDataPath(string)
+    string findAnalysisDataFile(string)
 
     vector[string] getAnalysisRefPaths()
-    string findAnalysisDataFile(string)
+    string findAnalysisRefFile(string)
 
     vector[string] getAnalysisInfoPaths()
     string findAnalysisInfoFile(string)

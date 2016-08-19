@@ -30,10 +30,10 @@ namespace Rivet {
     void init() {
       Cut cut = Cuts::abseta < 1.7 && Cuts::pT > 15*GeV;
       ZFinder zfinder(FinalState(), cut, PID::MUON, 65*GeV, 115*GeV, 0.2, ZFinder::NOCLUSTER, ZFinder::TRACK);
-      addProjection(zfinder, "ZFinder");
+      declare(zfinder, "ZFinder");
 
       FastJets conefinder(zfinder.remainingFinalState(), FastJets::D0ILCONE, 0.5);
-      addProjection(conefinder, "ConeFinder");
+      declare(conefinder, "ConeFinder");
 
       _h_dphi_jet_Z25 = bookHisto1D(1, 1, 1);
       _h_dphi_jet_Z45 = bookHisto1D(2, 1, 1);
@@ -60,7 +60,7 @@ namespace Rivet {
     void analyze(const Event& event) {
       const double weight = event.weight();
 
-      const ZFinder& zfinder = applyProjection<ZFinder>(event, "ZFinder");
+      const ZFinder& zfinder = apply<ZFinder>(event, "ZFinder");
       if (zfinder.bosons().size() == 1) {
         // count inclusive sum of weights for histogram normalisation
         _inclusive_Z_sumofweights += weight;
@@ -69,7 +69,7 @@ namespace Rivet {
         if (zmom.pT() < 25*GeV) vetoEvent;
 
         Jets jets;
-        foreach (const Jet& j, applyProjection<JetAlg>(event, "ConeFinder").jetsByPt(20*GeV)) {
+        foreach (const Jet& j, apply<JetAlg>(event, "ConeFinder").jetsByPt(20*GeV)) {
           if (j.abseta() < 2.8) {
             jets.push_back(j);
             break;

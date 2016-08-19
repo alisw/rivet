@@ -23,7 +23,7 @@ namespace Rivet {
       // Set up projections
       ZFinder zfinder(FinalState(), Cuts::open(), PID::ELECTRON,
                       66*GeV, 116*GeV, 0.0, ZFinder::NOCLUSTER);
-      addProjection(zfinder, "ZFinder");
+      declare(zfinder, "ZFinder");
 
       // Book histogram
       _hist_zpt = bookHisto1D(1, 1, 1);
@@ -32,7 +32,7 @@ namespace Rivet {
 
     /// Do the analysis
     void analyze(const Event& e) {
-      const ZFinder& zfinder = applyProjection<ZFinder>(e, "ZFinder");
+      const ZFinder& zfinder = apply<ZFinder>(e, "ZFinder");
       if (zfinder.bosons().size() != 1) {
         MSG_DEBUG("Num e+ e- pairs found = " << zfinder.bosons().size());
         vetoEvent;

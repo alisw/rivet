@@ -30,21 +30,25 @@ from subprocess import Popen,PIPE
 from optparse import OptionParser, OptionGroup
 parser = OptionParser(usage=__doc__)
 parser.add_option("-o", "--outputdir", dest="OUTPUTDIR",
-                  default="./plots", help="directory for webpage output")
+                  default="./rivet-plots", help="directory for Web page output")
 parser.add_option("-c", "--config", dest="CONFIGFILES", action="append", default=["~/.make-plots"],
-                  help="plot config file(s) to be used with rivet-cmphistos.")
+                  help="plot config file(s) to be used with rivet-cmphistos")
 parser.add_option("-n", "--num-threads", metavar="NUMTHREADS", dest="NUMTHREADS", type=int,
-                  default=None, help="request make-plots to use a specific number of threads.")
+                  default=None, help="request make-plots to use a specific number of threads")
 parser.add_option("--ignore-missing", dest="IGNORE_MISSING", action="store_true",
-                  default=False, help="ignore missing YODA files.")
+                  default=False, help="ignore missing YODA files")
 parser.add_option("-i", "--ignore-unvalidated", dest="IGNORE_UNVALIDATED", action="store_true",
-                  default=False, help="ignore unvalidated analyses.")
+                  default=False, help="ignore unvalidated analyses")
 # parser.add_option("--ref", "--refid", dest="REF_ID",
 #                   default=None, help="ID of reference data set (file path for non-REF data)")
 parser.add_option("--dry-run", help="don't actually do any plotting or HTML building", dest="DRY_RUN",
                   action="store_true", default=False)
+parser.add_option("--no-cleanup", dest="NO_CLEANUP", action="store_true", default=False,
+                  help="keep plotting temporary directory")
+parser.add_option("--no-subproc", dest="NO_SUBPROC", action="store_true", default=False,
+                  help="don't use subprocesses to render the plots in parallel -- useful for debugging")
 parser.add_option("--pwd", dest="PATH_PWD", action="store_true", default=False,
-                  help="append the current directory (pwd) to the analysis/data search paths (cf. $RIVET_ANALYSIS_PATH).")
+                  help="append the current directory (pwd) to the analysis/data search paths (cf. $RIVET_ANALYSIS_PATH)")
 
 stygroup = OptionGroup(parser, "Style options")
 stygroup.add_option("-t", "--title", dest="TITLE",
@@ -103,7 +107,8 @@ opts, yodafiles = parser.parse_args()
 
 ## Add pwd to search paths
 if opts.PATH_PWD:
-    rivet.addAnalysisLibPath(".")
+    rivet.addAnalysisLibPath(os.path.abspath("."))
+    rivet.addAnalysisDataPath(os.path.abspath("."))
 
 
 ## Check that there are some arguments!
@@ -141,11 +146,11 @@ for yodafile in yodafiles:
             sys.exit(2)
 
     try:
-        ## Note: use -m/-M flags here as well as when calling rivet-cmphistos, to potentially speed this initial loading
+        ## Note: we use -m/-M flags here as well as when calling rivet-cmphistos, to potentially speed this initial loading
         analysisobjects = yoda.read(yodafilepath, patterns=opts.PATHPATTERNS, unpatterns=opts.PATHUNPATTERNS)
     except IOError, e:
         print "File reading error: ", e.strerror
-        exit(1)
+        sys.exit(1)
 
     for path, ao in analysisobjects.iteritems():
         ## Make a path object and ensure the path is in standard form
@@ -174,12 +179,12 @@ for yodafile in yodafiles:
         if opts.ANAPATTERNS:
             matched = False
             for patt in opts.ANAPATTERNS:
-                if re.search(patt, analysis) is not None:
+                if re.match(patt, analysis) is not None:
                     matched = True
                     break
         if matched and opts.ANAUNPATTERNS:
             for patt in opts.ANAUNPATTERNS:
-                if re.search(patt, analysis) is not None:
+                if re.match(patt, analysis) is not None:
                     matched = False
                     break
         if matched:
@@ -229,10 +234,10 @@ if opts.REFTITLE:
     ch_cmd.append("--reftitle=%s" % opts.REFTITLE )
 if opts.PATHPATTERNS:
     for patt in opts.PATHPATTERNS:
-        ch_cmd += ["-m", patt]
+        ch_cmd += ["-m", patt] #"'"+patt+"'"]
 if opts.PATHUNPATTERNS:
     for patt in opts.PATHUNPATTERNS:
-        ch_cmd += ["-M", patt]
+        ch_cmd += ["-M", patt] #"'"+patt+"'"]
 ch_cmd.append("--hier-out")
 # TODO: Need to be able to override this: provide a --plotinfodir cmd line option?
 ch_cmd.append("--plotinfodir=%s" % os.path.abspath("../"))
@@ -255,23 +260,23 @@ for configfile in opts.CONFIGFILES:
         ch_cmd += ["-c", configfile]
 
 if opts.VERBOSE:
-    # ch_cmd.append("--verbose")
+    ch_cmd.append("--verbose")
     print "Calling rivet-cmphistos with the following command:"
     print " ".join(ch_cmd)
 
 ## Run rivet-cmphistos in a subdir, after fixing any relative paths in Rivet env vars
 if not opts.DRY_RUN:
-    for var in ("RIVET_ANALYSIS_PATH", "RIVET_REF_PATH", "RIVET_INFO_PATH", "RIVET_PLOT_PATH"):
+    for var in ("RIVET_ANALYSIS_PATH", "RIVET_DATA_PATH", "RIVET_REF_PATH", "RIVET_INFO_PATH", "RIVET_PLOT_PATH"):
         if var in os.environ:
             abspaths = map(os.path.abspath, os.environ[var].split(":"))
             os.environ[var] = ":".join(abspaths)
-    subproc = Popen(ch_cmd, cwd=opts.OUTPUTDIR,stdout=PIPE,stderr=PIPE)
-    out,err = subproc.communicate()
+    subproc = Popen(ch_cmd, cwd=opts.OUTPUTDIR, stdout=PIPE, stderr=PIPE)
+    out, err = subproc.communicate()
     retcode = subproc.returncode
-    if (opts.VERBOSE or retcode != 0) and out:
-        print 'Output from rivet-cmphistos\n', out
+    if opts.VERBOSE or retcode != 0:
+        print 'Output from rivet-cmphistos:\n', out
     if err :
-        print 'Errors from rivet-cmphistos\n', err
+        print 'Errors from rivet-cmphistos:\n', err
     if retcode != 0:
         print 'Crash in rivet-cmphistos code = ', retcode, ' exiting'
         exit(retcode)
@@ -358,9 +363,11 @@ if not opts.DRY_RUN:
 
         reflist = []
         if inspireid:
-            reflist.append('<a href="http://inspirehep.net/record/%s">Spires</a>' % inspireid)
-        elif spiresid:
-            reflist.append('<a href="http://durpdg.dur.ac.uk/cgi-bin/spiface/hep/www?irn+%s">Spires</a>' % spiresid)
+            reflist.append('<a href="http://inspire-hep.net/record/%s">Inspire</a>' % inspireid)
+            reflist.append('<a href="http://hepdata.cedar.ac.uk/view/ins%s">HepData</a>' % inspireid)
+        elif ana.spiresId():
+            reflist.append('<a href="http://inspire-hep.net/search?p=find+key+%s">Inspire</a>' % spiresid)
+            reflist.append('<a href="http://hepdata.cedar.ac.uk/view/irn%s">HepData</a>' % spiresid)
         reflist += references
         index.write('<p>%s</p>\n' % " &#124; ".join(reflist))
 
@@ -416,20 +423,26 @@ if not opts.DRY_RUN:
 mp_cmd = ["make-plots"]
 if opts.NUMTHREADS:
     mp_cmd.append("--num-threads=%d" % opts.NUMTHREADS)
+if opts.NO_CLEANUP:
+    mp_cmd.append("--no-cleanup")
+if opts.NO_SUBPROC:
+    mp_cmd.append("--no-subproc")
 if opts.VECTORFORMAT == "PDF":
     mp_cmd.append("--pdfpng")
 elif opts.VECTORFORMAT == "PS":
     mp_cmd.append("--pspng")
-if opts.OUTPUT_FONT.upper() == "PALATINO":
-    mp_cmd.append("--palatino")
-if opts.OUTPUT_FONT.upper() == "CM":
-    mp_cmd.append("--cm")
-elif opts.OUTPUT_FONT.upper() == "TIMES":
-    mp_cmd.append("--times")
-elif opts.OUTPUT_FONT.upper() == "HELVETICA":
-    mp_cmd.append("--helvetica")
-elif opts.OUTPUT_FONT.upper() == "MINION":
-    mp_cmd.append("--minion")
+if opts.OUTPUT_FONT:
+    mp_cmd.append("--font=%s" % opts.OUTPUT_FONT)
+# if opts.OUTPUT_FONT.upper() == "PALATINO":
+#     mp_cmd.append("--palatino")
+# if opts.OUTPUT_FONT.upper() == "CM":
+#     mp_cmd.append("--cm")
+# elif opts.OUTPUT_FONT.upper() == "TIMES":
+#     mp_cmd.append("--times")
+# elif opts.OUTPUT_FONT.upper() == "HELVETICA":
+#     mp_cmd.append("--helvetica")
+# elif opts.OUTPUT_FONT.upper() == "MINION":
+#     mp_cmd.append("--minion")
 datfiles = []
 for analysis in analyses:
     anapath = os.path.join(opts.OUTPUTDIR, analysis)

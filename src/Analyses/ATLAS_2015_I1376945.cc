@@ -9,18 +9,16 @@
 
 namespace Rivet {
 
+
   class ATLAS_2015_I1376945 : public Analysis {
   public:
 
     /// Constructor
-    ATLAS_2015_I1376945()
-      : Analysis("ATLAS_2015_I1376945")
-    {    }
+    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2015_I1376945);
 
-
-  public:
 
     /// @name Analysis methods
+    //@{
 
     /// Book histograms and initialise projections before the run
     void init() {
@@ -33,7 +31,7 @@ namespace Rivet {
 
       IdentifiedFinalState neutrino_fs(promptFs);
       neutrino_fs.acceptNeutrinos();
-      addProjection(neutrino_fs, "NEUTRINO_FS");
+      declare(neutrino_fs, "NEUTRINO_FS");
 
       IdentifiedFinalState Photon(fs);
       Photon.acceptIdPair(PID::PHOTON);
@@ -46,10 +44,10 @@ namespace Rivet {
 
       Cut lep_cuts = (Cuts::abseta < 2.5) & (Cuts::pT > 1*MeV);
       DressedLeptons muons(Photon, bare_muons_fs, 0.1, lep_cuts, true, false);
-      addProjection(muons, "MUONS");
+      declare(muons, "MUONS");
 
       DressedLeptons elecs(Photon, bare_elecs_fs, 0.1, lep_cuts, true, false);
-      addProjection(elecs, "ELECS");
+      declare(elecs, "ELECS");
 
       VetoedFinalState vfs;
       vfs.addVetoOnThisFinalState(muons);
@@ -58,7 +56,7 @@ namespace Rivet {
 
       FastJets fjets(vfs, FastJets::ANTIKT, 0.4);
       fjets.useInvisibles();
-      addProjection(fjets, "jets");
+      declare(fjets, "jets");
 
       h_pull_all     = bookHisto1D(4,1,1);
       h_pull_charged = bookHisto1D(5,1,1);
@@ -73,9 +71,9 @@ namespace Rivet {
       /**************
        *    JETS    *
        **************/
-      const Jets& allJets = applyProjection<FastJets>(event, "jets").jetsByPt(Cuts::pT > 25.0*GeV && Cuts::absrap < 2.5);
-      const vector<DressedLepton>& all_elecs = applyProjection<DressedLeptons>(event, "ELECS").dressedLeptons();
-      const vector<DressedLepton>& all_muons = applyProjection<DressedLeptons>(event, "MUONS").dressedLeptons();
+      const Jets& allJets = apply<FastJets>(event, "jets").jetsByPt(Cuts::pT > 25.0*GeV && Cuts::absrap < 2.5);
+      const vector<DressedLepton>& all_elecs = apply<DressedLeptons>(event, "ELECS").dressedLeptons();
+      const vector<DressedLepton>& all_muons = apply<DressedLeptons>(event, "MUONS").dressedLeptons();
       Jets goodJets;
       foreach (const Jet j, allJets) {
         bool keep = true;
@@ -128,7 +126,7 @@ namespace Rivet {
       /****************
        *  NEUTRINOS   *
        ****************/
-      const Particles& neutrinos = applyProjection<IdentifiedFinalState>(event, "NEUTRINO_FS").particlesByPt();
+      const Particles& neutrinos = apply<IdentifiedFinalState>(event, "NEUTRINO_FS").particlesByPt();
       FourMomentum metVector = FourMomentum(0.,0.,0.,0.);
       foreach (const Particle& n, neutrinos) {
         metVector += n.momentum();
@@ -207,14 +205,18 @@ namespace Rivet {
       normalize(h_pull_charged);
     }
 
-    private:
+    //@}
 
-    // Data members like post-cuts event weight counters go here
+
+  private:
+
     Histo1DPtr h_pull_all;
     Histo1DPtr h_pull_charged;
 
   };
 
+
   // The hook for the plugin system
   DECLARE_RIVET_PLUGIN(ATLAS_2015_I1376945);
+
 }

@@ -17,7 +17,7 @@ namespace Rivet {
 
     void init() {
       const FinalState fs;
-      addProjection(FastJets(fs, FastJets::ANTIKT, 0.5),"Jets");
+      declare(FastJets(fs, FastJets::ANTIKT, 0.5),"Jets");
 
       _hist_jetpt_fwdincl = bookHisto1D(1, 1, 1);
       _hist_jetpt_forward = bookHisto1D(2, 1, 1);
@@ -27,7 +27,7 @@ namespace Rivet {
     void analyze(const Event& event) {
       const double weight = event.weight();
 
-      const FastJets& fj = applyProjection<FastJets>(event,"Jets");
+      const FastJets& fj = apply<FastJets>(event,"Jets");
       const Jets jets = fj.jets(Cuts::ptIn(35*GeV, 150*GeV) && Cuts::abseta < 4.7);
 
       double cjet_pt = 0.0;

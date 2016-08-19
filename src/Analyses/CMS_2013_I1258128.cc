@@ -22,23 +22,23 @@ namespace Rivet {
     void init() {
       // Full final state
       const FinalState fs(Cuts::abseta < 5);
-      addProjection(fs, "FS");
+      declare(fs, "FS");
 
       // Z finders for electrons and muons
       Cut cuts = Cuts::abseta < 2.1 && Cuts::pT > 20*GeV;
       const ZFinder zfe(fs, cuts, PID::ELECTRON, 76*GeV, 106*GeV);
       const ZFinder zfm(fs, cuts, PID::MUON, 76*GeV, 106*GeV);
-      addProjection(zfe, "ZFE");
-      addProjection(zfm, "ZFM");
+      declare(zfe, "ZFE");
+      declare(zfm, "ZFM");
 
       // Try to get the leading photon
       LeadingParticlesFinalState photonfs(FinalState(-2.5, 2.5, 40.0*GeV));
       photonfs.addParticleId(PID::PHOTON);
-      addProjection(photonfs, "LeadingPhoton");
+      declare(photonfs, "LeadingPhoton");
 
       // Jets
       const FastJets jets(fs, FastJets::ANTIKT, 0.5);
-      addProjection(jets, "JETS");
+      declare(jets, "JETS");
 
       // Histograms
       _hist1YZ      = bookHisto1D(1, 1, 1);
@@ -54,8 +54,8 @@ namespace Rivet {
 
     void makeZCut(const Event& event) {
       // Apply the Z finders and veto if no Z found
-      const ZFinder& zfe = applyProjection<ZFinder>(event, "ZFE");
-      const ZFinder& zfm = applyProjection<ZFinder>(event, "ZFM");
+      const ZFinder& zfe = apply<ZFinder>(event, "ZFE");
+      const ZFinder& zfm = apply<ZFinder>(event, "ZFM");
       if (zfe.empty() && zfm.empty()) vetoEvent;
 
       // Choose the Z candidate
@@ -66,7 +66,7 @@ namespace Rivet {
       if (z[0].pT() < 40*GeV) return;
 
       // Build the jets
-      const FastJets& jetfs = applyProjection<FastJets>(event, "JETS");
+      const FastJets& jetfs = apply<FastJets>(event, "JETS");
       Jets jets = jetfs.jetsByPt(Cuts::pT > 30*GeV && Cuts::abseta < 2.4);
       if (jets.empty()) return;
 
@@ -98,14 +98,14 @@ namespace Rivet {
 
     void makePhotonCut(const Event& event) {
         // Get the photon
-        const FinalState& photonfs = applyProjection<FinalState>(event, "LeadingPhoton");
+        const FinalState& photonfs = apply<FinalState>(event, "LeadingPhoton");
         if (photonfs.particles().size() < 1) return;
         const Particle& photon = photonfs.particles().front();
         if (photon.pT() < 40*GeV) return;
         if (fabs(photon.eta()) > 1.4442 ) return;
 
       // Build the jets
-      const FastJets& jetfs = applyProjection<FastJets>(event, "JETS");
+      const FastJets& jetfs = apply<FastJets>(event, "JETS");
       Jets jets = jetfs.jetsByPt(Cuts::pT > 30*GeV && Cuts::abseta < 2.4);
       if (jets.empty()) return;
 

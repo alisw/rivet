@@ -8,7 +8,6 @@
 
 namespace Rivet {
 
-  class Particle;
 
   /// @brief Get the highest-pT occurrences of FS particles with the specified PDG IDs.
   class LeadingParticlesFinalState : public FinalState {
@@ -24,9 +23,7 @@ namespace Rivet {
     }
 
     /// Clone on the heap.
-    virtual const Projection *clone() const {
-      return new LeadingParticlesFinalState(*this);
-    }
+    DEFAULT_RIVET_PROJ_CLONE(LeadingParticlesFinalState);
 
     /// Add a particle ID to the list of leading particles selected
     LeadingParticlesFinalState& addParticleId(long id) {

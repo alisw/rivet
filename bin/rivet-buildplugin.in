@@ -49,7 +49,7 @@ fi
 
 ## Get Rivet system C++ compiler (fall back to $CXX and then g++ if needed)
 mycxx=g++
-rivetcxx=$(which "@CXX@" 2> /dev/null)
+rivetcxx=$(which $(echo "@RIVETCXX@" | awk '{print $1}') 2> /dev/null)
 abscxx=$(which "$CXX" 2> /dev/null)
 if [[ -x "$rivetcxx" ]]; then
     mycxx="@CXX@"
@@ -62,8 +62,8 @@ mycxxflags=""
 if [[ -n "@AM_CXXFLAGS@" ]]; then
     mycxxflags="@AM_CXXFLAGS@"
 fi
-if [[ -n "@CXXFLAGS@" ]]; then
-    mycxxflags="$mycxxflags @CXXFLAGS@"
+if [[ -n "@RIVETCXXFLAGS@" ]]; then
+    mycxxflags="$mycxxflags @RIVETCXXFLAGS@"
 fi
 
 ## Get Rivet system C preprocessor flags (duplicating that in rivet-config.in)
@@ -80,8 +80,8 @@ ifastjet="@FASTJETINCPATH@"
 test -n "$ifastjet" && mycppflags="$mycppflags -I${ifastjet}"
 igsl="@GSLINCPATH@"
 test -n "$igsl" && mycppflags="$mycppflags -I${igsl}"
-iboost="@BOOST_CPPFLAGS@"
-test -n "$iboost" && mycppflags="$mycppflags ${iboost}"
+# iboost="@BOOST_CPPFLAGS@"
+# test -n "$iboost" && mycppflags="$mycppflags ${iboost}"
 
 
 ## Get Rivet system linker flags (duplicating that in rivet-config.in)

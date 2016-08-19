@@ -32,7 +32,7 @@ namespace Rivet {
 
       FinalState fs;
       FastJets conefinder(fs, FastJets::D0ILCONE, 0.7);
-      addProjection(conefinder, "ConeFinder");
+      declare(conefinder, "ConeFinder");
 
       _h_m_dijet.addHistogram(0.0, 0.4, bookHisto1D(1, 1, 1));
       _h_m_dijet.addHistogram(0.4, 0.8, bookHisto1D(2, 1, 1));
@@ -47,7 +47,7 @@ namespace Rivet {
     void analyze(const Event& e) {
       const double weight = e.weight();
 
-      const Jets& jets = applyProjection<JetAlg>(e, "ConeFinder").jetsByPt(40.0*GeV);
+      const Jets& jets = apply<JetAlg>(e, "ConeFinder").jetsByPt(40.0*GeV);
       if (jets.size() < 2) vetoEvent;
 
       FourMomentum j0(jets[0].momentum());

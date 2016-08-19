@@ -26,9 +26,8 @@ namespace Rivet {
     }
 
     /// Clone on the heap.
-    virtual const Projection* clone() const {
-      return new MergedFinalState(*this);
-    }
+    DEFAULT_RIVET_PROJ_CLONE(MergedFinalState);
+
     //@}
 
   protected:

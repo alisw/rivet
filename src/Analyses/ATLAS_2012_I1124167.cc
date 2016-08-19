@@ -21,8 +21,8 @@ namespace Rivet {
     void init() {
       // Projections
       ChargedFinalState cfs(-2.5, 2.5, 0.5*GeV);
-      addProjection(cfs, "CFS");
-      addProjection(Sphericity(cfs), "Sphericity");
+      declare(cfs, "CFS");
+      declare(Sphericity(cfs), "Sphericity");
 
       // Book histograms
       _hist_T_05_25 = bookHisto1D(1,1,1);
@@ -70,7 +70,7 @@ namespace Rivet {
       const double weight = event.weight();
 
       // CFS projection and particles
-      const ChargedFinalState& cfs500 = applyProjection<ChargedFinalState>(event, "CFS");
+      const ChargedFinalState& cfs500 = apply<ChargedFinalState>(event, "CFS");
       ParticleVector particles500 = cfs500.particlesByPt();
 
       // Require at least 6 charged particles

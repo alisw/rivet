@@ -2,7 +2,7 @@
 #define RIVET_PARTICLENAME_HH
 
 #include "Rivet/Particle.fhh"
-#include "Rivet/Exceptions.hh"
+#include "Rivet/Tools/Exceptions.hh"
 
 namespace Rivet {
 
@@ -159,13 +159,13 @@ namespace Rivet {
 
       static const std::string& particleName(PdgId pid) {
         /// @todo Isn't there a nicer, pointerless way to do singletons?
-        if (!_instance) _instance = new ParticleNames();
+        if (!_instance) _instance = unique_ptr<ParticleNames>(new ParticleNames);
         return _instance->_particleName(pid);
       }
 
       static PdgId particleId(const std::string& pname) {
         /// @todo Isn't there a nicer, pointerless way to do singletons?
-        if (!_instance) _instance = new ParticleNames();
+        if (!_instance) _instance = unique_ptr<ParticleNames>(new ParticleNames);
         return _instance->_particleId(pname);
       }
 
@@ -208,7 +208,7 @@ namespace Rivet {
         _names_ids[pname] = pid;
       }
 
-      static ParticleNames* _instance;
+      static unique_ptr<ParticleNames> _instance;
 
       std::map<PdgId, std::string> _ids_names;
 

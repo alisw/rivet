@@ -24,9 +24,9 @@ namespace Rivet {
       Cut cut = Cuts::abseta < 3.5 && Cuts::pT > 25*GeV;
       /// @todo Urk, abuse! Need explicit HiggsFinder (and TauFinder?)
       ZFinder hfinder(FinalState(), cut, PID::TAU, 115*GeV, 135*GeV, 0.0, ZFinder::NOCLUSTER, ZFinder::NOTRACK, 125*GeV);
-      addProjection(hfinder, "Hfinder");
+      declare(hfinder, "Hfinder");
       FastJets jetpro(hfinder.remainingFinalState(), FastJets::ANTIKT, 0.4);
-      addProjection(jetpro, "Jets");
+      declare(jetpro, "Jets");
 
       _h_H_jet1_deta = bookHisto1D("H_jet1_deta", 50, -5.0, 5.0);
       _h_H_jet1_dR = bookHisto1D("H_jet1_dR", 25, 0.5, 7.0);
@@ -38,12 +38,12 @@ namespace Rivet {
 
     /// Do the analysis
     void analyze(const Event & e) {
-      const ZFinder& hfinder = applyProjection<ZFinder>(e, "Hfinder");
+      const ZFinder& hfinder = apply<ZFinder>(e, "Hfinder");
       if (hfinder.bosons().size() != 1) vetoEvent;
       const double weight = e.weight();
 
       FourMomentum hmom(hfinder.bosons()[0].momentum());
-      const Jets& jets = applyProjection<FastJets>(e, "Jets").jetsByPt(_jetptcut);
+      const Jets& jets = apply<FastJets>(e, "Jets").jetsByPt(_jetptcut);
       if (jets.size() > 0) {
         _h_H_jet1_deta->fill(hmom.eta()-jets[0].eta(), weight);
         _h_H_jet1_dR->fill(deltaR(hmom, jets[0].momentum()), weight);

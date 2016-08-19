@@ -25,12 +25,12 @@ namespace Rivet {
 
     /// Book projections and histograms
     void init() {
-      addProjection(ChargedFinalState(-5.5, 5.5), "TriggerFS");
-      addProjection(ChargedFinalState(-2.5, 2.5), "TrackFS");
+      declare(ChargedFinalState(-5.5, 5.5), "TriggerFS");
+      declare(ChargedFinalState(-2.5, 2.5), "TrackFS");
       const FinalState trkcalofs(-2.5, 2.5);
-      addProjection(MissingMomentum(trkcalofs), "MET25");
+      declare(MissingMomentum(trkcalofs), "MET25");
       const FinalState calofs(-6.0, 6.0);
-      addProjection(MissingMomentum(calofs), "MET60");
+      declare(MissingMomentum(calofs), "MET60");
 
       if (fuzzyEquals(sqrtS()/GeV, 63)) {
         _hist_Pt = bookProfile1D(8,1,1);
@@ -61,7 +61,7 @@ namespace Rivet {
 
     void analyze(const Event& event) {
       // Trigger
-      const FinalState& trigfs = applyProjection<FinalState>(event, "TriggerFS");
+      const FinalState& trigfs = apply<FinalState>(event, "TriggerFS");
       unsigned int n_minus(0), n_plus(0);
       foreach (const Particle& p, trigfs.particles()) {
         const double eta = p.eta();
@@ -74,9 +74,9 @@ namespace Rivet {
       _sumwTrig += weight;
 
       // Use good central detector tracks
-      const FinalState& cfs = applyProjection<FinalState>(event, "TrackFS");
-      const double Et25 = applyProjection<MissingMomentum>(event, "MET25").scalarEt();
-      const double Et60 = applyProjection<MissingMomentum>(event, "MET60").scalarEt();
+      const FinalState& cfs = apply<FinalState>(event, "TrackFS");
+      const double Et25 = apply<MissingMomentum>(event, "MET25").scalarEt();
+      const double Et60 = apply<MissingMomentum>(event, "MET60").scalarEt();
       const unsigned int nch = cfs.size();
 
       // Event level histos

@@ -18,7 +18,7 @@ namespace Rivet {
     /// Book histograms and initialise projections before the run
     void init() {
       const FastJets jets(FinalState(-10, 10, 0.0*GeV), FastJets::ANTIKT, 0.5);
-      addProjection(jets, "Jets");
+      declare(jets, "Jets");
 
       _h_hTotD = bookHisto1D(1, 1, 1);
       _h_hTotDF = bookHisto1D(1, 1, 2);
@@ -27,7 +27,7 @@ namespace Rivet {
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-      const Jets& jets = applyProjection<FastJets>(event, "Jets").jetsByPt(30.0*GeV);
+      const Jets& jets = apply<FastJets>(event, "Jets").jetsByPt(30.0*GeV);
       if (jets.size() < 3) vetoEvent;
 
       const FourMomentum jet1 = jets[0].momentum();

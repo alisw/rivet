@@ -1,13 +1,12 @@
-#include <iostream>
-#include <limits>
-#include <cassert>
-
 #include "Rivet/Math/MathUtils.hh"
 #include "Rivet/Math/Vectors.hh"
 #include "Rivet/Math/Matrices.hh"
-
-using namespace std;
 using namespace Rivet;
+
+#include <iostream>
+#include <limits>
+#include <cassert>
+using namespace std;
 
 int main() {
 
@@ -115,33 +114,33 @@ int main() {
   cout << endl;
 
   cout << "Boosts:" << endl;
-  LorentzTransform ltX(0.5,0,0);
+  LorentzTransform ltX = LorentzTransform::mkObjTransformFromBeta(Vector3(0.5, 0, 0));
   cout << "LTx: " << ltX << endl;
   cout << "I on LTx: " << ltX.rotate(Matrix3::mkIdentity()) << endl;
   cout << "Rot90 on LTx: " << ltX.rotate(rot90) << endl;
   cout << endl;
 
   cout << "X-boosts:" << endl;
-  const FourMomentum p1 = FourMomentum(10,0,0,1);
+  const FourMomentum p1 = FourMomentum(10, 0, 0, 1);
   const FourMomentum p2 = ltX.transform(p1);
   cout << p1 << " -> " << p2 << endl;
   cout << p2 << " -> " << ltX.inverse().transform(p2) << endl;
   //cout << p1.boostVector() << endl;
-  const FourMomentum p3 = LorentzTransform(-p1.boostVector()).transform(p1);
+  const FourMomentum p3 = LorentzTransform::mkFrameTransformFromBeta(p1.boostVector()).transform(p1);
   cout << p1 << " -> " << p3 << endl;
   cout << endl;
 
-  LorentzTransform ltY(0,0.4,0);
+  LorentzTransform ltY = LorentzTransform::mkObjTransformFromGamma(Vector3(0, 1.2, 0));
   cout << FourMomentum(1,0,0,1) << " -> " //<< "\n  "
        << (ltX * ltY).transform(FourMomentum(1,0,0,1)) << endl;
   cout << FourMomentum(1,0,0,1) << " -> " //<< "\n  "
        << (ltY * ltX).transform(FourMomentum(1,0,0,1)) << endl;
-  cout << (ltX * ltY).boost() << endl;
-  cout << (ltY * ltX).boost() << endl;
-  cout << (ltX * ltX.inverse()).boost() << endl;
+  cout << (ltX * ltY).betaVec() << endl;
+  cout << (ltY * ltX).betaVec() << endl;
+  cout << (ltX * ltX.inverse()).betaVec() << endl;
 
   // If we are already in the rest frame and there is no boost, then LT is trivial/identity
-  LorentzTransform noBoost(0.0,0.0,0.0);
+  LorentzTransform noBoost;
   cout << "Element  0,0 should be 1 and is " << noBoost.toMatrix().get(0,0) << endl;
   assert(noBoost.toMatrix().get(0,0)==1);
   cout << "Element  0,1 should be 0 and is " << noBoost.toMatrix().get(0,1) << endl;

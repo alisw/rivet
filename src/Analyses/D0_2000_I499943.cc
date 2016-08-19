@@ -25,11 +25,11 @@ namespace Rivet {
       FinalState fs;
       IdentifiedFinalState muons(Cuts::abseta < 0.8 && Cuts::pT > 4.0*GeV);
       muons.acceptIdPair(PID::MUON);
-      addProjection(muons, "Muons");
+      declare(muons, "Muons");
 
       FastJets jetproj(fs, FastJets::D0ILCONE, 0.7);
       jetproj.useInvisibles();
-      addProjection(jetproj, "Jets");
+      declare(jetproj, "Jets");
 
       // Book histograms
       _h_pt_leading_mu = bookHisto1D(1, 1, 1);
@@ -39,10 +39,10 @@ namespace Rivet {
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-      const Jets& jets = applyProjection<FastJets>(event, "Jets").jetsByPt(12*GeV);
+      const Jets& jets = apply<FastJets>(event, "Jets").jetsByPt(12*GeV);
       if (jets.size() < 2) vetoEvent;
 
-      const Particles& muons = applyProjection<IdentifiedFinalState>(event, "Muons").particlesByPt();
+      const Particles& muons = apply<IdentifiedFinalState>(event, "Muons").particlesByPt();
       if (muons.size() < 2) vetoEvent;
 
       // Muon selection: require the muons to be *close* to jets, not the usual overlap vetoing!

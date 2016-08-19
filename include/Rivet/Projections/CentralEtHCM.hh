@@ -25,9 +25,7 @@ namespace Rivet {
     }
 
     /// Clone on the heap.
-    virtual const Projection* clone() const {
-      return new CentralEtHCM(*this);
-    }
+    DEFAULT_RIVET_PROJ_CLONE(CentralEtHCM);
 
 
   protected:

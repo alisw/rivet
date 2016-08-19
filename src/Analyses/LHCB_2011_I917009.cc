@@ -51,14 +51,14 @@ namespace Rivet {
       for (size_t i = 12; i < 15; ++i) _tmphistos[i] = YODA::Histo1D(refData(dsShift+5, 1, 1));
       for (size_t i = 15; i < 18; ++i) _tmphistos[i] = YODA::Histo1D(y_nbins, rap_beam - rap_max, rap_beam - rap_min);
 
-      addProjection(UnstableFinalState(), "UFS");
+      declare(UnstableFinalState(), "UFS");
     }
 
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
       const double weight = event.weight();
-      const UnstableFinalState& ufs = applyProjection<UnstableFinalState>(event, "UFS");
+      const UnstableFinalState& ufs = apply<UnstableFinalState>(event, "UFS");
       double ancestor_lftsum = 0.0;
       double y, pT;
       int id;

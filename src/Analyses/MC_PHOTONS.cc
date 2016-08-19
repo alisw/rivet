@@ -32,11 +32,11 @@ namespace Rivet {
     void init() {
       IdentifiedFinalState leptons(Cuts::abseta < 5.0 && Cuts::pT > 10*GeV);
       leptons.acceptChLeptons();
-      addProjection(leptons, "lFS");
+      declare(leptons, "lFS");
 
       IdentifiedFinalState photons(Cuts::abseta < 5.0);
       photons.acceptId(PID::PHOTON);
-      addProjection(photons, "gammaFS");
+      declare(photons, "gammaFS");
 
       _h_Ptgamma = bookHisto1D("Ptgamma", logspace(50, 0.01, 30));
       _h_Egamma = bookHisto1D("Egamma", logspace(50, 0.01, 200));
@@ -59,9 +59,9 @@ namespace Rivet {
       const double weight = event.weight();
 
       /// Get photons and leptons
-      const Particles& photons = applyProjection<FinalState>(event, "gammaFS").particles();
+      const Particles& photons = apply<FinalState>(event, "gammaFS").particles();
       MSG_DEBUG("Photon multiplicity = " << photons.size());
-      const Particles& leptons = applyProjection<FinalState>(event, "lFS").particles();
+      const Particles& leptons = apply<FinalState>(event, "lFS").particles();
       MSG_DEBUG("Photon multiplicity = " << leptons.size());
 
       // Initialise a map of sumPtgamma for each lepton

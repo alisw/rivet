@@ -1,7 +1,6 @@
 // -*- C++ -*-
 #include "Rivet/Analysis.hh"
 #include "Rivet/Projections/FinalState.hh"
-#include "Rivet/Cuts.hh"
 
 namespace Rivet {
 
@@ -11,11 +10,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    EXAMPLE_CUTS()
-      : Analysis("EXAMPLE_CUTS")
-    {
-      // No counters etc. to initialise, hence nothing to do here!
-    }
+    DEFAULT_RIVET_ANALYSIS_CTOR(EXAMPLE_CUTS);
 
 
     /// @name Analysis methods
@@ -25,7 +20,7 @@ namespace Rivet {
     void init() {
       // Projections
       const FinalState cnfs(Cuts::abseta < 4);
-      addProjection(cnfs, "FS");
+      declare(cnfs, "FS");
 
       // Histograms
       _histPt         = bookHisto1D("pT", 30, 0, 30);
@@ -39,7 +34,7 @@ namespace Rivet {
       // Make sure to always include the event weight in histogram fills!
       const double weight = event.weight();
 
-      const Particles ps = applyProjection<FinalState>(event, "FS").particlesByPt();
+      const Particles ps = apply<FinalState>(event, "FS").particlesByPt();
 
       Cut ptcut = Cuts::range(Cuts::pT, 5, 20);
       Cut masscut = Cuts::range(Cuts::mass, 0, 0.2);

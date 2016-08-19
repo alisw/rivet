@@ -27,12 +27,12 @@ namespace Rivet {
     void init() {
       // Final state for the jet finding
       const FinalState fsj(-4.0, 4.0, 0.0*GeV);
-      addProjection(fsj, "FSJ");
-      addProjection(FastJets(fsj, FastJets::KT, 0.7), "Jets");
+      declare(fsj, "FSJ");
+      declare(FastJets(fsj, FastJets::KT, 0.7), "Jets");
 
       // Charged final state for the distributions
       const ChargedFinalState cfs(-1.0, 1.0, 0.5*GeV);
-      addProjection(cfs, "CFS");
+      declare(cfs, "CFS");
 
       const double maxpt1 = 500.0;
       _hist_pnchg      = bookProfile1D("trans-nchg", 50, 0.0, maxpt1);
@@ -48,13 +48,13 @@ namespace Rivet {
     // Do the analysis
     void analyze(const Event& e) {
 
-      const FinalState& fsj = applyProjection<FinalState>(e, "FSJ");
+      const FinalState& fsj = apply<FinalState>(e, "FSJ");
       if (fsj.particles().empty()) {
         MSG_DEBUG("Failed multiplicity cut");
         vetoEvent;
       }
 
-      const FastJets& jetpro = applyProjection<FastJets>(e, "Jets");
+      const FastJets& jetpro = apply<FastJets>(e, "Jets");
       const Jets jets = jetpro.jetsByPt();
       MSG_DEBUG("Jet multiplicity = " << jets.size());
 
@@ -74,7 +74,7 @@ namespace Rivet {
       const double weight = e.weight();
 
       // Get the final states to work with for filling the distributions
-      const FinalState& cfs = applyProjection<ChargedFinalState>(e, "CFS");
+      const FinalState& cfs = apply<ChargedFinalState>(e, "CFS");
 
       size_t   numOverall(0),     numToward(0),     numTrans1(0),     numTrans2(0),     numAway(0);
       double ptSumOverall(0.0), ptSumToward(0.0), ptSumTrans1(0.0), ptSumTrans2(0.0), ptSumAway(0.0);

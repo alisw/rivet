@@ -54,17 +54,17 @@ namespace Rivet {
 
     void init() {
       // Projections
-      addProjection(Beam(), "Beams");
+      declare(Beam(), "Beams");
       const FinalState fs;
-      addProjection(fs, "FS");
+      declare(fs, "FS");
       const ChargedFinalState cfs;
-      addProjection(cfs, "CFS");
-      addProjection(FastJets(fs, FastJets::DURHAM, 0.7), "DurhamJets");
-      addProjection(Sphericity(fs), "Sphericity");
-      addProjection(ParisiTensor(fs), "Parisi");
+      declare(cfs, "CFS");
+      declare(FastJets(fs, FastJets::DURHAM, 0.7), "DurhamJets");
+      declare(Sphericity(fs), "Sphericity");
+      declare(ParisiTensor(fs), "Parisi");
       const Thrust thrust(fs);
-      addProjection(thrust, "Thrust");
-      addProjection(Hemispheres(thrust), "Hemispheres");
+      declare(thrust, "Thrust");
+      declare(Hemispheres(thrust), "Hemispheres");
 
       // Get beam energy index
       _isqrts = getHistIndex(sqrtS());
@@ -102,7 +102,7 @@ namespace Rivet {
 
     void analyze(const Event& event) {
       // Even if we only generate hadronic events, we still need a cut on numCharged >= 2.
-      const FinalState& cfs = applyProjection<FinalState>(event, "CFS");
+      const FinalState& cfs = apply<FinalState>(event, "CFS");
       if (cfs.size() < 2) vetoEvent;
 
       // Increment passed-cuts weight sum
@@ -110,7 +110,7 @@ namespace Rivet {
       _sumWTrack2 += weight;
 
       // Thrusts
-      const Thrust& thrust = applyProjection<Thrust>(event, "Thrust");
+      const Thrust& thrust = apply<Thrust>(event, "Thrust");
       _hist1MinusT[_isqrts]->fill(1-thrust.thrust(), weight);
       _histTMajor[_isqrts]->fill(thrust.thrustMajor(), weight);
       _histTMinor[_isqrts]->fill(thrust.thrustMinor(), weight);
@@ -123,7 +123,7 @@ namespace Rivet {
       }
 
       // Jets
-      const FastJets& durjet = applyProjection<FastJets>(event, "DurhamJets");
+      const FastJets& durjet = apply<FastJets>(event, "DurhamJets");
       if (durjet.clusterSeq()) {
         _sumWJet3 += weight;
         const double y23 = durjet.clusterSeq()->exclusive_ymerge_max(2);
@@ -136,7 +136,7 @@ namespace Rivet {
       }
 
       // Sphericities
-      const Sphericity& sphericity = applyProjection<Sphericity>(event, "Sphericity");
+      const Sphericity& sphericity = apply<Sphericity>(event, "Sphericity");
       const double sph = sphericity.sphericity();
       const double apl = sphericity.aplanarity();
       _histSphericity[_isqrts]->fill(sph, weight);
@@ -146,7 +146,7 @@ namespace Rivet {
       }
 
       // C & D params
-      const ParisiTensor& parisi = applyProjection<ParisiTensor>(event, "Parisi");
+      const ParisiTensor& parisi = apply<ParisiTensor>(event, "Parisi");
       const double cparam = parisi.C();
       const double dparam = parisi.D();
       _histCParam[_isqrts]->fill(cparam, weight);
@@ -156,7 +156,7 @@ namespace Rivet {
       }
 
       // Hemispheres
-      const Hemispheres& hemi = applyProjection<Hemispheres>(event, "Hemispheres");
+      const Hemispheres& hemi = apply<Hemispheres>(event, "Hemispheres");
       // The paper says that M_H/L are scaled by sqrt(s), but scaling by E_vis is the way that fits the data...
       const double hemi_mh = hemi.scaledMhigh();
       const double hemi_ml = hemi.scaledMlow();

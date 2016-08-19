@@ -19,7 +19,7 @@ namespace Rivet {
      void init() {
        FinalState fs;
        FastJets akt(fs, FastJets::ANTIKT, 0.5);
-       addProjection(akt, "antikT");
+       declare(akt, "antikT");
 
        _h_tmp_dijet = Histo1D(refData(1, 1, 1));
        _h_tmp_trijet = Histo1D(refData(1, 1, 1));
@@ -32,7 +32,7 @@ namespace Rivet {
 
        Jets highpT_jets;
        double HT = 0;
-       foreach(const Jet & jet, applyProjection<JetAlg>(event, "antikT").jetsByPt(50.0*GeV)) {
+       foreach(const Jet & jet, apply<JetAlg>(event, "antikT").jetsByPt(50.0*GeV)) {
          if (jet.abseta() < 2.5) {
            highpT_jets.push_back(jet);
            HT += jet.pT();

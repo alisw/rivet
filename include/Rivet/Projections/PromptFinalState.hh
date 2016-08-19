@@ -24,16 +24,19 @@ namespace Rivet {
 
     /// @name Constructors
     //@{
-    // Final State
-    PromptFinalState(const FinalState& fsp);
 
-    /// Cut constructor.
-    PromptFinalState(const Cut & c);
+    // Constructor from a final state.
+    PromptFinalState(const FinalState& fsp, bool accepttaudecays=false, bool acceptmudecays=false);
+
+    /// Constructor from a Cut.
+    PromptFinalState(const Cut& c, bool accepttaudecays=false, bool acceptmudecays=false);
+
+    // /// Constructor from a Cut and optional FinalState.
+    // PromptFinalState(const Cut& c, const FinalState& fsp=FinalState(), bool accepttaudecays, bool acceptmudecays);
 
     /// Clone on the heap.
-    virtual const Projection* clone() const {
-      return new PromptFinalState(*this);
-    }
+    DEFAULT_RIVET_PROJ_CLONE(PromptFinalState);
+
     //@}
 
     /// Accept particles from decays of prompt muons as themselves being prompt?
@@ -41,10 +44,6 @@ namespace Rivet {
     /// Accept particles from decays of prompt taus as themselves being prompt?
     void acceptTauDecays(bool acc=true) { _acceptTauDecays = acc; }
 
-    /// Decide if a given particle is prompt based on set definition flags
-    /// @todo Move into ParticleUtils / MCUtils
-    /// @note This one doesn't make any judgements about final-stateness
-    bool isPrompt(const Particle& p) const;
 
   protected:
 
@@ -53,6 +52,7 @@ namespace Rivet {
 
     /// Compare projections.
     int compare(const Projection& p) const;
+
 
   private:
 

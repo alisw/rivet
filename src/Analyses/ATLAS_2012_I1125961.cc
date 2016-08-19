@@ -31,23 +31,23 @@ namespace Rivet {
       // Projection to find the electrons
       IdentifiedFinalState elecs(Cuts::abseta < 2.47 && Cuts::pT > 20*GeV);
       elecs.acceptIdPair(PID::ELECTRON);
-      addProjection(elecs, "elecs");
+      declare(elecs, "elecs");
 
       // Projection to find the muons
       IdentifiedFinalState muons(Cuts::abseta < 2.4 && Cuts::pT > 10*GeV);
       muons.acceptIdPair(PID::MUON);
-      addProjection(muons, "muons");
+      declare(muons, "muons");
 
       // Jet finder
       VetoedFinalState vfs;
       vfs.addVetoPairId(PID::MUON);
-      addProjection(FastJets(vfs, FastJets::ANTIKT, 0.4), "AntiKtJets04");
+      declare(FastJets(vfs, FastJets::ANTIKT, 0.4), "AntiKtJets04");
 
       // All tracks (to do deltaR with leptons)
-      addProjection(ChargedFinalState(Cuts::abseta < 3.0), "cfs");
+      declare(ChargedFinalState(Cuts::abseta < 3.0), "cfs");
 
       // Used for pTmiss (N.B. the real 'vfs' extends beyond 4.5 to |eta| = 4.9)
-      addProjection(VisibleFinalState(Cuts::abseta < 4.5), "vfs");
+      declare(VisibleFinalState(Cuts::abseta < 4.5), "vfs");
 
       // Book histograms
       _count_A_tight   = bookHisto1D("count_A_tight"   , 1, 0., 1.);
@@ -77,19 +77,19 @@ namespace Rivet {
       const double weight = event.weight();
 
       Jets cand_jets;
-      const Jets jets = applyProjection<FastJets>(event, "AntiKtJets04").jetsByPt(20.0*GeV);
+      const Jets jets = apply<FastJets>(event, "AntiKtJets04").jetsByPt(20.0*GeV);
       foreach (const Jet& jet, jets) {
         if ( fabs( jet.eta() ) < 4.9 ) {
           cand_jets.push_back(jet);
         }
       }
 
-      const Particles cand_e  = applyProjection<IdentifiedFinalState>(event, "elecs").particlesByPt();
+      const Particles cand_e  = apply<IdentifiedFinalState>(event, "elecs").particlesByPt();
 
       // Muon isolation not mentioned in hep-exp 1109.6572 but assumed to still be applicable
       Particles cand_mu;
-      const Particles chg_tracks = applyProjection<ChargedFinalState>(event, "cfs").particles();
-      const Particles muons = applyProjection<IdentifiedFinalState>(event, "muons").particlesByPt();
+      const Particles chg_tracks = apply<ChargedFinalState>(event, "cfs").particles();
+      const Particles muons = apply<IdentifiedFinalState>(event, "muons").particlesByPt();
       foreach (const Particle& mu, muons) {
         double pTinCone = -mu.pT();
         foreach (const Particle& track, chg_tracks) {
@@ -141,7 +141,7 @@ namespace Rivet {
       // pTmiss
       // Based on all candidate electrons, muons and jets, plus everything else with |eta| < 4.5
       // i.e. everything in our projection "vfs" plus the jets with |eta| > 4.5
-      Particles vfs_particles = applyProjection<VisibleFinalState>(event, "vfs").particles();
+      Particles vfs_particles = apply<VisibleFinalState>(event, "vfs").particles();
       FourMomentum pTmiss;
       foreach ( const Particle & p, vfs_particles ) {
         pTmiss -= p.momentum();

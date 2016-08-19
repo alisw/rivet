@@ -9,31 +9,6 @@ libRivetAnalysisTools_la_SOURCES = \
     MC_JetAnalysis.cc \
     MC_JetSplittings.cc
 
-## ANALYSIS CATEGORIES
-##
-## Unvalidated analyses: add new standard analyses here, and only
-## move them into the collider-specific standard plugin libraries
-## once they have been finished and checked. The --enable-unvalidated
-## flag is needed to install the unvalidated analyses.
-##
-## Preliminary analyses: validated analyses whose experimental paper has not
-## been fully accepted for publication should go here. Analyses in this group
-## are considered safe to use but the reference data may yet change. In
-## progressing from preliminary status to a permanent published analyses
-## collection, the analysis name is very likely to change, so you should ensure
-## that any Rivet-using scripts are not broken by such name changes when
-## upgrading between Rivet versions. These analyses will not be available if
-## Rivet is built with the --disable-preliminary configure flag.
-##
-## Obsolete analyses: as mentioned above, when a preliminary analysis becomes
-## permanent its name will change to reflect its newly published status via the
-## publication's SPIRES ID. The previous form of the analysis, possibly with
-## different reference histograms, will be retained for one major version of
-## Rivet with a status of "obsolete" before being removed, to give users time to
-## migrate their run scripts, i.e. if an analysis is marked as obsolete in
-## version 1.4.2, it will remain in Rivet's distribution until version
-## 1.5.0. Obsolete analyses will not be available if Rivet is built with the
-## --disable-obsolete configure flag.
 
 if ENABLE_ANALYSES
 
@@ -147,34 +122,29 @@ RivetATLASAnalyses_la_SOURCES = \
     ATLAS_2016_I1424838.cc \
 	ATLAS_2016_I1457605.cc \
     ATLAS_2016_I1468168.cc
-if ENABLE_PRELIMINARY
+# PRELIMINARY / OBSOLETE
 RivetATLASAnalyses_la_SOURCES += \
     ATLAS_2012_CONF_2012_001.cc \
-    ATLAS_2015_CONF_2015_041.cc
-endif
-if ENABLE_OBSOLETE
-RivetATLASAnalyses_la_SOURCES += \
     ATLAS_2010_CONF_2010_049.cc \
     ATLAS_2011_CONF_2011_090.cc \
     ATLAS_2011_CONF_2011_098.cc \
-    ATLAS_2011_S9041966.cc \
-    ATLAS_2011_S9212353.cc \
     ATLAS_2012_CONF_2012_103.cc \
     ATLAS_2012_CONF_2012_104.cc \
     ATLAS_2012_CONF_2012_105.cc \
     ATLAS_2012_CONF_2012_109.cc \
+    ATLAS_2012_CONF_2012_153.cc \
+    ATLAS_2015_CONF_2015_041.cc \
+    ATLAS_2011_S9041966.cc \
+    ATLAS_2011_S9212353.cc \
     ATLAS_2012_I946427.cc
-endif
-if ENABLE_UNVALIDATED
+# UNVALIDATED
 RivetATLASAnalyses_la_SOURCES += \
     ATLAS_2011_S9108483.cc \
     ATLAS_2012_I1095236.cc \
     ATLAS_2012_I1126136.cc \
     ATLAS_2012_I1180197.cc \
     ATLAS_2012_I1186556.cc \
-    ATLAS_2012_I1190891.cc \
-    ATLAS_2012_CONF_2012_153.cc
-endif
+    ATLAS_2012_I1190891.cc
 
 
 lib_LTLIBRARIES += RivetCMSAnalyses.la
@@ -225,28 +195,24 @@ RivetCMSAnalyses_la_SOURCES = \
     CMS_2015_I1385107.cc \
     CMSTOTEM_2014_I1294140.cc \
     TOTEM_2014_I1328627.cc
-if ENABLE_PRELIMINARY
+# PRELIMINARY
 RivetCMSAnalyses_la_SOURCES += \
     CMS_QCD_10_024.cc \
     CMS_2012_PAS_QCD_11_010.cc
-endif
 
 
 lib_LTLIBRARIES += RivetLHCbAnalyses.la
 RivetLHCbAnalyses_la_SOURCES = \
     LHCB_2010_I867355.cc \
+    LHCB_2010_S8758301.cc \
+    LHCB_2011_I917009.cc \
+    LHCB_2011_I919315.cc \
+    LHCB_2012_I1119400.cc \
     LHCB_2012_I1208102.cc \
     LHCB_2013_I1218996.cc \
     LHCB_2013_I1208105.cc \
     LHCB_2014_I1281685.cc \
     LHCB_2015_I1333223.cc
-if ENABLE_UNVALIDATED
-RivetLHCbAnalyses_la_SOURCES += \
-    LHCB_2010_S8758301.cc \
-    LHCB_2011_I917009.cc \
-    LHCB_2011_I919315.cc \
-    LHCB_2012_I1119400.cc
-endif
 
 
 lib_LTLIBRARIES += RivetLHCfAnalyses.la
@@ -257,7 +223,7 @@ RivetLHCfAnalyses_la_SOURCES = \
 lib_LTLIBRARIES += RivetTOTEMAnalyses.la
 RivetTOTEMAnalyses_la_SOURCES = \
     TOTEM_2012_I1115294.cc \
-    TOTEM_2012_002.cc # TODO: update to Inspire ID
+    TOTEM_2012_I1220862.cc
 
 
 lib_LTLIBRARIES += RivetCDFAnalyses.la
@@ -279,6 +245,8 @@ RivetCDFAnalyses_la_SOURCES = \
     CDF_2006_S6653332.cc \
     CDF_2007_S7057202.cc \
     CDF_2008_S7540469.cc \
+    CDF_2008_S7541902.cc \
+    CDF_2008_S7782535.cc \
     CDF_2008_S7828950.cc \
     CDF_2008_S8093652.cc \
     CDF_2008_S8095620.cc \
@@ -288,27 +256,23 @@ RivetCDFAnalyses_la_SOURCES = \
     CDF_2010_S8591881_DY.cc \
     CDF_2010_S8591881_QCD.cc \
     CDF_2012_I1124333.cc
-if ENABLE_PRELIMINARY
+# PRELIMINARY
 RivetCDFAnalyses_la_SOURCES += \
     CDF_2009_NOTE_9936.cc \
     CDF_2012_NOTE10874.cc
-endif
-
-if ENABLE_UNVALIDATED
+# UNVALIDATED
 RivetCDFAnalyses_la_SOURCES += \
     CDF_1993_S2742446.cc \
     CDF_1996_S3108457.cc \
     CDF_1996_S3349578.cc \
     CDF_1997_S3541940.cc \
-    CDF_2001_S4563131.cc \
-    CDF_2008_S7541902.cc \
-    CDF_2008_S7782535.cc
-endif
+    CDF_2001_S4563131.cc
 
 
 lib_LTLIBRARIES += RivetD0Analyses.la
 RivetD0Analyses_la_SOURCES = \
     D0_2000_I499943.cc \
+    D0_2000_S4480767.cc \
     D0_2001_S4674421.cc \
     D0_2004_S5992206.cc \
     D0_2006_S6438750.cc \
@@ -329,23 +293,21 @@ RivetD0Analyses_la_SOURCES = \
     D0_2011_I895662.cc \
     D0_2015_I1324946.cc \
     D0_2000_I503361.cc
-if ENABLE_UNVALIDATED
+# UNVALIDATED
 RivetD0Analyses_la_SOURCES += \
-    D0_2000_S4480767.cc \
     D0_1996_S3214044.cc \
     D0_1996_S3324664.cc
-endif
 
 
 lib_LTLIBRARIES += RivetHERAAnalyses.la
 RivetHERAAnalyses_la_SOURCES = \
     H1_1994_S2919893.cc \
     H1_2000_S4129130.cc
-if ENABLE_UNVALIDATED
+# UNVALIDATED
 RivetHERAAnalyses_la_SOURCES += \
     H1_1995_S3167097.cc \
     ZEUS_2001_S4815815.cc
-endif
+
 
 lib_LTLIBRARIES += RivetPetraAnalyses.la
 RivetPetraAnalyses_la_SOURCES = \
@@ -365,6 +327,7 @@ RivetLEPAnalyses_la_SOURCES = \
     DELPHI_1996_S3430090.cc \
     DELPHI_1999_S3960137.cc \
     DELPHI_2000_S4328825.cc \
+    DELPHI_2011_I890503.cc \
     OPAL_1994_S2927284.cc \
     OPAL_1995_S3198391.cc \
     OPAL_1996_S3257789.cc \
@@ -381,14 +344,12 @@ RivetLEPAnalyses_la_SOURCES = \
     SLD_1999_S3743934.cc \
     SLD_2002_S4869273.cc \
     SLD_2004_S5693039.cc
-if ENABLE_PRELIMINARY
-RivetLEPAnalyses_la_SOURCES += \
-    DELPHI_2002_069_CONF_603.cc
-endif
-if ENABLE_UNVALIDATED
+# UNVALIDATED
 RivetLEPAnalyses_la_SOURCES += \
     OPAL_1993_S2692198.cc
-endif
+# OBSOLETE
+RivetLEPAnalyses_la_SOURCES += \
+    DELPHI_2002_069_CONF_603.cc
 
 
 lib_LTLIBRARIES += RivetRHICAnalyses.la
@@ -396,15 +357,13 @@ RivetRHICAnalyses_la_SOURCES = \
     STAR_2006_S6500200.cc \
     STAR_2006_S6860818.cc \
     STAR_2006_S6870392.cc
-if ENABLE_PRELIMINARY
+# PRELIMINARY
 RivetRHICAnalyses_la_SOURCES += \
     STAR_2009_UE_HELEN.cc
-endif
-if ENABLE_UNVALIDATED
+# UNVALIDATED
 RivetRHICAnalyses_la_SOURCES += \
     STAR_2008_S7869363.cc \
     STAR_2008_S7993412.cc
-endif
 
 
 lib_LTLIBRARIES += RivetSPSAnalyses.la
@@ -419,6 +378,7 @@ RivetSPSAnalyses_la_SOURCES = \
 
 lib_LTLIBRARIES += RivetMiscAnalyses.la
 RivetMiscAnalyses_la_SOURCES = \
+    E735_1998_S3905616.cc \
     PDG_HADRON_MULTIPLICITIES.cc \
     PDG_HADRON_MULTIPLICITIES_RATIOS.cc \
     PDG_TAUS.cc \
@@ -435,17 +395,16 @@ RivetMiscAnalyses_la_SOURCES = \
     BELLE_2008_I786560.cc \
     BELLE_2013_I1216515.cc \
     CLEO_2004_S5809304.cc
-if ENABLE_UNVALIDATED
+# UNVALIDATED
 RivetMiscAnalyses_la_SOURCES += \
-    E735_1998_S3905616.cc \
     SFM_1984_S1178091.cc
-endif
 
 
 lib_LTLIBRARIES += RivetMCAnalyses.la
 RivetMCAnalyses_la_SOURCES = \
     EXAMPLE.cc \
     EXAMPLE_CUTS.cc \
+    EXAMPLE_SMEAR.cc \
     MC_QCD_PARTONS.cc \
     MC_DIPHOTON.cc \
     MC_ELECTRONS.cc \
@@ -459,6 +418,7 @@ RivetMCAnalyses_la_SOURCES = \
     MC_JETTAGS.cc \
     MC_HFJETS.cc \
     MC_LEADJETUE.cc \
+    MC_MET.cc \
     MC_MUONS.cc \
     MC_PDFS.cc \
     MC_PHOTONINC.cc \
@@ -483,11 +443,5 @@ RivetMCAnalyses_la_SOURCES = \
     MC_ZZINC.cc \
     MC_ZZJETS.cc \
     MC_ZZKTSPLITTINGS.cc
-
-
-if ENABLE_UNVALIDATED
-RivetMCAnalyses_la_SOURCES += \
-    MC_DIJET.cc
-endif
 
 endif

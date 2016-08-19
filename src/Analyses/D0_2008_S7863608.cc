@@ -27,10 +27,10 @@ namespace Rivet {
       /// @todo These clustering arguments look odd: are they ok?
       Cut cut = Cuts::abseta < 1.7 && Cuts::pT > 15*GeV;
       ZFinder zfinder(FinalState(), cut, PID::MUON, 65*GeV, 115*GeV, 0.2, ZFinder::NOCLUSTER, ZFinder::TRACK);
-      addProjection(zfinder, "ZFinder");
+      declare(zfinder, "ZFinder");
 
       FastJets conefinder(zfinder.remainingFinalState(), FastJets::D0ILCONE, 0.5);
-      addProjection(conefinder, "ConeFinder");
+      declare(conefinder, "ConeFinder");
 
       _sum_of_weights_inclusive = 0;
 
@@ -50,10 +50,10 @@ namespace Rivet {
     void analyze(const Event& e) {
       const double weight = e.weight();
 
-      const ZFinder& zfinder = applyProjection<ZFinder>(e, "ZFinder");
+      const ZFinder& zfinder = apply<ZFinder>(e, "ZFinder");
       if (zfinder.bosons().size()==1) {
         _sum_of_weights_inclusive += weight;
-        const JetAlg& jetpro = applyProjection<JetAlg>(e, "ConeFinder");
+        const JetAlg& jetpro = apply<JetAlg>(e, "ConeFinder");
         const Jets& jets = jetpro.jetsByPt(20*GeV);
         Jets jets_cut;
         foreach (const Jet& j, jets) {

@@ -24,10 +24,10 @@ namespace Rivet {
     void init() {
 
       TauFinder tauleptonic(TauFinder::LEPTONIC); // open cuts, leptonic decays
-      addProjection(tauleptonic, "TauLeptonic");
+      declare(tauleptonic, "TauLeptonic");
 
       TauFinder tauhadronic(TauFinder::HADRONIC); // open cuts, hadronic decays
-      addProjection(tauhadronic, "TauHadronic");
+      declare(tauhadronic, "TauHadronic");
 
       populateDecayMap();
 
@@ -48,8 +48,8 @@ namespace Rivet {
     void analyze(const Event& e) {
       const double weight = e.weight();
 
-      const TauFinder& taulep = applyProjection<TauFinder>(e, "TauLeptonic");
-      const TauFinder& tauhad = applyProjection<TauFinder>(e, "TauHadronic");
+      const TauFinder& taulep = apply<TauFinder>(e, "TauLeptonic");
+      const TauFinder& tauhad = apply<TauFinder>(e, "TauHadronic");
 
       // Hadronic tau decays --- prong decays
       foreach(const Particle& tau, tauhad.taus()) {
@@ -120,16 +120,16 @@ namespace Rivet {
 
     // Set up a lookup table for decays
     void populateDecayMap() {
-      decay_pids["muids"]     += 13,14,16;
-      decay_pids["elids"]     += 11,12,16;
-      decay_pids["pinu"]      += 211,16;
-      decay_pids["Kpnu"]      += 321,16;
-      decay_pids["pipinu"]    += 111,211,16;
-      decay_pids["Kppinu"]    += 111,321,16;
-      decay_pids["pipipinu"]  += 111,111,211,16;
-      decay_pids["KSpinu"]    += 211,310,16;
-      decay_pids["KLpinu"]    += 211,130,16;
-      decay_pids["3pipipinu"] += 211,211,211,16;
+      decay_pids["muids"]     = {{ 13,14,16 }};
+      decay_pids["elids"]     = {{ 11,12,16 }};
+      decay_pids["pinu"]      = {{ 211,16 }};
+      decay_pids["Kpnu"]      = {{ 321,16 }};
+      decay_pids["pipinu"]    = {{ 111,211,16 }};
+      decay_pids["Kppinu"]    = {{ 111,321,16 }};
+      decay_pids["pipipinu"]  = {{ 111,111,211,16 }};
+      decay_pids["KSpinu"]    = {{ 211,310,16 }};
+      decay_pids["KLpinu"]    = {{ 211,130,16 }};
+      decay_pids["3pipipinu"] = {{ 211,211,211,16 }};
     }
 
 
@@ -165,19 +165,17 @@ namespace Rivet {
 
           // Only fill the histo if there is a radiative decay
           if (radiative) {
-            // Iterate over decay products to find photon with 5MeV energy
+            // Iterate over decay products to find photon with 5 MeV energy
             foreach (const Particle& son, mother.children()) {
               if (son.pid() == PID::PHOTON) {
                 // Require photons to have at least 5 MeV energy in the rest frame of the tau
                 // boosted taus
-                if (!mother.momentum().boostVector().isZero()) {
-                  LorentzTransform cms_boost;
-                    Vector3 bv = -mother.momentum().boostVector();
-                    cms_boost = LorentzTransform(bv);
-                    if (cms_boost.transform(son.momentum())[0]/MeV > 5.) {
-                      h_ratio->fill(1, e_weight);
-                      break;
-                    }
+                if (!mother.momentum().betaVec().isZero()) {
+                  LorentzTransform cms_boost = LorentzTransform::mkFrameTransformFromBeta(mother.momentum().betaVec());
+                  if (cms_boost.transform(son.momentum())[0]/MeV > 5.) {
+                    h_ratio->fill(1, e_weight);
+                    break;
+                  }
                 }
                 // not boosted taus
                 else {

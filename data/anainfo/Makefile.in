@@ -90,8 +90,7 @@ build_triplet = @build@
 host_triplet = @host@
 subdir = data/anainfo
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps = $(top_srcdir)/m4/ax_cxx_compile_stdcxx_11.m4 \
-	$(top_srcdir)/m4/boost.m4 $(top_srcdir)/m4/boost_bug.m4 \
+am__aclocal_m4_deps = $(top_srcdir)/m4/ax_cxx_compile_stdcxx.m4 \
 	$(top_srcdir)/m4/cxx.m4 $(top_srcdir)/m4/cython.m4 \
 	$(top_srcdir)/m4/gsl.m4 $(top_srcdir)/m4/lcg.m4 \
 	$(top_srcdir)/m4/libtool.m4 $(top_srcdir)/m4/ltoptions.m4 \
@@ -171,8 +170,6 @@ AUTOCONF = @AUTOCONF@
 AUTOHEADER = @AUTOHEADER@
 AUTOMAKE = @AUTOMAKE@
 AWK = @AWK@
-BOOST_CPPFLAGS = @BOOST_CPPFLAGS@
-BOOST_ROOT = @BOOST_ROOT@
 CC = @CC@
 CCDEPMODE = @CCDEPMODE@
 CFLAGS = @CFLAGS@
@@ -185,7 +182,6 @@ CXXFLAGS = @CXXFLAGS@
 CYGPATH_W = @CYGPATH_W@
 DEFS = @DEFS@
 DEPDIR = @DEPDIR@
-DISTCHECK_CONFIGURE_FLAGS = @DISTCHECK_CONFIGURE_FLAGS@
 DLLTOOL = @DLLTOOL@
 DOXYGEN = @DOXYGEN@
 DSYMUTIL = @DSYMUTIL@
@@ -271,6 +267,8 @@ PYTHON_PLATFORM = @PYTHON_PLATFORM@
 PYTHON_PREFIX = @PYTHON_PREFIX@
 PYTHON_VERSION = @PYTHON_VERSION@
 RANLIB = @RANLIB@
+RIVETCXX = @RIVETCXX@
+RIVETCXXFLAGS = @RIVETCXXFLAGS@
 RIVET_PYTHONPATH = @RIVET_PYTHONPATH@
 SED = @SED@
 SET_MAKE = @SET_MAKE@
@@ -340,7 +338,6 @@ program_transform_name = @program_transform_name@
 psdir = @psdir@
 pyexecdir = @pyexecdir@
 pythondir = @pythondir@
-runstatedir = @runstatedir@
 sbindir = @sbindir@
 sharedstatedir = @sharedstatedir@
 srcdir = @srcdir@
@@ -593,7 +590,6 @@ dist_pkgdata_DATA = \
   CMS_2015_I1384119.info \
   CMS_2015_I1385107.info \
   CMSTOTEM_2014_I1294140.info \
-  TOTEM_2014_I1328627.info \
   CMS_2012_PAS_QCD_11_010.info \
   CMS_QCD_10_024.info \
   D0_1996_S3214044.info \
@@ -626,8 +622,10 @@ dist_pkgdata_DATA = \
   DELPHI_1999_S3960137.info \
   DELPHI_2000_S4328825.info \
   DELPHI_2002_069_CONF_603.info \
+  DELPHI_2011_I890503.info \
   EXAMPLE.info \
   EXAMPLE_CUTS.info \
+  EXAMPLE_SMEAR.info \
   H1_1994_S2919893.info \
   H1_1995_S3167097.info \
   H1_2000_S4129130.info \
@@ -644,7 +642,6 @@ dist_pkgdata_DATA = \
   LHCB_2014_I1281685.info \
   LHCB_2015_I1333223.info \
   LHCF_2012_I1115479.info \
-  MC_DIJET.info \
   MC_DIPHOTON.info \
   MC_ELECTRONS.info \
   MC_GENERIC.info \
@@ -658,6 +655,7 @@ dist_pkgdata_DATA = \
   MC_JETTAGS.info \
   MC_KTSPLITTINGS.info \
   MC_LEADJETUE.info \
+  MC_MET.info \
   MC_MUONS.info \
   MC_PDFS.info \
   MC_PHOTONINC.info \
@@ -729,7 +727,8 @@ dist_pkgdata_DATA = \
   STAR_2009_UE_HELEN.info \
   TASSO_1990_S2148048.info \
   TOTEM_2012_I1115294.info \
-  TOTEM_2012_002.info \
+  TOTEM_2012_I1220862.info \
+  TOTEM_2014_I1328627.info \
   ZEUS_2001_S4815815.info \
   UA1_1990_S2044935.info \
   UA5_1982_S875503.info \

@@ -32,17 +32,17 @@ namespace Rivet {
 
       WFinder w_e_finder(fs, cuts, PID::ELECTRON, 40*GeV, MAXDOUBLE, 0.0*GeV, 0.0, WFinder::CLUSTERNODECAY, 
                          WFinder::NOTRACK, WFinder::TRANSMASS);
-      addProjection(w_e_finder, "W_E_FINDER");
+      declare(w_e_finder, "W_E_FINDER");
 
       WFinder w_mu_finder(fs, cuts, PID::MUON, 40*GeV, MAXDOUBLE, 0.0*GeV, 0.0, WFinder::CLUSTERNODECAY, 
                           WFinder::NOTRACK, WFinder::TRANSMASS);
-      addProjection(w_mu_finder, "W_MU_FINDER");
+      declare(w_mu_finder, "W_MU_FINDER");
 
       VetoedFinalState jet_fs(fs);
       jet_fs.addVetoOnThisFinalState(getProjection<WFinder>("W_E_FINDER"));
       jet_fs.addVetoOnThisFinalState(getProjection<WFinder>("W_MU_FINDER"));
       FastJets jets(jet_fs, FastJets::ANTIKT, 0.4);
-      addProjection(jets, "JETS");
+      declare(jets, "JETS");
 
     }
 
@@ -51,8 +51,8 @@ namespace Rivet {
 
       double weight = e.weight();
 
-      const WFinder& w_e_finder  = applyProjection<WFinder>(e, "W_E_FINDER" );
-      const WFinder& w_mu_finder = applyProjection<WFinder>(e, "W_MU_FINDER");
+      const WFinder& w_e_finder  = apply<WFinder>(e, "W_E_FINDER" );
+      const WFinder& w_mu_finder = apply<WFinder>(e, "W_MU_FINDER");
       Particle lepton, neutrino;
       Jets all_jets, jets;
   
@@ -70,7 +70,7 @@ namespace Rivet {
         vetoEvent;
       }
 
-      all_jets = applyProjection<FastJets>(e, "JETS").jetsByPt(Cuts::pt>20.0*GeV && Cuts::absrap<2.8);
+      all_jets = apply<FastJets>(e, "JETS").jetsByPt(Cuts::pt>20.0*GeV && Cuts::absrap<2.8);
 
       // Remove jets DeltaR < 0.5 from W lepton
       for(Jets::iterator it = all_jets.begin(); it != all_jets.end(); ++it) {

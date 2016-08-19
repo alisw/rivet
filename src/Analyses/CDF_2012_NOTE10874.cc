@@ -19,7 +19,7 @@ namespace Rivet {
 
     void init() {
       const ChargedFinalState cfs(-1.0, 1.0, 0.5*GeV);
-      addProjection(cfs, "CFS");
+      declare(cfs, "CFS");
 
       int isqrts = -1;
       if (fuzzyEquals(sqrtS(), 300*GeV)) isqrts = 1;
@@ -44,7 +44,7 @@ namespace Rivet {
     void analyze(const Event& event) {
       const double weight = event.weight();
 
-      const ChargedFinalState& cfs = applyProjection<ChargedFinalState>(event, "CFS");
+      const ChargedFinalState& cfs = apply<ChargedFinalState>(event, "CFS");
       if (cfs.size() < 1) {
         vetoEvent;
       }

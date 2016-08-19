@@ -39,9 +39,9 @@ namespace Rivet {
 
     /// Book projections and histograms
     void init() {
-      addProjection(TriggerCDFRun0Run1(), "Trigger");
+      declare(TriggerCDFRun0Run1(), "Trigger");
       const ChargedFinalState cfs(-1.0, 1.0, 0.4*GeV);
-      addProjection(cfs, "FS");
+      declare(cfs, "FS");
 
       // Histos
       if (fuzzyEquals(sqrtS()/GeV, 630)) {
@@ -57,13 +57,13 @@ namespace Rivet {
     /// Do the analysis
     void analyze(const Event& evt) {
       // Trigger
-      const bool trigger = applyProjection<TriggerCDFRun0Run1>(evt, "Trigger").minBiasDecision();
+      const bool trigger = apply<TriggerCDFRun0Run1>(evt, "Trigger").minBiasDecision();
       if (!trigger) vetoEvent;
       const double weight = evt.weight();
       _sumWTrig += weight;
 
       // Get beam energy and tracks
-      const ChargedFinalState& fs = applyProjection<ChargedFinalState>(evt, "FS");
+      const ChargedFinalState& fs = apply<ChargedFinalState>(evt, "FS");
       const size_t numParticles = fs.particles().size();
 
       // Fill histos of charged multiplicity distributions

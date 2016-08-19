@@ -3,6 +3,7 @@
 #define RIVET_RivetPaths_HH
 #include <string>
 #include <vector>
+#include <unistd.h>
 
 namespace Rivet {
 
@@ -37,7 +38,7 @@ namespace Rivet {
   /// Set the Rivet analysis plugin library search paths
   void setAnalysisLibPaths(const std::vector<std::string>& paths);
 
-  /// Set the Rivet analysis plugin library search paths
+  /// Add a Rivet analysis plugin library search path
   void addAnalysisLibPath(const std::string& extrapath);
 
   /// @brief Find the first file of the given name in the analysis library search dirs
@@ -53,11 +54,18 @@ namespace Rivet {
   /// Get Rivet analysis reference data search paths
   std::vector<std::string> getAnalysisDataPaths();
 
+  /// Set the Rivet data file search paths
+  void setAnalysisDataPaths(const std::vector<std::string>& paths);
+
+  /// Add a Rivet data file search path
+  void addAnalysisDataPath(const std::string& extrapath);
+
   /// @brief Find the first file of the given name in the general data file search dirs
   /// @note If none found, returns an empty string
   std::string findAnalysisDataFile(const std::string& filename,
-                                  const std::vector<std::string>& pathprepend=std::vector<std::string>(),
-                                  const std::vector<std::string>& pathappend=std::vector<std::string>());
+                                   const std::vector<std::string>& pathprepend=std::vector<std::string>(),
+                                   const std::vector<std::string>& pathappend=std::vector<std::string>());
+
 
   /// Get Rivet analysis reference data search paths
   std::vector<std::string> getAnalysisRefPaths();
@@ -68,6 +76,7 @@ namespace Rivet {
                                   const std::vector<std::string>& pathprepend=std::vector<std::string>(),
                                   const std::vector<std::string>& pathappend=std::vector<std::string>());
 
+
   /// Get Rivet analysis info metadata search paths
   std::vector<std::string> getAnalysisInfoPaths();
 
@@ -76,6 +85,7 @@ namespace Rivet {
   std::string findAnalysisInfoFile(const std::string& filename,
                                    const std::vector<std::string>& pathprepend=std::vector<std::string>(),
                                    const std::vector<std::string>& pathappend=std::vector<std::string>());
+
 
   /// Get Rivet analysis plot style search paths
   std::vector<std::string> getAnalysisPlotPaths();

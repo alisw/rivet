@@ -29,12 +29,12 @@ namespace Rivet {
       // Final state
       // All particles within |eta| < 5.0
       const FinalState FS(Cuts::abseta<5.0);
-      addProjection(FS,"FS");
+      declare(FS,"FS");
 
       // Project photons with pT > 25 GeV and |eta| < 2.37
       IdentifiedFinalState ph_FS(Cuts::abseta<2.37 && Cuts::pT>25.0*GeV);
       ph_FS.acceptIdPair(PID::PHOTON);
-      addProjection(ph_FS, "PH_FS");
+      declare(ph_FS, "PH_FS");
 
       // Project photons for dressing
       IdentifiedFinalState ph_dressing_FS(FS);
@@ -43,11 +43,11 @@ namespace Rivet {
       // Project bare electrons
       IdentifiedFinalState el_bare_FS(FS);
       el_bare_FS.acceptIdPair(PID::ELECTRON);
-      addProjection(el_bare_FS,"el_bare_FS");
+      declare(el_bare_FS,"el_bare_FS");
 
       // Project dressed electrons with pT > 15 GeV and |eta| < 2.47
       DressedLeptons el_dressed_FS(ph_dressing_FS, el_bare_FS, 0.1, Cuts::abseta < 2.47 && Cuts::pT > 15*GeV, true, false);
-      addProjection(el_dressed_FS,"EL_DRESSED_FS");
+      declare(el_dressed_FS,"EL_DRESSED_FS");
 
       // Project bare muons
       IdentifiedFinalState mu_bare_FS(FS);
@@ -56,17 +56,17 @@ namespace Rivet {
       // Project dressed muons with pT > 15 GeV and |eta| < 2.47
       //DressedLeptons mu_dressed_FS(ph_dressing_FS, mu_bare_FS, 0.1, true, -2.47, 2.47, 15.0*GeV, false);
       DressedLeptons mu_dressed_FS(ph_dressing_FS, mu_bare_FS, 0.1, Cuts::abseta < 2.47 && Cuts::pT > 15*GeV, true, false);
-      addProjection(mu_dressed_FS,"MU_DRESSED_FS");
+      declare(mu_dressed_FS,"MU_DRESSED_FS");
 
       // Final state excluding muons and neutrinos (for jet building and photon isolation)
       VetoedFinalState veto_mu_nu_FS(FS);
       veto_mu_nu_FS.vetoNeutrinos();
       veto_mu_nu_FS.addVetoPairId(PID::MUON);
-      addProjection(veto_mu_nu_FS, "VETO_MU_NU_FS");
+      declare(veto_mu_nu_FS, "VETO_MU_NU_FS");
 
       // Build the anti-kT R=0.4 jets, using FinalState particles (vetoing muons and neutrinos)
       FastJets jets(veto_mu_nu_FS, FastJets::ANTIKT, 0.4);
-      addProjection(jets, "JETS");
+      declare(jets, "JETS");
 
       // Book histograms
       // 1D distributions
@@ -115,11 +115,11 @@ namespace Rivet {
       _weight = weight;
 
       // Get final state particles
-      const ParticleVector& FS_ptcls          = applyProjection<FinalState>(event, "FS").particles();
-      const ParticleVector& ptcls_veto_mu_nu  = applyProjection<VetoedFinalState>(event, "VETO_MU_NU_FS").particles();
-      const ParticleVector& photons           = applyProjection<IdentifiedFinalState>(event, "PH_FS").particlesByPt();
-      const vector<DressedLepton>& el_dressed = applyProjection<DressedLeptons>(event, "EL_DRESSED_FS").dressedLeptons();
-      const vector<DressedLepton>& mu_dressed = applyProjection<DressedLeptons>(event, "MU_DRESSED_FS").dressedLeptons();
+      const ParticleVector& FS_ptcls          = apply<FinalState>(event, "FS").particles();
+      const ParticleVector& ptcls_veto_mu_nu  = apply<VetoedFinalState>(event, "VETO_MU_NU_FS").particles();
+      const ParticleVector& photons           = apply<IdentifiedFinalState>(event, "PH_FS").particlesByPt();
+      const vector<DressedLepton>& el_dressed = apply<DressedLeptons>(event, "EL_DRESSED_FS").dressedLeptons();
+      const vector<DressedLepton>& mu_dressed = apply<DressedLeptons>(event, "MU_DRESSED_FS").dressedLeptons();
 
       // For isolation calculation
       float dR_iso    = 0.4;
@@ -214,8 +214,8 @@ namespace Rivet {
 
       // Jet selection
       // Get jets with pT > 25 GeV and |rapidity| < 4.4
-      //const Jets& jets = applyProjection<FastJets>(event, "JETS").jetsByPt(25.0*GeV, MAXDOUBLE, -4.4, 4.4, RAPIDITY);
-      const Jets& jets = applyProjection<FastJets>(event, "JETS").jetsByPt(Cuts::pT>25.0*GeV && Cuts::absrap <4.4);
+      //const Jets& jets = apply<FastJets>(event, "JETS").jetsByPt(25.0*GeV, MAXDOUBLE, -4.4, 4.4, RAPIDITY);
+      const Jets& jets = apply<FastJets>(event, "JETS").jetsByPt(Cuts::pT>25.0*GeV && Cuts::absrap <4.4);
 
       vector<const Jet*> jets_25;
       vector<const Jet*> jets_30;

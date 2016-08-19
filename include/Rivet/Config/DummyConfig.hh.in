@@ -1,26 +1,5 @@
 /* include/Rivet/Config/DummyConfig.hh.in.  Generated from configure.ac by autoheader.  */
 
-/* Defined if the requested minimum BOOST version is satisfied */
-#undef HAVE_BOOST
-
-/* Define to 1 if you have <boost/assign.hpp> */
-#undef HAVE_BOOST_ASSIGN_HPP
-
-/* Define to 1 if you have <boost/foreach.hpp> */
-#undef HAVE_BOOST_FOREACH_HPP
-
-/* Define to 1 if you have <boost/lexical_cast.hpp> */
-#undef HAVE_BOOST_LEXICAL_CAST_HPP
-
-/* Define to 1 if you have <boost/range.hpp> */
-#undef HAVE_BOOST_RANGE_HPP
-
-/* Define to 1 if you have <boost/scoped_ptr.hpp> */
-#undef HAVE_BOOST_SCOPED_PTR_HPP
-
-/* Define to 1 if you have <boost/shared_ptr.hpp> */
-#undef HAVE_BOOST_SHARED_PTR_HPP
-
 /* define if the compiler supports basic C++11 syntax */
 #undef HAVE_CXX11
 

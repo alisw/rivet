@@ -28,9 +28,9 @@ namespace Rivet {
     /// Book histograms and initialise projections before the run
     void init() {
 
-      addProjection(TriggerCDFRun2(), "Trigger");
+      declare(TriggerCDFRun2(), "Trigger");
 
-      addProjection(ChargedFinalState(-1.0, 1.0, 0.4*GeV), "CFS");
+      declare(ChargedFinalState(-1.0, 1.0, 0.4*GeV), "CFS");
 
       _hist_nch = bookHisto1D(1, 1, 1);
     }
@@ -39,13 +39,13 @@ namespace Rivet {
     /// Perform the per-event analysis
     void analyze(const Event& event) {
       // MinBias Trigger
-      const bool trigger = applyProjection<TriggerCDFRun2>(event, "Trigger").minBiasDecision();
+      const bool trigger = apply<TriggerCDFRun2>(event, "Trigger").minBiasDecision();
       if (!trigger) vetoEvent;
       //_sumWPassed += event.weight();
       const double weight = event.weight();
 
       // Get events charged multiplicity and fill histogram
-      const ChargedFinalState& cfs = applyProjection<ChargedFinalState>(event, "CFS");
+      const ChargedFinalState& cfs = apply<ChargedFinalState>(event, "CFS");
       _hist_nch->fill(cfs.size(), weight);
 
     }

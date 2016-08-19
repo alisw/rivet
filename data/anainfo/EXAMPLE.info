@@ -5,7 +5,7 @@ Authors:
  - Andy Buckley <andy.buckley@cern.ch>
 RunInfo:
   All event types will be accepted.
-NumEvents: 1000000
+NumEvents: 10000
 PtCuts: [0]
 Description:
   "This analysis is a demonstration of the Rivet analysis structure and

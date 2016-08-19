@@ -25,17 +25,17 @@ namespace Rivet {
     void init() {
       // General FS
       FinalState fs(-5.0, 5.0);
-      addProjection(fs, "FS");
+      declare(fs, "FS");
 
       // Get leading photon
       LeadingParticlesFinalState photonfs(FinalState(-1.0, 1.0, 30.0*GeV));
       photonfs.addParticleId(PID::PHOTON);
-      addProjection(photonfs, "LeadingPhoton");
+      declare(photonfs, "LeadingPhoton");
 
       // FS for isolation excludes the leading photon
       VetoedFinalState vfs(fs);
       vfs.addVetoOnThisFinalState(photonfs);
-      addProjection(vfs, "JetFS");
+      declare(vfs, "JetFS");
 
       _h_photon_pT = bookHisto1D("photon_pT", logspace(50, 30.0, 0.5*(sqrtS()>0.?sqrtS():14000.)));
       _h_photon_pT_lin = bookHisto1D("photon_pT_lin", 50, 0.0, 70.0);
@@ -46,14 +46,14 @@ namespace Rivet {
     /// Do the analysis
     void analyze(const Event& e) {
       // Get the photon
-      const Particles photons = applyProjection<FinalState>(e, "LeadingPhoton").particles();
+      const Particles photons = apply<FinalState>(e, "LeadingPhoton").particles();
       if (photons.size() != 1) {
         vetoEvent;
       }
       const FourMomentum photon = photons.front().momentum();
 
       // Get all charged particles
-      const FinalState& fs = applyProjection<FinalState>(e, "JetFS");
+      const FinalState& fs = apply<FinalState>(e, "JetFS");
       if (fs.empty()) {
         vetoEvent;
       }

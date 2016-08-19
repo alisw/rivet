@@ -25,9 +25,9 @@ namespace Rivet {
     void init() {
       FinalState fs;
       WFinder wfinder(fs, Cuts::abseta < 3.5 && Cuts::pT > 25*GeV, PID::ELECTRON, 60.0*GeV, 100.0*GeV, 25.0*GeV, 0.2);
-      addProjection(wfinder, "WFinder");
+      declare(wfinder, "WFinder");
       FastJets jetpro(wfinder.remainingFinalState(), FastJets::KT, 0.6);
-      addProjection(jetpro, "Jets");
+      declare(jetpro, "Jets");
 
       MC_JetSplittings::init();
     }
@@ -36,7 +36,7 @@ namespace Rivet {
     /// Do the analysis
     void analyze(const Event & e) {
 
-      const WFinder& wfinder = applyProjection<WFinder>(e, "WFinder");
+      const WFinder& wfinder = apply<WFinder>(e, "WFinder");
       if (wfinder.bosons().size() != 1) {
         vetoEvent;
       }

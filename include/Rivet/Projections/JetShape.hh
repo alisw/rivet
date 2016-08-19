@@ -12,36 +12,36 @@
 namespace Rivet {
 
 
-  /**
-     @brief Calculate the jet shape.
-
-     Calculate the differential and integral jet shapes in \f$P_{\perp}\f$ for a given
-     set of jets. This particular jet shape projection calculates jet shapes relative
-     to jet centroids, using only the particles associated to each jet, for the hardest
-     \f$ n \f$ jets.
-
-     The rapidity scheme (\f$ \eta \f$ or \f$ y \f$) has to be specified when
-     invoking the constructor.
-
-     The differential jet shape around a given jet axis at distance interval
-     \f$ r \pm \delta{r}/2 \f$ is defined as
-     \f[
-     \rho(r) =
-       \frac{1}{\delta r} \frac{1}{N_\mathrm{jets}}
-       \sum_\mathrm{jets} \frac{P_\perp(r - \delta r/2, r+\delta r/2)}{p_\perp(0, R)}
-     \f]
-     with \f$ 0 \le r \le R \f$ and \f$ P_\perp(r_1, r_2) = \sum_{\in [r_1, r_2)} p_\perp \f$.
-
-     The integral jet shape around a given jet axes until distance \f$ r \f$ is defined as
-     \f[
-     \Psi(r) =
-       \frac{1}{N_\mathrm{jets}}
-       \sum_\mathrm{jets} \frac{P_\perp(0, r)}{p_\perp(0, R)}
-     \f]
-     with \f$ 0 \le r \le R \f$ and \f$ P_\perp(r_1, r_2) = \sum_{\in [r_1, r_2)} p_\perp \f$.
-
-     The constructor expects also the binning in radius \f$ r \f$ to be supplied.
-  */
+  ///*
+  /// @brief Calculate the jet shape.
+  ///
+  /// Calculate the differential and integral jet shapes in \f$P_{\perp}\f$ for a given
+  /// set of jets. This particular jet shape projection calculates jet shapes relative
+  /// to jet centroids, using only the particles associated to each jet, for the hardest
+  /// \f$ n \f$ jets.
+  ///
+  /// The rapidity scheme (\f$ \eta \f$ or \f$ y \f$) has to be specified when
+  /// invoking the constructor.
+  ///
+  /// The differential jet shape around a given jet axis at distance interval
+  /// \f$ r \pm \delta{r}/2 \f$ is defined as
+  /// \f[
+  /// \rho(r) =
+  ///   \frac{1}{\delta r} \frac{1}{N_\mathrm{jets}}
+  ///   \sum_\mathrm{jets} \frac{P_\perp(r - \delta r/2, r+\delta r/2)}{p_\perp(0, R)}
+  /// \f]
+  /// with \f$ 0 \le r \le R \f$ and \f$ P_\perp(r_1, r_2) = \sum_{\in [r_1, r_2)} p_\perp \f$.
+  ///
+  /// The integral jet shape around a given jet axes until distance \f$ r \f$ is defined as
+  /// \f[
+  /// \Psi(r) =
+  ///   \frac{1}{N_\mathrm{jets}}
+  ///   \sum_\mathrm{jets} \frac{P_\perp(0, r)}{p_\perp(0, R)}
+  /// \f]
+  /// with \f$ 0 \le r \le R \f$ and \f$ P_\perp(r_1, r_2) = \sum_{\in [r_1, r_2)} p_\perp \f$.
+  ///
+  /// The constructor expects also the binning in radius \f$ r \f$ to be supplied.
+  ///
   class JetShape : public Projection {
   public:
 
@@ -62,9 +62,7 @@ namespace Rivet {
              RapScheme rapscheme=RAPIDITY);
 
     /// Clone on the heap.
-    virtual const Projection* clone() const {
-      return new JetShape(*this);
-    }
+    DEFAULT_RIVET_PROJ_CLONE(JetShape);
 
     //@}
 

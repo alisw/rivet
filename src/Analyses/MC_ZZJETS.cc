@@ -24,19 +24,19 @@ namespace Rivet {
     void init() {
       Cut cut = Cuts::abseta < 3.5 && Cuts::pT > 25*GeV;
       ZFinder zeefinder(FinalState(), cut, PID::ELECTRON, 65*GeV, 115*GeV, 0.2, ZFinder::CLUSTERNODECAY, ZFinder::TRACK);
-      addProjection(zeefinder, "ZeeFinder");
+      declare(zeefinder, "ZeeFinder");
 
       VetoedFinalState zmminput;
       zmminput.addVetoOnThisFinalState(zeefinder);
       ZFinder zmmfinder(zmminput, cut, PID::MUON, 65*GeV, 115*GeV, 0.2, ZFinder::CLUSTERNODECAY, ZFinder::TRACK);
-      addProjection(zmmfinder, "ZmmFinder");
+      declare(zmmfinder, "ZmmFinder");
 
       VetoedFinalState jetinput;
       jetinput
           .addVetoOnThisFinalState(zeefinder)
           .addVetoOnThisFinalState(zmmfinder);
       FastJets jetpro(jetinput, FastJets::ANTIKT, 0.4);
-      addProjection(jetpro, "Jets");
+      declare(jetpro, "Jets");
 
       // Correlations with jets
       _h_ZZ_jet1_deta = bookHisto1D("ZZ_jet1_deta", 70, -7.0, 7.0);
@@ -55,10 +55,10 @@ namespace Rivet {
     void analyze(const Event& e) {
       const double weight = e.weight();
 
-      const ZFinder& zeefinder = applyProjection<ZFinder>(e, "ZeeFinder");
+      const ZFinder& zeefinder = apply<ZFinder>(e, "ZeeFinder");
       if (zeefinder.bosons().size() != 1) vetoEvent;
 
-      const ZFinder& zmmfinder = applyProjection<ZFinder>(e, "ZmmFinder");
+      const ZFinder& zmmfinder = apply<ZFinder>(e, "ZmmFinder");
       if (zmmfinder.bosons().size() != 1) vetoEvent;
 
       // Z momenta
@@ -71,7 +71,7 @@ namespace Rivet {
       const FourMomentum& mp = zmmfinder.constituents()[0].momentum();
       const FourMomentum& mm = zmmfinder.constituents()[1].momentum();
 
-      const Jets& jets = applyProjection<FastJets>(e, "Jets").jetsByPt(_jetptcut);
+      const Jets& jets = apply<FastJets>(e, "Jets").jetsByPt(_jetptcut);
       if (jets.size() > 0) {
         const FourMomentum j0 = jets[0].momentum();
         _h_ZZ_jet1_deta->fill(zz.eta()-j0.eta(), weight);

@@ -25,13 +25,13 @@ namespace Rivet {
         FinalState fs;
         Cut cuts = Cuts::abseta < 2.4 && Cuts::pT > 20*GeV;
         ZFinder zfinder_dressed_el(fs, cuts, PID::ELECTRON, 66*GeV, 116*GeV, 0.1, ZFinder::CLUSTERNODECAY);
-        addProjection(zfinder_dressed_el, "ZFinder_dressed_el");
+        declare(zfinder_dressed_el, "ZFinder_dressed_el");
         ZFinder zfinder_bare_el(fs, cuts, PID::ELECTRON, 66*GeV, 116*GeV, 0.0, ZFinder::NOCLUSTER);
-        addProjection(zfinder_bare_el, "ZFinder_bare_el");
+        declare(zfinder_bare_el, "ZFinder_bare_el");
         ZFinder zfinder_dressed_mu(fs, cuts, PID::MUON, 66*GeV, 116*GeV, 0.1, ZFinder::CLUSTERNODECAY);
-        addProjection(zfinder_dressed_mu, "ZFinder_dressed_mu");
+        declare(zfinder_dressed_mu, "ZFinder_dressed_mu");
         ZFinder zfinder_bare_mu(fs, cuts, PID::MUON, 66*GeV, 116*GeV, 0.0, ZFinder::NOCLUSTER);
-        addProjection(zfinder_bare_mu, "ZFinder_bare_mu");
+        declare(zfinder_bare_mu, "ZFinder_bare_mu");
 
         // Book histograms
         // Single-differential plots
@@ -63,10 +63,10 @@ namespace Rivet {
       void analyze(const Event& event) {
         const double weight = event.weight();
 
-        const ZFinder& zfinder_dressed_el = applyProjection<ZFinder>(event, "ZFinder_dressed_el");
-        const ZFinder& zfinder_bare_el = applyProjection<ZFinder>(event, "ZFinder_bare_el");
-        const ZFinder& zfinder_dressed_mu = applyProjection<ZFinder>(event, "ZFinder_dressed_mu");
-        const ZFinder& zfinder_bare_mu = applyProjection<ZFinder>(event, "ZFinder_bare_mu");
+        const ZFinder& zfinder_dressed_el = apply<ZFinder>(event, "ZFinder_dressed_el");
+        const ZFinder& zfinder_bare_el = apply<ZFinder>(event, "ZFinder_bare_el");
+        const ZFinder& zfinder_dressed_mu = apply<ZFinder>(event, "ZFinder_dressed_mu");
+        const ZFinder& zfinder_bare_mu = apply<ZFinder>(event, "ZFinder_bare_mu");
 
         fillPlots(zfinder_dressed_el, _hist_zphistar_el_dressed, _h_phistar_el_dressed, weight);
         fillPlots(zfinder_bare_el, _hist_zphistar_el_bare, _h_phistar_el_bare, weight);

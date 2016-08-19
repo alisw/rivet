@@ -1,7 +1,7 @@
 ## Process this file with autoconf to produce a configure script.
 
 AC_PREREQ(2.59)
-AC_INIT([Rivet],[2.4.3],[rivet@projects.hepforge.org],[Rivet])
+AC_INIT([Rivet],[2.5.1],[rivet@projects.hepforge.org],[Rivet])
 
 ## Check and block installation into the src/build dir
 if test "$prefix" = "$PWD"; then
@@ -30,41 +30,24 @@ AC_DEFINE_UNQUOTED(RIVET_BUGREPORT, "$PACKAGE_BUGREPORT", "Rivet contact email a
 ## OS X
 AC_CEDAR_OSX
 
-## LCG platform tag
+## Work out the LCG platform tag
 AC_LCG_TAG
 
 ## Set default compiler flags
 if test "x$CXXFLAGS" == "x"; then CXXFLAGS="-O2"; fi
 
-## Make compiler error messages more readable if gfilt is installed.
-dnl AC_CEDAR_CXXFILTER
-
-
-## Checks for programs.
+## Compiler setup
 AC_LANG(C++)
 AC_PROG_CXX
+AX_CXX_COMPILE_STDCXX([11], [noext], [mandatory])
 
-dnl this block can go once we decide to have C++11 always on
-AC_MSG_CHECKING([whether to include C++11 flag for testing])
-AC_ARG_ENABLE(stdcxx11,
-        AC_HELP_STRING([--enable-stdcxx11],
-        [turn on C++11 flag]),
-        [],
-        [enable_stdcxx11=no]
-        )
+## Store and propagate the compiler identity and flags
+RIVETCXX="$CXX"
+AC_SUBST(RIVETCXX)
+RIVETCXXFLAGS="$CXXFLAGS"
+AC_SUBST(RIVETCXXFLAGS)
 
-
-if test "x$enable_stdcxx11" = "xyes"; then
-  AC_MSG_RESULT([yes])
-  dnl remove the wrapper if block and "optional" once we decide to have C++11 always on
-  AX_CXX_COMPILE_STDCXX_11([noext],[optional])
-  if test "x$HAVE_CXX11" != "x1"; then
-  AC_MSG_ERROR([compiler does not recognize requested c++11 option])
-  fi
-else
-  AC_MSG_RESULT([no])
-fi
-
+## Checks for programs.
 AC_PROG_INSTALL
 AC_PROG_LN_S
 AC_DISABLE_STATIC
@@ -170,15 +153,15 @@ AC_CHECK_HEADER([gsl/gsl_vector.h], [], [AC_MSG_ERROR([GSL vectors not found.])]
 CPPFLAGS=$oldCPPFLAGS
 
 
-## Boost utility library
-BOOST_REQUIRE([1.55.0])
-BOOST_FOREACH
-BOOST_SMART_PTR
-BOOST_FIND_HEADER([boost/lexical_cast.hpp])
-BOOST_FIND_HEADER([boost/range.hpp])
-BOOST_FIND_HEADER([boost/assign.hpp])
+dnl ## Boost utility library
+dnl BOOST_REQUIRE([1.55.0])
+dnl BOOST_FOREACH
+dnl BOOST_SMART_PTR
+dnl BOOST_FIND_HEADER([boost/lexical_cast.hpp])
+dnl BOOST_FIND_HEADER([boost/range.hpp])
+dnl BOOST_FIND_HEADER([boost/assign.hpp])
+dnl BOOST_BUG_IN_FOREACH
 
-BOOST_BUG_IN_FOREACH
 
 ## Disable build/install of standard analyses
 AC_ARG_ENABLE([analyses],
@@ -192,38 +175,47 @@ AM_CONDITIONAL(ENABLE_ANALYSES, [test x$enable_analyses = xyes])
 
 ## Enable build/install of unvalidated analyses
 AC_ARG_ENABLE([unvalidated],
-  [AC_HELP_STRING(--enable-unvalidated, [build and install unvalidated analyses])],
-  [], [enable_unvalidated=no])
-if test x$enable_unvalidated = xyes; then
-   AC_MSG_WARN([Building unvalidated Rivet analyses, by request])
-else
-   AC_MSG_NOTICE([Not building unvalidated Rivet analyses])
-fi
-AM_CONDITIONAL(ENABLE_UNVALIDATED, [test x$enable_unvalidated = xyes])
+  [AC_HELP_STRING(--enable-unvalidated, [does nothing, for backward compatibility])],
+  [], [enable_unvalidated=yes])
+dnl AC_ARG_ENABLE([unvalidated],
+dnl   [AC_HELP_STRING(--enable-unvalidated, [build and install unvalidated analyses])],
+dnl   [], [enable_unvalidated=yes])
+dnl if test x$enable_unvalidated = xyes; then
+dnl    AC_MSG_WARN([Building unvalidated Rivet analyses, by request])
+dnl else
+dnl    AC_MSG_NOTICE([Not building unvalidated Rivet analyses])
+dnl fi
+dnl AM_CONDITIONAL(ENABLE_UNVALIDATED, [test x$enable_unvalidated = xyes])
 
 
 ## Disable build/install of validated-but-preliminary analyses
 AC_ARG_ENABLE([preliminary],
-  [AC_HELP_STRING(--disable-preliminary, [build and install validated-but-preliminary analyses])],
+  [AC_HELP_STRING(--disable-preliminary, [does nothing, for backward compatibility])],
   [], [enable_preliminary=yes])
-if test x$enable_preliminary = xyes; then
-   AC_MSG_NOTICE([Building preliminary Rivet analyses])
-else
-   AC_MSG_NOTICE([Not building preliminary Rivet analyses, by request])
-fi
-AM_CONDITIONAL(ENABLE_PRELIMINARY, [test x$enable_preliminary = xyes])
+dnl AC_ARG_ENABLE([preliminary],
+dnl   [AC_HELP_STRING(--disable-preliminary, [build and install validated-but-preliminary analyses])],
+dnl   [], [enable_preliminary=yes])
+dnl if test x$enable_preliminary = xyes; then
+dnl    AC_MSG_NOTICE([Building preliminary Rivet analyses])
+dnl else
+dnl    AC_MSG_NOTICE([Not building preliminary Rivet analyses, by request])
+dnl fi
+dnl AM_CONDITIONAL(ENABLE_PRELIMINARY, [test x$enable_preliminary = xyes])
 
 
 ## Disable build/install of now-obsolete preliminary analyses
 AC_ARG_ENABLE([obsolete],
-  [AC_HELP_STRING(--disable-obsolete, [build and install now-obsolete analyses])],
-  [], [enable_obsolete=$enable_preliminary])
-if test x$enable_obsolete = xyes; then
-   AC_MSG_NOTICE([Building obsolete Rivet analyses])
-else
-   AC_MSG_NOTICE([Not building obsolete Rivet analyses, by request])
-fi
-AM_CONDITIONAL(ENABLE_OBSOLETE, [test x$enable_obsolete = xyes])
+  [AC_HELP_STRING(--disable-obsolete, [does nothing, for backward compatibility])],
+  [], [enable_obsolete=yes])
+dnl AC_ARG_ENABLE([obsolete],
+dnl   [AC_HELP_STRING(--disable-obsolete, [build and install now-obsolete analyses])],
+dnl   [], [enable_obsolete=$enable_preliminary])
+dnl if test x$enable_obsolete = xyes; then
+dnl    AC_MSG_NOTICE([Building obsolete Rivet analyses])
+dnl else
+dnl    AC_MSG_NOTICE([Not building obsolete Rivet analyses, by request])
+dnl fi
+dnl AM_CONDITIONAL(ENABLE_OBSOLETE, [test x$enable_obsolete = xyes])
 
 
 ## Build LaTeX docs if possible...
@@ -317,12 +309,11 @@ AM_CONDITIONAL(ENABLE_PYEXT, [test x$enable_pyext == xyes])
 AM_CPPFLAGS="-I\$(top_srcdir)/include -I\$(top_builddir)/include"
 #AM_CPPFLAGS="$AM_CPPFLAGS -I\$(top_srcdir)/include/eigen3"
 AM_CPPFLAGS="$AM_CPPFLAGS \$(GSL_CPPFLAGS)"
-AM_CPPFLAGS="$AM_CPPFLAGS \$(BOOST_CPPFLAGS)"
+dnl AM_CPPFLAGS="$AM_CPPFLAGS \$(BOOST_CPPFLAGS)"
 AM_CPPFLAGS="$AM_CPPFLAGS -I\$(YODAINCPATH)"
 AM_CPPFLAGS="$AM_CPPFLAGS -I\$(HEPMCINCPATH)"
 AM_CPPFLAGS="$AM_CPPFLAGS -I\$(FASTJETINCPATH)"
 AC_CEDAR_CHECKCXXFLAG([-pedantic], [AM_CXXFLAGS="$AM_CXXFLAGS -pedantic"])
-AC_CEDAR_CHECKCXXFLAG([-ansi], [AM_CXXFLAGS="$AM_CXXFLAGS -ansi"])
 AC_CEDAR_CHECKCXXFLAG([-Wall], [AM_CXXFLAGS="$AM_CXXFLAGS -Wall"])
 AC_CEDAR_CHECKCXXFLAG([-Wno-long-long], [AM_CXXFLAGS="$AM_CXXFLAGS -Wno-long-long"])
 AC_CEDAR_CHECKCXXFLAG([-Wno-format], [AM_CXXFLAGS="$AM_CXXFLAGS -Wno-format"])

@@ -19,8 +19,8 @@ namespace Rivet {
 
     /// Book histograms and initialise projections before the run
     void init() {
-      addProjection(TriggerUA5(), "Trigger");
-      addProjection(ChargedFinalState(-5.0, 5.0), "CFS");
+      declare(TriggerUA5(), "Trigger");
+      declare(ChargedFinalState(-5.0, 5.0), "CFS");
 
       _hist_mean_nch = bookHisto1D(1, 1, 1);
       _hist_nch      = bookHisto1D(3, 1, 1);
@@ -31,14 +31,14 @@ namespace Rivet {
     /// Perform the per-event analysis
     void analyze(const Event& event) {
       // Trigger
-      const TriggerUA5& trigger = applyProjection<TriggerUA5>(event, "Trigger");
+      const TriggerUA5& trigger = apply<TriggerUA5>(event, "Trigger");
       if (!trigger.nsdDecision()) vetoEvent;
 
       const double weight = event.weight();
       _sumWPassed += weight;
 
       // Count final state particles in several eta regions
-      const int Nch = applyProjection<ChargedFinalState>(event, "CFS").size();
+      const int Nch = apply<ChargedFinalState>(event, "CFS").size();
 
       // Fill histograms
       _hist_nch->fill(Nch, weight);

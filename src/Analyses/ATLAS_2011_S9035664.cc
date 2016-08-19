@@ -22,7 +22,7 @@ namespace Rivet {
     //@{
 
     void init() {
-      addProjection(UnstableFinalState(), "UFS");
+      declare(UnstableFinalState(), "UFS");
       _nonPrRapHigh    = bookHisto1D( 14, 1, 1);
       _nonPrRapMedHigh = bookHisto1D( 13, 1, 1);
       _nonPrRapMedLow  = bookHisto1D( 12, 1, 1);
@@ -45,7 +45,7 @@ namespace Rivet {
 
 
       // Final state of unstable particles to get particle spectra
-      const UnstableFinalState& ufs = applyProjection<UnstableFinalState>(e, "UFS");
+      const UnstableFinalState& ufs = apply<UnstableFinalState>(e, "UFS");
 
       foreach (const Particle& p, ufs.particles()) {
         if (p.abspid() != 443) continue;

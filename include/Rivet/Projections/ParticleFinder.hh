@@ -3,7 +3,6 @@
 #define RIVET_ParticleFinder_HH
 
 #include "Rivet/Projection.hh"
-#include "Rivet/Cuts.hh"
 
 namespace Rivet {
 
@@ -24,7 +23,7 @@ namespace Rivet {
     virtual ~ParticleFinder() {}
 
     /// Clone on the heap.
-    virtual const Projection* clone() const = 0;
+    virtual unique_ptr<Projection> clone() const = 0;
 
     //@}
 

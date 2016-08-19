@@ -66,14 +66,14 @@ namespace Rivet {
 	_h_den_highpt  [it->first] = bookHisto1D  ("TMP/den_h_"+it->first,refData(_hepdataid[it->first], 1, 3));
       }
 
-      addProjection(ChargedFinalState(_eta_min, _eta_max, _pt_min*GeV), "CFS");
+      declare(ChargedFinalState(_eta_min, _eta_max, _pt_min*GeV), "CFS");
     }
 
 
     // Perform the per-event analysis
     void analyze(const Event& event) {
       const double weight = event.weight();
-      const ChargedFinalState& cfs = applyProjection<ChargedFinalState>(event, "CFS");
+      const ChargedFinalState& cfs = apply<ChargedFinalState>(event, "CFS");
 
       foreach (const Particle& p, cfs.particles()) {
         int id = p.pid();

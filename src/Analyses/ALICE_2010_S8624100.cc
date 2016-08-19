@@ -30,9 +30,9 @@ namespace Rivet {
       ChargedFinalState cfs05(-0.5, 0.5);
       ChargedFinalState cfs10(-1.0, 1.0);
       ChargedFinalState cfs13(-1.3, 1.3);
-      addProjection(cfs05, "CFS05");
-      addProjection(cfs10, "CFS10");
-      addProjection(cfs13, "CFS13");
+      declare(cfs05, "CFS05");
+      declare(cfs10, "CFS10");
+      declare(cfs13, "CFS13");
 
       if (fuzzyEquals(sqrtS()/GeV, 900, 1E-3)) {
         _h_dN_dNch_05    = bookHisto1D(11, 1, 1);
@@ -51,9 +51,9 @@ namespace Rivet {
     void analyze(const Event& event) {
       const double weight = event.weight();
 
-      const ChargedFinalState& charged_05 = applyProjection<ChargedFinalState>(event, "CFS05");
-      const ChargedFinalState& charged_10 = applyProjection<ChargedFinalState>(event, "CFS10");
-      const ChargedFinalState& charged_13 = applyProjection<ChargedFinalState>(event, "CFS13");
+      const ChargedFinalState& charged_05 = apply<ChargedFinalState>(event, "CFS05");
+      const ChargedFinalState& charged_10 = apply<ChargedFinalState>(event, "CFS10");
+      const ChargedFinalState& charged_13 = apply<ChargedFinalState>(event, "CFS13");
 
       _h_dN_dNch_05->fill(charged_05.size(), weight);
       _h_dN_dNch_10->fill(charged_10.size(), weight);

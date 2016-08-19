@@ -54,7 +54,9 @@ def getCommandLineOptions():
     parser.add_option("--reftitle", dest="REFTITLE",
                         default='Data', help="Reference data legend entry")
     parser.add_option("--pwd", dest="PATH_PWD", action="store_true", default=False,
-                    help="append the current directory (pwd) to the analysis/data search paths (cf. $RIVET_ANALYSIS_PATH).")
+                      help="append the current directory (pwd) to the analysis/data search paths (cf. $RIVET_ANALYSIS/DATA_PATH)")
+    parser.add_option("-v", "--verbose", dest="VERBOSE", action="store_true", default=False,
+                      help="produce debug output to the terminal")
 
     stygroup = OptionGroup(parser, "Plot style")
     stygroup.add_option("--linear", action="store_true", dest="LINEAR",
@@ -90,11 +92,11 @@ def getCommandLineOptions():
     # #                     default=None, help="specify a file containing a list of histograms to plot, in the format "
     # #                     "/ANALYSIS_ID/histoname, one per line, e.g. '/DELPHI_1996_S3430090/d01-x01-y01'.")
     selgroup.add_option("-m", "--match", action="append",
-                        help="Only write out histograms whose $path/$name string matches these regexes. The argument "
+                        help="only write out histograms whose $path/$name string matches these regexes. The argument "
                         "may also be a text file.",
                         dest="PATHPATTERNS")
     selgroup.add_option("-M", "--unmatch", action="append",
-                        help="Exclude histograms whose $path/$name string matches these regexes",
+                        help="exclude histograms whose $path/$name string matches these regexes",
                         dest="PATHUNPATTERNS")
     parser.add_option_group(selgroup)
 
@@ -108,6 +110,7 @@ def getHistos(filelist):
     for infile in filelist:
         mchistos.setdefault(infile, {})
         analysisobjects = yoda.read(infile, patterns=opts.PATHPATTERNS, unpatterns=opts.PATHUNPATTERNS)
+        print analysisobjects
         for path, ao in analysisobjects.iteritems():
             ## We can't plot non-histograms yet
             # TODO: support counter plotting with a faked x (or y) position and forced plot width/height
@@ -288,7 +291,8 @@ if __name__ == '__main__':
 
     ## Add pwd to search paths
     if opts.PATH_PWD:
-        rivet.addAnalysisLibPath(".")
+        rivet.addAnalysisLibPath(os.path.abspath("."))
+        rivet.addAnalysisDataPath(os.path.abspath("."))
 
     ## Split the input file names and the associated plotting options
     ## given on the command line into two separate lists

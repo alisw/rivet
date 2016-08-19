@@ -27,7 +27,7 @@ namespace Rivet {
       Cut etaRanges_MU = Cuts::abseta < 2.4 && Cuts::pT > 20*GeV;
 
       MissingMomentum met(fs);
-      addProjection(met, "MET");
+      declare(met, "MET");
 
       IdentifiedFinalState Photon(fs);
       Photon.acceptIdPair(PID::PHOTON);
@@ -40,7 +40,7 @@ namespace Rivet {
 
       IdentifiedFinalState neutrinoFS(fs);
       neutrinoFS.acceptNeutrinos();
-      addProjection(neutrinoFS, "Neutrinos");
+      declare(neutrinoFS, "Neutrinos");
 
       ////////////////////////////////////////////////////////
       // DRESSED LEPTONS
@@ -50,17 +50,17 @@ namespace Rivet {
       //
       //////////////////////////////////////////////////////////
       DressedLeptons electronFS(Photon, bare_EL, 0.1, etaRanges_EL);
-      addProjection(electronFS, "ELECTRON_FS");
+      declare(electronFS, "ELECTRON_FS");
 
       DressedLeptons muonFS(Photon, bare_MU, 0.1, etaRanges_MU);
-      addProjection(muonFS, "MUON_FS");
+      declare(muonFS, "MUON_FS");
 
       VetoedFinalState jetinput;
       jetinput.addVetoOnThisFinalState(bare_MU);
       jetinput.addVetoOnThisFinalState(neutrinoFS);
 
       FastJets jetpro(jetinput, FastJets::ANTIKT, 0.4);
-      addProjection(jetpro, "jet");
+      declare(jetpro, "jet");
 
       // Book histograms
       _h_Wl1_pT_mumu = bookHisto1D(1, 1, 2);
@@ -73,9 +73,9 @@ namespace Rivet {
     /// Do the analysis
     void analyze(const Event& e) {
 
-      const  vector<DressedLepton>& muonFS = applyProjection<DressedLeptons>(e, "MUON_FS").dressedLeptons();
-      const  vector<DressedLepton>& electronFS = applyProjection<DressedLeptons>(e, "ELECTRON_FS").dressedLeptons();
-      const MissingMomentum& met = applyProjection<MissingMomentum>(e, "MET");
+      const  vector<DressedLepton>& muonFS = apply<DressedLeptons>(e, "MUON_FS").dressedLeptons();
+      const  vector<DressedLepton>& electronFS = apply<DressedLeptons>(e, "ELECTRON_FS").dressedLeptons();
+      const MissingMomentum& met = apply<MissingMomentum>(e, "MET");
 
       vector<DressedLepton> dressed_lepton, isolated_lepton, fiducial_lepton;
       dressed_lepton.insert(dressed_lepton.end(), muonFS.begin(), muonFS.end());
@@ -142,7 +142,7 @@ namespace Rivet {
       //
       /////////////////////////////////////////////////////////////////////////
       Jets alljets, vetojets;
-      foreach (const Jet& j, applyProjection<FastJets>(e, "jet").jetsByPt(25)) {
+      foreach (const Jet& j, apply<FastJets>(e, "jet").jetsByPt(25)) {
         if (j.absrap() > 4.5 ) continue;
         alljets.push_back(j);
         bool deltaRcontrol = true;

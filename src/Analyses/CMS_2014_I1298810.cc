@@ -22,9 +22,9 @@ namespace Rivet {
     void init() {
       // Projections
       FastJets jetsak5(FinalState(), FastJets::ANTIKT, 0.5);
-      addProjection(jetsak5, "JetsAK5");
+      declare(jetsak5, "JetsAK5");
       FastJets jetsak7(FinalState(), FastJets::ANTIKT, 0.7);
-      addProjection(jetsak7, "JetsAK7");
+      declare(jetsak7, "JetsAK7");
 
       // Histograms
       _h_pt_05_ak5    = bookHisto1D(1, 1, 1);
@@ -53,8 +53,8 @@ namespace Rivet {
     /// Perform the per-event analysis
     void analyze(const Event& event) {
 
-      const Jets& jetsak5 = applyProjection<FastJets>(event, "JetsAK5").jetsByPt(56*GeV);
-      const Jets& jetsak7 = applyProjection<FastJets>(event, "JetsAK7").jetsByPt(56*GeV);
+      const Jets& jetsak5 = apply<FastJets>(event, "JetsAK5").jetsByPt(56*GeV);
+      const Jets& jetsak7 = apply<FastJets>(event, "JetsAK7").jetsByPt(56*GeV);
       if (jetsak5.size() < 1 && jetsak7.size() < 1) vetoEvent;
 
       const double weight = event.weight();

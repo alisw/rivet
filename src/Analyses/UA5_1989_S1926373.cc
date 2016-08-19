@@ -21,11 +21,11 @@ namespace Rivet {
 
     /// Book histograms and projections
     void init() {
-      addProjection(TriggerUA5(), "Trigger");
-      addProjection(ChargedFinalState(-0.5, 0.5), "CFS05");
-      addProjection(ChargedFinalState(-1.5, 1.5), "CFS15");
-      addProjection(ChargedFinalState(-3.0, 3.0), "CFS30");
-      addProjection(ChargedFinalState(-5.0, 5.0), "CFS50");
+      declare(TriggerUA5(), "Trigger");
+      declare(ChargedFinalState(-0.5, 0.5), "CFS05");
+      declare(ChargedFinalState(-1.5, 1.5), "CFS15");
+      declare(ChargedFinalState(-3.0, 3.0), "CFS30");
+      declare(ChargedFinalState(-5.0, 5.0), "CFS50");
 
       // NB. _hist_nch and _hist_ncheta50 use the same data but different binning
       if (fuzzyEquals(sqrtS()/GeV, 200, 1E-3)) {
@@ -51,17 +51,17 @@ namespace Rivet {
     /// Do the analysis
     void analyze(const Event& event) {
       // Trigger
-      const TriggerUA5& trigger = applyProjection<TriggerUA5>(event, "Trigger");
+      const TriggerUA5& trigger = apply<TriggerUA5>(event, "Trigger");
       if (!trigger.nsdDecision()) vetoEvent;
 
       const double weight = event.weight();
       _sumWPassed += weight;
 
       // Count final state particles in several eta regions
-      const int numP05 = applyProjection<ChargedFinalState>(event, "CFS05").size();
-      const int numP15 = applyProjection<ChargedFinalState>(event, "CFS15").size();
-      const int numP30 = applyProjection<ChargedFinalState>(event, "CFS30").size();
-      const int numP50 = applyProjection<ChargedFinalState>(event, "CFS50").size();
+      const int numP05 = apply<ChargedFinalState>(event, "CFS05").size();
+      const int numP15 = apply<ChargedFinalState>(event, "CFS15").size();
+      const int numP30 = apply<ChargedFinalState>(event, "CFS30").size();
+      const int numP50 = apply<ChargedFinalState>(event, "CFS50").size();
 
       // Fill histograms
       _hist_nch->fill(numP50, weight);

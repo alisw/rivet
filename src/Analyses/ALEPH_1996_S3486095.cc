@@ -50,16 +50,16 @@ namespace Rivet {
 
     void init() {
       // Set up projections
-      addProjection(Beam(), "Beams");
+      declare(Beam(), "Beams");
       const ChargedFinalState cfs;
-      addProjection(cfs, "FS");
-      addProjection(UnstableFinalState(), "UFS");
-      addProjection(FastJets(cfs, FastJets::DURHAM, 0.7), "DurhamJets");
-      addProjection(Sphericity(cfs), "Sphericity");
-      addProjection(ParisiTensor(cfs), "Parisi");
+      declare(cfs, "FS");
+      declare(UnstableFinalState(), "UFS");
+      declare(FastJets(cfs, FastJets::DURHAM, 0.7), "DurhamJets");
+      declare(Sphericity(cfs), "Sphericity");
+      declare(ParisiTensor(cfs), "Parisi");
       const Thrust thrust(cfs);
-      addProjection(thrust, "Thrust");
-      addProjection(Hemispheres(thrust), "Hemispheres");
+      declare(thrust, "Thrust");
+      declare(Hemispheres(thrust), "Hemispheres");
 
       // Book histograms
       _histSphericity   = bookHisto1D(1, 1, 1);
@@ -131,7 +131,7 @@ namespace Rivet {
 
     void analyze(const Event& e) {
       // First, veto on leptonic events by requiring at least 4 charged FS particles
-      const FinalState& fs = applyProjection<FinalState>(e, "FS");
+      const FinalState& fs = apply<FinalState>(e, "FS");
       const size_t numParticles = fs.particles().size();
 
       // Even if we only generate hadronic events, we still need a cut on numCharged >= 2.
@@ -146,21 +146,21 @@ namespace Rivet {
       _weightedTotalPartNum += numParticles * weight;
 
       // Get beams and average beam momentum
-      const ParticlePair& beams = applyProjection<Beam>(e, "Beams").beams();
+      const ParticlePair& beams = apply<Beam>(e, "Beams").beams();
       const double meanBeamMom = ( beams.first.p3().mod() +
                                    beams.second.p3().mod() ) / 2.0;
       MSG_DEBUG("Avg beam momentum = " << meanBeamMom);
 
       // Thrusts
       MSG_DEBUG("Calculating thrust");
-      const Thrust& thrust = applyProjection<Thrust>(e, "Thrust");
+      const Thrust& thrust = apply<Thrust>(e, "Thrust");
       _hist1MinusT->fill(1 - thrust.thrust(), weight);
       _histTMinor->fill(thrust.thrustMinor(), weight);
       _histOblateness->fill(thrust.oblateness(), weight);
 
       // Jets
       MSG_DEBUG("Calculating differential jet rate plots:");
-      const FastJets& durjet = applyProjection<FastJets>(e, "DurhamJets");
+      const FastJets& durjet = apply<FastJets>(e, "DurhamJets");
       if (durjet.clusterSeq()) {
         double y3 = durjet.clusterSeq()->exclusive_ymerge_max(2);
         if (y3>0.0) _histY3->fill(-1. * std::log(y3), weight);
@@ -168,18 +168,18 @@ namespace Rivet {
 
       // Sphericities
       MSG_DEBUG("Calculating sphericity");
-      const Sphericity& sphericity = applyProjection<Sphericity>(e, "Sphericity");
+      const Sphericity& sphericity = apply<Sphericity>(e, "Sphericity");
       _histSphericity->fill(sphericity.sphericity(), weight);
       _histAplanarity->fill(sphericity.aplanarity(), weight);
 
       // C param
       MSG_DEBUG("Calculating Parisi params");
-      const ParisiTensor& parisi = applyProjection<ParisiTensor>(e, "Parisi");
+      const ParisiTensor& parisi = apply<ParisiTensor>(e, "Parisi");
       _histCParam->fill(parisi.C(), weight);
 
       // Hemispheres
       MSG_DEBUG("Calculating hemisphere variables");
-      const Hemispheres& hemi = applyProjection<Hemispheres>(e, "Hemispheres");
+      const Hemispheres& hemi = apply<Hemispheres>(e, "Hemispheres");
       _histHeavyJetMass->fill(hemi.scaledM2high(), weight);
 
       // Iterate over all the charged final state particles.
@@ -239,7 +239,7 @@ namespace Rivet {
 
 
       //// Final state of unstable particles to get particle spectra
-      const UnstableFinalState& ufs = applyProjection<UnstableFinalState>(e, "UFS");
+      const UnstableFinalState& ufs = apply<UnstableFinalState>(e, "UFS");
       for (Particles::const_iterator p = ufs.particles().begin(); p != ufs.particles().end(); ++p) {
         const Vector3 mom3 = p->momentum().p3();
         int id = abs(p->pid());

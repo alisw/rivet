@@ -16,7 +16,7 @@ namespace Rivet {
 
     void init() {
       ChargedFinalState cfs(-7.0, 7.0, 0.0*GeV);
-      addProjection(cfs, "CFS");
+      declare(cfs, "CFS");
 
       _Nevt_after_cuts_or = 0;
       _Nevt_after_cuts_and = 0;
@@ -32,7 +32,7 @@ namespace Rivet {
 
     void analyze(const Event& event) {
       // Count forward and backward charged particles
-      const ChargedFinalState& charged = applyProjection<ChargedFinalState>(event, "CFS");
+      const ChargedFinalState& charged = apply<ChargedFinalState>(event, "CFS");
       int count_plus = 0, count_minus = 0;
       foreach (const Particle& p, charged.particles()) {
         if (inRange(p.eta(),  5.3,  6.5)) count_plus++;

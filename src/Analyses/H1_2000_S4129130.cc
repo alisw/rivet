@@ -6,11 +6,11 @@
 
 namespace Rivet {
 
-  
-
 
   /// @brief H1 energy flow and charged particle spectra
+  ///
   /// @author Peter Richardson
+  ///
   /// Based on the HZTOOL analysis HZ99091
   class H1_2000_S4129130 : public Analysis {
   public:
@@ -24,28 +24,70 @@ namespace Rivet {
     /// @name Analysis methods
     //@{
 
-    void analyze(const Event& event) {
-      // Get the projections
-      const FinalState & fs = applyProjection<FinalState>(event, "FS");
-      const DISKinematics& dk = applyProjection<DISKinematics>(event, "Kinematics");
-      const DISLepton    & dl = applyProjection<DISLepton>(event,"Lepton");
+    /// Initialise projections and histograms
+    void init() {
+      // Projections
+      declare(DISLepton(), "Lepton");
+      declare(DISKinematics(), "Kinematics");
+      declare(FinalState(), "FS");
 
-      // Get the DIS kinematics
+      // Histos
+      Histo1DPtr h;
+
+      // Histograms and weight vectors for low Q^2 a
+      for (size_t ix = 0; ix < 17; ++ix) {
+        h = bookHisto1D(ix+1, 1, 1);
+        _histETLowQa.push_back(h);
+        _weightETLowQa.push_back(0.);
+      }
+
+      // Histograms and weight vectors for high Q^2 a
+      for (size_t ix = 0; ix < 7; ++ix) {
+        h = bookHisto1D(ix+18, 1, 1);
+        _histETHighQa.push_back(h);
+        _weightETHighQa.push_back(0.);
+      }
+
+      // Histograms and weight vectors for low Q^2 b
+      for (size_t ix = 0; ix < 5; ++ix) {
+        h = bookHisto1D(ix+25, 1, 1);
+        _histETLowQb.push_back(h);
+        _weightETLowQb.push_back(0.);
+      }
+
+      // Histograms and weight vectors for high Q^2 b
+      for (size_t ix = 0; ix < 3; ++ix) {
+        h = bookHisto1D(30+ix, 1, 1);
+        _histETHighQb.push_back(h);
+        _weightETHighQb.push_back(0.0);
+      }
+
+      // Histograms for the averages
+      _histAverETCentral = bookProfile1D(33,  1, 1);
+      _histAverETFrag = bookProfile1D(34,  1, 1);
+    }
+
+
+    /// Analyze each event
+    void analyze(const Event& event) {
+
+      // DIS kinematics
+      const DISKinematics& dk = apply<DISKinematics>(event, "Kinematics");
       double q2  = dk.Q2();
       double x   = dk.x();
       double y   = dk.y();
       double w2  = dk.W2();
 
-      // Momentum of the scattered lepton
-      FourMomentum leptonMom = dl.out().momentum();
-      // pT energy and angle
-      double enel = leptonMom.E();
-      double thel = 180 - leptonMom.angle(dl.in().momentum())/degree;
+      // Kinematics of the scattered lepton
+      const DISLepton& dl = apply<DISLepton>(event,"Lepton");
+      const FourMomentum leptonMom = dl.out();
+      const double enel = leptonMom.E();
+      const double thel = 180 - leptonMom.angle(dl.in().mom())/degree;
 
       // Extract the particles other than the lepton
-      Particles particles;
-      particles.reserve(fs.particles().size());
-      const GenParticle* dislepGP = dl.out().genParticle();
+      const FinalState& fs = apply<FinalState>(event, "FS");
+      Particles particles; particles.reserve(fs.size());
+      const GenParticle* dislepGP = dl.out().genParticle(); ///< @todo Is the GenParticle stuff necessary? (Not included in Particle::==?)
       foreach (const Particle& p, fs.particles()) {
         const GenParticle* loopGP = p.genParticle();
         if (loopGP == dislepGP) continue;
@@ -55,8 +97,8 @@ namespace Rivet {
       // Cut on the forward energy
       double efwd = 0.;
       foreach (const Particle& p, particles) {
-        double th = 180.-p.angle(dl.in().momentum())/degree;
-        if (th > 4.4 && th < 15.0) efwd += p.E();
+        const double th = 180 - p.angle(dl.in())/degree;
+        if (inRange(th, 4.4, 15.0)) efwd += p.E();
       }
       // There are four possible selections for events
       bool evcut[4];
@@ -70,9 +112,8 @@ namespace Rivet {
       evcut[3] = inRange(thel,12.,150.) && inRange(y,0.05,0.6) && inRange(w2,27110.*GeV2,45182.*GeV2);
 
       // Veto if fails all cuts
-      if (! (evcut[0] || evcut[1] || evcut[2] || evcut[3]) ) {
-        vetoEvent;
-      }
+      /// @todo Can we use all()?
+      if (! (evcut[0] || evcut[1] || evcut[2] || evcut[3]) ) vetoEvent;
 
       // Find the bins
       int bin[4] = {-1,-1,-1,-1};
@@ -138,9 +179,8 @@ namespace Rivet {
       evcut[3] &= bin[3] >= 0;
 
       // Veto if fails all cuts after bin selection
-      if (! (evcut[0] || evcut[1] || evcut[2] || evcut[3])) {
-        vetoEvent;
-      }
+      /// @todo Can we use all()?
+      if (! (evcut[0] || evcut[1] || evcut[2] || evcut[3])) vetoEvent;
 
       // Increment the count for normalisation
       const double weight = event.weight();
@@ -149,7 +189,7 @@ namespace Rivet {
       if (evcut[2]) _weightETHighQa[bin[2]] += weight;
       if (evcut[3]) _weightETHighQb[bin[3]] += weight;
 
-      // Boost to hadronicCM
+      // Boost to hadronic CoM
       const LorentzTransform hcmboost = dk.boostHCM();
 
       // Loop over the particles
@@ -171,60 +211,9 @@ namespace Rivet {
       }
       // Fill histograms for the average quantities
       if (evcut[1] || evcut[3]) {
-        _histAverETCentral->fill(q2, etcent*weight,weight);
-        _histAverETFrag   ->fill(q2, etfrag*weight,weight);
+        _histAverETCentral->fill(q2, etcent, weight);
+        _histAverETFrag   ->fill(q2, etfrag, weight);
       }
-    }
-
-
-    void init() {
-      // Projections
-      addProjection(DISLepton(), "Lepton");
-      addProjection(DISKinematics(), "Kinematics");
-      addProjection(FinalState(), "FS");
-
-      // Histos
-      Histo1DPtr h;
-
-      // Histograms and weight vectors for low Q^2 a
-      _histETLowQa.reserve(17);
-      _weightETLowQa.reserve(17);
-      for (size_t ix = 0; ix < 17; ++ix) {
-        h = bookHisto1D(ix+1, 1, 1);
-        _histETLowQa.push_back(h);
-        _weightETLowQa.push_back(0.);
-      }
-
-      // Histograms and weight vectors for high Q^2 a
-      _histETHighQa.reserve(7);
-      _weightETHighQa.reserve(7);
-      for (size_t ix = 0; ix < 7; ++ix) {
-        h = bookHisto1D(ix+18, 1, 1);
-        _histETHighQa.push_back(h);
-        _weightETHighQa.push_back(0.);
-      }
-
-      // Histograms and weight vectors for low Q^2 b
-      _histETLowQb.reserve(5);
-      _weightETLowQb.reserve(5);
-      for (size_t ix = 0; ix < 5; ++ix) {
-        h = bookHisto1D(ix+25, 1, 1);
-        _histETLowQb.push_back(h);
-        _weightETLowQb.push_back(0.);
-      }
-
-      // Histograms and weight vectors for high Q^2 b
-      _histETHighQb.reserve(3);
-      _weightETHighQb.reserve(3);
-      for (size_t ix = 0; ix < 3; ++ix) {
-        h = bookHisto1D(30+ix, 1, 1);
-        _histETHighQb.push_back(h);
-        _weightETHighQb.push_back(0.0);
-      }
-
-      // Histograms for the averages
-      _histAverETCentral = bookProfile1D(33,  1, 1);
-      _histAverETFrag = bookProfile1D(34,  1, 1);
     }
 
 
@@ -237,7 +226,6 @@ namespace Rivet {
       for (size_t ix = 0; ix <  5; ++ix) if (_weightETLowQb[ix]  != 0) scale(_histETLowQb[ix],  1/_weightETLowQb[ix]);
       for (size_t ix = 0; ix <  3; ++ix) if (_weightETHighQb[ix] != 0) scale(_histETHighQb[ix], 1/_weightETHighQb[ix]);
     }
-
 
     //@}
 
@@ -261,11 +249,11 @@ namespace Rivet {
     vector<double> _weightETLowQb;
     vector<double> _weightETHighQb;
     //@}
+
   };
 
 
 
-  // The hook for the plugin system
   DECLARE_RIVET_PLUGIN(H1_2000_S4129130);
 
 }

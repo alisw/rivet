@@ -8,7 +8,7 @@
 #include "HepMC/GenRanges.h"
 #include "HepMC/IO_GenEvent.h"
 #include "Rivet/Tools/RivetSTL.hh"
-#include "Rivet/Exceptions.hh"
+#include "Rivet/Tools/Exceptions.hh"
 
 namespace Rivet {
 
@@ -80,29 +80,51 @@ namespace Rivet {
   }
 
 
-  inline std::pair<GenVertex::particles_in_const_iterator, GenVertex::particles_in_const_iterator>
-  particles_in(const GenVertex* gv) {
-    return make_pair(gv->particles_in_const_begin(), gv->particles_in_const_end());
+
+  // Get iterator ranges as wrapped begin/end pairs
+  /// @note GenVertex _in and _out iterators are actually, secretly the same types *sigh*
+  struct GenVertexIterRangeC {
+    GenVertexIterRangeC(const GenVertex::particles_in_const_iterator& begin, const GenVertex::particles_in_const_iterator& end)
+      : _begin(begin), _end(end) {  }
+    const GenVertex::particles_in_const_iterator& begin() { return _begin; }
+    const GenVertex::particles_in_const_iterator& end() { return _end; }
+  private:
+    const GenVertex::particles_in_const_iterator _begin, _end;
+  };
+
+  inline GenVertexIterRangeC particles_in(const GenVertex* gv) {
+    return GenVertexIterRangeC(gv->particles_in_const_begin(), gv->particles_in_const_end());
   }
+
+  inline GenVertexIterRangeC particles_out(const GenVertex* gv) {
+    return GenVertexIterRangeC(gv->particles_out_const_begin(), gv->particles_out_const_end());
+  }
+
+
 
   #if HEPMC_VERSION_CODE >= 2007000
-  inline std::pair<GenVertex::particles_in_iterator, GenVertex::particles_in_iterator>
-  particles_in(GenVertex* gv) {
-    return make_pair(gv->particles_in_begin(), gv->particles_in_end());
+
+  // Get iterator ranges as wrapped begin/end pairs
+  /// @note GenVertex _in and _out iterators are actually, secretly the same types *sigh*
+  struct GenVertexIterRange {
+    GenVertexIterRange(const GenVertex::particles_in_iterator& begin, const GenVertex::particles_in_iterator& end)
+      : _begin(begin), _end(end) {  }
+    const GenVertex::particles_in_iterator& begin() { return _begin; }
+    const GenVertex::particles_in_iterator& end() { return _end; }
+  private:
+    const GenVertex::particles_in_iterator _begin, _end;
+  };
+
+  inline GenVertexIterRange particles_in(const GenVertex* gv) {
+    return GenVertexIterRange(gv->particles_in_begin(), gv->particles_in_end());
   }
+
+  inline GenVertexIterRange particles_out(const GenVertex* gv) {
+    return GenVertexIterRange(gv->particles_out_begin(), gv->particles_out_end());
+  }
+
   #endif
 
-  inline std::pair<GenVertex::particles_out_const_iterator, GenVertex::particles_out_const_iterator>
-  particles_out(const GenVertex* gv) {
-    return make_pair(gv->particles_out_const_begin(), gv->particles_out_const_end());
-  }
-
-  #if HEPMC_VERSION_CODE >= 2007000
-  inline std::pair<GenVertex::particles_out_iterator, GenVertex::particles_out_iterator>
-  particles_out(GenVertex* gv) {
-    return make_pair(gv->particles_out_begin(), gv->particles_out_end());
-  }
-  #endif
 
   //////////////////////////
 

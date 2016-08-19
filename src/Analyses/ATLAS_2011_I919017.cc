@@ -79,8 +79,8 @@ namespace Rivet {
       ChargedFinalState cfs(-2.5, 2.5, 0.3*GeV);
       FastJets trkjets04(cfs, FastJets::ANTIKT, 0.4);
       FastJets trkjets06(cfs, FastJets::ANTIKT, 0.6);
-      addProjection(trkjets04, "Jets04");
-      addProjection(trkjets06, "Jets06");
+      declare(trkjets04, "Jets04");
+      declare(trkjets06, "Jets06");
 
       // Book histograms
       _h_pt04_00_05 = bookHisto1D(1, 1, 1);
@@ -302,7 +302,7 @@ namespace Rivet {
     void analyze(const Event& event) {
       const double weight = event.weight();
 
-      const Jets& jets04 = applyProjection<JetAlg>(event, "Jets04").jets();
+      const Jets& jets04 = apply<JetAlg>(event, "Jets04").jets();
       if (!jets04.empty()) {
         _sumofweights04 += weight;
         foreach (const Jet& j, jets04) {
@@ -549,7 +549,7 @@ namespace Rivet {
         } // each jet
       } // jets04 not empty
 
-      const Jets& jets06 = applyProjection<JetAlg>(event, "Jets06").jets();
+      const Jets& jets06 = apply<JetAlg>(event, "Jets06").jets();
       if (!jets06.empty()) {
         _sumofweights06 += weight;
         foreach (const Jet& j, jets06) {

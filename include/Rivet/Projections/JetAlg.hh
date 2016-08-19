@@ -30,7 +30,7 @@ namespace Rivet {
     JetAlg() {};
 
     /// Clone on the heap.
-    virtual const Projection* clone() const = 0;
+    virtual unique_ptr<Projection> clone() const = 0;
 
     /// Destructor
     virtual ~JetAlg() { }
@@ -69,7 +69,7 @@ namespace Rivet {
     /// in which neutrinos from hadron decays are included via MC-based calibrations.
     /// Setting this flag to true avoids the automatic restriction to a VisibleFinalState.
     ///
-    /// @deprecated Use the enum-arg version instead
+    /// @deprecated Use the enum-arg version instead. Will be removed in Rivet v3
     void useInvisibles(bool useinvis) {
       _useInvisibles = useinvis ? DECAY_INVISIBLES : NO_INVISIBLES;
     }
@@ -82,23 +82,24 @@ namespace Rivet {
 
     /// Get jets in no guaranteed order, with optional cuts on \f$ p_\perp \f$ and rapidity.
     /// @note Returns a copy rather than a reference, due to cuts
-    /// @todo Can't this be a const Cut& arg?
-    virtual Jets jets(const Cut & c = Cuts::open()) const {
-      const Jets rawjets = _jets(0.0); // arg means no pT cut
-      // Just return a copy of rawjets if the cut is open
-      if (c == Cuts::open()) return rawjets;
-      // If there is a non-trivial cut...
-      Jets rtn;
-      rtn.reserve(size());
-      foreach (const Jet& j, rawjets)
-        if (c->accept(j)) rtn.push_back(j);
-      return rtn;
+    virtual Jets jets(const Cut& c=Cuts::open()) const {
+      return filterBy(_jets(), c);
+      // const Jets rawjets = _jets();
+      // // Just return a copy of rawjets if the cut is open
+      // if (c == Cuts::open()) return rawjets;
+      // // If there is a non-trivial cut...
+      // /// @todo Use an STL erase(remove_if) and lambda function for this
+      // Jets rtn;
+      // rtn.reserve(size());
+      // foreach (const Jet& j, rawjets)
+      //   if (c->accept(j)) rtn.push_back(j);
+      // return rtn;
     }
 
     /// Get the jets, ordered by supplied sorting function object, with optional cuts on \f$ p_\perp \f$ and rapidity.
     /// @note Returns a copy rather than a reference, due to cuts and sorting
     template <typename F>
-    Jets jets(F sorter, const Cut & c = Cuts::open()) const {
+    Jets jets(F sorter, const Cut& c=Cuts::open()) const {
       /// @todo Will the vector be efficiently std::move'd by value through this function chain?
       return sortBy(jets(c), sorter);
     }
@@ -106,7 +107,7 @@ namespace Rivet {
     /// Get the jets, ordered by supplied sorting function object, with optional cuts on \f$ p_\perp \f$ and rapidity.
     /// @note Returns a copy rather than a reference, due to cuts and sorting
     template <typename F>
-    Jets jets(const Cut & c ,  F sorter) const {
+    Jets jets(const Cut& c, F sorter) const {
       /// @todo Will the vector be efficiently std::move'd by value through this function chain?
       return sortBy(jets(c), sorter);
     }
@@ -118,7 +119,7 @@ namespace Rivet {
     ///
     /// This is a very common use-case, so is available as syntatic sugar for jets(c, cmpMomByPt).
     /// @todo The other sorted accessors should be removed in a cleanup.
-    Jets jetsByPt(const Cut & c = Cuts::open()) const {
+    Jets jetsByPt(const Cut& c=Cuts::open()) const {
       return jets(c, cmpMomByPt);
     }
 
@@ -126,14 +127,14 @@ namespace Rivet {
 
 
     /// @name Old sorted jet accessors
-    /// @deprecated Use the versions with sorter function arguments
+    /// @deprecated Use the versions with sorter function arguments. These will be removed in Rivet v3
     //@{
 
     /// Get the jets, ordered by \f$ |p| \f$, with optional cuts on \f$ p_\perp \f$ and rapidity.
     /// @note Returns a copy rather than a reference, due to cuts and sorting
     /// @deprecated Use the version with a sorter function argument.
     DEPRECATED("Use the version with a sorter function argument.")
-    Jets jetsByP(const Cut & c = Cuts::open()) const {
+    Jets jetsByP(const Cut& c=Cuts::open()) const {
       return jets(c, cmpMomByP);
     }
 
@@ -141,7 +142,7 @@ namespace Rivet {
     /// @note Returns a copy rather than a reference, due to cuts and sorting
     /// @deprecated Use the version with a sorter function argument.
     DEPRECATED("Use the version with a sorter function argument.")
-    Jets jetsByE(const Cut & c = Cuts::open()) const {
+    Jets jetsByE(const Cut &c=Cuts::open()) const {
       return jets(c, cmpMomByE);
     }
 
@@ -149,7 +150,7 @@ namespace Rivet {
     /// @note Returns a copy rather than a reference, due to cuts and sorting
     /// @deprecated Use the version with a sorter function argument.
     DEPRECATED("Use the version with a sorter function argument.")
-    Jets jetsByEt(const Cut & c = Cuts::open()) const {
+    Jets jetsByEt(const Cut& c=Cuts::open()) const {
       return jets(c, cmpMomByEt);
     }
 
@@ -193,18 +194,17 @@ namespace Rivet {
   protected:
 
     /// @brief Internal pure virtual method for getting jets in no guaranteed order.
-    /// An optional cut on min \f$ p_\perp \f$ is applied in this function, since that is
-    /// directly supported by FastJet and it seems a shame to not make use of that. But
-    /// all other jet cuts are applied at the @c ::jets() function level.
-    /// @todo Remove the ptmin cut
-    virtual Jets _jets(double ptmin=0) const = 0;
+    virtual Jets _jets() const = 0;
 
 
   public:
 
-    /// Number of jets.
-    virtual size_t size() const = 0;
-    /// Determine if the jet collection is empty.
+    /// Number of jets passing the provided Cut.
+    size_t numJets(const Cut& c=Cuts::open()) const { return jets(c).size(); }
+
+    /// Number of jets (without cuts).
+    size_t size() const { return jets().size(); }
+    /// Whether the inclusive jet collection is empty.
     bool empty() const { return size() != 0; }
 
     /// Clear the projection.
@@ -216,8 +216,8 @@ namespace Rivet {
     /// Template-usable interface common to FinalState.
     collection_type entities() const { return jets(); }
 
-    /// Do the calculation locally (no caching).
-    virtual void calc(const Particles& constituents, const Particles& tagparticles=Particles()) = 0;
+    // /// Do the calculation locally (no caching).
+    // virtual void calc(const Particles& constituents, const Particles& tagparticles=Particles()) = 0;
 
 
   protected:

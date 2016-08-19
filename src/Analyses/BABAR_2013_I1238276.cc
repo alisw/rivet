@@ -1,9 +1,7 @@
 // -*- C++ -*-
-#include <iostream>
 #include "Rivet/Analysis.hh"
 #include "Rivet/Projections/Beam.hh"
 #include "Rivet/Projections/ChargedFinalState.hh"
-#include "Rivet/Tools/ParticleIdUtils.hh"
 
 namespace Rivet {
 
@@ -18,16 +16,29 @@ namespace Rivet {
     { }
 
 
+    void init() {
+      declare(Beam(), "Beams");
+      declare(ChargedFinalState(), "FS");
+
+      _histPion_no_dec   = bookHisto1D(1,1,1);
+      _histKaon_no_dec   = bookHisto1D(1,1,2);
+      _histProton_no_dec = bookHisto1D(1,1,3);
+      _histPion_dec      = bookHisto1D(2,1,1);
+      _histKaon_dec      = bookHisto1D(2,1,2);
+      _histProton_dec    = bookHisto1D(2,1,3);
+    }
+
+
     void analyze(const Event& e) {
       const double weight = e.weight();
 
       // Loop through charged FS particles and look for charmed mesons/baryons
-      const ChargedFinalState& fs = applyProjection<ChargedFinalState>(e, "FS");
+      const ChargedFinalState& fs = apply<ChargedFinalState>(e, "FS");
 
-      const Beam beamproj = applyProjection<Beam>(e, "Beams");
+      const Beam beamproj = apply<Beam>(e, "Beams");
       const ParticlePair& beams = beamproj.beams();
-      FourMomentum mom_tot = beams.first.momentum() + beams.second.momentum();
-      LorentzTransform cms_boost(-mom_tot.boostVector());
+      const FourMomentum mom_tot = beams.first.momentum() + beams.second.momentum();
+      const LorentzTransform cms_boost = LorentzTransform::mkFrameTransformFromBeta(mom_tot.betaVec());
       MSG_DEBUG("CMS Energy sqrt s = " << beamproj.sqrtS());
 
       foreach (const Particle& p, fs.particles()) {
@@ -50,7 +61,6 @@ namespace Rivet {
           ivertex = pmother->production_vertex();
         }
 
-
         // momentum in CMS frame
         const double mom = cms_boost.transform(p.momentum()).vector3().mod();
         const int PdgId = p.abspid();
@@ -71,32 +81,18 @@ namespace Rivet {
           break;
         }
       }
-    } // analyze
+    }
 
 
     void finalize() {
-
       scale(_histPion_no_dec  ,1./sumOfWeights());
       scale(_histKaon_no_dec  ,1./sumOfWeights());
       scale(_histProton_no_dec,1./sumOfWeights());
       scale(_histPion_dec     ,1./sumOfWeights());
       scale(_histKaon_dec     ,1./sumOfWeights());
       scale(_histProton_dec   ,1./sumOfWeights());
-    } // finalize
+    }
 
-
-    void init() {
-      addProjection(Beam(), "Beams");
-      addProjection(ChargedFinalState(), "FS");
-
-      _histPion_no_dec   = bookHisto1D(1,1,1);
-      _histKaon_no_dec   = bookHisto1D(1,1,2);
-      _histProton_no_dec = bookHisto1D(1,1,3);
-      _histPion_dec      = bookHisto1D(2,1,1);
-      _histKaon_dec      = bookHisto1D(2,1,2);
-      _histProton_dec    = bookHisto1D(2,1,3);
-
-    } // init
 
   private:
 

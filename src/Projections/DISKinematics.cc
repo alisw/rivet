@@ -34,7 +34,7 @@ namespace Rivet {
 
     // Calculate boost vector for boost into HCM-system
     LorentzTransform tmp;
-    tmp.setBoost(-tothad.boostVector());
+    tmp.setBetaVec(-tothad.boostVector());
 
     // Rotate so the photon is in x-z plane in HCM rest frame
     FourMomentum pGammaHCM = tmp.transform(pGamma);
@@ -60,7 +60,7 @@ namespace Rivet {
     // Boost to Breit frame (use opposite convention for photon --- along *minus* z)
     tmp.preMult(Matrix3(Vector3::mkX(), PI));
     const double bz = 1 - 2*x();
-    _breit = LorentzTransform(Vector3::mkZ() * bz).combine(tmp);
+    _breit = LorentzTransform::mkObjTransformFromBeta(Vector3::mkZ() * bz).combine(tmp);
     assert(isZero(angle(_breit.transform(pGamma).vector3(), -Vector3::mkZ()), 1e-3));
     assert(isZero(_breit.transform(pLepOut).azimuthalAngle(), 1e-3));
   }

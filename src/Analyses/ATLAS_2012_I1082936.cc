@@ -31,15 +31,15 @@ namespace Rivet {
     void init() {
 
       const FinalState fs;
-      addProjection(fs,"FinalState");
+      declare(fs,"FinalState");
 
       FastJets fj04(fs,  FastJets::ANTIKT, 0.4);
       fj04.useInvisibles();
-      addProjection(fj04, "AntiKT04");
+      declare(fj04, "AntiKT04");
 
       FastJets fj06(fs,  FastJets::ANTIKT, 0.6);
       fj06.useInvisibles();
-      addProjection(fj06, "AntiKT06");
+      declare(fj06, "AntiKT06");
 
 
       // Histogram booking copied from the previous analysis
@@ -64,8 +64,8 @@ namespace Rivet {
     void analyze(const Event& event) {
       const double weight = event.weight();
       Jets jetAr[2];
-      jetAr[AKT6] = applyProjection<FastJets>(event, "AntiKT06").jetsByPt(20*GeV);
-      jetAr[AKT4] = applyProjection<FastJets>(event, "AntiKT04").jetsByPt(20*GeV);
+      jetAr[AKT6] = apply<FastJets>(event, "AntiKT06").jetsByPt(20*GeV);
+      jetAr[AKT4] = apply<FastJets>(event, "AntiKT04").jetsByPt(20*GeV);
 
       // Loop over jet "radii" used in analysis
       for (size_t alg = 0; alg < 2; ++alg) {

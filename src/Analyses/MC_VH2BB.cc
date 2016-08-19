@@ -6,9 +6,6 @@
 #include "Rivet/Projections/UnstableFinalState.hh"
 #include "Rivet/Projections/FastJets.hh"
 #include "Rivet/Math/LorentzTrans.hh"
-#include "Rivet/Math/Constants.hh"
-#include <cmath>
-#include <vector>
 
 namespace Rivet {
 
@@ -27,38 +24,8 @@ namespace Rivet {
     //@}
 
 
-  public:
-
     /// @name Analysis methods
     //@{
-
-    vector<double> boostAngles(const FourMomentum& b1, const FourMomentum& b2, const FourMomentum& vb){
-
-      // This should take in the four-momenta of two b's (jets/hadrons) and a vector boson, for the process VB*->VBH with H->bb
-      // It should return the smallest angle between the virtual vector boson and one of the b's, in the rest frame of the Higgs boson.
-      // It should also return (as the second element of the vector) the angle between the b's, in the rest frame of the Higgs boson.
-
-      FourMomentum higgsMomentum = b1 + b2;
-      FourMomentum virtualVBMomentum = higgsMomentum + vb;
-
-      LorentzTransform lt( -higgsMomentum.boostVector() );
-
-      FourMomentum virtualVBMomentumBOOSTED = lt.transform(virtualVBMomentum);
-      FourMomentum b1BOOSTED = lt.transform(b1);
-      FourMomentum b2BOOSTED = lt.transform(b2);
-
-      double angle1 = b1BOOSTED.angle(virtualVBMomentumBOOSTED);
-      double angle2 = b2BOOSTED.angle(virtualVBMomentumBOOSTED);
-
-      double anglebb = b1BOOSTED.angle(b2BOOSTED);
-
-      vector<double> toReturn;
-      toReturn.push_back(angle1 < angle2 ? angle1 : angle2);
-      toReturn.push_back(anglebb);
-
-      return toReturn;
-    }
-
 
     /// Book histograms and initialise projections before the run
     void init() {
@@ -66,18 +33,18 @@ namespace Rivet {
       FinalState fs;
       Cut cut = Cuts::abseta < 3.5 && Cuts::pT > 25*GeV;
       ZFinder zeefinder(fs, cut, PID::ELECTRON, 65*GeV, 115*GeV, 0.2);
-      addProjection(zeefinder, "ZeeFinder");
+      declare(zeefinder, "ZeeFinder");
       ZFinder zmmfinder(fs, cut, PID::MUON, 65*GeV, 115*GeV, 0.2);
-      addProjection(zmmfinder, "ZmmFinder");
+      declare(zmmfinder, "ZmmFinder");
       WFinder wefinder(fs, cut, PID::ELECTRON, 60*GeV, 100*GeV, 25*GeV, 0.2);
-      addProjection(wefinder, "WeFinder");
+      declare(wefinder, "WeFinder");
       WFinder wmfinder(fs, cut, PID::MUON, 60*GeV, 100*GeV, 25*GeV, 0.2);
-      addProjection(wmfinder, "WmFinder");
+      declare(wmfinder, "WmFinder");
 
-      addProjection(fs, "FinalState");
-      addProjection(FastJets(fs, FastJets::ANTIKT, 0.4), "AntiKT04");
-      addProjection(FastJets(fs, FastJets::ANTIKT, 0.5), "AntiKT05");
-      addProjection(FastJets(fs, FastJets::ANTIKT, 0.6), "AntiKT06");
+      declare(fs, "FinalState");
+      declare(FastJets(fs, FastJets::ANTIKT, 0.4), "AntiKT04");
+      declare(FastJets(fs, FastJets::ANTIKT, 0.5), "AntiKT05");
+      declare(FastJets(fs, FastJets::ANTIKT, 0.6), "AntiKT06");
 
       /// Book histograms
       _h_jet_bb_Delta_eta = bookHisto1D("jet_bb_Delta_eta", 50, 0, 4);
@@ -121,15 +88,15 @@ namespace Rivet {
 
       const double JETPTCUT = 30*GeV;
 
-      const ZFinder& zeefinder = applyProjection<ZFinder>(event, "ZeeFinder");
-      const ZFinder& zmmfinder = applyProjection<ZFinder>(event, "ZmmFinder");
-      const WFinder& wefinder = applyProjection<WFinder>(event, "WeFinder");
-      const WFinder& wmfinder = applyProjection<WFinder>(event, "WmFinder");
+      const ZFinder& zeefinder = apply<ZFinder>(event, "ZeeFinder");
+      const ZFinder& zmmfinder = apply<ZFinder>(event, "ZmmFinder");
+      const WFinder& wefinder = apply<WFinder>(event, "WeFinder");
+      const WFinder& wmfinder = apply<WFinder>(event, "WmFinder");
       const Particles vectorBosons = zeefinder.bosons() + zmmfinder.bosons() + wefinder.bosons() + wmfinder.bosons();
       _h_Z_multiplicity->fill(zeefinder.bosons().size() + zmmfinder.bosons().size(), weight);
       _h_W_multiplicity->fill(wefinder.bosons().size() + wmfinder.bosons().size(), weight);
 
-      const Jets jets = applyProjection<FastJets>(event, "AntiKT04").jetsByPt(JETPTCUT);
+      const Jets jets = apply<FastJets>(event, "AntiKT04").jetsByPt(JETPTCUT);
       _h_jet_multiplicity->fill(jets.size(), weight);
 
       // Identify the b-jets
@@ -240,6 +207,30 @@ namespace Rivet {
       scale(_h_jet_bb_angle_Hframe, crossSection()/sumOfWeights());
       scale(_h_jet_bVB_cosangle_Hframe, crossSection()/sumOfWeights());
       scale(_h_jet_bb_cosangle_Hframe, crossSection()/sumOfWeights());
+    }
+
+
+    /// This should take in the four-momenta of two b's (jets/hadrons) and a vector boson, for the process VB*->VBH with H->bb
+    /// It should return the smallest angle between the virtual vector boson and one of the b's, in the rest frame of the Higgs boson.
+    /// It should also return (as the second element of the vector) the angle between the b's, in the rest frame of the Higgs boson.
+    vector<double> boostAngles(const FourMomentum& b1, const FourMomentum& b2, const FourMomentum& vb) {
+      const FourMomentum higgsMomentum = b1 + b2;
+      const FourMomentum virtualVBMomentum = higgsMomentum + vb;
+      const LorentzTransform lt = LorentzTransform::mkFrameTransformFromBeta(higgsMomentum.betaVec());
+
+      const FourMomentum virtualVBMomentumBOOSTED = lt.transform(virtualVBMomentum);
+      const FourMomentum b1BOOSTED = lt.transform(b1);
+      const FourMomentum b2BOOSTED = lt.transform(b2);
+
+      const double angle1 = b1BOOSTED.angle(virtualVBMomentumBOOSTED);
+      const double angle2 = b2BOOSTED.angle(virtualVBMomentumBOOSTED);
+
+      const double anglebb = b1BOOSTED.angle(b2BOOSTED);
+
+      vector<double> rtn;
+      rtn.push_back(angle1 < angle2 ? angle1 : angle2);
+      rtn.push_back(anglebb);
+      return rtn;
     }
 
     //@}

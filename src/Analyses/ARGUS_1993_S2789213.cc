@@ -17,7 +17,7 @@ namespace Rivet {
 
 
     void init() {
-      addProjection(UnstableFinalState(), "UFS");
+      declare(UnstableFinalState(), "UFS");
 
       _mult_cont_Omega     = bookHisto1D( 1, 1, 1);
       _mult_cont_Rho0      = bookHisto1D( 1, 1, 2);
@@ -60,7 +60,7 @@ namespace Rivet {
       // Find the upsilons
       Particles upsilons;
       // First in unstable final state
-      const UnstableFinalState& ufs = applyProjection<UnstableFinalState>(e, "UFS");
+      const UnstableFinalState& ufs = apply<UnstableFinalState>(e, "UFS");
       foreach (const Particle& p, ufs.particles())
         if (p.pid() == 300553 || p.pid() == 553) upsilons.push_back(p);
       // Then in whole event if that failed
@@ -127,7 +127,7 @@ namespace Rivet {
           /// @todo Update to new LT mk* functions
           LorentzTransform cms_boost;
           if (ups.p3().mod() > 0.001)
-            cms_boost = LorentzTransform(-ups.momentum().boostVector());
+            cms_boost = LorentzTransform::mkFrameTransformFromBeta(ups.momentum().betaVec());
           double mass = ups.mass();
           unsigned int nOmega(0),nRho0(0),nKStar0(0),nKStarPlus(0),nPhi(0);
           foreach(const Particle & p , unstable) {

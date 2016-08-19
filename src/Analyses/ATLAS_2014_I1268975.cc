@@ -24,15 +24,15 @@ namespace Rivet {
     void init() {
 
       const FinalState fs;
-      addProjection(fs,"FinalState");
+      declare(fs,"FinalState");
 
       FastJets fj04(fs,  FastJets::ANTIKT, 0.4);
       fj04.useInvisibles();
-      addProjection(fj04, "AntiKT04");
+      declare(fj04, "AntiKT04");
 
       FastJets fj06(fs,  FastJets::ANTIKT, 0.6);
       fj06.useInvisibles();
-      addProjection(fj06, "AntiKT06");
+      declare(fj06, "AntiKT06");
 
       double ystarbins[] = { 0.0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0};
 
@@ -49,8 +49,8 @@ namespace Rivet {
     /// Perform the per-event analysis
     void analyze(const Event& event) {
       Jets jetAr[2];
-      jetAr[AKT4] = applyProjection<FastJets>(event, "AntiKT04").jetsByPt(50*GeV);
-      jetAr[AKT6] = applyProjection<FastJets>(event, "AntiKT06").jetsByPt(50*GeV);
+      jetAr[AKT4] = apply<FastJets>(event, "AntiKT04").jetsByPt(50*GeV);
+      jetAr[AKT6] = apply<FastJets>(event, "AntiKT06").jetsByPt(50*GeV);
 
       // Loop over jet "radii" used in analysis
       for (size_t alg = 0; alg < 2; ++alg) {

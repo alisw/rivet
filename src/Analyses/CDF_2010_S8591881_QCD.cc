@@ -40,12 +40,12 @@ namespace Rivet {
     void init() {
       // Final state for the jet finding
       const FinalState fsj(-4.0, 4.0, 0.0*GeV);
-      addProjection(fsj, "FSJ");
-      addProjection(FastJets(fsj, FastJets::CDFMIDPOINT, 0.7), "MidpointJets");
+      declare(fsj, "FSJ");
+      declare(FastJets(fsj, FastJets::CDFMIDPOINT, 0.7), "MidpointJets");
 
       // Charged final state for the distributions
       const ChargedFinalState cfs(-1.0, 1.0, 0.5*GeV);
-      addProjection(cfs, "CFS");
+      declare(cfs, "CFS");
 
       // Book histograms
       _hist_tnchg      = bookProfile1D(10, 1, 1);
@@ -69,13 +69,13 @@ namespace Rivet {
     void analyze(const Event& e) {
       /// @todo Implement Run II min bias trigger cf. CDF_2009?
 
-      const FinalState& fsj = applyProjection<FinalState>(e, "FSJ");
+      const FinalState& fsj = apply<FinalState>(e, "FSJ");
       if (fsj.particles().size() < 1) {
         MSG_DEBUG("Failed multiplicity cut");
         vetoEvent;
       }
 
-      const Jets& jets = applyProjection<FastJets>(e, "MidpointJets").jetsByPt();
+      const Jets& jets = apply<FastJets>(e, "MidpointJets").jetsByPt();
       MSG_DEBUG("Jet multiplicity = " << jets.size());
 
       // We require the leading jet to be within |eta|<2
@@ -94,7 +94,7 @@ namespace Rivet {
       const double weight = e.weight();
 
       // Get the final states to work with for filling the distributions
-      const FinalState& cfs = applyProjection<ChargedFinalState>(e, "CFS");
+      const FinalState& cfs = apply<ChargedFinalState>(e, "CFS");
 
       size_t numOverall(0),     numToward(0),          numAway(0)  ;
       long int numTrans1(0),     numTrans2(0);

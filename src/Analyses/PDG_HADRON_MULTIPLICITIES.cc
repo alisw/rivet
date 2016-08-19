@@ -23,7 +23,7 @@ namespace Rivet {
 
     void analyze(const Event& e) {
       // First, veto on leptonic events by requiring at least 4 charged FS particles
-      const FinalState& fs = applyProjection<FinalState>(e, "FS");
+      const FinalState& fs = apply<FinalState>(e, "FS");
       const size_t numParticles = fs.particles().size();
 
       // Even if we only generate hadronic events, we still need a cut on numCharged >= 2.
@@ -39,7 +39,7 @@ namespace Rivet {
       MSG_DEBUG("sqrt(s) = " << sqrtS()/GeV << " GeV");
 
       // Final state of unstable particles to get particle spectra
-      const UnstableFinalState& ufs = applyProjection<UnstableFinalState>(e, "UFS");
+      const UnstableFinalState& ufs = apply<UnstableFinalState>(e, "UFS");
 
       if (sqrtS()/GeV >= 9.5 && sqrtS()/GeV <= 10.5) {
         foreach (const Particle& p, ufs.particles()) {
@@ -433,8 +433,8 @@ namespace Rivet {
 
 
     void init() {
-      addProjection(ChargedFinalState(), "FS");
-      addProjection(UnstableFinalState(), "UFS");
+      declare(ChargedFinalState(), "FS");
+      declare(UnstableFinalState(), "UFS");
 
       if (sqrtS()/GeV >= 9.5 && sqrtS()/GeV <= 10.5) {
         _histMeanMultiPiPlus             = bookHisto1D( 1, 1, 1);

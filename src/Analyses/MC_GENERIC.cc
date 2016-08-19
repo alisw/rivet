@@ -28,8 +28,8 @@ namespace Rivet {
 
       // Projections
       const FinalState cnfs(-5.0, 5.0, 500*MeV);
-      addProjection(cnfs, "FS");
-      addProjection(ChargedFinalState(-5.0, 5.0, 500*MeV), "CFS");
+      declare(cnfs, "FS");
+      declare(ChargedFinalState(-5.0, 5.0, 500*MeV), "CFS");
 
       // Histograms
       // @todo Choose E/pT ranged based on input energies... can't do anything about kin. cuts, though
@@ -74,7 +74,7 @@ namespace Rivet {
       const double weight = event.weight();
 
       // Charged + neutral final state
-      const FinalState& cnfs = applyProjection<FinalState>(event, "FS");
+      const FinalState& cnfs = apply<FinalState>(event, "FS");
       MSG_DEBUG("Total multiplicity = " << cnfs.size());
       _histMult->fill(cnfs.size(), weight);
       foreach (const Particle& p, cnfs.particles()) {
@@ -94,7 +94,7 @@ namespace Rivet {
         _histPhi->fill(p.phi(), weight);
       }
 
-      const FinalState& cfs = applyProjection<FinalState>(event, "CFS");
+      const FinalState& cfs = apply<FinalState>(event, "CFS");
       MSG_DEBUG("Total charged multiplicity = " << cfs.size());
       _histMultCh->fill(cfs.size(), weight);
       foreach (const Particle& p, cfs.particles()) {

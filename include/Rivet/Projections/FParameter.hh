@@ -6,11 +6,10 @@
 #include "Rivet/Projections/FinalState.hh"
 #include "Rivet/Event.hh"
 
-
 namespace Rivet {
 
-  class FParameter : public Projection {
 
+  class FParameter : public Projection {
   public:
 
     /// @name Constructors etc.
@@ -20,9 +19,7 @@ namespace Rivet {
     FParameter(const FinalState& fsp);
 
     /// Clone on the heap.
-    virtual const Projection* clone() const {
-      return new FParameter(*this);
-    }
+    DEFAULT_RIVET_PROJ_CLONE(FParameter);
 
     //@}
 
@@ -59,7 +56,7 @@ namespace Rivet {
     /// @name Direct methods
     /// Ways to do the calculation directly, without engaging the caching system
     //@{
- 
+
     /// Manually calculate the sphericity, without engaging the caching system
     void calc(const FinalState& fs);
 

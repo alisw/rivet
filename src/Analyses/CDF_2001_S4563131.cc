@@ -29,7 +29,7 @@ namespace Rivet {
     /// Book histograms and initialise projections before the run
     void init() {
       FinalState fs(-4.2, 4.2);
-      addProjection(FastJets(fs, FastJets::CDFJETCLU, 0.7), "Jets");
+      declare(FastJets(fs, FastJets::CDFJETCLU, 0.7), "Jets");
       _h_ET = bookHisto1D(1, 1, 1);
     }
 
@@ -37,9 +37,9 @@ namespace Rivet {
     /// Perform the per-event analysis
     void analyze(const Event& event) {
       const double weight = event.weight();
-      Jets jets = applyProjection<FastJets>(event, "Jets").jets(Cuts::Et > 40*GeV, cmpMomByEt);
+      Jets jets = apply<FastJets>(event, "Jets").jets(Cuts::Et > 40*GeV && Cuts::abseta >= 0.1 && Cuts::abseta <= 0.7, cmpMomByEt);
       foreach (const Jet& jet, jets) {
-        if (inRange(jet.abseta(), 0.1, 0.7))
+        //if (inRange(jet.abseta(), 0.1, 0.7))
           _h_ET->fill(jet.Et(), weight);
       }
     }

@@ -16,7 +16,7 @@ namespace Rivet {
   public:
     void init() {
       const UnstableFinalState ufs(Cuts::abseta < 15);
-      addProjection(ufs, "UFS");
+      declare(ufs, "UFS");
 
       _histPtK0s        = bookHisto1D(1, 1, 1);
       _histPtLambda     = bookHisto1D(2, 1, 1);
@@ -31,7 +31,7 @@ namespace Rivet {
 
     void analyze(const Event& event) {
       const double weight = event.weight();
-      const UnstableFinalState& ufs = applyProjection<UnstableFinalState>(event, "UFS");
+      const UnstableFinalState& ufs = apply<UnstableFinalState>(event, "UFS");
 
       foreach (const Particle& p, ufs.particles()) {
         const double absrap = p.absrap();

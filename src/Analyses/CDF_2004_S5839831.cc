@@ -98,20 +98,20 @@ namespace Rivet {
 
     void init() {
       // Set up projections
-      addProjection(TriggerCDFRun0Run1(), "Trigger");
-      addProjection(Beam(), "Beam");
+      declare(TriggerCDFRun0Run1(), "Trigger");
+      declare(Beam(), "Beam");
       const FinalState calofs(-1.2, 1.2);
-      addProjection(calofs, "CaloFS");
-      addProjection(FastJets(calofs, FastJets::CDFJETCLU, 0.7), "Jets");
+      declare(calofs, "CaloFS");
+      declare(FastJets(calofs, FastJets::CDFJETCLU, 0.7), "Jets");
       const ChargedFinalState trackfs(-1.2, 1.2, 0.4*GeV);
-      addProjection(trackfs, "TrackFS");
+      declare(trackfs, "TrackFS");
       // Restrict tracks to |eta| < 0.7 for the min bias part.
       const ChargedFinalState mbfs(-0.7, 0.7, 0.4*GeV);
-      addProjection(mbfs, "MBFS");
+      declare(mbfs, "MBFS");
       // Restrict tracks to |eta| < 1 for the Swiss-Cheese part.
       const ChargedFinalState cheesefs(-1.0, 1.0, 0.4*GeV);
-      addProjection(cheesefs, "CheeseFS");
-      addProjection(FastJets(cheesefs, FastJets::CDFJETCLU, 0.7), "CheeseJets");
+      declare(cheesefs, "CheeseFS");
+      declare(FastJets(cheesefs, FastJets::CDFJETCLU, 0.7), "CheeseJets");
 
       // Book histograms
       if (fuzzyEquals(sqrtS()/GeV, 1800, 1E-3)) {
@@ -148,16 +148,16 @@ namespace Rivet {
     /// Do the analysis
     void analyze(const Event& event) {
       // Trigger
-      const bool trigger = applyProjection<TriggerCDFRun0Run1>(event, "Trigger").minBiasDecision();
+      const bool trigger = apply<TriggerCDFRun0Run1>(event, "Trigger").minBiasDecision();
       if (!trigger) vetoEvent;
 
       // Get sqrt(s) and event weight
-      const double sqrtS = applyProjection<Beam>(event, "Beam").sqrtS();
+      const double sqrtS = apply<Beam>(event, "Beam").sqrtS();
       const double weight = event.weight();
 
       {
         MSG_DEBUG("Running max/min analysis");
-        Jets jets = applyProjection<JetAlg>(event, "Jets").jets(cmpMomByE);
+        Jets jets = apply<JetAlg>(event, "Jets").jets(cmpMomByE);
         if (!jets.empty()) {
           // Leading jet must be in central |eta| < 0.5 region
           const Jet leadingjet = jets.front();
@@ -170,7 +170,7 @@ namespace Rivet {
                      << " not in |eta| < 0.5 & pT > 15 GeV");
           } else {
             // Multiplicity & pT distributions for sqrt(s) = 630 GeV, 1800 GeV
-            const Particles tracks = applyProjection<FinalState>(event, "TrackFS").particles();
+            const Particles tracks = apply<FinalState>(event, "TrackFS").particles();
             const ConesInfo cones = _calcTransCones(leadingjet.momentum(), tracks);
             if (fuzzyEquals(sqrtS/GeV, 630)) {
               _pt90Max630->fill(ETlead/GeV, cones.ptMax/GeV, weight);
@@ -207,7 +207,7 @@ namespace Rivet {
       // Fill min bias total track multiplicity histos
       {
         MSG_DEBUG("Running min bias multiplicity analysis");
-        const Particles mbtracks = applyProjection<FinalState>(event, "MBFS").particles();
+        const Particles mbtracks = apply<FinalState>(event, "MBFS").particles();
         if (fuzzyEquals(sqrtS/GeV, 1800)) {
           _numTracksDbn1800MB->fill(mbtracks.size(), weight);
         } else if (fuzzyEquals(sqrtS/GeV, 630)) {
@@ -234,8 +234,8 @@ namespace Rivet {
       // the removed jets must have Et > 5 GeV.
       {
         MSG_DEBUG("Running Swiss Cheese analysis");
-        const Particles cheesetracks = applyProjection<FinalState>(event, "CheeseFS").particles();
-        Jets cheesejets = applyProjection<JetAlg>(event, "Jets").jets(cmpMomByE);
+        const Particles cheesetracks = apply<FinalState>(event, "CheeseFS").particles();
+        Jets cheesejets = apply<JetAlg>(event, "Jets").jets(cmpMomByE);
         if (cheesejets.empty()) {
           MSG_DEBUG("No 'cheese' jets found in event");
           return;

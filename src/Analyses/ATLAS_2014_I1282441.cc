@@ -22,11 +22,11 @@ namespace Rivet {
       UnstableFinalState ufs(Cuts::abseta < 10 && Cuts::pT > 500*MeV);
       IdentifiedFinalState phis(ufs);
       phis.acceptIdPair(PID::PHI);
-      addProjection(phis, "Phis");
+      declare(phis, "Phis");
 
       IdentifiedFinalState kpms(Cuts::abseta < 2.0 && Cuts::pT > 230*MeV);
       kpms.acceptIdPair(PID::KPLUS);
-      addProjection(kpms, "Kpms");
+      declare(kpms, "Kpms");
 
       _h_phi_rapidity = bookHisto1D(1,1,1);
       _h_phi_pT       = bookHisto1D(2,1,1);
@@ -34,7 +34,7 @@ namespace Rivet {
 
 
     void analyze(const Event& event) {
-      const Particles& ks_all = applyProjection<IdentifiedFinalState>(event, "Kpms").particles();
+      const Particles& ks_all = apply<IdentifiedFinalState>(event, "Kpms").particles();
       Particles kp, km;
       foreach (const Particle& p, ks_all) {
         if (!p.hasAncestor(PID::PHI)) { MSG_DEBUG("-- K not from phi."); continue; }
@@ -42,7 +42,7 @@ namespace Rivet {
         (p.charge() > 0 ? kp : km).push_back(p);
       }
 
-      const Particles& phis_all = applyProjection<FinalState>(event, "Phis").particles();
+      const Particles& phis_all = apply<FinalState>(event, "Phis").particles();
       Particles phis;
       /// @todo Use particles(Cuts&) instead
       foreach (const Particle& p, phis_all) {

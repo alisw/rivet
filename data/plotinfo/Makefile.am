@@ -241,7 +241,6 @@ dist_pkgdata_DATA = \
   CMS_2012_PAS_QCD_11_010.plot \
   CMS_QCD_10_024.plot \
   CMSTOTEM_2014_I1294140.plot \
-  TOTEM_2014_I1328627.plot \
   D0_1996_S3214044.plot \
   D0_1996_S3324664.plot \
   D0_2000_S4480767.plot \
@@ -272,6 +271,7 @@ dist_pkgdata_DATA = \
   DELPHI_1999_S3960137.plot \
   DELPHI_2000_S4328825.plot \
   DELPHI_2002_069_CONF_603.plot \
+  DELPHI_2011_I890503.plot \
   EXAMPLE.plot \
   H1_1994_S2919893.plot \
   H1_1995_S3167097.plot \
@@ -289,7 +289,6 @@ dist_pkgdata_DATA = \
   LHCB_2014_I1281685.plot \
   LHCB_2015_I1333223.plot \
   LHCF_2012_I1115479.plot \
-  MC_DIJET.plot \
   MC_DIPHOTON.plot \
   MC_ELECTRONS.plot \
   MC_GENERIC.plot \
@@ -303,6 +302,7 @@ dist_pkgdata_DATA = \
   MC_JETTAGS.plot \
   MC_KTSPLITTINGS.plot \
   MC_LEADJETUE.plot \
+  MC_MET.plot \
   MC_MUONS.plot \
   MC_PDFS.plot \
   MC_PHOTONINC.plot \
@@ -373,7 +373,8 @@ dist_pkgdata_DATA = \
   STAR_2009_UE_HELEN.plot \
   TASSO_1990_S2148048.plot \
   TOTEM_2012_I1115294.plot \
-  TOTEM_2012_002.plot \
+  TOTEM_2012_I1220862.plot \
+  TOTEM_2014_I1328627.plot \
   ZEUS_2001_S4815815.plot \
   UA1_1990_S2044935.plot \
   UA5_1982_S875503.plot \

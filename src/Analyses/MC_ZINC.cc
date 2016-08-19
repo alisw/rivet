@@ -26,7 +26,7 @@ namespace Rivet {
       FinalState fs;
       Cut cut = Cuts::abseta < 3.5 && Cuts::pT > 25*GeV;
       ZFinder zfinder(fs, cut, _lepton, 65.0*GeV, 115.0*GeV, _dR, ZFinder::CLUSTERNODECAY, ZFinder::TRACK);
-      addProjection(zfinder, "ZFinder");
+      declare(zfinder, "ZFinder");
 
       _h_Z_mass = bookHisto1D("Z_mass", 50, 66.0, 116.0);
       _h_Z_pT = bookHisto1D("Z_pT", logspace(100, 1.0, 0.5*(sqrtS()>0.?sqrtS():14000.)/GeV));
@@ -42,7 +42,7 @@ namespace Rivet {
 
     /// Do the analysis
     void analyze(const Event & e) {
-      const ZFinder& zfinder = applyProjection<ZFinder>(e, "ZFinder");
+      const ZFinder& zfinder = apply<ZFinder>(e, "ZFinder");
       if (zfinder.bosons().size()!=1) {
         vetoEvent;
       }

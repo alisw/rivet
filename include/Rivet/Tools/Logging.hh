@@ -15,7 +15,7 @@ namespace Rivet {
     };
 
     /// Typedef for a collection of named logs.
-    typedef std::map<std::string, Log*> LogMap;
+    typedef std::map<std::string, Log> LogMap;
 
     /// Typedef for a collection of named log levels.
     typedef std::map<std::string, int> LevelMap;
@@ -152,10 +152,6 @@ namespace Rivet {
     std::string formatMessage(int level, const std::string& message);
 
   public:
-
-    /// A null output stream, used for piping discarded output to nowhere.
-    /// @todo Hide this...
-    std::ostream* const _nostream;
 
     /// The streaming operator can use Log's internals.
     friend std::ostream& operator<<(Log& log, int level);

@@ -33,7 +33,7 @@ namespace Rivet {
       fillMap(_partLftMap);
 
       // Projections
-      addProjection(ChargedFinalState(_eta_min, _eta_max, _pt_min*GeV), "CFS");
+      declare(ChargedFinalState(_eta_min, _eta_max, _pt_min*GeV), "CFS");
 
       // Book histograms
       _h_mult_total  = bookHisto1D("d03-x01-y01", 50, 0.5, 50.5);
@@ -70,7 +70,7 @@ namespace Rivet {
       val_dNdEta.clear();
       val_dNdPt.clear();
 
-      const ChargedFinalState& cfs = applyProjection<ChargedFinalState>(event, "CFS");
+      const ChargedFinalState& cfs = apply<ChargedFinalState>(event, "CFS");
       foreach (const Particle& p, cfs.particles()) {
         int id = p.pdgId();
         // continue if particle is not a pion, kaon, proton, muon or electron

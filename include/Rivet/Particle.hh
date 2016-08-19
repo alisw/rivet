@@ -5,16 +5,21 @@
 #include "Rivet/Particle.fhh"
 #include "Rivet/ParticleBase.hh"
 #include "Rivet/Config/RivetCommon.hh"
+#include "Rivet/Tools/Cuts.hh"
 #include "Rivet/Tools/Utils.hh"
+#include "Rivet/Math/LorentzTrans.hh"
 // NOTE: Rivet/Tools/ParticleUtils.hh included at the end
 #include "fastjet/PseudoJet.hh"
 
 namespace Rivet {
 
 
-  /// Representation of particles from a HepMC::GenEvent.
+  /// Particle representation, either from a HepMC::GenEvent or reconstructed.
   class Particle : public ParticleBase {
   public:
+
+    /// @name Constructors
+    //@{
 
     /// Default constructor.
     /// @note A particle without info is useless. This only exists to keep STL containers happy.
@@ -29,17 +34,6 @@ namespace Rivet {
         _original(0), _id(pid), _momentum(mom), _origin(pos)
     { }
 
-    /// Constructor from a HepMC GenParticle.
-    Particle(const GenParticle& gp)
-      : ParticleBase(),
-        _original(&gp), _id(gp.pdg_id()),
-        _momentum(gp.momentum())
-    {
-      const GenVertex* vprod = gp.production_vertex();
-      if (vprod != NULL)
-        setOrigin(vprod->position().t(), vprod->position().x(), vprod->position().y(), vprod->position().z());
-    }
-
     /// Constructor from a HepMC GenParticle pointer.
     Particle(const GenParticle* gp)
       : ParticleBase(),
@@ -51,8 +45,22 @@ namespace Rivet {
         setOrigin(vprod->position().t(), vprod->position().x(), vprod->position().y(), vprod->position().z());
     }
 
+    /// Constructor from a HepMC GenParticle.
+    Particle(const GenParticle& gp)
+      : ParticleBase(),
+        _original(&gp), _id(gp.pdg_id()),
+        _momentum(gp.momentum())
+    {
+      const GenVertex* vprod = gp.production_vertex();
+      if (vprod != NULL)
+        setOrigin(vprod->position().t(), vprod->position().x(), vprod->position().y(), vprod->position().z());
+    }
 
-  public:
+    //@}
+
+
+    /// @name Other representations and implicit casts
+    //@{
 
     /// Converter to FastJet3 PseudoJet
     virtual fastjet::PseudoJet pseudojet() const {
@@ -63,11 +71,6 @@ namespace Rivet {
     operator PseudoJet () const { return pseudojet(); }
 
 
-  public:
-
-    /// @name Basic particle specific properties
-    //@{
-
     /// Get a const pointer to the original GenParticle.
     const GenParticle* genParticle() const {
       return _original;
@@ -76,20 +79,37 @@ namespace Rivet {
     /// Cast operator for conversion to GenParticle*
     operator const GenParticle* () const { return genParticle(); }
 
+    //@}
+
+
+    /// @name Kinematic properties
+    //@{
+
     /// The momentum.
     const FourMomentum& momentum() const {
       return _momentum;
     }
+
     /// Set the momentum.
     Particle& setMomentum(const FourMomentum& momentum) {
       _momentum = momentum;
       return *this;
     }
+
     /// Set the momentum via components.
     Particle& setMomentum(double E, double px, double py, double pz) {
       _momentum = FourMomentum(E, px, py, pz);
       return *this;
     }
+
+    /// Apply an active Lorentz transform to this particle
+    Particle& transformBy(const LorentzTransform& lt);
+
+    //@
+
+
+    /// @name Positional properties
+    //@{
 
     /// The origin position.
     const FourVector& origin() const {
@@ -127,19 +147,20 @@ namespace Rivet {
     //@{
 
     /// The charge of this Particle.
-    double charge() const {
-      return PID::charge(pid());
-    }
+    double charge() const { return PID::charge(pid()); }
+
+    /// The absolute charge of this Particle.
+    double abscharge() const { return PID::abscharge(pid()); }
 
     /// Three times the charge of this Particle (i.e. integer multiple of smallest quark charge).
-    int charge3() const {
-      return PID::charge3(pid());
-    }
+    int charge3() const { return PID::charge3(pid()); }
+
     /// Alias for charge3
     /// @deprecated Use charge3
-    int threeCharge() const {
-      return PID::threeCharge(pid());
-    }
+    int threeCharge() const { return PID::threeCharge(pid()); }
+
+    /// Three times the absolute charge of this Particle (i.e. integer multiple of smallest quark charge).
+    int abscharge3() const { return PID::abscharge3(pid()); }
 
     /// Is this a hadron?
     bool isHadron() const { return PID::isHadron(pid()); }
@@ -174,7 +195,7 @@ namespace Rivet {
     /// @name Ancestry properties
     //@{
 
-    /// Check whether a given PID is found in the GenParticle's ancestor list
+    /// Check whether a given PID is found in the particle's ancestor list
     ///
     /// @note This question is valid in MC, but may not be answerable
     /// experimentally -- use this function with care when replicating
@@ -239,6 +260,11 @@ namespace Rivet {
     /// experimental analyses!
     bool fromDecay() const { return fromHadron() || fromPromptTau(); }
 
+    /// @brief Shorthand definition of 'promptness' based on set definition flags
+    ///
+    /// @note This one doesn't make any judgements about final-stateness
+    bool isPrompt(bool from_prompt_tau=false, bool from_prompt_mu=false) const;
+
     //@}
 
 
@@ -249,15 +275,15 @@ namespace Rivet {
     bool isStable() const;
 
     /// Get a list of the direct descendants from the current particle
-    vector<Particle> children() const;
+    Particles children(const Cut& c=Cuts::open()) const;
 
     /// Get a list of all the descendants (including duplication of parents and children) from the current particle
-    vector<Particle> allDescendants() const;
+    Particles allDescendants(const Cut& c=Cuts::open(), bool remove_duplicates=true) const;
 
     /// Get a list of all the stable descendants from the current particle
     /// @todo Use recursion through replica-avoiding MCUtils functions to avoid bookkeeping duplicates
     /// @todo Insist that the current particle is post-hadronization, otherwise throw an exception?
-    vector<Particle> stableDescendants() const;
+    Particles stableDescendants(const Cut& c=Cuts::open()) const;
 
     /// Flight length (divide by mm or cm to get the appropriate units)
     double flightLength() const;
@@ -282,19 +308,21 @@ namespace Rivet {
   };
 
 
-  /// @name String representation
+  /// @name String representation and streaming support
   //@{
 
-  /// Print a ParticlePair as a string.
-  inline std::string to_str(const ParticlePair& pair) {
-    stringstream out;
-    out << "["
-        << PID::toParticleName(pair.first.pid()) << " @ "
-        << pair.first.momentum().E()/GeV << " GeV, "
-        << PID::toParticleName(pair.second.pid()) << " @ "
-        << pair.second.momentum().E()/GeV << " GeV]";
-    return out.str();
+  /// Represent a Particle as a string.
+  std::string to_str(const Particle& p);
+
+  /// Allow a Particle to be passed to an ostream.
+  inline std::ostream& operator<<(std::ostream& os, const Particle& p) {
+    os << to_str(p);
+    return os;
   }
+
+
+  /// Represent a ParticlePair as a string.
+  std::string to_str(const ParticlePair& pair);
 
   /// Allow ParticlePair to be passed to an ostream.
   inline std::ostream& operator<<(std::ostream& os, const ParticlePair& pp) {

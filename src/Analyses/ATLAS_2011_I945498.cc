@@ -39,19 +39,19 @@ namespace Rivet {
       // Set up projections
 	  FinalState fs;
       ZFinder zfinder_mu(fs, Cuts::abseta < 2.4 && Cuts::pT > 20*GeV, PID::MUON, 66*GeV, 116*GeV, 0.1, ZFinder::CLUSTERNODECAY);
-      addProjection(zfinder_mu, "ZFinder_mu");
+      declare(zfinder_mu, "ZFinder_mu");
 
       Cut cuts = (Cuts::abseta < 1.37 || Cuts::absetaIn(1.52, 2.47)) && Cuts::pT > 20*GeV;
 
       ZFinder zfinder_el(fs, cuts, PID::ELECTRON, 66*GeV, 116*GeV, 0.1, ZFinder::CLUSTERNODECAY);
-      addProjection(zfinder_el, "ZFinder_el");
+      declare(zfinder_el, "ZFinder_el");
 
 	  Cut cuts25_20 = Cuts::abseta < 2.5 && Cuts::pT > 20*GeV;
       // For combined cross-sections (combined phase space + dressed level)
       ZFinder zfinder_comb_mu(fs, cuts25_20, PID::MUON, 66.0*GeV, 116.0*GeV, 0.1, ZFinder::CLUSTERNODECAY);
-      addProjection(zfinder_comb_mu, "ZFinder_comb_mu");
+      declare(zfinder_comb_mu, "ZFinder_comb_mu");
       ZFinder zfinder_comb_el(fs, cuts25_20, PID::ELECTRON, 66.0*GeV, 116.0*GeV, 0.1, ZFinder::CLUSTERNODECAY);
-      addProjection(zfinder_comb_el, "ZFinder_comb_el");
+      declare(zfinder_comb_el, "ZFinder_comb_el");
 
       // Define veto FS in order to prevent Z-decay products entering the jet algorithm
       VetoedFinalState remfs;
@@ -63,10 +63,10 @@ namespace Rivet {
 
       FastJets jets(remfs, FastJets::ANTIKT, 0.4);
       jets.useInvisibles();
-      addProjection(jets, "jets");
+      declare(jets, "jets");
       FastJets jets_comb(remfs_comb, FastJets::ANTIKT, 0.4);
       jets_comb.useInvisibles();
-      addProjection(jets_comb, "jets_comb");
+      declare(jets_comb, "jets_comb");
 
       // 0=el, 1=mu, 2=comb
       for (size_t chn = 0; chn < 3; ++chn) {
@@ -108,14 +108,14 @@ namespace Rivet {
       const double weight = event.weight();
 
       vector<const ZFinder*> zfs;
-      zfs.push_back(& (applyProjection<ZFinder>(event, "ZFinder_el")));
-      zfs.push_back(& (applyProjection<ZFinder>(event, "ZFinder_mu")));
-      zfs.push_back(& (applyProjection<ZFinder>(event, "ZFinder_comb_el")));
-      zfs.push_back(& (applyProjection<ZFinder>(event, "ZFinder_comb_mu")));
+      zfs.push_back(& (apply<ZFinder>(event, "ZFinder_el")));
+      zfs.push_back(& (apply<ZFinder>(event, "ZFinder_mu")));
+      zfs.push_back(& (apply<ZFinder>(event, "ZFinder_comb_el")));
+      zfs.push_back(& (apply<ZFinder>(event, "ZFinder_comb_mu")));
 
       vector<const FastJets*> fjs;
-      fjs.push_back(& (applyProjection<FastJets>(event, "jets")));
-      fjs.push_back(& (applyProjection<FastJets>(event, "jets_comb")));
+      fjs.push_back(& (apply<FastJets>(event, "jets")));
+      fjs.push_back(& (apply<FastJets>(event, "jets_comb")));
 
       // Determine what kind of MC sample this is
       const bool isZee = (zfs[0]->bosons().size() == 1) || (zfs[2]->bosons().size() == 1);

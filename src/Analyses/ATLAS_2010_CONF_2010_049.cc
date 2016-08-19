@@ -16,13 +16,13 @@ namespace Rivet {
 
     void init() {
       ChargedFinalState cfs(-1.5, 1.5, 0.5*GeV);
-      addProjection(cfs, "CFS");
+      declare(cfs, "CFS");
 
       FastJets jetsproj6(cfs, FastJets::ANTIKT, 0.6);
-      addProjection(jetsproj6, "Jets6");
+      declare(jetsproj6, "Jets6");
 
       FastJets jetsproj4(cfs, FastJets::ANTIKT, 0.4);
-      addProjection(jetsproj4, "Jets4");
+      declare(jetsproj4, "Jets4");
 
       for (size_t i=0 ; i<2 ; i++) {
         _h_xsec[i]       = bookHisto1D(1+i, 1, 1);
@@ -41,8 +41,8 @@ namespace Rivet {
     void analyze(const Event& event) {
       const double weight = event.weight();
 
-      const FastJets & jetsproj6 = applyProjection<FastJets>(event, "Jets6");
-      const FastJets & jetsproj4 = applyProjection<FastJets>(event, "Jets4");
+      const FastJets & jetsproj6 = apply<FastJets>(event, "Jets6");
+      const FastJets & jetsproj4 = apply<FastJets>(event, "Jets4");
       Jets alljets[2];
       alljets[0] = jetsproj6.jetsByPt(4.0*GeV);
       alljets[1] = jetsproj4.jetsByPt(4.0*GeV);

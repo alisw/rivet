@@ -45,21 +45,21 @@ namespace Rivet {
     void init() {
       // General FS
       FinalState fs;
-      addProjection(fs, "FS");
+      declare(fs, "FS");
 
       // Get leading photon
       LeadingParticlesFinalState photonfs(FinalState(-1.0, 1.0, 30.0*GeV));
       photonfs.addParticleId(PID::PHOTON);
-      addProjection(photonfs, "LeadingPhoton");
+      declare(photonfs, "LeadingPhoton");
 
       // FS excluding the leading photon
       VetoedFinalState vfs(fs);
       vfs.addVetoOnThisFinalState(photonfs);
-      addProjection(vfs, "JetFS");
+      declare(vfs, "JetFS");
 
       // Jets
       FastJets jetpro(vfs, FastJets::D0ILCONE, 0.7);
-      addProjection(jetpro, "Jets");
+      declare(jetpro, "Jets");
 
       // Histograms
       _h_central_same_cross_section = bookHisto1D(1, 1, 1);
@@ -84,7 +84,7 @@ namespace Rivet {
       const double weight = event.weight();
 
       // Get the photon
-      const FinalState& photonfs = applyProjection<FinalState>(event, "LeadingPhoton");
+      const FinalState& photonfs = apply<FinalState>(event, "LeadingPhoton");
       if (photonfs.particles().size() != 1) {
         vetoEvent;
       }
@@ -95,7 +95,7 @@ namespace Rivet {
       double eta_P = photon.eta();
       double phi_P = photon.phi();
       double econe = 0.0;
-      foreach (const Particle& p, applyProjection<FinalState>(event, "JetFS").particles()) {
+      foreach (const Particle& p, apply<FinalState>(event, "JetFS").particles()) {
         if (deltaR(eta_P, phi_P, p.eta(), p.phi()) < 0.4) {
           econe += p.E();
           // Veto as soon as E_cone gets larger
@@ -106,7 +106,7 @@ namespace Rivet {
         }
       }
 
-      Jets jets = applyProjection<FastJets>(event, "Jets").jetsByPt(15.0*GeV);
+      Jets jets = apply<FastJets>(event, "Jets").jetsByPt(15.0*GeV);
       if (jets.empty()) vetoEvent;
 
       FourMomentum leadingJet = jets[0].momentum();

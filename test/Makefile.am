@@ -1,18 +1,22 @@
-check_PROGRAMS = testMath testMatVec testBoost testCmp testApi testNaN
+check_PROGRAMS = testMath testMatVec testCmp testApi testNaN testBeams
 
-AM_LDFLAGS = -L$(top_srcdir)/src -L$(prefix)/lib $(BOOST_LDFLAGS) $(YAMLCPP_LDFLAGS) -L$(YODALIBPATH)
+AM_LDFLAGS = -L$(top_srcdir)/src -L$(prefix)/lib $(YAMLCPP_LDFLAGS) -L$(YODALIBPATH)
 LIBS = -lm $(GSL_LDFLAGS) -lYODA
 
-testBoost_SOURCES = testBoost.cc
-testMath_SOURCES = testMath.cc
-testMatVec_SOURCES = testMatVec.cc
+TEST_LDADD = $(top_builddir)/src/libRivet.la $(HEPMCLDFLAGS) $(YODALDFLAGS) $(HEPMCLDLIBS) $(YODALDLIBS)
 
+testMath_SOURCES = testMath.cc
+testMath_LDADD = $(TEST_LDADD)
+testMatVec_SOURCES = testMatVec.cc
+testMatVec_LDADD = $(TEST_LDADD)
 testCmp_SOURCES = testCmp.cc
-testCmp_LDADD = $(top_builddir)/src/libRivet.la $(HEPMCLDFLAGS) $(YODALDFLAGS) $(HEPMCLDLIBS) $(YODALDLIBS)
+testCmp_LDADD = $(TEST_LDADD)
 testApi_SOURCES = testApi.cc
-testApi_LDADD = $(top_builddir)/src/libRivet.la $(HEPMCLDFLAGS) $(YODALDFLAGS) $(HEPMCLDLIBS) $(YODALDLIBS)
+testApi_LDADD = $(TEST_LDADD)
 testNaN_SOURCES = testNaN.cc
-testNaN_LDADD = $(top_builddir)/src/libRivet.la $(HEPMCLDFLAGS) $(YODALDFLAGS) $(HEPMCLDLIBS) $(YODALDLIBS)
+testNaN_LDADD = $(TEST_LDADD)
+testBeams_SOURCES = testBeams.cc
+testBeams_LDADD = $(TEST_LDADD)
 
 TESTS_ENVIRONMENT = \
   RIVET_REF_PATH=$(top_srcdir)/data/refdata \
@@ -24,7 +28,7 @@ TESTS_ENVIRONMENT = \
   PATH=$(top_builddir)/bin:$(top_srcdir)/bin:$(PATH) \
   RIVET_TESTS_SRC=$(srcdir)
 
-TESTS = testMath testMatVec testBoost testCmp testApi testNaN
+TESTS = testMath testMatVec testCmp testApi testNaN testBeams
 if ENABLE_ANALYSES
 TESTS += testCmdLine.sh
 endif

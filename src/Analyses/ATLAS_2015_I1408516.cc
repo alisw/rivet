@@ -25,7 +25,7 @@ namespace Rivet {
       Cut cuts = Cuts::abseta < 2.4 && Cuts::pT > 20*GeV;
       ZFinder zfinder_el(fs, cuts, (_mode ? PID::MUON : PID::ELECTRON),
                          12*GeV, 150*GeV, 0.1, ZFinder::CLUSTERNODECAY, ZFinder::NOTRACK);
-      addProjection(zfinder_el, "ZFinder");
+      declare(zfinder_el, "ZFinder");
 
       // Book histograms
       const size_t offset = _mode ? 4 : 1;
@@ -85,7 +85,7 @@ namespace Rivet {
     void analyze(const Event& event) {
 
       // Get leptonic Z boson
-      const ZFinder& zfinder = applyProjection<ZFinder>(event, "ZFinder");
+      const ZFinder& zfinder = apply<ZFinder>(event, "ZFinder");
       if (zfinder.bosons().size() != 1 ) vetoEvent;
       const Particle& Zboson = zfinder.boson();
 
@@ -195,16 +195,14 @@ namespace Rivet {
 
     /// Normalise histograms etc., after the run
     void finalize() {
-
-      const double sf(crossSection() / sumOfWeights());
-      /// @todo Tidy in C++11
-      for (map<string, Histo1DPtr>::iterator hit = _h.begin(); hit != _h.end(); ++hit) {
-        scale(hit->second, sf);
-        if ( hit->first.find("_xsec") == string::npos) normalize(hit->second);
+      // Scale non-xsec plots to cross-section
+      const double sf = crossSection() / picobarn / sumOfWeights();
+      for (const auto& key_hist : _h) {
+        scale(key_hist.second, sf);
+        if (!contains(key_hist.first, "_xsec")) normalize(key_hist.second);
       }
 
-      // M(ll) not differential cross section
-      // so shouldn't be divided by bin width
+      // M(ll) plot isn't a differential cross section so shouldn't be divided by bin width
       for (size_t i = 0; i < 6; ++i) {
         double bw = _h["mll_xsec"]->bin(i).xWidth();
         _h["mll_xsec"]->bin(i).scaleW(bw);

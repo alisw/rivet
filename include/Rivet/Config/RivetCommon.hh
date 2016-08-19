@@ -39,25 +39,22 @@
 #endif
 #endif
 
-
-#include "Rivet/Exceptions.hh"
-
 #include "Rivet/Tools/RivetSTL.hh"
-#include "Rivet/Tools/RivetBoost.hh"
 #include "Rivet/Tools/RivetHepMC.hh"
 
-#include "Rivet/Tools/Utils.hh"
+#include "Rivet/Tools/Exceptions.hh"
 #include "Rivet/Tools/Logging.hh"
+#include "Rivet/Tools/Utils.hh"
 
 #include "Rivet/Math/Units.hh"
-#include "Rivet/ParticleName.hh"
+#include "Rivet/Math/Constants.hh"
+#include "Rivet/Tools/ParticleName.hh"
 #include "Rivet/Tools/ParticleIdUtils.hh"
 
-#include "Rivet/Math/MathUtils.hh"
+#include "Rivet/Math/Math.hh"
 #include "Rivet/Math/Vectors.hh"
-#include "Rivet/Math/Constants.hh"
 
-// #include "Rivet/Particle.hh"
-// #include "Rivet/Event.hh"
+// #include "Rivet/Tools/Cmp.hh"
+// #include "Rivet/Tools/Cuts.hh"
 
 #endif

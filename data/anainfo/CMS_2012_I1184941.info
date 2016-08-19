@@ -27,8 +27,8 @@ Description:
    data used has a total integrated luminosity of 2.7 nb$^{-1}$ collected during 2010 with low instantaneous luminosity.
    Events are selected with at least two jets in $|\eta| < 4.4$ with $\pT > 20$ GeV and all final states particles
    are used for the reconstruction of $\xi$.
-BibKey: :2012vc
-BibTeX: '@article{:2012vc,
+BibKey: Chatrchyan:2012vc
+BibTeX: '@article{Chatrchyan:2012vc,
       author         = "Chatrchyan, Serguei and others",
       title          = "{Observation of a diffractive contribution to dijet production in proton-proton collisions at $\sqrt{s} = 7$ TeV}",
       collaboration  = "CMS Collaboration",

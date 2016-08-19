@@ -53,8 +53,8 @@ int main() {
   Rivet::AnalysisHandler rivet;
   rivet.addAnalysis("Test");
 
-  std::istream* file = new std::fstream("testApi.hepmc", std::ios::in);
-  HepMC::IO_GenEvent hepmcio(*file);
+  std::ifstream file("testApi.hepmc");
+  HepMC::IO_GenEvent hepmcio(file);
   HepMC::GenEvent* evt = hepmcio.read_next_event();
   double sum_of_weights = 0.0;
   while (evt) {
@@ -66,7 +66,7 @@ int main() {
     delete evt; evt = 0;
     hepmcio >> evt;
   }
-  delete file; file = 0;
+  file.close();
 
   rivet.setCrossSection(1.0);
   rivet.finalize();

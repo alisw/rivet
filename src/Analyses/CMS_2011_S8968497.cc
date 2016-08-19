@@ -17,7 +17,7 @@ namespace Rivet {
     void init() {
       FinalState fs;
       FastJets antikt(fs, FastJets::ANTIKT, 0.5);
-      addProjection(antikt, "ANTIKT");
+      declare(antikt, "ANTIKT");
       _h_chi_dijet.addHistogram(2200., 7000., bookHisto1D(1, 1, 1));
       _h_chi_dijet.addHistogram(1800., 2200., bookHisto1D(2, 1, 1));
       _h_chi_dijet.addHistogram(1400., 1800., bookHisto1D(3, 1, 1));
@@ -32,7 +32,7 @@ namespace Rivet {
 
     void analyze(const Event& event) {
       const double weight = event.weight();
-      const Jets& jets = applyProjection<JetAlg>(event, "ANTIKT").jetsByPt();
+      const Jets& jets = apply<JetAlg>(event, "ANTIKT").jetsByPt();
       if (jets.size() < 2) vetoEvent;
       FourMomentum j0(jets[0].momentum());
       FourMomentum j1(jets[1].momentum());

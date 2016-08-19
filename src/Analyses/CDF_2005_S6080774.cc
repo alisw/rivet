@@ -21,11 +21,11 @@ namespace Rivet {
 
     void init() {
       FinalState fs;
-      addProjection(fs, "FS");
+      declare(fs, "FS");
 
       IdentifiedFinalState ifs(Cuts::abseta < 0.9 && Cuts::pT > 13*GeV);
       ifs.acceptId(PID::PHOTON);
-      addProjection(ifs, "IFS");
+      declare(ifs, "IFS");
 
       for (size_t yAxisId=1; yAxisId<5; ++yAxisId) {
         _h_m_PP.push_back(bookHisto1D(1, 1, yAxisId));
@@ -38,14 +38,14 @@ namespace Rivet {
     void analyze(const Event& event) {
       const double weight = event.weight();
 
-      Particles photons = applyProjection<IdentifiedFinalState>(event, "IFS").particlesByPt();
+      Particles photons = apply<IdentifiedFinalState>(event, "IFS").particlesByPt();
       if (photons.size() < 2 || photons[0].pT() < 14.0*GeV) {
         vetoEvent;
       }
 
       // Isolate photons with ET_sum in cone
       Particles isolated_photons;
-      Particles fs = applyProjection<FinalState>(event, "FS").particles();
+      Particles fs = apply<FinalState>(event, "FS").particles();
       foreach (const Particle& photon, photons) {
         FourMomentum mom_in_cone;
         double eta_P = photon.eta();

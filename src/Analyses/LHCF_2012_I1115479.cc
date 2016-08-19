@@ -17,7 +17,7 @@ namespace Rivet {
   public:
 
     void init() {
-      addProjection(UnstableFinalState(),"UFS");
+      declare(UnstableFinalState(),"UFS");
 
       _binnedHistos_y_pT.addHistogram( 8.9,  9.0, bookHisto1D(1, 1, 1));
       _binnedHistos_y_pT.addHistogram( 9.0,  9.2, bookHisto1D(2, 1, 1));
@@ -29,7 +29,7 @@ namespace Rivet {
 
 
     void analyze(const Event& event) {
-      const UnstableFinalState& ufs = applyProjection<UnstableFinalState>(event, "UFS");
+      const UnstableFinalState& ufs = apply<UnstableFinalState>(event, "UFS");
 
       const double weight = event.weight();
       const double dphi = TWOPI;

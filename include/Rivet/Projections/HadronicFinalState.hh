@@ -9,12 +9,11 @@
 #include "Rivet/Projection.hh"
 #include "Rivet/Projections/FinalState.hh"
 
-
 namespace Rivet {
+
 
   /// @brief Project only hadronic final state particles.
   class HadronicFinalState : public FinalState {
-
   public:
 
     /// Constructor: the supplied FinalState projection is assumed to live through the run.
@@ -33,9 +32,7 @@ namespace Rivet {
     }
 
     /// Clone on the heap.
-    virtual const Projection* clone() const {
-      return new HadronicFinalState(*this);
-    }
+    DEFAULT_RIVET_PROJ_CLONE(HadronicFinalState);
 
   protected:
 

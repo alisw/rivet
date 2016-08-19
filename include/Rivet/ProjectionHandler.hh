@@ -3,15 +3,13 @@
 #define RIVET_ProjectionHandler_HH
 
 #include "Rivet/Config/RivetCommon.hh"
-#include "Rivet/Tools/RivetBoost.hh"
-#include "Rivet/Tools/Logging.hh"
 #include "Rivet/Projection.fhh"
 
 namespace Rivet {
 
 
   /// Typedef for Projection (smart) pointer
-  typedef shared_ptr<const Projection> ProjHandle;
+  typedef std::shared_ptr<const Projection> ProjHandle;
 
   // Forward declaration.
   class ProjectionApplier;
@@ -76,19 +74,16 @@ namespace Rivet {
     //@{
 
     /// Private destructor means no inheritance from this class.
-    ~ProjectionHandler();
+    ~ProjectionHandler() = default;
 
     /// The assignment operator is hidden.
-    ProjectionHandler& operator=(const ProjectionHandler&);
+    ProjectionHandler& operator=(const ProjectionHandler&) = delete;
 
     /// The copy constructor is hidden.
-    ProjectionHandler(const ProjectionHandler&);
+    ProjectionHandler(const ProjectionHandler&) = delete;
 
     /// The standard constructor.
-    ProjectionHandler() { }
-
-    /// @todo Remove in favour of the static singleton function
-    static ProjectionHandler* _instance;
+    ProjectionHandler() = default;
 
     //@}
 
@@ -96,12 +91,10 @@ namespace Rivet {
   public:
 
     /// Singleton creation function
-    static ProjectionHandler& getInstance(); // {
-    /// @todo This is a better form of singleton, which cleans up properly... but it can't
-    /// yet be used as it highlights a projection memory problem. Please fix so we can use this!
-    //   static ProjectionHandler _instance;
-    //   return _instance;
-    // }
+    static ProjectionHandler& getInstance() {
+      static ProjectionHandler _instance;
+      return _instance;
+    }
 
 
   public:
@@ -111,11 +104,6 @@ namespace Rivet {
     /// Attach and retrieve a projection as a reference.
     const Projection& registerProjection(const ProjectionApplier& parent,
                                          const Projection& proj,
-                                         const string& name);
-
-    /// Attach and retrieve a projection as a pointer.
-    const Projection* registerProjection(const ProjectionApplier& parent,
-                                         const Projection* proj,
                                          const string& name);
     //@}
 
@@ -127,14 +115,14 @@ namespace Rivet {
 
     /// Try to get an equivalent projection from the system
     /// @returns 0 if no equivalent projection found
-    const Projection* _getEquiv(const Projection& proj) const;
+    ProjHandle _getEquiv(const Projection& proj) const;
 
     /// Make a clone of proj, copying across child references from the original
-    const Projection* _clone(const Projection& proj);
+    unique_ptr<Projection> _clone(const Projection& proj);
 
     /// Internal function to do the registering
-    const Projection* _register(const ProjectionApplier& parent,
-                                const Projection& proj,
+    const Projection& _register(const ProjectionApplier& parent,
+                                ProjHandle proj,
                                 const string& name);
 
     /// Get a string dump of the current ProjHandler structure
@@ -170,11 +158,6 @@ namespace Rivet {
     //@}
 
 
-    /// Projection clearing method: deletes all known projections and empties
-    /// the reference collections.
-    void clear();
-
-
   private:
 
     /// Remove a ProjectionApplier: designed to only be called by ~ProjectionApplier (as a friend)
@@ -182,10 +165,6 @@ namespace Rivet {
 
 
   private:
-
-    /// Get a logger.
-    Log& getLog() const;
-
 
     // /// Get map of named projections belonging to @a parent.
     // /// Throws an exception if @a parent has not got any registered projections.

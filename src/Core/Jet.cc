@@ -1,8 +1,8 @@
 #include "Rivet/Jet.hh"
+#include "Rivet/Tools/Cuts.hh"
+#include "Rivet/Tools/ParticleName.hh"
 #include "Rivet/Tools/Logging.hh"
 #include "Rivet/Tools/ParticleIdUtils.hh"
-#include "Rivet/Tools/RivetBoost.hh"
-#include "Rivet/ParticleName.hh"
 
 namespace Rivet {
 
@@ -25,7 +25,7 @@ namespace Rivet {
   }
 
 
-  Jet& Jet::setState(const fastjet::PseudoJet& pj, const vector<Particle>& particles, const Particles& tags) {
+  Jet& Jet::setState(const fastjet::PseudoJet& pj, const Particles& particles, const Particles& tags) {
     clear();
     _pseudojet = pj;
     _momentum = FourMomentum(pj.e(), pj.px(), pj.py(), pj.pz());
@@ -52,7 +52,7 @@ namespace Rivet {
   }
 
 
-  Jet& Jet::setParticles(const vector<Particle>& particles) {
+  Jet& Jet::setParticles(const Particles& particles) {
     _particles = particles;
     return *this;
   }
@@ -86,6 +86,15 @@ namespace Rivet {
 
 
   /// @todo Jet::containsMatch(Matcher m) { ... if m(pid) return true; ... }
+
+
+  Jet& Jet::transformBy(const LorentzTransform& lt) {
+    _momentum = lt.transform(_momentum);
+    for (Particle& p : _particles) p.transformBy(lt);
+    for (Particle& t : _tags) t.transformBy(lt);
+    _pseudojet.reset(_momentum.px(), _momentum.py(), _momentum.pz(), _momentum.E()); //< lose ClusterSeq etc.
+    return *this;
+  }
 
 
   double Jet::neutralEnergy() const {
@@ -183,6 +192,26 @@ namespace Rivet {
     foreach (const Particle& tp, tags()) {
       if (isTau(tp) && c->accept(tp)) rtn.push_back(tp);
     }
+    return rtn;
+  }
+
+
+  /// Filter a jet collection in-place to the subset that passes the supplied Cut
+  Jets& filterBy(Jets& jets, const Cut& c) {
+    if (c != Cuts::OPEN) {
+      const auto newend = std::remove_if(jets.begin(), jets.end(), [&](const Jet& j){ return !c->accept(j); });
+      jets.erase(newend, jets.end());
+    }
+    return jets;
+  }
+
+  /// Get a subset of the supplied jets that passes the supplied Cut
+  Jets filterBy(const Jets& jets, const Cut& c) {
+    // Just return a copy if the cut is open
+    if (c == Cuts::OPEN) return jets;
+    // But if there is a non-trivial cut...
+    Jets rtn;
+    std::copy_if(jets.begin(), jets.end(), back_inserter(rtn), [&](const Jet& j){ return c->accept(j); });
     return rtn;
   }
 

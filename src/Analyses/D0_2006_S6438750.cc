@@ -31,12 +31,12 @@ namespace Rivet {
     void init() {
       // General FS for photon isolation
       FinalState fs;
-      addProjection(fs, "AllFS");
+      declare(fs, "AllFS");
 
       // Get leading photon
       LeadingParticlesFinalState photonfs(FinalState(-0.9, 0.9, 23.0*GeV));
       photonfs.addParticleId(PID::PHOTON);
-      addProjection(photonfs, "LeadingPhoton");
+      declare(photonfs, "LeadingPhoton");
 
       // Book histograms
       _h_pTgamma = bookHisto1D(1, 1, 1);
@@ -47,7 +47,7 @@ namespace Rivet {
     void analyze(const Event& event) {
 
       // Get the photon
-      const FinalState& photonfs = applyProjection<FinalState>(event, "LeadingPhoton");
+      const FinalState& photonfs = apply<FinalState>(event, "LeadingPhoton");
       if (photonfs.particles().size() != 1) {
         vetoEvent;
       }
@@ -58,7 +58,7 @@ namespace Rivet {
       double eta_P = photon.eta();
       double phi_P = photon.phi();
       double econe = 0.0;
-      foreach (const Particle& p, applyProjection<FinalState>(event, "AllFS").particles()) {
+      foreach (const Particle& p, apply<FinalState>(event, "AllFS").particles()) {
         if (deltaR(eta_P, phi_P,
                    p.eta(), p.phi()) < 0.4) {
           econe += p.E();

@@ -183,18 +183,16 @@ for ANANAME in ANANAMES:
 // -*- C++ -*-
 #include "Rivet/Analysis.hh"
 #include "Rivet/Projections/FinalState.hh"
-/// @todo Include more projections as required, e.g. ChargedFinalState, FastJets, ZFinder...
 
 namespace Rivet {
 
 
+  /// @brief Add a short analysis description here
   class %(ANANAME)s : public Analysis {
   public:
 
     /// Constructor
-    %(ANANAME)s()
-      : Analysis("%(ANANAME)s")
-    {    }
+    DEFAULT_RIVET_ANALYSIS_CTOR(%(ANANAME)s);
 
 
     /// @name Analysis methods
@@ -203,18 +201,19 @@ namespace Rivet {
     /// Book histograms and initialise projections before the run
     void init() {
 
-      /// @todo Initialise and register projections here
+      // Initialise and register projections
+      declare(FinalState(Cuts::abseta < 5 && Cuts::pT > 100*MeV), "FS");
 
-      /// @todo Book histograms here, e.g.:
-      // _h_XXXX = bookProfile1D(1, 1, 1);
-      // _h_YYYY = bookHisto1D(2, 1, 1);
+      // Book histograms
+      _h_XXXX = bookProfile1D(1, 1, 1);
+      _h_YYYY = bookHisto1D(2, 1, 1);
+      _h_ZZZZ = bookCounter(3, 1, 1);
 
     }
 
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-      const double weight = event.weight();
 
       /// @todo Do the event by event analysis here
 
@@ -224,10 +223,8 @@ namespace Rivet {
     /// Normalise histograms etc., after the run
     void finalize() {
 
-      /// @todo Normalise, scale and otherwise manipulate histograms here
-
-      // scale(_h_YYYY, crossSection()/sumOfWeights()); // norm to cross section
-      // normalize(_h_YYYY); // normalize to unity
+      normalize(_h_YYYY); // normalize to unity
+      scale(_h_ZZZZ, crossSection()/picobarn/sumOfWeights()); // norm to cross section
 
     }
 
@@ -236,18 +233,16 @@ namespace Rivet {
 
   private:
 
-    // Data members like post-cuts event weight counters go here
-
 
     /// @name Histograms
     //@{
     Profile1DPtr _h_XXXX;
     Histo1DPtr _h_YYYY;
+    CounterPtr _h_ZZZZ;
     //@}
 %(INLINEMETHODS)s
 
   };
-
 
 
   // The hook for the plugin system
@@ -303,8 +298,6 @@ NeedCrossSection: no
 #Beams: <Insert beam pair(s), e.g. [p-, p+] or [[p-, e-], [p-, e+]]>
 #Energies: <Insert list of run energies or beam energy pairs in GeV,
 #           e.g. [1960] or [[8.0, 3.5]] or [630, 1800]. Order pairs to match "Beams">
-#PtCuts: <Insert list of kinematic pT cuts in GeV, e.g. [0, 20]>
-#NeedCrossSection: True
 Description:
   '<Insert a fairly long description, including what is measured
   and if possible what it is useful for in terms of MC validation

@@ -1,6 +1,5 @@
 // -*- C++ -*-
 #include "Rivet/Tools/BinnedHistogram.hh"
-#include "Rivet/Tools/RivetBoost.hh"
 #include "Rivet/Tools/RivetYODA.hh"
 #include "Rivet/Analysis.hh"
 

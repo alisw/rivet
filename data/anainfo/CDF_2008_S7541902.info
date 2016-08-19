@@ -4,7 +4,7 @@ Summary: Jet pT and multiplicity distributions in W + jets events
 Experiment: CDF
 Collider: Tevatron Run 2
 SpiresID: 7541902
-Status: UNVALIDATED
+Status: VALIDATED
 Authors:
  - Ben Cooper <b.d.cooper@qmul.ac.uk>
  - Emily Nurse <nurse@hep.ucl.ac.uk>

@@ -27,9 +27,9 @@ namespace Rivet {
     void init() {
       FinalState fs;
       WFinder wfinder(fs, Cuts::abseta < 3.5 && Cuts::pT > 25*GeV, _lepton, 60.0*GeV, 100.0*GeV, 25.0*GeV, _dR);
-      addProjection(wfinder, "WFinder");
+      declare(wfinder, "WFinder");
       FastJets jetpro(wfinder.remainingFinalState(), FastJets::ANTIKT, 0.4);
-      addProjection(jetpro, "Jets");
+      declare(jetpro, "Jets");
 
       _h_W_jet1_deta = bookHisto1D("W_jet1_deta", 50, -5.0, 5.0);
       _h_W_jet1_dR = bookHisto1D("W_jet1_dR", 25, 0.5, 7.0);
@@ -43,13 +43,13 @@ namespace Rivet {
     void analyze(const Event & e) {
       const double weight = e.weight();
 
-      const WFinder& wfinder = applyProjection<WFinder>(e, "WFinder");
+      const WFinder& wfinder = apply<WFinder>(e, "WFinder");
       if (wfinder.bosons().size() != 1) {
         vetoEvent;
       }
       FourMomentum wmom(wfinder.bosons().front().momentum());
 
-      const Jets& jets = applyProjection<FastJets>(e, "Jets").jetsByPt(_jetptcut);
+      const Jets& jets = apply<FastJets>(e, "Jets").jetsByPt(_jetptcut);
       if (jets.size() > 0) {
         _h_W_jet1_deta->fill(wmom.eta()-jets[0].eta(), weight);
         _h_W_jet1_dR->fill(deltaR(wmom, jets[0].momentum()), weight);

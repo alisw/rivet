@@ -3,6 +3,7 @@
 
 #include "Rivet/Config/RivetCommon.hh"
 #include "Rivet/Jet.fhh"
+#include "Rivet/Tools/Cuts.fhh"
 #include "Rivet/Math/Vectors.hh"
 
 namespace Rivet {
@@ -41,6 +42,11 @@ namespace Rivet {
     /// Get the energy directly (alias).
     double energy() const { return momentum().E(); }
 
+    /// Get the energy-squared.
+    double E2() const { return momentum().E2(); }
+    /// Get the energy-squared (alias).
+    double energy2() const { return momentum().E2(); }
+
     /// Get the \f$ p_T \f$ directly.
     double pt() const { return momentum().pt(); }
     /// Get the \f$ p_T \f$ directly (alias).
@@ -57,6 +63,8 @@ namespace Rivet {
 
     /// Get the \f$ E_T \f$ directly.
     double Et() const { return momentum().Et(); }
+    /// Get the \f$ E_T^2 \f$ directly.
+    double Et2() const { return momentum().Et2(); }
 
     /// Get the mass directly.
     double mass() const { return momentum().mass(); }
@@ -89,8 +97,10 @@ namespace Rivet {
 
     /// Get the 3-momentum directly.
     Vector3 p3() const { return momentum().vector3(); }
-    // /// Get the 3-momentum directly (alias).
-    // Vector3 p() const { return momentum().vector3(); }
+    /// Get the 3-momentum magnitude directly.
+    double p() const { return momentum().p(); }
+    /// Get the 3-momentum magnitude-squared directly.
+    double p2() const { return momentum().p2(); }
 
     /// x component of momentum.
     double px() const { return momentum().x(); }
@@ -98,6 +108,13 @@ namespace Rivet {
     double py() const { return momentum().y(); }
     /// z component of momentum.
     double pz() const { return momentum().z(); }
+
+    /// x component of momentum, squared.
+    double px2() const { return momentum().x2(); }
+    /// y component of momentum, squared.
+    double py2() const { return momentum().y2(); }
+    /// z component of momentum, squared.
+    double pz2() const { return momentum().z2(); }
 
     /// Angle subtended by the 3-vector and the z-axis.
     double polarAngle() const { return momentum().polarAngle(); }

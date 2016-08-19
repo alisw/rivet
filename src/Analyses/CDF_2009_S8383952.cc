@@ -34,7 +34,7 @@ namespace Rivet {
       // i.e. eta cuts and pT cuts on leptons.
       ZFinder zfinder(FinalState(), Cuts::open(), PID::ELECTRON,
                       66*GeV, 116*GeV, 0.2, ZFinder::CLUSTERNODECAY, ZFinder::TRACK);
-      addProjection(zfinder, "ZFinder");
+      declare(zfinder, "ZFinder");
 
 
       /// Book histograms here
@@ -46,7 +46,7 @@ namespace Rivet {
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-      const ZFinder& zfinder = applyProjection<ZFinder>(event, "ZFinder");
+      const ZFinder& zfinder = apply<ZFinder>(event, "ZFinder");
       if (zfinder.bosons().size() == 1) {
         const double weight = event.weight();
         _h_yZ->fill(fabs(zfinder.bosons()[0].rapidity()), weight);

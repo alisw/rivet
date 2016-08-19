@@ -23,22 +23,22 @@ namespace Rivet {
 
     void init() {
       FinalState fs;
-      addProjection(fs, "FinalState");
+      declare(fs, "FinalState");
 
       Cut cuts = Cuts::abseta < 2.5 && Cuts::pT >= 25*GeV;
 
       // W finder for electrons and muons
       WFinder wf(fs, cuts, _mode==3? PID::MUON : PID::ELECTRON, 0.0*GeV, MAXDOUBLE, 0.0, 0.1,
                  WFinder::CLUSTERNODECAY, WFinder::NOTRACK, WFinder::TRANSMASS);
-      addProjection(wf, "WF");
+      declare(wf, "WF");
 
       // jets
       VetoedFinalState jet_fs(fs);
       jet_fs.addVetoOnThisFinalState(getProjection<WFinder>("WF"));
       FastJets fj(jet_fs, FastJets::ANTIKT, 0.4);
       fj.useInvisibles();
-      addProjection(fj, "Jets");
-      addProjection(HeavyHadrons(Cuts::abseta < 2.5 && Cuts::pT > 5*GeV), "BHadrons");
+      declare(fj, "Jets");
+      declare(HeavyHadrons(Cuts::abseta < 2.5 && Cuts::pT > 5*GeV), "BHadrons");
 
 
       // book histograms
@@ -54,7 +54,7 @@ namespace Rivet {
       const double weight = event.weight();
 
       //  retrieve W boson candidate
-      const WFinder& wf = applyProjection<WFinder>(event, "WF");
+      const WFinder& wf = apply<WFinder>(event, "WF");
       if( wf.bosons().size() != 1 )  vetoEvent; // only one W boson candidate
       if( !(wf.mT() > 60.0*GeV) )    vetoEvent;
       //const Particle& Wboson  = wf.boson();
@@ -68,8 +68,8 @@ namespace Rivet {
       const Particle& lepton = wf.constituentLepton();
 
       // count good jets, check if good jet contains B hadron
-      const Particles& bHadrons = applyProjection<HeavyHadrons>(event, "BHadrons").bHadrons();
-      const Jets& jets = applyProjection<JetAlg>(event, "Jets").jetsByPt(25*GeV);
+      const Particles& bHadrons = apply<HeavyHadrons>(event, "BHadrons").bHadrons();
+      const Jets& jets = apply<JetAlg>(event, "Jets").jetsByPt(25*GeV);
       int goodjets = 0, bjets = 0;
       double bPt = 0.;
       foreach(const Jet& j, jets) {

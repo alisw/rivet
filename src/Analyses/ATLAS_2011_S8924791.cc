@@ -25,14 +25,14 @@ namespace Rivet {
     void init() {
       // Set up projections
       const FinalState fs(-5.0, 5.0);
-      addProjection(fs, "FS");
+      declare(fs, "FS");
       FastJets fj(fs, FastJets::ANTIKT, 0.6);
       fj.useInvisibles();
-      addProjection(fj, "Jets");
+      declare(fj, "Jets");
 
       // Specify pT bins
-      _ptedges += 30.0, 40.0, 60.0, 80.0, 110.0, 160.0, 210.0, 260.0, 310.0, 400.0, 500.0, 600.0;
-      _yedges  += 0.0, 0.3, 0.8, 1.2, 2.1, 2.8;
+      _ptedges = {{ 30.0, 40.0, 60.0, 80.0, 110.0, 160.0, 210.0, 260.0, 310.0, 400.0, 500.0, 600.0 }};
+      _yedges  = {{ 0.0, 0.3, 0.8, 1.2, 2.1, 2.8 }};
 
       // Register a jet shape projection and histogram for each pT bin
       for (size_t i = 0; i < 11; ++i) {
@@ -46,7 +46,7 @@ namespace Rivet {
           const double ylow = (j < 5) ? _yedges[j] : _yedges.front();
           const double yhigh = (j < 5) ? _yedges[j+1] : _yedges.back();
           const JetShape jsp(fj, 0.0, 0.7, 7, _ptedges[i], _ptedges[i+1], ylow, yhigh, RAPIDITY);
-          addProjection(jsp, _jsnames_pT[i][j]);
+          declare(jsp, _jsnames_pT[i][j]);
 
           // Book profile histograms for each (pT,y) bin
           _profhistRho_pT[i][j] = bookProfile1D(i+1, j+1, 1);
@@ -61,7 +61,7 @@ namespace Rivet {
     void analyze(const Event& evt) {
 
       // Get jets and require at least one to pass pT and y cuts
-      const Jets jets = applyProjection<FastJets>(evt, "Jets")
+      const Jets jets = apply<FastJets>(evt, "Jets")
         .jetsByPt(Cuts::ptIn(_ptedges.front()*GeV, _ptedges.back()*GeV) && Cuts::absrap < 2.8);
       MSG_DEBUG("Jet multiplicity before cuts = " << jets.size());
       if (jets.size() == 0) {
@@ -76,7 +76,7 @@ namespace Rivet {
           if (ipt == 8 && jy == 4) continue;
           if (ipt == 9 && jy == 4) continue;
           if (ipt == 10 && jy != 5) continue;
-          const JetShape& jsipt = applyProjection<JetShape>(evt, _jsnames_pT[ipt][jy]);
+          const JetShape& jsipt = apply<JetShape>(evt, _jsnames_pT[ipt][jy]);
           for (size_t ijet = 0; ijet < jsipt.numJets(); ++ijet) {
             for (size_t rbin = 0; rbin < jsipt.numBins(); ++rbin) {
               const double r_rho = jsipt.rBinMid(rbin);

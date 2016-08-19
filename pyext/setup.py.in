@@ -30,13 +30,13 @@ def ext(name, depends=[], statics=[]):
     return Extension(
         "rivet.%s" % name,
         ["rivet/%s.cpp" % name] + statics,
-        language="C++",
+        language="c++",
         depends=depends,
         include_dirs=[srcincdir, buildincdir],
-        extra_compile_args= "-I@prefix@/include @BOOST_CPPFLAGS@ @PYEXT_CXXFLAGS@ @HEPMCCPPFLAGS@ @FASTJETCPPFLAGS@ @YODACPPFLAGS@ @GSLCPPFLAGS@".split(),
+        extra_compile_args="-I@prefix@/include @PYEXT_CXXFLAGS@ @HEPMCCPPFLAGS@ @FASTJETCPPFLAGS@ @YODACPPFLAGS@ @GSLCPPFLAGS@".split(),
         library_dirs=lookupdirs,
         runtime_library_dirs=lookupdirs[1:],
-        libraries=["stdc++", "gsl", "HepMC", "fastjet", "YODA", "Rivet"])
+        libraries=["gsl", "HepMC", "fastjet", "YODA", "Rivet"])
 
 header_files = glob("../include/Rivet/*.h") + glob("../include/Rivet/Utils/*.h")
 

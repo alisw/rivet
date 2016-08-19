@@ -90,8 +90,7 @@ build_triplet = @build@
 host_triplet = @host@
 subdir = data/refdata
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps = $(top_srcdir)/m4/ax_cxx_compile_stdcxx_11.m4 \
-	$(top_srcdir)/m4/boost.m4 $(top_srcdir)/m4/boost_bug.m4 \
+am__aclocal_m4_deps = $(top_srcdir)/m4/ax_cxx_compile_stdcxx.m4 \
 	$(top_srcdir)/m4/cxx.m4 $(top_srcdir)/m4/cython.m4 \
 	$(top_srcdir)/m4/gsl.m4 $(top_srcdir)/m4/lcg.m4 \
 	$(top_srcdir)/m4/libtool.m4 $(top_srcdir)/m4/ltoptions.m4 \
@@ -171,8 +170,6 @@ AUTOCONF = @AUTOCONF@
 AUTOHEADER = @AUTOHEADER@
 AUTOMAKE = @AUTOMAKE@
 AWK = @AWK@
-BOOST_CPPFLAGS = @BOOST_CPPFLAGS@
-BOOST_ROOT = @BOOST_ROOT@
 CC = @CC@
 CCDEPMODE = @CCDEPMODE@
 CFLAGS = @CFLAGS@
@@ -185,7 +182,6 @@ CXXFLAGS = @CXXFLAGS@
 CYGPATH_W = @CYGPATH_W@
 DEFS = @DEFS@
 DEPDIR = @DEPDIR@
-DISTCHECK_CONFIGURE_FLAGS = @DISTCHECK_CONFIGURE_FLAGS@
 DLLTOOL = @DLLTOOL@
 DOXYGEN = @DOXYGEN@
 DSYMUTIL = @DSYMUTIL@
@@ -271,6 +267,8 @@ PYTHON_PLATFORM = @PYTHON_PLATFORM@
 PYTHON_PREFIX = @PYTHON_PREFIX@
 PYTHON_VERSION = @PYTHON_VERSION@
 RANLIB = @RANLIB@
+RIVETCXX = @RIVETCXX@
+RIVETCXXFLAGS = @RIVETCXXFLAGS@
 RIVET_PYTHONPATH = @RIVET_PYTHONPATH@
 SED = @SED@
 SET_MAKE = @SET_MAKE@
@@ -340,7 +338,6 @@ program_transform_name = @program_transform_name@
 psdir = @psdir@
 pyexecdir = @pyexecdir@
 pythondir = @pythondir@
-runstatedir = @runstatedir@
 sbindir = @sbindir@
 sharedstatedir = @sharedstatedir@
 srcdir = @srcdir@
@@ -526,6 +523,7 @@ dist_pkgdata_DATA = \
   CMS_2013_I1265659.yoda \
   CMS_2013_I1272853.yoda \
   CMS_2013_I1273574.yoda \
+  CMSTOTEM_2014_I1294140.yoda \
   CMS_2014_I1298810.yoda \
   CMS_2014_I1303894.yoda \
   CMS_2014_I1305624.yoda \
@@ -538,8 +536,6 @@ dist_pkgdata_DATA = \
   CMS_QCD_10_024.yoda \
   CMS_2015_I1346843.yoda \
   CMS_2015_I1327224.yoda \
-  CMSTOTEM_2014_I1294140.yoda \
-  TOTEM_2014_I1328627.yoda \
   LHCB_2010_S8758301.yoda \
   LHCB_2010_I867355.yoda \
   LHCB_2011_I917009.yoda \
@@ -557,6 +553,7 @@ dist_pkgdata_DATA = \
   DELPHI_1999_S3960137.yoda \
   DELPHI_2000_S4328825.yoda \
   DELPHI_2002_069_CONF_603.yoda \
+  DELPHI_2011_I890503.yoda \
   OPAL_1993_S2692198.yoda \
   OPAL_1994_S2927284.yoda \
   OPAL_1995_S3198391.yoda \
@@ -661,7 +658,8 @@ dist_pkgdata_DATA = \
   SLD_2004_S5693039.yoda \
   STAR_2008_S7869363.yoda \
   TOTEM_2012_I1115294.yoda \
-  TOTEM_2012_002.yoda \
+  TOTEM_2012_I1220862.yoda \
+  TOTEM_2014_I1328627.yoda \
   PDG_HADRON_MULTIPLICITIES.yoda \
   PDG_HADRON_MULTIPLICITIES_RATIOS.yoda \
   PDG_TAUS.yoda

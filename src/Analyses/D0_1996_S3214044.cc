@@ -3,8 +3,6 @@
 #include "Rivet/Projections/FinalState.hh"
 #include "Rivet/Projections/FastJets.hh"
 #include "Rivet/Math/LorentzTrans.hh"
-#include "Rivet/Math/Vector3.hh"
-#include "Rivet/Math/Units.hh"
 
 namespace Rivet {
 
@@ -27,9 +25,10 @@ namespace Rivet {
     /// Book histograms
     void init() {
       const FinalState fs;
-      addProjection(fs, "FS");
-      /// @todo Use correct jet algorithm
-      addProjection(FastJets(fs, FastJets::D0ILCONE, 0.7), "ConeJets");
+      declare(fs, "FS");
+      /// @todo Use correct jet algorithm --- tried FJ3 D0RunICone but does
+      // not look as good as the Run2 cone alg used here
+      declare(FastJets(fs, FastJets::D0ILCONE, 0.7), "ConeJets");
 
       _h_3j_x3 = bookHisto1D(1, 1, 1);
       _h_3j_x5 = bookHisto1D(2, 1, 1);
@@ -68,8 +67,8 @@ namespace Rivet {
     void analyze(const Event& event) {
       const double weight = event.weight();
 
-      Jets jets_in = applyProjection<FastJets>(event, "ConeJets")
-        .jets(cmpMomByEt, Cuts::pT > 20*GeV && Cuts::abseta < 3);
+      Jets jets_in = apply<FastJets>(event, "ConeJets")
+        .jets(Cuts::Et > 20*GeV && Cuts::abseta < 3, cmpMomByEt);
 
       Jets jets_isolated;
       for (size_t i = 0; i < jets_in.size(); ++i) {
@@ -138,7 +137,7 @@ namespace Rivet {
         return;
       }
 
-      LorentzTransform cms_boost(-jjj.boostVector());
+      const LorentzTransform cms_boost = LorentzTransform::mkFrameTransformFromBeta(jjj.betaVec());
       vector<FourMomentum> jets_boosted;
       foreach (Jet jet, jets) {
         jets_boosted.push_back(cms_boost.transform(jet.momentum()));
@@ -169,7 +168,7 @@ namespace Rivet {
       const double sqrts = _safeMass(jjjj);
       if (sqrts < 200*GeV) return;
 
-      LorentzTransform cms_boost(-jjjj.boostVector());
+      const LorentzTransform cms_boost = LorentzTransform::mkFrameTransformFromBeta(jjjj.betaVec());
       vector<FourMomentum> jets_boosted;
       foreach (Jet jet, jets) {
         jets_boosted.push_back(cms_boost.transform(jet.momentum()));
@@ -206,8 +205,8 @@ namespace Rivet {
       _h_4j_mu45->fill(_safeMass(FourMomentum(p4+p5))/sqrts, weight);
       _h_4j_mu46->fill(_safeMass(FourMomentum(p4+p6))/sqrts, weight);
       _h_4j_mu56->fill(_safeMass(FourMomentum(p5+p6))/sqrts, weight);
-      _h_4j_theta_BZ->fill(acos(costheta_BZ)/degree, weight);
-      _h_4j_costheta_NR->fill(costheta_NR, weight);
+      _h_4j_theta_BZ->fill(acos(fabs(costheta_BZ))/degree, weight);
+      _h_4j_costheta_NR->fill(fabs(costheta_NR), weight);
 
     }
 

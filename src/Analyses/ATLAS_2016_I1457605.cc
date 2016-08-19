@@ -13,23 +13,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    ATLAS_2016_I1457605()
-      : Analysis("ATLAS_2016_I1457605")
-    {
-      /// @todo Update in v2.5.0
-      _eta_bins.push_back( 0.00);
-      _eta_bins.push_back( 0.60);
-      _eta_bins.push_back( 1.37);
-      _eta_bins.push_back( 1.56);
-      _eta_bins.push_back( 1.81);
-      _eta_bins.push_back( 2.37);
-
-      /// @todo Update in v2.5.0
-      _eta_bins_areaoffset.push_back(0.0);
-      _eta_bins_areaoffset.push_back(1.5);
-      _eta_bins_areaoffset.push_back(3.0);
-    }
-
+    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2016_I1457605);
 
     /// Book histograms and initialise projections before the run
     void init() {
@@ -39,9 +23,7 @@ namespace Rivet {
 
       // Consider the final state jets for the energy density calculation
       FastJets fj(fs, FastJets::KT, 0.5);
-      /// @todo Update in v2.5.0
-      _area_def = new fastjet::AreaDefinition(fastjet::VoronoiAreaSpec());
-      fj.useJetArea(_area_def);
+      fj.useJetArea(new fastjet::AreaDefinition(fastjet::VoronoiAreaSpec()));
       addProjection(fj, "KtJetsD05");
 
       // Consider the leading pt photon with |eta| < 2.37 and pT > 25 GeV
@@ -98,17 +80,16 @@ namespace Rivet {
       vector<double> ptDensity;
       vector< vector<double> > ptDensities(_eta_bins_areaoffset.size()-1);
       const FastJets& fast_jets = applyProjection<FastJets>(event, "KtJetsD05");
-      const fastjet::ClusterSequenceArea* clust_seq_area = fast_jets.clusterSeqArea();
+      const auto clust_seq_area = fast_jets.clusterSeqArea();
       foreach (const Jet& jet, fast_jets.jets()) {
         const double area = clust_seq_area->area(jet);
         if (area > 1e-3 && jet.abseta() < _eta_bins_areaoffset.back())
-          ptDensities.at( _getEtaBin(jet.abseta(), true) ).push_back(jet.pT()/area);
+          ptDensities.at( _getEtaBin(jet.abseta(), true) ) += jet.pT()/area;
       }
       // Compute the median energy density, etc.
       for (size_t b = 0; b < _eta_bins_areaoffset.size()-1; ++b) {
         const int njets = ptDensities[b].size();
-        const double ptmedian = (njets > 0) ? median(ptDensities[b]) : 0.0;
-        ptDensity.push_back(ptmedian);
+        ptDensity += (njets > 0) ? median(ptDensities[b]) : 0.0;
       }
       // Compute the isolation energy correction (cone area*energy density)
       const double etCone_area = PI * sqr(0.4);
@@ -138,10 +119,8 @@ namespace Rivet {
 
     Histo1DPtr _h_Et_photon[5];
 
-    /// @todo Remove / smart-ptr
-    fastjet::AreaDefinition* _area_def;
-
-    vector<double> _eta_bins, _eta_bins_areaoffset;
+    const vector<double> _eta_bins = {0.00, 0.60, 1.37, 1.56, 1.81, 2.37 };
+    const vector<double> _eta_bins_areaoffset = {0.0, 1.5, 3.0};
 
   };
 

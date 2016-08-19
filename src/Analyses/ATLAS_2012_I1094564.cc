@@ -160,9 +160,9 @@ namespace Rivet {
 
       /// Projections:
       FinalState fs(-4.5, 4.5, 0.*GeV);
-      addProjection(fs, "FS");
-      addProjection(FastJets(fs, FastJets::ANTIKT, 1.0), "AKT");
-      addProjection(FastJets(fs, FastJets::CAM, 1.2)   , "CA" );
+      declare(fs, "FS");
+      declare(FastJets(fs, FastJets::ANTIKT, 1.0), "AKT");
+      declare(FastJets(fs, FastJets::CAM, 1.2)   , "CA" );
 
       /// Histograms:
       _h_camass.addHistogram(200, 300, bookHisto1D(1, 1, 1));
@@ -219,7 +219,7 @@ namespace Rivet {
       using namespace fastjet;
 
       // Get anti-kt jets with p_T > 200 GeV, check abs(y) < 2, and fill mass histograms
-      const FastJets& ktfj = applyProjection<FastJets>(event, "AKT");
+      const FastJets& ktfj = apply<FastJets>(event, "AKT");
       PseudoJets ktjets = ktfj.pseudoJetsByPt(200*GeV);
       foreach (const PseudoJet ajet, ktjets) {
         if (abs(ajet.rap()) < 2) {
@@ -228,7 +228,7 @@ namespace Rivet {
       }
 
       // Same as above but C/A jets
-      const FastJets& cafj = applyProjection<FastJets>(event, "CA");
+      const FastJets& cafj = apply<FastJets>(event, "CA");
       PseudoJets cajets = cafj.pseudoJetsByPt(200*GeV);
       foreach (const PseudoJet ajet, cajets) {
         if (abs(ajet.rap()) < 2) {

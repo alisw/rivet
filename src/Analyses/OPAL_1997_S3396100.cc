@@ -26,9 +26,9 @@ namespace Rivet {
     //@{
 
     void init() {
-      addProjection(Beam(), "Beams");
-      addProjection(ChargedFinalState(), "FS");
-      addProjection(UnstableFinalState(), "UFS");
+      declare(Beam(), "Beams");
+      declare(ChargedFinalState(), "FS");
+      declare(UnstableFinalState(), "UFS");
       _histXpLambda         = bookHisto1D( 1, 1, 1);
       _histXiLambda         = bookHisto1D( 2, 1, 1);
       _histXpXiMinus        = bookHisto1D( 3, 1, 1);
@@ -46,7 +46,7 @@ namespace Rivet {
 
     void analyze(const Event& e) {
       // First, veto on leptonic events by requiring at least 4 charged FS particles
-      const FinalState& fs = applyProjection<FinalState>(e, "FS");
+      const FinalState& fs = apply<FinalState>(e, "FS");
       const size_t numParticles = fs.particles().size();
 
       // Even if we only generate hadronic events, we still need a cut on numCharged >= 2.
@@ -60,13 +60,13 @@ namespace Rivet {
       const double weight = e.weight();
 
       // Get beams and average beam momentum
-      const ParticlePair& beams = applyProjection<Beam>(e, "Beams").beams();
+      const ParticlePair& beams = apply<Beam>(e, "Beams").beams();
       const double meanBeamMom = ( beams.first.p3().mod() +
                                    beams.second.p3().mod() ) / 2.0;
       MSG_DEBUG("Avg beam momentum = " << meanBeamMom);
 
       // Final state of unstable particles to get particle spectra
-      const UnstableFinalState& ufs = applyProjection<UnstableFinalState>(e, "UFS");
+      const UnstableFinalState& ufs = apply<UnstableFinalState>(e, "UFS");
 
       foreach (const Particle& p, ufs.particles()) {
         const int id = p.abspid();

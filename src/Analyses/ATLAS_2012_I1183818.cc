@@ -25,11 +25,11 @@ namespace Rivet {
 
       const FinalState cnfs(-4.8, 4.8, 0*MeV);
       const ChargedFinalState cfs(-2.5, 2.5, 250*MeV);
-      addProjection(cnfs, "FS");
-      addProjection(cfs, "CFS");
+      declare(cnfs, "FS");
+      declare(cfs, "CFS");
 
       const FastJets jetsAntiKt4(cnfs, FastJets::ANTIKT, 0.4);
-      addProjection(jetsAntiKt4, "AntiKt4Jets");
+      declare(jetsAntiKt4, "AntiKt4Jets");
 
       // ------- MINBIAS HISTOGRAMS --------
       //
@@ -66,7 +66,7 @@ namespace Rivet {
 
       const double weight = event.weight();
 
-      const FinalState& cfs = applyProjection<FinalState>(event, "CFS");
+      const FinalState& cfs = apply<FinalState>(event, "CFS");
 
       bool isCharged = false;
       if (cfs.size() >= 2) {  // event selection: > 2 charged particles with pT > 250.MeV and |eta| < 2.5
@@ -74,7 +74,7 @@ namespace Rivet {
         m_chargedEvents += weight;
       }
 
-      const FinalState& cnfs = applyProjection<FinalState>(event, "FS");
+      const FinalState& cnfs = apply<FinalState>(event, "FS");
 
       Particles particles;
       foreach( const Particle& p, cnfs.particles() ) {
@@ -88,7 +88,7 @@ namespace Rivet {
 
 
       // get jets
-      const FastJets& jetsAntiKt4 = applyProjection<FastJets>(event, "AntiKt4Jets");
+      const FastJets& jetsAntiKt4 = apply<FastJets>(event, "AntiKt4Jets");
       const Jets& jets = jetsAntiKt4.jetsByPt(20.0*GeV);
 
       // initialise sumET variables

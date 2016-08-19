@@ -37,18 +37,18 @@ namespace Rivet {
     /// Book histograms and initialise projections before the run
     void init() {
       FinalState fs(Cuts::abseta < 2.4);
-      addProjection(fs, "FS");
+      declare(fs, "FS");
 
       // Find Zs with pT > 120 GeV
       ZFinder zfinder(fs, Cuts::abseta < 2.4 && Cuts::pT > 30*GeV, PID::ELECTRON, 80*GeV, 100*GeV,
                       0.2, ZFinder::CLUSTERNODECAY, ZFinder::TRACK);
 
-      addProjection(zfinder, "ZFinder");
+      declare(zfinder, "ZFinder");
 
       // Z+jet jet collections
-      addProjection(FastJets(zfinder.remainingFinalState(), FastJets::ANTIKT, 0.7), "JetsAK7_zj");
-      addProjection(FastJets(zfinder.remainingFinalState(), FastJets::CAM, 0.8), "JetsCA8_zj");
-      addProjection(FastJets(zfinder.remainingFinalState(), FastJets::CAM, 1.2), "JetsCA12_zj");
+      declare(FastJets(zfinder.remainingFinalState(), FastJets::ANTIKT, 0.7), "JetsAK7_zj");
+      declare(FastJets(zfinder.remainingFinalState(), FastJets::CAM, 0.8), "JetsCA8_zj");
+      declare(FastJets(zfinder.remainingFinalState(), FastJets::CAM, 1.2), "JetsCA12_zj");
 
       // Histograms
       /// @note These are 2D histos rendered into slices
@@ -90,7 +90,7 @@ namespace Rivet {
       const double weight = event.weight();
 
       // Get the Z
-      const ZFinder& zfinder = applyProjection<ZFinder>(event, "ZFinder");
+      const ZFinder& zfinder = apply<ZFinder>(event, "ZFinder");
       if (zfinder.bosons().size() != 1) vetoEvent;
       const Particle& z = zfinder.bosons()[0];
       const Particle& l1 = zfinder.constituents()[0];
@@ -100,7 +100,7 @@ namespace Rivet {
       if (l1.pT() < 30*GeV || l2.pT() < 30*GeV || z.pT() < 120*GeV) vetoEvent;
 
       // AK7 jets
-      const PseudoJets& psjetsAK7_zj = applyProjection<FastJets>(event, "JetsAK7_zj").pseudoJetsByPt(50.0*GeV);
+      const PseudoJets& psjetsAK7_zj = apply<FastJets>(event, "JetsAK7_zj").pseudoJetsByPt(50.0*GeV);
       if (!psjetsAK7_zj.empty()) {
         // Get the leading jet and make sure it's back-to-back with the Z
         const fastjet::PseudoJet& j0 = psjetsAK7_zj[0];
@@ -119,7 +119,7 @@ namespace Rivet {
       }
 
       // CA8 jets
-      const PseudoJets& psjetsCA8_zj = applyProjection<FastJets>(event, "JetsCA8_zj").pseudoJetsByPt(50.0*GeV);
+      const PseudoJets& psjetsCA8_zj = apply<FastJets>(event, "JetsCA8_zj").pseudoJetsByPt(50.0*GeV);
       if (!psjetsCA8_zj.empty()) {
         // Get the leading jet and make sure it's back-to-back with the Z
         const fastjet::PseudoJet& j0 = psjetsCA8_zj[0];
@@ -133,7 +133,7 @@ namespace Rivet {
       }
 
       // CA12 jets
-      const PseudoJets& psjetsCA12_zj = applyProjection<FastJets>(event, "JetsCA12_zj").pseudoJetsByPt(50.0*GeV);
+      const PseudoJets& psjetsCA12_zj = apply<FastJets>(event, "JetsCA12_zj").pseudoJetsByPt(50.0*GeV);
       if (!psjetsCA12_zj.empty()) {
         // Get the leading jet and make sure it's back-to-back with the Z
         const fastjet::PseudoJet& j0 = psjetsCA12_zj[0];

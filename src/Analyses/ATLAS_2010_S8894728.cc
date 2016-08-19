@@ -13,11 +13,11 @@ namespace Rivet {
 
     void init() {
       const ChargedFinalState cfs100(-2.5, 2.5, 100*MeV);
-      addProjection(cfs100, "CFS100");
+      declare(cfs100, "CFS100");
       const ChargedFinalState cfs500(-2.5, 2.5, 500*MeV);
-      addProjection(cfs500, "CFS500");
+      declare(cfs500, "CFS500");
       const ChargedFinalState cfslead(-2.5, 2.5, 1.0*GeV);
-      addProjection(cfslead, "CFSlead");
+      declare(cfslead, "CFSlead");
 
       // Get an index for the beam energy
       int isqrts = -1;
@@ -96,13 +96,13 @@ namespace Rivet {
       const double weight = event.weight();
 
       // Require at least one track in the event with pT >= 1 GeV
-      const ChargedFinalState& cfslead = applyProjection<ChargedFinalState>(event, "CFSlead");
+      const ChargedFinalState& cfslead = apply<ChargedFinalState>(event, "CFSlead");
       if (cfslead.size() < 1) {
         vetoEvent;
       }
 
       // These are the charged particles (tracks) with pT > 500 MeV
-      const ChargedFinalState& charged500 = applyProjection<ChargedFinalState>(event, "CFS500");
+      const ChargedFinalState& charged500 = apply<ChargedFinalState>(event, "CFS500");
 
       // Identify leading track and its phi and pT (this is the same for both the 100 MeV and 500 MeV track cuts)
       Particles particles500 = charged500.particlesByPt();
@@ -220,7 +220,7 @@ namespace Rivet {
 
 
       // These are the charged particles (tracks) with pT > 100 MeV
-      const ChargedFinalState& charged100 = applyProjection<ChargedFinalState>(event, "CFS100");
+      const ChargedFinalState& charged100 = apply<ChargedFinalState>(event, "CFS100");
 
       // Iterate over all > 100 MeV particles and count particles and scalar pTsum in the three regions
       vector<double> num100(3, 0), ptSum100(3, 0.0);

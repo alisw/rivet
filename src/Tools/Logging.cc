@@ -17,11 +17,11 @@ namespace Rivet {
 
 
   Log::Log(const string& name)
-    : _name(name), _level(INFO), _nostream(new ostream(0)) { }
+    : _name(name), _level(INFO) { }
 
 
   Log::Log(const string& name, int level)
-    : _name(name), _level(level), _nostream(new ostream(0)) { }
+    : _name(name), _level(level) { }
 
 
   /// @todo Add single static setLevel
@@ -30,7 +30,7 @@ namespace Rivet {
     for (Log::LevelMap::const_iterator lev = defaultLevels.begin(); lev != defaultLevels.end(); ++lev) {
       for (Log::LogMap::iterator log = existingLogs.begin(); log != existingLogs.end(); ++log) {
         if (log->first.find(lev->first) == 0) {
-          log->second->setLevel(lev->second);
+          log->second.setLevel(lev->second);
         }
       }
     }
@@ -53,7 +53,8 @@ namespace Rivet {
 
 
   Log& Log::getLog(const string& name) {
-    if (existingLogs.find(name) == existingLogs.end()) {
+    auto theLog = existingLogs.find(name);
+    if (theLog == existingLogs.end()) {
       int level = INFO;
       // Try running through all parent classes to find an existing level
       string tmpname = name;
@@ -64,9 +65,9 @@ namespace Rivet {
           level = defaultLevels.find(tmpname)->second;
           break;
         }
-        // Is there already such a logger? (NB. tmpname != name)
+        // Is there already such a logger? (NB. tmpname != name in later iterations)
         if (existingLogs.find(tmpname) != existingLogs.end()) {
-          level = existingLogs.find(tmpname)->second->getLevel();
+          level = existingLogs.find(tmpname)->second.getLevel();
           break;
         }
         // Crop the string back to the next parent level
@@ -80,9 +81,12 @@ namespace Rivet {
       // for (LevelMap::const_iterator l = defaultLevels.begin(); l != defaultLevels.end(); ++l) {
       // 
       // }
-      existingLogs[name] = new Log(name, level);
+
+      // emplace returns pair<iterator,bool>
+      auto result = existingLogs.emplace(name, Log(name, level));
+      theLog = result.first;
     }
-    return *existingLogs[name];
+    return theLog->second;
   }
 
 
@@ -191,7 +195,8 @@ namespace Rivet {
       cout << log.formatMessage(level, "");
       return cout;
     } else {
-      return *(log._nostream);
+      static ostream devNull(nullptr);
+      return devNull;
     }
   }
 

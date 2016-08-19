@@ -22,7 +22,7 @@ namespace Rivet {
 
 
     void init() {
-      addProjection(UnstableFinalState(), "UFS");
+      declare(UnstableFinalState(), "UFS");
 
       _hist_cont_f0 = bookHisto1D(2, 1, 1);
       _hist_Ups1_f0 = bookHisto1D(3, 1, 1);
@@ -33,7 +33,7 @@ namespace Rivet {
     void analyze(const Event& e) {
 
       // Find the Upsilons among the unstables
-      const UnstableFinalState& ufs = applyProjection<UnstableFinalState>(e, "UFS");
+      const UnstableFinalState& ufs = apply<UnstableFinalState>(e, "UFS");
       Particles upsilons;
 
       // First in unstable final state
@@ -95,7 +95,7 @@ namespace Rivet {
           findDecayProducts(ups.genParticle(), unstable);
           LorentzTransform cms_boost;
           if (ups.p3().mod() > 1*MeV)
-            cms_boost = LorentzTransform(-ups.momentum().boostVector());
+            cms_boost = LorentzTransform::mkFrameTransformFromBeta(ups.momentum().betaVec());
           const double mass = ups.mass();
           unsigned int nEtaA(0), nEtaB(0), nf0(0);
           foreach(const Particle& p, unstable) {

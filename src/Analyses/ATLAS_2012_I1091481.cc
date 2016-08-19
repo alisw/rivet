@@ -18,9 +18,9 @@ namespace Rivet {
     void init() {
 
       ChargedFinalState cfs100(Cuts::abseta < 2.5 && Cuts::pT > 0.1*GeV);
-      addProjection(cfs100,"CFS100");
+      declare(cfs100,"CFS100");
       ChargedFinalState cfs500(Cuts::abseta < 2.5 && Cuts::pT > 0.5*GeV);
-      addProjection(cfs500,"CFS500");
+      declare(cfs500,"CFS500");
 
       // collision energy
       int isqrts = -1;
@@ -113,9 +113,9 @@ namespace Rivet {
       double weight = event.weight();
 
       // Charged fs
-      const ChargedFinalState& cfs100  = applyProjection<ChargedFinalState>(event, "CFS100");
+      const ChargedFinalState& cfs100  = apply<ChargedFinalState>(event, "CFS100");
       const Particles          part100 = cfs100.particles(cmpMomByEta);
-      const ChargedFinalState& cfs500  = applyProjection<ChargedFinalState>(event, "CFS500");
+      const ChargedFinalState& cfs500  = apply<ChargedFinalState>(event, "CFS500");
       const Particles&         part500 = cfs500.particles(cmpMomByEta);
 
       // Veto event if the most inclusive phase space has less than 10 particles and the max pT is > 10 GeV

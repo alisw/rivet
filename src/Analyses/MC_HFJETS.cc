@@ -30,8 +30,8 @@ namespace Rivet {
 
       FastJets fj(FinalState(-5, 5), FastJets::ANTIKT, 0.6);
       fj.useInvisibles();
-      addProjection(fj, "Jets");
-      addProjection(HeavyHadrons(Cuts::abseta < 5 && Cuts::pT > 500*MeV), "BCHadrons");
+      declare(fj, "Jets");
+      declare(HeavyHadrons(Cuts::abseta < 5 && Cuts::pT > 500*MeV), "BCHadrons");
 
       _h_ptCJetLead = bookHisto1D("ptCJetLead", linspace(5, 0, 20, false) + logspace(25, 20, 200));
       _h_ptCHadrLead = bookHisto1D("ptCHadrLead", linspace(5, 0, 10, false) + logspace(25, 10, 200));
@@ -50,9 +50,9 @@ namespace Rivet {
       const double weight = event.weight();
 
       // Get jets and heavy hadrons
-      const Jets& jets = applyProjection<JetAlg>(event, "Jets").jetsByPt();
-      const Particles bhadrons = sortByPt(applyProjection<HeavyHadrons>(event, "BCHadrons").bHadrons());
-      const Particles chadrons = sortByPt(applyProjection<HeavyHadrons>(event, "BCHadrons").cHadrons());
+      const Jets& jets = apply<JetAlg>(event, "Jets").jetsByPt();
+      const Particles bhadrons = sortByPt(apply<HeavyHadrons>(event, "BCHadrons").bHadrons());
+      const Particles chadrons = sortByPt(apply<HeavyHadrons>(event, "BCHadrons").cHadrons());
       MSG_DEBUG("# b hadrons = " << bhadrons.size() << ", # c hadrons = " << chadrons.size());
 
       // Max HF hadron--jet axis dR to be regarded as a jet tag

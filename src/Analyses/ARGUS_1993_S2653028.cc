@@ -22,7 +22,7 @@ namespace Rivet {
       // Find the upsilons
       Particles upsilons;
       // First in unstable final state
-      const UnstableFinalState& ufs = applyProjection<UnstableFinalState>(e, "UFS");
+      const UnstableFinalState& ufs = apply<UnstableFinalState>(e, "UFS");
       foreach (const Particle& p, ufs.particles()) {
         if (p.pid() == 300553) upsilons.push_back(p);
       }
@@ -52,7 +52,7 @@ namespace Rivet {
         findDecayProducts(p.genParticle(), pionsA, pionsB, protonsA, protonsB, kaons);
         LorentzTransform cms_boost;
         if (p.p3().mod() > 1*MeV)
-          cms_boost = LorentzTransform(-p.momentum().boostVector());
+          cms_boost = LorentzTransform::mkFrameTransformFromBeta(p.momentum().betaVec());
         for (size_t ix = 0; ix < pionsA.size(); ++ix) {
           FourMomentum ptemp(pionsA[ix]->momentum());
           FourMomentum p2 = cms_boost.transform(ptemp);
@@ -103,7 +103,7 @@ namespace Rivet {
 
 
     void init() {
-      addProjection(UnstableFinalState(), "UFS");
+      declare(UnstableFinalState(), "UFS");
 
       // spectra
       _histPiA = bookHisto1D(1, 1, 1);

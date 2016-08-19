@@ -26,8 +26,7 @@ namespace Rivet {
   class ATLAS_2012_I1084540 : public Analysis {
   public:
 
-    ATLAS_2012_I1084540() : Analysis("ATLAS_2012_I1084540"), _etaBins(49), _etaMax(4.9) {
-    }
+    ATLAS_2012_I1084540() : Analysis("ATLAS_2012_I1084540") {}
 
 
     /// @name Analysis methods
@@ -39,10 +38,10 @@ namespace Rivet {
       const FinalState cnfs4(-_etaMax, _etaMax, 0.4 * GeV);
       const FinalState cnfs6(-_etaMax, _etaMax, 0.6 * GeV);
       const FinalState cnfs8(-_etaMax, _etaMax, 0.8 * GeV);
-      addProjection(cnfs2, "CNFS2");
-      addProjection(cnfs4, "CNFS4");
-      addProjection(cnfs6, "CNFS6");
-      addProjection(cnfs8, "CNFS8");
+      declare(cnfs2, "CNFS2");
+      declare(cnfs4, "CNFS4");
+      declare(cnfs6, "CNFS6");
+      declare(cnfs8, "CNFS8");
 
       _etaBinSize = (2. * _etaMax)/(double)_etaBins;
 
@@ -77,16 +76,16 @@ namespace Rivet {
       static unsigned int event_count = 0;
       ++event_count;
       const double weight = event.weight();
-      const FinalState& fs2 = applyProjection<FinalState>(event, "CNFS2");
-      const FinalState& fs4 = applyProjection<FinalState>(event, "CNFS4");
-      const FinalState& fs6 = applyProjection<FinalState>(event, "CNFS6");
-      const FinalState& fs8 = applyProjection<FinalState>(event, "CNFS8");
+      const FinalState& fs2 = apply<FinalState>(event, "CNFS2");
+      const FinalState& fs4 = apply<FinalState>(event, "CNFS4");
+      const FinalState& fs6 = apply<FinalState>(event, "CNFS6");
+      const FinalState& fs8 = apply<FinalState>(event, "CNFS8");
 
       // Set up Yes/No arrays for energy in each eta bin at each pT cut
-      bool* energyMap_200 = new bool[_etaBins];
-      bool* energyMap_400 = new bool[_etaBins];
-      bool* energyMap_600 = new bool[_etaBins];
-      bool* energyMap_800 = new bool[_etaBins];
+      bool energyMap_200[_etaBins];
+      bool energyMap_400[_etaBins];
+      bool energyMap_600[_etaBins];
+      bool energyMap_800[_etaBins];
       for (int i = 0; i < _etaBins; ++i) {
         energyMap_200[i] = false;
         energyMap_400[i] = false;
@@ -198,11 +197,6 @@ namespace Rivet {
           MSG_DEBUG(gapArrow);
         }
       }
-
-      delete[] energyMap_200;
-      delete[] energyMap_400;
-      delete[] energyMap_600;
-      delete[] energyMap_800;
     }
 
     /// Normalise histograms after the run, Scale to cross section
@@ -225,8 +219,8 @@ namespace Rivet {
     //@}
     /// @name Private variables
     //@{
-    int _etaBins;
-    double _etaMax;
+    static constexpr int _etaBins = 49;
+    static constexpr double _etaMax = 4.9;
     double _etaBinSize;
     //@}
   };

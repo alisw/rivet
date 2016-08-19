@@ -22,7 +22,7 @@ namespace Rivet {
 
       IdentifiedFinalState ifs(Cuts::abseta < 2.1 && Cuts::pT > 6*GeV);
       ifs.acceptIdPair(PID::MUON);
-      addProjection(ifs, "IFS");
+      declare(ifs, "IFS");
     }
 
 
@@ -40,7 +40,7 @@ namespace Rivet {
       nbtot += weight;
 
       // Event must contain a muon
-      Particles muons = applyProjection<IdentifiedFinalState>(event, "IFS").particlesByPt();
+      Particles muons = apply<IdentifiedFinalState>(event, "IFS").particlesByPt();
       if (muons.size() < 1) vetoEvent;
       nbmutot += weight;
 

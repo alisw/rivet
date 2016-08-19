@@ -10,10 +10,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    SFM_1984_S1178091() : Analysis("SFM_1984_S1178091") {
-      _sumW = 0;
-      _sumWDiff = 0;
-    }
+    SFM_1984_S1178091() : Analysis("SFM_1984_S1178091") {}
 
 
     /// @name Analysis methods
@@ -21,8 +18,8 @@ namespace Rivet {
 
     void init() {
       // Projections
-      /// @todo Corrected to full phase space?
-      addProjection(ChargedFinalState(-10,10,250*MeV), "FS");
+      // 
+      declare(ChargedFinalState(Cuts::absrap<5 && Cuts::pT>250*MeV && Cuts::pT<3*GeV), "FS");
 
       // Histograms
       if (fuzzyEquals(sqrtS()/GeV, 30.4, 1E-1)) {
@@ -45,67 +42,40 @@ namespace Rivet {
     // Analyse each event
     void analyze(const Event& event) {
       const double weight = event.weight();
-      const ChargedFinalState& fs = applyProjection<ChargedFinalState>(event, "FS");
-      //const size_t numParticles = fs.particles().size();
-      size_t N=0;
+      const ChargedFinalState& fs = apply<ChargedFinalState>(event, "FS");
 
-      /// @todo Any trigger?
-      //
       // Trigger
-      //if (numParticles <1 ) vetoEvent;
+      if (fs.particles().size() <1 ) vetoEvent;
 
-      // Decide whether event is of diffractive type or not
-      // @todo It is not so clear in the paper how this distinction is made.
-      // They seem to require either exactly one particle with Feynman x larger
-      // than 0.8 to call an event diffractive or that there are no tracks
-      // reconstructed in either of the two hemispheres. For the latter
-      // they require in addition also the number of charged particles
-      // to be smaller than 8.
+      // Event classification: 
       int n_left(0), n_right(0), n_large_x(0);
       foreach (const Particle& p, fs.particles()) {
         // Calculate the particles' Feynman x
-        if (p.pT() <=3*GeV) {
-          N++;
-          const double x_feyn = 2.0 * fabs(p.pz())/sqrtS();
-          if (x_feyn > 0.8 ) n_large_x += 1;
+        const double x_feyn = 2.0 * fabs(p.pz())/sqrtS();
+        if (x_feyn > 0.8 ) n_large_x += 1;
 
-          // Pseudorapidity
-          const double eta = p.eta();
-          if (eta > 0.0) n_right += 1;
-          else if (eta < 0.0) n_left += 1;
-        }
+        // Pseudorapidity
+        const double eta = p.eta();
+        if (eta > 0.0) n_right += 1;
+        else if (eta < 0.0) n_left += 1;
       }
       MSG_DEBUG("N_left: " << n_left << ", "
                 << "N_right: " << n_right << ", "
                 << "N_large_x: " << n_large_x);
 
-      if ( N < 1 ) vetoEvent;
-      // Not sure about the "=="!
-      // @todo Not sure about the "== 1", the paper says no charged particle
-      // that was reconstructed so the incoming protons must run down the beam
-      // pipe. Since we look a the complete final state here no particle being
-      // reconstructed should be equal to one particle (proton) in each
-      // hemisphere.  The "< 8" is also not certain.
-      const bool isDiffractive = (n_large_x == 1) ||
-        (( (n_left + n_right) == 1) && (N < 7) );
-        //((n_left == 1 || n_right == 1) && N < 8 );
-        //((n_left == 1 || n_right == 1) && numParticles < 8 );
+      
+      // Single diffractive: either one large x particle or 0 particles in the one hemisphere but more than 7 in the other hemisphere
+      bool isDiffractive = (n_large_x == 1) ||  ( ((n_left==0) && (fs.particles().size() < 7)) || ((n_right==0) && (fs.particles().size() < 7)) );
 
-      // Increment weight counters
-      _sumW += weight;
-      _sumWDiff += weight;
 
-      // Fill histos of charged multiplicity distributions
-      //_hist_multiplicity_inel->fill(numParticles, weight);
-      //if (!isDiffractive) _hist_multiplicity_nsd->fill(numParticles, weight);
-      _hist_multiplicity_inel->fill(N, weight);
-      if (!isDiffractive) _hist_multiplicity_nsd->fill(N, weight);
+      _hist_multiplicity_inel->fill(fs.particles().size(), weight);
+      if (!isDiffractive) _hist_multiplicity_nsd->fill(fs.particles().size(), weight);
     }
 
 
     void finalize() {
-      scale(_hist_multiplicity_inel, 1.0/_sumWDiff);
-      scale(_hist_multiplicity_nsd, 1.0/_sumW );
+      normalize(_hist_multiplicity_inel);
+      normalize(_hist_multiplicity_nsd);
     }
 
     //@}
@@ -113,10 +83,6 @@ namespace Rivet {
 
   private:
 
-    /// @name Weight counters
-    //@{
-    double _sumW, _sumWDiff;
-    //@}
 
     /// @name Histograms
     //@{

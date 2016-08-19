@@ -39,12 +39,8 @@ namespace Rivet {
 
 
     /// Clone on the heap.
-    virtual const Projection* clone() const {
-    	return new InvMassFinalState(*this);
-    }
+    DEFAULT_RIVET_PROJ_CLONE(InvMassFinalState);
 
-
-  public:
 
     /// Constituent pairs.
     const std::vector<std::pair<Particle, Particle> >& particlePairs() const;

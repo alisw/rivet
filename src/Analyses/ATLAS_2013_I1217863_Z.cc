@@ -28,18 +28,18 @@ namespace Rivet {
     void init() {
 
       FinalState fs;
-      addProjection(fs, "FS");
+      declare(fs, "FS");
 
       Cut cuts = Cuts::abseta < 2.47 && Cuts::pT > 25*GeV;
 
       // Z finder
       ZFinder zf(fs, cuts, _mode==3? PID::MUON : PID::ELECTRON, 40.0*GeV, 1000.0*GeV, 0.1, ZFinder::CLUSTERNODECAY, ZFinder::NOTRACK);
-      addProjection(zf, "ZF");
+      declare(zf, "ZF");
 
       // leading photon
       LeadingParticlesFinalState photonfs(FinalState(Cuts::abseta < 2.37 && Cuts::pT > 15*GeV));
       photonfs.addParticleId(PID::PHOTON);
-      addProjection(photonfs, "LeadingPhoton");
+      declare(photonfs, "LeadingPhoton");
 
       // jets
       VetoedFinalState jet_fs(fs);
@@ -47,12 +47,12 @@ namespace Rivet {
       jet_fs.addVetoOnThisFinalState(getProjection<LeadingParticlesFinalState>("LeadingPhoton"));
       FastJets jets(jet_fs, FastJets::ANTIKT, 0.4);
       jets.useInvisibles(true);
-      addProjection(jets, "Jets");
+      declare(jets, "Jets");
 
       // FS excluding the leading photon
       VetoedFinalState vfs(fs);
       vfs.addVetoOnThisFinalState(photonfs);
-      addProjection(vfs, "isolatedFS");
+      declare(vfs, "isolatedFS");
 
 
       // Book histograms
@@ -71,7 +71,7 @@ namespace Rivet {
       const double weight = event.weight();
 
       // retrieve leading photon
-      Particles photons = applyProjection<LeadingParticlesFinalState>(event, "LeadingPhoton").particles();
+      Particles photons = apply<LeadingParticlesFinalState>(event, "LeadingPhoton").particles();
       if (photons.size() != 1)  vetoEvent;
       const Particle& leadingPhoton = photons[0];
       if (leadingPhoton.Et() < 15.0*GeV) vetoEvent;
@@ -79,14 +79,14 @@ namespace Rivet {
 
       // check photon isolation
       double coneEnergy(0.0);
-      Particles fs = applyProjection<VetoedFinalState>(event, "isolatedFS").particles();
+      Particles fs = apply<VetoedFinalState>(event, "isolatedFS").particles();
       foreach(const Particle& p, fs) {
         if ( deltaR(leadingPhoton, p) < 0.4 )  coneEnergy += p.E();
       }
       if (coneEnergy / leadingPhoton.E() >= 0.5 )  vetoEvent;
 
       // retrieve Z boson candidate
-      const ZFinder& zf = applyProjection<ZFinder>(event, "ZF");
+      const ZFinder& zf = apply<ZFinder>(event, "ZF");
       if ( zf.bosons().size() != 1 )  vetoEvent; // only one Z boson candidate
       const Particle& Zboson  = zf.boson();
       if ( !(Zboson.mass() > 40.0*GeV) )  vetoEvent;
@@ -101,7 +101,7 @@ namespace Rivet {
       }
 
       // count jets
-      const FastJets& jetfs = applyProjection<FastJets>(event, "Jets");
+      const FastJets& jetfs = apply<FastJets>(event, "Jets");
       Jets jets = jetfs.jets(cmpMomByEt);
       int goodJets = 0;
       foreach (const Jet& j, jets) {

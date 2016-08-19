@@ -19,7 +19,7 @@ namespace Rivet {
       const FinalState fs;
 
       // Initialize the projectors:
-      addProjection(FastJets(fs, FastJets::ANTIKT, 0.5),"Jets");
+      declare(FastJets(fs, FastJets::ANTIKT, 0.5),"Jets");
 
       // Book histograms:
       _hist_sigma.addHistogram(0.0, 0.5, bookHisto1D(1, 1, 1));
@@ -33,7 +33,7 @@ namespace Rivet {
     // Analysis
     void analyze(const Event &event) {
       const double weight = event.weight();
-      const FastJets& fj = applyProjection<FastJets>(event,"Jets");
+      const FastJets& fj = apply<FastJets>(event,"Jets");
       const Jets& jets = fj.jets(Cuts::ptIn(18*GeV, 1100.0*GeV) && Cuts::absrap < 4.7);
 
       // Fill the relevant histograms:

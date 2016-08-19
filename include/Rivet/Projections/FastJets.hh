@@ -26,7 +26,8 @@ namespace Rivet {
   class FastJets : public JetAlg {
   public:
 
-    /// Wrapper enum for selected Fastjet jet algorithms.
+    /// Wrapper enum for selected FastJet jet algorithms.
+    /// @todo Move to JetAlg and alias here?
     enum JetAlgName { KT, CAM, SISCONE, ANTIKT,
                       // PXCONE,
                       ATLASCONE, CMSCONE,
@@ -37,92 +38,136 @@ namespace Rivet {
     /// @name Constructors etc.
     //@{
 
-    /// "Wrapped" argument constructor using Rivet enums for most common
-    /// jet alg choices (including some plugins). For the built-in algs,
-    /// E-scheme recombination is used. For full control of
-    /// FastJet built-in jet algs, use the native arg constructor.
-    FastJets(const FinalState& fsp, JetAlgName alg, double rparameter,
+    /// Constructor from a FastJet JetDefinition
+    ///
+    /// @warning The AreaDefinition pointer must be heap-allocated: it will be stored/deleted via a shared_ptr.
+    FastJets(const FinalState& fsp,
+             const fastjet::JetDefinition& jdef,
              JetAlg::MuonsStrategy usemuons=JetAlg::ALL_MUONS,
              JetAlg::InvisiblesStrategy useinvis=JetAlg::NO_INVISIBLES,
-             double seed_threshold=1.0)
-      : JetAlg(fsp, usemuons, useinvis), _adef(0) { _init1(alg, rparameter, seed_threshold); }
+             fastjet::AreaDefinition* adef=nullptr)
+      : JetAlg(fsp, usemuons, useinvis), _jdef(jdef), _adef(adef)
+    {
+      _initBase();
+    }
+
+    /// JetDefinition-based constructor with reordered args for easier specification of jet area definition
+    ///
+    /// @warning The AreaDefinition pointer must be heap-allocated: it will be stored/deleted via a shared_ptr.
+    FastJets(const FinalState& fsp,
+             const fastjet::JetDefinition& jdef,
+             fastjet::AreaDefinition* adef,
+             JetAlg::MuonsStrategy usemuons=JetAlg::ALL_MUONS,
+             JetAlg::InvisiblesStrategy useinvis=JetAlg::NO_INVISIBLES)
+      : FastJets(fsp, jdef, usemuons, useinvis, adef)
+    {    }
 
     /// Native argument constructor, using FastJet alg/scheme enums.
-    FastJets(const FinalState& fsp, fastjet::JetAlgorithm type,
+    ///
+    /// @warning The AreaDefinition pointer must be heap-allocated: it will be stored/deleted via a shared_ptr.
+    FastJets(const FinalState& fsp,
+             fastjet::JetAlgorithm type,
              fastjet::RecombinationScheme recom, double rparameter,
              JetAlg::MuonsStrategy usemuons=JetAlg::ALL_MUONS,
-             JetAlg::InvisiblesStrategy useinvis=JetAlg::NO_INVISIBLES)
-      : JetAlg(fsp, usemuons, useinvis), _adef(0) { _init2(type, recom, rparameter); }
+             JetAlg::InvisiblesStrategy useinvis=JetAlg::NO_INVISIBLES,
+             fastjet::AreaDefinition* adef=nullptr)
+      : FastJets(fsp, fastjet::JetDefinition(type, rparameter, recom), usemuons, useinvis, adef)
+    {    }
 
-    /// Explicitly pass in a JetDefinition
-    FastJets(const FinalState& fsp, const fastjet::JetDefinition& jdef,
+    /// Native argument constructor with reordered args for easier specification of jet area definition
+    ///
+    /// @warning The AreaDefinition pointer must be heap-allocated: it will be stored/deleted via a shared_ptr.
+    FastJets(const FinalState& fsp,
+             fastjet::JetAlgorithm type,
+             fastjet::RecombinationScheme recom, double rparameter,
+             fastjet::AreaDefinition* adef,
              JetAlg::MuonsStrategy usemuons=JetAlg::ALL_MUONS,
              JetAlg::InvisiblesStrategy useinvis=JetAlg::NO_INVISIBLES)
-      : JetAlg(fsp, usemuons, useinvis), _adef(0) { _init3(jdef); }
+      : FastJets(fsp, type, recom, rparameter, usemuons, useinvis, adef)
+    {    }
 
-    /// Explicitly pass in an externally-constructed plugin (must be heap-allocated, Rivet will delete)
-    FastJets(const FinalState& fsp, fastjet::JetDefinition::Plugin* plugin,
+    /// @brief Explicitly pass in an externally-constructed plugin
+    ///
+    /// @warning Provided plugin and area definition pointers must be heap-allocated; Rivet will store/delete via a shared_ptr
+    FastJets(const FinalState& fsp,
+             fastjet::JetDefinition::Plugin* plugin,
+             JetAlg::MuonsStrategy usemuons=JetAlg::ALL_MUONS,
+             JetAlg::InvisiblesStrategy useinvis=JetAlg::NO_INVISIBLES,
+             fastjet::AreaDefinition* adef=nullptr)
+      : FastJets(fsp, fastjet::JetDefinition(plugin), usemuons, useinvis, adef)
+    {
+      _plugin.reset(plugin);
+    }
+
+    /// @brief Explicitly pass in an externally-constructed plugin, with reordered args for easier specification of jet area definition
+    ///
+    /// @warning Provided plugin and area definition pointers must be heap-allocated; Rivet will store/delete via a shared_ptr
+    FastJets(const FinalState& fsp,
+             fastjet::JetDefinition::Plugin* plugin,
+             fastjet::AreaDefinition* adef,
              JetAlg::MuonsStrategy usemuons=JetAlg::ALL_MUONS,
              JetAlg::InvisiblesStrategy useinvis=JetAlg::NO_INVISIBLES)
-      : JetAlg(fsp, usemuons, useinvis), _adef(0) { _init4(plugin); }
+      : FastJets(fsp, plugin, usemuons, useinvis, adef)
+    {    }
 
-    /// Explicitly pass in an externally-constructed plugin (must be heap-allocated, Rivet will delete)
-    /// @deprecated Use the pointer version -- it makes the lifetime & ownership more obvious
-    FastJets(const FinalState& fsp, fastjet::JetDefinition::Plugin& plugin,
+    /// @brief Convenience constructor using Rivet enums for most common jet algs (including some plugins).
+    ///
+    /// For the built-in algs, E-scheme recombination is used. For full control
+    /// of FastJet built-in jet algs, use the constructors from native-args or a
+    /// plugin pointer.
+    ///
+    /// @warning Provided area definition pointer must be heap-allocated; Rivet will store/delete via a shared_ptr
+    FastJets(const FinalState& fsp,
+             JetAlgName alg, double rparameter,
              JetAlg::MuonsStrategy usemuons=JetAlg::ALL_MUONS,
-             JetAlg::InvisiblesStrategy useinvis=JetAlg::NO_INVISIBLES)
-      : JetAlg(fsp, usemuons, useinvis), _adef(0) { _init4(&plugin); }
+             JetAlg::InvisiblesStrategy useinvis=JetAlg::NO_INVISIBLES,
+             fastjet::AreaDefinition* adef=nullptr,
+             double seed_threshold=1.0)
+      : JetAlg(fsp, usemuons, useinvis)
+    {
+      _initBase();
+      _initJdef(alg, rparameter, seed_threshold);
+    }
 
 
-    /// Same thing as above, but without an FS (for when we want to pass the particles directly to the calc method)
-    FastJets(JetAlgName alg, double rparameter, double seed_threshold=1.0)
-      : _adef(0) { _init1(alg, rparameter, seed_threshold); }
-    /// Same thing as above, but without an FS (for when we want to pass the particles directly to the calc method)
-    FastJets(fastjet::JetAlgorithm type, fastjet::RecombinationScheme recom, double rparameter)
-      : _adef(0) { _init2(type, recom, rparameter); }
-    /// Same thing as above, but without an FS (for when we want to pass the particles directly to the calc method)
-    FastJets(fastjet::JetDefinition::Plugin* plugin)
-      : _adef(0) { _init3(plugin); }
-    /// Same thing as above, but without an FS (for when we want to pass the particles directly to the calc method)
-    FastJets(fastjet::JetDefinition::Plugin& plugin)
-      : _adef(0) { _init3(&plugin); }
+    // /// Same thing as above, but without an FS (for when we want to pass the particles directly to the calc method)
+    // /// @todo Does this work properly, without internal HeavyQuarks etc.?
+    // FastJets(JetAlgName alg, double rparameter, double seed_threshold=1.0) { _initJdef(alg, rparameter, seed_threshold); }
+    // /// Same thing as above, but without an FS (for when we want to pass the particles directly to the calc method)
+    // /// @todo Does this work properly, without internal HeavyQuarks etc.?
+    // FastJets(fastjet::JetAlgorithm type, fastjet::RecombinationScheme recom, double rparameter) { _initJdef(type, recom, rparameter); }
+    // /// Same thing as above, but without an FS (for when we want to pass the particles directly to the calc method)
+    // /// @todo Does this work properly, without internal HeavyQuarks etc.?
+    // FastJets(fastjet::JetDefinition::Plugin* plugin) : _jdef(plugin), _plugin(plugin) {
+    //   // _plugin.reset(plugin);
+    //   // _jdef = fastjet::JetDefinition(plugin);
+    // }
 
 
     /// Clone on the heap.
-    virtual const Projection* clone() const {
-      return new FastJets(*this);
-    }
+    DEFAULT_RIVET_PROJ_CLONE(FastJets);
 
     //@}
 
 
-  public:
-
     /// Reset the projection. Jet def, etc. are unchanged.
     void reset();
 
+
     /// @brief Use provided jet area definition
     ///
-    /// @warning @a adef is NOT copied, the user must ensure that it remains valid!
-    ///
-    /// Provide an adef null pointer to re-disable jet area calculation
+    /// @warning The provided pointer must be heap-allocated: it will be stored/deleted via a shared_ptr.
+    /// @note Provide an adef null pointer to re-disable jet area calculation
     void useJetArea(fastjet::AreaDefinition* adef) {
-      _adef = adef;
+      _adef.reset(adef);
     }
+
 
     /// @name Access to the jets
     //@{
 
-    /// Number of jets above the \f$ p_\perp \f$ cut.
-    size_t numJets(double ptmin=0.0) const;
-
-    /// Number of jets.
-    size_t size() const {
-      return numJets();
-    }
-
-    /// Get the jets (unordered).
-    Jets _jets(double ptmin=0.0) const;
+    /// Get the jets (unordered) with pT > ptmin.
+    Jets _jets() const;
 
     /// Get the pseudo jets (unordered).
     PseudoJets pseudoJets(double ptmin=0.0) const;
@@ -150,53 +195,48 @@ namespace Rivet {
     /// Alias
     PseudoJets pseudojetsByRapidity(double ptmin=0.0) const { return pseudoJetsByRapidity(ptmin); }
 
-    //@}
-
     /// Trim (filter) a jet, keeping tag and constituent info in the resulting jet
     Jet trimJet(const Jet& input, const fastjet::Filter& trimmer) const;
+
+    //@}
+
 
     /// @name Access to the FastJet clustering objects such as jet def, area def, and cluster
     //@{
 
     /// Return the cluster sequence.
-    const fastjet::ClusterSequence* clusterSeq() const {
-      return _cseq.get();
+    /// @todo Care needed re. const shared_ptr<T> vs. shared_ptr<const T>
+    const shared_ptr<fastjet::ClusterSequence> clusterSeq() const {
+      return _cseq;
     }
+    // const fastjet::ClusterSequence* clusterSeq() const {
+    //   return _cseq.get();
+    // }
 
     /// Return the area-enabled cluster sequence (if an area defn exists, otherwise returns a null ptr).
-    const fastjet::ClusterSequenceArea* clusterSeqArea() const {
-      if (areaDef() == NULL) return (fastjet::ClusterSequenceArea*) 0;
-      return dynamic_cast<fastjet::ClusterSequenceArea*>(_cseq.get());
+    /// @todo Care needed re. const shared_ptr<T> vs. shared_ptr<const T>
+    const shared_ptr<fastjet::ClusterSequenceArea> clusterSeqArea() const {
+      return areaDef() ? dynamic_pointer_cast<fastjet::ClusterSequenceArea>(_cseq) : nullptr;
     }
+    // const fastjet::ClusterSequenceArea* clusterSeqArea() const {
+    //   return areaDef() ? dynamic_cast<fastjet::ClusterSequenceArea*>(_cseq.get()) : nullptr;
+    // }
 
     /// Return the jet definition.
     const fastjet::JetDefinition& jetDef() const {
       return _jdef;
     }
 
-    /// Return the area definition.. May be null.
-    const fastjet::AreaDefinition* areaDef() const {
+    /// @brief Return the area definition.
+    ///
+    /// @warning May be null!
+    /// @todo Care needed re. const shared_ptr<T> vs. shared_ptr<const T>
+    const shared_ptr<fastjet::AreaDefinition> areaDef() const {
       return _adef;
     }
-
-    //@}
-
-
-    /// @name Access to jet splitting variables: DISABLED FROM 2.3.0, USE FASTJET OBJECTS DIRECTLY INSTEAD
-    //@{
-
-    // /// Get the subjet splitting variables for the given jet.
-    // vector<double> ySubJet(const fastjet::PseudoJet& jet) const;
-
-    // /// @brief Split a jet a la PRL100,242001(2008).
-    // ///
-    // /// Based on code from G.Salam, A.Davison.
-    // fastjet::PseudoJet splitJet(fastjet::PseudoJet jet, double& last_R) const;
-
-    // /// @brief Filter a jet a la PRL100,242001(2008).
-    // ///
-    // /// Based on code from G.Salam, A.Davison.
-    // fastjet::PseudoJet filterJet(fastjet::PseudoJet jet, double& stingy_R, const double def_R) const;
+    // const fastjet::AreaDefinition* areaDef() const {
+    //   return _adef.get();
+    // }
 
     //@}
 
@@ -206,14 +246,14 @@ namespace Rivet {
     /// Shared utility functions to implement constructor behaviour
     /// @todo Replace with calls between constructors when C++11 available?
     void _initBase();
-    void _init1(JetAlgName alg, double rparameter, double seed_threshold);
-    void _init2(fastjet::JetAlgorithm type, fastjet::RecombinationScheme recom, double rparameter);
-    void _init3(const fastjet::JetDefinition& plugin);
-    void _init4(fastjet::JetDefinition::Plugin* plugin);
+    void _initJdef(JetAlgName alg, double rparameter, double seed_threshold);
+    // void _init2(fastjet::JetAlgorithm type, fastjet::RecombinationScheme recom, double rparameter);
+    // void _init3(const fastjet::JetDefinition& plugin);
+    // void _init4(fastjet::JetDefinition::Plugin* plugin);
 
     /// Function to make Rivet::Jet from fastjet::PseudoJet, including constituent and tag info
-    Jet _makeJetFromPseudoJet(const PseudoJet& pj) const;
-    
+    Jet _mkJet(const PseudoJet& pj) const;
+
   protected:
 
     /// Perform the projection on the Event.
@@ -234,20 +274,20 @@ namespace Rivet {
     fastjet::JetDefinition _jdef;
 
     /// Pointer to user-handled area definition
-    fastjet::AreaDefinition* _adef;
+    std::shared_ptr<fastjet::AreaDefinition> _adef;
 
     /// Cluster sequence
-    shared_ptr<fastjet::ClusterSequence> _cseq;
+    std::shared_ptr<fastjet::ClusterSequence> _cseq;
 
     /// FastJet external plugin
-    shared_ptr<fastjet::JetDefinition::Plugin> _plugin;
+    std::shared_ptr<fastjet::JetDefinition::Plugin> _plugin;
 
     /// Map of vectors of y scales. This is mutable so we can use caching/lazy evaluation.
-    mutable map<int, vector<double> > _yscales;
+    mutable std::map<int, vector<double> > _yscales;
 
     /// set of particles sorted by their PT2
     //set<Particle, ParticleBase::byPTAscending> _particles;
-    map<int, Particle> _particles;
+    std::map<int, Particle> _particles;
 
   };
 

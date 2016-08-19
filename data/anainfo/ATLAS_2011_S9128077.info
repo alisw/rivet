@@ -3,6 +3,7 @@ Year: 2011
 Summary: Measurement of multi-jet cross sections
 Experiment: ATLAS
 Collider: LHC
+InspireID: 917599
 SpiresID: 9128077
 Status: VALIDATED
 Authors:
@@ -20,10 +21,10 @@ Description:
   2.4 pb-1. Results on multi-jet cross sections are presented differential
   in pT of the four leading jets, HT. Additionally three-to-two jet fractions
   are presented differential in different observables.
-  Jets are anti-kt with $R=0.4$ and $R=0.6$, $p_\perp>80(60)$ GeV and $|\eta|<2.8$.'
+  Jets are anti-$k_t$ with $R=0.4$ and $R=0.6$, $p_\perp>80(60)$ GeV and $|\eta|<2.8$.'
 NeedCrossSection: yes
-BibKey: Collaboration:2011tq
-BibTeX: '@Article{Collaboration:2011tq,
+BibKey: Aad:2011tqa
+BibTeX: '@Article{Aad:2011tqa,
      author    = "Collaboration, ATLAS",
      title     = "{Measurement of multi-jet cross sections in proton-proton
                   collisions at a 7 TeV center-of-mass energy}",

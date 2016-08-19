@@ -23,9 +23,9 @@ namespace Rivet {
 
     /// Set up projections and histograms
     void init() {
-      addProjection(TriggerUA5(), "Trigger");
-      addProjection(Beam(), "Beams");
-      addProjection(ChargedFinalState(-5.0, 5.0), "CFS50");
+      declare(TriggerUA5(), "Trigger");
+      declare(Beam(), "Beams");
+      declare(ChargedFinalState(-5.0, 5.0), "CFS50");
 
       // Histograms
       if (fuzzyEquals(sqrtS()/GeV, 200.0, 1E-4)) {
@@ -49,12 +49,12 @@ namespace Rivet {
     /// Fill eta histograms (in Nch bins)
     void analyze(const Event& event) {
       // Trigger
-      const TriggerUA5& trigger = applyProjection<TriggerUA5>(event, "Trigger");
+      const TriggerUA5& trigger = apply<TriggerUA5>(event, "Trigger");
       if (!trigger.sdDecision()) vetoEvent;
       const bool isNSD = trigger.nsdDecision();
 
       // Get the index corresponding to the max Nch range histo/sum(w) vector index
-      const ChargedFinalState& cfs50 = applyProjection<ChargedFinalState>(event, "CFS50");
+      const ChargedFinalState& cfs50 = apply<ChargedFinalState>(event, "CFS50");
       const int numP = cfs50.size();
       const int ni = (int)floor(static_cast<float>(numP-2)/10.0);
       const int num_idx = min(ni, (int)_sumWn.size()-1);

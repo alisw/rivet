@@ -1,5 +1,4 @@
 // -*- C++ -*-
-#include <iostream>
 #include "Rivet/Analysis.hh"
 #include "Rivet/Projections/Beam.hh"
 #include "Rivet/Projections/UnstableFinalState.hh"
@@ -23,7 +22,7 @@ namespace Rivet {
       // Find the charmonia
       Particles upsilons;
       // First in unstable final state
-      const UnstableFinalState& ufs = applyProjection<UnstableFinalState>(e, "UFS");
+      const UnstableFinalState& ufs = apply<UnstableFinalState>(e, "UFS");
       foreach (const Particle& p, ufs.particles())
         if (p.pid() == 300553) upsilons.push_back(p);
       // Then in whole event if fails
@@ -44,38 +43,38 @@ namespace Rivet {
         }
       }
 
-      // find an upsilons
+      // Find upsilons
       foreach (const Particle& p, upsilons) {
         _weightSum += weight;
-        // find the charmonium resonances
-        vector<const GenParticle*> allJpsi, primaryJpsi, Psiprime,
-          all_chi_c1, all_chi_c2, primary_chi_c1, primary_chi_c2;
+        // Find the charmonium resonances
+        /// @todo Use Rivet::Particles
+        vector<const GenParticle*> allJpsi, primaryJpsi, Psiprime, all_chi_c1, all_chi_c2, primary_chi_c1, primary_chi_c2;
         findDecayProducts(p.genParticle(), allJpsi, primaryJpsi, Psiprime,
                           all_chi_c1, all_chi_c2, primary_chi_c1, primary_chi_c2);
-        LorentzTransform cms_boost(-p.momentum().boostVector());
+        const LorentzTransform cms_boost = LorentzTransform::mkFrameTransformFromBeta(p.mom().betaVec());
         for (size_t i = 0; i < allJpsi.size(); i++) {
-          double pcm = cms_boost.transform(FourMomentum(allJpsi[i]->momentum())).vector3().mod();
+          const double pcm = cms_boost.transform(FourMomentum(allJpsi[i]->momentum())).p();
           _hist_all_Jpsi->fill(pcm, weight);
         }
         _mult_JPsi->fill(10.58, weight*double(allJpsi.size()));
         for (size_t i = 0; i < primaryJpsi.size(); i++) {
-          double pcm = cms_boost.transform(FourMomentum(primaryJpsi[i]->momentum())).vector3().mod();
+          const double pcm = cms_boost.transform(FourMomentum(primaryJpsi[i]->momentum())).p();
           _hist_primary_Jpsi->fill(pcm, weight);
         }
         _mult_JPsi_direct->fill(10.58, weight*double(primaryJpsi.size()));
         for (size_t i=0; i<Psiprime.size(); i++) {
-          double pcm = cms_boost.transform(FourMomentum(Psiprime[i]->momentum())).vector3().mod();
+          const double pcm = cms_boost.transform(FourMomentum(Psiprime[i]->momentum())).p();
           _hist_Psi_prime->fill(pcm, weight);
         }
         _mult_Psi2S->fill(10.58, weight*double(Psiprime.size()));
         for (size_t i = 0; i < all_chi_c1.size(); i++) {
-          double pcm = cms_boost.transform(FourMomentum(all_chi_c1[i]->momentum())).vector3().mod();
+          const double pcm = cms_boost.transform(FourMomentum(all_chi_c1[i]->momentum())).p();
           _hist_chi_c1->fill(pcm, weight);
         }
         _mult_chi_c1->fill(10.58, weight*double(all_chi_c1.size()));
         _mult_chi_c1_direct->fill(10.58, weight*double(primary_chi_c1.size()));
         for (size_t i = 0; i < all_chi_c2.size(); i++) {
-          double pcm = cms_boost.transform(FourMomentum(all_chi_c2[i]->momentum())).vector3().mod();
+          const double pcm = cms_boost.transform(FourMomentum(all_chi_c2[i]->momentum())).p();
           _hist_chi_c2->fill(pcm, weight);
         }
         _mult_chi_c2->fill(10.58, weight*double(all_chi_c2.size()));
@@ -101,7 +100,7 @@ namespace Rivet {
 
 
     void init() {
-      addProjection(UnstableFinalState(), "UFS");
+      declare(UnstableFinalState(), "UFS");
 
       _mult_JPsi          = bookHisto1D(1, 1, 1);
       _mult_JPsi_direct   = bookHisto1D(1, 1, 2);

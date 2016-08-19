@@ -16,7 +16,7 @@ namespace Rivet {
 
     void init() {
       const UnstableFinalState cfs(Cuts::absrap<0.5);
-      addProjection(cfs, "CFS");
+      declare(cfs, "CFS");
 
       // Plots from the paper
       _histPtSigmaStarPlus        = bookHisto1D("d01-x01-y01");    // Sigma*+
@@ -30,7 +30,7 @@ namespace Rivet {
 
     void analyze(const Event& event) {
       const double weight = event.weight();
-      const UnstableFinalState& cfs = applyProjection<UnstableFinalState>(event, "CFS");
+      const UnstableFinalState& cfs = apply<UnstableFinalState>(event, "CFS");
       foreach (const Particle& p, cfs.particles()) {
 	// protections against mc generators decaying long-lived particles
 	if ( !(p.hasAncestor(310)  || p.hasAncestor(-310)   || // K0s

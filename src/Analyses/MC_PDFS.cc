@@ -22,7 +22,7 @@ namespace Rivet {
     /// Book histograms and initialise projections before the run
     void init() {
       // Projections
-      // addProjection(ChargedFinalState(-5.0, 5.0, 500*MeV), "CFS");
+      // declare(ChargedFinalState(-5.0, 5.0, 500*MeV), "CFS");
 
       // Histograms
       _histPdfX = bookHisto1D("PdfX", logspace(50, 0.000001, 1.0));
@@ -54,7 +54,7 @@ namespace Rivet {
       _histPdfXQ->fill(pdfi.x1(), pdfi.scalePDF(), weight); // always in GeV?
       _histPdfXQ->fill(pdfi.x2(), pdfi.scalePDF(), weight); // always in GeV?
 
-      // const FinalState& cfs = applyProjection<FinalState>(event, "CFS");
+      // const FinalState& cfs = apply<FinalState>(event, "CFS");
       // foreach (const Particle& p, cfs.particles()) {
       //   if (fabs(eta) < 2.5 && p.pT() > 10*GeV) {
       //     _histPdfTrackptVsX->fill(pdfi.x1(), p.pT()/GeV, weight);

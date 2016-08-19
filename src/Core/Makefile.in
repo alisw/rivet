@@ -90,8 +90,7 @@ build_triplet = @build@
 host_triplet = @host@
 subdir = src/Core
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps = $(top_srcdir)/m4/ax_cxx_compile_stdcxx_11.m4 \
-	$(top_srcdir)/m4/boost.m4 $(top_srcdir)/m4/boost_bug.m4 \
+am__aclocal_m4_deps = $(top_srcdir)/m4/ax_cxx_compile_stdcxx.m4 \
 	$(top_srcdir)/m4/cxx.m4 $(top_srcdir)/m4/cython.m4 \
 	$(top_srcdir)/m4/gsl.m4 $(top_srcdir)/m4/lcg.m4 \
 	$(top_srcdir)/m4/libtool.m4 $(top_srcdir)/m4/ltoptions.m4 \
@@ -113,13 +112,13 @@ libRivetCore_la_DEPENDENCIES =  \
 	$(builddir)/yamlcpp/librivet-yaml-cpp.la
 am_libRivetCore_la_OBJECTS = libRivetCore_la-Run.lo \
 	libRivetCore_la-Event.lo libRivetCore_la-Jet.lo \
-	libRivetCore_la-Particle.lo libRivetCore_la-ParticleName.lo \
+	libRivetCore_la-Particle.lo \
 	libRivetCore_la-ProjectionApplier.lo \
 	libRivetCore_la-Projection.lo libRivetCore_la-Analysis.lo \
 	libRivetCore_la-AnalysisLoader.lo \
 	libRivetCore_la-AnalysisInfo.lo \
 	libRivetCore_la-AnalysisHandler.lo \
-	libRivetCore_la-ProjectionHandler.lo libRivetCore_la-Cuts.lo
+	libRivetCore_la-ProjectionHandler.lo
 libRivetCore_la_OBJECTS = $(am_libRivetCore_la_OBJECTS)
 AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
@@ -240,8 +239,6 @@ AUTOCONF = @AUTOCONF@
 AUTOHEADER = @AUTOHEADER@
 AUTOMAKE = @AUTOMAKE@
 AWK = @AWK@
-BOOST_CPPFLAGS = @BOOST_CPPFLAGS@
-BOOST_ROOT = @BOOST_ROOT@
 CC = @CC@
 CCDEPMODE = @CCDEPMODE@
 CFLAGS = @CFLAGS@
@@ -254,7 +251,6 @@ CXXFLAGS = @CXXFLAGS@
 CYGPATH_W = @CYGPATH_W@
 DEFS = @DEFS@
 DEPDIR = @DEPDIR@
-DISTCHECK_CONFIGURE_FLAGS = @DISTCHECK_CONFIGURE_FLAGS@
 DLLTOOL = @DLLTOOL@
 DOXYGEN = @DOXYGEN@
 DSYMUTIL = @DSYMUTIL@
@@ -340,6 +336,8 @@ PYTHON_PLATFORM = @PYTHON_PLATFORM@
 PYTHON_PREFIX = @PYTHON_PREFIX@
 PYTHON_VERSION = @PYTHON_VERSION@
 RANLIB = @RANLIB@
+RIVETCXX = @RIVETCXX@
+RIVETCXXFLAGS = @RIVETCXXFLAGS@
 RIVET_PYTHONPATH = @RIVET_PYTHONPATH@
 SED = @SED@
 SET_MAKE = @SET_MAKE@
@@ -409,7 +407,6 @@ program_transform_name = @program_transform_name@
 psdir = @psdir@
 pyexecdir = @pyexecdir@
 pythondir = @pythondir@
-runstatedir = @runstatedir@
 sbindir = @sbindir@
 sharedstatedir = @sharedstatedir@
 srcdir = @srcdir@
@@ -422,11 +419,10 @@ SUBDIRS = yamlcpp
 noinst_LTLIBRARIES = libRivetCore.la
 libRivetCore_la_LIBADD = $(builddir)/yamlcpp/librivet-yaml-cpp.la
 libRivetCore_la_SOURCES = \
-  Run.cc Event.cc Jet.cc Particle.cc ParticleName.cc \
+  Run.cc Event.cc Jet.cc Particle.cc \
   ProjectionApplier.cc Projection.cc \
   Analysis.cc AnalysisLoader.cc AnalysisInfo.cc \
-  AnalysisHandler.cc ProjectionHandler.cc \
-  Cuts.cc
+  AnalysisHandler.cc ProjectionHandler.cc
 
 libRivetCore_la_CPPFLAGS = -I$(srcdir)/yamlcpp -DYAMLCPP_API=3 -DYAML_NAMESPACE=RIVET_YAML $(AM_CPPFLAGS)
 all: all-recursive
@@ -487,11 +483,9 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libRivetCore_la-AnalysisHandler.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libRivetCore_la-AnalysisInfo.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libRivetCore_la-AnalysisLoader.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libRivetCore_la-Cuts.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libRivetCore_la-Event.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libRivetCore_la-Jet.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libRivetCore_la-Particle.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libRivetCore_la-ParticleName.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libRivetCore_la-Projection.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libRivetCore_la-ProjectionApplier.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libRivetCore_la-ProjectionHandler.Plo@am__quote@
@@ -546,13 +540,6 @@ libRivetCore_la-Particle.lo: Particle.cc
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libRivetCore_la_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o libRivetCore_la-Particle.lo `test -f 'Particle.cc' || echo '$(srcdir)/'`Particle.cc
 
-libRivetCore_la-ParticleName.lo: ParticleName.cc
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libRivetCore_la_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT libRivetCore_la-ParticleName.lo -MD -MP -MF $(DEPDIR)/libRivetCore_la-ParticleName.Tpo -c -o libRivetCore_la-ParticleName.lo `test -f 'ParticleName.cc' || echo '$(srcdir)/'`ParticleName.cc
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libRivetCore_la-ParticleName.Tpo $(DEPDIR)/libRivetCore_la-ParticleName.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='ParticleName.cc' object='libRivetCore_la-ParticleName.lo' libtool=yes @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libRivetCore_la_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o libRivetCore_la-ParticleName.lo `test -f 'ParticleName.cc' || echo '$(srcdir)/'`ParticleName.cc
-
 libRivetCore_la-ProjectionApplier.lo: ProjectionApplier.cc
 @am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libRivetCore_la_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT libRivetCore_la-ProjectionApplier.lo -MD -MP -MF $(DEPDIR)/libRivetCore_la-ProjectionApplier.Tpo -c -o libRivetCore_la-ProjectionApplier.lo `test -f 'ProjectionApplier.cc' || echo '$(srcdir)/'`ProjectionApplier.cc
 @am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libRivetCore_la-ProjectionApplier.Tpo $(DEPDIR)/libRivetCore_la-ProjectionApplier.Plo
@@ -601,13 +588,6 @@ libRivetCore_la-ProjectionHandler.lo: ProjectionHandler.cc
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='ProjectionHandler.cc' object='libRivetCore_la-ProjectionHandler.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libRivetCore_la_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o libRivetCore_la-ProjectionHandler.lo `test -f 'ProjectionHandler.cc' || echo '$(srcdir)/'`ProjectionHandler.cc
-
-libRivetCore_la-Cuts.lo: Cuts.cc
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libRivetCore_la_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT libRivetCore_la-Cuts.lo -MD -MP -MF $(DEPDIR)/libRivetCore_la-Cuts.Tpo -c -o libRivetCore_la-Cuts.lo `test -f 'Cuts.cc' || echo '$(srcdir)/'`Cuts.cc
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libRivetCore_la-Cuts.Tpo $(DEPDIR)/libRivetCore_la-Cuts.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='Cuts.cc' object='libRivetCore_la-Cuts.lo' libtool=yes @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libRivetCore_la_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o libRivetCore_la-Cuts.lo `test -f 'Cuts.cc' || echo '$(srcdir)/'`Cuts.cc
 
 mostlyclean-libtool:
 	-rm -f *.lo

@@ -12,6 +12,7 @@
 
 namespace Rivet {
 
+
   /// Unscoped awareness of FastJet's PseudoJet
   using fastjet::PseudoJet;
 
@@ -28,6 +29,7 @@ namespace Rivet {
   inline FourMomentum momentum(const fastjet::PseudoJet& pj) {
     return FourMomentum(pj.E(), pj.px(), pj.py(), pj.pz());
   }
+
 
 }
 

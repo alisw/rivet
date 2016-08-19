@@ -1,6 +1,6 @@
 Name: STAR_2008_S7869363
 Year: 2008
-Summary: Multiplicities and pT spectra from STAR for pp at 200 GeV
+Summary: Multiplicities and pT spectra from STAR for $pp$ at 200 GeV
 Experiment: STAR
 Collider: RHIC
 SpiresID: 7869363
@@ -36,4 +36,4 @@ BibTeX: '@Article{:2008ez,
 }'
 ToDo:
  - Understand first bin in multiplicity distribution
- - Normalise to generator values (just scale by 1/nPassedCuts?) rather than data areas
+ - Normalise to generator values (just scale by 1/nPassedCuts?) rather than data areas?

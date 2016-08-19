@@ -1,10 +1,10 @@
 Name: CDF_2001_S4563131
 Year: 2001
-Summary: Inclusive jet cross section
+Summary: Inclusive jet cross-section
 Experiment: CDF
 Collider: Tevatron Run 1
 SpiresID: 4563131
-Status: UNVALIDATED
+Status: VALIDATED
 Authors:
  - Frank Siegert <frank.siegert@cern.ch>
 References:
@@ -18,8 +18,8 @@ Beams: [p-, p+]
 Energies: [1800]
 PtCuts: [0]
 Description:
-  Measurement of the inclusive jet cross section for jet transverse energies
-  from 40 to 465 GeV in the pseudo-rapidity range $0.1<|\eta|<0.7$.
+  Measurement of the inclusive jet cross-section for jet transverse energies
+  from 40 to 465~GeV in the pseudorapidity range $0.1<|\eta|<0.7$.
   The results are based on 87 $\mathrm{pb}^{-1}$ of data.
 NeedCrossSection: yes
 BibKey: Affolder:2001fa

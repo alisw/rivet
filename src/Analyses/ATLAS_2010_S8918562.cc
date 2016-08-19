@@ -45,11 +45,11 @@ namespace Rivet {
     void init() {
       // Projections
       const ChargedFinalState cfs100(-2.5, 2.5, 100.0*MeV);
-      addProjection(cfs100, "CFS100");
+      declare(cfs100, "CFS100");
       const ChargedFinalState cfs500(-2.5, 2.5, 500.0*MeV);
-      addProjection(cfs500, "CFS500");
+      declare(cfs500, "CFS500");
       const ChargedFinalState cfs2500(-2.5, 2.5, 2500.0*MeV);
-      addProjection(cfs2500, "CFS2500");
+      declare(cfs2500, "CFS2500");
 
       // Book histograms
       if (fuzzyEquals(sqrtS()/GeV, 900)) {
@@ -122,7 +122,7 @@ namespace Rivet {
 
       // 100 GeV final states
       if (!fuzzyEquals(sqrtS()/GeV, 2360)) {
-        const ChargedFinalState& cfs100 = applyProjection<ChargedFinalState>(event, "CFS100");
+        const ChargedFinalState& cfs100 = apply<ChargedFinalState>(event, "CFS100");
         // nch>=2
         if (cfs100.size() >= 2) _sumW_pt100_nch2 += weight;
         fillPtEtaNch(cfs100, 2, weight, _hist_pt100_nch2_nch, _hist_pt100_nch2_pt, _hist_pt100_nch2_eta, _hist_pt100_nch2_ptnch);
@@ -132,7 +132,7 @@ namespace Rivet {
       }
 
       // 500 GeV final states
-      const ChargedFinalState& cfs500 = applyProjection<ChargedFinalState>(event, "CFS500");
+      const ChargedFinalState& cfs500 = apply<ChargedFinalState>(event, "CFS500");
       // nch>=1
       if (cfs500.size() >= 1) _sumW_pt500_nch1 += weight;
       fillPtEtaNch(cfs500, 1, weight, _hist_pt500_nch1_nch, _hist_pt500_nch1_pt, _hist_pt500_nch1_eta, _hist_pt500_nch1_ptnch);
@@ -144,7 +144,7 @@ namespace Rivet {
 
       // 2500 GeV final states
       if (!fuzzyEquals(sqrtS()/GeV, 2360)) {
-        const ChargedFinalState& cfs2500 = applyProjection<ChargedFinalState>(event, "CFS2500");
+        const ChargedFinalState& cfs2500 = apply<ChargedFinalState>(event, "CFS2500");
         // nch>=1
         if (cfs2500.size() >= 1) _sumW_pt2500_nch1 += weight;
         fillPtEtaNch(cfs2500, 1, weight, _hist_pt2500_nch1_nch, _hist_pt2500_nch1_pt, _hist_pt2500_nch1_eta, _hist_pt2500_nch1_ptnch);

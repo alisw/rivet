@@ -15,9 +15,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    ATLAS_2015_I1397637()
-      : Analysis("ATLAS_2015_I1397637")
-    {    }
+    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2015_I1397637);
 
 
     /// Book projections and histograms
@@ -31,7 +29,7 @@ namespace Rivet {
       nu_id.acceptNeutrinos();
       PromptFinalState neutrinos(nu_id);
       neutrinos.acceptTauDecays(true);
-      addProjection(neutrinos, "neutrinos");
+      declare(neutrinos, "neutrinos");
 
       // Get photons used to dress leptons
       IdentifiedFinalState photons(fs);
@@ -54,7 +52,7 @@ namespace Rivet {
       lep_id.acceptIdPair(PID::MUON);
       lep_id.acceptIdPair(PID::ELECTRON);
       PromptFinalState bare_lep(lep_id);
-      addProjection(bare_lep, "bare_lep");
+      declare(bare_lep, "bare_lep");
 
       // Tau finding
       /// @todo Use TauFinder
@@ -62,7 +60,7 @@ namespace Rivet {
       IdentifiedFinalState tau_id(ufs);
       tau_id.acceptIdPair(PID::TAU);
       PromptFinalState bare_tau(tau_id);
-      addProjection(bare_tau, "bare_tau");
+      declare(bare_tau, "bare_tau");
 
       // Muons and electrons must have |eta| < 2.5
       Cut eta_ranges = Cuts::abseta < 2.5;
@@ -70,12 +68,12 @@ namespace Rivet {
       // Get dressed muons and the good muons (pt>25GeV)
       DressedLeptons all_dressed_mu(photons, bare_mu, 0.1, eta_ranges, true, true);
       DressedLeptons dressed_mu(photons, bare_mu, 0.1, eta_ranges & (Cuts::pT > 25.0*GeV), true, true);
-      addProjection(dressed_mu, "muons");
+      declare(dressed_mu, "muons");
 
       // Get dressed electrons and the good electrons (pt>25GeV)
       DressedLeptons all_dressed_el(photons, bare_el, 0.1, eta_ranges, true, true);
       DressedLeptons dressed_el(photons, bare_el, 0.1, eta_ranges & (Cuts::pT > 25.0*GeV), true, true);
-      addProjection(dressed_el, "electrons");
+      declare(dressed_el, "electrons");
 
       // Jet clustering
       VetoedFinalState vfs(fs);
@@ -88,14 +86,14 @@ namespace Rivet {
       FastJets jets(vfs, FastJets::ANTIKT, 0.4);
       jets.useInvisibles(JetAlg::ALL_INVISIBLES);
       jets.useMuons(JetAlg::DECAY_MUONS);
-      addProjection(jets, "jets");
+      declare(jets, "jets");
 
       // Large-R jets
       /// @todo Use extra constructor args
       FastJets large_jets(vfs, FastJets::ANTIKT, 1.0);
       large_jets.useInvisibles(JetAlg::ALL_INVISIBLES);
       large_jets.useMuons(JetAlg::DECAY_MUONS);
-      addProjection(large_jets, "fat_jets");
+      declare(large_jets, "fat_jets");
 
 
       /// Book histogram
@@ -107,37 +105,37 @@ namespace Rivet {
     void analyze(const Event& event) {
 
       // Single lepton filter on bare leptons with no cuts
-      const Particles& bare_lep = applyProjection<PromptFinalState>(event, "bare_lep").particles();
-      const Particles& bare_tau = applyProjection<PromptFinalState>(event, "bare_tau").particles();
+      const Particles& bare_lep = apply<PromptFinalState>(event, "bare_lep").particles();
+      const Particles& bare_tau = apply<PromptFinalState>(event, "bare_tau").particles();
       if (bare_lep.size() + bare_tau.size() != 1) vetoEvent;
 
       // Electrons and muons
-      const vector<DressedLepton>& electrons = applyProjection<DressedLeptons>(event, "electrons").dressedLeptons();
-      const vector<DressedLepton>& muons = applyProjection<DressedLeptons>(event, "muons").dressedLeptons();
+      const vector<DressedLepton>& electrons = apply<DressedLeptons>(event, "electrons").dressedLeptons();
+      const vector<DressedLepton>& muons = apply<DressedLeptons>(event, "muons").dressedLeptons();
       if (electrons.size() + muons.size() != 1) vetoEvent;
       const DressedLepton& lepton = muons.empty() ? electrons[0] : muons[0];
 
       // Get the neutrinos from the event record (they have pT > 0.0 and |eta| < 4.5 at this stage
-      const Particles& neutrinos = applyProjection<PromptFinalState>(event, "neutrinos").particlesByPt();
+      const Particles& neutrinos = apply<PromptFinalState>(event, "neutrinos").particlesByPt();
       FourMomentum met;
-      foreach (const Particle& nu, neutrinos) met += nu.momentum();
+      for (const Particle& nu : neutrinos) met += nu.momentum();
       if (met.pT() < 20*GeV) vetoEvent;
 
 
       // Thin jets and trimmed fat jets
       /// @todo Use Rivet built-in FJ trimming support
-      const Jets& jets  = applyProjection<FastJets>(event, "jets").jetsByPt(Cuts::pT > 25*GeV && Cuts::abseta < 2.5);
-      const PseudoJets& fat_pjets = applyProjection<FastJets>(event, "fat_jets").pseudoJetsByPt();
+      const Jets& jets  = apply<FastJets>(event, "jets").jetsByPt(Cuts::pT > 25*GeV && Cuts::abseta < 2.5);
+      const PseudoJets& fat_pjets = apply<FastJets>(event, "fat_jets").pseudoJetsByPt();
       const double Rfilt = 0.3, ptFrac_min = 0.05; ///< @todo Need to be careful about the units for the pT cut passed to FJ?
       PseudoJets trimmed_fat_pjets;
       fastjet::Filter trimmer(fastjet::JetDefinition(fastjet::kt_algorithm, Rfilt), fastjet::SelectorPtFractionMin(ptFrac_min));
-      foreach (const PseudoJet& pjet, fat_pjets) trimmed_fat_pjets += trimmer(pjet);
+      for (const PseudoJet& pjet : fat_pjets) trimmed_fat_pjets += trimmer(pjet);
       trimmed_fat_pjets = fastjet::sorted_by_pt(trimmed_fat_pjets);
 
       // Jet reclustering
       // Use a kT cluster sequence to recluster the trimmed jets so that a d12 can then be obtained from the reclustered jet
       vector<double> splittingScales;
-      foreach (const PseudoJet& tpjet, trimmed_fat_pjets) {
+      for (const PseudoJet& tpjet : trimmed_fat_pjets) {
         const PseudoJets tpjet_constits = tpjet.constituents();
         const fastjet::ClusterSequence kt_cs(tpjet_constits, fastjet::JetDefinition(fastjet::kt_algorithm, 1.5, fastjet::E_scheme, fastjet::Best));
         const PseudoJets kt_jets = kt_cs.inclusive_jets();
@@ -157,7 +155,7 @@ namespace Rivet {
 
       // Jet b-tagging
       Jets bjets, non_bjets;
-      foreach (const Jet& jet, jets)
+      for (const Jet& jet : jets)
         (jet.bTagged() ? bjets : non_bjets) += jet;
       if (bjets.empty()) vetoEvent;
 
@@ -193,7 +191,7 @@ namespace Rivet {
       // Boosted selection: b-tag matching
       const bool lepbtag = ljet.bTagged();
       bool hadbtag = false;
-      foreach (const Jet& bjet, bjets) {
+      for (const Jet& bjet : bjets) {
         hadbtag |= (deltaR(fjet, bjet) < 1.0);
       }
 

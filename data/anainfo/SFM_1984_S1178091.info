@@ -4,15 +4,15 @@ Summary: Charged multiplicity distribution in $pp$ interactions at CERN ISR ener
 Experiment: SFM
 Collider: CERN ISR
 SpiresID: 1178091
-Status: VALIDATED
+Status: UNVALIDATED
 Authors:
- - Holger Schulz <holger.schulz@physik.hu-berlin.de>
+ - Holger Schulz <holger.schulz@durham.ac.uk>
  - Andy Buckley <andy.buckley@cern.ch>
 References:
  - Phys.Rev.D30:528,1984
 RunInfo:
-  QCD events, double-diffractive events should be turned on as well.
-NumEvents: 1000000
+  QCD events, double-diffractive events.
+NumEvents: 100000
 Beams: [p+, p+]
 Energies: [30.4, 44.5, 52.2, 62.2]
 PtCuts: [0]
@@ -21,8 +21,7 @@ Description:
   publication to compare to.
   Charged multiplicities are measured at $\sqrt{s} = 30.4$, 44.5, 52.2
   and 62.2 GeV using a minimum-bias trigger. The data is sub-divided
-  into inelastic as well as non-single-diffractive events. However,
-  the implementation of the diffractive events will require some work.
+  into inelastic as well as non-single-diffractive events.
 BibKey: Breakstone:1983ns
 BibTeX: '@Article{Breakstone:1983ns,
      author    = "Breakstone, A. and others",

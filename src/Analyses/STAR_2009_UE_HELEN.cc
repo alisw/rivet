@@ -28,26 +28,26 @@ namespace Rivet {
     void init() {
       // Charged final state, |eta|<1, pT>0.2GeV
       const ChargedFinalState cfs(-1.0, 1.0, 0.2*GeV);
-      addProjection(cfs, "CFS");
+      declare(cfs, "CFS");
 
       // Neutral final state, |eta|<1, ET>0.2GeV (needed for the jets)
       const NeutralFinalState nfs(-1.0, 1.0, 0.2*GeV);
-      addProjection(nfs, "NFS");
+      declare(nfs, "NFS");
 
       // STAR can't see neutrons and K^0_L
       VetoedFinalState vfs(nfs);
       vfs.vetoNeutrinos();
       vfs.addVetoPairId(PID::K0L);
       vfs.addVetoPairId(PID::NEUTRON);
-      addProjection(vfs, "VFS");
+      declare(vfs, "VFS");
 
       // Jets are reconstructed from charged and neutral particles,
       // and the cuts are different (pT vs. ET), so we need to merge them.
       const MergedFinalState jfs(cfs, vfs);
-      addProjection(jfs, "JFS");
+      declare(jfs, "JFS");
 
       // SISCone, R = 0.7, overlap_threshold = 0.75
-      addProjection(FastJets(jfs, FastJets::SISCONE, 0.7), "AllJets");
+      declare(FastJets(jfs, FastJets::SISCONE, 0.7), "AllJets");
 
       // Book histograms
       _hist_pmaxnchg   = bookProfile1D( 1, 1, 1);
@@ -58,13 +58,13 @@ namespace Rivet {
 
     // Do the analysis
     void analyze(const Event& e) {
-      const FinalState& cfs = applyProjection<ChargedFinalState>(e, "CFS");
+      const FinalState& cfs = apply<ChargedFinalState>(e, "CFS");
       if (cfs.particles().size() < 1) {
         MSG_DEBUG("Failed multiplicity cut");
         vetoEvent;
       }
 
-      const Jets& alljets = applyProjection<FastJets>(e, "AllJets").jetsByPt();
+      const Jets& alljets = apply<FastJets>(e, "AllJets").jetsByPt();
       MSG_DEBUG("Total jet multiplicity = " << alljets.size());
 
       // The jet acceptance region is |eta|<(1-R)=0.3  (with R = jet radius)

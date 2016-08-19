@@ -18,15 +18,15 @@ int main(int argc, char** argv) {
     ah.addAnalysis(argv[i]);
   }
 
-  std::istream* file = new std::fstream(argv[1], std::ios::in);
-  HepMC::IO_GenEvent hepmcio(*file);
+  std::ifstream file(argv[1]);
+  HepMC::IO_GenEvent hepmcio(file);
   HepMC::GenEvent* evt = hepmcio.read_next_event();
   while (evt) {
     ah.analyze(*evt);
     delete evt; evt = 0;
     hepmcio >> evt;
   }
-  delete file; file = 0;
+  file.close();
 
   ah.setCrossSection(1.0);
   ah.finalize();

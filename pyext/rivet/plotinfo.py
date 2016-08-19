@@ -90,16 +90,18 @@ class PlotParser(object):
             return
         startreading = False
         f = open(plotfile)
+        msec = None
         for line in f:
             m = self.pat_begin_block.match(line)
             if m:
                 tag, pathpat = m.group(2,3)
-                #print tag, pathpat
                 # pathpat could be a regex
                 if not self.pat_paths.has_key(pathpat):
                     self.pat_paths[pathpat] = re.compile(pathpat)
                 if tag == section:
-                    if self.pat_paths[pathpat].match(hpath):
+                    m2 = self.pat_paths[pathpat].match(hpath)
+                    if m2:
+                        msec = m2
                         startreading = True
                         if section in ['SPECIAL']:
                             ret[section] = ''
@@ -115,8 +117,21 @@ class PlotParser(object):
                 vm = self.pat_property.match(line)
                 if vm:
                     prop, value = vm.group(1,2)
-                    #print prop, value
-                    ret[section][prop] = texpand(value)
+                    if msec:
+                        oldval = value
+                        try:
+                            ## First escape backslashes *except* regex groups, then expand regex groups from path match
+                            #print "\n", value
+                            value = value.encode("string-escape")
+                            #print value
+                            value = re.sub("(\\\\)(\\d)", "\\2", value) #< r-strings actually made this harder, since the \) is still treated as an escape!
+                            #print value
+                            value = msec.expand(value)
+                            #print value
+                        except Exception as e:
+                            #print e
+                            value = oldval #< roll back escapes if it goes wrong
+                    ret[section][prop] = texpand(value) #< expand TeX shorthands
             elif section in ['SPECIAL']:
                 ret[section] += line
         f.close()

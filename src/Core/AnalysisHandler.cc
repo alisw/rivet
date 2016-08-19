@@ -2,21 +2,13 @@
 #include "Rivet/Config/RivetCommon.hh"
 #include "Rivet/AnalysisHandler.hh"
 #include "Rivet/Analysis.hh"
-#include "Rivet/ParticleName.hh"
-#include "Rivet/BeamConstraint.hh"
+#include "Rivet/Tools/ParticleName.hh"
+#include "Rivet/Tools/BeamConstraint.hh"
 #include "Rivet/Tools/Logging.hh"
 #include "Rivet/Projections/Beam.hh"
 #include "YODA/WriterYODA.h"
 
 namespace Rivet {
-
-
-  /// @todo Replace with a lambda when we can use C++11
-  namespace {
-    inline bool cmpAOByPath(const AnalysisObjectPtr a, const AnalysisObjectPtr b) {
-      return a->path() < b->path();
-    }
-  }
 
 
   AnalysisHandler::AnalysisHandler(const string& runname)
@@ -48,13 +40,13 @@ namespace Rivet {
     // Check that analyses are beam-compatible, and remove those that aren't
     const size_t num_anas_requested = analysisNames().size();
     vector<string> anamestodelete;
-    foreach (const AnaHandle a, _analyses) {
+    for (const AnaHandle a : _analyses) {
       if (!_ignoreBeams && !a->isCompatible(beams())) {
         //MSG_DEBUG(a->name() << " requires beams " << a->requiredBeams() << " @ " << a->requiredEnergies() << " GeV");
         anamestodelete.push_back(a->name());
       }
     }
-    foreach (const string& aname, anamestodelete) {
+    for (const string& aname : anamestodelete) {
       MSG_WARNING("Analysis '" << aname << "' is incompatible with the provided beams: removing");
       removeAnalysis(aname);
     }
@@ -65,7 +57,7 @@ namespace Rivet {
     }
 
     // Warn if any analysis' status is not unblemished
-    foreach (const AnaHandle a, analyses()) {
+    for (const AnaHandle a : analyses()) {
       if (toUpper(a->status()) == "PRELIMINARY") {
         MSG_WARNING("Analysis '" << a->name() << "' is preliminary: be careful, it may change and/or be renamed!");
       } else if (toUpper(a->status()) == "OBSOLETE") {
@@ -76,7 +68,7 @@ namespace Rivet {
     }
 
     // Initialize the remaining analyses
-    foreach (AnaHandle a, _analyses) {
+    for (AnaHandle a : _analyses) {
       MSG_DEBUG("Initialising analysis: " << a->name());
       try {
         // Allow projection registration in the init phase onwards
@@ -130,7 +122,7 @@ namespace Rivet {
     #endif
 
     // Run the analyses
-    foreach (AnaHandle a, _analyses) {
+    for (AnaHandle a : _analyses) {
       MSG_TRACE("About to run analysis " << a->name());
       try {
         a->analyze(event);
@@ -155,7 +147,7 @@ namespace Rivet {
   void AnalysisHandler::finalize() {
     if (!_initialised) return;
     MSG_INFO("Finalising analyses");
-    foreach (AnaHandle a, _analyses) {
+    for (AnaHandle a : _analyses) {
       a->setCrossSection(_xs);
       try {
         a->finalize();
@@ -183,7 +175,7 @@ namespace Rivet {
     // Check for a duplicate analysis
     /// @todo Might we want to be able to run an analysis twice, with different params?
     ///       Requires avoiding histo tree clashes, i.e. storing the histos on the analysis objects.
-    foreach (const AnaHandle& a, _analyses) {
+    for (const AnaHandle& a : _analyses) {
       if (a->name() == analysisname) {
         MSG_WARNING("Analysis '" << analysisname << "' already registered: skipping duplicate");
         return *this;
@@ -198,14 +190,14 @@ namespace Rivet {
       MSG_WARNING("Analysis '" << analysisname << "' not found.");
     }
     // MSG_WARNING(_analyses.size());
-    // foreach (const AnaHandle& a, _analyses) MSG_WARNING(a->name());
+    // for (const AnaHandle& a : _analyses) MSG_WARNING(a->name());
     return *this;
   }
 
 
   AnalysisHandler& AnalysisHandler::removeAnalysis(const string& analysisname) {
-    shared_ptr<Analysis> toremove;
-    foreach (const AnaHandle a, _analyses) {
+    std::shared_ptr<Analysis> toremove;
+    for (const AnaHandle a : _analyses) {
       if (a->name() == analysisname) {
         toremove = a;
         break;
@@ -221,21 +213,24 @@ namespace Rivet {
 
   vector<AnalysisObjectPtr> AnalysisHandler::getData() const {
     vector<AnalysisObjectPtr> rtn;
-    rtn.push_back( AnalysisObjectPtr(new Counter(YODA::Dbn0D(_numEvents, _sumOfWeights, _sumOfWeightsSq), "/_EVTCOUNT")) );
+    rtn.push_back( make_shared<Counter>(YODA::Dbn0D(_numEvents, _sumOfWeights, _sumOfWeightsSq), "/_EVTCOUNT") );
     YODA::Scatter1D::Points pts; pts.insert(YODA::Point1D(_xs, _xserr));
-    rtn.push_back( AnalysisObjectPtr(new Scatter1D(pts, "/_XSEC")) );
-    foreach (const AnaHandle a, analyses()) {
+    rtn.push_back( make_shared<Scatter1D>(pts, "/_XSEC") );
+    for (const AnaHandle a : analyses()) {
       vector<AnalysisObjectPtr> aos = a->analysisObjects();
       // MSG_WARNING(a->name() << " " << aos.size());
-      foreach (const AnalysisObjectPtr ao, aos) {
+      for (const AnalysisObjectPtr ao : aos) {
         // Exclude paths starting with /TMP/ from final write-out
         /// @todo This needs to be much more nuanced for re-entrant histogramming
         if (ao->path().find("/TMP/") != string::npos) continue;
         rtn.push_back(ao);
       }
     }
-    /// @todo Use lambda in C++11
-    sort(rtn.begin(), rtn.end(), cmpAOByPath);
+    sort(rtn.begin(), rtn.end(),
+         [](AnalysisObjectPtr a, AnalysisObjectPtr b) {
+              return a->path() < b->path();
+          }
+        );
     return rtn;
   }
 
@@ -262,7 +257,7 @@ namespace Rivet {
 
   std::vector<std::string> AnalysisHandler::analysisNames() const {
     std::vector<std::string> rtn;
-    foreach (AnaHandle a, _analyses) {
+    for (AnaHandle a : _analyses) {
       rtn.push_back(a->name());
     }
     return rtn;
@@ -270,14 +265,14 @@ namespace Rivet {
 
 
   const AnaHandle AnalysisHandler::analysis(const std::string& analysisname) const {
-    foreach (const AnaHandle a, analyses())
+    for (const AnaHandle a : analyses())
       if (a->name() == analysisname) return a;
     throw Error("No analysis named '" + analysisname + "' registered in AnalysisHandler");
   }
 
 
   AnalysisHandler& AnalysisHandler::addAnalyses(const std::vector<std::string>& analysisnames) {
-    foreach (const string& aname, analysisnames) {
+    for (const string& aname : analysisnames) {
       //MSG_DEBUG("Adding analysis '" << aname << "'");
       addAnalysis(aname);
     }
@@ -286,7 +281,7 @@ namespace Rivet {
 
 
   AnalysisHandler& AnalysisHandler::removeAnalyses(const std::vector<std::string>& analysisnames) {
-    foreach (const string& aname, analysisnames) {
+    for (const string& aname : analysisnames) {
       removeAnalysis(aname);
     }
     return *this;
@@ -295,7 +290,7 @@ namespace Rivet {
 
   bool AnalysisHandler::needCrossSection() const {
     bool rtn = false;
-    foreach (const AnaHandle a, _analyses) {
+    for (const AnaHandle a : _analyses) {
       if (!rtn) rtn = a->needsCrossSection();
       if (rtn) break;
     }

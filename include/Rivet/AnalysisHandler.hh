@@ -12,7 +12,7 @@ namespace Rivet {
 
   // Forward declaration and smart pointer for Analysis
   class Analysis;
-  typedef shared_ptr<Analysis> AnaHandle;
+  typedef std::shared_ptr<Analysis> AnaHandle;
 
 
   // Needed to make smart pointers compare equivalent in the STL set
@@ -87,22 +87,22 @@ namespace Rivet {
     bool hasCrossSection() const;
 
 
-    /// Set beams for this run
+    /// Set the beam particles for this run
     AnalysisHandler& setRunBeams(const ParticlePair& beams) {
       _beams = beams;
       MSG_DEBUG("Setting run beams = " << beams << " @ " << sqrtS()/GeV << " GeV");
       return *this;
     }
 
-    /// Get beam IDs for this run, usually determined from the first event.
-    const ParticlePair& beams() const {
-      return _beams;
-    }
+    /// Get the beam particles for this run, usually determined from the first event.
+    const ParticlePair& beams() const { return _beams; }
 
     /// Get beam IDs for this run, usually determined from the first event.
+    /// @deprecated Use standalone beamIds(ah.beams()), to clean AH interface
     PdgIdPair beamIds() const;
 
     /// Get energy for this run, usually determined from the first event.
+    /// @deprecated Use standalone sqrtS(ah.beams()), to clean AH interface
     double sqrtS() const;
 
     /// Setter for _ignoreBeams

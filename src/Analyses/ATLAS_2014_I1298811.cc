@@ -17,9 +17,9 @@ namespace Rivet {
     void init() {
       // Configure projections
       const FinalState fs(-4.8, 4.8, 0*MeV);
-      addProjection(fs, "FS");
+      declare(fs, "FS");
       const FastJets jets(fs, FastJets::ANTIKT, 0.4);
-      addProjection(jets, "Jets");
+      declare(jets, "Jets");
 
       // Book histograms
       for (size_t itopo = 0; itopo < 2; ++itopo) {
@@ -50,7 +50,7 @@ namespace Rivet {
     void analyze(const Event& event) {
       // Find the jets with pT > 20 GeV and *rapidity* within 2.8
       /// @todo Use Cuts instead rather than an eta cut in the proj and a y cut after
-      const Jets alljets = applyProjection<FastJets>(event, "Jets").jetsByPt(20*GeV);
+      const Jets alljets = apply<FastJets>(event, "Jets").jetsByPt(20*GeV);
       Jets jets;
       foreach (const Jet& j, alljets)
         if (j.absrap() < 2.8) jets.push_back(j);
@@ -72,7 +72,7 @@ namespace Rivet {
       double tmpptsum[2] = {0,0};
       double tmpetsum48[2] = {0,0};
       double tmpetsum25[2] = {0,0};
-      const Particles particles = applyProjection<FinalState>(event, "FS").particles();
+      const Particles particles = apply<FinalState>(event, "FS").particles();
       foreach (const Particle& p, particles) {
         // Only consider the transverse region(s), not toward or away
         if (!inRange(deltaPhi(p.phi(), philead), PI/3.0, TWOPI/3.0)) continue;

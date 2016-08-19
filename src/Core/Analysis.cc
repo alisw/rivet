@@ -3,9 +3,7 @@
 #include "Rivet/Analysis.hh"
 #include "Rivet/AnalysisHandler.hh"
 #include "Rivet/AnalysisInfo.hh"
-#include "Rivet/BeamConstraint.hh"
-#include "Rivet/Tools/RivetYODA.hh"
-#include "Rivet/Tools/Logging.hh"
+#include "Rivet/Tools/BeamConstraint.hh"
 
 namespace Rivet {
 
@@ -18,10 +16,10 @@ namespace Rivet {
     ProjectionApplier::_allowProjReg = false;
     _defaultname = name;
 
-    AnalysisInfo* ai = AnalysisInfo::make(name);
-    assert(ai != 0);
-    _info.reset(ai);
-    assert(_info.get() != 0);
+    unique_ptr<AnalysisInfo> ai = AnalysisInfo::make(name);
+    assert(ai);
+    _info = move(ai);
+    assert(_info);
   }
 
   double Analysis::sqrtS() const {
@@ -45,9 +43,7 @@ namespace Rivet {
       if (handler().runName().length() > 0) {
         _histoDir = "/" + handler().runName() + _histoDir;
       }
-      while (find_first(_histoDir, "//")) {
-        replace_all(_histoDir, "//", "/");
-      }
+      replace_all(_histoDir, "//", "/"); //< iterates until none
     }
     return _histoDir;
   }
@@ -202,7 +198,7 @@ namespace Rivet {
                                    // const string& xtitle,
                                    // const string& ytitle) {
     const string path = histoPath(cname);
-    CounterPtr ctr( new Counter(path, title) );
+    CounterPtr ctr = make_shared<Counter>(path, title);
     addAnalysisObject(ctr);
     MSG_TRACE("Made counter " << cname << " for " << name());
     // hist->setAnnotation("XLabel", xtitle);
@@ -217,7 +213,7 @@ namespace Rivet {
                                    const string& xtitle,
                                    const string& ytitle) {
     const string path = histoPath(hname);
-    Histo1DPtr hist( new Histo1D(nbins, lower, upper, path, title) );
+    Histo1DPtr hist = make_shared<Histo1D>(nbins, lower, upper, path, title);
     addAnalysisObject(hist);
     MSG_TRACE("Made histogram " << hname <<  " for " << name());
     hist->setAnnotation("XLabel", xtitle);
@@ -232,7 +228,7 @@ namespace Rivet {
                                    const string& xtitle,
                                    const string& ytitle) {
     const string path = histoPath(hname);
-    Histo1DPtr hist( new Histo1D(binedges, path, title) );
+    Histo1DPtr hist = make_shared<Histo1D>(binedges, path, title);
     addAnalysisObject(hist);
     MSG_TRACE("Made histogram " << hname <<  " for " << name());
     hist->setAnnotation("XLabel", xtitle);
@@ -247,7 +243,7 @@ namespace Rivet {
                                    const string& xtitle,
                                    const string& ytitle) {
     const string path = histoPath(hname);
-    Histo1DPtr hist( new Histo1D(refscatter, path) );
+    Histo1DPtr hist = make_shared<Histo1D>(refscatter, path);
     addAnalysisObject(hist);
     MSG_TRACE("Made histogram " << hname <<  " for " << name());
     hist->setTitle(title);
@@ -290,7 +286,7 @@ namespace Rivet {
                                    const string& ztitle)
   {
     const string path = histoPath(hname);
-    Histo2DPtr hist( new Histo2D(nxbins, xlower, xupper, nybins, ylower, yupper, path, title) );
+    Histo2DPtr hist = make_shared<Histo2D>(nxbins, xlower, xupper, nybins, ylower, yupper, path, title);
     addAnalysisObject(hist);
     MSG_TRACE("Made 2D histogram " << hname <<  " for " << name());
     hist->setAnnotation("XLabel", xtitle);
@@ -309,7 +305,7 @@ namespace Rivet {
                                    const string& ztitle)
   {
     const string path = histoPath(hname);
-    Histo2DPtr hist( new Histo2D(xbinedges, ybinedges, path, title) );
+    Histo2DPtr hist = make_shared<Histo2D>(xbinedges, ybinedges, path, title);
     addAnalysisObject(hist);
     MSG_TRACE("Made 2D histogram " << hname <<  " for " << name());
     hist->setAnnotation("XLabel", xtitle);
@@ -366,7 +362,7 @@ namespace Rivet {
                                        const string& xtitle,
                                        const string& ytitle) {
     const string path = histoPath(hname);
-    Profile1DPtr prof( new Profile1D(nbins, lower, upper, path, title) );
+    Profile1DPtr prof = make_shared<Profile1D>(nbins, lower, upper, path, title);
     addAnalysisObject(prof);
     MSG_TRACE("Made profile histogram " << hname <<  " for " << name());
     prof->setAnnotation("XLabel", xtitle);
@@ -381,7 +377,7 @@ namespace Rivet {
                                        const string& xtitle,
                                        const string& ytitle) {
     const string path = histoPath(hname);
-    Profile1DPtr prof( new Profile1D(binedges, path, title) );
+    Profile1DPtr prof = make_shared<Profile1D>(binedges, path, title);
     addAnalysisObject(prof);
     MSG_TRACE("Made profile histogram " << hname <<  " for " << name());
     prof->setAnnotation("XLabel", xtitle);
@@ -396,7 +392,7 @@ namespace Rivet {
                                        const string& xtitle,
                                        const string& ytitle) {
     const string path = histoPath(hname);
-    Profile1DPtr prof( new Profile1D(refscatter, path) );
+    Profile1DPtr prof = make_shared<Profile1D>(refscatter, path);
     addAnalysisObject(prof);
     MSG_TRACE("Made profile histogram " << hname <<  " for " << name());
     prof->setTitle(title);
@@ -437,7 +433,7 @@ namespace Rivet {
                                    const string& ztitle)
   {
     const string path = histoPath(hname);
-    Profile2DPtr prof( new Profile2D(nxbins, xlower, xupper, nybins, ylower, yupper, path, title) );
+    Profile2DPtr prof = make_shared<Profile2D>(nxbins, xlower, xupper, nybins, ylower, yupper, path, title);
     addAnalysisObject(prof);
     MSG_TRACE("Made 2D profile histogram " << hname <<  " for " << name());
     prof->setAnnotation("XLabel", xtitle);
@@ -456,7 +452,7 @@ namespace Rivet {
                                    const string& ztitle)
   {
     const string path = histoPath(hname);
-    Profile2DPtr prof( new Profile2D(xbinedges, ybinedges, path, title) );
+    Profile2DPtr prof = make_shared<Profile2D>(xbinedges, ybinedges, path, title);
     addAnalysisObject(prof);
     MSG_TRACE("Made 2D profile histogram " << hname <<  " for " << name());
     prof->setAnnotation("XLabel", xtitle);
@@ -526,10 +522,10 @@ namespace Rivet {
     const string path = histoPath(hname);
     if (copy_pts) {
       const Scatter2D& refdata = refData(hname);
-      s.reset( new Scatter2D(refdata, path) );
+      s = make_shared<Scatter2D>(refdata, path);
       foreach (Point2D& p, s->points()) p.setY(0, 0);
     } else {
-      s.reset( new Scatter2D(path) );
+      s = make_shared<Scatter2D>(path);
     }
     addAnalysisObject(s);
     MSG_TRACE("Made scatter " << hname <<  " for " << name());
@@ -546,7 +542,7 @@ namespace Rivet {
                                        const string& xtitle,
                                        const string& ytitle) {
     const string path = histoPath(hname);
-    Scatter2DPtr s( new Scatter2D(path) );
+    Scatter2DPtr s = make_shared<Scatter2D>(path);
     const double binwidth = (upper-lower)/npts;
     for (size_t pt = 0; pt < npts; ++pt) {
       const double bincentre = lower + (pt + 0.5) * binwidth;
@@ -567,7 +563,7 @@ namespace Rivet {
                                        const string& xtitle,
                                        const string& ytitle) {
     const string path = histoPath(hname);
-    Scatter2DPtr s( new Scatter2D(path) );
+    Scatter2DPtr s = make_shared<Scatter2D>(path);
     for (size_t pt = 0; pt < binedges.size()-1; ++pt) {
       const double bincentre = (binedges[pt] + binedges[pt+1]) / 2.0;
       const double binwidth = binedges[pt+1] - binedges[pt];
@@ -583,6 +579,19 @@ namespace Rivet {
 
 
   /////////////////////
+
+
+  void Analysis::divide(CounterPtr c1, CounterPtr c2, Scatter1DPtr s) const {
+    const string path = s->path();
+    *s = *c1 / *c2;
+    s->setPath(path);
+  }
+
+  void Analysis::divide(const Counter& c1, const Counter& c2, Scatter1DPtr s) const {
+    const string path = s->path();
+    *s = c1 / c2;
+    s->setPath(path);
+  }
 
 
   void Analysis::divide(Histo1DPtr h1, Histo1DPtr h2, Scatter2DPtr s) const {
@@ -637,6 +646,9 @@ namespace Rivet {
   }
 
 
+  /// @todo Counter and Histo2D efficiencies and asymms
+
+
   void Analysis::efficiency(Histo1DPtr h1, Histo1DPtr h2, Scatter2DPtr s) const {
     const string path = s->path();
     *s = YODA::efficiency(*h1, *h2);
@@ -663,6 +675,25 @@ namespace Rivet {
   }
 
 
+  void Analysis::scale(CounterPtr cnt, double factor) {
+    if (!cnt) {
+      MSG_WARNING("Failed to scale counter=NULL in analysis " << name() << " (scale=" << factor << ")");
+      return;
+    }
+    if (std::isnan(factor) || std::isinf(factor)) {
+      MSG_WARNING("Failed to scale counter=" << cnt->path() << " in analysis: " << name() << " (invalid scale factor = " << factor << ")");
+      factor = 0;
+    }
+    MSG_TRACE("Scaling counter " << cnt->path() << " by factor " << factor);
+    try {
+      cnt->scaleW(factor);
+    } catch (YODA::Exception& we) {
+      MSG_WARNING("Could not scale counter " << cnt->path());
+      return;
+    }
+  }
+
+
   void Analysis::normalize(Histo1DPtr histo, double norm, bool includeoverflows) {
     if (!histo) {
       MSG_WARNING("Failed to normalize histo=NULL in analysis " << name() << " (norm=" << norm << ")");
@@ -678,37 +709,57 @@ namespace Rivet {
   }
 
 
-  void Analysis::scale(Histo1DPtr histo, double scale) {
+  void Analysis::scale(Histo1DPtr histo, double factor) {
     if (!histo) {
-      MSG_WARNING("Failed to scale histo=NULL in analysis " << name() << " (scale=" << scale << ")");
+      MSG_WARNING("Failed to scale histo=NULL in analysis " << name() << " (scale=" << factor << ")");
       return;
     }
-    if (std::isnan(scale) || std::isinf(scale)) {
-      MSG_WARNING("Failed to scale histo=" << histo->path() << " in analysis: " << name() << " (invalid scale factor = " << scale << ")");
-      scale = 0;
+    if (std::isnan(factor) || std::isinf(factor)) {
+      MSG_WARNING("Failed to scale histo=" << histo->path() << " in analysis: " << name() << " (invalid scale factor = " << factor << ")");
+      factor = 0;
     }
-    MSG_TRACE("Scaling histo " << histo->path() << " by factor " << scale);
+    MSG_TRACE("Scaling histo " << histo->path() << " by factor " << factor);
     try {
-      histo->scaleW(scale);
+      histo->scaleW(factor);
     } catch (YODA::Exception& we) {
       MSG_WARNING("Could not scale histo " << histo->path());
       return;
     }
-    // // Transforming the histo into a scatter after scaling
-    // vector<double> x, y, ex, ey;
-    // for (size_t i = 0, N = histo->numBins(); i < N; ++i) {
-    //   x.push_back( histo->bin(i).midpoint() );
-    //   ex.push_back(histo->bin(i).width()*0.5);
-    //   y.push_back(histo->bin(i).height()*scale);
-    //   ey.push_back(histo->bin(i).heightErr()*scale);
-    // }
-    // string title = histo->title();
-    // Scatter2DPtr dps( new Scatter2D(x, y, ex, ey, hpath, title) );
-    // addAnalysisObject(dps);
   }
 
 
-  /// @todo 2D versions of scale and normalize...
+  void Analysis::normalize(Histo2DPtr histo, double norm, bool includeoverflows) {
+    if (!histo) {
+      MSG_ERROR("Failed to normalize histo=NULL in analysis " << name() << " (norm=" << norm << ")");
+      return;
+    }
+    MSG_TRACE("Normalizing histo " << histo->path() << " to " << norm);
+    try {
+      histo->normalize(norm, includeoverflows);
+    } catch (YODA::Exception& we) {
+      MSG_WARNING("Could not normalize histo " << histo->path());
+      return;
+    }
+  }
+
+
+  void Analysis::scale(Histo2DPtr histo, double factor) {
+    if (!histo) {
+      MSG_ERROR("Failed to scale histo=NULL in analysis " << name() << " (scale=" << factor << ")");
+      return;
+    }
+    if (std::isnan(factor) || std::isinf(factor)) {
+      MSG_ERROR("Failed to scale histo=" << histo->path() << " in analysis: " << name() << " (invalid scale factor = " << factor << ")");
+      factor = 0;
+    }
+    MSG_TRACE("Scaling histo " << histo->path() << " by factor " << factor);
+    try {
+      histo->scaleW(factor);
+    } catch (YODA::Exception& we) {
+      MSG_WARNING("Could not scale histo " << histo->path());
+      return;
+    }
+  }
 
 
   void Analysis::integrate(Histo1DPtr h, Scatter2DPtr s) const {

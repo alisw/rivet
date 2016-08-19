@@ -9,6 +9,7 @@ namespace Rivet {
   /// H1 energy flow in DIS
   ///
   /// @todo Make histograms match those in HepData and use autobooking
+  ///
   /// @author Leif Lonnblad
   /// @author Andy Buckley
   class H1_1995_S3167097 : public Analysis {
@@ -25,16 +26,16 @@ namespace Rivet {
 
     void init() {
       // Projections
-      const DISKinematics& diskin = addProjection(DISKinematics(), "Kinematics");
-      const DISFinalState& fshcm = addProjection(DISFinalState(diskin, DISFinalState::HCM), "FS");
-      addProjection(CentralEtHCM(fshcm), "Y1HCM");
+      const DISKinematics& diskin = declare(DISKinematics(), "Kinematics");
+      const DISFinalState& fshcm = declare(DISFinalState(diskin, DISFinalState::HCM), "FS");
+      declare(CentralEtHCM(fshcm), "Y1HCM");
 
       // Histograms
       /// @todo Convert to use autobooking and correspond to HepData data tables
       _sumw.resize(9);
       _hEtFlow.resize(9);
       for (size_t i = 0; i < 9; ++i)
-        _hEtFlow[i] = bookHisto1D(lexical_cast<string>(i), 24, -6, 6);
+        _hEtFlow[i] = bookHisto1D(to_str(i), 24, -6, 6);
       _tmphAvEt = Histo1D(9, 1.0, 10.0);
       _tmphAvX  = Histo1D(9, 1.0, 10.0);
       _tmphAvQ2 = Histo1D(9, 1.0, 10.0);
@@ -43,6 +44,7 @@ namespace Rivet {
 
 
     /// Calculate the bin number from the DISKinematics projection
+    /// @todo Convert to use a HEPUtils Binning1D
     size_t _getbin(const DISKinematics& dk) {
       if (inRange(dk.Q2()/GeV2, 5.0, 10.0)) {
         if (inRange(dk.x(), 1e-4, 2e-4)) return 0;
@@ -62,13 +64,15 @@ namespace Rivet {
 
 
     void analyze(const Event& event) {
-      const FinalState& fs = applyProjection<FinalState>(event, "FS");
-      const DISKinematics& dk = applyProjection<DISKinematics>(event, "Kinematics");
-      const CentralEtHCM y1 = applyProjection<CentralEtHCM>(event, "Y1HCM");
+      const FinalState& fs = apply<FinalState>(event, "FS");
+      const DISKinematics& dk = apply<DISKinematics>(event, "Kinematics");
+      const CentralEtHCM& y1 = apply<CentralEtHCM>(event, "Y1HCM");
 
       const int ibin = _getbin(dk);
       if (ibin < 0) vetoEvent;
+
       const double weight = event.weight();
+      _sumw[ibin] += weight;
 
       for (size_t i = 0, N = fs.particles().size(); i < N; ++i) {
         const double rap = fs.particles()[i].rapidity();
@@ -76,7 +80,7 @@ namespace Rivet {
         _hEtFlow[ibin]->fill(rap, weight * et/GeV);
       }
 
-      _sumw[ibin] += weight;
+      /// @todo Use fillBin?
       _tmphAvEt.fill(ibin + 1.5, weight * y1.sumEt()/GeV);
       _tmphAvX.fill(ibin + 1.5, weight * dk.x());
       _tmphAvQ2.fill(ibin + 1.5, weight * dk.Q2()/GeV2);
@@ -88,9 +92,9 @@ namespace Rivet {
       for (size_t ibin = 0; ibin < 9; ++ibin)
         scale(_hEtFlow[ibin], 0.5/_sumw[ibin]);
       /// @todo Improve this!
-      addAnalysisObject(Scatter2DPtr( new Scatter2D(_tmphAvEt/_tmphN, histoPath("21")) ));
-      addAnalysisObject(Scatter2DPtr( new Scatter2D(_tmphAvX/_tmphN,  histoPath("22")) ));
-      addAnalysisObject(Scatter2DPtr( new Scatter2D(_tmphAvQ2/_tmphN, histoPath("23")) ));
+      addAnalysisObject(make_shared<Scatter2D>(_tmphAvEt/_tmphN, histoPath("21")) );
+      addAnalysisObject(make_shared<Scatter2D>(_tmphAvX/_tmphN,  histoPath("22")) );
+      addAnalysisObject(make_shared<Scatter2D>(_tmphAvQ2/_tmphN, histoPath("23")) );
     }
 
     //@}

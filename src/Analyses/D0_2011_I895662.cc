@@ -19,7 +19,7 @@ namespace Rivet {
     void init() {
       FastJets jets(FinalState(-3.6, 3.6, 0.*GeV), FastJets::D0ILCONE, 0.7);
       jets.useInvisibles();
-      addProjection(jets, "Jets");
+      declare(jets, "Jets");
 
       _h_m3j_08_40  = bookHisto1D(1, 1, 1);
       _h_m3j_16_40  = bookHisto1D(2, 1, 1);
@@ -32,7 +32,7 @@ namespace Rivet {
     void analyze(const Event& event) {
       const double weight = event.weight();
 
-      Jets jets = applyProjection<FastJets>(event, "Jets").jetsByPt(40.*GeV);
+      Jets jets = apply<FastJets>(event, "Jets").jetsByPt(40.*GeV);
 
       // Need three jets, leading jet above 150 GeV
       if (jets.size() < 3 || jets[0].pT() <= 150.*GeV) vetoEvent;

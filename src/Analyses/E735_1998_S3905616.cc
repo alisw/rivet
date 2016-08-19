@@ -23,8 +23,8 @@ namespace Rivet {
 
     void init() {
       // Projections
-      addProjection(TriggerUA5(), "Trigger");
-      addProjection(ChargedFinalState(), "FS");
+      declare(TriggerUA5(), "Trigger");
+      declare(ChargedFinalState(), "FS");
 
       // Histo
       _hist_multiplicity = bookHisto1D(1, 1, 1);
@@ -32,12 +32,12 @@ namespace Rivet {
 
 
     void analyze(const Event& event) {
-      const bool trigger = applyProjection<TriggerUA5>(event, "Trigger").nsdDecision();
+      const bool trigger = apply<TriggerUA5>(event, "Trigger").nsdDecision();
       if (!trigger) vetoEvent;
       const double weight = event.weight();
       _sumWTrig += weight;
 
-      const ChargedFinalState& fs = applyProjection<ChargedFinalState>(event, "FS");
+      const ChargedFinalState& fs = apply<ChargedFinalState>(event, "FS");
       const size_t numParticles = fs.particles().size();
       _hist_multiplicity->fill(numParticles, weight);
     }

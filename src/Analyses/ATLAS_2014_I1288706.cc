@@ -32,13 +32,13 @@ namespace Rivet {
        FinalState fs;
 
        ZFinder zfinder_ext_dressed_mu(fs, Cuts::abseta<2.4 && Cuts::pT>6.0*GeV, PID::MUON, 12.0*GeV, 66.0*GeV, 0.1);
-       addProjection(zfinder_ext_dressed_mu, "ZFinder_ext_dressed_mu");       
+       declare(zfinder_ext_dressed_mu, "ZFinder_ext_dressed_mu");       
        
        ZFinder zfinder_dressed_mu(fs, Cuts::abseta<2.4 && Cuts::pT>12*GeV, PID::MUON, 26.0*GeV, 66.0*GeV, 0.1);
-       addProjection(zfinder_dressed_mu, "ZFinder_dressed_mu"); 
+       declare(zfinder_dressed_mu, "ZFinder_dressed_mu"); 
         
        ZFinder zfinder_dressed_el(fs, Cuts::abseta<2.4 && Cuts::pT>12*GeV, PID::ELECTRON, 26.0*GeV, 66.0*GeV, 0.1);
-       addProjection(zfinder_dressed_el, "ZFinder_dressed_el");   
+       declare(zfinder_dressed_el, "ZFinder_dressed_el");   
        
        _hist_ext_mu_dressed = bookHisto1D(1, 1, 1); // muon, dressed level, extended phase space
        _hist_mu_dressed	    = bookHisto1D(2, 1, 1); // muon, dressed level, nominal phase space
@@ -49,9 +49,9 @@ namespace Rivet {
     /// Perform the per-event analysis
     void analyze(const Event& event) {
       const double weight = event.weight();
-      const ZFinder& zfinder_ext_dressed_mu = applyProjection<ZFinder>(event, "ZFinder_ext_dressed_mu");
-      const ZFinder& zfinder_dressed_mu     = applyProjection<ZFinder>(event, "ZFinder_dressed_mu"    );	   
-      const ZFinder& zfinder_dressed_el     = applyProjection<ZFinder>(event, "ZFinder_dressed_el"    ); 
+      const ZFinder& zfinder_ext_dressed_mu = apply<ZFinder>(event, "ZFinder_ext_dressed_mu");
+      const ZFinder& zfinder_dressed_mu     = apply<ZFinder>(event, "ZFinder_dressed_mu"    );	   
+      const ZFinder& zfinder_dressed_el     = apply<ZFinder>(event, "ZFinder_dressed_el"    ); 
       
       FillPlots(zfinder_ext_dressed_mu, _hist_ext_mu_dressed, 9.0, weight);
       FillPlots(zfinder_dressed_mu,     _hist_mu_dressed,    15.0, weight);      

@@ -19,13 +19,13 @@ namespace Rivet {
     void init() {
       IdentifiedFinalState Muons(Cuts::abseta < 2.4 && Cuts::pT > 20*GeV);
       Muons.acceptIdPair(PID::MUON);
-      addProjection(Muons, "muons");
+      declare(Muons, "muons");
 
       ChargedFinalState CFS(Cuts::abseta < 2.8);
-      addProjection(CFS, "tracks");
+      declare(CFS, "tracks");
 
       MissingMomentum missmom(FinalState(Cuts::abseta < 5));
-      addProjection(missmom, "MissingMomentum");
+      declare(missmom, "MissingMomentum");
 
       /// @todo Will need to register TMP histograms for future histogramming
       _tmp_h_plus  = Histo1D(refData(1,1,1));
@@ -36,9 +36,9 @@ namespace Rivet {
 
     void analyze(const Event& event) {
 
-      const IdentifiedFinalState& muons = applyProjection<IdentifiedFinalState>(event, "muons");
+      const IdentifiedFinalState& muons = apply<IdentifiedFinalState>(event, "muons");
       if (muons.size() < 1) vetoEvent;
-      const ChargedFinalState& tracks = applyProjection<ChargedFinalState>(event, "tracks");
+      const ChargedFinalState& tracks = apply<ChargedFinalState>(event, "tracks");
 
       Particles selected_muons;
       foreach (Particle muon, muons.particles()) {
@@ -57,7 +57,7 @@ namespace Rivet {
       if (selected_muons.size() < 1) vetoEvent;
 
       const FourMomentum muonmom = selected_muons[0].momentum();
-      const MissingMomentum& missmom = applyProjection<MissingMomentum>(event, "MissingMomentum");
+      const MissingMomentum& missmom = apply<MissingMomentum>(event, "MissingMomentum");
       FourMomentum missvec = -missmom.visibleMomentum();
       if (fabs(missvec.Et()) < 25*GeV) vetoEvent;
 

@@ -26,9 +26,9 @@ namespace Rivet {
 
     /// Book histograms and initialise projections before the run
     void init() {
-      addProjection(Beam(), "Beams");
-      addProjection(UnstableFinalState(), "UFS");
-      addProjection(ChargedFinalState(), "CFS");
+      declare(Beam(), "Beams");
+      declare(UnstableFinalState(), "UFS");
+      declare(ChargedFinalState(), "CFS");
 
       _h_Xe_Ds = bookHisto1D(1, 1, 1);
     }
@@ -39,15 +39,15 @@ namespace Rivet {
       const double weight = event.weight();
 
       // Trigger condition
-      const ChargedFinalState& cfs = applyProjection<ChargedFinalState>(event, "CFS");
+      const ChargedFinalState& cfs = apply<ChargedFinalState>(event, "CFS");
       if (cfs.size() < 5) vetoEvent;
 
       _sumWpassed += weight;
 
-      const UnstableFinalState& ufs = applyProjection<UnstableFinalState>(event, "UFS");
+      const UnstableFinalState& ufs = apply<UnstableFinalState>(event, "UFS");
 
       // Get beams and average beam momentum
-      const ParticlePair& beams = applyProjection<Beam>(event, "Beams").beams();
+      const ParticlePair& beams = apply<Beam>(event, "Beams").beams();
       const double meanBeamMom = ( beams.first.p3().mod() +
                                    beams.second.p3().mod() ) / 2.0/GeV;
 

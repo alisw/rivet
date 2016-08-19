@@ -37,15 +37,15 @@ namespace Rivet {
       Cut cuts = Cuts::etaIn(-2.5,2.5) & (Cuts::pT > 20.0*GeV);
 
       ZFinder zfinder(fs, cuts, _mode==1? PID::ELECTRON : PID::MUON, 76.0*GeV, 106.0*GeV, 0.1, ZFinder::CLUSTERNODECAY, ZFinder::NOTRACK);
-      addProjection(zfinder, "ZFinder");
+      declare(zfinder, "ZFinder");
 
       //FastJets jetpro1( getProjection<ZFinder>("ZFinder").remainingFinalState(), FastJets::ANTIKT, 0.4);
       VetoedFinalState jet_fs(fs);
       jet_fs.addVetoOnThisFinalState(getProjection<ZFinder>("ZFinder"));
       FastJets jetpro1(jet_fs, FastJets::ANTIKT, 0.4);
       jetpro1.useInvisibles();
-      addProjection(jetpro1, "AntiKtJets04");
-      addProjection(HeavyHadrons(), "BHadrons");
+      declare(jetpro1, "AntiKtJets04");
+      declare(HeavyHadrons(), "BHadrons");
 
       //Histograms with data binning
       _h_bjet_Pt      = bookHisto1D( 3, 1, 1);
@@ -73,7 +73,7 @@ namespace Rivet {
       const double weight = e.weight();
 
       // -- check we have a Z: 
-      const ZFinder& zfinder = applyProjection<ZFinder>(e, "ZFinder");
+      const ZFinder& zfinder = apply<ZFinder>(e, "ZFinder");
       
       if(zfinder.bosons().size() != 1)  vetoEvent;
       
@@ -85,7 +85,7 @@ namespace Rivet {
       
       //---------------------------
       //------------- stop processing the event if no true b-partons or hadrons are found
-      const Particles& allBs = applyProjection<HeavyHadrons>(e, "BHadrons").bHadrons(5.0*GeV);
+      const Particles& allBs = apply<HeavyHadrons>(e, "BHadrons").bHadrons(5.0*GeV);
       Particles stableBs;
       foreach(Particle p, allBs) {
         if(p.abseta() < 2.5)  stableBs += p;
@@ -95,7 +95,7 @@ namespace Rivet {
       
       //---------------------------
       // -- get the b-jets:
-      const Jets& jets = applyProjection<JetAlg>(e, "AntiKtJets04").jetsByPt(Cuts::pT >20.0*GeV && Cuts::abseta <2.4);
+      const Jets& jets = apply<JetAlg>(e, "AntiKtJets04").jetsByPt(Cuts::pT >20.0*GeV && Cuts::abseta <2.4);
       Jets b_jets;
       foreach(const Jet& jet, jets) {
         //veto overlaps with Z leptons:

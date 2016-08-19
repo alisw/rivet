@@ -24,28 +24,28 @@ namespace Rivet {
     void init() {
       // Set up projections
       const FinalState fs(-4.5, 4.5);
-      addProjection(fs, "ALL_FS");
+      declare(fs, "ALL_FS");
 
       /// Get electrons from truth record
       IdentifiedFinalState elec_fs(Cuts::abseta < 2.47 && Cuts::pT > 25*GeV);
       elec_fs.acceptIdPair(PID::ELECTRON);
-      addProjection(elec_fs, "ELEC_FS");
+      declare(elec_fs, "ELEC_FS");
 
       /// Get muons which pass the initial kinematic cuts:
       IdentifiedFinalState muon_fs(Cuts::abseta < 2.5 && Cuts::pT > 20*GeV);
       muon_fs.acceptIdPair(PID::MUON);
-      addProjection(muon_fs, "MUON_FS");
+      declare(muon_fs, "MUON_FS");
 
       // Final state used as input for jet-finding.
       // We include everything except the muons and neutrinos
       VetoedFinalState jet_input(fs);
       jet_input.vetoNeutrinos();
       jet_input.addVetoPairId(PID::MUON);
-      addProjection(jet_input, "JET_INPUT");
+      declare(jet_input, "JET_INPUT");
 
       // Get the jets
       FastJets jets(jet_input, FastJets::ANTIKT, 0.4);
-      addProjection(jets, "JETS");
+      declare(jets, "JETS");
 
       // Book histograms
       for (size_t d = 0; d < 5; ++d) {
@@ -62,12 +62,12 @@ namespace Rivet {
       const double weight = event.weight();
 
       /// Get the various sets of final state particles
-      const ParticleVector& elecFS = applyProjection<IdentifiedFinalState>(event, "ELEC_FS").particlesByPt();
-      const ParticleVector& muonFS = applyProjection<IdentifiedFinalState>(event, "MUON_FS").particlesByPt();
+      const ParticleVector& elecFS = apply<IdentifiedFinalState>(event, "ELEC_FS").particlesByPt();
+      const ParticleVector& muonFS = apply<IdentifiedFinalState>(event, "MUON_FS").particlesByPt();
 
       // Get all jets with pT > 7 GeV (ATLAS standard jet collection)
       /// @todo Why rewrite the jets collection as a vector of pointers?
-      const Jets& jets = applyProjection<FastJets>(event, "JETS").jetsByPt(7*GeV);
+      const Jets& jets = apply<FastJets>(event, "JETS").jetsByPt(7*GeV);
       vector<const Jet*> allJets;
       foreach(const Jet& j, jets) allJets.push_back(&j);
 
@@ -200,7 +200,7 @@ namespace Rivet {
       // Calculate the jet shapes
       /// @todo Use C++11 vector/array initialization
       const double binWidth = 0.04; // -> 10 bins from 0.0-0.4
-      vector<double> ptEdges; ptEdges += 30, 40, 50, 70, 100, 150;
+      vector<double> ptEdges; ptEdges += {{ 30, 40, 50, 70, 100, 150 }};
 
       // b-jet shapes
       MSG_DEBUG("Filling b-jet shapes");

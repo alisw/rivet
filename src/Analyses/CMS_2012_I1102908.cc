@@ -23,7 +23,7 @@ namespace Rivet {
 
   void init() {
     // Projections
-    addProjection(FastJets(FinalState(), FastJets::ANTIKT, 0.5), "antikT");
+    declare(FastJets(FinalState(), FastJets::ANTIKT, 0.5), "antikT");
 
     // Histograms
     /// @todo Can we manage to only register these as they are "really" created in the finalize()?
@@ -41,7 +41,7 @@ namespace Rivet {
     const double weight = event.weight();
 
     // Jets with  pT > 35.0, -4.7 < y < 4.7
-    const JetAlg& jet_alg = applyProjection<JetAlg>(event, "antikT");
+    const JetAlg& jet_alg = apply<JetAlg>(event, "antikT");
     const Jets& jets = jet_alg.jets(Cuts::pT > 35*GeV && Cuts::absrap < 4.7);
 
     // Veto event if number of jets less than 2

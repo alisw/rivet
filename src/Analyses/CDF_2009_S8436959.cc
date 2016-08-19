@@ -29,11 +29,11 @@ namespace Rivet {
     /// Book histograms and initialise projections before the run
     void init() {
       FinalState fs;
-      addProjection(fs, "FS");
+      declare(fs, "FS");
 
       LeadingParticlesFinalState photonfs(FinalState(-1.0, 1.0, 30.0*GeV));
       photonfs.addParticleId(PID::PHOTON);
-      addProjection(photonfs, "LeadingPhoton");
+      declare(photonfs, "LeadingPhoton");
 
       _h_Et_photon = bookHisto1D(1, 1, 1);
     }
@@ -43,8 +43,8 @@ namespace Rivet {
     void analyze(const Event& event) {
       const double weight = event.weight();
 
-      Particles fs = applyProjection<FinalState>(event, "FS").particles();
-      Particles photons = applyProjection<LeadingParticlesFinalState>(event, "LeadingPhoton").particles();
+      Particles fs = apply<FinalState>(event, "FS").particles();
+      Particles photons = apply<LeadingParticlesFinalState>(event, "LeadingPhoton").particles();
       if (photons.size()!=1) {
         vetoEvent;
       }

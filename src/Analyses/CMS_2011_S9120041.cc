@@ -20,11 +20,11 @@ namespace Rivet {
 
     void init() {
       const ChargedFinalState cfs(-2.0, 2.0, 500*MeV);
-      addProjection(cfs, "CFS");
+      declare(cfs, "CFS");
 
       const ChargedFinalState cfsforjet(-2.5, 2.5, 500*MeV);
       const FastJets jetpro(cfsforjet, FastJets::SISCONE, 0.5);
-      addProjection(jetpro, "Jets");
+      declare(jetpro, "Jets");
 
       if (fuzzyEquals(sqrtS(), 7.0*TeV)) {
         _h_Nch_vs_pT = bookProfile1D(1, 1, 1); // Nch vs. pT_max
@@ -59,7 +59,7 @@ namespace Rivet {
 
       // Find the lead jet, applying a restriction that the jets must be within |eta| < 2.
       FourMomentum p_lead;
-      foreach (const Jet& j, applyProjection<FastJets>(event, "Jets").jetsByPt(1.0*GeV)) {
+      foreach (const Jet& j, apply<FastJets>(event, "Jets").jetsByPt(1.0*GeV)) {
         if (j.abseta() < 2.0) {
           p_lead = j.momentum();
           break;
@@ -69,7 +69,7 @@ namespace Rivet {
       const double philead = p_lead.phi();
       const double pTlead  = p_lead.pT();
 
-      Particles particles = applyProjection<ChargedFinalState>(event, "CFS").particlesByPt();
+      Particles particles = apply<ChargedFinalState>(event, "CFS").particlesByPt();
 
       int nTransverse = 0;
       double ptSumTransverse = 0.;

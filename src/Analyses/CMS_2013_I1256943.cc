@@ -24,18 +24,18 @@ namespace Rivet {
       _sumWpT = 0;
 
       FinalState fs(Cuts::abseta < 2.4 && Cuts::pT > 20*GeV);
-      addProjection(fs, "FS");
+      declare(fs, "FS");
 
       UnstableFinalState ufs(Cuts::abseta < 2 && Cuts::pT > 15*GeV);
-      addProjection(ufs, "UFS");
+      declare(ufs, "UFS");
 
       Cut zetacut = Cuts::abseta < 2.4;
 
       ZFinder zfindermu(fs, zetacut, PID::MUON, 81.0*GeV, 101.0*GeV, 0.1, ZFinder::NOCLUSTER, ZFinder::TRACK, 91.2*GeV);
-      addProjection(zfindermu, "ZFinderMu");
+      declare(zfindermu, "ZFinderMu");
 
       ZFinder zfinderel(fs, zetacut, PID::ELECTRON, 81.0*GeV, 101.0*GeV, 0.1, ZFinder::NOCLUSTER, ZFinder::TRACK, 91.2*GeV);
-      addProjection(zfinderel, "ZFinderEl");
+      declare(zfinderel, "ZFinderEl");
 
 
       // Histograms in non-boosted region of Z pT
@@ -58,9 +58,9 @@ namespace Rivet {
     void analyze(const Event& e) {
       vector<FourMomentum> Bmom;
 
-      const UnstableFinalState& ufs = applyProjection<UnstableFinalState>(e, "UFS");
-      const ZFinder& zfindermu = applyProjection<ZFinder>(e, "ZFinderMu");
-      const ZFinder& zfinderel = applyProjection<ZFinder>(e, "ZFinderEl");
+      const UnstableFinalState& ufs = apply<UnstableFinalState>(e, "UFS");
+      const ZFinder& zfindermu = apply<ZFinder>(e, "ZFinderMu");
+      const ZFinder& zfinderel = apply<ZFinder>(e, "ZFinderEl");
 
       // Look for a Z --> mu+ mu- event in the final state
       if (zfindermu.empty() && zfinderel.empty()) vetoEvent;

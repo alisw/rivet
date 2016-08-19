@@ -49,6 +49,15 @@ namespace Rivet {
     }
     return true;
   }
+  
+  // Fill event and check for a bad read state --- to skip, maybe HEPMC3 will have a better way
+  bool Run::skipEvent() {
+    if (_io->rdstate() != 0 || !_io->fill_next_event(_evt.get()) ) {
+      Log::getLog("Rivet.Run") << Log::DEBUG << "Read failed. End of file?" << endl;
+      return false;
+    }
+    return true;
+  }
 
 
   bool Run::openFile(const std::string& evtfile, double weight) {

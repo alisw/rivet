@@ -1,23 +1,15 @@
 #ifndef RIVET_Cuts_HH
 #define RIVET_Cuts_HH
-#include <boost/smart_ptr.hpp>
+
+#include "Rivet/Tools/Cuts.fhh"
+#include <memory>
 
 namespace Rivet {
 
 
-  /// @internal Forward declaration of helper class. Not for end users.
-  class CuttableBase;
-
-  /// @internal Base class for cut objects.
-  /// @note End users should always use the @ref Cut typedef instead.
-  class CutBase;
-
-  /// Main cut object
-  typedef boost::shared_ptr<CutBase> Cut;
-
-
   class CutBase {
   public:
+
     /// Main work method.
     /// @internal Forwards the received object to @ref accept_, wrapped in the Cuttable converter
     template <typename ClassToCheck> bool accept(const ClassToCheck&) const;
@@ -25,9 +17,11 @@ namespace Rivet {
     virtual bool operator==(const Cut&) const = 0;
     /// Default destructor
     virtual ~CutBase() {}
+
   protected:
     /// @internal Actual accept implementation, overloadable by various cut combiners
     virtual bool _accept(const CuttableBase&) const = 0;
+
   };
 
 
@@ -39,9 +33,14 @@ namespace Rivet {
   namespace Cuts {
 
     /// Available categories of cut objects
-    enum Quantity { pT=0, pt=0, Et=1, et=1, mass, rap, absrap, eta, abseta, phi };
+    enum Quantity { pT=0, pt=0, Et=1, et=1, mass, rap, absrap, eta, abseta, phi,
+                    pid, abspid, charge, abscharge, charge3, abscharge3 };
+
     /// Fully open cut singleton, accepts everything
-    const Cut& open();
+    const Cut& open(); //< access by factory function
+
+    extern const Cut& OPEN; //= open(); //< access by constant
+    extern const Cut& NOCUT; //= open(); //< access by constant
 
     /// @name Shortcuts for common cuts
     //@{

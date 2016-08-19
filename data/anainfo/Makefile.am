@@ -242,7 +242,6 @@ dist_pkgdata_DATA = \
   CMS_2015_I1384119.info \
   CMS_2015_I1385107.info \
   CMSTOTEM_2014_I1294140.info \
-  TOTEM_2014_I1328627.info \
   CMS_2012_PAS_QCD_11_010.info \
   CMS_QCD_10_024.info \
   D0_1996_S3214044.info \
@@ -275,8 +274,10 @@ dist_pkgdata_DATA = \
   DELPHI_1999_S3960137.info \
   DELPHI_2000_S4328825.info \
   DELPHI_2002_069_CONF_603.info \
+  DELPHI_2011_I890503.info \
   EXAMPLE.info \
   EXAMPLE_CUTS.info \
+  EXAMPLE_SMEAR.info \
   H1_1994_S2919893.info \
   H1_1995_S3167097.info \
   H1_2000_S4129130.info \
@@ -293,7 +294,6 @@ dist_pkgdata_DATA = \
   LHCB_2014_I1281685.info \
   LHCB_2015_I1333223.info \
   LHCF_2012_I1115479.info \
-  MC_DIJET.info \
   MC_DIPHOTON.info \
   MC_ELECTRONS.info \
   MC_GENERIC.info \
@@ -307,6 +307,7 @@ dist_pkgdata_DATA = \
   MC_JETTAGS.info \
   MC_KTSPLITTINGS.info \
   MC_LEADJETUE.info \
+  MC_MET.info \
   MC_MUONS.info \
   MC_PDFS.info \
   MC_PHOTONINC.info \
@@ -378,7 +379,8 @@ dist_pkgdata_DATA = \
   STAR_2009_UE_HELEN.info \
   TASSO_1990_S2148048.info \
   TOTEM_2012_I1115294.info \
-  TOTEM_2012_002.info \
+  TOTEM_2012_I1220862.info \
+  TOTEM_2014_I1328627.info \
   ZEUS_2001_S4815815.info \
   UA1_1990_S2044935.info \
   UA5_1982_S875503.info \

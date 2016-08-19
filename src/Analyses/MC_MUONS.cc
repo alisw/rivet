@@ -19,14 +19,14 @@ namespace Rivet {
     void init() {
       IdentifiedFinalState muons;
       muons.acceptIdPair(PID::MUON);
-      addProjection(muons, "Muons");
+      declare(muons, "Muons");
 
       MC_ParticleAnalysis::init();
     }
 
 
     void analyze(const Event& event) {
-      const Particles mus = applyProjection<FinalState>(event, "Muons").particlesByPt(Cuts::pT > 0.5*GeV);
+      const Particles mus = apply<FinalState>(event, "Muons").particlesByPt(Cuts::pT > 0.5*GeV);
       MC_ParticleAnalysis::_analyze(event, mus);
     }
 

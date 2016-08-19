@@ -1,58 +1,42 @@
 #ifndef RIVET_RivetSTL_HH
 #define RIVET_RivetSTL_HH
 
-#include <typeinfo>
+#include <string>
+#include <vector>
 #include <set>
 #include <list>
 #include <map>
 #include <utility>
-#include <string>
-#include <sstream>
-#include <vector>
+#include <algorithm>
+#include <type_traits>
 #include <stdexcept>
+#include <cassert>
+#include <memory>
+#include <typeinfo>
+#include <sstream>
+#include <fstream>
 #include <iostream>
 #include <iomanip>
 #include <cmath>
 #include <limits>
-#include <cassert>
-#include <fstream>
-#include <algorithm>
+
+
+#ifndef foreach
+/// @decl A foreach macro for backward compatibility with BOOST_FOREACH
+#define foreach(value, container) for (value : container)
+#endif
+
 
 namespace Rivet {
 
-  /// @name Convenient imports of common STL classes and functions
-  //@{
 
-  using std::set;
-  using std::map;
-  using std::multimap;
-  using std::type_info;
-  using std::string;
-  using std::stringstream;
-  using std::less;
-  using std::list;
-  using std::vector;
-  using std::pair;
-  using std::make_pair;
-  using std::runtime_error;
-  using std::min;
-  using std::max;
-  using std::abs;
-  using std::numeric_limits;
-  using std::ostream;
-  using std::istream;
-  using std::cout;
-  using std::cin;
-  using std::cerr;
-  using std::setw;
-  using std::pow;
-  using std::endl;
-
-  //@}
+  /// We implicitly use STL entities in the Rivet namespace
+  using namespace std;
 
 
   /// @name Streaming containers as string reps
   /// @todo Make these named toStr rather than operator<<
+  /// @todo Make these generic to any iterable
   //@{
 
   /// Convenient function for streaming out vectors of any streamable object.
@@ -134,12 +118,14 @@ namespace std {
   /// @name Container filling and merging
   //@{
 
+  /// Append a single item to vector @a v
+  template <typename T>
+  inline void operator+=(std::vector<T>& v, const T& x) { v.push_back(x); }
+
   /// Append all the items from vector @a v2 to vector @a v1
   template <typename T>
   inline void operator+=(std::vector<T>& v1, const std::vector<T>& v2) {
-    for (typename vector<T>::const_iterator s = v2.begin(); s != v2.end(); ++s) {
-      v1.push_back(*s);
-    }
+    for (const auto& x : v2) v1.push_back(x);
   }
 
   /// Create a new vector from the concatenated items in vectors @a v1 and @a v2
@@ -154,9 +140,7 @@ namespace std {
   /// Merge the contents of set @a s2 into @a s1
   template <typename T>
   inline void operator+=(std::set<T>& s1, const std::set<T>& s2) {
-    for (typename std::set<T>::const_iterator s = s2.begin(); s != s2.end(); ++s) {
-      s1.insert(*s);
-    }
+    for (const auto& x : s2) s1.insert(x);
   }
 
   /// Merge the contents of sets @a s1 and @a s2
@@ -165,6 +149,20 @@ namespace std {
     std::set<T> rtn(s1);
     rtn += s2;
     return rtn;
+  }
+
+  //@}
+
+
+  /// @name Function helpers
+  //@{
+
+  /// Get a function pointer / hash integer from an std::function
+  template<typename T, typename... U>
+  inline size_t get_address(std::function<T(U...)> f) {
+    typedef T(fnType)(U...);
+    fnType ** fnPointer = f.template target<fnType*>();
+    return (fnPointer != nullptr) ? reinterpret_cast<size_t>(*fnPointer) : 0;
   }
 
   //@}

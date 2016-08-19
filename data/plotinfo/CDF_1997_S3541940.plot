@@ -6,64 +6,64 @@ YLabel=$1/N \mathrm{d}N/\mathrm{d}m$ [1/GeV]
 
 # BEGIN PLOT /CDF_1997_S3541940/d02-x01-y01
 Title=Dalitz distribution
-XLabel=$X_3^{'''}$
-YLabel=$1/N \mathrm{d}N/\mathrm{d}X_3^{'''}$
+XLabel=$X_3^{primeprimeprime}$
+YLabel=$1/N \mathrm{d}N/\mathrm{d}X_3^{primeprimeprime}$
 LogY=0
 # END PLOT
 
 # BEGIN PLOT /CDF_1997_S3541940/d03-x01-y01
 Title=Dalitz distribution
-XLabel=$X_4^{'''}$
-YLabel=$1/N \mathrm{d}N/\mathrm{d}X_4^{'''}$
+XLabel=$X_4^{primeprimeprime}$
+YLabel=$1/N \mathrm{d}N/\mathrm{d}X_4^{primeprimeprime}$
 LogY=0
 # END PLOT
 
 # BEGIN PLOT /CDF_1997_S3541940/d04-x01-y01
 Title=Leading jet angle
-XLabel=$|\cos \theta_{3^{'''}}|$
-YLabel=$1/N \mathrm{d}N/\mathrm{d}\cos\theta_{3^{'''}}$
+XLabel=$|\cos \theta_{3^{primeprimeprime}}|$
+YLabel=$1/N \mathrm{d}N/\mathrm{d}\cos\theta_{3^{primeprimeprime}}$
 LogY=0
 # END PLOT
 
 # BEGIN PLOT /CDF_1997_S3541940/d05-x01-y01
 Title=Angular distribution
-XLabel=$\Psi_{3^{'''}}$
-YLabel=$1/N \mathrm{d}N/\mathrm{d}\Psi_{3^{'''}}$
+XLabel=$\Psi_{3^{primeprimeprime}}$
+YLabel=$1/N \mathrm{d}N/\mathrm{d}\Psi_{3^{primeprimeprime}}$
 LogY=0
 # END PLOT
 
 # BEGIN PLOT /CDF_1997_S3541940/d06-x01-y01
 Title=Single-jet mass fraction
-XLabel=$f_3^{'''}$
-YLabel=$1/N \mathrm{d}N/\mathrm{d}f_3^{'''}$
+XLabel=$f_3^{primeprimeprime}$
+YLabel=$1/N \mathrm{d}N/\mathrm{d}f_3^{primeprimeprime}$
 LogY=0
 # END PLOT
 
 # BEGIN PLOT /CDF_1997_S3541940/d06-x01-y02
 Title=Single-jet mass fraction
-XLabel=$f_4^{'''}$
-YLabel=$1/N \mathrm{d}N/\mathrm{d}f_4^{'''}$
+XLabel=$f_4^{primeprimeprime}$
+YLabel=$1/N \mathrm{d}N/\mathrm{d}f_4^{primeprimeprime}$
 LogY=0
 # END PLOT
 
 # BEGIN PLOT /CDF_1997_S3541940/d06-x01-y03
 Title=Single-jet mass fraction
-XLabel=$f_5^{'''}$
-YLabel=$1/N \mathrm{d}N/\mathrm{d}f_5^{'''}$
+XLabel=$f_5^{primeprimeprime}$
+YLabel=$1/N \mathrm{d}N/\mathrm{d}f_5^{primeprimeprime}$
 LogY=0
 # END PLOT
 
 # BEGIN PLOT /CDF_1997_S3541940/d07-x01-y01
 Title=Two-body energy sharing
-XLabel=$X_A^{''}$
-YLabel=$1/N \mathrm{d}N/\mathrm{d}X_A^{''}$
+XLabel=$X_A^{primeprime}$
+YLabel=$1/N \mathrm{d}N/\mathrm{d}X_A^{primeprime}$
 LogY=0
 # END PLOT
 
 # BEGIN PLOT /CDF_1997_S3541940/d08-x01-y01
 Title=Two-body energy sharing
-XLabel=$X_C^{'}$
-YLabel=$1/N \mathrm{d}N/\mathrm{d}X_C^{'}$
+XLabel=$X_C^{prime}$
+YLabel=$1/N \mathrm{d}N/\mathrm{d}X_C^{prime}$
 LogY=0
 # END PLOT
 
@@ -76,15 +76,15 @@ LogY=0
 
 # BEGIN PLOT /CDF_1997_S3541940/d10-x01-y01
 Title=Two-body angular distribution
-XLabel=$\Psi_{A^{''}B^{''}}$
-YLabel=$1/N \mathrm{d}N/\mathrm{d}\Psi_{A^{''}B^{''}}$
+XLabel=$\Psi_{A^{primeprime}B^{primeprime}}$
+YLabel=$1/N \mathrm{d}N/\mathrm{d}\Psi_{A^{primeprime}B^{primeprime}}$
 LogY=0
 # END PLOT
 
 # BEGIN PLOT /CDF_1997_S3541940/d11-x01-y01
 Title=Two-body angular distribution
-XLabel=$\Psi_{C^{'}D^{'}}$
-YLabel=$1/N \mathrm{d}N/\mathrm{d}\Psi_{C^{'}D^{'}}$
+XLabel=$\Psi_{C^{prime}D^{prime}}$
+YLabel=$1/N \mathrm{d}N/\mathrm{d}\Psi_{C^{prime}D^{prime}}$
 LogY=0
 # END PLOT
 
@@ -97,29 +97,29 @@ LogY=0
 
 # BEGIN PLOT /CDF_1997_S3541940/d13-x01-y01
 Title=Single-body mass fraction
-XLabel=$f_A^{''}$
-YLabel=$1/N \mathrm{d}N/\mathrm{d}f_A^{''}$
+XLabel=$f_A^{primeprime}$
+YLabel=$1/N \mathrm{d}N/\mathrm{d}f_A^{primeprime}$
 LogY=0
 # END PLOT
 
 # BEGIN PLOT /CDF_1997_S3541940/d14-x01-y01
 Title=Single-body mass fraction
-XLabel=$f_B^{''}$
-YLabel=$1/N \mathrm{d}N/\mathrm{d}f_B^{''}$
+XLabel=$f_B^{primeprime}$
+YLabel=$1/N \mathrm{d}N/\mathrm{d}f_B^{primeprime}$
 LogY=0
 # END PLOT
 
 # BEGIN PLOT /CDF_1997_S3541940/d15-x01-y01
 Title=Single-body mass fraction
-XLabel=$f_C^{'}$
-YLabel=$1/N \mathrm{d}N/\mathrm{d}f_C^{'}$
+XLabel=$f_C^{prime}$
+YLabel=$1/N \mathrm{d}N/\mathrm{d}f_C^{prime}$
 LogY=0
 # END PLOT
 
 # BEGIN PLOT /CDF_1997_S3541940/d16-x01-y01
 Title=Single-body mass fraction
-XLabel=$f_D^{'}$
-YLabel=$1/N \mathrm{d}N/\mathrm{d}f_D^{'}$
+XLabel=$f_D^{prime}$
+YLabel=$1/N \mathrm{d}N/\mathrm{d}f_D^{prime}$
 LogY=0
 # END PLOT
 

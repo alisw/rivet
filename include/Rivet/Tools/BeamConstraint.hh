@@ -2,13 +2,10 @@
 #ifndef RIVET_BeamConstraint_HH
 #define RIVET_BeamConstraint_HH
 
-#include "Rivet/Config/RivetCommon.hh"
-#include "Rivet/ParticleName.hh"
 #include "Rivet/Particle.hh"
-#include <iostream>
-
 
 namespace Rivet {
+
 
   /// Find whether ParticleName @a p is compatible with the
   /// template ParticleName @a allowed. Effectively this is

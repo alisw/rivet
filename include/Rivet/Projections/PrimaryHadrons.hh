@@ -35,9 +35,7 @@ namespace Rivet {
 
 
     /// Clone on the heap.
-    virtual const Projection* clone() const {
-      return new PrimaryHadrons(*this);
-    }
+    DEFAULT_RIVET_PROJ_CLONE(PrimaryHadrons);
 
     //@}
 

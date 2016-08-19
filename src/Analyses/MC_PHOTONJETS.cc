@@ -26,19 +26,19 @@ namespace Rivet {
     void init() {
       // General FS
       FinalState fs(-5.0, 5.0);
-      addProjection(fs, "FS");
+      declare(fs, "FS");
 
       // Get leading photon
       LeadingParticlesFinalState photonfs(FinalState(-1.0, 1.0, 30.0*GeV));
       photonfs.addParticleId(PID::PHOTON);
-      addProjection(photonfs, "LeadingPhoton");
+      declare(photonfs, "LeadingPhoton");
 
       // FS for jets excludes the leading photon
       VetoedFinalState vfs(fs);
       vfs.addVetoOnThisFinalState(photonfs);
-      addProjection(vfs, "JetFS");
+      declare(vfs, "JetFS");
       FastJets jetpro(vfs, FastJets::ANTIKT, 0.4);
-      addProjection(jetpro, "Jets");
+      declare(jetpro, "Jets");
 
       _h_photon_jet1_deta = bookHisto1D("photon_jet1_deta", 50, -5.0, 5.0);
       _h_photon_jet1_dphi = bookHisto1D("photon_jet1_dphi", 20, 0.0, M_PI);
@@ -52,14 +52,14 @@ namespace Rivet {
     void analyze(const Event& e) {
       // Get the photon
       /// @todo share IsolatedPhoton projection between all MC_*PHOTON* analyses
-      const Particles photons = applyProjection<FinalState>(e, "LeadingPhoton").particles();
+      const Particles photons = apply<FinalState>(e, "LeadingPhoton").particles();
       if (photons.size() != 1) {
         vetoEvent;
       }
       const FourMomentum photon = photons.front().momentum();
 
       // Get all charged particles
-      const FinalState& fs = applyProjection<FinalState>(e, "JetFS");
+      const FinalState& fs = apply<FinalState>(e, "JetFS");
       if (fs.empty()) {
         vetoEvent;
       }
@@ -80,7 +80,7 @@ namespace Rivet {
         }
       }
 
-      const Jets& jets = applyProjection<FastJets>(e, "Jets").jetsByPt(_jetptcut);
+      const Jets& jets = apply<FastJets>(e, "Jets").jetsByPt(_jetptcut);
       if (jets.size()>0) {
         _h_photon_jet1_deta->fill(photon.eta()-jets[0].eta(), weight);
         _h_photon_jet1_dphi->fill(mapAngle0ToPi(photon.phi()-jets[0].phi()), weight);

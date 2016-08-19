@@ -32,20 +32,20 @@ namespace Rivet {
       //       between 1 and 2 GeV. That correction is included in the systematic
       //       uncertainties and overly complicated to program, so we ignore it.
       const FinalState fs;
-      addProjection(fs, "FS");
+      declare(fs, "FS");
       FastJets durhamjets(fs, FastJets::DURHAM, 0.7);
       durhamjets.useInvisibles(true);
-      addProjection(durhamjets, "DurhamJets");
+      declare(durhamjets, "DurhamJets");
 
       const Thrust thrust(fs);
-      addProjection(thrust, "Thrust");
-      addProjection(Sphericity(fs), "Sphericity");
-      addProjection(ParisiTensor(fs), "Parisi");
-      addProjection(Hemispheres(thrust), "Hemispheres");
+      declare(thrust, "Thrust");
+      declare(Sphericity(fs), "Sphericity");
+      declare(ParisiTensor(fs), "Parisi");
+      declare(Hemispheres(thrust), "Hemispheres");
 
       const ChargedFinalState cfs;
-      addProjection(Beam(), "Beams");
-      addProjection(cfs, "CFS");
+      declare(Beam(), "Beams");
+      declare(cfs, "CFS");
 
       // Histos
       // offset for the event shapes and jets
@@ -138,8 +138,8 @@ namespace Rivet {
     void analyze(const Event& e) {
       const double weight = e.weight();
 
-      const Thrust& thrust = applyProjection<Thrust>(e, "Thrust");
-      const Sphericity& sphericity = applyProjection<Sphericity>(e, "Sphericity");
+      const Thrust& thrust = apply<Thrust>(e, "Thrust");
+      const Sphericity& sphericity = apply<Sphericity>(e, "Sphericity");
 
       if(_initialisedJets) {
         bool LEP1 = fuzzyEquals(sqrtS(),91.2*GeV,0.01);
@@ -153,13 +153,13 @@ namespace Rivet {
           _h_thrustminor->fill(thrust.thrustMinor(),weight);
         _h_oblateness->fill(thrust.oblateness(),weight);
 
-        const Hemispheres& hemi = applyProjection<Hemispheres>(e, "Hemispheres");
+        const Hemispheres& hemi = apply<Hemispheres>(e, "Hemispheres");
         _h_heavyjetmass->fill(hemi.scaledM2high(),weight);
         _h_jetmassdifference->fill(hemi.scaledM2diff(),weight);
         _h_totaljetbroadening->fill(hemi.Bsum(),weight);
         _h_widejetbroadening->fill(hemi.Bmax(),weight);
 
-        const ParisiTensor& parisi = applyProjection<ParisiTensor>(e, "Parisi");
+        const ParisiTensor& parisi = apply<ParisiTensor>(e, "Parisi");
         _h_cparameter->fill(parisi.C(),weight);
 
         _h_aplanarity->fill(sphericity.aplanarity(),weight);
@@ -168,7 +168,7 @@ namespace Rivet {
         _h_sphericity->fill(sphericity.sphericity(),weight);
 
         // Jet rates
-        const FastJets& durjet = applyProjection<FastJets>(e, "DurhamJets");
+        const FastJets& durjet = apply<FastJets>(e, "DurhamJets");
         double log10e = log10(exp(1.));
         if (durjet.clusterSeq()) {
           double logynm1=0.;
@@ -199,7 +199,7 @@ namespace Rivet {
           }
         }
         if( !_initialisedSpectra) {
-          const ChargedFinalState& cfs = applyProjection<ChargedFinalState>(e, "CFS");
+          const ChargedFinalState& cfs = apply<ChargedFinalState>(e, "CFS");
           const size_t numParticles = cfs.particles().size();
           _weightedTotalChargedPartNum += numParticles * weight;
         }
@@ -207,10 +207,10 @@ namespace Rivet {
 
       // charged particle distributions
       if(_initialisedSpectra) {
-        const ChargedFinalState& cfs = applyProjection<ChargedFinalState>(e, "CFS");
+        const ChargedFinalState& cfs = apply<ChargedFinalState>(e, "CFS");
         const size_t numParticles = cfs.particles().size();
         _weightedTotalChargedPartNum += numParticles * weight;
-        const ParticlePair& beams = applyProjection<Beam>(e, "Beams").beams();
+        const ParticlePair& beams = apply<Beam>(e, "Beams").beams();
         const double meanBeamMom = ( beams.first.p3().mod() +
                                      beams.second.p3().mod() ) / 2.0;
         foreach (const Particle& p, cfs.particles()) {

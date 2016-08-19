@@ -24,9 +24,7 @@ namespace Rivet {
     ChargedFinalState(double mineta, double maxeta, double minpt=0*GeV);
 
     /// Clone on the heap.
-    virtual const Projection* clone() const {
-      return new ChargedFinalState(*this);
-    }
+    DEFAULT_RIVET_PROJ_CLONE(ChargedFinalState);
 
     //@}
 

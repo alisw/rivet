@@ -25,7 +25,7 @@ namespace Rivet {
     void init() {
       ZFinder zfinder(FinalState(), Cuts::open(), PID::ELECTRON,
                       71*GeV, 111*GeV, 0.2, ZFinder::CLUSTERNODECAY, ZFinder::TRACK);
-      addProjection(zfinder, "ZFinder");
+      declare(zfinder, "ZFinder");
 
       _h_yZ = bookHisto1D(1, 1, 1);
     }
@@ -35,7 +35,7 @@ namespace Rivet {
     void analyze(const Event & e) {
       const double weight = e.weight();
 
-      const ZFinder& zfinder = applyProjection<ZFinder>(e, "ZFinder");
+      const ZFinder& zfinder = apply<ZFinder>(e, "ZFinder");
       if (zfinder.bosons().size() == 1) {
         const Particles& el(zfinder.constituents());
         if (el[0].pT() > 25*GeV || el[1].pT() > 25*GeV) {

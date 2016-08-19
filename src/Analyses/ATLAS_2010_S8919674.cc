@@ -34,9 +34,9 @@ namespace Rivet {
       FinalState fs;
       Cut cuts = (Cuts::abseta < 1.37 || Cuts::absetaIn(1.52, 2.47)) && Cuts::pT > 20*GeV;
       WFinder wfinder_e(fs, cuts, PID::ELECTRON, 0*GeV, 1000*GeV, 25*GeV);
-      addProjection(wfinder_e, "W_e");
+      declare(wfinder_e, "W_e");
       WFinder wfinder_mu(fs, Cuts::abseta < 2.4 && Cuts::pT > 20*GeV, PID::MUON, 0*GeV, 1000*GeV, 25*GeV);
-      addProjection(wfinder_mu, "W_mu");
+      declare(wfinder_mu, "W_mu");
 
       // Input for the jets: no neutrinos, no muons, and no electron which passed the electron cuts
       VetoedFinalState veto;
@@ -45,7 +45,7 @@ namespace Rivet {
       veto.addVetoPairId(PID::MUON);
       veto.vetoNeutrinos();
       FastJets jets(veto, FastJets::ANTIKT, 0.4);
-      addProjection(jets, "jets");
+      declare(jets, "jets");
 
       /// Book histograms
       _h_el_njet_inclusive = bookHisto1D(1,1,1);
@@ -61,9 +61,9 @@ namespace Rivet {
     void analyze(const Event& event) {
       const double weight = event.weight();
 
-      const Jets& jets = applyProjection<FastJets>(event, "jets").jetsByPt(20.0*GeV);
+      const Jets& jets = apply<FastJets>(event, "jets").jetsByPt(20.0*GeV);
 
-      const WFinder& We = applyProjection<WFinder>(event, "W_e");
+      const WFinder& We = apply<WFinder>(event, "W_e");
       if (We.bosons().size() == 1) {
         const FourMomentum& p_miss = We.constituentNeutrinos()[0].momentum();
         const FourMomentum& p_lept = We.constituentLeptons()[0].momentum();
@@ -88,7 +88,7 @@ namespace Rivet {
         }
       }
 
-      const WFinder& Wm = applyProjection<WFinder>(event, "W_mu");
+      const WFinder& Wm = apply<WFinder>(event, "W_mu");
       if (Wm.bosons().size() == 1) {
         const FourMomentum& p_miss = Wm.constituentNeutrinos()[0].momentum();
         const FourMomentum& p_lept = Wm.constituentLeptons()[0].momentum();

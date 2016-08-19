@@ -19,10 +19,10 @@ namespace Rivet {
 
 
     void init() {
-      addProjection(ChargedFinalState(-0.8, 0.8, 0.5*GeV), "CFS_08_05");
-      addProjection(ChargedFinalState(-0.8, 0.8, 1.0*GeV), "CFS_08_10");
-      addProjection(ChargedFinalState(-2.4, 2.4, 0.5*GeV), "CFS_24_05");
-      addProjection(ChargedFinalState(-2.4, 2.4, 1.0*GeV), "CFS_24_10");
+      declare(ChargedFinalState(-0.8, 0.8, 0.5*GeV), "CFS_08_05");
+      declare(ChargedFinalState(-0.8, 0.8, 1.0*GeV), "CFS_08_10");
+      declare(ChargedFinalState(-2.4, 2.4, 0.5*GeV), "CFS_24_05");
+      declare(ChargedFinalState(-2.4, 2.4, 1.0*GeV), "CFS_24_10");
 
       size_t offset = 0;
       if (fuzzyEquals(sqrtS()/GeV, 7000, 1E-3)) offset = 0;
@@ -36,10 +36,10 @@ namespace Rivet {
 
     void analyze(const Event& event) {
       const double weight = event.weight();
-      const ChargedFinalState& cfs_08_05 = applyProjection<ChargedFinalState>(event, "CFS_08_05");
-      const ChargedFinalState& cfs_08_10 = applyProjection<ChargedFinalState>(event, "CFS_08_10");
-      const ChargedFinalState& cfs_24_05 = applyProjection<ChargedFinalState>(event, "CFS_24_05");
-      const ChargedFinalState& cfs_24_10 = applyProjection<ChargedFinalState>(event, "CFS_24_10");
+      const ChargedFinalState& cfs_08_05 = apply<ChargedFinalState>(event, "CFS_08_05");
+      const ChargedFinalState& cfs_08_10 = apply<ChargedFinalState>(event, "CFS_08_10");
+      const ChargedFinalState& cfs_24_05 = apply<ChargedFinalState>(event, "CFS_24_05");
+      const ChargedFinalState& cfs_24_10 = apply<ChargedFinalState>(event, "CFS_24_10");
 
       // Plot distributions
       if(!cfs_08_05.particles().empty()) _weight_pt05_eta08 += weight;

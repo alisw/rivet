@@ -31,30 +31,30 @@ namespace Rivet {
       Cut pt10 = Cuts::pT > 10.0*GeV;
       IdentifiedFinalState elecs(Cuts::abseta < 2.47 && pt10);
       elecs.acceptIdPair(PID::ELECTRON);
-      addProjection(elecs, "elecs");
+      declare(elecs, "elecs");
 
       // veto region electrons
       Cut vetocut = Cuts::absetaIn(1.37, 1.52);
       IdentifiedFinalState veto_elecs(vetocut && pt10);
       veto_elecs.acceptIdPair(PID::ELECTRON);
-      addProjection(veto_elecs, "veto_elecs");
+      declare(veto_elecs, "veto_elecs");
 
       // projection to find the muons
       IdentifiedFinalState muons(Cuts::abseta < 2.4 && pt10 );
       muons.acceptIdPair(PID::MUON);
-      addProjection(muons, "muons");
+      declare(muons, "muons");
 
       VetoedFinalState vfs;
       vfs.addVetoPairId(PID::MUON);
 
       /// Jet finder
-      addProjection(FastJets(vfs, FastJets::ANTIKT, 0.4), "AntiKtJets04");
+      declare(FastJets(vfs, FastJets::ANTIKT, 0.4), "AntiKtJets04");
 
       // all tracks (to do deltaR with leptons)
-      addProjection(ChargedFinalState(Cuts::abseta < 3.0),"cfs");
+      declare(ChargedFinalState(Cuts::abseta < 3.0),"cfs");
 
       // for pTmiss
-      addProjection(VisibleFinalState(Cuts::abseta < 4.9),"vfs");
+      declare(VisibleFinalState(Cuts::abseta < 4.9),"vfs");
 
       /// Book histograms
       _count_A = bookHisto1D("count_A", 1, 0., 1.);
@@ -73,19 +73,19 @@ namespace Rivet {
     void analyze(const Event& event) {
       const double weight = event.weight();
 
-      Particles veto_e = applyProjection<IdentifiedFinalState>(event, "veto_elecs").particles();
+      Particles veto_e = apply<IdentifiedFinalState>(event, "veto_elecs").particles();
       if ( ! veto_e.empty() ) {
         MSG_DEBUG("electrons in veto region");
         vetoEvent;
       }
 
 
-      Jets cand_jets = applyProjection<FastJets>(event, "AntiKtJets04").jetsByPt(Cuts::pT > 20*GeV && Cuts::abseta < 4.9);
-      Particles cand_e  = applyProjection<IdentifiedFinalState>(event, "elecs").particlesByPt();
+      Jets cand_jets = apply<FastJets>(event, "AntiKtJets04").jetsByPt(Cuts::pT > 20*GeV && Cuts::abseta < 4.9);
+      Particles cand_e  = apply<IdentifiedFinalState>(event, "elecs").particlesByPt();
 
       Particles cand_mu;
-      Particles chg_tracks = applyProjection<ChargedFinalState>(event, "cfs").particles();
-      foreach ( const Particle & mu, applyProjection<IdentifiedFinalState>(event, "muons").particlesByPt() ) {
+      Particles chg_tracks = apply<ChargedFinalState>(event, "cfs").particles();
+      foreach ( const Particle & mu, apply<IdentifiedFinalState>(event, "muons").particlesByPt() ) {
         double pTinCone = -mu.pT();
         foreach ( const Particle & track, chg_tracks ) {
           if ( deltaR(mu, track) <= 0.2 ) pTinCone += track.pT();
@@ -137,7 +137,7 @@ namespace Rivet {
 
 
       // pTmiss
-      Particles vfs_particles = applyProjection<VisibleFinalState>(event, "vfs").particles();
+      Particles vfs_particles = apply<VisibleFinalState>(event, "vfs").particles();
       FourMomentum pTmiss;
       foreach ( const Particle & p, vfs_particles ) {
         pTmiss -= p.momentum();

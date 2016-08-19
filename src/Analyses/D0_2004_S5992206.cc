@@ -42,14 +42,14 @@ namespace Rivet {
     void init() {
       // Final state for jets, mET etc.
       const FinalState fs(-3.0, 3.0);
-      addProjection(fs, "FS");
+      declare(fs, "FS");
       // Veto neutrinos, and muons with pT above 1.0 GeV
       VetoedFinalState vfs(fs);
       vfs.vetoNeutrinos();
       vfs.addVetoPairDetail(PID::MUON, 1.0*GeV, MAXDOUBLE);
-      addProjection(vfs, "VFS");
-      addProjection(FastJets(vfs, FastJets::D0ILCONE, 0.7), "Jets");
-      addProjection(MissingMomentum(vfs), "CalMET");
+      declare(vfs, "VFS");
+      declare(FastJets(vfs, FastJets::D0ILCONE, 0.7), "Jets");
+      declare(MissingMomentum(vfs), "CalMET");
 
       // Book histograms
       _histJetAzimuth_pTmax75_100  = bookHisto1D(1, 2, 1);
@@ -63,7 +63,7 @@ namespace Rivet {
     void analyze(const Event& event) {
 
       // Analyse and print some info
-      const JetAlg& jetpro = applyProjection<JetAlg>(event, "Jets");
+      const JetAlg& jetpro = apply<JetAlg>(event, "Jets");
       MSG_DEBUG("Jet multiplicity before any pT cut = " << jetpro.size());
 
       const Jets jets  = jetpro.jetsByPt(40.0*GeV);
@@ -80,7 +80,7 @@ namespace Rivet {
       MSG_DEBUG("Jet eta and pT requirements fulfilled");
       const double pT1 = jets[0].pT();
 
-      const MissingMomentum& caloMissEt = applyProjection<MissingMomentum>(event, "CalMET");
+      const MissingMomentum& caloMissEt = apply<MissingMomentum>(event, "CalMET");
       MSG_DEBUG("Missing vector Et = " << caloMissEt.vectorEt()/GeV << " GeV");
       if (caloMissEt.vectorEt().mod() > 0.7*pT1) {
         MSG_DEBUG("Vetoing event with too much missing ET: "

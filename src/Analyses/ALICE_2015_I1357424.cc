@@ -17,7 +17,7 @@ namespace Rivet {
 
     void init() {
       const ChargedFinalState cfs(Cuts::absrap<0.5);
-      addProjection(cfs, "CFS");
+      declare(cfs, "CFS");
       //
       // plots from the paper
       _histPtPions          = bookHisto1D("d01-x01-y01");    // pions
@@ -36,7 +36,7 @@ namespace Rivet {
 
     void analyze(const Event& event) {
       const double weight = event.weight();
-      const ChargedFinalState& cfs = applyProjection<ChargedFinalState>(event, "CFS");
+      const ChargedFinalState& cfs = apply<ChargedFinalState>(event, "CFS");
       foreach (const Particle& p, cfs.particles()) {
 	// protections against mc generators decaying long-lived particles
 	if ( !(p.hasAncestor(310)  || p.hasAncestor(-310)  ||     // K0s

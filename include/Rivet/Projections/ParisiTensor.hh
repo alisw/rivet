@@ -10,33 +10,32 @@
 namespace Rivet {
 
 
-  /**
-     @brief Calculate the Parisi event shape tensor (or linear momentum tensor).
-  
-     The Parisi event shape C and D variables are derived from the eigenvalues of
-     the linear momentum tensor
-     \f[
-     \theta^{\alpha \beta} =
-     \frac{\sum_i \frac{p_i^\alpha p_i^\beta}{|\mathbf{p}_i|}}
-          {\sum_i |\mathbf{p}_i|}
-     \f]
-     which is actually a linearized (and hence infra-red safe) version of the
-     {@link Sphericity} tensor.
-
-     Defining the three eigenvalues of \f$\theta\f$
-     \f$ \lambda_1 \ge \lambda_2 \ge \lambda_3 \f$, with \f$ \lambda_1 + \lambda_2 + \lambda_3 = 1 \f$,
-     the C and D parameters are defined as
-     \f[
-     C = 3(\lambda_1\lambda_2 + \lambda_1\lambda_3 + \lambda_2\lambda_3)
-     \f]
-     and
-     \f[
-     D = 27 \lambda_1\lambda_2\lambda_3
-     \f]
-
-     Internally, this Projection uses the Sphericity projection with the generalising
-     \f$r\f$ parameter set to 1.
-  */
+  /// @brief Calculate the Parisi event shape tensor (or linear momentum tensor).
+  ///
+  /// The Parisi event shape C and D variables are derived from the eigenvalues of
+  /// the linear momentum tensor
+  /// \f[
+  /// \theta^{\alpha \beta} =
+  /// \frac{\sum_i \frac{p_i^\alpha p_i^\beta}{|\mathbf{p}_i|}}
+  ///      {\sum_i |\mathbf{p}_i|}
+  /// \f]
+  /// which is actually a linearized (and hence infra-red safe) version of the
+  /// {@link Sphericity} tensor.
+  ///
+  /// Defining the three eigenvalues of \f$\theta\f$
+  /// \f$ \lambda_1 \ge \lambda_2 \ge \lambda_3 \f$, with \f$ \lambda_1 + \lambda_2 + \lambda_3 = 1 \f$,
+  /// the C and D parameters are defined as
+  /// \f[
+  /// C = 3(\lambda_1\lambda_2 + \lambda_1\lambda_3 + \lambda_2\lambda_3)
+  /// \f]
+  /// and
+  /// \f[
+  /// D = 27 \lambda_1\lambda_2\lambda_3
+  /// \f]
+  ///
+  /// Internally, this Projection uses the Sphericity projection with the generalising
+  /// \f$r\f$ parameter set to 1.
+  ///
   class ParisiTensor : public Projection {
   public:
 
@@ -50,9 +49,7 @@ namespace Rivet {
     }
 
     /// Clone on the heap.
-    virtual const Projection* clone() const {
-      return new ParisiTensor(*this);
-    }
+    DEFAULT_RIVET_PROJ_CLONE(ParisiTensor);
 
 
   protected:
@@ -85,9 +82,9 @@ namespace Rivet {
     double lambda3() const { return _lambda[2]; }
     ///@}
 
-     
+
   private:
- 
+
     /// The Parisi event shape variables.
     double _C, _D;
 

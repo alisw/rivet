@@ -28,9 +28,9 @@ function _rivet() {
     prev="${COMP_WORDS[COMP_CWORD-1]}"
 
     opts="--help --verbose --quiet --version --nevts --nskip --cross-section"
-    opts="$opts --analysis --analyses --runname --list-analyses --show-analysis" #< intentionally skip --show-analyses alias
+    opts="$opts --analysis --analyses --runname --list-analyses --show-analysis --show-bibtex" #< intentionally skip --show-analyses alias
     opts="$opts --analysis-path --analysis-path-append --pwd"
-    opts="$opts --histo-file --histo-interval --event-timeout"
+    opts="$opts --histo-file --no-histo-file --histo-interval --event-timeout"
     opts="$opts -a -A -n -h -x -H -l -v -q"
     if [[ ${cur} == -* ]] ; then
         COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )

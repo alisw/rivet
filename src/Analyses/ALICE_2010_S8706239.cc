@@ -29,7 +29,7 @@ namespace Rivet {
     void init() {
 
       ChargedFinalState cfs(-0.8, 0.8, 0.15);
-      addProjection(cfs, "CFS");
+      declare(cfs, "CFS");
 
       _h_pT = bookHisto1D(4, 1, 1);
 
@@ -43,7 +43,7 @@ namespace Rivet {
     void analyze(const Event& event) {
       const double weight = event.weight();
 
-      const ChargedFinalState& charged = applyProjection<ChargedFinalState>(event, "CFS");
+      const ChargedFinalState& charged = apply<ChargedFinalState>(event, "CFS");
 
       _Nevt_after_cuts += weight;
 

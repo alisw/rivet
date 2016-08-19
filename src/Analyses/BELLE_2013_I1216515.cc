@@ -1,9 +1,7 @@
 // -*- C++ -*-
-#include <iostream>
 #include "Rivet/Analysis.hh"
 #include "Rivet/Projections/Beam.hh"
 #include "Rivet/Projections/ChargedFinalState.hh"
-#include "Rivet/Tools/ParticleIdUtils.hh"
 
 namespace Rivet {
 
@@ -22,13 +20,13 @@ namespace Rivet {
       const double weight = e.weight();
 
       // Loop through charged FS particles and look for charmed mesons/baryons
-      const ChargedFinalState& fs = applyProjection<ChargedFinalState>(e, "FS");
+      const ChargedFinalState& fs = apply<ChargedFinalState>(e, "FS");
 
-      const Beam beamproj = applyProjection<Beam>(e, "Beams");
+      const Beam beamproj = apply<Beam>(e, "Beams");
       const ParticlePair& beams = beamproj.beams();
-      FourMomentum mom_tot = beams.first.momentum() + beams.second.momentum();
-      LorentzTransform cms_boost(-mom_tot.boostVector());
-      MSG_DEBUG("CMS Energy sqrt s = " << beamproj.sqrtS());
+      const FourMomentum mom_tot = beams.first.momentum() + beams.second.momentum();
+      const LorentzTransform cms_boost = LorentzTransform::mkFrameTransformFromBeta(mom_tot.betaVec());
+      MSG_DEBUG("CMS energy sqrt s = " << beamproj.sqrtS());
 
       foreach (const Particle& p, fs.particles()) {
         // energy in CMS frame
@@ -58,8 +56,8 @@ namespace Rivet {
 
 
     void init() {
-      addProjection(Beam(), "Beams");
-      addProjection(ChargedFinalState(), "FS");
+      declare(Beam(), "Beams");
+      declare(ChargedFinalState(), "FS");
 
       _histPion = bookHisto1D(1,1,1);
       _histKaon = bookHisto1D(1,1,2);

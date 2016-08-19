@@ -3,7 +3,6 @@
 #include "Rivet/Tools/RivetPaths.hh"
 #include "YODA/ReaderYODA.h"
 #include "YODA/ReaderAIDA.h"
-#include "boost/algorithm/string/split.hpp"
 
 using namespace std;
 
@@ -25,6 +24,7 @@ namespace Rivet {
     const string datafile = getDatafilePath(papername);
 
     // Make an appropriate data file reader and read the data objects
+    /// @todo Remove AIDA support some day...
     YODA::Reader& reader = (datafile.find(".yoda") != string::npos) ?   \
       YODA::ReaderYODA::create() : YODA::ReaderAIDA::create();
     vector<YODA::AnalysisObject *> aovec;
@@ -33,17 +33,13 @@ namespace Rivet {
     // Return value, to be populated
     map<string, AnalysisObjectPtr> rtn;
     foreach ( YODA::AnalysisObject* ao, aovec ) {
-      // Scatter2DPtr refdata( dynamic_cast<Scatter2D*>(ao) );
       AnalysisObjectPtr refdata(ao);
       if (!refdata) continue;
-      string plotpath = refdata->path();
-
+      const string plotpath = refdata->path();
       // Split path at "/" and only return the last field, i.e. the histogram ID
-      vector<string> pathvec;
-      split( pathvec, plotpath, is_any_of("/"), token_compress_on );
-      plotpath = pathvec.back();
-
-      rtn[plotpath] = refdata;
+      const size_t slashpos = plotpath.rfind("/");
+      const string plotname = (slashpos+1 < plotpath.size()) ? plotpath.substr(slashpos+1) : "";
+      rtn[plotname] = refdata;
     }
     return rtn;
   }

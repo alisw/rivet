@@ -23,7 +23,7 @@ namespace Rivet {
     /// Book projections and histogram
     void init() {
       const ChargedFinalState cfs;
-      addProjection(cfs, "CFS");
+      declare(cfs, "CFS");
 
       _histChTot = bookHisto1D(1, 1, 1);
     }
@@ -31,7 +31,7 @@ namespace Rivet {
 
     /// Do the analysis
     void analyze(const Event& event) {
-      const FinalState& cfs = applyProjection<FinalState>(event, "CFS");
+      const FinalState& cfs = apply<FinalState>(event, "CFS");
       MSG_DEBUG("Total charged multiplicity = " << cfs.size());
       _histChTot->fill(cfs.size(), event.weight());
     }

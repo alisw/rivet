@@ -3,7 +3,7 @@ Year: 2002 (note)
 Summary: Study of the b-quark fragmentation function at LEP 1
 Experiment: DELPHI
 Collider: LEP 1
-Status: PRELIMINARY
+Status: OBSOLETE
 Authors:
  - Hendrik Hoeth <hendrik.hoeth@cern.ch>
 References:
@@ -19,4 +19,5 @@ Description:
   LEP 1 data. The fragmentation function for both weakly decaying and
   primary $b$-quarks has been determined in a model independent way.
   Nevertheless the authors trust $f(x_B^\text{weak})$ more than
-  $f(x_B^\text{prim})$.
+  $f(x_B^\text{prim})$. Note --- this analysis is superseded by
+  DELPHI_2011_I890503.

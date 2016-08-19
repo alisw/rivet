@@ -10,8 +10,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    ATLAS_2015_I1387176()
-      : Analysis("ATLAS_2015_I1387176") {  }
+    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2015_I1387176);
 
 
     /// Initialization, called once before running
@@ -19,7 +18,7 @@ namespace Rivet {
       // Projections
       FastJets jets(FinalState(), FastJets::ANTIKT, 0.4);
       jets.useInvisibles();
-      addProjection(jets, "Jets");
+      declare(jets, "Jets");
 
       // Book histograms
       _hist_EEC  = bookHisto1D(1, 1, 1);
@@ -35,7 +34,7 @@ namespace Rivet {
     void analyze(const Event& event) {
 
       const double evtWeight = event.weight();
-      const Jets& jets = applyProjection<FastJets>(event, "Jets").jetsByPt(Cuts::pT > 50.0*GeV && Cuts::abseta < 2.5);
+      const Jets& jets = apply<FastJets>(event, "Jets").jetsByPt(Cuts::pT > 50.0*GeV && Cuts::abseta < 2.5);
 
       if (jets.size() < 2)  vetoEvent;
       if (jets[0].pT() + jets[1].pT() < 500*GeV)  vetoEvent;

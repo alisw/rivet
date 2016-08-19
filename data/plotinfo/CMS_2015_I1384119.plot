@@ -1,7 +1,7 @@
 # BEGIN PLOT /CMS_2015_I1384119/d01-x01-y01
-Title= Selection: inelastic $pp$, charged hadrons (p, K ,$\pi$) $c\tau > 10 mm$
+Title= Selection: inelastic $pp$, charged hadrons (p, K ,$\pi$) $c\tau > 10$~mm
 XLabel=$\eta$ 
-YLabel=$\frac{1}{N}\frac{dN}{d\eta}$ 
+YLabel=$\frac{1}{N}\frac{dN_\text{ch}}{d\eta}$ 
 FullRange=1
 LogY=0
 LegendXPos=0.5

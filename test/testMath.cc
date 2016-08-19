@@ -21,18 +21,25 @@ int main() {
 
   ////////////
 
-  linspace(50, 0, 10);
-  logspace(50, 0.000001, 1.0);
+  assert(linspace(50, 0, 10).size() == 51);
+  assert(logspace(50, 0.000001, 1.0).back() == 1.0);
 
-  /// @todo Compiler warnings on SLC5... reinstate
-  // inRange(1, 0, 2);
-  // inRange(1, 0.0, 2);
-  // inRange(1, 0, 2.0);
-  // inRange(1, 0.0, 2.0);
-  // inRange(1.0, 0, 2);
-  // inRange(1.0, 0.0, 2);
-  // inRange(1.0, 0, 2.0);
-  // inRange(1.0, 0.0, 2.0);
+  assert(binIndex(3, vector<double>{0, 1, 2, 3, 4, 5}) == 3);
+  assert(binIndex(2.99, vector<double>{0, 1, 2, 3, 4, 5}) == 2);
+  assert(binIndex(-4, vector<double>{0, 1, 2, 3, 4, 5}) == -1);
+  assert(binIndex(5.0, vector<double>{0, 1, 2, 3, 4, 5}) == -1);
+  assert(binIndex(5.1, vector<double>{0, 1, 2, 3, 4, 5}, true) == 5);
+
+  ////////////
+
+  inRange(1, 0, 2);
+  inRange(1, 0.0, 2);
+  inRange(1, 0, 2.0);
+  inRange(1, 0.0, 2.0);
+  inRange(1.0, 0, 2);
+  inRange(1.0, 0.0, 2);
+  inRange(1.0, 0, 2.0);
+  inRange(1.0, 0.0, 2.0);
 
   assert(isZero(1e-15));
   assert(fuzzyEquals(1e-15, 0.0));

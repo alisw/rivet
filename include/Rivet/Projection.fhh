@@ -5,7 +5,7 @@
 /// @todo Is there a reason that this stuff can't go into Projection.hh?
 
 #include "Rivet/Config/RivetCommon.hh"
-#include "Rivet/Cmp.fhh"
+#include "Rivet/Tools/Cmp.fhh"
 
 
 namespace Rivet {

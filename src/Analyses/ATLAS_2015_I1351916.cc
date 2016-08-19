@@ -34,7 +34,7 @@ namespace Rivet {
 
       const Cut cuts = (_mode == 0) ? (Cuts::pT > 25*GeV && Cuts::abseta < 4.9) : (Cuts::pT > 20*GeV && Cuts::abseta < 2.47);
       DressedLeptons leptons(fs, bareleptons, 0.1, cuts, true, true);
-      addProjection(leptons, "leptons");
+      declare(leptons, "leptons");
 
 
       // Book dummy histograms for heterogeneous merging
@@ -66,7 +66,7 @@ namespace Rivet {
     void analyze(const Event& e) {
 
       // Get and cut on dressed leptons
-      const vector<DressedLepton>& leptons = applyProjection<DressedLeptons>(e, "leptons").dressedLeptons();
+      const vector<DressedLepton>& leptons = apply<DressedLeptons>(e, "leptons").dressedLeptons();
       if (leptons.size() != 2) vetoEvent; // require exactly two leptons
       if (leptons[0].threeCharge() * leptons[1].threeCharge() > 0) vetoEvent; // require opposite charge
 
@@ -96,11 +96,8 @@ namespace Rivet {
 
     /// Normalise histograms etc., after the run
     void finalize() {
-      const double sf = crossSectionPerEvent();
-      /// @todo Tidy in C++11 mode
-      for (map<string, Histo1DPtr>::iterator it = _h.begin(); it != _h.end(); ++it) {
-        scale(it->second, sf);
-      }
+      const double sf = crossSectionPerEvent() / picobarn;
+      for (const auto& key_hist : _h) scale(key_hist.second, sf);
       divide(*_h["NCC_pos"] - *_h["NCC_neg"], *_h["NCC_pos"] + *_h["NCC_neg"], _s["CC"]);
       if (!_mode)  divide(*_h["NCF_pos"] - *_h["NCF_neg"], *_h["NCF_pos"] + *_h["NCF_neg"], _s["CF"]);
     }

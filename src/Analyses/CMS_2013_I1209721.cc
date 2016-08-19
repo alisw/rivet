@@ -23,16 +23,16 @@ namespace Rivet {
     void init() {
       // Full final state
       const FinalState fs(-5.0,5.0);
-      addProjection(fs, "FS");
+      declare(fs, "FS");
       // Z finders for electrons and muons
       Cut cuts = Cuts::abseta < 2.4 && Cuts::pT > 20*GeV;
       const ZFinder zfe(fs, cuts, PID::ELECTRON, 71*GeV, 111*GeV);
       const ZFinder zfm(fs, cuts, PID::MUON,     71*GeV, 111*GeV);
-      addProjection(zfe, "ZFE");
-      addProjection(zfm, "ZFM");
+      declare(zfe, "ZFE");
+      declare(zfm, "ZFM");
       // Jets
       const FastJets jets(fs, FastJets::ANTIKT, 0.5);
-      addProjection(jets, "JETS");
+      declare(jets, "JETS");
 
       // Book histograms from data
       for (size_t i = 0; i < 2; ++i) {
@@ -53,8 +53,8 @@ namespace Rivet {
       const double weight = event.weight();
 
       // Apply the Z finders
-      const ZFinder& zfe = applyProjection<ZFinder>(event, "ZFE");
-      const ZFinder& zfm = applyProjection<ZFinder>(event, "ZFM");
+      const ZFinder& zfe = apply<ZFinder>(event, "ZFE");
+      const ZFinder& zfm = apply<ZFinder>(event, "ZFM");
 
       // Choose the Z candidate (there must be one)
       if (zfe.empty() && zfm.empty()) vetoEvent;
@@ -65,7 +65,7 @@ namespace Rivet {
       const bool is_boosted = (z[0].pT() > 150*GeV);
 
       // Build the jets
-      const FastJets& jetfs = applyProjection<FastJets>(event, "JETS");
+      const FastJets& jetfs = apply<FastJets>(event, "JETS");
       const Jets& jets = jetfs.jetsByPt(Cuts::pT > 50*GeV && Cuts::abseta < 2.5);
 
       // Clean the jets against the lepton candidates, as in the paper, with a deltaR cut of 0.4 against the clustered leptons

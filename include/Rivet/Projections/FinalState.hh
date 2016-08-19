@@ -3,9 +3,9 @@
 #define RIVET_FinalState_HH
 
 #include "Rivet/Projections/ParticleFinder.hh"
-#include "Rivet/Cuts.hh"
 
 namespace Rivet {
+
 
   /// @brief Project out all final-state particles in an event.
   /// Probably the most important projection in Rivet!
@@ -15,6 +15,7 @@ namespace Rivet {
     template<typename T> FinalState(const T& rhs);
     template<typename T> FinalState const& operator=(T const& rhs);
 
+
   public:
 
     /// @name Standard constructors etc.
@@ -23,15 +24,16 @@ namespace Rivet {
     /// Construction using Cuts object
     FinalState(const Cut& c=Cuts::open());
 
+    // /// Construction using Cuts object and another FinalState
+    // FinalState(const Cut& c=Cuts::open(), const FinalState& fsp=FinalState());
+
     /// Old constructor with numeric cut arguments, retained for compatibility
     /// @deprecated Use the versions with Cut arguments
     //DEPRECATED("Use the versions with Cut arguments")
     FinalState(double mineta, double maxeta, double minpt=0.0*GeV);
 
     /// Clone on the heap.
-    virtual const Projection* clone() const {
-      return new FinalState(*this);
-    }
+    DEFAULT_RIVET_PROJ_CLONE(FinalState);
 
     //@}
 

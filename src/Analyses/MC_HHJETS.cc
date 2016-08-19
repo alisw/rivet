@@ -24,11 +24,11 @@ namespace Rivet {
     void init() {
       IdentifiedFinalState ifs(Cuts::abseta < 10.0 && Cuts::pT > 0*GeV);
       ifs.acceptId(25);
-      addProjection(ifs,"IFS");
+      declare(ifs,"IFS");
 
       VetoedFinalState vfs;
       vfs.addVetoPairId(25);
-      addProjection(FastJets(vfs, FastJets::ANTIKT, 0.4), "Jets");
+      declare(FastJets(vfs, FastJets::ANTIKT, 0.4), "Jets");
 
       _h_HH_mass = bookHisto1D("HH_mass", 250, 240, 4000.0);
       _h_HH_dR = bookHisto1D("HH_dR", 25, 0.5, 10.0);
@@ -53,7 +53,7 @@ namespace Rivet {
     /// Do the analysis
     void analyze(const Event & e) {
 
-      const IdentifiedFinalState& ifs = applyProjection<IdentifiedFinalState>(e, "IFS");
+      const IdentifiedFinalState& ifs = apply<IdentifiedFinalState>(e, "IFS");
       Particles allp = ifs.particlesByPt();
       if (allp.empty()) vetoEvent;
 
@@ -86,7 +86,7 @@ namespace Rivet {
 
 
       // Get the jet candidates
-      Jets jets = applyProjection<FastJets>(e, "Jets").jetsByPt(20.0*GeV);
+      Jets jets = apply<FastJets>(e, "Jets").jetsByPt(20.0*GeV);
       if (!jets.empty()) {
         _h_H_jet1_deta->fill(deltaEta(hmom, jets[0]), weight);
         _h_H_jet1_dR->fill(deltaR(hmom, jets[0]), weight);

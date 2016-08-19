@@ -13,7 +13,7 @@ namespace Rivet {
 
     void init() {
       ChargedFinalState cfs(-2.5, 2.5, 0.0*GeV);
-      addProjection(cfs, "CFS");
+      declare(cfs, "CFS");
 
       for (int d=1; d<=3; d++) {
         for (int y=1; y<=4; y++) {
@@ -30,7 +30,7 @@ namespace Rivet {
       const double weight = event.weight();
 
       //charged particles
-      const ChargedFinalState& charged = applyProjection<ChargedFinalState>(event, "CFS");
+      const ChargedFinalState& charged = apply<ChargedFinalState>(event, "CFS");
 
       foreach (const Particle& p, charged.particles()) {
         //selecting only charged hadrons

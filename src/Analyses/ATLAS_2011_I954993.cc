@@ -28,19 +28,19 @@ namespace Rivet {
       Cut cuts = Cuts::abseta < 2.5 && Cuts::pT > 15*GeV;
 
       ZFinder zfinder_e(fs, cuts, PID::ELECTRON, 81.1876*GeV, 101.1876*GeV, 0.1, ZFinder::CLUSTERNODECAY);
-      addProjection(zfinder_e, "ZFinder_e");
+      declare(zfinder_e, "ZFinder_e");
       ZFinder zfinder_mu(fs, cuts, PID::MUON, 81.1876*GeV, 101.1876*GeV, 0.1, ZFinder::CLUSTERNODECAY);
-      addProjection(zfinder_mu, "ZFinder_mu");
+      declare(zfinder_mu, "ZFinder_mu");
 
       VetoedFinalState weinput;
       weinput.addVetoOnThisFinalState(zfinder_e);
       WFinder wfinder_e(weinput, cuts, PID::ELECTRON, 0*GeV, 1000*GeV, 25*GeV, 0.1, WFinder::CLUSTERNODECAY);
-      addProjection(wfinder_e, "WFinder_e");
+      declare(wfinder_e, "WFinder_e");
 
       VetoedFinalState wminput;
       wminput.addVetoOnThisFinalState(zfinder_mu);
       WFinder wfinder_mu(wminput,cuts, PID::MUON, 0*GeV, 1000*GeV, 25*GeV, 0.1, WFinder::CLUSTERNODECAY);
-      addProjection(wfinder_mu, "WFinder_mu");
+      declare(wfinder_mu, "WFinder_mu");
 
       // Histograms
       _h_fiducial = bookHisto1D(1,1,1);
@@ -49,10 +49,10 @@ namespace Rivet {
 
     /// Do the analysis
     void analyze(const Event& e) {
-      const ZFinder& zfinder_e = applyProjection<ZFinder>(e, "ZFinder_e");
-      const ZFinder& zfinder_mu = applyProjection<ZFinder>(e, "ZFinder_mu");
-      const WFinder& wfinder_e = applyProjection<WFinder>(e, "WFinder_e");
-      const WFinder& wfinder_mu = applyProjection<WFinder>(e, "WFinder_mu");
+      const ZFinder& zfinder_e = apply<ZFinder>(e, "ZFinder_e");
+      const ZFinder& zfinder_mu = apply<ZFinder>(e, "ZFinder_mu");
+      const WFinder& wfinder_e = apply<WFinder>(e, "WFinder_e");
+      const WFinder& wfinder_mu = apply<WFinder>(e, "WFinder_mu");
 
       // Looking for a Z, exit if not found
       if (zfinder_e.bosons().size() != 1 && zfinder_mu.bosons().size() != 1) {

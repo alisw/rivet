@@ -13,11 +13,7 @@ namespace Rivet {
     /// Constructor
     ATLAS_2014_I1307756()
       : Analysis("ATLAS_2014_I1307756")
-    {
-      _eta_bins_areaoffset.push_back(0.0);
-      _eta_bins_areaoffset.push_back(1.5);
-      _eta_bins_areaoffset.push_back(3.0);
-    }
+    {    }
 
 
     /// @name Analysis methods
@@ -28,77 +24,55 @@ namespace Rivet {
 
       /// Initialise and register projections here
       FinalState fs;
-      addProjection(fs, "FS");
+      declare(fs, "FS");
 
       FastJets fj(fs, FastJets::KT, 0.5);
-      _area_def = new fastjet::AreaDefinition(fastjet::VoronoiAreaSpec());
-      fj.useJetArea(_area_def);
-      addProjection(fj, "KtJetsD05");
+      fj.useJetArea(new fastjet::AreaDefinition(fastjet::VoronoiAreaSpec()));
+      declare(fj, "KtJetsD05");
 
       IdentifiedFinalState photonfs(Cuts::abseta < 2.37 && Cuts::pT > 22*GeV);
       photonfs.acceptId(PID::PHOTON);
-      addProjection(photonfs, "photons");
+      declare(photonfs, "photons");
 
       // Initialize event count here:
       _fidWeights = 0.;
     }
 
 
-    /// Utility to compute ambiant energy density per eta bin
-    /// @todo Use bin index lookup util instead...
-    int getEtaBin(double eta_w) const {
-      double eta = fabs(eta_w);
-      int v_iter = 0;
-      for (v_iter = 0; v_iter < (int)_eta_bins_areaoffset.size()-1; ++v_iter) {
-        if (inRange(eta, _eta_bins_areaoffset[v_iter], _eta_bins_areaoffset[v_iter+1]))
-          break;
-      }
-      return v_iter;
+    int getEtaBin(double eta) const {
+      double aeta = fabs(eta);
+      return binIndex(aeta, _eta_bins_areaoffset);
     }
 
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
       /// Require at least 2 photons in final state
-      Particles photons = applyProjection<IdentifiedFinalState>(event, "photons").particlesByPt();
+      Particles photons = apply<IdentifiedFinalState>(event, "photons").particlesByPt();
       if (photons.size() < 2) vetoEvent;
 
-      /// compute the median energy density per eta bin
-      vector<double> _ptDensity;
-      vector< vector<double> > ptDensities;
-      vector<double> emptyVec;
-      ptDensities.assign(_eta_bins_areaoffset.size()-1, emptyVec);
-
-      const fastjet::ClusterSequenceArea* clust_seq_area = applyProjection<FastJets>(event, "KtJetsD05").clusterSeqArea();
-      foreach (const fastjet::PseudoJet& jet, applyProjection<FastJets>(event, "KtJetsD05").pseudoJets(0.0*GeV)) {
-        const double eta = fabs( jet.eta()  );
-        const double pt  = fabs( jet.perp() );
+      // Get jet pT densities
+      vector< vector<double> > ptDensities(_eta_bins_areaoffset.size()-1);
+      const auto clust_seq_area = apply<FastJets>(event, "KtJetsD05").clusterSeqArea();
+      for (const Jet& jet : apply<FastJets>(event, "KtJetsD05").jets()) {
         const double area = clust_seq_area->area(jet);
-        if (area > 1e-4 && fabs(eta) < _eta_bins_areaoffset[_eta_bins_areaoffset.size()-1]) {
-          ptDensities.at(getEtaBin(fabs(eta))).push_back(pt/area);
+        if (area > 1e-4 && jet.abseta() < _eta_bins_areaoffset.back()) {
+          ptDensities.at(getEtaBin(jet.abseta())) += jet.pT()/area;
         }
       }
 
+      /// Compute the median energy density per eta bin
+      vector<double> ptDensity;
       for (size_t b = 0; b < _eta_bins_areaoffset.size()-1; ++b) {
-        double median = 0.0;
-        if (ptDensities[b].size() > 0) {
-          std::sort(ptDensities[b].begin(), ptDensities[b].end());
-          const int nDens = ptDensities[b].size();
-          if (nDens % 2 == 0) {
-            median = (ptDensities[b][nDens/2] + ptDensities[b][(nDens-2)/2]) / 2;
-          } else {
-            median = ptDensities[b][(nDens-1)/2];
-          }
-        }
-        _ptDensity.push_back(median);
+        ptDensity += ptDensities[b].empty() ? 0 : median(ptDensities[b]);
       }
 
       // Loop over photons and find isolated ones
       Particles isolated_photons;
-      foreach (const Particle& ph, photons) {
-        Particles fs = applyProjection<FinalState>(event, "FS").particles();
+      for (const Particle& ph : photons) {
+        Particles fs = apply<FinalState>(event, "FS").particles();
         FourMomentum mom_in_EtCone;
-        foreach (const Particle& p, fs) {
+        for (const Particle& p : fs) {
 
           // Reject if the particle is not in DR=0.4 cone
           if (deltaR(ph.momentum(), p.momentum()) > 0.4) continue;
@@ -115,8 +89,8 @@ namespace Rivet {
         }
 
         // Subtract the UE correction (area*density)
-        double EtCone_area = M_PI*.4*.4 - (7.0*.025)*(5.0*M_PI/128.);
-        double correction = _ptDensity[getEtaBin(ph.eta())]*EtCone_area;
+        const double ETCONE_AREA = M_PI*.4*.4 - (7.0*.025)*(5.0*M_PI/128.);
+        const double correction = ptDensity[getEtaBin(ph.eta())] * ETCONE_AREA;
 
         // Add isolated photon to list
         if (mom_in_EtCone.Et() - correction > 12*GeV) continue;
@@ -128,27 +102,27 @@ namespace Rivet {
 
       // Select leading pT pair
       std::sort(isolated_photons.begin(), isolated_photons.end(), cmpMomByPt);
-      FourMomentum y1 = isolated_photons[0].momentum();
-      FourMomentum y2 = isolated_photons[1].momentum();
+      const FourMomentum& y1 = isolated_photons[0].momentum();
+      const FourMomentum& y2 = isolated_photons[1].momentum();
 
-      // compute invariant mass
-      FourMomentum yy = y1 + y2;
-      double Myy = yy.mass();
+      // Compute invariant mass
+      const FourMomentum yy = y1 + y2;
+      const double Myy = yy.mass();
 
-      // if Myy >= 110 GeV, apply relative cuts
-      if (Myy/GeV >= 110 && (y1.Et()/Myy < 0.4 || y2.Et()/Myy < 0.3) ) vetoEvent;
+      // If Myy >= 110 GeV, apply relative cuts
+      if (Myy >= 110*GeV && (y1.Et()/Myy < 0.4 || y2.Et()/Myy < 0.3) ) vetoEvent;
 
       // Add to cross-section
       _fidWeights += event.weight();
     }
 
 
-    /// Normalise histograms etc., after the run
+    /// @todo Add to the YODA output rather than print to log
     void finalize() {
 
       // Compute selection efficiency & statistical error
-      double eff = _fidWeights/sumOfWeights();
-      double err = sqrt(eff*(1-eff)/numEvents());
+      const double eff = _fidWeights/sumOfWeights();
+      const double err = sqrt(eff*(1-eff)/numEvents());
 
       // Compute fiducial cross-section in fb
       const double fidCrossSection = eff * crossSection()/femtobarn;
@@ -167,9 +141,8 @@ namespace Rivet {
 
   private:
 
-    fastjet::AreaDefinition* _area_def;
-    vector<double> _eta_bins_areaoffset;
-    float _fidWeights;
+    const vector<double> _eta_bins_areaoffset = {0.0, 1.5, 3.0};
+    double _fidWeights;
 
   };
 

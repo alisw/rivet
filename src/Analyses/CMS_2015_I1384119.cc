@@ -10,17 +10,15 @@ namespace Rivet {
   public:
 
     /// Constructor
-    CMS_2015_I1384119()
-      : Analysis("CMS_2015_I1384119")
-    {    }
+    DEFAULT_RIVET_ANALYSIS_CTOR(CMS_2015_I1384119);
 
 
     /// Book histograms and initialise projections before the run
     void init() {
       const FinalState fsa(Cuts::abseta < 20);
-      addProjection(fsa, "FSA");
+      declare(fsa, "FSA");
       const ChargedFinalState cfs(Cuts::abseta < 2);
-      addProjection(cfs, "CFS");
+      declare(cfs, "CFS");
 
       _hist_dNch_dEta_inel = bookHisto1D(1, 1, 1);
     }
@@ -29,10 +27,10 @@ namespace Rivet {
     /// Perform the per-event analysis
     void analyze(const Event& event) {
       // Apply inelastic selection (veto pp -> pp elastic events)
-      const FinalState& fsa = applyProjection<FinalState>(event, "FSA");
+      const FinalState& fsa = apply<FinalState>(event, "FSA");
       if (fsa.size() <= 2) vetoEvent;
 
-      const ChargedFinalState& cfs = applyProjection<ChargedFinalState>(event, "CFS");
+      const ChargedFinalState& cfs = apply<ChargedFinalState>(event, "CFS");
       foreach (const Particle& p, cfs.particles()) {
         const int id = p.abspid();
         // continue if particle is a proton, a kaon or a pion

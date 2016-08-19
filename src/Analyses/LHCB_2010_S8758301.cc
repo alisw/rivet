@@ -49,7 +49,7 @@ using namespace std;
       _h_K0s_pt_y_35  = bookHisto1D(2,1,2);
       _h_K0s_pt_y_40  = bookHisto1D(2,1,3);
       _h_K0s_pt_y_all = bookHisto1D(3,1,1);
-      addProjection(UnstableFinalState(), "UFS");
+      declare(UnstableFinalState(), "UFS");
     }
 
 
@@ -58,7 +58,7 @@ using namespace std;
       int id;
       double y, pT;
       const double weight = event.weight();
-      const UnstableFinalState& ufs = applyProjection<UnstableFinalState>(event, "UFS");
+      const UnstableFinalState& ufs = apply<UnstableFinalState>(event, "UFS");
       double ancestor_lftime;
       foreach (const Particle& p, ufs.particles()) {
         id = p.pid();

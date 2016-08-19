@@ -1,5 +1,4 @@
-#include "Rivet/ParticleName.hh"
-#include "Rivet/Tools/RivetBoost.hh"
+#include "Rivet/Tools/ParticleName.hh"
 #include "Rivet/Tools/Utils.hh"
 
 namespace Rivet {
@@ -8,7 +7,7 @@ namespace Rivet {
 
 
     // Initialise ParticleNames singleton pointer
-    ParticleNames* ParticleNames::_instance = 0;
+    unique_ptr<ParticleNames> ParticleNames::_instance = nullptr;
 
 
     const std::string& ParticleNames::_particleName(PdgId pid) {

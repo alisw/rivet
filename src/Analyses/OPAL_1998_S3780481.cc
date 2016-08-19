@@ -28,7 +28,7 @@ namespace Rivet {
 
     void analyze(const Event& e) {
       // First, veto on leptonic events by requiring at least 4 charged FS particles
-      const FinalState& fs = applyProjection<FinalState>(e, "FS");
+      const FinalState& fs = apply<FinalState>(e, "FS");
       const size_t numParticles = fs.particles().size();
 
       // Even if we only generate hadronic events, we still need a cut on numCharged >= 2.
@@ -43,13 +43,13 @@ namespace Rivet {
       _weightedTotalPartNum += numParticles * weight;
 
       // Get beams and average beam momentum
-      const ParticlePair& beams = applyProjection<Beam>(e, "Beams").beams();
+      const ParticlePair& beams = apply<Beam>(e, "Beams").beams();
       const double meanBeamMom = ( beams.first.p3().mod() +
                                    beams.second.p3().mod() ) / 2.0;
       MSG_DEBUG("Avg beam momentum = " << meanBeamMom);
 
       int flavour = 0;
-      const InitialQuarks& iqf = applyProjection<InitialQuarks>(e, "IQF");
+      const InitialQuarks& iqf = apply<InitialQuarks>(e, "IQF");
 
       // If we only have two quarks (qqbar), just take the flavour.
       // If we have more than two quarks, look for the highest energetic q-qbar pair.
@@ -118,9 +118,9 @@ namespace Rivet {
 
     void init() {
       // Projections
-      addProjection(Beam(), "Beams");
-      addProjection(ChargedFinalState(), "FS");
-      addProjection(InitialQuarks(), "IQF");
+      declare(Beam(), "Beams");
+      declare(ChargedFinalState(), "FS");
+      declare(InitialQuarks(), "IQF");
 
       // Book histos
       _histXpuds           = bookHisto1D(1, 1, 1);

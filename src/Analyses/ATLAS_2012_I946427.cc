@@ -37,14 +37,14 @@ namespace Rivet {
       // photons
       IdentifiedFinalState photonfs(Cuts::abseta < 1.81 && Cuts::pT > 25*GeV);
       photonfs.acceptId(PID::PHOTON);
-      addProjection(photonfs, "Photon");
+      declare(photonfs, "Photon");
 
       //
       FinalState fs;
-      addProjection(fs, "FS");
+      declare(fs, "FS");
 
       // Used for pTmiss
-      addProjection(VisibleFinalState(Cuts::abseta < 4.9),"vfs");
+      declare(VisibleFinalState(Cuts::abseta < 4.9),"vfs");
 
       // Book histograms
       _count_SR = bookHisto1D("count_SR", 1, 0., 1.);
@@ -62,13 +62,13 @@ namespace Rivet {
 
       // require at least 2 photons in final state
       Particles photons =
-        applyProjection<IdentifiedFinalState>(event, "Photon").particlesByPt();
+        apply<IdentifiedFinalState>(event, "Photon").particlesByPt();
       if (photons.size() < 2) {
         vetoEvent;
       }
 
       // Loop over photons and fill vector of isolated ones
-      Particles fs = applyProjection<FinalState>(event, "FS").particles();
+      Particles fs = apply<FinalState>(event, "FS").particles();
       Particles isolated_photons;
       foreach (const Particle& photon, photons) {
         // remove photons in crack
@@ -98,7 +98,7 @@ namespace Rivet {
 
       // pTmiss
       Particles vfs_particles =
-        applyProjection<VisibleFinalState>(event, "vfs").particles();
+        apply<VisibleFinalState>(event, "vfs").particles();
       FourMomentum pTmiss;
       foreach ( const Particle & p, vfs_particles ) {
         pTmiss -= p.momentum();

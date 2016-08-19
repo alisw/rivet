@@ -18,8 +18,8 @@ namespace Rivet {
     void init() {
       ChargedFinalState cfsm(-7.0, -6.0, 0.0*GeV);
       ChargedFinalState cfsp( 3.7,  4.8, 0.0*GeV);
-      addProjection(cfsm, "CFSM");
-      addProjection(cfsp, "CFSP");
+      declare(cfsm, "CFSM");
+      declare(cfsp, "CFSP");
 
       _h_eta = bookHisto1D(1, 1, 1);
       _sumofweights = 0.;
@@ -27,8 +27,8 @@ namespace Rivet {
 
 
     void analyze(const Event& event) {
-      const ChargedFinalState cfsm = applyProjection<ChargedFinalState>(event, "CFSM");
-      const ChargedFinalState cfsp = applyProjection<ChargedFinalState>(event, "CFSP");
+      const ChargedFinalState cfsm = apply<ChargedFinalState>(event, "CFSM");
+      const ChargedFinalState cfsp = apply<ChargedFinalState>(event, "CFSP");
       if (cfsm.size() == 0 && cfsp.size() == 0) vetoEvent;
 
       _sumofweights += event.weight();

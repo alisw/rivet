@@ -18,12 +18,8 @@ namespace Rivet {
     TriggerUA5();
 
     /// Clone on the heap.
-    virtual const Projection* clone() const {
-      return new TriggerUA5(*this);
-    }
+    DEFAULT_RIVET_PROJ_CLONE(TriggerUA5);
 
-
-  public:
 
     /// The trigger result for non-single diffractive (2 arm) trigger
     bool sdDecision() const {

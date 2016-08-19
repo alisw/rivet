@@ -11,8 +11,9 @@ namespace Rivet {
 
   /// @brief Project out quarks from the hard process in \f$ e^+ e^- \to Z^0 \f$ events
   ///
-  /// @warning This is a very dangerous and specific projection! Use
-  ///   e.g. PID::hasBottom and friends instead whenever possible
+  /// @deprecated We're not sure exactly when we'lll get rid of this, but it's going to happen...
+  ///
+  /// @warning This is a very dangerous and specific projection!
   class InitialQuarks : public Projection {
   public:
 
@@ -24,11 +25,9 @@ namespace Rivet {
       setName("InitialQuarks");
     }
 
-
     /// Clone on the heap.
-    virtual const Projection* clone() const {
-      return new InitialQuarks(*this);
-    }
+    DEFAULT_RIVET_PROJ_CLONE(InitialQuarks);
+
     //@}
 
     /// Access the projected final-state particles.

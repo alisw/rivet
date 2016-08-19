@@ -27,6 +27,7 @@ libRivetProjections_la_SOURCES = \
   MissingMomentum.cc \
   NeutralFinalState.cc \
   NonHadronicFinalState.cc \
+  NonPromptFinalState.cc \
   ParisiTensor.cc \
   ParticleFinder.cc \
   PrimaryHadrons.cc \

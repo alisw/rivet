@@ -2,23 +2,16 @@
 #include "Rivet/Analysis.hh"
 #include "Rivet/Projections/FinalState.hh"
 #include "Rivet/Projections/ChargedFinalState.hh"
-//#include "Rivet/Projections/VetoedFinalState.hh"
-#include "Rivet/ParticleName.hh"
 #include "Rivet/Projections/ZFinder.hh"
-
-#include <utility>
-
-#include <cstdlib>
 
 namespace Rivet {
 
-  using namespace Cuts;
 
   class ATLAS_2014_I1315949 : public Analysis {
   public:
 
     /// Constructor
-    ATLAS_2014_I1315949() 
+    ATLAS_2014_I1315949()
       : Analysis("ATLAS_2014_I1315949")
     {    }
 
@@ -27,10 +20,10 @@ namespace Rivet {
       FinalState fs;
 
       ZFinder zfinder(fs, Cuts::abseta<2.4 && Cuts::pT>20.0*GeV, PID::MUON, 66*GeV, 116*GeV, 0.1, ZFinder::CLUSTERNODECAY);
-      addProjection(zfinder, "ZFinder");
+      declare(zfinder, "ZFinder");
 
       ChargedFinalState cfs( zfinder.remainingFinalState() );
-      addProjection(cfs, "cfs");
+      declare(cfs, "cfs");
 
 
       _h_pTsum_tow    = bookProfile1D( 1, 1, 1);
@@ -70,7 +63,7 @@ namespace Rivet {
     void analyze(const Event& event) {
 
       const double weight = event.weight();
-      const ZFinder& zfinder = applyProjection<ZFinder>(event, "ZFinder");
+      const ZFinder& zfinder = apply<ZFinder>(event, "ZFinder");
 
       if (zfinder.bosons().size() != 1) vetoEvent;
 
@@ -83,9 +76,9 @@ namespace Rivet {
       int nTowards(0), nTransverse(0), nLeft(0), nRight(0), nTrmin(0), nTrmax(0), nAway(0);
       double ptSumTowards(0.0), ptSumTransverse(0.0), ptSumLeft(0.0), ptSumRight(0.0),
              ptSumTrmin(0.0), ptSumTrmax(0.0), ptSumAway(0.0);
-     
+
       // The charged particles
-      ParticleVector particles = applyProjection<ChargedFinalState>(event, "cfs").particlesByPt(
+      ParticleVector particles = apply<ChargedFinalState>(event, "cfs").particlesByPt(
           Cuts::pT > 0.5*GeV && Cuts::abseta <2.5);
 
       // Loop over charged particles with pT>500 MeV and |eta|<2.5
@@ -100,7 +93,7 @@ namespace Rivet {
         if( std::fabs(dphi) < M_PI/3. ) {
           nTowards++;
           ptSumTowards += pT;
-        } 
+        }
         // Transverse region
         else if( std::fabs(dphi) < 2.*M_PI/3. ) {
           nTransverse++;
@@ -113,7 +106,7 @@ namespace Rivet {
             nLeft++;
             ptSumLeft += pT;
           }
-        } 
+        }
         // Away region
         else {
           nAway++;
@@ -159,7 +152,7 @@ namespace Rivet {
       _h_pTavg_tow->fill( Zpt, nTowards    > 0.? ptSumTowards/nTowards       : 0., weight);
       _h_pTavg_trv->fill( Zpt, nTransverse > 0.? ptSumTransverse/nTransverse : 0., weight);
       _h_pTavg_away->fill(Zpt, nAway       > 0.? ptSumAway/nAway             : 0., weight);
-       
+
       // Fill <Nch> vs. ZpT profiles
       _h_pTavgvsmult_tow->fill( nTowards,    nTowards    > 0.? ptSumTowards/nTowards       : 0., weight);
       _h_pTavgvsmult_trv->fill( nTransverse, nTransverse > 0.? ptSumTransverse/nTransverse : 0., weight);
@@ -169,7 +162,7 @@ namespace Rivet {
       int i_bin(0);
       if (inRange(Zpt,0,5)        ) i_bin=0;
       if (inRange(Zpt,5,10)       ) i_bin=1;
-      if (inRange(Zpt,10,20)      ) i_bin=2; 
+      if (inRange(Zpt,10,20)      ) i_bin=2;
       if (inRange(Zpt,20,50)      ) i_bin=3;
       if (inRange(Zpt,50,110)     ) i_bin=4;
       if (Zpt>110) i_bin=5;
@@ -221,9 +214,9 @@ namespace Rivet {
                  _h_pTavgvsmult_tow,
                  _h_pTavgvsmult_trv,
                  _h_pTavgvsmult_away;
-   
+
     Histo1DPtr   _h_ptSum_1D[4][6], _h_Nchg_1D[4][6];
-    
+
 
   };
 

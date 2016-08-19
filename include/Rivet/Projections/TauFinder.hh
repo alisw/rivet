@@ -1,4 +1,3 @@
-
 #ifndef RIVET_TauFinder_HH
 #define RIVET_TauFinder_HH
 
@@ -8,19 +7,18 @@
 namespace Rivet {
 
 
-
   /// @brief Convenience finder of unstable taus
   /// @todo Inherit directly from ParticleFinder, not FinalState
   class TauFinder : public FinalState {
   public:
 
     enum DecayType { ANY=0, LEPTONIC=1, HADRONIC };
-    
+
     static bool isHadronic(const Particle& tau) {
       assert(tau.abspid() == PID::TAU);
       return any(tau.stableDescendants(), isHadron);
     }
-    
+
     static bool isLeptonic(const Particle& tau) {
       return !isHadronic(tau);
     }
@@ -36,9 +34,7 @@ namespace Rivet {
 
 
     /// Clone on the heap.
-    virtual const Projection* clone() const {
-      return new TauFinder(*this);
-    }
+    DEFAULT_RIVET_PROJ_CLONE(TauFinder);
 
 
     const Particles& taus() const { return _theParticles; }
@@ -57,7 +53,7 @@ namespace Rivet {
 
     /// The decaytype enum
     DecayType _dectype;
-  
+
   };
 
 

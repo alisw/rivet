@@ -69,6 +69,8 @@ parser.add_option_group(anagroup)
 extragroup = OptionGroup(parser, "Extra run settings")
 extragroup.add_option("-o", "-H", "--histo-file", dest="HISTOFILE",
                       default="Rivet.yoda", help="specify the output histo file path (default = %default)")
+extragroup.add_option("--no-histo-file", dest="WRITE_DATA", action="store_false", default=True,
+                      help="don't write out any histogram file at the end of the run (default = write)")
 extragroup.add_option("-x", "--cross-section", dest="CROSS_SECTION",
                       default=None, metavar="XS",
                       help="specify the signal process cross-section in pb")
@@ -81,8 +83,8 @@ extragroup.add_option("--nskip", dest="EVTSKIPNUM", type="int",
 extragroup.add_option("--runname", dest="RUN_NAME", default=None, metavar="NAME",
                       help="give an optional run name, to be prepended as a 'top level directory' in histo paths")
 extragroup.add_option("--ignore-beams", dest="IGNORE_BEAMS", action="store_true", default=False,
-                      help="Ignore input event beams when checking analysis compatibility. "
-                      "Warning: analyses may not work correctly, or at all, with inappropriate beams")
+                      help="ignore input event beams when checking analysis compatibility. "
+                      "WARNING: analyses may not work correctly, or at all, with inappropriate beams")
 parser.add_option_group(extragroup)
 
 
@@ -96,7 +98,7 @@ timinggroup.add_option("--run-timeout", dest="RUN_TIMEOUT", type="int",
                        "as the LCG Grid where tokens expire on a fixed wall-clock and can render long Rivet runs unable to write "
                        "out the final histogram file (default = unlimited)")
 timinggroup.add_option("--histo-interval", dest="HISTO_WRITE_INTERVAL", type=int,
-                       default=10000, help="[experimental!] specify the number of events between histogram file updates. "
+                       default=1000, help="specify the number of events between histogram file updates, default = %default. "
                        "Set to 0 to only write out at the end of the run. Note that intermediate histograms will be those "
                        "from the analyze step only: analysis finalizing is currently not executed until the end of the run.")
 parser.add_option_group(timinggroup)
@@ -209,11 +211,14 @@ except:
 ## Override/modify analysis search path
 if opts.ANALYSIS_PATH:
     rivet.setAnalysisLibPaths(opts.ANALYSIS_PATH.split(":"))
+    rivet.setAnalysisDataPaths(opts.ANALYSIS_PATH.split(":"))
 if opts.ANALYSIS_PATH_APPEND:
     for ap in opts.ANALYSIS_PATH_APPEND.split(":"):
         rivet.addAnalysisLibPath(ap)
+        rivet.addAnalysisDataPath(ap)
 if opts.ANALYSIS_PATH_PWD:
-    rivet.addAnalysisLibPath(".")
+    rivet.addAnalysisLibPath(os.path.abspath("."))
+    rivet.addAnalysisDataPath(os.path.abspath("."))
 
 
 ## List of analyses
@@ -328,7 +333,7 @@ if len(opts.SHOW_ANALYSES) > 0:
             msg += "Beams:" + ", ".join(beamstrs) + "\n"
 
         if ana.requiredEnergies():
-            msg += "Beam energies: %s GeV\n" + "; ".join(["(%0.1f, %0.1f)" % (epair[0], epair[1]) for epair in ana.requiredEnergies()])
+            msg += "Beam energies:" + "; ".join(["(%0.1f, %0.1f) GeV\n" % (epair[0], epair[1]) for epair in ana.requiredEnergies()])
         else:
             msg += "Beam energies: ANY\n"
 
@@ -419,7 +424,6 @@ RUNNAME = opts.RUN_NAME or ""
 ah = rivet.AnalysisHandler(RUNNAME)
 ah.setIgnoreBeams(opts.IGNORE_BEAMS)
 for a in opts.ANALYSES:
-    #a_up = a.upper()
     ## Print warning message and exit if not a valid analysis name
     if not a in all_analyses:
         logging.warning("'%s' is not a known Rivet analysis! Do you need to set RIVET_ANALYSIS_PATH or use the --pwd switch?\n" % a)
@@ -513,6 +517,7 @@ for fileidx, hepmcfile in enumerate(HEPMCFILES):
         if not run.readEvent():
             logging.warning("Could not read events from '%s'" % hepmcfile)
             continue
+
     ## Announce new file
     msg = "Reading events from '%s'" % hepmcfile
     if hepmcfileweight != 1.0:
@@ -520,11 +525,13 @@ for fileidx, hepmcfile in enumerate(HEPMCFILES):
     logging.info(msg)
 
     ## The event loop
-    while opts.MAXEVTNUM is None or evtnum-opts.EVTSKIPNUM <= opts.MAXEVTNUM:
+    while opts.MAXEVTNUM is None or evtnum-opts.EVTSKIPNUM < opts.MAXEVTNUM:
         evtnum += 1
 
         ## Optional event skipping
         if evtnum <= opts.EVTSKIPNUM:
+            logging.debug("Skipping event #%i" % evtnum)
+            run.skipEvent();
             continue
 
         ## Only log the event number once we're actually processing
@@ -572,7 +579,8 @@ print
 
 ## Finalize and write out data file
 run.finalize()
-ah.writeData(opts.HISTOFILE)
+if opts.WRITE_DATA:
+    ah.writeData(opts.HISTOFILE)
 print
 endtime = datetime.datetime.now().replace(microsecond=0)
 logging.info("Rivet run completed at %s, time elapsed = %s" % (str(endtime), str(endtime-starttime)))

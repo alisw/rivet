@@ -1,7 +1,8 @@
 #ifndef RIVET_Math_MathHeader
 #define RIVET_Math_MathHeader
 
-#include "Rivet/Exceptions.hh"
+#include "Rivet/Tools/Exceptions.hh"
+#include "Rivet/Tools/Utils.hh"
 #include <stdexcept>
 #include <string>
 #include <ostream>

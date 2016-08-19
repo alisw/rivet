@@ -14,8 +14,9 @@ namespace Rivet {
   class Particle;
 
   /// Typedefs for a vector of Particle objects.
-  typedef std::vector<Particle> Particles; ///< New form, cf. Jets
-  typedef std::vector<Particle> ParticleVector; ///< Old form
+  typedef std::vector<Particle> Particles; //< New form, cf. Jets
+  /// @deprecated Use Particles instead. Will be removed
+  typedef std::vector<Particle> ParticleVector; //< Old form
 
   /// Typedef for a pair of Particle objects.
   typedef std::pair<Particle, Particle> ParticlePair;

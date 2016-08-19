@@ -38,25 +38,25 @@ namespace Rivet {
       // projection to find the electrons
       IdentifiedFinalState elecs(Cuts::abseta < 2.47 && Cuts::pT > 10*GeV);
       elecs.acceptIdPair(PID::ELECTRON);
-      addProjection(elecs, "elecs");
+      declare(elecs, "elecs");
 
 
       // projection to find the muons
       IdentifiedFinalState muons(Cuts::abseta < 2.4 && Cuts::pT > 10*GeV);
       muons.acceptIdPair(PID::MUON);
-      addProjection(muons, "muons");
+      declare(muons, "muons");
 
       // for pTmiss
-      addProjection(VisibleFinalState(Cuts::abseta < 4.9), "vfs");
+      declare(VisibleFinalState(Cuts::abseta < 4.9), "vfs");
 
       VetoedFinalState vfs;
       vfs.addVetoPairId(PID::MUON);
 
       /// Jet finder
-      addProjection(FastJets(vfs, FastJets::ANTIKT, 0.4), "AntiKtJets04");
+      declare(FastJets(vfs, FastJets::ANTIKT, 0.4), "AntiKtJets04");
 
       // all tracks (to do deltaR with leptons)
-      addProjection(ChargedFinalState(Cuts::abseta < 3.0), "cfs");
+      declare(ChargedFinalState(Cuts::abseta < 3.0), "cfs");
 
       vector<double> edges_meff;
       edges_meff.push_back(   0);
@@ -92,16 +92,16 @@ namespace Rivet {
       const double weight = event.weight();
       // get the jet candidates
       Jets cand_jets;
-      foreach (const Jet& jet, applyProjection<FastJets>(event, "AntiKtJets04").jetsByPt(20.0*GeV) ) {
+      foreach (const Jet& jet, apply<FastJets>(event, "AntiKtJets04").jetsByPt(20.0*GeV) ) {
         if (jet.abseta() < 2.5) cand_jets.push_back(jet);
       }
 
       // candidate muons
-      Particles cand_mu = applyProjection<IdentifiedFinalState>(event, "muons").particlesByPt();
+      Particles cand_mu = apply<IdentifiedFinalState>(event, "muons").particlesByPt();
 
       // candidate electrons
       // Discard if two electrons are within R=0.1
-      Particles temp = applyProjection<IdentifiedFinalState>(event, "elecs").particles(cmpMomByE);
+      Particles temp = apply<IdentifiedFinalState>(event, "elecs").particles(cmpMomByE);
       vector<bool> vetoed(temp.size(),false);
       Particles cand_e;
       for (size_t ix = 0; ix < temp.size(); ++ix) {
@@ -184,7 +184,7 @@ namespace Rivet {
 
       // pTmiss
       Particles vfs_particles =
-        applyProjection<VisibleFinalState>(event, "vfs").particles();
+        apply<VisibleFinalState>(event, "vfs").particles();
       FourMomentum pTmiss;
       foreach ( const Particle & p, vfs_particles ) {
         pTmiss -= p.momentum();
@@ -193,7 +193,7 @@ namespace Rivet {
 
       // apply electron isolation
       Particles chg_tracks =
-        applyProjection<ChargedFinalState>(event, "cfs").particles();
+        apply<ChargedFinalState>(event, "cfs").particles();
       Particles cand4_e;
       foreach (const Particle& e, cand3_e) {
         // charge isolation

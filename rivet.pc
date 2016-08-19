@@ -1,4 +1,4 @@
-prefix=/home/andy/heplocal
+prefix=/home/hschulz/src/rivet-hg2/local
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include
@@ -7,8 +7,8 @@ datarootdir=${prefix}/share
 Name: rivet
 Description: Rivet MC analysis library
 URL: https://rivet.hepforge.org
-Version: 2.4.3
+Version: 2.5.1
 #Requires: yoda
-Libs: -L${exec_prefix}/lib -L/home/andy/heplocal/lib -L/home/andy/heplocal/lib -L-Wl,-rpath,/home/andy/heplocal/lib -lm -L/home/andy/heplocal/lib -lfastjettools -lfastjet -lfastjetplugins -lsiscone_spherical -lsiscone -L/usr/lib -lRivet
-Cflags: -I${prefix}/include -I/home/andy/heplocal/include -I/home/andy/heplocal/include -I/home/andy/heplocal/include -I/usr/include
-#-I
+Libs: -L${exec_prefix}/lib -L/home/hschulz/src/HepMC-2.06.09/local/lib -L/home/hschulz/src/yoda-hg/local/lib -L-Wl,-rpath,/home/hschulz/src/fastjet-3.2.0/../local/lib -lm -L/home/hschulz/src/fastjet-3.2.0/../local/lib -lfastjettools -lfastjet -lfastjetplugins -lsiscone_spherical -lsiscone -L/home/hschulz/src/local/lib -lRivet
+Cflags: -I${prefix}/include -I/home/hschulz/src/HepMC-2.06.09/local/include -I/home/hschulz/src/yoda-hg/local/include -I/home/hschulz/src/local/include -I/home/hschulz/src/local/include
+#-I@BOOST_CPPFLAGS@

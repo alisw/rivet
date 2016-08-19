@@ -9,8 +9,7 @@ namespace Rivet {
 
 
   /// @brief Generic runtime Rivet error.
-  class Error : public std::runtime_error {
-  public:
+  struct Error : public std::runtime_error {
     Error(const std::string& what) : std::runtime_error(what) {}
   };
 
@@ -20,29 +19,25 @@ namespace Rivet {
 
 
   /// @brief Error for e.g. use of invalid bin ranges.
-  class RangeError : public Error {
-  public:
+  struct RangeError : public Error {
     RangeError(const std::string& what) : Error(what) {}
   };
 
 
   /// @brief Error specialisation for places where alg logic has failed.
-  class LogicError : public Error {
-  public:
+  struct LogicError : public Error {
     LogicError(const std::string& what) : Error(what) {}
   };
 
 
   /// @brief Error specialisation for failures relating to particle ID codes.
-  class PidError : public Error {
-  public:
+  struct PidError : public Error {
     PidError(const std::string& what) : Error(what) {}
   };
 
 
   /// @brief Error specialisation for failures relating to analysis info.
-  class InfoError : public Error {
-  public:
+  struct InfoError : public Error {
     InfoError(const std::string& what) : Error(what) {}
   };
 
@@ -51,15 +46,13 @@ namespace Rivet {
   ///
   /// Arises in computing statistical quantities because e.g. the bin
   /// weight is zero or negative.
-  class WeightError : public Error {
-  public:
+  struct WeightError : public Error {
     WeightError(const std::string& what) : Error(what) {}
   };
 
 
-  /// @brief Error specialisation for where the problem is between the chair and computer.
-  class UserError : public Error {
-  public:
+  /// @brief Error specialisation for where the problem is between the chair and the computer.
+  struct UserError : public Error {
     UserError(const std::string& what) : Error(what) {}
   };
 

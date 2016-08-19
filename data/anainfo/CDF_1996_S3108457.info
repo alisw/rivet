@@ -4,14 +4,17 @@ Summary: Properties of high-mass multijet events
 Experiment: CDF
 Collider: Tevatron Run 1
 SpiresID: 3108457
-Status: UNVALIDATED
+Status: VALIDATED
 Authors:
  - Frank Siegert <frank.siegert@cern.ch>
 References:
  - Phys.Rev.Lett.75:608-612,1995
  - doi:10.1103/PhysRevLett.75.608
 RunInfo:
-  Pure QCD events without underlying event.
+  Pure QCD events without underlying event (the paper states that UE was
+  corrected for).
+  Several runs with different kinematic cuts might be needed to fill the 
+  2,3,4,5 and 6-jet properly.
 NumEvents: 1000000
 Beams: [p-, p+]
 Energies: [1800]

@@ -29,14 +29,14 @@ namespace Rivet {
     /// Book histograms and initialise projections before the run
     void init() {
       FinalState fs(-4.2, 4.2);
-      addProjection(FastJets(fs, FastJets::CDFJETCLU, 0.7), "Jets");
+      declare(FastJets(fs, FastJets::CDFJETCLU, 0.7), "Jets");
       _h_mjj = bookHisto1D(1, 1, 1);
     }
 
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-      Jets jets = applyProjection<FastJets>(event, "Jets").jets(cmpMomByEt);
+      Jets jets = apply<FastJets>(event, "Jets").jets(cmpMomByEt);
       if (jets.size() < 2) vetoEvent;
       FourMomentum jet1 = jets[0].momentum();
       FourMomentum jet2 = jets[1].momentum();

@@ -39,15 +39,13 @@ namespace Rivet {
             const Cut & cuts,
             PdgId pid,
             double minmass, double maxmass,
-            double dRmax=0.1, 
-            ClusterPhotons clusterPhotons=CLUSTERNODECAY, 
+            double dRmax=0.1,
+            ClusterPhotons clusterPhotons=CLUSTERNODECAY,
             PhotonTracking trackPhotons=NOTRACK,
             double masstarget=91.2*GeV);
 
     /// Clone on the heap.
-    virtual const Projection* clone() const {
-      return new ZFinder(*this);
-    }
+    DEFAULT_RIVET_PROJ_CLONE(ZFinder);
 
     //@}
 

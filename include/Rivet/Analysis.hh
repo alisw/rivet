@@ -12,6 +12,7 @@
 #include "Rivet/Tools/RivetYODA.hh"
 #include "Rivet/Tools/Logging.hh"
 #include "Rivet/Tools/ParticleUtils.hh"
+#include "Rivet/Tools/Cuts.hh"
 
 
 /// @def vetoEvent
@@ -102,7 +103,7 @@ namespace Rivet {
 
     /// Get the actual AnalysisInfo object in which all this metadata is stored.
     const AnalysisInfo& info() const {
-      assert(_info.get() != 0 && "No AnalysisInfo object :O");
+      assert(_info && "No AnalysisInfo object :O");
       return *_info;
     }
 
@@ -244,7 +245,7 @@ namespace Rivet {
 
     /// Get the actual AnalysisInfo object in which all this metadata is stored (non-const).
     AnalysisInfo& info() {
-      assert(_info.get() != 0 && "No AnalysisInfo object :O");
+      assert(_info && "No AnalysisInfo object :O");
       return *_info;
     }
 
@@ -622,31 +623,63 @@ namespace Rivet {
     //@}
 
 
-    /// @todo What follows should really be protected: only public to keep BinnedHistogram happy for now...
   public:
 
-    /// @name Histogram manipulation
+
+    /// @name Analysis object manipulation
+    /// @todo Should really be protected: only public to keep BinnedHistogram happy for now...
     //@{
 
+    /// Multiplicatively scale the given counter, @a cnt, by factor @s factor.
+    void scale(CounterPtr cnt, double factor);
+
+    /// Multiplicatively scale the given counters, @a cnts, by factor @s factor.
+    void scale(const std::vector<CounterPtr>& cnts, double factor) {
+      for (const auto& c : cnts) scale(c, factor);
+    }
+
     /// Normalize the given histogram, @a histo, to area = @a norm.
-    ///
-    /// @note The histogram is no longer invalidated by this procedure.
     void normalize(Histo1DPtr histo, double norm=1.0, bool includeoverflows=true);
 
-    /// Multiplicatively scale the given histogram, @a histo, by factor @s scale.
-    ///
-    /// @note The histogram is no longer invalidated by this procedure.
-    void scale(Histo1DPtr histo, double scale);
+    /// Normalize the given histograms, @a histos, to area = @a norm.
+    void normalize(const std::vector<Histo1DPtr>& histos, double norm=1.0, bool includeoverflows=true) {
+      for (const auto& h : histos) normalize(h, norm, includeoverflows);
+    }
+
+    /// Multiplicatively scale the given histogram, @a histo, by factor @s factor.
+    void scale(Histo1DPtr histo, double factor);
+
+    /// Multiplicatively scale the given histograms, @a histos, by factor @s factor.
+    void scale(const std::vector<Histo1DPtr>& histos, double factor) {
+      for (const auto& h : histos) scale(h, factor);
+    }
 
     /// Normalize the given histogram, @a histo, to area = @a norm.
-    ///
-    /// @note The histogram is no longer invalidated by this procedure.
     void normalize(Histo2DPtr histo, double norm=1.0, bool includeoverflows=true);
 
-    /// Multiplicatively scale the given histogram, @a histo, by factor @s scale.
+    /// Normalize the given histograms, @a histos, to area = @a norm.
+    void normalize(const std::vector<Histo2DPtr>& histos, double norm=1.0, bool includeoverflows=true) {
+      for (const auto& h : histos) normalize(h, norm, includeoverflows);
+    }
+
+    /// Multiplicatively scale the given histogram, @a histo, by factor @s factor.
+    void scale(Histo2DPtr histo, double factor);
+
+    /// Multiplicatively scale the given histograms, @a histos, by factor @s factor.
+    void scale(const std::vector<Histo2DPtr>& histos, double factor) {
+      for (const auto& h : histos) scale(h, factor);
+    }
+
+
+    /// Helper for counter division.
     ///
-    /// @note The histogram is no longer invalidated by this procedure.
-    void scale(Histo2DPtr histo, double scale);
+    /// @note Assigns to the (already registered) output scatter, @a s. Preserves the path information of the target.
+    void divide(CounterPtr c1, CounterPtr c2, Scatter1DPtr s) const;
+
+    /// Helper for histogram division with raw YODA objects.
+    ///
+    /// @note Assigns to the (already registered) output scatter, @a s. Preserves the path information of the target.
+    void divide(const YODA::Counter& c1, const YODA::Counter& c2, Scatter1DPtr s) const;
 
 
     /// Helper for histogram division.
@@ -748,7 +781,7 @@ namespace Rivet {
     /// @todo Use this default function template arg in C++11
     // template <typename AO=AnalysisObjectPtr>
     template <typename AO>
-    const shared_ptr<AO> getAnalysisObject(const std::string& name) const {
+    const std::shared_ptr<AO> getAnalysisObject(const std::string& name) const {
       foreach (const AnalysisObjectPtr& ao, analysisObjects()) {
         if (ao->path() == histoPath(name)) return dynamic_pointer_cast<AO>(ao);
       }
@@ -759,7 +792,7 @@ namespace Rivet {
     /// @todo Use this default function template arg in C++11
     // template <typename AO=AnalysisObjectPtr>
     template <typename AO>
-    shared_ptr<AO> getAnalysisObject(const std::string& name) {
+    std::shared_ptr<AO> getAnalysisObject(const std::string& name) {
       foreach (const AnalysisObjectPtr& ao, analysisObjects()) {
         if (ao->path() == histoPath(name)) return dynamic_pointer_cast<AO>(ao);
       }
@@ -886,7 +919,7 @@ namespace Rivet {
     string _defaultname;
 
     /// Pointer to analysis metadata object
-    shared_ptr<AnalysisInfo> _info;
+    unique_ptr<AnalysisInfo> _info;
 
     /// Storage of all plot objects
     /// @todo Make this a map for fast lookup by path?
@@ -934,9 +967,17 @@ namespace Rivet {
 /// Preprocessor define to prettify the global-object plugin hook mechanism.
 #define DECLARE_RIVET_PLUGIN(clsname) Rivet::AnalysisBuilder<clsname> plugin_ ## clsname
 
+/// @def DECLARE_ALIASED_RIVET_PLUGIN
+/// Preprocessor define to prettify the global-object plugin hook mechanism, with an extra alias name for this analysis.
+// #define DECLARE_ALIASED_RIVET_PLUGIN(clsname, alias) Rivet::AnalysisBuilder<clsname> plugin_ ## clsname ## ( ## #alias ## )
+#define DECLARE_ALIASED_RIVET_PLUGIN(clsname, alias) DECLARE_RIVET_PLUGIN(clsname)( #alias )
+
 /// @def DEFAULT_RIVET_ANA_CONSTRUCTOR
 /// Preprocessor define to prettify the manky constructor with name string argument
-#define DEFAULT_RIVET_ANA_CONSTRUCTOR(clsname) clsname() : Analysis(# clsname) {}
+#define DEFAULT_RIVET_ANALYSIS_CTOR(clsname) clsname() : Analysis(# clsname) {}
+
+// DEPRECATED ALIAS
+#define DEFAULT_RIVET_ANA_CONSTRUCTOR(clsname) DEFAULT_RIVET_ANALYSIS_CTOR(clsname)
 
 
 #endif

@@ -2,6 +2,7 @@
 #define RIVET_PARTICLEUTILS_HH
 
 #include "Rivet/Particle.hh"
+#include "Rivet/Tools/ParticleBaseUtils.hh"
 #include "Rivet/Tools/ParticleIdUtils.hh"
 
 // Macros to map Rivet::Particle functions to PID:: functions of the same name
@@ -15,6 +16,13 @@ namespace Rivet {
 
   /// @name Particle classifier functions
   //@{
+
+  /// Unbound function access to PID code
+  inline int pid(const Particle& p) { return p.pid(); }
+
+  /// Unbound function access to abs PID code
+  inline int abspid(const Particle& p) { return p.abspid(); }
+
 
   /// Is this particle species charged?
   PARTICLE_TO_PID_BOOLFN(isCharged)
@@ -72,6 +80,15 @@ namespace Rivet {
 
   /// Determine if the PID is that of an SM/lightest SUSY Higgs
   PARTICLE_TO_PID_BOOLFN(isHiggs)
+
+  /// Determine if the PID is that of an s/sbar
+  PARTICLE_TO_PID_BOOLFN(isStrange)
+
+  /// Determine if the PID is that of a c/cbar
+  PARTICLE_TO_PID_BOOLFN(isCharm)
+
+  /// Determine if the PID is that of a b/bbar
+  PARTICLE_TO_PID_BOOLFN(isBottom)
 
   /// Determine if the PID is that of a t/tbar
   PARTICLE_TO_PID_BOOLFN(isTop)
@@ -218,21 +235,31 @@ namespace Rivet {
   PARTICLE_TO_PID_INTFN(lSpin)
 
 
-  /// Return 3 times the charge (3 x quark charge is an int)
-  PARTICLE_TO_PID_INTFN(charge3)
-
-  /// Return 3 times the absolute charge (3 x quark charge is an int)
-  PARTICLE_TO_PID_INTFN(abscharge3)
-
-  /// Return 3 times the charge (3 x quark charge is an int)
-  /// @deprecated Prefer charge3
-  PARTICLE_TO_PID_INTFN(threeCharge)
-
   /// Return the charge
   PARTICLE_TO_PID_DBLFN(charge)
 
+  /// Return 3 times the charge (3 x quark charge is an int)
+  PARTICLE_TO_PID_INTFN(charge3)
+
   /// Return the absolute charge
   PARTICLE_TO_PID_DBLFN(abscharge)
+
+  /// Return 3 times the abs charge (3 x quark charge is an int)
+  PARTICLE_TO_PID_INTFN(abscharge3)
+
+  /// Alias for charge3
+  /// @deprecated Use charge3
+  PARTICLE_TO_PID_INTFN(threeCharge)
+
+
+  /// Get the atomic number (number of protons) in a nucleus/ion
+  PARTICLE_TO_PID_INTFN(nuclZ)
+
+  /// Get the atomic weight (number of nucleons) in a nucleus/ion
+  PARTICLE_TO_PID_INTFN(nuclA)
+
+  /// If this is a nucleus (ion), get nLambda
+  PARTICLE_TO_PID_INTFN(nuclNlambda)
 
   //@}
 
@@ -283,18 +310,99 @@ namespace Rivet {
   };
 
   /// PID matching functor
-  struct HasPID : public BoolParticleFunctor {
-    HasPID(PdgId pid) : targetpid(pid) { }
+  struct hasPID : public BoolParticleFunctor {
+    hasPID(PdgId pid) : targetpid(pid) { }
     bool operator()(const Particle& p) const { return p.pid() == targetpid; }
     PdgId targetpid;
   };
+  using HasPID = hasPID;
 
   /// |PID| matching functor
-  struct HasAbsPID : public BoolParticleFunctor {
-    HasAbsPID(PdgId pid) : targetpid(abs(pid)) { }
+  struct hasAbsPID : public BoolParticleFunctor {
+    hasAbsPID(PdgId pid) : targetpid(abs(pid)) { }
     bool operator()(const Particle& p) const { return p.abspid() == abs(targetpid); }
     PdgId targetpid;
   };
+  using HasAbsPID = hasAbsPID;
+
+  //@}
+
+
+
+  //////////////////////////////////////
+
+
+
+  /// @name Non-PID particle properties, via unbound functions
+  //@{
+
+  /// Is this particle potentially visible in a detector?
+  inline bool isVisible(const Particle& p) { return p.isVisible(); }
+
+  /// Decide if a given particle is prompt, via Particle::isPrompt()
+  inline bool isPrompt(const Particle& p, bool from_prompt_tau=false, bool from_prompt_mu=false) {
+    return p.isPrompt(from_prompt_tau, from_prompt_mu);
+  }
+
+  /// Decide if a given particle is stable, via Particle::isStable()
+  inline bool isStable(const Particle& p) { return p.isStable(); }
+
+  /// Check whether a given PID is found in the particle's ancestor list
+  inline bool hasAncestor(const Particle& p, PdgId pid)  { return p.hasAncestor(pid); }
+
+  /// Determine whether the particle is from a b-hadron decay
+  inline bool fromBottom(const Particle& p) { return p.fromBottom(); }
+
+  /// @brief Determine whether the particle is from a c-hadron decay
+  inline bool fromCharm(const Particle& p) { return p.fromCharm(); }
+
+  /// @brief Determine whether the particle is from a hadron decay
+  inline bool fromHadron(const Particle& p) { return p.fromHadron(); }
+
+  /// @brief Determine whether the particle is from a tau decay
+  inline bool fromTau(const Particle& p, bool prompt_taus_only=false) {
+    return p.fromTau(prompt_taus_only);
+  }
+
+  /// @brief Determine whether the particle is from a prompt tau decay
+  inline bool fromPromptTau(const Particle& p) { return p.fromPromptTau(); }
+
+  /// @brief Determine whether the particle is from a hadron or tau decay
+  inline bool fromDecay(const Particle& p) { return p.fromDecay(); }
+
+  //@}
+
+
+
+  /// @name Unbound functions for filtering particles
+  //@{
+
+  /// Get a subset of the supplied particles that passes the supplied Cut
+  Particles filterBy(const Particles& particles, const Cut& c);
+
+  /// Filter a particle collection in-place to the subset that passes the supplied Cut
+  Particles& ifilterBy(Particles& particles, const Cut& c);
+
+  /// Filter a particle collection to the subset that passes the supplied Cut, into a new container
+  /// @note New container will be replaced, not appended to
+  inline Particles& filterBy(Particles& particles, const Cut& c, Particles& out) {
+    //const Particles& const_particles = particles;
+    out = filterBy(particles, c);
+    return out;
+  }
+
+  //@}
+
+
+
+  /// @name Particle pair functions
+  //@{
+
+  /// Get the PDG ID codes of a ParticlePair
+  /// @todo Make ParticlePair a custom class instead?
+  inline PdgIdPair pids(const ParticlePair& pp) {
+    return make_pair(pp.first.pid(), pp.second.pid());
+  }
 
   //@}
 

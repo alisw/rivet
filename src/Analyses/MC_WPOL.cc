@@ -7,8 +7,6 @@
 namespace Rivet {
 
 
-
-
   /// @brief MC validation analysis for W polarisation
   class MC_WPOL : public Analysis {
   public:
@@ -35,12 +33,11 @@ namespace Rivet {
       FinalState fs;
       WFinder wfinder(fs, Cuts::open(), PID::ELECTRON,
                       60.0*GeV, 100.0*GeV, 0.0*GeV, 0.0);
-      addProjection(wfinder, "WFinder");
+      declare(wfinder, "WFinder");
       Beam beams;
-      addProjection(beams, "Beams");
+      declare(beams, "Beams");
 
-      vector<string> tags;
-      tags += "_wplus", "_wminus";
+      vector<string> tags{"_wplus", "_wminus"};
       _h_dists.resize(tags.size());
       _h_histos.resize(tags.size());
       for (size_t i=0; i<tags.size(); ++i) {
@@ -70,19 +67,19 @@ namespace Rivet {
     void analyze(const Event& event) {
       const double weight = event.weight();
 
-      const WFinder& wfinder = applyProjection<WFinder>(event, "WFinder");
+      const WFinder& wfinder = apply<WFinder>(event, "WFinder");
       if (wfinder.bosons().size() != 1) {
         vetoEvent;
       }
-      const ParticlePair& beams = applyProjection<Beam>(event, "Beams").beams();
+      const ParticlePair& beams = apply<Beam>(event, "Beams").beams();
 
       FourMomentum pb1(beams.second.momentum()), pb2(beams.first.momentum());
-      Particle lepton=wfinder.constituentLeptons()[0];
+      Particle lepton = wfinder.constituentLeptons()[0];
       FourMomentum pl(lepton.momentum());
       size_t idx = (PID::threeCharge(lepton.pid())>0 ? 0 : 1);
       FourMomentum plnu(wfinder.bosons()[0].momentum());
 
-      LorentzTransform cms(-plnu.boostVector());
+      const LorentzTransform cms = LorentzTransform::mkFrameTransformFromBeta(plnu.betaVec());
       Matrix3 zrot(plnu.p3(), Vector3(0.0, 0.0, 1.0));
       pl=cms.transform(pl);
       pb1=cms.transform(pb1);

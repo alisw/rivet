@@ -9,7 +9,7 @@ EXTRA_DIST = \
 if WITH_CYTHON
 RIVETINCLUDE = $(top_srcdir)/include/Rivet/
 core.cpp: core.pyx rivet.pxd $(RIVETINCLUDE)/Analysis.hh $(RIVETINCLUDE)/AnalysisHandler.hh $(RIVETINCLUDE)/AnalysisLoader.hh $(RIVETINCLUDE)/Run.hh
-	cython $(srcdir)/core.pyx --cplus -o $@
+	cython --cplus $(srcdir)/core.pyx -o $@
 else
 core.cpp:
 	@echo "Not (re)generating core.cpp since Cython is not installed"

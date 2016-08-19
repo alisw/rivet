@@ -13,9 +13,7 @@ namespace Rivet {
   class ATLAS_2015_I1390114 : public Analysis {
   public:
 
-    ATLAS_2015_I1390114()
-      : Analysis("ATLAS_2015_I1390114")
-    {    }
+    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2015_I1390114);
 
 
     void init() {
@@ -36,9 +34,9 @@ namespace Rivet {
       el_id.acceptIdPair(PID::ELECTRON);
       PromptFinalState electrons(el_id);
       electrons.acceptTauDecays(true);
-      addProjection(electrons, "electrons");
+      declare(electrons, "electrons");
       DressedLeptons dressedelectrons(photons, electrons, 0.1, eta_lep && (Cuts::pT >= 25*GeV), true, true);
-      addProjection(dressedelectrons, "dressedelectrons");
+      declare(dressedelectrons, "dressedelectrons");
       DressedLeptons ewdressedelectrons(photons, electrons, 0.1, eta_full, true, true);
 
       // Projection to find the muons
@@ -46,9 +44,9 @@ namespace Rivet {
       mu_id.acceptIdPair(PID::MUON);
       PromptFinalState muons(mu_id);
       muons.acceptTauDecays(true);
-      addProjection(muons, "muons");
+      declare(muons, "muons");
       DressedLeptons dressedmuons(photons, muons, 0.1, eta_lep && (Cuts::pT >= 25*GeV), true, true);
-      addProjection(dressedmuons, "dressedmuons");
+      declare(dressedmuons, "dressedmuons");
       DressedLeptons ewdressedmuons(photons, muons, 0.1, eta_full, true, true);
 
       // Projection to find neutrinos and produce MET
@@ -64,7 +62,7 @@ namespace Rivet {
       vfs.addVetoOnThisFinalState(neutrinos);
       FastJets jets(vfs,FastJets::ANTIKT, 0.4);
       jets.useInvisibles();
-      addProjection(jets, "jets");
+      declare(jets, "jets");
 
       _histo = bookHisto1D(1,1,1);
       _ratio = bookScatter2D(2,1,1, true);
@@ -77,11 +75,11 @@ namespace Rivet {
       const double weight = event.weight();
 
       // Get the selected objects, using the projections.
-      vector<DressedLepton> electrons = applyProjection<DressedLeptons>(event, "dressedelectrons").dressedLeptons();
-      vector<DressedLepton> muons = applyProjection<DressedLeptons>(event, "dressedmuons").dressedLeptons();
+      vector<DressedLepton> electrons = apply<DressedLeptons>(event, "dressedelectrons").dressedLeptons();
+      vector<DressedLepton> muons = apply<DressedLeptons>(event, "dressedmuons").dressedLeptons();
       if (electrons.empty() && muons.empty())  vetoEvent;
 
-      Jets jets = applyProjection<FastJets>(event, "jets").jets((Cuts::pT>20*GeV) && (Cuts::abseta < 2.5), cmpMomByPt);
+      Jets jets = apply<FastJets>(event, "jets").jets((Cuts::pT>20*GeV) && (Cuts::abseta < 2.5), cmpMomByPt);
       Jets bjets;
 
       // Check overlap of jets/leptons.

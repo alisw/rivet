@@ -26,7 +26,7 @@ namespace Rivet {
     void init() {
       Cut cut = Cuts::abseta < 1.7 && Cuts::pT > 15*GeV;
       ZFinder zfinder(FinalState(), cut, PID::MUON, 65*GeV, 115*GeV, 0.2, ZFinder::NOCLUSTER, ZFinder::TRACK);
-      addProjection(zfinder, "ZFinder");
+      declare(zfinder, "ZFinder");
 
       _h_Z_pT_normalised = bookHisto1D(1, 1, 1);
       _h_Z_pT_xs = bookHisto1D(2, 1, 1);
@@ -36,7 +36,7 @@ namespace Rivet {
     // Do the analysis
     void analyze(const Event& e) {
       const double weight = e.weight();
-      const ZFinder& zfinder = applyProjection<ZFinder>(e, "ZFinder");
+      const ZFinder& zfinder = apply<ZFinder>(e, "ZFinder");
       if (zfinder.bosons().size()==1) {
         double ZpT = zfinder.bosons()[0].pT()/GeV;
         _h_Z_pT_normalised->fill(ZpT, weight);

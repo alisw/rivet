@@ -29,7 +29,7 @@ namespace Rivet {
       FinalState fs;
       /// @todo Use separate pT and ETmiss cuts in WFinder
       const WFinder wfe(fs, Cuts::abseta < 5 && Cuts::pT > 25*GeV, PID::ELECTRON, 60.0*GeV, 100.0*GeV, 25.0*GeV, 0.2);
-      addProjection(wfe, "WFe");
+      declare(wfe, "WFe");
 
       // Histograms (temporary +- charge histos and scatters to store the calculated asymmetries)
       for (size_t pmindex = 0; pmindex < 2; ++pmindex) {
@@ -46,7 +46,7 @@ namespace Rivet {
 
     /// Do the analysis
     void analyze(const Event & event) {
-      const WFinder& wf = applyProjection<WFinder>(event, "WFe");
+      const WFinder& wf = apply<WFinder>(event, "WFe");
       if (wf.bosons().size() == 0) {
         MSG_DEBUG("No W candidates found: vetoing");
         vetoEvent;

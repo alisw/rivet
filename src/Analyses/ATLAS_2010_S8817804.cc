@@ -24,9 +24,9 @@ namespace Rivet {
 
     void init() {
       FinalState fs;
-      addProjection(fs, "FinalState");
-      addProjection(FastJets(fs, FastJets::ANTIKT, 0.6), "AntiKT06");
-      addProjection(FastJets(fs, FastJets::ANTIKT, 0.4), "AntiKT04");
+      declare(fs, "FinalState");
+      declare(FastJets(fs, FastJets::ANTIKT, 0.6), "AntiKT06");
+      declare(FastJets(fs, FastJets::ANTIKT, 0.4), "AntiKT04");
 
       double ybins[] = { 0.0, 0.3, 0.8, 1.2, 2.1, 2.8 };
       double massBinsForChi[] = { 340, 520, 800, 1200 };
@@ -54,8 +54,8 @@ namespace Rivet {
 
     void analyze(const Event& evt) {
       Jets jetAr[2];
-      jetAr[AKT6] = applyProjection<FastJets>(evt, "AntiKT06").jetsByPt(30*GeV);
-      jetAr[AKT4] = applyProjection<FastJets>(evt, "AntiKT04").jetsByPt(30*GeV);
+      jetAr[AKT6] = apply<FastJets>(evt, "AntiKT06").jetsByPt(30*GeV);
+      jetAr[AKT4] = apply<FastJets>(evt, "AntiKT04").jetsByPt(30*GeV);
 
       // Identify the dijets
       for (size_t alg = 0; alg < 2; ++alg) {

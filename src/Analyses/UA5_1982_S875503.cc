@@ -21,8 +21,8 @@ namespace Rivet {
 
     /// Set up projections and book histos
     void init() {
-      addProjection(TriggerUA5(), "Trigger");
-      addProjection(ChargedFinalState(-3.5, 3.5), "CFS");
+      declare(TriggerUA5(), "Trigger");
+      declare(ChargedFinalState(-3.5, 3.5), "CFS");
 
       // Book histos based on pp or ppbar beams
       if (beamIds().first == beamIds().second) {
@@ -37,13 +37,13 @@ namespace Rivet {
 
     void analyze(const Event& event) {
       // Trigger
-      const TriggerUA5& trigger = applyProjection<TriggerUA5>(event, "Trigger");
+      const TriggerUA5& trigger = apply<TriggerUA5>(event, "Trigger");
       if (!trigger.nsdDecision()) vetoEvent;
       const double weight = event.weight();
       _sumWTrig += weight;
 
       // Get tracks
-      const ChargedFinalState& cfs = applyProjection<ChargedFinalState>(event, "CFS");
+      const ChargedFinalState& cfs = apply<ChargedFinalState>(event, "CFS");
 
       // Fill mean charged multiplicity histos
       _hist_nch->fill(_hist_nch->bin(0).xMid(), cfs.size()*weight);

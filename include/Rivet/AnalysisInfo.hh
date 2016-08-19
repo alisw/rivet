@@ -12,7 +12,7 @@ namespace Rivet {
   public:
 
     /// Static factory method: returns null pointer if no metadata found
-    static AnalysisInfo* make(const std::string& name);
+    static unique_ptr<AnalysisInfo> make(const std::string& name);
 
     /// @name Standard constructors and destructors.
     //@{

@@ -30,19 +30,19 @@ namespace Rivet {
 
       // gives the range of eta and min pT for the final state from which I get the jets
       FastJets jetpro (ChargedFinalState(-2.5, 2.5, 0.3*GeV), FastJets::ANTIKT, 0.5);
-      addProjection(jetpro, "Jets");
+      declare(jetpro, "Jets");
 
       // skip Neutrinos and Muons
       VetoedFinalState fsv(FinalState(-7.0, -4.0, 0.*GeV));
       fsv.vetoNeutrinos();
       fsv.addVetoPairId(PID::MUON);
-      addProjection(fsv, "fsv");
+      declare(fsv, "fsv");
 
       // for the hadron level selection
       VetoedFinalState sfsv(FinalState(-MAXDOUBLE, MAXDOUBLE, 0.*GeV));
       sfsv.vetoNeutrinos();
       sfsv.addVetoPairId(PID::MUON);
-      addProjection(sfsv, "sfsv");
+      declare(sfsv, "sfsv");
 
       //counters
       passedSumOfWeights = 0.;
@@ -66,12 +66,12 @@ namespace Rivet {
       const double weight = event.weight();
 
       // Skip if the event is empty
-      const FinalState& fsv = applyProjection<FinalState>(event, "fsv");
+      const FinalState& fsv = apply<FinalState>(event, "fsv");
       if (fsv.empty()) vetoEvent;
 
       // ====================== Minimum Bias selection
 
-      const FinalState& sfsv = applyProjection<FinalState>(event, "sfsv");
+      const FinalState& sfsv = apply<FinalState>(event, "sfsv");
       Particles parts = sfsv.particles(cmpMomByRap);
       if (parts.empty()) vetoEvent;
 
@@ -124,7 +124,7 @@ namespace Rivet {
 
       //  ============================== JET EVENTS
 
-      const FastJets& jetpro = applyProjection<FastJets>(event, "Jets");
+      const FastJets& jetpro = apply<FastJets>(event, "Jets");
       const Jets& jets = jetpro.jetsByPt(1.0*GeV);
       if (jets.size()<1) vetoEvent;
 

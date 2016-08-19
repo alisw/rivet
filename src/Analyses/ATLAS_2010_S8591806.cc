@@ -18,7 +18,7 @@ namespace Rivet {
 
     void init() {
       ChargedFinalState cfs(-2.5, 2.5, 0.5*GeV);
-      addProjection(cfs, "CFS");
+      declare(cfs, "CFS");
 
       _h_dNch_deta = bookHisto1D(2, 1, 1);
       _h_dNch_dpT = bookHisto1D(3, 1, 1);
@@ -30,7 +30,7 @@ namespace Rivet {
     void analyze(const Event& event) {
       const double weight = event.weight();
 
-      const ChargedFinalState& charged = applyProjection<ChargedFinalState>(event, "CFS");
+      const ChargedFinalState& charged = apply<ChargedFinalState>(event, "CFS");
       if (charged.size() < 1) {
         vetoEvent;
       }
@@ -66,8 +66,7 @@ namespace Rivet {
   };
 
 
-
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2010_S8591806);
+  //DECLARE_RIVET_PLUGIN(ATLAS_2010_S8591806);
+  DECLARE_ALIASED_RIVET_PLUGIN(ATLAS_2010_S8591806, ATLAS_2010_I849050);
 
 }

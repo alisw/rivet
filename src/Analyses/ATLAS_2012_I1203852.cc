@@ -120,32 +120,32 @@ namespace Rivet {
       Cut etaranges_lep = Cuts::abseta < 3.16 && Cuts::pT > 7*GeV;
 
       DressedLeptons electron_sel4l(Photon, bare_EL, 0.1, etaranges_lep);
-      addProjection(electron_sel4l, "ELECTRON_sel4l");
+      declare(electron_sel4l, "ELECTRON_sel4l");
       DressedLeptons muon_sel4l(Photon, bare_MU, 0.1, etaranges_lep);
-      addProjection(muon_sel4l, "MUON_sel4l");
+      declare(muon_sel4l, "MUON_sel4l");
 
 
       // Selection 2: ZZ-> llnunu selection
       Cut etaranges_lep2 = Cuts::abseta < 2.5 && Cuts::pT > 10*GeV;
 
       DressedLeptons electron_sel2l2nu(Photon, bare_EL, 0.1, etaranges_lep2);
-      addProjection(electron_sel2l2nu, "ELECTRON_sel2l2nu");
+      declare(electron_sel2l2nu, "ELECTRON_sel2l2nu");
       DressedLeptons muon_sel2l2nu(Photon, bare_MU, 0.1, etaranges_lep2);
-      addProjection(muon_sel2l2nu, "MUON_sel2l2nu");
+      declare(muon_sel2l2nu, "MUON_sel2l2nu");
 
 
       /// Get all neutrinos. These will not be used to form jets.
       /// We'll use the highest 2 pT neutrinos to calculate the MET
       IdentifiedFinalState neutrino_fs(Cuts::abseta < 4.5);
       neutrino_fs.acceptNeutrinos();
-      addProjection(neutrino_fs, "NEUTRINO_FS");
+      declare(neutrino_fs, "NEUTRINO_FS");
 
       VetoedFinalState jetinput;
       jetinput.addVetoOnThisFinalState(bare_MU);
       jetinput.addVetoOnThisFinalState(neutrino_fs);
 
       FastJets jetpro(fs, FastJets::ANTIKT, 0.4);
-      addProjection(jetpro, "jet");
+      declare(jetpro, "jet");
 
       // Both ZZ on-shell histos
       _h_ZZ_xsect = bookHisto1D(1, 1, 1);
@@ -174,8 +174,8 @@ namespace Rivet {
 
       Particles leptons_sel4l;
 
-      const vector<DressedLepton>& mu_sel4l = applyProjection<DressedLeptons>(e, "MUON_sel4l").dressedLeptons();
-      const vector<DressedLepton>& el_sel4l = applyProjection<DressedLeptons>(e, "ELECTRON_sel4l").dressedLeptons();
+      const vector<DressedLepton>& mu_sel4l = apply<DressedLeptons>(e, "MUON_sel4l").dressedLeptons();
+      const vector<DressedLepton>& el_sel4l = apply<DressedLeptons>(e, "ELECTRON_sel4l").dressedLeptons();
 
       vector<DressedLepton> leptonsFS_sel4l;
       leptonsFS_sel4l.insert( leptonsFS_sel4l.end(), mu_sel4l.begin(), mu_sel4l.end() );
@@ -244,8 +244,8 @@ namespace Rivet {
       ////////////////////////////////////////////////////////////////////
 
       Particles leptons_sel2l2nu; // output
-      const vector<DressedLepton>& mu_sel2l2nu = applyProjection<DressedLeptons>(e, "MUON_sel2l2nu").dressedLeptons();
-      const vector<DressedLepton>& el_sel2l2nu = applyProjection<DressedLeptons>(e, "ELECTRON_sel2l2nu").dressedLeptons();
+      const vector<DressedLepton>& mu_sel2l2nu = apply<DressedLeptons>(e, "MUON_sel2l2nu").dressedLeptons();
+      const vector<DressedLepton>& el_sel2l2nu = apply<DressedLeptons>(e, "ELECTRON_sel2l2nu").dressedLeptons();
 
       vector<DressedLepton> leptonsFS_sel2l2nu;
       leptonsFS_sel2l2nu.insert( leptonsFS_sel2l2nu.end(), mu_sel2l2nu.begin(), mu_sel2l2nu.end() );
@@ -275,7 +275,7 @@ namespace Rivet {
       FourMomentum Z1 = Z1constituents.first.momentum() + Z1constituents.second.momentum();
 
       // Find Z2-> nunu
-      const Particles& neutrinoFS = applyProjection<IdentifiedFinalState>(e, "NEUTRINO_FS").particlesByPt();
+      const Particles& neutrinoFS = apply<IdentifiedFinalState>(e, "NEUTRINO_FS").particlesByPt();
       FinalState fs3(-4.5, 4.5);
       InvMassFinalState imfs_Znunu(fs3, vnuids, 20*GeV, sqrtS(), ZMASS);
       imfs_Znunu.calc(neutrinoFS);
@@ -316,7 +316,7 @@ namespace Rivet {
       // JETVETO: veto all events with at least one good jet
       ///////////////////////////////////////////////////////////////////////////
       vector<Jet> good_jets;
-      foreach (const Jet& j, applyProjection<FastJets>(e, "jet").jetsByPt(25)) {
+      foreach (const Jet& j, apply<FastJets>(e, "jet").jetsByPt(25)) {
         if (j.abseta() > 4.5) continue;
         bool isLepton = 0;
         foreach (const Particle& l, leptons_sel2l2nu_jetveto) {

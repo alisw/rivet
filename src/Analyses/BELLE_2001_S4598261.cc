@@ -1,5 +1,4 @@
 // -*- C++ -*-
-#include <iostream>
 #include "Rivet/Analysis.hh"
 #include "Rivet/Projections/Beam.hh"
 #include "Rivet/Projections/UnstableFinalState.hh"
@@ -17,17 +16,23 @@ namespace Rivet {
     { }
 
 
+    void init() {
+      declare(UnstableFinalState(), "UFS");
+      _histdSigDp = bookHisto1D(1, 1, 1); // spectrum
+      _histMult   = bookHisto1D(2, 1, 1); // multiplicity
+    }
+
+
     void analyze(const Event& e) {
       const double weight = e.weight();
 
-
-      // find the upsilons
+      // Find the upsilons
       Particles upsilons;
-      // first in unstable final state
-      const UnstableFinalState& ufs = applyProjection<UnstableFinalState>(e, "UFS");
+      // First in unstable final state
+      const UnstableFinalState& ufs = apply<UnstableFinalState>(e, "UFS");
       foreach (const Particle& p, ufs.particles())
         if (p.pid()==300553) upsilons.push_back(p);
-      // then in whole event if fails
+      // Then in whole event if fails
       if (upsilons.empty()) {
         foreach (const GenParticle* p, Rivet::particles(e.genEvent())) {
           if (p->pdg_id() != 300553) continue;
@@ -52,10 +57,9 @@ namespace Rivet {
         // Find the neutral pions from the decay
         vector<GenParticle *> pions;
         findDecayProducts(p.genParticle(), pions);
-        LorentzTransform cms_boost(-p.momentum().boostVector());
+        const LorentzTransform cms_boost = LorentzTransform::mkFrameTransformFromBeta(p.momentum().betaVec());
         for (size_t ix=0; ix<pions.size(); ++ix) {
-          double pcm =
-            cms_boost.transform(FourMomentum(pions[ix]->momentum())).vector3().mod();
+          const double pcm = cms_boost.transform(FourMomentum(pions[ix]->momentum())).p();
           _histdSigDp->fill(pcm,weight);
         }
         _histMult->fill(0., pions.size()*weight);
@@ -69,16 +73,6 @@ namespace Rivet {
     }
 
 
-    void init() {
-      addProjection(UnstableFinalState(), "UFS");
-
-      // spectrum
-      _histdSigDp = bookHisto1D(1, 1, 1);
-      // multiplicity
-      _histMult   = bookHisto1D(2, 1, 1);
-    }
-
-
   private:
 
     //@{
@@ -89,14 +83,15 @@ namespace Rivet {
     Histo1DPtr _histMult;
     //@}
 
+
     void findDecayProducts(const GenParticle* p, vector<GenParticle*>& pions) {
       const GenVertex* dv = p->end_vertex();
       /// @todo Use better looping
       for (GenVertex::particles_out_const_iterator pp = dv->particles_out_const_begin(); pp != dv->particles_out_const_end(); ++pp) {
-        int id = (*pp)->pdg_id();
-        if (id==111) {
+        const int id = (*pp)->pdg_id();
+        if (id == 111) {
           pions.push_back(*pp);
-        } else if((*pp)->end_vertex())
+        } else if ((*pp)->end_vertex())
           findDecayProducts(*pp, pions);
       }
     }

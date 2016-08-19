@@ -13,9 +13,8 @@ namespace Rivet {
   class ATLAS_2015_I1397635 : public Analysis {
   public:
 
-    ATLAS_2015_I1397635()
-      : Analysis("ATLAS_2015_I1397635")
-    {    }
+    /// Constructor
+    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2015_I1397635);
 
 
     void init() {
@@ -36,9 +35,9 @@ namespace Rivet {
       el_id.acceptIdPair(PID::ELECTRON);
       PromptFinalState electrons(el_id);
       electrons.acceptTauDecays(true);
-      addProjection(electrons, "electrons");
+      declare(electrons, "electrons");
       DressedLeptons dressedelectrons(photons, electrons, 0.1, eta_lep && Cuts::pT >= 25*GeV, true, true);
-      addProjection(dressedelectrons, "dressedelectrons");
+      declare(dressedelectrons, "dressedelectrons");
       DressedLeptons ewdressedelectrons(photons, electrons, 0.1, eta_full, true, true);
 
       // Projection to find the muons
@@ -46,9 +45,9 @@ namespace Rivet {
       mu_id.acceptIdPair(PID::MUON);
       PromptFinalState muons(mu_id);
       muons.acceptTauDecays(true);
-      addProjection(muons, "muons");
+      declare(muons, "muons");
       DressedLeptons dressedmuons(photons, muons, 0.1, eta_lep && Cuts::pT >= 25*GeV, true, true);
-      addProjection(dressedmuons, "dressedmuons");
+      declare(dressedmuons, "dressedmuons");
       DressedLeptons ewdressedmuons(photons, muons, 0.1, eta_full, true, true);
 
       // Projection to find neutrinos and produce MET
@@ -56,7 +55,7 @@ namespace Rivet {
       nu_id.acceptNeutrinos();
       PromptFinalState neutrinos(nu_id);
       neutrinos.acceptTauDecays(true);
-      addProjection(neutrinos, "neutrinos");
+      declare(neutrinos, "neutrinos");
 
 
       // Jet clustering.
@@ -66,7 +65,7 @@ namespace Rivet {
       vfs.addVetoOnThisFinalState(neutrinos);
       FastJets jets(vfs,FastJets::ANTIKT, 0.4);
       jets.useInvisibles();
-      addProjection(jets, "jets");
+      declare(jets, "jets");
 
       _histo = bookHisto1D(1,1,1);
     }
@@ -75,14 +74,14 @@ namespace Rivet {
     void analyze(const Event& event) {
 
       // Get the selected objects, using the projections.
-      vector<DressedLepton> electrons = applyProjection<DressedLeptons>(event, "dressedelectrons").dressedLeptons();
-      vector<DressedLepton> muons = applyProjection<DressedLeptons>(event, "dressedmuons").dressedLeptons();
+      vector<DressedLepton> electrons = apply<DressedLeptons>(event, "dressedelectrons").dressedLeptons();
+      vector<DressedLepton> muons = apply<DressedLeptons>(event, "dressedmuons").dressedLeptons();
       // also make basic event selection cuts for leptons
       if (electrons.empty() && muons.empty())  vetoEvent;
       if (electrons.size() + muons.size() != 2) vetoEvent;
 
       // next selection cuts for jets
-      const Jets jets = applyProjection<FastJets>(event, "jets").jets(Cuts::pT>20*GeV && Cuts::abseta < 2.5, cmpMomByPt);
+      const Jets jets = apply<FastJets>(event, "jets").jets(Cuts::pT>20*GeV && Cuts::abseta < 2.5, cmpMomByPt);
       if (jets.size() != 1) vetoEvent;
 
       // and selection cuts for b-tagging
@@ -107,7 +106,7 @@ namespace Rivet {
 
       // Now evaluate MET selection
       // Get the neutrinos from the event record (they have pT > 0.0 and |eta| < 4.5 at this stage
-      const Particles& neutrinos = applyProjection<PromptFinalState>(event, "neutrinos").particlesByPt();
+      const Particles& neutrinos = apply<PromptFinalState>(event, "neutrinos").particlesByPt();
       FourMomentum met;
       foreach (const Particle& nu, neutrinos)  met += nu.momentum();
       if (met.pT() <= 20*GeV)  vetoEvent;

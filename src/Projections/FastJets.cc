@@ -14,8 +14,12 @@ namespace Rivet {
     addProjection(TauFinder(TauFinder::HADRONIC), "Taus");
   }
 
-  void FastJets::_init1(JetAlgName alg, double rparameter, double seed_threshold) {
-    _initBase();
+
+  // void FastJets::_init1(JetAlgName alg, double rparameter, double seed_threshold) {
+  //   _initBase();
+
+
+  void FastJets::_initJdef(JetAlgName alg, double rparameter, double seed_threshold) {
     MSG_DEBUG("JetAlg = " << alg);
     MSG_DEBUG("R parameter = " << rparameter);
     MSG_DEBUG("Seed threshold = " << seed_threshold);
@@ -36,7 +40,7 @@ namespace Rivet {
       //   string msg = "PxCone currently not supported, since FastJet doesn't install it by default. ";
       //   msg += "Please notify the Rivet authors if this behaviour should be changed.";
       //   throw Error(msg);
-        //_plugin.reset(new fastjet::PxConePlugin(rparameter));
+      //  _plugin.reset(new fastjet::PxConePlugin(rparameter));
       } else if (alg == ATLASCONE) {
         const double OVERLAP_THRESHOLD = 0.5;
         _plugin.reset(new fastjet::ATLASConePlugin(rparameter, seed_threshold, OVERLAP_THRESHOLD));
@@ -60,22 +64,28 @@ namespace Rivet {
     }
   }
 
-  void FastJets::_init2(fastjet::JetAlgorithm type,
-                        fastjet::RecombinationScheme recom, double rparameter) {
-    _initBase();
-    _jdef = fastjet::JetDefinition(type, rparameter, recom);
-  }
 
-  void FastJets::_init3(const fastjet::JetDefinition& jdef) {
-    _initBase();
-    _jdef = jdef;
-  }
+  // void FastJets::_init2(fastjet::JetAlgorithm type,
+  //                       fastjet::RecombinationScheme recom, double rparameter)
+  //   : FastJets
+  // {
 
-  void FastJets::_init4(fastjet::JetDefinition::Plugin* plugin) {
-    _initBase();
-    _plugin.reset(plugin);
-    _jdef = fastjet::JetDefinition(_plugin.get());
-  }
+  //   _initBase();
+  //   _jdef = fastjet::JetDefinition(type, rparameter, recom);
+  // }
+
+
+  // void FastJets::_init3(const fastjet::JetDefinition& jdef) {
+  //   _initBase();
+  //   _jdef = jdef;
+  // }
+
+
+  // void FastJets::_init4(fastjet::JetDefinition::Plugin* plugin) {
+  //   _initBase();
+  //   _plugin.reset(plugin);
+  //   _jdef = fastjet::JetDefinition(_plugin.get());
+  // }
 
 
 
@@ -94,6 +104,7 @@ namespace Rivet {
 
 
   namespace {
+    /// @todo Replace with C++11 lambdas
     bool isPromptInvisible(const Particle& p) { return !(p.isVisible() || p.fromDecay()); }
     // bool isMuon(const Particle& p) { return p.abspid() == PID::MUON; }
     bool isPromptMuon(const Particle& p) { return isMuon(p) && !p.fromDecay(); }
@@ -132,9 +143,8 @@ namespace Rivet {
 
     // Store 4 vector data about each particle into FastJet's PseudoJets
     int counter = 1;
-    foreach (const Particle& p, fsparticles) {
-      const FourMomentum fv = p.momentum();
-      fastjet::PseudoJet pj(fv.px(), fv.py(), fv.pz(), fv.E()); ///< @todo Eliminate with implicit cast?
+    for (const Particle& p : fsparticles) {
+      fastjet::PseudoJet pj = p;
       pj.set_user_index(counter);
       pjs.push_back(pj);
       _particles[counter] = p;
@@ -142,22 +152,24 @@ namespace Rivet {
     }
     // And the same for ghost tagging particles (with negative user indices)
     counter = 1;
-    foreach (const Particle& p, tagparticles) {
-      const FourMomentum fv = 1e-20 * p.momentum(); ///< Ghostify the momentum
-      fastjet::PseudoJet pj(fv.px(), fv.py(), fv.pz(), fv.E()); ///< @todo Eliminate with implicit cast?
+    for (const Particle& p : tagparticles) {
+      fastjet::PseudoJet pj = p;
+      pj *= 1e-20; ///< Ghostify the momentum
       pj.set_user_index(-counter);
       pjs.push_back(pj);
       _particles[-counter] = p;
       counter += 1;
     }
 
-    MSG_DEBUG("Running FastJet ClusterSequence construction");
     // Choose cseq as basic or area-calculating
-    if (_adef == NULL) {
-      _cseq.reset(new fastjet::ClusterSequence(pjs, _jdef));
-    } else {
+    if (_adef) {
       _cseq.reset(new fastjet::ClusterSequenceArea(pjs, _jdef, *_adef));
+    } else {
+      _cseq.reset(new fastjet::ClusterSequence(pjs, _jdef));
     }
+    MSG_DEBUG("FastJet ClusterSequence constructed; Njets_tot = "
+              << _cseq->inclusive_jets().size() << ", Njets_10 = "
+              << _cseq->inclusive_jets(10*GeV).size()); //< only inefficient in debug mode
   }
 
 
@@ -168,16 +180,10 @@ namespace Rivet {
   }
 
 
-  size_t FastJets::numJets(double ptmin) const {
-    if (_cseq.get() == NULL) return 0;
-    return _cseq->inclusive_jets(ptmin).size();
-  }
-
-
-  Jets FastJets::_jets(double ptmin) const {
-    Jets rtn;
+  Jets FastJets::_jets() const {
+    Jets rtn; rtn.reserve(pseudojets().size());
     foreach (const fastjet::PseudoJet& pj, pseudojets()) {
-      rtn.push_back(_makeJetFromPseudoJet(pj));
+      rtn.push_back(_mkJet(pj));
     }
     /// @todo Cache?
     return rtn;
@@ -185,28 +191,28 @@ namespace Rivet {
 
 
   Jet FastJets::trimJet(const Jet &input, const fastjet::Filter &trimmer)const{
-    assert(input.pseudojet().associated_cluster_sequence() == clusterSeq());
+    assert(input.pseudojet().associated_cluster_sequence() == clusterSeq().get());
     PseudoJet pj = trimmer(input);
-    return _makeJetFromPseudoJet(pj);
+    return _mkJet(pj);
   }
 
 
   PseudoJets FastJets::pseudoJets(double ptmin) const {
-    return (clusterSeq() != NULL) ? clusterSeq()->inclusive_jets(ptmin) : PseudoJets();
+    return clusterSeq() ? clusterSeq()->inclusive_jets(ptmin) : PseudoJets();
   }
 
 
-  Jet FastJets::_makeJetFromPseudoJet(const PseudoJet &pj)const{
-    assert(clusterSeq() != NULL);
-    
-    // take the constituents from the cluster sequence, unless the jet was not
+  Jet FastJets::_mkJet(const PseudoJet &pj)const{
+    assert(clusterSeq());
+
+    // Take the constituents from the cluster sequence, unless the jet was not
     // associated with the cluster sequence (could be the case for trimmed jets)
-    const PseudoJets parts = (pj.associated_cluster_sequence() == clusterSeq())?
-    clusterSeq()->constituents(pj): pj.constituents();
-    
+    const PseudoJets parts = (pj.associated_cluster_sequence() == clusterSeq().get())
+      ? clusterSeq()->constituents(pj) : pj.constituents();
+
     vector<Particle> constituents, tags;
     constituents.reserve(parts.size());
-    foreach (const fastjet::PseudoJet& p, parts) {
+    for (const fastjet::PseudoJet& p : parts) {
       map<int, Particle>::const_iterator found = _particles.find(p.user_index());
       // assert(found != _particles.end());
       if (found == _particles.end() && p.is_pure_ghost()) continue; //< Pure FJ ghosts are ok
@@ -215,7 +221,7 @@ namespace Rivet {
       if (found->first > 0) constituents.push_back(found->second);
       else if (found->first < 0) tags.push_back(found->second);
     }
-    
+
     return Jet(pj, constituents, tags);
   }
 

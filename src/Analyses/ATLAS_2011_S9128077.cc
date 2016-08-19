@@ -25,10 +25,10 @@ namespace Rivet {
       const FinalState fs;
       FastJets j4(fs, FastJets::ANTIKT, 0.4);
       j4.useInvisibles();
-      addProjection(j4, "AntiKtJets04");
+      declare(j4, "AntiKtJets04");
       FastJets j6(fs, FastJets::ANTIKT, 0.6);
       j6.useInvisibles();
-      addProjection(j6, "AntiKtJets06");
+      declare(j6, "AntiKtJets06");
 
       // Persistent histograms
       _h_jet_multi_inclusive = bookHisto1D(1, 1, 1);
@@ -78,7 +78,7 @@ namespace Rivet {
       const double weight = event.weight();
 
       vector<FourMomentum> jets04;
-      foreach (const Jet& jet, applyProjection<FastJets>(event, "AntiKtJets04").jetsByPt(60.0*GeV)) {
+      foreach (const Jet& jet, apply<FastJets>(event, "AntiKtJets04").jetsByPt(60.0*GeV)) {
         if (jet.abseta() < 2.8) {
           jets04.push_back(jet.momentum());
         }
@@ -118,7 +118,7 @@ namespace Rivet {
 
       /// @todo It'd be better to avoid duplicating 95% of the code!
       vector<FourMomentum> jets06;
-      foreach (const Jet& jet, applyProjection<FastJets>(event, "AntiKtJets06").jetsByPt(60.0*GeV)) {
+      foreach (const Jet& jet, apply<FastJets>(event, "AntiKtJets06").jetsByPt(60.0*GeV)) {
         if (jet.abseta() < 2.8) {
           jets06.push_back(jet.momentum());
         }

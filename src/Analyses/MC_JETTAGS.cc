@@ -1,11 +1,10 @@
 // -*- C++ -*-
-#include "Rivet/Analyses/MC_JetAnalysis.hh"
+#include "Rivet/Analysis.hh"
 #include "Rivet/Projections/FinalState.hh"
 #include "Rivet/Projections/FastJets.hh"
 
 namespace Rivet {
 
-  
 
 
   /// @brief MC validation analysis for jet events
@@ -19,8 +18,8 @@ namespace Rivet {
 
     void init() {
       FinalState fs;
-      addProjection(FastJets(fs, FastJets::ANTIKT, 0.4), "Jets04");
-      addProjection(FastJets(fs, FastJets::ANTIKT, 0.6), "Jets06");
+      declare(FastJets(fs, FastJets::ANTIKT, 0.4), "Jets04");
+      declare(FastJets(fs, FastJets::ANTIKT, 0.6), "Jets06");
 
       _h_numBTagsPerJet[0] = bookHisto1D("numBTagsPer04Jet", 5, -0.5, 4.5);
       _h_numBTagsPerJet[1] = bookHisto1D("numBTagsPer06Jet", 5, -0.5, 4.5);
@@ -34,15 +33,15 @@ namespace Rivet {
     void analyze(const Event& event) {
       const double weight = event.weight();
 
-      const Jets jets04 = applyProjection<FastJets>(event, "Jets04").jetsByPt(20*GeV);
-      const Jets jets06 = applyProjection<FastJets>(event, "Jets06").jetsByPt(20*GeV);
+      const Jets jets04 = apply<FastJets>(event, "Jets04").jetsByPt(20*GeV);
+      const Jets jets06 = apply<FastJets>(event, "Jets06").jetsByPt(20*GeV);
 
-      foreach (const Jet& j, jets04) {
+      for (const Jet& j : jets04) {
         _h_numBTagsPerJet[0]->fill(j.bTags().size(), weight);
         _h_numCTagsPerJet[0]->fill(j.cTags().size(), weight);
         _h_numTauTagsPerJet[0]->fill(j.tauTags().size(), weight);
       }
-      foreach (const Jet& j, jets06) {
+      for (const Jet& j : jets06) {
         _h_numBTagsPerJet[1]->fill(j.bTags().size(), weight);
         _h_numCTagsPerJet[1]->fill(j.cTags().size(), weight);
         _h_numTauTagsPerJet[1]->fill(j.tauTags().size(), weight);

@@ -35,11 +35,11 @@ namespace Rivet {
 
                 FastJets fj04(fs, FastJets::ANTIKT, 0.4);
                 fj04.useInvisibles();
-                addProjection(fj04, "AntiKT04");
+                declare(fj04, "AntiKT04");
 
                 FastJets fj06(fs, FastJets::ANTIKT, 0.6);
                 fj06.useInvisibles();
-                addProjection(fj06, "AntiKT06");
+                declare(fj06, "AntiKT06");
 
                 double ystarBins[] = { 0.0, 2.0, 4.0, 6.0, 8.0, 10.0 };
 
@@ -56,8 +56,8 @@ namespace Rivet {
             void analyze(const Event& event) {
 
                 Jets jetAr[2];
-                jetAr[AKT4] = applyProjection<FastJets>(event, "AntiKT04").jetsByPt(Cuts::pT > 50*GeV);
-                jetAr[AKT6] = applyProjection<FastJets>(event, "AntiKT06").jetsByPt(Cuts::pT > 50*GeV);
+                jetAr[AKT4] = apply<FastJets>(event, "AntiKT04").jetsByPt(Cuts::pT > 50*GeV);
+                jetAr[AKT6] = apply<FastJets>(event, "AntiKT06").jetsByPt(Cuts::pT > 50*GeV);
 
                 const size_t nJets = 3;
                 double ptCut[nJets] = { 150., 100., 50.};

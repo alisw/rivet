@@ -30,14 +30,14 @@ namespace Rivet {
       // > 30 GeV, out of which the ChargedLeptons projection picks only the
       // electrons and muons, to be accessed later as "LFS".
       ChargedLeptons lfs(FinalState(-4.2, 4.2, 30*GeV));
-      addProjection(lfs, "LFS");
+      declare(lfs, "LFS");
       // A second FinalState is used to select all particles in |eta| < 4.2,
       // with no pT cut. This is used to construct jets and measure missing
       // transverse energy.
       VetoedFinalState fs(FinalState(-4.2, 4.2, 0*GeV));
       fs.addVetoOnThisFinalState(lfs);
-      addProjection(FastJets(fs, FastJets::ANTIKT, 0.6), "Jets");
-      addProjection(MissingMomentum(fs), "MissingET");
+      declare(FastJets(fs, FastJets::ANTIKT, 0.6), "Jets");
+      declare(MissingMomentum(fs), "MissingET");
 
       // Booking of histograms
       _h_njets = bookHisto1D("jet_mult", 11, -0.5, 10.5);
@@ -83,7 +83,7 @@ namespace Rivet {
       // Use the "LFS" projection to require at least one hard charged
       // lepton. This is an experimental signature for the leptonically decaying
       // W. This helps to reduce pure QCD backgrounds.
-      const ChargedLeptons& lfs = applyProjection<ChargedLeptons>(event, "LFS");
+      const ChargedLeptons& lfs = apply<ChargedLeptons>(event, "LFS");
       MSG_DEBUG("Charged lepton multiplicity = " << lfs.chargedLeptons().size());
       foreach (const Particle& lepton, lfs.chargedLeptons()) {
         MSG_DEBUG("Lepton pT = " << lepton.pT());
@@ -95,7 +95,7 @@ namespace Rivet {
 
       // Use a missing ET cut to bias toward events with a hard neutrino from
       // the leptonically decaying W. This helps to reduce pure QCD backgrounds.
-      const MissingMomentum& met = applyProjection<MissingMomentum>(event, "MissingET");
+      const MissingMomentum& met = apply<MissingMomentum>(event, "MissingET");
       MSG_DEBUG("Vector ET = " << met.vectorEt().mod() << " GeV");
       if (met.vectorEt().mod() < 30*GeV) {
         MSG_DEBUG("Event failed missing ET cut");
@@ -106,7 +106,7 @@ namespace Rivet {
       // any pT. Getting the jets sorted by pT ensures that the first jet is the
       // hardest, and so on. We apply no pT cut here only because we want to
       // plot all jet pTs to help optimise our jet pT cut.
-      const FastJets& jetpro = applyProjection<FastJets>(event, "Jets");
+      const FastJets& jetpro = apply<FastJets>(event, "Jets");
       const Jets alljets = jetpro.jetsByPt();
       if (alljets.size() < 4) {
         MSG_DEBUG("Event failed jet multiplicity cut");

@@ -23,12 +23,12 @@ namespace Rivet {
     void init() {
       FinalState fs;
       WFinder wenufinder(fs, Cuts::abseta < 3.5 && Cuts::pT > 25*GeV, PID::ELECTRON, 60.0*GeV, 100.0*GeV, 25.0*GeV, 0.2);
-      addProjection(wenufinder, "WenuFinder");
+      declare(wenufinder, "WenuFinder");
 
       VetoedFinalState wmnuinput;
       wmnuinput.addVetoOnThisFinalState(wenufinder);
       WFinder wmnufinder(wmnuinput, Cuts::abseta < 3.5 && Cuts::pT > 25*GeV, PID::MUON, 60.0*GeV, 100.0*GeV, 25.0*GeV, 0.2);
-      addProjection(wmnufinder, "WmnuFinder");
+      declare(wmnufinder, "WmnuFinder");
 
       // properties of the pair momentum
       double sqrts = sqrtS()>0. ? sqrtS() : 14000.;
@@ -69,12 +69,12 @@ namespace Rivet {
     void analyze(const Event & e) {
       const double weight = e.weight();
 
-      const WFinder& wenufinder = applyProjection<WFinder>(e, "WenuFinder");
+      const WFinder& wenufinder = apply<WFinder>(e, "WenuFinder");
       if (wenufinder.bosons().size()!=1) {
         vetoEvent;
       }
 
-      const WFinder& wmnufinder = applyProjection<WFinder>(e, "WmnuFinder");
+      const WFinder& wmnufinder = apply<WFinder>(e, "WmnuFinder");
       if (wmnufinder.bosons().size()!=1) {
         vetoEvent;
       }

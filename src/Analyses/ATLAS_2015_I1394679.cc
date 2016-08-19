@@ -11,9 +11,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    ATLAS_2015_I1394679()
-      : Analysis("ATLAS_2015_I1394679")
-    {    }
+    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2015_I1394679);
 
 
     /// @name Analysis methods
@@ -24,9 +22,9 @@ namespace Rivet {
 
       // Initialise and register projections here
       const FinalState fs;
-      addProjection(fs, "FinalState");
+      declare(fs, "FinalState");
       FastJets fj04(fs, FastJets::ANTIKT, 0.4, JetAlg::ALL_MUONS, JetAlg::DECAY_INVISIBLES);
-      addProjection(fj04, "AntiKt4jets");
+      declare(fj04, "AntiKt4jets");
 
       // Histograms
       _h["pt1"] = bookHisto1D(1, 1, 1);
@@ -55,7 +53,7 @@ namespace Rivet {
     /// Perform the per-event analysis
     void analyze(const Event& event) {
 
-      const Jets& alljetskt4 = applyProjection<FastJets>(event, "AntiKt4jets").jetsByPt(Cuts::pT > 60*GeV && Cuts::absrap < 2.8);
+      const Jets& alljetskt4 = apply<FastJets>(event, "AntiKt4jets").jetsByPt(Cuts::pT > 60*GeV && Cuts::absrap < 2.8);
 
       // Require 4 jets with rap < 2.8 and passing pT cuts
       int nJets = alljetskt4.size();

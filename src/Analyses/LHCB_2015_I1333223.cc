@@ -32,7 +32,7 @@ namespace Rivet {
     /// Book histograms and initialise projections before the run
     void init() {
       // Charged particles
-      addProjection(ChargedFinalState(Cuts::eta> 2.0 && Cuts::eta <4.5 && Cuts::pT >0.2*GeV), "CFS");
+      declare(ChargedFinalState(Cuts::eta> 2.0 && Cuts::eta <4.5 && Cuts::pT >0.2*GeV), "CFS");
       // Reproducing only measurement for prompt charged particles
       _hInelasticXs = bookHisto1D(1, 1, 1);
     }
@@ -41,7 +41,7 @@ namespace Rivet {
     /// Perform the per-event analysis
     void analyze(const Event& event) {
       const double             weight  = event.weight();
-      const ChargedFinalState   &cfs    = applyProjection<ChargedFinalState> (event, "CFS");
+      const ChargedFinalState   &cfs    = apply<ChargedFinalState> (event, "CFS");
 
       // eliminate non-inelastic events and empty events in LHCb
       if (cfs.particles().size() == 0) vetoEvent;

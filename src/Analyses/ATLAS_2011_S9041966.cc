@@ -51,37 +51,37 @@ namespace Rivet {
       // projection to find the electrons
       IdentifiedFinalState elecs(Cuts::abseta < 2.47 && Cuts::pT > 20*GeV);
       elecs.acceptIdPair(PID::ELECTRON);
-      addProjection(elecs, "elecs");
+      declare(elecs, "elecs");
 
       // veto region electrons
       Cut vetocut = Cuts::absetaIn(1.35, 1.52);
       IdentifiedFinalState veto_elecs(vetocut && Cuts::pT > 10*GeV);
       veto_elecs.acceptIdPair(PID::ELECTRON);
-      addProjection(veto_elecs, "veto_elecs");
+      declare(veto_elecs, "veto_elecs");
 
       ///DEBUG
       // projection to find all leptons
       IdentifiedFinalState all_mu_e;
       all_mu_e.acceptIdPair(PID::MUON);
       all_mu_e.acceptIdPair(PID::ELECTRON);
-      addProjection(all_mu_e, "all_mu_e"); //debug
+      declare(all_mu_e, "all_mu_e"); //debug
 
       // projection to find the muons
       IdentifiedFinalState muons(Cuts::abseta < 2.4 && Cuts::pT > 20*GeV);
       muons.acceptIdPair(PID::MUON);
-      addProjection(muons, "muons");
+      declare(muons, "muons");
 
       // Jet finder
       VetoedFinalState vfs;
       vfs.addVetoPairDetail(PID::MUON, 20*GeV, 7000*GeV);
       vfs.addVetoPairDetail(PID::ELECTRON, 20*GeV, 7000*GeV);
-      addProjection(FastJets(vfs, FastJets::ANTIKT, 0.4), "AntiKtJets04");
+      declare(FastJets(vfs, FastJets::ANTIKT, 0.4), "AntiKtJets04");
 
       // all tracks (to do deltaR with leptons)
-      addProjection(ChargedFinalState(Cuts::abseta < 3 && Cuts::pT > 0.5*GeV), "cfs");
+      declare(ChargedFinalState(Cuts::abseta < 3 && Cuts::pT > 0.5*GeV), "cfs");
 
       // for pTmiss
-      addProjection(VisibleFinalState(Cuts::abseta < 4.9), "vfs");
+      declare(VisibleFinalState(Cuts::abseta < 4.9), "vfs");
 
       /// Book histograms
       _count_mumujj = bookHisto1D("count_2muons_dijet", 1, 0., 1.);
@@ -114,20 +114,20 @@ namespace Rivet {
       count +=1; //cerr<< "Event " << count << '\n';
       // debug
 
-      Particles veto_e = applyProjection<IdentifiedFinalState>(event, "veto_elecs").particles();
+      Particles veto_e = apply<IdentifiedFinalState>(event, "veto_elecs").particles();
       if ( ! veto_e.empty() ) {
         MSG_DEBUG("electrons in veto region");
         vetoEvent;
       }
       ++vetoe;
 
-      Jets cand_jets = applyProjection<FastJets>(event, "AntiKtJets04").jetsByPt(Cuts::pT > 20*GeV && Cuts::abseta < 2.8);
+      Jets cand_jets = apply<FastJets>(event, "AntiKtJets04").jetsByPt(Cuts::pT > 20*GeV && Cuts::abseta < 2.8);
 
-      Particles candtemp_e = applyProjection<IdentifiedFinalState>(event, "elecs").particlesByPt();
-      Particles candtemp_mu = applyProjection<IdentifiedFinalState>(event,"muons").particlesByPt();
+      Particles candtemp_e = apply<IdentifiedFinalState>(event, "elecs").particlesByPt();
+      Particles candtemp_mu = apply<IdentifiedFinalState>(event,"muons").particlesByPt();
       Particles cand_mu;
       Particles cand_e;
-      Particles vfs_particles = applyProjection<VisibleFinalState>(event, "vfs").particles();
+      Particles vfs_particles = apply<VisibleFinalState>(event, "vfs").particles();
 
 
       // pTcone around muon track

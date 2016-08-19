@@ -24,10 +24,10 @@ namespace Rivet {
     void init() {
 
       UnstableFinalState ufs(Cuts::pT > 100*MeV);
-      addProjection(ufs, "UFS");
+      declare(ufs, "UFS");
 
       ChargedFinalState  mbts(Cuts::absetaIn(2.09, 3.84));
-      addProjection(mbts, "MBTS");
+      declare(mbts, "MBTS");
 
       IdentifiedFinalState nstable(Cuts::abseta < 2.5 && Cuts::pT >= 100*MeV);
       nstable.acceptIdPair(PID::ELECTRON)
@@ -35,7 +35,7 @@ namespace Rivet {
         .acceptIdPair(PID::PIPLUS)
         .acceptIdPair(PID::KPLUS)
         .acceptIdPair(PID::PROTON);
-      addProjection(nstable, "nstable");
+      declare(nstable, "nstable");
 
       if (fuzzyEquals(sqrtS()/GeV, 7000, 1e-3)) {
         _hist_Ks_pT      = bookHisto1D(1, 1, 1);
@@ -130,20 +130,20 @@ namespace Rivet {
       const double weight = event.weight();
 
       // ATLAS MBTS trigger requirement of at least one hit in either hemisphere
-      if (applyProjection<FinalState>(event, "MBTS").size() < 1) {
+      if (apply<FinalState>(event, "MBTS").size() < 1) {
         MSG_DEBUG("Failed trigger cut");
         vetoEvent;
       }
 
       // Veto event also when we find less than 2 particles in the acceptance region of type 211,2212,11,13,321
-      if (applyProjection<FinalState>(event, "nstable").size() < 2) {
+      if (apply<FinalState>(event, "nstable").size() < 2) {
         MSG_DEBUG("Failed stable particle cut");
         vetoEvent;
       }
       _sum_w_passed += weight;
 
       // This ufs holds all the Kaons and Lambdas
-      const UnstableFinalState& ufs = applyProjection<UnstableFinalState>(event, "UFS");
+      const UnstableFinalState& ufs = apply<UnstableFinalState>(event, "UFS");
 
       // Some conters
       int n_KS0 = 0;

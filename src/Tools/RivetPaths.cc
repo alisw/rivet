@@ -1,14 +1,14 @@
 #include "Rivet/Config/RivetCommon.hh"
 #include "Rivet/Tools/RivetPaths.hh"
-#include "Rivet/Tools/RivetBoost.hh"
 #include "Rivet/Tools/Utils.hh"
 #include "binreloc.h"
+#include <cstring>
 
 namespace Rivet {
 
 
   inline string _findFile(const string& filename, const vector<string>& paths) {
-    foreach (const string& dir, paths) {
+    for (const string& dir : paths) {
       const string path = dir + "/" + filename;
       if (fileexists(path)) return path;
     }
@@ -66,6 +66,18 @@ namespace Rivet {
     return _findFile(filename, getAnalysisLibPaths());
   }
 
+
+
+  void setAnalysisDataPaths(const vector<string>& paths) {
+    const string pathstr = pathjoin(paths);
+    setenv("RIVET_DATA_PATH", pathstr.c_str(), 1);
+  }
+
+  void addAnalysisDataPath(const string& extrapath) {
+    vector<string> paths = getAnalysisDataPaths();
+    paths.push_back(extrapath);
+    setAnalysisDataPaths(paths);
+  }
 
   vector<string> getAnalysisDataPaths() {
     vector<string> dirs;

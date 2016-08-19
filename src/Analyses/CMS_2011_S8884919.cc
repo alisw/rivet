@@ -16,7 +16,7 @@ namespace Rivet {
 
     void init() {
       ChargedFinalState cfs(-2.4, 2.4, 0.0*GeV);
-      addProjection(cfs, "CFS");
+      declare(cfs, "CFS");
 
       // eta bins
       _etabins.push_back(0.5);
@@ -55,7 +55,7 @@ namespace Rivet {
       const double weight = event.weight();
 
       // Get the charged particles
-      const ChargedFinalState& charged = applyProjection<ChargedFinalState>(event, "CFS");
+      const ChargedFinalState& charged = apply<ChargedFinalState>(event, "CFS");
 
       // Resetting the multiplicity for the event to 0;
       vector<int> _nch_in_Evt;

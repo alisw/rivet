@@ -1,14 +1,11 @@
-#include <Rivet/Cuts.hh>
-#include <boost/make_shared.hpp>
+#include "Rivet/Tools/Cuts.hh"
+#include "Rivet/Particle.hh"
+#include "Rivet/Jet.hh"
+#include "Rivet/Math/Vectors.hh"
+#include "fastjet/PseudoJet.hh"
+#include "HepMC/SimpleVector.h"
 
-// headers for converters
-#include <Rivet/Particle.hh>
-#include <Rivet/Jet.hh>
-#include <Rivet/Math/Vectors.hh>
-#include <fastjet/PseudoJet.hh>
-#include <HepMC/SimpleVector.h>
-
-// todo Sort out what can go into anonymous namespace{}
+/// @todo Sort out what can go into anonymous namespace
 
 namespace Rivet {
 
@@ -36,7 +33,7 @@ namespace Rivet {
   class Open_Cut : public CutBase {
   public:
     bool operator==(const Cut & c) const {
-      shared_ptr<Open_Cut> cc = dynamic_pointer_cast<Open_Cut>(c);
+      std::shared_ptr<Open_Cut> cc = dynamic_pointer_cast<Open_Cut>(c);
       return bool(cc);
     }
   protected:
@@ -44,13 +41,16 @@ namespace Rivet {
     bool _accept(const CuttableBase &) const { return true; }
   };
 
-  const Cut & Cuts::open() {
-    // only ever need one static open cut object
-    static const Cut open = boost::make_shared<Open_Cut>();
+
+  const Cut& Cuts::open() {
+    // Only ever need one static open cut object
+    static const Cut open = std::make_shared<Open_Cut>();
     return open;
   }
 
-
+  // Constants for convenient access
+  const Cut& Cuts::OPEN = Cuts::open();
+  const Cut& Cuts::NOCUT = Cuts::open();
 
 
 
@@ -59,7 +59,7 @@ namespace Rivet {
   public:
     Cut_GtrEq(const Cuts::Quantity qty, const double low) : qty_(qty), low_(low) {}
     bool operator==(const Cut & c) const {
-      shared_ptr<Cut_GtrEq> cc = dynamic_pointer_cast<Cut_GtrEq>(c);
+      std::shared_ptr<Cut_GtrEq> cc = dynamic_pointer_cast<Cut_GtrEq>(c);
       return cc && qty_ == cc->qty_  &&  low_ == cc->low_;
     }
   protected:
@@ -69,12 +69,13 @@ namespace Rivet {
     double low_;
   };
 
+
   // Cut constructor for <
   class Cut_Less : public CutBase {
   public:
     Cut_Less(const Cuts::Quantity qty, const double high) : qty_(qty), high_(high) {}
     bool operator==(const Cut & c) const {
-      shared_ptr<Cut_Less> cc = dynamic_pointer_cast<Cut_Less>(c);
+      std::shared_ptr<Cut_Less> cc = dynamic_pointer_cast<Cut_Less>(c);
       return cc && qty_ == cc->qty_  &&  high_ == cc->high_;
     }
   protected:
@@ -84,12 +85,13 @@ namespace Rivet {
     double high_;
   };
 
+
   // Cut constructor for >=
   class Cut_Gtr : public CutBase {
   public:
     Cut_Gtr(const Cuts::Quantity qty, const double low) : qty_(qty), low_(low) {}
     bool operator==(const Cut & c) const {
-      shared_ptr<Cut_Gtr> cc = dynamic_pointer_cast<Cut_Gtr>(c);
+      std::shared_ptr<Cut_Gtr> cc = dynamic_pointer_cast<Cut_Gtr>(c);
       return cc && qty_ == cc->qty_  &&  low_ == cc->low_;
     }
   protected:
@@ -99,12 +101,13 @@ namespace Rivet {
     double low_;
   };
 
+
   // Cut constructor for <
   class Cut_LessEq : public CutBase {
   public:
     Cut_LessEq(const Cuts::Quantity qty, const double high) : qty_(qty), high_(high) {}
     bool operator==(const Cut & c) const {
-      shared_ptr<Cut_LessEq> cc = dynamic_pointer_cast<Cut_LessEq>(c);
+      std::shared_ptr<Cut_LessEq> cc = dynamic_pointer_cast<Cut_LessEq>(c);
       return cc && qty_ == cc->qty_  &&  high_ == cc->high_;
     }
   protected:
@@ -117,7 +120,7 @@ namespace Rivet {
 
   template <typename T>
   inline Cut make_cut(T t) {
-    return boost::make_shared<T>(t);
+    return std::make_shared<T>(t);
   }
 
   Cut operator < (Cuts::Quantity qty, double n) {
@@ -151,7 +154,7 @@ namespace Rivet {
   public:
     CutsOr(const Cut & c1, const Cut & c2) : cut1(c1), cut2(c2) {}
     bool operator==(const Cut & c) const {
-      shared_ptr<CutsOr> cc = dynamic_pointer_cast<CutsOr>(c);
+      std::shared_ptr<CutsOr> cc = dynamic_pointer_cast<CutsOr>(c);
       return cc && (   ( cut1 == cc->cut1  &&  cut2 == cc->cut2 )
                        || ( cut1 == cc->cut2  &&  cut2 == cc->cut1 ));
     }
@@ -164,11 +167,12 @@ namespace Rivet {
     const Cut cut2;
   };
 
+
   class CutsAnd : public CutBase {
   public:
     CutsAnd(const Cut & c1, const Cut & c2) : cut1(c1), cut2(c2) {}
     bool operator==(const Cut & c) const {
-      shared_ptr<CutsAnd> cc = dynamic_pointer_cast<CutsAnd>(c);
+      std::shared_ptr<CutsAnd> cc = dynamic_pointer_cast<CutsAnd>(c);
       return cc && (   ( cut1 == cc->cut1  &&  cut2 == cc->cut2 )
                        || ( cut1 == cc->cut2  &&  cut2 == cc->cut1 ));
     }
@@ -181,11 +185,12 @@ namespace Rivet {
     const Cut cut2;
   };
 
+
   class CutInvert : public CutBase {
   public:
     CutInvert(const Cut & c1) : cut(c1) {}
     bool operator==(const Cut & c) const {
-      shared_ptr<CutInvert> cc = dynamic_pointer_cast<CutInvert>(c);
+      std::shared_ptr<CutInvert> cc = dynamic_pointer_cast<CutInvert>(c);
       return cc && cut == cc->cut;
     }
   protected:
@@ -196,11 +201,12 @@ namespace Rivet {
     const Cut cut;
   };
 
+
   class CutsXor : public CutBase {
   public:
     CutsXor(const Cut & c1, const Cut & c2) : cut1(c1), cut2(c2) {}
     bool operator==(const Cut & c) const {
-      shared_ptr<CutsXor> cc = dynamic_pointer_cast<CutsXor>(c);
+      std::shared_ptr<CutsXor> cc = dynamic_pointer_cast<CutsXor>(c);
       return cc && (   ( cut1 == cc->cut1  &&  cut2 == cc->cut2 )
                        || ( cut1 == cc->cut2  &&  cut2 == cc->cut1 ));
     }
@@ -214,6 +220,7 @@ namespace Rivet {
     const Cut cut1;
     const Cut cut2;
   };
+
 
   ////////////
   ///Operators
@@ -247,6 +254,7 @@ namespace Rivet {
     return make_cut(CutsXor(aptr, bptr));
   }
 
+
   ///////////////////////
   /// Cuts
 
@@ -272,14 +280,20 @@ namespace Rivet {
     Cuttable(const Particle& p) : p_(p) {}
     double getValue(Cuts::Quantity qty) const {
       switch ( qty ) {
-      case Cuts::pT:     return p_.momentum().pT();
-      case Cuts::Et:     return p_.momentum().Et();
-      case Cuts::mass:   return p_.momentum().mass();
-      case Cuts::rap:    return p_.momentum().rapidity();
-      case Cuts::absrap: return std::abs(p_.momentum().rapidity());
-      case Cuts::eta:    return p_.momentum().pseudorapidity();
-      case Cuts::abseta: return std::abs(p_.momentum().pseudorapidity());
-      case Cuts::phi:    return p_.momentum().phi();
+      case Cuts::pT:         return p_.pT();
+      case Cuts::Et:         return p_.Et();
+      case Cuts::mass:       return p_.mass();
+      case Cuts::rap:        return p_.rap();
+      case Cuts::absrap:     return p_.absrap();
+      case Cuts::eta:        return p_.eta();
+      case Cuts::abseta:     return p_.abseta();
+      case Cuts::phi:        return p_.phi();
+      case Cuts::pid:        return p_.pid();
+      case Cuts::abspid:     return p_.abspid();
+      case Cuts::charge:     return p_.charge();
+      case Cuts::abscharge:  return p_.abscharge();
+      case Cuts::charge3:    return p_.charge3();
+      case Cuts::abscharge3: return p_.abscharge3();
       default: qty_not_found();
       }
       return -999.;
@@ -299,10 +313,10 @@ namespace Rivet {
       case Cuts::pT:     return fm_.pT();
       case Cuts::Et:     return fm_.Et();
       case Cuts::mass:   return fm_.mass();
-      case Cuts::rap:    return fm_.rapidity();
-      case Cuts::absrap: return std::abs(fm_.rapidity());
-      case Cuts::eta:    return fm_.pseudorapidity();
-      case Cuts::abseta: return std::abs(fm_.pseudorapidity());
+      case Cuts::rap:    return fm_.rap();
+      case Cuts::absrap: return fm_.absrap();
+      case Cuts::eta:    return fm_.eta();
+      case Cuts::abseta: return fm_.abseta();
       case Cuts::phi:    return fm_.phi();
       default: qty_not_found();
       }

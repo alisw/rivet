@@ -35,15 +35,15 @@ namespace Rivet {
       // get the non-hadronic final-state particles
       double etaMax = 2.5;
       const NonHadronicFinalState nhfs(-etaMax,etaMax,13.*GeV);
-      addProjection(nhfs,"NHFS");
+      declare(nhfs,"NHFS");
       // select the charged ones
       const ChargedFinalState cfs(nhfs);
-      addProjection(cfs,"CFS");
+      declare(cfs,"CFS");
       // and then veto electrons, and taus to be safe
       VetoedFinalState vfs(cfs);
       vfs.addVetoPairId(PID::ELECTRON);
 
-      addProjection(vfs,"VFS");
+      declare(vfs,"VFS");
 
       /// Book histograms
       _count_trigger   = bookHisto1D("count_trigger"  , 1, 0., 1.);
@@ -85,7 +85,7 @@ namespace Rivet {
       const double weight = event.weight();
       // get the charged final-state particles
       Particles charged =
-        applyProjection<VetoedFinalState>(event,"VFS").particles();
+        apply<VetoedFinalState>(event,"VFS").particles();
       // need at least two candidates
       if(charged.size()<2) vetoEvent;
       // number passing trigger

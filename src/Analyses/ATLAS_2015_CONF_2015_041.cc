@@ -33,14 +33,14 @@ namespace Rivet {
 
       Cut cuts = (Cuts::pT > 25*GeV) & (Cuts::abseta < 2.5);
       ZFinder zfinder(fs, cuts, _mode? PID::MUON : PID::ELECTRON, 66*GeV, 116*GeV);
-      addProjection(zfinder, "zfinder");
+      declare(zfinder, "zfinder");
 
       // Define veto FS in order to prevent Z-decay products entering the jet algorithm
       VetoedFinalState had_fs;
       had_fs.addVetoOnThisFinalState(zfinder);
       FastJets jets(had_fs, FastJets::ANTIKT, 0.4);
       jets.useInvisibles(true);
-      addProjection(jets, "jets");
+      declare(jets, "jets");
 
       // individual channels
       _hNjets      = bookHisto1D(1, 1, _mode + 1);
@@ -56,12 +56,12 @@ namespace Rivet {
 
       const double weight = event.weight();
 
-      const ZFinder& zfinder = applyProjection<ZFinder>(event, "zfinder");
+      const ZFinder& zfinder = apply<ZFinder>(event, "zfinder");
       const Particles& leptons = zfinder.constituents();
       if (leptons.size() != 2)  vetoEvent;
 
       Jets jets;
-      foreach (Jet j, applyProjection<JetAlg>(event, "jets").jetsByPt(Cuts::pT > 30*GeV && Cuts::absrap < 2.5)) {
+      foreach (Jet j, apply<JetAlg>(event, "jets").jetsByPt(Cuts::pT > 30*GeV && Cuts::absrap < 2.5)) {
         bool keep = true;
         foreach(const Particle& l, leptons)  keep &= deltaR(j, l) > 0.4;
         if (keep)  jets += j;

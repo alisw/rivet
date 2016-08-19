@@ -2,6 +2,7 @@
 #include "Rivet/Analysis.hh"
 #include "Rivet/Projections/FinalState.hh"
 #include "Rivet/Projections/FastJets.hh"
+#include "Rivet/Projections/SmearedJets.hh"
 
 namespace Rivet {
 
@@ -21,7 +22,12 @@ namespace Rivet {
     void init() {
 
       const FinalState fs(-4.2, 4.2);
-      addProjection(FastJets(fs, FastJets::CDFJETCLU, 0.7), "Jets");
+      FastJets fj (fs, FastJets::CDFJETCLU, 0.7);
+      declare(fj, "Jets");
+
+      // Smear Energy and mass with the 10% uncertainty quoted in the paper
+      SmearedJets sj_E(fj, [](const Jet& jet){ return P4_SMEAR_MASS_GAUSS(P4_SMEAR_E_GAUSS(jet, 0.1*jet.E()), 0.1*jet.mass()); });
+      declare(sj_E, "SmearedJets");
 
       _h_m6J = bookHisto1D(1, 1, 1);
       _h_X3ppp = bookHisto1D(2, 1, 1);
@@ -47,27 +53,22 @@ namespace Rivet {
 
 
     void analyze(const Event& event) {
-      const double weight = event.weight();
-
       Jets jets;
       double sumEt = 0.0;
       FourMomentum jetsystem(0.0, 0.0, 0.0, 0.0);
-      foreach (const Jet& jet, applyProjection<FastJets>(event, "Jets").jets(cmpMomByEt)) {
+      foreach (const Jet& jet, apply<JetAlg>(event, "SmearedJets").jets(Cuts::Et>20*GeV && Cuts::abseta<3,cmpMomByEt)) {
         double Et = jet.Et();
-        double eta = jet.abseta();
-        if (Et > 20.0*GeV && eta < 3.0) {
-          bool separated = true;
-          foreach (const Jet& ref, jets) {
-            if (deltaR(jet.momentum(), ref.momentum()) < 0.9) {
-              separated = false;
-              break;
-            }
+        bool separated = true;
+        foreach (const Jet& ref, jets) {
+          if (deltaR(jet, ref) < 0.9) {
+            separated = false;
+            break;
           }
-          if (!separated) continue;
-          jets.push_back(jet);
-          sumEt += Et;
-          jetsystem += jet.momentum();
         }
+        if (!separated) continue;
+        jets.push_back(jet);
+        sumEt += Et;
+        jetsystem += jet.momentum();
         if (jets.size() >= 6) break;
       }
 
@@ -77,7 +78,7 @@ namespace Rivet {
       double m6J = _safeMass(jetsystem);
       if (m6J < 520.0*GeV) vetoEvent;
 
-      LorentzTransform cms_boost(-jetsystem.boostVector());
+      const LorentzTransform cms_boost = LorentzTransform::mkFrameTransformFromBeta(jetsystem.betaVec());
       vector<FourMomentum> jets6;
       foreach (Jet jet, jets) {
         jets6.push_back(cms_boost.transform(jet.momentum()));
@@ -100,15 +101,13 @@ namespace Rivet {
       FourMomentum p5ppp(jets3[2]);
 
       double X3ppp = 2.0*p3ppp.E()/m6J;
-      if (X3ppp > 0.9) {
-        vetoEvent;
-      }
+      if (X3ppp > 0.9) vetoEvent;
 
       FourMomentum pAV = cms_boost.transform(_avg_beam_in_lab(m6J, jetsystem.rapidity()));
       double costheta3ppp = pAV.p3().unit().dot(p3ppp.p3().unit());
-      if (fabs(costheta3ppp) > 0.9) {
-        vetoEvent;
-      }
+      if (fabs(costheta3ppp) > 0.9) vetoEvent;
+
+      const double weight = event.weight();
 
       // 3-jet-system variables
       _h_m6J->fill(m6J, weight);
@@ -201,17 +200,11 @@ namespace Rivet {
       FourMomentum beam2(mt, 0, 0, -mt);
       if (fabs(y) > 1e-3) {
         FourMomentum boostvec(cosh(y), 0.0, 0.0, sinh(y));
-        LorentzTransform cms_boost(-boostvec.boostVector());
-        cms_boost = cms_boost.inverse();
+        const LorentzTransform cms_boost = LorentzTransform::mkFrameTransformFromBeta(boostvec.betaVec()).inverse();
         beam1 = cms_boost.transform(beam1);
         beam2 = cms_boost.transform(beam2);
       }
-      if (beam1.E() > beam2.E()) {
-        return beam1 - beam2;
-      }
-      else {
-        return beam2 - beam1;
-      }
+      return (beam1.E() > beam2.E()) ? beam1 - beam2 : beam2 - beam1;
     }
 
 

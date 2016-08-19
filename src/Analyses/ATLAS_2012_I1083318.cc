@@ -41,14 +41,14 @@ namespace Rivet {
       allleptons.acceptIdPair(PID::MUON);
       Cut cuts = Cuts::abseta < 2.5 && Cuts::pT > 20*GeV;
       DressedLeptons leptons(fs, allleptons, 0.1, cuts);
-      addProjection(leptons, "leptons");
+      declare(leptons, "leptons");
 
       // Leading neutrinos for Etmiss
       LeadingParticlesFinalState neutrinos(fs);
       neutrinos.addParticleIdPair(PID::NU_E);
       neutrinos.addParticleIdPair(PID::NU_MU);
       neutrinos.setLeadingOnly(true);
-      addProjection(neutrinos, "neutrinos");
+      declare(neutrinos, "neutrinos");
 
       // Input for the jets: "Neutrinos, electrons, and muons from decays of the
       // massive W boson were not used"
@@ -57,7 +57,7 @@ namespace Rivet {
       veto.addVetoOnThisFinalState(neutrinos);
       FastJets jets(veto, FastJets::ANTIKT, 0.4);
       jets.useInvisibles(true);
-      addProjection(jets, "jets");
+      declare(jets, "jets");
 
       for (size_t i = 0; i < 2; ++i) {
         _h_NjetIncl[i] = bookHisto1D(1, 1, i+1);
@@ -93,8 +93,8 @@ namespace Rivet {
     void analyze(const Event& event) {
       const double weight = event.weight();
 
-      const vector<DressedLepton>& leptons = applyProjection<DressedLeptons>(event, "leptons").dressedLeptons();
-      Particles neutrinos = applyProjection<FinalState>(event, "neutrinos").particlesByPt();
+      const vector<DressedLepton>& leptons = apply<DressedLeptons>(event, "leptons").dressedLeptons();
+      Particles neutrinos = apply<FinalState>(event, "neutrinos").particlesByPt();
 
       if (leptons.size() != 1 || (neutrinos.size() == 0)) {
         vetoEvent;
@@ -112,7 +112,7 @@ namespace Rivet {
       }
 
       double jetcuts[] = { 30.0*GeV, 20.0*GeV };
-      const FastJets& jetpro = applyProjection<FastJets>(event, "jets");
+      const FastJets& jetpro = apply<FastJets>(event, "jets");
 
       for (size_t i = 0; i < 2; ++i) {
         vector<FourMomentum> jets;

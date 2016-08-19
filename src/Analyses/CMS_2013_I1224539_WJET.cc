@@ -35,17 +35,17 @@ namespace Rivet {
     /// Book histograms and initialise projections before the run
     void init() {
       FinalState fs(-2.4, 2.4, 0*GeV);
-      addProjection(fs, "FS");
+      declare(fs, "FS");
 
       // Find W's with pT > 120, MET > 50
       WFinder wfinder(fs, Cuts::abseta < 2.4 && Cuts::pT > 80*GeV, PID::ELECTRON, 50*GeV, 1000*GeV, 50.0*GeV,
                       0.2, WFinder::CLUSTERNODECAY, WFinder::NOTRACK, WFinder::TRANSMASS);
-      addProjection(wfinder, "WFinder");
+      declare(wfinder, "WFinder");
 
       // W+jet jet collections
-      addProjection(FastJets(wfinder.remainingFinalState(), FastJets::ANTIKT, 0.7), "JetsAK7_wj");
-      addProjection(FastJets(wfinder.remainingFinalState(), FastJets::CAM, 0.8), "JetsCA8_wj");
-      addProjection(FastJets(wfinder.remainingFinalState(), FastJets::CAM, 1.2), "JetsCA12_wj");
+      declare(FastJets(wfinder.remainingFinalState(), FastJets::ANTIKT, 0.7), "JetsAK7_wj");
+      declare(FastJets(wfinder.remainingFinalState(), FastJets::CAM, 0.8), "JetsCA8_wj");
+      declare(FastJets(wfinder.remainingFinalState(), FastJets::CAM, 1.2), "JetsCA12_wj");
 
       // Histograms
       /// @note These are 2D histos rendered into slices
@@ -87,7 +87,7 @@ namespace Rivet {
       const double weight = event.weight();
 
       // Get the W
-      const WFinder& wfinder = applyProjection<WFinder>(event, "WFinder");
+      const WFinder& wfinder = apply<WFinder>(event, "WFinder");
       if (wfinder.bosons().size() != 1) vetoEvent;
       const Particle& w = wfinder.bosons()[0];
       const Particle& l = wfinder.constituentLeptons()[0];
@@ -96,11 +96,11 @@ namespace Rivet {
       if (l.pT() < 80*GeV || w.pT() < 120*GeV) vetoEvent;
 
       // Get the pseudojets.
-      const PseudoJets& psjetsCA8_wj = applyProjection<FastJets>(event, "JetsCA8_wj").pseudoJetsByPt( 50.0*GeV );
-      const PseudoJets& psjetsCA12_wj = applyProjection<FastJets>(event, "JetsCA12_wj").pseudoJetsByPt( 50.0*GeV );
+      const PseudoJets& psjetsCA8_wj = apply<FastJets>(event, "JetsCA8_wj").pseudoJetsByPt( 50.0*GeV );
+      const PseudoJets& psjetsCA12_wj = apply<FastJets>(event, "JetsCA12_wj").pseudoJetsByPt( 50.0*GeV );
 
       // AK7 jets
-      const PseudoJets& psjetsAK7_wj = applyProjection<FastJets>(event, "JetsAK7_wj").pseudoJetsByPt( 50.0*GeV );
+      const PseudoJets& psjetsAK7_wj = apply<FastJets>(event, "JetsAK7_wj").pseudoJetsByPt( 50.0*GeV );
       if (!psjetsAK7_wj.empty()) {
         // Get the leading jet and make sure it's back-to-back with the W
         const fastjet::PseudoJet& j0 = psjetsAK7_wj[0];

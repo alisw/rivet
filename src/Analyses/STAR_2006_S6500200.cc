@@ -21,15 +21,15 @@ namespace Rivet {
     void init() {
       ChargedFinalState bbc1(-5.0,-3.3, 0.0*GeV); // beam-beam-counter trigger
       ChargedFinalState bbc2( 3.3, 5.0, 0.0*GeV); // beam-beam-counter trigger
-      addProjection(bbc1, "BBC1");
-      addProjection(bbc2, "BBC2");
+      declare(bbc1, "BBC1");
+      declare(bbc2, "BBC2");
 
       IdentifiedFinalState pionfs(Cuts::abseta < 2.5 && Cuts::pT > 0.3*GeV);
       IdentifiedFinalState protonfs(Cuts::abseta < 2.5 && Cuts::pT > 0.4*GeV);
       pionfs.acceptIdPair(PID::PIPLUS);
       protonfs.acceptIdPair(PID::PROTON);
-      addProjection(pionfs, "PionFS");
-      addProjection(protonfs, "ProtonFS");
+      declare(pionfs, "PionFS");
+      declare(protonfs, "ProtonFS");
 
       _h_pT_piplus     = bookHisto1D(1, 1, 1); // full range pion binning
       _h_pT_piminus    = bookHisto1D(1, 2, 1); // full range pion binning
@@ -47,8 +47,8 @@ namespace Rivet {
 
     /// Do the analysis
     void analyze(const Event& event) {
-      const ChargedFinalState& bbc1 = applyProjection<ChargedFinalState>(event, "BBC1");
-      const ChargedFinalState& bbc2 = applyProjection<ChargedFinalState>(event, "BBC2");
+      const ChargedFinalState& bbc1 = apply<ChargedFinalState>(event, "BBC1");
+      const ChargedFinalState& bbc2 = apply<ChargedFinalState>(event, "BBC2");
       if (bbc1.size() < 1 || bbc2.size() < 1) {
         MSG_DEBUG("Failed beam-beam-counter trigger");
         vetoEvent;
@@ -56,7 +56,7 @@ namespace Rivet {
 
       const double weight = event.weight();
 
-      const IdentifiedFinalState& pionfs = applyProjection<IdentifiedFinalState>(event, "PionFS");
+      const IdentifiedFinalState& pionfs = apply<IdentifiedFinalState>(event, "PionFS");
       foreach (const Particle& p, pionfs.particles()) {
         if (p.absrap() < 0.5) {
           /// @todo Use a binned counter to avoid this bin width cancellation hack
@@ -66,7 +66,7 @@ namespace Rivet {
         }
       }
 
-      const IdentifiedFinalState& protonfs = applyProjection<IdentifiedFinalState>(event, "ProtonFS");
+      const IdentifiedFinalState& protonfs = apply<IdentifiedFinalState>(event, "ProtonFS");
       foreach (const Particle& p, protonfs.particles()) {
         if (p.absrap() < 0.5) {
           /// @todo Use a binned counter to avoid this bin width cancellation hack

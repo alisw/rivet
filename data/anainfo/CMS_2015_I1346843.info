@@ -1,6 +1,6 @@
 Name: CMS_2015_I1346843
 Year: 2014
-Summary: Measurement of differential cross section of FSR Photons in Z decays.
+Summary: Measurement of differential cross-section of FSR photons in $Z$ decays
 Experiment: CMS
 Collider: LHC
 InspireID: 1346843
@@ -50,4 +50,3 @@ BibTeX: '@article{Khachatryan:2015rja,
 }'
 ToDo:
  - Implement the analysis, test it, remove this ToDo, and mark as VALIDATED :-)
-

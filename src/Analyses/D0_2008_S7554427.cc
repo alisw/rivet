@@ -27,7 +27,7 @@ namespace Rivet {
       FinalState fs;
       ZFinder zfinder(fs, Cuts::open(), PID::ELECTRON,
                       40*GeV, 200*GeV, 0.2, ZFinder::CLUSTERNODECAY, ZFinder::TRACK);
-      addProjection(zfinder, "ZFinder");
+      declare(zfinder, "ZFinder");
 
       _h_ZpT         = bookHisto1D(1, 1, 1);
       _h_forward_ZpT = bookHisto1D(3, 1, 1);
@@ -36,18 +36,15 @@ namespace Rivet {
 
     /// Do the analysis
     void analyze(const Event& e) {
-      const double weight = e.weight();
-
-      const ZFinder& zfinder = applyProjection<ZFinder>(e, "ZFinder");
-      if (zfinder.bosons().size() == 1) {
-        const double yZ = fabs(zfinder.bosons()[0].rapidity());
-        const double pTZ = zfinder.bosons()[0].pT();
-        _h_ZpT->fill(pTZ, weight);
-        if (yZ > 2) _h_forward_ZpT->fill(pTZ, weight);
-      } else {
+      const ZFinder& zfinder = apply<ZFinder>(e, "ZFinder");
+      if (zfinder.bosons().size() != 1) {
         MSG_DEBUG("No unique lepton pair found.");
+        vetoEvent;
       }
-
+      const double yZ = fabs(zfinder.bosons()[0].rapidity());
+      const double pTZ = zfinder.bosons()[0].pT();
+      _h_ZpT->fill(pTZ, e.weight());
+      if (yZ > 2) _h_forward_ZpT->fill(pTZ, e.weight());
     }
 
 
@@ -64,12 +61,10 @@ namespace Rivet {
 
     /// @name Histograms
     //@{
-    Histo1DPtr _h_ZpT;
-    Histo1DPtr _h_forward_ZpT;
+    Histo1DPtr _h_ZpT, _h_forward_ZpT;
     //@}
 
   };
-
 
 
   // The hook for the plugin system

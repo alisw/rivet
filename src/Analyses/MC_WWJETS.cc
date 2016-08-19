@@ -26,19 +26,19 @@ namespace Rivet {
     void init() {
       FinalState fs;
       WFinder wenufinder(fs, Cuts::abseta < 3.5 && Cuts::pT > 25*GeV, PID::ELECTRON, 60.0*GeV, 100.0*GeV, 25.0*GeV, 0.2);
-      addProjection(wenufinder, "WenuFinder");
+      declare(wenufinder, "WenuFinder");
 
       VetoedFinalState wmnuinput;
       wmnuinput.addVetoOnThisFinalState(wenufinder);
       WFinder wmnufinder(wmnuinput, Cuts::abseta < 3.5 && Cuts::pT > 25*GeV, PID::MUON, 60.0*GeV, 100.0*GeV, 25.0*GeV, 0.2);
-      addProjection(wmnufinder, "WmnuFinder");
+      declare(wmnufinder, "WmnuFinder");
 
       VetoedFinalState jetinput;
       jetinput
           .addVetoOnThisFinalState(wenufinder)
           .addVetoOnThisFinalState(wmnufinder);
       FastJets jetpro(jetinput, FastJets::ANTIKT, 0.4);
-      addProjection(jetpro, "Jets");
+      declare(jetpro, "Jets");
 
       // correlations with jets
       _h_WW_jet1_deta = bookHisto1D("WW_jet1_deta", 70, -7.0, 7.0);
@@ -58,10 +58,10 @@ namespace Rivet {
     void analyze(const Event& e) {
       const double weight = e.weight();
 
-      const WFinder& wenufinder = applyProjection<WFinder>(e, "WenuFinder");
+      const WFinder& wenufinder = apply<WFinder>(e, "WenuFinder");
       if (wenufinder.bosons().size() !=1 ) vetoEvent;
 
-      const WFinder& wmnufinder = applyProjection<WFinder>(e, "WmnuFinder");
+      const WFinder& wmnufinder = apply<WFinder>(e, "WmnuFinder");
       if (wmnufinder.bosons().size() !=1 ) vetoEvent;
 
       FourMomentum wenu = wenufinder.bosons()[0].momentum();
@@ -73,7 +73,7 @@ namespace Rivet {
       FourMomentum mm = wmnufinder.constituentLeptons()[0].momentum();
       FourMomentum mnu = wmnufinder.constituentNeutrinos()[0].momentum();
 
-      const Jets& jets = applyProjection<FastJets>(e, "Jets").jetsByPt(_jetptcut);
+      const Jets& jets = apply<FastJets>(e, "Jets").jetsByPt(_jetptcut);
       if (jets.size() > 0) {
         _h_WW_jet1_deta->fill(ww.eta()-jets[0].eta(), weight);
         _h_WW_jet1_dR->fill(deltaR(ww, jets[0].momentum()), weight);

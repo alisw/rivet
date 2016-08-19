@@ -34,16 +34,16 @@ namespace Rivet {
     /// Book histograms and initialise projections before the run
     void init() {
       const ChargedFinalState cfs(-MAXDOUBLE, MAXDOUBLE, 0.1/GeV);
-      addProjection(cfs, "CFS");
+      declare(cfs, "CFS");
 
       //// Beams -- needed for x_p calculation
-      //addProjection(Beam(), "Beams");
+      //declare(Beam(), "Beams");
 
       // Thrust
-      addProjection(Thrust(cfs), "Thrust");
+      declare(Thrust(cfs), "Thrust");
 
       // For Sphericity and the like
-      addProjection(Sphericity(cfs), "Sphericity");
+      declare(Sphericity(cfs), "Sphericity");
 
       // Histos
       int offset = 0;
@@ -72,10 +72,10 @@ namespace Rivet {
     /// Perform the per-event analysis
     void analyze(const Event& event) {
       const double weight = event.weight();
-      const ChargedFinalState& cfs = applyProjection<ChargedFinalState>(event, "CFS");
+      const ChargedFinalState& cfs = apply<ChargedFinalState>(event, "CFS");
 
       //// Get beams and average beam momentum
-      //const ParticlePair& beams = applyProjection<Beam>(event, "Beams").beams();
+      //const ParticlePair& beams = apply<Beam>(event, "Beams").beams();
       //const double meanBeamMom = ( beams.first.p3().mod() +
                                    //beams.second.p3().mod() ) / 2.0;
 
@@ -102,7 +102,7 @@ namespace Rivet {
       // Raise counter for events that pass trigger conditions
       //_sumWPassed += event.weight();
 
-      const Thrust& thrust = applyProjection<Thrust>(event, "Thrust");
+      const Thrust& thrust = apply<Thrust>(event, "Thrust");
       //const Vector3 & thrustAxis = thrust.thrustAxis ();
       //double theta = thrustAxis.theta();
       //if ( fabs(cos(theta)) >= 0.8 ) {
@@ -110,7 +110,7 @@ namespace Rivet {
         //vetoEvent;
       //}
 
-      const Sphericity& sphericity = applyProjection<Sphericity>(event, "Sphericity");
+      const Sphericity& sphericity = apply<Sphericity>(event, "Sphericity");
 
       //// Fill histograms in order of appearance in paper
       //foreach (const Particle& p, cfs.particles()) {

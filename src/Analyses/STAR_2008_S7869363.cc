@@ -61,7 +61,7 @@ namespace Rivet {
     void init() {
       const ChargedFinalState cfs(-0.5, 0.5, 0.2*GeV);
       const LossyFinalState<STARRandomFilter> lfs(cfs, STARRandomFilter());
-      addProjection(lfs, "FS");
+      declare(lfs, "FS");
 
       _h_dNch           = bookHisto1D(1, 1, 1);
       _h_dpT_Pi         = bookHisto1D(2, 1, 1);
@@ -75,7 +75,7 @@ namespace Rivet {
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-      const FinalState& charged = applyProjection<FinalState>(event, "FS");
+      const FinalState& charged = apply<FinalState>(event, "FS");
 
       // Vertex reconstruction efficiencies as a function of charged multiplicity.
       // For events with more than 23 reconstructed tracks the efficiency is 100%.

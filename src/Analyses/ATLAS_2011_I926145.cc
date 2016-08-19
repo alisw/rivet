@@ -32,7 +32,7 @@ namespace Rivet {
       IdentifiedFinalState elecs(cuts);
       elecs.acceptId(PID::ELECTRON);
       elecs.acceptId(PID::POSITRON);
-      addProjection(elecs, "elecs");
+      declare(elecs, "elecs");
 
       //projection for muons -- same phase space as above??? Not sure if the crack region has
       //to be removed for the muons as well
@@ -44,13 +44,13 @@ namespace Rivet {
       IdentifiedFinalState muons(Cuts::abseta < 2 && Cuts::pT > 7*GeV);
       muons.acceptId(PID::MUON);
       muons.acceptId(PID::ANTIMUON);
-      addProjection(muons, "muons");
+      declare(muons, "muons");
 
       //projection for muons full range
       IdentifiedFinalState muons_full(Cuts::abseta < 2.5 && Cuts::pT > 4*GeV);
       muons_full.acceptId(PID::MUON);
       muons_full.acceptId(PID::ANTIMUON);
-      addProjection(muons_full, "muons_full");
+      declare(muons_full, "muons_full");
 	  Cut cut20 = Cuts::abseta < 2.0;
 	  Cut cut25 = Cuts::abseta < 2.5;
       const FinalState fs20(cut20);
@@ -58,19 +58,19 @@ namespace Rivet {
 
       /// @todo Bare Zs ...
       ZFinder zfinder_e(fs20, cut20, PID::ELECTRON, 66.0*GeV, 116.0*GeV, 0.1, ZFinder::NOCLUSTER);
-      addProjection(zfinder_e, "ZFinder_e");
+      declare(zfinder_e, "ZFinder_e");
       ZFinder zfinder_mu(fs20, cut20, PID::MUON, 66.0*GeV, 116.0*GeV, 0.1, ZFinder::NOCLUSTER);
-      addProjection(zfinder_mu, "ZFinder_mu");
+      declare(zfinder_mu, "ZFinder_mu");
       ZFinder zfinder_mufull(fs25, cut25, PID::MUON, 66.0*GeV, 116.0*GeV, 0.1, ZFinder::NOCLUSTER);
-      addProjection(zfinder_mufull, "ZFinder_mufull");
+      declare(zfinder_mufull, "ZFinder_mufull");
 
       /// @todo ... but dressed Ws?
       WFinder wfinder_e(fs20, cut20, PID::ELECTRON, 60.0*GeV, 100.0*GeV, 25.0*GeV, 0.2);
-      addProjection(wfinder_e, "WFinder_e");
+      declare(wfinder_e, "WFinder_e");
       WFinder wfinder_mu(fs20, cut20, PID::MUON, 60.0*GeV, 100.0*GeV, 25.0*GeV, 0.2);
-      addProjection(wfinder_mu, "WFinder_mu");
+      declare(wfinder_mu, "WFinder_mu");
       WFinder wfinder_mufull(fs25, cut25, PID::MUON, 60.0*GeV, 100.0*GeV, 25.0*GeV, 0.2);
-      addProjection(wfinder_mufull, "WFinder_mufull");
+      declare(wfinder_mufull, "WFinder_mufull");
 
       // Book histograms
       _histPt_elecs      = bookHisto1D(1 ,1 ,1);
@@ -82,9 +82,9 @@ namespace Rivet {
     void analyze(const Event& event) {
       const double weight = event.weight();
 
-      const FinalState& elecs      = applyProjection<FinalState>(event, "elecs");
-      const FinalState& muons      = applyProjection<FinalState>(event, "muons");
-      const FinalState& muons_full = applyProjection<FinalState>(event, "muons_full");
+      const FinalState& elecs      = apply<FinalState>(event, "elecs");
+      const FinalState& muons      = apply<FinalState>(event, "muons");
+      const FinalState& muons_full = apply<FinalState>(event, "muons_full");
 
       // Veto event if no lepton is present
       if (elecs.size() == 0 && muons.size() == 0 && muons_full.size() == 0) {
@@ -94,9 +94,9 @@ namespace Rivet {
       // Check for W and or Z bosons in event
       //
       // Z veto
-      const ZFinder& zfinder_e      = applyProjection<ZFinder>(event, "ZFinder_e");
-      const ZFinder& zfinder_mu     = applyProjection<ZFinder>(event, "ZFinder_mu");
-      const ZFinder& zfinder_mufull = applyProjection<ZFinder>(event, "ZFinder_mufull");
+      const ZFinder& zfinder_e      = apply<ZFinder>(event, "ZFinder_e");
+      const ZFinder& zfinder_mu     = apply<ZFinder>(event, "ZFinder_mu");
+      const ZFinder& zfinder_mufull = apply<ZFinder>(event, "ZFinder_mufull");
 
       if (zfinder_e.bosons().size() > 0 || zfinder_mu.bosons().size() > 0 || zfinder_mufull.bosons().size() > 0) {
           MSG_DEBUG("Num elec Z-bosons found: " << zfinder_e.bosons().size());
@@ -106,9 +106,9 @@ namespace Rivet {
       }
 
       // W veto
-      const WFinder& wfinder_e      = applyProjection<WFinder>(event, "WFinder_e");
-      const WFinder& wfinder_mu     = applyProjection<WFinder>(event, "WFinder_mu");
-      const WFinder& wfinder_mufull = applyProjection<WFinder>(event, "WFinder_mufull");
+      const WFinder& wfinder_e      = apply<WFinder>(event, "WFinder_e");
+      const WFinder& wfinder_mu     = apply<WFinder>(event, "WFinder_mu");
+      const WFinder& wfinder_mufull = apply<WFinder>(event, "WFinder_mufull");
 
       if (wfinder_e.bosons().size() > 0 || wfinder_mu.bosons().size() > 0 || wfinder_mufull.bosons().size() > 0) {
           MSG_DEBUG("Num elec W-bosons found: " << wfinder_e.bosons().size());

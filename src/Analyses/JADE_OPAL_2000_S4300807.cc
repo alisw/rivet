@@ -28,13 +28,13 @@ namespace Rivet {
     void init() {
       // Projections
       const FinalState fs;
-      addProjection(fs, "FS");
+      declare(fs, "FS");
       FastJets jadeJets = FastJets(fs, FastJets::JADE, 0.7);
       FastJets durhamJets = FastJets(fs, FastJets::DURHAM, 0.7);
       jadeJets.useInvisibles(true);
       durhamJets.useInvisibles(true);
-      addProjection(jadeJets, "JadeJets");
-      addProjection(durhamJets, "DurhamJets");
+      declare(jadeJets, "JadeJets");
+      declare(durhamJets, "DurhamJets");
 
       // Histos
       int offset = 0;
@@ -60,9 +60,9 @@ namespace Rivet {
 
     void analyze(const Event& e) {
       const double weight = e.weight();
-      MSG_DEBUG("Num particles = " << applyProjection<FinalState>(e, "FS").particles().size());
+      MSG_DEBUG("Num particles = " << apply<FinalState>(e, "FS").particles().size());
 
-      const FastJets& jadejet = applyProjection<FastJets>(e, "JadeJets");
+      const FastJets& jadejet = apply<FastJets>(e, "JadeJets");
       if (jadejet.clusterSeq()) {
         const double y_23 = jadejet.clusterSeq()->exclusive_ymerge_max(2);
         const double y_34 = jadejet.clusterSeq()->exclusive_ymerge_max(3);
@@ -106,7 +106,7 @@ namespace Rivet {
         }
       }
 
-      const FastJets& durjet = applyProjection<FastJets>(e, "DurhamJets");
+      const FastJets& durjet = apply<FastJets>(e, "DurhamJets");
       if (durjet.clusterSeq()) {
         const double y_23 = durjet.clusterSeq()->exclusive_ymerge_max(2);
         const double y_34 = durjet.clusterSeq()->exclusive_ymerge_max(3);

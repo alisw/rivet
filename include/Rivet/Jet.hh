@@ -5,9 +5,9 @@
 #include "Rivet/Config/RivetCommon.hh"
 #include "Rivet/Jet.fhh"
 #include "Rivet/Particle.hh"
-#include "Rivet/Cuts.hh"
-#include "Rivet/Tools/ParticleUtils.hh"
-#include "fastjet/PseudoJet.hh"
+#include "Rivet/Tools/Cuts.hh"
+#include "Rivet/Tools/RivetFastJet.hh"
+#include "Rivet/Math/LorentzTrans.hh"
 #include <numeric>
 
 namespace Rivet {
@@ -50,14 +50,14 @@ namespace Rivet {
     size_t size() const { return _particles.size(); }
 
     /// Get the particles in this jet.
-    vector<Particle>& particles() { return _particles; }
+    Particles& particles() { return _particles; }
     /// Get the particles in this jet (const version)
     const vector<Particle>& particles() const { return _particles; }
 
     /// Get the particles in this jet (FastJet-like alias)
-    vector<Particle>& constituents() { return particles(); }
+    Particles& constituents() { return particles(); }
     /// Get the particles in this jet (FastJet-like alias, const version)
-    const vector<Particle>& constituents() const { return particles(); }
+    const Particles& constituents() const { return particles(); }
 
     /// Check whether this jet contains a particular particle.
     bool containsParticle(const Particle& particle) const;
@@ -150,11 +150,16 @@ namespace Rivet {
     //@}
 
 
-    /// @name Access additional effective jet 4-vector properties
+    /// @name Effective jet 4-vector properties
     //@{
 
     /// Get equivalent single momentum four-vector.
     const FourMomentum& momentum() const { return _momentum; }
+
+    /// Apply an active Lorentz transform to this jet
+    /// @note The Rivet jet momentum, constituent particles, and tag particles will be modified.
+    /// @warning The FastJet cluster sequence and pseudojets will not be modified: don't use them after transformation!
+    Jet& transformBy(const LorentzTransform& lt);
 
     /// Get the total energy of this jet.
     double totalEnergy() const { return momentum().E(); }
@@ -192,7 +197,7 @@ namespace Rivet {
     /// Set all the jet data, with optional full particle constituent and tag information.
     Jet& setState(const FourMomentum& mom, const Particles& particles, const Particles& tags=Particles());
 
-    /// @deprecated Prefer the 4-mom first-arg versions
+    /// @deprecated Prefer the 4-mom first-arg versions. Remove in Rivet v3
     DEPRECATED("Prefer the 4-mom first-arg versions")
     Jet& setState(const Particles& particles, const FourMomentum& mom) { return setState(mom, particles); }
 
@@ -226,6 +231,24 @@ namespace Rivet {
   };
 
 
+  /// @name String representation and streaming support
+  //@{
+
+  /// Represent a Jet as a string.
+  std::string to_str(const Jet& j);
+
+  /// Allow a Jet to be passed to an ostream.
+  inline std::ostream& operator<<(std::ostream& os, const Jet& j) {
+    os << to_str(j);
+    return os;
+  }
+
+  //@}
+
+
 }
+
+
+#include "Rivet/Tools/JetUtils.hh"
 
 #endif

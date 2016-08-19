@@ -37,19 +37,19 @@ namespace Rivet {
   }
 
 
-  Analysis* AnalysisLoader::getAnalysis(const string& analysisname) {
+  unique_ptr<Analysis> AnalysisLoader::getAnalysis(const string& analysisname) {
     _loadAnalysisPlugins();
     AnalysisBuilderMap::const_iterator ai = _ptrs.find(analysisname);
-    if (ai == _ptrs.end()) return 0;
+    if (ai == _ptrs.end()) return nullptr;
     return ai->second->mkAnalysis();
   }
 
 
-  vector<Analysis*> AnalysisLoader::getAllAnalyses() {
+  vector<unique_ptr<Analysis>> AnalysisLoader::getAllAnalyses() {
     _loadAnalysisPlugins();
-    vector<Analysis*> analyses;
-    foreach (const AnalysisBuilderMap::value_type& p, _ptrs) {
-      analyses += p.second->mkAnalysis();
+    vector<unique_ptr<Analysis>> analyses;
+    foreach (const auto & p, _ptrs) {
+      analyses.emplace_back( p.second->mkAnalysis() );
     }
     return analyses;
   }
@@ -65,6 +65,17 @@ namespace Rivet {
     } else {
       MSG_TRACE("Registering a plugin analysis called '" << name << "'");
       _ptrs[name] = ab;
+    }
+
+    const string aname = ab->alias();
+    if (!aname.empty()) {
+      //MSG_WARNING("ALIAS!!! " << aname);
+      if (_ptrs.find(aname) != _ptrs.end()) {
+        MSG_WARNING("Ignoring duplicate plugin analysis alias '" << aname << "'");
+      } else {
+        MSG_TRACE("Registering a plugin analysis via alias '" << aname << "'");
+        _ptrs[aname] = ab;
+      }
     }
   }
 

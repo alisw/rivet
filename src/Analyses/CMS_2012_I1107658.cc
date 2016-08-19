@@ -5,11 +5,8 @@
 #include "Rivet/Projections/FinalState.hh"
 #include "Rivet/Projections/ChargedFinalState.hh"
 #include "Rivet/Projections/VetoedFinalState.hh"
-#include "Rivet/ParticleName.hh"
 
 namespace Rivet {
-
-  
 
 
   /// Underlying event activity in the Drell-Yan process at 7 TeV
@@ -28,12 +25,12 @@ namespace Rivet {
       /// @note Using a bare muon Z (but with a clustering radius!?)
       Cut cut = Cuts::abseta < 2.4 && Cuts::pT > 20*GeV;
       ZFinder zfinder(FinalState(), cut, PID::MUON, 4*GeV, 140*GeV, 0.2, ZFinder::NOCLUSTER);
-      addProjection(zfinder, "ZFinder");
+      declare(zfinder, "ZFinder");
 
       ChargedFinalState cfs(-2, 2, 500*MeV);
       VetoedFinalState nonmuons(cfs);
       nonmuons.addVetoPairId(PID::MUON);
-      addProjection(nonmuons, "nonmuons");
+      declare(nonmuons, "nonmuons");
 
       _h_Nchg_towards_pTmumu                 = bookProfile1D(1, 1, 1);
       _h_Nchg_transverse_pTmumu              = bookProfile1D(2, 1, 1);
@@ -61,7 +58,7 @@ namespace Rivet {
     /// Perform the per-event analysis
     void analyze(const Event& event) {
       const double weight = event.weight();
-      const ZFinder& zfinder = applyProjection<ZFinder>(event, "ZFinder");
+      const ZFinder& zfinder = apply<ZFinder>(event, "ZFinder");
 
       if (zfinder.bosons().size() != 1) vetoEvent;
 
@@ -69,7 +66,7 @@ namespace Rivet {
       double Zphi = zfinder.bosons()[0].phi();
       double Zmass = zfinder.bosons()[0].mass()/GeV;
 
-      Particles particles = applyProjection<VetoedFinalState>(event, "nonmuons").particles();
+      Particles particles = apply<VetoedFinalState>(event, "nonmuons").particles();
 
       int nTowards = 0;
       int nTransverse = 0;

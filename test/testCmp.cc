@@ -1,7 +1,7 @@
 #include <iostream>
 #include <limits>
 
-#include "Rivet/Cmp.hh"
+#include "Rivet/Tools/Cmp.hh"
 
 using namespace std;
 

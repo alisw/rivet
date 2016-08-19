@@ -27,12 +27,12 @@ namespace Rivet {
     void init() {
       // Full final state
       FinalState fs(-5.0, 5.0);
-      addProjection(fs, "FS");
+      declare(fs, "FS");
 
       // Leading electrons in tracking acceptance
       IdentifiedFinalState elfs(Cuts::abseta < 5 && Cuts::pT > 25*GeV);
       elfs.acceptIdPair(PID::ELECTRON);
-      addProjection(elfs, "LeadingElectrons");
+      declare(elfs, "LeadingElectrons");
 
       _h_jet_multiplicity = bookHisto1D(1, 1, 1);
       _h_jet_pT_cross_section_incl_1jet = bookHisto1D(2, 1, 1);
@@ -45,14 +45,14 @@ namespace Rivet {
       const double weight = event.weight();
 
       // Skip if the event is empty
-      const FinalState& fs = applyProjection<FinalState>(event, "FS");
+      const FinalState& fs = apply<FinalState>(event, "FS");
       if (fs.empty()) {
         MSG_DEBUG("Skipping event " << numEvents() << " because no final state pair found");
         vetoEvent;
       }
 
       // Find the Z candidates
-      const FinalState & electronfs = applyProjection<FinalState>(event, "LeadingElectrons");
+      const FinalState & electronfs = apply<FinalState>(event, "LeadingElectrons");
       std::vector<std::pair<Particle, Particle> > Z_candidates;
       Particles all_els=electronfs.particles();
       for (size_t i=0; i<all_els.size(); ++i) {
@@ -85,78 +85,63 @@ namespace Rivet {
         vetoEvent;
       }
 
-      // Now build the jets on a FS without the electrons from the Z
-      // (including their QED radiation)
+      // Now build the jets on a FS without the electrons from the Z (including QED radiation)
       Particles jetparts;
-      foreach (const Particle& p, fs.particles()) {
+      for (const Particle& p : fs.particles()) {
         bool copy = true;
         if (p.pid() == PID::PHOTON) {
           FourMomentum p_e0 = Z_candidates[0].first.momentum();
           FourMomentum p_e1 = Z_candidates[0].second.momentum();
           FourMomentum p_P = p.momentum();
-          if (deltaR(p_e0.eta(), p_e0.phi(),
-                     p_P.eta(), p_P.phi()) < 0.2) {
-            copy = false;
-          }
-          if (deltaR(p_e1.eta(), p_e1.phi(),
-                     p_P.eta(), p_P.phi()) < 0.2) {
-            copy = false;
-          }
+          if (deltaR(p_e0, p_P) < 0.2) copy = false;
+          if (deltaR(p_e1, p_P) < 0.2) copy = false;
         } else {
-          if (p.genParticle()->barcode() == Z_candidates[0].first.genParticle()->barcode()) {
-            copy = false;
-          }
-          if (p.genParticle()->barcode() == Z_candidates[0].second.genParticle()->barcode()) {
-            copy = false;
-          }
+          if (p.genParticle()->barcode() == Z_candidates[0].first.genParticle()->barcode()) copy = false;
+          if (p.genParticle()->barcode() == Z_candidates[0].second.genParticle()->barcode()) copy = false;
         }
         if (copy) jetparts.push_back(p);
       }
-      FastJets jetpro(FastJets::CDFMIDPOINT, 0.7);
-      jetpro.calc(jetparts);
 
-      // Take jets with pt > 30, |eta| < 2.1:
-      /// @todo Make this neater, using the JetAlg interface and the built-in sorting
-      const Jets& jets = jetpro.jets();
-      Jets jets_cut;
-      foreach (const Jet& j, jets) {
-        if (j.pT()/GeV > 30.0 && j.abseta() < 2.1) {
-          jets_cut.push_back(j);
-        }
-      }
-      MSG_DEBUG("Num jets above 30 GeV = " << jets_cut.size());
+      // Proceed to lepton dressing
+      const PseudoJets pjs = mkPseudoJets(jetparts);
+      const auto jplugin = make_shared<fastjet::CDFMidPointPlugin>(0.7, 0.5, 1.0);
+      const Jets jets_all = mkJets(fastjet::ClusterSequence(pjs, jplugin.get()).inclusive_jets());
+      const Jets jets_cut = sortByPt(filterBy(jets_all, Cuts::pT > 30*GeV && Cuts::abseta < 2.1));
+      // FastJets jetpro(FastJets::CDFMIDPOINT, 0.7);
+      // jetpro.calc(jetparts);
+      // // Take jets with pt > 30, |eta| < 2.1:
+      // const Jets& jets = jetpro.jets();
+      // Jets jets_cut;
+      // foreach (const Jet& j, jets) {
+      //   if (j.pT()/GeV > 30.0 && j.abseta() < 2.1) {
+      //     jets_cut.push_back(j);
+      //   }
+      // }
+      // // Sort by pT:
+      // sort(jets_cut.begin(), jets_cut.end(), cmpMomByPt);
 
       // Return if there are no jets:
+      MSG_DEBUG("Num jets above 30 GeV = " << jets_cut.size());
       if (jets_cut.empty()) {
         MSG_DEBUG("No jets pass cuts ");
         vetoEvent;
       }
 
-      // Sort by pT:
-      sort(jets_cut.begin(), jets_cut.end(), cmpMomByPt);
-
-      // cut on Delta R between jet and electrons
-      foreach (const Jet& j, jets_cut) {
-        Particle el = Z_candidates[0].first;
-        if (deltaR(el.eta(), el.phi(),
-                   j.eta(), j.phi()) < 0.7) {
-          vetoEvent;
-        }
-        el = Z_candidates[0].second;
-        if (deltaR(el.eta(), el.phi(),
-                   j.eta(), j.phi()) < 0.7) {
-          vetoEvent;
-        }
+      // Cut on Delta R between Z electrons and *all* jets
+      for (const Jet& j : jets_cut) {
+        if (deltaR(Z_candidates[0].first, j) < 0.7) vetoEvent;
+        if (deltaR(Z_candidates[0].second, j) < 0.7) vetoEvent;
       }
 
+      // Fill histograms
       for (size_t njet=1; njet<=jets_cut.size(); ++njet) {
         _h_jet_multiplicity->fill(njet, weight);
       }
-      foreach (const Jet& j, jets_cut) {
-        if (jets_cut.size()>0) {
+      for (const Jet& j : jets_cut) {
+        if (jets_cut.size() > 0) {
           _h_jet_pT_cross_section_incl_1jet->fill(j.pT(), weight);
         }
-        if (jets_cut.size()>1) {
+        if (jets_cut.size() > 1) {
           _h_jet_pT_cross_section_incl_2jet->fill(j.pT(), weight);
         }
       }
@@ -173,6 +158,7 @@ namespace Rivet {
 
     //@}
 
+
   private:
 
     /// @name Histograms
@@ -183,7 +169,6 @@ namespace Rivet {
     //@}
 
   };
-
 
 
   // The hook for the plugin system

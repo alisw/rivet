@@ -18,11 +18,11 @@ namespace Rivet {
 
     void init() {
       FinalState fs(-3.5, 3.5);
-      addProjection(fs, "FinalState");
+      declare(fs, "FinalState");
       FastJets fj(fs, FastJets::ANTIKT, 0.4);
       fj.useInvisibles();
-      addProjection(fj, "Jets");
-      addProjection(HeavyHadrons(Cuts::abseta < 3.5 && Cuts::pT > 5*GeV), "BHadrons");
+      declare(fj, "Jets");
+      declare(HeavyHadrons(Cuts::abseta < 3.5 && Cuts::pT > 5*GeV), "BHadrons");
 
       double ybins[] = { 0.0, 0.3, 0.8, 1.2, 2.1 };
       for (size_t i = 0; i < 4; ++i)
@@ -44,8 +44,8 @@ namespace Rivet {
     void analyze(const Event& evt) {
       const double weight = evt.weight();
 
-      const Particles& bHadrons = applyProjection<HeavyHadrons>(evt, "BHadrons").bHadrons();
-      const Jets& jets = applyProjection<JetAlg>(evt, "Jets").jetsByPt(15*GeV);
+      const Particles& bHadrons = apply<HeavyHadrons>(evt, "BHadrons").bHadrons();
+      const Jets& jets = apply<JetAlg>(evt, "Jets").jetsByPt(15*GeV);
 
       FourMomentum leadingJet, subleadingJet;
       int leadJet = 0, subJet = 0;

@@ -1,10 +1,10 @@
 Name: CDF_1997_S3541940
 Year: 1997
-Summary: Properties of six jet events with large six jet mass
+Summary: Properties of six-jet events with large six-jet mass
 Experiment: CDF
 Collider: Tevatron Run 1
 SpiresID: 3541940
-Status: UNVALIDATED
+Status: VALIDATED
 Authors:
  - Frank Siegert <frank.siegert@cern.ch>
 References:

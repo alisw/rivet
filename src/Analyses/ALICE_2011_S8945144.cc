@@ -17,7 +17,7 @@ namespace Rivet {
 
     void init() {
       const ChargedFinalState cfs(-15, 15);
-      addProjection(cfs, "CFS");
+      declare(cfs, "CFS");
 
       _histPtPions        = bookHisto1D("d01-x01-y01");
       _histPtAntiPions    = bookHisto1D("d01-x01-y02");
@@ -31,7 +31,7 @@ namespace Rivet {
 
     void analyze(const Event& event) {
       const double weight = event.weight();
-      const ChargedFinalState& cfs = applyProjection<ChargedFinalState>(event, "CFS");
+      const ChargedFinalState& cfs = apply<ChargedFinalState>(event, "CFS");
       foreach (const Particle& p, cfs.particles()) {
         if(p.absrap()<0.5) {
           switch (p.pid()) {

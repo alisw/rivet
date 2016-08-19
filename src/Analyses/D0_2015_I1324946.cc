@@ -24,7 +24,7 @@ namespace Rivet {
     void init() {
       FinalState fs;
       ZFinder zfinder_mm(fs, Cuts::abseta < 2 && Cuts::pT > 15*GeV, PID::MUON, 30*GeV, 500*GeV, 0.0, ZFinder::NOCLUSTER, ZFinder::NOTRACK);
-      addProjection(zfinder_mm, "zfinder_mm");
+      declare(zfinder_mm, "zfinder_mm");
 
       _h_phistar_mm_peak_central = bookHisto1D(1, 1, 1);
       _h_phistar_mm_peak_forward = bookHisto1D(1, 1, 2);
@@ -41,7 +41,7 @@ namespace Rivet {
 
 
       //70<Mmm<105
-      const ZFinder& zfinder_mm = applyProjection<ZFinder>(event, "zfinder_mm");
+      const ZFinder& zfinder_mm = apply<ZFinder>(event, "zfinder_mm");
       if (zfinder_mm.bosons().size() == 1) {
 	Particles mm = zfinder_mm.constituents();
 	std::sort(mm.begin(), mm.end(), cmpMomByPt);

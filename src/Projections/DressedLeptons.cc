@@ -83,7 +83,7 @@ namespace Rivet {
 
     // Match each photon to its closest charged lepton within the dR cone
     const FinalState& photons = applyProjection<FinalState>(e, "Photons");
-    foreach (const Particle& photon, photons.particles()) {
+    for (const Particle& photon : photons.particles()) {
       // Ignore photon if it's from a hadron/tau decay and we're avoiding those
       if (!_fromDecay && photon.fromDecay()) continue;
       const FourMomentum p_P = photon.momentum();
@@ -105,10 +105,11 @@ namespace Rivet {
       }
     }
 
-    foreach (const DressedLepton& lepton, allClusteredLeptons) {
+    for (const DressedLepton& lepton : allClusteredLeptons) {
       if (accept(lepton)) {
         _clusteredLeptons.push_back(lepton);
         _theParticles.push_back(lepton.constituentLepton());
+        /// @todo Can't we use += here?
         _theParticles.insert(_theParticles.end(),
                              lepton.constituentPhotons().begin(),
                              lepton.constituentPhotons().end());

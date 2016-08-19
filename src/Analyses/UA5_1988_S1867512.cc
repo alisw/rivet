@@ -6,13 +6,12 @@
 
 namespace Rivet {
 
-  /// @brief helper function to fill correlation points into scatter plot
-  Point2D correlation_helper(double x, double xerr,
-			     const vector<int> & nf, const vector<int> & nb,
-			     double sumWPassed)
-  {
-    return Point2D( x, 	correlation(nf, nb),
-		    xerr,	correlation_err(nf, nb)/sqrt(sumWPassed)  );
+
+  namespace {
+    /// @brief Helper function to fill correlation points into scatter plot
+    Point2D correlation_helper(double x, double xerr, const vector<int> & nf, const vector<int> & nb, double sumWPassed) {
+      return Point2D(x, correlation(nf, nb), xerr, correlation_err(nf, nb)/sqrt(sumWPassed));
+    }
   }
 
 
@@ -20,10 +19,9 @@ namespace Rivet {
   class UA5_1988_S1867512 : public Analysis {
   public:
 
-    UA5_1988_S1867512() : Analysis("UA5_1988_S1867512")
-    {
-      _sumWPassed = 0;
-    }
+    UA5_1988_S1867512()
+      : Analysis("UA5_1988_S1867512"), _sumWPassed(0)
+    {    }
 
 
     /// @name Analysis methods
@@ -31,29 +29,29 @@ namespace Rivet {
 
     void init() {
       // Projections
-      addProjection(TriggerUA5(), "Trigger");
+      declare(TriggerUA5(), "Trigger");
 
       // Symmetric eta interval
-      addProjection(ChargedFinalState(-0.5, 0.5), "CFS05");
+      declare(ChargedFinalState(-0.5, 0.5), "CFS05");
 
       // Asymmetric intervals first
       // Forward eta intervals
-      addProjection(ChargedFinalState(0.0, 1.0), "CFS10F");
-      addProjection(ChargedFinalState(0.5, 1.5), "CFS15F");
-      addProjection(ChargedFinalState(1.0, 2.0), "CFS20F");
-      addProjection(ChargedFinalState(1.5, 2.5), "CFS25F");
-      addProjection(ChargedFinalState(2.0, 3.0), "CFS30F");
-      addProjection(ChargedFinalState(2.5, 3.5), "CFS35F");
-      addProjection(ChargedFinalState(3.0, 4.0), "CFS40F");
+      declare(ChargedFinalState(0.0, 1.0), "CFS10F");
+      declare(ChargedFinalState(0.5, 1.5), "CFS15F");
+      declare(ChargedFinalState(1.0, 2.0), "CFS20F");
+      declare(ChargedFinalState(1.5, 2.5), "CFS25F");
+      declare(ChargedFinalState(2.0, 3.0), "CFS30F");
+      declare(ChargedFinalState(2.5, 3.5), "CFS35F");
+      declare(ChargedFinalState(3.0, 4.0), "CFS40F");
 
       // Backward eta intervals
-      addProjection(ChargedFinalState(-1.0,  0.0), "CFS10B");
-      addProjection(ChargedFinalState(-1.5, -0.5), "CFS15B");
-      addProjection(ChargedFinalState(-2.0, -1.0), "CFS20B");
-      addProjection(ChargedFinalState(-2.5, -1.5), "CFS25B");
-      addProjection(ChargedFinalState(-3.0, -2.0), "CFS30B");
-      addProjection(ChargedFinalState(-3.5, -2.5), "CFS35B");
-      addProjection(ChargedFinalState(-4.0, -3.0), "CFS40B");
+      declare(ChargedFinalState(-1.0,  0.0), "CFS10B");
+      declare(ChargedFinalState(-1.5, -0.5), "CFS15B");
+      declare(ChargedFinalState(-2.0, -1.0), "CFS20B");
+      declare(ChargedFinalState(-2.5, -1.5), "CFS25B");
+      declare(ChargedFinalState(-3.0, -2.0), "CFS30B");
+      declare(ChargedFinalState(-3.5, -2.5), "CFS35B");
+      declare(ChargedFinalState(-4.0, -3.0), "CFS40B");
 
       // Histogram booking, we have sqrt(s) = 200, 546 and 900 GeV
       // TODO use Scatter2D to be able to output errors
@@ -72,29 +70,30 @@ namespace Rivet {
 
     void analyze(const Event& event) {
       // Trigger
-      const bool trigger = applyProjection<TriggerUA5>(event, "Trigger").nsdDecision();
+      const bool trigger = apply<TriggerUA5>(event, "Trigger").nsdDecision();
       if (!trigger) vetoEvent;
       _sumWPassed += event.weight();
 
       // Count forward/backward particles
-      n_10f += applyProjection<ChargedFinalState>(event, "CFS10F").size();
-      n_15f += applyProjection<ChargedFinalState>(event, "CFS15F").size();
-      n_20f += applyProjection<ChargedFinalState>(event, "CFS20F").size();
-      n_25f += applyProjection<ChargedFinalState>(event, "CFS25F").size();
-      n_30f += applyProjection<ChargedFinalState>(event, "CFS30F").size();
-      n_35f += applyProjection<ChargedFinalState>(event, "CFS35F").size();
-      n_40f += applyProjection<ChargedFinalState>(event, "CFS40F").size();
+      n_10f.push_back(apply<ChargedFinalState>(event, "CFS10F").size());
+      n_15f.push_back(apply<ChargedFinalState>(event, "CFS15F").size());
+      n_20f.push_back(apply<ChargedFinalState>(event, "CFS20F").size());
+      n_25f.push_back(apply<ChargedFinalState>(event, "CFS25F").size());
+      n_30f.push_back(apply<ChargedFinalState>(event, "CFS30F").size());
+      n_35f.push_back(apply<ChargedFinalState>(event, "CFS35F").size());
+      n_40f.push_back(apply<ChargedFinalState>(event, "CFS40F").size());
       //
-      n_10b += applyProjection<ChargedFinalState>(event, "CFS10B").size();
-      n_15b += applyProjection<ChargedFinalState>(event, "CFS15B").size();
-      n_20b += applyProjection<ChargedFinalState>(event, "CFS20B").size();
-      n_25b += applyProjection<ChargedFinalState>(event, "CFS25B").size();
-      n_30b += applyProjection<ChargedFinalState>(event, "CFS30B").size();
-      n_35b += applyProjection<ChargedFinalState>(event, "CFS35B").size();
-      n_40b += applyProjection<ChargedFinalState>(event, "CFS40B").size();
+      n_10b.push_back(apply<ChargedFinalState>(event, "CFS10B").size());
+      n_15b.push_back(apply<ChargedFinalState>(event, "CFS15B").size());
+      n_20b.push_back(apply<ChargedFinalState>(event, "CFS20B").size());
+      n_25b.push_back(apply<ChargedFinalState>(event, "CFS25B").size());
+      n_30b.push_back(apply<ChargedFinalState>(event, "CFS30B").size());
+      n_35b.push_back(apply<ChargedFinalState>(event, "CFS35B").size());
+      n_40b.push_back(apply<ChargedFinalState>(event, "CFS40B").size());
       //
-      n_05 += applyProjection<ChargedFinalState>(event, "CFS05").size();
+      n_05 .push_back(apply<ChargedFinalState>(event, "CFS05").size());
     }
+
 
     void finalize() {
       // The correlation strength is defined in formulas

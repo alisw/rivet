@@ -26,10 +26,10 @@ namespace Rivet {
     /// Get an analysis by name.
     /// Warning: a name arg which matches no known analysis will return a null
     /// pointer. Check your return values before using them!
-    static Analysis* getAnalysis(const string& analysisname);
+    static unique_ptr<Analysis> getAnalysis(const string& analysisname);
 
     /// Get all the available analyses.
-    static vector<Analysis*> getAllAnalyses();
+    static vector<unique_ptr<Analysis>> getAllAnalyses();
 
 
   private:

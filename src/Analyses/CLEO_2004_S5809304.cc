@@ -1,5 +1,4 @@
 // -*- C++ -*-
-#include <iostream>
 #include "Rivet/Analysis.hh"
 #include "Rivet/Projections/Beam.hh"
 #include "Rivet/Projections/UnstableFinalState.hh"
@@ -21,14 +20,14 @@ namespace Rivet {
       const double weight = e.weight();
 
       // Loop through unstable FS particles and look for charmed mesons/baryons
-      const UnstableFinalState& ufs = applyProjection<UnstableFinalState>(e, "UFS");
+      const UnstableFinalState& ufs = apply<UnstableFinalState>(e, "UFS");
 
-      const Beam beamproj = applyProjection<Beam>(e, "Beams");
+      const Beam beamproj = apply<Beam>(e, "Beams");
       const ParticlePair& beams = beamproj.beams();
-      FourMomentum mom_tot = beams.first.momentum() + beams.second.momentum();
+      const FourMomentum mom_tot = beams.first.momentum() + beams.second.momentum();
       LorentzTransform cms_boost;
-      if (mom_tot.p3().mod() > 0.001)
-        cms_boost = LorentzTransform(-mom_tot.boostVector());
+      if (mom_tot.p3().mod() > 1*MeV)
+        cms_boost = LorentzTransform::mkFrameTransformFromBeta(mom_tot.betaVec());
       const double s = sqr(beamproj.sqrtS());
 
       // Particle masses from PDGlive (accessed online 16. Nov. 2009).
@@ -110,8 +109,8 @@ namespace Rivet {
 
 
     void init() {
-      addProjection(Beam(), "Beams");
-      addProjection(UnstableFinalState(), "UFS");
+      declare(Beam(), "Beams");
+      declare(UnstableFinalState(), "UFS");
 
       // continuum cross sections
       _sigmaDPlus      = bookHisto1D(1,1,1);

@@ -6,6 +6,7 @@ Collider: HERA Run I
 SpiresID: 4815815
 Status: UNVALIDATED
 Authors:
+ - Andy Buckley <andy.buckley@cern.ch>
  - Jon Butterworth <jmb@hep.ucl.ac.uk>
 References:
  - Eur.Phys.J.C23:615,2002
@@ -29,10 +30,10 @@ Description:
   227~GeV is probed, with values of $x_P$, the fractional momentum of the
   partons inside the proton, predominantly in the region between 0.01
   and 0.1. The fractional momentum of the partons from the photon,
-  $x\gamma$, is in the region 0.1 to 1. Jets are reconstructed in the
+  $x_\gamma$, is in the region 0.1 to 1. Jets are reconstructed in the
   range $-1 < |\eta| < 2.4$ using the $k_\perp$ algorithm with an $R$
-  parameter of 1.0. The minimum pT of the leading jet should be greater
-  than 14~GeV, and at least one other jet must have $pT > 11$~GeV.
+  parameter of 1.0. The minimum \pT of the leading jet should be greater
+  than 14~GeV, and at least one other jet must have $\pT > 11$~GeV.
 BibKey: Chekanov:2001bw
 BibTeX: '@Article{Chekanov:2001bw,
      author    = "Chekanov, S. and others",

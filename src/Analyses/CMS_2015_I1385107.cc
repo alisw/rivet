@@ -23,11 +23,11 @@ namespace Rivet {
     void init() {
 
       const ChargedFinalState cfs(Cuts::abseta < 2 && Cuts::pT > 500*MeV);
-      addProjection(cfs, "CFS");
+      declare(cfs, "CFS");
 
       const ChargedFinalState cfsforjet(Cuts::abseta < 2.5 && Cuts::pT > 500*MeV);
       const FastJets jetpro(cfsforjet, FastJets::SISCONE, 0.5);
-      addProjection(jetpro, "Jets");
+      declare(jetpro, "Jets");
 
       _h_Nch_TransAVE_vs_pT = bookProfile1D(1, 1, 1); // Nch vs. pT_max      (TransAVE)
       _h_Sum_TransAVE_vs_pT = bookProfile1D(2, 1, 1); // sum(pT) vs. pT_max  (TransAVE)
@@ -53,7 +53,7 @@ namespace Rivet {
 
       // Find the lead jet, applying a restriction that the jets must be within |eta| < 2.
       FourMomentum p_lead;
-      foreach (const Jet& j, applyProjection<FastJets>(event, "Jets").jetsByPt(1*GeV)) {
+      foreach (const Jet& j, apply<FastJets>(event, "Jets").jetsByPt(1*GeV)) {
         if (j.abseta() < 2.0) {
           p_lead = j.momentum();
           break;
@@ -64,7 +64,7 @@ namespace Rivet {
       const double pT_lead  = p_lead.pT();
 
       // Loop on charged particles and separate Left and Right transverse regions
-      Particles particles = applyProjection<ChargedFinalState>(event, "CFS").particlesByPt();
+      Particles particles = apply<ChargedFinalState>(event, "CFS").particlesByPt();
       int nch_TransLeft = 0, nch_TransRight = 0;
       double ptSum_TransLeft = 0., ptSum_TransRight = 0.;
       foreach (const Particle& p, particles) {

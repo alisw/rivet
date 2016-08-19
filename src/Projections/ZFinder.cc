@@ -67,10 +67,12 @@ namespace Rivet {
     if (imfs.particlePairs().size() < 1) return;
     ParticlePair Zconstituents(imfs.particlePairs()[0]);
     Particle l1(Zconstituents.first), l2(Zconstituents.second);
-    if (threeCharge(l1) > 0.0) {
-      _constituents += l1, l2;
+    if (threeCharge(l1) > 0) {
+      _constituents.push_back(l1);
+      _constituents.push_back(l2);
     } else {
-      _constituents += l2, l1;
+      _constituents.push_back(l2);
+      _constituents.push_back(l1);
     }
     FourMomentum pZ = l1.momentum() + l2.momentum();
     assert(threeCharge(l1) + threeCharge(l2) == 0);

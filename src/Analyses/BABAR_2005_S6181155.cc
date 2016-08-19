@@ -1,5 +1,4 @@
 // -*- C++ -*-
-#include <iostream>
 #include "Rivet/Analysis.hh"
 #include "Rivet/Projections/Beam.hh"
 #include "Rivet/Projections/UnstableFinalState.hh"
@@ -16,26 +15,39 @@ namespace Rivet {
       : Analysis("BABAR_2005_S6181155")
     { }
 
+    void init() {
+      declare(Beam(), "Beams");
+      declare(UnstableFinalState(), "UFS");
+      _histOnResonanceA = bookHisto1D(1,1,1);
+      _histOnResonanceB = bookHisto1D(2,1,1);
+      _histOffResonance = bookHisto1D(2,1,2);
+      _sigma            = bookHisto1D(3,1,1);
+      _histOnResonanceA_norm = bookHisto1D(4,1,1);
+      _histOnResonanceB_norm = bookHisto1D(5,1,1);
+      _histOffResonance_norm = bookHisto1D(5,1,2);
+      
+    }
 
     void analyze(const Event& e) {
       const double weight = e.weight();
 
       // Loop through unstable FS particles and look for charmed mesons/baryons
-      const UnstableFinalState& ufs = applyProjection<UnstableFinalState>(e, "UFS");
+      const UnstableFinalState& ufs = apply<UnstableFinalState>(e, "UFS");
 
-      const Beam beamproj = applyProjection<Beam>(e, "Beams");
+      const Beam beamproj = apply<Beam>(e, "Beams");
       const ParticlePair& beams = beamproj.beams();
-      FourMomentum mom_tot = beams.first.momentum() + beams.second.momentum();
-      LorentzTransform cms_boost(-mom_tot.boostVector());
+      const FourMomentum mom_tot = beams.first.momentum() + beams.second.momentum();
+      const LorentzTransform cms_boost = LorentzTransform::mkFrameTransformFromBeta(mom_tot.betaVec());
       const double s = sqr(beamproj.sqrtS());
 
-      const bool onresonance = fuzzyEquals(beamproj.sqrtS(), 10.58, 2E-3);
+      const bool onresonance = fuzzyEquals(beamproj.sqrtS()/GeV, 10.58, 2E-3);
 
       foreach (const Particle& p, ufs.particles()) {
         // 3-momentum in CMS frame
+
         const double mom = cms_boost.transform(p.momentum()).vector3().mod();
-        // only looking at Xi_c^0
-        if(p.abspid() != 4132 ) continue;
+        // Only looking at Xi_c^0
+        if (p.abspid() != 4132 ) continue;
         if (onresonance) {
           _histOnResonanceA_norm->fill(mom,weight);
           _histOnResonanceB_norm->fill(mom,weight);
@@ -45,7 +57,7 @@ namespace Rivet {
         }
         MSG_DEBUG("mom = " << mom);
         // off-resonance cross section
-        if(checkDecay(p.genParticle())) {
+        if (checkDecay(p.genParticle())) {
           if (onresonance) {
             _histOnResonanceA->fill(mom,weight);
             _histOnResonanceB->fill(mom,weight);
@@ -56,7 +68,8 @@ namespace Rivet {
           }
         }
       }
-    } // analyze
+    }
+
 
     void finalize() {
       scale(_histOnResonanceA, crossSection()/femtobarn/sumOfWeights());
@@ -66,22 +79,8 @@ namespace Rivet {
       normalize(_histOnResonanceA_norm);
       normalize(_histOnResonanceB_norm);
       normalize(_histOffResonance_norm);
-    } // finalize
+    }
 
-
-    void init() {
-      addProjection(Beam(), "Beams");
-      addProjection(UnstableFinalState(), "UFS");
-
-      _histOnResonanceA = bookHisto1D(1,1,1);
-      _histOnResonanceB = bookHisto1D(2,1,1);
-      _histOffResonance = bookHisto1D(2,1,2);
-      _sigma            = bookHisto1D(3,1,1);
-      _histOnResonanceA_norm = bookHisto1D(4,1,1);
-      _histOnResonanceB_norm = bookHisto1D(5,1,1);
-      _histOffResonance_norm = bookHisto1D(5,1,2);
-
-    } // init
 
   private:
 
@@ -102,11 +101,11 @@ namespace Rivet {
       findDecayProducts(p, nstable, npip, npim, nXip, nXim);
       int id = p->pdg_id();
       // Xi_c
-      if (id==4132) {
-        if (nstable==2 && nXim==1 && npip==1) return true;
+      if (id == 4132) {
+        if (nstable == 2 && nXim == 1 && npip == 1) return true;
       }
-      else if (id==-4132) {
-        if (nstable==2 && nXip==1 && npim==1) return true;
+      else if (id == -4132) {
+        if (nstable == 2 && nXip == 1 && npim == 1) return true;
       }
       return false;
     }
@@ -122,10 +121,10 @@ namespace Rivet {
         if (id==3312) {
           ++nXim;
           ++nstable;
-        } else if (id==-3312) {
+        } else if (id == -3312) {
           ++nXip;
           ++nstable;
-        } else if(id==111||id==221) {
+        } else if(id == 111 || id == 221) {
           ++nstable;
         } else if ((*pp)->end_vertex()) {
           findDecayProducts(*pp, nstable, npip, npim, nXip, nXim);

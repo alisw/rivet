@@ -26,12 +26,12 @@ namespace Rivet {
 
     void init() {
       const FinalState fs;
-      addProjection(fs, "FinalState");
+      declare(fs, "FinalState");
 
       FastJets fj06(fs, FastJets::ANTIKT, 0.6);
-      addProjection(fj06, "AntiKT06");
+      declare(fj06, "AntiKT06");
       FastJets fj10(fs, FastJets::ANTIKT, 1.0);
-      addProjection(fj10, "AntiKT10");
+      declare(fj10, "AntiKT10");
 
       for (size_t alg = 0; alg < 2; ++alg) {
         _hs_mass[alg]  = bookHisto1D(1, alg+1, 1);
@@ -49,8 +49,8 @@ namespace Rivet {
     void analyze(const Event& event) {
       const double weight = event.weight();
       Jets jetAr[2];
-      jetAr[0] = applyProjection<FastJets>(event, "AntiKT06").jetsByPt(Cuts::pT > 300*GeV && Cuts::abseta < 2.0);
-      jetAr[1] = applyProjection<FastJets>(event, "AntiKT10").jetsByPt(Cuts::pT > 300*GeV && Cuts::abseta < 2.0);
+      jetAr[0] = apply<FastJets>(event, "AntiKT06").jetsByPt(Cuts::pT > 300*GeV && Cuts::abseta < 2.0);
+      jetAr[1] = apply<FastJets>(event, "AntiKT10").jetsByPt(Cuts::pT > 300*GeV && Cuts::abseta < 2.0);
 
       for (size_t alg = 0; alg < 2; ++alg) {
         // Require at least one jet

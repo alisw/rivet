@@ -48,34 +48,34 @@ namespace Rivet {
       el_id.acceptIdPair(PID::ELECTRON);
       PromptFinalState electrons(el_id);
       electrons.acceptTauDecays(true);
-      addProjection(electrons, "electrons");
+      declare(electrons, "electrons");
       DressedLeptons dressedelectrons(photons, electrons, 0.1, eta_lep && Cuts::pT > 25*GeV, true, true);
-      addProjection(dressedelectrons, "dressedelectrons");
+      declare(dressedelectrons, "dressedelectrons");
       DressedLeptons vetodressedelectrons(photons, electrons, 0.1, eta_lep && Cuts::pT >= 15*GeV, true, true);
-      addProjection(vetodressedelectrons, "vetodressedelectrons");
+      declare(vetodressedelectrons, "vetodressedelectrons");
       DressedLeptons ewdressedelectrons(photons, electrons, 0.1, eta_full, true, true);
-      addProjection(ewdressedelectrons, "ewdressedelectrons");
+      declare(ewdressedelectrons, "ewdressedelectrons");
 
       // Projection to find the muons
       IdentifiedFinalState mu_id(fs);
       mu_id.acceptIdPair(PID::MUON);
       PromptFinalState muons(mu_id);
       muons.acceptTauDecays(true);
-      addProjection(muons, "muons");
+      declare(muons, "muons");
       vector<pair<double, double> > eta_muon;
       DressedLeptons dressedmuons(photons, muons, 0.1, eta_lep && Cuts::pT >= 25*GeV, true, true);
-      addProjection(dressedmuons, "dressedmuons");
+      declare(dressedmuons, "dressedmuons");
       DressedLeptons vetodressedmuons(photons, muons, 0.1, eta_lep && Cuts::pT >= 15*GeV, true, true);
-      addProjection(vetodressedmuons, "vetodressedmuons");
+      declare(vetodressedmuons, "vetodressedmuons");
       DressedLeptons ewdressedmuons(photons, muons, 0.1, eta_full, true, true);
-      addProjection(ewdressedmuons, "ewdressedmuons");
+      declare(ewdressedmuons, "ewdressedmuons");
 
       // Projection to find neutrinos and produce MET
       IdentifiedFinalState nu_id;
       nu_id.acceptNeutrinos();
       PromptFinalState neutrinos(nu_id);
       neutrinos.acceptTauDecays(true);
-      addProjection(neutrinos, "neutrinos");
+      declare(neutrinos, "neutrinos");
 
       // Jet clustering.
       VetoedFinalState vfs;
@@ -84,7 +84,7 @@ namespace Rivet {
       vfs.addVetoOnThisFinalState(neutrinos);
       FastJets jets(vfs, FastJets::ANTIKT, 0.4);
       jets.useInvisibles();
-      addProjection(jets, "jets");
+      declare(jets, "jets");
 
       // Book histograms
       for (unsigned int ihist = 0; ihist < _histLimit ; ihist++) {
@@ -99,15 +99,15 @@ namespace Rivet {
     void analyze(const Event& event) {
 
       // Get the selected objects, using the projections.
-      _dressedelectrons = sortByPt(applyProjection<DressedLeptons>(event, "dressedelectrons").dressedLeptons());
-      _vetodressedelectrons = applyProjection<DressedLeptons>(event, "vetodressedelectrons").dressedLeptons();
+      _dressedelectrons = sortByPt(apply<DressedLeptons>(event, "dressedelectrons").dressedLeptons());
+      _vetodressedelectrons = apply<DressedLeptons>(event, "vetodressedelectrons").dressedLeptons();
 
-      _dressedmuons = sortByPt(applyProjection<DressedLeptons>(event, "dressedmuons").dressedLeptons());
-      _vetodressedmuons = applyProjection<DressedLeptons>(event, "vetodressedmuons").dressedLeptons();
+      _dressedmuons = sortByPt(apply<DressedLeptons>(event, "dressedmuons").dressedLeptons());
+      _vetodressedmuons = apply<DressedLeptons>(event, "vetodressedmuons").dressedLeptons();
 
-      _neutrinos = applyProjection<PromptFinalState>(event, "neutrinos").particlesByPt();
+      _neutrinos = apply<PromptFinalState>(event, "neutrinos").particlesByPt();
 
-      _jets = applyProjection<FastJets>(event, "jets").jetsByPt(Cuts::pT > 25*GeV && Cuts::abseta < 2.5);
+      _jets = apply<FastJets>(event, "jets").jetsByPt(Cuts::pT > 25*GeV && Cuts::abseta < 2.5);
 
 
       // Calculate the missing ET, using the prompt neutrinos only (really?)

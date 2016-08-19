@@ -32,29 +32,29 @@ LogY=0
 
 # BEGIN PLOT /CDF_1996_S3349578/d04-x01-y01
 Title=Dalitz distribution in inclusive 4-jet events
-XLabel=$X_3^{'}$
-YLabel=$1/N \mathrm{d}N/\mathrm{d}X_3^{'}$
+XLabel=$X_3^\prime$
+YLabel=$1/N \mathrm{d}N/\mathrm{d}X_3^\prime$
 LogY=0
 # END PLOT
 
 # BEGIN PLOT /CDF_1996_S3349578/d05-x01-y01
 Title=Dalitz distribution in inclusive 4-jet events
-XLabel=$X_4^{'}$
-YLabel=$1/N \mathrm{d}N/\mathrm{d}X_4^{'}$
+XLabel=$X_4^\prime$
+YLabel=$1/N \mathrm{d}N/\mathrm{d}X_4^\prime$
 LogY=0
 # END PLOT
 
 # BEGIN PLOT /CDF_1996_S3349578/d06-x01-y01
 Title=Dalitz distribution in inclusive 5-jet events
-XLabel=$X_3^{''}$
-YLabel=$1/N \mathrm{d}N/\mathrm{d}X_3^{''}$
+XLabel=$X_3^{\prime\prime}$
+YLabel=$1/N \mathrm{d}N/\mathrm{d}X_3^{\prime\prime}$
 LogY=0
 # END PLOT
 
 # BEGIN PLOT /CDF_1996_S3349578/d07-x01-y01
 Title=Dalitz distribution in inclusive 5-jet events
-XLabel=$X_4^{''}$
-YLabel=$1/N \mathrm{d}N/\mathrm{d}X_4^{''}$
+XLabel=$X_4^{\prime\prime}$
+YLabel=$1/N \mathrm{d}N/\mathrm{d}X_4^{\prime\prime}$
 LogY=0
 # END PLOT
 
@@ -74,29 +74,29 @@ LogY=0
 
 # BEGIN PLOT /CDF_1996_S3349578/d10-x01-y01
 Title=Leading jet angle in inclusive 4-jet events
-XLabel=$|\cos \theta_{3^'}|$
-YLabel=$1/N \mathrm{d}N/\mathrm{d}\cos\theta_{3^'}$
+XLabel=$|\cos \theta_{3^\prime}|$
+YLabel=$1/N \mathrm{d}N/\mathrm{d}\cos\theta_{3^\prime}$
 LogY=0
 # END PLOT
 
 # BEGIN PLOT /CDF_1996_S3349578/d11-x01-y01
 Title=Angular distribution in inclusive 4-jet events
-XLabel=$\Psi_{3^'}$
-YLabel=$1/N \mathrm{d}N/\mathrm{d}\Psi_{3^'}$
+XLabel=$\Psi_{3^\prime}$
+YLabel=$1/N \mathrm{d}N/\mathrm{d}\Psi_{3^\prime}$
 LogY=0
 # END PLOT
 
 # BEGIN PLOT /CDF_1996_S3349578/d12-x01-y01
 Title=Leading jet angle in inclusive 5-jet events
-XLabel=$|\cos \theta_{3^{''}}|$
-YLabel=$1/N \mathrm{d}N/\mathrm{d}\cos\theta_{3^{''}}$
+XLabel=$|\cos \theta_{3^{\prime\prime}}|$
+YLabel=$1/N \mathrm{d}N/\mathrm{d}\cos\theta_{3^{\prime\prime}}$
 LogY=0
 # END PLOT
 
 # BEGIN PLOT /CDF_1996_S3349578/d13-x01-y01
 Title=Angular distribution in inclusive 5-jet events
-XLabel=$\Psi_{3^{''}}$
-YLabel=$1/N \mathrm{d}N/\mathrm{d}\Psi_{3^{''}}$
+XLabel=$\Psi_{3^{\prime\prime}}$
+YLabel=$1/N \mathrm{d}N/\mathrm{d}\Psi_{3^{\prime\prime}}$
 LogY=0
 # END PLOT
 
@@ -123,43 +123,43 @@ LogY=0
 
 # BEGIN PLOT /CDF_1996_S3349578/d15-x01-y01
 Title=Single-jet mass fraction in inclusive 4-jet events
-XLabel=$f_3^{'}$
-YLabel=$1/N \mathrm{d}N/\mathrm{d}f_3^{'}$
+XLabel=$f_3^\prime$
+YLabel=$1/N \mathrm{d}N/\mathrm{d}f_3^\prime$
 LogY=0
 # END PLOT
 
 # BEGIN PLOT /CDF_1996_S3349578/d15-x01-y02
 Title=Single-jet mass fraction in inclusive 4-jet events
-XLabel=$f_4^{'}$
-YLabel=$1/N \mathrm{d}N/\mathrm{d}f_4^{'}$
+XLabel=$f_4^\prime$
+YLabel=$1/N \mathrm{d}N/\mathrm{d}f_4^\prime$
 LogY=0
 # END PLOT
 
 # BEGIN PLOT /CDF_1996_S3349578/d15-x01-y03
 Title=Single-jet mass fraction in inclusive 4-jet events
-XLabel=$f_5^{'}$
-YLabel=$1/N \mathrm{d}N/\mathrm{d}f_5^{'}$
+XLabel=$f_5^\prime$
+YLabel=$1/N \mathrm{d}N/\mathrm{d}f_5^\prime$
 LogY=0
 # END PLOT
 
 # BEGIN PLOT /CDF_1996_S3349578/d16-x01-y01
 Title=Single-jet mass fraction in inclusive 5-jet events
-XLabel=$f_3^{''}$
-YLabel=$1/N \mathrm{d}N/\mathrm{d}f_3^{''}$
+XLabel=$f_3^{\prime\prime}$
+YLabel=$1/N \mathrm{d}N/\mathrm{d}f_3^{\prime\prime}$
 LogY=0
 # END PLOT
 
 # BEGIN PLOT /CDF_1996_S3349578/d16-x01-y02
 Title=Single-jet mass fraction in inclusive 5-jet events
-XLabel=$f_4^{''}$
-YLabel=$1/N \mathrm{d}N/\mathrm{d}f_4^{''}$
+XLabel=$f_4^{\prime\prime}$
+YLabel=$1/N \mathrm{d}N/\mathrm{d}f_4^{\prime\prime}$
 LogY=0
 # END PLOT
 
 # BEGIN PLOT /CDF_1996_S3349578/d16-x01-y03
 Title=Single-jet mass fraction in inclusive 5-jet events
-XLabel=$f_5^{''}$
-YLabel=$1/N \mathrm{d}N/\mathrm{d}f_5^{''}$
+XLabel=$f_5^{\prime\prime}$
+YLabel=$1/N \mathrm{d}N/\mathrm{d}f_5^{\prime\prime}$
 LogY=0
 # END PLOT
 
@@ -172,8 +172,8 @@ LogY=0
 
 # BEGIN PLOT /CDF_1996_S3349578/d18-x01-y01
 Title=Two-body energy sharing in inclusive 5-jet events
-XLabel=$X_A^{'}$
-YLabel=$1/N \mathrm{d}N/\mathrm{d}X_A^{'}$
+XLabel=$X_A^{\prime}$
+YLabel=$1/N \mathrm{d}N/\mathrm{d}X_A^{\prime}$
 LogY=0
 # END PLOT
 
@@ -186,22 +186,22 @@ LogY=0
 
 # BEGIN PLOT /CDF_1996_S3349578/d19-x01-y01
 Title=Two-body angular distribution in inclusive 4-jet events
-XLabel=$\Psi^{'}_{AB}$
-YLabel=$1/N \mathrm{d}N/\mathrm{d}\Psi^{'}_{AB}$
+XLabel=$\Psi^{\prime}_{AB}$
+YLabel=$1/N \mathrm{d}N/\mathrm{d}\Psi^{\prime}_{AB}$
 LogY=0
 # END PLOT
 
 # BEGIN PLOT /CDF_1996_S3349578/d20-x01-y01
 Title=Two-body angular distribution in inclusive 5-jet events
-XLabel=$\Psi^{''}_{A^{'}B^{'}}$
-YLabel=$1/N \mathrm{d}N/\mathrm{d}\Psi^{''}_{A^{'}B^{'}}$
+XLabel=$\Psi^{\prime\prime}_{A^{\prime}B^{\prime}}$
+YLabel=$1/N \mathrm{d}N/\mathrm{d}\Psi^{\prime\prime}_{A^{\prime}B^{\prime}}$
 LogY=0
 # END PLOT
 
 # BEGIN PLOT /CDF_1996_S3349578/d20-x01-y02
 Title=Two-body angular distribution in inclusive 5-jet events
-XLabel=$\Psi^{''}_{CD}$
-YLabel=$1/N \mathrm{d}N/\mathrm{d}\Psi^{''}_{CD}$
+XLabel=$\Psi^{\prime\prime}_{CD}$
+YLabel=$1/N \mathrm{d}N/\mathrm{d}\Psi^{\prime\prime}_{CD}$
 LogY=0
 # END PLOT
 
@@ -221,15 +221,15 @@ LogY=0
 
 # BEGIN PLOT /CDF_1996_S3349578/d22-x01-y01
 Title=Single-body mass fraction in inclusive 5-jet events
-XLabel=$f_A^{'}$
-YLabel=$1/N \mathrm{d}N/\mathrm{d}f_A^{'}$
+XLabel=$f_A^{\prime}$
+YLabel=$1/N \mathrm{d}N/\mathrm{d}f_A^{\prime}$
 LogY=0
 # END PLOT
 
 # BEGIN PLOT /CDF_1996_S3349578/d23-x01-y01
 Title=Single-body mass fraction in inclusive 5-jet events
-XLabel=$f_B^{'}$
-YLabel=$1/N \mathrm{d}N/\mathrm{d}f_B^{'}$
+XLabel=$f_B^{\prime}$
+YLabel=$1/N \mathrm{d}N/\mathrm{d}f_B^{\prime}$
 LogY=0
 # END PLOT
 

@@ -19,7 +19,7 @@ namespace Rivet {
     /// Book histograms and initialise projections before the run
     void init() {
       const FinalState cnfs(-4.7, 4.7);
-      addProjection(FastJets(cnfs, FastJets::ANTIKT, 0.5), "Jets");
+      declare(FastJets(cnfs, FastJets::ANTIKT, 0.5), "Jets");
 
       _h_jetetas[0]     = bookHisto1D(1,1,1);
       _h_jetpts[0]      = bookHisto1D(2,1,1);
@@ -38,7 +38,7 @@ namespace Rivet {
     /// Perform the per-event analysis
     void analyze(const Event& event) {
       /// @todo Use jetsByPt(ptGtr(20*GeV) & absetaIn(4.7)), then no need for the lower loop;
-      const Jets jets = applyProjection<FastJets>(event, "Jets").jetsByPt(20*GeV);
+      const Jets jets = apply<FastJets>(event, "Jets").jetsByPt(20*GeV);
       if (jets.size() < 4) vetoEvent;
 
       // Ensure that there are exactly 4 jets > 20 GeV, with two above 50 GeV

@@ -49,34 +49,34 @@ namespace Rivet {
     void init() {
 
       const FinalState fs(Cuts::abseta < 4.5);
-      addProjection(fs, "ALL_FS");
+      declare(fs, "ALL_FS");
 
       /// Get electrons from truth record
       IdentifiedFinalState elec_fs(Cuts::abseta < 2.47 && Cuts::pT > 25*GeV);
       elec_fs.acceptIdPair(PID::ELECTRON);
-      addProjection(elec_fs, "ELEC_FS");
+      declare(elec_fs, "ELEC_FS");
 
       /// Get muons which pass the initial kinematic cuts:
       IdentifiedFinalState muon_fs(Cuts::abseta < 2.5 && Cuts::pT > 20*GeV);
       muon_fs.acceptIdPair(PID::MUON);
-      addProjection(muon_fs, "MUON_FS");
+      declare(muon_fs, "MUON_FS");
 
       /// Get all neutrinos. These will not be used to form jets.
       /// We'll use the highest 2 pT neutrinos to calculate the MET
       IdentifiedFinalState neutrino_fs(Cuts::abseta < 4.5);
       neutrino_fs.acceptNeutrinos();
-      addProjection(neutrino_fs, "NEUTRINO_FS");
+      declare(neutrino_fs, "NEUTRINO_FS");
 
       // Final state used as input for jet-finding.
       // We include everything except the muons and neutrinos
       VetoedFinalState jet_input(fs);
       jet_input.vetoNeutrinos();
       jet_input.addVetoPairId(PID::MUON);
-      addProjection(jet_input, "JET_INPUT");
+      declare(jet_input, "JET_INPUT");
 
       // Get the jets
       FastJets jets(jet_input, FastJets::ANTIKT, 0.4);
-      addProjection(jets, "JETS");
+      declare(jets, "JETS");
 
       // Initialise weight counter
       m_total_weight = 0.0;
@@ -131,12 +131,12 @@ namespace Rivet {
       const double weight = event.weight();
 
       /// Get the various sets of final state particles
-      const Particles& elecFS = applyProjection<IdentifiedFinalState>(event, "ELEC_FS").particlesByPt();
-      const Particles& muonFS = applyProjection<IdentifiedFinalState>(event, "MUON_FS").particlesByPt();
-      const Particles& neutrinoFS = applyProjection<IdentifiedFinalState>(event, "NEUTRINO_FS").particlesByPt();
+      const Particles& elecFS = apply<IdentifiedFinalState>(event, "ELEC_FS").particlesByPt();
+      const Particles& muonFS = apply<IdentifiedFinalState>(event, "MUON_FS").particlesByPt();
+      const Particles& neutrinoFS = apply<IdentifiedFinalState>(event, "NEUTRINO_FS").particlesByPt();
 
       // Get all jets with pT > 25 GeV
-      const Jets& jets = applyProjection<FastJets>(event, "JETS").jetsByPt(25.0*GeV);
+      const Jets& jets = apply<FastJets>(event, "JETS").jetsByPt(25.0*GeV);
 
       // Keep any jets that pass the initial rapidity cut
       vector<const Jet*> central_jets;

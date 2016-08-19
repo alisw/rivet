@@ -18,10 +18,10 @@ namespace Rivet {
       FinalState fs;
       FastJets jetproj(fs, FastJets::ANTIKT, 0.5);
       jetproj.useInvisibles();
-      addProjection(jetproj, "Jets");
+      declare(jetproj, "Jets");
 
       UnstableFinalState ufs;
-      addProjection(ufs, "UFS");
+      declare(ufs, "UFS");
 
       // Book histograms
       _h_dsigma_dR_56GeV = bookHisto1D(1,1,1);
@@ -44,8 +44,8 @@ namespace Rivet {
     void analyze(const Event& event) {
       const double weight = event.weight();
 
-      const Jets& jets = applyProjection<FastJets>(event,"Jets").jetsByPt();
-      const UnstableFinalState& ufs = applyProjection<UnstableFinalState>(event, "UFS");
+      const Jets& jets = apply<FastJets>(event,"Jets").jetsByPt();
+      const UnstableFinalState& ufs = apply<UnstableFinalState>(event, "UFS");
 
       // Find the leading jet pT and eta
       if (jets.size() == 0) vetoEvent;
