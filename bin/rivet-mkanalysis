@@ -205,9 +205,9 @@ namespace Rivet {
       declare(FinalState(Cuts::abseta < 5 && Cuts::pT > 100*MeV), "FS");
 
       // Book histograms
-      _h_XXXX = bookProfile1D(1, 1, 1);
-      _h_YYYY = bookHisto1D(2, 1, 1);
-      _h_ZZZZ = bookCounter(3, 1, 1);
+      _h_XXXX = bookProfile1D("dummy_profile", 10, 0., 20., "profile", "x", "y");
+      _h_YYYY = bookHisto1D("dummy_histo", 10, 0., 20., "histo", "x", "counts");
+      _h_ZZZZ = bookCounter("dummy_counter");
 
     }
 
