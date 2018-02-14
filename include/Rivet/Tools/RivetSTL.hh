@@ -19,6 +19,7 @@
 #include <iomanip>
 #include <cmath>
 #include <limits>
+#include <functional>
 
 
 #ifndef foreach
