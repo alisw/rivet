@@ -8,7 +8,3 @@ uninstall-local:
 	rm -rf $(DESTDIR)$(pkgdatadir)/texmf
 
 EXTRA_DIST = dvips tex cnf
-
-dist-hook:
-	rm -rf `find $(distdir) -name '.svn'`
-

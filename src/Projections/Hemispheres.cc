@@ -19,14 +19,14 @@ namespace Rivet {
 
   void Hemispheres::calc(const Vector3& n, const Particles& particles) {
     vector<FourMomentum> p4s; p4s.reserve(particles.size());
-    foreach (const Particle& p, particles) p4s.push_back(p.mom());
+    for (const Particle& p : particles) p4s.push_back(p.mom());
     calc(n, p4s);
   }
 
 
   void Hemispheres::calc(const Vector3& n, const Jets& jets) {
     vector<FourMomentum> p4s; p4s.reserve(jets.size());
-    foreach (const Jet& j, jets) p4s.push_back(j.mom());
+    for (const Jet& j : jets) p4s.push_back(j.mom());
     calc(n, p4s);
   }
 
@@ -37,7 +37,7 @@ namespace Rivet {
 
     FourMomentum p4With, p4Against;
     double Evis(0), broadWith(0), broadAgainst(0), broadDenom(0);
-    foreach (const FourMomentum& p4, p4s) {
+    for (const FourMomentum& p4 : p4s) {
       const Vector3 p3 = p4.vector3();
       const double p3Para = dot(p3, n);
       const double p3Trans = (p3 - p3Para * n).mod();

@@ -12,7 +12,6 @@ libRivetProjections_la_SOURCES = \
   FastJets.cc \
   FinalPartons.cc \
   FinalState.cc \
-  FoxWolframMoments.cc \
   FParameter.cc \
   HadronicFinalState.cc \
   HeavyHadrons.cc \

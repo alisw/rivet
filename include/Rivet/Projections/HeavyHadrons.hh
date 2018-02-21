@@ -29,21 +29,13 @@ namespace Rivet {
       addProjection(UnstableFinalState(c), "UFS");
     }
 
-    /// Constructor with specification of the minimum and maximum pseudorapidity
-    /// \f$ \eta \f$ and the min \f$ p_T \f$ (in GeV).
-    DEPRECATED("Use the version with a Cut argument")
-    HeavyHadrons(double mineta, double maxeta, double minpt=0.0*GeV) {
-      setName("HeavyHadrons");
-      addProjection(UnstableFinalState(Cuts::etaIn(mineta, maxeta) && Cuts::pT > minpt), "UFS");
-    }
-
     /// Clone on the heap.
     DEFAULT_RIVET_PROJ_CLONE(HeavyHadrons);
 
     //@}
 
 
-    /// @name Particle accessors
+    /// @name b hadron accessors
     //@{
 
     /// Get all weakly decaying b hadrons (return by reference)
@@ -51,25 +43,48 @@ namespace Rivet {
       return _theBs;
     }
 
-    /// Get weakly decaying b hadrons with a pTmin cut (return by value)
-    Particles bHadrons(double pTmin) const {
-      Particles rtn;
-      foreach (const Particle& p, bHadrons())
-        if (p.pT() > pTmin) rtn += p;
-      return rtn;
+    /// Get weakly decaying b hadrons with a Cut applied (return by value)
+    Particles bHadrons(const Cut& c) const {
+      return filter_select(bHadrons(), c);
     }
+
+    /// Get weakly decaying b hadrons with a pTmin cut (return by value)
+    /// @deprecated Prefer bHadrons(Cuts::pT > x)
+    Particles bHadrons(double ptmin) const {
+      return bHadrons(Cuts::pT > ptmin);
+    }
+
+    /// Get weakly decaying b hadrons with a general filter function applied (return by value)
+    Particles bHadrons(const ParticleSelector& s) const {
+      return filter_select(bHadrons(), s);
+    }
+
+    //@}
+
+
+
+    /// @name b hadron accessors
+    //@{
 
     /// Get all weakly decaying c hadrons (return by reference)
     const Particles& cHadrons() const {
       return _theCs;
     }
 
+    /// Get weakly decaying c hadrons with a Cut applied (return by value)
+    Particles cHadrons(const Cut& c) const {
+      return filter_select(cHadrons(), c);
+    }
+
     /// Get weakly decaying c hadrons with a pTmin cut (return by value)
-    const Particles cHadrons(double pTmin) const {
-      Particles rtn;
-      foreach (const Particle& p, cHadrons())
-        if (p.pT() > pTmin) rtn += p;
-      return rtn;
+    /// @deprecated Prefer cHadrons(Cuts::pT > x)
+    Particles cHadrons(double ptmin) const {
+      return cHadrons(Cuts::pT > ptmin);
+    }
+
+    /// Get weakly decaying c hadrons with a general filter function applied (return by value)
+    Particles cHadrons(const ParticleSelector& s) const {
+      return filter_select(cHadrons(), s);
     }
 
     //@}

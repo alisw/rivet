@@ -1,8 +1,10 @@
 #! /usr/bin/env python
 
-import logging
-import urllib2
-import re
+import logging, re
+try:
+    from urllib.request import urlopen
+except ImportError:
+    from urllib2 import urlopen
 
 usage = """%prog <spiresid> [<spiresid2> ...]
 
@@ -18,7 +20,7 @@ def fetch_bibtex(iscode, refid):
     elif iscode.upper() == "S":
         url = "http://inspire-hep.net/search?p=find+key+%s&of=hx" % str(refid)
         logging.debug("Downloading SPIRES BibTeX from %s" % url)
-    hreq = urllib2.urlopen(url)
+    hreq = urlopen(url)
     bibtexhtml = hreq.read()
     hreq.close()
     #logging.debug(bibtexhtml)

@@ -18,7 +18,7 @@ class AOPath(object):
     TODO: move to YODA?
     """
     import re
-    re_aopath = re.compile(r"^(/[^\[\]\@\#]+)(\[\w+\])?(#\d+)?$")
+    re_aopath = re.compile(r"^(/[^\[\]\@\#]+)(\[[A-Za-z\d\._]+\])?(#\d+|@[\d\.]+)?$")
 
     def __init__(self, path):
         import os

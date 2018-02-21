@@ -2,11 +2,13 @@
 #define RIVET_RivetSTL_HH
 
 #include <string>
+#include <array>
 #include <vector>
 #include <set>
 #include <list>
 #include <map>
 #include <utility>
+#include <tuple>
 #include <algorithm>
 #include <type_traits>
 #include <stdexcept>
@@ -19,6 +21,7 @@
 #include <iomanip>
 #include <cmath>
 #include <limits>
+#include <functional>
 
 
 #ifndef foreach

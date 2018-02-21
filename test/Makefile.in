@@ -92,18 +92,19 @@ check_PROGRAMS = testMath$(EXEEXT) testMatVec$(EXEEXT) \
 	testBeams$(EXEEXT)
 TESTS = testMath$(EXEEXT) testMatVec$(EXEEXT) testCmp$(EXEEXT) \
 	testApi$(EXEEXT) testNaN$(EXEEXT) testBeams$(EXEEXT) \
-	$(am__append_1)
+	testImport.sh $(am__append_1)
 @ENABLE_ANALYSES_TRUE@am__append_1 = testCmdLine.sh
 subdir = test
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps = $(top_srcdir)/m4/ax_cxx_compile_stdcxx.m4 \
-	$(top_srcdir)/m4/cxx.m4 $(top_srcdir)/m4/cython.m4 \
-	$(top_srcdir)/m4/gsl.m4 $(top_srcdir)/m4/lcg.m4 \
+am__aclocal_m4_deps = $(top_srcdir)/m4/ax_check_zlib.m4 \
+	$(top_srcdir)/m4/ax_cxx_compile_stdcxx.m4 \
+	$(top_srcdir)/m4/ax_openmp.m4 \
+	$(top_srcdir)/m4/ax_python_devel.m4 $(top_srcdir)/m4/cxx.m4 \
+	$(top_srcdir)/m4/cython.m4 $(top_srcdir)/m4/lcg.m4 \
 	$(top_srcdir)/m4/libtool.m4 $(top_srcdir)/m4/ltoptions.m4 \
 	$(top_srcdir)/m4/ltsugar.m4 $(top_srcdir)/m4/ltversion.m4 \
 	$(top_srcdir)/m4/lt~obsolete.m4 $(top_srcdir)/m4/osx.m4 \
-	$(top_srcdir)/m4/pkgchecks.m4 $(top_srcdir)/m4/python.m4 \
-	$(top_srcdir)/configure.ac
+	$(top_srcdir)/m4/pkgchecks.m4 $(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
 DIST_COMMON = $(srcdir)/Makefile.am $(am__DIST_COMMON)
@@ -455,15 +456,6 @@ FASTJETPATH = @FASTJETPATH@
 FGREP = @FGREP@
 FJCONFIG = @FJCONFIG@
 GREP = @GREP@
-GSLCONFIG = @GSLCONFIG@
-GSLCPPFLAGS = @GSLCPPFLAGS@
-GSLINCNAME = @GSLINCNAME@
-GSLINCPATH = @GSLINCPATH@
-GSLLIBPATH = @GSLLIBPATH@
-GSLPATH = @GSLPATH@
-GSL_CPPFLAGS = @GSL_CPPFLAGS@
-GSL_CXXFLAGS = @GSL_CXXFLAGS@
-GSL_LDFLAGS = @GSL_LDFLAGS@
 HAVE_CXX11 = @HAVE_CXX11@
 HEPMCCPPFLAGS = @HEPMCCPPFLAGS@
 HEPMCINCNAME = @HEPMCINCNAME@
@@ -512,14 +504,20 @@ PATH_SEPARATOR = @PATH_SEPARATOR@
 PDFLATEX = @PDFLATEX@
 PYEXT_CXXFLAGS = @PYEXT_CXXFLAGS@
 PYTHON = @PYTHON@
+PYTHON_CPPFLAGS = @PYTHON_CPPFLAGS@
 PYTHON_EXEC_PREFIX = @PYTHON_EXEC_PREFIX@
+PYTHON_EXTRA_LDFLAGS = @PYTHON_EXTRA_LDFLAGS@
+PYTHON_EXTRA_LIBS = @PYTHON_EXTRA_LIBS@
+PYTHON_LIBS = @PYTHON_LIBS@
 PYTHON_PLATFORM = @PYTHON_PLATFORM@
 PYTHON_PREFIX = @PYTHON_PREFIX@
+PYTHON_SITE_PKG = @PYTHON_SITE_PKG@
 PYTHON_VERSION = @PYTHON_VERSION@
 RANLIB = @RANLIB@
 RIVETCXX = @RIVETCXX@
 RIVETCXXFLAGS = @RIVETCXXFLAGS@
 RIVET_PYTHONPATH = @RIVET_PYTHONPATH@
+RIVET_SETUP_PY_PATH = @RIVET_SETUP_PY_PATH@
 SED = @SED@
 SET_MAKE = @SET_MAKE@
 SHELL = @SHELL@
@@ -588,6 +586,7 @@ program_transform_name = @program_transform_name@
 psdir = @psdir@
 pyexecdir = @pyexecdir@
 pythondir = @pythondir@
+runstatedir = @runstatedir@
 sbindir = @sbindir@
 sharedstatedir = @sharedstatedir@
 srcdir = @srcdir@
@@ -596,7 +595,7 @@ target_alias = @target_alias@
 top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
-AM_LDFLAGS = -L$(top_srcdir)/src -L$(prefix)/lib $(YAMLCPP_LDFLAGS) -L$(YODALIBPATH)
+AM_LDFLAGS = -L$(top_srcdir)/src $(YAMLCPP_LDFLAGS) -L$(YODALIBPATH)
 TEST_LDADD = $(top_builddir)/src/libRivet.la $(HEPMCLDFLAGS) $(YODALDFLAGS) $(HEPMCLDLIBS) $(YODALDLIBS)
 testMath_SOURCES = testMath.cc
 testMath_LDADD = $(TEST_LDADD)
@@ -611,17 +610,20 @@ testNaN_LDADD = $(TEST_LDADD)
 testBeams_SOURCES = testBeams.cc
 testBeams_LDADD = $(TEST_LDADD)
 TESTS_ENVIRONMENT = \
-  RIVET_REF_PATH=$(top_srcdir)/data/refdata \
-  RIVET_INFO_PATH=$(top_srcdir)/data/anainfo \
-  RIVET_ANALYSIS_PATH=$(top_builddir)/src/Analyses/.libs \
-  LD_LIBRARY_PATH=$(top_builddir)/src:$(top_builddir)/src/.libs:$(HEPMCLIBPATH):$(YODALIBPATH):$(FASTJETLIBPATH):$(YAML_CPPLIBPATH):$(LD_LIBRARY_PATH) \
-  DYLD_LIBRARY_PATH=$(top_builddir)/src:$(top_builddir)/src/.libs:$(HEPMCLIBPATH):$(YODALIBPATH):$(FASTJETLIBPATH):$(YAML_CPPLIBPATH):$(DYLD_LIBRARY_PATH) \
-  PYTHON_BUILD_DIR=$(top_builddir)/pyext/build \
+  RIVET_ANALYSIS_PATH=$(top_builddir)/analyses \
+  RIVET_DATA_PATH=$(top_builddir)/analyses/data \
+  RIVET_INFO_PATH=$(top_builddir)/analyses/data \
+  RIVET_REF_PATH=$(top_builddir)/analyses/data \
+  LIBLOCATION=$(top_builddir)/src/.libs \
+  LD_LIBRARY_PATH=$$LIBLOCATION:$(LD_LIBRARY_PATH) \
+  DYLD_LIBRARY_PATH=$$LIBLOCATION:$(DYLD_LIBRARY_PATH) \
+  PYTHONPATH=$(top_builddir)/pyext/build/$(RIVET_SETUP_PY_PATH):$(PYTHONPATH) \
   PATH=$(top_builddir)/bin:$(top_srcdir)/bin:$(PATH) \
+  PYTHON=$(PYTHON) \
   RIVET_TESTS_SRC=$(srcdir)
 
-EXTRA_DIST = testApi.hepmc testCmdLine.sh
-CLEANFILES = out.aida log a.out fifo.hepmc file2.hepmc out.yoda NaN.aida Rivet.yoda
+EXTRA_DIST = testApi.hepmc testCmdLine.sh testImport.sh
+CLEANFILES = log a.out fifo.hepmc file2.hepmc out.yoda NaN.aida Rivet.yoda
 all: all-am
 
 .SUFFIXES:
@@ -960,6 +962,13 @@ testNaN.log: testNaN$(EXEEXT)
 testBeams.log: testBeams$(EXEEXT)
 	@p='testBeams$(EXEEXT)'; \
 	b='testBeams'; \
+	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
+	--log-file $$b.log --trs-file $$b.trs \
+	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
+	"$$tst" $(AM_TESTS_FD_REDIRECT)
+testImport.sh.log: testImport.sh
+	@p='testImport.sh'; \
+	b='testImport.sh'; \
 	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \

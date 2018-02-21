@@ -6,7 +6,6 @@
 #include "Rivet/Tools/ParticleIdUtils.hh"
 
 // Macros to map Rivet::Particle functions to PID:: functions of the same name
-/// @todo Can leave return type out of the macro and put that on each line where it's used?
 #define PARTICLE_TO_PID_BOOLFN(fname) inline bool fname (const Particle& p) { return PID:: fname (p.pid()); }
 #define PARTICLE_TO_PID_INTFN(fname) inline int fname (const Particle& p) { return PID:: fname (p.pid()); }
 #define PARTICLE_TO_PID_DBLFN(fname) inline double fname (const Particle& p) { return PID:: fname (p.pid()); }
@@ -35,7 +34,11 @@ namespace Rivet {
   PARTICLE_TO_PID_BOOLFN(isNeutrino)
 
   /// Determine if the PID is that of a charged lepton
+  PARTICLE_TO_PID_BOOLFN(isChargedLepton)
   PARTICLE_TO_PID_BOOLFN(isChLepton)
+
+  /// Determine if the PID is that of a lepton (charged or neutral)
+  PARTICLE_TO_PID_BOOLFN(isLepton)
 
   /// Determine if the PID is that of a photon
   PARTICLE_TO_PID_BOOLFN(isPhoton)
@@ -299,35 +302,6 @@ namespace Rivet {
   //@}
 
 
-  /// @name Particle classifying functors
-  ///
-  /// To be passed to any() or all() e.g. any(p.children(), HasPID(PID::MUON))
-  //@{
-
-  /// Base type for Particle -> bool functors
-  struct BoolParticleFunctor {
-    virtual bool operator()(const Particle& p) const = 0;
-  };
-
-  /// PID matching functor
-  struct hasPID : public BoolParticleFunctor {
-    hasPID(PdgId pid) : targetpid(pid) { }
-    bool operator()(const Particle& p) const { return p.pid() == targetpid; }
-    PdgId targetpid;
-  };
-  using HasPID = hasPID;
-
-  /// |PID| matching functor
-  struct hasAbsPID : public BoolParticleFunctor {
-    hasAbsPID(PdgId pid) : targetpid(abs(pid)) { }
-    bool operator()(const Particle& p) const { return p.abspid() == abs(targetpid); }
-    PdgId targetpid;
-  };
-  using HasAbsPID = hasAbsPID;
-
-  //@}
-
-
 
   //////////////////////////////////////
 
@@ -336,18 +310,130 @@ namespace Rivet {
   /// @name Non-PID particle properties, via unbound functions
   //@{
 
+  /// @brief Determine whether a particle is the first in a decay chain to meet the function requirement
+  inline bool isFirstWith(const Particle& p, const ParticleSelector& f) {
+    return p.isFirstWith(f);
+  }
+
+  /// @brief Determine whether a particle is the first in a decay chain not to meet the function requirement
+  inline bool isFirstWithout(const Particle& p, const ParticleSelector& f) {
+    return p.isFirstWithout(f);
+  }
+
+
+  /// @brief Determine whether a particle is the last in a decay chain to meet the function requirement
+  inline bool isLastWith(const Particle& p, const ParticleSelector& f) {
+    return p.isLastWith(f);
+  }
+
+  /// @brief Determine whether a particle is the last in a decay chain not to meet the function requirement
+  inline bool isLastWithout(const Particle& p, const ParticleSelector& f) {
+    return p.isLastWithout(f);
+  }
+
+
+
+  /// @brief Determine whether a particle has an ancestor which meets the function requirement
+  inline bool hasAncestorWith(const Particle& p, const ParticleSelector& f) {
+    return p.hasAncestorWith(f);
+  }
+
+  /// @brief Determine whether a particle has an ancestor which doesn't meet the function requirement
+  inline bool hasAncestorWithout(const Particle& p, const ParticleSelector& f) {
+    return p.hasAncestorWithout(f);
+  }
+
+
+  /// @brief Determine whether a particle has a parent which meets the function requirement
+  inline bool hasParentWith(const Particle& p, const ParticleSelector& f) {
+    return p.hasParentWith(f);
+  }
+
+  /// @brief Determine whether a particle has a parent which doesn't meet the function requirement
+  inline bool hasParentWithout(const Particle& p, const ParticleSelector& f) {
+    return p.hasParentWithout(f);
+  }
+
+
+  /// @brief Determine whether a particle has a child which meets the function requirement
+  inline bool hasChildWith(const Particle& p, const ParticleSelector& f) {
+    return p.hasChildWith(f);
+  }
+
+  /// @brief Determine whether a particle has a child which doesn't meet the function requirement
+  inline bool hasChildWithout(const Particle& p, const ParticleSelector& f) {
+    return p.hasChildWithout(f);
+  }
+
+
+  /// @brief Determine whether a particle has a descendant which meets the function requirement
+  inline bool hasDescendantWith(const Particle& p, const ParticleSelector& f) {
+    return p.hasDescendantWith(f);
+    // return !p.allDescendants(f).empty();
+  }
+
+  /// @brief Determine whether a particle has a descendant which doesn't meet the function requirement
+  inline bool hasDescendantWithout(const Particle& p, const ParticleSelector& f) {
+    return p.hasDescendantWithout(f);
+  }
+
+
+  /// @brief Determine whether a particle has a stable descendant which meets the function requirement
+  inline bool hasStableDescendantWith(const Particle& p, const ParticleSelector& f) {
+    return p.hasStableDescendantWith(f);
+  }
+
+  /// @brief Determine whether a particle has a stable descendant which doesn't meet the function requirement
+  inline bool hasStableDescendantWithout(const Particle& p, const ParticleSelector& f) {
+    return p.hasStableDescendantWithout(f);
+  }
+
+
+
   /// Is this particle potentially visible in a detector?
   inline bool isVisible(const Particle& p) { return p.isVisible(); }
 
-  /// Decide if a given particle is prompt, via Particle::isPrompt()
-  inline bool isPrompt(const Particle& p, bool from_prompt_tau=false, bool from_prompt_mu=false) {
-    return p.isPrompt(from_prompt_tau, from_prompt_mu);
+  /// @brief Decide if a given particle is direct, via Particle::isDirect()
+  ///
+  /// A "direct" particle is one directly connected to the hard process. It is a
+  /// preferred alias for "prompt", since it has no confusing implications about
+  /// distinguishability by timing information.
+  ///
+  /// The boolean arguments allow a decay lepton to be considered direct if
+  /// its parent was a "real" direct lepton.
+  inline bool isDirect(const Particle& p, bool allow_from_direct_tau=false, bool allow_from_direct_mu=false) {
+    return p.isDirect(allow_from_direct_tau, allow_from_direct_mu);
   }
+
+  /// @brief Decide if a given particle is prompt, via Particle::isPrompt()
+  ///
+  /// The boolean arguments allow a decay lepton to be considered prompt if
+  /// its parent was a "real" prompt lepton.
+  inline bool isPrompt(const Particle& p, bool allow_from_prompt_tau=false, bool allow_from_prompt_mu=false) {
+    return p.isPrompt(allow_from_prompt_tau, allow_from_prompt_mu);
+  }
+
 
   /// Decide if a given particle is stable, via Particle::isStable()
   inline bool isStable(const Particle& p) { return p.isStable(); }
 
+  /// Decide if a given particle decays hadronically
+  inline bool hasHadronicDecay(const Particle& p) {
+    if (p.isStable()) return false;
+    if (p.hasChildWith(isHadron)) return true;
+    return false;
+  }
+
+  /// Decide if a given particle decays leptonically (decays, and no hadrons)
+  inline bool hasLeptonicDecay(const Particle& p) {
+    if (p.isStable()) return false;
+    if (p.hasChildWith(isHadron)) return false;
+    return true;
+  }
+
+
   /// Check whether a given PID is found in the particle's ancestor list
+  /// @deprecated Prefer hasAncestorWith
   inline bool hasAncestor(const Particle& p, PdgId pid)  { return p.hasAncestor(pid); }
 
   /// Determine whether the particle is from a b-hadron decay
@@ -368,26 +454,225 @@ namespace Rivet {
   inline bool fromPromptTau(const Particle& p) { return p.fromPromptTau(); }
 
   /// @brief Determine whether the particle is from a hadron or tau decay
+  /// @deprecated Too vague: use fromHadron or fromHadronicTau
   inline bool fromDecay(const Particle& p) { return p.fromDecay(); }
 
   //@}
 
 
+  /// @name Particle classifier -> bool functors
+  ///
+  /// To be passed to any() or all() e.g. any(p.children(), HasPID(PID::MUON))
+  //@{
+
+  /// Base type for Particle -> bool functors
+  struct BoolParticleFunctor {
+    virtual bool operator()(const Particle& p) const = 0;
+  };
+
+  struct BoolParticleAND : public BoolParticleFunctor {
+    BoolParticleAND(const std::vector<ParticleSelector>& sels) : selectors(sels) {}
+    BoolParticleAND(const ParticleSelector& a, const ParticleSelector& b) : selectors({a,b}) {}
+    BoolParticleAND(const ParticleSelector& a, const ParticleSelector& b, const ParticleSelector& c) : selectors({a,b,c}) {}
+    bool operator()(const Particle& p) const {
+      for (const ParticleSelector& sel : selectors) if (!sel(p)) return false;
+      return true;
+    }
+    std::vector<ParticleSelector> selectors;
+  };
+
+  struct BoolParticleOR : public BoolParticleFunctor {
+    BoolParticleOR(const std::vector<ParticleSelector>& sels) : selectors(sels) {}
+    BoolParticleOR(const ParticleSelector& a, const ParticleSelector& b) : selectors({a,b}) {}
+    BoolParticleOR(const ParticleSelector& a, const ParticleSelector& b, const ParticleSelector& c) : selectors({a,b,c}) {}
+    bool operator()(const Particle& p) const {
+      for (const ParticleSelector& sel : selectors) if (sel(p)) return true;
+      return false;
+    }
+    std::vector<ParticleSelector> selectors;
+  };
+
+  struct BoolParticleNOT : public BoolParticleFunctor {
+    BoolParticleNOT(const ParticleSelector& sel) : selector(sel) {}
+    bool operator()(const Particle& p) const { return !selector(p); }
+    ParticleSelector selector;
+  };
+
+
+  /// PID matching functor
+  struct HasPID : public BoolParticleFunctor {
+    HasPID(PdgId pid) : targetpid(pid) { }
+    bool operator()(const Particle& p) const { return p.pid() == targetpid; }
+    PdgId targetpid;
+  };
+  using hasPID = HasPID;
+
+  /// |PID| matching functor
+  struct HasAbsPID : public BoolParticleFunctor {
+    HasAbsPID(PdgId pid) : targetpid(abs(pid)) { }
+    bool operator()(const Particle& p) const { return p.abspid() == abs(targetpid); }
+    PdgId targetpid;
+  };
+  using hasAbsPID = HasAbsPID;
+
+
+  /// Determine whether a particle is the first in a decay chain to meet the cut/function
+  struct FirstParticleWith : public BoolParticleFunctor {
+    FirstParticleWith(const ParticleSelector& f) : fn(f) { }
+    FirstParticleWith(const Cut& c);
+    bool operator()(const Particle& p) const { return isFirstWith(p, fn); }
+    ParticleSelector fn;
+  };
+  using firstParticleWith = FirstParticleWith;
+
+  /// Determine whether a particle is the first in a decay chain not to meet the cut/function
+  struct FirstParticleWithout : public BoolParticleFunctor {
+    FirstParticleWithout(const ParticleSelector& f) : fn(f) { }
+    FirstParticleWithout(const Cut& c);
+    bool operator()(const Particle& p) const { return isFirstWithout(p, fn); }
+    ParticleSelector fn;
+  };
+  using firstParticleWithout = FirstParticleWithout;
+
+
+  /// Determine whether a particle is the last in a decay chain to meet the cut/function
+  struct LastParticleWith : public BoolParticleFunctor {
+    template <typename FN>
+    LastParticleWith(const FN& f) : fn(f) { }
+    LastParticleWith(const Cut& c);
+    bool operator()(const Particle& p) const { return isLastWith(p, fn); }
+    std::function<bool(const Particle&)> fn;
+  };
+  using lastParticleWith = LastParticleWith;
+
+  /// Determine whether a particle is the last in a decay chain not to meet the cut/function
+  struct LastParticleWithout : public BoolParticleFunctor {
+    LastParticleWithout(const ParticleSelector& f) : fn(f) { }
+    LastParticleWithout(const Cut& c);
+    bool operator()(const Particle& p) const { return isLastWithout(p, fn); }
+    ParticleSelector fn;
+  };
+  using lastParticleWithout = LastParticleWithout;
+
+
+  /// Determine whether a particle has an ancestor which meets the cut/function
+  struct HasParticleAncestorWith : public BoolParticleFunctor {
+    HasParticleAncestorWith(const ParticleSelector& f) : fn(f) { }
+    HasParticleAncestorWith(const Cut& c);
+    bool operator()(const Particle& p) const { return hasAncestorWith(p, fn); }
+    ParticleSelector fn;
+  };
+  using hasParticleAncestorWith = HasParticleAncestorWith;
+
+  /// Determine whether a particle has an ancestor which doesn't meet the cut/function
+  struct HasParticleAncestorWithout : public BoolParticleFunctor {
+    HasParticleAncestorWithout(const ParticleSelector& f) : fn(f) { }
+    HasParticleAncestorWithout(const Cut& c);
+    bool operator()(const Particle& p) const { return hasAncestorWithout(p, fn); }
+    ParticleSelector fn;
+  };
+  using hasParticleAncestorWithout = HasParticleAncestorWithout;
+
+
+  /// Determine whether a particle has an parent which meets the cut/function
+  struct HasParticleParentWith : public BoolParticleFunctor {
+    HasParticleParentWith(const ParticleSelector& f) : fn(f) { }
+    HasParticleParentWith(const Cut& c);
+    bool operator()(const Particle& p) const { return hasParentWith(p, fn); }
+    ParticleSelector fn;
+  };
+  using hasParticleParentWith = HasParticleParentWith;
+
+  /// Determine whether a particle has an parent which doesn't meet the cut/function
+  struct HasParticleParentWithout : public BoolParticleFunctor {
+    HasParticleParentWithout(const ParticleSelector& f) : fn(f) { }
+    HasParticleParentWithout(const Cut& c);
+    bool operator()(const Particle& p) const { return hasParentWithout(p, fn); }
+    ParticleSelector fn;
+  };
+  using hasParticleParentWithout = HasParticleParentWithout;
+
+
+  /// Determine whether a particle has a child which meets the cut/function
+  struct HasParticleChildWith : public BoolParticleFunctor {
+    HasParticleChildWith(const ParticleSelector& f) : fn(f) { }
+    HasParticleChildWith(const Cut& c);
+    bool operator()(const Particle& p) const { return hasChildWith(p, fn); }
+    ParticleSelector fn;
+  };
+  using hasParticleChildWith = HasParticleChildWith;
+
+  /// Determine whether a particle has a child which doesn't meet the cut/function
+  struct HasParticleChildWithout : public BoolParticleFunctor {
+    HasParticleChildWithout(const ParticleSelector& f) : fn(f) { }
+    HasParticleChildWithout(const Cut& c);
+    bool operator()(const Particle& p) const { return hasChildWithout(p, fn); }
+    ParticleSelector fn;
+  };
+  using hasParticleChildWithout = HasParticleChildWithout;
+
+
+  /// Determine whether a particle has a descendant which meets the cut/function
+  struct HasParticleDescendantWith : public BoolParticleFunctor {
+    HasParticleDescendantWith(const ParticleSelector& f) : fn(f) { }
+    HasParticleDescendantWith(const Cut& c);
+    bool operator()(const Particle& p) const { return hasDescendantWith(p, fn); }
+    ParticleSelector fn;
+  };
+  using hasParticleDescendantWith = HasParticleDescendantWith;
+
+  /// Determine whether a particle has a descendant which doesn't meet the cut/function
+  struct HasParticleDescendantWithout : public BoolParticleFunctor {
+    HasParticleDescendantWithout(const ParticleSelector& f) : fn(f) { }
+    HasParticleDescendantWithout(const Cut& c);
+    bool operator()(const Particle& p) const { return hasDescendantWithout(p, fn); }
+    ParticleSelector fn;
+  };
+  using hasParticleDescendantWithout = HasParticleDescendantWithout;
+
+  //@}
+
 
   /// @name Unbound functions for filtering particles
   //@{
 
-  /// Get a subset of the supplied particles that passes the supplied Cut
-  Particles filterBy(const Particles& particles, const Cut& c);
+  /// Filter a particle collection in-place to the subset that passes the supplied Cut
+  Particles& ifilter_select(Particles& particles, const Cut& c);
+  /// Alias for ifilter_select
+  /// @deprecated Use ifilter_select
+  inline Particles& ifilterBy(Particles& particles, const Cut& c) { return ifilter_select(particles, c); }
 
   /// Filter a particle collection in-place to the subset that passes the supplied Cut
-  Particles& ifilterBy(Particles& particles, const Cut& c);
+  inline Particles filter_select(const Particles& particles, const Cut& c) {
+    Particles rtn = particles;
+    return ifilter_select(rtn, c);
+  }
+  /// Alias for ifilter_select
+  /// @deprecated Use filter_select
+  inline Particles filterBy(const Particles& particles, const Cut& c) { return filter_select(particles, c); }
 
-  /// Filter a particle collection to the subset that passes the supplied Cut, into a new container
-  /// @note New container will be replaced, not appended to
-  inline Particles& filterBy(Particles& particles, const Cut& c, Particles& out) {
-    //const Particles& const_particles = particles;
-    out = filterBy(particles, c);
+  /// Filter a particle collection in-place to the subset that passes the supplied Cut
+  inline Particles filter_select(const Particles& particles, const Cut& c, Particles& out) {
+    out = filter_select(particles, c);
+    return out;
+  }
+  /// Alias for ifilter_select
+  /// @deprecated Use filter_select
+  inline Particles filterBy(const Particles& particles, const Cut& c, Particles& out) { return filter_select(particles, c, out); }
+
+
+  /// Filter a particle collection in-place to the subset that fails the supplied Cut
+  Particles& ifilter_discard(Particles& particles, const Cut& c);
+
+  /// Filter a particle collection in-place to the subset that fails the supplied Cut
+  inline Particles filter_discard(const Particles& particles, const Cut& c) {
+    Particles rtn = particles;
+    return ifilter_discard(rtn, c);
+  }
+
+  /// Filter a particle collection in-place to the subset that fails the supplied Cut
+  inline Particles filter_discard(const Particles& particles, const Cut& c, Particles& out) {
+    out = filter_discard(particles, c);
     return out;
   }
 
@@ -405,6 +690,35 @@ namespace Rivet {
   }
 
   //@}
+
+
+
+  /// @name Operations on collections of Particle
+  /// @note This can't be done on generic collections of ParticleBase -- thanks, C++ :-/
+  //@{
+  namespace Kin {
+
+    inline double sumPt(const Particles& ps) {
+      return sum(ps, pT, 0.0);
+    }
+
+    inline FourMomentum sumP4(const Particles& ps) {
+      return sum(ps, p4, FourMomentum());
+    }
+
+    inline Vector3 sumP3(const Particles& ps) {
+      return sum(ps, p3, Vector3());
+    }
+
+    /// @todo Min dPhi, min dR?
+    /// @todo Isolation routines?
+
+  }
+  //@}
+
+
+  // Import Kin namespace into Rivet
+  using namespace Kin;
 
 
 }

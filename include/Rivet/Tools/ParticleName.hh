@@ -4,6 +4,10 @@
 #include "Rivet/Particle.fhh"
 #include "Rivet/Tools/Exceptions.hh"
 
+// cython includes termio.h on some systems,
+// which #defines a B0 = 0 macro
+#undef B0
+
 namespace Rivet {
 
   namespace PID {
@@ -50,6 +54,8 @@ namespace Rivet {
     static const PdgId Z0 = Z0BOSON;
     static const PdgId HIGGSBOSON = 25;
     static const PdgId HIGGS = HIGGSBOSON;
+    static const PdgId H0BOSON = HIGGSBOSON;
+    static const PdgId HBOSON = HIGGSBOSON;
     //@}
 
     /// @name Quarks
@@ -76,6 +82,9 @@ namespace Rivet {
     static const PdgId PI0 = 111;
     static const PdgId PIPLUS = 211;
     static const PdgId PIMINUS = -PIPLUS;
+    static const PdgId RHO0 = 113;
+    static const PdgId RHOPLUS = 213;
+    static const PdgId RHOMINUS = -RHOPLUS;
     static const PdgId K0L = 130;
     static const PdgId K0S = 310;
     static const PdgId KPLUS = 321;
@@ -96,8 +105,11 @@ namespace Rivet {
     /// @name Charm mesons
     //@{
     static const PdgId D0 = 421;
+    static const PdgId D0BAR = -421;
     static const PdgId DPLUS = 411;
     static const PdgId DMINUS = -DPLUS;
+    static const PdgId DSTARPLUS = 413;
+    static const PdgId DSTARMINUS = -DSTARPLUS;
     static const PdgId DSPLUS = 431;
     static const PdgId DSMINUS = -DSPLUS;
     //@}
@@ -114,6 +126,7 @@ namespace Rivet {
     /// @name b mesons
     //@{
     static const PdgId B0 = 511;
+    static const PdgId B0BAR = -511;
     static const PdgId BPLUS = 521;
     static const PdgId BMINUS = -BPLUS;
     static const PdgId B0S = 531;

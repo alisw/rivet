@@ -82,8 +82,8 @@ if test -n "$tmp"; then
     test -n "$iyoda" && OUT="$OUT -I${iyoda}"
     ifastjet="@FASTJETINCPATH@"
     test -n "$ifastjet" && OUT="$OUT -I${ifastjet}"
-    igsl="@GSLINCPATH@"
-    test -n "$igsl" && OUT="$OUT -I${igsl}"
+    # igsl="@GSLINCPATH@"
+    # test -n "$igsl" && OUT="$OUT -I${igsl}"
     # iboost="@BOOST_CPPFLAGS@"
     # test -n "$iboost" && OUT="$OUT ${iboost}"
 fi
@@ -93,13 +93,13 @@ if test -n "$tmp"; then
     lrivet="@libdir@"
     test -n "$lrivet" && OUT="$OUT -L${lrivet}"
     lhepmc="@HEPMCLIBPATH@"
-    test -n "$lhepmc" && OUT="$OUT -L${lhepmc}"
+    test -n "$lhepmc" && OUT="$OUT -L${lhepmc} -lHepMC"
     lyoda="@YODALIBPATH@"
-    test -n "$lyoda" && OUT="$OUT -L${lyoda}"
+    test -n "$lyoda" && OUT="$OUT -L${lyoda} -lYODA"
     lfastjet="@FASTJETCONFIGLIBADD@"
     test -n "$lfastjet" && OUT="$OUT ${lfastjet}"
-    lgsl="@GSLLIBPATH@"
-    test -n "$lgsl" && OUT="$OUT -L${lgsl}"
+    # lgsl="@GSLLIBPATH@"
+    # test -n "$lgsl" && OUT="$OUT -L${lgsl}"
 fi
 
 tmp=$( echo "$*" | egrep -- '--\<libs\>|--\<ldadd\>')

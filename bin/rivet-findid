@@ -8,11 +8,12 @@ Looks up the Rivet analysis and other ID formats matching the given ID.
 
 Arguments:
  ID            A paper ID in one of the following formats
-                - arXiv:   yymm.nnnn
+                - arXiv:   yymm.nnnnn
                 - arXiv:   foo-bar/yymmnnn
                 - SPIRES:  [S]nnnnnnn
                 - Inspire: [I]nnnnnn[n]"""
 
+from __future__ import print_function
 import rivet, sys, os, re
 rivet.util.check_python_version()
 rivet.util.set_process_name(os.path.basename(__file__))
@@ -29,7 +30,7 @@ def main():
 
 
     ## Set up some variables before the loop over args
-    arxiv_pattern = re.compile('^\d\d[01]\d\.\d{4}$|^(hep-(ex|ph|th)|nucl-ex)/\d\d[01]\d{4}$')
+    arxiv_pattern = re.compile('^\d\d[01]\d\.\d{4,5}$|^(hep-(ex|ph|th)|nucl-ex)/\d\d[01]\d{4}$')
     spires_pattern = re.compile('^(S|I)?(\d{6}\d?)$')
 
 
@@ -68,7 +69,7 @@ def main():
             RESULT['rivet'] = rivet_candidates[0]
 
         if N > 0:
-            print ""
+            print()
         output(RESULT)
 
 
@@ -78,28 +79,28 @@ def output(result):
     if not result.get('title'):
         return
 
-    print 'title       %s' % result['title']
+    print('title       %s' % result['title'])
     ar = result.get('arxiv')
     if ar:
-        print 'arxiv       %s' % ar
-        print 'arxiv_url   http://arxiv.org/abs/%s' % ar
+        print('arxiv       %s' % ar)
+        print('arxiv_url   http://arxiv.org/abs/%s' % ar)
 
     sp = result.get('spires')
     if sp:
-        print 'spires      %s' % sp
+        print('spires      %s' % sp)
 
     insp = result.get('inspire')
     if insp:
-        print 'inspire     %s' % insp
-        print 'inspire_url http://inspirehep.net/record/%s' % insp
+        print('inspire     %s' % insp)
+        print('inspire_url http://inspirehep.net/record/%s' % insp)
 
     tex = result.get('bibtex')
     if tex:
-        print 'bibtex      %s' % tex
+        print('bibtex      %s' % tex)
 
     riv = result.get('rivet')
     if riv:
-        print 'rivet       %s' % riv
+        print('rivet       %s' % riv)
 
 
 
@@ -143,8 +144,11 @@ def try_rivet(id):
 
 def _search_inspire(url):
     result = {}
-    import urllib2
-    urlstream = urllib2.urlopen(url)
+    try:
+        from urllib.request import urlopen
+    except ImportError:
+        from urllib2 import urlopen
+    urlstream = urlopen(url)
     ET = rivet.util.import_ET()
     tree = ET.parse(urlstream)
     for i in tree.getiterator('{http://www.loc.gov/MARC21/slim}controlfield'):

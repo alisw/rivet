@@ -3,6 +3,7 @@
 
 namespace Rivet {
 
+
   FParameter::FParameter(const FinalState& fsp) {
     setName("FParameter");
     addProjection(fsp, "FS");
@@ -28,7 +29,7 @@ namespace Rivet {
   void FParameter::calc(const vector<Particle>& fsparticles) {
     vector<Vector3> threeMomenta;
     threeMomenta.reserve(fsparticles.size());
-    foreach (const Particle& p, fsparticles) {
+    for (const Particle& p : fsparticles) {
       const Vector3 p3 = p.momentum().vector3();
       threeMomenta.push_back(p3);
     }
@@ -38,7 +39,7 @@ namespace Rivet {
   void FParameter::calc(const vector<FourMomentum>& fsmomenta) {
     vector<Vector3> threeMomenta;
     threeMomenta.reserve(fsmomenta.size());
-    foreach (const FourMomentum& v, fsmomenta) {
+    for (const FourMomentum& v : fsmomenta) {
       threeMomenta.push_back(v.vector3());
     }
     _calcFParameter(threeMomenta);
@@ -60,14 +61,14 @@ namespace Rivet {
 
     // A small iteration over full momenta but set z-coord. to 0.0 to get transverse momenta
     vector <Vector3> fsperpmomenta;
-    foreach (const Vector3& p, fsmomenta) {
+    for (const Vector3& p : fsmomenta) {
       fsperpmomenta.push_back(Vector3(p.x(), p.y(), 0.0));
     }
 
     // Iterate over all the final state particles.
     Matrix<2> mMom;
     MSG_DEBUG("Number of particles = " << fsperpmomenta.size());
-    foreach (const Vector3& p3, fsperpmomenta) {
+    for (const Vector3& p3 : fsperpmomenta) {
 
       double prefactor = 1.0/p3.mod();
 
@@ -87,27 +88,23 @@ namespace Rivet {
     if (!isSymm) {
       MSG_ERROR("Error: momentum tensor not symmetric:");
       MSG_ERROR("[0,1] vs. [1,0]: " << mMom.get(0,1) << ", " << mMom.get(1,0));
-      MSG_ERROR("[0,2] vs. [2,0]: " << mMom.get(0,2) << ", " << mMom.get(2,0));
-      MSG_ERROR("[1,2] vs. [2,1]: " << mMom.get(1,2) << ", " << mMom.get(2,1));
     }
     // If not symmetric, something's wrong (we made sure the error msg appeared first).
+
     assert(isSymm);
+    const double a = mMom.get(0,0);
+    const double b = mMom.get(1,1);
+    const double c = mMom.get(1,0);
 
-    // Diagonalize momentum matrix.
-    const EigenSystem<2> eigen2 = diagonalize(mMom);
-    MSG_DEBUG("Diag momentum tensor = " << eigen2.getDiagMatrix());
+    const double l1 = 0.5*(a+b+sqrt( (a-b)*(a-b) + 4 *c*c));
+    const double l2 = 0.5*(a+b-sqrt( (a-b)*(a-b) + 4 *c*c));
 
-    // Reset and set eigenvalue parameters.
-    _lambdas.clear();
-    const EigenSystem<2>::EigenPairs epairs = eigen2.getEigenPairs();
-    assert(epairs.size() == 2);
-    for (size_t i = 0; i < 2; ++i) {
-      _lambdas.push_back(epairs[i].first);
-    }
+    _lambdas = {l1, l2};
 
     // Debug output.
     MSG_DEBUG("Lambdas = ("
              << lambda1() << ", " << lambda2() << ")");
     MSG_DEBUG("Sum of lambdas = " << lambda1() + lambda2());
+    MSG_DEBUG("F-Parameter = " << F());
   }
 }

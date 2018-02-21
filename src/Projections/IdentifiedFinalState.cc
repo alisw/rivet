@@ -54,14 +54,6 @@ namespace Rivet {
   }
 
 
-  IdentifiedFinalState::IdentifiedFinalState(double etamin, double etamax, double ptMin)
-    // : FinalState(etamin, etamax, ptMin)
-  {
-    setName("IdentifiedFinalState");
-    addProjection(FinalState(etamin, etamax, ptMin), "FS");
-  }
-
-
 
   int IdentifiedFinalState::compare(const Projection& p) const {
     const PCmp fscmp = mkNamedPCmp(p, "FS");
@@ -80,11 +72,10 @@ namespace Rivet {
     _theParticles.reserve(fs.particles().size());
     _remainingParticles.clear();
     _remainingParticles.reserve(fs.particles().size());
-    foreach (const Particle& p, fs.particles()) {
+    for (const Particle& p : fs.particles()) {
       if (acceptedIds().find(p.pid()) != acceptedIds().end()) {
         _theParticles.push_back(p);       // Identified
-      }
-      else {
+      } else {
         _remainingParticles.push_back(p); // Remaining
       }
     }

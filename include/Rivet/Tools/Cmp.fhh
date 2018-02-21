@@ -12,13 +12,16 @@ namespace Rivet {
 
   /// Enumerate the possible states of a Cmp object.
   enum CmpState {
-    UNDEFINED = -2,  ///< Undefined state.
-    ASC = -1,    ///< The two corresponding objects are in ascending order.
-    ORDERED = -1,    ///< The two corresponding objects are ordered.
-    EQUIVALENT = 0,  ///< The two corresponding objects are equivalent.
-    DESC = 1,    ///< The two corresponding objects are in descending order.
-    UNORDERED = 1,    ///< The two corresponding objects are anti-ordered.
-    ANTIORDERED = 1    ///< The two corresponding objects are anti-ordered.
+    UNDEFINED = -2,   ///< Undefined state.
+    ASC = -1,         ///< The two objects are ordered (in ascending order).
+    ORDERED = -1,     ///< The two objects are ordered (in ascending order).
+    EQUAL = 0,        ///< The two objects are equivalent.
+    EQUIVALENT = 0,   ///< The two objects are equivalent.
+    DESC = 1,         ///< The two objects are anti-ordered (in descending order).
+    ANTIORDERED = 1,  ///< The two objects are anti-ordered (in descending order).
+    UNORDERED = 1,    ///< The two objects are anti-ordered (in descending order). // DEPRECATED!
+    UNEQUAL = 2,      ///< The two objects are unequal, without ordering implications.
+    INEQUIVALENT = 2, ///< The two objects are unequal, without ordering implications.
   };
 
 

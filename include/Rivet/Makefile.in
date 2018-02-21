@@ -90,14 +90,15 @@ build_triplet = @build@
 host_triplet = @host@
 subdir = include/Rivet
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps = $(top_srcdir)/m4/ax_cxx_compile_stdcxx.m4 \
-	$(top_srcdir)/m4/cxx.m4 $(top_srcdir)/m4/cython.m4 \
-	$(top_srcdir)/m4/gsl.m4 $(top_srcdir)/m4/lcg.m4 \
+am__aclocal_m4_deps = $(top_srcdir)/m4/ax_check_zlib.m4 \
+	$(top_srcdir)/m4/ax_cxx_compile_stdcxx.m4 \
+	$(top_srcdir)/m4/ax_openmp.m4 \
+	$(top_srcdir)/m4/ax_python_devel.m4 $(top_srcdir)/m4/cxx.m4 \
+	$(top_srcdir)/m4/cython.m4 $(top_srcdir)/m4/lcg.m4 \
 	$(top_srcdir)/m4/libtool.m4 $(top_srcdir)/m4/ltoptions.m4 \
 	$(top_srcdir)/m4/ltsugar.m4 $(top_srcdir)/m4/ltversion.m4 \
 	$(top_srcdir)/m4/lt~obsolete.m4 $(top_srcdir)/m4/osx.m4 \
-	$(top_srcdir)/m4/pkgchecks.m4 $(top_srcdir)/m4/python.m4 \
-	$(top_srcdir)/configure.ac
+	$(top_srcdir)/m4/pkgchecks.m4 $(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
 DIST_COMMON = $(srcdir)/Makefile.am $(nobase_dist_noinst_HEADERS) \
@@ -223,15 +224,6 @@ FASTJETPATH = @FASTJETPATH@
 FGREP = @FGREP@
 FJCONFIG = @FJCONFIG@
 GREP = @GREP@
-GSLCONFIG = @GSLCONFIG@
-GSLCPPFLAGS = @GSLCPPFLAGS@
-GSLINCNAME = @GSLINCNAME@
-GSLINCPATH = @GSLINCPATH@
-GSLLIBPATH = @GSLLIBPATH@
-GSLPATH = @GSLPATH@
-GSL_CPPFLAGS = @GSL_CPPFLAGS@
-GSL_CXXFLAGS = @GSL_CXXFLAGS@
-GSL_LDFLAGS = @GSL_LDFLAGS@
 HAVE_CXX11 = @HAVE_CXX11@
 HEPMCCPPFLAGS = @HEPMCCPPFLAGS@
 HEPMCINCNAME = @HEPMCINCNAME@
@@ -280,14 +272,20 @@ PATH_SEPARATOR = @PATH_SEPARATOR@
 PDFLATEX = @PDFLATEX@
 PYEXT_CXXFLAGS = @PYEXT_CXXFLAGS@
 PYTHON = @PYTHON@
+PYTHON_CPPFLAGS = @PYTHON_CPPFLAGS@
 PYTHON_EXEC_PREFIX = @PYTHON_EXEC_PREFIX@
+PYTHON_EXTRA_LDFLAGS = @PYTHON_EXTRA_LDFLAGS@
+PYTHON_EXTRA_LIBS = @PYTHON_EXTRA_LIBS@
+PYTHON_LIBS = @PYTHON_LIBS@
 PYTHON_PLATFORM = @PYTHON_PLATFORM@
 PYTHON_PREFIX = @PYTHON_PREFIX@
+PYTHON_SITE_PKG = @PYTHON_SITE_PKG@
 PYTHON_VERSION = @PYTHON_VERSION@
 RANLIB = @RANLIB@
 RIVETCXX = @RIVETCXX@
 RIVETCXXFLAGS = @RIVETCXXFLAGS@
 RIVET_PYTHONPATH = @RIVET_PYTHONPATH@
+RIVET_SETUP_PY_PATH = @RIVET_SETUP_PY_PATH@
 SED = @SED@
 SET_MAKE = @SET_MAKE@
 SHELL = @SHELL@
@@ -356,6 +354,7 @@ program_transform_name = @program_transform_name@
 psdir = @psdir@
 pyexecdir = @pyexecdir@
 pythondir = @pythondir@
+runstatedir = @runstatedir@
 sbindir = @sbindir@
 sharedstatedir = @sharedstatedir@
 srcdir = @srcdir@
@@ -365,6 +364,8 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 nobase_dist_noinst_HEADERS = Tools/osdir.hh
+
+# TODO: Move to Rivet/AnalysisTools header dir?
 nobase_pkginclude_HEADERS = Rivet.hh Run.hh Event.hh ParticleBase.hh \
 	Particle.fhh Particle.hh Jet.fhh Jet.hh Projection.fhh \
 	Projection.hh ProjectionApplier.hh ProjectionHandler.hh \
@@ -389,8 +390,8 @@ nobase_pkginclude_HEADERS = Rivet.hh Run.hh Event.hh ParticleBase.hh \
 	Projections/MissingMomentum.hh \
 	Projections/NeutralFinalState.hh \
 	Projections/NonHadronicFinalState.hh \
-	Projections/NonPromptFinalState.hh \
-	Projections/ParticleFinder.hh Projections/ParisiTensor.hh \
+	Projections/NonPromptFinalState.hh Projections/ParisiTensor.hh \
+	Projections/ParticleFinder.hh Projections/PartonicTops.hh \
 	Projections/PrimaryHadrons.hh Projections/PromptFinalState.hh \
 	Projections/SmearedParticles.hh Projections/SmearedJets.hh \
 	Projections/SmearedMET.hh Projections/Sphericity.hh \
@@ -400,21 +401,26 @@ nobase_pkginclude_HEADERS = Rivet.hh Run.hh Event.hh ParticleBase.hh \
 	Projections/UnstableFinalState.hh \
 	Projections/VetoedFinalState.hh \
 	Projections/VisibleFinalState.hh Projections/WFinder.hh \
-	Projections/ZFinder.hh Analyses/MC_ParticleAnalysis.hh \
+	Projections/ZFinder.hh Projections/FinalStates.hh \
+	Projections/Smearing.hh Analyses/MC_ParticleAnalysis.hh \
 	Analyses/MC_JetAnalysis.hh Analyses/MC_JetSplittings.hh \
-	Tools/BeamConstraint.hh Tools/BinnedHistogram.hh Tools/Cmp.fhh \
-	Tools/Cmp.hh Tools/Cuts.fhh Tools/Cuts.hh Tools/Exceptions.hh \
-	Tools/JetUtils.hh Tools/Logging.hh Tools/ParticleBaseUtils.hh \
+	Tools/BeamConstraint.hh Tools/BinnedHistogram.hh \
+	Tools/CentralityBinner.hh Tools/Cmp.fhh Tools/Cmp.hh \
+	Tools/Cutflow.hh Tools/Cuts.fhh Tools/Cuts.hh \
+	Tools/Exceptions.hh Tools/JetUtils.hh Tools/Logging.hh \
+	Tools/Random.hh Tools/ParticleBaseUtils.hh \
 	Tools/ParticleIdUtils.hh Tools/ParticleUtils.hh \
 	Tools/ParticleName.hh Tools/PrettyPrint.hh Tools/RivetPaths.hh \
 	Tools/RivetSTL.hh Tools/RivetFastJet.hh Tools/RivetHepMC.hh \
 	Tools/RivetYODA.hh Tools/RivetMT2.hh \
-	Tools/SmearingFunctions.hh Tools/TypeTraits.hh Tools/Utils.hh \
-	Math/Matrices.hh Math/Vector3.hh Math/VectorN.hh \
-	Math/MatrixN.hh Math/MatrixDiag.hh Math/MathHeader.hh \
-	Math/Vectors.hh Math/LorentzTrans.hh Math/Matrix3.hh \
-	Math/MathUtils.hh Math/Vector4.hh Math/Math.hh Math/Units.hh \
-	Math/Constants.hh Math/eigen/util.h \
+	Tools/SmearingFunctions.hh Tools/MomentumSmearingFunctions.hh \
+	Tools/ParticleSmearingFunctions.hh \
+	Tools/JetSmearingFunctions.hh Tools/TypeTraits.hh \
+	Tools/Utils.hh Math/Matrices.hh Math/Vector3.hh \
+	Math/VectorN.hh Math/MatrixN.hh Math/MatrixDiag.hh \
+	Math/MathHeader.hh Math/Vectors.hh Math/LorentzTrans.hh \
+	Math/Matrix3.hh Math/MathUtils.hh Math/Vector4.hh Math/Math.hh \
+	Math/Units.hh Math/Constants.hh Math/eigen/util.h \
 	Math/eigen/regressioninternal.h Math/eigen/regression.h \
 	Math/eigen/vector.h Math/eigen/ludecompositionbase.h \
 	Math/eigen/ludecomposition.h Math/eigen/linearsolver.h \

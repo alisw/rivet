@@ -10,6 +10,8 @@ TODO:
  * Add partial name / regex searching? (Requires extending the Rivet library)
 """
 
+from __future__ import print_function
+
 import rivet, sys, os
 rivet.util.check_python_version()
 rivet.util.set_process_name(os.path.basename(__file__))
@@ -24,6 +26,6 @@ ops, args = op.parse_args()
 # print rivet.findAnalysisRefFile()
 for a in args:
     try:
-        print rivet.findAnalysisRefFile(a)
+        print(rivet.findAnalysisRefFile(a))
     except:
-        print "No match for '%s'"
+        print("No match for '%s'")

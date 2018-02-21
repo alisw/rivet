@@ -200,58 +200,60 @@ namespace Rivet {
       return true;
     }
 
-    bool operator==(const Matrix<N>& a) const {
+    bool operator == (const Matrix<N>& a) const {
       return _matrix == a._matrix;
     }
 
-    bool operator!=(const Matrix<N>& a) const {
+    bool operator != (const Matrix<N>& a) const {
       return _matrix != a._matrix;
     }
 
-    bool operator<(const Matrix<N>& a) const {
+    bool operator < (const Matrix<N>& a) const {
       return _matrix < a._matrix;
     }
 
-    bool operator<=(const Matrix<N>& a) const {
+    bool operator <= (const Matrix<N>& a) const {
       return _matrix <= a._matrix;
     }
 
-    bool operator>(const Matrix<N>& a) const {
+    bool operator > (const Matrix<N>& a) const {
       return _matrix > a._matrix;
     }
 
-    bool operator>=(const Matrix<N>& a) const {
+    bool operator >= (const Matrix<N>& a) const {
       return _matrix >= a._matrix;
     }
 
-    Matrix<N>& operator*=(const Matrix<N>& m) {
+    Matrix<N>& operator *= (const Matrix<N>& m) {
       _matrix = _matrix * m._matrix;
       return *this;
     }
 
-    Matrix<N>& operator*=(const double a) {
+    Matrix<N>& operator *= (const double a) {
       _matrix *= a;
       return *this;
     }
 
-    Matrix<N>& operator/=(const double a) {
+    Matrix<N>& operator /= (const double a) {
       _matrix /= a;
       return *this;
     }
 
-    Matrix<N>& operator+=(const Matrix<N>& m) {
+    Matrix<N>& operator += (const Matrix<N>& m) {
       _matrix += m._matrix;
       return *this;
     }
 
-    Matrix<N>& operator-=(const Matrix<N>& m) {
+    Matrix<N>& operator -= (const Matrix<N>& m) {
       _matrix -= m._matrix;
       return *this;
     }
 
   protected:
+
     typedef Eigen::Matrix<double,N> EMatrix;
     EMatrix _matrix;
+
   };
 
 
@@ -271,12 +273,12 @@ namespace Rivet {
   }
 
   template <size_t N>
-  inline Matrix<N> operator+(const Matrix<N> a, const Matrix<N>& b) {
+  inline Matrix<N> operator + (const Matrix<N> a, const Matrix<N>& b) {
     return add(a, b);
   }
 
   template <size_t N>
-  inline Matrix<N> operator-(const Matrix<N> a, const Matrix<N>& b) {
+  inline Matrix<N> operator - (const Matrix<N> a, const Matrix<N>& b) {
     return subtract(a, b);
   }
 
@@ -298,12 +300,12 @@ namespace Rivet {
   }
 
   template <size_t N>
-  inline Matrix<N> operator*(const double a, const Matrix<N>& m) {
+  inline Matrix<N> operator * (const double a, const Matrix<N>& m) {
     return multiply(a, m);
   }
 
   template <size_t N>
-  inline Matrix<N> operator*(const Matrix<N>& m, const double a) {
+  inline Matrix<N> operator * (const Matrix<N>& m, const double a) {
     return multiply(a, m);
   }
 
@@ -315,7 +317,7 @@ namespace Rivet {
   }
 
   template <size_t N>
-  inline Matrix<N> operator*(const Matrix<N>& a, const Matrix<N>& b) {
+  inline Matrix<N> operator * (const Matrix<N>& a, const Matrix<N>& b) {
     return multiply(a, b);
   }
 
@@ -328,7 +330,7 @@ namespace Rivet {
   }
 
   template <size_t N>
-  inline Vector<N> operator*(const Matrix<N>& a, const Vector<N>& b) {
+  inline Vector<N> operator * (const Matrix<N>& a, const Vector<N>& b) {
     return multiply(a, b);
   }
 
@@ -383,7 +385,7 @@ namespace Rivet {
 
   /// Stream out string representation
   template <size_t N>
-  inline ostream& operator<<(std::ostream& out, const Matrix<N>& m) {
+  inline ostream& operator << (std::ostream& out, const Matrix<N>& m) {
     out << toString(m);
     return out;
   }

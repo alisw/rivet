@@ -531,10 +531,12 @@ namespace Rivet {
     }
 
     /// Determine if the PID is that of a charged lepton
-    inline bool isChLepton(int pid) {
+    inline bool isChargedLepton(int pid) {
       const long apid = abs(pid);
       return apid == 11 || apid == 13 || apid == 15;
     }
+    // Alias
+    inline bool isChLepton(int pid) { return isChargedLepton(pid); }
 
     /// Determine if the PID is that of a neutrino
     inline bool isNeutrino(int pid) {
@@ -542,9 +544,6 @@ namespace Rivet {
       return apid == 12 || apid == 14 || apid == 16;
     }
 
-
-
-    /// @todo Add isElectron, Muon, Tau (and +- specific versions?)... and is(Anti)Proton?
 
     /// Determine if the PID is that of a W+
     inline bool isWplus(int pid) {

@@ -17,13 +17,17 @@ namespace Rivet {
     /// Constructor with a FinalState and optional list of PDG ID codes.
     IdentifiedFinalState(const FinalState& fsp, const vector<PdgId>& pids=vector<PdgId>());
 
-    /// Constructor with a list of PDG ID codes and a FinalState.
+    /// Constructor with a list of PDG ID codes and a FinalState
+    /// @deprecated Use the version with FinalState as 1st arg
+    DEPRECATED("Use the version with FinalState as 1st arg")
     IdentifiedFinalState(const vector<PdgId>& pids, const FinalState& fsp);
 
-    /// Constructor with a FinalState and a single of PDG ID code.
+    /// Constructor with a FinalState and a single PDG ID code.
     IdentifiedFinalState(const FinalState& fsp, PdgId pid);
 
     /// Constructor with a single PDG ID code and a FinalState.
+    /// @deprecated Use the version with FinalState as 1st arg
+    DEPRECATED("Use the version with FinalState as 1st arg")
     IdentifiedFinalState(PdgId pid, const FinalState& fsp);
 
 
@@ -38,12 +42,6 @@ namespace Rivet {
 
     /// Construction using a single PDG ID code and an optional Cuts object
     IdentifiedFinalState(PdgId pid, const Cut& c=Cuts::open());
-
-
-    /// Constructor with eta range and pT_min arguments and optional list of PDG ID codes.
-    /// @deprecated Use the versions with Cut or FinalState arguments
-    DEPRECATED("Use the versions with Cut or FinalState arguments.")
-    IdentifiedFinalState(double etamin, double etamax, double ptMin=0.0*GeV);
 
 
     /// Clone on the heap.

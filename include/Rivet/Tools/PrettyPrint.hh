@@ -13,6 +13,8 @@
 #ifndef H_PRETTY_PRINT
 #define H_PRETTY_PRINT
 
+/// @cond PRETTYPRINT
+
 #include <cstddef>
 #include <iterator>
 #include <memory>
@@ -449,6 +451,6 @@ operator<<(std::basic_ostream<TChar, TCharTraits> & stream, const T & container)
 
 }
 
-
+/// @endcond
 
 #endif  // H_PRETTY_PRINT

@@ -15,8 +15,8 @@ namespace Rivet {
     if (!path1.empty()) return path1;
     const string path2 = findAnalysisRefFile(papername + ".aida");
     if (!path2.empty()) return path2;
-    throw Rivet::Error("Couldn't find ref data file '" + papername + ".yoda/aida" +
-                       " in $RIVET_REF_PATH, '" + getRivetDataPath() + "', or '.'");
+    throw Rivet::Error("Couldn't find ref data file '" + papername + ".yoda" +
+                       " in data path, '" + getRivetDataPath() + "', or '.'");
   }
 
 

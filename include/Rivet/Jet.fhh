@@ -7,11 +7,30 @@
 
 namespace Rivet {
 
+
+  /// @name Jet declarations
+  //@{
+
   // Forward declaration
   class Jet;
 
   /// Typedef for a collection of Jet objects.
   typedef std::vector<Jet> Jets;
+
+  //@}
+
+
+  /// @name Jet function/functor declarations
+  //@{
+
+  /// std::function instantiation for functors taking a Jet and returning a bool
+  using JetSelector = function<bool(const Jet&)>;
+
+  /// std::function instantiation for functors taking two Jets and returning a bool
+  using JetSorter = function<bool(const Jet&, const Jet&)>;
+
+  //@}
+
 
 }
 

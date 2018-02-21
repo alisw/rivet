@@ -1,6 +1,7 @@
 #include "Rivet/Math/MathUtils.hh"
 #include "Rivet/Math/Vectors.hh"
 #include "Rivet/Math/Matrices.hh"
+// #include "Rivet/Math/MatrixDiag.hh"
 using namespace Rivet;
 
 #include <iostream>
@@ -39,7 +40,7 @@ int main() {
   m.set(1, 1, 13/4.0);
   m.set(2, 2, 9);
   cout << m << endl << endl;
-  EigenSystem<3> es = diagonalize(m);
+//  EigenSystem<3> es = diagonalize(m);
 
   cout << "Matrices:" << endl;
   cout << Matrix3() << endl;

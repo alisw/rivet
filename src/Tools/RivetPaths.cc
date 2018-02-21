@@ -21,7 +21,7 @@ namespace Rivet {
     br_init_lib(&error);
     char* temp = br_find_lib_dir(DEFAULTLIBDIR);
     const string libdir(temp);
-    free (temp);
+    free(temp);
     return libdir;
   }
 
@@ -30,7 +30,7 @@ namespace Rivet {
     br_init_lib(&error);
     char* temp = br_find_data_dir(DEFAULTDATADIR);
     const string sharedir(temp);
-    free (temp);
+    free(temp);
     return sharedir;
   }
 

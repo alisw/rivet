@@ -1,7 +1,7 @@
 ## Process this file with autoconf to produce a configure script.
 
 AC_PREREQ(2.59)
-AC_INIT([Rivet],[2.5.1],[rivet@projects.hepforge.org],[Rivet])
+AC_INIT([Rivet],[2.6.0],[rivet@projects.hepforge.org],[Rivet])
 
 ## Check and block installation into the src/build dir
 if test "$prefix" = "$PWD"; then
@@ -14,7 +14,7 @@ fi
 
 AC_CONFIG_SRCDIR([src/Core/Analysis.cc])
 AC_CONFIG_HEADERS([include/Rivet/Config/DummyConfig.hh include/Rivet/Config/RivetConfig.hh include/Rivet/Config/BuildOptions.hh])
-AM_INIT_AUTOMAKE([dist-bzip2 -Wall])
+AM_INIT_AUTOMAKE([dist-bzip2 -Wall 1.10])
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 m4_ifdef([AM_PROG_AR], [AM_PROG_AR])
 AC_CONFIG_MACRO_DIR([m4])
@@ -54,9 +54,9 @@ AC_DISABLE_STATIC
 AC_LIBTOOL_DLOPEN
 AC_PROG_LIBTOOL
 
+AC_FUNC_STRERROR_R
 
 ## YODA histogramming library
-# TODO: we could download, configure, and install YODA automatically... but that is NASTY
 AC_CEDAR_LIBRARYANDHEADERS([YODA], , , [AC_MSG_ERROR([YODA is required])])
 YODABINPATH=$YODALIBPATH/../bin
 AC_SUBST(YODABINPATH)
@@ -144,23 +144,13 @@ AC_CHECK_HEADER([fastjet/TrackJetPlugin.hh], [], [AC_MSG_ERROR([$FASTJET_ERRMSG]
 CPPFLAGS=$oldCPPFLAGS
 
 
-## GNU Scientific Library
-AC_SEARCH_GSL
-AC_CEDAR_HEADERS([gsl], , , [AC_MSG_ERROR([GSL (GNU Scientific Library) is required])])
-oldCPPFLAGS=$CPPFLAGS
-CPPFLAGS="$CPPFLAGS -I$GSLINCPATH"
-AC_CHECK_HEADER([gsl/gsl_vector.h], [], [AC_MSG_ERROR([GSL vectors not found.])])
-CPPFLAGS=$oldCPPFLAGS
-
-
-dnl ## Boost utility library
-dnl BOOST_REQUIRE([1.55.0])
-dnl BOOST_FOREACH
-dnl BOOST_SMART_PTR
-dnl BOOST_FIND_HEADER([boost/lexical_cast.hpp])
-dnl BOOST_FIND_HEADER([boost/range.hpp])
-dnl BOOST_FIND_HEADER([boost/assign.hpp])
-dnl BOOST_BUG_IN_FOREACH
+# ## GNU Scientific Library
+# AC_SEARCH_GSL
+# AC_CEDAR_HEADERS([gsl], , , [AC_MSG_ERROR([GSL (GNU Scientific Library) is required])])
+# oldCPPFLAGS=$CPPFLAGS
+# CPPFLAGS="$CPPFLAGS -I$GSLINCPATH"
+# AC_CHECK_HEADER([gsl/gsl_vector.h], [], [AC_MSG_ERROR([GSL vectors not found.])])
+# CPPFLAGS=$oldCPPFLAGS
 
 
 ## Disable build/install of standard analyses
@@ -171,51 +161,6 @@ if test x$enable_analyses != xyes; then
    AC_MSG_WARN([Not building standard Rivet analyses, by request])
 fi
 AM_CONDITIONAL(ENABLE_ANALYSES, [test x$enable_analyses = xyes])
-
-
-## Enable build/install of unvalidated analyses
-AC_ARG_ENABLE([unvalidated],
-  [AC_HELP_STRING(--enable-unvalidated, [does nothing, for backward compatibility])],
-  [], [enable_unvalidated=yes])
-dnl AC_ARG_ENABLE([unvalidated],
-dnl   [AC_HELP_STRING(--enable-unvalidated, [build and install unvalidated analyses])],
-dnl   [], [enable_unvalidated=yes])
-dnl if test x$enable_unvalidated = xyes; then
-dnl    AC_MSG_WARN([Building unvalidated Rivet analyses, by request])
-dnl else
-dnl    AC_MSG_NOTICE([Not building unvalidated Rivet analyses])
-dnl fi
-dnl AM_CONDITIONAL(ENABLE_UNVALIDATED, [test x$enable_unvalidated = xyes])
-
-
-## Disable build/install of validated-but-preliminary analyses
-AC_ARG_ENABLE([preliminary],
-  [AC_HELP_STRING(--disable-preliminary, [does nothing, for backward compatibility])],
-  [], [enable_preliminary=yes])
-dnl AC_ARG_ENABLE([preliminary],
-dnl   [AC_HELP_STRING(--disable-preliminary, [build and install validated-but-preliminary analyses])],
-dnl   [], [enable_preliminary=yes])
-dnl if test x$enable_preliminary = xyes; then
-dnl    AC_MSG_NOTICE([Building preliminary Rivet analyses])
-dnl else
-dnl    AC_MSG_NOTICE([Not building preliminary Rivet analyses, by request])
-dnl fi
-dnl AM_CONDITIONAL(ENABLE_PRELIMINARY, [test x$enable_preliminary = xyes])
-
-
-## Disable build/install of now-obsolete preliminary analyses
-AC_ARG_ENABLE([obsolete],
-  [AC_HELP_STRING(--disable-obsolete, [does nothing, for backward compatibility])],
-  [], [enable_obsolete=yes])
-dnl AC_ARG_ENABLE([obsolete],
-dnl   [AC_HELP_STRING(--disable-obsolete, [build and install now-obsolete analyses])],
-dnl   [], [enable_obsolete=$enable_preliminary])
-dnl if test x$enable_obsolete = xyes; then
-dnl    AC_MSG_NOTICE([Building obsolete Rivet analyses])
-dnl else
-dnl    AC_MSG_NOTICE([Not building obsolete Rivet analyses, by request])
-dnl fi
-dnl AM_CONDITIONAL(ENABLE_OBSOLETE, [test x$enable_obsolete = xyes])
 
 
 ## Build LaTeX docs if possible...
@@ -248,67 +193,63 @@ AM_CONDITIONAL(WITH_ASCIIDOC, [test x$ASCIIDOC != x])
 AC_ARG_ENABLE(pyext, [AC_HELP_STRING(--disable-pyext,
   [don't build Python module (default=build)])],
   [], [enable_pyext=yes])
-AZ_PYTHON_DEFAULT
 ## Basic Python checks
 if test x$enable_pyext == xyes; then
-  AZ_PYTHON_PATH
-  AZ_PYTHON_VERSION_ENSURE([2.5])
-  PYTHON_VERSION=`$PYTHON -c "import sys; print '.'.join(map(str, sys.version_info@<:@:2@:>@));"`
+  AX_PYTHON_DEVEL([>= '2.7.3'])
   AC_SUBST(PYTHON_VERSION)
-  RIVET_PYTHONPATH=`$PYTHON -c "import distutils.sysconfig; print distutils.sysconfig.get_python_lib(prefix='$prefix', plat_specific=True);"`
+  RIVET_PYTHONPATH=`$PYTHON -c "from __future__ import print_function;
+import distutils.sysconfig; print(distutils.sysconfig.get_python_lib(prefix='$prefix', plat_specific=True));"`
   AC_SUBST(RIVET_PYTHONPATH)
-  ## Test for Python header
-  if test -x "$PYTHON"; then
-    AC_MSG_CHECKING([for Python include path])
-    python_incpath=`$PYTHON -c "import distutils.sysconfig; print distutils.sysconfig.get_python_inc();"`
-    AC_MSG_RESULT([$python_incpath])
-    python_header="$python_incpath/Python.h"
-    if test -z "$python_incpath"; then
-      AC_MSG_ERROR([Can't build Python extension since include directory cannot be determined from distutils])
-      enable_pyext=no
-    elif test ! -e "$python_header"; then
-      AC_MSG_ERROR([Can't build Python extension since header file $python_header cannot be found])
-      enable_pyext=no
-    fi
-  else
+  if test -z "$PYTHON"; then
     AC_MSG_ERROR([Can't build Python extension since python can't be found])
     enable_pyext=no
   fi
-fi
-if test x$enable_pyext == xyes; then
-  AC_MSG_NOTICE([All Python build checks successful: 'yoda' Python extension will be built])
+  if test -z "$PYTHON_CPPFLAGS"; then
+    AC_MSG_ERROR([Can't build Python extension since Python.h header file cannot be found])
+    enable_pyext=no
+  fi
 fi
 AM_CONDITIONAL(ENABLE_PYEXT, [test x$enable_pyext == xyes])
 
+dnl
+dnl setup.py puts its build artifacts into a labelled path
+dnl this helps the test scripts to find them locally instead of
+dnl having to install first
+dnl
+RIVET_SETUP_PY_PATH=$(${PYTHON} -c 'from __future__ import print_function;
+import distutils.util as u, sys; vi=sys.version_info; print("lib.%s-%s.%s" % (u.get_platform(),vi.major, vi.minor))')
+AC_SUBST(RIVET_SETUP_PY_PATH)
 
-## Set extra Python extension build flags (to cope with Cython output code oddities)
-PYEXT_CXXFLAGS="$CXXFLAGS"
-AC_CEDAR_CHECKCXXFLAG([-Wno-unused-but-set-variable], [PYEXT_CXXFLAGS="$PYEXT_CXXFLAGS -Wno-unused-but-set-variable"])
-AC_CEDAR_CHECKCXXFLAG([-Wno-sign-compare], [PYEXT_CXXFLAGS="$PYEXT_CXXFLAGS -Wno-sign-compare"])
-AC_SUBST(PYEXT_CXXFLAGS)
 
 
 ## Cython checks
 if test x$enable_pyext == xyes; then
-  AM_CHECK_CYTHON([0.18], [:], [:])
+  AM_CHECK_CYTHON([0.24.0], [:], [:])
   if test x$CYTHON_FOUND = xyes; then
-    AC_MSG_NOTICE([Cython >= 0.18 found: Python extension source can be rebuilt (for developers)])
-    cython_compiler=$CXX
+    AC_MSG_NOTICE([Cython >= 0.24 found: Python extension source can be rebuilt (for developers)])
   fi
-fi
-AM_CONDITIONAL(WITH_CYTHON, [test x$CYTHON_FOUND = xyes])
 
+  AC_CHECK_FILE([pyext/rivet/core.cpp],
+                [],
+                [if test "x$CYTHON_FOUND" != "xyes"; then
+                  AC_MSG_ERROR([Cython is required for --enable-pyext, no pre-built core.cpp was found.])
+                fi])
 
-if test x$enable_pyext == xyes; then
+  cython_compiler=$CXX
+  ## Set extra Python extension build flags (to cope with Cython output code oddities)
+  PYEXT_CXXFLAGS="$CXXFLAGS"
+  AC_CEDAR_CHECKCXXFLAG([-Wno-unused-but-set-variable], [PYEXT_CXXFLAGS="$PYEXT_CXXFLAGS -Wno-unused-but-set-variable"])
+  AC_CEDAR_CHECKCXXFLAG([-Wno-sign-compare], [PYEXT_CXXFLAGS="$PYEXT_CXXFLAGS -Wno-sign-compare"])
+  AC_SUBST(PYEXT_CXXFLAGS)
   AC_MSG_NOTICE([All Python build checks successful: 'rivet' Python extension will be built])
 fi
-AM_CONDITIONAL(ENABLE_PYEXT, [test x$enable_pyext == xyes])
+AM_CONDITIONAL(WITH_CYTHON, [test x$CYTHON_FOUND = xyes])
 
 
 ## Set default build flags
 AM_CPPFLAGS="-I\$(top_srcdir)/include -I\$(top_builddir)/include"
 #AM_CPPFLAGS="$AM_CPPFLAGS -I\$(top_srcdir)/include/eigen3"
-AM_CPPFLAGS="$AM_CPPFLAGS \$(GSL_CPPFLAGS)"
+#AM_CPPFLAGS="$AM_CPPFLAGS \$(GSL_CPPFLAGS)"
 dnl AM_CPPFLAGS="$AM_CPPFLAGS \$(BOOST_CPPFLAGS)"
 AM_CPPFLAGS="$AM_CPPFLAGS -I\$(YODAINCPATH)"
 AM_CPPFLAGS="$AM_CPPFLAGS -I\$(HEPMCINCPATH)"
@@ -321,6 +262,12 @@ dnl AC_CEDAR_CHECKCXXFLAG([-Wno-unused-variable], [AM_CXXFLAGS="$AM_CXXFLAGS -Wn
 AC_CEDAR_CHECKCXXFLAG([-Werror=uninitialized], [AM_CXXFLAGS="$AM_CXXFLAGS -Werror=uninitialized"])
 AC_CEDAR_CHECKCXXFLAG([-Werror=delete-non-virtual-dtor], [AM_CXXFLAGS="$AM_CXXFLAGS -Werror=delete-non-virtual-dtor"])
 
+## Add OpenMP-enabling flags if possible
+AX_OPENMP([AM_CXXFLAGS="$AM_CXXFLAGS $OPENMP_CXXFLAGS"])
+
+## Optional zlib support for gzip-compressed data streams/files
+AX_CHECK_ZLIB
+
 
 ## Debug flag (default=-DNDEBUG, enabled=-g)
 AC_ARG_ENABLE([debug], [AC_HELP_STRING(--enable-debug,
@@ -328,7 +275,6 @@ AC_ARG_ENABLE([debug], [AC_HELP_STRING(--enable-debug,
 if test x$enable_debug == xyes; then
   AM_CXXFLAGS="$AM_CXXFLAGS -g"
 fi
-
 
 ## Extra warnings flag (default=none)
 AC_ARG_ENABLE([extra-warnings], [AC_HELP_STRING(--enable-extra-warnings,
@@ -342,19 +288,20 @@ AC_SUBST(AM_CPPFLAGS)
 AC_SUBST(AM_CXXFLAGS)
 
 AC_EMPTY_SUBST
+AC_CONFIG_FILES(Makefile Doxyfile)
 AC_CONFIG_FILES(include/Makefile include/Rivet/Makefile)
 AC_CONFIG_FILES(src/Makefile)
 AC_CONFIG_FILES(src/Core/Makefile src/Core/yamlcpp/Makefile)
 AC_CONFIG_FILES(src/Tools/Makefile)
 AC_CONFIG_FILES(src/Projections/Makefile)
-AC_CONFIG_FILES(src/Analyses/Makefile)
+AC_CONFIG_FILES(src/AnalysisTools/Makefile)
+AC_CONFIG_FILES(analyses/Makefile)
 AC_CONFIG_FILES(test/Makefile)
 AC_CONFIG_FILES(pyext/Makefile pyext/rivet/Makefile pyext/setup.py)
-AC_CONFIG_FILES(data/Makefile data/refdata/Makefile data/anainfo/Makefile data/plotinfo/Makefile data/texmf/Makefile)
+AC_CONFIG_FILES(data/Makefile data/texmf/Makefile)
 AC_CONFIG_FILES(doc/Makefile)
-AC_CONFIG_FILES(doc/rivetversion.sty doc/diffanas)
+AC_CONFIG_FILES(doc/rivetversion.sty)
 AC_CONFIG_FILES(bin/Makefile bin/rivet-config bin/rivet-buildplugin)
-AC_CONFIG_FILES(Makefile Doxyfile)
 AC_CONFIG_FILES(rivetenv.sh rivetenv.csh rivet.pc)
 
 AC_OUTPUT

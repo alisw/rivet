@@ -68,6 +68,7 @@ namespace Rivet {
     TRY_GETINFO("Experiment", experiment);
     TRY_GETINFO("Collider", collider);
     TRY_GETINFO("Year", year);
+    TRY_GETINFO("Luminosity_fb", luminosityfb);
     TRY_GETINFO("SpiresID", spiresId);
     TRY_GETINFO("InspireID", inspireId);
     TRY_GETINFO("BibKey", bibKey);
@@ -92,6 +93,7 @@ namespace Rivet {
     TRY_GETINFO_SEQ("Authors", authors);
     TRY_GETINFO_SEQ("References", references);
     TRY_GETINFO_SEQ("ToDo", todos);
+    TRY_GETINFO_SEQ("Keywords", keywords);
     #undef TRY_GETINFO_SEQ
 
 

@@ -11,7 +11,8 @@ namespace Rivet {
   /// Probably the most important projection in Rivet!
   class FinalState : public ParticleFinder {
   private:
-    // hide lossy copy constructors for all classes derived from FinalState
+
+    // Hide lossy copy constructors for all classes derived from FinalState
     template<typename T> FinalState(const T& rhs);
     template<typename T> FinalState const& operator=(T const& rhs);
 
@@ -29,7 +30,6 @@ namespace Rivet {
 
     /// Old constructor with numeric cut arguments, retained for compatibility
     /// @deprecated Use the versions with Cut arguments
-    //DEPRECATED("Use the versions with Cut arguments")
     FinalState(double mineta, double maxeta, double minpt=0.0*GeV);
 
     /// Clone on the heap.

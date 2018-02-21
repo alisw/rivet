@@ -25,11 +25,14 @@ namespace Rivet {
     /// @name Constructors
     //@{
 
-    // Constructor from a final state.
-    PromptFinalState(const FinalState& fsp, bool accepttaudecays=false, bool acceptmudecays=false);
+    /// Constructor without cuts
+    PromptFinalState(bool accepttaudecays=false, bool acceptmudecays=false);
 
-    /// Constructor from a Cut.
+    /// Constructor from a Cut
     PromptFinalState(const Cut& c, bool accepttaudecays=false, bool acceptmudecays=false);
+
+    // Constructor from a FinalState
+    PromptFinalState(const FinalState& fsp, bool accepttaudecays=false, bool acceptmudecays=false);
 
     // /// Constructor from a Cut and optional FinalState.
     // PromptFinalState(const Cut& c, const FinalState& fsp=FinalState(), bool accepttaudecays, bool acceptmudecays);
@@ -39,9 +42,9 @@ namespace Rivet {
 
     //@}
 
-    /// Accept particles from decays of prompt muons as themselves being prompt?
+    /// Accept leptons from decays of prompt muons as themselves being prompt?
     void acceptMuonDecays(bool acc=true) { _acceptMuDecays = acc; }
-    /// Accept particles from decays of prompt taus as themselves being prompt?
+    /// Accept leptons from decays of prompt taus as themselves being prompt?
     void acceptTauDecays(bool acc=true) { _acceptTauDecays = acc; }
 
 
@@ -59,6 +62,10 @@ namespace Rivet {
     bool _acceptMuDecays, _acceptTauDecays;
 
   };
+
+
+  /// Alias with a more correct name
+  using DirectFinalState = PromptFinalState;
 
 }
 

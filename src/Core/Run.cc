@@ -3,6 +3,8 @@
 #include "Rivet/AnalysisHandler.hh"
 #include "HepMC/IO_GenEvent.h"
 #include "Rivet/Math/MathUtils.hh"
+#include "Rivet/Tools/RivetPaths.hh"
+#include "zstr/zstr.hpp"
 #include <limits>
 
 namespace Rivet {
@@ -49,7 +51,7 @@ namespace Rivet {
     }
     return true;
   }
-  
+
   // Fill event and check for a bad read state --- to skip, maybe HEPMC3 will have a better way
   bool Run::skipEvent() {
     if (_io->rdstate() != 0 || !_io->fill_next_event(_evt.get()) ) {
@@ -68,8 +70,13 @@ namespace Rivet {
     if (evtfile == "-") {
       _io.reset(new HepMC::IO_GenEvent(std::cin));
     } else {
-      // Ignore the HepMC::IO_GenEvent(filename, ios) constructor, since it's only available from HepMC 2.4
+      if (!fileexists(evtfile)) throw Error("Event file '" + evtfile + "' not found");
+      #ifdef HAVE_LIBZ
+      // NB. zstr auto-detects if file is deflated or plain-text
+      _istr.reset(new zstr::ifstream(evtfile.c_str()));
+      #else
       _istr.reset(new std::fstream(evtfile.c_str(), std::ios::in));
+      #endif
       _io.reset(new HepMC::IO_GenEvent(*_istr));
     }
     if (_io->rdstate() != 0) {
@@ -95,7 +102,7 @@ namespace Rivet {
     _ah.init(*_evt);
 
     // Set cross-section from command line
-    if (!isnan(_xs)) {
+    if (!std::isnan(_xs)) {
       Log::getLog("Rivet.Run")
         << Log::DEBUG << "Setting user cross-section = " << _xs << " pb" << endl;
       _ah.setCrossSection(_xs);
@@ -103,7 +110,7 @@ namespace Rivet {
 
     // List the chosen & compatible analyses if requested
     if (_listAnalyses) {
-      foreach (const std::string& ana, _ah.analysisNames()) {
+      for (const std::string& ana : _ah.analysisNames()) {
         cout << ana << endl;
       }
     }
@@ -143,7 +150,7 @@ namespace Rivet {
     _istr.reset();
     _io.reset();
 
-    if (!isnan(_xs)) _ah.setCrossSection(_xs);
+    if (!std::isnan(_xs)) _ah.setCrossSection(_xs);
     _ah.finalize();
 
     return true;

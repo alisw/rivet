@@ -25,7 +25,6 @@ namespace Rivet {
       setAsRotation(from, to);
     }
 
-  public:
     static Matrix3 mkXRotation(const double angle) {
       return Matrix3(Vector3(1,0,0), angle);
     }
@@ -38,7 +37,6 @@ namespace Rivet {
       return Matrix3(Vector3(0,0,1), angle);
     }
 
-  public:
     Matrix3& setAsRotation(const Vector3& from, const Vector3& to) {
       const double theta = angle(from, to);
       if (Rivet::isZero(theta)) {

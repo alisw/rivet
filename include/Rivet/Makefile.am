@@ -30,31 +30,31 @@ nobase_pkginclude_HEADERS += \
 
 
 ## Projections
-nobase_pkginclude_HEADERS +=   \
+nobase_pkginclude_HEADERS += \
   Projections/AxesDefinition.hh \
-  Projections/Beam.hh           \
-  Projections/BeamThrust.hh     \
-  Projections/CentralEtHCM.hh   \
+  Projections/Beam.hh \
+  Projections/BeamThrust.hh \
+  Projections/CentralEtHCM.hh \
   Projections/ChargedFinalState.hh \
   Projections/ChargedLeptons.hh \
   Projections/ConstLossyFinalState.hh \
-  Projections/DISFinalState.hh  \
-  Projections/DISKinematics.hh  \
-  Projections/DISLepton.hh      \
+  Projections/DISFinalState.hh \
+  Projections/DISKinematics.hh \
+  Projections/DISLepton.hh \
   Projections/DressedLeptons.hh \
-  Projections/FastJets.hh       \
-  Projections/FinalPartons.hh     \
-  Projections/FinalState.hh     \
+  Projections/FastJets.hh \
+  Projections/FinalPartons.hh \
+  Projections/FinalState.hh \
   Projections/FoxWolframMoments.hh \
   Projections/FParameter.hh \
   Projections/HadronicFinalState.hh \
   Projections/HeavyHadrons.hh \
-  Projections/Hemispheres.hh    \
+  Projections/Hemispheres.hh \
   Projections/IdentifiedFinalState.hh \
   Projections/InitialQuarks.hh \
   Projections/InvMassFinalState.hh \
-  Projections/JetAlg.hh         \
-  Projections/JetShape.hh       \
+  Projections/JetAlg.hh \
+  Projections/JetShape.hh \
   Projections/LeadingParticlesFinalState.hh \
   Projections/LossyFinalState.hh \
   Projections/MergedFinalState.hh \
@@ -62,8 +62,9 @@ nobase_pkginclude_HEADERS +=   \
   Projections/NeutralFinalState.hh \
   Projections/NonHadronicFinalState.hh \
   Projections/NonPromptFinalState.hh \
-  Projections/ParticleFinder.hh   \
-  Projections/ParisiTensor.hh   \
+  Projections/ParisiTensor.hh \
+  Projections/ParticleFinder.hh \
+  Projections/PartonicTops.hh \
   Projections/PrimaryHadrons.hh \
   Projections/PromptFinalState.hh \
   Projections/SmearedParticles.hh \
@@ -81,9 +82,14 @@ nobase_pkginclude_HEADERS +=   \
   Projections/VisibleFinalState.hh \
   Projections/WFinder.hh \
   Projections/ZFinder.hh
+## Meta-projection convenience headers
+nobase_pkginclude_HEADERS +=   \
+  Projections/FinalStates.hh \
+  Projections/Smearing.hh
 
 
 ## Analysis base class headers
+# TODO: Move to Rivet/AnalysisTools header dir?
 nobase_pkginclude_HEADERS += \
   Analyses/MC_ParticleAnalysis.hh \
   Analyses/MC_JetAnalysis.hh \
@@ -94,13 +100,16 @@ nobase_pkginclude_HEADERS += \
 nobase_pkginclude_HEADERS += \
   Tools/BeamConstraint.hh \
   Tools/BinnedHistogram.hh \
+  Tools/CentralityBinner.hh \
   Tools/Cmp.fhh \
   Tools/Cmp.hh \
+  Tools/Cutflow.hh \
   Tools/Cuts.fhh \
   Tools/Cuts.hh \
   Tools/Exceptions.hh \
   Tools/JetUtils.hh \
   Tools/Logging.hh  \
+  Tools/Random.hh  \
   Tools/ParticleBaseUtils.hh \
   Tools/ParticleIdUtils.hh \
   Tools/ParticleUtils.hh \
@@ -113,6 +122,9 @@ nobase_pkginclude_HEADERS += \
   Tools/RivetYODA.hh \
   Tools/RivetMT2.hh \
   Tools/SmearingFunctions.hh \
+  Tools/MomentumSmearingFunctions.hh \
+  Tools/ParticleSmearingFunctions.hh \
+  Tools/JetSmearingFunctions.hh \
   Tools/TypeTraits.hh \
   Tools/Utils.hh
 nobase_dist_noinst_HEADERS += \

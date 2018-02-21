@@ -14,10 +14,11 @@ namespace Rivet {
   /// Chain together different projections as convenience for finding Z's
   /// from two leptons in the final state, including photon clustering.
   ///
-  /// @todo Inherit directly from ParticleFinder, not FinalState
-  class ZFinder : public FinalState {
+  /// @todo Alias then rename as Dileptons
+  class ZFinder : public ParticleFinder {
   public:
 
+    enum ChargedLeptons { PROMPTCHLEPTONS=0, ALLCHLEPTONS };
     enum ClusterPhotons { NOCLUSTER=0, CLUSTERNODECAY=1, CLUSTERALL };
     enum PhotonTracking { NOTRACK=0, TRACK=1 };
 
@@ -36,13 +37,29 @@ namespace Rivet {
     /// @param trackPhotons whether such photons should be added to _theParticles
     ///  (cf. _trackPhotons)
     ZFinder(const FinalState& inputfs,
-            const Cut & cuts,
+            const Cut& cuts,
             PdgId pid,
             double minmass, double maxmass,
             double dRmax=0.1,
+            ChargedLeptons chLeptons=PROMPTCHLEPTONS,
             ClusterPhotons clusterPhotons=CLUSTERNODECAY,
             PhotonTracking trackPhotons=NOTRACK,
             double masstarget=91.2*GeV);
+
+    /// Backward-compatible constructor with implicit chLeptons mode = PROMPTCHLEPTONS
+    /// @deprecated Remove this and always use the constructor with chLeptons argument.
+    ZFinder(const FinalState& inputfs,
+            const Cut& cuts,
+            PdgId pid,
+            double minmass, double maxmass,
+            double dRmax,
+            ClusterPhotons clusterPhotons,
+            PhotonTracking trackPhotons=NOTRACK,
+            double masstarget=91.2*GeV)
+      : ZFinder(inputfs, cuts, pid, minmass, maxmass,
+                dRmax, PROMPTCHLEPTONS, clusterPhotons, trackPhotons, masstarget)
+    {   }
+
 
     /// Clone on the heap.
     DEFAULT_RIVET_PROJ_CLONE(ZFinder);
@@ -53,33 +70,32 @@ namespace Rivet {
     /// Access to the found bosons
     ///
     /// @note Currently either 0 or 1 boson can be found.
-    const Particles& bosons() const { return _bosons; }
-
+    const Particles& bosons() const { return particles(); }
     /// Access to the found boson (assuming it exists).
-    const Particle boson() const { return _bosons[0]; }
+    const Particle boson() const { return bosons().front(); }
+
 
     /// Access to the Z constituent clustered leptons
     ///
     /// For example, to make more fine-grained cuts on the clustered leptons.
     /// The positive charge constituent is first in the list (if not empty), and
     /// the negative one second.
-    const Particles& constituents() const { return _constituents; }
+    Particles constituentLeptons() const;
+    Particles constituents() const { return constituentLeptons(); }
+
 
     /// Access to the Z constituent clustered leptons, sorted by a comparison functor
     ///
     /// Unlike the no-arg version, this returns by value (i.e. is less efficient)
-    template <typename CMP>
-    Particles constituents(const CMP& cmp) const {
-      Particles rtn = constituents();
-      std::sort(rtn.begin(), rtn.end(), cmp);
-      return rtn;
-    }
+    Particles constituentLeptons(const ParticleSorter& cmp) const;
+    Particles constituents(const ParticleSorter& cmp) const { return constituentLeptons(cmp); }
 
-    /// Access to all DressedLeptons in the fiducial region.
-    ///
-    /// This includes those DressedLeptons that could not
-    /// be paired up with any other DressedLepton to form a Z candidate.
-    const vector<DressedLepton>& allLeptons() const { return _allLeptons; }
+
+    // /// Access to all DressedLeptons in the fiducial region.
+    // ///
+    // /// This includes those DressedLeptons that could not
+    // /// be paired up with any other DressedLepton to form a Z candidate.
+    // const vector<DressedLepton>& allLeptons() const { return _allLeptons; }
 
     /// Access to the particles other than the Z leptons and clustered photons
     ///
@@ -99,43 +115,24 @@ namespace Rivet {
   public:
 
     /// Clear the projection
-    void clear() {
-      _theParticles.clear();
-      _bosons.clear();
-      _constituents.clear();
-      _allLeptons.clear();
-    }
+    void clear() { _theParticles.clear(); }
 
 
   private:
+
     /// Mass cuts to apply to clustered leptons (cf. InvMassFinalState)
     double _minmass, _maxmass, _masstarget;
 
-    /// Switch for tracking of photons (whether to add them to _theParticles)
-    /// This is relevant when the ZFinder::_theParticles are to be excluded
-    /// from e.g. the input to a jet finder, to specify whether the clustered
-    /// photons are to be excluded as well.
-    /// (Yes, some experiments make a difference between clusterPhotons and
-    /// trackPhotons!)
+    /// Switch for tracking of photons (whether to include them in the Z particle)
+    /// This is relevant when the clustered photons need to be excluded from e.g. a jet finder
     PhotonTracking _trackPhotons;
 
     /// Lepton flavour
     PdgId _pid;
 
-    /// list of found bosons (currently either 0 or 1)
-    Particles _bosons;
-
-    /// Clustered leptons
-    vector<Particle> _constituents;
-
-    ///Dressed leptons
-    vector<DressedLepton> _allLeptons;
-
   };
 
 
 }
-
-
 
 #endif

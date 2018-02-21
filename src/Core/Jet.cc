@@ -160,59 +160,42 @@ namespace Rivet {
 
 
   Particles Jet::tags(const Cut& c) const {
-    Particles rtn;
-    foreach (const Particle& p, tags()) {
-      if (c->accept(p)) rtn.push_back(p);
-    }
-    return rtn;
+    return filter_select(tags(), c);
   }
-
 
   Particles Jet::bTags(const Cut& c) const {
     Particles rtn;
-    foreach (const Particle& tp, tags()) {
+    for (const Particle& tp : tags()) {
       if (hasBottom(tp) && c->accept(tp)) rtn.push_back(tp);
     }
     return rtn;
   }
 
-
   Particles Jet::cTags(const Cut& c) const {
     Particles rtn;
-    foreach (const Particle& tp, tags()) {
+    for (const Particle& tp : tags()) {
       /// @todo Is making b and c tags exclusive the right thing to do?
       if (hasCharm(tp) && !hasBottom(tp) && c->accept(tp)) rtn.push_back(tp);
     }
     return rtn;
   }
 
-
   Particles Jet::tauTags(const Cut& c) const {
     Particles rtn;
-    foreach (const Particle& tp, tags()) {
+    for (const Particle& tp : tags()) {
       if (isTau(tp) && c->accept(tp)) rtn.push_back(tp);
     }
     return rtn;
   }
 
 
-  /// Filter a jet collection in-place to the subset that passes the supplied Cut
-  Jets& filterBy(Jets& jets, const Cut& c) {
-    if (c != Cuts::OPEN) {
-      const auto newend = std::remove_if(jets.begin(), jets.end(), [&](const Jet& j){ return !c->accept(j); });
-      jets.erase(newend, jets.end());
-    }
-    return jets;
-  }
-
-  /// Get a subset of the supplied jets that passes the supplied Cut
-  Jets filterBy(const Jets& jets, const Cut& c) {
-    // Just return a copy if the cut is open
-    if (c == Cuts::OPEN) return jets;
-    // But if there is a non-trivial cut...
-    Jets rtn;
-    std::copy_if(jets.begin(), jets.end(), back_inserter(rtn), [&](const Jet& j){ return c->accept(j); });
-    return rtn;
+  /// Allow a Jet to be passed to an ostream.
+  std::ostream& operator << (std::ostream& os, const Jet& j) {
+    os << "Jet<" << j.mom()/GeV << " GeV; Nparticles=" << j.size() << "; ";
+    os << "bTag=" << boolalpha << j.bTagged() << ", ";
+    os << "cTag=" << boolalpha << j.cTagged() << ", ";
+    os << "tauTag=" << boolalpha << j.tauTagged() << ">";
+    return os;
   }
 
 

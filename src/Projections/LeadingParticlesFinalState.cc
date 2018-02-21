@@ -62,7 +62,7 @@ namespace Rivet {
       double ptmax=0.0;
       Particle pmax;
 
-      foreach (const Particle& p, _theParticles) {
+      for (const Particle& p : _theParticles) {
         if (p.pT() > ptmax) {
           ptmax = p.pT();
           pmax = p;

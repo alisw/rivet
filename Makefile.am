@@ -1,5 +1,5 @@
 ACLOCAL_AMFLAGS = -I m4
-SUBDIRS = src pyext data include bin doc test
+SUBDIRS = src pyext data include bin analyses doc test
 
 EXTRA_DIST = GUIDELINES
 
@@ -21,7 +21,7 @@ clean-local:
 if WITH_DOXYGEN
 dox:
 	@echo "Running Doxygen..."
-	@$(DOXYGEN) $(top_srcdir)/Doxyfile || true
+	@$(DOXYGEN) $(top_builddir)/Doxyfile || true
 install-dox:
 	$(install_sh_DATA) doxy/html/* $(DESTDIR)$(pkgdatadir)/doc/html
 mostlyclean-local:
@@ -33,7 +33,7 @@ endif
 
 
 ## Upload to HepForge
-RSH=rsync
-DEST=login.hepforge.org:rivet/downloads/
+RSH = rsync
+DEST = login.hepforge.org:rivet/downloads/
 upload: dist
 	$(RSH) $(DIST_ARCHIVES) $(DEST)

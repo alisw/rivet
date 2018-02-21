@@ -10,7 +10,7 @@ namespace Rivet {
     setName("JetAlg");
     addProjection(fs, "FS");
     VisibleFinalState vfs(fs);
-    MSG_DEBUG("Making visible final state from provided FS");
+    // MSG_DEBUG("Making visible final state from provided FS");
     addProjection(vfs, "VFS");
   }
 

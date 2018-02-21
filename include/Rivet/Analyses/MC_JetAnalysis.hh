@@ -56,7 +56,7 @@ namespace Rivet {
     Histo1DPtr _h_jet_multi_exclusive;
     Histo1DPtr _h_jet_multi_inclusive;
     Scatter2DPtr _h_jet_multi_ratio;
-    Histo1DPtr _h_jet_HT;
+    Histo1DPtr _h_jet_HT, _h_mjj_jets;
     //@}
 
   };

@@ -54,7 +54,7 @@ namespace Rivet {
   protected:
 
     /// Compare with other projections.
-    virtual int compare(const Projection& UNUSED(p)) const {
+    virtual int compare(const Projection&) const {
       return EQUIVALENT;
     }
 

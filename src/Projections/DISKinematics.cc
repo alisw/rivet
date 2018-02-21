@@ -6,24 +6,29 @@ namespace Rivet {
 
 
   void DISKinematics::project(const Event& e) {
+
+    // Find appropriate DIS leptons
+    const DISLepton& dislep = applyProjection<DISLepton>(e, "Lepton");
+    _outLepton = dislep.out();
+
     // Identify beam hadron
     const ParticlePair& inc = applyProjection<Beam>(e, "Beam").beams();
-    bool firstIsHadron  = PID::isHadron(inc.first.pid());
-    bool secondIsHadron = PID::isHadron(inc.second.pid());
+    const bool firstIsHadron  = PID::isHadron(inc.first.pid());
+    const bool secondIsHadron = PID::isHadron(inc.second.pid());
     if (firstIsHadron && !secondIsHadron) {
       _inHadron = inc.first;
+      _inLepton = dislep.in(); // inc.second;
     } else if (!firstIsHadron && secondIsHadron) {
       _inHadron = inc.second;
+      _inLepton = dislep.in(); // inc.first;
     } else {
-      //help!
-      throw Error("DISKinematics projector could not find the correct beam hadron");
+      throw Error("DISKinematics could not find the correct beam hadron");
     }
 
     // Get the DIS lepton and store some of its properties
-    const DISLepton& dislep = applyProjection<DISLepton>(e, "Lepton");
-    const FourMomentum pLepIn = dislep.in().momentum();
-    const FourMomentum pLepOut = dislep.out().momentum();
     const FourMomentum pHad = _inHadron.momentum();
+    const FourMomentum pLepIn = _inLepton.momentum();
+    const FourMomentum pLepOut = _outLepton.momentum();
     const FourMomentum pGamma = pLepIn - pLepOut;
     const FourMomentum tothad = pGamma + pHad;
     _theQ2 = -pGamma.mass2();

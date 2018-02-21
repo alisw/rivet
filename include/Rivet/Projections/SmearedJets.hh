@@ -12,57 +12,90 @@
 namespace Rivet {
 
 
+  // // Recursive variadic template arg decoding
+  // namespace {
+  //   template<typename T>
+  //   vector<JetEffSmearFn>& toEffSmearFns(vector<JetEffSmearFn>& v, const T& t) {
+  //     v.push_back(JetEffSmearFn(t));
+  //     return v;
+  //   }
+  //   template<typename T, typename... ARGS>
+  //   vector<JetEffSmearFn>& toEffSmearFns(vector<JetEffSmearFn>& v, const T& first, ARGS... args) {
+  //     v.push_back(JetEffSmearFn(first));
+  //     toEffSmearFns(v, args...);
+  //     return v;
+  //   }
+  // }
+
+
+
   /// Wrapper projection for smearing {@link Jet}s with detector resolutions and efficiencies
-  /// @todo Chain constructors?
   class SmearedJets : public JetAlg {
   public:
 
     /// @name Constructors etc.
     //@{
 
-    /// @brief Constructor with efficiency and smearing function args
-    /// The jet reconstruction efficiency is mandatory; the smearing and tagging functions are optional
-    template <typename J2JFN>
+    /// @brief Constructor with a reco efficiency and optional tagging efficiencies
     SmearedJets(const JetAlg& ja,
-                const J2JFN& jetSmearFn)
-      : SmearedJets(ja, jetSmearFn, JET_BTAG_PERFECT, JET_CTAG_PERFECT, JET_EFF_ONE)
+                const JetSmearFn& smearFn,
+                const JetEffFn& bTagEffFn=JET_BTAG_PERFECT,
+                const JetEffFn& cTagEffFn=JET_CTAG_PERFECT)
+      : SmearedJets(ja, vector<JetEffSmearFn>{smearFn}, bTagEffFn, cTagEffFn)
     {    }
 
 
-    /// @brief Constructor with efficiency and smearing function args
-    /// The jet reconstruction efficiency is mandatory; the smearing and tagging functions are optional
-    template <typename J2JFN, typename J2DFN>
+    /// @brief Constructor with tagging efficiencies, plus an ordered init-list of efficiency and smearing functions
     SmearedJets(const JetAlg& ja,
-                const J2JFN& jetSmearFn,
-                const J2DFN& bTagEffFn)
-      : SmearedJets(ja, jetSmearFn, bTagEffFn, JET_CTAG_PERFECT, JET_EFF_ONE)
+                const JetEffFn& bTagEffFn=JET_BTAG_PERFECT,
+                const JetEffFn& cTagEffFn=JET_CTAG_PERFECT,
+                const initializer_list<JetEffSmearFn>& effSmearFns={})
+      : SmearedJets(ja, vector<JetEffSmearFn>{effSmearFns}, bTagEffFn, cTagEffFn)
+    {    }
+
+    /// @brief Constructor with tagging efficiencies, plus an ordered vector of efficiency and smearing functions
+    SmearedJets(const JetAlg& ja,
+                const JetEffFn& bTagEffFn=JET_BTAG_PERFECT,
+                const JetEffFn& cTagEffFn=JET_CTAG_PERFECT,
+                const vector<JetEffSmearFn>& effSmearFns={})
+      : SmearedJets(ja, effSmearFns, bTagEffFn, cTagEffFn)
     {    }
 
 
-    /// @brief Constructor with efficiency and smearing function args
-    /// The jet reconstruction efficiency is mandatory; the smearing and tagging functions are optional
-    template <typename J2JFN, typename J2DFNa, typename J2DFNb>
+    /// @brief Constructor with an ordered init-list of efficiency and smearing functions, plus optional tagging efficiencies
     SmearedJets(const JetAlg& ja,
-                const J2JFN& jetSmearFn,
-                const J2DFNa& bTagEffFn,
-                const J2DFNb& cTagEffFn)
-      : SmearedJets(ja, jetSmearFn, bTagEffFn, cTagEffFn, JET_EFF_ONE)
+                const initializer_list<JetEffSmearFn>& effSmearFns,
+                const JetEffFn& bTagEffFn=JET_BTAG_PERFECT,
+                const JetEffFn& cTagEffFn=JET_CTAG_PERFECT)
+      : SmearedJets(ja, vector<JetEffSmearFn>{effSmearFns}, bTagEffFn, cTagEffFn)
     {    }
 
-
-    /// @brief Constructor with efficiency and smearing function args
-    /// The jet reconstruction efficiency is mandatory; the smearing and tagging functions are optional
-    template <typename J2JFN, typename J2DFNa, typename J2DFNb, typename J2DFNc>
+    /// @brief Constructor with an ordered vector of efficiency and smearing functions, plus optional tagging efficiencies
     SmearedJets(const JetAlg& ja,
-                const J2JFN& jetSmearFn,
-                const J2DFNa& bTagEffFn,
-                const J2DFNb& cTagEffFn,
-                const J2DFNc& jetEffFn)
-      : _jetEffFn(jetEffFn), _bTagEffFn(bTagEffFn), _cTagEffFn(cTagEffFn), _jetSmearFn(jetSmearFn)
+                const vector<JetEffSmearFn>& effSmearFns,
+                const JetEffFn& bTagEffFn=JET_BTAG_PERFECT,
+                const JetEffFn& cTagEffFn=JET_CTAG_PERFECT)
+      : _detFns(effSmearFns), _bTagEffFn(bTagEffFn), _cTagEffFn(cTagEffFn)
     {
       setName("SmearedJets");
       addProjection(ja, "TruthJets");
     }
+
+
+    /// @brief Constructor with trailing efficiency arg
+    /// @deprecated Use the version with pair-smearing list as 2nd argument
+    SmearedJets(const JetAlg& ja,
+                const JetSmearFn& smearFn,
+                const JetEffFn& bTagEffFn,
+                const JetEffFn& cTagEffFn,
+                const JetEffFn& jetEffFn)
+      : SmearedJets(ja, {jetEffFn,smearFn}, bTagEffFn, cTagEffFn)
+    {    }
+
+
+    /// @todo How to include tagging effs?
+    /// @todo Variadic eff/smear fn list?
+    /// @todo Add a trailing Cut arg cf. SmearedParticles? -- wrap into an eff function
 
 
     /// Clone on the heap.
@@ -73,57 +106,64 @@ namespace Rivet {
 
     /// Compare to another SmearedJets
     int compare(const Projection& p) const {
+      // Compare truth jets definitions
+      const int teq = mkPCmp(p, "TruthJets");
+      if (teq != EQUIVALENT) return UNEQUAL;
+
+      // Compare lists of detector functions
       const SmearedJets& other = dynamic_cast<const SmearedJets&>(p);
-      if (get_address(_jetEffFn) == 0) return UNDEFINED;
-      if (get_address(_bTagEffFn) == 0) return UNDEFINED;
-      if (get_address(_cTagEffFn) == 0) return UNDEFINED;
-      if (get_address(_jetSmearFn) == 0) return UNDEFINED;
-      MSG_TRACE("Eff hashes = " << get_address(_jetEffFn) << "," << get_address(other._jetEffFn) << "; " <<
-                "smear hashes = " << get_address(_jetSmearFn) << "," << get_address(other._jetSmearFn) << "; " <<
-                "b-tag hashes = " << get_address(_bTagEffFn) << "," << get_address(other._bTagEffFn) << "; " <<
-                "c-tag hashes = " << get_address(_cTagEffFn) << "," << get_address(other._cTagEffFn));
-      return
-        mkPCmp(other, "TruthJets") ||
-        cmp(get_address(_jetEffFn), get_address(other._jetEffFn)) ||
-        cmp(get_address(_jetSmearFn), get_address(other._jetSmearFn)) ||
-        cmp(get_address(_bTagEffFn), get_address(other._bTagEffFn)) ||
-        cmp(get_address(_cTagEffFn), get_address(other._cTagEffFn));
+      if (_detFns.size() != other._detFns.size()) return UNEQUAL;
+      for (size_t i = 0; i < _detFns.size(); ++i) {
+        const int feq = _detFns[i].cmp(other._detFns[i]);
+        if (feq != EQUIVALENT) return UNEQUAL;
+      }
+
+      // If we got this far, we're equal
+      return EQUIVALENT;
     }
 
 
     /// Perform the jet finding & smearing calculation
     void project(const Event& e) {
       // Copying and filtering
-      const Jets& truthjets = applyProjection<JetAlg>(e, "TruthJets").jetsByPt();
+      const Jets& truthjets = apply<JetAlg>(e, "TruthJets").jetsByPt();
       _recojets.clear(); _recojets.reserve(truthjets.size());
+      // Apply jet smearing and efficiency transforms
       for (const Jet& j : truthjets) {
-        // Efficiency sampling
-        const double jeff = _jetEffFn ? _jetEffFn(j) : 1;
-        MSG_DEBUG("Efficiency of jet " << j.mom() << " = " << 100*jeff << "%");
-        MSG_DEBUG("Efficiency of jet with mom=" << j.mom()/GeV << " GeV, "
-                  << "pT=" << j.pT()/GeV << ", eta=" << j.eta() << " : " << 100*jeff << "%");
-        if (jeff <= 0) continue; //< no need to roll expensive dice (and we deal with -ve probabilities, just in case)
-        if (jeff < 1 && rand01() > jeff) continue; //< roll dice (and deal with >1 probabilities, just in case)
-        // Kinematic smearing
-        Jet sj = _jetSmearFn ? _jetSmearFn(j) : j;
-        MSG_DEBUG("Jet smearing from " << j.mom() << " to " << sj.mom());
-        // Re-add constituents & tags if (we assume accidentally) they were lost by the smearing function
-        if (sj.particles().empty() && !j.particles().empty()) sj.particles() = j.particles();
-        if (sj.tags().empty() && !j.tags().empty()) sj.tags() = j.tags();
-        _recojets.push_back(sj);
+        Jet jdet = j;
+        bool keep = true;
+        MSG_DEBUG("Truth jet: " << "mom=" << jdet.mom()/GeV << " GeV, pT=" << jdet.pT()/GeV << ", eta=" << jdet.eta());
+        for (const JetEffSmearFn& fn : _detFns) {
+          double jeff = -1;
+          tie(jdet, jeff) = fn(jdet); // smear & eff
+          // Re-add constituents & tags if (we assume accidentally) they were lost by the smearing function
+          if (jdet.particles().empty() && !j.particles().empty()) jdet.particles() = j.particles();
+          if (jdet.tags().empty() && !j.tags().empty()) jdet.tags() = j.tags();
+          MSG_DEBUG("         ->" << "mom=" << jdet.mom()/GeV << " GeV, pT=" << jdet.pT()/GeV << ", eta=" << jdet.eta());
+          // MSG_DEBUG("New det jet: "
+          //           << "mom=" << jdet.mom()/GeV << " GeV, pT=" << jdet.pT()/GeV << ", eta=" << jdet.eta()
+          //           << ", b-tag=" << boolalpha << jdet.bTagged()
+          //           << ", c-tag=" << boolalpha << jdet.cTagged()
+          //           << " : eff=" << 100*jeff << "%");
+          if (jeff <= 0) { keep = false; break; } //< no need to roll expensive dice (and we deal with -ve probabilities, just in case)
+          if (jeff < 1 && rand01() > jeff)  { keep = false; break; } //< roll dice (and deal with >1 probabilities, just in case)
+        }
+        if (keep) _recojets.push_back(jdet);
       }
       // Apply tagging efficiencies, using smeared kinematics as input to the tag eff functions
       for (Jet& j : _recojets) {
-        const double beff = _bTagEffFn ? _bTagEffFn(j) : 1;
-        const bool btag = beff == 1 || (beff != 0 && beff < rand01());
+        // Decide whether or not there should be a b-tag on this jet
+        const double beff = _bTagEffFn ? _bTagEffFn(j) : j.bTagged();
+        const bool btag = beff == 1 || (beff != 0 && rand01() < beff);
         // Remove b-tags if needed, and add a dummy one if needed
         if (!btag && j.bTagged()) j.tags().erase(std::remove_if(j.tags().begin(), j.tags().end(), hasBottom), j.tags().end());
-        if (btag && !j.bTagged()) j.tags().push_back(Particle(PID::BQUARK, j.mom()));
-        const double ceff = _cTagEffFn ? _cTagEffFn(j) : 1;
-        const bool ctag = ceff == 1 || (ceff != 0 && ceff < rand01());
+        if (btag && !j.bTagged()) j.tags().push_back(Particle(PID::BQUARK, j.mom())); ///< @todo Or could use the/an actual clustered b-quark momentum?
+        // Decide whether or not there should be a c-tag on this jet
+        const double ceff = _cTagEffFn ? _cTagEffFn(j) : j.cTagged();
+        const bool ctag = ceff == 1 || (ceff != 0 && rand01() < beff);
         // Remove c-tags if needed, and add a dummy one if needed
         if (!ctag && j.cTagged()) j.tags().erase(std::remove_if(j.tags().begin(), j.tags().end(), hasCharm), j.tags().end());
-        if (ctag && !j.cTagged()) j.tags().push_back(Particle(PID::CQUARK, j.mom()));
+        if (ctag && !j.cTagged()) j.tags().push_back(Particle(PID::CQUARK, j.mom())); ///< @todo As above... ?
       }
     }
 
@@ -138,13 +178,14 @@ namespace Rivet {
 
   private:
 
+    /// Smeared jets
     Jets _recojets;
 
-    /// Stored efficiency functions
-    std::function<double(const Jet&)> _jetEffFn, _bTagEffFn, _cTagEffFn;
+    /// Stored efficiency & smearing functions
+    vector<JetEffSmearFn> _detFns;
 
-    /// Stored smearing function
-    std::function<Jet(const Jet&)> _jetSmearFn;
+    /// Stored efficiency functions
+    JetEffFn _bTagEffFn, _cTagEffFn;
 
   };
 

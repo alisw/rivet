@@ -1,10 +1,6 @@
 // -*- C++ -*-
 #include "Rivet/Projections/InitialQuarks.hh"
 
-
-#define IS_PARTON_PDGID(id) ( abs(id) <= 100 && abs(id) != 22 && (abs(id) < 11 || abs(id) > 18) )
-
-
 namespace Rivet {
 
 

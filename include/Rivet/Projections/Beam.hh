@@ -193,7 +193,7 @@ namespace Rivet {
   private:
 
     /// Compare with other projections -- it's always the same, since there are no params
-    virtual int compare(const Projection& UNUSED(p)) const { return EQUIVALENT; }
+    virtual int compare(const Projection&) const { return EQUIVALENT; }
 
     /// The beam particles in the current collision
     ParticlePair _theBeams;

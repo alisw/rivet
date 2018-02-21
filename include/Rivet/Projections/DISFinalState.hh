@@ -15,19 +15,52 @@ namespace Rivet {
   public:
 
     /// Type of DIS boost to apply
-    enum BoostType { HCM, BREIT };
+    enum BoostType { HCM, BREIT, LAB };
 
 
     /// @name Constructors
     //@{
 
-    /// Constructor
-    DISFinalState(const DISKinematics& kinematicsp, BoostType boosttype)
+    /// Constructor with explicit FinalState
+    /// @note The DISKinematics has no parameters, hence explicitly passing it as an arg shouldn't be necessary.
+    DISFinalState(const FinalState& fs, BoostType boosttype, const DISKinematics& kinematicsp=DISKinematics())
       : _boosttype(boosttype)
     {
       setName("DISFinalState");
-      addProjection(kinematicsp, "Kinematics");
+      declare(fs, "FS");
+      declare(kinematicsp, "Kinematics");
     }
+
+    /// Constructor with optional FinalState
+    /// @note The DISKinematics has no parameters, hence explicitly passing it as an arg shouldn't be necessary.
+    DISFinalState(BoostType boosttype, const FinalState& fs=FinalState(), const DISKinematics& kinematicsp=DISKinematics())
+      : DISFinalState(fs, boosttype, kinematicsp)
+    {    }
+
+    /// Constructor with explicit cuts to define final-state particles
+    /// @note The DISKinematics has no parameters, hence explicitly passing it as an arg shouldn't be necessary.
+    DISFinalState(const Cut& c, BoostType boosttype, const DISKinematics& kinematicsp=DISKinematics())
+      : DISFinalState(FinalState(c), boosttype, kinematicsp)
+    {    }
+
+    /// Constructor with explicit cuts to define final-state particles
+    /// @note The DISKinematics has no parameters, hence explicitly passing it as an arg shouldn't be necessary.
+    DISFinalState(BoostType boosttype, const Cut& c, const DISKinematics& kinematicsp=DISKinematics())
+      : DISFinalState(FinalState(c), boosttype, kinematicsp)
+    {    }
+
+    // /// @brief Constructor with default FinalState
+    // /// @note The DISKinematics has no parameters, hence explicitly passing it as an arg shouldn't be necessary.
+    // DISFinalState(BoostType boosttype, const DISKinematics& kinematicsp=DISKinematics())
+    //   : DISFinalState(FinalState(), boosttype, kinematicsp)
+    // {    }
+
+    /// Backward compatible constructor with default FinalState
+    /// @deprecated Prefer a version that doesn't need a DISKinematics argument
+    DISFinalState(const DISKinematics& kinematicsp, BoostType boosttype)
+      : DISFinalState(FinalState(), boosttype, kinematicsp)
+    {    }
+
 
     /// Clone on the heap.
     DEFAULT_RIVET_PROJ_CLONE(DISFinalState);
@@ -43,7 +76,7 @@ namespace Rivet {
     /// Compare projections.
     int compare(const Projection& p) const {
       const DISFinalState& other = dynamic_cast<const DISFinalState&>(p);
-      return mkNamedPCmp(p, "Kinematics") || cmp(_boosttype, other._boosttype);
+      return mkNamedPCmp(p, "Kinematics") || mkNamedPCmp(p, "FS") || cmp(_boosttype, other._boosttype);
     }
 
 

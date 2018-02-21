@@ -4,49 +4,58 @@
 namespace Rivet {
 
 
-  /// @todo Reduce the cut & paste duplication between the constructors. With C++11 constructors can chain...
+  // On DressedLepton helper class
+  //{
+
+  DressedLepton::DressedLepton(const Particle& dlepton)
+    : Particle(dlepton)
+  {   }
+
+  DressedLepton::DressedLepton(const Particle& lepton, const Particles& photons, bool momsum)
+    : Particle(lepton.pid(), lepton.momentum())
+  {
+    setConstituents({{lepton}}); //< bare lepton is first constituent
+    addConstituents(photons, momsum);
+  }
+
+  void DressedLepton::addPhoton(const Particle& p, bool momsum) {
+    if (p.pid() != PID::PHOTON) throw Error("Clustering a non-photon on to a DressedLepton");
+    addConstituent(p, momsum);
+  }
+
+  const Particle& DressedLepton::bareLepton() const {
+    const Particle& l = constituents().front();
+    if (!l.isChargedLepton()) throw Error("First constituent of a DressedLepton is not a bare lepton: oops");
+    return l;
+  }
+
+  //}
 
 
+
+  // Separate-FS version
   DressedLeptons::DressedLeptons(const FinalState& photons, const FinalState& bareleptons,
-                                 double dRmax, const Cut& cut, bool cluster, bool useDecayPhotons)
+                                 double dRmax, const Cut& cut, bool useDecayPhotons)
     : FinalState(cut),
-      _dRmax(dRmax), _cluster(cluster), _fromDecay(useDecayPhotons)
+      _dRmax(dRmax), _fromDecay(useDecayPhotons)
   {
     setName("DressedLeptons");
-    IdentifiedFinalState photonfs(photons);
-    photonfs.acceptId(PID::PHOTON);
+
+    IdentifiedFinalState photonfs(photons, PID::PHOTON);
     addProjection(photonfs, "Photons");
-    addProjection(bareleptons, "Leptons");
+
+    IdentifiedFinalState leptonfs(bareleptons);
+    leptonfs.acceptIdPairs({PID::ELECTRON, PID::MUON, PID::TAU});
+    addProjection(leptonfs, "Leptons");
   }
 
 
-  DressedLeptons::DressedLeptons(const FinalState& photons, const FinalState& bareleptons,
-                                 double dRmax, bool cluster, const Cut& cut,
-                                 bool useDecayPhotons)
-    : FinalState(cut),
-      _dRmax(dRmax), _cluster(cluster), _fromDecay(useDecayPhotons)
-  {
-    setName("DressedLeptons");
-    IdentifiedFinalState photonfs(photons);
-    photonfs.acceptId(PID::PHOTON);
-    addProjection(photonfs, "Photons");
-    addProjection(bareleptons, "Leptons");
-  }
+  // Single-FS version
+  DressedLeptons::DressedLeptons(const FinalState& barefs,
+                                 double dRmax, const Cut& cut, bool useDecayPhotons)
+    : DressedLeptons(barefs, barefs, dRmax, cut, useDecayPhotons)
+  {     }
 
-
-  DressedLeptons::DressedLeptons(const FinalState& photons, const FinalState& bareleptons,
-                                 double dRmax, bool cluster,
-                                 double etaMin, double etaMax,
-                                 double pTmin, bool useDecayPhotons)
-    : FinalState(etaMin, etaMax, pTmin),
-      _dRmax(dRmax), _cluster(cluster), _fromDecay(useDecayPhotons)
-  {
-    setName("DressedLeptons");
-    IdentifiedFinalState photonfs(photons);
-    photonfs.acceptId(PID::PHOTON);
-    addProjection(photonfs, "Photons");
-    addProjection(bareleptons, "Leptons");
-  }
 
 
 
@@ -63,57 +72,61 @@ namespace Rivet {
     if (sigcmp != EQUIVALENT) return sigcmp;
 
     return (cmp(_dRmax, other._dRmax) ||
-            cmp(_cluster, other._cluster) ||
             cmp(_fromDecay, other._fromDecay));
   }
 
 
   void DressedLeptons::project(const Event& e) {
     _theParticles.clear();
-    _clusteredLeptons.clear();
 
+    // Get bare leptons
     const FinalState& signal = applyProjection<FinalState>(e, "Leptons");
     Particles bareleptons = signal.particles();
     if (bareleptons.empty()) return;
 
-    vector<DressedLepton> allClusteredLeptons;
-    for (size_t i = 0; i < bareleptons.size(); ++i) {
-      allClusteredLeptons.push_back(DressedLepton(bareleptons[i]));
+    // Initialise DL collection with bare leptons
+    vector<Particle> allClusteredLeptons;
+    allClusteredLeptons.reserve(bareleptons.size());
+    for (const Particle& bl : bareleptons) {
+      Particle dl(bl.pid(), bl.momentum());
+      dl.setConstituents({bl});
+      allClusteredLeptons += dl;
     }
 
-    // Match each photon to its closest charged lepton within the dR cone
-    const FinalState& photons = applyProjection<FinalState>(e, "Photons");
-    for (const Particle& photon : photons.particles()) {
-      // Ignore photon if it's from a hadron/tau decay and we're avoiding those
-      if (!_fromDecay && photon.fromDecay()) continue;
-      const FourMomentum p_P = photon.momentum();
-      double dRmin = _dRmax;
-      int idx = -1;
-      for (size_t i = 0; i < bareleptons.size(); ++i) {
-        // Only cluster photons around *charged* signal particles
-        if (PID::threeCharge(bareleptons[i].pid()) == 0) continue;
-        // Find the closest lepton
-        const FourMomentum& p_l = bareleptons[i].momentum();
-        double dR = deltaR(p_l, p_P);
-        if (dR < dRmin) {
-          dRmin = dR;
-          idx = i;
+    // If the radius is 0 or negative, don't even attempt to cluster
+    if (_dRmax > 0) {
+      // Match each photon to its closest charged lepton within the dR cone
+      const FinalState& photons = applyProjection<FinalState>(e, "Photons");
+      for (const Particle& photon : photons.particles()) {
+        // Ignore photon if it's from a hadron/tau decay and we're avoiding those
+        if (!_fromDecay && photon.fromDecay()) continue;
+        const FourMomentum& p_P = photon.momentum();
+        double dRmin = _dRmax;
+        int idx = -1;
+        for (size_t i = 0; i < bareleptons.size(); ++i) {
+          const Particle& bl = bareleptons[i];
+          // Only cluster photons around *charged* signal particles
+          if (bl.charge3() == 0) continue;
+          // Find the closest lepton
+          double dR = deltaR(bl, p_P);
+          if (dR < dRmin) {
+            dRmin = dR;
+            idx = i;
+          }
         }
-      }
-      if (idx > -1) {
-        if (_cluster) allClusteredLeptons[idx].addPhoton(photon, _cluster);
+        if (idx > -1) allClusteredLeptons[idx].addConstituent(photon, true);
       }
     }
 
-    for (const DressedLepton& lepton : allClusteredLeptons) {
-      if (accept(lepton)) {
-        _clusteredLeptons.push_back(lepton);
-        _theParticles.push_back(lepton.constituentLepton());
-        /// @todo Can't we use += here?
-        _theParticles.insert(_theParticles.end(),
-                             lepton.constituentPhotons().begin(),
-                             lepton.constituentPhotons().end());
-      }
+    // Fill the canonical particles collection with the composite DL Particles
+    for (const Particle& lepton : allClusteredLeptons) {
+      const bool acc = accept(lepton);
+      MSG_TRACE("Clustered lepton " << lepton << " with constituents = " << lepton.constituents() << ", cut-pass = " << boolalpha << acc);
+      if (acc) _theParticles.push_back(lepton);
     }
+    MSG_DEBUG("#dressed leptons = " << allClusteredLeptons.size() << " -> " << _theParticles.size() << " after cuts");
+
   }
+
+
 }

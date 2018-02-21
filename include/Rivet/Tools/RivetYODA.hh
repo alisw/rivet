@@ -48,13 +48,6 @@ namespace Rivet {
   /// Get the file system path to the reference file for this paper.
   string getDatafilePath(const string& papername);
 
-  /// Return the integral over the histogram bins
-  /// @deprecated Prefer to directly use the histo's integral() method.
-  DEPRECATED("Prefer to directly use the histo's integral() method.")
-  inline double integral(Histo1DPtr histo) {
-    return histo->integral();
-  }
-
 
 }
 

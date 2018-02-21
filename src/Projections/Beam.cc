@@ -8,14 +8,27 @@ namespace Rivet {
 
   ParticlePair beams(const Event& e) {
     assert(e.genEvent()->particles_size() >= 2);
+
+    // First try the official way: ask the GenEvent for the beam pointers
     if (e.genEvent()->valid_beam_particles()) {
       pair<HepMC::GenParticle*, HepMC::GenParticle*> beams = e.genEvent()->beam_particles();
       assert(beams.first && beams.second);
       return ParticlePair{beams.first, beams.second};
-    } else if (e.genEvent()->barcode_to_particle(1) && e.genEvent()->barcode_to_particle(2)) {
+    }
+
+    // Ok, that failed: let's find the status = 4 particles by hand
+    const vector<Particle> pstat4s = e.allParticles([](const Particle& p){ return p.genParticle()->status() == 4; });
+    if (pstat4s.size() >= 2) {
+      return ParticlePair{pstat4s[0], pstat4s[1]};
+    }
+
+    // Hmm, this sucks. Last guess is that barcodes 1 and 2 are the beams
+    if (e.genEvent()->barcode_to_particle(1) && e.genEvent()->barcode_to_particle(2)) {
       return ParticlePair{e.genEvent()->barcode_to_particle(1), e.genEvent()->barcode_to_particle(2)};
     }
-    return ParticlePair{Particle(PID::ANY, FourMomentum()), Particle(PID::ANY, FourMomentum())};
+
+    // Give up: return null beams
+    return ParticlePair{Particle(), Particle()};
   }
 
 

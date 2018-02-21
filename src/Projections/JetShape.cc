@@ -62,7 +62,7 @@ namespace Rivet {
   void JetShape::calc(const Jets& jets) {
     clear();
 
-    foreach (const Jet& j, jets) {
+    for (const Jet& j : jets) {
       // Apply jet cuts
       const FourMomentum& pj = j.momentum();
       if (!inRange(pj.pT(), _ptcuts)) continue;
@@ -72,7 +72,7 @@ namespace Rivet {
 
       // Fill bins
       vector<double> bins(numBins(), 0.0);
-      foreach (const Particle& p, j.particles()) {
+      for (const Particle& p : j.particles()) {
         const double dR = deltaR(pj, p.momentum(), _rapscheme);
         const int dRindex = binIndex(dR, _binedges);
         if (dRindex == -1) continue; ///< Out of histo range
@@ -84,7 +84,7 @@ namespace Rivet {
     }
 
     // Normalize to total pT
-    foreach (vector<double>& binsref, _diffjetshapes) {
+    for (vector<double>& binsref : _diffjetshapes) {
       double integral = 0.0;
       for (size_t i = 0; i < numBins(); ++i) {
         integral += binsref[i];

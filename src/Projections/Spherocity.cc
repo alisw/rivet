@@ -3,7 +3,6 @@
 #include "Rivet/Projections/Spherocity.hh"
 #include "Rivet/Tools/Logging.hh"
 
-
 namespace Rivet {
 
 
@@ -15,7 +14,7 @@ namespace Rivet {
   void Spherocity::calc(const vector<Particle>& fsparticles) {
     vector<Vector3> threeMomenta;
     threeMomenta.reserve(fsparticles.size());
-    foreach (const Particle& p, fsparticles) {
+    for (const Particle& p : fsparticles) {
       threeMomenta.push_back( p.momentum().vector3() );
     }
     _calcSpherocity(threeMomenta);
@@ -25,7 +24,7 @@ namespace Rivet {
   void Spherocity::calc(const vector<FourMomentum>& fsmomenta) {
     vector<Vector3> threeMomenta;
     threeMomenta.reserve(fsmomenta.size());
-    foreach (const FourMomentum& v, fsmomenta) {
+    for (const FourMomentum& v : fsmomenta) {
       threeMomenta.push_back(v.vector3());
     }
     _calcSpherocity(threeMomenta);
@@ -53,7 +52,7 @@ namespace Rivet {
 
     // Prepare vector to store unit vector representation of all particle momenta
     vector<Vector3> units;
-    foreach (const Vector3& p, perpmomenta) {
+    for (const Vector3& p : perpmomenta) {
       units.push_back(Vector3(p.x(), p.y(), 0.0).unit());
     }
 
@@ -62,7 +61,7 @@ namespace Rivet {
     // Pick the solution with the smallest spherocity
     sphero = 99999.;
     // The outer loop is for iteration over all unit vectors
-    foreach (const Vector3& u, units){
+    for (const Vector3& u : units){
       double s =0.0;
       for (unsigned int k=0 ; k<p.size() ; k++) {
         s += fabs( p[k].cross(u).mod() );
@@ -85,13 +84,13 @@ namespace Rivet {
 
     // A small iteration over full momenta but set z-coord. to 0.0 to get transverse momenta
     vector<Vector3> fsperpmomenta;
-    foreach (const Vector3& p, fsmomenta) {
+    for (const Vector3& p : fsmomenta) {
       fsperpmomenta.push_back(Vector3(p.x(), p.y(), 0.0));
     }
 
     // This returns the scalar sum of (transverse) momenta
     double perpmomentumSum(0.0);
-    foreach (const Vector3& p, fsperpmomenta) {
+    for (const Vector3& p : fsperpmomenta) {
       perpmomentumSum += p.mod();
     }
 

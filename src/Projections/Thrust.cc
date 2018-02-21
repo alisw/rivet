@@ -3,7 +3,6 @@
 #include "Rivet/Projections/Thrust.hh"
 #include "Rivet/Tools/Logging.hh"
 
-
 namespace Rivet {
 
 
@@ -14,7 +13,7 @@ namespace Rivet {
   void Thrust::calc(const vector<Particle>& fsparticles) {
     vector<Vector3> threeMomenta;
     threeMomenta.reserve(fsparticles.size());
-    foreach (const Particle& p, fsparticles) {
+    for (const Particle& p : fsparticles) {
       threeMomenta.push_back( p.momentum().vector3() );
     }
     _calcThrust(threeMomenta);
@@ -23,7 +22,7 @@ namespace Rivet {
   void Thrust::calc(const vector<FourMomentum>& fsmomenta) {
     vector<Vector3> threeMomenta;
     threeMomenta.reserve(fsmomenta.size());
-    foreach (const FourMomentum& v, fsmomenta) {
+    for (const FourMomentum& v : fsmomenta) {
       threeMomenta.push_back(v.vector3());
     }
     _calcThrust(threeMomenta);
@@ -101,9 +100,7 @@ namespace Rivet {
   void Thrust::_calcThrust(const vector<Vector3>& fsmomenta) {
     // Make a vector of the three-momenta in the final state
     double momentumSum(0.0);
-    foreach (const Vector3& p3, fsmomenta) {
-      momentumSum += p3.mod();
-    }
+    for (const Vector3& p3 : fsmomenta) momentumSum += p3.mod();
     MSG_DEBUG("Number of particles = " << fsmomenta.size());
 
 
@@ -159,7 +156,7 @@ namespace Rivet {
 
     // Get thrust major
     vector<Vector3> threeMomenta;
-    foreach (const Vector3& v, fsmomenta) {
+    for (const Vector3& v : fsmomenta) {
       // Get the part of each 3-momentum which is perpendicular to the thrust axis
       const Vector3 vpar = dot(v, axis.unit()) * axis.unit();
       threeMomenta.push_back(v - vpar);
@@ -175,7 +172,7 @@ namespace Rivet {
       axis = _thrustAxes[0].cross(_thrustAxes[1]);
       _thrustAxes.push_back(axis);
       val = 0.0;
-      foreach (const Vector3& v, fsmomenta) {
+      for (const Vector3& v : fsmomenta) {
         val += fabs(dot(axis, v));
       }
       _thrusts.push_back(val / momentumSum);

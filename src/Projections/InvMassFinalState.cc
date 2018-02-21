@@ -88,20 +88,15 @@ namespace Rivet {
     _particlePairs.clear();
 
     // Containers for the particles of type specified in the pair
-    vector<const Particle*> type1;
-    vector<const Particle*> type2;
+    vector<const Particle*> type1, type2;
     // Get all the particles of the type specified in the pair from the particle list
-    foreach (const Particle& ipart, inparticles) {
-      // Loop around possible particle pairs (typedef needed to keep BOOST_FOREACH happy)
-      foreach (const PdgIdPair& ipair, _decayids) {
+    for (const Particle& ipart : inparticles) {
+      // Loop around possible particle pairs
+      for (const PdgIdPair& ipair : _decayids) {
         if (ipart.pid() == ipair.first) {
-          if (accept(ipart)) {
-            type1 += &ipart;
-          }
+          if (accept(ipart)) type1 += &ipart;
         } else if (ipart.pid() == ipair.second) {
-          if (accept(ipart)) {
-            type2 += &ipart;
-          }
+          if (accept(ipart)) type2 += &ipart;
         }
       }
     }
@@ -115,12 +110,12 @@ namespace Rivet {
     // Now calculate the inv mass
     pair<double, pair<Particle, Particle> > closestPair;
     closestPair.first = 1e30;
-    foreach (const Particle* i1, type1) {
-      foreach (const Particle* i2, type2) {
+    for (const Particle* i1 : type1) {
+      for (const Particle* i2 : type2) {
         // Check this is actually a pair
         // (if more than one pair in vector particles can be unrelated)
         bool found = false;
-        foreach (const PdgIdPair& ipair, _decayids) {
+        for (const PdgIdPair& ipair : _decayids) {
           if (i1->pid() == ipair.first && i2->pid() == ipair.second) {
             found = true;
             break;
@@ -135,7 +130,7 @@ namespace Rivet {
         }
         bool passedMassCut = false;
         if (_useTransverseMass) {
-          passedMassCut = inRange(massT(i1->momentum(), i2->momentum()), _minmass, _maxmass);
+          passedMassCut = inRange(mT(i1->momentum(), i2->momentum()), _minmass, _maxmass);
         } else {
           passedMassCut = inRange(v4.mass(), _minmass, _maxmass);
         }
@@ -174,7 +169,7 @@ namespace Rivet {
 
     MSG_DEBUG("Selected " << _theParticles.size() << " particles " << "(" << _particlePairs.size() << " pairs)");
     if (getLog().isActive(Log::TRACE)) {
-      foreach (const Particle& p, _theParticles) {
+      for (const Particle& p : _theParticles) {
         MSG_TRACE("ID: " << p.pid() << ", barcode: " << p.genParticle()->barcode());
       }
     }

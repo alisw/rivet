@@ -14,7 +14,7 @@ namespace Rivet {
   void BeamThrust::calc(const vector<Particle>& fsparticles) {
     vector<FourMomentum> fsmomenta;
     fsmomenta.reserve(fsparticles.size());
-    foreach (const Particle& p, fsparticles) {
+    for (const Particle& p : fsparticles) {
       const FourMomentum p4 = p.momentum();
       fsmomenta.push_back(p4);
     }
@@ -30,7 +30,7 @@ namespace Rivet {
   // Do the full calculation
   void BeamThrust::_calcBeamThrust(const vector<FourMomentum>& fsmomenta) {
     _beamthrust = 0.;
-    foreach (const FourMomentum& p, fsmomenta) {
+    for (const FourMomentum& p : fsmomenta) {
       _beamthrust += p.E() - fabs(p.z());
     }
   }

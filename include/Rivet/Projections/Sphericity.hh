@@ -6,8 +6,10 @@
 #include "Rivet/Projections/AxesDefinition.hh"
 #include "Rivet/Projections/FinalState.hh"
 #include "Rivet/Event.hh"
+#include "Rivet/Jet.fhh"
 
 namespace Rivet {
+
 
 
   /// @brief Calculate the sphericity event shape.
@@ -72,47 +74,52 @@ namespace Rivet {
     /// Compare with other projections
     int compare(const Projection& p) const;
 
+
   public:
 
     /// Reset the projection
     void clear();
 
     /// @name Access the event shapes by name
-    /// @{
+    //@{
     /// Sphericity
     double sphericity() const { return 3.0 / 2.0 * (lambda2() + lambda3()); }
-    /// Transverse Sphericity
+    /// Transverse sphericity
     double transSphericity() const { return 2.0 * lambda2() / ( lambda1() + lambda2() ); }
     /// Planarity
     double planarity() const { return 2 * (sphericity() - 2 * aplanarity()) / 3.0; }
     /// Aplanarity
     double aplanarity() const { return 3 / 2.0 * lambda3(); }
-    /// @}
+    //@}
+
 
     /// @name Access the sphericity basis vectors
-    /// @{
+    //@{
     /// Sphericity axis
     const Vector3& sphericityAxis() const { return _sphAxes[0]; }
     /// Sphericity major axis
     const Vector3& sphericityMajorAxis() const { return _sphAxes[1]; }
     /// Sphericity minor axis
     const Vector3& sphericityMinorAxis() const { return _sphAxes[2]; }
-    /// @}
+    //@}
 
-    ///@{ AxesDefinition axis accessors.
+
+    /// @name AxesDefinition axis accessors
+    //@{
     const Vector3& axis1() const { return sphericityAxis(); }
     const Vector3& axis2() const { return sphericityMajorAxis(); }
     const Vector3& axis3() const { return sphericityMinorAxis(); }
-    ///@}
+    //@}
 
 
     /// @name Access the momentum tensor eigenvalues
-    /// @{
+    //@{
     double lambda1() const { return _lambdas[0]; }
     double lambda2() const { return _lambdas[1]; }
     double lambda3() const { return _lambdas[2]; }
-    /// @}
+    //@}
 
+    Vector3 mkEigenVector(Matrix3 A, const double &lambda);
 
     /// @name Direct methods
     /// Ways to do the calculation directly, without engaging the caching system
@@ -122,19 +129,24 @@ namespace Rivet {
     void calc(const FinalState& fs);
 
     /// Manually calculate the sphericity, without engaging the caching system
-    void calc(const vector<Particle>& fsparticles);
+    void calc(const Particles& particles);
 
     /// Manually calculate the sphericity, without engaging the caching system
-    void calc(const vector<FourMomentum>& fsmomenta);
+    void calc(const Jets& jets);
 
     /// Manually calculate the sphericity, without engaging the caching system
-    void calc(const vector<Vector3>& fsmomenta);
+    void calc(const vector<FourMomentum>& momenta);
+
+    /// @brief Manually calculate the sphericity, without engaging the caching system
+    ///
+    /// This one actually does the calculation
+    void calc(const vector<Vector3>& momenta);
 
     //@}
 
 
-
   private:
+
     /// Eigenvalues.
     vector<double> _lambdas;
 
@@ -144,14 +156,9 @@ namespace Rivet {
     /// Regularizing parameter, used to force infra-red safety.
     const double _regparam;
 
-  private:
-
-    /// Actually do the calculation
-    void _calcSphericity(const vector<Vector3>& fsmomenta);
-
   };
 
-}
 
+}
 
 #endif

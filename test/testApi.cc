@@ -28,7 +28,6 @@ int main() {
   file.close();
 
   ah.setCrossSection(1.0);
-  ah.setSumOfWeights(sum_of_weights); ///< Not necessary, but allowed
   ah.finalize();
   ah.writeData("out.yoda");
 

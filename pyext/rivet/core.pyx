@@ -21,12 +21,12 @@ cdef class AnalysisHandler:
         self._ptr.setIgnoreBeams(ignore)
 
     def addAnalysis(self, name):
-        self._ptr.addAnalysis(name)
+        self._ptr.addAnalysis(name.encode('utf-8'))
         return self
 
     def analysisNames(self):
         anames = self._ptr.analysisNames()
-        return [a for a in anames]
+        return [ a.decode('utf-8') for a in anames ]
 
     # def analysis(self, aname):
     #     cdef c.Analysis* ptr = self._ptr.analysis(aname)
@@ -36,8 +36,11 @@ cdef class AnalysisHandler:
     #     pyobj._ptr = ptr
     #     return pyobj
 
+    def readData(self, name):
+        self._ptr.readData(name.encode('utf-8'))
+
     def writeData(self, name):
-        self._ptr.writeData(name)
+        self._ptr.writeData(name.encode('utf-8'))
 
     def crossSection(self):
         return self._ptr.crossSection()
@@ -64,10 +67,10 @@ cdef class Run:
         return self
 
     def init(self, name, weight=1.0):
-        return self._ptr.init(name, weight)
+        return self._ptr.init(name.encode('utf-8'), weight)
 
     def openFile(self, name, weight=1.0):
-        return self._ptr.openFile(name, weight)
+        return self._ptr.openFile(name.encode('utf-8'), weight)
 
     def readEvent(self):
         return self._ptr.readEvent()
@@ -94,48 +97,56 @@ cdef class Analysis:
     def requiredEnergies(self):
         return deref(self._ptr).requiredEnergies()
 
+    def keywords(self):
+        kws = deref(self._ptr).keywords()
+        return [ k.decode('utf-8') for k in kws ]
+
     def authors(self):
-        return deref(self._ptr).authors()
+        auths = deref(self._ptr).authors()
+        return [ a.decode('utf-8') for a in auths ]
 
     def bibKey(self):
-        return deref(self._ptr).bibKey()
+        return deref(self._ptr).bibKey().decode('utf-8')
 
     def name(self):
-        return deref(self._ptr).name()
+        return deref(self._ptr).name().decode('utf-8')
 
     def bibTeX(self):
-        return deref(self._ptr).bibTeX()
+        return deref(self._ptr).bibTeX().decode('utf-8')
 
     def references(self):
-        return deref(self._ptr).references()
+        refs = deref(self._ptr).references()
+        return [ r.decode('utf-8') for r  in refs ]
 
     def collider(self):
-        return deref(self._ptr).collider()
+        return deref(self._ptr).collider().decode('utf-8')
 
     def description(self):
-        return deref(self._ptr).description()
+        return deref(self._ptr).description().decode('utf-8')
 
     def experiment(self):
-        return deref(self._ptr).experiment()
+        return deref(self._ptr).experiment().decode('utf-8')
 
     def inspireId(self):
-        return deref(self._ptr).inspireId()
+        return deref(self._ptr).inspireId().decode('utf-8')
 
     def spiresId(self):
-        return deref(self._ptr).spiresId()
+        return deref(self._ptr).spiresId().decode('utf-8')
 
     def runInfo(self):
-        return deref(self._ptr).runInfo()
+        return deref(self._ptr).runInfo().decode('utf-8')
 
     def status(self):
-        return deref(self._ptr).status()
+        return deref(self._ptr).status().decode('utf-8')
 
     def summary(self):
-        return deref(self._ptr).summary()
+        return deref(self._ptr).summary().decode('utf-8')
 
     def year(self):
-        return deref(self._ptr).year()
+        return deref(self._ptr).year().decode('utf-8')
 
+    def luminosityfb(self):
+        return deref(self._ptr).luminosityfb().decode('utf-8')
 
 #cdef object
 LEVELS = dict(TRACE = 0, DEBUG = 10, INFO = 20,
@@ -146,10 +157,13 @@ LEVELS = dict(TRACE = 0, DEBUG = 10, INFO = 20,
 cdef class AnalysisLoader:
     @staticmethod
     def analysisNames():
-        return c.AnalysisLoader_analysisNames()
+        names = c.AnalysisLoader_analysisNames()
+        return [ n.decode('utf-8') for n in names ]
+
 
     @staticmethod
     def getAnalysis(name):
+        name = name.encode('utf-8')
         cdef c.unique_ptr[c.Analysis] ptr = c.AnalysisLoader_getAnalysis(name)
         cdef Analysis pyobj = Analysis.__new__(Analysis)
         if not ptr:
@@ -160,51 +174,59 @@ cdef class AnalysisLoader:
 
 
 def getAnalysisLibPaths():
-    return c.getAnalysisLibPaths()
+    ps = c.getAnalysisLibPaths()
+    return [ p.decode('utf-8') for p in ps ]
 
 def setAnalysisLibPaths(xs):
-    c.setAnalysisLibPaths(xs)
+    bs = [ x.encode('utf-8') for x in xs ]
+    c.setAnalysisLibPaths(bs)
 
 def addAnalysisLibPath(path):
-    c.addAnalysisLibPath(path)
+    c.addAnalysisLibPath(path.encode('utf-8'))
 
 
 def setAnalysisDataPaths(xs):
-    c.setAnalysisDataPaths(xs)
+    bs = [ x.encode('utf-8') for x in xs ]
+    c.setAnalysisDataPaths(bs)
 
 def addAnalysisDataPath(path):
-    c.addAnalysisDataPath(path)
+    c.addAnalysisDataPath(path.encode('utf-8'))
 
 def getAnalysisDataPaths():
-    return c.getAnalysisDataPaths()
+    ps = c.getAnalysisDataPaths()
+    return [ p.decode('utf-8') for p in ps ]
 
 def findAnalysisDataFile(q):
-    return c.findAnalysisDataFile(q)
-
+    f = c.findAnalysisDataFile(q.encode('utf-8'))
+    return f.decode('utf-8')
 
 def getAnalysisRefPaths():
-    return c.getAnalysisRefPaths()
+    ps = c.getAnalysisRefPaths()
+    return [ p.decode('utf-8') for p in ps ]
 
 def findAnalysisRefFile(q):
-    return c.findAnalysisRefFile(q)
+    f = c.findAnalysisRefFile(q.encode('utf-8'))
+    return f.decode('utf-8')
 
 
 def getAnalysisInfoPaths():
-    return c.getAnalysisInfoPaths()
+    ps = c.getAnalysisInfoPaths()
+    return [ p.decode('utf-8') for p in ps ]
 
 def findAnalysisInfoFile(q):
-    return c.findAnalysisInfoFile(q)
-
+    f = c.findAnalysisInfoFile(q.encode('utf-8'))
+    return f.decode('utf-8')
 
 def getAnalysisPlotPaths():
-    return c.getAnalysisPlotPaths()
+    ps = c.getAnalysisPlotPaths()
+    return [ p.decode('utf-8') for p in ps ]
 
 def findAnalysisPlotFile(q):
-    return c.findAnalysisPlotFile(q)
-
+    f = c.findAnalysisPlotFile(q.encode('utf-8'))
+    return f.decode('utf-8')
 
 def version():
-    return c.version()
+    return c.version().decode('utf-8')
 
 def setLogLevel(name, level):
-    c.setLogLevel(name, level)
+    c.setLogLevel(name.encode('utf-8'), level)

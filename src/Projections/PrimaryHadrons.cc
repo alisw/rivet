@@ -8,7 +8,7 @@ namespace Rivet {
     _theParticles.clear();
 
     const Particles& unstables = applyProjection<FinalState>(e, "UFS").particles();
-    foreach (const Particle& p, unstables) {
+    for (const Particle& p : unstables) {
       // Exclude taus etc.
       if (!isHadron(p)) continue;
       // A spontaneously appearing hadron: this is weird, but I guess is allowed... and is primary
@@ -20,7 +20,7 @@ namespace Rivet {
       // There are ancestors -- check them for status=2 hadronic content
       const vector<GenParticle const *> ancestors = particles_in(p.genParticle(), HepMC::ancestors);
       bool has_hadron_parent = false;
-      foreach (const GenParticle* pa, ancestors) {
+      for (const GenParticle* pa : ancestors) {
         if (pa->status() != 2) continue;
         /// @todo Are hadrons from tau decays "primary hadrons"? I guess not
         if (PID::isHadron(pa->pdg_id()) || abs(pa->pdg_id()) == PID::TAU) {

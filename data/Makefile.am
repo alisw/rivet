@@ -1,1 +1,1 @@
-SUBDIRS = refdata anainfo plotinfo texmf
+SUBDIRS = texmf

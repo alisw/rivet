@@ -19,6 +19,8 @@ ENVIRONMENT:
  * RIVET_DATA_PATH: list of paths to be searched for data files
 """
 
+from __future__ import print_function
+
 import rivet, sys, os
 rivet.util.check_python_version()
 rivet.util.set_process_name(os.path.basename(__file__))
@@ -62,7 +64,7 @@ stygroup.add_option("-s", "--single", dest="SINGLE", action="store_true",
                     default=False, help="display plots on single webpage.")
 stygroup.add_option("--no-ratio", dest="SHOW_RATIO", action="store_false",
                     default=True, help="don't draw a ratio plot under each main plot.")
-stygroup.add_option("--mc-errs", dest="MC_ERRS", action="store_true",
+stygroup.add_option("--errs", "--mc-errs", dest="MC_ERRS", action="store_true",
                     default=False, help="plot error bars.")
 stygroup.add_option("--offline", dest="OFFLINE", action="store_true",
                     default=False, help="generate HTML that does not use external URLs.")
@@ -71,7 +73,7 @@ stygroup.add_option("--pdf", dest="VECTORFORMAT", action="store_const", const="P
 stygroup.add_option("--ps", dest="VECTORFORMAT", action="store_const", const="PS",
                     default="PDF", help="use PostScript as the vector plot format. DEPRECATED")
 stygroup.add_option("--booklet", dest="BOOKLET", action="store_true",
-                    default=False, help="create booklet (currently only available for PDF with pdftk).")
+                    default=False, help="create booklet (currently only available for PDF with pdftk or pdfmerge).")
 stygroup.add_option("--font", dest="OUTPUT_FONT", choices="palatino,cm,times,helvetica,minion".split(","),
                     default="palatino", help="choose the font to be used in the plots")
 stygroup.add_option("--palatino", dest="OUTPUT_FONT", action="store_const", const="palatino", default="palatino",
@@ -91,9 +93,11 @@ selgroup.add_option("-m", "--match", action="append", dest="PATHPATTERNS", defau
                     help="only write out histograms whose $path/$name string matches any of these regexes")
 selgroup.add_option("-M", "--unmatch", action="append", dest="PATHUNPATTERNS", default=[],
                     help="exclude histograms whose $path/$name string matches any of these regexes")
-selgroup.add_option("-a", "--ana-match", action="append", dest="ANAPATTERNS", default=[],
+selgroup.add_option(#"-a", #< these were confusing, and -m should be enough
+                    "--ana-match", action="append", dest="ANAPATTERNS", default=[],
                     help="only write out histograms from analyses whose name matches any of these regexes")
-selgroup.add_option("-A", "--ana-unmatch", action="append", dest="ANAUNPATTERNS", default=[],
+selgroup.add_option(#"-A", #< these were confusing, and -M should be enough
+                    "--ana-unmatch", action="append", dest="ANAUNPATTERNS", default=[],
                     help="exclude histograms from analyses whose name matches any of these regexes")
 parser.add_option_group(selgroup)
 
@@ -113,7 +117,7 @@ if opts.PATH_PWD:
 
 ## Check that there are some arguments!
 if not yodafiles:
-    print "Error: You need to specify some YODA files to be plotted!"
+    print("Error: You need to specify some YODA files to be plotted!")
     sys.exit(1)
 
 
@@ -125,7 +129,7 @@ if not opts.DRY_RUN:
     try:
         os.makedirs(opts.OUTPUTDIR)
     except:
-        print "Error: failed to make new directory '%s'" % opts.OUTPUTDIR
+        print("Error: failed to make new directory '%s'" % opts.OUTPUTDIR)
         sys.exit(1)
 
 ## Get set of analyses involved in the runs
@@ -139,7 +143,7 @@ for yodafile in yodafiles:
         continue
     yodafilepath = os.path.abspath(yodafile.split(":")[0])
     if not os.access(yodafilepath, os.R_OK):
-        print "Error: cannot read from %s" % yodafilepath
+        print("Error: cannot read from %s" % yodafilepath)
         if opts.IGNORE_MISSING:
             continue
         else:
@@ -148,17 +152,17 @@ for yodafile in yodafiles:
     try:
         ## Note: we use -m/-M flags here as well as when calling rivet-cmphistos, to potentially speed this initial loading
         analysisobjects = yoda.read(yodafilepath, patterns=opts.PATHPATTERNS, unpatterns=opts.PATHUNPATTERNS)
-    except IOError, e:
-        print "File reading error: ", e.strerror
+    except IOError as e:
+        print("File reading error: ", e.strerror)
         sys.exit(1)
 
-    for path, ao in analysisobjects.iteritems():
+    for path, ao in analysisobjects.items():
         ## Make a path object and ensure the path is in standard form
         try:
             aop = rivet.AOPath(path)
-        except Exception, e:
-            #print e
-            print "Found analysis object with non-standard path structure:", path, "... skipping"
+        except Exception as e:
+            #print(e)
+            print("Found analysis object with non-standard path structure:", path, "... skipping")
             continue
 
         ## We don't plot data objects with path components hidden by an underscore prefix
@@ -215,7 +219,7 @@ def anasort(name):
 analyses = sorted(analyses, key=anasort)
 
 ## Uncomment to test analysis ordering on index page
-# print analyses
+# print(analyses)
 # sys.exit(0)
 
 
@@ -250,7 +254,7 @@ for af in yodafiles:
     newarg = yodafilepath
     if ":" in af:
         newarg += ":" + af.split(":", 1)[1]
-    # print newarg
+    # print(newarg)
     ch_cmd.append(newarg)
 
 ## Pass rivet-mkhtml -c args to rivet-cmphistos
@@ -261,24 +265,24 @@ for configfile in opts.CONFIGFILES:
 
 if opts.VERBOSE:
     ch_cmd.append("--verbose")
-    print "Calling rivet-cmphistos with the following command:"
-    print " ".join(ch_cmd)
+    print("Calling rivet-cmphistos with the following command:")
+    print(" ".join(ch_cmd))
 
 ## Run rivet-cmphistos in a subdir, after fixing any relative paths in Rivet env vars
 if not opts.DRY_RUN:
     for var in ("RIVET_ANALYSIS_PATH", "RIVET_DATA_PATH", "RIVET_REF_PATH", "RIVET_INFO_PATH", "RIVET_PLOT_PATH"):
         if var in os.environ:
-            abspaths = map(os.path.abspath, os.environ[var].split(":"))
+            abspaths = [os.path.abspath(p) for p in os.environ[var].split(":")]
             os.environ[var] = ":".join(abspaths)
     subproc = Popen(ch_cmd, cwd=opts.OUTPUTDIR, stdout=PIPE, stderr=PIPE)
     out, err = subproc.communicate()
     retcode = subproc.returncode
     if opts.VERBOSE or retcode != 0:
-        print 'Output from rivet-cmphistos:\n', out
+        print('Output from rivet-cmphistos:\n', out)
     if err :
-        print 'Errors from rivet-cmphistos:\n', err
+        print('Errors from rivet-cmphistos:\n', err)
     if retcode != 0:
-        print 'Crash in rivet-cmphistos code = ', retcode, ' exiting'
+        print('Crash in rivet-cmphistos code = ', retcode, ' exiting')
         exit(retcode)
 
 
@@ -365,14 +369,18 @@ if not opts.DRY_RUN:
         if inspireid:
             reflist.append('<a href="http://inspire-hep.net/record/%s">Inspire</a>' % inspireid)
             reflist.append('<a href="http://hepdata.cedar.ac.uk/view/ins%s">HepData</a>' % inspireid)
-        elif ana.spiresId():
+        elif spiresid:
+        # elif ana.spiresId():
             reflist.append('<a href="http://inspire-hep.net/search?p=find+key+%s">Inspire</a>' % spiresid)
             reflist.append('<a href="http://hepdata.cedar.ac.uk/view/irn%s">HepData</a>' % spiresid)
         reflist += references
         index.write('<p>%s</p>\n' % " &#124; ".join(reflist))
 
         if description:
-            index.write('<p style="font-size:smaller;">%s</p>\n' % description)
+            try:
+                index.write('<p style="font-size:smaller;">%s</p>\n' % description)
+            except UnicodeEncodeError as ue:
+                    print("Unicode error in analysis description for " + analysis + ": " + str(ue))
 
         anapath = os.path.join(opts.OUTPUTDIR, analysis)
         if not opts.SINGLE:
@@ -384,12 +392,15 @@ if not opts.DRY_RUN:
             anaindex.write('<h3>%s</h3>\n' % htmlify(analysis))
             anaindex.write('<p><a href="../index.html">Back to index</a></p>\n')
             if description:
-                anaindex.write('<p>\n  %s\n</p>\n' % description)
+                try:
+                    anaindex.write('<p>\n  %s\n</p>\n' % description)
+                except UnicodeEncodeError as ue:
+                    print("Unicode error in analysis description for " + analysis + ": " + str(ue))
         else:
             anaindex = index
 
         datfiles = glob.glob("%s/*.dat" % anapath)
-        #print datfiles
+        #print(datfiles)
 
         anaindex.write('<div style="float:none; overflow:auto; width:100%">\n')
         for datfile in sorted(datfiles):
@@ -417,6 +428,24 @@ if not opts.DRY_RUN:
     index.write('<br>%s</body>\n</html>' % timestamp)
     index.close()
 
+# http://stackoverflow.com/questions/377017/test-if-executable-exists-in-python
+def which(program):
+    import os
+    def is_exe(fpath):
+        return os.path.isfile(fpath) and os.access(fpath, os.X_OK)
+
+    fpath, fname = os.path.split(program)
+    if fpath:
+        if is_exe(program):
+            return program
+    else:
+        for path in os.environ["PATH"].split(os.pathsep):
+            path = path.strip('"')
+            exe_file = os.path.join(path, program)
+            if is_exe(exe_file):
+                return exe_file
+
+    return None
 
 ## Run make-plots on all generated .dat files
 # sys.exit(0)
@@ -446,22 +475,33 @@ if opts.OUTPUT_FONT:
 datfiles = []
 for analysis in analyses:
     anapath = os.path.join(opts.OUTPUTDIR, analysis)
-    #print anapath
+    #print(anapath)
     anadatfiles = glob.glob("%s/*.dat" % anapath)
     datfiles += sorted(anadatfiles)
 if datfiles:
     mp_cmd += datfiles
     if opts.VERBOSE:
         mp_cmd.append("--verbose")
-        print "Calling make-plots with the following options:"
-        print " ".join(mp_cmd)
+        print("Calling make-plots with the following options:")
+        print(" ".join(mp_cmd))
     if not opts.DRY_RUN:
         Popen(mp_cmd).wait()
         if opts.BOOKLET and opts.VECTORFORMAT=="PDF":
-            bookletcmd = ["pdftk"]
-            for analysis in analyses:
-                anapath = os.path.join(opts.OUTPUTDIR, analysis)
-                bookletcmd += sorted(glob.glob("%s/*.pdf" % anapath))
-            bookletcmd += ["cat", "output", "%s/booklet.pdf" % opts.OUTPUTDIR]
-            print bookletcmd
-            Popen(bookletcmd).wait()
+            if which("pdftk") is not None:
+                bookletcmd = ["pdftk"]
+                for analysis in analyses:
+                    anapath = os.path.join(opts.OUTPUTDIR, analysis)
+                    bookletcmd += sorted(glob.glob("%s/*.pdf" % anapath))
+                bookletcmd += ["cat", "output", "%s/booklet.pdf" % opts.OUTPUTDIR]
+                print(bookletcmd)
+                Popen(bookletcmd).wait()
+            elif which("pdfmerge") is not None:
+                bookletcmd = ["pdfmerge"]
+                for analysis in analyses:
+                    anapath = os.path.join(opts.OUTPUTDIR, analysis)
+                    bookletcmd += sorted(glob.glob("%s/*.pdf" % anapath))
+                bookletcmd += ["%s/booklet.pdf" % opts.OUTPUTDIR]
+                print(bookletcmd)
+                Popen(bookletcmd).wait()
+            else:
+                print("Neither pdftk nor pdfmerge available --- not booklet output possible")

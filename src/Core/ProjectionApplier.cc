@@ -32,10 +32,10 @@ namespace Rivet {
 
 
   const Projection& ProjectionApplier::_declareProjection(const Projection& proj,
-                                                      const std::string& name) {
+                                                          const string& name) {
     if (!_allowProjReg) {
       cerr << "Trying to register projection '"
-           << proj.name() << "' before init phase in '" << this->name() << "'." << endl;
+           << proj.name() << "' outside init phase in '" << this->name() << "'." << endl;
       exit(2);
     }
     const Projection& reg = getProjHandler().registerProjection(*this, proj, name);

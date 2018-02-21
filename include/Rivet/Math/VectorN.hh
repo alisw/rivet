@@ -38,6 +38,14 @@ namespace Rivet {
       }
     }
 
+    double& get(const size_t index) {
+      if (index >= N) {
+        throw std::runtime_error("Tried to access an invalid vector index.");
+      } else {
+        return _vec(index);
+      }
+    }
+
     /// Direct access to vector elements by index.
     const double& operator[](const size_t index) const {
       return get(index);
@@ -121,18 +129,9 @@ namespace Rivet {
       return _vec >= a._vec;
     }
 
-
-  protected:
-    double& get(const size_t index) {
-      if (index >= N) {
-        throw std::runtime_error("Tried to access an invalid vector index.");
-      } else {
-        return _vec(index);
-      }
-    }
-
     /// Vector
     Eigen::Vector<double,N> _vec;
+
   };
 
 

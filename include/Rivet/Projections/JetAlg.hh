@@ -80,10 +80,10 @@ namespace Rivet {
     /// @name Access to jet objects
     //@{
 
-    /// Get jets in no guaranteed order, with optional cuts on \f$ p_\perp \f$ and rapidity.
+    /// Get jets in no guaranteed order, with an optional Cut
     /// @note Returns a copy rather than a reference, due to cuts
     virtual Jets jets(const Cut& c=Cuts::open()) const {
-      return filterBy(_jets(), c);
+      return filter_select(_jets(), c);
       // const Jets rawjets = _jets();
       // // Just return a copy of rawjets if the cut is open
       // if (c == Cuts::open()) return rawjets;
@@ -96,20 +96,39 @@ namespace Rivet {
       // return rtn;
     }
 
-    /// Get the jets, ordered by supplied sorting function object, with optional cuts on \f$ p_\perp \f$ and rapidity.
+    /// Get jets in no guaranteed order, with a selection functor
+    /// @note Returns a copy rather than a reference, due to cuts
+    virtual Jets jets(const JetSelector& selector) const {
+      return filter_select(_jets(), selector);
+    }
+
+
+    /// Get the jets with a Cut applied, and ordered by supplied sorting functor
     /// @note Returns a copy rather than a reference, due to cuts and sorting
-    template <typename F>
-    Jets jets(F sorter, const Cut& c=Cuts::open()) const {
+    Jets jets(const Cut& c, const JetSorter& sorter) const {
       /// @todo Will the vector be efficiently std::move'd by value through this function chain?
       return sortBy(jets(c), sorter);
     }
 
+    /// Get the jets, ordered by supplied sorting functor, with an optional Cut
+    /// @note Returns a copy rather than a reference, due to cuts and sorting
+    Jets jets(const JetSorter& sorter, const Cut& c=Cuts::open()) const {
+      /// @todo Will the vector be efficiently std::move'd by value through this function chain?
+      return jets(c, sorter);
+    }
+
     /// Get the jets, ordered by supplied sorting function object, with optional cuts on \f$ p_\perp \f$ and rapidity.
     /// @note Returns a copy rather than a reference, due to cuts and sorting
-    template <typename F>
-    Jets jets(const Cut& c, F sorter) const {
+    Jets jets(const JetSelector& selector, const JetSorter& sorter) const {
       /// @todo Will the vector be efficiently std::move'd by value through this function chain?
-      return sortBy(jets(c), sorter);
+      return sortBy(jets(selector), sorter);
+    }
+
+    /// Get the jets, ordered by supplied sorting functor and with a selection functor applied
+    /// @note Returns a copy rather than a reference, due to cuts and sorting
+    Jets jets(const JetSorter& sorter, const JetSelector selector) const {
+      /// @todo Will the vector be efficiently std::move'd by value through this function chain?
+      return jets(selector, sorter);
     }
 
 
@@ -123,58 +142,14 @@ namespace Rivet {
       return jets(c, cmpMomByPt);
     }
 
-    //@}
-
-
-    /// @name Old sorted jet accessors
-    /// @deprecated Use the versions with sorter function arguments. These will be removed in Rivet v3
-    //@{
-
-    /// Get the jets, ordered by \f$ |p| \f$, with optional cuts on \f$ p_\perp \f$ and rapidity.
-    /// @note Returns a copy rather than a reference, due to cuts and sorting
-    /// @deprecated Use the version with a sorter function argument.
-    DEPRECATED("Use the version with a sorter function argument.")
-    Jets jetsByP(const Cut& c=Cuts::open()) const {
-      return jets(c, cmpMomByP);
-    }
-
-    /// Get the jets, ordered by \f$ E \f$, with optional cuts on \f$ p_\perp \f$ and rapidity.
-    /// @note Returns a copy rather than a reference, due to cuts and sorting
-    /// @deprecated Use the version with a sorter function argument.
-    DEPRECATED("Use the version with a sorter function argument.")
-    Jets jetsByE(const Cut &c=Cuts::open()) const {
-      return jets(c, cmpMomByE);
-    }
-
-    /// Get the jets, ordered by \f$ E_T \f$, with optional cuts on \f$ p_\perp \f$ and rapidity.
-    /// @note Returns a copy rather than a reference, due to cuts and sorting
-    /// @deprecated Use the version with a sorter function argument.
-    DEPRECATED("Use the version with a sorter function argument.")
-    Jets jetsByEt(const Cut& c=Cuts::open()) const {
-      return jets(c, cmpMomByEt);
-    }
-
-    //@}
-
-
-    /// @name Old jet accessors
-    /// @deprecated Use the versions with Cut arguments
-    //@{
-
-    /// Get jets in no guaranteed order, with optional cuts on \f$ p_\perp \f$ and rapidity.
+    /// Get the jets, ordered by \f$ p_T \f$, with cuts via a selection functor.
     ///
-    /// @deprecated Use the version with a Cut argument
-    /// @note Returns a copy rather than a reference, due to cuts
-    DEPRECATED("Use the version with a Cut argument.")
-    Jets jets(double ptmin, double ptmax=MAXDOUBLE,
-              double rapmin=-MAXDOUBLE, double rapmax=MAXDOUBLE,
-              RapScheme rapscheme=PSEUDORAPIDITY) const {
-      if (rapscheme == PSEUDORAPIDITY) {
-        return jets((Cuts::pT >= ptmin) & (Cuts::pT < ptmax) & (Cuts::rapIn(rapmin, rapmax)));
-      } else if (rapscheme == RAPIDITY) {
-        return jets((Cuts::pT >= ptmin) & (Cuts::pT < ptmax) & (Cuts::etaIn(rapmin, rapmax)));
-      }
-      throw LogicError("Unknown rapidity scheme. This shouldn't be possible!");
+    /// @note Returns a copy rather than a reference, due to cuts and sorting
+    ///
+    /// This is a very common use-case, so is available as syntatic sugar for jets(c, cmpMomByPt).
+    /// @todo The other sorted accessors should be removed in a cleanup.
+    Jets jetsByPt(const JetSelector& selector) const {
+      return jets(selector, cmpMomByPt);
     }
 
     /// Get the jets, ordered by \f$ p_T \f$, with a cut on \f$ p_\perp \f$.
@@ -199,13 +174,19 @@ namespace Rivet {
 
   public:
 
-    /// Number of jets passing the provided Cut.
-    size_t numJets(const Cut& c=Cuts::open()) const { return jets(c).size(); }
-
-    /// Number of jets (without cuts).
+    /// Count the jets
     size_t size() const { return jets().size(); }
-    /// Whether the inclusive jet collection is empty.
-    bool empty() const { return size() != 0; }
+    /// Count the jets after a Cut is applied.
+    size_t size(const Cut& c) const { return jets(c).size(); }
+    /// Count the jets after a selection functor is applied.
+    size_t size(const JetSelector& s) const { return jets(s).size(); }
+
+    /// Is this jet finder empty?
+    bool empty() const { return size() == 0; }
+    /// Is this jet finder empty after a Cut is applied?
+    bool empty(const Cut& c) const { return size(c) == 0; }
+    /// Is this jet finder empty after a selection functor is applied?
+    bool empty(const JetSelector& s) const { return size(s) == 0; }
 
     /// Clear the projection.
     virtual void reset() = 0;
@@ -239,6 +220,11 @@ namespace Rivet {
 
 
   };
+
+
+  /// Compatibility typedef, for equivalence with ParticleFinder
+  /// @todo Should we make this the canonical name? Would "require" a header filename change -> breakage or ugly.
+  using JetFinder = JetAlg;
 
 
 }

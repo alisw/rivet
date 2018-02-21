@@ -32,12 +32,12 @@ namespace Rivet {
     _theParticles.clear();
 
     const Particles& particles = applyProjection<FinalState>(e, "FS").particles();
-    foreach (const Particle& p, particles)
+    for (const Particle& p : particles)
       if (!isPrompt(p, !_acceptTauDecays, !_acceptMuDecays)) _theParticles.push_back(p);
     MSG_DEBUG("Number of final state particles from hadron decays = " << _theParticles.size());
 
     if (getLog().isActive(Log::TRACE)) {
-      foreach (const Particle& p, _theParticles)
+      for (const Particle& p : _theParticles)
         MSG_TRACE("Selected: " << p.pid() << ", charge = " << p.charge());
     }
   }

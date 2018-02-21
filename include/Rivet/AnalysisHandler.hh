@@ -54,37 +54,57 @@ namespace Rivet {
     //@{
 
     /// Get the name of this run.
-    string runName() const;
+    string runName() const { return _runname; }
 
 
     /// Get the number of events seen. Should only really be used by external
     /// steering code or analyses in the finalize phase.
-    size_t numEvents() const;
+    size_t numEvents() const { return _eventcounter.numEntries(); }
 
-    /// Get the sum of the event weights seen - the weighted equivalent of the
-    /// number of events. Should only really be used by external steering code
-    /// or analyses in the finalize phase.
-    double sumOfWeights() const;
+    /// @brief Access the sum of the event weights seen
+    ///
+    /// This is the weighted equivalent of the number of events. It should only
+    /// be used by external steering code or analyses in the finalize phase.
+    double sumW() const { return _eventcounter.sumW(); }
+    /// Access to the sum of squared-weights
+    double sumW2() const { return _eventcounter.sumW2(); }
 
-    /// Set sum of weights. This is useful if Rivet is steered externally and
+    /// @brief Compatibility alias for sumOfWeights
+    ///
+    /// @deprecated Prefer sumW
+    double sumOfWeights() const { return sumW(); }
+
+    /// @brief Set the sum of weights
+    ///
+    /// This is useful if Rivet is steered externally and
     /// the analyses are run for a sub-contribution of the events
     /// (but of course have to be normalised to the total sum of weights)
-    void setSumOfWeights(const double& sum);
+    ///
+    /// @todo What about the sumW2 term? That needs to be set coherently. Need a
+    /// new version, with all three N,sumW,sumW2 numbers (or a counter)
+    /// supplied.
+    ///
+    /// @deprecated Weight sums are no longer tracked this way...
+    void setSumOfWeights(const double& sum) {
+      //_sumOfWeights = sum;
+      throw Error("Can't set sum of weights independently, since it's now tracked by a Counter. "
+                  "Please contact the Rivet authors if you need this.");
+    }
 
 
     /// Is cross-section information required by at least one child analysis?
+    /// @deprecated Should no-longer be an issue: does any generator not write the cross-section?
     bool needCrossSection() const;
-
-    /// Set the cross-section for the process being generated.
-    AnalysisHandler& setCrossSection(double xs);
+    /// Whether the handler knows about a cross-section.
+    /// @deprecated Should no-longer be an issue: does any generator not write the cross-section?
+    bool hasCrossSection() const;
 
     /// Get the cross-section known to the handler.
-    double crossSection() const {
-      return _xs;
-    }
+    double crossSection() const { return _xs; }
 
-    /// Whether the handler knows about a cross-section.
-    bool hasCrossSection() const;
+    /// Set the cross-section for the process being generated.
+    /// @todo What about the xsec uncertainty? Add a second, optional argument?
+    AnalysisHandler& setCrossSection(double xs);
 
 
     /// Set the beam particles for this run
@@ -182,10 +202,16 @@ namespace Rivet {
     /// @name Histogram / data object access
     //@{
 
+    /// Add a vector of analysis objects to the current state.
+    void addData(const std::vector<AnalysisObjectPtr>& aos);
+
+    /// Read analysis plots into the histo collection (via addData) from the named file.
+    void readData(const std::string& filename);
+
     /// Get all analyses' plots as a vector of analysis objects.
     std::vector<AnalysisObjectPtr> getData() const;
 
-    /// Write all analyses' plots to the named file.
+    /// Write all analyses' plots (via getData) to the named file.
     void writeData(const std::string& filename) const;
 
     //@}
@@ -203,12 +229,8 @@ namespace Rivet {
     /// Run name
     std::string _runname;
 
-    /// Number of events seen.
-    /// @todo Replace by a counter
-    unsigned int _numEvents;
-    /// Sum of event weights seen.
-    /// @todo Replace by a counter
-    double _sumOfWeights, _sumOfWeightsSq;
+    /// Event counter
+    Counter _eventcounter;
 
     /// Cross-section known to AH
     double _xs, _xserr;
@@ -223,6 +245,7 @@ namespace Rivet {
     bool _ignoreBeams;
 
     //@}
+
 
   private:
 

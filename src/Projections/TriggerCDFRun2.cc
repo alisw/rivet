@@ -16,7 +16,7 @@ namespace Rivet {
     int n_trig_1 = 0;
     int n_trig_2 = 0;
     const ChargedFinalState& cfs = applyProjection<ChargedFinalState>(evt, "CFS");
-    foreach (const Particle& p, cfs.particles()) {
+    for (const Particle& p : cfs.particles()) {
       if (inRange(p.eta(), -4.7, -3.7)) n_trig_1 += 1;
       else if (inRange(p.eta(), 3.7, 4.7)) n_trig_2 += 1;
     }

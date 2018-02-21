@@ -13,7 +13,6 @@ namespace Rivet {
 
   /// @brief Get the DIS kinematic variables and relevant boosts for an event.
   class DISKinematics : public Projection {
-
   public:
 
     /// The default constructor.
@@ -50,7 +49,7 @@ namespace Rivet {
     /// The Bjorken \f$x\f$.
     double x() const { return _theX; }
 
-    /// The Inelasticity \f$y\f$
+    /// The inelasticity \f$y\f$
     double y() const { return _theY; }
 
     /// The centre of mass energy \f$s\f$
@@ -68,10 +67,28 @@ namespace Rivet {
       return _breit;
     }
 
-    /// The incoming Hadron beam particle
+    /// The incoming hadron beam particle
     const Particle& beamHadron() const {
       return _inHadron;
     }
+
+    /// The incoming lepton beam particle
+    const Particle& beamLepton() const {
+      return _inLepton;
+    }
+
+    /// The scattered DIS lepton
+    const Particle& scatteredLepton() const {
+      return _outLepton;
+    }
+
+    /// @brief 1/-1 multiplier indicating (respectively) whether the event has conventional orientation or not
+    ///
+    /// Conventional DIS orientation has the hadron travelling in the +z direction
+    const int orientation() const {
+      return sign(_inHadron.pz());
+    }
+
 
   private:
 
@@ -90,13 +107,15 @@ namespace Rivet {
     /// The centre of mass energy \f$s\f$
     double _theS;
 
-    Particle _inHadron;
+    /// Incoming and outgoing DIS particles
+    Particle _inHadron, _inLepton, _outLepton;
 
     /// The LorentzRotation needed to boost a particle to the hadronic CM frame.
     LorentzTransform _hcm;
 
     /// The LorentzRotation needed to boost a particle to the hadronic Breit frame.
     LorentzTransform _breit;
+
   };
 
 

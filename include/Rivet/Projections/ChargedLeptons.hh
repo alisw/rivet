@@ -17,11 +17,16 @@ namespace Rivet {
   public:
 
     /// Constructor
-    ChargedLeptons(const FinalState& fsp)
-    {
+    ChargedLeptons(const FinalState& fsp=FinalState()) {
       setName("ChargedLeptons");
       addProjection(ChargedFinalState(fsp), "ChFS");
     }
+
+    /// Constructor via Cut
+    ChargedLeptons(const Cut& c)
+      : ChargedLeptons(FinalState(c))
+    {    }
+
 
     /// Clone on the heap.
     DEFAULT_RIVET_PROJ_CLONE(ChargedLeptons);

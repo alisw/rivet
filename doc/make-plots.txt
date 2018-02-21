@@ -146,7 +146,7 @@ To specify minor ticks at arbitrary positions. `<list>` is a tab separated
 list of format `value1 <tab> value2 <tab> value3 ...`.
 
 --------------------
-PlotTickLabels=<0|1>
+PlotXTickLabels=<0|1>
 RatioPlotTickLabels=<0|1>
 --------------------
 Disable/enable plotting of the tick labels in the plot and ratio plot (useful

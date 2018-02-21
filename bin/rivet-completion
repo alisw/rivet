@@ -51,7 +51,7 @@ function _rivet() {
     fi
 
     if (echo ${prev} | egrep -- "--\<histo-file\>|\<-H\>" &> /dev/null); then
-        _filedir yoda
+        _filedir "yoda|yoda.gz"
         return 0
     fi
 
@@ -143,7 +143,7 @@ function _rivet_cmphistos() {
     opts="$opts --outdir -o"
     opts="$opts --rivet-refs -R --no-rivet-refs"
     opts="$opts --histogram-list -l"
-    opts="$opts --hier-out --linear --logarithmic --mc-errs"
+    opts="$opts --hier-out --linear --logarithmic --errs --mc-errs"
     opts="$opts --no-ratio --rel-ratio --abs-ratio"
     opts="$opts --all --show-mc-only --show-single --refid"
     opts="$opts --no-plottitle"
@@ -167,7 +167,7 @@ function _rivet_cmphistos() {
         return 0
     fi
 
-    _filedir yoda
+    _filedir "yoda|yoda.gz"
     return 0
 }
 
@@ -220,7 +220,7 @@ function _rivet_mkhtml() {
     opts="$opts --title -t"
     opts="$opts --config -c"
     opts="$opts --single -s"
-    opts="$opts --no-ratio --mc-errs --refid"
+    opts="$opts --no-ratio --errs --mc-errs --refid"
     opts="$opts --num-threads --n"
     opts="$opts --pdf --ps --booklet"
     opts="$opts --ignore-unvalidated -i"
@@ -250,7 +250,7 @@ function _rivet_mkhtml() {
         return 0
     fi
 
-    _filedir yoda
+    _filedir "yoda|yoda.gz"
     return 0
 }
 

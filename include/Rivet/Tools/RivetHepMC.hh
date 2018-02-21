@@ -17,8 +17,20 @@ namespace Rivet {
   using HepMC::GenParticle;
   using HepMC::GenVertex;
 
+  #if HEPMC_VERSION_CODE >= 3000000
+  using HepMC::GenEventPtr;
+  using HepMC::GenParticlePtr;
+  using HepMC::GenVertexPtr;
+  #elif HEPMC_VERSION_CODE >= 2007000
+  // HepMC 2.07 provides its own #defines
+  #else
+  #define GenEventPtr GenEvent*
+  #define GenParticlePtr GenParticle*
+  #define GenVertexPtr GenVertex*
+  #endif
 
-  /// @todo Use mcutils
+
+  /// @todo Use mcutils?
 
 
   inline std::vector<GenParticle const *> particles(const GenEvent* ge) {
@@ -29,7 +41,7 @@ namespace Rivet {
     return rtn;
   }
 
-  inline std::vector<GenParticle*> particles(GenEvent* ge) {
+  inline std::vector<GenParticlePtr> particles(GenEvent* ge) {
     assert(ge);
     std::vector<GenParticle*> rtn;
     for (GenEvent::particle_iterator pi = ge->particles_begin(); pi != ge->particles_end(); ++pi)
@@ -84,12 +96,13 @@ namespace Rivet {
   // Get iterator ranges as wrapped begin/end pairs
   /// @note GenVertex _in and _out iterators are actually, secretly the same types *sigh*
   struct GenVertexIterRangeC {
-    GenVertexIterRangeC(const GenVertex::particles_in_const_iterator& begin, const GenVertex::particles_in_const_iterator& end)
+    typedef vector<GenParticle*>::const_iterator genvertex_particles_const_iterator;
+    GenVertexIterRangeC(const genvertex_particles_const_iterator& begin, const genvertex_particles_const_iterator& end)
       : _begin(begin), _end(end) {  }
-    const GenVertex::particles_in_const_iterator& begin() { return _begin; }
-    const GenVertex::particles_in_const_iterator& end() { return _end; }
+    const genvertex_particles_const_iterator& begin() { return _begin; }
+    const genvertex_particles_const_iterator& end() { return _end; }
   private:
-    const GenVertex::particles_in_const_iterator _begin, _end;
+    const genvertex_particles_const_iterator _begin, _end;
   };
 
   inline GenVertexIterRangeC particles_in(const GenVertex* gv) {
@@ -107,19 +120,20 @@ namespace Rivet {
   // Get iterator ranges as wrapped begin/end pairs
   /// @note GenVertex _in and _out iterators are actually, secretly the same types *sigh*
   struct GenVertexIterRange {
-    GenVertexIterRange(const GenVertex::particles_in_iterator& begin, const GenVertex::particles_in_iterator& end)
+    typedef vector<GenParticle*>::iterator genvertex_particles_iterator;
+    GenVertexIterRange(const genvertex_particles_iterator& begin, const genvertex_particles_iterator& end)
       : _begin(begin), _end(end) {  }
-    const GenVertex::particles_in_iterator& begin() { return _begin; }
-    const GenVertex::particles_in_iterator& end() { return _end; }
+    const genvertex_particles_iterator& begin() { return _begin; }
+    const genvertex_particles_iterator& end() { return _end; }
   private:
-    const GenVertex::particles_in_iterator _begin, _end;
+    const genvertex_particles_iterator _begin, _end;
   };
 
-  inline GenVertexIterRange particles_in(const GenVertex* gv) {
+  inline GenVertexIterRange particles_in(GenVertex* gv) {
     return GenVertexIterRange(gv->particles_in_begin(), gv->particles_in_end());
   }
 
-  inline GenVertexIterRange particles_out(const GenVertex* gv) {
+  inline GenVertexIterRange particles_out(GenVertex* gv) {
     return GenVertexIterRange(gv->particles_out_begin(), gv->particles_out_end());
   }
 
@@ -174,6 +188,16 @@ namespace Rivet {
     if (range != HepMC::children && range != HepMC::descendants)
       throw UserError("Requested particles_out(GenParticle*) with a non-'out' iterator range");
     return (gp->end_vertex()) ? particles(gp->end_vertex(), range) : std::vector<GenParticle*>();
+  }
+
+
+  /// Get any relatives of GenParticle @a gp
+  inline std::vector<const GenParticle*> particles(const GenParticle* gp, HepMC::IteratorRange range=HepMC::ancestors) {
+    if (range == HepMC::parents || range == HepMC::ancestors)
+      return particles_in(gp, range);
+    if (range == HepMC::children || range == HepMC::descendants)
+      return particles_in(gp, range);
+    throw UserError("Requested particles(GenParticle*) with an unsupported iterator range");
   }
 
 

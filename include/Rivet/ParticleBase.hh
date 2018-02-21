@@ -20,6 +20,16 @@ namespace Rivet {
     virtual ~ParticleBase() { }
 
 
+    // /// @name Constituent accessors
+    // //@{
+
+    // /// @todo Can't do this because a) ParticleBase is pure-virtual; b) inheritance causality for Particle... urk
+    // virtual const vector<ParticleBase>& constituents() const = 0;
+    // virtual const vector<ParticleBase>& rawConstituents() const = 0;
+
+    // //@}
+
+
     /// @name Effective momentum accessors
     //@{
 
@@ -94,13 +104,17 @@ namespace Rivet {
     /// Get the \f$ \phi \f$ directly.
     double phi(const PhiMapping mapping=ZERO_2PI) const { return momentum().phi(mapping); }
 
-
     /// Get the 3-momentum directly.
     Vector3 p3() const { return momentum().vector3(); }
     /// Get the 3-momentum magnitude directly.
     double p() const { return momentum().p(); }
     /// Get the 3-momentum magnitude-squared directly.
     double p2() const { return momentum().p2(); }
+
+    /// Get the transverse 3-momentum directly.
+    Vector3 ptvec() const { return momentum().ptvec(); }
+    /// Get the transverse 3-momentum directly.
+    Vector3 pTvec() const { return momentum().pTvec(); }
 
     /// x component of momentum.
     double px() const { return momentum().x(); }

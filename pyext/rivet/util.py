@@ -101,7 +101,7 @@ def detex(tex):
 
     The argument can either be a string or an iterable of strings.
 
-    TODO: Replace \gamma, \mu, \tau, \Upsilon, \rho, \psi, \pi, \eta, \Delta, \Omega, \omega -> no-\ form?
+    TODO: Replace \gamma, \mu, \tau, \\Upsilon, \rho, \psi, \pi, \eta, \Delta, \Omega, \omega -> no-\ form?
     TODO: Replace e^+- -> e+-?
     """
     if not tex:
@@ -109,6 +109,12 @@ def detex(tex):
     from distutils.spawn import find_executable
     if not find_executable("pandoc"):
         return tex
+
+    try:
+        tex_is_str = type(tex) in (unicode,str)
+    except NameError: # for py3
+        tex_is_str = type(tex) is str
+
     texheader = r"""
     \newcommand{\text}[1]{#1}
     \newcommand{\ensuremath}[1]{#1}
@@ -181,20 +187,27 @@ def detex(tex):
     \newcommand{\GeV}{GeV }
     \newcommand{\TeV}{TeV }
     """
-    import subprocess, shlex
-    nowrap_flags = "--wrap=none"
-    x = subprocess.Popen(["pandoc", nowrap_flags, "/dev/null"],
-                         stdout=subprocess.PIPE, stderr=subprocess.PIPE).wait()
+    import subprocess
+    pandoc_cmd = ['pandoc','-f','latex','-t','plain','--wrap=none']
+    ### check we have the right wrap option ###
+    x = subprocess.Popen(pandoc_cmd,stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    out, err = x.communicate(b' ')
+    x = x.wait()
     if x != 0:
-        nowrap_flags = "--no-wrap"
-    p = subprocess.Popen(shlex.split("pandoc -f latex -t plain " + nowrap_flags),
-                         stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    texbody = tex if type(tex) is str else "@@".join(tex)
+        pandoc_cmd[-1] = '--no-wrap'
+    p = subprocess.Popen(pandoc_cmd,stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    texbody = tex if tex_is_str else "@@".join(tex)
     # texbody = texbody.replace("$", "")
-    plain, err = p.communicate((texheader + texbody).replace("\n", ""))
+    # pandoc reads in UTF-8, need to encode / decode correctly
+    plain, err = p.communicate((texheader + texbody).replace("\n", "").encode('utf-8'))
+    ret = p.wait()
+    if ret != 0:
+        return tex
+    # pandoc sends UTF-8, need to decode
+    plain = plain.decode('utf-8')
     plain = plain.replace("\n", "")
     plains = plain.replace(r"\&", "&").split("@@")
-    if type(tex) is str:
+    if tex_is_str:
         assert len(plains) == 1
         return plains[0] if plains[0] else tex
     else:

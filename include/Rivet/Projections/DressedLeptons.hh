@@ -11,25 +11,34 @@ namespace Rivet {
 
 
   /// A charged lepton meta-particle created by clustering photons close to the bare lepton
+  /// @todo Remove completely -- it's unnecessary and too confusing (esp. between copying & aggregating)
+  /// @deprecated Just use Particle.constituents() now.
   class DressedLepton : public Particle {
   public:
 
-    DressedLepton(const Particle& lepton) :
-      Particle(lepton.pid(), lepton.momentum()),
-      _constituentLepton(lepton) {}
+    /// Copy constructor (from Particle)
+    DressedLepton(const Particle& dlepton);
 
-    void addPhoton(const Particle& p, bool cluster) {
-      _constituentPhotons.push_back(p);
-      if (cluster) setMomentum(momentum() + p.momentum());
-    }
+    /// Components constructor
+    /// @note This is not a copy constructor, hence the explicit second argument even if empty
+    DressedLepton(const Particle& lepton, const Particles& photons, bool momsum=true);
 
-    const Particle& constituentLepton() const { return _constituentLepton; }
-    const Particles& constituentPhotons() const { return _constituentPhotons; }
+    /// Add a photon to the dressed lepton
+    /// @todo Deprecate and override add/setConstituents instead?
+    void addPhoton(const Particle& p, bool momsum=true);
 
-  private:
+    /// Retrieve the bare lepton
+    const Particle& bareLepton() const;
+    /// Retrieve the bare lepton (alias)
+    /// @deprecated Prefer the more physicsy bareLepton()
+    const Particle& constituentLepton() const { return bareLepton(); }
 
-    Particles _constituentPhotons;
-    Particle _constituentLepton;
+    /// Retrieve the clustered photons
+    const Particles photons() const { return slice(constituents(), 1); }
+    /// Retrieve the clustered photons (alias)
+    /// @deprecated Prefer the shorter photons()
+    const Particles constituentPhotons() const { return photons(); }
+
   };
 
 
@@ -43,43 +52,52 @@ namespace Rivet {
   class DressedLeptons : public FinalState {
   public:
 
-    /// @brief Constructor with a general (and optional) Cut argument
+    /// @brief Constructor with a single input FinalState (used for both photons and bare leptons)
+    ///
+    /// Provide a single final state projection used to select the photons and bare
+    /// leptons, a photon-clustering delta(R) cone size around each bare lepton, and an optional
+    /// cut on the _dressed_ leptons (i.e. the momenta after clustering).
+    /// The final argument controls whether non-prompt photons are to be included.
+    /// Set the clustering radius to 0 or negative to disable clustering.
+    DressedLeptons(const FinalState& barefs,
+                   double dRmax, const Cut& cut=Cuts::open(),
+                   bool useDecayPhotons=false);
+
+    /// @brief Constructor with distinct photon and lepton finders
     ///
     /// Provide final state projections used to select the photons and bare
     /// leptons (wish we had put the first two args the other way around...),
     /// a clustering delta(R) cone size around each bare lepton, and an optional
     /// cut on the _dressed_ leptons (i.e. the momenta after clustering.)
-    /// The final two arguments are rarely used.
+    /// The final argument controls whether non-prompt photons are to be included.
+    /// Set the clustering radius to 0 or negative to disable clustering.
+    ///
+    /// @todo Convert second arg to a general ParticleFinder rather than an FS, to
+    /// allow clustering on to unstables, e.g. taus via TauFinder.
     DressedLeptons(const FinalState& photons, const FinalState& bareleptons,
                    double dRmax, const Cut& cut=Cuts::open(),
-                   bool cluster=true, bool useDecayPhotons=false);
-
-    /// Constructor with a general (and optional) Cut argument
-    /// @deprecated Use the version with Cut c before cluster (i.e. with the most common non-default args first)
-    DEPRECATED("Use the version with Cut c before cluster")
-    DressedLeptons(const FinalState& photons, const FinalState& bareleptons,
-                   double dRmax, bool cluster, const Cut& cut=Cuts::open(),
                    bool useDecayPhotons=false);
 
-    /// Constructor with numerical eta and pT cuts
-    /// @deprecated Use the Cut version
-    DEPRECATED("Use the Cut version")
+    // For compatibility only
+    /// @cond INTERNAL
+    DEPRECATED("Use the new form with no bool cluster argument")
     DressedLeptons(const FinalState& photons, const FinalState& bareleptons,
-                   double dRmax, bool cluster,
-                   double etaMin, double etaMax,
-                   double pTmin, bool useDecayPhotons=false);
-
+                   double dRmax, const Cut& cut, bool, bool useDecayPhotons)
+      : DressedLeptons(photons, bareleptons, dRmax, cut, useDecayPhotons)
+    {   }
+    /// @endcond
 
     /// Clone this projection
     DEFAULT_RIVET_PROJ_CLONE(DressedLeptons);
 
-    /// Retrieve the dressed leptons
-    const vector<DressedLepton>& dressedLeptons() const { return _clusteredLeptons; }
-
-    /// Retrieve the dressed leptons (synonym)
-    /// @deprecated Use dressedLeptons()
-    DEPRECATED("Use dressedLeptons()")
-    const vector<DressedLepton>& clusteredLeptons() const { return _clusteredLeptons; }
+    /// @brief Retrieve the dressed leptons
+    /// @note Like particles() but with helper functions
+    vector<DressedLepton> dressedLeptons() const {
+      vector<DressedLepton> rtn;
+      for (const Particle& p : particles())
+        rtn += DressedLepton(p);  //static_cast<const DressedLepton>(p);
+      return rtn;
+    }
 
 
   protected:
@@ -95,13 +113,9 @@ namespace Rivet {
 
     /// Maximum cone radius to find photons in
     double _dRmax;
-    /// Whether to actually add the photon momenta to clusteredLeptons
-    bool _cluster;
-    /// Whether to include photons from hadron (particularly pi0) decays
-    bool _fromDecay;
 
-    /// Container which stores the clustered lepton objects
-    vector<DressedLepton> _clusteredLeptons;
+    /// Whether to include photons from hadron (particularly pi0) and hadronic tau decays
+    bool _fromDecay;
 
   };
 

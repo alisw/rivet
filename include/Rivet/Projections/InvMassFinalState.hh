@@ -54,13 +54,6 @@ namespace Rivet {
     /// Operate on a given particle vector directly instead of through project (no caching)
     void calc(const Particles& inparticles);
 
-  private:
-
-    /// Transverse Mass
-    inline double massT( FourMomentum v1, FourMomentum v2) {
-      return sqrt( (v1.Et() + v2.Et())*(v1.Et() + v2.Et()) -
-                   (v1+v2).perp()*(v1+v2).perp() );
-    }
 
   protected:
 
@@ -74,10 +67,10 @@ namespace Rivet {
   private:
 
     /// IDs of the decay products.
-    std::vector<PdgIdPair> _decayids;
+    vector<PdgIdPair> _decayids;
 
     /// Constituent pairs.
-    std::vector<std::pair<Particle, Particle> > _particlePairs;
+    vector<pair<Particle, Particle> > _particlePairs;
 
     /// Min inv mass.
     double _minmass;
@@ -90,6 +83,7 @@ namespace Rivet {
 
     /// Flag to decide whether to use the full inv mass or just the transverse mass.
     bool _useTransverseMass;
+
   };
 
 

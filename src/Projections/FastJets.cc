@@ -15,10 +15,6 @@ namespace Rivet {
   }
 
 
-  // void FastJets::_init1(JetAlgName alg, double rparameter, double seed_threshold) {
-  //   _initBase();
-
-
   void FastJets::_initJdef(JetAlgName alg, double rparameter, double seed_threshold) {
     MSG_DEBUG("JetAlg = " << alg);
     MSG_DEBUG("R parameter = " << rparameter);
@@ -31,6 +27,8 @@ namespace Rivet {
       _jdef = fastjet::JetDefinition(fastjet::antikt_algorithm, rparameter, fastjet::E_scheme);
     } else if (alg == DURHAM) {
       _jdef = fastjet::JetDefinition(fastjet::ee_kt_algorithm, fastjet::E_scheme);
+    } else if (alg == GENKTEE) {
+      _jdef = fastjet::JetDefinition(fastjet::ee_genkt_algorithm, rparameter, -1);
     } else {
       // Plugins:
       if (alg == SISCONE) {
@@ -65,30 +63,6 @@ namespace Rivet {
   }
 
 
-  // void FastJets::_init2(fastjet::JetAlgorithm type,
-  //                       fastjet::RecombinationScheme recom, double rparameter)
-  //   : FastJets
-  // {
-
-  //   _initBase();
-  //   _jdef = fastjet::JetDefinition(type, rparameter, recom);
-  // }
-
-
-  // void FastJets::_init3(const fastjet::JetDefinition& jdef) {
-  //   _initBase();
-  //   _jdef = jdef;
-  // }
-
-
-  // void FastJets::_init4(fastjet::JetDefinition::Plugin* plugin) {
-  //   _initBase();
-  //   _plugin.reset(plugin);
-  //   _jdef = fastjet::JetDefinition(_plugin.get());
-  // }
-
-
-
   int FastJets::compare(const Projection& p) const {
     const FastJets& other = dynamic_cast<const FastJets&>(p);
     return \
@@ -103,11 +77,66 @@ namespace Rivet {
   }
 
 
-  namespace {
-    /// @todo Replace with C++11 lambdas
-    bool isPromptInvisible(const Particle& p) { return !(p.isVisible() || p.fromDecay()); }
-    // bool isMuon(const Particle& p) { return p.abspid() == PID::MUON; }
-    bool isPromptMuon(const Particle& p) { return isMuon(p) && !p.fromDecay(); }
+  // STATIC
+  PseudoJets FastJets::mkClusterInputs(const Particles& fsparticles, const Particles& tagparticles) {
+    vector<fastjet::PseudoJet> pjs;
+    /// @todo Use FastJet3's UserInfo system to store Particle pointers directly?
+
+    // Store 4 vector data about each particle into FastJet's PseudoJets
+    for (size_t i = 0; i < fsparticles.size(); ++i) {
+      fastjet::PseudoJet pj = fsparticles[i];
+      pj.set_user_index(i+1);
+      pjs.push_back(pj);
+    }
+    // And the same for ghost tagging particles (with negative user indices)
+    for (size_t i = 0; i < tagparticles.size(); ++i) {
+      fastjet::PseudoJet pj = tagparticles[i];
+      pj *= 1e-20; ///< Ghostify the momentum
+      pj.set_user_index(-i-1);
+      pjs.push_back(pj);
+    }
+
+    return pjs;
+  }
+
+
+  // STATIC
+  Jet FastJets::mkJet(const PseudoJet& pj, const Particles& fsparticles, const Particles& tagparticles) {
+    const PseudoJets pjconstituents = pj.constituents();
+
+    vector<Particle> constituents, tags;
+    constituents.reserve(pjconstituents.size());
+
+    for (const fastjet::PseudoJet& pjc : pjconstituents) {
+      // Pure ghosts don't have corresponding particles
+      if (pjc.has_area() && pjc.is_pure_ghost()) continue;
+      // Default user index = 0 doesn't give valid particle lookup
+      if (pjc.user_index() == 0) continue;
+      // Split by index sign into constituent & tag lookup
+      if (pjc.user_index() > 0) {
+        // Find constituents if index > 0
+        const size_t i = pjc.user_index() - 1;
+        if (i >= fsparticles.size()) throw RangeError("FS particle lookup failed in jet construction");
+        constituents.push_back(fsparticles.at(i));
+      } else if (!tagparticles.empty()) {
+        // Find tags if index < 0
+        const size_t i = abs(pjc.user_index()) - 1;
+        if (i >= tagparticles.size()) throw RangeError("Tag particle lookup failed in jet construction");
+        tags.push_back(tagparticles.at(i));
+      }
+    }
+
+    return Jet(pj, constituents, tags);
+  }
+
+
+  // STATIC
+  Jets FastJets::mkJets(const PseudoJets& pjs, const Particles& fsparticles, const Particles& tagparticles) {
+    Jets rtn; rtn.reserve(pjs.size());
+    for (const PseudoJet pj : pjs) {
+      rtn.push_back(FastJets::mkJet(pj, fsparticles, tagparticles));
+    }
+    return rtn;
   }
 
 
@@ -116,16 +145,17 @@ namespace Rivet {
     const string fskey = (_useInvisibles == JetAlg::NO_INVISIBLES) ? "VFS" : "FS";
     Particles fsparticles = applyProjection<FinalState>(e, fskey).particles();
     // Remove prompt invisibles if needed (already done by VFS if using NO_INVISIBLES)
-    if (_useInvisibles == JetAlg::DECAY_INVISIBLES)
-      fsparticles.erase( std::remove_if(fsparticles.begin(), fsparticles.end(), isPromptInvisible), fsparticles.end() );
+    if (_useInvisibles == JetAlg::DECAY_INVISIBLES) {
+      ifilter_discard(fsparticles, [](const Particle& p) { return !(p.isVisible() || p.fromDecay()); });
+    }
     // Remove prompt/all muons if needed
-    if (_useMuons == JetAlg::DECAY_MUONS)
-      fsparticles.erase( std::remove_if(fsparticles.begin(), fsparticles.end(), isPromptMuon), fsparticles.end() );
-    else if (_useMuons == JetAlg::NO_MUONS)
-      fsparticles.erase( std::remove_if(fsparticles.begin(), fsparticles.end(), isMuon), fsparticles.end() );
+    if (_useMuons == JetAlg::DECAY_MUONS) {
+      ifilter_discard(fsparticles, [](const Particle& p) { return isMuon(p) && !p.fromDecay(); });
+    } else if (_useMuons == JetAlg::NO_MUONS) {
+      ifilter_discard(fsparticles, isMuon);
+    }
 
     // Tagging particles
-    /// @todo Allow the user to specify tag particle kinematic thresholds
     const Particles chadrons = applyProjection<HeavyHadrons>(e, "HFHadrons").cHadrons();
     const Particles bhadrons = applyProjection<HeavyHadrons>(e, "HFHadrons").bHadrons();
     const Particles taus = applyProjection<FinalState>(e, "Taus").particles();
@@ -134,95 +164,50 @@ namespace Rivet {
 
 
   void FastJets::calc(const Particles& fsparticles, const Particles& tagparticles) {
-    _particles.clear();
-    vector<fastjet::PseudoJet> pjs;
+    MSG_DEBUG("Finding jets from " << fsparticles.size() << " input particles + " << tagparticles.size() << " tagging particles");
+    _fsparticles = fsparticles;
+    _tagparticles = tagparticles;
 
-    MSG_DEBUG("Finding jets from " << fsparticles.size() << " input particles");
+    // Make pseudojets, with mapping info to Rivet FS and tag particles
+    PseudoJets pjs = mkClusterInputs(_fsparticles, _tagparticles);
 
-    /// @todo Use FastJet3's UserInfo system
-
-    // Store 4 vector data about each particle into FastJet's PseudoJets
-    int counter = 1;
-    for (const Particle& p : fsparticles) {
-      fastjet::PseudoJet pj = p;
-      pj.set_user_index(counter);
-      pjs.push_back(pj);
-      _particles[counter] = p;
-      counter += 1;
-    }
-    // And the same for ghost tagging particles (with negative user indices)
-    counter = 1;
-    for (const Particle& p : tagparticles) {
-      fastjet::PseudoJet pj = p;
-      pj *= 1e-20; ///< Ghostify the momentum
-      pj.set_user_index(-counter);
-      pjs.push_back(pj);
-      _particles[-counter] = p;
-      counter += 1;
-    }
-
-    // Choose cseq as basic or area-calculating
+    // Run either basic or area-calculating cluster sequence as reqd.
     if (_adef) {
       _cseq.reset(new fastjet::ClusterSequenceArea(pjs, _jdef, *_adef));
     } else {
       _cseq.reset(new fastjet::ClusterSequence(pjs, _jdef));
     }
-    MSG_DEBUG("FastJet ClusterSequence constructed; Njets_tot = "
-              << _cseq->inclusive_jets().size() << ", Njets_10 = "
-              << _cseq->inclusive_jets(10*GeV).size()); //< only inefficient in debug mode
+
+    MSG_DEBUG("ClusterSequence constructed; Njets_tot = "
+              << _cseq->inclusive_jets().size() << ", Njets(pT > 10 GeV) = "
+              << _cseq->inclusive_jets(10*GeV).size());
   }
 
 
   void FastJets::reset() {
     _yscales.clear();
-    _particles.clear();
+    _fsparticles.clear();
+    _tagparticles.clear();
     /// @todo _cseq = fastjet::ClusterSequence();
   }
 
 
   Jets FastJets::_jets() const {
-    Jets rtn; rtn.reserve(pseudojets().size());
-    foreach (const fastjet::PseudoJet& pj, pseudojets()) {
-      rtn.push_back(_mkJet(pj));
-    }
     /// @todo Cache?
-    return rtn;
+    return mkJets(pseudojets(), _fsparticles, _tagparticles);
   }
 
 
-  Jet FastJets::trimJet(const Jet &input, const fastjet::Filter &trimmer)const{
-    assert(input.pseudojet().associated_cluster_sequence() == clusterSeq().get());
+  Jet FastJets::trimJet(const Jet& input, const fastjet::Filter& trimmer) const {
+    if (input.pseudojet().associated_cluster_sequence() != clusterSeq().get())
+      throw Error("To trim a Rivet::Jet, its associated PseudoJet must have come from this FastJets' ClusterSequence");
     PseudoJet pj = trimmer(input);
-    return _mkJet(pj);
+    return mkJet(pj, _fsparticles, _tagparticles);
   }
 
 
   PseudoJets FastJets::pseudoJets(double ptmin) const {
     return clusterSeq() ? clusterSeq()->inclusive_jets(ptmin) : PseudoJets();
-  }
-
-
-  Jet FastJets::_mkJet(const PseudoJet &pj)const{
-    assert(clusterSeq());
-
-    // Take the constituents from the cluster sequence, unless the jet was not
-    // associated with the cluster sequence (could be the case for trimmed jets)
-    const PseudoJets parts = (pj.associated_cluster_sequence() == clusterSeq().get())
-      ? clusterSeq()->constituents(pj) : pj.constituents();
-
-    vector<Particle> constituents, tags;
-    constituents.reserve(parts.size());
-    for (const fastjet::PseudoJet& p : parts) {
-      map<int, Particle>::const_iterator found = _particles.find(p.user_index());
-      // assert(found != _particles.end());
-      if (found == _particles.end() && p.is_pure_ghost()) continue; //< Pure FJ ghosts are ok
-      assert(found != _particles.end()); //< Anything else must be known
-      assert(found->first != 0); //< All mapping IDs are pos-def (particles) or neg-def (tags)
-      if (found->first > 0) constituents.push_back(found->second);
-      else if (found->first < 0) tags.push_back(found->second);
-    }
-
-    return Jet(pj, constituents, tags);
   }
 
 

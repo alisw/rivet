@@ -102,12 +102,15 @@ namespace Rivet {
     /// @todo Add SFINAE to require that PROJ inherit from Projection
     template <typename PROJ>
     const PROJ& apply(const Event& evt, const std::string& name) const { return applyProjection<PROJ>(evt, name); }
+    /// Apply the supplied projection on event @a evt (convenience arg-reordering alias).
+    /// @todo Add SFINAE to require that PROJ inherit from Projection
+    template <typename PROJ>
+    const PROJ& apply(const std::string& name, const Event& evt) const { return applyProjection<PROJ>(evt, name); }
 
     //@}
 
 
-    /// Mark object as owned by the _projhandler
-    /// @todo Huh? What's this for?
+    /// Mark this object as owned by a proj-handler
     void markAsOwned() const { _owned = true; }
 
 
@@ -149,6 +152,10 @@ namespace Rivet {
     /// @todo Add SFINAE to require that PROJ inherit from Projection
     template <typename PROJ>
     const PROJ& declare(const PROJ& proj, const std::string& name) { return declareProjection(proj, name); }
+    /// @brief Register a contained projection (user-facing, arg-reordered version)
+    /// @todo Add SFINAE to require that PROJ inherit from Projection
+    template <typename PROJ>
+    const PROJ& declare(const std::string& name, const PROJ& proj) { return declareProjection(proj, name); }
 
     /// @brief Register a contained projection (user-facing version)
     /// @deprecated Use declareProjection() or declare()

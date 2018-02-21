@@ -1,9 +1,6 @@
 // -*- C++ -*-
 #include "Rivet/Projections/UnstableFinalState.hh"
 
-/// @todo Replace with PID::isParton()
-#define IS_PARTON_PDGID(id) ( abs(id) <= 100 && abs(id) != 22 && (abs(id) < 11 || abs(id) > 18) )
-
 namespace Rivet {
 
 
@@ -18,11 +15,11 @@ namespace Rivet {
     vetoIds += 22; // status 2 photons don't count!
     vetoIds += 110; vetoIds += 990; vetoIds += 9990; // Reggeons
     //vetoIds += 9902210; // something weird from PYTHIA6
-    foreach (const GenParticle* p, Rivet::particles(e.genEvent())) {
+    for (const GenParticle* p : Rivet::particles(e.genEvent())) {
       const int st = p->status();
       bool passed =
         (st == 1 || (st == 2 && !contains(vetoIds, abs(p->pdg_id())))) &&
-        !IS_PARTON_PDGID(p->pdg_id()) && ///< Always veto partons
+        !PID::isParton(p->pdg_id()) && ///< Always veto partons
         !p->is_beam() && // Filter beam particles
         _cuts->accept(p->momentum());
 
@@ -40,7 +37,7 @@ namespace Rivet {
       // Avoid double counting by re-marking as unpassed if ID == any child ID
       const GenVertex* dv = p->end_vertex();
       if (passed && dv) {
-        foreach (GenParticle* pp, particles_out(dv)) {
+        for (GenParticle* pp : particles_out(dv)) {
           if (p->pdg_id() == pp->pdg_id() && pp->status() == 2) {
             passed = false;
             break;

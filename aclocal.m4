@@ -906,7 +906,7 @@ AC_DEFUN([AM_PATH_PYTHON],
   dnl Find a Python interpreter.  Python versions prior to 2.0 are not
   dnl supported. (2.0 was released on October 16, 2000).
   m4_define_default([_AM_PYTHON_INTERPRETER_LIST],
-[python python2 python3 python3.3 python3.2 python3.1 python3.0 python2.7 dnl
+[python python2 python3 python3.7 python3.6 python3.5 python3.4 python3.3 python3.2 python3.1 python3.0 python2.7 dnl
  python2.6 python2.5 python2.4 python2.3 python2.2 python2.1 python2.0])
 
   AC_ARG_VAR([PYTHON], [the Python interpreter])
@@ -1445,10 +1445,12 @@ AC_SUBST([am__tar])
 AC_SUBST([am__untar])
 ]) # _AM_PROG_TAR
 
+m4_include([m4/ax_check_zlib.m4])
 m4_include([m4/ax_cxx_compile_stdcxx.m4])
+m4_include([m4/ax_openmp.m4])
+m4_include([m4/ax_python_devel.m4])
 m4_include([m4/cxx.m4])
 m4_include([m4/cython.m4])
-m4_include([m4/gsl.m4])
 m4_include([m4/lcg.m4])
 m4_include([m4/libtool.m4])
 m4_include([m4/ltoptions.m4])
@@ -1457,4 +1459,3 @@ m4_include([m4/ltversion.m4])
 m4_include([m4/lt~obsolete.m4])
 m4_include([m4/osx.m4])
 m4_include([m4/pkgchecks.m4])
-m4_include([m4/python.m4])

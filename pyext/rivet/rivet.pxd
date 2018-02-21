@@ -15,6 +15,7 @@ cdef extern from "Rivet/AnalysisHandler.hh" namespace "Rivet":
         vector[string] analysisNames() const
         # Analysis* analysis(string)
         void writeData(string&)
+        void readData(string&)
         double crossSection()
         void finalize()
 
@@ -23,12 +24,12 @@ cdef extern from "Rivet/Run.hh" namespace "Rivet":
         Run(AnalysisHandler)
         Run& setCrossSection(double) # For chaining?
         Run& setListAnalyses(bool)
-        bool init(string, double) # $2=1.0
-        bool openFile(string, double) # $2=1.0
-        bool readEvent()
-        bool skipEvent()
-        bool processEvent()
-        bool finalize()
+        bool init(string, double) except + # $2=1.0
+        bool openFile(string, double) except + # $2=1.0
+        bool readEvent() except +
+        bool skipEvent() except +
+        bool processEvent() except +
+        bool finalize() except +
 
 cdef extern from "Rivet/Analysis.hh" namespace "Rivet":
     cdef cppclass Analysis:
@@ -36,6 +37,7 @@ cdef extern from "Rivet/Analysis.hh" namespace "Rivet":
         vector[pair[double, double]] requiredEnergies()
         vector[string] authors()
         vector[string] references()
+        vector[string] keywords()
         string name()
         string bibTeX()
         string bibKey()
@@ -48,6 +50,7 @@ cdef extern from "Rivet/Analysis.hh" namespace "Rivet":
         string status()
         string summary()
         string year()
+        string luminosityfb()
 
 # Might need to translate the following errors, although I believe 'what' is now
 # preserved. But often, we need the exception class name.

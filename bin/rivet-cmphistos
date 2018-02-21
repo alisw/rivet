@@ -15,6 +15,7 @@ ENVIRONMENT:
  * RIVET_DATA_PATH: list of paths to be searched for data files
 """
 
+from __future__ import print_function
 import rivet, yoda, sys, os
 rivet.util.check_python_version()
 rivet.util.set_process_name(os.path.basename(__file__))
@@ -23,7 +24,7 @@ rivet.util.set_process_name(os.path.basename(__file__))
 class Plot(dict):
     "A tiny Plot object to help writing out the head in the .dat file"
     def __repr__(self):
-        return "# BEGIN PLOT\n" + "\n".join("%s=%s" % (k,v) for k,v in self.iteritems()) + "\n# END PLOT\n\n"
+        return "# BEGIN PLOT\n" + "\n".join("%s=%s" % (k,v) for k,v in self.items()) + "\n# END PLOT\n\n"
 
 
 def sanitiseString(s):
@@ -61,7 +62,7 @@ def getCommandLineOptions():
     stygroup = OptionGroup(parser, "Plot style")
     stygroup.add_option("--linear", action="store_true", dest="LINEAR",
                         default=False, help="plot with linear scale")
-    stygroup.add_option("--mc-errs", action="store_true", dest="MC_ERRS",
+    stygroup.add_option("--errs", "--mc-errs", action="store_true", dest="MC_ERRS",
                         default=False, help="show vertical error bars on the MC lines")
     stygroup.add_option("--no-ratio", action="store_false", dest="RATIO",
                         default=True, help="disable the ratio plot")
@@ -110,19 +111,26 @@ def getHistos(filelist):
     for infile in filelist:
         mchistos.setdefault(infile, {})
         analysisobjects = yoda.read(infile, patterns=opts.PATHPATTERNS, unpatterns=opts.PATHUNPATTERNS)
-        print analysisobjects
-        for path, ao in analysisobjects.iteritems():
+        #print(analysisobjects)
+        for path, ao in analysisobjects.items():
             ## We can't plot non-histograms yet
             # TODO: support counter plotting with a faked x (or y) position and forced plot width/height
-            if ao.type not in ("Histo1D", "Histo2D", "Profile1D", "Profile2D", "Scatter2D", "Scatter3D"):
+            if ao.type not in ("Counter", 
+                               "Histo1D", 
+                               "Histo2D", 
+                               "Profile1D", 
+                               "Profile2D", 
+                               "Scatter1D", 
+                               "Scatter2D", 
+                               "Scatter3D"):
                 continue
 
             ## Make a path object and ensure the path is in standard form
             try:
                 aop = rivet.AOPath(path)
-            except Exception, e:
-                #print e
-                print "Found analysis object with non-standard path structure:", path, "... skipping"
+            except Exception as e:
+                #print(e)
+                print("Found analysis object with non-standard path structure:", path, "... skipping")
                 continue
 
             ## We don't plot data objects with path components hidden by an underscore prefix
@@ -131,10 +139,10 @@ def getHistos(filelist):
 
             ## Add it to the ref or mc paths, if this path isn't already known
             basepath = aop.basepath(keepref=False)
-            if aop.isref() and not refhistos.has_key(basepath):
+            if aop.isref() and basepath not in refhistos:
                 ao.path = aop.varpath(keepref=False, defaultvarid=0)
                 refhistos[basepath] = ao
-            else: #if not mchistos[infile].has_key(basepath):
+            else: #if basepath not in mchistos[infile]:
                 mchistos[infile].setdefault(basepath, {})[aop.varid(0)] = ao
 
     return refhistos, mchistos
@@ -155,7 +163,7 @@ def getRivetRefData(anas=None):
         # TODO: delegate to getHistos?
         for infile in filelist:
             analysisobjects = yoda.read(infile, patterns=opts.PATHPATTERNS, unpatterns=opts.PATHUNPATTERNS)
-            for path, ao in analysisobjects.iteritems():
+            for path, ao in analysisobjects.items():
                 aop = rivet.AOPath(ao.path)
                 if aop.isref():
                     ao.path = aop.basepath(keepref=False)
@@ -175,7 +183,7 @@ def parseArgs(args):
         filelist.append(path)
         plotoptions[path] = []
         has_title = False
-        for i in xrange(1, len(asplit)):
+        for i in range(1, len(asplit)):
             ## Add 'Title' if there is no = sign before math mode
             if '=' not in asplit[i] or ('$' in asplit[i] and asplit[i].index('$') < asplit[i].index('=')):
                 asplit[i] = 'Title=%s' % asplit[i]
@@ -206,7 +214,7 @@ def setStyle(ao, istyle, variation=False):
 
     jc = istyle % len(LINECOLORS)
     c = LINECOLORS[jc]
-    js = (istyle / len(LINECOLORS)) % len(LINESTYLES)
+    js = (istyle // len(LINECOLORS)) % len(LINESTYLES)
     s = LINESTYLES[js]
 
     ## If plotting a variation (i.e. band), fade the colour
@@ -254,7 +262,7 @@ def mkOutput(hpath, aos, plot=None, special=None):
         output += special
         output += "# END SPECIAL\n\n"
 
-    from cStringIO import StringIO
+    from io import StringIO
     sio = StringIO()
     yoda.writeFLAT(aos, sio)
     output += sio.getvalue()
@@ -304,7 +312,7 @@ if __name__ == '__main__':
     ## Check that the files exist
     for f in filelist:
         if not os.access(f, os.R_OK):
-            print "Error: cannot read from %s" % f
+            print("Error: cannot read from %s" % f)
             sys.exit(1)
 
     ## Read the .plot files
@@ -314,8 +322,8 @@ if __name__ == '__main__':
     ## Create a list of all histograms to be plotted, and identify if they are 2D histos (which need special plotting)
     try:
         refhistos, mchistos = getHistos(filelist)
-    except IOError, e:
-        print "File reading error: ", e.strerror
+    except IOError as e:
+        print("File reading error: ", e.strerror)
         exit(1)
     hpaths, h2ds = [], []
     for aos in mchistos.values():
@@ -331,14 +339,15 @@ if __name__ == '__main__':
     if opts.RIVETREFS:
         try:
             refhistos2 = getRivetRefData()
-        except IOError, e:
-            print "File reading error: ", e.strerror
+        except IOError as e:
+            print("File reading error: ", e.strerror)
             exit(1)
         refhistos2.update(refhistos)
         refhistos = refhistos2
 
     ## Purge unmatched ref data entries to save memory
-    for refhpath in refhistos.keys():
+    keylist = list(refhistos.keys()) # can't modify for-loop target
+    for refhpath in keylist:
         if refhpath not in hpaths:
             del refhistos[refhpath]
 
@@ -346,7 +355,7 @@ if __name__ == '__main__':
     ## Now loop over all MC histograms and plot them
     # TODO: factorize much of this into a rivet.utils mkplotfile(mchists, refhist, kwargs, is2d=False) function
     for hpath in hpaths:
-        #print 'Currently looking at', h
+        #print('Currently looking at', h)
 
         ## The analysis objects to be plotted
         anaobjects = []
@@ -367,11 +376,11 @@ if __name__ == '__main__':
         headers = plotparser.getHeaders(hpath)
         if headers:
             plot.update(headers)
-        # for key, val in headers.iteritems():
+        # for key, val in headers.items():
         #     plot[key] = val
-        if plotoptions.has_key("PLOT"):
+        if "PLOT" in plotoptions:
             for key_val in plotoptions["PLOT"]:
-                key, val = [s.strip() for s in key_val.split("=")]
+                key, val = [s.strip() for s in key_val.split("=",1)]
                 plot[key] = val
         if opts.LINEAR:
             plot['LogY'] = '0'
@@ -391,7 +400,7 @@ if __name__ == '__main__':
 
         ## Handle reference data histogram, if there is one
         ratioreference, hasdataref = None, False
-        if refhistos.has_key(hpath):
+        if hpath in refhistos:
             hasdataref = True
             refdata = refhistos[hpath]
             refdata.setAnnotation('Title', opts.REFTITLE)
@@ -413,7 +422,7 @@ if __name__ == '__main__':
         ## Loop over the MC files to plot all instances of the histogram
         styleidx = 0
         for infile in filelist:
-            if mchistos.has_key(infile) and mchistos[infile].has_key(hpath):
+            if infile in mchistos and hpath in mchistos[infile]:
                 hmcs = mchistos[infile][hpath]
                 ## For now, just plot all the different variation histograms (reversed, so [0] is on top)
                 # TODO: calculate and plot an appropriate error band, somehow...
@@ -428,7 +437,7 @@ if __name__ == '__main__':
                     ## Plot defaults from .plot files
                     histopts = plotparser.getHistogramOptions(hpath)
                     if histopts:
-                        for key, val in histopts.iteritems():
+                        for key, val in histopts.items():
                             hmc.setAnnotation(key, val)
                     ## Command line plot options
                     setOptions(hmc, plotoptions[infile])
@@ -462,7 +471,7 @@ if __name__ == '__main__':
         if showratio and len(varlines + mainlines) > 1:
             plot['RatioPlot'] = '1'
             plot['RatioPlotReference'] = ratioreference
-            if not hasdataref and not plot.has_key("RatioPlotYLabel"):
+            if not hasdataref and "RatioPlotYLabel" not in plot:
                 if plot.get('RatioPlotMode', '') == 'deviation':
                     plot['RatioPlotYLabel'] = 'Deviation' #r'$\text{MC}-\text{MC}_\text{ref}$'
                 else:

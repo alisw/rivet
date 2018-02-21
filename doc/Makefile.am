@@ -1,19 +1,23 @@
-dist_noinst_SCRIPTS = mk-analysis-html mk-analysis-latex
+dist_noinst_SCRIPTS = mk-analysis-html mk-analysis-latex mk-analysis-json
 
 LATEXSUBSOURCES = preamble.tex intro.tex gettingstarted.tex writinganalyses.tex agilerunmc.tex acknowledgements.tex
-DOCSOURCES = compare-histos.txt slip.eps thinker.eps cone.eps bend.eps \
+
+DOCSOURCES = $(LATEXSUBSOURCES) \
+  compare-histos.txt slip.eps thinker.eps cone.eps bend.eps \
   h-physrev3.bst hepnames.sty JHEP3.cls JHEP.bst make-plots.txt rivet-manual.tex \
-  $(LATEXSUBSOURCES) heppennames.sty hepnicenames.sty hepparticles.sty maybemath.sty \
+  heppennames.sty hepnicenames.sty hepparticles.sty maybemath.sty \
   hepunits.sty underscore.sty microtype.sty
 
-EXTRA_DIST = $(DOCSOURCES)
-DOCS =
+EXTRA_DIST = $(DOCSOURCES) refs.bib
 
-if ENABLE_PDFMANUAL
+DOCS =
+DOCDIRS =
+
 
 if ENABLE_PYEXT
 DOCS += analyses.html
-analyses.html: $(top_srcdir)/src/Analyses mk-analysis-html
+DOCDIRS += analyses
+analyses.html: $(top_srcdir)/analyses mk-analysis-html
 	LD_LIBRARY_PATH=$(top_builddir)/src/.libs:$(YAML_CPPLIBPATH):$(FASTJETLIBPATH):$(HEPMCLIBPATH):$(YODALIBPATH):$(LD_LIBRARY_PATH) \
     DYLD_LIBRARY_PATH=$(top_builddir)/src/.libs:$(YAML_CPPLIBPATH):$(FASTJETLIBPATH):$(HEPMCLIBPATH):$(YODALIBPATH):$(DYLD_LIBRARY_PATH) \
     PYTHONPATH=$(YODA_PYTHONPATH):$(RIVET_PYTHONPATH):$(PYTHONPATH) \
@@ -21,13 +25,34 @@ analyses.html: $(top_srcdir)/src/Analyses mk-analysis-html
 endif
 
 
-if WITH_PDFLATEX
+if ENABLE_PYEXT
+DOCS += analyses.json
+analyses.json: $(top_srcdir)/analyses mk-analysis-json
+	LD_LIBRARY_PATH=$(top_builddir)/src/.libs:$(YAML_CPPLIBPATH):$(FASTJETLIBPATH):$(HEPMCLIBPATH):$(YODALIBPATH):$(LD_LIBRARY_PATH) \
+    DYLD_LIBRARY_PATH=$(top_builddir)/src/.libs:$(YAML_CPPLIBPATH):$(FASTJETLIBPATH):$(HEPMCLIBPATH):$(YODALIBPATH):$(DYLD_LIBRARY_PATH) \
+    PYTHONPATH=$(YODA_PYTHONPATH):$(RIVET_PYTHONPATH):$(PYTHONPATH) \
+    $(PYTHON) mk-analysis-json
+endif
 
+
+if WITH_ASCIIDOC
+DOCS += compare-histos.html make-plots.html
+EXTRA_DIST += compare-histos.html make-plots.html
+
+compare-histos.html: compare-histos.txt
+	asciidoc -a toc compare-histos.txt
+
+make-plots.html: make-plots.txt
+	asciidoc -a toc make-plots.txt
+endif
+
+
+if ENABLE_PDFMANUAL
+if WITH_PDFLATEX
 DOCS += rivet-manual.pdf
-EXTRA_DIST += refs.bib
 
 if ENABLE_PYEXT
-analyses.bib analyses.tex: $(top_srcdir)/src/Analyses $(top_srcdir)/data/plotinfo $(top_srcdir)/data/anainfo mk-analysis-latex
+analyses.bib analyses.tex: $(top_srcdir)/analyses mk-analysis-latex
 	LD_LIBRARY_PATH=$(top_builddir)/src/.libs:$(YAML_CPPLIBPATH):$(FASTJETLIBPATH):$(HEPMCLIBPATH):$(YODALIBPATH):$(LD_LIBRARY_PATH) \
     DYLD_LIBRARY_PATH=$(top_builddir)/src/.libs:$(YAML_CPPLIBPATH):$(FASTJETLIBPATH):$(HEPMCLIBPATH):$(YODALIBPATH):$(DYLD_LIBRARY_PATH) \
     PYTHONPATH=$(YODA_PYTHONPATH):$(RIVET_PYTHONPATH):$(PYTHONPATH) \
@@ -61,20 +86,6 @@ endif
 endif
 
 
-if WITH_ASCIIDOC
-
-DOCS += compare-histos.html make-plots.html
-EXTRA_DIST += compare-histos.html make-plots.html
-
-compare-histos.html: compare-histos.txt
-	asciidoc -a toc compare-histos.txt
-
-make-plots.html: make-plots.txt
-	asciidoc -a toc make-plots.txt
-
-endif
-
-
 ################
 
 
@@ -83,10 +94,10 @@ endif
 doc: $(DOCS)
 	@true
 
-RSH=rsync
-DEST=login.hepforge.org:rivet/public_html/
-upload: $(DOCS)
-	$(RSH) $? $(DEST)
+RSH = rsync
+DEST = login.hepforge.org:rivet/public_html/
+upload: $(DOCS) $(DOCDIRS)
+	$(RSH) -r $? $(DEST)
 
 arxivtar: $(DOCSOURCES) rivet-manual.bbl
 	for i in *.png; do convert $$i $${i/.png/.eps}; done
@@ -96,11 +107,21 @@ hepnames.sty hepnicenames.sty hepparticles.sty heppennames.sty hepunits.sty mayb
 bend.eps cone.eps thinker.eps slip.eps \
 h-physrev3.bst JHEP3.cls JHEP.bst
 
+
+## Install!
+pkgdata_DATA = $(DOCS)
+
+install-data-local: doc
+	@$(NORMAL_INSTALL)
+	test "$(DOCDIRS)" && cp -r $(DOCDIRS) $(DESTDIR)$(pkgdatadir)/
+
+uninstall-local:
+	@$(NORMAL_UNINSTALL)
+	rm -rf $(DESTDIR)$(pkgdatadir)/analyses
+
+
 mostlyclean-local:
 	rm -rf *.aux *.log *.toc
 
 clean-local:
-	rm -rf $(DOCS)
-
-## Install!
-pkgdata_DATA = $(DOCS)
+	rm -rf $(DOCS) $(DOCDIRS)

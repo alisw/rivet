@@ -4,7 +4,6 @@
 #include "Rivet/Math/MathHeader.hh"
 #include "Rivet/Math/MathUtils.hh"
 #include "Rivet/Math/VectorN.hh"
-#include <cfloat>
 
 namespace Rivet {
 
@@ -56,12 +55,16 @@ namespace Rivet {
 
     ~Vector3() { }
 
+
   public:
+
     static Vector3 mkX() { return Vector3(1,0,0); }
     static Vector3 mkY() { return Vector3(0,1,0); }
     static Vector3 mkZ() { return Vector3(0,0,1); }
 
+
   public:
+
     double x() const { return get(0); }
     double y() const { return get(1); }
     double z() const { return get(2); }
@@ -69,16 +72,20 @@ namespace Rivet {
     Vector3& setY(double y) { set(1, y); return *this; }
     Vector3& setZ(double z) { set(2, z); return *this; }
 
+
+    /// Dot-product with another vector
     double dot(const Vector3& v) const {
       return _vec.dot(v._vec);
     }
 
+    /// Cross-product with another vector
     Vector3 cross(const Vector3& v) const {
       Vector3 result;
       result._vec = _vec.cross(v._vec);
       return result;
     }
 
+    /// Angle in radians to another vector
     double angle(const Vector3& v) const {
       const double localDotOther = unit().dot(v.unit());
       if (localDotOther > 1.0) return 0.0;
@@ -86,35 +93,56 @@ namespace Rivet {
       return acos(localDotOther);
     }
 
-    Vector3 unit() const {
+
+    /// Unit-normalized version of this vector
+    Vector3 unitVec() const {
       /// @todo What to do in this situation?
       if (isZero()) return *this;
       else return *this * 1.0/this->mod();
     }
 
+    /// Synonym for unitVec
+    Vector3 unit() const {
+      return unitVec();
+    }
+
+
+    /// Polar projection of this vector into the x-y plane
+    Vector3 polarVec() const {
+      Vector3 rtn = *this;
+      rtn.setZ(0.);
+      return rtn;
+    }
+    /// Synonym for polarVec
+    Vector3 perpVec() const {
+      return polarVec();
+    }
+    /// Synonym for polarVec
+    Vector3 rhoVec() const {
+      return polarVec();
+    }
+
+    /// Square of the polar radius (
     double polarRadius2() const {
       return x()*x() + y()*y();
     }
-
     /// Synonym for polarRadius2
     double perp2() const {
       return polarRadius2();
     }
-
     /// Synonym for polarRadius2
     double rho2() const {
       return polarRadius2();
     }
 
+    /// Polar radius
     double polarRadius() const {
       return sqrt(polarRadius2());
     }
-
     /// Synonym for polarRadius
     double perp() const {
       return polarRadius();
     }
-
     /// Synonym for polarRadius
     double rho() const {
       return polarRadius();
@@ -129,7 +157,6 @@ namespace Rivet {
       const double value = atan2( y(), x() );
       return mapAngle(value, mapping);
     }
-
     /// Synonym for azimuthalAngle.
     double phi(const PhiMapping mapping = ZERO_2PI) const {
       return azimuthalAngle(mapping);
@@ -147,9 +174,11 @@ namespace Rivet {
       return polarAngle();
     }
 
-    /// Purely geometric approximation to rapidity; exact for massless particles
-    /// and in the central region.
-    // cut-off such that |eta| < log(2/DBL_EPSILON)
+    /// Purely geometric approximation to rapidity
+    ///
+    /// Also invariant under z-boosts, equal to y for massless particles.
+    ///
+    /// @note A cut-off is applied such that |eta| < log(2/DBL_EPSILON)
     double pseudorapidity() const {
       const double epsilon = DBL_EPSILON;
       double m = mod();
@@ -159,10 +188,16 @@ namespace Rivet {
       return z() > 0.0 ? rap: -rap;
     }
 
-    /// Synonym for pseudorapidity.
+    /// Synonym for pseudorapidity
     double eta() const {
       return pseudorapidity();
     }
+
+    /// Convenience shortcut for fabs(eta())
+    double abseta() const {
+      return fabs(eta());
+    }
+
 
   public:
     Vector3& operator*=(const double a) {
@@ -300,19 +335,34 @@ namespace Rivet {
   //@{
 
   /// Calculate the 2D rapidity-azimuthal ("eta-phi") distance between two spatial vectors.
+  inline double deltaR2(const Vector3& a, const Vector3& b) {
+    return deltaR2(a.pseudorapidity(), a.azimuthalAngle(),
+                   b.pseudorapidity(), b.azimuthalAngle());
+  }
+
+  /// Calculate the 2D rapidity-azimuthal ("eta-phi") distance between two spatial vectors.
   inline double deltaR(const Vector3& a, const Vector3& b) {
-    return deltaR(a.pseudorapidity(), a.azimuthalAngle(),
-                  b.pseudorapidity(), b.azimuthalAngle());
+    return sqrt(deltaR2(a,b));
+  }
+
+  /// Calculate the 2D rapidity-azimuthal ("eta-phi") distance between two spatial vectors.
+  inline double deltaR2(const Vector3& v, double eta2, double phi2) {
+    return deltaR2(v.pseudorapidity(), v.azimuthalAngle(), eta2, phi2);
   }
 
   /// Calculate the 2D rapidity-azimuthal ("eta-phi") distance between two spatial vectors.
   inline double deltaR(const Vector3& v, double eta2, double phi2) {
-    return deltaR(v.pseudorapidity(), v.azimuthalAngle(), eta2, phi2);
+    return sqrt(deltaR2(v, eta2, phi2));
+  }
+
+  /// Calculate the 2D rapidity-azimuthal ("eta-phi") distance between two spatial vectors.
+  inline double deltaR2(double eta1, double phi1, const Vector3& v) {
+    return deltaR2(eta1, phi1, v.pseudorapidity(), v.azimuthalAngle());
   }
 
   /// Calculate the 2D rapidity-azimuthal ("eta-phi") distance between two spatial vectors.
   inline double deltaR(double eta1, double phi1, const Vector3& v) {
-    return deltaR(eta1, phi1, v.pseudorapidity(), v.azimuthalAngle());
+    return sqrt(deltaR2(eta1, phi1, v));
   }
 
   //@}

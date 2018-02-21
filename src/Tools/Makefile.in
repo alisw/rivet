@@ -91,14 +91,15 @@ build_triplet = @build@
 host_triplet = @host@
 subdir = src/Tools
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps = $(top_srcdir)/m4/ax_cxx_compile_stdcxx.m4 \
-	$(top_srcdir)/m4/cxx.m4 $(top_srcdir)/m4/cython.m4 \
-	$(top_srcdir)/m4/gsl.m4 $(top_srcdir)/m4/lcg.m4 \
+am__aclocal_m4_deps = $(top_srcdir)/m4/ax_check_zlib.m4 \
+	$(top_srcdir)/m4/ax_cxx_compile_stdcxx.m4 \
+	$(top_srcdir)/m4/ax_openmp.m4 \
+	$(top_srcdir)/m4/ax_python_devel.m4 $(top_srcdir)/m4/cxx.m4 \
+	$(top_srcdir)/m4/cython.m4 $(top_srcdir)/m4/lcg.m4 \
 	$(top_srcdir)/m4/libtool.m4 $(top_srcdir)/m4/ltoptions.m4 \
 	$(top_srcdir)/m4/ltsugar.m4 $(top_srcdir)/m4/ltversion.m4 \
 	$(top_srcdir)/m4/lt~obsolete.m4 $(top_srcdir)/m4/osx.m4 \
-	$(top_srcdir)/m4/pkgchecks.m4 $(top_srcdir)/m4/python.m4 \
-	$(top_srcdir)/configure.ac
+	$(top_srcdir)/m4/pkgchecks.m4 $(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
 DIST_COMMON = $(srcdir)/Makefile.am $(dist_noinst_HEADERS) \
@@ -112,11 +113,12 @@ CONFIG_CLEAN_VPATH_FILES =
 LTLIBRARIES = $(noinst_LTLIBRARIES)
 libRivetTools_la_LIBADD =
 am_libRivetTools_la_OBJECTS = libRivetTools_la-BinnedHistogram.lo \
-	libRivetTools_la-Cuts.lo libRivetTools_la-Logging.lo \
+	libRivetTools_la-Cuts.lo libRivetTools_la-JetUtils.lo \
+	libRivetTools_la-Random.lo libRivetTools_la-Logging.lo \
+	libRivetTools_la-ParticleUtils.lo \
 	libRivetTools_la-ParticleName.lo libRivetTools_la-RivetYODA.lo \
 	libRivetTools_la-RivetMT2.lo libRivetTools_la-RivetPaths.lo \
-	libRivetTools_la-Utils.lo libRivetTools_la-binreloc.lo \
-	libRivetTools_la-mt2_bisect.lo
+	libRivetTools_la-Utils.lo libRivetTools_la-binreloc.lo
 libRivetTools_la_OBJECTS = $(am_libRivetTools_la_OBJECTS)
 AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
@@ -249,15 +251,6 @@ FASTJETPATH = @FASTJETPATH@
 FGREP = @FGREP@
 FJCONFIG = @FJCONFIG@
 GREP = @GREP@
-GSLCONFIG = @GSLCONFIG@
-GSLCPPFLAGS = @GSLCPPFLAGS@
-GSLINCNAME = @GSLINCNAME@
-GSLINCPATH = @GSLINCPATH@
-GSLLIBPATH = @GSLLIBPATH@
-GSLPATH = @GSLPATH@
-GSL_CPPFLAGS = @GSL_CPPFLAGS@
-GSL_CXXFLAGS = @GSL_CXXFLAGS@
-GSL_LDFLAGS = @GSL_LDFLAGS@
 HAVE_CXX11 = @HAVE_CXX11@
 HEPMCCPPFLAGS = @HEPMCCPPFLAGS@
 HEPMCINCNAME = @HEPMCINCNAME@
@@ -306,14 +299,20 @@ PATH_SEPARATOR = @PATH_SEPARATOR@
 PDFLATEX = @PDFLATEX@
 PYEXT_CXXFLAGS = @PYEXT_CXXFLAGS@
 PYTHON = @PYTHON@
+PYTHON_CPPFLAGS = @PYTHON_CPPFLAGS@
 PYTHON_EXEC_PREFIX = @PYTHON_EXEC_PREFIX@
+PYTHON_EXTRA_LDFLAGS = @PYTHON_EXTRA_LDFLAGS@
+PYTHON_EXTRA_LIBS = @PYTHON_EXTRA_LIBS@
+PYTHON_LIBS = @PYTHON_LIBS@
 PYTHON_PLATFORM = @PYTHON_PLATFORM@
 PYTHON_PREFIX = @PYTHON_PREFIX@
+PYTHON_SITE_PKG = @PYTHON_SITE_PKG@
 PYTHON_VERSION = @PYTHON_VERSION@
 RANLIB = @RANLIB@
 RIVETCXX = @RIVETCXX@
 RIVETCXXFLAGS = @RIVETCXXFLAGS@
 RIVET_PYTHONPATH = @RIVET_PYTHONPATH@
+RIVET_SETUP_PY_PATH = @RIVET_SETUP_PY_PATH@
 SED = @SED@
 SET_MAKE = @SET_MAKE@
 SHELL = @SHELL@
@@ -382,6 +381,7 @@ program_transform_name = @program_transform_name@
 psdir = @psdir@
 pyexecdir = @pyexecdir@
 pythondir = @pythondir@
+runstatedir = @runstatedir@
 sbindir = @sbindir@
 sharedstatedir = @sharedstatedir@
 srcdir = @srcdir@
@@ -394,16 +394,19 @@ noinst_LTLIBRARIES = libRivetTools.la
 libRivetTools_la_SOURCES = \
   BinnedHistogram.cc \
   Cuts.cc \
+  JetUtils.cc \
+  Random.cc \
   Logging.cc \
+  ParticleUtils.cc \
   ParticleName.cc \
   RivetYODA.cc \
   RivetMT2.cc \
   RivetPaths.cc \
   Utils.cc \
-  binreloc.c \
-  mt2_bisect.cc
+  binreloc.c
 
-dist_noinst_HEADERS = binreloc.h mt2_bisect.hh
+#  mt2_bisect.cc
+dist_noinst_HEADERS = binreloc.h lester_mt2_bisect.hh mt2_bisect.hh
 libRivetTools_la_CPPFLAGS = $(AM_CPPFLAGS) -DENABLE_BINRELOC -DDEFAULTDATADIR=\"$(datadir)\" -DDEFAULTLIBDIR=\"$(libdir)\"
 all: all-am
 
@@ -461,14 +464,16 @@ distclean-compile:
 
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libRivetTools_la-BinnedHistogram.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libRivetTools_la-Cuts.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libRivetTools_la-JetUtils.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libRivetTools_la-Logging.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libRivetTools_la-ParticleName.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libRivetTools_la-ParticleUtils.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libRivetTools_la-Random.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libRivetTools_la-RivetMT2.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libRivetTools_la-RivetPaths.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libRivetTools_la-RivetYODA.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libRivetTools_la-Utils.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libRivetTools_la-binreloc.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libRivetTools_la-mt2_bisect.Plo@am__quote@
 
 .c.o:
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
@@ -533,12 +538,33 @@ libRivetTools_la-Cuts.lo: Cuts.cc
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libRivetTools_la_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o libRivetTools_la-Cuts.lo `test -f 'Cuts.cc' || echo '$(srcdir)/'`Cuts.cc
 
+libRivetTools_la-JetUtils.lo: JetUtils.cc
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libRivetTools_la_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT libRivetTools_la-JetUtils.lo -MD -MP -MF $(DEPDIR)/libRivetTools_la-JetUtils.Tpo -c -o libRivetTools_la-JetUtils.lo `test -f 'JetUtils.cc' || echo '$(srcdir)/'`JetUtils.cc
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libRivetTools_la-JetUtils.Tpo $(DEPDIR)/libRivetTools_la-JetUtils.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='JetUtils.cc' object='libRivetTools_la-JetUtils.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libRivetTools_la_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o libRivetTools_la-JetUtils.lo `test -f 'JetUtils.cc' || echo '$(srcdir)/'`JetUtils.cc
+
+libRivetTools_la-Random.lo: Random.cc
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libRivetTools_la_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT libRivetTools_la-Random.lo -MD -MP -MF $(DEPDIR)/libRivetTools_la-Random.Tpo -c -o libRivetTools_la-Random.lo `test -f 'Random.cc' || echo '$(srcdir)/'`Random.cc
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libRivetTools_la-Random.Tpo $(DEPDIR)/libRivetTools_la-Random.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='Random.cc' object='libRivetTools_la-Random.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libRivetTools_la_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o libRivetTools_la-Random.lo `test -f 'Random.cc' || echo '$(srcdir)/'`Random.cc
+
 libRivetTools_la-Logging.lo: Logging.cc
 @am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libRivetTools_la_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT libRivetTools_la-Logging.lo -MD -MP -MF $(DEPDIR)/libRivetTools_la-Logging.Tpo -c -o libRivetTools_la-Logging.lo `test -f 'Logging.cc' || echo '$(srcdir)/'`Logging.cc
 @am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libRivetTools_la-Logging.Tpo $(DEPDIR)/libRivetTools_la-Logging.Plo
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='Logging.cc' object='libRivetTools_la-Logging.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libRivetTools_la_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o libRivetTools_la-Logging.lo `test -f 'Logging.cc' || echo '$(srcdir)/'`Logging.cc
+
+libRivetTools_la-ParticleUtils.lo: ParticleUtils.cc
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libRivetTools_la_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT libRivetTools_la-ParticleUtils.lo -MD -MP -MF $(DEPDIR)/libRivetTools_la-ParticleUtils.Tpo -c -o libRivetTools_la-ParticleUtils.lo `test -f 'ParticleUtils.cc' || echo '$(srcdir)/'`ParticleUtils.cc
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libRivetTools_la-ParticleUtils.Tpo $(DEPDIR)/libRivetTools_la-ParticleUtils.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='ParticleUtils.cc' object='libRivetTools_la-ParticleUtils.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libRivetTools_la_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o libRivetTools_la-ParticleUtils.lo `test -f 'ParticleUtils.cc' || echo '$(srcdir)/'`ParticleUtils.cc
 
 libRivetTools_la-ParticleName.lo: ParticleName.cc
 @am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libRivetTools_la_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT libRivetTools_la-ParticleName.lo -MD -MP -MF $(DEPDIR)/libRivetTools_la-ParticleName.Tpo -c -o libRivetTools_la-ParticleName.lo `test -f 'ParticleName.cc' || echo '$(srcdir)/'`ParticleName.cc
@@ -574,13 +600,6 @@ libRivetTools_la-Utils.lo: Utils.cc
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='Utils.cc' object='libRivetTools_la-Utils.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libRivetTools_la_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o libRivetTools_la-Utils.lo `test -f 'Utils.cc' || echo '$(srcdir)/'`Utils.cc
-
-libRivetTools_la-mt2_bisect.lo: mt2_bisect.cc
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libRivetTools_la_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT libRivetTools_la-mt2_bisect.lo -MD -MP -MF $(DEPDIR)/libRivetTools_la-mt2_bisect.Tpo -c -o libRivetTools_la-mt2_bisect.lo `test -f 'mt2_bisect.cc' || echo '$(srcdir)/'`mt2_bisect.cc
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libRivetTools_la-mt2_bisect.Tpo $(DEPDIR)/libRivetTools_la-mt2_bisect.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='mt2_bisect.cc' object='libRivetTools_la-mt2_bisect.lo' libtool=yes @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libRivetTools_la_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o libRivetTools_la-mt2_bisect.lo `test -f 'mt2_bisect.cc' || echo '$(srcdir)/'`mt2_bisect.cc
 
 mostlyclean-libtool:
 	-rm -f *.lo

@@ -32,7 +32,7 @@ namespace Rivet {
                       // PXCONE,
                       ATLASCONE, CMSCONE,
                       CDFJETCLU, CDFMIDPOINT, D0ILCONE,
-                      JADE, DURHAM, TRACKJET };
+                      JADE, DURHAM, TRACKJET, GENKTEE };
 
 
     /// @name Constructors etc.
@@ -150,6 +150,19 @@ namespace Rivet {
     //@}
 
 
+    /// @name Static helper functions for FastJet interaction, with tagging
+    //@{
+
+    /// Make PseudoJets for input to a ClusterSequence, with user_index codes for constituent- and tag-particle linking
+    static PseudoJets mkClusterInputs(const Particles& fsparticles, const Particles& tagparticles=Particles());
+    /// Make a Rivet Jet from a PseudoJet holding a user_index code for lookup of Rivet fsparticle or tagparticle links
+    static Jet mkJet(const PseudoJet& pj, const Particles& fsparticles, const Particles& tagparticles=Particles());
+    /// Convert a whole list of PseudoJets to a list of Jets, with mkJet-style unpacking
+    static Jets mkJets(const PseudoJets& pjs, const Particles& fsparticles, const Particles& tagparticles=Particles());
+
+    //@}
+
+
     /// Reset the projection. Jet def, etc. are unchanged.
     void reset();
 
@@ -209,18 +222,12 @@ namespace Rivet {
     const shared_ptr<fastjet::ClusterSequence> clusterSeq() const {
       return _cseq;
     }
-    // const fastjet::ClusterSequence* clusterSeq() const {
-    //   return _cseq.get();
-    // }
 
     /// Return the area-enabled cluster sequence (if an area defn exists, otherwise returns a null ptr).
     /// @todo Care needed re. const shared_ptr<T> vs. shared_ptr<const T>
     const shared_ptr<fastjet::ClusterSequenceArea> clusterSeqArea() const {
       return areaDef() ? dynamic_pointer_cast<fastjet::ClusterSequenceArea>(_cseq) : nullptr;
     }
-    // const fastjet::ClusterSequenceArea* clusterSeqArea() const {
-    //   return areaDef() ? dynamic_cast<fastjet::ClusterSequenceArea*>(_cseq.get()) : nullptr;
-    // }
 
     /// Return the jet definition.
     const fastjet::JetDefinition& jetDef() const {
@@ -234,9 +241,6 @@ namespace Rivet {
     const shared_ptr<fastjet::AreaDefinition> areaDef() const {
       return _adef;
     }
-    // const fastjet::AreaDefinition* areaDef() const {
-    //   return _adef.get();
-    // }
 
     //@}
 
@@ -244,15 +248,8 @@ namespace Rivet {
   private:
 
     /// Shared utility functions to implement constructor behaviour
-    /// @todo Replace with calls between constructors when C++11 available?
     void _initBase();
     void _initJdef(JetAlgName alg, double rparameter, double seed_threshold);
-    // void _init2(fastjet::JetAlgorithm type, fastjet::RecombinationScheme recom, double rparameter);
-    // void _init3(const fastjet::JetDefinition& plugin);
-    // void _init4(fastjet::JetDefinition::Plugin* plugin);
-
-    /// Function to make Rivet::Jet from fastjet::PseudoJet, including constituent and tag info
-    Jet _mkJet(const PseudoJet& pj) const;
 
   protected:
 
@@ -285,9 +282,8 @@ namespace Rivet {
     /// Map of vectors of y scales. This is mutable so we can use caching/lazy evaluation.
     mutable std::map<int, vector<double> > _yscales;
 
-    /// set of particles sorted by their PT2
-    //set<Particle, ParticleBase::byPTAscending> _particles;
-    std::map<int, Particle> _particles;
+    /// Particles used for constituent and tag lookup
+    Particles _fsparticles, _tagparticles;
 
   };
 

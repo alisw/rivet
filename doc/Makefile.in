@@ -89,21 +89,22 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = @build@
 host_triplet = @host@
-@ENABLE_PDFMANUAL_TRUE@@ENABLE_PYEXT_TRUE@am__append_1 = analyses.html
-@ENABLE_PDFMANUAL_TRUE@@WITH_PDFLATEX_TRUE@am__append_2 = rivet-manual.pdf
-@ENABLE_PDFMANUAL_TRUE@@WITH_PDFLATEX_TRUE@am__append_3 = refs.bib
+@ENABLE_PYEXT_TRUE@am__append_1 = analyses.html analyses.json
+@ENABLE_PYEXT_TRUE@am__append_2 = analyses
+@WITH_ASCIIDOC_TRUE@am__append_3 = compare-histos.html make-plots.html
 @WITH_ASCIIDOC_TRUE@am__append_4 = compare-histos.html make-plots.html
-@WITH_ASCIIDOC_TRUE@am__append_5 = compare-histos.html make-plots.html
+@ENABLE_PDFMANUAL_TRUE@@WITH_PDFLATEX_TRUE@am__append_5 = rivet-manual.pdf
 subdir = doc
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps = $(top_srcdir)/m4/ax_cxx_compile_stdcxx.m4 \
-	$(top_srcdir)/m4/cxx.m4 $(top_srcdir)/m4/cython.m4 \
-	$(top_srcdir)/m4/gsl.m4 $(top_srcdir)/m4/lcg.m4 \
+am__aclocal_m4_deps = $(top_srcdir)/m4/ax_check_zlib.m4 \
+	$(top_srcdir)/m4/ax_cxx_compile_stdcxx.m4 \
+	$(top_srcdir)/m4/ax_openmp.m4 \
+	$(top_srcdir)/m4/ax_python_devel.m4 $(top_srcdir)/m4/cxx.m4 \
+	$(top_srcdir)/m4/cython.m4 $(top_srcdir)/m4/lcg.m4 \
 	$(top_srcdir)/m4/libtool.m4 $(top_srcdir)/m4/ltoptions.m4 \
 	$(top_srcdir)/m4/ltsugar.m4 $(top_srcdir)/m4/ltversion.m4 \
 	$(top_srcdir)/m4/lt~obsolete.m4 $(top_srcdir)/m4/osx.m4 \
-	$(top_srcdir)/m4/pkgchecks.m4 $(top_srcdir)/m4/python.m4 \
-	$(top_srcdir)/configure.ac
+	$(top_srcdir)/m4/pkgchecks.m4 $(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
 DIST_COMMON = $(srcdir)/Makefile.am $(dist_noinst_SCRIPTS) \
@@ -112,7 +113,7 @@ mkinstalldirs = $(install_sh) -d
 CONFIG_HEADER = $(top_builddir)/include/Rivet/Config/DummyConfig.hh \
 	$(top_builddir)/include/Rivet/Config/RivetConfig.hh \
 	$(top_builddir)/include/Rivet/Config/BuildOptions.hh
-CONFIG_CLEAN_FILES = rivetversion.sty diffanas
+CONFIG_CLEAN_FILES = rivetversion.sty
 CONFIG_CLEAN_VPATH_FILES =
 SCRIPTS = $(dist_noinst_SCRIPTS)
 AM_V_P = $(am__v_P_@AM_V@)
@@ -164,8 +165,7 @@ am__uninstall_files_from_dir = { \
 am__installdirs = "$(DESTDIR)$(pkgdatadir)"
 DATA = $(pkgdata_DATA)
 am__tagged_files = $(HEADERS) $(SOURCES) $(TAGS_FILES) $(LISP)
-am__DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/diffanas.in \
-	$(srcdir)/rivetversion.sty.in
+am__DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/rivetversion.sty.in
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 ACLOCAL = @ACLOCAL@
 AMTAR = @AMTAR@
@@ -213,15 +213,6 @@ FASTJETPATH = @FASTJETPATH@
 FGREP = @FGREP@
 FJCONFIG = @FJCONFIG@
 GREP = @GREP@
-GSLCONFIG = @GSLCONFIG@
-GSLCPPFLAGS = @GSLCPPFLAGS@
-GSLINCNAME = @GSLINCNAME@
-GSLINCPATH = @GSLINCPATH@
-GSLLIBPATH = @GSLLIBPATH@
-GSLPATH = @GSLPATH@
-GSL_CPPFLAGS = @GSL_CPPFLAGS@
-GSL_CXXFLAGS = @GSL_CXXFLAGS@
-GSL_LDFLAGS = @GSL_LDFLAGS@
 HAVE_CXX11 = @HAVE_CXX11@
 HEPMCCPPFLAGS = @HEPMCCPPFLAGS@
 HEPMCINCNAME = @HEPMCINCNAME@
@@ -270,14 +261,20 @@ PATH_SEPARATOR = @PATH_SEPARATOR@
 PDFLATEX = @PDFLATEX@
 PYEXT_CXXFLAGS = @PYEXT_CXXFLAGS@
 PYTHON = @PYTHON@
+PYTHON_CPPFLAGS = @PYTHON_CPPFLAGS@
 PYTHON_EXEC_PREFIX = @PYTHON_EXEC_PREFIX@
+PYTHON_EXTRA_LDFLAGS = @PYTHON_EXTRA_LDFLAGS@
+PYTHON_EXTRA_LIBS = @PYTHON_EXTRA_LIBS@
+PYTHON_LIBS = @PYTHON_LIBS@
 PYTHON_PLATFORM = @PYTHON_PLATFORM@
 PYTHON_PREFIX = @PYTHON_PREFIX@
+PYTHON_SITE_PKG = @PYTHON_SITE_PKG@
 PYTHON_VERSION = @PYTHON_VERSION@
 RANLIB = @RANLIB@
 RIVETCXX = @RIVETCXX@
 RIVETCXXFLAGS = @RIVETCXXFLAGS@
 RIVET_PYTHONPATH = @RIVET_PYTHONPATH@
+RIVET_SETUP_PY_PATH = @RIVET_SETUP_PY_PATH@
 SED = @SED@
 SET_MAKE = @SET_MAKE@
 SHELL = @SHELL@
@@ -346,6 +343,7 @@ program_transform_name = @program_transform_name@
 psdir = @psdir@
 pyexecdir = @pyexecdir@
 pythondir = @pythondir@
+runstatedir = @runstatedir@
 sbindir = @sbindir@
 sharedstatedir = @sharedstatedir@
 srcdir = @srcdir@
@@ -354,15 +352,17 @@ target_alias = @target_alias@
 top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
-dist_noinst_SCRIPTS = mk-analysis-html mk-analysis-latex
+dist_noinst_SCRIPTS = mk-analysis-html mk-analysis-latex mk-analysis-json
 LATEXSUBSOURCES = preamble.tex intro.tex gettingstarted.tex writinganalyses.tex agilerunmc.tex acknowledgements.tex
-DOCSOURCES = compare-histos.txt slip.eps thinker.eps cone.eps bend.eps \
+DOCSOURCES = $(LATEXSUBSOURCES) \
+  compare-histos.txt slip.eps thinker.eps cone.eps bend.eps \
   h-physrev3.bst hepnames.sty JHEP3.cls JHEP.bst make-plots.txt rivet-manual.tex \
-  $(LATEXSUBSOURCES) heppennames.sty hepnicenames.sty hepparticles.sty maybemath.sty \
+  heppennames.sty hepnicenames.sty hepparticles.sty maybemath.sty \
   hepunits.sty underscore.sty microtype.sty
 
-EXTRA_DIST = $(DOCSOURCES) $(am__append_3) $(am__append_5)
-DOCS = $(am__append_1) $(am__append_2) $(am__append_4)
+EXTRA_DIST = $(DOCSOURCES) refs.bib $(am__append_4)
+DOCS = $(am__append_1) $(am__append_3) $(am__append_5)
+DOCDIRS = $(am__append_2)
 @ENABLE_PDFMANUAL_TRUE@@WITH_PDFLATEX_TRUE@LATEX = pdflatex --interaction=batchmode
 @ENABLE_PDFMANUAL_TRUE@@WITH_PDFLATEX_TRUE@RERUN = "(There were undefined references|Rerun to get (cross-references|the bars) right)"
 @ENABLE_PDFMANUAL_TRUE@@WITH_PDFLATEX_TRUE@RERUNBIB = "No file.*\.bbl|Citation.*undefined"
@@ -406,8 +406,6 @@ $(ACLOCAL_M4):  $(am__aclocal_m4_deps)
 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
 $(am__aclocal_m4_deps):
 rivetversion.sty: $(top_builddir)/config.status $(srcdir)/rivetversion.sty.in
-	cd $(top_builddir) && $(SHELL) ./config.status $(subdir)/$@
-diffanas: $(top_builddir)/config.status $(srcdir)/diffanas.in
 	cd $(top_builddir) && $(SHELL) ./config.status $(subdir)/$@
 
 mostlyclean-libtool:
@@ -530,7 +528,7 @@ info: info-am
 
 info-am:
 
-install-data-am: install-pkgdataDATA
+install-data-am: install-data-local install-pkgdataDATA
 
 install-dvi: install-dvi-am
 
@@ -575,32 +573,44 @@ ps: ps-am
 
 ps-am:
 
-uninstall-am: uninstall-pkgdataDATA
+uninstall-am: uninstall-local uninstall-pkgdataDATA
 
 .MAKE: install-am install-strip
 
 .PHONY: all all-am check check-am clean clean-generic clean-libtool \
 	clean-local cscopelist-am ctags-am distclean distclean-generic \
 	distclean-libtool distdir dvi dvi-am html html-am info info-am \
-	install install-am install-data install-data-am install-dvi \
-	install-dvi-am install-exec install-exec-am install-html \
-	install-html-am install-info install-info-am install-man \
-	install-pdf install-pdf-am install-pkgdataDATA install-ps \
-	install-ps-am install-strip installcheck installcheck-am \
-	installdirs maintainer-clean maintainer-clean-generic \
-	mostlyclean mostlyclean-generic mostlyclean-libtool \
-	mostlyclean-local pdf pdf-am ps ps-am tags-am uninstall \
-	uninstall-am uninstall-pkgdataDATA
+	install install-am install-data install-data-am \
+	install-data-local install-dvi install-dvi-am install-exec \
+	install-exec-am install-html install-html-am install-info \
+	install-info-am install-man install-pdf install-pdf-am \
+	install-pkgdataDATA install-ps install-ps-am install-strip \
+	installcheck installcheck-am installdirs maintainer-clean \
+	maintainer-clean-generic mostlyclean mostlyclean-generic \
+	mostlyclean-libtool mostlyclean-local pdf pdf-am ps ps-am \
+	tags-am uninstall uninstall-am uninstall-local \
+	uninstall-pkgdataDATA
 
 .PRECIOUS: Makefile
 
-@ENABLE_PDFMANUAL_TRUE@@ENABLE_PYEXT_TRUE@analyses.html: $(top_srcdir)/src/Analyses mk-analysis-html
-@ENABLE_PDFMANUAL_TRUE@@ENABLE_PYEXT_TRUE@	LD_LIBRARY_PATH=$(top_builddir)/src/.libs:$(YAML_CPPLIBPATH):$(FASTJETLIBPATH):$(HEPMCLIBPATH):$(YODALIBPATH):$(LD_LIBRARY_PATH) \
-@ENABLE_PDFMANUAL_TRUE@@ENABLE_PYEXT_TRUE@    DYLD_LIBRARY_PATH=$(top_builddir)/src/.libs:$(YAML_CPPLIBPATH):$(FASTJETLIBPATH):$(HEPMCLIBPATH):$(YODALIBPATH):$(DYLD_LIBRARY_PATH) \
-@ENABLE_PDFMANUAL_TRUE@@ENABLE_PYEXT_TRUE@    PYTHONPATH=$(YODA_PYTHONPATH):$(RIVET_PYTHONPATH):$(PYTHONPATH) \
-@ENABLE_PDFMANUAL_TRUE@@ENABLE_PYEXT_TRUE@    $(PYTHON) mk-analysis-html
+@ENABLE_PYEXT_TRUE@analyses.html: $(top_srcdir)/analyses mk-analysis-html
+@ENABLE_PYEXT_TRUE@	LD_LIBRARY_PATH=$(top_builddir)/src/.libs:$(YAML_CPPLIBPATH):$(FASTJETLIBPATH):$(HEPMCLIBPATH):$(YODALIBPATH):$(LD_LIBRARY_PATH) \
+@ENABLE_PYEXT_TRUE@    DYLD_LIBRARY_PATH=$(top_builddir)/src/.libs:$(YAML_CPPLIBPATH):$(FASTJETLIBPATH):$(HEPMCLIBPATH):$(YODALIBPATH):$(DYLD_LIBRARY_PATH) \
+@ENABLE_PYEXT_TRUE@    PYTHONPATH=$(YODA_PYTHONPATH):$(RIVET_PYTHONPATH):$(PYTHONPATH) \
+@ENABLE_PYEXT_TRUE@    $(PYTHON) mk-analysis-html
+@ENABLE_PYEXT_TRUE@analyses.json: $(top_srcdir)/analyses mk-analysis-json
+@ENABLE_PYEXT_TRUE@	LD_LIBRARY_PATH=$(top_builddir)/src/.libs:$(YAML_CPPLIBPATH):$(FASTJETLIBPATH):$(HEPMCLIBPATH):$(YODALIBPATH):$(LD_LIBRARY_PATH) \
+@ENABLE_PYEXT_TRUE@    DYLD_LIBRARY_PATH=$(top_builddir)/src/.libs:$(YAML_CPPLIBPATH):$(FASTJETLIBPATH):$(HEPMCLIBPATH):$(YODALIBPATH):$(DYLD_LIBRARY_PATH) \
+@ENABLE_PYEXT_TRUE@    PYTHONPATH=$(YODA_PYTHONPATH):$(RIVET_PYTHONPATH):$(PYTHONPATH) \
+@ENABLE_PYEXT_TRUE@    $(PYTHON) mk-analysis-json
 
-@ENABLE_PDFMANUAL_TRUE@@ENABLE_PYEXT_TRUE@@WITH_PDFLATEX_TRUE@analyses.bib analyses.tex: $(top_srcdir)/src/Analyses $(top_srcdir)/data/plotinfo $(top_srcdir)/data/anainfo mk-analysis-latex
+@WITH_ASCIIDOC_TRUE@compare-histos.html: compare-histos.txt
+@WITH_ASCIIDOC_TRUE@	asciidoc -a toc compare-histos.txt
+
+@WITH_ASCIIDOC_TRUE@make-plots.html: make-plots.txt
+@WITH_ASCIIDOC_TRUE@	asciidoc -a toc make-plots.txt
+
+@ENABLE_PDFMANUAL_TRUE@@ENABLE_PYEXT_TRUE@@WITH_PDFLATEX_TRUE@analyses.bib analyses.tex: $(top_srcdir)/analyses mk-analysis-latex
 @ENABLE_PDFMANUAL_TRUE@@ENABLE_PYEXT_TRUE@@WITH_PDFLATEX_TRUE@	LD_LIBRARY_PATH=$(top_builddir)/src/.libs:$(YAML_CPPLIBPATH):$(FASTJETLIBPATH):$(HEPMCLIBPATH):$(YODALIBPATH):$(LD_LIBRARY_PATH) \
 @ENABLE_PDFMANUAL_TRUE@@ENABLE_PYEXT_TRUE@@WITH_PDFLATEX_TRUE@    DYLD_LIBRARY_PATH=$(top_builddir)/src/.libs:$(YAML_CPPLIBPATH):$(FASTJETLIBPATH):$(HEPMCLIBPATH):$(YODALIBPATH):$(DYLD_LIBRARY_PATH) \
 @ENABLE_PDFMANUAL_TRUE@@ENABLE_PYEXT_TRUE@@WITH_PDFLATEX_TRUE@    PYTHONPATH=$(YODA_PYTHONPATH):$(RIVET_PYTHONPATH):$(PYTHONPATH) \
@@ -623,16 +633,10 @@ uninstall-am: uninstall-pkgdataDATA
 @ENABLE_PDFMANUAL_TRUE@@WITH_PDFLATEX_TRUE@	if cmp -s paper.toc paper.toc.bak; then true; else $(LATEX) $<; true; fi
 @ENABLE_PDFMANUAL_TRUE@@WITH_PDFLATEX_TRUE@	rm -f paper.toc.bak; true
 
-@WITH_ASCIIDOC_TRUE@compare-histos.html: compare-histos.txt
-@WITH_ASCIIDOC_TRUE@	asciidoc -a toc compare-histos.txt
-
-@WITH_ASCIIDOC_TRUE@make-plots.html: make-plots.txt
-@WITH_ASCIIDOC_TRUE@	asciidoc -a toc make-plots.txt
-
 doc: $(DOCS)
 	@true
-upload: $(DOCS)
-	$(RSH) $? $(DEST)
+upload: $(DOCS) $(DOCDIRS)
+	$(RSH) -r $? $(DEST)
 
 arxivtar: $(DOCSOURCES) rivet-manual.bbl
 	for i in *.png; do convert $$i $${i/.png/.eps}; done
@@ -642,11 +646,19 @@ hepnames.sty hepnicenames.sty hepparticles.sty heppennames.sty hepunits.sty mayb
 bend.eps cone.eps thinker.eps slip.eps \
 h-physrev3.bst JHEP3.cls JHEP.bst
 
+install-data-local: doc
+	@$(NORMAL_INSTALL)
+	test "$(DOCDIRS)" && cp -r $(DOCDIRS) $(DESTDIR)$(pkgdatadir)/
+
+uninstall-local:
+	@$(NORMAL_UNINSTALL)
+	rm -rf $(DESTDIR)$(pkgdatadir)/analyses
+
 mostlyclean-local:
 	rm -rf *.aux *.log *.toc
 
 clean-local:
-	rm -rf $(DOCS)
+	rm -rf $(DOCS) $(DOCDIRS)
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.
