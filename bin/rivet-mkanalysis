@@ -135,7 +135,7 @@ for ANANAME in ANANAMES:
             #
             hdurl = None
             if INSPIRE_SPIRES == "I":
-                hdurl = "http://www.hepdata.net/record/ins%s?format=yoda&rivet=%s" % (ANAINSPIREID, ANANAME)
+                hdurl = "https://www.hepdata.net/record/ins%s?format=yoda&rivet=%s" % (ANAINSPIREID, ANANAME)
             if not hdurl:
                 raise Exception("Couldn't identify a URL for getting reference data from HepData")
             logging.info("Getting data file from HepData at %s" % hdurl)
