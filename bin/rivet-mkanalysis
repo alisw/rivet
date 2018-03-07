@@ -136,7 +136,7 @@ for ANANAME in ANANAMES:
             #
             hdurl = None
             if INSPIRE_SPIRES == "I":
-                hdurl = "http://www.hepdata.net/record/ins%s?format=yoda" % ANAINSPIREID
+                hdurl = "https://www.hepdata.net/record/ins%s?format=yoda" % ANAINSPIREID
             if hdurl:
                 logging.debug("Getting data file from HepData at %s" % hdurl)
                 response = urlopen(hdurl)
@@ -144,7 +144,7 @@ for ANANAME in ANANAMES:
                 if not download or "<html" in download:
                     logging.warning("Problem encountered when getting data from HepData (%s). No reference data file written." % hdurl)
                 else:
-                    tar = tarfile.open(mode= "r:gz", fileobj = io.StringIO(download))
+                    tar = tarfile.open(mode= "r:gz", fileobj = io.BytesIO(download))
                     fnames = tar.getnames()
                     if len(fnames)>1:
                         logging.warning("Found more than one file on downloaded archive. Not writing data file")
