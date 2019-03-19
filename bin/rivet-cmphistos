@@ -62,7 +62,7 @@ def getCommandLineOptions():
     stygroup = OptionGroup(parser, "Plot style")
     stygroup.add_option("--linear", action="store_true", dest="LINEAR",
                         default=False, help="plot with linear scale")
-    stygroup.add_option("--errs", "--mc-errs", action="store_true", dest="MC_ERRS",
+    stygroup.add_option("--errs", "--mcerrs", "--mc-errs", action="store_true", dest="MC_ERRS",
                         default=False, help="show vertical error bars on the MC lines")
     stygroup.add_option("--no-ratio", action="store_false", dest="RATIO",
                         default=True, help="disable the ratio plot")
@@ -115,13 +115,13 @@ def getHistos(filelist):
         for path, ao in analysisobjects.items():
             ## We can't plot non-histograms yet
             # TODO: support counter plotting with a faked x (or y) position and forced plot width/height
-            if ao.type not in ("Counter", 
-                               "Histo1D", 
-                               "Histo2D", 
-                               "Profile1D", 
-                               "Profile2D", 
-                               "Scatter1D", 
-                               "Scatter2D", 
+            if ao.type not in ("Counter",
+                               "Histo1D",
+                               "Histo2D",
+                               "Profile1D",
+                               "Profile2D",
+                               "Scatter1D",
+                               "Scatter2D",
                                "Scatter3D"):
                 continue
 
@@ -134,7 +134,7 @@ def getHistos(filelist):
                 continue
 
             ## We don't plot data objects with path components hidden by an underscore prefix
-            if aop.istmp():
+            if aop.istmp() or aop.israw():
                 continue
 
             ## Add it to the ref or mc paths, if this path isn't already known
@@ -305,6 +305,7 @@ if __name__ == '__main__':
     ## Split the input file names and the associated plotting options
     ## given on the command line into two separate lists
     filelist, plotoptions = parseArgs(args)
+
     ## Remove the PLOT dummy file from the file list
     if "PLOT" in filelist:
         filelist.remove("PLOT")
@@ -328,12 +329,13 @@ if __name__ == '__main__':
     hpaths, h2ds = [], []
     for aos in mchistos.values():
         for p in aos.keys():
-            if p and p not in hpaths:
-                hpaths.append(p)
+            ps = rivet.stripOptions(p)
+            if ps and ps not in hpaths:
+                hpaths.append(ps)
             firstaop = aos[p][sorted(aos[p].keys())[0]]
             # TODO: Would be nicer to test via isHisto and dim or similar, or yoda.Scatter/Histo/Profile base classes
-            if type(firstaop) in (yoda.Histo2D, yoda.Profile2D) and p not in h2ds:
-                h2ds.append(p)
+            if type(firstaop) in (yoda.Histo2D, yoda.Profile2D) and ps not in h2ds:
+                h2ds.append(ps)
 
     ## Take reference data from the Rivet search paths, if there is not already
     if opts.RIVETREFS:
@@ -380,7 +382,10 @@ if __name__ == '__main__':
         #     plot[key] = val
         if "PLOT" in plotoptions:
             for key_val in plotoptions["PLOT"]:
-                key, val = [s.strip() for s in key_val.split("=",1)]
+                key, val = [s.strip() for s in key_val.split("=", 1)]
+                if 'ReplaceOption' in key_val:
+                    opt_group = key_val.split("=", 2)
+                    key, val = "=".join(opt_group[:2]), opt_group[2]
                 plot[key] = val
         if opts.LINEAR:
             plot['LogY'] = '0'
@@ -422,43 +427,49 @@ if __name__ == '__main__':
         ## Loop over the MC files to plot all instances of the histogram
         styleidx = 0
         for infile in filelist:
-            if infile in mchistos and hpath in mchistos[infile]:
-                hmcs = mchistos[infile][hpath]
-                ## For now, just plot all the different variation histograms (reversed, so [0] is on top)
-                # TODO: calculate and plot an appropriate error band, somehow...
-                for i in sorted(hmcs.keys(), reverse=True):
-                    iscanonical = (str(i) == "0")
-                    hmc = hmcs[i]
-                    ## Default linecolor, linestyle
-                    if not is2d:
-                        setStyle(hmc, styleidx, not iscanonical)
-                        if opts.MC_ERRS:
-                            hmc.setAnnotation('ErrorBars', '1')
-                    ## Plot defaults from .plot files
-                    histopts = plotparser.getHistogramOptions(hpath)
-                    if histopts:
-                        for key, val in histopts.items():
-                            hmc.setAnnotation(key, val)
-                    ## Command line plot options
-                    setOptions(hmc, plotoptions[infile])
-                    ## Set path attribute
-                    fullpath = "/"+infile+hpath
-                    if not iscanonical:
-                        fullpath += "["+str(i)+"]"
-                    hmc.setAnnotation('Path', fullpath)
-                    ## Add object / path to appropriate lists
-                    anaobjects.append(hmc)
-                    if iscanonical:
-                        mainlines.append(fullpath)
-                    else:
-                        varlines.append(fullpath)
-                    if showratio and ratioreference is None and iscanonical:
-                        ratioreference = fullpath
-                    ## For 2D, plot each histo now (since overlay makes no sense)
-                    if is2d:
-                        s = mkOutput(hpath, [hmc], plot, special)
-                        writeOutput(s, fullpath)
-                styleidx += 1
+            if infile in mchistos:
+                for xpath in sorted(mchistos[infile]):
+                    if  rivet.stripOptions(xpath) != hpath:
+                        continue
+                    hmcs = mchistos[infile][xpath]
+                    ## For now, just plot all the different variation histograms (reversed, so [0] is on top)
+                    # TODO: calculate and plot an appropriate error band, somehow...
+                    for i in sorted(hmcs.keys(), reverse=True):
+                        iscanonical = (str(i) == "0")
+                        hmc = hmcs[i]
+                        ## Default linecolor, linestyle
+                        if not is2d:
+                            setStyle(hmc, styleidx, not iscanonical)
+                            if opts.MC_ERRS:
+                                hmc.setAnnotation('ErrorBars', '1')
+                        ## Plot defaults from .plot files
+                        histopts = plotparser.getHistogramOptions(hpath)
+                        if histopts:
+                            for key, val in histopts.items():
+                                hmc.setAnnotation(key, val)
+                        ## Command line plot options
+                        setOptions(hmc, plotoptions[infile])
+                        ## Set path attribute
+                        fullpath = "/"+infile+xpath
+                        if not iscanonical:
+                            fullpath += "["+str(i)+"]"
+                        hmc.setAnnotation('Path', fullpath)
+                        ## Add object / path to appropriate lists
+                        #if hmc.hasAnnotation("Title"):
+                        #    hmc.setAnnotation("Title", hmc.annotation("Title") +
+                        #                      rivet.extractOptionString(xpath))
+                        anaobjects.append(hmc)
+                        if iscanonical:
+                            mainlines.append(fullpath)
+                        else:
+                            varlines.append(fullpath)
+                        if showratio and ratioreference is None and iscanonical:
+                            ratioreference = fullpath
+                        ## For 2D, plot each histo now (since overlay makes no sense)
+                        if is2d:
+                            s = mkOutput(hpath, [hmc], plot, special)
+                            writeOutput(s, fullpath)
+                    styleidx += 1
 
 
         ## Finally render the combined plots; only show the first one if it's 2D

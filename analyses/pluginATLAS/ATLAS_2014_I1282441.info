@@ -10,6 +10,7 @@ Authors:
  - Kiran Joshi <kiran.joshi@cern.ch>
 References:
  - arXiv:1402.6162 [hep-ex]
+ - Eur.Phys.J. C74 (2014) no.7, 2895
 RunInfo:
   Run minimum bias events
 NumEvents: 1000k

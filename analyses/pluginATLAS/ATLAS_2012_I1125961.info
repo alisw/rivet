@@ -10,13 +10,15 @@ Authors:
  - David Grellscheid <david.grellscheid@durham.ac.uk>
  - Chris Wymant <c.m.wymant@durham.ac.uk>
 References:
- - arXiv:1208.0949 
+ - arXiv:1208.0949
 RunInfo:
   BSM signal events at 7000 GeV.
 NumEvents: 10000 for BSM signals
 Beams: [p+, p+]
 Energies: [7000]
+#Luminosity_fb:
 Description:
   '0-lepton search for squarks and gluinos by ATLAS at 7 TeV.
   Event counts in five signal regions are implemented as one-bin
   histograms.'
+Keywords: [search, bsm, 0lepton, jets, met]

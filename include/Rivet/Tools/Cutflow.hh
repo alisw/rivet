@@ -21,14 +21,14 @@ namespace Rivet {
 
     /// @brief Fill the pre-cut counter
     void fillinit(double weight=1.) {
-      counts[0] += weight;
+      counts.front() += weight;
     }
 
     /// @brief Fill the @a {icut}'th post-cut counter, starting at icut=1 for first cut
     ///
     /// @note Returns the cut result to allow 'side-effect' cut-flow filling in an if-statement
     bool fill(size_t icut, bool cutresult=true, double weight=1.) {
-      if (cutresult) counts[icut] += weight;
+      if (cutresult) counts.at(icut) += weight;
       return cutresult;
     }
 
@@ -53,9 +53,9 @@ namespace Rivet {
     bool fill(const vector<bool>& cutresults, double weight=1.) {
       if (cutresults.size() != ncuts)
         throw RangeError("Number of filled cut results needs to match the Cutflow construction");
-      counts[0] += 1;
+      counts.front() += 1;
       for (size_t i = 0; i < ncuts; ++i) {
-        if (cutresults[i]) counts[i+1] += weight; else break;
+        if (cutresults[i]) counts.at(i+1) += weight; else break;
       }
       return all(cutresults);
     }
@@ -76,7 +76,7 @@ namespace Rivet {
         throw RangeError("Number of filled cut results needs to match the Cutflow construction");
       const size_t offset = counts.size() - cutresults.size();
       for (size_t i = 0; i < cutresults.size(); ++i) {
-        if (cutresults[i]) counts[offset+i] += weight; else break;
+        if (cutresults[i]) counts.at(offset+i) += weight; else break;
       }
       return all(cutresults);
     }
@@ -86,10 +86,15 @@ namespace Rivet {
       for (double& x : counts) x *= factor;
     }
 
+    /// Scale the cutflow weights so that the weight count after cut @a icut is @a norm
+    void normalize(double norm, size_t icut=0) {
+      scale(norm/counts.at(icut));
+    }
+
     /// Create a string representation
     string str() const {
       stringstream ss;
-      ss << fixed << setprecision(1) << counts[0];
+      ss << fixed << setprecision(1) << counts.front();
       const size_t count0len = ss.str().length();
       ss.str("");
       ss << name << " cut-flow:\n";
@@ -101,17 +106,17 @@ namespace Rivet {
          << setw(6) << right << "A_cumu" << "    "
          << setw(6) << right << "A_incr";
       for (size_t i = 0; i <= ncuts; ++i) {
-        const int pcttot = (counts[0] == 0) ? -1 : round(100*counts[i]/double(counts[0]));
-        const int pctinc = (i == 0 || counts[i-1] == 0) ? -1 : round(100*counts[i]/double(counts[i-1]));
+        const int pcttot = (counts.front() == 0) ? -1 : round(100*counts.at(i)/double(counts.front()));
+        const int pctinc = (i == 0 || counts.at(i-1) == 0) ? -1 : round(100*counts.at(i)/double(counts.at(i-1)));
         stringstream ss2;
-        ss2 << fixed << setprecision(1) << counts[i];
+        ss2 << fixed << setprecision(1) << counts.at(i);
         const string countstr = ss2.str(); ss2.str("");
         ss2 << fixed << setprecision(3) << pcttot << "%";
         const string pcttotstr = ss2.str(); ss2.str("");
         ss2 << fixed << setprecision(3) << pctinc << "%";
         const string pctincstr = ss2.str();
         ss << "\n"
-           << setw(maxnamelen+5) << left << (i == 0 ? "" : "Pass "+cuts[i-1]) << "   "
+           << setw(maxnamelen+5) << left << (i == 0 ? "" : "Pass "+cuts.at(i-1)) << "   "
            << setw(count0len) << right << countstr << "    "
            << setw(6) << right << (pcttot < 0 ? "- " : pcttotstr) << "    "
            << setw(6) << right << (pctinc < 0 ? "- " : pctincstr);
@@ -204,6 +209,12 @@ namespace Rivet {
     /// Scale the contained {Cutflow}s by the given factor
     void scale(double factor) {
       for (Cutflow& cf : cfs) cf.scale(factor);
+    }
+
+    /// Scale the cutflow weights so that all the weight counts after cut @a icut are @a norm
+    /// @todo Provide a version that takes a vector of norms?
+    void normalize(double norm, size_t icut=0) {
+      for (Cutflow& cf : cfs) cf.normalize(norm, icut);
     }
 
     /// Create a string representation

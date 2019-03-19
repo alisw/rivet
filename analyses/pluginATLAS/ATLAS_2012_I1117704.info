@@ -14,6 +14,7 @@ RunInfo:
 NumEvents: 25000 for BSM signals
 Beams: [p+, p+]
 Energies: [7000]
+Luminosity_fb: 4.7
 NeedCrossSection: yes
 Description:
   'Search for SUSY using events with 6 or more jets in
@@ -23,3 +24,4 @@ Description:
    in the W and top control regions are not produced, while in addition to
    the plots from the paper the count of events in the different signal regions
    is included.'
+Keywords: [search, bsm, 0lepton, multijet, met]

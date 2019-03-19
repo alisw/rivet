@@ -55,8 +55,6 @@ namespace Rivet {
     void calc(const Particles& inparticles);
 
 
-  protected:
-
     /// Apply the projection on the supplied event.
     void project(const Event& e);
 

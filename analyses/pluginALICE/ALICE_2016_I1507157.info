@@ -1,0 +1,51 @@
+Name: ALICE_2016_I1507157
+Year: 2016
+Summary: Angular correlations of identified particles at 7 TeV.
+Experiment: ALICE
+Collider: LHC
+InspireID: 1507157
+Status: UNVALIDATED
+Authors:
+ - Christian Bierlich <christian.bierlich@thep.lu.se>
+References:
+- 'Eur.Phys.J.C77(2017)no.8,569'
+- 'DOI:10.1140/epjc/s10052-017-5129-6'
+- 'arXiv:1612.08975'
+RunInfo: Proton-proton minium bias events at 7 TeV.
+NeedCrossSection: no
+Beams: [p+,p+]
+Energies: [7000]
+#Luminosity_fb: <Insert integrated luminosity, in inverse fb>
+Description:
+  'Angular correlations between like-sign and opposite-sign identified particles,
+   integrated over $\Delta \eta < 1.3$. The analysis makes use of event mixing
+   to remove background. The current implementation of the event micing is not 
+   validated by experiment, and should be used with caution. Note in particular
+   that for the event mixing to behave sensibly, event weights are assumed to be
+   unity. Do not run this analysis with weighted events'
+Keywords: []
+BibKey: Adam:2016iwf
+BibTeX: '%%% contains utf-8, see: http://inspirehep.net/info/faq/general#utf8
+%%% add \usepackage[utf8]{inputenc} to your latex preamble
+
+@article{Adam:2016iwf,
+      author         = "Adam, Jaroslav and others",
+      title          = "{Insight into particle production mechanisms via angular
+                        correlations of identified particles in pp collisions at
+                        $\sqrt{\mathrm{s}}=7$  TeV}",
+      collaboration  = "ALICE",
+      journal        = "Eur. Phys. J.",
+      volume         = "C77",
+      year           = "2017",
+      number         = "8",
+      pages          = "569",
+      doi            = "10.1140/epjc/s10052-017-5129-6",
+      eprint         = "1612.08975",
+      archivePrefix  = "arXiv",
+      primaryClass   = "nucl-ex",
+      reportNumber   = "CERN-EP-2016-322",
+      SLACcitation   = "%%CITATION = ARXIV:1612.08975;%%"
+}'
+ToDo:
+ - Implement the analysis, test it, remove this ToDo, and mark as VALIDATED :-)
+

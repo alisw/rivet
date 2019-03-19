@@ -4,6 +4,7 @@
 
 #include "Rivet/Tools/RivetSTL.hh"
 #include "Rivet/Tools/RivetFastJet.hh"
+#include "Rivet/Math/Vectors.hh"
 
 namespace Rivet {
 
@@ -14,10 +15,20 @@ namespace Rivet {
   // Forward declaration
   class Jet;
 
-  /// Typedef for a collection of Jet objects.
+  // DISABLED UNTIL VANILLA CC7 COMPATIBILITY NOT NEEDED
+  // /// A collection of Jet objects.
+  // class Jets : public std::vector<Jet> {
+  // public:
+  //   using base = std::vector<Jet>; //< using-declarations don't like template syntax
+  //   using base::base; //< import base-class constructors
+  //   /// Copy constructor from vector<Jet>
+  //   Jets(const std::vector<Jet>& vjs);
+  //   operator FourMomenta () const; //< implementation in Jet.cc
+  //   /// @todo Add conversion to PseudoJets
+  // };
+  // Jets operator + (const Jets& a, const Jets& b);
+  // //@}
   typedef std::vector<Jet> Jets;
-
-  //@}
 
 
   /// @name Jet function/functor declarations

@@ -1,0 +1,11 @@
+Name: MC_PARTONICTOPS
+Summary: Plot partonic top properties (requires tops in event record)
+Status: VALIDATED
+Authors:
+ - Andy Buckley <andy.buckley@cern.ch>
+RunInfo: 'Any events containing partonic tops'
+NeedCrossSection: no
+Description:
+  'Just looks for final, i.e. post-QCD and weakly decaying, top quarks in the
+  event record and plots their multiplicities, transverse momentum spectra,
+  and rapidity distribution, both inclusively and classified by decay mode.'

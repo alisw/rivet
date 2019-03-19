@@ -11,7 +11,6 @@ namespace Rivet {
 
   /// @brief Get the highest-pT occurrences of FS particles with the specified PDG IDs.
   class LeadingParticlesFinalState : public FinalState {
-
   public:
 
     /// Constructor: the supplied FinalState projection is assumed to live through the run.
@@ -52,24 +51,24 @@ namespace Rivet {
     // bool get(const PdgId pid) const;
 
 
-  protected:
-
     /// Apply the projection on the supplied event.
     void project(const Event& e);
 
     /// Compare projections.
     int compare(const Projection& p) const;
 
-    /// Check if the particle's ID is in the list
-    bool inList(const Particle& particle) const;
 
   private:
+
+    /// Check if the particle's ID is in the list
+    bool inList(const Particle& particle) const;
 
     /// IDs of the leading particles to be selected
     std::set<long>_ids;
     bool _leading_only;
 
   };
+
 
 }
 

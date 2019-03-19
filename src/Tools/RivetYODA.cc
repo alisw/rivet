@@ -44,5 +44,28 @@ namespace Rivet {
     return rtn;
   }
 
+  bool copyao(AnalysisObjectPtr src, AnalysisObjectPtr dst) {
+    for (const std::string& a : src->annotations())
+      dst->setAnnotation(a, src->annotation(a));
+    if ( aocopy<Counter>(src,dst) ) return true;
+    if ( aocopy<Histo1D>(src,dst) ) return true;
+    if ( aocopy<Histo2D>(src,dst) ) return true;
+    if ( aocopy<Profile1D>(src,dst) ) return true;
+    if ( aocopy<Profile2D>(src,dst) ) return true;
+    if ( aocopy<Scatter1D>(src,dst) ) return true;
+    if ( aocopy<Scatter2D>(src,dst) ) return true;
+    if ( aocopy<Scatter3D>(src,dst) ) return true;
+    return false;
+  }
+
+  bool addaos(AnalysisObjectPtr dst, AnalysisObjectPtr src, double scale) {
+    if ( aoadd<Counter>(dst,src,scale) ) return true;
+    if ( aoadd<Histo1D>(dst,src,scale) ) return true;
+    if ( aoadd<Histo2D>(dst,src,scale) ) return true;
+    if ( aoadd<Profile1D>(dst,src,scale) ) return true;
+    if ( aoadd<Profile2D>(dst,src,scale) ) return true;
+    return false;
+  }
+
 
 }

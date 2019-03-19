@@ -16,6 +16,8 @@ Beams: [p+, p+]
 Energies: [7000]
 PtCuts: pT(jets) > 20 GeV, pT(leptons) > 20 GeV
 NeedsCrossSection: True
+Options:
+ - LMODE=EL,MU
 Description:
   'Measurements of differential production cross-sections of a $Z$
    boson in association with $b$-jets in $pp$ collisions at $\sqrt{s}=7$

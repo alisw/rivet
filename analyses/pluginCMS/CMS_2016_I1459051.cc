@@ -70,11 +70,11 @@ namespace Rivet {
 
     // Finalize
     void finalize() {
-      /// @todo What is the cross-section unit?
-      _hist_sigmaAK4.scale(crossSection()/sumOfWeights()/2.0, this);
-      _hist_sigmaAK7.scale(crossSection()/sumOfWeights()/2.0, this);
-      scale(_hist_sigmaAK4Forward,crossSection()/sumOfWeights()/3.0);
-      scale(_hist_sigmaAK7Forward,crossSection()/sumOfWeights()/3.0);
+      /// @note Extra division factor is the *signed* dy, i.e. 2*d|y|
+      _hist_sigmaAK4.scale(crossSection()/picobarn/sumOfWeights()/2.0, this);
+      _hist_sigmaAK7.scale(crossSection()/picobarn/sumOfWeights()/2.0, this);
+      scale(_hist_sigmaAK4Forward,crossSection()/picobarn/sumOfWeights()/3.0);
+      scale(_hist_sigmaAK7Forward,crossSection()/picobarn/sumOfWeights()/3.0);
     }
 
 

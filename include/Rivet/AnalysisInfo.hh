@@ -50,6 +50,14 @@ namespace Rivet {
     /// Set the name of the analysis.
     void setName(const std::string& name) { _name = name; }
 
+    /// Get the reference data name of the analysis (if different from plugin name).
+    std::string getRefDataName() const { 
+      if (!_refDataName.empty())  return _refDataName;
+      return name();
+    }
+
+    /// Set the reference data name of the analysis (if different from plugin name).
+    void setRefDataName(const std::string& name) { _refDataName = name; }
 
     /// Get the Inspire (SPIRES replacement) ID code for this analysis.
     const std::string& inspireId() const { return _inspireId; }
@@ -184,11 +192,33 @@ namespace Rivet {
     void setTodos(const std::vector<std::string>& todos) { _todos = todos; }
 
 
+    /// Get the option list.
+    const std::vector<std::string>& options() const { return _options; }
+
+    /// Check if the given option is valid.
+    bool validOption(std::string key, std::string val) const;
+
+    /// Set the option list.
+    void setOptions(const std::vector<std::string>& opts) {
+      _options = opts;
+      buildOptionMap();
+    }
+
+    /// Build a map of options to facilitate checking.
+    void buildOptionMap();
+
+
     /// Return true if this analysis needs to know the process cross-section.
     bool needsCrossSection() const { return _needsCrossSection; }
 
     /// Return true if this analysis needs to know the process cross-section.
     void setNeedsCrossSection(bool needXsec) { _needsCrossSection = needXsec; }
+
+    /// Return true if finalize() can be run multiple times for this analysis.
+    bool reentrant() const { return _reentrant; }
+
+    /// setReentrant
+    void setReentrant(bool ree = true) { _reentrant = ree; }
 
     //@}
 
@@ -196,6 +226,7 @@ namespace Rivet {
   private:
 
     std::string _name;
+    std::string _refDataName;
     std::string _spiresId, _inspireId;
     std::vector<std::string> _authors;
     std::string _summary;
@@ -216,8 +247,14 @@ namespace Rivet {
     std::vector<std::string> _todos;
     bool _needsCrossSection;
 
+    std::vector<std::string> _options;
+    std::map< std::string, std::set<std::string> > _optionmap;
+    
+    bool _reentrant;
+    
     void clear() {
       _name = "";
+      _refDataName = "";
       _spiresId = "";
       _inspireId = "";
       _authors.clear();
@@ -238,6 +275,9 @@ namespace Rivet {
       _status = "";
       _todos.clear();
       _needsCrossSection = false;
+      _options.clear();
+      _optionmap.clear();
+      _reentrant = false;
     }
 
   };

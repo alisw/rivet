@@ -12,7 +12,8 @@ References:
   - 'arXiv:1608.01857 [hep-ex]'
 Keywords:
  - jets
- - DPS
+ - dps
+ - mpi
 RunInfo:
   Four-jet events at 7 TeV
 Luminosity_fb: 3.73E-02

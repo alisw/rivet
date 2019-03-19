@@ -104,19 +104,24 @@ namespace Rivet {
     void analyze(const Event& event) {
 
       const double weight = event.weight();
-      const WFinder& wfinder_mu = applyProjection<WFinder>(event, "WFinder_mu");
+      const WFinder& wfinder_mu = apply<WFinder>(event, "WFinder_mu");
       if (wfinder_mu.bosons().size() != 1) vetoEvent;
 
-      const FourMomentum& lepton0 = wfinder_mu.constituentLeptons()[0].momentum();
-      const FourMomentum& neutrino = wfinder_mu.constituentNeutrinos()[0].momentum();
-      double WmT = sqrt( 2 * lepton0.pT() * neutrino.pT() * (1 - cos(deltaPhi(lepton0, neutrino))) );
+      //const FourMomentum& lepton0 = wfinder_mu.constituentLeptons()[0].momentum();
+      //const FourMomentum& neutrino = wfinder_mu.constituentNeutrinos()[0].momentum();
+      //double WmT = sqrt( 2 * lepton0.pT() * neutrino.pT() * (1 - cos(deltaPhi(lepton0, neutrino))) );
+
+      const FourMomentum& lepton0 = wfinder_mu.constituentLepton().momentum();
+      //const FourMomentum& neutrino = wfinder_mu.constituentNeutrino().momentum();
+      double WmT = wfinder_mu.mT();
+
       if (WmT < 50.0*GeV) vetoEvent;
       if (lepton0.abseta() > 2.1 || lepton0.pT() < 25.0*GeV) vetoEvent;
 
       // Select final jets, ordered by decreasing pT
       vector<FourMomentum> finaljet_list;
       double HT = 0.0;
-      const Jets jListAll = applyProjection<FastJets>(event, "Jets").jetsByPt(30.0*GeV);
+      const Jets jListAll = apply<FastJets>(event, "Jets").jetsByPt(30.0*GeV);
       for (const Jet& j : jListAll) {
         if (j.abseta() < 2.4 && j.pT() > 30.0*GeV && deltaR(lepton0, j) > 0.5) {
           finaljet_list.push_back(j.momentum());

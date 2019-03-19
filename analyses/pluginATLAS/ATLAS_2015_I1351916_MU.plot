@@ -12,6 +12,6 @@ YLabel=$A_\text{FB}$
 LegendXPos=0.1
 # END PLOT
 
-# BEGIN PLOT /ATLAS_2015_I1351916_MU/d01-x01
+# BEGIN PLOT /ATLAS_2015_I1351916_MU/d04
 Title=Central--central muon channel, dressed level
 # END PLOT

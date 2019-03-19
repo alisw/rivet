@@ -23,6 +23,7 @@ Description:
   decays into a muon and a neutrino, and two jets. The data sample
   corresponds to an integrated luminosity of 5 inverse femtobarns,
   collected with the CMS detector at the LHC.
+Keywords: [dps, mpi, jets, wboson]
 BibKey: Chatrchyan:2013xxa
 BibTeX: '@article{Chatrchyan:2013xxa,
       author         = "Chatrchyan, Serguei and others",

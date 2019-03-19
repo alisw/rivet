@@ -1,0 +1,39 @@
+Name: LHCF_2015_I1351909
+Year: 2015
+Summary: Measurement of very forward neutron energy spectra for 7 TeV proton-proton collisions at the Large Hadron Collider
+Experiment: LHCF
+Collider: LHC
+InspireID: 1351909
+Status: VALIDATED
+Authors:
+ - Eugenio Berti <eugenio.berti@fi.infn.it>
+ - LHCf collaboration <lhcf@isee.nagoya-u.ac.jp>
+Acknowledgements:
+ - Felix Riehn <felix.riehn@kit.edu>
+References:
+ - Phys. Lett. B 750 (2015) 360-366
+RunInfo: Differential production cross section of neutrons in p-p collisions in the very forward region expressed as a function of energy. Note that, being LHCf detector locate 140m away from IP, two additional effects must be taken into account. They are particles decay in the transport though the beam pipe and trajectories bending due to the dipole magnet. Because of them, the final energy spectra included about $0-6 ~ \%$ of other hadrons, mainly $\Lambda^{0}$ and $K^{0}$. These effects are considered in the Rivet code making use of some approximations that are able to reproduce the model distributions shown in the paper within 15% in most cases, depending on the model, the pseudorapidity region and the energy bin.  
+NumEvents: 1000000
+NeedCrossSection: no
+Beams: [[p+, p+]]
+Energies: [[3500, 3500]]
+Description: 
+  'The Large Hadron Collider forward (LHCf) experiment is designed to use the LHC to verify the hadronic-interaction models used in cosmic-ray physics. Forward baryon production is one of the crucial points to understand the development of cosmic-ray showers. We report the neutron-energy spectra for LHC $\sqrt{s}$ = 7 TeV proton--proton collisions with the pseudo-rapidity $\eta$ ranging from 8.81 to 8.99, from 8.99 to 9.22, and from 10.76 to infinity. The measured energy spectra obtained from the two independent calorimeters of Arm1 and Arm2 show the same characteristic feature before unfolding the difference in the detector responses. We unfolded the measured spectra by using the multidimensional unfolding method based on Bayesian theory, and the unfolded spectra were compared with current hadronic-interaction models. The QGSJET II-03 model predicts a high neutron production rate at the highest pseudo-rapidity range similar to our results and the DPMJET 3.04 model describes our results well at the lower pseudo-rapidity ranges. However no model perfectly explains the experimental results in the whole pseudo-rapidity range. The experimental data indicate the most abundant neutron production rate relative to the photon production, which does not agree with predictions of the
+models.'
+BibKey: Adriani2015360
+BibTeX: '@article{Adriani2015360,
+      author         = "Adriani, O. and others",
+      title          = "{Measurement of very forward neutron energy spectra for 7 TeV proton–proton collisions at the Large Hadron Collider}",
+      collaboration  = "LHCf",
+      journal        = "Phys. Lett.",
+      volume         = "B750",
+      year           = "2015",
+      pages          = "360-366",
+      doi            = "10.1016/j.physletb.2015.09.041",
+      eprint         = "1503.03505",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-PH-EP-DRAFT-LHCF-2015-001, CERN-PH-EP-2015-056",
+      SLACcitation   = "%%CITATION = ARXIV:1503.03505;%%"
+}'
+

@@ -9,16 +9,32 @@ LegendXPos=0.95
 LegendAlign=r
 # END PLOT
 
-# BEGIN PLOT /ATLAS_2017_I1589844/d..-x01-y04
+# BEGIN PLOT /ATLAS_2017_I1589844/d..-x01-y02
+Title=$Z \rightarrow \mu^+\mu^-$, $R=0.4$, charged particles only
+# END PLOT
+
+# BEGIN PLOT /ATLAS_2017_I1589844/d..-x01-y03
 Title=$Z \rightarrow e^+e^-$, $R=1.0$, charged particles only
 # END PLOT
 
-# BEGIN PLOT /ATLAS_2017_I1589844/d..-x01-y06
+# BEGIN PLOT /ATLAS_2017_I1589844/d..-x01-y04
+Title=$Z \rightarrow \mu^+\mu^-$, $R=1.0$, charged particles only
+# END PLOT
+
+# BEGIN PLOT /ATLAS_2017_I1589844/d..-x01-y05
 Title=$Z \rightarrow e^+e^-$, $R=0.4$, charged and neutral particles
 # END PLOT
 
-# BEGIN PLOT /ATLAS_2017_I1589844/d..-x01-y08
+# BEGIN PLOT /ATLAS_2017_I1589844/d..-x01-y06
+Title=$Z \rightarrow \mu^+\mu^-$, $R=0.4$, charged and neutral particles
+# END PLOT
+
+# BEGIN PLOT /ATLAS_2017_I1589844/d..-x01-y07
 Title=$Z \rightarrow e^+e^-$, $R=1.0$, charged and neutral particles
+# END PLOT
+
+# BEGIN PLOT /ATLAS_2017_I1589844/d..-x01-y08
+Title=$Z \rightarrow \mu^+\mu^-$, $R=1.0$, charged and neutral particles
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2017_I1589844/d01

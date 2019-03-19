@@ -56,6 +56,11 @@ namespace Rivet {
     UserError(const std::string& what) : Error(what) {}
   };
 
+  /// @brief Error relating to looking up analyis objects in the register
+  struct LookupError : public Error {
+    LookupError(const std::string& what) : Error(what) {}
+  };
+
 
 }
 

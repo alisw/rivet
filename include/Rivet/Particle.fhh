@@ -3,6 +3,7 @@
 #define RIVET_Particle_FHH
 
 #include "Rivet/Tools/RivetSTL.hh"
+#include "Rivet/Math/Vectors.hh"
 
 namespace Rivet {
 
@@ -13,10 +14,22 @@ namespace Rivet {
   // Forward declaration
   class Particle;
 
-  /// Typedefs for a vector of Particle objects.
-  typedef std::vector<Particle> Particles; //< New form, cf. Jets
-  /// @deprecated Use Particles instead. Will be removed
-  typedef std::vector<Particle> ParticleVector; //< Old form
+  // DISABLED UNTIL VANILLA CC7 COMPATIBILITY NOT NEEDED
+  // /// Typedefs for a vector of Particle objects.
+  // class Particles : public std::vector<Particle> {
+  // public:
+  //   using base = std::vector<Particle>; //< using-declarations don't like template syntax
+  //   using base::base; //< import base-class constructors
+  //   /// Copy constructor from vector<Particle>
+  //   Particles(const std::vector<Particle>& vps);
+  //   operator FourMomenta () const; //< implementation in Particle.cc
+  //   /// @todo Add conversion to PseudoJets?
+  // };
+  // Particles operator + (const Particles& a, const Particles& b);
+  typedef std::vector<Particle> Particles;
+
+  /// @deprecated Old name: use Particles instead. Will be removed
+  typedef Particles ParticleVector;
 
   /// Typedef for a pair of Particle objects.
   typedef std::pair<Particle, Particle> ParticlePair;

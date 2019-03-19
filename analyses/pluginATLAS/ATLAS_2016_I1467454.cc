@@ -12,11 +12,8 @@ namespace Rivet {
   public:
 
     /// Constructor
-    ATLAS_2016_I1467454(const string& name="ATLAS_2016_I1467454")
-      : Analysis(name)
-    {
-      _mode = 0; // use electron channel by default
-    }
+    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2016_I1467454);
+    //@}
 
 
     /// @name Analysis methods
@@ -24,6 +21,11 @@ namespace Rivet {
 
     /// Book histograms and initialise projections before the run
     void init() {
+
+      // Get options from the new option system
+      _mode = 0;
+      if ( getOption("LMODE") == "EL" ) _mode = 0;
+      if ( getOption("LMODE") == "MU" ) _mode = 1;
 
       const FinalState fs;
       Cut cuts = Cuts::abseta < 2.5 && Cuts::pT > 30*GeV;
@@ -88,21 +90,6 @@ namespace Rivet {
 
   };
 
-
-  /// High-mass Drell-Yan at 8 TeV, electron channel
-  struct ATLAS_2016_I1467454_EL : public ATLAS_2016_I1467454 {
-    ATLAS_2016_I1467454_EL() : ATLAS_2016_I1467454("ATLAS_2016_I1467454_EL") { _mode = 0; }
-  };
-
-
-  /// High-mass Drell-Yan at 8 TeV, muon channel
-  struct ATLAS_2016_I1467454_MU : public ATLAS_2016_I1467454 {
-    ATLAS_2016_I1467454_MU() : ATLAS_2016_I1467454("ATLAS_2016_I1467454_MU") { _mode = 1; }
-  };
-
-
   DECLARE_RIVET_PLUGIN(ATLAS_2016_I1467454);
-  DECLARE_RIVET_PLUGIN(ATLAS_2016_I1467454_EL);
-  DECLARE_RIVET_PLUGIN(ATLAS_2016_I1467454_MU);
 
 }

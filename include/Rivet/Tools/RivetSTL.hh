@@ -77,34 +77,40 @@ namespace Rivet {
     return s.find(sub) != string::npos;
   }
 
+  /// Does the init list @a il contain @a x?
+  template <typename T>
+  inline bool contains(const std::initializer_list<T>& il, const T& x) {
+    return find(begin(il), end(il), x) != end(il);
+  }
+
   /// Does the vector @a v contain @a x?
   template <typename T>
   inline bool contains(const std::vector<T>& v, const T& x) {
-    return find(v.begin(), v.end(), x) != v.end();
+    return find(begin(v), end(v), x) != end(v);
   }
 
   /// Does the list @a l contain @a x?
   template <typename T>
   inline bool contains(const std::list<T>& l, const T& x) {
-    return find(l.begin(), l.end(), x) != l.end();
+    return find(begin(l), end(l), x) != end(l);
   }
 
   /// Does the set @a s contain @a x?
   template <typename T>
   inline bool contains(const std::set<T>& s, const T& x) {
-    return find(s.begin(), s.end(), x) != s.end();
+    return find(begin(s), end(s), x) != end(s);
   }
 
   /// Does the map @a m contain the key @a key?
   template <typename K, typename T>
   inline bool has_key(const std::map<K, T>& m, const K& key) {
-    return m.find(key) != m.end();
+    return m.find(key) != end(m);
   }
 
   /// Does the map @a m contain the value @a val?
   template <typename K, typename T>
   inline bool has_value(const std::map<K, T>& m, const T& val) {
-    for (typename std::map<K,T>::const_iterator it = m.begin(); it != m.end(); ++it) {
+    for (typename std::map<K,T>::const_iterator it = begin(m); it != end(m); ++it) {
       if (it->second == val) return true;
     }
     return false;

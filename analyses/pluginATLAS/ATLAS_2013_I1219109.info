@@ -18,10 +18,12 @@ Beams: [p+, p+]
 Energies: [7000]
 PtCuts: [25,25]
 NeedCrossSection: True
+Options:
+ - LMODE=EL,MU
 Description:
   Measurements of the W+b-jets ($W+b+X$ and $W+b\bar{b}+X$) production cross-section in proton-proton collisions at a
   centre-of-mass energy of 7 TeV at the LHC. These results are based on data corresponding to an integrated luminosity of 
-  4.6~$fb^{−1}$, collected with the ATLAS detector. Cross-sections are presented as a function of jet multiplicity and of the 
+  4.6~$fb^{-1}$, collected with the ATLAS detector. Cross-sections are presented as a function of jet multiplicity and of the 
   transverse momentum of the leading b-jet for both the combined muon and electron decay modes of the W boson. 
   The default routine will consider the electron decay channel of the W boson. Use ATLAS_2013_I1217863_W_EL and 
   ATLAS_2013_I1217863_W_MU to specify the decay channel directly.

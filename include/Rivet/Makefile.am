@@ -31,26 +31,34 @@ nobase_pkginclude_HEADERS += \
 
 ## Projections
 nobase_pkginclude_HEADERS += \
+  Projections/AliceCommon.hh \
   Projections/AxesDefinition.hh \
   Projections/Beam.hh \
   Projections/BeamThrust.hh \
   Projections/CentralEtHCM.hh \
+  Projections/CentralityProjection.hh \
   Projections/ChargedFinalState.hh \
   Projections/ChargedLeptons.hh \
   Projections/ConstLossyFinalState.hh \
+  Projections/DirectFinalState.hh \
   Projections/DISFinalState.hh \
   Projections/DISKinematics.hh \
   Projections/DISLepton.hh \
   Projections/DressedLeptons.hh \
+  Projections/EventMixingFinalState.hh \
   Projections/FastJets.hh \
+  Projections/PxConePlugin.hh \
   Projections/FinalPartons.hh \
   Projections/FinalState.hh \
   Projections/FoxWolframMoments.hh \
   Projections/FParameter.hh \
+  Projections/GeneratedPercentileProjection.hh \
   Projections/HadronicFinalState.hh \
   Projections/HeavyHadrons.hh \
   Projections/Hemispheres.hh \
   Projections/IdentifiedFinalState.hh \
+  Projections/ImpactParameterProjection.hh \
+  Projections/IndirectFinalState.hh \
   Projections/InitialQuarks.hh \
   Projections/InvMassFinalState.hh \
   Projections/JetAlg.hh \
@@ -65,8 +73,11 @@ nobase_pkginclude_HEADERS += \
   Projections/ParisiTensor.hh \
   Projections/ParticleFinder.hh \
   Projections/PartonicTops.hh \
+  Projections/PercentileProjection.hh \
   Projections/PrimaryHadrons.hh \
+  Projections/PrimaryParticles.hh \
   Projections/PromptFinalState.hh \
+  Projections/SingleValueProjection.hh \
   Projections/SmearedParticles.hh \
   Projections/SmearedJets.hh \
   Projections/SmearedMET.hh \
@@ -76,8 +87,10 @@ nobase_pkginclude_HEADERS += \
   Projections/Thrust.hh \
   Projections/TriggerCDFRun0Run1.hh \
   Projections/TriggerCDFRun2.hh \
+  Projections/TriggerProjection.hh \
   Projections/TriggerUA5.hh \
   Projections/UnstableFinalState.hh \
+  Projections/UserCentEstimate.hh \
   Projections/VetoedFinalState.hh \
   Projections/VisibleFinalState.hh \
   Projections/WFinder.hh \
@@ -91,6 +104,7 @@ nobase_pkginclude_HEADERS +=   \
 ## Analysis base class headers
 # TODO: Move to Rivet/AnalysisTools header dir?
 nobase_pkginclude_HEADERS += \
+  Analyses/MC_Cent_pPb.hh \
   Analyses/MC_ParticleAnalysis.hh \
   Analyses/MC_JetAnalysis.hh \
   Analyses/MC_JetSplittings.hh
@@ -98,11 +112,14 @@ nobase_pkginclude_HEADERS += \
 
 ## Tools
 nobase_pkginclude_HEADERS += \
+  Tools/AliceCommon.hh \
+  Tools/AtlasCommon.hh \
   Tools/BeamConstraint.hh \
   Tools/BinnedHistogram.hh \
   Tools/CentralityBinner.hh \
   Tools/Cmp.fhh \
   Tools/Cmp.hh \
+  Tools/Correlators.hh \
   Tools/Cutflow.hh \
   Tools/Cuts.fhh \
   Tools/Cuts.hh \
@@ -114,6 +131,7 @@ nobase_pkginclude_HEADERS += \
   Tools/ParticleIdUtils.hh \
   Tools/ParticleUtils.hh \
   Tools/ParticleName.hh \
+  Tools/Percentile.hh \
   Tools/PrettyPrint.hh \
   Tools/RivetPaths.hh \
   Tools/RivetSTL.hh \
@@ -126,7 +144,24 @@ nobase_pkginclude_HEADERS += \
   Tools/ParticleSmearingFunctions.hh \
   Tools/JetSmearingFunctions.hh \
   Tools/TypeTraits.hh \
-  Tools/Utils.hh
+  Tools/Utils.hh \
+  Tools/fjcontrib/AxesDefinition.hh \
+  Tools/fjcontrib/BottomUpSoftDrop.hh \
+  Tools/fjcontrib/EnergyCorrelator.hh \
+  Tools/fjcontrib/ExtraRecombiners.hh \
+  Tools/fjcontrib/IteratedSoftDrop.hh \
+  Tools/fjcontrib/MeasureDefinition.hh \
+  Tools/fjcontrib/ModifiedMassDropTagger.hh \
+  Tools/fjcontrib/Njettiness.hh \
+  Tools/fjcontrib/NjettinessPlugin.hh \
+  Tools/fjcontrib/Nsubjettiness.hh \
+  Tools/fjcontrib/Recluster.hh \
+  Tools/fjcontrib/RecursiveSoftDrop.hh \
+  Tools/fjcontrib/RecursiveSymmetryCutBase.hh \
+  Tools/fjcontrib/SoftDrop.hh \
+  Tools/fjcontrib/TauComponents.hh \
+  Tools/fjcontrib/XConePlugin.hh
+
 nobase_dist_noinst_HEADERS += \
   Tools/osdir.hh
 

@@ -306,6 +306,9 @@ namespace Rivet {
   }
 
 
+  /// @todo geomspace
+
+
   /// @brief Make a list of @a nbins + 1 values spaced for equal area
   /// Breit-Wigner binning between @a start and @a end inclusive. @a
   /// mu and @a gamma are the Breit-Wigner parameters.
@@ -329,6 +332,31 @@ namespace Rivet {
   }
 
 
+  /// Actual helper implementation of binIndex (so generic and specific overloading can work)
+  template <typename NUM, typename CONTAINER>
+  inline typename std::enable_if<std::is_arithmetic<NUM>::value && std::is_arithmetic<typename CONTAINER::value_type>::value, int>::type
+  _binIndex(NUM val, const CONTAINER& binedges, bool allow_overflow=false) {
+    if (val < *begin(binedges)) return -1; ///< Below/out of histo range
+    // CONTAINER::iterator_type itend =
+    if (val >= *(end(binedges)-1)) return allow_overflow ? int(binedges.size())-1 : -1; ///< Above/out of histo range
+    auto it = std::upper_bound(begin(binedges), end(binedges), val);
+    return std::distance(begin(binedges), --it);
+  }
+
+  /// @brief Return the bin index of the given value, @a val, given a vector of bin edges
+  ///
+  /// An underflow always returns -1. If allow_overflow is false (default) an overflow
+  /// also returns -1, otherwise it returns the Nedge-1, the index of an inclusive bin
+  /// starting at the last edge.
+  ///
+  /// @note The @a binedges vector must be sorted
+  /// @todo Use std::common_type<NUM1, NUM2>::type x = val; ?
+  template <typename NUM1, typename NUM2>
+  inline typename std::enable_if<std::is_arithmetic<NUM1>::value && std::is_arithmetic<NUM2>::value, int>::type
+  binIndex(NUM1 val, std::initializer_list<NUM2> binedges, bool allow_overflow=false) {
+    return _binIndex(val, binedges, allow_overflow);
+  }
+
   /// @brief Return the bin index of the given value, @a val, given a vector of bin edges
   ///
   /// An underflow always returns -1. If allow_overflow is false (default) an overflow
@@ -340,10 +368,7 @@ namespace Rivet {
   template <typename NUM, typename CONTAINER>
   inline typename std::enable_if<std::is_arithmetic<NUM>::value && std::is_arithmetic<typename CONTAINER::value_type>::value, int>::type
   binIndex(NUM val, const CONTAINER& binedges, bool allow_overflow=false) {
-    if (val < binedges.front()) return -1; ///< Below/out of histo range
-    if (val >= binedges.back()) return allow_overflow ? int(binedges.size())-1 : -1; ///< Above/out of histo range
-    auto it = std::upper_bound(binedges.begin(), binedges.end(), val);
-    return std::distance(binedges.begin(), --it);
+    return _binIndex(val, binedges, allow_overflow);
   }
 
   //@}
@@ -541,8 +566,9 @@ namespace Rivet {
   /// @brief Calculate the difference between two angles in radians
   ///
   /// Returns in the range [0, PI].
-  inline double deltaPhi(double phi1, double phi2) {
-    return mapAngle0ToPi(phi1 - phi2);
+  inline double deltaPhi(double phi1, double phi2, bool sign=false) {
+    const double x = mapAngleMPiToPi(phi1 - phi2);
+    return sign ? x : fabs(x);
   }
 
   /// Calculate the abs difference between two pseudorapidities

@@ -1,0 +1,42 @@
+Name: ALICE_2012_I1127497
+Year: 2012
+Summary: Centrality dependence of charged particle production at large transverse momentum in Pb-Pb collisions at $\sqrt{s_{\rm{NN}}} = 2.76$ TeV
+Experiment: ALICE
+Collider: LHC
+SpireID: 
+InspireID: 1127497
+Status: VALIDATED
+Authors:
+ - Przemyslaw Karczmarczyk <przemyslaw.karczmarczyk@cern.ch>
+ - Jan Fiete Grosse-Oetringhaus <Jan.Fiete.Grosse-Oetringhaus@cern.ch>
+ - Jochen Klein <Jochen.Klein@cern.ch>
+References:
+ - arXiv:1208.2711 [hep-ex]
+RunInfo:
+NumEvents:
+Options:
+ - cent=REF,GEN,IMP,USR 
+Beams: [[p, p], [1000822080, 1000822080]]
+# This is _total_ energy of beams, so this becomes 208*2760=574080
+Energies: [2760, 574080]
+Description:
+  'The inclusive transverse momentum ($p_T$) distributions of primary charged particles are measured in the pseudo-rapidity range $|\eta| < 0.8$ as a function of event centrality in Pb--Pb collisions at $\sqrt{s_{nn}} = 2.76$ TeV with ALICE at the LHC. The data are presented in the $p_T$ range $0.15<p_T<50$ GeV/c for nine centrality intervals from 70-80% to 0-5%. The Pb-Pb spectra are presented in terms of the nuclear modification factor RAA using a pp reference spectrum measured at the same collision energy. We observe that the suppression of high-pT particles strongly depends on event centrality. In central collisions (0-5%) the yield is most suppressed with $R_{AA} \approx 0.13$ at $p_T= 6-7$ GeV/c. Above $p_T = 7$ GeV/c, there is a significant rise in the nuclear modification factor, which reaches $R_{AA} \approx 0.4$ for $p_T > 30$ GeV/c. In peripheral collisions (70-80%), the suppression is weaker with $R_{AA} \approx 0.7$ almost independently of $p_T$. The measured nuclear modification factors are compared to other measurements and model calculations.'
+BibKey: Abelev:2012hxa
+BibTeX: '@article{Abelev:2012hxa,
+      author         = "Abelev, Betty and others",
+      title          = "{Centrality Dependence of Charged Particle Production at
+                        Large Transverse Momentum in Pb--Pb Collisions at
+                        $\sqrt{s_{\rm{NN}}} = 2.76$ TeV}",
+      collaboration  = "ALICE",
+      journal        = "Phys. Lett.",
+      volume         = "B720",
+      year           = "2013",
+      pages          = "52-62",
+      doi            = "10.1016/j.physletb.2013.01.051",
+      eprint         = "1208.2711",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-PH-EP-2012-233",
+      SLACcitation   = "%%CITATION = ARXIV:1208.2711;%%"
+}'
+Reentrant: True

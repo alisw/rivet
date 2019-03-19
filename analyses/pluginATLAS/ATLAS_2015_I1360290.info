@@ -1,0 +1,45 @@
+Name: ATLAS_2015_I1360290
+Year: 2015
+Summary: Charged particle spectra in Pb--Pb collisions at $\sqrt{s_{NN}} = 2.76$ TeV.
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1360290
+Status: UNVALIDATED
+Authors:
+ - Christian Bierlich <christian.bierlich@thep.lu.se>
+References:
+- 'JHEP 09 (2015) 050'
+- 'arXiv:1504.04337 [hep-ex]'
+RunInfo: Pb--Pb minimum bias events. Centrality calibration from ATLAS_PBPB_CENTRALITY.
+NeedCrossSection: no
+Options:
+ - cent=REF,GEN,IMP,USR
+Beams: [1000822080, 1000822080]
+# This is _total_ energy of beams, so this becomes 208*2760=574080
+Energies: [574080]
+Description:
+  'Invariant $p_\perp$ spectra of charged particles as function of centrality, in Pb--Pb
+   collisions. Also measured is $\eta$ distributions at various $p_\perp$ intervals. Nuclear
+   modification factors currently not implemented, but could be.'
+Keywords: []
+BibKey: Aad:2015wga
+BibTeX: '@article{Aad:2015wga,
+      author         = "Aad, Georges and others",
+      title          = "{Measurement of charged-particle spectra in Pb+Pb
+                        collisions at $\sqrt{{s}_\mathsf{{NN}}} = 2.76$ TeV with
+                        the ATLAS detector at the LHC}",
+      collaboration  = "ATLAS",
+      journal        = "JHEP",
+      volume         = "09",
+      year           = "2015",
+      pages          = "050",
+      doi            = "10.1007/JHEP09(2015)050",
+      eprint         = "1504.04337",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-PH-EP-2015-032",
+      SLACcitation   = "%%CITATION = ARXIV:1504.04337;%%"
+}'
+ToDo:
+ - Implement the analysis, test it, remove this ToDo, and mark as VALIDATED :-)
+

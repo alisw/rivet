@@ -18,19 +18,21 @@ namespace Rivet {
       addProjection(FastJets(FinalState(), FastJets::ANTIKT, 0.4), "Jets");
 
       forward_kappa3 = bookProfile1D(1, 1, 1);
-      forward_kappa5 = bookProfile1D(2, 1, 1);
-      forward_kappa7 = bookProfile1D(3, 1, 1);
+      forwardRMS_kappa3 = bookScatter2D("d02-x01-y01", true);
 
-      central_kappa3 = bookProfile1D(4, 1, 1);
-      central_kappa5 = bookProfile1D(5, 1, 1);
-      central_kappa7 = bookProfile1D(6, 1, 1);
+      central_kappa3 = bookProfile1D(3, 1, 1);
+      centralRMS_kappa3 = bookScatter2D("d04-x01-y01", true);
 
-      forwardRMS_kappa3 = bookScatter2D("d07-x01-y01", true);
-      forwardRMS_kappa5 = bookScatter2D("d08-x01-y01", true);
-      forwardRMS_kappa7 = bookScatter2D("d09-x01-y01", true);
+      forward_kappa5 = bookProfile1D(5, 1, 1);
+      forwardRMS_kappa5 = bookScatter2D("d06-x01-y01", true);
 
-      centralRMS_kappa3 = bookScatter2D("d10-x01-y01", true);
-      centralRMS_kappa5 = bookScatter2D("d11-x01-y01", true);
+      central_kappa5 = bookProfile1D(7, 1, 1);
+      centralRMS_kappa5 = bookScatter2D("d08-x01-y01", true);
+
+      forward_kappa7 = bookProfile1D(9, 1, 1);
+      forwardRMS_kappa7 = bookScatter2D("d10-x01-y01", true);
+
+      central_kappa7 = bookProfile1D(11, 1, 1);
       centralRMS_kappa7 = bookScatter2D("d12-x01-y01", true);
 
     }

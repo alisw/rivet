@@ -1,6 +1,6 @@
 Name: ATLAS_2016_I1469071
 Year: 2016
-Summary: Measurement of the WZ production cross section at 13 TeV
+Summary: Measurement of the $WZ$ production cross section at 13 TeV
 Experiment: ATLAS
 Collider: LHC
 InspireID: 1469071
@@ -12,8 +12,9 @@ References:
  - arXiv:1606.04017 [hep-ex]
  - doi:10.1016/j.physletb.2016.08.052
 Keywords:
- - WZ
- - DIBOSON
+ - wz
+ - diboson
+ - 2lepton
 RunInfo:
   pp -> WZ + X, diboson decays to electrons and muons
 NeedCrossSection: yes

@@ -1,0 +1,51 @@
+Name: ATLAS_2017_I1645627
+Year: 2017
+Summary: Isolated photon + jets at 13 TeV
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1645627
+Status: VALIDATED
+Authors:
+ - Ana Rosario Cueto Gomez <ana.rosario.cueto.gomez@cern.ch>
+ - Christian Gutschow <chris.g@cern.ch>
+References:
+ - Phys.Lett. B780 (2018) 578-602
+ - doi:10.1016/j.physletb.2
+ - arXiv:1801.00112 [hep-ex]
+Keywords:
+ - PHOTON
+ - JETS
+RunInfo:
+  prompt photon + jets
+Luminosity_fb: 3.2
+Beams: [p+, p+]
+Energies: [13000]
+PtCuts: [125,100]
+NeedCrossSection: True
+Description: 
+  'The dynamics of isolated-photon production in association with a jet in proton--proton collisions at a centre-of-mass energy of 
+  13 TeV are studied with the ATLAS detector at the LHC using a dataset with an integrated luminosity of 3.2 fb${}^{-1}$. 
+  Photons are required to have transverse energies above 125 GeV. Jets are identified using the anti-$k_\text{t}$ algorithm 
+  with radius parameter $R=0.4$ and required to have transverse momenta above 100 GeV. Measurements of isolated-photon plus jet 
+  cross sections are presented as functions of the leading-photon transverse energy, the leading-jet transverse momentum, 
+  the azimuthal angular separation between the photon and the jet, the photon--jet invariant mass and the scattering angle 
+  in the photon–jet centre-of-mass system. Tree-level plus parton-shower predictions from Sherpa and Pythia as well as 
+  next-to-leading-order QCD predictions from Jetphox and Sherpa are compared to the measurements.'
+BibKey: Aaboud:2017kff
+BibTeX: '@article{Aaboud:2017kff,
+      author         = "Aaboud, Morad and others",
+      title          = "{Measurement of the cross section for isolated-photon
+                        plus jet production in $pp$ collisions at $\sqrt s=13$ TeV
+                        using the ATLAS detector}",
+      collaboration  = "ATLAS",
+      journal        = "Phys. Lett.",
+      volume         = "B780",
+      year           = "2018",
+      pages          = "578-602",
+      doi            = "10.1016/j.physletb.2018.03.035",
+      eprint         = "1801.00112",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-EP-2017-265",
+      SLACcitation   = "%%CITATION = ARXIV:1801.00112;%%"
+}'

@@ -15,8 +15,8 @@ References:
  - doi:10.1140/epjc/s10052-017-4766-0
  - arXiv:1610.09978 [hep-ex]
 Keywords:
- - TTBAR
- - GAPFRACTIONS
+ - ttbar
+ - rapgap
 RunInfo:
   p + p -> ttbar (dileptonic, needs high statistics [~2 million] to populate gap fractions).
 Luminosity_fb: 3.2

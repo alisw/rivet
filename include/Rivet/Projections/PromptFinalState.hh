@@ -48,8 +48,6 @@ namespace Rivet {
     void acceptTauDecays(bool acc=true) { _acceptTauDecays = acc; }
 
 
-  protected:
-
     /// Apply the projection on the supplied event.
     void project(const Event& e);
 
@@ -64,10 +62,6 @@ namespace Rivet {
   };
 
 
-  /// Alias with a more correct name
-  using DirectFinalState = PromptFinalState;
-
 }
-
 
 #endif

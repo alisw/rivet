@@ -57,7 +57,7 @@ namespace Rivet {
 
     // If no graph-connected scattered lepton, use the hardest (preferably same-flavour) prompt FS lepton in the event
     /// @todo Specify the charged or neutral current being searched for in the DISLepton constructor/API, and remove the guesswork
-    const Particles fsleptons = applyProjection<FinalState>(e, "PromptFS").particles(isLepton, cmpMomByE);
+    const Particles fsleptons = applyProjection<FinalState>(e, "FS").particles(isLepton, cmpMomByE);
     const Particles sfleptons = filter_select(fsleptons, Cuts::pid == _incoming.pid());
     MSG_DEBUG("SF leptons = " << sfleptons.size() << ", all leptons = " << fsleptons.size());
     if (!sfleptons.empty()) {

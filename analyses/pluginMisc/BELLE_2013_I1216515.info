@@ -1,5 +1,5 @@
 Name: BELLE_2013_I1216515
-Summary: Pion and kaon identified particle spectra at $\sqrt{s}=10.52$ GeV
+Summary: Pion and kaon identified particle spectra at $\sqrt{s}=10.52$~\GeV
 Status: VALIDATED
 Experiment: Belle
 Collider: KEKB
@@ -9,9 +9,8 @@ References:
  - Phys.Rev.Lett. 111 (2013) 6, 062002
  - arXiv:1301.6183
  - doi:10.1103/PhysRevLett.111.062002
-
 Keywords:
- - bdecays
+ - bdecay
  - semileptonic
 RunInfo:
   $e^+ e^-$ analysis at 10.52

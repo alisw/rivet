@@ -1,0 +1,10 @@
+Name: MC_JET_IN_HI
+Summary: Monte Carlo validation, simple jet analysis in heavy ion collisions, using centrality framework.
+Status: VALIDATED
+RunInfo:
+   Heavy Ion event with a Z decaying to muons and an associated jet. Centrality measure taken from ATLAS_2015_PBPBCENTRALITY, which needs to be run, and the corresponding histogram preloaded.
+Authors:
+ - Christian Bierlich <christian.bierlich@thep.lu.se>
+ - Johannes Bellm
+Options:
+ - cent=REF,GEN,IMP,USR

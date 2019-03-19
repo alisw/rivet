@@ -439,8 +439,28 @@ system can be found in Section~\ref{section:histogramming}.
 %   addCut("PT", MORE_EQ, 3.0*GeV);
 % \end{snippet}
 
+\begin{philosophy}
+  We are often asked if there is a way to pass parameters to Rivet analyses, to
+  change their behaviour. This is potentially very useful when e.g. protopying
+  an analysis or optimising cuts. We have resisted it, however, because it would
+  jeopardise the core Rivet mission of preserving experimental analyses which
+  ``do the right thing'' to reproduce experimental results without any specific
+  parameter-passing being necessary: we fear that if parameterised analyses
+  become ``normal'', it will be much harder to do broad validation and testing
+  against large swathes of the analysis collection. Maybe we are too pessimistic.
 
-\subsection{Utility classes}
+  Anyway, you can still pass parameters to non-preservation analyses via
+  environment variables, and in fact we provide a \code{getEnvParam} function to
+  help you with this. For example, you might put in your code: \code{double x =
+    getEnvParam<double>("X", 10.0)}, and then on the command-line call
+  \kbd{X=17.5 rivet -a MYANALYSIS}: the \kbd{X} variable will be read, converted
+  to a double, and stored in the \code{x} variable; if it is not set, the value
+  will default to 10. Hopefully this will satisfy the most enthusiastic
+  analysis-parametriser!
+\end{philosophy}
+
+
+\subsection{Utility classes and functions}
 
 Rivet provides quite a few object types for physics purposes, such as three- and
 four-vectors, matrices and Lorentz boosts, and convenience proxy objects for
@@ -479,36 +499,144 @@ can be computed using a range of overloaded external functions of the type
 \code{deltaR(vec1, vec2)}. Angles between such vectors can be calculated via the
 similar \code{angle(vec1, vec2)} functions.
 
+\begin{warning}
+  Developers' note: We should be specific about the type of rapidity used in
+  $\Delta{R}$ calculations\dots and change the default? Pseudorapidity naively
+  corresponds better to detector geometry than rapidity, but it has been shown
+  that this is not true for jets (and presumably also composite particles).
+\end{warning}
+
+\subsubsection{\code{Cut}s}
+The \code{Cut} system is a very powerful innovation in Rivet, allowing clear and
+self-documenting expression of arbitrarily complex kinematic cuts without
+needing lots of function overloads, or falling foul of type ambiguities.
+
+First, let's explain the problem with the original \code{FinalState}
+constructor: \code{FinalState(double, double, double)}. What do these parameters
+mean? Without reading the code -- which would reveal, perhaps unintuitively,
+that the order is $(\eta_\text{min}, \eta_\text{max}, \p_\perp^\text{min})$ --
+we simply have no way of knowing. This is bad for readability and
+maintainability of analysis code, since everyone will forget the order at some
+point, and the compiler will be of no help since it cannot tell when you get the
+order wrong: a double is a double, regardless of whether its value doesn't make
+sense as a \pT.
+
+A second problem is what to do with disjoint ranges, e.g.~excluding crack
+regions in the ATLAS calorimeters: do we need a separate \code{FinalState} for
+each $\eta$ range?! In fact, \code{FinalState} had a highly inconvenient-to-use
+constructor accepting a vector of $\eta$ min/max pairs for this reason --
+yuck. Wouldn't it be nice if we could just use logical ANDs and ORs?
+
+The \code{Cut} classes do exactly this, and are best demonstrated with an
+example: \code{fs.particles(Cuts::pT > 10*GeV \&\& Cuts::abseta < 2.5)}. There
+are a range of physical quantities like \code{Cuts::pT}, \code{Cuts::eta},
+\code{Cuts::absrap}, \code{Cuts::pid}, \code{Cuts::pid}, etc. which you will
+find in the Doxygen documentation. All can be paired with a value using standard
+equality and inequality operators, and each cut name--value pair can be combined
+with another cut via standard boolean operators: they can be nested arbitrarily
+deep, to make clear and readable cut definitions of any complexity.
+
+All \code{Cut} quantities will work on any object that can convert itself to a
+\code{FourMomentum}, e.g. particles and jets (see below). Some, such as the PID
+quantities, will only work for selection of \code{Particle}s. Many functions in
+Rivet for selecting or filtering particles or general four-momenta accept a
+single (potentially composite) \code{Cut} object as an argument, and usually
+also have a variant which will accept any function object that takes a
+\code{Particle}/\code{FourMomentum} and returns a bool.
+
+% and selector functions
+
 \subsubsection{\code{Particle}}
 This class is a wrapper around the HepMC \code{GenParticle}
 class. \code{Particle} objects are usually obtained as a vector from the
-\code{particles()} method of a \code{FinalState} projection.  Rather than having
-to directly use the HepMC objects, and e.g. translate HepMC four-vectors into
+\code{particles()} method of a \code{FinalState} projection. Rather than having
+to directly use the HepMC objects, and e.g.~translate HepMC four-vectors into
 the Rivet equivalent, several key properties are accessed directly via the
-\code{Particle} interface (and more may be added). The main methods of interest
-are \code{momentum()}, which returns a \code{FourMomentum}, and \code{pdgId()},
-which returns the PDG particle ID code. The PDG code can be used to access
-particle properties by using functions such as \code{PID::isHadron()},
-\code{PID::threeCharge()}, etc. (these are defined in
-\kbd{Rivet/Tools/ParticleIDMethods.hh}.)
+\code{Particle} interface (and more may be added).
+
+The main methods of interest are \code{momentum()}, which returns a
+\code{FourMomentum}, and \code{pdgId()}, which returns the PDG particle ID
+code. The PDG code can be used to access particle properties by using functions
+such as \code{PID::isHadron()}, \code{PID::threeCharge()}, etc. (these are
+defined in \kbd{Rivet/Tools/ParticleIDMethods.hh}.)  \code{Particle}s can be
+implicitly cast to \code{FourMomentum}.
+
+Particle ancestry and children can be accessed via the \code{parents()},
+\code{children()}, \code{ancestors()} and \code{allDescendants()} methods. These
+can all be filtered via \code{Cut}s and filter functions, and be restricted to
+physical particles (i.e.~not with generator-specific HepMC IDs or statuses) if
+desired. Properties of relatives can also be tested without explicitly
+retrieving the particles, e.g.~via \code{hasAncestorWith()} and similar
+functions, or \code{isLastWith()} and similar, which are useful for identifying
+interesting points in decay chains: all these functions take functions or
+function objects as arguments.
+
+From Rivet version 2.6.0, \code{Particle} can have internal structure -- much
+like a jet. The constituent list of \code{Particle}s is accessed with the
+\code{constituents()} method, which is non-empty if
+\code{Particle::isComposite()} is true. The \code{constituents()} method can be
 
 \subsubsection{\code{Jet}}
 Jets are obtained from one of the jet accessor methods of a projection that
 implements the \code{JetAlg} interface, e.g. \code{FastJets::jetsByPt()} (this
 returns the jets sorted by \pT, such that the first element in the vector is the
-hardest jet --- usually what you want.) The most useful methods are
-\code{particles()}, \code{momenta()}, \code{momentum()} (a representative
-\code{FourMomentum}), and some checks on the jet contents such as
-\code{containsParticleId(pid)}, \code{containsCharm()} and
-\code{containsBottom()}.
+hardest jet --- usually what you want.) \code{Jet}s can be implicitly cast to
+\code{FourMomentum}.
 
+The most useful methods are \code{particles()}, \code{momentum()} (a
+representative \code{FourMomentum}), and many checks on the jet contents, of
+which the most useful are \code{bTagged()} and \code{bTags()} (there are
+equivalent functions for charm and tau tagging). The tagging functions, like
+many functions in Rivet, accept \code{Cut}s and filter function objects as
+optional arguments, e.g.~\code{j.bTags(Cuts::pT > 5*GeV)} will return the subset
+of ghost-associated tagging $b$-hadrons with $\pT > 5~\GeV$.
+
+\subsubsection{Filter functions and filtering functors}
+
+Rivet contains a suite of useful functions for filtering of lists of
+\code{Particle}, \code{Jet}, and \code{FourMomentum} objects (aka
+\code{Particles}, \code{Jets}, and \code{FourMomenta}): \code{filter\_select},
+\code{filter\_discard}, and their \code{ifilter\_*} equivalents.
+
+The \code{filter\_*} functions operate on a const list, and return a new one
+with a selection criterion applied; the ``select'' variant keeps objects for
+which the criterion evaluates as true, while the ``discard'' ones keep those for
+which it is false, e.g.~\code{Particles filtered = filter_select(unfiltered,
+  Cuts::absrap < 3)} will return the subset of particles with $|y| < 3$.  The
+\code{ifilter\_} versions operate in-place on a non-const list (hence avoiding
+copying and being a bit more efficient, if you can tolerate having non-const
+lists lying around).
+
+These filtering functions accept either \code{Cut} objects or general function
+objects to define the selection/rejection criterion. So you can also pass in
+simple one-argument \code{Particle} $\to$ \code{bool} functions,
+e.g.~\code{ifilter\_select(allparticles, isNeutral)} (see the
+\kbd{Rivet/Tools/ParticleUtils.hh} header for more such functions). C++11 lambda
+functions also work nicely, but are a bit syntactically ugly: in many cases you
+will be able to more elegantly use stateful function objects like this:
+\code{filter\_discard(jets, hasBTag(Cuts::pT > 5*GeV))} (see
+\kbd{Rivet/Tools/JetUtils.hh}), or even an elegant approach to jet/lepton
+isolation like this:
+%
+\begin{snippet}
+  Particles leptons = leptonfs.particles();
+  for (const Jet& j : jets())
+    ifilter_discard(leptons, deltaRLess(j, 0.4));
+\end{snippet}
+(see \kbd{Rivet/Tools/ParticleBaseUtils.hh} for lots more kinematic function
+objects which can be applied to all types that can be cast to
+\code{FourMomentum}).
+
+% \subsubsection{Smearing and efficiency functions}
+
+% TODO
 
 \subsubsection{Mathematical utilities}
 The \kbd{Rivet/Math/MathUtils.hh} header defines a variety of mathematical
-utility functions. These include testing functions such as \code{isZero(a)},
-\code{fuzzyEquals(a, b)} and \code{inRange(a, low, high)}, whose purpose is
-hopefully self-evident, and angular range-mapping functions such as
-\code{mapAngle0To2Pi(a)}, \code{mapAngleMPiToPi(a)}, etc.
+utility functions. These include functions such as \code{isZero(a)},
+\code{fuzzyEquals(a, b)}, \code{inRange(a, low, high)} and \code{binIndex(val,
+  binedges)}, whose purposes are hopefully self-evident, and angular range-mapping
+functions such as \code{mapAngle0To2Pi(a)}, \code{mapAngleMPiToPi(a)}, etc.
 
 
 \subsection{Histogramming}

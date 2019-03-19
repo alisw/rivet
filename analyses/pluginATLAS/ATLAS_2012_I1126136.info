@@ -14,12 +14,14 @@ RunInfo:
 NumEvents: 25000 for BSM signals
 Beams: [p+, p+]
 Energies: [7000]
+Luminosity_fb: 4.7
 NeedCrossSection: yes
 Description:
   'Search for direct pair production of supersymmetric top squarks, assuming the stop_1 decays
    into a top quark and the lightest supersymmetric particle, and that both top quarks decay
    to purely hadronic final states. This search has an integrated luminosity
    of 4.7 fb$^{-1}$ at $\sqrt{s} = 8$\,TeV.'
+Keywords: [search, bsm, tquark, met]
 BibTeX: '@article{:2012si,
       author         = "Aad, Georges and others",
       title          = "{Search for a supersymmetric partner to the top quark in

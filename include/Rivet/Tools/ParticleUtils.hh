@@ -267,6 +267,23 @@ namespace Rivet {
   //@}
 
 
+  /// @name Particle pair classifiers
+  /// @todo Make versions that work on ParticlePair?
+  //@{
+
+  inline bool isSameSign(const Particle& a, const Particle& b) { return PID::isSameSign(a.pid(), b.pid()); }
+  inline bool isOppSign(const Particle& a, const Particle& b) { return PID::isOppSign(a.pid(), b.pid()); }
+  inline bool isSameFlav(const Particle& a, const Particle& b) { return PID::isSameFlav(a.pid(), b.pid()); }
+  inline bool isOppFlav(const Particle& a, const Particle& b) { return PID::isOppFlav(a.pid(), b.pid()); }
+
+  inline bool isOSSF(const Particle& a, const Particle& b) { return PID::isOSSF(a.pid(), b.pid()); }
+  inline bool isSSSF(const Particle& a, const Particle& b) { return PID::isSSSF(a.pid(), b.pid()); }
+  inline bool isOSOF(const Particle& a, const Particle& b) { return PID::isOSOF(a.pid(), b.pid()); }
+  inline bool isSSOF(const Particle& a, const Particle& b) { return PID::isSSOF(a.pid(), b.pid()); }
+
+  //@}
+
+
   /// @name Particle charge/sign comparison functions
   //@{
 
@@ -468,8 +485,10 @@ namespace Rivet {
   /// Base type for Particle -> bool functors
   struct BoolParticleFunctor {
     virtual bool operator()(const Particle& p) const = 0;
+    virtual ~BoolParticleFunctor() {}
   };
 
+  /// Functor for and-combination of selector logic
   struct BoolParticleAND : public BoolParticleFunctor {
     BoolParticleAND(const std::vector<ParticleSelector>& sels) : selectors(sels) {}
     BoolParticleAND(const ParticleSelector& a, const ParticleSelector& b) : selectors({a,b}) {}
@@ -480,7 +499,13 @@ namespace Rivet {
     }
     std::vector<ParticleSelector> selectors;
   };
+  /// Operator syntactic sugar for AND construction
+  inline BoolParticleAND operator && (const ParticleSelector& a, const ParticleSelector& b) {
+    return BoolParticleAND(a, b);
+  }
 
+
+  /// Functor for or-combination of selector logic
   struct BoolParticleOR : public BoolParticleFunctor {
     BoolParticleOR(const std::vector<ParticleSelector>& sels) : selectors(sels) {}
     BoolParticleOR(const ParticleSelector& a, const ParticleSelector& b) : selectors({a,b}) {}
@@ -491,27 +516,40 @@ namespace Rivet {
     }
     std::vector<ParticleSelector> selectors;
   };
+  /// Operator syntactic sugar for OR construction
+  inline BoolParticleOR operator || (const ParticleSelector& a, const ParticleSelector& b) {
+    return BoolParticleOR(a, b);
+  }
 
+  /// Functor for inverting selector logic
   struct BoolParticleNOT : public BoolParticleFunctor {
     BoolParticleNOT(const ParticleSelector& sel) : selector(sel) {}
     bool operator()(const Particle& p) const { return !selector(p); }
     ParticleSelector selector;
   };
+  /// Operator syntactic sugar for NOT construction
+  inline BoolParticleNOT operator ! (const ParticleSelector& a) {
+    return BoolParticleNOT(a);
+  }
 
 
   /// PID matching functor
   struct HasPID : public BoolParticleFunctor {
-    HasPID(PdgId pid) : targetpid(pid) { }
-    bool operator()(const Particle& p) const { return p.pid() == targetpid; }
-    PdgId targetpid;
+    HasPID(PdgId pid) : targetpids{pid} { }
+    HasPID(vector<PdgId> pids) : targetpids{pids} { }
+    HasPID(initializer_list<PdgId> pids) : targetpids{pids} { }
+    bool operator()(const Particle& p) const { return contains(targetpids, p.pid()); }
+    vector<PdgId> targetpids;
   };
   using hasPID = HasPID;
 
   /// |PID| matching functor
   struct HasAbsPID : public BoolParticleFunctor {
-    HasAbsPID(PdgId pid) : targetpid(abs(pid)) { }
-    bool operator()(const Particle& p) const { return p.abspid() == abs(targetpid); }
-    PdgId targetpid;
+    HasAbsPID(PdgId pid) : targetapids{abs(pid)} { }
+    HasAbsPID(vector<PdgId> pids) { for (PdgId pid : pids) targetapids.push_back(abs(pid)); }
+    HasAbsPID(initializer_list<PdgId> pids) { for (PdgId pid : pids) targetapids.push_back(abs(pid)); }
+    bool operator()(const Particle& p) const { return contains(targetapids, p.abspid()); }
+    vector<PdgId> targetapids;
   };
   using hasAbsPID = HasAbsPID;
 
@@ -675,6 +713,15 @@ namespace Rivet {
     out = filter_discard(particles, c);
     return out;
   }
+
+
+  // inline void ifilterIsolateDeltaR(Particles& particles, const FourMomenta& vecs) {
+  //   ifilter_discard(particles,
+  // }
+
+
+  // inline Particles filterIsolateDeltaR(const Particles& particles, const FourMomenta& vecs) {
+  // }
 
   //@}
 

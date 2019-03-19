@@ -2,7 +2,7 @@
 #define RIVET_Cuts_HH
 
 #include "Rivet/Tools/Cuts.fhh"
-#include <memory>
+#include <string>
 
 namespace Rivet {
 
@@ -22,6 +22,9 @@ namespace Rivet {
 
     /// Comparison to another Cut
     virtual bool operator == (const Cut&) const = 0;
+
+    /// String representation
+    virtual std::string toString() const = 0;
 
     /// Default destructor
     virtual ~CutBase() {}
@@ -114,6 +117,13 @@ namespace Rivet {
   Cut operator ^ (const Cut & aptr, const Cut & bptr);
 
   //@}
+
+
+  /// String representation
+  inline std::ostream& operator << (std::ostream& os, const Cut& cptr) {
+    os << cptr->toString();
+    return os;
+  }
 
 
 }

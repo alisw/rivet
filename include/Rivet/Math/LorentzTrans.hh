@@ -82,6 +82,16 @@ namespace Rivet {
       return rtn;
     }
 
+    /// Make an LT for an active boost (i.e. object velocity += in boost direction)
+    static LorentzTransform mkObjTransform(const FourMomentum& p4) {
+      return mkObjTransformFromBeta(p4.betaVec());
+    }
+
+    /// Make an LT for a passive boost (i.e. object velocity -= in boost direction)
+    static LorentzTransform mkFrameTransform(const FourMomentum& p4) {
+      return mkObjTransformFromBeta(-p4.betaVec());
+    }
+
     //@}
 
 
@@ -156,6 +166,16 @@ namespace Rivet {
     /// Apply this transformation to the given 4-mometum
     FourMomentum transform(const FourMomentum& v4) const {
       return multiply(_boostMatrix, v4);
+    }
+
+    /// Apply this transformation to the given 4-vector
+    FourVector operator () (const FourVector& v4) const {
+      return transform(v4);
+    }
+
+    /// Apply this transformation to the given 4-mometum
+    FourMomentum operator () (const FourMomentum& v4) const {
+      return transform(v4);
     }
 
 

@@ -63,9 +63,7 @@ namespace Rivet {
 
     /// Add a set of accepted particle IDs.
     IdentifiedFinalState& acceptIds(const vector<PdgId>& pids) {
-      foreach (const PdgId pid, pids) {
-        _pids.insert(pid);
-      }
+      for (const PdgId pid : pids) _pids.insert(pid);
       return *this;
     }
 
@@ -78,7 +76,7 @@ namespace Rivet {
 
     /// Add a set of accepted particle IDs and their antiparticles.
     IdentifiedFinalState& acceptIdPairs(const vector<PdgId>& pids) {
-      foreach (const PdgId pid, pids) {
+      for (const PdgId pid : pids) {
         _pids.insert(pid);
         _pids.insert(-pid);
       }
@@ -111,8 +109,6 @@ namespace Rivet {
       return _remainingParticles;
     }
 
-
-  protected:
 
     /// Apply the projection on the supplied event.
     void project(const Event& e);

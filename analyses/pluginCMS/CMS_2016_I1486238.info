@@ -32,6 +32,7 @@ Description:
     between them are well reproduced by event generators that combine
     perturbative QCD calculations at next-to-leading-order accuracy with
     contributions from parton showers and multiparton interactions.'
+Keywords: [jets, bjet]
 BibKey: Khachatryan:2016rjt
 BibTeX: '@article{Khachatryan:2016rjt,
       author         = "Khachatryan, Vardan and others",

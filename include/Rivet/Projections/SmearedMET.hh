@@ -47,7 +47,7 @@ namespace Rivet {
     /// Compare to another SmearedMET
     int compare(const Projection& p) const {
       const SmearedMET& other = dynamic_cast<const SmearedMET&>(p);
-      if (get_address(_metSmearFn) == 0) return UNDEFINED;
+      if (get_address(_metSmearFn) == 0) return cmp((size_t)this, (size_t)&p);
       MSG_TRACE("Smear hashes = " << get_address(_metSmearFn) << "," << get_address(other._metSmearFn));
       return mkPCmp(other, "TruthMET") || cmp(get_address(_metSmearFn), get_address(other._metSmearFn));
     }

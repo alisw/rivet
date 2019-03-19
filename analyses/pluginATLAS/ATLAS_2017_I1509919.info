@@ -10,8 +10,8 @@ Authors:
 References:
  - arXiv:1701.05390
 Keywords:
- - tracks
- - UE
+ - mpi
+ - lowpt
 RunInfo:
   '$pp$ QCD interactions at 13 TeV. Diffractive events should be included.'
 Luminosity_fb: 1.6*E-06

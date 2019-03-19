@@ -20,6 +20,8 @@ Luminosity_fb: 20.3
 Beams: [p+, p+]
 Energies: [8000]
 NeedCrossSection: yes
+Options:
+ - LMODE=EL,MU
 Description:
   'This paper presents a measurement of the double-differential cross section for the Drell-Yan
   $Z/\gamma^\ast \rightarrow \ell^+\ell^-$ and photon-induced $\gamma\gamma \rightarrow \ell^+\ell^-$ processes where
@@ -31,7 +33,8 @@ Description:
   and muon channel measurements are combined and a total experimental precision of better than 1\% is achieved at low
   $m_{\ell\ell}$. A comparison to next-to-next-to-leading order perturbative QCD predictions using several recent parton
   distribution functions and including next-to-leading order electroweak effects indicates the potential of the data to
-  constrain parton distribution functions. In particular, a large impact of the data on the photon PDF is demonstrated.'
+  constrain parton distribution functions. In particular, a large impact of the data on the photon PDF is demonstrated.
+  Decay channel (e or mu) is selected by LMODE=EL,MU'
 BibKey: Aad:2016zzw
 BibTeX: '@article{Aad:2016zzw,
       author         = "Aad, Georges and others",

@@ -1,0 +1,13 @@
+Name: MC_DILEPTON
+Summary: Charged dilepton kinematic distributions sensitive to boson polarisation
+Status: VALIDATED
+Authors:
+ - Andy Buckley <andy.buckley@cern.ch>
+RunInfo: Any event type that produces prompt charged lepton pairs.
+NeedCrossSection: no
+Description:
+  'Finds two charged leptons ($e$ or $\mu$) and plots their basic kinematics
+  in the lab frame and in their centre-of-mass frame. Observables of the lepton
+  momentum components parallel and perpendicular to the CoM boost direction are
+  particularly sensitive to the polarisation state of a decaying vector boson.'
+Keywords: [mc,dilepton,polarization]

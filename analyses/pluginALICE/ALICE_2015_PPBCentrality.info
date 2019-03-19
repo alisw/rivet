@@ -1,0 +1,32 @@
+Name: ALICE_2015_PPBCentrality
+Summary: ALICE proton-lead centrality calibration analysis.
+Status: UNVALIDATED
+Authors:
+ - Christian Bierlich <christian.bierlich@thep.lu.se>
+NumEvents: 50000
+References:
+ - Phys.Lett.B728(2014)25-38,arXiv:1307.6796 
+RunInfo: Any!
+Description:
+   'Calibration analysis for ALICE pPb centrality. The centrality measure
+   is multiplicity in VO-A ie. in the lead direction. No reference data
+   is given, as the spectrum is not possible to unfold.'
+
+BibKey: Abelev:2013haa
+BibTeX: '@article{Abelev:2013haa,
+      author         = "Abelev, Betty Bezverkhny and others",
+      title          = "{Multiplicity Dependence of Pion, Kaon, Proton and Lambda
+                        Production in p-Pb Collisions at $\sqrt{s_{NN}}$ = 5.02
+                        TeV}",
+      collaboration  = "ALICE",
+      journal        = "Phys. Lett.",
+      volume         = "B728",
+      year           = "2014",
+      pages          = "25-38",
+      doi            = "10.1016/j.physletb.2013.11.020",
+      eprint         = "1307.6796",
+      archivePrefix  = "arXiv",
+      primaryClass   = "nucl-ex",
+      reportNumber   = "CERN-PH-EP-2013-135",
+      SLACcitation   = "%%CITATION = ARXIV:1307.6796;%%"
+}'

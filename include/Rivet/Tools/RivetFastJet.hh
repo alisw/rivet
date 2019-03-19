@@ -9,14 +9,18 @@
 #include "fastjet/ClusterSequenceArea.hh"
 #include "fastjet/PseudoJet.hh"
 #include "fastjet/tools/Filter.hh"
+#include "fastjet/tools/Recluster.hh"
 
 namespace Rivet {
 
 
   /// Unscoped awareness of FastJet's PseudoJet
   using fastjet::PseudoJet;
+  using fastjet::ClusterSequence;
+  using fastjet::JetDefinition;
 
   /// Typedef for a collection of PseudoJet objects.
+  /// @todo Make into an explicit container with conversion to Jets and FourMomenta?
   typedef std::vector<PseudoJet> PseudoJets;
 
 

@@ -1,6 +1,27 @@
 def isRefPath(path):
     return path.startswith("/REF")
 
+def isRawPath(path):
+    return path.startswith("/RAW")
+
+def isRawAO(ao):
+    return isRawPath(ao.path)
+
+def stripOptions(path):
+    import re
+    return re.sub(r':\w+=[^:/]+', "", path)
+
+def extractOptionString(path):
+    import re
+    re_opts = re.compile(r"^.*(:\w+=[^:/]+)+")
+    m = re_opts.match(path)
+    if not m:
+        return ""
+    opts = list(m.groups())
+    for i in range(len(opts)):
+        opts[i] = opts[i].strip(':') 
+    return " [" + ",".join(opts) + "]"
+   
 def isRefAO(ao):
     return int(ao.annotation("IsRef")) == 1 or isRefPath(ao.path)
 
@@ -85,3 +106,7 @@ class AOPath(object):
     def istmp(self):
         "Do any basepath components start with an underscore, used to hide them from plotting?"
         return isTmpPath(self.basepath())
+
+    def israw(self):
+        "Do any basepath components start with /RAW, used to hide them from plotting?"
+        return isRawPath(self.basepath())

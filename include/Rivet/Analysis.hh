@@ -15,6 +15,8 @@
 #include "Rivet/Tools/BinnedHistogram.hh"
 #include "Rivet/Tools/RivetMT2.hh"
 #include "Rivet/Tools/RivetYODA.hh"
+#include "Rivet/Tools/Percentile.hh"
+#include "Rivet/Projections/CentralityProjection.hh"
 
 
 /// @def vetoEvent
@@ -51,7 +53,6 @@ namespace Rivet {
 
     /// The AnalysisHandler is a friend.
     friend class AnalysisHandler;
-
 
   public:
 
@@ -111,11 +112,22 @@ namespace Rivet {
 
     /// @brief Get the name of the analysis.
     ///
-    /// By default this is computed by combining the results of the experiment,
-    /// year and Spires ID metadata methods and you should only override it if
-    /// there's a good reason why those won't work.
+    /// By default this is computed by combining the results of the
+    /// experiment, year and Spires ID metadata methods and you should
+    /// only override it if there's a good reason why those won't
+    /// work. If options has been set for this instance, a
+    /// corresponding string is appended at the end.
     virtual std::string name() const {
-      return (info().name().empty()) ? _defaultname : info().name();
+      return  ( (info().name().empty()) ? _defaultname : info().name() ) + _optstring;
+    }
+    // get name of reference data file, which could be different from plugin name
+    virtual std::string getRefDataName() const {
+      return (info().getRefDataName().empty()) ? _defaultname : info().getRefDataName();
+    }
+
+    // set name of reference data file, which could be different from plugin name
+    virtual void setRefDataName(const std::string& ref_data="") {
+      info().setRefDataName(!ref_data.empty() ? ref_data : name());
     }
 
     /// Get the Inspire ID code for this analysis.
@@ -277,10 +289,17 @@ namespace Rivet {
     /// Centre of mass energy for this run
     double sqrtS() const;
 
+    /// Check if we are running rivet-merge.
+    bool merging() const {
+      return sqrtS() <= 0.0;
+    }
+
     //@}
 
 
     /// @name Analysis / beam compatibility testing
+    /// @todo Replace with beamsCompatible() with no args (calling beams() function internally)
+    /// @todo Add beamsMatch() methods with same (shared-code?) tolerance as in beamsCompatible()
     //@{
 
     /// Check if analysis is compatible with the provided beam particle IDs and energies
@@ -296,10 +315,11 @@ namespace Rivet {
 
 
     /// Set the cross section from the generator
-    Analysis& setCrossSection(double xs);
+    Analysis& setCrossSection(double xs); //, double xserr=0.0);
 
     /// Access the controlling AnalysisHandler object.
     AnalysisHandler& handler() const { return *_analysishandler; }
+
 
 
   protected:
@@ -347,7 +367,12 @@ namespace Rivet {
     const std::string histoPath(unsigned int datasetId, unsigned int xAxisId, unsigned int yAxisId) const;
 
     /// Get the internal histogram name for given d, x and y (cf. HepData)
-    const std::string makeAxisCode(unsigned int datasetId, unsigned int xAxisId, unsigned int yAxisId) const;
+    const std::string mkAxisCode(unsigned int datasetId, unsigned int xAxisId, unsigned int yAxisId) const;
+    /// Alias
+    /// @deprecated Prefer the "mk" form, consistent with other "making function" names
+    const std::string makeAxisCode(unsigned int datasetId, unsigned int xAxisId, unsigned int yAxisId) const {
+      return mkAxisCode(datasetId, xAxisId, yAxisId);
+    }
 
     //@}
 
@@ -668,10 +693,109 @@ namespace Rivet {
                                const std::string& xtitle,
                                const std::string& ytitle);
 
+    /// Book a 2-dimensional data point set with x-points from an existing scatter and a new path.
+    Scatter2DPtr bookScatter2D(const Scatter2DPtr scPtr, 
+    const std::string& path, const std::string& title = "", 
+    const std::string& xtitle = "", const std::string& ytitle = "" );
+    
     //@}
 
 
   public:
+
+    /// @name accessing options for this Analysis instance.
+    //@{
+
+    /// Get an option for this analysis instance as a string.
+    std::string getOption(std::string optname) {
+      if ( _options.find(optname) != _options.end() )
+        return _options.find(optname)->second;
+      return "";
+    }
+
+    /// Get an option for this analysis instance converted to a
+    /// specific type (given by the specified @a def value).
+    template<typename T>
+    T getOption(std::string optname, T def) {
+      if (_options.find(optname) == _options.end()) return def;
+      std::stringstream ss;
+      ss << _options.find(optname)->second;
+      T ret;
+      ss >> ret;
+      return ret;
+    }
+
+    //@}
+    /// @brief Book a CentralityProjection
+    ///
+    /// Using a SingleValueProjection, @a proj, giving the value of an
+    /// experimental observable to be used as a centrality estimator,
+    /// book a CentralityProjection based on the experimentally
+    /// measured pecentiles of this observable (as given by the
+    /// reference data for the @a calHistName histogram in the @a
+    /// calAnaName analysis. If a preloaded file with the output of a
+    /// run using the @a calAnaName analysis contains a valid
+    /// generated @a calHistName histogram, it will be used as an
+    /// optional percentile binning. Also if this preloaded file
+    /// contains a histogram with the name @a calHistName with an
+    /// appended "_IMP" This histogram will be used to add an optional
+    /// centrality percentile based on the generated impact
+    /// parameter. If @increasing is true, a low (high) value of @proj
+    /// is assumed to correspond to a more peripheral (central) event.
+    const CentralityProjection&
+    declareCentrality(const SingleValueProjection &proj,
+                      string calAnaName, string calHistName,
+                      const string projName, bool increasing = false);
+
+    /// @brief Book a Pecentile wrapper around AnalysisObjects.
+    ///
+    /// Based on a previously registered CentralityProjection named @a
+    /// projName book one AnalysisObject for each @a centralityBin and
+    /// name them according to the corresponding code in the @a ref
+    /// vector.
+    template <class T>
+    Percentile<T> bookPercentile(string projName,
+                                 vector<pair<float, float> > centralityBins,
+                                 vector<tuple<int, int, int> > ref) {
+      typedef typename ReferenceTraits<T>::RefT RefT;
+      Percentile<T> pctl(this, projName);
+
+      const int nCent = centralityBins.size();
+      for (int iCent = 0; iCent < nCent; ++iCent) {
+        const string axisCode = makeAxisCode(std::get<0>(ref[iCent]),
+                                             std::get<1>(ref[iCent]),
+                                             std::get<2>(ref[iCent])); 
+	const RefT & refscatter = refData<RefT>(axisCode);
+        shared_ptr<T> ao = addOrGetCompatAO(make_shared<T>(refscatter, histoPath(axisCode)));
+        CounterPtr cnt =
+          addOrGetCompatAO(make_shared<Counter>(histoPath("TMP/COUNTER/" + axisCode)));
+        pctl.add(ao, cnt, centralityBins[iCent]);
+      }
+      return pctl;
+    }
+
+    /// @brief Book Pecentile wrappers around AnalysisObjects.
+    ///
+    /// Based on a previously registered CentralityProjection named @a
+    /// projName book one (or several) AnalysisObject(s) named
+    /// according to @a ref where the x-axis will be filled according
+    /// to the percentile output(s) of the @projName.
+    template <class T>
+    PercentileXaxis<T> bookPercentileXaxis(string projName,
+                                           tuple<int, int, int> ref) {
+      typedef typename ReferenceTraits<T>::RefT RefT;
+      PercentileXaxis<T> pctl(this, projName);
+
+      const string axisCode = makeAxisCode(std::get<0>(ref),
+                                           std::get<1>(ref),
+                                           std::get<2>(ref)); 
+      const RefT & refscatter = refData<RefT>(axisCode);
+      shared_ptr<T> ao = addOrGetCompatAO(make_shared<T>(refscatter, histoPath(axisCode)));
+      pctl.add(proj, ao, make_shared<Counter>());
+
+      return pctl;
+    }
+
 
 
     /// @name Analysis object manipulation
@@ -863,13 +987,40 @@ namespace Rivet {
     /// Register a data object in the histogram system
     void addAnalysisObject(AnalysisObjectPtr ao);
 
+    /// Register a data object in the system and return its pointer,
+    /// or, if an object of the same path is already there, check if it
+    /// is compatible (eg. same type and same binning) and return that
+    /// object instead. Emits a warning if an incompatible object with
+    /// the same name is found and replcaces that with the given data
+    /// object.
+    template <typename AO=YODA::AnalysisObject>
+    std::shared_ptr<AO> addOrGetCompatAO(std::shared_ptr<AO> aonew) {
+      foreach (const AnalysisObjectPtr& ao, analysisObjects()) {
+        if ( ao->path() == aonew->path() ) {
+           std::shared_ptr<AO> aoold = dynamic_pointer_cast<AO>(ao);
+           if ( aoold && bookingCompatible(aonew, aoold) ) {
+             MSG_TRACE("Bound pre-existing data object " << aonew->path()
+                       <<  " for " << name());
+             return aoold;
+           } else {
+             MSG_WARNING("Found incompatible pre-existing data object with same path " 
+                         << aonew->path() <<  " for " << name());
+           }
+        }
+      }
+      MSG_TRACE("Registered " << aonew->annotation("Type") << " " << aonew->path()
+                <<  " for " << name());
+      addAnalysisObject(aonew);
+      return aonew;
+    }
+
     /// Get a data object from the histogram system
     template <typename AO=YODA::AnalysisObject>
     const std::shared_ptr<AO> getAnalysisObject(const std::string& name) const {
       foreach (const AnalysisObjectPtr& ao, analysisObjects()) {
         if (ao->path() == histoPath(name)) return dynamic_pointer_cast<AO>(ao);
       }
-      throw Exception("Data object " + histoPath(name) + " not found");
+      throw LookupError("Data object " + histoPath(name) + " not found");
     }
 
     /// Get a data object from the histogram system (non-const)
@@ -878,7 +1029,7 @@ namespace Rivet {
       foreach (const AnalysisObjectPtr& ao, analysisObjects()) {
         if (ao->path() == histoPath(name)) return dynamic_pointer_cast<AO>(ao);
       }
-      throw Exception("Data object " + histoPath(name) + " not found");
+      throw LookupError("Data object " + histoPath(name) + " not found");
     }
 
     /// Unregister a data object from the histogram system (by name)
@@ -887,6 +1038,22 @@ namespace Rivet {
     /// Unregister a data object from the histogram system (by pointer)
     void removeAnalysisObject(AnalysisObjectPtr ao);
 
+    /// Get all data object from the AnalysisHandler.
+    vector<AnalysisObjectPtr> getAllData(bool includeorphans) const;
+
+    /// Get a data object from another analysis (e.g. preloaded
+    /// calibration histogram).
+    /// Get a data object from the histogram system (non-const)
+    template <typename AO=YODA::AnalysisObject>
+    std::shared_ptr<AO> getAnalysisObject(const std::string & ananame,
+                                          const std::string& name) {
+      std::string path = "/" + ananame + "/" + name;
+      for ( AnalysisObjectPtr ao : getAllData(true) ) {
+        if ( ao->path() == path )
+          return dynamic_pointer_cast<AO>(ao);
+      }
+      return std::shared_ptr<AO>();
+    }
 
     /// Get a named Histo1D object from the histogram system
     const Histo1DPtr getHisto1D(const std::string& name) const {
@@ -1006,7 +1173,7 @@ namespace Rivet {
     /// Storage of all plot objects
     /// @todo Make this a map for fast lookup by path?
     vector<AnalysisObjectPtr> _analysisobjects;
-
+    
     /// @name Cross-section variables
     //@{
     double _crossSection;
@@ -1020,6 +1187,11 @@ namespace Rivet {
     /// reference data file should only be read once.
     mutable std::map<std::string, AnalysisObjectPtr> _refdata;
 
+     /// Options the (this instance of) the analysis
+     map<string, string> _options;
+
+    /// The string of options.
+    string _optstring;
 
   private:
 

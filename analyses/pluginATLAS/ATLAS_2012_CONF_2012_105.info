@@ -13,6 +13,7 @@ RunInfo:
 NumEvents: 25000 for BSM signals
 Beams: [p+, p+]
 Energies: [8000]
+Luminosity_fb: 5.8
 Description:
   'Results of the search for the production of supersymmetric particles decaying into final
    states with missing transverse momentum and two isolated same-sign leptons, electrons or muons.
@@ -20,3 +21,4 @@ Description:
    corresponds to a total integrated luminosity o1 $5.8\,\text{fb}^{-1}$ of $\sqrt{s} = 8$\,TeV
    proton-proton collisions recorded with the ATLAS detector at the Large Hadron Collider.
    Opposite-sign and same-sign dilepton events are studied separately.'
+Keywords: [search, bsm, susy, 2lepton, jets, met]

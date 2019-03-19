@@ -13,8 +13,9 @@ References:
  - arXiv:1509.07844 [hep-ex]
 Keywords:
  - diboson
- - leptons
- - lineshape
+ - 2boson
+ - zz
+ - 4lepton
 RunInfo:
   '$p p \to \ell \ell \ell \ell + X$'
 Luminosity_fb: 20.3

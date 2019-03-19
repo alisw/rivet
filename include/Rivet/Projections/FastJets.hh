@@ -17,6 +17,7 @@
 #include "fastjet/D0RunIIConePlugin.hh"
 #include "fastjet/TrackJetPlugin.hh"
 #include "fastjet/JadePlugin.hh"
+#include "Rivet/Projections/PxConePlugin.hh"
 //#include "fastjet/PxConePlugin.hh"
 
 namespace Rivet {
@@ -28,8 +29,7 @@ namespace Rivet {
 
     /// Wrapper enum for selected FastJet jet algorithms.
     /// @todo Move to JetAlg and alias here?
-    enum JetAlgName { KT, CAM, SISCONE, ANTIKT,
-                      // PXCONE,
+    enum JetAlgName { KT, CAM, SISCONE, ANTIKT, PXCONE,
                       ATLASCONE, CMSCONE,
                       CDFJETCLU, CDFMIDPOINT, D0ILCONE,
                       JADE, DURHAM, TRACKJET, GENKTEE };

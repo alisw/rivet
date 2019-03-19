@@ -16,12 +16,11 @@ namespace Rivet {
     //@{
 
     /// Constructor
-    ATLAS_2015_CONF_2015_041(string name="ATLAS_2015_CONF_2015_041")
-      : Analysis(name),
-        _weights(5, 0.0)
-    {
-      // This class uses the combined e+mu mode
-      _mode = 0;
+    ATLAS_2015_CONF_2015_041(const string name="ATLAS_2015_CONF_2015_041", size_t channel = 0,
+                             const string ref_data="ATLAS_2015_CONF_2015_041")
+                             : Analysis(name), _weights(5, 0.0) {
+      _mode = 0; // This class uses the combined e+mu mode
+      setRefDataName(ref_data);
     }
 
     //@}
@@ -134,24 +133,15 @@ namespace Rivet {
 
   class ATLAS_2015_CONF_2015_041_EL : public ATLAS_2015_CONF_2015_041 {
   public:
-    ATLAS_2015_CONF_2015_041_EL()
-      : ATLAS_2015_CONF_2015_041("ATLAS_2015_CONF_2015_041_EL")
-    {
-      _mode = 0;
-    }
+    ATLAS_2015_CONF_2015_041_EL() : ATLAS_2015_CONF_2015_041("ATLAS_2015_CONF_2015_041_EL", 0) { }
   };
 
 
 
   class ATLAS_2015_CONF_2015_041_MU : public ATLAS_2015_CONF_2015_041 {
   public:
-    ATLAS_2015_CONF_2015_041_MU()
-      : ATLAS_2015_CONF_2015_041("ATLAS_2015_CONF_2015_041_MU")
-    {
-      _mode = 1;
-    }
+    ATLAS_2015_CONF_2015_041_MU() : ATLAS_2015_CONF_2015_041("ATLAS_2015_CONF_2015_041_MU", 1) { }
   };
-
 
 
   DECLARE_RIVET_PLUGIN(ATLAS_2015_CONF_2015_041);

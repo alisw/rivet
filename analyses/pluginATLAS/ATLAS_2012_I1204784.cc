@@ -77,7 +77,7 @@ namespace Rivet {
 
       void fillPlots(const ZFinder& zfind, Histo1DPtr hist, BinnedHistogram<double>& binnedHist, double weight) {
         if (zfind.bosons().size() != 1) return;
-        Particles leptons = zfind.constituents(cmpMomByPt);
+        Particles leptons = sortBy(zfind.constituents(), cmpMomByPt);
 
         const FourMomentum lminus = leptons[0].charge() < 0 ? leptons[0].momentum() : leptons[1].momentum();
         const FourMomentum lplus = leptons[0].charge() < 0 ? leptons[1].momentum() : leptons[0].momentum();

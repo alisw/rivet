@@ -14,6 +14,7 @@ RunInfo:
 NumEvents: 25000 for BSM signals
 Beams: [p+, p+]
 Energies: [7000]
+#Luminosity_fb:
 Description:
   'Search for supersymmmetric particles by ATLAS at 7 TeV in events with b-jets,
   large missing
@@ -22,6 +23,7 @@ Description:
   as one-bin histograms.
   Histograms for missing transverse energy, and effective mass are also
   implemented for some signal regions.'
+Keywords: [search, bsm, 0lepton, 1lepton, bjet, met]
 BibKey: ATLAS2012:1095236
 BibTeX: '@article{ATLAS2012:1095236,
       author         = "Aad, Georges and others",

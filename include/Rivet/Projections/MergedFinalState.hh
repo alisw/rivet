@@ -13,8 +13,9 @@ namespace Rivet {
 
 
   /// @brief Get final state particles merged from two FinalState projections.
+  ///
+  /// @todo Extend to merging many FS projections
   class MergedFinalState : public FinalState {
-
   public:
 
     /// @name Constructors

@@ -1,0 +1,26 @@
+Name: CMS_2017_I1605749
+Year: 2017
+Summary: Measurements of jet charge with dijet events in pp collisions at $\sqrt{s}=8$ TeV
+Experiment: CMS
+Collider: LHC
+InspireID: 1605749
+Status: VALIDATED
+Authors:
+ - Debarati Roy <debarati.roy@cern.ch>
+ - Andreas Hinzmann <andreas.hinzmann@cern.ch>
+ - Nhan Viet Tran <nhan.viet.tran@cern.ch>
+ - Sunanda Banerjee <Sunanda.Banerjee@cern.ch>
+
+References:
+ - DOI:10.1007/JHEP10(2017)131
+ - arXiv:1706.05868
+ - CMS-SMP-15-003
+
+RunInfo:
+  pp QCD interactions at $\sqrt{s} = 8$ TeV. Data collected by CMS during the year 2012.
+Beams: [p+, p+]
+Energies: [8000]
+PtCuts: [400]
+NeedCrossSection: no
+Description:
+  'Jet charge is an estimator of the electric charge of a quark, antiquark, or gluon initiating a jet. It is based on the momentum-weighted sum of the electric charges of the jet constituents. Measurements of three charge observables of the leading jet in transverse momentum $p_\mathrm{T}$ are performed with dijet events. The analysis is carried out with data collected by the CMS experiment at the CERN LHC in proton-proton collisions at $\sqrt{s}=8\TeV$ corresponding to an integrated luminosity of 19.7 fb$^{-1}$. The results are presented in bins of the $p_\mathrm{T}$ of the leading jet.'

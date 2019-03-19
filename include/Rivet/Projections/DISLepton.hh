@@ -20,7 +20,7 @@ namespace Rivet {
     DISLepton(){
       setName("DISLepton");
       addProjection(Beam(), "Beam");
-      addProjection(PromptFinalState(), "PromptFS");
+      addProjection(PromptFinalState(), "FS");
     }
 
     /// Clone on the heap.

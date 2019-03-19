@@ -11,7 +11,7 @@ namespace Rivet {
     if (_vetofsnames.size() != 0) return UNDEFINED;
     const VetoedFinalState& other = dynamic_cast<const VetoedFinalState&>(p);
     return \
-      cmp(_vetoCodes, other._vetoCodes) ||
+      cmp(_vetoCuts, other._vetoCuts) ||
       cmp(_compositeVetoes, other._compositeVetoes) ||
       cmp(_parentVetoes, other._parentVetoes);
   }
@@ -22,58 +22,41 @@ namespace Rivet {
     _theParticles.clear();
     _theParticles.reserve(fs.particles().size());
 
-
-    // Veto by PID code
-    if (getLog().isActive(Log::TRACE)) {
-      /// @todo Should be PdgId, but _vetoCodes is currently a long
-      vector<long> codes;
-      for (auto& code : _vetoCodes) codes += code.first;
-      MSG_TRACE("Veto codes = " << codes << " (" << codes.size() << ")");
-    }
-    if (_vetoCodes.empty()) {
+    // Veto by cut
+    if (_vetoCuts.empty()) {
       _theParticles = fs.particles();
     } else {
       // Test every particle against the codes
       for (const Particle& p : fs.particles()) {
-        VetoDetails::iterator iter = _vetoCodes.find(p.pid());
-        if (iter == _vetoCodes.end()) {
-          // MSG_TRACE("Storing with PDG code = " << p.pid() << ", pT = " << p.pT());
+        bool match = false;
+        for (const Cut& c : _vetoCuts) {
+          if (c->accept(p)) {
+            match = true;
+            break;
+          }
+        }
+        if (!match) {
+          MSG_TRACE("Storing particle " << p);
           _theParticles.push_back(p);
         } else {
-          // This particle code is listed as a possible veto... check pT.
-          // Make sure that the pT range is sensible:
-          BinaryCut ptrange = iter->second;
-          assert(ptrange.first <= ptrange.second);
-          stringstream rangess;
-          if (ptrange.first < numeric_limits<double>::max()) rangess << ptrange.second;
-          rangess << " - ";
-          if (ptrange.second < numeric_limits<double>::max()) rangess << ptrange.second;
-          MSG_TRACE("ID = " << p.pid() << ", pT range = " << rangess.str());
-          stringstream debugline;
-          debugline << "with PDG code = " << p.pid() << " pT = " << p.pT();
-          if (p.pT() < ptrange.first || p.pT() > ptrange.second) {
-            MSG_TRACE("Storing " << debugline.str());
-            _theParticles.push_back(p);
-          } else {
-            MSG_TRACE("Vetoing " << debugline.str());
-          }
+          MSG_TRACE("Vetoing particle " << p);
         }
       }
     }
 
-    /// @todo What is this block? Mass vetoing?
+    // Composite particle mass vetoing
+    /// @todo YUCK! Clean up...
     set<Particles::iterator> toErase;
-    for (set<int>::iterator nIt = _nCompositeDecays.begin(); nIt != _nCompositeDecays.end() && !_theParticles.empty(); ++nIt) {
+    for (auto nIt = _nCompositeDecays.begin(); nIt != _nCompositeDecays.end() && !_theParticles.empty(); ++nIt) {
       map<set<Particles::iterator>, FourMomentum> oldMasses;
       map<set<Particles::iterator>, FourMomentum> newMasses;
       set<Particles::iterator> start;
       start.insert(_theParticles.begin());
       oldMasses.insert(pair<set<Particles::iterator>, FourMomentum>(start, _theParticles.begin()->momentum()));
       for (int nParts = 1; nParts != *nIt; ++nParts) {
-        for (map<set<Particles::iterator>, FourMomentum>::iterator mIt = oldMasses.begin();
-             mIt != oldMasses.end(); ++mIt) {
+        for (auto mIt = oldMasses.begin(); mIt != oldMasses.end(); ++mIt) {
           Particles::iterator pStart = *(mIt->first.rbegin());
-          for (Particles::iterator pIt = pStart + 1; pIt != _theParticles.end(); ++pIt) {
+          for (auto pIt = pStart + 1; pIt != _theParticles.end(); ++pIt) {
             FourMomentum cMom = mIt->second + pIt->momentum();
             set<Particles::iterator> pList(mIt->first);
             pList.insert(pIt);
@@ -83,17 +66,14 @@ namespace Rivet {
         oldMasses = newMasses;
         newMasses.clear();
       }
-      for (map<set<Particles::iterator>, FourMomentum>::iterator mIt = oldMasses.begin();
-           mIt != oldMasses.end(); ++mIt) {
+      for (auto mIt = oldMasses.begin(); mIt != oldMasses.end(); ++mIt) {
         double mass2 = mIt->second.mass2();
         if (mass2 >= 0.0) {
           double mass = sqrt(mass2);
-          for (CompositeVeto::iterator cIt = _compositeVetoes.lower_bound(*nIt);
-               cIt != _compositeVetoes.upper_bound(*nIt); ++cIt) {
-            BinaryCut massRange = cIt->second;
+          for (auto cIt = _compositeVetoes.lower_bound(*nIt); cIt != _compositeVetoes.upper_bound(*nIt); ++cIt) {
+            auto massRange = cIt->second;
             if (mass < massRange.second && mass > massRange.first) {
-              for (set<Particles::iterator>::iterator lIt = mIt->first.begin();
-                   lIt != mIt->first.end(); ++lIt) {
+              for (auto lIt = mIt->first.begin(); lIt != mIt->first.end(); ++lIt) {
                 toErase.insert(*lIt);
               }
             }
@@ -101,10 +81,9 @@ namespace Rivet {
         }
       }
     }
-    for (set<Particles::iterator>::reverse_iterator p = toErase.rbegin(); p != toErase.rend(); ++p) {
+    for (auto p = toErase.rbegin(); p != toErase.rend(); ++p) {
       _theParticles.erase(*p);
     }
-
 
     // Remove particles whose parents match entries in the parent veto PDG ID codes list
     /// @todo There must be a nice way to do this -- an STL algorithm (or we provide a nicer wrapper)

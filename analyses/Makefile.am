@@ -1,4 +1,5 @@
 AUTOMAKE_OPTIONS = -Wno-portability
+SHELL := bash -O extglob
 
 if ENABLE_ANALYSES
 
@@ -13,21 +14,21 @@ EXTRA_DIST = $(PLUGIN_DIRS)
 %.so:
 	@+echo && RIVET_BUILDPLUGIN_BEFORE_INSTALL=1 bash $(top_builddir)/bin/rivet-buildplugin -j2 $@ $^ -I$(top_builddir)/include
 
-RivetALICEAnalyses.so: $(shell ls $(srcdir)/pluginALICE/*.cc)
-RivetATLASAnalyses.so: $(shell ls $(srcdir)/pluginATLAS/*.cc)
-RivetCDFAnalyses.so  : $(shell ls $(srcdir)/pluginCDF/*.cc)
-RivetCMSAnalyses.so  : $(shell ls $(srcdir)/pluginCMS/*.cc)
-RivetD0Analyses.so   : $(shell ls $(srcdir)/pluginD0/*.cc)
-RivetHERAAnalyses.so : $(shell ls $(srcdir)/pluginHERA/*.cc)
-RivetLEPAnalyses.so  : $(shell ls $(srcdir)/pluginLEP/*.cc)
-RivetLHCbAnalyses.so : $(shell ls $(srcdir)/pluginLHCb/*.cc)
-RivetLHCfAnalyses.so : $(shell ls $(srcdir)/pluginLHCf/*.cc)
-RivetMCAnalyses.so   : $(shell ls $(srcdir)/pluginMC/*.cc)
-RivetMiscAnalyses.so : $(shell ls $(srcdir)/pluginMisc/*.cc)
-RivetPetraAnalyses.so: $(shell ls $(srcdir)/pluginPetra/*.cc)
-RivetRHICAnalyses.so : $(shell ls $(srcdir)/pluginRHIC/*.cc)
-RivetSPSAnalyses.so  : $(shell ls $(srcdir)/pluginSPS/*.cc)
-RivetTOTEMAnalyses.so: $(shell ls $(srcdir)/pluginTOTEM/*.cc)
+RivetALICEAnalyses.so: $(shell ls $(srcdir)/pluginALICE/!(tmp)*.cc)
+RivetATLASAnalyses.so: $(shell ls $(srcdir)/pluginATLAS/!(tmp)*.cc)
+RivetCDFAnalyses.so  : $(shell ls $(srcdir)/pluginCDF/!(tmp)*.cc)
+RivetCMSAnalyses.so  : $(shell ls $(srcdir)/pluginCMS/!(tmp)*.cc)
+RivetD0Analyses.so   : $(shell ls $(srcdir)/pluginD0/!(tmp)*.cc)
+RivetHERAAnalyses.so : $(shell ls $(srcdir)/pluginHERA/!(tmp)*.cc)
+RivetLEPAnalyses.so  : $(shell ls $(srcdir)/pluginLEP/!(tmp)*.cc)
+RivetLHCbAnalyses.so : $(shell ls $(srcdir)/pluginLHCb/!(tmp)*.cc)
+RivetLHCfAnalyses.so : $(shell ls $(srcdir)/pluginLHCf/!(tmp)*.cc)
+RivetMCAnalyses.so   : $(shell ls $(srcdir)/pluginMC/!(tmp)*.cc)
+RivetMiscAnalyses.so : $(shell ls $(srcdir)/pluginMisc/!(tmp)*.cc)
+RivetPetraAnalyses.so: $(shell ls $(srcdir)/pluginPetra/!(tmp)*.cc)
+RivetRHICAnalyses.so : $(shell ls $(srcdir)/pluginRHIC/!(tmp)*.cc)
+RivetSPSAnalyses.so  : $(shell ls $(srcdir)/pluginSPS/!(tmp)*.cc)
+RivetTOTEMAnalyses.so: $(shell ls $(srcdir)/pluginTOTEM/!(tmp)*.cc)
 
 all-local: $(PLUGIN_LIBS) $(PLUGIN_DATAFILES)
 	mkdir -p $(builddir)/data

@@ -9,7 +9,7 @@
 namespace Rivet {
 
 
-  /// @brief Just measures a few random things as an example.
+  /// @brief Just measures a few observables as a demo
   class EXAMPLE : public Analysis {
   public:
 
@@ -78,7 +78,7 @@ namespace Rivet {
       _histAplanarity->fill(s.aplanarity(), weight);
 
       const Jets jets = apply<FastJets>(event, "Jets").jets(Cuts::pT > 5*GeV);
-      const size_t num_b_jets = count_if(jets.begin(), jets.end(), [](const Jet& j){ return j.bTagged(Cuts::pT > 500*MeV); });
+      const size_t num_b_jets = count_if(jets.begin(), jets.end(), hasBTag(Cuts::pT > 500*MeV));
       MSG_DEBUG("Num B-jets with pT > 5 GeV = " << num_b_jets);
     }
 

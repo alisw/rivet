@@ -49,7 +49,7 @@ namespace Rivet {
       declare(mus, "TruthMuons");
       declare(SmearedParticles(mus, MUON_EFF_ATLAS_RUN2, MUON_SMEAR_ATLAS_RUN2), "Muons");
 
-      ChargedFinalState cfs(Cuts::abseta < 2.5);
+      FinalState cfs(Cuts::abseta < 2.5 && Cuts::abscharge > 0);
       declare(cfs, "TruthTracks");
       declare(SmearedParticles(cfs, TRK_EFF_ATLAS_RUN2), "Tracks");
 

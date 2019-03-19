@@ -1,0 +1,47 @@
+Name: ALICE_2012_I1126966 
+Year: 2012
+Summary: Pion, Kaon, and Proton Production in Central Pb-Pb Collisions at 2.76 TeV
+Experiment: ALICE
+Collider: LHC
+SpiresID: 1126966
+Status: UNVALIDATED
+Authors:
+ - Cody B Duncan <cody.duncan@monash.edu>
+ - Patrick Kirchgaesser <patrick.kirchgaesser@kit.edu>
+ - Johannes Bellm <johannes.bellm@thep.lu.se>
+References:
+ - Phys.Rev.Lett. 109 (2012) 252301
+ - arXiv:1208.1974 [hep-ex] 
+RunInfo: 
+  Analysis of various pT spectra in central Pb-Pb collisions at 2.76 TeV
+NeedCrossSection: no
+Beams: [1000822080,1000822080]
+# This is _total_ energy of beams, so this becomes 208*2760=574080
+Energies: [574080]
+Options:
+ - cent=REF,GEN,IMP,USR
+Description:
+  Measurements of the transverse momentum distributions of charged pions, kaons 
+  and (anti)protons in Lead-Lead collisions at a centre-of-mass energy per nucleon 
+  of 2.76 TeV. The data, covering the PT range up to 4.5 GeV for protons, is restricted 
+  to the central rapidity range |y| < 0.5.
+BibKey: Abelev:2012wca
+BibTeX: '@article{Abelev:2012wca,
+      author         = "Abelev, Betty and others",
+      title          = "{Pion, Kaon, and Proton Production in Central Pb--Pb
+                        Collisions at $\sqrt{s_{NN}} = 2.76$ TeV}",
+      collaboration  = "ALICE",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "109",
+      year           = "2012",
+      pages          = "252301",
+      doi            = "10.1103/PhysRevLett.109.252301",
+      eprint         = "1208.1974",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-PH-EP-2012-230",
+      SLACcitation   = "%%CITATION = ARXIV:1208.1974;%%"
+}'
+ToDo:
+ - test it, remove this ToDo, and mark as VALIDATED :-)
+

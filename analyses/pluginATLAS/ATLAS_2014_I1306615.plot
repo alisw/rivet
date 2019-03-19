@@ -22,12 +22,14 @@ Title=Number of jets, $p_{T}^{jet} > 30$ GeV
 XLabel=$N_{jets}$
 YLabel=$\sigma_{\mathrm{fid}}$ [fb]
 LogY=0
+XCustomMajorTicks=1.0 $0$ 2.0 $1$ 3.0 $2$ 4.0 $\geq 3$
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2014_I1306615/d04-x01-y01
 Title=Number of jets, $p_{T}^{jet} > 50$ GeV
 XLabel=$N_{jets}$
 YLabel=$\sigma_{\mathrm{fid}}$ [fb]
+XCustomMajorTicks=1.0 $0$ 2.0 $1$ 3.0 $2$ 4.0 $\geq 3$
 LogY=0
 # END PLOT
 
@@ -200,7 +202,7 @@ YLabel=$\mathrm{d}\sigma_{\mathrm{fid}} / \mathrm{d} p_T^{j1}$ [fb/GeV]
 LogY=0
 # END PLOT
 
-# BEGIN PLOT /ATLAS_2014_I1306615/d29-x01-y01
+# BEGIN PLOT /ATLAS_2014_I1306615/d30-x01-y01
 Title=Baseline, $N_{jets} \ge 1, 2, 3$, VBF, $N_{lep} \ge 1$, $E_T^{miss} \ge 80$ GeV regions
 XLabel=region ID
 YLabel=$\sigma_{\mathrm{fid}}$ [fb]

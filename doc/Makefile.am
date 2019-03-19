@@ -1,6 +1,10 @@
-dist_noinst_SCRIPTS = mk-analysis-html mk-analysis-latex mk-analysis-json
+dist_noinst_SCRIPTS = \
+  mk-analysis-html mk-analysis-latex mk-analysis-json \
+  mk-coverage-html mk-coverage-htmls
 
-LATEXSUBSOURCES = preamble.tex intro.tex gettingstarted.tex writinganalyses.tex agilerunmc.tex acknowledgements.tex
+LATEXSUBSOURCES = \
+  preamble.tex intro.tex gettingstarted.tex writinganalyses.tex \
+  agilerunmc.tex acknowledgements.tex
 
 DOCSOURCES = $(LATEXSUBSOURCES) \
   compare-histos.txt slip.eps thinker.eps cone.eps bend.eps \
@@ -17,21 +21,34 @@ DOCDIRS =
 if ENABLE_PYEXT
 DOCS += analyses.html
 DOCDIRS += analyses
-analyses.html: $(top_srcdir)/analyses mk-analysis-html
-	LD_LIBRARY_PATH=$(top_builddir)/src/.libs:$(YAML_CPPLIBPATH):$(FASTJETLIBPATH):$(HEPMCLIBPATH):$(YODALIBPATH):$(LD_LIBRARY_PATH) \
-    DYLD_LIBRARY_PATH=$(top_builddir)/src/.libs:$(YAML_CPPLIBPATH):$(FASTJETLIBPATH):$(HEPMCLIBPATH):$(YODALIBPATH):$(DYLD_LIBRARY_PATH) \
+analyses.html: $(top_srcdir)/analyses $(srcdir)/mk-analysis-html
+	LD_LIBRARY_PATH=$(top_builddir)/src/.libs:$(LD_LIBRARY_PATH) \
+    DYLD_LIBRARY_PATH=$(top_builddir)/src/.libs:$(DYLD_LIBRARY_PATH) \
     PYTHONPATH=$(YODA_PYTHONPATH):$(RIVET_PYTHONPATH):$(PYTHONPATH) \
-    $(PYTHON) mk-analysis-html
+    RIVET_ANALYSIS_PATH=$(top_builddir)/analyses:: \
+    $(PYTHON) $(srcdir)/mk-analysis-html || true
 endif
 
 
 if ENABLE_PYEXT
 DOCS += analyses.json
-analyses.json: $(top_srcdir)/analyses mk-analysis-json
-	LD_LIBRARY_PATH=$(top_builddir)/src/.libs:$(YAML_CPPLIBPATH):$(FASTJETLIBPATH):$(HEPMCLIBPATH):$(YODALIBPATH):$(LD_LIBRARY_PATH) \
-    DYLD_LIBRARY_PATH=$(top_builddir)/src/.libs:$(YAML_CPPLIBPATH):$(FASTJETLIBPATH):$(HEPMCLIBPATH):$(YODALIBPATH):$(DYLD_LIBRARY_PATH) \
+analyses.json: $(top_srcdir)/analyses $(srcdir)/mk-analysis-json
+	LD_LIBRARY_PATH=$(top_builddir)/src/.libs:$(LD_LIBRARY_PATH) \
+    DYLD_LIBRARY_PATH=$(top_builddir)/src/.libs:$(DYLD_LIBRARY_PATH) \
     PYTHONPATH=$(YODA_PYTHONPATH):$(RIVET_PYTHONPATH):$(PYTHONPATH) \
-    $(PYTHON) mk-analysis-json
+    RIVET_ANALYSIS_PATH=$(top_builddir)/analyses:: \
+    $(PYTHON) $(srcdir)/mk-analysis-json || true
+endif
+
+
+if ENABLE_PYEXT
+DOCS += rivet-coverage.html
+rivet-coverage.html: $(wildcard $(srcdir)/inspire*.json) $(wildcard $(srcdir)/*.rank) $(top_srcdir)/analyses $(srcdir)/mk-coverage-html
+	LD_LIBRARY_PATH=$(top_builddir)/src/.libs:$(LD_LIBRARY_PATH) \
+    DYLD_LIBRARY_PATH=$(top_builddir)/src/.libs:$(DYLD_LIBRARY_PATH) \
+    PYTHONPATH=$(YODA_PYTHONPATH):$(RIVET_PYTHONPATH):$(PYTHONPATH) \
+    RIVET_ANALYSIS_PATH=$(top_builddir)/analyses:: \
+    $(srcdir)/mk-coverage-htmls || true
 endif
 
 
@@ -40,23 +57,23 @@ DOCS += compare-histos.html make-plots.html
 EXTRA_DIST += compare-histos.html make-plots.html
 
 compare-histos.html: compare-histos.txt
-	asciidoc -a toc compare-histos.txt
+	asciidoc -a toc compare-histos.txt || true
 
 make-plots.html: make-plots.txt
-	asciidoc -a toc make-plots.txt
+	asciidoc -a toc make-plots.txt || true
 endif
 
 
-if ENABLE_PDFMANUAL
 if WITH_PDFLATEX
 DOCS += rivet-manual.pdf
 
 if ENABLE_PYEXT
-analyses.bib analyses.tex: $(top_srcdir)/analyses mk-analysis-latex
+analyses.bib analyses.tex: $(top_srcdir)/analyses $(srcdir)/mk-analysis-latex
 	LD_LIBRARY_PATH=$(top_builddir)/src/.libs:$(YAML_CPPLIBPATH):$(FASTJETLIBPATH):$(HEPMCLIBPATH):$(YODALIBPATH):$(LD_LIBRARY_PATH) \
     DYLD_LIBRARY_PATH=$(top_builddir)/src/.libs:$(YAML_CPPLIBPATH):$(FASTJETLIBPATH):$(HEPMCLIBPATH):$(YODALIBPATH):$(DYLD_LIBRARY_PATH) \
     PYTHONPATH=$(YODA_PYTHONPATH):$(RIVET_PYTHONPATH):$(PYTHONPATH) \
-    $(PYTHON) mk-analysis-latex
+    RIVET_ANALYSIS_PATH=$(top_builddir)/analyses:: \
+    $(PYTHON) $(srcdir)/mk-analysis-latex || true
 else
 analyses.bib analyses.tex:
 	> analyses.tex
@@ -83,19 +100,20 @@ paper.pdf : paper.tex $(LATEXSUBSOURCES) analyses.tex refs.bib analyses.bib
 	rm -f paper.toc.bak; true
 
 endif
-endif
 
 
 ################
 
 
-.PHONY = all doc upload arxivtar
+RSH = rsync
+DEST = login.hepforge.org:rivet/public_html/
+
+
+.PHONY = doc upload arxivtar
 
 doc: $(DOCS)
 	@true
 
-RSH = rsync
-DEST = login.hepforge.org:rivet/public_html/
 upload: $(DOCS) $(DOCDIRS)
 	$(RSH) -r $? $(DEST)
 
@@ -108,20 +126,17 @@ bend.eps cone.eps thinker.eps slip.eps \
 h-physrev3.bst JHEP3.cls JHEP.bst
 
 
-## Install!
-pkgdata_DATA = $(DOCS)
+all-local:
+	@echo "No default target in doc: run 'make doc' to build documentation"
+	@true
 
-install-data-local: doc
-	@$(NORMAL_INSTALL)
-	test "$(DOCDIRS)" && cp -r $(DOCDIRS) $(DESTDIR)$(pkgdatadir)/
-
-uninstall-local:
-	@$(NORMAL_UNINSTALL)
-	rm -rf $(DESTDIR)$(pkgdatadir)/analyses
+install-data-local:
+	@echo "No local docs installation: copy the documentation to wherever you require"
+	@true
 
 
 mostlyclean-local:
 	rm -rf *.aux *.log *.toc
 
 clean-local:
-	rm -rf $(DOCS) $(DOCDIRS)
+	rm -rf rivet-coverage-*.html $(DOCS) $(DOCDIRS)

@@ -7,6 +7,7 @@ namespace Rivet {
 
 
   /// Generic analysis looking at various distributions of final state particles
+  /// @deprecated Replaced by the better-named MC_FSPARTICLES
   class MC_GENERIC : public Analysis {
   public:
 

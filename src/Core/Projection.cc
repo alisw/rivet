@@ -25,9 +25,13 @@ namespace Rivet {
     const std::type_info& thisid = typeid(*this);
     const std::type_info& otherid = typeid(p);
     if (thisid == otherid) {
-      return compare(p) < 0;
+      const bool cmp = compare(p) < 0;
+      MSG_TRACE("Comparing projections of same RTTI type: " << this << " < " << &p << " = " << cmp);
+      return cmp;
     } else {
-      return thisid.before(otherid);
+      const bool cmp = thisid.before(otherid);
+      MSG_TRACE("Ordering projections of different RTTI type: " << this << " < " << &p << " = " << cmp);
+      return cmp;
     }
   }
 

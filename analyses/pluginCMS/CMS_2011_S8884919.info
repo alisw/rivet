@@ -29,7 +29,7 @@ Description:
   in 2009 and the 7 TeV run in 2010. The average transverse momentum as a function of the multiplicity is also presented.
   The measurement of higher-order moments of the multiplicity distribution confirms the violation of
   Koba-Nielsen-Olesen scaling that has been observed at lower energies.
-
+Keywords: [mpi, minbias]
 BibKey: Khachatryan:2010nk
 BibTeX: '@Article{Khachatryan:2010nk,
      author    = "Khachatryan, Vardan and others",
@@ -46,4 +46,3 @@ BibTeX: '@Article{Khachatryan:2010nk,
      SLACcitation  = "%%CITATION = 1011.5531;%%"
   }'
 ToDo:
-

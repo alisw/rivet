@@ -35,8 +35,6 @@ namespace Rivet {
     DEFAULT_RIVET_PROJ_CLONE(NonHadronicFinalState);
 
 
-  protected:
-
     /// Apply the projection on the supplied event.
     void project(const Event& e);
 

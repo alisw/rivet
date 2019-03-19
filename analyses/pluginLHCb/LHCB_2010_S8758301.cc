@@ -153,7 +153,7 @@ using namespace std;
       map<int, double>::iterator pPartLft = partLftMap.find(pid);
       // search stable particle list
       if (pPartLft == partLftMap.end()) {
-        if (pid <= 100) return 0.0;
+        if (pid <= 100 || pid == 990) return 0.0;
         for (unsigned int i=0; i < sizeof(stablePDGIds)/sizeof(unsigned int); i++ ) {
           if (pid == stablePDGIds[i]) { lft = 0.0; break; }
         }

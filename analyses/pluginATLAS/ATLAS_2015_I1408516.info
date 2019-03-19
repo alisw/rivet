@@ -16,13 +16,16 @@ Beams: [p+, p+]
 Energies: [8000]
 PtCuts: [12,20]
 NeedCrossSection: True
+Options:
+- LMODE=EL,MU
 Description:
-  Distributions of transverse momentum $p_\text{T}^{\ell\ell}$ and the angular variable $\phi^\ast_\eta$ of Drell-Yan lepton pairs
+  'Distributions of transverse momentum $p_\text{T}^{\ell\ell}$ and the angular variable $\phi^\ast_\eta$ of Drell-Yan lepton pairs
   are measured in $20.3\,\text{fb}^{-1}$ of proton-proton collisions at $\sqrt{s}=8$\,TeV with the ATLAS detector at the LHC.
   Measurements in electron-pair and muon-pair final states are corrected for detector effects. Compared to previous measurements
   in proto--proton collisions at i$\sqrt{s}=7$\,TeV, these new measurements benefit from a larger data sample and improved control
   of systematic uncertainties. Measurements are performed in bins of lepton-pair mass above, around and below the $Z$-boson mass peak.
-  Specify the lepton channel (default is Z->ee) by using the dedicated plugins ATLAS_2015_I1408516_EL and ATLAS_2015_I1408516_MU.
+  Specify the lepton channel (default is Z->ee) by using the LMODE variable. Only individual channels are available as particle-level
+  measurements.'
 BibKey: Aad:2015auj
 BibTeX: '@article{Aad:2015auj,
       author         = "Aad, Georges and others",

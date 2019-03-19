@@ -1,0 +1,41 @@
+Name: CMS_2017_I1610623
+Year: 2017
+Summary: Measurements of differential cross sections for the associated production of a W boson and jets in proton-proton collisions at sqrt(s) = 13 TeV
+Experiment: CMS
+Collider: LHC
+InspireID: 1610623
+Status: VALIDATED
+Authors:
+ - Emanuela.Barberis@cern.ch
+ - apichart.hortiangtham@cern.ch
+ - Kadir.Ocalan@cern.ch
+References:
+ - DOI:10.1103/PhysRevD.96.072005
+ - arXiv:1707.05979
+ - CMS-SMP-16-005
+RunInfo: 13 TeV $pp \to W+jets$.
+NumEvents: 1000000
+NeedCrossSection: True
+Beams: [p+, p+]
+Energies: [13000]
+Description:
+  'Differential cross sections for a W boson produced in association with jets are measured in a data sample of proton-proton collisions at a center-of-mass energy of 13 TeV recorded with the CMS detector and corresponding to an integrated luminosity of 2.2 inverse femtobarns. The W bosons are identified through their decay into a muon and a neutrino. The cross sections are reported as functions of jet multiplicity, jet transverse momenta, jet rapidity $|y|$, the scalar sum of jet transverse momenta ($H_T$), and angular correlations between the muon and each jet for different jet multiplicities. The cross sections are measured in the fiducial region defined by a muon with $p_T > 25$ GeV and pseudorapidity $|\eta| < 2.4$, and by a transverse mass between the muon and the missing transverse energy $M_T > 50$ GeV. Jets are reconstructed using the anti-kT algorithm with a distance parameter R = 0.4, and only jets with $p_T > 30$ GeV, $|y| < 2.4$, and a separation of $\Delta R > 0.4$ from the muon are considered. In addition, the differential cross section is measured as a function of the angular distance (DeltaR) between the muon and the closest jet for events with one or more jets, requiring jets with $p_T > 100$ GeV and the leading jet with $p_T > 300$ GeV.'
+BibKey: Sirunyan:2017wgx
+BibTeX: '@article{Sirunyan:2017wgx,
+      author         = "Sirunyan, Albert M and others",
+      title          = "{Measurement of the differential cross sections for the
+                        associated production of a $W$ boson and jets in
+                        proton-proton collisions at $\sqrt{s}=13$ TeV}",
+      collaboration  = "CMS",
+      journal        = "Phys. Rev.",
+      volume         = "D96",
+      year           = "2017",
+      number         = "7",
+      pages          = "072005",
+      doi            = "10.1103/PhysRevD.96.072005",
+      eprint         = "1707.05979",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CMS-SMP-16-005, CERN-EP-2017-142",
+      SLACcitation   = "%%CITATION = ARXIV:1707.05979;%%"
+}'

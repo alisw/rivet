@@ -1,5 +1,6 @@
 EXTRA_DIST = \
 	__init__.py \
+    hepdatautils.py \
     spiresbib.py util.py \
     plotinfo.py aopaths.py \
     core.pyx rivet.pxd \

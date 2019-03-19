@@ -12,6 +12,7 @@ References:
  - 'arXiv:1606.02625 [hep-ex]'
 Keywords:
  - minbias
+ - totalxsec
 RunInfo:
    Inelastic events (non-diffractive and inelastic diffractive).
 Luminosity_fb: 6.0*E-08

@@ -133,14 +133,14 @@ namespace Rivet {
 
     //@}
 
-
-  protected:
-
     /// Apply the projection to the event
     virtual void project(const Event& e) = 0;
 
     /// Compare projections
     virtual int compare(const Projection& p) const;
+
+
+  protected:
 
     /// The kinematic cuts cuts
     Cut _cuts;

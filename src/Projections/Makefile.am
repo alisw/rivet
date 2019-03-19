@@ -10,6 +10,7 @@ libRivetProjections_la_SOURCES = \
   DISLepton.cc \
   DressedLeptons.cc \
   FastJets.cc \
+  PxConePlugin.cc \
   FinalPartons.cc \
   FinalState.cc \
   FParameter.cc \
@@ -30,6 +31,7 @@ libRivetProjections_la_SOURCES = \
   ParisiTensor.cc \
   ParticleFinder.cc \
   PrimaryHadrons.cc \
+  PrimaryParticles.cc \
   PromptFinalState.cc \
   Sphericity.cc \
   Spherocity.cc \

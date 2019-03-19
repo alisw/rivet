@@ -12,10 +12,10 @@ YLabel=$A_\text{FB}$
 LegendXPos=0.1
 # END PLOT
 
-# BEGIN PLOT /ATLAS_2015_I1351916_EL/d01-x01
+# BEGIN PLOT /ATLAS_2015_I1351916_EL/d02
 Title=Central--central electron channel, dressed level
 # END PLOT
 
-# BEGIN PLOT /ATLAS_2015_I1351916_EL/d01-x02
+# BEGIN PLOT /ATLAS_2015_I1351916_EL/d03
 Title=Central--forward electron channel, dressed level
 # END PLOT

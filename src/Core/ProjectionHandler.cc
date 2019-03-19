@@ -229,12 +229,18 @@ namespace Rivet {
   }
 
 
+  bool ProjectionHandler::hasProjection(const ProjectionApplier& parent, const string& name) const {
+    MSG_TRACE("Searching for child projection '" << name << "' of " << &parent);
+    NamedProjsMap::const_iterator nps = _namedprojs.find(&parent);
+    if (nps == _namedprojs.end()) return false;
+    NamedProjs::const_iterator np = nps->second.find(name);
+    return !(np == nps->second.end());
+  }
 
 
   const Projection& ProjectionHandler::getProjection(const ProjectionApplier& parent,
                                                      const string& name) const {
-    //getLog() << Log::TRACE << "Searching for child projection '"
-    //         << name << "' of " << &parent << endl;
+    MSG_TRACE("Searching for child projection '" << name << "' of " << &parent);
     NamedProjsMap::const_iterator nps = _namedprojs.find(&parent);
     if (nps == _namedprojs.end()) {
       ostringstream msg;
@@ -247,6 +253,7 @@ namespace Rivet {
       msg << "No projection '" << name << "' found for parent " << &parent;
       throw Error(msg.str());
     }
+    MSG_TRACE("Found projection '" << name << "' of " << &parent << " -> " << np->second);
     // If it's registered with the projection handler, we must be able to safely
     // dereference the Projection pointer to a reference...
     return *(np->second);

@@ -10,6 +10,7 @@ LegendAlign=r
 Title=$p_\text{T}^\text{jet} > 25$ GeV for $|\eta| < 2.4$ and $p_\text{T}^\text{jet} > 30$ GeV for $2.4 < |\eta| < 4.5$
 XLabel=$N_\text{jet}$ 
 YLabel=$\text{d}\sigma_\text{fid} / \text{d} N_\text{jet}$ [fb]
+XCustomMajorTicks=1.0 $0$ 2.0 $1$ 3.0 $2$
 LogY=0
 LegendYPos=0.30
 LegendXPos=0.05
@@ -52,7 +53,7 @@ LogY=0
 
 # BEGIN PLOT /ATLAS_2016_I1444991/d09-x01-y01
 XLabel=$p_\text{T}^{j_1}$ [GeV]
-YLabel=$1/\sigma$ $\text{d}\sigma_\text{fid} / \text{d} p_\text{T}^{j_1}$ [1/GeV]
+YLabel=$1/\sigma$ $\text{d}\sigma_\text{fid} / \text{d} p_\text{T}^{j_1}$ [10$^{-3}$/GeV]
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2016_I1444991/d10-x01-y01

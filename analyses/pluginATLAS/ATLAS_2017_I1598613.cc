@@ -13,11 +13,10 @@ namespace Rivet {
   public:
 
     /// Constructor
-    ATLAS_2017_I1598613(string name="ATLAS_2017_I1598613")
-      : Analysis(name)
-    {
-      //default to the 3-muon mode:
-      _mode = 0;
+    ATLAS_2017_I1598613(const string name="ATLAS_2017_I1598613", size_t mode = 0,
+                        const string ref_data="ATLAS_2017_I1598613") : Analysis(name) {
+      _mode = mode; //default to the 3-muon mode
+      setRefDataName(ref_data);
     }
 
 
@@ -50,27 +49,26 @@ namespace Rivet {
       }
 
       //Book the histograms:
-      _h["dPhi"]      = bookHandler(1,  1, 1);
-      _h["dy"]        = bookHandler(1,  2, 1);
-      _h["yboost"]    = bookHandler(1,  3, 1);
-      _h["dR"]        = bookHandler(1,  4, 1);
-      _h["lowpT_dR"]  = bookHandler(1,  5, 1);
-      _h["highpT_dR"] = bookHandler(1,  6, 1);
-      _h["M"]         = bookHandler(1,  7, 1);
-      _h["pT"]        = bookHandler(1,  8, 1);
-      _h["MopT"]      = bookHandler(1,  9, 1);
-      _h["pToM"]      = bookHandler(1, 10, 1);
+      _h["dR"]        = bookHandler( 1);
+      _h["highpT_dR"] = bookHandler( 4);
+      _h["lowpT_dR"]  = bookHandler( 7);
+      _h["dPhi"]      = bookHandler(10);
+      _h["dy"]        = bookHandler(13);
+      _h["MopT"]      = bookHandler(16);
+      _h["pToM"]      = bookHandler(19);
+      _h["pT"]        = bookHandler(22);
+      _h["M"]         = bookHandler(25);
+      _h["yboost"]    = bookHandler(29);
     }
 
 
-    HistoHandler bookHandler(unsigned int id_d, unsigned int id_x, unsigned int id_y) {
+    HistoHandler bookHandler(unsigned int id_xsec) {
       HistoHandler dummy;
-      dummy.histo = bookHisto1D(id_d, id_x, id_y);
+      dummy.histo = bookHisto1D(id_xsec, 1, 1);
       if (_mode) {
-        dummy.scatter = bookScatter2D(id_d, id_x, id_y, true);
-        dummy.d = id_d;
-        dummy.x = id_x;
-        dummy.y = id_y + 1;
+        dummy.scatter = bookScatter2D(id_xsec, 1, 1, true);
+        dummy.d = id_xsec + 1; // transfer function
+        dummy.x = 1; dummy.y = 1;
       }
       return dummy;
     }
@@ -247,7 +245,7 @@ namespace Rivet {
   protected:
 
     /// Analysis-mode switch
-    int _mode;
+    size_t _mode;
 
     /// Histograms
     map<string, HistoHandler> _h;
@@ -258,7 +256,7 @@ namespace Rivet {
 
   /// Specialised subclass for the BB analysis
   struct ATLAS_2017_I1598613_BB : public ATLAS_2017_I1598613 {
-    ATLAS_2017_I1598613_BB() : ATLAS_2017_I1598613("ATLAS_2017_I1598613_BB") { _mode = 1; }
+    ATLAS_2017_I1598613_BB() : ATLAS_2017_I1598613("ATLAS_2017_I1598613_BB", 1) { }
   };
 
 

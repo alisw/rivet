@@ -61,6 +61,8 @@ namespace Rivet {
   /// @todo Modify constituent particle vectors for consistency
   /// @todo Set a null PseudoJet if the Jet is smeared?
   inline Jet JET_SMEAR_IDENTITY(const Jet& j) { return j; }
+  /// Alias for JET_SMEAR_IDENTITY
+  inline Jet JET_SMEAR_PERFECT(const Jet& j) { return j; }
 
 
   /// @brief Functor for simultaneous efficiency-filtering and smearing of Jets

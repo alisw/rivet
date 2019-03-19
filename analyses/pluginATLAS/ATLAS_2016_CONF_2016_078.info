@@ -11,9 +11,11 @@ NumEvents: 10000
 NeedCrossSection: yes
 Beams: [p+, p+]
 Energies: [13000]
+Luminosity_fb: 13.2
 Description:
   'ATLAS search for SUSY in 13~TeV $pp$ collisions at LHC Run~2, using 13.2/fb of
   integrated luminosity and events containing missing transverse momentum and
   no isolated high-energy leptons.
   Detailed info:
   https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2016-078/ '
+Keywords: [search, bsm, susy, 0lepton, jets, met]

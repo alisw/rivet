@@ -141,6 +141,9 @@ namespace Rivet {
     /// @name Projection retrieval. */
     //@{
 
+    /// Check if there is a @a name projection registered by @a parent
+    bool hasProjection(const ProjectionApplier& parent, const string& name) const;
+
     /// Retrieve a named projection for the given parent. Returning as a
     /// reference is partly to discourage ProjectionApplier classes from storing
     /// pointer members to the registered projections, since that can lead to

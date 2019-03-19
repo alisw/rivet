@@ -13,7 +13,7 @@ References:
  - CMS-PAS-TOP-15-006
 RunInfo:
   ttbar events at sqrt(s) = 8 TeV (inclusive decay modes)
-Luminosity: 19.7 / fb
+Luminosity_fb: 19.7
 Beams: [p+, p+]
 Energies: [8000]
 Description:

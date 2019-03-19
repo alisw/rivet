@@ -314,18 +314,18 @@ namespace Rivet {
   //@{
 
   /// Calculate the difference in azimuthal angle between two spatial vectors.
-  inline double deltaPhi(const Vector3& a, const Vector3& b) {
-    return deltaPhi(a.azimuthalAngle(), b.azimuthalAngle());
+  inline double deltaPhi(const Vector3& a, const Vector3& b, bool sign=false) {
+    return deltaPhi(a.azimuthalAngle(), b.azimuthalAngle(), sign);
   }
 
   /// Calculate the difference in azimuthal angle between two spatial vectors.
-  inline double deltaPhi(const Vector3& v, double phi2) {
-    return deltaPhi(v.azimuthalAngle(), phi2);
+  inline double deltaPhi(const Vector3& v, double phi2, bool sign=false) {
+    return deltaPhi(v.azimuthalAngle(), phi2, sign);
   }
 
   /// Calculate the difference in azimuthal angle between two spatial vectors.
-  inline double deltaPhi(double phi1, const Vector3& v) {
-    return deltaPhi(phi1, v.azimuthalAngle());
+  inline double deltaPhi(double phi1, const Vector3& v, bool sign=false) {
+    return deltaPhi(phi1, v.azimuthalAngle(), sign);
   }
 
   //@}

@@ -1,6 +1,6 @@
 Name: ATLAS_2012_I946427
 Year: 2012
-Summary: Search for supersymmetry with diphotons and mising Transverse Momentum
+Summary: Search for supersymmetry with diphotons and missing transverse momentum
 Experiment: ATLAS
 Collider: LHC
 InspireID: 946427
@@ -15,10 +15,12 @@ RunInfo:
 NumEvents: 25000 for BSM signals
 Beams: [p+, p+]
 Energies: [7000]
+Luminosity_fb: 1.07
 Description:
   'Search for diphoton events with large missing transverse momentum
    with integrated luminosity 1.07$\text{fb}^{-1}$ at $\sqrt{s}=7$.
    No excess of events was observed.'
+Keywords: [search, bsm, 2photon, diphoton, met]
 BibKey: Aad:2011zj
 BibTeX: '@article{Aad:2011zj,
       author         = "Aad, Georges and others",

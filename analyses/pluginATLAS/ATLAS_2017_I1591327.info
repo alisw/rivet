@@ -11,8 +11,8 @@ References:
  - arXiv:1704.03839 [hep-ex]
  - submitted to PRD
 Keywords:
- - PHOTON
- - DIPHOTON
+ - 2photon
+ - diphoton
 RunInfo:
   $pp \to \gamma \gamma$ at 8 TeV
 Luminosity_fb: 20.2

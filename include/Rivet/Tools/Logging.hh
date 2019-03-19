@@ -23,7 +23,9 @@ namespace Rivet {
     /// Typedef for a collection of shell color codes, accessed by log level.
     typedef std::map<int, std::string> ColorCodes;
 
+
   private:
+
     /// A static map of existing logs: we don't make more loggers than necessary.
     static LogMap existingLogs;
 
@@ -48,7 +50,9 @@ namespace Rivet {
     /// Use shell colour escape codes?
     static bool useShellColors;
 
+
   public:
+
     /// Set the log levels
     static void setLevel(const std::string& name, int level);
     static void setLevels(const LevelMap& logLevels);
@@ -69,6 +73,7 @@ namespace Rivet {
       useShellColors = useColors;
     }
 
+
   protected:
 
     /// @name Hidden constructors etc.
@@ -84,13 +89,13 @@ namespace Rivet {
 
     static std::string getColorCode(int level);
 
+
   public:
 
     /// Get a logger with the given name. The level will be taken from the
     /// "requestedLevels" static map or will be INFO by default.
     static Log& getLog(const std::string& name);
 
-  public:
     /// Get the priority level of this logger.
     int getLevel() const {
       return _level;
@@ -137,7 +142,9 @@ namespace Rivet {
     void error(const std::string& message) { log(ERROR, message); }
     //@}
 
+
   private:
+
     /// This logger's name
     std::string _name;
 
@@ -145,6 +152,7 @@ namespace Rivet {
     int _level;
 
   protected:
+
     /// Write a message at a particular level.
     void log(int level, const std::string& message);
 
@@ -158,8 +166,10 @@ namespace Rivet {
 
   };
 
+
   /// Streaming output to a logger must have a Log::Level/int as its first argument.
   std::ostream& operator<<(Log& log, int level);
+
 
 }
 

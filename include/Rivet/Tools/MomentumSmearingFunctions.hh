@@ -38,6 +38,8 @@ namespace Rivet {
 
   /// Take a FourMomentum and return it unmodified
   inline FourMomentum P4_SMEAR_IDENTITY(const FourMomentum& p) { return p; }
+  /// Alias for P4_SMEAR_IDENTITY
+  inline FourMomentum P4_SMEAR_PERFECT(const FourMomentum& p) { return p; }
 
   /// Smear a FourMomentum's energy using a Gaussian of absolute width @a resolution
   /// @todo Also make jet versions that update/smear constituents?
@@ -87,6 +89,8 @@ namespace Rivet {
 
   /// Take a Vector3 and return it unmodified
   inline Vector3 P3_SMEAR_IDENTITY(const Vector3& p) { return p; }
+  /// Alias for P3_SMEAR_IDENTITY
+  inline Vector3 P3_SMEAR_PERFECT(const Vector3& p) { return p; }
 
   /// Smear a Vector3's length using a Gaussian of absolute width @a resolution
   inline Vector3 P3_SMEAR_LEN_GAUSS(const Vector3& p, double resolution) {

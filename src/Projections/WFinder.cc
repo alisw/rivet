@@ -72,18 +72,6 @@ namespace Rivet {
 
 
 
-  const Particles WFinder::constituentLeptons() const {
-    if (empty()) return Particles();
-    return boson().constituents(isChargedLepton);
-  }
-
-
-  const Particles WFinder::constituentNeutrinos() const {
-    if (empty()) return Particles();
-    return boson().constituents(isNeutrino);
-  }
-
-
   const VetoedFinalState& WFinder::remainingFinalState() const {
     return getProjection<VetoedFinalState>("RFS");
   }
@@ -110,6 +98,8 @@ namespace Rivet {
 
   void WFinder::project(const Event& e) {
     clear();
+    _leptons.clear();
+    _neutrinos.clear();
 
     // Check missing ET
     const MissingMomentum& missmom = applyProjection<MissingMomentum>(e, "MissingET");
@@ -159,8 +149,10 @@ namespace Rivet {
     // Add (dressed) lepton constituents to the W (skipping photons if requested)
     /// @todo Do we need to add all used invisibles to _theParticles ?
     const Particle l = p1.isChargedLepton() ? p1 : p2;
-    w.addConstituent(_trackPhotons == TRACK ? l : l.constituents().front());
+    _leptons += (_trackPhotons == TRACK) ? l : l.constituents().front();
+    w.addConstituent(_leptons.back());
     const Particle nu = p1.isNeutrino() ? p1 : p2;
+    _neutrinos += nu;
     w.addConstituent(nu);
 
     // Register the completed W

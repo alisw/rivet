@@ -21,7 +21,9 @@ namespace Rivet {
 
   const Projection& ProjectionApplier::_applyProjection(const Event& evt,
                                                         const string& name) const {
-    return evt.applyProjection(getProjection(name));
+    const Projection& proj = getProjection(name);
+    // cout << "Found projection " << &proj << " -> applying" << endl;
+    return _applyProjection(evt, proj);
   }
 
 

@@ -104,7 +104,7 @@ namespace Rivet {
       _h_pTj1_excl = bookHisto1D(24,1,1);
 
       // Fiducial regions
-      _h_fidXSecs = bookHisto1D(29,1,1);
+      _h_fidXSecs = bookHisto1D(30,1,1);
     }
 
     // Perform the per-event analysis

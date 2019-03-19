@@ -138,7 +138,7 @@ namespace Rivet {
 
     /// Finalize
     void finalize() {
-      const double norm = crossSection()/sumOfWeights()/femtobarn;
+      const double norm = crossSection()/sumOfWeights()/femtobarn/TeV;
       scale(_h_ZZ_mZZ,  norm);
       scale(_h_ZZ_pTZZ, norm);
     }

@@ -1,6 +1,6 @@
 Name: ATLAS_2017_I1609448_Znunu
 Year: 2017
-Summary: pTmiss+jets cross section ratios at 13 TeV
+Summary: $p_T^\text{miss}$ + jets cross-section ratios at 13 TeV
 Experiment: ATLAS
 Collider: LHC
 InspireID: 1609448
@@ -11,17 +11,16 @@ References:
  - arXiv:1707.03263 [hep-ex]
  - submitted to EPJC
 Keywords:
- - MET
- - JETS
- - Z
- - VJETS
- - RATIOS
+ - met
+ - jets
+ - zboson
+ - vjets
 RunInfo:
   pp -> MET + jets at 13 TeV
 Luminosity_fb: 3.2
 Beams: [p+, p+]
 Energies: [13000]
-PtCuts: [200] 
+PtCuts: [200]
 Description: |
   Observables sensitive to the anomalous production of events containing hadronic jets and missing momentum in the plane transverse
   to the proton beams at the Large Hadron Collider are presented. The observables are defined as a ratio of cross sections, for
@@ -30,9 +29,9 @@ Description: |
   This ratio is measured differentially with respect to a number of kinematic properties of the hadronic system in two phase-space
   regions; one inclusive single-jet region and one region sensitive to vector-boson-fusion topologies. The data are found to be in
   agreement with the Standard Model predictions and used to constrain a variety of theoretical models for dark-matter production,
-  including simplified models, effective field theory models, and invisible decays of the Higgs boson. The measurements use 
-  3.2 fb${}^{-1}$ of proton-proton collision data recorded by the ATLAS experiment at a centre-of-mass energy of 13 TeV and are 
-  fully corrected for detector effects, meaning that the data can be used to constrain new-physics models beyond those shown in 
+  including simplified models, effective field theory models, and invisible decays of the Higgs boson. The measurements use
+  3.2 fb${}^{-1}$ of proton-proton collision data recorded by the ATLAS experiment at a centre-of-mass energy of 13 TeV and are
+  fully corrected for detector effects, meaning that the data can be used to constrain new-physics models beyond those shown in
   this paper. The reference data file comes with the measured $R^\text{miss}$ (y01), the expected $R^\text{miss}$ in the Standard
   Model (y02), the expected $R^\text{miss}$ numerator in the Standard Model (y03) as well as the expected $R^\text{miss}$
   denominator in the Standard Model (y04).

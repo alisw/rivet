@@ -9,7 +9,7 @@
 
 namespace Rivet {
 
-  
+
 
 
   class CMS_2013_I1224539_ZJET : public Analysis {
@@ -42,7 +42,6 @@ namespace Rivet {
       // Find Zs with pT > 120 GeV
       ZFinder zfinder(fs, Cuts::abseta < 2.4 && Cuts::pT > 30*GeV, PID::ELECTRON, 80*GeV, 100*GeV,
                       0.2, ZFinder::CLUSTERNODECAY, ZFinder::TRACK);
-
       declare(zfinder, "ZFinder");
 
       // Z+jet jet collections
@@ -93,11 +92,19 @@ namespace Rivet {
       const ZFinder& zfinder = apply<ZFinder>(event, "ZFinder");
       if (zfinder.bosons().size() != 1) vetoEvent;
       const Particle& z = zfinder.bosons()[0];
-      const Particle& l1 = zfinder.constituents()[0];
-      const Particle& l2 = zfinder.constituents()[1];
+      if (z.constituents().size() < 2) {
+        MSG_WARNING("Found a Z with less than 2 constituents.");
+        vetoEvent;
+      }
+      const Particle& l1 = z.constituents()[0];
+      const Particle& l2 = z.constituents()[1];
+      MSG_DEBUG(l1.pT() << " " << l2.pT());
+      assert(&l1 != &l2);
 
       // Require a high-pT Z (and constituents)
-      if (l1.pT() < 30*GeV || l2.pT() < 30*GeV || z.pT() < 120*GeV) vetoEvent;
+      if (l1.pT() < 30*GeV ) vetoEvent;
+      if (l2.pT() < 30*GeV ) vetoEvent;
+      if (z.pT() < 120*GeV) vetoEvent;
 
       // AK7 jets
       const PseudoJets& psjetsAK7_zj = apply<FastJets>(event, "JetsAK7_zj").pseudoJetsByPt(50.0*GeV);

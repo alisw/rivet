@@ -1,0 +1,47 @@
+Name: ALICE_2016_I1471838
+Year: 2016
+Summary: Enhanced production of multi-strange hadrons in high-multiplicity proton-proton collisions.
+Experiment: ALICE
+Collider: LHC
+InspireID: 1471838
+Status: UNVALIDATED
+Authors:
+ - Christian Bierlich <christian.bierlich@thep.lu.se>
+References:
+- Nature.Phys.13(2017)535-539
+- arXiv:1606.07424
+RunInfo: Minimum bias pp
+NeedCrossSection: no
+Beams: [p+, p+]
+Energies: [7000]
+Options:
+ - cent=REF,GEN,IMP,USR
+Reentrant: True
+Description:
+  'Measurements of pT spectra and yields of (multi)strange hadrons, as well as 
+   protons and pions (yields only) in forward multiplicity classes at 7 TeV.
+   Ratios of yields to pion yields are constructed. The analysis takes care
+   of particle reconstruction as the experiment does, so no finite lifetime
+   should be imposed on generator level. Experimental results are scaled to
+   inelastic cross section, and generator setup should be adjusted accordingly.'
+Keywords: [QCD, Minimum bias, collectivity, small systems]
+BibKey: ALICE:2017jyt
+BibTeX: '@article{ALICE:2017jyt,
+      author         = "Adam, Jaroslav and others",
+      title          = "{Enhanced production of multi-strange hadrons in
+                        high-multiplicity proton-proton collisions}",
+      collaboration  = "ALICE",
+      journal        = "Nature Phys.",
+      volume         = "13",
+      year           = "2017",
+      pages          = "535-539",
+      doi            = "10.1038/nphys4111",
+      eprint         = "1606.07424",
+      archivePrefix  = "arXiv",
+      primaryClass   = "nucl-ex",
+      reportNumber   = "CERN-EP-2016-153",
+      SLACcitation   = "%%CITATION = ARXIV:1606.07424;%%"
+}'
+ToDo:
+ - Implement the analysis, test it, remove this ToDo, and mark as VALIDATED :-)
+

@@ -18,27 +18,55 @@ namespace Rivet {
 
       declare(ChargedFinalState(Cuts::abseta < 2.5 && Cuts::pT > 500*MeV), "CFS500");
 
-      for (size_t iR = 0; iR < NREGIONS; ++iR) {
-        // Nch profiles vs. pT_lead
-        _hist_nch[iR] = bookProfile1D(1, 1 + iR, 1);
-        // pTsum profiles vs. pT_lead
-        _hist_ptsum[iR] = bookProfile1D(2, 1 + iR, 1);
-        // <pT> profiles vs pT_lead (not measured for trans diff)
-        if (iR != kTransDiff)  _hist_ptavg[iR] = bookProfile1D(3, 1 + iR, 1);
-        // <pT> profiles vs. Nch (not measured for trans diff)
-        if (iR != kTransDiff)  _hist_dn_dpt[iR] = bookProfile1D(4, 1 + iR, 1);
-        // Only measured for trans max/min
-        if ( (iR == kTransMax) || (iR == kTransMin) )  _hist_dn_dpt2[iR] = bookProfile1D(5, 1 + iR, 1);
-      }
+      // Nch profiles vs. pT_lead
+      _hist_nch[0] = bookProfile1D(22, 1, 1);
+      _hist_nch[1] = bookProfile1D(23, 1, 1);
+      _hist_nch[2] = bookProfile1D(21, 1, 1);
+      _hist_nch[3] = bookProfile1D( 3, 1, 1);
+      _hist_nch[4] = bookProfile1D( 2, 1, 1);
+      _hist_nch[5] = bookProfile1D( 4, 1, 1);
+
+      // pTsum profiles vs. pT_lead
+      _hist_ptsum[0] = bookProfile1D(25, 1, 1);
+      _hist_ptsum[1] = bookProfile1D(26, 1, 1);
+      _hist_ptsum[2] = bookProfile1D(24, 1, 1);
+      _hist_ptsum[3] = bookProfile1D( 6, 1, 1);
+      _hist_ptsum[4] = bookProfile1D( 5, 1, 1);
+      _hist_ptsum[5] = bookProfile1D( 7, 1, 1);
+
+      // <pT> profiles vs pT_lead (not measured for trans diff)
+      _hist_ptavg[0] = bookProfile1D(29, 1, 1);
+      _hist_ptavg[1] = bookProfile1D(30, 1, 1);
+      _hist_ptavg[2] = bookProfile1D(11, 1, 1);
+      _hist_ptavg[3] = bookProfile1D(13, 1, 1);
+      _hist_ptavg[4] = bookProfile1D(12, 1, 1);
+
+      // <pT> profiles vs. Nch (not measured for trans diff)
+      _hist_dn_dpt[0] = bookProfile1D(27, 1, 1);
+      _hist_dn_dpt[1] = bookProfile1D(28, 1, 1);
+      _hist_dn_dpt[2] = bookProfile1D( 8, 1, 1);
+      _hist_dn_dpt[3] = bookProfile1D(10, 1, 1);
+      _hist_dn_dpt[4] = bookProfile1D( 9, 1, 1);
+
+      // Only measured for trans max/min
+      _hist_dn_dpt2[3] = bookProfile1D(32, 1, 1);
+      _hist_dn_dpt2[4] = bookProfile1D(31, 1, 1);
+
+      // Nch vs. Delta(phi) profiles
+      _hist_N_vs_dPhi[0] = bookProfile1D(15, 1, 1);
+      _hist_N_vs_dPhi[1] = bookProfile1D(16, 1, 1);
+      _hist_N_vs_dPhi[2] = bookProfile1D(17, 1, 1);
+
+      // pT vs. Delta(phi) profiles
+      _hist_pT_vs_dPhi[0] = bookProfile1D(18, 1, 1);
+      _hist_pT_vs_dPhi[1] = bookProfile1D(19, 1, 1);
+      _hist_pT_vs_dPhi[2] = bookProfile1D(20, 1, 1);
+
+      //ptLead histos only for 1 and 5 GeV cuts
+      _hist_ptLead[0] = bookHisto1D( 1, 1, 1);
+      _hist_ptLead[1] = bookHisto1D(14, 1, 1);
 
       for (size_t iC = 0; iC < NCUTS; ++iC) {
-        // Nch vs. Delta(phi) profiles
-        _hist_N_vs_dPhi[iC] = bookProfile1D(6, 1 + iC, 1);
-        // pT vs. Delta(phi) profiles
-        _hist_pT_vs_dPhi[iC] = bookProfile1D(7, 1 + iC, 1);
-        //ptLead histos only for 1 and 5 GeV cuts
-        if ( (iC == 0) || (iC == 1) )  _hist_ptLead[iC] = bookHisto1D(8, 1 + iC, 1);
-        // 
         _counters[iC] = bookCounter("Ctr_cut_" + toString(iC));
       }
 

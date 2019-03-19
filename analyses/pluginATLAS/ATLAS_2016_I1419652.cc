@@ -48,10 +48,11 @@ namespace Rivet {
 
       for (int iT = 0; iT < kNPartTypes; ++iT)  {
         for (int iR = 0; iR < kNregions; ++iR)  {
-          _hist_nch  [iT][iR] = bookHisto1D  ( 1, iR + 1, iT + 1);
-          _hist_pt   [iT][iR] = bookHisto1D  ( 2, iR + 1, iT + 1);
-          _hist_eta  [iT][iR] = bookHisto1D  ( 3, iR + 1, iT + 1);
-          _hist_ptnch[iT][iR] = bookProfile1D( 4, iR + 1, iT + 1);
+          size_t offset = 4 * iR + 8 * iT;
+          _hist_eta  [iT][iR] = bookHisto1D  (offset + 3, 1, 1);
+          _hist_pt   [iT][iR] = bookHisto1D  (offset + 4, 1, 1);
+          _hist_nch  [iT][iR] = bookHisto1D  (offset + 5, 1, 1);
+          _hist_ptnch[iT][iR] = bookProfile1D(offset + 6, 1, 1);
         }
       }
     }

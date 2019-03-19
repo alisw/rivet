@@ -19,10 +19,11 @@ Description:
   '2-lepton search for supersymmetric particles by ATLAS at 7 TeV.
   Event counts in signal regions (3 same sign and 3 opposite sign) are implemented as one
   bin histograms. Histograms for missing transverse energy are implemented.'
+Keywords: [search, bsm, 2lepton, met]
 BibKey: Aad:2011xm
 BibTeX: '@Article{Aad:2011xm,
      author    = "Aad, Georges and others",
- collaboration = "ATLAS",
+     collaboration = "ATLAS",
      title     = "{Search for supersymmetric particles in events with lepton
                   pairs and large missing transverse momentum in sqrt{s} = 7
                   TeV proton-proton collisions with the ATLAS experiment}",

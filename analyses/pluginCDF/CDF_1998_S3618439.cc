@@ -10,18 +10,9 @@ namespace Rivet {
   class CDF_1998_S3618439 : public Analysis {
   public:
 
-    /// @name Constructors etc.
-    //@{
-
     /// Constructor
-    CDF_1998_S3618439()
-      : Analysis("CDF_1998_S3618439")
-    {    }
+    DEFAULT_RIVET_ANALYSIS_CTOR(CDF_1998_S3618439);
 
-    //@}
-
-
-  public:
 
     /// @name Analysis methods
     //@{
@@ -40,14 +31,14 @@ namespace Rivet {
     void analyze(const Event& event) {
       const double weight = event.weight();
 
-      Jets jets = apply<FastJets>(event, "Jets").jets(Cuts::Et > 20*GeV, cmpMomByEt);
+      const Jets jets = apply<FastJets>(event, "Jets").jets(Cuts::Et > 20*GeV, cmpMomByEt);
       double sumET_20(0.0), sumET_100(0.0);
-      foreach (const Jet& jet, jets) {
+      for (const Jet& jet : jets) {
         double ET = jet.Et()/GeV;
         sumET_20 += ET;
         if (ET > 100.0) sumET_100 += ET;
       }
-      if (sumET_20 > 320.0) _h_sumET_20->fill(sumET_20, weight);
+      if (sumET_20  > 320.0) _h_sumET_20->fill(sumET_20, weight);
       if (sumET_100 > 320.0) _h_sumET_100->fill(sumET_100, weight);
     }
 

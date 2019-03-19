@@ -35,10 +35,11 @@ namespace Rivet {
     /// The Cmp specialization for Projection is a friend.
     friend class Cmp<Projection>;
 
-  public:
+
 
     /// @name Standard constructors and destructors.
     //@{
+
     /// The default constructor.
     Projection();
 
@@ -47,19 +48,24 @@ namespace Rivet {
 
     /// The destructor.
     virtual ~Projection();
+
     //@}
 
 
-  public:
+    /// Get the name of the projection.
+    virtual std::string name() const {
+      return _name;
+    }
+
+
+    /// @name Projection operation and comparison
+    //@{
 
     /// Take the information available in the Event and make the
     /// calculations necessary to obtain the projection. Note that this
     /// function must never be called except inside the
     /// Event::applyProjection(Projection *) function.
     virtual void project(const Event& e) = 0;
-
-
-  protected:
 
     /// This function is used to define a unique ordering between
     /// different Projection objects of the same class. If this is
@@ -82,14 +88,20 @@ namespace Rivet {
     /// equivalent with \a p.
     virtual int compare(const Projection& p) const = 0;
 
-  public:
-
     /// Determine whether this object should be ordered before the object
     /// \a p given as argument. If \a p is of a different class than
     /// this, the before() function of the corresponding type_info
     /// objects is used. Otherwise, if the objects are of the same class,
     /// the virtual compare(const Projection &) will be returned.
     bool before(const Projection& p) const;
+
+    //@}
+
+
+
+    /// @name Beam configuration
+    /// @todo Does it really make sense to restrict Projections to particular beam configs? Do we use this in practice?
+    //@{
 
     /// Return the allowed beam pairs on which this projection can operate, not
     /// including recursion. Derived classes should ensure that all contained
@@ -98,18 +110,18 @@ namespace Rivet {
     /// @todo Remove the beam constraints system from projections.
     virtual const std::set<PdgIdPair> beamPairs() const;
 
-    /// Get the name of the projection.
-    virtual std::string name() const {
-      return _name;
-    }
-
 
     /// Add a colliding beam pair.
+    /// @todo This deserves a better name!
     Projection& addPdgIdPair(PdgId beam1, PdgId beam2) {
       _beamPairs.insert(PdgIdPair(beam1, beam2));
       return *this;
     }
 
+    //@}
+
+
+  protected:
 
     /// Get a Log object based on the getName() property of the calling projection object.
     Log& getLog() const {
@@ -121,9 +133,6 @@ namespace Rivet {
     void setName(const std::string& name) {
       _name = name;
     }
-
-
-  protected:
 
     /// Shortcut to make a named Cmp<Projection> comparison with the @c *this
     /// object automatically passed as one of the parent projections.
@@ -146,6 +155,7 @@ namespace Rivet {
     string _name;
 
     /// Beam-type constraint.
+    /// @todo Remove?
     set<PdgIdPair> _beamPairs;
 
   };

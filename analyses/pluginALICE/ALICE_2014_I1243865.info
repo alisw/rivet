@@ -1,0 +1,51 @@
+Name: ALICE_2014_I1243865
+Year: 2014
+Summary: Multi-Strange Baryon production at mid rapidity in Pb--Pb at 2.76 TeV/nn 
+Experiment: ALICE
+Collider: LHC
+SpiresID: 1243865
+Status: UNVALIDATED
+Authors:
+ - Cody B Duncan <cody.duncan@monash.edu>
+ - Patrick Kirchgaesser <patrick.kirchgaesser@kit.edu>
+ - Johannes Bellm <johannes.bellm@thep.lu.se>
+#References:
+ - Phys.Lett. B728 (2014) 216-227
+ - 10.1016/j.physletb.2013.11.048
+ - arXiv:1307.5543 [nucl-ex]
+RunInfo: 
+   Analysis of multi-strange baryon production at $\sqrt{s} = 2.76\;\mathrm{TeV}$ for Pb-Pb collisions.
+NeedCrossSection: no
+Beams: [1000822080,1000822080]
+# This is _total_ energy of beams, so this becomes 208*2760=574080
+Energies: [574080]
+Options:
+ - cent=REF,GEN,IMP,USR
+Description:
+  Measurements of transverse momentum (pT) spectra for charged Xi and Omega hyperon 
+  production at mid-rapidity in several centrality intervals for Pb-Pb collisions 
+  at sqrt(sNN) = 2.76 TeV recorded in 2010. Mid-rapidity yields, integrated over 
+  pT, have also been determined, together with the enhancements with respect to pp 
+  collisions and the hyperon-to-pion production ratios
+BibKey: ABELEV:2013zaa
+BibTeX: '@article{ABELEV:2013zaa,
+      author         = "Abelev, Betty Bezverkhny and others",
+      title          = "{Multi-strange baryon production at mid-rapidity in Pb-Pb
+                        collisions at $\sqrt{s_{NN}}$ = 2.76 TeV}",
+      collaboration  = "ALICE",
+      journal        = "Phys. Lett.",
+      volume         = "B728",
+      year           = "2014",
+      pages          = "216-227",
+      doi            = "10.1016/j.physletb.2014.05.052,
+                        10.1016/j.physletb.2013.11.048",
+      note           = "[Erratum: Phys. Lett.B734,409(2014)]",
+      eprint         = "1307.5543",
+      archivePrefix  = "arXiv",
+      primaryClass   = "nucl-ex",
+      reportNumber   = "CERN-PH-EP-2013-134",
+      SLACcitation   = "%%CITATION = ARXIV:1307.5543;%%"
+}'
+ToDo:
+ - test it, remove this ToDo, and mark as VALIDATED :-)
+

@@ -1,6 +1,6 @@
 Name: BELLE_2015_I1397632
 Year: 2015
-Summary: Exclusive semileptonic B to D decays.
+Summary: Exclusive semileptonic $B$ to $D$ decays.
 Experiment: BELLE
 Collider: KEKB
 InspireID: 1397632
@@ -8,9 +8,9 @@ Status: VALIDATED
 Authors:
  - Holger Schulz <holger.schulz@cern.ch>
 RunInfo:
-  Events with B-decays, either particle guns or collisions.
+  Events with $b$-decays, either particle guns or collisions.
 Keywords:
- - bdecays
+ - bdecay
  - semileptonic
 NumEvents: 10000
 NeedCrossSection: no

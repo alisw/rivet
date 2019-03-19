@@ -39,9 +39,15 @@ namespace Rivet {
 
     /// @name Projection "getting" functions
     //@{
+
     /// Get the contained projections, including recursion.
     std::set<ConstProjectionPtr> getProjections() const {
       return getProjHandler().getChildProjections(*this, ProjectionHandler::DEEP);
+    }
+
+    /// Does this applier have a projection registered under the name @a name?
+    bool hasProjection(const std::string& name) const {
+      return getProjHandler().hasProjection(*this, name);
     }
 
     /// Get the named projection, specifying return type via a template argument.

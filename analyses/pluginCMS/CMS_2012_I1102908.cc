@@ -7,10 +7,6 @@
 
 namespace Rivet {
 
-  /// @cond
-  inline double _invert(double x) { return (x > 0) ? 1/x : 0; }
-  /// @endcond
-
 
   /// @brief CMS inclusive and exclusive dijet production ratio at large rapidity intervals
   class CMS_2012_I1102908 : public Analysis {
@@ -64,16 +60,18 @@ namespace Rivet {
   }
 
 
-
   void finalize() {
-    *_h_dijet_ratio    = YODA::efficiency(*_h_DeltaY_exclusive, *_h_DeltaY_inclusive);
-    *_h_MN_dijet_ratio = YODA::efficiency(*_h_DeltaY_exclusive, *_h_DeltaY_MN);
+    efficiency(_h_DeltaY_exclusive, _h_DeltaY_inclusive, _h_dijet_ratio);
+    efficiency(_h_DeltaY_exclusive, _h_DeltaY_MN, _h_MN_dijet_ratio);
     transformY(*_h_dijet_ratio, _invert);
     transformY(*_h_MN_dijet_ratio, _invert);
   }
 
 
   private:
+
+    /// Reciprocal function with div-by-zero protection, for inverting the efficiency measure
+    static double _invert(double x) { return (x > 0) ? 1/x : 0; }
 
     /// @name Histograms
     //@{

@@ -1,0 +1,48 @@
+Name: ALICE_2014_I1244523
+Year: 2014
+Summary: Multiplicity Dependence of Pion, Kaon, Proton and Lambda Production in p--Pb Collisions at 5.02 TeV/nn
+Experiment: ALICE
+Collider: LHC
+SpiresID: 1244523
+Status: UNVALIDATED
+Authors:
+ - Johannes Bellm <johannes.bellm@thep.lu.se>
+ - Christian Bierlich <christian.bierlich@thep.lu.se>
+ - Cody B Duncan <cody.duncan@monash.edu>
+ - Patrick Kirchgaesser <patrick.kirchgaesser@kit.edu>
+References:
+ - Phys.Lett. B728 (2014) 25-38
+ - 10.1016/j.physletb.2013.11.020
+ - arXiv:1307.6796 [nucl-ex]
+RunInfo:
+  Hadron multiplicity studies in proton-lead collisions at $\sqrt{s} = 5.02\;\TeV$
+NeedCrossSection: no
+Options:
+ - cent=REF,GEN,IMP,USR
+Beams: [2212,1000822080]
+Energies: [[4000,326560]]
+Description:
+  'Identified baryons and mesons plotted in invariant pT spectra as well as average pT and yield ratios.
+   The measurements are done in centrality classes, and one must apply centrality selection by
+   first running the ALICE pB centrality calibration analysis and preloading the produced histograms.
+   No generator level cut on particle life time should be applied.'
+BibKey:
+BibTeX: '@article{Abelev:2013haa, 
+      author         = "Abelev, Betty Bezverkhny and others",
+      title          = "{Multiplicity Dependence of Pion, Kaon, Proton and Lambda
+                        Production in p-Pb Collisions at $\sqrt{s_{NN}}$ = 5.02
+                        TeV}",
+      collaboration  = "ALICE",
+      journal        = "Phys. Lett.",
+      volume         = "B728",
+      year           = "2014",
+      pages          = "25-38",
+      doi            = "10.1016/j.physletb.2013.11.020",
+      eprint         = "1307.6796",
+      archivePrefix  = "arXiv",
+      primaryClass   = "nucl-ex",
+      reportNumber   = "CERN-PH-EP-2013-135",
+      SLACcitation   = "%%CITATION = ARXIV:1307.6796;%%"
+}'
+ToDo:
+ - Implement the analysis, test it, remove this ToDo, and mark as VALIDATED :-)

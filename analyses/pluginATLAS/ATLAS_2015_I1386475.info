@@ -1,0 +1,49 @@
+Name: ATLAS_2015_I1386475
+Year: 2015
+Summary: Centrality dependent of pseudorapidity distributions in p-Pb collisions $\sqrt{s_{_\text{NN}}}=5.02$ TeV.
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1386475
+Status: UNVALIDATED
+Authors:
+ - Leif Lönnblad <leif.lonnblad@thep.lu.se>
+ - Christian Bierlich <christian.bierlich@thep.lu.se>
+References:
+- Eur.Phys.J. C76 (2016) no.4, 199
+- DOI:0.1140/epjc/s10052-016-4002-3
+- arXiv:1508.00848 [hep-ex]
+RunInfo: p-Pb minimum bias events with $c\tau > 10 cm$ stable.
+NeedCrossSection: no
+Options:
+ - cent=REF,GEN,IMP,USR
+Beams: [2212,1000822080]
+Energies: [[4000,326560]]
+Description:
+  'The centrality dependence of the mean charged-particle multiplicity as a function
+   of pseudorapidity in proton-lead collisions. The collision energy is asymmetric,
+   4000 GeV for the proton and 1570/N for the lead. The primary particle definition is
+   $c\tau > 10 cm$ stable, and should be enforced at generator level.'
+BibKey: Aad:2015zza
+BibTeX: '%%% contains utf-8, see: http://inspirehep.net/info/faq/general#utf8
+%%% add \usepackage[utf8]{inputenc} to your latex preamble
+
+@article{Aad:2015zza,
+      author         = "Aad, Georges and others",
+      title          = "{Measurement of the centrality dependence of the
+                        charged-particle pseudorapidity distribution in
+                        proton–lead collisions at $\sqrt{s_{_\text {NN}}} =
+                        5.02$  TeV with the ATLAS detector}",
+      collaboration  = "ATLAS",
+      journal        = "Eur. Phys. J.",
+      volume         = "C76",
+      year           = "2016",
+      number         = "4",
+      pages          = "199",
+      doi            = "10.1140/epjc/s10052-016-4002-3",
+      eprint         = "1508.00848",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-PH-EP-2015-160",
+      SLACcitation   = "%%CITATION = ARXIV:1508.00848;%%"
+}'
+

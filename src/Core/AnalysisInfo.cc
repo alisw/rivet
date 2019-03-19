@@ -40,13 +40,7 @@ namespace Rivet {
     MSG_DEBUG("Reading analysis data from " << datapath);
     YAML::Node doc;
     try {
-      #if YAMLCPP_API == 3
-      std::ifstream file(datapath.c_str());
-      YAML::Parser parser(file);
-      parser.GetNextDocument(doc);
-      #elif YAMLCPP_API == 5
       doc = YAML::LoadFile(datapath);
-      #endif
     } catch (const YAML::ParserException& ex) {
       MSG_ERROR("Parse error when reading analysis data from " << datapath << " (" << ex.what() << ")");
       return ai;
@@ -55,11 +49,7 @@ namespace Rivet {
     #define THROW_INFOERR(KEY) throw InfoError("Problem in info parsing while accessing key " + string(KEY) + " in file " + datapath)
 
     // Simple scalars (test for nullness before casting)
-    #if YAMLCPP_API == 3
-    #define TRY_GETINFO(KEY, VAR) try { if (doc.FindValue(KEY)) { string val; doc[KEY] >> val; ai->_ ## VAR = val; } } catch (...) { THROW_INFOERR(KEY); }
-    #elif YAMLCPP_API == 5
     #define TRY_GETINFO(KEY, VAR) try { if (doc[KEY] && !doc[KEY].IsNull()) ai->_ ## VAR = doc[KEY].as<string>(); } catch (...) { THROW_INFOERR(KEY); }
-    #endif
     TRY_GETINFO("Name", name);
     TRY_GETINFO("Summary", summary);
     TRY_GETINFO("Status", status);
@@ -76,76 +66,34 @@ namespace Rivet {
     #undef TRY_GETINFO
 
     // Sequences (test the seq *and* each entry for nullness before casting)
-    #if YAMLCPP_API == 3
-    #define TRY_GETINFO_SEQ(KEY, VAR) try { \
-        if (const YAML::Node* VAR = doc.FindValue(KEY)) {               \
-          for (size_t i = 0; i < VAR->size(); ++i) {                    \
-            string val; (*VAR)[i] >> val; ai->_ ## VAR += val;          \
-          } } } catch (...) { THROW_INFOERR(KEY); }
-    #elif YAMLCPP_API == 5
     #define TRY_GETINFO_SEQ(KEY, VAR) try { \
         if (doc[KEY] && !doc[KEY].IsNull()) {                           \
           const YAML::Node& VAR = doc[KEY];                             \
           for (size_t i = 0; i < VAR.size(); ++i)                       \
             if (!VAR[i].IsNull()) ai->_ ## VAR += VAR[i].as<string>();  \
         } } catch (...) { THROW_INFOERR(KEY); }
-    #endif
     TRY_GETINFO_SEQ("Authors", authors);
     TRY_GETINFO_SEQ("References", references);
     TRY_GETINFO_SEQ("ToDo", todos);
     TRY_GETINFO_SEQ("Keywords", keywords);
+    TRY_GETINFO_SEQ("Options", options);
     #undef TRY_GETINFO_SEQ
 
+    // Build the option map
+    ai->buildOptionMap();
 
     // A boolean with some name flexibility
     try {
-      #if YAMLCPP_API == 3
-      bool val;
-      if (const YAML::Node* n = doc.FindValue("NeedsCrossSection")) { *n >> val; ai->_needsCrossSection = val; }
-      if (const YAML::Node* n = doc.FindValue("NeedCrossSection")) { *n >> val; ai->_needsCrossSection = val; }
-      #elif YAMLCPP_API == 5
       if (doc["NeedsCrossSection"]) ai->_needsCrossSection = doc["NeedsCrossSection"].as<bool>();
       else if (doc["NeedCrossSection"]) ai->_needsCrossSection = doc["NeedCrossSection"].as<bool>();
-      #endif
+      if (doc["Reentrant"]) ai->_reentrant = doc["Reentrant"].as<bool>();
     } catch (...) {
-      THROW_INFOERR("NeedsCrossSection|NeedCrossSection");
+      THROW_INFOERR("NeedsCrossSection|NeedCrossSection|Reentrant");
     }
 
 
     // Beam particle identities
     try {
-      #if YAMLCPP_API == 3
-
-      if (const YAML::Node* pbeampairs = doc.FindValue("Beams")) {
-        const YAML::Node& beampairs = *pbeampairs;
-        vector<PdgIdPair> beam_pairs;
-        if (beampairs.size() == 2 &&
-            beampairs[0].Type() == YAML::NodeType::Scalar &&
-            beampairs[1].Type() == YAML::NodeType::Scalar) {
-          string bstr0, bstr1;
-          beampairs[0] >> bstr0;
-          beampairs[1] >> bstr1;
-          beam_pairs += PID::make_pdgid_pair(bstr0, bstr1);
-        } else {
-          for (YAML::Iterator bpi = beampairs.begin(); bpi != beampairs.end(); ++bpi) {
-            const YAML::Node& bp = *bpi;
-            if (bp.size() == 2 &&
-                bp[0].Type() == YAML::NodeType::Scalar &&
-                bp[1].Type() == YAML::NodeType::Scalar) {
-              string bstr0, bstr1;
-              bp[0] >> bstr0;
-              bp[1] >> bstr1;
-              beam_pairs += PID::make_pdgid_pair(bstr0, bstr1);
-            } else {
-              throw InfoError("Beam ID pairs have to be either a 2-tuple or a list of 2-tuples of particle names");
-            }
-          }
-        }
-        ai->_beams = beam_pairs;
-      }
-
-      #elif YAMLCPP_API == 5
-
       if (doc["Beams"]) {
         const YAML::Node& beams = doc["Beams"];
         vector<PdgIdPair> beam_pairs;
@@ -161,49 +109,11 @@ namespace Rivet {
         }
         ai->_beams = beam_pairs;
       }
-
-      #endif
     } catch (...) { THROW_INFOERR("Beams"); }
 
 
     // Beam energies
     try {
-      #if YAMLCPP_API == 3
-
-      if (const YAML::Node* penergies = doc.FindValue("Energies")) {
-        const YAML::Node& energies = *penergies;
-        vector<pair<double,double> > beam_energy_pairs;
-        for (YAML::Iterator be = energies.begin(); be != energies.end(); ++be) {
-          if (be->Type() == YAML::NodeType::Scalar) {
-            // If beam energy is a scalar, then assume symmetric beams each with half that energy
-            double sqrts;
-            *be >> sqrts;
-            beam_energy_pairs += make_pair(sqrts/2.0, sqrts/2.0);
-          } else if (be->Type() == YAML::NodeType::Sequence) {
-            const YAML::Node& beseq = *be;
-            // If the sub-sequence is of length 1, then it's another scalar sqrt(s)!
-            if (beseq.size() == 1) {
-              double sqrts;
-              (*be)[0] >> sqrts;
-              beam_energy_pairs += make_pair(sqrts/2.0, sqrts/2.0);
-            } else if (beseq.size() == 2) {
-              vector<double> beamenergies;
-              double beamenergy0, beamenergy1;
-              beseq[0] >> beamenergy0;
-              beseq[1] >> beamenergy1;
-              beam_energy_pairs += make_pair(beamenergy0, beamenergy1);
-            } else {
-              throw InfoError("Beam energies have to be a list of either numbers or pairs of numbers");
-            }
-          } else {
-            throw InfoError("Beam energies have to be a list of either numbers or pairs of numbers");
-          }
-        }
-        ai->_energies = beam_energy_pairs;
-      }
-
-      #elif YAMLCPP_API == 5
-
       if (doc["Energies"]) {
         vector< pair<double,double> > beam_energy_pairs;
         for (size_t i = 0; i < doc["Energies"].size(); ++i) {
@@ -221,9 +131,6 @@ namespace Rivet {
         }
         ai->_energies = beam_energy_pairs;
       }
-
-      #endif
-
     } catch (...) { THROW_INFOERR("Energies"); }
 
     #undef THROW_INFOERR
@@ -235,7 +142,7 @@ namespace Rivet {
 
 
   string toString(const AnalysisInfo& ai) {
-    stringstream ss;
+    std::stringstream ss;
     ss << ai.name();
     ss << " - " << ai.summary();
     // ss << " - " << ai.beams();
@@ -244,5 +151,33 @@ namespace Rivet {
     return ss.str();
   }
 
+void AnalysisInfo::buildOptionMap() {
+  _optionmap.clear();
+  for ( auto opttag : _options ) {
+    std::vector<std::string> optv = split(opttag, "=");
+    std::string optname = optv[0];
+    for ( auto opt : split(optv[1], ",") )
+      _optionmap[optname].insert(opt);
+  }
+}
+
+bool AnalysisInfo::validOption(std::string key, std::string val) const {
+  auto opt = _optionmap.find(key);
+  // The option is required to be defined in the .info file.
+  if ( opt == _optionmap.end() ) return false;
+  // If the selection option is among the range of given options,
+  // we are fine.
+  if ( opt->second.find(val) != opt->second.end() ) return true;
+  // Wild card selection option for value types is #.
+  if ( opt->second.size() == 1 && *opt->second.begin() == "#" ) {
+    std::istringstream ss(val);
+    double test;
+    if ( ss >> test ) return true;
+  }
+  // Wild card selection option for any type is *.
+  if ( opt->second.size() == 1 && *opt->second.begin() == "*" )
+    return true;
+  return false;
+}
 
 }

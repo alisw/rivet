@@ -1,0 +1,48 @@
+Name: ALICE_2016_I1419244
+Year: 2016
+Summary: Anisotropic flow of charged particles in PbPb collisions at 5.02 TeV.
+Experiment: ALICE
+Collider: LHC
+InspireID: 1419244
+Status: UNVALIDATED
+Authors:
+ - Christian Bierlich <christian.bierlich@thep.lu.se>
+References:
+- Phys.Rev.Lett.116(2016)132302,2016
+- DOI:10.1103/PhysRevLett.116.132302
+- arXiv:1602.01119
+RunInfo: PbPb minimum bias events.
+NeedCrossSection: no
+Options:
+ - cent=REF,GEN,IMP,USR
+Beams: [1000822080, 1000822080]
+# This is _total_ energy of beams, so this becomes 208*5023=1044784
+Energies: [1044784]
+Description: 
+  'Anisotropic flow of charged particles in PbPb collisions at 5.02 TeV.
+  The analysis calculates flow coefficients using Generic Framework, integrated
+  and differential in pT, as function of centrality.
+  Only results for 5.02 TeV are calculated in the analysis, even though the HepData
+  record also includes results for 2.76 TeV. Those results should be validated through
+  a separate analysis referring to the primary citation. For this reason also ratios
+  between flow coefficients at two energies are excluded.'
+
+BibKey: Adam:2016izf
+BibTeX: '@article{Adam:2016izf,
+      author         = "Adam, Jaroslav and others",
+      title          = "{Anisotropic flow of charged particles in Pb-Pb
+                        collisions at $\sqrt{s_{\rm NN}}=5.02$ TeV}",
+      collaboration  = "ALICE",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "116",
+      year           = "2016",
+      number         = "13",
+      pages          = "132302",
+      doi            = "10.1103/PhysRevLett.116.132302",
+      eprint         = "1602.01119",
+      archivePrefix  = "arXiv",
+      primaryClass   = "nucl-ex",
+      reportNumber   = "CERN-EP-2016-018",
+      SLACcitation   = "%%CITATION = ARXIV:1602.01119;%%"
+}'
+

@@ -15,6 +15,7 @@ RunInfo:
 NeedCrossSection: yes
 Beams: [p, p]
 Energies: [13000]
+Luminosity_fb: 2.6
 PtCuts: [200]
 Description:
   'Dijet angular distributions are measured in proton-proton collisions at
@@ -22,6 +23,7 @@ Description:
   luminosity of 2.6/fb collected by the CMS detector at the CERN LHC. Dijet
   angular distributions are found to be in agreement with the perturbative QCD
   predictions that include electroweak corrections.'
+Keywords: [search, bsm, jets]
 BibKey: Sirunyan:2017ygf
 BibTeX: '@article{Sirunyan:2017ygf,
       author         = "Sirunyan, Albert M and others",

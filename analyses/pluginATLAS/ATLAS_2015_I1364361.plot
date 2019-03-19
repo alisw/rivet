@@ -12,7 +12,7 @@ YLabel=$\text{d}\sigma/\text{d}|y^\text{H}|$~[pb]
 XLabel=$N_\text{jets}$
 YLabel=$\text{d}\sigma/\text{d}N_\text{jets}$~[pb]
 XMinorTickMarks=0
-XCustomMajorTicks=0	0	1	1	2	2	3	$\geq3$
+XCustomMajorTicks=1	0	2	1	3	2	4	$\geq3$
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2015_I1364361/d04-x01-y01

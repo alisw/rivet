@@ -1,0 +1,20 @@
+# -*- mode: conf-colon-mode -*-
+Name: ALICE_2015_PBPBCentrality
+Year: 2018
+Summary: ALICE centrality calibration for Pb-Pb at 5.02TeV
+Experiment: ALICE
+Collider: LHC
+Status: NEW
+Authors:
+ - Christian Holm Christensen <cholm@nbi.dk>
+RunInfo: Pb-Pb at sqrt(sNN)=5.02TeV
+NumEvents: 1000000
+NeedCrossSection: no
+Beams: [[p, p], [1000822080, 1000822080]]
+# This _total_ energy of beams, so this becomes 208*5023=1044784
+Energies: [2760, 574080, 1044784]
+Description:
+  'Dummy analysis to bring in the centrality calibration for Pb-Pb at 5.02TeV'
+ToDo:
+  'Validate'
+  

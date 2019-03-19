@@ -27,7 +27,8 @@ Description:
   with increasing missing-transverse-momentum requirements between $E_T^\mathrm{miss} >
   250\;\GeV$ and 700\;\GeV. Good agreement is observed between the number of events
   in data and Standard Model predictions.'
-
+Keywords: [search, bsm, 1jet, monojet, 0lepton]
+Luminosity_fb: 3.2
 BibKey: Aaboud:2016tnv
 BibTeX: '@article{Aaboud:2016tnv,
       author         = "Aaboud, Morad and others",

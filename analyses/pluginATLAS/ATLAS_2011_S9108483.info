@@ -16,7 +16,9 @@ NumEvents: 25000 for BSM signals
 Beams: [p+, p+]
 Energies: [7000]
 Description:
-  'ATLAS search for long-lived heavy charged particles for four different mass cuts. Currently only the slepton search is implemented.'
+  'ATLAS search for long-lived heavy charged particles for four different mass
+  cuts. Currently only the slepton search is implemented.'
+Keywords: [search, bsm, 1lepton]
 NeedCrossSection: yes
 BibKey: Aad:2011hz
 BibTeX: '@Article{Aad:2011hz,

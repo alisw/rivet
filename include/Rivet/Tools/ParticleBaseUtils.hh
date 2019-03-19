@@ -22,12 +22,14 @@ namespace Rivet {
   /// Base type for Particle -> bool functors
   struct BoolParticleBaseFunctor {
     virtual bool operator()(const ParticleBase& p) const = 0;
+    virtual ~BoolParticleBaseFunctor() {}
   };
 
 
   /// Transverse momentum greater-than functor
   struct PtGtr : public BoolParticleBaseFunctor {
     PtGtr(double pt) : ptcut(pt) { }
+    PtGtr(const FourMomentum& p) : ptcut(p.pT()) { }
     bool operator()(const ParticleBase& p) const { return p.pT() > ptcut; }
     double ptcut;
   };
@@ -36,6 +38,7 @@ namespace Rivet {
 
   /// Transverse momentum less-than functor
   struct PtLess : public BoolParticleBaseFunctor {
+    PtLess(const FourMomentum& p) : ptcut(p.pT()) { }
     PtLess(double pt) : ptcut(pt) { }
     bool operator()(const ParticleBase& p) const { return p.pT() < ptcut; }
     double ptcut;
@@ -47,6 +50,7 @@ namespace Rivet {
   struct PtInRange : public BoolParticleBaseFunctor {
     PtInRange(pair<double, double> ptcuts) : ptcut(ptcuts) { }
     PtInRange(double ptlow, double pthigh) : PtInRange(make_pair(ptlow, pthigh)) { }
+    PtInRange(const FourMomentum& p1, const FourMomentum& p2) : PtInRange(p1.pT(), p2.pT()) { }
     bool operator()(const ParticleBase& p) const { return p.pT() >= ptcut.first && p.pT() < ptcut.second; }
     pair<double,double> ptcut;
   };
@@ -57,6 +61,7 @@ namespace Rivet {
   /// Pseudorapidity greater-than functor
   struct EtaGtr : public BoolParticleBaseFunctor {
     EtaGtr(double eta) : etacut(eta) { }
+    EtaGtr(const FourMomentum& p) : etacut(p.eta()) { }
     bool operator()(const ParticleBase& p) const { return p.eta() > etacut; }
     double etacut;
   };
@@ -65,6 +70,7 @@ namespace Rivet {
   /// Pseudorapidity less-than functor
   struct EtaLess : public BoolParticleBaseFunctor {
     EtaLess(double eta) : etacut(eta) { }
+    EtaLess(const FourMomentum& p) : etacut(p.eta()) { }
     bool operator()(const ParticleBase& p) const { return p.eta() < etacut; }
     double etacut;
   };
@@ -74,6 +80,7 @@ namespace Rivet {
   struct EtaInRange : public BoolParticleBaseFunctor {
     EtaInRange(pair<double, double> etacuts) : etacut(etacuts) { }
     EtaInRange(double etalow, double etahigh) : EtaInRange(make_pair(etalow, etahigh)) { }
+    EtaInRange(const FourMomentum& p1, const FourMomentum& p2) : EtaInRange(p1.eta(), p2.eta()) { }
     bool operator()(const ParticleBase& p) const { return p.eta() >= etacut.first && p.eta() < etacut.second; }
     pair<double,double> etacut;
   };
@@ -83,6 +90,7 @@ namespace Rivet {
   /// Abs pseudorapidity greater-than functor
   struct AbsEtaGtr : public BoolParticleBaseFunctor {
     AbsEtaGtr(double abseta) : absetacut(abseta) { }
+    AbsEtaGtr(const FourMomentum& p) : absetacut(p.abseta()) { }
     bool operator()(const ParticleBase& p) const { return p.abseta() > absetacut; }
     double absetacut;
   };
@@ -92,6 +100,7 @@ namespace Rivet {
   /// Abs pseudorapidity momentum less-than functor
   struct AbsEtaLess : public BoolParticleBaseFunctor {
     AbsEtaLess(double abseta) : absetacut(abseta) { }
+    AbsEtaLess(const FourMomentum& p) : absetacut(p.abseta()) { }
     bool operator()(const ParticleBase& p) const { return p.abseta() < absetacut; }
     double absetacut;
   };
@@ -102,6 +111,7 @@ namespace Rivet {
   struct AbsEtaInRange : public BoolParticleBaseFunctor {
     AbsEtaInRange(const pair<double, double>& absetacuts) : absetacut(absetacuts) { }
     AbsEtaInRange(double absetalow, double absetahigh) : AbsEtaInRange(make_pair(absetalow, absetahigh)) { }
+    AbsEtaInRange(const FourMomentum& p1, const FourMomentum& p2) : AbsEtaInRange(p1.abseta(), p2.abseta()) { }
     bool operator()(const ParticleBase& p) const { return p.abseta() >= absetacut.first && p.abseta() < absetacut.second; }
     pair<double,double> absetacut;
   };
@@ -112,6 +122,7 @@ namespace Rivet {
   /// Rapidity greater-than functor
   struct RapGtr : public BoolParticleBaseFunctor {
     RapGtr(double rap) : rapcut(rap) { }
+    RapGtr(const FourMomentum& p) : rapcut(p.rap()) { }
     bool operator()(const ParticleBase& p) const { return p.rap() > rapcut; }
     double rapcut;
   };
@@ -120,6 +131,7 @@ namespace Rivet {
   /// Rapidity momentum less-than functor
   struct RapLess : public BoolParticleBaseFunctor {
     RapLess(double rap) : rapcut(rap) { }
+    RapLess(const FourMomentum& p) : rapcut(p.rap()) { }
     bool operator()(const ParticleBase& p) const { return p.rap() < rapcut; }
     double rapcut;
   };
@@ -129,6 +141,7 @@ namespace Rivet {
   struct RapInRange : public BoolParticleBaseFunctor {
     RapInRange(const pair<double, double>& rapcuts) : rapcut(rapcuts) { }
     RapInRange(double raplow, double raphigh) : RapInRange(make_pair(raplow, raphigh)) { }
+    RapInRange(const FourMomentum& p1, const FourMomentum& p2) : RapInRange(p1.rap(), p2.rap()) { }
     bool operator()(const ParticleBase& p) const { return p.rap() >= rapcut.first && p.rap() < rapcut.second; }
     pair<double,double> rapcut;
   };
@@ -138,6 +151,7 @@ namespace Rivet {
   /// Abs rapidity greater-than functor
   struct AbsRapGtr : public BoolParticleBaseFunctor {
     AbsRapGtr(double absrap) : absrapcut(absrap) { }
+    AbsRapGtr(const FourMomentum& p) : absrapcut(p.absrap()) { }
     bool operator()(const ParticleBase& p) const { return p.absrap() > absrapcut; }
     double absrapcut;
   };
@@ -147,6 +161,7 @@ namespace Rivet {
   /// Abs rapidity momentum less-than functor
   struct AbsRapLess : public BoolParticleBaseFunctor {
     AbsRapLess(double absrap) : absrapcut(absrap) { }
+    AbsRapLess(const FourMomentum& p) : absrapcut(p.absrap()) { }
     bool operator()(const ParticleBase& p) const { return p.absrap() < absrapcut; }
     double absrapcut;
   };
@@ -157,12 +172,15 @@ namespace Rivet {
   struct AbsRapInRange : public BoolParticleBaseFunctor {
     AbsRapInRange(const pair<double, double>& absrapcuts) : absrapcut(absrapcuts) { }
     AbsRapInRange(double absraplow, double absraphigh) : AbsRapInRange(make_pair(absraplow, absraphigh)) { }
+    AbsRapInRange(const FourMomentum& p1, const FourMomentum& p2) : AbsRapInRange(p1.absrap(), p2.absrap()) { }
     bool operator()(const ParticleBase& p) const { return p.absrap() >= absrapcut.first && p.absrap() < absrapcut.second; }
     pair<double,double> absrapcut;
   };
   using absRapInRange = AbsRapInRange;
   using absrapInRange = AbsRapInRange;
 
+
+  /// @todo Define dR and dphi functors w.r.t. *multiple* ref vectors, with "all" or "any" semantics
 
 
   /// @f$ \Delta R @f$ (with respect to another 4-momentum, @a vec) greater-than functor
@@ -379,6 +397,7 @@ namespace Rivet {
   /// Base type for Particle -> double functors
   struct DoubleParticleBaseFunctor {
     virtual double operator()(const ParticleBase& p) const = 0;
+    virtual ~DoubleParticleBaseFunctor() {}
   };
 
   /// Calculator of @f$ \Delta R @f$ with respect to a given momentum
@@ -453,6 +472,38 @@ namespace Rivet {
   //@}
 
 
+  /// @name Isolation helper routines
+  //@{
+
+  template<typename PBCONTAINER1, typename PBCONTAINER2>
+  void idiscardIfAnyDeltaRLess(PBCONTAINER1& tofilter, const PBCONTAINER2& tocompare, double dR) {
+    for (const ParticleBase& pb : tocompare)
+      ifilter_discard(tofilter, deltaRLess(pb, dR));
+  }
+
+  template<typename PBCONTAINER1, typename PBCONTAINER2>
+  PBCONTAINER1 discardIfAnyDeltaRLess(const PBCONTAINER1& tofilter, const PBCONTAINER2& tocompare, double dR) {
+    PBCONTAINER1 tmp{tofilter};
+    idiscardIfAnyDeltaRLess(tmp, tocompare, dR);
+    return tmp;
+  }
+
+  template<typename PBCONTAINER1, typename PBCONTAINER2>
+  void idiscardIfAnyDeltaPhiLess(PBCONTAINER1& tofilter, const PBCONTAINER2& tocompare, double dphi) {
+    for (const ParticleBase& pb : tocompare)
+      ifilter_discard(tofilter, deltaPhiLess(pb, dphi));
+  }
+
+  template<typename PBCONTAINER1, typename PBCONTAINER2>
+  PBCONTAINER1 discardIfAnyDeltaPhiLess(const PBCONTAINER1& tofilter, const PBCONTAINER2& tocompare, double dphi) {
+    PBCONTAINER1 tmp{tofilter};
+    idiscardIfAnyDeltaPhiLess(tmp, tocompare, dphi);
+    return tmp;
+  }
+
+  //@}
+
+
   /// @name Non-PID particle properties, via unbound functions
   /// @todo Mostly move to functions on FourMomentum
   /// @note In a sub-namespace (imported by default) for protection
@@ -490,6 +541,16 @@ namespace Rivet {
 
     /// Unbound function access to abs rapidity
     inline double absrap(const ParticleBase& p) { return p.absrap(); }
+
+    /// Unbound function access to mass
+    inline double mass(const ParticleBase& p) { return p.mass(); }
+
+
+    /// Unbound function access to pair pT
+    inline double pairPt(const ParticleBase& p1, const ParticleBase& p2) { return (p1.mom() + p2.mom()).pT(); }
+
+    /// Unbound function access to pair mass
+    inline double pairMass(const ParticleBase& p1, const ParticleBase& p2) { return (p1.mom() + p2.mom()).mass(); }
 
   }
   //@}

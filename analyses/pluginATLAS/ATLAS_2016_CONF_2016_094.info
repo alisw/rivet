@@ -11,8 +11,10 @@ NumEvents: 100000
 NeedCrossSection: no
 Beams: [p+, p+]
 Energies: [13000]
+Luminosity_fb: 14.8
 Description:
   'A search for new phenomena in final states characterized by high jet multiplicity,
   an isolated lepton (electron or muon), and either zero or at least three $b$-tagged
   jets is. The search uses 14.8/fb of $\sqrt{s} = 13~\TeV$ proton--proton collision
   data collected by the ATLAS experiment at the Large Hadron Collider in 2015 and 2016.'
+Keywords: [search, bsm, susy, 1lepton, jets, multijet]

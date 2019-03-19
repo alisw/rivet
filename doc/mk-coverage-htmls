@@ -1,0 +1,13 @@
+#! /usr/bin/env bash
+
+RANKFILES=$(echo *.rank)
+BASECMD='./mk-coverage-html inspire-*.json -r "$RANKFILES" -R'
+UPDATE= #'--update-ranking'
+VERB= #"-v"
+
+eval "$BASECMD $UPDATE $VERB"
+eval "$BASECMD -SI $VERB"
+eval "$BASECMD -S $VERB"
+eval "$BASECMD -I $VERB"
+eval "$BASECMD -s $VERB"
+eval "$BASECMD -i $VERB"

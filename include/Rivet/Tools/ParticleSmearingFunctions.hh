@@ -21,12 +21,18 @@ namespace Rivet {
 
   /// Take a Particle and return 0
   inline double PARTICLE_EFF_ZERO(const Particle& ) { return 0; }
-  /// @deprecated Alias for PARTICLE_EFF_ZERO
+  /// Alias for PARTICLE_EFF_ZERO
+  inline double PARTICLE_EFF_0(const Particle& ) { return 0; }
+  /// Alias for PARTICLE_EFF_ZERO
   inline double PARTICLE_FN0(const Particle& ) { return 0; }
 
   /// Take a Particle and return 1
   inline double PARTICLE_EFF_ONE(const Particle& ) { return 1; }
-  /// @deprecated Alias for PARTICLE_EFF_ONE
+  /// Alias for PARTICLE_EFF_ONE
+  inline double PARTICLE_EFF_1(const Particle& ) { return 1; }
+  /// Alias for PARTICLE_EFF_ONE
+  inline double PARTICLE_EFF_PERFECT(const Particle& ) { return 1; }
+  /// Alias for PARTICLE_EFF_ONE
   inline double PARTICLE_FN1(const Particle& ) { return 1; }
 
   /// Take a Particle and return a constant number
@@ -39,6 +45,8 @@ namespace Rivet {
 
   /// Take a Particle and return it unmodified
   inline Particle PARTICLE_SMEAR_IDENTITY(const Particle& p) { return p; }
+  /// Alias for PARTICLE_SMEAR_IDENTITY
+  inline Particle PARTICLE_SMEAR_PERFECT(const Particle& p) { return p; }
 
 
   /// @brief Functor for simultaneous efficiency-filtering and smearing of Particles

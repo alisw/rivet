@@ -17,11 +17,13 @@ NumEvents: 25000 for BSM signals
 Beams: [p+, p+]
 Energies: [7000]
 NeedCrossSection: yes
+Luminosity_fb: 4.7
 Description:
   'Search for R-parity violating SUSY using events with 4 or more leptons in association with
    missing transverse energy in proton-proton
    collisions at a centre-of-mass energy of 7 TeV. The data sample has a total
    integrated luminosity of 4.7 fb$^{-1}$.'
+Keywords: [search, bsm, 4lepton, multilepton, met]
 BibTeX: '@article{Aad:2012kr,
       author         = "Aad, Georges and others",
       title          = "{Search for R-parity-violating supersymmetry in events with four or more leptons in $\sqrt{s} = 7$ TeV $pp$ collisions with the ATLAS detector}",

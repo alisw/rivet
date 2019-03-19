@@ -43,16 +43,19 @@ namespace Rivet {
     //@}
 
 
-  protected:
-
     /// Apply the projection on the supplied event.
     void project(const Event& e);
 
-    /// The minimum allowed transverse energy.
-    double _Etmin;
-
     /// Compare projections.
     int compare(const Projection& p) const;
+
+
+  protected:
+
+    /// The minimum allowed transverse energy.
+    /// @todo Remove in favour of a Cut
+    double _Etmin;
+
   };
 
 

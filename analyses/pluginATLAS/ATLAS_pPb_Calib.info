@@ -1,0 +1,36 @@
+Name: ATLAS_pPb_Calib
+Summary: ATLAS proton-lead centrality calibration analysis.
+Status: UNVALIDATED
+Authors:
+ - Leif Lönnblad <leif.lonnblad@thep.lu.se>
+NumEvents: 50000
+References:
+ - arXiv:1508.00848 [hep-ex], Eur.Phys.J. C76 (2016) no.4, 199
+RunInfo: Any!
+Description:
+   'Calibration analysis for ATLAS pPb centrality. The centrality measure
+   is $\sum E_\perp$ in the lead direction. The reference YODA file
+   contains the experimental centrality calibration, but extracted
+   from the plot in the paper. Note that this has not been unfolded
+   for detector effects.'
+
+BibKey: Aad:2015zza
+BibTeX: '@article{Aad:2015zza,
+      author         = "Aad, Georges and others",
+      title          = "{Measurement of the centrality dependence of the
+                        charged-particle pseudorapidity distribution in
+                        proton–lead collisions at $\sqrt{s_{_\text {NN}}} =
+                        5.02$  TeV with the ATLAS detector}",
+      collaboration  = "ATLAS",
+      journal        = "Eur. Phys. J.",
+      volume         = "C76",
+      year           = "2016",
+      number         = "4",
+      pages          = "199",
+      doi            = "10.1140/epjc/s10052-016-4002-3",
+      eprint         = "1508.00848",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-PH-EP-2015-160",
+      SLACcitation   = "%%CITATION = ARXIV:1508.00848;%%"
+}'

@@ -199,7 +199,6 @@ namespace Rivet {
 
 
   /// CMS Run 1 electron reconstruction efficiency
-  /// @todo How to use this in combination with tracking eff?
   inline double ELECTRON_EFF_CMS_RUN1(const Particle& e) {
     if (e.abseta() > 2.5) return 0;
     if (e.pT() < 10*GeV) return 0;
@@ -241,7 +240,6 @@ namespace Rivet {
     return Particle(e.pid(), P4_SMEAR_E_GAUSS(e, resolution));
   }
 
-
   /// CMS Run 2 electron reco smearing
   /// @todo Currently just a copy of the Run 1 version: fix!
   inline Particle ELECTRON_SMEAR_CMS_RUN2(const Particle& e) {
@@ -255,21 +253,64 @@ namespace Rivet {
   /// @name Photon efficiency and smearing functions
   //@{
 
-  /// ATLAS Run 1 photon reco efficiency
-  /// @todo Currently identical to CMS, cf. Delphes
+  /// @brief ATLAS Run 2 photon reco efficiency
+  ///
+  /// Taken from converted photons, Fig 8, in arXiv:1606.01813
   inline double PHOTON_EFF_ATLAS_RUN1(const Particle& y) {
-    if (y.pT() < 10*GeV || y.abseta() > 2.5) return 0;
-    return (y.abseta() < 1.5) ? 0.95 : 0.85;
+    if (y.pT() < 10*GeV) return 0;
+    if (inRange(y.abseta(), 1.37, 1.52) || y.abseta() > 2.37) return 0;
+
+    static const vector<double> edges_eta = {0., 0.6, 1.37, 1.52, 1.81, 2.37};
+    static const vector<double> edges_pt = {10., 15., 20., 25., 30., 35., 40., 45.,
+                                            50., 60., 80., 100., 125., 150., 175., 250.};
+    static const vector<double> effs = {0.53, 0.65, 0.73, 0.83, 0.86, 0.93, 0.94, 0.96,
+                                        0.97, 0.98, 0.98, 0.98, 0.98, 0.98, 0.98, 0.98,//
+                                        0.45, 0.57, 0.67, 0.74, 0.84, 0.87, 0.93, 0.94,
+                                        0.95, 0.96, 0.97, 0.98, 0.98, 0.99, 0.99, 0.99,//
+                                        0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00,
+                                        0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00,//
+                                        0.48, 0.56, 0.68, 0.76, 0.86, 0.90, 0.93, 0.95,
+                                        0.96, 0.97, 0.98, 0.99, 0.99, 1.00, 1.00, 1.00,//
+                                        0.50, 0.61, 0.74, 0.82, 0.88, 0.92, 0.94, 0.95,
+                                        0.96, 0.97, 0.98, 0.98, 0.98, 0.98, 0.99, 0.99};
+
+    const int i_eta = binIndex(y.abseta(), edges_eta);
+    const int i_pt = binIndex(y.pT()/GeV, edges_pt, true);
+    const int i = i_eta*edges_pt.size() + i_pt;
+    const double eff = effs[i];
+    return eff;
   }
 
-  /// ATLAS Run 2 photon reco efficiency
-  /// @todo Currently just a copy of Run 1: fix!
+  /// @brief ATLAS Run 2 photon reco efficiency
+  ///
+  /// Taken from converted photons, Fig 6, in ATL-PHYS-PUB-2016-014
   inline double PHOTON_EFF_ATLAS_RUN2(const Particle& y) {
-    return PHOTON_EFF_ATLAS_RUN1(y);
+    if (y.pT() < 10*GeV) return 0;
+    if (inRange(y.abseta(), 1.37, 1.52) || y.abseta() > 2.37) return 0;
+
+    static const vector<double> edges_eta = {0., 0.6, 1.37, 1.52, 1.81, 2.37};
+    static const vector<double> edges_pt = {10., 15., 20., 25., 30., 35., 40., 45.,
+                                            50., 60., 80., 100., 125., 150., 175., 250.};
+    static const vector<double> effs = {0.55, 0.70, 0.85, 0.89, 0.93, 0.95, 0.96, 0.96,
+                                        0.97, 0.97, 0.98, 0.97, 0.97, 0.97, 0.97, 0.97,//
+                                        0.47, 0.66, 0.79, 0.86, 0.89, 0.94, 0.96, 0.97,
+                                        0.97, 0.98, 0.97, 0.98, 0.98, 0.98, 0.98, 0.98,//
+                                        0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00,
+                                        0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00,//
+                                        0.54, 0.71, 0.84, 0.88, 0.92, 0.93, 0.94, 0.95,
+                                        0.96, 0.96, 0.96, 0.96, 0.96, 0.96, 0.96, 0.96,//
+                                        0.61, 0.74, 0.83, 0.88, 0.91, 0.94, 0.95, 0.96,
+                                        0.97, 0.98, 0.98, 0.98, 0.98, 0.98, 0.98, 0.98};
+
+    const int i_eta = binIndex(y.abseta(), edges_eta);
+    const int i_pt = binIndex(y.pT()/GeV, edges_pt, true);
+    const int i = i_eta*edges_pt.size() + i_pt;
+    const double eff = effs[i];
+    return eff;
   }
 
   /// CMS Run 1 photon reco efficiency
-  /// @todo Currently identical to ATLAS, cf. Delphes
+  /// @todo Currently from Delphes
   inline double PHOTON_EFF_CMS_RUN1(const Particle& y) {
     if (y.pT() < 10*GeV || y.abseta() > 2.5) return 0;
     return (y.abseta() < 1.5) ? 0.95 : 0.85;
@@ -280,6 +321,13 @@ namespace Rivet {
   inline double PHOTON_EFF_CMS_RUN2(const Particle& y) {
     return PHOTON_EFF_CMS_RUN1(y);
   }
+
+
+  /// @todo Use real photon smearing
+  inline Particle PHOTON_SMEAR_ATLAS_RUN1(const Particle& y) { return y; }
+  inline Particle PHOTON_SMEAR_ATLAS_RUN2(const Particle& y) { return y; }
+  inline Particle PHOTON_SMEAR_CMS_RUN1(const Particle& y) { return y; }
+  inline Particle PHOTON_SMEAR_CMS_RUN2(const Particle& y) { return y; }
 
   //@}
 
@@ -295,10 +343,17 @@ namespace Rivet {
     return (m.abseta() < 1.5) ? 0.95 : 0.85;
   }
 
-  /// ATLAS Run 2 muon reco efficiency
-  /// @todo Currently just a copy of Run 1: fix!
+  /// @brief ATLAS Run 2 muon reco efficiency
+  ///
+  /// For medium ID, from Fig 3 of
+  /// https://cds.cern.ch/record/2047831/files/ATL-PHYS-PUB-2015-037.pdf
   inline double MUON_EFF_ATLAS_RUN2(const Particle& m) {
-    return MUON_EFF_ATLAS_RUN1(m);
+    if (m.abseta() > 2.7) return 0;
+    static const vector<double> edges_pt = {0., 3.5, 4., 5., 6., 7., 8., 10.};
+    static const vector<double> effs = {0.00, 0.76, 0.94, 0.97, 0.98, 0.98, 0.98, 0.99};
+    const int i_pt = binIndex(m.pT()/GeV, edges_pt, true);
+    const double eff = effs[i_pt];
+    return eff;
   }
 
 
@@ -309,7 +364,7 @@ namespace Rivet {
     static const vector<double> res = {0., 0.03, 0.02, 0.03, 0.05,
                                        0., 0.04, 0.03, 0.04, 0.05};
 
-    const int i_eta = binIndex(m.abseta(), edges_eta, true);
+    const int i_eta = binIndex(m.abseta(), edges_eta);
     const int i_pt = binIndex(m.pT()/GeV, edges_pt, true);
     const int i = i_eta*edges_pt.size() + i_pt;
 
@@ -536,7 +591,9 @@ namespace Rivet {
     /// @todo Is this the best way to smear? Should we preserve the energy, or pT, or direction?
     const double fsmear = max(randnorm(1., resolution), 0.);
     const double mass = j.mass2() > 0 ? j.mass() : 0; //< numerical carefulness...
-    return Jet(FourMomentum::mkXYZM(j.px()*fsmear, j.py()*fsmear, j.pz()*fsmear, mass));
+    Jet rtn(FourMomentum::mkXYZM(j.px()*fsmear, j.py()*fsmear, j.pz()*fsmear, mass));
+    //if (deltaPhi(j, rtn) > 0.01) cout << "jdphi: " << deltaPhi(j, rtn) << endl;
+    return rtn;
   }
 
   /// ATLAS Run 2 jet smearing
@@ -563,10 +620,11 @@ namespace Rivet {
   ///
   /// Based on https://arxiv.org/pdf/1108.5602v2.pdf, Figs 14 and 15
   inline Vector3 MET_SMEAR_ATLAS_RUN1(const Vector3& met, double set) {
-    // Linearity offset (Fig 14)
     Vector3 smeared_met = met;
-    if (met.mod()/GeV < 25*GeV) smeared_met *= 1.05;
-    else if (met.mod()/GeV < 40*GeV) smeared_met *= (1.05 - (0.04/15)*(met.mod()/GeV - 25)); //< linear decrease
+
+    // Linearity offset (Fig 14)
+    if (met.mod() < 25*GeV) smeared_met *= 1.05;
+    else if (met.mod() < 40*GeV) smeared_met *= (1.05 - (0.04/15)*(met.mod()/GeV - 25)); //< linear decrease
     else smeared_met *= 1.01;
 
     // Smear by a Gaussian with width given by the resolution(sumEt) ~ 0.45 sqrt(sumEt) GeV
@@ -584,15 +642,37 @@ namespace Rivet {
   }
 
   /// CMS Run 1 ETmiss smearing
-  /// @todo Just a copy of the ATLAS one: improve!!
+  /// From https://arxiv.org/pdf/1411.0511.pdf Table 2, p16 (Z channels)
   inline Vector3 MET_SMEAR_CMS_RUN1(const Vector3& met, double set) {
-    return MET_SMEAR_ATLAS_RUN1(met, set);
+    Vector3 smeared_met = met;
+
+    // Calculate parallel and perpendicular resolutions and combine in quadrature (?)
+    const double resolution_x = (1.1 + 0.6*sqrt(set/GeV)) * GeV;
+    const double resolution_y = (1.4 + 0.6*sqrt(set/GeV)) * GeV;
+    const double resolution = sqrt(sqr(resolution_x) + sqr(resolution_y));
+
+    // Smear by a Gaussian with width given by the resolution
+    const double metsmear = max(randnorm(smeared_met.mod(), resolution), 0.);
+    smeared_met = metsmear * smeared_met.unit();
+
+    return smeared_met;
   }
 
   /// CMS Run 2 ETmiss smearing
-  /// @todo Just a copy of the ATLAS one: improve!!
+  /// From http://inspirehep.net/record/1681214/files/JME-17-001-pas.pdf Table 3, p20
   inline Vector3 MET_SMEAR_CMS_RUN2(const Vector3& met, double set) {
-    return MET_SMEAR_ATLAS_RUN2(met, set);
+    Vector3 smeared_met = met;
+
+    // Calculate parallel and perpendicular resolutions and combine in quadrature (?)
+    const double resolution_para = ( 2.0 + 0.64*sqrt(set/GeV)) * GeV;
+    const double resolution_perp = (-1.5 + 0.68*sqrt(set/GeV)) * GeV;
+    const double resolution = sqrt(sqr(resolution_para) + sqr(resolution_perp));
+
+    // Smear by a Gaussian with width given by the resolution
+    const double metsmear = max(randnorm(smeared_met.mod(), resolution), 0.);
+    smeared_met = metsmear * smeared_met.unit();
+
+    return smeared_met;
   }
 
   //@}

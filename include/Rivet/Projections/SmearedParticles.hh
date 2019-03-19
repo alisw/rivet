@@ -111,16 +111,18 @@ namespace Rivet {
 
     /// Compare to another SmearedParticles
     int compare(const Projection& p) const {
+      const SmearedParticles& other = dynamic_cast<const SmearedParticles&>(p);
+
       // Compare truth particles definitions
-      const int teq = mkPCmp(p, "TruthParticles");
-      if (teq != EQUIVALENT) return UNEQUAL;
+      const int teq = mkPCmp(other, "TruthParticles");
+      if (teq != EQUIVALENT) return teq;
 
       // Compare lists of detector functions
-      const SmearedParticles& other = dynamic_cast<const SmearedParticles&>(p);
-      if (_detFns.size() != other._detFns.size()) return UNEQUAL;
+      const int nfeq = cmp(_detFns.size(), other._detFns.size());
+      if (nfeq != EQUIVALENT) return nfeq;
       for (size_t i = 0; i < _detFns.size(); ++i) {
         const int feq = _detFns[i].cmp(other._detFns[i]);
-        if (feq != EQUIVALENT) return UNEQUAL;
+        if (feq != EQUIVALENT) return feq;
       }
 
       // If we got this far, we're equal

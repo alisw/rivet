@@ -14,8 +14,14 @@ RunInfo:
 NumEvents: 25000 for BSM signals
 Beams: [p+, p+]
 Energies: [7000]
+Luminosity_fb: 4.7
 Description:
-  'Search for direct pair production of heavy top-quark partners with 4.7 fb$^{-1}$ integrated luminosity at $\sqrt{s} = 7 TeV$ by the ATLAS experiment. Heavy top-quark partners decaying into a top quark and a neutral non-interacting particle are searched for in events with two leptons in the final state.'
+  'Search for direct pair production of heavy top-quark partners with 4.7~fb$^{-1}$
+  integrated luminosity at $\sqrt{s} = 7 TeV$ by the ATLAS
+  experiment. Heavy top-quark partners decaying into a top quark and a neutral
+  non-interacting particle are searched for in events with two leptons in the
+  final state.'
+Keywords: [search, bsm, tquark, met]
 BibTeX: '@article{Aad:2012uu,
       author         = "Aad, Georges and others",
       title          = "{Search for a heavy top-quark partner in final states

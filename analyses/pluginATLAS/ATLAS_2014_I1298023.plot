@@ -1,5 +1,5 @@
 # BEGIN PLOT /ATLAS_2014_I1298023/d.*
-XCustomMajorTicks=0.5	inclusive	1.5	VBS
+XCustomMajorTicks=1.0	inclusive	2.0	VBS
 XLabel=phase space
 YLabel=$\sigma^\text{fid}$ [pb]
 LogY=0

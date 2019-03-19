@@ -131,6 +131,8 @@ namespace Rivet {
     /// Check to see if this is a valid meson
     inline bool isMeson(int pid) {
       if (_extraBits(pid) > 0) return false;
+      // exotica
+      if (_digit(n,pid) > 0 && _digit(n,pid) < 9) return false;
       const int aid = abs(pid);
       if (aid == 130 || aid == 310 || aid == 210) return true; //< special cases for kaons
       if (aid <= 100) return false;
@@ -153,6 +155,8 @@ namespace Rivet {
     /// Check to see if this is a valid baryon
     inline bool isBaryon(int pid) {
       if (_extraBits(pid) > 0) return false;
+      // exotica
+      if (_digit(n,pid) > 0 && _digit(n,pid) < 9) return false;
       if (abs(pid) <= 100) return false;
       if (_fundamentalID(pid) <= 100 && _fundamentalID(pid) > 0) return false;
       if (abs(pid) == 2110 || abs(pid) == 2210) return true; ///< @todo Why this special case with nJ = 0? What are these? Not listed in RPP MC doc...
@@ -774,6 +778,22 @@ namespace Rivet {
 
     //@}
 
+
+    /// @name Particle pair classifiers
+    /// @todo Make versions that work on PdgIdPair?
+    //@{
+
+    inline bool isSameSign(PdgId a, PdgId b) { return a*b >= 0; }
+    inline bool isOppSign(PdgId a, PdgId b) { return !isSameSign(a, b); }
+    inline bool isSameFlav(PdgId a, PdgId b) { return abs(a) == abs(b); }
+    inline bool isOppFlav(PdgId a, PdgId b) { return !isSameFlav(a, b); }
+
+    inline bool isOSSF(PdgId a, PdgId b) { return isOppSign(a, b) && isSameFlav(a, b); }
+    inline bool isSSSF(PdgId a, PdgId b) { return isSameSign(a, b) && isSameFlav(a, b); }
+    inline bool isOSOF(PdgId a, PdgId b) { return isOppSign(a, b) && isOppFlav(a, b); }
+    inline bool isSSOF(PdgId a, PdgId b) { return isSameSign(a, b) && isOppFlav(a, b); }
+
+    //@}
 
   }
 }

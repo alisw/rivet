@@ -34,11 +34,12 @@ namespace Rivet {
       if (alg == SISCONE) {
         const double OVERLAP_THRESHOLD = 0.75;
         _plugin.reset(new fastjet::SISConePlugin(rparameter, OVERLAP_THRESHOLD));
-      // } else if (alg == PXCONE) {
-      //   string msg = "PxCone currently not supported, since FastJet doesn't install it by default. ";
-      //   msg += "Please notify the Rivet authors if this behaviour should be changed.";
-      //   throw Error(msg);
-      //  _plugin.reset(new fastjet::PxConePlugin(rparameter));
+      } else if (alg == PXCONE) {
+        string msg = "Using own c++ version of PxCone, since FastJet doesn't install it by default. ";
+        msg += "Please notify the Rivet authors if this behaviour should be changed.";
+        MSG_WARNING(msg);
+        //        _plugin.reset(new fastjet::PxConePlugin(rparameter));
+        _plugin.reset(new Rivet::PxConePlugin(rparameter));
       } else if (alg == ATLASCONE) {
         const double OVERLAP_THRESHOLD = 0.5;
         _plugin.reset(new fastjet::ATLASConePlugin(rparameter, seed_threshold, OVERLAP_THRESHOLD));
@@ -79,7 +80,7 @@ namespace Rivet {
 
   // STATIC
   PseudoJets FastJets::mkClusterInputs(const Particles& fsparticles, const Particles& tagparticles) {
-    vector<fastjet::PseudoJet> pjs;
+    PseudoJets pjs;
     /// @todo Use FastJet3's UserInfo system to store Particle pointers directly?
 
     // Store 4 vector data about each particle into FastJet's PseudoJets
@@ -104,7 +105,7 @@ namespace Rivet {
   Jet FastJets::mkJet(const PseudoJet& pj, const Particles& fsparticles, const Particles& tagparticles) {
     const PseudoJets pjconstituents = pj.constituents();
 
-    vector<Particle> constituents, tags;
+    Particles constituents, tags;
     constituents.reserve(pjconstituents.size());
 
     for (const fastjet::PseudoJet& pjc : pjconstituents) {
@@ -198,6 +199,7 @@ namespace Rivet {
   }
 
 
+  /// @todo "Automate" trimming as part of project() with pre-registered Filters
   Jet FastJets::trimJet(const Jet& input, const fastjet::Filter& trimmer) const {
     if (input.pseudojet().associated_cluster_sequence() != clusterSeq().get())
       throw Error("To trim a Rivet::Jet, its associated PseudoJet must have come from this FastJets' ClusterSequence");

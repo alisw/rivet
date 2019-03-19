@@ -25,8 +25,7 @@ namespace Rivet {
 
     // If operator() returns true, particle is deleted ("lost")
     bool operator()(const Particle&) {
-      /// @todo Use a better RNG
-      return (rand()/static_cast<double>(RAND_MAX) < _lossFraction);
+      return rand01() < _lossFraction;
     }
 
     int compare(const ConstRandomFilter& other) const {

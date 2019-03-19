@@ -163,10 +163,10 @@ else
     irivet="@includedir@"
 fi
 test -n "$irivet" && mycppflags="$mycppflags -I${irivet}"
-ihepmc="@HEPMCINCPATH@"
-test -n "$ihepmc" && mycppflags="$mycppflags -I${ihepmc}"
 iyoda="@YODAINCPATH@"
 test -n "$iyoda" && mycppflags="$mycppflags -I${iyoda}"
+ihepmc="@HEPMCINCPATH@"
+test -n "$ihepmc" && mycppflags="$mycppflags -I${ihepmc}"
 ifastjet="@FASTJETINCPATH@"
 test -n "$ifastjet" && mycppflags="$mycppflags -I${ifastjet}"
 # igsl="@GSLINCPATH@"

@@ -3,7 +3,6 @@ Year: 2012
 Summary: 0-lepton squark and gluino search
 Experiment: ATLAS
 Collider: LHC
-InspireID: 1125961
 Status: OBSOLETE
 Authors:
  - Peter Richardson <Peter.Richardson@durham.ac.uk>
@@ -17,7 +16,9 @@ RunInfo:
 NumEvents: 10000 for BSM signals
 Beams: [p+, p+]
 Energies: [8000]
+#Luminosity_fb:
 Description:
   '0-lepton search for squarks and gluinos by ATLAS at 8 TeV.
   Event counts in five signal regions are implemented as one-bin
   histograms.'
+Keywords: [search, bsm, susy, 0lepton]

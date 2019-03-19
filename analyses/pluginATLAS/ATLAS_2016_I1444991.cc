@@ -166,6 +166,7 @@ namespace Rivet {
       _h_JetVeto->point(1).setY(_h_PtLead_norm->bin(0).sumW(), sqrt(_h_PtLead_norm->bin(0).sumW2()));
       _h_JetVeto->point(2).setY(_h_pTj1_sel40->bin(0).sumW(), sqrt(_h_pTj1_sel25->bin(0).sumW2()));
 
+      scale(_h_PtLead_norm, 1000.); // curveball unit change in HepData, just for this one
     }
 
   private:

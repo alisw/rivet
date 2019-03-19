@@ -10,16 +10,18 @@ namespace Rivet {
   class ATLAS_2014_I1319490 : public Analysis {
   public:
 
-    ATLAS_2014_I1319490(string name = "ATLAS_2014_I1319490")
-      : Analysis(name)
-    {
-      _mode = 0; // using electron channel for combined data by default
-      setNeedsCrossSection(true);
-    }
+    ///@brief: Electroweak Wjj production at 8 TeV
+    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2014_I1319490);
+    //@}
 
 
     // Book histograms and initialise projections before the run
     void init() {
+
+     // Get options from the new option system
+      _mode = 0;
+      if ( getOption("LMODE") == "EL" ) _mode = 0;
+      if ( getOption("LMODE") == "MU" ) _mode = 1;
 
       FinalState fs;
 
@@ -203,30 +205,7 @@ namespace Rivet {
 
   };
 
-
-  class ATLAS_2014_I1319490_EL : public ATLAS_2014_I1319490 {
-  public:
-    ATLAS_2014_I1319490_EL()
-      : ATLAS_2014_I1319490("ATLAS_2014_I1319490_EL")
-    {
-      _mode = 1;
-    }
-  };
-
-
-  class ATLAS_2014_I1319490_MU : public ATLAS_2014_I1319490 {
-  public:
-    ATLAS_2014_I1319490_MU()
-      : ATLAS_2014_I1319490("ATLAS_2014_I1319490_MU")
-    {
-      _mode = 2;
-    }
-  };
-
-
   // The hooks for the plugin system
   DECLARE_RIVET_PLUGIN(ATLAS_2014_I1319490);
-  DECLARE_RIVET_PLUGIN(ATLAS_2014_I1319490_EL);
-  DECLARE_RIVET_PLUGIN(ATLAS_2014_I1319490_MU);
 
 }

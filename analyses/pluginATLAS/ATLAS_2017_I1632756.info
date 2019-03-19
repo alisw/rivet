@@ -11,9 +11,9 @@ References:
  - submitted to PLB
  - arXiv:1710.09560 [hep-ex]
 Keywords:
- - PHOTON
- - HEAVYFLAVOUR
- - JETS
+ - 1photon
+ - heavyflavor
+ - jets
 RunInfo:
   prompt photon + heavy-flavour jets
 Luminosity_fb: 20.2
@@ -29,11 +29,11 @@ Description:
   The differential cross sections are measured for each jet flavour with respect to the transverse energy of the leading photon in
   two photon pseudorapidity regions: $|\eta^\gamma| < 1.37$ and $1.56 < |\eta^\gamma| < 2.37$. The measurement covers photon transverse
   energies $25 < E^\gamma_\text{T} < 400$ GeV and $25 < E^\gamma_\text{T} < 350$ GeV respectively for the two $|\eta^\gamma|$ regions.
-  For each jet flavour, the ratio of the cross sections in the two $|\eta^\gamma|$ regions is also measured. The measurement is corrected 
-  for detector effects and compared to leading-order and next-to-leading-order perturbative QCD calculations, based on various treatments 
-  and assumptions about the heavy-flavour content of the proton. Overall, the predictions agree well with the measurement, but some 
-  deviations are observed at high photon transverse energies. The total uncertainty in the measurement ranges between 13% and 66%, 
-  while the central $\gamma + b$ measurement exhibits the smallest uncertainty, ranging from 13% to 27%, which is comparable to the 
+  For each jet flavour, the ratio of the cross sections in the two $|\eta^\gamma|$ regions is also measured. The measurement is corrected
+  for detector effects and compared to leading-order and next-to-leading-order perturbative QCD calculations, based on various treatments
+  and assumptions about the heavy-flavour content of the proton. Overall, the predictions agree well with the measurement, but some
+  deviations are observed at high photon transverse energies. The total uncertainty in the measurement ranges between 13% and 66%,
+  while the central $\gamma + b$ measurement exhibits the smallest uncertainty, ranging from 13% to 27%, which is comparable to the
   precision of the theoretical predictions.'
 BibKey: Aaboud:2017skj
 BibTeX: '@article{Aaboud:2017skj,

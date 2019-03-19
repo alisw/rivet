@@ -105,6 +105,7 @@ namespace Rivet {
 
     }
 
+
     void analyze(const Event& event) {
 
       const double weight = event.weight();
@@ -146,7 +147,6 @@ namespace Rivet {
         pbjet1 = bjets[1].momentum();
         pbjet2 = bjets[0].momentum();
       }
-
 
       double bestWmass = 1000.0*TeV;
       double mWPDG = 80.399*GeV;
@@ -211,6 +211,7 @@ namespace Rivet {
       _h["RWt_norm"]->fill(                  R_Wt,                      weight);
 
     }
+
 
     void finalize() {
       // Normalize to cross-section

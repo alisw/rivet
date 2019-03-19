@@ -15,11 +15,13 @@ RunInfo:
 NumEvents: 25000 for BSM signals
 Beams: [p+, p+]
 Energies: [7000]
+Luminosity_fb: 0.035
 Description:
-  '0-lepton search for squarks and gluinos by ATLAS at 7 TeV 
+  '0-lepton search for squarks and gluinos by ATLAS at 7 TeV
   with an integrated luminosity of $35\,\mathrm{pb}^{-1}$.
   Event counts in four signal regions A-D are implemented as one-bin
   histograms.'
+Keywords: [search, bsm, 0lepton, jets, met]
 BibKey: daCosta:2011qk
 BibTeX: '@Article{daCosta:2011qk,
      author    = "da Costa, Joao Barreiro Guimaraes and others",
@@ -32,5 +34,4 @@ BibTeX: '@Article{daCosta:2011qk,
      archivePrefix = "arXiv",
      primaryClass  =  "hep-ex",
      SLACcitation  = "%%CITATION = 1102.5290;%%"
-}
-'
+}'

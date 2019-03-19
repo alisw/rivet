@@ -1,0 +1,48 @@
+Name: CMS_2016_I1487277
+Year: 2016
+Summary: Measurement and QCD analysis of double-differential inclusive jet cross sections in pp collisions at $\sqrt{s} = 8\;\TeV$  and cross section ratios to 2.76 and 7 TeV
+Experiment: CMS
+Collider: LHC
+InspireID: 1487277
+Status: VALIDATED
+Authors:
+ - Hannes Jung
+References:
+ - DOI:10.1007/JHEP03(2017)156
+ - arXiv:1609.05331
+ - CMS-SMP-14-001
+RunInfo: QCD at $\sqrt{s} = 8\;\TeV$
+NumEvents: 1000000
+NeedCrossSection: no
+Beams: [p+, p+]
+Energies: [8000] 
+Description:
+  'A measurement of the double-differential inclusive jet cross section as a function of the jet transverse momentum $\pt$ and the absolute jet rapidity $\abs{y}$ is presented. 
+Data from LHC proton-proton collisions at $\sqrt{s}=8\TeV$, corresponding to an integrated luminosity of 19.7 fb^{-1}, have been collected with the CMS detector. 
+Jets are reconstructed using the anti-$\kt$ clustering algorithm with a size parameter of 0.7 in a phase space region covering jet $\pt$ from $74\GeV$ up to $2.5\TeV$ and jet absolute rapidity up to $\abs{y}=3.0$. 
+The low-$\pt$ jet range between 21 and $74\GeV$ is also studied up to $\abs{y}=4.7$, using a dedicated data sample corresponding to an integrated luminosity of 5.6\pbinv. 
+The measured jet cross section is corrected for detector effects and compared with the predictions from perturbative QCD at next-to-leading order (NLO) using various sets of parton distribution functions (PDF). 
+Cross section ratios to the corresponding measurements performed at 2.76 and $7\TeV$ are presented. 
+From the measured double-differential jet cross section, the value of the strong coupling constant evaluated at the $\PZ$ mass is $\alpha_\mathrm{S}(M_{\PZ}) = 0.1164^{+0.0060}_{-0.0043}$, 
+where the errors include the PDF, scale, nonperturbative effects and experimental uncertainties, using the CT10 NLO PDFs. 
+Improved constraints on PDFs based on the inclusive jet cross section measurement are presented.'
+BibKey: Khachatryan:2016mlc
+BibTeX: '@article{Khachatryan:2016mlc,
+      author         = "Khachatryan, Vardan and others",
+      title          = "{Measurement and QCD analysis of double-differential
+                        inclusive jet cross sections in pp collisions at $
+                        \sqrt{s}=8 $ TeV and cross section ratios to 2.76 and 7
+                        TeV}",
+      collaboration  = "CMS",
+      journal        = "JHEP",
+      volume         = "03",
+      year           = "2017",
+      pages          = "156",
+      doi            = "10.1007/JHEP03(2017)156",
+      eprint         = "1609.05331",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CMS-SMP-14-001, CERN-EP-2016-196",
+      SLACcitation   = "%%CITATION = ARXIV:1609.05331;%%"
+}'
+

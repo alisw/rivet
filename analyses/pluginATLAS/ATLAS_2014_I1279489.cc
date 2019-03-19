@@ -159,78 +159,58 @@ namespace Rivet {
 
 
     void initialisePlots(Plots& plots, const string& phase_space){
-      /****************************************
-       * Plot labeling:                       *
-       * format = d0_-x0_-y0_                 *
-       * d01 = baseline fiducial region       *
-       * d02 = high-pt fiducial region        *
-       * d03 = search fiducial region         *
-       * d04 = control fiducial region        *
-       * d05 = high-mass fiducial region      *
-       *                                      *
-       * x01 = mjj on x-axis                  *
-       * x02 = delta-y on x-axis              *
-       * x03 = njets on x-axis                *
-       * x04 = dphijj on x-axis               *
-       * x05 = ptbalance on x-axis            *
-       *                                      *
-       * y01 = differential cross-section     *
-       * y02 = jet veto efficiency            *
-       * y03 = ptbalance efficiency           *
-       * y04 = average njets                  *
-       ****************************************/
       plots.label = phase_space;
 
       if (phase_space=="baseline") {
         plots.h_mjj = bookHisto1D(1, 1, 1);
-        plots.h_dy = bookHisto1D(1, 2, 1);
+        plots.h_dy = bookHisto1D(3, 1, 1);
 
-        plots.h_jetveto_mjj_veto = bookHisto1D("jetveto_mjj_baseline_veto", refData(1,1,2));
-        plots.h_jetveto_mjj_inc = bookHisto1D("jetveto_mjj_baseline_inc", refData(1,1,2));
-        plots.h_jetveto_dy_veto = bookHisto1D("jetveto_dy_baseline_veto", refData(1,2,2));
-        plots.h_jetveto_dy_inc = bookHisto1D("jetveto_dy_baseline_inc", refData(1,2,2));
+        plots.h_jetveto_mjj_veto = bookHisto1D("jetveto_mjj_baseline_veto", refData(8,1,1));
+        plots.h_jetveto_mjj_inc = bookHisto1D("jetveto_mjj_baseline_inc", refData(8,1,1));
+        plots.h_jetveto_dy_veto = bookHisto1D("jetveto_dy_baseline_veto", refData(9,1,1));
+        plots.h_jetveto_dy_inc = bookHisto1D("jetveto_dy_baseline_inc", refData(9,1,1));
 
-        plots.h_ptbaleff_mjj_veto = bookHisto1D("ptbaleff_mjj_baseline_veto", refData(1,1,3));
-        plots.h_ptbaleff_mjj_inc = bookHisto1D("ptbaleff_mjj_baseline_inc", refData(1,1,3));
-        plots.h_ptbaleff_dy_veto = bookHisto1D("ptbaleff_dy_baseline_veto", refData(1,2,3));
-        plots.h_ptbaleff_dy_inc = bookHisto1D("ptbaleff_dy_baseline_inc", refData(1,2,3));
+        plots.h_ptbaleff_mjj_veto = bookHisto1D("ptbaleff_mjj_baseline_veto", refData(12,1,1));
+        plots.h_ptbaleff_mjj_inc = bookHisto1D("ptbaleff_mjj_baseline_inc", refData(12,1,1));
+        plots.h_ptbaleff_dy_veto = bookHisto1D("ptbaleff_dy_baseline_veto", refData(13,1,1));
+        plots.h_ptbaleff_dy_inc = bookHisto1D("ptbaleff_dy_baseline_inc", refData(13,1,1));
 
-        plots.p_avgnjets_mjj = bookProfile1D(1,1,4);
-        plots.p_avgnjets_dy = bookProfile1D(1,2,4);
+        plots.p_avgnjets_mjj = bookProfile1D(10,1,1);
+        plots.p_avgnjets_dy = bookProfile1D(11,1,1);
       }
 
       if (phase_space=="highpt") {
-        plots.h_mjj = bookHisto1D(2, 1, 1);
-        plots.h_dy = bookHisto1D(2, 2, 1);
+        plots.h_mjj = bookHisto1D(14, 1, 1);
+        plots.h_dy = bookHisto1D(16, 1, 1);
 
-        plots.h_jetveto_mjj_veto = bookHisto1D("jetveto_mjj_highpt_veto", refData(2,1,2));
-        plots.h_jetveto_mjj_inc = bookHisto1D("jetveto_mjj_highpt_inc", refData(2,1,2));
-        plots.h_jetveto_dy_veto = bookHisto1D("jetveto_dy_highpt_veto", refData(2,2,2));
-        plots.h_jetveto_dy_inc = bookHisto1D("jetveto_dy_highpt_inc", refData(2,2,2));
+        plots.h_jetveto_mjj_veto = bookHisto1D("jetveto_mjj_highpt_veto", refData(18,1,1));
+        plots.h_jetveto_mjj_inc = bookHisto1D("jetveto_mjj_highpt_inc", refData(18,1,1));
+        plots.h_jetveto_dy_veto = bookHisto1D("jetveto_dy_highpt_veto", refData(19,1,1));
+        plots.h_jetveto_dy_inc = bookHisto1D("jetveto_dy_highpt_inc", refData(19,1,1));
 
-        plots.h_ptbaleff_mjj_veto = bookHisto1D("ptbaleff_mjj_highpt_veto", refData(2,1,3));
-        plots.h_ptbaleff_mjj_inc = bookHisto1D("ptbaleff_mjj_highpt_inc", refData(2,1,3));
-        plots.h_ptbaleff_dy_veto = bookHisto1D("ptbaleff_dy_highpt_veto", refData(2,2,3));
-        plots.h_ptbaleff_dy_inc = bookHisto1D("ptbaleff_dy_highpt_inc", refData(2,2,3));
+        plots.h_ptbaleff_mjj_veto = bookHisto1D("ptbaleff_mjj_highpt_veto", refData(22,1,1));
+        plots.h_ptbaleff_mjj_inc = bookHisto1D("ptbaleff_mjj_highpt_inc", refData(22,1,1));
+        plots.h_ptbaleff_dy_veto = bookHisto1D("ptbaleff_dy_highpt_veto", refData(23,1,1));
+        plots.h_ptbaleff_dy_inc = bookHisto1D("ptbaleff_dy_highpt_inc", refData(23,1,1));
 
-        plots.p_avgnjets_mjj = bookProfile1D(2,1,4);
-        plots.p_avgnjets_dy = bookProfile1D(2,2,4);
+        plots.p_avgnjets_mjj = bookProfile1D(20,1,1);
+        plots.p_avgnjets_dy = bookProfile1D(21,1,1);
       }
 
       if (phase_space=="search") {
-        plots.h_mjj = bookHisto1D(3,1,1);
-        plots.h_dy = bookHisto1D(3,2,1);
+        plots.h_mjj = bookHisto1D(2,1,1);
+        plots.h_dy = bookHisto1D(4,1,1);
       }
 
       if (phase_space=="control") {
-        plots.h_mjj = bookHisto1D(4,1,1);
-        plots.h_dy = bookHisto1D(4,2,1);
+        plots.h_mjj = bookHisto1D(15,1,1);
+        plots.h_dy = bookHisto1D(17,1,1);
       }
 
       if (phase_space=="highmass") {
-        plots.h_njets = bookHisto1D(5, 3, 1);
-        plots.h_dphijj = bookHisto1D(5, 4, 1);
-        plots.h_ptbal = bookHisto1D(5, 5, 1);
+        plots.h_njets = bookHisto1D(5, 1, 1);
+        plots.h_dphijj = bookHisto1D(7, 1, 1);
+        plots.h_ptbal = bookHisto1D(6, 1, 1);
       }
     }
 
@@ -353,25 +333,24 @@ namespace Rivet {
     }
 
     void finalizeEfficiencies(Plots& plots) {
-      int region_index = 0;
-      if (plots.label=="baseline") region_index = 1;
-      else if (plots.label=="highpt") region_index = 2;
-      else return;
 
-      if (plots.h_jetveto_mjj_veto && plots.h_jetveto_mjj_inc) divide(plots.h_jetveto_mjj_veto, plots.h_jetveto_mjj_inc, bookScatter2D(region_index, 1, 2));
-      getScatter2D(region_index, 1, 2)->addAnnotation("InclusiveSumWeights", plots.h_jetveto_mjj_inc->integral());
+      if (plots.label != "baseline" && plots.label != "highpt")  return;
+      size_t offset = plots.label == "baseline"? 0 : 10;
+
+      if (plots.h_jetveto_mjj_veto && plots.h_jetveto_mjj_inc) divide(plots.h_jetveto_mjj_veto, plots.h_jetveto_mjj_inc, bookScatter2D(8 + offset, 1, 2));
+      getScatter2D(8 + offset, 1, 2)->addAnnotation("InclusiveSumWeights", plots.h_jetveto_mjj_inc->integral());
       removeAnalysisObject(plots.h_jetveto_mjj_veto); removeAnalysisObject(plots.h_jetveto_mjj_inc);
 
-      if (plots.h_jetveto_dy_veto && plots.h_jetveto_dy_inc) divide(plots.h_jetveto_dy_veto, plots.h_jetveto_dy_inc, bookScatter2D(region_index, 2, 2));
-      getScatter2D(region_index, 2, 2)->addAnnotation("InclusiveSumWeights", plots.h_jetveto_dy_inc->integral());
+      if (plots.h_jetveto_dy_veto && plots.h_jetveto_dy_inc) divide(plots.h_jetveto_dy_veto, plots.h_jetveto_dy_inc, bookScatter2D(9 + offset, 2, 2));
+      getScatter2D(9 + offset, 2, 2)->addAnnotation("InclusiveSumWeights", plots.h_jetveto_dy_inc->integral());
       removeAnalysisObject(plots.h_jetveto_dy_veto); removeAnalysisObject(plots.h_jetveto_dy_inc);
 
-      if (plots.h_ptbaleff_mjj_veto && plots.h_ptbaleff_mjj_inc) divide(plots.h_ptbaleff_mjj_veto, plots.h_ptbaleff_mjj_inc, bookScatter2D(region_index, 1, 3));
-      getScatter2D(region_index, 1, 3)->addAnnotation("InclusiveSumWeights", plots.h_ptbaleff_mjj_inc->integral());
+      if (plots.h_ptbaleff_mjj_veto && plots.h_ptbaleff_mjj_inc) divide(plots.h_ptbaleff_mjj_veto, plots.h_ptbaleff_mjj_inc, bookScatter2D(12 + offset, 1, 3));
+      getScatter2D(12 + offset, 1, 3)->addAnnotation("InclusiveSumWeights", plots.h_ptbaleff_mjj_inc->integral());
       removeAnalysisObject(plots.h_ptbaleff_mjj_veto); removeAnalysisObject(plots.h_ptbaleff_mjj_inc);
 
-      if (plots.h_ptbaleff_dy_veto && plots.h_ptbaleff_dy_inc) divide(plots.h_ptbaleff_dy_veto, plots.h_ptbaleff_dy_inc, bookScatter2D(region_index, 2, 3));
-      getScatter2D(region_index, 2, 3)->addAnnotation("InclusiveSumWeights", plots.h_ptbaleff_dy_inc->integral());
+      if (plots.h_ptbaleff_dy_veto && plots.h_ptbaleff_dy_inc) divide(plots.h_ptbaleff_dy_veto, plots.h_ptbaleff_dy_inc, bookScatter2D(13 + offset, 2, 3));
+      getScatter2D(13 + offset, 2, 3)->addAnnotation("InclusiveSumWeights", plots.h_ptbaleff_dy_inc->integral());
       removeAnalysisObject(plots.h_ptbaleff_dy_veto); removeAnalysisObject(plots.h_ptbaleff_dy_inc);
     }
 

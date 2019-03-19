@@ -32,7 +32,7 @@ namespace Rivet {
     _particles = particles;
     _tags = tags;
     // if (_particles.empty()) {
-    //   foreach (const fastjet::PseudoJet pjc, _pseudojet.constituents()) {
+    //   for (const fastjet::PseudoJet pjc : _pseudojet.constituents()) {
     //     // If there is no attached user info, we can't create a meaningful particle, so skip
     //     if (!pjc.has_user_info<RivetFJInfo>()) continue;
     //     const RivetFJInfo& fjinfo = pjc.user_info<RivetFJInfo>();
@@ -60,7 +60,7 @@ namespace Rivet {
 
   bool Jet::containsParticle(const Particle& particle) const {
     const int barcode = particle.genParticle()->barcode();
-    foreach (const Particle& p, particles()) {
+    for (const Particle& p : particles()) {
       if (p.genParticle()->barcode() == barcode) return true;
     }
     return false;
@@ -68,7 +68,7 @@ namespace Rivet {
 
 
   bool Jet::containsParticleId(PdgId pid) const {
-    foreach (const Particle& p, particles()) {
+    for (const Particle& p : particles()) {
       if (p.pid() == pid) return true;
     }
     return false;
@@ -76,8 +76,8 @@ namespace Rivet {
 
 
   bool Jet::containsParticleId(const vector<PdgId>& pids) const {
-    foreach (const Particle& p, particles()) {
-      foreach (PdgId pid, pids) {
+    for (const Particle& p : particles()) {
+      for (PdgId pid : pids) {
         if (p.pid() == pid) return true;
       }
     }
@@ -99,7 +99,7 @@ namespace Rivet {
 
   double Jet::neutralEnergy() const {
     double e_neutral = 0.0;
-    foreach (const Particle& p, particles()) {
+    for (const Particle& p : particles()) {
       const PdgId pid = p.pid();
       if (PID::threeCharge(pid) == 0) {
         e_neutral += p.E();
@@ -111,7 +111,7 @@ namespace Rivet {
 
   double Jet::hadronicEnergy() const {
     double e_hadr = 0.0;
-    foreach (const Particle& p, particles()) {
+    for (const Particle& p : particles()) {
       const PdgId pid = p.pid();
       if (PID::isHadron(pid)) {
         e_hadr += p.E();
@@ -122,14 +122,14 @@ namespace Rivet {
 
 
   bool Jet::containsCharm(bool include_decay_products) const {
-    foreach (const Particle& p, particles()) {
+    for (const Particle& p : particles()) {
       const PdgId pid = p.pid();
       if (abs(pid) == PID::CQUARK) return true;
       if (PID::isHadron(pid) && PID::hasCharm(pid)) return true;
       if (include_decay_products) {
         const HepMC::GenVertex* gv = p.genParticle()->production_vertex();
         if (gv) {
-          foreach (const GenParticle* pi, Rivet::particles(gv, HepMC::ancestors)) {
+          for (const GenParticle* pi : Rivet::particles(gv, HepMC::ancestors)) {
             const PdgId pid2 = pi->pdg_id();
             if (PID::isHadron(pid2) && PID::hasCharm(pid2)) return true;
           }
@@ -141,14 +141,14 @@ namespace Rivet {
 
 
   bool Jet::containsBottom(bool include_decay_products) const {
-    foreach (const Particle& p, particles()) {
+    for (const Particle& p : particles()) {
       const PdgId pid = p.pid();
       if (abs(pid) == PID::BQUARK) return true;
       if (PID::isHadron(pid) && PID::hasBottom(pid)) return true;
       if (include_decay_products) {
         const HepMC::GenVertex* gv = p.genParticle()->production_vertex();
         if (gv) {
-          foreach (const GenParticle* pi, Rivet::particles(gv, HepMC::ancestors)) {
+          for (const GenParticle* pi : Rivet::particles(gv, HepMC::ancestors)) {
             const PdgId pid2 = pi->pdg_id();
             if (PID::isHadron(pid2) && PID::hasBottom(pid2)) return true;
           }
@@ -187,6 +187,33 @@ namespace Rivet {
     }
     return rtn;
   }
+
+
+  //////////////////////
+
+
+  // DISABLED UNTIL VANILLA CC7 COMPATIBILITY NOT NEEDED
+
+  // /// Jets copy constructor from vector<Jet>
+  // Jets::Jets(const std::vector<Jet>& vjs) : base(vjs) {}
+
+  // /// Jets -> FourMomenta cast/conversion operator
+  // Jets::operator FourMomenta () const {
+  //   // FourMomenta rtn(this->begin(), this->end());
+  //   FourMomenta rtn; rtn.reserve(this->size());
+  //   for (size_t i = 0; i < this->size(); ++i) rtn.push_back((*this)[i]);
+  //   return rtn;
+  // }
+
+  // /// Jets concatenation operator
+  // Jets operator + (const Jets& a, const Jets& b) {
+  //   Jets rtn(a);
+  //   rtn += b;
+  //   return rtn;
+  // }
+
+
+  //////////////////////
 
 
   /// Allow a Jet to be passed to an ostream.

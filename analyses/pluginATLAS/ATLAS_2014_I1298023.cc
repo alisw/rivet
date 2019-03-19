@@ -98,10 +98,10 @@ namespace Rivet {
       if ( dijet.mass() <= 500*GeV )  vetoEvent;
 
       // inclusive region
-      _hist->fill(0.5, weight);
+      _hist->fill(1.0, weight);
 
       // VBS region
-      if ( deltaRap(jets[0], jets[1]) > 2.4 )  _hist->fill(1.5, weight);
+      if ( deltaRap(jets[0], jets[1]) > 2.4 )  _hist->fill(2.0, weight);
     }
 
     /// Normalise histograms etc., after the run

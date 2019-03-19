@@ -15,11 +15,11 @@ namespace Rivet {
   public:
 
     /// Constructor
-    ATLAS_2017_I1609448(string name="ATLAS_2017_I1609448")
-      : Analysis(name)
-    {
-      _mode = 0; // using Z -> nunu channel by default
+    ATLAS_2017_I1609448(const string name="ATLAS_2017_I1609448", size_t channel = 0,
+                        const string ref_data="ATLAS_2017_I1609448") : Analysis(name) {
+      _mode = channel; // using Z -> nunu channel by default
       setNeedsCrossSection(true);
+      setRefDataName(ref_data);
     }
 
 
@@ -250,31 +250,19 @@ namespace Rivet {
   /// ATLAS pTmiss+jets specialisation for Znunu channel
   class ATLAS_2017_I1609448_Znunu : public ATLAS_2017_I1609448 {
   public:
-    ATLAS_2017_I1609448_Znunu()
-      : ATLAS_2017_I1609448("ATLAS_2017_I1609448_Znunu")
-    {
-      _mode = 0;
-    }
+    ATLAS_2017_I1609448_Znunu() : ATLAS_2017_I1609448("ATLAS_2017_I1609448_Znunu", 0) { }
   };
 
   /// ATLAS pTmiss+jets specialisation for Zmumu channel
   class ATLAS_2017_I1609448_Zmumu : public ATLAS_2017_I1609448 {
   public:
-    ATLAS_2017_I1609448_Zmumu()
-      : ATLAS_2017_I1609448("ATLAS_2017_I1609448_Zmumu")
-    {
-      _mode = 1;
-    }
+    ATLAS_2017_I1609448_Zmumu() : ATLAS_2017_I1609448("ATLAS_2017_I1609448_Zmumu", 1) { }
   };
 
   /// ATLAS pTmiss+jets specialisation for Zee channel
   class ATLAS_2017_I1609448_Zee : public ATLAS_2017_I1609448 {
   public:
-    ATLAS_2017_I1609448_Zee()
-      : ATLAS_2017_I1609448("ATLAS_2017_I1609448_Zee")
-    {
-      _mode = 2;
-    }
+    ATLAS_2017_I1609448_Zee() : ATLAS_2017_I1609448("ATLAS_2017_I1609448_Zee", 2) { }
   };
 
 

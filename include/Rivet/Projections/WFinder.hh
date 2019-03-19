@@ -101,20 +101,20 @@ namespace Rivet {
 
     /// @brief Access to the Ws' constituent clustered leptons
     /// @note Either size 0 if no boson was found or 1 if one boson was found
-    const Particles constituentLeptons() const;
+    const Particles& constituentLeptons() const { return _leptons; }
     /// brief Access to the W's constituent clustered lepton (assuming it exists)
     /// @todo C++17 std::optional...
-    const Particle constituentLepton() const { return constituentLeptons().front(); }
+    const Particle& constituentLepton() const { return _leptons.front(); }
 
 
     /// Access to the Ws' constituent neutrinos
     ///
     /// @note Either size 0 if no boson was found or 1 if one boson was found
     /// @note The neutrino can't be perfecly reconstructed -- this is a pseudo-nu from the MET.
-    const Particles constituentNeutrinos() const;
+    const Particles& constituentNeutrinos() const { return _neutrinos; }
     /// Access to the W's constituent neutrino (assuming it exists)
     /// @note The neutrino can't be perfecly reconstructed -- this is a pseudo-nu from the MET.
-    const Particle constituentNeutrino() const { return constituentNeutrinos().front(); }
+    const Particle& constituentNeutrino() const { return _neutrinos.front(); }
 
 
     /// Access to the particles other than the W leptons and clustered photons
@@ -166,6 +166,9 @@ namespace Rivet {
 
     /// Charged lepton flavour
     PdgId _pid;
+
+    /// Result caches. Will be filled by project()
+    Particles _leptons, _neutrinos;
 
   };
 

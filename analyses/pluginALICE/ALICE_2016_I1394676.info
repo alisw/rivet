@@ -1,0 +1,43 @@
+Name: ALICE_2016_I1394676
+Year: 2016
+Summary: Charged particle production as function of centrality, peripheral events only, in PbPb collisions at 2.76 TeV.
+Experiment: ALICE
+Collider: LHC
+InspireID: 1394676
+Status: UNVALIDATED
+Authors:
+ - Christian Bierlich <christian.bierlich@thep.lu.se>
+References:
+- Phys.Lett.B754(2016)373-385
+- DOI:10.1016/j.physletb.2015.12.082"
+- arXiv:1509.07299
+RunInfo: PbPb minimum bias events. The analysis holds the Primary Particle definition, so don't limit decays on generator level. 
+NeedCrossSection: no
+Beams: [1000822080, 1000822080]
+# This is _total_ energy of beams, so this becomes 208*2760=574080
+Energies: [574080]
+Options:
+ - cent=REF,GEN,IMP,USR
+Description:
+  'Charged particle pseudorapidity density in centrality classes 30-40, 40-50, 50-60, 60-70, 70-80, 80-90. Measurements cover a wide $\eta$ range from -3.5 to 5. Centrality classes refer to forward V0 spectrum, as also measured by ALICE, can be modified to use a user definition instead.'
+BibKey: Adam:2015kda
+BibTeX: '@article{Adam:2015kda,
+      author         = "Adam, Jaroslav and others",
+      title          = "{Centrality evolution of the charged-particle
+                        pseudorapidity density over a broad pseudorapidity range
+                        in Pb-Pb collisions at $\sqrt{s_{\rm NN}} =$ 2.76 TeV}",
+      collaboration  = "ALICE",
+      journal        = "Phys. Lett.",
+      volume         = "B754",
+      year           = "2016",
+      pages          = "373-385",
+      doi            = "10.1016/j.physletb.2015.12.082",
+      eprint         = "1509.07299",
+      archivePrefix  = "arXiv",
+      primaryClass   = "nucl-ex",
+      reportNumber   = "CERN-PH-EP-2015-257, ALICE-PUBLIC-2015-010",
+      SLACcitation   = "%%CITATION = ARXIV:1509.07299;%%"
+}'
+ToDo:
+ - Implement the analysis, test it, remove this ToDo, and mark as VALIDATED :-)
+

@@ -64,7 +64,7 @@ stygroup.add_option("-s", "--single", dest="SINGLE", action="store_true",
                     default=False, help="display plots on single webpage.")
 stygroup.add_option("--no-ratio", dest="SHOW_RATIO", action="store_false",
                     default=True, help="don't draw a ratio plot under each main plot.")
-stygroup.add_option("--errs", "--mc-errs", dest="MC_ERRS", action="store_true",
+stygroup.add_option("--errs", "--mcerrs", "--mc-errs", dest="MC_ERRS", action="store_true",
                     default=False, help="plot error bars.")
 stygroup.add_option("--offline", dest="OFFLINE", action="store_true",
                     default=False, help="generate HTML that does not use external URLs.")
@@ -166,13 +166,13 @@ for yodafile in yodafiles:
             continue
 
         ## We don't plot data objects with path components hidden by an underscore prefix
-        if aop.istmp():
+        if aop.istmp() or aop.israw():
             continue
 
         ## Identify analysis/histo name parts
         analysis = "ANALYSIS"
         if aop.basepathparts(keepref=False):
-            analysis = aop.basepathparts(keepref=False)[0] #< TODO: for compatibility with rivet-cmphistos... generalise?
+            analysis = rivet.stripOptions(aop.basepathparts(keepref=False)[0]) #< TODO: for compatibility with rivet-cmphistos... generalise?
             #analysis = "_".join(aop.dirnameparts(keepref=False)[:-1]) #< TODO: would this be nicer? Currently incompatible with rivet-cmphistos
 
         ## Optionally veto on analysis name pattern matching
@@ -361,14 +361,14 @@ if not opts.DRY_RUN:
                 continue
 
         if opts.SINGLE:
-            index.write('\n<h3 style="clear:left; padding-top:2em;"><a name="%s">%s</a></h3>\n' % (analysis, summary))
+            index.write('\n<h3 style="clear:left; padding-top:2em;"><a name="%s">%s</a></h3>\n' % (analysis.encode("utf-8"), summary.encode("utf-8")))
         else:
-            index.write('\n<h3><a href="%s/index.html" style="text-decoration:none;">%s</a></h3>\n' % (analysis, summary))
+            index.write('\n<h3><a href="%s/index.html" style="text-decoration:none;">%s</a></h3>\n' % (analysis.encode("utf-8"), summary.encode("utf-8")))
 
         reflist = []
         if inspireid:
             reflist.append('<a href="http://inspire-hep.net/record/%s">Inspire</a>' % inspireid)
-            reflist.append('<a href="http://hepdata.cedar.ac.uk/view/ins%s">HepData</a>' % inspireid)
+            reflist.append('<a href="http://hepdata.net/record/ins%s">HepData</a>' % inspireid)
         elif spiresid:
         # elif ana.spiresId():
             reflist.append('<a href="http://inspire-hep.net/search?p=find+key+%s">Inspire</a>' % spiresid)
@@ -380,7 +380,7 @@ if not opts.DRY_RUN:
             try:
                 index.write('<p style="font-size:smaller;">%s</p>\n' % description)
             except UnicodeEncodeError as ue:
-                    print("Unicode error in analysis description for " + analysis + ": " + str(ue))
+                print("Unicode error in analysis description for " + analysis + ": " + str(ue))
 
         anapath = os.path.join(opts.OUTPUTDIR, analysis)
         if not opts.SINGLE:

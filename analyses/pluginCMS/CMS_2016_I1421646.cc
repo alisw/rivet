@@ -33,9 +33,10 @@ namespace Rivet {
     /// Per-event analysis
     void analyze(const Event & event) {
 
-      const Jets& jets = apply<JetAlg>(event, "antikT").jetsByPt(Cuts::absrap < 2.5 && Cuts::pT > 100*GeV);
+      const Jets& jets = apply<JetAlg>(event, "antikT").jetsByPt(Cuts::absrap < 5.0 && Cuts::pT > 100*GeV);
       if (jets.size() < 2) vetoEvent;
       if (jets[0].pT() < 200*GeV) vetoEvent;
+      if (jets[0].absrap() > 2.5 || jets[1].absrap() > 2.5) vetoEvent;
 
       const double dphi = deltaPhi(jets[0].phi(), jets[1].phi());
       _h_deltaPhi.fill(jets[0].pT(), dphi, event.weight());

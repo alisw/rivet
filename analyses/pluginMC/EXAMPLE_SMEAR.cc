@@ -119,7 +119,11 @@ namespace Rivet {
       const Vector3 met2 = apply<SmearedMET>(event, "MET2").vectorEt();
       MSG_DEBUG("MET = " << met0.mod()/GeV << ", " << met1.mod()/GeV << ", " << met2.mod()/GeV << " GeV");
       _h_met_true->fill(met0.mod()/GeV, weight);
-      _h_met_reco->fill(met2.mod()/GeV, weight);
+      _h_met_reco->fill(met1.mod()/GeV, weight);
+      if (met0.perp() > 0 && met1.perp() > 0 && deltaPhi(met0, met1) > 0.1) {
+        MSG_WARNING("Large MET phi change: " << met0.phi()  << " -> " << met1.phi() <<
+                    "; dphi = " << deltaPhi(met0, met1));
+      }
 
       const Jets jets0 = apply<JetAlg>(event, "Jets0").jetsByPt(Cuts::pT > 10*GeV);
       const Jets jets1 = apply<JetAlg>(event, "Jets1").jetsByPt(Cuts::pT > 10*GeV);
@@ -127,6 +131,12 @@ namespace Rivet {
       const Jets jets3 = apply<JetAlg>(event, "Jets3").jetsByPt(Cuts::pT > 10*GeV);
       MSG_DEBUG("Numbers of jets = " << jets0.size() << " true; "
                << jets1.size() << ", " << jets2.size() << ", " << jets3.size());
+      if (!jets0.empty() && !jets2.empty() && deltaPhi(jets0[0], jets2[0]) > 0.1) {
+        MSG_DEBUG("Large jet1 phi change (could be a different truth-jet): " <<
+                  jets0[0].phi() << " -> " << jets2[0].phi() <<
+                  "; dphi = " << deltaPhi(jets0[0], jets2[0]) <<
+                  "; pT = " << jets0[0].pT()/GeV << " -> " << jets2[0].pT()/GeV);
+      }
       _h_nj_true->fill(jets0.size(), weight);
       _h_nj_reco->fill(jets2.size(), weight);
       if (!jets0.empty()) {

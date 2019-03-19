@@ -40,10 +40,11 @@ namespace Rivet {
     //@}
 
 
-  protected:
-
     /// Apply the projection to the event.
     virtual void project(const Event& e);
+
+    // /// Compare projections.
+    // int compare(const Projection& p) const;
 
   };
 

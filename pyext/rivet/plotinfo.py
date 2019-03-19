@@ -11,6 +11,7 @@ class PlotParser(object):
     pat_end_block =   re.compile(r'^(#*\s*)?END (\w+)')
     pat_comment = re.compile(r'^\s*#|^\s*$')
     pat_property = re.compile(r'^(\w+?)\s*=\s*(.*)$')
+    pat_property_opt = re.compile('^ReplaceOption\[(\w+=\w+)\]=(.*)$')
     pat_path_property  = re.compile(r'^(\S+?)::(\w+?)=(.*)$')
     pat_paths = {}
 
@@ -130,6 +131,10 @@ class PlotParser(object):
                             #print(e)
                             value = oldval #< roll back escapes if it goes wrong
                     ret[section][prop] = texpand(value) #< expand TeX shorthands
+                vm = self.pat_property_opt.match(line)
+                if vm:
+                    prop, value = vm.group(1,2)
+                    ret[section]['ReplaceOption[' + prop + ']'] = texpand(value)
             elif section in ['SPECIAL']:
                 ret[section] += line
         f.close()

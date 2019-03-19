@@ -15,6 +15,7 @@ RunInfo:
 NumEvents: 25000 for BSM signals
 Beams: [p+, p+]
 Energies: [7000]
+Luminosity_fb: 2.06
 NeedCrossSection: yes
 Description:
   'Search for SUSY using events with 3 leptons in association with
@@ -25,6 +26,7 @@ Description:
    the two signal regions,
    correctly normalized to an integrated luminosity 2.06 fb$^{-1}$,
    are calculated.'
+Keywords: [search, bsm, 3lepton, multilepton, met]
 BibKey:  Aad:2012I1112263
 BibTeX: '@article{Aad:2012I1112263,
       author         = "Aad, Georges and others",

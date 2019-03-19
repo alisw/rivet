@@ -16,11 +16,13 @@ RunInfo:
 NumEvents: 10000 for BSM signals
 Beams: [p+, p+]
 Energies: [7000]
+Luminosity_fb: 1.04
 Description:
   '0-lepton search for squarks and gluinos by ATLAS at 7 TeV
   with an integrated luminosity of $1.04\,\mathrm{fb}^{-1}$.
   Event counts in five signal regions are implemented as one-bin
   histograms.'
+Keywords: [search, bsm, 0lepton, jets, met]
 BibKey: Aad:2011ib
 BibTeX: '@article{Aad:2011ib,
       author         = "Aad, Georges and others",

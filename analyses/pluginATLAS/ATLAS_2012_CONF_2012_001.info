@@ -14,6 +14,7 @@ RunInfo:
 NumEvents: 25000 for BSM signals
 Beams: [p+, p+]
 Energies: [7000]
+Luminosity_fb: 2.06
 NeedCrossSection: yes
 Description:
   'Search for SUSY using events with 4 or more leptons in association with
@@ -24,3 +25,4 @@ Description:
    the two signal regions,
    correctly normalized to an integrated luminosity 2.06 fb$^{-1}$,
    are calculated.'
+Keywords: [search, bsm, susy, 4lepton, multilepton, met]

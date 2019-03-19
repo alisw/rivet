@@ -27,8 +27,8 @@ Description:
   be specified directly with the plugins ATLAS_2014_I1312627_EL and ATLAS_2014_I1312627_MU, respectively.
   N.B. When running on multiple files, the asymmetry might have to be reconstructed in a post-processing
   step. To that end, the necessary Histo1D objects are written out as well. The asymmetry is a Scatter2D
-  objects ending in y01 and is constructed from the Histo1D objects (ending in y02 and y03) in the
-  following way: y01 = (y02 - y03) / (y02 + y03)'
+  object and is constructed from auxiliary Histo1D objects retained in the output file. The asymmetry is
+  constructed in the following way: asym = (pos - neg) / (pos + neg)'
 BibKey: Aad:2015uau
 BibTeX: '@article{Aad:2015uau,
       author         = "Aad, Georges and others",

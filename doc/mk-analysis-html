@@ -14,7 +14,7 @@ if not args:
 else:
     OUTFILE = args[0]+".html"
     OUTDIR = args[0]
-print "Using output file name '%s' and directory '%s'" % (OUTFILE, OUTDIR)
+print("Using output file name '%s' and directory '%s'" % (OUTFILE, OUTDIR))
 
 
 ## Add the rivet Python module build dir(s) to the Python module path, then import
@@ -28,7 +28,7 @@ import rivet
 from glob import glob
 dirpatt = os.path.join(os.getcwd(), "..", "analyses", "plugin*")
 for d in glob(dirpatt):
-    #print d
+    #print(d)
     rivet.addAnalysisDataPath(os.path.abspath(d))
 
 
@@ -48,14 +48,9 @@ head = '''\
     /* h2 { margin-left:-1em; margin-bottom:1.5em; } */
     /* h3 { color:#349; margin-top:2em; } */
   </style>
-  <script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {inlineMath: [["$","$"]]}
-  });
-  </script>
-  <script type="text/javascript"
-    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-  </script>
+  <meta charset="utf-8">
+  <script type="text/x-mathjax-config">MathJax.Hub.Config({ tex2jax: {inlineMath: [['$','$']]}, inTabOrder: false });</script>
+  <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </head>
 <body>
   <h2>Rivet analyses reference</h2>
@@ -72,13 +67,13 @@ if os.path.exists(OUTDIR) and not os.path.realpath(OUTDIR) == os.getcwd():
 try:
     os.makedirs(OUTDIR)
 except:
-    print "Error: failed to make new directory '%s'" % OUTDIR
+    print("Error: failed to make new directory '%s'" % OUTDIR)
     sys.exit(1)
 
 ## Find analysis source files
 ccpatt = os.path.join(os.getcwd(), "..", "analyses", "plugin*", "*.cc")
 ccfiles = glob(ccpatt)
-#print ccfiles
+#print(ccfiles)
 
 summaries = {}
 pages = []
@@ -201,10 +196,12 @@ for aname in sorted(list(all_analyses)):
                 page += "<kbd>" + src.replace("\n", "<br/>\n") + "</kbd>"
 
     # Write out HTML analysis file
-    #print aname
+    #print(aname)
     ANAFILE = os.path.join(OUTDIR, aname+'.html')
-    f = open(ANAFILE, "w")
-    outstr = unicode(head + page + foot)
+    f = open(ANAFILE, "wb")
+    outstr = head + page + foot
+    if type(u'') != str:
+        outstr = unicode(outstr)
     f.write(outstr.encode(errors="ignore"))
     f.close()
 
@@ -220,7 +217,7 @@ toc += "</ul>\n"
 outstr = head + toc + foot
 
 ## Index file in dir
-f = open(os.path.join(OUTDIR, "index.html"), "w")
+f = open(os.path.join(OUTDIR, "index.html"), "wb")
 f.write(outstr.encode(errors="ignore"))
 f.close()
 
@@ -229,6 +226,6 @@ outstr = outstr.replace("../%s" % OUTDIR, OUTDIR) #< correct link depth
 if OUTFILE == "-":
     sys.stdout.write(outstr.encode(errors="ignore"))
 else:
-    f = open(OUTFILE, "w")
+    f = open(OUTFILE, "wb")
     f.write(outstr.encode(errors="ignore"))
     f.close()
