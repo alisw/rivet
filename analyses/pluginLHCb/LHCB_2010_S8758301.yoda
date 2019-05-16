@@ -1,10 +1,13 @@
 BEGIN YODA_SCATTER2D_V2 /REF/LHCB_2010_S8758301/d01-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -80.0, up: 80.0}, sys_1: {dn: -38.0, up: 38.0}, sys_2: {dn: -90.0, up: 90.0}}, 1: {stat: {dn: -133.0, up: 133.0}, sys_1: {dn: -136.0, up: 136.0}, sys_2: {dn: -183.0, up: 183.0}}, 2: {stat: {dn: -63.0, up: 63.0}, sys_1: {dn: -66.0, up: 66.0}, sys_2: {dn: -97.0, up: 97.0}}, 3: {stat: {dn: -32.0, up: 32.0}, sys_1: {dn: -18.0, up: 18.0}, sys_2: {dn: -64.0, up: 64.0}}, 4: {stat: {dn: -20.0, up: 20.0}, sys_1: {dn: -4.0, up: 4.0}, sys_2: {dn: -37.0, up: 37.0}}, 5: {stat: {dn: -11.0, up: 11.0}, sys_1: {dn: -4.0, up: 4.0}, sys_2: {dn: -18.0, up: 18.0}}, 6: {stat: {dn: -10.0, up: 10.0}, sys_1: {dn: -3.0, up: 3.0}, sys_2: {dn: -14.0, up: 14.0}}, 7: {stat: {dn: -7.0, up: 7.0}, sys_1: {dn: -2.0, up: 2.0}, sys_2: {dn: -7.0, up: 7.0}}}
+
 IsRef: 1
 Path: /REF/LHCB_2010_S8758301/d01-x01-y01
-Title: ~
+Title: doi:10.17182/hepdata.55676.v1/t1
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 1.000000e-01	1.000000e-01	1.000000e-01	2.940000e+02	1.262696e+02	1.262696e+02
 3.000000e-01	1.000000e-01	1.000000e-01	6.490000e+02	2.639583e+02	2.639583e+02
 5.000000e-01	1.000000e-01	1.000000e-01	6.180000e+02	1.331691e+02	1.331691e+02
@@ -14,14 +17,16 @@ Type: Scatter2D
 1.300000e+00	1.000000e-01	1.000000e-01	8.500000e+01	1.746425e+01	1.746425e+01
 1.500000e+00	1.000000e-01	1.000000e-01	4.600000e+01	1.009950e+01	1.009950e+01
 END YODA_SCATTER2D_V2
-
 BEGIN YODA_SCATTER2D_V2 /REF/LHCB_2010_S8758301/d01-x01-y02
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -43.0, up: 43.0}, sys_1: {dn: -44.0, up: 44.0}, sys_2: {dn: -72.0, up: 72.0}}, 1: {stat: {dn: -42.0, up: 42.0}, sys_1: {dn: -22.0, up: 22.0}, sys_2: {dn: -101.0, up: 101.0}}, 2: {stat: {dn: -30.0, up: 30.0}, sys_1: {dn: -12.0, up: 12.0}, sys_2: {dn: -86.0, up: 86.0}}, 3: {stat: {dn: -21.0, up: 21.0}, sys_1: {dn: -9.0, up: 9.0}, sys_2: {dn: -59.0, up: 59.0}}, 4: {stat: {dn: -14.0, up: 14.0}, sys_1: {dn: -6.0, up: 6.0}, sys_2: {dn: -29.0, up: 29.0}}, 5: {stat: {dn: -11.0, up: 11.0}, sys_1: {dn: -3.0, up: 3.0}, sys_2: {dn: -22.0, up: 22.0}}, 6: {stat: {dn: -8.0, up: 8.0}, sys_1: {dn: -2.0, up: 2.0}, sys_2: {dn: -11.0, up: 11.0}}, 7: {stat: {dn: -6.0, up: 6.0}, sys_1: {dn: -3.0, up: 3.0}, sys_2: {dn: -8.0, up: 8.0}}}
+
 IsRef: 1
 Path: /REF/LHCB_2010_S8758301/d01-x01-y02
-Title: ~
+Title: doi:10.17182/hepdata.55676.v1/t1
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 1.000000e-01	1.000000e-01	1.000000e-01	3.160000e+02	9.470480e+01	9.470480e+01
 3.000000e-01	1.000000e-01	1.000000e-01	5.620000e+02	1.115751e+02	1.115751e+02
 5.000000e-01	1.000000e-01	1.000000e-01	5.340000e+02	9.186947e+01	9.186947e+01
@@ -31,14 +36,16 @@ Type: Scatter2D
 1.300000e+00	1.000000e-01	1.000000e-01	7.000000e+01	1.374773e+01	1.374773e+01
 1.500000e+00	1.000000e-01	1.000000e-01	4.900000e+01	1.044031e+01	1.044031e+01
 END YODA_SCATTER2D_V2
-
 BEGIN YODA_SCATTER2D_V2 /REF/LHCB_2010_S8758301/d01-x01-y03
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -39.0, up: 39.0}, sys_1: {dn: -39.0, up: 39.0}, sys_2: {dn: -38.0, up: 38.0}}, 1: {stat: {dn: -42.0, up: 42.0}, sys_1: {dn: -25.0, up: 25.0}, sys_2: {dn: -114.0, up: 114.0}}, 2: {stat: {dn: -26.0, up: 26.0}, sys_1: {dn: -14.0, up: 14.0}, sys_2: {dn: -77.0, up: 77.0}}, 3: {stat: {dn: -20.0, up: 20.0}, sys_1: {dn: -9.0, up: 9.0}, sys_2: {dn: -51.0, up: 51.0}}, 4: {stat: {dn: -16.0, up: 16.0}, sys_1: {dn: -6.0, up: 6.0}, sys_2: {dn: -33.0, up: 33.0}}, 5: {stat: {dn: -12.0, up: 12.0}, sys_1: {dn: -5.0, up: 5.0}, sys_2: {dn: -17.0, up: 17.0}}, 6: {stat: {dn: -9.0, up: 9.0}, sys_1: {dn: -3.0, up: 3.0}, sys_2: {dn: -6.0, up: 6.0}}, 7: {stat: {dn: -6.0, up: 6.0}, sys_1: {dn: -2.0, up: 2.0}, sys_2: {dn: -4.0, up: 4.0}}}
+
 IsRef: 1
 Path: /REF/LHCB_2010_S8758301/d01-x01-y03
-Title: ~
+Title: doi:10.17182/hepdata.55676.v1/t1
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 1.000000e-01	1.000000e-01	1.000000e-01	1.960000e+02	6.697761e+01	6.697761e+01
 3.000000e-01	1.000000e-01	1.000000e-01	5.710000e+02	1.240363e+02	1.240363e+02
 5.000000e-01	1.000000e-01	1.000000e-01	4.770000e+02	8.246818e+01	8.246818e+01
@@ -48,14 +55,16 @@ Type: Scatter2D
 1.300000e+00	1.000000e-01	1.000000e-01	3.500000e+01	1.122497e+01	1.122497e+01
 1.500000e+00	1.000000e-01	1.000000e-01	2.300000e+01	7.483315e+00	7.483315e+00
 END YODA_SCATTER2D_V2
-
 BEGIN YODA_SCATTER2D_V2 /REF/LHCB_2010_S8758301/d02-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.803, up: 0.803}, sys: {dn: -0.976, up: 0.976}}, 1: {stat: {dn: -1.328, up: 1.328}, sys: {dn: -2.277, up: 2.277}}, 2: {stat: {dn: -0.631, up: 0.631}, sys: {dn: -1.18, up: 1.18}}, 3: {stat: {dn: -0.318, up: 0.318}, sys: {dn: -0.666, up: 0.666}}, 4: {stat: {dn: -0.199, up: 0.199}, sys: {dn: -0.377, up: 0.377}}, 5: {stat: {dn: -0.112, up: 0.112}, sys: {dn: -0.187, up: 0.187}}, 6: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -0.14, up: 0.14}}, 7: {stat: {dn: -0.066, up: 0.066}, sys: {dn: -0.078, up: 0.078}}}
+
 IsRef: 1
 Path: /REF/LHCB_2010_S8758301/d02-x01-y01
-Title: ~
+Title: doi:10.17182/hepdata.55676.v1/t2
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 1.000000e-01	1.000000e-01	1.000000e-01	2.935000e+00	1.263877e+00	1.263877e+00
 3.000000e-01	1.000000e-01	1.000000e-01	6.485000e+00	2.635965e+00	2.635965e+00
 5.000000e-01	1.000000e-01	1.000000e-01	6.178000e+00	1.338118e+00	1.338118e+00
@@ -65,14 +74,16 @@ Type: Scatter2D
 1.300000e+00	1.000000e-01	1.000000e-01	8.510000e-01	1.720465e-01	1.720465e-01
 1.500000e+00	1.000000e-01	1.000000e-01	4.620000e-01	1.021763e-01	1.021763e-01
 END YODA_SCATTER2D_V2
-
 BEGIN YODA_SCATTER2D_V2 /REF/LHCB_2010_S8758301/d02-x01-y02
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.434, up: 0.434}, sys: {dn: -0.845, up: 0.845}}, 1: {stat: {dn: -0.425, up: 0.425}, sys: {dn: -1.036, up: 1.036}}, 2: {stat: {dn: -0.299, up: 0.299}, sys: {dn: -0.864, up: 0.864}}, 3: {stat: {dn: -0.215, up: 0.215}, sys: {dn: -0.601, up: 0.601}}, 4: {stat: {dn: -0.138, up: 0.138}, sys: {dn: -0.299, up: 0.299}}, 5: {stat: {dn: -0.11, up: 0.11}, sys: {dn: -0.221, up: 0.221}}, 6: {stat: {dn: -0.078, up: 0.078}, sys: {dn: -0.114, up: 0.114}}, 7: {stat: {dn: -0.062, up: 0.062}, sys: {dn: -0.083, up: 0.083}}}
+
 IsRef: 1
 Path: /REF/LHCB_2010_S8758301/d02-x01-y02
-Title: ~
+Title: doi:10.17182/hepdata.55676.v1/t2
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 1.000000e-01	1.000000e-01	1.000000e-01	3.165000e+00	9.499374e-01	9.499374e-01
 3.000000e-01	1.000000e-01	1.000000e-01	5.619000e+00	1.119786e+00	1.119786e+00
 5.000000e-01	1.000000e-01	1.000000e-01	5.335000e+00	9.142740e-01	9.142740e-01
@@ -82,14 +93,16 @@ Type: Scatter2D
 1.300000e+00	1.000000e-01	1.000000e-01	6.990000e-01	1.381304e-01	1.381304e-01
 1.500000e+00	1.000000e-01	1.000000e-01	4.910000e-01	1.036002e-01	1.036002e-01
 END YODA_SCATTER2D_V2
-
 BEGIN YODA_SCATTER2D_V2 /REF/LHCB_2010_S8758301/d02-x01-y03
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.393, up: 0.393}, sys: {dn: -0.545, up: 0.545}}, 1: {stat: {dn: -0.416, up: 0.416}, sys: {dn: -1.164, up: 1.164}}, 2: {stat: {dn: -0.259, up: 0.259}, sys: {dn: -0.778, up: 0.778}}, 3: {stat: {dn: -0.204, up: 0.204}, sys: {dn: -0.523, up: 0.523}}, 4: {stat: {dn: -0.157, up: 0.157}, sys: {dn: -0.333, up: 0.333}}, 5: {stat: {dn: -0.116, up: 0.116}, sys: {dn: -0.18, up: 0.18}}, 6: {stat: {dn: -0.087, up: 0.087}, sys: {dn: -0.061, up: 0.061}}, 7: {stat: {dn: -0.059, up: 0.059}, sys: {dn: -0.043, up: 0.043}}}
+
 IsRef: 1
 Path: /REF/LHCB_2010_S8758301/d02-x01-y03
-Title: ~
+Title: doi:10.17182/hepdata.55676.v1/t2
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 1.000000e-01	1.000000e-01	1.000000e-01	1.960000e+00	6.719181e-01	6.719181e-01
 3.000000e-01	1.000000e-01	1.000000e-01	5.710000e+00	1.236104e+00	1.236104e+00
 5.000000e-01	1.000000e-01	1.000000e-01	4.772000e+00	8.199787e-01	8.199787e-01
@@ -99,14 +112,16 @@ Type: Scatter2D
 1.300000e+00	1.000000e-01	1.000000e-01	3.460000e-01	1.062544e-01	1.062544e-01
 1.500000e+00	1.000000e-01	1.000000e-01	2.340000e-01	7.300685e-02	7.300685e-02
 END YODA_SCATTER2D_V2
-
 BEGIN YODA_SCATTER2D_V2 /REF/LHCB_2010_S8758301/d03-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.331, up: 0.331}, sys: {dn: -0.703, up: 0.703}}, 1: {stat: {dn: -0.485, up: 0.485}, sys: {dn: -1.387, up: 1.387}}, 2: {stat: {dn: -0.248, up: 0.248}, sys: {dn: -0.895, up: 0.895}}, 3: {stat: {dn: -0.145, up: 0.145}, sys: {dn: -0.587, up: 0.587}}, 4: {stat: {dn: -0.096, up: 0.096}, sys: {dn: -0.333, up: 0.333}}, 5: {stat: {dn: -0.065, up: 0.065}, sys: {dn: -0.192, up: 0.192}}, 6: {stat: {dn: -0.051, up: 0.051}, sys: {dn: -0.102, up: 0.102}}, 7: {stat: {dn: -0.036, up: 0.036}, sys: {dn: -0.065, up: 0.065}}}
+
 IsRef: 1
 Path: /REF/LHCB_2010_S8758301/d03-x01-y01
-Title: ~
+Title: doi:10.17182/hepdata.55676.v1/t3
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 1.000000e-01	1.000000e-01	1.000000e-01	2.687000e+00	7.770264e-01	7.770264e-01
 3.000000e-01	1.000000e-01	1.000000e-01	5.938000e+00	1.469352e+00	1.469352e+00
 5.000000e-01	1.000000e-01	1.000000e-01	5.428000e+00	9.287244e-01	9.287244e-01

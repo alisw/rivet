@@ -9,11 +9,11 @@ namespace Rivet {
   /// @author Paolo Gunnellini (DESY)
   ///
   /// CMS measurement of the underlying event in "leading track" events.
-  class CMS_PAS_FSQ_12_020 : public Analysis {
+  class CMS_2012_PAS_FSQ_12_020 : public Analysis {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(CMS_PAS_FSQ_12_020);
+    DEFAULT_RIVET_ANALYSIS_CTOR(CMS_2012_PAS_FSQ_12_020);
 
 
     /// Book histograms and initialise projections before the run
@@ -104,6 +104,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CMS_PAS_FSQ_12_020);
+  DECLARE_RIVET_PLUGIN(CMS_2012_PAS_FSQ_12_020);
 
 }

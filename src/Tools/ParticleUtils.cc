@@ -17,11 +17,13 @@ namespace Rivet {
     : fn([&](const Particle& p){ return c->accept(p); }) { }
 
 
-  HasParticleAncestorWith::HasParticleAncestorWith(const Cut& c)
-    : fn([&](const Particle& p){ return c->accept(p); }) { }
+  HasParticleAncestorWith::HasParticleAncestorWith(const Cut& c, bool only_physical)
+    : fn([&](const Particle& p){ return c->accept(p); }),
+      onlyphysical(only_physical) { }
 
-  HasParticleAncestorWithout::HasParticleAncestorWithout(const Cut& c)
-    : fn([&](const Particle& p){ return c->accept(p); }) { }
+  HasParticleAncestorWithout::HasParticleAncestorWithout(const Cut& c, bool only_physical)
+    : fn([&](const Particle& p){ return c->accept(p); }),
+      onlyphysical(only_physical) { }
 
   HasParticleParentWith::HasParticleParentWith(const Cut& c)
     : fn([&](const Particle& p){ return c->accept(p); }) { }
@@ -35,11 +37,13 @@ namespace Rivet {
   HasParticleChildWithout::HasParticleChildWithout(const Cut& c)
     : fn([&](const Particle& p){ return c->accept(p); }) { }
 
-  HasParticleDescendantWith::HasParticleDescendantWith(const Cut& c)
-    : fn([&](const Particle& p){ return c->accept(p); }) { }
+  HasParticleDescendantWith::HasParticleDescendantWith(const Cut& c, bool remove_duplicates)
+    : fn([&](const Particle& p){ return c->accept(p); }),
+      rmduplicates(remove_duplicates) { }
 
-  HasParticleDescendantWithout::HasParticleDescendantWithout(const Cut& c)
-    : fn([&](const Particle& p){ return c->accept(p); }) { }
+  HasParticleDescendantWithout::HasParticleDescendantWithout(const Cut& c, bool remove_duplicates)
+    : fn([&](const Particle& p){ return c->accept(p); }),
+      rmduplicates(remove_duplicates) { }
 
 
   Particles& ifilter_select(Particles& particles, const Cut& c) {

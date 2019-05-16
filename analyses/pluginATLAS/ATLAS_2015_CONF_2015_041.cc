@@ -19,7 +19,7 @@ namespace Rivet {
     ATLAS_2015_CONF_2015_041(const string name="ATLAS_2015_CONF_2015_041", size_t channel = 0,
                              const string ref_data="ATLAS_2015_CONF_2015_041")
                              : Analysis(name), _weights(5, 0.0) {
-      _mode = 0; // This class uses the combined e+mu mode
+      _mode = channel; // This class uses the combined e+mu mode
       setRefDataName(ref_data);
     }
 

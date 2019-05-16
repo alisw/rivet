@@ -1,9 +1,9 @@
 #! /usr/bin/env python
 
 """\
-%prog: make templates of analysis source files for Rivet
+%(prog)s: make templates of analysis source files for Rivet
 
-Usage: %prog [--help|-h] [--srcroot=<srcrootdir>] <analysisname>
+Usage: %(prog)s [--help|-h] [--srcroot=<srcrootdir>] <analysisname>
 
 Without the --srcroot flag, the analysis files will be created in the current
 directory.
@@ -14,33 +14,33 @@ rivet.util.check_python_version()
 rivet.util.set_process_name(os.path.basename(__file__))
 import logging
 
-
 ## Handle command line
-from optparse import OptionParser
-parser = OptionParser(usage=__doc__)
-parser.add_option("--srcroot", metavar="DIR", dest="SRCROOT", default=None,
-                  help="install the templates into the Rivet source tree (rooted " +
-                  "at directory DIR) rather than just creating all in the current dir")
-parser.add_option("-q", "--quiet", dest="LOGLEVEL", default=logging.INFO,
-                  action="store_const", const=logging.WARNING, help="only write out warning and error messages")
-parser.add_option("-v", "--verbose", dest="LOGLEVEL", default=logging.INFO,
-                  action="store_const", const=logging.DEBUG, help="provide extra debugging messages")
-parser.add_option("-i", "--inline-info", dest="INLINE", action="store_true",
-                  default=False, help="Put analysis info into source file instead of separate data file.")
-opts, args = parser.parse_args()
-logging.basicConfig(format="%(msg)s", level=opts.LOGLEVEL)
-ANANAMES = args
+import argparse
+parser = argparse.ArgumentParser(usage=__doc__)
+parser.add_argument("ANANAMES", nargs="+", help="names of analyses to make")
+parser.add_argument("--srcroot", metavar="DIR", dest="SRCROOT", default=None,
+                    help="install the templates into the Rivet source tree (rooted " +
+                    "at directory DIR) rather than just creating all in the current dir")
+parser.add_argument("-q", "--quiet", dest="LOGLEVEL", default=logging.INFO,
+                    action="store_const", const=logging.WARNING, help="only write out warning and error messages")
+parser.add_argument("-v", "--verbose", dest="LOGLEVEL", default=logging.INFO,
+                    action="store_const", const=logging.DEBUG, help="provide extra debugging messages")
+parser.add_argument("-i", "--inline-info", dest="INLINE", action="store_true",
+                    default=False, help="Put analysis info into source file instead of separate data file.")
+args = parser.parse_args()
+logging.basicConfig(format="%(msg)s", level=args.LOGLEVEL)
+ANANAMES = args.ANANAMES
 
 
 ## Work out installation paths
-ANAROOT = os.path.abspath(opts.SRCROOT or os.getcwd())
+ANAROOT = os.path.abspath(args.SRCROOT or os.getcwd())
 if not os.access(ANAROOT, os.W_OK):
     logging.error("Can't write to source root directory %s" % ANAROOT)
     sys.exit(1)
 ANASRCDIR = os.getcwd()
 ANAINFODIR = os.getcwd()
 ANAPLOTDIR = os.getcwd()
-if opts.SRCROOT:
+if args.SRCROOT:
     ANASRCDIR = os.path.join(ANAROOT, "src/Analyses")
     ANAINFODIR = os.path.join(ANAROOT, "data/anainfo")
     ANAPLOTDIR = os.path.join(ANAROOT, "data/plotinfo")
@@ -154,7 +154,7 @@ for ANANAME in ANANAMES:
             logging.debug("HepData oops: %s: %s" % (str(type(e)), e))
 
     INLINEMETHODS = ""
-    if opts.INLINE:
+    if args.INLINE:
         KEYWORDS["ANAREFREPO_LOWER"] = KEYWORDS["ANAREFREPO"].lower()
         INLINEMETHODS = """
   public:
@@ -281,7 +281,7 @@ END PLOT
     f.write(src)
     f.close()
 
-    if opts.INLINE:
+    if args.INLINE:
         sys.exit(0)
     ANAINFOFILE = os.path.join(ANAINFODIR, ANANAME+".info")
     logging.debug("Writing info template to %s" % ANAINFOFILE)

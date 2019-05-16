@@ -38,14 +38,14 @@ namespace Rivet {
       centralityBinsOmega = {5.,15.,30.,50.,100.};
       // Book histograms
       for (int i = 0; i < 10; ++i) {
-        K0SpT[centralityBins[9-i]] = bookHisto1D(i+1,1,1);
-        LambdapT[centralityBins[9-i]] = bookHisto1D(i+11,1,1);
-        XipT[centralityBins[9-i]] = bookHisto1D(i+21,1,1);
-	sow[centralityBins[9-i]] = bookCounter("sow_" + toString(i));
+        K0SpT[centralityBins[i]] = bookHisto1D(i+1,1,1);
+        LambdapT[centralityBins[i]] = bookHisto1D(i+11,1,1);
+        XipT[centralityBins[i]] = bookHisto1D(i+21,1,1);
+	sow[centralityBins[i]] = bookCounter("sow_" + toString(i));
       }
       for (int i = 0; i < 5; ++i) {
-	OmegapT[centralityBinsOmega[4-i]] = bookHisto1D(i+31,1,1);
-	sowOmega[centralityBinsOmega[4-i]] = bookCounter("sowO_" + toString(i));
+	OmegapT[centralityBinsOmega[i]] = bookHisto1D(i+31,1,1);
+	sowOmega[centralityBinsOmega[i]] = bookCounter("sowO_" + toString(i));
       }
       piYield = bookProfile1D(40,1,1);
       pYield = bookProfile1D(41,1,1);

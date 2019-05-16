@@ -6,14 +6,14 @@
 namespace Rivet {
 
 
-  class CMS_QCD_10_024 : public Analysis {
+  class CMS_2010_PAS_QCD_10_024 : public Analysis {
   public:
 
     /// @name Constructors etc.
     //@{
 
     /// Constructor
-    CMS_QCD_10_024() : Analysis("CMS_QCD_10_024"),
+    CMS_2010_PAS_QCD_10_024() : Analysis("CMS_2010_PAS_QCD_10_024"),
 		       _weight_pt05_eta08(0.), _weight_pt10_eta08(0.),
 		       _weight_pt05_eta24(0.), _weight_pt10_eta24(0.) {  }
 
@@ -79,6 +79,6 @@ namespace Rivet {
 
 
   // Hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CMS_QCD_10_024);
+  DECLARE_RIVET_PLUGIN(CMS_2010_PAS_QCD_10_024);
 
 }

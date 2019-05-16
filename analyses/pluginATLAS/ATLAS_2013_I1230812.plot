@@ -13,7 +13,6 @@ XLabel=$N_\text{jet}$
 YLabel=$\sigma(\geq N_\text{jet})/\sigma(\geq N_\text{jet}-1)$
 LogY=0
 LegendYPos=0.4
-Scale=1.0
 XMinorTickMarks=0
 # END PLOT
 
@@ -32,7 +31,6 @@ XLabel=$N_\text{jet}$
 YLabel=$\sigma(N_\text{jet})/\sigma(N_\text{jet}-1)$
 LogY=0
 LegendYPos=0.4
-Scale=1.0
 XMinorTickMarks=0
 # END PLOT
 
@@ -50,8 +48,7 @@ Title=Exclusive jet multiplicity ratio ($p_\perp^\text{jet1}>150$ GeV)
 XLabel=$N_\text{jet}$
 YLabel=$\sigma(N_\text{jet})/\sigma(N_\text{jet}-1)$
 LogY=0
-LegendYPos=0.4
-Scale=1.0
+LegendAlign=r
 XMinorTickMarks=0
 # END PLOT
 
@@ -70,7 +67,6 @@ XLabel=$N_\text{jet}$
 YLabel=$\sigma(N_\text{jet})/\sigma(N_\text{jet}-1)$
 LogY=0
 LegendYPos=0.4
-Scale=1.0
 XMinorTickMarks=0
 XMajorTickMarks=10
 # END PLOT

@@ -7,12 +7,15 @@
 
 namespace Rivet {
 
-  /// @brief lepton differential ttbar analysis at 8 TeV
+
+  /// Lepton differential ttbar analysis at 8 TeV
   class ATLAS_2017_I1626105 : public Analysis {
   public:
-    
+
+
     DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2017_I1626105);
-    
+
+
     void init() {
 
       Cut eta_full = Cuts::abseta < 5.0 && Cuts::pT > 1.0*MeV;
@@ -55,28 +58,24 @@ namespace Rivet {
       bookHistos("dilep_sumE",  15);
     }
 
+
     void analyze(const Event& event) {
       vector<DressedLepton> elecs = sortByPt(apply<DressedLeptons>(event, "elecs").dressedLeptons());
-      vector<DressedLepton> muons = sortByPt(apply<DressedLeptons>(event, "muons").dressedLeptons());      
+      vector<DressedLepton> muons = sortByPt(apply<DressedLeptons>(event, "muons").dressedLeptons());
       Jets jets = apply<FastJets>(event, "jets").jetsByPt(Cuts::pT > 25*GeV && Cuts::abseta < 2.5);
-     
+
       // Check overlap of jets/leptons.
       for (const Jet& jet : jets) {
-        for (const DressedLepton& el : elecs) {
-          if (deltaR(jet, el) < 0.4) delete el;
-        }
-        for (const DressedLepton& mu : muons) {
-          if (deltaR(jet, mu) < 0.4) delete mu;
-        }
+        ifilter_discard(elecs, deltaRLess(jet, 0.4));
+        ifilter_discard(muons, deltaRLess(jet, 0.4));
       }
-      if (elecs.empty() || muons.empty())  vetoEvent;
-      
-      if (elecs[0].charge() == muons[0].charge())  vetoEvent;  
-      
+      if (elecs.empty() || muons.empty()) vetoEvent;
+      if (elecs[0].charge() == muons[0].charge()) vetoEvent;
+
       FourMomentum el = elecs[0].momentum();
       FourMomentum mu = muons[0].momentum();
       FourMomentum ll = elecs[0].momentum() + muons[0].momentum();
-                  
+
       // Fill histograms
       const double weight = event.weight();
       fillHistos("lep_pt",      el.pT()/GeV,             weight);
@@ -96,7 +95,7 @@ namespace Rivet {
       const double sf = crossSection()/femtobarn/sumOfWeights();
       for (auto& hist : _h) {
         const double norm = 1.0 / hist.second->integral();
-        // add overflow to last bin 
+        // add overflow to last bin
         double overflow = hist.second->overflow().effNumEntries();
         hist.second->fillBin(hist.second->numBins() - 1, overflow);
         // histogram normalisation

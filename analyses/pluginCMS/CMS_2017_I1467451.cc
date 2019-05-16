@@ -85,8 +85,8 @@ namespace Rivet {
 
     /// Normalise histograms etc., after the run
     void finalize() {
-      scale(histoPtH, crossSection()/sumOfWeights());
-      scale(histoXsec, (histoXsec->xMax()-histoXsec->xMin())*crossSection()/sumOfWeights());
+      scale(histoPtH, crossSection()/sumOfWeights()/femtobarn);
+      scale(histoXsec, (histoXsec->xMax()-histoXsec->xMin())*crossSection()/sumOfWeights()/femtobarn);
     }
 
 

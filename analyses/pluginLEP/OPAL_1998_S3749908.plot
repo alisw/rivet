@@ -59,13 +59,13 @@ YLabel=$1/\sigma \, \text{d}\sigma/\text{d}\ln(1/x_p)$
 # END PLOT
 
 # BEGIN PLOT /OPAL_1998_S3749908/d12-x01-y01
-Title=$\eta'$ scaled momentum
+Title=$\eta^\prime$ scaled momentum
 XLabel=$x_E$
 YLabel=$1/\sigma \, \text{d}\sigma/\text{d}x_E$
 # END PLOT
 
 # BEGIN PLOT /OPAL_1998_S3749908/d13-x01-y01
-Title=$\eta'$ scaled momentum
+Title=$\eta^\prime$ scaled momentum
 XLabel=$\ln(1/x_p)$
 YLabel=$1/\sigma \, \text{d}\sigma/\text{d}\ln(1/x_p)$
 # END PLOT

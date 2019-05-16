@@ -1,6 +1,6 @@
 Name: ATLAS_2017_I1495243
 Year: 2016
-Summary: $t\bar{t}$ + jets at 13 TeV
+Summary: ttbar + jets at 13 TeV
 Experiment: ATLAS
 Collider: LHC
 InspireID: 1495243
@@ -25,7 +25,7 @@ Energies: [13000]
 PtCuts: [25]
 NeedCrossSection: True
 Description:
-  'Measurements of jet activity in top-quark pair events produced in proton–proton collisions are presented, using 3.2 fb$^{-1}$
+  'Measurements of jet activity in top-quark pair events produced in proton--proton collisions are presented, using 3.2 fb$^{-1}$
   of $pp$ collision data at a centre-of-mass energy of 13 TeV collected by the ATLAS experiment at the Large Hadron Collider.
   Events are chosen by requiring an opposite-charge $e\mu$ pair and two $b$-tagged jets in the final state. The normalised differential
   cross-sections of top-quark pair production are presented as functions of additional-jet multiplicity and transverse momentum,

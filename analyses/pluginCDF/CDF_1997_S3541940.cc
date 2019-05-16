@@ -17,7 +17,7 @@ namespace Rivet {
     void init() {
 
       // Find true jets
-      const FinalState fs(-4.2, 4.2);
+      const FinalState fs(Cuts::abseta < 4.2);
       FastJets fj(fs, FastJets::CDFJETCLU, 0.7);
 
       // Smear jet energy and mass with the 10% uncertainty quoted in the paper

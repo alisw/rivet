@@ -1,10 +1,10 @@
 #! /usr/bin/env python
 
 """\
-%prog - generate histogram comparison plots
+Generate histogram comparison plots
 
 USAGE:
- %prog [options] yodafile1[:'PlotOption1=Value':'PlotOption2=Value':...] [path/to/yodafile2 ...] [PLOT:Key1=Val1:...]
+ %(prog)s [options] yodafile1[:'PlotOption1=Value':'PlotOption2=Value':...] [path/to/yodafile2 ...] [PLOT:Key1=Val1:...]
 
 where the plot options are described in the make-plots manual in the HISTOGRAM
 section.
@@ -36,81 +36,13 @@ def sanitiseString(s):
     return s
 
 
-def getCommandLineOptions():
-    "Parse command line options"
-    from optparse import OptionParser, OptionGroup
-    parser = OptionParser(usage=__doc__)
-
-    parser.add_option('-o', '--outdir', dest='OUTDIR',
-                      default='.', help='write data files into this directory')
-    parser.add_option("--hier-out", action="store_true", dest="HIER_OUTPUT", default=False,
-                      help="write output dat files into a directory hierarchy which matches the analysis paths")
-    parser.add_option('--plotinfodir', dest='PLOTINFODIRS', action='append',
-                      default=['.'], help='directory which may contain plot header information (in addition '
-                      'to standard Rivet search paths)')
-    parser.add_option("--no-rivet-refs", dest="RIVETREFS", action="store_false",
-                      default=True, help="don't use Rivet reference data files")
-    # parser.add_option("--refid", dest="REF_ID",
-    #                   default="REF", help="ID of reference data set (file path for non-REF data)")
-    parser.add_option("--reftitle", dest="REFTITLE",
-                        default='Data', help="Reference data legend entry")
-    parser.add_option("--pwd", dest="PATH_PWD", action="store_true", default=False,
-                      help="append the current directory (pwd) to the analysis/data search paths (cf. $RIVET_ANALYSIS/DATA_PATH)")
-    parser.add_option("-v", "--verbose", dest="VERBOSE", action="store_true", default=False,
-                      help="produce debug output to the terminal")
-
-    stygroup = OptionGroup(parser, "Plot style")
-    stygroup.add_option("--linear", action="store_true", dest="LINEAR",
-                        default=False, help="plot with linear scale")
-    stygroup.add_option("--errs", "--mcerrs", "--mc-errs", action="store_true", dest="MC_ERRS",
-                        default=False, help="show vertical error bars on the MC lines")
-    stygroup.add_option("--no-ratio", action="store_false", dest="RATIO",
-                        default=True, help="disable the ratio plot")
-    stygroup.add_option("--rel-ratio", action="store_true", dest="RATIO_DEVIATION",
-                        default=False, help="show the ratio plots scaled to the ref error")
-    stygroup.add_option("--no-plottitle", action="store_true", dest="NOPLOTTITLE",
-                        default=False, help="don't show the plot title on the plot "
-                        "(useful when the plot description should only be given in a caption)")
-    stygroup.add_option("--style", dest="STYLE", default="default",
-                        help="change plotting style: default|bw|talk")
-    stygroup.add_option("-c", "--config", dest="CONFIGFILES", action="append", default=["~/.make-plots"],
-                        help="additional plot config file(s). Settings will be included in the output configuration.")
-    parser.add_option_group(stygroup)
-
-    selgroup = OptionGroup(parser, "Selective plotting")
-    # selgroup.add_option("--show-single", dest="SHOW_SINGLE", choices=("no", "ref", "mc", "all"),
-    #                     default="mc", help="control if a plot file is made if there is only one dataset to be plotted "
-    #                     "[default=%default]. If the value is 'no', single plots are always skipped, for 'ref' and 'mc', "
-    #                     "the plot will be written only if the single plot is a reference plot or an MC "
-    #                     "plot respectively, and 'all' will always create single plot files.\n The 'ref' and 'all' values "
-    #                     "should be used with great care, as they will also write out plot files for all reference "
-    #                     "histograms without MC traces: combined with the -R/--rivet-refs flag, this is a great way to "
-    #                     "write out several thousand irrelevant reference data histograms!")
-    # selgroup.add_option("--show-mc-only", "--all", action="store_true", dest="SHOW_IF_MC_ONLY",
-    #                     default=False, help="make a plot file even if there is only one dataset to be plotted and "
-    #                     "it is an MC one. Deprecated and will be removed: use --show-single instead, which overrides this.")
-    # # selgroup.add_option("-l", "--histogram-list", dest="HISTOGRAMLIST",
-    # #                     default=None, help="specify a file containing a list of histograms to plot, in the format "
-    # #                     "/ANALYSIS_ID/histoname, one per line, e.g. '/DELPHI_1996_S3430090/d01-x01-y01'.")
-    selgroup.add_option("-m", "--match", action="append",
-                        help="only write out histograms whose $path/$name string matches these regexes. The argument "
-                        "may also be a text file.",
-                        dest="PATHPATTERNS")
-    selgroup.add_option("-M", "--unmatch", action="append",
-                        help="exclude histograms whose $path/$name string matches these regexes",
-                        dest="PATHUNPATTERNS")
-    parser.add_option_group(selgroup)
-
-    return parser
-
-
 def getHistos(filelist):
     """Loop over all input files. Only use the first occurrence of any REF-histogram
     and the first occurrence in each MC file for every MC-histogram."""
     refhistos, mchistos = {}, {}
     for infile in filelist:
         mchistos.setdefault(infile, {})
-        analysisobjects = yoda.read(infile, patterns=opts.PATHPATTERNS, unpatterns=opts.PATHUNPATTERNS)
+        analysisobjects = yoda.read(infile, patterns=args.PATHPATTERNS, unpatterns=args.PATHUNPATTERNS)
         #print(analysisobjects)
         for path, ao in analysisobjects.items():
             ## We can't plot non-histograms yet
@@ -162,7 +94,7 @@ def getRivetRefData(anas=None):
     for filelist in dirlist:
         # TODO: delegate to getHistos?
         for infile in filelist:
-            analysisobjects = yoda.read(infile, patterns=opts.PATHPATTERNS, unpatterns=opts.PATHUNPATTERNS)
+            analysisobjects = yoda.read(infile, patterns=args.PATHPATTERNS, unpatterns=args.PATHUNPATTERNS)
             for path, ao in analysisobjects.items():
                 aop = rivet.AOPath(ao.path)
                 if aop.isref():
@@ -205,9 +137,9 @@ def setStyle(ao, istyle, variation=False):
     LINECOLORS = ['red', 'blue', 'green', 'orange', 'lilac']
     LINESTYLES = ['solid', 'dashed', 'dashdotted', 'dotted']
 
-    if opts.STYLE == 'talk':
+    if args.STYLE == 'talk':
         ao.setAnnotation('LineWidth', '1pt')
-    if opts.STYLE == 'bw':
+    if args.STYLE == 'bw':
         LINECOLORS = ['black!90',
                       'black!50',
                       'black!30']
@@ -272,14 +204,14 @@ def mkOutput(hpath, aos, plot=None, special=None):
 
 def writeOutput(output, h):
     "Choose output file name and dir"
-    if opts.HIER_OUTPUT:
+    if args.HIER_OUTPUT:
         hparts = h.strip("/").split("/", 1)
         ana = "_".join(hparts[:-1]) if len(hparts) > 1 else "ANALYSIS"
-        outdir = os.path.join(opts.OUTDIR, ana)
+        outdir = os.path.join(args.OUTDIR, ana)
         outfile = '%s.dat' % hparts[-1].replace("/", "_")
     else:
         hparts = h.strip("/").split("/")
-        outdir = opts.OUTDIR
+        outdir = args.OUTDIR
         outfile = '%s.dat' % "_".join(hparts)
     mkoutdir(outdir)
     outfilepath = os.path.join(outdir, outfile)
@@ -294,17 +226,80 @@ def writeOutput(output, h):
 if __name__ == '__main__':
 
     ## Command line parsing
-    parser = getCommandLineOptions()
-    opts, args = parser.parse_args()
+    import argparse
+    parser = argparse.ArgumentParser(description=__doc__)
+
+    parser.add_argument("ARGS", nargs="*")
+    parser.add_argument('-o', '--outdir', dest='OUTDIR',
+                        default='.', help='write data files into this directory')
+    parser.add_argument("--hier-out", action="store_true", dest="HIER_OUTPUT", default=False,
+                        help="write output dat files into a directory hierarchy which matches the analysis paths")
+    parser.add_argument('--plotinfodir', dest='PLOTINFODIRS', action='append',
+                        default=['.'], help='directory which may contain plot header information (in addition '
+                        'to standard Rivet search paths)')
+    parser.add_argument("--no-rivet-refs", dest="RIVETREFS", action="store_false",
+                        default=True, help="don't use Rivet reference data files")
+    # parser.add_argument("--refid", dest="REF_ID",
+    #                   default="REF", help="ID of reference data set (file path for non-REF data)")
+    parser.add_argument("--reftitle", dest="REFTITLE",
+                        default='Data', help="Reference data legend entry")
+    parser.add_argument("--pwd", dest="PATH_PWD", action="store_true", default=False,
+                        help="append the current directory (pwd) to the analysis/data search paths (cf. $RIVET_ANALYSIS/DATA_PATH)")
+    parser.add_argument("-v", "--verbose", dest="VERBOSE", action="store_true", default=False,
+                        help="produce debug output to the terminal")
+
+    stygroup = parser.add_argument_group("Plot style")
+    stygroup.add_argument("--linear", action="store_true", dest="LINEAR",
+                          default=False, help="plot with linear scale")
+    stygroup.add_argument("--errs", "--mcerrs", "--mc-errs", action="store_true", dest="MC_ERRS",
+                          default=False, help="show vertical error bars on the MC lines")
+    stygroup.add_argument("--no-ratio", action="store_false", dest="RATIO",
+                          default=True, help="disable the ratio plot")
+    stygroup.add_argument("--rel-ratio", action="store_true", dest="RATIO_DEVIATION",
+                          default=False, help="show the ratio plots scaled to the ref error")
+    stygroup.add_argument("--no-plottitle", action="store_true", dest="NOPLOTTITLE",
+                          default=False, help="don't show the plot title on the plot "
+                          "(useful when the plot description should only be given in a caption)")
+    stygroup.add_argument("--style", dest="STYLE", default="default",
+                          help="change plotting style: default|bw|talk")
+    stygroup.add_argument("-c", "--config", dest="CONFIGFILES", action="append", default=["~/.make-plots"],
+                          help="additional plot config file(s). Settings will be included in the output configuration.")
+    stygroup.add_argument("--remove-options", help="remove options label from legend", dest="REMOVE_OPTIONS",
+                          action="store_true", default=False)
+
+    selgroup = parser.add_argument_group("Selective plotting")
+    # selgroup.add_argument("--show-single", dest="SHOW_SINGLE", choices=("no", "ref", "mc", "all"),
+    #                     default="mc", help="control if a plot file is made if there is only one dataset to be plotted "
+    #                     "[default=%(default)s]. If the value is 'no', single plots are always skipped, for 'ref' and 'mc', "
+    #                     "the plot will be written only if the single plot is a reference plot or an MC "
+    #                     "plot respectively, and 'all' will always create single plot files.\n The 'ref' and 'all' values "
+    #                     "should be used with great care, as they will also write out plot files for all reference "
+    #                     "histograms without MC traces: combined with the -R/--rivet-refs flag, this is a great way to "
+    #                     "write out several thousand irrelevant reference data histograms!")
+    # selgroup.add_argument("--show-mc-only", "--all", action="store_true", dest="SHOW_IF_MC_ONLY",
+    #                     default=False, help="make a plot file even if there is only one dataset to be plotted and "
+    #                     "it is an MC one. Deprecated and will be removed: use --show-single instead, which overrides this.")
+    # # selgroup.add_argument("-l", "--histogram-list", dest="HISTOGRAMLIST",
+    # #                     default=None, help="specify a file containing a list of histograms to plot, in the format "
+    # #                     "/ANALYSIS_ID/histoname, one per line, e.g. '/DELPHI_1996_S3430090/d01-x01-y01'.")
+    selgroup.add_argument("-m", "--match", action="append",
+                          help="only write out histograms whose $path/$name string matches these regexes. The argument "
+                          "may also be a text file.",
+                          dest="PATHPATTERNS")
+    selgroup.add_argument("-M", "--unmatch", action="append",
+                          help="exclude histograms whose $path/$name string matches these regexes",
+                          dest="PATHUNPATTERNS")
+
+    args = parser.parse_args()
 
     ## Add pwd to search paths
-    if opts.PATH_PWD:
+    if args.PATH_PWD:
         rivet.addAnalysisLibPath(os.path.abspath("."))
         rivet.addAnalysisDataPath(os.path.abspath("."))
 
     ## Split the input file names and the associated plotting options
     ## given on the command line into two separate lists
-    filelist, plotoptions = parseArgs(args)
+    filelist, plotoptions = parseArgs(args.ARGS)
 
     ## Remove the PLOT dummy file from the file list
     if "PLOT" in filelist:
@@ -317,8 +312,8 @@ if __name__ == '__main__':
             sys.exit(1)
 
     ## Read the .plot files
-    plotdirs = opts.PLOTINFODIRS + [os.path.abspath(os.path.dirname(f)) for f in filelist]
-    plotparser = rivet.mkStdPlotParser(plotdirs, opts.CONFIGFILES)
+    plotdirs = args.PLOTINFODIRS + [os.path.abspath(os.path.dirname(f)) for f in filelist]
+    plotparser = rivet.mkStdPlotParser(plotdirs, args.CONFIGFILES)
 
     ## Create a list of all histograms to be plotted, and identify if they are 2D histos (which need special plotting)
     try:
@@ -338,7 +333,7 @@ if __name__ == '__main__':
                 h2ds.append(ps)
 
     ## Take reference data from the Rivet search paths, if there is not already
-    if opts.RIVETREFS:
+    if args.RIVETREFS:
         try:
             refhistos2 = getRivetRefData()
         except IOError as e:
@@ -357,7 +352,7 @@ if __name__ == '__main__':
     ## Now loop over all MC histograms and plot them
     # TODO: factorize much of this into a rivet.utils mkplotfile(mchists, refhist, kwargs, is2d=False) function
     for hpath in hpaths:
-        #print('Currently looking at', h)
+        #print('Currently looking at', hpath)
 
         ## The analysis objects to be plotted
         anaobjects = []
@@ -367,7 +362,7 @@ if __name__ == '__main__':
         ## Is this a 2D histo?
         is2d = (hpath in h2ds)
         ## Will we be drawing a ratio plot?
-        showratio = opts.RATIO and not is2d
+        showratio = args.RATIO and not is2d
 
 
         ## A Plot object to represent the PLOT section in the .dat file
@@ -387,15 +382,17 @@ if __name__ == '__main__':
                     opt_group = key_val.split("=", 2)
                     key, val = "=".join(opt_group[:2]), opt_group[2]
                 plot[key] = val
-        if opts.LINEAR:
+        if args.REMOVE_OPTIONS:
+            plot['RemoveOptions'] = '1'
+        if args.LINEAR:
             plot['LogY'] = '0'
-        if opts.NOPLOTTITLE:
+        if args.NOPLOTTITLE:
             plot['Title'] = ''
-        if showratio and opts.RATIO_DEVIATION:
+        if showratio and args.RATIO_DEVIATION:
             plot['RatioPlotMode'] = 'deviation'
-        if opts.STYLE == 'talk':
+        if args.STYLE == 'talk':
             plot['PlotSize'] = '8,6'
-        elif opts.STYLE == 'bw' and showratio:
+        elif args.STYLE == 'bw' and showratio:
             plot['RatioPlotErrorBandColor'] = 'black!10'
 
 
@@ -408,7 +405,7 @@ if __name__ == '__main__':
         if hpath in refhistos:
             hasdataref = True
             refdata = refhistos[hpath]
-            refdata.setAnnotation('Title', opts.REFTITLE)
+            refdata.setAnnotation('Title', args.REFTITLE)
             if not is2d:
                 refdata.setAnnotation('ErrorBars', '1')
                 refdata.setAnnotation('PolyMarker', '*')
@@ -440,12 +437,12 @@ if __name__ == '__main__':
                         ## Default linecolor, linestyle
                         if not is2d:
                             setStyle(hmc, styleidx, not iscanonical)
-                            if opts.MC_ERRS:
+                            if args.MC_ERRS:
                                 hmc.setAnnotation('ErrorBars', '1')
                         ## Plot defaults from .plot files
                         histopts = plotparser.getHistogramOptions(hpath)
                         if histopts:
-                            for key, val in histopts.items():
+                            for key, val in histargs.items():
                                 hmc.setAnnotation(key, val)
                         ## Command line plot options
                         setOptions(hmc, plotoptions[infile])
@@ -477,11 +474,15 @@ if __name__ == '__main__':
         if is2d:
             anaobjects = anaobjects[:1]
         ## Add final attrs to Plot
-        plot['DrawOnly'] = ' '.join(varlines + mainlines).strip()
-        plot['LegendOnly'] = ' '.join(mainlines).strip()
-        if showratio and len(varlines + mainlines) > 1:
+        if not plot.has_key('DrawOnly'):
+            plot['DrawOnly'] = ' '.join(varlines + mainlines).strip()
+        if not plot.has_key('LegendOnly'):
+            plot['LegendOnly'] = ' '.join(mainlines).strip()
+        if showratio and not plot.has_key('RatioPlot') and len(varlines + mainlines) > 1:
             plot['RatioPlot'] = '1'
-            plot['RatioPlotReference'] = ratioreference
+        if showratio and plot.has_key('RatioPlot') and plot['RatioPlot'] == '1' and len(varlines + mainlines) > 0:
+            if not plot.has_key('RatioPlotReference'):
+                plot['RatioPlotReference'] = ratioreference
             if not hasdataref and "RatioPlotYLabel" not in plot:
                 if plot.get('RatioPlotMode', '') == 'deviation':
                     plot['RatioPlotYLabel'] = 'Deviation' #r'$\text{MC}-\text{MC}_\text{ref}$'

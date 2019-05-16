@@ -58,7 +58,7 @@ namespace Rivet {
       declare(FastJets(jet_fs, FastJets::KT, 0.4), "Kt04Jets");
       declare(FastJets(jet_fs, FastJets::KT, 1.0), "Kt10Jets");
 
-      VetoedFinalState jet_fs_all(Cuts::abseta < 2.5 && Cuts::pT > 0.4*GeV);
+      VetoedFinalState jet_fs_all(FinalState(Cuts::abseta < 2.5 && Cuts::pT > 0.4*GeV));
       jet_fs_all.addVetoOnThisFinalState(muons);
       jet_fs_all.addVetoOnThisFinalState(elecs);
       FastJets jetpro04_all(jet_fs_all, FastJets::KT, 0.4);

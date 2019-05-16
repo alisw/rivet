@@ -15,7 +15,7 @@ namespace Rivet {
     : _runname(runname),
       _eventcounter("/_EVTCOUNT"),
       _xs(NAN), _xserr(NAN),
-      _initialised(false), _ignoreBeams(false), _dumpPeriod(0), _dumping(false)
+      _initialised(false), _ignoreBeams(false), _dumpPeriod(0), _dumping(0)
   {  }
 
 
@@ -39,7 +39,7 @@ namespace Rivet {
     // Check that analyses are beam-compatible, and remove those that aren't
     const size_t num_anas_requested = analysisNames().size();
     vector<string> anamestodelete;
-    for (const AnaHandle a : _analyses) {
+    for (const AnaHandle a : analyses()) {
       if (!_ignoreBeams && !a->isCompatible(beams())) {
         //MSG_DEBUG(a->name() << " requires beams " << a->requiredBeams() << " @ " << a->requiredEnergies() << " GeV");
         anamestodelete.push_back(a->name());
@@ -67,7 +67,7 @@ namespace Rivet {
     }
 
     // Initialize the remaining analyses
-    for (AnaHandle a : _analyses) {
+    for (AnaHandle a : analyses()) {
       MSG_DEBUG("Initialising analysis: " << a->name());
       try {
         // Allow projection registration in the init phase onwards
@@ -122,7 +122,7 @@ namespace Rivet {
     #endif
 
     // Run the analyses
-    for (AnaHandle a : _analyses) {
+    for (AnaHandle a : analyses()) {
       MSG_TRACE("About to run analysis " << a->name());
       try {
         a->analyze(event);
@@ -135,10 +135,10 @@ namespace Rivet {
 
     if ( _dumpPeriod > 0 && numEvents()%_dumpPeriod == 0 ) {
       MSG_INFO("Dumping intermediate results to " << _dumpFile << ".");
-      _dumping = true;
+      _dumping = numEvents()/_dumpPeriod;
       finalize();
-      _dumping = false;
       writeData(_dumpFile);
+      _dumping = 0;
     }
 
   }
@@ -158,17 +158,17 @@ namespace Rivet {
 
     // First we make copies of all analysis objects.
     map<string,AnalysisObjectPtr> backupAOs;
-    for (auto ao : getData(false, true) )
+    for (auto ao : getData(false, true, false) )
       backupAOs[ao->path()] = AnalysisObjectPtr(ao->newclone());
 
     // Now we run the (re-entrant) finalize() functions for all analyses.
     MSG_INFO("Finalising analyses");
-    for (AnaHandle a : _analyses) {
+    for (AnaHandle a : analyses()) {
       a->setCrossSection(_xs);
       try {
         if ( !_dumping || a->info().reentrant() )  a->finalize();
-        else if ( _dumping )
-          MSG_INFO("Skipping periodic dump of " << a->name()
+        else if ( _dumping == 1 )
+          MSG_INFO("Skipping finalize in periodic dump of " << a->name()
                    << " as it is not declared reentrant.");
       } catch (const Error& err) {
         cerr << "Error in " << a->name() << "::finalize method: " << err.what() << endl;
@@ -179,9 +179,9 @@ namespace Rivet {
     // Now we copy all analysis objects to the list of finalized
     // ones, and restore the value to their original ones.
     _finalizedAOs.clear();
-    for ( auto ao : getData() )
+    for ( auto ao : getData(false, false, false) )
       _finalizedAOs.push_back(AnalysisObjectPtr(ao->newclone()));
-    for ( auto ao : getData(false, true) ) {
+    for ( auto ao : getData(false, true, false) ) {
       // TODO: This should be possible to do in a nicer way, with a flag etc.
       if (ao->path().find("/FINAL") != std::string::npos) continue;
       auto aoit = backupAOs.find(ao->path());
@@ -206,6 +206,7 @@ namespace Rivet {
     cout << "Please acknowledge plots made with Rivet analyses, and cite arXiv:1003.0694 (http://arxiv.org/abs/1003.0694)" << endl;
   }
 
+
   AnalysisHandler& AnalysisHandler::addAnalysis(const string& analysisname, std::map<string, string> pars) {
      // Make an option handle.
     std::string parHandle = "";
@@ -214,8 +215,8 @@ namespace Rivet {
       parHandle += par->first + "=" + par->second;
     }
     return addAnalysis(analysisname + parHandle);
-
   }
+
 
   AnalysisHandler& AnalysisHandler::addAnalysis(const string& analysisname) {
     // Check for a duplicate analysis
@@ -231,8 +232,7 @@ namespace Rivet {
       for ( int i = 1, N = anaopt.size(); i < N; ++i ) {
         vector<string> opt = split(anaopt[i], "=");
         if ( opt.size() != 2 ) {
-          MSG_WARNING("Error in option specification. Skipping analysis "
-                      << analysisname);
+          MSG_WARNING("Error in option specification. Skipping analysis " << analysisname);
           return *this;
         }
         if ( !analysis->info().validOption(opt[0], opt[1]) ) {
@@ -246,14 +246,14 @@ namespace Rivet {
         analysis->_options[opt.first] = opt.second;
         analysis->_optstring += ":" + opt.first + "=" + opt.second;
       }
-      for (const AnaHandle& a : _analyses) {
+      for (const AnaHandle& a : analyses()) {
         if (a->name() == analysis->name() ) {
           MSG_WARNING("Analysis '" << analysisname << "' already registered: skipping duplicate");
           return *this;
         }
       }
       analysis->_analysishandler = this;
-      _analyses.insert(analysis);
+      _analyses[analysisname] = analysis;
     } else {
       MSG_WARNING("Analysis '" << analysisname << "' not found.");
     }
@@ -264,17 +264,17 @@ namespace Rivet {
 
 
   AnalysisHandler& AnalysisHandler::removeAnalysis(const string& analysisname) {
-    std::shared_ptr<Analysis> toremove;
-    for (const AnaHandle a : _analyses) {
-      if (a->name() == analysisname) {
-        toremove = a;
-        break;
-      }
-    }
-    if (toremove.get() != 0) {
-      MSG_DEBUG("Removing analysis '" << analysisname << "'");
-      _analyses.erase(toremove);
-    }
+    // std::shared_ptr<Analysis> toremove;
+    // for (const AnaHandle a : _analyses) {
+    //   if (a->name() == analysisname) {
+    //     toremove = a;
+    //     break;
+    //   }
+    // }
+    // if (toremove.get() != 0) {
+    MSG_DEBUG("Removing analysis '" << analysisname << "'");
+    if (_analyses.find(analysisname) != _analyses.end()) _analyses.erase(analysisname);
+    // }
     return *this;
   }
 
@@ -289,7 +289,7 @@ namespace Rivet {
         _orphanedPreloads.push_back(ao);
         continue;
       }
- 
+
       path = path.substr(4);
       ao->setPath(path);
       if (path.size() > 1) { // path > "/"
@@ -317,7 +317,7 @@ namespace Rivet {
           path.replace(path.find(":" + anaopts[i]), (":" + anaopts[i]).length(), "");
     ao->setPath(path);
   }
-   
+
 
 
 
@@ -329,7 +329,7 @@ namespace Rivet {
     vector<CounterPtr> sows;
     set<string> ananames;
      _eventcounter.reset();
- 
+
     // First scan all files and extract analysis objects and add the
     // corresponding anayses..
     for ( auto file : aofiles ) {
@@ -389,12 +389,12 @@ namespace Rivet {
       _xserr = sqrt(_xserr)/_eventcounter.effNumEntries();
     } else {
       _xserr = sqrt(_xserr);
-      for ( int i = 0, N = sows.size(); i < N; ++i ) 
+      for ( int i = 0, N = sows.size(); i < N; ++i )
         scales[i] = (_eventcounter.sumW()/sows[i]->sumW())*(xsecs[i]/_xs);
     }
 
     // Initialize the analyses allowing them to book analysis objects.
-    for (AnaHandle a : _analyses) {
+    for (AnaHandle a : analyses()) {
       MSG_DEBUG("Initialising analysis: " << a->name());
       if ( !a->info().reentrant() )
         MSG_WARNING("Analysis " << a->name() << " has not been validated to have "
@@ -415,7 +415,7 @@ namespace Rivet {
     _initialised = true;
     // Get a list of all anaysis objects to handle.
     map<string,AnalysisObjectPtr> current;
-    for ( auto ao : getData(false, true) ) current[ao->path()] = ao;
+    for ( auto ao : getData(false, true, false) ) current[ao->path()] = ao;
     // Go through all objects to be merged and add them to current
     // after appropriate scaling.
     for ( int i = 0, N = aosv.size(); i < N; ++i)
@@ -452,7 +452,7 @@ namespace Rivet {
 
 
   vector<AnalysisObjectPtr> AnalysisHandler::
-  getData(bool includeorphans, bool includetmps) const {
+  getData(bool includeorphans, bool includetmps, bool usefinalized) const {
     vector<AnalysisObjectPtr> rtn;
     // Event counter
     rtn.push_back( make_shared<Counter>(_eventcounter) );
@@ -460,15 +460,22 @@ namespace Rivet {
     YODA::Scatter1D::Points pts; pts.insert(YODA::Point1D(_xs, _xserr));
     rtn.push_back( make_shared<Scatter1D>(pts, "/_XSEC") );
     // Analysis histograms
-    for (const AnaHandle a : analyses()) {
-      vector<AnalysisObjectPtr> aos = a->analysisObjects();
-      // MSG_WARNING(a->name() << " " << aos.size());
-      for (const AnalysisObjectPtr ao : aos) {
-        // Exclude paths from final write-out if they contain a "TMP" layer (i.e. matching "/TMP/")
-        /// @todo This needs to be much more nuanced for re-entrant histogramming
-        if ( !includetmps && ao->path().find("/TMP/" ) != string::npos) continue;
-        rtn.push_back(ao);
+    vector<AnalysisObjectPtr> aos;
+    if (usefinalized)
+      aos = _finalizedAOs;
+    else {
+      for (const AnaHandle a : analyses()) {
+        // MSG_WARNING(a->name() << " " << aos.size());
+        for (const AnalysisObjectPtr ao : a->analysisObjects()) {
+          aos.push_back(ao);
+        }
       }
+    }
+    for (const AnalysisObjectPtr ao : aos) {
+      // Exclude paths from final write-out if they contain a "TMP" layer (i.e. matching "/TMP/")
+      /// @todo This needs to be much more nuanced for re-entrant histogramming
+      if ( !includetmps && ao->path().find("/TMP/" ) != string::npos) continue;
+      rtn.push_back(ao);
     }
     // Sort histograms alphanumerically by path before write-out
     sort(rtn.begin(), rtn.end(), [](AnalysisObjectPtr a, AnalysisObjectPtr b) {return a->path() < b->path();});
@@ -480,14 +487,24 @@ namespace Rivet {
 
   void AnalysisHandler::writeData(const string& filename) const {
     vector<AnalysisObjectPtr> out = _finalizedAOs;
+    set<string> finalana;
+    for ( auto ao : out) finalana.insert(ao->path());
     out.reserve(2*out.size());
-    vector<AnalysisObjectPtr> aos = getData(false, true);
+    vector<AnalysisObjectPtr> aos = getData(false, true, false);
+
+    if ( _dumping ) {
+      for ( auto ao : aos ) {
+        if ( finalana.find(ao->path()) == finalana.end() )
+          out.push_back(AnalysisObjectPtr(ao->newclone()));
+      }
+    }
+
     for ( auto ao : aos ) {
       ao = AnalysisObjectPtr(ao->newclone());
       ao->setPath("/RAW" + ao->path());
       out.push_back(ao);
     }
-   
+
     try {
       YODA::write(filename, out.begin(), out.end());
     } catch (...) { //< YODA::WriteError&
@@ -498,17 +515,10 @@ namespace Rivet {
 
   std::vector<std::string> AnalysisHandler::analysisNames() const {
     std::vector<std::string> rtn;
-    for (AnaHandle a : _analyses) {
+    for (AnaHandle a : analyses()) {
       rtn.push_back(a->name());
     }
     return rtn;
-  }
-
-
-  const AnaHandle AnalysisHandler::analysis(const std::string& analysisname) const {
-    for (const AnaHandle a : analyses())
-      if (a->name() == analysisname) return a;
-    throw Error("No analysis named '" + analysisname + "' registered in AnalysisHandler");
   }
 
 
@@ -531,7 +541,7 @@ namespace Rivet {
 
   bool AnalysisHandler::needCrossSection() const {
     bool rtn = false;
-    for (const AnaHandle a : _analyses) {
+    for (const AnaHandle a : analyses()) {
       if (!rtn) rtn = a->needsCrossSection();
       if (rtn) break;
     }
@@ -553,7 +563,8 @@ namespace Rivet {
 
   AnalysisHandler& AnalysisHandler::addAnalysis(Analysis* analysis) {
     analysis->_analysishandler = this;
-    _analyses.insert(AnaHandle(analysis));
+    // _analyses.insert(AnaHandle(analysis));
+    _analyses[analysis->name()] = AnaHandle(analysis);
     return *this;
   }
 

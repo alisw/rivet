@@ -48,8 +48,7 @@ namespace Rivet {
 
     // Find the pT histogram bin index for value pt (in GeV), to hack a 2D histogram equivalent
     /// @todo Use a YODA axis/finder alg when available
-    size_t findPtBin(double ptJ) {
-      const double ptBins_dj[N_PT_BINS_dj+1] = { 200., 260., 350., 460., 550., 650., 760., 900, 1000, 1100, 1200, 1300, 13000};
+    size_t findPtBin(double ptJ) {      
       for (size_t ibin = 0; ibin < N_PT_BINS_dj; ++ibin) {
         if (inRange(ptJ, ptBins_dj[ibin], ptBins_dj[ibin+1])) return ibin;
       }
@@ -107,8 +106,8 @@ namespace Rivet {
       }
       // Normalize the absolute cross section histograms to xs * lumi.
       for (size_t i = 0; i < N_PT_BINS_dj; ++i) {
-        scale(_h_ungroomedJetMass_dj[i][0],   crossSection()/picobarn / sumOfWeights());
-        scale(_h_sdJetMass_dj[i][0],          crossSection()/picobarn / sumOfWeights());
+        scale(_h_ungroomedJetMass_dj[i][0],   crossSection()/picobarn / sumOfWeights() / (ptBins_dj[i+1]-ptBins_dj[i]) );
+        scale(_h_sdJetMass_dj[i][0],          crossSection()/picobarn / sumOfWeights() / (ptBins_dj[i+1]-ptBins_dj[i]) );
       }
     }
     //@}
@@ -136,8 +135,9 @@ namespace Rivet {
            PT_1100_1200_dj,
            PT_1200_1300_dj,
            PT_1300_Inf_dj,
-           N_PT_BINS_dj } BINS_dj;
+           N_PT_BINS_dj };
     static const int N_CATEGORIES=2;
+    const double ptBins_dj[N_PT_BINS_dj+1]= { 200., 260., 350., 460., 550., 650., 760., 900., 1000., 1100., 1200., 1300., 13000.};
 
     Histo1DPtr _h_ungroomedJet0pt, _h_ungroomedJet1pt;
     Histo1DPtr _h_sdJet0pt, _h_sdJet1pt;

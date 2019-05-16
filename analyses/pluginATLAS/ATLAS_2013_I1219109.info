@@ -25,8 +25,8 @@ Description:
   centre-of-mass energy of 7 TeV at the LHC. These results are based on data corresponding to an integrated luminosity of 
   4.6~$fb^{-1}$, collected with the ATLAS detector. Cross-sections are presented as a function of jet multiplicity and of the 
   transverse momentum of the leading b-jet for both the combined muon and electron decay modes of the W boson. 
-  The default routine will consider the electron decay channel of the W boson. Use ATLAS_2013_I1217863_W_EL and 
-  ATLAS_2013_I1217863_W_MU to specify the decay channel directly.
+  The default routine will consider the average of electron and muon decay channel of the W boson. Use LMODE=EL and 
+  LMODE=MU to specify the decay channel directly.
 BibKey: Aad:2013vka
 BibTeX: '@article{Aad:2013vka,
       author         = "Aad, Georges and others",

@@ -153,7 +153,7 @@ namespace Rivet {
         if (jet.pT() > 100*GeV) nJet100 += 1;
 
         const bool isBtagged = jet.bTagged();
-        const bool isBFromTop = any(jet.bTags(), hasParticleAncestorWith(Cuts::abspid == PID::TQUARK));
+        const bool isBFromTop = any(jet.bTags(), hasParticleAncestorWith(Cuts::abspid == PID::TQUARK, false));
 
         if (isBFromTop) {
           if (jet.pT() > 30*GeV) topBJets.push_back(jet);
@@ -192,7 +192,7 @@ namespace Rivet {
 
       // Plots with two additional jets
       if (addJets.size() >= 1) {
-        const double ht = sum(addJets, pT, 0.0);
+        const double ht = sum(addJets, Kin::pT, 0.0);
         _hFull_addJJHT_abs->fill(ht/GeV, weight);
         _hFull_addJJHT    ->fill(ht/GeV, weight);
         if (isVisiblePS) {
@@ -338,7 +338,7 @@ namespace Rivet {
         h_gap_addJet2Pt->fillBin(i, int(j2pt/GeV < binCenter), weight);
       }
 
-      const double ht = sum(addJets, pT, 0.);
+      const double ht = sum(addJets, Kin::pT, 0.);
       for (size_t i = 0; i < h_gap_addJetHT->numBins(); ++i) {
         const double binCenter = h_gap_addJetHT->bin(i).xMid();
         h_gap_addJetHT->fillBin(i, int(ht/GeV < binCenter) , weight);

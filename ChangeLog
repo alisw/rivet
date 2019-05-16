@@ -1,3 +1,203 @@
+2019-05-09 Christian Gutschow  <chris.g@cern.ch>
+	* Release version 2.7.1
+
+2019-05-09 Christian Gutschow  <chris.g@cern.ch>
+	* add correlation information for those analyses 
+	that are compatible with HEPData
+	* prevent Variations meta data from being copied
+	* comment out redudnant code in MeasureDefinition.cc
+	to suppress compiler warning
+
+2019-05-08  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Use an std::map rather than std::set to store analyses in
+	AnalysisHandler, hopefully therefore fixing the analysis
+	evaluation order and making multi-analysis runs with random
+	numbers repeatable.
+
+2019-05-07  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Modify LorentzTransform::setBetaVec to behave better for boost
+	along x, y, and z axes.
+
+	* Attach bare lepton GenParticle pointers to output of
+	DressedLeptons, to allow ancestry/decay navigation (request by
+	Markus Seidel).
+
+	* Add Particle::setGenParticle method and manual Particle
+	constructors with the option to pass a GenParticle*.
+
+	* Improve DressedLeptons constructor to deconstruct incoming
+	particles into bare and dressing components (report by Markus
+	Seidel).
+
+	* Remove GSL includes and single remaining method (for now).
+
+2019-05-06  Andy Buckley  <andy.buckley@cern.ch>
+
+	* First set of script conversions from optparse to argparse for Python3.
+
+2019-05-06 Peter Richardson  <peter.richardson@durham.ac.uk>
+	* Fix normalisation in ATLAS_2016_I1444991 after yoda update from HepData
+
+2019-05-04 Christian Gutschow  <chris.g@cern.ch>
+	* default entry point of ATLAS_2014_I1319490 should
+	  be average of muon and electron channel
+	* fix units in ATLAS_2014_I1319490 and apply
+	  Peter Richardson's plot updates
+
+2019-05-04 Peter Richardson  <peter.richardson@durham.ac.uk>
+	* Fix plot selection and labels in ATLAS_2016_I1419652 (due yoda update from HepData)
+	* Fix to mode switch and plot labels in ATLAS_2014_I1319490
+
+2019-05-03 Peter Richardson  <peter.richardson@durham.ac.uk>
+	* Fix info text and plot labels in ATLAS_2013_I1217863
+	* Fix Zfinder test in ATLAS_2014_I1312627, size is now no of Z's not leptons
+
+2019-05-02  Peter Richardson  <peter.richardson@durham.ac.uk>
+	* Fix unicode in ATLAS_2014_I1312627,ATLAS_2016_I1424838,ATLAS_2016_I1426523
+
+2019-05-02  Peter Richardson  <peter.richardson@durham.ac.uk>
+
+	* Fix make-plots CustomMajorTicks and CustomMinorTicks
+
+2019-04-30  Peter Richardson  <peter.richardson@durham.ac.uk>
+
+	* Fix make-plots rendering when last point is NaN-valued.
+
+2019-04-30 Christian Gutschow  <chris.g@cern.ch>
+	* path sign behaviour in deltaEta (MathUtils.hh)
+	* add signed option for deltaRap
+
+2019-04-29  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add tau mistag efficiency functions for jet smearing.
+
+	* Make RIVET_RANDOM_SEED have effect outside OpenMP builds, too.
+
+2019-04-29 Christian Gutschow  <chris.g@cern.ch>
+	* remove IsRef from output Histo1D
+	* fix HEPData IDs in hist booking for ATLAS_2014_I1315949
+
+2019-04-26 Christian Gutschow  <chris.g@cern.ch>
+	* use jet size rather than 4-momentum size (?)
+	to fill in CDF_1996_S3108457
+
+2019-04-25 Christian Gutschow  <chris.g@cern.ch>
+	* fix mapping to ref data in STAR_2006_S6500200,
+	put bin width manually into ref data file
+
+2019-04-24 Christian Gutschow  <chris.g@cern.ch>
+	* Patch weird behaviour in ATLAS_2017_I1589844 and
+	ATLAS_2017_I1609448 when Cut argument is passed to
+	VetoedFinalState constructor. In version 2.6.2 or
+	prior, this would select the particles passing the cut,
+	after that they are being vetoed.
+
+2019-04-24  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add CMS_2016_I1487288 (CMS WZ differential cross-sections at 8
+	TeV) from Shehu AbdusSalam, refined and extended to jet
+	distributions by AB.
+
+2019-04-24  Jon Butterworth <j.butterworth@ucl.ac.uk>
+
+	* Fix logic of call the vetoedFinalState in ATLAS_2017_I1609448
+	which was giving wrong met calculation.
+
+2019-04-23  Chris Gutschow  <chris.g@cern.ch>
+
+	* Apply suggested corrections from Peter Richardson to
+	ATLAS_2014_I1282441 (normalisation of second plot is in millibarn
+	not microbarn), ATLAS_2015_I1387176 and ATLAS_2015_I1397635
+	(Unicode issues in the .info), ATLAS_2016_I1419070 (need more than
+	1 entry for a variance not just 1), CMS_2010_PAS_QCD_10_024 and
+	CMS_2012_PAS_FSQ_12_020 (class names need to be consistent with
+	file names to find the .yoda ref data), CMS_2013_I1261026 (need to
+	ensure more than 1 entry in histos to avoid LowStats issues from
+	YODA), CMS_2014_I1298810, CMS_2016_I1421646, CMS_2016_I1454211
+	(the polymarker command in the yoda caused make-plots to fail if
+	there is more than 1 MC line), CMS_2017_I1467451 (cross sections
+	in fb), CMS_2017_I1605749 (data fixed in HepData so don't need to
+	divide by bin width anymore), ALEPH_1996_S3486095 (delete a lot of
+	unused variables), ALEPH_2014_I1267648 (only worked if the final
+	decay products were direct children of the tau, which is not the
+	case in Herwig or Pythia -- rewritten to search down the decay
+	tree), DELPHI_1996_S3430090, DELPHI_2000_S4328825,
+	OPAL_1998_S374990, ARGUS_1993_S2669951, ALEPH_1996_S3486095
+	(switch ' to ^\prime in plots as it wasn't working as it was),
+	ALEPH_2004_S5765862 (fix typo in plot label), BABAR_2003_I593379
+	and BELLE_2008_I786560 (switch to Rivet particle from
+	genParticle), and to add the 2D case to the Sphericity projection
+	so tranSphericity works.
+
+2019-04-23  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add RIVET_CACHE_PROJECTIONS environment variable, for runtime
+	disabling of the caching mechanism (for debugging and
+	cross-checking).
+
+	* Add optional only_physical and remove_duplicates args (passed
+	through to the Particle methods) to hasParticleAncestorWith and
+	hasParticleDescendantWith functors.
+
+2019-04-08  Przemyslaw Karczmarczyk <przemyslaw.karczmarczyk@cern.ch>
+
+	* Restored behaviour of getData function to return finalized
+	plots by default
+
+2019-04-03  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Remove/protect against last Unicode .encode() calls that broke Python3 compatibility.
+
+	* Remove last assert (for mod2() >= 0) from Vector classes.
+
+2019-04-01  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Move inline projections *inside* analysis classes, since our
+	aggregated build mechanism means there's no longer a unique
+	unnamed namespace for each analysis .cc file.
+
+	* Adding analyses ATLAS_2018_I1677498 (WWbb), ATLAS_2018_I1711114
+	(g -> bb), and ATLAS_2019_I1720442 (4-lepton lineshape).
+
+2019-03-19  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Extend more deltaPhi(x,y) functions with an optional bool for signed dPhi.
+
+	* Add Particle::isSame and isSame(Particle, Particle) functions in
+	lieu of implicit (and wrong) Particle::operator==.
+
+	* Reinstate Particle -> GenParticle as an explicit cast option.
+
+2019-03-15  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add CMS_2018_I1686000.cc single-top plus photon analysis (with
+	an info file warning about fiducial definition oddity)
+
+	* Remove Particle -> GenParticle implicit cast.
+
+	* analyses/pluginCMS/CMS_2018_I1682495.cc: Fix normalisation of
+	final plots (patch from Sal Rappoccio, spot by Deepak Kar)
+
+2019-02-27  Andy Buckley  <andy.buckley@cern.ch>
+
+	* bin/make-plots: Fix a few Py2/3 incompabilities in
+	make-plots. Thanks to Leif Gellersen for the tip-off
+
+	* analyses/Makefile.am: Adopt a more make-friendly plugin building
+	rule. Thanks to Dima Konstantinov.
+
+2019-02-24  Jon Butterworth  <j.butterworth@ucl.ac.uk>
+
+	* Fix multiple bugs in ATLAS_2017_I1514251 (Z+jets) including a
+	problem with REF data having zero bin widths
+
+2019-02-17  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Convert ATLAS_2013_I1217863 analysis variants to use the LMODE
+	analysis option (from Jon Butterworth).
+
 2019-02-15  Leif Lönnblad  <Leif.Lonnblad@thep.lu.se>
 
 	* Release 2.7.0

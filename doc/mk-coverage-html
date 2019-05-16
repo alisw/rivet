@@ -40,11 +40,14 @@ args = ap.parse_args()
 import datetime
 now = datetime.datetime.now()
 
-EXPTS = ["ALICE", "ATLAS", "CMS", "LHCb", "Other"]
-
+## Experiment (grouping) names and regex patterns
+import re
+EXPTS = ["ALICE", "ATLAS", "CMS", "LHCb", "B-factories", "HERA", "Other"]
+EXPT_PATTS = ["ALICE", "ATLAS", "CMS", "LHCb", "BABAR|BELLE", "H1|ZEUS"]
+EXPT_REOBJS = [re.compile(patt, re.I) for patt in EXPT_PATTS]
 
 ## Add the rivet Python module build dir(s) to the Python module path, then import
-import os, sys, re
+import os, sys
 pybuild = os.path.abspath(os.path.join(os.getcwd(), "..", "pyext", "build"))
 pydirs = [os.path.join(pybuild, d) for d in os.listdir(pybuild)
           if re.match(r"lib\..*-.*-%d\.%d" % (sys.version_info[0], sys.version_info[1]), d)]
@@ -136,7 +139,7 @@ for ins, rec in records.items():
     title = rec[0] or ""
     if "search" in title.lower():
         code += " search"
-    if any(re.search(x, title) is not None for x in ["Pb", "Xe", "lead[ ,$]", "heavy[- ]ion"]):
+    if any(re.search(x, title) is not None for x in ["Pb", "Xe", "Au", "U+U", "gold", "lead[ ,$]", "heavy[- ]ion"]):
         code += " heavyion"
 
     rm = False
@@ -154,12 +157,17 @@ for ins, rec in records.items():
 ## Group and count records by experiment (and update rank file if requested)
 ex_records = {}
 ex_ntots, ex_ndefaults, ex_nurgents, ex_nwanteds, ex_ntargets, ex_nrivets = {}, {}, {}, {}, {}, {}
-for ex in EXPTS:
+for iex, ex in enumerate(EXPTS):
+
+    ## Name matching
     if ex != "Other":
-        ex_records[ex] = {ins : rec for ins, rec in records.items() if rec[1].upper() == ex.upper()}
+        ex_records[ex] = {ins : rec for ins, rec in records.items()
+                          if EXPT_REOBJS[iex].match(rec[1])}
     else:
-        namedexpts = [e.upper() for e in EXPTS[:-1]]
-        ex_records[ex] = {ins : rec for ins, rec in records.items() if rec[1].upper() not in namedexpts}
+        ex_records[ex] = {ins : rec for ins, rec in records.items()
+                          if not any(reobj.match(rec[1]) for reobj in EXPT_REOBJS)}
+
+    ## Count matches
     ex_ntots[ex] = len(ex_records[ex])
     ex_nrivets[ex] = len([ins for ins, rec in ex_records[ex].items() if "rivet" in rec[-1]])
     ex_ndefaults[ex] = len([ins for ins, rec in ex_records[ex].items() if "default" in rec[-1]])
@@ -213,7 +221,7 @@ if args.NOHEAVYION:
 import html
 OUT = html.HTML("html")
 
-title = "Rivet LHC analysis coverage"
+title = "Rivet analysis coverage"
 exclstr = " ({})".format(", ".join(excls)) if excls else ""
 title += exclstr
 

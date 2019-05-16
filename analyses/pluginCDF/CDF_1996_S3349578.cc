@@ -22,7 +22,7 @@ namespace Rivet {
     void init() {
 
       /// Initialise and register projections here
-      const FinalState fs(-4.2, 4.2);
+      const FinalState fs(Cuts::abseta < 4.2);
       FastJets fj(fs, FastJets::CDFJETCLU, 0.7);
       declare(fj, "Jets");
 

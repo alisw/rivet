@@ -98,12 +98,12 @@ namespace Rivet {
 
       // Fill yield histograms.
 
-      _histNpi->fill(Npi, weight);
-      _histNpibar->fill(Npibar, weight);
-      _histNKaon->fill(NKaon, weight);
-      _histNKaonbar->fill(NKaonbar, weight);
-      _histNproton->fill(Nproton, weight);
-      _histNprotonbar->fill(Nprotonbar, weight);
+      _histNpi->fill(0.0, Npi, weight);
+      _histNpibar->fill(0.0, Npibar, weight);
+      _histNKaon->fill(0.0, NKaon, weight);
+      _histNKaonbar->fill(0.0, NKaonbar, weight);
+      _histNproton->fill(0.0, Nproton, weight);
+      _histNprotonbar->fill(0.0, Nprotonbar, weight);
     }
 
 

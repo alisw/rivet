@@ -1,37 +1,47 @@
-BEGIN YODA_SCATTER2D /REF/CMS_2017_I1610623/d01-x01-y01
-IsRef=1
-Path=/REF/CMS_2017_I1610623/d01-x01-y01
-Title=doi:10.17182/hepdata.79859.v1/t1
-Type=Scatter2D
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+BEGIN YODA_SCATTER2D_V2 /REF/CMS_2017_I1610623/d01-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -24.12, up: 24.12}}, 1: {error: {dn: -16.08, up: 16.08}}, 2: {error: {dn: -4.482, up: 4.482}}, 3: {error: {dn: -1.376, up: 1.376}}, 4: {error: {dn: -0.4704, up: 0.4704}}, 5: {error: {dn: -0.1516, up: 0.1516}}}
+
+IsRef: 1
+Path: /REF/CMS_2017_I1610623/d01-x01-y01
+Title: doi:10.17182/hepdata.79859.v1/t1
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 1.000000e+00	5.000000e-01	5.000000e-01	8.326000e+02	2.412000e+01	2.412000e+01
 2.000000e+00	5.000000e-01	5.000000e-01	1.894000e+02	1.608000e+01	1.608000e+01
 3.000000e+00	5.000000e-01	5.000000e-01	3.907000e+01	4.482000e+00	4.482000e+00
 4.000000e+00	5.000000e-01	5.000000e-01	8.587000e+00	1.376000e+00	1.376000e+00
 5.000000e+00	5.000000e-01	5.000000e-01	2.210000e+00	4.704000e-01	4.704000e-01
 6.000000e+00	5.000000e-01	5.000000e-01	4.923000e-01	1.516000e-01	1.516000e-01
-END YODA_SCATTER2D
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/CMS_2017_I1610623/d02-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -29.37, up: 29.37}}, 1: {error: {dn: -16.76, up: 16.76}}, 2: {error: {dn: -4.715, up: 4.715}}, 3: {error: {dn: -1.463, up: 1.463}}, 4: {error: {dn: -0.4967, up: 0.4967}}, 5: {error: {dn: -0.1596, up: 0.1596}}}
 
-BEGIN YODA_SCATTER2D /REF/CMS_2017_I1610623/d02-x01-y01
-IsRef=1
-Path=/REF/CMS_2017_I1610623/d02-x01-y01
-Title=doi:10.17182/hepdata.79859.v1/t2
-Type=Scatter2D
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+IsRef: 1
+Path: /REF/CMS_2017_I1610623/d02-x01-y01
+Title: doi:10.17182/hepdata.79859.v1/t2
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 1.000000e+00	5.000000e-01	5.000000e-01	1.072000e+03	2.937000e+01	2.937000e+01
 2.000000e+00	5.000000e-01	5.000000e-01	2.399000e+02	1.676000e+01	1.676000e+01
 3.000000e+00	5.000000e-01	5.000000e-01	5.046000e+01	4.715000e+00	4.715000e+00
 4.000000e+00	5.000000e-01	5.000000e-01	1.139000e+01	1.463000e+00	1.463000e+00
 5.000000e+00	5.000000e-01	5.000000e-01	2.801000e+00	4.967000e-01	4.967000e-01
 6.000000e+00	5.000000e-01	5.000000e-01	5.903000e-01	1.596000e-01	1.596000e-01
-END YODA_SCATTER2D
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/CMS_2017_I1610623/d03-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -2.404, up: 2.404}}, 1: {error: {dn: -1.56, up: 1.56}}, 2: {error: {dn: -0.7748, up: 0.7748}}, 3: {error: {dn: -0.3438, up: 0.3438}}, 4: {error: {dn: -0.1635, up: 0.1635}}, 5: {error: {dn: -0.07479, up: 0.07479}}, 6: {error: {dn: -0.02982, up: 0.02982}}, 7: {error: {dn: -0.01535, up: 0.01535}}, 8: {error: {dn: -0.005253, up: 0.005253}}, 9: {error: {dn: -0.001921, up: 0.001921}}, 10: {error: {dn: -0.000608, up: 0.000608}}, 11: {error: {dn: -0.0001164, up: 0.0001164}}}
 
-BEGIN YODA_SCATTER2D /REF/CMS_2017_I1610623/d03-x01-y01
-IsRef=1
-Path=/REF/CMS_2017_I1610623/d03-x01-y01
-Title=doi:10.17182/hepdata.79859.v1/t3
-Type=Scatter2D
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+IsRef: 1
+Path: /REF/CMS_2017_I1610623/d03-x01-y01
+Title: doi:10.17182/hepdata.79859.v1/t3
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 3.450000e+01	4.500000e+00	4.500000e+00	3.947000e+01	2.404000e+00	2.404000e+00
 4.400000e+01	5.000000e+00	5.000000e+00	2.319000e+01	1.560000e+00	1.560000e+00
 5.550000e+01	6.500000e+00	6.500000e+00	1.359000e+01	7.748000e-01	7.748000e-01
@@ -44,14 +54,17 @@ Type=Scatter2D
 3.345000e+02	4.050000e+01	4.050000e+01	2.928000e-02	1.921000e-03	1.921000e-03
 4.625000e+02	8.750000e+01	8.750000e+01	6.415000e-03	6.080000e-04	6.080000e-04
 7.250000e+02	1.750000e+02	1.750000e+02	7.925000e-04	1.164000e-04	1.164000e-04
-END YODA_SCATTER2D
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/CMS_2017_I1610623/d04-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.7847, up: 0.7847}}, 1: {error: {dn: -0.395, up: 0.395}}, 2: {error: {dn: -0.1751, up: 0.1751}}, 3: {error: {dn: -0.07473, up: 0.07473}}, 4: {error: {dn: -0.03604, up: 0.03604}}, 5: {error: {dn: -0.01401, up: 0.01401}}, 6: {error: {dn: -0.006058, up: 0.006058}}, 7: {error: {dn: -0.003239, up: 0.003239}}, 8: {error: {dn: -0.001501, up: 0.001501}}, 9: {error: {dn: -0.0006895, up: 0.0006895}}, 10: {error: {dn: -0.0002709, up: 0.0002709}}}
 
-BEGIN YODA_SCATTER2D /REF/CMS_2017_I1610623/d04-x01-y01
-IsRef=1
-Path=/REF/CMS_2017_I1610623/d04-x01-y01
-Title=doi:10.17182/hepdata.79859.v1/t4
-Type=Scatter2D
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+IsRef: 1
+Path: /REF/CMS_2017_I1610623/d04-x01-y01
+Title: doi:10.17182/hepdata.79859.v1/t4
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 3.450000e+01	4.500000e+00	4.500000e+00	1.039000e+01	7.847000e-01	7.847000e-01
 4.400000e+01	5.000000e+00	5.000000e+00	5.272000e+00	3.950000e-01	3.950000e-01
 5.550000e+01	6.500000e+00	6.500000e+00	2.722000e+00	1.751000e-01	1.751000e-01
@@ -63,14 +76,17 @@ Type=Scatter2D
 2.675000e+02	3.250000e+01	3.250000e+01	1.459000e-02	1.501000e-03	1.501000e-03
 3.400000e+02	4.000000e+01	4.000000e+01	4.704000e-03	6.895000e-04	6.895000e-04
 4.400000e+02	6.000000e+01	6.000000e+01	1.619000e-03	2.709000e-04	2.709000e-04
-END YODA_SCATTER2D
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/CMS_2017_I1610623/d05-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.2271, up: 0.2271}}, 1: {error: {dn: -0.06669, up: 0.06669}}, 2: {error: {dn: -0.02398, up: 0.02398}}, 3: {error: {dn: -0.006557, up: 0.006557}}, 4: {error: {dn: -0.002288, up: 0.002288}}, 5: {error: {dn: -0.000932, up: 0.000932}}, 6: {error: {dn: -0.0002958, up: 0.0002958}}}
 
-BEGIN YODA_SCATTER2D /REF/CMS_2017_I1610623/d05-x01-y01
-IsRef=1
-Path=/REF/CMS_2017_I1610623/d05-x01-y01
-Title=doi:10.17182/hepdata.79859.v1/t5
-Type=Scatter2D
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+IsRef: 1
+Path: /REF/CMS_2017_I1610623/d05-x01-y01
+Title: doi:10.17182/hepdata.79859.v1/t5
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 3.550000e+01	5.500000e+00	5.500000e+00	2.407000e+00	2.271000e-01	2.271000e-01
 5.000000e+01	9.000000e+00	9.000000e+00	7.765000e-01	6.669000e-02	6.669000e-02
 7.000000e+01	1.100000e+01	1.100000e+01	2.319000e-01	2.398000e-02	2.398000e-02
@@ -78,28 +94,34 @@ Type=Scatter2D
 1.310000e+02	2.100000e+01	2.100000e+01	1.898000e-02	2.288000e-03	2.288000e-03
 1.760000e+02	2.400000e+01	2.400000e+01	6.092000e-03	9.320000e-04	9.320000e-04
 2.500000e+02	5.000000e+01	5.000000e+01	9.463000e-04	2.958000e-04	2.958000e-04
-END YODA_SCATTER2D
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/CMS_2017_I1610623/d06-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.07782, up: 0.07782}}, 1: {error: {dn: -0.03533, up: 0.03533}}, 2: {error: {dn: -0.01427, up: 0.01427}}, 3: {error: {dn: -0.006103, up: 0.006103}}, 4: {error: {dn: -0.002994, up: 0.002994}}, 5: {error: {dn: -0.0004843, up: 0.0004843}}}
 
-BEGIN YODA_SCATTER2D /REF/CMS_2017_I1610623/d06-x01-y01
-IsRef=1
-Path=/REF/CMS_2017_I1610623/d06-x01-y01
-Title=doi:10.17182/hepdata.79859.v1/t6
-Type=Scatter2D
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+IsRef: 1
+Path: /REF/CMS_2017_I1610623/d06-x01-y01
+Title: doi:10.17182/hepdata.79859.v1/t6
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 3.450000e+01	4.500000e+00	4.500000e+00	6.514000e-01	7.782000e-02	7.782000e-02
 4.400000e+01	5.000000e+00	5.000000e+00	2.412000e-01	3.533000e-02	3.533000e-02
 5.550000e+01	6.500000e+00	6.500000e+00	9.452000e-02	1.427000e-02	1.427000e-02
 7.000000e+01	8.000000e+00	8.000000e+00	4.072000e-02	6.103000e-03	6.103000e-03
 8.700000e+01	9.000000e+00	9.000000e+00	1.680000e-02	2.994000e-03	2.994000e-03
 1.380000e+02	4.200000e+01	4.200000e+01	1.989000e-03	4.843000e-04	4.843000e-04
-END YODA_SCATTER2D
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/CMS_2017_I1610623/d07-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -34.37, up: 34.37}}, 1: {error: {dn: -32.95, up: 32.95}}, 2: {error: {dn: -32.45, up: 32.45}}, 3: {error: {dn: -32.46, up: 32.46}}, 4: {error: {dn: -30.73, up: 30.73}}, 5: {error: {dn: -31.21, up: 31.21}}, 6: {error: {dn: -27.63, up: 27.63}}, 7: {error: {dn: -26.99, up: 26.99}}, 8: {error: {dn: -24.57, up: 24.57}}, 9: {error: {dn: -25.09, up: 25.09}}, 10: {error: {dn: -23.18, up: 23.18}}, 11: {error: {dn: -20.81, up: 20.81}}}
 
-BEGIN YODA_SCATTER2D /REF/CMS_2017_I1610623/d07-x01-y01
-IsRef=1
-Path=/REF/CMS_2017_I1610623/d07-x01-y01
-Title=doi:10.17182/hepdata.79859.v1/t7
-Type=Scatter2D
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+IsRef: 1
+Path: /REF/CMS_2017_I1610623/d07-x01-y01
+Title: doi:10.17182/hepdata.79859.v1/t7
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 1.000000e-01	1.000000e-01	1.000000e-01	5.772000e+02	3.437000e+01	3.437000e+01
 3.000000e-01	1.000000e-01	1.000000e-01	5.710000e+02	3.295000e+01	3.295000e+01
 5.000000e-01	1.000000e-01	1.000000e-01	5.571000e+02	3.245000e+01	3.245000e+01
@@ -112,14 +134,17 @@ Type=Scatter2D
 1.900000e+00	1.000000e-01	1.000000e-01	3.548000e+02	2.509000e+01	2.509000e+01
 2.100000e+00	1.000000e-01	1.000000e-01	3.153000e+02	2.318000e+01	2.318000e+01
 2.300000e+00	1.000000e-01	1.000000e-01	2.690000e+02	2.081000e+01	2.081000e+01
-END YODA_SCATTER2D
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/CMS_2017_I1610623/d08-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -9.328, up: 9.328}}, 1: {error: {dn: -9.264, up: 9.264}}, 2: {error: {dn: -8.902, up: 8.902}}, 3: {error: {dn: -9.404, up: 9.404}}, 4: {error: {dn: -9.04, up: 9.04}}, 5: {error: {dn: -8.762, up: 8.762}}, 6: {error: {dn: -8.095, up: 8.095}}, 7: {error: {dn: -7.842, up: 7.842}}, 8: {error: {dn: -7.422, up: 7.422}}, 9: {error: {dn: -7.769, up: 7.769}}, 10: {error: {dn: -6.951, up: 6.951}}, 11: {error: {dn: -6.547, up: 6.547}}}
 
-BEGIN YODA_SCATTER2D /REF/CMS_2017_I1610623/d08-x01-y01
-IsRef=1
-Path=/REF/CMS_2017_I1610623/d08-x01-y01
-Title=doi:10.17182/hepdata.79859.v1/t8
-Type=Scatter2D
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+IsRef: 1
+Path: /REF/CMS_2017_I1610623/d08-x01-y01
+Title: doi:10.17182/hepdata.79859.v1/t8
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 1.000000e-01	1.000000e-01	1.000000e-01	1.218000e+02	9.328000e+00	9.328000e+00
 3.000000e-01	1.000000e-01	1.000000e-01	1.232000e+02	9.264000e+00	9.264000e+00
 5.000000e-01	1.000000e-01	1.000000e-01	1.196000e+02	8.902000e+00	8.902000e+00
@@ -132,14 +157,17 @@ Type=Scatter2D
 1.900000e+00	1.000000e-01	1.000000e-01	8.233000e+01	7.769000e+00	7.769000e+00
 2.100000e+00	1.000000e-01	1.000000e-01	7.262000e+01	6.951000e+00	6.951000e+00
 2.300000e+00	1.000000e-01	1.000000e-01	6.426000e+01	6.547000e+00	6.547000e+00
-END YODA_SCATTER2D
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/CMS_2017_I1610623/d09-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -2.88, up: 2.88}}, 1: {error: {dn: -2.654, up: 2.654}}, 2: {error: {dn: -2.579, up: 2.579}}, 3: {error: {dn: -2.649, up: 2.649}}, 4: {error: {dn: -2.264, up: 2.264}}, 5: {error: {dn: -2.111, up: 2.111}}, 6: {error: {dn: -2.045, up: 2.045}}, 7: {error: {dn: -1.786, up: 1.786}}}
 
-BEGIN YODA_SCATTER2D /REF/CMS_2017_I1610623/d09-x01-y01
-IsRef=1
-Path=/REF/CMS_2017_I1610623/d09-x01-y01
-Title=doi:10.17182/hepdata.79859.v1/t9
-Type=Scatter2D
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+IsRef: 1
+Path: /REF/CMS_2017_I1610623/d09-x01-y01
+Title: doi:10.17182/hepdata.79859.v1/t9
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 1.500000e-01	1.500000e-01	1.500000e-01	2.564000e+01	2.880000e+00	2.880000e+00
 4.500000e-01	1.500000e-01	1.500000e-01	2.600000e+01	2.654000e+00	2.654000e+00
 7.500000e-01	1.500000e-01	1.500000e-01	2.471000e+01	2.579000e+00	2.579000e+00
@@ -148,14 +176,17 @@ Type=Scatter2D
 1.650000e+00	1.500000e-01	1.500000e-01	1.903000e+01	2.111000e+00	2.111000e+00
 1.950000e+00	1.500000e-01	1.500000e-01	1.647000e+01	2.045000e+00	2.045000e+00
 2.250000e+00	1.500000e-01	1.500000e-01	1.321000e+01	1.786000e+00	1.786000e+00
-END YODA_SCATTER2D
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/CMS_2017_I1610623/d10-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.9756, up: 0.9756}}, 1: {error: {dn: -0.8302, up: 0.8302}}, 2: {error: {dn: -0.9149, up: 0.9149}}, 3: {error: {dn: -0.8631, up: 0.8631}}, 4: {error: {dn: -0.7842, up: 0.7842}}, 5: {error: {dn: -0.6907, up: 0.6907}}, 6: {error: {dn: -0.7183, up: 0.7183}}, 7: {error: {dn: -0.5672, up: 0.5672}}}
 
-BEGIN YODA_SCATTER2D /REF/CMS_2017_I1610623/d10-x01-y01
-IsRef=1
-Path=/REF/CMS_2017_I1610623/d10-x01-y01
-Title=doi:10.17182/hepdata.79859.v1/t10
-Type=Scatter2D
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+IsRef: 1
+Path: /REF/CMS_2017_I1610623/d10-x01-y01
+Title: doi:10.17182/hepdata.79859.v1/t10
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 1.500000e-01	1.500000e-01	1.500000e-01	6.185000e+00	9.756000e-01	9.756000e-01
 4.500000e-01	1.500000e-01	1.500000e-01	5.440000e+00	8.302000e-01	8.302000e-01
 7.500000e-01	1.500000e-01	1.500000e-01	5.504000e+00	9.149000e-01	9.149000e-01
@@ -164,14 +195,17 @@ Type=Scatter2D
 1.650000e+00	1.500000e-01	1.500000e-01	3.630000e+00	6.907000e-01	6.907000e-01
 1.950000e+00	1.500000e-01	1.500000e-01	3.790000e+00	7.183000e-01	7.183000e-01
 2.250000e+00	1.500000e-01	1.500000e-01	2.419000e+00	5.672000e-01	5.672000e-01
-END YODA_SCATTER2D
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/CMS_2017_I1610623/d11-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -2.766, up: 2.766}}, 1: {error: {dn: -1.219, up: 1.219}}, 2: {error: {dn: -0.503, up: 0.503}}, 3: {error: {dn: -0.4032, up: 0.4032}}, 4: {error: {dn: -0.3086, up: 0.3086}}, 5: {error: {dn: -0.1777, up: 0.1777}}, 6: {error: {dn: -0.1098, up: 0.1098}}, 7: {error: {dn: -0.06115, up: 0.06115}}, 8: {error: {dn: -0.03183, up: 0.03183}}, 9: {error: {dn: -0.0175, up: 0.0175}}, 10: {error: {dn: -0.008458, up: 0.008458}}, 11: {error: {dn: -0.004692, up: 0.004692}}, 12: {error: {dn: -0.002875, up: 0.002875}}, 13: {error: {dn: -0.001529, up: 0.001529}}, 14: {error: {dn: -0.0006205, up: 0.0006205}}, 15: {error: {dn: -0.0002428, up: 0.0002428}}, 16: {error: {dn: -7.843e-05, up: 7.843e-05}}}
 
-BEGIN YODA_SCATTER2D /REF/CMS_2017_I1610623/d11-x01-y01
-IsRef=1
-Path=/REF/CMS_2017_I1610623/d11-x01-y01
-Title=doi:10.17182/hepdata.79859.v1/t11
-Type=Scatter2D
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+IsRef: 1
+Path: /REF/CMS_2017_I1610623/d11-x01-y01
+Title: doi:10.17182/hepdata.79859.v1/t11
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 3.450000e+01	4.500000e+00	4.500000e+00	3.768000e+01	2.766000e+00	2.766000e+00
 4.400000e+01	5.000000e+00	5.000000e+00	1.976000e+01	1.219000e+00	1.219000e+00
 5.550000e+01	6.500000e+00	6.500000e+00	1.041000e+01	5.030000e-01	5.030000e-01
@@ -189,14 +223,17 @@ Type=Scatter2D
 7.350000e+02	8.500000e+01	8.500000e+01	5.222000e-03	6.205000e-04	6.205000e-04
 9.600000e+02	1.400000e+02	1.400000e+02	1.860000e-03	2.428000e-04	2.428000e-04
 1.300000e+03	2.000000e+02	2.000000e+02	3.299000e-04	7.843000e-05	7.843000e-05
-END YODA_SCATTER2D
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/CMS_2017_I1610623/d12-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.3157, up: 0.3157}}, 1: {error: {dn: -0.216, up: 0.216}}, 2: {error: {dn: -0.1271, up: 0.1271}}, 3: {error: {dn: -0.08799, up: 0.08799}}, 4: {error: {dn: -0.05288, up: 0.05288}}, 5: {error: {dn: -0.02848, up: 0.02848}}, 6: {error: {dn: -0.01625, up: 0.01625}}, 7: {error: {dn: -0.008015, up: 0.008015}}, 8: {error: {dn: -0.004496, up: 0.004496}}, 9: {error: {dn: -0.002787, up: 0.002787}}, 10: {error: {dn: -0.001483, up: 0.001483}}, 11: {error: {dn: -0.0006661, up: 0.0006661}}, 12: {error: {dn: -0.000181, up: 0.000181}}}
 
-BEGIN YODA_SCATTER2D /REF/CMS_2017_I1610623/d12-x01-y01
-IsRef=1
-Path=/REF/CMS_2017_I1610623/d12-x01-y01
-Title=doi:10.17182/hepdata.79859.v1/t12
-Type=Scatter2D
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+IsRef: 1
+Path: /REF/CMS_2017_I1610623/d12-x01-y01
+Title: doi:10.17182/hepdata.79859.v1/t12
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 6.900000e+01	9.000000e+00	9.000000e+00	1.924000e+00	3.157000e-01	3.157000e-01
 8.700000e+01	9.000000e+00	9.000000e+00	2.386000e+00	2.160000e-01	2.160000e-01
 1.070000e+02	1.100000e+01	1.100000e+01	1.869000e+00	1.271000e-01	1.271000e-01
@@ -210,14 +247,17 @@ Type=Scatter2D
 5.950000e+02	5.500000e+01	5.500000e+01	1.450000e-02	1.483000e-03	1.483000e-03
 7.250000e+02	7.500000e+01	7.500000e+01	5.335000e-03	6.661000e-04	6.661000e-04
 1.000000e+03	2.000000e+02	2.000000e+02	1.656000e-03	1.810000e-04	1.810000e-04
-END YODA_SCATTER2D
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/CMS_2017_I1610623/d13-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.03618, up: 0.03618}}, 1: {error: {dn: -0.02156, up: 0.02156}}, 2: {error: {dn: -0.01314, up: 0.01314}}, 3: {error: {dn: -0.005831, up: 0.005831}}, 4: {error: {dn: -0.002475, up: 0.002475}}, 5: {error: {dn: -0.0006607, up: 0.0006607}}, 6: {error: {dn: -0.0002152, up: 0.0002152}}}
 
-BEGIN YODA_SCATTER2D /REF/CMS_2017_I1610623/d13-x01-y01
-IsRef=1
-Path=/REF/CMS_2017_I1610623/d13-x01-y01
-Title=doi:10.17182/hepdata.79859.v1/t13
-Type=Scatter2D
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+IsRef: 1
+Path: /REF/CMS_2017_I1610623/d13-x01-y01
+Title: doi:10.17182/hepdata.79859.v1/t13
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 1.430000e+02	2.500000e+01	2.500000e+01	2.747000e-01	3.618000e-02	3.618000e-02
 1.940000e+02	2.600000e+01	2.600000e+01	2.210000e-01	2.156000e-02	2.156000e-02
 2.600000e+02	4.000000e+01	4.000000e+01	1.278000e-01	1.314000e-02	1.314000e-02
@@ -225,28 +265,34 @@ Type=Scatter2D
 4.750000e+02	7.500000e+01	7.500000e+01	2.577000e-02	2.475000e-03	2.475000e-03
 6.650000e+02	1.150000e+02	1.150000e+02	6.927000e-03	6.607000e-04	6.607000e-04
 9.400000e+02	1.600000e+02	1.600000e+02	1.781000e-03	2.152000e-04	2.152000e-04
-END YODA_SCATTER2D
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/CMS_2017_I1610623/d14-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.007844, up: 0.007844}}, 1: {error: {dn: -0.0056, up: 0.0056}}, 2: {error: {dn: -0.003116, up: 0.003116}}, 3: {error: {dn: -0.001721, up: 0.001721}}, 4: {error: {dn: -0.0008501, up: 0.0008501}}, 5: {error: {dn: -0.0003304, up: 0.0003304}}}
 
-BEGIN YODA_SCATTER2D /REF/CMS_2017_I1610623/d14-x01-y01
-IsRef=1
-Path=/REF/CMS_2017_I1610623/d14-x01-y01
-Title=doi:10.17182/hepdata.79859.v1/t14
-Type=Scatter2D
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+IsRef: 1
+Path: /REF/CMS_2017_I1610623/d14-x01-y01
+Title: doi:10.17182/hepdata.79859.v1/t14
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 2.280000e+02	2.500000e+01	2.500000e+01	4.037000e-02	7.844000e-03	7.844000e-03
 2.865000e+02	3.350000e+01	3.350000e+01	3.020000e-02	5.600000e-03	5.600000e-03
 3.650000e+02	4.500000e+01	4.500000e+01	2.203000e-02	3.116000e-03	3.116000e-03
 4.700000e+02	6.000000e+01	6.000000e+01	1.219000e-02	1.721000e-03	1.721000e-03
 6.100000e+02	8.000000e+01	8.000000e+01	5.927000e-03	8.501000e-04	8.501000e-04
 8.000000e+02	1.100000e+02	1.100000e+02	1.860000e-03	3.304000e-04	3.304000e-04
-END YODA_SCATTER2D
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/CMS_2017_I1610623/d15-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -8.089, up: 8.089}}, 1: {error: {dn: -8.426, up: 8.426}}, 2: {error: {dn: -9.81, up: 9.81}}, 3: {error: {dn: -11.02, up: 11.02}}, 4: {error: {dn: -12, up: 12}}, 5: {error: {dn: -12.35, up: 12.35}}, 6: {error: {dn: -13.3, up: 13.3}}, 7: {error: {dn: -14.08, up: 14.08}}, 8: {error: {dn: -15.77, up: 15.77}}, 9: {error: {dn: -16.93, up: 16.93}}, 10: {error: {dn: -18.26, up: 18.26}}, 11: {error: {dn: -20.67, up: 20.67}}, 12: {error: {dn: -22.83, up: 22.83}}, 13: {error: {dn: -25.46, up: 25.46}}, 14: {error: {dn: -28.72, up: 28.72}}, 15: {error: {dn: -31.6, up: 31.6}}, 16: {error: {dn: -34.54, up: 34.54}}, 17: {error: {dn: -39.09, up: 39.09}}, 18: {error: {dn: -44.63, up: 44.63}}, 19: {error: {dn: -51.44, up: 51.44}}}
 
-BEGIN YODA_SCATTER2D /REF/CMS_2017_I1610623/d15-x01-y01
-IsRef=1
-Path=/REF/CMS_2017_I1610623/d15-x01-y01
-Title=doi:10.17182/hepdata.79859.v1/t15
-Type=Scatter2D
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+IsRef: 1
+Path: /REF/CMS_2017_I1610623/d15-x01-y01
+Title: doi:10.17182/hepdata.79859.v1/t15
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 7.854000e-02	7.854000e-02	7.854000e-02	8.503000e+01	8.089000e+00	8.089000e+00
 2.356195e-01	7.853950e-02	7.853950e-02	9.005000e+01	8.426000e+00	8.426000e+00
 3.926990e-01	7.854000e-02	7.854000e-02	1.069000e+02	9.810000e+00	9.810000e+00
@@ -267,14 +313,17 @@ Type=Scatter2D
 2.748890e+00	7.854000e-02	7.854000e-02	6.899000e+02	3.909000e+01	3.909000e+01
 2.905970e+00	7.854000e-02	7.854000e-02	7.137000e+02	4.463000e+01	4.463000e+01
 3.063050e+00	7.854000e-02	7.854000e-02	7.157000e+02	5.144000e+01	5.144000e+01
-END YODA_SCATTER2D
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/CMS_2017_I1610623/d16-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -5.18, up: 5.18}}, 1: {error: {dn: -4.919, up: 4.919}}, 2: {error: {dn: -5.651, up: 5.651}}, 3: {error: {dn: -6.201, up: 6.201}}, 4: {error: {dn: -5.906, up: 5.906}}, 5: {error: {dn: -6.073, up: 6.073}}, 6: {error: {dn: -6.004, up: 6.004}}, 7: {error: {dn: -6.419, up: 6.419}}, 8: {error: {dn: -6.686, up: 6.686}}, 9: {error: {dn: -6.233, up: 6.233}}, 10: {error: {dn: -6.953, up: 6.953}}, 11: {error: {dn: -7.02, up: 7.02}}, 12: {error: {dn: -6.771, up: 6.771}}, 13: {error: {dn: -6.886, up: 6.886}}, 14: {error: {dn: -6.903, up: 6.903}}, 15: {error: {dn: -6.549, up: 6.549}}, 16: {error: {dn: -6.885, up: 6.885}}, 17: {error: {dn: -7.251, up: 7.251}}, 18: {error: {dn: -7.37, up: 7.37}}, 19: {error: {dn: -6.848, up: 6.848}}}
 
-BEGIN YODA_SCATTER2D /REF/CMS_2017_I1610623/d16-x01-y01
-IsRef=1
-Path=/REF/CMS_2017_I1610623/d16-x01-y01
-Title=doi:10.17182/hepdata.79859.v1/t16
-Type=Scatter2D
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+IsRef: 1
+Path: /REF/CMS_2017_I1610623/d16-x01-y01
+Title: doi:10.17182/hepdata.79859.v1/t16
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 7.854000e-02	7.854000e-02	7.854000e-02	5.548000e+01	5.180000e+00	5.180000e+00
 2.356195e-01	7.853950e-02	7.853950e-02	5.533000e+01	4.919000e+00	4.919000e+00
 3.926990e-01	7.854000e-02	7.854000e-02	6.054000e+01	5.651000e+00	5.651000e+00
@@ -295,14 +344,17 @@ Type=Scatter2D
 2.748890e+00	7.854000e-02	7.854000e-02	8.638000e+01	7.251000e+00	7.251000e+00
 2.905970e+00	7.854000e-02	7.854000e-02	8.718000e+01	7.370000e+00	7.370000e+00
 3.063050e+00	7.854000e-02	7.854000e-02	8.497000e+01	6.848000e+00	6.848000e+00
-END YODA_SCATTER2D
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/CMS_2017_I1610623/d17-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -1.617, up: 1.617}}, 1: {error: {dn: -1.807, up: 1.807}}, 2: {error: {dn: -1.979, up: 1.979}}, 3: {error: {dn: -1.873, up: 1.873}}, 4: {error: {dn: -2.025, up: 2.025}}, 5: {error: {dn: -1.903, up: 1.903}}, 6: {error: {dn: -1.54, up: 1.54}}, 7: {error: {dn: -2.049, up: 2.049}}, 8: {error: {dn: -1.919, up: 1.919}}, 9: {error: {dn: -2.037, up: 2.037}}, 10: {error: {dn: -1.991, up: 1.991}}, 11: {error: {dn: -2.204, up: 2.204}}, 12: {error: {dn: -2.002, up: 2.002}}, 13: {error: {dn: -2.209, up: 2.209}}, 14: {error: {dn: -2.281, up: 2.281}}, 15: {error: {dn: -2.411, up: 2.411}}}
 
-BEGIN YODA_SCATTER2D /REF/CMS_2017_I1610623/d17-x01-y01
-IsRef=1
-Path=/REF/CMS_2017_I1610623/d17-x01-y01
-Title=doi:10.17182/hepdata.79859.v1/t17
-Type=Scatter2D
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+IsRef: 1
+Path: /REF/CMS_2017_I1610623/d17-x01-y01
+Title: doi:10.17182/hepdata.79859.v1/t17
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 9.817500e-02	9.817500e-02	9.817500e-02	1.152000e+01	1.617000e+00	1.617000e+00
 2.945245e-01	9.817450e-02	9.817450e-02	1.175000e+01	1.807000e+00	1.807000e+00
 4.908740e-01	9.817500e-02	9.817500e-02	1.418000e+01	1.979000e+00	1.979000e+00
@@ -319,14 +371,17 @@ Type=Scatter2D
 2.650715e+00	9.817500e-02	9.817500e-02	1.975000e+01	2.209000e+00	2.209000e+00
 2.847065e+00	9.817500e-02	9.817500e-02	2.104000e+01	2.281000e+00	2.281000e+00
 3.043415e+00	9.817500e-02	9.817500e-02	1.909000e+01	2.411000e+00	2.411000e+00
-END YODA_SCATTER2D
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/CMS_2017_I1610623/d18-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.535, up: 0.535}}, 1: {error: {dn: -0.5408, up: 0.5408}}, 2: {error: {dn: -0.6792, up: 0.6792}}, 3: {error: {dn: -0.7588, up: 0.7588}}, 4: {error: {dn: -0.8843, up: 0.8843}}, 5: {error: {dn: -0.7162, up: 0.7162}}, 6: {error: {dn: -0.6824, up: 0.6824}}, 7: {error: {dn: -0.6476, up: 0.6476}}, 8: {error: {dn: -0.8105, up: 0.8105}}, 9: {error: {dn: -0.9618, up: 0.9618}}, 10: {error: {dn: -0.7497, up: 0.7497}}, 11: {error: {dn: -0.7465, up: 0.7465}}, 12: {error: {dn: -0.7251, up: 0.7251}}, 13: {error: {dn: -0.7816, up: 0.7816}}, 14: {error: {dn: -0.8885, up: 0.8885}}, 15: {error: {dn: -0.6768, up: 0.6768}}}
 
-BEGIN YODA_SCATTER2D /REF/CMS_2017_I1610623/d18-x01-y01
-IsRef=1
-Path=/REF/CMS_2017_I1610623/d18-x01-y01
-Title=doi:10.17182/hepdata.79859.v1/t18
-Type=Scatter2D
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+IsRef: 1
+Path: /REF/CMS_2017_I1610623/d18-x01-y01
+Title: doi:10.17182/hepdata.79859.v1/t18
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 9.817500e-02	9.817500e-02	9.817500e-02	2.350000e+00	5.350000e-01	5.350000e-01
 2.945245e-01	9.817450e-02	9.817450e-02	2.678000e+00	5.408000e-01	5.408000e-01
 4.908740e-01	9.817500e-02	9.817500e-02	3.320000e+00	6.792000e-01	6.792000e-01
@@ -343,14 +398,17 @@ Type=Scatter2D
 2.650715e+00	9.817500e-02	9.817500e-02	3.920000e+00	7.816000e-01	7.816000e-01
 2.847065e+00	9.817500e-02	9.817500e-02	3.190000e+00	8.885000e-01	8.885000e-01
 3.043415e+00	9.817500e-02	9.817500e-02	4.092000e+00	6.768000e-01	6.768000e-01
-END YODA_SCATTER2D
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/CMS_2017_I1610623/d19-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: 0, up: 0}}, 1: {error: {dn: 0, up: 0}}, 2: {error: {dn: -0.2184, up: 0.2184}}, 3: {error: {dn: -0.2197, up: 0.2197}}, 4: {error: {dn: -0.2464, up: 0.2464}}, 5: {error: {dn: -0.1897, up: 0.1897}}, 6: {error: {dn: -0.2192, up: 0.2192}}, 7: {error: {dn: -0.1944, up: 0.1944}}, 8: {error: {dn: -0.1673, up: 0.1673}}, 9: {error: {dn: -0.1408, up: 0.1408}}, 10: {error: {dn: -0.1522, up: 0.1522}}, 11: {error: {dn: -0.1405, up: 0.1405}}, 12: {error: {dn: -0.155, up: 0.155}}, 13: {error: {dn: -0.1798, up: 0.1798}}, 14: {error: {dn: -0.2556, up: 0.2556}}, 15: {error: {dn: -0.3167, up: 0.3167}}, 16: {error: {dn: -0.1641, up: 0.1641}}, 17: {error: {dn: -0.1502, up: 0.1502}}, 18: {error: {dn: -0.2717, up: 0.2717}}, 19: {error: {dn: -0.07565, up: 0.07565}}}
 
-BEGIN YODA_SCATTER2D /REF/CMS_2017_I1610623/d19-x01-y01
-IsRef=1
-Path=/REF/CMS_2017_I1610623/d19-x01-y01
-Title=doi:10.17182/hepdata.79859.v1/t19
-Type=Scatter2D
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+IsRef: 1
+Path: /REF/CMS_2017_I1610623/d19-x01-y01
+Title: doi:10.17182/hepdata.79859.v1/t19
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 1.000000e-01	1.000000e-01	1.000000e-01	0.000000e+00	0.000000e+00	0.000000e+00
 3.000000e-01	1.000000e-01	1.000000e-01	0.000000e+00	0.000000e+00	0.000000e+00
 5.000000e-01	1.000000e-01	1.000000e-01	7.429000e-01	2.184000e-01	2.184000e-01
@@ -371,5 +429,4 @@ Type=Scatter2D
 3.500000e+00	1.000000e-01	1.000000e-01	3.947000e-01	1.502000e-01	1.502000e-01
 3.700000e+00	1.000000e-01	1.000000e-01	5.237000e-01	2.717000e-01	2.717000e-01
 3.900000e+00	1.000000e-01	1.000000e-01	1.550000e-01	7.565000e-02	7.565000e-02
-END YODA_SCATTER2D
-
+END YODA_SCATTER2D_V2

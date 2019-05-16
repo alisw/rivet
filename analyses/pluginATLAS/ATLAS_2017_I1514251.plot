@@ -96,4 +96,6 @@ XLabel=$M$(leading, second jet) [GeV]
 # END PLOT
 
 
-
+# BEGIN PLOT /ATLAS_2017_I1514251/d1
+Title=$Z \rightarrow e^+ e^-$, dressed level
+# END PLOT

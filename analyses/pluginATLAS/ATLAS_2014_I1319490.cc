@@ -20,8 +20,8 @@ namespace Rivet {
 
      // Get options from the new option system
       _mode = 0;
-      if ( getOption("LMODE") == "EL" ) _mode = 0;
-      if ( getOption("LMODE") == "MU" ) _mode = 1;
+      if ( getOption("LMODE") == "EL" ) _mode = 1;
+      if ( getOption("LMODE") == "MU" ) _mode = 2;
 
       FinalState fs;
 
@@ -35,13 +35,18 @@ namespace Rivet {
       }
 
       // bosons
-      WFinder wfinder(fs, cuts, _mode > 1? PID::MUON : PID::ELECTRON, 40.0*GeV, MAXDOUBLE, 0.0*GeV, 0.1,
+      WFinder wfinder_mu(fs, cuts, PID::MUON, 40.0*GeV, MAXDOUBLE, 0.0*GeV, 0.1,
                       WFinder::CLUSTERNODECAY, WFinder::NOTRACK, WFinder::TRANSMASS);
-      declare(wfinder, "WF");
+      declare(wfinder_mu, "WFmu");
+      WFinder wfinder_el(fs, cuts, PID::ELECTRON, 40.0*GeV, MAXDOUBLE, 0.0*GeV, 0.1,
+                      WFinder::CLUSTERNODECAY, WFinder::NOTRACK, WFinder::TRANSMASS);
+      declare(wfinder_el, "WFel");
 
       // jets
       VetoedFinalState jet_fs(fs);
-      jet_fs.addVetoOnThisFinalState(getProjection<WFinder>("WF"));
+      //jet_fs.addVetoOnThisFinalState(getProjection<WFinder>("WF"));
+      jet_fs.addVetoOnThisFinalState(wfinder_mu);
+      jet_fs.addVetoOnThisFinalState(wfinder_el);
       FastJets jets(jet_fs, FastJets::ANTIKT, 0.4);
       jets.useInvisibles(true);
       declare(jets, "Jets");
@@ -169,16 +174,23 @@ namespace Rivet {
     // Perform the per-event analysis
     void analyze(const Event& event) {
       // Retrieve boson candidate
-      const WFinder& wf = apply<WFinder>(event, "WF");
-      if (wf.empty()) vetoEvent;
+      const WFinder& wfmu = apply<WFinder>(event, "WFmu");
+      const WFinder& wfel = apply<WFinder>(event, "WFel");
+
+      size_t nWmu = wfmu.size();
+      size_t nWel = wfel.size();
+
+      if (_mode == 0 && !((nWmu == 1 && !nWel) || (!nWmu && nWel == 1)))  vetoEvent; // one W->munu OR W->elnu candidate, otherwise veto
+      if (_mode == 1 && !(!nWmu && nWel == 1))  vetoEvent; // one W->elnu candidate, otherwise veto
+      if (_mode == 2 && !(nWmu == 1 && !nWel))  vetoEvent; // one W->munu candidate, otherwise veto
 
       // Retrieve jets
       const JetAlg& jetfs = apply<JetAlg>(event, "Jets");
       Jets all_jets = jetfs.jetsByPt(Cuts::pT > 30.0*GeV && Cuts::absrap < 4.4);
 
-      const Particles& leptons = wf.constituentLeptons();
-      const double missET = wf.constituentNeutrino().pT() / GeV;
-      if (leptons.size() == 1 && missET > 25.0 && wf.mT() > 40.0*GeV) {
+      const Particles& leptons = (nWmu? wfmu : wfel).constituentLeptons();
+      const double missET = (nWmu? wfmu : wfel).constituentNeutrino().pT() / GeV;
+      if (leptons.size() == 1 && missET > 25. && (nWmu? wfmu : wfel).mT() > 40*GeV) {
         const Particle& lep = leptons[0];
         fillPlots(lep, missET, all_jets, event.weight());
       }
@@ -186,10 +198,11 @@ namespace Rivet {
 
 
     void finalize() {
-      const double scalefactor(crossSection() / sumOfWeights());
+      const double sf = _mode? 1.0 : 0.5;
+      const double scalefactor = sf * crossSection() / sumOfWeights();
       /// @todo Update to use C++11 range-for
-      for (map<string, Histo1DPtr>::iterator hit = histos.begin(); hit != histos.end(); ++hit) {
-        scale(hit->second, scalefactor);
+      for (const auto& hist : histos) {
+        scale(hist.second, scalefactor);
       }
     }
 

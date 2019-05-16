@@ -1,60 +1,71 @@
 BEGIN YODA_SCATTER2D_V2 /REF/ALEPH_2002_S4823664/d01-x01-y01
+Variations: [""]
+ErrorBreakdown: {1: {stat: {dn: -0.011, up: 0.011}, sys: {dn: -0.024, up: 0.024}}, 2: {stat: {dn: -0.037, up: 0.037}, sys_1: {dn: -0.082, up: 0.082}, sys_2: {dn: -0.07, up: 0.07}}}
+
 IsRef: 1
 Path: /REF/ALEPH_2002_S4823664/d01-x01-y01
-Title: ~
+Title: doi:10.17182/hepdata.48894.v1/t1
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 5.000000e-01	5.000000e-01	5.000000e-01	1.200000e+00	1.139868e-01	1.139868e-01
 5.500000e-01	4.500000e-01	4.500000e-01	3.550000e-01	2.640076e-02	2.640076e-02
 END YODA_SCATTER2D_V2
-
 BEGIN YODA_SCATTER2D_V2 /REF/ALEPH_2002_S4823664/d01-x01-y02
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.019, up: 0.019}, sys: {dn: -0.033, up: 0.033}}, 2: {stat: {dn: -0.032, up: 0.032}, sys_1: {dn: -0.057, up: 0.057}, sys_2: {dn: -0.024, up: 0.024}}}
+
 IsRef: 1
 Path: /REF/ALEPH_2002_S4823664/d01-x01-y02
-Title: ~
+Title: doi:10.17182/hepdata.48894.v1/t1
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 5.000000e-01	5.000000e-01	5.000000e-01	9.960000e-01	6.963476e-02	6.963476e-02
 5.250000e-01	4.750000e-01	4.750000e-01	5.850000e-01	3.807887e-02	3.807887e-02
 END YODA_SCATTER2D_V2
-
 BEGIN YODA_SCATTER2D_V2 /REF/ALEPH_2002_S4823664/d02-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.0098, up: 0.0098}, sys: {dn: -0.0182, up: 0.0182}}, 1: {stat: {dn: -0.0042, up: 0.0042}, sys: {dn: -0.0077, up: 0.0077}}, 2: {stat: {dn: -0.0028, up: 0.0028}, sys: {dn: -0.0047, up: 0.0047}}, 3: {stat: {dn: -0.0014, up: 0.0014}, sys: {dn: -0.0032, up: 0.0032}}, 4: {stat: {dn: -0.0004, up: 0.0004}, sys: {dn: -0.0009, up: 0.0009}}}
+
 IsRef: 1
 Path: /REF/ALEPH_2002_S4823664/d02-x01-y01
-Title: ~
+Title: doi:10.17182/hepdata.48894.v1/t2
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 1.250000e-01	2.500000e-02	2.500000e-02	1.236000e-01	2.067075e-02	2.067075e-02
 1.750000e-01	2.500000e-02	2.500000e-02	7.530000e-02	8.770975e-03	8.770975e-03
 2.500000e-01	5.000000e-02	5.000000e-02	8.020000e-02	5.470832e-03	5.470832e-03
 4.000000e-01	1.000000e-01	1.000000e-01	6.110000e-02	3.492850e-03	3.492850e-03
 7.500000e-01	2.500000e-01	2.500000e-01	1.460000e-02	9.848858e-04	9.848858e-04
 END YODA_SCATTER2D_V2
-
 BEGIN YODA_SCATTER2D_V2 /REF/ALEPH_2002_S4823664/d02-x01-y02
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.195, up: 0.195}, sys: {dn: -0.363, up: 0.363}}, 1: {stat: {dn: -0.084, up: 0.084}, sys: {dn: -0.154, up: 0.154}}, 2: {stat: {dn: -0.028, up: 0.028}, sys: {dn: -0.047, up: 0.047}}, 3: {stat: {dn: -0.007, up: 0.007}, sys: {dn: -0.016, up: 0.016}}, 4: {stat: {dn: -0.001, up: 0.001}, sys: {dn: -0.002, up: 0.002}}}
+
 IsRef: 1
 Path: /REF/ALEPH_2002_S4823664/d02-x01-y02
-Title: ~
+Title: doi:10.17182/hepdata.48894.v1/t2
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 1.250000e-01	2.500000e-02	2.500000e-02	2.471000e+00	4.120607e-01	4.120607e-01
 1.750000e-01	2.500000e-02	2.500000e-02	1.506000e+00	1.754195e-01	1.754195e-01
 2.500000e-01	5.000000e-02	5.000000e-02	8.020000e-01	5.470832e-02	5.470832e-02
 4.000000e-01	1.000000e-01	1.000000e-01	3.060000e-01	1.746425e-02	1.746425e-02
 7.500000e-01	2.500000e-01	2.500000e-01	2.900000e-02	2.236068e-03	2.236068e-03
 END YODA_SCATTER2D_V2
-
 BEGIN YODA_SCATTER2D_V2 /REF/ALEPH_2002_S4823664/d03-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.0173, up: 0.0173}, sys: {dn: -0.0289, up: 0.0289}}, 1: {stat: {dn: -0.0052, up: 0.0052}, sys: {dn: -0.0065, up: 0.0065}}, 2: {stat: {dn: -0.0027, up: 0.0027}, sys: {dn: -0.0042, up: 0.0042}}, 3: {stat: {dn: -0.0024, up: 0.0024}, sys: {dn: -0.0033, up: 0.0033}}, 4: {stat: {dn: -0.0011, up: 0.0011}, sys: {dn: -0.0017, up: 0.0017}}, 5: {stat: {dn: -0.0004, up: 0.0004}, sys: {dn: -0.0008, up: 0.0008}}}
+
 IsRef: 1
 Path: /REF/ALEPH_2002_S4823664/d03-x01-y01
-Title: ~
+Title: doi:10.17182/hepdata.48894.v1/t3
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 7.500000e-02	2.500000e-02	2.500000e-02	2.222000e-01	3.368234e-02	3.368234e-02
 1.250000e-01	2.500000e-02	2.500000e-02	1.246000e-01	8.324062e-03	8.324062e-03
 1.750000e-01	2.500000e-02	2.500000e-02	8.250000e-02	4.992995e-03	4.992995e-03
@@ -62,14 +73,16 @@ Type: Scatter2D
 4.000000e-01	1.000000e-01	1.000000e-01	5.690000e-02	2.024846e-03	2.024846e-03
 7.500000e-01	2.500000e-01	2.500000e-01	1.390000e-02	8.944272e-04	8.944272e-04
 END YODA_SCATTER2D_V2
-
 BEGIN YODA_SCATTER2D_V2 /REF/ALEPH_2002_S4823664/d03-x01-y02
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.347, up: 0.347}, sys: {dn: -0.578, up: 0.578}}, 1: {stat: {dn: -0.105, up: 0.105}, sys: {dn: -0.13, up: 0.13}}, 2: {stat: {dn: -0.054, up: 0.054}, sys: {dn: -0.084, up: 0.084}}, 3: {stat: {dn: -0.024, up: 0.024}, sys: {dn: -0.033, up: 0.033}}, 4: {stat: {dn: -0.006, up: 0.006}, sys: {dn: -0.009, up: 0.009}}, 5: {stat: {dn: -0.001, up: 0.001}, sys: {dn: -0.002, up: 0.002}}}
+
 IsRef: 1
 Path: /REF/ALEPH_2002_S4823664/d03-x01-y02
-Title: ~
+Title: doi:10.17182/hepdata.48894.v1/t3
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 7.500000e-02	2.500000e-02	2.500000e-02	4.444000e+00	6.741610e-01	6.741610e-01
 1.250000e-01	2.500000e-02	2.500000e-02	2.493000e+00	1.671077e-01	1.671077e-01
 1.750000e-01	2.500000e-02	2.500000e-02	1.650000e+00	9.985990e-02	9.985990e-02

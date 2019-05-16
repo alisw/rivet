@@ -1,89 +1,11 @@
 #include "Rivet/Analysis.hh"
-#include "Rivet/Tools/Logging.hh"
 #include "Rivet/Projections/FinalState.hh"
 #include "Rivet/Projections/FastJets.hh"
 #include "Rivet/Projections/DressedLeptons.hh"
 #include "Rivet/Projections/IdentifiedFinalState.hh"
 #include "Rivet/Projections/VetoedFinalState.hh"
-#include "Rivet/Tools/ParticleName.hh"
-#include "Rivet/Tools/ParticleIdUtils.hh"
 
 namespace Rivet {
-
-  namespace { //< only visible in this compilation unit
-
-
-    /// @brief Special dressed lepton finder
-    ///
-    /// Find dressed leptons by clustering all leptons and photons
-    class SpecialDressedLeptons : public FinalState {
-    public:
-
-      /// Constructor
-      SpecialDressedLeptons(const FinalState& fs, const Cut& cut)
-        : FinalState(cut)
-      {
-        setName("SpecialDressedLeptons");
-        IdentifiedFinalState ifs(fs);
-        ifs.acceptIdPair(PID::PHOTON);
-        ifs.acceptIdPair(PID::ELECTRON);
-        ifs.acceptIdPair(PID::MUON);
-        addProjection(ifs, "IFS");
-        addProjection(FastJets(ifs, FastJets::ANTIKT, 0.1), "LeptonJets");
-      }
-
-      /// Clone on the heap
-      virtual unique_ptr<Projection> clone() const {
-        return unique_ptr<Projection>(new SpecialDressedLeptons(*this));
-      }
-
-      /// Retrieve the dressed leptons
-      const vector<DressedLepton>& dressedLeptons() const { return _clusteredLeptons; }
-
-      /// Perform the calculation
-      void project(const Event& e) {
-        _theParticles.clear();
-        _clusteredLeptons.clear();
-
-        vector<DressedLepton> allClusteredLeptons;
-        const Jets jets = applyProjection<FastJets>(e, "LeptonJets").jetsByPt(5*GeV);
-        for (const Jet& jet : jets) {
-          Particle lepCand;
-          for (const Particle& cand : jet.particles()) {
-            const int absPdgId = cand.abspid();
-            if (absPdgId == PID::ELECTRON || absPdgId == PID::MUON) {
-              if (cand.pt() > lepCand.pt()) lepCand = cand;
-            }
-          }
-          // Central lepton must be the major component
-          if ((lepCand.pt() < jet.pt()/2.) || (lepCand.pdgId() == 0)) continue;
-
-          DressedLepton lepton = DressedLepton(lepCand);
-          for (const Particle& cand : jet.particles()) {
-            if (cand == lepCand) continue;
-            lepton.addPhoton(cand, true);
-          }
-          allClusteredLeptons.push_back(lepton);
-        }
-
-        for (const DressedLepton& lepton : allClusteredLeptons) {
-          if (accept(lepton)) {
-            _clusteredLeptons.push_back(lepton);
-            _theParticles.push_back(lepton.constituentLepton());
-            _theParticles += lepton.constituentPhotons();
-          }
-        }
-      }
-
-    private:
-
-      /// Container which stores the clustered lepton objects
-      vector<DressedLepton> _clusteredLeptons;
-
-    };
-
-  }
-
 
 
   /// Jet multiplicity in lepton+jets ttbar at 8 TeV
@@ -92,7 +14,6 @@ namespace Rivet {
 
     /// Constructor
     DEFAULT_RIVET_ANALYSIS_CTOR(CMS_2016_PAS_TOP_15_006);
-
 
     /// @name Analysis methods
     //@{
@@ -168,6 +89,76 @@ namespace Rivet {
     }
 
     //@}
+
+
+    /// @brief Special dressed lepton finder
+    ///
+    /// Find dressed leptons by clustering all leptons and photons
+    class SpecialDressedLeptons : public FinalState {
+    public:
+
+      /// Constructor
+      SpecialDressedLeptons(const FinalState& fs, const Cut& cut)
+        : FinalState(cut)
+      {
+        setName("SpecialDressedLeptons");
+        IdentifiedFinalState ifs(fs);
+        ifs.acceptIdPair(PID::PHOTON);
+        ifs.acceptIdPair(PID::ELECTRON);
+        ifs.acceptIdPair(PID::MUON);
+        addProjection(ifs, "IFS");
+        addProjection(FastJets(ifs, FastJets::ANTIKT, 0.1), "LeptonJets");
+      }
+
+      /// Clone on the heap
+      virtual unique_ptr<Projection> clone() const {
+        return unique_ptr<Projection>(new SpecialDressedLeptons(*this));
+      }
+
+      /// Retrieve the dressed leptons
+      const vector<DressedLepton>& dressedLeptons() const { return _clusteredLeptons; }
+
+      /// Perform the calculation
+      void project(const Event& e) {
+        _theParticles.clear();
+        _clusteredLeptons.clear();
+
+        vector<DressedLepton> allClusteredLeptons;
+        const Jets jets = applyProjection<FastJets>(e, "LeptonJets").jetsByPt(5*GeV);
+        for (const Jet& jet : jets) {
+          Particle lepCand;
+          for (const Particle& cand : jet.particles()) {
+            const int absPdgId = cand.abspid();
+            if (absPdgId == PID::ELECTRON || absPdgId == PID::MUON) {
+              if (cand.pt() > lepCand.pt()) lepCand = cand;
+            }
+          }
+          // Central lepton must be the major component
+          if ((lepCand.pt() < jet.pt()/2.) || (lepCand.pdgId() == 0)) continue;
+
+          DressedLepton lepton = DressedLepton(lepCand);
+          for (const Particle& cand : jet.particles()) {
+            if (isSame(cand, lepCand)) continue;
+            lepton.addPhoton(cand, true);
+          }
+          allClusteredLeptons.push_back(lepton);
+        }
+
+        for (const DressedLepton& lepton : allClusteredLeptons) {
+          if (accept(lepton)) {
+            _clusteredLeptons.push_back(lepton);
+            _theParticles.push_back(lepton.constituentLepton());
+            _theParticles += lepton.constituentPhotons();
+          }
+        }
+      }
+
+    private:
+
+      /// Container which stores the clustered lepton objects
+      vector<DressedLepton> _clusteredLeptons;
+
+    };
 
 
   private:

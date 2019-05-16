@@ -1,5 +1,7 @@
 // -*- C++ -*-
 #include "Rivet/Analysis.hh"
+#include "Rivet/Projections/FinalState.hh"
+#include "Rivet/Projections/PromptFinalState.hh"
 #include "Rivet/Projections/DressedLeptons.hh"
 #include "Rivet/Projections/VetoedFinalState.hh"
 #include "Rivet/Projections/FastJets.hh"
@@ -31,26 +33,21 @@ namespace Rivet {
       declare(FS,"FS");
 
       // Project photons with pT > 25 GeV and |eta| < 2.37
-      IdentifiedFinalState ph_FS(Cuts::abseta<2.37 && Cuts::pT>25.0*GeV);
-      ph_FS.acceptIdPair(PID::PHOTON);
+      PromptFinalState ph_FS(Cuts::abseta<2.37 && Cuts::pT>25*GeV);
       declare(ph_FS, "PH_FS");
 
       // Project photons for dressing
-      IdentifiedFinalState ph_dressing_FS(FS);
-      ph_dressing_FS.acceptIdPair(PID::PHOTON);
+      FinalState ph_dressing_FS(Cuts::abspid == PID::PHOTON);
 
       // Project bare electrons
-      IdentifiedFinalState el_bare_FS(FS);
-      el_bare_FS.acceptIdPair(PID::ELECTRON);
-      declare(el_bare_FS,"el_bare_FS");
+      PromptFinalState el_bare_FS(Cuts::abseta < 5.0 && Cuts::abspid == PID::ELECTRON);
 
       // Project dressed electrons with pT > 15 GeV and |eta| < 2.47
       DressedLeptons el_dressed_FS(ph_dressing_FS, el_bare_FS, 0.1, Cuts::abseta < 2.47 && Cuts::pT > 15*GeV);
       declare(el_dressed_FS,"EL_DRESSED_FS");
 
       // Project bare muons
-      IdentifiedFinalState mu_bare_FS(FS);
-      mu_bare_FS.acceptIdPair(PID::MUON);
+      PromptFinalState mu_bare_FS(Cuts::abseta < 5.0 && Cuts::abspid == PID::MUON);
 
       // Project dressed muons with pT > 15 GeV and |eta| < 2.47
       //DressedLeptons mu_dressed_FS(ph_dressing_FS, mu_bare_FS, 0.1, true, -2.47, 2.47, 15.0*GeV, false);
@@ -111,14 +108,13 @@ namespace Rivet {
     void analyze(const Event& event) {
 
       const double weight = event.weight();
-      _weight = weight;
 
       // Get final state particles
-      const ParticleVector& FS_ptcls          = apply<FinalState>(event, "FS").particles();
-      const ParticleVector& ptcls_veto_mu_nu  = apply<VetoedFinalState>(event, "VETO_MU_NU_FS").particles();
-      const ParticleVector& photons           = apply<IdentifiedFinalState>(event, "PH_FS").particlesByPt();
-      const vector<DressedLepton>& el_dressed = apply<DressedLeptons>(event, "EL_DRESSED_FS").dressedLeptons();
-      const vector<DressedLepton>& mu_dressed = apply<DressedLeptons>(event, "MU_DRESSED_FS").dressedLeptons();
+      const ParticleVector& FS_ptcls         = apply<FinalState>(event, "FS").particles();
+      const ParticleVector& ptcls_veto_mu_nu = apply<VetoedFinalState>(event, "VETO_MU_NU_FS").particles();
+      const ParticleVector& photons          = apply<PromptFinalState>(event, "PH_FS").particlesByPt();
+      vector<DressedLepton> good_el          = apply<DressedLeptons>(event, "EL_DRESSED_FS").dressedLeptons();
+      vector<DressedLepton> good_mu          = apply<DressedLeptons>(event, "MU_DRESSED_FS").dressedLeptons();
 
       // For isolation calculation
       float dR_iso    = 0.4;
@@ -126,32 +122,28 @@ namespace Rivet {
       FourMomentum ET_iso;
 
       // Fiducial selection: pT > 25 GeV, |eta| < 2.37 and isolation (in cone deltaR = 0.4) is < 14 GeV
-      vector<const Particle*> fid_photons;
-      foreach (const Particle& ph, photons) {
+      Particles fid_photons;
+      for (const Particle& ph : photons) {
 
-	// Veto photons from hadron or tau decay
-	if ( fromHadronDecay(ph) ) continue;
+        // Calculate isolation
+        ET_iso = - ph.momentum();
+        // Loop over fs truth particles (excluding muons and neutrinos)
+        for (const Particle& p : ptcls_veto_mu_nu) {
+          // Check if the truth particle is in a cone of 0.4
+          if ( deltaR(ph, p) < dR_iso ) ET_iso += p.momentum();
+        }
 
-	// Calculate isolation
-	ET_iso = - ph.momentum();
-	// Loop over fs truth particles (excluding muons and neutrinos)
-	foreach (const Particle& p, ptcls_veto_mu_nu) {
-	  // Check if the truth particle is in a cone of 0.4
-	  if ( deltaR(ph.momentum(), p.momentum()) < dR_iso )
-	    ET_iso += p.momentum();
-	}
+        // Check isolation
+        if ( ET_iso.Et() > ETcut_iso ) continue;
 
-	// Check isolation
-	if ( ET_iso.Et() > ETcut_iso ) continue;
-
-	// Fill vector of photons passing fiducial selection
-	fid_photons.push_back(&ph);
+        // Fill vector of photons passing fiducial selection
+        fid_photons.push_back(ph);
       }
 
-      if(fid_photons.size() < 2) vetoEvent;
+      if (fid_photons.size() < 2)  vetoEvent;
 
-      const FourMomentum& y1 = fid_photons[0]->momentum();
-      const FourMomentum& y2 = fid_photons[1]->momentum();
+      const FourMomentum y1 = fid_photons[0].momentum();
+      const FourMomentum y2 = fid_photons[1].momentum();
 
       double m_yy = (y1 + y2).mass();
 
@@ -165,170 +157,146 @@ namespace Rivet {
       // Passed diphoton baseline fiducial selection! //
       // -------------------------------------------- //
 
-      // Electron selection
-      vector<const Particle*> good_el;
-      foreach(const DressedLepton& els, el_dressed)  {
-
-	const Particle& el = els.constituentLepton();
-	if ( el.momentum().pT()        < 15   ) continue;
-	if ( fabs(el.momentum().eta()) > 2.47 ) continue;
-	if ( deltaR(el.momentum(), y1) < 0.4  ) continue;
-	if ( deltaR(el.momentum(), y2) < 0.4  ) continue;
-	if ( fromHadronDecay(el)              ) continue; // Veto electrons from hadron or tau decay
-	good_el.push_back(&el);
-      }
-
-      // Muon selection
-      vector<const Particle*> good_mu;
-      foreach(const DressedLepton& mus, mu_dressed)  {
-
-	const Particle& mu = mus.constituentLepton();
-	if ( mu.momentum().pT()        < 15   ) continue;
-	if ( fabs(mu.momentum().eta()) > 2.47 ) continue;
-	if ( deltaR(mu.momentum(), y1) < 0.4  ) continue;
-	if ( deltaR(mu.momentum(), y2) < 0.4  ) continue;
-	if ( fromHadronDecay(mu)              ) continue; // Veto muons from hadron or tau decay
-	good_mu.push_back(&mu);
-      }
+      // Muon and Electron selection
+      ifilter_discard(good_mu, [&](const DressedLepton& lep) { return deltaR(lep, y1) < 0.4 || deltaR(lep, y2) < 0.4; });
+      ifilter_discard(good_el, [&](const DressedLepton& lep) { return deltaR(lep, y1) < 0.4 || deltaR(lep, y2) < 0.4; });
 
       // Find prompt, invisible particles for missing ET calculation
       // Based on VisibleFinalState projection
       FourMomentum invisible(0,0,0,0);
       foreach (const Particle& p, FS_ptcls) {
 
-	// Veto non-prompt particles (from hadron or tau decay)
-        if ( fromHadronDecay(p) ) continue;
-	// Charged particles are visible
-	if ( PID::threeCharge( p.pid() ) != 0 ) continue;
-	// Neutral hadrons are visible
-	if ( PID::isHadron( p.pid() ) ) continue;
+        // Veto non-prompt particles (from hadron or tau decay)
+        if ( !p.isPrompt() ) continue;
+        // Charged particles are visible
+        if ( PID::threeCharge( p.pid() ) != 0 ) continue;
+        // Neutral hadrons are visible
+        if ( PID::isHadron( p.pid() ) ) continue;
         // Photons are visible
-	if ( p.pid() == PID::PHOTON ) continue;
+        if ( p.pid() == PID::PHOTON ) continue;
         // Gluons are visible (for parton level analyses)
-	if ( p.pid() == PID::GLUON ) continue;
-	// Everything else is invisible
-	invisible += p.momentum();
+        if ( p.pid() == PID::GLUON ) continue;
+        // Everything else is invisible
+        invisible += p.momentum();
       }
       double MET = invisible.Et();
 
       // Jet selection
       // Get jets with pT > 25 GeV and |rapidity| < 4.4
       //const Jets& jets = apply<FastJets>(event, "JETS").jetsByPt(25.0*GeV, MAXDOUBLE, -4.4, 4.4, RAPIDITY);
-      const Jets& jets = apply<FastJets>(event, "JETS").jetsByPt(Cuts::pT>25.0*GeV && Cuts::absrap <4.4);
+      const Jets& jets = apply<FastJets>(event, "JETS").jetsByPt(Cuts::pT>25*GeV && Cuts::absrap <4.4);
 
-      vector<const Jet*> jets_25;
-      vector<const Jet*> jets_30;
-      vector<const Jet*> jets_50;
+      Jets jets_25, jets_30, jets_50;
 
-      foreach (const Jet& jet, jets) {
+      for (const Jet& jet : jets) {
 
-	bool passOverlap = true;
-	// Overlap with leading photons
-	if ( deltaR(y1, jet.momentum()) < 0.4 ) passOverlap = false;
-	if ( deltaR(y2, jet.momentum()) < 0.4 ) passOverlap = false;
+        bool passOverlap = true;
+        // Overlap with leading photons
+        if ( deltaR(y1, jet.momentum()) < 0.4 ) passOverlap = false;
+        if ( deltaR(y2, jet.momentum()) < 0.4 ) passOverlap = false;
 
-	// Overlap with good electrons
-	foreach (const Particle* el, good_el)
-	  if ( deltaR(el->momentum(), jet.momentum()) < 0.2 ) passOverlap = false;
+        // Overlap with good electrons
+        for (const auto& el : good_el) {
+          if ( deltaR(el, jet) < 0.2 ) passOverlap = false;
+        }
 
-	if ( ! passOverlap ) continue;
+        if ( ! passOverlap ) continue;
 
-	if ( fabs(jet.momentum().eta()) < 2.4 || ( fabs(jet.momentum().eta()) > 2.4 && jet.momentum().pT() > 30 ) ) jets_25.push_back(&jet);
-	if ( jet.momentum().pT() > 30 ) jets_30.push_back(&jet);
-	if ( jet.momentum().pT() > 50 ) jets_50.push_back(&jet);
+        if ( jet.abseta() < 2.4 || ( jet.abseta() > 2.4 && jet.pT() > 30*GeV) ) jets_25 += jet;
+        if ( jet.pT() > 30*GeV ) jets_30 += jet;
+        if ( jet.pT() > 50*GeV ) jets_50 += jet;
       }
 
       // Fiducial regions
-      _h_fidXSecs->fill(1,_weight);
-      if ( jets_30.size() >= 1 ) _h_fidXSecs->fill(2, _weight);
-      if ( jets_30.size() >= 2 ) _h_fidXSecs->fill(3, _weight);
-      if ( jets_30.size() >= 3 ) _h_fidXSecs->fill(4, _weight);
-      if ( jets_30.size() >= 2 && passVBFCuts(y1 + y2, jets_30.at(0)->momentum(), jets_30.at(1)->momentum()) ) _h_fidXSecs->fill(5, _weight);
-      if ( (good_el.size() + good_mu.size()) > 0 ) _h_fidXSecs->fill(6, _weight);
-      if ( MET > 80 ) _h_fidXSecs->fill(7, _weight);
+      _h_fidXSecs->fill(1, weight);
+      if ( jets_30.size() >= 1 ) _h_fidXSecs->fill(2, weight);
+      if ( jets_30.size() >= 2 ) _h_fidXSecs->fill(3, weight);
+      if ( jets_30.size() >= 3 ) _h_fidXSecs->fill(4, weight);
+      if ( jets_30.size() >= 2 && passVBFCuts(y1 + y2, jets_30[0].momentum(), jets_30[1].momentum()) ) _h_fidXSecs->fill(5, weight);
+      if ( (good_el.size() + good_mu.size()) > 0 ) _h_fidXSecs->fill(6, weight);
+      if ( MET > 80 ) _h_fidXSecs->fill(7, weight);
 
       // Fill histograms
       // Inclusive variables
       _pT_yy    = (y1 + y2).pT();
-      _y_yy     = fabs( (y1 + y2).rapidity() );
+      _y_yy     = (y1 + y2).absrap();
       _cosTS_CS = cosTS_CS(y1, y2);
       _pTt_yy   = pTt(y1, y2);
       _Dy_yy    = fabs( deltaRap(y1, y2) );
 
       _Njets30 = jets_30.size() > 3 ? 3 : jets_30.size();
       _Njets50 = jets_50.size() > 3 ? 3 : jets_50.size();
-      _h_Njets30->fill(_Njets30, _weight);
-      _h_Njets50->fill(_Njets50, _weight);
+      _h_Njets30->fill(_Njets30, weight);
+      _h_Njets50->fill(_Njets50, weight);
 
-      _pT_j1 = jets_30.size() > 0 ? jets_30.at(0)->momentum().pT() : 0.;
-      _pT_j2 = jets_30.size() > 1 ? jets_30.at(1)->momentum().pT() : 0.;
-      _pT_j3 = jets_30.size() > 2 ? jets_30.at(2)->momentum().pT() : 0.;
+      _pT_j1 = jets_30.size() > 0 ? jets_30[0].momentum().pT() : 0.;
+      _pT_j2 = jets_30.size() > 1 ? jets_30[1].momentum().pT() : 0.;
+      _pT_j3 = jets_30.size() > 2 ? jets_30[2].momentum().pT() : 0.;
 
       _HT = 0.0;
-      foreach (const Jet* jet, jets_30)
-	_HT += jet->momentum().pT();
+      for (const Jet& jet : jets_30) {  _HT += jet.pT(); }
 
       _tau_jet     = tau_jet_max(y1 + y2, jets_25);
       _sum_tau_jet = sum_tau_jet(y1 + y2, jets_25);
 
-      _h_pT_yy        ->fill(_pT_yy    ,_weight);
-      _h_y_yy         ->fill(_y_yy     ,_weight);
-      _h_pT_j1        ->fill(_pT_j1    ,_weight);
-      _h_cosTS_CS     ->fill(_cosTS_CS ,_weight);
-      _h_cosTS_CS_5bin->fill(_cosTS_CS ,_weight);
-      _h_HT           ->fill(_HT       ,_weight);
-      _h_pTt_yy       ->fill(_pTt_yy   ,_weight);
-      _h_Dy_yy        ->fill(_Dy_yy    ,_weight);
-      _h_tau_jet      ->fill(_tau_jet  ,_weight);
-      _h_sum_tau_jet  ->fill(_sum_tau_jet,_weight);
+      _h_pT_yy        ->fill(_pT_yy    ,weight);
+      _h_y_yy         ->fill(_y_yy     ,weight);
+      _h_pT_j1        ->fill(_pT_j1    ,weight);
+      _h_cosTS_CS     ->fill(_cosTS_CS ,weight);
+      _h_cosTS_CS_5bin->fill(_cosTS_CS ,weight);
+      _h_HT           ->fill(_HT       ,weight);
+      _h_pTt_yy       ->fill(_pTt_yy   ,weight);
+      _h_Dy_yy        ->fill(_Dy_yy    ,weight);
+      _h_tau_jet      ->fill(_tau_jet  ,weight);
+      _h_sum_tau_jet  ->fill(_sum_tau_jet,weight);
 
       // >=1 jet variables
       if ( jets_30.size() >= 1 ) {
-	FourMomentum j1 = jets_30[0]->momentum();
-	_y_j1 = fabs( j1.rapidity() );
+        FourMomentum j1 = jets_30[0].momentum();
+        _y_j1 = j1.absrap();
 
-	_h_pT_j2->fill(_pT_j2 ,_weight);
-	_h_y_j1 ->fill(_y_j1  ,_weight);
+        _h_pT_j2->fill(_pT_j2 ,weight);
+        _h_y_j1 ->fill(_y_j1  ,weight);
       }
 
       // >=2 jet variables
       if ( jets_30.size() >= 2 ) {
-	FourMomentum j1 = jets_30[0]->momentum();
-	FourMomentum j2 = jets_30[1]->momentum();
+        FourMomentum j1 = jets_30[0].momentum();
+        FourMomentum j2 = jets_30[1].momentum();
 
-	_Dy_jj      = fabs( deltaRap(j1, j2) );
-	_Dphi_jj    = fabs( deltaPhi(j1, j2) );
-	_Dphi_yy_jj = fabs( deltaPhi(y1 + y2, j1 + j2) );
-	_m_jj       = (j1 + j2).mass();
-	_pT_yy_jj   = (y1 + y2 + j1 + j2).pT();
-	_y_j2       = fabs( j2.rapidity() );
+        _Dy_jj      = fabs( deltaRap(j1, j2) );
+        _Dphi_jj    = fabs( deltaPhi(j1, j2) );
+        _Dphi_yy_jj = fabs( deltaPhi(y1 + y2, j1 + j2) );
+        _m_jj       = (j1 + j2).mass();
+        _pT_yy_jj   = (y1 + y2 + j1 + j2).pT();
+        _y_j2       = j2.absrap();
 
-	_h_Dy_jj      ->fill(_Dy_jj     ,_weight);
-	_h_Dphi_jj    ->fill(_Dphi_jj   ,_weight);
-	_h_Dphi_yy_jj ->fill(_Dphi_yy_jj,_weight);
-	_h_m_jj       ->fill(_m_jj      ,_weight);
-	_h_pT_yy_jj   ->fill(_pT_yy_jj  ,_weight);
-	_h_pT_j3      ->fill(_pT_j3     ,_weight);
-	_h_y_j2       ->fill(_y_j2      ,_weight);
+        _h_Dy_jj      ->fill(_Dy_jj     ,weight);
+        _h_Dphi_jj    ->fill(_Dphi_jj   ,weight);
+        _h_Dphi_yy_jj ->fill(_Dphi_yy_jj,weight);
+        _h_m_jj       ->fill(_m_jj      ,weight);
+        _h_pT_yy_jj   ->fill(_pT_yy_jj  ,weight);
+        _h_pT_j3      ->fill(_pT_j3     ,weight);
+        _h_y_j2       ->fill(_y_j2      ,weight);
       }
 
       // 2D distributions of cosTS_CS x pT_yy
       if ( _pT_yy < 80 )
-	_h_cosTS_pTyy_low->fill(_cosTS_CS, _weight);
+        _h_cosTS_pTyy_low->fill(_cosTS_CS, weight);
       else if ( _pT_yy > 80 && _pT_yy < 200 )
-	_h_cosTS_pTyy_high->fill(_cosTS_CS,_weight);
+        _h_cosTS_pTyy_high->fill(_cosTS_CS,weight);
       else if ( _pT_yy > 200 )
-	_h_cosTS_pTyy_rest->fill(_cosTS_CS,_weight);
+        _h_cosTS_pTyy_rest->fill(_cosTS_CS,weight);
 
       // 2D distributions of pT_yy x Njets
       if ( _Njets30 == 0 )
-	_h_pTyy_Njets0->fill(_pT_yy, _weight);
+        _h_pTyy_Njets0->fill(_pT_yy, weight);
       else if ( _Njets30 == 1 )
-	_h_pTyy_Njets1->fill(_pT_yy, _weight);
+        _h_pTyy_Njets1->fill(_pT_yy, weight);
       else if ( _Njets30 >= 2 )
-	_h_pTyy_Njets2->fill(_pT_yy, _weight);
+        _h_pTyy_Njets2->fill(_pT_yy, weight);
 
-      if ( _Njets30 == 1 ) _h_pTj1_excl->fill(_pT_j1, _weight);
+      if ( _Njets30 == 1 ) _h_pTj1_excl->fill(_pT_j1, weight);
 
     }
 
@@ -368,20 +336,6 @@ namespace Rivet {
       scale(_h_fidXSecs, xs);
     }
 
-    // Trace event record to see if particle came from a hadron (or a tau from a hadron decay)
-    // Based on fromDecay() function
-    bool fromHadronDecay(const Particle& p ) {
-      if (p.genParticle() == NULL) return false;
-      const GenVertex* prodVtx = p.genParticle()->production_vertex();
-      if (prodVtx == NULL) return false;
-      foreach (const GenParticle* ancestor, particles(prodVtx, HepMC::ancestors)) {
-        const PdgId pid = ancestor->pdg_id();
-        if (ancestor->status() == 2 && PID::isHadron(pid)) return true;
-        if (ancestor->status() == 2 && (abs(pid) == PID::TAU && fromHadronDecay(ancestor))) return true;
-      }
-      return false;
-    }
-
     // VBF-enhanced dijet topology selection cuts
     bool passVBFCuts(const FourMomentum &H, const FourMomentum &j1, const FourMomentum &j2) {
       return ( fabs(deltaRap(j1, j2)) > 2.8 && (j1 + j2).mass() > 400 && fabs(deltaPhi(H, j1 + j2)) > 2.6 );
@@ -405,23 +359,21 @@ namespace Rivet {
     }
 
     // Maximal (leading) tau_jet (see paper for description)
-    double tau_jet_max( const FourMomentum &H, const vector<const Jet*> jets, double tau_jet_cut = 8. ) {
+    double tau_jet_max(const FourMomentum &H, const Jets& jets, double tau_jet_cut = 8.) {
       double max_tj = 0;
-      for (size_t i=0; i < jets.size(); ++i) {
-	FourMomentum jet = jets[i]->momentum();
-	if ( tau_jet(H, jet) > tau_jet_cut )
-	  max_tj = max( tau_jet(H, jet), max_tj );
+      for (const auto& jet : jets) {
+        FourMomentum j = jet.momentum();
+        if (tau_jet(H, j) > tau_jet_cut)  max_tj = max(tau_jet(H, j), max_tj);
       }
       return max_tj;
     }
 
     // Scalar sum of tau for all jets (see paper for description)
-    double sum_tau_jet( const FourMomentum &H, const vector<const Jet*> jets, double tau_jet_cut = 8. ) {
+    double sum_tau_jet(const FourMomentum &H, const Jets& jets, double tau_jet_cut = 8.)  {
       double sum_tj = 0;
-      for (size_t i=0; i < jets.size(); ++i) {
-	FourMomentum jet = jets[i]->momentum();
-	if ( tau_jet(H, jet) > tau_jet_cut )
-	  sum_tj += tau_jet(H, jet);
+      for (const auto& jet : jets) {
+        FourMomentum j = jet.momentum();
+        if (tau_jet(H, j) > tau_jet_cut)  sum_tj += tau_jet(H, j);
       }
       return sum_tj;
     }
@@ -458,7 +410,6 @@ namespace Rivet {
     Histo1DPtr _h_pTj1_excl;
     Histo1DPtr _h_fidXSecs;
 
-    double _weight;
     int _Njets30;
     int _Njets50;
     double _pT_yy;

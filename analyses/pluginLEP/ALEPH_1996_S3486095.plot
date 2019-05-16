@@ -189,7 +189,7 @@ FullRange=1
 # END PLOT
 
 # BEGIN PLOT /ALEPH_1996_S3486095/d31-x01-y01
-Title=$\eta'$ spectrum
+Title=$\eta^\prime$ spectrum
 XLabel=$x_E$
 YLabel=$1/\sigma \, \text{d}{\sigma}/\text{d}{x_E}$
 FullRange=1
@@ -282,7 +282,7 @@ Title=Mean $\eta$ multiplicity
 # END PLOT
 
 # BEGIN PLOT /ALEPH_1996_S3486095/d44-x01-y04
-Title=Mean $\eta'$ multiplicity
+Title=Mean $\eta^\prime$ multiplicity
 # END PLOT
 
 # BEGIN PLOT /ALEPH_1996_S3486095/d44-x01-y05

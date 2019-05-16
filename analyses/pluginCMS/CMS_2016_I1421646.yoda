@@ -3,7 +3,6 @@ ErrorBars: 1
 IsRef: 1
 LineColor: black
 Path: /REF/CMS_2016_I1421646/d01-x01-y01
-PolyMarker: !<!> "*"
 Title: Dphi Xsection
 Type: Scatter2D
 ---
@@ -40,7 +39,6 @@ ErrorBars: 1
 IsRef: 1
 LineColor: black
 Path: /REF/CMS_2016_I1421646/d02-x01-y01
-PolyMarker: !<!> "*"
 Title: Unfold Response hdummy_pt300_400 \rightarrow hdummy_pt300_400
 Type: Scatter2D
 ---
@@ -75,7 +73,6 @@ ErrorBars: 1
 IsRef: 1
 LineColor: black
 Path: /REF/CMS_2016_I1421646/d03-x01-y01
-PolyMarker: !<!> "*"
 Title: Unfold Response hdummy_pt400_500 \rightarrow hdummy_pt400_500
 Type: Scatter2D
 ---
@@ -110,7 +107,6 @@ ErrorBars: 1
 IsRef: 1
 LineColor: black
 Path: /REF/CMS_2016_I1421646/d04-x01-y01
-PolyMarker: !<!> "*"
 Title: Unfold Response hdummy_pt500_700 \rightarrow hdummy_pt500_700
 Type: Scatter2D
 ---
@@ -145,7 +141,6 @@ ErrorBars: 1
 IsRef: 1
 LineColor: black
 Path: /REF/CMS_2016_I1421646/d05-x01-y01
-PolyMarker: !<!> "*"
 Title: Unfold Response hdummy_pt700_900 \rightarrow hdummy_pt700_900
 Type: Scatter2D
 ---
@@ -174,7 +169,6 @@ ErrorBars: 1
 IsRef: 1
 LineColor: black
 Path: /REF/CMS_2016_I1421646/d06-x01-y01
-PolyMarker: !<!> "*"
 Title: Unfold Response hdummy_pt900_1100 \rightarrow hdummy_pt900_1100
 Type: Scatter2D
 ---
@@ -199,7 +193,6 @@ ErrorBars: 1
 IsRef: 1
 LineColor: black
 Path: /REF/CMS_2016_I1421646/d07-x01-y01
-PolyMarker: !<!> "*"
 Title: Unfold Response hdummy_pt1100 \rightarrow hdummy_pt1100
 Type: Scatter2D
 ---

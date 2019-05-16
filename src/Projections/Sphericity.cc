@@ -122,30 +122,49 @@ namespace Rivet {
     // If not symmetric, something's wrong (we made sure the error msg appeared first).
     assert(isSymm);
 
-    // Eigenvalues
-    const double q = mMom.trace()/3.;
-    const double p1 = mMom.get(0,1)*mMom.get(0,1) + mMom.get(0,2)*mMom.get(0,2) + mMom.get(1,2)*mMom.get(1,2);
-    const double p2 = (mMom.get(0,0) - q)*(mMom.get(0,0) - q) 
+    // Eigenvalues (z!=0)
+    double l1,l2,l3;
+    if(mMom.get(2,2)!=0.) {
+      const double q = mMom.trace()/3.;
+      const double p1 = mMom.get(0,1)*mMom.get(0,1) + mMom.get(0,2)*mMom.get(0,2) + mMom.get(1,2)*mMom.get(1,2);
+      const double p2 = (mMom.get(0,0) - q)*(mMom.get(0,0) - q)
         + (mMom.get(1,1) - q)*(mMom.get(1,1) - q) +  (mMom.get(2,2) - q)*(mMom.get(2,2) - q) + 2.*p1;
-    const double p = sqrt(p2/6.);
+      const double p = sqrt(p2/6.);
 
-    Matrix3 I3 = Matrix3::mkIdentity();
-    const double r = ( 1./p * (mMom - q*I3)).det()/2.;
+      Matrix3 I3 = Matrix3::mkIdentity();
+      const double r = ( 1./p * (mMom - q*I3)).det()/2.;
 
-    double phi(0);
-    if (r <= -1) phi = M_PI / 3.;
-    else if (r >= 1) phi = 0;
-    else phi = acos(r) / 3.;
+      double phi(0);
+      if (r <= -1) phi = M_PI / 3.;
+      else if (r >= 1) phi = 0;
+      else phi = acos(r) / 3.;
 
-    const double l1 = q + 2 * p * cos(phi);
-    const double l3 = q + 2 * p * cos(phi + (2*M_PI/3.));
-    const double l2 = 3 * q - l1 - l3;
+      l1 = q + 2 * p * cos(phi);
+      l3 = q + 2 * p * cos(phi + (2*M_PI/3.));
+      l2 = 3 * q - l1 - l3;
 
+      _sphAxes.clear();
+      _sphAxes.push_back(mkEigenVector(mMom, l1));
+      _sphAxes.push_back(mkEigenVector(mMom, l2));
+      _sphAxes.push_back(mkEigenVector(mMom, l3));
+    }
+    else {
+      const double a = mMom.get(0,0);
+      const double d = mMom.get(1,1);
+      const double b = mMom.get(0,1);
+      const double disc = sqrt(sqr(a-d)+4.*sqr(b));
+      l1 = 0.5*(a+d+disc);
+      l2 = 0.5*(a+d-disc);
+      l3 = 0.;
+      Vector3 E1(l1-d,b,0.);
+      Vector3 E2(l2-d,b,0.);
+
+      _sphAxes.clear();
+      _sphAxes.push_back(E1.unit());
+      _sphAxes.push_back(E2.unit());
+      _sphAxes.push_back(Vector3(0.,0.,1.));
+    }
     _lambdas.clear();
-    _sphAxes.clear();
-    _sphAxes.push_back(mkEigenVector(mMom, l1));
-    _sphAxes.push_back(mkEigenVector(mMom, l2));
-    _sphAxes.push_back(mkEigenVector(mMom, l3));
     _lambdas.push_back(l1);
     _lambdas.push_back(l2);
     _lambdas.push_back(l3);

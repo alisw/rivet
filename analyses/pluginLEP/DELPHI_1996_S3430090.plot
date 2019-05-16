@@ -285,7 +285,7 @@ Title=Mean $\eta$ multiplicity
 # END PLOT
 
 # BEGIN PLOT /DELPHI_1996_S3430090/d36-x01-y06
-Title=Mean $\eta'$ multiplicity
+Title=Mean $\eta^\prime$ multiplicity
 # END PLOT
 
 # BEGIN PLOT /DELPHI_1996_S3430090/d36-x01-y07

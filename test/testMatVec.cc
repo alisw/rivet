@@ -1,13 +1,27 @@
 #include "Rivet/Math/MathUtils.hh"
 #include "Rivet/Math/Vectors.hh"
 #include "Rivet/Math/Matrices.hh"
-// #include "Rivet/Math/MatrixDiag.hh"
+#include "Rivet/Math/MatrixDiag.hh"
 using namespace Rivet;
 
 #include <iostream>
 #include <limits>
 #include <cassert>
 using namespace std;
+
+
+/// Set up an active Lorentz boost in the z direction
+LorentzTransform mkLTz(const double beta) {
+  assert(abs(beta) < 1);
+  const double gamma = LorentzTransform::beta2gamma(beta);
+  Matrix<4> rtn = Matrix<4>::mkIdentity();
+  rtn.set(0, 0, gamma);
+  rtn.set(3, 3, gamma);
+  rtn.set(0, 3, +beta*gamma); //< +ve coeff since active boost
+  rtn.set(3, 0, +beta*gamma); //< +ve coeff since active boost
+  return LorentzTransform(rtn);
+}
+
 
 int main() {
 
@@ -40,7 +54,7 @@ int main() {
   m.set(1, 1, 13/4.0);
   m.set(2, 2, 9);
   cout << m << endl << endl;
-//  EigenSystem<3> es = diagonalize(m);
+  // EigenSystem<3> es = diagonalize(m);
 
   cout << "Matrices:" << endl;
   cout << Matrix3() << endl;
@@ -121,17 +135,45 @@ int main() {
   cout << "Rot90 on LTx: " << ltX.rotate(rot90) << endl;
   cout << endl;
 
+  LorentzTransform ltY = LorentzTransform::mkObjTransformFromBeta(Vector3(0, 0.5, 0));
+  cout << "LTy: " << ltY << endl;
+  cout << "I on LTy: " << ltY.rotate(Matrix3::mkIdentity()) << endl;
+  cout << "Rot90 on LTy: " << ltY.rotate(rot90) << endl;
+  cout << endl;
+
+  LorentzTransform ltZ = LorentzTransform::mkObjTransformFromBeta(Vector3(0, 0, 0.5));
+  cout << "LTz: " << ltZ << endl;
+  cout << "I on LTz: " << ltZ.rotate(Matrix3::mkIdentity()) << endl;
+  cout << "Rot90 on LTz: " << ltZ.rotate(rot90) << endl;
+  cout << endl;
+
+  LorentzTransform ltZ2 = mkLTz(0.5);
+  cout << "LTz': " << ltZ2 << endl;
+  cout << endl;
+
+  LorentzTransform ltXYZ = LorentzTransform::mkObjTransformFromBeta(Vector3(0.1, -0.2, 0.3));
+  cout << "LTxyz: " << ltXYZ << endl;
+  cout << "I on LTxyz: " << ltXYZ.rotate(Matrix3::mkIdentity()) << endl;
+  cout << "Rot90 on LTxyz: " << ltXYZ.rotate(rot90) << endl;
+  cout << endl;
+
   cout << "X-boosts:" << endl;
   const FourMomentum p1 = FourMomentum(10, 0, 0, 1);
   const FourMomentum p2 = ltX.transform(p1);
   cout << p1 << " -> " << p2 << endl;
   cout << p2 << " -> " << ltX.inverse().transform(p2) << endl;
   //cout << p1.boostVector() << endl;
+  cout << "LT(p1) = " << LorentzTransform::mkFrameTransformFromBeta(p1.boostVector()) << endl;
   const FourMomentum p3 = LorentzTransform::mkFrameTransformFromBeta(p1.boostVector()).transform(p1);
   cout << p1 << " -> " << p3 << endl;
+  assert(isZero(p3.x()));
+  assert(isZero(p3.y()));
+  assert(isZero(p3.z()));
+  assert(p3.E() < p1.E());
+  assert(fuzzyEquals(p3.E(), p1.mass()));
   cout << endl;
 
-  LorentzTransform ltY = LorentzTransform::mkObjTransformFromGamma(Vector3(0, 1.2, 0));
+  // LorentzTransform ltY = LorentzTransform::mkObjTransformFromGamma(Vector3(0, 1.2, 0));
   cout << FourMomentum(1,0,0,1) << " -> " //<< "\n  "
        << (ltX * ltY).transform(FourMomentum(1,0,0,1)) << endl;
   cout << FourMomentum(1,0,0,1) << " -> " //<< "\n  "

@@ -89,7 +89,12 @@ POST_UNINSTALL = :
 build_triplet = @build@
 host_triplet = @host@
 @ENABLE_PYEXT_TRUE@am__append_1 = analyses.html analyses.json \
-@ENABLE_PYEXT_TRUE@	rivet-coverage.html
+@ENABLE_PYEXT_TRUE@	rivet-coverage.html \
+@ENABLE_PYEXT_TRUE@	rivet-coverage-heavyiononly.html \
+@ENABLE_PYEXT_TRUE@	rivet-coverage-noheavyion.html \
+@ENABLE_PYEXT_TRUE@	rivet-coverage-searchesonly.html \
+@ENABLE_PYEXT_TRUE@	rivet-coverage-nosearches.html \
+@ENABLE_PYEXT_TRUE@	rivet-coverage-nosearches-noheavyion.html
 @ENABLE_PYEXT_TRUE@am__append_2 = analyses
 @WITH_ASCIIDOC_TRUE@am__append_3 = compare-histos.html make-plots.html
 @WITH_ASCIIDOC_TRUE@am__append_4 = compare-histos.html make-plots.html

@@ -8,6 +8,7 @@
 
 namespace Rivet {
 
+
   double Event::weight() const {
     // Get the weight index, which defaults to 0, i.e. nominal
     // NB. This should normally only perform the slow env var lookup once per run

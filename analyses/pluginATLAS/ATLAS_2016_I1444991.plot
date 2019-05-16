@@ -42,7 +42,7 @@ LogY=0
 
 # BEGIN PLOT /ATLAS_2016_I1444991/d07-x01-y01
 XLabel=$p_\text{T}^H$ [GeV]
-YLabel=$1/\sigma$ $\text{d}\sigma_\text{fid} / \text{d} p^H_\text{T}$ [1/GeV]
+YLabel=$1/\sigma$ $\text{d}\sigma_\text{fid} / \text{d} p^H_\text{T}$ [10$^{-3}$/GeV]
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2016_I1444991/d08-x01-y01

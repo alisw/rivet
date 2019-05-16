@@ -9,6 +9,7 @@
 #include "Rivet/Projection.hh"
 #include "Rivet/Projections/FinalState.hh"
 #include "Rivet/Projections/LossyFinalState.hh"
+#include "Rivet/Tools/Random.hh"
 
 namespace Rivet {
 

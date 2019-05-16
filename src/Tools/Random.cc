@@ -29,7 +29,8 @@ namespace Rivet {
     }
     mt19937& g = gens[nthread];
     #else
-    static mt19937 g(12345);
+    const uint32_t envseed = getEnvParam<uint32_t>("RIVET_RANDOM_SEED", 12345);
+    static mt19937 g(envseed);
     #endif
     return g;
   }

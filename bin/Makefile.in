@@ -156,7 +156,7 @@ am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(bindir)" \
 	"$(DESTDIR)$(pkgdatadir)"
 am__dist_bin_SCRIPTS_DIST = make-plots make-pgfplots rivet \
 	rivet-mkanalysis rivet-findid rivet-which rivet-diffhepdata \
-	rivet-cmphistos rivet-mkhtml rivet-merge
+	rivet-diffhepdata-all rivet-cmphistos rivet-mkhtml rivet-merge
 SCRIPTS = $(bin_SCRIPTS) $(dist_bin_SCRIPTS)
 AM_V_P = $(am__v_P_@AM_V@)
 am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
@@ -416,6 +416,7 @@ RIVETPROGS = \
     rivet-mkanalysis \
 	  rivet-findid rivet-which \
     rivet-diffhepdata \
+    rivet-diffhepdata-all \
     rivet-cmphistos rivet-mkhtml rivet-merge
 
 @ENABLE_PYEXT_TRUE@dist_pkgdata_DATA = rivet-completion

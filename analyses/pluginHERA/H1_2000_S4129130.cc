@@ -118,62 +118,62 @@ namespace Rivet {
       // Find the bins
       int bin[4] = {-1,-1,-1,-1};
       // For the low Q2 selection a)
-      if (q2 > 2.5*GeV && q2 <= 5.*GeV) {
+      if (q2 > 2.5*GeV2 && q2 <= 5.*GeV2) {
         if (x > 0.00005 && x <= 0.0001 ) bin[0] = 0;
         if (x > 0.0001  && x <= 0.0002 ) bin[0] = 1;
         if (x > 0.0002  && x <= 0.00035) bin[0] = 2;
         if (x > 0.00035 && x <= 0.0010 ) bin[0] = 3;
       }
-      else if (q2 > 5.*GeV && q2 <= 10.*GeV) {
+      else if (q2 > 5.*GeV2 && q2 <= 10.*GeV2) {
         if (x > 0.0001  && x <= 0.0002 ) bin[0] = 4;
         if (x > 0.0002  && x <= 0.00035) bin[0] = 5;
         if (x > 0.00035 && x <= 0.0007 ) bin[0] = 6;
         if (x > 0.0007  && x <= 0.0020 ) bin[0] = 7;
       }
-      else if (q2 > 10.*GeV && q2 <= 20.*GeV) {
+      else if (q2 > 10.*GeV2 && q2 <= 20.*GeV2) {
         if (x > 0.0002 && x <= 0.0005) bin[0] = 8;
         if (x > 0.0005 && x <= 0.0008) bin[0] = 9;
         if (x > 0.0008 && x <= 0.0015) bin[0] = 10;
         if (x > 0.0015 && x <= 0.040 ) bin[0] = 11;
       }
-      else if (q2 > 20.*GeV && q2 <= 50.*GeV) {
+      else if (q2 > 20.*GeV2 && q2 <= 50.*GeV2) {
         if (x > 0.0005 && x <= 0.0014) bin[0] = 12;
         if (x > 0.0014 && x <= 0.0030) bin[0] = 13;
         if (x > 0.0030 && x <= 0.0100) bin[0] = 14;
       }
-      else if (q2 > 50.*GeV && q2 <= 100.*GeV) {
+      else if (q2 > 50.*GeV2 && q2 <= 100.*GeV2) {
         if (x >0.0008 && x <= 0.0030) bin[0] = 15;
         if (x >0.0030 && x <= 0.0200) bin[0] = 16;
       }
       // check in one of the bins
       evcut[0] &= bin[0] >= 0;
       // For the low Q2 selection b)
-      if (q2 > 2.5*GeV && q2 <= 5.  *GeV) bin[1] = 0;
-      if (q2 > 5. *GeV && q2 <= 10. *GeV) bin[1] = 1;
-      if (q2 > 10.*GeV && q2 <= 20. *GeV) bin[1] = 2;
-      if (q2 > 20.*GeV && q2 <= 50. *GeV) bin[1] = 3;
-      if (q2 > 50.*GeV && q2 <= 100.*GeV) bin[1] = 4;
+      if (q2 > 2.5*GeV2 && q2 <= 5.  *GeV2) bin[1] = 0;
+      if (q2 > 5. *GeV2 && q2 <= 10. *GeV2) bin[1] = 1;
+      if (q2 > 10.*GeV2 && q2 <= 20. *GeV2) bin[1] = 2;
+      if (q2 > 20.*GeV2 && q2 <= 50. *GeV2) bin[1] = 3;
+      if (q2 > 50.*GeV2 && q2 <= 100.*GeV2) bin[1] = 4;
       // check in one of the bins
       evcut[1] &= bin[1] >= 0;
       // for the high Q2 selection a)
-      if (q2 > 100.*GeV && q2 <= 400.*GeV) {
+      if (q2 > 100.*GeV2 && q2 <= 400.*GeV2) {
         if (x > 0.00251 && x <= 0.00631) bin[2] = 0;
         if (x > 0.00631 && x <= 0.0158 ) bin[2] = 1;
         if (x > 0.0158  && x <= 0.0398 ) bin[2] = 2;
       }
-      else if (q2 > 400.*GeV && q2 <= 1100.*GeV) {
+      else if (q2 > 400.*GeV2 && q2 <= 1100.*GeV2) {
         if (x > 0.00631 && x <= 0.0158 ) bin[2] = 3;
         if (x > 0.0158  && x <= 0.0398 ) bin[2] = 4;
         if (x > 0.0398  && x <= 1.     ) bin[2] = 5;
       }
-      else if (q2 > 1100.*GeV && q2 <= 100000.*GeV) {
+      else if (q2 > 1100.*GeV2 && q2 <= 100000.*GeV2) {
         if (x > 0. && x <= 1.) bin[2] = 6;
       }
       // check in one of the bins
       evcut[2] &= bin[2] >= 0;
       // for the high Q2 selection b)
-      if      (q2 > 100.*GeV && q2 <= 220.*GeV) bin[3] = 0;
-      else if (q2 > 220.*GeV && q2 <= 400.*GeV) bin[3] = 1;
+      if      (q2 > 100.*GeV2 && q2 <= 220.*GeV2) bin[3] = 0;
+      else if (q2 > 220.*GeV2 && q2 <= 400.*GeV2) bin[3] = 1;
       else if (q2 > 400.              ) bin[3] = 2;
       // check in one of*GeV the bins
       evcut[3] &= bin[3] >= 0;

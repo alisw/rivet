@@ -1,10 +1,13 @@
 BEGIN YODA_SCATTER2D_V2 /REF/ALICE_2016_I1507090/d01-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -3.0, up: 3.0}, sys: {dn: -74.0, up: 74.0}}, 1: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -75.0, up: 75.0}}, 2: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -77.0, up: 77.0}}, 3: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -81.0, up: 81.0}}, 4: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -83.0, up: 83.0}}, 5: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -86.0, up: 86.0}}, 6: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -64.0, up: 64.0}}, 7: {stat: {dn: -2.0, up: 2.0}, sys: {dn: -80.0, up: 80.0}}, 8: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -71.0, up: 71.0}}, 9: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -64.0, up: 64.0}}, 10: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -56.0, up: 56.0}}, 11: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -52.0, up: 52.0}}, 12: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -47.0, up: 47.0}}, 13: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -46.0, up: 46.0}}, 14: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -46.0, up: 46.0}}, 15: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -47.0, up: 47.0}}, 16: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -52.0, up: 52.0}}, 17: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -56.0, up: 56.0}}, 18: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -64.0, up: 64.0}}, 19: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -71.0, up: 71.0}}, 20: {stat: {dn: -2.0, up: 2.0}, sys: {dn: -80.0, up: 80.0}}, 21: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -64.0, up: 64.0}}, 22: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -86.0, up: 86.0}}, 23: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -83.0, up: 83.0}}, 24: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -81.0, up: 81.0}}, 25: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -77.0, up: 77.0}}, 26: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -75.0, up: 75.0}}, 27: {stat: {dn: -3.0, up: 3.0}, sys: {dn: -74.0, up: 74.0}}, 28: {stat: {dn: -2.0, up: 2.0}, sys: {dn: -106.0, up: 103.0}}, 29: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -100.0, up: 97.0}}, 30: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -93.0, up: 90.0}}, 31: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -90.0, up: 87.0}}, 32: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -87.0, up: 84.0}}, 33: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -85.0, up: 82.0}}}
+
 IsRef: 1
 Path: /REF/ALICE_2016_I1507090/d01-x01-y01
 Title: doi:10.17182/hepdata.78365.v1/t1
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 -3.375000e+00	1.250000e-01	1.250000e-01	1.643000e+03	7.406079e+01	7.406079e+01
 -3.125000e+00	1.250000e-01	1.250000e-01	1.670000e+03	7.500667e+01	7.500667e+01
 -2.875000e+00	1.250000e-01	1.250000e-01	1.718000e+03	7.700649e+01	7.700649e+01
@@ -41,12 +44,15 @@ Type: Scatter2D
 4.875000e+00	1.250000e-01	1.250000e-01	1.244000e+03	8.500588e+01	8.200610e+01
 END YODA_SCATTER2D_V2
 BEGIN YODA_SCATTER2D_V2 /REF/ALICE_2016_I1507090/d01-x01-y02
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -2.0, up: 2.0}, sys: {dn: -62.0, up: 62.0}}, 1: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -63.0, up: 63.0}}, 2: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -64.0, up: 64.0}}, 3: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -67.0, up: 67.0}}, 4: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -68.0, up: 68.0}}, 5: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -71.0, up: 71.0}}, 6: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -53.0, up: 53.0}}, 7: {stat: {dn: -2.0, up: 2.0}, sys: {dn: -67.0, up: 67.0}}, 8: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -59.0, up: 59.0}}, 9: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -52.0, up: 52.0}}, 10: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -47.0, up: 47.0}}, 11: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -42.0, up: 42.0}}, 12: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -39.0, up: 39.0}}, 13: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -37.0, up: 37.0}}, 14: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -37.0, up: 37.0}}, 15: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -39.0, up: 39.0}}, 16: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -42.0, up: 42.0}}, 17: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -47.0, up: 47.0}}, 18: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -52.0, up: 52.0}}, 19: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -59.0, up: 59.0}}, 20: {stat: {dn: -2.0, up: 2.0}, sys: {dn: -67.0, up: 67.0}}, 21: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -53.0, up: 53.0}}, 22: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -71.0, up: 71.0}}, 23: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -68.0, up: 68.0}}, 24: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -67.0, up: 67.0}}, 25: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -64.0, up: 64.0}}, 26: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -63.0, up: 63.0}}, 27: {stat: {dn: -2.0, up: 2.0}, sys: {dn: -62.0, up: 62.0}}, 28: {stat: {dn: -2.0, up: 2.0}, sys: {dn: -88.0, up: 85.0}}, 29: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -83.0, up: 80.0}}, 30: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -77.0, up: 74.0}}, 31: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -74.0, up: 72.0}}, 32: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -72.0, up: 70.0}}, 33: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -70.0, up: 68.0}}}
+
 IsRef: 1
 Path: /REF/ALICE_2016_I1507090/d01-x01-y02
 Title: doi:10.17182/hepdata.78365.v1/t1
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 -3.375000e+00	1.250000e-01	1.250000e-01	1.364000e+03	6.203225e+01	6.203225e+01
 -3.125000e+00	1.250000e-01	1.250000e-01	1.391000e+03	6.300794e+01	6.300794e+01
 -2.875000e+00	1.250000e-01	1.250000e-01	1.424000e+03	6.400781e+01	6.400781e+01
@@ -83,12 +89,15 @@ Type: Scatter2D
 4.875000e+00	1.250000e-01	1.250000e-01	1.032000e+03	7.000714e+01	6.800735e+01
 END YODA_SCATTER2D_V2
 BEGIN YODA_SCATTER2D_V2 /REF/ALICE_2016_I1507090/d01-x01-y03
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -2.0, up: 2.0}, sys: {dn: -47.0, up: 47.0}}, 1: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -48.0, up: 48.0}}, 2: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -49.0, up: 49.0}}, 3: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -50.0, up: 50.0}}, 4: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -51.0, up: 51.0}}, 5: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -53.0, up: 53.0}}, 6: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -39.0, up: 39.0}}, 7: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -49.0, up: 49.0}}, 8: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -43.0, up: 43.0}}, 9: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -38.0, up: 38.0}}, 10: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -34.0, up: 34.0}}, 11: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -31.0, up: 31.0}}, 12: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -28.0, up: 28.0}}, 13: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -28.0, up: 28.0}}, 14: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -28.0, up: 28.0}}, 15: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -28.0, up: 28.0}}, 16: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -31.0, up: 31.0}}, 17: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -34.0, up: 34.0}}, 18: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -38.0, up: 38.0}}, 19: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -43.0, up: 43.0}}, 20: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -49.0, up: 49.0}}, 21: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -39.0, up: 39.0}}, 22: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -53.0, up: 53.0}}, 23: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -51.0, up: 51.0}}, 24: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -50.0, up: 50.0}}, 25: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -49.0, up: 49.0}}, 26: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -48.0, up: 48.0}}, 27: {stat: {dn: -2.0, up: 2.0}, sys: {dn: -47.0, up: 47.0}}, 28: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -66.0, up: 64.0}}, 29: {stat: {dn: -0.4, up: 0.4}, sys: {dn: -62.6, up: 60.6}}, 30: {stat: {dn: -0.4, up: 0.4}, sys: {dn: -58.3, up: 56.4}}, 31: {stat: {dn: -0.4, up: 0.4}, sys: {dn: -56.4, up: 54.5}}, 32: {stat: {dn: -0.5, up: 0.5}, sys: {dn: -54.9, up: 53.1}}, 33: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -53.0, up: 52.0}}}
+
 IsRef: 1
 Path: /REF/ALICE_2016_I1507090/d01-x01-y03
 Title: doi:10.17182/hepdata.78365.v1/t1
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 -3.375000e+00	1.250000e-01	1.250000e-01	1.038000e+03	4.704253e+01	4.704253e+01
 -3.125000e+00	1.250000e-01	1.250000e-01	1.061000e+03	4.801042e+01	4.801042e+01
 -2.875000e+00	1.250000e-01	1.250000e-01	1.080000e+03	4.901020e+01	4.901020e+01
@@ -125,12 +134,15 @@ Type: Scatter2D
 4.875000e+00	1.250000e-01	1.250000e-01	7.870000e+02	5.300943e+01	5.200961e+01
 END YODA_SCATTER2D_V2
 BEGIN YODA_SCATTER2D_V2 /REF/ALICE_2016_I1507090/d01-x01-y04
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -32.0, up: 32.0}}, 1: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -33.0, up: 33.0}}, 2: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -33.0, up: 33.0}}, 3: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -34.0, up: 34.0}}, 4: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -35.0, up: 35.0}}, 5: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -36.0, up: 36.0}}, 6: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -26.0, up: 26.0}}, 7: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -31.0, up: 31.0}}, 8: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -28.0, up: 28.0}}, 9: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -25.0, up: 25.0}}, 10: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -22.0, up: 22.0}}, 11: {stat: {dn: -0.5, up: 0.5}, sys: {dn: -20.1, up: 20.1}}, 12: {stat: {dn: -0.5, up: 0.5}, sys: {dn: -18.7, up: 18.7}}, 13: {stat: {dn: -0.5, up: 0.5}, sys: {dn: -17.9, up: 17.9}}, 14: {stat: {dn: -0.5, up: 0.5}, sys: {dn: -17.9, up: 17.9}}, 15: {stat: {dn: -0.5, up: 0.5}, sys: {dn: -18.7, up: 18.7}}, 16: {stat: {dn: -0.5, up: 0.5}, sys: {dn: -20.1, up: 20.1}}, 17: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -22.0, up: 22.0}}, 18: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -25.0, up: 25.0}}, 19: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -28.0, up: 28.0}}, 20: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -31.0, up: 31.0}}, 21: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -26.0, up: 26.0}}, 22: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -36.0, up: 36.0}}, 23: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -35.0, up: 35.0}}, 24: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -34.0, up: 34.0}}, 25: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -33.0, up: 33.0}}, 26: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -33.0, up: 33.0}}, 27: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -32.0, up: 32.0}}, 28: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -45.0, up: 44.0}}, 29: {stat: {dn: -0.3, up: 0.3}, sys: {dn: -42.5, up: 41.1}}, 30: {stat: {dn: -0.3, up: 0.3}, sys: {dn: -39.6, up: 38.3}}, 31: {stat: {dn: -0.3, up: 0.3}, sys: {dn: -38.4, up: 37.2}}, 32: {stat: {dn: -0.4, up: 0.4}, sys: {dn: -37.5, up: 36.2}}, 33: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -37.0, up: 35.0}}}
+
 IsRef: 1
 Path: /REF/ALICE_2016_I1507090/d01-x01-y04
 Title: doi:10.17182/hepdata.78365.v1/t1
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 -3.375000e+00	1.250000e-01	1.250000e-01	7.140000e+02	3.201562e+01	3.201562e+01
 -3.125000e+00	1.250000e-01	1.250000e-01	7.260000e+02	3.301515e+01	3.301515e+01
 -2.875000e+00	1.250000e-01	1.250000e-01	7.380000e+02	3.301515e+01	3.301515e+01
@@ -167,12 +179,15 @@ Type: Scatter2D
 4.875000e+00	1.250000e-01	1.250000e-01	5.380000e+02	3.701351e+01	3.501428e+01
 END YODA_SCATTER2D_V2
 BEGIN YODA_SCATTER2D_V2 /REF/ALICE_2016_I1507090/d01-x01-y05
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -21.0, up: 21.0}}, 1: {stat: {dn: -0.5, up: 0.5}, sys: {dn: -21.8, up: 21.8}}, 2: {stat: {dn: -0.4, up: 0.4}, sys: {dn: -22.1, up: 22.1}}, 3: {stat: {dn: -0.4, up: 0.4}, sys: {dn: -22.7, up: 22.7}}, 4: {stat: {dn: -0.5, up: 0.5}, sys: {dn: -23.0, up: 23.0}}, 5: {stat: {dn: -0.4, up: 0.4}, sys: {dn: -23.5, up: 23.5}}, 6: {stat: {dn: -0.4, up: 0.4}, sys: {dn: -15.9, up: 15.9}}, 7: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -19.0, up: 19.0}}, 8: {stat: {dn: -0.5, up: 0.5}, sys: {dn: -16.7, up: 16.7}}, 9: {stat: {dn: -0.4, up: 0.4}, sys: {dn: -15.1, up: 15.1}}, 10: {stat: {dn: -0.4, up: 0.4}, sys: {dn: -13.6, up: 13.6}}, 11: {stat: {dn: -0.4, up: 0.4}, sys: {dn: -12.6, up: 12.6}}, 12: {stat: {dn: -0.4, up: 0.4}, sys: {dn: -11.7, up: 11.7}}, 13: {stat: {dn: -0.4, up: 0.4}, sys: {dn: -11.4, up: 11.4}}, 14: {stat: {dn: -0.4, up: 0.4}, sys: {dn: -11.4, up: 11.4}}, 15: {stat: {dn: -0.4, up: 0.4}, sys: {dn: -11.7, up: 11.7}}, 16: {stat: {dn: -0.4, up: 0.4}, sys: {dn: -12.6, up: 12.6}}, 17: {stat: {dn: -0.4, up: 0.4}, sys: {dn: -13.6, up: 13.6}}, 18: {stat: {dn: -0.4, up: 0.4}, sys: {dn: -15.1, up: 15.1}}, 19: {stat: {dn: -0.5, up: 0.5}, sys: {dn: -16.7, up: 16.7}}, 20: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -19.0, up: 19.0}}, 21: {stat: {dn: -0.4, up: 0.4}, sys: {dn: -15.9, up: 15.9}}, 22: {stat: {dn: -0.4, up: 0.4}, sys: {dn: -23.5, up: 23.5}}, 23: {stat: {dn: -0.5, up: 0.5}, sys: {dn: -23.0, up: 23.0}}, 24: {stat: {dn: -0.4, up: 0.4}, sys: {dn: -22.7, up: 22.7}}, 25: {stat: {dn: -0.4, up: 0.4}, sys: {dn: -22.1, up: 22.1}}, 26: {stat: {dn: -0.5, up: 0.5}, sys: {dn: -21.8, up: 21.8}}, 27: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -21.0, up: 21.0}}, 28: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -30.0, up: 29.0}}, 29: {stat: {dn: -0.3, up: 0.3}, sys: {dn: -28.1, up: 27.2}}, 30: {stat: {dn: -0.3, up: 0.3}, sys: {dn: -26.3, up: 25.4}}, 31: {stat: {dn: -0.3, up: 0.3}, sys: {dn: -25.5, up: 24.7}}, 32: {stat: {dn: -0.3, up: 0.3}, sys: {dn: -25.0, up: 24.2}}, 33: {stat: {dn: -0.4, up: 0.4}, sys: {dn: -24.5, up: 23.7}}}
+
 IsRef: 1
 Path: /REF/ALICE_2016_I1507090/d01-x01-y05
 Title: doi:10.17182/hepdata.78365.v1/t1
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 -3.375000e+00	1.250000e-01	1.250000e-01	4.750000e+02	2.102380e+01	2.102380e+01
 -3.125000e+00	1.250000e-01	1.250000e-01	4.827000e+02	2.180573e+01	2.180573e+01
 -2.875000e+00	1.250000e-01	1.250000e-01	4.897000e+02	2.210362e+01	2.210362e+01
@@ -209,12 +224,15 @@ Type: Scatter2D
 4.875000e+00	1.250000e-01	1.250000e-01	3.599000e+02	2.450327e+01	2.370338e+01
 END YODA_SCATTER2D_V2
 BEGIN YODA_SCATTER2D_V2 /REF/ALICE_2016_I1507090/d01-x01-y06
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -14.0, up: 14.0}}, 1: {stat: {dn: -0.4, up: 0.4}, sys: {dn: -13.8, up: 13.8}}, 2: {stat: {dn: -0.3, up: 0.3}, sys: {dn: -14.0, up: 14.0}}, 3: {stat: {dn: -0.3, up: 0.3}, sys: {dn: -14.3, up: 14.3}}, 4: {stat: {dn: -0.4, up: 0.4}, sys: {dn: -14.5, up: 14.5}}, 5: {stat: {dn: -0.3, up: 0.3}, sys: {dn: -14.8, up: 14.8}}, 6: {stat: {dn: -0.3, up: 0.3}, sys: {dn: -9.3, up: 9.3}}, 7: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -11.0, up: 11.0}}, 8: {stat: {dn: -0.4, up: 0.4}, sys: {dn: -9.6, up: 9.6}}, 9: {stat: {dn: -0.3, up: 0.3}, sys: {dn: -8.7, up: 8.7}}, 10: {stat: {dn: -0.3, up: 0.3}, sys: {dn: -7.9, up: 7.9}}, 11: {stat: {dn: -0.3, up: 0.3}, sys: {dn: -7.4, up: 7.4}}, 12: {stat: {dn: -0.3, up: 0.3}, sys: {dn: -7.0, up: 7.0}}, 13: {stat: {dn: -0.3, up: 0.3}, sys: {dn: -6.7, up: 6.7}}, 14: {stat: {dn: -0.3, up: 0.3}, sys: {dn: -6.7, up: 6.7}}, 15: {stat: {dn: -0.3, up: 0.3}, sys: {dn: -7.0, up: 7.0}}, 16: {stat: {dn: -0.3, up: 0.3}, sys: {dn: -7.4, up: 7.4}}, 17: {stat: {dn: -0.3, up: 0.3}, sys: {dn: -7.9, up: 7.9}}, 18: {stat: {dn: -0.3, up: 0.3}, sys: {dn: -8.7, up: 8.7}}, 19: {stat: {dn: -0.4, up: 0.4}, sys: {dn: -9.6, up: 9.6}}, 20: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -11.0, up: 11.0}}, 21: {stat: {dn: -0.3, up: 0.3}, sys: {dn: -9.3, up: 9.3}}, 22: {stat: {dn: -0.3, up: 0.3}, sys: {dn: -14.8, up: 14.8}}, 23: {stat: {dn: -0.4, up: 0.4}, sys: {dn: -14.5, up: 14.5}}, 24: {stat: {dn: -0.3, up: 0.3}, sys: {dn: -14.3, up: 14.3}}, 25: {stat: {dn: -0.3, up: 0.3}, sys: {dn: -14.0, up: 14.0}}, 26: {stat: {dn: -0.4, up: 0.4}, sys: {dn: -13.8, up: 13.8}}, 27: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -14.0, up: 14.0}}, 28: {stat: {dn: -0.5, up: 0.5}, sys: {dn: -18.9, up: 18.2}}, 29: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -17.8, up: 17.2}}, 30: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -16.6, up: 16.1}}, 31: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -16.2, up: 15.7}}, 32: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -15.9, up: 15.4}}, 33: {stat: {dn: -0.3, up: 0.3}, sys: {dn: -15.6, up: 15.1}}}
+
 IsRef: 1
 Path: /REF/ALICE_2016_I1507090/d01-x01-y06
 Title: doi:10.17182/hepdata.78365.v1/t1
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 -3.375000e+00	1.250000e-01	1.250000e-01	3.020000e+02	1.403567e+01	1.403567e+01
 -3.125000e+00	1.250000e-01	1.250000e-01	3.063000e+02	1.380580e+01	1.380580e+01
 -2.875000e+00	1.250000e-01	1.250000e-01	3.101000e+02	1.400321e+01	1.400321e+01
@@ -251,12 +269,15 @@ Type: Scatter2D
 4.875000e+00	1.250000e-01	1.250000e-01	2.294000e+02	1.560288e+01	1.510298e+01
 END YODA_SCATTER2D_V2
 BEGIN YODA_SCATTER2D_V2 /REF/ALICE_2016_I1507090/d01-x01-y07
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -8.0, up: 8.0}}, 1: {stat: {dn: -0.3, up: 0.3}, sys: {dn: -8.1, up: 8.1}}, 2: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -8.2, up: 8.2}}, 3: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -8.4, up: 8.4}}, 4: {stat: {dn: -0.3, up: 0.3}, sys: {dn: -8.5, up: 8.5}}, 5: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -8.6, up: 8.6}}, 6: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -4.9, up: 4.9}}, 7: {stat: {dn: -0.4, up: 0.4}, sys: {dn: -5.5, up: 5.5}}, 8: {stat: {dn: -0.3, up: 0.3}, sys: {dn: -5.0, up: 5.0}}, 9: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -4.6, up: 4.6}}, 10: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -4.3, up: 4.3}}, 11: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -4.0, up: 4.0}}, 12: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -3.8, up: 3.8}}, 13: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -3.7, up: 3.7}}, 14: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -3.7, up: 3.7}}, 15: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -3.8, up: 3.8}}, 16: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -4.0, up: 4.0}}, 17: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -4.3, up: 4.3}}, 18: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -4.6, up: 4.6}}, 19: {stat: {dn: -0.3, up: 0.3}, sys: {dn: -5.0, up: 5.0}}, 20: {stat: {dn: -0.4, up: 0.4}, sys: {dn: -5.5, up: 5.5}}, 21: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -4.9, up: 4.9}}, 22: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -8.6, up: 8.6}}, 23: {stat: {dn: -0.3, up: 0.3}, sys: {dn: -8.5, up: 8.5}}, 24: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -8.4, up: 8.4}}, 25: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -8.2, up: 8.2}}, 26: {stat: {dn: -0.3, up: 0.3}, sys: {dn: -8.1, up: 8.1}}, 27: {stat: {dn: -1.0, up: 1.0}, sys: {dn: -8.0, up: 8.0}}, 28: {stat: {dn: -0.4, up: 0.4}, sys: {dn: -11.1, up: 10.7}}, 29: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -10.4, up: 10.1}}, 30: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -9.8, up: 9.5}}, 31: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -9.5, up: 9.2}}, 32: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -9.4, up: 9.1}}, 33: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -9.2, up: 8.9}}}
+
 IsRef: 1
 Path: /REF/ALICE_2016_I1507090/d01-x01-y07
 Title: doi:10.17182/hepdata.78365.v1/t1
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 -3.375000e+00	1.250000e-01	1.250000e-01	1.780000e+02	8.062258e+00	8.062258e+00
 -3.125000e+00	1.250000e-01	1.250000e-01	1.799000e+02	8.105554e+00	8.105554e+00
 -2.875000e+00	1.250000e-01	1.250000e-01	1.817000e+02	8.202439e+00	8.202439e+00
@@ -293,12 +314,15 @@ Type: Scatter2D
 4.875000e+00	1.250000e-01	1.250000e-01	1.360000e+02	9.202174e+00	8.902247e+00
 END YODA_SCATTER2D_V2
 BEGIN YODA_SCATTER2D_V2 /REF/ALICE_2016_I1507090/d01-x01-y08
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.4, up: 0.4}, sys: {dn: -4.3, up: 4.3}}, 1: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -4.3, up: 4.3}}, 2: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -4.4, up: 4.4}}, 3: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -4.4, up: 4.4}}, 4: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -4.5, up: 4.5}}, 5: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -4.5, up: 4.5}}, 6: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -2.3, up: 2.3}}, 7: {stat: {dn: -0.3, up: 0.3}, sys: {dn: -2.5, up: 2.5}}, 8: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -2.3, up: 2.3}}, 9: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -2.2, up: 2.2}}, 10: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -2.1, up: 2.1}}, 11: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -2.0, up: 2.0}}, 12: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -1.9, up: 1.9}}, 13: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -1.9, up: 1.9}}, 14: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -1.9, up: 1.9}}, 15: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -1.9, up: 1.9}}, 16: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -2.0, up: 2.0}}, 17: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -2.1, up: 2.1}}, 18: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -2.2, up: 2.2}}, 19: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -2.3, up: 2.3}}, 20: {stat: {dn: -0.3, up: 0.3}, sys: {dn: -2.5, up: 2.5}}, 21: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -2.3, up: 2.3}}, 22: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -4.5, up: 4.5}}, 23: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -4.5, up: 4.5}}, 24: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -4.4, up: 4.4}}, 25: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -4.4, up: 4.4}}, 26: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -4.3, up: 4.3}}, 27: {stat: {dn: -0.4, up: 0.4}, sys: {dn: -4.3, up: 4.3}}, 28: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -5.9, up: 5.7}}, 29: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -5.6, up: 5.4}}, 30: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -5.3, up: 5.1}}, 31: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -5.2, up: 5.0}}, 32: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -5.1, up: 4.9}}, 33: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -5.0, up: 4.8}}}
+
 IsRef: 1
 Path: /REF/ALICE_2016_I1507090/d01-x01-y08
 Title: doi:10.17182/hepdata.78365.v1/t1
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 -3.375000e+00	1.250000e-01	1.250000e-01	9.490000e+01	4.318565e+00	4.318565e+00
 -3.125000e+00	1.250000e-01	1.250000e-01	9.610000e+01	4.304649e+00	4.304649e+00
 -2.875000e+00	1.250000e-01	1.250000e-01	9.680000e+01	4.404543e+00	4.404543e+00
@@ -335,12 +359,15 @@ Type: Scatter2D
 4.875000e+00	1.250000e-01	1.250000e-01	7.380000e+01	5.003998e+00	4.804165e+00
 END YODA_SCATTER2D_V2
 BEGIN YODA_SCATTER2D_V2 /REF/ALICE_2016_I1507090/d01-x01-y09
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -2.0, up: 2.0}}, 1: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -2.1, up: 2.1}}, 2: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -2.1, up: 2.1}}, 3: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -2.1, up: 2.1}}, 4: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -2.1, up: 2.1}}, 5: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -2.1, up: 2.1}}, 6: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -0.9, up: 0.9}}, 7: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -1.0, up: 1.0}}, 8: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -1.0, up: 1.0}}, 9: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -0.9, up: 0.9}}, 10: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -0.9, up: 0.9}}, 11: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -0.9, up: 0.9}}, 12: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -0.8, up: 0.8}}, 13: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -0.8, up: 0.8}}, 14: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -0.8, up: 0.8}}, 15: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -0.8, up: 0.8}}, 16: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -0.9, up: 0.9}}, 17: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -0.9, up: 0.9}}, 18: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -0.9, up: 0.9}}, 19: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -1.0, up: 1.0}}, 20: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -1.0, up: 1.0}}, 21: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -0.9, up: 0.9}}, 22: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -2.1, up: 2.1}}, 23: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -2.1, up: 2.1}}, 24: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -2.1, up: 2.1}}, 25: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -2.1, up: 2.1}}, 26: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -2.1, up: 2.1}}, 27: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -2.0, up: 2.0}}, 28: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -2.8, up: 2.7}}, 29: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -2.7, up: 2.6}}, 30: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -2.5, up: 2.5}}, 31: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -2.5, up: 2.4}}, 32: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -2.5, up: 2.4}}, 33: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -2.4, up: 2.3}}}
+
 IsRef: 1
 Path: /REF/ALICE_2016_I1507090/d01-x01-y09
 Title: doi:10.17182/hepdata.78365.v1/t1
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 -3.375000e+00	1.250000e-01	1.250000e-01	4.540000e+01	2.009975e+00	2.009975e+00
 -3.125000e+00	1.250000e-01	1.250000e-01	4.600000e+01	2.102380e+00	2.102380e+00
 -2.875000e+00	1.250000e-01	1.250000e-01	4.600000e+01	2.102380e+00	2.102380e+00
@@ -377,12 +404,15 @@ Type: Scatter2D
 4.875000e+00	1.250000e-01	1.250000e-01	3.570000e+01	2.402082e+00	2.302173e+00
 END YODA_SCATTER2D_V2
 BEGIN YODA_SCATTER2D_V2 /REF/ALICE_2016_I1507090/d01-x01-y10
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -0.8, up: 0.8}}, 1: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -0.8, up: 0.8}}, 2: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -0.8, up: 0.8}}, 3: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -0.8, up: 0.8}}, 4: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -0.8, up: 0.8}}, 5: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -0.8, up: 0.8}}, 6: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -0.3, up: 0.3}}, 7: {stat: {dn: -0.3, up: 0.3}, sys: {dn: -0.4, up: 0.4}}, 8: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -0.4, up: 0.4}}, 9: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -0.4, up: 0.4}}, 10: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -0.4, up: 0.4}}, 11: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -0.3, up: 0.3}}, 12: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -0.3, up: 0.3}}, 13: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -0.3, up: 0.3}}, 14: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -0.3, up: 0.3}}, 15: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -0.3, up: 0.3}}, 16: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -0.3, up: 0.3}}, 17: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -0.4, up: 0.4}}, 18: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -0.4, up: 0.4}}, 19: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -0.4, up: 0.4}}, 20: {stat: {dn: -0.3, up: 0.3}, sys: {dn: -0.4, up: 0.4}}, 21: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -0.3, up: 0.3}}, 22: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -0.8, up: 0.8}}, 23: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -0.8, up: 0.8}}, 24: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -0.8, up: 0.8}}, 25: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -0.8, up: 0.8}}, 26: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -0.8, up: 0.8}}, 27: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -0.8, up: 0.8}}, 28: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -1.2, up: 1.1}}, 29: {stat: {dn: -0.05, up: 0.05}, sys: {dn: -1.11, up: 1.07}}, 30: {stat: {dn: -0.05, up: 0.05}, sys: {dn: -1.05, up: 1.02}}, 31: {stat: {dn: -0.05, up: 0.05}, sys: {dn: -1.05, up: 1.02}}, 32: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -1.1, up: 1.0}}, 33: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -1.0, up: 1.0}}}
+
 IsRef: 1
 Path: /REF/ALICE_2016_I1507090/d01-x01-y10
 Title: doi:10.17182/hepdata.78365.v1/t1
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 -3.375000e+00	1.250000e-01	1.250000e-01	1.870000e+01	8.246211e-01	8.246211e-01
 -3.125000e+00	1.250000e-01	1.250000e-01	1.870000e+01	8.062258e-01	8.062258e-01
 -2.875000e+00	1.250000e-01	1.250000e-01	1.860000e+01	8.062258e-01	8.062258e-01
@@ -419,21 +449,27 @@ Type: Scatter2D
 4.875000e+00	1.250000e-01	1.250000e-01	1.540000e+01	1.004988e+00	1.004988e+00
 END YODA_SCATTER2D_V2
 BEGIN YODA_SCATTER2D_V2 /REF/ALICE_2016_I1507090/d02-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.05, up: 0.05}, sys: {dn: -1.0, up: 1.0}}}
+
 IsRef: 1
 Path: /REF/ALICE_2016_I1507090/d02-x01-y01
 Title: doi:10.17182/hepdata.78365.v1/t2
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 7.320000e+00	1.000000e-01	1.000000e-01	1.752000e+01	1.001249e+00	1.001249e+00
 END YODA_SCATTER2D_V2
 BEGIN YODA_SCATTER2D_V2 /REF/ALICE_2016_I1507090/d03-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.0, up: 0.0}, sys_1: {dn: -20.0, up: 20.0}, sys_2: {dn: -20.0, up: 20.0}}, 1: {stat: {dn: -0.0, up: 0.0}, sys_1: {dn: -50.0, up: 50.0}, sys_2: {dn: -50.0, up: 50.0}}, 2: {stat: {dn: -0.0, up: 0.0}, sys_1: {dn: -90.0, up: 90.0}, sys_2: {dn: -70.0, up: 70.0}}, 3: {stat: {dn: -0.0, up: 0.0}, sys_1: {dn: -100.0, up: 100.0}, sys_2: {dn: -100.0, up: 100.0}}, 4: {stat: {dn: -0.0, up: 0.0}, sys_1: {dn: -200.0, up: 200.0}, sys_2: {dn: -100.0, up: 100.0}}, 5: {stat: {dn: -0.0, up: 0.0}, sys_1: {dn: -300.0, up: 300.0}, sys_2: {dn: -100.0, up: 100.0}}, 6: {stat: {dn: -0.0, up: 0.0}, sys_1: {dn: -550.0, up: 550.0}, sys_2: {dn: -90.0, up: 90.0}}, 7: {stat: {dn: -0.0, up: 0.0}, sys_1: {dn: -900.0, up: 900.0}, sys_2: {dn: -50.0, up: 50.0}}, 8: {stat: {dn: -0.0, up: 0.0}, sys_1: {dn: -1280.0, up: 1280.0}, sys_2: {dn: -20.0, up: 20.0}}, 9: {stat: {dn: -0.0, up: 0.0}, sys_1: {dn: -1460.0, up: 1460.0}, sys_2: {dn: -20.0, up: 20.0}}}
+
 IsRef: 1
 Path: /REF/ALICE_2016_I1507090/d03-x01-y01
 Title: doi:10.17182/hepdata.78365.v1/t3
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 7.320000e+00	1.000000e-01	1.000000e-01	2.300000e+02	2.828427e+01	2.828427e+01
 1.540200e+01	2.000000e-01	2.000000e-01	5.600000e+02	7.071068e+01	7.071068e+01
 2.958100e+01	4.000000e-01	4.000000e-01	1.180000e+03	1.140175e+02	1.140175e+02
@@ -446,12 +482,15 @@ Type: Scatter2D
 3.893007e+02	5.000000e-01	5.000000e-01	2.149000e+04	1.460137e+03	1.460137e+03
 END YODA_SCATTER2D_V2
 BEGIN YODA_SCATTER2D_V2 /REF/ALICE_2016_I1507090/d04-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.0, up: 0.0}, sys: {dn: -70.0, up: 70.0}}, 1: {stat: {dn: -0.0, up: 0.0}, sys: {dn: -80.0, up: 80.0}}, 2: {stat: {dn: -0.0, up: 0.0}, sys: {dn: -80.0, up: 80.0}}, 3: {stat: {dn: -0.0, up: 0.0}, sys: {dn: -80.0, up: 80.0}}, 4: {stat: {dn: -0.0, up: 0.0}, sys: {dn: -80.0, up: 80.0}}, 5: {stat: {dn: -0.0, up: 0.0}, sys: {dn: -90.0, up: 90.0}}, 6: {stat: {dn: -0.0, up: 0.0}, sys: {dn: -70.0, up: 70.0}}, 7: {stat: {dn: -0.0, up: 0.0}, sys: {dn: -80.0, up: 80.0}}, 8: {stat: {dn: -0.0, up: 0.0}, sys: {dn: -80.0, up: 80.0}}, 9: {stat: {dn: -0.0, up: 0.0}, sys: {dn: -70.0, up: 70.0}}, 10: {stat: {dn: -0.0, up: 0.0}, sys: {dn: -60.0, up: 60.0}}, 11: {stat: {dn: -0.0, up: 0.0}, sys: {dn: -60.0, up: 60.0}}, 12: {stat: {dn: -0.0, up: 0.0}, sys: {dn: -60.0, up: 60.0}}, 13: {stat: {dn: -0.0, up: 0.0}, sys: {dn: -60.0, up: 60.0}}, 14: {stat: {dn: -0.0, up: 0.0}, sys: {dn: -60.0, up: 60.0}}, 15: {stat: {dn: -0.0, up: 0.0}, sys: {dn: -60.0, up: 60.0}}, 16: {stat: {dn: -0.0, up: 0.0}, sys: {dn: -60.0, up: 60.0}}, 17: {stat: {dn: -0.0, up: 0.0}, sys: {dn: -60.0, up: 60.0}}, 18: {stat: {dn: -0.0, up: 0.0}, sys: {dn: -70.0, up: 70.0}}, 19: {stat: {dn: -0.0, up: 0.0}, sys: {dn: -80.0, up: 80.0}}, 20: {stat: {dn: -0.0, up: 0.0}, sys: {dn: -80.0, up: 80.0}}, 21: {stat: {dn: -0.0, up: 0.0}, sys: {dn: -70.0, up: 70.0}}, 22: {stat: {dn: -0.0, up: 0.0}, sys: {dn: -90.0, up: 90.0}}, 23: {stat: {dn: -0.0, up: 0.0}, sys: {dn: -80.0, up: 80.0}}, 24: {stat: {dn: -0.0, up: 0.0}, sys: {dn: -80.0, up: 80.0}}, 25: {stat: {dn: -0.0, up: 0.0}, sys: {dn: -80.0, up: 80.0}}, 26: {stat: {dn: -0.0, up: 0.0}, sys: {dn: -80.0, up: 80.0}}, 27: {stat: {dn: -0.0, up: 0.0}, sys: {dn: -70.0, up: 70.0}}, 28: {stat: {dn: -0.0, up: 0.0}, sys: {dn: -100.0, up: 100.0}}, 29: {stat: {dn: -0.0, up: 0.0}, sys: {dn: -100.0, up: 100.0}}, 30: {stat: {dn: -0.0, up: 0.0}, sys: {dn: -90.0, up: 90.0}}, 31: {stat: {dn: -0.0, up: 0.0}, sys: {dn: -90.0, up: 90.0}}, 32: {stat: {dn: -0.0, up: 0.0}, sys: {dn: -90.0, up: 80.0}}, 33: {stat: {dn: -0.0, up: 0.0}, sys: {dn: -80.0, up: 80.0}}}
+
 IsRef: 1
 Path: /REF/ALICE_2016_I1507090/d04-x01-y01
 Title: doi:10.17182/hepdata.78365.v1/t4
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 -3.170000e+00	1.200000e-01	1.200000e-01	1.650000e+03	7.000000e+01	7.000000e+01
 -2.970000e+00	1.200000e-01	1.200000e-01	1.680000e+03	8.000000e+01	8.000000e+01
 -2.680000e+00	1.100000e-01	1.100000e-01	1.730000e+03	8.000000e+01	8.000000e+01
@@ -488,29 +527,38 @@ Type: Scatter2D
 4.670000e+00	1.200000e-01	1.200000e-01	1.240000e+03	8.000000e+01	8.000000e+01
 END YODA_SCATTER2D_V2
 BEGIN YODA_SCATTER2D_V2 /REF/ALICE_2016_I1507090/d05-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.0, up: 0.0}, sys: {dn: -0.1, up: 0.1}}}
+
 IsRef: 1
 Path: /REF/ALICE_2016_I1507090/d05-x01-y01
 Title: doi:10.17182/hepdata.78365.v1/t5
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 5.023000e+03	0.000000e+00	0.000000e+00	4.100000e+00	1.000000e-01	1.000000e-01
 END YODA_SCATTER2D_V2
 BEGIN YODA_SCATTER2D_V2 /REF/ALICE_2016_I1507090/d05-x01-y02
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.0, up: 0.0}}}
+
 IsRef: 1
 Path: /REF/ALICE_2016_I1507090/d05-x01-y02
 Title: doi:10.17182/hepdata.78365.v1/t5
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 5.023000e+03	0.000000e+00	0.000000e+00	2.800000e+00	0.000000e+00	0.000000e+00
 END YODA_SCATTER2D_V2
 BEGIN YODA_SCATTER2D_V2 /REF/ALICE_2016_I1507090/d05-x01-y03
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.0, up: 0.0}}}
+
 IsRef: 1
 Path: /REF/ALICE_2016_I1507090/d05-x01-y03
 Title: doi:10.17182/hepdata.78365.v1/t5
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 5.023000e+03	0.000000e+00	0.000000e+00	8.600000e+00	0.000000e+00	0.000000e+00
 END YODA_SCATTER2D_V2

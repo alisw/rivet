@@ -67,11 +67,10 @@ def download_from_hepdata(inspire_id, rivet_analysis_name=None):
         tar = tarfile.open(mode='r:gz', fileobj=io.BytesIO(response.content))
         tar.extractall()
         yodafile_from_hepdata = tar.getnames()[0]
-        os.chmod(yodafile_from_hepdata, 0644)
+        os.chmod(yodafile_from_hepdata, 0o644)
     except tarfile.TarError as e:
         print('Error reading tarfile ({})'.format(str(e)))
         return None
 
     print('Downloaded {}'.format(yodafile_from_hepdata))
     return yodafile_from_hepdata
-

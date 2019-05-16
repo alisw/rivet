@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 
 """\
-Usage: %prog [options] file.dat [file2.dat ...]
+%(prog)s [options] file.dat [file2.dat ...]
 
 TODO
  * Optimise output for e.g. lots of same-height bins in a row
@@ -219,7 +219,7 @@ class InputData(Described):
                     self.functions[path] = Function(f)
         f.close()
 
-        self.apply_config_files(opts.CONFIGFILES)
+        self.apply_config_files(args.CONFIGFILES)
 
         self.props.setdefault('PlotSizeX', 10.)
         self.props.setdefault('PlotSizeY', 6.)
@@ -703,7 +703,7 @@ class Plot(object):
                             self.ymax = 1
                         ymins.append(2e-7*self.ymax)
                     minymin = min(ymins)
-                    fullrange = opts.FULL_RANGE
+                    fullrange = args.FULL_RANGE
                     if inputdata.has_attr('FullRange'):
                         fullrange = inputdata.attr_bool('FullRange')
                     self.ymin = minymin/1.7 if fullrange else max(minymin/1.7, 2e-7*self.ymax)
@@ -741,7 +741,7 @@ class Plot(object):
                             self.zmax = 1
                         zmins.append(2e-7*self.zmax)
                     minzmin = min(zmins)
-                    fullrange = inputdata.attr_bool("FullRange", opts.FULL_RANGE)
+                    fullrange = inputdata.attr_bool("FullRange", args.FULL_RANGE)
                     self.zmin = minzmin/1.7 if fullrange else max(minzmin/1.7, 2e-7*self.zmax)
 
                 if self.zmin == self.zmax:
@@ -766,7 +766,7 @@ class Plot(object):
         minorticks = []
         ticktype = '%sCustomMinorTicks' % axis
         if inputdata.attr(ticktype):
-            ticks = inputdata.attr(ticktype).strip().split() 
+            ticks = inputdata.attr(ticktype).strip().split()
             for val in ticks:
                 minorticks.append(val)
         return (majorlabels, majorticks, minorticks)
@@ -780,9 +780,9 @@ class Plot(object):
         inputdata.props.setdefault('LeftMargin', 1.4)
         inputdata.props.setdefault('BottomMargin', 0.75)
         inputdata.props.setdefault('RightMargin', 0.35)
-        if inputdata.attr('is2dim'): 
+        if inputdata.attr('is2dim'):
             inputdata.props['RightMargin'] += 1.8
-        papersizex  = inputdata.attr_float('PlotSizeX') + 0.1 
+        papersizex  = inputdata.attr_float('PlotSizeX') + 0.1
         papersizex += inputdata.attr_float('LeftMargin') + inputdata.attr_float('RightMargin')
         papersizey  = inputdata.attr_float('PlotSizeY') + 0.2
         papersizey += inputdata.attr_float('TopMargin') + inputdata.attr_float('BottomMargin')
@@ -792,20 +792,20 @@ class Plot(object):
         #
         out = ""
         out += '\\documentclass{article}\n'
-        if opts.OUTPUT_FONT == "MINION":
+        if args.OUTPUT_FONT == "MINION":
             out += ('\\usepackage{minion}\n')
-        elif opts.OUTPUT_FONT == "PALATINO_OSF":
+        elif args.OUTPUT_FONT == "PALATINO_OSF":
             out += ('\\usepackage[osf,sc]{mathpazo}\n')
-        elif opts.OUTPUT_FONT == "PALATINO":
+        elif args.OUTPUT_FONT == "PALATINO":
             out += ('\\usepackage{mathpazo}\n')
-        elif opts.OUTPUT_FONT == "TIMES":
+        elif args.OUTPUT_FONT == "TIMES":
             out += ('\\usepackage{mathptmx}\n')
-        elif opts.OUTPUT_FONT == "HELVETICA":
+        elif args.OUTPUT_FONT == "HELVETICA":
             out += ('\\renewcommand{\\familydefault}{\\sfdefault}\n')
             out += ('\\usepackage{sfmath}\n')
             out += ('\\usepackage{helvet}\n')
             out += ('\\usepackage[symbolgreek]{mathastext}\n')
-        for pkg in opts.LATEXPKGS:
+        for pkg in args.LATEXPKGS:
             out += ('\\usepackage{%s}\n' % pkg)
         out += ('\\usepackage[dvipsnames]{xcolor}\n')
         out += ('\\selectcolormodel{rgb}\n')
@@ -1139,7 +1139,7 @@ class RatioPlot(Plot):
             inputdata.histos[self.refdata].props['ErrorBandOpacity'] = inputdata.props[self.name+'ErrorBandOpacity']
             inputdata.histos[self.refdata].props['ErrorBands'] = '1'
             inputdata.histos[self.refdata].props['ErrorBars'] = '0'
-            inputdata.histos[self.refdata].props['ErrorTubes'] = '0' 
+            inputdata.histos[self.refdata].props['ErrorTubes'] = '0'
             inputdata.histos[self.refdata].props['LineStyle'] = 'solid'
             inputdata.histos[self.refdata].props['LineColor'] = 'black'
             inputdata.histos[self.refdata].props['LineWidth'] = '0.3pt'
@@ -1308,7 +1308,7 @@ class Legend(Described):
         orderedlegendlist=[]
         for i in sorted(legendordermap.keys()):
             orderedlegendlist.extend(legendordermap[i])
-            
+
         if self.props['is2dim']:
             return self.draw_2dlegend(orderedlegendlist)
 
@@ -1517,7 +1517,7 @@ class Special(Described):
             self.props['Location']='MainPlot'
         self.props['Location']=self.props['Location'].split('\t')
         if not self.props.has_key('Coordinates'):
-            self.props['Coordinates'] = 'Relative' 
+            self.props['Coordinates'] = 'Relative'
 
     def read_input(self, f):
         for line in f:
@@ -2530,7 +2530,7 @@ def process_datfile(datfile):
     datpath = os.path.abspath(datfile)
     datfile = os.path.basename(datpath)
     datdir = os.path.dirname(datpath)
-    outdir = opts.OUTPUT_DIR if opts.OUTPUT_DIR else datdir
+    outdir = args.OUTPUT_DIR if args.OUTPUT_DIR else datdir
     filename = datfile.replace('.dat','')
 
     ## Create a temporary directory
@@ -2538,7 +2538,7 @@ def process_datfile(datfile):
     tempdir = tempfile.mkdtemp('.make-plots')
     tempdatpath = os.path.join(tempdir, datfile)
     shutil.copy(datpath, tempdir)
-    if opts.NO_CLEANUP:
+    if args.NO_CLEANUP:
         logging.info('Keeping temp-files in %s' % tempdir)
 
     ## Make TeX file
@@ -2562,7 +2562,7 @@ def process_datfile(datfile):
     texfile.write(p.write_footer())
     texfile.close()
 
-    if opts.OUTPUT_FORMAT != ["TEX"]:
+    if args.OUTPUT_FORMAT != ["TEX"]:
 
         ## Check for the required programs
         latexavailable = have_cmd("latex")
@@ -2610,17 +2610,17 @@ def process_datfile(datfile):
         if not logging.getLogger().isEnabledFor(logging.DEBUG):
             dvcmd.append("-q")
         ## Handle Minion Font
-        if opts.OUTPUT_FONT == "MINION":
+        if args.OUTPUT_FONT == "MINION":
             dvcmd.append('-Pminion')
 
         ## Choose format
         # TODO: Rationalise... this is a mess! Maybe we can use tex2pix?
-        if "PS" in opts.OUTPUT_FORMAT:
+        if "PS" in args.OUTPUT_FORMAT:
             dvcmd += ["-o", "%s.ps" % filename]
             logging.debug(" ".join(dvcmd))
             dvproc = subprocess.Popen(dvcmd, stdout=subprocess.PIPE, cwd=tempdir)
             dvproc.wait()
-        if "PDF" in opts.OUTPUT_FORMAT:
+        if "PDF" in args.OUTPUT_FORMAT:
             dvcmd.append("-f")
             logging.debug(" ".join(dvcmd))
             dvproc = subprocess.Popen(dvcmd, stdout=subprocess.PIPE, cwd=tempdir)
@@ -2628,7 +2628,7 @@ def process_datfile(datfile):
             f = open(os.path.join(tempdir, "%s.pdf" % filename), "wb")
             f.write(cnvproc.communicate()[0])
             f.close()
-        if "EPS" in opts.OUTPUT_FORMAT:
+        if "EPS" in args.OUTPUT_FORMAT:
             dvcmd.append("-f")
             logging.debug(" ".join(dvcmd))
             dvproc = subprocess.Popen(dvcmd, stdout=subprocess.PIPE, cwd=tempdir)
@@ -2636,7 +2636,7 @@ def process_datfile(datfile):
             f = open(os.path.join(tempdir, "%s.eps" % filename), "wb")
             f.write(cnvproc.communicate()[0])
             f.close()
-        if "PNG" in opts.OUTPUT_FORMAT:
+        if "PNG" in args.OUTPUT_FORMAT:
             dvcmd.append("-f")
             logging.debug(" ".join(dvcmd))
             dvproc = subprocess.Popen(dvcmd, stdout=subprocess.PIPE, cwd=tempdir)
@@ -2648,7 +2648,7 @@ def process_datfile(datfile):
         logging.debug(os.listdir(tempdir))
 
     ## Copy results back to main dir
-    for fmt in opts.OUTPUT_FORMAT:
+    for fmt in args.OUTPUT_FORMAT:
         outname = "%s.%s" % (filename, fmt.lower())
         outpath = os.path.join(tempdir, outname)
         if os.path.exists(outpath):
@@ -2657,7 +2657,7 @@ def process_datfile(datfile):
             logging.error("No output file '%s' from processing %s" % (outname, datfile))
 
     ## Clean up
-    if not opts.NO_CLEANUP:
+    if not args.NO_CLEANUP:
         shutil.rmtree(tempdir, ignore_errors=True)
 
 
@@ -2689,53 +2689,53 @@ if __name__ == '__main__':
         numcores = 1
 
     ## Parse command line options
-    from optparse import OptionParser, OptionGroup
-    parser = OptionParser(usage=__doc__)
-    parser.add_option("-j", "-n", "--num-threads", dest="NUM_THREADS", type="int",
-                      default=numcores, help="max number of threads to be used [%s]" % numcores)
-    parser.add_option("-o", "--outdir", dest="OUTPUT_DIR", default=None,
-                      help="choose the output directory (default = .dat dir)")
-    parser.add_option("--font", dest="OUTPUT_FONT", choices="palatino,cm,times,helvetica,minion".split(","),
-                      default="palatino", help="choose the font to be used in the plots")
-    parser.add_option("-f", "--format", dest="OUTPUT_FORMAT", default="PDF",
-                      help="choose plot format, perhaps multiple comma-separated formats e.g. 'pdf' or 'tex,pdf,png' (default = PDF).")
-    parser.add_option("--no-cleanup", dest="NO_CLEANUP", action="store_true", default=False,
-                      help="keep temporary directory and print its filename.")
-    parser.add_option("--no-subproc", dest="NO_SUBPROC", action="store_true", default=False,
-                      help="don't use subprocesses to render the plots in parallel -- useful for debugging.")
-    parser.add_option("--full-range", dest="FULL_RANGE", action="store_true", default=False,
-                      help="plot full y range in log-y plots.")
-    parser.add_option("-c", "--config", dest="CONFIGFILES", action="append", default=None,
-                      help="plot config file to be used. Overrides internal config blocks.")
-    verbgroup = OptionGroup(parser, "Verbosity control")
-    verbgroup.add_option("-v", "--verbose", action="store_const", const=logging.DEBUG, dest="LOGLEVEL",
-                         default=logging.INFO, help="print debug (very verbose) messages")
-    verbgroup.add_option("-q", "--quiet", action="store_const", const=logging.WARNING, dest="LOGLEVEL",
-                         default=logging.INFO, help="be very quiet")
-    parser.add_option_group(verbgroup)
-    opts, args = parser.parse_args()
+    import argparse
+    parser = argparse.ArgumentParser(usage=__doc__)
+    parser.add_argument("DATFILES", nargs="+", help=".dat files to plot")
+    parser.add_argument("-j", "-n", "--num-threads", dest="NUM_THREADS", type=int,
+                        default=numcores, help="max number of threads to be used [%s]" % numcores)
+    parser.add_argument("-o", "--outdir", dest="OUTPUT_DIR", default=None,
+                        help="choose the output directory (default = .dat dir)")
+    parser.add_argument("--font", dest="OUTPUT_FONT", choices="palatino,cm,times,helvetica,minion".split(","),
+                        default="palatino", help="choose the font to be used in the plots")
+    parser.add_argument("-f", "--format", dest="OUTPUT_FORMAT", default="PDF",
+                        help="choose plot format, perhaps multiple comma-separated formats e.g. 'pdf' or 'tex,pdf,png' (default = PDF).")
+    parser.add_argument("--no-cleanup", dest="NO_CLEANUP", action="store_true", default=False,
+                        help="keep temporary directory and print its filename.")
+    parser.add_argument("--no-subproc", dest="NO_SUBPROC", action="store_true", default=False,
+                        help="don't use subprocesses to render the plots in parallel -- useful for debugging.")
+    parser.add_argument("--full-range", dest="FULL_RANGE", action="store_true", default=False,
+                        help="plot full y range in log-y plots.")
+    parser.add_argument("-c", "--config", dest="CONFIGFILES", action="append", default=None,
+                        help="plot config file to be used. Overrides internal config blocks.")
+    verbgroup = parser.add_argument_group("Verbosity control")
+    verbgroup.add_argument("-v", "--verbose", action="store_const", const=logging.DEBUG, dest="LOGLEVEL",
+                           default=logging.INFO, help="print debug (very verbose) messages")
+    verbgroup.add_argument("-q", "--quiet", action="store_const", const=logging.WARNING, dest="LOGLEVEL",
+                           default=logging.INFO, help="be very quiet")
+    args = parser.parse_args()
 
     ## Tweak the opts output
-    logging.basicConfig(level=opts.LOGLEVEL, format="%(message)s")
-    opts.OUTPUT_FONT = opts.OUTPUT_FONT.upper()
-    opts.OUTPUT_FORMAT = opts.OUTPUT_FORMAT.upper().split(",")
-    if opts.NUM_THREADS == 1:
-        opts.NO_SUBPROC = True
+    logging.basicConfig(level=args.LOGLEVEL, format="%(message)s")
+    args.OUTPUT_FONT = args.OUTPUT_FONT.upper()
+    args.OUTPUT_FORMAT = args.OUTPUT_FORMAT.upper().split(",")
+    if args.NUM_THREADS == 1:
+        args.NO_SUBPROC = True
 
     ## Check for no args
-    if len(args) == 0:
+    if len(args.DATFILES) == 0:
         logging.error(parser.get_usage())
         sys.exit(2)
 
     ## Check that the files exist
-    for f in args:
+    for f in args.DATFILES:
         if not os.access(f, os.R_OK):
             print("Error: cannot read from %s" % f)
             sys.exit(1)
 
     ## Test for external programs (kpsewhich, latex, dvips, ps2pdf/ps2eps, and convert)
-    opts.LATEXPKGS = []
-    if opts.OUTPUT_FORMAT != ["TEX"]:
+    args.LATEXPKGS = []
+    if args.OUTPUT_FORMAT != ["TEX"]:
         try:
             ## latex
             if not have_cmd("latex"):
@@ -2747,16 +2747,16 @@ if __name__ == '__main__':
                 sys.exit(1)
 
             ## ps2pdf / ps2eps
-            if "PDF" in opts.OUTPUT_FORMAT:
+            if "PDF" in args.OUTPUT_FORMAT:
                 if not have_cmd("ps2pdf"):
                     logging.error("ERROR: required program 'ps2pdf' (for PDF output) could not be found. Exiting...")
                     sys.exit(1)
-            elif "EPS" in opts.OUTPUT_FORMAT:
+            elif "EPS" in args.OUTPUT_FORMAT:
                 if not have_cmd("ps2eps"):
                     logging.error("ERROR: required program 'ps2eps' (for EPS output) could not be found. Exiting...")
                     sys.exit(1)
             ## PNG output converter
-            if "PNG" in opts.OUTPUT_FORMAT:
+            if "PNG" in args.OUTPUT_FORMAT:
                 if not have_cmd("convert"):
                     logging.error("ERROR: required program 'convert' (for PNG output) could not be found. Exiting...")
                     sys.exit(1)
@@ -2766,12 +2766,12 @@ if __name__ == '__main__':
                 logging.warning("WARNING: required program 'kpsewhich' (for LaTeX package checks) could not be found")
             else:
                 ## Check minion font
-                if opts.OUTPUT_FONT == "MINION":
+                if args.OUTPUT_FONT == "MINION":
                     p = subprocess.Popen(["kpsewhich", "minion.sty"], stdout=subprocess.PIPE)
                     p.wait()
                     if p.returncode != 0:
                         logging.warning('Warning: Using "--minion" requires minion.sty to be installed. Ignoring it.')
-                        opts.OUTPUT_FONT = "PALATINO"
+                        args.OUTPUT_FONT = "PALATINO"
 
                 ## Check for HEP LaTeX packages
                 # TODO: remove HEP-specifics/non-standards?
@@ -2779,14 +2779,14 @@ if __name__ == '__main__':
                     p = subprocess.Popen(["kpsewhich", "%s.sty" % pkg], stdout=subprocess.PIPE)
                     p.wait()
                     if p.returncode == 0:
-                        opts.LATEXPKGS.append(pkg)
+                        args.LATEXPKGS.append(pkg)
 
                 ## Check for Palatino old style figures and small caps
-                if opts.OUTPUT_FONT == "PALATINO":
+                if args.OUTPUT_FONT == "PALATINO":
                     p = subprocess.Popen(["kpsewhich", "ot1pplx.fd"], stdout=subprocess.PIPE)
                     p.wait()
                     if p.returncode == 0:
-                        opts.OUTPUT_FONT = "PALATINO_OSF"
+                        args.OUTPUT_FONT = "PALATINO_OSF"
         except Exception as e:
             logging.warning("Problem while testing for external packages. I'm going to try and continue without testing, but don't hold your breath...")
 
@@ -2795,16 +2795,16 @@ if __name__ == '__main__':
         signal.signal(signal.SIGINT, signal.SIG_IGN)
 
     ## Run rendering jobs
-    datfiles = args
+    datfiles = args.DATFILES
     plotword = "plots" if len(datfiles) > 1 else "plot"
     logging.info("Making %d %s" % (len(datfiles), plotword))
-    if opts.NO_SUBPROC:
+    if args.NO_SUBPROC:
         init_worker()
         for i, df in enumerate(datfiles):
             logging.info("Plotting %s (%d/%d remaining)" % (df, len(datfiles)-i, len(datfiles)))
             process_datfile(df)
     else:
-        pool = multiprocessing.Pool(opts.NUM_THREADS, init_worker)
+        pool = multiprocessing.Pool(args.NUM_THREADS, init_worker)
         try:
             for i, _ in enumerate(pool.imap(process_datfile, datfiles)):
                 logging.info("Plotting %s (%d/%d remaining)" % (datfiles[i], len(datfiles)-i, len(datfiles)))

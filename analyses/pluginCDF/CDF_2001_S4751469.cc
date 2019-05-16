@@ -40,7 +40,7 @@ namespace Rivet {
     void init() {
       declare(TriggerCDFRun0Run1(), "Trigger");
       // Randomly discard 8% of charged particles as a kind of hacky detector correction.
-      const ChargedFinalState cfs(-1.0, 1.0, 0.5*GeV);
+      const ChargedFinalState cfs(Cuts::abseta < 1.0 && Cuts::pT >  0.5*GeV);
       /// @todo Replace ConstLossyFinalState with SmearedParticles
       const ConstLossyFinalState lossyfs(cfs, 0.08);
       //const SmearedParticles lossyfs(cfs, [](const Particle&){ return 0.92; });

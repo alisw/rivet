@@ -13,7 +13,17 @@ namespace Rivet {
   DressedLepton::DressedLepton(const Particle& dlepton)
     : Particle(dlepton)
   {
-    setConstituents({{dlepton}}); //< bare lepton is first constituent
+    if (dlepton.isComposite()) {
+      Particles dressing;
+      dressing.reserve(dlepton.constituents().size()-1);
+      for (const Particle& p : dlepton.constituents()) {
+        if (p.isChargedLepton()) setConstituents({{p}}); //< bare lepton is first constituent
+        else dressing.push_back(p);
+      }
+      addConstituents(dressing);
+    } else {
+      setConstituents({{dlepton}});
+    }
   }
 
   DressedLepton::DressedLepton(const Particle& lepton, const Particles& photons, bool momsum)
@@ -114,7 +124,7 @@ namespace Rivet {
 
       if (_dRmax <= 0) {
         for (const Particle& bl : bareleptons) {
-          Particle dl(bl.pid(), bl.momentum());
+          Particle dl(bl.pid(), bl.momentum(), bl.genParticle());
           dl.setConstituents({bl});
           allClusteredLeptons += dl;
         }
@@ -124,7 +134,7 @@ namespace Rivet {
           const Particles leps = sortByPt(lepjet.particles(isChargedLepton));
           if (leps.empty()) continue;
           Particles constituents = {leps[0]}; //< note no dressing for subleading leptons
-          Particle dl(leps[0].pid(), leps[0].momentum());
+          Particle dl(leps[0].pid(), leps[0].momentum(), leps[0].genParticle());
           constituents += lepjet.particles(isPhoton);
           dl.setConstituents(constituents);
           allClusteredLeptons += dl;
@@ -134,7 +144,7 @@ namespace Rivet {
     } else {
 
       for (const Particle& bl : bareleptons) {
-        Particle dl(bl.pid(), bl.momentum());
+        Particle dl(bl.pid(), bl.momentum(), bl.genParticle());
         dl.setConstituents({bl});
         allClusteredLeptons += dl;
       }

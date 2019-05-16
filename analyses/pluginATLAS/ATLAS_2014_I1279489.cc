@@ -333,24 +333,23 @@ namespace Rivet {
     }
 
     void finalizeEfficiencies(Plots& plots) {
-
       if (plots.label != "baseline" && plots.label != "highpt")  return;
       size_t offset = plots.label == "baseline"? 0 : 10;
 
-      if (plots.h_jetveto_mjj_veto && plots.h_jetveto_mjj_inc) divide(plots.h_jetveto_mjj_veto, plots.h_jetveto_mjj_inc, bookScatter2D(8 + offset, 1, 2));
-      getScatter2D(8 + offset, 1, 2)->addAnnotation("InclusiveSumWeights", plots.h_jetveto_mjj_inc->integral());
+      if (plots.h_jetveto_mjj_veto && plots.h_jetveto_mjj_inc) divide(plots.h_jetveto_mjj_veto, plots.h_jetveto_mjj_inc, bookScatter2D(8 + offset, 1, 1));
+      getScatter2D(8 + offset, 1, 1)->addAnnotation("InclusiveSumWeights", plots.h_jetveto_mjj_inc->integral());
       removeAnalysisObject(plots.h_jetveto_mjj_veto); removeAnalysisObject(plots.h_jetveto_mjj_inc);
 
-      if (plots.h_jetveto_dy_veto && plots.h_jetveto_dy_inc) divide(plots.h_jetveto_dy_veto, plots.h_jetveto_dy_inc, bookScatter2D(9 + offset, 2, 2));
-      getScatter2D(9 + offset, 2, 2)->addAnnotation("InclusiveSumWeights", plots.h_jetveto_dy_inc->integral());
+      if (plots.h_jetveto_dy_veto && plots.h_jetveto_dy_inc) divide(plots.h_jetveto_dy_veto, plots.h_jetveto_dy_inc, bookScatter2D(9 + offset, 1, 1));
+      getScatter2D(9 + offset, 1, 1)->addAnnotation("InclusiveSumWeights", plots.h_jetveto_dy_inc->integral());
       removeAnalysisObject(plots.h_jetveto_dy_veto); removeAnalysisObject(plots.h_jetveto_dy_inc);
 
-      if (plots.h_ptbaleff_mjj_veto && plots.h_ptbaleff_mjj_inc) divide(plots.h_ptbaleff_mjj_veto, plots.h_ptbaleff_mjj_inc, bookScatter2D(12 + offset, 1, 3));
-      getScatter2D(12 + offset, 1, 3)->addAnnotation("InclusiveSumWeights", plots.h_ptbaleff_mjj_inc->integral());
+      if (plots.h_ptbaleff_mjj_veto && plots.h_ptbaleff_mjj_inc) divide(plots.h_ptbaleff_mjj_veto, plots.h_ptbaleff_mjj_inc, bookScatter2D(12 + offset, 1, 1));
+      getScatter2D(12 + offset, 1, 1)->addAnnotation("InclusiveSumWeights", plots.h_ptbaleff_mjj_inc->integral());
       removeAnalysisObject(plots.h_ptbaleff_mjj_veto); removeAnalysisObject(plots.h_ptbaleff_mjj_inc);
 
-      if (plots.h_ptbaleff_dy_veto && plots.h_ptbaleff_dy_inc) divide(plots.h_ptbaleff_dy_veto, plots.h_ptbaleff_dy_inc, bookScatter2D(13 + offset, 2, 3));
-      getScatter2D(13 + offset, 2, 3)->addAnnotation("InclusiveSumWeights", plots.h_ptbaleff_dy_inc->integral());
+      if (plots.h_ptbaleff_dy_veto && plots.h_ptbaleff_dy_inc) divide(plots.h_ptbaleff_dy_veto, plots.h_ptbaleff_dy_inc, bookScatter2D(13 + offset, 1, 1));
+      getScatter2D(13 + offset, 1, 1)->addAnnotation("InclusiveSumWeights", plots.h_ptbaleff_dy_inc->integral());
       removeAnalysisObject(plots.h_ptbaleff_dy_veto); removeAnalysisObject(plots.h_ptbaleff_dy_inc);
     }
 

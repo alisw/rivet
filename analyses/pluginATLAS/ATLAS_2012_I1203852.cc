@@ -14,6 +14,7 @@
 
 namespace Rivet {
 
+
   /// Generic Z candidate
   struct Zstate : public ParticlePair {
     Zstate() { }
@@ -25,7 +26,7 @@ namespace Rivet {
 
 
 
-  /// @name ZZ analysis
+  /// ZZ analysis
   class ATLAS_2012_I1203852 : public Analysis {
   public:
 
@@ -33,6 +34,7 @@ namespace Rivet {
     ATLAS_2012_I1203852()
       : Analysis("ATLAS_2012_I1203852")
     {    }
+
 
     void init() {
 
@@ -123,11 +125,11 @@ namespace Rivet {
       ////////////////////////////////////////////////////////////////////
       // OVERLAP removal dR(l,l)>0.2
       ////////////////////////////////////////////////////////////////////
-      foreach ( const DressedLepton& l1, leptonsFS_sel4l) {
+      for (const DressedLepton& l1 : leptonsFS_sel4l) {
         bool isolated = true;
-        foreach (DressedLepton& l2, leptonsFS_sel4l) {
+        for (DressedLepton& l2 : leptonsFS_sel4l) {
           const double dR = deltaR(l1, l2);
-          if (dR < 0.2 && l1 != l2) { isolated = false; break; }
+          if (dR < 0.2 && !isSame(l1, l2)) { isolated = false; break; }
         }
         if (isolated) leptons_sel4l.push_back(l1);
       }
@@ -138,7 +140,7 @@ namespace Rivet {
 
       // calculate total 'flavour' charge
       double totalcharge = 0;
-      foreach (Particle& l, leptons_sel4l) totalcharge += l.pid();
+      for (const Particle& l : leptons_sel4l) totalcharge += l.pid();
 
       // Analyze 4 lepton events
       if (leptons_sel4l.size() == 4 && totalcharge == 0  ) {

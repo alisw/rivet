@@ -18,9 +18,11 @@ namespace Rivet {
     void init() {
 
       // Get options from the new option system
-      _mode = 0;
+      // default to combined.
+      _mode = 2;
       if ( getOption("LMODE") == "EL" ) _mode = 0;
       if ( getOption("LMODE") == "MU" ) _mode = 1;
+      if ( getOption("LMODE") == "EMU" ) _mode = 2;
 
       const FinalState fs;
       
@@ -60,7 +62,7 @@ namespace Rivet {
     /// Perform the per-event analysis
     void analyze(const Event& event) {
       
-      const double weight = event.weight();
+      const double weight = event.weight(); 
       
       const ZFinder& zeefinder = apply<ZFinder>(event, "zeefinder");
       const ZFinder& zmumufinder = apply<ZFinder>(event, "zmumufinder");
@@ -69,9 +71,11 @@ namespace Rivet {
       const Particles& zmumus = zmumufinder.bosons();
 
       //Veto Z->mumu in electron mode, and vice versa:      
-      if (_mode==1 && (zees.size()!=1 || zmumus.size() ) )  vetoEvent;
-      else if (_mode==2 && (zees.size() || zmumus.size()!=1 ) )  vetoEvent;
-      else if (zees.size() + zmumus.size() != 1) {
+      if (_mode==0 && (zees.size()!=1 || zmumus.size() ) )  vetoEvent;
+
+      if (_mode==1 && (zees.size() || zmumus.size()!=1 ) )  vetoEvent;
+
+      if (zees.size() + zmumus.size() != 1) {
         // Running in combined mode, we did not find exactly one Z. Not good.
         MSG_DEBUG("Did not find exactly one good Z candidate");
         vetoEvent;
@@ -133,17 +137,21 @@ namespace Rivet {
         _h_Njets_Ratio->point(i).setY(r, e);
       }
 
-      scale(_h_Njets,                  crossSectionPerEvent() );
-      scale(_h_Njets_excl,             crossSectionPerEvent() );
-      scale(_h_HT,                     crossSectionPerEvent() );
-      scale(_h_leading_jet_rap,        crossSectionPerEvent() );
-      scale(_h_leading_jet_pT,         crossSectionPerEvent() );
-      scale(_h_leading_jet_pT_eq1jet,  crossSectionPerEvent() );
-      scale(_h_leading_jet_pT_2jet,    crossSectionPerEvent() );
-      scale(_h_leading_jet_pT_3jet,    crossSectionPerEvent() );
-      scale(_h_leading_jet_pT_4jet,    crossSectionPerEvent() );
-      scale(_h_jet_dphi,               crossSectionPerEvent() );
-      scale(_h_jet_mass,               crossSectionPerEvent() );
+      // when running in combined mode, need to average to get lepton xsec
+      double normfac = crossSectionPerEvent();
+      if (_mode == 2) normfac = 0.5*normfac;
+
+      scale(_h_Njets,                  normfac );
+      scale(_h_Njets_excl,             normfac );
+      scale(_h_HT,                     normfac );
+      scale(_h_leading_jet_rap,        normfac );
+      scale(_h_leading_jet_pT,         normfac );
+      scale(_h_leading_jet_pT_eq1jet,  normfac );
+      scale(_h_leading_jet_pT_2jet,    normfac );
+      scale(_h_leading_jet_pT_3jet,    normfac );
+      scale(_h_leading_jet_pT_4jet,    normfac );
+      scale(_h_jet_dphi,               normfac );
+      scale(_h_jet_mass,               normfac );
 
     }
 

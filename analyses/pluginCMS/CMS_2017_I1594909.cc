@@ -93,7 +93,7 @@ namespace Rivet {
       // Find isolated leptons
       const Particles isoleps = filter_select(elecs+mus, [&](const Particle& l){
           const double dR = l.pT() < 50*GeV ? 0.2 : l.pT() < 200*GeV ? 10*GeV/l.pT() : 0.05;
-          const double sumpt = sum(filter_select(pfiso, deltaRLess(l, dR)), pT, 0.0);
+          const double sumpt = sum(filter_select(pfiso, deltaRLess(l, dR)), Kin::pT, 0.0);
           return sumpt/l.pT() < (l.abspid() == PID::ELECTRON ? 0.1 : 0.2); //< different I criteria for e and mu
         });
 
@@ -102,7 +102,7 @@ namespace Rivet {
       const Particles isochgs = filter_select(pfchg, [&](const Particle& t){
           if (t.abseta() > 2.4) return false;
           if (any(isoleps, deltaRLess(t, 0.01))) return false; //< don't count isolated leptons here
-          const double sumpt = sum(filter_select(pfchg, deltaRLess(t, 0.3)), pT, -t.pT());
+          const double sumpt = sum(filter_select(pfchg, deltaRLess(t, 0.3)), Kin::pT, -t.pT());
           return sumpt/t.pT() < ((t.abspid() == PID::ELECTRON || t.abspid() == PID::MUON) ? 0.2 : 0.1);
         });
 
@@ -115,7 +115,7 @@ namespace Rivet {
       MSG_DEBUG("Njets = " << jets.size() << ", Nisojets = " << njets << ", Nbjets = " << nbjets);
 
       // Calculate HT, HTmiss, and pTmiss quantities
-      const double ht = sum(jets, pT, 0.0);
+      const double ht = sum(jets, Kin::pT, 0.0);
       const Vector3 vhtmiss = -sum(jets, pTvec, Vector3());
       const double htmiss = vhtmiss.perp();
       const Vector3& vptmiss = -apply<SmearedMET>(event, "MET").vectorEt();

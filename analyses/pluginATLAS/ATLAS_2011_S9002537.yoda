@@ -1,10 +1,13 @@
 BEGIN YODA_SCATTER2D_V2 /REF/ATLAS_2011_S9002537/d01-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.011, up: 0.011}, sys: {dn: -0.017, up: 0.017}}, 1: {stat: {dn: -0.01, up: 0.01}, sys: {dn: -0.012, up: 0.012}}, 2: {stat: {dn: -0.01, up: 0.01}, sys: {dn: -0.012, up: 0.012}}, 3: {stat: {dn: -0.01, up: 0.01}, sys: {dn: -0.015, up: 0.015}}, 4: {stat: {dn: -0.011, up: 0.011}, sys: {dn: -0.017, up: 0.017}}, 5: {stat: {dn: -0.008, up: 0.008}, sys: {dn: -0.011, up: 0.011}}, 6: {stat: {dn: -0.011, up: 0.011}, sys: {dn: -0.01, up: 0.01}}, 7: {stat: {dn: -0.009, up: 0.009}, sys: {dn: -0.01, up: 0.01}}, 8: {stat: {dn: -0.009, up: 0.009}, sys: {dn: -0.01, up: 0.01}}, 9: {stat: {dn: -0.009, up: 0.009}, sys: {dn: -0.012, up: 0.012}}, 10: {stat: {dn: -0.01, up: 0.01}, sys: {dn: -0.012, up: 0.012}}}
+
 IsRef: 1
 Path: /REF/ATLAS_2011_S9002537/d01-x01-y01
 Title: doi:10.17182/hepdata.85594.v1/t1
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 1.050000e-01	1.050000e-01	1.050000e-01	1.470000e-01	2.024846e-02	2.024846e-02
 3.150000e-01	1.050000e-01	1.050000e-01	1.490000e-01	1.562050e-02	1.562050e-02
 5.250000e-01	1.050000e-01	1.050000e-01	1.570000e-01	1.562050e-02	1.562050e-02

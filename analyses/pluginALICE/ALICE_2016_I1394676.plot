@@ -1,8 +1,47 @@
 # BEGIN PLOT /ALICE_2016_I1394676/d01-x01-y01
-#Title=[Uncomment and insert title for histogram d01-x01-y01 here]
-#XLabel=[Uncomment and insert x-axis label for histogram d01-x01-y01 here]
-#YLabel=[Uncomment and insert y-axis label for histogram d01-x01-y01 here]
-# + any additional plot settings you might like, see make-plots documentation
+Title=d$N_\text{ch}$/d$\eta$, $\sqrt{s}=2.76$ TeV/nn, Centrality: 30-40 \%
+XLabel=$\eta$
+YLabel=$\mathrm{d}N_\text{ch} / \mathrm{d}\eta$
+LogY=0
+LogX=0
 # END PLOT
 
-# ... add more histograms as you need them ...
+# BEGIN PLOT /ALICE_2016_I1394676/d01-x01-y02
+Title=d$N_\text{ch}$/d$\eta$, $\sqrt{s}=2.76$ TeV/nn, Centrality: 40-50 \%
+XLabel=$\eta$
+YLabel=$\mathrm{d}N_\text{ch} / \mathrm{d}\eta$
+LogY=0
+LogX=0
+# END PLOT
+
+# BEGIN PLOT /ALICE_2016_I1394676/d01-x01-y03
+Title=d$N_\text{ch}$/d$\eta$, $\sqrt{s}=2.76$ TeV/nn, Centrality: 50-60 \%
+XLabel=$\eta$
+YLabel=$\mathrm{d}N_\text{ch} / \mathrm{d}\eta$
+LogY=0
+LogX=0
+# END PLOT
+
+# BEGIN PLOT /ALICE_2016_I1394676/d01-x01-y04
+Title=d$N_\text{ch}$/d$\eta$, $\sqrt{s}=2.76$ TeV/nn, Centrality: 60-70 \%
+XLabel=$\eta$
+YLabel=$\mathrm{d}N_\text{ch} / \mathrm{d}\eta$
+LogY=0
+LogX=0
+# END PLOT
+
+# BEGIN PLOT /ALICE_2016_I1394676/d01-x01-y05
+Title=d$N_\text{ch}$/d$\eta$, $\sqrt{s}=2.76$ TeV/nn, Centrality: 70-80 \%
+XLabel=$\eta$
+YLabel=$\mathrm{d}N_\text{ch} / \mathrm{d}\eta$
+LogY=0
+LogX=0
+# END PLOT
+
+# BEGIN PLOT /ALICE_2016_I1394676/d01-x01-y06
+Title=d$N_\text{ch}$/d$\eta$, $\sqrt{s}=2.76$ TeV/nn, Centrality: 80-90 \%
+XLabel=$\eta$
+YLabel=$\mathrm{d}N_\text{ch} / \mathrm{d}\eta$
+LogY=0
+LogX=0
+# END PLOT

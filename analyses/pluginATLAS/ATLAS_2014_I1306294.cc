@@ -28,7 +28,7 @@ namespace Rivet {
     void init() {
 
      // Get options from the new option system
-      _mode = 0;
+      _mode = 1;
       if ( getOption("LMODE") == "EL" ) _mode = 1;
       if ( getOption("LMODE") == "MU" ) _mode = 2;
 

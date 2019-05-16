@@ -6,8 +6,10 @@ UPDATE= #'--update-ranking'
 VERB= #"-v"
 
 eval "$BASECMD $UPDATE $VERB"
-eval "$BASECMD -SI $VERB"
-eval "$BASECMD -S $VERB"
-eval "$BASECMD -I $VERB"
-eval "$BASECMD -s $VERB"
-eval "$BASECMD -i $VERB"
+if [[ -z "$UPDATE" ]]; then
+    eval "$BASECMD -SI $VERB"
+    eval "$BASECMD -S $VERB"
+    eval "$BASECMD -I $VERB"
+    eval "$BASECMD -s $VERB"
+    eval "$BASECMD -i $VERB"
+fi

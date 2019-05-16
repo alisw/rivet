@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 
 """\
-%prog [options] <yodafile1> [<yodafile2> <yodafile3>...] [PLOT:Key1=Val1:...]
+%(prog)s [options] <yodafile1> [<yodafile2> <yodafile3>...] [PLOT:Key1=Val1:...]
 
 Make web pages from histogram files written out by Rivet.  You can specify
 multiple Monte Carlo YODA files to be compared in the same syntax as for
@@ -14,8 +14,7 @@ appropriately).
 Any existing output directory will be overwritten.
 
 ENVIRONMENT:
- * RIVET_ANALYSIS_PATH: list of paths to be searched for plugin
-     analysis libraries at runtime
+ * RIVET_ANALYSIS_PATH: list of paths to be searched for analysis plugin libraries
  * RIVET_DATA_PATH: list of paths to be searched for data files
 """
 
@@ -29,88 +28,86 @@ import glob, shutil
 from subprocess import Popen,PIPE
 
 
-from optparse import OptionParser, OptionGroup
-parser = OptionParser(usage=__doc__)
-parser.add_option("-o", "--outputdir", dest="OUTPUTDIR",
-                  default="./rivet-plots", help="directory for Web page output")
-parser.add_option("-c", "--config", dest="CONFIGFILES", action="append", default=["~/.make-plots"],
-                  help="plot config file(s) to be used with rivet-cmphistos")
-parser.add_option("-n", "--num-threads", metavar="NUMTHREADS", dest="NUMTHREADS", type=int,
-                  default=None, help="request make-plots to use a specific number of threads")
-parser.add_option("--ignore-missing", dest="IGNORE_MISSING", action="store_true",
-                  default=False, help="ignore missing YODA files")
-parser.add_option("-i", "--ignore-unvalidated", dest="IGNORE_UNVALIDATED", action="store_true",
-                  default=False, help="ignore unvalidated analyses")
-# parser.add_option("--ref", "--refid", dest="REF_ID",
+import argparse
+parser = argparse.ArgumentParser(usage=__doc__)
+parser.add_argument("YODAFILES", nargs="+", help="data files to compare")
+parser.add_argument("-o", "--outputdir", dest="OUTPUTDIR",
+                    default="./rivet-plots", help="directory for Web page output")
+parser.add_argument("-c", "--config", dest="CONFIGFILES", action="append", default=["~/.make-plots"],
+                    help="plot config file(s) to be used with rivet-cmphistos")
+parser.add_argument("-n", "--num-threads", metavar="NUMTHREADS", dest="NUMTHREADS", type=int,
+                    default=None, help="request make-plots to use a specific number of threads")
+parser.add_argument("--ignore-missing", dest="IGNORE_MISSING", action="store_true",
+                    default=False, help="ignore missing YODA files")
+parser.add_argument("-i", "--ignore-unvalidated", dest="IGNORE_UNVALIDATED", action="store_true",
+                    default=False, help="ignore unvalidated analyses")
+# parser.add_argument("--ref", "--refid", dest="REF_ID",
 #                   default=None, help="ID of reference data set (file path for non-REF data)")
-parser.add_option("--dry-run", help="don't actually do any plotting or HTML building", dest="DRY_RUN",
-                  action="store_true", default=False)
-parser.add_option("--no-cleanup", dest="NO_CLEANUP", action="store_true", default=False,
-                  help="keep plotting temporary directory")
-parser.add_option("--no-subproc", dest="NO_SUBPROC", action="store_true", default=False,
-                  help="don't use subprocesses to render the plots in parallel -- useful for debugging")
-parser.add_option("--pwd", dest="PATH_PWD", action="store_true", default=False,
-                  help="append the current directory (pwd) to the analysis/data search paths (cf. $RIVET_ANALYSIS_PATH)")
+parser.add_argument("--dry-run", help="don't actually do any plotting or HTML building", dest="DRY_RUN",
+                    action="store_true", default=False)
+parser.add_argument("--no-cleanup", dest="NO_CLEANUP", action="store_true", default=False,
+                    help="keep plotting temporary directory")
+parser.add_argument("--no-subproc", dest="NO_SUBPROC", action="store_true", default=False,
+                    help="don't use subprocesses to render the plots in parallel -- useful for debugging")
+parser.add_argument("--pwd", dest="PATH_PWD", action="store_true", default=False,
+                    help="append the current directory (pwd) to the analysis/data search paths (cf. $RIVET_ANALYSIS_PATH)")
 
-stygroup = OptionGroup(parser, "Style options")
-stygroup.add_option("-t", "--title", dest="TITLE",
-                    default="Plots from Rivet analyses", help="title to be displayed on the main web page")
-stygroup.add_option("--reftitle", dest="REFTITLE",
-                    default="Data", help="legend entry for reference data")
-stygroup.add_option("--no-plottitle", dest="NOPLOTTITLE", action="store_true",
-                    default=False, help="don't show the plot title on the plot "
-                        "(useful when the plot description should only be given in a caption)")
-stygroup.add_option("-s", "--single", dest="SINGLE", action="store_true",
-                    default=False, help="display plots on single webpage.")
-stygroup.add_option("--no-ratio", dest="SHOW_RATIO", action="store_false",
-                    default=True, help="don't draw a ratio plot under each main plot.")
-stygroup.add_option("--errs", "--mcerrs", "--mc-errs", dest="MC_ERRS", action="store_true",
-                    default=False, help="plot error bars.")
-stygroup.add_option("--offline", dest="OFFLINE", action="store_true",
-                    default=False, help="generate HTML that does not use external URLs.")
-stygroup.add_option("--pdf", dest="VECTORFORMAT", action="store_const", const="PDF",
-                    default="PDF", help="use PDF as the vector plot format.")
-stygroup.add_option("--ps", dest="VECTORFORMAT", action="store_const", const="PS",
-                    default="PDF", help="use PostScript as the vector plot format. DEPRECATED")
-stygroup.add_option("--booklet", dest="BOOKLET", action="store_true",
-                    default=False, help="create booklet (currently only available for PDF with pdftk or pdfmerge).")
-stygroup.add_option("--font", dest="OUTPUT_FONT", choices="palatino,cm,times,helvetica,minion".split(","),
-                    default="palatino", help="choose the font to be used in the plots")
-stygroup.add_option("--palatino", dest="OUTPUT_FONT", action="store_const", const="palatino", default="palatino",
-                    help="use Palatino as font (default). DEPRECATED: Use --font")
-stygroup.add_option("--cm", dest="OUTPUT_FONT", action="store_const", const="cm", default="palatino",
-                    help="use Computer Modern as font. DEPRECATED: Use --font")
-stygroup.add_option("--times", dest="OUTPUT_FONT", action="store_const", const="times", default="palatino",
-                    help="use Times as font. DEPRECATED: Use --font")
-stygroup.add_option("--helvetica", dest="OUTPUT_FONT", action="store_const", const="helvetica", default="palatino",
-                    help="use Helvetica as font. DEPRECATED: Use --font")
-stygroup.add_option("--minion", dest="OUTPUT_FONT", action="store_const", const="minion", default="palatino",
-                    help="use Adobe Minion Pro as font. DEPRECATED: Use --font")
-parser.add_option_group(stygroup)
+stygroup = parser.add_argument_group("Style options")
+stygroup.add_argument("-t", "--title", dest="TITLE",
+                      default="Plots from Rivet analyses", help="title to be displayed on the main web page")
+stygroup.add_argument("--reftitle", dest="REFTITLE",
+                      default="Data", help="legend entry for reference data")
+stygroup.add_argument("--no-plottitle", dest="NOPLOTTITLE", action="store_true",
+                      default=False, help="don't show the plot title on the plot "
+                      "(useful when the plot description should only be given in a caption)")
+stygroup.add_argument("-s", "--single", dest="SINGLE", action="store_true",
+                      default=False, help="display plots on single webpage.")
+stygroup.add_argument("--no-ratio", dest="SHOW_RATIO", action="store_false",
+                      default=True, help="don't draw a ratio plot under each main plot.")
+stygroup.add_argument("--errs", "--mcerrs", "--mc-errs", dest="MC_ERRS", action="store_true",
+                      default=False, help="plot error bars.")
+stygroup.add_argument("--offline", dest="OFFLINE", action="store_true",
+                      default=False, help="generate HTML that does not use external URLs.")
+stygroup.add_argument("--pdf", dest="VECTORFORMAT", action="store_const", const="PDF",
+                      default="PDF", help="use PDF as the vector plot format.")
+stygroup.add_argument("--ps", dest="VECTORFORMAT", action="store_const", const="PS",
+                      default="PDF", help="use PostScript as the vector plot format. DEPRECATED")
+stygroup.add_argument("--booklet", dest="BOOKLET", action="store_true",
+                      default=False, help="create booklet (currently only available for PDF with pdftk or pdfmerge).")
+stygroup.add_argument("--font", dest="OUTPUT_FONT", choices="palatino,cm,times,helvetica,minion".split(","),
+                      default="palatino", help="choose the font to be used in the plots")
+stygroup.add_argument("--palatino", dest="OUTPUT_FONT", action="store_const", const="palatino", default="palatino",
+                      help="use Palatino as font (default). DEPRECATED: Use --font")
+stygroup.add_argument("--cm", dest="OUTPUT_FONT", action="store_const", const="cm", default="palatino",
+                      help="use Computer Modern as font. DEPRECATED: Use --font")
+stygroup.add_argument("--times", dest="OUTPUT_FONT", action="store_const", const="times", default="palatino",
+                      help="use Times as font. DEPRECATED: Use --font")
+stygroup.add_argument("--helvetica", dest="OUTPUT_FONT", action="store_const", const="helvetica", default="palatino",
+                      help="use Helvetica as font. DEPRECATED: Use --font")
+stygroup.add_argument("--minion", dest="OUTPUT_FONT", action="store_const", const="minion", default="palatino",
+                      help="use Adobe Minion Pro as font. DEPRECATED: Use --font")
+stygroup.add_argument("--remove-options", help="remove options label from legend", dest="REMOVE_OPTIONS",
+                    action="store_true", default=False)
 
-selgroup = OptionGroup(parser, "Selective plotting")
-selgroup.add_option("-m", "--match", action="append", dest="PATHPATTERNS", default=[],
-                    help="only write out histograms whose $path/$name string matches any of these regexes")
-selgroup.add_option("-M", "--unmatch", action="append", dest="PATHUNPATTERNS", default=[],
-                    help="exclude histograms whose $path/$name string matches any of these regexes")
-selgroup.add_option(#"-a", #< these were confusing, and -m should be enough
-                    "--ana-match", action="append", dest="ANAPATTERNS", default=[],
-                    help="only write out histograms from analyses whose name matches any of these regexes")
-selgroup.add_option(#"-A", #< these were confusing, and -M should be enough
-                    "--ana-unmatch", action="append", dest="ANAUNPATTERNS", default=[],
-                    help="exclude histograms from analyses whose name matches any of these regexes")
-parser.add_option_group(selgroup)
+selgroup = parser.add_argument_group("Selective plotting")
+selgroup.add_argument("-m", "--match", action="append", dest="PATHPATTERNS", default=[],
+                      help="only write out histograms whose $path/$name string matches any of these regexes")
+selgroup.add_argument("-M", "--unmatch", action="append", dest="PATHUNPATTERNS", default=[],
+                      help="exclude histograms whose $path/$name string matches any of these regexes")
+selgroup.add_argument("--ana-match", action="append", dest="ANAPATTERNS", default=[],
+                      help="only write out histograms from analyses whose name matches any of these regexes")
+selgroup.add_argument("--ana-unmatch", action="append", dest="ANAUNPATTERNS", default=[],
+                      help="exclude histograms from analyses whose name matches any of these regexes")
 
-vrbgroup = OptionGroup(parser, "Verbosity control")
-vrbgroup.add_option("-v", "--verbose", help="add extra debug messages", dest="VERBOSE",
-                  action="store_true", default=False)
-parser.add_option_group(vrbgroup)
+vrbgroup = parser.add_argument_group("Verbosity control")
+vrbgroup.add_argument("-v", "--verbose", help="add extra debug messages", dest="VERBOSE",
+                      action="store_true", default=False)
 
-opts, yodafiles = parser.parse_args()
-
+args = parser.parse_args()
+yodafiles = args.YODAFILES
 
 ## Add pwd to search paths
-if opts.PATH_PWD:
+if args.PATH_PWD:
     rivet.addAnalysisLibPath(os.path.abspath("."))
     rivet.addAnalysisDataPath(os.path.abspath("."))
 
@@ -122,14 +119,14 @@ if not yodafiles:
 
 
 ## Make output directory
-if not opts.DRY_RUN:
-    if os.path.exists(opts.OUTPUTDIR) and not os.path.realpath(opts.OUTPUTDIR)==os.getcwd():
+if not args.DRY_RUN:
+    if os.path.exists(args.OUTPUTDIR) and not os.path.realpath(args.OUTPUTDIR)==os.getcwd():
         import shutil
-        shutil.rmtree(opts.OUTPUTDIR)
+        shutil.rmtree(args.OUTPUTDIR)
     try:
-        os.makedirs(opts.OUTPUTDIR)
+        os.makedirs(args.OUTPUTDIR)
     except:
-        print("Error: failed to make new directory '%s'" % opts.OUTPUTDIR)
+        print("Error: failed to make new directory '%s'" % args.OUTPUTDIR)
         sys.exit(1)
 
 ## Get set of analyses involved in the runs
@@ -144,14 +141,14 @@ for yodafile in yodafiles:
     yodafilepath = os.path.abspath(yodafile.split(":")[0])
     if not os.access(yodafilepath, os.R_OK):
         print("Error: cannot read from %s" % yodafilepath)
-        if opts.IGNORE_MISSING:
+        if args.IGNORE_MISSING:
             continue
         else:
             sys.exit(2)
 
     try:
         ## Note: we use -m/-M flags here as well as when calling rivet-cmphistos, to potentially speed this initial loading
-        analysisobjects = yoda.read(yodafilepath, patterns=opts.PATHPATTERNS, unpatterns=opts.PATHUNPATTERNS)
+        analysisobjects = yoda.read(yodafilepath, patterns=args.PATHPATTERNS, unpatterns=args.PATHUNPATTERNS)
     except IOError as e:
         print("File reading error: ", e.strerror)
         sys.exit(1)
@@ -180,14 +177,14 @@ for yodafile in yodafiles:
             continue
         import re
         matched = True
-        if opts.ANAPATTERNS:
+        if args.ANAPATTERNS:
             matched = False
-            for patt in opts.ANAPATTERNS:
+            for patt in args.ANAPATTERNS:
                 if re.match(patt, analysis) is not None:
                     matched = True
                     break
-        if matched and opts.ANAUNPATTERNS:
-            for patt in opts.ANAUNPATTERNS:
+        if matched and args.ANAUNPATTERNS:
+            for patt in args.ANAUNPATTERNS:
                 if re.match(patt, analysis) is not None:
                     matched = False
                     break
@@ -226,21 +223,23 @@ analyses = sorted(analyses, key=anasort)
 ## Run rivet-cmphistos to get plain .dat files from .yoda
 ## We do this here since it also makes the necessary directories
 ch_cmd = ["rivet-cmphistos"]
-if opts.MC_ERRS:
+if args.MC_ERRS:
     ch_cmd.append("--mc-errs")
-if not opts.SHOW_RATIO:
+if not args.SHOW_RATIO:
     ch_cmd.append("--no-ratio")
-if opts.NOPLOTTITLE:
+if args.NOPLOTTITLE:
     ch_cmd.append("--no-plottitle")
-# if opts.REF_ID is not None:
-#     ch_cmd.append("--refid=%s" % os.path.abspath(opts.REF_ID))
-if opts.REFTITLE:
-    ch_cmd.append("--reftitle=%s" % opts.REFTITLE )
-if opts.PATHPATTERNS:
-    for patt in opts.PATHPATTERNS:
+if args.REMOVE_OPTIONS:
+    ch_cmd.append("--remove-options")
+# if args.REF_ID is not None:
+#     ch_cmd.append("--refid=%s" % os.path.abspath(args.REF_ID))
+if args.REFTITLE:
+    ch_cmd.append("--reftitle=%s" % args.REFTITLE )
+if args.PATHPATTERNS:
+    for patt in args.PATHPATTERNS:
         ch_cmd += ["-m", patt] #"'"+patt+"'"]
-if opts.PATHUNPATTERNS:
-    for patt in opts.PATHUNPATTERNS:
+if args.PATHUNPATTERNS:
+    for patt in args.PATHUNPATTERNS:
         ch_cmd += ["-M", patt] #"'"+patt+"'"]
 ch_cmd.append("--hier-out")
 # TODO: Need to be able to override this: provide a --plotinfodir cmd line option?
@@ -258,26 +257,26 @@ for af in yodafiles:
     ch_cmd.append(newarg)
 
 ## Pass rivet-mkhtml -c args to rivet-cmphistos
-for configfile in opts.CONFIGFILES:
+for configfile in args.CONFIGFILES:
     configfile = os.path.abspath(os.path.expanduser(configfile))
     if os.access(configfile, os.R_OK):
         ch_cmd += ["-c", configfile]
 
-if opts.VERBOSE:
+if args.VERBOSE:
     ch_cmd.append("--verbose")
     print("Calling rivet-cmphistos with the following command:")
     print(" ".join(ch_cmd))
 
 ## Run rivet-cmphistos in a subdir, after fixing any relative paths in Rivet env vars
-if not opts.DRY_RUN:
+if not args.DRY_RUN:
     for var in ("RIVET_ANALYSIS_PATH", "RIVET_DATA_PATH", "RIVET_REF_PATH", "RIVET_INFO_PATH", "RIVET_PLOT_PATH"):
         if var in os.environ:
             abspaths = [os.path.abspath(p) for p in os.environ[var].split(":")]
             os.environ[var] = ":".join(abspaths)
-    subproc = Popen(ch_cmd, cwd=opts.OUTPUTDIR, stdout=PIPE, stderr=PIPE)
+    subproc = Popen(ch_cmd, cwd=args.OUTPUTDIR, stdout=PIPE, stderr=PIPE)
     out, err = subproc.communicate()
     retcode = subproc.returncode
-    if opts.VERBOSE or retcode != 0:
+    if args.VERBOSE or retcode != 0:
         print('Output from rivet-cmphistos:\n', out)
     if err :
         print('Errors from rivet-cmphistos:\n', err)
@@ -290,7 +289,7 @@ if not opts.DRY_RUN:
 ## Write web page containing all (matched) plots
 ## Make web pages first so that we can load it locally in
 ## a browser to view the output before all plots are made
-if not opts.DRY_RUN:
+if not args.DRY_RUN:
 
     style = '''<style>
       html { font-family: sans-serif; }
@@ -301,7 +300,7 @@ if not opts.DRY_RUN:
 
     ## Include MathJax configuration
     script = ''
-    if not opts.OFFLINE:
+    if not args.OFFLINE:
         script = '''\
         <script type="text/x-mathjax-config">
         MathJax.Hub.Config({
@@ -320,14 +319,14 @@ if not opts.DRY_RUN:
     import datetime
     timestamp = '<p>Generated at %s</p>\n' % datetime.datetime.now().strftime("%A, %d. %B %Y %I:%M%p")
 
-    index = open(os.path.join(opts.OUTPUTDIR, "index.html"), "w")
-    index.write('<html>\n<head>\n<title>%s</title>\n%s</head>\n<body>' % (opts.TITLE, style + script))
-    if opts.BOOKLET and opts.VECTORFORMAT == "PDF":
-        index.write('<h2><a href="booklet.pdf">%s</a></h2>\n\n' % opts.TITLE)
+    index = open(os.path.join(args.OUTPUTDIR, "index.html"), "w")
+    index.write('<html>\n<head>\n<title>%s</title>\n%s</head>\n<body>' % (args.TITLE, style + script))
+    if args.BOOKLET and args.VECTORFORMAT == "PDF":
+        index.write('<h2><a href="booklet.pdf">%s</a></h2>\n\n' % args.TITLE)
     else:
-        index.write('<h2>%s</h2>\n\n' % opts.TITLE)
+        index.write('<h2>%s</h2>\n\n' % args.TITLE)
 
-    if opts.SINGLE:
+    if args.SINGLE:
         ## Write table of contents
         index.write('<ul>\n')
         for analysis in analyses:
@@ -335,7 +334,7 @@ if not opts.DRY_RUN:
             ana = rivet.AnalysisLoader.getAnalysis(analysis)
             if ana:
                 summary = "%s (%s)" % (ana.summary(), analysis)
-                if opts.IGNORE_UNVALIDATED and ana.status() != "VALIDATED":
+                if args.IGNORE_UNVALIDATED and ana.status() != "VALIDATED":
                     continue
             index.write('<li><a href="#%s">%s</a>\n' % (analysis, htmlify(summary)) )
         index.write('</ul>\n')
@@ -357,13 +356,17 @@ if not opts.DRY_RUN:
             references = ana.references()
             description = htmlify(ana.description())
             spiresid = ana.spiresId()
-            if opts.IGNORE_UNVALIDATED and ana.status().upper() != "VALIDATED":
+            if args.IGNORE_UNVALIDATED and ana.status().upper() != "VALIDATED":
                 continue
 
-        if opts.SINGLE:
-            index.write('\n<h3 style="clear:left; padding-top:2em;"><a name="%s">%s</a></h3>\n' % (analysis.encode("utf-8"), summary.encode("utf-8")))
-        else:
-            index.write('\n<h3><a href="%s/index.html" style="text-decoration:none;">%s</a></h3>\n' % (analysis.encode("utf-8"), summary.encode("utf-8")))
+        try:
+            # a, s = (analysis.encode("utf-8"), summary.encode("utf-8"))
+            if args.SINGLE:
+                index.write('\n<h3 style="clear:left; padding-top:2em;"><a name="%s">%s</a></h3>\n' % (analysis.encode("utf-8"), summary.encode("utf-8")))
+            else:
+                index.write('\n<h3><a href="%s/index.html" style="text-decoration:none;">%s</a></h3>\n' % (analysis.encode("utf-8"), summary.encode("utf-8")))
+        except UnicodeEncodeError as ue:
+            print("Unicode error in analysis description for " + analysis + ": " + str(ue))
 
         reflist = []
         if inspireid:
@@ -382,13 +385,13 @@ if not opts.DRY_RUN:
             except UnicodeEncodeError as ue:
                 print("Unicode error in analysis description for " + analysis + ": " + str(ue))
 
-        anapath = os.path.join(opts.OUTPUTDIR, analysis)
-        if not opts.SINGLE:
+        anapath = os.path.join(args.OUTPUTDIR, analysis)
+        if not args.SINGLE:
             if not os.path.exists(anapath):
                 os.makedirs(anapath)
             anaindex = open(os.path.join(anapath, "index.html"), 'w')
             anaindex.write('<html>\n<head>\n<title>%s &ndash; %s</title>\n%s</head>\n<body>\n' %
-                           (htmlify(opts.TITLE), analysis, style + script))
+                           (htmlify(args.TITLE), analysis, style + script))
             anaindex.write('<h3>%s</h3>\n' % htmlify(analysis))
             anaindex.write('<p><a href="../index.html">Back to index</a></p>\n')
             if description:
@@ -406,9 +409,9 @@ if not opts.DRY_RUN:
         for datfile in sorted(datfiles):
             obsname = os.path.basename(datfile).replace(".dat", "")
             pngfile = obsname+".png"
-            vecfile = obsname+"."+opts.VECTORFORMAT.lower()
+            vecfile = obsname+"."+args.VECTORFORMAT.lower()
             srcfile = obsname+".dat"
-            if opts.SINGLE:
+            if args.SINGLE:
                 pngfile = os.path.join(analysis, pngfile)
                 vecfile = os.path.join(analysis, vecfile)
                 srcfile = os.path.join(analysis, srcfile)
@@ -422,7 +425,7 @@ if not opts.DRY_RUN:
             anaindex.write('  </div>\n')
         anaindex.write('</div>\n')
 
-        if not opts.SINGLE:
+        if not args.SINGLE:
             anaindex.write('<div style="float:none">%s</body>\n</html></div>\n' % timestamp)
             anaindex.close()
     index.write('<br>%s</body>\n</html>' % timestamp)
@@ -450,57 +453,57 @@ def which(program):
 ## Run make-plots on all generated .dat files
 # sys.exit(0)
 mp_cmd = ["make-plots"]
-if opts.NUMTHREADS:
-    mp_cmd.append("--num-threads=%d" % opts.NUMTHREADS)
-if opts.NO_CLEANUP:
+if args.NUMTHREADS:
+    mp_cmd.append("--num-threads=%d" % args.NUMTHREADS)
+if args.NO_CLEANUP:
     mp_cmd.append("--no-cleanup")
-if opts.NO_SUBPROC:
+if args.NO_SUBPROC:
     mp_cmd.append("--no-subproc")
-if opts.VECTORFORMAT == "PDF":
+if args.VECTORFORMAT == "PDF":
     mp_cmd.append("--pdfpng")
-elif opts.VECTORFORMAT == "PS":
+elif args.VECTORFORMAT == "PS":
     mp_cmd.append("--pspng")
-if opts.OUTPUT_FONT:
-    mp_cmd.append("--font=%s" % opts.OUTPUT_FONT)
-# if opts.OUTPUT_FONT.upper() == "PALATINO":
+if args.OUTPUT_FONT:
+    mp_cmd.append("--font=%s" % args.OUTPUT_FONT)
+# if args.OUTPUT_FONT.upper() == "PALATINO":
 #     mp_cmd.append("--palatino")
-# if opts.OUTPUT_FONT.upper() == "CM":
+# if args.OUTPUT_FONT.upper() == "CM":
 #     mp_cmd.append("--cm")
-# elif opts.OUTPUT_FONT.upper() == "TIMES":
+# elif args.OUTPUT_FONT.upper() == "TIMES":
 #     mp_cmd.append("--times")
-# elif opts.OUTPUT_FONT.upper() == "HELVETICA":
+# elif args.OUTPUT_FONT.upper() == "HELVETICA":
 #     mp_cmd.append("--helvetica")
-# elif opts.OUTPUT_FONT.upper() == "MINION":
+# elif args.OUTPUT_FONT.upper() == "MINION":
 #     mp_cmd.append("--minion")
 datfiles = []
 for analysis in analyses:
-    anapath = os.path.join(opts.OUTPUTDIR, analysis)
+    anapath = os.path.join(args.OUTPUTDIR, analysis)
     #print(anapath)
     anadatfiles = glob.glob("%s/*.dat" % anapath)
     datfiles += sorted(anadatfiles)
 if datfiles:
     mp_cmd += datfiles
-    if opts.VERBOSE:
+    if args.VERBOSE:
         mp_cmd.append("--verbose")
         print("Calling make-plots with the following options:")
         print(" ".join(mp_cmd))
-    if not opts.DRY_RUN:
+    if not args.DRY_RUN:
         Popen(mp_cmd).wait()
-        if opts.BOOKLET and opts.VECTORFORMAT=="PDF":
+        if args.BOOKLET and args.VECTORFORMAT=="PDF":
             if which("pdftk") is not None:
                 bookletcmd = ["pdftk"]
                 for analysis in analyses:
-                    anapath = os.path.join(opts.OUTPUTDIR, analysis)
+                    anapath = os.path.join(args.OUTPUTDIR, analysis)
                     bookletcmd += sorted(glob.glob("%s/*.pdf" % anapath))
-                bookletcmd += ["cat", "output", "%s/booklet.pdf" % opts.OUTPUTDIR]
+                bookletcmd += ["cat", "output", "%s/booklet.pdf" % args.OUTPUTDIR]
                 print(bookletcmd)
                 Popen(bookletcmd).wait()
             elif which("pdfmerge") is not None:
                 bookletcmd = ["pdfmerge"]
                 for analysis in analyses:
-                    anapath = os.path.join(opts.OUTPUTDIR, analysis)
+                    anapath = os.path.join(args.OUTPUTDIR, analysis)
                     bookletcmd += sorted(glob.glob("%s/*.pdf" % anapath))
-                bookletcmd += ["%s/booklet.pdf" % opts.OUTPUTDIR]
+                bookletcmd += ["%s/booklet.pdf" % args.OUTPUTDIR]
                 print(bookletcmd)
                 Popen(bookletcmd).wait()
             else:

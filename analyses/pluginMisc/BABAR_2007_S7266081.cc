@@ -41,12 +41,8 @@ namespace Rivet {
         _weight_total += weight;
         Particles pip, pim, Kp, Km;
         unsigned int nstable = 0;
-        // Get the boost to the rest frame
-        LorentzTransform cms_boost;
-        if (p.p3().mod() > 1*MeV)
-          cms_boost = LorentzTransform::mkFrameTransformFromBeta(p.momentum().betaVec());
         // Find the decay products we want
-        findDecayProducts(p.genParticle(), nstable, pip, pim, Kp, Km);
+        findDecayProducts(p, nstable, pip, pim, Kp, Km);
         if (p.pid() < 0) {
           swap(pip, pim);
           swap(Kp, Km );
@@ -135,39 +131,36 @@ namespace Rivet {
 
     //@}
 
-    void findDecayProducts(const GenParticle* p,
+    void findDecayProducts(const Particle &mother,
                            unsigned int & nstable,
                            Particles& pip, Particles& pim,
                            Particles& Kp, Particles& Km) {
-      const GenVertex* dv = p->end_vertex();
-      /// @todo Use better looping
-      for (GenVertex::particles_out_const_iterator pp = dv->particles_out_const_begin(); pp != dv->particles_out_const_end(); ++pp) {
-        int id = (*pp)->pdg_id();
+      for (const Particle &p : mother.children()) {
+        long id = p.pdgId();
         if (id == PID::PI0 )
           ++nstable;
         else if (id == PID::K0S)
           ++nstable;
         else if (id == PID::PIPLUS) {
-          pip.push_back(Particle(**pp));
+          pip.push_back(p);
           ++nstable;
         }
         else if (id == PID::PIMINUS) {
-          pim.push_back(Particle(**pp));
+          pim.push_back(p);
           ++nstable;
         }
         else if (id == PID::KPLUS) {
-          Kp.push_back(Particle(**pp));
+          Kp.push_back(p);
           ++nstable;
         }
         else if (id == PID::KMINUS) {
-          Km.push_back(Particle(**pp));
+          Km.push_back(p);
           ++nstable;
         }
-        else if ((*pp)->end_vertex()) {
-          findDecayProducts(*pp, nstable, pip, pim, Kp, Km);
+        else if (!p.children().empty()) {
+          findDecayProducts(p, nstable, pip, pim, Kp, Km);
         }
-        else
-          ++nstable;
+        else  ++nstable;
       }
     }
 

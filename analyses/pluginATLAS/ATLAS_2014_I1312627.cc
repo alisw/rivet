@@ -114,7 +114,7 @@ namespace Rivet {
 
       // Apply boson cuts and fill histograms
       const double weight = event.weight();
-      if (zf.size() == 2) {
+      if (!zf.empty()) {
         const Particles& leptons = zf.constituents();
         if (oppSign(leptons[0], leptons[1]) && deltaR(leptons[0], leptons[1]) > 0.2)
           fillPlots(leptons, all_jets, weight, 1);

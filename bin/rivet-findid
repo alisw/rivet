@@ -1,8 +1,8 @@
 #! /usr/bin/env python
 
-"""%prog ID [ID ...]
+"""%(prog)s ID [ID ...]
 
-%prog -- paper ID lookup helper for Rivet
+%(prog)s -- paper ID lookup helper for Rivet
 
 Looks up the Rivet analysis and other ID formats matching the given ID.
 
@@ -21,21 +21,17 @@ rivet.util.set_process_name(os.path.basename(__file__))
 def main():
 
     ## Handle command line args
-    import optparse
-    op = optparse.OptionParser(usage=__doc__)
-    opts, args = op.parse_args()
-    if not args:
-        op.print_help()
-        exit(1)
-
+    import argparse
+    parser = argparse.ArgumentParser(usage=__doc__)
+    parser.add_argument("IDCODES", nargs="+", help="IDs to look up")
+    args = parser.parse_args()
 
     ## Set up some variables before the loop over args
     arxiv_pattern = re.compile('^\d\d[01]\d\.\d{4,5}$|^(hep-(ex|ph|th)|nucl-ex)/\d\d[01]\d{4}$')
     spires_pattern = re.compile('^(S|I)?(\d{6}\d?)$')
 
-
     ## Loop over requested IDs
-    for N, id in enumerate(args):
+    for N, id in enumerate(args.IDCODES):
 
         a_match = arxiv_pattern.match(id)
         s_match = spires_pattern.match(id)

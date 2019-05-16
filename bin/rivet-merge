@@ -5,11 +5,10 @@ Merge together yoda files produced by Rivet.
 
 Examples:
 
-  %prog [options] <yodafile> [<yodafile2> ...]
+  %(prog)s [options] <yodafile> [<yodafile2> ...]
 
 ENVIRONMENT:
- * RIVET_ANALYSIS_PATH: list of paths to be searched for plugin
-     analysis libraries at runtime
+ * RIVET_ANALYSIS_PATH: list of paths to be searched for analysis plugin libraries
  * RIVET_DATA_PATH: list of paths to be searched for data files
 """
 
@@ -39,32 +38,26 @@ rivet.util.set_process_name("rivet-merge")
 import time, datetime, logging, signal
 
 ## Parse command line options
-from optparse import OptionParser, OptionGroup
-parser = OptionParser(usage=__doc__, version="rivet v%s" % rivet.version())
+import argparse
+parser = argparse.ArgumentParser(description=__doc__)
 
-extragroup = OptionGroup(parser, "Run settings")
-extragroup.add_option("-o", "--output-file", dest="OUTPUTFILE",
-                      default="Rivet.yoda", help="specify the output histo file path (default = %default)")
-extragroup.add_option("-e", "--equiv", dest="EQUIV", action="store_true", default=False,
-                      help="assume that the yoda files are equivalent but statistically independent (default= assume that different files contains different processes)")
+extragroup = parser.add_argument_group("Run settings")
+extragroup.add_argument("YODAFILES", nargs="+", help="data files to merge")
+extragroup.add_argument("-o", "--output-file", dest="OUTPUTFILE",
+                        default="Rivet.yoda", help="specify the output histo file path (default = %(default)s)")
+extragroup.add_argument("-e", "--equiv", dest="EQUIV", action="store_true", default=False,
+                        help="assume that the yoda files are equivalent but statistically independent (default= assume that different files contains different processes)")
+extragroup.add_argument("-O", "--merge-option", dest="MERGEOPTIONS", action="append",
+                        default=[], help="specify an analysis option name where different options should be merged into the default analysis.")
 
-extragroup.add_option("-O", "--merge-option", dest="MERGEOPTIONS", action="append",
-                      default=[], help="specify an analysis option name where different options should be merged into the default analysis.")
-
-parser.add_option_group(extragroup)
-
-
-opts, args = parser.parse_args()
+args = parser.parse_args()
 
 
 ############################
 ## Actual analysis runs
 
 
-
 ## Set up analysis handler
 ah = rivet.AnalysisHandler("Merging")
-ah.mergeYodas(args, opts.MERGEOPTIONS, opts.EQUIV)
-ah.writeData(opts.OUTPUTFILE)
-
-
+ah.mergeYodas(args.YODAFILES, args.MERGEOPTIONS, args.EQUIV)
+ah.writeData(args.OUTPUTFILE)

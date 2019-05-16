@@ -12,19 +12,20 @@ TODO:
 
 from __future__ import print_function
 
-import rivet, sys, os
+import rivet, os
 rivet.util.check_python_version()
 rivet.util.set_process_name(os.path.basename(__file__))
 
-import sys, os, optparse
-op = optparse.OptionParser()
-ops, args = op.parse_args()
+import argparse
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument("ANALYSES", nargs="+", help="analyses to search for")
+args = parser.parse_args()
 
 # print rivet.findAnalysisPlotFile()
 # print rivet.findAnalysisLibFile()
 # print rivet.findAnalysisInfoFile()
 # print rivet.findAnalysisRefFile()
-for a in args:
+for a in args.ANALYSES:
     try:
         print(rivet.findAnalysisRefFile(a))
     except:

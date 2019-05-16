@@ -17,7 +17,7 @@ Energies: [8000]
 NeedsCrossSection: yes
 Description:
   'WARNING --- this analysis requires stable higgs bosons ---
-  Measurements of the total and differential cross sections of Higgs boson production are performed using 20.3 fb−1 of pp collisions produced by the Large Hadron Collider at a center-of-mass energy of 8 TeV and recorded by the ATLAS detector. Cross sections are obtained from measured Higgs to diphoton and ZZ* event yields, which are combined accounting for detector efficiencies, fiducial acceptances and branching fractions. Differential cross sections are reported as a function of Higgs boson transverse momentum, Higgs boson rapidity, number of jets in the event, and transverse momentum of the leading jet. The total production cross section is determined to be 33.0 ± 5.3 (stat) ± 1.6 (sys) pb.'
+  Measurements of the total and differential cross sections of Higgs boson production are performed using 20.3 $\text{fb}^{-1}$ of pp collisions produced by the Large Hadron Collider at a center-of-mass energy of 8 TeV and recorded by the ATLAS detector. Cross sections are obtained from measured Higgs to diphoton and ZZ* event yields, which are combined accounting for detector efficiencies, fiducial acceptances and branching fractions. Differential cross sections are reported as a function of Higgs boson transverse momentum, Higgs boson rapidity, number of jets in the event, and transverse momentum of the leading jet. The total production cross section is determined to be $33.0 \pm 5.3 (\text{stat}) \pm 1.6 (\text{sys})$ pb.'
 BibKey: 'Aad:2015lha'
 BibTex: '@article{Aad:2015lha,
       author         = "Aad, Georges and others",

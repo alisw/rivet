@@ -1,0 +1,145 @@
+#include "Rivet/Analysis.hh"
+#include "Rivet/Projections/FinalState.hh"
+#include "Rivet/Projections/ZFinder.hh"
+#include "Rivet/Projections/WFinder.hh"
+#include<iostream>
+#include<fstream>
+
+namespace Rivet {
+  
+  /// @brief Add a short analysis description here
+  class CMS_2016_I1487288 : public Analysis {
+
+  public:
+
+    /// Constructor
+    DEFAULT_RIVET_ANALYSIS_CTOR(CMS_2016_I1487288);
+
+
+    /// @name Analysis methods
+    //@{
+
+    /// Book histograms and initialise projections before the run
+    void init(){
+
+
+      FinalState fs; ///< @todo No cuts?
+      //      VisibleFinalState visfs(fs);
+
+      ZFinder zeeFinder(fs, Cuts::abseta < 2.5 && Cuts::pT > 20*GeV, PID::ELECTRON, 71.0*GeV, 111.0*GeV);
+      declare(zeeFinder, "ZeeFinder");
+
+      ZFinder zmumuFinder(fs, Cuts::abseta < 2.4 && Cuts::pT > 20*GeV, PID::MUON, 71.0*GeV, 111.0*GeV);
+      declare(zmumuFinder, "ZmumuFinder");
+
+      WFinder weFinder(fs, Cuts::abseta < 2.5 && Cuts::pT > 20*GeV, PID::ELECTRON, 60.0*GeV, 100.0*GeV, 30.0*GeV);
+      declare(weFinder, "WeFinder");
+
+      WFinder wmuFinder(fs, Cuts::abseta < 2.4 && Cuts::pT > 20*GeV, PID::MUON, 60.0*GeV, 100.0*GeV, 30.0*GeV);
+      declare(wmuFinder, "WmuFinder");
+
+      _h_ZpT        = bookHisto1D("ZpT", 40, 0.0, 300.0);
+      stdcoutf.open("testout.txt", std::ios::out); 
+    }
+
+
+    /// Perform the per-event analysis
+    void analyze(const Event& event) {
+      const double weight = event.weight();
+      bool isZee = false; // false for mumu and true for ee
+      bool isWe = false; // false for W -> mu nu and true for W -> e nu
+      
+      // Doing only Z -> e+ e- for beginnning
+      const ZFinder& zeeFS = apply<ZFinder>(event, "ZeeFinder");
+      const ZFinder& zmumuFS = apply<ZFinder>(event, "ZmumuFinder");
+      //      const ZFinder zllFS = zeeFS;
+      
+      const Particles& zees = zeeFS.bosons();
+      const Particles& zmumus = zmumuFS.bosons();
+
+      // One Z is required.
+      // if more than one matching pair is found, the one with mll nearest to MZ is selected
+      // Find the (dressed!) leptons
+      if (zees.size() + zmumus.size() == 0) vetoEvent;
+
+
+      // let us decide that we holed the selected Z cand. in zeeFS
+      if (zees.size() == 1 && zmumus.size() == 0){
+	isZee = true;
+      } else if (zees.size() == 0 && zmumus.size() == 1) {
+	isZee = false;
+      } else{
+	isZee = fabs(zeeFS.boson().mass() - 91.2*GeV) < fabs(zmumuFS.boson().mass() - 91.2*GeV) ? true : false; 
+      }
+
+     
+      // next look for the W 
+      const WFinder& weFS = apply<WFinder>(event, "WeFinder");
+      const WFinder& wmuFS = apply<WFinder>(event, "WmuFinder");
+      //      const WFinder& wlFS = weFS;
+
+      const Particles& wes = weFS.bosons();
+      const Particles& wmus = wmuFS.bosons();
+
+      if (wes.size() + wmus.size() == 0) vetoEvent;     
+
+      if(wes.size() == 1 && wmus.size() == 0){
+	isWe = true;
+      } else if(wes.size() == 0 && wmus.size() == 1){
+	isWe = false;
+      } else{
+	stdcoutf << weFS.boson().mass() << std::endl;
+	isWe = fabs(weFS.boson().mass() - 80.4*GeV) < fabs(wmuFS.boson().mass() - 91.2*GeV) ? true : false;
+      }
+
+      Particles zleps;
+      if(isZee) zleps = zeeFS.constituents();
+      else zleps = zmumuFS.constituents();
+
+      Particle wlep;
+      if(isWe) wlep = weFS.constituentLepton();
+      else wlep = wmuFS.constituentLepton();
+
+      // now check separation btw wl and the z ls > 0.1
+      for (int i = 0; i < 2; i++)
+	if (deltaR(wlep, zleps[i]) <= 0.1) vetoEvent;
+
+      if(isZee){
+	std::cout << zeeFS.boson().momentum().pT() << std::endl;
+	_h_ZpT -> fill(zeeFS.boson().momentum().pT(), weight);
+      } else{
+	std::cout << zmumuFS.boson().momentum().pT() << std::endl;	
+	_h_ZpT -> fill(zmumuFS.boson().momentum().pT(), weight);
+      }
+
+    }
+
+
+    /// Normalise histograms etc., after the run
+    void finalize() {
+      const double norm = (sumOfWeights() != 0) ? crossSection()/sumOfWeights() : 1.0;
+
+      std::cout << "Cross section = " << crossSection() << " pb" << std::endl;
+      MSG_INFO("Cross section = " << crossSection() << " pb");
+      MSG_INFO("# Events      = " << numEvents() );
+      MSG_INFO("SumW          = " << sumOfWeights());
+      MSG_INFO("Norm factor   = " << norm);
+
+      //      scale(_h_WZ_xsec, norm); 
+      scale(_h_ZpT    , norm);
+      stdcoutf.close(); 
+    }
+
+  private:
+    /// @name Histograms
+    Histo1DPtr _h_ZpT;
+    std::ofstream stdcoutf;
+
+    //@}
+  };
+
+  // The hook for the plugin system
+  DECLARE_RIVET_PLUGIN(CMS_2016_I1487288);
+
+
+}

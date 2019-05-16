@@ -8,16 +8,12 @@
 
 namespace Rivet {
 
-  
-
 
   class MC_TTBAR : public Analysis {
   public:
 
     /// Minimal constructor
-    MC_TTBAR() : Analysis("MC_TTBAR")
-    {
-    }
+    DEFAULT_RIVET_ANALYSIS_CTOR(MC_TTBAR);
 
 
     /// @name Analysis methods
@@ -29,12 +25,13 @@ namespace Rivet {
       // A FinalState is used to select particles within |eta| < 4.2 and with pT
       // > 30 GeV, out of which the ChargedLeptons projection picks only the
       // electrons and muons, to be accessed later as "LFS".
-      ChargedLeptons lfs(FinalState(-4.2, 4.2, 30*GeV));
+      ChargedLeptons lfs(FinalState(Cuts::abseta < 4.2 && Cuts::pT > 30*GeV));
       declare(lfs, "LFS");
+
       // A second FinalState is used to select all particles in |eta| < 4.2,
       // with no pT cut. This is used to construct jets and measure missing
       // transverse energy.
-      VetoedFinalState fs(FinalState(-4.2, 4.2, 0*GeV));
+      VetoedFinalState fs(FinalState(Cuts::abseta < 4.2));
       fs.addVetoOnThisFinalState(lfs);
       declare(FastJets(fs, FastJets::ANTIKT, 0.6), "Jets");
       declare(MissingMomentum(fs), "MissingET");

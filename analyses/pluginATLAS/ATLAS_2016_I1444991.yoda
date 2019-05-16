@@ -1,118 +1,151 @@
 BEGIN YODA_SCATTER2D_V2 /REF/ATLAS_2016_I1444991/d01-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -7.2, up: 7.2}, 'sys,Btag_exp': {dn: -1.2, up: 1.2}, 'sys,Det-cor': {dn: -0.1, up: 0.1}, 'sys,JER_exp': {dn: -1.8, up: 1.8}, 'sys,JES_exp': {dn: -0.8, up: 0.8}, 'sys,MET_exp': {dn: -0.8, up: 0.8}, 'sys,WW_theory': {dn: -5.0, up: 5.0}, 'sys,ggfH_theory': {dn: -0.9, up: 0.9}, 'sys,lep_exp': {dn: -2.0, up: 2.0}, 'sys,other_exp': {dn: -1.5, up: 1.5}, 'sys,other_theory': {dn: -2.0, up: 2.0}, 'sys,top_theory': {dn: -2.6, up: 2.6}}}
+
 IsRef: 1
 Path: /REF/ATLAS_2016_I1444991/d01-x01-y01
 Title: doi:10.17182/hepdata.76843.v1/t1
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 1.000000e+00	5.000000e-01	5.000000e-01	3.600000e+01	1.003145e+01	1.003145e+01
 END YODA_SCATTER2D_V2
 BEGIN YODA_SCATTER2D_V2 /REF/ATLAS_2016_I1444991/d02-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -4.5, up: 4.5}, 'sys,Btag_exp': {dn: -0.2, up: 0.2}, 'sys,Det-cor': {dn: -0.2, up: 0.2}, 'sys,JER_exp': {dn: -1.0, up: 1.0}, 'sys,JES_exp': {dn: -0.2, up: 0.2}, 'sys,MET_exp': {dn: -0.4, up: 0.4}, 'sys,WW_theory': {dn: -4.6, up: 4.6}, 'sys,ggfH_theory': {dn: -0.8, up: 0.8}, 'sys,lep_exp': {dn: -1.1, up: 1.1}, 'sys,other_exp': {dn: -1.0, up: 1.0}, 'sys,other_theory': {dn: -1.0, up: 1.0}, 'sys,top_theory': {dn: -0.4, up: 0.4}}, 1: {stat: {dn: -3.5, up: 3.5}, 'sys,Btag_exp': {dn: -0.3, up: 0.3}, 'sys,Det-cor': {dn: -0.3, up: 0.3}, 'sys,JER_exp': {dn: -0.3, up: 0.3}, 'sys,JES_exp': {dn: -0.8, up: 0.8}, 'sys,MET_exp': {dn: -0.3, up: 0.3}, 'sys,WW_theory': {dn: -1.2, up: 1.2}, 'sys,ggfH_theory': {dn: -0.5, up: 0.5}, 'sys,lep_exp': {dn: -0.5, up: 0.5}, 'sys,other_exp': {dn: -0.3, up: 0.3}, 'sys,other_theory': {dn: -0.5, up: 0.5}, 'sys,top_theory': {dn: -0.3, up: 0.3}}, 2: {stat: {dn: -5.0, up: 5.0}, 'sys,Btag_exp': {dn: -0.7, up: 0.7}, 'sys,Det-cor': {dn: -0.4, up: 0.4}, 'sys,JER_exp': {dn: -0.6, up: 0.6}, 'sys,JES_exp': {dn: -0.5, up: 0.5}, 'sys,MET_exp': {dn: -0.4, up: 0.4}, 'sys,WW_theory': {dn: -0.4, up: 0.4}, 'sys,ggfH_theory': {dn: -0.3, up: 0.3}, 'sys,lep_exp': {dn: -0.5, up: 0.5}, 'sys,other_exp': {dn: -0.3, up: 0.3}, 'sys,other_theory': {dn: -1.8, up: 1.8}, 'sys,top_theory': {dn: -2.1, up: 2.1}}}
+
 IsRef: 1
 Path: /REF/ATLAS_2016_I1444991/d02-x01-y01
 Title: doi:10.17182/hepdata.76843.v1/t2
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 1.000000e+00	5.000000e-01	5.000000e-01	1.900000e+01	6.833740e+00	6.833740e+00
 2.000000e+00	5.000000e-01	5.000000e-01	8.200000e+00	3.952215e+00	3.952215e+00
 3.000000e+00	5.000000e-01	5.000000e-01	8.800000e+00	5.887274e+00	5.887274e+00
 END YODA_SCATTER2D_V2
 BEGIN YODA_SCATTER2D_V2 /REF/ATLAS_2016_I1444991/d03-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.16, up: 0.16}, 'sys,Btag_exp': {dn: -0.012, up: 0.012}, 'sys,Det-cor': {dn: -0.006, up: 0.006}, 'sys,JER_exp': {dn: -0.043, up: 0.043}, 'sys,JES_exp': {dn: -0.037, up: 0.037}, 'sys,MET_exp': {dn: -0.055, up: 0.055}, 'sys,WW_theory': {dn: -0.189, up: 0.189}, 'sys,ggfH_theory': {dn: -0.085, up: 0.085}, 'sys,lep_exp': {dn: -0.043, up: 0.043}, 'sys,other_exp': {dn: -0.043, up: 0.043}, 'sys,other_theory': {dn: -0.037, up: 0.037}, 'sys,top_theory': {dn: -0.024, up: 0.024}}, 1: {stat: {dn: -0.09, up: 0.09}, 'sys,Btag_exp': {dn: -0.016, up: 0.016}, 'sys,Det-cor': {dn: -0.012, up: 0.012}, 'sys,JER_exp': {dn: -0.016, up: 0.016}, 'sys,JES_exp': {dn: -0.039, up: 0.039}, 'sys,MET_exp': {dn: -0.031, up: 0.031}, 'sys,WW_theory': {dn: -0.066, up: 0.066}, 'sys,ggfH_theory': {dn: -0.004, up: 0.004}, 'sys,lep_exp': {dn: -0.023, up: 0.023}, 'sys,other_exp': {dn: -0.016, up: 0.016}, 'sys,other_theory': {dn: -0.031, up: 0.031}, 'sys,top_theory': {dn: -0.027, up: 0.027}}, 2: {stat: {dn: -0.021, up: 0.021}, 'sys,Btag_exp': {dn: -0.003, up: 0.003}, 'sys,Det-cor': {dn: -0.001, up: 0.001}, 'sys,JER_exp': {dn: -0.005, up: 0.005}, 'sys,JES_exp': {dn: -0.006, up: 0.006}, 'sys,MET_exp': {dn: -0.002, up: 0.002}, 'sys,WW_theory': {dn: -0.004, up: 0.004}, 'sys,ggfH_theory': {dn: -0.002, up: 0.002}, 'sys,lep_exp': {dn: -0.002, up: 0.002}, 'sys,other_exp': {dn: -0.001, up: 0.001}, 'sys,other_theory': {dn: -0.005, up: 0.005}, 'sys,top_theory': {dn: -0.009, up: 0.009}}}
+
 IsRef: 1
 Path: /REF/ATLAS_2016_I1444991/d03-x01-y01
 Title: doi:10.17182/hepdata.76843.v1/t3
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 1.000000e+01	1.000000e+01	1.000000e+01	6.100000e-01	2.839225e-01	2.839225e-01
 4.000000e+01	2.000000e+01	2.000000e+01	3.900000e-01	1.344805e-01	1.344805e-01
 1.800000e+02	1.200000e+02	1.200000e+02	3.400000e-02	2.543619e-02	2.543619e-02
 END YODA_SCATTER2D_V2
 BEGIN YODA_SCATTER2D_V2 /REF/ATLAS_2016_I1444991/d04-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -7.3, up: 7.3}, 'sys,Btag_exp': {dn: -0.9, up: 0.9}, 'sys,Det-cor': {dn: -0.3, up: 0.3}, 'sys,JER_exp': {dn: -1.2, up: 1.2}, 'sys,JES_exp': {dn: -1.6, up: 1.6}, 'sys,MET_exp': {dn: -0.9, up: 0.9}, 'sys,WW_theory': {dn: -4.7, up: 4.7}, 'sys,ggfH_theory': {dn: -1.2, up: 1.2}, 'sys,lep_exp': {dn: -1.2, up: 1.2}, 'sys,other_exp': {dn: -1.2, up: 1.2}, 'sys,other_theory': {dn: -0.9, up: 0.9}, 'sys,top_theory': {dn: -3.7, up: 3.7}}, 1: {stat: {dn: -5.0, up: 5.0}, 'sys,Btag_exp': {dn: -0.4, up: 0.4}, 'sys,Det-cor': {dn: -0.1, up: 0.1}, 'sys,JER_exp': {dn: -1.0, up: 1.0}, 'sys,JES_exp': {dn: -0.9, up: 0.9}, 'sys,MET_exp': {dn: -0.8, up: 0.8}, 'sys,WW_theory': {dn: -2.9, up: 2.9}, 'sys,ggfH_theory': {dn: -0.6, up: 0.6}, 'sys,lep_exp': {dn: -1.0, up: 1.0}, 'sys,other_exp': {dn: -0.8, up: 0.8}, 'sys,other_theory': {dn: -0.7, up: 0.7}, 'sys,top_theory': {dn: -1.3, up: 1.3}}, 2: {stat: {dn: -3.5, up: 3.5}, 'sys,Btag_exp': {dn: -0.5, up: 0.5}, 'sys,Det-cor': {dn: -0.1, up: 0.1}, 'sys,JER_exp': {dn: -0.4, up: 0.4}, 'sys,JES_exp': {dn: -0.6, up: 0.6}, 'sys,MET_exp': {dn: -0.4, up: 0.4}, 'sys,WW_theory': {dn: -1.9, up: 1.9}, 'sys,ggfH_theory': {dn: -0.3, up: 0.3}, 'sys,lep_exp': {dn: -0.9, up: 0.9}, 'sys,other_exp': {dn: -0.6, up: 0.6}, 'sys,other_theory': {dn: -1.6, up: 1.6}, 'sys,top_theory': {dn: -0.8, up: 0.8}}}
+
 IsRef: 1
 Path: /REF/ATLAS_2016_I1444991/d04-x01-y01
 Title: doi:10.17182/hepdata.76843.v1/t4
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 3.000000e-01	3.000000e-01	3.000000e-01	3.100000e+01	9.995499e+00	9.995499e+00
 9.000000e-01	3.000000e-01	3.000000e-01	9.500000e+00	6.341136e+00	6.341136e+00
 1.850000e+00	6.500000e-01	6.500000e-01	9.500000e+00	4.610857e+00	4.610857e+00
 END YODA_SCATTER2D_V2
 BEGIN YODA_SCATTER2D_V2 /REF/ATLAS_2016_I1444991/d05-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.16, up: 0.16}, 'sys,Btag_exp': {dn: -0.007, up: 0.007}, 'sys,Det-cor': {dn: -0.007, up: 0.007}, 'sys,JER_exp': {dn: -0.028, up: 0.028}, 'sys,JES_exp': {dn: -0.014, up: 0.014}, 'sys,MET_exp': {dn: -0.014, up: 0.014}, 'sys,WW_theory': {dn: -0.159, up: 0.159}, 'sys,ggfH_theory': {dn: -0.035, up: 0.035}, 'sys,lep_exp': {dn: -0.041, up: 0.041}, 'sys,other_exp': {dn: -0.035, up: 0.035}, 'sys,other_theory': {dn: -0.035, up: 0.035}, 'sys,top_theory': {dn: -0.014, up: 0.014}}, 1: {stat: {dn: -0.1, up: 0.1}, 'sys,Btag_exp': {dn: -0.021, up: 0.021}, 'sys,Det-cor': {dn: -0.003, up: 0.003}, 'sys,JER_exp': {dn: -0.016, up: 0.016}, 'sys,JES_exp': {dn: -0.036, up: 0.036}, 'sys,MET_exp': {dn: -0.016, up: 0.016}, 'sys,WW_theory': {dn: -0.031, up: 0.031}, 'sys,ggfH_theory': {dn: -0.01, up: 0.01}, 'sys,lep_exp': {dn: -0.016, up: 0.016}, 'sys,other_exp': {dn: -0.013, up: 0.013}, 'sys,other_theory': {dn: -0.034, up: 0.034}, 'sys,top_theory': {dn: -0.034, up: 0.034}}, 2: {stat: {dn: -0.021, up: 0.021}, 'sys,Btag_exp': {dn: -0.475, up: 0.475}, 'sys,Det-cor': {dn: -0.095, up: 0.095}, 'sys,JER_exp': {dn: -0.38, up: 0.38}, 'sys,JES_exp': {dn: -0.57, up: 0.57}, 'sys,MET_exp': {dn: -0.38, up: 0.38}, 'sys,WW_theory': {dn: -1.9, up: 1.9}, 'sys,ggfH_theory': {dn: -0.285, up: 0.285}, 'sys,lep_exp': {dn: -0.855, up: 0.855}, 'sys,other_exp': {dn: -0.57, up: 0.57}, 'sys,other_theory': {dn: -1.615, up: 1.615}, 'sys,top_theory': {dn: -0.76, up: 0.76}}}
+
 IsRef: 1
 Path: /REF/ATLAS_2016_I1444991/d05-x01-y01
 Title: doi:10.17182/hepdata.76843.v1/t5
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 1.500000e+01	1.500000e+01	1.500000e+01	6.900000e-01	2.402228e-01	2.402228e-01
 4.500000e+01	1.500000e+01	1.500000e+01	2.600000e-01	1.267123e-01	1.267123e-01
 1.800000e+02	1.200000e+02	1.200000e+02	3.400000e-02	2.963404e+00	2.963404e+00
 END YODA_SCATTER2D_V2
 BEGIN YODA_SCATTER2D_V2 /REF/ATLAS_2016_I1444991/d06-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.11, up: 0.11}, 'sys,Btag_exp': {dn: -0.016, up: 0.016}, 'sys,Det-cor': {dn: -0.0053, up: 0.0053}, 'sys,JER_exp': {dn: -0.0053, up: 0.0053}, 'sys,JES_exp': {dn: -0.016, up: 0.016}, 'sys,MET_exp': {dn: -0.0053, up: 0.0053}, 'sys,WW_theory': {dn: -0.064, up: 0.064}, 'sys,ggfH_theory': {dn: -0.0053, up: 0.0053}, 'sys,lep_exp': {dn: -0.011, up: 0.011}, 'sys,other_exp': {dn: -0.011, up: 0.011}, 'sys,other_theory': {dn: -0.032, up: 0.032}, 'sys,top_theory': {dn: -0.037, up: 0.037}}, 1: {stat: {dn: -0.09, up: 0.09}, 'sys,Btag_exp': {dn: -0.0069, up: 0.0069}, 'sys,Det-cor': {dn: -0.0092, up: 0.0092}, 'sys,JER_exp': {dn: -0.0023, up: 0.0023}, 'sys,JES_exp': {dn: -0.016, up: 0.016}, 'sys,MET_exp': {dn: -0.0092, up: 0.0092}, 'sys,WW_theory': {dn: -0.0345, up: 0.0345}, 'sys,ggfH_theory': {dn: -0.0069, up: 0.0069}, 'sys,lep_exp': {dn: -0.0046, up: 0.0046}, 'sys,other_exp': {dn: -0.0046, up: 0.0046}, 'sys,other_theory': {dn: -0.012, up: 0.012}, 'sys,top_theory': {dn: -0.012, up: 0.012}}, 2: {stat: {dn: -0.12, up: 0.12}, 'sys,Btag_exp': {dn: -0.012, up: 0.012}, 'sys,Det-cor': {dn: -0.0096, up: 0.0096}, 'sys,JER_exp': {dn: -0.0048, up: 0.0048}, 'sys,JES_exp': {dn: -0.0096, up: 0.0096}, 'sys,MET_exp': {dn: -0.0096, up: 0.0096}, 'sys,WW_theory': {dn: -0.041, up: 0.041}, 'sys,ggfH_theory': {dn: -0.012, up: 0.012}, 'sys,lep_exp': {dn: -0.0096, up: 0.0096}, 'sys,other_exp': {dn: -0.0072, up: 0.0072}, 'sys,other_theory': {dn: -0.038, up: 0.038}, 'sys,top_theory': {dn: -0.043, up: 0.043}}}
+
 IsRef: 1
 Path: /REF/ATLAS_2016_I1444991/d06-x01-y01
 Title: doi:10.17182/hepdata.76843.v1/t6
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 1.000000e+00	5.000000e-01	5.000000e-01	5.300000e-01	1.394825e-01	1.394825e-01
 2.000000e+00	5.000000e-01	5.000000e-01	2.300000e-01	1.007291e-01	1.007291e-01
 3.000000e+00	5.000000e-01	5.000000e-01	2.400000e-01	1.417939e-01	1.417939e-01
 END YODA_SCATTER2D_V2
 BEGIN YODA_SCATTER2D_V2 /REF/ATLAS_2016_I1444991/d07-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -3.5, up: 3.5}, 'sys,Btag_exp': {dn: -0.68, up: 0.68}, 'sys,Det-cor': {dn: -0.17, up: 0.17}, 'sys,JER_exp': {dn: -0.34, up: 0.34}, 'sys,JES_exp': {dn: -1.36, up: 1.36}, 'sys,MET_exp': {dn: -1.7, up: 1.7}, 'sys,WW_theory': {dn: -3.23, up: 3.23}, 'sys,ggfH_theory': {dn: -1.7, up: 1.7}, 'sys,lep_exp': {dn: -0.51, up: 0.51}, 'sys,other_exp': {dn: -0.68, up: 0.68}, 'sys,other_theory': {dn: -1.19, up: 1.19}, 'sys,top_theory': {dn: -1.53, up: 1.53}}, 1: {stat: {dn: -2.0, up: 2.0}, 'sys,Btag_exp': {dn: -0.44, up: 0.44}, 'sys,Det-cor': {dn: -0.33, up: 0.33}, 'sys,JER_exp': {dn: -0.44, up: 0.44}, 'sys,JES_exp': {dn: -0.99, up: 0.99}, 'sys,MET_exp': {dn: -0.88, up: 0.88}, 'sys,WW_theory': {dn: -1.65, up: 1.65}, 'sys,ggfH_theory': {dn: -0.22, up: 0.22}, 'sys,lep_exp': {dn: -0.22, up: 0.22}, 'sys,other_exp': {dn: -0.22, up: 0.22}, 'sys,other_theory': {dn: -0.88, up: 0.88}, 'sys,top_theory': {dn: -0.88, up: 0.88}}, 2: {stat: {dn: -0.5, up: 0.5}, 'sys,Btag_exp': {dn: -0.058, up: 0.058}, 'sys,Det-cor': {dn: -0.029, up: 0.029}, 'sys,JER_exp': {dn: -0.106, up: 0.106}, 'sys,JES_exp': {dn: -0.154, up: 0.154}, 'sys,MET_exp': {dn: -0.067, up: 0.067}, 'sys,WW_theory': {dn: -0.202, up: 0.202}, 'sys,ggfH_theory': {dn: -0.096, up: 0.096}, 'sys,lep_exp': {dn: -0.048, up: 0.048}, 'sys,other_exp': {dn: -0.038, up: 0.038}, 'sys,other_theory': {dn: -0.115, up: 0.115}, 'sys,top_theory': {dn: -0.163, up: 0.163}}}
+
 IsRef: 1
 Path: /REF/ATLAS_2016_I1444991/d07-x01-y01
 Title: doi:10.17182/hepdata.76843.v1/t7
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 1.000000e+01	1.000000e+01	1.000000e+01	1.700000e+01	5.949697e+00	5.949697e+00
 4.000000e+01	2.000000e+01	2.000000e+01	1.100000e+01	3.266053e+00	3.266053e+00
 1.800000e+02	1.200000e+02	1.200000e+02	9.600000e-01	6.222604e-01	6.222604e-01
 END YODA_SCATTER2D_V2
 BEGIN YODA_SCATTER2D_V2 /REF/ATLAS_2016_I1444991/d08-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.17, up: 0.17}, 'sys,Btag_exp': {dn: -0.025, up: 0.025}, 'sys,Det-cor': {dn: -0.0083, up: 0.0083}, 'sys,JER_exp': {dn: -0.017, up: 0.017}, 'sys,JES_exp': {dn: -0.033, up: 0.033}, 'sys,MET_exp': {dn: -0.025, up: 0.025}, 'sys,WW_theory': {dn: -0.091, up: 0.091}, 'sys,ggfH_theory': {dn: -0.0083, up: 0.0083}, 'sys,lep_exp': {dn: -0.025, up: 0.025}, 'sys,other_exp': {dn: -0.025, up: 0.025}, 'sys,other_theory': {dn: -0.042, up: 0.042}, 'sys,top_theory': {dn: -0.083, up: 0.083}}, 1: {stat: {dn: -0.13, up: 0.13}, 'sys,Btag_exp': {dn: -0.014, up: 0.014}, 'sys,Det-cor': {dn: -0.0027, up: 0.0027}, 'sys,JER_exp': {dn: -0.014, up: 0.014}, 'sys,JES_exp': {dn: -0.024, up: 0.024}, 'sys,MET_exp': {dn: -0.019, up: 0.019}, 'sys,WW_theory': {dn: -0.057, up: 0.057}, 'sys,ggfH_theory': {dn: -0.0054, up: 0.0054}, 'sys,lep_exp': {dn: -0.014, up: 0.014}, 'sys,other_exp': {dn: -0.016, up: 0.016}, 'sys,other_theory': {dn: -0.022, up: 0.022}, 'sys,top_theory': {dn: -0.041, up: 0.041}}, 2: {stat: {dn: -0.08, up: 0.08}, 'sys,Btag_exp': {dn: -0.013, up: 0.013}, 'sys,Det-cor': {dn: -0.0026, up: 0.0026}, 'sys,JER_exp': {dn: -0.0052, up: 0.0052}, 'sys,JES_exp': {dn: -0.018, up: 0.018}, 'sys,MET_exp': {dn: -0.01, up: 0.01}, 'sys,WW_theory': {dn: -0.047, up: 0.047}, 'sys,ggfH_theory': {dn: -0.0026, up: 0.0026}, 'sys,lep_exp': {dn: -0.013, up: 0.013}, 'sys,other_exp': {dn: -0.013, up: 0.013}, 'sys,other_theory': {dn: -0.044, up: 0.044}, 'sys,top_theory': {dn: -0.023, up: 0.023}}}
+
 IsRef: 1
 Path: /REF/ATLAS_2016_I1444991/d08-x01-y01
 Title: doi:10.17182/hepdata.76843.v1/t8
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 3.000000e-01	3.000000e-01	3.000000e-01	8.300000e-01	2.232706e-01	2.232706e-01
 9.000000e-01	3.000000e-01	3.000000e-01	2.700000e-01	1.553430e-01	1.553430e-01
 1.850000e+00	6.500000e-01	6.500000e-01	2.600000e-01	1.097523e-01	1.097523e-01
 END YODA_SCATTER2D_V2
 BEGIN YODA_SCATTER2D_V2 /REF/ATLAS_2016_I1444991/d09-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -3.7, up: 3.7}, 'sys,Btag_exp': {dn: -0.57, up: 0.57}, 'sys,Det-cor': {dn: -0.19, up: 0.19}, 'sys,JER_exp': {dn: -0.38, up: 0.38}, 'sys,JES_exp': {dn: -0.57, up: 0.57}, 'sys,MET_exp': {dn: -0.19, up: 0.19}, 'sys,WW_theory': {dn: -2.09, up: 2.09}, 'sys,ggfH_theory': {dn: -0.38, up: 0.38}, 'sys,lep_exp': {dn: -0.38, up: 0.38}, 'sys,other_exp': {dn: -0.38, up: 0.38}, 'sys,other_theory': {dn: -0.95, up: 0.95}, 'sys,top_theory': {dn: -1.33, up: 1.33}}, 1: {stat: {dn: -2.7, up: 2.7}, 'sys,Btag_exp': {dn: -0.49, up: 0.49}, 'sys,Det-cor': {dn: -0.07, up: 0.07}, 'sys,JER_exp': {dn: -0.21, up: 0.21}, 'sys,JES_exp': {dn: -0.91, up: 0.91}, 'sys,MET_exp': {dn: -0.42, up: 0.42}, 'sys,WW_theory': {dn: -1.19, up: 1.19}, 'sys,ggfH_theory': {dn: -0.14, up: 0.14}, 'sys,lep_exp': {dn: -0.21, up: 0.21}, 'sys,other_exp': {dn: -0.21, up: 0.21}, 'sys,other_theory': {dn: -0.77, up: 0.77}, 'sys,top_theory': {dn: -0.63, up: 0.63}}, 2: {stat: {dn: -0.51, up: 0.51}, 'sys,Btag_exp': {dn: -0.082, up: 0.082}, 'sys,Det-cor': {dn: -0.0091, up: 0.0091}, 'sys,JER_exp': {dn: -0.046, up: 0.046}, 'sys,JES_exp': {dn: -0.127, up: 0.127}, 'sys,MET_exp': {dn: -0.036, up: 0.036}, 'sys,WW_theory': {dn: -0.155, up: 0.155}, 'sys,ggfH_theory': {dn: -0.046, up: 0.046}, 'sys,lep_exp': {dn: -0.046, up: 0.046}, 'sys,other_exp': {dn: -0.046, up: 0.046}, 'sys,other_theory': {dn: -0.1, up: 0.1}, 'sys,top_theory': {dn: -0.164, up: 0.164}}}
+
 IsRef: 1
 Path: /REF/ATLAS_2016_I1444991/d09-x01-y01
 Title: doi:10.17182/hepdata.76843.v1/t9
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 1.500000e+01	1.500000e+01	1.500000e+01	1.900000e+01	4.693517e+00	4.693517e+00
 4.500000e+01	1.500000e+01	1.500000e+01	7.000000e+00	3.331261e+00	3.331261e+00
 1.800000e+02	1.200000e+02	1.200000e+02	9.100000e-01	5.947410e-01	5.947410e-01
 END YODA_SCATTER2D_V2
 BEGIN YODA_SCATTER2D_V2 /REF/ATLAS_2016_I1444991/d10-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.11, up: 0.11}, 'sys,Btag_exp': {dn: -0.016, up: 0.016}, 'sys,Det-cor': {dn: -0.0053, up: 0.0053}, 'sys,JER_exp': {dn: -0.0, up: 0.0}, 'sys,JES_exp': {dn: -0.016, up: 0.016}, 'sys,MET_exp': {dn: -0.005, up: 0.005}, 'sys,WW_theory': {dn: -0.064, up: 0.064}, 'sys,ggfH_theory': {dn: -0.0053, up: 0.0053}, 'sys,lep_exp': {dn: -0.011, up: 0.011}, 'sys,other_exp': {dn: -0.011, up: 0.011}, 'sys,other_theory': {dn: -0.032, up: 0.032}, 'sys,top_theory': {dn: -0.037, up: 0.037}}, 1: {stat: {dn: -0.11, up: 0.11}, 'sys,Btag_exp': {dn: -0.017, up: 0.017}, 'sys,Det-cor': {dn: -0.0057, up: 0.0057}, 'sys,JER_exp': {dn: -0.011, up: 0.011}, 'sys,JES_exp': {dn: -0.017, up: 0.017}, 'sys,MET_exp': {dn: -0.0057, up: 0.0057}, 'sys,WW_theory': {dn: -0.063, up: 0.063}, 'sys,ggfH_theory': {dn: -0.011, up: 0.011}, 'sys,lep_exp': {dn: -0.011, up: 0.011}, 'sys,other_exp': {dn: -0.011, up: 0.011}, 'sys,other_theory': {dn: -0.029, up: 0.029}, 'sys,top_theory': {dn: -0.04, up: 0.04}}, 2: {stat: {dn: -0.12, up: 0.12}, 'sys,Btag_exp': {dn: -0.026, up: 0.026}, 'sys,Det-cor': {dn: -0.0064, up: 0.0064}, 'sys,JER_exp': {dn: -0.019, up: 0.019}, 'sys,JES_exp': {dn: -0.032, up: 0.032}, 'sys,MET_exp': {dn: -0.0064, up: 0.0064}, 'sys,WW_theory': {dn: -0.077, up: 0.077}, 'sys,ggfH_theory': {dn: -0.013, up: 0.013}, 'sys,lep_exp': {dn: -0.013, up: 0.013}, 'sys,other_exp': {dn: -0.032, up: 0.032}, 'sys,other_theory': {dn: -0.051, up: 0.051}, 'sys,top_theory': {dn: -0.058, up: 0.058}}}
+
 IsRef: 1
 Path: /REF/ATLAS_2016_I1444991/d10-x01-y01
 Title: doi:10.17182/hepdata.76843.v1/t10
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 2.500000e+01	0.000000e+00	0.000000e+00	5.300000e-01	1.393707e-01	1.393707e-01
 3.000000e+01	0.000000e+00	0.000000e+00	5.700000e-01	1.401320e-01	1.401320e-01
 4.000000e+01	0.000000e+00	0.000000e+00	6.400000e-01	1.726236e-01	1.726236e-01
 END YODA_SCATTER2D_V2
 BEGIN YODA_SCATTER3D_V2 /REF/ATLAS_2016_I1444991/d11-x01-y01
+Variations: [""]
+ErrorBreakdown: {}
+
 IsRef: 1
 Path: /REF/ATLAS_2016_I1444991/d11-x01-y01
 Title: doi:10.17182/hepdata.76843.v1/t11
 Type: Scatter3D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	 zval	 zerr-	 zerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	 zval	  zerr-	 zerr+	
 1.000000e+00	5.000000e-01	5.000000e-01	1.000000e+00	5.000000e-01	5.000000e-01	1.000000e+00	0.000000e+00	0.000000e+00
 2.000000e+00	5.000000e-01	5.000000e-01	2.000000e+00	5.000000e-01	5.000000e-01	1.100000e-01	0.000000e+00	0.000000e+00
 3.000000e+00	5.000000e-01	5.000000e-01	3.000000e+00	5.000000e-01	5.000000e-01	-7.000000e-02	0.000000e+00	0.000000e+00
@@ -124,12 +157,15 @@ Type: Scatter3D
 9.000000e+00	5.000000e-01	5.000000e-01	9.000000e+00	5.000000e-01	5.000000e-01	1.000000e+00	0.000000e+00	0.000000e+00
 END YODA_SCATTER3D_V2
 BEGIN YODA_SCATTER3D_V2 /REF/ATLAS_2016_I1444991/d12-x01-y01
+Variations: [""]
+ErrorBreakdown: {}
+
 IsRef: 1
 Path: /REF/ATLAS_2016_I1444991/d12-x01-y01
 Title: doi:10.17182/hepdata.76843.v1/t12
 Type: Scatter3D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	 zval	 zerr-	 zerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	 zval	  zerr-	 zerr+	
 1.000000e+01	1.000000e+01	1.000000e+01	1.000000e+01	1.000000e+01	1.000000e+01	1.000000e+00	0.000000e+00	0.000000e+00
 1.000000e+01	1.000000e+01	1.000000e+01	4.000000e+01	2.000000e+01	2.000000e+01	4.000000e-01	0.000000e+00	0.000000e+00
 1.000000e+01	1.000000e+01	1.000000e+01	1.800000e+02	1.200000e+02	1.200000e+02	0.000000e+00	0.000000e+00	0.000000e+00
@@ -141,12 +177,15 @@ Type: Scatter3D
 1.800000e+02	1.200000e+02	1.200000e+02	1.800000e+02	1.200000e+02	1.200000e+02	1.000000e+00	0.000000e+00	0.000000e+00
 END YODA_SCATTER3D_V2
 BEGIN YODA_SCATTER3D_V2 /REF/ATLAS_2016_I1444991/d13-x01-y01
+Variations: [""]
+ErrorBreakdown: {}
+
 IsRef: 1
 Path: /REF/ATLAS_2016_I1444991/d13-x01-y01
 Title: doi:10.17182/hepdata.76843.v1/t13
 Type: Scatter3D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	 zval	 zerr-	 zerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	 zval	  zerr-	 zerr+	
 3.000000e-01	3.000000e-01	3.000000e-01	3.000000e-01	3.000000e-01	3.000000e-01	1.000000e+00	0.000000e+00	0.000000e+00
 3.000000e-01	3.000000e-01	3.000000e-01	9.000000e-01	3.000000e-01	3.000000e-01	3.100000e-01	0.000000e+00	0.000000e+00
 3.000000e-01	3.000000e-01	3.000000e-01	1.850000e+00	6.500000e-01	6.500000e-01	2.900000e-01	0.000000e+00	0.000000e+00
@@ -158,12 +197,15 @@ Type: Scatter3D
 1.850000e+00	6.500000e-01	6.500000e-01	1.850000e+00	6.500000e-01	6.500000e-01	1.000000e+00	0.000000e+00	0.000000e+00
 END YODA_SCATTER3D_V2
 BEGIN YODA_SCATTER3D_V2 /REF/ATLAS_2016_I1444991/d14-x01-y01
+Variations: [""]
+ErrorBreakdown: {}
+
 IsRef: 1
 Path: /REF/ATLAS_2016_I1444991/d14-x01-y01
 Title: doi:10.17182/hepdata.76843.v1/t14
 Type: Scatter3D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	 zval	 zerr-	 zerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	 zval	  zerr-	 zerr+	
 1.500000e+01	1.500000e+01	1.500000e+01	1.500000e+01	1.500000e+01	1.500000e+01	1.000000e+00	0.000000e+00	0.000000e+00
 1.500000e+01	1.500000e+01	1.500000e+01	4.500000e+01	1.500000e+01	1.500000e+01	6.000000e-02	0.000000e+00	0.000000e+00
 1.500000e+01	1.500000e+01	1.500000e+01	1.800000e+02	1.200000e+02	1.200000e+02	0.000000e+00	0.000000e+00	0.000000e+00
@@ -175,12 +217,15 @@ Type: Scatter3D
 1.800000e+02	1.200000e+02	1.200000e+02	1.800000e+02	1.200000e+02	1.200000e+02	1.000000e+00	0.000000e+00	0.000000e+00
 END YODA_SCATTER3D_V2
 BEGIN YODA_SCATTER3D_V2 /REF/ATLAS_2016_I1444991/d15-x01-y01
+Variations: [""]
+ErrorBreakdown: {}
+
 IsRef: 1
 Path: /REF/ATLAS_2016_I1444991/d15-x01-y01
 Title: doi:10.17182/hepdata.76843.v1/t15
 Type: Scatter3D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	 zval	 zerr-	 zerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	 zval	  zerr-	 zerr+	
 1.000000e+00	5.000000e-01	5.000000e-01	1.000000e+00	5.000000e-01	5.000000e-01	1.000000e+00	0.000000e+00	0.000000e+00
 2.000000e+00	5.000000e-01	5.000000e-01	2.000000e+00	5.000000e-01	5.000000e-01	-4.300000e-01	0.000000e+00	0.000000e+00
 3.000000e+00	5.000000e-01	5.000000e-01	3.000000e+00	5.000000e-01	5.000000e-01	-7.700000e-01	0.000000e+00	0.000000e+00
@@ -192,12 +237,15 @@ Type: Scatter3D
 9.000000e+00	5.000000e-01	5.000000e-01	9.000000e+00	5.000000e-01	5.000000e-01	1.000000e+00	0.000000e+00	0.000000e+00
 END YODA_SCATTER3D_V2
 BEGIN YODA_SCATTER3D_V2 /REF/ATLAS_2016_I1444991/d16-x01-y01
+Variations: [""]
+ErrorBreakdown: {}
+
 IsRef: 1
 Path: /REF/ATLAS_2016_I1444991/d16-x01-y01
 Title: doi:10.17182/hepdata.76843.v1/t16
 Type: Scatter3D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	 zval	 zerr-	 zerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	 zval	  zerr-	 zerr+	
 1.000000e+01	1.000000e+01	1.000000e+01	1.000000e+01	1.000000e+01	1.000000e+01	1.000000e+00	0.000000e+00	0.000000e+00
 1.000000e+01	1.000000e+01	1.000000e+01	4.000000e+01	2.000000e+01	2.000000e+01	-3.600000e-01	0.000000e+00	0.000000e+00
 1.000000e+01	1.000000e+01	1.000000e+01	1.800000e+02	1.200000e+02	1.200000e+02	-6.800000e-01	0.000000e+00	0.000000e+00
@@ -209,12 +257,15 @@ Type: Scatter3D
 1.800000e+02	1.200000e+02	1.200000e+02	1.800000e+02	1.200000e+02	1.200000e+02	1.000000e+00	0.000000e+00	0.000000e+00
 END YODA_SCATTER3D_V2
 BEGIN YODA_SCATTER3D_V2 /REF/ATLAS_2016_I1444991/d17-x01-y01
+Variations: [""]
+ErrorBreakdown: {}
+
 IsRef: 1
 Path: /REF/ATLAS_2016_I1444991/d17-x01-y01
 Title: doi:10.17182/hepdata.76843.v1/t17
 Type: Scatter3D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	 zval	 zerr-	 zerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	 zval	  zerr-	 zerr+	
 3.000000e-01	3.000000e-01	3.000000e-01	3.000000e-01	3.000000e-01	3.000000e-01	1.000000e+00	0.000000e+00	0.000000e+00
 3.000000e-01	3.000000e-01	3.000000e-01	9.000000e-01	3.000000e-01	3.000000e-01	-4.300000e-01	0.000000e+00	0.000000e+00
 3.000000e-01	3.000000e-01	3.000000e-01	1.850000e+00	6.500000e-01	6.500000e-01	-7.200000e-01	0.000000e+00	0.000000e+00
@@ -226,12 +277,15 @@ Type: Scatter3D
 1.850000e+00	6.500000e-01	6.500000e-01	1.850000e+00	6.500000e-01	6.500000e-01	1.000000e+00	0.000000e+00	0.000000e+00
 END YODA_SCATTER3D_V2
 BEGIN YODA_SCATTER3D_V2 /REF/ATLAS_2016_I1444991/d18-x01-y01
+Variations: [""]
+ErrorBreakdown: {}
+
 IsRef: 1
 Path: /REF/ATLAS_2016_I1444991/d18-x01-y01
 Title: doi:10.17182/hepdata.76843.v1/t18
 Type: Scatter3D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	 zval	 zerr-	 zerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	 zval	  zerr-	 zerr+	
 1.500000e+01	1.500000e+01	1.500000e+01	1.500000e+01	1.500000e+01	1.500000e+01	1.000000e+00	0.000000e+00	0.000000e+00
 1.500000e+01	1.500000e+01	1.500000e+01	4.500000e+01	1.500000e+01	1.500000e+01	-5.200000e-01	0.000000e+00	0.000000e+00
 1.500000e+01	1.500000e+01	1.500000e+01	1.800000e+02	1.200000e+02	1.200000e+02	-7.700000e-01	0.000000e+00	0.000000e+00
@@ -243,45 +297,57 @@ Type: Scatter3D
 1.800000e+02	1.200000e+02	1.200000e+02	1.800000e+02	1.200000e+02	1.200000e+02	1.000000e+00	0.000000e+00	0.000000e+00
 END YODA_SCATTER3D_V2
 BEGIN YODA_SCATTER2D_V2 /REF/ATLAS_2016_I1444991/d19-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -4.5, up: 4.5}, 'sys,Btag_exp': {dn: -0.2, up: 0.2}, 'sys,Det-cor': {dn: -0.2, up: 0.2}, 'sys,JER_exp': {dn: -1.0, up: 1.0}, 'sys,JES_exp': {dn: -0.2, up: 0.2}, 'sys,MET_exp': {dn: -0.4, up: 0.4}, 'sys,WW_theory': {dn: -4.6, up: 4.6}, 'sys,ggfH_theory': {dn: -0.8, up: 0.8}, 'sys,lep_exp': {dn: -1.1, up: 1.1}, 'sys,other_exp': {dn: -1.0, up: 1.0}, 'sys,other_theory': {dn: -1.0, up: 1.0}, 'sys,top_theory': {dn: -0.4, up: 0.4}}, 1: {stat: {dn: -4.7, up: 4.7}, 'sys,Btag_exp': {dn: -0.2, up: 0.2}, 'sys,Det-cor': {dn: -0.2, up: 0.2}, 'sys,JER_exp': {dn: -0.8, up: 0.8}, 'sys,JES_exp': {dn: -0.4, up: 0.4}, 'sys,MET_exp': {dn: -0.4, up: 0.4}, 'sys,WW_theory': {dn: -4.8, up: 4.8}, 'sys,ggfH_theory': {dn: -1.0, up: 1.0}, 'sys,lep_exp': {dn: -1.2, up: 1.2}, 'sys,other_exp': {dn: -1.2, up: 1.2}, 'sys,other_theory': {dn: -1.0, up: 1.0}, 'sys,top_theory': {dn: -0.4, up: 0.4}}, 2: {stat: {dn: -5.1, up: 5.1}, 'sys,Btag_exp': {dn: -0.5, up: 0.5}, 'sys,Det-cor': {dn: -0.2, up: 0.2}, 'sys,JER_exp': {dn: -1.2, up: 1.2}, 'sys,JES_exp': {dn: -1.2, up: 1.2}, 'sys,MET_exp': {dn: -0.5, up: 0.5}, 'sys,WW_theory': {dn: -5.1, up: 5.1}, 'sys,ggfH_theory': {dn: -1.2, up: 1.2}, 'sys,lep_exp': {dn: -1.4, up: 1.4}, 'sys,other_exp': {dn: -1.6, up: 1.6}, 'sys,other_theory': {dn: -1.4, up: 1.4}, 'sys,top_theory': {dn: -0.9, up: 0.9}}}
+
 IsRef: 1
 Path: /REF/ATLAS_2016_I1444991/d19-x01-y01
 Title: doi:10.17182/hepdata.76843.v1/t19
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 1.000000e+00	5.000000e-01	5.000000e-01	1.900000e+01	6.833740e+00	6.833740e+00
 2.000000e+00	5.000000e-01	5.000000e-01	2.070000e+01	7.156116e+00	7.156116e+00
 3.000000e+00	5.000000e-01	5.000000e-01	2.330000e+01	8.010618e+00	8.010618e+00
 END YODA_SCATTER2D_V2
 BEGIN YODA_SCATTER2D_V2 /REF/ATLAS_2016_I1444991/d20-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.0015, up: 0.0018}}, 1: {error: {dn: -0.0026, up: 0.0026}}, 2: {error: {dn: -0.0042, up: 0.004}}}
+
 IsRef: 1
 Path: /REF/ATLAS_2016_I1444991/d20-x01-y01
 Title: doi:10.17182/hepdata.76843.v1/t20
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 1.000000e+00	5.000000e-01	5.000000e-01	5.670000e-02	1.500000e-03	1.800000e-03
 2.000000e+00	5.000000e-01	5.000000e-01	5.800000e-02	2.600000e-03	2.600000e-03
 3.000000e+00	5.000000e-01	5.000000e-01	6.280000e-02	4.200000e-03	4.000000e-03
 END YODA_SCATTER2D_V2
 BEGIN YODA_SCATTER2D_V2 /REF/ATLAS_2016_I1444991/d21-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.0015, up: 0.0017}}, 1: {error: {dn: -0.0031, up: 0.0031}}, 2: {error: {dn: -0.005, up: 0.005}}}
+
 IsRef: 1
 Path: /REF/ATLAS_2016_I1444991/d21-x01-y01
 Title: doi:10.17182/hepdata.76843.v1/t21
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 1.500000e+01	1.500000e+01	1.500000e+01	5.510000e-02	1.500000e-03	1.700000e-03
 4.500000e+01	1.500000e+01	1.500000e+01	5.690000e-02	3.100000e-03	3.100000e-03
 1.800000e+02	1.200000e+02	1.200000e+02	7.180000e-02	5.000000e-03	5.000000e-03
 END YODA_SCATTER2D_V2
 BEGIN YODA_SCATTER2D_V2 /REF/ATLAS_2016_I1444991/d22-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.003, up: 0.012}}, 1: {error: {dn: -0.0048, up: 0.0095}}, 2: {error: {dn: -0.0048, up: 0.0095}}}
+
 IsRef: 1
 Path: /REF/ATLAS_2016_I1444991/d22-x01-y01
 Title: doi:10.17182/hepdata.76843.v1/t22
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 1.000000e+00	5.000000e-01	5.000000e-01	9.798000e-01	3.000000e-03	1.200000e-02
 2.000000e+00	5.000000e-01	5.000000e-01	9.529000e-01	4.800000e-03	9.500000e-03
 3.000000e+00	5.000000e-01	5.000000e-01	9.534000e-01	4.800000e-03	9.500000e-03

@@ -22,6 +22,8 @@ Beams: [p+, p+]
 Energies: [13000]
 PtCuts: [500,350]
 NeedCrossSection: True
+Options:
+ - TMODE=PARTICLE,BOTH
 Description:
   'Measurements are made of differential cross-sections of highly boosted pair-produced top quarks as a function of top-quark and
   $t\bar{t}$ system kinematic observables using proton--proton collisions at a center-of-mass energy of $\sqrt{s}=13$ TeV. The data 

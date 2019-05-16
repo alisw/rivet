@@ -192,40 +192,40 @@ namespace Rivet {
   }
 
 
-  inline double deltaPhi(const ParticleBase& p1, const ParticleBase& p2) {
-    return deltaPhi(p1.momentum(), p2.momentum());
+  inline double deltaPhi(const ParticleBase& p1, const ParticleBase& p2, bool sign=false) {
+    return deltaPhi(p1.momentum(), p2.momentum(), sign);
   }
 
-  inline double deltaPhi(const ParticleBase& p, const FourMomentum& v) {
-    return deltaPhi(p.momentum(), v);
+  inline double deltaPhi(const ParticleBase& p, const FourMomentum& v, bool sign=false) {
+    return deltaPhi(p.momentum(), v, sign);
   }
 
-  inline double deltaPhi(const ParticleBase& p, const FourVector& v) {
-    return deltaPhi(p.momentum(), v);
+  inline double deltaPhi(const ParticleBase& p, const FourVector& v, bool sign=false) {
+    return deltaPhi(p.momentum(), v, sign);
   }
 
-  inline double deltaPhi(const ParticleBase& p, const Vector3& v) {
-    return deltaPhi(p.momentum(), v);
+  inline double deltaPhi(const ParticleBase& p, const Vector3& v, bool sign=false) {
+    return deltaPhi(p.momentum(), v, sign);
   }
 
-  inline double deltaPhi(const ParticleBase& p, double phi) {
-    return deltaPhi(p.momentum(), phi);
+  inline double deltaPhi(const ParticleBase& p, double phi, bool sign=false) {
+    return deltaPhi(p.momentum(), phi, sign);
   }
 
-  inline double deltaPhi(const FourMomentum& v, const ParticleBase& p) {
-    return deltaPhi(v, p.momentum());
+  inline double deltaPhi(const FourMomentum& v, const ParticleBase& p, bool sign=false) {
+    return deltaPhi(v, p.momentum(), sign);
   }
 
-  inline double deltaPhi(const FourVector& v, const ParticleBase& p) {
-    return deltaPhi(v, p.momentum());
+  inline double deltaPhi(const FourVector& v, const ParticleBase& p, bool sign=false) {
+    return deltaPhi(v, p.momentum(), sign);
   }
 
-  inline double deltaPhi(const Vector3& v, const ParticleBase& p) {
-    return deltaPhi(v, p.momentum());
+  inline double deltaPhi(const Vector3& v, const ParticleBase& p, bool sign=false) {
+    return deltaPhi(v, p.momentum(), sign);
   }
 
-  inline double deltaPhi(double phi, const ParticleBase& p) {
-    return deltaPhi(phi, p.momentum());
+  inline double deltaPhi(double phi, const ParticleBase& p, bool sign=false) {
+    return deltaPhi(phi, p.momentum(), sign);
   }
 
 

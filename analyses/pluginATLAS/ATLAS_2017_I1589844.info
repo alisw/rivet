@@ -28,8 +28,8 @@ Description:
   $\sqrt{s} = 8$ TeV by the ATLAS experiment at the LHC in 2012. The measurement is based on charged-particle track information,
   which is measured with excellent precision in the $p_\text{T}$ region relevant for the transition between the perturbative and the
   non-perturbative regimes. The data distributions are corrected for detector effects, and are found to deviate from
-  state-of-the-art predictions in various regions of the observables. If no mode specified, will try to fill both electron and muon plots. If EL or MU
-  is specified, only the relevant plots will be filled.'
+  state-of-the-art predictions in various regions of the observables. If no mode specified, will try to fill both electron and muon plots. 
+  If EL or MU is specified, only the relevant plots will be filled.'
 BibKey: Aaboud:2017hox
 BibTeX: '@article{Aaboud:2017hox,
       author         = "Aaboud, Morad and others",

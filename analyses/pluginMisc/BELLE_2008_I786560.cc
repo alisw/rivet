@@ -32,12 +32,8 @@ namespace Rivet {
         _weight_total += 1.;
         Particles pip, pim, pi0;
         unsigned int nstable = 0;
-        // get the boost to the rest frame
-        LorentzTransform cms_boost;
-        if (p.p3().mod() > 1*MeV)
-          cms_boost = LorentzTransform::mkFrameTransformFromBeta(p.momentum().betaVec());
         // find the decay products we want
-        findDecayProducts(p.genParticle(), nstable, pip, pim, pi0);
+        findDecayProducts(p, nstable, pip, pim, pi0);
         if (p.pid() < 0) {
           swap(pip, pim);
         }
@@ -68,26 +64,24 @@ namespace Rivet {
 
     //@}
 
-    void findDecayProducts(const GenParticle* p,
+    void findDecayProducts(const Particle &mother,
                            unsigned int & nstable,
                            Particles& pip, Particles& pim,
                            Particles& pi0) {
-      const GenVertex* dv = p->end_vertex();
-      /// @todo Use better looping
-      for (GenVertex::particles_out_const_iterator pp = dv->particles_out_const_begin(); pp != dv->particles_out_const_end(); ++pp) {
-        int id = (*pp)->pdg_id();
+      for (const Particle &p : mother.children()) {
+        long id = p.pdgId();
         if (id == PID::PI0 ) {
-          pi0.push_back(Particle(**pp));
+          pi0.push_back(p);
           ++nstable;
-	}
+       	}
         else if (id == PID::K0S)
           ++nstable;
         else if (id == PID::PIPLUS) {
-          pip.push_back(Particle(**pp));
+          pip.push_back(p);
           ++nstable;
         }
         else if (id == PID::PIMINUS) {
-          pim.push_back(Particle(**pp));
+          pim.push_back(p);
           ++nstable;
         }
         else if (id == PID::KPLUS) {
@@ -96,15 +90,13 @@ namespace Rivet {
         else if (id == PID::KMINUS) {
           ++nstable;
         }
-        else if ((*pp)->end_vertex()) {
-          findDecayProducts(*pp, nstable, pip, pim, pi0);
+        else if (!p.children().empty()) {
+          findDecayProducts(p, nstable, pip, pim, pi0);
         }
-        else
-          ++nstable;
+        else  ++nstable;
       }
     }
   };
-
 
   // The hook for the plugin system
   DECLARE_RIVET_PLUGIN(BELLE_2008_I786560);

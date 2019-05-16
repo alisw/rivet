@@ -22,14 +22,14 @@ Title=Number of jets, $p_{T}^{jet} > 30$ GeV
 XLabel=$N_{jets}$
 YLabel=$\sigma_{\mathrm{fid}}$ [fb]
 LogY=0
-XCustomMajorTicks=1.0 $0$ 2.0 $1$ 3.0 $2$ 4.0 $\geq 3$
+XCustomMajorTicks=1.0 $0$ 2.0 $1$ 3.0 $2$ 4.0 $\geq3$
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2014_I1306615/d04-x01-y01
 Title=Number of jets, $p_{T}^{jet} > 50$ GeV
 XLabel=$N_{jets}$
 YLabel=$\sigma_{\mathrm{fid}}$ [fb]
-XCustomMajorTicks=1.0 $0$ 2.0 $1$ 3.0 $2$ 4.0 $\geq 3$
+XCustomMajorTicks=1.0 $0$ 2.0 $1$ 3.0 $2$ 4.0 $\geq3$
 LogY=0
 # END PLOT
 

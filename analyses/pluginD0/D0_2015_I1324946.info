@@ -1,6 +1,6 @@
 Name: D0_2015_I1324946
 Year: 2015
-Summary: D0 measurement of the $\phi^*$ distribution of muon pairs with masses between 30 and 500 GeV in 10.4 fb−1
+Summary: D0 measurement of the $\phi^*$ distribution of muon pairs with masses between 30 and 500 GeV in 10.4 fb-1
 Experiment: D0
 Collider: Tevatron
 InspireID: 1324946
@@ -20,7 +20,7 @@ NeedCrossSection: True
 Description:
   'D0 measurement of the distribution of the variable $\phi^*$ for muon pairs with masses between 30 and 500 GeV,
   using the complete run II data set collected at the Tevatron proton-antiproton collider.
-  This corresponds to an integrated luminosity of 10.4  fb−1 at \sqrt{s}=1.96 TeV.
+  This corresponds to an integrated luminosity of $10.4 \text{fb}^{-1}$ at $\sqrt{s}=1.96$ TeV.
   The data are corrected for detector effects and presented in bins of dimuon rapidity and mass.'
 BibKey: Abazov:2014mza
 BibTeX: '@article{Abazov:2014mza,

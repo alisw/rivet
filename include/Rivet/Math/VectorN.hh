@@ -94,7 +94,7 @@ namespace Rivet {
     /// \f$ \sqrt{\sum_{i=1}^N x_i^2} \f$.
     double mod() const {
       const double norm = mod2();
-      assert(norm >= 0);
+      //assert(norm >= 0); //< *should* be impossible
       return sqrt(norm);
     }
 

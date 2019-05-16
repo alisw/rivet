@@ -87,10 +87,10 @@ namespace Rivet {
       //    -lower pT electrons with dR(e,e)<0.1 are removed
       //
       ////////////////////////////////////////////////////////////////////////////
-      foreach (DressedLepton& l1, dressed_lepton) {
+      for (DressedLepton& l1 : dressed_lepton) {
         bool l_isolated = true;
-        foreach (DressedLepton& l2, dressed_lepton) {
-          if (l1 != l2 && l2.constituentLepton().abspid() == PID::ELECTRON) {
+        for (DressedLepton& l2 : dressed_lepton) {
+          if (!isSame(l1, l2) && l2.constituentLepton().abspid() == PID::ELECTRON) {
             double overlapControl_ll= deltaR(l1.constituentLepton(),l2.constituentLepton());
             if (overlapControl_ll < 0.1) {
               l_isolated = false;

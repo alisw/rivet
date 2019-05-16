@@ -41,7 +41,7 @@ public:
 	}
 
 	bool isDeviated(Particle p, Particle parent) { //Select/Remove particles decayed between IP and LHCf
-		GenVertex* pv = p.genParticle()->production_vertex();
+		const GenVertex* pv = p.genParticle()->production_vertex();
 		assert(pv != NULL);
 
 		const double decay_vertex = pv->position().z()/mm;
@@ -93,7 +93,7 @@ public:
 
 	/// This method return a fake pseudorapidity to check id decayed particle is in LHCf acceptance
 	double RecomputeEta(Particle p) {
-		GenVertex* pv = p.genParticle()->production_vertex();
+		const GenVertex* pv = p.genParticle()->production_vertex();
 
 		const double x0 = pv->position().x()/mm;
 		const double y0 = pv->position().y()/mm;
@@ -160,7 +160,7 @@ public:
 					eta = p.eta();
 					en = p.E()/GeV;
 				} else if(isParticleFromDecay(p, parents)) { //Particles produced from decay
-					GenVertex* pv = p.genParticle()->production_vertex();
+					const GenVertex* pv = p.genParticle()->production_vertex();
 					assert(pv != NULL);
 
 					const double decay_vertex = pv->position().z()/mm;
@@ -209,7 +209,7 @@ public:
 								eta = parent.eta();
 								en = parent.E()/GeV;
 							} else if (isParticleFromDecay(parent, ancestors)) { //if we found first particles produced entering LHCf we consider them
-								GenVertex* pv_prev = parent.genParticle()->production_vertex();
+								const GenVertex* pv_prev = parent.genParticle()->production_vertex();
 								assert(pv_prev != NULL);
 
 								const double previous_decay_vertex = pv_prev->position().z()/mm;

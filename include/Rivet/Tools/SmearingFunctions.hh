@@ -460,11 +460,41 @@ namespace Rivet {
     if (chargedhadrons.empty()) return 0; //< leptonic tau
     if (pThadvis < 20*GeV) return 0; //< below threshold
     if (pThadvis < 40*GeV) {
-      if (chargedhadrons.size() == 1) return (t.abspid() == PID::TAU) ? 0.56 : 1/20.;
-      if (chargedhadrons.size() == 3) return (t.abspid() == PID::TAU) ? 0.38 : 1/100.;
+      if (chargedhadrons.size() == 1) return (t.abspid() == PID::TAU) ? 0.56 : 0; //1/20.;
+      if (chargedhadrons.size() == 3) return (t.abspid() == PID::TAU) ? 0.38 : 0; //1/100.;
     } else {
-      if (chargedhadrons.size() == 1) return (t.abspid() == PID::TAU) ? 0.56 : 1/25.;
-      if (chargedhadrons.size() == 3) return (t.abspid() == PID::TAU) ? 0.38 : 1/400.;
+      if (chargedhadrons.size() == 1) return (t.abspid() == PID::TAU) ? 0.56 : 0; //1/25.;
+      if (chargedhadrons.size() == 3) return (t.abspid() == PID::TAU) ? 0.38 : 0; //1/400.;
+    }
+    return 0;
+  }
+
+  /// @brief ATLAS Run 1 8 TeV tau misID rates (medium working point)
+  ///
+  /// Taken from http://arxiv.org/pdf/1412.7086.pdf
+  ///   20-40 GeV 1-prong LMT eff|mis = 0.66|1/10, 0.56|1/20, 0.36|1/80
+  ///   20-40 GeV 3-prong LMT eff|mis = 0.45|1/60, 0.38|1/100, 0.27|1/300
+  ///   > 40 GeV 1-prong LMT eff|mis = 0.66|1/15, 0.56|1/25, 0.36|1/80
+  ///   > 40 GeV 3-prong LMT eff|mis = 0.45|1/250, 0.38|1/400, 0.27|1/1300
+  inline double TAU_MISID_ATLAS_RUN1(const Jet& j) {
+    if (j.abseta() > 2.5) return 0; //< hmm... mostly
+    double pThadvis = 0;
+    Particles chargedhadrons;
+    for (const Particle& p : j.particles()) {
+      if (p.isHadron()) {
+        pThadvis += p.pT(); //< right definition? Paper is unclear
+        if (p.charge3() != 0 && p.abseta() < 2.5 && p.pT() > 1*GeV) chargedhadrons += p;
+      }
+    }
+    if (chargedhadrons.empty()) return 0;
+    if (pThadvis < 20*GeV) return 0;
+    /// @todo Add some "if jet is true tau" logic... how? tau among constituents' ancestors?
+    if (pThadvis < 40*GeV) {
+      if (chargedhadrons.size() == 1) return 1/20.;
+      if (chargedhadrons.size() == 3) return 1/100.;
+    } else {
+      if (chargedhadrons.size() == 1) return 1/25.;
+      if (chargedhadrons.size() == 3) return 1/400.;
     }
     return 0;
   }
@@ -487,8 +517,30 @@ namespace Rivet {
     }
     if (chargedhadrons.empty()) return 0; //< leptonic tau
     if (pThadvis < 20*GeV) return 0; //< below threshold
-    if (chargedhadrons.size() == 1) return (t.abspid() == PID::TAU) ? 0.55 : 1/50.;
-    if (chargedhadrons.size() == 3) return (t.abspid() == PID::TAU) ? 0.40 : 1/110.;
+    if (chargedhadrons.size() == 1) return (t.abspid() == PID::TAU) ? 0.55 : 0; //1/50.;
+    if (chargedhadrons.size() == 3) return (t.abspid() == PID::TAU) ? 0.40 : 0; //1/110.;
+    return 0;
+  }
+
+  /// @brief ATLAS Run 2 13 TeV tau misID rate (medium working point)
+  ///
+  /// From https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PUBNOTES/ATL-PHYS-PUB-2015-045/ATL-PHYS-PUB-2015-045.pdf
+  ///   LMT 1 prong efficiency/mistag = 0.6|1/30, 0.55|1/50, 0.45|1/120
+  ///   LMT 3 prong efficiency/mistag = 0.5|1/30, 0.4|1/110, 0.3|1/300
+  inline double TAU_MISID_ATLAS_RUN2(const Jet& j) {
+    if (j.abseta() > 2.5) return 0; //< hmm... mostly
+    double pThadvis = 0;
+    Particles chargedhadrons;
+    for (const Particle& p : j.particles()) {
+      if (p.isHadron()) {
+        pThadvis += p.pT(); //< right definition? Paper is unclear
+        if (p.charge3() != 0 && p.abseta() < 2.5 && p.pT() > 1*GeV) chargedhadrons += p;
+      }
+    }
+    if (chargedhadrons.empty()) return 0;
+    if (pThadvis < 20*GeV) return 0; //< below threshold
+    if (chargedhadrons.size() == 1) return 1/50.;
+    if (chargedhadrons.size() == 3) return 1/110.;
     return 0;
   }
 
@@ -604,8 +656,14 @@ namespace Rivet {
 
   /// CMS Run 2 jet smearing
   /// @todo Just a copy of the suboptimal ATLAS one: improve!!
-  inline Jet JET_SMEAR_CMS_RUN2(const Jet& j) {
+  inline Jet JET_SMEAR_CMS_RUN1(const Jet& j) {
     return JET_SMEAR_ATLAS_RUN1(j);
+  }
+
+  /// CMS Run 2 jet smearing
+  /// @todo Just a copy of the suboptimal ATLAS one: improve!!
+  inline Jet JET_SMEAR_CMS_RUN2(const Jet& j) {
+    return JET_SMEAR_CMS_RUN1(j);
   }
 
   //@}

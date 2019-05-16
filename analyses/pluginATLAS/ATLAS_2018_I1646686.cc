@@ -22,6 +22,11 @@ namespace Rivet {
       /// Book histograms and initialise projections before the run
       void init() {
 
+        // Get options particle-level only.
+        _mode = 0;
+        if ( getOption("TMODE") == "PARTICLE" ) _mode = 0;
+        if ( getOption("TMODE") == "BOTH" ) _mode = 1;
+
         //histogram booking
         _h["inclusive"] = bookHisto1D(1,1,1);
         bookHistograms("t_pt", 0, true);
@@ -52,105 +57,95 @@ namespace Rivet {
         photons.acceptIdPair(PID::PHOTON);
 
         // Projection to find the electrons
-        IdentifiedFinalState el_id(fs);
-        el_id.acceptIdPair(PID::ELECTRON);
-        PromptFinalState electrons(el_id);
-        electrons.acceptTauDecays(true);
+        PromptFinalState electrons(Cuts::abspid == PID::ELECTRON, true);
         DressedLeptons dressedelectrons(photons, electrons, 0.1, dressed_lep);
         declare(dressedelectrons, "elecs");
         DressedLeptons ewdressedelectrons(photons, electrons, 0.1, eta_full);
 
         // Projection to find the muons
-        IdentifiedFinalState mu_id(fs);
-        mu_id.acceptIdPair(PID::MUON);
-        PromptFinalState muons(mu_id);
-        muons.acceptTauDecays(true);
+        PromptFinalState muons(Cuts::abspid == PID::MUON, true);
         DressedLeptons dressedmuons(photons, muons, 0.1, dressed_lep);
         declare(dressedmuons, "muons");
         DressedLeptons ewdressedmuons(photons, muons, 0.1, eta_full);
 
-        // Projection to find neutrinos for vetoing in jets
-        IdentifiedFinalState nu_id(fs);
-        nu_id.acceptNeutrinos();
-        PromptFinalState neutrinos(nu_id);
-        neutrinos.acceptTauDecays(true);
-
         // Jet clustering.
-        VetoedFinalState lvfs(fs);
-        lvfs.addVetoOnThisFinalState(mu_id);
-        lvfs.addVetoOnThisFinalState(nu_id);
-
         VetoedFinalState vfs;
         vfs.addVetoOnThisFinalState(ewdressedelectrons);
         vfs.addVetoOnThisFinalState(ewdressedmuons);
-        vfs.addVetoOnThisFinalState(neutrinos);
 
-        FastJets jets(vfs, FastJets::ANTIKT, 0.4);
-        jets.useInvisibles();
+        FastJets jets(vfs, FastJets::ANTIKT, 0.4, JetAlg::DECAY_MUONS, JetAlg::DECAY_INVISIBLES);
         declare(jets, "jets");
 
-        FastJets ljets(lvfs, FastJets::ANTIKT, 1.0);
-        ljets.useInvisibles();
+        FastJets ljets(fs, FastJets::ANTIKT, 1.0, JetAlg::NO_MUONS, JetAlg::NO_INVISIBLES);
         declare(ljets, "ljets" );
 
-        PartonicTops partonTops;
-        declare(partonTops, "partonicTops");
+        if (_mode != 0 ){
+          PartonicTops partonTops;
+          declare(partonTops, "partonicTops");
+        }
       }
 
 
       void analyze(const Event& event) {
 
-        // Parton-level top quarks
-        const Particles partonicTops = apply<PartonicTops>( event, "partonicTops").particlesByPt();
-        FourMomentum top, tbar;
-        bool foundT = false, foundTBar = false;
-        for (const Particle& ptop : partonicTops) {
-          const int pid = ptop.pid();
-          if (pid == PID::TQUARK) {
-            top = ptop.momentum();
-            foundT = true;
-          } else if (pid == -PID::TQUARK) {
-            tbar = ptop.momentum();
-            foundTBar = true;
-          }
-        }
-
         const double weight = event.weight();
 
-        FourMomentum t1_parton, t2_parton, ttbar_parton;
-        if ( foundT && foundTBar ) {
-          t1_parton = top.pT2() > tbar.pT2() ? top : tbar;
-          t2_parton = top.pT2() > tbar.pT2() ? tbar : top;
-          ttbar_parton = t1_parton + t2_parton;
+        if (_mode != 0){
 
-          if ( t1_parton.pT() > 500*GeV && t2_parton.pT() > 350*GeV) {
+          // Parton-level top quarks
+          const Particles partonicTops = apply<PartonicTops>( event, "partonicTops").particlesByPt();
+          FourMomentum top, tbar;
+          bool foundT = false, foundTBar = false;
+          for (const Particle& ptop : partonicTops) {
+            const int pid = ptop.pid();
+            if (pid == PID::TQUARK) {
+              top = ptop.momentum();
+              foundT = true;
+            } else if (pid == -PID::TQUARK) {
+              tbar = ptop.momentum();
+              foundTBar = true;
+            }
+          }
 
-            const double chi_parton = calcChi(t1_parton, t2_parton);
-            const double cosThetaStar_parton = abs(calcCosThetaStar(t1_parton, t2_parton));
-            const double pout_parton = abs(calcPout(t1_parton, t2_parton));
-            const double dPhi_parton = deltaPhi(t1_parton, t2_parton);
+          FourMomentum t1_parton, t2_parton, ttbar_parton;
+          if ( foundT && foundTBar ) {
+            t1_parton = top.pT2() > tbar.pT2() ? top : tbar;
+            t2_parton = top.pT2() > tbar.pT2() ? tbar : top;
+            ttbar_parton = t1_parton + t2_parton;
+            
+            if ( t1_parton.pT() > 500*GeV && t2_parton.pT() > 350*GeV) {
+              
+              const double chi_parton = calcChi(t1_parton, t2_parton);
+              const double cosThetaStar_parton = abs(calcCosThetaStar(t1_parton, t2_parton));
+              if (cosThetaStar_parton == -99) {
+                MSG_DEBUG("ttbar going faster than light! Vetoing event. Try turning of partonic tops?");
+                vetoEvent;
+              }
+              const double pout_parton = abs(calcPout(t1_parton, t2_parton));
+              const double dPhi_parton = deltaPhi(t1_parton, t2_parton);
+              
+              const int randomChoice = rand() % 2;
+              const FourMomentum& randomTopParton = (randomChoice == 0) ? t1_parton : t2_parton;
+              
+              fillParton("t_pt", randomTopParton.pT()/GeV, weight);
+              fillParton("t_y",  randomTopParton.absrap(), weight);
+              
+              fillParton("t1_pt", t1_parton.pT()/GeV, weight);
+              fillParton("t1_y",  t1_parton.absrap(), weight);
+              fillParton("t2_pt", t2_parton.pT()/GeV, weight);
+              fillParton("t2_y",  t2_parton.absrap(), weight);
+              
+              fillParton("tt_m",  ttbar_parton.mass()/TeV, weight);
+              fillParton("tt_pt", ttbar_parton.pT()/GeV, weight);
+              fillParton("tt_Ht", (t1_parton.pT() + t2_parton.pT())/GeV, weight);
+              fillParton("tt_y",  ttbar_parton.absrap(), weight);
 
-            const int randomChoice = rand() % 2;
-            const FourMomentum& randomTopParton = (randomChoice == 0) ? t1_parton : t2_parton;
-
-            fillParton("t_pt", randomTopParton.pT()/GeV, weight);
-            fillParton("t_y",  randomTopParton.absrap(), weight);
-
-            fillParton("t1_pt", t1_parton.pT()/GeV, weight);
-            fillParton("t1_y",  t1_parton.absrap(), weight);
-            fillParton("t2_pt", t2_parton.pT()/GeV, weight);
-            fillParton("t2_y",  t2_parton.absrap(), weight);
-
-            fillParton("tt_m",  ttbar_parton.mass()/GeV, weight);
-            fillParton("tt_pt", ttbar_parton.pT()/GeV, weight);
-            fillParton("tt_Ht", (t1_parton.pT() + t2_parton.pT())/GeV, weight);
-            fillParton("tt_y",  ttbar_parton.absrap(), weight);
-
-            fillParton("tt_yboost", 0.5 * abs(t1_parton.rapidity() + t2_parton.rapidity()), weight);
-            fillParton("tt_chi", chi_parton, weight);
-            fillParton("tt_cosThStar", cosThetaStar_parton, weight);
-            fillParton("tt_pout", pout_parton/GeV, weight);
-            fillParton("tt_dPhi", dPhi_parton, weight);
+              fillParton("tt_yboost", 0.5 * abs(t1_parton.rapidity() + t2_parton.rapidity()), weight);
+              fillParton("tt_chi", chi_parton, weight);
+              fillParton("tt_cosThStar", cosThetaStar_parton, weight);
+              fillParton("tt_pout", pout_parton/GeV, weight);
+              fillParton("tt_dPhi", dPhi_parton, weight);
+            }
           }
         }
 
@@ -196,6 +191,10 @@ namespace Rivet {
 
         const double chi = calcChi(t1, t2);
         const double cosThetaStar = abs(calcCosThetaStar(t1, t2));
+	if (cosThetaStar == -99) {
+	  MSG_DEBUG("real ttbar going faster than light! This should not happen. Vetoing event.");
+	  vetoEvent;
+	}
         const double pout = abs(calcPout(t1, t2));
         const double dPhi = deltaPhi(t1, t2);
 
@@ -251,9 +250,17 @@ namespace Rivet {
         LorentzTransform centreOfMassTrans;
         ttbar.setX(0);
         ttbar.setY(0);
+        if (ttbar.betaVec().mod2() > 1){
+          return -99;
+        }
         centreOfMassTrans.setBetaVec( -ttbar.boostVector() );
         FourMomentum t1_star = centreOfMassTrans.transform(t1);
-        double cosThetaStar = t1_star.pz()/t1_star.p3().mod();
+        double cosThetaStar;
+        if (t1_star.p3().mod2() >= 0){
+          cosThetaStar = t1_star.pz()/t1_star.p3().mod();
+        } else {
+          return -99;
+        }
         return cosThetaStar;
       }
 
@@ -267,6 +274,10 @@ namespace Rivet {
         return pout;
       }
 
+
+    protected:
+
+      size_t _mode;
 
     private:
 
@@ -288,8 +299,10 @@ namespace Rivet {
           _h[name] = bookHisto1D(index, 1, 1 );
           _h[name + "_norm"] = bookHisto1D(index + 13, 1, 1 );
         }
-        _h[name + "_parton"] = bookHisto1D(index + 82, 1, 1 );
-        _h[name + "_parton_norm"] = bookHisto1D(index + 97, 1, 1 );
+        if (_mode != 0) {
+          _h[name + "_parton"] = bookHisto1D(index + 82, 1, 1 );
+          _h[name + "_parton_norm"] = bookHisto1D(index + 97, 1, 1 );
+        }
       }
 
   };

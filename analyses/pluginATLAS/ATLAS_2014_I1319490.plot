@@ -1,10 +1,19 @@
 # BEGIN PLOT /ATLAS_2014_I1319490/d..
-Title=$W \rightarrow e \nu$ (MC) vs $W \rightarrow \ell \nu$ (data), dressed level
 XTwosidedTicks=1
 YTwosidedTicks=1
 LeftMargin=1.5
 LegendYPos=0.3
 LegendXPos=0.1
+# END PLOT
+
+# BEGIN PLOT /ATLAS_2014_I1319490/d..-x01-y01
+Title=$W \rightarrow \ell \nu$, dressed level
+# END PLOT
+# BEGIN PLOT /ATLAS_2014_I1319490/d..-x01-y02
+Title=$W \rightarrow e \nu$, dressed level
+# END PLOT
+# BEGIN PLOT /ATLAS_2014_I1319490/d..-x01-y03
+Title=$W \rightarrow \mu \nu$, dressed level
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2014_I1319490/d0[1-4]

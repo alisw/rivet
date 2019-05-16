@@ -4,9 +4,9 @@
 #include "Rivet/Math/MathHeader.hh"
 #include "Rivet/Math/MatrixN.hh"
 
-#include "gsl/gsl_vector.h"
-#include "gsl/gsl_matrix.h"
-#include "gsl/gsl_eigen.h"
+// #include "gsl/gsl_vector.h"
+// #include "gsl/gsl_matrix.h"
+// #include "gsl/gsl_eigen.h"
 
 namespace Rivet {
 
@@ -82,50 +82,50 @@ struct EigenPairCmp :
 };
 
 
-/// Diagonalize an NxN matrix, returning a collection of pairs of
-/// eigenvalues and eigenvectors, ordered decreasing in eigenvalue.
-template <size_t N>
-EigenSystem<N> diagonalize(const Matrix<N>& m) {
-  EigenSystem<N> esys;
+// /// Diagonalize an NxN matrix, returning a collection of pairs of
+// /// eigenvalues and eigenvectors, ordered decreasing in eigenvalue.
+// template <size_t N>
+// EigenSystem<N> diagonalize(const Matrix<N>& m) {
+//   EigenSystem<N> esys;
 
-  // Make a GSL matrix.
-  gsl_matrix* A = gsl_matrix_alloc(N, N);
-  for (size_t i = 0; i < N; ++i) {
-    for (size_t j = 0; j < N; ++j) {
-      gsl_matrix_set(A, i, j, m.get(i, j));
-    }
-  }
+//   // Make a GSL matrix.
+//   gsl_matrix* A = gsl_matrix_alloc(N, N);
+//   for (size_t i = 0; i < N; ++i) {
+//     for (size_t j = 0; j < N; ++j) {
+//       gsl_matrix_set(A, i, j, m.get(i, j));
+//     }
+//   }
 
-  // Use GSL diagonalization.
-  gsl_matrix* vecs = gsl_matrix_alloc(N, N);
-  gsl_vector* vals = gsl_vector_alloc(N);
-  gsl_eigen_symmv_workspace* workspace = gsl_eigen_symmv_alloc(N);
-  gsl_eigen_symmv(A, vals, vecs, workspace);
-  gsl_eigen_symmv_sort(vals, vecs, GSL_EIGEN_SORT_VAL_DESC);
+//   // Use GSL diagonalization.
+//   gsl_matrix* vecs = gsl_matrix_alloc(N, N);
+//   gsl_vector* vals = gsl_vector_alloc(N);
+//   gsl_eigen_symmv_workspace* workspace = gsl_eigen_symmv_alloc(N);
+//   gsl_eigen_symmv(A, vals, vecs, workspace);
+//   gsl_eigen_symmv_sort(vals, vecs, GSL_EIGEN_SORT_VAL_DESC);
 
-  // Build the vector of "eigen-pairs".
-  typename EigenSystem<N>::EigenPairs eigensolns;
-  for (size_t i = 0; i < N; ++i) {
-    typename EigenSystem<N>::EigenPair ep;
-    ep.first = gsl_vector_get(vals, i);
-    Vector<N> ev;
-    for (size_t j = 0; j < N; ++j) {
-      ev.set(j, gsl_matrix_get(vecs, j, i));
-    }
-    ep.second = ev;
-    eigensolns.push_back(ep);
-  }
+//   // Build the vector of "eigen-pairs".
+//   typename EigenSystem<N>::EigenPairs eigensolns;
+//   for (size_t i = 0; i < N; ++i) {
+//     typename EigenSystem<N>::EigenPair ep;
+//     ep.first = gsl_vector_get(vals, i);
+//     Vector<N> ev;
+//     for (size_t j = 0; j < N; ++j) {
+//       ev.set(j, gsl_matrix_get(vecs, j, i));
+//     }
+//     ep.second = ev;
+//     eigensolns.push_back(ep);
+//   }
 
-  // Free GSL memory.
-  gsl_eigen_symmv_free(workspace);
-  gsl_matrix_free(A);
-  gsl_matrix_free(vecs);
-  gsl_vector_free(vals);
+//   // Free GSL memory.
+//   gsl_eigen_symmv_free(workspace);
+//   gsl_matrix_free(A);
+//   gsl_matrix_free(vecs);
+//   gsl_vector_free(vals);
 
-  // Populate the returned object.
-  esys._eigenPairs = eigensolns;
-  return esys;
-}
+//   // Populate the returned object.
+//   esys._eigenPairs = eigensolns;
+//   return esys;
+// }
 
 
 template <size_t N>

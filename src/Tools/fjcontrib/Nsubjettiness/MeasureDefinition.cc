@@ -551,13 +551,13 @@ std::vector<fastjet::PseudoJet> DefaultMeasure::get_one_pass_axes(int n_jets,
    }
 
    // this is used to debug the minimization routine to make sure that it works.
-   bool do_debug = false;
+   /*bool do_debug = false;
    if (do_debug) {
       // get this information to make sure that minimization is working properly
       double seed_tau = result(inputJets, seedAxes);
       double outputTau = result(inputJets, outputAxes);
       assert(outputTau <= seed_tau);
-   }
+   }*/
 
    return outputAxes;
 }

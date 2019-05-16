@@ -77,22 +77,16 @@ namespace Rivet {
 	_h["pT_0jet"] = bookHisto1D( 8, 1, 1);
       }
 	
-      if (_mode == 0 || _mode == 2 || _mode == 4){
+      // always book e and mu in charged lepton modes; there are sometimes 4 leptons.
+      if (_mode != 1){
 	// electron
 	_h["eeg"]       = bookHisto1D( 1, 1, 1);
 	_h["eegg"]      = bookHisto1D( 3, 1, 1);
-      }
-
-
-      // muon
-      if (_mode == 0 || _mode == 3 || _mode == 4){
+	// muon
 	_h["mmg"]       = bookHisto1D( 1, 1, 2);
 	_h["mmgg"]      = bookHisto1D( 3, 1, 2);
-      }
 
-      // combined
-      if (_mode != 1){
-
+	// combined
 	_h["llgg"] = bookHisto1D( 3, 1, 3);
 	_h["llg"]  = bookHisto1D( 1, 1, 3);
 	_h["pT"]       = bookHisto1D( 5, 1, 1);

@@ -856,7 +856,7 @@ LegendYPos=0.8
 # END PLOT
 
 # BEGIN PLOT /ALEPH_2004_S5765862/d113-x01-y01
-Title=Jet mass difference ($E_\mathrm{CMS}=1722$ GeV)
+Title=Jet mass difference ($E_\mathrm{CMS}=172$ GeV)
 XLabel=$M_D$
 YLabel=$1/\sigma \; \mathrm{d}\sigma/\mathrm{d}M_D$
 LegendXPos=0.65

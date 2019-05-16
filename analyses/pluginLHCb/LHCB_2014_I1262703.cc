@@ -50,6 +50,8 @@ namespace Rivet {
       const Cut jetSelector = Cuts::eta >= 2.0 && Cuts::eta <= 4.5 && Cuts::pT > 10*GeV;
       const Jets jets = apply<FastJets>(e, "Jets").jetsByPt(jetSelector);
 
+      if (jets.empty()) vetoEvent;
+
       // Clean the jets against the lepton candidates with a deltaR cut of 0.4
       const Jets cleanedJets = filter_discard(jets, [&](const Jet& j) { return any(leptons, deltaRLess(j, 0.4)); });
       // vector<const Jet*> cleanedJets;

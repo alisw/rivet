@@ -74,7 +74,7 @@ namespace Rivet {
       if (jets24.size() < 3) vetoEvent;
 
       // HT cut
-      vector<double> jetpts24; transform(jets24, jetpts24, pT);
+      vector<double> jetpts24; transform(jets24, jetpts24, Kin::pT);
       const double ht = sum(jetpts24, 0.0);
       if (ht < 300*GeV) vetoEvent;
 

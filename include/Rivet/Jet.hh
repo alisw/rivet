@@ -245,6 +245,10 @@ namespace Rivet {
     /// Effective jet 4-vector (just for caching)
     mutable FourMomentum _momentum;
 
+    // /// Provide but hide the equality operators, to avoid implicit comparison via fastjet::PseudoJet
+    // bool operator == (const Jet&) const;
+    // bool operator != (const Jet&) const;
+
   };
 
 

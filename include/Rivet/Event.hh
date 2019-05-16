@@ -114,20 +114,25 @@ namespace Rivet {
     template <typename PROJ>
     const PROJ& applyProjection(PROJ& p) const {
       Log& log = Log::getLog("Rivet.Event");
-      log << Log::TRACE << "Applying projection " << &p << " (" << p.name() << ") -> comparing to projections " << _projections << endl;
-      // First search for this projection *or an equivalent* in the already-executed list
-      const Projection* cpp(&p);
-      std::set<const Projection*>::const_iterator old = _projections.find(cpp);
-      if (old != _projections.end()) {
-        log << Log::TRACE << "Equivalent projection found -> returning already-run projection " << *old << endl;
-        const Projection& pRef = **old;
-        return pcast<PROJ>(pRef);
+      static bool docaching = getEnvParam("RIVET_CACHE_PROJECTIONS", true);
+      if (docaching) {
+        log << Log::TRACE << "Applying projection " << &p << " (" << p.name() << ") -> comparing to projections " << _projections << endl;
+        // First search for this projection *or an equivalent* in the already-executed list
+        const Projection* cpp(&p);
+        std::set<const Projection*>::const_iterator old = _projections.find(cpp);
+        if (old != _projections.end()) {
+          log << Log::TRACE << "Equivalent projection found -> returning already-run projection " << *old << endl;
+          const Projection& pRef = **old;
+          return pcast<PROJ>(pRef);
+        }
+        log << Log::TRACE << "No equivalent projection in the already-run list -> projecting now" << endl;
+      } else {
+        log << Log::TRACE << "Applying projection " << &p << " (" << p.name() << ") WITHOUT projection caching & comparison" << endl;
       }
       // If this one hasn't been run yet on this event, run it and add to the list
-      log << Log::TRACE << "No equivalent projection in the already-run list -> projecting now" << endl;
-      Projection* pp = const_cast<Projection*>(cpp);
+      Projection* pp = const_cast<Projection*>(&p);
       pp->project(*this);
-      _projections.insert(pp);
+      if (docaching) _projections.insert(pp);
       return p;
     }
 

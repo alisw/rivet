@@ -1,10 +1,13 @@
 BEGIN YODA_SCATTER2D_V2 /REF/ATLAS_2012_I1188891/d01-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.126491, up: 0.126491}}, 1: {error: {dn: -0.117047, up: 0.117047}}, 2: {error: {dn: -0.111803, up: 0.111803}}, 3: {error: {dn: -0.104403, up: 0.104403}}, 4: {error: {dn: -0.0860233, up: 0.0860233}}, 5: {error: {dn: -0.1, up: 0.1}}}
+
 IsRef: 1
 Path: /REF/ATLAS_2012_I1188891/d01-x01-y01
-Title: ~
+Title: doi:10.17182/hepdata.68119.v1/t1
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 5.000000e+01	1.000000e+01	1.000000e+01	6.500000e-01	1.264910e-01	1.264910e-01
 7.000000e+01	1.000000e+01	1.000000e+01	6.300000e-01	1.170470e-01	1.170470e-01
 1.000000e+02	2.000000e+01	2.000000e+01	5.800000e-01	1.118030e-01	1.118030e-01
@@ -12,14 +15,16 @@ Type: Scatter2D
 2.050000e+02	4.500000e+01	4.500000e+01	5.800000e-01	8.602330e-02	8.602330e-02
 3.750000e+02	1.250000e+02	1.250000e+02	3.900000e-01	1.000000e-01	1.000000e-01
 END YODA_SCATTER2D_V2
-
 BEGIN YODA_SCATTER2D_V2 /REF/ATLAS_2012_I1188891/d02-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.234307, up: 0.234307}}, 1: {error: {dn: -0.222036, up: 0.222036}}, 2: {error: {dn: -0.206155, up: 0.206155}}, 3: {error: {dn: -0.237697, up: 0.237697}}, 4: {error: {dn: -0.294109, up: 0.294109}}, 5: {error: {dn: -0.432666, up: 0.432666}}}
+
 IsRef: 1
 Path: /REF/ATLAS_2012_I1188891/d02-x01-y01
-Title: ~
+Title: doi:10.17182/hepdata.68119.v1/t2
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 5.000000e+01	1.000000e+01	1.000000e+01	4.900000e-01	2.343070e-01	2.343070e-01
 7.000000e+01	1.000000e+01	1.000000e+01	3.100000e-01	2.220360e-01	2.220360e-01
 1.000000e+02	2.000000e+01	2.000000e+01	5.300000e-01	2.061550e-01	2.061550e-01
@@ -27,14 +32,16 @@ Type: Scatter2D
 2.050000e+02	4.500000e+01	4.500000e+01	2.800000e-01	2.941090e-01	2.941090e-01
 3.750000e+02	1.250000e+02	1.250000e+02	9.300000e-01	4.326660e-01	4.326660e-01
 END YODA_SCATTER2D_V2
-
 BEGIN YODA_SCATTER2D_V2 /REF/ATLAS_2012_I1188891/d03-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.431393, up: 0.431393}}, 1: {error: {dn: -0.439318, up: 0.439318}}, 2: {error: {dn: -0.300832, up: 0.300832}}, 3: {error: {dn: -0.272947, up: 0.272947}}, 4: {error: {dn: -0.532541, up: 0.532541}}, 5: {error: {dn: -0.686222, up: 0.686222}}}
+
 IsRef: 1
 Path: /REF/ATLAS_2012_I1188891/d03-x01-y01
-Title: ~
+Title: doi:10.17182/hepdata.68119.v1/t3
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 5.000000e+01	1.000000e+01	1.000000e+01	1.080000e+00	4.313930e-01	4.313930e-01
 7.000000e+01	1.000000e+01	1.000000e+01	1.510000e+00	4.393180e-01	4.393180e-01
 1.000000e+02	2.000000e+01	2.000000e+01	1.030000e+00	3.008320e-01	3.008320e-01
@@ -42,14 +49,16 @@ Type: Scatter2D
 2.050000e+02	4.500000e+01	4.500000e+01	1.680000e+00	5.325410e-01	5.325410e-01
 3.750000e+02	1.250000e+02	1.250000e+02	7.000000e-01	6.862220e-01	6.862220e-01
 END YODA_SCATTER2D_V2
-
 BEGIN YODA_SCATTER2D_V2 /REF/ATLAS_2012_I1188891/d04-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.471275, up: 0.471275}}, 1: {error: {dn: -0.480833, up: 0.480833}}, 2: {error: {dn: -0.545894, up: 0.545894}}, 3: {error: {dn: -0.527731, up: 0.527731}}, 4: {error: {dn: -0.4531, up: 0.4531}}, 5: {error: {dn: -0.595399, up: 0.595399}}}
+
 IsRef: 1
 Path: /REF/ATLAS_2012_I1188891/d04-x01-y01
-Title: ~
+Title: doi:10.17182/hepdata.68119.v1/t4
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 5.000000e+01	1.000000e+01	1.000000e+01	4.070000e+00	4.712750e-01	4.712750e-01
 7.000000e+01	1.000000e+01	1.000000e+01	4.780000e+00	4.808330e-01	4.808330e-01
 1.000000e+02	2.000000e+01	2.000000e+01	5.430000e+00	5.458940e-01	5.458940e-01
@@ -57,14 +66,16 @@ Type: Scatter2D
 2.050000e+02	4.500000e+01	4.500000e+01	6.550000e+00	4.531000e-01	4.531000e-01
 3.750000e+02	1.250000e+02	1.250000e+02	6.690000e+00	5.953990e-01	5.953990e-01
 END YODA_SCATTER2D_V2
-
 BEGIN YODA_SCATTER2D_V2 /REF/ATLAS_2012_I1188891/d05-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -1.772, up: 1.772}}, 1: {error: {dn: -1.39284, up: 1.39284}}, 2: {error: {dn: -1.52069, up: 1.52069}}, 3: {error: {dn: -1.81593, up: 1.81593}}, 4: {error: {dn: -2.06155, up: 2.06155}}, 5: {error: {dn: -2.91204, up: 2.91204}}}
+
 IsRef: 1
 Path: /REF/ATLAS_2012_I1188891/d05-x01-y01
-Title: ~
+Title: doi:10.17182/hepdata.68119.v1/t5
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 5.000000e+01	1.000000e+01	1.000000e+01	1.060000e+01	1.772000e+00	1.772000e+00
 7.000000e+01	1.000000e+01	1.000000e+01	1.030000e+01	1.392840e+00	1.392840e+00
 1.000000e+02	2.000000e+01	2.000000e+01	1.130000e+01	1.520690e+00	1.520690e+00
@@ -72,14 +83,16 @@ Type: Scatter2D
 2.050000e+02	4.500000e+01	4.500000e+01	1.100000e+01	2.061550e+00	2.061550e+00
 3.750000e+02	1.250000e+02	1.250000e+02	1.240000e+01	2.912040e+00	2.912040e+00
 END YODA_SCATTER2D_V2
-
 BEGIN YODA_SCATTER2D_V2 /REF/ATLAS_2012_I1188891/d06-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -2.08806, up: 2.08806}}, 1: {error: {dn: -1.772, up: 1.772}}, 2: {error: {dn: -1.82483, up: 1.82483}}, 3: {error: {dn: -2.02237, up: 2.02237}}, 4: {error: {dn: -2.47386, up: 2.47386}}, 5: {error: {dn: -3.7108, up: 3.7108}}}
+
 IsRef: 1
 Path: /REF/ATLAS_2012_I1188891/d06-x01-y01
-Title: ~
+Title: doi:10.17182/hepdata.68119.v1/t6
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 5.000000e+01	1.000000e+01	1.000000e+01	8.310000e+01	2.088060e+00	2.088060e+00
 7.000000e+01	1.000000e+01	1.000000e+01	8.240000e+01	1.772000e+00	1.772000e+00
 1.000000e+02	2.000000e+01	2.000000e+01	8.120000e+01	1.824830e+00	1.824830e+00

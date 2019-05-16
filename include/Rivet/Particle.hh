@@ -28,12 +28,17 @@ namespace Rivet {
         _original(nullptr), _id(PID::ANY), _isDirect{false,false}
     {   }
 
-    /// Constructor without GenParticle.
-    Particle(PdgId pid, const FourMomentum& mom, const FourVector& pos=FourVector())
+    /// Constructor from PID and momentum.
+    Particle(PdgId pid, const FourMomentum& mom, const FourVector& pos=FourVector(), const GenParticle* gp=nullptr)
       : ParticleBase(),
-        _original(nullptr), _id(pid),
+        _original(gp), _id(pid),
         _momentum(mom), _origin(pos),
         _isDirect{false,false}
+    {   }
+
+    /// Constructor from PID, momentum, and a GenParticle for relational links.
+    Particle(PdgId pid, const FourMomentum& mom, const GenParticle* gp, const FourVector& pos=FourVector())
+      : Particle(pid, mom, pos, gp)
     {   }
 
     /// Constructor from a HepMC GenParticle pointer.
@@ -116,14 +121,20 @@ namespace Rivet {
     operator PseudoJet () const { return pseudojet(); }
 
 
+    /// Set a const pointer to the original GenParticle
+    Particle& setGenParticle(const GenParticle* gp) {
+      _original = gp;
+      return *this;
+    }
+
     /// Get a const pointer to the original GenParticle
     const GenParticle* genParticle() const {
       return _original;
     }
 
     /// Cast operator for conversion to GenParticle*
-    /// @todo This one's a bad idea since it enables accidental Particle comparisons
-    operator const GenParticle* () const { return genParticle(); }
+    /// @note Not implicit since that would enable accidental Particle::operator== comparisons
+    explicit operator const GenParticle* () const { return genParticle(); }
 
     //@}
 
@@ -669,9 +680,26 @@ namespace Rivet {
     //@}
 
 
+    /// @name Comparison
+    //@{
+
+    /// Compare particles, based on "external" characteristics, with a little angular tolerance
+    ///
+    /// @note Not a deep comparison: GenParticle ptr and constituents are not used in the comparison
+    bool isSame(const Particle& other) const {
+      if (pid() != other.pid()) return false;
+      if (!isZero((mom() - other.mom()).mod())) return false;
+      if (!isZero((origin() - other.origin()).mod())) return false;
+      return true;
+    }
+
+    //@}
+
+
   protected:
 
     /// A pointer to the original GenParticle from which this Particle is projected (may be null)
+    /// @todo Make into shared ptr / combine with HepMC3 migration
     const GenParticle* _original;
 
     /// Constituent particles if this is a composite (may be empty)
@@ -703,7 +731,6 @@ namespace Rivet {
   std::ostream& operator << (std::ostream& os, const ParticlePair& pp);
 
   //@}
-
 
 }
 

@@ -3,7 +3,6 @@ ErrorBars: 1
 IsRef: 1
 LineColor: black
 Path: /REF/CMS_2014_I1298810/d01-x01-y01
-PolyMarker: !<!> "*"
 Title: ~
 Type: Scatter2D
 ---
@@ -48,7 +47,6 @@ ErrorBars: 1
 IsRef: 1
 LineColor: black
 Path: /REF/CMS_2014_I1298810/d02-x01-y01
-PolyMarker: !<!> "*"
 Title: ~
 Type: Scatter2D
 ---
@@ -93,7 +91,6 @@ ErrorBars: 1
 IsRef: 1
 LineColor: black
 Path: /REF/CMS_2014_I1298810/d03-x01-y01
-PolyMarker: !<!> "*"
 Title: ~
 Type: Scatter2D
 ---
@@ -135,7 +132,6 @@ ErrorBars: 1
 IsRef: 1
 LineColor: black
 Path: /REF/CMS_2014_I1298810/d04-x01-y01
-PolyMarker: !<!> "*"
 Title: ~
 Type: Scatter2D
 ---
@@ -173,7 +169,6 @@ ErrorBars: 1
 IsRef: 1
 LineColor: black
 Path: /REF/CMS_2014_I1298810/d05-x01-y01
-PolyMarker: !<!> "*"
 Title: ~
 Type: Scatter2D
 ---
@@ -206,7 +201,6 @@ ErrorBars: 1
 IsRef: 1
 LineColor: black
 Path: /REF/CMS_2014_I1298810/d06-x01-y01
-PolyMarker: !<!> "*"
 Title: ~
 Type: Scatter2D
 ---
@@ -233,7 +227,6 @@ ErrorBars: 1
 IsRef: 1
 LineColor: black
 Path: /REF/CMS_2014_I1298810/d07-x01-y01
-PolyMarker: !<!> "*"
 Title: ~
 Type: Scatter2D
 ---
@@ -278,7 +271,6 @@ ErrorBars: 1
 IsRef: 1
 LineColor: black
 Path: /REF/CMS_2014_I1298810/d08-x01-y01
-PolyMarker: !<!> "*"
 Title: ~
 Type: Scatter2D
 ---
@@ -323,7 +315,6 @@ ErrorBars: 1
 IsRef: 1
 LineColor: black
 Path: /REF/CMS_2014_I1298810/d09-x01-y01
-PolyMarker: !<!> "*"
 Title: ~
 Type: Scatter2D
 ---
@@ -365,7 +356,6 @@ ErrorBars: 1
 IsRef: 1
 LineColor: black
 Path: /REF/CMS_2014_I1298810/d10-x01-y01
-PolyMarker: !<!> "*"
 Title: ~
 Type: Scatter2D
 ---
@@ -403,7 +393,6 @@ ErrorBars: 1
 IsRef: 1
 LineColor: black
 Path: /REF/CMS_2014_I1298810/d11-x01-y01
-PolyMarker: !<!> "*"
 Title: ~
 Type: Scatter2D
 ---
@@ -436,7 +425,6 @@ ErrorBars: 1
 IsRef: 1
 LineColor: black
 Path: /REF/CMS_2014_I1298810/d12-x01-y01
-PolyMarker: !<!> "*"
 Title: ~
 Type: Scatter2D
 ---
@@ -463,7 +451,6 @@ ErrorBars: 1
 IsRef: 1
 LineColor: black
 Path: /REF/CMS_2014_I1298810/d13-x01-y01
-PolyMarker: !<!> "*"
 Title: ~
 Type: Scatter2D
 ---
@@ -508,7 +495,6 @@ ErrorBars: 1
 IsRef: 1
 LineColor: black
 Path: /REF/CMS_2014_I1298810/d14-x01-y01
-PolyMarker: !<!> "*"
 Title: ~
 Type: Scatter2D
 ---
@@ -553,7 +539,6 @@ ErrorBars: 1
 IsRef: 1
 LineColor: black
 Path: /REF/CMS_2014_I1298810/d15-x01-y01
-PolyMarker: !<!> "*"
 Title: ~
 Type: Scatter2D
 ---
@@ -595,7 +580,6 @@ ErrorBars: 1
 IsRef: 1
 LineColor: black
 Path: /REF/CMS_2014_I1298810/d16-x01-y01
-PolyMarker: !<!> "*"
 Title: ~
 Type: Scatter2D
 ---
@@ -633,7 +617,6 @@ ErrorBars: 1
 IsRef: 1
 LineColor: black
 Path: /REF/CMS_2014_I1298810/d17-x01-y01
-PolyMarker: !<!> "*"
 Title: ~
 Type: Scatter2D
 ---
@@ -666,7 +649,6 @@ ErrorBars: 1
 IsRef: 1
 LineColor: black
 Path: /REF/CMS_2014_I1298810/d18-x01-y01
-PolyMarker: !<!> "*"
 Title: ~
 Type: Scatter2D
 ---

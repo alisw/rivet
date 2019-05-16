@@ -31,10 +31,10 @@ namespace Rivet {
       _h_pTsum_tmax   = bookProfile1D( 71, 1, 1);
       _h_pTsum_tdif   = bookProfile1D(125, 1, 1);
 
-      _h_Nchg_tow     = bookProfile1D( 70, 1, 1);
-      _h_Nchg_trv     = bookProfile1D( 71, 1, 1);
-      _h_Nchg_away    = bookProfile1D( 72, 1, 1);
-      _h_Nchg_tmin    = bookProfile1D( 73, 1, 1);
+      _h_Nchg_tow     = bookProfile1D( 72, 1, 1);
+      _h_Nchg_trv     = bookProfile1D( 73, 1, 1);
+      _h_Nchg_away    = bookProfile1D( 74, 1, 1);
+      _h_Nchg_tmin    = bookProfile1D( 75, 1, 1);
       _h_Nchg_tmax    = bookProfile1D( 82, 1, 1);
       _h_Nchg_tdif    = bookProfile1D(126, 1, 1);
 
@@ -70,7 +70,7 @@ namespace Rivet {
       if (zfinder.bosons().size() != 1) vetoEvent;
 
       double  Zpt   = zfinder.bosons()[0].momentum().pT()/GeV;
-      double  Zphi  = zfinder.bosons()[0].momentum().phi();
+      double  Zphi  = zfinder.bosons()[0].momentum().phi(MINUSPI_PLUSPI);
       double  Zmass = zfinder.bosons()[0].momentum().mass()/GeV;
       if(Zmass < 66. || Zmass > 116.) vetoEvent;
 
@@ -85,7 +85,7 @@ namespace Rivet {
 
       // Loop over charged particles with pT>500 MeV and |eta|<2.5
       foreach(const Particle& p, particles) {
-        double dphi = p.momentum().phi() - Zphi,
+        double dphi = p.momentum().phi(MINUSPI_PLUSPI) - Zphi,
                pT   = p.momentum().pT();
 
         // Get multiples of 2pi right
@@ -124,10 +124,10 @@ namespace Rivet {
         nTrmin     = nRight;
       }
       else {
-	ptSumTrmax = ptSumRight;
-	ptSumTrmin = ptSumLeft;
-	nTrmax     = nRight;
-	nTrmin     = nLeft;
+        ptSumTrmax = ptSumRight;
+        ptSumTrmin = ptSumLeft;
+        nTrmax     = nRight;
+        nTrmin     = nLeft;
       }
 
       // min max regions have difference are than all other regions

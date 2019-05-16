@@ -1,33 +1,42 @@
 BEGIN YODA_SCATTER2D_V2 /REF/ATLAS_2015_I1376945/d01-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.0128, up: 0.0128}, sys: {dn: -0.0341, up: 0.0341}}, 1: {stat: {dn: -0.0062, up: 0.0062}, sys: {dn: -0.022, up: 0.022}}, 2: {stat: {dn: -0.0101, up: 0.0101}, sys: {dn: -0.0169, up: 0.0169}}}
+
 IsRef: 1
 Path: /REF/ATLAS_2015_I1376945/d01-x01-y01
 Title: doi:10.17182/hepdata.71235.v1/t1
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 1.375000e-01	1.375000e-01	1.375000e-01	1.144300e+00	3.642321e-02	3.642321e-02
 4.562500e-01	1.812500e-01	1.812500e-01	9.862000e-01	2.285695e-02	2.285695e-02
 8.187500e-01	1.812500e-01	1.812500e-01	9.043000e-01	1.968807e-02	1.968807e-02
 END YODA_SCATTER2D_V2
 BEGIN YODA_SCATTER2D_V2 /REF/ATLAS_2015_I1376945/d02-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.0076, up: 0.0076}, sys: {dn: -0.0205, up: 0.0205}}, 1: {stat: {dn: -0.0052, up: 0.0052}, sys: {dn: -0.0084, up: 0.0084}}, 2: {stat: {dn: -0.0051, up: 0.0051}, sys: {dn: -0.0092, up: 0.0092}}, 3: {stat: {dn: -0.0072, up: 0.0072}, sys: {dn: -0.0208, up: 0.0208}}}
+
 IsRef: 1
 Path: /REF/ATLAS_2015_I1376945/d02-x01-y01
 Title: doi:10.17182/hepdata.71235.v1/t2
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 1.000000e-01	1.000000e-01	1.000000e-01	1.124900e+00	2.186344e-02	2.186344e-02
 3.500000e-01	1.500000e-01	1.500000e-01	1.017200e+00	9.879271e-03	9.879271e-03
 6.500000e-01	1.500000e-01	1.500000e-01	9.401000e-01	1.051903e-02	1.051903e-02
 9.000000e-01	1.000000e-01	1.000000e-01	9.392000e-01	2.201091e-02	2.201091e-02
 END YODA_SCATTER2D_V2
 BEGIN YODA_SCATTER3D_V2 /REF/ATLAS_2015_I1376945/d03-x01-y01
+Variations: [""]
+ErrorBreakdown: {}
+
 IsRef: 1
 Path: /REF/ATLAS_2015_I1376945/d03-x01-y01
 Title: doi:10.17182/hepdata.71235.v1/t3
 Type: Scatter3D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	 zval	 zerr-	 zerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	 zval	  zerr-	 zerr+	
 1.000000e+00	5.000000e-01	5.000000e-01	1.000000e+00	5.000000e-01	5.000000e-01	1.000000e+00	0.000000e+00	0.000000e+00
 2.000000e+00	5.000000e-01	5.000000e-01	2.000000e+00	5.000000e-01	5.000000e-01	-2.517683e-01	0.000000e+00	0.000000e+00
 3.000000e+00	5.000000e-01	5.000000e-01	3.000000e+00	5.000000e-01	5.000000e-01	-8.057602e-01	0.000000e+00	0.000000e+00
@@ -58,35 +67,44 @@ Type: Scatter3D
 4.900000e+01	5.000000e-01	5.000000e-01	4.900000e+01	5.000000e-01	5.000000e-01	1.000000e+00	0.000000e+00	0.000000e+00
 END YODA_SCATTER3D_V2
 BEGIN YODA_SCATTER2D_V2 /REF/ATLAS_2015_I1376945/d04-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.0128, up: 0.0128}, sys: {dn: -0.0309, up: 0.0309}}, 1: {stat: {dn: -0.0062, up: 0.0062}, sys: {dn: -0.0144, up: 0.0144}}, 2: {stat: {dn: -0.0101, up: 0.0101}, sys: {dn: -0.016, up: 0.016}}}
+
 IsRef: 1
 Path: /REF/ATLAS_2015_I1376945/d04-x01-y01
 Title: doi:10.17182/hepdata.71235.v1/t4
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 1.375000e-01	1.375000e-01	1.375000e-01	1.144300e+00	3.344623e-02	3.344623e-02
 4.562500e-01	1.812500e-01	1.812500e-01	9.862000e-01	1.567801e-02	1.567801e-02
 8.187500e-01	1.812500e-01	1.812500e-01	9.043000e-01	1.892115e-02	1.892115e-02
 END YODA_SCATTER2D_V2
 BEGIN YODA_SCATTER2D_V2 /REF/ATLAS_2015_I1376945/d05-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.0076, up: 0.0076}, sys: {dn: -0.0168, up: 0.0168}}, 1: {stat: {dn: -0.0052, up: 0.0052}, sys: {dn: -0.0083, up: 0.0083}}, 2: {stat: {dn: -0.0051, up: 0.0051}, sys: {dn: -0.008, up: 0.008}}, 3: {stat: {dn: -0.0072, up: 0.0072}, sys: {dn: -0.0207, up: 0.0207}}}
+
 IsRef: 1
 Path: /REF/ATLAS_2015_I1376945/d05-x01-y01
 Title: doi:10.17182/hepdata.71235.v1/t5
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 1.000000e-01	1.000000e-01	1.000000e-01	1.124900e+00	1.843909e-02	1.843909e-02
 3.500000e-01	1.500000e-01	1.500000e-01	1.017200e+00	9.794386e-03	9.794386e-03
 6.500000e-01	1.500000e-01	1.500000e-01	9.401000e-01	9.487360e-03	9.487360e-03
 9.000000e-01	1.000000e-01	1.000000e-01	9.392000e-01	2.191643e-02	2.191643e-02
 END YODA_SCATTER2D_V2
 BEGIN YODA_SCATTER3D_V2 /REF/ATLAS_2015_I1376945/d06-x01-y01
+Variations: [""]
+ErrorBreakdown: {}
+
 IsRef: 1
 Path: /REF/ATLAS_2015_I1376945/d06-x01-y01
 Title: doi:10.17182/hepdata.71235.v1/t6
 Type: Scatter3D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	 zval	 zerr-	 zerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	 zval	  zerr-	 zerr+	
 1.000000e+00	5.000000e-01	5.000000e-01	1.000000e+00	5.000000e-01	5.000000e-01	1.000000e+00	0.000000e+00	0.000000e+00
 2.000000e+00	5.000000e-01	5.000000e-01	2.000000e+00	5.000000e-01	5.000000e-01	-7.361593e-01	0.000000e+00	0.000000e+00
 3.000000e+00	5.000000e-01	5.000000e-01	3.000000e+00	5.000000e-01	5.000000e-01	-6.118175e-01	0.000000e+00	0.000000e+00

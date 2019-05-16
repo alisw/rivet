@@ -574,15 +574,17 @@ namespace Rivet {
   /// Calculate the abs difference between two pseudorapidities
   ///
   /// @note Just a cosmetic name for analysis code clarity.
-  inline double deltaEta(double eta1, double eta2) {
-    return fabs(eta1 - eta2);
+  inline double deltaEta(double eta1, double eta2, bool sign=false) {
+    const double x = eta1 - eta2;
+    return sign ? x : fabs(x);
   }
 
   /// Calculate the abs difference between two rapidities
   ///
   /// @note Just a cosmetic name for analysis code clarity.
-  inline double deltaRap(double y1, double y2) {
-    return fabs(y1 - y2);
+  inline double deltaRap(double y1, double y2, bool sign=false) {
+    const double x = y1 - y2;
+    return sign? x : fabs(x);
   }
 
   /// Calculate the squared distance between two points in 2D rapidity-azimuthal

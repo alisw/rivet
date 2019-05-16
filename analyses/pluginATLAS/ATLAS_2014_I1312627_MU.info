@@ -19,9 +19,9 @@ Energies: [7000]
 PtCuts: [25,30]
 NeedCrossSection: True
 Description:
-  'Measurements of the ratio of the production cross sections for $W$ and $Z$ bosons in association with jets in proton–proton
+  'Measurements of the ratio of the production cross sections for $W$ and $Z$ bosons in association with jets in proton-proton
   collisions at $\sqrt{s} = 7$~TeV with the ATLAS experiment at the Large Hadron Collider. The measurement is based on the
-  entire 2011 dataset, corresponding to an integrated luminosity of 4.6fb−1. Inclusive and differential cross-section ratios
+  entire 2011 dataset, corresponding to an integrated luminosity of $4.6\text{fb}^{-1}$. Inclusive and differential cross-section ratios
   for massive vector bosons decaying to electrons and muons are measured in association with jets with transverse momentum
   $p_\text{T} > 30$~GeV and jet rapidity $|y| < 4.4$. The default routine will pick up the electron decay channel of the
   heavy bosons and compare it to the combined (muon and electron channel) data. Individual channels (for data) are available

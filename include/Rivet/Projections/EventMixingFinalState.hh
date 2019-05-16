@@ -64,7 +64,7 @@ namespace Rivet {
     }
     
     /// Perform the projection on the Event
-    void project(const Event& e){
+    virtual void project(const Event& e){
 	const Particles parts = applyProjection<ParticleFinder>(e, "FS").particles();
 
 	calculateMixingObs(parts);
@@ -83,11 +83,11 @@ namespace Rivet {
     }
 
     /// Compare with other projections
-    int compare(const Projection& p) const {
+    virtual int compare(const Projection& p) const {
 	return mkNamedPCmp(p,"FS");
     }
     
-  private:
+  protected:
     // The number of event to mix with
     size_t nMix;
     // The mixing observable of the current event

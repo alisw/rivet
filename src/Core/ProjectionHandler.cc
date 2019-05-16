@@ -38,8 +38,7 @@ namespace Rivet {
     if ( ph ) {
       const Projection & ret = _register(parent, ph, name);
       return ret;
-    }
-    else {
+    } else {
       unique_ptr<Projection> p = _clone(proj);
       const Projection & ret = _register(parent, move(p), name);
       // Return registered proj
@@ -113,7 +112,7 @@ namespace Rivet {
     getLog() << Log::TRACE << "Comparing " << &proj
              << " with " << _projs.size()
              << " registered projection" << (_projs.size() == 1 ? "" : "s") <<  endl;
-    foreach (const ProjHandle& ph, _projs) {
+    for (const ProjHandle& ph : _projs) {
       // Make sure the concrete types match, using RTTI.
       const std::type_info& regtype = typeid(*ph);
       getLog() << Log::TRACE << "  RTTI type comparison with " << ph << ": "
@@ -141,10 +140,10 @@ namespace Rivet {
   string ProjectionHandler::_getStatus() const {
     ostringstream msg;
     msg << "Current projection hierarchy:" << endl;
-    foreach (const NamedProjsMap::value_type& nps, _namedprojs) {
+    for (const NamedProjsMap::value_type& nps : _namedprojs) {
       //const string parentname = nps.first->name();
       msg << nps.first << endl; //"(" << parentname << ")" << endl;
-      foreach (const NamedProjs::value_type& np, nps.second) {
+      for (const NamedProjs::value_type& np : nps.second) {
         msg << "  " << np.second << " (" << np.second->name()
             << ", locally called '" << np.first << "')" << endl;
       }
@@ -204,14 +203,10 @@ namespace Rivet {
   }
 
 
-
-
-  set<const Projection*> ProjectionHandler::getChildProjections(const ProjectionApplier& parent,
-                                                                ProjDepth depth) const
-  {
+  set<const Projection*> ProjectionHandler::getChildProjections(const ProjectionApplier& parent, ProjDepth depth) const {
     set<const Projection*> toplevel;
     NamedProjs nps = _namedprojs.find(&parent)->second;
-    foreach (NamedProjs::value_type& np, nps) {
+    for (NamedProjs::value_type& np : nps) {
       toplevel.insert(np.second.get());
     }
     if (depth == SHALLOW) {
@@ -220,7 +215,7 @@ namespace Rivet {
     } else {
       // Return recursively built projection list
       set<const Projection*> alllevels = toplevel;
-      foreach (const Projection* p, toplevel) {
+      for (const Projection* p : toplevel) {
         set<const Projection*> allsublevels = getChildProjections(*p, DEEP);
         alllevels.insert(allsublevels.begin(), allsublevels.end());
       }
@@ -238,8 +233,7 @@ namespace Rivet {
   }
 
 
-  const Projection& ProjectionHandler::getProjection(const ProjectionApplier& parent,
-                                                     const string& name) const {
+  const Projection& ProjectionHandler::getProjection(const ProjectionApplier& parent, const string& name) const {
     MSG_TRACE("Searching for child projection '" << name << "' of " << &parent);
     NamedProjsMap::const_iterator nps = _namedprojs.find(&parent);
     if (nps == _namedprojs.end()) {

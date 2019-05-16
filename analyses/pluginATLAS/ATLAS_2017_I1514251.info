@@ -20,7 +20,7 @@ Beams: [p+, p+]
 Energies: [13000]
 PtCuts: [25, 25]
 Options:
- - LMODE=EL,MU
+ - LMODE=EL,MU,EMU
 Description:
   'Measurements of the production cross section of a $Z$ boson in association with jets in proton-proton collisions at i
   $\sqrt{s}=13$ TeV are presented, using data corresponding to an integrated luminosity of 3.16 fb${}^{-1}$ collected by

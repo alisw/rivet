@@ -24,6 +24,20 @@ Title=Top-quark transverse momentum spectrum
 Title=Top-quark rapidity distribution
 # END PLOT
 
+# BEGIN PLOT /MC_PARTONICTOPS/t_all_pT_dfirstlast$
+Title=First-to-last top-quark transverse momentum difference
+XLabel=$\Delta p_\perp = p_\perp^\mathrm{last} - p_\perp^\mathrm{first}$~[GeV]
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\Delta p_\perp$~[GeV$^{-1}$]
+# END PLOT
+
+# BEGIN PLOT /MC_PARTONICTOPS/t_all_pT_dfirstlast_prof
+Title=First-to-last top-quark $p_\perp$ difference vs $p_\perp^\mathrm{first}$
+XLabel=$p_\perp^\mathrm{first}$~[GeV]
+YLabel=$\langle \Delta p_\perp \rangle$~[GeV]
+LogY=0
+LegendYPos=0.2
+# END PLOT
+
 # BEGIN PLOT /MC_PARTONICTOPS/t_lep_n
 Title=Leptonic top-quark per-event multiplicity
 # END PLOT

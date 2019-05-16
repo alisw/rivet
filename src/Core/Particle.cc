@@ -55,9 +55,9 @@ namespace Rivet {
 
 
   bool Particle::isStable() const {
-    return genParticle() != NULL &&
+    return genParticle() != nullptr &&
       genParticle()->status() == 1 &&
-      genParticle()->end_vertex() == NULL;
+      genParticle()->end_vertex() == nullptr;
   }
 
 
@@ -66,11 +66,11 @@ namespace Rivet {
 
     // this case needed protecting against (at least for the latest Herwig... not sure why
     // it didn't show up earlier
-    if (genParticle() == NULL) return rtn;
+    if (genParticle() == nullptr) return rtn;
 
     /// @todo Remove this const mess crap when HepMC doesn't suck
     GenVertexPtr gv = const_cast<GenVertexPtr>( genParticle()->production_vertex() );
-    if (gv == NULL) return rtn;
+    if (gv == nullptr) return rtn;
     /// @todo Would like to do this, but the range objects are broken
     // foreach (const GenParticlePtr gp, gv->particles(HepMC::children))
     //   rtn += Particle(gp);
@@ -88,7 +88,7 @@ namespace Rivet {
     Particles rtn;
     /// @todo Remove this const mess crap when HepMC doesn't suck
     GenVertexPtr gv = const_cast<GenVertexPtr>( genParticle()->production_vertex() );
-    if (gv == NULL) return rtn;
+    if (gv == nullptr) return rtn;
     /// @todo Would like to do this, but the range objects are broken
     // foreach (const GenParticlePtr gp, gv->particles(HepMC::children))
     //   rtn += Particle(gp);
@@ -129,13 +129,13 @@ namespace Rivet {
     if (isStable()) return rtn;
     /// @todo Remove this const mess crap when HepMC doesn't suck
     GenVertexPtr gv = const_cast<GenVertexPtr>( genParticle()->end_vertex() );
-    if (gv == NULL) return rtn;
+    if (gv == nullptr) return rtn;
     /// @todo Would like to do this, but the range objects are broken
     // foreach (const GenParticlePtr gp, gv->particles(HepMC::descendants))
     for (GenVertex::particle_iterator it = gv->particles_begin(HepMC::descendants); it != gv->particles_end(HepMC::descendants); ++it) {
       const Particle p(*it);
       if (c != Cuts::OPEN && !c->accept(p)) continue;
-      if (remove_duplicates && (*it)->end_vertex() != NULL) {
+      if (remove_duplicates && (*it)->end_vertex() != nullptr) {
         // size_t n = 0; ///< @todo Only remove 1-to-1 duplicates?
         bool dup = false;
         /// @todo Yuck, HepMC
@@ -157,11 +157,11 @@ namespace Rivet {
     if (isStable()) return rtn;
     /// @todo Remove this const mess crap when HepMC doesn't suck
     GenVertexPtr gv = const_cast<GenVertexPtr>( genParticle()->end_vertex() );
-    if (gv == NULL) return rtn;
+    if (gv == nullptr) return rtn;
     /// @todo Would like to do this, but the range objects are broken
     // foreach (const GenParticlePtr gp, gv->particles(HepMC::descendants))
     for (GenVertex::particle_iterator it = gv->particles_begin(HepMC::descendants); it != gv->particles_end(HepMC::descendants); ++it) {
-      // if ((*it)->status() != 1 || (*it)->end_vertex() != NULL) continue;
+      // if ((*it)->status() != 1 || (*it)->end_vertex() != nullptr) continue;
       const Particle p(*it);
       if (!p.isStable()) continue;
       if (c != Cuts::OPEN && !c->accept(p)) continue;
@@ -173,8 +173,8 @@ namespace Rivet {
 
   double Particle::flightLength() const {
     if (isStable()) return -1;
-    if (genParticle() == NULL) return 0;
-    if (genParticle()->production_vertex() == NULL) return 0;
+    if (genParticle() == nullptr) return 0;
+    if (genParticle()->production_vertex() == nullptr) return 0;
     const HepMC::FourVector v1 = genParticle()->production_vertex()->position();
     const HepMC::FourVector v2 = genParticle()->end_vertex()->position();
     return sqrt(sqr(v2.x()-v1.x()) + sqr(v2.y()-v1.y()) + sqr(v2.z()-v1.z()));

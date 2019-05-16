@@ -22,13 +22,13 @@ LogY=0
 # END PLOT
 
 # BEGIN PLOT /ARGUS_1993_S2669951/d01-x01-y02
-Title=$\eta'$ multiplicity, $x_p > 0.35$
-YLabel=$N_{\eta'}$
+Title=$\eta^\prime$ multiplicity, $x_p > 0.35$
+YLabel=$N_{\eta^\prime}$
 # END PLOT
 
 # BEGIN PLOT /ARGUS_1993_S2669951/d01-x01-y02
-Title=$\eta'$ multiplicity
-YLabel=$N_{\eta'}$
+Title=$\eta^\prime$ multiplicity
+YLabel=$N_{\eta^\prime}$
 # END PLOT
 
 # BEGIN PLOT /ARGUS_1993_S2669951/d05-x01-y01

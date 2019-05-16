@@ -42,7 +42,10 @@ endif
 
 
 if ENABLE_PYEXT
-DOCS += rivet-coverage.html
+DOCS += rivet-coverage.html \
+  rivet-coverage-heavyiononly.html rivet-coverage-noheavyion.html \
+  rivet-coverage-searchesonly.html rivet-coverage-nosearches.html \
+  rivet-coverage-nosearches-noheavyion.html
 rivet-coverage.html: $(wildcard $(srcdir)/inspire*.json) $(wildcard $(srcdir)/*.rank) $(top_srcdir)/analyses $(srcdir)/mk-coverage-html
 	LD_LIBRARY_PATH=$(top_builddir)/src/.libs:$(LD_LIBRARY_PATH) \
     DYLD_LIBRARY_PATH=$(top_builddir)/src/.libs:$(DYLD_LIBRARY_PATH) \

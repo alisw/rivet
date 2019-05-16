@@ -27,9 +27,9 @@ Description:
   and multiplicities up to seven associated jets. The production cross sections for W bosons are measured in both the electron and 
   muon decay channels. Differential cross sections for many observables are also presented including measurements of the jet 
   observables such as the rapidities and the transverse momenta as well as measurements of event observables such as the scalar sums 
-  of the transverse momenta  of the jets. The default routine will pick up the electron decay channel of the $W$ boson and compare it
-  to the combined (muon and electron channel) data. Individual channels (for data) are available as well, use ATLAS_2014_I1312627_EL 
-  and ATLAS_2014_I1312627_MU to specify the decay channel directly.
+  of the transverse momenta  of the jets. The default routine assumes both muon and electron decay channel of the $W$ boson are being 
+  generate and the average will be constructed. Individual lepton channels can be specified using options LMODE=EL and LMODE:MU
+  respectively.
 BibKey: Aad:2014qxa
 BibTeX: '@article{Aad:2014qxa,
       author         = "Aad, Georges and others",

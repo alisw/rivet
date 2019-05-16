@@ -35,8 +35,8 @@ LogY=0
 # END PLOT
 
 # BEGIN PLOT /BABAR_2003_I593379/d01-x01-y07
-Title=$\text{Br}(B\to \psi')$ at the $\Upsilon(4S)$
-YLabel=$\text{Br}(B\to \psi')$ [\%]
+Title=$\text{Br}(B\to \psi^\prime)$ at the $\Upsilon(4S)$
+YLabel=$\text{Br}(B\to \psi^\prime)$ [\%]
 LogY=0
 # END PLOT
 
@@ -62,9 +62,9 @@ LogY=0
 # END PLOT
 
 # BEGIN PLOT /BABAR_2003_I593379/d08-x01-y01
-Title=$\text{Br}(B\to \psi')$ at the $\Upsilon(4S)$
-XLabel=$p^*_{\psi'}$ [GeV]
-YLabel=$\text{d}B/\text{d}p^*_{\psi'}$ [0.1/GeV]
+Title=$\text{Br}(B\to \psi^\prime)$ at the $\Upsilon(4S)$
+XLabel=$p^*_{\psi^\prime}$ [GeV]
+YLabel=$\text{d}B/\text{d}p^*_{\psi^\prime}$ [0.1/GeV]
 LogY=0
 # END PLOT
 

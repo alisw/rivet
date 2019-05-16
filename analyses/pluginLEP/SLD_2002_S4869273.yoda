@@ -1,10 +1,13 @@
 BEGIN YODA_SCATTER2D_V2 /REF/SLD_2002_S4869273/d01-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.027, up: 0.027}, sys: {dn: -0.004, up: 0.004}, 'sys,unfolding': {dn: -0.014, up: 0.014}}, 1: {stat: {dn: -0.027, up: 0.027}, sys: {dn: -0.005, up: 0.005}, 'sys,unfolding': {dn: -0.025, up: 0.025}}, 2: {stat: {dn: -0.027, up: 0.027}, sys: {dn: -0.006, up: 0.006}, 'sys,unfolding': {dn: -0.013, up: 0.013}}, 3: {stat: {dn: -0.026, up: 0.026}, sys: {dn: -0.008, up: 0.008}, 'sys,unfolding': {dn: -0.01, up: 0.01}}, 4: {stat: {dn: -0.027, up: 0.027}, sys: {dn: -0.009, up: 0.009}, 'sys,unfolding': {dn: -0.015, up: 0.015}}, 5: {stat: {dn: -0.029, up: 0.029}, sys: {dn: -0.011, up: 0.011}, 'sys,unfolding': {dn: -0.011, up: 0.011}}, 6: {stat: {dn: -0.031, up: 0.031}, sys: {dn: -0.012, up: 0.012}, 'sys,unfolding': {dn: -0.01, up: 0.01}}, 7: {stat: {dn: -0.032, up: 0.032}, sys: {dn: -0.014, up: 0.014}, 'sys,unfolding': {dn: -0.016, up: 0.016}}, 8: {stat: {dn: -0.035, up: 0.035}, sys: {dn: -0.015, up: 0.015}, 'sys,unfolding': {dn: -0.015, up: 0.015}}, 9: {stat: {dn: -0.037, up: 0.037}, sys: {dn: -0.016, up: 0.016}, 'sys,unfolding': {dn: -0.011, up: 0.011}}, 10: {stat: {dn: -0.04, up: 0.04}, sys: {dn: -0.017, up: 0.017}, 'sys,unfolding': {dn: -0.03, up: 0.03}}, 11: {stat: {dn: -0.045, up: 0.045}, sys: {dn: -0.018, up: 0.018}, 'sys,unfolding': {dn: -0.056, up: 0.056}}, 12: {stat: {dn: -0.052, up: 0.052}, sys: {dn: -0.018, up: 0.018}, 'sys,unfolding': {dn: -0.07, up: 0.07}}, 13: {stat: {dn: -0.059, up: 0.059}, sys: {dn: -0.02, up: 0.02}, 'sys,unfolding': {dn: -0.062, up: 0.062}}, 14: {stat: {dn: -0.066, up: 0.066}, sys: {dn: -0.028, up: 0.028}, 'sys,unfolding': {dn: -0.044, up: 0.044}}, 15: {stat: {dn: -0.076, up: 0.076}, sys: {dn: -0.046, up: 0.046}, 'sys,unfolding': {dn: -0.075, up: 0.075}}, 16: {stat: {dn: -0.084, up: 0.084}, sys: {dn: -0.071, up: 0.071}, 'sys,unfolding': {dn: -0.14, up: 0.14}}, 17: {stat: {dn: -0.088, up: 0.088}, sys: {dn: -0.084, up: 0.084}, 'sys,unfolding': {dn: -0.201, up: 0.201}}, 18: {stat: {dn: -0.085, up: 0.085}, sys: {dn: -0.065, up: 0.065}, 'sys,unfolding': {dn: -0.144, up: 0.144}}, 19: {stat: {dn: -0.067, up: 0.067}, sys: {dn: -0.094, up: 0.094}, 'sys,unfolding': {dn: -0.113, up: 0.113}}, 20: {stat: {dn: -0.04, up: 0.04}, sys: {dn: -0.051, up: 0.051}, 'sys,unfolding': {dn: -0.205, up: 0.205}}, 21: {stat: {dn: -0.012, up: 0.012}, sys: {dn: -0.004, up: 0.004}, 'sys,unfolding': {dn: -0.061, up: 0.061}}}
+
 IsRef: 1
 Path: /REF/SLD_2002_S4869273/d01-x01-y01
-Title: ~
+Title: doi:10.17182/hepdata.72835.v1/t1
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 1.400000e-01	2.000000e-02	2.000000e-02	1.160000e-01	3.067572e-02	3.067572e-02
 1.800000e-01	2.000000e-02	2.000000e-02	1.980000e-01	3.713489e-02	3.713489e-02
 2.200000e-01	2.000000e-02	2.000000e-02	2.470000e-01	3.056141e-02	3.056141e-02
@@ -28,14 +31,16 @@ Type: Scatter2D
 9.400000e-01	2.000000e-02	2.000000e-02	8.410000e-01	2.150023e-01	2.150023e-01
 9.800000e-01	2.000000e-02	2.000000e-02	1.080000e-01	6.229767e-02	6.229767e-02
 END YODA_SCATTER2D_V2
-
 BEGIN YODA_SCATTER2D_V2 /REF/SLD_2002_S4869273/d02-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.029, up: 0.029}, sys: {dn: -0.004, up: 0.004}, 'sys,unfolding': {dn: -0.014, up: 0.014}}, 1: {stat: {dn: -0.035, up: 0.035}, sys: {dn: -0.005, up: 0.005}, 'sys,unfolding': {dn: -0.025, up: 0.025}}, 2: {stat: {dn: -0.032, up: 0.032}, sys: {dn: -0.006, up: 0.006}, 'sys,unfolding': {dn: -0.013, up: 0.013}}, 3: {stat: {dn: -0.027, up: 0.027}, sys: {dn: -0.008, up: 0.008}, 'sys,unfolding': {dn: -0.01, up: 0.01}}, 4: {stat: {dn: -0.031, up: 0.031}, sys: {dn: -0.009, up: 0.009}, 'sys,unfolding': {dn: -0.015, up: 0.015}}, 5: {stat: {dn: -0.036, up: 0.036}, sys: {dn: -0.011, up: 0.011}, 'sys,unfolding': {dn: -0.011, up: 0.011}}, 6: {stat: {dn: -0.037, up: 0.037}, sys: {dn: -0.012, up: 0.012}, 'sys,unfolding': {dn: -0.01, up: 0.01}}, 7: {stat: {dn: -0.041, up: 0.041}, sys: {dn: -0.014, up: 0.014}, 'sys,unfolding': {dn: -0.016, up: 0.016}}, 8: {stat: {dn: -0.042, up: 0.042}, sys: {dn: -0.015, up: 0.015}, 'sys,unfolding': {dn: -0.015, up: 0.015}}, 9: {stat: {dn: -0.044, up: 0.044}, sys: {dn: -0.016, up: 0.016}, 'sys,unfolding': {dn: -0.011, up: 0.011}}, 10: {stat: {dn: -0.047, up: 0.047}, sys: {dn: -0.017, up: 0.017}, 'sys,unfolding': {dn: -0.03, up: 0.03}}, 11: {stat: {dn: -0.052, up: 0.052}, sys: {dn: -0.018, up: 0.018}, 'sys,unfolding': {dn: -0.056, up: 0.056}}, 12: {stat: {dn: -0.058, up: 0.058}, sys: {dn: -0.018, up: 0.018}, 'sys,unfolding': {dn: -0.07, up: 0.07}}, 13: {stat: {dn: -0.068, up: 0.068}, sys: {dn: -0.02, up: 0.02}, 'sys,unfolding': {dn: -0.062, up: 0.062}}, 14: {stat: {dn: -0.08, up: 0.08}, sys: {dn: -0.028, up: 0.028}, 'sys,unfolding': {dn: -0.044, up: 0.044}}, 15: {stat: {dn: -0.094, up: 0.094}, sys: {dn: -0.046, up: 0.046}, 'sys,unfolding': {dn: -0.075, up: 0.075}}, 16: {stat: {dn: -0.104, up: 0.104}, sys: {dn: -0.071, up: 0.071}, 'sys,unfolding': {dn: -0.14, up: 0.14}}, 17: {stat: {dn: -0.111, up: 0.111}, sys: {dn: -0.084, up: 0.084}, 'sys,unfolding': {dn: -0.201, up: 0.201}}, 18: {stat: {dn: -0.106, up: 0.106}, sys: {dn: -0.065, up: 0.065}, 'sys,unfolding': {dn: -0.144, up: 0.144}}, 19: {stat: {dn: -0.079, up: 0.079}, sys: {dn: -0.094, up: 0.094}, 'sys,unfolding': {dn: -0.113, up: 0.113}}, 20: {stat: {dn: -0.042, up: 0.042}, sys: {dn: -0.051, up: 0.051}, 'sys,unfolding': {dn: -0.205, up: 0.205}}, 21: {stat: {dn: -0.011, up: 0.011}, sys: {dn: -0.004, up: 0.004}, 'sys,unfolding': {dn: -0.061, up: 0.061}}}
+
 IsRef: 1
 Path: /REF/SLD_2002_S4869273/d02-x01-y01
-Title: ~
+Title: doi:10.17182/hepdata.72835.v1/t2
 Type: Scatter2D
 ---
-# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
 1.400000e-01	2.000000e-02	2.000000e-02	1.100000e-01	3.244996e-02	3.244996e-02
 1.800000e-01	2.000000e-02	2.000000e-02	1.880000e-01	4.330127e-02	4.330127e-02
 2.200000e-01	2.000000e-02	2.000000e-02	2.040000e-01	3.505710e-02	3.505710e-02

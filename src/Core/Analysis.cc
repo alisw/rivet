@@ -213,7 +213,7 @@ namespace Rivet {
   }
 
   vector<AnalysisObjectPtr> Analysis::getAllData(bool includeorphans) const{
-    return handler().getData(includeorphans);
+    return handler().getData(includeorphans, false, false);
   }
 
   CounterPtr Analysis::bookCounter(const string& cname,
@@ -269,6 +269,9 @@ namespace Rivet {
                                    const string& xtitle,
                                    const string& ytitle) {
     Histo1DPtr hist = make_shared<Histo1D>(refscatter, histoPath(hname));
+    if (hist->hasAnnotation("IsRef")) hist->rmAnnotation("IsRef");
+    if (hist->hasAnnotation("ErrorBreakdown")) hist->rmAnnotation("ErrorBreakdown");
+    if (hist->hasAnnotation("Variations")) hist->rmAnnotation("Variations");
     hist->setTitle(title);
     hist->setAnnotation("XLabel", xtitle);
     hist->setAnnotation("YLabel", ytitle);
@@ -356,6 +359,8 @@ namespace Rivet {
     const string path = histoPath(hname);
     Histo2DPtr hist( new Histo2D(refscatter, path) );
     if (hist->hasAnnotation("IsRef")) hist->rmAnnotation("IsRef");
+    if (hist->hasAnnotation("ErrorBreakdown")) hist->rmAnnotation("ErrorBreakdown");
+    if (hist->hasAnnotation("Variations")) hist->rmAnnotation("Variations");
     hist->setTitle(title);
     hist->setAnnotation("XLabel", xtitle);
     hist->setAnnotation("YLabel", ytitle);
@@ -431,6 +436,8 @@ namespace Rivet {
     const string path = histoPath(hname);
     Profile1DPtr prof = make_shared<Profile1D>(refscatter, path);
     if (prof->hasAnnotation("IsRef")) prof->rmAnnotation("IsRef");
+    if (prof->hasAnnotation("ErrorBreakdown")) prof->rmAnnotation("ErrorBreakdown");
+    if (prof->hasAnnotation("Variations")) prof->rmAnnotation("Variations");
     prof->setTitle(title);
     prof->setAnnotation("XLabel", xtitle);
     prof->setAnnotation("YLabel", ytitle);
@@ -516,6 +523,8 @@ namespace Rivet {
     const string path = histoPath(hname);
     Profile2DPtr prof( new Profile2D(refscatter, path) );
     if (prof->hasAnnotation("IsRef")) prof->rmAnnotation("IsRef");
+    if (prof->hasAnnotation("ErrorBreakdown")) prof->rmAnnotation("ErrorBreakdown");
+    if (prof->hasAnnotation("Variations")) prof->rmAnnotation("Variations");
     prof->setTitle(title);
     prof->setAnnotation("XLabel", xtitle);
     prof->setAnnotation("YLabel", ytitle);
@@ -572,6 +581,8 @@ namespace Rivet {
       s = make_shared<Scatter2D>(path);
     }
     if (s->hasAnnotation("IsRef")) s->rmAnnotation("IsRef");
+    if (s->hasAnnotation("ErrorBreakdown")) s->rmAnnotation("ErrorBreakdown");
+    if (s->hasAnnotation("Variations")) s->rmAnnotation("Variations");
     s->setTitle(title);
     s->setAnnotation("XLabel", xtitle);
     s->setAnnotation("YLabel", ytitle);
@@ -894,7 +905,7 @@ Analysis::declareCentrality(const SingleValueProjection &proj,
   else if ( sel == "GEN" ) {
     Histo1DPtr genhist;
     string histpath = "/" + calAnaName + "/" + calHistName;
-    for ( AnalysisObjectPtr ao : handler().getData(true) ) {
+    for ( AnalysisObjectPtr ao : handler().getData(true, false, false) ) {
       if ( ao->path() == histpath )
         genhist = dynamic_pointer_cast<Histo1D>(ao);
     }

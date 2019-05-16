@@ -12,7 +12,7 @@ References:
  - doi:10.1140/epjc/s10052-014-3195-6
  - arXiv:1409.3433 [hep-ex]
 RunInfo:
-  p + p -> Z + X ( Z -> mu^+ mu^- or e^+ e^- ). \sqrt{s} = 7 TeV
+  p + p -> Z + X ( Z -> mu^+ mu^- or e^+ e^- ) at 7 TeV
 NumEvents: 1000000
 NeedCrossSection: yes
 Beams: [p+, p+]
@@ -20,9 +20,9 @@ Energies: [7000]
 PtCuts: [20, 20]
 Description:
   Charged-particle distributions sensitive to the properties of the underlying event are measured for an 
-  inclusive sample of events containing a $Z$-boson, decaying to an electron or muon pair. The measurement 
-  is based on data collected using the ATLAS detector at the LHC in proton–proton collisions at a 
-  centre-of-mass energy of 7 TeV with an integrated luminosity of 4.6~$\text{fb}^{−1}$. Distributions of 
+  inclusive sample of events containing a $Z$-boson, decaying to an electron or muon pair. The measurement
+  is based on data collected using the ATLAS detector at the LHC in proton--proton collisions at a 
+  centre-of-mass energy of 7 TeV with an integrated luminosity of 4.6 fb$^{-1}$. Distributions of 
   the charged particle multiplicity and of the charged particle transverse momentum are measured in regions
   of azimuthal angle defined with respect to the $Z$-boson direction.
 BibKey: Aad:2014jgf

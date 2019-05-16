@@ -15,10 +15,8 @@ namespace Rivet {
   public:
 
     /// Constructor
-    ATLAS_2017_I1609448(const string name="ATLAS_2017_I1609448", size_t channel = 0,
+    ATLAS_2017_I1609448(const string name="ATLAS_2017_I1609448", 
                         const string ref_data="ATLAS_2017_I1609448") : Analysis(name) {
-      _mode = channel; // using Z -> nunu channel by default
-      setNeedsCrossSection(true);
       setRefDataName(ref_data);
     }
 
@@ -36,6 +34,12 @@ namespace Rivet {
 
     /// Initialize
     void init() {
+
+      // Get options from the new option system
+      _mode = 0;
+      if ( getOption("LMODE") == "NU" ) _mode = 0; // using Z -> nunu channel by default
+      if ( getOption("LMODE") == "MU" ) _mode = 1;
+      if ( getOption("LMODE") == "EL" ) _mode = 2;
 
       // Prompt photons
       PromptFinalState photon_fs(Cuts::abspid == PID::PHOTON && Cuts::abseta < 4.9);
@@ -57,7 +61,7 @@ namespace Rivet {
       declare(veto_lep, "VetoLeptons");
 
       // MET
-      VetoedFinalState met_fs(!(Cuts::abseta > 2.5 && Cuts::abspid == PID::MUON));
+      VetoedFinalState met_fs(Cuts::abseta > 2.5 && Cuts::abspid == PID::MUON); // veto out-of-acceptance muons
       if (_mode) met_fs.addVetoOnThisFinalState(dressed_leps);
       declare(MissingMomentum(met_fs), "MET");
 
@@ -245,31 +249,6 @@ namespace Rivet {
 
   };
 
-
-
-  /// ATLAS pTmiss+jets specialisation for Znunu channel
-  class ATLAS_2017_I1609448_Znunu : public ATLAS_2017_I1609448 {
-  public:
-    ATLAS_2017_I1609448_Znunu() : ATLAS_2017_I1609448("ATLAS_2017_I1609448_Znunu", 0) { }
-  };
-
-  /// ATLAS pTmiss+jets specialisation for Zmumu channel
-  class ATLAS_2017_I1609448_Zmumu : public ATLAS_2017_I1609448 {
-  public:
-    ATLAS_2017_I1609448_Zmumu() : ATLAS_2017_I1609448("ATLAS_2017_I1609448_Zmumu", 1) { }
-  };
-
-  /// ATLAS pTmiss+jets specialisation for Zee channel
-  class ATLAS_2017_I1609448_Zee : public ATLAS_2017_I1609448 {
-  public:
-    ATLAS_2017_I1609448_Zee() : ATLAS_2017_I1609448("ATLAS_2017_I1609448_Zee", 2) { }
-  };
-
-
   // Hooks for the plugin system
   DECLARE_RIVET_PLUGIN(ATLAS_2017_I1609448);
-  DECLARE_RIVET_PLUGIN(ATLAS_2017_I1609448_Znunu);
-  DECLARE_RIVET_PLUGIN(ATLAS_2017_I1609448_Zmumu);
-  DECLARE_RIVET_PLUGIN(ATLAS_2017_I1609448_Zee);
-
 }

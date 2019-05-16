@@ -20,14 +20,14 @@ NeedCrossSection: no
 Description:
   'Characteristics of multi-particle production in proton-proton
   collisions at $\sqrt{s} = 7$ TeV are studied as a function of the
-  charged-particle multiplicity ($N_{ch}$). The produced particles are separated
+  charged-particle multiplicity ($N_\text{ch}$). The produced particles are separated
   into two classes: those belonging to jets and those belonging to the
   underlying event. Charged particles are measured with pseudorapidity
-  $|\eta| < 2.4$ and transverse momentum $p_T > 0.25$ GeV. Jets are
+  $|\eta| < 2.4$ and transverse momentum $p_\text{T} > 0.25$ GeV. Jets are
   reconstructed from charged-particles only and required to have
-  $\pt > 5$ GeV. The distributions of jet \pt, average \pt of charged particles
+  $p_\text{T} > 5$ GeV. The distributions of jet $p_\text{T}$, average $p_\text{T}$ of charged particles
   belonging to the underlying event or to jets, jet rates, and jet shapes
-  are presented as functions of $N_{ch}$.'
+  are presented as functions of $N_\text{ch}$.'
 BibKey: Chatrchyan:2013ala
 BibTeX: '@article{Chatrchyan:2013ala,
       author         = "Chatrchyan, Serguei and others",

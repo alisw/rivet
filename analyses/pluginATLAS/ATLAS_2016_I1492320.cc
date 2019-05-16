@@ -6,6 +6,7 @@
 #include "Rivet/Projections/MissingMomentum.hh"
 #include "Rivet/Projections/DressedLeptons.hh"
 #include "Rivet/Projections/PromptFinalState.hh"
+#include "Rivet/Projections/HeavyHadrons.hh"
 
 namespace Rivet {
 
@@ -71,11 +72,11 @@ namespace Rivet {
 	std::sort(_vbs_lep.begin(), _vbs_lep.end(), [](const DressedLepton& l1, const DressedLepton& l2) {
 	    return (l1.constituentLepton().pT() > l2.constituentLepton().pT());
 	  });
-	
+
 	// Get the jets
 	const Jets& _vbs_jets = apply<FastJets>(event, "Jets").jetsByPt(Cuts::pT > 25*GeV && Cuts::abseta < 4.5);
 	if (_vbs_jets.size() <= 1) {
-	
+
 	  // Determine nsfos pairs for channel classification
 	  int nSFOS = 0;
 	  for (size_t i = 0; i < _vbs_lep.size(); ++i) {
@@ -85,48 +86,48 @@ namespace Rivet {
 	      if (_vbs_lep[i].abspid() == _vbs_lep[j].abspid() && ch_l0*ch_l1 < 0) ++nSFOS;
 	    }
 	  }
-	  
+
 	  double minDRll = DBL_MAX, mSFOS_MinDiff = DBL_MAX, meeSS_MinDiff = DBL_MAX, mSF_min = DBL_MAX;
 	  for (size_t i = 0; i < _vbs_lep.size(); ++i) {
 	    const double ch_l0 = _vbs_lep[i].charge();
 	    for (size_t j = i + 1; j < _vbs_lep.size(); ++j) {
 	      const double ch_l1 = _vbs_lep[j].charge();
 	      const bool samesign = ch_l0*ch_l1 > 0;
-	      
+
 	      // Update min dR between leptons
 	      minDRll = min(minDRll, deltaR(_vbs_lep[i], _vbs_lep[j]));
-	      
+
 	      // Require same flavour
 	      if (_vbs_lep[i].abspid() != _vbs_lep[j].abspid()) continue;
-	      
+
 	      // SF dilepton mass (used several times)
 	      const double mSF = (_vbs_lep[i].momentum() + _vbs_lep[j].momentum()).mass();
-	      
+
 	      // Determine min for all same-flavor pairs
 	      mSF_min = min(mSF, mSF_min);
-	      
+
 	      // Determine min for all m_ee same-sign pairs
 	      if (_vbs_lep[i].abspid() == PID::ELECTRON && samesign) {
 		if (fabs(mSF-ZMASS) < fabs(meeSS_MinDiff-ZMASS)) meeSS_MinDiff = mSF;
 	      }
-	      
+
 	      // Determine min for all mSFOS pairs
 	      if (!samesign && fabs(mSF-ZMASS) < abs(mSFOS_MinDiff-ZMASS)) mSFOS_MinDiff = mSF;
 	    }
 	  }
-	  
+
 	  bool setVeto = false;
 	  if (minDRll < 0.1) setVeto = true;
 	  if (nSFOS == 0 && mSF_min < 20*GeV) setVeto = true;
 	  if (nSFOS == 0 && fabs(meeSS_MinDiff - ZMASS) < 15*GeV) setVeto = true;
 	  if (nSFOS == 1 && ((ZMASS - mSFOS_MinDiff) < 35*GeV && (mSFOS_MinDiff - ZMASS) < 20*GeV)) setVeto = true;
 	  if (nSFOS == 2 && fabs(mSFOS_MinDiff - ZMASS) < 20*GeV) setVeto = true;
-	  
+
 	  if (!setVeto) {
 	    const Vector3& met = -1.0 * apply<MissingMomentum>(event, "MET").vectorEt();
 	    if (nSFOS == 1 && met.mod() < 45*GeV) setVeto = true;
 	    if (nSFOS == 2 && met.mod() < 55*GeV) setVeto = true;
-	    
+
 	    if (!setVeto) {
 	      const double dPhi = deltaPhi((_vbs_lep[0].momentum() + _vbs_lep[1].momentum() + _vbs_lep[2].momentum()), met);
 	      if (dPhi < 2.5) setVeto = true;
@@ -149,10 +150,10 @@ namespace Rivet {
 		      return (l1.constituentLepton().pT() > l2.constituentLepton().pT()); });
 	  if (leps[0].pT() < 30*GeV || leps[0].abseta() > 2.5)  vetoEvent;
 	  if (leps[1].pT() < 30*GeV || leps[1].abseta() > 2.5)  vetoEvent;
-	  
+
 	  // Get jets
 	  const Jets& jets = apply<FastJets>(event, "Jets").jetsByPt(Cuts::pT > 15*GeV);
-	  
+
 	  // Find min dilepton DR and mass
 	  double minDRll = DBL_MAX, mll = DBL_MAX;
 	  for (size_t i = 0; i < leps.size(); ++i) {
@@ -163,18 +164,18 @@ namespace Rivet {
 	  }
 	  if (minDRll < 0.1) vetoEvent;
 	  if (mll < 40*GeV) vetoEvent;
-	  
+
 	  // Require same-sign leading leptons
 	  if (leps[0].charge()*leps[0].charge() < 0) vetoEvent;
-	  
+
 	  // Veto di-electron combinations within 10 GeV of the Z mass
 	  if (fabs(mll - 91.188*GeV) < 10*GeV && leps[0].abspid() == PID::ELECTRON && leps[1].abspid() == PID::ELECTRON) vetoEvent;
-	  
+
 	  // Now jet cuts
 	  if (jets.size() < 2) vetoEvent;
 	  if (jets[0].pT() < 30*GeV || jets[0].abseta() > 2.5) vetoEvent;
 	  if (jets[1].pT() < 20*GeV || jets[1].abseta() > 2.5) vetoEvent;
-	  
+
 	  // Find closest jet/lepton pair and veto if too close in phi or too far in eta
 	  double minDRLepJets = DBL_MAX;
 	  for (const Jet& jet : jets) {
@@ -182,12 +183,12 @@ namespace Rivet {
 	  }
 	  if (minDRLepJets < 0.3) vetoEvent;
 	  if (fabs(deltaEta(jets[0], jets[1])) > 1.5) vetoEvent;
-	  
+
 	  // Dijet mass requirement
 	  double mjj = (jets[0].momentum() + jets[1].momentum()).mass();
 	  if (mjj < 65 || mjj > 105)  vetoEvent;
 	  if (!inRange(mjj, 65*GeV, 105*GeV)) vetoEvent;
-	  
+
 	  // Veto if any good jets are b-jets
 	  const Particles& bhadrons = apply<HeavyHadrons>(event, "Bhadrons").bHadrons();
 	  for (const Jet& j : jets) {
@@ -195,7 +196,7 @@ namespace Rivet {
 	    const bool isbJet = any(bhadrons, deltaRLess(j, 0.3));
 	    if (isbJet) vetoEvent;
 	  }
-	  
+
 	  // MET vetoing for non-muon events
 	  const MissingMomentum& met = apply<MissingMomentum>(event, "MET");
 	  if (met.vectorEt().mod() < 55*GeV && (leps[0].abspid() != PID::MUON || leps[1].abspid() != PID::MUON)) vetoEvent;

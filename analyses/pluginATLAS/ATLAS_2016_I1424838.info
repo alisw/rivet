@@ -19,7 +19,7 @@ Beams: [p+, p+]
 Energies: [7000]
 Description:
   'Measurement of transverse event-shape observables ($N_\text{ch}$,
-  $\sum\pT$, thrust, beam-thrust, $F$-parameter, and spherocity)
+  $\sum \pT$, thrust, beam-thrust, $F$-parameter, and spherocity)
   in $Z \to \ell\ell$ events at 7~TeV for different $\pT(Z)$ regions.'
 BibKey: Aad:2016ria
 BibTeX: '@article{Aad:2016ria,
