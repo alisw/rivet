@@ -5,7 +5,7 @@
 #include "Rivet/Projections/IdentifiedFinalState.hh"
 #include "Rivet/Projections/WFinder.hh"
 #include "Rivet/Projections/LeadingParticlesFinalState.hh"
-#include "Rivet/Projections/UnstableFinalState.hh"
+#include "Rivet/Projections/UnstableParticles.hh"
 #include "Rivet/Projections/VetoedFinalState.hh"
 #include "Rivet/Projections/DressedLeptons.hh"
 #include "Rivet/Projections/MergedFinalState.hh"

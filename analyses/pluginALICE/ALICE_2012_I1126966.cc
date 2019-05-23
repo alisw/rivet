@@ -1,24 +1,24 @@
 //-*- C++ -*-
+#include "Rivet/Analysis.hh"
 #include "Rivet/Projections/CentralityProjection.hh"
 #include "Rivet/Projections/AliceCommon.hh"
 #include "Rivet/Tools/AliceCommon.hh"
-#include "Rivet/Tools/Cuts.hh"
 
 namespace Rivet {
-  
-  
+
+
   /// Pion, Kaon, and Proton Production in 0-5%
   ///  central Pb--Pb Collisions at 2.76 TeV
   class ALICE_2012_I1126966 : public Analysis {
   public:
-    
+
     /// Constructor
     DEFAULT_RIVET_ANALYSIS_CTOR(ALICE_2012_I1126966);
-    
+
     /// Book histograms and initialise projections before the run
     void init() {
       // Particles of interest.
-      declare(ALICE::PrimaryParticles(Cuts::absrap < 0.5),"CFS"); 
+      declare(ALICE::PrimaryParticles(Cuts::absrap < 0.5),"CFS");
 
       // The event trigger.
       declare(ALICE::V0AndTrigger(), "V0-AND");
@@ -44,9 +44,9 @@ namespace Rivet {
       sow = bookCounter("sow");
 
   }
-    
+
       /// Perform the per-event analysis
-    
+
     void analyze(const Event& event) {
       // Event weight.
       const double weight = event.weight();
@@ -55,7 +55,7 @@ namespace Rivet {
         vetoEvent;
       // Event trigger.
       if (!apply<ALICE::V0AndTrigger>(event, "V0-AND")() ) vetoEvent;
-      
+
       sow->fill(weight);
       // ID particles counters for this event.
       int Npi=0;
@@ -65,9 +65,9 @@ namespace Rivet {
       int Nproton=0;
       int Nprotonbar=0;
 
-      for (const auto& p : 
+      for (const auto& p :
 	apply<ALICE::PrimaryParticles>(event,"CFS").particles()) {
-          const double pWeight = weight / p.pT() / 2. / M_PI;	      
+          const double pWeight = weight / p.pT() / 2. / M_PI;
           switch (p.pid()) {
             case 211: // pi+
 	      Npi++;
@@ -123,9 +123,9 @@ namespace Rivet {
        _histNprotonbar->scaleW(s);
 
 }
-    
+
   private:
-    
+
       // pT histograms
     Histo1DPtr _histPtPi;
     Histo1DPtr _histPtKaon;
@@ -142,10 +142,10 @@ namespace Rivet {
     CounterPtr sow;
 
   };
-  
-  
+
+
     // The hook for the plugin system
   DECLARE_RIVET_PLUGIN(ALICE_2012_I1126966);
-  
-  
+
+
 }

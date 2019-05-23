@@ -2,7 +2,7 @@
 #include "Rivet/Analysis.hh"
 #include "Rivet/Projections/Beam.hh"
 #include "Rivet/Tools/BinnedHistogram.hh"
-#include "Rivet/Projections/UnstableFinalState.hh"
+#include "Rivet/Projections/UnstableParticles.hh"
 namespace Rivet {
 
 
@@ -25,7 +25,7 @@ public:
 	void init() {
 
 		// Initialise and register projections
-		addProjection(UnstableFinalState(), "UFS");
+		addProjection(UnstableParticles(), "UFS");
 		addProjection(Beam(), "Beam");
 
 		// calculate beam rapidity
@@ -123,7 +123,7 @@ public:
 	void analyze(const Event& event) {
 		_nevt = _nevt + 1.;
 
-		const UnstableFinalState &ufs = applyProjection<UnstableFinalState> (event, "UFS");
+		const UnstableParticles &ufs = applyProjection<UnstableFinalState> (event, "UFS");
 		Particles ufs_particles = ufs.particles();
 		for (Particle& p: ufs_particles ) {
 

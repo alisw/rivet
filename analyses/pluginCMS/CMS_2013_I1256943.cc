@@ -2,7 +2,7 @@
 #include "Rivet/Analysis.hh"
 #include "Rivet/Projections/ZFinder.hh"
 #include "Rivet/Projections/FinalState.hh"
-#include "Rivet/Projections/UnstableFinalState.hh"
+#include "Rivet/Projections/UnstableParticles.hh"
 
 namespace Rivet {
 
@@ -24,7 +24,7 @@ namespace Rivet {
       FinalState fs(Cuts::abseta < 2.4 && Cuts::pT > 20*GeV);
       declare(fs, "FS");
 
-      UnstableFinalState ufs(Cuts::abseta < 2 && Cuts::pT > 15*GeV);
+      UnstableParticles ufs(Cuts::abseta < 2 && Cuts::pT > 15*GeV);
       declare(ufs, "UFS");
 
       Cut zetacut = Cuts::abseta < 2.4;
@@ -55,7 +55,7 @@ namespace Rivet {
     /// Do the analysis
     void analyze(const Event& e) {
 
-      const UnstableFinalState& ufs = apply<UnstableFinalState>(e, "UFS");
+      const UnstableParticles& ufs = apply<UnstableFinalState>(e, "UFS");
       const ZFinder& zfindermu = apply<ZFinder>(e, "ZFinderMu");
       const ZFinder& zfinderel = apply<ZFinder>(e, "ZFinderEl");
 

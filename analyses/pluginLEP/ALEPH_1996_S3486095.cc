@@ -8,7 +8,7 @@
 #include "Rivet/Projections/Hemispheres.hh"
 #include "Rivet/Projections/FinalState.hh"
 #include "Rivet/Projections/ChargedFinalState.hh"
-#include "Rivet/Projections/UnstableFinalState.hh"
+#include "Rivet/Projections/UnstableParticles.hh"
 
 namespace Rivet {
 
@@ -33,7 +33,7 @@ namespace Rivet {
       declare(Beam(), "Beams");
       const ChargedFinalState cfs;
       declare(cfs, "FS");
-      declare(UnstableFinalState(), "UFS");
+      declare(UnstableParticles(), "UFS");
       declare(FastJets(cfs, FastJets::DURHAM, 0.7), "DurhamJets");
       declare(Sphericity(cfs), "Sphericity");
       declare(ParisiTensor(cfs), "Parisi");
@@ -217,7 +217,7 @@ namespace Rivet {
 
 
       //// Final state of unstable particles to get particle spectra
-      const UnstableFinalState& ufs = apply<UnstableFinalState>(e, "UFS");
+      const UnstableParticles& ufs = apply<UnstableFinalState>(e, "UFS");
       for (Particles::const_iterator p = ufs.particles().begin(); p != ufs.particles().end(); ++p) {
         const Vector3 mom3 = p->momentum().p3();
         int id = abs(p->pid());

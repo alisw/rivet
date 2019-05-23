@@ -1,7 +1,7 @@
 // -*- C++ -*-
 #include "Rivet/Analysis.hh"
 #include "Rivet/Projections/Beam.hh"
-#include "Rivet/Projections/UnstableFinalState.hh"
+#include "Rivet/Projections/UnstableParticles.hh"
 
 namespace Rivet {
 
@@ -18,7 +18,7 @@ namespace Rivet {
 
     void init() {
       declare(Beam(), "Beams");
-      declare(UnstableFinalState(), "UFS");
+      declare(UnstableParticles(), "UFS");
 
       _histOff  = bookHisto1D(1,1,1);
       _sigmaOff = bookHisto1D(2,1,1);
@@ -31,7 +31,7 @@ namespace Rivet {
       const double weight = e.weight();
 
       // Loop through unstable FS particles and look for charmed mesons/baryons
-      const UnstableFinalState& ufs = apply<UnstableFinalState>(e, "UFS");
+      const UnstableParticles& ufs = apply<UnstableFinalState>(e, "UFS");
 
       const Beam beamproj = apply<Beam>(e, "Beams");
       const ParticlePair& beams = beamproj.beams();

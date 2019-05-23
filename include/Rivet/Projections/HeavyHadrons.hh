@@ -3,7 +3,7 @@
 #define RIVET_HeavyHadrons_HH
 
 #include "Rivet/Projections/FinalState.hh"
-#include "Rivet/Projections/UnstableFinalState.hh"
+#include "Rivet/Projections/UnstableParticles.hh"
 #include "Rivet/Particle.hh"
 #include "Rivet/Event.hh"
 
@@ -26,7 +26,7 @@ namespace Rivet {
     /// \f$ \eta \f$ and the min \f$ p_T \f$ (in GeV).
     HeavyHadrons(const Cut& c=Cuts::open()) {
       setName("HeavyHadrons");
-      addProjection(UnstableFinalState(c), "UFS");
+      addProjection(UnstableParticles(c), "UFS");
     }
 
     /// Clone on the heap.

@@ -2,7 +2,7 @@
 #include "Rivet/Analysis.hh"
 #include "Rivet/Projections/ChargedFinalState.hh"
 #include "Rivet/Projections/IdentifiedFinalState.hh"
-#include "Rivet/Projections/UnstableFinalState.hh"
+#include "Rivet/Projections/UnstableParticles.hh"
 
 namespace Rivet {
 
@@ -23,7 +23,7 @@ namespace Rivet {
     /// Book histograms and initialise projections before the run
     void init() {
 
-      UnstableFinalState ufs(Cuts::pT > 100*MeV);
+      UnstableParticles ufs(Cuts::pT > 100*MeV);
       declare(ufs, "UFS");
 
       ChargedFinalState  mbts(Cuts::absetaIn(2.09, 3.84));
@@ -143,7 +143,7 @@ namespace Rivet {
       _sum_w_passed += weight;
 
       // This ufs holds all the Kaons and Lambdas
-      const UnstableFinalState& ufs = apply<UnstableFinalState>(event, "UFS");
+      const UnstableParticles& ufs = apply<UnstableFinalState>(event, "UFS");
 
       // Some conters
       int n_KS0 = 0;

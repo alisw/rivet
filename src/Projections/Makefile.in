@@ -112,19 +112,20 @@ LTLIBRARIES = $(noinst_LTLIBRARIES)
 libRivetProjections_la_LIBADD =
 am_libRivetProjections_la_OBJECTS = Beam.lo BeamThrust.lo \
 	ChargedFinalState.lo ChargedLeptons.lo CentralEtHCM.lo \
-	DISFinalState.lo DISKinematics.lo DISLepton.lo \
-	DressedLeptons.lo FastJets.lo PxConePlugin.lo FinalPartons.lo \
-	FinalState.lo FParameter.lo HadronicFinalState.lo \
-	HeavyHadrons.lo Hemispheres.lo IdentifiedFinalState.lo \
-	InitialQuarks.lo InvMassFinalState.lo JetAlg.lo JetShape.lo \
-	LeadingParticlesFinalState.lo MergedFinalState.lo \
-	MissingMomentum.lo NeutralFinalState.lo \
+	DISDiffHadron.lo DISFinalState.lo DISKinematics.lo \
+	DISLepton.lo DISRapidityGap.lo DressedLeptons.lo FastJets.lo \
+	PxConePlugin.lo FinalPartons.lo FinalState.lo FParameter.lo \
+	HadronicFinalState.lo HeavyHadrons.lo Hemispheres.lo \
+	IdentifiedFinalState.lo InitialQuarks.lo InvMassFinalState.lo \
+	JetAlg.lo JetShape.lo LeadingParticlesFinalState.lo \
+	MergedFinalState.lo MissingMomentum.lo NeutralFinalState.lo \
 	NonHadronicFinalState.lo NonPromptFinalState.lo \
 	ParisiTensor.lo ParticleFinder.lo PrimaryHadrons.lo \
 	PrimaryParticles.lo PromptFinalState.lo Sphericity.lo \
 	Spherocity.lo TauFinder.lo Thrust.lo TriggerCDFRun0Run1.lo \
 	TriggerCDFRun2.lo TriggerUA5.lo UnstableFinalState.lo \
-	VetoedFinalState.lo VisibleFinalState.lo WFinder.lo ZFinder.lo
+	UndressBeamLeptons.lo VetoedFinalState.lo VisibleFinalState.lo \
+	WFinder.lo ZFinder.lo
 libRivetProjections_la_OBJECTS = $(am_libRivetProjections_la_OBJECTS)
 AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
@@ -384,9 +385,11 @@ libRivetProjections_la_SOURCES = \
   ChargedFinalState.cc \
   ChargedLeptons.cc \
   CentralEtHCM.cc \
+  DISDiffHadron.cc \
   DISFinalState.cc \
   DISKinematics.cc \
   DISLepton.cc \
+  DISRapidityGap.cc \
   DressedLeptons.cc \
   FastJets.cc \
   PxConePlugin.cc \
@@ -420,6 +423,7 @@ libRivetProjections_la_SOURCES = \
   TriggerCDFRun2.cc \
   TriggerUA5.cc \
   UnstableFinalState.cc \
+  UndressBeamLeptons.cc \
   VetoedFinalState.cc \
   VisibleFinalState.cc \
   WFinder.cc \
@@ -484,9 +488,11 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/CentralEtHCM.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ChargedFinalState.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ChargedLeptons.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/DISDiffHadron.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/DISFinalState.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/DISKinematics.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/DISLepton.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/DISRapidityGap.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/DressedLeptons.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/FParameter.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/FastJets.Plo@am__quote@
@@ -519,6 +525,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/TriggerCDFRun0Run1.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/TriggerCDFRun2.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/TriggerUA5.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/UndressBeamLeptons.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/UnstableFinalState.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/VetoedFinalState.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/VisibleFinalState.Plo@am__quote@

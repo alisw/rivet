@@ -1,5 +1,5 @@
 # BEGIN PLOT /ALICE_2012_I930312/d01-x01-y01
-Title=$I_{AA}$ near-side
+Title=$I_{AA}$ near-side (0-5\%)
 XLabel=$p_{t,assoc}$ [GeV/c]
 YLabel=$ I_{AA} $
 LogX=0
@@ -7,7 +7,7 @@ LogY=0
 # END PLOT
 
 # BEGIN PLOT /ALICE_2012_I930312/d02-x01-y01
-Title=$I_{AA}$ near-side
+Title=$I_{AA}$ near-side (60-90\%)
 XLabel=$p_{t,assoc}$ [GeV/c]
 YLabel=$I_{AA}$
 LogX=0
@@ -15,7 +15,7 @@ LogY=0
 # END PLOT
 
 # BEGIN PLOT /ALICE_2012_I930312/d03-x01-y01
-Title=$I_{AA}$ away-side
+Title=$I_{AA}$ away-side (0-5\%)
 XLabel=$p_{t,assoc}$ [GeV/c]
 YLabel=$I_{AA}$
 LogX=0
@@ -23,7 +23,7 @@ LogY=0
 # END PLOT
 
 # BEGIN PLOT /ALICE_2012_I930312/d04-x01-y01
-Title=$I_{AA}$ away-side
+Title=$I_{AA}$ away-side (60-90\%)
 XLabel=$p_{t,assoc}$ [GeV/c]
 YLabel=$I_{AA}$
 LogX=0

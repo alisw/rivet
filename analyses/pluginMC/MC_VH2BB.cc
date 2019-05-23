@@ -3,7 +3,7 @@
 #include "Rivet/Projections/FinalState.hh"
 #include "Rivet/Projections/ZFinder.hh"
 #include "Rivet/Projections/WFinder.hh"
-#include "Rivet/Projections/UnstableFinalState.hh"
+#include "Rivet/Projections/UnstableParticles.hh"
 #include "Rivet/Projections/FastJets.hh"
 #include "Rivet/Math/LorentzTrans.hh"
 

@@ -472,6 +472,27 @@ namespace Rivet {
   //@}
 
 
+  /// @name Next-level filtering
+  //@{
+
+  template<typename PBCONTAINER1, typename PBCONTAINER2>
+  void idiscardIfAny(PBCONTAINER1& tofilter, const PBCONTAINER2& tocompare,
+                     typename std::function<bool(const typename PBCONTAINER1::value_type&, const typename PBCONTAINER2::value_type&)> fn) {
+    for (const auto& pbcmp : tocompare)
+      ifilter_discard(tofilter, [&](const typename PBCONTAINER1::value_type& pbfilt){ return fn(pbfilt, pbcmp); });
+  }
+
+  template<typename PBCONTAINER1, typename PBCONTAINER2>
+  PBCONTAINER1 discardIfAny(const PBCONTAINER1& tofilter, const PBCONTAINER2& tocompare,
+                            typename std::function<bool(const typename PBCONTAINER1::value_type&, const typename PBCONTAINER2::value_type&)> fn) {
+    PBCONTAINER1 tmp{tofilter};
+    idiscardIfAny(tmp, tocompare, fn);
+    return tmp;
+  }
+
+  //@}
+
+
   /// @name Isolation helper routines
   //@{
 

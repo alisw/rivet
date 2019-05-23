@@ -1,7 +1,7 @@
 // -*- C++ -*-
 #include "Rivet/Analysis.hh"
 #include "Rivet/Projections/FinalState.hh"
-#include "Rivet/Projections/UnstableFinalState.hh"
+#include "Rivet/Projections/UnstableParticles.hh"
 
 namespace Rivet {
 
@@ -21,7 +21,7 @@ namespace Rivet {
     void init() {
 
       // Initialise and register projections
-      declare(UnstableFinalState(), "UFS");
+      declare(UnstableParticles(), "UFS");
 
       // Book histograms
       _h_w      = bookHisto1D(1, 1, 1);
@@ -67,7 +67,7 @@ namespace Rivet {
     void analyze(const Event& event) {
       FourMomentum pl, pnu, pB, pD, pDs, ppi;
       // Iterate of B0bar mesons
-      for(const Particle& p : apply<UnstableFinalState>(event, "UFS").particles(Cuts::pid==-511)) {
+      for(const Particle& p : apply<UnstableParticles>(event, "UFS").particles(Cuts::pid==-511)) {
         pB = p.momentum();
         // Find semileptonic decays
         if (analyzeDecay(p, {PID::DSTARPLUS,-12,11}) || analyzeDecay(p, {PID::DSTARPLUS,-14,13}) ) {

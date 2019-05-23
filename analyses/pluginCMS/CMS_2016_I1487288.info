@@ -23,7 +23,10 @@ Description:
    7 and 8~TeV, and differentially at 8 TeV only (this analysis). The differential
    cross-sections are measured with respect to $Z$ $p_T$, leading jet $p_T$, and the
    jet multiplicity. This data is useful for constraining MC models of QCD and EW activity
-   in diboson events, and for constraining anomalous couplings.'
+   in diboson events, and for constraining anomalous couplings.
+
+   NOTE: total cross-section is fixed to the measured value in this analysis, since the
+   correction factors from fiducial to inclusive $WZ$ production were not published.'
 Keywords: [diboson, WZ]
 BibKey: Khachatryan:2016poo
 BibTeX: '@article{Khachatryan:2016poo,
@@ -45,5 +48,3 @@ BibTeX: '@article{Khachatryan:2016poo,
       reportNumber   = "CMS-SMP-14-014, CERN-EP-2016-205",
       SLACcitation   = "%%CITATION = ARXIV:1609.05721;%%"
 }'
-ToDo:
- - Replace hard-coded histo binnings with ref data from HepData

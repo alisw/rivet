@@ -41,9 +41,11 @@ nobase_pkginclude_HEADERS += \
   Projections/ChargedLeptons.hh \
   Projections/ConstLossyFinalState.hh \
   Projections/DirectFinalState.hh \
+  Projections/DISDiffHadron.hh \
   Projections/DISFinalState.hh \
   Projections/DISKinematics.hh \
   Projections/DISLepton.hh \
+  Projections/DISRapidityGap.hh \
   Projections/DressedLeptons.hh \
   Projections/EventMixingFinalState.hh \
   Projections/FastJets.hh \
@@ -90,6 +92,8 @@ nobase_pkginclude_HEADERS += \
   Projections/TriggerProjection.hh \
   Projections/TriggerUA5.hh \
   Projections/UnstableFinalState.hh \
+  Projections/UndressBeamLeptons.hh \
+  Projections/UnstableParticles.hh \
   Projections/UserCentEstimate.hh \
   Projections/VetoedFinalState.hh \
   Projections/VisibleFinalState.hh \

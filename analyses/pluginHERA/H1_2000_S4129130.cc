@@ -73,6 +73,7 @@ namespace Rivet {
 
       // DIS kinematics
       const DISKinematics& dk = apply<DISKinematics>(event, "Kinematics");
+      if ( dk.failed() ) vetoEvent;
       double q2  = dk.Q2();
       double x   = dk.x();
       double y   = dk.y();
@@ -80,6 +81,7 @@ namespace Rivet {
 
       // Kinematics of the scattered lepton
       const DISLepton& dl = apply<DISLepton>(event,"Lepton");
+      if ( dl.failed() ) return;
       const FourMomentum leptonMom = dl.out();
       const double enel = leptonMom.E();
       const double thel = 180 - leptonMom.angle(dl.in().mom())/degree;

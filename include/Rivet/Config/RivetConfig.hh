@@ -10,13 +10,13 @@
 #define RIVET_NAME "Rivet"
 
 /* Define to the full name and version of this package. */
-#define RIVET_STRING "Rivet 2.7.1"
+#define RIVET_STRING "Rivet 2.7.2"
 
 /* Define to the one symbol short name of this package. */
 #define RIVET_TARNAME "Rivet"
 
 /* Define to the version of this package. */
-#define RIVET_VERSION "2.7.1"
+#define RIVET_VERSION "2.7.2"
 
 
 #endif

@@ -2,8 +2,8 @@
 
 RANKFILES=$(echo *.rank)
 BASECMD='./mk-coverage-html inspire-*.json -r "$RANKFILES" -R'
-UPDATE= #'--update-ranking'
-VERB= #"-v"
+test -n "$UPDATE" && UPDATE='--update-ranking'
+test -n "$V" && VERB="-v"
 
 eval "$BASECMD $UPDATE $VERB"
 if [[ -z "$UPDATE" ]]; then

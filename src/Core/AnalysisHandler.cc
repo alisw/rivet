@@ -364,7 +364,6 @@ namespace Rivet {
           exit(1);
         }
         xsecs.push_back(xsec->point(0).x());
-        sows.push_back(sow);
 	xsecerrs.push_back(sqr(xsec->point(0).xErrAvg()));
         _eventcounter += *sow;
         sows.push_back(sow);

@@ -2,7 +2,7 @@
 #include "Rivet/Analysis.hh"
 #include "Rivet/Projections/FinalState.hh"
 #include "Rivet/Projections/ChargedFinalState.hh"
-#include "Rivet/Projections/UnstableFinalState.hh"
+#include "Rivet/Projections/UnstableParticles.hh"
 
 namespace Rivet {
 
@@ -39,7 +39,7 @@ namespace Rivet {
       MSG_DEBUG("sqrt(s) = " << sqrtS()/GeV << " GeV");
 
       // Final state of unstable particles to get particle spectra
-      const UnstableFinalState& ufs = apply<UnstableFinalState>(e, "UFS");
+      const UnstableParticles& ufs = apply<UnstableFinalState>(e, "UFS");
 
       if (sqrtS()/GeV >= 9.5 && sqrtS()/GeV <= 10.5) {
         foreach (const Particle& p, ufs.particles()) {
@@ -434,7 +434,7 @@ namespace Rivet {
 
     void init() {
       declare(ChargedFinalState(), "FS");
-      declare(UnstableFinalState(), "UFS");
+      declare(UnstableParticles(), "UFS");
 
       if (sqrtS()/GeV >= 9.5 && sqrtS()/GeV <= 10.5) {
         _histMeanMultiPiPlus             = bookHisto1D( 1, 1, 1);

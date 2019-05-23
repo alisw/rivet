@@ -86,21 +86,24 @@ namespace Rivet {
 
       // Isolate jets from W and Z charged leptons
       const Particles wzleps = filter_select(W.constituents()+Z.constituents(), isChLepton);
-      const Jets& jets = apply<FastJets>("Jets", event).jets();
+      const Jets& jets = apply<FastJets>("Jets", event).jetsByPt(Cuts::pT > 30*GeV and Cuts::abseta < 2.5);
       const Jets isojets = discardIfAnyDeltaRLess(jets, wzleps, 0.5);
 
       // Fill jet histograms
-      _h_Njet->fill(jets.size(), event.weight());
-      if (!jets.empty()) _h_JpT->fill(jets[0].pT()/GeV, event.weight());
+      _h_Njet->fill(isojets.size(), event.weight());
+      if (!isojets.empty()) _h_JpT->fill(isojets[0].pT()/GeV, event.weight());
 
     }
 
 
     /// Normalise histograms etc., after the run
     void finalize() {
-      scale(_h_ZpT, crossSection()/picobarn);
-      scale(_h_Njet, crossSection()/picobarn);
-      scale(_h_JpT, crossSection()/picobarn);
+      // Total cross-section is corrected for BR(W->lnu), BR(Z->ll), leptonic-tau fraction f_tau = 6.5-7.6%,
+      // and unpublished detector/acceptance signal efficiencies epsilon_sig. Fix to published value: valid for shape comparison only
+      const double xsec8tev = 24.09; // picobarn;
+      normalize(_h_ZpT,  xsec8tev);
+      normalize(_h_Njet, xsec8tev);
+      normalize(_h_JpT,  xsec8tev);
     }
 
 

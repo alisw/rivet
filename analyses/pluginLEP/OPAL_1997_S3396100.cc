@@ -3,7 +3,7 @@
 #include "Rivet/Projections/Beam.hh"
 #include "Rivet/Projections/FinalState.hh"
 #include "Rivet/Projections/ChargedFinalState.hh"
-#include "Rivet/Projections/UnstableFinalState.hh"
+#include "Rivet/Projections/UnstableParticles.hh"
 
 namespace Rivet {
 
@@ -28,7 +28,7 @@ namespace Rivet {
     void init() {
       declare(Beam(), "Beams");
       declare(ChargedFinalState(), "FS");
-      declare(UnstableFinalState(), "UFS");
+      declare(UnstableParticles(), "UFS");
       _histXpLambda         = bookHisto1D( 1, 1, 1);
       _histXiLambda         = bookHisto1D( 2, 1, 1);
       _histXpXiMinus        = bookHisto1D( 3, 1, 1);
@@ -66,7 +66,7 @@ namespace Rivet {
       MSG_DEBUG("Avg beam momentum = " << meanBeamMom);
 
       // Final state of unstable particles to get particle spectra
-      const UnstableFinalState& ufs = apply<UnstableFinalState>(e, "UFS");
+      const UnstableParticles& ufs = apply<UnstableFinalState>(e, "UFS");
 
       foreach (const Particle& p, ufs.particles()) {
         const int id = p.abspid();

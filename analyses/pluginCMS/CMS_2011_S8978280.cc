@@ -1,6 +1,6 @@
 // -*- C++ -*-
 #include "Rivet/Analysis.hh"
-#include "Rivet/Projections/UnstableFinalState.hh"
+#include "Rivet/Projections/UnstableParticles.hh"
 
 namespace Rivet {
 
@@ -17,7 +17,7 @@ namespace Rivet {
 
 
     void init() {
-      UnstableFinalState ufs(Cuts::absrap < 2);
+      UnstableParticles ufs(Cuts::absrap < 2);
       declare(ufs, "UFS");
 
       // Particle distributions versus rapidity and transverse momentum
@@ -53,7 +53,7 @@ namespace Rivet {
     void analyze(const Event& event) {
       const double weight = event.weight();
 
-      const UnstableFinalState& parts = apply<UnstableFinalState>(event, "UFS");
+      const UnstableParticles& parts = apply<UnstableFinalState>(event, "UFS");
       foreach (const Particle& p, parts.particles()) {
         switch (p.abspid()) {
         case PID::K0S:

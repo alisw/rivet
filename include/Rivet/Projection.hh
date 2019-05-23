@@ -57,6 +57,15 @@ namespace Rivet {
       return _name;
     }
 
+    /// Get the state of the projetion.
+    bool valid() const {
+      return _isValid;
+    }
+
+    /// Get the state of the projetion.
+    bool failed() const {
+      return !valid();
+    }
 
     /// @name Projection operation and comparison
     //@{
@@ -134,6 +143,11 @@ namespace Rivet {
       _name = name;
     }
 
+    /// Set the projection in an unvalid state.
+    void fail() {
+      _isValid = false;
+    }
+
     /// Shortcut to make a named Cmp<Projection> comparison with the @c *this
     /// object automatically passed as one of the parent projections.
     Cmp<Projection> mkNamedPCmp(const Projection& otherparent, const std::string& pname) const;
@@ -158,6 +172,9 @@ namespace Rivet {
     /// @todo Remove?
     set<PdgIdPair> _beamPairs;
 
+    /// Flag to tell if this projection is in a valid state.
+    bool _isValid;
+    
   };
 
 

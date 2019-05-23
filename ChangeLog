@@ -1,8 +1,41 @@
+2019-05-21  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Release version 2.7.2
+
+	* Fixes to CMS_2016_I1487288 jet selection and
+	normalisation. Thanks to Peter Richardson for highlighting the
+	issues.
+
+2019-05-20  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Improve Vector3::azimuthalAngle() (also used by FourMomentum and
+	FourVector) to use exact rather than fuzzy is-zero check, to only
+	check the perpendicular components, and to note that IEEE floating
+	point implementations of atan2 should already be 'safe' unless we
+	decide that this function should throw or return NaN in case of
+	null or along-z vectors. Thanks to Louis Moureaux from CMS for the
+	report and diagnosis.
+
+2019-05-17  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Tools/Utils.h: Add isum() functions, and mark other container
+	functions as wanting a conversion to use std::function.
+
+2019-05-16  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add super-generic (i)discardIfAny(particlebases, particlebases, bool(pb,pb)) functions.
+
+2019-05-16 Christian Gutschow  <chris.g@cern.ch>
+
+	* Introduce TTMODE options for MC_TTBAR to pick the decay mode
+
 2019-05-09 Christian Gutschow  <chris.g@cern.ch>
+
 	* Release version 2.7.1
 
 2019-05-09 Christian Gutschow  <chris.g@cern.ch>
-	* add correlation information for those analyses 
+
+	* add correlation information for those analyses
 	that are compatible with HEPData
 	* prevent Variations meta data from being copied
 	* comment out redudnant code in MeasureDefinition.cc
@@ -192,6 +225,21 @@
 
 	* Fix multiple bugs in ATLAS_2017_I1514251 (Z+jets) including a
 	problem with REF data having zero bin widths
+
+2019-02-23  Jon Butterworth <j.butterworth@ucl.ac.uk>
+
+	* Added first version of ZEUS_2012_I1116258 (dijet photoproduction). Currently works but unvalidated,
+	  need to check exact recombination scheme with ZEUS contacts. Note ZEUS_2001_S4815815 also needs the
+	  recombination scheme checking. (Now done; changed to Et scheme are checking original code, 27/2/19.)
+
+2019-02-20  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Move UnstableParticles to a consistently-named header, with
+	UnstableFinalState.hh retained for backward compatibility.
+
+	* Improve/fix UnstableParticles projection's Cut constructor
+	argument to apply the cut on a Rivet::Particle rather than a
+	HepMC::FourVector, meaning that PID cuts can now be used.
 
 2019-02-17  Andy Buckley  <andy.buckley@cern.ch>
 

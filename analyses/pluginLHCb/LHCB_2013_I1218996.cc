@@ -2,7 +2,7 @@
 #include "Rivet/Analysis.hh"
 #include "Rivet/Tools/BinnedHistogram.hh"
 #include "Rivet/Projections/FinalState.hh"
-#include "Rivet/Projections/UnstableFinalState.hh"
+#include "Rivet/Projections/UnstableParticles.hh"
 
 namespace Rivet {
 
@@ -29,7 +29,7 @@ namespace Rivet {
     void init() {
 
       /// Initialise and register projections
-      declare(UnstableFinalState(), "UFS");
+      declare(UnstableParticles(), "UFS");
 
       /// Book histograms
       _h_pdg411_Dplus_pT_y.addHistogram(  2.0, 2.5, bookHisto1D(3, 1, 1));
@@ -65,7 +65,7 @@ namespace Rivet {
       const double weight = event.weight();
 
       /// @todo Use PrimaryHadrons to avoid double counting and automatically remove the contributions from unstable?
-      const UnstableFinalState &ufs = apply<UnstableFinalState> (event, "UFS");
+      const UnstableParticles &ufs = apply<UnstableFinalState> (event, "UFS");
       foreach (const Particle& p, ufs.particles() ) {
 
         // We're only interested in charm hadrons

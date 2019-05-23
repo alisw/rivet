@@ -1,7 +1,7 @@
 // -*- C++ -*-
 #include "Rivet/Analysis.hh"
 #include "Rivet/Projections/FinalState.hh"
-#include "Rivet/Projections/UnstableFinalState.hh"
+#include "Rivet/Projections/UnstableParticles.hh"
 #include "Rivet/Projections/VetoedFinalState.hh"
 #include "Rivet/Projections/IdentifiedFinalState.hh"
 #include "Rivet/Projections/PromptFinalState.hh"
@@ -56,7 +56,7 @@ namespace Rivet {
 
       // Tau finding
       /// @todo Use TauFinder
-      UnstableFinalState ufs;
+      UnstableParticles ufs;
       IdentifiedFinalState tau_id(ufs);
       tau_id.acceptIdPair(PID::TAU);
       PromptFinalState bare_tau(tau_id);

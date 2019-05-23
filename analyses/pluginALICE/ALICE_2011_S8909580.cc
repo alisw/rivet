@@ -1,6 +1,6 @@
 #include "Rivet/Analysis.hh"
 #include "Rivet/Projections/FinalState.hh"
-#include "Rivet/Projections/UnstableFinalState.hh"
+#include "Rivet/Projections/UnstableParticles.hh"
 
 namespace Rivet {
 
@@ -15,7 +15,7 @@ namespace Rivet {
 
   public:
     void init() {
-      const UnstableFinalState ufs(Cuts::abseta < 15);
+      const UnstableParticles ufs(Cuts::abseta < 15);
       declare(ufs, "UFS");
 
       _histPtK0s        = bookHisto1D(1, 1, 1);
@@ -31,7 +31,7 @@ namespace Rivet {
 
     void analyze(const Event& event) {
       const double weight = event.weight();
-      const UnstableFinalState& ufs = apply<UnstableFinalState>(event, "UFS");
+      const UnstableParticles& ufs = apply<UnstableFinalState>(event, "UFS");
 
       foreach (const Particle& p, ufs.particles()) {
         const double absrap = p.absrap();

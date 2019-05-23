@@ -58,12 +58,14 @@ namespace Rivet {
 
       // Get the DIS kinematics
       const DISKinematics& dk = apply<DISKinematics>(event, "Kinematics");
+      if ( dk.failed() ) vetoEvent;
       const double x  = dk.x();
       const double w2 = dk.W2();
       const double w = sqrt(w2);
 
       // Momentum of the scattered lepton
       const DISLepton& dl = apply<DISLepton>(event,"Lepton");
+      if ( dl.failed() ) return;
       const FourMomentum leptonMom = dl.out();
       const double ptel = leptonMom.pT();
       const double enel = leptonMom.E();

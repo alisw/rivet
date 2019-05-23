@@ -94,11 +94,11 @@ namespace Rivet {
     }
 
 
-    /// Unit-normalized version of this vector
+    /// Unit-normalized version of this vector.
     Vector3 unitVec() const {
-      /// @todo What to do in this situation?
-      if (isZero()) return *this;
-      else return *this * 1.0/this->mod();
+      double md = mod();
+      if ( md <= 0.0 ) return Vector3();
+      else return *this * 1.0/md;
     }
 
     /// Synonym for unitVec
@@ -149,10 +149,13 @@ namespace Rivet {
     }
 
     /// Angle subtended by the vector's projection in x-y and the x-axis.
+    ///
+    /// @note Returns zero in the case of a vector with null x and y components.
+    /// @todo Would it be better to return NaN in the null-perp case? Or throw?!
     double azimuthalAngle(const PhiMapping mapping = ZERO_2PI) const {
-      // If this is a null vector, return zero rather than let atan2 set an error state
-      if (Rivet::isZero(mod2())) return 0.0;
-
+      // If this has a null perp-vector, return zero rather than let atan2 set an error state
+      // This isn't necessary if the implementation supports IEEE floating-point arithmetic (IEC 60559)... are we sure?
+      if (x() == 0 && y() == 0) return 0.0; //< Or return nan / throw an exception?
       // Calculate the arctan and return in the requested range
       const double value = atan2( y(), x() );
       return mapAngle(value, mapping);

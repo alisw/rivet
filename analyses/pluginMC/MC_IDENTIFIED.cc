@@ -1,7 +1,7 @@
 // -*- C++ -*-
 #include "Rivet/Analysis.hh"
 #include "Rivet/Projections/FinalState.hh"
-#include "Rivet/Projections/UnstableFinalState.hh"
+#include "Rivet/Projections/UnstableParticles.hh"
 
 namespace Rivet {
 
@@ -28,7 +28,7 @@ namespace Rivet {
       // Projections
       const FinalState cnfs(Cuts::abseta < 5.0 && Cuts::pT > 500*MeV);
       declare(cnfs, "FS");
-      declare(UnstableFinalState(Cuts::abseta < 5.0 && Cuts::pT > 500*MeV), "UFS");
+      declare(UnstableParticles(Cuts::abseta < 5.0 && Cuts::pT > 500*MeV), "UFS");
 
       // Histograms
       // @todo Choose E/pT ranged based on input energies... can't do anything about kin. cuts, though
@@ -60,7 +60,7 @@ namespace Rivet {
       }
 
       // Unstable PIDs and identified particle eta spectra
-      const UnstableFinalState& ufs = apply<UnstableFinalState>(event, "UFS");
+      const UnstableParticles& ufs = apply<UnstableFinalState>(event, "UFS");
       foreach (const Particle& p, ufs.particles()) {
         _histDecayedPIDs->fill(p.pid(), weight);
         const double eta_abs = p.abseta();

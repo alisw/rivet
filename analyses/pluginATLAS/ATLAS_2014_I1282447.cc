@@ -118,7 +118,7 @@
 //////////////////////////////////////////////////////////////////////////
 
 #include "Rivet/Analysis.hh"
-#include "Rivet/Projections/UnstableFinalState.hh"
+#include "Rivet/Projections/UnstableParticles.hh"
 #include "Rivet/Projections/WFinder.hh"
 #include "Rivet/Projections/FastJets.hh"
 #include "Rivet/Projections/ChargedFinalState.hh"
@@ -145,7 +145,7 @@ namespace Rivet {
     void init() {
 
       /// @todo Initialise and register projections here
-      UnstableFinalState fs;
+      UnstableParticles fs;
 
       Cut cuts = Cuts::etaIn(-2.5, 2.5) & (Cuts::pT > 20*GeV);
 
@@ -158,7 +158,7 @@ namespace Rivet {
 
       // all hadrons that could be coming from a charm decay --
       // -- for safety, use region -3.5 - 3.5
-      declare(UnstableFinalState(Cuts::abseta <3.5), "hadrons");
+      declare(UnstableParticles(Cuts::abseta <3.5), "hadrons");
 
       // Input for the jets: no neutrinos, no muons, and no electron which passed the electron cuts
       // also: NO electron, muon or tau (needed due to ATLAS jet truth reconstruction feature)
@@ -292,7 +292,7 @@ namespace Rivet {
       }
 
       // Find hadrons in the event
-      const UnstableFinalState& fs = apply<UnstableFinalState>(event, "hadrons");
+      const UnstableParticles& fs = apply<UnstableFinalState>(event, "hadrons");
 
       /// FIND Different channels
       // 1: wcjet

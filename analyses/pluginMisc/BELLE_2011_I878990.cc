@@ -1,6 +1,6 @@
 // -*- C++ -*-
 #include "Rivet/Analysis.hh"
-#include "Rivet/Projections/UnstableFinalState.hh"
+#include "Rivet/Projections/UnstableParticles.hh"
 
 namespace Rivet {
 
@@ -20,7 +20,7 @@ namespace Rivet {
     void init() {
 
       // Initialise and register projections
-      declare(UnstableFinalState(), "UFS");
+      declare(UnstableParticles(), "UFS");
 
       // Book histograms
       _h_q2 = bookHisto1D(1, 1, 1);
@@ -44,7 +44,7 @@ namespace Rivet {
     /// Perform the per-event analysis
     void analyze(const Event& event) {
       // Loop over B0 mesons 
-      foreach(const Particle& p, apply<UnstableFinalState>(event, "UFS").particles(Cuts::pid==PID::B0)) {
+      foreach(const Particle& p, apply<UnstableParticles>(event, "UFS").particles(Cuts::pid==PID::B0)) {
         if (isSemileptonicDecay(p, {PID::PIMINUS, PID::POSITRON, PID::NU_E}) ||
             isSemileptonicDecay(p, {PID::PIMINUS, PID::ANTIMUON, PID::NU_MU})) {
             _h_q2->fill(q2(p, PID::PIMINUS), event.weight());

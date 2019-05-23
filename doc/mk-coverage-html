@@ -42,8 +42,8 @@ now = datetime.datetime.now()
 
 ## Experiment (grouping) names and regex patterns
 import re
-EXPTS = ["ALICE", "ATLAS", "CMS", "LHCb", "B-factories", "HERA", "Other"]
-EXPT_PATTS = ["ALICE", "ATLAS", "CMS", "LHCb", "BABAR|BELLE", "H1|ZEUS"]
+EXPTS = ["ALICE", "ATLAS", "CMS", "LHCb", "B-factories", "HERA", "LEP", "Other"]
+EXPT_PATTS = ["ALICE", "ATLAS", "CMS", "LHCb", "BABAR|BELLE", "H1|ZEUS", "ALEPH|DELPHI|L3|OPAL|SLD"]
 EXPT_REOBJS = [re.compile(patt, re.I) for patt in EXPT_PATTS]
 
 ## Add the rivet Python module build dir(s) to the Python module path, then import

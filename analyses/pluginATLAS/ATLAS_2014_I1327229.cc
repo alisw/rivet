@@ -5,7 +5,7 @@
 #include "Rivet/Projections/VisibleFinalState.hh"
 #include "Rivet/Projections/VetoedFinalState.hh"
 #include "Rivet/Projections/IdentifiedFinalState.hh"
-#include "Rivet/Projections/UnstableFinalState.hh"
+#include "Rivet/Projections/UnstableParticles.hh"
 #include "Rivet/Projections/FastJets.hh"
 
 
@@ -53,7 +53,7 @@ namespace Rivet {
       declare(FastJets(vfs, FastJets::ANTIKT, 0.4), "AntiKtJets04");
 
       // Final state including all unstable particles (including taus)
-      declare(UnstableFinalState(Cuts::abseta < 5.0 && Cuts::pT > 5*GeV),"UFS");
+      declare(UnstableParticles(Cuts::abseta < 5.0 && Cuts::pT > 5*GeV),"UFS");
 
       // Final state including all electrons
       IdentifiedFinalState elecs(Cuts::abseta < 2.47 && Cuts::pT > 10*GeV);
@@ -157,7 +157,7 @@ namespace Rivet {
 
       // Taus
       Particles tau_candidates;
-      for (const Particle& tau : apply<UnstableFinalState>(event, "UFS").particles() ) {
+      for (const Particle& tau : apply<UnstableParticles>(event, "UFS").particles() ) {
         // Only pick taus out of all unstable particles
         if ( tau.abspid() != PID::TAU) continue;
         // Check that tau has decayed into daughter particles

@@ -2,7 +2,7 @@
 #include "Rivet/Analysis.hh"
 #include "Rivet/Projections/Beam.hh"
 #include "Rivet/Projections/ChargedFinalState.hh"
-#include "Rivet/Projections/UnstableFinalState.hh"
+#include "Rivet/Projections/UnstableParticles.hh"
 
 namespace Rivet {
 
@@ -25,7 +25,7 @@ namespace Rivet {
     /// Book histograms and initialise projections before the run
     void init() {
       declare(Beam(), "Beams");
-      declare(UnstableFinalState(), "UFS");
+      declare(UnstableParticles(), "UFS");
       declare(ChargedFinalState(), "CFS");
 
       _h_Xe_Ds = bookHisto1D(1, 1, 1);
@@ -40,7 +40,7 @@ namespace Rivet {
       const ChargedFinalState& cfs = apply<ChargedFinalState>(event, "CFS");
       if (cfs.size() < 5) vetoEvent;
 
-      const UnstableFinalState& ufs = apply<UnstableFinalState>(event, "UFS");
+      const UnstableParticles& ufs = apply<UnstableFinalState>(event, "UFS");
 
       // Get beams and average beam momentum
       const ParticlePair& beams = apply<Beam>(event, "Beams").beams();

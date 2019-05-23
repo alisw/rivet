@@ -9,6 +9,10 @@ namespace Rivet {
 
     // Find appropriate DIS leptons
     const DISLepton& dislep = applyProjection<DISLepton>(e, "Lepton");
+    if ( dislep.failed() ) {
+      fail();
+      return;
+    }
     _outLepton = dislep.out();
 
     // Identify beam hadron
@@ -22,7 +26,8 @@ namespace Rivet {
       _inHadron = inc.second;
       _inLepton = dislep.in(); // inc.first;
     } else {
-      throw Error("DISKinematics could not find the correct beam hadron");
+      fail();
+      return;
     }
 
     // Get the DIS lepton and store some of its properties

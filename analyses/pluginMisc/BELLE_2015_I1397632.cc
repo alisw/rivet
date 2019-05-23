@@ -1,6 +1,6 @@
 // -*- C++ -*-
 #include "Rivet/Analysis.hh"
-#include "Rivet/Projections/UnstableFinalState.hh"
+#include "Rivet/Projections/UnstableParticles.hh"
 
 namespace Rivet {
 
@@ -21,7 +21,7 @@ namespace Rivet {
 
       // Initialise and register projections
 
-      declare(UnstableFinalState(), "UFS");
+      declare(UnstableParticles(), "UFS");
 
       // Book histograms
       _h_B_Denu      = bookHisto1D(1, 1, 1);
@@ -51,12 +51,12 @@ namespace Rivet {
     /// Perform the per-event analysis
     void analyze(const Event& event) {
       // Get B0 Mesons
-      foreach(const Particle& p, apply<UnstableFinalState>(event, "UFS").particles(Cuts::pid==PID::B0)) {
+      foreach(const Particle& p, apply<UnstableParticles>(event, "UFS").particles(Cuts::pid==PID::B0)) {
         if (isSemileptonicDecay(p, {PID::DMINUS,PID::POSITRON,PID::NU_E})) _h_B_Denu->fill( recoilW(p, PID::DMINUS), event.weight());
         if (isSemileptonicDecay(p, {PID::DMINUS,PID::ANTIMUON,PID::NU_MU})) _h_B_Dmunu->fill(recoilW(p, PID::DMINUS), event.weight());
       }
       // Get B+ Mesons
-      foreach(const Particle& p, apply<UnstableFinalState>(event, "UFS").particles(Cuts::pid==PID::BPLUS)) {
+      foreach(const Particle& p, apply<UnstableParticles>(event, "UFS").particles(Cuts::pid==PID::BPLUS)) {
         if (isSemileptonicDecay(p, {PID::D0BAR,PID::POSITRON,PID::NU_E})) _h_B_Deplusnu->fill( recoilW(p, PID::D0BAR), event.weight());
         if (isSemileptonicDecay(p, {PID::D0BAR,PID::ANTIMUON,PID::NU_MU})) _h_B_Dmuplusnu->fill(recoilW(p, PID::D0BAR), event.weight());
       }

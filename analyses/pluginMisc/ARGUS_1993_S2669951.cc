@@ -1,6 +1,6 @@
 // -*- C++ -*-
 #include "Rivet/Analysis.hh"
-#include "Rivet/Projections/UnstableFinalState.hh"
+#include "Rivet/Projections/UnstableParticles.hh"
 
 namespace Rivet {
 
@@ -22,7 +22,7 @@ namespace Rivet {
 
 
     void init() {
-      declare(UnstableFinalState(), "UFS");
+      declare(UnstableParticles(), "UFS");
 
       _hist_cont_f0 = bookHisto1D(2, 1, 1);
       _hist_Ups1_f0 = bookHisto1D(3, 1, 1);
@@ -33,7 +33,7 @@ namespace Rivet {
     void analyze(const Event& e) {
 
       // Find the Upsilons among the unstables
-      const UnstableFinalState& ufs = apply<UnstableFinalState>(e, "UFS");
+      const UnstableParticles& ufs = apply<UnstableFinalState>(e, "UFS");
       Particles upsilons;
 
       // First in unstable final state

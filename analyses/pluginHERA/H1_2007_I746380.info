@@ -1,0 +1,46 @@
+Name: H1_2007_I746380
+Year: 2007
+Summary: Tests of QCD Factorisation in the diffractive production of dijets in deep-inelastic scattering and photoproduction at HERA
+Experiment: H1
+Collider: HERA
+InspireID: 746380
+Status: UNVALIDATED
+Authors:
+ - Christine O. Rasmussen <christine.rasmussen@thep.lu.se>
+ - Ilkka Helenius <ilkka.m.helenius@jyu.fi>
+References:
+- Eur. Phys. J. C51 (2007) 549
+- arXiv:hep-ex/0703022
+RunInfo:
+  820 GeV protons colliding with 27.5 GeV positrons;
+  Diffractive photoproduction of dijets;
+  Jet $E_T > 4$ GeV;
+NumEvents: 1000000
+Beams: [p+, e+]
+Energies: [[820, 27.5]]
+PtCuts: [0]
+Description:
+  H1 diffractive jets from proton--positron collisions at beam energies of
+  820~GeV and 27.5~GeV. Measurements are presented of differential dijet cross
+  sections in diffractive photoproduction (Q2 < 0.01 GeV2) and deep-inelastic
+  scattering processes (DIS, 4 < Q2 < 80 GeV2). The event topology is given by
+  ep → eXY , in which the system X, containing at least two jets, is separated
+  from a leading low-mass proton remnant system Y by a large rapidity gap.
+BibKey: Aktas:2007hn
+BibTeX: '@article{Aktas:2007hn,
+      author         = "Aktas, A. and others",
+      title          = "{Tests of QCD factorisation in the diffractive production
+                        of dijets in deep-inelastic scattering and photoproduction
+                        at HERA}",
+      collaboration  = "H1",
+      journal        = "Eur. Phys. J.",
+      volume         = "C51",
+      year           = "2007",
+      pages          = "549-568",
+      doi            = "10.1140/epjc/s10052-007-0325-4",
+      eprint         = "hep-ex/0703022",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "DESY-07-018",
+      SLACcitation   = "%%CITATION = HEP-EX/0703022;%%"
+}'

@@ -4,12 +4,14 @@ Status: VALIDATED
 Authors:
  - Hendrik Hoeth <hendrik.hoeth@cern.ch>
  - Andy Buckley <andy.buckley@cern.ch>
+ - Christian Gutschow <chris.g@cern.ch>
  - Dave Mallows
  - Michal Kawalec
 RunInfo:
- "* For Pythia6, set MSEL=6 and fix $W^+$ and $W^-$ decays to semi-leptonic modes via the MDME array.
-  * For Fortran Herwig/Jimmy select IPROC=1706."
+ "pp -> tt, force top decays to be one of all hadronic / single leptonic / dileptonic / non-all-hadronic."
 NumEvents: 10000
 PtCuts: [0]
 Description:
-  This is a pure Monte Carlo study for semi-leptonic $t\bar{t}$ production.
+  This is a pure Monte Carlo study for $t\bar{t}$ production.
+Options:
+- TTMODE=ALLHAD,ONELEP,TWOLEP,ANYLEP

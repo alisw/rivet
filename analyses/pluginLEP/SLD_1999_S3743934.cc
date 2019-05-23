@@ -2,7 +2,7 @@
 #include "Rivet/Analysis.hh"
 #include "Rivet/Projections/Beam.hh"
 #include "Rivet/Projections/FinalState.hh"
-#include "Rivet/Projections/UnstableFinalState.hh"
+#include "Rivet/Projections/UnstableParticles.hh"
 #include "Rivet/Projections/ChargedFinalState.hh"
 #include "Rivet/Projections/InitialQuarks.hh"
 #include "Rivet/Projections/Thrust.hh"
@@ -190,7 +190,7 @@ namespace Rivet {
         }
       }
 
-      const UnstableFinalState& ufs = apply<UnstableFinalState>(e, "UFS");
+      const UnstableParticles& ufs = apply<UnstableFinalState>(e, "UFS");
       foreach (const Particle& p, ufs.particles()) {
         const double xp = p.p3().mod()/meanBeamMom;
         // if in quark or antiquark hemisphere
@@ -295,7 +295,7 @@ namespace Rivet {
       // Projections
       declare(Beam(), "Beams");
       declare(ChargedFinalState(), "FS");
-      declare(UnstableFinalState(), "UFS");
+      declare(UnstableParticles(), "UFS");
       declare(InitialQuarks(), "IQF");
       declare(Thrust(FinalState()), "Thrust");
 

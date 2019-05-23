@@ -1,6 +1,6 @@
 //-*- C++ -*-
 #include "Rivet/Analysis.hh"
-#include "Rivet/Projections/UnstableFinalState.hh"
+#include "Rivet/Projections/UnstableParticles.hh"
 
 namespace Rivet {
 
@@ -15,7 +15,7 @@ namespace Rivet {
     /// Initialise projections and histograms
     void init() {
 
-      const UnstableFinalState ufs(Cuts::absrap < RAPMAX);
+      const UnstableParticles ufs(Cuts::absrap < RAPMAX);
       addProjection(ufs, "UFS");
 
       // Check if cm energy is 7 TeV or 0.9 TeV
@@ -43,7 +43,7 @@ namespace Rivet {
     void analyze(const Event& event) {
       const double weight = event.weight();
 
-      const FinalState& ufs = apply<UnstableFinalState>(event, "UFS");
+      const FinalState& ufs = apply<UnstableParticles>(event, "UFS");
       for (const Particle& p : ufs.particles()) {
         const double normfactor = TWOPI*p.pT()/GeV*2*RAPMAX;
         if (p.pid() == 111) {

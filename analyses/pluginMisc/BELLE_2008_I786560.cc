@@ -1,6 +1,6 @@
 // -*- C++ -*-
 #include "Rivet/Analysis.hh"
-#include "Rivet/Projections/UnstableFinalState.hh"
+#include "Rivet/Projections/UnstableParticles.hh"
 
 namespace Rivet {
 
@@ -18,7 +18,7 @@ namespace Rivet {
 
 
     void init() {
-      declare(UnstableFinalState(), "UFS");
+      declare(UnstableParticles(), "UFS");
       _hist_pipi = bookHisto1D( 1, 1, 1);
     }
 
@@ -26,7 +26,7 @@ namespace Rivet {
     void analyze(const Event& e) {
       // Find the taus
       Particles taus;
-      const UnstableFinalState& ufs = apply<UnstableFinalState>(e, "UFS");
+      const UnstableParticles& ufs = apply<UnstableFinalState>(e, "UFS");
       foreach (const Particle& p, ufs.particles()) {
         if (p.abspid() != PID::TAU) continue;
         _weight_total += 1.;

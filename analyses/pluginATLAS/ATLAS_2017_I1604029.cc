@@ -4,7 +4,7 @@
 #include "Rivet/Projections/FinalState.hh"
 #include "Rivet/Projections/DressedLeptons.hh"
 #include "Rivet/Projections/PromptFinalState.hh"
-#include "Rivet/Projections/UnstableFinalState.hh"
+#include "Rivet/Projections/UnstableParticles.hh"
 
 namespace Rivet {
 
@@ -44,7 +44,7 @@ namespace Rivet {
       // auxiliary projections for 'single-lepton ttbar filter'
       PromptFinalState prompt_lep(Cuts::abspid == PID::MUON || Cuts::abspid == PID::ELECTRON);
       declare(prompt_lep, "prompt_leps");
-      declare(UnstableFinalState(), "ufs");
+      declare(UnstableParticles(), "ufs");
 
       // jets
       FastJets jets(fs, FastJets::ANTIKT, 0.4, JetAlg::NO_MUONS, JetAlg::NO_INVISIBLES);
@@ -65,7 +65,7 @@ namespace Rivet {
       // (i.e. contribution from dileptonic ttbar where one of the leptons is outside 
       // the detector acceptance has been subtracted as a background)
       if (applyProjection<PromptFinalState>(event, "prompt_leps").particles().size() != 1)  vetoEvent;
-      for (const auto& p : apply<UnstableFinalState>(event, "ufs").particles()) {
+      for (const auto& p : apply<UnstableParticles>(event, "ufs").particles()) {
         if (p.fromPromptTau())  vetoEvent;
       }
 

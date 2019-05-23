@@ -3,7 +3,7 @@
 #include "Rivet/Projections/SingleValueProjection.hh"
 #include "Rivet/Projections/ImpactParameterProjection.hh"
 #include "Rivet/Projections/FinalState.hh"
-#include "Rivet/Projections/UnstableFinalState.hh"
+#include "Rivet/Projections/UnstableParticles.hh"
 #include "Rivet/Projections/ChargedFinalState.hh"
 
 namespace Rivet {

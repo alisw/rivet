@@ -131,6 +131,7 @@ namespace Rivet {
       }
       // If this one hasn't been run yet on this event, run it and add to the list
       Projection* pp = const_cast<Projection*>(&p);
+      pp->_isValid = true;
       pp->project(*this);
       if (docaching) _projections.insert(pp);
       return p;

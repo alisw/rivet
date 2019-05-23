@@ -1,7 +1,7 @@
 // -*- C++ -*-
 #include "Rivet/Analysis.hh"
 #include "Rivet/Projections/ChargedFinalState.hh"
-#include "Rivet/Projections/UnstableFinalState.hh"
+#include "Rivet/Projections/UnstableParticles.hh"
 #include "Rivet/Projections/FastJets.hh"
 
 namespace Rivet {
@@ -17,7 +17,7 @@ namespace Rivet {
       const FastJets jets(ChargedFinalState(Cuts::abseta < 2.5 && Cuts::pT > 0.5*GeV), FastJets::ANTIKT, 0.5);
       declare(jets, "Jets");
 
-      const UnstableFinalState ufs(Cuts::abseta < 2 && Cuts::pT > 0.6*GeV);
+      const UnstableParticles ufs(Cuts::abseta < 2 && Cuts::pT > 0.6*GeV);
       declare(ufs, "UFS");
 
       _h_nTrans_Lambda     = bookProfile1D(1, 1, 1);
@@ -40,7 +40,7 @@ namespace Rivet {
       FourMomentum p_lead = jets[0].momentum();
       const double pTlead  = p_lead.pT();
 
-      const UnstableFinalState& ufs = apply<UnstableFinalState>(event, "UFS");
+      const UnstableParticles& ufs = apply<UnstableFinalState>(event, "UFS");
 
       int numTrans_Kaon = 0;
       int numTrans_Lambda = 0;

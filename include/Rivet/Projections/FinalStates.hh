@@ -11,7 +11,6 @@
 #include "Rivet/Projections/VetoedFinalState.hh"
 #include "Rivet/Projections/PromptFinalState.hh"
 #include "Rivet/Projections/NonPromptFinalState.hh"
-#include "Rivet/Projections/UnstableFinalState.hh"
 #include "Rivet/Projections/VisibleFinalState.hh"
 
 #endif

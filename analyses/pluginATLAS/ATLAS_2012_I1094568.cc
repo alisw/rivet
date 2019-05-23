@@ -3,7 +3,7 @@
 #include "Rivet/Projections/FinalState.hh"
 #include "Rivet/Projections/IdentifiedFinalState.hh"
 #include "Rivet/Projections/LeadingParticlesFinalState.hh"
-#include "Rivet/Projections/UnstableFinalState.hh"
+#include "Rivet/Projections/UnstableParticles.hh"
 #include "Rivet/Projections/HadronicFinalState.hh"
 #include "Rivet/Projections/VetoedFinalState.hh"
 #include "Rivet/Projections/FastJets.hh"
@@ -166,7 +166,7 @@ namespace Rivet {
       }
 
       // Get b hadrons with pT > 5 GeV
-      /// @todo This is a hack -- replace with UnstableFinalState
+      /// @todo This is a hack -- replace with UnstableParticles
       vector<GenParticle const *> B_hadrons;
       vector<GenParticle const *> allParticles = particles(event.genEvent());
       for (size_t i = 0; i < allParticles.size(); i++) {

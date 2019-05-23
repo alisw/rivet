@@ -31,8 +31,9 @@ namespace Rivet {
 
       // Projections
       /// @todo Acceptance
+      // checking recombination scheme and radius checked with original code from M.Wing
       FinalState fs;
-      declare(FastJets(fs, FastJets::KT, 1.0), "Jets"); //< R=1 checked with Matt Wing
+      declare(FastJets(fs, fastjet::JetAlgorithm::kt_algorithm, fastjet::RecombinationScheme::Et_scheme, 1.0), "Jets"); 
       declare(DISKinematics(), "Kinematics");
 
       // Table 1
@@ -73,6 +74,7 @@ namespace Rivet {
 
       // Determine kinematics, including event orientation since ZEUS coord system is for +z = proton direction
       const DISKinematics& kin = apply<DISKinematics>(event, "Kinematics");
+      if ( kin.failed() ) vetoEvent;
       const int orientation = kin.orientation();
 
       // Q2 and inelasticity cuts

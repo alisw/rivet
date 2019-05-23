@@ -3,7 +3,7 @@
 #include "Rivet/Projections/Beam.hh"
 #include "Rivet/Projections/FinalState.hh"
 #include "Rivet/Projections/ChargedFinalState.hh"
-#include "Rivet/Projections/UnstableFinalState.hh"
+#include "Rivet/Projections/UnstableParticles.hh"
 
 
 
@@ -24,7 +24,7 @@ namespace Rivet {
     void init() {
       declare(Beam(), "Beams");
       declare(ChargedFinalState(), "FS");
-      declare(UnstableFinalState(), "UFS");
+      declare(UnstableParticles(), "UFS");
 
       _histXbweak     = bookHisto1D(1, 1, 1);
       _histMeanXbweak = bookProfile1D(2, 1, 1);
@@ -49,7 +49,7 @@ namespace Rivet {
                                    beams.second.p3().mod() ) / 2.0;
       MSG_DEBUG("Avg beam momentum = " << meanBeamMom);
 
-      const UnstableFinalState& ufs = apply<UnstableFinalState>(e, "UFS");
+      const UnstableParticles& ufs = apply<UnstableFinalState>(e, "UFS");
       // Get Bottom hadrons
       const Particles bhads = filter_select(ufs.particles(), isBottomHadron);
 

@@ -3,7 +3,7 @@
 #include "Rivet/Projections/Beam.hh"
 #include "Rivet/Projections/FinalState.hh"
 #include "Rivet/Projections/ChargedFinalState.hh"
-#include "Rivet/Projections/UnstableFinalState.hh"
+#include "Rivet/Projections/UnstableParticles.hh"
 
 namespace Rivet {
 
@@ -22,7 +22,7 @@ namespace Rivet {
     //@{
 
     void init() {
-      declare(UnstableFinalState(), "UFS");
+      declare(UnstableParticles(), "UFS");
       _nonPrRapHigh    = bookHisto1D( 14, 1, 1);
       _nonPrRapMedHigh = bookHisto1D( 13, 1, 1);
       _nonPrRapMedLow  = bookHisto1D( 12, 1, 1);
@@ -45,7 +45,7 @@ namespace Rivet {
 
 
       // Final state of unstable particles to get particle spectra
-      const UnstableFinalState& ufs = apply<UnstableFinalState>(e, "UFS");
+      const UnstableParticles& ufs = apply<UnstableFinalState>(e, "UFS");
 
       foreach (const Particle& p, ufs.particles()) {
         if (p.abspid() != 443) continue;

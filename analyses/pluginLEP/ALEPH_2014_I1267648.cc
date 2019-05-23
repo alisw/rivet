@@ -1,6 +1,6 @@
 // -*- C++ -*-
 #include "Rivet/Analysis.hh"
-#include "Rivet/Projections/UnstableFinalState.hh"
+#include "Rivet/Projections/UnstableParticles.hh"
 
 namespace Rivet {
 
@@ -20,7 +20,7 @@ namespace Rivet {
     void init() {
 
       // Initialise and register projections
-      declare(UnstableFinalState(), "UFS");
+      declare(UnstableParticles(), "UFS");
 
       // Book histograms
       _h_pip0  = bookHisto1D(1, 1, 1);
@@ -66,7 +66,7 @@ namespace Rivet {
 
       const double weight = event.weight();
       // Loop over taus
-      for (const Particle& tau : apply<UnstableFinalState>(event, "UFS").particles(Cuts::abspid==PID::TAU)) {
+      for (const Particle& tau : apply<UnstableParticles>(event, "UFS").particles(Cuts::abspid==PID::TAU)) {
         FourMomentum ptot;
         unsigned int nstable(0), npip(0), npim(0), npi0(0);
         findDecayProducts(tau,nstable,npip,npim,npi0,ptot);

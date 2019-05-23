@@ -99,7 +99,7 @@ namespace Rivet {
       }
 
       // Fill trigger histogram for a proper event type
-      _counterTrigger[ev_type]->fill(trigParticles.size());
+      _counterTrigger[ev_type]->fill(trigParticles.size()*weight);
 
       // Loop over trigger particles
       for (const Particle& trigParticle : trigParticles) {

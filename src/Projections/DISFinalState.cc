@@ -6,11 +6,19 @@ namespace Rivet {
 
   void DISFinalState::project(const Event& e) {
     const DISKinematics& diskin = apply<DISKinematics>(e, "Kinematics");
+    if ( diskin.failed() ) {
+      fail();
+      return;
+    }
     LorentzTransform hcmboost; //< Null boost = LAB frame by default
     if (_boosttype == HCM) hcmboost = diskin.boostHCM();
     else if (_boosttype == BREIT) hcmboost = diskin.boostBreit();
 
     const DISLepton& dislep = diskin.apply<DISLepton>(e, "Lepton");
+    if ( diskin.failed() ) {
+      fail();
+      return;
+    }
 
     const FinalState& fs = apply<FinalState>(e, "FS");
 

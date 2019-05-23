@@ -9,7 +9,7 @@ namespace Rivet {
 
 
   Projection::Projection()
-    : _name("BaseProjection")
+    : _name("BaseProjection"), _isValid(true)
   {
     addPdgIdPair(PID::ANY, PID::ANY);
   }

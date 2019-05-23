@@ -1,7 +1,7 @@
 // -*- C++ -*-
 #include "Rivet/Analysis.hh"
 #include "Rivet/Projections/FinalState.hh"
-#include "Rivet/Projections/UnstableFinalState.hh"
+#include "Rivet/Projections/UnstableParticles.hh"
 #include "Rivet/Projections/FastJets.hh"
 
 namespace Rivet {
@@ -20,7 +20,7 @@ namespace Rivet {
       jetproj.useInvisibles();
       declare(jetproj, "Jets");
 
-      UnstableFinalState ufs;
+      UnstableParticles ufs;
       declare(ufs, "UFS");
 
       // Book histograms
@@ -45,7 +45,7 @@ namespace Rivet {
       const double weight = event.weight();
 
       const Jets& jets = apply<FastJets>(event,"Jets").jetsByPt();
-      const UnstableFinalState& ufs = apply<UnstableFinalState>(event, "UFS");
+      const UnstableParticles& ufs = apply<UnstableFinalState>(event, "UFS");
 
       // Find the leading jet pT and eta
       if (jets.size() == 0) vetoEvent;

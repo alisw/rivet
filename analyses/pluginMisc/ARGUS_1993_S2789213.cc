@@ -1,6 +1,6 @@
 // -*- C++ -*-
 #include "Rivet/Analysis.hh"
-#include "Rivet/Projections/UnstableFinalState.hh"
+#include "Rivet/Projections/UnstableParticles.hh"
 
 namespace Rivet {
 
@@ -17,7 +17,7 @@ namespace Rivet {
 
 
     void init() {
-      declare(UnstableFinalState(), "UFS");
+      declare(UnstableParticles(), "UFS");
 
       _mult_cont_Omega     = bookHisto1D( 1, 1, 1);
       _mult_cont_Rho0      = bookHisto1D( 1, 1, 2);
@@ -60,7 +60,7 @@ namespace Rivet {
       // Find the upsilons
       Particles upsilons;
       // First in unstable final state
-      const UnstableFinalState& ufs = apply<UnstableFinalState>(e, "UFS");
+      const UnstableParticles& ufs = apply<UnstableFinalState>(e, "UFS");
       foreach (const Particle& p, ufs.particles())
         if (p.pid() == 300553 || p.pid() == 553) upsilons.push_back(p);
       // Then in whole event if that failed
