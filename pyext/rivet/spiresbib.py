@@ -48,6 +48,7 @@ def extract_bibtex(html):
 
 def get_bibtex_from_repo(iscode, refid):
     html = fetch_bibtex(iscode, refid)
+    html = html.decode('utf-8')
     key, bibtex = extract_bibtex(html)
     return key, bibtex
 

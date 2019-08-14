@@ -522,7 +522,7 @@ class InputData(Described):
         histoordermap = {}
         histolist = self.histos.keys()
         if self.has_attr(curves):
-            histolist = filter(self.histos.keys().count, self.attr(curves).strip().split())
+            histolist = filter(list(self.histos).count, self.attr(curves).strip().split())
         for histo in histolist:
             order = 0
             if self.histos[histo].has_attr('PlotOrder'):
@@ -580,7 +580,7 @@ class Plot(object):
                 out += ('colorbar style={yticklabel=$\\,10^{\\pgfmathprintnumber{\\tick}}$},\n')
         #if kwargs['Grid']:
         #    out += ('grid=%s,\n' % kwargs['Grid'])
-        for axis, label in kwargs['Labels'].iteritems():
+        for axis, label in kwargs['Labels'].items():
             out += ('%s={%s},\n' % (axis.lower(), label))
         if kwargs['XLabelSep'] != None:
             if not kwargs['is3D']:
@@ -595,12 +595,12 @@ class Plot(object):
         out += ('major tick length={%4.3fcm},\n' % kwargs['MajorTickLength'])
         out += ('minor tick length={%4.3fcm},\n' % kwargs['MinorTickLength'])
         # check if 'number of minor tick divisions' is specified
-        for axis, nticks in kwargs['MinorTicks'].iteritems():
+        for axis, nticks in kwargs['MinorTicks'].items():
             if nticks:
               out += ('minor %s tick num=%i,\n' % (axis.lower(), nticks))
         # check if actual major/minor tick divisions have been specified
         out += ('max space between ticks=20,\n')
-        for axis, tickinfo in kwargs['CustomTicks'].iteritems():
+        for axis, tickinfo in kwargs['CustomTicks'].items():
             majorlabels, majorticks, minorticks = tickinfo
             if len(minorticks):
               out += ('minor %stick={%s},\n' % (axis.lower(), ','.join(minorticks)))
@@ -1086,7 +1086,7 @@ class RatioPlot(Plot):
         # initialise histograms even when no main plot
         self.set_normalisation(inputdata)
         self.refdata = inputdata.props[self.name+'Reference']
-        if not inputdata.histos.has_key(self.refdata):
+        if not self.refdata in inputdata.histos:
             print('ERROR: %sReference=%s not found in:' % (self.name,self.refdata))
             for i in inputdata.histos.keys():
                 print('    ', i)
@@ -1318,7 +1318,7 @@ class Legend(Described):
         posalign = 'left' if talign == 'right' else 'right'
         legx = float(self.getLegendXPos()); legy = float(self.getLegendYPos())
         ypos = legy -0.05*6/self.props['PlotSizeY']
-        if self.props.has_key(self.name+'Title'):
+        if self.name+'Title' in self.props:
             for i in self.props[self.name+'Title'].strip().split('\\\\'):
                 out += ('\\node[black, inner sep=0, align=%s, %s,\n' % (posalign, talign))
                 out += ('] at (rel axis cs: %4.3f,%4.3f) {%s};\n' % (legx, ypos, i))
@@ -1326,9 +1326,9 @@ class Legend(Described):
         offset = self.attr_float(self.name+'EntryOffset', 0.)
         separation = self.attr_float(self.name+'EntrySeparation', 0.)
         hline = True; vline = True
-        if self.props.has_key(self.name+'HorizontalLine'):
+        if self.name+'HorizontalLine' in self.props:
             hline = self.props[self.name+'HorizontalLine'] != '0'
-        if self.props.has_key(self.name+'VerticalLine'):
+        if self.name+'VerticalLine' in self.props:
             vline = self.props[self.name+'VerticalLine'] != '0'
 
         rel_xpos_sign = 1.0
@@ -1341,9 +1341,9 @@ class Legend(Described):
         xpostext = 0.1*rel_xpos_sign
 
         for i in orderedlegendlist:
-            if self.histos.has_key(i):
+            if i in self.histos:
                 drawobject=self.histos[i]
-            elif self.functions.has_key(i):
+            elif i in self.functions:
                 drawobject=self.functions[i]
             else:
                 continue
@@ -1436,9 +1436,9 @@ class Legend(Described):
     def draw_2dlegend(self,orderedlegendlist):
         histos = ""
         for i in range(0,len(orderedlegendlist)):
-            if self.histos.has_key(orderedlegendlist[i]):
+            if orderedlegendlist[i] in self.histos:
                 drawobject=self.histos[orderedlegendlist[i]]
-            elif self.functions.has_key(orderedlegendlist[i]):
+            elif orderedlegendlist[i] in self.functions:
                 drawobject=self.functions[orderedlegendlist[i]]
             else:
                 continue
@@ -1513,10 +1513,10 @@ class Special(Described):
         self.props = {}
         self.data = []
         self.read_input(f)
-        if not self.props.has_key('Location'):
+        if 'Location' not in self.props:
             self.props['Location']='MainPlot'
         self.props['Location']=self.props['Location'].split('\t')
-        if not self.props.has_key('Coordinates'):
+        if 'Coordinates' not in self.props:
             self.props['Coordinates'] = 'Relative'
 
     def read_input(self, f):
@@ -1770,7 +1770,7 @@ class Function(DrawableObject):
     def __init__(self, f):
         self.props = {}
         self.read_input(f)
-        if not self.props.has_key('Location'):
+        if 'Location' not in self.props:
             self.props['Location']='MainPlot'
         self.props['Location']=self.props['Location'].split('\t')
 

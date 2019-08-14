@@ -99,7 +99,7 @@ extragroup.add_argument("--ignore-beams", dest="IGNORE_BEAMS", action="store_tru
 extragroup.add_argument("-d", "--dump", "--histo-interval", dest="DUMP_PERIOD", type=int,
                         default=1000, metavar="NUM",
                         help="specify the number of events between histogram file updates, "
-                        "default = %default. Set to 0 to only write out at the end of the run. "
+                        "default = %(default)s. Set to 0 to only write out at the end of the run. "
                         "Note that intermediate histograms will be those from the analyze step "
                         "only, except for analyses explicitly declared Reentrant for which the "
                         "finalize function is executed first.")
@@ -522,7 +522,7 @@ if args.PRELOADFILE is not None:
     ah.readData(args.PRELOADFILE)
 
 if args.DUMP_PERIOD:
-    ah.dump(args.HISTOFILE, args.DUMP_PERIOD)
+    ah.dump(args.HISTOFILE.encode('utf-8'), args.DUMP_PERIOD)
 
 if args.SHOW_BIBTEX:
     bibs = []
