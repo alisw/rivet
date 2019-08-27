@@ -367,8 +367,7 @@ if len(args.SHOW_ANALYSES) > 0:
             import tempfile, subprocess
             tffd, tfpath = tempfile.mkstemp(prefix="rivet-show.")
             msgsum = u"\n\n".join(msgs)
-            if type(u'') is not str:
-                msgsum = msgsum.encode('utf-8')
+            msgsum = msgsum.encode('utf-8')
             os.write(tffd, msgsum)
             if sys.stdout.isatty():
                 pager = subprocess.Popen(["less", "-FX", tfpath]) #, stdin=subprocess.PIPE)
