@@ -2949,7 +2949,7 @@ class XTicks(Ticks):
         return self.description.get('XMinorTickLineWidth', '0.3pt')
 
     def getMajorTickLineColor(self):
-        return self.description.get('XMajorTickLineColor', '0.3pt')
+        return self.description.get('XMajorTickLineColor', 'black')
 
     def getMinorTickLineColor(self):
         return self.description.get('XMinorTickLineColor', 'black')
