@@ -1,0 +1,34 @@
+Name: OPAL_1995_I382219
+Year: 1995
+Summary: Scaled energy distribution of $D^*$ with flavour separation at LEP
+Experiment: OPAL
+Collider: LEP
+InspireID: 382219
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Z.Phys. C67 (1995) 27-44, 1995
+RunInfo:
+  Hadronic $Z$ decays at 91.2\;GeV.
+NumEvents: 1000000
+NeedCrossSection: no
+Beams: [e+, e-]
+Energies: [91.2]
+Description:
+  'The scaled energy distribution
+   of $D^{*\pm}$ is measure, including separating the contributions from $c\bar{c}$ and $b\bar{b}$ events.'
+BibKey: Akers:1994jc
+BibTeX: '@article{Akers:1994jc,
+      author         = "Akers, R. and others",
+      title          = "{A Measurement of the production of D*+- mesons on the Z0
+                        resonance}",
+      collaboration  = "OPAL",
+      journal        = "Z. Phys.",
+      volume         = "C67",
+      year           = "1995",
+      pages          = "27-44",
+      doi            = "10.1007/BF01564819",
+      reportNumber   = "CERN-PPE-94-217",
+      SLACcitation   = "%%CITATION = ZEPYA,C67,27;%%"
+}'

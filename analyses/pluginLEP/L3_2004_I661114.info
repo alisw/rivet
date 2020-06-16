@@ -1,0 +1,35 @@
+Name: L3_2004_I661114
+Year: 2004
+Summary: Jet production in Photon-Photon collisions at $E_{\text{CMS}}=198$ GeV
+Experiment: L3
+Collider: LEP
+InspireID: 661114
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B602 (2004) 157-166, 2004 
+RunInfo: e+ e- > gamma gamma events, needs direct, resolved and double resolved.
+NeedCrossSection: yes
+Beams: [e+, e-]
+Energies: 198
+Description:
+  'Jet production in $\gamma\gamma$ collisons where the photons are radiation from incoming electrons and positrons'
+Keywords: []
+BibKey: Achard:2004rh
+BibTeX: '@article{Achard:2004rh,
+      author         = "Achard, P. and others",
+      title          = "{Inclusive jet production in two-photon collisions at
+                        LEP}",
+      collaboration  = "L3",
+      journal        = "Phys. Lett.",
+      volume         = "B602",
+      year           = "2004",
+      pages          = "157-166",
+      doi            = "10.1016/j.physletb.2004.10.003",
+      eprint         = "hep-ex/0410012",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-EP-2003-055",
+      SLACcitation   = "%%CITATION = HEP-EX/0410012;%%"
+}'

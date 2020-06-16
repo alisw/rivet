@@ -1,0 +1,38 @@
+Name: BESIII_2018_I1633425
+Year: 2018
+Summary: Cross Section for $e^+e^-\to\pi^0\pi^0\psi(2S)$ for energies between 4.009 to 4.600 GeV
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1633425
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D97 (2018) no.5, 052001
+RunInfo: e+ e- to hadrons
+Beams: [e+, e-]
+Description:
+  'Cross section for  $e^+e^-\to\pi^+\pi^-h_c$ for energies between 3.89 and 4.6 GeV measured by the BESIII collaboration.'
+ValidationInfo:
+  ''
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Ablikim:2017aji
+BibTeX: '@article{Ablikim:2017aji,
+      author         = "Ablikim, Medina and others",
+      title          = "{Measurement of $e^{+}e^{-} \to \pi^{0}\pi^{0}\psi(3686)$
+                        at $\sqrt{s}$ from 4.009 to 4.600 GeV and observation of a
+                        neutral charmoniumlike structure}",
+      collaboration  = "BESIII",
+      journal        = "Phys. Rev.",
+      volume         = "D97",
+      year           = "2018",
+      number         = "5",
+      pages          = "052001",
+      doi            = "10.1103/PhysRevD.97.052001",
+      eprint         = "1710.10740",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1710.10740;%%"
+}'

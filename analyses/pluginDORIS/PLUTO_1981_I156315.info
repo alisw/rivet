@@ -1,0 +1,33 @@
+Name: PLUTO_1981_I156315
+Year: 1981
+Summary: Energy-Energy correlation for a range of energies between 7.7 and 31.6 GeV
+Experiment: PLUTO
+Collider: DORIS/Petra
+InspireID: 156315
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+RunInfo: e+e- to hadrons at 7.7,9.4,12.,13.,17.,22.,27.6,30.8 GeV CMS
+NeedCrossSection: no
+Beams: [e+, e-]
+Energies: [7.7,9.4,12.,13.,17.,22.,27.6,30.8]
+Description:
+  'Measurement of the energy-energy correlation, and its assymetry, or a range of energies between 7.7 and 31.6 GeV'
+Keywords: []
+BibKey: Berger:1980yh
+BibTeX: '@article{Berger:1980yh,
+      author         = "Berger, Christoph and others",
+      title          = "{Energy-energy Correlations in $e^+ e^-$ Annihilation
+                        Into Hadrons}",
+      booktitle      = "{Proceedings, 16th Rencontres de Moriond : Session 1: QCD
+                        and Lepton Physics: Les Arcs, France, March 15-21, 1981}",
+      collaboration  = "PLUTO",
+      journal        = "Phys. Lett.",
+      volume         = "99B",
+      year           = "1981",
+      pages          = "292",
+      doi            = "10.1016/0370-2693(81)91128-X",
+      note           = "[,57(1981)]",
+      reportNumber   = "DESY-80-78",
+      SLACcitation   = "%%CITATION = PHLTA,99B,292;%%"
+}'

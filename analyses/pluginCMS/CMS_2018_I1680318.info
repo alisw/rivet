@@ -1,0 +1,50 @@
+Name: CMS_2018_I1680318
+Year: 2018
+Summary: Charged particle distributions in different final states at 13~TeV
+Experiment: CMS collaboration
+Collider: LHC
+InspireID: 1680318
+Status: VALIDATED
+Authors:
+  - cms-pag-conveners-smp@cern.ch
+  - Juan Manuel Grados Luyando <juan.grados.luyando@desy.de>
+  - Pieters Maxim <Maxim.Pieters@uantwerpen.be>
+References:
+  - 'Eur.Phys.J. C78 (2018) no.9, 697'
+  - 'DOI: 10.1140/epjc/s10052-018-6144-y'
+  - 'arXiv:1806.11245 [hep-ex]'
+  - 'http://cms-results.web.cern.ch/cms-results/public-results/publications/FSQ-16-011/'
+RunInfo:
+  'Inelastic events at 13~TeV centre of mass energy.
+   Tracks in $|\eta|<2.4$ and with $\pT > 0.5~GeV$'
+#NumEvents: 10000000
+NeedCrossSection: no
+Beams: [p+, p+]
+Energies: [13000]
+Description:
+  'Charged particle distributions in different final states at $\sqrt{s} = 13$~TeV by the CMS experiment.
+   Pseudorapidity, multiplicity and transverse momentum distributions of all charged particles.
+   Also the $\pT$ leading charged particle spectrum and its integration as function of $\pT$.
+   The distributions are presented for inelastic, non-single-diffractive
+   and single-diffractive event selections.
+   Please note, that the MC predictions are not scaled to the datapoints,
+   in contrast to Figure 6 in the publication.'
+BibKey: Sirunyan:2018zdc
+BibTeX: '@article{Sirunyan:2018zdc,
+      author         = "Sirunyan, Albert M. and others",
+      title          = "{Measurement of charged particle spectra in minimum-bias
+                        events from proton-proton collisions at
+                        $\sqrt{s}=13\,\text {TeV} $}",
+      collaboration  = "CMS",
+      journal        = "Eur. Phys. J.",
+      volume         = "C78",
+      year           = "2018",
+      number         = "9",
+      pages          = "697",
+      doi            = "10.1140/epjc/s10052-018-6144-y",
+      eprint         = "1806.11245",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CMS-FSQ-16-011, CERN-EP-2018-187",
+      SLACcitation   = "%%CITATION = ARXIV:1806.11245;%%"
+}'

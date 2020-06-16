@@ -1,0 +1,32 @@
+Name: TASSO_1989_I279165
+Year: 1989
+Summary: Jet masses in $e^+e^-$ between 14 and 44 GeV
+Experiment: TASSO
+Collider: Petra
+InspireID: 279165
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Z.Phys. C45 (1989) 11
+RunInfo: $e^+ e^- \to$ hadrons
+NumEvents: 100000
+Beams: [e-, e+]
+Energies: [14., 22, 34.8, 43.5]
+Description:
+   Light, heavy jet masses and their difference at 14, 22, 34.8, and 43.5 measured by the TASSO experiment.
+BibKey: Braunschweig:1989ef
+BibTeX: '@article{Braunschweig:1989ef,
+      author         = "Braunschweig, W. and others",
+      title          = "{Experimental Study of Jet Masses in $e^+ e^-$
+                        Annihilation at $c$.m. Energies Between 12-{GeV} and
+                        43.5-{GeV}}",
+      collaboration  = "TASSO",
+      journal        = "Z. Phys.",
+      volume         = "C45",
+      year           = "1989",
+      pages          = "11",
+      doi            = "10.1007/BF01556666",
+      reportNumber   = "DESY-89-069, FTUAM-EP-89-03",
+      SLACcitation   = "%%CITATION = ZEPYA,C45,11;%%"
+}'

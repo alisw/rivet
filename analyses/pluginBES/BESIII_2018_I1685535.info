@@ -1,0 +1,36 @@
+Name: BESIII_2018_I1685535
+Year: 2018
+Summary: Cross section for $e^+e^-\to\pi^+D^0D^{*-}$ +c.c. cross section between 4.05 and 4.60 GeV
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1685535
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 122 (2019) no.10, 102002
+RunInfo: e+e- to hadrons
+Beams: [e+, e-]
+Description:
+  'Measurement of the cross section  for $e^+e^-\to\pi^+D^0D^{*-}$ +c.c. cross section between 4.05 and 4.60 GeV by thew BEWS collaboration.'
+ValidationInfo:
+  ''
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Ablikim:2018vxx
+BibTeX: '@article{Ablikim:2018vxx,
+      author         = "Ablikim, Medina and others",
+      title          = "{Evidence of a resonant structure in the $e^+e^-\to\pi^+D^0D^{*-}$ cross section between 4.05 and 4.60 GeV}",
+      collaboration  = "BESIII",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "122",
+      year           = "2019",
+      number         = "10",
+      pages          = "102002",
+      doi            = "10.1103/PhysRevLett.122.102002",
+      eprint         = "1808.02847",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1808.02847;%%"
+}'

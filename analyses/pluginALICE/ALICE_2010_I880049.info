@@ -1,0 +1,43 @@
+Name: ALICE_2010_I880049
+Year: 2010
+Summary: Centrality dependence of the charged-particle multiplicity density at mid-rapidity in Pb--Pb collisions at $\sqrt{s_{\rm{NN}}} = 2.76$ TeV
+Experiment: ALICE
+Collider: LHC
+SpireID: 032301
+InspireID: 880049
+Status: VALIDATED
+Authors:
+ - Przemyslaw Karczmarczyk <przemyslaw.karczmarczyk@cern.ch>
+ - Jan Fiete Grosse-Oetringhaus <Jan.Fiete.Grosse-Oetringhaus@cern.ch>
+ - Jochen Klein <Jochen.Klein@cern.ch>
+References:
+ - arXiv:1012.1657 [nucl-ex]
+RunInfo:
+NumEvents:
+Options:
+ - cent=REF,GEN,IMP,USR,RAW 
+Beams: [Pb, Pb]
+# This is _total_ energy of beams, so this becomes 208*2760=574080
+Energies: [574080]
+Description:
+  'The centrality dependence of the charged-particle multiplicity density at mid-rapidity in Pb-Pb collisions at $\sqrt{s_{NN}} = 2.76$ TeV is presented. 
+   The charged-particle density normalized per participating nucleon pair increases by about a factor 2 from peripheral (70-80%) to central (0-5%) collisions. 
+   The centrality dependence is found to be similar to that observed at lower collision energies. The data are compared with models based on different mechanisms for particle production in nuclear collisions.'
+BibKey: Aamodt:2010cz
+BibTeX: '@article{Aamodt:2010cz,
+      author         = "Aamodt, Kenneth and others",
+      title          = "{Centrality dependence of the charged-particle
+                        multiplicity density at mid-rapidity in Pb-Pb collisions
+                        at $\sqrt{s_{NN}}=2.76$ TeV}",
+      collaboration  = "ALICE",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "106",
+      year           = "2011",
+      pages          = "032301",
+      doi            = "10.1103/PhysRevLett.106.032301",
+      eprint         = "1012.1657",
+      archivePrefix  = "arXiv",
+      primaryClass   = "nucl-ex",
+      reportNumber   = "CERN-PH-EP-2010-071",
+      SLACcitation   = "%%CITATION = ARXIV:1012.1657;%%"
+}'

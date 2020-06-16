@@ -1,0 +1,17 @@
+BEGIN YODA_SCATTER1D_V2 /REF/DASP_1982_I178613/d01-x01-y01
+IsRef: 1
+Path: /REF/DASP_1982_I178613/d01-x01-y01
+Title: doi:10.17182/hepdata.30881.v1/t1
+Type: Scatter1D
+---
+# xval	 xerr-	 xerr+
+END YODA_SCATTER1D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/DASP_1982_I178613/d02-x01-y01
+IsRef: 1
+Path: /REF/DASP_1982_I178613/d02-x01-y01
+Title: doi:10.17182/hepdata.30881.v1/t2
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+9.420000e+00	2.000000e-02	2.000000e-02	3.730000e+00	3.222733e-01	3.222733e-01
+END YODA_SCATTER2D_V2

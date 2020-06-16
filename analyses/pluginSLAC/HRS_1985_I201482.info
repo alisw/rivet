@@ -1,0 +1,32 @@
+Name: HRS_1985_I201482
+Year: 1985
+Summary: Event shapes in $e^+e^-$ collisions at 29 GeV
+Experiment: HRS
+Collider: PEP
+InspireID: 201482
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+- Phys.Rev. D31 (1985) 1, 1985 
+RunInfo: 
+  Hadronic e+e- events at $\sqrt{s} = 29.$ GeV
+NumEvents: 1000000
+Beams: [e+, e-]
+Energies: [29.]
+Description:
+  Measurement of a range of event shapes at 29 GeV by the HRS experiment. The event are seperate into two ($S\leq0.25$, $A\leq0.1$) and jet three($S>0.25$, $A\leq0.1$) jet regions. The mean values of event shapes are not implemented.
+Keywords: []
+BibKey: Bender:1984fp
+BibTeX: '@article{Bender:1984fp,
+      author         = "Bender, D. and others",
+      title          = "{Study of Quark Fragmentation at 29-GeV: Global Jet
+                        Parameters and Single Particle Distributions}",
+      journal        = "Phys. Rev.",
+      volume         = "D31",
+      year           = "1985",
+      pages          = "1",
+      doi            = "10.1103/PhysRevD.31.1",
+      reportNumber   = "ANL-HEP-PR-84-08, PU-84-510, IUHEE-53, UM HE 84-03",
+      SLACcitation   = "%%CITATION = PHRVA,D31,1;%%"
+}'

@@ -1,0 +1,38 @@
+Name: BELLE_2013_I1225975
+Year: 2013
+Summary: Cross section for $e^+e^-\to J/\psi\pi^+\pi^-$ at energies between 3.8 and 4.82 GeV
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1225975
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 110 (2013) 252002, 2013 
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+  'Measurement of the cross section for $e^+e^-\to J/\psi\pi^+\pi^-$ at energies between 3.8 and 4.82 GeV using radiative return by BELLE.'
+Keywords: []
+BibKey: Liu:2013dau
+BibTeX: '%%% contains utf-8, see: http://inspirehep.net/info/faq/general#utf8
+%%% add \usepackage[utf8]{inputenc} to your latex preamble
+
+@article{Liu:2013dau,
+      author         = "Liu, Z. Q. and others",
+      title          = "{Study of $e^+e^- → π^+ π^- J/ψ$ and Observation of
+                        a Charged Charmoniumlike State at Belle}",
+      collaboration  = "Belle",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "110",
+      year           = "2013",
+      pages          = "252002",
+      doi            = "10.1103/PhysRevLett.110.252002",
+      eprint         = "1304.0121",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "BELLE-PREPRINT-2013-6, KEK-PREPRINT-2013-2",
+      SLACcitation   = "%%CITATION = ARXIV:1304.0121;%%"
+}'

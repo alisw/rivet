@@ -1,0 +1,30 @@
+Name: MARKI_1975_I100592
+Year: 1975
+Summary: Cross section and charged particle multiplicity for energies between 2.6 and 5 GeV
+Experiment: MARKI
+Collider: SPEAR
+InspireID: 100592
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 34 (1975) 764, 1975 
+RunInfo: e+e- to hadrons
+NeedCrossSection: no
+Beams: [e-, e+]
+Description:
+  'Cross section and harged particle multiplicity for energies between 2.6 and 5 GeV'
+BibKey: Augustin:1975yq
+BibTeX: '@article{Augustin:1975yq,
+      author         = "Augustin, J. E. and others",
+      title          = "{Total Cross-Section for Hadron Production by
+                        electron-Positron Annihilation Between 2.4-GeV and 5.0-GeV
+                        Center-Of-Mass Energy}",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "34",
+      year           = "1975",
+      pages          = "764",
+      doi            = "10.1103/PhysRevLett.34.764",
+      reportNumber   = "SLAC-PUB-1520, LBL-3621",
+      SLACcitation   = "%%CITATION = PRLTA,34,764;%%"
+}'

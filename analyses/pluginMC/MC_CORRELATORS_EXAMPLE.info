@@ -1,0 +1,10 @@
+Name: MC_TEST_CORRELATORS
+Year: 2010
+Summary: Example analysis for correlators framework
+Experiment: None 
+RunInfo: any
+NumEvents: 1000000
+#Beams: [p+, p+]
+#Energies: [900]
+Description:
+  'Example analysis for how to implement a flow analysis using the correlators framework.'

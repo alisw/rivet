@@ -1,0 +1,35 @@
+Name: BELLE_2010_I841618
+Year: 2010
+Summary: Mass spectra for $h^-h^-h^+$ decays of the $\tau^-$ lepton
+Experiment: BELLE
+Collider: KEKB
+InspireID: 841618
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D81 (2010) 113007
+RunInfo:  e+ e- > tau+ tau-, or any process producing tau leptons
+NeedCrossSection: no
+Description:
+  'Mass spectra for $\pi^+\pi^-\pi^+$, $K^-\pi^+\pi^-$, $K^+K^-\pi^-$ and $K^-K^-K^+$ in tau decays
+   measured by BELLE. Useful for testing models of the hadronic current in $\tau$ decays.'
+Keywords: []
+BibKey: Lee:2010tc
+BibTeX: '@article{Lee:2010tc,
+      author         = "Lee, M. J. and others",
+      title          = "{Measurement of the branching fractions and the invariant
+                        mass distributions for $\tau^- \to h^-h^+h^-\nu_{\tau}$
+                        decays}",
+      collaboration  = "Belle",
+      journal        = "Phys. Rev.",
+      volume         = "D81",
+      year           = "2010",
+      pages          = "113007",
+      doi            = "10.1103/PhysRevD.81.113007",
+      eprint         = "1001.0083",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "BELLE-PREPRINT-2009-23, KEK-PREPRINT-2009-26",
+      SLACcitation   = "%%CITATION = ARXIV:1001.0083;%%"
+}'

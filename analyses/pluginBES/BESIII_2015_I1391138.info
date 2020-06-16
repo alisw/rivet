@@ -1,0 +1,35 @@
+Name: BESIII_2015_I1391138
+Year: 2015
+Summary: Exclusive $D^0\to K^-,\pi^-e^+\nu_e$ decays
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1391138
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D92 (2015) 072012, 2015 
+RunInfo:
+  Events with D-decays, either particle guns or collisions.
+NumEvents: 10000
+NeedCrossSection: no
+Description:
+  'Differential decay rates for semileptonic $D^0\to K^-,\pi^-e^+\nu_e$ decays'
+Keywords: []
+BibKey: Ablikim:2015ixa
+BibTeX: '@article{Ablikim:2015ixa,
+      author         = "Ablikim, M. and others",
+      title          = "{Study of Dynamics of $D^0 \to K^- e^+ \nu_{e}$ and
+                        $D^0\to\pi^- e^+ \nu_{e}$ Decays}",
+      collaboration  = "BESIII",
+      journal        = "Phys. Rev.",
+      volume         = "D92",
+      year           = "2015",
+      number         = "7",
+      pages          = "072012",
+      doi            = "10.1103/PhysRevD.92.072012",
+      eprint         = "1508.07560",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1508.07560;%%"
+}'

@@ -1,0 +1,48 @@
+Name: ATLAS_2017_I1624693
+Year: 2017
+Summary: Study of ordered hadron chains at 7 TeV
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1624693
+Status: VALIDATED
+Authors:
+ - Sharka Todorova-Nova <sarka.todorova@cern.ch>
+ - Christian Gutschow <chris.g@cern.ch>
+References:
+ - Phys.Rev. D96 (2017) no.9, 092008
+ - doi:10.1103/PhysRevD.96.092008
+ - arXiv:1709.07384 [hep-ex]
+Keyword:
+ - MINBIAS
+ - QCD
+RunInfo: 
+   minimum bias, charged tracks with pT>100 MeV, |eta|<2.5
+Luminosity_fb: 190E-09
+Beams: [p+, p+]
+Energies: [7000]
+PtCuts: [0.1]
+Description:
+  'The analysis of the momentum difference between charged hadrons in high-energy proton-proton collisions is performed in order to
+  study coherent particle production. The observed correlation pattern agrees with a model of a helical QCD string fragmenting into
+  a chain of ground-state hadrons. A threshold momentum difference in the production of adjacent pairs of charged hadrons is
+  observed, in agreement with model predictions. The presence of low-mass hadron chains also explains the emergence of
+  charge-combination-dependent two-particle correlations commonly attributed to Bose-Einstein interference. The data sample consists
+  of 190 $\mu\text{b}^{-1}$ of minimum-bias events collected with proton-proton collisions at a center-of-mass energy 
+  $\sqrt{s}$ = 7 TeV in the early low-luminosity data taking with the ATLAS detector at the LHC.'
+BibKey: Aaboud:2017plr
+BibTeX: '@article{Aaboud:2017plr,
+      author         = "Aaboud, M. and others",
+      title          = "{Study of ordered hadron chains with the ATLAS detector}",
+      collaboration  = "ATLAS",
+      journal        = "Phys. Rev.",
+      volume         = "D96",
+      year           = "2017",
+      number         = "9",
+      pages          = "092008",
+      doi            = "10.1103/PhysRevD.96.092008",
+      eprint         = "1709.07384",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-EP-2017-092",
+      SLACcitation   = "%%CITATION = ARXIV:1709.07384;%%"
+}'

@@ -1,0 +1,33 @@
+Name: TASSO_1984_I199468
+Year: 1984
+Summary: Measurement of $R$ for energies between 39.8 and 45.2 GeV
+Experiment: TASSO
+Collider: PETRA
+InspireID: 199468
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B138 (1984) 441-448, 1984 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: yes
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$ in $e^+e^-$ collisions for energies between 39.8 and 45.2 GeV.
+   The individual hadronic and muonic cross sections are also outputted to the yoda file
+   so that ratio $R$ can be recalcuated if runs are combined.'
+Keywords: []
+BibKey: Althoff:1984us
+BibTeX: '@article{Althoff:1984us,
+      author         = "Althoff, M. and others",
+      title          = "{Measurement of r and Search for the Top Quark in e+ e-
+                        Annihilation Between 39.8-GeV and 45.2-GeV}",
+      collaboration  = "TASSO",
+      journal        = "Phys. Lett.",
+      volume         = "138B",
+      year           = "1984",
+      pages          = "441-448",
+      doi            = "10.1016/0370-2693(84)91936-1",
+      reportNumber   = "DESY-84-001",
+      SLACcitation   = "%%CITATION = PHLTA,138B,441;%%"
+}'

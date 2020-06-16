@@ -1,0 +1,37 @@
+BEGIN YODA_SCATTER2D_V2 /REF/D0_2000_I503361/d01-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.53, up: 0.53}, 'sys,Overall normalization uncertainty': {dn: -0.26576000000000005, up: 0.26576000000000005}}, 1: {error: {dn: -0.96, up: 0.96}, 'sys,Overall normalization uncertainty': {dn: -0.7128000000000001, up: 0.7128000000000001}}, 2: {error: {dn: -1.1, up: 1.1}, 'sys,Overall normalization uncertainty': {dn: -0.8976000000000001, up: 0.8976000000000001}}, 3: {error: {dn: -1.1, up: 1.1}, 'sys,Overall normalization uncertainty': {dn: -0.8668, up: 0.8668}}, 4: {error: {dn: -0.92, up: 0.92}, 'sys,Overall normalization uncertainty': {dn: -0.7128000000000001, up: 0.7128000000000001}}, 5: {error: {dn: -0.87, up: 0.87}, 'sys,Overall normalization uncertainty': {dn: -0.66, up: 0.66}}, 6: {error: {dn: -0.84, up: 0.84}, 'sys,Overall normalization uncertainty': {dn: -0.6204, up: 0.6204}}, 7: {error: {dn: -0.73, up: 0.73}, 'sys,Overall normalization uncertainty': {dn: -0.48840000000000006, up: 0.48840000000000006}}, 8: {error: {dn: -0.69, up: 0.69}, 'sys,Overall normalization uncertainty': {dn: -0.44000000000000006, up: 0.44000000000000006}}, 9: {error: {dn: -0.67, up: 0.67}, 'sys,Overall normalization uncertainty': {dn: -0.40876, up: 0.40876}}, 10: {error: {dn: -0.54, up: 0.54}, 'sys,Overall normalization uncertainty': {dn: -0.319, up: 0.319}}, 11: {error: {dn: -0.44, up: 0.44}, 'sys,Overall normalization uncertainty': {dn: -0.2398, up: 0.2398}}, 12: {error: {dn: -0.39, up: 0.39}, 'sys,Overall normalization uncertainty': {dn: -0.19580000000000003, up: 0.19580000000000003}}, 13: {error: {dn: -0.33, up: 0.33}, 'sys,Overall normalization uncertainty': {dn: -0.15576, up: 0.15576}}, 14: {error: {dn: -0.31, up: 0.31}, 'sys,Overall normalization uncertainty': {dn: -0.14124, up: 0.14124}}, 15: {error: {dn: -0.18, up: 0.18}, 'sys,Overall normalization uncertainty': {dn: -0.09064000000000001, up: 0.09064000000000001}}, 16: {error: {dn: -0.13, up: 0.13}, 'sys,Overall normalization uncertainty': {dn: -0.056760000000000005, up: 0.056760000000000005}}, 17: {error: {dn: -0.11, up: 0.11}, 'sys,Overall normalization uncertainty': {dn: -0.042328000000000005, up: 0.042328000000000005}}, 18: {error: {dn: -0.1, up: 0.1}, 'sys,Overall normalization uncertainty': {dn: -0.03696, up: 0.03696}}, 19: {error: {dn: -0.045, up: 0.045}, 'sys,Overall normalization uncertainty': {dn: -0.016412, up: 0.016412}}, 20: {error: {dn: -0.036, up: 0.036}, 'sys,Overall normalization uncertainty': {dn: -0.011044000000000002, up: 0.011044000000000002}}, 21: {error: {dn: -0.027, up: 0.027}, 'sys,Overall normalization uncertainty': {dn: -0.007172000000000001, up: 0.007172000000000001}}, 22: {error: {dn: -0.012, up: 0.012}, 'sys,Overall normalization uncertainty': {dn: -0.0023320000000000003, up: 0.0023320000000000003}}, 23: {error: {dn: -0.009, up: 0.009}, 'sys,Overall normalization uncertainty': {dn: -0.0014960000000000002, up: 0.0014960000000000002}}, 24: {error: {dn: -0.0013, up: 0.0013}, 'sys,Overall normalization uncertainty': {dn: -0.00022000000000000003, up: 0.00022000000000000003}}, 25: {error: {dn: -0.0003, up: 0.0004}, 'sys,Overall normalization uncertainty': {dn: -1.76e-05, up: 1.76e-05}}}
+
+IsRef: 1
+Path: /REF/D0_2000_I503361/d01-x01-y01
+Title: doi:10.17182/hepdata.42104.v1/t1
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+5.000000e-01	5.000000e-01	5.000000e-01	6.040000e+00	5.928983e-01	5.928983e-01
+1.500000e+00	5.000000e-01	5.000000e-01	1.620000e+01	1.195694e+00	1.195694e+00
+2.500000e+00	5.000000e-01	5.000000e-01	2.040000e+01	1.419748e+00	1.419748e+00
+3.500000e+00	5.000000e-01	5.000000e-01	1.970000e+01	1.400479e+00	1.400479e+00
+4.500000e+00	5.000000e-01	5.000000e-01	1.620000e+01	1.163823e+00	1.163823e+00
+5.500000e+00	5.000000e-01	5.000000e-01	1.500000e+01	1.092016e+00	1.092016e+00
+6.500000e+00	5.000000e-01	5.000000e-01	1.410000e+01	1.044268e+00	1.044268e+00
+7.500000e+00	5.000000e-01	5.000000e-01	1.110000e+01	8.783135e-01	8.783135e-01
+8.500000e+00	5.000000e-01	5.000000e-01	1.000000e+01	8.183520e-01	8.183520e-01
+9.500000e+00	5.000000e-01	5.000000e-01	9.290000e+00	7.848470e-01	7.848470e-01
+1.100000e+01	1.000000e+00	1.000000e+00	7.250000e+00	6.271850e-01	6.271850e-01
+1.300000e+01	1.000000e+00	1.000000e+00	5.450000e+00	5.011028e-01	5.011028e-01
+1.500000e+01	1.000000e+00	1.000000e+00	4.450000e+00	4.363916e-01	4.363916e-01
+1.700000e+01	1.000000e+00	1.000000e+00	3.540000e+00	3.649126e-01	3.649126e-01
+1.900000e+01	1.000000e+00	1.000000e+00	3.210000e+00	3.406593e-01	3.406593e-01
+2.250000e+01	2.500000e+00	2.500000e+00	2.060000e+00	2.015331e-01	2.015331e-01
+2.750000e+01	2.500000e+00	2.500000e+00	1.290000e+00	1.418510e-01	1.418510e-01
+3.250000e+01	2.500000e+00	2.500000e+00	9.620000e-01	1.178629e-01	1.178629e-01
+3.750000e+01	2.500000e+00	2.500000e+00	8.400000e-01	1.066116e-01	1.066116e-01
+4.500000e+01	5.000000e+00	5.000000e+00	3.730000e-01	4.789941e-02	4.789941e-02
+5.500000e+01	5.000000e+00	5.000000e+00	2.510000e-01	3.765594e-02	3.765594e-02
+6.500000e+01	5.000000e+00	5.000000e+00	1.630000e-01	2.793631e-02	2.793631e-02
+7.750000e+01	7.500000e+00	7.500000e+00	5.300000e-02	1.222449e-02	1.222449e-02
+9.250000e+01	7.500000e+00	7.500000e+00	3.400000e-02	9.123487e-03	9.123487e-03
+1.500000e+02	5.000000e+01	5.000000e+01	5.000000e-03	1.318484e-03	1.318484e-03
+2.500000e+02	5.000000e+01	5.000000e+01	4.000000e-04	3.005158e-04	4.003870e-04
+END YODA_SCATTER2D_V2

@@ -1,0 +1,32 @@
+Name: GAMMAGAMMA_1975_I100016
+Year: 1975
+Summary: Measurement of $R$ and the hadronic cross section for energies between 1.91 and 2.97 GeV
+Experiment: GAMMAGAMMA
+Collider: ADONE
+InspireID: 100016
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B58 (1975) 481-483, 1975 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: yes
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$ and the hadronic cross section in $e^+e^-$ collisions by the GAMMA-GAMMA group for energies between 1.91 and 2.97 GeV.
+   The muonic cross section is also outputted to the yoda file
+   so that ratio $R$ can be recalcuated if runs are combined.'
+BibKey: Bacci:1975eb
+BibTeX: '@article{Bacci:1975eb,
+      author         = "Bacci, C. and others",
+      title          = "{Search for Narrow Resonances in e+ e- Annihilation Into
+                        Hadrons in the Mass Regions 1910-MeV-2545-MeV and
+                        2970-MeV-3090-MeV}",
+      journal        = "Phys. Lett.",
+      volume         = "58B",
+      year           = "1975",
+      pages          = "481-483",
+      doi            = "10.1016/0370-2693(75)90707-8",
+      reportNumber   = "LNF-75/38-P",
+      SLACcitation   = "%%CITATION = PHLTA,58B,481;%%"
+}'

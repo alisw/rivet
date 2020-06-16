@@ -1,0 +1,30 @@
+Name: CMD3_2019_I1770428
+Year: 2019
+Summary: $e^+e^-\to K^0_SK^0_S\pi^+\pi^-$ below 2 GeV
+Experiment: CMD3
+Collider: VEPP-2M
+InspireID: 1770428
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - 'arXiv:1912.05751'
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e-, e+]
+Description:
+  'Measurement of the cross section for $e^+e^-\to K^0_SK^0_S\pi^+\pi^-$ below 2 GeV
+   by the CMD3 experiment'
+Keywords: []
+BibKey: CMD-3:2019cvx
+BibTeX: '@article{CMD-3:2019cvx,
+      title          = "{Study Of The Process $e^+e^-\to K_S^0 K_S^0 \pi^+\pi^-$
+                        In The C.M. Energy Range 1.6--2.0 GeV With The CMD-3
+                        Detector}",
+      collaboration  = "CMD-3",
+      year           = "2019",
+      eprint         = "1912.05751",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1912.05751;%%"
+}'

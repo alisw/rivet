@@ -1,0 +1,36 @@
+Name: BESIII_2018_I1662660
+Year: 2018
+Summary: $D^+\to \eta e^+\nu_e$ $q^2$ spectrum
+Experiment: BESIII
+Collider: CESR
+InspireID: 1662660
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 121 (2018) 171803
+RunInfo: Any process producing D0 and D+
+Description:
+  'Measurement of the $q^2$ spectrum in the decay $D^+\to \eta e^+\nu_e$ BES-III.'
+ValidationInfo:
+  'Herwig 7 events using EvtGen for the decays.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Ablikim:2018lfp
+BibTeX: '@article{Ablikim:2018lfp,
+      author         = "Ablikim, Medina and others",
+      title          = "{Study of the decays $D^+\rightarrow\eta^{(\prime)}
+                        e^+\nu_{e}$}",
+      collaboration  = "BESIII",
+      journal        = "Phys. Rev.",
+      volume         = "D97",
+      year           = "2018",
+      number         = "9",
+      pages          = "092009",
+      doi            = "10.1103/PhysRevD.97.092009",
+      eprint         = "1803.05570",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1803.05570;%%"
+}'

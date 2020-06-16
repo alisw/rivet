@@ -1,0 +1,33 @@
+Name: SND_2014_I1275333
+Year: 2014
+Summary: Cross section for $e^+e^-\to\eta\gamma$ for energies between 1.07 and 2 GeV
+Experiment: SND
+Collider: VEPP-2M
+InspireID: 1275333
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+- Phys.Rev. D90 (2014) 032002
+RunInfo: e+ e- to hadrons below 0.6 and 1.38 GeV
+NeedCrossSection: yes
+Beams: [e+, e-]
+Description:
+  'Cross section for $e^+e^-\to\eta\gamma$ for energies between 1.07 and 2 GeV.'
+Keywords: []
+BibKey: Achasov:2013eli
+BibTeX: '@article{Achasov:2013eli,
+      author         = "Achasov, M. N. and others",
+      title          = "{Study of the process $e^+e^-\to\eta\gamma$ in the
+                        center-of-mass energy range 1.07--2.00 GeV}",
+      journal        = "Phys. Rev.",
+      volume         = "D90",
+      year           = "2014",
+      number         = "3",
+      pages          = "032002",
+      doi            = "10.1103/PhysRevD.90.032002",
+      eprint         = "1312.7078",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1312.7078;%%"
+}'

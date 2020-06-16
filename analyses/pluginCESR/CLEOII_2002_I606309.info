@@ -1,0 +1,35 @@
+Name: CLEOII_2002_I606309
+Year: 2002
+Summary: Momentum Spectra for $J/\psi$ and $\psi(2S)$ production in B decays
+Experiment: CLEOII
+Collider: CESR
+InspireID: 606309
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 89 (2002) 282001
+RunInfo: any process with Upsilon(4S) decay, original e+e-
+Description:
+  'Momentum Spectra for $J/\psi$ and $\psi(2S)$ production in B decays at the $\Upsilon(4S)$'
+ValidationInfo:
+  'Herwig 7 events using EvtGen for the decays.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Anderson:2002md
+BibTeX: '@article{Anderson:2002md,
+      author         = "Anderson, S. and others",
+      title          = "{Measurements of inclusive $B \to \psi$ production}",
+      collaboration  = "CLEO",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "89",
+      year           = "2002",
+      pages          = "282001",
+      doi            = "10.1103/PhysRevLett.89.282001",
+      eprint         = "hep-ex/0207059",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CLNS-02-1785, CLEO-02-06",
+      SLACcitation   = "%%CITATION = HEP-EX/0207059;%%"
+}'

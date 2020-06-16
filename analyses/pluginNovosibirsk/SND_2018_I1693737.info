@@ -1,0 +1,34 @@
+Name: SND_2018_I1693737
+Year: 2018
+Summary: Cross section for $e^+e^-\to\eta K^+K^-$ for energies below 2 GeV
+Experiment: SND
+Collider: VEPP-2M
+InspireID: 1693737
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Atom.Nucl. 81 (2018) no.2, 205-213
+RunInfo: e+ e- to hadrons
+NeedCrossSection: yes
+Beams: [e+, e-]
+Description:
+  'Cross section for $e^+e^-\to\eta K^+K^-$ for energies below 2 GeV'
+Keywords: []
+BibKey: Achasov:2018ygm
+BibTeX: '%%% contains utf-8, see: http://inspirehep.net/info/faq/general#utf8
+%%% add \usepackage[utf8]{inputenc} to your latex preamble
+
+@article{Achasov:2018ygm,
+      author         = "Achasov, M. N. and others",
+      title          = "{Measurement of the $e^+e^−\to\eta K^+K^−$ Cross
+                        Section by Means of the SND Detector}",
+      journal        = "Phys. Atom. Nucl.",
+      volume         = "81",
+      year           = "2018",
+      number         = "2",
+      pages          = "205-213",
+      doi            = "10.1134/S1063778818020023",
+      note           = "[Yad. Fiz.81,no.2,195(2018)]",
+      SLACcitation   = "%%CITATION = PANUE,81,205;%%"
+}'

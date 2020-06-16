@@ -1,0 +1,45 @@
+BEGIN YODA_SCATTER2D_V2 /REF/BESIII_2019_I1691850/d01-x01-y01
+IsRef: 1
+Path: /REF/BESIII_2019_I1691850/d01-x01-y01
+Title: 
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+0.50000   0.50000   0.50000   0.461	 0.009	0.009
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/BESIII_2019_I1691850/d01-x02-y01
+IsRef: 1
+Path: /REF/BESIII_2019_I1691850/d01-x02-y01
+Title: 
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+0.50000   0.50000   0.50000   42.4	 .8	.8
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/BESIII_2019_I1691850/d01-x03-y01
+IsRef: 1
+Path: /REF/BESIII_2019_I1691850/d01-x03-y01
+Title: 
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+0.50000   0.50000   0.50000   0.75	 0.01	0.01
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/BESIII_2019_I1691850/d01-x04-y01
+IsRef: 1
+Path: /REF/BESIII_2019_I1691850/d01-x04-y01
+Title: 
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+0.50000   0.50000   0.50000  -0.758	 0.012	0.012
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/BESIII_2019_I1691850/d01-x05-y01
+IsRef: 1
+Path: /REF/BESIII_2019_I1691850/d01-x05-y01
+Title: 
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+0.50000   0.50000   0.50000   -0.692	 0.017	0.017
+END YODA_SCATTER2D_V2

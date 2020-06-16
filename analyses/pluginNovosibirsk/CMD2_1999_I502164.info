@@ -1,0 +1,37 @@
+Name: CMD2_1999_I502164
+Year: 1999
+Summary: Cross section for $e^+e^-\to K^0_SK^0_L$ at energies near the $\phi$ mass
+Experiment: CMD2
+Collider: VEPP-2M
+InspireID: 502164
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B466 (1999) 385, 1999 
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+Description:
+  'Measurement of the cross section for $e^+e^-\to K^0_SK^0_L$ at energies near the $\phi$ mass.'
+Keywords: []
+BibKey: Akhmetshin:1999ym
+BibTeX: '@article{Akhmetshin:1999ym,
+      author         = "Akhmetshin, R. R. and others",
+      title          = "{Measurement of $\phi$ meson parameters in K$^0_L$
+                        K$^0_S$ decay mode with CMD-2}",
+      collaboration  = "CMD-2",
+      journal        = "Phys. Lett.",
+      volume         = "B466",
+      year           = "1999",
+      pages          = "385",
+      doi            = "10.1016/S0370-2693(99)00973-9,
+                        10.1016/S0370-2693(01)00511-1",
+      note           = "[Erratum: Phys. Lett.B508,217(2001)]",
+      eprint         = "hep-ex/9906032",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = HEP-EX/9906032;%%"
+}'

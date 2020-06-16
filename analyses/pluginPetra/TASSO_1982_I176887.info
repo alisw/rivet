@@ -1,0 +1,33 @@
+Name: TASSO_1982_I176887
+Year: 1982
+Summary: Measurement of $R$ between 12 and 36.7 GeV
+Experiment: TASSO
+Collider: PETRA
+InspireID: 176887
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B113 (1982) 499-508, 1982
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: no
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$ in $e^+e^-$ collisions by TASSO for energies between 12 and 36.7 GeV.
+   The individual hadronic and muonic cross sections are also outputted to the yoda file
+   so that ratio $R$ can be recalcuated if runs are combined.'
+Keywords: []
+BibKey: Brandelik:1982zi
+BibTeX: '@article{Brandelik:1982zi,
+      author         = "Brandelik, R. and others",
+      title          = "{A Measurement of Sigma(tot) (e+ e- ---&gt; Hadrons) for CM
+                        Energies Between 12.0-GeV and 36.7-GeV}",
+      collaboration  = "TASSO",
+      journal        = "Phys. Lett.",
+      volume         = "113B",
+      year           = "1982",
+      pages          = "499-508",
+      doi            = "10.1016/0370-2693(82)90794-8",
+      reportNumber   = "DESY-82-010",
+      SLACcitation   = "%%CITATION = PHLTA,113B,499;%%"
+}'

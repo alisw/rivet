@@ -1,0 +1,33 @@
+Name: DELPHI_1997_I428178
+Year: 1997
+Summary: Flavour separated charged particle spectra at LEP1
+Experiment: DELPHI
+Collider: LEP
+InspireID: 428178
+Status: VALIDATED
+Authors:
+ - Peter Richardson <Peter.Richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B398 (1997) 194-206, 1997
+RunInfo:
+  Hadronic Z decay events generated on the Z pole ($\sqrt{s} = 91.2$ GeV)
+NumEvents: 1000000
+Beams: [e+, e-]
+Energies: [91.2]
+Description:
+  'Charged particle momentum scaled momentum spectrum, separated into flavours of the initial quarks, at LEP1'
+Keywords: []
+BibKey: Abreu:1996px
+BibTeX: '@article{Abreu:1996px,
+      author         = "Abreu, P. and others",
+      title          = "{A Measurement of alpha-s from the scaling violation in
+                        e+ e- annihilation}",
+      collaboration  = "DELPHI",
+      journal        = "Phys. Lett.",
+      volume         = "B398",
+      year           = "1997",
+      pages          = "194-206",
+      doi            = "10.1016/S0370-2693(97)00256-6",
+      reportNumber   = "CERN-PPE-96-185",
+      SLACcitation   = "%%CITATION = PHLTA,B398,194;%%"
+}'

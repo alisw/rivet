@@ -1,0 +1,32 @@
+Name: JADE_1984_I202784
+Year: 1984
+Summary: Energy-Energy correlation at 14, 22 and 34 GeV
+Experiment: JADE
+Collider: Petra
+InspireID: 202784
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Z.Phys. C25 (1984) 231, 1984 
+RunInfo: e+e- to hadrons at 14, 22 and 34 GeV CMS
+NeedCrossSection: no
+Beams: [e+, e-]
+Energies: [14,22,34]
+Description:
+  'Measurement of the energy-energy correlation, and its assymetry, at centre-of-mass energies 14, 22 and 34 GeV'
+Keywords: []
+BibKey: Bartel:1984uc
+BibTeX: '@article{Bartel:1984uc,
+      author         = "Bartel, W. and others",
+      title          = "{Measurements of Energy Correlations in $e^+ e^- \to$
+                        Hadrons}",
+      collaboration  = "JADE",
+      journal        = "Z. Phys.",
+      volume         = "C25",
+      year           = "1984",
+      pages          = "231",
+      doi            = "10.1007/BF01547922",
+      reportNumber   = "DESY-84-050",
+      SLACcitation   = "%%CITATION = ZEPYA,C25,231;%%"
+}'

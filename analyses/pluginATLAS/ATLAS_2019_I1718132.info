@@ -1,0 +1,52 @@
+Name: ATLAS_2019_I1718132
+Year: 2019
+Summary: Control region measurements for leptoquark search at 13 TeV 
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1718132
+Status: VALIDATED
+Authors:
+ - Louie Corpe <lcorpe@cern.ch>
+ - Christian Gutschow <chris.g@cern.ch>
+References:
+ - arXiv:1902.00377 [hep-ex]
+ - submitted to EPJC
+RunInfo:
+   pp -> Z + jets at 13 TeV, pp -> ttbar at 13 TeV, 
+Luminosity_fb: 36.1
+Beams: [p+, p+]
+Energies: [13000]
+Options:
+ - LMODE=ELEL,MUMU,ELMU
+Description: 
+  'Searches for scalar leptoquarks pair-produced in proton-proton collisions at $\sqrt{s} = 13$ TeV at the Large Hadron Collider 
+  are performed by the ATLAS experiment. A data set corresponding to an integrated luminosity of 36.1 fb${}^{-1}$ is used. 
+  Final states containing two electrons or two muons and two or more jets are studied, as are states with one electron or muon, 
+  missing transverse momentum and two or more jets. No statistically significant excess above the Standard Model expectation 
+  is observed. The observed and expected lower limits on the leptoquark mass at 95% confidence level extend up to 1.25 TeV for 
+  first- and second-generation leptoquarks, as postulated in the minimal Buchmuller-Ruckl-Wyler model, assuming a branching 
+  ratio into a charged lepton and a quark of 50%. In addition, measurements of particle-level fiducial and differential cross sections 
+  are presented for the $Z\to ee$, $Z\to\mu\mu$ and $t\bar{t}$ processes in several regions related to the search control regions. 
+  Predictions from a range of generators are compared with the measurements, and good agreement is seen for many of the observables. 
+  However, the predictions for the $Z\to\ell\ell$ measurements in observables sensitive to jet energies disagree with the data.'
+BibKey: Aaboud:2019jcc
+BibTeX: '@article{Aaboud:2019jcc,
+      author         = "Aaboud, Morad and others",
+      title          = "{Searches for scalar leptoquarks and differential
+                        cross-section measurements in dilepton-dijet events in
+                        proton-proton collisions at a centre-of-mass energy of
+                        $\sqrt{s}$ = 13 TeV with the ATLAS experiment}",
+      collaboration  = "ATLAS",
+      year           = "2019",
+      eprint         = "1902.00377",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-EP-2018-262",
+      SLACcitation   = "%%CITATION = ARXIV:1902.00377;%%"
+}'
+
+ReleaseTests:
+ - $A LHC-13-Top-L
+ - $A-2 LHC-13-Z-el-jets :LMODE=ELEL
+ - $A-3 LHC-13-Z-mu-jets :LMODE=MUMU
+

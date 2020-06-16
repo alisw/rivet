@@ -1,0 +1,35 @@
+Name: BES_1999_I507637
+Year: 1999
+Summary: $\psi(2S)\to J/\psi\pi^+\pi^-$
+Experiment: BES
+Collider: BEPC
+InspireID: 507637
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D62 (2000) 032002
+RunInfo: In princple any process producing psi(2S), but e+e- -> psi(2S) needs for some dists
+Description:
+  'Measurement of the $\pi^+\pi^-$ mass Spectrum and other distributions in $\psi(2S)\to J/\psi\pi^+\pi^-$ decays.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Bai:1999mj
+BibTeX: '@article{Bai:1999mj,
+      author         = "Bai, J. Z. and others",
+      title          = "{psi(2S) ---&gt; pi+ pi- J / psi decay distributions}",
+      collaboration  = "BES",
+      journal        = "Phys. Rev.",
+      volume         = "D62",
+      year           = "2000",
+      pages          = "032002",
+      doi            = "10.1103/PhysRevD.62.032002",
+      eprint         = "hep-ex/9909038",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "SLAC-REPRINT-1999-088, BIHEP-EP1-99-03, UH511-939-99",
+      SLACcitation   = "%%CITATION = HEP-EX/9909038;%%"
+}'

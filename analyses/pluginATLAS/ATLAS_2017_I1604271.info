@@ -1,0 +1,56 @@
+Name: ATLAS_2017_I1604271
+Year: 2017
+Summary: ATLAS Inclusive jet cross section measurement at sqrt(s)=8TeV
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1604271
+Status: VALIDATED
+Authors:
+ - Jon Butterworth <j.butterworth@cern.ch>
+ - Jonathan Bossio <jonathan.bossio@cern.ch>
+ - Zdenek Hubacek  <zdenek.hubacek@cern.ch>
+References:
+ - JHEP 09 (2017) 020
+ - arXiv:1706.03192
+RunInfo: LHC 8TeV, ATLAS, QCD jet production, anti-kt R=0.4 jets, anti-kt R=0.6 jets
+Beams: [p+, p+]
+Energies: [8000]
+Luminosity_fb: 20.2
+Description:
+ 'Inclusive jet production cross-sections are measured in proton-proton collisions at a centre-of-mass energy of $\sqrt{s}=8$ TeV 
+  recorded by the ATLAS experiment at the Large Hadron Collider at CERN. The total integrated luminosity of the analysed data set 
+  amounts to 20.2 fb$^{-1}$. Double-differential cross-sections are measured for jets defined by the anti-$k_\text{t}$ jet clustering 
+  algorithm with radius parameters of $R=0.4$ and $R=0.6$ and are presented as a function of the jet transverse momentum, in the range 
+  between 70 GeV and 2.5 TeV and in six bins of the absolute jet rapidity, between 0 and 3.0. The measured cross-sections are compared 
+  to predictions of quantum chromodynamics, calculated at next-to-leading order in perturbation theory, and corrected for 
+  non-perturbative and electroweak effects. The level of agreement with predictions, using a selection of different parton 
+  distribution functions for the proton, is quantified. Tensions between the data and the theory predictions are observed.'
+BibKey: Aaboud:2017dvo
+BibTeX: '@article{Aaboud:2017dvo,
+      author         = "Aaboud, Morad and others",
+      title          = "{Measurement of the inclusive jet cross-sections in
+                        proton-proton collisions at $ \sqrt{s}=8 $ TeV with the
+                        ATLAS detector}",
+      collaboration  = "ATLAS",
+      journal        = "JHEP",
+      volume         = "09",
+      year           = "2017",
+      pages          = "020",
+      doi            = "10.1007/JHEP09(2017)020",
+      eprint         = "1706.03192",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-EP-2017-043",
+      SLACcitation   = "%%CITATION = ARXIV:1706.03192;%%"
+}'
+
+ReleaseTests:
+ - $A LHC-8-Jets-10
+ - $A-2 LHC-8-Jets-3
+ - $A-3 LHC-8-Jets-4
+ - $A-4 LHC-8-Jets-5
+ - $A-5 LHC-8-Jets-6
+ - $A-6 LHC-8-Jets-7
+ - $A-7 LHC-8-Jets-8
+ - $A-8 LHC-8-Jets-9
+

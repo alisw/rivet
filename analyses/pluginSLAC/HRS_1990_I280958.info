@@ -1,0 +1,36 @@
+Name: HRS_1990_I280958
+Year: 1990
+Summary: $K^0$ spectrum in $e^+e^-$ collisions at 29 GeV
+Experiment: HRS
+Collider:  PEP
+InspireID: 280958
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+- Phys.Lett. B205 (1988) 111-114
+RunInfo: 
+  Hadronic e+e- events at $\sqrt{s} = 29.$ GeV
+NumEvents: 1000000
+Beams: [e+, e-]
+Energies: [29.]
+PtCuts: [0]
+Description:
+  $K^0$ meson momentum spectrum measured at $\sqrt{s} = 29.$ GeV using the HRS detector at
+  PEP. The analysis includes flavour tagging by requiring either a single charged particle with $x_p>0.65 (light quarks) or a $D^{*+}$ meson (charm).
+  The rapidities with respect to the chartged thrust axis are also included.
+  The bin widths are not included in either the paper or HEPdata and have therefore been infered.
+Keywords: []
+BibKey: Abachi:1989pr
+BibTeX: '@article{Abachi:1989pr,
+      author         = "Abachi, S. and others",
+      title          = "{QUARK HADRONIZATION PROBED BY K0 MESONS}",
+      collaboration  = "HRS",
+      journal        = "Phys. Rev.",
+      volume         = "D41",
+      year           = "1990",
+      pages          = "2045",
+      doi            = "10.1103/PhysRevD.41.2045",
+      reportNumber   = "ANL-HEP-PR-89-73, IUHEE-89-4, UM-HE-89-25, PU-89-631",
+      SLACcitation   = "%%CITATION = PHRVA,D41,2045;%%"
+}'

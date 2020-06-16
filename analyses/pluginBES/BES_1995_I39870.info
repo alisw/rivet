@@ -1,0 +1,31 @@
+Name: BES_1995_I39870
+Year: 1995
+Summary: Measurement of the hadronic cross section for energies between 3.08 and 3.116 GeV
+Experiment: BES
+Collider: BEPC
+InspireID: 39870
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B355 (1995) 374-380, 1995 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: yes
+Beams: [e-, e+]
+Description:
+  'Measurement of the hadronic cross section in $e^+e^-$ collisions by BES for energies between 3.08 and 3.116 GeV.'
+BibKey: Bai:1995ik
+BibTeX: '@article{Bai:1995ik,
+      author         = "Bai, J. Z. and others",
+      title          = "{A Measurement of J / psi decay widths}",
+      collaboration  = "BES",
+      journal        = "Phys. Lett.",
+      volume         = "B355",
+      year           = "1995",
+      pages          = "374-380",
+      doi            = "10.1016/0370-2693(95)01220-2,
+                        10.1016/0370-2693(95)00712-T",
+      note           = "[Erratum: Phys. Lett.B363,267(1995)]",
+      reportNumber   = "BIHEP-EP1-95-03",
+      SLACcitation   = "%%CITATION = PHLTA,B355,374;%%"
+}'

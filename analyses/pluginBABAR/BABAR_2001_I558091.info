@@ -1,0 +1,33 @@
+Name: BABAR_2001_I558091
+Year: 2001
+Summary: Inclusive $J/\psi$ cross section at 10.57 GeV
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 558091
+Status: VALIDATED
+Authors:
+ - Your Name <your@email.address>
+References:
+ - PRL 87,162002
+RunInfo: e+ e- to hadrons
+NeedCrossSection: yes
+Beams: [e-, e+]
+Description:
+  'Measurement of inclusive $J/psi$ production by BaBar for 10.57 GeV.'
+BibKey: Aubert:2001pd
+BibTeX: '@article{Aubert:2001pd,
+      author         = "Aubert, Bernard and others",
+      title          = "{Measurement of $J/\psi$ production in continuum $e^+e^-$
+                        annihilations near $\sqrt{s}=10.6$ GeV}",
+      collaboration  = "BaBar",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "87",
+      year           = "2001",
+      pages          = "162002",
+      doi            = "10.1103/PhysRevLett.87.162002",
+      eprint         = "hep-ex/0106044",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "BABAR-PUB-01-12, SLAC-PUB-8854",
+      SLACcitation   = "%%CITATION = HEP-EX/0106044;%%"
+}'

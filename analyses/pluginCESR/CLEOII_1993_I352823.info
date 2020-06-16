@@ -1,0 +1,34 @@
+Name: CLEOII_1993_I352823
+Year: 1993
+Summary: Spectrum for $D^+_{s1}(2536)$ production at 10.58 GeV
+Experiment: CLEOII
+Collider: CESR
+InspireID: 352823
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B303 (1993) 377-384
+RunInfo: e+e- to hadrons 
+Beams: [e+, e-]
+Energies: [10.58]
+Description:
+  'Spectrum for $D^+_{s1}(2536)$ production at 10.58 GeV measured by CLEOII.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Alexander:1993nq
+BibTeX: '@article{Alexander:1993nq,
+      author         = "Alexander, James P. and others",
+      title          = "{Production and decay of the D(s1)+ (2536)}",
+      collaboration  = "CLEO",
+      journal        = "Phys. Lett.",
+      volume         = "B303",
+      year           = "1993",
+      pages          = "377-384",
+      doi            = "10.1016/0370-2693(93)91448-V",
+      reportNumber   = "CLNS-93-1191, CLEO-93-1",
+      SLACcitation   = "%%CITATION = PHLTA,B303,377;%%"
+}'

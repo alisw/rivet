@@ -1,0 +1,39 @@
+Name: BABAR_2007_I1091435
+Year: 2007
+Summary: $D^0\to K^- e^+\nu_e$ $q^2$ spectrum
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 1091435
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D76 (2007) 052005
+RunInfo: Any process producing D0
+Description:
+  'Measurement of the $q^2$ spectrum in the decay $D^0\to K^- e^+\nu_e$ by BaBar.'
+ValidationInfo:
+  'Herwig 7 events using EvtGen for the decays.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Aubert:2007wg
+BibTeX: '@article{Aubert:2007wg,
+      author         = "Aubert, Bernard and others",
+      title          = "{Measurement of the hadronic form-factor in $D^0 \to
+                        K^{-} e^{+} \nu_{e}$ 1}",
+      booktitle      = "{Proceedings, 42nd Rencontres de Moriond on QCD and High
+                        Energy Hadronic Interactions: La Thuile, Italy, March
+                        17-24, 2007}",
+      collaboration  = "BaBar",
+      journal        = "Phys. Rev.",
+      volume         = "D76",
+      year           = "2007",
+      pages          = "052005",
+      doi            = "10.1103/PhysRevD.76.052005",
+      eprint         = "0704.0020",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "SLAC-PUB-12417, BABAR-PUB-07-015",
+      SLACcitation   = "%%CITATION = ARXIV:0704.0020;%%"
+}'

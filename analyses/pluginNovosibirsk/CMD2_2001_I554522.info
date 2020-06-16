@@ -1,0 +1,33 @@
+Name: CMD2_2001_I554522
+Year: 2001
+Summary: Cross section for $e^+e^-\to\eta\gamma$ for energies between 600 MeV and 1380 MeV
+Experiment: CMD2
+Collider: VEPP-2M
+InspireID: 554522
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B509 (2001) 217-226, 2001 
+RunInfo: e+ e- to hadrons below 0.6 and 1.38 GeV
+NeedCrossSection: yes
+Beams: [e+, e-]
+Description:
+  'Cross section for $e^+e^-\to\eta\gamma$ for energies between 600 MeV and 1380 MeV'
+Keywords:
+BibKey: Akhmetshin:2001hm
+BibTeX: '@article{Akhmetshin:2001hm,
+      author         = "Akhmetshin, R. R. and others",
+      title          = "{Study of the process e+ e- ---&gt; eta gamma in
+                        center-of-mass energy range 600-MeV to 1380-MeV at CMD-2}",
+      collaboration  = "CMD-2",
+      journal        = "Phys. Lett.",
+      volume         = "B509",
+      year           = "2001",
+      pages          = "217-226",
+      doi            = "10.1016/S0370-2693(01)00567-6",
+      eprint         = "hep-ex/0103043",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = HEP-EX/0103043;%%"
+}'

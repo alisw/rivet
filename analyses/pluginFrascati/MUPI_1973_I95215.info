@@ -1,0 +1,33 @@
+Name: MUPI_1973_I95215
+Year: 1973
+Summary: Measurement of $R$ and the hadronic cross section for energies betwee 2.6 and 3 GeV
+Experiment: MUPI
+Collider: ADONE
+InspireID: 95215
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B47 (1973) 80-84, 1973 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: yes
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$ and the hadronic cross seection in $e^+e^-$ collisions by
+   the Mu-Pi group for energies between 2.6 and 3 GeV.
+   The muonic cross section is also outputted to the yoda file
+   so that ratio $R$ can be recalcuated if runs are combined.'
+Keywords: []
+BibKey: Ceradini:1974nt
+BibTeX: '@article{Ceradini:1974nt,
+      author         = "Ceradini, F. and Conversi, M. and D Angelo, S. and
+                        Paoluzi, L. and Santonico, R. and Visentin, R.",
+      title          = "{Multihadron production in e+ e- collisions up to 3 gev
+                        total center-of-mass energy}",
+      journal        = "Phys. Lett.",
+      volume         = "47B",
+      year           = "1973",
+      pages          = "80-84",
+      doi            = "10.1016/0370-2693(73)90574-1",
+      SLACcitation   = "%%CITATION = PHLTA,47B,80;%%"
+}'

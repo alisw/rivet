@@ -1,0 +1,31 @@
+Name: BESIII_2019_I1743841
+Year: 2019
+Summary: Cross section for $K^+K^-K^+K^-$ and $K^+K^-\phi$ for $E_{\text{CMS}}=2.10$ to $3.08$ GeV
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1743841
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - arXiv:1907.06015 [hep-ex]
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+  'Measurement of the cross section for  $e^+e^- \to$  $K^+K^-K^+K^-$ and $K^+K^-\phi$ for center of mass energies between 2.10 and 3.08 GeV by the BESIII experiment.'
+Keywords: []
+BibKey: Ablikim:2019tpp
+BibTeX: '@article{Ablikim:2019tpp,
+      author         = "Ablikim, M. and others",
+      title          = "{Cross section measurements of $e^{+}e^{-} \to
+                        K^{+}K^{-}K^{+}K^{-} $ and $ \phi K^{+}K^{-}$ at
+                        center-of-mass energies from 2.10 to 3.08 GeV}",
+      collaboration  = "BESIII",
+      year           = "2019",
+      eprint         = "1907.06015",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1907.06015;%%"
+}'

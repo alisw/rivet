@@ -1,0 +1,31 @@
+Name: CMD2_1995_I406880
+Year: 1995
+Summary: Cross section for $e^+e^-\to$  $K^+K^-$, $K_S^0K_L^0$, $\pi^+\pi^-\pi^0$ and $\eta\gamma$ near the $\phi$ resonance
+Experiment: CMD2
+Collider: VEPP-2M
+InspireID: 406880
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+- Phys.Lett. B364 (1995) 199-206, 1995 
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+Description:
+  'Measurement of the cross section for $e^+e^-\to$  $K^+K^-$, $K_S^0K_L^0$, $\pi^+\pi^-\pi^0$ and $\eta\gamma$ near the $\phi$ resonance'
+Keywords:
+BibKey: Akhmetshin:1995vz
+BibTeX: '@article{Akhmetshin:1995vz,
+      author         = "Akhmetshin, R. R. and others",
+      title          = "{Measurement of phi meson parameters with CMD-2 detector
+                        at VEPP-2M collider}",
+      journal        = "Phys. Lett.",
+      volume         = "B364",
+      year           = "1995",
+      pages          = "199-206",
+      doi            = "10.1016/0370-2693(95)01394-6",
+      SLACcitation   = "%%CITATION = PHLTA,B364,199;%%"
+}'

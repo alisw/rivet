@@ -1,0 +1,39 @@
+Name: BABAR_2014_I1287920
+Year: 2014
+Summary: Cross section for $e^+e^-\to$ $K_S^0K_L^0$, $K_S^0K_L^0\pi^+\pi^-$, $K_S^0K_S^0\pi^+\pi^-$, $K_S^0K_S^0K^+K^-$ between 1.06 and 2.2 GeV
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 1287920
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+- Phys.Rev. D89 (2014) 092002, 2014 
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+  'Measurement of the cross section for  $e^+e^-\to$ $K_S^0K_L^0$, $K_S^0K_L^0\pi^+\pi^-$, $K_S^0K_S^0\pi^+\pi^-$, $K_S^0K_S^0K^+K^-$ via radiative return,
+   including for energies between 1.06 and 2.2 GeV'
+Keywords:
+BibKey: Lees:2014xsh
+BibTeX: '@article{Lees:2014xsh,
+      author         = "Lees, J. P. and others",
+      title          = "{Cross sections for the reactions $e^+ e^-\to K_S^0
+                        K_L^0$, $K_S^0 K_L^0 \pi^+\pi^-$, $K_S^0 K_S^0
+                        \pi^+\pi^-$, and $K_S^0 K_S^0 K^+K^-$ from events with
+                        initial-state radiation}",
+      collaboration  = "BaBar",
+      journal        = "Phys. Rev.",
+      volume         = "D89",
+      year           = "2014",
+      number         = "9",
+      pages          = "092002",
+      doi            = "10.1103/PhysRevD.89.092002",
+      eprint         = "1403.7593",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "SLAC-PUB-15934",
+      SLACcitation   = "%%CITATION = ARXIV:1403.7593;%%"
+}'

@@ -1,0 +1,35 @@
+Name: CLEOII_1995_I404590
+Year: 1995
+Summary: Spectrum for $\Xi_c^{+}$ production at 10.58 GeV
+Experiment: CLEOII
+Collider: CESR
+InspireID: 404590
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B373 (1996) 261-266
+RunInfo: e+e- to hadrons 
+Beams: [e+, e-]
+Energies: [10.58]
+Description:
+  'Spectrum for $\Xi_c^{+}$ production at 10.58 GeV measured by CLEOII.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Edwards:1995xw
+BibTeX: '@article{Edwards:1995xw,
+      author         = "Edwards, K. W. and others",
+      title          = "{Observation of new decay modes of the charmed strange
+                        baryon Xi(c)+}",
+      collaboration  = "CLEO",
+      journal        = "Phys. Lett.",
+      volume         = "B373",
+      year           = "1996",
+      pages          = "261-266",
+      doi            = "10.1016/0370-2693(96)00111-6",
+      reportNumber   = "CLNS-95-1353, CLEO-95-15",
+      SLACcitation   = "%%CITATION = PHLTA,B373,261;%%"
+}'

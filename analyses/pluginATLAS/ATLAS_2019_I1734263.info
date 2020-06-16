@@ -1,0 +1,46 @@
+Name: ATLAS_2019_I1734263
+Year: 2016
+Summary: WW production at 13 TeV
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1734263
+Status: VALIDATED
+Authors:
+ - Kristin Lohwasser <kristin.lohwasser@cern.ch>
+ - Christian Gutschow <chris.g@cern.ch>
+ - Hannes Mildner <hannes.mildner@cern.ch>
+References:
+ - arXiv:1905.04242 [hep-ex]
+Keywords:
+ - 2boson
+ - diboson
+ - multiboson
+ - ww
+ - 2lepton
+RunInfo:
+  pp -> WW production at 13 TeV
+Luminosity_fb: 36.1
+Beams: [p+, p+]
+Energies: [13000]
+PtCuts: [27,27]
+Description:
+'A measurement of fiducial and differential cross-sections for $W^+W^-$ production in proton--proton collisions at $\sqrt{s}=$13~\TeV\ with the ATLAS experiment at the Large Hadron Collider using data corresponding to an integrated luminosity of $36.1$~fb$^{-1}$ is presented. Events with one electron and one muon are selected, corresponding to the decay of the diboson system as $WW\rightarrow e^{\pm}\nu\mu^{\mp}\nu$. To suppress top-quark background, events containing jets with a transverse momentum exceeding 35~\GeV\ are not included in the measurement phase space. 
+The fiducial cross-section, six differential distributions and the cross-section as a function of the jet-veto transverse momentum threshold are measured and compared with several theoretical predictions. 
+Constraints on anomalous electroweak gauge boson self-interactions are also presented in the framework of a dimension-six effective field theory.'
+BibKey: Aaboud:2019nkz
+BibTex: '@article{Aaboud:2019nkz,
+      author         = "Aaboud, Morad and others",
+      title          = "{Measurement of fiducial and differential $W^+W^-$
+                        production cross-sections at $\sqrt{s}=$13 TeV with the
+                        ATLAS detector}",
+      collaboration  = "ATLAS",
+      year           = "2019",
+      eprint         = "1905.04242",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-EP-2019-055",
+      SLACcitation   = "%%CITATION = ARXIV:1905.04242;%%"
+}'
+
+ReleaseTests:
+ - $A LHC-13-WW-ll

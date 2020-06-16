@@ -1,0 +1,50 @@
+Name: CMS_2018_I1646260
+Year: 2019
+Summary: Search for BSM with 2 soft leptons + MET at 13 TeV
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1646260
+Status: VALIDATED NOTREENTRY NOHEPDATA
+Authors:
+ - Andy Buckley <andy.buckley@cern.ch>
+ - Derek Yeung
+References:
+ - 'Phys.Lett. B782 (2018) 440-467'
+ - 'DOI: 10.1016/j.physletb.2018.05.062'
+ - 'CMS-SUS-16-048'
+ - 'arXiv:1801.01846'
+RunInfo:
+  Low-mass l^+ l^- + pTmiss (l = el, mu)
+NeedCrossSection: yes
+Beams: [p+, p+]
+Energies: [13000]
+Luminosity_fb: 35.9
+Description:
+  'A search is presented for new physics in events with two low-momentum, oppositely
+  charged leptons (electrons or muons) and missing transverse momentum in proton-proton
+  collisions at a centre-of-mass energy of 13 TeV. The data collected using the CMS
+  detector at the LHC correspond to an integrated luminosity of 35.9/fb. The observed
+  event yields are consistent with the expectations from the Standard Model. The
+  analysis is optimised for study of pair production of charginos and neutralinos
+  with nearly degenerate masses, as expected in natural supersymmetry models with light
+  higgsinos, as well as in terms of the pair production of top squarks, when the lightest
+  neutralino and the top squark have similar masses.'
+Keywords: [susy, leptons, softlepton]
+BibKey: Sirunyan:2018iwl
+BibTeX: '@article{Sirunyan:2018iwl,
+      author         = "Sirunyan, Albert M and others",
+      title          = "{Search for new physics in events with two soft
+                        oppositely charged leptons and missing transverse momentum
+                        in proton-proton collisions at $\sqrt{s}=$ 13 TeV}",
+      collaboration  = "CMS",
+      journal        = "Phys. Lett.",
+      volume         = "B782",
+      year           = "2018",
+      pages          = "440-467",
+      doi            = "10.1016/j.physletb.2018.05.062",
+      eprint         = "1801.01846",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-EP-2017-336, CMS-SUS-16-048",
+      SLACcitation   = "%%CITATION = ARXIV:1801.01846;%%"
+}'

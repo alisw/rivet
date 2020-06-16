@@ -1,0 +1,37 @@
+Name: DELPHI_2006_I719387
+Year: 2006
+Summary: Spectrum for $\Xi^-(\bar{\Xi}^+)$ at LEP1
+Experiment: DELPHI
+Collider: LEP
+InspireID: 719387
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B639 (2006) 179-191, 2006 
+RunInfo:
+  Hadronic Z decay events generated on the Z pole ($\sqrt{s} = 91.2$ GeV)
+NumEvents: 1000000
+Beams: [e+, e-]
+Energies: [91.2]
+PtCuts: [0]
+Description:
+  Measurement of the $\Xi^-$ momentum distributions by DELPHI at LEP 1.
+Keywords: []
+BibKey: Abdallah:2006zx
+BibTeX: '@article{Abdallah:2006zx,
+      author         = "Abdallah, J. and others",
+      title          = "{Masses, Lifetimes and Production Rates of Xi- and
+                        anti-Xi+ at LEP 1}",
+      collaboration  = "DELPHI",
+      journal        = "Phys. Lett.",
+      volume         = "B639",
+      year           = "2006",
+      pages          = "179-191",
+      doi            = "10.1016/j.physletb.2006.06.029",
+      eprint         = "hep-ex/0606030",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-PH-EP-2006-016",
+      SLACcitation   = "%%CITATION = HEP-EX/0606030;%%"
+}'

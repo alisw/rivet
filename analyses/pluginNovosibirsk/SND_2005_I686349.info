@@ -1,0 +1,36 @@
+Name: SND_2005_I686349
+Year: 2005
+Summary: Cross section for $e^+e^-\to \pi^+\pi^-$ at energies between 0.4 and 1 GeV
+Experiment: SND
+Collider:  VEPP-2M
+InspireID: 686349
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+- J. Exp. Theor. Phys. 101, 1053 (2005)
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+Description:
+  'Measurement of the cross section for $e^+e^-\to \pi^+\pi^-$ at energies between 0.4 and 1 GeV'
+Keywords: []
+BibKey: Achasov:2005rg
+BibTeX: '@article{Achasov:2005rg,
+      author         = "Achasov, M. N. and others",
+      title          = "{Study of the process e+ e- ---&gt; pi+ pi- in the energy
+                        region 400 &lt; s**(1/2) &lt; 1000-MeV}",
+      journal        = "J. Exp. Theor. Phys.",
+      volume         = "101",
+      year           = "2005",
+      number         = "6",
+      pages          = "1053-1070",
+      doi            = "10.1134/1.2163921",
+      note           = "[Zh. Eksp. Teor. Fiz.128,no.6,1201(2005)]",
+      eprint         = "hep-ex/0506076",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = HEP-EX/0506076;%%"
+}'

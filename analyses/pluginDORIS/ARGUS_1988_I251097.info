@@ -1,0 +1,35 @@
+Name: ARGUS_1988_I251097
+Year: 1988
+Summary: Hyperon spectra in $e^+e^-$ collisions in the continuum at 10 GeV and at $\Upsilon_{1,2}$
+Experiment: ARGUS
+Collider: DORIS
+InspireID: 251097
+Status: VALIDATED
+Authors:
+ - Peter Richardson <Peter.Richardson@durham.ac.uk>
+References:
+ - Z.Phys. C39 (1988) 177, 1988 
+RunInfo:
+  $e^+ e^-$ analysis near the $\Upsilon$ resonances
+NeedCrossSection: yes
+Beams: [e-, e+]
+Energies: [9.46,10.00,10.02]
+Description:
+  'Measurement of the specrtra for the production of $\Lambda$ and $\Xi^-$ baryons.
+             Data are taken on the $\Upsilon(1S)$, $\Upsilon(2S)$
+	     and in the nearby continuum. N.B. data tables 10 onwards are duplicates and therefore not implemented.'
+Keywords: []
+BibKey: Albrecht:1987ew
+BibTeX: '@article{Albrecht:1987ew,
+      author         = "Albrecht, H. and others",
+      title          = "{Hyperon Production in $e^+ e^-$ Annihilation at 10-{GeV}
+                        Center-of-mass Energy}",
+      collaboration  = "ARGUS",
+      journal        = "Z. Phys.",
+      volume         = "C39",
+      year           = "1988",
+      pages          = "177",
+      doi            = "10.1007/BF01550992",
+      reportNumber   = "DESY-87-141",
+      SLACcitation   = "%%CITATION = ZEPYA,C39,177;%%"
+}'

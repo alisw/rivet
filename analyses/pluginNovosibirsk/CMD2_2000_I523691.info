@@ -1,0 +1,33 @@
+Name: CMD2_2000_I523691
+Year: 2000
+Summary: Cross section for $e^+e^-\to \pi^+\pi^-\pi^0$ near the $\omega$ mass
+Experiment: CMD2
+Collider: VEPP-2M
+InspireID: 523691
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B434 (1998) 426-436, 1998 
+RunInfo: e+ e- to hadrons
+NeedCrossSection: yes
+Beams: [e+, e-]
+Description:
+  'Measurement of the cross section for $e^+e^-\to \pi^+\pi^-\pi^0$ for energies near the $\omega$ mass.'
+Keywords:
+BibKey: Akhmetshin:2000ca
+BibTeX: '@article{Akhmetshin:2000ca,
+      author         = "Akhmetshin, R. R. and others",
+      title          = "{Measurement of omega meson parameters in pi+ pi- pi0
+                        decay mode with CMD-2}",
+      collaboration  = "CMD-2",
+      journal        = "Phys. Lett.",
+      volume         = "B476",
+      year           = "2000",
+      pages          = "33-39",
+      doi            = "10.1016/S0370-2693(00)00123-4",
+      eprint         = "hep-ex/0002017",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = HEP-EX/0002017;%%"
+}'

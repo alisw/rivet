@@ -1,0 +1,34 @@
+Name: BELLE_2009_I823878
+Year: 2009
+Summary: Cross section for $\phi\eta$, $\phi\eta^\prime$, $\rho^0\eta$, $\rho^0\eta^\prime$ at 10.58 GeV
+Experiment: BELLE
+Collider: KEKB
+InspireID: 823878
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B681 (2009) 400-405, 2009
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+  'Measurement of the cross section for $\phi\eta$, $\phi\eta^\prime$, $\rho^0\eta$, $\rho^0\eta^\prime$ at 10.58 GeV'
+Keywords: []
+BibKey: Belous:2009yp
+BibTeX: '@article{Belous:2009yp,
+      author         = "Belous, K. and others",
+      title          = "{Measurement of cross sections of exclusive e+ e- ---&gt; VP
+                        processes at s**(1/2) = 10.58-GeV}",
+      collaboration  = "Belle",
+      journal        = "Phys. Lett.",
+      volume         = "B681",
+      year           = "2009",
+      pages          = "400-405",
+      doi            = "10.1016/j.physletb.2009.10.037",
+      eprint         = "0906.4214",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:0906.4214;%%"
+}'

@@ -1,0 +1,72 @@
+BEGIN YODA_SCATTER2D_V2 /REF/OPAL_2001_I536266/d01-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.51, up: 0.51}, sys: {dn: -1.2, up: 0.86}}}
+
+IsRef: 1
+Path: /REF/OPAL_2001_I536266/d01-x01-y01
+Title: doi:10.17182/hepdata.49812.v1/t1
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+4.560000e+01	0.500000e+00	0.500000e+00	1.777000e+01	1.303879e+00	9.998500e-01
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/OPAL_2001_I536266/d01-x01-y02
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.63, up: 0.63}, sys: {dn: -1.17, up: 1.46}}}
+
+IsRef: 1
+Path: /REF/OPAL_2001_I536266/d01-x01-y02
+Title: doi:10.17182/hepdata.49812.v1/t1
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+4.560000e+01	0.500000e+00	0.500000e+00	2.144000e+01	1.328834e+00	1.590126e+00
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/OPAL_2001_I536266/d01-x01-y03
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.13, up: 0.13}, sys: {dn: -0.37, up: 0.39}}}
+
+IsRef: 1
+Path: /REF/OPAL_2001_I536266/d01-x01-y03
+Title: doi:10.17182/hepdata.49812.v1/t1
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+4.560000e+01	0.500000e+00	0.500000e+00	2.002000e+01	3.921734e-01	4.110961e-01
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/OPAL_2001_I536266/d02-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.047, up: 0.047}, sys: {dn: -0.109, up: 0.081}}}
+
+IsRef: 1
+Path: /REF/OPAL_2001_I536266/d02-x01-y01
+Title: doi:10.17182/hepdata.49812.v1/t2
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+4.560000e+01	0.500000e+00	0.500000e+00	8.290000e-01	1.187013e-01	9.364828e-02
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/OPAL_2001_I536266/d02-x01-y02
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.03, up: 0.03}, sys: {dn: -0.089, up: 0.062}}}
+
+IsRef: 1
+Path: /REF/OPAL_2001_I536266/d02-x01-y02
+Title: doi:10.17182/hepdata.49812.v1/t2
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+4.560000e+01	0.500000e+00	0.500000e+00	9.340000e-01	9.392018e-02	6.887670e-02
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/OPAL_2001_I536266/d02-x01-y03
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.033, up: 0.033}, sys: {dn: -0.077, up: 0.057}}}
+
+IsRef: 1
+Path: /REF/OPAL_2001_I536266/d02-x01-y03
+Title: doi:10.17182/hepdata.49812.v1/t2
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+4.560000e+01	0.500000e+00	0.500000e+00	1.127000e+00	8.377350e-02	6.586350e-02
+END YODA_SCATTER2D_V2

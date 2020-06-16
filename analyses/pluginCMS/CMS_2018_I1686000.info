@@ -1,0 +1,59 @@
+Name: CMS_2018_I1686000
+Year: 2018
+Summary: Fiducial single-top + photon cross-section measurement at 13 TeV
+Experiment: CMS
+Collider: LHC
+InspireID: 1682495
+Status: VALIDATED
+Authors:
+ - cms-pag-conveners-smp@cern.ch
+ - Andy Buckley <andy.buckley@cern.ch>
+References:
+ - CMS-TOP-17-016, CERN-EP-2018-206
+ - Phys.Rev.Lett. 121 (2018)
+ - DOI 10.1103/PhysRevLett.121.221802
+ - arXiv:1808.02913 [hep-ex]
+ - http://cms-results.web.cern.ch/cms-results/public-results/publications/TOP-17-016/index.html
+RunInfo:
+  $pp$ single-top + photon production at $\sqrt{s} = 13$ TeV
+Beams: [p+, p+]
+Energies: [13000]
+NeedCrossSection: yes
+Description:
+  'The first evidence of events consistent with the production of a single top
+  quark in association with a photon is reported. The analysis is based on
+  proton-proton collisions at s=13  TeV and recorded by the CMS experiment in
+  2016, corresponding to an integrated luminosity of 35.9  fb-1. Events are
+  selected by requiring the presence of a muon, a photon, an imbalance
+  in transverse momentum from an undetected neutrino, and at least two jets
+  of which exactly one is identified as associated with the hadronization of
+  a b quark. A multivariate discriminant based on topological and kinematic
+  event properties is employed to separate signal from background processes. An
+  excess above the background-only hypothesis is observed, with a significance
+  of 4.4 standard deviations. A fiducial cross section is measured for isolated
+  photons with transverse momentum greater than 25 GeV in the central region of
+  the detector. The measured product of the cross section and branching fraction
+  is $115 \pm 17 \text{ (stat)} \pm 30 \text{ (syst)}~\mathrm{fb}$, consistent with the
+  Standard Model prediction.
+
+  Warning: the fiducial definition in this analysis relies on generation-level cuts
+  and cannot be exactly reproduced.'
+BibKey: Sirunyan:2018bsr
+BibTeX: '@article{Sirunyan:2018bsr,
+      author         = "Sirunyan, Albert M and others",
+      title          = "{Evidence for the associated production of a single top
+                        quark and a photon in proton-proton collisions at
+                        $\sqrt{s}=$ 13 TeV}",
+      collaboration  = "CMS",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "121",
+      year           = "2018",
+      number         = "22",
+      pages          = "221802",
+      doi            = "10.1103/PhysRevLett.121.221802",
+      eprint         = "1808.02913",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CMS-TOP-17-016, CERN-EP-2018-206",
+      SLACcitation   = "%%CITATION = ARXIV:1808.02913;%%"
+}'

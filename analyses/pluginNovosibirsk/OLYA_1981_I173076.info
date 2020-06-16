@@ -1,0 +1,32 @@
+Name: OLYA_1981_I173076
+Year: 1981
+Summary: Cross section for $e^+e^-\to K^+K^-$ at energies between 1. and 1.4 GeV
+Experiment: OLYA
+Collider: VEPP-2M
+InspireID: 173076
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+- Phys.Rev. D76 (2007) 072012, 2007 
+RunInfo: e+ e- to hadrons
+NeedCrossSection: yes
+Beams: [e+, e-]
+Description:
+  'Measurement of the cross section for $e^+e^-\to K^+K^-$ at energies between 1. and 1.4 GeV'
+Keywords:
+BibKey: Ivanov:1981wf
+BibTeX: '@article{Ivanov:1981wf,
+      author         = "Ivanov, P. M. and Kurdadze, L. M. and Lelchuk, M. {\relax
+                        Yu}. and Sidorov, V. A. and Skrinsky, A. N. and
+                        Chilingarov, A. G. and Shatunov, {\relax Yu}. M. and
+                        Shvarts, B. A. and Eidelman, S. I.",
+      title          = "{Measurement of the Charged Kaon Form-factor in the
+                        Energy Range 1.0-{GeV} to 1.4-{GeV}}",
+      journal        = "Phys. Lett.",
+      volume         = "107B",
+      year           = "1981",
+      pages          = "297-300",
+      doi            = "10.1016/0370-2693(81)90834-0",
+      SLACcitation   = "%%CITATION = PHLTA,107B,297;%%"
+}'

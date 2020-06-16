@@ -1,0 +1,9 @@
+Name: MC_Meson_Meson_Leptons_Decay
+Summary: MC analyis of $V\to P \ell^+\ell^-$ and $P\to V \ell^+\ell^-$ decays
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+RunInfo: Any process producing vector or scalar meson decays
+NeedCrossSection: no
+Description:
+  'A Monte Carlo analysis for the decay of vector mesons to a pseudoscalar meson, or a pseudoscalar meson to a vector meson, and an $e^+e^-$ or $\mu^+\mu^-$ pair. All such decays are automatically identified. Based on old Herwig++ internal analysis.'

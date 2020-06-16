@@ -1,0 +1,36 @@
+Name: CLEOC_2009_I823313
+Year: 2009
+Summary: $q^2$ spectra in semi-leptonic $D$ decays
+Experiment: CLEOC
+Collider: CESR
+InspireID: 823313
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D80 (2009) 032005
+RunInfo: any process producing charm mesons
+Description:
+  'Measurement of the $q^2$ spectra for semi-leptonic $D$ meson decays by CLEOC.'
+ValidationInfo:
+  'Herwig 7 events at the psi(3770), using EvtGen for the D decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Besson:2009uv
+BibTeX: '@article{Besson:2009uv,
+      author         = "Besson, D. and others",
+      title          = "{Improved measurements of D meson semileptonic decays to
+                        pi and K mesons}",
+      collaboration  = "CLEO",
+      journal        = "Phys. Rev.",
+      volume         = "D80",
+      year           = "2009",
+      pages          = "032005",
+      doi            = "10.1103/PhysRevD.80.032005",
+      eprint         = "0906.2983",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CLNS-09-2049, CLEO-09-02",
+      SLACcitation   = "%%CITATION = ARXIV:0906.2983;%%"
+}'

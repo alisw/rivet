@@ -1,0 +1,58 @@
+Name: ATLAS_2017_I1637587
+Year: 2017
+Summary: Soft-Drop Jet Mass at 13 TeV
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1637587
+Status: VALIDATED REENTRANT
+Authors: 
+ - Ben Nachman <benjamin.philip.nachman@cern.ch>
+ - Jennifer Roloff <jroloff2@gmail.com>
+References:
+ - Phys.Rev.Lett. 121 (2018) no.9, 092001
+ - doi:10.1103/PhysRevLett.121.092001
+ - arXiv:1711.08341 [hep-ex]
+Keywords:
+  - SUBSTRUCTURE
+  - SOFTDROP
+  - JETS
+RunInfo:
+  p p -> j j at 13 TeV
+Luminosity_fb: 32.9
+Beams: [p+, p+]
+Energies: [13000]
+PtCuts: [400.]
+Description:
+  'Jet substructure observables have significantly extended the search program for physics beyond the standard model at the Large
+  Hadron Collider. The state-of-the-art tools have been motivated by theoretical calculations, but there has never been a direct
+  comparison between data and calculations of jet substructure observables that are accurate beyond leading-logarithm approximation.
+  Such observables are significant not only for probing the collinear regime of QCD that is largely unexplored at a hadron collider,
+  but also for improving the understanding of jet substructure properties that are used in many studies at the Large Hadron
+  Collider. This Letter documents a measurement of the first jet substructure quantity at a hadron collider to be calculated at
+  next-to-next-to-leading-logarithm accuracy. The normalized, differential cross section is measured as a function of
+  $\text{log}_{10}\rho^2$, where $\rho$ is the ratio of the soft-drop mass to the ungroomed jet transverse momentum. This quantity
+  is measured in dijet events from 32.9fb$^{-1}$ of $\sqrt{s} = 13$ TeV proton-proton collisions recorded by the ATLAS detector.
+  The data are unfolded to correct for detector effects and compared to precise QCD calculations and leading-logarithm particle-level
+  Monte Carlo simulations.'
+BibKey: Aaboud:2017qwh
+BibTex: '@article{Aaboud:2017qwh,
+      author         = "Aaboud, Morad and others",
+      title          = "{Measurement of the Soft-Drop Jet Mass in pp Collisions
+                        at $\sqrt{s} = 13$  TeV with the ATLAS Detector}",
+      collaboration  = "ATLAS",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "121",
+      year           = "2018",
+      number         = "9",
+      pages          = "092001",
+      doi            = "10.1103/PhysRevLett.121.092001",
+      eprint         = "1711.08341",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-EP-2017-231",
+      SLACcitation   = "%%CITATION = ARXIV:1711.08341;%%"
+}'
+
+ReleaseTests:
+ - $A LHC-13-DiJets-boosted
+

@@ -1,0 +1,33 @@
+Name: MARKII_1991_I295286
+Year: 1991
+Summary: Measurement of $R$ at 29 GeV
+Experiment: MARKII
+Collider: PEP
+InspireID: 295286
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D43 (1991) 34-45, 1991 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: yes
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$ in $e^+e^-$ collisions by MARKII at 29 GeV.
+   The individual hadronic and muonic cross sections are also outputted to the yoda file
+   so that ratio $R$ can be recalcuated if runs are combined.'
+Keywords: []
+BibKey: VonZanthier:1990we
+BibTeX: '@article{VonZanthier:1990we,
+      author         = "Von Zanthier, Christoph and others",
+      title          = "{Measurement of the Total Hadronic Cross-section in $e^+
+                        e^-$ Annihilation at $\sqrt{s}=29$-{GeV}}",
+      collaboration  = "MARK-II",
+      journal        = "Phys. Rev.",
+      volume         = "D43",
+      year           = "1991",
+      pages          = "34-45",
+      doi            = "10.1103/PhysRevD.43.34",
+      reportNumber   = "SLAC-PUB-5213, LBL-28859",
+      SLACcitation   = "%%CITATION = PHRVA,D43,34;%%"
+}'

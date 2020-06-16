@@ -1,0 +1,35 @@
+Name: SND_2018_I1637194
+Year: 2018
+Summary: Cross section for  $e^+e^-\to$ $K^0_SK^0_L\pi^0$ for energies between 1.3 and 2.0
+Experiment: SND
+Collider: VEPP-2M
+InspireID: 1637194
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D97 (2018) no.3, 032011
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+  'Measurement of the cross section for  $e^+e^-\to$ $K^0_SK^0_L\pi^0$ for energies from 1.3 to 2.0 GeV.'
+Keywords:
+BibKey: Achasov:2017vaq
+BibTeX: '@article{Achasov:2017vaq,
+      author         = "Achasov, M. N. and others",
+      title          = "{Measurement of the $\mathbf{e^+e^- \rightarrow K_S K_L
+                        \pi^0}$ cross section in the energy range
+                        $\mathbf{\sqrt{s}=1.3-2.0}$ GeV}",
+      journal        = "Phys. Rev.",
+      volume         = "D97",
+      year           = "2018",
+      number         = "3",
+      pages          = "032011",
+      doi            = "10.1103/PhysRevD.97.032011",
+      eprint         = "1711.07143",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1711.07143;%%"
+}'

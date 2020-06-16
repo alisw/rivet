@@ -1,0 +1,35 @@
+Name: BESIII_2018_I1641075
+Year: 2018
+Summary:  $\eta^\prime\to \pi^+\pi^-\gamma$ decays
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1641075
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 120 (2018) 242003, 2018
+RunInfo:
+  Events with eta prime decays, either particle guns or collisions.
+NumEvents: 10000
+NeedCrossSection: no
+Description:
+  'Differential decay rates for $\eta^\prime\to \pi^+\pi^-\gamma$ decays. Data from HEPData has been manipulated to remove the background, correct for the efficiency, and normalise the distribution.'
+Keywords: []
+BibKey: Ablikim:2017fll
+BibTeX: '@article{Ablikim:2017fll,
+      author         = "Ablikim, M. and others",
+      title          = "{Precision Study of
+                        $\eta^\prime\rightarrow\gamma\pi^+\pi^-$ Decay Dynamics}",
+      collaboration  = "BESIII",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "120",
+      year           = "2018",
+      number         = "24",
+      pages          = "242003",
+      doi            = "10.1103/PhysRevLett.120.242003",
+      eprint         = "1712.01525",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1712.01525;%%"
+}'

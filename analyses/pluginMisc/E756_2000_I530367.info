@@ -1,0 +1,37 @@
+Name: E756_2000_I530367
+Year: 2000
+Summary: Measurement of the asymmetry in $\Xi^-\to\Lambda^0\pi^-$
+Experiment: E756
+InspireID: 530367
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 85 (2000) 4860-4863
+RunInfo: Any process producing Xi- baryons
+NeedCrossSection: no
+Description:
+  'The Hyper CP experiment measured the asymmetry parameter in the decay $\Xi^-\to\Lambda^0\pi^-$
+   and the charge conjugate mode, in practice
+   this is a fit to a normalised distribution $\frac12(1+\alpha\cos\theta)$.
+   The paper only gives the number for the $\alpha$ parameter and not the distribution, so the
+   distribution is calculated. The $\alpha$ parameter is then extracted using a $\chi^2$ fit.
+   This analysis is useful for testing spin correlations in hadron decays.'
+Keywords: []
+BibKey: Luk:2000zw
+BibTeX: '@article{Luk:2000zw,
+      author         = "Luk, K. B. and others",
+      title          = "{Search for direct CP violation in nonleptonic decays of
+                        charged Xi and Lambda hyperons}",
+      collaboration  = "E756",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "85",
+      year           = "2000",
+      pages          = "4860-4863",
+      doi            = "10.1103/PhysRevLett.85.4860",
+      eprint         = "hep-ex/0007030",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "LBNL-46257, LBL-46257, FERMILAB-PUB-00-410-A",
+      SLACcitation   = "%%CITATION = HEP-EX/0007030;%%"
+}'

@@ -1,0 +1,9 @@
+Name: MC_F1_Decay
+Summary: Analysis of Kinematic distributions of $f_1$ meson decays
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+RunInfo: Any type of process producing f_1 mesons
+NeedCrossSection: no
+Description:
+  'Simple analysis of kinematic distributions in f_1 meson decays.'

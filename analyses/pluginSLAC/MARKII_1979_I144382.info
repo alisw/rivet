@@ -1,0 +1,31 @@
+Name: MARKII_1979_I144382
+Year: 1979
+Summary: $\pi^+\pi^-$ spectrum in $\psi(2S)\to\pi^+\pi^-J/\psi$
+Experiment: MARKII
+Collider: SPEAR
+InspireID: 144382
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+#RunInfo: <Describe event types, cuts, and other general generator config tips.>
+#Beams: [p+, p+]
+#Energies: [[6500,6500]]
+#Luminosity_fb: 139.0
+Description:
+  'Measurement of the mass spectrum for $\pi^+\pi^-$ in $\psi(2S)\to\pi^+\pi^-J/\psi$ decays by the MARK-II experiment.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Himel:1979dj
+BibTeX: '@phdthesis{Himel:1979dj,
+      author         = "Himel, T.",
+      title          = "{DECAYS OF THE psi-prime (3684) TO OTHER CHARMONIUM
+                        STATES}",
+      school         = "SLAC",
+      url            = "http://www-public.slac.stanford.edu/sciDoc/docMeta.aspx?slacPubNumber=slac-r-223.html",
+      year           = "1979",
+      reportNumber   = "SLAC-0223, UMI-80-16831, SLAC-R-0223, SLAC-R-223",
+      SLACcitation   = "%%CITATION = SLAC-0223;%%"
+}'

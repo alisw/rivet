@@ -1,0 +1,21 @@
+Name: MC_TTBAR
+Summary: MC analysis for ttbar studies
+Status: VALIDATED
+Authors:
+ - Hendrik Hoeth <hendrik.hoeth@cern.ch>
+ - Andy Buckley <andy.buckley@cern.ch>
+ - Christian Gutschow <chris.g@cern.ch>
+ - Dave Mallows
+ - Michal Kawalec
+RunInfo:
+ "pp -> tt, force top decays to be one of all hadronic / single leptonic / dileptonic / non-all-hadronic."
+NumEvents: 10000
+PtCuts: [0]
+Description:
+  This is a pure Monte Carlo study for $t\bar{t}$ production.
+Options:
+- TTMODE=ALLHAD,ONELEP,TWOLEP,ANYLEP
+
+ReleaseTests:
+ - $A LHC-7-Top-SL
+

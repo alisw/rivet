@@ -1,0 +1,35 @@
+Name: BESIII_2012_I1121378
+Year: 2012
+Summary: Analysis of $J/psi\to \Lambda^0\bar\Sigma^0+\text{c.c.}$
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1121378
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D86 (2012) 032008
+RunInfo: e+e- > J/psi 
+NeedCrossSection: no
+Beams: [e-, e+]
+Energies: [3.1]
+Description:
+  'Analysis of the angular distribution of the baryons produced in $e^+e^-\to J/\psi\to\Lambda^0\bar\Sigma^0+\text{c.c.}$.
+   Gives information about the decay and is useful for testing correlations in hadron decays.'
+Keywords: []
+BibKey: Ablikim:2012bw
+BibTeX: '@article{Ablikim:2012bw,
+      author         = "Ablikim, M. and others",
+      title          = "{First observation of the isospin violating decay
+                        $J/\psi\rightarrow \Lambda\bar{\Sigma}^{0}+c.c.$}",
+      collaboration  = "BESIII",
+      journal        = "Phys. Rev.",
+      volume         = "D86",
+      year           = "2012",
+      pages          = "032008",
+      doi            = "10.1103/PhysRevD.86.032008",
+      eprint         = "1207.1201",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1207.1201;%%"
+}'

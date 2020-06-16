@@ -1,0 +1,32 @@
+Name: OPAL_1997_I440103
+Year: 1997
+Summary: Polarization of $\phi$, $D^{*+}$ and $B^*$ mesons at LEP1
+Experiment: OPAL
+Collider: LEP
+InspireID: 440103
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Z.Phys. C74 (1997) 437-449
+RunInfo: e+e- to hadrons
+NeedCrossSection: no
+Beams: [e-, e+]
+Energies: 91.2
+Description:
+  'Mewasurement of the polarization of  $\phi$, $D^{*+}$ and $B^*$ mesons at LEP1'
+Keywords: []
+BibKey: Ackerstaff:1997kd
+BibTeX: '@article{Ackerstaff:1997kd,
+      author         = "Ackerstaff, K. and others",
+      title          = "{Study of phi (1020), D*+- and B* spin alignment in
+                        hadronic Z0 decays}",
+      collaboration  = "OPAL",
+      journal        = "Z. Phys.",
+      volume         = "C74",
+      year           = "1997",
+      pages          = "437-449",
+      doi            = "10.1007/s002880050406",
+      reportNumber   = "CERN-PPE-97-005, CERN-PPE-97-05, CERN-PPE-97-5",
+      SLACcitation   = "%%CITATION = ZEPYA,C74,437;%%"
+}'

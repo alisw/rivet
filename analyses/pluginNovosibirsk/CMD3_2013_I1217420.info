@@ -1,0 +1,33 @@
+Name: CMD3_2013_I1217420
+Year: 2013
+Summary:  Cross section for $e^+e^-\to3(\pi^+\pi^-)$ below 2 GeV by CMD3
+Experiment: CMD3
+Collider: VEPP-2M
+InspireID: 1217420
+Status: VALIDATED
+Authors:
+ - Peter Richrdson <peter.richardson@durham.ac.uk>
+References:
+ - arXiv:1302.0053
+RunInfo: e+ e- to hadrons 
+NeedCrossSection: yes
+Beams: [e+, e-]
+Description:
+  'Measurement of the cross section for $e^+e^-\to3(\pi^+\pi^-)$ for energies below 2 GeV by the CMD3 experiment'
+Keywords: []
+BibKey: Akhmetshin:2013xc
+BibTeX: '@article{Akhmetshin:2013xc,
+      author         = "Akhmetshin, R. R. and others",
+      title          = "{Study of the process $e^+e^-\to 3(\pi^+\pi^-)$ in the
+                        c.m.energy range 1.5--2.0 gev with the cmd-3 detector}",
+      collaboration  = "CMD-3",
+      journal        = "Phys. Lett.",
+      volume         = "B723",
+      year           = "2013",
+      pages          = "82-89",
+      doi            = "10.1016/j.physletb.2013.04.065",
+      eprint         = "1302.0053",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1302.0053;%%"
+}'

@@ -1,0 +1,47 @@
+Name: STAR_2017_I1510593
+Year: 2017
+Summary: Bulk Properties of the medium produced in Relativistic Heavy-Ion Collisions from the Beam Energy Scan Program
+Experiment: STAR
+Collider: RHIC
+InspireID: 1510593
+Status: UNVALIDATED
+Authors:
+ - Johannes Jahan <johannes.jahan@subatech.in2p3.fr>
+ - Gabriela Pokropska <g.pokropska@gmail.com>
+ - Maria Stefaniak <maria.stefaniak@subatech.in2p3.fr>
+References:
+- 'Phys.Rev. C96 (2017) no.4, 044904'
+- 'DOI: 10.1103/PhysRevC.96.044904'
+- 'arXiv:1701.07065'
+RunInfo: Minimum bias AuAu events at various collision energies
+NeedCrossSection: no
+Options:
+ - cent=GEN,IMP,USR,RAW
+Beams: [1000791970, 1000791970]
+# This is _total_ energy of beams, so this becomes 197*7.7=1516.9 etc.
+Energies: [1516.9, 2265.5, 3861.2, 5319, 7683]
+Reentrant: True
+Description:
+  'Results of measurements of bulk properties of the matter in Au+Au 
+   collisions at energies of the Beam Energy Scan program, using
+   pions, kaons and protons identified : $\frac{dN}{dy}$ spectras, 
+   $\langle \pT \rangle$ spectras and particles ratios are shown.'  
+BibKey: Adamczyk:2017iwn
+BibTeX: '@article{Adamczyk:2017iwn,
+      author         = "Adamczyk, L. and others",
+      title          = "{Bulk Properties of the Medium Produced in Relativistic
+                        Heavy-Ion Collisions from the Beam Energy Scan Program}",
+      collaboration  = "STAR",
+      journal        = "Phys. Rev.",
+      volume         = "C96",
+      year           = "2017",
+      number         = "4",
+      pages          = "044904",
+      doi            = "10.1103/PhysRevC.96.044904",
+      eprint         = "1701.07065",
+      archivePrefix  = "arXiv",
+      primaryClass   = "nucl-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1701.07065;%%"
+}'
+ToDo:
+ - Implement the analysis, test it, remove this ToDo, and mark as VALIDATED :-)

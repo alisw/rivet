@@ -1,0 +1,36 @@
+Name: CLEO_2001_I552541
+Year: 2001
+Summary: Correlated $\Lambda^+_c\bar{\Lambda}_c$ production in $e^+e^-$ annihilations at $\sqrt{s}=10.5$ GeV
+Experiment: CLEO
+Collider: <Insert the collider name>
+InspireID: 552541
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D63 (2001) 112003, 2001
+RunInfo:
+  $e^+ e^-$ analysis near the $\Upsilon(4S)$ resonance
+NumEvents: 1000000
+Beams: [e+, e-]
+Energies: [10.52]
+Description:
+  'Measurement of correlations between $\Lambda^+_c$ and $\bar{\Lambda}_c$ production in $e^+e^-$ annihilations at $\sqrt{s}=10.5$ GeV by the CLEO experiment. Useful fo studying models of baryon production.'
+Keywords: []
+BibKey: Bornheim:2001fs
+BibTeX: '@article{Bornheim:2001fs,
+      author         = "Bornheim, A. and others",
+      title          = "{Correlated Lambda+(c) anti-Lambda-(c) production in e+
+                        e- annihilations at s**(1/2) = 10.5-GeV}",
+      collaboration  = "CLEO",
+      journal        = "Phys. Rev.",
+      volume         = "D63",
+      year           = "2001",
+      pages          = "112003",
+      doi            = "10.1103/PhysRevD.63.112003",
+      eprint         = "hep-ex/0101051",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CLNS-00-1709, CLEO-00-28",
+      SLACcitation   = "%%CITATION = HEP-EX/0101051;%%"
+}'

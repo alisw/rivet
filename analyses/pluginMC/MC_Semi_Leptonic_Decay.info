@@ -1,0 +1,9 @@
+Name: MC_Semi_Leptonic_Decay
+Summary: MC analysis of the Kinematics in Semi-Leptonic Meson decays
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+RunInfo: Any type of process producing mesons which decay semi-leptonically
+NeedCrossSection: no
+Description:
+  'Analysis of the kinematics in semileptonic meson decays.'

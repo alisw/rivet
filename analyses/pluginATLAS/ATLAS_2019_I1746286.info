@@ -1,0 +1,51 @@
+Name: ATLAS_2019_I1746286
+Year: 2019
+Summary: K-short and Lambda production in ttbar events at 7 TeV
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1746286
+Status: VALIDATED
+Authors: 
+ - Sergio Calvente <sergio.calvente.lopez@cern.ch>
+ - Fernando Barreiro <fernando.barreriro@uam.es>
+ - Javier LLorente <javier.llorente.merino@cern.ch>
+References:
+ - Eur.Phys.J. C79 (2019) no.12, 1017
+ - doi:10.1140/epjc/s10052-019-7512-y
+ - arXiv:1907.10862 [hep-ex]
+Keywords:
+  - TTBAR
+  - KSHORT
+  - LAMBDA
+RunInfo:
+ ttbar production at 7 TeV, c*tau>10mm is stable
+Luminosity_fb: 4.6
+Beams: [p+, p+]
+Energies: [7000]
+PtCuts: [30.]
+Description:
+  'Measurements of $K^0_S$ and $\Lambda^0$ production in $t\bar{t}$ final states have been performed. They are based on a 
+  data sample with integrated luminosity of 4.6 fb$^{-1}$ from proton-proton collisions at a centre-of-mass energy of 7 TeV,
+  collected in 2011 with the ATLAS detector at the Large Hadron Collider. Neutral strange particles are separated into three 
+  classes, depending on whether they are contained in a jet, with or without a $b$-tag, or not associated with a selected jet. 
+  The aim is to look for differences in their main kinematic distributions. A comparison of data with several Monte Carlo 
+  simulations using different hadronisation and fragmentation schemes, colour reconnection models and different tunes for the 
+  underlying event has been made. The production of neutral strange particles in $t\bar{t}$ dileptonic events is found to be well 
+  described by current Monte Carlo models for $K^0_S$ ans $\Lambda^0$ production within jets, but not for those produced outside jets.'
+BibKey: Aad:2019xek
+BibTex: '@article{Aad:2019xek,
+      author         = "Aad, Georges and others",
+      title          = "{Measurement of $K_S^0$ and $\Lambda^0$ production in $t
+                        \bar{t}$ dileptonic events in $pp$ collisions at $\sqrt{s}
+                        =$ 7 TeV with the ATLAS detector}",
+      collaboration  = "ATLAS",
+      year           = "2019",
+      eprint         = "1907.10862",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-EP-2019-112",
+      SLACcitation   = "%%CITATION = ARXIV:1907.10862;%%"
+}'
+
+ReleaseTests:
+ - $A LHC-7-Top-All

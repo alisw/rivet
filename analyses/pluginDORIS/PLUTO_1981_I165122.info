@@ -1,0 +1,33 @@
+Name: PLUTO_1981_I165122
+Year: 1981
+Summary: Ratio of the cross section for the production of $K^0_S$ to that for $\mu^+\mu^-$ between $3.6$ and $31.6$ GeV 
+Experiment: PLUTO
+Collider: <Insert the collider name>
+InspireID: 165122
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B104 (1981) 79-83, 1981
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: yes
+Beams: [e-, e+]
+Description:
+  'Ratio of the cross section for the production of $K^0_S$ to that for $\mu^+\mu^-$ between $3.6$ and $31.6$ GeV.
+   The average number of $K^0$ per hadronic event is also provided for some energies, together with the kaon spectrum
+   at 9.4 and 31.6 GeV. N.B. The point at $9.45\to9.456$ GeV is from the $\Upsilon(1S)$ resonance.'
+Keywords: []
+BibKey: Berger:1981wd
+BibTeX: '@article{Berger:1981wd,
+      author         = "Berger, Christoph and others",
+      title          = "{Inclusive $K^0$ Production in $e^+ e^-$ Annihilation for
+                        9.3-{GeV} $&lt;\sqrt{s}&lt;$  31.6-{GeV}}",
+      collaboration  = "PLUTO",
+      journal        = "Phys. Lett.",
+      volume         = "104B",
+      year           = "1981",
+      pages          = "79-83",
+      doi            = "10.1016/0370-2693(81)90859-5",
+      reportNumber   = "DESY-81-018",
+      SLACcitation   = "%%CITATION = PHLTA,104B,79;%%"
+}'

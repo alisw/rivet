@@ -1,0 +1,29 @@
+Name: BESIII_2019_I1724880
+Year: 2019
+Summary:  Charge particle multiplicity in $\eta_c$ decays
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1724880
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - arXiv:1903.05375
+RunInfo: Any process producing eta_c mesons
+NeedCrossSection: no
+Description:
+  'Measurememt of the charged particle multiplicity distribution in $\eta_c$ decays by the BESIII collaboration.'
+Keywords: []
+BibKey: Ablikim:2019ory
+BibTeX: '@article{Ablikim:2019ory,
+      author         = "Ablikim, M. and others",
+      title          = "{Measurements of the branching fractions of $\eta_c\to
+                        K^+K^-\pi^0$, $K^0_S
+                        K^{\pm}\pi^{\mp}$,$2(\pi^+\pi^-\pi^0)$, and $p \bar{p}$}",
+      collaboration  = "BESIII",
+      year           = "2019",
+      eprint         = "1903.05375",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1903.05375;%%"
+}'

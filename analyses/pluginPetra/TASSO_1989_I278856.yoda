@@ -1,0 +1,104 @@
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I278856/d01-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -28.0, up: 28.0}, 'sys,Systematic error in branching ratios used': {dn: -5.0600000000000005, up: 5.0600000000000005}, 'sys,Systematic error on efficiency calculation': {dn: -3.68, up: 3.68}, 'sys,Systematic error on luminosity measurement': {dn: -2.3000000000000003, up: 2.3000000000000003}}, 1: {error: {dn: -27.0, up: 27.0}, 'sys,Systematic error in branching ratios used': {dn: -11.99, up: 11.99}, 'sys,Systematic error on efficiency calculation': {dn: -8.72, up: 8.72}, 'sys,Systematic error on luminosity measurement': {dn: -5.45, up: 5.45}}, 2: {error: {dn: -25.0, up: 25.0}, 'sys,Systematic error in branching ratios used': {dn: -12.76, up: 12.76}, 'sys,Systematic error on efficiency calculation': {dn: -9.28, up: 9.28}, 'sys,Systematic error on luminosity measurement': {dn: -5.8, up: 5.8}}, 3: {error: {dn: -31.0, up: 31.0}, 'sys,Systematic error in branching ratios used': {dn: -19.580000000000002, up: 19.580000000000002}, 'sys,Systematic error on efficiency calculation': {dn: -14.24, up: 14.24}, 'sys,Systematic error on luminosity measurement': {dn: -8.9, up: 8.9}}, 4: {error: {dn: -38.0, up: 38.0}, 'sys,Systematic error in branching ratios used': {dn: -24.86, up: 24.86}, 'sys,Systematic error on efficiency calculation': {dn: -18.08, up: 18.08}, 'sys,Systematic error on luminosity measurement': {dn: -11.299999999999999, up: 11.299999999999999}}, 5: {error: {dn: -33.0, up: 33.0}, 'sys,Systematic error in branching ratios used': {dn: -15.399999999999999, up: 15.399999999999999}, 'sys,Systematic error on efficiency calculation': {dn: -11.2, up: 11.2}, 'sys,Systematic error on luminosity measurement': {dn: -7.0, up: 7.0}}, 6: {error: {dn: -14.0, up: 14.0}, 'sys,Systematic error in branching ratios used': {dn: -5.17, up: 5.17}, 'sys,Systematic error on efficiency calculation': {dn: -3.76, up: 3.76}, 'sys,Systematic error on luminosity measurement': {dn: -2.3499999999999996, up: 2.3499999999999996}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I278856/d01-x01-y01
+Title: doi:10.17182/hepdata.15361.v1/t1
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+2.500000e-01	5.000000e-02	5.000000e-02	4.600000e+01	2.878256e+01	2.878256e+01
+3.500000e-01	5.000000e-02	5.000000e-02	1.090000e+02	3.128100e+01	3.128100e+01
+4.500000e-01	5.000000e-02	5.000000e-02	1.160000e+02	3.012600e+01	3.012600e+01
+5.500000e-01	5.000000e-02	5.000000e-02	1.780000e+02	4.032820e+01	4.032820e+01
+6.500000e-01	5.000000e-02	5.000000e-02	2.260000e+02	5.016569e+01	5.016569e+01
+7.500000e-01	5.000000e-02	5.000000e-02	1.400000e+02	3.873758e+01	3.873758e+01
+9.000000e-01	1.000000e-01	1.000000e-01	4.700000e+01	1.556885e+01	1.556885e+01
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I278856/d01-x01-y02
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -41.0, up: 41.0}, 'sys,Systematic error in branching ratios used': {dn: -7.48, up: 7.48}, 'sys,Systematic error on efficiency calculation': {dn: -5.44, up: 5.44}, 'sys,Systematic error on luminosity measurement': {dn: -3.4000000000000004, up: 3.4000000000000004}}, 1: {error: {dn: -37.0, up: 37.0}, 'sys,Systematic error in branching ratios used': {dn: -16.5, up: 16.5}, 'sys,Systematic error on efficiency calculation': {dn: -12.0, up: 12.0}, 'sys,Systematic error on luminosity measurement': {dn: -7.5, up: 7.5}}, 2: {error: {dn: -34.0, up: 34.0}, 'sys,Systematic error in branching ratios used': {dn: -17.27, up: 17.27}, 'sys,Systematic error on efficiency calculation': {dn: -12.56, up: 12.56}, 'sys,Systematic error on luminosity measurement': {dn: -7.8500000000000005, up: 7.8500000000000005}}, 3: {error: {dn: -42.0, up: 42.0}, 'sys,Systematic error in branching ratios used': {dn: -26.18, up: 26.18}, 'sys,Systematic error on efficiency calculation': {dn: -19.04, up: 19.04}, 'sys,Systematic error on luminosity measurement': {dn: -11.899999999999999, up: 11.899999999999999}}, 4: {error: {dn: -51.0, up: 51.0}, 'sys,Systematic error in branching ratios used': {dn: -33.0, up: 33.0}, 'sys,Systematic error on efficiency calculation': {dn: -24.0, up: 24.0}, 'sys,Systematic error on luminosity measurement': {dn: -15.0, up: 15.0}}, 5: {error: {dn: -44.0, up: 44.0}, 'sys,Systematic error in branching ratios used': {dn: -20.46, up: 20.46}, 'sys,Systematic error on efficiency calculation': {dn: -14.88, up: 14.88}, 'sys,Systematic error on luminosity measurement': {dn: -9.3, up: 9.3}}, 6: {error: {dn: -19.0, up: 19.0}, 'sys,Systematic error in branching ratios used': {dn: -6.82, up: 6.82}, 'sys,Systematic error on efficiency calculation': {dn: -4.96, up: 4.96}, 'sys,Systematic error on luminosity measurement': {dn: -3.1, up: 3.1}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I278856/d01-x01-y02
+Title: doi:10.17182/hepdata.15361.v1/t1
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+2.500000e-01	5.000000e-02	5.000000e-02	6.800000e+01	4.216757e+01	4.216757e+01
+3.500000e-01	5.000000e-02	5.000000e-02	1.500000e+02	4.291270e+01	4.291270e+01
+4.500000e-01	5.000000e-02	5.000000e-02	1.570000e+02	4.091001e+01	4.091001e+01
+5.500000e-01	5.000000e-02	5.000000e-02	2.380000e+02	5.434633e+01	5.434633e+01
+6.500000e-01	5.000000e-02	5.000000e-02	3.000000e+02	6.701492e+01	6.701492e+01
+7.500000e-01	5.000000e-02	5.000000e-02	1.860000e+02	5.159957e+01	5.159957e+01
+9.000000e-01	1.000000e-01	1.000000e-01	6.200000e+01	2.101723e+01	2.101723e+01
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I278856/d02-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -31.0, up: 31.0}, 'sys,Systematic error in branching ratios used': {dn: -16.830000000000002, up: 16.830000000000002}, 'sys,Systematic error on efficiency calculation': {dn: -12.24, up: 12.24}, 'sys,Systematic error on luminosity measurement': {dn: -7.65, up: 7.65}}, 1: {error: {dn: -38.0, up: 38.0}, 'sys,Systematic error in branching ratios used': {dn: -24.31, up: 24.31}, 'sys,Systematic error on efficiency calculation': {dn: -17.68, up: 17.68}, 'sys,Systematic error on luminosity measurement': {dn: -11.05, up: 11.05}}, 2: {error: {dn: -32.0, up: 32.0}, 'sys,Systematic error in branching ratios used': {dn: -14.96, up: 14.96}, 'sys,Systematic error on efficiency calculation': {dn: -10.88, up: 10.88}, 'sys,Systematic error on luminosity measurement': {dn: -6.800000000000001, up: 6.800000000000001}}, 3: {error: {dn: -27.0, up: 27.0}, 'sys,Systematic error in branching ratios used': {dn: -9.35, up: 9.35}, 'sys,Systematic error on efficiency calculation': {dn: -6.8, up: 6.8}, 'sys,Systematic error on luminosity measurement': {dn: -4.25, up: 4.25}}, 4: {error: {dn: -10.0, up: 10.0}, 'sys,Systematic error in branching ratios used': {dn: -2.5300000000000002, up: 2.5300000000000002}, 'sys,Systematic error on efficiency calculation': {dn: -1.84, up: 1.84}, 'sys,Systematic error on luminosity measurement': {dn: -1.1500000000000001, up: 1.1500000000000001}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I278856/d02-x01-y01
+Title: doi:10.17182/hepdata.15361.v1/t2
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+4.500000e-01	5.000000e-02	5.000000e-02	1.530000e+02	3.811285e+01	3.811285e+01
+5.500000e-01	5.000000e-02	5.000000e-02	2.210000e+02	4.969568e+01	4.969568e+01
+6.500000e-01	5.000000e-02	5.000000e-02	1.360000e+02	3.758212e+01	3.758212e+01
+7.500000e-01	5.000000e-02	5.000000e-02	8.500000e+01	2.967701e+01	2.967701e+01
+9.000000e-01	1.000000e-01	1.000000e-01	2.300000e+01	1.054083e+01	1.054083e+01
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I278856/d02-x01-y02
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -41.0, up: 41.0}, 'sys,Systematic error in branching ratios used': {dn: -24.09, up: 24.09}, 'sys,Systematic error on efficiency calculation': {dn: -17.52, up: 17.52}, 'sys,Systematic error on luminosity measurement': {dn: -10.95, up: 10.95}}, 1: {error: {dn: -50.0, up: 50.0}, 'sys,Systematic error in branching ratios used': {dn: -32.56, up: 32.56}, 'sys,Systematic error on efficiency calculation': {dn: -23.68, up: 23.68}, 'sys,Systematic error on luminosity measurement': {dn: -14.8, up: 14.8}}, 2: {error: {dn: -42.0, up: 42.0}, 'sys,Systematic error in branching ratios used': {dn: -19.91, up: 19.91}, 'sys,Systematic error on efficiency calculation': {dn: -14.48, up: 14.48}, 'sys,Systematic error on luminosity measurement': {dn: -9.05, up: 9.05}}, 3: {error: {dn: -36.0, up: 36.0}, 'sys,Systematic error in branching ratios used': {dn: -12.43, up: 12.43}, 'sys,Systematic error on efficiency calculation': {dn: -9.04, up: 9.04}, 'sys,Systematic error on luminosity measurement': {dn: -5.6499999999999995, up: 5.6499999999999995}}, 4: {error: {dn: -13.0, up: 13.0}, 'sys,Systematic error in branching ratios used': {dn: -3.41, up: 3.41}, 'sys,Systematic error on efficiency calculation': {dn: -2.48, up: 2.48}, 'sys,Systematic error on luminosity measurement': {dn: -1.55, up: 1.55}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I278856/d02-x01-y02
+Title: doi:10.17182/hepdata.15361.v1/t2
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+4.500000e-01	5.000000e-02	5.000000e-02	2.190000e+02	5.184767e+01	5.184767e+01
+5.500000e-01	5.000000e-02	5.000000e-02	2.960000e+02	6.587819e+01	6.587819e+01
+6.500000e-01	5.000000e-02	5.000000e-02	1.810000e+02	4.951748e+01	4.951748e+01
+7.500000e-01	5.000000e-02	5.000000e-02	1.130000e+02	3.954932e+01	3.954932e+01
+9.000000e-01	1.000000e-01	1.000000e-01	3.100000e+01	1.375431e+01	1.375431e+01
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I278856/d03-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.09, up: 0.09}, sys: {dn: -0.18, up: 0.18}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I278856/d03-x01-y01
+Title: doi:10.17182/hepdata.15361.v1/t3
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+3.620000e+01	0.000000e+00	0.000000e+00	1.280000e+00	2.012461e-01	2.012461e-01
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I278856/d04-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.072, up: 0.072}, sys: {dn: -0.011, up: 0.011}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I278856/d04-x01-y01
+Title: doi:10.17182/hepdata.15361.v1/t4
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+3.620000e+01	0.000000e+00	0.000000e+00	-1.600000e-01	7.283543e-02	7.283543e-02
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I278856/d05-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.047, up: 0.047}, sys: {dn: -0.027, up: 0.027}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I278856/d05-x01-y01
+Title: doi:10.17182/hepdata.15361.v1/t5
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+3.620000e+01	0.000000e+00	0.000000e+00	-1.680000e-01	5.420332e-02	5.420332e-02
+END YODA_SCATTER2D_V2

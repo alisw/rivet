@@ -1,0 +1,35 @@
+Name: BABAR_2013_I1217421
+Year: 2013
+Summary: Cross section for $e^+e^-\to$ proton and antiproton between 1.877 and 4.25 GeV
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 1217421
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+- 'Phys.Rev. D87 (2013) 092005, 2013 '
+RunInfo: e+ e- to hadrons
+NeedCrossSection: yes
+Beams: [e+, e-]
+Description:
+  'Measurement of the cross section for $e^+e^-\to p\bar{p}$ using radiative
+   return for energies between 1.877 and 4.25 GeV.'
+BibKey: Lees:2013ebn
+BibTeX: '@article{Lees:2013ebn,
+      author         = "Lees, J. P. and others",
+      title          = "{Study of $e^+e^- \to p \bar{p}$ via initial-state
+                        radiation at BABAR}",
+      collaboration  = "BaBar",
+      journal        = "Phys. Rev.",
+      volume         = "D87",
+      year           = "2013",
+      number         = "9",
+      pages          = "092005",
+      doi            = "10.1103/PhysRevD.87.092005",
+      eprint         = "1302.0055",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "BABAR-PUB-12-030, SLAC-PUB-15324",
+      SLACcitation   = "%%CITATION = ARXIV:1302.0055;%%"
+}'

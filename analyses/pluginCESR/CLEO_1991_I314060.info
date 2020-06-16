@@ -1,0 +1,31 @@
+Name: CLEO_1991_I314060
+Year: 1991
+Summary: Polarization of $D^{*+}$ mesons at 10.5 GeV
+Experiment: CLEO
+Collider: CESR
+InspireID: 314060
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D44 (1991) 593-600
+RunInfo: e+e to hadrons
+NeedCrossSection: no
+Beams: [e-, e+]
+Energies: 10.5
+Description:
+  'Measurement of the polarization of $D^{*+}$ in $e^+e^-$ collisions at 10.5 GeV.'
+Keywords: []
+BibKey: Kubota:1991vc
+BibTeX: '@article{Kubota:1991vc,
+      author         = "Kubota, Y. and others",
+      title          = "{Study of continuum D*+ spin alignment}",
+      collaboration  = "CLEO",
+      journal        = "Phys. Rev.",
+      volume         = "D44",
+      year           = "1991",
+      pages          = "593-600",
+      doi            = "10.1103/PhysRevD.44.593",
+      reportNumber   = "CLNS-91-1042, CLEO-91-1",
+      SLACcitation   = "%%CITATION = PHRVA,D44,593;%%"
+}'

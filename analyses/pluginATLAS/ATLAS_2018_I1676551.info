@@ -1,0 +1,61 @@
+Name: ATLAS_2018_I1676551
+Year: 2018
+Summary: Recursive jigsaw chargino-neutralino search with 2 or 3 charged leptons in 36/fb of 13 TeV pp
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1676551
+Status: VALIDATED NOTREENTRY SINGLEWEIGHT
+Authors:
+ - Derek Yeung
+ - Andy Buckley <andy.buckley@cern.ch>
+References:
+ - 'Phys.Rev. D98 (2018) no.9, 092012'
+ - 'DOI: 10.1103/PhysRevD.98.092012'
+ - 'CERN-EP-2018-113'
+RunInfo: BSM signal events, with 2 or 3 high-pT leptons.
+Beams: [p+, p+]
+Energies: [[6500,6500]]
+Luminosity_fb: 36.1
+Description:
+  'A search for electroweak production of supersymmetric particles in two-lepton and three-lepton
+  final states using recursive jigsaw reconstruction, a technique that assigns reconstructed objects
+  to the most probable hemispheres of the decay trees, allowing one to construct tailored kinematic
+  variables to separate the signal and background. The search uses data collected in 2015 and 2016
+  by the ATLAS experiment in $\sqrt{s}=13$~TeV proton-proton collisions at the CERN Large Hadron
+  Collider corresponding to an integrated luminosity of 36.1/fb. Chargino-neutralino pair production,
+  with decays via W/Z bosons, is studied in final states involving leptons and jets and missing
+  transverse momentum for scenarios with large and intermediate mass splittings between the parent
+  particle and lightest supersymmetric particle, as well as for the scenario where this mass splitting
+  is close to the mass of the $Z$ boson. The latter case is challenging since the vector bosons are
+  produced with kinematic properties that are similar to those in Standard Model processes. Results
+  are found to be compatible with the Standard Model expectations in the signal regions targeting
+  large and intermediate mass splittings, and chargino-neutralino masses up to 600~GeV are excluded
+  at 95% confidence level for a massless lightest supersymmetric particle. Excesses of data above
+  the expected background are found in the signal regions targeting low mass splittings, and the
+  largest local excess amounts to 3.0 standard deviations.'
+ValidationInfo:
+  'Cut-flows reproduced to ~20 percent accuracy. Modelling effects and reproduction difficulties
+  in the ISR region, matching the experience for the equivalent Gambit analysis using RestFrames.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Aaboud:2018sua
+BibTeX: '@article{Aaboud:2018sua,
+      author         = "Aaboud, Morad and others",
+      title          = "{Search for chargino-neutralino production using
+                        recursive jigsaw reconstruction in final states with two
+                        or three charged leptons in proton-proton collisions at
+                        $\sqrt{s}=13$ TeV with the ATLAS detector}",
+      collaboration  = "ATLAS",
+      journal        = "Phys. Rev.",
+      volume         = "D98",
+      year           = "2018",
+      number         = "9",
+      pages          = "092012",
+      doi            = "10.1103/PhysRevD.98.092012",
+      eprint         = "1806.02293",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-EP-2018-113",
+      SLACcitation   = "%%CITATION = ARXIV:1806.02293;%%"
+}'

@@ -1,0 +1,50 @@
+Name: CMS_2016_I1487288
+Year: 2016
+Summary: $WZ$ production cross-section in $pp$ collisions at 8~TeV
+Experiment: CMS
+Collider: LHC
+InspireID: 1487288
+Status: VALIDATED
+Authors:
+ - Shehu AbdusSalam <shehu.abdussalam@cern.ch>
+ - Andy Buckley <andy.buckley@cern.ch>
+References:
+ - "Eur.Phys.J. C77 (2017) no.4, 236"
+ - "DOI:10.1140/epjc/s10052-017-4730-z"
+ - "CMS-SMP-14-014"
+ - "CERN-EP-2016-205"
+ - "arXiv:1609.05721"
+RunInfo: WZ events at 8 TeV
+Beams: [p+, p+]
+Energies: [8000]
+Luminosity_fb: 19.6
+Description:
+  'Fully leptonic $WZ$ diboson production at the CMS experiment, measured inclusively at
+   7 and 8~TeV, and differentially at 8 TeV only (this analysis). The differential
+   cross-sections are measured with respect to $Z$ $p_T$, leading jet $p_T$, and the
+   jet multiplicity. This data is useful for constraining MC models of QCD and EW activity
+   in diboson events, and for constraining anomalous couplings.
+
+   NOTE: total cross-section is fixed to the measured value in this analysis, since the
+   correction factors from fiducial to inclusive $WZ$ production were not published.'
+Keywords: [diboson, WZ]
+BibKey: Khachatryan:2016poo
+BibTeX: '@article{Khachatryan:2016poo,
+      author         = "Khachatryan, V. and others",
+      title          = "{Measurement of the WZ production cross section in pp
+                        collisions at $\sqrt{s} = 7$ and 8 $\,\text{TeV}$ and
+                        search for anomalous triple gauge couplings at $\sqrt{s} =
+                        8\,\text{TeV} $}",
+      collaboration  = "CMS",
+      journal        = "Eur. Phys. J.",
+      volume         = "C77",
+      year           = "2017",
+      number         = "4",
+      pages          = "236",
+      doi            = "10.1140/epjc/s10052-017-4730-z",
+      eprint         = "1609.05721",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CMS-SMP-14-014, CERN-EP-2016-205",
+      SLACcitation   = "%%CITATION = ARXIV:1609.05721;%%"
+}'

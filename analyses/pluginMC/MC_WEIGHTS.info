@@ -1,0 +1,12 @@
+Name: MC_WEIGHTS
+Summary: MC analysis for distributions of event weights
+Status: VALIDATED
+Authors:
+ - Frank Siegert <frank.siegert@cern.ch>
+ - Christian Gutschow <chris.g@cern.ch>
+RunInfo: Suitable for any process.
+PtCuts: [0]
+Description:
+  Analysis for studying event weight distributions and fraction of events
+  with negative weights. This analysis will not produce sensible 
+  distributions in case of correlated NLO sub-events.

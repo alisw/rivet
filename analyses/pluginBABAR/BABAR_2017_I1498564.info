@@ -1,0 +1,37 @@
+Name: BABAR_2017_I1498564
+Year: 2017
+Summary: Electron spectrum inclusive semi-leptonic in B decays
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 1498564
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D95 (2017) no.7, 072001
+RunInfo: bottom mesons produced at the Upsilon(4S)
+Description:
+  'Measurement of the electron spectrum inclusive semi-leptonic in $B$ decays, including but the total and the charmless. N.B. The spectum is obtained in the rest frame of the decaying $\Upsilon(4S)$ which produces the decaying $B$ mesons'
+ValidationInfo:
+  'Herwig 7 events at the Upsilon(4S), using EvtGen for the B decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: TheBABAR:2016lja
+BibTeX: '@article{TheBABAR:2016lja,
+      author         = "Lees, J. P. and others",
+      title          = "{Measurement of the inclusive electron spectrum from B
+                        meson decays and determination of |Vub|}",
+      collaboration  = "BaBar",
+      journal        = "Phys. Rev.",
+      volume         = "D95",
+      year           = "2017",
+      number         = "7",
+      pages          = "072001",
+      doi            = "10.1103/PhysRevD.95.072001",
+      eprint         = "1611.05624",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "BABAR-PUB-16-006, SLAC-PUB-16855",
+      SLACcitation   = "%%CITATION = ARXIV:1611.05624;%%"
+}'

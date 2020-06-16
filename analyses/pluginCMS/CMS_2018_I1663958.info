@@ -1,0 +1,57 @@
+Name: CMS_2018_I1663958
+Year: 2018
+Summary: Differential cross sections for top quark pair production using the lepton+jets final state in proton proton collisions at 13 TeV
+Experiment: CMS
+Collider: LHC
+InspireID: 1663958
+Status: VALIDATED
+Authors:
+ - Otto Hindrichs <otto.heinz.hindrichs@cern.ch>
+References:
+ - arXiv:1803.08856
+ - CMS-TOP-17-002
+ - Submitted to Phys. Rev. D.
+RunInfo:
+  pp QCD interactions at $\sqrt{s} = 13$ TeV. Data collected by CMS during the year 2015. Selection of lepton+jets top pair candidate events at particle level.
+NumEvents: 570000
+NeedCrossSection: no
+Luminosity: 35.8 /fb
+Beams: [p+, p+]
+Energies: [13000]
+Description:
+  'Abstract:
+
+Differential and double-differential cross sections for the production of top quark pairs in proton-proton collisions at $\sqrt{s} = 13$\,TeV are measured as a function of kinematic variables of the top quarks and the top quark-antiquark ($\text{t}\bar{\text{t}}$) system. In addition, kinematic variables and multiplicities of jets associated with the $\text{t}\bar{\text{t}}$ production are measured. This analysis is based on data collected by the CMS experiment at the LHC in 2016 corresponding to an integrated luminosity of 35.8\,fb$^{-1}$. The measurements are performed in the lepton+jets decay channels with a single muon or electron and jets in the final state. The differential cross sections are presented at the particle level, within a phase space close to the experimental acceptance, and at the parton level in the full phase space. The results are compared to several standard model predictions that use different methods and approximations. The kinematic variables of the top quarks and the $\text{t}\bar{\text{t}}$ system are reasonably described in general, though none predict all the measured distributions. In particular, the transverse momentum distribution of the top quarks is more steeply falling than predicted. The kinematic distributions and multiplicities of jets are adequately modeled by certain combinations of next-to-leading-order calculations and parton shower models.
+
+  Rivet:
+
+This analysis is to be run on $\text{t}\bar{\text{t}}$ Monte Carlo. The particle-level phase space is defined using the following definitions:
+\begin{description}
+\item[lepton]: an electron or muon with $p_\text{T}>30\,\text{GeV}$ and $|\eta|<2.4$, dressed within a cone of radius 0.1,
+\item[jet]: a jet is reconstructed with the anti-$k_\text{T}$ algorithm with a radius of 0.4, after removing the neutrinos and dressed leptons, with $p_\text{T]>25\,\text{GeV}$ and $|\eta|<2.4$,
+\item[b-jet]: a jet that contains a B-hadron.
+\end{description}
+
+A W boson is reconstructed from a lepton and the sum of the neutrino energies, while another W boson is reconstructed from a light jet pair. The two top quarks are reconstructed by combining b jets to these W boson. A check based on the W boson and top quark masses is performed to choose the proper combinations.
+'
+BibKey: Sirunyan:2018wem
+BibTeX:
+  ' @article{Sirunyan:2018wem,
+      author         = "Sirunyan, Albert M and others",
+      title          = "{Measurement of differential cross sections for the
+                        production of top quark pairs and of additional jets in
+                        lepton+jets events from pp collisions at $\sqrt{s} =$ 13
+                        TeV}",
+      collaboration  = "CMS",
+      journal        = "Phys. Rev.",
+      volume         = "D97",
+      year           = "2018",
+      number         = "11",
+      pages          = "112003",
+      doi            = "10.1103/PhysRevD.97.112003",
+      eprint         = "1803.08856",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CMS-TOP-17-002, CERN-EP-2018-039",
+      SLACcitation   = "%%CITATION = ARXIV:1803.08856;%%"
+}'

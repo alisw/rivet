@@ -1,0 +1,31 @@
+Name: TOPAZ_1997_I454183
+Year: 1997
+Summary: Measurement of charged particle multiplicity vs thrust at $E_{\text{CMS}}=57.8$ GeV
+Experiment: TOPAZ
+Collider: Tristan
+InspireID: 454183
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B413 (1997) 447-452
+RunInfo: e+ e- to hadrons
+NeedCrossSection: no
+Beams: [e-, e+]
+Energies: [57.8]
+Description:
+  'Measurement of the charged particle multiplicity as a function of thrust at 57.8 GeV by the TOPAZ collaboration.'
+BibKey: Nakabayashi:1997hr
+BibTeX: '@article{Nakabayashi:1997hr,
+      author         = "Nakabayashi, K. and others",
+      title          = "{Charged particle multiplicities of quark and gluon jets
+                        in e+ e- annihilation at TRISTAN}",
+      collaboration  = "TOPAZ",
+      journal        = "Phys. Lett.",
+      volume         = "B413",
+      year           = "1997",
+      pages          = "447-452",
+      doi            = "10.1016/S0370-2693(97)01191-X",
+      reportNumber   = "DPNU-97-44, KEK-PREPRINT-97-140, NWU-HEP-97-01,
+                        TIT-HPE-97-07, TUAT-HEP-97-01, OCU-HEP-97-01, PU-97-705",
+      SLACcitation   = "%%CITATION = PHLTA,B413,447;%%"
+}'

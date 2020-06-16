@@ -1,0 +1,36 @@
+Name: BESIII_2016_I1385603
+Year: 2016
+Summary: Cross section for $e^+e^-\to \pi^+\pi^-$ between 0.6 and 0.9 GeV
+Experiment: BES III
+Collider: BEPC II
+InspireID: 1385603
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+-  Phys. Lett. B753 (2016) 629-638
+RunInfo: e+ e- to hadrons below 0.6 and 0.9 GeV
+NeedCrossSection: yes
+Beams: [e+, e-]
+Description:
+  'Measurement of the cross section for $e^+e^-\to \pi^+\pi^-$ at energies between 0.6 and 0.9 GeV. Useful for comparing models of the pion form factor.'
+Keywords: 
+BibTeX: '%%% contains utf-8, see: http://inspirehep.net/info/faq/general#utf8
+%%% add \usepackage[utf8]{inputenc} to your latex preamble
+
+@article{Ablikim:2015orh,
+      author         = "Ablikim, M. and others",
+      title          = "{Measurement of the $e^+ e^− \to \pi^+ \pi^−$ cross
+                        section between 600 and 900 MeV using initial state
+                        radiation}",
+      collaboration  = "BESIII",
+      journal        = "Phys. Lett.",
+      volume         = "B753",
+      year           = "2016",
+      pages          = "629-638",
+      doi            = "10.1016/j.physletb.2015.11.043",
+      eprint         = "1507.08188",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1507.08188;%%"
+}'

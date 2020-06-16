@@ -1,0 +1,57 @@
+Name: ATLAS_2018_I1634970
+Year: 2018
+Summary: ATLAS Inclusive jet and dijet cross section measurement at sqrt(s)=13TeV
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1634970
+Status: VALIDATED
+Authors:
+ - Jonathan Bossio <jonathan.bossio@cern.ch>
+ - Zdenek Hubacek  <zdenek.hubacek@cern.ch>
+References:
+ - JHEP 1805 (2018) 195 
+ - arXiv:1711.02692
+RunInfo: LHC 13TeV, ATLAS, QCD jet production, anti-kt R=0.4 jets
+NeedCrossSection: yes
+Beams: [p+, p+]
+Energies: [13000]
+Luminosity_fb: 3.2
+Description:
+ 'Inclusive jet and dijet cross-sections are measured in proton-proton collisions at a centre-of-mass energy of 13 TeV. The
+ measurement uses a dataset with an integrated luminosity of 3.2 fb$^{-1}$ recorded in 2015 with the ATLAS detector at the 
+ Large Hadron Collider. Jets are identified using the anti-$k_\text{t}$ algorithm with a radius parameter value of $R = 0.4$.
+ The inclusive jet cross-sections are measured double-differentially as a function of the jet transverse momentum, covering 
+ the range from 100 GeV to 3.5 TeV, and the absolute jet rapidity up to $|y| = 3$. The double-differential dijet production 
+ cross-sections are presented as a function of the dijet mass, covering the range from 300 GeV to 9 TeV, and the half absolute 
+ rapidity separation between the two leading jets within $|y| < 3$, $y^\ast$, up to $y^\ast = 3$. Next-to-leading-order, and 
+ next-to-next-to-leading-order for the inclusive jet measurement, perturbative QCD calculations corrected for non-perturbative 
+ and electroweak effects are compared to the measured cross-sections.'
+BibKey: Aaboud:2017wsi
+BibTeX: '@article{Aaboud:2017wsi,
+      author         = "Aaboud, M. and others",
+      title          = "{Measurement of inclusive jet and dijet cross-sections in
+                        proton-proton collisions at $\sqrt{s}=13$ TeV with the
+                        ATLAS detector}",
+      collaboration  = "ATLAS",
+      journal        = "JHEP",
+      volume         = "05",
+      year           = "2018",
+      pages          = "195",
+      doi            = "10.1007/JHEP05(2018)195",
+      eprint         = "1711.02692",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-EP-2017-157",
+      SLACcitation   = "%%CITATION = ARXIV:1711.02692;%%"
+}'
+
+ReleaseTests:
+ - $A LHC-13-Jets-10
+ - $A-2 LHC-13-Jets-3
+ - $A-3 LHC-13-Jets-4
+ - $A-4 LHC-13-Jets-5
+ - $A-5 LHC-13-Jets-6
+ - $A-6 LHC-13-Jets-7
+ - $A-7 LHC-13-Jets-8
+ - $A-8 LHC-13-Jets-9
+

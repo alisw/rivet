@@ -1,0 +1,33 @@
+Name: CELLO_1982_I12010
+Year: 1982
+Summary: Energy-Energy correlation at 22 and 34 GeV
+Experiment: CELLO
+Collider: Petra
+InspireID: 12010
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Z.Phys. C14 (1982) 95, 1982 
+RunInfo: e+e- to hadrons at 22 and 34 GeV CMS
+NeedCrossSection: no
+Beams: [e+, e-]
+Energies: [22,34]
+Description:
+  'Measurement of the energy-energy correlation, and its assymetry, at centre-of-mass energies 22 and 34 GeV'
+Keywords: []
+BibKey: Behrend:1982na
+BibTeX: '@article{Behrend:1982na,
+      author         = "Behrend, H. J. and others",
+      title          = "{Analysis of the Energy Weighted Angular Correlations in
+                        Hadronic $e^+ e^-$ Annihilations at 22-{GeV} and
+                        34-{GeV}}",
+      collaboration  = "CELLO",
+      journal        = "Z. Phys.",
+      volume         = "C14",
+      year           = "1982",
+      pages          = "95",
+      doi            = "10.1007/BF01495029",
+      reportNumber   = "Print-82-0345 (DESY), DESY-82-022",
+      SLACcitation   = "%%CITATION = ZEPYA,C14,95;%%"
+}'

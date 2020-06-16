@@ -1,0 +1,35 @@
+Name: ARGUS_1986_I227324
+Year: 1986
+Summary: Event shapes in $\Upsilon(1S)$ decay and nearby continuum
+Experiment: ARGUS
+Collider: DORIS
+InspireID: 227324
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Z.Phys. C31 (1986) 181
+RunInfo: e+e- to hadrons for continuum and any process for Upsilon decay
+Beams: [e+, e-]
+Description:
+  'Measurement of the thrust and sphericty by the ARGUS experiment in e+e- collision at
+   the $\Upsilon(1S)$ resonance and in the nearby continuum.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Albrecht:1986ec
+BibTeX: '@article{Albrecht:1986ec,
+      author         = "Albrecht, H. and others",
+      title          = "{An Upper Limit for Two Jet Production in Direct
+                        $\Upsilon$ (1s) Decays}",
+      collaboration  = "ARGUS",
+      journal        = "Z. Phys.",
+      volume         = "C31",
+      year           = "1986",
+      pages          = "181",
+      doi            = "10.1007/BF01479524",
+      reportNumber   = "DESY-86-002",
+      SLACcitation   = "%%CITATION = ZEPYA,C31,181;%%"
+}'

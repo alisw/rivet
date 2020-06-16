@@ -1,0 +1,32 @@
+Name: ARGUS_1997_I440304
+Year: 1997
+Summary: Spectrum for $\Lambda_c^+(2595)$ production at 10.4 GeV
+Experiment: ARGUS
+Collider: DORIS
+InspireID: 440304
+Status: VALIDATED
+References:
+ - Phys.Lett. B402 (1997) 207-212
+RunInfo: e+e- to hadrons 
+Beams: [e+, e-]
+Energies: [10.4]
+Description:
+  'Spectrum for  $\Lambda_c^+(2595)$ production at 10.4 GeV measured by ARGUS.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Albrecht:1997qa
+BibTeX: '@article{Albrecht:1997qa,
+      author         = "Albrecht, H. and others",
+      title          = "{Evidence for Lambda(c)+ (2593) production}",
+      collaboration  = "ARGUS",
+      journal        = "Phys. Lett.",
+      volume         = "B402",
+      year           = "1997",
+      pages          = "207-212",
+      doi            = "10.1016/S0370-2693(97)00503-0",
+      reportNumber   = "DESY-97-008",
+      SLACcitation   = "%%CITATION = PHLTA,B402,207;%%"
+}'

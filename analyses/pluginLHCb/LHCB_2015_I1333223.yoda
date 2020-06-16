@@ -1,0 +1,24 @@
+BEGIN YODA_SCATTER2D_V2 /REF/LHCB_2015_I1333223/d01-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.0, up: 0.0}, sys: {dn: -2.4, up: 2.4}}}
+
+IsRef: 1
+Path: /REF/LHCB_2015_I1333223/d01-x01-y01
+Title: doi:10.17182/hepdata.69845.v1/t1
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+7.000000e+03	5.000000e-01	5.000000e-01	5.500000e+01	2.400000e+00	2.400000e+00
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/LHCB_2015_I1333223/d02-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.0, up: 0.0}, 'sys,exp': {dn: -2.9, up: 2.9}, 'sys,extr': {dn: -4.4, up: 4.4}}}
+
+IsRef: 1
+Path: /REF/LHCB_2015_I1333223/d02-x01-y01
+Title: doi:10.17182/hepdata.69845.v1/t2
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+7.000000e+03	5.000000e-01	5.000000e-01	6.690000e+01	5.269725e+00	5.269725e+00
+END YODA_SCATTER2D_V2

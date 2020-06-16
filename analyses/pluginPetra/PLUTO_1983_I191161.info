@@ -1,0 +1,33 @@
+Name: PLUTO_1983_I191161
+Year: 1983
+Summary: Measurement of average transverse momentum w.r.t thurst and Sphericity Axes for $E_{\text{CMS}}=7.7\to31.6$ GeV
+Experiment: PLUTO
+Collider: DORIS/Petra
+InspireID: 191161
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+RunInfo: $e^+e^-\to$ hadrons
+NeedCrossSection: no
+Beams: [e-, e+]
+Energies: [7.7,9.4,12,13,17,22,27.6,30.8]
+Description:
+  'Measurements of the average transverse momentum w.r.t thurst and Sphericity Axes for $E_{\text{CMS}}=7.7\to31.6$ GeV'
+Keywords: []
+BibKey: Berger:1983yp
+BibTeX: '@article{Berger:1983yp,
+      author         = "Berger, Christoph and others",
+      title          = "{Measurement of Transverse Momenta in $e^+ e^-$
+                        Annihilation Jets at {PETRA}}",
+      booktitle      = "{11th International Symposium on Lepton and Photon
+                        Interactions at High Energies Ithaca, New York, August
+                        4-9, 1983}",
+      collaboration  = "PLUTO",
+      journal        = "Z. Phys.",
+      volume         = "C22",
+      year           = "1984",
+      pages          = "103",
+      doi            = "10.1007/BF01572156",
+      reportNumber   = "DESY-83-054",
+      SLACcitation   = "%%CITATION = ZEPYA,C22,103;%%"
+}'

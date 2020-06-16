@@ -1,0 +1,37 @@
+mName: CLEOII_2002_I601701
+Year: 2002
+Summary: Spectra of $\eta^\prime$ mesons in $\Upsilon(1S)$ decays
+Experiment: CLEO-II
+Collider: CESR
+InspireID: 601701
+Status: VALIDATED
+Authors:
+ - Peter Richardson <Peter.Richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D67 (2003) 052003
+RunInfo:
+  Any process producing Upslion 1S, original $e^+ e^-$
+Description:
+  Measurement of the inclusive production of the $\eta^\prime$ mesons in $\Upsilon(1S)$ decays by the CLEO-II experiment.
+  In principle this measurement is superseeded, however the newer result (CLEOIII_2006_I728679) did not include numerical values which were read from the plots and therefore we keep this measurement.
+ValidationInfo:
+  'Herwig events with Upsilon(1S) decays.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Artuso:2002px
+BibTeX: '@article{Artuso:2002px,
+      author         = "Artuso, M. and others",
+      title          = "{Inclusive eta-prime production from the Upsilon(1S)}",
+      collaboration  = "CLEO",
+      journal        = "Phys. Rev.",
+      volume         = "D67",
+      year           = "2003",
+      pages          = "052003",
+      doi            = "10.1103/PhysRevD.67.052003",
+      eprint         = "hep-ex/0211029",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CLNS-02-1805, CLEO-02-14",
+      SLACcitation   = "%%CITATION = HEP-EX/0211029;%%"
+}'

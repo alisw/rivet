@@ -1,0 +1,51 @@
+namespace Rivet {
+/// @mainpage The %Rivet MC analysis framework
+///
+/// %Rivet is a C++ and Python framework for preservation and reinterpretation
+/// of particle collider analyses, suitable for comparison with Monte Carlo
+/// event generator predictions, and an enabler of physics model development,
+/// validation, and optimisation in both Standard Model and BSM.
+///
+/// %Rivet is built on the dual concepts of @a analyses -- routines
+/// which implement published experiment analyses -- and @a projections --
+/// routines which compute observables from MC event records. It is
+/// designed to be efficient via automatic caching of projection results
+/// for each event, and very "physicist friendly" with analysis codes
+/// containing minimal boilerplate code and maximum physics.
+///
+/// @section keyclasses Key classes
+/// @li @b Analysis: base for implementation of analysis logic
+/// @li @b Particle: representation of (meta)particles
+/// @li @b Jet: representation of recursively clustered particle jets
+/// @li @b FourMomentum: a 4-momentum object
+/// @li @b Event: container of all particles
+/// @li ParticleBase: core functionality for particles and jets
+///
+/// @section keyprojs Key projections
+/// @li @b ParticleFinder: retrieve all final-state particles matching cuts
+/// @li @b FinalState: retrieve all final-state particles matching cuts
+/// @li @b PromptFinalState: retrieve FS particles
+/// @li @b JetFinder: base class for jet reconstruction
+/// @li @b FastJets: interface to the FastJet clustering package
+/// @li @b DressedLeptons: finder of "physical" bare leptons plus ~colinear photons
+/// @li @b MissingMomentum: fiducial definition of momentum imbalances
+///
+/// @section keytools Key tools
+/// @li @b Modules
+/// @li @b Filtering utilities
+/// @li @b Container utilities
+/// @li @b String utilities
+/// @li @b PID utilities
+///
+/// @section detprojs Detector projections
+/// @li @b SmearedParticles: detector efficiency and smearing functions for particles
+/// @li @b SmearedJets: detector efficiency and smearing functions for jets
+/// @li @b SmearedMET: detector efficiency and smearing functions for missing ET
+///
+/// @section advclasses Advanced classes (for API embedding)
+/// @li @b AnalysisHandler: coordinator of Analysis objects in a Run
+/// @li @b AnalysisInfo: direct access to analysis metadata (most also via Analysis)
+/// @li @b Run: aggregator of multiple incoming event files into a single stream
+///
+/// For more information, please see the documentation via https://rivet.hepforge.org/
+}

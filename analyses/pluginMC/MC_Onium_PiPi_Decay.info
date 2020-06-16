@@ -1,0 +1,10 @@
+Name: MC_Onium_PiPi_Decay
+Summary: Analysis of kinematics in $\mathcal{O}\to\mathcal{O}^\prime\pi\pi$ decays
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+RunInfo: Any type of process producing bottom or charmonium mesons
+NeedCrossSection: no
+Description:
+  'Analysis of the kinematics in the decay of bottom and charmonium resonances to lighter resonances and $\pi\pi$'
+  

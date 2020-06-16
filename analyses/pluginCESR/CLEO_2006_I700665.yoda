@@ -1,0 +1,9 @@
+BEGIN YODA_SCATTER2D_V2 /REF/CLEO_2006_I700665/d01-x01-y01
+IsRef: 1
+Path: /REF/CLEO_2006_I700665/d01-x01-y01
+Title: doi:10.17182/hepdata.47194.v1/t1
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+3.773000e+00	0.001000e+00	0.001000e+00	6.380000e+00	3.104835e-01	4.177320e-01
+END YODA_SCATTER2D_V2

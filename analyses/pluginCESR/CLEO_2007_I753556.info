@@ -1,0 +1,36 @@
+Name: CLEO_2007_I753556
+Year: 2007
+Summary: Measurement of $R$ for energies between 6.964 and 10.538 GeV
+Experiment: CLEO
+Collider:  CESR
+InspireID: 753556
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D76 (2007) 072008, 2007 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: no
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$ in $e^+e^-$ collisions by CLEO for energies between 6.964 and 10.538 GeV.
+   The individual hadronic and muonic cross sections are also outputted to the yoda file
+   so that ratio $R$ can be recalcuated if runs are combined.'
+Keywords: []
+BibKey: Besson:2007aa
+BibTeX: '@article{Besson:2007aa,
+      author         = "Besson, D. and others",
+      title          = "{Measurement of the Total Hadronic Cross Section in e+e-
+                        Annihilations below 10.56-GeV}",
+      collaboration  = "CLEO",
+      journal        = "Phys. Rev.",
+      volume         = "D76",
+      year           = "2007",
+      pages          = "072008",
+      doi            = "10.1103/PhysRevD.76.072008",
+      eprint         = "0706.2813",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CLNS-07-1998, CLEO-07-7",
+      SLACcitation   = "%%CITATION = ARXIV:0706.2813;%%"
+}'

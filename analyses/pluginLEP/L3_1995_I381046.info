@@ -1,0 +1,31 @@
+Name: L3_1995_I381046
+Year: 1995
+Summary: Production of $B^*$ mesons at LEP1
+Experiment: L3
+Collider: LEP
+InspireID: 381046
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B345 (1995) 589-597, 1995 
+RunInfo: e+e- to hadrons
+NeedCrossSection: no
+Beams: [e-, e+]
+Energies: 91.2
+Description:
+  'The ratio of vector to pseudoscalar for $B$ meson production at LEP1.'
+Keywords: []
+BibKey: Acciarri:1994qv
+BibTeX: '@article{Acciarri:1994qv,
+      author         = "Acciarri, M. and others",
+      title          = "{B* production in Z decays at LEP}",
+      collaboration  = "L3",
+      journal        = "Phys. Lett.",
+      volume         = "B345",
+      year           = "1995",
+      pages          = "589-597",
+      doi            = "10.1016/0370-2693(95)01611-S",
+      reportNumber   = "CERN-PPE-94-143",
+      SLACcitation   = "%%CITATION = PHLTA,B345,589;%%"
+}'

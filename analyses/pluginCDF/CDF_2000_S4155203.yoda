@@ -1,0 +1,73 @@
+BEGIN YODA_SCATTER2D_V2 /REF/CDF_2000_S4155203/d01-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.54, up: 0.54}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.13065000000000002, up: 0.13065000000000002}}, 1: {error: {dn: -1.0, up: 1.0}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.3939, up: 0.3939}}, 2: {error: {dn: -1.2, up: 1.2}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.5772, up: 0.5772}}, 3: {error: {dn: -1.4, up: 1.4}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.7565999999999999, up: 0.7565999999999999}}, 4: {error: {dn: -1.4, up: 1.4}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.7878, up: 0.7878}}, 5: {error: {dn: -1.5, up: 1.5}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.9204, up: 0.9204}}, 6: {error: {dn: -1.4, up: 1.4}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.9204, up: 0.9204}}, 7: {error: {dn: -1.4, up: 1.4}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.897, up: 0.897}}, 8: {error: {dn: -1.3, up: 1.3}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.7760999999999999, up: 0.7760999999999999}}, 9: {error: {dn: -1.2, up: 1.2}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.7527, up: 0.7527}}, 10: {error: {dn: -1.2, up: 1.2}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.6980999999999999, up: 0.6980999999999999}}, 11: {error: {dn: -1.2, up: 1.2}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.702, up: 0.702}}, 12: {error: {dn: -1.0, up: 1.0}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.5693999999999999, up: 0.5693999999999999}}, 13: {error: {dn: -1.0, up: 1.0}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.5655, up: 0.5655}}, 14: {error: {dn: -1.0, up: 1.0}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.5265, up: 0.5265}}, 15: {error: {dn: -1.0, up: 1.0}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.5342999999999999, up: 0.5342999999999999}}, 16: {error: {dn: -0.9, up: 0.9}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.4641, up: 0.4641}}, 17: {error: {dn: -0.9, up: 0.9}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.4056, up: 0.4056}}, 18: {error: {dn: -0.9, up: 0.9}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.4329, up: 0.4329}}, 19: {error: {dn: -0.82, up: 0.82}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.37284, up: 0.37284}}, 20: {error: {dn: -0.76, up: 0.76}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.32564999999999994, up: 0.32564999999999994}}, 21: {error: {dn: -0.74, up: 0.74}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.30498000000000003, up: 0.30498000000000003}}, 22: {error: {dn: -0.76, up: 0.76}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.31901999999999997, up: 0.31901999999999997}}, 23: {error: {dn: -0.72, up: 0.72}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.29172000000000003, up: 0.29172000000000003}}, 24: {error: {dn: -0.53, up: 0.53}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.28119, up: 0.28119}}, 25: {error: {dn: -0.47, up: 0.47}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.23595, up: 0.23595}}, 26: {error: {dn: -0.41, up: 0.41}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.18447, up: 0.18447}}, 27: {error: {dn: -0.44, up: 0.44}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.20319, up: 0.20319}}, 28: {error: {dn: -0.4, up: 0.4}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.17394, up: 0.17394}}, 29: {error: {dn: -0.39, up: 0.39}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.16692, up: 0.16692}}, 30: {error: {dn: -0.35, up: 0.35}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.13688999999999998, up: 0.13688999999999998}}, 31: {error: {dn: -0.33, up: 0.33}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.11739, up: 0.11739}}, 32: {error: {dn: -0.22, up: 0.22}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.10257, up: 0.10257}}, 33: {error: {dn: -0.18, up: 0.18}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.07098, up: 0.07098}}, 34: {error: {dn: -0.18, up: 0.18}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.07215, up: 0.07215}}, 35: {error: {dn: -0.17, up: 0.17}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.06162, up: 0.06162}}, 36: {error: {dn: -0.16, up: 0.16}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.05499, up: 0.05499}}, 37: {error: {dn: -0.1, up: 0.1}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.03978, up: 0.03978}}, 38: {error: {dn: -0.079, up: 0.079}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.026442, up: 0.026442}}, 39: {error: {dn: -0.076, up: 0.076}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.025116, up: 0.025116}}, 40: {error: {dn: -0.062, up: 0.062}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.016926, up: 0.016926}}, 41: {error: {dn: -0.059, up: 0.059}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.015366, up: 0.015366}}, 42: {error: {dn: -0.027, up: 0.027}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.00819, up: 0.00819}}, 43: {error: {dn: -0.019, up: 0.019}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.004173, up: 0.004173}}, 44: {error: {dn: -0.0175, up: 0.0175}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.003549, up: 0.003549}}, 45: {error: {dn: -0.0122, up: 0.0122}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.0017549999999999998, up: 0.0017549999999999998}}, 46: {error: {dn: -0.0107, up: 0.0107}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.0013689, up: 0.0013689}}, 47: {error: {dn: -0.0048, up: 0.0048}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.0007059, up: 0.0007059}}, 48: {error: {dn: -0.00297, up: 0.00297}, 'sys,Additional uncertainty due to the luminosity error': {dn: -0.00027728999999999997, up: 0.00027728999999999997}}, 49: {error: {dn: -0.000756, up: 0.000756}, 'sys,Additional uncertainty due to the luminosity error': {dn: -3.7986e-05, up: 3.7986e-05}}}
+
+IsRef: 1
+Path: /REF/CDF_2000_S4155203/d01-x01-y01
+Title: doi:10.17182/hepdata.42070.v1/t1
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+2.500000e-01	2.500000e-01	2.500000e-01	3.350000e+00	5.555803e-01	5.555803e-01
+7.500000e-01	2.500000e-01	2.500000e-01	1.010000e+01	1.074782e+00	1.074782e+00
+1.250000e+00	2.500000e-01	2.500000e-01	1.480000e+01	1.331600e+00	1.331600e+00
+1.750000e+00	2.500000e-01	2.500000e-01	1.940000e+01	1.591365e+00	1.591365e+00
+2.250000e+00	2.500000e-01	2.500000e-01	2.020000e+01	1.606434e+00	1.606434e+00
+2.750000e+00	2.500000e-01	2.500000e-01	2.360000e+01	1.759868e+00	1.759868e+00
+3.250000e+00	2.500000e-01	2.500000e-01	2.360000e+01	1.675451e+00	1.675451e+00
+3.750000e+00	2.500000e-01	2.500000e-01	2.300000e+01	1.662711e+00	1.662711e+00
+4.250000e+00	2.500000e-01	2.500000e-01	1.990000e+01	1.514045e+00	1.514045e+00
+4.750000e+00	2.500000e-01	2.500000e-01	1.930000e+01	1.416530e+00	1.416530e+00
+5.250000e+00	2.500000e-01	2.500000e-01	1.790000e+01	1.388288e+00	1.388288e+00
+5.750000e+00	2.500000e-01	2.500000e-01	1.800000e+01	1.390253e+00	1.390253e+00
+6.250000e+00	2.500000e-01	2.500000e-01	1.460000e+01	1.150746e+00	1.150746e+00
+6.750000e+00	2.500000e-01	2.500000e-01	1.450000e+01	1.148821e+00	1.148821e+00
+7.250000e+00	2.500000e-01	2.500000e-01	1.350000e+01	1.130134e+00	1.130134e+00
+7.750000e+00	2.500000e-01	2.500000e-01	1.370000e+01	1.133789e+00	1.133789e+00
+8.250000e+00	2.500000e-01	2.500000e-01	1.190000e+01	1.012615e+00	1.012615e+00
+8.750000e+00	2.500000e-01	2.500000e-01	1.040000e+01	9.871734e-01	9.871734e-01
+9.250000e+00	2.500000e-01	2.500000e-01	1.110000e+01	9.987004e-01	9.987004e-01
+9.750000e+00	2.500000e-01	2.500000e-01	9.560000e+00	9.007828e-01	9.007828e-01
+1.025000e+01	2.500000e-01	2.500000e-01	8.350000e+00	8.268300e-01	8.268300e-01
+1.075000e+01	2.500000e-01	2.500000e-01	7.820000e+00	8.003829e-01	8.003829e-01
+1.125000e+01	2.500000e-01	2.500000e-01	8.180000e+00	8.242413e-01	8.242413e-01
+1.175000e+01	2.500000e-01	2.500000e-01	7.480000e+00	7.768530e-01	7.768530e-01
+1.250000e+01	5.000000e-01	5.000000e-01	7.210000e+00	5.999732e-01	5.999732e-01
+1.350000e+01	5.000000e-01	5.000000e-01	6.050000e+00	5.259015e-01	5.259015e-01
+1.450000e+01	5.000000e-01	5.000000e-01	4.730000e+00	4.495878e-01	4.495878e-01
+1.550000e+01	5.000000e-01	5.000000e-01	5.210000e+00	4.846506e-01	4.846506e-01
+1.650000e+01	5.000000e-01	5.000000e-01	4.460000e+00	4.361824e-01	4.361824e-01
+1.750000e+01	5.000000e-01	5.000000e-01	4.280000e+00	4.242196e-01	4.242196e-01
+1.850000e+01	5.000000e-01	5.000000e-01	3.510000e+00	3.758176e-01	3.758176e-01
+1.950000e+01	5.000000e-01	5.000000e-01	3.010000e+00	3.502576e-01	3.502576e-01
+2.100000e+01	1.000000e+00	1.000000e+00	2.630000e+00	2.427357e-01	2.427357e-01
+2.300000e+01	1.000000e+00	1.000000e+00	1.820000e+00	1.934894e-01	1.934894e-01
+2.500000e+01	1.000000e+00	1.000000e+00	1.850000e+00	1.939217e-01	1.939217e-01
+2.700000e+01	1.000000e+00	1.000000e+00	1.580000e+00	1.808232e-01	1.808232e-01
+2.900000e+01	1.000000e+00	1.000000e+00	1.410000e+00	1.691860e-01	1.691860e-01
+3.200000e+01	2.000000e+00	2.000000e+00	1.020000e+00	1.076218e-01	1.076218e-01
+3.600000e+01	2.000000e+00	2.000000e+00	6.780000e-01	8.330774e-02	8.330774e-02
+4.000000e+01	2.000000e+00	2.000000e+00	6.440000e-01	8.004257e-02	8.004257e-02
+4.400000e+01	2.000000e+00	2.000000e+00	4.340000e-01	6.426888e-02	6.426888e-02
+4.800000e+01	2.000000e+00	2.000000e+00	3.940000e-01	6.096814e-02	6.096814e-02
+5.500000e+01	5.000000e+00	5.000000e+00	2.100000e-01	2.821482e-02	2.821482e-02
+6.500000e+01	5.000000e+00	5.000000e+00	1.070000e-01	1.945286e-02	1.945286e-02
+7.500000e+01	5.000000e+00	5.000000e+00	9.100000e-02	1.785624e-02	1.785624e-02
+8.500000e+01	5.000000e+00	5.000000e+00	4.500000e-02	1.232558e-02	1.232558e-02
+9.500000e+01	5.000000e+00	5.000000e+00	3.510000e-02	1.078721e-02	1.078721e-02
+1.125000e+02	1.250000e+01	1.250000e+01	1.810000e-02	4.851628e-03	4.851628e-03
+1.375000e+02	1.250000e+01	1.250000e+01	7.110000e-03	2.982916e-03	2.982916e-03
+1.750000e+02	2.500000e+01	2.500000e+01	9.740000e-04	7.569537e-04	7.569537e-04
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/CDF_2000_S4155203/d02-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -4.0, up: 4.0}, sys_1: {dn: -3.0, up: 3.0}, sys_2: {dn: -10.0, up: 10.0}}}
+
+IsRef: 1
+Path: /REF/CDF_2000_S4155203/d02-x01-y01
+Title: doi:10.17182/hepdata.42070.v1/t2
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.800000e+00	0.000000e+00	0.000000e+00	2.480000e+02	1.118034e+01	1.118034e+01
+END YODA_SCATTER2D_V2

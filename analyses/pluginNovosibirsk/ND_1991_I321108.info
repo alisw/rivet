@@ -1,0 +1,31 @@
+Name: ND_1991_I321108
+Year: 1991
+Summary: Cross sections for $e^+e^-\to$ exclusive hadronic states between 0.5 and 1.4 GeV.
+Experiment: ND
+Collider: VEPP-2M 
+InspireID: 321108
+Status: VALIDATED
+Authors:
+ - Peter Richardson
+References:
+ - PRep 202,99 
+RunInfo: e+ e- to hadrons
+NeedCrossSection: yes
+Beams: [e+, e-]
+Description:
+  'Measurement of the cross section for $e^+e^-\to \pi^+\pi^-$, $K^+K^-$, $K^0_SK^0_L$, $\pi^+\pi^-\pi^0$,
+  $2\pi^+2\pi^-$, $\pi^+\pi^-2\pi^0$, $\omega\pi^0$, $\eta\pi^+\pi^-$ and $2\pi^+2\pi^-\pi^0$ by ND for energies between 0.5 and 1.4 GeV.'
+Keywords:
+Keywords: []
+BibKey: Dolinsky:1991vq
+BibTeX: '@article{Dolinsky:1991vq,
+      author         = "Dolinsky, S. I. and others",
+      title          = "{Summary of experiments with the neutral detector at the
+                        e+ e- storage ring VEPP-2M}",
+      journal        = "Phys. Rept.",
+      volume         = "202",
+      year           = "1991",
+      pages          = "99-170",
+      doi            = "10.1016/0370-1573(91)90127-8",
+      SLACcitation   = "%%CITATION = PRPLC,202,99;%%"
+}'

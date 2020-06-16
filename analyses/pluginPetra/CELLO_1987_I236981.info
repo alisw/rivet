@@ -1,0 +1,34 @@
+Name: CELLO_1987_I236981
+Year: 1987
+Summary:  Measurement of $R$ for energies between 14 and 46.6 GeV
+Experiment: CELLO
+Collider: PETRA
+InspireID: 236981
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B183 (1987) 400-411, 1987 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: no
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$ in $e^+e^-$ collisions for energies between 14 and 46.6 GeV.
+   The individual hadronic and muonic cross sections are also outputted to the yoda file
+   so that ratio $R$ can be recalcuated if runs are combined.'
+Keywords: []
+BibKey: Behrend:1986md
+BibTeX: '@article{Behrend:1986md,
+      author         = "Behrend, H. J. and others",
+      title          = "{Determination of alpha-s and sin**2theta(w) from
+                        Measurements of the Total Hadronic Cross-Section in e+ e-
+                        Annihilation}",
+      collaboration  = "CELLO",
+      journal        = "Phys. Lett.",
+      volume         = "B183",
+      year           = "1987",
+      pages          = "400-411",
+      doi            = "10.1016/0370-2693(87)90986-5",
+      reportNumber   = "DESY-86-133",
+      SLACcitation   = "%%CITATION = PHLTA,B183,400;%%"
+}'

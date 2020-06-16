@@ -1,0 +1,36 @@
+Name: BESIII_2019_I1691850
+Year: 2019
+Summary: Analysis of $J/\psi$ decays to $\Lambda^0\bar\Lambda^0$
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1691850
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Nature Phys. 15 (2019) 631-634
+RunInfo: e+e- > J/psi 
+NeedCrossSection: no
+Beams: [e-, e+]
+Energies: [3.1]
+Description:
+  'Analysis of the angular distribution of the baryons, and decay products, produced in
+   $e^+e^-\to J/\psi \to \Lambda^0\bar\Lambda^0$.
+   Gives information about the decay and is useful for testing correlations in hadron decays.'
+Keywords: []
+BibKey: Ablikim:2018zay
+BibTeX: '@article{Ablikim:2018zay,
+      author         = "Ablikim, M. and others",
+      title          = "{Polarization and Entanglement in Baryon-Antibaryon Pair
+                        Production in Electron-Positron Annihilation}",
+      collaboration  = "BESIII",
+      journal        = "Nature Phys.",
+      volume         = "15",
+      year           = "2019",
+      pages          = "631-634",
+      doi            = "10.1038/s41567-019-0494-8",
+      eprint         = "1808.08917",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1808.08917;%%"
+}'

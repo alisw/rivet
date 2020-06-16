@@ -1,0 +1,25 @@
+Name: ATLAS_2011_CONF_2011_098
+Year: 2011
+Summary: b-jets search for supersymmetry with 0-leptons
+Experiment: ATLAS
+Collider: LHC
+SpiresID:
+Status: OBSOLETE
+Authors:
+ - Angela Chen <aqchen@fas.harvard.edu>
+References:
+ - ATLAS_2011_CONF_2011_098
+RunInfo:
+  BSM signal events at 7000 GeV.
+NumEvents: 25000 for BSM signals
+Beams: [p+, p+]
+Energies: [7000]
+#Luminosity_fb:
+Description:
+  'Search for supersymmmetric particles by ATLAS at 7 TeV in events with b-jets, large missing
+  energy, and no leptons.
+  Event counts in four signal regions (1 b-jet, $m_eff>500$\,GeV; 1 b-jet, $m_eff>700$\,GeV; 2 b-jets,
+  $m_eff>500$\,GeV; 2 b-jets, $m_eff>700$\,GeV) are implemented as one-bin histograms.
+  Histograms for missing transverse energy, effective mass, and pT of the leading jet are
+  implemented for the 1 b-tag and 2 b-tag signal regions.'
+Keywords: [search, bsm, susy, 0lepton, jets, bjet]

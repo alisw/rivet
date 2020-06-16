@@ -1,0 +1,53 @@
+Name: ATLAS_2017_I1644367
+Year: 2017
+Summary: Isolated triphotons at 8 TeV
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1644367
+Status: VALIDATED
+Authors:
+ - Josu Cantero Garcia <josu.cantero.garcia@cern.ch>
+ - Christian Gutschow <chris.g@cern.ch>
+References:
+ - Phys.Lett. B781 (2018) 55-76
+ - doi:10.1016/j.physletb.2018.03.057
+ - arXiv:1712.07291 [hep-ex]
+Keywords:
+ - PHOTON
+ - MULTIBOSON
+ - TRIBOSON
+RunInfo:
+  inclusive triphoton production
+Luminosity_fb: 20.2
+Beams: [p+, p+]
+Energies: [8000]
+PtCuts: [27,22,15]
+NeedCrossSection: True
+Description: 
+  'A measurement of the production of three isolated photons in proton-proton collisions at a centre-of-mass energy $\sqrt{s} = 8$ TeV
+  is reported. The results are based on an integrated luminosity of 20.2 fb${}^{-1}$ collected with the ATLAS detector at the LHC. The
+  differential cross sections are measured as functions of the transverse energy of each photon, the difference in azimuthal angle
+  and in pseudorapidity between pairs of photons, the invariant mass of pairs of photons, and the invariant mass of the triphoton
+  system. A measurement of the inclusive fiducial cross section is also reported. Next-to-leading-order perturbative QCD predictions
+  are compared to the cross-section measurements. The predictions underestimate the measurement of the inclusive fiducial cross
+  section and the differential measurements at low photon transverse energies and invariant masses. They provide adequate
+  descriptions of the measurements at high values of the photon transverse energies, invariant mass of pairs of photons, and
+  invariant mass of the triphoton system.'
+BibKey: Aaboud:2017lxm
+BibTeX: '@article{Aaboud:2017lxm,
+      author         = "Aaboud, Morad and others",
+      title          = "{Measurement of the production cross section of three
+                        isolated photons in $pp$ collisions at $\sqrt{s}$ = 8 TeV
+                        using the ATLAS detector}",
+      collaboration  = "ATLAS",
+      journal        = "Phys. Lett.",
+      volume         = "B781",
+      year           = "2018",
+      pages          = "55-76",
+      doi            = "10.1016/j.physletb.2018.03.057",
+      eprint         = "1712.07291",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-EP-2017-302",
+      SLACcitation   = "%%CITATION = ARXIV:1712.07291;%%"
+}'

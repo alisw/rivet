@@ -1,0 +1,33 @@
+Name: CELLO_1984_I202783
+Year: 1984
+Summary: Measurement of $R$ for energies between 33 and 47 GeV
+Experiment: CELLO
+Collider: PETRA
+InspireID: 202783
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B144 (1984) 297-301, 1984 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: no
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$ in $e^+e^-$ collisions for energies between 33 and 47 GeV.
+   The individual hadronic and muonic cross sections are also outputted to the yoda file
+   so that ratio $R$ can be recalcuated if runs are combined.'
+Keywords: []
+BibKey: Behrend:1984ub
+BibTeX: '@article{Behrend:1984ub,
+      author         = "Behrend, H. J. and others",
+      title          = "{Search for New Heavy Quarks in $e^+ e^-$ Collisions Up
+                        to 46.78-{GeV} Center-of-mass Energy}",
+      collaboration  = "CELLO",
+      journal        = "Phys. Lett.",
+      volume         = "144B",
+      year           = "1984",
+      pages          = "297-301",
+      doi            = "10.1016/0370-2693(84)91824-0",
+      reportNumber   = "DESY-84-051",
+      SLACcitation   = "%%CITATION = PHLTA,144B,297;%%"
+}'

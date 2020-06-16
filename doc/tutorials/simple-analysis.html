@@ -1,0 +1,103 @@
+<h2 id="instructions-for-writing-a-rivet-routineanalysis">Instructions for writing a Rivet routine/analysis</h2>
+<p>At this point you have probably run Rivet a few times, maybe different analyses, different generators, and played around with plotting options. To really utilize the full power of the framework, one does, however, need to write analysis code -- it is an analysis framework after all.</p>
+<p>The best tip for writing analyses, is to find an existing similar analysis, from the large library of already existing ones, and take inspiration from that. But even then, it is important to have the basics right.</p>
+<h3 id="writing-the-analysis-code">Writing the analysis code</h3>
+<p>Here we are going to write a new analysis for use with Rivet. This is done &quot;stand-alone&quot;, i.e. you don't have to modify the code of Rivet itself: in fact, you can follow these instructions using a system install of Rivet to which you have no write permissions.</p>
+<p>All analysis routines are implemented as sub-classes of the Rivet &quot;Analysis&quot; class: pretty much all the magic that binds the analysis object into the Rivet system is handled in this base class, meaning that your code can really concentrate on implementing the physics goals of the analysis.</p>
+<h3 id="the-analysis-wizard">The analysis &quot;wizard&quot;</h3>
+<p>You could make your analysis by copying some example code and then going through a load of search and replace fiddling, but in fact there is a much easier way: the <code>rivet-mkanalysis</code> script. This script is installed along with the rest of the Rivet system, and will generate template analysis files for you.</p>
+<p>You can get some help info by running <code>rivet-mkanalysis --help</code>, but the basic usage (to generate the files in your current directory) is <code>rivet-mkanalysis MY_ANALYSIS_NAME</code>. A three part name, separated by underscores, is a Rivet convention that we recommend you to use: the first part is the experiment name, the second is the year of publication, and the third is the ID code for the corresponding paper in the <a href="http://inspirehep.net">Inspire HEP database</a>, preceded by an &quot;I&quot;. You can get the Inspire ID from an Inspire record page by looking at the URL: it will be the numerical trailing part of the address following <code>record/</code>, e.g. 849050 in the record <a href="http://inspirehep.net/record/849050">http://inspirehep.net/record/849050.</a></p>
+<p>So, for example, <code>ATLAS_2010_I849050</code> would be the standard name for the analysis link given above... although in fact that one (the first ATLAS minimum bias paper) is in the Rivet collection under the name <code>ATLAS_2010_S8591806</code>, which uses the older ''SPIRES'' database ID. Please use Inspire IDs rather than SPIRES ones for new analyses -- we intend to update all analyses to the Inspire naming in a future release.</p>
+<p>Running the <code>rivet-mkanalysis</code> script with the appropriate analysis name will have generated a <code>.cc</code> C++ source file template, and template metadata files for information about the analysis (<code>.info</code>) and specifications of titles, axis labels, etc. for the plots which the analysis will produce (<code>.plot</code>). These templates will include, if possible, extra analysis metadata such as a BibTeX publication entry in the <code>.info</code> file.</p>
+<h3 id="structure">Structure</h3>
+<p>For simplicity, Rivet analysis classes are usually written in just one <code>.cc</code> file, i.e. no header declaration. This is because classes are almost always not inherited from, and all that the Rivet system needs to know is that it can be treated as an <code>Analysis*</code> pointer: avoiding header files makes everything more compact and removes a source of errors and annoyance.</p>
+<p>An analysis has the following components: * a no-argument constructor; * three analysis event loop methods: <code>init</code>, <code>analyze</code> and <code>finalize</code>; * a minimal hook into the plugin system</p>
+<p>It is also possible to add some metadata methods which describe the analysis, references to publications, experiment, etc., but we strongly recommend that you put this information into the &quot;YAML&quot; format (see http://www.yaml.org) <code>.info</code> template that the <code>rivet-mkanalysis</code> script generated for you instead: this way the code will remain clean and minimal, and you can update the metadata without needing to recompile. All analyses bundled with Rivet store their metadata in external files.</p>
+<p>Useful analyses also contain member variables for the analysis: event weight counters and histograms are the most common of these. Conventionally, we declare the class member variables with a leading underscore: see the <a href="codingstyle.md">Coding Style Guide</a> for more information on our recommended uniform coding style. Histogram pointer members (for which we use special smart pointers with clever machinery inside) are preferred to start with an &quot;h&quot;, e.g. <code>Histo1DPtr _h_pT</code>.</p>
+<h3 id="implementation">Implementation</h3>
+<p>The constructor and three event loop methods are used for the following:</p>
+<ul>
+<li>Constructor: set whether the generator cross-section is needed. Minimal!</li>
+<li><code>init</code>: book histograms, initialise counters, etc.</li>
+<li><code>analyze</code>: select particles, filter according to cuts, loop over combinations, construct observables, fill histograms. This is where the per-event aspect of the analysis algorithm goes.</li>
+<li><code>finalize</code>: normalize/scale/divide histograms, tuples, etc.</li>
+</ul>
+<p>This probably looks similar to every analysis system you've ever used, so hopefully you're not worried about Rivet being weird or difficult to learn ;-)</p>
+<p>Rivet provides implementations of many calculational tools, called &quot;projections&quot;. These are just observable calculator objects with a silly name, so don't get worried. (They automatically cache their results, to make Rivet automatically efficient, but you don't have to worry about that since it's, well, automatic.) The projections are used by calling the analysis' <code>apply(event)</code> method. This will return a const reference to the completed projection object and takes the type of the reference as a template argument, e.g.</p>
+<pre><code>  const FinalState&amp; cfs = apply&lt;FinalState&gt;(event, &quot;Tracks&quot;);</code></pre>
+<p>The name &quot;Tracks&quot; here will have been registered in the <code>init</code> method as referring to a projection of type &quot;ChargedFinalState&quot; --- a calculator which provides a list of charged particles with certain basic cuts applied. This is done via the <code>declare</code> method. Note that a) you don't have to manage the memory yourself, and b) polymorphism via the reference is both allowed and encouraged. If b) means nothing to you, don't worry... we just want to reassure C++ fiends who might think we're cramping their style!</p>
+<h3 id="example">Example</h3>
+<p>Here is an example of the whole Rivet analysis shebang. We've compressed it into a single .cc file since the <code>analyze</code> method is nice and short and there is no reason to make a header:</p>
+<pre><code>#include &quot;Rivet/Analysis.hh&quot;
+#include &quot;Rivet/Projections/FinalState.hh&quot;
+#include &quot;Rivet/Projections/ChargedFinalState.hh&quot;
+#include &quot;Rivet/Projections/FastJets.hh&quot;
+
+namespace Rivet {
+  
+  class MyAnalysis : public Analysis {
+  public:
+    
+    /// Default constructor
+    MyAnalysis() : Analysis(&quot;MYANALYSIS&quot;) {   }
+    
+    
+    /// @name Analysis methods
+    //@{
+    void init() {
+      const FinalState fs(Cuts::abseta &lt; 5);
+      declare(FastJets(fs, FastJets::ANTIKT, 0.5), &quot;Jets&quot;);
+      declare(ChargedFinalState(Cuts::abseta &lt; 2.5 &amp;&amp; Cuts::pT &gt; 500*MeV), &quot;Tracks&quot;);
+    }
+    
+    void analyze(const Event&amp; event) {
+      const Jets&amp; jets = apply&lt;ChargedFinalState&gt;(event, &quot;Jets&quot;)
+        .jetsByPt(Cuts::pT &gt; 20*GeV &amp;&amp; Cuts::abseta &lt; 4.4);
+      MSG_DEBUG(&quot;Jet multiplicity = &quot; &lt;&lt; jets.size());
+
+      const Particles&amp; trks = apply&lt;FinalState&gt;(event, &quot;Tracks&quot;).particles();
+      MSG_DEBUG(&quot;Track multiplicity = &quot; &lt;&lt; trks.size());
+    }
+
+    // No histos, so no need for a finalize()!
+
+    //@}
+    
+  };
+
+  // Magic required by the plugin system 
+  DECLARE_RIVET_PLUGIN(MyAnalysis);
+  
+}</code></pre>
+<h3 id="cut-objects">Cut objects</h3>
+<p>Note the use of objects in the <code>Cuts</code> namespace to specify kinematic cuts on particles or jets selected by projections, or returned from them as lists. These predefined objects of type <code>Rivet::Cut</code> can be combined together using arbitrary combinations of logical operators, with the combined object also being of type <code>Cut</code>.</p>
+<p>Many functions in Rivet accept a (potentially compound) <code>Cut</code> as an argument, so this is a very flexible, unambiguous, and human-readable way to express analysis selection logic. There is not much to know from the user point of view beyond what you see above!</p>
+<p>The standard Rivet predefined cuts are (all in the <code>Rivet::Cuts</code> namespace): <code>pT</code>, <code>Et</code>, <code>mass</code>, <code>phi</code>, <code>eta</code>, <code>abseta</code>, <code>rap</code>, <code>absrap</code>.</p>
+<h3 id="compiling-and-linking">Compiling and linking</h3>
+<p>To use your new analysis, you need to build it into a Rivet analysis plugin library, with a name of the form <code>Rivet*.so</code> library. You can do this manually, but to make life easier there is again a helper script, used as follows: <code>rivet-buildplugin RivetMyAnalyses.so MyAnalysis.cc MyOtherAnalysis.cc # etc.</code></p>
+<p>Note that the name of the library has to start with the word &quot;Rivet&quot; or it will not get loaded at runtime. By default, if no &quot;.so&quot; first argument is given, the name =RivetAnalysis.so= will be used.</p>
+<h3 id="running">Running</h3>
+<p>You can now use your new analysis right away. Provided that the <code>RivetMyAnalysis.so</code> shared library file, or a similarly-named symbolic link to it, is in a directory listed in your <code>RIVET_ANALYSIS_PATH</code> environment variable, it will work right away with the <code>rivet</code> command:</p>
+<pre><code>  &gt; ls
+  RivetMyAnalysis.so MyAnalysis.cc
+  &gt; export RIVET_ANALYSIS_PATH=$PWD
+  &gt; rivet --list-analyses
+  [...]
+  MYANALYSIS
+  &gt; rivet --show-analysis MYANALYSIS
+  MyAnalysis
+  ==========
+
+  Spires ID: NONE
+  Spires URL: http://www.slac.stanford.edu/spires/find/hep/www?rawcmd=key+NONE
+  Experiment: NONE
+  Year of publication: NONE
+
+  Description:
+    A do-nothing analysis for demonstrating how to make a plugin
+
+  References:</code></pre>
+<p>Alternatively, you can use the <code>--analysis-path</code> flag to <code>rivet</code>:</p>
+<pre><code>  &gt; rivet --list-analyses --analysis-path=$PWD</code></pre>
+<h3 id="making-it-useful">Making it useful</h3>
+<p>Hopefully that's enough to get you started. The other main things to learn are booking (and &quot;auto-booking&quot;) of histograms and other data objects, and use of the Rivet projections and analysis objects. For this, we recommend that you take a look at the code of some of the standard analyses, and read more information about projections and histogramming on this wiki and in the Rivet PDF manual.</p>

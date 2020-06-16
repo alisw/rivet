@@ -1,0 +1,33 @@
+Name: TASSO_1980_I143691
+Year: 1980
+Summary: Charged Particle distributions  between 13 and 31.6 GeV
+Experiment: TASSO
+Collider: Petra
+InspireID: 143691
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. 89B (1980) 418-422
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: yes
+Beams: [e-, e+]
+Energies: [13,17,22,27.6,30.3,31.2]
+Description:
+  'Measurement of charged particle multiplicity, rapidity and scaled momentum distributions for a range of energies
+   between 13 and 31.6 GeV'
+Keywords: []
+BibKey: Brandelik:1979bw
+BibTeX: '@article{Brandelik:1979bw,
+      author         = "Brandelik, R. and others",
+      title          = "{Rapid Growth of Charged Particle Multiplicity in
+                        High-Energy e+ e- Annihilations}",
+      collaboration  = "TASSO",
+      journal        = "Phys. Lett.",
+      volume         = "89B",
+      year           = "1980",
+      pages          = "418-422",
+      doi            = "10.1016/0370-2693(80)90156-2",
+      reportNumber   = "DESY-79/73",
+      SLACcitation   = "%%CITATION = PHLTA,89B,418;%%"
+}'

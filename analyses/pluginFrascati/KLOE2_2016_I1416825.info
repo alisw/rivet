@@ -1,0 +1,32 @@
+Name: KLOE2_2016_I1416825
+Year: 2016
+Summary: Form factor for the decay $\phi\to\pi^0e^+e^-$
+Experiment: KLOE2
+Collider: DAPHNE
+InspireID: 1416825
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B757 (2016) 362-367, 2016 
+RunInfo: phi production with both the dalitz decay and radiative decay for normalization
+NeedCrossSection: no
+Description:
+  'Measurement of the form factor $\left|F_{\phi\pi^0}(q^2)\right|$ for the decay $\phi\to\pi^0e^+e^-$ by the KLOE experiment at DAPHNE'
+Keywords: []
+BibKey: Anastasi:2016qga
+BibTeX: '@article{Anastasi:2016qga,
+      author         = "Anastasi, A. and others",
+      title          = "{Measurement of the $\phi \to \pi^0 e^+e^-$ transition
+                        form factor with the KLOE detector}",
+      collaboration  = "KLOE-2",
+      journal        = "Phys. Lett.",
+      volume         = "B757",
+      year           = "2016",
+      pages          = "362-367",
+      doi            = "10.1016/j.physletb.2016.04.015",
+      eprint         = "1601.06565",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1601.06565;%%"
+}'

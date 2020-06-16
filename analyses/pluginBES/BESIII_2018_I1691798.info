@@ -1,0 +1,31 @@
+Name: BESIII_2018_I1691798
+Year: 2018
+Summary:  Cross Section for $K^0_SK^\pm\pi^\mp$ between 3.8 and 4.6 GeV
+Experiment: BESIII
+Collider: BEPC II
+InspireID: 1691798
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - arXiv:1808.08733 [hep-ex]
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+  'Measurement of the cross section for $K^0_SK^\pm\pi^\mp$ between 3.8 and 4.6 GeV.'
+Keywords:
+BibKey: Ablikim:2018lmx
+BibTeX: '@article{Ablikim:2018lmx,
+      author         = "Ablikim, Medina and others",
+      title          = "{Precision measurements of $\sigma_{B}(e^+e^- \to
+                        K_{S}^{0}K^{\pm}\pi^{\mp})$ at center-of-mass energies
+                        between 3.8 and 4.6 GeV}",
+      collaboration  = "BESIII",
+      year           = "2018",
+      eprint         = "1808.08733",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1808.08733;%%"
+}'

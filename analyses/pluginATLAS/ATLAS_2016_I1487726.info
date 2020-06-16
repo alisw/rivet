@@ -1,0 +1,54 @@
+Name: ATLAS_2016_I1487726
+Year: 2016
+Summary: Collinear W emissions at 8 TeV
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1487726
+Status: VALIDATED
+Authors:
+ - marek.schoenherr@cern.ch
+ - mileswu@uchicago.edu
+ - chris.g@cern.ch
+References:
+ - DOI:10.1016/j.physletb.2016.12.005
+ - arXiv:1609.07045 [hep-ex]
+ - Phys.Lett. B765 (2017) 132-153
+Keywords:
+ - WJETS
+ - COLLINEAR
+ - VJETS
+RunInfo: 8 TeV $pp \to W+\text{jets} \to \mu\nu+\text{jets}$.
+Beams: [p+, p+]
+Energies: [8000]
+Luminosity_fb: 20.3
+Options:
+  - LMODE=EL
+Description:
+  'The $W$ boson angular distribution in events with high transverse momentum jets is measured using data collected by the ATLAS
+  experiment from proton-proton collisions at a centre-of-mass energy $\sqrt{s}=8$ TeV at the Large Hadron Collider, corresponding to an
+  integrated luminosity of 20.3 fb$^{-1}$. The focus is on the contributions to $W+$jets processes from real $W$ emission, 
+  which is achieved by studying events where a muon is observed close to a high transverse momentum jet. At small angular separations, 
+  these contributions are expected to be large. Various theoretical models of this process are compared to the data in terms of the
+  absolute cross-section and the angular distributions of the muon from the leptonic $W$ decay.'
+BibKey: Aaboud:2016ylh
+BibTeX: '@article{Aaboud:2016ylh,
+      author         = "Aaboud, Morad and others",
+      title          = "{Measurement of $W$ boson angular distributions in events
+                        with high transverse momentum jets at $\sqrt{s}=$ 8 TeV
+                        using the ATLAS detector}",
+      collaboration  = "ATLAS",
+      journal        = "Phys. Lett.",
+      volume         = "B765",
+      year           = "2017",
+      pages          = "132-153",
+      doi            = "10.1016/j.physletb.2016.12.005",
+      eprint         = "1609.07045",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-EP-2016-182",
+      SLACcitation   = "%%CITATION = ARXIV:1609.07045;%%"
+}'
+
+ReleaseTests:
+ - $A LHC-8-Wmv-boosted
+ - $A-2 LHC-8-Wev-boosted :LMODE=EL

@@ -1,0 +1,43 @@
+Name: CMS_2018_I1711625
+Year: 2018
+Summary: Measurement of the differential Drell-Yan cross section in proton-proton collisions at $\sqrt{s} = 13\,TeV$
+Experiment: CMS
+Collider: LHC
+InspireID: 1711625
+Status: VALIDATED
+Authors:
+ - cms-pag-conveners-smp@cern.ch
+ - Kyeongpil Lee <kplee@cern.ch>
+References:
+  - arXiv:1812.10529
+  - SMP-17-001
+  - JHEP 1912 (2019) 059
+RunInfo: pp to Z interactions at $\sqrt{s} = 13$ TeV. Data collected by CMS during the year 2015.
+NumEvents: 1000000
+NeedCrossSection: yes
+Beams: [p+, p+]
+Energies: [13000]
+Description:
+  'Differential Drell-Yan cross sections $d\sigma/dm$ are presented. The cross section measurement is reported in the dilepton invariant mass range from 15 to 3000 GeV.
+  The results within detector acceptance are provided in muon and electron channel respectively. In addition, the results in muon channel are also obtained with the correction to the full phase space and the other correction for the effects of final state radiation.'
+BibKey: Sirunyan:2018owv
+BibTeX: '@article{Sirunyan:2018owv,
+      author         = "Sirunyan, Albert M and others",
+      title          = "{Measurement of the differential Drell-Yan cross section
+                        in proton-proton collisions at $ \sqrt{\mathrm{s}} $ = 13
+                        TeV}",
+      collaboration  = "CMS",
+      journal        = "JHEP",
+      volume         = "12",
+      year           = "2019",
+      pages          = "059",
+      doi            = "10.1007/JHEP12(2019)059",
+      eprint         = "1812.10529",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CMS-SMP-17-001, CERN-EP-2018-320",
+      SLACcitation   = "%%CITATION = ARXIV:1812.10529;%%"
+}'
+ReleaseTests:
+ - $A LHC-13-Z-mu
+ - $A-2 LHC-13-Z-e

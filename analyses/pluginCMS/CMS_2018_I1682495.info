@@ -1,0 +1,62 @@
+Name: CMS_2018_I1682495
+Year: 2018
+Summary: Jet mass in dijet events in $pp$ collisions at 13~TeV
+Experiment: CMS
+Collider: LHC
+InspireID: 1682495
+Status: VALIDATED
+Authors:
+ - cms-pag-conveners-smp@cern.ch
+ - Salvatore Rappoccio <salvatore.rappoccio@cern.ch>
+References:
+ - JHEP 11 (2018) 113
+ - DOI 10.1007/JHEP11(2018)113
+ - arXiv:1807.05974 [hep-ex]
+ - inspirehep 1682495
+ - http://cms-results.web.cern.ch/cms-results/public-results/publications/SMP-16-010/index.html
+RunInfo:
+  $pp$ QCD interactions at $\sqrt{s} = 13$ TeV. Data collected by CMS during the year 2015.
+Beams: [p+, p+]
+Energies: [13000]
+PtCuts: [200]
+NeedCrossSection: yes
+Description:
+  'Measurements of the differential jet cross section are presented as a function
+   of jet mass in dijet events, in bins of jet transverse momentum, with and without
+   a jet grooming algorithm. The data have been recorded by the CMS Collaboration
+   in proton-proton collisions at the LHC at a center-of-mass energy of 13\TeV and
+   correspond to an integrated luminosity of 2.3\fbinv.
+   The absolute cross sections show slightly different jet
+   transverse momentum spectra in data and Monte Carlo event generators
+   for the settings used. Removing this transverse momentum dependence,
+   the normalized cross section for ungroomed jets is consistent with the
+   prediction from Monte Carlo event generators for masses below 30\% of
+   the transverse momentum. The normalized cross section for groomed jets
+   is measured with higher precision than the ungroomed cross
+   section. Semi-analytical calculations of the jet mass beyond leading
+   logarithmic accuracy are compared to data, as well as predictions at
+   leading order and next-to-leading order, which include parton
+   showering and hadronization. Overall, in the normalized cross section,
+   the theoretical predictions agree with the measured cross sections
+   within the uncertainties for masses from 10 to 30\% of the jet
+   transverse momentum.'
+BibKey: Sirunyan:2018xdh
+BibTeX:
+   '@article{Sirunyan:2018xdh,
+      author         = "Sirunyan, Albert M. and others",
+      title          = "{Measurements of the differential jet cross section as a
+                        function of the jet mass in dijet events from
+                        proton-proton collisions at $ \sqrt{s}=13 $ TeV}",
+      collaboration  = "CMS",
+      journal        = "JHEP",
+      volume         = "11",
+      year           = "2018",
+      pages          = "113",
+      doi            = "10.1007/JHEP11(2018)113",
+      eprint         = "1807.05974",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CMS-SMP-16-010, CERN-EP-2018-180",
+      SLACcitation   = "%%CITATION = ARXIV:1807.05974;%%"
+}'
+

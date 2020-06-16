@@ -1,0 +1,31 @@
+Name: DM1_1981_I166964
+Year: 1981
+Summary: Cross section for $e^+e^-\to\omega\pi^+\pi^-$ at energies between 1.4 and 2.2 GeV
+Experiment: DM1
+Collider: DCI
+InspireID: 166964
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B106 (1981) 155-158, 1981 
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+  'Measurement of the cross section for $e^+e^-\to\omega\pi^+\pi^-$ at energies between 1.4 and 2.2 GeV.'
+BibKey: Cordier:1981zs
+BibTeX: '@article{Cordier:1981zs,
+      author         = "Cordier, A. and Bisello, D. and Bizot, J. C. and Buon, J.
+                        and Delcourt, B. and Mane, F.",
+      title          = "{Observation of a New Isoscalar Vector Meson in $e^+ e^-
+                        \to \omega \pi^+ \pi^-$ Annihilation at 1.65-{GeV}}",
+      journal        = "Phys. Lett.",
+      volume         = "106B",
+      year           = "1981",
+      pages          = "155-158",
+      doi            = "10.1016/0370-2693(81)91101-1",
+      reportNumber   = "LAL 81/20",
+      SLACcitation   = "%%CITATION = PHLTA,106B,155;%%"
+}'

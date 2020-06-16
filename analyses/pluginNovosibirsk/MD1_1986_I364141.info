@@ -1,0 +1,32 @@
+Name: MD1_1986_I364141
+Year: 1986
+Summary: Measurement of $R$ for energies between 7.2 and 10.34 GeV 
+Experiment: MD1
+Collider: VEPP-4
+InspireID: 364141
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Z.Phys. C70 (1996) 31-38, 1996 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: no
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$ in $e^+e^-$ collisions by MD1 for energies between 7.2 and 10.34 GeV .
+   The individual hadronic and muonic cross sections are also outputted to the yoda file
+   so that ratio $R$ can be recalcuated if runs are combined.'
+Keywords: []
+BibKey: Blinov:1993fw
+BibTeX: '@article{Blinov:1993fw,
+      author         = "Blinov, A. E. and others",
+      title          = "{The Measurement of R in e+ e- annihilation at
+                        center-of-mass energies between 7.2-GeV and 10.34-GeV}",
+      journal        = "Z. Phys.",
+      volume         = "C70",
+      year           = "1996",
+      pages          = "31-38",
+      doi            = "10.1007/s002880050077",
+      reportNumber   = "BUDKER-INP-1993-54",
+      SLACcitation   = "%%CITATION = ZEPYA,C70,31;%%"
+}'

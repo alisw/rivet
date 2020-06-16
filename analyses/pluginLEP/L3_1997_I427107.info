@@ -1,0 +1,32 @@
+Name: L3_1997_I427107
+Year: 1997
+Summary: $\eta^\prime$ and $\omega$ specta at 91 GeV
+Experiment: L3
+Collider: LEP
+InspireID: 427107
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B393 (1997) 465-476, 1997
+RunInfo:  e+ e- to hadrons at the Z pole
+NeedCrossSection: no
+Beams: [e-, e+]
+Energies: [91.2]
+Description:
+  'Measurement of the momentum distribution of the $\eta^\prime$ and $\omega$ mesons at 91.2 GeV in $e^+e^-$ collisions.'
+Keywords: []
+BibKey: Acciarri:1996tc
+BibTeX: '@article{Acciarri:1996tc,
+      author         = "Acciarri, M. and others",
+      title          = "{Measurement of inclusive omega and eta-prime production
+                        in hadronic Z decays}",
+      collaboration  = "L3",
+      journal        = "Phys. Lett.",
+      volume         = "B393",
+      year           = "1997",
+      pages          = "465-476",
+      doi            = "10.1016/S0370-2693(96)01683-8",
+      reportNumber   = "CERN-PPE-96-171",
+      SLACcitation   = "%%CITATION = PHLTA,B393,465;%%"
+}'

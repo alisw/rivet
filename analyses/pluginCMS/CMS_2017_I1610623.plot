@@ -1,0 +1,113 @@
+# BEGIN PLOT /CMS_2017_I1610623/d01-x01-y01
+Title=CMS, sqrt(s) = 13 TeV, W+jets
+XLabel=EXCLUSIVE JET MULTIPLICITY
+YLabel=$\sigma(W\rightarrow \mu \nu + N \text{ jets})$ [PB]
+# END PLOT
+
+# BEGIN PLOT /CMS_2017_I1610623/d02-x01-y01
+Title=CMS, sqrt(s) = 13 TeV, W+jets
+XLabel=INCLUSIVE JET MULTIPLICITY
+YLabel=$\sigma(W\rightarrow \mu \nu + \ge N \text{ jets})$ [PB]
+# END PLOT
+
+# BEGIN PLOT /CMS_2017_I1610623/d03-x01-y01
+Title=CMS, sqrt(s) = 13 TeV, W+jets
+XLabel=FIRST LEADING JET PT [GEV]
+YLabel=D(SIG)/D(PT) [PB/GEV]
+# END PLOT
+
+# BEGIN PLOT /CMS_2017_I1610623/d04-x01-y01
+Title=CMS, sqrt(s) = 13 TeV, W+jets
+XLabel=SECOND LEADING JET PT [GEV]
+YLabel=D(SIG)/D(PT) [PB/GEV]
+# END PLOT
+
+# BEGIN PLOT /CMS_2017_I1610623/d05-x01-y01
+Title=CMS, sqrt(s) = 13 TeV, W+jets
+XLabel=THIRD LEADING JET PT [GEV]
+YLabel=D(SIG)/D(PT) [PB/GEV]
+# END PLOT
+
+# BEGIN PLOT /CMS_2017_I1610623/d06-x01-y01
+Title=CMS, sqrt(s) = 13 TeV, W+jets
+XLabel=FOURTH LEADING JET PT [GEV]
+YLabel=D(SIG)/D(PT) [PB/GEV]
+# END PLOT
+
+# BEGIN PLOT /CMS_2017_I1610623/d07-x01-y01
+Title=CMS, sqrt(s) = 13 TeV, W+jets
+XLabel=FIRST LEADING JET ABS(YRAP)
+YLabel=D(SIG)/D(ABS(YRAP)) [PB]
+# END PLOT
+
+# BEGIN PLOT /CMS_2017_I1610623/d08-x01-y01
+Title=CMS, sqrt(s) = 13 TeV, W+jets
+XLabel=SECOND LEADING JET ABS(YRAP)
+YLabel=D(SIG)/D(ABS(YRAP)) [PB]
+# END PLOT
+
+# BEGIN PLOT /CMS_2017_I1610623/d09-x01-y01
+Title=CMS, sqrt(s) = 13 TeV, W+jets
+XLabel=THIRD LEADING JET ABS(YRAP)
+YLabel=D(SIG)/D(ABS(YRAP)) [PB]
+# END PLOT
+
+# BEGIN PLOT /CMS_2017_I1610623/d10-x01-y01
+Title=CMS, sqrt(s) = 13 TeV, W+jets
+XLabel=FOURTH LEADING JET ABS(YRAP)
+YLabel=D(SIG)/D(ABS(YRAP)) [PB]
+# END PLOT
+
+# BEGIN PLOT /CMS_2017_I1610623/d11-x01-y01
+Title=CMS, sqrt(s) = 13 TeV, W+jets
+XLabel=HT ($\ge 1$ JET) [GEV]
+YLabel=D(SIG)/D(HT) [PB/GEV]
+# END PLOT
+
+# BEGIN PLOT /CMS_2017_I1610623/d12-x01-y01
+Title=CMS, sqrt(s) = 13 TeV, W+jets
+XLabel=HT ($\ge 2$ JET) [GEV]
+YLabel=D(SIG)/D(HT) [PB/GEV]
+# END PLOT
+
+# BEGIN PLOT /CMS_2017_I1610623/d13-x01-y01
+Title=CMS, sqrt(s) = 13 TeV, W+jets
+XLabel=HT ($\ge 3$ JET) [GEV]
+YLabel=D(SIG)/D(HT) [PB/GEV]
+# END PLOT
+
+# BEGIN PLOT /CMS_2017_I1610623/d14-x01-y01
+Title=CMS, sqrt(s) = 13 TeV, W+jets
+XLabel=HT ($\ge 4$ JET) [GEV]
+YLabel=D(SIG)/D(HT) [PB/GEV]
+# END PLOT
+
+# BEGIN PLOT /CMS_2017_I1610623/d15-x01-y01
+Title=CMS, sqrt(s) = 13 TeV, W+jets
+XLabel=DELTA PHI (FIRST LEADING JET, MUON) [RAD]
+YLabel=D(SIG)/D(DELTAPHI) [PB/RAD]
+# END PLOT
+
+# BEGIN PLOT /CMS_2017_I1610623/d16-x01-y01
+Title=CMS, sqrt(s) = 13 TeV, W+jets
+XLabel=DELTA PHI (SECOND LEADING JET, MUON) [RAD]
+YLabel=D(SIG)/D(DELTAPHI) [PB/RAD]
+# END PLOT
+
+# BEGIN PLOT /CMS_2017_I1610623/d17-x01-y01
+Title=CMS, sqrt(s) = 13 TeV, W+jets
+XLabel=DELTA PHI (THIRD LEADING JET, MUON) [RAD]
+YLabel=D(SIG)/D(DELTAPHI) [PB/RAD]
+# END PLOT
+
+# BEGIN PLOT /CMS_2017_I1610623/d18-x01-y01
+Title=CMS, sqrt(s) = 13 TeV, W+jets
+XLabel=DELTA PHI (FOURTH LEADING JET, MUON) [RAD]
+YLabel=D(SIG)/D(DELTAPHI) [PB/RAD]
+# END PLOT
+
+# BEGIN PLOT /CMS_2017_I1610623/d19-x01-y01
+Title=CMS, sqrt(s) = 13 TeV, W+jets
+XLabel=DELTA R (CLOSEST JET, MUON) ($\ge 1$ JET)
+YLabel=D(SIG)/D(DELTAR) [PB]
+# END PLOT

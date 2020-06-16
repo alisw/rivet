@@ -1,0 +1,28 @@
+Name: DM1_1978_I134061
+Year: 1978
+Summary:  Cross section for $e^+e^-\to \pi^+\pi^-$ between 0.483 and 1.096 GeV
+Experiment: DM1
+Collider: ACO
+InspireID: 134061
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B76 (1978) 512-516, 1978 
+RunInfo: e+ e- to hadrons
+NeedCrossSection: yes
+Beams: [e+, e-]
+Description:
+  'Measurement of the cross section for $e^+e^-\to \pi^+\pi^-$ at energies between 0.483 and 1.096 GeV. Useful for comparing models of the pion form factor.'
+Keywords:
+BibKey: Quenzer:1978qt
+BibTeX: '@article{Quenzer:1978qt,
+      author         = "Quenzer, A. and others",
+      title          = "{Pion Form-Factor from 480-MeV to 1100-MeV}",
+      journal        = "Phys. Lett.",
+      volume         = "76B",
+      year           = "1978",
+      pages          = "512-516",
+      doi            = "10.1016/0370-2693(78)90918-8",
+      SLACcitation   = "%%CITATION = PHLTA,76B,512;%%"
+}'

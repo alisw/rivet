@@ -1,0 +1,35 @@
+Name: BESIII_2014_I1323621
+Year: 2014
+Summary: Cross section for $e^+e^-\to \omega\chi_{c0}$ at energies between 4.21 and 4.42 GeV
+Experiment: BESIII
+Collider: <Insert the collider name>
+InspireID: 1323621
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys. Rev. D 99, 091103 (2019)
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+  'Measurement of the cross section for $e^+e^-\to \omega\chi_{c0}$ at energies between 4.21 and 4.42 GeV by the BESIII collaboration.'
+Keywords: []
+BibKey: Ablikim:2014qwy
+BibTeX: '@article{Ablikim:2014qwy,
+      author         = "Ablikim, M. and others",
+      title          = "{Study of $e^+e^-\to\omega\chi_{cJ}$ at center-of-mass
+                        energies from 4.21 to 4.42 GeV}",
+      collaboration  = "BESIII",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "114",
+      year           = "2015",
+      number         = "9",
+      pages          = "092003",
+      doi            = "10.1103/PhysRevLett.114.092003",
+      eprint         = "1410.6538",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1410.6538;%%"
+}'

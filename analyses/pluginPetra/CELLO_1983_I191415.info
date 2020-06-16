@@ -1,0 +1,33 @@
+Name: CELLO_1983_I191415
+Year: 1983
+Summary: Photon and $\pi^0$ spectra in $e^+e^-$ at 14, 22 and 34 GeV
+Experiment: CELLO
+Collider: Petra
+InspireID: 191415
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Z.Phys. C20 (1983) 207, 1983
+RunInfo: e+ e- to hadrons
+NeedCrossSection: yes
+Beams: [e+, e-]
+Energies: [14,22,34]
+Description:
+  'Measurement of the $\gamma$ and $\pi^0$ energy fractions in $e^+e^-$ collisions for centre-of-mass energies of 14, 22 and 34 GeV by the CELLO experiment at Petra. Only the bin centroids are given in the paper and HEPdata so the bin widths have been infered.'
+Keywords: []
+BibKey: Behrend:1983pd
+BibTeX: '@article{Behrend:1983pd,
+      author         = "Behrend, H. J. and others",
+      title          = "{Inclusive $\gamma$ and $\pi^0$ Production in $e^+ e^-$
+                        Annihilation at 14-{GeV}, 22-{GeV}, and 34-{GeV}
+                        Center-of-mass Energy}",
+      collaboration  = "CELLO",
+      journal        = "Z. Phys.",
+      volume         = "C20",
+      year           = "1983",
+      pages          = "207",
+      doi            = "10.1007/BF01574852",
+      reportNumber   = "DESY-83-066",
+      SLACcitation   = "%%CITATION = ZEPYA,C20,207;%%"
+}'

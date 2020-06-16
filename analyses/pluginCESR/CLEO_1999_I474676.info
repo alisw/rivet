@@ -1,0 +1,35 @@
+Name: CLEO_1999_I474676
+Year: 1999
+Summary: Cross Section for $e^+e^-\to\Upsilon(2,3S)\pi^+\pi^-$ at 10.52, 10.58 GeV
+Experiment: CLEO
+Collider: CESR
+InspireID: 474676
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D59 (1999) 052003, 1999 
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+  'Measurement of the cross section for $e^+e^-\to\Upsilon(2,3S)\pi^+\pi^-$ at 10.52 and 10.58 by CLEO.'
+Keywords: []
+BibKey: Glenn:1998bd
+BibTeX: '@article{Glenn:1998bd,
+      author         = "Glenn, S. and others",
+      title          = "{Upsilon dipion transitions at energies near the
+                        upsilon(4S)}",
+      collaboration  = "CLEO",
+      journal        = "Phys. Rev.",
+      volume         = "D59",
+      year           = "1999",
+      pages          = "052003",
+      doi            = "10.1103/PhysRevD.59.052003",
+      eprint         = "hep-ex/9808008",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "SLAC-REPRINT-1998-097, CLNS-98-1576, CLEO-98-12",
+      SLACcitation   = "%%CITATION = HEP-EX/9808008;%%"
+}'

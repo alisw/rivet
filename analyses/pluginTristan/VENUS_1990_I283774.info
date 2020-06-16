@@ -1,0 +1,35 @@
+Name: VENUS_1990_I283774
+Year: 1990
+Summary: Measurement of $R$ for energies between 50 and 61.4 GeV
+Experiment: VENUS
+Collider: Tristan
+InspireID: 283774
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B234 (1990) 382-388, 1990 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: no
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$ in $e^+e^-$ collisions by VENUS for energies between 50 and 61.4 GeV.
+   The individual hadronic and muonic cross sections are also outputted to the yoda file
+   so that ratio $R$ can be recalcuated if runs are combined.'
+Keywords: []
+BibKey: Abe:1989qx
+BibTeX: '@article{Abe:1989qx,
+      author         = "Abe, K. and others",
+      title          = "{Measurement of R and Search for New Quark Flavors
+                        Decaying Into Multi - Jet Final States in $e^+ e^-$
+                        Collisions Between 54-{GeV} and 61.4-{GeV} c.m. Energies}",
+      collaboration  = "VENUS",
+      journal        = "Phys. Lett.",
+      volume         = "B234",
+      year           = "1990",
+      pages          = "382-388",
+      doi            = "10.1016/0370-2693(90)91946-9",
+      reportNumber   = "KEK-PREPRINT-89-135, HUPD-8916, KOBE-HEP-89-09, KUNS-990,
+                        OULNS-89-10, TMUP-HEL-89-31",
+      SLACcitation   = "%%CITATION = PHLTA,B234,382;%%"
+}'

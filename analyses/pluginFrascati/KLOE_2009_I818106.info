@@ -1,0 +1,32 @@
+Name: KLOE_2009_I818106
+Year: 2009
+Summary: Mass spectrum of $\eta\pi$ in $\phi\to\eta\pi^0\gamma$ decays
+Experiment: KLOE
+Collider: DAPHNE
+InspireID: 818106
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B681 (2009) 5-13
+RunInfo:   Any process producing phi mesons
+Description:
+  'Mass spectra for $\eta\pi$ in $\phi$ decays to $\eta\pi^0\gamma$
+   measured by KLOE. Useful for teting the treatment of the a_0(980) meson.'
+Keywords: []
+BibKey: Ambrosino:2009py
+BibTeX: '@article{Ambrosino:2009py,
+      author         = "Ambrosino, F. and others",
+      title          = "{Study of the a(0)(980) meson via the radiative decay
+                        $\phi \to \eta \pi_0 \gamma$ with the KLOE detector}",
+      collaboration  = "KLOE",
+      journal        = "Phys. Lett.",
+      volume         = "B681",
+      year           = "2009",
+      pages          = "5-13",
+      doi            = "10.1016/j.physletb.2009.09.022",
+      eprint         = "0904.2539",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:0904.2539;%%"
+}'
