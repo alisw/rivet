@@ -1,0 +1,27 @@
+## These variables need to exist
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+datarootdir=@datarootdir@
+
+## Try to automatically work out the YODA Python path
+YODA_PYTHONPATH="@YODA_PYTHONPATH@"
+test -n "$YODA_PYTHONPATH" || { (which yoda-config > /dev/null) && YODA_PYTHONPATH=`yoda-config --pythonpath`; }
+test -n "$YODA_PYTHONPATH" || echo "yoda-config could not be found: you may need to manually set paths to libYODA and the yoda Python package" 1>&2
+
+export PATH="$exec_prefix/bin:@YODABINPATH@:$PATH"
+export @LIBPATHVARNAME@="@libdir@:@YODALIBPATH@:@HEPMCLIBPATH@:@FASTJETLIBPATH@:@FJCONTRIBLIBPATH@:$@LIBPATHVARNAME@"
+export PYTHONPATH="@RIVET_PYTHONPATH@:$YODA_PYTHONPATH:$PYTHONPATH"
+
+texdatadir=`echo "@datadir@" | sed -e 's:/\+:/:g'`
+export TEXMFHOME="$texdatadir/Rivet/texmf:$TEXMFHOME"
+export HOMETEXMF="$texdatadir/Rivet/texmf:$HOMETEXMF"
+export TEXMFCNF="$texdatadir/Rivet/texmf/cnf:$TEXMFCNF"
+export TEXINPUTS="$texdatadir/Rivet/texmf/tex//:$TEXINPUTS"
+export LATEXINPUTS="$texdatadir/Rivet/texmf/tex//:$LATEXINPUTS"
+
+if (complete &> /dev/null); then
+    comppath="@sysconfdir@/bash_completion.d/rivet-completion"
+    test -e $comppath && source $comppath
+fi
+
+unset YODA_PYTHONPATH

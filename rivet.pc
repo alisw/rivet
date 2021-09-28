@@ -1,0 +1,13 @@
+prefix=/home/andy/heplocal
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+datarootdir=${prefix}/share
+
+Name: rivet
+Description: Rivet MC analysis library
+URL: https://rivet.hepforge.org
+Version: 3.1.4
+#Requires: yoda
+Libs: -L${exec_prefix}/lib -L/home/andy/heplocal/lib -L/home/andy/heplocal/lib -L@FASTJETCONFIGLIBADD@ -lRivet
+Cflags: -I${prefix}/include -I/home/andy/heplocal/include -I/home/andy/heplocal/include -I/home/andy/heplocal/include
