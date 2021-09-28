@@ -1,0 +1,36 @@
+Name: DELPHI_2000_I531568
+Year: 2000
+Summary: Rapidity structure of $p\bar{p}$ pairs
+Experiment: DELPHI
+Collider: LEP
+InspireID: 531568
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett.B 490 (2000) 61-70
+RunInfo: e+e- -> hadrons
+Beams: [e+, e-]
+Energies: [91.2]
+Description:
+  'Rapidity-rank structure of $p\bar{p}$ pairs, the relative occurrence of the rapidity-ordered configuration $pM\bar{p}$,
+   where $M$ is a meson, and that of adjacent $p\bar{p}$ pairs is compared as a function of the rapidity w.r.t the thrust axis.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Abreu:2000ek
+BibTeX: '@article{Abreu:2000ek,
+    author = "Abreu, P. and others",
+    collaboration = "DELPHI",
+    title = "{Rapidity-rank structure of p anti-p pairs in hadronic Z0 decays}",
+    eprint = "hep-ex/0105050",
+    archivePrefix = "arXiv",
+    reportNumber = "CERN-EP-2000-081",
+    doi = "10.1016/S0370-2693(00)00868-6",
+    journal = "Phys. Lett. B",
+    volume = "490",
+    pages = "61--70",
+    year = "2000"
+}'

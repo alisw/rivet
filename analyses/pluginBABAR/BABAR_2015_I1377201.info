@@ -1,0 +1,39 @@
+Name: BABAR_2015_I1377201
+Year: 2015
+Summary: Azimuthal asymmetries in inclusive $\pi\pi$ $KK$ and $K\pi$ pairs at 10.58 GeV
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 1377201
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D92 (2015) no.11, 111101
+RunInfo: e+e- to hadrons
+Beams: [e+, e-]
+Energies: [10.58]
+Description:
+  'Measurement of azimuthal asymmetries in inclusive $\pi\pi$ $KK$ and $K\pi$ pair production at $\sqrt{s}=10.58$ GeV by the BABAR experiment'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Aubert:2015hha
+BibTeX: '@article{Aubert:2015hha,
+      author         = "Lees, J. P. and others",
+      title          = "{Collins asymmetries in inclusive charged $KK$ and $K\pi$
+                        pairs produced in $e^+e^-$ annihilation}",
+      collaboration  = "BaBar",
+      journal        = "Phys. Rev.",
+      volume         = "D92",
+      year           = "2015",
+      number         = "11",
+      pages          = "111101",
+      doi            = "10.1103/PhysRevD.92.111101",
+      eprint         = "1506.05864",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "SLAC-PUB-16311",
+      SLACcitation   = "%%CITATION = ARXIV:1506.05864;%%"
+}'

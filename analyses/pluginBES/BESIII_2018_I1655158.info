@@ -1,0 +1,34 @@
+Name: BESIII_2018_I1655158
+Year: 2018
+Summary: $D^0\to \pi^- \mu^+\nu_\mu$ and $D^+\to \pi^0 \mu^+\nu_\mu$ $q^2$ spectrum
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1655158
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 121 (2018) 171803
+RunInfo: Any process producing D0 and D+
+Description:
+  'Measurement of the $q^2$ spectrum in the decays by $D^0\to \pi^- \mu^+\nu_\mu$ and $D^+\to \pi^0 \mu^+\nu_\mu$ BES-III.'
+ValidationInfo:
+  'Herwig 7 events using EvtGen for the decays.'
+BibKey: Ablikim:2018frk
+BibTeX: '@article{Ablikim:2018frk,
+      author         = "Ablikim, M. and others",
+      title          = "{Measurement of the branching fraction for the
+                        semi-leptonic decay $D^{0(+)}\to \pi^{-(0)}\mu^+\nu_\mu$
+                        and test of lepton universality}",
+      collaboration  = "BESIII",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "121",
+      year           = "2018",
+      number         = "17",
+      pages          = "171803",
+      doi            = "10.1103/PhysRevLett.121.171803",
+      eprint         = "1802.05492",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1802.05492;%%"
+}'

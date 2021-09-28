@@ -1,0 +1,41 @@
+Name: CLEO_1995_I392704
+Year: 1995
+Summary: Decay asymmetries in $\Lambda^+_c\to\Lambda^0\pi^+$ and $\Lambda^+_c\to\Sigma^+\pi^0$ 
+Experiment: CLEO
+Collider: CESR
+InspireID: 392704
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Any process producing Lambda_c baryons
+RunInfo: Phys.Lett. B350 (1995) 256-262
+Description:
+  'Measurement of the decay asymmetries in $\Lambda^+_c\to\Lambda^0\pi^+$ and $\Lambda^+_c\to\Sigma^+\pi^0$ by the CLEO experiment.
+ The asymmetry parameter is extracted by fitting to normalised angular distribution. N.B. the product of the asymmetry parameters for
+ the $\Lambda_c$ and daughter baryon is implemented as this is what is measured, rather than the extracted
+ parameter for the $\Lambda_c$ which relies on other measurements of the parameter for the daughter baryon.
+ This analysis is useful for testing spin correlations in hadron decays.'
+ValidationInfo:
+  'Herwig 7 particle gun'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Bishai:1995gp
+BibTeX: '@article{Bishai:1995gp,
+      author         = "Bishai, M. and others",
+      title          = "{Measurement of the decay asymmetry parameters in
+                        Lambda(c)+ ---&gt; Lambda pi+ and Lambda(c)+ ---&gt; Sigma+
+                        pi0}",
+      collaboration  = "CLEO",
+      journal        = "Phys. Lett.",
+      volume         = "B350",
+      year           = "1995",
+      pages          = "256-262",
+      doi            = "10.1016/0370-2693(95)00280-X",
+      eprint         = "hep-ex/9502004",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CLNS-95-1319, CLEO-95-1",
+      SLACcitation   = "%%CITATION = HEP-EX/9502004;%%"
+}'

@@ -1,0 +1,60 @@
+Name: ATLAS_2017_I1625109
+Year: 2017
+Summary: Measurement of $ZZ -> 4\ell$ production at 13 TeV
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1625109
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Stefan Richter <stefan.richter@cern.ch>
+References:
+ - Phys.Rev. D97 (2018) no.3, 032005
+ - doi:10.1103/PhysRevD.97.032005
+ - arXiv:1709.07703 [hep-ex]
+Keywords:
+ - zz
+ - 2boson
+ - diboson
+RunInfo:
+  pp -> Z(->ll)Z(->ll) + jets at 13 TeV
+Luminosity_fb: 36.1
+Beams: [p+, p+]
+Energies: [13000]
+PtCuts: [20, 15, 10]
+Description:
+  'Measurements of $ZZ$ production in the $\ell^+\ell^-\ell^{\prime +}\ell^{\prime -}$-channel in proton--proton collisions at 13 TeV
+  center-of-mass energy at the Large Hadron Collider are presented. The data correspond to 36.1 fb${}^{-1}$ of collisions
+  collected by the ATLAS experiment in 2015 and 2016. Here $\ell$ and $\ell^\prime$ stand for electrons or muons. Integrated and
+  differential $ZZ\to \ell^+\ell^-\ell^{\prime +}\ell^{\prime -}$-cross sections with $Z\to\ell^+\ell^-$-candidate masses in the range
+  of 66 GeV to 116 GeV are measured in a fiducial phase space corresponding to the detector acceptance and corrected for detector
+  effects. The differential cross sections are presented in bins of twenty observables, including several that describe the jet
+  activity. The integrated cross section is also extrapolated to a total phase space and to all standard model decays of $Z$ bosons
+  with mass between 66 GeV and 116 GeV, resulting in a value of 17.3$\pm$0.9[$\pm$0.6(stat)$\pm$0.5(syst)$\pm$0.6(lumi)] pb. The
+  measurements are found to be in good agreement with the standard model. A search for neutral triple gauge couplings is performed
+  using the transverse momentum distribution of the leading $Z$ boson candidate. No evidence for such couplings is found and exclusion
+  limits are set on their parameters.'
+BibKey: Aaboud:2017rwm
+BibTeX: '@article{Aaboud:2017rwm,
+      author         = "Aaboud, Morad and others",
+      title          = "{$ZZ \to \ell^{+}\ell^{-}\ell^{\prime +}\ell^{\prime -}$
+                        cross-section measurements and search for anomalous triple
+                        gauge couplings in 13 TeV $pp$ collisions with the ATLAS
+                        detector}",
+      collaboration  = "ATLAS",
+      journal        = "Phys. Rev.",
+      volume         = "D97",
+      year           = "2018",
+      number         = "3",
+      pages          = "032005",
+      doi            = "10.1103/PhysRevD.97.032005",
+      eprint         = "1709.07703",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-EP-2017-163",
+      SLACcitation   = "%%CITATION = ARXIV:1709.07703;%%"
+}'
+
+ReleaseTests:
+ - $A pp-13000-llll
+

@@ -1,0 +1,47 @@
+Name: CMS_2019_I1753680
+Year: 2019
+Summary: Measurements of differential Z boson production cross sections in proton-proton collisions at 13 TeV
+Experiment: CMS
+Collider: LHC
+InspireID: 1753680
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - cms-pag-conveners-smp@cern.ch
+ - Jay Lawhorn <jay.mathew.lawhorn@cern.ch>
+ - Markus Seidel <markus.seidel@cern.ch>
+References:
+  - arXiv:1909.04133
+  - CMS-SMP-17-010
+  - JHEP 12 (2019) 061
+RunInfo: pp to Z interactions at $\sqrt{s} = 13$ TeV. Data collected by CMS during the year 2016.
+NeedCrossSection: yes
+Beams: [p+, p+]
+Energies: [13000]
+Options:
+ - LMODE=EL,MU,EMU
+Description:
+  'Measurements are presented of the differential cross sections for Z bosons produced in proton-proton collisions at $\sqrt{s} = 13~\TeV$ and decaying to muons and electrons. The data analyzed were collected in 2016 with the CMS detector at the LHC and correspond to an integrated luminosity of $35.9/fb$. The measured fiducial inclusive product of cross section and branching fraction agrees with
+  next-to-next-to-leading order quantum chromodynamics calculations. Differential cross sections of the transverse
+  momentum \pt, the optimized angular variable $\phi^{*}_{\eta}$, and the rapidity of lepton pairs are
+  measured. The data are corrected for detector effects and compared to theoretical predictions using fixed order, resummed, and parton shower calculations. The uncertainties of the measured normalized cross sections are smaller than 0.5% for $\phi^{*}_{\eta} < 0.5$ and for $p_{T}^{Z} < 50~\GeV$.'
+BibKey: Sirunyan:2019bzr
+BibTeX: '@article{Sirunyan:2019bzr,
+    author = "Sirunyan, Albert M and others",
+    collaboration = "CMS",
+    title = "{Measurements of differential Z boson production cross sections in proton-proton collisions at $ \sqrt{s} $ = 13 TeV}",
+    eprint = "1909.04133",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CMS-SMP-17-010, CERN-EP-2019-175",
+    doi = "10.1007/JHEP12(2019)061",
+    journal = "JHEP",
+    volume = "12",
+    pages = "061",
+    year = "2019"
+}'
+ReleaseTests:
+ - $A LHC-13-Z-e
+ - $A-2 LHC-13-Z-el-jets
+ - $A-3 LHC-13-Z-mu-jets
+ - $A-4 LHC-13-Z-mu

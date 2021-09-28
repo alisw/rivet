@@ -1,0 +1,35 @@
+Name: CLEOII_1996_I415409
+Year: 1996
+Summary:  Hadronic Mass in $\tau^-\to K^-\eta\nu_\tau$
+Experiment: CLEOII
+Collider: CESR
+InspireID: 415409
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 76 (1996) 4119-4123
+RunInfo: 
+  Tau production, can be any process but original data was in
+  $e^+ e^-$ at the $\Upsilon(4S)$ resonance
+Description:
+  'Measurement of the invariant mass spectrum of the $K^-\eta$ system in $\tau\to K^-\eta\nu_\tau$ measured by CLEO at CESR.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Bartelt:1996iv
+BibTeX: '@article{Bartelt:1996iv,
+      author         = "Bartelt, John E. and others",
+      title          = "{First observation of the decay tau- ---&gt; K- eta
+                        tau-neutrino}",
+      collaboration  = "CLEO",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "76",
+      year           = "1996",
+      pages          = "4119-4123",
+      doi            = "10.1103/PhysRevLett.76.4119",
+      reportNumber   = "CLNS-96-1395, CLEO-96-5, SLAC-PUB-9940",
+      SLACcitation   = "%%CITATION = PRLTA,76,4119;%%"
+}'

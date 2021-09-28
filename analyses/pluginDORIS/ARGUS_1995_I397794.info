@@ -1,0 +1,34 @@
+Name: ARGUS_1995_I397794
+Year: 1995
+Summary: Spectrum for $D_{s2}^+$ production at 10.58 GeV
+Experiment: ARGUS
+Collider: <Insert the collider name>
+InspireID: 397794
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Z.Phys. C69 (1996) 405-408
+RunInfo: e+e- to hadrons 
+Beams: [e+, e-]
+Energies: [10.58]
+Description:
+  'Spectrum for $D_{s2}^+$ production at 10.58 GeV measured by ARGUS.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Albrecht:1995qx
+BibTeX: '@article{Albrecht:1995qx,
+      author         = "Albrecht, H. and others",
+      title          = "{Measurement of the decay D(s2)*+ ---&gt; D0 K+}",
+      collaboration  = "ARGUS",
+      journal        = "Z. Phys.",
+      volume         = "C69",
+      year           = "1996",
+      pages          = "405-408",
+      doi            = "10.1007/s002880050040",
+      reportNumber   = "DESY-95-129",
+      SLACcitation   = "%%CITATION = ZEPYA,C69,405;%%"
+}'

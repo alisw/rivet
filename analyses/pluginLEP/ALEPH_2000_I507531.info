@@ -1,0 +1,33 @@
+Name: ALEPH_2000_I507531
+Year: 2000
+Summary: Measurement of $\pi^0$, $\eta$, $\eta^\prime$, $K^0_S$ and $\Lambda^0$ spectra in two and three jet events
+Experiment: ALEPH
+Collider: LEP
+InspireID: 507531
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Eur.Phys.J. C16 (2000) 613
+RunInfo: e+e- -> hadrons
+NeedCrossSection: no
+Beams: [e-, e+]
+Energies: 91.2
+Description:
+  'Measurement of $\pi^0$, $\eta$, $\eta^\prime$, $K^0_S$ and $\Lambda^0$ spectra in two and three jet events. In addition to the normal inclusive spectra the spectra in individual jets are measured for three jet events.'
+Keywords: []
+BibKey: Barate:1999gb
+BibTeX: '@article{Barate:1999gb,
+      author         = "Barate, R. and others",
+      title          = "{Inclusive production of pi0, eta, eta-prime (958), K0(S)
+                        and lambda in two jet and three jet events from hadronic Z
+                        decays}",
+      collaboration  = "ALEPH",
+      journal        = "Eur. Phys. J.",
+      volume         = "C16",
+      year           = "2000",
+      pages          = "613",
+      doi            = "10.1007/s100520000443",
+      reportNumber   = "CERN-EP-99-105",
+      SLACcitation   = "%%CITATION = EPHJA,C16,613;%%"
+}'

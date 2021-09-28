@@ -1,0 +1,35 @@
+Name: HRS_1988_I250824
+Year: 1988
+Summary: $\eta$ spectrum in $e^+e^-$ collisions at 29 GeV
+Experiment: HRS
+Collider: PEP
+InspireID: 250824
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+- Phys.Lett. B205 (1988) 111-114
+RunInfo: 
+  Hadronic e+e- events at $\sqrt{s} = 29.$ GeV
+NumEvents: 1000000
+Beams: [e+, e-]
+Energies: [29.]
+PtCuts: [0]
+Description:
+  $\eta$ meson momentum spectrum measured at $\sqrt{s} = 29.$ GeV using the HRS detector at
+  PEP. The bin widths are not included in either the paper or HEPdata and have therefore been infered.
+Keywords: []
+BibKey: Abachi:1987qd
+BibTeX: '@article{Abachi:1987qd,
+      author         = "Abachi, S. and others",
+      title          = "{Production of $\eta$ Mesons in $e^+ e^-$ Annihilations
+                        at $\sqrt{s}=29$-{GeV}}",
+      collaboration  = "HRS",
+      journal        = "Phys. Lett.",
+      volume         = "B205",
+      year           = "1988",
+      pages          = "111-114",
+      doi            = "10.1016/0370-2693(88)90408-X",
+      reportNumber   = "ANL-HEP-PR-87-106, IUHEE-87-12, UM-HE-87-27, PU-87-608",
+      SLACcitation   = "%%CITATION = PHLTA,B205,111;%%"
+}'

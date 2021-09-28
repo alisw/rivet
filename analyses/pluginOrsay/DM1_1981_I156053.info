@@ -1,0 +1,32 @@
+Name: DM1_1981_I156053
+Year: 1981
+Summary: Cross section for $e^+e^-\to K^0_SK^0_L$ between 1.4 and 2.18 GeV
+Experiment: DM1
+Collider:  DCI
+InspireID: 156053
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B99 (1981) 261-264, 1981 
+RunInfo: e+ e- to hadrons
+NeedCrossSection: yes
+Beams: [e+, e-]
+Description:
+  'Measurement of the cross section for $e^+e^-\to K^+K^-$ at energies between 1.35 and 2.4 GeV'
+Keywords:
+BibKey: Mane:1980ep
+BibTeX: '@article{Mane:1980ep,
+      author         = "Mane, F. and Bisello, D. and Bizot, J. C. and Buon, J.
+                        and Cordier, A. and Delcourt, B.",
+      title          = "{Study of the Reaction $e^+ e^- \to K^0_S K^0_L$ in the
+                        Total Energy Range 1.4-{GeV} to 2.18-{GeV} and
+                        Interpretation of the $K^+$ and $K^0$ Form-factors}",
+      journal        = "Phys. Lett.",
+      volume         = "99B",
+      year           = "1981",
+      pages          = "261-264",
+      doi            = "10.1016/0370-2693(81)91122-9",
+      reportNumber   = "LAL/80-37",
+      SLACcitation   = "%%CITATION = PHLTA,99B,261;%%"
+}'

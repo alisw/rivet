@@ -1,0 +1,54 @@
+Name: ATLAS_2017_I1626105
+Year: 2017
+Summary: Dileptonic $t\bar{t}$ at 8 TeV
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1626105
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Judith Katzy <judith.katzy@cern.ch>
+ - Christian Gutschow <chris.g@cern.ch>
+References:
+ - Eur.Phys.J. C77 (2017) no.11, 804
+ - doi:10.1140/epjc/s10052-017-5349-9
+ - arXiv:1709.09407 [hep-ex]
+Keywords:
+ - TTBAR
+ - DILEPTON
+RunInfo:
+  dileptonic top-quark pair production
+Luminosity_fb: 20.2
+Beams: [p+, p+]
+Energies: [8000]
+PtCuts: [25,15]
+NeedCrossSection: True
+Description:
+  'This paper presents single lepton and dilepton kinematic distributions measured in dileptonic $t\bar{t}$ events produced in
+  20.2 fb${}^{-1}$ of $\sqrt{s} = 8$ TeV $pp$ collisions recorded by the ATLAS experiment at the LHC. Both absolute and normalised
+  differential cross-sections are measured, using events with an opposite-charge $e\mu$ pair and one or two $b$-tagged jets.
+  The cross-sections are measured in a fiducial region corresponding to the detector acceptance for leptons, and are compared
+  to the predictions from a variety of Monte Carlo event generators, as well as fixed-order QCD calculations, exploring the
+  sensitivity of the cross-sections to the gluon parton distribution function. Some of the distributions are also sensitive to
+  the top quark pole mass, a combined fit of NLO fixed-order predictions to all the measured distributions yields a top quark
+  mass value of $m_t^\text{pole} = 173.2 \pm 0.9 \pm 0.8 \pm 1.2$ GeV, where the three uncertainties arise from data statistics,
+  experimental systematics, and theoretical sources.'
+BibKey: Aaboud:2017ujq
+BibTeX: '@article{Aaboud:2017ujq,
+      author         = "Aaboud, M. and others",
+      title          = "{Measurement of lepton differential distributions and the
+                        top quark mass in $t\bar{t}$ production in $pp$ collisions
+                        at $\sqrt{s}=8$ TeV with the ATLAS detector}",
+      collaboration  = "ATLAS",
+      journal        = "Eur. Phys. J.",
+      volume         = "C77",
+      year           = "2017",
+      number         = "11",
+      pages          = "804",
+      doi            = "10.1140/epjc/s10052-017-5349-9",
+      eprint         = "1709.09407",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-EP-2017-200",
+      SLACcitation   = "%%CITATION = ARXIV:1709.09407;%%"
+}'

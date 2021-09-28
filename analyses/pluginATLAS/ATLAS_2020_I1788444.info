@@ -1,0 +1,57 @@
+Name: ATLAS_2020_I1788444
+Year: 2020
+Summary: Differential cross-sections for Z + b-jets
+Experiment: ATLAS
+Collider: LHC
+Status: VALIDATED
+Reentrant: true
+InspireID: 1788444
+Authors:
+ - Federico Sforza <fsforza@cern.ch>
+ - Deepak Kar <deepak.kar@cern.ch>
+References:
+ - arXiv:arXiv:2003.11960 [hep-ex]
+Keywords:
+  - Z-boson
+  - b-jets
+RunInfo:
+  Z+jets at 13 TeV
+Luminosity_fb: 35.6
+NeedCrossSection: yes
+Beams: [p+, p+]
+Energies: [13000]
+PtCuts: [20]
+Options:
+ - LMODE=EL,MU
+Description:
+    'This paper presents a measurement of the production cross-section of a $Z$ boson in association with $b$-jets, 
+    in proton-proton collisions at $\sqrt{s} = 13$ TeV with the ATLAS experiment at the Large Hadron Collider 
+    using data corresponding to an integrated luminosity of 35.6 fb$^{-1}$. 
+    Inclusive and differential cross-sections are measured for events containing a $Z$ boson decaying 
+    into electrons or muons and produced in association with at least one or at 
+    least two $b$-jets with transverse momentum $p_T> 20$ GeV and rapidity $|y|<2.5$. 
+    Predictions from several Monte Carlo generators based on leading-order (LO) or 
+    next-to-leading-order (NLO) matrix elements interfaced with a parton-shower simulation 
+    and testing different flavour schemes for the choice of initial-state partons are compared 
+    with measured cross-sections. The 5-flavour number scheme predictions at NLO accuracy 
+    agree better with data than 4-flavour number scheme ones. The 4-flavour number scheme 
+    predictions underestimate data in events with at least one $b$-jet.
+    N.B.: Data correspond to average of electron and muon channel. 
+    Use LMODE=EL,MU to run on individual channels.'
+BibKey: Aad:2020gfi
+BibTeX: '@article{Aad:2020gfi,
+    author = "Aad, Georges and others",
+    collaboration = "ATLAS",
+    title = "{Measurements of the production cross-section for a $Z$ boson in association with $b$-jets in proton-proton collisions at $\sqrt{s} = 13$ TeV with the ATLAS detector}",
+    eprint = "2003.11960",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CERN-EP-2020-022",
+    doi = "10.1007/JHEP07(2020)044",
+    journal = "JHEP",
+    volume = "07",
+    pages = "044",
+    year = "2020"
+}'
+ReleaseTests:
+ - $A pp-13000-mumujj

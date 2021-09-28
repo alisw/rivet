@@ -1,0 +1,116 @@
+#! /usr/bin/env python
+
+"""\
+Merge together YODA files produced by Rivet
+
+Examples:
+
+  %(prog)s [options] <yodafile> [<yodafile2> ...]
+
+ENVIRONMENT:
+ * RIVET_ANALYSIS_PATH: list of paths to be searched for analysis plugin libraries
+ * RIVET_DATA_PATH: list of paths to be searched for data files
+"""
+
+import os, sys
+
+## Load the rivet module
+try:
+    import rivet
+except:
+    ## If rivet loading failed, try to bootstrap the Python path!
+    try:
+        # TODO: Is this a good idea? Maybe just notify the user that their PYTHONPATH is wrong?
+        import commands
+        modname = sys.modules[__name__].__file__
+        binpath = os.path.dirname(modname)
+        rivetconfigpath = os.path.join(binpath, "rivet-config")
+        rivetpypath = commands.getoutput(rivetconfigpath + " --pythonpath")
+        sys.path.append(rivetpypath)
+        import rivet
+    except:
+        sys.stderr.write("The rivet Python module could not be loaded: is your PYTHONPATH set correctly?\n")
+        sys.exit(5)
+
+rivet.util.check_python_version()
+rivet.util.set_process_name("rivet-merge")
+
+import time, datetime, logging, signal
+
+## Parse command line options
+import argparse
+parser = argparse.ArgumentParser(description=__doc__)
+
+extragroup = parser.add_argument_group("Run settings")
+extragroup.add_argument("YODAFILES", nargs="+", help="data files to merge")
+extragroup.add_argument("-o", "--output-file", dest="OUTPUTFILE",
+                        default="Rivet.yoda", help="specify the output histo file path (default = %(default)s)")
+extragroup.add_argument("-e", "--equiv", dest="EQUIV", action="store_true", default=False,
+                        help="assume that the yoda files are equivalent but statistically independent (default= assume that different files contains different processes)")
+# TODO: could the merge- and add-options settings be specified in the info file in a MergeSettings heading?
+extragroup.add_argument("-O", "--merge-option", dest="MERGEOPTIONS", action="append",
+                        default=[], help="specify an analysis option name where different options should be merged into the default analysis.")
+extragroup.add_argument("-a", "--add-option", dest="ADDOPTIONS", action="append", default=[], help="specify an analysis option in the format ANALYSIS:NAME=VALUE that should be added in the merging.")
+extragroup.add_argument("--pwd", dest="ANALYSIS_PATH_PWD", action="store_true", default=False,
+                      help="append the current directory (pwd) to the analysis/data search paths (cf. $RIVET_ANALYSIS_PATH).")
+extragroup.add_argument("-p", "--preload-file", dest="PRELOADFILE",
+                        default=None, help="specify and old yoda file to initialize or load calibrations, etc. (default = %(default)s)")
+
+verbgroup = parser.add_argument_group("Verbosity control")
+parser.add_argument("-l", dest="NATIVE_LOG_STRS", action="append",
+                    default=[], help="set a log level in the Rivet library")
+verbgroup.add_argument("-v", "--verbose", action="store_const", const=logging.DEBUG, dest="LOGLEVEL",
+                       default=logging.INFO, help="print debug (very verbose) messages")
+verbgroup.add_argument("-q", "--quiet", action="store_const", const=logging.WARNING, dest="LOGLEVEL",
+                       default=logging.INFO, help="be very quiet")
+
+args = parser.parse_args()
+
+
+## Configure logging
+logging.basicConfig(level=args.LOGLEVEL, format="%(message)s")
+for l in args.NATIVE_LOG_STRS:
+    name, level = None, None
+    try:
+        name, level = l.split("=")
+    except:
+        name = "Rivet"
+        level = l
+    ## Fix name
+    if name != "Rivet" and not name.startswith("Rivet."):
+        name = "Rivet." + name
+    try:
+        ## Get right error type
+        level = rivet.LEVELS.get(level.upper(), None)
+        logging.debug("Setting log level: %s %d" % (name, level))
+        rivet.setLogLevel(name, level)
+    except:
+        logging.warning("Couldn't process logging string '%s'" % l)
+
+
+## Set up analysis handler
+try:
+    ah = rivet.AnalysisHandler("Merging")
+    if args.ANALYSIS_PATH_PWD:
+        rivet.addAnalysisLibPath(os.path.abspath("."))
+        rivet.addAnalysisDataPath(os.path.abspath("."))
+    if args.PRELOADFILE is not None:
+        ah.readData(args.PRELOADFILE)
+
+    ah.mergeYodas(args.YODAFILES, args.MERGEOPTIONS, args.ADDOPTIONS, args.EQUIV)
+    ah.writeData(args.OUTPUTFILE)
+
+except:
+    # Python3 and Cython3 might require explicit byte strings
+    ah = rivet.AnalysisHandler(b"Merging")
+    if args.ANALYSIS_PATH_PWD:
+        rivet.addAnalysisLibPath(os.path.abspath("."))
+        rivet.addAnalysisDataPath(os.path.abspath("."))
+    yfiles = [y.encode() for y in args.YODAFILES]
+    moptions = [m.encode() for m in args.MERGEOPTIONS]
+    aoptions = [a.encode() for a in args.ADDOPTIONS]
+    if args.PRELOADFILE is not None:
+        ah.readData([p.encode() for p in args.PRELOADFILE])
+
+    ah.mergeYodas(yfiles, moptions, aoptions, args.EQUIV)
+    ah.writeData(args.OUTPUTFILE)

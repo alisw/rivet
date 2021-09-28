@@ -1,0 +1,35 @@
+Name: CLEO_2005_I1649168
+Year: 2005
+Summary: Spectrum of $D^\pm_s$ mesons in $\Upsilon(4S)$ and $\Upsilon(5S)$ decays
+Experiment: CLEO
+Collider: CESR
+InspireID: 1649168
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 95 (2005) 261801
+RunInfo: Any process producing $\Upsilon(4S)$ or $\Upsilon(5S)$, original $e^+e^-$ 
+NeedCrossSection: no
+Description:
+  'Measurement of the $D^\pm_s$ meson spectrum in  $\Upsilon(4S)$ and $\Upsilon(5S)$ decays by CLEO, only the
+   spectra are included not the conclusions on $B_s$ production drawn from them.'
+Keywords: []
+BibKey: Artuso:2005mrj
+BibTeX: '@article{Artuso:2005mrj,
+      author         = "Artuso, M. and others",
+      title          = "{First Evidence and Measurement of $B_s^{(*)}
+                        barB_s^{(*)}$ Production at the $\Upsilon(5S)$}",
+      booktitle      = "{Phys.Rev.Lett.95:261801,2005}",
+      collaboration  = "CLEO",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "95",
+      year           = "2005",
+      pages          = "261801",
+      doi            = "10.1103/PhysRevLett.95.261801",
+      eprint         = "hep-ex/0508047",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CLNS-05-1930, CLEO-05-18",
+      SLACcitation   = "%%CITATION = HEP-EX/0508047;%%"
+}'

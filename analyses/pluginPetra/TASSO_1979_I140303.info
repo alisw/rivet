@@ -1,0 +1,33 @@
+Name: TASSO_1979_I140303
+Year: 1979
+Summary: Measurement of $R$ for energies between 13 and 17 GeV
+Experiment: TASSO
+Collider: PETRA 
+InspireID: 140303
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B83 (1979) 261-266, 1979 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: yes
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$ in $e^+e^-$ collisions for energies between 13 and 17 GeV.
+   The individual hadronic and muonic cross sections are also outputted to the yoda file
+   so that ratio $R$ can be recalcuated if runs are combined.'
+Keywords: []
+BibKey: Brandelik:1979cj
+BibTeX: '@article{Brandelik:1979cj,
+      author         = "Brandelik, R. and others",
+      title          = "{Properties of Hadron Final States in e+ e- Annihilation
+                        at 13-GeV and 17-GeV Center-Of-Mass Energies}",
+      collaboration  = "TASSO",
+      journal        = "Phys. Lett.",
+      volume         = "83B",
+      year           = "1979",
+      pages          = "261-266",
+      doi            = "10.1016/0370-2693(79)90699-3",
+      reportNumber   = "DESY-79-14",
+      SLACcitation   = "%%CITATION = PHLTA,83B,261;%%"
+}'

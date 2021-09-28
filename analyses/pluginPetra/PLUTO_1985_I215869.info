@@ -1,0 +1,32 @@
+Name: PLUTO_1985_I215869
+Year: 1985
+Summary:  Energy-Energy correlation at 34.6 GeV
+Experiment: PLUTO
+Collider: Petra
+InspireID: 215869
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Z.Phys. C28 (1985) 365, 1985 
+RunInfo: e+e- to hadrons at 34.6 GeV CMS
+NeedCrossSection: no
+Beams: [e+, e-]
+Energies: [34.6]
+Description:
+  'Measurement of the energy-energy correlation at 34.6 GeV'
+Keywords: []
+BibKey: Berger:1985xq
+BibTeX: '@article{Berger:1985xq,
+      author         = "Berger, Christoph and others",
+      title          = "{A Study of Energy-energy Correlations in $e^+ e^-$
+                        Annihilations at $\sqrt{s}=34$.6-{GeV}}",
+      collaboration  = "PLUTO",
+      journal        = "Z. Phys.",
+      volume         = "C28",
+      year           = "1985",
+      pages          = "365",
+      doi            = "10.1007/BF01413599",
+      reportNumber   = "DESY-85-039",
+      SLACcitation   = "%%CITATION = ZEPYA,C28,365;%%"
+}'

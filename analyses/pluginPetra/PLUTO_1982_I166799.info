@@ -1,0 +1,33 @@
+Name: PLUTO_1982_I166799
+Year: 1982
+Summary: Measurement of $R$ between 3.6 and 30 GeV and hadronic cross section from 9.3 to 9.48 GeV
+Experiment: PLUTO
+Collider: PETRA
+InspireID: 166799
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rept. 83 (1982) 151-280, 1982 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: yes
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$ in $e^+e^-$ collisions for energies between 3.6 and 30 GeV.
+   The hadronic cross section is also measured in the $\Upsilon$ region, 9.3 to 9.48 GeV.
+   The individual hadronic and muonic cross sections are also outputted to the yoda file
+   so that ratio $R$ can be recalcuated if runs are combined.'
+Keywords: []
+BibKey: Criegee:1981qx
+BibTeX: '@article{Criegee:1981qx,
+      author         = "Criegee, Lutz and Knies, Gerhard",
+      title          = "{Review of $e^+ e^-$ Experiments With Pluto From 3-{GeV}
+                        to 31-{GeV}}",
+      journal        = "Phys. Rept.",
+      volume         = "83",
+      year           = "1982",
+      pages          = "151-280",
+      doi            = "10.1016/0370-1573(82)90012-6",
+      reportNumber   = "DESY-81-044",
+      SLACcitation   = "%%CITATION = PRPLC,83,151;%%"
+}'

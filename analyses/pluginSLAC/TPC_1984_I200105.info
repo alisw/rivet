@@ -1,0 +1,32 @@
+Name: TPC_1984_I200105
+Year: 1984
+Summary: $\phi$ spectrum at 29 GeV
+Experiment: TPC
+Collider: PEP
+InspireID: 200105
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 52 (1984) 2201, 1984 
+RunInfo: e+e- to hadrons at 29 GeV
+NeedCrossSection: no
+Beams: [e+, e-]
+Energies: [29]
+Description:
+  'Measurement of the  $\phi$ spectra at 29 GeV by the TPC experiment.'
+Keywords: []
+BibKey: Aihara:1984pw
+BibTeX: '@article{Aihara:1984pw,
+      author         = "Aihara, H. and others",
+      title          = "{Phi meson production in $e^+e^-$ annihilations at
+                        29-GeV}",
+      collaboration  = "TPC/Two Gamma",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "52",
+      year           = "1984",
+      pages          = "2201",
+      doi            = "10.1103/PhysRevLett.52.2201",
+      reportNumber   = "LBL-17616, UT-HE-84/05",
+      SLACcitation   = "%%CITATION = PRLTA,52,2201;%%"
+}'

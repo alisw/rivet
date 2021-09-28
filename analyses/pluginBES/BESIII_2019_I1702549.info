@@ -1,0 +1,34 @@
+Name: BESIII_2019_I1702549
+Year: 2019
+Summary:  $D_s^+\to K^0 e^+\nu_e$ $q^2$ spectrum
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1702549
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 122 (2019) 6, 061801
+RunInfo: Any process producing D_s+
+Description:
+  'Measurement of the $q^2$ spectrum in the decay $D_s^+\to K^0 e^+\nu_e$ BES-III.'
+ValidationInfo:
+  'Herwig 7 events using EvtGen for the decays.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Ablikim:2018upe
+BibTeX: '@article{Ablikim:2018upe,
+    author = "Ablikim, M. and others",
+    collaboration = "BESIII",
+    title = "{First Measurement of the Form Factors in $D^+_{s}\rightarrow K^0 e^+\nu_e$ and $D^+_{s}\rightarrow K^{*0} e^+\nu_e$ Decays}",
+    eprint = "1811.02911",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevLett.122.061801",
+    journal = "Phys. Rev. Lett.",
+    volume = "122",
+    number = "6",
+    pages = "061801",
+    year = "2019"
+}'

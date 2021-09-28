@@ -1,0 +1,56 @@
+Name: LHCB_2016_I1490663
+Year: 2017
+Summary: Charm hadron differential cross-sections in $p_\perp$ and rapidity at $\sqrt{s} = 5$ TeV
+Experiment: LHCB
+Collider: LHC 5TeV
+InspireID: 1396331
+Status: VALIDATED
+Authors:
+ - Dominik Muller <dominik.muller@cern.ch>
+ - Patrick Spradlin <patrick.spradlin@cern.ch>
+References:
+ - JHEP 1706 (2017) 147
+ - doi JHEP 1706 (2017) 147
+ - arXiv 1610.02230 [hep-ex]
+ - CERN-EP-2016-244, LHCB-PAPER-2016-042
+RunInfo: Minimum bias QCD events, proton--proton interactions at $\sqrt{s} = 5$ TeV.
+NumEvents: 1000000
+Beams:  [p+, p+]
+Energies: [5000]
+NeedCrossSection: True
+Description:
+  'Measurements of differential production cross-sections with respect to
+   transverse momentum, $d \sigma(H_c + \mathrm{c.c.}) / d p_T$, for charm
+   hadron species $H_c \in \{ D^0, D^+, D^\ast(2010)^+, D_s^+ \}$
+   in proton--proton collisions at center-of-mass energy
+   $\sqrt{s}= 5$ TeV.
+
+   The differential cross-sections are measured in bins of hadron transverse
+   momentum ($p_T$) and rapidity ($y$) with respect to the beam axis in the
+   region $0 < p_T < 10$ GeV/$c$ and $2.0 < y < 4.5$, where $p_T$ and $y$ are
+   measured in the proton--proton CM frame.  In this analysis code, it is
+   assumed that the event coordinate system is in the proton--proton CM frame
+   with the $z$-axis corresponding to the proton--proton collision axis (as
+   usual).
+
+   Contributions of charm hadrons from the decays of $b$-hadrons and other
+   particles with comparably large mean lifetimes have been removed in the
+   measurement. In this analysis code, this is implemented by counting only
+   charm hadrons that do not have an ancestor that contains a $b$ quark.'
+BibKey: Aaij:2016jht
+BibTeX: '@article{Aaij:2016jht,
+      author         = "Aaij, Roel and others",
+      title          = "{Measurements of prompt charm production cross-sections
+                        in pp collisions at $ \sqrt{s}=5 $ TeV}",
+      collaboration  = "LHCb",
+      journal        = "JHEP",
+      volume         = "06",
+      year           = "2017",
+      pages          = "147",
+      doi            = "10.1007/JHEP06(2017)147",
+      eprint         = "1610.02230",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-EP-2016-244, LHCB-PAPER-2016-042",
+      SLACcitation   = "%%CITATION = ARXIV:1610.02230;%%"
+}'

@@ -1,0 +1,35 @@
+Name: L3_2008_I825820
+Year: 2008
+Summary: Flavour separated event shapes at 197 GeV
+Experiment: L3
+Collider: LEP
+InspireID: 825820
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - 
+RunInfo: Ke+e- to hadrons
+#Beams: [e+, e-]
+Energies: [197]
+Description:
+  'Measurement of the thrust, heavy jet mass, total and wide jet broadening, $C$ parameter and $y_{23}$ by L3 at 197 GeV. The event shapes are measured for all events, b-quark initiated events and non-b-quark initiated events.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Achard:2009vc
+BibTeX: '@article{Achard:2009vc,
+    author = "Achard, P. and others",
+    collaboration = "L3",
+    title = "{Study of hadronic event shape in flavour tagged events in $e^+ e^-$ annihilation at \ensuremath{<} s**(1/2) \ensuremath{>} = 197-GeV}",
+    eprint = "0907.2658",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1186/1754-0410-2-6",
+    journal = "PMC Phys. A",
+    volume = "2",
+    pages = "6",
+    year = "2008"
+}'

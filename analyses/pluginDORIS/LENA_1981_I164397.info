@@ -1,0 +1,34 @@
+Name: LENA_1981_I164397
+Year: 1981
+Summary: Charged particle multiplicities and thrust in $\Upsilon(1S,2S)$ decays and nearby continuum
+Experiment: LENA
+Collider: DORIS
+InspireID: 164397
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - 
+RunInfo: e+e- to hadrons for continuum, or any process producing Upsilon 1S and 2S decays
+Description:
+  'Measurement of the charged particle  multiplicities and a thrust-like variable
+   in $\Upsilon(1S,2S)$ decays and nearby continuum. As LENA had no magnetic field the momenta of the charged particles were not measured and therefore a thrust-like variable $T^\prime$ was constructed using only the directions of the charged particles.'
+ValidationInfo:
+  'Herwig events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Niczyporuk:1981kf
+BibTeX: '@article{Niczyporuk:1981kf,
+      author         = "Niczyporuk, B. and others",
+      title          = "{Charged Hadron Production in $e^+ e^-$ Annihilation in
+                        the $\Upsilon$ and $\Upsilon^\prime$ Region}",
+      collaboration  = "LENA",
+      journal        = "Z. Phys.",
+      volume         = "C9",
+      year           = "1981",
+      pages          = "1",
+      doi            = "10.1007/BF01554103",
+      reportNumber   = "DESY-81-008",
+      SLACcitation   = "%%CITATION = ZEPYA,C9,1;%%"
+}'

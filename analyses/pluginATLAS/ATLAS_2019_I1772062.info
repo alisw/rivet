@@ -1,0 +1,50 @@
+Name: ATLAS_2019_I1772062
+Year: 2020
+Summary: Soft-drop observables
+Experiment: ATLAS
+Collider: LHC
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Jennifer Roloff <jroloff2@gmail.com>
+References:
+ - arXiv:1912.09837 [hep-ex]
+Keywords:
+  - SUBSTRUCTURE
+  - JET
+  - MASS
+  - DIJET
+RunInfo:
+ jet substructure observables for soft drop jets produced at 13 TeV in dijet events
+Luminosity_fb: 36.1
+NeedCrossSection: no
+Beams: [p+, p+]
+Energies: [13000]
+PtCuts: [300]
+Description:
+    'Jet substructure quantities are measured using jets groomed with the soft-drop grooming procedure in dijet events from
+    32.9 fb$^{-1}$ of $pp$ collisions collected with the ATLAS detector at $\sqrt{s} = 13$ TeV. These observables are sensitive 
+    to a wide range of QCD phenomena. Some observables, such as the jet mass and opening angle between the two subjets which 
+    pass the soft-drop condition, can be described by a high-order (resummed) series in the strong coupling constant $\alpha_s$. 
+    Other observables, such as the momentum sharing between the two subjets, are nearly independent of $\alpha_s$. 
+    These observables can be constructed using all interacting particles or using only charged particles reconstructed 
+    in the inner tracking detectors. Track-based versions of these observables are not collinear safe, but are measured more precisely, 
+    and universal nonperturbative functions can absorb the collinear singularities. The unfolded data are directly compared with 
+    QCD calculations and hadron-level Monte Carlo simulations. The measurements are performed in different pseudorapidity regions, 
+    which are then used to extract quark and gluon jet shapes using the predicted quark and gluon fractions in each region. 
+    All of the parton shower and analytical calculations provide an excellent description of the data in most regions of phase space.'
+BibKey: Aad:2019vyi
+BibTeX: '@article{Aad:2019vyi,
+      author         = "Aad, Georges and others",
+      title          = "{A measurement of soft-drop jet observables in $pp$ collisions with the ATLAS detector at $\sqrt{s}$ =13 TeV}",
+      collaboration  = "ATLAS",
+      year           = "2019",
+      eprint         = "1912.09837",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-EP-2019-269",
+      SLACcitation   = "%%CITATION = ARXIV:1912.09837;%%"
+}'
+
+ReleaseTests:
+ - $A LHC-13-Jets-8

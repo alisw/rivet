@@ -1,0 +1,28 @@
+Name: ALEPH_1996_I421984
+Year: 1996
+Summary: Tau decays to $\omega\pi^-$ and $\omega\pi^-\pi^0$
+Experiment: ALEPH
+Collider: LEP
+InspireID: 421984
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Z.Phys. C74 (1997) 263-273
+RunInfo: any process producing tau leptons
+Description:
+  'Measurement of mass spectra in the tau lepton decays $\tau^-\to\nu_\tau \pi^-\pi^+\pi^-\pi^0$ and $\tau^-\to\nu_\tau \pi^-\pi^0\pi^+\pi^-\pi^0$'
+Keywords: []
+BibKey: Buskulic:1996qs
+BibTeX: '@article{Buskulic:1996qs,
+      author         = "Buskulic, D. and others",
+      title          = "{A Study of tau decays involving eta and omega mesons}",
+      collaboration  = "ALEPH",
+      journal        = "Z. Phys.",
+      volume         = "C74",
+      year           = "1997",
+      pages          = "263-273",
+      doi            = "10.1007/s002880050387",
+      reportNumber   = "CERN-PPE-96-103, FSU-SCRI-97-50",
+      SLACcitation   = "%%CITATION = ZEPYA,C74,263;%%"
+}'

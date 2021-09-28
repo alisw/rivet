@@ -1,0 +1,35 @@
+Name: OPAL_2000_I513476
+Year: 2000
+Summary: Event Shapes at 172, 183 and 189 GeV
+Experiment: OPAL
+Collider: LEP
+InspireID: 513476
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Eur.Phys.J. C16 (2000) 185-210
+RunInfo: e+e- to hadrons
+NeedCrossSection: no
+Beams: [e-, e+]
+Energies: [172,183,189]
+Description:
+  'Event shapes at  172, 183 and 189 GeV.'
+Keywords: []
+BibKey: Abbiendi:1999sx
+BibTeX: '@article{Abbiendi:1999sx,
+      author         = "Abbiendi, G. and others",
+      title          = "{QCD studies with e+ e- annihilation data at 172-GeV -
+                        189-GeV}",
+      collaboration  = "OPAL",
+      journal        = "Eur. Phys. J.",
+      volume         = "C16",
+      year           = "2000",
+      pages          = "185-210",
+      doi            = "10.1007/s100520050015",
+      eprint         = "hep-ex/0002012",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-EP-99-178",
+      SLACcitation   = "%%CITATION = HEP-EX/0002012;%%"
+}'

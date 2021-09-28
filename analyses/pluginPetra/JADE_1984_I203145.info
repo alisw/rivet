@@ -1,0 +1,34 @@
+Name: JADE_1984_I203145
+Year: 1984
+Summary: Spectra of $\rho^0$ and $K^{*\pm}$ in $e^+e^-$ collisions at 35 GeV
+Experiment: JADE
+Collider: <Insert the collider name>
+InspireID: 203145
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B145 (1984) 441-447, 1984
+RunInfo: e+ e- to hadrons
+NeedCrossSection: yes
+Beams: [e+, e-]
+Energies: [35]
+Description:
+  'Measurement of the $\rho^0$ and $K^{*\pm}$ spectra in $e^+e^-$ collisions for centre-of-mass energy 35 GeV by the JADE experiment at Petra.'
+Keywords: []
+Keywords: []
+BibKey: Bartel:1984rh
+BibTeX: '@article{Bartel:1984rh,
+      author         = "Bartel, W. and others",
+      title          = "{Inclusive Production of Vector Mesons $\rho^0$ and
+                        $K^{*\pm}$ in $e^+ e^-$ Annihilation at
+                        $\left&lt;\sqrt{s}\right&gt; = 35$-{GeV}}",
+      collaboration  = "JADE",
+      journal        = "Phys. Lett.",
+      volume         = "145B",
+      year           = "1984",
+      pages          = "441-447",
+      doi            = "10.1016/0370-2693(84)90077-7",
+      reportNumber   = "DESY-84-058",
+      SLACcitation   = "%%CITATION = PHLTA,145B,441;%%"
+}'

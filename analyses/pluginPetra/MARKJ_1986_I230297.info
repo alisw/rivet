@@ -1,0 +1,33 @@
+Name: MARKJ_1986_I230297
+Year: 1986
+Summary: Measurement of $R$ between 12 and 46.78 GeV
+Experiment: MARKJ
+Collider: PETRA
+InspireID: 230297
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D34 (1986) 681-691, 1986 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: yes
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$ in $e^+e^-$ collisions by MARKJ between 12 and 46.78 GeV.
+   The individual hadronic and muonic cross sections are also outputted to the yoda file
+   so that ratio $R$ can be recalcuated if runs are combined.'
+BibKey: Adeva:1986nt
+BibTeX: '@article{Adeva:1986nt,
+      author         = "Adeva, B. and others",
+      title          = "{Study of Hadron and Inclusive Muon Production From
+                        Electron Positron Annihilation at 39.79-{GeV} $\le
+                        \sqrt{s} \le$ 46.78-{GeV}}",
+      collaboration  = "Mark-J",
+      journal        = "Phys. Rev.",
+      volume         = "D34",
+      year           = "1986",
+      pages          = "681-691",
+      doi            = "10.1103/PhysRevD.34.681",
+      reportNumber   = "MIT-LNS-146",
+      SLACcitation   = "%%CITATION = PHRVA,D34,681;%%"
+}'

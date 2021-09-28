@@ -1,0 +1,53 @@
+Name: ATLAS_2019_I1750330
+Year: 2019
+Summary: Semileptonic ttbar at 13 TeV
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1750330
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Federica Fabbri <federica.fabbri@cern.ch>
+ - Francesco La Ruffa <francesco.la.ruffa@cern.ch>
+ - Christian Gutschow <chris.g@cern.ch>
+References:
+ - arXiv:1908.07305 [hep-ex]
+Keywords:
+ - Semileptonic ttbar
+ - Resolved
+ - Boosted
+Options:
+ - TYPE=BOOSTED,RESOLVED,BOTH
+RunInfo:
+  pp -> non-allhadronic ttbar production at 13 TeV
+Luminosity_fb: 36
+Beams: [p+, p+]
+Energies: [13000]
+PtCuts: [0]
+Description:
+'Single- and double-differential cross-section measurements are presented for the production of top-quark pairs, 
+in the lepton + jets channel at particle and parton level. Two topologies, resolved and boosted, are considered 
+and the results are presented as a function of several kinematic variables characterising the top and the system 
+and jet multiplicities. The study was performed using data from $pp$ collisions at centre-of-mass energy of 13 TeV 
+collected in 2015 and 2016 by the ATLAS detector at the CERN Large Hadron Collider (LHC), corresponding to an integrated 
+luminosity of 36 fb$^{-1}$. Due to the large $t\bar{t}$ cross-section at the LHC, such measurements allow a detailed study 
+of the properties of top-quark production and decay, enabling precision tests of several Monte Carlo generators and 
+fixed-order Standard Model predictions. Overall, there is good agreement between the theoretical predictions and the data.'
+BibKey: Aad:2019ntk
+BibTeX: '@article{Aad:2019ntk,
+    author = "Aad, Georges and others",
+    collaboration = "ATLAS",
+    title = "{Measurements of top-quark pair differential and double-differential cross-sections in the $\ell$+jets channel with $pp$ collisions at $\sqrt{s}=13$ TeV using the ATLAS detector}",
+    eprint = "1908.07305",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CERN-EP-2019-149",
+    doi = "10.1140/epjc/s10052-019-7525-6",
+    journal = "Eur. Phys. J. C",
+    volume = "79",
+    number = "12",
+    pages = "1028",
+    year = "2019"
+}'
+ReleaseTests:
+ - $A LHC-13-Top-All

@@ -1,0 +1,36 @@
+Name: BELLE_2006_I725750
+Year: 2006
+Summary: $\phi K$ mass distribution in $\tau\to\phi K^-\nu_\tau$
+Experiment: BELLE
+Collider: KEKB
+InspireID: 725750
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B643 (2006) 5-10
+RunInfo: any process producing tau leptons
+Description:
+  'Measurement of the $\phi K$ mass distribution in $\tau\to\phi K^-\nu_tau$ by BELLE'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Inami:2006vd
+BibTeX: '@article{Inami:2006vd,
+      author         = "Inami, K. and others",
+      title          = "{First Observation of the Decay tau- ---&gt; phi K-
+                        nu(tau)}",
+      collaboration  = "Belle",
+      journal        = "Phys. Lett.",
+      volume         = "B643",
+      year           = "2006",
+      pages          = "5-10",
+      doi            = "10.1016/j.physletb.2006.10.027",
+      eprint         = "hep-ex/0609018",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "BELLE-2006-24, KEK-2006-32",
+      SLACcitation   = "%%CITATION = HEP-EX/0609018;%%"
+}'

@@ -1,0 +1,31 @@
+Name: CMD3_2019_I1740541
+Year: 2019
+Summary: Cross section for $e^+e^-\to\phi\eta$ for energies below 2 GeV
+Experiment: CMD3
+Collider: VEPP-2M
+InspireID: 1740541
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - arXiv:1906.08006
+RunInfo: e+ e- to hadrons 
+NeedCrossSection: yes
+Beams: [e+, e-]
+Description:
+  'Measurement of the cross section for $e^+e^-\to K^+K^-\eta$, which is found to be saturated by the resonant
+  $\phi\eta$  sub-process, and therefore only the cross section for $e^+e^-\to\phi\eta$
+  for energies below 2 GeV is extracted by the CMD3 experiment'
+Keywords: []
+BibKey: Ivanov:2019crp
+BibTeX: '@article{Ivanov:2019crp,
+      author         = "Ivanov, V. L. and others",
+      title          = "{Study of the process $e^+e^-{\to}K^+K^-\eta$ with the
+                        CMD-3 detector at the VEPP-2000 collider}",
+      doi            = "10.1016/j.physletb.2019.134946",
+      year           = "2019",
+      eprint         = "1906.08006",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1906.08006;%%"
+}'

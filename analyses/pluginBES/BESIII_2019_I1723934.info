@@ -1,0 +1,36 @@
+Name: BESIII_2019_I1723934
+Year: 2019
+Summary: Cross section for $e^+e^-\to \omega\chi_{c0}$ at energies between 4.178 and 4.278 GeV
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1723934
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys. Rev. D 99, 091103 (2019)
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+  'Measurement of the cross section for $e^+e^-\to \omega\chi_{c0}$ at energies between 4.178 and 4.278 GeV by the BESIII collaboration.'
+Keywords: []
+BibKey: Ablikim:2019apl
+BibTeX: '@article{Ablikim:2019apl,
+      author         = "Ablikim, M. and others",
+      title          = "{Cross section measurements of $e^+
+                        e^-\to\omega\chi_{c0}$ form $\sqrt{s}=$ 4.178 to
+                        4.278 GeV}",
+      collaboration  = "BESIII",
+      journal        = "Phys. Rev.",
+      volume         = "D99",
+      year           = "2019",
+      number         = "9",
+      pages          = "091103",
+      doi            = "10.1103/PhysRevD.99.091103",
+      eprint         = "1903.02359",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1903.02359;%%"
+}'

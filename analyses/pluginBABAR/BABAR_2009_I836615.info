@@ -1,0 +1,36 @@
+Name: BABAR_2009_I836615
+Year: 2009
+Summary: Spectrum for $D^{*\pm}$ in $\Upsilon(1S)$ decays
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 836615
+Status: VALIDATED
+Authors:
+ - Peter Richardson <Peter.Richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D81 (2010) 011102
+RunInfo: Any process producing Upsilon(1S) mesons, original e+e-
+Description:
+  'Spectrum for $D^{*\pm}$ in $\Upsilon(1S)$ decays measured by Babar'
+ValidationInfo:
+  'Herwig 7 Upslion(1S) decay events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Aubert:2009aa
+BibTeX: '@article{Aubert:2009aa,
+      author         = "Aubert, B. and others",
+      title          = "{Observation of inclusive D*+- production in the decay of
+                        Upsilon(1S)}",
+      collaboration  = "BaBar",
+      journal        = "Phys. Rev.",
+      volume         = "D81",
+      year           = "2010",
+      pages          = "011102",
+      doi            = "10.1103/PhysRevD.81.011102",
+      eprint         = "0911.2024",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "SLAC-PUB-13837, BABAR-PUB-09-030",
+      SLACcitation   = "%%CITATION = ARXIV:0911.2024;%%"
+}'

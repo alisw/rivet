@@ -1,0 +1,60 @@
+Name: ATLAS_2020_I1803608
+Year: 2020
+Summary: Electroweak Zjj at 13 TeV
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1803608
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Stephen Weber <stephen.albert.weber@cern.ch>
+ - Dag Gillberg <dag.gillberg@cern.ch>
+References:
+ - arXiv:2006.15458 [hep-ex]
+ - submitted to the EPJC
+Keywords:
+ - VJETS
+ - VBF
+ - VJJ
+ - ZJETS
+ - ZJJ
+RunInfo:
+  pp -> Z [-> ee and mumu] + jets production at 13 TeV
+Luminosity_fb: 139
+Beams: [p+, p+]
+Energies: [13000]
+PtCuts: [25,25]
+Options:
+ - TYPE=EW_ONLY
+Description:
+'Differential cross-section measurements are presented for the electroweak production of two jets in association with a $ZZ$ boson.
+ These measurements are sensitive to the vector-boson fusion production mechanism and provide a fundamental test of the 
+ gauge structure of the Standard Model. The analysis is performed using proton-proton collision data collected by ATLAS at 
+ $\sqrt{s} = 13$ TeV and with an integrated luminosity of 139 fb$^{-1}$. The differential cross-sections are measured 
+ in the $Z\rightarrow \ell^+\ell^-$ decay channel ($\ell=e,\mu$) as a function of four observables: the dijet invariant mass, 
+ the rapidity interval spanned by the two jets, the signed azimuthal angle between the two jets, and the transverse momentum 
+ of the dilepton pair. The data are corrected for the effects of detector inefficiency and resolution and are sufficiently 
+ precise to distinguish between different state-of-the-art theoretical predictions calculated using Powheg+Pythia8, 
+ Herwig7+Vbfnlo and Sherpa 2.2. The differential cross-sections are used to search for anomalous weak-boson 
+ self-interactions using a dimension-six effective field theory. The measurement of the signed azimuthal angle between 
+ the two jets is found to be particularly sensitive to the interference between the Standard Model and dimension-six 
+ scattering amplitudes and provides a direct test of charge-conjugation and parity invariance in the weak-boson self-interactions.
+ Note that the default entry point is for the inclusive Z+2jet selections. For the EW-only measurement use the option TYPE=EW_ONLY.
+ In both cases, electron and muon channels are to be summed.'
+BibKey: Aad:2020sle
+BibTeX: '@article{Aad:2020sle,
+    author = "Aad, Georges and others",
+    collaboration = "ATLAS",
+    title = "{Differential cross-section measurements for the electroweak production of dijets in association with a $Z$ boson in proton-proton collisions at ATLAS}",
+    eprint = "2006.15458",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CERN-EP-2020-045",
+    month = "6",
+    year = "2020"
+}'
+
+ReleaseTests:
+ - $A pp-13000-eejj
+ - $A-2 pp-13000-mumujj
+

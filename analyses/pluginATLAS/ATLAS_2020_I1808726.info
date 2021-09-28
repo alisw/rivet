@@ -1,0 +1,48 @@
+Name: ATLAS_2020_I1808726
+Year: 2020
+Summary: Hadronic event shapes in multijet final states
+Experiment: ATLAS
+Collider: LHC
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Javier Llorente <javier.llorente.merino@cern.ch>
+ - Deepak Kar <deepak.kar@cern.ch>
+References:
+ - arXiv:2007.12600 [hep-ex]
+Keywords:
+  - Mutijet
+  - Event shapes
+RunInfo:
+  Jet production at 13000 GeV. 
+Beams: [p+, p+]
+Energies: [13000]
+PtCuts: [100.0]
+Description:
+   'A measurement of event-shape variables in proton−proton collisions at large momentum transfer 
+   is presented using data collected at s√=13 TeV with the ATLAS detector at the Large Hadron Collider. 
+   Six event-shape variables calculated using hadronic jets are studied in inclusive multijet 
+   events using data corresponding to an integrated luminosity of 139 fb$^{-1}$. 
+   Measurements are performed in bins of jet multiplicity and in different ranges 
+   of the scalar sum of the transverse momenta of the two leading jets, reaching scales beyond 
+   2 TeV. These measurements are compared with predictions from Monte Carlo event 
+   generators containing leading-order or next-to-leading order matrix elements matched 
+   to parton showers simulated to leading-logarithm accuracy. At low jet multiplicities, 
+   shape discrepancies between the measurements and the Monte Carlo predictions are observed. 
+   At high jet multiplicities, the shapes are better described but discrepancies 
+   in the normalisation are observed.'
+BibKey: Aad:2020fch
+BibTex: '@article{Aad:2020fch,
+    author = "Aad, Georges and others",
+    collaboration = "ATLAS",
+    title = "{Measurement of hadronic event shapes in multijet final states at $\sqrt{s}=13$ TeV with the ATLAS detector}",
+    eprint = "2007.12600",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CERN-EP-2020-077",
+    month = "7",
+    year = "2020"
+}'
+
+ReleaseTests:
+ - $A LHC-13-Jets-8

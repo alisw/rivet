@@ -1,0 +1,39 @@
+Name: BESIII_2020_I1775344
+Year: 2020
+Summary: Cross section for $e^+e^-\to K^+K^-\pi^0\pi^0$ from 2.000 to 2.644 GeV
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1775344
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 124 (2020) 112001
+RunInfo: e+e- to hadrons
+Beams: [e+, e-]
+Description:
+'Cross section for $e^+e^-\to K^+K^-\pi^0\pi^0$ for centre-of-mass energies from 2.000 to 2.644 GeV measured by BES.
+The Born cross sections for the subprocesses $e^+e^-\to \phi\pi^0\pi^0$, $K(1460)^+K^-$, $K_1(1400)^+K^-$,
+$K_1(1270)^+K^-$ and $K^*(892)^+K^*(892)^-$ are also measured. In addition kinematic distributions are measured at the
+centre-of-mass energies with the highest integrated luminosity, i.e. 2.125 and 2.396 GeV.'
+ValidationInfo:
+  'Herwig 7 events generated using non-perturbative currents and e+e- to q qbar + cluster hadronization.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Ablikim:2020pgw
+BibTeX: '@article{Ablikim:2020pgw,
+      author         = "Ablikim, M. and others",
+      title          = "{Observation of a resonant structure in $e^{+}e^{-} \to
+                        K^{+}K^{-}\pi^{0}\pi^{0}$}",
+      collaboration  = "BESIII",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "124",
+      year           = "2020",
+      pages          = "112001",
+      doi            = "10.1103/PhysRevLett.124.112001",
+      eprint         = "2001.04131",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:2001.04131;%%"
+}'

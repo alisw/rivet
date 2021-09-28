@@ -1,0 +1,34 @@
+Name: BESII_2008_I801210
+Year: 2008
+Summary: Cross sections for light hadrons at 3.773, 3.650 and 3.6648 GeV
+Experiment: BESII
+Collider: BEPC II
+InspireID: 801210
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B670 (2008) 184-189, 2008 
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+, e-]
+Description:
+  'Cross section for $e^+e^-\to \pi^+\pi^-$, $K^+K^-$, $2\pi^+2\pi^-$, $K^+K^-\pi^+\pi^-$ and $3\pi^+3\pi^-$
+   together with a $\pi^0\pi^0$ pair at 3.773, 3.650 and 3.6648 GeV.'
+BibKey: Ablikim:2008vk
+BibTeX: '@article{Ablikim:2008vk,
+      author         = "Ablikim, M. and others",
+      title          = "{Measurements of the observed cross sections for e+e-
+                        ---&gt; exclusive light hadrons containing pi0 pi0 at s**(1/)
+                        = 3.773, 3.650 and 3.6648-GeV}",
+      collaboration  = "BES",
+      journal        = "Phys. Lett.",
+      volume         = "B670",
+      year           = "2008",
+      pages          = "184-189",
+      doi            = "10.1016/j.physletb.2008.10.051",
+      eprint         = "0810.5611",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:0810.5611;%%"
+}'

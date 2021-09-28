@@ -1,0 +1,32 @@
+Name: CUSB_1984_I199809
+Year: 1984
+Summary: Pion Mass Spectrum in $\Upsilon(2S)\to\Upsilon(1S)\pi^+\pi^-$
+Experiment: CUSB
+Collider: CESR 
+InspireID: 199809
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Nucl.Phys. B242 (1984) 31-50
+RunInfo: Any process producing Upsilon(2S), original e+e-
+Description:
+  'Measurement of the $\pi^+\pi^-$ mass Spectrum in $\Upsilon(2S)\to\Upsilon(1S)\pi^+\pi^-$ decays.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Fonseca:1984fg
+BibTeX: '@article{Fonseca:1984fg,
+      author         = "Fonseca, V. and others",
+      title          = "{A Study of Hadronic Decays of the $\Upsilon^\prime$}",
+      collaboration  = "CUSB",
+      journal        = "Nucl. Phys.",
+      volume         = "B242",
+      year           = "1984",
+      pages          = "31-50",
+      doi            = "10.1016/0550-3213(84)90131-7",
+      reportNumber   = "MPI-PAE/Exp-El-126",
+      SLACcitation   = "%%CITATION = NUPHA,B242,31;%%"
+}'

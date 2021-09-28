@@ -1,0 +1,38 @@
+Name: ARGUS_1992_I319105
+Year: 1992
+Summary: Decay asymmetries in $\Lambda^+_c\to\Lambda^0\pi^+$
+Experiment: ARGUS
+Collider: DORIS
+InspireID: 319105
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B274 (1992) 239-245
+RunInfo: Any process producing Lambda_c baryons
+Description:
+'Measurement of the decay asymmetries in $\Lambda^+_c\to\Lambda^0\pi^+$ by the ARGUS experiment.
+ The asymmetry parameter is extracted by fitting to normalised angular distribution. N.B. the product of the asymmetry parameters for
+ the $\Lambda_c$ and daughter baryon is implemented as this is what is measured, rather than the extracted
+ parameter for the $\Lambda_c$ which relies on other measurements of the parameter for the daughter baryon.
+ This analysis is useful for testing spin correlations
+ in hadron decays.'
+ValidationInfo:
+  'Herwig 7 particle gun'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Albrecht:1991vs
+BibTeX: '@article{Albrecht:1991vs,
+      author         = "Albrecht, H. and others",
+      title          = "{A Measurement of asymmetry in the decay lambda(c)+ ---&gt;
+                        lambda pi+}",
+      collaboration  = "ARGUS",
+      journal        = "Phys. Lett.",
+      volume         = "B274",
+      year           = "1992",
+      pages          = "239-245",
+      doi            = "10.1016/0370-2693(92)90529-D",
+      reportNumber   = "DESY-91-091",
+      SLACcitation   = "%%CITATION = PHLTA,B274,239;%%"
+}'

@@ -1,0 +1,37 @@
+Name: SND_2015_I1332929
+Year: 2015
+Summary: Cross section for $e^+e^-\to\eta\pi^+\pi^-$ between 1.22 and 2 GeV
+Experiment: SND
+Collider: VEPP-2M
+InspireID: 1332929
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+- Phys.Rev. D91 (2015) 052013, 2015 
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+Description:
+  'Measurement of the cross section for $e^+e^-\to\eta\pi^+\pi^-$ at energies between 1.22 and 2 GeV.'
+Keywords: 
+BibKey: Aulchenko:2014vkn
+BibTeX: '@article{Aulchenko:2014vkn,
+      author         = "Aulchenko, V. M. and others",
+      title          = "{Measurement of the $e^+e^- \to \eta\pi^+\pi^-$ cross
+                        section in the center-of-mass energy range 1.22-2.00 GeV
+                        with the SND detector at the VEPP-2000 collider}",
+      collaboration  = "SND",
+      journal        = "Phys. Rev.",
+      volume         = "D91",
+      year           = "2015",
+      number         = "5",
+      pages          = "052013",
+      doi            = "10.1103/PhysRevD.91.052013",
+      eprint         = "1412.1971",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1412.1971;%%"
+}'

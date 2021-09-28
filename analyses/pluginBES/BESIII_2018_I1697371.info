@@ -1,0 +1,38 @@
+Name: BESIII_2018_I1697371
+Year: 2018
+Summary: Exclusive $D^0\to K^-\mu^+\nu_\mu$ decays
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1697371
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 122 (2019) no.1, 011804
+RunInfo:
+  Events with D-decays, either particle guns or collisions.
+NumEvents: 10000
+NeedCrossSection: no
+Description:
+  'Differential decay rates for semileptonic $D^0\to K^-\mu^+\nu_\mu$ decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Ablikim:2018evp
+BibTeX: '@article{Ablikim:2018evp,
+      author         = "Ablikim, Medina and others",
+      title          = "{Study of the $D^0\to K^-\mu^+\nu_\mu$ dynamics and test
+                        of lepton flavor universality with $D^0\to
+                        K^-\ell^+\nu_\ell$ decays}",
+      collaboration  = "BESIII",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "122",
+      year           = "2019",
+      number         = "1",
+      pages          = "011804",
+      doi            = "10.1103/PhysRevLett.122.011804",
+      eprint         = "1810.03127",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1810.03127;%%"
+}'

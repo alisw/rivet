@@ -1,0 +1,35 @@
+Name: VENUS_1987_I251274
+Year: 1987
+Summary: Measurement of $R$ for energies between 50 and 52 GeV
+Experiment: VENUS
+Collider: Tristan
+InspireID: 251274
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B198 (1987) 570, 1987 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: no
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$ in $e^+e^-$ collisions by VENUS for energies between 50 and 52 GeV.
+   The individual hadronic and muonic cross sections are also outputted to the yoda file
+   so that ratio $R$ can be recalcuated if runs are combined.'
+Keywords: []
+BibKey: Yoshida:1987sf
+BibTeX: '@article{Yoshida:1987sf,
+      author         = "Yoshida, H. and others",
+      title          = "{Measurement of R and Search for New Heavy Quarks in $e^+
+                        e^-$ Annihilation at 50-{GeV} and 52-{GeV} Center-of-mass
+                        Energies}",
+      collaboration  = "Venus",
+      journal        = "Phys. Lett.",
+      volume         = "B198",
+      year           = "1987",
+      pages          = "570",
+      doi            = "10.1016/0370-2693(87)90920-8",
+      reportNumber   = "KEK-PREPRINT-87-81, KOBE-HEP-87-03, KUNS-893, OULNS-87-5,
+                        TMUP-HEL-87-22",
+      SLACcitation   = "%%CITATION = PHLTA,B198,570;%%"
+}'

@@ -1,0 +1,33 @@
+Name: SND_2007_I755881
+Year: 2007
+Summary: Cross section for $e^+e^-\to K^+K^-$ between 1.04 and 1.38 GeV
+Experiment: SND
+Collider: VEPP-2M
+InspireID: 755881
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D76 (2007) 072012, 2007 
+RunInfo: e+ e- to hadrons
+NeedCrossSection: yes
+Beams: [e+, e-]
+Description:
+  'Measurement of the cross section for $e^+e^-\to K^+K^-$ at energies between 1.04 and 1.38 GeV'
+Keywords:
+BibKey: Achasov:2007kg
+BibTeX: '@article{Achasov:2007kg,
+      author         = "Achasov, M. N. and others",
+      title          = "{Measurement of the e+e- -&gt; K+K- process cross-section in
+                        the energy range s**(1/2) = 1.04 - 1.38 GeV with the SND
+                        detector in the experiment at VEPP-2M e+e- collider}",
+      journal        = "Phys. Rev.",
+      volume         = "D76",
+      year           = "2007",
+      pages          = "072012",
+      doi            = "10.1103/PhysRevD.76.072012",
+      eprint         = "0707.2279",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:0707.2279;%%"
+}'

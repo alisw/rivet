@@ -1,0 +1,503 @@
+\documentclass[11pt]{article}
+\def\eg{\emph{e.g.}\xspace}
+\def\ie{\emph{i.e.}\xspace}
+\def\cf{\emph{c.f.}\xspace}
+\def\etc{\emph{etc.}\xspace}
+
+\def\llangle{\left\langle}
+\def\rrangle{\right\rangle}
+\newcommand{\todo}[1]{\vspace*{3mm}\par\noindent\textbf{\boldmath $\Longrightarrow$ #1}\vspace*{7mm}}
+\usepackage[utf8]{inputenc}
+\usepackage{upquote}
+\usepackage{latexsym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage[english]{babel}
+\usepackage{graphicx}				
+\usepackage{geometry}
+\usepackage{amssymb}
+\usepackage{pict2e}
+\usepackage{amsthm}
+\usepackage{booktabs}
+\usepackage{authblk}
+\usepackage{xspace}
+\usepackage{hyperref}
+\usepackage{relsize}
+\newcommand{\pythia}{P\protect\scalebox{0.8}{YTHIA}8\xspace}
+\newcommand{\rivet}{R\protect\scalebox{0.8}{IVET}\xspace}
+\newcommand{\hepmc}{H\protect\scalebox{0.8}{EP}MC\xspace}
+\newcommand{\eic}{\protect\scalebox{0.8}{EIC}\xspace}
+\newcommand{\fastjet}{F\protect\scalebox{0.8}{AST}J\protect\scalebox{0.8}{ET}\xspace}
+\newcommand{\rooot}{R\protect\scalebox{0.8}{oot}\xspace}
+\newcommand{\Cpp}{\hbox{C\raisebox{0.2ex}{\smaller \kern-.1em+\kern-.2em+}}\xspace}
+
+\begin{document}
+%% \maketitle
+\begin{flushright}
+version 1: \href{https://indico.bnl.gov/event/9153/}{EICUG 2020}\\
+\end{flushright}
+\vspace*{1cm}
+\begin{center}
+  \LARGE A brief introduction to \rivet for the \eic
+	\normalsize\\[8mm]
+	Christian Bierlich, Lund University\\ Email: \texttt{bierlich@thep.lu.se}
+\end{center}
+
+\tableofcontents
+
+\section{Summary}
+This tutorial will introduce you to the basic elements of \rivet, with emphasis on DIS functionality. After a short introduction to the paradigm, it will include several exercises, that assumes
+that you have \rivet \cite{Bierlich:2019rhm} (version 3.1 or higher), as well as a Monte Carlo event generator capable of generating \hepmc events available. Follow the instructions in section \ref{sec:setup} if you do not already have this. You will learn:
+
+\begin{itemize}
+	\item To run an analysis and plot the results.
+	\item To modify your resulting figures.
+	\item To write your own analysis to display your observables of choice.
+	\item To use more advanced analysis techniques, such as percentile binning, analysis options and jet finding with \fastjet \cite{Cacciari:2011ma}.
+\end{itemize}
+While this document is meant to be self-contained enough to be useful for self-study, it is by no means a replacement of either the online tutorial documentation available
+at \url{https://gitlab.com/hepcedar/rivet/tree/master/doc/tutorials}, nor the documentation included in the \rivet manual \cite{Bierlich:2019rhm} or the specific manual for heavy ion features \cite{Bierlich:2020wms}. (Only in very rare cases is it recommended to follow manuals for versions older than v. 3, as they are superseded by newer ones.) To follow this tutorial in a purely self-contained way, one can go to the tutorial url above, and follow the steps necessary for installation outlined there, before proceeding to the next section.
+
+\section{Setting up \rivet}
+\label{sec:setup}
+Since \rivet relies on several third party libraries, it can be cumbersome to install. Several solutions exist for overcoming this problem. For tutorial purposes, the easiest thing is to rely on a \href{https://www.docker.com/}{Docker} image. If you have participated in the \eic \pythia tutorial, you have a similar setup as presented on the \rivet tutorials page. If you have not, go to the \href{https://gitlab.com/hepcedar/rivet/-/blob/master/doc/tutorials/docker.md}{page}, and follow the instructions.
+
+If you followed the \pythia tutorial, go to the same working directory in a terminal (in the following instructions, terminal commands are prefaced with a \texttt{\$>}), and create aliases for running \rivet from \textit{inside} the container on \textit{your own} machine (where \texttt{<image name>} is the name of the Docker image you pulled):
+\begin{verbatim}
+$> alias rivet='docker run -i  --rm  -u `id -u $USER`:`id -g` \
+    -v $PWD:$PWD -w $PWD <image name> rivet'
+$> alias rivet-mkanalysis='docker run -i  --rm  -u `id -u $USER`:`id -g` \
+    -v $PWD:$PWD -w $PWD <image name> rivet-mkanalysis'
+$> alias rivet-build='docker run -i  --rm  -u `id -u $USER`:`id -g` \
+    -v $PWD:$PWD -w $PWD <image name> rivet-build'
+$> alias rivet-mkhtml='docker run -i  --rm  -u `id -u $USER`:`id -g` \
+    -v $PWD:$PWD -w $PWD <image name> rivet-mkhtml'
+\end{verbatim}
+
+\section{A brief introduction to the \rivet paradigm}
+\rivet is an analysis framework intended for analyzing Monte Carlo events, producing a range of observables, putting them into histograms and comparing them to data. As such, it is at face value not much different than many other analysis frameworks, such as \eg \rooot, or simply generating Monte Carlo events, and filling them directly into histograms. What sets \rivet apart, is rather its imposed constraints, which forces the user to only calculate experimentally measurable quantities. As such, \rivet does best either as a tool to compare a prediction from a Monte Carlo event generator to data, or as a tool to provide predictions which are guaranteed to be well-defined experimentally.
+
+\begin{figure}
+	\center
+	\includegraphics[width=0.7\textwidth]{anaflow.pdf}
+	\caption{\label{fig:anaflow}Sketch of the \rivet program flow, with initialization, analysis and finalization steps, as described in the text. Figure from \cite{Bierlich:2020wms}.}
+\end{figure}
+
+This is to a high degree achieved by the so-called \texttt{Projection} abstraction, which is central to \rivet. Each \texttt{Projection} calculates a (set of) physical observables, \eg the set of all final-state charged particles meeting some kinematical cuts, the set of all possible reconstructed $Z$-bosons, an event shape or a collection of jets. From the \texttt{Projection}, desired quantities can then be extracted and filled into histograms. Besides providing an abstraction which demands calculation of only experimentally observable quantities, the \texttt{Projection} paradigm also offers several computational advantages, as described in ref. \cite{Bierlich:2019rhm}.
+
+Technically, the framework is written as a \Cpp shared library, with most user-facing calls implemented in Python wrappers. Analyses are written as \Cpp plugin libraries, usually with one implemented \rivet analysis corresponding to one published paper. There are currently over 900 such analyses already implemented in the framework, from a large variety of experiments and beam configurations. A \rivet analysis is implemented as a \Cpp class, inhering from an \texttt{Analysis} base class, and split into three parts, as shown in figure \ref{fig:anaflow}:
+\begin{description}
+	\item[Initialization: ] The \texttt{init()} method is called once per analysis, and is used to declare ("book") histograms and projections. 
+	\item[Analysis: ] The \texttt{analyze(const Event\&)} method is called once per event. Here single event quantities are calculated from the booked projections, and filled into histograms.
+	\item[Finalization: ] The \texttt{finalize()} method is called once, at the end of each analysis, and is intended to apply normalization to histograms, fill histograms with all-event averages, or construct ratios.
+\end{description}
+Once the analysis is done, the results are written to a file in the \texttt{.yoda} file format. This is a human readable format for histograms, which can be plotted directly with provided scripts.
+
+\section{Running your first DIS analysis}
+In this section we will run two analyses suitable for electron-proton collisions. It is preferable to use an event sample generated by yourself. If you don't have such an event sample, a \pythia event sample (50k events, 168 MB) can be obtained with:
+
+\begin{verbatim}
+$> wget http://home.thep.lu.se/~bierlich/eic/pythia-dis.hepmc.gz
+\end{verbatim}
+Meanwhile, the basic functionality can be tested. Call the \rivet \texttt{help} function, as well as taking a look at available analyses:
+\begin{verbatim}
+$> rivet --help
+$> rivet --list-analyses
+\end{verbatim}
+
+Run two analyses over the events. The first, called \texttt{MC\_DIS\_Check}, is a test analysis which we will return to, the other, called \texttt{H1\_1994\_S2919893}, is an energy flow measurement from H1 \cite{Abt:1994ye}. Once they are done, plot and view the results in a web browser. (Substitute the name of the event file with the name of your event file, if you have one).
+
+\begin{verbatim}
+$> rivet pythia-dis.hepmc.gz -a MC_DIS_Check -a H1_1994_S2919893
+$> rivet-mkhtml Rivet.yoda
+$> firefox rivet-plots/index.html
+\end{verbatim}
+
+Take a look at the figures generated by the two analyses. In \texttt{MC\_DIS\_Check}, you see distributions of the basic DIS kinematics variables, $x$, $y$ and $Q^2$. A cut on $Q^2$ imposed on the generator level, should be clearly visible. Importantly, the values shown here are not the true values which entered the calculation, but rather reconstructed values from final state particles. Even though most DIS events will only have a single obvious candidate for the scattered lepton, the event can include more. An analysis wanting to apply the same observable definitions to theory and data, must therefore implement a way to distinguish between these, in order to resolve any ambiguity. All this is done automatically in \rivet, with options to select the highest energy lepton (default), or by rapidity or transverse energy. This is taken care of by the projection \texttt{DISKinematics}. Take this opportunity to use the online \rivet documentation to study the analysis code, as well as the header of the \texttt{DISKinematics} projection.
+
+\begin{description}
+	\item[Analysis code: ] Go to \url{https://rivet.hepforge.org/}, and click on \textit{Analyses} $\rightarrow$ \textit{Standard analyses} in the left menu, which should take you to \href{https://rivet.hepforge.org/analyses.html}{this page}. Find the analysis name, click it, and study the code. Note in particular:
+		\begin{enumerate}
+			\item Declaration of the two projections \texttt{DISLepton} and \texttt{DISKinematics} in \texttt{init()}, and the following application of \texttt{DISKinematics} in \texttt{analyze(const Event\&)}. The latter step is necessary if the analysis step should be allowed to access members of \texttt{DISKinematics}.
+			\item Booking of histograms in \texttt{init()}. Pointers to histograms (\texttt{Histo1DPtr}s) are declared as members of the class, and booked with a name and axis definitions.
+			\item Filling of histograms in \texttt{analyze(const Event\&)}. The \texttt{fill(double)} method of the histogram is called, with the appropriate value as an argument. (Note: Some Monte Carlo event generators deliver events with event weights. These are handled automatically by \rivet, and the user should not worry about it when filling histograms).
+		\end{enumerate}
+	\item[Projection header: ] Click on \textit{Doxygen code/API docs} in the left menu, and then on \textit{Class index}. Clicking on the projection name, should take you to \href{https://rivet.hepforge.org/code/dev/classRivet_1_1DISKinematics.html}{this page}. Here you can take a look at the methods defined in this class, which includes both the normal kinematical quantities, as well as methods to return Lorentz transformations from the lab frame (default), to the hadronic center of mass frame and the Breit frame. These will be used in section \ref{sec:own-analysis}.
+\end{description}
+
+In \texttt{H1\_1994\_S2919893}, a full analysis, including comparison to data taken by H1, has been performed. In the plots you already see data points, which are loaded automatically by the analysis. Following the same steps as above, take a look at the {\href{https://rivet.hepforge.org/analyses/H1_1994_S2919893.html}{analysis~code}}. Note several differences from the previous analysis (apart from the fact that this real analysis is much more complicated):
+\begin{enumerate}
+	\item Histogram booking is different. Instead of supplying values for histogram axis, three integers are provided. This is the naming scheme for the data reference, which is in turn taken from \href{HEPData}{https://www.hepdata.net/}. By providing these indices in the booking, axis are defined in the same way as the reference, and comparison will be done automatically.
+	\item Another projection, the \texttt{FinalState}, is used. It contains all particles of the final state, which are here analysed. Find its use in the \texttt{analyze(const Event\&)} method.
+	\item The method extracting the Lorentz transform to the hadronic center of mass system is used to boost the momentum of final state particles. Find its use.
+	\item In \texttt{finalize()} histograms are no longer just normalized, but normalized to the average number of charged particles per event.
+\end{enumerate}
+
+You have now been through a simple analysis, as well as a realistic one, which also compares to data. It is now time to write some code yourself.
+
+\section{Analysis and plot modifications}
+\label{sec:anamod}
+The goal of this section is to construct a modified version of \texttt{MC\_DIS\_Check}, and run it. We use here the name \texttt{MC\_DIS\_Mod}, but you can of course substitute any name you like. Start by making an analysis template, by:
+\begin{verbatim}
+$> rivet-mkanalysis MC_DIS_Mod
+\end{verbatim}
+This creates three files in you working directory. \texttt{MC\_DIS\_Mod.cc}, which will contain the source code of the analysis, \texttt{MC\_DIS\_Mod.info}, which will contain some general information about the analysis, and \texttt{MC\_DIS\_Mod.plot}, which will contain plotting information for the analysis figures.
+
+Open the \texttt{.cc} file with your preferred text editor. It contains a show-case analysis, which is of less importance here. Substitute the contents of the three member methods, the \texttt{\#include} statements, as well as the histogram pointers declared at the bottom, with the contents of \texttt{MC\_DIS\_Check}, which you looked at before.
+
+Add another histogram to the analysis, and fill it with values for $W^2$, as computed by the \texttt{DISKinematics} projection -- re-check the header in the documentation if needed. To analyze the Monte Carlo events with your modified analysis, you must first go through a few steps. The analysis must be compiled, and \rivet must be made aware that an analysis plugin exists in this directory, by using the \texttt{--pwd} option on calls to \rivet\footnote{If you had \rivet installed on your own system, you could simply tell \rivet to do this once and for all, by doing \texttt{\$> export RIVET\_ANALYSIS\_PATH=\$PWD}. But alas, that does not work when you run the commands from a Docker container.}.
+\begin{verbatim}
+$> rivet-build RivetMC_DIS_Mod.so MC_DIS_Mod.cc # Compile the analysis
+$> rivet --list-analyses --pwd | grep MC_DIS_Mod # Check analysis is found
+$> rivet pythia-dis.hepmc.gz -a MC_DIS_mod --pwd # Run the new analysis
+\end{verbatim}
+
+While the analysis runs, open the file \texttt{MC\_DIS\_Mod.plot}. This encodes plotting information for your modified analysis. To, for example, plot the $x_{\mathrm{Bj}}$ histogram as in the test analysis (with a logarithmic horizontal axis), you would put:
+\begin{verbatim}
+BEGIN PLOT /MC_DIS_Mod/xBj
+LogX=1
+END PLOT
+\end{verbatim}
+Take a look at the documentation for plotting options \href{https://gitlab.com/hepcedar/rivet/blob/master/doc/tutorials/makeplots.md}{here}, and modify to your liking. There are a large number of options. Once the analysis is finished running, plot it, remembering to tell \rivet where to find your modified \texttt{.plot} file:
+\begin{verbatim}
+$> rivet-mkhtml Rivet.yoda --pwd
+\end{verbatim}
+
+\section{Writing your own analysis}
+\label{sec:own-analysis}
+In this section, you will extend your modified analysis to a more realistic analysis of final state particles. At this point there is no need to make a whole new analysis file, you can simply add some more figures to the existing one. For the purpose of this tutorial, focus will rather be on showcasing functionality than providing the observable most interesting to your own interest -- but feel free to add your own!
+
+We will add two histograms containing the charged hadron multiplicity per event as a function of pseudo-rapidity ($\eta$) in the hadronic center of mass systems. One for $x < 10^{-3}$, and one for $x \geq 10^{-3}$. Start by declaring a \texttt{DISFinalState} projection in \texttt{init()}, to get access to final state particles. This projection will automatically remove the DIS lepton, and has built-in functionality to deliver final state particles in the desired boost frame. You can look up the projection in the online documentation as before.
+
+\begin{verbatim}
+// Add to includes
+#include "Rivet/Projections/DISFinalState.hh"
+...
+// Add in init
+declare(DISFinalState(DISFinalState::BoostFrame::HCM), "DISFS");
+\end{verbatim}
+
+Next you want to book the two histograms, as well as two \texttt{CounterPtr}s, the latter keeping track of the number
+of events filled into each histogram\footnote{The preference is towards using counters rather than raw \texttt{double}s, since the former are streamed to the output file, which thus can be properly merged with other samples in a parallel run. Using counters, you also don't have to worry about event weights.}. Book both in \texttt{init()}, and remember to declare them in the class, preferably in the end along with rest of the histogram pointer declarations.
+
+\begin{verbatim}
+// Book in init
+book(_hist_multeta1, "multeta1", 30, -6, 6);      
+book(_hist_multeta2, "multeta2", 30, -6, 6);
+book(sow1, "_sow1");      
+book(sow2, "_sow2");
+...
+// Remember to declare as class members.
+Histo1DPtr _hist_multeta1, _hist_multeta2;
+CounterPtr sow1, sow2;
+\end{verbatim}
+By prefacing the counter names with an underscore, we prevent them from being plotted with \texttt{rivet-mkhtml}. (After all, they are not the main purpose here.)
+
+The projection should now be applied, and the histograms filled, in the analysis step. Apply the projection below the application of \texttt{DISKinematics}, by inserting the following line:
+\begin{verbatim}
+const DISFinalState& disfs = apply<DISFinalState>(event, "DISFS");
+\end{verbatim}
+Fill the counters and histograms by adding the following lines below the filling of previous histograms.
+\begin{verbatim}
+if (x < 1e-3) sow1->fill();
+else sow2->fill();
+for (auto p : disfs.particles()) {
+  if (p.isHadron() && p.isCharged()) {
+    if (x < 1e-3) _hist_multeta1->fill(p.eta());
+    else _hist_multeta2->fill(p.eta());
+  }
+}
+\end{verbatim}
+Finally, the histograms must be scaled by the contents of the counters in \texttt{finalize()}. Add the following two lines:
+\begin{verbatim}
+scale(_hist_multeta1, 1./sow1->sumW());
+scale(_hist_multeta2, 1./sow2->sumW());
+\end{verbatim}
+You should now be ready to re-compile the analysis, run it and plot the results. Modify the \texttt{.plot} file to your liking, and if you want to have a description of the analysis displayed on the plot page, the \texttt{.info} file should be modified accordingly.
+\begin{verbatim}
+$> rivet-build RivetMC_DIS_Mod.so MC_DIS_Mod.cc
+$> rivet pythia-dis.hepmc.gz -a MC_DIS_Mod --pwd
+$> rivet-mkhtml Rivet.yoda --pwd
+\end{verbatim}
+
+You are now done with this part of the task. If you have time, you can proceed to the next section and add more advanced features. For your reference, the full code of the analysis (which will compile and run) at this point, is pasted in the appendix \ref{app:code}.
+
+\section{More advanced analysis techniques}
+In this section, three more advanced analysis techniques are introduced. The pace is stepped up a bit, and it is implied that one should study the online code documentation if something is unclear. You can pick none, one, two or all of the techniques and implement them, according to taste.
+
+\subsection{Analysis options}
+It is possible to specify options to an analysis, thereby allowing the user to interact with the analysis while calling it from the command line. This can be useful to change parameters to algorithms, cuts etc., without having to rewrite or recompile an analysis. This will be exemplified in the following, by adding an option to boost the \texttt{DISFinalState} to the Breit frame.
+
+Begin by adding the option to \texttt{init}. An option can be any data type which can be streamed from the command line, even user defined ones, but here we will keep it to strings, by adding the following right before declaring \texttt{DISFinalState} in \texttt{init}:
+
+\begin{verbatim}
+string boostSystem = getOption<string>("boost","hcm");
+\end{verbatim}
+
+This allows the analysis to get an string data type option named \texttt{boost} from the command line, holding the default value \texttt{hcm}. Let the declaration of \texttt{DISFinalState} depend on this option, by replacing the current declaration with:
+
+\begin{verbatim}
+if (boostSystem == "breit")
+  declare(DISFinalState(DISFinalState::BoostFrame::BREIT),"DISFS");
+else
+  declare(DISFinalState(DISFinalState::BoostFrame::HCM),"DISFS");
+\end{verbatim}
+
+Finally, the analysis \texttt{.info} file must be modified to accept this option. Open the file, and add a new section just before \texttt{Description:}, saying:
+
+\begin{verbatim}
+Options:
+ - boost=hcm,breit
+\end{verbatim}
+Recompile the analysis. The options can now be specified on the command line, and it is even possible to run the analysis twice -- once with each option -- by specifying the analysis twice.
+
+\begin{verbatim}
+$> rivet pythia-dis.hepmc.gz -a MC_DIS_Mod:boost=hcm \
+    -a MC_DIS_Mod:boost=breit --pwd
+$> rivet-mkhtml Rivet.yoda --pwd
+\end{verbatim}
+You will see that the results are now plotted on top of each other for the two option selections.
+
+\subsection{Percentile binning}
+In heavy ion physics, it is common to bin an observable in percentiles of another observable, \eg as collision "centrality". This is possible to do in \rivet as well, by constructing a calibration analysis used to calculate this observable using Monte Carlo, and calibrate against it afterwards\footnote{It is also possible to calibrate against experimentally defined curves, impact parameter, or even supply a calibration value directly. Study the full manual for such use cases.}. We will here just pick a rather silly example, and construct the charged hadron multiplicity as function of $\eta$ (for all $x$, in the hadronic center of mass system) in percentile bins of 0-20\%, 20-40\%, 40-60\% and 60-100\% of the charged hadron multiplicity at $|\eta| > 3$.
+
+In order to bin in percentiles of some quantity, first a \texttt{SingleValueProjection} projecting this quantity must be defined. Secondly, a calibration analysis must be defined. For the purpose of this tutorial, they can all be put in the same \texttt{.cc} file as the analysis, but normally they would be separated out, as one experiment needs only be concerned with a single implementation of both for most analyses. Add
+\begin{verbatim}
+#include "Rivet/Projections/SingleValueProjection.hh"
+\end{verbatim}
+to the include statements, and insert the code for the projection and calibration analysis before your own analysis. Read through it, but don't be concerned with the details. As stated, implementing projections and calibration analyses are rarely needed -- when they exist once, they can be reused in the body of one's own analysis:
+\begin{verbatim}
+  class MC_DIS_CALIB : public SingleValueProjection {
+  public:
+    MC_DIS_CALIB() {
+      declare(DISFinalState(DISFinalState::BoostFrame::HCM),"DISFS");
+    }
+    virtual ~MC_DIS_CALIB() {}
+
+    DEFAULT_RIVET_PROJ_CLONE(MC_DIS_CALIB);
+  
+  protected:
+    void project(const Event& e) {
+      clear();
+      int nch = 0;
+      for (auto p : apply<DISFinalState>(e, "DISFS").particles())
+        if (p.isHadron() && p.isCharged() && abs(p.eta()) > 3.) ++nch;
+      set(nch);
+    }
+    virtual CmpState compare(const Projection& p) const {
+      return mkNamedPCmp(p, "DISFS");
+    }
+  };
+
+  class MC_DIS_PERC : public Analysis {
+  public:
+    DEFAULT_RIVET_ANALYSIS_CTOR(MC_DIS_PERC);
+
+    void init() {
+      declare(MC_DIS_CALIB(),"PERC");
+      book(_fm, "FM",25,0,25);
+    }
+    void analyze(const Event& event) {
+      _fm->fill(apply<MC_DIS_CALIB>(event, "PERC")());
+    }
+    void finalize() {
+      _fm->normalize();
+    }
+    Histo1DPtr _fm;
+  };
+  DECLARE_RIVET_PLUGIN(MC_DIS_PERC);
+\end{verbatim}
+
+We will order the percentile binned histograms and counters in \Cpp \texttt{std::map}s, and define a vector holding the upper limits of the intervals. Add the following members to your analysis class:
+
+\begin{verbatim}
+map<double, Histo1DPtr> histEtaPerc;
+map<double, CounterPtr> sowPerc;
+vector<double> percentileBins;
+\end{verbatim}
+
+Declare a \texttt{CentralityProjection} in \texttt{init()}, and book histograms and counters:
+
+\begin{verbatim}
+declareCentrality(MC_DIS_CALIB(), "MC_DIS_PERC", "FM", "PERC");
+percentileBins = {20, 40, 60, 100};
+for (size_t i = 0; i < percentileBins.size(); ++i) {
+  double pb = percentileBins[i];
+  book(histEtaPerc[pb], "histEtaCent-"+toString(pb), 30, -6, 6);
+  book(sowPerc[pb], "_sow"+toString(pb));
+}
+\end{verbatim}
+
+In the analysis step, find the histogram and counter corresponding to the current percentile bin, by calling the \texttt{CentralityProjection}:
+
+\begin{verbatim}
+const CentralityProjection& cent = 
+  apply<CentralityProjection>(event, "PERC");
+double c = cent();
+auto hItr = histEtaPerc.upper_bound(c);
+if (hItr == histEtaPerc.end()) return;
+auto sItr = sowPerc.upper_bound(c);
+if (sItr == sowPerc.end()) return;
+\end{verbatim}
+Fill the counter outside the particle loop, and the histogram inside, by calling the fill methods \texttt{sItr->second->fill();} and \texttt{hItr->second->fill(p.eta());} respectively. Finally normalize the histograms by their appropriate counter, by placing the following loop in \texttt{finalize()}
+
+\begin{verbatim}
+for (size_t i = 0; i < percentileBins.size(); ++i) {
+  double pb = percentileBins[i];
+  histEtaPerc[pb]->scaleW(1./sowPerc[pb]->sumW());
+}
+\end{verbatim}
+Before the analysis can be run, the \texttt{.info} file must be appended. Open it in a text editor, and add a new section just before \texttt{Description:}:
+\begin{verbatim}
+Options:
+ - cent=GEN
+\end{verbatim}
+If you have already done the part about analysis options, you can just append the last line to your existing \texttt{Options} section.
+
+You can now recompile and run the analysis. First the calibration analysis must be run, and the resulting \texttt{.yoda} file from that, must be pre-loaded into the second run. We give the calibration file the name \texttt{calib.yoda}, by specifying an output name:
+
+\begin{verbatim}
+$> rivet-build RivetMC_DIS_Mod.so MC_DIS_Mod.cc
+$> rivet pythia-dis.hepmc.gz -a MC_DIS_PERC -o calib.yoda --pwd
+$> rivet pythia-dis.hepmc.gz -a MC_DIS_Mod:cent=GEN -p calib.yoda --pwd
+$> rivet-mkhtml Rivet.yoda calib.yoda --pwd
+\end{verbatim}
+And the resulting figures can be studied.
+
+\subsection{Jet finding with \fastjet}
+\rivet comes with an interface to the \fastjet library for finding jets. The library, and the user supplied contributed algorithms in \texttt{fjcontrib} provides a wealth of possibilities -- far too much to cover here. For other use cases than the simple one covered here, you are thus referred to the extensive documentation available online, or from existing \rivet analyses implementing one.
+
+We will add a jet finder to the analysis, with the goal of finding $k_\perp$-jets with an $R$-parameter of 1 and $E_\perp > 4$ GeV. We will plot the distribution of number of such jets, as well as the $E_\perp$ distribution.
+
+First the header for the \fastjet interface must be included, add:
+
+\begin{verbatim}
+#include "Rivet/Projections/FastJets.hh"
+\end{verbatim}
+
+For the \texttt{FastJets} projection to be declared, it must have access to an underlying projection in \texttt{init()}, here the \texttt{DISFinalState}. Therefore, remove the line where the \texttt{DISFinalState} projection is declared, and replace it with:
+
+\begin{verbatim}
+const DISFinalState& disfs = 
+  declare(DISFinalState(DISFinalState::BoostFrame::HCM),"DISFS");
+declare(FastJets(disfs, fastjet::JetAlgorithm::kt_algorithm, 
+  fastjet::RecombinationScheme::pt_scheme, 1.0,
+  JetAlg::Muons::ALL, JetAlg::Invisibles::NONE, nullptr), "JETS");
+\end{verbatim}
+
+The second line declares the \texttt{FastJets} projection. If any of the arguments to the constructor prompt doubts, they can be looked up in the online documentation. Also, book two histograms to fill in the analysis step (one for the $E_\perp$ distribution, one for number of jets):
+
+\begin{verbatim}
+// In init().
+book(_hist_njets, "njets", 5, 0, 5);
+book(_hist_jetET, "jetET", 20, 4, 60);
+...
+// Declarations as class members.
+Histo1DPtr _hist_njets, _hist_jetET;
+\end{verbatim}
+
+In the analysis step, the jets can now be accessed like any other projection. The application of the projection, and histogram filling, should look like this:
+
+\begin{verbatim}
+Jets jets = 
+  apply<FastJets>(event, "JETS").jets(Cuts::Et > 4. * GeV, cmpMomByEt);
+_hist_njets->fill(jets.size());
+if (jets.size() == 0) return;
+_hist_jetET->fill(jets[0].Et());
+\end{verbatim}
+
+And in \texttt{finalize()} the histograms for number of jets should be normalized to unity, and the $E_\perp$ histogram to the cross section (here in picobarn):
+
+\begin{verbatim}
+normalize(_hist_njets);
+scale(_hist_jetET, crossSection()/picobarn/sumOfWeights());
+\end{verbatim}
+
+The analysis can now be compiled and run like normally. (Note, that if you have already done the percentile calibrated observables, you have to specify the preload file and the \texttt{cent=GEN} option as before).
+
+\begin{verbatim}
+$> rivet-build RivetMC_DIS_Mod.so MC_DIS_Mod.cc
+$> rivet pythia-dis.hepmc.gz -a MC_DIS_Mod --pwd
+$> rivet-mkhtml Rivet.yoda --pwd
+\end{verbatim}
+
+\bibliographystyle{ieeetr}  
+\bibliography{tutorial} 
+
+\appendix
+\section{Full source code for section \ref{sec:own-analysis}}
+\label{app:code}
+A complete \rivet analysis answering section \ref{sec:own-analysis} is given below, for debugging purposes.
+
+\begin{verbatim}
+#include "Rivet/Analysis.hh"
+#include "Rivet/Projections/DISKinematics.hh"
+#include "Rivet/Projections/DISFinalState.hh"
+
+namespace Rivet {
+
+  class MC_DIS_Mod : public Analysis {
+  public:
+
+    /// Constructor
+    DEFAULT_RIVET_ANALYSIS_CTOR(MC_DIS_Mod);
+    
+    /// Initialize histograms, projections etc.
+    void init() {
+      DISLepton lepton(options());
+      declare(lepton, "Lepton");
+      declare(DISKinematics(lepton), "Kinematics");
+      declare(DISFinalState(DISFinalState::BoostFrame::HCM),"DISFS");
+
+      // Book histograms
+      book(_hist_Q2, "Q2",logspace(100,0.1, 1000.0));
+      book(_hist_y, "y",100,0.,1.);
+      book(_hist_x, "xBj",logspace(100,0.00001, 1.0));
+      book(_hist_W2, "W2", logspace(100, 0.1, 10000.));
+      book(_hist_multeta1, "multeta1", 30, -6, 6);      
+      book(_hist_multeta2, "multeta2", 30, -6, 6);
+      book(sow1, "_sow1");      
+      book(sow2, "_sow2");      
+    }
+
+    /// Perform the per-event analysis
+    void analyze(const Event& event) {
+      const DISKinematics& dk = apply<DISKinematics>(event, "Kinematics");
+      const DISFinalState& disfs = apply<DISFinalState>(event, "DISFS");
+      if ( dk.failed() ) return;
+      double x  = dk.x();
+      double y  = dk.y();
+      double Q2 = dk.Q2();
+      double W2 = dk.W2();
+      _hist_Q2->fill(Q2);
+      _hist_y->fill(y);
+      _hist_x->fill(x);
+      _hist_W2->fill(W2);
+      if (x < 1e-3) sow1->fill();
+      else sow2->fill();
+      for (auto p : disfs.particles()) {
+        if (p.isHadron() && p.isCharged()) {
+          if (x < 1e-3) _hist_multeta1->fill(p.eta());
+          else _hist_multeta2->fill(p.eta());
+        }
+      }
+    }
+
+    /// Normalise histograms etc., after the run
+    void finalize() {
+      normalize(_hist_Q2); // normalize to unity
+      normalize(_hist_y); // normalize to unity
+      scale(_hist_multeta1, 1./sow1->sumW());
+      scale(_hist_multeta2, 1./sow2->sumW());
+    }
+
+    /// The histograms.
+    Histo1DPtr _hist_Q2, _hist_y, _hist_x, _hist_W2;
+    Histo1DPtr _hist_multeta1, _hist_multeta2;
+    CounterPtr sow1, sow2;
+  };
+
+  DECLARE_RIVET_PLUGIN(MC_DIS_Mod);
+}
+\end{verbatim}
+\end{document} 

@@ -1,0 +1,31 @@
+Name: DM2_1983_I190558
+Year: 1983
+Summary: Cross section for $e^+e^-\to p\bar{p}$ between 1.975 and 2.250 GeV 
+Experiment: DM2
+Collider: DCI
+InspireID: 190558
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Nucl.Phys. B224 (1983) 379, 1983 
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+Description:
+  'Measurement of the cross section for $e^+e^-\to p\bar{p}$ between 1.975 and 2.250 GeV '
+BibKey: Bisello:1983at
+BibTeX: '@article{Bisello:1983at,
+      author         = "Bisello, D. and others",
+      title          = "{&gt;A Measurement of $e^+ e^- \to \bar{p} p$ for 1975-{MeV}
+                        $\le \sqrt{s} \le$ 2250-{MeV}}",
+      journal        = "Nucl. Phys.",
+      volume         = "B224",
+      year           = "1983",
+      pages          = "379",
+      doi            = "10.1016/0550-3213(83)90381-4",
+      reportNumber   = "LAL 83/15",
+      SLACcitation   = "%%CITATION = NUPHA,B224,379;%%"
+}'

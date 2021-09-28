@@ -1,0 +1,62 @@
+BEGIN YODA_SCATTER2D_V2 /REF/CDF_2006_S6450792/d01-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.09, up: 0.09}, sys: {dn: -1.2, up: 1.26}, 'sys,Additional systematic uncertainty from the luminosity.': {dn: -0.5418, up: 0.5418}}, 1: {stat: {dn: -0.05, up: 0.05}, sys: {dn: -0.65, up: 0.7}, 'sys,Additional systematic uncertainty from the luminosity.': {dn: -0.3102, up: 0.3102}}, 2: {stat: {dn: -0.03, up: 0.03}, sys: {dn: -0.35, up: 0.39}, 'sys,Additional systematic uncertainty from the luminosity.': {dn: -0.1752, up: 0.1752}}, 3: {stat: {dn: -0.02, up: 0.02}, sys: {dn: -0.2, up: 0.23}, 'sys,Additional systematic uncertainty from the luminosity.': {dn: -0.10200000000000001, up: 0.10200000000000001}}, 4: {stat: {dn: -0.01, up: 0.01}, sys: {dn: -0.12, up: 0.14}, 'sys,Additional systematic uncertainty from the luminosity.': {dn: -0.061200000000000004, up: 0.061200000000000004}}, 5: {stat: {dn: -0.004, up: 0.004}, sys: {dn: -0.069, up: 0.083}, 'sys,Additional systematic uncertainty from the luminosity.': {dn: -0.0354, up: 0.0354}}, 6: {stat: {dn: -0.002, up: 0.002}, sys: {dn: -0.042, up: 0.051}, 'sys,Additional systematic uncertainty from the luminosity.': {dn: -0.021179999999999997, up: 0.021179999999999997}}, 7: {stat: {dn: -0.001, up: 0.001}, sys: {dn: -0.025, up: 0.031}, 'sys,Additional systematic uncertainty from the luminosity.': {dn: -0.012419999999999999, up: 0.012419999999999999}}, 8: {stat: {dn: -0.001, up: 0.001}, sys: {dn: -0.015, up: 0.019}, 'sys,Additional systematic uncertainty from the luminosity.': {dn: -0.007379999999999999, up: 0.007379999999999999}}, 9: {stat: {dn: -0.0003, up: 0.0003}, sys: {dn: -0.0076, up: 0.0094}, 'sys,Additional systematic uncertainty from the luminosity.': {dn: -0.003504, up: 0.003504}}, 10: {stat: {dn: -0.0001, up: 0.0001}, sys: {dn: -0.003, up: 0.0036}, 'sys,Additional systematic uncertainty from the luminosity.': {dn: -0.00126, up: 0.00126}}, 11: {stat: {dn: -5.0e-05, up: 5.0e-05}, sys: {dn: -0.00116, up: 0.00136}, 'sys,Additional systematic uncertainty from the luminosity.': {dn: -0.0004482, up: 0.0004482}}, 12: {stat: {dn: -2.0e-05, up: 2.0e-05}, sys: {dn: -0.00046, up: 0.00052}, 'sys,Additional systematic uncertainty from the luminosity.': {dn: -0.00016020000000000002, up: 0.00016020000000000002}}, 13: {stat: {dn: -1.0e-05, up: 1.0e-05}, sys: {dn: -0.000169, up: 0.000189}, 'sys,Additional systematic uncertainty from the luminosity.': {dn: -5.328e-05, up: 5.328e-05}}, 14: {stat: {dn: -5.0e-06, up: 5.0e-06}, sys: {dn: -6.4e-05, up: 7.2e-05}, 'sys,Additional systematic uncertainty from the luminosity.': {dn: -1.818e-05, up: 1.818e-05}}, 15: {stat: {dn: -2.7e-06, up: 2.7e-06}, sys: {dn: -2.21e-05, up: 2.57e-05}, 'sys,Additional systematic uncertainty from the luminosity.': {dn: -5.718e-06, up: 5.718e-06}}, 16: {stat: {dn: -1.4e-06, up: 1.4e-06}, sys: {dn: -6.5e-06, up: 7.9e-06}, 'sys,Additional systematic uncertainty from the luminosity.': {dn: -1.5180000000000001e-06, up: 1.5180000000000001e-06}}, 17: {stat: {dn: -6.1e-07, up: 6.1e-07}, sys: {dn: -1.81e-06, up: 2.42e-06}, 'sys,Additional systematic uncertainty from the luminosity.': {dn: -3.804e-07, up: 3.804e-07}}, 18: {stat: {dn: -2.9e-07, up: 2.9e-07}, sys: {dn: -4.5e-07, up: 6.5e-07}, 'sys,Additional systematic uncertainty from the luminosity.': {dn: -8.159999999999999e-08, up: 8.159999999999999e-08}}, 19: {stat: {dn: -1.24e-07, up: 1.24e-07}, sys: {dn: -1.11e-07, up: 1.64e-07}, 'sys,Additional systematic uncertainty from the luminosity.': {dn: -1.668e-08, up: 1.668e-08}}}
+
+IsRef: 1
+Path: /REF/CDF_2006_S6450792/d01-x01-y01
+Title: doi:10.17182/hepdata.41844.v1/t1
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+6.400000e+01	3.000000e+00	3.000000e+00	9.030000e+00	1.319715e+00	1.374499e+00
+7.050000e+01	3.500000e+00	3.500000e+00	5.170000e+00	7.219585e-01	7.672835e-01
+7.750000e+01	3.500000e+00	3.500000e+00	2.920000e+00	3.925494e-01	4.285966e-01
+8.500000e+01	4.000000e+00	4.000000e+00	1.700000e+00	2.253974e-01	2.523965e-01
+9.300000e+01	4.000000e+00	4.000000e+00	1.020000e+00	1.350757e-01	1.531190e-01
+1.015000e+02	4.500000e+00	4.500000e+00	5.900000e-01	7.765410e-02	9.032253e-02
+1.105000e+02	4.500000e+00	4.500000e+00	3.530000e-01	4.708070e-02	5.525932e-02
+1.200000e+02	5.000000e+00	5.000000e+00	2.070000e-01	2.793307e-02	3.341042e-02
+1.305000e+02	5.500000e+00	5.500000e+00	1.230000e-01	1.674707e-02	2.040746e-02
+1.470000e+02	1.100000e+01	1.100000e+01	5.840000e-02	8.374247e-03	1.003633e-02
+1.710000e+02	1.300000e+01	1.300000e+01	2.100000e-02	3.255396e-03	3.815442e-03
+1.980000e+02	1.400000e+01	1.400000e+01	7.470000e-03	1.244582e-03	1.432824e-03
+2.280000e+02	1.600000e+01	1.600000e+01	2.670000e-03	4.875080e-04	5.444851e-04
+2.620000e+02	1.800000e+01	1.800000e+01	8.880000e-04	1.774817e-04	1.966208e-04
+2.990000e+02	1.900000e+01	1.900000e+01	3.030000e-04	6.671966e-05	7.442790e-05
+3.390000e+02	2.100000e+01	2.100000e+01	9.530000e-05	2.298686e-05	2.646650e-05
+3.820000e+02	2.200000e+01	2.200000e+01	2.530000e-05	6.820141e-06	8.165435e-06
+4.340000e+02	3.000000e+01	3.000000e+01	6.340000e-06	1.947538e-06	2.524521e-06
+4.970000e+02	3.300000e+01	3.300000e+01	1.360000e-06	5.415335e-07	7.164207e-07
+5.750000e+02	4.500000e+01	4.500000e+01	2.780000e-07	1.672580e-07	2.062771e-07
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/CDF_2006_S6450792/d02-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.11, up: 0.11}, sys: {dn: -1.49, up: 1.53}, 'sys,Additional systematic uncertainty from the luminosity.': {dn: -0.48119999999999996, up: 0.48119999999999996}}, 1: {stat: {dn: -0.06, up: 0.06}, sys: {dn: -0.8, up: 0.83}, 'sys,Additional systematic uncertainty from the luminosity.': {dn: -0.2802, up: 0.2802}}, 2: {stat: {dn: -0.04, up: 0.04}, sys: {dn: -0.42, up: 0.45}, 'sys,Additional systematic uncertainty from the luminosity.': {dn: -0.16019999999999998, up: 0.16019999999999998}}, 3: {stat: {dn: -0.02, up: 0.02}, sys: {dn: -0.23, up: 0.26}, 'sys,Additional systematic uncertainty from the luminosity.': {dn: -0.0942, up: 0.0942}}, 4: {stat: {dn: -0.01, up: 0.01}, sys: {dn: -0.13, up: 0.15}, 'sys,Additional systematic uncertainty from the luminosity.': {dn: -0.056999999999999995, up: 0.056999999999999995}}, 5: {stat: {dn: -0.005, up: 0.005}, sys: {dn: -0.075, up: 0.087}, 'sys,Additional systematic uncertainty from the luminosity.': {dn: -0.033420000000000005, up: 0.033420000000000005}}, 6: {stat: {dn: -0.003, up: 0.003}, sys: {dn: -0.044, up: 0.053}, 'sys,Additional systematic uncertainty from the luminosity.': {dn: -0.02016, up: 0.02016}}, 7: {stat: {dn: -0.002, up: 0.002}, sys: {dn: -0.026, up: 0.031}, 'sys,Additional systematic uncertainty from the luminosity.': {dn: -0.01188, up: 0.01188}}, 8: {stat: {dn: -0.001, up: 0.001}, sys: {dn: -0.016, up: 0.019}, 'sys,Additional systematic uncertainty from the luminosity.': {dn: -0.0070799999999999995, up: 0.0070799999999999995}}, 9: {stat: {dn: -0.0005, up: 0.0005}, sys: {dn: -0.0077, up: 0.0094}, 'sys,Additional systematic uncertainty from the luminosity.': {dn: -0.003402, up: 0.003402}}, 10: {stat: {dn: -0.0002, up: 0.0002}, sys: {dn: -0.003, up: 0.0036}, 'sys,Additional systematic uncertainty from the luminosity.': {dn: -0.00123, up: 0.00123}}, 11: {stat: {dn: -7.0e-05, up: 7.0e-05}, sys: {dn: -0.00115, up: 0.00135}, 'sys,Additional systematic uncertainty from the luminosity.': {dn: -0.00044039999999999997, up: 0.00044039999999999997}}, 12: {stat: {dn: -2.0e-05, up: 2.0e-05}, sys: {dn: -0.00045, up: 0.00052}, 'sys,Additional systematic uncertainty from the luminosity.': {dn: -0.0001578, up: 0.0001578}}, 13: {stat: {dn: -1.1e-05, up: 1.1e-05}, sys: {dn: -0.000167, up: 0.000187}, 'sys,Additional systematic uncertainty from the luminosity.': {dn: -5.274e-05, up: 5.274e-05}}, 14: {stat: {dn: -6.0e-06, up: 6.0e-06}, sys: {dn: -6.3e-05, up: 7.1e-05}, 'sys,Additional systematic uncertainty from the luminosity.': {dn: -1.806e-05, up: 1.806e-05}}, 15: {stat: {dn: -2.7e-06, up: 2.7e-06}, sys: {dn: -2.2e-05, up: 2.55e-05}, 'sys,Additional systematic uncertainty from the luminosity.': {dn: -5.6759999999999995e-06, up: 5.6759999999999995e-06}}, 16: {stat: {dn: -1.4e-06, up: 1.4e-06}, sys: {dn: -6.4e-06, up: 7.9e-06}, 'sys,Additional systematic uncertainty from the luminosity.': {dn: -1.506e-06, up: 1.506e-06}}, 17: {stat: {dn: -6.1e-07, up: 6.1e-07}, sys: {dn: -1.8e-06, up: 2.4e-06}, 'sys,Additional systematic uncertainty from the luminosity.': {dn: -3.786e-07, up: 3.786e-07}}, 18: {stat: {dn: -2.9e-07, up: 2.9e-07}, sys: {dn: -4.4e-07, up: 6.4e-07}, 'sys,Additional systematic uncertainty from the luminosity.': {dn: -8.159999999999999e-08, up: 8.159999999999999e-08}}, 19: {stat: {dn: -1.24e-07, up: 1.24e-07}, sys: {dn: -1.1e-07, up: 1.63e-07}, 'sys,Additional systematic uncertainty from the luminosity.': {dn: -1.656e-08, up: 1.656e-08}}}
+
+IsRef: 1
+Path: /REF/CDF_2006_S6450792/d02-x01-y01
+Title: doi:10.17182/hepdata.41844.v1/t2
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+6.400000e+01	3.000000e+00	3.000000e+00	8.020000e+00	1.569635e+00	1.607655e+00
+7.050000e+01	3.500000e+00	3.500000e+00	4.670000e+00	8.497718e-01	8.780729e-01
+7.750000e+01	3.500000e+00	3.500000e+00	2.670000e+00	4.512915e-01	4.793371e-01
+8.500000e+01	4.000000e+00	4.000000e+00	1.570000e+00	2.493464e-01	2.772610e-01
+9.300000e+01	4.000000e+00	4.000000e+00	9.500000e-01	1.422990e-01	1.607762e-01
+1.015000e+02	4.500000e+00	4.500000e+00	5.570000e-01	8.226115e-02	9.333218e-02
+1.105000e+02	4.500000e+00	4.500000e+00	3.360000e-01	4.849150e-02	5.678403e-02
+1.200000e+02	5.000000e+00	5.000000e+00	1.980000e-01	2.865544e-02	3.325860e-02
+1.305000e+02	5.500000e+00	5.500000e+00	1.180000e-01	1.752502e-02	2.030090e-02
+1.470000e+02	1.100000e+01	1.100000e+01	5.670000e-02	8.432888e-03	1.000918e-02
+1.710000e+02	1.300000e+01	1.300000e+01	2.050000e-02	3.248523e-03	3.809580e-03
+1.980000e+02	1.400000e+01	1.400000e+01	7.340000e-03	1.233431e-03	1.421743e-03
+2.280000e+02	1.600000e+01	1.600000e+01	2.630000e-03	4.772849e-04	5.437838e-04
+2.620000e+02	1.800000e+01	1.800000e+01	8.790000e-04	1.754751e-04	1.946060e-04
+2.990000e+02	1.900000e+01	1.900000e+01	3.010000e-04	6.581158e-05	7.350621e-05
+3.390000e+02	2.100000e+01	2.100000e+01	9.460000e-05	2.288027e-05	2.626322e-05
+3.820000e+02	2.200000e+01	2.200000e+01	2.510000e-05	6.722205e-06	8.163212e-06
+4.340000e+02	3.000000e+01	3.000000e+01	6.310000e-06	1.937895e-06	2.505082e-06
+4.970000e+02	3.300000e+01	3.300000e+01	1.360000e-06	5.332528e-07	7.073603e-07
+5.750000e+02	4.500000e+01	4.500000e+01	2.760000e-07	1.665840e-07	2.054732e-07
+END YODA_SCATTER2D_V2

@@ -1,0 +1,48 @@
+Name: ATLAS_2019_I1762584
+Year: 2019
+Summary: Differential single diffractive cross sections at 8 TeV
+Experiment: ATLAS, ALFA
+Collider: LHC
+InspireID: 1762584
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Felix Kling <fkling@slac.stanford.edu>
+References:
+ - arXiv:1911.00453 [hep-ex]
+ - JHEP 02 (2020) 042
+RunInfo:
+ Single diffractive minimum bias events
+Beams: [p+, p+]
+Energies: [[4000,4000]]
+Luminosity_fb: 1.67±0.03nb−1
+Description:
+    'A dedicated sample of Large Hadron Collider proton-proton collision data at centre-of-mass energy $\sqrt{s} = 8$ TeV is used 
+    to study inclusive single diffractive dissociation, $pp \to X p$. The intact final-state proton is reconstructed in the 
+    ATLAS ALFA forward spectrometer, while charged particles from the dissociated system X are measured in the central detector 
+    components. The fiducial range of the measurement is $-4.0 < \log_{10} \xi < -1.6$ and $0.016 < |t| < 0.43$ GeV$^{2}$, 
+    where $\xi$ is the proton fractional energy loss and $t$ is the squared four-momentum transfer. The total cross section 
+    integrated across the fiducial range is $1.59 \pm 0.13$ mb. Cross sections are also measured differentially as functions 
+    of $\xi$, $t$, and $\Delta \eta$, a variable that characterises the rapidity gap separating the proton and the system X. 
+    The data are consistent with an exponential $t$ dependence, d$\sigma$/d$t \approx e^{Bt}$ with slope parameter 
+    $B = 7.65 \pm 0.34$ GeV$^{-2}$. Interpreted in the framework of triple Regge phenomenology, the $\xi$ dependence leads 
+    to a pomeron intercept of $\alpha(0) = 1.07 \pm 0.09$.'
+BibKey: Aad:2019tek
+BibTeX: '@article{Aad:2019tek,
+    author = "Aad, Georges and others",
+    collaboration = "ATLAS",
+    title = "{Measurement of differential cross sections for single diffractive dissociation in $\sqrt{s} = 8$ TeV $pp$ collisions using the ATLAS ALFA spectrometer}",
+    eprint = "1911.00453",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CERN-EP-2019-190",
+    doi = "10.1007/JHEP02(2020)042",
+    journal = "JHEP",
+    volume = "02",
+    pages = "042",
+    year = "2020"
+}'
+
+ReleaseTests:
+ - $A LHC-8-UE
+

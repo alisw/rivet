@@ -1,0 +1,35 @@
+Name: DELPHI_1994_I375963
+Year: 1994
+Summary: A study of radiative muon pair events at Z0 energies
+Experiment: DELPHI
+Collider: LEP
+InspireID: 375963
+Status: VALIDATED NOTREENTRY NOHEPDATA
+Authors:
+ - Markus Seidel <markus.seidel@cern.ch>
+References:
+ - 'Z.Phys.C 65 (1995) 603-618'
+ - 'DOI:10.1007/BF01578669'
+ - 'CERN-PPE-94-121'
+ - 'CERN-DELPHI-THESIS-111'
+RunInfo:  e+ e- > mu+ mu-, including ISR
+Beams: [e+, e-]
+Energies: [91.2]
+Luminosity_fb: 0.0405
+Description:
+  'Differential cross sections of the radiative photons as a function of photon energy and of the angle between the photon and the muon. Data points were digitized from the note, +8% photon efficiency uncertainty (as described in thesis), and divided by bin width for the Rivet analysis.'
+ReleaseTests:
+ - $A pp-91-lly
+Keywords: []
+BibKey: Abreu:1994ria
+BibTeX: '@article{Abreu:1994ria,
+    author = "Abreu, P. and others",
+    collaboration = "DELPHI",
+    title = "{A Study of radiative muon pair events at $Z^0$ energies and limits on an additional $Z^\prime$ gauge boson}",
+    reportNumber = "CERN-PPE-94-121",
+    doi = "10.1007/BF01578669",
+    journal = "Z. Phys. C",
+    volume = "65",
+    pages = "603--618",
+    year = "1995"
+}'

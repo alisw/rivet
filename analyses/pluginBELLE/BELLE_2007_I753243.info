@@ -1,0 +1,32 @@
+Name: BELLE_2007_I753243
+Year: 2007
+Summary: $K_S^0\pi^-$ spectrum in $\tau$ decays
+Experiment: BELLE
+Collider: KEKB
+InspireID: 753243
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B654 (2007) 65-73
+RunInfo: e+ e- > tau+ tau-, or any process producing tau leptons
+NeedCrossSection: no
+Description:
+  'Measurement of the spectrum of $K_S^0\pi^-$ spectrum in $\tau$ decays by BELLE. Useful for testing models of the hadronic current in $\tau$ decays.'
+Keywords: []
+BibKey: Epifanov:2007rf
+BibTeX: '@article{Epifanov:2007rf,
+      author         = "Epifanov, D. and others",
+      title          = "{Study of tau- ---&gt; K(S) pi- nu(tau) decay at Belle}",
+      collaboration  = "Belle",
+      journal        = "Phys. Lett.",
+      volume         = "B654",
+      year           = "2007",
+      pages          = "65-73",
+      doi            = "10.1016/j.physletb.2007.08.045",
+      eprint         = "0706.2231",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "BELLE-PREPRINT-2007-28, KEK-PREPRINT-2007-17",
+      SLACcitation   = "%%CITATION = ARXIV:0706.2231;%%"
+}'

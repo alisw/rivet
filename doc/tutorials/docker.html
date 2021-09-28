@@ -1,0 +1,48 @@
+<h1 id="docker-instructions">Docker instructions</h1>
+<p>Obtaining docker is explained here: <a href="https://docs.docker.com/engine/installation/">https://docs.docker.com/engine/installation/.</a></p>
+<h2 id="linux-prerequisites">Linux prerequisites</h2>
+<p><em>Note:</em> on Linux systems, make sure to create a group &quot;docker&quot; and add yourself to it. Otherwise you will need to run all docker commands as sudo.</p>
+<pre><code>sudo groupadd docker
+sudo usermod -aG docker $USER</code></pre>
+<p>After that you need to <code>logout</code> and log back in for the group change to take effect. Now you are able to use docker without sudo.</p>
+<p>These steps need only be done once.</p>
+<h2 id="mac-prerequisites">Mac prerequisites</h2>
+<p>Quote from docker webpage: Docker for Mac requires OS X El Capitan 10.11 or newer macOS release running on a 2010 or newer Mac, with Intel’s hardware support for MMU virtualization. The app will run on 10.10.3 Yosemite, but with limited support. Please see What to know before you install for a full explanation and list of prerequisites.</p>
+<p>Please use the docker webpage to obtain up--to--date information about possible Mac install issues.</p>
+<h3 id="obtaining-a-docker-image-for-rivet">Obtaining a docker image for rivet</h3>
+<p>The command is simply:</p>
+<pre><code>docker pull hepstore/rivet:X.Y.Z</code></pre>
+<p>where X.Y.Z is the latest Rivet version. This will download and store the Docker container in /var/lib/docker on your Linux or Mac system.</p>
+<p>For the rest of this document we will refer to the Rivet/image version number as &quot;X.Y.Z&quot;: replace this with the Rivet version code that you are using, cf. the pull command above.</p>
+<h2 id="running-the-container-interactively">Running the container interactively</h2>
+<p>The most basic thing to do is to simply run bash inside the container as such:</p>
+<pre><code>docker run -it --rm hepstore/rivet:X.Y.Z bash</code></pre>
+<p>This gives you full access to anything inside the container. This is probably a good cross-check to see if your docker permissions are correct.</p>
+<p>To see a list of available rivet analysis you can now do this:</p>
+<pre><code>docker run -i --rm hepstore/rivet:X.Y.Z rivet --list-analyses</code></pre>
+<h2 id="running-rivet-through-docker">Running Rivet through docker</h2>
+<p>In the following, a proposed way of working with rivet through docker is given.</p>
+<p>To mount your current directory on the host system into the container and making it the current directory inside the container as well and set the same user and group ids as on the host system, we add this to the command line:</p>
+<pre><code> -v $PWD:$PWD -w $PWD -u `id -u $USER`:`id -g`</code></pre>
+<p>A very efficient way of using rivet through docker is to use aliases as the command line does get quite lengthy.</p>
+<p>If you set the following aliases in your shell, you have everything set up to run rivet, compile your own analysis code and make plots:</p>
+<pre><code>alias rivet=&#39;docker run -i  --rm  -u `id -u $USER`:`id -g`  -v $PWD:$PWD -w $PWD  hepstore/rivet:X.Y.Z rivet&#39;
+alias rivet-mkanalysis=&#39;docker run -i  --rm  -u `id -u $USER`:`id -g`  -v $PWD:$PWD -w $PWD  hepstore/rivet:X.Y.Z rivet-mkanalysis&#39;
+alias rivet-buildplugin=&#39;docker run -i  --rm  -u `id -u $USER`:`id -g`  -v $PWD:$PWD -w $PWD  hepstore/rivet:X.Y.Z rivet-buildplugin&#39;
+alias rivet-mkhtml=&#39;docker run -i  --rm  -u `id -u $USER`:`id -g`  -v $PWD:$PWD -w $PWD  hepstore/rivet:X.Y.Z rivet-mkhtml&#39;
+alias yodamerge=&#39;docker run -i --rm  -u `id -u $USER`:`id -g`  -v $PWD:$PWD -w $PWD  hepstore/rivet:X.Y.Z yodamerge&#39;</code></pre>
+<p>You might want to put these alias definitions into your <code>~/.bashrc</code> for persistence.</p>
+<p><em>Note:</em> on SELinux systems, an additional docker run flag <code>--privileged</code> is sometimes required for read/write permissions:</p>
+<pre><code>alias rivet=&#39;docker run -i --privileged --rm  -u `id -u $USER`:`id -g`  -v $PWD:$PWD -w $PWD  hepstore/rivet:X.Y.Z rivet&#39;
+alias rivet-mkanalysis=&#39;docker run -i --privileged --rm  -u `id -u $USER`:`id -g`  -v $PWD:$PWD -w $PWD  hepstore/rivet:X.Y.Z rivet-mkanalysis&#39;
+alias rivet-buildplugin=&#39;docker run -i --privileged --rm  -u `id -u $USER`:`id -g`  -v $PWD:$PWD -w $PWD  hepstore/rivet:X.Y.Z rivet-buildplugin&#39;
+alias rivet-mkhtml=&#39;docker run -i --privileged --rm  -u `id -u $USER`:`id -g`  -v $PWD:$PWD -w $PWD  hepstore/rivet:X.Y.Z rivet-mkhtml&#39;
+alias yodamerge=&#39;docker run -i --privileged --rm  -u `id -u $USER`:`id -g`  -v $PWD:$PWD -w $PWD  hepstore/rivet:X.Y.Z yodamerge&#39;</code></pre>
+<p>You now can use the following commands from your host system's terminal:</p>
+<ul>
+<li><code>rivet</code> --- this is the main program</li>
+<li><code>rivet-mkanalysis</code> --- this creates analysis code templates</li>
+<li><code>rivet-build</code> --- this compiles your own analysis code</li>
+<li><code>rivet-mkhtml</code> --- this is used for plotting the output histograms</li>
+</ul>
+<p>This should allow you to follow eg. the <a href="First%20run">firstrun.md</a> tutorial on your host system.</p>

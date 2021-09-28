@@ -1,0 +1,41 @@
+Name: ATLAS_PBPB_CENTRALITY
+Summary: Centrality calibration / forward energy flow Pb--Pb.
+Status: UNVALIDATED
+Authors:
+ - Christian Bierlich <christian.bierlich@thep.lu.se>
+NumEvents: 50000
+References:
+ - arXiv:1108.6018 [hep-ex], 
+ - Phys.Lett. B707 (2012) 330-348
+RunInfo: Any!
+Description:
+   'Calibration analysis for ATLAS Pb--Pb centrality. The centrality measure
+   is $\sum E_\perp$ in the forward and backward directions.
+   The reference YODA file contains the experimental 
+   centrality calibration, but extracted from the plot in the paper.
+   Analysis can be run for all energies to provide generator calibration
+   curves, but only holds data for 2.76 TeV/nn.
+   Note that this has not been unfolded for detector effects.'
+ReleaseTests:
+  - $A LHC-2760-PbPb
+
+BibKey: ATLAS:2001ah
+BibTeX: '@article{ATLAS:2011ah,
+      author         = "Aad, Georges and others",
+      title          = "{Measurement of the pseudorapidity and transverse
+                        momentum dependence of the elliptic flow of charged
+                        particles in lead-lead collisions at $\sqrt{s_{NN}}=2.76$
+                        TeV with the ATLAS detector}",
+      collaboration  = "ATLAS",
+      journal        = "Phys. Lett.",
+      volume         = "B707",
+      year           = "2012",
+      pages          = "330-348",
+      doi            = "10.1016/j.physletb.2011.12.056",
+      eprint         = "1108.6018",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-PH-EP-2011-124",
+      SLACcitation   = "%%CITATION = ARXIV:1108.6018;%%"
+}'
+

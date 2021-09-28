@@ -1,0 +1,41 @@
+Name: BELLE_2005_I686014
+Year: 2005
+Summary: Rates and Spectra for Charm hadrons in $\Upsilon(4S)$ decays and the continuum
+Experiment: BELLE
+Collider: KEKB
+InspireID: 686014
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - 
+RunInfo: e+e- to hadrons at the Upsilon 4S and nearby continuum
+Beams: [e+, e-]
+Energies: [10.52,10.58]
+Description:
+'Measurement of the cross section and scaled momentum spectrum
+ for the production of charm hadrons, $D^0$, $D^+$, $D_s^+$, $\Lambda_c^+$, $D^{*0}$ and $D^{*+}$.
+ The cross section and spectra in the continuum together with the branching ratio and spectra in $\Upsilon(4S)$ decays
+ are measured.'
+ValidationInfo:
+  'Herwig 7 events using EvtGen for bottom and charm hadron decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Seuster:2005tr
+BibTeX: '@article{Seuster:2005tr,
+      author         = "Seuster, R. and others",
+      title          = "{Charm hadrons from fragmentation and B decays in e+ e-
+                        annihilation at s**(1/2) = 10.6-GeV}",
+      collaboration  = "Belle",
+      journal        = "Phys. Rev.",
+      volume         = "D73",
+      year           = "2006",
+      pages          = "032002",
+      doi            = "10.1103/PhysRevD.73.032002",
+      eprint         = "hep-ex/0506068",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "BELLE-PREPRINT-2005-23, KEK-PREPRINT-2005-34",
+      SLACcitation   = "%%CITATION = HEP-EX/0506068;%%"
+}'

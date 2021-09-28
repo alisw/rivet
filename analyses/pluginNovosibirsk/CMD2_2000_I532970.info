@@ -1,0 +1,34 @@
+Name: CMD2_2000_I532970
+Year: 2000
+Summary:  Cross section for $e^+e^-\to\pi^+\pi^+\pi^-\pi^+\pi^0$ between 1.28 and 1.38 GeV
+Experiment: CMD2
+Collider:  VEPP-2M
+InspireID: 532970
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B489 (2000) 125-130, 2000 
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+  'Measurement of the cross section for $e^+e^-\to\pi^+\pi^+\pi^-\pi^+\pi^0$ between 1.28 and 1.38 GeV.'
+Keywords:
+BibKey: Akhmetshin:2000wv
+BibTeX: '@article{Akhmetshin:2000wv,
+      author         = "Akhmetshin, R. R. and others",
+      title          = "{Study of the process e+ e- ---&gt; pi+ pi- pi+ pi- pi0 with
+                        CMD-2 detector}",
+      collaboration  = "CMD-2",
+      journal        = "Phys. Lett.",
+      volume         = "B489",
+      year           = "2000",
+      pages          = "125-130",
+      doi            = "10.1016/S0370-2693(00)00937-0",
+      eprint         = "hep-ex/0009013",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = HEP-EX/0009013;%%"
+}'

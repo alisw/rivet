@@ -1,0 +1,30 @@
+Name: JADE_1985_I213948
+Year: 1985
+Summary: Photon, $\pi^0$ and $\eta$ spectra in $e^+e^-$ collisions at 14, 22.5 and 34.4 GeV
+Experiment: JADE
+Collider: Petra
+InspireID: 213948
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Z.Phys.C 28 (1985) 343
+RunInfo: e+ e- to hadrons
+NeedCrossSection: yes
+Beams: [e+, e-]
+Energies: [14,22.5,34.4]
+Description:
+  'Measurement of the Photon, $\pi^0$ and $\eta$ spectra in $e^+e^-$ collisions at14, 22.5 and 34.4  GeV by the JADE experiment at Petra. N.B. The binning was not provided in the HepData entry and had to be deduced from the average values in the bins.'
+Keywords: []
+BibKey: Bartel:1985wn
+BibTeX: '@article{Bartel:1985wn,
+    author = "Bartel, W. and others",
+    collaboration = "JADE",
+    title = "{A Study of Photon Production in Hadronic $e^+ e^-$ Annihilation}",
+    reportNumber = "DESY-85-029",
+    doi = "10.1007/BF01413597",
+    journal = "Z. Phys. C",
+    volume = "28",
+    pages = "343",
+    year = "1985"
+}'

@@ -1,0 +1,55 @@
+Name: ATLAS_2018_I1705857
+Year: 2018
+Summary: ttbb at 13 TeV
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1705857
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Stewart Swift <stewart.patrick.swift@cern.ch>
+ - Tom Neep <tom.neep@cern.ch>
+ - Christian Gutschow <chris.g@cern.ch>
+References:
+ - submitted to JHEP
+ - arXiv:1811.12113 [hep-ex]
+Keywords:
+  - TTBAR
+  - TOP
+  - TTBB
+  - DILEPTON
+  - LEPTONS
+  - JETS
+  - BJETS
+RunInfo:
+ ttbb production at 13 TeV in dilepton and lepton+jets channel
+Luminosity_fb: 36.1
+NeedCrossSection: no
+Beams: [p+, p+]
+Energies: [13000]
+PtCuts: [25.,25.]
+Description:
+  'This paper presents measurements of $t\bar{t}$ production in association with additional $b$-jets in $pp$ collisions at the LHC 
+  at a centre-of-mass energy of 13 TeV. The data were recorded with the ATLAS detector and correspond to an integrated luminosity 
+  of 36.1 fb$^{-1}$. Fiducial cross-section measurements are performed in the dilepton and lepton-plus-jets $t\bar{t}$ decay channels.
+  Results are presented at particle level in the form of inclusive cross-sections of $t\bar{t}$ final states with three and four $b$-jets 
+  as well as differential cross-sections as a function of global event properties and properties of $b$-jet pairs. The measured inclusive
+  fiducial cross-sections generally exceed the $t\bar{t}b\bar{b}$ predictions from various next-to-leading-order matrix element calculations
+  matched to a parton shower but are compatible within the total uncertainties. The experimental uncertainties are smaller than the
+  uncertainties in the predictions. Comparisons of state-of-the-art theoretical predictions with the differential measurements are
+  shown and good agreement with data is found for most of them.'
+BibKey: Aaboud:2018eki
+BibTeX: '@article{Aaboud:2018eki,
+      author         = "Aaboud, Morad and others",
+      title          = "{Measurements of fiducial and differential cross-sections
+                        of $t\bar{t}$ production with additional heavy-flavour
+                        jets in proton-proton collisions at $\sqrt{s}$ = 13 TeV
+                        with the ATLAS detector}",
+      collaboration  = "ATLAS",
+      year           = "2018",
+      eprint         = "1811.12113",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-EP-2018-276",
+      SLACcitation   = "%%CITATION = ARXIV:1811.12113;%%"
+}'

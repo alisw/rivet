@@ -1,0 +1,65 @@
+BEGIN YODA_SCATTER2D_V2 /REF/ATLAS_2018_I1711114/d01-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.0016, up: 0.0016}, 'sys,Backgroundfit': {dn: -0.1, up: 0.1}, 'sys,Calorimeterjetenergy': {dn: -0.019, up: 0.076}, 'sys,Flavortagging': {dn: -0.042, up: 0.041}, 'sys,Theoreticalmodeling': {dn: -0.15, up: 0.15}, 'sys,Tracking': {dn: -0.0069, up: 0.03}, 'sys,UnfoldingMethod': {dn: -0.00099, up: 0.00099}}, 1: {stat: {dn: -0.0019, up: 0.0019}, 'sys,Backgroundfit': {dn: -0.13, up: 0.13}, 'sys,Calorimeterjetenergy': {dn: -0.1, up: 0.062}, 'sys,Flavortagging': {dn: -0.034, up: 0.034}, 'sys,Theoreticalmodeling': {dn: -0.23, up: 0.23}, 'sys,Tracking': {dn: -0.0092, up: 0.022}, 'sys,UnfoldingMethod': {dn: -0.0015, up: 0.0015}}, 2: {stat: {dn: -0.0017, up: 0.0017}, 'sys,Backgroundfit': {dn: -0.088, up: 0.088}, 'sys,Calorimeterjetenergy': {dn: -0.089, up: 0.02}, 'sys,Flavortagging': {dn: -0.018, up: 0.021}, 'sys,Theoreticalmodeling': {dn: -0.057, up: 0.057}, 'sys,Tracking': {dn: -0.056, up: 0.0}, 'sys,UnfoldingMethod': {dn: -0.00035, up: 0.00035}}, 3: {stat: {dn: -0.0018, up: 0.0018}, 'sys,Backgroundfit': {dn: -0.063, up: 0.063}, 'sys,Calorimeterjetenergy': {dn: -0.024, up: 0.039}, 'sys,Flavortagging': {dn: -0.0084, up: 0.0092}, 'sys,Theoreticalmodeling': {dn: -0.17, up: 0.17}, 'sys,Tracking': {dn: -0.01, up: 0.0075}, 'sys,UnfoldingMethod': {dn: -5.4e-05, up: 5.4e-05}}, 4: {stat: {dn: -0.0013, up: 0.0013}, 'sys,Backgroundfit': {dn: -0.039, up: 0.04}, 'sys,Calorimeterjetenergy': {dn: -0.0067, up: 0.036}, 'sys,Flavortagging': {dn: -0.013, up: 0.013}, 'sys,Theoreticalmodeling': {dn: -0.035, up: 0.035}, 'sys,Tracking': {dn: -0.0051, up: 0.018}, 'sys,UnfoldingMethod': {dn: -1.4e-06, up: 1.4e-06}}, 5: {stat: {dn: -0.0013, up: 0.0013}, 'sys,Backgroundfit': {dn: -0.066, up: 0.065}, 'sys,Calorimeterjetenergy': {dn: -0.026, up: 0.018}, 'sys,Flavortagging': {dn: -0.017, up: 0.014}, 'sys,Theoreticalmodeling': {dn: -0.12, up: 0.12}, 'sys,Tracking': {dn: -0.0075, up: 0.012}, 'sys,UnfoldingMethod': {dn: -2.3e-06, up: 2.3e-06}}}
+
+IsRef: 1
+Path: /REF/ATLAS_2018_I1711114/d01-x01-y01
+Title: doi:10.17182/hepdata.85697.v1/t1
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+2.250000e-01	2.500000e-02	2.500000e-02	2.980000e+00	1.862153e-01	2.021399e-01
+2.750000e-01	2.500000e-02	2.500000e-02	3.510000e+00	2.846867e-01	2.743900e-01
+3.500000e-01	5.000000e-02	5.000000e-02	2.640000e+00	1.495895e-01	1.087980e-01
+4.500000e-01	5.000000e-02	5.000000e-02	1.740000e+00	1.833543e-01	1.858336e-01
+5.500000e-01	5.000000e-02	5.000000e-02	1.310000e+00	5.465885e-02	6.793887e-02
+6.500000e-01	5.000000e-02	5.000000e-02	1.060000e+00	1.406376e-01	1.388909e-01
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/ATLAS_2018_I1711114/d02-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.0016, up: 0.0016}, 'sys,Backgroundfit': {dn: -0.045, up: 0.045}, 'sys,Calorimeterjetenergy': {dn: -0.0072, up: 0.033}, 'sys,Flavortagging': {dn: -0.0021, up: 0.0022}, 'sys,Theoreticalmodeling': {dn: -0.15, up: 0.15}, 'sys,Tracking': {dn: -0.0, up: 0.028}, 'sys,UnfoldingMethod': {dn: -0.00015, up: 0.00015}}, 1: {stat: {dn: -0.0016, up: 0.0016}, 'sys,Backgroundfit': {dn: -0.028, up: 0.027}, 'sys,Calorimeterjetenergy': {dn: -0.024, up: 1.1e-05}, 'sys,Flavortagging': {dn: -0.0029, up: 0.0018}, 'sys,Theoreticalmodeling': {dn: -0.021, up: 0.021}, 'sys,Tracking': {dn: -0.02, up: 0.00098}, 'sys,UnfoldingMethod': {dn: -0.00019, up: 0.00019}}, 2: {stat: {dn: -0.0015, up: 0.0015}, 'sys,Backgroundfit': {dn: -0.04, up: 0.041}, 'sys,Calorimeterjetenergy': {dn: -0.018, up: 0.0017}, 'sys,Flavortagging': {dn: -0.0011, up: 0.0014}, 'sys,Theoreticalmodeling': {dn: -0.059, up: 0.059}, 'sys,Tracking': {dn: -0.017, up: 0.0012}, 'sys,UnfoldingMethod': {dn: -3.7e-06, up: 3.7e-06}}, 3: {stat: {dn: -0.0014, up: 0.0014}, 'sys,Backgroundfit': {dn: -0.053, up: 0.054}, 'sys,Calorimeterjetenergy': {dn: -0.031, up: 0.0}, 'sys,Flavortagging': {dn: -0.0023, up: 0.0044}, 'sys,Theoreticalmodeling': {dn: -0.077, up: 0.077}, 'sys,Tracking': {dn: -0.017, up: 0.0}, 'sys,UnfoldingMethod': {dn: -0.00018, up: 0.00018}}, 4: {stat: {dn: -0.0017, up: 0.0017}, 'sys,Backgroundfit': {dn: -0.035, up: 0.035}, 'sys,Calorimeterjetenergy': {dn: -0.0, up: 0.054}, 'sys,Flavortagging': {dn: -0.003, up: 0.0016}, 'sys,Theoreticalmodeling': {dn: -0.15, up: 0.15}, 'sys,Tracking': {dn: -0.0, up: 0.031}, 'sys,UnfoldingMethod': {dn: -0.00014, up: 0.00014}}}
+
+IsRef: 1
+Path: /REF/ATLAS_2018_I1711114/d02-x01-y01
+Title: doi:10.17182/hepdata.85697.v1/t2
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.000000e-01	1.000000e-01	1.000000e-01	1.140000e+00	1.567923e-01	1.624975e-01
+3.000000e-01	1.000000e-01	1.000000e-01	9.150000e-01	4.703197e-02	3.430447e-02
+5.000000e-01	1.000000e-01	1.000000e-01	8.650000e-01	7.548152e-02	7.190647e-02
+7.000000e-01	1.000000e-01	1.000000e-01	9.630000e-01	9.997641e-02	9.416131e-02
+9.000000e-01	1.000000e-01	1.000000e-01	1.110000e+00	1.540679e-01	1.661550e-01
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/ATLAS_2018_I1711114/d03-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.0018, up: 0.0018}, 'sys,Backgroundfit': {dn: -0.13, up: 0.13}, 'sys,Calorimeterjetenergy': {dn: -0.067, up: 0.0056}, 'sys,Flavortagging': {dn: -0.0065, up: 0.0051}, 'sys,Theoreticalmodeling': {dn: -0.11, up: 0.11}, 'sys,Tracking': {dn: -0.052, up: 0.0}, 'sys,UnfoldingMethod': {dn: -0.014, up: 0.014}}, 1: {stat: {dn: -0.0016, up: 0.0016}, 'sys,Backgroundfit': {dn: -0.074, up: 0.074}, 'sys,Calorimeterjetenergy': {dn: -0.0058, up: 0.11}, 'sys,Flavortagging': {dn: -0.012, up: 0.008}, 'sys,Theoreticalmodeling': {dn: -0.079, up: 0.079}, 'sys,Tracking': {dn: -0.0, up: 0.073}, 'sys,UnfoldingMethod': {dn: -0.029, up: 0.029}}, 2: {stat: {dn: -0.0018, up: 0.0018}, 'sys,Backgroundfit': {dn: -0.053, up: 0.05}, 'sys,Calorimeterjetenergy': {dn: -0.006, up: 0.064}, 'sys,Flavortagging': {dn: -0.005, up: 0.0079}, 'sys,Theoreticalmodeling': {dn: -0.16, up: 0.16}, 'sys,Tracking': {dn: -0.0, up: 0.056}, 'sys,UnfoldingMethod': {dn: -0.049, up: 0.049}}, 3: {stat: {dn: -0.0016, up: 0.0016}, 'sys,Backgroundfit': {dn: -0.13, up: 0.12}, 'sys,Calorimeterjetenergy': {dn: -0.012, up: 0.085}, 'sys,Flavortagging': {dn: -0.0059, up: 0.01}, 'sys,Theoreticalmodeling': {dn: -0.19, up: 0.19}, 'sys,Tracking': {dn: -0.0, up: 0.034}, 'sys,UnfoldingMethod': {dn: -0.089, up: 0.089}}, 4: {stat: {dn: -0.0018, up: 0.0018}, 'sys,Backgroundfit': {dn: -0.064, up: 0.063}, 'sys,Calorimeterjetenergy': {dn: -0.098, up: 0.0}, 'sys,Flavortagging': {dn: -0.009, up: 0.007}, 'sys,Theoreticalmodeling': {dn: -0.041, up: 0.041}, 'sys,Tracking': {dn: -0.056, up: 0.0}, 'sys,UnfoldingMethod': {dn: -0.049, up: 0.049}}}
+
+IsRef: 1
+Path: /REF/ATLAS_2018_I1711114/d03-x01-y01
+Title: doi:10.17182/hepdata.85697.v1/t3
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+5.000000e-02	5.000000e-02	5.000000e-02	1.460000e+00	1.908782e-01	1.710456e-01
+1.500000e-01	5.000000e-02	5.000000e-02	2.580000e+00	1.128636e-01	1.733596e-01
+2.500000e-01	5.000000e-02	5.000000e-02	2.190000e+00	1.757107e-01	1.944187e-01
+3.500000e-01	5.000000e-02	5.000000e-02	2.140000e+00	2.471889e-01	2.586592e-01
+4.500000e-01	5.000000e-02	5.000000e-02	1.620000e+00	1.449215e-01	9.001800e-02
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/ATLAS_2018_I1711114/d04-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.0014, up: 0.0014}, 'sys,Backgroundfit': {dn: -0.0059, up: 0.0059}, 'sys,Calorimeterjetenergy': {dn: -0.0029, up: 0.0031}, 'sys,Flavortagging': {dn: -0.0014, up: 0.0012}, 'sys,Theoreticalmodeling': {dn: -0.014, up: 0.014}, 'sys,Tracking': {dn: -0.00032, up: 0.0013}, 'sys,UnfoldingMethod': {dn: -0.0017, up: 0.0017}}, 1: {stat: {dn: -0.0017, up: 0.0017}, 'sys,Backgroundfit': {dn: -0.025, up: 0.025}, 'sys,Calorimeterjetenergy': {dn: -0.0044, up: 0.033}, 'sys,Flavortagging': {dn: -0.016, up: 0.016}, 'sys,Theoreticalmodeling': {dn: -0.046, up: 0.046}, 'sys,Tracking': {dn: -0.0021, up: 0.02}, 'sys,UnfoldingMethod': {dn: -0.0059, up: 0.0059}}, 2: {stat: {dn: -0.0019, up: 0.0019}, 'sys,Backgroundfit': {dn: -0.019, up: 0.019}, 'sys,Calorimeterjetenergy': {dn: -0.018, up: 0.014}, 'sys,Flavortagging': {dn: -0.0011, up: 0.0045}, 'sys,Theoreticalmodeling': {dn: -0.051, up: 0.051}, 'sys,Tracking': {dn: -0.0091, up: 0.0049}, 'sys,UnfoldingMethod': {dn: -0.0005, up: 0.0005}}, 3: {stat: {dn: -0.0018, up: 0.0018}, 'sys,Backgroundfit': {dn: -0.012, up: 0.012}, 'sys,Calorimeterjetenergy': {dn: -0.014, up: 0.0083}, 'sys,Flavortagging': {dn: -0.0071, up: 0.0069}, 'sys,Theoreticalmodeling': {dn: -0.018, up: 0.018}, 'sys,Tracking': {dn: -0.01, up: 0.0035}, 'sys,UnfoldingMethod': {dn: -0.00077, up: 0.00077}}, 4: {stat: {dn: -0.0015, up: 0.0015}, 'sys,Backgroundfit': {dn: -0.0044, up: 0.0044}, 'sys,Calorimeterjetenergy': {dn: -0.0049, up: 0.0029}, 'sys,Flavortagging': {dn: -0.002, up: 0.0018}, 'sys,Theoreticalmodeling': {dn: -0.014, up: 0.014}, 'sys,Tracking': {dn: -0.0017, up: 0.00044}, 'sys,UnfoldingMethod': {dn: -0.00015, up: 0.00015}}}
+
+IsRef: 1
+Path: /REF/ATLAS_2018_I1711114/d04-x01-y01
+Title: doi:10.17182/hepdata.85697.v1/t4
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+-2.600000e+00	4.000000e-01	4.000000e-01	1.230000e-01	1.568861e-02	1.576071e-02
+-2.050000e+00	1.500000e-01	1.500000e-01	8.860000e-01	5.530344e-02	6.725846e-02
+-1.700000e+00	2.000000e-01	2.000000e-01	7.760000e-01	5.808511e-02	5.662261e-02
+-1.300000e+00	2.000000e-01	2.000000e-01	4.800000e-01	2.860495e-02	2.450679e-02
+-5.500000e-01	5.500000e-01	5.500000e-01	1.210000e-01	1.576491e-02	1.514847e-02
+END YODA_SCATTER2D_V2

@@ -1,0 +1,46 @@
+Name: CMS_2018_I1620050
+Year: 2018
+Summary: Measurement of normalized differential ttbar cross sections in the dilepton channel from pp collisions at 13 TeV 
+Experiment: CMS
+Collider: LHC
+InspireID: 1620050
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Youn Jung Roh <youn.jung.roh@cern.ch>,
+ - Suyong Choi <su.yong.choi@cern.ch>, 
+ - Junghwan Goh <junghwan.goh@cern.ch>, 
+ - Dajeong Jeon <dajeong.jeon@cern.ch>, 
+ - Jason S. H. Lee <Jason.Lee@cern.ch>
+References:
+ - JHEP 1804 (2018) 060
+ - DOI:10.1007/JHEP04(2018)060
+ - arXiv:1708.07638
+ - https://www.hepdata.net/record/81686
+ - CMS-TOP-16-007
+RunInfo:
+  pp QCD interactions at $\sqrt{s} = 13$ TeV. Data collected by CMS during the year 2015. Selection of dilepton top pair candidate events at particle level. 
+NumEvents: 1000000
+NeedCrossSection: no
+Luminosity: 2.1 /fb
+Beams: [p+, p+]
+Energies: [13000]
+Description:
+  'Abstract:
+
+Normalized differential cross sections for top quark pair production are measured in the dilepton ($e^{+}e^{-}$, $\mu^{+}\mu^{-}$, and $\mu^{\mp}e^{\pm}$) decay channels in proton-proton collisions at a center-of-mass energy of 13TeV.  The measurements are performed with data corresponding to an integrated luminosity of 2.1$fb^{-1}$ using the CMS detector at the LHC. The cross sections are measured differentially as a function of the kinematic properties of the leptons, jets from bottom quark hadronization, top quarks, and top quark pairs at the particle and parton levels. The results are compared to several Monte Carlo generators that implement calculations up to next-to-leading order in perturbative quantum chromodynamics interfaced with parton showering, and also to fixed-order theoretical calculations of top quark pair production up to next-to-next-to-leading order.
+
+  Rivet:
+  
+This analysis is to be run on $\text{t}\bar{\text{t}}$ Monte Carlo. The particle-level phase space is defined using the following definitions:
+\begin{description}
+\item[lepton]: an electron or muon with $p_\text{T}>30\,\text{GeV}$ and $|\eta|<2.4$, dressed within a cone of radius 0.1,
+\item[jet]: a jet is reconstructed with the anti-$k_t$ algorithm with a radius of 0.4, after removing the neutrinos and dressed leptons, with $p_\text{T]>30\,\text{GeV}$ and $|\eta|<2.4$,
+\item[b-jet]: a jet that contains a B-hadron.  
+\end{description}
+
+A W boson at the particle level is defined by combining a dressed lepton and a neutrino. In each event, a pair of particle-level W bosons is chosen among the possible combinations such that the sum of the absolute values of the invariant mass differences with respect to the W boson mass is minimal. Similarly, a top quark at the particle level is defined by combining a particle-level W boson and a b jet. The combination of a W boson and a b jet with the minimum invariant mass difference from the correct top quark mass is selected.
+'  
+
+ReleaseTests:
+ - $A LHC-13-Top-All

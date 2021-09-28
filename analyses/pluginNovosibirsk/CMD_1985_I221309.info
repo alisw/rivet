@@ -1,0 +1,31 @@
+Name: CMD_1985_I221309
+Year: 1985
+Summary: Cross section for $e^+e^-\to \pi^+\pi^-$ for energies below 1.4 GeV
+Experiment: CMD
+Collider: VEPP-2M
+InspireID: 221309
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Nucl.Phys. B256 (1985) 365-384, 1985  
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+Description:
+  'Measurement of the cross section for $e^+e^-\to \pi^+\pi^-$ at energies below 1.4 GeV.'
+Keywords: []
+BibKey: Barkov:1985ac
+BibTeX: '@article{Barkov:1985ac,
+      author         = "Barkov, L. M. and others",
+      title          = "{Electromagnetic Pion Form-Factor in the Timelike
+                        Region}",
+      journal        = "Nucl. Phys.",
+      volume         = "B256",
+      year           = "1985",
+      pages          = "365-384",
+      doi            = "10.1016/0550-3213(85)90399-2",
+      SLACcitation   = "%%CITATION = NUPHA,B256,365;%%"
+}'

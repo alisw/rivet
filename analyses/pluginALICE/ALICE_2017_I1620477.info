@@ -1,0 +1,37 @@
+Name: ALICE_2017_I1620477
+Year: 2017
+Summary: Invariant cross section of neutral pions at mid-rapidity in $8\,$TeV pp collisions
+Experiment: ALICE
+Collider: LHC
+InspireID: 1620477
+Status: VALIDATED
+Authors:
+  - Hendrik Poppenborg <hendrik.poppenborg@cern.ch>
+References:
+  - "Eur. Phys. J. C (2018) 78: 263"
+  - 10.1140/epjc/s10052-018-5612-8
+  - arXiv:hep-ex/1708.08745
+Beams: [p+, p+]
+Energies: [8000]
+Description:
+  Transverse momentum spectra of neutral pions and $\eta$ mesons measured at
+  $0.3<p_T<35~GeV/c$ and $0.5<p_T<35~GeV/c$, respectively, and the ratio $\pi^{0}/\eta$,
+  obtained at mid-rapidity in $pp$ collisions at $\sqrt(s) = 8\,$TeV with ALICE at the LHC.
+BibKey: Acharya:2017tlv
+BibTeX: '@article{Acharya:2017tlv,
+      author         = "Acharya, Shreyasi and others",
+      title          = "{$\pi^0$ and $\eta$ meson production in proton-proton
+                        collisions at $\sqrt{s}=8$ TeV}",
+      collaboration  = "ALICE",
+      journal        = "Eur. Phys. J.",
+      volume         = "C78",
+      year           = "2018",
+      number         = "3",
+      pages          = "263",
+      doi            = "10.1140/epjc/s10052-018-5612-8",
+      eprint         = "1708.08745",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-EP-2017-216",
+      SLACcitation   = "%%CITATION = ARXIV:1708.08745;%%"
+}'

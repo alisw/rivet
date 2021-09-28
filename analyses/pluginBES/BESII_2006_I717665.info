@@ -1,0 +1,35 @@
+Name: BESII_2006_I717665
+Year: 2006
+Summary: Measurement of $R$ for energies betweenv 3.65 and 3.773 GeV
+Experiment: BESII
+Collider: BEPC
+InspireID: 717665
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B641 (2006) 145-155, 2006 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: yes
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$ and the hadronic cross section in $e^+e^-$ collisions by BESII for energies between 3.65 and 3.773, in the vicinity of the $\psi(3770)$.
+   The muonic cross section is also outputted to the yoda file
+   so that ratio $R$ can be recalcuated if runs are combined.'
+BibKey: Ablikim:2006aj
+BibTeX: '@article{Ablikim:2006aj,
+      author         = "Ablikim, M. and others",
+      title          = "{Measurements of the cross-sections for e+ e- ---&gt;
+                        hadrons at 3.650-GeV, 3.6648-GeV, 3.773-GeV and the
+                        branching fraction for psi(3770) ---&gt; non - D anti-D}",
+      collaboration  = "BES",
+      journal        = "Phys. Lett.",
+      volume         = "B641",
+      year           = "2006",
+      pages          = "145-155",
+      doi            = "10.1016/j.physletb.2006.08.049",
+      eprint         = "hep-ex/0605105",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = HEP-EX/0605105;%%"
+}'

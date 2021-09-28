@@ -1,0 +1,51 @@
+Name: ALICE_2019_I1723697
+Year: 2019
+Summary: Multi-particle correlations in pp, pPb, XeXe and PbPb
+Experiment: ALICE
+Collider: LHC
+InspireID: 1723697
+Status: UNVALIDATED
+Authors:
+ - Christian Bierlich <christian.bierlich@thep.lu.se>
+References:
+- Phys.Rev.Lett.123(2019)no.14,142301
+- arXiv:1903.01790
+RunInfo: Minimum bias events for either system.
+NeedCrossSection: no
+Beams: [[p+, p+],[p+, Pb],[Xe, Xe],[Pb, Pb]]
+Options:
+ - cent=GEN
+ - beam=pp,pPb,XeXe,PbPb
+Energies: [13000,[4000,326560],[325338,325338],1044784]
+Description:
+  'Multiparticle correlations and flow coefficients as function of number of charged particles in pp (13 TeV), pPb (5.02 TeV), XeXe (5.44 TeV) and PbPb (5.02 TeV).
+   Be aware that in order to apply the high multiplicity trigger in pp, a calibration run must first be performed, using
+   the analysis ALICE_2015_PPCentrality, and the resulting file pre-loaded to Rivet. Furthermore, the analysis option beam=<beam-type> (pp,pPb,XeXe,PbPb) must be
+   used when running the analysis, if multiple runs should be merged by rivet-merge afterwards.'
+Keywords: []
+ReleaseTests:
+ - $A LHC-5020-pPb :beam=pPb
+ - $A-2 LHC-5044-XeXe :beam=XeXe
+ - $A-3 LHC-5020-PbPb :beam=PbPb
+BibKey: Acharya:2019vdf
+BibTeX: '@article{Acharya:2019vdf,
+      author         = "Acharya, Shreyasi and others",
+      title          = "{Investigations of Anisotropic Flow Using Multiparticle
+                        Azimuthal Correlations in pp, p-Pb, Xe-Xe, and Pb-Pb
+                        Collisions at the LHC}",
+      collaboration  = "ALICE",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "123",
+      year           = "2019",
+      number         = "14",
+      pages          = "142301",
+      doi            = "10.1103/PhysRevLett.123.142301",
+      eprint         = "1903.01790",
+      archivePrefix  = "arXiv",
+      primaryClass   = "nucl-ex",
+      reportNumber   = "CERN-EP-2019-033",
+      SLACcitation   = "%%CITATION = ARXIV:1903.01790;%%"
+}'
+ToDo:
+ - Implement symmetric cumulants and 3 subevents. 
+

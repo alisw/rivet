@@ -1,0 +1,52 @@
+Name: ATLAS_2020_I1790439
+Year: 2020
+Summary: Higgs to 4-lepton at 13 TeV
+Experiment: ATLAS
+Collider: ATLAS
+InspireID: 1790439
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Rongkun Wang <rongkun.wang@cern.ch>
+ - Neil Warrack <neil.warrack@cern.ch>
+ - Roger Naranjo
+References:
+- 'arXiv:2004.03969'
+- submitted to EPJC
+RunInfo: routine expects Higgs to 4l processes including ggH, VBF, VH and ttH. The total production cross section including tau decays should be passed and the routine applies branching ratios.
+Beams: [p+, p+]
+Energies: [13000]
+Luminosity_fb: 139
+Description:
+    'Inclusive and differential fiducial cross sections of the Higgs boson are measured in the $H \to ZZ^* \to 4\ell$ ($\ell = e, \mu$) decay
+    channel. The results are based on proton−proton collision data produced at the Large Hadron Collider at a centre-of-mass energy
+    of 13 TeV and recorded by the ATLAS detector from 2015 to 2018, equivalent to an integrated luminosity of 139 fb$^{-1}$. The
+    inclusive fiducial cross section for the  $H \to ZZ^* \to 4\ell$ process is measured to be  $\sigma_\text{fid} = 3.28 \pm 0.32$ fb, in
+    agreement with the Standard Model prediction of  $\sigma_\text{fid, SM} = 3.41 \pm 0.18$ fb. Differential fiducial cross sections are
+    measured for a variety of observables which are sensitive to the production and decay of the Higgs boson. All measurements are
+    in agreement with the Standard Model predictions. The results are used to constrain anomalous Higgs boson interactions with
+    Standard Model particles. For fiducial cross sections, different bin represents cross section measurement in different channels.
+    For opposite-flavor cross sections, the branching ratio of Higgs to $4\ell$ of 1.18e$^{-4}$ is used while for same-flavor cross sections,
+    1.3e$^{-4}$ is used, which takes interference into consideration. For all other cross sections, a combined branching ratio of
+    1.24e$^{-4}$ is used.  In the routine, a Matrix Element calculation based on LO MG is used to assist the pairing of leptons.
+    The Higgs to $ZZ$ branching ratio of 0.02641 is multiplied by the $ZZ$ to four lepton branching ratio 0.004736842 and used to scale
+    all the histograms except for the $\mathtt{xs\_flavor}$ histograms where bins are scaled by the Higgs to four same flavour leptons branching
+    ratio 0.00013 or the Higgs to $ee\mu\mu$ branching ratio 0.000118.'
+Keywords:
+ - HIGGS
+ - LEPTONS
+ - MULTIBOSON
+BibKey: ATLAS:2020wny
+BibTeX:
+  '@article{ATLAS:2020wny,
+    archivePrefix = "arXiv",
+    collaboration = "ATLAS",
+    eprint = "2004.03969",
+    month = "4",
+    primaryClass = "hep-ex",
+    reportNumber = "CERN-EP-2020-035",
+    title = "{Measurements of the Higgs boson inclusive and differential fiducial cross sections in the 4$\ell$ decay channel at $\sqrt{s}$ = 13 TeV}",
+    year = "2020"
+  }'
+ReleaseTests:
+ - $A pp-13000-llll

@@ -1,0 +1,18 @@
+Name: MC_WKTSPLITTINGS
+Summary: Monte Carlo validation observables for $k_\perp$ splitting scales in $W[\ell \, \nu]$ + jets events
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Frank Siegert <frank.siegert@cern.ch>
+ - Christian Gutschow <chris.g@cern.ch>
+References:
+RunInfo:
+  $\ell \, \nu$ + jets analysis.
+Options:
+ - LMODE=EL,MU
+ - SCHEME=DRESSED,BARE
+PtCuts: [0]
+Description:
+  Monte Carlo validation observables for $k_\perp$ splitting scales in $W[\ell \, \nu]$ + jets events
+  60 GeV $<m_W<$ 100 GeV cut applied.
+NeedCrossSection: yes

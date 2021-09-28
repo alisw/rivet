@@ -1,0 +1,33 @@
+<h1 id="installation">Installation</h1>
+<p>The easiest way to start using Rivet is via the Docker system (see https://www.docker.com/), which is like a lightweight Linux virtual machine that's easily installed and run on Mac, Linux and Windows machines. See the dedicated <a href="docker.md">Docker</a> tutorial page for more detail.</p>
+<p>The rest of these instructions are mainly aimed at users who want to natively install and run a release of Rivet on their machine.</p>
+<p>GettingStartedForDevelopers has some additional or replacement steps for people wishing to check out the development version from the repository and build from there.</p>
+<h2 id="native-installation-of-rivet-and-all-dependencies">Native installation of Rivet and all dependencies</h2>
+<p>The simplest Rivet installation uses a &quot;bootstrap&quot; script to install Rivet and all its dependencies from release tarballs.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>Python header files are required. On Ubuntu and other Debian Linux derivatives, you can use this command to install the necessary files system-wide: <code>sudo apt-get install python-dev</code>. You will also need a C++ compiler capable of building the C++14 dialect: on systems like CERN lxplus you can get such an environment (and also a fixed LaTeX for plotting) with:</p>
+<pre><code>source /cvmfs/sft.cern.ch/lcg/releases/LCG_96/Python/2.7.16/x86_64-centos7-gcc62-opt/Python-env.sh
+export PATH=/cvmfs/sft.cern.ch/lcg/external/texlive/2016/bin/x86_64-linux:$PATH</code></pre>
+<h3 id="installation-1">Installation</h3>
+<ol style="list-style-type: decimal">
+<li><p><strong>Download the bootstrap script</strong> into a temporary working directory, and make it executable:</p>
+<pre><code>  cd /scratch/rivet
+  wget https://gitlab.com/hepcedar/rivetbootstrap/raw/3.1.0/rivet-bootstrap
+  chmod +x rivet-bootstrap</code></pre>
+<p>(Replace the version string as appropriate if you want to install other versions of Rivet.)</p></li>
+<li><p><strong>Check the options.</strong> Look at the header of the script to see all variables which you can set, e.g. to skip installation of certain dependencies if they are available in your system:</p>
+<pre><code>  less rivet-bootstrap ## and read...</code></pre></li>
+<li><p><strong>Run the script.</strong> By default it will install to <code>$PWD/local</code>, where <code>$PWD</code> is the current directory. If you need to change that, specify the corresponding values on the command line. Examples:</p>
+<pre><code>./rivet-bootstrap
+  # or, e.g.
+INSTALL_PREFIX=$HOME/software/rivet MAKE=&quot;make -j8&quot; ./rivet-bootstrap</code></pre>
+<p>We will refer to the installation root path as <code>$PREFIX</code>.</p></li>
+</ol>
+<h2 id="setting-up-the-environment">Setting up the environment</h2>
+<p>After the script grinds away for a while, it will tell you that it is finished and how to set up a runtime environment (similar to that used inside the build script) for running Rivet. A sourceable rivetenv.(c)sh script is provided for (c)sh shell users to help set up this environment. Here's how to set up the environment and then test the <code>rivet</code> program's help feature and analysis listing:</p>
+<pre><code>  source $PREFIX/rivetenv.sh
+  rivet --help
+  rivet --list-analyses</code></pre>
+<p>If that works, everything is installed correctly. If you are using the <code>bash</code> shell in your terminal, then Rivet will offer you programmable tab completion: try typing {{{rivet}}} and pressing the Tab key!</p>
+<p><strong>You may wish to add the environment variable settings to your <code>~/.bashrc</code> shell config file, so that Rivet will work without needing any special session setup.</strong></p>
+<p>You can now check out the FirstRivetRun guide.</p>

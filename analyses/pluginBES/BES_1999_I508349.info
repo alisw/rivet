@@ -1,0 +1,38 @@
+Name: BES_1999_I508349
+Year: 1999
+Summary: Charm cross sections and spectra at 4.03 and 4.14 GeV
+Experiment: BES
+Collider: BEPC
+InspireID: 508349
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D62 (2000) 012002
+RunInfo: e+e- to hadrons
+Beams: [e+, e-]
+Energies: [4.03,4.14]
+Description:
+  'Measurement of the total cvharm cross section, together with the $D^0$, $D^+$ rates and spectra at 4.03 and 4.14 GeV by the BES collaboration.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Bai:1999tv
+BibTeX: '@article{Bai:1999tv,
+      author         = "Bai, J. Z. and others",
+      title          = "{Measurement of the inclusive charm cross-section at
+                        4.03-GeV and 4.14-GeV}",
+      collaboration  = "BES",
+      journal        = "Phys. Rev.",
+      volume         = "D62",
+      year           = "2000",
+      pages          = "012002",
+      doi            = "10.1103/PhysRevD.62.012002",
+      eprint         = "hep-ex/9910016",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "SLAC-REPRINT-1999-089",
+      SLACcitation   = "%%CITATION = HEP-EX/9910016;%%"
+}'

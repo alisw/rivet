@@ -1,0 +1,40 @@
+Name: ATLAS_2019_I1725190
+Year: 2019
+Summary: Dilepton mass spectrum in 13 TeV pp collisions with 139/fb Run 2 dataset
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1725190
+Status: VALIDATED SINGLEWEIGHT NOREENTRY
+Reentrant: false
+Authors:
+ - Andy Buckley <andy.buckley@cern.ch>
+References:
+ - 'Phys.Lett. B796 (2019) 68-87'
+ - 'DOI:10.1016/j.physletb.2019.07.016'
+ - 'arXiv:1903.06248'
+RunInfo: Dilepton events, either full process, BSM signal-only, or signal + SM interference.
+NeedCrossSection: yes
+Beams: [p+, p+]
+Energies: [[6500,6500]]
+Luminosity_fb: 139
+Description:
+  'A search for high-mass dielectron and dimuon resonances in the mass range of 250 GeV to
+   6 TeV. Functional forms have been fitted to the components of Crystal Ball + Gaussian
+   dilepton invariant-mass distribution smearing functions for electrons and muons separately,
+   which are encoded in this analysis to allow particle-level MC to be compared to the
+   reco-level experimental data.'
+Keywords: [dilepton]
+BibKey: Aad:2019fac
+BibTeX: '@article{Aad:2019fac,
+      author         = "Aad, Georges and others",
+      title          = "{Search for high-mass dilepton resonances using
+                        139~fb$^{-1}$ of $pp$ collision data collected at
+                        $\sqrt{s}=$13 TeV with the ATLAS detector}",
+      collaboration  = "ATLAS",
+      year           = "2019",
+      eprint         = "1903.06248",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-EP-2019-030",
+      SLACcitation   = "%%CITATION = ARXIV:1903.06248;%%"
+}'

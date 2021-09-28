@@ -1,0 +1,32 @@
+Name: DESY147_1978_I131524
+Year: 1978
+Summary: Measurement of $R$ for energies between 9.41 and 10.63 GeV
+Experiment: DESY147
+Collider: DORIS
+InspireID: 131524
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B78 (1978) 360-363, 1978 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: no
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$ in $e^+e^-$ collisions for energies between 9.41 and 9.51, and 9.98 and 10.63 GeV.
+   The individual hadronic and muonic cross sections are also outputted to the yoda file
+   so that ratio $R$ can be recalcuated if runs are combined.'
+Keywords: []
+BibKey: Bienlein:1978bg
+BibTeX: '@article{Bienlein:1978bg,
+      author         = "Bienlein, J. K. and others",
+      title          = "{Observation of a Narrow Resonance at 10.02-GeV in e+ e-
+                        Annihilations}",
+      journal        = "Phys. Lett.",
+      volume         = "78B",
+      year           = "1978",
+      pages          = "360-363",
+      doi            = "10.1016/0370-2693(78)90040-0",
+      reportNumber   = "DESY-78-45",
+      SLACcitation   = "%%CITATION = PHLTA,78B,360;%%"
+}'

@@ -1,0 +1,35 @@
+Name: BELLE_2010_I835104
+Year: 2010
+Summary: Measurement of the mass $m_X$ produced in $B\to\eta X_s$
+Experiment: BELLE
+Collider: KEKB
+InspireID: 835104
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uK>
+References:
+ - Phys.Rev.Lett. 105 (2010) 191803
+RunInfo: Any process producing Upsilon(4S), originally e+e-
+Description:
+  'Measurement of the mass $m_X$ produced in $B\to\eta X_s$ where the $\eta$ meson has momentum $2<p$ GeV in the $\Upsilon(4S)$ rest frame.'
+ValidationInfo:
+  'Herwig 7 events using EvtGen for the decays.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Nishimura:2009ae
+BibTeX: '@article{Nishimura:2009ae,
+      author         = "Nishimura, K. and others",
+      title          = "{First Measurement of Inclusive $B \to X_s \eta$ Decays}",
+      collaboration  = "Belle",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "105",
+      year           = "2010",
+      pages          = "191803",
+      doi            = "10.1103/PhysRevLett.105.191803",
+      eprint         = "0910.4751",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "BELLE-PREPRINT-2010-19, KEK-PREPRINT-2010-30",
+      SLACcitation   = "%%CITATION = ARXIV:0910.4751;%%"
+}'

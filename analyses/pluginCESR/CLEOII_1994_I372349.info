@@ -1,0 +1,36 @@
+Name: CLEOII_1994_I372349
+Year: 1994
+Summary:  Spectra for  $D_1(2420)^0$ and $D_2^*(2460)^0$
+Experiment: CLEOII
+Collider: CESR
+InspireID: 372349
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B331 (1994) 236-244
+RunInfo: 
+NeedCrossSection: no
+Beams: [e-, e+]
+Energies: [10.58]
+Description:
+  'Measurement of the scaled momentum spectra for $D_1(2420)^0$ and  $D^*_2(2460)^0$ mesons at 10.58 GeV.'
+BibKey: Avery:1994yc
+BibTeX: '@article{Avery:1994yc,
+      author         = "Avery, P. and others",
+      title          = "{Production and decay of D$_1$(2420)$^0$ and
+                        D$_2^*$(2460)$^0$}",
+      collaboration  = "CLEO",
+      journal        = "Phys. Lett.",
+      volume         = "B331",
+      year           = "1994",
+      pages          = "236-244",
+      doi            = "10.1016/0370-2693(94)01498-2,
+                        10.1016/0370-2693(94)90968-7",
+      note           = "[Erratum: Phys. Lett.B342,453(1995)]",
+      eprint         = "hep-ph/9403359",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ph",
+      reportNumber   = "CLNS-94-1280, CLEO-94-10, CLNS94-1280",
+      SLACcitation   = "%%CITATION = HEP-PH/9403359;%%"
+}'

@@ -1,0 +1,32 @@
+Name: DELPHI_1996_I420528
+Year: 1996
+Summary: Spectra for $K^{*0}$ and $\Phi$ production in hadronic $Z^0$ decays
+Experiment: DELPHI
+Collider: LEP
+InspireID: 420528
+Status: VALIDATED
+Authors:
+ - Peter Richardson <Peter.Richardson@durham.ac.uk>
+References:
+ - Z.Phys. C73 (1996) 61-72, 1996 
+RunInfo:
+  Hadronic Z decay events generated on the Z pole ($\sqrt{s} = 91.2$ GeV)
+NumEvents: 1000000
+Beams: [e+, e-]
+Energies: [91.2]
+PtCuts: [0]
+Description: DELPHI results for the spectra of  $K^{*0}$ and $\Phi$ production in hadronic $Z^0$ decays
+BibKey: Abreu:1996sn
+BibTeX: '@article{Abreu:1996sn,
+      author         = "Abreu, P. and others",
+      title          = "{Measurement of inclusive K*0 (892), Phi (1020) and
+                        K(2)*0 (1430) production in hadronic Z decays}",
+      collaboration  = "DELPHI",
+      journal        = "Z. Phys.",
+      volume         = "C73",
+      year           = "1996",
+      pages          = "61-72",
+      doi            = "10.1007/s002880050296",
+      reportNumber   = "CERN-PPE-96-077, CERN-PPE-96-77",
+      SLACcitation   = "%%CITATION = ZEPYA,C73,61;%%"
+}'

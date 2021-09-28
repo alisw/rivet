@@ -1,0 +1,32 @@
+Name: TASSO_1982_I168232
+Year: 1982
+Summary: $\pi^0$ spectrum in  $e^+e^-$ at 14 and 34 GeV
+Experiment: TASSO
+Collider: TASSO
+InspireID: 168232
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B108 (1982) 71-76, 1982
+RunInfo: e+ e- to hadrons
+NeedCrossSection: yes
+Beams: [e+, e-]
+Energies: [14,34]
+Description:
+  'Measurement of the $\pi^0$ spectrum in $e^+e^-$ collisions for centre-of-mass energies of 14 and 34 GeV by the TASSO experiment at Petra.'
+Keywords: []
+BibKey: Brandelik:1981gx
+BibTeX: '@article{Brandelik:1981gx,
+      author         = "Brandelik, R. and others",
+      title          = "{$\pi^0$ Production by $e^+ e^-$ Annihilation at 14-{GeV}
+                        and 34-{GeV} Center-of-mass Energy}",
+      collaboration  = "TASSO",
+      journal        = "Phys. Lett.",
+      volume         = "108B",
+      year           = "1982",
+      pages          = "71-76",
+      doi            = "10.1016/0370-2693(82)91145-5",
+      reportNumber   = "DESY-81-069",
+      SLACcitation   = "%%CITATION = PHLTA,108B,71;%%"
+}'

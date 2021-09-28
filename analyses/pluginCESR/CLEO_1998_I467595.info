@@ -1,0 +1,35 @@
+Name: CLEO_1998_I467595
+Year: 1998
+Summary: $D^{*+}$ polarization in $e^+e^-$ at 10.5 GeV
+Experiment: CLEO
+Collider: CESR
+InspireID: 467595
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson>@durham.ac.uk>
+References:
+ - Phys.Rev. D58 (1998) 052003
+RunInfo: continuum e+e- -> hadrons at 10.5 GeV
+NeedCrossSection: no
+Beams: [e+,e-]
+Energies: 10.5
+Description:
+  'Measurement of the polarization of $D^{*+}$ mesons in $e^+e^-$ collisions at 10.5 GeV by CLEO'
+Keywords: []
+BibKey: Brandenburg:1998ap
+BibTeX: '@article{Brandenburg:1998ap,
+      author         = "Brandenburg, G. and others",
+      title          = "{Continuum charged D* spin alignment at S**(1/2) =
+                        10.5-GeV}",
+      collaboration  = "CLEO",
+      journal        = "Phys. Rev.",
+      volume         = "D58",
+      year           = "1998",
+      pages          = "052003",
+      doi            = "10.1103/PhysRevD.58.052003",
+      eprint         = "hep-ex/9802022",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "SLAC-REPRINT-1998-086, CLNS-98-1542, CLEO-98-3",
+      SLACcitation   = "%%CITATION = HEP-EX/9802022;%%"
+}'

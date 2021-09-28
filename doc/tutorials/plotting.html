@@ -1,0 +1,14 @@
+<h2 id="plotting">Plotting</h2>
+<p>Rivet comes with three commands --- <code>rivet-mkhtml</code>, <code>compare-histos</code> and <code>make-plots</code> --- for comparing and plotting data files. These commands produce nice comparison plots of publication quality from the YODA format text files.</p>
+<p>The high-level program <code>rivet-mkhtml</code> will automatically create a plot webpage from the given YODA files. It searches for reference data automatically and uses the other two commands internally. Example:</p>
+<pre><code>rivet-mkhtml withUE.yoda:&#39;Title=With UE&#39; withoutUE.yoda:&#39;LineColor=blue&#39;</code></pre>
+<p>Run <code>rivet-mkhtml --help</code> to find out about all features and options.</p>
+<p>Plotting options will be taken from <code>*.plot</code> files installed in Rivet's share directory. These contain plotting instructions according to the <code>make-plots</code> syntax as documented in <a href="http://rivet.hepforge.org/make-plots.html">http://rivet.hepforge.org/make-plots.html.</a> Such files can also be written for any plugin analysis and will be found if they are in the <code>RIVET_ANALYSIS_PATH</code>.</p>
+<p>You can also run the other two commands separately:</p>
+<p><code>compare-histos</code> will accept a number of YODA files as input (ending in <code>.yoda</code>, identify which plots are available in them, and combine the MC and reference plots appropriately into a set of plot data files ending with <code>.dat</code>. More options are described by running <code>compare-histos --help</code>.</p>
+<p>Incidentally, the reference files for each Rivet analysis are to be found in the installed Rivet shared data directory, <code>installdir/share/Rivet</code>. You can find the location of this by using the <code>rivet-config</code> command:</p>
+<pre><code>rivet-config --datadir</code></pre>
+<p>You can plot the created data files using the <code>make-plots</code> command:</p>
+<pre><code>make-plots --pdf *.dat</code></pre>
+<p>The <code>--pdf</code> flag makes the output plots in PDF format: by default the output is in postscript (<code>.ps</code>), and flags for conversion to EPS and PNG are also available.</p>
+<p>Note that the plotting tools internally use LaTeX for drawing, and for very complex plots it might sometimes fail with an error message like &quot;TeX memory exceeded&quot; (or &quot;DVI file can't be opened&quot;). In such a case it is recommended to increase the allowed TeX memory size as described e.g. in the <a href="http://pgfplots.sourceforge.net/pgfplots.pdf">pgfplots manual</a> in Section 6.2.</p>

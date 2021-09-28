@@ -1,0 +1,31 @@
+Name: A2_2017_I1486671
+Year: 2017
+Summary: Form factors for the decays $\omega\to\pi^0e^+e^-$ and $\eta\to\gamma e^+e^-$
+Experiment: A2
+Collider: MAMI
+InspireID: 1486671
+Status: VALIDATED
+References:
+ - Phys.Rev. C95 (2017) no.3, 035208
+RunInfo: omega and eta production with both the dalitz decay and radiative decay for normalization
+NeedCrossSection: no
+Description:
+  'Measurement of the form factors $\left|F_{\omega\pi^0}(q^2)\right|$ for the decay $\phi\to\pi^0e^+e^-$ and $\left|F_{\eta}(q^2)\right|$ for the decay $\eta\to\gamma e^+e^-$ by the A2 experiment at MAMI'
+Keywords: []
+BibKey: Adlarson:2016hpp
+BibTeX: '@article{Adlarson:2016hpp,
+      author         = "Adlarson, P. and others",
+      title          = "{Measurement of the $\omega \to \pi^0 e^+e^-$ and $\eta
+                        \to e^+e^- \gamma$ Dalitz decays with the A2 setup at
+                        MAMI}",
+      journal        = "Phys. Rev.",
+      volume         = "C95",
+      year           = "2017",
+      number         = "3",
+      pages          = "035208",
+      doi            = "10.1103/PhysRevC.95.035208",
+      eprint         = "1609.04503",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1609.04503;%%"
+}'

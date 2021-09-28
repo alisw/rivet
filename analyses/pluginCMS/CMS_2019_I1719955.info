@@ -1,0 +1,46 @@
+Name: CMS_2019_I1719955
+Year: 2019
+Summary: Azimuthal separation in nearly back-to-back jet topologies in inclusive 2- and 3-jet events in pp collisions at $\sqrt{s} = 13$ TeV
+Experiment: CMS
+Collider: LHC
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Armando Bermudez Martinez <armando.bermudez.martinez@desy.de>
+ - SMP conveners <cms-phys-conveners-smp@NOSPAMcernNOSPAMPLEASE.ch>
+References:
+ - 10.1140/epjc/s10052-019-7276-4
+ - arXiv:1902.04374  [hep-ex]
+ - CERN-EP-2018-344
+RunInfo:
+   QCD at $\sqrt{s} = 13$ TeV, ptHat (or equivalent) greater than 100 GeV for the 2-jet observables and greater than 10 GeV for the 3-jet observables
+NumEvents: 50M
+Luminosity: 35.9/fb
+Beams: [p+, p+]
+Energies: [13000]
+Description:
+'A measurement for inclusive 2- and 3-jet events of the azimuthal correlation between 
+the two jets with the largest transverse momenta, $\Delta\phi_{12}$, is presented. The measurement 
+considers events where the two leading jets are nearly collinear ("back-to-back") 
+in the transverse plane and is performed for several ranges of the leading
+jet transverse momentum. Proton-proton collision data collected with the CMS experiment 
+at a center-of-mass energy of 13 TeV and corresponding to an integrated
+luminosity of 35.9 $\text{fb}^{-1}$ are used.'
+BibKey: :Sirunyan:2019rpc
+BibTeX: '@article{Sirunyan:2019rpc,
+    author = "Sirunyan, Albert M and others",
+    collaboration = "CMS",
+    title = "{Azimuthal separation in nearly back-to-back jet topologies in inclusive 2- and 3-jet events in pp collisions at $\sqrt{s}=$ 13 TeV}",
+    eprint = "1902.04374",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CMS-SMP-17-009, CERN-EP-2018-344",
+    doi = "10.1140/epjc/s10052-019-7276-4",
+    journal = "Eur. Phys. J. C",
+    volume = "79",
+    number = "9",
+    pages = "773",
+    year = "2019"
+}'
+ReleaseTests:
+ - $A LHC-13-DiJets-boosted

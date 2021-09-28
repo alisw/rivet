@@ -1,0 +1,33 @@
+Name: CELLO_1990_I283026
+Year: 1990
+Summary: Spectra for strange hadron production at $E_{\text{CMS}}=35$ GeV
+Experiment: CELLO
+Collider: Petra
+InspireID: 283026
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Z.Phys. C46 (1990) 397-404, 1990
+RunInfo: e+e- to hadrons at 35 GeV
+NeedCrossSection: no
+Beams: [e+,e-]
+Energies: [35]
+Description:
+  'Spectra for $K^0$, $K^{*+}$ and $\Lambda$ production in $e^+e^-$ collisions at a centre-of-mass energy of 35 GeV measured by the CELLO experiment at Petra.
+   The data in HEPData only contains the centroids of the bins, not the bin edges which have therefore been inferred.'
+Keywords: []
+BibKey: Behrend:1989ae
+BibTeX: '@article{Behrend:1989ae,
+      author         = "Behrend, H. J. and others",
+      title          = "{Inclusive Strange Particle Production in $e^+ e^-$
+                        Annihilation}",
+      collaboration  = "CELLO",
+      journal        = "Z. Phys.",
+      volume         = "C46",
+      year           = "1990",
+      pages          = "397-404",
+      doi            = "10.1007/BF01621027",
+      reportNumber   = "DESY-89-140",
+      SLACcitation   = "%%CITATION = ZEPYA,C46,397;%%"
+}'

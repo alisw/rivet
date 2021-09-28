@@ -1,0 +1,39 @@
+Name: BELLE_2015_I1336624
+Year: 2015
+Summary: Measurements of $R$ for $b\bar{b}$ and $\Upsilon(1,2,3S)\pi^+\pi^-$ between 10.63 and 11.05 GeV
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1336624
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D93 (2016) no.1, 011101
+RunInfo: e+e- to hadrons and muons (for normalisation)
+Beams: [e+, e-]
+Description:
+  'Measurement of the ratio of the cross sections for $e^+e^-\to\Upsilon(1,2,3S)\pi^+\pi^-$ and $e^+e^-\to b\bar{b}$ to the
+  muon cross section for energies between  10.63 and 11.05 GeV by the BELLE collaboration.'
+ValidationInfo:
+  ''
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Santel:2015qga
+BibTeX: '@article{Santel:2015qga,
+      author         = "Santel, D. and others",
+      title          = "{Measurements of the $\Upsilon$(10860) and
+                        $\Upsilon$(11020) resonances via $\sigma(e^+e^-\to
+                        \Upsilon(nS)\pi^+ \pi^-)$}",
+      collaboration  = "Belle",
+      journal        = "Phys. Rev.",
+      volume         = "D93",
+      year           = "2016",
+      number         = "1",
+      pages          = "011101",
+      doi            = "10.1103/PhysRevD.93.011101",
+      eprint         = "1501.01137",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1501.01137;%%"
+}'

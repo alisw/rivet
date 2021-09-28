@@ -1,0 +1,34 @@
+Name: BABAR_2006_I700020
+Year: 2006
+Summary:  Cross section for $e^+e^-\to$ proton and antiproton between threshold and 4.4 GeV
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 700020
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - 
+RunInfo: e+ e- to hadrons
+NeedCrossSection: yes
+Beams: [e+, e-]
+Description:
+  'Measurement of the cross section for $e^+e^-\to p\bar{p}$ using radiative
+   return for energies between threshold and 4.4 GeV.'
+BibKey: Aubert:2005cb
+BibTeX: '@article{Aubert:2005cb,
+      author         = "Aubert, Bernard and others",
+      title          = "{A Study of $e^{+} e^{-} \to p \bar{p}$ using initial
+                        state radiation with BABAR}",
+      collaboration  = "BaBar",
+      journal        = "Phys. Rev.",
+      volume         = "D73",
+      year           = "2006",
+      pages          = "012005",
+      doi            = "10.1103/PhysRevD.73.012005",
+      eprint         = "hep-ex/0512023",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "SLAC-PUB-11587, BABAR-PUB-05-050",
+      SLACcitation   = "%%CITATION = HEP-EX/0512023;%%"
+}'

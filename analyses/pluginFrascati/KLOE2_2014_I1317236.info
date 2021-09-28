@@ -1,0 +1,32 @@
+Name: KLOE2_2014_I1317236
+Year: 2014
+Summary: Form factor for the decay $\phi\to\eta e^+e^-$
+Experiment: KLOE2
+Collider: DAPHNE
+InspireID: 1317236
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B742 (2015) 1-6
+RunInfo: phi production with both the dalitz decay and radiative decay for normalization
+NeedCrossSection: no
+Description:
+  'Measurement of the form factor $\left|F_{\phi\eta }(q^2)\right|$ for the decay $\phi\to\eta e^+e^-$ by the KLOE experiment at DAPHNE'
+Keywords: []
+BibKey: Babusci:2014ldz
+BibTeX: '@article{Babusci:2014ldz,
+      author         = "Babusci, D. and others",
+      title          = "{Study of the Dalitz decay $\phi \to \eta e^+e^-$ with
+                        the KLOE detector}",
+      collaboration  = "KLOE-2",
+      journal        = "Phys. Lett.",
+      volume         = "B742",
+      year           = "2015",
+      pages          = "1-6",
+      doi            = "10.1016/j.physletb.2015.01.011",
+      eprint         = "1409.4582",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1409.4582;%%"
+}'

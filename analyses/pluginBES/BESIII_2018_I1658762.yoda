@@ -1,0 +1,18 @@
+BEGIN YODA_SCATTER2D_V2 /REF/BESIII_2018_I1658762/d01-x01-y01
+IsRef: 1
+Path: /REF/BESIII_2018_I1658762/d01-x01-y01
+Title: 
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+0.50000   0.50000   0.50000  	 1.03	 0.07	0.07
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/BESIII_2018_I1658762/d01-x01-y02
+IsRef: 1
+Path: /REF/BESIII_2018_I1658762/d01-x01-y02
+Title: 
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+0.50000   0.50000   0.50000   0.68   0.16	0.16
+END YODA_SCATTER2D_V2

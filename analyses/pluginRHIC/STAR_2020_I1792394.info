@@ -1,0 +1,22 @@
+Name: STAR_2020_I1792394
+Year: 2020
+Summary: Measurement of Central Exclusive Production of charged hadron pairs h+h- (h=pi,K,p) at sqrt(s)=200 GeV with forward proton tagging in Roman Pots
+Experiment: STAR
+Collider: RHIC
+InspireID: 1792394
+Status: VALIDATED
+Authors:
+ - Rafal Sikora <rsikora@agh.edu.pl>
+References:
+ - 'arXiv:2004.11078'
+Beams: [p+, p+]
+Energies: [[100,100]]
+Luminosity_fb: 0.0142
+Description:
+  'The differential fiducial cross sections are measured for the process of CEP of h+h- pairs (h=pi,K,p).
+  For the details of analysis and definition of the fiducial region see the arXiv.'
+ValidationInfo:
+  'Tested with Pythia 8.244. Only some small fraction of distributions presented in the paper is reproduced
+  in this Rivet routine. However, with the provided code it should be straightforward to self-implement the
+  remaining histograms.'
+Keywords: [diffraction, exclusive, CEP, forward, DPE, pomeron, glueball]

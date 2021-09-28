@@ -1,0 +1,39 @@
+Name: R209_1982_I168182
+Year: 1982
+Summary: Drell Yan measurements $pp \to \mu^+\mu^- +X $ at $\sqrt{s} = 44$ and $62$ GeV at CERN ISR
+Experiment: R209
+Collider: ISR CERN
+InspireID: 168182
+Status: VALIDATED
+Authors:
+ - Hannes Jung hannes.jung@desy.de
+References:
+ - "Phys. Rev. Lett., 48(1982), 302"
+ - "DOI: 10.1103/PhysRevLett.48.302"
+RunInfo: Run in pp mode (center-of-mass frame)
+NeedCrossSection: yes
+Beams: [p+, p+]
+Energies: [44, 62]
+Description: 'Measurements of $pp \to \mu^+\mu^- +X $ at $\sqrt{s} = 44$ and
+  $62$ GeV are compared. The data are #taken under identical conditions
+  utilizing clean proton-proton collisions from the CERN intersecting storage
+  rings and confirm scaling to 5%.  Data encoded by Mike Whalley, read from the
+  figure in the paper. Note also, cross sections are quoted in [nb]. The errors
+  shown are statistical only. There is an additional 15% overall systematic
+  uncertainty.'
+Keywords: []
+BibKey: Antreasyan:1981eg
+BibTeX: '@article{Antreasyan:1981eg,
+      author         = "Antreasyan, D. and others",
+      title          = "{Dimuon Scaling Comparison at 44-{GeV} and 62-{GeV}}",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "48",
+      year           = "1982",
+      pages          = "302",
+      doi            = "10.1103/PhysRevLett.48.302",
+      reportNumber   = "MIT-LNS-119",
+      SLACcitation   = "%%CITATION = PRLTA,48,302;%%"
+}'
+ReleaseTests:
+ - $A pp-44-Zmm
+ - $A pp-62-Zmm

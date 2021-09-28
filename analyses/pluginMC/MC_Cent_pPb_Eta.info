@@ -1,0 +1,45 @@
+Name: MC_Cent_pPb_Eta
+Summary: Template analysis for ontaining eta distributions binned in centrality
+Status: UNVALIDATED
+Reentrant: true
+Authors:
+ - Leif Lönnblad <leif.lonnblad@thep.lu.se>
+Options:
+ - cent=REF,GEN,IMP,RAW
+NumEvents: 50000
+References:
+ - arXiv:1508.00848 [hep-ex]
+ - Eur.Phys.J. C76 (2016) no.4, 199
+RunInfo: Any!
+Description:
+   Template analysis for obtaining eta distributions binned in
+   centrality using the CentralityProjection and Percentile<>
+   classes. The example is pPb collisions at 5 TeV and is based on the
+   ATLAS analysis arXiv:1508.00848 [hep-ex]. The reference YODA file
+   contains the corresponding plots from HepData. The generator should
+   be run in minimum-bias mode with a cut on the transverse momentum
+   of charged particles of 0.1 GeV, and setting particles with tcau>10
+   fm stable. Note that a calibration histogram for the generated
+   centrality may be preloaded with the output of a corresponding
+   MC_Cent_pPb_Calib analysis.
+BibKey: Aad:2015zza
+BibTeX: '@article{Aad:2015zza,
+      author         = "Aad, Georges and others",
+      title          = "{Measurement of the centrality dependence of the
+                        charged-particle pseudorapidity distribution in
+                        proton–lead collisions at $\sqrt{s_{_\text {NN}}} =
+                        5.02$  TeV with the ATLAS detector}",
+      collaboration  = "ATLAS",
+      journal        = "Eur. Phys. J.",
+      volume         = "C76",
+      year           = "2016",
+      number         = "4",
+      pages          = "199",
+      doi            = "10.1140/epjc/s10052-016-4002-3",
+      eprint         = "1508.00848",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-PH-EP-2015-160",
+      SLACcitation   = "%%CITATION = ARXIV:1508.00848;%%"
+}'
+

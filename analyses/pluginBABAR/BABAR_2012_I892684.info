@@ -1,0 +1,37 @@
+Name: BABAR_2012_I892684
+Year: 2012
+Summary: Cross sections for $e^+e^-\to$ $K^+K^-\pi^+\pi^-$, $K^+K^-\pi^0\pi^0$, and $K^+K^-K^+K^-$ between 1.28 and 5.0 GeV
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 892684
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+- Phys.Rev. D86 (2012) 012008, 2012
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+  'Measurement of the cross section for  $e^+e^- \to$  $K^+K^-\pi^+\pi^-$, $K^+K^-\pi^0\pi^0$ and $K^+K^-K^+K^-$ via radiative return,
+   including the identification of $K^{*0}$, $\phi$ and $f_0(980)$ mesons for energies between 1.28 and 5.0 GeV'
+Keywords:
+BibKey: Lees:2011zi
+BibTeX: '@article{Lees:2011zi,
+      author         = "Lees, J. P. and others",
+      title          = "{Cross Sections for the Reactions e+e- --&gt; K+ K- pi+pi-,
+                        K+ K- pi0pi0, and K+ K- K+ K- Measured Using Initial-State
+                        Radiation Events}",
+      collaboration  = "BaBar",
+      journal        = "Phys. Rev.",
+      volume         = "D86",
+      year           = "2012",
+      pages          = "012008",
+      doi            = "10.1103/PhysRevD.86.012008",
+      eprint         = "1103.3001",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "SLAC-PUB-14403",
+      SLACcitation   = "%%CITATION = ARXIV:1103.3001;%%"
+}'

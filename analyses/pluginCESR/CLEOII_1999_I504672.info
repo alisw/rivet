@@ -1,0 +1,35 @@
+Name: CLEOII_1999_I504672
+Year: 1999
+Summary: Charged Particle Multiplicity in $\Upsilon(4S)$ decays
+Experiment: CLEOII
+Collider: CESR
+InspireID: 504672
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D61 (2000) 072002
+RunInfo: Upsilon(4S) decays
+Description:
+  'Charged particle multiplicity in $\Upsilon(4S)$ decays measured by CLEOII.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Brandenburg:1999cs
+BibTeX: '@article{Brandenburg:1999cs,
+      author         = "Brandenburg, G. and others",
+      title          = "{Charged track multiplicity in $B$ meson decay}",
+      collaboration  = "CLEO",
+      journal        = "Phys. Rev.",
+      volume         = "D61",
+      year           = "2000",
+      pages          = "072002",
+      doi            = "10.1103/PhysRevD.61.072002",
+      eprint         = "hep-ex/9907057",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "SLAC-REPRINT-1999-103, CLNS-99-1626, CLEO-99-7",
+      SLACcitation   = "%%CITATION = HEP-EX/9907057;%%"
+}'

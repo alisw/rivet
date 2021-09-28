@@ -1,0 +1,74 @@
+// -*- C++ -*-
+#ifndef RIVET_Particle_FHH
+#define RIVET_Particle_FHH
+
+#include "Rivet/Tools/RivetSTL.hh"
+#include "Rivet/Math/Vectors.hh"
+
+namespace Rivet {
+
+
+  /// @name Particle declarations
+  //@{
+
+  // Forward declaration
+  class Particle;
+
+
+  /// @brief Specialised vector of Particle objects.
+  ///
+  /// A specialised version of vector<Particle> which is able to implicitly and
+  /// explicitly convert to a vector of FourMomentum.
+  ///
+  /// @todo Add explicit and implicit conversion to PseudoJets
+  ///
+  // typedef std::vector<Particle> Particles;
+  class Particles : public std::vector<Particle> {
+  public:
+    using base = std::vector<Particle>; //< using-declarations don't like template syntax
+    using base::base; //< import base-class constructors
+    Particles();
+    Particles(const std::vector<Particle>& vps);
+    FourMomenta moms() const; //< implementation in Particle.cc
+    inline operator FourMomenta () const { return moms(); }
+    Particles& operator += (const Particle& p);
+    Particles& operator += (const Particles& ps);
+    /// @todo Add conversion to PseudoJets
+  };
+
+  Particles operator + (const Particles& a, const Particles& b);
+
+  /// Typedef for a pair of Particle objects.
+  typedef std::pair<Particle, Particle> ParticlePair;
+
+  //@}
+
+
+  /// @name Particle function/functor declarations
+  //@{
+
+  /// std::function instantiation for functors taking a Particle and returning a bool
+  using ParticleSelector = function<bool(const Particle&)>;
+
+  /// std::function instantiation for functors taking two Particles and returning a bool
+  using ParticleSorter = function<bool(const Particle&, const Particle&)>;
+
+  //@}
+
+
+  /// @name PdgId declarations
+  //@{
+
+  /// Typedefs for a PDG ID code.
+  typedef int PdgId;
+  //typedef PdgId PID; //< can't do this, because it's also a (sub)namespace
+
+  /// Typedef for a pair of particle names.
+  typedef std::pair<PdgId, PdgId> PdgIdPair;
+
+  //@}
+
+
+}
+
+#endif

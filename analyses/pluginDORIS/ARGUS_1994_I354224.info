@@ -1,0 +1,28 @@
+Name: ARGUS_1994_I354224
+Year: 1994
+Summary: $K^0_s$ production in B decays
+Experiment: ARGUS
+Collider: DORIS
+InspireID: 354224
+Status: VALIDATED
+Authors:
+ - Peter Richardson <Peter.Richardson@durham.ac.uk>
+References:
+ - Z.Phys. C62 (1994) 371-382, 1994 
+RunInfo:
+  In principle any process producting $B^\pm$ and $B^0,\bar{B}^0$, bot original at Upsilon 4S 
+NumEvents: 1000000
+Description: Measurement of the spectrum for $K^0_S$ production in $B$ decays. The original measurement was done by ARGUS at the $\Upsilon(4S)$ resonance and therefore represents that admixture of  $B^\pm$ and $B^0,\bar{B}^0$.
+BibKey: Albrecht:1993cd
+BibTeX: '@article{Albrecht:1993cd,
+      author         = "Albrecht, H. and others",
+      title          = "{Kaons in flavor tagged B decays}",
+      collaboration  = "ARGUS",
+      journal        = "Z. Phys.",
+      volume         = "C62",
+      year           = "1994",
+      pages          = "371-382",
+      doi            = "10.1007/BF01555897",
+      reportNumber   = "DESY-93-052",
+      SLACcitation   = "%%CITATION = ZEPYA,C62,371;%%"
+}'

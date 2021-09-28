@@ -1,0 +1,58 @@
+Name: ATLAS_2018_I1677498
+Year: 2018
+Summary: WWbb at 13 TeV
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1677498
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Christian Herwig <herwig@cern.ch>
+ - Christian Gutschow <chris.g@cern.ch>
+References:
+ - Phys.Rev.Lett. 121 (2018) no.15, 152002
+ - arXiv:1806.04667 [hep-ex]
+Keywords:
+  - TTBAR
+  - TOP
+  - WWBB
+  - DILEPTON
+  - LEPTONS
+  - JETS
+  - BJETS
+RunInfo:
+ dileptonic WWbb production at 13 TeV
+Luminosity_fb: 36.1
+NeedCrossSection: no
+Beams: [p+, p+]
+Energies: [13000]
+PtCuts: [28.,28.,25.,25.]
+Description:
+  'This Letter presents a normalized differential cross-section measurement in a fiducial phase-space region where interference
+  effects between top-quark pair production and associated production of a single top quark with a $W$ boson and a $b$-quark are
+  significant. Events with exactly two leptons ($ee$, $\mu\mu$, or $e\mu$) and two $b$-tagged jets that satisfy a multiparticle
+  invariant mass requirement are selected from 36.1 fb$^{-1}$ of proton-proton collision data taken at $\sqrt{s}=13$ TeV with the
+  ATLAS detector at the LHC in 2015 and 2016. The results are compared with predictions from simulations using various strategies 
+  for the interference. The standard prescriptions for interference modeling are significantly different from each other but are
+  within $2\sigma$ of the data. State-of-the-art predictions that naturally incorporate interference effects provide the best 
+  description of the data in the measured region of phase space most sensitive to these effects. These results provide an important 
+  constraint on interference models and will guide future model development and tuning.'
+BibKey: Aaboud:2018bir
+BibTeX: '@article{Aaboud:2018bir,
+      author         = "Aaboud, Morad and others",
+      title          = "{Probing the quantum interference between singly and
+                        doubly resonant top-quark production in $pp$ collisions at
+                        $\sqrt{s}=13$ TeV with the ATLAS detector}",
+      collaboration  = "ATLAS",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "121",
+      year           = "2018",
+      number         = "15",
+      pages          = "152002",
+      doi            = "10.1103/PhysRevLett.121.152002",
+      eprint         = "1806.04667",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-EP-2018-087",
+      SLACcitation   = "%%CITATION = ARXIV:1806.04667;%%"
+}'

@@ -1,0 +1,37 @@
+Name: BESIII_2017_I1596897
+Year: 2017
+Summary: Cross Section for $e^+e^-\to\eta h_c$ for energies between 4.085 and 4.6 GeV
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1596897
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D96 (2017) no.1, 012001
+RunInfo: e+ e- to hadrons
+Beams: [e+, e-]
+Description:
+  'Cross section for  $e^+e^-\to\eta h_c$ for energies between 4.085 and 4.6 GeV measured by the BESIII collaboration.'
+ValidationInfo:
+  ''
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Ablikim:2017nkn
+BibTeX: '@article{Ablikim:2017nkn,
+      author         = "Ablikim, Medina and others",
+      title          = "{Observation of $e^{+}e^{-} \to \eta h_{c}$ at
+                        center-of-mass energies from 4.085 to 4.600 GeV}",
+      collaboration  = "BESIII",
+      journal        = "Phys. Rev.",
+      volume         = "D96",
+      year           = "2017",
+      number         = "1",
+      pages          = "012001",
+      doi            = "10.1103/PhysRevD.96.012001",
+      eprint         = "1704.08033",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1704.08033;%%"
+}'

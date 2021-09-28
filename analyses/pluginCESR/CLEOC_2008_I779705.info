@@ -1,0 +1,36 @@
+Name: CLEOC_2008_I779705
+Year: 2008
+Summary: Mass distributions in $D^0\to\eta\pi^+\pi^-$ decays
+Experiment: CLEOC
+Collider: <Insert the collider name>
+InspireID: 779705
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D77 (2008) 092003
+RunInfo: Any process producing $d^0$ mesons, originally e+e-
+Description:
+  'Measurement of mass distributions in $D^0\to\eta\pi^+\pi^-$ decays by the CLEO experiment.'
+ValidationInfo:
+  'Herwig 7 events using EvtGen for D decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Artuso:2008aa
+BibTeX: '@article{Artuso:2008aa,
+      author         = "Artuso, M. and others",
+      title          = "{Measurement of exclusive D meson decays to eta and
+                        eta-prime final states and SU(3) amplitude analysis}",
+      collaboration  = "CLEO",
+      journal        = "Phys. Rev.",
+      volume         = "D77",
+      year           = "2008",
+      pages          = "092003",
+      doi            = "10.1103/PhysRevD.77.092003",
+      eprint         = "0802.2664",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CLNS-08-2017, CLEO-08-01",
+      SLACcitation   = "%%CITATION = ARXIV:0802.2664;%%"
+}'

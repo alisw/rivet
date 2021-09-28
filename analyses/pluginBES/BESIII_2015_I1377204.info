@@ -1,0 +1,35 @@
+Name: BESIII_2015_I1377204
+Year: 2015
+Summary:  Cross section for $e^+e^-\to J/\psi \pi^0\pi^0$ at energies between 4.19 and 4.42 GeV
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1377204
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 115 (2015) 112003, 2015
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+  'Measurement of the cross section for $e^+e^-\to J/\psi \pi^0\pi^0$ at energies between 4.19 and 4.42 GeV'
+Keywords: []
+BibKey: Ablikim:2015tbp
+BibTeX: '@article{Ablikim:2015tbp,
+      author         = "Ablikim, M. and others",
+      title          = "{Observation of $Z_c(3900)^{0}$ in $e^+e^-\to\pi^0\pi^0
+                        J/\psi$}",
+      collaboration  = "BESIII",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "115",
+      year           = "2015",
+      number         = "11",
+      pages          = "112003",
+      doi            = "10.1103/PhysRevLett.115.112003",
+      eprint         = "1506.06018",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1506.06018;%%"
+}'

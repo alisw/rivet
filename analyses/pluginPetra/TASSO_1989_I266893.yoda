@@ -1,0 +1,465 @@
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I266893/d01-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.011, up: 0.011}, sys: {dn: -0.021, up: 0.021}}, 1: {stat: {dn: -0.029, up: 0.03}, sys: {dn: -0.025, up: 0.025}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I266893/d01-x01-y01
+Title: doi:10.17182/hepdata.15283.v1/t1
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+3.480000e+01	0.000000e+00	0.000000e+00	2.180000e-01	2.370654e-02	2.370654e-02
+4.210000e+01	0.000000e+00	0.000000e+00	2.560000e-01	3.828838e-02	3.905125e-02
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I266893/d02-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.012, up: 0.013}, sys: {dn: -0.01, up: 0.01}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I266893/d02-x01-y01
+Title: doi:10.17182/hepdata.15283.v1/t2
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+3.480000e+01	0.000000e+00	0.000000e+00	5.200000e-02	1.562050e-02	1.640122e-02
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I266893/d03-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.0022, up: 0.0023}, 'sys,Additional systematic error': {dn: -0.0015209999999999998, up: 0.0015209999999999998}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.0008449999999999999, up: 0.0008449999999999999}}, 1: {error: {dn: -0.002, up: 0.002}, 'sys,Additional systematic error': {dn: -0.001422, up: 0.001422}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.0007900000000000001, up: 0.0007900000000000001}}, 2: {error: {dn: -0.0018, up: 0.0018}, 'sys,Additional systematic error': {dn: -0.001323, up: 0.001323}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.000735, up: 0.000735}}, 3: {error: {dn: -0.0014, up: 0.0015}, 'sys,Additional systematic error': {dn: -0.0009450000000000001, up: 0.0009450000000000001}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.0005250000000000001, up: 0.0005250000000000001}}, 4: {error: {dn: -0.0017, up: 0.0018}, 'sys,Additional systematic error': {dn: -0.001296, up: 0.001296}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.00072, up: 0.00072}}, 5: {error: {dn: -0.0015, up: 0.0016}, 'sys,Additional systematic error': {dn: -0.000882, up: 0.000882}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.00049, up: 0.00049}}, 6: {error: {dn: -0.0011, up: 0.0012}, 'sys,Additional systematic error': {dn: -0.000567, up: 0.000567}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.000315, up: 0.000315}}, 7: {error: {dn: -0.0011, up: 0.0012}, 'sys,Additional systematic error': {dn: -0.000549, up: 0.000549}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.00030500000000000004, up: 0.00030500000000000004}}, 8: {error: {dn: -0.0008, up: 0.0008}, 'sys,Additional systematic error': {dn: -0.000405, up: 0.000405}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.000225, up: 0.000225}}, 9: {error: {dn: -0.0008, up: 0.0002}, 'sys,Additional systematic error': {dn: -5.399999999999999e-05, up: 5.399999999999999e-05}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -2.9999999999999997e-05, up: 2.9999999999999997e-05}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I266893/d03-x01-y01
+Title: doi:10.17182/hepdata.15283.v1/t3
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+8.000000e-01	3.400000e-01	3.400000e-01	1.690000e-02	2.804900e-03	2.884002e-03
+1.325000e+00	1.850000e-01	1.850000e-01	1.580000e-02	2.578019e-03	2.578019e-03
+1.695000e+00	1.850000e-01	1.850000e-01	1.470000e-02	2.351713e-03	2.351713e-03
+2.085000e+00	2.050000e-01	2.050000e-01	1.050000e-02	1.768799e-03	1.848959e-03
+2.495000e+00	2.050000e-01	2.050000e-01	1.440000e-02	2.255663e-03	2.331955e-03
+2.910000e+00	2.100000e-01	2.100000e-01	9.800000e-03	1.807768e-03	1.891567e-03
+3.445000e+00	3.250000e-01	3.250000e-01	6.300000e-03	1.276994e-03	1.364080e-03
+4.215000e+00	4.450000e-01	4.450000e-01	6.100000e-03	1.266659e-03	1.354410e-03
+5.255000e+00	5.950000e-01	5.950000e-01	4.500000e-03	9.244728e-04	9.244728e-04
+1.152500e+01	5.675000e+00	5.675000e+00	6.000000e-04	8.023815e-04	2.093227e-04
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I266893/d04-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.0022, up: 0.0023}, 'sys,Additional systematic error': {dn: -0.0019440000000000002, up: 0.0019440000000000002}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.00108, up: 0.00108}}, 1: {error: {dn: -0.0016, up: 0.0017}, 'sys,Additional systematic error': {dn: -0.00099, up: 0.00099}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.0005499999999999999, up: 0.0005499999999999999}}, 2: {error: {dn: -0.0017, up: 0.0017}, 'sys,Additional systematic error': {dn: -0.001224, up: 0.001224}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.00068, up: 0.00068}}, 3: {error: {dn: -0.0015, up: 0.0016}, 'sys,Additional systematic error': {dn: -0.001017, up: 0.001017}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.000565, up: 0.000565}}, 4: {error: {dn: -0.0016, up: 0.0016}, 'sys,Additional systematic error': {dn: -0.001026, up: 0.001026}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.00057, up: 0.00057}}, 5: {error: {dn: -0.0014, up: 0.0014}, 'sys,Additional systematic error': {dn: -0.000828, up: 0.000828}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.00046, up: 0.00046}}, 6: {error: {dn: -0.0011, up: 0.0012}, 'sys,Additional systematic error': {dn: -0.000549, up: 0.000549}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.00030500000000000004, up: 0.00030500000000000004}}, 7: {error: {dn: -0.0011, up: 0.0013}, 'sys,Additional systematic error': {dn: -0.00048600000000000005, up: 0.00048600000000000005}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.00027, up: 0.00027}}, 8: {error: {dn: -0.0008, up: 0.0008}, 'sys,Additional systematic error': {dn: -0.000414, up: 0.000414}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.00023, up: 0.00023}}, 9: {error: {dn: -0.0002, up: 0.0002}, 'sys,Additional systematic error': {dn: -5.399999999999999e-05, up: 5.399999999999999e-05}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -2.9999999999999997e-05, up: 2.9999999999999997e-05}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I266893/d04-x01-y01
+Title: doi:10.17182/hepdata.15283.v1/t4
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+4.050000e-01	4.050000e-01	4.050000e-01	2.160000e-02	3.128184e-03	3.199302e-03
+1.015000e+00	2.050000e-01	2.050000e-01	1.100000e-02	1.960255e-03	2.042694e-03
+1.425000e+00	2.050000e-01	2.050000e-01	1.360000e-02	2.202402e-03	2.202402e-03
+1.845000e+00	2.150000e-01	2.150000e-01	1.130000e-02	1.898292e-03	1.978260e-03
+2.275000e+00	2.150000e-01	2.150000e-01	1.140000e-02	1.984333e-03	1.984333e-03
+2.735000e+00	2.450000e-01	2.450000e-01	9.200000e-03	1.690321e-03	1.690321e-03
+3.320000e+00	3.400000e-01	3.400000e-01	6.100000e-03	1.266659e-03	1.354410e-03
+4.110000e+00	4.500000e-01	4.500000e-01	5.400000e-03	1.232516e-03	1.413894e-03
+5.190000e+00	6.300000e-01	6.300000e-01	4.600000e-03	9.296752e-04	9.296752e-04
+1.151000e+01	5.690000e+00	5.690000e+00	6.000000e-04	2.093227e-04	2.093227e-04
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I266893/d05-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.0167, up: 0.0162}, 'sys,Additional systematic error': {dn: -0.006785999999999999, up: 0.006785999999999999}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.0037699999999999995, up: 0.0037699999999999995}}, 1: {error: {dn: -0.0139, up: 0.0148}, 'sys,Additional systematic error': {dn: -0.0056700000000000006, up: 0.0056700000000000006}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.00315, up: 0.00315}}, 2: {error: {dn: -0.0116, up: 0.0122}, 'sys,Additional systematic error': {dn: -0.005706, up: 0.005706}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.00317, up: 0.00317}}, 3: {error: {dn: -0.0118, up: 0.0123}, 'sys,Additional systematic error': {dn: -0.007488, up: 0.007488}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.00416, up: 0.00416}}, 4: {error: {dn: -0.0104, up: 0.0109}, 'sys,Additional systematic error': {dn: -0.005904, up: 0.005904}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.00328, up: 0.00328}}, 5: {error: {dn: -0.0073, up: 0.0075}, 'sys,Additional systematic error': {dn: -0.004239, up: 0.004239}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.002355, up: 0.002355}}, 6: {error: {dn: -0.0048, up: 0.005}, 'sys,Additional systematic error': {dn: -0.0031230000000000003, up: 0.0031230000000000003}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.0017350000000000002, up: 0.0017350000000000002}}, 7: {error: {dn: -0.0034, up: 0.0035}, 'sys,Additional systematic error': {dn: -0.0026190000000000002, up: 0.0026190000000000002}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.0014550000000000001, up: 0.0014550000000000001}}, 8: {error: {dn: -0.0015, up: 0.0016}, 'sys,Additional systematic error': {dn: -0.001206, up: 0.001206}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.00067, up: 0.00067}}, 9: {error: {dn: -0.0002, up: 0.0002}, 'sys,Additional systematic error': {dn: -0.000135, up: 0.000135}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -7.500000000000001e-05, up: 7.500000000000001e-05}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I266893/d05-x01-y01
+Title: doi:10.17182/hepdata.15283.v1/t5
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+3.400000e-02	3.400000e-02	3.400000e-02	7.540000e-02	1.841610e-02	1.796393e-02
+1.065000e-01	3.850000e-02	3.850000e-02	6.300000e-02	1.533889e-02	1.615894e-02
+1.905000e-01	4.550000e-02	4.550000e-02	6.340000e-02	1.331042e-02	1.383645e-02
+2.835000e-01	4.750000e-02	4.750000e-02	8.320000e-02	1.458135e-02	1.498885e-02
+3.795000e-01	4.850000e-02	4.850000e-02	6.560000e-02	1.240063e-02	1.282286e-02
+4.825000e-01	5.450000e-02	5.450000e-02	4.710000e-02	8.763855e-03	8.931134e-03
+6.140000e-01	7.700000e-02	7.700000e-02	3.470000e-02	5.983590e-03	6.145190e-03
+7.990000e-01	1.080000e-01	1.080000e-01	2.910000e-02	4.531687e-03	4.607189e-03
+1.113500e+00	2.065000e-01	2.065000e-01	1.340000e-02	2.037974e-03	2.112661e-03
+3.360000e+00	2.040000e+00	2.040000e+00	1.500000e-03	2.526856e-04	2.526856e-04
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I266893/d06-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.025, up: 0.026}, 'sys,Additional systematic error': {dn: -0.013859999999999999, up: 0.013859999999999999}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.007699999999999999, up: 0.007699999999999999}}, 1: {error: {dn: -0.02, up: 0.021}, 'sys,Additional systematic error': {dn: -0.01188, up: 0.01188}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.0066, up: 0.0066}}, 2: {error: {dn: -0.022, up: 0.023}, 'sys,Additional systematic error': {dn: -0.013139999999999999, up: 0.013139999999999999}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.007299999999999999, up: 0.007299999999999999}}, 3: {error: {dn: -0.02, up: 0.022}, 'sys,Additional systematic error': {dn: -0.01368, up: 0.01368}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.007599999999999999, up: 0.007599999999999999}}, 4: {error: {dn: -0.016, up: 0.017}, 'sys,Additional systematic error': {dn: -0.0099, up: 0.0099}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.0055000000000000005, up: 0.0055000000000000005}}, 5: {error: {dn: -0.015, up: 0.016}, 'sys,Additional systematic error': {dn: -0.008280000000000001, up: 0.008280000000000001}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.0046, up: 0.0046}}, 6: {error: {dn: -0.014, up: 0.015}, 'sys,Additional systematic error': {dn: -0.008369999999999999, up: 0.008369999999999999}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.00465, up: 0.00465}}, 7: {error: {dn: -0.01, up: 0.011}, 'sys,Additional systematic error': {dn: -0.005399999999999999, up: 0.005399999999999999}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.0029999999999999996, up: 0.0029999999999999996}}, 8: {error: {dn: -0.007, up: 0.007}, 'sys,Additional systematic error': {dn: -0.00513, up: 0.00513}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.00285, up: 0.00285}}, 9: {error: {dn: -0.001, up: 0.001}, 'sys,Additional systematic error': {dn: -0.00072, up: 0.00072}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.0004, up: 0.0004}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I266893/d06-x01-y01
+Title: doi:10.17182/hepdata.15283.v1/t6
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.600000e-02	1.600000e-02	1.600000e-02	1.540000e-01	2.960388e-02	3.045307e-02
+4.950000e-02	1.750000e-02	1.750000e-02	1.320000e-01	2.418045e-02	2.501388e-02
+8.700000e-02	2.000000e-02	2.000000e-02	1.460000e-01	2.664488e-02	2.747635e-02
+1.290000e-01	2.200000e-02	2.200000e-02	1.520000e-01	2.539493e-02	2.699819e-02
+1.740000e-01	2.300000e-02	2.300000e-02	1.100000e-01	1.960255e-02	2.042694e-02
+2.240000e-01	2.700000e-02	2.700000e-02	9.200000e-02	1.774030e-02	1.859350e-02
+2.850000e-01	3.400000e-02	3.400000e-02	9.300000e-02	1.696111e-02	1.779549e-02
+3.615000e-01	4.250000e-02	4.250000e-02	6.000000e-02	1.175415e-02	1.261586e-02
+4.745000e-01	7.050000e-02	7.050000e-02	5.700000e-02	9.134517e-03	9.134517e-03
+1.157500e+00	6.125000e-01	6.125000e-01	8.000000e-03	1.295531e-03	1.295531e-03
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I266893/d07-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.0031, up: 0.0032}, 'sys,Additional systematic error': {dn: -0.0028350000000000003, up: 0.0028350000000000003}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.001575, up: 0.001575}}, 1: {error: {dn: -0.0031, up: 0.0032}, 'sys,Additional systematic error': {dn: -0.0019619999999999998, up: 0.0019619999999999998}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.0010899999999999998, up: 0.0010899999999999998}}, 2: {error: {dn: -0.0032, up: 0.0033}, 'sys,Additional systematic error': {dn: -0.0020970000000000003, up: 0.0020970000000000003}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.0011650000000000002, up: 0.0011650000000000002}}, 3: {error: {dn: -0.0036, up: 0.0037}, 'sys,Additional systematic error': {dn: -0.002376, up: 0.002376}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.00132, up: 0.00132}}, 4: {error: {dn: -0.0038, up: 0.0038}, 'sys,Additional systematic error': {dn: -0.002367, up: 0.002367}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.001315, up: 0.001315}}, 5: {error: {dn: -0.0043, up: 0.0044}, 'sys,Additional systematic error': {dn: -0.002817, up: 0.002817}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.001565, up: 0.001565}}, 6: {error: {dn: -0.0047, up: 0.0049}, 'sys,Additional systematic error': {dn: -0.002709, up: 0.002709}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.001505, up: 0.001505}}, 7: {error: {dn: -0.0039, up: 0.0041}, 'sys,Additional systematic error': {dn: -0.0017729999999999998, up: 0.0017729999999999998}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.000985, up: 0.000985}}, 8: {error: {dn: -0.0035, up: 0.0037}, 'sys,Additional systematic error': {dn: -0.001656, up: 0.001656}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.00092, up: 0.00092}}, 9: {error: {dn: -0.0017, up: 0.0017}, 'sys,Additional systematic error': {dn: -0.00054, up: 0.00054}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.00030000000000000003, up: 0.00030000000000000003}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I266893/d07-x01-y01
+Title: doi:10.17182/hepdata.15283.v1/t7
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+2.850000e-01	2.850000e-01	2.850000e-01	3.150000e-02	4.486407e-03	4.556078e-03
+6.935000e-01	1.235000e-01	1.235000e-01	2.180000e-02	3.827211e-03	3.908650e-03
+9.185000e-01	1.015000e-01	1.015000e-01	2.330000e-02	3.999329e-03	4.079784e-03
+1.115000e+00	9.500000e-02	9.500000e-02	2.640000e-02	4.510851e-03	4.591054e-03
+1.300000e+00	9.000000e-02	9.000000e-02	2.630000e-02	4.666038e-03	4.666038e-03
+1.475000e+00	8.500000e-02	8.500000e-02	3.130000e-02	5.373520e-03	5.453871e-03
+1.655000e+00	9.500000e-02	9.500000e-02	3.010000e-02	5.629716e-03	5.797733e-03
+1.860000e+00	1.100000e-01	1.100000e-01	1.970000e-02	4.395879e-03	4.574249e-03
+2.100000e+00	1.300000e-01	1.300000e-01	1.840000e-02	3.979791e-03	4.156770e-03
+2.760000e+00	5.300000e-01	5.300000e-01	6.000000e-03	1.808756e-03	1.808756e-03
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I266893/d08-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -142.0, up: 148.0}, 'sys,Additional systematic error': {dn: -99.54, up: 99.54}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -55.300000000000004, up: 55.300000000000004}}, 1: {error: {dn: -66.0, up: 70.0}, 'sys,Additional systematic error': {dn: -50.76, up: 50.76}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -28.2, up: 28.2}}, 2: {error: {dn: -55.0, up: 57.0}, 'sys,Additional systematic error': {dn: -41.22, up: 41.22}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -22.9, up: 22.9}}, 3: {error: {dn: -37.0, up: 38.0}, 'sys,Additional systematic error': {dn: -25.29, up: 25.29}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -14.05, up: 14.05}}, 4: {error: {dn: -46.0, up: 47.0}, 'sys,Additional systematic error': {dn: -32.85, up: 32.85}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -18.25, up: 18.25}}, 5: {error: {dn: -34.0, up: 36.0}, 'sys,Additional systematic error': {dn: -20.88, up: 20.88}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -11.6, up: 11.6}}, 6: {error: {dn: -23.0, up: 24.0}, 'sys,Additional systematic error': {dn: -12.6, up: 12.6}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -7.0, up: 7.0}}, 7: {error: {dn: -24.0, up: 26.0}, 'sys,Additional systematic error': {dn: -12.78, up: 12.78}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -7.1, up: 7.1}}, 8: {error: {dn: -17.0, up: 19.0}, 'sys,Additional systematic error': {dn: -8.459999999999999, up: 8.459999999999999}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -4.699999999999999, up: 4.699999999999999}}, 9: {error: {dn: -3.0, up: 3.0}, 'sys,Additional systematic error': {dn: -1.2600000000000002, up: 1.2600000000000002}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.7000000000000001, up: 0.7000000000000001}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I266893/d08-x01-y01
+Title: doi:10.17182/hepdata.15283.v1/t8
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+8.050000e-02	1.150000e-02	1.150000e-02	1.106000e+03	1.820173e+02	1.867359e+02
+1.005000e-01	8.500000e-03	8.500000e-03	5.640000e+02	8.790801e+01	9.094953e+01
+1.175000e-01	8.500000e-03	8.500000e-03	4.580000e+02	7.244652e+01	7.397634e+01
+1.370000e-01	1.100000e-02	1.100000e-02	2.810000e+02	4.696793e+01	4.775968e+01
+1.585000e-01	1.050000e-02	1.050000e-02	3.650000e+02	5.939853e+01	6.017628e+01
+1.805000e-01	1.150000e-02	1.150000e-02	2.320000e+02	4.155159e+01	4.320341e+01
+2.105000e-01	1.850000e-02	1.850000e-02	1.400000e+02	2.714332e+01	2.799571e+01
+2.535000e-01	2.450000e-02	2.450000e-02	1.420000e+02	2.810228e+01	2.982848e+01
+3.105000e-01	3.250000e-02	3.250000e-02	9.400000e+01	1.956174e+01	2.132280e+01
+6.715000e-01	3.285000e-01	3.285000e-01	1.400000e+01	3.328303e+00	3.328303e+00
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I266893/d09-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.0035, up: 0.0038}, 'sys,Additional systematic error': {dn: -0.001224, up: 0.001224}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.00068, up: 0.00068}}, 1: {error: {dn: -0.0029, up: 0.0032}, 'sys,Additional systematic error': {dn: -0.001377, up: 0.001377}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.0007650000000000001, up: 0.0007650000000000001}}, 2: {error: {dn: -0.0019, up: 0.002}, 'sys,Additional systematic error': {dn: -0.00072, up: 0.00072}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.0004, up: 0.0004}}, 3: {error: {dn: -0.0011, up: 0.0012}, 'sys,Additional systematic error': {dn: -0.000468, up: 0.000468}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.00026, up: 0.00026}}, 4: {error: {dn: -0.0003, up: 0.0003}, 'sys,Additional systematic error': {dn: -9.0e-05, up: 9.0e-05}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -5.0e-05, up: 5.0e-05}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I266893/d09-x01-y01
+Title: doi:10.17182/hepdata.15283.v1/t9
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+9.500000e-01	3.400000e-01	3.400000e-01	1.360000e-02	3.769692e-03	4.049762e-03
+1.585000e+00	2.950000e-01	2.950000e-01	1.530000e-02	3.300205e-03	3.566701e-03
+2.280000e+00	4.000000e-01	4.000000e-01	8.000000e-03	2.070845e-03	2.162961e-03
+3.410000e+00	7.300000e-01	7.300000e-01	5.200000e-03	1.223366e-03	1.314011e-03
+1.082000e+01	6.680000e+00	6.680000e+00	1.000000e-03	3.171750e-04	3.171750e-04
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I266893/d10-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.0036, up: 0.0039}, 'sys,Additional systematic error': {dn: -0.0015209999999999998, up: 0.0015209999999999998}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.0008449999999999999, up: 0.0008449999999999999}}, 1: {error: {dn: -0.0028, up: 0.003}, 'sys,Additional systematic error': {dn: -0.0011790000000000001, up: 0.0011790000000000001}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.0006550000000000001, up: 0.0006550000000000001}}, 2: {error: {dn: -0.0018, up: 0.002}, 'sys,Additional systematic error': {dn: -0.000603, up: 0.000603}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.000335, up: 0.000335}}, 3: {error: {dn: -0.0012, up: 0.0013}, 'sys,Additional systematic error': {dn: -0.00054, up: 0.00054}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.00030000000000000003, up: 0.00030000000000000003}}, 4: {error: {dn: -0.0003, up: 0.0003}, 'sys,Additional systematic error': {dn: -7.2e-05, up: 7.2e-05}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -3.9999999999999996e-05, up: 3.9999999999999996e-05}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I266893/d10-x01-y01
+Title: doi:10.17182/hepdata.15283.v1/t10
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+4.975000e-01	4.975000e-01	4.975000e-01	1.690000e-02	3.998433e-03	4.270535e-03
+1.327500e+00	3.325000e-01	3.325000e-01	1.310000e-02	3.107904e-03	3.289235e-03
+2.070000e+00	4.100000e-01	4.100000e-01	6.700000e-03	1.927650e-03	2.115617e-03
+3.225000e+00	7.450000e-01	7.450000e-01	6.000000e-03	1.349667e-03	1.439305e-03
+1.073500e+01	6.765000e+00	6.765000e+00	8.000000e-04	3.111013e-04	3.111013e-04
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I266893/d11-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.0216, up: 0.0232}, 'sys,Additional systematic error': {dn: -0.007488, up: 0.007488}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.00416, up: 0.00416}}, 1: {error: {dn: -0.0168, up: 0.0182}, 'sys,Additional systematic error': {dn: -0.0041670000000000006, up: 0.0041670000000000006}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.0023150000000000002, up: 0.0023150000000000002}}, 2: {error: {dn: -0.0088, up: 0.0096}, 'sys,Additional systematic error': {dn: -0.002457, up: 0.002457}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.0013650000000000001, up: 0.0013650000000000001}}, 3: {error: {dn: -0.005, up: 0.0053}, 'sys,Additional systematic error': {dn: -0.0022229999999999997, up: 0.0022229999999999997}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.001235, up: 0.001235}}, 4: {error: {dn: -0.0005, up: 0.0006}, 'sys,Additional systematic error': {dn: -0.000288, up: 0.000288}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.00015999999999999999, up: 0.00015999999999999999}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I266893/d11-x01-y01
+Title: doi:10.17182/hepdata.15283.v1/t11
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+7.600000e-02	7.600000e-02	7.600000e-02	8.320000e-02	2.323652e-02	2.473087e-02
+2.445000e-01	9.250000e-02	9.250000e-02	4.630000e-02	1.746319e-02	1.881391e-02
+4.600000e-01	1.230000e-01	1.230000e-01	2.730000e-02	9.237969e-03	1.000300e-02
+7.795000e-01	1.965000e-01	1.965000e-01	2.470000e-02	5.609541e-03	5.878516e-03
+2.918000e+00	1.942000e+00	1.942000e+00	3.200000e-03	5.987854e-04	6.845027e-04
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I266893/d12-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.033, up: 0.035}, 'sys,Additional systematic error': {dn: -0.01152, up: 0.01152}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.0064, up: 0.0064}}, 1: {error: {dn: -0.03, up: 0.032}, 'sys,Additional systematic error': {dn: -0.012600000000000002, up: 0.012600000000000002}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.007000000000000001, up: 0.007000000000000001}}, 2: {error: {dn: -0.018, up: 0.028}, 'sys,Additional systematic error': {dn: -0.00999, up: 0.00999}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.00555, up: 0.00555}}, 3: {error: {dn: -0.011, up: 0.012}, 'sys,Additional systematic error': {dn: -0.0022500000000000003, up: 0.0022500000000000003}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.00125, up: 0.00125}}, 4: {error: {dn: -0.002, up: 0.002}, 'sys,Additional systematic error': {dn: -0.0009000000000000001, up: 0.0009000000000000001}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.0005, up: 0.0005}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I266893/d12-x01-y01
+Title: doi:10.17182/hepdata.15283.v1/t12
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+4.000000e-02	4.000000e-02	4.000000e-02	1.280000e-01	3.553407e-02	3.739880e-02
+1.225000e-01 	4.250000e-02	4.250000e-02	1.400000e-01	3.328303e-02	3.509644e-02
+2.190000e-01	5.400000e-02	5.400000e-02	1.110000e-01	2.132141e-02	3.024240e-02
+3.620000e-01	8.900000e-02	8.900000e-02	2.500000e-02	1.129712e-02	1.227294e-02
+1.180500e+00	7.295000e-01	7.295000e-01	1.000000e-02	2.249444e-03	2.249444e-03
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I266893/d13-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.0049, up: 0.0053}, 'sys,Additional systematic error': {dn: -0.002331, up: 0.002331}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.0012950000000000001, up: 0.0012950000000000001}}, 1: {error: {dn: -0.0047, up: 0.0049}, 'sys,Additional systematic error': {dn: -0.001917, up: 0.001917}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.001065, up: 0.001065}}, 2: {error: {dn: -0.005, up: 0.0053}, 'sys,Additional systematic error': {dn: -0.001746, up: 0.001746}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.0009699999999999999, up: 0.0009699999999999999}}, 3: {error: {dn: -0.0048, up: 0.005}, 'sys,Additional systematic error': {dn: -0.0018360000000000002, up: 0.0018360000000000002}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.00102, up: 0.00102}}, 4: {error: {dn: -0.0023, up: 0.0025}, 'sys,Additional systematic error': {dn: -0.0005849999999999999, up: 0.0005849999999999999}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.000325, up: 0.000325}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I266893/d13-x01-y01
+Title: doi:10.17182/hepdata.15283.v1/t13
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+3.430000e-01	3.430000e-01	3.430000e-01	2.590000e-02	5.578583e-03	5.933008e-03
+8.630000e-01	1.770000e-01	1.770000e-01	2.130000e-02	5.186436e-03	5.368344e-03
+1.210000e+00	1.700000e-01	1.700000e-01	1.940000e-02	5.384182e-03	5.663869e-03
+1.585000e+00	2.050000e-01	2.050000e-01	2.040000e-02	5.239398e-03	5.423218e-03
+2.610000e+00	8.200000e-01	8.200000e-01	6.500000e-03	2.395381e-03	2.588020e-03
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I266893/d14-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -300.0, up: 320.0}, 'sys,Additional systematic error': {dn: -108.89999999999999, up: 108.89999999999999}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -60.5, up: 60.5}}, 1: {error: {dn: -170.0, up: 180.0}, 'sys,Additional systematic error': {dn: -74.7, up: 74.7}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -41.5, up: 41.5}}, 2: {error: {dn: -90.0, up: 90.0}, 'sys,Additional systematic error': {dn: -34.199999999999996, up: 34.199999999999996}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -19.0, up: 19.0}}, 3: {error: {dn: -60.0, up: 60.0}, 'sys,Additional systematic error': {dn: -23.400000000000002, up: 23.400000000000002}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -13.0, up: 13.0}}, 4: {error: {dn: -10.0, up: 10.0}, 'sys,Additional systematic error': {dn: -3.6, up: 3.6}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -2.0, up: 2.0}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I266893/d14-x01-y01
+Title: doi:10.17182/hepdata.15283.v1/t14
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+7.050000e-02	1.050000e-02	1.050000e-02	1.210000e+03	3.248376e+02	3.433940e+02
+9.350000e-02	1.250000e-02	1.250000e-02	8.300000e+02	1.902691e+02	1.992545e+02
+1.220000e-01	1.600000e-02	1.600000e-02	3.800000e+02	9.813582e+01	9.813582e+01
+1.710000e-01	3.300000e-02	3.300000e-02	2.600000e+02	6.570053e+01	6.570053e+01
+5.075000e-01	3.035000e-01	3.035000e-01	4.000000e+01	1.081480e+01	1.081480e+01
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I266893/d15-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.021, up: 0.022}}, 1: {error: {dn: -0.023, up: 0.024}}, 2: {error: {dn: -0.027, up: 0.028}}, 3: {error: {dn: -0.024, up: 0.025}}, 4: {error: {dn: -0.031, up: 0.032}}, 5: {error: {dn: -0.028, up: 0.031}}, 6: {error: {dn: -0.028, up: 0.032}}, 7: {error: {dn: -0.03, up: 0.032}}, 8: {error: {dn: -0.033, up: 0.035}}, 9: {error: {dn: -0.028, up: 0.03}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I266893/d15-x01-y01
+Title: doi:10.17182/hepdata.15283.v1/t15
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.100000e-02	1.100000e-02	1.100000e-02	1.740000e-01	2.100000e-02	2.200000e-02
+2.950000e-02	7.500000e-03	7.500000e-03	1.190000e-01	2.300000e-02	2.400000e-02
+4.500000e-02	8.000000e-03	8.000000e-03	2.120000e-01	2.700000e-02	2.800000e-02
+6.250000e-02	9.500000e-03	9.500000e-03	1.720000e-01	2.400000e-02	2.500000e-02
+8.150000e-02	9.500000e-03	9.500000e-03	1.590000e-01	3.100000e-02	3.200000e-02
+1.055000e-01	1.450000e-02	1.450000e-02	2.000000e-01	2.800000e-02	3.100000e-02
+1.415000e-01	2.150000e-02	2.150000e-02	2.370000e-01	2.800000e-02	3.200000e-02
+1.975000e-01	3.450000e-02	3.450000e-02	2.630000e-01	3.000000e-02	3.200000e-02
+2.895000e-01	5.750000e-02	5.750000e-02	2.650000e-01	3.300000e-02	3.500000e-02
+5.945000e-01	2.475000e-01	2.475000e-01	2.930000e-01	2.800000e-02	3.000000e-02
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I266893/d15-x01-y02
+Variations: [""]
+ErrorBreakdown: {}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I266893/d15-x01-y02
+Title: doi:10.17182/hepdata.15283.v1/t15
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.100000e-02	1.100000e-02	1.100000e-02	9.600000e+00	0.000000e+00	0.000000e+00
+2.950000e-02	7.500000e-03	7.500000e-03	1.160000e+01	0.000000e+00	0.000000e+00
+4.500000e-02	8.000000e-03	8.000000e-03	1.270000e+01	0.000000e+00	0.000000e+00
+6.250000e-02	9.500000e-03	9.500000e-03	1.320000e+01	0.000000e+00	0.000000e+00
+8.150000e-02	9.500000e-03	9.500000e-03	1.390000e+01	0.000000e+00	0.000000e+00
+1.055000e-01	1.450000e-02	1.450000e-02	1.430000e+01	0.000000e+00	0.000000e+00
+1.415000e-01	2.150000e-02	2.150000e-02	1.470000e+01	0.000000e+00	0.000000e+00
+1.975000e-01	3.450000e-02	3.450000e-02	1.530000e+01	0.000000e+00	0.000000e+00
+2.895000e-01	5.750000e-02	5.750000e-02	1.570000e+01	0.000000e+00	0.000000e+00
+5.945000e-01	2.475000e-01	2.475000e-01	1.640000e+01	0.000000e+00	0.000000e+00
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I266893/d15-x01-y03
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.0022, up: 0.0023}}, 1: {error: {dn: -0.002, up: 0.0021}}, 2: {error: {dn: -0.0021, up: 0.0023}}, 3: {error: {dn: -0.0019, up: 0.0019}}, 4: {error: {dn: -0.0022, up: 0.0023}}, 5: {error: {dn: -0.002, up: 0.0021}}, 6: {error: {dn: -0.002, up: 0.0021}}, 7: {error: {dn: -0.0019, up: 0.0021}}, 8: {error: {dn: -0.0021, up: 0.0022}}, 9: {error: {dn: -0.0017, up: 0.0018}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I266893/d15-x01-y03
+Title: doi:10.17182/hepdata.15283.v1/t15
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.100000e-02	1.100000e-02	1.100000e-02	1.800000e-02	2.200000e-03	2.300000e-03
+2.950000e-02	7.500000e-03	7.500000e-03	1.020000e-02	2.000000e-03	2.100000e-03
+4.500000e-02	8.000000e-03	8.000000e-03	1.670000e-02	2.100000e-03	2.300000e-03
+6.250000e-02	9.500000e-03	9.500000e-03	1.310000e-02	1.900000e-03	1.900000e-03
+8.150000e-02	9.500000e-03	9.500000e-03	1.150000e-02	2.200000e-03	2.300000e-03
+1.055000e-01	1.450000e-02	1.450000e-02	1.400000e-02	2.000000e-03	2.100000e-03
+1.415000e-01	2.150000e-02	2.150000e-02	1.600000e-02	2.000000e-03	2.100000e-03
+1.975000e-01	3.450000e-02	3.450000e-02	1.720000e-02	1.900000e-03	2.100000e-03
+2.895000e-01	5.750000e-02	5.750000e-02	1.690000e-02	2.100000e-03	2.200000e-03
+5.945000e-01	2.475000e-01	2.475000e-01	1.780000e-02	1.700000e-03	1.800000e-03
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I266893/d16-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.045, up: 0.048}}, 1: {error: {dn: -0.048, up: 0.052}}, 2: {error: {dn: -0.064, up: 0.069}}, 3: {error: {dn: -0.079, up: 0.085}}, 4: {error: {dn: -0.075, up: 0.08}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I266893/d16-x01-y01
+Title: doi:10.17182/hepdata.15283.v1/t16
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.750000e-02	1.750000e-02	1.750000e-02	1.850000e-01	4.500000e-02	4.800000e-02
+5.300000e-02	1.800000e-02	1.800000e-02	1.600000e-01	4.800000e-02	5.200000e-02
+1.025000e-01	3.150000e-02	3.150000e-02	2.310000e-01	6.400000e-02	6.900000e-02
+1.895000e-01	5.550000e-02	5.550000e-02	4.040000e-01	7.900000e-02	8.500000e-02
+4.870000e-01	2.420000e-01	2.420000e-01	4.460000e-01	7.500000e-02	8.000000e-02
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I266893/d16-x01-y02
+Variations: [""]
+ErrorBreakdown: {}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I266893/d16-x01-y02
+Title: doi:10.17182/hepdata.15283.v1/t16
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.750000e-02	1.750000e-02	1.750000e-02	1.180000e+01	0.000000e+00	0.000000e+00
+5.300000e-02	1.800000e-02	1.800000e-02	1.460000e+01	0.000000e+00	0.000000e+00
+1.025000e-01	3.150000e-02	3.150000e-02	1.620000e+01	0.000000e+00	0.000000e+00
+1.895000e-01	5.550000e-02	5.550000e-02	1.710000e+01	0.000000e+00	0.000000e+00
+4.870000e-01	2.420000e-01	2.420000e-01	1.780000e+01	0.000000e+00	0.000000e+00
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I266893/d16-x01-y03
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.0038, up: 0.0041}}, 1: {error: {dn: -0.0033, up: 0.0035}}, 2: {error: {dn: -0.0039, up: 0.0043}}, 3: {error: {dn: -0.0046, up: 0.005}}, 4: {error: {dn: -0.0042, up: 0.0045}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I266893/d16-x01-y03
+Title: doi:10.17182/hepdata.15283.v1/t16
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.750000e-02	1.750000e-02	1.750000e-02	1.570000e-02	3.800000e-03	4.100000e-03
+5.300000e-02	1.800000e-02	1.800000e-02	1.100000e-02	3.300000e-03	3.500000e-03
+1.025000e-01	3.150000e-02	3.150000e-02	1.430000e-02	3.900000e-03	4.300000e-03
+1.895000e-01	5.550000e-02	5.550000e-02	2.370000e-02	4.600000e-03	5.000000e-03
+4.870000e-01	2.420000e-01	2.420000e-01	2.500000e-02	4.200000e-03	4.500000e-03
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I266893/d17-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.003, up: 0.003}, sys: {dn: -0.003, up: 0.003}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I266893/d17-x01-y01
+Title: doi:10.17182/hepdata.15283.v1/t17
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+3.480000e+01	0.000000e+00	0.000000e+00	1.200000e-02	4.242641e-03	4.242641e-03
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I266893/d18-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.00043, up: 0.00048}, 'sys,Additional systematic error': {dn: -0.00022599999999999996, up: 0.00022599999999999996}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -5.649999999999999e-05, up: 5.649999999999999e-05}}, 1: {error: {dn: -0.00026, up: 0.0003}, 'sys,Additional systematic error': {dn: -0.000116, up: 0.000116}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -2.9e-05, up: 2.9e-05}}, 2: {error: {dn: -0.0001, up: 0.00013}, 'sys,Additional systematic error': {dn: -5.8e-05, up: 5.8e-05}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -1.45e-05, up: 1.45e-05}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I266893/d18-x01-y01
+Title: doi:10.17182/hepdata.15283.v1/t18
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.360000e+00	7.400000e-01	7.400000e-01	1.130000e-03	4.890483e-04	5.335431e-04
+2.685000e+00	5.850000e-01	5.850000e-01	5.800000e-04	2.861765e-04	3.229505e-04
+6.835000e+00	3.565000e+00	3.565000e+00	2.900000e-04	1.165086e-04	1.430883e-04
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I266893/d19-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.00036, up: 0.0004}, 'sys,Additional systematic error': {dn: -0.000178, up: 0.000178}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -4.45e-05, up: 4.45e-05}}, 1: {error: {dn: -0.00028, up: 0.00031}, 'sys,Additional systematic error': {dn: -0.00014, up: 0.00014}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -3.5e-05, up: 3.5e-05}}, 2: {error: {dn: -9.0e-05, up: 0.0001}, 'sys,Additional systematic error': {dn: -4.8e-05, up: 4.8e-05}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -1.2e-05, up: 1.2e-05}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I266893/d19-x01-y01
+Title: doi:10.17182/hepdata.15283.v1/t19
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+9.100000e-01	9.100000e-01	9.100000e-01	8.900000e-04	4.040597e-04	4.400730e-04
+2.450000e+00	6.300000e-01	6.300000e-01	7.000000e-04	3.150000e-04	3.419430e-04
+6.740000e+00	3.660000e+00	3.660000e+00	2.400000e-04	1.027035e-04	1.115706e-04
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I266893/d20-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.0025, up: 0.0029}, 'sys,Additional systematic error': {dn: -0.00112, up: 0.00112}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.00028, up: 0.00028}}, 1: {error: {dn: -0.0015, up: 0.0018}, 'sys,Additional systematic error': {dn: -0.00041999999999999996, up: 0.00041999999999999996}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.00010499999999999999, up: 0.00010499999999999999}}, 2: {error: {dn: -0.0002, up: 0.0002}, 'sys,Additional systematic error': {dn: -0.00014, up: 0.00014}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -3.5e-05, up: 3.5e-05}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I266893/d20-x01-y01
+Title: doi:10.17182/hepdata.15283.v1/t20
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.425000e-01	1.425000e-01	1.425000e-01	5.600000e-03	2.753688e-03	3.121346e-03
+4.705000e-01	1.855000e-01	1.855000e-01	2.100000e-03	1.561225e-03	1.851331e-03
+2.218000e+00	1.562000e+00	1.562000e+00	7.000000e-04	2.466272e-04	2.466272e-04
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I266893/d21-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.0041, up: 0.0046}, 'sys,Additional systematic error': {dn: -0.00216, up: 0.00216}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.00054, up: 0.00054}}, 1: {error: {dn: -0.0031, up: 0.0036}, 'sys,Additional systematic error': {dn: -0.00156, up: 0.00156}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.00039, up: 0.00039}}, 2: {error: {dn: -0.0004, up: 0.0004}, 'sys,Additional systematic error': {dn: -0.00015999999999999999, up: 0.00015999999999999999}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -3.9999999999999996e-05, up: 3.9999999999999996e-05}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I266893/d21-x01-y01
+Title: doi:10.17182/hepdata.15283.v1/t21
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+6.700000e-02	6.700000e-02	6.700000e-02	1.080000e-02	4.665533e-03	5.110499e-03
+2.305000e-01	9.650000e-02	9.650000e-02	7.800000e-03	3.492234e-03	3.942804e-03
+1.058500e+00	7.315000e-01	7.315000e-01	8.000000e-04	4.326662e-04	4.326662e-04
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I266893/d22-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.0006, up: 0.0006}, 'sys,Additional systematic error': {dn: -0.00026, up: 0.00026}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -6.5e-05, up: 6.5e-05}}, 1: {error: {dn: -0.0009, up: 0.001}, 'sys,Additional systematic error': {dn: -0.0005799999999999999, up: 0.0005799999999999999}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.00014499999999999997, up: 0.00014499999999999997}}, 2: {error: {dn: -0.0006, up: 0.0006}, 'sys,Additional systematic error': {dn: -0.00026, up: 0.00026}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -6.5e-05, up: 6.5e-05}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I266893/d22-x01-y01
+Title: doi:10.17182/hepdata.15283.v1/t22
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+4.925000e-01	4.925000e-01	4.925000e-01	1.300000e-03	6.571339e-04	6.571339e-04
+1.222500e+00	2.375000e-01	2.375000e-01	2.900000e-03	1.080474e-03	1.165086e-03
+2.065000e+00	6.050000e-01	6.050000e-01	1.300000e-03	6.571339e-04	6.571339e-04
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I266893/d23-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -19.0, up: 21.0}, 'sys,Additional systematic error': {dn: -10.8, up: 10.8}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -2.7, up: 2.7}}, 1: {error: {dn: -6.0, up: 8.0}, 'sys,Additional systematic error': {dn: -2.2, up: 2.2}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.55, up: 0.55}}, 2: {error: {dn: -2.0, up: 3.0}, 'sys,Additional systematic error': {dn: -1.4000000000000001, up: 1.4000000000000001}, 'sys,Systematic error due to uncertainty in R. (A value of 4.01 +- 0.03 (DSYS=0.20) is used)': {dn: -0.35000000000000003, up: 0.35000000000000003}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I266893/d23-x01-y01
+Title: doi:10.17182/hepdata.15283.v1/t23
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.140000e-01	3.000000e-02	3.000000e-02	5.400000e+01	2.202113e+01	2.376826e+01
+1.750000e-01	3.100000e-02	3.100000e-02	1.100000e+01	6.414242e+00	8.315197e+00
+4.060000e-01	2.000000e-01	2.000000e-01	7.000000e+00	2.466272e+00	3.329039e+00
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I266893/d24-x01-y01
+Variations: []
+ErrorBreakdown: {}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I266893/d24-x01-y01
+Title: doi:10.17182/hepdata.15283.v1/t24
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	
+END YODA_SCATTER2D_V2

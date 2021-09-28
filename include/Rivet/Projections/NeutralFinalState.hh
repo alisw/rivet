@@ -1,0 +1,57 @@
+// -*- C++ -*-
+#ifndef RIVET_NeutralFinalState_HH
+#define RIVET_NeutralFinalState_HH
+
+#include "Rivet/Projections/FinalState.hh"
+
+namespace Rivet {
+
+
+  /// @brief Project only neutral final state particles.
+  class NeutralFinalState : public FinalState {
+
+  public:
+
+    /// @name Constructors
+    //@{
+
+    /// Construction from another FinalState
+    NeutralFinalState(const FinalState& fsp, double etmin=0*GeV)
+      : _Etmin(etmin)
+    {
+      setName("NeutralFinalState");
+      declare(fsp, "FS");
+    }
+
+    /// Construction using Cuts object
+    NeutralFinalState(const Cut& c=Cuts::open()) : _Etmin(0.0*GeV) {
+      setName("NeutralFinalState");
+      declare(FinalState(c), "FS");
+    }
+
+    /// Clone on the heap.
+    DEFAULT_RIVET_PROJ_CLONE(NeutralFinalState);
+
+    //@}
+
+
+    /// Apply the projection on the supplied event.
+    void project(const Event& e);
+
+    /// Compare projections.
+    CmpState compare(const Projection& p) const;
+
+
+  protected:
+
+    /// The minimum allowed transverse energy.
+    /// @todo Remove in favour of a Cut
+    double _Etmin;
+
+  };
+
+
+}
+
+
+#endif

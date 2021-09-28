@@ -1,0 +1,36 @@
+Name: BELLE_2008_I764099
+Year: 2008
+Summary: Cross Section for $e^+e^-\to\Upsilon(1,2,3S)\pi^+\pi^-$ and $\Upsilon(1S)K^+K^-$  at 10.87 GeV
+Experiment: BELLE
+Collider: KEKB
+InspireID: 764099
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 100 (2008) 112001, 2008 
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+  'Measurement of the cross section for $e^+e^-\to\Upsilon(1,2,3S)\pi^+\pi^-$ and $\Upsilon(1S)K^+K^-$  at 10.87 GeV measured by BELLE.'
+Keywords: []
+BibKey: Abe:2007tk
+BibTeX: '@article{Abe:2007tk,
+      author         = "Chen, K. F. and others",
+      title          = "{Observation of anomalous Upsilon(1S) pi+ pi- and
+                        Upsilon(2S) pi+ pi- production near the Upsilon(5S)
+                        resonance}",
+      collaboration  = "Belle",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "100",
+      year           = "2008",
+      pages          = "112001",
+      doi            = "10.1103/PhysRevLett.100.112001",
+      eprint         = "0710.2577",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "BELLE-CONF-0774",
+      SLACcitation   = "%%CITATION = ARXIV:0710.2577;%%"
+}'

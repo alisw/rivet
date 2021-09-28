@@ -1,0 +1,58 @@
+Name: LHCB_2015_I1396331
+Year: 2016
+Summary: Charm hadron differential cross-sections in $p_T$ and rapidity at $\sqrt{s} = 13$ TeV
+Experiment: LHCB
+Collider: LHC 13TeV
+InspireID: 1396331
+Status: VALIDATED
+Authors:
+ - Dominik Muller <dominik.muller@cern.ch>
+ - Patrick Spradlin <patrick.spradlin@cern.ch>
+References:
+ - JHEP 1603 (2016) 159 JHEP 1609 (2016) 013 JHEP 1705 (2017) 074
+ - doi 10.1007/JHEP09(2016)013 10.1007/JHEP05(2017)074 10.1007/JHEP03(2016)159
+ - arXiv 1510.01707 [hep-ex]
+ - LHCB-PAPER-2015-041, CERN-PH-EP-2015-272
+RunInfo: Minimum bias QCD events, proton--proton interactions at $\sqrt{s} = 13$ TeV.
+NumEvents: 1000000
+Beams:  [p+, p+]
+Energies: [13000]
+NeedCrossSection: True
+Description:
+  'Measurements of differential production cross-sections with respect to
+   transverse momentum, $d \sigma(H_c + \mathrm{c.c.}) / d p_T$, for charm
+   hadron species $H_c \in \{ D^0, D^+, D^\ast(2010)^+, D_s^+ \}$
+   in proton--proton collisions at center-of-mass energy
+   $\sqrt{s}= 13$ TeV.
+
+   The differential cross-sections are measured in bins of hadron transverse
+   momentum ($p_T$) and rapidity ($y$) with respect to the beam axis in the
+   region $0 < p_T < 15$ GeV/$c$ and $2.0 < y < 4.5$, where $p_T$ and $y$ are
+   measured in the proton--proton CM frame.  In this analysis code, it is
+   assumed that the event coordinate system is in the proton--proton CM frame
+   with the $z$-axis corresponding to the proton--proton collision axis (as
+   usual).
+
+   Contributions of charm hadrons from the decays of $b$-hadrons and other
+   particles with comparably large mean lifetimes have been removed in the
+   measurement. In this analysis code, this is implemented by counting only
+   charm hadrons that do not have an ancestor that contains a $b$ quark.'
+BibKey: Aaij:2015bpa
+BibTeX: '@article{Aaij:2015bpa,
+      author         = "Aaij, Roel and others",
+      title          = "{Measurements of prompt charm production cross-sections
+                        in $pp$ collisions at $ \sqrt{s}=13 $ TeV}",
+      collaboration  = "LHCb",
+      journal        = "JHEP",
+      volume         = "03",
+      year           = "2016",
+      pages          = "159",
+      doi            = "10.1007/JHEP03(2016)159, 10.1007/JHEP09(2016)013,
+                        10.1007/JHEP05(2017)074",
+      note           = "[Erratum: JHEP05,074(2017)]",
+      eprint         = "1510.01707",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "LHCB-PAPER-2015-041, CERN-PH-EP-2015-272",
+      SLACcitation   = "%%CITATION = ARXIV:1510.01707;%%"
+}

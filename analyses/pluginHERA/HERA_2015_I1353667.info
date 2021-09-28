@@ -1,0 +1,47 @@
+Name: HERA_2015_I1353667
+Year: 2015
+Summary: Combined H1/ZEUS $D^*$ production cross-sections in DIS
+Experiment: H1/ZEUS
+Collider: HERA
+InspireID: 1353667
+Status: UNVALIDATED
+Authors:
+ - Andy Buckley <andy.buckley@cern.ch>
+References:
+- 'JHEP 1509 (2015) 149'
+- 'DOI:10.1007/JHEP09(2015)149'
+- 'DESY-15-037'
+- 'arxiv:1503.06042'
+- 'http://www-h1.desy.de/publications/htmlsplit/DESY-15-037.long.poster.html'
+RunInfo: 'Inclusive DIS events. $Q^2$ cut must be lower than 1.5 $\GeV^2$.'
+NeedCrossSection: yes
+Beams: [[p+, e-], [p+, e+]]
+Energies: [318]
+Description:
+   H1 and ZEUS combined differential cross-sections for inclusive $D^{*\pm}$
+   production in deep-inelastic $ep$ scattering at HERA. The cross-sections
+   are combined in the common visible phase-space region of photon virtuality
+   $Q^2 > 5 \GeV^2$, electron inelasticity $0.02 < y < 0.7$, and the $D^{*\pm}$
+   meson's transverse momentum $p_T(D^*) > 1.5 \GeV$ and pseudorapidity
+   $|\eta(D^*)| < 1.5$. The combination procedure takes into account all
+   correlations. Double-differential cross sections $d2\sigma/dQ^2 dy$
+   are combined with earlier $D^{∗\pm}$ data, extending the kinematic range
+   down to $Q^2 > 1.5 \GeV^2$.
+Keywords: [ep dis dstar]
+BibKey: H1:2015dma
+BibTeX: '@article{H1:2015dma,
+      author         = "Abramowicz, H. and others",
+      title          = "{Combination of differential D$^{∗\pm}$ cross-section
+                        measurements in deep-inelastic ep scattering at HERA}",
+      collaboration  = "H1, ZEUS",
+      journal        = "JHEP",
+      volume         = "09",
+      year           = "2015",
+      pages          = "149",
+      doi            = "10.1007/JHEP09(2015)149",
+      eprint         = "1503.06042",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "DESY-15-037",
+      SLACcitation   = "%%CITATION = ARXIV:1503.06042;%%"
+}'

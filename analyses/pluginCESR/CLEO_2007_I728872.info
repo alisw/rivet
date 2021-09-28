@@ -1,0 +1,34 @@
+Name: CLEO_2007_I728872
+Year: 2007
+Summary: Spectrum of $\phi$ mesons in $\Upsilon(4S)$ and $\Upsilon(5S)$ decays
+Experiment: CLEO
+Collider: CESR
+InspireID: 728872
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D75 (2007) 012002
+RunInfo: Any process producing $\Upsilon(4S)$ or $\Upsilon(5S)$, original $e^+e^-$ 
+NeedCrossSection: no
+Description:
+  'Measurement of the $\phi$ meson spectrum in  $\Upsilon(4S)$ and $\Upsilon(5S)$ decays by CLEO, only the
+   spectra are included not the conclusions on $B_s$ production drawn from them.'
+Keywords: []
+BibKey: Huang:2006em
+BibTeX: '@article{Huang:2006em,
+      author         = "Huang, G. S. and others",
+      title          = "{Measurement of B(Upsilon(5S) ---&gt; B(*)(s) anti-B(*)(s))
+                        Using phi Mesons}",
+      collaboration  = "CLEO",
+      journal        = "Phys. Rev.",
+      volume         = "D75",
+      year           = "2007",
+      pages          = "012002",
+      doi            = "10.1103/PhysRevD.75.012002",
+      eprint         = "hep-ex/0610035",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CLNS-06-1973, CLEO-06-16",
+      SLACcitation   = "%%CITATION = HEP-EX/0610035;%%"
+}'

@@ -1,0 +1,62 @@
+Name: ATLAS_2016_I1502620
+Year: 2016
+Summary: W and Z inclusive cross sections at 7 TeV
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1502620
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Jan Kretzschmar <jan.kretzschmar@cern.ch>
+ - Christian Gutschow <chris.g@cern.ch>
+References:
+ - Eur. Phys. J. C77 (2017) no.6, 367
+ - doi:10.1140/epjc/s10052-017-4911-9
+ - arXiv:1612.03016 [hep-ex]
+Keywords:
+ - zboson
+RunInfo:
+  p + p -> Z + X ( Z -> e e )
+Luminosity_fb: 4.9
+Beams: [p+, p+]
+Energies: [7000]
+PtCuts: [20]
+NeedCrossSection: True
+Options:
+ - LMODE=EL,MU,Z,W,ZEL,ZMU,WEL,WMU
+Description:
+  'High-precision measurements by the ATLAS Collaboration are presented of inclusive $W^+\to\ell^+$, $W^-\to\ell^-$,
+  $Z/\gamma^\ast\to\ell\ell$ ($\ell=e,\mu$) Drell-Yan production cross sections at the LHC. The data were collected
+  in proton-proton collisions at $\sqrt{s}=7$ TeV with an integrated luminosity of 4.6 fb${}^{-1}$. Differential
+  $W^+$ and $W^-$ cross sections are measured in a lepton pseudorapidity range $|\eta_\ell| < 2.5$. Differential
+  $Z/\gamma^\ast$ cross sections are measured as a function of the absolute dilepton rapidity, for $|y_{\ell\ell}| < 3.6$,
+  for three intervals of dilepton mass, $m_{\ell\ell}$, extending from 46 to 150 GeV. The integrated and differential
+  electron- and muon-channel cross sections are combined and compared to theoretical predictions using recent sets of
+  parton distribution functions. The data, together with the final inclusive $e^\pm p$ scattering cross-section data
+  from H1 and ZEUS, are interpreted in a next-to-next-to-leading-order QCD analysis, and a new set of parton distribution
+  functions, ATLAS-epWZ16, is obtained. The ratio of strange-to-light sea-quark densities in the proton is determined
+  more accurately than in previous determinations based on collider data only, and is established to be close to unity in
+  the sensitivity range of the data. A new measurement of the CKM matrix element $|V_{cs}|$ is also provided.
+  N.B.: Use :LMODE to choose specify the signature decay channel directly. 
+        Default, run everything, assuming all decay modes are generated 
+        Contains Z (W): fill only Z (W) signature histgrams
+        Contains EL (MU): assume only electron (muon) decay modes are being generated.'
+BibKey: Aaboud:2016btc
+BibTeX: '@article{Aaboud:2016btc,
+      author         = "Aaboud, Morad and others",
+      title          = "{Precision measurement and interpretation of inclusive
+                        $W^+$ , $W^-$ and $Z/\gamma ^*$ production cross sections
+                        with the ATLAS detector}",
+      collaboration  = "ATLAS",
+      journal        = "Eur. Phys. J.",
+      volume         = "C77",
+      year           = "2017",
+      number         = "6",
+      pages          = "367",
+      doi            = "10.1140/epjc/s10052-017-4911-9",
+      eprint         = "1612.03016",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-EP-2016-272",
+      SLACcitation   = "%%CITATION = ARXIV:1612.03016;%%"
+}'

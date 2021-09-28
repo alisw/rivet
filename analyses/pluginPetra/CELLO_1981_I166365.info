@@ -1,0 +1,29 @@
+Name: CELLO_1981_I166365
+Year: 1981
+Summary: Measurement of $R$ for energies between 33 and 36.7 GeV
+Experiment: CELLO
+Collider: PETRA
+InspireID: 166365
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: no
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$ in $e^+e^-$ collisions for energies between 14 and 46.6 GeV.
+   The individual hadronic and muonic cross sections are also outputted to the yoda file
+   so that ratio $R$ can be recalcuated if runs are combined.'
+Keywords: []
+BibKey: Behrend:1981sy
+BibTeX: '@article{Behrend:1981sy,
+      author         = "Behrend, H. J. and others",
+      title          = "{SEARCH FOR NARROW QUARKONIUM STATES AND PAIR PRODUCTION
+                        OF NEW HEAVY QUARKS AT c.m. ENERGIES FROM 33-GeV TO
+                        36.7-GeV}",
+      collaboration  = "CELLO",
+      journal        = "Submitted to: Phys. Lett. B",
+      year           = "1981",
+      reportNumber   = "DESY-81-029",
+      SLACcitation   = "%%CITATION = DESY-81-029;%%"
+}'

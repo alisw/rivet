@@ -1,0 +1,36 @@
+Name: CLEO_1985_I205668
+Year: 1985
+Summary: Identified Particle Spectra and rates in $\Upsilon(1S)$ decays and continumm at 10.49 GeV
+Experiment: CLEO
+Collider: CESR
+InspireID: 205668
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D31 (1985) 2161
+RunInfo: e+e- > hadrons at Upslion1s and 10.49 GeV
+Beams: [e+, e-]
+Energies: [9.46,10.49]
+Description:
+'Spectra and rates for $\pi^\pm$, $K^\pm$, $\pi^0$, $K^0$, $\Lambda$, $\Xi^-$, $\rho^0$, $K^{*\pm}$, $K^{*0}$ and $\phi$
+production in $\Upsilon(1S)$ decays and continumm at 10.49 GeV.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Behrends:1984be
+BibTeX: '@article{Behrends:1984be,
+      author         = "Behrends, S. and others",
+      title          = "{Inclusive Hadron Production in Upsilon Decays and in
+                        Nonresonant electron-Positron Annihilation at 10.49-GeV}",
+      collaboration  = "CLEO",
+      journal        = "Phys. Rev.",
+      volume         = "D31",
+      year           = "1985",
+      pages          = "2161",
+      doi            = "10.1103/PhysRevD.31.2161",
+      reportNumber   = "CLNS-84-630, CLEO-84-9",
+      SLACcitation   = "%%CITATION = PHRVA,D31,2161;%%"
+}'

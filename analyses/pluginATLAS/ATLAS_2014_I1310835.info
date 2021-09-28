@@ -1,0 +1,57 @@
+Name: ATLAS_2014_I1310835
+Year: 2014
+Summary: H(125) -> 4l at 8 TeV
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1310835
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Jonathan Stahlman <stahlman@cern.ch>
+ - Christian Gutschow <chris.g@cern.ch>
+References:
+ - Phys.Lett. B738 (2014) 234-253
+ - arXiv:1408.3226 [hep-ex]
+ - doi:10.1016/j.physletb.2014.09.054
+Keywords:
+ - higgs
+ - 2boson
+ - diboson
+ - zz
+ - 4lepton
+ - jets
+RunInfo:
+  p + p -> H (-> 4 l) + X at 8 TeV
+Luminosity_fb: 20.3
+Beams: [p+, p+]
+Energies: [8000]
+PtCuts: [20,15,10]
+NeedCrossSection: True
+Description:
+  'Measurements of fiducial and differential cross sections of Higgs boson production in the $H\to ZZ^\ast\to 4\ell$ decay channel
+  are presented. The cross sections are determined within a fiducial phase space and corrected for detection efficiency and resolution
+  effects. They are based on 20.3 fb$^{-1}$ of $pp$ collision data, produced at $\sqrt{s}=8$ TeV centre-of-mass energy at the LHC and
+  recorded by the ATLAS detector. The differential measurements are performed in bins of transverse momentum and rapidity of the
+  four-lepton system, the invariant mass of the subleading lepton pair and the decay angle of the leading lepton pair with respect
+  to the beam line in the four-lepton rest frame, as well as the number of jets and the transverse momentum of the leading jet.
+  The measured cross sections are compared to selected theoretical calculations of the Standard Model expectations. No significant
+  deviation from any of the tested predictions is found.'
+BibKey: Aad:2014tca
+BibTeX: '@article{Aad:2014tca,
+      author         = "Aad, Georges and others",
+      title          = "{Fiducial and differential cross sections of Higgs boson
+                        production measured in the four-lepton decay channel in
+                        $pp$ collisions at $\sqrt{s}$=8 TeV with the ATLAS
+                        detector}",
+      collaboration  = "ATLAS",
+      journal        = "Phys. Lett.",
+      volume         = "B738",
+      year           = "2014",
+      pages          = "234-253",
+      doi            = "10.1016/j.physletb.2014.09.054",
+      eprint         = "1408.3226",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-PH-EP-2014-186",
+      SLACcitation   = "%%CITATION = ARXIV:1408.3226;%%"
+}'

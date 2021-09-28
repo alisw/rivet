@@ -1,0 +1,54 @@
+Name: ZEUS_2008_I763404
+Year: 2008
+Summary: Diffractive photoproduction of dijets
+Experiment: ZEUS
+Collider: HERA Run II
+SpiresID: 7416806
+InspireID: 763404
+Status: UNVALIDATED
+Authors:
+ - Ilkka Helenius <ilkka.m.helenius@jyu.fi>
+ - Christine O. Rasmussen <christine.rasmussen@thep.lu.se>
+References:
+ - Eur.Phys.J.C55:177,2008
+ - DESY 07/161
+ - arXiv:0710.1498 [hep-ex]
+RunInfo:
+  920 GeV protons colliding with 27.5 GeV positrons;
+  Diffractive photoproduction of dijets;
+  Leading jet $pT > 7.5$ GeV, second jet $pT > 6.5$ GeV;
+  Jet pseudorapidity $-1.5 < \eta^{jet} < 1.5$
+NumEvents: 1000000
+Beams: [p+, e+]
+Energies: [[920, 27.5]]
+PtCuts: [0]
+Description:
+  ZEUS analysis for diffractive photoproduction of dijets in proton-positron
+  collisions with beam energies of 920~GeV on 27.5~GeV at the ep collider HERA
+  using an integrated luminosity of 77.2 pb−1. The measurements were made in the
+  kinematic range Q2 < 1 GeV^2, 0.20 < y < 0.85 and xIP < 0.025, where Q2 is the
+  photon virtuality, y is the inelasticity and xIP is the fraction of the proton
+  momentum taken by the diffractive exchange. The two jets with the highest
+  transverse energy, Ejet, were required to satisfy E_jet > 7.5 and 6.5 GeV,
+  respectively, and to lie in the pseudorapidity range −1.5 < η_{jet} < 1.5.
+BibKey: Chekanov:2007rh
+BibTeX: '@article{Chekanov:2007rh,
+      author         = "Chekanov, Sergei and others",
+      title          = "{Diffractive photoproduction of dijets in ep collisions
+                        at HERA}",
+      collaboration  = "ZEUS",
+      journal        = "Eur. Phys. J.",
+      volume         = "C55",
+      year           = "2008",
+      pages          = "177-191",
+      doi            = "10.1140/epjc/s10052-008-0598-2",
+      eprint         = "0710.1498",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "DESY-07-161",
+      SLACcitation   = "%%CITATION = ARXIV:0710.1498;%%"
+}'
+
+ReleaseTests:
+ - $A HERA-II-GammaP-Gap
+

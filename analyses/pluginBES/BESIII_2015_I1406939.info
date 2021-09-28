@@ -1,0 +1,35 @@
+Name: BESIII_2015_I1406939
+Year: 2015
+Summary: Cross section for $e^+e^-\to \omega\chi_{c(1,2)}$ at energies between 4.42 and 4.6 GeV
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1406939
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D93 (2016) 011102, 2016 
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+  'Measurement of the cross section for $e^+e^-\to \omega\chi_{c(1,2)}$ at energies between 4.42 and 4.6 GeV by the BESIII collaboration.'
+Keywords: []
+BibKey: Ablikim:2015uix
+BibTeX: '@article{Ablikim:2015uix,
+      author         = "Ablikim, Medina and others",
+      title          = "{Observation of $e^+e^- \rightarrow \omega \chi_{c1,2}$
+                        near $\sqrt{s}$ = 4.42 and 4.6 GeV}",
+      collaboration  = "BESIII",
+      journal        = "Phys. Rev.",
+      volume         = "D93",
+      year           = "2016",
+      number         = "1",
+      pages          = "011102",
+      doi            = "10.1103/PhysRevD.93.011102",
+      eprint         = "1511.08564",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1511.08564;%%"
+}'

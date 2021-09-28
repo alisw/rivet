@@ -1,0 +1,31 @@
+Name: MARKJ_1980_I158857
+Year: 1980
+Summary: Measurement of $R$ between 12 and 35.8 GeV
+Experiment: MARKJ
+Collider: PETRA
+InspireID: 158857
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rept. 63 (1980) 337-391, 1980 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: yes
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$ in $e^+e^-$ collisions by MARKJ between 12 and 35.8 GeV.
+   The individual hadronic and muonic cross sections are also outputted to the yoda file
+   so that ratio $R$ can be recalcuated if runs are combined.'
+BibKey: Barber:1980uq
+BibTeX: '@article{Barber:1980uq,
+      author         = "Barber, D. P. and others",
+      title          = "{PHYSICS WITH HIGH-ENERGY ELECTRON POSITRON COLLIDING
+                        BEAMS WITH THE MARK-J DETECTOR}",
+      collaboration  = "MARK-J, AACHEN-DESY-MIT-NIKHEF-BEIJING",
+      journal        = "Phys. Rept.",
+      volume         = "63",
+      year           = "1980",
+      pages          = "337-391",
+      doi            = "10.1016/0370-1573(80)90169-6",
+      SLACcitation   = "%%CITATION = PRPLC,63,337;%%"
+}'

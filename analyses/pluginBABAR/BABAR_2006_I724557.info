@@ -1,0 +1,42 @@
+Name: BABAR_2006_I724557
+Year: 2006
+Summary: Measurement of $\Omega_c^{*0}$ production
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 724557
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 97 (2006) 232001
+RunInfo: e+e- to hadrons
+Beams: [e+, e-]
+Energies: [10.58]
+Description:
+  'Measurement of the ratio \[R=\sigma(e^+e^-\to\Omega^{*0}_cX, x_p(\Omega_c^{*0}) > 0.5)/\sigma(e^+e^-\to\Omega^0_cX, x_p(\Omega_c^0) > 0.5),\] by BABAR. This is currently the only measurement of the rate of $\Omega_c^{*0}$ production.
+,'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Aubert:2006je
+BibTeX: '@article{Aubert:2006je,
+      author         = "Aubert, Bernard and others",
+      title          = "{Observation of an excited charm baryon Omega(C)*
+                        decaying to Omega(C)0 gamma}",
+      booktitle      = "{Proceedings of the 33rd International Conference on High
+                        Energy Physics (ICHEP 06): Moscow, Russia, July 26-August
+                        2, 2006}",
+      collaboration  = "BaBar",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "97",
+      year           = "2006",
+      pages          = "232001",
+      doi            = "10.1103/PhysRevLett.97.232001",
+      eprint         = "hep-ex/0608055",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "SLAC-PUB-12075, BABAR-PUB-06-055",
+      SLACcitation   = "%%CITATION = HEP-EX/0608055;%%"
+}'

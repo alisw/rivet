@@ -1,0 +1,36 @@
+Name: BESIII_2018_I1653121
+Year: 2018
+Summary: Cross section for  $e^+e^-\to K^+K^-J/\psi$ and $K^0_SK^0_SJ/\psi$ for energies between 4.2 and 4.6 GeV
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1653121
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D97 (2018) 071101
+RunInfo: e+ e- to hadrons
+Beams: [e+, e-]
+Description:
+  'Cross section for  $e^+e^-\to K^+K^-J/\psi$ and $K^0_SK^0_SJ/\psi$ for energies between 4.2 and 4.6 GeV measured by the BESIII collaboration.'
+ValidationInfo:
+  ''
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Ablikim:2018epj
+BibTeX: '@article{Ablikim:2018epj,
+      author         = "Ablikim, Medina and others",
+      title          = "{Observation of $e^{+}e^{-} \rightarrow K\bar{K}J/\psi$
+                        at center-of-mass energies from 4.189 to 4.600 GeV}",
+      collaboration  = "BESIII",
+      journal        = "Phys. Rev.",
+      volume         = "D97",
+      year           = "2018",
+      pages          = "071101",
+      doi            = "10.1103/PhysRevD.97.071101",
+      eprint         = "1802.01216",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1802.01216;%%"
+}'

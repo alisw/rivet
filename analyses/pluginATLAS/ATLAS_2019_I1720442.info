@@ -1,0 +1,56 @@
+Name: ATLAS_2019_I1720442
+Year: 2019
+Summary: Inclusive 4-lepton lineshape at 13 TeV
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1720442
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Max Goblirsch <goblirsc@cern.ch>
+ - Jon Butterworth <j.butterworth@ucl.ac.uk>
+ - Christian Gutschow <chris.g@cern.ch>
+References:
+ - Submitted to JHEP
+ - arXiv:1902.05892 [hep-ex]
+Keywords:
+ - DIBOSON
+ - FOURLEPTON
+ - LEPTONS
+ - ZZ
+ - MULTIBOSON
+ - BOSONS
+RunInfo:
+  '$p p \to \ell \ell \ell \ell + X$ at 13 TeV'
+Luminosity_fb: 36.1
+Beams: [p+, p+]
+Energies: [13000]
+PtCuts: [20., 15., 10., 8.]
+Description:
+  'A measurement of the four-lepton invariant mass spectrum is made with the ATLAS detector, using an integrated luminosity of
+  36.1 fb$^{-1}$ of proton-proton collisions at $\sqrt{s} = 13$ TeV delivered by the Large Hadron Collider. The differential
+  cross-section is measured for events containing two same-flavour opposite-sign lepton pairs. It exhibits a rich structure,
+  with different mass regions dominated in the Standard Model by single $Z$ boson production, Higgs boson production, and
+  $Z$ boson pair production, and non-negligible interference effects at high invariant masses. The measurement is compared
+  with state-of-the-art Standard Model calculations, which are found to be consistent with the data. These calculations are
+  used to interpret the data in terms of $gg\to ZZ\to 4\ell$ and $Z\to 4\ell$ subprocesses, and to place constraints on a
+  possible contribution from physics beyond the Standard Model.'
+BibKey: Aaboud:2019lxo
+BibTeX: '@article{Aaboud:2019lxo,
+      author         = "Aaboud, Morad and others",
+      title          = "{Measurement of the four-lepton invariant mass spectrum
+                        in 13 TeV proton-proton collisions with the ATLAS
+                        detector}",
+      collaboration  = "ATLAS",
+      year           = "2019",
+      eprint         = "1902.05892",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-EP-2018-318",
+      SLACcitation   = "%%CITATION = ARXIV:1902.05892;%%"
+}'
+
+
+ReleaseTests:
+ - $A pp-13000-llll
+

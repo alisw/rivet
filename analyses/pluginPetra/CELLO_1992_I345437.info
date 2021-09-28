@@ -1,0 +1,33 @@
+Name: CELLO_1992_I345437
+Year: 1992
+Summary: $\gamma\gamma\to\pi^+\pi^-$ for centre-of-mass energies between 0.75 and 1.7 GeV
+Experiment: CELLO
+Collider: Petra
+InspireID: 345437
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - 'Z.Phys.C 56 (1992) 381-390'
+RunInfo: gamma gamma to hadrons
+Beams: [gamma, gamma]
+Energies: []
+Description:
+  'Measurement of the differential cross section for $\gamma\gamma\to\pi^+\pi^-$. Both the cross section as a function of the centre-of-mass energy
+   of the photonic collision, and the differential cross section with respect to the pion scattering angle are measured.'
+ValidationInfo:
+  'Herwig 7 gamma gamma to pi+ pi- events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Behrend:1992hy
+BibTeX: '@article{Behrend:1992hy,
+    author = "Behrend, H.J. and others",
+    collaboration = "CELLO",
+    title = "{An Experimental study of the process gamma gamma ---> pi+ pi-}",
+    doi = "10.1007/BF01565945",
+    journal = "Z. Phys. C",
+    volume = "56",
+    pages = "381--390",
+    year = "1992"
+}'

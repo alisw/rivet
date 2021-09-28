@@ -1,0 +1,46 @@
+Name: ATLAS_2018_I1656578
+Year: 2018
+Summary: Differential $t\bar{t}$ $l$+jets cross-sections at 13~TeV
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1656578
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Francesco La Ruffa <francesco.la.ruffa@cern.ch>
+ - Christian Gutschow <chris.g@cern.ch>
+References:
+ - Submitted to JHEP
+ - arXiv:1802.06572 [hep-ex]
+Keywords:
+  - TTBAR
+  - NONALLHADRONIC
+  - JETS
+RunInfo:
+ non-all-hadronic ttbar production at 13 TeV
+Luminosity_fb: 3.2
+NeedCrossSection: yes
+Beams: [p+, p+]
+Energies: [13000]
+PtCuts: [25.]
+Description:
+  'Measurements of differential cross sections of top quark pair production in association with jets by the ATLAS experiment at the
+  LHC are presented. The measurements are performed as functions of the top quark transverse momentum, the transverse momentum of
+  the top quark-antitop quark system and the out-of-plane transverse momentum using data from pp collisions at $\sqrt{s}=13$ TeV
+  collected by the ATLAS detector at the LHC in 2015 and corresponding to an integrated luminosity of 3.2 $\text{fb}^{-1}$. The top quark
+  pair events are selected in the lepton (electron or muon) + jets channel. The measured cross sections, which are compared to several
+  predictions, allow a detailed study of top quark production.'
+BibKey: Aaboud:2018uzf
+BibTeX: '@article{Aaboud:2018uzf,
+      author         = "Aaboud, Morad and others",
+      title          = "{Measurements of differential cross sections of top quark
+                        pair production in association with jets in ${pp}$
+                        collisions at $\sqrt{s}=13$ TeV using the ATLAS detector}",
+      collaboration  = "ATLAS",
+      year           = "2018",
+      eprint         = "1802.06572",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-EP-2017-227",
+      SLACcitation   = "%%CITATION = ARXIV:1802.06572;%%"
+}'

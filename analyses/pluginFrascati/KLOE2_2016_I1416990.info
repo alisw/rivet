@@ -1,0 +1,32 @@
+Name: KLOE2_2016_I1416990
+Year: 2016
+Summary: Measurement of the Dalitz plot for $\eta\to\pi^+\pi^-\pi^0$
+Experiment: KLOE2
+Collider: DAPHNE
+InspireID: 1416990
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - JHEP 1605 (2016) 019
+RunInfo: Any process producing eta mesons
+NeedCrossSection: no
+Description:
+  'Measurement of the dalitz plot for the decay $\eta\to\pi^+\pi^-\pi^0$ by the KLOE2 collaboration. The distributions are normalised such that the bin at $X=0$, $Y=0.05$ is $1$.'
+Keywords: []
+BibKey: Anastasi:2016cdz
+BibTeX: '@article{Anastasi:2016cdz,
+      author         = "Anastasi, A. and others",
+      title          = "{Precision measurement of the $\eta\to\pi^+\pi^-\pi^0$
+                        Dalitz plot distribution with the KLOE detector}",
+      collaboration  = "KLOE-2",
+      journal        = "JHEP",
+      volume         = "05",
+      year           = "2016",
+      pages          = "019",
+      doi            = "10.1007/JHEP05(2016)019",
+      eprint         = "1601.06985",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1601.06985;%%"
+}'

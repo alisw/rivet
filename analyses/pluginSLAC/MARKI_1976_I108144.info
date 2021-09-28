@@ -1,0 +1,31 @@
+Name: MARKI_1976_I108144
+Year: 1976
+Summary: Measurement of $R$ between 3.888 and 4.586 GeV
+Experiment: MARKI
+Collider: Spear
+InspireID: 108144
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 36 (1976) 700, 1976 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: no
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$ in $e^+e^-$ collisions by MARKI for energies between 3.888 and 4.586 GeV.
+   The individual hadronic and muonic cross sections are also outputted to the yoda file
+   so that ratio $R$ can be recalcuated if runs are combined.'
+BibKey: Siegrist:1976br
+BibTeX: '@article{Siegrist:1976br,
+      author         = "Siegrist, J. and others",
+      title          = "{Observation of a Resonance at 4.4-GeV and Additional
+                        Structure Near 4.1-GeV in e+ e- Annihilation}",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "36",
+      year           = "1976",
+      pages          = "700",
+      doi            = "10.1103/PhysRevLett.36.700",
+      reportNumber   = "SLAC-PUB-1717, LBL-4804",
+      SLACcitation   = "%%CITATION = PRLTA,36,700;%%"
+}'

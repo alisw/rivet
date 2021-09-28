@@ -1,0 +1,12 @@
+Name: MC_FSPARTICLES
+Summary: Final-state particle distributions
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Ian Bruce <ibruce@cern.ch>
+ - Andy Buckley <andy.buckley@cern.ch>
+NumEvents: 5000
+RunInfo: Any!
+Description:
+  Generic analysis of typical per-particle distributions such as $\eta$, $y$,
+  $pT$, $\phi$\dots

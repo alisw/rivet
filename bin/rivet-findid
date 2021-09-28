@@ -1,0 +1,139 @@
+#! /usr/bin/env python
+
+"""%(prog)s ID [ID ...]
+
+%(prog)s -- paper ID lookup helper for Rivet
+
+Looks up the Rivet analysis and other ID formats matching the given ID.
+
+Arguments:
+ ID            A paper ID in one of the following formats
+                - arXiv:   yymm.nnnnn
+                - arXiv:   foo-bar/yymmnnn
+                - Inspire: [I]nnnnnn[n]
+                - SPIRES:  Snnnnnn[n]
+                - DOI:     anything!
+"""
+
+from __future__ import print_function
+import sys, os, re
+try:
+    from urllib.request import urlopen
+except ImportError:
+    from urllib2 import urlopen
+import json
+
+
+def mkoutput(result):
+    "Render a JSON metadata dict as test strings for the terminal output"
+    # print(result)
+    # print(result.keys())
+    md = result["metadata"]
+
+    entries = []
+
+    ## Title
+    try:
+        entries.append('title       %s' % md["titles"][0]["title"])
+    except:
+        pass
+
+    ## arXiv
+    try:
+        ar = md["arxiv_eprints"][0]["value"]
+        entries.append('arxiv       %s' % ar)
+        entries.append('arxiv_url   http://arxiv.org/abs/%s' % ar)
+    except:
+        pass
+
+    ## Inspire
+    try:
+        insp = md["control_number"]
+        entries.append('inspire     %s' % insp)
+        entries.append('inspire_url https://inspirehep.net/literature/%s' % insp)
+    except:
+        pass
+
+    ## SPIRES
+    try:
+        exts = md["external_system_identifiers"]
+        for e in exts:
+            if e.get("schema", "") == "SPIRES":
+                entries.append('spires      %s' % e["value"].replace("SPIRES-",""))
+                break
+    except:
+        pass
+
+    ## Rivet
+    try:
+        urls = md["urls"]
+        for u in urls:
+            if "rivet" in u.get("description", "").lower():
+                riveturl = u["value"]
+                rivetana = riveturl.split("/")[-1]
+                entries.append('rivet       %s' % rivetana)
+                entries.append('rivet_url   %s' % riveturl)
+                break
+    except:
+        pass
+
+    ## BibTeX
+    try:
+        entries.append('bibkey      %s' % md["texkeys"][0])
+        biburl = result["links"]["bibtex"]
+        entries.append('bibtex      %s' % urlopen(biburl).read().decode("utf-8").strip())
+    except:
+        pass
+
+    return "\n".join(entries)
+    # for e in entries:
+    #     print(e)
+    #     e.decode("utf_32")
+    # uentries = [e.decode("utf_8") for e in entries]
+    # return "\n".join(uentries)
+
+
+# import rivet
+# rivet.util.check_python_version()
+# rivet.util.set_process_name(os.path.basename(__file__))
+
+
+## Handle command line args
+import argparse
+parser = argparse.ArgumentParser(usage=__doc__)
+parser.add_argument("IDCODES", nargs="+", help="IDs to look up")
+args = parser.parse_args()
+
+
+## Set up some variables before the loop over args
+arxiv_pattern = re.compile('^\d\d[01]\d\.\d{4,5}$|^(hep-(ex|ph|th)|nucl-ex)/\d\d[01]\d{4}$')
+inspire_pattern = re.compile('^I?(\d{6}\d?)$')
+spires_pattern = re.compile('^S(\d{6}\d?)$')
+
+## Loop over requested IDs
+out = []
+for id in args.IDCODES:
+
+    ## Choose URL for JSON retrieval, fall back to DOI
+    url = "https://inspirehep.net/api/doi/{}".format(id)
+    if arxiv_pattern.match(id):
+        url = "https://inspirehep.net/api/arxiv/{}".format(id)
+    elif inspire_pattern.match(id):
+        url = "https://inspirehep.net/api/literature/{}".format(id.replace("I", ""))
+    elif spires_pattern.match(id):
+        searchurl = "https://inspirehep.net/api/literature?q=external_system_identifiers.value:SPIRES-{}".format(id[1:])
+        searchreq = urlopen(searchurl)
+        searchdata = json.loads(searchreq.read().decode("utf-8"))
+        if searchdata["hits"]:
+            url = "https://inspirehep.net/api/literature/{}".format(searchdata["hits"]["hits"][0]["id"])
+
+    ## Get and test JSON
+    response = urlopen(url)
+    metadata = json.loads(response.read().decode("utf-8"))
+    if metadata.get("status", "") == 404:
+        sys.stderr.write('ERROR: pattern %s not found in the InspireHEP database\n' % id)
+        continue
+
+    ## Make the output string and store in an array for printing
+    out.append(mkoutput(metadata))
+print(*out, sep="\n")

@@ -1,0 +1,58 @@
+Name: ATLAS_2011_S9035664
+Year: 2011
+Summary: Measurement of J/Psi production
+Experiment: ATLAS
+Collider: LHC
+SpiresID: 9035664
+InspireID: 896268
+Status: VALIDATED
+Reentrant: true
+Authors:
+ -
+References:
+ -
+ - arXiv:1104.3038 [hep-ex]
+RunInfo:
+  pp to hadrons including both prompt J/Psi production and the production in B decays
+NumEvents: 1000000
+Beams: [p+, p+]
+Energies: [7000]
+PtCuts:
+Description:
+  'The inclusive $J/\psi$ production cross-section and fraction of $J/\psi$ mesons produced in B-hadron decays are measured
+   in proton-proton collisions at $\sqrt{s} = 7$ TeV with the ATLAS detector at the LHC, as a function of the transverse momentum
+   and rapidity of the J/psi, using 2.3$\textrm{pb}^{-1}$ of integrated luminosity. The cross section is measured from a minimum $p_T$
+   of 1 GeV to a maximum of 70 GeV and for rapidities within $|y| < 2.4$ giving the widest reach of any measurement of $J/\psi$ production
+  to date.'
+NeedCrossSection: yes
+BibKey: Aad:2011sp
+BibTeX: '@article{Aad:2011sp,
+      author         = "Aad, Georges and others",
+      title          = "{Measurement of the differential cross-sections of
+                        inclusive, prompt and non-prompt $J/\psi$ production in
+                        proton-proton collisions at $\sqrt{s}=7$ TeV}",
+      collaboration  = "ATLAS Collaboration",
+      journal        = "Nucl.Phys.",
+      volume         = "B850",
+      pages          = "387-444",
+      doi            = "10.1016/j.nuclphysb.2011.05.015",
+      year           = "2011",
+      eprint         = "1104.3038",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1104.3038;%%",
+}'
+
+ReleaseTests:
+ - $A LHC-7-Bottom-0
+ - $A-2 LHC-7-Bottom-1
+ - $A-3 LHC-7-Bottom-2
+ - $A-4 LHC-7-Bottom-3
+ - $A-5 LHC-7-Bottom-4
+ - $A-6 LHC-7-Bottom-5
+ - $A-7 LHC-7-Charm-1
+ - $A-8 LHC-7-Charm-2
+ - $A-9 LHC-7-Charm-3
+ - $A-10 LHC-7-Charm-4
+ - $A-11 LHC-7-Charm-5
+

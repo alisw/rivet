@@ -1,0 +1,34 @@
+Name: BELLE_2015_I1330289
+Year: 2015
+Summary: Measurement of the spectrum for $\bar{B}\to X_s \gamma$
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1330289
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - PR D91,052004
+RunInfo: any process making $B^-$ and $\bar{B}^0$ mesons, eg. particle gun or $\Upslion(4S)$ decay. 
+NeedCrossSection: no
+Description:
+  'Mass spectrum in $B\to s\gamma$ decays measured by BELLE. Useful for testing the implementation of these decays'
+Keywords: []
+BibKey: Saito:2014das
+BibTeX: '@article{Saito:2014das,
+      author         = "Saito, T. and others",
+      title          = "{Measurement of the $\bar{B} \rightarrow X_s \gamma$
+                        Branching Fraction with a Sum of Exclusive Decays}",
+      collaboration  = "Belle",
+      journal        = "Phys. Rev.",
+      volume         = "D91",
+      year           = "2015",
+      number         = "5",
+      pages          = "052004",
+      doi            = "10.1103/PhysRevD.91.052004",
+      eprint         = "1411.7198",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "BELLE-PREPRINT-2014-15, KEK-PREPRINT-2014-26",
+      SLACcitation   = "%%CITATION = ARXIV:1411.7198;%%"
+}'

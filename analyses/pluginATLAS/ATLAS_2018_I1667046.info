@@ -1,0 +1,46 @@
+Name: ATLAS_2018_I1667046
+Year: 2018
+Summary: Search for R-parity-violating SUSY in multi-jet final states at 13 TeV
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1667046
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Shalini Epari <shalinivssv@gmail.com>
+ - Andy Buckley <andy.buckley@cern.ch>
+References:
+- 'Phys. Lett. B 785 (2018) 136'
+- 'arXiv:1804.03568'
+- 'DOI:10.1016/j.physletb.2018.08.021'
+RunInfo: BSM signal events
+NeedCrossSection: yes
+Beams: [p+, p+]
+Energies: [13000]
+Luminosity_fb: 36.1
+Description:
+  'This search uses 36.1/fb of data collected by the ATLAS detector in proton-proton
+  collisions with a center-of-mass energy of $\sqrt{s}=13$ TeV at the LHC. The analysis
+  is performed using requirements on the number of jets and the number of jets tagged
+  as containing a $b$-hadron, as well as a topological observable formed by the scalar
+  sum of masses of large-radius jets in the event. No significant excess above the
+  expected Standard Model background was observed.'
+BibKey: Aaboud:2018lpl
+BibTeX: '@article{Aaboud:2018lpl,
+      author         = "Aaboud, Morad and others",
+      title          = "{Search for R-parity-violating supersymmetric particles
+                        in multi-jet final states produced in $p$-$p$ collisions
+                        at $\sqrt{s} =13$ TeV using the ATLAS detector at the
+                        LHC}",
+      collaboration  = "ATLAS",
+      journal        = "Phys. Lett.",
+      volume         = "B785",
+      year           = "2018",
+      pages          = "136-158",
+      doi            = "10.1016/j.physletb.2018.08.021",
+      eprint         = "1804.03568",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-EP-2017-298",
+      SLACcitation   = "%%CITATION = ARXIV:1804.03568;%%"
+}'

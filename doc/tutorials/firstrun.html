@@ -1,0 +1,13 @@
+<h1 id="first-run">First run</h1>
+<p>So, we assume you've got Rivet installed and that the <code>rivet</code> command is available in your executable path (i.e. the <code>$PATH</code> environment variable). Now it's time to run some events, make some analysis data, and plot the results.</p>
+<h2 id="generating-and-analysing">Generating and analysing</h2>
+<p>The main interface to Rivet is the <code>rivet</code> command. We will demonstrate how to use this to analyse HepMC events from a text file in the &quot;IO_GenEvent&quot; HepMC format.</p>
+<p>Firstly, we recommend using a named pipe (or 'FIFO') so that your events don't create a huge file that takes all your disk space. The idea is that the generator will push events into what looks like a file, and Rivet will read from it. However, this 'file' is a direct pipe between the two processes (just like the shell pipe in e.g. <code>echo foo | less</code>), so no slow filesystem access needs to take place, no disk space is occupied, and the system will automatically balance the data flow between the writing and reading processes. All this is completely transparent to the user: good old Unix! Here's how you do it (with a fictional generator command, as an example):</p>
+<pre><code>&gt; mkfifo fifo.hepmc
+&gt; my-generator --num-events=500000 --hepmc-output=fifo.hepmc &amp;
+&gt; rivet --analysis=ANALYSIS_NAME fifo.hepmc</code></pre>
+<p>The backgrounding of the generator process -- i.e. the <code>&amp;</code> character -- is important: the generator will wait until the <code>fifo.hepmc</code> pipe is being read by Rivet, so unless it is backgrounded you will never get the terminal focus back to run <code>rivet</code>!</p>
+<p>If you have trouble with this FIFO approach, try writing a few -- 10 or so -- events to a normal file and look at the file (e.g. with emacs, less, gedit or any other text editor). If your generator is writing the events to file properly your HepMC file should consist of a short header, followed by lots of largely numeric lines starting with a letter (E, P, V in particular). If you don't see this, something has gone wrong &quot;upstream&quot; and you should fix it before blaming the FIFO or Rivet ;-)</p>
+<h2 id="checking-the-data">Checking the data</h2>
+<p>By default, Rivet outputs its histograms in the YODA text format. To get a clearer view of the data values in histogram bins, you can use the <code>yoda2flat</code> script, e.g. <code>yoda2flat Rivet.yoda - | less</code>.</p>
+<p>There is also a <code>yoda2root</code> command which provides the data as ROOT histogram (or <code>TGraph</code>) objects for those of a ROOTy disposition.</p>

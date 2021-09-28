@@ -1,0 +1,36 @@
+Name: LHCB_2013_I1243156
+Year: 2013
+Summary: Helicity angle distributions in excited $D$ meson decays
+Experiment: LHCB
+Collider: LHC
+InspireID: 1243156
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - 
+RunInfo:  Any process producing excited $D$ mesons
+Description:
+  'The decays $D^{**} \to D^{*+}\pi^-\to D^0\pi^+\pi^-$ are used to measure the helicity angle,
+   i.e. the angle between the two pions in the rest frame of the $D^*$. The decays of $D_1(2420)^0$,
+   $D^*_2(2460)^0$, $D(2650)^0$, $D(2760)$, $D(2580)$, $D(2740)$, $D(3000)$ were measured, but currently only the $D_1(2420)^0$,
+   $D^*_2(2460)^0$ are implemented. The data were read from the plots in the papers and therefore for the $D_1(2420)^0$,
+   $D^*_2(2460)^0$ the error bars are the size of the points in the plots.'
+Keywords: []
+BibKey: Aaij:2013sza
+BibTeX: '@article{Aaij:2013sza,
+      author         = "Aaij, R and others",
+      title          = "{Study of $D_J$ meson decays to $D^+\pi^-$, $D^0 \pi^+$
+                        and $D^{*+}\pi^-$ final states in pp collision}",
+      collaboration  = "LHCb",
+      journal        = "JHEP",
+      volume         = "09",
+      year           = "2013",
+      pages          = "145",
+      doi            = "10.1007/JHEP09(2013)145",
+      eprint         = "1307.4556",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-PH-EP-2013-122, LHCB-PAPER-2013-026",
+      SLACcitation   = "%%CITATION = ARXIV:1307.4556;%%"
+}'

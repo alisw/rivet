@@ -1,0 +1,34 @@
+Name: BABAR_2008_I781294
+Year: 2008
+Summary: Decay asymmetris in the decay of $\Xi^*(1530)0$ baryons prodcuted in the decay of $\Lambda_c^+$ baryons
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 781294
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 78 (2008) 034008
+RunInfo: Any process producing Lambda_c+ baryons
+Description:
+  'Measurement of decay asymmetries in $\Lambda_c^+\to\Xi^*(1530)^0K^+$ followed by $\Xi^*(1530)^0\Xi^-\pi+$ decays by the BaBaR experiment.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Aubert:2008ty
+BibTeX: '@article{Aubert:2008ty,
+    author = "Aubert, Bernard and others",
+    collaboration = "BaBar",
+    title = "{Measurement of the Spin of the Xi(1530) Resonance}",
+    eprint = "0803.1863",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "SLAC-PUB-13160, BABAR-PUB-07-073",
+    doi = "10.1103/PhysRevD.78.034008",
+    journal = "Phys. Rev. D",
+    volume = "78",
+    pages = "034008",
+    year = "2008"
+}'

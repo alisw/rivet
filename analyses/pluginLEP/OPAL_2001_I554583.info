@@ -1,0 +1,35 @@
+Name: OPAL_2001_I554583
+Year: 2001
+Summary: $\tau$ polarization at LEP1
+Experiment: OPAL
+Collider: LEP
+InspireID: 554583
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Eur.Phys.J.C 21 (2001) 1-21
+RunInfo:  e+ e- > tau+ tau-
+Beams: [e+, e-]
+Energies: [91.2]
+Description:
+  'Measurement of the $\tau$ lepton polarization in $e^+e^-\to\tau^+\tau^-$ at the $Z^0$ pole by the OPAL experiment at LEP1.'
+ValidationInfo:
+  'Herwig7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Abbiendi:2001km
+BibTeX: '@article{Abbiendi:2001km,
+    author = "Abbiendi, G. and others",
+    collaboration = "OPAL",
+    title = "{Precision neutral current asymmetry parameter measurements from the tau polarization at LEP}",
+    eprint = "hep-ex/0103045",
+    archivePrefix = "arXiv",
+    reportNumber = "CERN-EP-2001-023",
+    doi = "10.1007/s100520100714",
+    journal = "Eur. Phys. J. C",
+    volume = "21",
+    pages = "1--21",
+    year = "2001"
+}'

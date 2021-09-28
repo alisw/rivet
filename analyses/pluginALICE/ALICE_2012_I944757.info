@@ -1,0 +1,52 @@
+Name: ALICE_2012_I944757
+Year: 2012
+Summary: Measurement of charm production at central rapidity in proton-proton collisions at $\sqrt{s}=7$ TeV
+Experiment: ALICE
+Collider: LHC
+InspireID: 944757
+Status: VALIDATED
+Authors:
+ - Marco Giacalone <marco.giacalone@bo.infn.it>
+References:
+ - doi:10.1007/JHEP01(2012)128
+ - arXiv:1111.1553 [hep-ex]
+RunInfo:
+    "Proton Proton events at 7 TeV simulated using PYTHIA 8.240 and HERWIG 7.1.5. 
+    SoftQCD:all parameter enabled on the former, while MB (Minimum Bias) and SoftTune snippets were used for the latter."
+Beams: [p+, p+]
+Energies: [7000]
+Luminosity_nb: 5.0
+Description:
+  "The $p_\\text{T}$-differential inclusive production cross sections of the prompt charmed mesons $D^0$, $D^+$, 
+  and $D^{\\ast +}$ in the rapidity range $|y|<0.5$ were measured in proton-proton collisions at $\\sqrt{s}=7$ TeV 
+  at the LHC using the ALICE detector. Reconstructing the decays $D^0 \\to K^-\\pi^+$, $D^+\\to K^-\\pi^+\\pi^+$,
+  $D^{\\ast +} \\to D^0\\pi^+$, and their charge conjugates, about 8,400 $D^0$, 2,900 $D^+$, and 2,600 $D^{\\ast +}$ 
+  mesons with $1 < p_\\text{T} < 24$ GeV/$c$ were counted, after selection cuts, in a data sample of 3.14$\\times 10^8$ 
+  events collected with a minimum-bias trigger (integrated luminosity $L_\\text{int} = 5$/nb). 
+  The results are described within uncertainties by predictions based on perturbative QCD."
+Keywords:
+ - MINBIAS
+ - MESONS
+ - CHARM
+BibKey: ALICE:2011aa
+BibTeX: '@article{ALICE:2011aa,
+      author         = "Abelev, B. and others",
+      title          = "{Measurement of charm production at central rapidity in
+                        proton-proton collisions at $\sqrt{s} = 7$ TeV}",
+      collaboration  = "ALICE",
+      journal        = "JHEP",
+      volume         = "01",
+      year           = "2012",
+      pages          = "128",
+      doi            = "10.1007/JHEP01(2012)128",
+      eprint         = "1111.1553",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-PH-EP-2011-181",
+      SLACcitation   = "%%CITATION = ARXIV:1111.1553;%%"
+}'
+ReleaseTests:
+ - $A LHC-7-Charm-1
+ - $A-1 LHC-7-Charm-2
+ - $A-2 LHC-7-Charm-3
+ - $A-3 LHC-7-Charm-4

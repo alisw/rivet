@@ -1,0 +1,36 @@
+Name: BRAHMS_2004_AUAUCentrality
+Summary: BRAHMS AuAu centrality calibration analysis.
+Status: UNVALIDATED
+Authors:
+ - Christian Bierlich <christian.bierlich@thep.lu.se>
+NumEvents: 50000
+References:
+ - arXiv:1508.00848 [hep-ex]
+ - Eur.Phys.J. C76 (2016) no.4, 199
+RunInfo: Any!
+Description:
+   'Calibration analysis for BRAHMS AuAu centrality. The centrality number of 
+   charged particles at mid-rapidity. No reference yoda file.'
+References:
+- 'Phys.Rev.Lett. 94 (2005) 162301'
+- '10.1103/PhysRevLett.94.162301'
+- 'arXiv:043050'
+Keywords: []
+ReleaseTests:
+ - $A RHIC-200-AuAu
+BibKey: Bearden:2004yx
+BibTeX: '@article{Bearden:2004yx,
+      author         = "Bearden, I. G. and others",
+      title          = "{Charged meson rapidity distributions in central Au+Au
+                        collisions at s(NN)**(1/2) = 200-GeV}",
+      collaboration  = "BRAHMS",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "94",
+      year           = "2005",
+      pages          = "162301",
+      doi            = "10.1103/PhysRevLett.94.162301",
+      eprint         = "nucl-ex/0403050",
+      archivePrefix  = "arXiv",
+      primaryClass   = "nucl-ex",
+      SLACcitation   = "%%CITATION = NUCL-EX/0403050;%%"
+}'

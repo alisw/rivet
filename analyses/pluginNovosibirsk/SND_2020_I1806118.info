@@ -1,0 +1,31 @@
+Name: SND_2020_I1806118
+Year: 2020
+Summary: Cross Section for $e^+e^-\to K^+K^-\pi^0$ and $\phi\pi^0$ from threshold to 2.1 GeV
+Experiment: SND
+Collider: VEPP-2000
+InspireID: 1806118
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - arXiv:2006.05465
+RunInfo: e+ e- to hadrons
+Beams: [e+, e-]
+Description:
+  'Cross section for $e^+e^-\to K^+K^-\pi^0$ between threshold and 2.1 GeV.
+   The $\phi\pi^0$ radiative subprocess is also measured.'
+ValidationInfo:
+  'Herwig 7 events using low energy hadronic currents.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Achasov:2020zyv
+BibTeX: '@article{Achasov:2020zyv,
+    author = "Achasov, M.N. and others",
+    title = "{Measurement of the $e^+e^- \to K^+ K^- \pi^0$ cross section with the SND detector}",
+    eprint = "2007.04527",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    month = "7",
+    year = "2020"
+}'

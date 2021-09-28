@@ -1,0 +1,651 @@
+#! /usr/bin/env python
+
+"""\
+Generate histogram comparison plots
+
+USAGE:
+ %(prog)s [options] yodafile1[:'PlotOption1=Value':'PlotOption2=Value':...] [path/to/yodafile2 ...] [PLOT:Key1=Val1:...]
+
+where the plot options are described in the make-plots manual in the HISTOGRAM
+section.
+
+ENVIRONMENT:
+ * RIVET_ANALYSIS_PATH: list of paths to be searched for plugin
+     analysis libraries at runtime
+ * RIVET_DATA_PATH: list of paths to be searched for data files
+"""
+
+from __future__ import print_function
+import rivet, yoda, sys, os, math, re
+rivet.util.check_python_version()
+rivet.util.set_process_name(os.path.basename(__file__))
+
+
+class Plot(dict):
+    "A tiny Plot object to help writing out the head in the .dat file"
+    def __repr__(self):
+        return "# BEGIN PLOT\n" + "\n".join("%s=%s" % (k,v) for k,v in self.items()) + "\n# END PLOT\n\n"
+
+
+def sanitiseString(s):
+    #s = s.replace('_','\\_')
+    #s = s.replace('^','\\^{}')
+    #s = s.replace('$','\\$')
+    s = s.replace('#','\\#')
+    s = s.replace('%','\\%')
+    return s
+
+
+def getHistos(filelist, filenames):
+    """Loop over all input files. Only use the first occurrence of any REF-histogram
+    and the first occurrence in each MC file for every MC-histogram."""
+    refhistos, mchistos = {}, {}
+    for infile, inname in zip(filelist, filenames):
+        mchistos.setdefault(inname, {})
+        analysisobjects = yoda.read(infile, patterns=args.PATHPATTERNS, unpatterns=args.PATHUNPATTERNS)
+        #print(analysisobjects)
+        for path, ao in analysisobjects.items():
+            ## We can't plot non-histograms yet
+            # TODO: support counter plotting with a faked x (or y) position and forced plot width/height
+            if ao.type() not in ("Counter",
+                               "Histo1D",
+                               "Histo2D",
+                               "Profile1D",
+                               "Profile2D",
+                               "Scatter1D",
+                               "Scatter2D",
+                               "Scatter3D"):
+                continue
+
+            ## Make a path object and ensure the path is in standard form
+            try:
+                aop = rivet.AOPath(path)
+            except Exception as e:
+                #print(e)
+                print("Found analysis object with non-standard path structure:", path, "... skipping")
+                continue
+
+            ## We don't plot data objects with path components hidden by an underscore prefix
+            if aop.istmp() or aop.israw():
+                continue
+
+            ## Add it to the ref or mc paths, if this path isn't already known
+            basepath = aop.basepath(keepref=False)
+            defaultWeightName = getDefaultVariation(plotoptions[inname])
+            if aop.isref() and basepath not in refhistos:
+                ao.setPath(aop.varpath(keepref=False, defaultvarid=defaultWeightName))
+                refhistos[basepath] = ao
+            else: #if basepath not in mchistos[infile]:
+                mchistos[inname].setdefault(basepath, {})[aop.varid(defaultWeightName)] = ao
+
+    return refhistos, mchistos
+
+
+def getRivetRefData(anas=None):
+    "Find all Rivet reference data files"
+    refhistos = {}
+    rivet_data_dirs = rivet.getAnalysisRefPaths()
+    dirlist = []
+    for d in rivet_data_dirs:
+        import glob
+        if anas is None:
+            dirlist.append(glob.glob(os.path.join(d, '*.yoda*')))
+        else:
+            #dirlist.append([os.path.join(d, a+'.yoda*') for a in anas])
+            for a in anas:
+                res = glob.glob(os.path.join(d, a+'.yoda'))
+                if len(res) == 0:
+                    res = glob.glob(os.path.join(d, a+'.yoda.gz'))
+                if len(res) != 0:
+                    dirlist.append(res)
+    for filelist in dirlist:
+        # TODO: delegate to getHistos?
+        for infile in filelist:
+            analysisobjects = yoda.read(infile, patterns=args.PATHPATTERNS, unpatterns=args.PATHUNPATTERNS)
+            for path, ao in analysisobjects.items():
+                aop = rivet.AOPath(ao.path())
+                if aop.isref():
+                    ao.setPath(aop.basepath(keepref=False))
+                    refhistos[ao.path()] = ao
+    return refhistos
+
+
+def parseArgs(args):
+    """Look at the argument list and split it at colons, in order to separate
+    the file names from the plotting options. Store the file names and
+    file specific plotting options."""
+    filelist = []
+    filenames = []
+    plotoptions = {}
+    for a in args:
+        asplit = a.split(':')
+        path = asplit[0]
+        if path != "PLOT":
+            filelist.append(path)
+            filenames.append(path)
+        plotoptions[path] = []
+        has_title = False
+        has_name = ""
+        for i in range(1, len(asplit)):
+            ## Add 'Title' if there is no = sign before math mode
+            if '=' not in asplit[i] or ('$' in asplit[i] and asplit[i].index('$') < asplit[i].index('=')):
+                asplit[i] = 'Title=%s' % asplit[i]
+            if asplit[i].startswith('Title='):
+                has_title = True
+            plotoptions[path].append(asplit[i])
+            if asplit[i].startswith('Name=') and path != "PLOT":
+                has_name = asplit[i].split('=', 1)[1]
+                filenames[-1] = has_name
+        if has_name != "":
+            plotoptions[has_name] = plotoptions[path]
+            del plotoptions[path]
+        if path != "PLOT" and not has_title:
+            plotoptions[has_name if has_name != "" else path].append('Title=%s' % sanitiseString(os.path.basename( os.path.splitext(path)[0] )) )
+    return filelist, filenames, plotoptions
+
+
+def setStyle(ao, istyle, variation=False):
+    """Set default plot styles (color and line width) colors borrowed from Google Ngrams"""
+    # LINECOLORS = ['{[HTML]{EE3311}}',  # red (Google uses 'DC3912')
+    #               '{[HTML]{3366FF}}',  # blue
+    #               '{[HTML]{109618}}',  # green
+    #               '{[HTML]{FF9900}}',  # orange
+    #               '{[HTML]{990099}}']  # lilac
+    LINECOLORS = ['red', 'blue', 'green', 'orange', 'lilac']
+    LINESTYLES = ['solid', 'dashed', 'dashdotted', 'dotted']
+
+    if args.STYLE == 'talk':
+        ao.setAnnotation('LineWidth', '1pt')
+    if args.STYLE == 'bw':
+        LINECOLORS = ['black!90',
+                      'black!50',
+                      'black!30']
+
+    jc = istyle % len(LINECOLORS)
+    c = LINECOLORS[jc]
+    js = (istyle // len(LINECOLORS)) % len(LINESTYLES)
+    s = LINESTYLES[js]
+
+    ## If plotting a variation (i.e. band), fade the colour
+    if variation:
+        c += "!30"
+
+    ao.setAnnotation('LineStyle', '%s' % s)
+    ao.setAnnotation('LineColor', '%s' % c)
+
+
+def setOptions(ao, options, isBand):
+    "Set arbitrary annotations"
+    for opt in options:
+        key, val = opt.split('=', 1)
+        if key in ['DefaultWeight', 'Variations', 'BandComponentEnv', 'BandComponentPDF']:
+            continue
+        # this cheat means we don't have
+        # to re-define common tags
+        if 'VariationBand' in key:
+            key = key[13:]
+        ao.setAnnotation(key, val)
+    if isBand:
+        ao.setAnnotation('ErrorBars',  '0')
+        ao.setAnnotation('ErrorBands', '1')
+        if 'ErrorBandColor' not in ao.annotations():
+            c = ao.annotation('LineColor')
+            if 'byte' in str(type(c)):
+                c = c.decode('utf-8')
+            ao.setAnnotation('ErrorBandColor', c)
+        if 'ErrorBandOpacity' not in ao.annotations():
+            ao.setAnnotation('ErrorBandOpacity', '0.5')
+
+
+def getFileOptions(options, tags):
+    ret = { }
+    if 'list' not in str(type(tags)):
+      tags = [ tags ]
+    for opt in options:
+        key, val = opt.split('=', 1)
+        if key in tags:
+            ret[key] = val
+    return ret
+
+
+def getDefaultVariation(options):
+    name = "0"
+    for val in getFileOptions(options, "DefaultWeight").values():
+        name = val
+    return name
+
+
+# TODO: move to rivet.utils
+def mkoutdir(outdir):
+    "Function to make output directories"
+    if not os.path.exists(outdir):
+        try:
+            os.makedirs(outdir)
+        except:
+            msg = "Can't make output directory '%s'" % outdir
+            raise Exception(msg)
+    if not os.access(outdir, os.W_OK):
+        msg = "Can't write to output directory '%s'" % outdir
+        raise Exception(msg)
+
+
+def mkOutput(hpath, aos, plot=None, special=None):
+    """
+    Make the .dat file string. We can't use "yoda.writeFLAT(anaobjects, 'foobar.dat')"
+    because the PLOT and SPECIAL blocks don't have a corresponding analysis object.
+    """
+    output = ''
+
+    if plot is not None:
+        output += str(plot)
+
+    if special is not None:
+        for k, v in special.items():
+            output += "\n"
+            output += "# BEGIN SPECIAL %s\n" % k
+            output += v
+            output += "# END SPECIAL\n\n"
+
+    from io import StringIO
+    sio = StringIO()
+    yoda.writeFLAT(aos, sio)
+    output += sio.getvalue()
+
+    return output
+
+
+def writeOutput(output, h):
+    "Choose output file name and dir"
+    if args.HIER_OUTPUT:
+        hparts = h.strip("/").split("/", 1)
+        ana = "_".join(hparts[:-1]) if len(hparts) > 1 else "ANALYSIS"
+        outdir = os.path.join(args.OUTDIR, ana)
+        outfile = '%s.dat' % hparts[-1].replace("/", "_")
+    else:
+        hparts = h.strip("/").split("/")
+        outdir = args.OUTDIR
+        outfile = '%s.dat' % "_".join(hparts)
+    mkoutdir(outdir)
+    outfilepath = os.path.join(outdir, outfile)
+    f = open(outfilepath, 'w')
+    f.write(output)
+    f.close()
+
+
+#--------------------------------------------------------------------------------------------
+
+
+if __name__ == '__main__':
+
+    ## Command line parsing
+    import argparse
+    parser = argparse.ArgumentParser(description=__doc__)
+
+    parser.add_argument("ARGS", nargs="*")
+    parser.add_argument('-o', '--outdir', dest='OUTDIR',
+                        default='.', help='write data files into this directory')
+    parser.add_argument("--hier-out", action="store_true", dest="HIER_OUTPUT", default=False,
+                        help="write output dat files into a directory hierarchy which matches the analysis paths")
+    parser.add_argument('--plotinfodir', dest='PLOTINFODIRS', action='append',
+                        default=['.'], help='directory which may contain plot header information (in addition '
+                        'to standard Rivet search paths)')
+    parser.add_argument("--no-rivet-refs", dest="RIVETREFS", action="store_false",
+                        default=True, help="don't use Rivet reference data files")
+    # parser.add_argument("--refid", dest="REF_ID",
+    #                   default="REF", help="ID of reference data set (file path for non-REF data)")
+    parser.add_argument("--reftitle", dest="REFTITLE",
+                        default='Data', help="Reference data legend entry")
+    parser.add_argument("--pwd", dest="PATH_PWD", action="store_true", default=False,
+                        help="append the current directory (pwd) to the analysis/data search paths (cf. $RIVET_ANALYSIS/DATA_PATH)")
+    parser.add_argument("-v", "--verbose", dest="VERBOSE", action="store_true", default=False,
+                        help="produce debug output to the terminal")
+
+    stygroup = parser.add_argument_group("Plot style")
+    stygroup.add_argument("--linear", action="store_true", dest="LINEAR",
+                          default=False, help="plot with linear scale")
+    stygroup.add_argument("--errs", "--mcerrs", "--mc-errs", action="store_true", dest="MC_ERRS",
+                          default=False, help="show vertical error bars on the MC lines")
+    stygroup.add_argument("--no-ratio", action="store_false", dest="RATIO",
+                          default=True, help="disable the ratio plot")
+    stygroup.add_argument("--rel-ratio", action="store_true", dest="RATIO_DEVIATION",
+                          default=False, help="show the ratio plots scaled to the ref error")
+    stygroup.add_argument("--no-plottitle", action="store_true", dest="NOPLOTTITLE",
+                          default=False, help="don't show the plot title on the plot "
+                          "(useful when the plot description should only be given in a caption)")
+    stygroup.add_argument("--style", dest="STYLE", default="default",
+                          help="change plotting style: default|bw|talk")
+    stygroup.add_argument("-c", "--config", dest="CONFIGFILES", action="append", default=["~/.make-plots"],
+                          help="additional plot config file(s). Settings will be included in the output configuration.")
+    stygroup.add_argument("--remove-options", help="remove options label from legend", dest="REMOVE_OPTIONS",
+                          action="store_true", default=False)
+
+    selgroup = parser.add_argument_group("Selective plotting")
+    # selgroup.add_argument("--show-single", dest="SHOW_SINGLE", choices=("no", "ref", "mc", "all"),
+    #                     default="mc", help="control if a plot file is made if there is only one dataset to be plotted "
+    #                     "[default=%(default)s]. If the value is 'no', single plots are always skipped, for 'ref' and 'mc', "
+    #                     "the plot will be written only if the single plot is a reference plot or an MC "
+    #                     "plot respectively, and 'all' will always create single plot files.\n The 'ref' and 'all' values "
+    #                     "should be used with great care, as they will also write out plot files for all reference "
+    #                     "histograms without MC traces: combined with the -R/--rivet-refs flag, this is a great way to "
+    #                     "write out several thousand irrelevant reference data histograms!")
+    # selgroup.add_argument("--show-mc-only", "--all", action="store_true", dest="SHOW_IF_MC_ONLY",
+    #                     default=False, help="make a plot file even if there is only one dataset to be plotted and "
+    #                     "it is an MC one. Deprecated and will be removed: use --show-single instead, which overrides this.")
+    # # selgroup.add_argument("-l", "--histogram-list", dest="HISTOGRAMLIST",
+    # #                     default=None, help="specify a file containing a list of histograms to plot, in the format "
+    # #                     "/ANALYSIS_ID/histoname, one per line, e.g. '/DELPHI_1996_S3430090/d01-x01-y01'.")
+    selgroup.add_argument("-m", "--match", action="append",
+                          help="only write out histograms whose $path/$name string matches these regexes. The argument "
+                          "may also be a text file.",
+                          dest="PATHPATTERNS")
+    selgroup.add_argument("-M", "--unmatch", action="append",
+                          help="exclude histograms whose $path/$name string matches these regexes",
+                          dest="PATHUNPATTERNS")
+    selgroup.add_argument("--no-weights", help="prevent multiweights from being plotted", dest="NO_WEIGHTS",
+                          action="store_true", default=False)
+                         
+
+    args = parser.parse_args()
+
+    ## Add pwd to search paths
+    if args.PATH_PWD:
+        rivet.addAnalysisLibPath(os.path.abspath("."))
+        rivet.addAnalysisDataPath(os.path.abspath("."))
+
+    ## Split the input file names and the associated plotting options
+    ## given on the command line into two separate lists
+    filelist, filenames, plotoptions = parseArgs(args.ARGS)
+
+    ## Check that the files exist
+    for f in filelist:
+        if not os.access(f, os.R_OK):
+            print("Error: cannot read from %s" % f)
+            sys.exit(1)
+
+    ## Read the .plot files
+    plotdirs = args.PLOTINFODIRS + [os.path.abspath(os.path.dirname(f)) for f in filelist]
+    plotparser = rivet.mkStdPlotParser(plotdirs, args.CONFIGFILES)
+
+    ## Create a list of all histograms to be plotted, and identify if they are 2D histos (which need special plotting)
+    try:
+        refhistos, mchistos = getHistos(filelist, filenames)
+    except IOError as e:
+        print("File reading error: ", e.strerror)
+        exit(1)
+    hpaths, h2ds = [], []
+    for aos in mchistos.values():
+        for p in aos.keys():
+            ps = rivet.stripOptions(p)
+            if ps and ps not in hpaths:
+                hpaths.append(ps)
+            firstaop = aos[p][sorted(aos[p].keys())[0]]
+            # TODO: Would be nicer to test via isHisto and dim or similar, or yoda.Scatter/Histo/Profile base classes
+            if type(firstaop) in (yoda.Histo2D, yoda.Profile2D, yoda.Scatter3D) and ps not in h2ds:
+                h2ds.append(ps)
+
+    # Unique list of analyses
+    anas = list(set([x.split("/")[1] for x in hpaths]))
+    #print (anas)
+
+    ## Take reference data from the Rivet search paths, if there is not already
+    if args.RIVETREFS:
+        try:
+            refhistos2 = getRivetRefData(anas)
+        except IOError as e:
+            print("File reading error: ", e.strerror)
+            exit(1)
+        refhistos2.update(refhistos)
+        refhistos = refhistos2
+
+    ## Purge unmatched ref data entries to save memory
+    keylist = list(refhistos.keys()) # can't modify for-loop target
+    for refhpath in keylist:
+        if refhpath not in hpaths:
+            del refhistos[refhpath]
+
+    ## Now loop over all MC histograms and plot them
+    # TODO: factorize much of this into a rivet.utils mkplotfile(mchists, refhist, kwargs, is2d=False) function
+    for hpath in hpaths:
+        #print('Currently looking at', hpath)
+
+        ## The analysis objects to be plotted
+        anaobjects = []
+        ## List of histos to be drawn, to sync the legend and plotted lines
+        mainlines = []
+        varlines = []
+        ## Is this a 2D histo?
+        is2d = (hpath in h2ds)
+        ## Will we be drawing a ratio plot?
+        showratio = args.RATIO and not is2d
+
+
+        ## A Plot object to represent the PLOT section in the .dat file
+        plot = Plot()
+        if not is2d:
+            plot['Legend'] = '1'
+            plot['LogY'] = '1'
+        headers = plotparser.getHeaders(hpath)
+        if headers:
+            plot.update(headers)
+        # for key, val in headers.items():
+        #     plot[key] = val
+        if "PLOT" in plotoptions:
+            for key_val in plotoptions["PLOT"]:
+                key, val = [s.strip() for s in key_val.split("=", 1)]
+                if 'ReplaceOption' in key_val:
+                    opt_group = key_val.split("=", 2)
+                    key, val = "=".join(opt_group[:2]), opt_group[2]
+                plot[key] = val
+        if args.REMOVE_OPTIONS:
+            plot['RemoveOptions'] = '1'
+        if args.LINEAR:
+            plot['LogY'] = '0'
+        if args.NOPLOTTITLE:
+            plot['Title'] = ''
+        if showratio and args.RATIO_DEVIATION:
+            plot['RatioPlotMode'] = 'deviation'
+        if args.STYLE == 'talk':
+            plot['PlotSize'] = '8,6'
+        elif args.STYLE == 'bw' and showratio:
+            plot['RatioPlotErrorBandColor'] = 'black!10'
+
+        ## are we meant to calculate a PDF band? Need LHAPDF in that case ...
+        if any([ 'BandComponentPDF' in str(plotoptions[infile]) for infile in plotoptions ]):
+            try:
+                import lhapdf
+                lhapdf.setVerbosity(0)
+            except ImportError as e:
+                print("LHAPDF not available! Need this to construct PDF band: ", e.strerror)
+                exit(1)
+
+        ## Get a special object, if there is one for this path
+        special = plotparser.getSpecials(hpath)
+
+
+        ## Handle reference data histogram, if there is one
+        ratioreference, hasdataref = None, False
+        if hpath in refhistos:
+            hasdataref = True
+            refdata = refhistos[hpath]
+            refdata.setAnnotation('Title', args.REFTITLE)
+            for key in refdata.annotations():
+                if not any([ keep in key for keep in [ 'IsRef', 'Path', 'Title', 'Type' ] ]):
+                    refdata.rmAnnotation(key)
+            if not is2d:
+                refdata.setAnnotation('ErrorBars', '1')
+                refdata.setAnnotation('PolyMarker', '*')
+                refdata.setAnnotation('ConnectBins', '0')
+                if showratio:
+                    ratioreference = hpath
+            ## For 1D
+            anaobjects.append(refdata)
+            mainlines.append(hpath)
+            ## For 2D
+            if is2d:
+                s = mkOutput(hpath, [refdata], plot, special)
+                writeOutput(s, hpath)
+
+
+        ## Loop over the MC files to plot all instances of the histogram
+        styleidx = 0
+        for infile in filenames:
+            if infile in mchistos:
+                for xpath in sorted(mchistos[infile]):
+                    if  rivet.stripOptions(xpath) != hpath:
+                        continue
+                    hmcs = mchistos[infile][xpath]
+                    ## For now, just plot all the different variation histograms (reversed, so [0] is on top)
+                    # calculate an appropriate error band -- can only do bands for Histo1D or Scatter2D for now ...
+                    BANDNAME = '_VarBand'
+                    defaultWeightName = getDefaultVariation(plotoptions[infile])
+                    if defaultWeightName not in hmcs:
+                        raise NameError("No default weight found in file!")
+                    obj_type = str(hmcs[defaultWeightName])
+                    construct_band = 'Histo1D' in obj_type or 'Scatter2D' in obj_type
+                    componentNames = ['BandComponentPDF', 'BandComponentEnv']
+                    poptions = getFileOptions(plotoptions[infile], componentNames) if construct_band else { }
+                    for bandType, bandContribs in poptions.items():
+                        for curvegroup in bandContribs.split(' '):
+                            isPDF = 'PDF' in bandType
+                            errors = None; PDFset = None; nPDF = None; nomVals = None; PDFvars = [ ]
+                            for varname in sorted(hmcs.keys()):
+                                isNominal = (str(varname) == defaultWeightName)
+                                # accept nominal and variations matching any of the specified patterns
+                                if isNominal or any([ re.search(pat, varname) for pat in curvegroup.split(',') ]):
+                                    thisobj = hmcs[varname].mkScatter() if 'Histo1D' in obj_type else hmcs[varname]
+                                    if isNominal and BANDNAME not in hmcs:
+                                        # make a copy of the nominal as basis for the error tube
+                                        hmcs[BANDNAME] = thisobj if 'Histo1D' in obj_type else hmcs[varname].clone()
+                                        newpath = "%s[%s]" % (hmcs[BANDNAME].annotation('Path'), BANDNAME)
+                                        hmcs[BANDNAME].setAnnotation('Path', newpath)
+                                    # get central values of current variation
+                                    central_values = [ p.y() for p in thisobj.points() ]
+                                    # update envelope
+                                    if isPDF:
+                                        # generator may or may not count
+                                        # nominal as PDF variation
+                                        if isNominal:
+                                            nomVals = list(central_values)
+                                        else:
+                                            PDFvars.append(central_values)
+                                    elif errors == None:
+                                        errors = [ list(central_values), list(central_values) ]
+                                    else:
+                                        errors[0] = list(map(min, zip(errors[0], central_values)))
+                                        errors[1] = list(map(max, zip(errors[1], central_values)))
+                                    # remove current variation from curves to be plotted
+                                    if not isNominal:
+                                        del mchistos[infile][xpath][varname]
+                                        if isPDF and PDFset == None:
+                                            lhapdfID = int(re.search('PDF[0-9]*', varname).group(0)[3:])
+                                            PDFset = lhapdf.mkPDF(lhapdfID).set()
+                                            nPDF = int(PDFset.size)
+                            # compute PDF uncertainty
+                            if PDFset:
+                                # if the number of PDF variations is off by 1,
+                                # probably needs the nominal
+                                if len(PDFvars) == nPDF - 1:
+                                    PDFvars.append(nomVals)
+                                PDFvars = list(map(list, zip(*PDFvars))) # transpose
+                                # TODO: would be nice if I could ask LHAPDF to give me the tuple straightaway
+                                uncertainties = [ PDFset.uncertainty(binVars) for binVars in PDFvars ]
+                                errors = [ (unc.errminus, unc.errplus) for unc in uncertainties ]
+                                errors = list(map(list, zip(*errors)))
+                            # update error bars of current variation band
+                            if BANDNAME in hmcs and errors != None:
+
+                                for i in range(hmcs[BANDNAME].numPoints()):
+                                    val = hmcs[BANDNAME].point(i).y()
+                                    err0, err1 = hmcs[BANDNAME].point(i).yErrs()
+                                    contrib0 = errors[0][i] if isPDF else val - errors[0][i]
+                                    contrib1 = errors[1][i] if isPDF else val - errors[1][i]
+                                    err0 = math.sqrt(err0 ** 2 + contrib0 ** 2)
+                                    err1 = math.sqrt(err1 ** 2 + contrib1 ** 2)
+                                    hmcs[BANDNAME].point(i).setYErrs(err0, err1)
+                        # keep a record of what has gone into the band
+                        hmcs[BANDNAME].setAnnotation(bandType, bandContribs)
+
+                    for i in sorted(hmcs.keys(), reverse=True):
+                        hname = str(i)
+                        iscanonical = (hname == defaultWeightName)
+                        isband = BANDNAME in hname
+                        if args.NO_WEIGHTS and not iscanonical:
+                          continue
+                        hmc = hmcs[i]
+                        ## Default linecolor, linestyle
+                        if not is2d:
+                            setStyle(hmc, styleidx, isband or not iscanonical)
+                            if args.MC_ERRS:
+                                hmc.setAnnotation('ErrorBars', '1')
+                        ## Plot defaults from .plot files
+                        histopts = plotparser.getHistogramOptions(hpath)
+                        if histopts:
+                            for key, val in histopts.items():
+                                hmc.setAnnotation(key, val)
+                        ## Command line plot options
+                        setOptions(hmc, plotoptions[infile], isband)
+                        ## Set path attribute
+                        fullpath = "/"+infile+xpath
+                        for val in getFileOptions(plotoptions[infile], "Name").values():
+                            fullpath = val
+                        if hname != "0":
+                            fullpath += "["+hname+"]"
+                            if hmc.hasAnnotation("Name"):
+                                old_name = hmc.annotation("Name")
+                                if 'byte' in str(type(old_name)):
+                                    old_name = old_name.decode('utf-8')
+                                new_name = old_name + "["+hname+"]"
+                                hmc.setAnnotation("Name", new_name)
+                        hmc.setAnnotation("Path", fullpath)
+                        ## Add object / path to appropriate lists
+                        #if hmc.hasAnnotation("Title"):
+                        #    hmc.setAnnotation("Title", hmc.annotation("Title") +
+                        #                      rivet.extractOptionString(xpath))
+                        if not is2d :
+                            anaobjects.append(hmc)
+                        if iscanonical:
+                            mainlines.append(fullpath)
+                        elif not any([ key in hname for key in [ 'AUX', 'NOPLOT', 'DEBUG' ] ]):
+                            user_var = True
+                            # check if user specified what variations to keep
+                            for val in getFileOptions(plotoptions[infile], 'Variations').values():
+                                var_patterns = val.split(',') # keep vars matching any of these patterns
+                                user_var = any([ re.search(pat, hname) for pat in var_patterns ])
+                                break
+                            if BANDNAME in hname or user_var:
+                                varlines.append(fullpath)
+                        if showratio and ratioreference is None and iscanonical:
+                            ratioreference = fullpath
+                        ## For 2D, plot each histo now (since overlay makes no sense)
+                        if is2d:
+                            suffix=(infile.split("/")[-1].replace(".yoda.gz", "").replace(".yoda",""))
+                            s = mkOutput(hpath, [hmc], plot, special)
+                            writeOutput(s, "%s_%s" % (hpath,suffix))
+                    styleidx += 1
+
+
+        ## Finally render the combined plots; only show the first one if it's 2D
+        # TODO: Only show the first *MC* one if 2D?
+        if is2d:
+            anaobjects = anaobjects[:1]
+        ## Add final attrs to Plot
+        if 'DrawOnly' not in plot:
+            plot['DrawOnly'] = ' '.join(varlines + mainlines).strip()
+        if 'LegendOnly' not in plot:
+            plot['LegendOnly'] = ' '.join(mainlines).strip()
+        if showratio and 'RatioPlot' not in plot and len(varlines + mainlines) > 1:
+            plot['RatioPlot'] = '1'
+        if showratio and 'RatioPlot' in plot and plot['RatioPlot'] == '1' and len(varlines + mainlines) > 0:
+            if 'RatioPlotReference' not in plot:
+                plot['RatioPlotReference'] = ratioreference
+            if not hasdataref and "RatioPlotYLabel" not in plot:
+                if plot.get('RatioPlotMode', '') == 'deviation':
+                    plot['RatioPlotYLabel'] = 'Deviation' #r'$\text{MC}-\text{MC}_\text{ref}$'
+                else:
+                    plot['RatioPlotYLabel'] = 'Ratio' #r'$\text{MC}/\text{MC}_\text{ref}$'
+
+
+        ## Make the output and write to file
+        if len(anaobjects) > 0:
+            o = mkOutput(hpath, anaobjects, plot, special)
+            writeOutput(o, hpath)

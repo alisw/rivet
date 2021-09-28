@@ -1,0 +1,30 @@
+Name: SND_2000_I524221
+Year: 2000
+Summary: $e^+e^-\to\pi\gamma$ and $\eta\gamma$ for energies near the $\phi$ mass
+Experiment: SND
+Collider:  VEPP-2M
+InspireID: 524221
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Eur. Phys. J. C12, 2000, 25-33
+RunInfo: e+ e- to hadrons
+NeedCrossSection: yes
+Beams: [e+, e-]
+Description:
+  'Cross section for $e^+e^-\to\pi\gamma$ and $\eta\gamma$ for energies near the $\phi$ mass'
+Keywords: []
+BibKey: Achasov:2000zd
+BibTeX: '@article{Achasov:2000zd,
+      author         = "Achasov, M. N. and others",
+      title          = "{Experimental study of the processes e+ e- --&gt; phi --&gt;
+                        eta gamma, pi0 gamma at VEPP-2M}",
+      journal        = "Eur. Phys. J.",
+      volume         = "C12",
+      year           = "2000",
+      pages          = "25-33",
+      doi            = "10.1007/s100529900222",
+      reportNumber   = "BUDKER-INP-1999-39",
+      SLACcitation   = "%%CITATION = EPHJA,C12,25;%%"
+}'

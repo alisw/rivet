@@ -1,0 +1,36 @@
+Name: CLEOII_1997_I442910
+Year: 1997
+Summary: Spectra of $\Xi_c^0$ and $\Xi_c^+$ produced in $\Upsilon(4S)$ decays
+Experiment: CLEOII
+Collider: CESR
+InspireID: 442910
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 79 (1997) 3599-3603
+RunInfo: Any process producing Upsilon(4S), originally e+e-
+Description:
+  'Spectra of $\Xi_c^0$ and $\Xi_c^+$ produced in $\Upsilon(4S)$ decays measured by the CLEO collaboration. The simluation is normalised to the integrated result in the paper.'
+ValidationInfo:
+  'Herwig 7 Upsilon(4S) decay events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Barish:1997pq
+BibTeX: '@article{Barish:1997pq,
+      author         = "Barish, B. and others",
+      title          = "{First observation of inclusive B decays to the charmed
+                        strange baryons Xi(c)0 and Xi(c)+}",
+      collaboration  = "CLEO",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "79",
+      year           = "1997",
+      pages          = "3599-3603",
+      doi            = "10.1103/PhysRevLett.79.3599",
+      eprint         = "hep-ex/9705005",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "SLAC-PUB-9781, CLNS-97-1470, CLEO-97-5",
+      SLACcitation   = "%%CITATION = HEP-EX/9705005;%%"
+}'

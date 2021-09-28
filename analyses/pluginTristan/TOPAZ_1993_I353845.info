@@ -1,0 +1,34 @@
+Name: TOPAZ_1993_I353845
+Year: 1993
+Summary: Cross section in $e^+e^-\to$hadrons for energies between 57.37 and 59.84 GeV
+Experiment: TOPAZ
+Collider:  Tristan
+InspireID: 353845
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B304 (1993) 373-380, 1993 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu-
+NeedCrossSection: no
+Beams: [e-, e+]
+Description:
+  'Measurement of the hadronic cross section in $e^+e^-$ collisions by TOPAZ for energies between 57.37 and 59.84 GeV.
+   The individual hadronic and muonic cross sections are also outputted to the yoda file
+   so that ratio $R$ can be recalcuated if runs are combined.'
+BibKey: Abe:1993fy
+BibTeX: '@article{Abe:1993fy,
+      author         = "Abe, K. and others",
+      title          = "{Search for a narrow resonance in e+ e- collisions
+                        between E(cm) = 58-GeV and 60-GeV}",
+      collaboration  = "TOPAZ",
+      journal        = "Phys. Lett.",
+      volume         = "B304",
+      year           = "1993",
+      pages          = "373-380",
+      doi            = "10.1016/0370-2693(93)90311-5",
+      reportNumber   = "KEK-PREPRINT-92-205, TUAT-HEP-93-01, NWU-HEP-9302,
+                        DPNU-93-08, OCU-HEP-93-1, PU-93-666, INS-966,
+                        KOBE-HEP-93-04, TIT-HPE-93-03",
+      SLACcitation   = "%%CITATION = PHLTA,B304,373;%%"
+}'

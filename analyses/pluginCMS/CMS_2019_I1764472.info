@@ -1,0 +1,52 @@
+Name: CMS_2019_I1764472
+Year: 2019
+Summary: Measurement of the differential ttbar production cross section as a function of the jet mass and top quark mass in boosted hadronic top quark decays.
+Experiment: CMS
+Collider: LHC
+InspireID: 1764472
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Dennis Schwarz <dennis.schwarz@desy.de>
+ - Roman Kogler
+ - Johannes Haller
+References:
+- 'TOP-19-005'
+- 'Phys.Rev.Lett. 124 (2020) 20, 202001'
+- 'arXiv:1911.03800'
+RunInfo: ttbar events at sqrt(s) = 13 TeV, lepton+jets selection at particle level
+Luminosity: 35.9 / fb
+Beams: [p+, p+]
+Energies: [13000]
+Description:
+  'A measurement of the ttbar production cross section as a function of the jet mass of hadronic decays of boosted top quarks is presented.
+  The measurement is carried out in the lepton+jets channel.
+  As leptons, muons and electrons are defined with originate from the W boson decay.
+  Jets are clustered from all stable particles excluding neutrinos in a two-step procedure using the XCone algorithm.
+  At first, two large jets (R=1.2) are found aiming at a reconstruction of the two top quarks.
+  Using the constituents of those jets, XCone is run again finding three subjets with R=0.4.
+  A jet representing the hadronic and leptonic top quark decay is found by the angular distance to the leading lepton in the event.
+  The final jets are constructed as the sum of the subjet four-momenta.
+  The jet identified as the one containing the hadronic top quark decay is required to have \pt > 400 GeV.
+  Furthermore, the jet mass of this jet has to be larger than the invariant mass of the combined system of second jet and lepton.
+  Both, the differential and normalized differential ttbar production cross sections are measured as a function of the jet mass.
+  '
+Keywords: []
+BibKey: Sirunyan:2019rfa
+BibTeX: '@article{Sirunyan:2019rfa,
+    author = "Sirunyan, Albert M and others",
+    collaboration = "CMS",
+    title = "{Measurement of the jet mass distribution and top quark mass in hadronic decays of boosted top quarks in pp collisions at $\sqrt{s} =$ 13 TeV}",
+    eprint = "1911.03800",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CMS-TOP-19-005, CERN-EP-2019-226",
+    doi = "10.1103/PhysRevLett.124.202001",
+    journal = "Phys. Rev. Lett.",
+    volume = "124",
+    number = "20",
+    pages = "202001",
+    year = "2020"
+}'
+ReleaseTests:
+ - $A pp-13000-ttbar-sl-boosted

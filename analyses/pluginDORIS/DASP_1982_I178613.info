@@ -1,0 +1,32 @@
+Name: DASP_1982_I178613
+Year: 1982
+Summary: Measurement of $R$ in the $\Upsilon$ region, 9.42 GeV
+Experiment: DASP
+Collider: DORIS
+InspireID: 178613
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B116 (1982) 383-386, 1982 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: no
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$ in $e^+e^-$ collisions by DASP in the $\Upsilon$ region, 9.42 GeV.
+   The individual hadronic and muonic cross sections are also outputted to the yoda file
+   so that ratio $R$ can be recalcuated if runs are combined.'
+BibKey: Albrecht:1982bq
+BibTeX: '@article{Albrecht:1982bq,
+      author         = "Albrecht, H. and others",
+      title          = "{The Hadronic Cross-section of Electron - Positron
+                        Annihilation at 9.5-{GeV} and the $\Upsilon$ and
+                        $\Upsilon^\prime$ Resonance Parameters}",
+      journal        = "Phys. Lett.",
+      volume         = "116B",
+      year           = "1982",
+      pages          = "383-386",
+      doi            = "10.1016/0370-2693(82)90305-7",
+      reportNumber   = "DESY-82-037",
+      SLACcitation   = "%%CITATION = PHLTA,116B,383;%%"
+}'

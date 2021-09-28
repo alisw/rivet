@@ -1,0 +1,38 @@
+Name: BABAR_2009_I815035
+Year: 2009
+Summary: Cross section for $e^+e^-\to D^{*0}\bar{D}^{0}$, $D^{*+}\bar{D}^{-}$ and $D^{*}\bar{D}^{*}$
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 815035
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D79 (2009) 092001
+RunInfo: e+e- to hadrons
+Beams: [e+, e-]
+Description:
+  'Measurement of the cross section for $e^+e^-\to D^{*0}\bar{D}^{0}$, $D^{*+}\bar{D}^{-}$ and $D^{*}\bar{D}^{*}$
+   by the BaBar collaboration.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Aubert:2009aq
+BibTeX: '@article{Aubert:2009aq,
+      author         = "Aubert, Bernard and others",
+      title          = "{Exclusive Initial-State-Radiation Production of the D
+                        anti-D, D* anti-D*, and D* anti-D* Systems}",
+      collaboration  = "BaBar",
+      journal        = "Phys. Rev.",
+      volume         = "D79",
+      year           = "2009",
+      pages          = "092001",
+      doi            = "10.1103/PhysRevD.79.092001",
+      eprint         = "0903.1597",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "SLAC-PUB-13560, BABAR-PUB-08-057",
+      SLACcitation   = "%%CITATION = ARXIV:0903.1597;%%"
+}'

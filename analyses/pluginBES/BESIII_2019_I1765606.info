@@ -1,0 +1,32 @@
+Name: BESIII_2019_I1765606
+Year: 2019
+Summary: Analysis of $J/\psi$ decays to $\Xi^{*-}\bar\Xi^{+}+\text{c.c.}$
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1765606
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ -  arXiv:1911.06669
+RunInfo: e+e- -> J/Psi
+NeedCrossSection: no
+Beams: [e-, e+]
+Energies: [3.1]
+Description:
+  'Analysis of the angular distribution of the baryons produced in $e^+e^-\to J/\psi \to \Xi^{*-}\bar\Xi^{+}+\text{c.c.}$.
+   Gives information about the decay and is useful for testing correlations in hadron decays.'
+Keywords: []
+BibKey: Ablikim:2019ecg
+BibTeX: '@article{Ablikim:2019ecg,
+      author         = "Ablikim, M. and others",
+      title          = "{Measurement of {\boldmath
+                        $J/\psi\to\Xi(1530)^{-}\bar\Xi^{+}$} and evidence for the
+                        radiative decay {\boldmath
+                        $\Xi(1530)^{-}\to\gamma\Xi^-$}}",
+      year           = "2019",
+      eprint         = "1911.06669",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1911.06669;%%"
+}'

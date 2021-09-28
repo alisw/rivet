@@ -1,0 +1,60 @@
+// -*- C++ -*-
+#ifndef RIVET_Jet_FHH
+#define RIVET_Jet_FHH
+
+#include "Rivet/Tools/RivetSTL.hh"
+#include "Rivet/Tools/RivetFastJet.hh"
+#include "Rivet/Math/Vectors.hh"
+
+namespace Rivet {
+
+
+  /// @name Jet declarations
+  //@{
+
+  // Forward declaration
+  class Jet;
+
+
+  /// @brief Specialised vector of Jet objects.
+  ///
+  /// A specialised version of vector<Jet> which is able to implicitly and
+  /// explicitly convert to a vector of FourMomentum.
+  ///
+  /// @todo Add explicit and implicit conversion to PseudoJets
+  ///
+  /// typedef std::vector<Jet> Jets;
+  class Jets : public std::vector<Jet> {
+  public:
+    using base = std::vector<Jet>; //< using-declarations don't like template syntax
+    using base::base; //< import base-class constructors
+    Jets();
+    Jets(const std::vector<Jet>& vjs);
+    FourMomenta moms() const; //< implementation in Jet.cc
+    operator FourMomenta () const { return moms(); }
+    Jets& operator += (const Jet& j);
+    Jets& operator += (const Jets& js);
+    /// @todo Add conversion to PseudoJets
+  };
+
+  Jets operator + (const Jets& a, const Jets& b);
+
+  //@}
+
+
+  /// @name Jet function/functor declarations
+  //@{
+
+  /// std::function instantiation for functors taking a Jet and returning a bool
+  using JetSelector = function<bool(const Jet&)>;
+
+  /// std::function instantiation for functors taking two Jets and returning a bool
+  using JetSorter = function<bool(const Jet&, const Jet&)>;
+
+  //@}
+
+
+}
+
+
+#endif
