@@ -76,11 +76,11 @@ tmp=$( echo "$*" | egrep -- '--\<cppflags\>')
 if test -n "$tmp"; then
     irivet="@includedir@"
     test -n "$irivet" && OUT="$OUT -I${irivet}"
-    ihepmc="@HEPMCINCPATH@"
+    ihepmc="$HEPMC_ROOT/include"
     test -n "$ihepmc" && OUT="$OUT -I${ihepmc}"
-    iyoda="@YODAINCPATH@"
+    iyoda="$(yoda-config --includedir)"
     test -n "$iyoda" && OUT="$OUT -I${iyoda}"
-    ifastjet="@FASTJETINCPATH@"
+    ifastjet="$FASTJET/include"
     test -n "$ifastjet" && OUT="$OUT -I${ifastjet}"
     ifjcontrib="@FJCONTRIBCPPFLAGS@"
     test -n "$ifjcontrib" && OUT="$OUT ${ifjcontrib}"
@@ -90,11 +90,11 @@ tmp=$( echo "$*" | egrep -- '--\<ldflags\>|--\<libs\>')
 if test -n "$tmp"; then
     lrivet="@libdir@"
     test -n "$lrivet" && OUT="$OUT -L${lrivet}"
-    lhepmc="@HEPMCLIBPATH@"
+    lhepmc="$HEPMC_ROOT/lib"
     test -n "$lhepmc" && OUT="$OUT -L${lhepmc} @HEPMCLIBNAME@"
-    lyoda="@YODALIBPATH@"
+    lyoda="$(yoda-config --libdir)"
     test -n "$lyoda" && OUT="$OUT -L${lyoda} -lYODA"
-    lfastjet="@FASTJETLIBADD@"
+    lfastjet="${CGAL_ROOT:+-L$CGAL_ROOT/lib} ${GMP_ROOT:+-L$GMP_ROOT/lib} $(fastjet-config --plugins --shared --libs)"
     test -n "$lfastjet" && OUT="$OUT ${lfastjet}"
 fi
 
