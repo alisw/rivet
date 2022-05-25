@@ -1,0 +1,37 @@
+Name: CLEOII_1997_I446031
+Year: 1997
+Summary: $e^+e^-\to e^+e^-\pi^0, \eta, \eta^\prime$ via intermediate photons at 10.58 GeV
+Experiment: CLEOII
+Collider: CESR
+InspireID: 446031
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 57 (1998) 33-54
+RunInfo: e+ e- > e+e- meson via photon photon -> meson
+Beams: [e+, e-]
+Energies: [10.58]
+Description:
+  'Measurement of the cross sections for the production of $\pi^0, \eta, \eta^\prime$ in photon-photon
+   collisions, i.e. $e^+e^-\to \gamma\gamma e^+e^-$ followed by $\gamma\gamma\to\pi^0, \eta, \eta^\prime$,
+   by the CLEO II experiment at 10.58 GeV'
+ValidationInfo:
+  'Herwig7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Gronberg:1997fj
+BibTeX: '@article{Gronberg:1997fj,
+    author = "Gronberg, J. and others",
+    collaboration = "CLEO",
+    title = "{Measurements of the meson - photon transition form-factors of light pseudoscalar mesons at large momentum transfer}",
+    eprint = "hep-ex/9707031",
+    archivePrefix = "arXiv",
+    reportNumber = "SLAC-PUB-9838, CLNS-97-1477, CLEO-97-7",
+    doi = "10.1103/PhysRevD.57.33",
+    journal = "Phys. Rev. D",
+    volume = "57",
+    pages = "33--54",
+    year = "1998"
+}'

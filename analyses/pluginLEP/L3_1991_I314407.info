@@ -1,0 +1,33 @@
+Name: L3_1991_I314407
+Year: 1991
+Summary: $\pi^0$ and charged particle spectra at 91 GeV
+Experiment: L3
+Collider: LEP
+InspireID: 314407
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett.B 259 (1991) 199-208
+RunInfo: e+e- -> hadrons
+Beams: [e+, e-]
+Energies: [91.2]
+Description:
+  'Measurement of the momentum distribution of the $\pi^0$ mesons and charged particles at 91.2 GeV in $e^+e^-$ collisions by the L3 collaboration.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Adeva:1991it
+BibTeX: '@article{Adeva:1991it,
+    author = "Adeva, B. and others",
+    collaboration = "L3",
+    title = "{Measurement of the inclusive production of neutral pions and charged particles on the Z0 resonance}",
+    reportNumber = "L3-025",
+    doi = "10.1016/0370-2693(91)90159-N",
+    journal = "Phys. Lett. B",
+    volume = "259",
+    pages = "199--208",
+    year = "1991"
+}'

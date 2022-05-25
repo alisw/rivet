@@ -1,0 +1,51 @@
+Name: ATLAS_2016_I1478355
+Year: 2016
+Summary: Measurement of the bbar dijet dijet cross section at 7 TeV
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1478355
+Status: VALIDATED
+Authors:
+ - Lucia Keszeghova <lucia.keszeghova@cern.ch>
+ - Deepak Kar <deepak.kar@cern.ch>
+References:
+ - Eur.Phys.J. C76 (2016) 670
+ - DOI:10.1140/epjc/s10052-016-4521-y
+ - arXiv:1607.08430 [hep-ex]
+Keywords:
+  - Dijet
+  - bbbar
+RunInfo: Dijet production, high pThatmin
+Beams: [p+, p+]
+Energies: [[3500,3500]]
+Luminosity_fb: 4.2
+Description:
+  'The dijet production cross section for jets containing a $b$-hadron ($b$-jets) has been measured in proton-proton collisions 
+  with a centre-of-mass energy of $\sqrt{s} = 7$ TeV, using the ATLAS detector at the LHC. The data used correspond to an 
+  integrated luminosity of 4.2 fb$^{-1}$. The cross section is measured for events with two identified $b$-jets with a 
+  transverse momentum $p_\mathrm{T} > 20$GeV and a minimum separation in the $\eta$-$\phi$ plane of $\Delta R$ = 0.4. 
+  At least one of the jets in the event is required to have $p_\mathrm{T} > 270$GeV. The cross section is measured 
+  differentially as a function of dijet invariant mass, dijet transverse momentum, boost of the dijet system, and the 
+  rapidity difference, azimuthal angle and angular distance between the $b$-jets. The results are compared to different 
+  predictions of leading order and next-to-leading order perturbative quantum chromodynamics matrix elements supplemented 
+  with models for parton-showers and hadronization.'
+BibKey: ATLAS:2016anw
+BibTex: '@article{ATLAS:2016anw,
+    author = "Aaboud, Morad and others",
+    collaboration = "ATLAS",
+    title = "{Measurement of the $b\overline{b}$ dijet cross section in pp collisions at $\sqrt{s} = 7$  TeV with the ATLAS detector}",
+    eprint = "1607.08430",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CERN-EP-2016-091",
+    doi = "10.1140/epjc/s10052-016-4521-y",
+    journal = "Eur. Phys. J. C",
+    volume = "76",
+    number = "12",
+    pages = "670",
+    year = "2016"
+}'
+
+ReleaseTests:
+ - $A LHC-7-Jets-8
+

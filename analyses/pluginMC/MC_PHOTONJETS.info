@@ -1,0 +1,21 @@
+Name: MC_PHOTONJETS
+Summary: Monte Carlo validation observables for photon + jets production
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Frank Siegert <frank.siegert@cern.ch>
+References:
+RunInfo:
+  Tevatron Run II ppbar -> gamma + jets.
+NumEvents: 10000000
+PtCuts: [0]
+Description:
+  Different observables related to the photon and extra jets.
+NeedCrossSection: yes
+
+ReleaseTests:
+ - $A LHC-7-PromptPhoton-1
+ - $A-2 LHC-7-PromptPhoton-2
+ - $A-3 LHC-7-PromptPhoton-3
+ - $A-4 LHC-7-PromptPhoton-4
+

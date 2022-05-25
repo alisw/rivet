@@ -1,0 +1,32 @@
+Name: HRS_1989_I276948
+Year: 1989
+Summary: $\rho^0$, $K^{*0}$ and $K^{*\pm}$ spectra at 29 GeV
+Experiment: HRS
+Collider: <Insert the collider name>
+InspireID: 276948
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 40 (1989) 706, 1989
+Beams: [e+, e-]
+Energies: [29]
+Description:
+  'Measurement of the $\rho^0$, $K^{*0}$ and $K^{*\pm}$ spectra at 29 GeV by the HRS experiment.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Abachi:1989em
+BibTeX: '@article{Abachi:1989em,
+    author = "Abachi, S. and others",
+    title = "{Study of Vector Meson Production in $e^+ e^-$ Annihilation at $\sqrt{s}=29$-{GeV}}",
+    reportNumber = "ANL-HEP-PR-89-09, IUHEE-89-01, UM-HE-89-01, PU-89-625",
+    doi = "10.1103/PhysRevD.40.706",
+    journal = "Phys. Rev. D",
+    volume = "40",
+    pages = "706",
+    year = "1989"
+}
+'

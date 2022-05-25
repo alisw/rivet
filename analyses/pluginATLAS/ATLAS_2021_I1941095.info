@@ -1,0 +1,49 @@
+Name: ATLAS_2021_I1941095
+Year: 2021
+Summary: energy asymmetry in ttj @ 13 TeV
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1941095
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Alexander Basan <alexander.basan@cern.ch>
+References:
+ - arXiv:2110.05453 [hep-ex]
+Keywords:
+ - TTBAR
+ - SEMILEPTONIC
+ - ASYMMETRY
+RunInfo:
+  semileptonic top-quark pair plus jet production at 13 TeV
+Luminosity_fb: 139.0
+Beams: [p+, p+]
+Energies: [13000]
+PtCuts: [350]
+Description: 
+    'A measurement of the energy asymmetry in jet-associated top-quark pair production is presented using 
+    139 fb$^{-1}$ of data collected by the ATLAS detector at the Large Hadron Collider during $pp$ collisions at 
+    $\sqrt{s}=13$ TeV. The observable measures the different probability of top and antitop quarks to have the higher 
+    energy as a function of the jet scattering angle with respect to the beam axis. The energy asymmetry is measured 
+    in the semileptonic $t\bar{t}$ decay channel, and the hadronically decaying top quark must have transverse momentum 
+    above 350 GeV. The results are corrected for detector effects to particle level in three bins of the scattering angle 
+    of the associated jet. The measurement agrees with the SM prediction at next-to-leading-order accuracy in quantum
+    chromodynamics in all three bins. In the bin with the largest expected asymmetry, where the jet is emitted perpendicular 
+    to the beam, the energy asymmetry is measured to be $-0.043\pm0.020$, in agreement with the SM prediction of 
+    $-0.037\pm0.003$. Interpreting this result in the framework of the Standard Model effective field theory (SMEFT), 
+    it is shown that the energy asymmetry is sensitive to the top-quark chirality in four-quark operators and is therefore 
+    a valuable new observable in global SMEFT fits.'
+BibKey: ATLAS:2021dqb,
+BibTex: '@article{ATLAS:2021dqb,
+    author = "Aad, Georges and others",
+    collaboration = "ATLAS",
+    title = "{Measurement of the energy asymmetry in $t\bar{t}j$ production at 13 TeV with the ATLAS experiment and interpretation in the SMEFT framework}",
+    eprint = "2110.05453",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CERN-EP-2021-181",
+    month = "10",
+    year = "2021"
+}'
+ReleaseTest:
+ - $A pp-13000-ttbar-sl-boosted

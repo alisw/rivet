@@ -1,0 +1,32 @@
+Name: TASSO_1986_I230950
+Year: 1986
+Summary: $\pi^0$ spectrum in  $e^+e^-$ at 34.4 GeV
+Experiment: TASSO
+Collider: Petra
+InspireID: 230950
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Z.Phys. C33 (1986) 13, 1986 
+RunInfo: e+ e- to hadrons
+NeedCrossSection: yes
+Beams: [e+, e-]
+Energies: [34.4]
+Description:
+  'Measurement of the $\pi^0$ spectrum in $e^+e^-$ collisions for a centre-of-mass energy of 34.4 GeV by the TASSO experiment at Petra.'
+Keywords: []
+BibKey: Braunschweig:1986hr
+BibTeX: '@article{Braunschweig:1986hr,
+      author         = "Braunschweig, W. and others",
+      title          = "{Inclusive $\pi^0$ Production by $e^+ e^-$ Annihilation
+                        at 34.6-{GeV} Center-of-mass Energy}",
+      collaboration  = "TASSO",
+      journal        = "Z. Phys.",
+      volume         = "C33",
+      year           = "1986",
+      pages          = "13",
+      doi            = "10.1007/BF01410448",
+      reportNumber   = "DESY-86-078",
+      SLACcitation   = "%%CITATION = ZEPYA,C33,13;%%"
+}'

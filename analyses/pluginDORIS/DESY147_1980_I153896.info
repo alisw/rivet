@@ -1,0 +1,33 @@
+Name: DESY147_1980_I153896
+Year: 1980
+Summary: Measurement of $R$ between 9.4 and 10.1 GeV
+Experiment: DESY147
+Collider: DORIS
+InspireID: 153896
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Z.Phys. C6 (1980) 125, 1980 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: yes
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$ in $e^+e^-$ collisions for energies between 9.4 and 10.1 GeV.
+   The individual hadronic and muonic cross sections are also outputted to the yoda file
+   so that ratio $R$ can be recalculated if runs are combined.'
+Keywords: []
+BibKey: Bock:1980ag
+BibTeX: '@article{Bock:1980ag,
+      author         = "Bock, P. and others",
+      title          = "{Total Cross-section for Hadron Production by $e^+ e^-$
+                        Annihilation Between 9.4-{GeV} and 9.5-{GeV}}",
+      collaboration  = "DESY-Hamburg-Heidelberg-Munich",
+      journal        = "Z. Phys.",
+      volume         = "C6",
+      year           = "1980",
+      pages          = "125",
+      doi            = "10.1007/BF01588838",
+      reportNumber   = "DESY-80-58",
+      SLACcitation   = "%%CITATION = ZEPYA,C6,125;%%"
+}'

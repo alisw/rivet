@@ -1,0 +1,34 @@
+Name: PLUTO_1979_I142517
+Year: 1979
+Summary:  Measurement of $R$ between 22 and 31.6 GeV
+Experiment: PLUTO
+Collider: PETRA
+InspireID: 142517
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B86 (1979) 413-417, 1979 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: yes
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$ in $e^+e^-$ collisions for energies between 22 and 31.6 GeV.
+   The hadronic cross section is also measured in the $\Upsilon$ region, 9.3 to 9.48 GeV.
+   The individual hadronic and muonic cross sections are also outputted to the yoda file
+   so that ratio $R$ can be recalculated if runs are combined.'
+Keywords: []
+BibKey: Berger:1979wn
+BibTeX: '@article{Berger:1979wn,
+      author         = "Berger, Christoph and others",
+      title          = "{Search for a Top Threshold in Hadronic $e^+ e^-$
+                        Annihilation at Energies Between 22-{GeV} and 31.6-{GeV}}",
+      collaboration  = "PLUTO",
+      journal        = "Phys. Lett.",
+      volume         = "86B",
+      year           = "1979",
+      pages          = "413-417",
+      doi            = "10.1016/0370-2693(79)90868-2",
+      reportNumber   = "DESY-79-56",
+      SLACcitation   = "%%CITATION = PHLTA,86B,413;%%"
+}'

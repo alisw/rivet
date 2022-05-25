@@ -1,0 +1,34 @@
+Name: PLUTO_1979_I140294
+Year: 1979
+Summary: Measurement of $R$ between 3 and 17 GeV
+Experiment: PLUTO
+Collider: PETRA
+InspireID: 140294
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B81 (1979) 410-415, 1979 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: no
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$ in $e^+e^-$ collisions by PLUTO for energies between 3 and 17 GeV.
+   The individual hadronic and muonic cross sections are also outputted to the yoda file
+   so that ratio $R$ can be recalculated if runs are combined.'
+Keywords: []
+BibKey: Berger:1979bp
+BibTeX: '@article{Berger:1979bp,
+      author         = "Berger, Christoph and others",
+      title          = "{Cross-Sections and Event Topologies in e+ e-
+                        Annihilation at 13-GeV and 17-GeV Observed with the PLUTO
+                        Detector}",
+      collaboration  = "PLUTO",
+      journal        = "Phys. Lett.",
+      volume         = "81B",
+      year           = "1979",
+      pages          = "410-415",
+      doi            = "10.1016/0370-2693(79)90365-4",
+      reportNumber   = "DESY-79-11",
+      SLACcitation   = "%%CITATION = PHLTA,81B,410;%%"
+}'

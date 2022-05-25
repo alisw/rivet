@@ -1,0 +1,36 @@
+Name: CMD3_2016_I1444990
+Year: 2016
+Summary: Cross section for $e^+e^-\to K^0_SK^0_L$ at energies between 1.004 and 1.06 GeV
+Experiment: CMD3
+Collider: VEPP-2M
+InspireID: 1444990
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B760 (2016) 314-319, 2016
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+Description:
+  'Measurement of the cross section for $e^+e^-\to K^0_SK^0_L$ at energies between 1.004 and 1.06 GeV.'
+Keywords: []
+BibKey: Kozyrev:2016raz
+BibTeX: '@article{Kozyrev:2016raz,
+      author         = "Kozyrev, E. A. and others",
+      title          = "{Study of the process $e^+ e^- \to K^0_{S}K^0_{L}$ in the
+                        center-of-mass energy range 1004--1060 MeV with the CMD-3
+                        detector at the VEPP-2000 $e^+ e^-$ collider}",
+      collaboration  = "CMD-3",
+      journal        = "Phys. Lett.",
+      volume         = "B760",
+      year           = "2016",
+      pages          = "314-319",
+      doi            = "10.1016/j.physletb.2016.07.003",
+      eprint         = "1604.02981",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1604.02981;%%"
+}'

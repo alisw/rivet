@@ -1,0 +1,32 @@
+Name: MARKII_1984_I195739
+Year: 1984
+Summary: $\gamma\gamma\to\pi^+\pi^-/K^+K^-$ for centre-of-mass energies between 1.6 and 2.5 GeV
+Experiment: MARKII
+Collider: PEP
+InspireID: 195739
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 30 (1984) 851, 1984
+RunInfo: gamma gamma to hadrons
+Beams: [gamma, gamma]
+Energies: []
+Description:
+  'Measurement of the differential cross section for $\gamma\gamma\to\pi^+\pi^-/K^+K^-$ for $1.6 \text{GeV} < W < 2.5 \text{GeV}$.'
+ValidationInfo:
+  'Herwig 7 gamma gamma to pi+ pi- and K+K- events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Smith:1983jk
+BibTeX: '@article{Smith:1983jk,
+    author = "Smith, J. R. and others",
+    title = "{Pion Pair Production From $\gamma \gamma$ Collisions at {PEP}}",
+    reportNumber = "SLAC-PUB-3205, LBL-L6687",
+    doi = "10.1103/PhysRevD.30.851",
+    journal = "Phys. Rev. D",
+    volume = "30",
+    pages = "851",
+    year = "1984"
+}'

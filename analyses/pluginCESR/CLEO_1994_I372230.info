@@ -1,0 +1,35 @@
+Name: CLEO_1994_I372230
+Year: 1994
+Summary: $\gamma\gamma\to\pi^+\pi^-/K^+K^-$ for centre-of-mass energies between 1.5 and 5 GeV
+Experiment: CLEO
+Collider: CESR
+InspireID: 372230
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 50 (1994) 3027-3037, 1994
+RunInfo: gamma gamma to hadrons
+Beams: [gamma, gamma]
+Energies: []
+Description:
+  'Measurement of the differential cross section for $\gamma\gamma\to\pi^+\pi^-/K^+K^-$ for $1.5 \text{GeV} < W < 5.0 \text{GeV}$.'
+ValidationInfo:
+  'Herwig 7 gamma gamma to pi+ pi- and K+K- events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: CLEO:1994grb
+BibTeX: '@article{CLEO:1994grb,
+    author = "Dominick, J. and others",
+    collaboration = "CLEO",
+    title = "{Two photon production of charged pion and kaon pairs}",
+    eprint = "hep-ph/9403379",
+    archivePrefix = "arXiv",
+    reportNumber = "CLNS-94-1274, CLEO-94-9, CLNS94-1274",
+    doi = "10.1103/PhysRevD.50.3027",
+    journal = "Phys. Rev. D",
+    volume = "50",
+    pages = "3027--3037",
+    year = "1994"
+}'

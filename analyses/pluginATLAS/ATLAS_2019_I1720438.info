@@ -1,0 +1,53 @@
+Name: ATLAS_2019_I1720438
+Year: 2019
+Summary: Measurement of the $WZ$ production cross section at 13 TeV
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1720438
+Authors:
+ - Eirini Kasimi <eirini.kasimi@cern.ch>
+ - Emmanuel Sauvan <sauvan@lapp.in2p3.fr>
+References:
+ - Eur. Phys. J. C 79 (2019) 535
+ - arXiv:arXiv:1902.05759 [hep-ex]
+ - doi:10.1140/epjc/s10052-019-7027-6
+Keywords:
+ - wz
+ - diboson
+ - 2lepton
+RunInfo:
+  pp -> WZ + X, diboson decays to electrons or muons, data only for single channel
+Luminosity_fb: 36.1
+Beams: [p+, p+]
+Energies: [13000]
+Description:
+  'The production of $W^\pm Z$ events in proton--proton collisions at a centre-of-mass energy of 13 TeV is measured with the ATLAS detector
+  at the LHC. The collected data correspond to an integrated luminosity of 36.1 fb${}^{-1}$ . The $W^\pm Z$ candidates are reconstructed using
+  leptonic decays of the gauge bosons into electrons or muons. The measured inclusive cross section in the detector fiducial region
+  for leptonic decay modes is $\sigma(W^\pm Z\to\ell^\prime\nu\ell\ell \text{fid.}) = 63.7\pm 3.2$(stat.)$\pm 1.0$(sys.)$\pm 1.4$(lumi.) fb.
+  In comparison, the next-to-leading-order Standard Model prediction is 61.5-1.3+1.4 fb. Cross sections for $W^+Z$ and $W^-Z$ production 
+  and their ratio are presented as well as differentialcross sections for several kinematic observable.
+  Users should note that explicit matching of lepton flavour between individual SM neutrinos and charged leptons is used in this analysis
+  routine, to match the MC-based correction to the fiducial region applied in the paper. The data are therefore only valid under the
+  assumption of the Standard Model and cannot be used for BSM reinterpretation. Uses SM neutrino-lepton flavour matching and a 
+  resonant shape algorithm assuming the Standard Model, to match the MC-based correction to the fiducial region applied in the paper. 
+  This routine is therefore only valid under the assumption of the Standard Model and cannot be used for BSM reinterpretation'
+BibKey: ATLAS:2019gxl
+BibTeX: '@article{ATLAS:2019gxl,
+    author = "Aaboud, Morad and others",
+    collaboration = "ATLAS",
+    title = "{Measurement of $W^{\pm}Z$ production cross sections and gauge boson polarisation in $pp$ collisions at $\sqrt{s} = 13$ TeV with the ATLAS detector}",
+    eprint = "1902.05759",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CERN-EP-2018-327",
+    doi = "10.1140/epjc/s10052-019-7027-6",
+    journal = "Eur. Phys. J. C",
+    volume = "79",
+    number = "6",
+    pages = "535",
+    year = "2019"
+}'
+ReleaseTests:
+ - $A pp-13000-lllv
+

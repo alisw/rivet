@@ -1,0 +1,13 @@
+prefix=/Users/chrisg/software/rivet/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+datarootdir=${prefix}/share
+
+Name: rivet
+Description: Rivet MC analysis library
+URL: https://rivet.hepforge.org
+Version: 3.1.6
+#Requires: yoda
+Libs: -L${exec_prefix}/lib -L/Users/chrisg/software/HepMC3-install/lib -L/Users/chrisg/software/yoda2/local/lib -L@FASTJETCONFIGLIBADD@ -lRivet
+Cflags: -I${prefix}/include -I/Users/chrisg/software/HepMC3-install/include -I/Users/chrisg/software/yoda2/local/include -I/Users/chrisg/software/fastjet-3.3.4/local/include

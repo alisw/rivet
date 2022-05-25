@@ -1,0 +1,6 @@
+BEGIN YODA_SCATTER2D_V2 /REF/CMS_2018_I1686000/xsec
+Path=/REF/CMS_2018_I1686000/xsec
+Type=Scatter1D
+# xval   xerr- (from paper)   xerr+ (paper ++ Rivet/paper mismatch)
+81	4	8
+END YODA_SCATTER2D_V2

@@ -1,0 +1,61 @@
+Name: ATLAS_2021_I1849535
+Year: 2021
+Summary: Inclusive 4-lepton cross sections at 13 TeV
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1849535
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Max Goblirsch <goblirsc@cern.ch>
+ - Jon Butterworth <j.butterworth@ucl.ac.uk>
+ - Louie Dartmoor Corpe <l.corpe@cern.ch>
+References:
+ - arXiv:2103.01918
+ - submitted to JHEP
+Keywords:
+ - diboson
+ - 2boson
+ - zz
+ - 4lepton
+ - Higgs
+RunInfo:
+  '$p p \to \ell \ell \ell \ell + X$'
+Luminosity_fb: 139
+Beams: [p+, p+]
+Energies: [13000]
+Description: 'Measurements of four-lepton differential and integrated fiducial cross-sections
+ in events with two same-flavour, opposite-charge electron or muon pairs are presented.
+ The data correspond to 139~fb$^{-1}$ of $\sqrt{s}=13$~TeV proton-proton collisions, collected by the 
+ ATLAS detector during Run~2 of the Large Hadron Collider (2015--2018). 
+ The final state has contributions from a number of interesting Standard Model processes that dominate in different
+ four-lepton invariant mass regions, including single $Z$ boson production,
+ Higgs boson production and on-shell $ZZ$ production, with a complex mix of
+ interference terms, and possible contributions from
+ physics beyond the Standard Model. The differential cross-sections include  the four-lepton invariant mass
+ inclusively, in slices of other kinematic variables, and in different lepton flavour categories. Also
+ measured are dilepton invariant masses, transverse momenta, and angular correlation
+ variables, in four regions of four-lepton invariant mass, each
+ dominated by different processes. The measurements are corrected for detector effects and are compared
+ with state-of-the-art Standard Model calculations, which are found to
+ be consistent with the data. The $Z\to 4\ell$ branching fraction is
+ extracted, giving a value of $\left(4.41 \pm 0.30\right) \times 10^{-6}$.
+ Constraints on effective field theory parameters and a model based on
+ a spontaneously broken $B-L$ gauge symmetry are also evaluated.
+ Further reinterpretations can be performed with the provided information.'
+BibKey: Aad:2021ebo
+BibTeX: '@article{Aad:2021ebo,
+    author = "Aad, Georges and others",
+    collaboration = "ATLAS",
+    title = "{Measurements of differential cross-sections in four-lepton events in 13 TeV proton-proton collisions with the ATLAS detector}",
+    eprint = "2103.01918",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CERN-EP-2021-019",
+    month = "3",
+    year = "2021"
+}'
+
+ReleaseTests:
+ - $A pp-13000-llll
+

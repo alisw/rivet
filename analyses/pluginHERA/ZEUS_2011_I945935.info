@@ -1,0 +1,52 @@
+Name: ZEUS_2011_I945935
+Year: 2012
+Summary: Scaled momentum distributions for $K^0_S$ and $\Lambda/\bar{\Lambda}$ in DIS at HERA
+Experiment: ZEUS
+Collider: HERA
+InspireID: 945935
+Status: VALIDATED
+Reenterant: true
+Luminosity_fb: 0.330
+Authors:
+ - Andrii Verbytskyi andrii.verbytskyi@mpp.mpg.de
+References:
+ - 'JHEP 1203 (2012) 020'
+ - 'DOI: 10.1007/JHEP03(2012)020'
+ - 'DESY-11-205'
+ - 'arXiv:1111.3526 [hep-ex]' 
+RunInfo:
+  $e^{\pm} p$ deep inelastic scattering with $p$ at 920~GeV,
+  $e^{\pm}$ at 27.5 GeV \to $\sqrt{s} = 318~\GeV$
+NumEvents: 100000
+Beams: [[p+, e+],[p+, e-]]
+Energies: [[920, 27.5],[920, 27.5]]
+PtCuts: [0]
+Description:
+'Scaled momentum distributions for the strange hadrons K0s and Lambda/bar Lambda were measured in deep inelastic ep scattering 
+with the ZEUS detector at HERA using an integrated luminosity of $330 pb^{-1}$. The evolution of these distributions with the 
+photon virtuality, $Q^2$, was studied in the kinematic region $10<Q^2<40000 GeV^2$ and $0.001<x<0.75$, where $x$ is the Bjorken scaling 
+variable. Clear scaling violations are observed. Predictions based on different approaches to fragmentation were compared to 
+the measurements. Leading-logarithm parton-shower Monte Carlo calculations interfaced to the Lund string fragmentation model
+ describe the data reasonably well in the whole range measured. Next-to-leading-order QCD calculations based on fragmentation 
+ functions, FFs, extracted from $e^+e^-$ data alone, fail to describe the measurements. The calculations based on FFs extracted 
+ from a global analysis including $e^+e^-$, $ep$ and $pp$ data give an improved description. The measurements presented in this paper 
+ have the potential to further constrain the FFs of quarks, anti-quarks and gluons yielding $K^0_{S}$ and $\Lambda/\bar{ \Lambda}$ strange hadrons.'
+BibKey: Abramowicz:2011kn
+BibTeX: '@article{Abramowicz:2011kn,
+      author         = "Abramowicz, H. and others",
+      title          = "{Scaled momentum distributions for $K^0_S$ and
+                        $\Lambda/\bar{\Lambda}$ in DIS at HERA}",
+      collaboration  = "ZEUS",
+      journal        = "JHEP",
+      volume         = "03",
+      year           = "2012",
+      pages          = "020",
+      doi            = "10.1007/JHEP03(2012)020",
+      eprint         = "1111.3526",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "DESY-11-205",
+      SLACcitation   = "%%CITATION = ARXIV:1111.3526;%%"
+}'
+
+

@@ -1,0 +1,37 @@
+Name: MARKI_1975_I100733
+Year: 1975
+Summary: Measurement of $R$ and the hadronic cross section for energies between 2.4 and 6.9 GeV 
+Experiment: MARKI
+Collider: Spear
+InspireID: 100733
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - https://doi.org/10.17182/hepdata.18759
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization). Beam energy must be specified as analysis option "ENERGY" when rivet-merging samples.
+NeedCrossSection: no
+Beams: [e-, e+]
+Options:
+ - ENERGY=*
+Description:
+  'Measurement of $R$  and the hadronic cross section for energies between 2.4 and 6.9 GeV.
+   The charged hadron spectum at 3, 4.8 and 7.4 GeV is also measured.
+   The muonic cross sections is also outputted to the yoda file
+   so that ratio $R$ can be recalcuated if runs are combined.
+   Beam energy must be specified as analysis option "ENERGY" when rivet-merging samples.'
+Keywords: []
+BibKey: Schwitters:1975fv
+BibTeX: '@inproceedings{Schwitters:1975fv,
+      author         = "Schwitters, R.",
+      title          = "{Hadron Production at SPEAR}",
+      booktitle      = "{1975 International Symposium on Lepton and Photon
+                        Interactions at High-Energies. Proceedings. Stanford
+                        University, August 21-27, 1975}",
+      url            = "http://www-public.slac.stanford.edu/sciDoc/docMeta.aspx?slacPubNumber=SLAC-PUB-1666",
+      year           = "1975",
+      pages          = "5",
+      reportNumber   = "SLAC-PUB-1666",
+      SLACcitation   = "%%CITATION = SLAC-PUB-1666;%%"
+}'

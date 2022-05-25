@@ -1,0 +1,38 @@
+Name: CMS_2020_I1794169
+Year: 2020
+Summary: Measurements of production cross sections of WZ and same-sign WW boson pairs in association with two jets in proton-proton collisions at $\sqrt{s} =$ 13 TeV
+Experiment: CMS
+Collider: LHC
+InspireID: 1794169
+Status: VALIDATED
+Authors:
+ - cms-pag-conveners-smp@cern.ch
+ - Guillelmo Gomez-Ceballos <ceballos@cern.ch>
+ - Kenneth Long <kenneth.long@cern.ch>
+References:
+  - arXiv:2005.01173
+  - CMS-SMP-19-012
+  - Phys. Lett. B 809 (2020) 135710
+RunInfo: VBS WZ and W+W+ interactions at $\sqrt{s} = 13$ TeV. Data collected by CMS during the year 2016-18.
+NeedCrossSection: yes
+Beams: [p+, p+]
+Energies: [13000]
+Options:
+ - LMODE=WW,WZ
+Description:
+  'Measurements of production cross sections of WZ and same-sign W+W+ boson pairs in association with two jets in proton-proton collisions at sqrt{s}=13TeV at the LHC are reported. The data sample corresponds to an integrated luminosity of 137fb-1, collected with the CMS detector during 2016--2018. The measurements are performed in the leptonic decay modes. Differential fiducial cross sections as functions of the invariant masses of the jet and charged lepton pairs, as well as of the leading-lepton transverse momentum, are measured for WW production and are consistent with the standard model predictions. The dependence of differential cross sections on the invariant mass of the jet pair is also measured for WZ production. An observation of electroweak production of WZ boson pairs is reported with an observed (expected) significance of 6.8 (5.3) standard deviations. Constraints are obtained on the structure of quartic vector boson interactions in the framework of effective field theory.'
+BibKey: Sirunyan:2020jtq
+BibTeX: '@article{Sirunyan:2020gyx,
+    author = "Sirunyan, Albert M and others",
+    collaboration = "CMS",
+    title = "{Measurements of production cross sections of WZ and same-sign WW boson pairs in association with two jets in proton-proton collisions at $\sqrt{s} =$ 13 TeV}",
+    eprint = "2005.01173",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CMS-SMP-19-012, CERN-EP-2020-064",
+    doi = "10.1016/j.physletb.2020.135710",
+    journal = "Phys. Lett. B",
+    volume = "809",
+    pages = "135710",
+    year = "2020"
+}'

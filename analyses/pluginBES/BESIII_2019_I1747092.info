@@ -1,0 +1,32 @@
+Name: BESIII_2019_I1747092
+Year: 2019
+Summary: Analysis of $\psi(2S)$ decays to $\Xi^{*-}\bar\Xi^{*+}$
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1747092
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ -  arXiv:1907.13041
+RunInfo: e+e- -> Psi(2S)
+NeedCrossSection: no
+Beams: [e-, e+]
+Energies: [3.69]
+Description:
+  'Analysis of the angular distribution of the baryons produced in $e^+e^-\to \psi(2S) \to \Xi^{*-}\bar\Xi^{*+}$.
+   Gives information about the decay and is useful for testing correlations in hadron decays.'
+Keywords: []
+BibKey: Ablikim:2019wjs
+BibTeX: '@article{Ablikim:2019wjs,
+      author         = "Ablikim, Medina and others",
+      title          = "{Observation of
+                        $\psi(3686)\rightarrow\Xi(1530)^{-}\bar\Xi(1530)^{+}$ and
+                        $\Xi(1530)^{-}\bar\Xi^{+}$}",
+      collaboration  = "BESIII",
+      year           = "2019",
+      eprint         = "1907.13041",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1907.13041;%%"
+}'

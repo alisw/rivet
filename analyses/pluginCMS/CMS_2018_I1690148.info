@@ -1,0 +1,49 @@
+Name: CMS_2018_I1690148
+Year: 2018
+Summary: Measurement of jet substructure observables in $t\bar{t}$ events from $pp$ collisions at 13~TeV
+Experiment: CMS
+Collider: LHC
+InspireID: 1690148
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Markus Seidel <markus.seidel@cern.ch>
+References:
+ - arXiv:1808.07340
+ - CMS-TOP-17-013
+ - Phys. Rev. D 98, 092014 (2018)
+RunInfo:
+  $t\bar{t}$ events at $\sqrt{s} = 13~\TeV$, lepton+jets selection at particle level.
+Luminosity: 35.9 / fb
+Beams: [p+, p+]
+Energies: [13000]
+Description:
+  'A measurement of jet substructure observables is presented using $t\bar{t}$ events in the lepton+jets channel
+  from proton-proton collisions at $\sqrt{s}=13$ TeV recorded by the CMS experiment at the LHC, corresponding to
+  an integrated luminosity of 35.9/fb. Multiple jet substructure observables are measured for jets identified as
+  bottom, light-quark, and gluon jets, as well as for inclusive jets (no flavor information). The results are
+  unfolded to the particle level and compared to next-to-leading-order predictions from POWHEG interfaced with
+  the parton shower generators PYTHIA 8 and HERWIG 7, as well as from SHERPA 2 and DIRE 2. A value of the strong
+  coupling at the Z boson mass, $\alpha_{S}(m_{Z}) = 0.115^{+0.015}_{-0.013}$, is extracted from the substructure
+  data at leading-order plus leading-log accuracy.'
+BibKey: Sirunyan:2018asm
+BibTeX: '@article{Sirunyan:2018asm,
+      author         = "Sirunyan, A. M. and others",
+      title          = "{Measurement of jet substructure observables in
+                        $\mathrm{t\overline{t}}$ events from proton-proton
+                        collisions at $\sqrt{s}=$ 13TeV}",
+      collaboration  = "CMS",
+      journal        = "Phys. Rev.",
+      volume         = "D98",
+      year           = "2018",
+      number         = "9",
+      pages          = "092014",
+      doi            = "10.1103/PhysRevD.98.092014",
+      eprint         = "1808.07340",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CMS-TOP-17-013, CERN-EP-2018-214",
+      SLACcitation   = "%%CITATION = ARXIV:1808.07340;%%"
+}'
+ReleaseTests:
+ - $A LHC-13-Top-All

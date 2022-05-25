@@ -1,0 +1,53 @@
+Name: H1_2015_I1343110
+Year: 2015
+Summary: Diffractive dijets in DIS and photoproduction
+Experiment: H1
+Collider: HERA
+InspireID: 1343110
+Status: UNVALIDATED
+Authors:
+ - Christine O. Rasmussen <christine.rasmussen@thep.lu.se>
+ - Ilkka Helenius <ilkka.m.helenius@jyu.fi>
+References:
+- JHEP 05 (2015) 056
+- arXiv:1502.01683 [hep-ex]
+RunInfo:
+  920 GeV protons colliding with 27.5 GeV positrons;
+  Diffractive photoproduction of dijets;
+  Tagged protons.;
+  Jet $pT > 5$ GeV;
+  Note that CM energy is WRONG in HepData table.;
+  Has been changed by hand in YODA refdata file to correct value.
+NumEvents: 1000000
+Beams: [p+, e+]
+Energies: [[920, 27.5]]
+PtCuts: [0]
+Description:
+  H1 diffractive jets from proton--positron collisions at beam energies of
+  920~GeV and 27.5~GeV. The cross section of the diffractive process
+  e+p -> e+X+p is measured at a centre-of-mass energy of 318 GeV, where the
+  system X contains at least two jets and the leading final state proton p is
+  detected in the H1 Very Forward Proton Spectrometer. The measurement is
+  performed in photoproduction with photon virtualities Q^2 < 2 GeV^2 and in
+  deep-inelastic scattering with 4 GeV^2 < Q2 < 80 GeV^2.
+BibKey: Andreev:2015cwa
+BibTeX: '@Article{Andreev:2015cwa,
+      author         = "Andreev, V. and others",
+      title          = "{Diffractive Dijet Production with a Leading Proton in
+                        $ep$ Collisions at HERA}",
+      collaboration  = "H1",
+      journal        = "JHEP",
+      volume         = "05",
+      year           = "2015",
+      pages          = "056",
+      doi            = "10.1007/JHEP05(2015)056",
+      eprint         = "1502.01683",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "DESY-14-242",
+      SLACcitation   = "%%CITATION = ARXIV:1502.01683;%%"
+}'
+
+ReleaseTests:
+ - $A HERA-II-GammaP-Gap
+

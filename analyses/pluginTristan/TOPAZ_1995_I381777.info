@@ -1,0 +1,34 @@
+Name: TOPAZ_1995_I381777
+Year: 1995
+Summary:  Cross section in $e^+e^-\to$hadrons for 57.77 GeV
+Experiment: TOPAZ
+Collider: Tristan
+InspireID: 381777
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B347 (1995) 171-178, 1995
+RunInfo: e+ e- to hadrons 
+NeedCrossSection: yes
+Beams: [e-, e+]
+Energies: [57.77]
+Description:
+  'Measurement of the hadronic cross section in $e^+e^-$ collisions by TOPAZ for 57.77 GeV.'
+BibKey: Miyabayashi:1994ej
+BibTeX: '@article{Miyabayashi:1994ej,
+      author         = "Miyabayashi, K. and others",
+      title          = "{Measurement of the total hadronic cross-section and
+                        determination of gamma - Z interference in e+ e-
+                        annihilation}",
+      collaboration  = "TOPAZ",
+      journal        = "Phys. Lett.",
+      volume         = "B347",
+      year           = "1995",
+      pages          = "171-178",
+      doi            = "10.1016/0370-2693(95)00038-M",
+      reportNumber   = "DPNU-94-47, NWU-HEP-94-06, KEK-PREPRINT-94-152,
+                        TUAT-HEP-94-05, TIT-HPE-94-11, OCU-HEP-94-09, PU-94-688,
+                        INS-1074, KOBE-HEP-94-08",
+      SLACcitation   = "%%CITATION = PHLTA,B347,171;%%"
+}'

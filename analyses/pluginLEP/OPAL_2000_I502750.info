@@ -1,0 +1,35 @@
+Name: OPAL_2000_I502750
+Year: 2000
+Summary: Polarization of $\rho^\pm$ and $\omega^0$ mesons at LEP1
+Experiment: OPAL
+Collider: LEP
+InspireID: 502750
+Status: VALIDATED
+Authors:
+ - Peter Richardson <Peter.Richardson@durham.ac.uk>
+References:
+ - Eur.Phys.J. C16 (2000) 61-70
+RunInfo:
+  Hadronic Z decay events generated on the Z pole ($\sqrt{s} = 91.2$ GeV)
+NumEvents: 1000000
+Beams: [e+, e-]
+Energies: [91.2]
+Description:  The measurement of the polarization of $\rho^\pm$ and $\omega^0$ mesons at LEP1 by the OPAL experiment.
+ 
+BibKey: Abbiendi:1999bz
+BibTeX: '@article{Abbiendi:1999bz,
+      author         = "Abbiendi, G. and others",
+      title          = "{A Study of spin alignment of rho(770)+- and omega(782)
+                        mesons in hadronic Z0 decays}",
+      collaboration  = "OPAL",
+      journal        = "Eur. Phys. J.",
+      volume         = "C16",
+      year           = "2000",
+      pages          = "61-70",
+      doi            = "10.1007/s100520050003",
+      eprint         = "hep-ex/9906043",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-EP-99-082, CERN-EP-99-82",
+      SLACcitation   = "%%CITATION = HEP-EX/9906043;%%"
+}'

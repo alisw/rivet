@@ -1,0 +1,32 @@
+Name: NA48_2010_I868871
+Year: 2010
+Summary: Decay asymmetries in $\Xi^0\to\Lambda^0\gamma$, $\Lambda^0\pi^0$ and $\Sigma^0\gamma$
+Experiment: NA48
+InspireID: 868871
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B693 (2010) 241-248
+RunInfo: Any process producing Xi0 baryons
+Description:
+'Measurement of the decay asymmetries in $\Xi^0\to\Lambda^0\gamma$, $\Lambda^0\pi^0$ and $\Sigma^0\gamma$ by the NA48 experiment.
+ The asymmetry parameter is extracted by fitting to normalised angular distribution. This analysis is useful for testing spin correlations
+   in hadron decays.'
+Keywords: []
+BibKey: Batley:2010bp
+BibTeX: '@article{Batley:2010bp,
+      author         = "Batley, J. R. and others",
+      title          = "{New Precise Measurements of the $\xi^0 -&gt; \Lamga \gamma$
+                        and $\xi^0 -&gt; \Sigma^0 \gamma$ Decay Asymmetries}",
+      journal        = "Phys. Lett.",
+      volume         = "B693",
+      year           = "2010",
+      pages          = "241-248",
+      doi            = "10.1016/j.physletb.2010.08.046",
+      eprint         = "1009.3844",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-PH-EP-2010-032",
+      SLACcitation   = "%%CITATION = ARXIV:1009.3844;%%"
+}'

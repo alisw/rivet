@@ -1,0 +1,39 @@
+Name: BESIII_2016_I1384778
+Year: 2016
+Summary: Azimuthal asymmetries in inclusive charged pion-pair production at $\sqrt{s}=3.65$ GeV
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1384778
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 116 (2016) no.4, 042001
+RunInfo: e+e- to hadrons
+Beams: [e+, e-]
+Energies: [3.65]
+Description:
+  'Measurement of azimuthal asymmetries in inclusive charged pion-pair production at $\sqrt{s}=3.65$ GeV by the BESII experiment'
+ValidationInfo:
+  'Herwig 7 events '
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Ablikim:2015pta
+BibTeX: '@article{Ablikim:2015pta,
+      author         = "Ablikim, M. and others",
+      title          = "{Measurement of azimuthal asymmetries in inclusive
+                        charged dipion production in $e^+e^-$ annihilations at
+                        $\sqrt{s}$ = 3.65 GeV}",
+      collaboration  = "BESIII",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "116",
+      year           = "2016",
+      number         = "4",
+      pages          = "042001",
+      doi            = "10.1103/PhysRevLett.116.042001",
+      eprint         = "1507.06824",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1507.06824;%%"
+}'

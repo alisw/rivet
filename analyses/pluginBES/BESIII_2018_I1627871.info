@@ -1,0 +1,34 @@
+Name: BESIII_2018_I1627871
+Year: 2018
+Summary: Cross section for $e^+e^-\to\Lambda\bar{\Lambda}$ between threshold and 3.08 GeV
+Experiment: BESIII
+Collider:  BEPC II
+InspireID: 1627871
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D97 (2018) no.3, 032013
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Description:
+  'Measurement of the cross section for $e^+e^-\to\Lambda\bar{\Lambda}$ between threshold and 3.08 GeV.'
+Keywords:
+BibKey: Ablikim:2017pyl
+BibTeX: '@article{Ablikim:2017pyl,
+      author         = "Ablikim, Medina and others",
+      title          = "{Observation of a cross-section enhancement near mass
+                        threshold in $e^{+}e^{-}\rightarrow\Lambda\bar{\Lambda}$}",
+      collaboration  = "BESIII",
+      journal        = "Phys. Rev.",
+      volume         = "D97",
+      year           = "2018",
+      number         = "3",
+      pages          = "032013",
+      doi            = "10.1103/PhysRevD.97.032013",
+      eprint         = "1709.10236",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1709.10236;%%"
+}'

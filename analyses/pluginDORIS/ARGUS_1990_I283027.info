@@ -1,0 +1,35 @@
+Name: ARGUS_1990_I283027
+Year: 1990
+Summary: Anti-deuteron production in $\Upsilon$ decays
+Experiment: ARGUS
+Collider: DORIS
+InspireID: 283027
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B236 (1990) 102-108
+RunInfo: Upsilon(1S) decays (originally e+e- production)
+Description:
+  'Measurement of the anti-deuteron spectrum in $\Upsilon(1S)$ decays. The measurement was original an average of
+   both $\Upsilon(1S)$ and $\Upsilon(2S)$ decays but the $\Upsilon(2S)$ sample
+   is re-scaled to the  $\Upsilon(1S)$.'
+ValidationInfo:
+  'Herwig 7 events with protons relabelled as did not have anything making deuterons'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Albrecht:1989ag
+BibTeX: '@article{Albrecht:1989ag,
+      author         = "Albrecht, H. and others",
+      title          = "{Study of Anti-deuteron Production in $e^+ e^-$
+                        Annihilation at 10-{GeV} Center-of-mass Energy}",
+      collaboration  = "ARGUS",
+      journal        = "Phys. Lett.",
+      volume         = "B236",
+      year           = "1990",
+      pages          = "102-108",
+      doi            = "10.1016/0370-2693(90)90602-3",
+      reportNumber   = "DESY-89-144",
+      SLACcitation   = "%%CITATION = PHLTA,B236,102;%%"
+}'

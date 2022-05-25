@@ -1,0 +1,54 @@
+Name: CMS_2018_I1662081
+Year: 2017
+Summary: Measurement of the differential cross sections of top quark pair production as a function of kinematic event variables in pp collisions at sqrt(s) = 13 TeV
+Experiment: CMS
+Collider: LHC
+InspireID: 1662081
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Doug Burns <Douglas.Burns@cern.ch>
+ - Emyr Clement <Emyr.Clement@bristol.ac.uk>
+ - Markus Seidel <markus.seidel@cern.ch>
+
+References:
+ - TOP-16-014
+ - arxiv:1803.03991
+ - Submitted to JHEP
+RunInfo:
+  ttbar events at sqrt(s) = 13 TeV, lepton+jets selection at particle level
+Luminosity_fb: 35.9
+Beams: [p+, p+]
+Energies: [13000]
+Description:
+      'Abstract : 
+
+	Measurements of the differential $\mathrm{t}\overline{\mathrm{t}}$ production cross section are presented in the single-lepton decay channel, with respect to a number of global event observables. The measurements are performed with $\text{35.9~fb}^{-1}$ of proton-proton collision data collected by the CMS experiment at the LHC during 2016 at $\sqrt{s} = \text{13~TeV}$. The differential cross sections are measured at the level of long-lived generated particles in a phase space similar to that accessible by the CMS detector, and are compared to state-of-the-art leading-order and next-to-leading-order $\mathrm{t}\overline{\mathrm{t}}$ simulations.
+
+      Rivet : 
+
+	  This analysis is to be run on ${\rm t\bar{t}}$ simulation. 
+
+	  The particle level selection requires:
+	  - exactly one electron or muon with $p_{T} > 26$~GeV and $|\eta| < 2.4$
+	  - no additional electrons or muons with $p_{T} > 15$~GeV and $|\eta| < 2.4$
+	  - at least thress jets with $p_{T} > 30$~GeV and $|\eta| < 2.4$, and one jet with $p_{T} > 25$~GeV and $|\eta| < 2.4$
+	  - two of these selected jets must be tagged as originating from a b quark.
+      '
+
+BibKey: Sirunyan:2018ptc
+BibTeX: '@article{Sirunyan:2018ptc,
+      author         = "Sirunyan, Albert M and others",
+      title          = "{Measurements of differential cross sections of top quark
+                        pair production as a function of kinematic event variables
+                        in proton-proton collisions at $\sqrt{s}=$ 13 TeV}",
+      collaboration  = "CMS",
+      year           = "2018",
+      eprint         = "1803.03991",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CMS-TOP-16-014, CERN-EP-2018-013",
+      SLACcitation   = "%%CITATION = ARXIV:1803.03991;%%"
+}'
+ReleaseTests:
+ - $A LHC-13-Top-All

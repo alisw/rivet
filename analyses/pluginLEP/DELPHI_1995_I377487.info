@@ -1,0 +1,31 @@
+Name: DELPHI_1995_I377487
+Year: 1995
+Summary: Spectrum for $K^0,\bar{K}^0$ and $K^{*\pm}$  production in hadronic $Z^0$ decays
+Experiment: DELPHI
+Collider: LEP
+InspireID: 377487
+Status: VALIDATED
+Authors:
+ - Peter Richardson <Peter.Richardson@durham.ac.uk>
+References:
+ - Z.Phys. C65 (1995) 587-602
+RunInfo:
+  Hadronic Z decay events generated on the Z pole ($\sqrt{s} = 91.2$ GeV)
+NumEvents: 1000000
+Beams: [e+, e-]
+Energies: [91.2]
+Description: DELPHI results for the spectra for $K^0,\bar{K}^0$ and $K^{*\pm}$  production in hadronic $Z^0$ decays. The other spectra in the paper are superseded by those in DELPHI_1999_S3960137 and are therefore not implemented.
+BibKey: Abreu:1994rg
+BibTeX: '@article{Abreu:1994rg,
+      author         = "Abreu, P. and others",
+      title          = "{Production characteristics of K0 and light meson
+                        resonances in hadronic decays of the Z0}",
+      collaboration  = "DELPHI",
+      journal        = "Z. Phys.",
+      volume         = "C65",
+      year           = "1995",
+      pages          = "587-602",
+      doi            = "10.1007/BF01578668",
+      reportNumber   = "CERN-PPE-94-130",
+      SLACcitation   = "%%CITATION = ZEPYA,C65,587;%%"
+}'

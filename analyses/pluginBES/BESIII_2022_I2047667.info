@@ -1,0 +1,33 @@
+Name: BESIII_2022_I2047667
+Year: 2022
+Summary: Cross section for $e^+e^-\to\omega\eta$ and $\omega\pi^0$ between 3.773 and 4.701 GeV
+Experiment: BESIII
+Collider: BEPC
+InspireID: 2047667
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - arXiv:2203.02682
+RunInfo: e+ e- to hadrons
+Beams: [e+, e-]
+Description:
+  'Cross section for $e^+e^-\to\omega\eta$ and $\omega\pi^0$ between 3.773 and 4.701 GeV measured by the BESIII collaborations'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2022zxr
+BibTeX: '@article{BESIII:2022zxr,
+    author = "Ablikim, M. and others",
+    collaboration = "BESIII",
+    title = "{Cross section measurements of the processes $e^+e^- \rightarrow \omega\pi^{0}$ and $\omega\eta$ at center-of-mass energies between 3.773 and 4.701 GeV}",
+    eprint = "2203.02682",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    month = "3",
+    year = "2022"
+}
+'

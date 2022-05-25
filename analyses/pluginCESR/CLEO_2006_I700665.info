@@ -1,0 +1,37 @@
+Name: CLEO_2006_I700665
+Year: 2006
+Summary: Hadronic cross section at 3.773 GeV
+Experiment: CLEO
+Collider: CESR
+InspireID: 1650066
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 96 (2006) 092002, 2006 
+RunInfo: e+ e- to hadrons 
+NeedCrossSection: yes
+Beams: [e-, e+]
+Description:
+  'Haronic cross section at 3.773 measured by CLEO.'
+Keywords: []
+BibKey: Besson:2005kzr
+BibTeX: '@article{Besson:2005kzr,
+      author         = "Besson, D. and others",
+      title          = "{Measurement of $\sigma(e^+e^- \to \psi(3770) \to
+                        hadrons)$ at $E_{c.m.}$ = 3773 MeV}",
+      collaboration  = "CLEO",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "96",
+      year           = "2006",
+      pages          = "092002",
+      doi            = "10.1103/PhysRevLett.96.092002,
+                        10.1103/PhysRevLett.104.159901",
+      note           = "[Erratum: Phys. Rev. Lett.104,159901(2010)]",
+      eprint         = "1004.1358",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CLNS-05-1939, CLEO-05-27, hep-ex/0512038",
+      SLACcitation   = "%%CITATION = ARXIV:1004.1358;%%"
+}
+'

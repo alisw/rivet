@@ -1,0 +1,35 @@
+Name: BELLE_2003_I629334
+Year: 2003
+Summary: $\gamma\gamma\to K^+K^-$ for centre-of-mass energies between 1.4 and 2.4 GeV
+Experiment: BELLE
+Collider: KEKB
+InspireID: 629334
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Eur.Phys.J.C 32 (2003) 323-336, 2003
+RunInfo: gamma gamma to hadrons
+Beams: [gamma, gamma]
+Energies: []
+Description:
+  'Measurement of the differential cross section for $\gamma\gamma\to K^+K^-$ for $1.4 \text{GeV} < W < 2.4 \text{GeV}$. Both the cross section as a function of the centre-of-mass energy of the photonic collision, and the differential cross section with respect to the kaon scattering angle are measured.'
+ValidationInfo:
+  'Herwig 7 gamma gamma to K+ K- events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle:2003xlt
+BibTeX: '@article{Belle:2003xlt,
+    author = "Abe, Kazuo and others",
+    collaboration = "Belle",
+    title = "{Measurement of K+ K- production in two photon collisions in the resonant mass region}",
+    eprint = "hep-ex/0309077",
+    archivePrefix = "arXiv",
+    reportNumber = "KEK-PREPRINT-2003-61, BELLE-PREPRINT-2003-19",
+    doi = "10.1140/epjc/s2003-01468-9",
+    journal = "Eur. Phys. J. C",
+    volume = "32",
+    pages = "323--336",
+    year = "2003"
+}'

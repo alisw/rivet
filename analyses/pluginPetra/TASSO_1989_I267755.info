@@ -1,0 +1,36 @@
+Name: TASSO_1989_I267755
+Year: 1989
+Summary: $\pi^\pm$, $K^\pm$ and $p,\bar{p}$ spectra in $e^+e^-$ at 34 and 44 GeV
+Experiment: TASSO
+Collider: Petra
+InspireID: 267755
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Z.Phys. C42 (1989) 189, 1989
+RunInfo: e+ e- to hadrons. Beam energy must be specified as analysis option "ENERGY" when rivet-merging samples.
+NeedCrossSection: yes
+Beams: [e+, e-]
+Energies: [34,44]
+Options:
+ - ENERGY=34,44
+Description:
+   Measurement of the $\pi^\pm$, $K^\pm$ and $p,\bar{p}$ spectra in $e^+e^-$ collisions for centre-of-mass 
+   energies of 34 and 44 GeV by the TASSO experiment at Petra. Beam energy must be specified as analysis option "ENERGY" when rivet-merging samples.
+BibKey: Braunschweig:1988hv
+BibTeX: '@article{Braunschweig:1988hv,
+      author         = "Braunschweig, W. and others",
+      title          = "{Pion, Kaon and Proton Cross-sections in $e^+ e^-$
+                        Annihilation at 34-{GeV} and 44-{GeV} Center-of-mass
+                        Energy}",
+      collaboration  = "TASSO",
+      journal        = "Z. Phys.",
+      volume         = "C42",
+      year           = "1989",
+      pages          = "189",
+      doi            = "10.1007/BF01555856",
+      reportNumber   = "DESY-88-164",
+      SLACcitation   = "%%CITATION = ZEPYA,C42,189;%%"
+}'

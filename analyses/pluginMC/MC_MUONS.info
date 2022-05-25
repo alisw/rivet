@@ -1,0 +1,19 @@
+Name: MC_MUONS
+Summary: Monte Carlo validation observables for muon production
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Andy Buckley <andy.buckley@cern.ch>
+NumEvents: 10000
+Description:
+  Any muons with $p_\perp > 0.5$ GeV are found and projected onto many different observables.
+  To restrict attention to direct/prompt electrons only, use the DIRECT
+  option. To use lepton dressing, use the DRESSED option; this only makes sense
+  for prompt leptons, and is automatically activated if DIRECT=1 is used, hence
+  the main use of DRESSED is to *disable* lepton dressing in DIRECT=1 mode.
+ToDo:
+ - Add PTMIN and ETAMAX options?
+NeedCrossSection: yes
+Options:
+ - DIRECT=0,1
+ - DRESSED=0,1

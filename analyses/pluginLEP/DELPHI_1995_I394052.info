@@ -1,0 +1,32 @@
+Name: DELPHI_1995_I394052
+Year: 1995
+Summary: $K^\pm$ and $p,\bar{p}$ spectra in hadronic $Z^0$ decays
+Experiment: DELPHI
+Collider: LEP
+InspireID: 394052
+Status: VALIDATED
+Authors:
+ - Peter Richardson <Peter.Richardson@durham.ac.uk>
+References:
+ - Nucl.Phys. B444 (1995) 3-26, 1995 
+RunInfo:
+  Hadronic Z decay events generated on the Z pole ($\sqrt{s} = 91.2$ GeV)
+NumEvents: 1000000
+Beams: [e+, e-]
+Energies: [91.2]
+Description: DELPHI results for the spectra for  $K^\pm$ and $p,\bar{p}$ production in hadronic $Z^0$ decays.
+Keywords: []
+BibKey: Abreu:1995cu
+BibTeX: '@article{Abreu:1995cu,
+      author         = "Abreu, P. and others",
+      title          = "{Inclusive measurements of the K+- and p / anti-p
+                        production in hadronic Z0 decays}",
+      collaboration  = "DELPHI",
+      journal        = "Nucl. Phys.",
+      volume         = "B444",
+      year           = "1995",
+      pages          = "3-26",
+      doi            = "10.1016/0550-3213(95)00190-4",
+      reportNumber   = "CERN-PPE-95-28, CERN-PPE-95-028",
+      SLACcitation   = "%%CITATION = NUPHA,B444,3;%%"
+}'

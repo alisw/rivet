@@ -1,0 +1,72 @@
+BEGIN YODA_SCATTER2D_V2 /REF/DELPHI_2000_I511443/d01-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.043, up: 0.043}}, 1: {error: {dn: -0.02, up: 0.02}}, 2: {error: {dn: -0.021, up: 0.021}}, 3: {error: {dn: -0.023, up: 0.023}}, 4: {error: {dn: -0.023, up: 0.023}}, 5: {error: {dn: -0.02, up: 0.02}}, 6: {error: {dn: -0.02, up: 0.02}}, 7: {error: {dn: -0.043, up: 0.043}}}
+IsRef: 1
+Path: /REF/DELPHI_2000_I511443/d01-x01-y01
+Title: doi:10.17182/hepdata.49001.v1/t1
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+-8.360000e-01	1.040000e-01	1.040000e-01	-1.200000e-02	4.300000e-02	4.300000e-02
+-6.100000e-01	1.220000e-01	1.220000e-01	-2.500000e-02	2.000000e-02	2.000000e-02
+-3.660000e-01	1.220000e-01	1.220000e-01	-2.100000e-02	2.100000e-02	2.100000e-02
+-1.220000e-01	1.220000e-01	1.220000e-01	-1.160000e-01	2.300000e-02	2.300000e-02
+1.220000e-01	1.220000e-01	1.220000e-01	-1.470000e-01	2.300000e-02	2.300000e-02
+3.660000e-01	1.220000e-01	1.220000e-01	-2.230000e-01	2.000000e-02	2.000000e-02
+6.100000e-01	1.220000e-01	1.220000e-01	-2.590000e-01	2.000000e-02	2.000000e-02
+8.360000e-01	1.040000e-01	1.040000e-01	-1.990000e-01	4.300000e-02	4.300000e-02
+END YODA_SCATTER2D_V2
+
+
+BEGIN YODA_SCATTER2D_V2 /REF/DELPHI_2000_I511443/d02-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.0079, up: 0.0079}, sys: {dn: -0.0055, up: 0.0055}}}
+IsRef: 1
+Path: /REF/DELPHI_2000_I511443/d02-x01-y01
+Title: doi:10.17182/hepdata.49001.v1/t2
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+9.120000e+01	0.000000e+00	0.000000e+00	1.359000e-01	9.626006e-03	9.626006e-03
+END YODA_SCATTER2D_V2
+
+
+BEGIN YODA_SCATTER2D_V2 /REF/DELPHI_2000_I511443/d02-x01-y02
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.0116, up: 0.0116}, sys: {dn: -0.0005, up: 0.0005}}}
+IsRef: 1
+Path: /REF/DELPHI_2000_I511443/d02-x01-y02
+Title: doi:10.17182/hepdata.49001.v1/t2
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+9.120000e+01	0.000000e+00	0.000000e+00	1.382000e-01	1.161077e-02	1.161077e-02
+END YODA_SCATTER2D_V2
+
+
+BEGIN YODA_SCATTER2D_V2 /REF/DELPHI_2000_I511443/d02-x01-y03
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.0065, up: 0.0065}, sys: {dn: -0.0035, up: 0.0035}}}
+IsRef: 1
+Path: /REF/DELPHI_2000_I511443/d02-x01-y03
+Title: doi:10.17182/hepdata.49001.v1/t2
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+9.120000e+01	0.000000e+00	0.000000e+00	1.386000e-01	7.382412e-03	7.382412e-03
+END YODA_SCATTER2D_V2
+
+
+BEGIN YODA_SCATTER2D_V2 /REF/DELPHI_2000_I511443/d02-x01-y04
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.00092, up: 0.00092}}}
+IsRef: 1
+Path: /REF/DELPHI_2000_I511443/d02-x01-y04
+Title: doi:10.17182/hepdata.49001.v1/t2
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+9.120000e+01	0.000000e+00	0.000000e+00	2.328200e-01	9.200000e-04	9.200000e-04
+END YODA_SCATTER2D_V2
+
+

@@ -1,0 +1,31 @@
+Name: CUSB_1982_I180613
+Year: 1982
+Summary:  Measurement of $R$ for energies between 10.34 and 11.6 GeV
+Experiment: CUSB
+Collider: CESR
+InspireID: 180613
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 48 (1982) 906-910, 1982
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: no
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$ in $e^+e^-$ collisions by CUSB for energies between 10.34 and 11.6 GeV.
+   The individual hadronic and muonic cross sections are also outputted to the yoda file
+   so that ratio $R$ can be recalcuated if runs are combined.'
+Keywords: []
+BibKey: Rice:1982br
+BibTeX: '@article{Rice:1982br,
+      author         = "Rice, E. and others",
+      title          = "{SEARCH FOR STRUCTURE IN SIGMA (E+ E- ---&gt; HADRONS)
+                        BETWEEN S**(1/2) = 10.34-GEV AND 11.6-GEV}",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "48",
+      year           = "1982",
+      pages          = "906-910",
+      doi            = "10.1103/PhysRevLett.48.906",
+      SLACcitation   = "%%CITATION = PRLTA,48,906;%%"
+}'

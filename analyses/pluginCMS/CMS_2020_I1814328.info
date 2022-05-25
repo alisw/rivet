@@ -1,0 +1,38 @@
+Name: CMS_2020_I1814328
+Year: 2020
+Summary: W$^+$W$^-$ boson pair production in proton-proton collisions at $\sqrt{s} =$ 13 TeV
+Experiment: CMS
+Collider: LHC
+InspireID: 1814328
+Status: VALIDATED
+Authors:
+ - cms-pag-conveners-smp@cern.ch
+ - Guillelmo Gomez-Ceballos <ceballos@cern.ch>
+References:
+  - arXiv:2009.00119
+  - CMS-SMP-18-004
+  - Phys. Rev. D 102 (2020) 092001
+RunInfo: pp to W+W- interactions at $\sqrt{s} = 13$ TeV. Data collected by CMS during the year 2016.
+NeedCrossSection: yes
+Beams: [p+, p+]
+Energies: [13000]
+Description:
+  'A measurement of the W W boson pair production cross section in proton-proton collisions at sqrt(s) = 13 TeV is presented. The data used in this study were collected with the CMS detector at the LHC and correspond to an integrated luminosity of 35.9 fb-1. The W+W- candidate events are selected by first requiring two oppositely-charged leptons (electrons or muons). Two methods for reducing background contributions are employed. In the first one, a sequence of requirements on kinematic quantities is applied allowing a measurement of the total cross section: 117.6 +/- 6.8 pb which agrees well with the theoretical cross section. Fiducial cross sections are also reported for events with zero jets or one jet, and the change in the zero-jet fiducial cross section with the jet pT threshold is measured. Normalized differential cross sections are reported within the fiducial region; these are compared to theoretical predictions based on quantum chromodynamics at next-to-next-to-leading-order accuracy. A second method for suppressing background contributions employs two random forest classifiers. The analysis based on this method includes a measurement of the total cross section and also a measurement of the normalized jet multiplicity distribution in W+W- events. Finally, a dilepton invariant mass distribution is used to probe for physics beyond the standard model in the context of an effective field theory and limits on the presence of dimension-6 operators are derived.'
+BibKey: Sirunyan:2020jtq
+BibTeX: '@article{Sirunyan:2020jtq,
+    author = "Sirunyan, Albert M and others",
+    collaboration = "CMS",
+    title = "{W$^+$W$^-$ boson pair production in proton-proton collisions at $\sqrt{s} =$ 13 TeV}",
+    eprint = "2009.00119",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CMS-SMP-18-004, CERN-EP-2020-144",
+    doi = "10.1103/PhysRevD.102.092001",
+    journal = "Phys. Rev. D",
+    volume = "102",
+    number = "9",
+    pages = "092001",
+    year = "2020"
+}'
+ReleaseTests:
+ - $A LHC-13-WW-ll

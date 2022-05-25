@@ -1,0 +1,61 @@
+Name: ATLAS_2018_I1711114
+Year: 2018
+Summary: g \to bb at 13 TeV
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1711114
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Ben Nachman <benjamin.philip.nachman@cern.ch>
+ - Zihao Jiang <zihao.jiang@cern.ch>
+ - Christian Gutschow <chris.g@cern.ch>
+References:
+ - Phys.Rev. D99 (2019) no.5, 052004
+ - doi:10.1103/PhysRevD.99.052004
+ - arXiv:1812.09283 [hep-ex]
+Keywords:
+  - GLUON
+  - FRAGMENTATION
+  - TAGGING
+  - SUBSTRUCTURE
+  - BOOSTED
+  - TRACKS
+  - JETS
+RunInfo:
+  Boosted g \to b bbar at 13 TeV
+Luminosity_fb: 33.0
+NeedCrossSection: no
+Beams: [p+, p+]
+Energies: [13000]
+PtCuts: [450.]
+Description:
+  'The fragmentation of high-energy gluons at small opening angles is largely unconstrained by present measurements.
+  Gluon splitting to $b$-quark pairs is a unique probe into the properties of gluon fragmentation because identified
+  $b$-tagged jets provide a proxy for the quark daughters of the initial gluon. In this study, key differential
+  distributions related to the $g\to b\bar{b}$ process are measured using 33fb$^{-1}$ of $\sqrt{s}=13$ TeV $pp$
+  collision data recorded by the ATLAS experiment at the LHC in 2016. Jets constructed from charged-particle tracks,
+  clustered with the anti-$k_\text{t}$ jet algorithm with radius parameter $R=0.2$, are used to probe angular scales
+  below the $R=0.4$ jet radius. The observables are unfolded to particle level in order to facilitate direct comparisons
+  with predictions from present and future simulations. Multiple significant differences are observed between the data
+  and parton shower Monte Carlo predictions, providing input to improve these predictions of the main source of background
+  events in analyses involving boosted Higgs bosons decaying into $b$-quarks.'
+BibKey: Aaboud:2018uiu
+BibTeX: '@article{Aaboud:2018uiu,
+      author         = "Aaboud, Morad and others",
+      title          = "{Properties of $g\rightarrow b\bar{b}$ at small opening
+                        angles in $pp$ collisions with the ATLAS detector at
+                        $\sqrt{s}=13$ TeV}",
+      collaboration  = "ATLAS",
+      journal        = "Phys. Rev.",
+      volume         = "D99",
+      year           = "2019",
+      number         = "5",
+      pages          = "052004",
+      doi            = "10.1103/PhysRevD.99.052004",
+      eprint         = "1812.09283",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-EP-2018-323",
+      SLACcitation   = "%%CITATION = ARXIV:1812.09283;%%"
+}'

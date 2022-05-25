@@ -1,0 +1,36 @@
+Name: KEDR_2019_I1673357
+Year: 2019
+Summary: Measurement of $R$ between 1.84 and 3.72 GeV
+Experiment: KEDR
+Collider: VEPP-4M
+InspireID: 1673357
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B788 (2019) 42-51
+RunInfo: e+e- to hadrons and muon so the ratio can be computed
+Beams: [e+, e-]
+Description:
+  'Measurement of $R$ for centre-of-mass energies between 1.84 and 3.72 GeV by the KEDR experiment.'
+ValidationInfo:
+  'Tested using events generated with Herwig7'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Anashin:2018vdo
+BibTeX: '@article{Anashin:2018vdo,
+      author         = "Anashin, V. V. and others",
+      title          = "{Precise measurement of $R_{\text{uds}}$ and $R$ between
+                        1.84 and 3.72 GeV at the KEDR detector}",
+      collaboration  = "KEDR",
+      journal        = "Phys. Lett.",
+      volume         = "B788",
+      year           = "2019",
+      pages          = "42-51",
+      doi            = "10.1016/j.physletb.2018.11.012",
+      eprint         = "1805.06235",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1805.06235;%%"
+}'

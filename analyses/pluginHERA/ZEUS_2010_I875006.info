@@ -1,0 +1,52 @@
+Name: ZEUS_2010_I875006
+Year: 2010
+Summary: ZEUS dijet cross sections in NC DIS
+Experiment: ZEUS
+Collider: HERA
+InspireID: 875006
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Jacob Shannon <jacob.shannon.17@ucl.ac.uk>
+References:
+ - Eur.Phys.J.C70:965-982,2010
+ - doi:10.1140/epjc/s10052-010-1504-2
+ - arXiv:1010.6167v1
+RunInfo: Deep Inelastic Scattering events, 125 to 20000 GeV2
+Beams: [p+, e+]
+Energies_GeV: [[920,27.5]]
+Luminosity_fb: 0.3740
+Description:
+  'Single- and double-differential inclusive dijet cross sections in neutral 
+current deep inelastic ep scattering have been measured with the ZEUS detector
+using an integrated luminosity of 374 pb$^{-1}$. The measurement was performed
+at large values of the photon virtuality, Q$^2$, between 125 and 20000 GeV$^2$. 
+The jets were reconstructed with the k$_T$ cluster algorithm in the Breit
+reference frame and selected by requiring their transverse energies in the 
+Breit frame, E$_T^{B,jet}$, to be larger than 8 GeV. In addition, the invariant 
+mass of the dijet system, M$_{jj}$, was required to be greater than 20 GeV. The
+cross sections are described by the predictions of next-to-leading-order QCD.'
+ValidationInfo:
+  'A description of the process used to validate the Rivet code against
+  the original experimental analysis. Cut-flow tables and similar information
+  are welcome'
+Keywords: []
+BibKey: Abramowicz:2010cka
+BibTeX: '@article{Abramowicz:2010cka,
+      author         = "Abramowicz, H. and others",
+      title          = "{Inclusive dijet cross sections in neutral current deep
+                        inelastic scattering at HERA}",
+      collaboration  = "ZEUS",
+      journal        = "Eur. Phys. J.",
+      volume         = "C70",
+      year           = "2010",
+      pages          = "965-982",
+      doi            = "10.1140/epjc/s10052-010-1504-2",
+      eprint         = "1010.6167",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "DESY-10-170",
+      SLACcitation   = "%%CITATION = ARXIV:1010.6167;%%"
+}'
+ReleaseTests:
+ - $A DIS-e+-HighQ2

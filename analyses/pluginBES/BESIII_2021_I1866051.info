@@ -1,0 +1,32 @@
+Name: BESIII_2021_I1866051
+Year: 2021
+Summary: Cross section for $e^+e^-\to$ $K_S^0K_L^0$between2.00 and 3.08 GeV
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1866051
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - arXiv:2105.13597
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Description:
+  'Measurement of the cross section for  $e^+e^-\to$ $K_S^0K_L^0$ for energies between 2.00 and 3.08 GeV'
+ValidationInfo:
+  'Herwig7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Ablikim:2021llj
+BibTeX: '@article{Ablikim:2021llj,
+    author = "Ablikim, M. and others",
+    title = "{Cross section measurement of $e^{+}e^{-} \to K_{S}^{0}K_{L}^{0}$ at $\sqrt{s}=2.00-3.08~{\rm GeV}$}",
+    eprint = "2105.13597",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    month = "5",
+    year = "2021"
+}'

@@ -1,0 +1,38 @@
+Name: BABAR_2021_I1938254
+Year: 2021
+Summary: Cross sections for $e^+e^-\to\pi^+\pi^-4\pi^0$ and $e^+e^-\to\pi^+\pi^-3\pi^0\eta$ between threshold and 4.5 GeV
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 1938254
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ -  2110.00823
+RunInfo: e+ e- to hadrons
+NeedCrossSection: yes
+Beams: [e+, e-]
+Description:
+  'Cross sections for $e^+e^-\to\pi^+\pi^-4\pi^0$ and $e^+e^-\to\pi^+\pi^-3\pi^0\eta$ between threshold and 4.5 GeV measured by
+   BaBar using radiative return. The contributions of the $\eta\pi^+\pi^-\pi^0$, $\eta\omega$, $\omega\pi^0\pi^0\pi^0$ intermediate states are also measured.
+   Useful to compare hadronization and other non-perturbative models
+   at low energies between 1.4 and 4.5 GeV.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BaBar:2021gyu
+BibTeX: '@article{BaBar:2021gyu,
+    author = "Lees, J. P. and others",
+    collaboration = "BaBar",
+    title = "{Study of the reactions $e^+e^-\to\pi^+\pi^-\pi^0\pi^0\pi^0\pi^0$ and $\pi^+\pi^-\pi^0\pi^0\pi^0\eta$ at center-of-mass energies from threshold to 4.5 GeV using initial-state radiation}",
+    eprint = "2110.00823",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "SLAC-PUB-17619, BABAR-PUB-21/005",
+    month = "10",
+    year = "2021"
+}
+'

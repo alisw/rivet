@@ -1,0 +1,36 @@
+Name: BESII_2000_I505323
+Year: 2000
+Summary:  Measurement of $R$ for energies between 2.6 and 5 GeV
+Experiment: BESII
+Collider: BEPC
+InspireID: 505323
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 84 (2000) 594-597, 2000 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: yes
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$ in $e^+e^-$ collisions by BESII for energies between 2.6 and 5 GeV.
+   The individual hadronic and muonic cross sections are also outputted to the yoda file
+   so that ratio $R$ can be recalculated if runs are combined.'
+BibKey: Bai:1999pk
+BibTeX: '@article{Bai:1999pk,
+      author         = "Bai, J. Z. and others",
+      title          = "{Measurement of the total cross-section for hadronic
+                        production by e+ e- annihilation at energies between
+                        2.6-GeV - 5-GeV}",
+      collaboration  = "BES",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "84",
+      year           = "2000",
+      pages          = "594-597",
+      doi            = "10.1103/PhysRevLett.84.594",
+      eprint         = "hep-ex/9908046",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "SLAC-REPRINT-1999-087",
+      SLACcitation   = "%%CITATION = HEP-EX/9908046;%%"
+}'

@@ -1,0 +1,36 @@
+Name: OPAL_2003_I611415
+Year: 2003
+Summary: Dijet production in  Photon-Photon collisions at $E_{\text{CMS}}=198$ GeV
+Experiment: OPAL
+Collider: LEP
+InspireID: 611415
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Eur.Phys.J. C31 (2003) 307-325, 2003
+RunInfo: e+ e- > gamma gamma events, needs direct, resolved and double resolved.
+NeedCrossSection: yes
+Beams: [e+, e-]
+Energies: 198
+Description:
+  'Jet production in $\gamma\gamma$ collisions where the photons are radiation from incoming electrons and positrons'
+Keywords: []
+BibKey: Abbiendi:2003cn
+BibTeX: '@article{Abbiendi:2003cn,
+      author         = "Abbiendi, G. and others",
+      title          = "{Dijet production in photon-photon collisions at
+                        s(ee)**(1/2) from 189-GeV to 209-GeV}",
+      collaboration  = "OPAL",
+      journal        = "Eur. Phys. J.",
+      volume         = "C31",
+      year           = "2003",
+      pages          = "307-325",
+      doi            = "10.1140/epjc/s2003-01360-8",
+      eprint         = "hep-ex/0301013",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-EP-2002-093",
+      SLACcitation   = "%%CITATION = HEP-EX/0301013;%%"
+}'

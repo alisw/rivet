@@ -1,0 +1,35 @@
+Name: ARGUS_1989_I262551
+Year: 1989
+Summary: Spectra for $\phi$ meson production for $e^+e^-$ collisions in the continuum at 10 GeV and at $\Upsilon_{1,2}$
+Experiment: ARGUS
+Collider: DORIS
+InspireID: 262551
+Status: VALIDATED
+Authors:
+ - Peter Richardson <Peter.Richardson@durham.ac.uk>
+References:
+ - Z.Phys. C41 (1989) 557, 1989
+RunInfo:
+  $e^+ e^-$ analysis near the $\Upsilon$ resonances
+NeedCrossSection: yes
+Beams: [e-, e+]
+Energies: [9.46,10,0.02]
+NeedCrossSection: no
+Description:
+  'Measurement of the spectrum for $\phi$ mesons in the $e^+e^-$ continuum at 10 GeV and in $\Upsilon(1S)$ and $\Upsilon(2S)$ decays.'
+Keywords: []
+BibKey: Albrecht:1988vx
+BibTeX: '@article{Albrecht:1988vx,
+      author         = "Albrecht, H. and others",
+      title          = "{Inclusive $\phi$ Meson Production in Electron - Positron
+                        Interactions in the Energy Region of the $\Upsilon$
+                        Resonances}",
+      collaboration  = "ARGUS",
+      journal        = "Z. Phys.",
+      volume         = "C41",
+      year           = "1989",
+      pages          = "557",
+      doi            = "10.1007/BF01564700",
+      reportNumber   = "DESY-88-079",
+      SLACcitation   = "%%CITATION = ZEPYA,C41,557;%%"
+}'

@@ -1,0 +1,62 @@
+Name: CMS_2016_I1491950
+Year: 2016
+Summary: Differential cross sections for top quark pair production using the lepton+jets final state in proton proton collisions at 13 TeV
+Experiment: CMS
+Collider: LHC
+InspireID: 1491950
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Regina Demina <R.Demina@cern.ch>
+ - Yi-Ting Duh <kaliduh@gmail.com>
+ - Mario Galanti <Mario.Galanti@cern.ch>
+ - Aran Garcia-Bellido <aran.garcia-bellido@cern.ch>
+ - Otto Hindrichs <otto.heinz.hindrichs@cern.ch>
+ - Mauro Verzetti <Mauro.Verzetti@cern.ch>
+ - Markus Seidel <markus.seidel@cern.ch>
+References:
+ - Phys. Rev. D 95 (2017) 092001
+ - arXiv:1610.04191
+ - CMS-TOP-16-008
+RunInfo:
+  pp QCD interactions at $\sqrt{s} = 13$ TeV. Data collected by CMS during the year 2015. Selection of lepton+jets top pair candidate events at particle level.
+NumEvents: 1000000
+NeedCrossSection: no
+Luminosity_fb: 2.3
+Beams: [p+, p+]
+Energies: [13000]
+Description:
+  'Abstract:
+
+Differential and double-differential cross sections for the production of top quark pairs in proton-proton collisions at 13 TeV are measured as a function of jet multiplicity and of kinematic variables of the top quarks and the top quark-antiquark system. This analysis is based on data collected by the CMS experiment at the LHC corresponding to an integrated luminosity of 2.3 inverse femtobarns. The measurements are performed in the lepton+jets decay channels with a single muon or electron in the final state. The differential cross sections are presented at particle level, within a phase space close to the experimental acceptance, and at parton level in the full phase space. The results are compared to several standard model predictions.
+
+  Rivet:
+
+This analysis is to be run on $\text{t}\bar{\text{t}}$ Monte Carlo. The particle-level phase space is defined using the following definitions:
+an electron or muon with $p_\text{T}>30\,\text{GeV}$ and $|\eta|<2.5$, dressed within a cone of radius 0.1;
+a jet is reconstructed with the anti-$k_t$ algorithm with a radius of 0.4, after removing the neutrinos and dressed leptons, with $p_\text{T}>25\,\text{GeV}$ and $|\eta|<2.5$; a jet that contains a B-hadron.
+
+A W boson is reconstructed from a lepton and the sum of the neutrino energies, while another W boson is reconstructed from a light jet pair. The two top quarks are reconstructed by combining b jets to these W boson. A check based on the W boson and top quark masses is performed to choose the proper combinations.
+'
+BibKey:  Khachatryan:2016mnb
+BibTeX: 
+  '@article{Khachatryan:2016mnb,
+      author         = "Khachatryan, Vardan and others",
+      title          = "{Measurement of differential cross sections for top quark
+                        pair production using the lepton+jets final state in
+                        proton-proton collisions at 13 TeV}",
+      collaboration  = "CMS",
+      journal        = "Phys. Rev.",
+      volume         = "D95",
+      year           = "2017",
+      number         = "9",
+      pages          = "092001",
+      doi            = "10.1103/PhysRevD.95.092001",
+      eprint         = "1610.04191",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CMS-TOP-16-008, CERN-EP-2016-227",
+      SLACcitation   = "%%CITATION = ARXIV:1610.04191;%%"
+}'
+ReleaseTests:
+ - $A LHC-13-Top-All

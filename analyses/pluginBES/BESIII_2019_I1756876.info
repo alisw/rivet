@@ -1,0 +1,29 @@
+Name: BESIII_2019_I1756876
+Year: 2019
+Summary: Cross section for $e^+e^-\to D^+D^-\pi^+\pi^-$ for $E_{\text{CMS}}=4.36\to4.60$ GeV
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1756876
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - arXiv:1909.12478
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e-, e+]
+Energies: [4.35830,4.38740,4.41560,4.46710,4.52710,4.57450,4.59950]
+Description:
+  'Cross section for $e^+e^-\to D^+D^-\pi^+\pi^-$ for $E_{\text{CMS}}=4.36\to4.60$ GeV. The cross sections for the subprocesses $e^+e^-\to D_1(2420)^\pm D^\mp$ and $e^+e^-\to \psi(3770) \pi^+\pi^-$ are measured.'
+Keywords: []
+BibKey: Ablikim:2019okg
+BibTeX: '@article{Ablikim:2019okg,
+      author         = "Ablikim, M. and others",
+      title          = "{Study of $e^{+}e^{-} \to D^{+} D^{-} \pi^{+} \pi^{-} $
+                        at center-of-mass energies from 4.36 to 4.60 GeV}",
+      year           = "2019",
+      eprint         = "1909.12478",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1909.12478;%%"
+}'

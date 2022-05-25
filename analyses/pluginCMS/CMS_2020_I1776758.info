@@ -1,0 +1,32 @@
+Name: CMS_2020_I1776758
+Year: 2020
+Summary: Ratios of cross sections in the associated production of a Z boson with at least one charm or bottom quark jet are measured in proton-proton collisions at $\sqrt{s}=13$ TeV
+Experiment: CMS 
+Collider: LHC
+InspireID: 1776758
+Status: VALIDATED 
+Authors: 
+- Hannes Jung <hannes.jung@desy.de>
+References: 
+- Phys.Rev.D 102 (2020) 3 032007 
+- DOI:10.1103/PhysRevD.102.032007 
+- arXiv:2001.06899 
+- CMS-SMP-19-004
+RunInfo: Z to leptons
+Beams: [p+, p+]
+Energies: [[6500,6500]]
+Luminosity_fb: 35.9
+Description: 
+'Ratios of cross sections, $\sigma(Z+c~jets)/\sigma(Z+jets)$, $\sigma(Z+b~jets)/\sigma(Z+jets)$ and $\sigma(Z+c~jets)/\sigma(Z+b~jets)$  in the associated production of a Z boson with at least one charm or bottom quark jet are measured in proton-proton collisions at $\sqrt{s}=13$ TeV. The data sample, collected by the CMS experiment at the CERN LHC, corresponds to an integrated luminosity of 35.9 $fv^{-1}$, with a fiducial volume of $p_T > 30 $ GeV and $|\eta|<2.4$ for the jets. The Z boson candidates come from leptonic decays into electrons or muons with $p_T > 25 $ GeV and $|\eta|<2.4$  and the dilepton mass satisfies $ 71 < M_Z < 111 $ GeV.'
+Keywords: []
+BibKey: Sirunyan:2020lgh
+BibTeX: '@article{Sirunyan:2020lgh,
+	Author = {Sirunyan, Albert M and others},
+	Journal = {Phys. Rev. D},
+	Number = {3},
+	Pages = {032007},
+	Title = {{Measurement of the associated production of a $Z$ boson with charm or bottom quark jets in proton-proton collisions at $\sqrt {s}$=13 TeV}},
+	Volume = {102},
+	Year = {2020}}'
+ReleaseTests:
+ - $A LHC-13-Z-mu-jets

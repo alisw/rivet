@@ -1,0 +1,33 @@
+Name: MARKII_1985_I209198
+Year: 1985
+Summary:  $\Lambda^0$ production at 29 GeV
+Experiment: MARKII
+Collider: PEP
+InspireID: 209198
+Status: VALIDATED
+Authors:
+ - Peter Richardson <Peter.Richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 54 (1985) 2071-2074, 1985
+RunInfo: e+ e- to hadrons at 29 GeV
+Beams: [e+, e-]
+Energies: [29]
+Description:
+  'Spectrum and $p_T$ with respect to the thrust axis for $\Lambda^0$ baryon production at 29 GeV measured by the MARKII collaboration.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: delaVaissiere:1984xg
+BibTeX: '@article{delaVaissiere:1984xg,
+    author = "de la Vaissiere, C. and others",
+    title = "{$\Lambda$ Production in $e^+ e^-$ Annihilation at 29-{GeV}}",
+    reportNumber = "SLAC-PUB-3419, LBL-18848",
+    doi = "10.1103/PhysRevLett.54.2071",
+    journal = "Phys. Rev. Lett.",
+    volume = "54",
+    pages = "2071--2074",
+    year = "1985",
+    note = "[Erratum: Phys.Rev.Lett. 55, 263 (1985)]"
+}'

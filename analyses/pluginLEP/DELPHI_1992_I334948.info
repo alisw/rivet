@@ -1,0 +1,32 @@
+Name: DELPHI_1992_I334948
+Year: 1992
+Summary: Charge multiplicity for different jet multiplicities in hadronic $Z^0$ decays
+Experiment: DELPHI
+Collider: LEP
+InspireID: 334948
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Z.Phys. C56 (1992) 63-76, 1992 
+RunInfo:
+  $\sqrt{s} = 91.2$ GeV, $e^+ e^- -> Z^0$ production with hadronic decays only
+NumEvents: 1000000
+Beams: [e+, e-]
+Energies: [91.2]
+Description:
+  The charged multiplicity distribution in hadron $Z^0$ decays for different numbers of final state jets. 
+BibKey: Abreu:1992gp
+BibTeX: '@article{Abreu:1992gp,
+      author         = "Abreu, P. and others",
+      title          = "{Charged particle multiplicity distributions for fixed
+                        number of jets in Z0 hadronic decays}",
+      collaboration  = "DELPHI",
+      journal        = "Z. Phys.",
+      volume         = "C56",
+      year           = "1992",
+      pages          = "63-76",
+      doi            = "10.1007/BF01589707",
+      reportNumber   = "CERN-PPE-92-064, CERN-PPE-92-64",
+      SLACcitation   = "%%CITATION = ZEPYA,C56,63;%%"
+}'

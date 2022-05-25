@@ -1,0 +1,36 @@
+Name: TASSO_1982_I177174
+Year: 1982
+Summary: Charged Particle spectra in $e^+e^-$ collisions in $e^+e^-$ at 12, 14, 22, 25, 30, 34 and 35 GeV
+Experiment: TASSO
+Collider: Petra
+InspireID: 177174
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. 114B (1982) 65
+RunInfo: e+ e- to hadrons. Beam energy must be specified as analysis option "ENERGY" when rivet-merging samples.
+NeedCrossSection: yes
+Beams: [e+, e-]
+Energies: [12, 14, 22, 25, 30, 34, 35]
+Options:
+ - ENERGY=12, 14, 22, 25, 30, 34, 35
+Description:
+  'Measurement of the charged particle spectra in $e^+e^-$ collisions in $e^+e^-$ at 12, 14, 22, 25, 30, 34 and 35 GeV by the TASSO experiment at Petra.
+  Beam energy must be specified as analysis option "ENERGY" when rivet-merging samples.'
+Keywords: []
+BibKey: Brandelik:1982di
+BibTeX: '@article{Brandelik:1982di,
+      author         = "Brandelik, R. and others",
+      title          = "{Scale Breaking in Inclusive Charged Particle Production
+                        by $e^+ e^-$ Annihilation}",
+      collaboration  = "TASSO",
+      journal        = "Phys. Lett.",
+      volume         = "114B",
+      year           = "1982",
+      pages          = "65",
+      doi            = "10.1016/0370-2693(82)90017-X",
+      reportNumber   = "DESY-82-013",
+      SLACcitation   = "%%CITATION = PHLTA,114B,65;%%"
+}'

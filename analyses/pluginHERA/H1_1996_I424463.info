@@ -1,0 +1,35 @@
+Name: H1_1996_I424463
+Year: 1996
+Summary: Transverse momentum spectra of charged particles in DIS (H1 1996) 
+Experiment: H1
+Collider: HERA
+InspireID: 424463
+Status: VALIDATED 
+Reentrant: True
+Authors: 
+ - Suraj Kumar Singh <surajsinghdeos@gmail.com>
+ - Hannes Jung <hannes.jung@desy.de>
+References: 
+ - 'Nucl. Phys. B485 (1997) 3' 
+ - 'doi:10.1016/S0550-3213(96)00675-X'
+ - 'arXiv:hep-ex/9610006'
+ - 'DESY-96-215'
+Beams: [[e+, p+],[p+,e+]] 
+Energies: [[27.5,820],[820,27.5]]
+Description: Transverse momentum spectra of charged particles produced in deep inelastic scattering are measured as a function of the kinematic variables x and Q2 using the H1 detector at the epcollider HERA. The data are compared to different patton emission models, either with or without ordering of the emissions in transverse momentum. The data provide evidence for a relatively large amount of patton radiation between the current and the remnant systems.
+Keywords: []
+BibKey: H1:1996muf
+BibTeX: '@article{H1:1996muf,
+    author = "Adloff, C. and others",
+    collaboration = "H1",
+    title = "{Measurement of charged particle transverse momentum spectra in deep inelastic scattering}",
+    eprint = "hep-ex/9610006",
+    archivePrefix = "arXiv",
+    reportNumber = "DESY-96-215",
+    doi = "10.1016/S0550-3213(96)00675-X",
+    journal = "Nucl. Phys. B",
+    volume = "485",
+    pages = "3",
+    year = "1997"
+}'
+

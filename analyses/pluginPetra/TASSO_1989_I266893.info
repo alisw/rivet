@@ -1,0 +1,34 @@
+Name: TASSO_1989_I266893
+Year: 1989
+Summary: Spectra for $\Lambda^0,\bar{\Lambda}^0$ and $\Xi^-,\bar{\Xi}^-$ at 34.8 and 42.1 GeV
+Experiment: TASSO
+Collider: Petra
+InspireID: 266893
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Z.Phys. C45 (1989) 209, 1989
+RunInfo: e+ e- to hadrons. Beam energy must be specified as analysis option "ENERGY" when rivet-merging samples.
+NeedCrossSection: yes
+Beams: [e+, e-]
+Energies: [34.8,42.1]
+Options:
+ - ENERGY=34.8,42.1
+Description:
+  'Measurement of the $\Lambda^0,\bar{\Lambda}^0$ and $\Xi^-,\bar{\Xi}^-$ spectra at 34.8 and 42.1 GeV by the TASSO experiment at Petra. In addition to the spectra $p_l$, $p_\perp^{\text{in}}$, $p_\perp^{\text{out}}$ and the rapidity of the $\Lambda^0,\bar{\Lambda}^0$ are measured with respect to the sphericity axis. Beam energy must be specified as analysis option "ENERGY" when rivet-merging samples.'
+Keywords: []
+BibKey: Braunschweig:1988wh
+BibTeX: '@article{Braunschweig:1988wh,
+      author         = "Braunschweig, W. and others",
+      title          = "{Strange Baryon Production in e+ e- Annihilation}",
+      collaboration  = "TASSO",
+      journal        = "Z. Phys.",
+      volume         = "C45",
+      year           = "1989",
+      pages          = "209",
+      doi            = "10.1007/BF01674451",
+      reportNumber   = "DESY-88-173, OUNP-89-3",
+      SLACcitation   = "%%CITATION = ZEPYA,C45,209;%%"
+}'

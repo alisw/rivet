@@ -1,0 +1,40 @@
+Name: LHCB_2016_I1414195
+Year: 2016
+Summary: Helicity angle distributions in excited $D_s$ meson decays
+Experiment: LHCB
+Collider: LHC
+InspireID: 1414195
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - JHEP 02 (2016) 133
+RunInfo:  Any process producing excited $D_s$ mesons
+Description:
+  'The decays $D_s^{**} \to D^{*+}K^0_S\to D^0\pi^+K^0_S$ are used to measure the helicity angle,
+   i.e. the angle between the pion and kaon in the rest frame of the $D^*$. The decays of $D_{s1}(2536)^+$,
+   $D^*_{s2}(2573)^+$, $D_{s1}^*(2700)^+$, $D_{sJ}^*(2860)^+$, $D_{sJ}(3040)^+$ were measured, currently the $D_{sJ}(3040)^+$ is not implemented.
+  It is unclear if the  $D_{sJ}^*(2860)^+$ is the $D_{s1}^*(2860)^+$, $D_{s3}^*(2860)^+$ or a mixture of the two.
+  This histogram is therefore filled we with each state and the admixture.
+  The data were extracted from the files supplied on the LHCb website.'
+Keywords: []
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: LHCb:2016mbk
+BibTeX: '@article{LHCb:2016mbk,
+    author = "Aaij, Roel and others",
+    collaboration = "LHCb",
+    title = "{Study of D$_{sJ}^{(*) +}$ mesons decaying to D$^{∗ +}$ K$_S^0$ and D$^{*0}$ K$^{+}$ final states}",
+    eprint = "1601.01495",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CERN-PH-EP-2015-322, LHCB-PAPER-2015-052",
+    doi = "10.1007/JHEP02(2016)133",
+    journal = "JHEP",
+    volume = "02",
+    pages = "133",
+    year = "2016"
+}
+'

@@ -1,0 +1,35 @@
+Name: BELLE_2007_I749358
+Year: 2007
+Summary:  $\gamma\gamma\to\pi^+\pi^-$ for centre-of-mass energies between 0.8 and 1.5 GeV
+Experiment: BELLE
+Collider: KEKB
+InspireID: 749358
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - J.Phys.Soc.Jap. 76 (2007) 074102
+RunInfo: gamma gamma to hadrons
+Beams: [gamma, gamma]
+Energies: []
+Description:
+  'Measurement of the differential cross section for $\gamma\gamma\to\pi^+\pi^-$ for $0.8 \text{GeV} < W < 1.5 \text{GeV}$. Both the cross section as a function of the centre-of-mass energy of the photonic collision, and the differential cross section with respect to the pion scattering angle are measured.'
+ValidationInfo:
+  'Herwig 7 gamma gamma to pi+ pi- events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle:2007ebm
+BibTeX: '@article{Belle:2007ebm,
+    author = "Mori, T. and others",
+    collaboration = "Belle",
+    title = "{High statistics measurement of the cross-sections of gamma gamma ---\ensuremath{>} pi+ pi- production}",
+    eprint = "0704.3538",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1143/JPSJ.76.074102",
+    journal = "J. Phys. Soc. Jap.",
+    volume = "76",
+    pages = "074102",
+    year = "2007"
+}'

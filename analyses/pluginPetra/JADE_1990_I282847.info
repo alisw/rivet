@@ -1,0 +1,39 @@
+Name: JADE_1990_I282847
+Year: 1990
+Summary: Photon, $\pi^0$ and $\eta$ spectra in $e^+e^-$ collisions at 35 and 44 GeV
+Experiment: JADE
+Collider: Petra
+InspireID: 282847
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Z.Phys. C46 (1990) 1-7, 1990 
+RunInfo: e+ e- to hadrons. Beam energy must be specified as analysis option "ENERGY" when rivet-merging samples.
+NeedCrossSection: yes
+Beams: [e+, e-]
+Energies: [35,44]
+Options:
+ - ENERGY=35,44
+Description:
+  'Measurement of the Photon, $\pi^0$ and $\eta$ spectra in $e^+e^-$ collisions at 35 and 44 GeV by the JADE experiment at Petra. The isolated photon spectrum which tests ISR and FST QED radiation is not implemented. The multiplicities are not implemented as they are in the PDG averages. Beam energy must be specified as analysis option "ENERGY" when rivet-merging samples.'
+Keywords: []
+BibKey: Pitzl:1989qy
+BibTeX: '@article{Pitzl:1989qy,
+      author         = "Pitzl, D. D. and others",
+      title          = "{A Study of Photon Production in Hadronic Events from e+
+                        e- Annihilation}",
+      collaboration  = "JADE",
+      journal        = "Z. Phys.",
+      volume         = "C46",
+      year           = "1990",
+      pages          = "1-7",
+      doi            = "10.1007/BF02440827",
+      note           = "[Erratum: Z. Phys.C47,676(1990)]",
+      reportNumber   = "DESY-89-129",
+      SLACcitation   = "%%CITATION = ZEPYA,C46,1;%%"
+}'
+ToDo:
+ - Implement the isolated photon specrtrum
+

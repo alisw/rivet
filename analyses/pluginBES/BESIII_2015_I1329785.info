@@ -1,0 +1,35 @@
+Name: BESIII_2015_I1329785
+Year: 2015
+Summary:  Cross section for $e^+e^-\to \gamma\chi_{c(0,1,2)}$ at energies between 4.009 and 4.36 GeV
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1329785
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Chin.Phys. C39 (2015) 041001, 2015 
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+  'Measurement of the cross section for $e^+e^-\to \gamma\chi_{c(0,1,2)}$ at energies between 4.009 and 4.36 GeV.'
+Keywords: []
+BibKey: Ablikim:2014hwn
+BibTeX: '@article{Ablikim:2014hwn,
+      author         = "Ablikim, M. and others",
+      title          = "{Evidence for $e^+e^-\to\gamma\chi_{c1, 2}$ at
+                        center-of-mass energies from 4.009 to 4.360 GeV}",
+      collaboration  = "BESIII",
+      journal        = "Chin. Phys.",
+      volume         = "C39",
+      year           = "2015",
+      number         = "4",
+      pages          = "041001",
+      doi            = "10.1088/1674-1137/39/4/041001",
+      eprint         = "1411.6336",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1411.6336;%%"
+}'

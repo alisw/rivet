@@ -1,0 +1,31 @@
+Name: TASSO_1982_I179022
+Year: 1982
+Summary: $\rho^0$ spectrum in $e^+e^-$ collisions at $E_{\text{CMS}}=34$ GeV
+Experiment: TASSO
+Collider: Petra
+InspireID: 179022
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B117 (1982) 135-140, 1982
+RunInfo: e+ e- to hadrons
+NeedCrossSection: no
+Beams: [e-, e+]
+Description:
+  'Spectrum for $\rho^0$ production measured by the TASSO experiment in $e^+e^-$ collisions at $E_{\text{CMS}}=34$ GeV at PETRA'
+Keywords: []
+BibKey: Brandelik:1982ad
+BibTeX: '@article{Brandelik:1982ad,
+      author         = "Brandelik, R. and others",
+      title          = "{Inclusive $\rho^0$ Production in $e^+ e^-$ Annihilation
+                        at High-energy}",
+      collaboration  = "TASSO",
+      journal        = "Phys. Lett.",
+      volume         = "117B",
+      year           = "1982",
+      pages          = "135-140",
+      doi            = "10.1016/0370-2693(82)90890-5",
+      reportNumber   = "DESY-82-046",
+      SLACcitation   = "%%CITATION = PHLTA,117B,135;%%"
+}'

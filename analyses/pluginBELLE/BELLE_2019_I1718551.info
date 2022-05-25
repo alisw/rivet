@@ -1,0 +1,40 @@
+Name: BELLE_2019_I1718551
+Year: 2019
+Summary: Cross sections for $\pi^\pm$, $K^\pm$ and $p\bar{p}$ as functions of $z$ and $p_\perp$ at $E_{\text{cms}}=10.58$ GeV
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1718551
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D92 (2015) no.9, 092007
+RunInfo: e+e- to hadrons at 10.58 continuum events only
+Beams: [e+, e-]
+Energies: [10.58]
+Description:
+  'Cross sections for $\pi^\pm$, $K^\pm$ and $p\bar{p}$ as functions of $z$ and $p_\perp$ at $E_{\text{cms}}=10.58$ GeV'
+ValidationInfo:
+  ''
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Seidl:2019jei
+BibTeX: '@article{Seidl:2019jei,
+      author         = "Seidl, R. and others",
+      title          = "{Transverse momentum dependent production cross sections
+                        of charged pions, kaons and protons produced in inclusive
+                        $e^+e^-$ annihilation at $\sqrt{s}=$ 10.58 GeV}",
+      collaboration  = "Belle",
+      journal        = "Phys. Rev.",
+      volume         = "D99",
+      year           = "2019",
+      number         = "11",
+      pages          = "112006",
+      doi            = "10.1103/PhysRevD.99.112006",
+      eprint         = "1902.01552",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "KEK preprint 18-86, Belle preprint 19-02",
+      SLACcitation   = "%%CITATION = ARXIV:1902.01552;%%"
+}'

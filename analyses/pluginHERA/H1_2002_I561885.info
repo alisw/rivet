@@ -1,0 +1,38 @@
+Name: H1_2002_I561885
+Year: 2002
+Summary: Measurement of $D^{*\pm}$ meson production in deep inelastic scattering at HERA
+Experiment: H1
+Collider: HERA
+InspireID: 561885
+Status: VALIDATED
+Reentrant: True
+Authors:
+ - Madhav Chithirasreemadam <cmaddy999@gmail.com>
+ - Hannes Jung <hannes.jung@desy.de>
+
+Beams: [[p+, e-],[e-,p+]]
+Energies: [[820,27.5],[27.5,820]]
+Description:
+  'The inclusive production of $D^{*\pm}$ (2010)  mesons in deep-inelastic scattering is studied with the H1 detector at HERA. In the kinematic region $1 < Q^2 < 100 $ GeV$^2$ and $0.05 < y < 0.7$ in $e^+ p$ cross section for inclusive $D^{*\pm}$ meson production is measured in the visible range $p_{T}^{D*} > 1.5$ GeV and $|\eta^{D*}| < 1.5 $.'
+ValidationInfo:
+  'A description of the process used to validate the Rivet code against
+  the original experimental analysis. Cut-flow tables and similar information
+  are welcome'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: H1:2001wps
+BibTeX: '@article{H1:2001wps,
+    author = "Adloff, C. and others",
+    collaboration = "H1",
+    title = "{Measurement of D*+- meson production and F2(c) in deep inelastic scattering at HERA}",
+    eprint = "hep-ex/0108039",
+    archivePrefix = "arXiv",
+    reportNumber = "DESY-01-100",
+    doi = "10.1016/S0370-2693(02)01195-4",
+    journal = "Phys. Lett. B",
+    volume = "528",
+    pages = "199",
+    year = "2002"
+}'
+

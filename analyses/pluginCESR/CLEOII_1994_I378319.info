@@ -1,0 +1,31 @@
+Name: CLEOII_1994_I378319
+Year: 1994
+Summary: Spectra for  $D_1(2420)^+$ and $D_2^*(2460)^+$
+Experiment: CLEOII
+Collider: CESR
+InspireID: 378319
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B340 (1994) 194-204
+RunInfo: 
+NeedCrossSection: no
+Beams: [e-, e+]
+Energies: [10.58]
+Description:
+  'Measurement of the scaled momentum spectra for $D_1(2420)^+$ and  $D^*_2(2460)^+$ mesons at 10.58 GeV.'
+Keywords: []
+BibKey: Bergfeld:1994af
+BibTeX: '@article{Bergfeld:1994af,
+      author         = "Bergfeld, T. and others",
+      title          = "{Observation of D1+ (2420) and D2*+ (2460)}",
+      collaboration  = "CLEO",
+      journal        = "Phys. Lett.",
+      volume         = "B340",
+      year           = "1994",
+      pages          = "194-204",
+      doi            = "10.1016/0370-2693(94)01348-9",
+      reportNumber   = "CLNS-94-1298, CLEO-94-21",
+      SLACcitation   = "%%CITATION = PHLTA,B340,194;%%"
+}'

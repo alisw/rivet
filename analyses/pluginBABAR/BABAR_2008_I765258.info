@@ -1,0 +1,37 @@
+Name: BABAR_2008_I765258
+Year: 2008
+Summary: Cross Section for $e^+e^-\to$ $K^+K^-\eta$, $K^+K^-\pi^0$ and $K^0_SK^\pm\pi^\mp$ from threshold to 4.6 GeV
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 765258
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D77 (2008) 092002, 2008 
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+  'Measurement of the cross section for  $e^+e^-\to$ $K^+K^-\eta$, $K^+K^-\pi^0$ and $K^0_SK^\pm\pi^\mp$ via radiative return,
+   including the identification of $\phi$ and $\eta$ mesons for energies from threshold to 4.6 GeV.'
+Keywords:
+BibKey: Aubert:2007ym
+BibTeX: '@article{Aubert:2007ym,
+      author         = "Aubert, Bernard and others",
+      title          = "{Measurements of $e^{+} e^{-} \to K^{+} K^{-} \eta$,
+                        $K^{+} K^{-} \pi^0$ and $K^0_{s} K^\pm \pi^\mp$ cross-
+                        sections using initial state radiation events}",
+      collaboration  = "BaBar",
+      journal        = "Phys. Rev.",
+      volume         = "D77",
+      year           = "2008",
+      pages          = "092002",
+      doi            = "10.1103/PhysRevD.77.092002",
+      eprint         = "0710.4451",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "SLAC-PUB-12968, BABAR-PUB-07-052",
+      SLACcitation   = "%%CITATION = ARXIV:0710.4451;%%"
+}'

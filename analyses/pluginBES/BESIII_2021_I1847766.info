@@ -1,0 +1,33 @@
+Name: BESIII_2021_I1847766
+Year: 2021
+Summary: Cross section for $e^+e^-\to$ proton and antiproton between 1.877 and 3 GeV
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1847766
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@dur.ac.uk>
+References:
+ - arXiv:2102.10337
+RunInfo: e+ e- to hadrons
+NeedCrossSection: yes
+Beams: [e+, e-]
+Description:
+  'Measurement of the cross section for $e^+e^-\to p\bar{p}$ for energies between 1.877 and 3 GeV using initial-state radiation by the BESIII collaboration.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Ablikim:2021kjh
+BibTeX: '@article{Ablikim:2021kjh,
+    author = "Ablikim, Medina and others",
+    collaboration = "BESIII",
+    title = "{Measurement of proton electromagnetic form factors in the time-like region using initial state radiation at BESIII}",
+    eprint = "2102.10337",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    month = "2",
+    year = "2021"
+}'

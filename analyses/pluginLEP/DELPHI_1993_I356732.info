@@ -1,0 +1,36 @@
+Name: DELPHI_1993_I356732
+Year: 1993
+Summary: Charmed Meson spectra at LEPI
+Experiment: DELPHI
+Collider: LEP
+InspireID: 356732
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Z.Phys.C 59 (1993) 533-546, 1993
+RunInfo:
+  Hadronic $Z$ decays at 91.2~GeV.
+Beams: [e+, e-]
+Energies: [91.2]
+Description:
+  'Measurement of the spectra for $D^{*\pm$} $D^0$ and $D^\pm$ measured by DELPHI. Rather than the event rates in HEPData values read from Figs6-8 in the original paper are used with the branching ratios corrected using the PDG 2020 values.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: DELPHI:1993gqe
+BibTeX: '@article{DELPHI:1993gqe,
+    author = "Abreu, P. and others",
+    collaboration = "DELPHI",
+    title = "{A Measurement of D meson production in Z0 hadronic decays}",
+    reportNumber = "CERN-PPE-93-70",
+    doi = "10.1007/BF01562545",
+    journal = "Z. Phys. C",
+    volume = "59",
+    pages = "533--546",
+    year = "1993",
+    note = "[Erratum: Z.Phys.C 65, 709--710 (1995)]"
+}
+'

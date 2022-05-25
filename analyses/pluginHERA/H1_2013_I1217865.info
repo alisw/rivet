@@ -1,0 +1,41 @@
+Name: H1_2013_I1217865
+Year: 2013
+Summary: Charged particle production in deep-inelastic ep scattering at H1 
+Experiment: H1
+Collider: HERA
+InspireID: 1217865
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Anastasia Grebenyuk <Anastasia.Grebenyuk@cern.ch>
+ - Hannes Jung <hannes.jung@desy.de>
+References: 
+ - Eur.Phys.J. C73 (2013) 2406, 
+ - arXiv:1302.1321
+RunInfo: Inclusive DIS
+NeedCrossSection: yes
+Beams: [[e+, p+],[p+,e+],[e-, p+],[p+,e-]]
+Energies_GeV: [[27.5,920],[920,27.5],[27.5,920],[920,27.5]]
+Luminosity_fb: 0.0886
+Description: Charged particle production in deep-inelastic ep scattering is measured with the H1 detector at HERA. The kinematic range of the analysis covers low photon virtualities, 5 < Q2 < 100 GeV2 and small values of Bjorken-x, 10**-2 < x < 10**-2. The analysis is performed in the hadronic centre-of-mass system. The charged particle densities are measured as a function of pseudorapidity eta* and transverse momentum pT* in the range 0 <eta* <5 and 0 < pT* < 10 GeV in bins of x and Q2. 
+# Keywords: []
+BibKey: Alexa:2013vkv
+BibTeX: '@article{Alexa:2013vkv,
+      author         = "Alexa, C. and others",
+      title          = "{Measurement of Charged Particle Spectra in
+                        Deep-Inelastic ep Scattering at HERA}",
+      collaboration  = "H1",
+      journal        = "Eur. Phys. J.",
+      volume         = "C73",
+      year           = "2013",
+      number         = "4",
+      pages          = "2406",
+      doi            = "10.1140/epjc/s10052-013-2406-x",
+      eprint         = "1302.1321",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "DESY-13-012",
+      SLACcitation   = "%%CITATION = ARXIV:1302.1321;%%"
+}'
+ReleaseTests:
+ - $A DIS-e+-HighQ2

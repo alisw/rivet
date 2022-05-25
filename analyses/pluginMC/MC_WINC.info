@@ -1,0 +1,18 @@
+Name: MC_WINC
+Summary: Monte Carlo validation observables for inclusive $W[\ell \, \nu]$ production
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Frank Siegert <frank.siegert@cern.ch>
+ - Christian Gutschow <chris.g@cern.ch>
+References:
+Options:
+ - LMODE=EL,MU
+ - SCHEME=DRESSED,BARE
+RunInfo:
+  $\ell \, \nu$ + jets analysis.
+PtCuts: [0]
+Description:
+  Monte Carlo validation observables for inclusive $W[\ell \, \nu]$ production. 
+  60 GeV $<m_W<$ 100 GeV cut applied.
+NeedCrossSection: yes

@@ -1,0 +1,51 @@
+Name: CMS_2012_I1089835
+Year: 2012
+Summary:  Inclusive b-jet production in pp collisions at 7 TeV
+Experiment: CMS
+Collider: LHC
+InspireID: 1089835
+Status: VALIDATED
+Authors:
+ - cms-pag-conveners-bph@cern.ch
+ - Paolo Gunnellini <paolo.gunnellini@desy.de>
+References:
+ - CMS-BPH-11-022
+ - JHEP 1204 (2012) 084
+ - DOI:10.1007/JHEP04(2012)084
+ - arXiv:1202.4617 
+RunInfo:
+ QCD events with transverse momentum greater than 10 GeV
+NumEvents: 1000000
+Beams: [p+, p+]
+Energies: [7000]
+NeedCrossSection: True
+Description:
+ 'The inclusive b-jet production cross section in pp collisions at a center-of-mass energy of 7 TeV is measured using data collected by the CMS experiment at the LHC. 
+ The cross section is presented as a function of the jet transverse momentum in the range 18 $<$ pT $<$ 200 GeV for several rapidity intervals. 
+ The results are also given as the ratio of the b-jet production cross section to the inclusive jet production cross section. 
+ The measurement is performed with two different analyses, which differ in their trigger selection and b-jet identification: 
+ a jet analysis that selects events with a b jet using a sample corresponding to an integrated luminosity of 34 inverse picobarns, 
+ and a muon analysis requiring a b jet with a muon based on an integrated luminosity of 3 inverse picobarns. 
+ In both approaches the b jets are identified by requiring a secondary vertex. 
+ The results from the two methods are in agreement with each other and with next-to-leading order calculations, as well as with predictions 
+ based on the PYTHIA event generator.'
+BibKey: Chatrchyan:2012dk
+BibTeX: '@article{Chatrchyan:2012dk,
+      author         = "Chatrchyan, Serguei and others",
+      title          = "{Inclusive $b$-jet production in $pp$ collisions at
+                        $\sqrt{s}=7$ TeV}",
+      collaboration  = "CMS",
+      journal        = "JHEP",
+      volume         = "04",
+      year           = "2012",
+      pages          = "084",
+      doi            = "10.1007/JHEP04(2012)084",
+      eprint         = "1202.4617",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CMS-BPH-11-022, CERN-PH-EP-2012-036",
+      SLACcitation   = "%%CITATION = ARXIV:1202.4617;%%"
+}'
+ReleaseTests:
+ - $A LHC-7-Bottom-0
+ - $A-2 LHC-7-DiJets-1-A

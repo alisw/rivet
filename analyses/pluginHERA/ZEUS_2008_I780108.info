@@ -1,0 +1,46 @@
+Name: ZEUS_2008_I780108
+Year: 2008
+Summary: Multi-jet cross-sections in charged current $e^{\pm} p$ scattering at HERA
+Experiment: ZEUS
+Collider: HERA
+InspireID: 780108
+Status: VALIDATED
+Reentrant: false
+Authors:
+ -  Andrii Verbytskyi  andrii.verbytskyi@mpp.mpg.de
+References:
+- arXiv:0802.3955 [hep-ex]
+- Phys. Rev. D78 (2008) 032004
+RunInfo: inclusive ep collisons
+NeedCrossSection: no
+Beams: [[p+, e-], [p+, e+], [e-, p+], [e+, p+]]
+Description:
+  'Jet cross sections were measured in charged current deep inelastic $e^{\pm}p$
+  scattering at high boson virtualities $Q^2$ with the ZEUS detector at HERA II 
+  using an integrated luminosity of $0.36 fb^{-1}$. Differential cross sections are 
+  presented for inclusive-jet production as functions of $Q^2$, Bjorken x and the jet 
+  transverse energy and pseudorapidity. The dijet invariant mass cross section is also
+   presented. Observation of three- and four-jet events in charged-current $e^{\pm}p$ processes 
+   is reported for the first time. The predictions of next-to-leading-order (NLO) QCD 
+   calculations are compared to the measurements. The measured inclusive-jet cross sections 
+   are well described in shape and normalization by the NLO predictions. The data have the 
+   potential to constrain the u and d valence quark distributions in the proton if included 
+   as input to global fits.'
+BibKey: Chekanov:2008af
+BibTeX: '@article{Chekanov:2008af,
+      author         = "Chekanov, Sergei and others",
+      title          = "{Multi-jet cross-sections in charged current e+- p
+                        scattering at HERA}",
+      collaboration  = "ZEUS",
+      journal        = "Phys. Rev.",
+      volume         = "D78",
+      year           = "2008",
+      pages          = "032004",
+      doi            = "10.1103/PhysRevD.78.032004",
+      eprint         = "0802.3955",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "DESY-08-024",
+      SLACcitation   = "%%CITATION = ARXIV:0802.3955;%%"
+}'
+

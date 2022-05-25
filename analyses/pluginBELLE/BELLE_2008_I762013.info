@@ -1,0 +1,36 @@
+Name: BELLE_2008_I762013
+Year: 2008
+Summary: Decay angles in $D_{s1}(2536)^+\to D^{*+}K^0$
+Experiment: BELLE
+Collider: KEKB
+InspireID: 762013
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D77 (2008) 032001
+RunInfo: e+e- to hadrons
+Beams: [e-, e+]
+Energies: [10.58]
+Description:
+  'Measurement of decay angles in the decay $D_{s1}(2536)^+\to D^{*+}K^0$ by BELLE.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Balagura:2007dya
+BibTeX: '@article{Balagura:2007dya,
+      author         = "Balagura, V. and others",
+      title          = "{Observation of D(s1)(2536)+ ---&gt; D+ pi- K+ and angular
+                        decomposition of D(s1)(2536)+ ---&gt; D*+ K(S)0}",
+      collaboration  = "Belle",
+      journal        = "Phys. Rev.",
+      volume         = "D77",
+      year           = "2008",
+      pages          = "032001",
+      doi            = "10.1103/PhysRevD.77.032001",
+      eprint         = "0709.4184",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:0709.4184;%%"
+}'

@@ -1,0 +1,36 @@
+Name: BABAR_2006_I719581
+Year: 2006
+Summary: Decay asymmetries in the decay of $\Omega^-$ baryons produced in $\Xi^0_c$ and $\Omega_c^0$ decays
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 719581
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 97 (2006) 112001
+RunInfo: Any process producing Xi_c0 and Omega_c0 baryons
+Description:
+'Measurement of the decay asymmetries in $\Xi^0_c\to\Omega^-K^+$ and $\Omega^-_c\to\Omega^-\pi^+$ by the BaBar experiment.
+ In both cases the decay mode $\Omega^-\to\Lambda^0K^-$ was used.
+ This analysis is useful for testing spin correlations in hadron decays.'
+Keywords: []
+BibKey: Aubert:2006dc
+BibTeX: '@article{Aubert:2006dc,
+      author         = "Aubert, Bernard and others",
+      title          = "{Measurement of the spin of the Omega- hyperon at BABAR}",
+      booktitle      = "{Proceedings of the 33rd International Conference on High
+                        Energy Physics (ICHEP 06): Moscow, Russia, July 26-August
+                        2, 2006}",
+      collaboration  = "BaBar",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "97",
+      year           = "2006",
+      pages          = "112001",
+      doi            = "10.1103/PhysRevLett.97.112001",
+      eprint         = "hep-ex/0606039",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "SLAC-PUB-11896, BABAR-PUB-05-05",
+      SLACcitation   = "%%CITATION = HEP-EX/0606039;%%"
+}'

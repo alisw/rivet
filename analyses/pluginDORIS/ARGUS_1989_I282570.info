@@ -1,0 +1,36 @@
+Name: ARGUS_1989_I282570
+Year: 1989
+Summary:  Spectrum for $D^+_{s1}(2536)$ production at 10. GeV
+Experiment: ARGUS
+Collider: DORIS
+InspireID: 282570
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B230 (1989) 162
+RunInfo: e+e- to hadrons 
+Beams: [e+, e-]
+Energies: [10.]
+Description:
+  'Spectrum for $D^+_{s1}(2536)$ production at 10. GeV measured by ARGUS.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Albrecht:1989yi
+BibTeX: '@article{Albrecht:1989yi,
+      author         = "Albrecht, H. and others",
+      title          = "{Observation of a New Charmed - Strange Meson}",
+      booktitle      = "{Lake Louise Winter Inst. 1989:236-245, Presented by
+                        Kutschke in proceedings}",
+      collaboration  = "ARGUS",
+      journal        = "Phys. Lett.",
+      volume         = "B230",
+      year           = "1989",
+      pages          = "162",
+      doi            = "10.1016/0370-2693(89)91672-9",
+      reportNumber   = "DESY-89-119",
+      SLACcitation   = "%%CITATION = PHLTA,B230,162;%%"
+}'

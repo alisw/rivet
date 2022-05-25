@@ -1,0 +1,35 @@
+Name: BELLE_2005_I667712
+Year: 2005
+Summary: $\gamma\gamma\to\pi^+\pi^-$ and $K^+K^-$ for centre-of-mass energies between 2.4 and 4.1 GeV
+Experiment: BELLE
+Collider: KEKB
+InspireID: 667712
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett.B 615 (2005) 39-49
+RunInfo: gamma gamma to hadrons
+Beams: [gamma, gamma]
+Energies: []
+Description:
+  'Measurement of the differential cross section for $\gamma\gamma\to\pi^+\pi^-$ and $K^+K^-$ for $2.4 \text{GeV} < W < 4.1 \text{GeV}$. Both the cross section as a function of the centre-of-mass energy of the photonic collision, and the differential cross section with respect to the pion scattering angle are measured.'
+ValidationInfo:
+  'Herwig 7 gamma gamma to pi+ pi- and K+K- events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle:2004bpk
+BibTeX: '@article{Belle:2004bpk,
+    author = "Nakazawa, H. and others",
+    collaboration = "Belle",
+    title = "{Measurement of the gamma gamma ---\ensuremath{>} pi+ pi- and gamma gamma ---\ensuremath{>} K+ K- processes at energies of 2.4-Gev to 4.1-GeV}",
+    eprint = "hep-ex/0412058",
+    archivePrefix = "arXiv",
+    reportNumber = "BELLE-PREPRINT-2004-39, KEK-PREPRINT-2004-80",
+    doi = "10.1016/j.physletb.2005.03.067",
+    journal = "Phys. Lett. B",
+    volume = "615",
+    pages = "39--49",
+    year = "2005"
+}'

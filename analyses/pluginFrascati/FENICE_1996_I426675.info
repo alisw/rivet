@@ -1,0 +1,30 @@
+Name: FENICE_1996_I426675
+Year: 1996
+Summary: Measurement of the hadronic cross section near the $N\bar{N}$ threshold
+Experiment: FENICE
+Collider: ADONE
+InspireID: 426675
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: no
+Beams: [e-, e+]
+Description:
+  'Measurement of hadronic cross section in $e^+e^-$ collisions near the nucelon-antinucleon threshold by the FENICE experiment.'
+Keywords: []
+BibKey: Antonelli:1996xn
+BibTeX: '@article{Antonelli:1996xn,
+      author         = "Antonelli, A. and others",
+      title          = "{Measurement of the total e+ e- ---&gt; hadrons
+                        cross-section near the e+ e- ---&gt; N anti-N threshold}",
+      collaboration  = "FENICE",
+      journal        = "Phys. Lett.",
+      volume         = "B365",
+      year           = "1996",
+      pages          = "427-430",
+      doi            = "10.1016/0370-2693(95)01457-8",
+      SLACcitation   = "%%CITATION = PHLTA,B365,427;%%"
+}'

@@ -1,0 +1,33 @@
+Name: L3_1998_I467929
+Year: 1998
+Summary: $\tau$ polarization at LEP1
+Experiment: L3
+Collider: LEP
+InspireID: 467929
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett.B 429 (1998) 387-398
+RunInfo:  e+ e- > tau+ tau-
+Beams: [e+, e-]
+Energies: [91.2]
+Description:
+  'Measurement of the $\tau$ lepton polarization in $e^+e^-\to\tau^+\tau^-$ at the $Z^0$ pole by the L3 experiment at LEP1.'
+ValidationInfo:
+  'Herwig7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Acciarri:1998vg
+BibTeX: '@article{Acciarri:1998vg,
+    author = "Acciarri, M. and others",
+    collaboration = "L3",
+    title = "{Measurement of tau polarization at LEP}",
+    reportNumber = "CERN-EP-98-026, CERN-EP-98-26",
+    doi = "10.1016/S0370-2693(98)00406-7",
+    journal = "Phys. Lett. B",
+    volume = "429",
+    pages = "387--398",
+    year = "1998"
+}'

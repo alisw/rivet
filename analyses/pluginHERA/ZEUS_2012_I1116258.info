@@ -1,0 +1,53 @@
+Name: ZEUS_2012_I1116258
+Year: 2012
+Summary: Inclusive-jet photoproduction at HERA and determination of the strong coupling
+Experiment: ZEUS
+Collider: HERA Run II
+InspireID: 1116258
+Status: UNVALIDATED
+Reentrant: true
+Authors:
+ - Jon Butterworth <j.butterworth@ucl.ac.uk>
+References:
+ - Nucl.Phys. B864 (2012) 1-37
+ - DESY 12/045
+ - hep-ex/1205.6153
+RunInfo:
+  920 GeV protons colliding with 27.5 GeV positrons;
+  Direct and resolved photoproduction of dijets;
+  Jet $pT > 17$ GeV
+  Jet pseudorapidity $-1 < |\eta| < 2.5$
+NumEvents: 1000000
+Beams: [p+, e+]
+Energies: [[920, 27.5]]
+Description:
+   Inclusive-jet cross sections have been measured in the reaction ep->e+jet+X for photon virtuality Q2 < 1 GeV2 and gamma-p
+   centre-of-mass energies in the region 142 < W(gamma-p) < 293 GeV with the ZEUS detector at HERA using an integrated
+   luminosity of 300 pb-1. Jets were identified using the kT, anti-kT or SIScone jet algorithms in the laboratory frame.
+   Single-differential cross sections are presented as functions of the jet transverse energy, ETjet, and pseudorapidity,
+   etajet, for jets with ETjet > 17 GeV and -1 < etajet < 2.5. In addition, measurements of double-differential inclusive-jet
+   cross sections are presented as functions of ETjet in different regions of etajet. Next-to-leading-order QCD calculations
+   give a good description of the measurements, except for jets with low ETjet and high etajet. The influence of
+   non-perturbative effects not related to hadronisation was studied. Measurements of the ratios of cross sections using
+   different jet algorithms are also presented; the measured ratios are well described by calculations including up to
+   O(alphas2) terms. Values of alphas(Mz) were extracted from the measurements and the energy-scale dependence of the
+   coupling was determined. The value of alphas(Mz) extracted from the measurements based on the kT jet algorithm is
+   alphas(Mz) = 0.1206 +0.0023 -0.0022 (exp.) +0.0042 -0.0035 (th.); the results from the anti-kT and SIScone algorithms
+   are compatible with this value and have a similar precision.
+BibKey: Abramowicz:2012jz
+BibTeX: '@article{Abramowicz:2012jz,
+      author         = "Abramowicz, H. and others",
+      title          = "{Inclusive-jet photoproduction at HERA and determination
+                        of alphas}",
+      collaboration  = "ZEUS",
+      journal        = "Nucl. Phys.",
+      volume         = "B864",
+      year           = "2012",
+      pages          = "1-37",
+      doi            = "10.1016/j.nuclphysb.2012.06.006",
+      eprint         = "1205.6153",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "DESY-12-045",
+      SLACcitation   = "%%CITATION = ARXIV:1205.6153;%%"
+}'

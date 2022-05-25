@@ -1,0 +1,33 @@
+Name: ARGUS_1988_I261672
+Year: 1988
+Summary: Spectrum for $\Sigma_c^{0,++}$ production in $e^+e^-$ at 10 GeV in the continuum
+Experiment: ARGUS
+Collider: DORIS
+InspireID: 261672
+Status: VALIDATED
+Authors:
+ - Peter Richardson <Peter.Richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B211 (1988) 489-492
+RunInfo:
+  $e^+ e^-$ analysis near the $\Upsilon$ resonances
+NeedCrossSection: no
+Beams: [e-, e+]
+Energies: [10.]
+Description:
+  'Measurement of the $\Sigma_c^{0,++}$ spectrum in $e^+e^-$ collisions at 10 GeV.'
+Keywords: []
+BibKey: Albrecht:1988gc
+BibTeX: '@article{Albrecht:1988gc,
+      author         = "Albrecht, H. and others",
+      title          = "{Observation of the Charmed Baryon $\Sigma(c$) in $e^+
+                        e^-$ Annihilations}",
+      collaboration  = "ARGUS",
+      journal        = "Phys. Lett.",
+      volume         = "B211",
+      year           = "1988",
+      pages          = "489-492",
+      doi            = "10.1016/0370-2693(88)91899-0",
+      reportNumber   = "DESY-88-058",
+      SLACcitation   = "%%CITATION = PHLTA,B211,489;%%"
+}'

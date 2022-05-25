@@ -1,0 +1,35 @@
+Name: CMS_2021_I1920187_ZJET
+Year: 2021
+Summary: Study of quark and gluon jet substructure in Z+jet and dijet events from pp collisions at 13 TeV
+Experiment: CMS
+Collider: LHC
+InspireID: 1920187
+Status: VALIDATED
+Authors:
+ - cms-pag-conveners-smp@cern.ch
+ - Andreas Hinzmann <hinzmann@cern.ch>
+References:
+- CMS-SMP-20-010
+- 'arXiv:2109.03340'
+RunInfo: Z -> mu mu
+NeedCrossSection: no
+Beams: [p+, p+]
+Energies: [13000]
+Luminosity_fb: 35.9
+Description:
+  'Measurements of jet substructure describing the composition of quark- and gluon-initiated jets are presented. Proton-proton (pp) collision data at sqrt(s)=13 TeV collected with the CMS detector are used, corresponding to an integrated luminosity of 35.9/fb. Generalized angularities are measured that characterize the jet substructure and distinguish quark- and gluon-initiated jets. These observables are sensitive to the distributions of transverse momenta and angular distances within a jet. The analysis is performed using a data sample of dijet events enriched in gluon-initiated jets, and, for the first time, a Z+jet event sample enriched in quark-initiated jets. The observables are measured in bins of jet transverse momentum, and as a function of the jet radius parameter. Each measurement is repeated applying a "soft drop" grooming procedure that removes soft and large angle radiation from the jet.'
+BibKey: CMS:2021iwu
+BibTeX: '@article{CMS:2021iwu,
+    author = "Tumasyan, Armen and others",
+    collaboration = "CMS",
+    title = "{Study of quark and gluon jet substructure in Z+jet and dijet events from pp collisions}",
+    eprint = "2109.03340",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CMS-SMP-20-010, CERN-EP-2021-161",
+    month = "9",
+    year = "2021"
+}'
+
+ReleaseTests:
+ - $A LHC-13-Z-mu-jets

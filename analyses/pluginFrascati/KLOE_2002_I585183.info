@@ -1,0 +1,33 @@
+Name: KLOE_2002_I585183
+Year: 2002
+Summary: Mass spectrum of $\pi^0\pi^0$ in $\phi\to\pi^0\pi^0\gamma$ decays
+Experiment: KLOE
+Collider: DAPHNE
+InspireID: 585183
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B485 (2000) 349-356
+RunInfo:   Any process producing phi mesons
+Description:
+  'Mass spectra for $\pi^0\pi^0$ in $\phi$ decays to $\pi^0\pi^0\gamma$
+   measured by KLOE.'
+Keywords: []
+BibKey: Aloisio:2002bt
+BibTeX: '@article{Aloisio:2002bt,
+      author         = "Aloisio, A and others",
+      title          = "{Study of the decay $\phi \to \pi^0 \pi^0 \gamma$ with
+                        the KLOE detector}",
+      collaboration  = "KLOE",
+      journal        = "Phys. Lett.",
+      volume         = "B537",
+      year           = "2002",
+      pages          = "21-27",
+      doi            = "10.1016/S0370-2693(02)01838-5",
+      eprint         = "hep-ex/0204013",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "LNF-02-003",
+      SLACcitation   = "%%CITATION = HEP-EX/0204013;%%"
+}'

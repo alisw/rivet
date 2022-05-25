@@ -1,0 +1,35 @@
+Name: VENUS_1998_I453613
+Year: 1998
+Summary: Charged particle multiplicities in heavy and light quark initiated events at 58 GeV
+Experiment: VENUS
+Collider: Tristan
+InspireID: 453613
+Status: VALIDATED
+Authors:
+ -Peter Richardson <Peter.Richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B423 (1998) 407-418
+RunInfo: e+e- > hadrons
+NeedCrossSection: no
+Beams: [e+, e-]
+Energies: [58]
+Description:
+  'Measurement of the mean charged multiplicities separately for $b\bar b$,
+  and light quark ($uds$) initiated events in $e^+e^-$ interactions at 58 GeV.'
+Keywords: []
+BibKey: Okabe:1997uf
+BibTeX: '@article{Okabe:1997uf,
+      author         = "Okabe, K. and others",
+      title          = "{Measurement of the charged multiplicity of bottom and
+                        light quark events in e+ e- annihilation at s**(1/2) =
+                        58-GeV}",
+      collaboration  = "VENUS",
+      journal        = "Phys. Lett.",
+      volume         = "B423",
+      year           = "1998",
+      pages          = "407-418",
+      doi            = "10.1016/S0370-2693(98)00073-2",
+      reportNumber   = "KEK-PREPRINT-97-240, KOBE-HEP-97-04, KUDP-97-01,
+                        NGTHEP-97-4, OUHEP-97-3, OULNS-97-03, TMU-HEP-97-22",
+      SLACcitation   = "%%CITATION = PHLTA,B423,407;%%"
+}'

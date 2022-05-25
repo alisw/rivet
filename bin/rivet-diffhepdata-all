@@ -1,0 +1,179 @@
+#! /usr/bin/env python
+
+"""\
+%(prog)s [-h|--help] [-r|--rivet_directory RIVET_DIRECTORY] [-d|--hepdata_directory HEPDATA_DIRECTORY] [-o|--output_directory %OUTPUT_DIRECTORY] [-l|--lower_count LOWER_COUNT]  [-u|--upper_count UPPER_COUNT] [-f|--force_download] [--sync]
+
+Check compatibility of YODA reference data files, distributed with Rivet, with the YODA file downloaded from HEPData.
+Optional arguments to specify Rivet analyses directory and directories to store HEPData .yoda files and yodadiff output.
+Optional arguments to loop over a range of INSPIRE IDs (for testing) and to force re-download of HEPData .yoda files.
+Optional argument to perform sync operation.
+
+Examples:
+ # Specify Rivet directory, HEPData and yodadiff output directories, and redirect output to a text file.
+ rivet-diffhepdata-all -r ../Rivet/analyses -d HEPDataYoda -o YodaDiffOutput > rivet-diffhepdata-all.txt
+
+ # Loop over only the first 10 INSPIRE IDs (sorted by Rivet analysis name) and force HEPData re-download.
+ rivet-diffhepdata-all -l 1 -u 10 -f  # for Rivet .yoda files located in a subdirectory of current path
+"""
+
+from __future__ import print_function
+import os, shutil, fnmatch, importlib, glob, requests, argparse
+
+from rivet import hepdatautils, version, getAnalysis
+import yoda
+
+parser = argparse.ArgumentParser(usage='Check compatibility of YODA reference data files with HEPData for all Rivet analyses')
+parser.add_argument('-r', '--rivet_directory', nargs=1, default=['.'], help='directory to search for Rivet .yoda files')
+parser.add_argument('-d', '--hepdata_directory', nargs=1, default=['.'], help='directory to store downloaded HEPData .yoda files')
+parser.add_argument('-o', '--output_directory', nargs=1, default=['.'], help='directory to write yodadiff output')
+parser.add_argument('-l', '--lower_count', nargs=1, type=int, default=[0], help='minimum count for loop over INSPIRE IDs')
+parser.add_argument('-u', '--upper_count', nargs=1, type=int, default=[0], help='maximum count for loop over INSPIRE IDs')
+parser.add_argument('-f', '--force_download', action='store_true', help='force re-download of HEPData .yoda files')
+parser.add_argument('--sync', action='store_true', help='perform sync operation')
+args = parser.parse_args()
+rivet_directory = args.rivet_directory[0]
+hepdata_directory = args.hepdata_directory[0]
+output_name = args.output_directory[0]
+lower_count = args.lower_count[0]
+upper_count = args.upper_count[0]
+force_download = args.force_download
+perform_sync = args.sync
+print('Arguments specified:')
+print('    rivet_directory={}'.format(rivet_directory))
+print('    hepdata_directory={}'.format(hepdata_directory))
+print('    output={}'.format(output_name))
+print('    lower_count={}'.format(lower_count))
+print('    upper_count={}'.format(upper_count))
+print('    force_download={}'.format(force_download))
+print('    sync={}'.format(perform_sync))
+
+def versionSorter(filename):
+    # e.g. "HEPData-ins944757-v2-yoda.yoda.gz" -> v2 -> 2
+    return int(filename.split('-')[2][1:])
+
+def find(filename, path):
+    """ Function to return first matching 'filename' by walking the directory tree top-down from 'path'. """
+    for root, dirs, files in os.walk(path):
+        if 'plugin' in root:
+            if filename in files:
+                return os.path.join(root, filename)
+            if filename + '.gz' in files:
+                return os.path.join(root, filename + '.gz')
+
+def getRefDataFiles(pattern, path):
+    """ Function to return all file names matching 'pattern' by walking the directory tree top-down from 'path'. """
+    for root, dirs, files in os.walk(path):
+         if 'plugin' in root:
+            return fnmatch.filter(files, pattern)
+
+# Create output directories if they don't already exist.
+if not os.path.exists(hepdata_directory):
+    os.makedirs(hepdata_directory)
+if not os.path.exists(output_name):
+    os.makedirs(output_name)
+
+# Get mapping between INSPIRE IDs and Rivet analysis names.
+# use local file is available (needed for development of patches at same time as analysis)
+if os.path.isfile("doc/analists/analyses.json") :
+    import json
+    with open("doc/analists/analyses.json") as jf:
+        analyses = json.load(jf)
+else :
+    analyses_url = 'http://rivet.hepforge.org/analyses'
+    response = requests.get(analyses_url + version().replace('.', '') + '.json')
+    # Fallback if version-specific analyses.json file not available.
+    if response.status_code != requests.codes.ok:
+        response = requests.get(analyses_url + '.json')
+    analyses = response.json()
+
+# Loop over INSPIRE IDs and collect compatible and incompatible analyses.
+# Sort analyses dict by the Rivet analysis name.
+compatible_analyses = []
+incompatible_analyses = []
+for count, inspire_id in enumerate(sorted(analyses, key=analyses.get)):
+
+    # Loop over a restricted range of INSPIRE IDs (useful for testing).
+    if count + 1 < lower_count or (upper_count and count + 1 > upper_count):
+        continue
+
+    print()
+    compatible = True
+    num_analyses = len(analyses[inspire_id])
+    if num_analyses != 1:
+        # routine names could be aliased (e.g. to have entry point based in spire/inspire ID)
+        # this is fine as long as there is only one unique ref data file
+        refdata_files = [ getRefDataFiles(ana + '*.yoda*', rivet_directory) for ana in analyses[inspire_id] ]
+        if len(refdata_files) == 1:
+            analyses[inspire_id] = refdata_files[0].split('.', 1)[0]
+        else:
+            compatible = False
+            txt = 'Multiple (or zero) reference data files matching Rivet analyses {} for INSPIRE ID {}.'
+            print(txt.format(analyses[inspire_id], inspire_id))
+
+    if compatible and 'CONF' in analyses[inspire_id][0]:
+        compatible = True
+        print('Rivet analysis {} is a CONF note result. Skipping.'.format(analyses[inspire_id][0]))
+    else:
+        analysis = analyses[inspire_id][0]
+
+        yodafile = find(analysis + '.yoda', rivet_directory)
+        outfile = os.path.join(output_name, analysis + '.txt')
+
+        # Check if .yoda file has already been downloaded from HEPData, otherwise download. Do anyway if force_download = True.
+        matched_files = glob.glob(os.path.join(hepdata_directory, 'HEPData-ins' + inspire_id + '-v*-yoda.yoda.gz'))
+        yodafile_from_hepdata = None
+        if not matched_files or force_download:
+            # try downloading from HepData
+            try:
+                yodafile_from_hepdata = hepdatautils.download_from_hepdata(inspire_id, analysis, hepdata_directory)
+            except:
+                print('Download from HEPData failed for Rivet analysis {}.'.format(analysis))
+        else:
+            yodafile_from_hepdata = sorted(matched_files,key=versionSorter)[-1] # sort in case of multiple versions 
+
+        if yodafile_from_hepdata:
+            # This block deals with ref data post-processing, e.g. to patch 0-width bins
+            # First check if a post-processed version already exists in HEPData directory:
+            hdPatchedVersions = glob.glob( '{}-post.yoda.gz'.format(yodafile_from_hepdata[:-8]) )
+            if hdPatchedVersions and not force_download: # use the latest one
+                yodafile_from_hepdata = sorted(hdPatchedVersions)[-1]
+            else:
+                matchstr, unmatchstr = None, None
+                try:
+                    a = getAnalysis(analysis)
+                    matchstr, unmatchstr = a.refMatch(), a.refUnmatch()
+                    del a
+                except:
+                    print("Couldn't instantiate analysis {ana} to check for HD Ref(Un)match regexes".format(ana=analysis))
+                patchedContent = hepdatautils.patch_yodaref(yodafile_from_hepdata, matchstr, unmatchstr) # apply post-processing
+                # save the post-processed content in the HEPData directory and use it instead
+                yodasplits = yodafile_from_hepdata.split('.', 1)
+                yodafile_from_hepdata = '{}-post.yoda.gz'.format(yodasplits[0])
+                yoda.writeYODA(patchedContent, yodafile_from_hepdata)
+                del patchedContent
+
+        if yodafile:
+            # Run yodadiff between the .yoda files from Rivet and HEPData.
+            compatible = hepdatautils.compare_with_hepdata(yodafile, yodafile_from_hepdata=yodafile_from_hepdata, output=outfile)
+            if perform_sync and compatible:
+                shutil.copy(yodafile_from_hepdata, yodafile)
+        else:
+            print('Missing YODA reference data file from Rivet for analysis {}.'.format(analysis))
+            compatible = True
+
+    if compatible:
+        print('YODA reference data files from Rivet and HEPData are compatible!')
+        compatible_analyses.append(inspire_id)
+    else:
+        print('YODA reference data files from Rivet and HEPData are NOT compatible!')
+        incompatible_analyses.append(inspire_id)
+
+# Print out some summary information.
+print()
+print('Compatible Rivet analyses: {}'.format([analyses[inspire_id] for inspire_id in compatible_analyses]))
+print('Incompatible Rivet analyses: {}'.format([analyses[inspire_id] for inspire_id in incompatible_analyses]))
+print()
+print('Of {:d} Rivet analyses in {}, {:d} ({:.1f}%) were compatible and {:d} ({:.1f}%) were incompatible.'.format(
+    len(analyses), rivet_directory,
+    len(compatible_analyses), 100.*len(compatible_analyses)/len(analyses),
+    len(incompatible_analyses), 100.*len(incompatible_analyses)/len(analyses)))

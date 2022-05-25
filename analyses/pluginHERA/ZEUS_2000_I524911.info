@@ -1,0 +1,41 @@
+Name: ZEUS_2000_I524911
+Year: 2000
+Summary: Measurement of azimuthal asymmetries in deep inelastic scattering
+Experiment: ZEUS
+Collider: HERA
+InspireID: 524911
+Status: VALIDATED
+Reentrant: True
+Authors:
+ - Aryan Borkar aryanborkar9sept@gmail.com
+ - Hannes Jung <hannes.jung@desy.de>
+References:
+ - 'Phys.Lett.B481:199-212,200'
+ - 'DOI:10.1016/S0370-2693(00)00430-5'
+ - 'arXiv:hep-ex/0003017'
+ 
+RunInfo: The kinematic region studied is $0.2 < y < 0.8$ and $0.01 < x < 0.1$, corresponding to a $Q^2$ range $180 < Q^2 < 7220 \GeV^2$
+Beams: [[p+, e-],[e-,p+]]
+Energies: [[820,27.5],[27.5,820]]
+Description:
+  'The distribution of the azimuthal angle for the charged hadrons has been studied in the hadronic centre-of-mass system for neutral current deep inelastic positron-proton scattering with the ZEUS detector at HERA. Measurements of the dependence of the moments of this distribution on the transverse momenta of the charged hadrons are presented.'
+ValidationInfo:
+  'The results obtained were plotted via the use of PDFs CTEQ6l1 and HERAPDF2.0 and compared with those of using HzTool.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: ZEUS:2000esx
+BibTeX: '@article{ZEUS:2000esx,
+    author = "Breitweg, J. and others",
+    collaboration = "ZEUS",
+    title = "{Measurement of azimuthal asymmetries in deep inelastic scattering}",
+    eprint = "hep-ex/0003017",
+    archivePrefix = "arXiv",
+    reportNumber = "DESY-00-040",
+    doi = "10.1016/S0370-2693(00)00430-5",
+    journal = "Phys. Lett. B",
+    volume = "481",
+    pages = "199--212",
+    year = "2000"
+}'
+

@@ -1,0 +1,33 @@
+Name: MARKII_1988_I246184
+Year: 1988
+Summary: Event Shapes at 29 GeV
+Experiment: MARKII
+Collider: PEP
+InspireID: 246184
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 37 (1988) 1, 1988
+RunInfo: e+ e- to hadrons
+Beams: [e+, e-]
+Energies: [29.]
+Description:
+  'Event shapes measured by the MARKII collaboration at 29 GeV.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Petersen:1987bq
+BibTeX: '@article{Petersen:1987bq,
+    author = "Petersen, A. and others",
+    title = "{Multi - Hadronic Events at E(c.m.) = 29-GeV and Predictions of QCD Models from E(c.m.) = 29-GeV to E(c.m.) = 93-GeV}",
+    reportNumber = "SLAC-PUB-4290, LBL-23243",
+    doi = "10.1103/PhysRevD.37.1",
+    journal = "Phys. Rev. D",
+    volume = "37",
+    pages = "1",
+    year = "1988"
+}
+'

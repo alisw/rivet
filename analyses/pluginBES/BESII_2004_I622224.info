@@ -1,0 +1,40 @@
+Name: BESII_2004_I622224
+Year: 2004
+Summary: Charged particle momentum distributions for energies between 2.2 and 4.8 GeV
+Experiment: BESII
+Collider: BEPC
+InspireID: 622224
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D69 (2004) 072002, 2004 
+RunInfo: e+e- to hadrons. Beam energy must be specified as analysis option "ENERGY" when rivet-merging samples.
+NeedCrossSection: yes
+Beams: [e+,e-]
+Energies: [2.2,2.6,3.0,3.2,4.6,4.8]
+Options:
+ - ENERGY=2.2,2.6,3.0,3.2,4.6,4.8
+Luminosity_fb: 
+Description:
+  'Charged particle momentum distributions for energies between 2.2 and 4.8 GeV.
+   Beam energy must be specified as analysis option "ENERGY" when rivet-merging samples.'
+BibKey: Dunwoodie:2003xt
+BibTeX: '@article{Dunwoodie:2003xt,
+      author         = "Dunwoodie, W. and others",
+      title          = "{Measurement of inclusive momentum spectra and
+                        multiplicity distributions of charged particles at S**1/2
+                        sim 2-5 GeV}",
+      collaboration  = "BES",
+      journal        = "Phys. Rev.",
+      volume         = "D69",
+      year           = "2004",
+      pages          = "072002",
+      doi            = "10.1103/PhysRevD.69.072002",
+      eprint         = "hep-ex/0306055",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "SLAC-PUB-10095",
+      SLACcitation   = "%%CITATION = HEP-EX/0306055;%%"
+}'

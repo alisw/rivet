@@ -1,0 +1,49 @@
+Name: CMS_2018_I1653948
+Year: 2018
+Summary: Measurement of the inelastic proton-proton cross section at 13 TeV
+Experiment: CMS
+Collider: LHC
+InspireID: 1653948
+Reentrant: true
+Status: VALIDATED
+Authors:
+ - cms-pag-conveners-smp@cern.ch
+ - Sercan Sen <Sercan.Sen@cern.ch>
+ - Pierre Van Mechelen <pierre.vanmechelen@uantwerpen.be>
+ - Hans Van Haevermaet <hans.vanhaevermaet@uantwerpen.be>
+References:
+ - JHEP 07 (2018) 161
+ - DOI 10.1007/JHEP07(2018)161
+ - CMS-FSQ-15-005
+ - arXiv:1802.02613 [hep-ex]
+ - CERN-EP-2018-004
+ - http://cms-results.web.cern.ch/cms-results/public-results/publications/FSQ-15-005/
+RunInfo:
+   Inelastic events (non-diffractive and inelastic diffractive).
+NumEvents: 1M
+Beams: [p+, p+]
+Energies: [13000]
+PtCuts:
+Description:
+    'A measurement of the inelastic proton-proton cross section at $\sqrt{s} = 13$ TeV with the CMS
+    detector at the LHC has been presented. An inelastic cross section of $67.5 \pm 0.8 \text{(syst)}
+    \pm 1.6 \text{(lumi)}$ mb is obtained for $\xi = M^2/s > 10^{-6}$ (corresponding to $M > 13$ GeV),
+    with $M$ the larger of $M_{\mathrm{X}}$ and $M_{\mathrm{Y}}$, where $M_{\mathrm{X}}$ and
+    $M_{\mathrm{Y}}$ are the masses of the diffractive dissociation systems with negative and positive
+    pseudorapidities, respectively. In addition, an inelastic cross section of $68.6 \pm 0.5 \text{(syst)}
+    \pm 1.6 \text{(lumi)}$ mb is obtained in the enlarged phase space $\xi_{\mathrm{X}} > 10^{-7}$
+    and/or $\xi_{\mathrm{Y}} > 10^{-6}$ (corresponding to $M_{\mathrm{X}} > 4.1$ GeV and/or
+    $M_{\mathrm{Y}} > 13$ GeV).'
+BibKey: Sirunyan:2018nqx
+BibTeX: '@article{Sirunyan:2018nqx,
+      author         = "Sirunyan, Albert M and others",
+      title          = "{Measurement of the inelastic proton-proton cross section
+                        at $\sqrt{s}=$ 13 TeV}",
+      collaboration  = "CMS",
+      year           = "2018",
+      eprint         = "1802.02613",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CMS-FSQ-15-005, CERN-EP-2018-004",
+      SLACcitation   = "%%CITATION = ARXIV:1802.02613;%%"
+}'

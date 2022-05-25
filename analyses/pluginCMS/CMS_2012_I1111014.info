@@ -1,0 +1,22 @@
+Name: CMS_2012_I1111014
+Year: 2012
+Summary: Shape, Transverse Size, and Charged Hadron Multiplicity of Jets in pp Collisions at $\sqrt{s}=7$ TeV
+Experiment: CMS
+Collider: LHC
+InspireID: 1111014
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Andreas Hinzmann <andreas.hinzmann@cern.ch>
+References:
+ - arXiv:1204.3170 [hep-ex]
+ - inspirehep 1111014
+ - http://cms-results.web.cern.ch/cms-results/public-results/publications/QCD-10-029/
+RunInfo:
+  pp QCD interactions at $\sqrt{s} = 7$ TeV. Data collected by CMS during the year 2010.
+Beams: [p+, p+]
+Energies: [7000]
+PtCuts: [20]
+NeedCrossSection: no
+Description:
+  'Measurements of jet characteristics from inclusive jet production in proton-proton collisions at a centre-of-mass energy of 7 TeV are presented. The data sample was collected with the CMS detector at the LHC during 2010 and corresponds to an integrated luminosity of 36 inverse picobarns. The mean charged hadron multiplicity, the differential and integral jet shape distributions, and two independent moments of the shape distributions are measured as functions of the jet transverse momentum for jets reconstructed with the anti-kT algorithm. The measured observables are corrected to the particle level and compared with predictions from various QCD Monte Carlo generators.'

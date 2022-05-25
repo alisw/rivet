@@ -1,0 +1,36 @@
+Name: BESII_2007_I762901
+Year: 2007
+Summary: Cross sections for light hadrons at 3.650 and 3.773 GeV 
+Experiment: BESII
+Collider: BEPC
+InspireID: 762901
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B656 (2007) 30-37, 2007
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+, e-]
+Description:
+  'Cross section for $e^+e^-\to 2\pi^+2\pi^-K^+K^-$, $\pi^+\pi^-2K^+2K^-$,
+  $2\pi^+2\pi^-p\bar{p}$, $3\pi^+3\pi^-$, $2\pi^+2\pi^-K^+K^-\pi^0$,
+  $\rho^0\pi^+\pi^-$, $\rho^0K^+K^-$, $\rho^0p\bar{p}$, $K^{*0}K^-\pi^++\text{c.c.}$ at 3.650 and 3.773 GeV.'
+Keywords: []
+BibKey: Ablikim:2007af
+BibTeX: '@article{Ablikim:2007af,
+      author         = "Ablikim, M. and others",
+      title          = "{Measurements of the observed cross-sections for
+                        exclusive light hadron production in e+ e- annihilation at
+                        s**(1/2) = 3.773-GeV and 3.650- GeV}",
+      collaboration  = "BES",
+      journal        = "Phys. Lett.",
+      volume         = "B656",
+      year           = "2007",
+      pages          = "30-37",
+      doi            = "10.1016/j.physletb.2007.10.001",
+      eprint         = "0710.0786",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:0710.0786;%%"
+}'

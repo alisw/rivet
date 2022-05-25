@@ -1,0 +1,30 @@
+Name: DM1_1979_I141565
+Year: 1979
+Summary:  Cross section for $e^+e^-\to p\bar{p}$ between 1.925 and 2.18 GeV
+Experiment: DM1
+Collider: DCI
+InspireID: 141565
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B86 (1979) 395-398, 1979 
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Description:
+  'Measurement of the cross section for $e^+e^-\to p\bar{p}$ between 1.925 and 2.18 GeV.'
+Keywords:
+BibKey: Delcourt:1979ed
+BibTeX: '@article{Delcourt:1979ed,
+      author         = "Delcourt, B. and others",
+      title          = "{Study of the Reaction $e^+ e^- \to p \bar{p}$ in the
+                        Total Energy Range 1925-{MeV} - 2180-{MeV}}",
+      journal        = "Phys. Lett.",
+      volume         = "86B",
+      year           = "1979",
+      pages          = "395-398",
+      doi            = "10.1016/0370-2693(79)90864-5",
+      reportNumber   = "LAL-79/12",
+      SLACcitation   = "%%CITATION = PHLTA,86B,395;%%"
+}'

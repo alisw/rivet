@@ -1,0 +1,40 @@
+Name: L3_2004_I645127
+Year: 2004
+Summary: $\mu^+\mu^-$ and $\tau^+\tau^-$ production in two photon collisions at LEP 
+Experiment: L3
+Collider: LEP
+InspireID: 645127
+Status: VALIDATED 
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk?>
+References:
+ - Phys.Lett. B585 (2004) 53-62, 2004 
+RunInfo: e+e- -> gamma gamma producing muons and tau leptons
+NeedCrossSection: yes
+Beams: [[e-, e+],[gamma,gamma]]
+Energies: [161,172,183,189,196,206,3.5,4.5,5.5,6.5,7.5,9.0,12.5,17.5,30]
+Options:
+ - PROCESS=EE,GG
+Description:
+  'Measurement of $e^+e^-\to e^+e^-\gamma\gamma\to e^+e^-\to e^+e^-\mu^+\mu^-,\ \tau^+\tau^-$.
+   This analysis can test approximations used to simulate this process, but also is a prototype for analyses of $\gamma\gamma$ collisions.
+   There are two modes supported, the first PROCESS=EE, simulates for full process starting with $e^+e^-$ beams, while the second
+   PROCESS=GG is the extracted cross section for $\gamma\gamma\to \mu^+\mu^-$.'
+Keywords: []
+BibKey: Achard:2004jj
+BibTeX: '@article{Achard:2004jj,
+      author         = "Achard, P. and others",
+      title          = "{Muon pair and tau pair production in two photon
+                        collisions at LEP}",
+      collaboration  = "L3",
+      journal        = "Phys. Lett.",
+      volume         = "B585",
+      year           = "2004",
+      pages          = "53-62",
+      doi            = "10.1016/j.physletb.2004.02.012",
+      eprint         = "hep-ex/0402037",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-EP-2003-080",
+      SLACcitation   = "%%CITATION = HEP-EX/0402037;%%"
+}'

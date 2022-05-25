@@ -1,0 +1,35 @@
+Name: BABAR_2009_I797507
+Year: 2009
+Summary: Measurement of $R_b$ for energies between 10.541 and 11.206 GeV
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 797507
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - PRL 102,012001
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: no
+Beams: [e-, e+]
+Description:
+  'Measurement of $R_b$ in $e^+e^-$ collisions by BaBar for energies between 10.541 and 11.206 GeV.
+   The individual bottom hadronic and muonic cross sections are also outputted to the yoda file
+   so that ratio $R$ can be recalculated if runs are combined.'
+BibKey: Aubert:2008ab
+BibTeX: '@article{Aubert:2008ab,
+      author         = "Aubert, Bernard and others",
+      title          = "{Measurement of the $e^{+} e^{-} \to b \bar{b}$ cross
+                        section between $\sqrt{s}$ = 10.54-GeV and 11.20-GeV}",
+      collaboration  = "BaBar",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "102",
+      year           = "2009",
+      pages          = "012001",
+      doi            = "10.1103/PhysRevLett.102.012001",
+      eprint         = "0809.4120",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "SLAC-PUB-13397, BABAR-PUB-08042",
+      SLACcitation   = "%%CITATION = ARXIV:0809.4120;%%"
+}'

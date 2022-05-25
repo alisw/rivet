@@ -1,0 +1,34 @@
+Name: SND_2020_I1789269
+Year: 2020
+Summary: Cross section for $e^+e^-\to \pi^+\pi^-$ at energies between 0.525 and 0.883 GeV
+Experiment: SND
+Collider: VEPP-2M
+InspireID: 1789269
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ -  arXiv:2004.00263 
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Description:
+  'Measurement of the cross section for $e^+e^-\to \pi^+\pi^-$ at energies between 0.525 and 0.883 GeV'
+ValidationInfo:
+  Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Achasov:2020iys
+BibTeX: '@article{Achasov:2020iys,
+      author         = "Achasov, M. N. and others",
+      title          = "{Measurement of the $e^+e^- \to\pi^+\pi^- $ process cross
+                        section with the SND detector at the VEPP-2000 collider in
+                        the energy region $0.525<\sqrt{s}<0.883$ GeV}",
+      collaboration  = "SND",
+      year           = "2020",
+      eprint         = "2004.00263",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:2004.00263;%%"
+}'

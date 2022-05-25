@@ -1,0 +1,32 @@
+Name: DM1_1979_I132828
+Year: 1979
+Summary: Cross section for $e^+e^-\to\pi^+\pi^+\pi^-\pi^+$ between 0.89 and 1.1 GeV
+Experiment: DM1
+Collider: ACO
+InspireID: 132828
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B81 (1979) 389-392, 1979 
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+  'Measurement of the cross section for $e^+e^-\to\pi^+\pi^+\pi^-\pi^+$ between 0.89 and 1.1 GeV'
+Keywords:
+BibKey: Cordier:1978yp
+BibTeX: '@article{Cordier:1978yp,
+      author         = "Cordier, A. and others",
+      title          = "{Cross-section of the Reaction $e^+ e^- \to \pi^+ \pi^-
+                        \pi^+ \pi^-$ for Center-of-mass Energies From 890-{MeV} to
+                        1100-{MeV}}",
+      journal        = "Phys. Lett.",
+      volume         = "81B",
+      year           = "1979",
+      pages          = "389-392",
+      doi            = "10.1016/0370-2693(79)90360-5",
+      reportNumber   = "LAL-78/31",
+      SLACcitation   = "%%CITATION = PHLTA,81B,389;%%"
+}'

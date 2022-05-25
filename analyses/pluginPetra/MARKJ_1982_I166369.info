@@ -1,0 +1,31 @@
+Name: MARKJ_1982_I166369
+Year: 1982
+Summary: Measurement of $R$ between 33 and 36.7 GeV
+Experiment: MARKJ
+Collider: PETRA
+InspireID: 166369
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B108 (1982) 63-66, 1982 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: yes
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$ in $e^+e^-$ collisions by MARKJ between 33 and 36.7 GeV.
+   The individual hadronic and muonic cross sections are also outputted to the yoda file
+   so that ratio $R$ can be recalculated if runs are combined.'
+BibKey: Barber:1981tc
+BibTeX: '@article{Barber:1981tc,
+      author         = "Barber, D. P. and others",
+      title          = "{Measurement of Hadron Production and Three Jet Event
+                        Properties at {PETRA} {MIT}}",
+      journal        = "Phys. Lett.",
+      volume         = "108B",
+      year           = "1982",
+      pages          = "63-66",
+      doi            = "10.1016/0370-2693(82)91143-1",
+      reportNumber   = "MIT-LNS-115",
+      SLACcitation   = "%%CITATION = PHLTA,108B,63;%%"
+}'

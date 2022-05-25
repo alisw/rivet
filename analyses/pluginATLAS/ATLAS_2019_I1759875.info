@@ -1,0 +1,52 @@
+Name: ATLAS_2019_I1759875
+Year: 2019
+Summary: dileptonic ttbar at 13 TeV
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1759875
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Richard Hawkings <richard.hawkings@cern.ch>
+References:
+ - Eur.Phys.J.C 80 (2020) 6, 528
+Keywords:
+ - TTBAR
+ - DILEPTON
+RunInfo:
+  dileptonic top-quark pair production
+Luminosity_fb: 36.1
+Beams: [p+, p+]
+Energies: [13000]
+PtCuts: [20]
+NeedCrossSection: True
+Description: 
+    'The inclusive top quark pair ($t\bar{t}$) production cross-section $\sigma_{t\bar{t}}$ has been measured in proton-proton 
+    collisions at $\sqrt{s}=13$ TeV, using 36.1 fb$^{-1}$ of data collected in 2015-2016 by the ATLAS experiment at the LHC. 
+    Using events with an opposite-charge $e\mu$ pair and $b$-tagged jets, the cross-section is measured to be: 
+    $\sigma_{t\bar{t}} = 826.4 \pm 3.6$ (stat) $\pm 11.5$ (syst) $\pm 15.7$ (lumi) $\pm 1.9$ (beam) pb, where the uncertainties reflect 
+    the limited size of the data sample, experimental and theoretical systematic effects, the integrated luminosity, 
+    and the LHC beam energy, giving a total uncertainty of 2.4%. The result is consistent with theoretical QCD calculations 
+    at next-to-next-to-leading order. It is used to determine the top quark pole mass via the dependence of the predicted 
+    cross-section on $m_t^{\mathrm{pole}}$, giving $m_t^{\mathrm{pole}}=173.1^{+2.0}_{-2.1}$ GeV. It is also combined with 
+    measurements at $\sqrt{s}=7$ TeV and $\sqrt{s}=8$ TeV to derive ratios and double ratios of $t\bar{t}$ and $Z$ cross-sections 
+    at different energies. The same event sample is used to measure absolute and normalised differential cross-sections as functions 
+    of single-lepton and dilepton kinematic variables, and the results are compared with predictions from various Monte Carlo event
+    generators.'
+BibKey: Aad:2019hzw
+BibTeX: '@article{Aad:2019hzw,
+      author         = "Aad, Georges and others",
+      title          = "{Measurement of the $t\bar{t}$ production cross-section
+                        and lepton differential distributions in $e\mu$ dilepton
+                        events from $pp$ collisions at $\sqrt{s}=13$ TeV with the
+                        ATLAS detector}",
+      collaboration  = "ATLAS",
+      year           = "2019",
+      eprint         = "1910.08819",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-EP-2019-203",
+      SLACcitation   = "%%CITATION = ARXIV:1910.08819;%%"
+}'
+ReleaseTest:
+ - $A LHC-13-Top-L

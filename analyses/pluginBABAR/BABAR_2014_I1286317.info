@@ -1,0 +1,40 @@
+Name: BABAR_2014_I1286317
+Year: 2014
+Summary: Rate and momentum spectra for anti-deuteron production in $\Upsilon(1,2,3S)$ decays and nearby continuum
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 1286317
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D89 (2014) no.11, 111102
+RunInfo: e+e- to hadrons via Upsilon(1,2,3S) and continuum at 10.58 GeV
+Beams: [e+, e-]
+Energies: [9.46,10.02,10.36,10.58]
+Description:
+  'Measurement of the branching ratios momentum spectra for anti-deuteron production in $\Upsilon(1,2,3S)$ decays,
+   together with the cross section and momentum spectrum for anti-deuteron production in the continuum'
+ValidationInfo:
+  'Herwig 7 events, relabelling antiprotons as nothing to make deuterons'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Lees:2014iub
+BibTeX: '@article{Lees:2014iub,
+      author         = "Lees, J. P. and others",
+      title          = "{Antideuteron production in $\Upsilon(nS)$ decays and in
+                        $e^+e^- \to q\bar{q}$ at $\sqrt{s} \approx 10.58$ GeV}",
+      collaboration  = "BaBar",
+      journal        = "Phys. Rev.",
+      volume         = "D89",
+      year           = "2014",
+      number         = "11",
+      pages          = "111102",
+      doi            = "10.1103/PhysRevD.89.111102",
+      eprint         = "1403.4409",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "SLAC-PUB-15925",
+      SLACcitation   = "%%CITATION = ARXIV:1403.4409;%%"
+}'

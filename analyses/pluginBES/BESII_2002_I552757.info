@@ -1,0 +1,35 @@
+Name: BESII_2002_I552757
+Year: 2002
+Summary:  Measurement of $R$ for energies between 2.2 and 4.8 GeV
+Experiment: BESII
+Collider: BEPC
+InspireID: 552757
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 88 (2002) 101802, 2002 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: yes
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$ in $e^+e^-$ collisions by BESII for energies between 2.2 and 4.8 GeV.
+   The individual hadronic and muonic cross sections are also outputted to the yoda file
+   so that ratio $R$ can be recalculated if runs are combined.'
+BibKey: Bai:2001ct
+BibTeX: '@article{Bai:2001ct,
+      author         = "Bai, J. Z. and others",
+      title          = "{Measurements of the cross-section for e+ e ---&gt; hadrons
+                        at center-of-mass energies from 2-GeV to 5-GeV}",
+      collaboration  = "BES",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "88",
+      year           = "2002",
+      pages          = "101802",
+      doi            = "10.1103/PhysRevLett.88.101802",
+      eprint         = "hep-ex/0102003",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "SLAC-PUB-8938",
+      SLACcitation   = "%%CITATION = HEP-EX/0102003;%%"
+}'

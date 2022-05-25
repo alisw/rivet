@@ -1,0 +1,62 @@
+Name: CMS_2019_I1744604
+Year: 2019
+Summary: $t$-channel single top-quark differential cross sections and charge ratios at 13 TeV
+Experiment: CMS
+Collider: LHC
+InspireID: 1744604
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Matthias Komm <Matthias.Komm@cern.ch>
+References:
+ - Eur.Phys.J. C80 (2020) 370, 2020
+ - DOI:10.1140/epjc/s10052-020-7858-1
+ - arXiv:1907.08330
+RunInfo:
+  't-channel single top quark and antiquark events at $\sqrt{s} = 13$ TeV; charged lepton
+  (including those from intermediate $\tau$ lepton decays) + two jets selected at particle level'
+Beams: [p+, p+]
+Energies: [13000]
+Luminosity_fb: 35.9
+Reentrant: true
+Description:
+    'Abstract:
+    A measurement is presented of differential cross sections for $t$-channel single top quark and antiquark production in
+    proton-proton collisions at a centre-of-mass energy of 13 TeV by the CMS experiment at the LHC. From a data set corresponding
+    to an integrated luminosity of 35.9 $\textrm{fb}^{-1}$, events containing one muon or electron and two or three jets are analysed.
+    The cross section is measured as a function of the top quark transverse momentum ($p_\textrm{T}$), rapidity, and
+    polarisation angle, the charged lepton $p_\textrm{T}$ and rapidity, and the $p_\textrm{T}$ of the W boson from the
+    top quark decay. In addition, the charge ratio is measured differentially as a function of the top quark, charged lepton,
+    and W boson kinematic observables. The results are found to be in agreement with standard model predictions using
+    various next-to-leading-order event generators and sets of parton distribution functions. Additionally, the spin asymmetry,
+    sensitive to the top quark polarisation, is determined from the differential distribution of the polarisation angle at
+    parton level to be $0.440 \pm 0.070$, in agreement with the standard model prediction.
+
+    Rivet:
+    This analysis is to be run separately on t-channel single top quark and top antiquark simulation
+    and the resulting outputs have to be merged for caculating the top quark and antiquark cross section sums and ratios.
+
+    The particle level selection requires:
+        exactly one dressed lepton (electron or muon; including those from intermediate $\tau$ lepton decay) with $p_{T} > 26$~GeV and $|\eta| < 2.4$;
+        exactly two jets with $p_{T} > 40$~GeV and $|\eta| < 4.7$ that are separated from the dressed lepton by $\Delta R>0.4$.
+    A neutrino candidate reconstructed from the summed transverse momenta of all prompt neutrinos using a W boson mass constraint ($m_\textrm{W}=80.4$ GeV).
+    The four momentum of the top quark is found by summing the dressed lepton, neutrino,
+    and the jet momenta, where the latter is chosen such that a top quark mass closest to 172.5 GeV is obtained.
+    The other jet is taken to be the one that recoils against the W boson in production and used for calculating the top quark polarization angle.'
+
+BibKey: Sirunyan:2019hqb
+BibTeX: '@article{Sirunyan:2019hqb,
+    author = "Sirunyan, Albert M and others",
+    collaboration = "CMS",
+    title = "{Measurement of differential cross sections and charge ratios for $t$-channel single top quark production in proton-proton collisions at $\sqrt{s}=13\,\textrm{TeV}$}",
+    eprint = "1907.08330",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CMS-TOP-17-023, CERN-EP-2019-138",
+    doi = "10.1140/epjc/s10052-020-7858-1",
+    journal = "Eur. Phys. J. C",
+    volume = "80",
+    number = "5",
+    pages = "370",
+    year = "2020"
+}'

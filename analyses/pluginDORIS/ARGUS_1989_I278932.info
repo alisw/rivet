@@ -1,0 +1,34 @@
+Name: ARGUS_1989_I278932
+Year: 1989
+Summary: Spectrum of $\Delta^{++}$ baryons produced in $\Upsilon(1S)$ decays
+Experiment: ARGUS
+Collider: DORIS
+InspireID: 278932
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys. Lett. B230 169-174
+RunInfo: e+e- to hadrons
+Description:
+  'Measurement of the production rate of $\Delta^{++}$ baryons in $\Upsilon(1S)$ decays and the nearby continuum.
+   The momentum spectrum in $\Upsilon(1S)$ decays is measured, but not that in the continuum.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Albrecht:1989qj
+BibTeX: '@article{Albrecht:1989qj,
+      author         = "Albrecht, H. and others",
+      title          = "{Observation of $\Delta^{++}$ (1232) Production in $e^+
+                        e^-$ Annihilations Around 10-{GeV}}",
+      collaboration  = "ARGUS",
+      journal        = "Phys. Lett.",
+      volume         = "B230",
+      year           = "1989",
+      pages          = "169-174",
+      doi            = "10.1016/0370-2693(89)91673-0",
+      reportNumber   = "DESY-89-061",
+      SLACcitation   = "%%CITATION = PHLTA,B230,169;%%"
+}'

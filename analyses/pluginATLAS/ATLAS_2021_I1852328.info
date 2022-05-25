@@ -1,0 +1,44 @@
+Name: ATLAS_2021_I1852328
+Year: 2021
+Summary: WW + $\geq$1 jet production at 13 TeV
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1852328
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Hannes Mildner <hannes.mildner@cern.ch>
+References:
+ - arXiv:2103.10319 [hep-ex]
+Keywords:
+ - 2boson
+ - diboson
+ - multiboson
+ - ww
+ - 2lepton
+RunInfo:
+  pp -> WW + jet production at 13 TeV
+Luminosity_fb: 139
+Beams: [p+, p+]
+Energies: [13000]
+PtCuts: [27,27,30]
+Description:
+'Fiducial and differential measurements of $W^+W^-$ production in events with at least one hadronic jet are presented.
+These measurements are sensitive to the properties of gauge boson self interactions and provide a test of perturbative quantum chromodynamics and the electroweak theory.
+The analysis is performed using proton--proton collision data collected at $\sqrt{s}=13$ TeV with the ATLAS experiment, corresponding to an integrated luminosity of 139 fb$^{-1}$. Events with exactly one oppositely charged electron-muon pair and at least one hadronic jet with a transverse momentum of $p_{\mathrm{T}}>30$ GeV and a pseudorapidity of $|\eta|<4.5$ are selected. 
+After subtracting the background contributions and correcting for detector effects, the jet-inclusive  $W^+W^-+\ge 1$ fiducial cross-section and $W^+W^-$+jets differential cross-sections with respect to several kinematic variables are measured, for the first time at the LHC. These measurements include leptonic quantities, like the lepton transverse momenta as well as the transverse mass of the $W^+W^-$ system, and also jet related observables like the leading jet transverse momentum and the jet multiplicity.'
+BibKey: Aad:2021dse
+BibTeX: '@article{Aad:2021dse,
+    author = "Aad, Georges and others",
+    collaboration = "ATLAS",
+    title = "{Measurements of $W^+W^-+\ge 1~$jet production cross-sections in $pp$ collisions at $\sqrt{s}=13~$TeV with the ATLAS detector}",
+    eprint = "2103.10319",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CERN-EP-2021-030",
+    month = "3",
+    year = "2021"
+}'
+ReleaseTests:
+ - $A LHC-13-WW-ll
+

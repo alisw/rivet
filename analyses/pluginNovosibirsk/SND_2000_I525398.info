@@ -1,0 +1,30 @@
+Name: SND_2000_I525398
+Year: 2000
+Summary: Mass spectrum of $\eta\pi$ in $\phi\to\eta\pi^0\gamma$ decays
+Experiment: SND
+Collider: VEPP-2M
+InspireID: 525398
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B479 (2000) 53-58
+RunInfo:   Any process producing phi mesons
+Description:
+  'Mass spectra for $\eta\pi$ in $\phi$ decays to $\eta\pi^0\gamma$
+   measured by KLOE. Useful for teting the treatment of the a_0(980) meson.'
+Keywords: []
+BibKey: Achasov:2000ku
+BibTeX: '@article{Achasov:2000ku,
+      author         = "Achasov, M. N. and others",
+      title          = "{The phi ---&gt; eta pi0 gamma decay}",
+      journal        = "Phys. Lett.",
+      volume         = "B479",
+      year           = "2000",
+      pages          = "53-58",
+      doi            = "10.1016/S0370-2693(00)00334-8",
+      eprint         = "hep-ex/0003031",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = HEP-EX/0003031;%%"
+}'

@@ -1,0 +1,33 @@
+Name: TASSO_1980_I143690
+Year: 1980
+Summary: Measurement of $R$ for energies between 12 and 39 GeV
+Experiment: TASSO
+Collider: PETRA
+InspireID: 143690
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Z.Phys. C4 (1980) 87, 1980 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: yes
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$ in $e^+e^-$ collisions for energies between 12 and 39 GeV.
+   The individual hadronic and muonic cross sections are also outputted to the yoda file
+   so that ratio $R$ can be recalculated if runs are combined.'
+Keywords: []
+BibKey: Brandelik:1979bv
+BibTeX: '@article{Brandelik:1979bv,
+      author         = "Brandelik, R. and others",
+      title          = "{E+ e- Annihilation at High-Energies and Search for the
+                        t-Quark Continuum Contribution}",
+      collaboration  = "TASSO",
+      journal        = "Z. Phys.",
+      volume         = "C4",
+      year           = "1980",
+      pages          = "87",
+      doi            = "10.1007/BF01554391",
+      reportNumber   = "DESY-79/74",
+      SLACcitation   = "%%CITATION = ZEPYA,C4,87;%%"
+}'

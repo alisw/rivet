@@ -1,0 +1,30 @@
+Name: BESIII_2019_I1736235
+Year: 2019
+Summary:  Cross section for $e^+e^-\to$ proton and antiproton between 2. and 3.08 GeV
+Experiment: BESIII
+Collider: BEPC II
+InspireID: 1736235
+Status:   VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - arXiv:1905.09001
+RunInfo: e+ e- to hadrons
+NeedCrossSection: yes
+Beams: [e+, e-]
+Description:
+  'Measurement of the cross section for $e^+e^-\to p\bar{p}$ for energies between 2. and 3.08 GeV using.'
+Keywords: []
+BibKey: Ablikim:2019eau
+BibTeX: '@article{Ablikim:2019eau,
+      author         = "Ablikim, M. and others",
+      title          = "{Measurement of proton electromagnetic form factors in
+                        $e^+e^- \to p\bar{p}$ in the energy region 2.00 - 3.08
+                        GeV}",
+      collaboration  = "BESIII",
+      year           = "2019",
+      eprint         = "1905.09001",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1905.09001;%%"
+}'

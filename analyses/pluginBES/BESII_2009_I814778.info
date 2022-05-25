@@ -1,0 +1,34 @@
+Name: BESII_2009_I814778
+Year: 2009
+Summary:  Measurement of $R$ for energies between 2.6 and 3.65 GeV
+Experiment: BESII
+Collider: BEPC
+InspireID: 814778
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B677 (2009) 239-245, 2009 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: yes
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$ in $e^+e^-$ collisions by BESII for energies between 2.6 and 3.65 GeV.
+   The individual hadronic and muonic cross sections are also outputted to the yoda file
+   so that ratio $R$ can be recalculated if runs are combined.'
+BibKey: Ablikim:2009ad
+BibTeX: '@article{Ablikim:2009ad,
+      author         = "Ablikim, M. and others",
+      title          = "{R value measurements for e+ e- annihilation at 2.60-GeV,
+                        3.07-GeV and 3.65-GeV}",
+      collaboration  = "BES",
+      journal        = "Phys. Lett.",
+      volume         = "B677",
+      year           = "2009",
+      pages          = "239-245",
+      doi            = "10.1016/j.physletb.2009.05.055",
+      eprint         = "0903.0900",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:0903.0900;%%"
+}'

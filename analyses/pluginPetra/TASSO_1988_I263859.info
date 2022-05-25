@@ -1,0 +1,32 @@
+Name: TASSO_1988_I263859
+Year: 1988
+Summary: Event shapes at 35 GeV
+Experiment: TASSO
+Collider: Petra
+InspireID: 263859
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Z.Phys. C41 (1988) 359-373, 1988
+RunInfo: $e^+ e^- \to$hadrons
+NumEvents: 100000
+Beams: [e-, e+]
+Energies: [35]
+Description:
+   Event shapes Thrust, Sphericity, Aplanarity at 35 GeV
+Keywords: []
+BibKey: Braunschweig:1988qm
+BibTeX: '@Article{Braunschweig:1988qm,
+      author         = "Braunschweig, W. and others",
+      title          = "Jet Fragme",
+      collaboration  = "TASSO",
+      journal        = "Z. Phys.",
+      volume         = "C41",
+      year           = "1988",
+      pages          = "359-373",
+      doi            = "10.1007/BF01585620",
+      reportNumber   = "DESY-88-107, OUNP-42-88",
+      SLACcitation   = "%%CITATION = ZEPYA,C41,359;%%"
+}'
+

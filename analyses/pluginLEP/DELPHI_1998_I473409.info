@@ -1,0 +1,33 @@
+Name: DELPHI_1998_I473409
+Year: 1998
+Summary: Flavour separated spectra for $\pi^\pm$, $K^\pm$, $p,\bar{p}$ production in hadronic $Z^0$ decays
+Experiment: DELPHI
+Collider: LEP
+InspireID: 473409
+Status: VALIDATED
+Authors:
+ - Peter Richardson <Peter.Richardson@durham.ac.uk>
+References:
+ - Nucl.Phys. B444 (1995) 3-26, 1995 
+RunInfo:
+  Hadronic Z decay events generated on the Z pole ($\sqrt{s} = 91.2$ GeV)
+NumEvents: 1000000
+Beams: [e+, e-]
+Energies: [91.2]
+Description: 'DELPHI results for the spectra \pi^\pm$, $K^\pm$, $p,\bar{p}$ production in hadronic $Z^0$ decays.
+             The results are separated in light and bottom quark initiated events.'
+Keywords: []
+BibKey: Abreu:1998vq
+BibTeX: '@article{Abreu:1998vq,
+      author         = "Abreu, P. and others",
+      title          = "{pi+-, K+-, p and anti-p production in Z0 ---&gt; q anti-q,
+                        Z0 ---&gt; b anti-b, Z0 ---&gt; u anti-u, d anti-d, s anti-s}",
+      collaboration  = "DELPHI",
+      journal        = "Eur. Phys. J.",
+      volume         = "C5",
+      year           = "1998",
+      pages          = "585-620",
+      doi            = "10.1007/s100529800989",
+      reportNumber   = "CERN-EP-98-095, CERN-EP-98-95",
+      SLACcitation   = "%%CITATION = EPHJA,C5,585;%%"
+}'

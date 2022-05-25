@@ -1,0 +1,34 @@
+Name: MARKI_1976_I109792
+Year: 1976
+Summary: Charged particle momentum distributions for energies between 3.0 and 7.4 GeV
+Experiment: MARK-I
+Collider: SPEAR
+InspireID: 109792
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+RunInfo: e+e- > hadrons. Beam energy must be specified as analysis option "ENERGY" when rivet-merge'ing samples.
+
+NeedCrossSection: yes
+Beams: [e-, e+]
+Energies: [3.0,4.8,5.8,6.2,6.6,7.0,7.4]
+Options:
+ - ENERGY=3.0,4.8,5.8,6.2,6.6,7.0,7.4
+Description:
+  'Charged particle momentum distributions for energies between 3.0 and 7.4 GeV. Beam energy must be specified as 
+  analysis option "ENERGY" when rivet-merging samples.'
+Keywords: []
+BibKey: Hanson:1976gw
+BibTeX: '@inproceedings{Hanson:1976gw,
+      author         = "Hanson, G.",
+      title          = "{e+ e- Hadron Production and Jet Structure at SPEAR}",
+      booktitle      = "{Proceedings, XVIII International Conference on
+                        High-Energy Physics Volume 2: July 15-21, 1976 Tbilisi,
+                        USSR}",
+      url            = "http://www-public.slac.stanford.edu/sciDoc/docMeta.aspx?slacPubNumber=SLAC-PUB-1814",
+      year           = "2017",
+      pages          = "B1-B10",
+      reportNumber   = "SLAC-PUB-1814",
+      SLACcitation   = "%%CITATION = SLAC-PUB-1814;%%"
+}'

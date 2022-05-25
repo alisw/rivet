@@ -1,0 +1,48 @@
+Name: ATLAS_2019_I1738841
+Year: 2019
+Summary: Same-sign $WW$ Observation at 13 TeV
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1738841
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Stefanie Todt <stefanie.todt@cern.ch>
+ - Philip Sommer <philip.sommer@cern.ch>
+ - Rustem Ospanov <rustem.ospanov@cern.ch>
+References:
+ - arXiv:1906.03203 [hep-ex]
+ - Phys. Rev. Lett. 123 (2019) 161801
+ - doi:10.1103/PhysRevLett.123.161801
+Keywords:
+  - DIBOSON
+  - WW
+  - SSWW
+  - MULTIBOSON
+  - BOOSTED
+RunInfo: '$p p \to \ell \nu \ell \nu j j$ at 13 TeV'
+Luminosity_fb: 36.1
+Beams: [p+, p+]
+Energies: [13000]
+PtCuts: [27.]
+Description:
+  'This Letter presents the observation and measurement of electroweak production of a same-sign $W$ boson pair in association with two jets using 36.1 fb$^{-1}$ of proton-proton collision data recorded at a center-of-mass energy of $\sqrt{s}=13$ TeV by the ATLAS detector at the Large Hadron Collider. The analysis is performed in the detector fiducial phase-space region, defined by the presence of two same-sign leptons, electron or muon, and at least two jets with a large invariant mass and rapidity difference. A total of 122 candidate events are observed for a background expectation of $69 \pm 7$ events, corresponding to an observed signal significance of 6.5 standard deviations. The measured fiducial signal cross section is $\sigma^{\textrm {fid.}}=2.89^{+0.51}_{-0.48}~\textrm{(stat.)}\ ^{+0.29}_{-0.28}~\textrm{(syst.)}\textrm{ fb}$.'
+BibKey: Aaboud:2019nmv
+BibTeX: '@article{Aaboud:2019nmv,
+      author         = "Aaboud, Morad and others",
+      title          = "{Observation of electroweak production of a same-sign $W$
+                        boson pair in association with two jets in $pp$ collisions
+                        at $\sqrt{s}=13$ TeV with the ATLAS detector}",
+      collaboration  = "ATLAS",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "123",
+      year           = "2019",
+      number         = "16",
+      pages          = "161801",
+      doi            = "10.1103/PhysRevLett.123.161801",
+      eprint         = "1906.03203",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-EP-2019-008",
+      SLACcitation   = "%%CITATION = ARXIV:1906.03203;%%"
+}'

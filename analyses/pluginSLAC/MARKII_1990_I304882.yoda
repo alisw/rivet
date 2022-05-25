@@ -1,0 +1,229 @@
+BEGIN YODA_SCATTER2D_V2 /REF/MARKII_1990_I304882/d01-x01-y01
+ErrorBreakdown: {0: {stat: {dn: -9.3, up: 9.3}, sys: {dn: -31.1, up: 31.1}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -16.24, up: 16.24}}, 1: {stat: {dn: -8.2, up: 8.2}, sys: {dn: -23.2, up: 23.2}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -15.75, up: 15.75}}, 2: {stat: {dn: -9.4, up: 9.4}, sys: {dn: -21.8, up: 21.8}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -14.700000000000001, up: 14.700000000000001}}, 3: {stat: {dn: -19.0, up: 19.0}, sys: {dn: -33.6, up: 33.6}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -16.45, up: 16.45}}, 4: {stat: {dn: -25.4, up: 25.4}, sys: {dn: -35.8, up: 35.8}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -9.450000000000001, up: 9.450000000000001}}, 5: {stat: {dn: -4.2, up: 4.2}, sys: {dn: -12.9, up: 12.9}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -6.944, up: 6.944}}, 6: {stat: {dn: -3.6, up: 3.6}, sys: {dn: -11.8, up: 11.8}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -6.8389999999999995, up: 6.8389999999999995}}, 7: {stat: {dn: -3.7, up: 3.7}, sys: {dn: -10.2, up: 10.2}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -7.5249999999999995, up: 7.5249999999999995}}, 8: {stat: {dn: -3.4, up: 3.4}, sys: {dn: -9.9, up: 9.9}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -6.614999999999999, up: 6.614999999999999}}, 9: {stat: {dn: -3.3, up: 3.3}, sys: {dn: -9.3, up: 9.3}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -5.915, up: 5.915}}, 10: {stat: {dn: -3.6, up: 3.6}, sys: {dn: -9.1, up: 9.1}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -6.454000000000001, up: 6.454000000000001}}, 11: {stat: {dn: -3.5, up: 3.5}, sys: {dn: -9.0, up: 9.0}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -5.859000000000001, up: 5.859000000000001}}, 12: {stat: {dn: -6.1, up: 6.1}, sys: {dn: -8.0, up: 8.0}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -5.782, up: 5.782}}, 13: {stat: {dn: -6.5, up: 6.5}, sys: {dn: -8.1, up: 8.1}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -6.867, up: 6.867}}, 14: {stat: {dn: -6.2, up: 6.2}, sys: {dn: -8.1, up: 8.1}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -5.971, up: 5.971}}, 15: {stat: {dn: -6.0, up: 6.0}, sys: {dn: -7.8, up: 7.8}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -5.425, up: 5.425}}, 16: {stat: {dn: -6.2, up: 6.2}, sys: {dn: -7.3, up: 7.3}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -5.698, up: 5.698}}, 17: {stat: {dn: -6.1, up: 6.1}, sys: {dn: -8.0, up: 8.0}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -5.439, up: 5.439}}, 18: {stat: {dn: -6.1, up: 6.1}, sys: {dn: -5.7, up: 5.7}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -5.6000000000000005, up: 5.6000000000000005}}, 19: {stat: {dn: -5.8, up: 5.8}, sys: {dn: -5.3, up: 5.3}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -5.291999999999999, up: 5.291999999999999}}, 20: {stat: {dn: -6.0, up: 6.0}, sys: {dn: -4.8, up: 4.8}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -5.348, up: 5.348}}, 21: {stat: {dn: -6.1, up: 6.1}, sys: {dn: -4.5, up: 4.5}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -5.635000000000001, up: 5.635000000000001}}, 22: {stat: {dn: -6.3, up: 6.3}, sys: {dn: -3.9, up: 3.9}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -6.258, up: 6.258}}, 23: {stat: {dn: -6.3, up: 6.3}, sys: {dn: -4.4, up: 4.4}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -5.404, up: 5.404}}, 24: {stat: {dn: -6.4, up: 6.4}, sys: {dn: -3.5, up: 3.5}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -6.02, up: 6.02}}, 25: {stat: {dn: -5.9, up: 5.9}, sys: {dn: -2.9, up: 2.9}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -5.361999999999999, up: 5.361999999999999}}, 26: {stat: {dn: -6.2, up: 6.2}, sys: {dn: -3.0, up: 3.0}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -5.866, up: 5.866}}, 27: {stat: {dn: -6.3, up: 6.3}, sys: {dn: -2.8, up: 2.8}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -5.971, up: 5.971}}, 28: {stat: {dn: -6.2, up: 6.2}, sys: {dn: -2.7, up: 2.7}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -5.515999999999999, up: 5.515999999999999}}, 29: {stat: {dn: -6.8, up: 6.8}, sys: {dn: -2.7, up: 2.7}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -6.460999999999999, up: 6.460999999999999}}, 30: {stat: {dn: -6.5, up: 6.5}, sys: {dn: -2.8, up: 2.8}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -6.209, up: 6.209}}, 31: {stat: {dn: -6.6, up: 6.6}, sys: {dn: -2.9, up: 2.9}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -5.999, up: 5.999}}, 32: {stat: {dn: -7.1, up: 7.1}, sys: {dn: -2.8, up: 2.8}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -6.6290000000000004, up: 6.6290000000000004}}, 33: {stat: {dn: -7.0, up: 7.0}, sys: {dn: -2.9, up: 2.9}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -6.510000000000001, up: 6.510000000000001}}, 34: {stat: {dn: -7.2, up: 7.2}, sys: {dn: -3.0, up: 3.0}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -6.678000000000001, up: 6.678000000000001}}, 35: {stat: {dn: -7.5, up: 7.5}, sys: {dn: -3.2, up: 3.2}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -7.483, up: 7.483}}, 36: {stat: {dn: -7.7, up: 7.7}, sys: {dn: -3.4, up: 3.4}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -7.182, up: 7.182}}, 37: {stat: {dn: -8.3, up: 8.3}, sys: {dn: -3.6, up: 3.6}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -8.386, up: 8.386}}, 38: {stat: {dn: -8.2, up: 8.2}, sys: {dn: -3.6, up: 3.6}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -8.008000000000001, up: 8.008000000000001}}, 39: {stat: {dn: -8.2, up: 8.2}, sys: {dn: -3.7, up: 3.7}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -8.176, up: 8.176}}, 40: {stat: {dn: -8.7, up: 8.7}, sys: {dn: -3.9, up: 3.9}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -8.673, up: 8.673}}, 41: {stat: {dn: -7.8, up: 7.8}, sys: {dn: -3.3, up: 3.3}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -6.909, up: 6.909}}, 42: {stat: {dn: -8.6, up: 8.6}, sys: {dn: -3.7, up: 3.7}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -8.043, up: 8.043}}, 43: {stat: {dn: -9.1, up: 9.1}, sys: {dn: -4.1, up: 4.1}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -8.862, up: 8.862}}, 44: {stat: {dn: -9.0, up: 9.0}, sys: {dn: -4.0, up: 4.0}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -8.54, up: 8.54}}, 45: {stat: {dn: -8.1, up: 8.1}, sys: {dn: -3.3, up: 3.3}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -7.042, up: 7.042}}, 46: {stat: {dn: -9.5, up: 9.5}, sys: {dn: -4.5, up: 4.5}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -9.499, up: 9.499}}, 47: {stat: {dn: -9.3, up: 9.3}, sys: {dn: -4.3, up: 4.3}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -8.841, up: 8.841}}, 48: {stat: {dn: -10.0, up: 10.0}, sys: {dn: -4.9, up: 4.9}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -10.283000000000001, up: 10.283000000000001}}, 49: {stat: {dn: -9.8, up: 9.8}, sys: {dn: -4.7, up: 4.7}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -9.751, up: 9.751}}, 50: {stat: {dn: -11.3, up: 11.3}, sys: {dn: -5.7, up: 5.7}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -11.732, up: 11.732}}, 51: {stat: {dn: -11.1, up: 11.1}, sys: {dn: -5.7, up: 5.7}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -11.557, up: 11.557}}, 52: {stat: {dn: -11.5, up: 11.5}, sys: {dn: -5.9, up: 5.9}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -11.956000000000001, up: 11.956000000000001}}, 53: {stat: {dn: -12.0, up: 12.0}, sys: {dn: -6.8, up: 6.8}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -13.503, up: 13.503}}, 54: {stat: {dn: -11.9, up: 11.9}, sys: {dn: -6.7, up: 6.7}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -13.278999999999998, up: 13.278999999999998}}, 55: {stat: {dn: -13.7, up: 13.7}, sys: {dn: -8.6, up: 8.6}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -16.898, up: 16.898}}, 56: {stat: {dn: -12.8, up: 12.8}, sys: {dn: -7.7, up: 7.7}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -14.84, up: 14.84}}, 57: {stat: {dn: -13.1, up: 13.1}, sys: {dn: -7.8, up: 7.8}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -14.973000000000003, up: 14.973000000000003}}, 58: {stat: {dn: -13.4, up: 13.4}, sys: {dn: -8.4, up: 8.4}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -15.834, up: 15.834}}, 59: {stat: {dn: -13.8, up: 13.8}, sys: {dn: -9.1, up: 9.1}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -17.08, up: 17.08}}, 60: {stat: {dn: -14.2, up: 14.2}, sys: {dn: -9.2, up: 9.2}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -17.178, up: 17.178}}, 61: {stat: {dn: -14.5, up: 14.5}, sys: {dn: -9.2, up: 9.2}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -17.031000000000002, up: 17.031000000000002}}, 62: {stat: {dn: -13.3, up: 13.3}, sys: {dn: -8.3, up: 8.3}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -14.98, up: 14.98}}, 63: {stat: {dn: -15.2, up: 15.2}, sys: {dn: -9.4, up: 9.4}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -17.311000000000003, up: 17.311000000000003}}, 64: {stat: {dn: -14.5, up: 14.5}, sys: {dn: -9.0, up: 9.0}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -16.247, up: 16.247}}, 65: {stat: {dn: -13.6, up: 13.6}, sys: {dn: -7.6, up: 7.6}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -13.615, up: 13.615}}, 66: {stat: {dn: -13.7, up: 13.7}, sys: {dn: -8.2, up: 8.2}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -14.525000000000002, up: 14.525000000000002}}, 67: {stat: {dn: -12.1, up: 12.1}, sys: {dn: -6.4, up: 6.4}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -11.375, up: 11.375}}, 68: {stat: {dn: -12.4, up: 12.4}, sys: {dn: -6.4, up: 6.4}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -11.305, up: 11.305}}, 69: {stat: {dn: -12.2, up: 12.2}, sys: {dn: -6.1, up: 6.1}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -10.612, up: 10.612}}, 70: {stat: {dn: -10.8, up: 10.8}, sys: {dn: -4.5, up: 4.5}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -7.917, up: 7.917}}, 71: {stat: {dn: -9.6, up: 9.6}, sys: {dn: -3.7, up: 3.7}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -6.328, up: 6.328}}, 72: {stat: {dn: -9.9, up: 9.9}, sys: {dn: -4.0, up: 4.0}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -6.846, up: 6.846}}, 73: {stat: {dn: -8.1, up: 8.1}, sys: {dn: -2.9, up: 2.9}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -4.809, up: 4.809}}, 74: {stat: {dn: -7.9, up: 7.9}, sys: {dn: -2.7, up: 2.7}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -4.494, up: 4.494}}, 75: {stat: {dn: -8.5, up: 8.5}, sys: {dn: -3.0, up: 3.0}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -4.984000000000001, up: 4.984000000000001}}, 76: {stat: {dn: -8.2, up: 8.2}, sys: {dn: -2.7, up: 2.7}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -4.452, up: 4.452}}, 77: {stat: {dn: -6.5, up: 6.5}, sys: {dn: -1.7, up: 1.7}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -2.632, up: 2.632}}, 78: {stat: {dn: -6.9, up: 6.9}, sys: {dn: -2.0, up: 2.0}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -3.164, up: 3.164}}, 79: {stat: {dn: -6.7, up: 6.7}, sys: {dn: -2.0, up: 2.0}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -3.122, up: 3.122}}, 80: {stat: {dn: -6.6, up: 6.6}, sys: {dn: -1.6, up: 1.6}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -2.527, up: 2.527}}, 81: {stat: {dn: -6.1, up: 6.1}, sys: {dn: -1.3, up: 1.3}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -2.072, up: 2.072}}, 82: {stat: {dn: -5.5, up: 5.5}, sys: {dn: -1.2, up: 1.2}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -1.827, up: 1.827}}, 83: {stat: {dn: -6.4, up: 6.4}, sys: {dn: -1.4, up: 1.4}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -2.233, up: 2.233}}, 84: {stat: {dn: -4.2, up: 4.2}, sys: {dn: -0.8, up: 0.8}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -1.127, up: 1.127}}, 85: {stat: {dn: -6.2, up: 6.2}, sys: {dn: -1.3, up: 1.3}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -2.0020000000000002, up: 2.0020000000000002}}, 86: {stat: {dn: -5.6, up: 5.6}, sys: {dn: -1.3, up: 1.3}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -1.911, up: 1.911}}, 87: {stat: {dn: -2.7, up: 2.7}, sys: {dn: -0.6, up: 0.6}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -0.8260000000000001, up: 0.8260000000000001}}, 88: {stat: {dn: -3.1, up: 3.1}, sys: {dn: -0.7, up: 0.7}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -0.9380000000000001, up: 0.9380000000000001}}, 89: {stat: {dn: -2.3, up: 2.3}, sys: {dn: -0.5, up: 0.5}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -0.546, up: 0.546}}, 90: {stat: {dn: -2.8, up: 2.8}, sys: {dn: -0.6, up: 0.6}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -0.7560000000000001, up: 0.7560000000000001}}, 91: {stat: {dn: -2.6, up: 2.6}, sys: {dn: -0.6, up: 0.6}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -0.7000000000000001, up: 0.7000000000000001}}}
+IsRef: 1
+Path: /REF/MARKII_1990_I304882/d01-x01-y01
+Title: doi:10.17182/hepdata.22881.v1/t1
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+3.550000e-01	0.000000e+00	0.000000e+00	2.320000e+02	3.629652e+01	3.629652e+01
+3.650000e-01	0.000000e+00	0.000000e+00	2.250000e+02	2.921545e+01	2.921545e+01
+3.750000e-01	0.000000e+00	0.000000e+00	2.100000e+02	2.792293e+01	2.792293e+01
+3.850000e-01	0.000000e+00	0.000000e+00	2.350000e+02	4.195906e+01	4.195906e+01
+3.950000e-01	0.000000e+00	0.000000e+00	1.350000e+02	4.490103e+01	4.490103e+01
+5.550000e-01	0.000000e+00	0.000000e+00	9.920000e+01	1.524038e+01	1.524038e+01
+5.850000e-01	0.000000e+00	0.000000e+00	9.770000e+01	1.410574e+01	1.410574e+01
+6.150000e-01	0.000000e+00	0.000000e+00	1.075000e+02	1.320438e+01	1.320438e+01
+6.450000e-01	0.000000e+00	0.000000e+00	9.450000e+01	1.238258e+01	1.238258e+01
+6.750000e-01	0.000000e+00	0.000000e+00	8.450000e+01	1.150510e+01	1.150510e+01
+7.050000e-01	0.000000e+00	0.000000e+00	9.220000e+01	1.172280e+01	1.172280e+01
+7.350000e-01	0.000000e+00	0.000000e+00	8.370000e+01	1.129504e+01	1.129504e+01
+7.550000e-01	0.000000e+00	0.000000e+00	8.260000e+01	1.160351e+01	1.160351e+01
+7.650000e-01	0.000000e+00	0.000000e+00	9.810000e+01	1.245053e+01	1.245053e+01
+7.750000e-01	0.000000e+00	0.000000e+00	8.530000e+01	1.181960e+01	1.181960e+01
+7.850000e-01	0.000000e+00	0.000000e+00	7.750000e+01	1.123702e+01	1.123702e+01
+7.950000e-01	0.000000e+00	0.000000e+00	8.140000e+01	1.114438e+01	1.114438e+01
+8.050000e-01	0.000000e+00	0.000000e+00	7.770000e+01	1.143646e+01	1.143646e+01
+8.150000e-01	0.000000e+00	0.000000e+00	8.000000e+01	1.005286e+01	1.005286e+01
+8.250000e-01	0.000000e+00	0.000000e+00	7.560000e+01	9.472870e+00	9.472870e+00
+8.350000e-01	0.000000e+00	0.000000e+00	7.640000e+01	9.361683e+00	9.361683e+00
+8.450000e-01	0.000000e+00	0.000000e+00	8.050000e+01	9.445275e+00	9.445275e+00
+8.550000e-01	0.000000e+00	0.000000e+00	8.940000e+01	9.698586e+00	9.698586e+00
+8.650000e-01	0.000000e+00	0.000000e+00	7.720000e+01	9.394318e+00	9.394318e+00
+8.750000e-01	0.000000e+00	0.000000e+00	8.600000e+01	9.457822e+00	9.457822e+00
+8.850000e-01	0.000000e+00	0.000000e+00	7.660000e+01	8.483575e+00	8.483575e+00
+8.950000e-01	0.000000e+00	0.000000e+00	8.380000e+01	9.047097e+00	9.047097e+00
+9.050000e-01	0.000000e+00	0.000000e+00	8.530000e+01	9.120463e+00	9.120463e+00
+9.150000e-01	0.000000e+00	0.000000e+00	7.880000e+01	8.726755e+00	8.726755e+00
+9.250000e-01	0.000000e+00	0.000000e+00	9.230000e+01	9.760867e+00	9.760867e+00
+9.350000e-01	0.000000e+00	0.000000e+00	8.870000e+01	9.414971e+00	9.414971e+00
+9.450000e-01	0.000000e+00	0.000000e+00	8.570000e+01	9.378593e+00	9.378593e+00
+9.550000e-01	0.000000e+00	0.000000e+00	9.470000e+01	1.010909e+01	1.010909e+01
+9.650000e-01	0.000000e+00	0.000000e+00	9.300000e+01	9.989499e+00	9.989499e+00
+9.750000e-01	0.000000e+00	0.000000e+00	9.540000e+01	1.026819e+01	1.026819e+01
+9.850000e-01	0.000000e+00	0.000000e+00	1.069000e+02	1.106731e+01	1.106731e+01
+9.950000e-01	0.000000e+00	0.000000e+00	1.026000e+02	1.106486e+01	1.106486e+01
+1.005000e+00	0.000000e+00	0.000000e+00	1.198000e+02	1.233592e+01	1.233592e+01
+1.015000e+00	0.000000e+00	0.000000e+00	1.144000e+02	1.201366e+01	1.201366e+01
+1.025000e+00	0.000000e+00	0.000000e+00	1.168000e+02	1.215636e+01	1.215636e+01
+1.035000e+00	0.000000e+00	0.000000e+00	1.239000e+02	1.288879e+01	1.288879e+01
+1.045000e+00	0.000000e+00	0.000000e+00	9.870000e+01	1.092997e+01	1.092997e+01
+1.055000e+00	0.000000e+00	0.000000e+00	1.149000e+02	1.234260e+01	1.234260e+01
+1.065000e+00	0.000000e+00	0.000000e+00	1.266000e+02	1.334747e+01	1.334747e+01
+1.075000e+00	0.000000e+00	0.000000e+00	1.220000e+02	1.303578e+01	1.303578e+01
+1.085000e+00	0.000000e+00	0.000000e+00	1.006000e+02	1.122897e+01	1.122897e+01
+1.095000e+00	0.000000e+00	0.000000e+00	1.357000e+02	1.416796e+01	1.416796e+01
+1.105000e+00	0.000000e+00	0.000000e+00	1.263000e+02	1.353304e+01	1.353304e+01
+1.115000e+00	0.000000e+00	0.000000e+00	1.469000e+02	1.515751e+01	1.515751e+01
+1.125000e+00	0.000000e+00	0.000000e+00	1.393000e+02	1.460178e+01	1.460178e+01
+1.135000e+00	0.000000e+00	0.000000e+00	1.676000e+02	1.725746e+01	1.725746e+01
+1.145000e+00	0.000000e+00	0.000000e+00	1.651000e+02	1.700777e+01	1.700777e+01
+1.155000e+00	0.000000e+00	0.000000e+00	1.708000e+02	1.760699e+01	1.760699e+01
+1.165000e+00	0.000000e+00	0.000000e+00	1.929000e+02	1.930210e+01	1.930210e+01
+1.175000e+00	0.000000e+00	0.000000e+00	1.897000e+02	1.904815e+01	1.904815e+01
+1.185000e+00	0.000000e+00	0.000000e+00	2.414000e+02	2.339214e+01	2.339214e+01
+1.195000e+00	0.000000e+00	0.000000e+00	2.120000e+02	2.105601e+01	2.105601e+01
+1.205000e+00	0.000000e+00	0.000000e+00	2.139000e+02	2.136915e+01	2.136915e+01
+1.215000e+00	0.000000e+00	0.000000e+00	2.262000e+02	2.237936e+01	2.237936e+01
+1.225000e+00	0.000000e+00	0.000000e+00	2.440000e+02	2.376923e+01	2.376923e+01
+1.235000e+00	0.000000e+00	0.000000e+00	2.454000e+02	2.411148e+01	2.411148e+01
+1.245000e+00	0.000000e+00	0.000000e+00	2.433000e+02	2.418564e+01	2.418564e+01
+1.255000e+00	0.000000e+00	0.000000e+00	2.140000e+02	2.168364e+01	2.168364e+01
+1.265000e+00	0.000000e+00	0.000000e+00	2.473000e+02	2.488113e+01	2.488113e+01
+1.275000e+00	0.000000e+00	0.000000e+00	2.321000e+02	2.356300e+01	2.356300e+01
+1.285000e+00	0.000000e+00	0.000000e+00	1.945000e+02	2.069029e+01	2.069029e+01
+1.295000e+00	0.000000e+00	0.000000e+00	2.075000e+02	2.158485e+01	2.158485e+01
+1.305000e+00	0.000000e+00	0.000000e+00	1.625000e+02	1.779777e+01	1.779777e+01
+1.315000e+00	0.000000e+00	0.000000e+00	1.615000e+02	1.795893e+01	1.795893e+01
+1.325000e+00	0.000000e+00	0.000000e+00	1.516000e+02	1.728191e+01	1.728191e+01
+1.335000e+00	0.000000e+00	0.000000e+00	1.131000e+02	1.412689e+01	1.412689e+01
+1.345000e+00	0.000000e+00	0.000000e+00	9.040000e+01	1.207864e+01	1.207864e+01
+1.355000e+00	0.000000e+00	0.000000e+00	9.780000e+01	1.268376e+01	1.268376e+01
+1.365000e+00	0.000000e+00	0.000000e+00	6.870000e+01	9.856291e+00	9.856291e+00
+1.375000e+00	0.000000e+00	0.000000e+00	6.420000e+01	9.481352e+00	9.481352e+00
+1.385000e+00	0.000000e+00	0.000000e+00	7.120000e+01	1.030001e+01	1.030001e+01
+1.395000e+00	0.000000e+00	0.000000e+00	6.360000e+01	9.713408e+00	9.713408e+00
+1.405000e+00	0.000000e+00	0.000000e+00	3.760000e+01	7.215776e+00	7.215776e+00
+1.415000e+00	0.000000e+00	0.000000e+00	4.520000e+01	7.849898e+00	7.849898e+00
+1.425000e+00	0.000000e+00	0.000000e+00	4.460000e+01	7.657472e+00	7.657472e+00
+1.435000e+00	0.000000e+00	0.000000e+00	3.610000e+01	7.246084e+00	7.246084e+00
+1.445000e+00	0.000000e+00	0.000000e+00	2.960000e+01	6.572152e+00	6.572152e+00
+1.455000e+00	0.000000e+00	0.000000e+00	2.610000e+01	5.918440e+00	5.918440e+00
+1.465000e+00	0.000000e+00	0.000000e+00	3.190000e+01	6.921437e+00	6.921437e+00
+1.475000e+00	0.000000e+00	0.000000e+00	1.610000e+01	4.421553e+00	4.421553e+00
+1.485000e+00	0.000000e+00	0.000000e+00	2.860000e+01	6.643644e+00	6.643644e+00
+1.495000e+00	0.000000e+00	0.000000e+00	2.730000e+01	6.058211e+00	6.058211e+00
+1.510000e+00	0.000000e+00	0.000000e+00	1.180000e+01	2.886568e+00	2.886568e+00
+1.530000e+00	0.000000e+00	0.000000e+00	1.340000e+01	3.313585e+00	3.313585e+00
+1.550000e+00	0.000000e+00	0.000000e+00	7.800000e+00	2.416219e+00	2.416219e+00
+1.570000e+00	0.000000e+00	0.000000e+00	1.080000e+01	2.961678e+00	2.961678e+00
+1.590000e+00	0.000000e+00	0.000000e+00	1.000000e+01	2.758623e+00	2.758623e+00
+END YODA_SCATTER2D_V2
+
+
+BEGIN YODA_SCATTER2D_V2 /REF/MARKII_1990_I304882/d02-x01-y01
+ErrorBreakdown: {0: {error: {dn: -2.3, up: 2.3}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -1.4349999999999998, up: 1.4349999999999998}}, 1: {error: {dn: -1.5, up: 1.5}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -1.155, up: 1.155}}, 2: {error: {dn: -1.3, up: 1.3}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -1.029, up: 1.029}}, 3: {error: {dn: -0.9, up: 0.9}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -1.113, up: 1.113}}, 4: {error: {dn: -1.1, up: 1.1}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -1.344, up: 1.344}}, 5: {error: {dn: -1.4, up: 1.4}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -1.701, up: 1.701}}, 6: {error: {dn: -2.3, up: 2.3}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -2.891, up: 2.891}}, 7: {error: {dn: -2.4, up: 2.4}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -2.3729999999999998, up: 2.3729999999999998}}, 8: {error: {dn: -1.4, up: 1.4}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -0.847, up: 0.847}}, 9: {error: {dn: -0.9, up: 0.9}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -0.35000000000000003, up: 0.35000000000000003}}}
+IsRef: 1
+Path: /REF/MARKII_1990_I304882/d02-x01-y01
+Title: doi:10.17182/hepdata.22881.v1/t2
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+6.000000e-01	5.000000e-02	5.000000e-02	2.050000e+01	2.710945e+00	2.710945e+00
+7.000000e-01	5.000000e-02	5.000000e-02	1.650000e+01	1.893152e+00	1.893152e+00
+8.000000e-01	5.000000e-02	5.000000e-02	1.470000e+01	1.657963e+00	1.657963e+00
+9.000000e-01	5.000000e-02	5.000000e-02	1.590000e+01	1.431352e+00	1.431352e+00
+1.000000e+00	5.000000e-02	5.000000e-02	1.920000e+01	1.736760e+00	1.736760e+00
+1.100000e+00	5.000000e-02	5.000000e-02	2.430000e+01	2.203044e+00	2.203044e+00
+1.200000e+00	5.000000e-02	5.000000e-02	4.130000e+01	3.694304e+00	3.694304e+00
+1.300000e+00	5.000000e-02	5.000000e-02	3.390000e+01	3.375075e+00	3.375075e+00
+1.400000e+00	5.000000e-02	5.000000e-02	1.210000e+01	1.636279e+00	1.636279e+00
+1.500000e+00	5.000000e-02	5.000000e-02	5.000000e+00	9.656604e-01	9.656604e-01
+END YODA_SCATTER2D_V2
+
+
+BEGIN YODA_SCATTER2D_V2 /REF/MARKII_1990_I304882/d02-x01-y02
+ErrorBreakdown: {0: {error: {dn: -2.1, up: 2.1}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -1.281, up: 1.281}}, 1: {error: {dn: -0.9, up: 0.9}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -1.155, up: 1.155}}, 2: {error: {dn: -1.3, up: 1.3}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -1.064, up: 1.064}}, 3: {error: {dn: -1.0, up: 1.0}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -1.106, up: 1.106}}, 4: {error: {dn: -1.1, up: 1.1}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -1.344, up: 1.344}}, 5: {error: {dn: -1.4, up: 1.4}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -1.617, up: 1.617}}, 6: {error: {dn: -2.5, up: 2.5}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -2.975, up: 2.975}}, 7: {error: {dn: -2.9, up: 2.9}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -2.4779999999999998, up: 2.4779999999999998}}, 8: {error: {dn: -1.5, up: 1.5}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -0.882, up: 0.882}}, 9: {error: {dn: -0.8, up: 0.8}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -0.315, up: 0.315}}}
+IsRef: 1
+Path: /REF/MARKII_1990_I304882/d02-x01-y02
+Title: doi:10.17182/hepdata.22881.v1/t2
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+6.000000e-01	5.000000e-02	5.000000e-02	1.830000e+01	2.459870e+00	2.459870e+00
+7.000000e-01	5.000000e-02	5.000000e-02	1.650000e+01	1.464249e+00	1.464249e+00
+8.000000e-01	5.000000e-02	5.000000e-02	1.520000e+01	1.679910e+00	1.679910e+00
+9.000000e-01	5.000000e-02	5.000000e-02	1.580000e+01	1.491052e+00	1.491052e+00
+1.000000e+00	5.000000e-02	5.000000e-02	1.920000e+01	1.736760e+00	1.736760e+00
+1.100000e+00	5.000000e-02	5.000000e-02	2.310000e+01	2.138852e+00	2.138852e+00
+1.200000e+00	5.000000e-02	5.000000e-02	4.250000e+01	3.885952e+00	3.885952e+00
+1.300000e+00	5.000000e-02	5.000000e-02	3.540000e+01	3.814510e+00	3.814510e+00
+1.400000e+00	5.000000e-02	5.000000e-02	1.260000e+01	1.740093e+00	1.740093e+00
+1.500000e+00	5.000000e-02	5.000000e-02	4.500000e+00	8.597819e-01	8.597819e-01
+END YODA_SCATTER2D_V2
+
+
+BEGIN YODA_SCATTER2D_V2 /REF/MARKII_1990_I304882/d02-x01-y03
+ErrorBreakdown: {0: {error: {dn: -2.1, up: 2.1}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -1.218, up: 1.218}}, 1: {error: {dn: -1.6, up: 1.6}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -0.924, up: 0.924}}, 2: {error: {dn: -1.3, up: 1.3}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -1.043, up: 1.043}}, 3: {error: {dn: -1.2, up: 1.2}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -1.029, up: 1.029}}, 4: {error: {dn: -1.4, up: 1.4}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -1.288, up: 1.288}}, 5: {error: {dn: -1.5, up: 1.5}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -1.638, up: 1.638}}, 6: {error: {dn: -2.5, up: 2.5}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -2.6950000000000003, up: 2.6950000000000003}}, 7: {error: {dn: -2.7, up: 2.7}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -2.394, up: 2.394}}, 8: {error: {dn: -1.7, up: 1.7}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -0.742, up: 0.742}}, 9: {error: {dn: -0.8, up: 0.8}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -0.252, up: 0.252}}}
+IsRef: 1
+Path: /REF/MARKII_1990_I304882/d02-x01-y03
+Title: doi:10.17182/hepdata.22881.v1/t2
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+6.000000e-01	5.000000e-02	5.000000e-02	1.740000e+01	2.427658e+00	2.427658e+00
+7.000000e-01	5.000000e-02	5.000000e-02	1.320000e+01	1.847641e+00	1.847641e+00
+8.000000e-01	5.000000e-02	5.000000e-02	1.490000e+01	1.666688e+00	1.666688e+00
+9.000000e-01	5.000000e-02	5.000000e-02	1.470000e+01	1.580772e+00	1.580772e+00
+1.000000e+00	5.000000e-02	5.000000e-02	1.840000e+01	1.902352e+00	1.902352e+00
+1.100000e+00	5.000000e-02	5.000000e-02	2.340000e+01	2.221046e+00	2.221046e+00
+1.200000e+00	5.000000e-02	5.000000e-02	3.850000e+01	3.676007e+00	3.676007e+00
+1.300000e+00	5.000000e-02	5.000000e-02	3.420000e+01	3.608495e+00	3.608495e+00
+1.400000e+00	5.000000e-02	5.000000e-02	1.060000e+01	1.854876e+00	1.854876e+00
+1.500000e+00	5.000000e-02	5.000000e-02	3.600000e+00	8.387515e-01	8.387515e-01
+END YODA_SCATTER2D_V2
+
+
+BEGIN YODA_SCATTER2D_V2 /REF/MARKII_1990_I304882/d02-x01-y04
+ErrorBreakdown: {0: {error: {dn: -2.1, up: 2.1}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -1.008, up: 1.008}}, 1: {error: {dn: -1.7, up: 1.7}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -1.05, up: 1.05}}, 2: {error: {dn: -1.6, up: 1.6}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -0.903, up: 0.903}}, 3: {error: {dn: -1.3, up: 1.3}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -0.9869999999999999, up: 0.9869999999999999}}, 4: {error: {dn: -1.3, up: 1.3}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -1.274, up: 1.274}}, 5: {error: {dn: -2.2, up: 2.2}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -1.7220000000000002, up: 1.7220000000000002}}, 6: {error: {dn: -2.5, up: 2.5}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -2.6459999999999995, up: 2.6459999999999995}}, 7: {error: {dn: -2.2, up: 2.2}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -1.9810000000000003, up: 1.9810000000000003}}, 8: {error: {dn: -1.5, up: 1.5}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -0.777, up: 0.777}}, 9: {error: {dn: -0.7, up: 0.7}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -0.18200000000000002, up: 0.18200000000000002}}}
+IsRef: 1
+Path: /REF/MARKII_1990_I304882/d02-x01-y04
+Title: doi:10.17182/hepdata.22881.v1/t2
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+6.000000e-01	5.000000e-02	5.000000e-02	1.440000e+01	2.329391e+00	2.329391e+00
+7.000000e-01	5.000000e-02	5.000000e-02	1.500000e+01	1.998124e+00	1.998124e+00
+8.000000e-01	5.000000e-02	5.000000e-02	1.290000e+01	1.837229e+00	1.837229e+00
+9.000000e-01	5.000000e-02	5.000000e-02	1.410000e+01	1.632228e+00	1.632228e+00
+1.000000e+00	5.000000e-02	5.000000e-02	1.820000e+01	1.820186e+00	1.820186e+00
+1.100000e+00	5.000000e-02	5.000000e-02	2.460000e+01	2.793794e+00	2.793794e+00
+1.200000e+00	5.000000e-02	5.000000e-02	3.780000e+01	3.640236e+00	3.640236e+00
+1.300000e+00	5.000000e-02	5.000000e-02	2.830000e+01	2.960466e+00	2.960466e+00
+1.400000e+00	5.000000e-02	5.000000e-02	1.110000e+01	1.689298e+00	1.689298e+00
+1.500000e+00	5.000000e-02	5.000000e-02	2.600000e+00	7.232731e-01	7.232731e-01
+END YODA_SCATTER2D_V2
+
+
+BEGIN YODA_SCATTER2D_V2 /REF/MARKII_1990_I304882/d02-x01-y05
+ErrorBreakdown: {0: {error: {dn: -2.7, up: 2.7}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -1.1340000000000001, up: 1.1340000000000001}}, 1: {error: {dn: -1.8, up: 1.8}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -0.882, up: 0.882}}, 2: {error: {dn: -1.7, up: 1.7}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -0.9520000000000001, up: 0.9520000000000001}}, 3: {error: {dn: -1.5, up: 1.5}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -0.868, up: 0.868}}, 4: {error: {dn: -1.5, up: 1.5}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -1.155, up: 1.155}}, 5: {error: {dn: -1.6, up: 1.6}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -1.344, up: 1.344}}, 6: {error: {dn: -2.8, up: 2.8}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -2.303, up: 2.303}}, 7: {error: {dn: -2.2, up: 2.2}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -1.827, up: 1.827}}, 8: {error: {dn: -1.1, up: 1.1}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -0.427, up: 0.427}}, 9: {error: {dn: -0.7, up: 0.7}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -0.14, up: 0.14}}}
+IsRef: 1
+Path: /REF/MARKII_1990_I304882/d02-x01-y05
+Title: doi:10.17182/hepdata.22881.v1/t2
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+6.000000e-01	5.000000e-02	5.000000e-02	1.620000e+01	2.928473e+00	2.928473e+00
+7.000000e-01	5.000000e-02	5.000000e-02	1.260000e+01	2.004476e+00	2.004476e+00
+8.000000e-01	5.000000e-02	5.000000e-02	1.360000e+01	1.948411e+00	1.948411e+00
+9.000000e-01	5.000000e-02	5.000000e-02	1.240000e+01	1.733039e+00	1.733039e+00
+1.000000e+00	5.000000e-02	5.000000e-02	1.650000e+01	1.893152e+00	1.893152e+00
+1.100000e+00	5.000000e-02	5.000000e-02	1.920000e+01	2.089578e+00	2.089578e+00
+1.200000e+00	5.000000e-02	5.000000e-02	3.290000e+01	3.625439e+00	3.625439e+00
+1.300000e+00	5.000000e-02	5.000000e-02	2.610000e+01	2.859708e+00	2.859708e+00
+1.400000e+00	5.000000e-02	5.000000e-02	6.100000e+00	1.179970e+00	1.179970e+00
+1.500000e+00	5.000000e-02	5.000000e-02	2.000000e+00	7.138627e-01	7.138627e-01
+END YODA_SCATTER2D_V2
+
+
+BEGIN YODA_SCATTER2D_V2 /REF/MARKII_1990_I304882/d02-x01-y06
+ErrorBreakdown: {0: {error: {dn: -2.9, up: 2.9}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -0.9730000000000001, up: 0.9730000000000001}}, 1: {error: {dn: -2.2, up: 2.2}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -0.9450000000000001, up: 0.9450000000000001}}, 2: {error: {dn: -2.1, up: 2.1}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -0.735, up: 0.735}}, 3: {error: {dn: -1.8, up: 1.8}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -0.882, up: 0.882}}, 4: {error: {dn: -1.8, up: 1.8}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -1.085, up: 1.085}}, 5: {error: {dn: -1.9, up: 1.9}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -1.3579999999999999, up: 1.3579999999999999}}, 6: {error: {dn: -2.4, up: 2.4}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -1.7429999999999999, up: 1.7429999999999999}}, 7: {error: {dn: -2.6, up: 2.6}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -1.3579999999999999, up: 1.3579999999999999}}, 8: {error: {dn: -1.0, up: 1.0}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -0.231, up: 0.231}}, 9: {error: {dn: -0.6, up: 0.6}, 'sys,(C=APPROX)//Additional overall normalisation error': {dn: -0.063, up: 0.063}}}
+IsRef: 1
+Path: /REF/MARKII_1990_I304882/d02-x01-y06
+Title: doi:10.17182/hepdata.22881.v1/t2
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+6.000000e-01	5.000000e-02	5.000000e-02	1.390000e+01	3.058877e+00	3.058877e+00
+7.000000e-01	5.000000e-02	5.000000e-02	1.350000e+01	2.394374e+00	2.394374e+00
+8.000000e-01	5.000000e-02	5.000000e-02	1.050000e+01	2.224910e+00	2.224910e+00
+9.000000e-01	5.000000e-02	5.000000e-02	1.260000e+01	2.004476e+00	2.004476e+00
+1.000000e+00	5.000000e-02	5.000000e-02	1.550000e+01	2.101720e+00	2.101720e+00
+1.100000e+00	5.000000e-02	5.000000e-02	1.940000e+01	2.335415e+00	2.335415e+00
+1.200000e+00	5.000000e-02	5.000000e-02	2.490000e+01	2.966151e+00	2.966151e+00
+1.300000e+00	5.000000e-02	5.000000e-02	1.940000e+01	2.933286e+00	2.933286e+00
+1.400000e+00	5.000000e-02	5.000000e-02	3.300000e+00	1.026334e+00	1.026334e+00
+1.500000e+00	5.000000e-02	5.000000e-02	9.000000e-01	6.032984e-01	6.032984e-01
+END YODA_SCATTER2D_V2
+
+

@@ -1,0 +1,40 @@
+Name: CLEOIII_2006_I728679
+Year: 2006
+Summary: Spectra of $\eta^\prime$ mesons in $\Upsilon(1S)$ decays
+Experiment: CLEOIII
+Collider: CESR
+InspireID: 728679
+Status: VALIDATED
+Authors:
+ - Peter Richardson <Peter.Richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D74 (2006) 092006
+RunInfo:
+  Any process producing Upslion 1S, original $e^+ e^-$
+Description:
+  Measurement of the inclusive production of the $\eta^\prime$ mesons in $\Upsilon(1S)$ decays by the CLEO-II experiment.
+  In principle this measurement is superseeds  CLEOII_2002_I601701, however given the data for this analysis were extracted
+  from the plots we retain the older analysis.
+ValidationInfo:
+  'Herwig events with Upsilon(1S) decays.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Aquines:2006vf
+BibTeX: '@article{Aquines:2006vf,
+      author         = "Aquines, O. and others",
+      title          = "{Improved Measurement of the Branching Fraction and
+                        Energy Spectrum of eta-prime from Upsilon(1S) Decays}",
+      collaboration  = "CLEO",
+      journal        = "Phys. Rev.",
+      volume         = "D74",
+      year           = "2006",
+      pages          = "092006",
+      doi            = "10.1103/PhysRevD.74.092006, 10.1103/PhysRevD.75.119902",
+      note           = "[Erratum: Phys. Rev.D75,119902(2007)]",
+      eprint         = "hep-ex/0610032",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CLNS-06-1970, CLEO-06-15",
+      SLACcitation   = "%%CITATION = HEP-EX/0610032;%%"
+}'

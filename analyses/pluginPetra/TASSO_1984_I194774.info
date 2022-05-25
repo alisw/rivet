@@ -1,0 +1,34 @@
+Name: TASSO_1984_I194774
+Year: 1984
+Summary: $D_s^\pm$ spectra at 34.7 GeV
+Experiment: TASSO
+Collider: PETRA
+InspireID: 194774
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett.B 136 (1984) 130-134, 1984
+RunInfo: e+ e- to hadrons
+Beams: [e+, e-]
+Energies: [34.7]
+Description:
+  'Measurement of the $D_s^\pm$ spectra at 34.7 GeV by the TASSO experiment, the PDG2020 value of $D^+_s\to\phi\pi^+$ branching ratio is used.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: TASSO:1983eum
+BibTeX: '@article{TASSO:1983eum,
+    author = "Althoff, M. and others",
+    collaboration = "TASSO",
+    title = "{Observation of F Meson Production in High-energy $e^+ e^-$ Annihilation}",
+    reportNumber = "DESY-83-119",
+    doi = "10.1016/0370-2693(84)92070-7",
+    journal = "Phys. Lett. B",
+    volume = "136",
+    pages = "130--134",
+    year = "1984"
+}
+'

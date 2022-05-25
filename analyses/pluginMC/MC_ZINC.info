@@ -1,0 +1,22 @@
+Name: MC_ZINC
+Summary: Monte Carlo validation observables for $Z[\ell^+ \, \ell^-]$ production
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Frank Siegert <frank.siegert@cern.ch>
+ - Christian Gutschow <chris.g@cern.ch>
+References:
+RunInfo:
+  $\ell^+ \ell^-$ analysis. Needs mass cut on lepton pair to avoid
+  photon singularity, e.g. a min range of $66 < m_{ll} < 116$ GeV
+Options:
+ - LMODE=EL,MU
+ - SCHEME=DRESSED,BARE
+PtCuts: [0]
+Description:
+  Monte Carlo validation observables for $Z[\ell^+ \, \ell^-]$ production
+NeedCrossSection: yes
+
+ReleaseTests:
+ - $A LHC-Z-e
+

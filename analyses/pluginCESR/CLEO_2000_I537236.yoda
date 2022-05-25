@@ -1,0 +1,9 @@
+BEGIN YODA_SCATTER2D_V2 /REF/CLEO_2000_I537236/d01-x01-y01
+IsRef: 1
+Path: /REF/CLEO_2000_I537236/d01-x01-y01
+Title: ~
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+5.00000e-01	5.000000e-01	5.000000e-01	0.26	0.19	0.19
+END YODA_SCATTER2D_V2

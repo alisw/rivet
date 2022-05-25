@@ -1,0 +1,34 @@
+Name: BELLE_2007_I756643
+Year: 2007
+Summary: Cross section for $e^+e^-\to \psi(2S)\pi^+\pi^-$ at energies between 4.025 and 5.475 GeV
+Experiment: BELLE
+Collider: KEKB
+InspireID: 756643
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 99 (2007) 142002, 2007 
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+  'Measurement of the cross section for $e^+e^-\to \psi(2S)\pi^+\pi^-$ at energies between 4.025 and 5.475 GeV using radiative return by BELLE.'
+BibKey: Wang:2007ea
+BibTeX: '@article{Wang:2007ea,
+      author         = "Wang, X. L. and others",
+      title          = "{Observation of Two Resonant Structures in e+e- to pi+
+                        pi- psi(2S) via Initial State Radiation at Belle}",
+      collaboration  = "Belle",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "99",
+      year           = "2007",
+      pages          = "142002",
+      doi            = "10.1103/PhysRevLett.99.142002",
+      eprint         = "0707.3699",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "BELLE-2007-33, KEK-2007-27",
+      SLACcitation   = "%%CITATION = ARXIV:0707.3699;%%"
+}'

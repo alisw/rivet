@@ -1,0 +1,20 @@
+Name: MC_DIS
+Summary: MC DIS analysis for DIS kinematic observables
+Status: VALIDATED
+Authors:
+ - Andrii Verbytskyi <andrii.verbytskyi@mpp.mpg.de>
+
+Options:
+ - LMode=mc
+ - LSort=ENERGY,ETA,ET
+ - DressDR=#
+ - IsolDR=#
+ - Undress=#
+
+RunInfo: Suitable for DIS.
+NumEvents: 1000
+PtCuts: [0]
+Beams: [[p+, e-], [p+, e+]]
+Description:
+  Analysis of kinematic observables in DIS.
+NeedsCrossSection: yes

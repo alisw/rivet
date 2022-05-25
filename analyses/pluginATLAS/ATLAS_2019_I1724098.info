@@ -1,0 +1,57 @@
+Name: ATLAS_2019_I1724098
+Year: 2019
+Summary: Jet substructure at 13 TeV
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1724098
+Status: VALIDATED
+Reentrant: true
+Authors: 
+ - Deepak Kar <deepak.kar@cern.ch>
+ - Amal Vaidya <amal.vaidya@cern.ch>
+ - Christian Gutschow <chris.g@cern.ch>
+References:
+ - JHEP 1908 (2019) 033
+ - doi:10.1007/JHEP08(2019)033
+ - arXiv:1903.02942 [hep-ex]
+Keywords:
+ - substructure
+ - boosted
+ - jets
+ - ttbar
+ - w
+Options:
+ - MODE=DJ,TW
+RunInfo:
+ 'Multijet / ttbar production at 13 TeV'
+Luminosity_fb: 33.0
+Beams: [p+, p+]
+Energies: [13000]
+PtCuts: [450.]
+Description:
+  'A measurement of jet substructure observables is presented using data collected in 2016 by the ATLAS experiment at the LHC with
+  proton-proton collisions at $\sqrt{s} = 13$ TeV. Large-radius jets groomed with the trimming and soft-drop algorithms are studied.
+  Dedicated event selections are used to study jets produced by light quarks or gluons, and hadronically decaying top quarks and W
+  bosons. The observables measured are sensitive to substructure, and therefore are typically used for tagging large-radius jets
+  from boosted massive particles. These include the energy correlation functions and the $N$-subjettiness variables. The number of
+  subjets and the Les Houches angularity are also considered. The distributions of the substructure variables, corrected for
+  detector effects, are compared to the predictions of various Monte Carlo event generators. They are also compared between the
+  large-radius jets originating from light quarks or gluons, and hadronically decaying top quarks and $W$ bosons.'
+BibKey: Aaboud:2019aii
+BibTeX: '@article{Aaboud:2019aii,
+      author         = "Aaboud, Morad and others",
+      title          = "{Measurement of jet-substructure observables in top
+                        quark, $W$ boson and light jet production in proton-proton
+                        collisions at $\sqrt{s}=13$ TeV with the ATLAS detector}",
+      collaboration  = "ATLAS",
+      journal        = "JHEP",
+      volume         = "08",
+      year           = "2019",
+      pages          = "033",
+      doi            = "10.1007/JHEP08(2019)033",
+      eprint         = "1903.02942",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-EP-2019-011",
+      SLACcitation   = "%%CITATION = ARXIV:1903.02942;%%"
+}'

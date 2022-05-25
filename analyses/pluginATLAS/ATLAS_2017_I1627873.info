@@ -1,0 +1,54 @@
+Name: ATLAS_2017_I1627873
+Year: 2016
+Summary: EW Zjj using early Run-2 data
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1627873
+Status: VALIDATED
+Authors:
+ - Christian Johnson <christian.johnson@cern.ch>
+ - Deepak Kar <deepak.kar@cern.ch>
+ - Christian Gutschow <chris.g@cern.ch>
+References:
+ - "JHEP 1404 (2014) 031"
+ - "arXiv:1401.7610 [hep-ex]"
+Keywords:
+  - ZJETS
+  - VBF
+RunInfo:
+  Inclusive Z+jets events at 13 TeV, with Z decaying to muons or electrons 
+Beams: [p+, p+]
+Energies: [13000]
+PtCuts: [55, 45]
+Luminosity_fb: 3.2
+Options:
+ - TYPE=EW_ONLY
+Description:
+  'The cross-section for the production of two jets in association with a leptonically decaying Z boson ($Zjj$) is measured in
+  proton-proton collisions at a centre-of-mass energy of 13 TeV, using data recorded with the ATLAS detector at the Large Hadron
+  Collider, corresponding to an integrated luminosity of 3.2 fbi$^{-1}$. The electroweak $Zjj$ cross-section is extracted in a fiducial
+  region chosen to enhance the electroweak contribution relative to the dominant Drell–Yan $Zjj$ process, which is constrained using a
+  data-driven approach. The measured fiducial electroweak cross-section is 
+  $\sigma_{EWZjj}$ = 119$\pm$16(stat.)$\pm$20(syst.)$\pm$2(lumi.) fb for dijet invariant mass greater than 250 GeV, 
+  and 34.2$\pm$5.8(stat.)$\pm$5.5(syst.)$\pm$0.7(lumi.) fb for dijet invariant mass greater than 1 TeV.
+  Standard Model predictions are in agreement with the measurements. The inclusive $Zjj$ cross-section is also measured in six
+  different fiducial regions with varying contributions from electroweak and Drell-Yan $Zjj$ production.'
+BibKey: ATLAS:2017nei
+BibTex: '@article{ATLAS:2017nei,
+    author = "Aaboud, M. and others",
+    collaboration = "ATLAS",
+    title = "{Measurement of the cross-section for electroweak production of dijets in association with a Z boson in pp collisions at $\sqrt {s}$ = 13 TeV with the ATLAS detector}",
+    eprint = "1709.10264",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CERN-EP-2017-115",
+    doi = "10.1016/j.physletb.2017.10.040",
+    journal = "Phys. Lett. B",
+    volume = "775",
+    pages = "206--228",
+    year = "2017"
+}'
+
+ReleaseTests:
+ - $A pp-13000-mumujj
+

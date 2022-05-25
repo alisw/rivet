@@ -1,0 +1,35 @@
+Name: PLUTO_1984_I204487
+Year: 1984
+Summary: $\gamma\gamma\to\pi^+\pi^-$ for centre-of-mass energies between 0.36 and 1.72 GeV
+Experiment: PLUTO
+Collider: PETRA
+InspireID: 204487
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Z.Phys.C 26 (1984) 199, 1984
+RunInfo: gamma gamma to hadrons
+Beams: [gamma, gamma]
+Energies: []
+Description:
+  'Measurement of the differential cross section for $\gamma\gamma\to\pi^+\pi^-$. The cross section as a function of the centre-of-mass energy
+   of the photonic collision is measured.'
+ValidationInfo:
+  'Herwig 7 gamma gamma to pi+ pi- events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: PLUTO:1984efc
+BibTeX: '@article{PLUTO:1984efc,
+    author = "Berger, Christoph and others",
+    collaboration = "PLUTO",
+    title = "{Pion Pair Production in Photon-photon Interactions}",
+    reportNumber = "DESY-84-074",
+    doi = "10.1007/BF01421755",
+    journal = "Z. Phys. C",
+    volume = "26",
+    pages = "199",
+    year = "1984"
+}
+'

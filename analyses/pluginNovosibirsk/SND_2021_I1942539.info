@@ -1,0 +1,33 @@
+Name: SND_2021_I1942539
+Year: 2021
+Summary: Cross Section for $e^+e^-\to\eta\eta\gamma$ between 1.17 and 2 GeV
+Experiment: SND
+Collider: VEPP-2M
+InspireID: 1942539
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - arXiv:2110.05845
+RunInfo: e+ e- to hadrons below 1.17 and 2 GeV
+NeedCrossSection: yes
+Beams: [e+, e-]
+Description:
+  'Cross Section for $e^+e^-\to\eta\eta\gamma$ between 1.17 and 2 GeV measured by the SND collaboration.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: SND:2021amz
+BibTeX: '@article{SND:2021amz,
+    author = "Achasov, M. N. and others",
+    collaboration = "SND",
+    title = "{Study of the process $e^+e^- \to \eta\eta\gamma$ in the energy range $\sqrt{s} = \mbox{1.17--2.00}$ GeV with the SND detector}",
+    eprint = "2110.05845",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    month = "10",
+    year = "2021"
+}'

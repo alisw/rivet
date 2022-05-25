@@ -1,0 +1,28 @@
+Name: SND_2019_I1726419
+Year: 2019
+Summary: Cross section for $e^+e^-\to\pi^+\pi^-\pi^0\eta$ for energies below 2 GeV
+Experiment: SND
+Collider: VEPP-2M
+InspireID: 1726419
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - arXiv:1903.09307
+RunInfo: e+ e- to hadrons 
+NeedCrossSection: yes
+Beams: [e+, e-]
+Description:
+  'Measurement of the cross section for $e^+e^-\to\pi^+\pi^-\pi^0\eta$, and the resonant sub-processes $\omega\eta$, $\phi\eta$ and $a_0(980)\rho$, for energies below 2 GeV by the SND experiment'
+Keywords: []
+BibKey: Achasov:2019duv
+BibTeX: '@article{Achasov:2019duv,
+      author         = "Achasov, M. N. and others",
+      title          = "{Measurement of the $e^+e^- \to \pi^+\pi^-\pi^0\eta$
+                        cross section below $\sqrt{s}=2$ GeV}",
+      year           = "2019",
+      eprint         = "1903.09307",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1903.09307;%%"
+}'

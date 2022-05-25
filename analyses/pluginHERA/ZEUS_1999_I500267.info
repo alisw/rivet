@@ -1,0 +1,48 @@
+Name: ZEUS_1999_I500267
+Year: 1999
+Summary: Measurement of High-$Q^2$ Neutral-Current $e^+p$ Deep Inelastic Scattering Cross-Sections at HERA
+Experiment: ZEUS
+Collider: HERA Run I
+InspireID: 500267
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Andrii Verbytskyi <andrii.verbytskyi@mpp.mpg.de>
+References:
+ - Eur.Phys.J.C 11 (1999) 427-445
+ - arXiv:hep-ex/9905032'
+RunInfo: Inclusive high $Q^2$ DIS
+NeedCrossSection: yes
+Beams: [p+, e+]
+Energies: [[820, 27.5]]
+PtCuts: [0]
+Description:
+  The $e^+p$ neutral-current deep inelastic scattering differential cross-sections $d\sigma/dQ^2$, 
+  for $Q^2$ > 400 $GeV^2$, $d\sigma/dx$ and $d\sigma/dy$, for $Q^2$ > 400, 2500 and 10000 $GeV^2$, have been 
+  measured with the ZEUS detector at HERA. The data sample of $47.7 pb^{-1}$ was collected 
+  at a center-of-mass energy of 300 GeV. The cross-section, $d\sigma/dQ^2$, falls by six orders
+   of magnitude between $Q^2 = 400$ and $40000 GeV^2$. The predictions of the Standard Model 
+   are in very good agreement with the data. Complementing the observations of time-like 
+   $Z^0$ contributions to fermion-antifermion annihilation, the data provide direct evidence 
+   for the presence of $Z^0$ exchange in the space-like region explored by deep inelastic scattering.
+Keywords: []
+BibKey: Breitweg:1999id
+BibTeX: '@article{Breitweg:1999id,
+      author         = "Breitweg, J. and others",
+      title          = "{Measurement of high $Q^{2}$ neutral current $e^{+} p$
+                        deep inelastic scattering cross-sections at HERA}",
+      collaboration  = "ZEUS",
+      journal        = "Eur. Phys. J.",
+      volume         = "C11",
+      year           = "1999",
+      pages          = "427-445",
+      doi            = "10.1007/s100520050645",
+      eprint         = "hep-ex/9905032",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "DESY-99-056, ANL-HEP-PR-99-81",
+      SLACcitation   = "%%CITATION = HEP-EX/9905032;%%"
+}'
+
+ReleaseTests:
+ - $A DIS-e+-HighQ2

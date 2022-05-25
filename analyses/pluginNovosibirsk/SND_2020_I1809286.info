@@ -1,0 +1,32 @@
+Name: SND_2020_I1809286
+Year: 2020
+Summary: Cross section for $e^+e^-\to\pi^+\pi^-\pi^0$ between 1.15 and 2 GeV
+Experiment: SND
+Collider: VEPP-2000
+InspireID: 1809286
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - arXiv:2007.14595 
+RunInfo: e+ e- to hadrons
+Beams: [e+, e-]
+Description:
+  'Cross section for  $e^+e^-\to\pi^+\pi^-\pi^0$ between 1.15 and 2 GeV measured by SND.
+   The $\omega\pi^0$, $\rho\pi$ and $\rho(1450)\pi$ subprocesses are also extracted.'
+ValidationInfo:
+  'Herwig 7 events using low energy hadronic currents.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Achasov:2020van
+BibTeX: '@article{Achasov:2020van,
+    author = "Achasov, M.N. and others",
+    collaboration = "SND",
+    title = "{Study of dynamics of the process $e^+e^-\to \pi^+\pi^-\pi^0$ in the energy range 1.15--2.00 GeV}",
+    eprint = "2007.14595",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    month = "7",
+    year = "2020"
+}'

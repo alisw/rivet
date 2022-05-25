@@ -1,0 +1,49 @@
+Name: STAR_2016_I1414638
+Year: 2016
+Summary: Beam energy dependence of the third harmonic of azimuthal correlations
+Experiment: STAR
+Collider: RHIC
+InspireID: 1414638
+Status: UNVALIDATED
+Reentrant: true
+Authors:
+ - Maria Stefaniak <maria.stefaniak@subatech.in2p3.fr>
+ - Christian Bierlich <christian.bierlich@thep.lu.se>
+References:
+- 'Phys.Rev.Lett. 116 (2016) no.11, 112302'
+- 'DOI: 10.1103/PhysRevLett.116.112302'
+- 'arXiv:1601.01999 '
+RunInfo: Minimum bias AuAu events at various collision energies. Beam energy must be specified as analysis option "ENERGY" when rivet-merging samples.
+NeedCrossSection: no
+Beams: [Au, Au]
+# This is _total_ energy of beams, so this becomes 197*200=39400 etc.
+Energies: [1516.9, 2265.5, 2856.5, 3861.2, 5319, 7683, 12292.8, 39400]
+Options:
+ - ENERGY=1516.9, 2265.5, 2856.5, 3861.2, 5319, 7683, 12292.8, 39400
+ - cent=REF,GEN,IMP,USR,RAW
+Description:
+  'Results of harmonic decomposition of two-particle azimuthal correlations
+   in AuAu collisions, in energies recorded in the beam energy scan. For MC
+   purposes, note that the lowest energies might be too low for standard
+   generators to even initialise. Beam energy must be specified as analysis 
+   option "ENERGY" when rivet-merging samples.'
+BibKey: Adamczyk:2016exq
+BibTeX: '@article{Adamczyk:2016exq,
+      author         = "Adamczyk, L. and others",
+      title          = "{Beam Energy Dependence of the Third Harmonic of
+                        Azimuthal Correlations in Au+Au Collisions at RHIC}",
+      collaboration  = "STAR",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "116",
+      year           = "2016",
+      number         = "11",
+      pages          = "112302",
+      doi            = "10.1103/PhysRevLett.116.112302",
+      eprint         = "1601.01999",
+      archivePrefix  = "arXiv",
+      primaryClass   = "nucl-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1601.01999;%%"
+}'
+ToDo:
+ - Implement the analysis, test it, remove this ToDo, and mark as VALIDATED :-)
+

@@ -1,0 +1,364 @@
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I267755/d01-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.014, up: 0.014}}, 1: {error: {dn: -0.014, up: 0.014}}, 2: {error: {dn: -0.015, up: 0.015}}, 3: {error: {dn: -0.018, up: 0.018}}, 4: {error: {dn: -0.019, up: 0.019}}, 5: {error: {dn: -0.015, up: 0.015}}, 6: {error: {dn: -0.056, up: 0.056}}, 7: {error: {dn: -0.048, up: 0.048}}, 8: {error: {dn: -0.043, up: 0.043}}, 9: {error: {dn: -0.04, up: 0.04}}, 10: {error: {dn: -0.065, up: 0.065}}, 11: {error: {dn: -0.057, up: 0.057}}, 12: {error: {dn: -0.043, up: 0.043}}, 13: {error: {dn: -0.039, up: 0.039}}, 14: {error: {dn: -0.038, up: 0.038}}, 15: {error: {dn: -0.099, up: 0.099}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I267755/d01-x01-y01
+Title: doi:10.17182/hepdata.1500.v1/t1
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+2.000000e-02	2.900000e-03	2.900000e-03	9.470000e-01	1.400000e-02	1.400000e-02
+2.575000e-02	2.850000e-03	2.850000e-03	9.220000e-01	1.400000e-02	1.400000e-02
+3.145000e-02	2.850000e-03	2.850000e-03	8.690000e-01	1.500000e-02	1.500000e-02
+3.715000e-02	2.850000e-03	2.850000e-03	8.560000e-01	1.800000e-02	1.800000e-02
+4.285000e-02	2.850000e-03	2.850000e-03	8.480000e-01	1.900000e-02	1.900000e-02
+5.140000e-02	5.700000e-03	5.700000e-03	8.220000e-01	1.500000e-02	1.500000e-02
+6.285000e-02	5.750000e-03	5.750000e-03	7.830000e-01	5.600000e-02	5.600000e-02
+8.000000e-02	1.140000e-02	1.140000e-02	7.690000e-01	4.800000e-02	4.800000e-02
+1.027000e-01	1.130000e-02	1.130000e-02	7.590000e-01	4.300000e-02	4.300000e-02
+1.300000e-01	1.600000e-02	1.600000e-02	7.300000e-01	4.000000e-02	4.000000e-02
+1.825000e-01	1.150000e-02	1.150000e-02	6.100000e-01	6.500000e-02	6.500000e-02
+2.055000e-01	1.150000e-02	1.150000e-02	6.490000e-01	5.700000e-02	5.700000e-02
+2.400000e-01	2.300000e-02	2.300000e-02	6.160000e-01	4.300000e-02	4.300000e-02
+3.030000e-01	4.000000e-02	4.000000e-02	6.070000e-01	3.900000e-02	3.900000e-02
+4.570000e-01	1.140000e-01	1.140000e-01	5.790000e-01	3.800000e-02	3.800000e-02
+7.710000e-01	2.000000e-01	2.000000e-01	5.840000e-01	9.900000e-02	9.900000e-02
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I267755/d02-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.003, up: 0.003}}, 1: {error: {dn: -0.005, up: 0.005}}, 2: {error: {dn: -0.008, up: 0.008}}, 3: {error: {dn: -0.013, up: 0.013}}, 4: {error: {dn: -0.026, up: 0.026}}, 5: {error: {dn: -0.029, up: 0.029}}, 6: {error: {dn: -0.036, up: 0.036}}, 7: {error: {dn: -0.07, up: 0.07}}, 8: {error: {dn: -0.045, up: 0.045}}, 9: {error: {dn: -0.046, up: 0.046}}, 10: {error: {dn: -0.113, up: 0.113}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I267755/d02-x01-y01
+Title: doi:10.17182/hepdata.1500.v1/t2
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+2.000000e-02	2.900000e-03	2.900000e-03	4.400000e-02	3.000000e-03	3.000000e-03
+2.575000e-02	2.850000e-03	2.850000e-03	6.100000e-02	5.000000e-03	5.000000e-03
+3.145000e-02	2.850000e-03	2.850000e-03	1.080000e-01	8.000000e-03	8.000000e-03
+3.715000e-02	2.850000e-03	2.850000e-03	1.100000e-01	1.300000e-02	1.300000e-02
+4.285000e-02	2.850000e-03	2.850000e-03	1.140000e-01	2.600000e-02	2.600000e-02
+5.140000e-02	5.700000e-03	5.700000e-03	1.250000e-01	2.900000e-02	2.900000e-02
+7.425000e-02	1.715000e-02	1.715000e-02	1.670000e-01	3.600000e-02	3.600000e-02
+1.027000e-01	1.130000e-02	1.130000e-02	1.560000e-01	7.000000e-02	7.000000e-02
+1.940000e-01	2.300000e-02	2.300000e-02	2.660000e-01	4.500000e-02	4.500000e-02
+2.800000e-01	6.300000e-02	6.300000e-02	2.940000e-01	4.600000e-02	4.600000e-02
+7.710000e-01	2.000000e-01	2.000000e-01	2.560000e-01	1.130000e-01	1.130000e-01
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I267755/d03-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.005, up: 0.005}}, 1: {error: {dn: -0.003, up: 0.003}}, 2: {error: {dn: -0.002, up: 0.002}}, 3: {error: {dn: -0.004, up: 0.004}}, 4: {error: {dn: -0.009, up: 0.009}}, 5: {error: {dn: -0.005, up: 0.005}}, 6: {error: {dn: -0.012, up: 0.012}}, 7: {error: {dn: -0.026, up: 0.026}}, 8: {error: {dn: -0.032, up: 0.032}}, 9: {error: {dn: -0.037, up: 0.037}}, 10: {error: {dn: -0.081, up: 0.081}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I267755/d03-x01-y01
+Title: doi:10.17182/hepdata.1500.v1/t3
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+2.000000e-02	2.900000e-03	2.900000e-03	9.000000e-03	5.000000e-03	5.000000e-03
+2.575000e-02	2.850000e-03	2.850000e-03	1.600000e-02	3.000000e-03	3.000000e-03
+3.145000e-02	2.850000e-03	2.850000e-03	2.200000e-02	2.000000e-03	2.000000e-03
+3.715000e-02	2.850000e-03	2.850000e-03	3.400000e-02	4.000000e-03	4.000000e-03
+4.285000e-02	2.850000e-03	2.850000e-03	3.900000e-02	9.000000e-03	9.000000e-03
+5.715000e-02	1.145000e-02	1.145000e-02	5.500000e-02	5.000000e-03	5.000000e-03
+8.000000e-02	1.140000e-02	1.140000e-02	7.300000e-02	1.200000e-02	1.200000e-02
+1.027000e-01	1.130000e-02	1.130000e-02	8.500000e-02	2.600000e-02	2.600000e-02
+1.940000e-01	2.300000e-02	2.300000e-02	1.020000e-01	3.200000e-02	3.200000e-02
+2.800000e-01	6.300000e-02	6.300000e-02	9.400000e-02	3.700000e-02	3.700000e-02
+7.710000e-01	2.000000e-01	2.000000e-01	1.600000e-01	8.100000e-02	8.100000e-02
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I267755/d04-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.014, up: 0.014}}, 1: {error: {dn: -0.036, up: 0.036}}, 2: {error: {dn: -0.02, up: 0.02}}, 3: {error: {dn: -0.028, up: 0.028}}, 4: {error: {dn: -0.095, up: 0.095}}, 5: {error: {dn: -0.076, up: 0.076}}, 6: {error: {dn: -0.092, up: 0.092}}, 7: {error: {dn: -0.098, up: 0.098}}, 8: {error: {dn: -0.093, up: 0.093}}, 9: {error: {dn: -0.047, up: 0.047}}, 10: {error: {dn: -0.069, up: 0.069}}, 11: {error: {dn: -0.126, up: 0.126}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I267755/d04-x01-y01
+Title: doi:10.17182/hepdata.1500.v1/t4
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.590000e-02	2.300000e-03	2.300000e-03	9.480000e-01	1.400000e-02	1.400000e-02
+2.045000e-02	2.250000e-03	2.250000e-03	8.780000e-01	3.600000e-02	3.600000e-02
+2.500000e-02	2.300000e-03	2.300000e-03	8.600000e-01	2.000000e-02	2.000000e-02
+2.955000e-02	2.250000e-03	2.250000e-03	8.160000e-01	2.800000e-02	2.800000e-02
+4.545000e-02	9.050000e-03	9.050000e-03	8.150000e-01	9.500000e-02	9.500000e-02
+6.360000e-02	9.100000e-03	9.100000e-03	7.130000e-01	7.600000e-02	7.600000e-02
+8.180000e-02	9.100000e-03	9.100000e-03	6.150000e-01	9.200000e-02	9.200000e-02
+1.044500e-01	1.355000e-02	1.355000e-02	6.350000e-01	9.800000e-02	9.800000e-02
+1.545000e-01	1.850000e-02	1.850000e-02	6.100000e-01	9.300000e-02	9.300000e-02
+2.230000e-01	5.000000e-02	5.000000e-02	6.290000e-01	4.700000e-02	4.700000e-02
+3.640000e-01	9.100000e-02	9.100000e-02	6.450000e-01	6.900000e-02	6.900000e-02
+7.275000e-01	2.725000e-01	2.725000e-01	5.880000e-01	1.260000e-01	1.260000e-01
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I267755/d05-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.006, up: 0.006}}, 1: {error: {dn: -0.025, up: 0.025}}, 2: {error: {dn: -0.014, up: 0.014}}, 3: {error: {dn: -0.018, up: 0.018}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I267755/d05-x01-y01
+Title: doi:10.17182/hepdata.1500.v1/t5
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.590000e-02	2.300000e-03	2.300000e-03	4.100000e-02	6.000000e-03	6.000000e-03
+2.045000e-02	2.250000e-03	2.250000e-03	9.200000e-02	2.500000e-02	2.500000e-02
+2.500000e-02	2.300000e-03	2.300000e-03	1.100000e-01	1.400000e-02	1.400000e-02
+2.955000e-02	2.250000e-03	2.250000e-03	1.330000e-01	1.800000e-02	1.800000e-02
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I267755/d06-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.005, up: 0.005}}, 1: {error: {dn: -0.006, up: 0.006}}, 2: {error: {dn: -0.006, up: 0.006}}, 3: {error: {dn: -0.006, up: 0.006}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I267755/d06-x01-y01
+Title: doi:10.17182/hepdata.1500.v1/t6
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.590000e-02	2.300000e-03	2.300000e-03	1.100000e-02	5.000000e-03	5.000000e-03
+2.045000e-02	2.250000e-03	2.250000e-03	3.100000e-02	6.000000e-03	6.000000e-03
+2.500000e-02	2.300000e-03	2.300000e-03	3.000000e-02	6.000000e-03	6.000000e-03
+2.955000e-02	2.250000e-03	2.250000e-03	5.000000e-02	6.000000e-03	6.000000e-03
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I267755/d07-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -3.0, up: 3.0}, 'sys,Overall normalization error': {dn: -9.72, up: 9.72}}, 1: {error: {dn: -3.0, up: 3.0}, 'sys,Overall normalization error': {dn: -9.06, up: 9.06}}, 2: {error: {dn: -3.0, up: 3.0}, 'sys,Overall normalization error': {dn: -7.74, up: 7.74}}, 3: {error: {dn: -3.0, up: 3.0}, 'sys,Overall normalization error': {dn: -6.959999999999999, up: 6.959999999999999}}, 4: {error: {dn: -2.5, up: 2.5}, 'sys,Overall normalization error': {dn: -5.934000000000001, up: 5.934000000000001}}, 5: {error: {dn: -1.6, up: 1.6}, 'sys,Overall normalization error': {dn: -4.787999999999999, up: 4.787999999999999}}, 6: {error: {dn: -4.2, up: 4.2}, 'sys,Overall normalization error': {dn: -3.546, up: 3.546}}, 7: {error: {dn: -2.8, up: 2.8}, 'sys,Overall normalization error': {dn: -2.586, up: 2.586}}, 8: {error: {dn: -1.7, up: 1.7}, 'sys,Overall normalization error': {dn: -1.818, up: 1.818}}, 9: {error: {dn: -1.1, up: 1.1}, 'sys,Overall normalization error': {dn: -1.158, up: 1.158}}, 10: {error: {dn: -1.0, up: 1.0}, 'sys,Overall normalization error': {dn: -0.546, up: 0.546}}, 11: {error: {dn: -0.7, up: 0.7}, 'sys,Overall normalization error': {dn: -0.46199999999999997, up: 0.46199999999999997}}, 12: {error: {dn: -0.4, up: 0.4}, 'sys,Overall normalization error': {dn: -0.30000000000000004, up: 0.30000000000000004}}, 13: {error: {dn: -0.19, up: 0.19}, 'sys,Overall normalization error': {dn: -0.171, up: 0.171}}, 14: {error: {dn: -0.052, up: 0.052}, 'sys,Overall normalization error': {dn: -0.0546, up: 0.0546}}, 15: {error: {dn: -0.02, up: 0.02}, 'sys,Overall normalization error': {dn: -0.0066, up: 0.0066}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I267755/d07-x01-y01
+Title: doi:10.17182/hepdata.1500.v1/t7
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+2.000000e-02	2.900000e-03	2.900000e-03	1.620000e+02	1.017243e+01	1.017243e+01
+2.570000e-02	2.800000e-03	2.900000e-03	1.510000e+02	9.543773e+00	9.543773e+00
+3.140000e-02	2.800000e-03	2.900000e-03	1.290000e+02	8.301060e+00	8.301060e+00
+3.710000e-02	2.800000e-03	2.900000e-03	1.160000e+02	7.579024e+00	7.579024e+00
+4.290000e-02	2.900000e-03	2.800000e-03	9.890000e+01	6.439127e+00	6.439127e+00
+5.140000e-02	5.700000e-03	5.700000e-03	7.980000e+01	5.048261e+00	5.048261e+00
+6.290000e-02	5.800000e-03	5.700000e-03	5.910000e+01	5.496737e+00	5.496737e+00
+7.890000e-02	1.030000e-02	1.250000e-02	4.310000e+01	3.811482e+00	3.811482e+00
+1.020000e-01	1.060000e-02	1.200000e-02	3.030000e+01	2.489001e+00	2.489001e+00
+1.300000e-01	1.600000e-02	1.600000e-02	1.930000e+01	1.597174e+00	1.597174e+00
+1.820000e-01	1.100000e-02	1.200000e-02	9.100000e+00	1.139349e+00	1.139349e+00
+2.040000e-01	1.000000e-02	1.300000e-02	7.700000e+00	8.387157e-01	8.387157e-01
+2.370000e-01	2.000000e-02	2.600000e-02	5.000000e+00	5.000000e-01	5.000000e-01
+2.970000e-01	3.400000e-02	4.600000e-02	2.850000e+00	2.556189e-01	2.556189e-01
+4.340000e-01	9.100000e-02	1.370000e-01	9.100000e-01	7.540000e-02	7.540000e-02
+7.300000e-01	1.590000e-01	2.410000e-01	1.100000e-01	2.106086e-02	2.106086e-02
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I267755/d08-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.5, up: 0.5}, 'sys,Overall normalization error': {dn: -0.44999999999999996, up: 0.44999999999999996}}, 1: {error: {dn: -0.9, up: 0.9}, 'sys,Overall normalization error': {dn: -0.6000000000000001, up: 0.6000000000000001}}, 2: {error: {dn: -1.2, up: 1.2}, 'sys,Overall normalization error': {dn: -0.966, up: 0.966}}, 3: {error: {dn: -1.7, up: 1.7}, 'sys,Overall normalization error': {dn: -0.8939999999999999, up: 0.8939999999999999}}, 4: {error: {dn: -3.0, up: 3.0}, 'sys,Overall normalization error': {dn: -0.798, up: 0.798}}, 5: {error: {dn: -2.8, up: 2.8}, 'sys,Overall normalization error': {dn: -0.726, up: 0.726}}, 6: {error: {dn: -2.3, up: 2.3}, 'sys,Overall normalization error': {dn: -0.63, up: 0.63}}, 7: {error: {dn: -2.8, up: 2.8}, 'sys,Overall normalization error': {dn: -0.378, up: 0.378}}, 8: {error: {dn: -0.61, up: 0.61}, 'sys,Overall normalization error': {dn: -0.21419999999999997, up: 0.21419999999999997}}, 9: {error: {dn: -0.28, up: 0.28}, 'sys,Overall normalization error': {dn: -0.10500000000000001, up: 0.10500000000000001}}, 10: {error: {dn: -0.02, up: 0.02}, 'sys,Overall normalization error': {dn: -0.003, up: 0.003}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I267755/d08-x01-y01
+Title: doi:10.17182/hepdata.1500.v1/t8
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+2.000000e-02	2.900000e-03	2.900000e-03	7.500000e+00	6.726812e-01	6.726812e-01
+2.570000e-02	2.800000e-03	2.900000e-03	1.000000e+01	1.081665e+00	1.081665e+00
+3.140000e-02	2.800000e-03	2.900000e-03	1.610000e+01	1.540505e+00	1.540505e+00
+3.710000e-02	2.800000e-03	2.900000e-03	1.490000e+01	1.920738e+00	1.920738e+00
+4.290000e-02	2.900000e-03	2.800000e-03	1.330000e+01	3.104320e+00	3.104320e+00
+5.140000e-02	5.700000e-03	5.700000e-03	1.210000e+01	2.892590e+00	2.892590e+00
+7.260000e-02	1.550000e-02	1.880000e-02	1.050000e+01	2.384722e+00	2.384722e+00
+1.020000e-01	1.060000e-02	1.200000e-02	6.300000e+00	2.825400e+00	2.825400e+00
+1.910000e-01	2.000000e-02	2.600000e-02	3.570000e+00	6.465150e-01	6.465150e-01
+2.710000e-01	5.400000e-02	7.200000e-02	1.750000e+00	2.990401e-01	2.990401e-01
+7.300000e-01	1.590000e-01	2.410000e-01	5.000000e-02	2.022375e-02	2.022375e-02
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I267755/d09-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.86, up: 0.86}, 'sys,Overall normalization error': {dn: -0.09240000000000001, up: 0.09240000000000001}}, 1: {error: {dn: -0.53, up: 0.53}, 'sys,Overall normalization error': {dn: -0.1578, up: 0.1578}}, 2: {error: {dn: -0.35, up: 0.35}, 'sys,Overall normalization error': {dn: -0.19980000000000003, up: 0.19980000000000003}}, 3: {error: {dn: -0.53, up: 0.53}, 'sys,Overall normalization error': {dn: -0.273, up: 0.273}}, 4: {error: {dn: -1.05, up: 1.05}, 'sys,Overall normalization error': {dn: -0.273, up: 0.273}}, 5: {error: {dn: -0.44, up: 0.44}, 'sys,Overall normalization error': {dn: -0.28440000000000004, up: 0.28440000000000004}}, 6: {error: {dn: -0.67, up: 0.67}, 'sys,Overall normalization error': {dn: -0.24599999999999997, up: 0.24599999999999997}}, 7: {error: {dn: -1.03, up: 1.03}, 'sys,Overall normalization error': {dn: -0.20400000000000001, up: 0.20400000000000001}}, 8: {error: {dn: -0.42, up: 0.42}, 'sys,Overall normalization error': {dn: -0.0822, up: 0.0822}}, 9: {error: {dn: -0.23, up: 0.23}, 'sys,Overall normalization error': {dn: -0.033600000000000005, up: 0.033600000000000005}}, 10: {error: {dn: -0.016, up: 0.016}, 'sys,Overall normalization error': {dn: -0.0019200000000000003, up: 0.0019200000000000003}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I267755/d09-x01-y01
+Title: doi:10.17182/hepdata.1500.v1/t9
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+2.000000e-02	2.900000e-03	2.900000e-03	1.540000e+00	8.649496e-01	8.649496e-01
+2.570000e-02	2.800000e-03	2.900000e-03	2.630000e+00	5.529926e-01	5.529926e-01
+3.140000e-02	2.800000e-03	2.900000e-03	3.330000e+00	4.030137e-01	4.030137e-01
+3.710000e-02	2.800000e-03	2.900000e-03	4.550000e+00	5.961787e-01	5.961787e-01
+4.290000e-02	2.900000e-03	2.800000e-03	4.550000e+00	1.084910e+00	1.084910e+00
+5.600000e-02	1.030000e-02	1.260000e-02	4.740000e+00	5.239116e-01	5.239116e-01
+7.890000e-02	1.030000e-02	1.250000e-02	4.100000e+00	7.137338e-01	7.137338e-01
+1.020000e-01	1.060000e-02	1.200000e-02	3.400000e+00	1.050008e+00	1.050008e+00
+1.910000e-01	2.000000e-02	2.600000e-02	1.370000e+00	4.279683e-01	4.279683e-01
+2.710000e-01	5.400000e-02	7.200000e-02	5.600000e-01	2.324413e-01	2.324413e-01
+7.300000e-01	1.590000e-01	2.410000e-01	3.200000e-02	1.611479e-02	1.611479e-02
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I267755/d10-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -4.0, up: 4.0}, 'sys,Overall normalization error': {dn: -12.120000000000001, up: 12.120000000000001}}, 1: {error: {dn: -8.0, up: 8.0}, 'sys,Overall normalization error': {dn: -11.28, up: 11.28}}, 2: {error: {dn: -4.0, up: 4.0}, 'sys,Overall normalization error': {dn: -9.959999999999999, up: 9.959999999999999}}, 3: {error: {dn: -6.0, up: 6.0}, 'sys,Overall normalization error': {dn: -8.58, up: 8.58}}, 4: {error: {dn: -11.4, up: 11.4}, 'sys,Overall normalization error': {dn: -5.808, up: 5.808}}, 5: {error: {dn: -6.2, up: 6.2}, 'sys,Overall normalization error': {dn: -3.3899999999999997, up: 3.3899999999999997}}, 6: {error: {dn: -5.1, up: 5.1}, 'sys,Overall normalization error': {dn: -2.034, up: 2.034}}, 7: {error: {dn: -4.0, up: 4.0}, 'sys,Overall normalization error': {dn: -1.53, up: 1.53}}, 8: {error: {dn: -2.0, up: 2.0}, 'sys,Overall normalization error': {dn: -0.774, up: 0.774}}, 9: {error: {dn: -0.5, up: 0.5}, 'sys,Overall normalization error': {dn: -0.384, up: 0.384}}, 10: {error: {dn: -0.2, up: 0.2}, 'sys,Overall normalization error': {dn: -0.126, up: 0.126}}, 11: {error: {dn: -0.04, up: 0.04}, 'sys,Overall normalization error': {dn: -0.012, up: 0.012}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I267755/d10-x01-y01
+Title: doi:10.17182/hepdata.1500.v1/t10
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.590000e-02	2.300000e-03	2.300000e-03	2.020000e+02	1.276301e+01	1.276301e+01
+2.050000e-02	2.300000e-03	2.200000e-03	1.880000e+02	1.382890e+01	1.382890e+01
+2.500000e-02	2.300000e-03	2.300000e-03	1.660000e+02	1.073320e+01	1.073320e+01
+2.950000e-02	2.200000e-03	2.300000e-03	1.430000e+02	1.046979e+01	1.046979e+01
+4.450000e-02	8.100000e-03	1.000000e-02	9.680000e+01	1.279425e+01	1.279425e+01
+6.270000e-02	8.200000e-03	1.000000e-02	5.650000e+01	7.066265e+00	7.066265e+00
+8.090000e-02	8.200000e-03	1.000000e-02	3.390000e+01	5.490643e+00	5.490643e+00
+1.030000e-01	1.210000e-02	1.500000e-02	2.550000e+01	4.282628e+00	4.282628e+00
+1.520000e-01	1.600000e-02	2.100000e-02	1.290000e+01	2.144546e+00	2.144546e+00
+2.160000e-01	4.300000e-02	5.700000e-02	6.400000e+00	6.304411e-01	6.304411e-01
+3.450000e-01	7.200000e-02	1.100000e-01	2.100000e+00	2.363810e-01	2.363810e-01
+6.820000e-01	2.270000e-01	3.180000e-01	2.000000e-01	4.176123e-02	4.176123e-02
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I267755/d11-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -1.2, up: 1.2}, 'sys,Overall normalization error': {dn: -0.528, up: 0.528}}, 1: {error: {dn: -5.3, up: 5.3}, 'sys,Overall normalization error': {dn: -1.1880000000000002, up: 1.1880000000000002}}, 2: {error: {dn: -2.6, up: 2.6}, 'sys,Overall normalization error': {dn: -1.278, up: 1.278}}, 3: {error: {dn: -3.1, up: 3.1}, 'sys,Overall normalization error': {dn: -1.3980000000000001, up: 1.3980000000000001}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I267755/d11-x01-y01
+Title: doi:10.17182/hepdata.1500.v1/t11
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.590000e-02	2.300000e-03	2.300000e-03	8.800000e+00	1.311024e+00	1.311024e+00
+2.050000e-02	2.300000e-03	2.200000e-03	1.980000e+01	5.431514e+00	5.431514e+00
+2.500000e-02	2.300000e-03	2.300000e-03	2.130000e+01	2.897116e+00	2.897116e+00
+2.950000e-02	2.200000e-03	2.300000e-03	2.330000e+01	3.400648e+00	3.400648e+00
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I267755/d12-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -1.1, up: 1.1}, 'sys,Overall normalization error': {dn: -0.14400000000000002, up: 0.14400000000000002}}, 1: {error: {dn: -1.3, up: 1.3}, 'sys,Overall normalization error': {dn: -0.396, up: 0.396}}, 2: {error: {dn: -1.2, up: 1.2}, 'sys,Overall normalization error': {dn: -0.342, up: 0.342}}, 3: {error: {dn: -1.1, up: 1.1}, 'sys,Overall normalization error': {dn: -0.528, up: 0.528}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I267755/d12-x01-y01
+Title: doi:10.17182/hepdata.1500.v1/t12
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.590000e-02	2.300000e-03	2.300000e-03	2.400000e+00	1.109385e+00	1.109385e+00
+2.050000e-02	2.300000e-03	2.200000e-03	6.600000e+00	1.358976e+00	1.358976e+00
+2.500000e-02	2.300000e-03	2.300000e-03	5.700000e+00	1.247784e+00	1.247784e+00
+2.950000e-02	2.200000e-03	2.300000e-03	8.800000e+00	1.220157e+00	1.220157e+00
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I267755/d13-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -8.1, up: 8.1}, sys: {dn: -8.1, up: 8.1}, 'sys,Overall normalization error': {dn: -2.3520000000000003, up: 2.3520000000000003}}, 1: {stat: {dn: -5.5, up: 5.5}, sys: {dn: -3.5, up: 3.5}, 'sys,Overall normalization error': {dn: -1.08, up: 1.08}}, 2: {stat: {dn: -2.1, up: 2.1}, sys: {dn: -2.1, up: 2.1}, 'sys,Overall normalization error': {dn: -0.666, up: 0.666}}, 3: {stat: {dn: -1.3, up: 1.3}, sys: {dn: -1.3, up: 1.3}, 'sys,Overall normalization error': {dn: -0.43200000000000005, up: 0.43200000000000005}}, 4: {stat: {dn: -0.57, up: 0.57}, sys: {dn: -0.68, up: 0.68}, 'sys,Overall normalization error': {dn: -0.15839999999999999, up: 0.15839999999999999}}, 5: {stat: {dn: -0.11, up: 0.11}, sys: {dn: -0.13, up: 0.13}, 'sys,Overall normalization error': {dn: -0.034199999999999994, up: 0.034199999999999994}}, 6: {stat: {dn: -0.015, up: 0.015}, sys: {dn: -0.011, up: 0.011}, 'sys,Overall normalization error': {dn: -0.0024000000000000002, up: 0.0024000000000000002}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I267755/d13-x01-y01
+Title: doi:10.17182/hepdata.1500.v1/t13
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+5.550000e-02	1.000000e-02	1.270000e-02	3.920000e+01	1.169410e+01	1.169410e+01
+7.955000e-02	1.135000e-02	1.135000e-02	1.800000e+01	6.608056e+00	6.608056e+00
+1.100000e-01	1.910000e-02	2.600000e-02	1.110000e+01	3.043609e+00	3.043609e+00
+1.560000e-01	2.000000e-02	2.600000e-02	7.200000e+00	1.888551e+00	1.888551e+00
+2.190000e-01	3.700000e-02	5.400000e-02	2.640000e+00	9.013271e-01	9.013271e-01
+3.910000e-01	1.180000e-01	1.540000e-01	5.700000e-01	1.736941e-01	1.736941e-01
+7.050000e-01	1.600000e-01	2.950000e-01	4.000000e-02	1.875527e-02	1.875527e-02
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I267755/d14-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.5, up: 0.5}}, 1: {error: {dn: -0.5, up: 0.5}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I267755/d14-x01-y01
+Title: doi:10.17182/hepdata.1500.v1/t14
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+3.400000e+01	0.000000e+00	0.000000e+00	1.090000e+01	5.000000e-01	5.000000e-01
+4.400000e+01	0.000000e+00	0.000000e+00	1.110000e+01	5.000000e-01	5.000000e-01
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I267755/d14-x01-y02
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.2, up: 0.2}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I267755/d14-x01-y02
+Title: doi:10.17182/hepdata.1500.v1/t14
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+3.400000e+01	0.000000e+00	0.000000e+00	1.760000e+00	2.000000e-01	2.000000e-01
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I267755/d14-x01-y03
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.06, up: 0.06}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I267755/d14-x01-y03
+Title: doi:10.17182/hepdata.1500.v1/t14
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+3.400000e+01	0.000000e+00	0.000000e+00	6.700000e-01	6.000000e-02	6.000000e-02
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I267755/d14-x01-y04
+Variations: [""]
+ErrorBreakdown: {1: {error: {dn: -1.0, up: 1.0}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I267755/d14-x01-y04
+Title: doi:10.17182/hepdata.1500.v1/t14
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+4.400000e+01	0.000000e+00	0.000000e+00	5.400000e+00	1.000000e+00	1.000000e+00
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I267755/d15-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.5, up: 0.5}}, 1: {error: {dn: -0.5, up: 0.5}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I267755/d15-x01-y01
+Title: doi:10.17182/hepdata.1500.v1/t15
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+3.400000e+01	0.000000e+00	0.000000e+00	1.090000e+01	5.000000e-01	5.000000e-01
+4.400000e+01	0.000000e+00	0.000000e+00	1.110000e+01	5.000000e-01	5.000000e-01
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I267755/d16-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.2, up: 0.2}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I267755/d16-x01-y01
+Title: doi:10.17182/hepdata.1500.v1/t16
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+3.400000e+01	0.000000e+00	0.000000e+00	1.760000e+00	2.000000e-01	2.000000e-01
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I267755/d17-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.06, up: 0.06}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I267755/d17-x01-y01
+Title: doi:10.17182/hepdata.1500.v1/t17
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+3.400000e+01	0.000000e+00	0.000000e+00	6.700000e-01	6.000000e-02	6.000000e-02
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1989_I267755/d18-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -1.0, up: 1.0}}}
+
+IsRef: 1
+Path: /REF/TASSO_1989_I267755/d18-x01-y01
+Title: doi:10.17182/hepdata.1500.v1/t18
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+4.400000e+01	0.000000e+00	0.000000e+00	5.400000e+00	1.000000e+00	1.000000e+00
+END YODA_SCATTER2D_V2

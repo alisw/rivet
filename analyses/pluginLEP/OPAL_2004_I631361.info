@@ -1,0 +1,54 @@
+Name: OPAL_2004_I631361
+Year: 2004
+Summary: Gluon jet charged multiplicities and fragmentation functions
+Experiment: OPAL
+Collider: LEP
+InspireID: 631361
+Status: VALIDATED
+Authors:
+ - Daniel Reichelt <d.reichelt@cern.ch>
+References:
+ - Phys. Rev. D69, 032002,2004
+ - hep-ex/0310048
+RunInfo:
+  The fictional $e^+e^-\to gg$ process 
+NumEvents: 100000
+NeedCrossSection: no
+Beams: [e+, e- ]
+Energies: [10.50,11.96,13.96,16.86,21.84,28.48,35.44,91.2]
+Options:
+ - PROCESS=GG,QQ
+NeedCrossSection: False
+Description:
+  ' Measurement of gluon jet properties using the jet boost algorithm, a technique to select unbiased samples of gluon jets in $e^+e^-$ annihilation, i.e. gluon jets free of biases introduced by event selection or jet finding criteria.
+Two modes are provided, the prefer option is to produce the fictional $e^+e^-\to g g $  process to be used due to the corrections applied to the data, PROCESS=GG.
+The original analysis technique to extract gluon jets from hadronic $e^+e^-$ events using $e^+e^-\to q\bar{q}$ events, PROCESS=QQ,
+is also provided but cannot be used for tuning as the data has been corrected for impurities, however it is still useful qualitatively in order to check the properties of gluon jets in the original way in which there were measured rather than using a fictitious process.'
+BibKey: Abbiendi:2004gh
+BibTeX: '@article{Abbiendi:2004gh,
+      author         = "Abbiendi, G. and others",
+      title          = "{Experimental studies of unbiased gluon jets from $e^{+}
+                        e^{-}$ annihilations using the jet boost algorithm}",
+      collaboration  = "OPAL",
+      journal        = "Phys. Rev.",
+      volume         = "D69",
+      year           = "2004",
+      pages          = "032002",
+      doi            = "10.1103/PhysRevD.69.032002",
+      eprint         = "hep-ex/0310048",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-EP-2004-067",
+      SLACcitation   = "%%CITATION = HEP-EX/0310048;%%"
+}'
+
+ReleaseTests:
+ - $A LEP-10.5-gg
+ - $A-2 LEP-11.96-gg
+ - $A-3 LEP-13.96-gg
+ - $A-4 LEP-16.86-gg
+ - $A-5 LEP-21.84-gg
+ - $A-6 LEP-28.48-gg
+ - $A-7 LEP-35.44-gg
+ - $A-8 LEP-91 :PROCESS=QQ
+

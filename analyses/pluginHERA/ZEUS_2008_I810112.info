@@ -1,0 +1,47 @@
+Name: ZEUS_2008_I810112
+Year: 2008
+Summary: Measurement of $D^{\pm}$ and $D^0$ production in deep inelastic scattering using a lifetime tag at HERA
+Experiment: ZEUS
+Collider: HERA
+InspireID: 810112
+Status: VALIDATED
+Authors:
+ -  Andrii Verbytskyi  andrii.verbytskyi@mpp.mpg.de
+References:
+ - Eur.Phys.J.C 63 (2009) 171-188
+ - DOI:10.1140/epjc/s10052-009-1088-x
+ - arXiv:0812.3775 [hep-ex]
+Reentrant: true
+RunInfo: Inclusive DIS
+NeedCrossSection: yes
+Beams: [[e+, p+],[p+,e+],[e-, p+],[p+,e-]]
+Energies_GeV: [[27.5,920],[920,27.5],[27.5,920],[920,27.5]]
+Description:
+  'The production of $D^{\pm}$ and $D^{0}$ mesons has been measured with the
+   ZEUS detector at HERA using an integrated luminosity of $133.6 pb^{-1}$.
+   The measurements cover the kinematic range $5 < Q^2 < 1000 GeV^2$, 
+   $0.02 < y < 0.7$, $1.5 < p_T^D < 15 GeV$ and $\eta^D < 1.6$. Combinatorial
+   background to the D meson signals is reduced by using the ZEUS microvertex detector
+   to reconstruct displaced secondary vertices. Production cross sections are compared
+   with the predictions of next-to-leading-order QCD which is found to describe the data
+   well. Measurements are extrapolated to the full kinematic phase space in order to obtain the open-charm 
+  contribution, $F_2^c\bar{c}$, to the proton structure function, $F_2$.'
+BibKey: Chekanov:2008yd
+BibTeX: '@article{Chekanov:2008yd,
+      author         = "Chekanov, S. and others",
+      title          = "{Measurement of D+- and D0 production in deep inelastic
+                        scattering using a lifetime tag at HERA}",
+      collaboration  = "ZEUS",
+      journal        = "Eur. Phys. J.",
+      volume         = "C63",
+      year           = "2009",
+      pages          = "171-188",
+      doi            = "10.1140/epjc/s10052-009-1088-x",
+      eprint         = "0812.3775",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "DESY-08-201",
+      SLACcitation   = "%%CITATION = ARXIV:0812.3775;%%"
+}'
+
+

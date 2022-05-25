@@ -1,0 +1,30 @@
+Name: BABAR_2008_I776519
+Year: 2008
+Summary: Cross section for $e^+e^-\to D^+D^-$ and $D^0\bar{D}^0$ below 5 GeV
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 776519
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ -  arXiv:0710.1371
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+, e-]
+Description:
+  'Cross section for $e^+e^-\to D^+D^-$ and $D^0\bar{D}^0$ below 5 GeV'
+Keywords: []
+BibKey: Aubert:2008pa
+BibTeX: '@article{Aubert:2008pa,
+      author         = "Aubert, Bernard and others",
+      title          = "{Study of the Exclusive Initial-State-Radiation
+                        Production of the D anti-D System}",
+      collaboration  = "BaBar",
+      year           = "2008",
+      eprint         = "0710.1371",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "SLAC-PUB-12818, BABAR-PUB-07-060",
+      SLACcitation   = "%%CITATION = ARXIV:0710.1371;%%"
+}'

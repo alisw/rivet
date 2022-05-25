@@ -1,0 +1,61 @@
+Name: ATLAS_2019_I1740909
+Year: 2019
+Summary: Jet fragmentation using charged particles 
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1740909
+Status: VALIDATED
+Reentrant: true
+RefUnmatch: 'd185|d186|d187|d188'
+Authors:
+ - Ben Nachman <benjamin.philip.nachman@cern.ch>
+ - Deepak Kar <deepak.kar@cern.ch>
+References:
+ - arXiv:1906.09254  [hep-ex]
+ -  Phys.Rev.D 100 (2019) 5, 052011
+RunInfo:
+  p + p -> jj
+Beams: [p+, p+]
+Energies: [13000]
+Luminosity_fb: 33
+PtCuts: [100]
+Description:
+  'This paper presents a measurement of quantities related to the formation of jets from 
+   high-energy quarks and gluons (fragmentation). Jets with transverse momentum 
+   100 GeV $< p_T <$ 2.5 TeV and pseudorapidity $|\eta|<2.1$ from an integrated luminosity of 
+   33 fb$^{−1}$ of $\sqrt{s}=$13 TeV proton-proton collisions are reconstructed with the ATLAS detector 
+   at the Large Hadron Collider. Charged-particle tracks with $p_T >$ 500 MeV and $|\eta|<2.5$ 
+   are used to probe the detailed structure of the jet. The fragmentation properties of the more 
+   forward and the more central of the two leading jets from each event are studied. 
+   The data are unfolded to correct for detector resolution and acceptance effects. 
+   Comparisons with parton shower Monte Carlo generators indicate that existing models 
+   provide a reasonable description of the data across a wide range of phase space, 
+   but there are also significant differences. Furthermore, the data are interpreted 
+   in the context of quark- and gluon-initiated jets by exploiting the rapidity dependence 
+   of the jet flavor fraction. A first measurement of the charged-particle multiplicity 
+   using model-independent jet labels (topic modeling) provides a promising alternative 
+   to traditional quark and gluon extractions using input from simulation. 
+   The simulations provide a reasonable description of the quark-like data across the jet 
+   $p_T$ range presented in this measurement, but the gluon-like data have systematically 
+   fewer charged particles than the simulations.'
+BibKey: ATLAS:2019rqw
+BibTeX: '@article{ATLAS:2019rqw,
+    author = "Aad, Georges and others",
+    collaboration = "ATLAS",
+    title = "{Properties of jet fragmentation using charged particles measured with the ATLAS detector in $pp$ collisions at $\sqrt{s}=13$ TeV}",
+    eprint = "1906.09254",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CERN-EP-2019-090",
+    doi = "10.1103/PhysRevD.100.052011",
+    journal = "Phys. Rev. D",
+    volume = "100",
+    number = "5",
+    pages = "052011",
+    year = "2019"
+}'
+
+ReleaseTests:
+ - $A LHC-13-Jets-8
+
+

@@ -1,0 +1,35 @@
+Name: TASSO_1983_I181470
+Year: 1983
+Summary: $\pi^\pm$, $K^\pm$ and $p,\bar{p}$ spectra in $e^+e^-$ at 14, 22 and 34 GeV
+Experiment: TASSO
+Collider: Petra
+InspireID: 181470
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Z.Phys. C17 (1983) 5-15, 1983 
+RunInfo: e+ e- to hadrons. Beam energy must be specified as analysis option "ENERGY" when rivet-merging samples.
+NeedCrossSection: yes
+Beams: [e+, e-]
+Energies: [14,22,34]
+Options:
+ - ENERGY=14, 22, 34
+Description:
+  'Measurement of the $\pi^\pm$, $K^\pm$ and $p,\bar{p}$ spectra in $e^+e^-$ collisions for centre-of-mass energies of 14, 22 and 34 GeV by the TASSO experiment at Petra.
+  Beam energy must be specified as analysis option "ENERGY" when rivet-merging samples.'
+Keywords: []
+BibKey: Althoff:1982dh
+BibTeX: '@article{Althoff:1982dh,
+      author         = "Althoff, M. and others",
+      title          = "{Charged Hadron Composition of the Final State in e+ e-
+                        Annihilation at High-Energies}",
+      collaboration  = "TASSO",
+      journal        = "Z. Phys.",
+      volume         = "C17",
+      year           = "1983",
+      pages          = "5-15",
+      doi            = "10.1007/BF01577813",
+      reportNumber   = "DESY-82-070",
+      SLACcitation   = "%%CITATION = ZEPYA,C17,5;%%"
+}'

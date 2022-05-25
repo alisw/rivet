@@ -1,0 +1,61 @@
+Name: ATLAS_2018_I1707015
+Year: 2018
+Summary: Measurement of normalized differential distributions in ttbar+photon production at 13 TeV
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1707015
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Yichen Li <yichen.li@cern.ch>
+ - Andy Buckley <andy.buckley@cern.ch>
+ - Leah Spiedel Johnson <2177557s@student.gla.ac.uk>
+ - Neil Warrack <neil.warrack@cern.ch>
+References:
+ - arXiv:1812.01697 [hep-ex]
+Keywords:
+ - dileptonic ttbar
+ - semileptonic ttbar
+ - photon
+RunInfo:
+  top-quark pair production associated with a photon
+NeedCrossSection: no
+Beams: [p+, p+]
+Energies: [13000]
+Luminosity_fb: 36.1
+Options:
+ - LMODE=SINGLE,DILEPTON,ALL
+Description:
+  'Differential cross-sections for the production of a top-quark pair in association with a photon are
+  measured with proton-proton collision data corresponding to an integrated luminosity of 36.1 fb^-1,
+  collected by the ATLAS detector at the LHC in 2015 and 2016 at a centre-of-mass energy of 13 TeV. The
+  measurements are performed in single-lepton and dilepton final states in a fiducial volume. Events
+  with exactly one photon, one or two leptons, a channel-dependent minimum number of jets, and at least
+  one b-jet are selected. Neural network algorithms are used to separate the signal from the
+  backgrounds. The differential cross-sections are measured as a function of photon transverse
+  momentum, photon absolute pseudorapidity, and angular distance between the photon and its closest
+  lepton in both channels, as well azimuthal opening angle and absolute pseudorapidity difference
+  between the two leptons in the dilepton channel.'
+BibKey: 'Aaboud:2018hip'
+BibTeX: '@article{Aaboud:2018hip,
+      author         = "Aaboud, Morad and others",
+      title          = "{Measurements of inclusive and differential fiducial
+                        cross-sections of $t\bar{t}\gamma $ production in leptonic
+                        final states at $\sqrt{s}=13~\text {TeV}$ in ATLAS}",
+      collaboration  = "ATLAS",
+      journal        = "Eur. Phys. J.",
+      volume         = "C79",
+      year           = "2018",
+      number         = "5",
+      pages          = "382",
+      doi            = "10.1140/epjc/s10052-019-6849-6",
+      eprint         = "1812.01697",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-EP-2018-302",
+      SLACcitation   = "%%CITATION = ARXIV:1812.01697;%%"
+}'
+
+ReleaseTests:
+ - $A pp-13000-ttbargamma-sl
+ - $A-2 pp-13000-ttbargamma-dl

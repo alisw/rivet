@@ -1,0 +1,45 @@
+Name: BRAHMS_2004_I647076
+Year: 2004
+Summary: Charged meson pT spectra for various rapidities in central Au--Au collisions at 200 GeV.
+Experiment: BRAHMS
+Collider: RHIC
+InspireID: 647076
+Status: UNVALIDATED
+Authors:
+ - Christian Bierlich <christian.bierlich@thep.lu.se>
+References:
+- 'Phys.Rev.Lett. 94 (2005) 162301'
+- '10.1103/PhysRevLett.94.162301'
+- 'arXiv:nucl-ex/043050'
+RunInfo: Au Au minimum bias events, only 5% most central events used in analysis.
+NeedCrossSection: no
+Options:
+ - cent=REF,GEN,IMP,USR,RAW
+Beams: [Au, Au]
+# This is _total_ energy of beams, so this becomes 197*200=39400
+Energies: [39400]
+Description:
+  'Measurements of invariant $p_\perp$ spectra for pions and kaons in the 5% most central Au--Au collisions
+   at $\sqrt{s_{NN}} = 200$ GeV, over a broad rapidity range $-0.1 < y < 3.5$. The paper quotes several derived 
+   quantities, like total $dN/dy$ and $\langle p_\perp \rangle$, which can be fitted from the spectra produced in
+   this analysis.'
+Keywords: []
+BibKey: Bearden:2004yx
+BibTeX: '@article{Bearden:2004yx,
+      author         = "Bearden, I. G. and others",
+      title          = "{Charged meson rapidity distributions in central Au+Au
+                        collisions at s(NN)**(1/2) = 200-GeV}",
+      collaboration  = "BRAHMS",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "94",
+      year           = "2005",
+      pages          = "162301",
+      doi            = "10.1103/PhysRevLett.94.162301",
+      eprint         = "nucl-ex/0403050",
+      archivePrefix  = "arXiv",
+      primaryClass   = "nucl-ex",
+      SLACcitation   = "%%CITATION = NUCL-EX/0403050;%%"
+}'
+ToDo:
+ - Implement the analysis, test it, remove this ToDo, and mark as VALIDATED :-)
+

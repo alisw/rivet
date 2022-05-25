@@ -1,0 +1,36 @@
+Name: CLEO_2006_I691720
+Year: 2006
+Summary: Cross section for light hadron production at 3.671 and 3.773 GeV
+Experiment: CLEO
+Collider: CESR
+InspireID: 691720
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D73 (2006) 012002, 2006 
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+, e-]
+Description:
+  'Cross section for $e^+e^-\to \pi^+\pi^-\pi^0$, $\rho^0\pi^0$, $\rho^\pm\pi^\mp$,
+  $\omega\pi^0$, $\rho^0\eta$, $\omega\eta$, $\phi\eta$, $\rho^0\eta^\prime$,
+  $\omega\eta^\prime$, $\phi\eta^\prime$, $K^{*0}\bar{K}^{*0}$,
+  $K^{*\pm} K^\mp$, $b_1^0\pi^0$, $b_1^\pm\pi^\mp$ at 3.671 and 3.773 GeV'
+Keywords: []
+BibKey: Adams:2005ks
+BibTeX: '@article{Adams:2005ks,
+      author         = "Adams, G. S. and others",
+      title          = "{Decay of the psi(3770) to light hadrons}",
+      collaboration  = "CLEO",
+      journal        = "Phys. Rev.",
+      volume         = "D73",
+      year           = "2006",
+      pages          = "012002",
+      doi            = "10.1103/PhysRevD.73.012002",
+      eprint         = "hep-ex/0509011",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CLNS-05-1933, CLEO-05-21",
+      SLACcitation   = "%%CITATION = HEP-EX/0509011;%%"
+}'

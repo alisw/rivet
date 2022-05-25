@@ -1,0 +1,32 @@
+Name: MARKII_1987_I247900
+Year: 1987
+Summary: $\Omega^-$ production at 29 GeV
+Experiment: MARKII
+Collider: PEP
+InspireID: 247900
+Status: VALIDATED
+Authors:
+ - Peter Richardson <Peter.Richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 59 (1987) 2412, 1987.
+RunInfo: e+ e- to hadrons at 29 GeV
+Beams: [e+, e-]
+Energies: [29]
+Description:
+  'Rate and spectrum for $\Omega^-$ baryon production at 29 GeV measured by the MARKII collaboration.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Klein:1987fu
+BibTeX: '@article{Klein:1987fu,
+    author = "Klein, S. and others",
+    title = "{Observation of $\Omega^-$ Production in $e^+ e^-$ Annihilation at 29-{GeV}}",
+    reportNumber = "SLAC-PUB-4338, LBL-23539",
+    doi = "10.1103/PhysRevLett.59.2412",
+    journal = "Phys. Rev. Lett.",
+    volume = "59",
+    pages = "2412",
+    year = "1987"
+}'

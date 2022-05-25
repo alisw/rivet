@@ -1,0 +1,55 @@
+Name: CMS_2017_I1598460
+Year: 2017
+Summary: Triple-differential dijet pT cross section and PDF constraints at 8 TeV
+Experiment: CMS
+Collider: LHC
+InspireID: 1598460
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Klaus Rabbertz <klaus.rabbertz@cern.ch>
+ - Georg Sieber
+References:
+  - Eur.Phys.J. C77 (2017) no.11, 746
+  - arXiv:1705.02628
+RunInfo:
+    pp collision, 8 TeV, jets with anti-kt algorithm with a jet size parameter of
+    $R = 0.7$; only events with at least two jets up to $|y| = 5.0$ are selected
+    and the two jets leading in $p_T$ are required to have transverse momenta greater than 50 GeV and $|y| < 3.0$.
+NumEvents: 1000000
+NeedCrossSection: no
+Beams: [p+, p+]
+Energies: [8000]
+Luminosity_fb: 19.7
+Cuts: events with at least two jets with $|y| < 5.0$
+      first two leading jets with $p_T > 50$ and $|y| < 3.0$
+Description:
+    A measurement is presented of the triple-differential dijet cross section at a centre-of-mass
+    energy of 8 TeV using 19.7 fb$^-1$ of data collected with the CMS detector in
+    proton-proton collisions at the LHC. The cross section is measured as a function of the
+    average transverse momentum, half the rapidity separation, and the boost of the two
+    leading jets in the event. The cross section is corrected for detector effects and compared
+    to calculations in perturbative quantum chromodynamics at next-to-leading order
+    accuracy, complemented with electroweak and nonperturbative corrections. New
+    constraints on parton distribution functions are obtained and the inferred value of the
+    strong coupling constant is $\alpha_s(M_{Z})$ = 0.1199 $\pm$ 0.0015 (exp)$^{+0.0031}_{-0.0020}$ (theo),
+    where M$_{Z}$ is the mass of the Z boson.
+BibKey: Sirunyan:2017skj
+BibTeX: '@article{Sirunyan:2017skj,
+      author         = "Sirunyan, Albert M and others",
+      title          = "{Measurement of the triple-differential dijet cross
+                        section in proton-proton collisions at $\sqrt{s}=8\,\text
+                        {TeV}$ and constraints on parton distribution functions}",
+      collaboration  = "CMS",
+      journal        = "Eur. Phys. J. C",
+      volume         = "77",
+      year           = "2017",
+      number         = "11",
+      pages          = "746",
+      doi            = "10.1140/epjc/s10052-017-5286-7",
+      eprint         = "1705.02628",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CMS-SMP-16-011, CERN-EP-2017-061",
+      SLACcitation   = "%%CITATION = ARXIV:1705.02628;%%"
+}'

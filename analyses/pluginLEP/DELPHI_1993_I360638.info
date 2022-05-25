@@ -1,0 +1,33 @@
+Name: DELPHI_1993_I360638
+Year: 1993
+Summary: Correlations between $\Lambda^0$ and $\bar{\Lambda}^0$ production in hadronic $Z^0$ decays
+Experiment: DELPHI
+Collider: LEP
+InspireID: 360638
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B318 (1993) 249-262, 1993 
+RunInfo:
+  $\sqrt{s} = 91.2$ GeV, $e^+ e^- -> Z^0$ production with hadronic decays only
+NumEvents: 1000000
+Beams: [e+, e-]
+Energies: [91.2]
+Description:
+  The spectrum for the production of $\Lambda^0$ and $\bar{\Lambda}^0$ in hadronic $Z^0$ decays. Importantly the rapidity difference and
+  cosine of the angle between $\Lambda^0$ and $\bar{\Lambda}^0$ baryons is measured. This is sensitive to different models of baryon production.
+BibKey: Abreu:1993mm
+BibTeX: '@article{Abreu:1993mm,
+      author         = "Abreu, P. and others",
+      title          = "{Production of Lambda and Lambda anti-Lambda correlations
+                        in the hadronic decays of the Z0}",
+      collaboration  = "DELPHI",
+      journal        = "Phys. Lett.",
+      volume         = "B318",
+      year           = "1993",
+      pages          = "249-262",
+      doi            = "10.1016/0370-2693(93)91815-5",
+      reportNumber   = "CERN-PPE-93-171",
+      SLACcitation   = "%%CITATION = PHLTA,B318,249;%%"
+}'

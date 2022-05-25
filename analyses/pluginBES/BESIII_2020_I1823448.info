@@ -1,0 +1,31 @@
+Name: BESIII_2020_I1823448
+Year: 2020
+Summary:  Cross section for $e^+e^-\to\Xi^-\bar{\Xi}^+$ between 2.644 and 3.080 GeV
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1823448
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - arXiv:2010.08320
+RunInfo:  e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Description:
+  'Measurement of the cross section for $e^+e^-\to\Xi^-\bar{\Xi}^+$ between 2.644 and 3.080.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Ablikim:2020rwi
+BibTeX: '@article{Ablikim:2020rwi,
+    author = "Ablikim, Medina and others",
+    collaboration = "BESIII",
+    title = "{Measurement of cross-section for $e^+e^-\to\Xi^-\bar{\Xi}^+$ near threshold at BESIII}",
+    eprint = "2010.08320",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    month = "10",
+    year = "2020"
+}'

@@ -1,0 +1,33 @@
+Name: BELLE_2021_I1859137
+Year: 2021
+Summary: Cross section for $B,\bar{B}$, $B\bar{B}^*$ and $B^*\bar{B}^*$ for energies between 10.63 and 11.02 GeV 
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1859137
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@dur.ac.uk>
+References:
+ - arXiv:2104.08371
+RunInfo: e+ e- to hadrons
+Beams: [e+, e-]
+Description:
+  'Measurement of the cross sections for $B,\bar{B}$, $B\bar{B}^*$ and $B^*\bar{B}^*$ by the BELLE experiment for energies between 10.63 and 11.02 GeV.'
+ValidationInfo:
+  'Herwig 7'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Mizuk:2021gvx
+BibTeX: '@article{Mizuk:2021gvx,
+    author = "Mizuk, R. and others",
+    collaboration = "Belle",
+    title = "{Measurement of the energy dependence of the $e^+e^-\to B\bar{B}$, $B\bar{B}^*$ and $B^*\bar{B}^*$ exclusive cross sections}",
+    eprint = "2104.08371",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "Belle Preprint 2021-05, KEK Preprint 2021-1",
+    month = "4",
+    year = "2021"
+}'

@@ -1,0 +1,54 @@
+Name: ATLAS_2019_I1744201
+Year: 2019
+Summary: Z+jet at 8 TeV
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1744201
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Aliaksei Hrynevich <aliaksei.hrynevich@cern.ch>
+ - Deepak Kar <deepak.kar@cern.ch>
+References:
+ - arXiv:1907.06728 [hep-ex]
+Keywords:
+ - ZJETS
+ - Z
+ - JETS
+RunInfo:
+  pp -> Z(ee)+jets at 8 TeV
+Luminosity_fb: 19.9
+Beams: [p+, p+]
+Energies: [8000]
+PtCuts: [0]
+Description:
+ 'The inclusive cross-section for jet production in association with a $Z$ boson decaying into an electron-positron pair is 
+  measured as a function of the transverse momentum and the absolute rapidity of jets using 
+  19.9 fb$^{-1}$ of $\sqrt{s}=8$ TeV proton-proton collision data collected with the ATLAS detector 
+  at the Large Hadron Collider. 
+  The measured Z+ jets cross-section is unfolded to the particle level. 
+  The cross-section is compared with state-of-the-art Standard Model calculations, 
+  including the next-to-leading-order and next-to-next-to-leading-order perturbative QCD calculations, 
+  corrected for non-perturbative and QED radiation effects. 
+  The results of the measurements cover final-state jets with transverse momenta up to 1 TeV, 
+  and show good agreement with fixed-order calculations.'
+BibKey: Aad:2019hga
+BibTeX: '@article{Aad:2019hga,
+    author = "Aad, Georges and others",
+    collaboration = "ATLAS",
+    title = "{Measurement of the inclusive cross-section for the production of jets in association with a Z boson in proton-proton collisions at 8 TeV using the ATLAS detector}",
+    eprint = "1907.06728",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CERN-EP-2019-133",
+    doi = "10.1140/epjc/s10052-019-7321-3",
+    journal = "Eur. Phys. J. C",
+    volume = "79",
+    number = "10",
+    pages = "847",
+    year = "2019"
+}'
+
+ReleaseTests:
+ - $A pp-8000-Zee-jets
+

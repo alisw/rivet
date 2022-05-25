@@ -1,0 +1,33 @@
+Name: PLUTO_1980_I152291
+Year: 1980
+Summary: Measurement of $R$ between 30 and 31 GeV
+Experiment: PLUTO
+Collider: PETRA
+InspireID: 152291
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B91 (1980) 148-151, 1980 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: no
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$ in $e^+e^-$ collisions by PLUTO for energies between 30 and 31 GeV.
+   The individual hadronic and muonic cross sections are also outputted to the yoda file
+   so that ratio $R$ can be recalculated if runs are combined.'
+Keywords: []
+BibKey: Berger:1980rt
+BibTeX: '@article{Berger:1980rt,
+      author         = "Berger, Christoph and others",
+      title          = "{Search for Narrow Resonances in $e^+ e^-$ Annihilation
+                        at {PETRA}}",
+      collaboration  = "PLUTO",
+      journal        = "Phys. Lett.",
+      volume         = "91B",
+      year           = "1980",
+      pages          = "148-151",
+      doi            = "10.1016/0370-2693(80)90681-4",
+      reportNumber   = "DESY-80-02",
+      SLACcitation   = "%%CITATION = PHLTA,91B,148;%%"
+}'

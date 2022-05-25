@@ -1,0 +1,38 @@
+Name: BELLE_2014_I1282602
+Year: 2014
+Summary: Cross section for $e^+e^-\to J/\psi K^+K^-$ at energies between 4.175 and 5.975 GeV
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1282602
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D89 (2014) 072015, 2014 
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+  'Measurement of the cross section for $e^+e^-\to J/\psi K^+K^-$ at energies between 4.175 and 5.975 GeV using radiative return by BELLE.
+   The paper also includes $J\psi K^0_SK^0_S$ but the data is a confidence limit and is therefore not implemented'
+Keywords: []
+BibKey: Shen:2014gdm
+BibTeX: '@article{Shen:2014gdm,
+      author         = "Shen, C. P. and others",
+      title          = "{Updated cross section measurement of $e^+ e^- \to K^+
+                        K^- J/\psi$ and $K_S^0K_S^0J/\psi$ via initial state
+                        radiation at Belle}",
+      collaboration  = "Belle",
+      journal        = "Phys. Rev.",
+      volume         = "D89",
+      year           = "2014",
+      number         = "7",
+      pages          = "072015",
+      doi            = "10.1103/PhysRevD.89.072015",
+      eprint         = "1402.6578",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "BELLE-PREPRINT-2014-2, KEK-PREPRINT-2013-61",
+      SLACcitation   = "%%CITATION = ARXIV:1402.6578;%%"
+}'

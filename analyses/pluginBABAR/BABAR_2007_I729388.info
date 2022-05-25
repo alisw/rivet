@@ -1,0 +1,38 @@
+Name: BABAR_2007_I729388
+Year: 2007
+Summary: Cross section for $e^+e^-\to \psi(2S)\pi^+\pi^-$ at energies between 4 and 8 GeV
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 729388
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 98 (2007) 212001
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+  'Measurement of the cross section for $e^+e^-\to \psi(2S)\pi^+\pi^-$ at energies between 4 and 8 GeV using radiative return by BABAR.'
+BibKey: Aubert:2007zz
+BibTeX: '@article{Aubert:2007zz,
+      author         = "Aubert, Bernard and others",
+      title          = "{Evidence of a broad structure at an invariant mass of
+                        4.32- $GeV/c^{2}$ in the reaction $e^{+} e^{-} \to \pi^{+}
+                        \pi^{-} \psi_{2S}$ measured at BaBar}",
+      booktitle      = "{Proceedings of the 33rd International Conference on High
+                        Energy Physics (ICHEP 06): Moscow, Russia, July 26-August
+                        2, 2006}",
+      collaboration  = "BaBar",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "98",
+      year           = "2007",
+      pages          = "212001",
+      doi            = "10.1103/PhysRevLett.98.212001",
+      eprint         = "hep-ex/0610057",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "SLAC-PUB-12155, BABAR-PUB-06-38",
+      SLACcitation   = "%%CITATION = HEP-EX/0610057;%%"
+}'

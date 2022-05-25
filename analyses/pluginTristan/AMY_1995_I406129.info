@@ -1,0 +1,31 @@
+Name: AMY_1995_I406129
+Year: 1995
+Summary: Durham and Jade differential 2-jet rate at 57.7 GeV
+Experiment: AMY
+Collider: Tristan
+InspireID: 406129
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B355 (1995) 394-400
+RunInfo: e+e- to hadrons
+NeedCrossSection: no
+Beams: [e-, e+]
+Energies: [57.7]
+Description:
+  'Measurement of the differential 2-jet rate in $e^+e^-$ collisions at $57.7$ GeV by the AMY Collaboration. The Durham algorithm, together with 3 variants of the JADE algorithm are used. The JADE E-scheme results are significantly different from the other approaches.'
+Keywords: []
+BibKey: Li:1995av
+BibTeX: '@article{Li:1995av,
+      author         = "Li, Y. K. and others",
+      title          = "{A Determination of alpha-s in e+ e- annihilation at
+                        s**(1/2) = 57.3-GeV}",
+      collaboration  = "AMY",
+      journal        = "Phys. Lett.",
+      volume         = "B355",
+      year           = "1995",
+      pages          = "394-400",
+      doi            = "10.1016/0370-2693(95)00689-I",
+      SLACcitation   = "%%CITATION = PHLTA,B355,394;%%"
+}'

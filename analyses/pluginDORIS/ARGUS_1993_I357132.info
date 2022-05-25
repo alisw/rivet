@@ -1,0 +1,34 @@
+Name: ARGUS_1993_I357132
+Year: 1993
+Summary: Spectrum for $\Lambda_c^+(2625)$ production at 10.58 GeV
+Experiment: ARGUS
+Collider: DORIS
+InspireID: 357132
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B317 (1993) 227-232
+RunInfo: e+e- to hadrons 
+Beams: [e+, e-]
+Energies: [10.58]
+Description:
+  'Spectrum for $\Lambda_c^+(2625)$ production at 10.58 GeV measured by ARGUS.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Albrecht:1993pt
+BibTeX: '@article{Albrecht:1993pt,
+      author         = "Albrecht, H. and others",
+      title          = "{Observation of a new charmed baryon}",
+      collaboration  = "ARGUS",
+      journal        = "Phys. Lett.",
+      volume         = "B317",
+      year           = "1993",
+      pages          = "227-232",
+      doi            = "10.1016/0370-2693(93)91598-H",
+      reportNumber   = "DESY-93-101",
+      SLACcitation   = "%%CITATION = PHLTA,B317,227;%%"
+}'

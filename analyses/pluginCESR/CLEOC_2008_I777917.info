@@ -1,0 +1,36 @@
+Name: CLEOC_2008_I777917
+Year: 2008
+Summary: Measurement of charm final-states, the total hadronic cross section and $R$ for energies between 3.92 and 4.26 GeV
+Experiment: CLEOC
+Collider: CESR
+InspireID: 777917
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D80 (2009) 072001, 2009 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: yes
+Beams: [e-, e+]
+Description:
+  'Measurement of charm final-states, the total hadronic cross section
+   and $R$ for energies between 3.92 and 4.26 GeV
+   The muonic cross section is also outputted to the yoda file
+   so that ratio $R$ can be recalcuated if runs are combined.'
+BibKey: CroninHennessy:2008yi
+BibTeX: '@article{CroninHennessy:2008yi,
+      author         = "Cronin-Hennessy, D. and others",
+      title          = "{Measurement of Charm Production Cross Sections in e+e-
+                        Annihilation at Energies between 3.97 and 4.26-GeV}",
+      collaboration  = "CLEO",
+      journal        = "Phys. Rev.",
+      volume         = "D80",
+      year           = "2009",
+      pages          = "072001",
+      doi            = "10.1103/PhysRevD.80.072001",
+      eprint         = "0801.3418",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CLNS07-2015, CLEO-07-19",
+      SLACcitation   = "%%CITATION = ARXIV:0801.3418;%%"
+}'

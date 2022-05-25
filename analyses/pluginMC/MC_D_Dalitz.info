@@ -1,0 +1,9 @@
+Name: MC_D_Dalitz
+Summary: MC analysis of Dalitz plots in three-body $D$-meson decays
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+RunInfo: Any process producing D mesons
+Description:
+  'Monte Carlo analysis of $D^0\to \bar{K}^0\pi^+\pi^-$, $D^0\to K^-\pi^+\pi^0$, $D^+\to K^-\pi^+\pi^+$, $D^+\to\bar{K}^0\pi^+\pi^0$, $D^+\to K^+\pi^-\pi^+$ and $D_s^+\to K^+\pi^-\pi^+$ including kinematic distributions and Dalitz plots.'

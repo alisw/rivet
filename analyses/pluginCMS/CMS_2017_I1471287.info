@@ -1,0 +1,37 @@
+Name: CMS_2017_I1471287
+Year: 2017
+Summary: Two- and multi-particle angular correlations in pp collisions at $\sqrt{s} = 13$ TeV. 
+Experiment: CMS
+Collider: LHC
+InspireID: 1471287
+Status: UNVALIDATED
+Reentrant: false
+Authors:
+ - Christian Bierlich <christian.bierlich@thep.lu.se>
+References:
+- Phys.Lett. B765 (2017) 193-220
+- DOI:10.1016/j.physletb.2016.12.009
+- arXiv:1606.06198
+RunInfo: Minimum bias QCD events.
+NeedCrossSection: no
+Beams: [p+, p+]
+Energies: [13000]
+Description:
+'Measurement of two- and multi-particle angular correlations of charged particles as well as $K^0_s$ and $\Lambda + \bar{\Lambda}$. Measurements are done $p_\perp$ integrated as function of event multiplicity, and $p_\perp$ differential in two bins of event multiplicity; high and low. The experimental analysis performs also a subtraction procedure of low multiplicity results from high multiplicity ones. Such a subtraction is not performed in the RIVET analysis (due to the difficulty of performing the same procedure on MC), and as such, only unsubtracted values are used. Bin edges for integrated correlations are not reported in HepData, and are as such based simply on midpoints between reported points.'
+BibKey: Khachatryan:2016txc
+BibTeX: '@article{Khachatryan:2016txc,
+      author         = "Khachatryan, Vardan and others",
+      title          = "{Evidence for collectivity in pp collisions at the LHC}",
+      collaboration  = "CMS",
+      journal        = "Phys. Lett.",
+      volume         = "B765",
+      year           = "2017",
+      pages          = "193-220",
+      doi            = "10.1016/j.physletb.2016.12.009",
+      eprint         = "1606.06198",
+      archivePrefix  = "arXiv",
+      primaryClass   = "nucl-ex",
+      reportNumber   = "CMS-HIN-16-010, CERN-EP-2016-147",
+      SLACcitation   = "%%CITATION = ARXIV:1606.06198;%%"
+}'
+

@@ -1,0 +1,41 @@
+Name: CMS_2021_I1978840
+Year: 2021
+Summary: Measurement of $\mathrm{W}^{\pm}\gamma$ differential cross sections in proton-proton collisions at $\sqrt{s}=13\,\mathrm{TeV}$ and effective field theory constraints
+Experiment: CMS
+Collider: LHC
+InspireID: 1978840
+Status: VALIDATED
+Authors:
+ - cms-pag-conveners-smp@cern.ch
+ - Andrew Gilbert <andrew.gilbert@cern.ch>
+References:
+ - CMS-SMP-20-005
+ - arxiv:2111.13948
+ - Phys. Rev. D 105 (2022) 052003
+
+RunInfo: pp to $\mathrm{W}^{\pm}\gamma$ at $\sqrt{s}=13$ TeV.
+Beams: [p+, p+]
+Energies: [[6500,6500]]
+Luminosity_fb: 138.0
+Description:
+  'Differential cross section measurements of $\mathrm{W}^{\pm}\gamma$ production in proton-proton collisions at $\sqrt{s} = 13\,\mathrm{TeV}$ are presented.
+   The data set used in this study was collected with the CMS detector at the CERN LHC in 2016--2018 with an integrated luminosity of $138\,\mathrm{fb}^{-1}$.
+   Candidate events containing an electron or muon, a photon, and missing transverse momentum are selected.
+   The measurements are compared with standard model predictions computed at next-to-leading and next-to-next-to-leading orders in perturbative quantum chromodynamics.
+   Constraints on the presence of TeV-scale new physics affecting the $\mathrm{WW}\gamma$ vertex are determined within an effective field theory framework, focusing on the $\mathcal{O}_{3W}$ operator.
+   A simultaneous measurement of the photon transverse momentum and the azimuthal angle of the charged lepton in a special reference frame is performed.'
+Keywords: []
+BibKey: CMS:2021cxr
+BibTeX: '@article{CMS:2021cxr,
+    author = "Tumasyan, Armen and others",
+    collaboration = "CMS",
+    title = "{Measurement of W$^\pm\gamma$ differential cross sections in proton-proton collisions at $\sqrt{s}$ = 13 TeV and effective field theory constraints}",
+    eprint = "2111.13948",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CMS-SMP-20-005, CERN-EP-2021-219",
+    month = "11",
+    year = "2021"
+}'
+ReleaseTests:
+ - $A pp-13000-Wev

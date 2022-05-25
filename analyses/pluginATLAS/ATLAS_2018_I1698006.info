@@ -1,0 +1,45 @@
+Name: ATLAS_2018_I1698006
+Year: 2018
+Summary: Z(vv)+gamma measurement at 13 TeV
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1698006
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - J.Butterworth@ucl.ac.uk
+ - sokratis.michail.19@ucl.ac.uk
+ - yoran.yeh.20@ucl.ac.uk
+References:
+ - JHEP 12 (2018) 010
+ - 10.1007/JHEP12(2018)010
+ - arXiv:1810.04995 [hep-ex]
+RunInfo: p + p -> Z0 nu nubar gamma at 13 TeV
+Luminosity_fb: 36.1
+Beams: [p+, p+]
+Energies: [13000]
+PtCuts: [150,50,150]
+NeedCrossSection: True
+Options:
+ - LVETO=ON,OFF
+Description:
+  'The production of Z bosons in association with a high-energy photon (Z$\gamma$ production) is studied in the neutrino decay channel of the Z boson using pp collisions at $\sqrt s$ = 13 TeV. The analysis uses a data sample with an integrated luminosity of 36.1 fb−1 collected by the ATLAS detector at the LHC in 2015 and 2016. Candidate Z$\gamma$ events with invisible decays of the Z boson are selected by requiring significant transverse momentum (pT) of the dineutrino system in conjunction with a single isolated photon with large
+transverse energy (ET). The rate of Z$\gamma$ production is measured as a function of photon ET, dineutrino system pT and jet multiplicity. Evidence of anomalous triple gauge-boson couplings is sought in Z$\gamma$ production with photo ET greater than 600 GeV. No excess is observed relative to the Standard Model expectation, and upper limits are set on the strength of ZZ$\gamma$ and Z$\gamma\gamma$ couplings.'
+BibKey: ATLAS:2018nci
+BibTeX: '@article{ATLAS:2018nci,
+    author = "Aaboud, Morad and others",
+    collaboration = "ATLAS",
+    title = "{Measurement of the $ Z\gamma \to \nu \overline{\nu}\gamma $ production cross section in pp collisions at $ \sqrt{s}=13 $ TeV with the ATLAS detector and limits on anomalous triple gauge-boson couplings}",
+    eprint = "1810.04995",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CERN-EP-2018-220",
+    doi = "10.1007/JHEP12(2018)010",
+    journal = "JHEP",
+    volume = "12",
+    pages = "010",
+    year = "2018"
+}'
+ReleaseTest:
+ - $A pp-13000-gammaMET.hepmc.gz
+ 

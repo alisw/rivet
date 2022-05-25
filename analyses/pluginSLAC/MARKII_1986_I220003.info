@@ -1,0 +1,32 @@
+Name: MARKII_1986_I220003
+Year: 1986
+Summary: $\gamma\gamma\to\pi^+\pi^-/K^+K^-$ for centre-of-mass energies between 1.7 and 3.5 GeV
+Experiment: MARKII
+Collider: PEP
+InspireID: 220003
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 56 (1986) 207
+RunInfo: gamma gamma to hadrons
+Beams: [gamma, gamma]
+Energies: []
+Description:
+  'Measurement of the differential cross section for $\gamma\gamma\to\pi^+\pi^-/K^+K^-$ for $1.7 \text{GeV} < W < 3.5 \text{GeV}$.'
+ValidationInfo:
+  'Herwig 7 gamma gamma to pi+ pi- and K+K- events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Boyer:1985wm
+BibTeX: '@article{Boyer:1985wm,
+    author = "Boyer, J. and others",
+    title = "{Charged Meson Pair Production in $\gamma \gamma$ Interactions}",
+    reportNumber = "SLAC-PUB-3780, LBL-20280",
+    doi = "10.1103/PhysRevLett.56.207",
+    journal = "Phys. Rev. Lett.",
+    volume = "56",
+    pages = "207",
+    year = "1986"
+}'

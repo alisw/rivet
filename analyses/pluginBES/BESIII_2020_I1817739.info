@@ -1,0 +1,31 @@
+Name: BESIII_2020_I1817739
+Year: 2020
+Summary: Cross section for $e^+e^-\to\omega\pi^0$ and $\omega\eta$ for centre-of-mass energies between 2.00 and 3.08 GeV
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1817739
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - arXiv:2009.08099
+RunInfo: e+ e- to hadrons
+Beams: [e+, e-]
+Description:
+  'Measurement of the cross section for $e^+e^-\to\omega\pi^0$ and $\omega\eta$ for centre-of-mass energies between 2.00 and 3.08 GeV by the BESIII collaboration.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Ablikim:2020das
+BibTeX: '@article{Ablikim:2020das,
+    author = "Ablikim, M. and others",
+    collaboration = "BESIII",
+    title = "{Observation of a resonant structure in $e^{+}e^{-} \to \omega\eta$ and another in $e^{+}e^{-} \to \omega\pi^{0}$ at center-of-mass energies between 2.00 and 3.08 GeV}",
+    eprint = "2009.08099",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    month = "9",
+    year = "2020"
+}'

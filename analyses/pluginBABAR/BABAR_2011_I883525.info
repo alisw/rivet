@@ -1,0 +1,39 @@
+Name: BABAR_2011_I883525
+Year: 2011
+Summary: $e^+e^-\to e^+e^-\eta, \eta^\prime$ via intermediate photons at 10.58 GeV
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 883525
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 84 (2011) 052001
+RunInfo: e+ e- > e+e- meson via photon photon -> meson
+Beams: [e+, e-]
+Energies: [10.58]
+Description:
+  'Measurement of the cross sections for the production of $\eta$ and $\eta^\prime$ in photon-photon
+   collisions, i.e. $e^+e^-\to \gamma\gamma e^+e^-$ followed by $\gamma\gamma\to\eta, \eta^\prime$,
+   by the Babar experiment at 10.58 GeV'
+ValidationInfo:
+  'Herwig7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BABAR:2011ad
+BibTeX: '@article{BABAR:2011ad,
+    author = "del Amo Sanchez, P. and others",
+    collaboration = "BaBar",
+    title = "{Measurement of the $\gamma \gamma^* \to \eta$ and $\gamma \gamma^* \to \eta^\prime$ transition form factors}",
+    eprint = "1101.1142",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "SLAC-PUB-14317, BABAR-PUB-10-028",
+    doi = "10.1103/PhysRevD.84.052001",
+    journal = "Phys. Rev. D",
+    volume = "84",
+    pages = "052001",
+    year = "2011"
+}'

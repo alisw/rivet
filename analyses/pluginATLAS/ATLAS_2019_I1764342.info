@@ -1,0 +1,55 @@
+Name: ATLAS_2019_I1764342
+Year: 2019
+Summary: Z(ll)y cross-section at 13 TeV
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1764342
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Ruchi Gupta <ruchi.gupta@desy.de>
+References:
+ - arXiv:1911.04813 [hep-ex]
+Keywords:
+ - ZJETS
+ - ZGAMMA
+ - GAMMA
+ - DIBOSON
+RunInfo:
+  pp -> Z(ll)+y at 13 TeV
+Luminosity_fb: 139
+Beams: [p+, p+]
+Energies: [13000]
+PtCuts: [0]
+Description:
+'The production of a prompt photon in association with a Z boson is studied in proton-proton collisions at a 
+centre-of-mass energy $\sqrt{s}=$13 TeV. The analysis uses a data sample with an integrated luminosity of 
+139 fb$^{-1}$ collected by the ATLAS detector at the LHC from 2015 to 2018. 
+The production cross-section for the process $pp \rightarrow \ell^+ \ell^- + \gamma + X$ ($\ell=e,\mu$) 
+is measured within a fiducial phase-space region defined by kinematic requirements on the photon and 
+the leptons, and by isolation requirements on the photon. 
+An experimental precision of $2.9\%$ is achieved for the fiducial cross-section. 
+Differential cross-sections are measured as a function of each of 
+six kinematic variables characterising the $\ell^+\ell^-\gamma$ system. 
+The data are compared with theoretical predictions based on next-to-leading-order and 
+next-to-next-to-leading-order perturbative QCD calculations. 
+The impact of next-to-leading-order electroweak corrections is also considered.'
+BibKey: Aad:2019gpq
+BibTeX: '@article{Aad:2019gpq,
+    author = "Aad, Georges and others",
+    collaboration = "ATLAS",
+    title = "{Measurement of the $Z(\rightarrow\ell^+\ell^-)\gamma$ production cross-section in $pp$ collisions at $\sqrt{s} =13$ TeV with the ATLAS detector}",
+    eprint = "1911.04813",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CERN-EP-2019-228",
+    doi = "10.1007/JHEP03(2020)054",
+    journal = "JHEP",
+    volume = "03",
+    pages = "054",
+    year = "2020"
+}'
+
+ReleaseTests:
+ - $A pp-13000-eegamma
+

@@ -1,0 +1,35 @@
+Name: HRS_1985_I213242
+Year: 1985
+Summary: $\phi$ and $D_s^\pm$ spectra at 29 GeV
+Experiment: HRS
+Collider: PEP
+InspireID: 213242
+Status: VALIDATED
+Authors: 
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ -     Phys.Rev.Lett. 54 (1985) 2568
+RunInfo: e+ e- to hadrons
+Beams: [e+, e-]
+Energies: [29]
+Description:
+  'Measurement of the $\phi$ and $D_s^\pm$ spectra at 29 GeV by the HRS experiment.
+  The PDG2020 value of $D^+_s\to\phi\pi^+$ branching ratio is used.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Derrick:1985ip
+BibTeX: '@article{Derrick:1985ip,
+    author = "Derrick, M. and others",
+    editor = "Tran Thanh Van, J.",
+    title = "{Production of $\phi$ and F (1970) $\to \phi \pi$ in $e^+ e^-$ Annihilation at 29-{GeV}}",
+    reportNumber = "ANL-HEP-PR-85-02, IUHEE-64, PU-85-526, UM HE 85-06",
+    doi = "10.1103/PhysRevLett.54.2568",
+    journal = "Phys. Rev. Lett.",
+    volume = "54",
+    pages = "2568",
+    year = "1985"
+}
+'

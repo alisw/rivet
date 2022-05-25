@@ -1,0 +1,33 @@
+Name: HRS_1986_I18688
+Year: 1986
+Summary: $f_2(1270)$, $f_0(980)$ and $K_2(1430)^0$ spectra at 29 GeV
+Experiment: HRS
+Collider: HRS
+InspireID: 18688
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 57 (1986) 1990
+Beams: [e+, e-]
+Energies: [29]
+Description:
+  'Measurement of the $f_2(1270)$, $f_0(980)$ and $K_2(1430)^0$ spectra at 29 GeV by the HRS experiment.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Abachi:1986id
+BibTeX: '@article{Abachi:1986id,
+    author = "Abachi, S. and others",
+    editor = "Loken, S. C.",
+    title = "{Observation of Tensor and Scalar Mesons Produced in $e^+ e^-$ Annihilation at 29-{GeV}}",
+    reportNumber = "ANL-HEP-PR-86-70, IUHEE-93, UM-HE-86-21, PU-86-577",
+    doi = "10.1103/PhysRevLett.57.1990",
+    journal = "Phys. Rev. Lett.",
+    volume = "57",
+    pages = "1990",
+    year = "1986"
+}
+'

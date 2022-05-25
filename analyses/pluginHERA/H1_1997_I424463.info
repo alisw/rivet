@@ -1,0 +1,42 @@
+Name: H1_1997_I424463
+Year: 1997
+Summary: Measurement of charged particle transverse momentum spectra in deep inelastic scattering
+Experiment: H1
+Collider: HERA
+InspireID: 424463
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Andrii Verbytskyi <andrii.verbytskyi@mpp.mpg.de>
+References:
+ - Nucl.Phys.B 485 (1997) 3-24
+ - DOI:10.1016/S0550-3213(96)00675-X
+ - arXiv:hep-ex/9610006
+NumEvents: 1000000
+Luminosity: 1.3
+Beams: [p+, e-]
+Energies: [[820, 27.5]]
+PtCuts: [0]
+Description:
+  'Transverse momentum spectra of charged particles produced in deep inelastic scattering are
+   measured as a function of the kinematic variables $x_B$ and $Q^2$ using the H1 detector at
+   the ep collider HERA. The data are compared to different parton emission models, either with
+   or without ordering of the emissions in transverse momentum. The data provide evidence for a
+    relatively large amount of parton radiation between the current and the remnant systems.'
+BibKey: Adloff:1996dy
+BibTeX: '@article{Adloff:1996dy,
+      author         = "Adloff, C. and others",
+      title          = "{Measurement of charged particle transverse momentum
+                        spectra in deep inelastic scattering}",
+      collaboration  = "H1",
+      journal        = "Nucl. Phys.",
+      volume         = "B485",
+      year           = "1997",
+      pages          = "3-24",
+      doi            = "10.1016/S0550-3213(96)00675-X",
+      eprint         = "hep-ex/9610006",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "DESY-96-215",
+      SLACcitation   = "%%CITATION = HEP-EX/9610006;%%"
+}'

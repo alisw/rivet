@@ -1,0 +1,27 @@
+Name: MC_DIS_Check
+
+Summary: A simple analysis using the DISKinematics projection.
+
+Collider: HERA
+
+Status: UNVALIDATED
+Reentrant: true
+
+Authors:
+ - Hannes Jung <hannes.jung@desy.de>
+ - Leif Lönnblad <leif.lonnblad@thep.lu.se>
+
+Options:
+ - LMode=prompt,any,dressed
+ - LSort=ENERGY,ETA,ET
+ - DressDR=#
+ - IsolDR=#
+ - Undress=#
+
+Beams: [[p+, e-], [p+, e+]]
+
+Description:
+   A simple analysis to illustrate how to use the DISKinematics
+   projection together with different options, and to histogram the
+   obtained x, y and Q2 variables.
+

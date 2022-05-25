@@ -1,0 +1,39 @@
+Name: ZEUS_1999_I470499
+Year: 1999
+Summary: Forward jet production in deep inelastic scattering at HERA (ZEUS)
+Experiment: ZEUS
+Collider: HERA
+InspireID: 470499
+Status: VALIDATED 
+Reentrant: True
+Authors:
+ - Wendy Zhang <wz306@cam.ac.uk>
+ - Hannes Jung <hannes.jung@desy.de>
+References:
+ - Eur.Phys.J.C 6 (1999) 239
+ - doi:10.1007/s100529801018
+ - arXiv:hep-ex/9805016
+ - DESY-98-050
+Beams: [[e+, p+],[p+,e+]]
+Energies: [[27.5,820],[820,27.5]]
+Description:
+  ' The inclusive forward jet cross section in deep inelastic e+p scattering has been measured in the region of x-Bjorken, $4.5 \times 10^{-4}$ to $4.5 \times  10^{-2}$. This measurement is motivated by the search for effects of BFKL-like parton shower evolution. The cross section at hadron level as a function of x is compared to cross sections predicted by various Monte Carlo models. An excess of forward jet production at small x is observed, which is not reproduced by models based on DGLAP parton shower evolution. '
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: ZEUS:1998uhq
+BibTeX: '@article{ZEUS:1998uhq,
+    author = "Breitweg, J. and others",
+    collaboration = "ZEUS",
+    title = "{Forward jet production in deep inelastic scattering at HERA}",
+    eprint = "hep-ex/9805016",
+    archivePrefix = "arXiv",
+    reportNumber = "DESY-98-050, ANL-HEP-PR-98-50",
+    doi = "10.1007/s100529801018",
+    journal = "Eur. Phys. J. C",
+    volume = "6",
+    pages = "239",
+    year = "1999"
+}'
+
+

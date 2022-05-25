@@ -1,0 +1,33 @@
+Name: BESIII_2021_I1940960
+Year: 2021
+Summary: Measurement of cross section for $e^+e^-\to\Sigma^0\bar{\Sigma}^0$  between 2.3864 and 3.02 GeV
+Experiment: BESIII
+Collider:  BEPC
+InspireID: 1940960
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ -  arXiv:2110.04510
+RunInfo: e+e- to hadrons
+Beams: [e+, e-]
+Energies: [2.396]
+Description:
+  'Measurement of the cross section for $e^+e^-\to\Sigma^0\bar{\Sigma}^0$   between 2.3864 and 3.02 GeV by the BESIII collaboration.'
+ValidationInfo:
+  'Herwig7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Irshad:2021ndt
+BibTeX: '@article{Irshad:2021ndt,
+    author = "Irshad, Muzaffar",
+    title = "{Measurement of the $e^{+}e^{-}\to\Sigma^{0}\bar{\Sigma}^{0}$ cross sections at center-of-mass energies from $2.3864$ to $3.0200$ GeV}",
+    eprint = "2110.04510",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    month = "10",
+    year = "2021"
+}
+'

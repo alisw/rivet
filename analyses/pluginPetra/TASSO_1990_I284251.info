@@ -1,0 +1,35 @@
+Name: TASSO_1990_I284251
+Year: 1990
+Summary: $K^0,\bar{K}^0$ and $K^{*\pm}$ spectra in $e^+e^-$ collisions for centre-of-mass energies between 14.8 and 42.6 GeV
+Experiment: TASSO
+Collider: Petra
+InspireID: 284251
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Z.Phys. C47 (1990) 167-180, 1990 
+RunInfo: e+ e- to hadrons. Beam energy must be specified as analysis option "ENERGY" when rivet-merge'ing samples.
+NeedCrossSection: yes
+Beams: [e+, e-]
+Energies: [14.8,21.5,34.5,35.,42.6]
+Options:
+ - ENERGY=14.8,21.5,34.5,35.,42.6
+Description:
+  Measurement of the $K^0,\bar{K}^0$ and $K^{*\pm}$ spectra in $e^+e^-$ collisions for centre-of-mass energies between 14.8 and 42.6 GeV by the TASSO experiment at Petra.
+  Beam energy must be specified as analysis option "ENERGY" when rivet-merge'ing samples.
+Keywords: []
+BibKey: Braunschweig:1989wg
+BibTeX: '@article{Braunschweig:1989wg,
+      author         = "Braunschweig, W. and others",
+      title          = "{Strange Meson Production in $e^+ e^-$ Annihilation}",
+      collaboration  = "TASSO",
+      journal        = "Z. Phys.",
+      volume         = "C47",
+      year           = "1990",
+      pages          = "167-180",
+      doi            = "10.1007/BF01552337",
+      reportNumber   = "DESY-89-156, FTUAM-EP-89-04",
+      SLACcitation   = "%%CITATION = ZEPYA,C47,167;%%"
+}'

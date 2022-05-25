@@ -1,0 +1,37 @@
+Name: ATLAS_2021_I1887997
+Year: 2021
+Summary: $\gamma\gamma$ production at 13 TeV
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1887997
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Frank Siegert <frank.siegert@cern.ch>
+References:
+ - arXiv:2107.09330 [hep-ex]
+Keywords:
+ - 2photon
+RunInfo:
+  pp -> yy production at 13 TeV
+Luminosity_fb: 139
+Beams: [p+, p+]
+Energies: [13000]
+PtCuts: [40,30]
+Description:
+'Fiducial and differential measurements of $\gamma\gamma$ production.
+The photons are required to be isolated and have a transverse momentum of $p_{\mathrm{T}}>40(30)$ GeV for the leading (sub-leading) photon. The differential cross sections as functions of several observables for the diphoton system are measured.'
+BibKey: ATLAS:2021mbt
+BibTeX: '@article{ATLAS:2021mbt,
+    author = "Aad, Georges and others",
+    collaboration = "ATLAS",
+    title = "{Measurement of the production cross section of pairs of isolated photons in $pp$ collisions at 13 TeV with the ATLAS detector}",
+    eprint = "2107.09330",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CERN-EP-2021-105",
+    month = "7",
+    year = "2021"
+}'
+ReleaseTests:
+ - $A pp-13000-gammagamma

@@ -1,0 +1,31 @@
+Name: ALEPH_1996_I402895
+Year: 1996
+Summary: Bottom baryon polarization at LEP1
+Experiment: ALEPH
+Collider: LEP
+InspireID: 402895
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B365 (1996) 437-447
+RunInfo: e+e- > hadrons
+NeedCrossSection: no
+Beams: [e-, e+]
+Energies: 91.2
+Description:
+'Measurement of the polarization of b-baryons, mainly $\Lambda_b$ at LEP1. The result is obtained by measuring the ratio of
+ the charged lepton energy to the neutrino (missing energy).' 
+Keywords: []
+BibKey: Buskulic:1995mf
+BibTeX: '@article{Buskulic:1995mf,
+      author         = "Buskulic, D. and others",
+      title          = "{Measurement of Lambda(b) polarization in Z decays}",
+      collaboration  = "ALEPH",
+      journal        = "Phys. Lett.",
+      volume         = "B365",
+      year           = "1996",
+      pages          = "437-447",
+      doi            = "10.1016/0370-2693(95)01433-0",
+      reportNumber   = "CERN-PPE-95-156",
+      SLACcitation   = "%%CITATION = PHLTA,B365,437;%%"
+}'

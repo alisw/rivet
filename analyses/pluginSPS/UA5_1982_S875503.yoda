@@ -1,0 +1,193 @@
+BEGIN YODA_SCATTER2D_V2 /REF/UA5_1982_S875503/d01-x01-y01
+ErrorBreakdown: {0: {error: {dn: -0.012, up: 0.012}}}
+IsRef: 1
+Path: /REF/UA5_1982_S875503/d01-x01-y01
+Title: doi:10.17182/hepdata.30953.v1/t1
+Type: Scatter2D
+Variations: [""]
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.000000e+00	5.000000e-01	5.000000e-01	1.015000e+00	1.200000e-02	1.200000e-02
+END YODA_SCATTER2D_V2
+
+BEGIN YODA_SCATTER2D_V2 /REF/UA5_1982_S875503/d02-x01-y01
+ErrorBreakdown: {0: {error: {dn: -0.17, up: 0.17}}}
+IsRef: 1
+Path: /REF/UA5_1982_S875503/d02-x01-y01
+Title: doi:10.17182/hepdata.30953.v1/t2
+Type: Scatter2D
+Variations: [""]
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+5.300000e+01	0.500000e+00	0.500000e+00	1.155000e+01	1.700000e-01	1.700000e-01
+END YODA_SCATTER2D_V2
+
+BEGIN YODA_SCATTER2D_V2 /REF/UA5_1982_S875503/d02-x01-y02
+ErrorBreakdown: {0: {error: {dn: -0.12, up: 0.12}}}
+IsRef: 1
+Path: /REF/UA5_1982_S875503/d02-x01-y02
+Title: doi:10.17182/hepdata.30953.v1/t2
+Type: Scatter2D
+Variations: [""]
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+5.300000e+01	0.500000e+00	0.500000e+00	5.700000e+00	1.200000e-01	1.200000e-01
+END YODA_SCATTER2D_V2
+
+BEGIN YODA_SCATTER2D_V2 /REF/UA5_1982_S875503/d02-x01-y03
+ErrorBreakdown: {0: {error: {dn: -0.05, up: 0.05}}}
+IsRef: 1
+Path: /REF/UA5_1982_S875503/d02-x01-y03
+Title: doi:10.17182/hepdata.30953.v1/t2
+Type: Scatter2D
+Variations: [""]
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+5.300000e+01	0.500000e+00	0.500000e+00	2.030000e+00	5.000000e-02	5.000000e-02
+END YODA_SCATTER2D_V2
+
+BEGIN YODA_SCATTER2D_V2 /REF/UA5_1982_S875503/d02-x01-y04
+ErrorBreakdown: {0: {error: {dn: -0.015, up: 0.015}}}
+IsRef: 1
+Path: /REF/UA5_1982_S875503/d02-x01-y04
+Title: doi:10.17182/hepdata.30953.v1/t2
+Type: Scatter2D
+Variations: [""]
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+5.300000e+01	0.500000e+00	0.500000e+00	2.910000e-01	1.500000e-02	1.500000e-02
+END YODA_SCATTER2D_V2
+
+BEGIN YODA_SCATTER2D_V2 /REF/UA5_1982_S875503/d02-x01-y05
+ErrorBreakdown: {0: {error: {dn: -0.016, up: 0.016}}}
+IsRef: 1
+Path: /REF/UA5_1982_S875503/d02-x01-y05
+Title: doi:10.17182/hepdata.30953.v1/t2
+Type: Scatter2D
+Variations: [""]
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+5.300000e+01	0.500000e+00	0.500000e+00	1.100000e-01	1.600000e-02	1.600000e-02
+END YODA_SCATTER2D_V2
+
+BEGIN YODA_SCATTER2D_V2 /REF/UA5_1982_S875503/d02-x01-y06
+ErrorBreakdown: {0: {error: {dn: -0.16, up: 0.16}}}
+IsRef: 1
+Path: /REF/UA5_1982_S875503/d02-x01-y06
+Title: doi:10.17182/hepdata.30953.v1/t2
+Type: Scatter2D
+Variations: [""]
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+5.300000e+01	0.500000e+00	0.500000e+00	1.147000e+01	1.600000e-01	1.600000e-01
+END YODA_SCATTER2D_V2
+
+BEGIN YODA_SCATTER2D_V2 /REF/UA5_1982_S875503/d02-x01-y07
+ErrorBreakdown: {0: {error: {dn: -0.11, up: 0.11}}}
+IsRef: 1
+Path: /REF/UA5_1982_S875503/d02-x01-y07
+Title: doi:10.17182/hepdata.30953.v1/t2
+Type: Scatter2D
+Variations: [""]
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+5.300000e+01	0.500000e+00	0.500000e+00	5.770000e+00	1.100000e-01	1.100000e-01
+END YODA_SCATTER2D_V2
+
+BEGIN YODA_SCATTER2D_V2 /REF/UA5_1982_S875503/d02-x01-y08
+ErrorBreakdown: {0: {error: {dn: -0.04, up: 0.04}}}
+IsRef: 1
+Path: /REF/UA5_1982_S875503/d02-x01-y08
+Title: doi:10.17182/hepdata.30953.v1/t2
+Type: Scatter2D
+Variations: [""]
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+5.300000e+01	0.500000e+00	0.500000e+00	1.990000e+00	4.000000e-02	4.000000e-02
+END YODA_SCATTER2D_V2
+
+BEGIN YODA_SCATTER2D_V2 /REF/UA5_1982_S875503/d02-x01-y09
+ErrorBreakdown: {0: {error: {dn: -0.014, up: 0.014}}}
+IsRef: 1
+Path: /REF/UA5_1982_S875503/d02-x01-y09
+Title: doi:10.17182/hepdata.30953.v1/t2
+Type: Scatter2D
+Variations: [""]
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+5.300000e+01	0.500000e+00	0.500000e+00	3.040000e-01	1.400000e-02	1.400000e-02
+END YODA_SCATTER2D_V2
+
+BEGIN YODA_SCATTER2D_V2 /REF/UA5_1982_S875503/d02-x01-y10
+ErrorBreakdown: {0: {error: {dn: -0.017, up: 0.017}}}
+IsRef: 1
+Path: /REF/UA5_1982_S875503/d02-x01-y10
+Title: doi:10.17182/hepdata.30953.v1/t2
+Type: Scatter2D
+Variations: [""]
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+5.300000e+01	0.500000e+00	0.500000e+00	1.270000e-01	1.700000e-02	1.700000e-02
+END YODA_SCATTER2D_V2
+
+BEGIN YODA_SCATTER2D_V2 /REF/UA5_1982_S875503/d03-x01-y01
+ErrorBreakdown: {0: {error: {dn: -0.07, up: 0.07}}, 1: {error: {dn: -0.08, up: 0.08}}, 2: {error: {dn: -0.07, up: 0.07}}, 3: {error: {dn: -0.07, up: 0.07}}, 4: {error: {dn: -0.06, up: 0.06}}, 5: {error: {dn: -0.06, up: 0.06}}, 6: {error: {dn: -0.06, up: 0.06}}, 7: {error: {dn: -0.07, up: 0.07}}, 8: {error: {dn: -0.06, up: 0.06}}, 9: {error: {dn: -0.06, up: 0.06}}, 10: {error: {dn: -0.05, up: 0.05}}, 11: {error: {dn: -0.05, up: 0.05}}, 12: {error: {dn: -0.05, up: 0.05}}, 13: {error: {dn: -0.06, up: 0.06}}}
+IsRef: 1
+Path: /REF/UA5_1982_S875503/d03-x01-y01
+Title: doi:10.17182/hepdata.30953.v1/t3
+Type: Scatter2D
+Variations: [""]
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.250000e-01	1.250000e-01	1.250000e-01	1.720000e+00	7.000000e-02	7.000000e-02
+3.750000e-01	1.250000e-01	1.250000e-01	1.950000e+00	8.000000e-02	8.000000e-02
+6.250000e-01	1.250000e-01	1.250000e-01	1.740000e+00	7.000000e-02	7.000000e-02
+8.750000e-01	1.250000e-01	1.250000e-01	1.760000e+00	7.000000e-02	7.000000e-02
+1.125000e+00	1.250000e-01	1.250000e-01	1.730000e+00	6.000000e-02	6.000000e-02
+1.375000e+00	1.250000e-01	1.250000e-01	1.790000e+00	6.000000e-02	6.000000e-02
+1.625000e+00	1.250000e-01	1.250000e-01	1.720000e+00	6.000000e-02	6.000000e-02
+1.875000e+00	1.250000e-01	1.250000e-01	1.720000e+00	7.000000e-02	7.000000e-02
+2.125000e+00	1.250000e-01	1.250000e-01	1.440000e+00	6.000000e-02	6.000000e-02
+2.375000e+00	1.250000e-01	1.250000e-01	1.380000e+00	6.000000e-02	6.000000e-02
+2.625000e+00	1.250000e-01	1.250000e-01	1.240000e+00	5.000000e-02	5.000000e-02
+2.875000e+00	1.250000e-01	1.250000e-01	1.010000e+00	5.000000e-02	5.000000e-02
+3.125000e+00	1.250000e-01	1.250000e-01	1.040000e+00	5.000000e-02	5.000000e-02
+3.375000e+00	1.250000e-01	1.250000e-01	8.800000e-01	6.000000e-02	6.000000e-02
+END YODA_SCATTER2D_V2
+
+BEGIN YODA_SCATTER2D_V2 /REF/UA5_1982_S875503/d04-x01-y01
+ErrorBreakdown: {0: {error: {dn: -0.08, up: 0.08}}, 1: {error: {dn: -0.09, up: 0.09}}, 2: {error: {dn: -0.08, up: 0.08}}, 3: {error: {dn: -0.08, up: 0.08}}, 4: {error: {dn: -0.08, up: 0.08}}, 5: {error: {dn: -0.08, up: 0.08}}, 6: {error: {dn: -0.07, up: 0.07}}, 7: {error: {dn: -0.07, up: 0.07}}, 8: {error: {dn: -0.06, up: 0.06}}, 9: {error: {dn: -0.06, up: 0.06}}, 10: {error: {dn: -0.06, up: 0.06}}, 11: {error: {dn: -0.06, up: 0.06}}, 12: {error: {dn: -0.06, up: 0.06}}, 13: {error: {dn: -0.07, up: 0.07}}}
+IsRef: 1
+Path: /REF/UA5_1982_S875503/d04-x01-y01
+Title: doi:10.17182/hepdata.30953.v1/t4
+Type: Scatter2D
+Variations: [""]
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.250000e-01	1.250000e-01	1.250000e-01	1.760000e+00	8.000000e-02	8.000000e-02
+3.750000e-01	1.250000e-01	1.250000e-01	1.910000e+00	9.000000e-02	9.000000e-02
+6.250000e-01	1.250000e-01	1.250000e-01	1.860000e+00	8.000000e-02	8.000000e-02
+8.750000e-01	1.250000e-01	1.250000e-01	1.810000e+00	8.000000e-02	8.000000e-02
+1.125000e+00	1.250000e-01	1.250000e-01	1.760000e+00	8.000000e-02	8.000000e-02
+1.375000e+00	1.250000e-01	1.250000e-01	1.800000e+00	8.000000e-02	8.000000e-02
+1.625000e+00	1.250000e-01	1.250000e-01	1.800000e+00	7.000000e-02	7.000000e-02
+1.875000e+00	1.250000e-01	1.250000e-01	1.690000e+00	7.000000e-02	7.000000e-02
+2.125000e+00	1.250000e-01	1.250000e-01	1.490000e+00	6.000000e-02	6.000000e-02
+2.375000e+00	1.250000e-01	1.250000e-01	1.370000e+00	6.000000e-02	6.000000e-02
+2.625000e+00	1.250000e-01	1.250000e-01	1.110000e+00	6.000000e-02	6.000000e-02
+2.875000e+00	1.250000e-01	1.250000e-01	1.020000e+00	6.000000e-02	6.000000e-02
+3.125000e+00	1.250000e-01	1.250000e-01	9.600000e-01	6.000000e-02	6.000000e-02
+3.375000e+00	1.250000e-01	1.250000e-01	8.200000e-01	7.000000e-02	7.000000e-02
+END YODA_SCATTER2D_V2
+
+BEGIN YODA_SCATTER1D_V2 /REF/UA5_1982_S875503/d05-x01-y01
+ErrorBreakdown: {}
+IsRef: 1
+Path: /REF/UA5_1982_S875503/d05-x01-y01
+Title: doi:10.17182/hepdata.30953.v1/t5
+Type: Scatter1D
+Variations: []
+---
+# xval	 xerr-	 xerr+	
+END YODA_SCATTER1D_V2
+

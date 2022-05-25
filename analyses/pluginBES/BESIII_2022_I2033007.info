@@ -1,0 +1,33 @@
+Name: BESIII_2022_I2033007
+Year: 2022
+Summary: $e^+e^-\to K^+K^-\pi^0$ cross section between 2 and 3.08 GeV
+Experiment: BESIII
+Collider: BEPC
+InspireID: 2033007
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson
+References:
+ - arXiv:2202.06447
+RunInfo: e+e- to hadrons
+Beams: [e+, e-]
+Description:
+  'Measurement of $e^+e^-\to K^+K^-\pi^0$ cross section between 2 and 3.08 GeV. In addition the cross sections for the $\phi\pi^0$, $K^*+K^-$ and $K^*(1430)^+K^-$.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2022wxz
+BibTeX: '@article{BESIII:2022wxz,
+    author = "Ablikim, M. and others",
+    collaboration = "BESIII",
+    title = "{Measurement of $e^{+}e^{-} \to K^{+}K^{-}\pi^{0}$ cross section and observation of a resonant structure}",
+    eprint = "2202.06447",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    month = "2",
+    year = "2022"
+}
+'

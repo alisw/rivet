@@ -1,0 +1,59 @@
+Name: CMS_2018_I1667854
+Year: 2018
+Summary: Differential cross section of Z boson production in association with jets in proton-proton collisions at $\sqrt{s} = 13\,$TeV
+Experiment: CMS
+Collider: LHC
+InspireID: 1667854
+Status: VALIDATED
+Reentrant: true
+Authors:
+  - cms-pag-conveners-smp@cern.ch
+  - Philippe Gras <philippe.gras@cern.ch>
+References:
+  - CMS-SMP-16-015
+  - https://inspirehep.net/record/1667854
+RunInfo:
+  'Run MC generators with Z decaying leptonically into both electrons and muons at 13 TeV CoM energy. If
+  only one of the two decay channels is included, set LMODE accordingly.'
+NeedCrossSection: yes
+Beams: [p+, p+]
+Energies: [13000]
+Luminosity_fb: 2.19
+Options:
+ - LMODE=EL,MU,EMU
+Description:
+  'The production of a Z boson, decaying to two charged leptons, in association with jets in proton-proton
+  collisions at a centre-of-mass energy of 13 TeV is measured. Data recorded with the CMS detector at the
+  LHC are used that correspond to an integrated luminosity of 2.19$\,$fb$^{-1}$. The cross section is measured
+  as a function of the jet multiplicity and its dependence on the transverse momentum of the Z boson, the jet
+  kinematic variables (transverse momentum and rapidity), the scalar sum of the jet momenta, which quantifies
+  the hadronic activity, and the balance in transverse momentum between the reconstructed jet recoil and the
+  Z boson. The measurements are compared with predictions from four different calculations. The first two
+  merge matrix elements with different parton multiplicities in the final state and parton showering, one
+  of which includes one-loop corrections. The third is a fixed-order calculation with next-to-next-to-leading
+  order accuracy for the process with a Z boson and one parton in the final state. The fourth combines the
+  fully differential next-to-next-to-leading order calculation with next-to-next-to-leading logarithm
+  resummation and parton showering.'
+Cuts: 'First two leading electrons or muons with $p_T > 20$ GeV and $|\eta| < 2.4$
+     Dilepton invariant mass in the [71,111] GeV range
+     Jets $p_T > 30$ GeV and $|\eta| < 2.4$
+     $\Delta{R}($lepton,jet$) > 0.4$'
+BibKey: Sirunyan:2018cpw
+BibTeX: '@article{Sirunyan:2018cpw,
+      author         = "Sirunyan, Albert M and others",
+      title          = "{Measurement of differential cross sections for Z boson
+                        production in association with jets in proton-proton
+                        collisions at $\sqrt{s}=$ 13$\,$TeV}",
+      collaboration  = "CMS",
+      year           = "2018",
+      eprint         = "1804.05252",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CMS-SMP-16-015, CERN-EP-2018-071",
+      SLACcitation   = "%%CITATION = ARXIV:1804.05252;%%"
+}'
+ReleaseTests:
+ - $A LHC-13-Z-e
+ - $A-2 LHC-13-Z-el-jets
+ - $A-3 LHC-13-Z-mu-jets
+ - $A-4 LHC-13-Z-mu

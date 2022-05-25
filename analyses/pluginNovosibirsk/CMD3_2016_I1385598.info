@@ -1,0 +1,36 @@
+Name: CMD3_2016_I1385598
+Year: 2016
+Summary: Cross section for $e^+e^-\to p\bar{p}$ between the threshold and 2 GeV
+Experiment: CMD3
+Collider:  VEPP-2M
+InspireID: 1385598
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B759 (2016) 634-640, 2016 
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+Description:
+  'Measurement of the cross section for $e^+e^-\to p\bar{p}$ between the threshold and 2 GeV.'
+Keywords: []
+BibKey: Akhmetshin:2015ifg
+BibTeX: '@article{Akhmetshin:2015ifg,
+      author         = "Akhmetshin, R. R. and others",
+      title          = "{Study of the process $e^+e^-\to p\bar{p}$ in the c.m.
+                        energy range from threshold to 2 GeV with the CMD-3
+                        detector}",
+      collaboration  = "CMD-3",
+      journal        = "Phys. Lett.",
+      volume         = "B759",
+      year           = "2016",
+      pages          = "634-640",
+      doi            = "10.1016/j.physletb.2016.04.048",
+      eprint         = "1507.08013",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1507.08013;%%"
+}'

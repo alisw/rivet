@@ -1,0 +1,32 @@
+Name: GAMMAGAMMA_1973_I84794
+Year: 1973
+Summary: Measurement of $R$ and the hadronic cross section for energies between 1.35 and 3 GeV
+Experiment: GAMMAGAMMA
+Collider: ADONE
+InspireID: 84794
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B44 (1973) 533-536, 1973 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: yes
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$ and the hadronic cross section in $e^+e^-$ collisions by the GAMMA-GAMMA group for energies between 1.35 and 3 GeV.
+   The muonic cross section is also outputted to the yoda file
+   so that ratio $R$ can be recalcuated if runs are combined.'
+BibKey: Bacci:1973fb
+BibTeX: '@article{Bacci:1973fb,
+      author         = "Bacci, C. and Penson, G. and Salvini, G. and Stella, B.
+                        and Baldini-Celio, R. and Capon, G. and Mencuccini, C. and
+                        Murtas, G. P. and Spinetti, M. and Zallo, A.",
+      title          = "{Multihadronic cross-sections from e+ e- annihilation up
+                        to 3 gev center-of-mass energy}",
+      journal        = "Phys. Lett.",
+      volume         = "44B",
+      year           = "1973",
+      pages          = "533-536",
+      doi            = "10.1016/0370-2693(73)90016-6",
+      SLACcitation   = "%%CITATION = PHLTA,44B,533;%%"
+}'

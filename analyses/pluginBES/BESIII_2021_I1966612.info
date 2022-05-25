@@ -1,0 +1,34 @@
+Name: BESIII_2021_I1966612
+Year: 2021
+Summary: Cross section for $e^+e^-\to$ neutron and antineutron between 2. and 3.08 GeV
+Experiment: BESIII
+Collider:  BEPC II
+InspireID: 1966612
+Status:   VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Nature Phys. 17 (2021) 11, 1200-1204
+RunInfo: e+ e- to hadrons
+NeedCrossSection: yes
+Beams: [e+, e-]
+Description:
+  'Measurement of the cross section for $e^+e^-\to p\bar{p}$ for energies between 2. and 3.08 GeV.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2021tbq
+BibTeX: '@article{BESIII:2021tbq,
+    author = "Ablikim, M. and others",
+    collaboration = "BESIII",
+    title = "{Oscillating features in the electromagnetic structure of the neutron}",
+    doi = "10.1038/s41567-021-01345-6",
+    journal = "Nature Phys.",
+    volume = "17",
+    number = "11",
+    pages = "1200--1204",
+    year = "2021"
+}'

@@ -1,0 +1,42 @@
+Name: DELPHI_2003_I620250
+Year: 2003
+Summary: Measurements of event shapes by DELPHI, above and below $m_Z$
+Experiment: DELPHI
+Collider: LEP
+InspireID: 620250
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Eur.Phys.J. C29 (2003) 285-312
+RunInfo:
+  Hadronic Z decay events generated below the Z pole. Beam energy must be specified as analysis option "ENERGY" when rivet-merging samples.
+NeedCrossSection: no
+Beams: [e+, e-]
+Energies: [45,66,76,183,189,192,196,200,202,205,207]
+Options:
+ - ENERGY=45,66,76,183,189,192,196,200,202,205,207
+Description:
+  'Measurement of a wide range of event shapes by DELPHI at energies below the Z pole using radiative events and above $m_Z$ from LEP2. 
+This analyses allows the energy dependence of simulations to be studied. Only the distributions and not the means are implemented.
+Beam energy must be specified as analysis option "ENERGY" when rivet-merging samples.'
+Keywords: []
+BibKey: Abdallah:2003xz
+BibTeX: '@article{Abdallah:2003xz,
+      author         = "Abdallah, J. and others",
+      title          = "{A Study of the energy evolution of event shape
+                        distributions and their means with the DELPHI detector at
+                        LEP}",
+      collaboration  = "DELPHI",
+      journal        = "Eur. Phys. J.",
+      volume         = "C29",
+      year           = "2003",
+      pages          = "285-312",
+      doi            = "10.1140/epjc/s2003-01198-0",
+      eprint         = "hep-ex/0307048",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-EP-2002-082",
+      SLACcitation   = "%%CITATION = HEP-EX/0307048;%%"
+}'

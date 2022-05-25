@@ -1,0 +1,62 @@
+Name: ATLAS_2019_I1768911
+Year: 2019
+Summary: Z pT and Z phi* at 13 TeV
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1768911
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Jan Kretzschmar <jan.kretzschmar@cern.ch>
+References:
+ - arXiv:1912.02844 [hep-ex]
+ - Eur. Phys. J. C 80 (2020) 616 
+RunInfo:
+  p + p -> Z + X with Z -> e e or Z -> mu mu
+Beams: [p+, p+]
+Energies: [13000]
+Luminosity_fb: 36.1
+PtCuts: [27]
+Options:
+- LMODE=EL,MU
+Description:
+  'This paper describes precision measurements of the transverse
+  momentum $p_\mathrm{T}^{\ell\ell}$ ($\ell=e,\mu$) and of the angular
+  variable $\phi^{*}_{\eta}$ distributions of Drell-Yan lepton pairs
+  in a mass range of 66-116 GeV. The analysis uses data from 36.1
+  fb$^{-1}$ of proton-proton collisions at a centre-of-mass energy of
+  $\sqrt{s}=13$ TeV collected by the ATLAS experiment at the LHC in
+  2015 and 2016. Measurements in electron-pair and muon-pair final
+  states are performed in the same fiducial volumes, corrected for
+  detector effects, and combined. Compared to previous measurements in
+  proton-proton collisions at $\sqrt{s}=$7 and 8 TeV, this new
+  measurement probes perturbative QCD at a higher centre-of-mass
+  energy with a different composition of initial states. It reaches a
+  precision of 0.2% for the normalized spectra at low values of
+  $p_\mathrm{T}^{\ell\ell}$. The data are compared with different QCD
+  predictions, where it is found that predictions based on resummation
+  approaches can describe the full spectrum within uncertainties.
+  Decay channel (e or mu) is selected by LMODE=EL,MU. The comparison is always to the combined measurement.'
+BibKey: ATLAS:2019zci
+BibTeX: '@article{ATLAS:2019zci,
+    author = "Aad, Georges and others",
+    collaboration = "ATLAS",
+    title = "{Measurement of the transverse momentum distribution of Drell-Yan lepton pairs in proton-proton collisions at $\sqrt{s}=13$ TeV with the ATLAS detector}",
+    eprint = "1912.02844",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CERN-EP-2019-223",
+    doi = "10.1140/epjc/s10052-020-8001-z",
+    journal = "Eur. Phys. J. C",
+    volume = "80",
+    number = "7",
+    pages = "616",
+    year = "2020"
+}'
+
+ReleaseTests:
+ - $A LHC-13-Z-e
+ - $A-2 LHC-13-Z-mu
+ - $A-3 LHC-13-Z-el-jets
+ - $A-4 LHC-13-Z-mu-jets
+

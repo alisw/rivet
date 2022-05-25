@@ -1,0 +1,53 @@
+Name: ATLAS_2017_I1517194
+Year: 2017
+Summary: Electroweak $Wjj$ production at 8~TeV
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1517194
+Status: VALIDATED
+Reentrant: true
+Authors:
+  - Christian Johnson <christian.johnson@cern.ch>
+  - Christian Gutschow <chris.g@cern.ch>
+References:
+  - Eur.Phys.J. C77 (2017) no.7, 474
+  - arXiv:1703.04362 [hep-ex]
+Keywords:
+  - VJETS
+  - ELECTROWEAK
+  - VBF
+  - VJJ
+RunInfo:
+ $pp$ to electroweak lepton + neutrino + 2~jets at 8~TeV
+Luminosity_fb: 20.2
+NeedCrossSection: yes
+Beams: [p+, p+]
+Energies: [8000]
+PtCuts: [30.,30.,25.]
+Options:
+ - LMODE=EL,MU
+Description:
+  'Measurements of the electroweak production of a $W$ boson in association with two jets at high dijet invariant mass
+  are performed using $\sqrt{s} = 7$ and 8 TeV proton-proton collision data produced by the Large Hadron Collider,
+  corresponding respectively to 4.7 and 20.2 fb$^{-1}$ of integrated luminosity collected by the ATLAS detector.
+  The measurements are sensitive to the production of a $W$ boson via a triple-gauge-boson vertex and include both
+  the fiducial and differential cross sections of the electroweak process.'
+BibKey: Aaboud:2017fye
+BibTeX: '@article{Aaboud:2017fye,
+      author         = "Aaboud, Morad and others",
+      title          = "{Measurements of electroweak $Wjj$ production and
+                        constraints on anomalous gauge couplings with the ATLAS
+                        detector}",
+      collaboration  = "ATLAS",
+      journal        = "Eur. Phys. J.",
+      volume         = "C77",
+      year           = "2017",
+      number         = "7",
+      pages          = "474",
+      doi            = "10.1140/epjc/s10052-017-5007-2",
+      eprint         = "1703.04362",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-EP-2017-008",
+      SLACcitation   = "%%CITATION = ARXIV:1703.04362;%%"
+}'

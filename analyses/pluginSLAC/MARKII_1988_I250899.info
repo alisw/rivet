@@ -1,0 +1,33 @@
+Name: MARKII_1988_I250899
+Year: 1988
+Summary: Energy-Energy correlation at 29 GeV
+Experiment: MARKII
+Collider: PEP
+InspireID: 250899
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 37 (1988) 3091, 1988
+RunInfo: e+e- to hadrons
+Beams: [e+, e-]
+Energies: [29.]
+Description:
+  'Energy-Energy correlation and its asymmetry measured at 29 GeV by the MARKII collaboration.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Wood:1987uf
+BibTeX: '@article{Wood:1987uf,
+    author = "Wood, D. R. and others",
+    title = "{Determination of $\alpha^- s$ From Energy-energy Correlations in $e^+ e^-$ Annihilation at 29-{GeV}}",
+    reportNumber = "SLAC-PUB-4374, LBL-23812",
+    doi = "10.1103/PhysRevD.37.3091",
+    journal = "Phys. Rev. D",
+    volume = "37",
+    pages = "3091",
+    year = "1988"
+}
+'

@@ -1,0 +1,33 @@
+Name: TASSO_1980_I153511
+Year: 1980
+Summary: Event shapes at 12 and 30 GeV
+Experiment: TASSO
+Collider: Petra
+InspireID: 153511
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B94 (1980) 437-443, 1980 
+RunInfo: $e^+e^-\to$ hadrons. Beam energy must be specified as analysis option "ENERGY" when rivet-merging samples.
+NumEvents: 100000
+Beams: [e-, e+]
+Energies: [12.,30.]
+Options:
+ - ENERGY=12,30
+Description: Sphericity, Aplanarity and scaled momentum distribution at 12 and 30 GeV. Beam energy must be specified as analysis option "ENERGY" when rivet-merging samples.
+BibKey: Brandelik:1980zw
+BibTeX: '@article{Brandelik:1980zw,
+      author         = "Brandelik, R. and others",
+      title          = "{Comparison of e+ e- Annihilation with QCD and
+                        Determination of the Strong Coupling Constant}",
+      collaboration  = "TASSO",
+      journal        = "Phys. Lett.",
+      volume         = "94B",
+      year           = "1980",
+      pages          = "437-443",
+      doi            = "10.1016/0370-2693(80)90914-4",
+      reportNumber   = "DESY-80-40",
+      SLACcitation   = "%%CITATION = PHLTA,94B,437;%%"
+}'

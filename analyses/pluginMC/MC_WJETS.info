@@ -1,0 +1,22 @@
+Name: MC_WJETS
+Summary: Monte Carlo validation observables for $W[e \, \nu]$ + jets production
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Frank Siegert <frank.siegert@cern.ch>
+ - Christian Gutschow <chris.g@cern.ch>
+References:
+RunInfo:
+  $\ell \, \nu$ + jets analysis.
+Options:
+ - LMODE=EL,MU
+ - SCHEME=DRESSED,BARE
+PtCuts: [0]
+Description:
+  Monte Carlo validation observables for $W[\ell \, \nu]$ + jets production
+  60 GeV $<m_W<$ 100 GeV cut applied.
+NeedCrossSection: yes
+
+ReleaseTests:
+ - $A LHC-W-e
+

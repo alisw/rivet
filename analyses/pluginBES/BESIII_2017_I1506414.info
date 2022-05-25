@@ -1,0 +1,40 @@
+Name: BESIII_2017_I1506414
+Year: 2017
+Summary: Analysis of $J/\psi$ and $\psi(2S)$ decays to $\Xi^0\bar\Xi^0$ and $\Sigma^{*0}\bar\Sigma^{*0}$
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1506414
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B770 (2017) 217-225
+RunInfo: e+e- > J/psi and Psi(2S). Beam energy must be specified as analysis option "ENERGY" when rivet-merging samples.
+NeedCrossSection: no
+Beams: [e-, e+]
+Energies: [3.1,3.686]
+Options:
+ - ENERGY=3.1,3.686
+Description:
+  'Analysis of the angular distribution of the baryons produced in $e^+e^-\to J/\psi,\psi(2S) \to \Xi^0\bar\Xi^0$ and $\Sigma^{*0}\bar\Sigma^{*0}$.
+   Gives information about the decay and is useful for testing correlations in hadron decays.
+   Beam energy must be specified as analysis option "ENERGY" when rivet-merging samples.'
+Keywords: []
+BibKey: Ablikim:2016sjb
+BibTeX: '@article{Ablikim:2016sjb,
+      author         = "Ablikim, Medina and others",
+      title          = "{Study of $J/\psi$ and
+                        $\psi(3686)\rightarrow\Sigma(1385)^{0}\bar\Sigma(1385)^{0}$
+                        and $\Xi^0\bar\Xi^{0}$}",
+      collaboration  = "BESIII",
+      journal        = "Phys. Lett.",
+      volume         = "B770",
+      year           = "2017",
+      pages          = "217-225",
+      doi            = "10.1016/j.physletb.2017.04.048",
+      eprint         = "1612.08664",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1612.08664;%%"
+}'

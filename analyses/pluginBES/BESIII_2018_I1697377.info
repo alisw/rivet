@@ -1,0 +1,35 @@
+Name: BESIII_2018_I1697377
+Year: 2018
+Summary: $J/\psi\to e^+e^-\eta$ decays
+Experiment: BESIII
+Collider: 
+InspireID: 1697377
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D99 (2019) no.1, 012006
+RunInfo:
+  Events with J/psi decays, either particle guns or collisions.
+NumEvents: 10000
+NeedCrossSection: no
+Description:
+  'Differential decay rates for $J/\psi\to e^+e^-\eta$ decays.'
+Keywords: []
+BibKey: Ablikim:2018eoy
+BibTeX: '@article{Ablikim:2018eoy,
+      author         = "Ablikim, Medina and others",
+      title          = "{Study of the Dalitz decay $J/\psi \to e^+e^- \eta$}",
+      collaboration  = "BESIII",
+      journal        = "Phys. Rev.",
+      volume         = "D99",
+      year           = "2019",
+      number         = "1",
+      pages          = "012006",
+      doi            = "10.1103/PhysRevD.99.012006",
+      eprint         = "1810.03091",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "BESIII Analysis Memo (BAM) - 0266",
+      SLACcitation   = "%%CITATION = ARXIV:1810.03091;%%"
+}'

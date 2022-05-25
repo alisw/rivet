@@ -1,0 +1,54 @@
+Name: ATLAS_2020_I1801434
+Year: 2020
+Summary: Top-quark pair single- and double-differential cross-sections in the all-hadronic channel
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1801434
+Status: VALIDATED
+Reentrant: true
+Authors: 
+ - Serena Palazzo <serena.palazzo@cern.ch>
+ - Deepak Kar <deepak.kar@cern.ch>
+References:
+ - JHEP 01 (2021) 033
+ - arXiv:2006.09274 [hep-ex]
+Keywords:
+  - TTBAR
+  - AllHadronic
+RunInfo:
+ ttbar production at 13 TeV, all hadronic decay mode
+Luminosity_fb: 36
+Beams: [p+, p+]
+Energies: [13000]
+Description:
+  'Differential cross-sections are measured for top-quark pair production in the all-hadronic decay mode, 
+  using proton-proton collision events collected by the ATLAS experiment in which all six decay jets 
+  are separately resolved. Absolute and normalised single- and double-differential cross-sections 
+  are measured at particle and parton level as a function of various kinematic variables. 
+  Emphasis is placed on well-measured observables in fully reconstructed final states, 
+  as well as on the study of correlations between the top-quark pair system 
+  and additional jet radiation identified in the event. 
+  The study is performed using data from proton-proton collisions at $\sqrt{s} = 13$ TeV collected 
+  by the ATLAS detector at CERN’s Large Hadron Collider in 2015 and 2016, corresponding 
+  to an integrated luminosity of 36.1 fb$^{−1}$. The rapidities of the individual top quarks 
+  and of the top-quark pair are well modelled by several independent event generators. 
+  Significant mismodelling is observed in the transverse momenta of the leading three jet emissions, 
+  while the leading top-quark transverse momentum and top-quark pair transverse momentum 
+  are both found to be incompatible with several theoretical predictions'
+BibKey: ATLAS:2020ccu
+BibTex: '@article{ATLAS:2020ccu,
+    author = "Aad, Georges and others",
+    collaboration = "ATLAS",
+    title = "{Measurements of top-quark pair single- and double-differential cross-sections in the all-hadronic channel in $pp$ collisions at $\sqrt{s}=13~\textrm{TeV}$ using the ATLAS detector}",
+    eprint = "2006.09274",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CERN-EP-2020-063",
+    doi = "10.1007/JHEP01(2021)033",
+    journal = "JHEP",
+    volume = "01",
+    pages = "033",
+    year = "2021"
+}'
+ReleaseTests:
+ - $A LHC-13-Top-All

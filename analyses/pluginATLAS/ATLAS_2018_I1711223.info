@@ -1,0 +1,52 @@
+Name: ATLAS_2018_I1711223
+Year: 2021
+Summary: Observation of electroweak WZjj production 
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1711223
+Status: VALIDATED
+Authors:
+ - Eirini Kasimi <ekasimi@cern.ch>
+ - Emmanuel Sauvan <sauvan@lapp.in2p3.fr>
+References:
+Keywords:
+ - wzjj
+ - VBS
+ - diboson
+ - 3lepton
+RunInfo:
+  pp -> WZ j j, diboson decays to electrons and muons, no b-quarks in the initial state
+NeedCrossSection: yes
+Luminosity_fb: 36.1
+Beams: [p+, p+]
+Energies: [13000]
+PtCuts: [15,25]
+Description:
+  'An observation of electroweak $W^\pm Z$ production in association with two jets in proton-proton collisions is presented. The data
+  collected by the ATLAS detector at the Large Hadron Collider in 2015 and 2016 at a centre-of-mass energy of $\sqrt{s}=13$ TeV are used,
+  corresponding to an integrated luminosity of 36.1fb$^{-1}$. Events containing three identified leptons, either electrons or muons, and
+  two jets are selected. The electroweak production of $W^\pm Z$ bosons in association with two jets is measured with an observed
+  significance of 5.3 standard deviations. A fiducial cross-section for electroweak production including interference effects and
+  for a single leptonic decay mode is measured to be $\sigma_{WZjj-EW}=0.57-0.13+0.14$(stat.)$-0.06+0.07$(syst.)fb. Total and differential
+  fiducial cross-sections of the sum of $W^\pm Zjj$ electroweak and strong productions for several kinematic observables are also
+  measured. Uses SM neutrino-lepton flavour matching and a resonant shape algorithm assuming the Standard Model, to match the MC-based 
+  correction to the fiducial region applied in the paper. This routine is therefore only valid under the assumption of the Standard Model 
+  and cannot be used for BSM reinterpretation'
+BibKey: ATLAS:2018mxa
+BibTeX: '@article{ATLAS:2018mxa,
+    author = "Aaboud, Morad and others",
+    collaboration = "ATLAS",
+    title = "{Observation of electroweak $W^{\pm}Z$ boson pair production in association with two jets in $pp$ collisions at $\sqrt{s} =$ 13 TeV with the ATLAS detector}",
+    eprint = "1812.09740",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CERN-EP-2018-286",
+    doi = "10.1016/j.physletb.2019.05.012",
+    journal = "Phys. Lett. B",
+    volume = "793",
+    pages = "469--492",
+    year = "2019"
+}'
+ReleaseTests:
+ - $A pp-13000-lllvjj
+

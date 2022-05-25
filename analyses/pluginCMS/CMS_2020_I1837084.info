@@ -1,0 +1,36 @@
+Name: CMS_2020_I1837084
+Year: 2020
+Summary: Measurement of the Z boson differential production cross section using its invisible decay mode in proton-proton collisions at 13 TeV
+Experiment: CMS
+Collider: LHC
+InspireID: 1837084
+Status: VALIDATED
+Authors:
+ - cms-pag-conveners-smp@cern.ch
+ - Guillelmo Gomez-Ceballos <ceballos@cern.ch>
+References:
+  - arXiv:2012.09254
+  - CMS-SMP-18-003
+  - JHEP 05 (2021) 205
+RunInfo: pp to Z interactions at $\sqrt{s} = 13$ TeV. Data collected by CMS during the year 2016.
+NeedCrossSection: yes
+Beams: [p+, p+]
+Energies: [13000]
+Luminosity_fb: 35.9
+Description:
+  'Measurements of the total and differential fiducial cross sections for the Z boson decaying into two neutrinos are presented at the LHC in proton-proton collisions at a center-of-mass energy of 13 TeV. The data were collected by the CMS detector in 2016 and correspond to an integrated luminosity of 35.9 fb-1. In these measurements, events are selected containing an imbalance in transverse momentum and one or more energetic jets. The fiducial differential cross section is measured as a function of the Z boson transverse momentum. The results are combined with a previous measurement of charged-lepton decays of the Z boson.'
+BibKey: Sirunyan:2020lfm
+BibTeX: '@article{Sirunyan:2020lfm,
+    author = "Sirunyan, Albert M and others",
+    collaboration = "CMS",
+    title = "{Measurement of the Z boson differential production cross section using its invisible decay mode (Z$\nu\bar{\nu}$) in proton-proton collisions at $\sqrt{s}=$ 13 TeV}",
+    eprint = "2012.09254",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CMS-SMP-18-003, CERN-EP-2020-223",
+    month = "12",
+    year = "2020"
+}'
+ReleaseTests:
+ - $A LHC-13-Z-mu-jets
+ - $A-2 LHC-13-Z-mu

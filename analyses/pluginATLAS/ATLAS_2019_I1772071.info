@@ -1,0 +1,54 @@
+Name: ATLAS_2019_I1772071
+Year: 2019
+Summary: Measurement of isolated-photon plus two-jet production
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1772071
+Status: VALIDATED
+Reentrant: true
+Authors: 
+ - Ana Rosario Cueto Gomez <ana.cueto@cern.ch>
+ - Deepak Kar <deepak.kar@cern.ch>
+References:
+ - JHEP 03 (2020) 179
+ - arXiv:1912.09866 [hep-ex]
+Keywords:
+  - Photon
+  - Dijet
+RunInfo:
+ photon+jet production at 13 TeV
+Luminosity_fb: 36.1
+Beams: [p+, p+]
+Energies: [13000]
+Description:
+  'The dynamics of isolated-photon plus two-jet production in pp collisions at a centre-of-mass e
+  nergy of 13 TeV are studied with the ATLAS detector at the LHC using a dataset corresponding 
+  to an integrated luminosity of 36.1 fb$^{−1}$. Cross sections are measured as functions 
+  of a variety of observables, including angular correlations and invariant masses of 
+  the objects in the final state, γ + jet + jet. Measurements are also performed in 
+  phase-space regions enriched in each of the two underlying physical mechanisms, 
+  namely direct and fragmentation processes. The measurements cover the range of photon 
+  (jet) transverse momenta from 150 GeV (100 GeV) to 2 TeV. The tree-level plus 
+  parton-shower predictions from Sherpa and Pythia as well as the next-to-leading-order 
+  QCD predictions from Sherpa are compared with the measurements. The next-to-leading-order 
+  QCD predictions describe the data adequately in shape and normalisation except for 
+  regions of phase space such as those with high values of the invariant mass or 
+  rapidity separation of the two jets, where the predictions overestimate the data.'
+BibKey: ATLAS:2019iaa
+BibTex: '@article{ATLAS:2019iaa,
+    author = "Aad, Georges and others",
+    collaboration = "ATLAS",
+    title = "{Measurement of isolated-photon plus two-jet production in $pp$ collisions at $\sqrt s=13$ TeV with the ATLAS detector}",
+    eprint = "1912.09866",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CERN-EP-2019-210",
+    doi = "10.1007/JHEP03(2020)179",
+    journal = "JHEP",
+    volume = "03",
+    pages = "179",
+    year = "2020"
+}'
+ReleaseTests:
+ - $A pp-13000-gammajets
+ - $A-2 pp-13000-gamma2jets

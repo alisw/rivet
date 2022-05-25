@@ -1,0 +1,35 @@
+Name: VENUS_1995_I392360
+Year: 1995
+Summary: $\gamma\gamma\to\pi^+\pi^-$ for centre-of-mass energies between 1 and 1.5 GeV
+Experiment: VENUS
+Collider: Tristan
+InspireID: 392360
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ -     J.Phys.Soc.Jap. 64 (1995) 435-447
+RunInfo: gamma gamma to hadrons
+Beams: [gamma, gamma]
+Energies: []
+Description:
+  'Measurement of the differential cross section for $\gamma\gamma\to\pi^+\pi^-$. Both the cross section as a function of the centre-of-mass energy
+   of the photonic collision, and the differential cross section with respect to the pion scattering angle are measured.'
+ValidationInfo:
+  'Herwig 7 gamma gamma to pi+ pi- events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: VENUS:1995scy
+BibTeX: '@article{VENUS:1995scy,
+    author = "Yabuki, Fumiaki and others",
+    collaboration = "VENUS",
+    title = "{Study of pi+ pi- pair production in a two photon process at TRISTAN}",
+    reportNumber = "KEK-PREPRINT-94-183, KUNS-1315, OUHEP-95-1, KOBE-HEP-95-01, OULNS-94-03, HUPD-9501, TMU-HEP-95-10",
+    doi = "10.1143/JPSJ.64.435",
+    journal = "J. Phys. Soc. Jap.",
+    volume = "64",
+    pages = "435--447",
+    year = "1995"
+}
+'

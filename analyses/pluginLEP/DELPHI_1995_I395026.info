@@ -1,0 +1,31 @@
+Name: DELPHI_1995_I395026
+Year: 1995
+Summary: Production of $B^*$ mesons at LEP1
+Experiment: DELPHI
+Collider: LEP
+InspireID: 395026
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Z.Phys. C68 (1995) 353-362
+RunInfo: e+e- to hadrons
+NeedCrossSection: no
+Beams: [e-, e+]
+Energies: 91.2
+Description:
+'Spectrum for the production of $B^*$ mesons at LEP1. The polarization and ratio of vector to pseudoscalar
+$B$ meson production is also measured.'
+Keywords: []
+BibKey: Abreu:1995ky
+BibTeX: '@article{Abreu:1995ky,
+      author         = "Abreu, P. and others",
+      title          = "{B* production in Z decays}",
+      collaboration  = "DELPHI",
+      journal        = "Z. Phys.",
+      volume         = "C68",
+      year           = "1995",
+      pages          = "353-362",
+      reportNumber   = "CERN-PPE-95-53, CERN-PPE-95-053",
+      SLACcitation   = "%%CITATION = ZEPYA,C68,353;%%"
+}'

@@ -1,0 +1,15 @@
+Name: MC_ZKTSPLITTINGS
+Summary: Monte Carlo validation observables for $Z[\ell^+ \, \ell^-]$ + jets production
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Frank Siegert <frank.siegert@cern.ch>
+ - Christian Gutschow <chris.g@cern.ch>
+References:
+RunInfo:
+  $\ell^+ \ell^-$ + jets analysis. Needs mass cut on lepton pair to avoid
+  photon singularity, e.g. a min range of $66 < m_{ll} < 116$ GeV
+PtCuts: [0]
+Description:
+  Monte Carlo validation observables for $Z[\ell^+ \, \ell^-]$ + jets production
+NeedCrossSection: yes

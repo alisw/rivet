@@ -1,0 +1,36 @@
+Name: H1_1999_I504022
+Year: 1999
+Summary: Forward pi0 meson production at HERA
+Experiment: H1
+Collider: HERA
+InspireID: 504022
+Status: VALIDATED
+Reentrant: True
+Authors:
+ - Keila Moral Figueroa <keila.moral.figueroa@desy.de>
+ - Hannes Jung <hannes.jung@desy.de>
+References:
+- 'Phys.Lett.B462:440-452,1999'
+- 'DOI: 10.1016/S0370-2693(99)00906-5'
+- 'arXiv:hep-ex/9907030'
+RunInfo: '$\pi^0$ production in the forward region detected by H1 in DIS ep scattering events at HERA. Cuts:0.1 $< y <$ 0.6, 2 $< Q^2 <$ 70 $GeV^2$, $\pi^0$ transverse momentum in the hadronic CMS. $p^*_T$ $ > $ 2.5 GeV, 5$^o< \theta < 25^o$, where $\theta$ is the polar angle of the produced $\pi^0$,$x_{\pi^0} > 0.001$ where $ x_{\pi^0} = E_{\pi^0}/ E_{proton}$ and $E_{proton} = 820GeV$ is the proton beam energy. RAPGAP 26.7 configuration parameters: 10^6 events.'
+NeedCrossSection: yes
+Beams: [[p+, e-],[e-,p+]]
+Energies: [[820, 27.5],[27.5,820]]
+Description:
+  'High transverse momentum $\pi^0$ mesons have been measured with the H1 detector at HERA in deep-inelastic ep scattering events at low Bjorken-x, down to $x \approx  4 \cdot 10^{-5}$ .The measurement is performed in a region of small angles with respect to the proton remnant in the laboratory frame of reference, namely the forward region, and corresponds to central rapidity in the centre of mass system of the virtual photon and proton. This region is expected to be particularly sensitive to QCD effects in hadronic final states. Differential cross-sections for inclusive $\pi^0$ meson production are presented as a function of Bjorken-x and the four-momentum transfer $Q^2$, and as a function of transverse momentum and pseudorapidity.'
+Keywords: []
+BibKey: H1:1999iry
+BibTeX: '@article{H1:1999iry,
+    author = "Adloff, C. and others",
+    collaboration = "H1",
+    title = "{Forward pi0 meson production at HERA}",
+    eprint = "hep-ex/9907030",
+    archivePrefix = "arXiv",
+    reportNumber = "DESY-99-094",
+    doi = "10.1016/S0370-2693(99)00906-5",
+    journal = "Phys. Lett. B",
+    volume = "462",
+    pages = "440--452",
+    year = "1999"
+}'

@@ -1,0 +1,34 @@
+Name: CLEOII_1994_I373188
+Year: 1994
+Summary: Hadronic Mass in $\tau^-\to 3\pi^-2\pi^+\pi^0\nu_\tau$
+Experiment: CLEOII
+Collider: CESR
+InspireID: 373188
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 73 (1994) 934-938
+RunInfo: 
+  Tau production, can be any process but original data was in
+  $e^+ e^-$ at the $\Upsilon(4S)$ resonance
+Description:
+  'Measurement of the invariant mass spectrum of the $K^-\eta$ system in $\tau\to 3\pi^-2\pi^+\pi^0\nu_\tau$ measured by CLEO at CESR.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Gibaut:1994ik
+BibTeX: '@article{Gibaut:1994ik,
+      author         = "Gibaut, D. and others",
+      title          = "{Study of the five charged pion decay of the tau lepton}",
+      collaboration  = "CLEO",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "73",
+      year           = "1994",
+      pages          = "934-938",
+      doi            = "10.1103/PhysRevLett.73.934",
+      reportNumber   = "CLNS-94-1284, CLEO-94-12",
+      SLACcitation   = "%%CITATION = PRLTA,73,934;%%"
+}'

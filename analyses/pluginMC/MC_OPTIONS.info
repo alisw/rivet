@@ -1,0 +1,15 @@
+Name: MC_OPTIONS
+Status: VALIDATED
+Authors:
+ - Christian Bierlich <christian.bierlich@thep.lu.se>
+#RunInfo:
+NeedCrossSection: no
+Options:
+ - foo=#
+ - bar=A,B
+ - baz=*
+#Beams:
+#Energies:
+Description:
+  'Just an example of the options system in action.'
+Keywords: []

@@ -1,0 +1,40 @@
+Name: ARGUS_1992_I319102
+Year: 1992
+Summary: Measurement of $R$ at 9.36 GeV and charged particle multiplicities in continuum and at the $\Upsilon(4S)$
+Experiment: ARGUS
+Collider: DORIS
+InspireID: 319102
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Z.Phys. C54 (1992) 13-20, 1992 
+RunInfo: 
+  e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+  Beam energy must be specified as analysis option "ENERGY" when rivet-merging samples.
+NeedCrossSection: yes
+Beams: [e-, e+]
+Options:
+ - ENERGY=*
+Description:
+  'Measurement of $R$ at 9.36 GeV and charged particle multiplicities in continuum and at the $\Upsilon(4S)$.
+   The individual hadronic and muonic cross sections are also outputted to the yoda file
+   so that ratio $R$ can be recalculated if runs are combined.
+   Beam energy must be specified as analysis option "ENERGY" when rivet-merging samples.'
+Keywords: []
+BibKey: Albrecht:1991vp
+BibTeX: '@article{Albrecht:1991vp,
+      author         = "Albrecht, H. and others",
+      title          = "{Measurement of R and determination of the charged
+                        particle multiplicity in e+ e- annihilation at s**(1/2)
+                        around 10-GeV}",
+      collaboration  = "ARGUS",
+      journal        = "Z. Phys.",
+      volume         = "C54",
+      year           = "1992",
+      pages          = "13-20",
+      doi            = "10.1007/BF01881704",
+      reportNumber   = "DESY-91-092",
+      SLACcitation   = "%%CITATION = ZEPYA,C54,13;%%"
+}'

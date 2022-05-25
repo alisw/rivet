@@ -1,0 +1,38 @@
+Name: H1_1996_I421105
+Year: 1996
+Summary: Inclusive D0 and D*+- production in deep inelastic e p scattering at HERA
+Experiment: H1
+Collider: HERA
+InspireID: 421105
+Status: VALIDATED
+Reentrant: True
+Authors:
+ - Muhammad Ibrahim Abdulhamid <Muhammad.Ibrahim@science.tanta.edu.eg>
+ - Hannes Jung <hannes.jung@desy.de>
+References:
+ - 'Z.Phys.C 72 (1996) 593'
+ - 'doi:10.1007/s002880050281,10.1007/BF02909190'
+ - 'arXiv:hep-ex/9607012'
+ - 'DESY-96-138'
+RunInfo: 'Charm production in DIS with Q2> 10 and 0.01 < y < 0.7' 
+Beams: [[e-, p+],[p+,e-]]
+Energies: [[27.6,820],[820,27.6]]
+Description:
+  'First results on inclusive D0 and D* production in deep inelastic ep scattering are reported using data collected by the H1 experiment at HERA in 1994. '
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: H1:1996naa
+BibTeX: '@article{H1:1996naa,
+    author = "Adloff, C. and others",
+    collaboration = "H1",
+    title = "{Inclusive D0 and D*+- production in deep inelastic e p scattering at HERA}",
+    eprint = "hep-ex/9607012",
+    archivePrefix = "arXiv",
+    reportNumber = "DESY-96-138",
+    doi = "10.1007/s002880050281",
+    journal = "Z. Phys. C",
+    volume = "72",
+    pages = "593",
+    year = "1996"
+}'

@@ -1,0 +1,56 @@
+Name: H1_2009_I810046
+Year: 2009
+Summary: Strangeness Production at low $Q^2$ in Deep-Inelastic $ep$ Scattering at HERA
+Experiment: H1
+Collider: HERA
+InspireID: 810046
+Status: VALIDATED
+Authors:
+ - Andrii Verbytskyi <andrii.verbytskyi@mpp.mpg.de>
+References:
+ - Eur.Phys.J.C 61 (2009) 185-205
+ - doi:10.1140/epjc/s10052-009-0995-1
+ - arXiv:0810.4036 [hep-ex]
+RunInfo:
+  $e^+ p$ deep inelastic scattering with $p$ at 920~GeV,
+  $e^+$ at 27.5 GeV \to $\sqrt{s} = 318~\GeV$
+NumEvents: 1000000
+NeedCrossSection: yes
+Beams: [[p+, e-], [p+, e+]]
+Reentrant: true
+Energies: [318]
+Description:
+  The production of neutral strange hadrons is investigated using deep-inelastic 
+  scattering events measured with the H1 detector at HERA. The measurements are made 
+  in the phase space defined by the negative four-momentum transfer squared of the
+   photon $2 < Q^2 < 100 GeV^2$ and the inelasticity $0.1 < y < 0.6$. The $K_s$ and $\Lambda$ 
+  production cross sections and their ratios are determined. $K_s$ production is compared 
+  to the production of charged particles in the same region of phase space. The $\Lambda$ -
+   anti-$\Lambda$ asymmetry is also measured and found to be consistent with zero. Predictions 
+   of leading order Monte Carlo programs are compared to the data.
+
+Keywords: []
+BibKey: Aaron:2008ck
+BibTeX: '@article{Aaron:2008ck,
+      author         = "Aaron, F. D. and others",
+      title          = "{Strangeness Production at low Q**2 in Deep-Inelastic ep
+                        Scattering at HERA}",
+      collaboration  = "H1",
+      journal        = "Eur. Phys. J.",
+      volume         = "C61",
+      year           = "2009",
+      pages          = "185-205",
+      doi            = "10.1140/epjc/s10052-009-0995-1",
+      eprint         = "0810.4036",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "DESY-08-095",
+      SLACcitation   = "%%CITATION = ARXIV:0810.4036;%%"
+}'
+
+# ToDo: generate some regression inputs 
+# at the correct beam energy, the ones
+# below don't work
+#ReleaseTests:
+# - $A DIS-e+-HighQ2
+# - $A-2 DIS-e+-LowQ2

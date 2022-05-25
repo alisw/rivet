@@ -1,0 +1,31 @@
+Name: DELPHI_1996_I416741
+Year: 1996
+Summary: Spectrum for $f_2^\prime(1525)$ production in hadronic $Z^0$ decays
+Experiment: DELPHI
+Collider: LEP
+InspireID: 416741
+Status: VALIDATED
+Authors:
+ - Peter Richardson <Peter.Richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B379 (1996) 309-318, 1996 
+RunInfo:
+  Hadronic Z decay events generated on the Z pole ($\sqrt{s} = 91.2$ GeV)
+NumEvents: 1000000
+Beams: [e+, e-]
+Energies: [91.2]
+Description: DELPHI results for the spectrum for $f_2^\prime(1525)$ production in hadronic $Z^0$ decays
+BibKey: Abreu:1996wd
+BibTeX: '@article{Abreu:1996wd,
+      author         = "Abreu, P. and others",
+      title          = "{First measurement of f2-prime (1525) production in Z0
+                        hadronic decays}",
+      collaboration  = "DELPHI",
+      journal        = "Phys. Lett.",
+      volume         = "B379",
+      year           = "1996",
+      pages          = "309-318",
+      doi            = "10.1016/0370-2693(96)00557-6",
+      reportNumber   = "CERN-PPE-96-026, CERN-PPE-96-26",
+      SLACcitation   = "%%CITATION = PHLTA,B379,309;%%"
+}'

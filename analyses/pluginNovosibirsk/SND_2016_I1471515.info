@@ -1,0 +1,32 @@
+Name: SND_2016_I1471515
+Year: 2016
+Summary: Cross section for $e^+e^-\to\eta\omega\pi^0$ for energies below 2 GeV
+Experiment: SND
+Collider: 
+InspireID: 1471515
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D94 (2016) no.9, 092002
+RunInfo: e+ e- to hadrons
+NeedCrossSection: yes
+Beams: [e+, e-]
+Description:
+  'Cross section for $e^+e^-\to\eta\omega\pi^0$ for energies below 2 GeV'
+BibKey: Achasov:2016eyg
+BibTeX: '@article{Achasov:2016eyg,
+      author         = "Achasov, M. N. and others",
+      title          = "{Study of the process $e^+e^-\to\omega\eta\pi^0$ in the
+                        energy range $\sqrt{s} &lt;2$ GeV with the SND detector}",
+      journal        = "Phys. Rev.",
+      volume         = "D94",
+      year           = "2016",
+      number         = "3",
+      pages          = "032010",
+      doi            = "10.1103/PhysRevD.94.032010",
+      eprint         = "1606.06481",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1606.06481;%%"
+}'
