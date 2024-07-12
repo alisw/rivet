@@ -13,9 +13,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    E735_1998_S3905616() : Analysis("E735_1998_S3905616") {
-      _sumWTrig = 0;
-    }
+    RIVET_DEFAULT_ANALYSIS_CTOR(E735_1998_S3905616);
 
 
     /// @name Analysis methods
@@ -27,24 +25,25 @@ namespace Rivet {
       declare(ChargedFinalState(), "FS");
 
       // Histo
-      _hist_multiplicity = bookHisto1D(1, 1, 1);
+      book(_hist_multiplicity ,1, 1, 1);
+      book(_sumWTrig, "TMP/sumWtrig");
+
     }
 
 
     void analyze(const Event& event) {
       const bool trigger = apply<TriggerUA5>(event, "Trigger").nsdDecision();
       if (!trigger) vetoEvent;
-      const double weight = event.weight();
-      _sumWTrig += weight;
+      _sumWTrig->fill();
 
       const ChargedFinalState& fs = apply<ChargedFinalState>(event, "FS");
       const size_t numParticles = fs.particles().size();
-      _hist_multiplicity->fill(numParticles, weight);
+      _hist_multiplicity->fill(numParticles);
     }
 
 
     void finalize() {
-      scale(_hist_multiplicity, 1/_sumWTrig);
+      scale(_hist_multiplicity, 1 / *_sumWTrig);
     }
 
     //@}
@@ -52,21 +51,16 @@ namespace Rivet {
 
   private:
 
-    /// @name Weight counter
-    //@{
-    double _sumWTrig;
-    //@}
+    /// Weight counter
+    CounterPtr _sumWTrig;
 
-    /// @name Histograms
-    //@{
+    /// Histograms
     Histo1DPtr _hist_multiplicity;
-    //@}
 
   };
 
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(E735_1998_S3905616);
+  RIVET_DECLARE_ALIASED_PLUGIN(E735_1998_S3905616, E735_1998_I480349);
 
 }

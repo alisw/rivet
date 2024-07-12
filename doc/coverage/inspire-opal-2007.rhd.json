@@ -1,0 +1,53 @@
+{
+    "729387": [
+        "Search for invisibly decaying Higgs bosons with large decay width using the OPAL detector at LEP", 
+        "OPAL", 
+        "10.1140/epjc/s10052-006-0170-x", 
+        "990082", 
+        "hep-ex/0610056", 
+        null, 
+        null, 
+        [
+            "OPAL-PR-417", 
+            "CERN-PH-EP-2006-026"
+        ]
+    ], 
+    "734955": [
+        "Inclusive production of charged hadrons in photon-photon collisions", 
+        "OPAL", 
+        "10.1016/j.physletb.2007.06.001", 
+        "1006145", 
+        "hep-ex/0612045", 
+        "ins734955", 
+        null, 
+        [
+            "CERN-PH-EP-2006-038"
+        ]
+    ], 
+    "757820": [
+        "Bose-Einstein study of position-momentum correlations of charged pions in hadronic Z0 decays", 
+        "OPAL", 
+        "10.1140/epjc/s10052-007-0443-z", 
+        "1050512", 
+        "0708.1122", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2007-025", 
+            "OPAL-PR423"
+        ]
+    ], 
+    "757918": [
+        "Measurement of the e+ e- ---> W+ W- cross section and W decay branching fractions at LEP", 
+        "OPAL", 
+        "10.1140/epjc/s10052-007-0442-0", 
+        "1050573", 
+        "0708.1311", 
+        "ins757918", 
+        null, 
+        [
+            "CERN-PH-EP-2007-027", 
+            "OPAL-PR-424"
+        ]
+    ]
+}

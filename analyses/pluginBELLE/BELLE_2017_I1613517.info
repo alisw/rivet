@@ -1,0 +1,35 @@
+Name: BELLE_2017_I1613517
+Year: 2017
+Summary: Cross Section for $e^+e^-\to D^\pm D^{*\mp}$ and $D^{*+}D^{*-}$ from threshold to 6 GeV
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1613517
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D97 (2018) no.1, 012002
+RunInfo: e+ e- to hadrons
+NeedCrossSection: yes
+Beams: [e-, e+]
+Description:
+  'Measurement of the cross section for  $e^+e^-\to D^\pm D^{*\mp}$ and $D^{*+}D^{*-}$ from threshold to 6 GeV.'
+BibKey: Zhukova:2017pen
+BibTeX: '@article{Zhukova:2017pen,
+      author         = "Zhukova, V. and others",
+      title          = "{Angular analysis of the $e^+ e^- \to D^{(*) \pm} D^{*
+                        \mp}$ process near the open charm threshold using
+                        initial-state radiation}",
+      collaboration  = "Belle",
+      journal        = "Phys. Rev.",
+      volume         = "D97",
+      year           = "2018",
+      number         = "1",
+      pages          = "012002",
+      doi            = "10.1103/PhysRevD.97.012002",
+      eprint         = "1707.09167",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "BELLE-PREPRINT-2017-15, KEK-PREPRINT-2017-16",
+      SLACcitation   = "%%CITATION = ARXIV:1707.09167;%%"
+}'

@@ -1,0 +1,46 @@
+{
+    "23570": [
+        "Study of Multi - Hadron Events With Isolated Leptons in $e^+ e^-$ Annihilation at $50\\le \\sqrt{s} \\le 55$-{GeV}", 
+        "VENUS", 
+        "10.1016/0370-2693(88)90590-4", 
+        null, 
+        null, 
+        "ins23570", 
+        null, 
+        [
+            "KEK-Preprint-87-165", 
+            "HUPD-8803", 
+            "KOBE-HEP-88-01", 
+            "KUNS-914", 
+            "OULNS-87-08", 
+            "TMUP-HEL-88-20"
+        ]
+    ], 
+    "264345": [
+        "A Search for Excited Electrons in the $e^+ e^-$ Reactions Up to the $\\sqrt{s}$ of 56-{GeV}", 
+        "Venus", 
+        "10.1016/0370-2693(88)91784-4", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-88-33", 
+            "HUPD-8808", 
+            "KOBE-HEP-88-02", 
+            "KUNS-937", 
+            "OULNS-88-04", 
+            "TMUP-HEL-88-22"
+        ]
+    ], 
+    "269112": [
+        "Search for New Charged Leptons Decaying Into Massive Neutrinos and New Stable Charged Leptons in $e^+ e^-$ Collisions", 
+        "VENUS", 
+        "10.1103/PhysRevLett.61.915", 
+        null, 
+        null, 
+        "ins269112", 
+        null, 
+        []
+    ]
+}

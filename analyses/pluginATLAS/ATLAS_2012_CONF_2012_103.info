@@ -4,6 +4,7 @@ Summary: High jet-multiplicity + MET squark and gluino search
 Experiment: ATLAS
 Collider: LHC
 Status: OBSOLETE
+Reentrant: true
 Authors:
  - Peter Richardson <peter.richardson@durham.ac.uk>
 References:

@@ -1,6 +1,5 @@
 // -*- C++ -*-
 #include "Rivet/Analysis.hh"
-#include "Rivet/Tools/BinnedHistogram.hh"
 #include "Rivet/Projections/FinalState.hh"
 #include "Rivet/Projections/ChargedFinalState.hh"
 #include "Rivet/Projections/VisibleFinalState.hh"
@@ -57,33 +56,33 @@ namespace Rivet {
       declare(ChargedFinalState(Cuts::abseta < 3),"cfs");
 
       /// Book histograms
-      _etmiss_HT_7j55 = bookHisto1D("etmiss_HT_7j55", 8, 0., 16.);
-      _etmiss_HT_8j55 = bookHisto1D("etmiss_HT_8j55", 8, 0., 16.);
-      _etmiss_HT_9j55 = bookHisto1D("etmiss_HT_9j55", 8, 0., 16.);
-      _etmiss_HT_6j80 = bookHisto1D("etmiss_HT_6j80", 8, 0., 16.);
-      _etmiss_HT_7j80 = bookHisto1D("etmiss_HT_7j80", 8, 0., 16.);
-      _etmiss_HT_8j80 = bookHisto1D("etmiss_HT_8j80", 8, 0., 16.);
+      book(_etmiss_HT_7j55 ,"etmiss_HT_7j55", 8, 0., 16.);
+      book(_etmiss_HT_8j55 ,"etmiss_HT_8j55", 8, 0., 16.);
+      book(_etmiss_HT_9j55 ,"etmiss_HT_9j55", 8, 0., 16.);
+      book(_etmiss_HT_6j80 ,"etmiss_HT_6j80", 8, 0., 16.);
+      book(_etmiss_HT_7j80 ,"etmiss_HT_7j80", 8, 0., 16.);
+      book(_etmiss_HT_8j80 ,"etmiss_HT_8j80", 8, 0., 16.);
 
-      _hist_njet55 = bookHisto1D("hist_njet55", 11, 2.5, 13.5);
-      _hist_njet80 = bookHisto1D("hist_njet80", 11, 2.5, 13.5);
+      book(_hist_njet55 ,"hist_njet55", 11, 2.5, 13.5);
+      book(_hist_njet80 ,"hist_njet80", 11, 2.5, 13.5);
 
-      _count_7j55 = bookHisto1D("count_7j55", 1, 0., 1.);
-      _count_8j55 = bookHisto1D("count_8j55", 1, 0., 1.);
-      _count_9j55 = bookHisto1D("count_9j55", 1, 0., 1.);
-      _count_6j80 = bookHisto1D("count_6j80", 1, 0., 1.);
-      _count_7j80 = bookHisto1D("count_7j80", 1, 0., 1.);
-      _count_8j80 = bookHisto1D("count_8j80", 1, 0., 1.);
+      book(_count_7j55 ,"count_7j55", 1, 0., 1.);
+      book(_count_8j55 ,"count_8j55", 1, 0., 1.);
+      book(_count_9j55 ,"count_9j55", 1, 0., 1.);
+      book(_count_6j80 ,"count_6j80", 1, 0., 1.);
+      book(_count_7j80 ,"count_7j80", 1, 0., 1.);
+      book(_count_8j80 ,"count_8j80", 1, 0., 1.);
 
     }
 
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-      const double weight = event.weight();
+      const double weight = 1.0;
 
       // get the jet candidates
       Jets cand_jets;
-      foreach (const Jet& jet,
+      for (const Jet& jet :
                apply<FastJets>(event, "AntiKtJets04").jetsByPt(20.0*GeV) ) {
         if ( fabs( jet.eta() ) < 2.8 ) {
           cand_jets.push_back(jet);
@@ -94,10 +93,10 @@ namespace Rivet {
       Particles cand_mu;
       Particles chg_tracks =
         apply<ChargedFinalState>(event, "cfs").particles();
-      foreach ( const Particle& mu,
+      for ( const Particle& mu :
                 apply<IdentifiedFinalState>(event, "muons").particlesByPt() ) {
         double pTinCone = -mu.pT();
-        foreach ( const Particle& track, chg_tracks ) {
+        for ( const Particle& track : chg_tracks ) {
           if ( deltaR(mu.momentum(),track.momentum()) <= 0.2 )
             pTinCone += track.pT();
         }
@@ -111,11 +110,11 @@ namespace Rivet {
 
       // resolve jet/lepton ambiguity
       Jets recon_jets;
-      foreach ( const Jet& jet, cand_jets ) {
+      for ( const Jet& jet : cand_jets ) {
         // candidates after |eta| < 2.8
         if ( fabs( jet.eta() ) >= 2.8 ) continue;
         bool away_from_e = true;
-        foreach ( const Particle& e, cand_e ) {
+        for ( const Particle& e : cand_e ) {
           if ( deltaR(e.momentum(),jet.momentum()) <= 0.2 ) {
             away_from_e = false;
             break;
@@ -126,9 +125,9 @@ namespace Rivet {
 
       // only keep electrons more than R=0.4 from jets
       Particles recon_e;
-      foreach ( const Particle& e, cand_e ) {
+      for ( const Particle& e : cand_e ) {
         bool away = true;
-        foreach ( const Jet& jet, recon_jets ) {
+        for ( const Jet& jet : recon_jets ) {
           if ( deltaR(e.momentum(),jet.momentum()) < 0.4 ) {
             away = false;
             break;
@@ -140,9 +139,9 @@ namespace Rivet {
 
       // only keep muons more than R=0.4 from jets
       Particles recon_mu;
-      foreach ( const Particle& mu, cand_mu ) {
+      for ( const Particle& mu : cand_mu ) {
         bool away = true;
-        foreach ( const Jet& jet, recon_jets ) {
+        for ( const Jet& jet : recon_jets ) {
           if ( deltaR(mu.momentum(),jet.momentum()) < 0.4 ) {
             away = false;
             break;
@@ -156,7 +155,7 @@ namespace Rivet {
       Particles vfs_particles =
         apply<VisibleFinalState>(event, "vfs").particles();
       FourMomentum pTmiss;
-      foreach ( const Particle& p, vfs_particles ) {
+      for ( const Particle& p  : vfs_particles ) {
         pTmiss -= p.momentum();
       }
       double eTmiss = pTmiss.pT();
@@ -171,7 +170,7 @@ namespace Rivet {
 
       // calculate H_T
       double HT=0;
-      foreach ( const Jet& jet, recon_jets ) {
+      for ( const Jet& jet : recon_jets ) {
         if ( jet.pT() > 40 * GeV )
           HT += jet.pT() ;
       }
@@ -278,6 +277,6 @@ namespace Rivet {
   };
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2012_I1117704);
+  RIVET_DECLARE_PLUGIN(ATLAS_2012_I1117704);
 
 }

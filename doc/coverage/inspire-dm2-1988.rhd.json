@@ -1,0 +1,75 @@
+{
+    "251040": [
+        "First Observation of the $\\eta_c \\to \\rho^0 \\rho^0$ Decay", 
+        "DM2", 
+        "10.1016/0370-2693(88)91139-2", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "LAL-87-34"
+        ]
+    ], 
+    "255496": [
+        "Measurement of the Radiative $J/\\psi$ Decays in $K \\bar{K}$ States", 
+        "DM2", 
+        "10.1103/PhysRevLett.60.2238", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "LAL-87-25"
+        ]
+    ], 
+    "262690": [
+        "Study of the Reaction $e^+ e^- \\to K^+ K^-$ in the Energy Range 1350 $\\le \\sqrt{s} \\le$ 2400-{MeV}", 
+        "DM2", 
+        "10.1007/BF01560386", 
+        null, 
+        null, 
+        "ins262690", 
+        null, 
+        [
+            "LAL-88-01"
+        ]
+    ], 
+    "262692": [
+        "Study of Three-body Hadronic $J/\\psi$ Decays", 
+        "DM2", 
+        "10.1103/PhysRevD.38.2706", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "LAL-88-04", 
+            "PCCF-RI-88-03"
+        ]
+    ], 
+    "264143": [
+        "Looking at {CP} Invariance and Quantum Mechanics in $J/\\psi \\to \\Lambda \\bar{\\Lambda}$ Decay", 
+        "DM2", 
+        "10.1016/0370-2693(88)91809-6", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "LAL-88-13"
+        ]
+    ], 
+    "264144": [
+        "Measurement of the Reaction $e^+ e^- \\to \\eta \\pi^+ \\pi^-$ in the Center-of-mass Energy Interval 1350-{MeV} to 2400-{MeV}", 
+        "DM2", 
+        "10.1016/0370-2693(88)91250-6", 
+        null, 
+        null, 
+        "ins264144", 
+        null, 
+        [
+            "LAL-88-11"
+        ]
+    ]
+}

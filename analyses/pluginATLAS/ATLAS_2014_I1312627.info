@@ -5,9 +5,11 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1312627
 Status: VALIDATED
+Reentrant: false
 Authors:
  - Christian Gutschow <chris.g@cern.ch>
 References:
+ - ATLAS-STDM-2012-25
  - Eur.Phys.J. C74 (2014) 3168
  - doi:10.1140/epjc/s10052-014-3168-9
  - arXiv:1408.6510 [hep-ex]
@@ -17,7 +19,8 @@ NumEvents: 1000000
 Beams: [p+, p+]
 Energies: [7000]
 PtCuts: [25,30]
-NeedCrossSection: True
+Options:
+- LMODE=EL,MU
 Description:
   'Measurements of the ratio of the production cross sections for $W$ and $Z$ bosons in association with jets in proton-proton
   collisions at $\sqrt{s} = 7$~TeV with the ATLAS experiment at the Large Hadron Collider. The measurement is based on the
@@ -50,3 +53,9 @@ BibTeX: '@article{Aad:2014rta,
       reportNumber   = "CERN-PH-EP-2014-200",
       SLACcitation   = "%%CITATION = ARXIV:1408.6510;%%",
 }'
+
+ReleaseTests:
+ - $A LHC-W-Z-e
+ - $A-2 LHC-W-Z-e :LMODE=EL
+ - $A-3 LHC-W-Z-mu :LMODE=MU
+

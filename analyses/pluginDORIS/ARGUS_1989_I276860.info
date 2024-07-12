@@ -1,0 +1,36 @@
+Name: ARGUS_1989_I276860
+Year: 1989
+Summary: Spectra for $\pi^\pm$, $K^\pm$, $K^0_S$ and $\bar{p}$ in $e^+e^-$ collisions at the $\Upsilon(1S)$ and continuum
+Experiment: ARGUS
+Collider: DORIS
+InspireID: 276860
+Status: VALIDATED
+Authors:
+ - Peter Richardson <Peter.Richardson@durham.ac.uk>
+References:
+ - Z.Phys. C44 (1989) 547, 1989
+RunInfo:
+  $e^+ e^-$ analysis near the $\Upsilon$ resonances
+NeedCrossSection: yes
+Beams: [e-, e+]
+Energies: [9.46,9.98]
+Description:
+  'Spectra for the production of  $\pi^\pm$, $K^\pm$, $K^0_S$ and $\bar{p}$ in $e^+e^-$ collisions.
+             Data are taken on the $\Upsilon(1S)$
+	     and in the nearby continuum.'
+Keywords: []
+BibKey: Albrecht:1989wd
+BibTeX: '@article{Albrecht:1989wd,
+      author         = "Albrecht, H. and others",
+      title          = "{Inclusive Production of Charged Pions, Charged and
+                        Neutral Kaons and Anti-protons in $e^+ e^-$ Annihilation
+                        at 10-{GeV} and in Direct $\Upsilon$ Decays}",
+      collaboration  = "ARGUS",
+      journal        = "Z. Phys.",
+      volume         = "C44",
+      year           = "1989",
+      pages          = "547",
+      doi            = "10.1007/BF01549077",
+      reportNumber   = "DESY-89-014",
+      SLACcitation   = "%%CITATION = ZEPYA,C44,547;%%"
+}'

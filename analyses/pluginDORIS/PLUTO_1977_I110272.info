@@ -1,0 +1,33 @@
+Name: PLUTO_1977_I110272
+Year: 1977
+Summary: Measurement of $R$ for energies between 3.1 and 4.8 GeV
+Experiment: PLUTO
+Collider: DORIS
+InspireID: 110272
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B66 (1977) 395-400, 1977
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: yes
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$ in $e^+e^-$ collisions by PLUTO for energies between 3.1 and 4.8 GeV.
+   The individual hadronic and muonic cross sections are also outputted to the yoda file
+   so that ratio $R$ can be recalculated if runs are combined.'
+Keywords: []
+BibKey: Burmester:1976mn
+BibTeX: '@article{Burmester:1976mn,
+      author         = "Burmester, J. and others",
+      title          = "{The Total Hadronic Cross-Section for e+ e- Annihilation
+                        Between 3.1-GeV and 4.8-GeV Center-Of-Mass Energy}",
+      collaboration  = "PLUTO",
+      journal        = "Phys. Lett.",
+      volume         = "66B",
+      year           = "1977",
+      pages          = "395-400",
+      doi            = "10.1016/0370-2693(77)90023-5",
+      reportNumber   = "DESY-76-53",
+      SLACcitation   = "%%CITATION = PHLTA,66B,395;%%"
+}'

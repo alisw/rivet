@@ -1,0 +1,34 @@
+Name: CMD3_2017_I1606078
+Year: 2017
+Summary: Cross section for $e^+e^-\to\pi^+\pi^-\pi^0\eta$ for energies below 2 GeV
+Experiment: CMD3
+Collider: VEPP-2M
+InspireID: 1606078
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - arXiv:1706.06267
+RunInfo: e+ e- to hadrons 
+NeedCrossSection: yes
+Beams: [e+, e-]
+Description:
+  'Measurement of the cross section for $e^+e^-\to\pi^+\pi^-\pi^0\eta$, and the resonant sub-processes $\omega\eta$and $a_0(980)\rho$, for energies below 2 GeV by the CMD3 experiment'
+Keywords: []
+BibKey: CMD-3:2017tgb
+BibTeX: '@article{CMD-3:2017tgb,
+      author         = "Akhmetshin, R. R. and others",
+      title          = "{Study of the process $e^+e^-\to \pi^+\pi^-\pi^0\eta$ in
+                        the c.m. energy range 1394-2005 MeV with the CMD-3
+                        detector}",
+      collaboration  = "CMD-3",
+      journal        = "Phys. Lett.",
+      volume         = "B773",
+      year           = "2017",
+      pages          = "150-158",
+      doi            = "10.1016/j.physletb.2017.08.019",
+      eprint         = "1706.06267",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1706.06267;%%"
+}'

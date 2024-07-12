@@ -5,6 +5,7 @@ Experiment: CMS
 Collider: LHC
 InspireID: 1223519
 Status: UNVALIDATED
+Reentrant: true
 Authors:
  - Andy Buckley <andy.buckley@cern.ch>
 References:
@@ -16,7 +17,7 @@ Beams: [p+, p+]
 Energies: [8000]
 Description:
   'An inclusive search for supersymmetric processes that produce final states with jets
-   and missing transverse energy in $pp$ collisions at 8\;\TeV. The data sample corresponds
+   and missing transverse energy in $pp$ collisions at 8~\TeV. The data sample corresponds
    to an integrated luminosity of 11.7/fb collected by the CMS experiment. In this search,
    a dimensionless kinematic variable, $\alpha_T$, is used to discriminate between events
    with genuine and misreconstructed missing transverse energy. The search was based on

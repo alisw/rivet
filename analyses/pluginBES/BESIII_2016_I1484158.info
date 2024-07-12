@@ -1,0 +1,37 @@
+Name: BESIII_2016_I1484158
+Year: 2016
+Summary: $\eta\pi^0$ mass distribution in $J/\psi\to\gamma\eta\pi^0$
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1484158
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 94 (2016) 7, 072005
+RunInfo: Any process producing J/psi, originally e+e-
+Description:
+  'Measurement of the $\eta\pi^0$ mass distribution in
+   $J/\psi\to\gamma\eta\pi^0$ decays. The data were read from the plots in the paper and the backgrounds given subtracted, although acceptance/efficiency may not be corrected.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2016gkg
+BibTeX: '@article{BESIII:2016gkg,
+    author = "Ablikim, M. and others",
+    collaboration = "BESIII",
+    title = "{Observation of $J/\psi\to \gamma\eta\pi^{0}$}",
+    eprint = "1608.07393",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevD.94.072005",
+    journal = "Phys. Rev. D",
+    volume = "94",
+    number = "7",
+    pages = "072005",
+    year = "2016"
+}
+'

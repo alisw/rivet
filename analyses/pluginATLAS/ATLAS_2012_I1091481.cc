@@ -24,21 +24,21 @@ namespace Rivet {
 
       // collision energy
       int isqrts = -1;
-      if (fuzzyEquals(sqrtS(), 900*GeV)) isqrts = 2;
-      if (fuzzyEquals(sqrtS(),   7*TeV)) isqrts = 1;
+      if (isCompatibleWithSqrtS(900))  isqrts = 2;
+      if (isCompatibleWithSqrtS(7000)) isqrts = 1;
       assert(isqrts > 0);
 
-      _sE_10_100   = bookHisto1D(isqrts, 1, 1);
-      _sE_1_100    = bookHisto1D(isqrts, 1, 2);
-      _sE_10_500   = bookHisto1D(isqrts, 1, 3);
+      book(_sE_10_100   ,isqrts, 1, 1);
+      book(_sE_1_100    ,isqrts, 1, 2);
+      book(_sE_10_500   ,isqrts, 1, 3);
 
-      _sEta_10_100 = bookHisto1D(isqrts, 2, 1);
-      _sEta_1_100  = bookHisto1D(isqrts, 2, 2);
-      _sEta_10_500 = bookHisto1D(isqrts, 2, 3);
+      book(_sEta_10_100 ,isqrts, 2, 1);
+      book(_sEta_1_100  ,isqrts, 2, 2);
+      book(_sEta_10_500 ,isqrts, 2, 3);
 
-      norm_inclusive = 0.;
-      norm_lowPt = 0.;
-      norm_pt500 = 0.;
+      book(norm_inclusive, "norm_inclusive");
+      book(norm_lowPt, "norm_lowPt");
+      book(norm_pt500, "norm_pt500");
     }
 
 
@@ -56,7 +56,7 @@ namespace Rivet {
     //
     double getSeta(const Particles& part, double xi) {
       std::complex<double> c_eta (0.0, 0.0);
-      foreach (const Particle& p, part) {
+      for (const Particle& p : part) {
         double eta = p.eta();
         double phi = p.phi();
         double arg = xi*eta-phi;
@@ -87,7 +87,7 @@ namespace Rivet {
 
 
     // Convenient fill function
-    void fillS(Histo1DPtr h, const Particles& part, double weight, bool SE=true) {
+    void fillS(Histo1DPtr h, const Particles& part, bool SE=true) {
       // Loop over bins, take bin centers as parameter values
       for(size_t i=0; i < h->numBins(); ++i) {
         double x = h->bin(i).xMid();
@@ -95,7 +95,7 @@ namespace Rivet {
         double y;
         if(SE)  y = getSE(part,   x);
         else    y = getSeta(part, x);
-        h->fill(x, y * width * weight);
+        h->fill(x, y * width);
         // Histo1D objects will be converted to Scatter2D objects for plotting
         // As part of this conversion, Rivet will divide by bin width
         // However, we want the (x,y) of the Scatter2D to be the (binCenter, sumW) of
@@ -110,8 +110,6 @@ namespace Rivet {
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-      double weight = event.weight();
-
       // Charged fs
       const ChargedFinalState& cfs100  = apply<ChargedFinalState>(event, "CFS100");
       const Particles          part100 = cfs100.particles(cmpMomByEta);
@@ -124,38 +122,36 @@ namespace Rivet {
       if (ptmax > 10.0) vetoEvent;
 
       // Fill the pt>100, pTmax<10 GeV histos
-      fillS(_sE_10_100, part100, weight, true);
-      fillS(_sEta_10_100, part100, weight, false);
-      norm_inclusive += weight;
+      fillS(_sE_10_100, part100, true);
+      fillS(_sEta_10_100, part100, false);
+      norm_inclusive->fill();
 
       // Fill the pt>100, pTmax<1 GeV histos
       if (ptmax < 1.0) {
-        fillS(_sE_1_100,   part100, weight, true);
-        fillS(_sEta_1_100, part100, weight, false);
-        norm_lowPt += weight;
+        fillS(_sE_1_100,   part100, true);
+        fillS(_sEta_1_100, part100, false);
+        norm_lowPt->fill();
       }
 
       // Fill the pt>500, pTmax<10 GeV histos
       if (part500.size() > 10) {
-        fillS(_sE_10_500,   part500, weight, true );
-        fillS(_sEta_10_500, part500, weight, false);
-        norm_pt500 += weight;
+        fillS(_sE_10_500,   part500, true );
+        fillS(_sEta_10_500, part500, false);
+        norm_pt500->fill();
       }
     }
 
     /// Normalise histograms etc., after the run
     void finalize() {
       // The scaling takes the multiple fills per event into account
-      scale(_sE_10_100, 1.0/norm_inclusive);
-      scale(_sE_1_100 , 1.0/norm_lowPt);
-      scale(_sE_10_500, 1.0/norm_pt500);
+      scale(_sE_10_100, 1.0/ *norm_inclusive);
+      scale(_sE_1_100 , 1.0/ *norm_lowPt);
+      scale(_sE_10_500, 1.0/ *norm_pt500);
 
-      scale(_sEta_10_100, 1.0/norm_inclusive);
-      scale(_sEta_1_100 , 1.0/norm_lowPt);
-      scale(_sEta_10_500, 1.0/norm_pt500);
+      scale(_sEta_10_100, 1.0/ *norm_inclusive);
+      scale(_sEta_1_100 , 1.0/ *norm_lowPt);
+      scale(_sEta_10_500, 1.0/ *norm_pt500);
     }
-
-    //@}
 
 
   private:
@@ -168,12 +164,12 @@ namespace Rivet {
     Histo1DPtr _sEta_1_100;
     Histo1DPtr _sEta_10_500;
 
-    double norm_inclusive;
-    double norm_lowPt;
-    double norm_pt500;
+    CounterPtr norm_inclusive;
+    CounterPtr norm_lowPt;
+    CounterPtr norm_pt500;
   };
 
 
-  DECLARE_RIVET_PLUGIN(ATLAS_2012_I1091481);
+  RIVET_DECLARE_PLUGIN(ATLAS_2012_I1091481);
 
 }

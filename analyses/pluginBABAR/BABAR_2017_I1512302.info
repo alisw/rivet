@@ -1,0 +1,37 @@
+Name: BABAR_2017_I1512302
+Year: 2017
+Summary: Dalitz plot analysis of $J/\psi\to\pi^+\pi^-\pi^0$, $K^+K^-\pi^0$ and $K^0_SK^\pm\pi^\mp$
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 1512302
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 95 (2017) 7, 072007
+RunInfo: Any process producing J/psi, originally e+e-
+Description:
+  'Measurement of the mass distributions in the decays $J/\psi\to\pi^+\pi^-\pi^0$, $K^+K^-\pi^0$ and $K^0_SK^\pm\pi^\mp$ by BaBar. The data were read from the plots in the paper and therefore for some points the error bars are the size of the point. Also the sideband background from the plots has been subtracted. It is also not clear that any resolution effects have been unfolded.'
+ValidationInfo:
+  'Herwig7 events uing the model in the paper'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BaBar:2017dwm
+BibTeX: '@article{BaBar:2017dwm,
+    author = "Lees, J. P. and others",
+    collaboration = "BaBar",
+    title = "{Dalitz plot analyses of $J/\psi \to \pi^+ \pi^- \pi^0$, $J/\psi \to K^+ K^- \pi^0$, and $J/\psi \to K^0_S K^{\pm} \pi^{\mp}$ produced via $e^+ e^-$ annihilation with initial-state radiation}",
+    eprint = "1702.01551",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BABAR-PUB-16-008, SLAC-PUB-16920",
+    doi = "10.1103/PhysRevD.95.072007",
+    journal = "Phys. Rev. D",
+    volume = "95",
+    number = "7",
+    pages = "072007",
+    year = "2017"
+}
+'

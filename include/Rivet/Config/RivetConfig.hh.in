@@ -17,5 +17,16 @@
 /* Define to the version of this package. */
 #undef RIVET_VERSION
 
+/* Define to the version of this package as a comparable integer. */
+#undef RIVET_VERSION_CODE
+
+/* Define if version 3 of HepMC is used. */
+#undef RIVET_ENABLE_HEPMC_3
+
+/* Define if version 2.06.10 of HepMC is used. */
+#undef RIVET_ENABLE_HEPMC_20610
+
+/* Define if Rivet supports in-memory merging of AnalysisHandlers. */
+#undef RIVET_SUPPORTS_MERGING_IN_MEMORY
 
 #endif

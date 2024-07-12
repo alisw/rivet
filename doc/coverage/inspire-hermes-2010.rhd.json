@@ -1,0 +1,98 @@
+{
+    "823107": [
+        "Transverse momentum broadening of hadrons produced in semi-inclusive deep-inelastic scattering on nuclei", 
+        "HERMES", 
+        "10.1016/j.physletb.2010.01.020", 
+        null, 
+        "0906.2478", 
+        null, 
+        null, 
+        [
+            "DESY-09-082"
+        ]
+    ], 
+    "825794": [
+        "Single-spin azimuthal asymmetry in exclusive electroproduction of pi+ mesons on transversely polarized protons", 
+        "HERMES", 
+        "10.1016/j.physletb.2009.11.039", 
+        null, 
+        "0907.2596", 
+        null, 
+        null, 
+        [
+            "DESY-09-106"
+        ]
+    ], 
+    "827377": [
+        "Search for a Two-Photon Exchange Contribution to Inclusive Deep-Inelastic Scattering", 
+        "HERMES", 
+        "10.1016/j.physletb.2009.11.041", 
+        null, 
+        "0907.5369", 
+        null, 
+        null, 
+        [
+            "DESY-09-117"
+        ]
+    ], 
+    "835694": [
+        "Nuclear-mass dependence of azimuthal beam-helicity and beam-charge asymmetries in deeply virtual Compton scattering", 
+        "HERMES", 
+        "10.1103/PhysRevC.81.035202", 
+        null, 
+        "0911.0091", 
+        null, 
+        null, 
+        [
+            "DESY-09-190"
+        ]
+    ], 
+    "835697": [
+        "Measurement of azimuthal asymmetries associated with deeply virtual Compton scattering on an unpolarized deuterium target", 
+        "HERMES", 
+        "10.1016/j.nuclphysb.2009.12.004", 
+        null, 
+        "0911.0095", 
+        null, 
+        null, 
+        [
+            "DESY-09-189"
+        ]
+    ], 
+    "846228": [
+        "Leading-Order Determination of the Gluon Polarization from high-p(T) Hadron Electroproduction", 
+        "HERMES", 
+        "10.1007/JHEP08(2010)130", 
+        null, 
+        "1002.3921", 
+        null, 
+        null, 
+        [
+            "DESY-10-021"
+        ]
+    ], 
+    "850490": [
+        "Exclusive Leptoproduction of Real Photons on a Longitudinally Polarised Hydrogen Target", 
+        "HERMES", 
+        "10.1007/JHEP06(2010)019", 
+        null, 
+        "1004.0177", 
+        null, 
+        null, 
+        [
+            "DESY-10-046"
+        ]
+    ], 
+    "859154": [
+        "Effects of transversity in deep-inelastic scattering by polarized protons", 
+        "HERMES", 
+        "10.1016/j.physletb.2010.08.012", 
+        null, 
+        "1006.4221", 
+        null, 
+        null, 
+        [
+            "DESY-10-087"
+        ]
+    ]
+}

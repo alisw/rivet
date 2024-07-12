@@ -1,0 +1,35 @@
+Name: OPAL_1997_I447188
+Year: 1997
+Summary: Polarization of $\Lambda^0$ baryons at LEP 1
+Experiment: OPAL
+Collider: LEP
+InspireID: 447188
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Eur.Phys.J. C2 (1998) 49-59
+RunInfo: e+e- -> hadrons at 91.2 GeV
+NeedCrossSection: no
+Beams: [e-, e+]
+Energies: 91.2
+Description:
+  'Measurement of the polarization of $\Lambda^0$ baryons at LEP 1. The $\cos\theta$ and $\cos\phi$ distributions are extracted and then the polarization obtained by fitting the resulting distributions.'
+Keywords: []
+BibKey: Ackerstaff:1997nh
+BibTeX: '@article{Ackerstaff:1997nh,
+      author         = "Ackerstaff, K. and others",
+      title          = "{Polarization and forward - backward asymmetry of Lambda
+                        baryons in hadronic Z0 decays}",
+      collaboration  = "OPAL",
+      journal        = "Eur. Phys. J.",
+      volume         = "C2",
+      year           = "1998",
+      pages          = "49-59",
+      doi            = "10.1007/s100520050123",
+      eprint         = "hep-ex/9708027",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-PPE-97-104",
+      SLACcitation   = "%%CITATION = HEP-EX/9708027;%%"
+}'

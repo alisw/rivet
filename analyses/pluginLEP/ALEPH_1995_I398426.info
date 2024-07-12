@@ -1,0 +1,30 @@
+Name: ALEPH_1995_I398426
+Year: 1995
+Summary: Production of $B^*$ mesons at LEP1
+Experiment: ALEPH
+Collider: LEP
+InspireID: 398426
+Status: VALIDATED NOHEPDATA
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Z.Phys. C69 (1996) 393-404
+RunInfo: e+e- to hadrons
+NeedCrossSection: no
+Beams: [e-, e+]
+Energies: 91.2
+Description:
+'The polarization and ratio of vector to pseudoscalar for $B$ meson production at LEP1.'
+BibKey: Buskulic:1995mt
+BibTeX: '@article{Buskulic:1995mt,
+      author         = "Buskulic, D. and others",
+      title          = "{Production of excited beauty states in Z decays}",
+      collaboration  = "ALEPH",
+      journal        = "Z. Phys.",
+      volume         = "C69",
+      year           = "1996",
+      pages          = "393-404",
+      doi            = "10.1007/BF02907419",
+      reportNumber   = "CERN-PPE-95-108",
+      SLACcitation   = "%%CITATION = ZEPYA,C69,393;%%"
+}'

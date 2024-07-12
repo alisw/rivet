@@ -1,0 +1,42 @@
+Name: LHCF_2018_I1518782
+Year: 2018
+Summary: Measurement of forward photon production cross-section in proton-proton collisions at $\mathrm{\sqrt{s}=13\,TeV}$ with the LHCf detector
+Experiment: LHCF
+Collider: LHC
+InspireID: 1518782
+Status: VALIDATED
+Authors:
+ - Eugenio Berti <eugenio.berti@fi.infn.it>
+ - LHCf collaboration <lhcf@isee.nagoya-u.ac.jp>
+References:
+ - Phys.Lett. B780 (2018) 233-239
+ - doi:10.1016/j.physletb.2017.12.050
+ - arXiv:1703.07678 [hep-ex]
+Keywords:
+ - Photons
+ - Forward Physics
+Luminosity_fb: 1.91e-07
+RunInfo: Inclusive differential production cross section of forward photons produced in p-p collisions at $\mathrm{\sqrt{s}=13\,TeV}$. Cross section is expressed as a function of energy in two different pseudorapidity regions, namely $\eta>10.94$ and $8.81<\eta<8.99$. The measurements refer to all photons directly produced in the collisions or resulting from the decay of short life particles ($\mathrm{c \tau<1\,cm}$).
+NeedCrossSection: no
+Beams: [p+, p+]
+Energies: [13000]
+Description:
+  'In this paper, we report the production cross-section of forward photons in the pseudorapidity regions of $\eta>10.94$ and $8.99>\eta>8.81$, measured by the LHCf experiment with proton-proton collisions at $\mathrm{\sqrt{s}=13\,TeV}$. The results from the analysis of $\mathrm{0.191\,nb^{-1}}$ of data obtained in June 2015 are compared to the predictions of several hadronic interaction models that are used in air-shower simulations for ultra-high-energy cosmic rays. Although none of the models agree perfectly with the data, EPOS-LHC shows the best agreement with the experimental data among the models.'
+BibKey: Adriani:2017jys
+BibTeX: '@article{Adriani:2017jys,
+      author         = "Adriani, O. and others",
+      title          = "{Measurement of forward photon production cross-section
+                        in proton–proton collisions at $\sqrt{s}$ = 13 TeV with
+                        the LHCf detector}",
+      collaboration  = "LHCf",
+      journal        = "Phys. Lett.",
+      volume         = "B780",
+      year           = "2018",
+      pages          = "233-239",
+      doi            = "10.1016/j.physletb.2017.12.050",
+      eprint         = "1703.07678",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-EP-2017-051, CERN-EP-DRAFT-LHCf-2017-001",
+      SLACcitation   = "%%CITATION = ARXIV:1703.07678;%%"
+}'

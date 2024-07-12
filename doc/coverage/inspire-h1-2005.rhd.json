@@ -1,0 +1,122 @@
+{
+    "654175": [
+        "Measurement of prompt photon cross sections in photoproduction at HERA", 
+        "H1", 
+        "10.1140/epjc/s2004-02085-x", 
+        "772828", 
+        "hep-ex/0407018", 
+        "ins654175", 
+        null, 
+        [
+            "DESY-04-118"
+        ]
+    ], 
+    "657925": [
+        "Inclusive production of D+, D0, D+(s) and D*+ mesons in deep inelastic scattering at HERA", 
+        "H1", 
+        "10.1140/epjc/s2004-02069-x", 
+        "790846", 
+        "hep-ex/0408149", 
+        "ins657925", 
+        null, 
+        [
+            "DESY-04-156"
+        ]
+    ], 
+    "664364": [
+        "Measurement of F2($c \\bar{c}$) and F2($b \\bar{b}$) at high $Q^{2}$ using the H1 vertex detector at HERA", 
+        "H1", 
+        "10.1140/epjc/s2005-02154-8", 
+        "803371", 
+        "hep-ex/0411046", 
+        "ins664364", 
+        null, 
+        [
+            "DESY-04-209"
+        ]
+    ], 
+    "668595": [
+        "Search for light gravitinos in events with photons and missing transverse momentum at HERA", 
+        "H1", 
+        "10.1016/j.physletb.2005.04.038", 
+        "815344", 
+        "hep-ex/0501030", 
+        null, 
+        null, 
+        [
+            "DESY-04-227"
+        ]
+    ], 
+    "668684": [
+        "A Direct search for stable magnetic monopoles produced in positron-proton collisions at HERA", 
+        "H1", 
+        "10.1140/epjc/s2005-02201-6", 
+        "815804", 
+        "hep-ex/0501039", 
+        null, 
+        null, 
+        [
+            "DESY-04-240"
+        ]
+    ], 
+    "669251": [
+        "Measurement of dijet cross sections in ep interactions with a leading neutron at HERA", 
+        "H1", 
+        "10.1140/epjc/s2005-02227-8", 
+        "819108", 
+        "hep-ex/0501074", 
+        "ins669251", 
+        null, 
+        [
+            "DESY-04-247"
+        ]
+    ], 
+    "676166": [
+        "Measurement of beauty production at HERA using events with muons and jets", 
+        "H1", 
+        "10.1140/epjc/s2005-02267-0", 
+        "820810", 
+        "hep-ex/0502010", 
+        null, 
+        null, 
+        [
+            "DESY-05-004"
+        ]
+    ], 
+    "678876": [
+        "Measurement of charm and beauty photoproduction at HERA using D* mu correlations", 
+        "H1", 
+        "10.1016/j.physletb.2005.06.040", 
+        "828811", 
+        "hep-ex/0503038", 
+        null, 
+        null, 
+        [
+            "DESY-05-040"
+        ]
+    ], 
+    "682849": [
+        "Measurement of deeply virtual compton scattering at HERA", 
+        "H1", 
+        "10.1140/epjc/s2005-02345-3", 
+        "836247", 
+        "hep-ex/0505061", 
+        "ins682849", 
+        null, 
+        [
+            "DESY-05-065"
+        ]
+    ], 
+    "685461": [
+        "Search for leptoquark bosons in ep collisions at HERA", 
+        "H1", 
+        "10.1016/j.physletb.2005.09.048", 
+        "844611", 
+        "hep-ex/0506044", 
+        null, 
+        null, 
+        [
+            "DESY-05-087"
+        ]
+    ]
+}

@@ -1,0 +1,36 @@
+Name: BABAR_2012_I1086537
+Year: 2012
+Summary: Mass distributions in $B^0\to K^+K^-K^0_S$, $B^+\to K^+K^-K^+$ and $B^+\to K^0_SK^0_SK^+$
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 1086537
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 85 (2012) 112010
+RunInfo: Any process producing B0 and B+, originally Upsilon(4S) decays
+Description:
+  'Mass distributions in $B^0\to K^+K^-K^0_S$, $B^+\to K^+K^-K^+$ and $B^+\to K^0_SK^0_SK^+$. The data were read from the plots in the paper.'
+ValidationInfo:
+  'Herwig 7 events using evtGen for B decays.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BaBar:2012iuj
+BibTeX: '@article{BaBar:2012iuj,
+    author = "Lees, J. P. and others",
+    collaboration = "BaBar",
+    title = "{Study of CP violation in Dalitz-plot analyses of B0 ---\ensuremath{>} K+K-K0(S), B+ ---\ensuremath{>} K+K-K+, and B+ ---\ensuremath{>} K0(S)K0(S)K+}",
+    eprint = "1201.5897",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BABAR-PUB-11-024, SLAC-PUB-14858",
+    doi = "10.1103/PhysRevD.85.112010",
+    journal = "Phys. Rev. D",
+    volume = "85",
+    pages = "112010",
+    year = "2012"
+}
+'

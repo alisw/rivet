@@ -1,0 +1,21 @@
+Name: MC_TAU_Decay
+Summary: Analysis of Kinematic distributions for $\tau$ lepton decays
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+RunInfo: Any type of process producing tau leptons
+NeedCrossSection: no
+Description:
+  'Simple analysis of kinematic distributions in tau lepton decays.
+   This includes the mass distribution of the hadronic decay products of the $\tau$ in the 2, 3, 4 and 5 hadron decays.
+   The two hadron modes included are $\tau^-\to\nu_\tau\{\pi^-\pi^0,K^-\pi^0,K^0\pi^-,K^-\eta,K^-K^0\}$.
+   The three hadron modes included are $\tau^-\to\nu_\tau \pi^+\pi^-\pi^-$,
+   $\tau^-\to\nu_\tau \pi^0\pi^0\pi^-$, $\tau^-\to\nu_\tau K^-K^+\pi^-$,
+   $\tau^-\to\nu_\tau K^0\bar{K}^0\pi^-$, $\tau^-\to\nu_\tau K^-K^0\pi^0$,
+   $\tau^-\to\nu_\tau \pi^0-\pi^0K^-$,$\tau^-\to\nu_\tau K^-\pi^-\pi^+$,
+   $\tau^-\to\nu_\tau \pi^-K^0\pi^0$, $\tau^-\to\nu_\tau \pi^-\pi^0\eta$,
+   $\tau^-\to\nu_\tau \pi^-\pi^0\gamma$.
+   The mass distributions in the four and five pion decays are included.
+   The leptonic modes are also included.
+ Charge conjugate modes are combined. This is based on a number of old Herwig internal analyses.'

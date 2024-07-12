@@ -1,0 +1,38 @@
+Name: BABAR_2006_I714447
+Year: 2006
+Summary: Momentum Spectra and cross sections for $D_{sJ}^*(2317)^+$ and $D_{sJ}^*(2460)^+$ at 10.6 GeV
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 714447
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D74 (2006) 032007
+RunInfo: e+e- to hadrons
+Beams: [e+, e-]
+Energies: [10.6]
+Description:
+  'Momentum Spectra and cross sections for $D_{sJ}^*(2317)^+$ and $D_{sJ}^*(2460)^+$ at 10.6 GeV. All spectra and cross sections are for the centre-of-mass momentum of the excited $D_s$ state, $p^*$, greater than 3.2 GeV. '
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Aubert:2006bk
+BibTeX: '@article{Aubert:2006bk,
+      author         = "Aubert, Bernard and others",
+      title          = "{A Study of the D*(sJ)(2317) and D(sJ)(2460) Mesons in
+                        Inclusive c anti-c Production Near (s)**(1/2) = 10.6-GeV}",
+      collaboration  = "BaBar",
+      journal        = "Phys. Rev.",
+      volume         = "D74",
+      year           = "2006",
+      pages          = "032007",
+      doi            = "10.1103/PhysRevD.74.032007",
+      eprint         = "hep-ex/0604030",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "SLAC-PUB-11816, BABAR-CONF-025-07",
+      SLACcitation   = "%%CITATION = HEP-EX/0604030;%%"
+}'

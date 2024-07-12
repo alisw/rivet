@@ -1,0 +1,31 @@
+Name: BESIII_2020_I1788734
+Year: 2020
+Summary: Cross section for $e^+e^-\to \phi\eta^\prime$ for $\sqrt{s}$ between 3.05 and 3.08 GeV
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1788734
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - arXiv:2003.13064
+Beams: [e+, e-]
+Description:
+  'Measurement of the cross section for $e^+e^-\to \phi\eta^\prime$ for $\sqrt{s}$ between 3.05 and 3.08 GeV by BESIII'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Ablikim:2020coo
+BibTeX: '@article{Ablikim:2020coo,
+      author         = "Ablikim, M. and others",
+      title          = "{Observation of a structure in $e^{+}e^{-} \to \phi
+                        \eta^{\prime}$ at $\sqrt{s}$ from 2.05 to 3.08 GeV}",
+      collaboration  = "BESIII",
+      year           = "2020",
+      eprint         = "2003.13064",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:2003.13064;%%"
+}'

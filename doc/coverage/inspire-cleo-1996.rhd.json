@@ -1,0 +1,289 @@
+{
+    "397664": [
+        "Search for exclusive charmless hadronic B decays", 
+        "CLEO", 
+        "10.1103/PhysRevD.53.1039", 
+        null, 
+        "hep-ex/9508004", 
+        null, 
+        null, 
+        [
+            "CLNS-95-1338", 
+            "CLEO-95-8"
+        ]
+    ], 
+    "397665": [
+        "Observation of the Cabibbo suppressed charmed baryon decay lambda(c)+ ---> p phi", 
+        "CLEO", 
+        "10.1103/PhysRevD.53.R1013", 
+        null, 
+        "hep-ex/9508005", 
+        "ins397665", 
+        null, 
+        [
+            "CLNS-95-1343", 
+            "CLEO-95-9"
+        ]
+    ], 
+    "397787": [
+        "Observation of the Xi(c)+ charmed baryon decays to Sigma+ K- pi+, Sigma+ anti-K*0, and Lambda K- pi+ pi+", 
+        "CLEO", 
+        "10.1016/0370-2693(95)01432-2", 
+        null, 
+        "hep-ex/9508006", 
+        null, 
+        null, 
+        [
+            "CLNS-95-1349", 
+            "CLEO-95-12"
+        ]
+    ], 
+    "398228": [
+        "The Inclusive decay B --- eta X", 
+        "CLEO", 
+        "10.1103/PhysRevD.53.6033", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-95-1327", 
+            "CLEO-95-4"
+        ]
+    ], 
+    "401274": [
+        "Measurements of the B semileptonic branching fraction with lepton tags", 
+        "CLEO", 
+        "10.1103/PhysRevLett.76.1570", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-95-1362", 
+            "CLEO-95-17"
+        ]
+    ], 
+    "401599": [
+        "Measurements of B ---> D(s)+ X decays", 
+        "CLEO", 
+        "10.1103/PhysRevD.53.4734", 
+        null, 
+        null, 
+        "ins401599", 
+        null, 
+        [
+            "CLNS-95-1354", 
+            "CLEO-95-16"
+        ]
+    ], 
+    "401961": [
+        "Measurements of the inclusive semielectronic D0 branching fraction", 
+        "CLEO", 
+        "10.1103/PhysRevD.54.2994", 
+        null, 
+        "hep-ex/9511014", 
+        null, 
+        null, 
+        [
+            "CLNS-95-1363", 
+            "CLEO-95-18", 
+            "CLNS-95-1363-CLEO-95-18"
+        ]
+    ], 
+    "403296": [
+        "Tau decays into three charged leptons and two neutrinos", 
+        "CLEO", 
+        "10.1103/PhysRevLett.76.2637", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-95-1370", 
+            "CLEO-95-19", 
+            "SLAC-PUB-9947"
+        ]
+    ], 
+    "403297": [
+        "Measurement of the form-factors for anti-B0 ---> D*+ lepton- anti-neutrino", 
+        "CLEO", 
+        "10.1103/PhysRevLett.76.3898", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-95-1372", 
+            "CLEO-95-20", 
+            "SLAC-PUB-9946"
+        ]
+    ], 
+    "404273": [
+        "Study of B ---> psi rho", 
+        "CLEO", 
+        "10.1016/0370-2693(95)01585-X", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-95-1379", 
+            "CLEO-95-21", 
+            "SLAC-PUB-9945"
+        ]
+    ], 
+    "404590": [
+        "Observation of new decay modes of the charmed strange baryon Xi(c)+", 
+        "CLEO", 
+        "10.1016/0370-2693(96)00111-6", 
+        null, 
+        null, 
+        "ins404590", 
+        null, 
+        [
+            "CLNS-95-1353", 
+            "CLEO-95-15"
+        ]
+    ], 
+    "415407": [
+        "Limits on flavor changing neutral currents in D0 meson decays", 
+        "CLEO", 
+        "10.1103/PhysRevLett.76.3065", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-96-1389", 
+            "CLEO-96-1", 
+            "SLAC-PUB-9944"
+        ]
+    ], 
+    "415408": [
+        "Decays of tau leptons to final states containing K(s)0 mesons", 
+        "CLEO", 
+        "10.1103/PhysRevD.53.6037", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-96-1391", 
+            "CLEO-96-3", 
+            "SLAC-PUB-9943"
+        ]
+    ], 
+    "415409": [
+        "First observation of the decay tau- ---> K- eta tau-neutrino", 
+        "CLEO", 
+        "10.1103/PhysRevLett.76.4119", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-96-1395", 
+            "CLEO-96-5", 
+            "SLAC-PUB-9940"
+        ]
+    ], 
+    "415612": [
+        "Measurement of the branching fraction for D(s)- ---> phi pi-", 
+        "CLEO", 
+        "10.1016/0370-2693(96)00503-5", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9937", 
+            "CLNS-95-1387", 
+            "CLEO-95-23"
+        ]
+    ], 
+    "415895": [
+        "A Measurement of B (D0 ---> K- pi+ pi0) / B (D0 ---> K- pi+)", 
+        "CLEO", 
+        "10.1016/0370-2693(96)00159-1", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9936", 
+            "CLNS-95-1386", 
+            "CLEO-95-22"
+        ]
+    ], 
+    "415897": [
+        "Analysis of D0 ---> K anti-K X decays", 
+        "CLEO", 
+        "10.1103/PhysRevD.54.4211", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9935", 
+            "CLNS-96-1390", 
+            "CLEO-96-2"
+        ]
+    ], 
+    "416471": [
+        "Observation of an excited charmed baryon decaying into Xi(c)0 pi+", 
+        "CLEO", 
+        "10.1103/PhysRevLett.77.810", 
+        null, 
+        null, 
+        "ins416471", 
+        null, 
+        [
+            "SLAC-PUB-9933", 
+            "CLNS-96-1394", 
+            "CLEO-96-4"
+        ]
+    ], 
+    "420727": [
+        "Measurement of the tau lepton lifetime", 
+        "CLEO", 
+        "10.1016/S0370-2693(96)01163-X", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-96-1417", 
+            "CLEO-96-8", 
+            "SLAC-PUB-9918"
+        ]
+    ], 
+    "420962": [
+        "First measurement of the B ---> pi lepton neutrino and B ---> rho (omega) lepton neutrino branching fractions", 
+        "CLEO", 
+        "10.1103/PhysRevLett.77.5000", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-96-1419", 
+            "CLEO-96-9", 
+            "SLAC-PUB-9869"
+        ]
+    ], 
+    "425120": [
+        "A Search for nonresonant B+ ---> h+ h- h+ decays", 
+        "CLEO", 
+        "10.1103/PhysRevLett.77.4503", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-96-1423", 
+            "CLEO-96-12", 
+            "SLAC-PUB-9845"
+        ]
+    ]
+}

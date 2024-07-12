@@ -1,0 +1,206 @@
+{
+    "624868": [
+        "Observation of K0(s) K0(s) resonances in deep inelastic scattering at HERA", 
+        "ZEUS", 
+        "10.1016/j.physletb.2003.10.049", 
+        null, 
+        "hep-ex/0308006", 
+        null, 
+        null, 
+        [
+            "DESY-03-098"
+        ]
+    ], 
+    "626816": [
+        "Measurement of D*+- production in deep inelastic e+- p scattering at HERA", 
+        "ZEUS", 
+        "10.1103/PhysRevD.69.012004", 
+        null, 
+        "hep-ex/0308068", 
+        "ins626816", 
+        null, 
+        [
+            "DESY-03-115"
+        ]
+    ], 
+    "632835": [
+        "Isolated tau leptons in events with large missing transverse momentum at HERA", 
+        "ZEUS", 
+        "10.1016/j.physletb.2003.12.054", 
+        null, 
+        "hep-ex/0311028", 
+        null, 
+        null, 
+        [
+            "DESY-03-182"
+        ]
+    ], 
+    "632942": [
+        "Bose-Einstein correlations in one and two-dimensions in deep inelastic scattering", 
+        "ZEUS", 
+        "10.1016/j.physletb.2003.12.068", 
+        null, 
+        "hep-ex/0311030", 
+        null, 
+        null, 
+        [
+            "DESY-03-176"
+        ]
+    ], 
+    "635791": [
+        "Search for QCD instanton induced events in deep inelastic ep scattering at HERA", 
+        "ZEUS", 
+        "10.1140/epjc/s2004-01735-3", 
+        null, 
+        "hep-ex/0312048", 
+        null, 
+        null, 
+        [
+            "DESY-03-201"
+        ]
+    ], 
+    "636222": [
+        "Beauty photoproduction measured using decays into muons in dijet events in e p collisions at s**(1/2) = 318-GeV", 
+        "ZEUS", 
+        "10.1103/PhysRevD.70.012008", 
+        null, 
+        "hep-ex/0312057", 
+        "ins636222", 
+        null, 
+        [
+            "DESY-03-212"
+        ]
+    ], 
+    "636641": [
+        "High Q**2 neutral current cross-sections in e+ p deep inelastic scattering at s**(1/2) = 318-GeV", 
+        "ZEUS", 
+        "10.1103/PhysRevD.70.052001", 
+        null, 
+        "hep-ex/0401003", 
+        "ins636641", 
+        null, 
+        [
+            "DESY-03-214"
+        ]
+    ], 
+    "636690": [
+        "Search for contact interactions, large extra dimensions and finite quark radius in e p collisions at HERA", 
+        "ZEUS", 
+        "10.1016/j.physletb.2004.03.081", 
+        null, 
+        "hep-ex/0401009", 
+        null, 
+        null, 
+        [
+            "DESY-03-218"
+        ]
+    ], 
+    "642709": [
+        "Photoproduction of D*+- mesons associated with a leading neutron", 
+        "ZEUS", 
+        "10.1016/j.physletb.2004.03.076", 
+        null, 
+        "hep-ex/0401017", 
+        "ins642709", 
+        null, 
+        [
+            "DESY-03-221"
+        ]
+    ], 
+    "644282": [
+        "Observation of isolated high E(T) photons in deep inelastic scattering", 
+        "ZEUS", 
+        "10.1016/j.physletb.2004.05.033", 
+        null, 
+        "hep-ex/0402019", 
+        null, 
+        null, 
+        [
+            "DESY-04-016"
+        ]
+    ], 
+    "647286": [
+        "Evidence for a narrow baryonic state decaying to K0(S) p and K0(S) anti-p in deep inelastic scattering at HERA", 
+        "ZEUS", 
+        "10.1016/j.physletb.2004.04.024", 
+        null, 
+        "hep-ex/0403051", 
+        null, 
+        null, 
+        [
+            "DESY-04-056"
+        ]
+    ], 
+    "647777": [
+        "Exclusive electroproduction of J/psi mesons at HERA", 
+        "ZEUS", 
+        "10.1016/j.nuclphysb.2004.06.034", 
+        null, 
+        "hep-ex/0404008", 
+        "ins647777", 
+        null, 
+        [
+            "DESY-04-052"
+        ]
+    ], 
+    "649041": [
+        "The Dependence of dijet production on photon virtuality in ep collisions at HERA", 
+        "ZEUS", 
+        "10.1140/epjc/s2004-01885-2", 
+        null, 
+        "hep-ex/0404033", 
+        "ins649041", 
+        null, 
+        [
+            "DESY-04-053"
+        ]
+    ], 
+    "650732": [
+        "Substructure dependence of jet cross sections at HERA and determination of alpha(s)", 
+        "ZEUS", 
+        "10.1016/j.nuclphysb.2004.08.049", 
+        null, 
+        "hep-ex/0405065", 
+        "ins650732", 
+        null, 
+        [
+            "DESY-04-072"
+        ]
+    ], 
+    "650875": [
+        "Measurement of beauty production in deep inelastic scattering at HERA", 
+        "ZEUS", 
+        "10.1016/j.physletb.2004.08.048", 
+        null, 
+        "hep-ex/0405069", 
+        "ins650875", 
+        null, 
+        [
+            "DESY-04-070"
+        ]
+    ], 
+    "655798": [
+        "Dissociation of virtual photons in events with a leading proton at HERA", 
+        "ZEUS", 
+        "10.1140/epjc/s2004-02047-4", 
+        null, 
+        "hep-ex/0408009", 
+        null, 
+        null, 
+        [
+            "DESY-04-131"
+        ]
+    ], 
+    "659021": [
+        "Search for a narrow charmed baryonic state decaying to D*+- p-+ in ep collisions at HERA", 
+        "ZEUS", 
+        "10.1140/epjc/s2004-02042-9", 
+        null, 
+        "hep-ex/0409033", 
+        null, 
+        null, 
+        [
+            "DESY-04-164"
+        ]
+    ]
+}

@@ -1,0 +1,811 @@
+{
+    "1309999": [
+        "Measurement of the track reconstruction efficiency at LHCb", 
+        "LHCb", 
+        "10.1088/1748-0221/10/02/P02007", 
+        "1748269", 
+        "1408.1251", 
+        null, 
+        null, 
+        [
+            "CERN-LHCB-DP-2013-002"
+        ]
+    ], 
+    "1311489": [
+        "Determination of $\\gamma$ and \u22122$\\beta_s$ from charmless two-body decays of beauty mesons", 
+        "LHCb", 
+        "10.1016/j.physletb.2014.12.015", 
+        "1750838", 
+        "1408.4368", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2014-207", 
+            "LHCB-PAPER-2014-045"
+        ]
+    ], 
+    "1316329": [
+        "Measurement of the $\\eta_c (1S)$ production cross-section in proton-proton collisions via the decay $\\eta_c (1S) \\rightarrow p \\bar{p}$", 
+        "LHCb", 
+        "10.1140/epjc/s10052-015-3502-x", 
+        "1755550", 
+        "1409.3612", 
+        "ins1316329", 
+        null, 
+        [
+            "LHCB-PAPER-2014-029", 
+            "CERN-PH-EP-2014-218"
+        ]
+    ], 
+    "1319484": [
+        "Search for the lepton flavour violating decay \u03c4$^{\u2212}$ \u2192 \u03bc$^{\u2212}$ \u03bc$^{+}$ \u03bc$^{\u2212}$", 
+        "LHCb", 
+        "10.1007/JHEP02(2015)121", 
+        "1951383", 
+        "1409.8548", 
+        null, 
+        null, 
+        [
+            "LHCB-PAPER-2014-052", 
+            "CERN-PH-EP-2014-236"
+        ]
+    ], 
+    "1319487": [
+        "Measurement of the semileptonic $CP$ asymmetry in $B^0-\\overline{B}{}^0$ mixing", 
+        "LHCb", 
+        "10.1103/PhysRevLett.114.041601", 
+        "1951424", 
+        "1409.8586", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2014-237", 
+            "LHCB-PAPER-2014-053"
+        ]
+    ], 
+    "1322386": [
+        "Search for CP violation in $D^0 \\to \\pi^\u2212 \\pi^+ \\pi^0$ decays with the energy test", 
+        "LHCb", 
+        "10.1016/j.physletb.2014.11.043", 
+        "1955544", 
+        "1410.4170", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2014-251", 
+            "LHCB-PAPER-2014-054"
+        ]
+    ], 
+    "1325983": [
+        "Study of $\\eta-\\eta^{\\prime}$ mixing from measurement of $B^0_{(s)} \\rightarrow J/\\psi \\eta^{(\\prime)}$~decay rates", 
+        "LHCb", 
+        "10.1007/JHEP01(2015)024", 
+        "1966993", 
+        "1411.0943", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2014-266", 
+            "LHCB-PAPER-2014-056"
+        ]
+    ], 
+    "1326136": [
+        "Measurement of the Z+b-jet cross-section in pp collisions at $ \\sqrt{s} $ = 7 TeV in the forward region", 
+        "LHCb", 
+        "10.1007/JHEP01(2015)064", 
+        "1967222", 
+        "1411.1264", 
+        null, 
+        null, 
+        [
+            "LHCB-PAPER-2014-055", 
+            "CERN-PH-EP-2014-267"
+        ]
+    ], 
+    "1326411": [
+        "Measurement of the CP-violating phase $\\beta$ in $B^0\\rightarrow J/\\psi \\pi^+\\pi^-$ decays and limits on penguin effects", 
+        "LHCb", 
+        "10.1016/j.physletb.2015.01.008", 
+        "1967422", 
+        "1411.1634", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2014-268", 
+            "LHCB-PAPER-2014-058"
+        ]
+    ], 
+    "1327230": [
+        "Measurement of $B_c^+$ production in proton-proton collisions at $\\sqrt{s}=8$ TeV", 
+        "LHCb", 
+        "10.1103/PhysRevLett.114.132001", 
+        "1968989", 
+        "1411.2943", 
+        "ins1327230", 
+        null, 
+        [
+            "CERN-PH-EP-2014-269", 
+            "LHCB-PAPER-2014-050"
+        ]
+    ], 
+    "1327481": [
+        "Precision measurement of $CP$ violation in $B_s^0 \\to J/\\psi K^+K^-$ decays", 
+        "LHCb", 
+        "10.1103/PhysRevLett.114.041801", 
+        "1969197", 
+        "1411.3104", 
+        null, 
+        null, 
+        [
+            "LHCB-PAPER-2014-059", 
+            "CERN-PH-EP-2014-271"
+        ]
+    ], 
+    "1328493": [
+        "Observation of the rare $B^0_s\\to\\mu^+\\mu^-$ decay from the combined analysis of CMS and LHCb data", 
+        "CMS", 
+        "10.1038/nature14474", 
+        "1970675", 
+        "1411.4413", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2014-220", 
+            "CMS-BPH-13-007", 
+            "LHCB-PAPER-2014-049"
+        ]
+    ], 
+    "1328624": [
+        "Observation of two new $\\Xi_b^-$ baryon resonances", 
+        "LHCb", 
+        "10.1103/PhysRevLett.114.062004", 
+        "1970690", 
+        "1411.4849", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2014-279", 
+            "LHCB-PAPER-2014-061"
+        ]
+    ], 
+    "1329958": [
+        "Measurement of the lifetime of the $B_c^+$ meson using the $B_c^+\\rightarrow J/\\psi\\pi^+$ decay mode", 
+        "LHCb", 
+        "10.1016/j.physletb.2015.01.010", 
+        "1972201", 
+        "1411.6899", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2014-283", 
+            "LHCB-PAPER-2014-060"
+        ]
+    ], 
+    "1333223": [
+        "Measurement of the inelastic pp cross-section at a centre-of-mass energy of $ \\sqrt{s} $ = 7 TeV", 
+        "LHCb", 
+        "10.1007/JHEP02(2015)129", 
+        "1975522", 
+        "1412.2500", 
+        "ins1333223", 
+        null, 
+        [
+            "CERN-PH-EP-2014-285", 
+            "LHCB-PAPER-2014-057"
+        ]
+    ], 
+    "1333397": [
+        "Search for long-lived particles decaying to jet pairs", 
+        "LHCb", 
+        "10.1140/epjc/s10052-015-3344-6", 
+        "1975714", 
+        "1412.3021", 
+        null, 
+        null, 
+        [
+            "LHCB-PAPER-2014-062", 
+            "CERN-PH-EP-2014-291"
+        ]
+    ], 
+    "1335135": [
+        "LHCb Detector Performance", 
+        "LHCb", 
+        "10.1142/S0217751X15300227", 
+        "1978280", 
+        "1412.6352", 
+        null, 
+        null, 
+        [
+            "LHCB-DP-2014-002", 
+            "CERN-PH-EP-2014-290"
+        ]
+    ], 
+    "1335137": [
+        "Study of the rare $B_s^0$ and $B^0$ decays into the $\\pi^+\\pi^-\\mu^+\\mu^-$ final state", 
+        "LHCb", 
+        "10.1016/j.physletb.2015.02.010", 
+        "1978281", 
+        "1412.6433", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2014-296", 
+            "LHCB-PAPER-2014-063"
+        ]
+    ], 
+    "1335499": [
+        "Determination of the branching fractions of B$_{S}^{0} \\to$ D$_{S}^{\u2213}$ K$^{\u2213}$ and B$^{0}\\to$  D$_{S}^{\u2212}$ K$^{+}$", 
+        "LHCb", 
+        "10.1007/JHEP05(2015)019", 
+        "1978798", 
+        "1412.7654", 
+        null, 
+        null, 
+        [
+            "LHCB-PAPER-2014-064", 
+            "CERN-PH-EP-2014-297"
+        ]
+    ], 
+    "1338587": [
+        "Angular analysis of the $B^{0} \\to K^{*0} e^{+} e^{\u2212}$ decay in the low-q$^{2}$ region", 
+        "LHCb", 
+        "10.1007/JHEP04(2015)064", 
+        "1981106", 
+        "1501.03038", 
+        null, 
+        null, 
+        [
+            "LHCB-PAPER-2014-066", 
+            "CERN-PH-EP-2014-301"
+        ]
+    ], 
+    "1341286": [
+        "Measurement of indirect $CP$ asymmetries in $D^0\\rightarrow K^-K^+$ and $D^0\\rightarrow \\pi^-\\pi^+$ decays using semileptonic $B$ decays", 
+        "LHCb", 
+        "10.1007/JHEP04(2015)043", 
+        "1983198", 
+        "1501.06777", 
+        null, 
+        null, 
+        [
+            "LHCB-PAPER-2014-069", 
+            "CERN-PH-EP-2015-008"
+        ]
+    ], 
+    "1343514": [
+        "Precise measurements of the properties of the $B_1(5721)^{0,+}$ and $B^\\ast_2(5747)^{0,+}$ states and observation of $B^{+,0}\\pi^{-,+}$ mass structures", 
+        "LHCb", 
+        "10.1007/JHEP04(2015)024", 
+        "1987883", 
+        "1502.02638", 
+        null, 
+        null, 
+        [
+            "LHCB-PAPER-2014-067", 
+            "CERN-PH-EP-2015-021"
+        ]
+    ], 
+    "1347133": [
+        "Measurement of forward $\\rm Z\\rightarrow e^+e^-$ production at $\\sqrt{s}=8$ TeV", 
+        "LHCb", 
+        "10.1007/JHEP05(2015)109", 
+        "1996441", 
+        "1503.00963", 
+        "ins1347133", 
+        null, 
+        [
+            "CERN-PH-EP-2015-045", 
+            "LHCB-PAPER-2015-003"
+        ]
+    ], 
+    "1351449": [
+        "First observation and amplitude analysis of the $B^{-}\\to D^{+}K^{-}\\pi^{-}$ decay", 
+        "LHCb", 
+        "10.1103/PhysRevD.91.092002", 
+        "2000543", 
+        "1503.02995", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-051", 
+            "LHCB-PAPER-2015-007"
+        ]
+    ], 
+    "1353388": [
+        "Measurement of $CP$ asymmetries and polarisation fractions in $B_s^0 \\rightarrow K^{*0}\\bar{K}{}^{*0}$ decays", 
+        "LHCb", 
+        "10.1007/JHEP07(2015)166", 
+        "2002385", 
+        "1503.05362", 
+        null, 
+        null, 
+        [
+            "LHCB-PAPER-2014-068", 
+            "CERN-PH-EP-2015-058"
+        ]
+    ], 
+    "1355373": [
+        "Measurement of the time-dependent CP asymmetries in $B_s^0\\rightarrow J/\\psi K_{\\rm S}^0$", 
+        "LHCb", 
+        "10.1007/JHEP06(2015)131", 
+        "2003252", 
+        "1503.07055", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-064", 
+            "LHCB-PAPER-2015-005"
+        ]
+    ], 
+    "1355375": [
+        "Measurement of $CP$ violation in $B^0 \\rightarrow J/\\psi K^0_S$ decays", 
+        "LHCb", 
+        "10.1103/PhysRevLett.115.031601", 
+        "2003792", 
+        "1503.07089", 
+        null, 
+        null, 
+        [
+            "LHCB-PAPER-2015-004", 
+            "CERN-PH-EP-2015-076"
+        ]
+    ], 
+    "1355376": [
+        "Observation of the decay $\\overline{B}_s^0 \\rightarrow \\psi(2S) K^+ \\pi^-$", 
+        "LHCb", 
+        "10.1016/j.physletb.2015.06.038", 
+        "2003793", 
+        "1503.07112", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-072", 
+            "LHCB-PAPER-2015-010"
+        ]
+    ], 
+    "1355377": [
+        "Differential branching fraction and angular analysis of $\\Lambda^{0}_{b} \\rightarrow \\Lambda \\mu^+\\mu^-$ decays", 
+        "LHCb", 
+        "10.1007/JHEP06(2015)115", 
+        "2003794", 
+        "1503.07138", 
+        null, 
+        null, 
+        [
+            "LHCB-PAPER-2015-009", 
+            "CERN-PH-EP-2015-078"
+        ]
+    ], 
+    "1355552": [
+        "Observation of the $B^0_s\\to\\eta'\\eta'$ decay", 
+        "LHCb", 
+        "10.1103/PhysRevLett.115.051801", 
+        "2004586", 
+        "1503.07483", 
+        null, 
+        null, 
+        [
+            "LHCB-PAPER-2014-065", 
+            "CERN-PH-EP-2015-073", 
+            "LHCB-PAPER-2014-065-"
+        ]
+    ], 
+    "1356281": [
+        "Observation of the $B^0 \\to \\rho^0 \\rho^0$ decay from an amplitude analysis of $B^0 \\to (\\pi^+\\pi^-)(\\pi^+\\pi^-)$ decays", 
+        "LHCb", 
+        "10.1016/j.physletb.2015.06.027", 
+        "2004591", 
+        "1503.07770", 
+        null, 
+        null, 
+        [
+            "LHCB-PAPER-2015-006", 
+            "CERN-PH-EP-2015-077"
+        ]
+    ], 
+    "1357203": [
+        "First observation and measurement of the branching fraction for the decay $B^0_s \\to D_s^{*\\mp} K^{\\pm}$", 
+        "LHCb", 
+        "10.1007/JHEP06(2015)130", 
+        "2005510", 
+        "1503.09086", 
+        null, 
+        null, 
+        [
+            "LHCB-PAPER-2015-008", 
+            "CERN-PH-EP-2015-081"
+        ]
+    ], 
+    "1358215": [
+        "Determination of the quark coupling strength $|V_{ub}|$ using baryonic decays", 
+        "LHCb", 
+        "10.1038/nphys3415", 
+        "2007377", 
+        "1504.01568", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-084", 
+            "LHCB-PAPER-2015-013"
+        ]
+    ], 
+    "1362487": [
+        "A study of $CP$ violation in $B^\\mp \\rightarrow Dh^\\mp$ ($h=K,\\pi$) with the modes $D \\rightarrow K^\\mp \\pi^\\pm \\pi^0$, $D \\rightarrow \\pi^+\\pi^-\\pi^0$ and $D \\rightarrow K^+K^-\\pi^0$", 
+        "LHCb", 
+        "10.1103/PhysRevD.91.112014", 
+        "2011387", 
+        "1504.05442", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-097", 
+            "LHCB-PAPER-2015-014", 
+            "CERN-PH-EP-2015-097-"
+        ]
+    ], 
+    "1364718": [
+        "Quantum numbers of the $X(3872)$ state and orbital angular momentum in its $\\rho^0 J\\psi$ decay", 
+        "LHCb", 
+        "10.1103/PhysRevD.92.011102", 
+        "2012165", 
+        "1504.06339", 
+        null, 
+        null, 
+        [
+            "LHCB-PAPER-2015-015", 
+            "CERN-PH-EP-2015-098"
+        ]
+    ], 
+    "1365284": [
+        "Identification of beauty and charm quark jets at LHCb", 
+        "LHCb", 
+        "10.1088/1748-0221/10/06/P06013", 
+        "2012990", 
+        "1504.07670", 
+        null, 
+        null, 
+        [
+            "LHCB-PAPER-2015-016", 
+            "CERN-PH-EP-2015-101"
+        ]
+    ], 
+    "1367298": [
+        "Amplitude analysis of $B^0 \\rightarrow \\bar{D}^0 K^+ \\pi^-$ decays", 
+        "LHCb", 
+        "10.1103/PhysRevD.92.012012", 
+        "2014836", 
+        "1505.01505", 
+        null, 
+        null, 
+        [
+            "LHCB-PAPER-2015-017", 
+            "CERN-PH-EP-2015-107"
+        ]
+    ], 
+    "1367305": [
+        "Search for the decay $ {B}_s^0\\to {\\overline{D}}^0{f}_0(980) $", 
+        "LHCb", 
+        "10.1007/JHEP08(2015)005", 
+        "2014733", 
+        "1505.01654", 
+        null, 
+        null, 
+        [
+            "LHCB-PAPER-2015-012", 
+            "CERN-PH-EP-2015-086"
+        ]
+    ], 
+    "1367306": [
+        "Dalitz plot analysis of $B^0 \\to \\overline{D}^0 \\pi^+\\pi^-$ decays", 
+        "LHCb", 
+        "10.1103/PhysRevD.92.032002", 
+        "2014715", 
+        "1505.01710", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-110", 
+            "LHCB-PAPER-2014-070"
+        ]
+    ], 
+    "1369996": [
+        "Search for the $\\Lambda^0_b \\rightarrow \\Lambda \\eta^\\prime$ and $\\Lambda^0_b \\rightarrow \\Lambda \\eta$ decays with the LHCb detector", 
+        "LHCb", 
+        "10.1007/JHEP09(2015)006", 
+        "2016239", 
+        "1505.03295", 
+        null, 
+        null, 
+        [
+            "LHCB-PAPER-2015-019", 
+            "CERN-PH-EP-2015-112"
+        ]
+    ], 
+    "1370436": [
+        "Study of $W$ boson production in association with beauty and charm", 
+        "LHCb", 
+        "10.1103/PhysRevD.92.052001", 
+        "2016711", 
+        "1505.04051", 
+        "ins1370436", 
+        null, 
+        [
+            "LHCB-PAPER-2015-021", 
+            "CERN-PH-EP-2015-118"
+        ]
+    ], 
+    "1373300": [
+        "Measurement of the forward $Z$ boson production cross-section in $pp$ collisions at $\\sqrt{s}=7$ TeV", 
+        "LHCb", 
+        "10.1007/JHEP08(2015)039", 
+        "2019534", 
+        "1505.07024", 
+        "ins1373300", 
+        null, 
+        [
+            "LHCB-PAPER-2015-001", 
+            "CERN-PH-EP-2015-102"
+        ]
+    ], 
+    "1373302": [
+        "Study of $B^{-}\\to DK^-\\pi^+\\pi^-$ and $B^-\\to D\\pi^-\\pi^+\\pi^-$ decays and determination of the CKM angle $\\gamma$", 
+        "LHCb", 
+        "10.1103/PhysRevD.92.112005", 
+        "2019536", 
+        "1505.07044", 
+        null, 
+        null, 
+        [
+            "LHCB-PAPER-2015-020", 
+            "CERN-PH-EP-2015-127"
+        ]
+    ], 
+    "1373746": [
+        "Measurement of the exclusive \u03a5 production cross-section in pp collisions at $ \\sqrt{s}=7 $ TeV and 8 TeV", 
+        "LHCb", 
+        "10.1007/JHEP09(2015)084", 
+        "2020686", 
+        "1505.08139", 
+        "ins1373746", 
+        null, 
+        [
+            "LHCB-PAPER-2015-011", 
+            "CERN-PH-EP-2015-123"
+        ]
+    ], 
+    "1374216": [
+        "First observation of top quark production in the forward region", 
+        "LHCb", 
+        "10.1103/PhysRevLett.115.112001", 
+        "2021262", 
+        "1506.00903", 
+        null, 
+        null, 
+        [
+            "LHCB-PAPER-2015-022", 
+            "CERN-PH-EP-2015-132"
+        ]
+    ], 
+    "1380182": [
+        "Measurement of the ratio of branching fractions $\\mathcal{B}(\\bar{B}^0 \\to D^{*+}\\tau^{-}\\bar{\\nu}_{\\tau})/\\mathcal{B}(\\bar{B}^0 \\to D^{*+}\\mu^{-}\\bar{\\nu}_{\\mu})$", 
+        "LHCb", 
+        "10.1103/PhysRevLett.115.111803", 
+        "2029609", 
+        "1506.08614", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-150", 
+            "LHCB-PAPER-2015-025"
+        ]
+    ], 
+    "1380188": [
+        "Angular analysis and differential branching fraction of the decay $B^0_s\\to\\phi\\mu^+\\mu^-$", 
+        "LHCb", 
+        "10.1007/JHEP09(2015)179", 
+        "2029820", 
+        "1506.08777", 
+        "ins1380188", 
+        null, 
+        [
+            "CERN-PH-EP-2015-145", 
+            "LHCB-PAPER-2015-023"
+        ]
+    ], 
+    "1380452": [
+        "Search for long-lived heavy charged particles using a ring imaging Cherenkov technique at LHCb", 
+        "LHCb", 
+        "10.1140/epjc/s10052-015-3809-7", 
+        "2030417", 
+        "1506.09173", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2105-139", 
+            "LHCB-PAPER-2015-002"
+        ]
+    ], 
+    "1382595": [
+        "Observation of $J/\\psi p$ Resonances Consistent with Pentaquark States in $\\Lambda_b^0 \\to J/\\psi K^- p$ Decays", 
+        "LHCb", 
+        "10.1103/PhysRevLett.115.072001", 
+        "2033887", 
+        "1507.03414", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-153", 
+            "LHCB-PAPER-2015-029"
+        ]
+    ], 
+    "1382599": [
+        "Measurement of the branching fraction ratio $\\mathcal{B}(B_c^+ \\rightarrow \\psi(2S)\\pi^+)/\\mathcal{B}(B_c^+ \\rightarrow J/\\psi \\pi^+)$", 
+        "LHCb", 
+        "10.1103/PhysRevD.92.072007", 
+        "2033891", 
+        "1507.03516", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-167", 
+            "LHCB-PAPER-2015-024"
+        ]
+    ], 
+    "1385321": [
+        "$B$ flavour tagging using charm decays at the LHCb experiment", 
+        "LHCb", 
+        "10.1088/1748-0221/10/10/P10005", 
+        "2038937", 
+        "1507.07892", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-193", 
+            "LHCB-PAPER-2015-027"
+        ]
+    ], 
+    "1386473": [
+        "Measurement of the $B_s^0 \\to \\phi \\phi$ branching fraction and search for the decay $B^0 \\to \\phi \\phi$", 
+        "LHCb", 
+        "10.1007/JHEP10(2015)053", 
+        "2040342", 
+        "1508.00788", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015", 
+            "LHCB-PAPER-2015-028"
+        ]
+    ], 
+    "1388185": [
+        "Search for hidden-sector bosons in $B^0 \\!\\to K^{*0}\\mu^+\\mu^-$ decays", 
+        "LHCb", 
+        "10.1103/PhysRevLett.115.161802", 
+        "2045144", 
+        "1508.04094", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-202", 
+            "LHCB-PAPER-2015-036"
+        ]
+    ], 
+    "1389705": [
+        "Measurement of the time-integrated $CP$ asymmetry in $D^0 \\to K^0_S K^0_S$ decays", 
+        "LHCb", 
+        "10.1007/JHEP10(2015)055", 
+        "2047219", 
+        "1508.06087", 
+        null, 
+        null, 
+        [
+            "LHCB-PAPER-2015-030", 
+            "CERN-PH-EP-2015-215", 
+            "LHCB-PAPER-2015-030-CERN-PH-EP-2015-215"
+        ]
+    ], 
+    "1391324": [
+        "Measurement of CP violation parameters and polarisation fractions in $ {\\mathrm{B}}_{\\mathrm{s}}^0\\to \\mathrm{J}/\\psi {\\overline{\\mathrm{K}}}^{\\ast 0} $ decays", 
+        "LHCb", 
+        "10.1007/JHEP11(2015)082", 
+        "2048426", 
+        "1509.00400", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-224", 
+            "LHCB-PAPER-2015-034"
+        ]
+    ], 
+    "1391325": [
+        "First measurement of the differential branching fraction and $C\\!P$ asymmetry of the $B^\\pm\\to\\pi^\\pm\\mu^+\\mu^-$ decay", 
+        "LHCb", 
+        "10.1007/JHEP10(2015)034", 
+        "2048427", 
+        "1509.00414", 
+        "ins1391325", 
+        null, 
+        [
+            "LHCB-PAPER-2015-035", 
+            "CERN-PH-EP-2015-219"
+        ]
+    ], 
+    "1391511": [
+        "Measurement of forward $J/\\psi$ production cross-sections in $pp$ collisions at $\\sqrt{s}=13$ TeV", 
+        "LHCb", 
+        "10.1007/JHEP10(2015)172", 
+        "2048812", 
+        "1509.00771", 
+        "ins1391511", 
+        null, 
+        [
+            "LHCB-PAPER-2015-037", 
+            "CERN-PH-EP-2015-222"
+        ]
+    ], 
+    "1392456": [
+        "Forward production of $\\Upsilon$ mesons in $pp$ collisions at $\\sqrt{s}=7$ and 8TeV", 
+        "LHCb", 
+        "10.1007/JHEP11(2015)103", 
+        "2049870", 
+        "1509.02372", 
+        "ins1392456", 
+        null, 
+        [
+            "CERN-PH-EP-2015-232", 
+            "LHCB-PAPER-2015-045"
+        ]
+    ], 
+    "1394859": [
+        "Measurement of the forward-backward asymmetry in $Z/\\gamma^{\\ast} \\rightarrow \\mu^{+}\\mu^{-}$ decays and determination of the effective weak mixing angle", 
+        "LHCb", 
+        "10.1007/JHEP11(2015)190", 
+        "2055598", 
+        "1509.07645", 
+        "ins1394859", 
+        null, 
+        [
+            "LHCB-PAPER-2015-039", 
+            "CERN-PH-EP-2015-250"
+        ]
+    ], 
+    "1396563": [
+        "Model-independent confirmation of the $Z(4430)^-$ state", 
+        "LHCb", 
+        "10.1103/PhysRevD.92.112009", 
+        "2057916", 
+        "1510.01951", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-244", 
+            "LHCB-PAPER-2015-038"
+        ]
+    ], 
+    "1397639": [
+        "Evidence for the strangeness-changing weak decay $\\Xi_b^-\\to\\Lambda_b^0\\pi^-$", 
+        "LHCb", 
+        "10.1103/PhysRevLett.115.241801", 
+        "2059561", 
+        "1510.03829", 
+        null, 
+        null, 
+        [
+            "LHCB-PAPER-2015-047", 
+            "CERN-PH-EP-2015-277"
+        ]
+    ], 
+    "1398352": [
+        "Search for the rare decays $B^{0}\\to J/\\psi \\gamma$ and $B^{0}_{s} \\to J/\\psi \\gamma$", 
+        "LHCb", 
+        "10.1103/PhysRevD.92.112002", 
+        "2060452", 
+        "1510.04866", 
+        null, 
+        null, 
+        [
+            "LHCB-PAPER-2015-044", 
+            "CERN-PH-EP-2015-276"
+        ]
+    ]
+}

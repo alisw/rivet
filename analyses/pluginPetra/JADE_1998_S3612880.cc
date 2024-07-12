@@ -12,7 +12,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(JADE_1998_S3612880);
+    RIVET_DEFAULT_ANALYSIS_CTOR(JADE_1998_S3612880);
 
 
     /// Book histograms and initialise projections before the run
@@ -32,22 +32,22 @@ namespace Rivet {
 
         case 44:
           offset = 0;
-          _h_thrust  = bookHisto1D( 2+offset, 1, 1);
-          _h_MH = bookHisto1D( 3 + offset, 1, 1);
-          _h_BT = bookHisto1D( 4 + offset, 1, 1);
-          _h_BW = bookHisto1D( 5 + offset, 1, 1);
-          _h_y23 = bookHisto1D(10, 1, 1);
+          book(_h_thrust  , 2+offset, 1, 1);
+          book(_h_MH , 3 + offset, 1, 1);
+          book(_h_BT , 4 + offset, 1, 1);
+          book(_h_BW , 5 + offset, 1, 1);
+          book(_h_y23 ,10, 1, 1);
           break;
         case 35:
           offset = 4;
-          _h_thrust  = bookHisto1D( 2+offset, 1, 1);
-          _h_MH = bookHisto1D( 3 + offset, 1, 1);
-          _h_BT = bookHisto1D( 4 + offset, 1, 1);
-          _h_BW = bookHisto1D( 5 + offset, 1, 1);
-          _h_y23 = bookHisto1D(11, 1, 1);
+          book(_h_thrust  , 2+offset, 1, 1);
+          book(_h_MH , 3 + offset, 1, 1);
+          book(_h_BT , 4 + offset, 1, 1);
+          book(_h_BW , 5 + offset, 1, 1);
+          book(_h_y23 ,11, 1, 1);
           break;
         case 22:
-          _h_y23 = bookHisto1D(12, 1, 1);
+          book(_h_y23 ,12, 1, 1);
           break;
       }
     }
@@ -55,7 +55,6 @@ namespace Rivet {
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-      const double weight = event.weight();
       const ChargedFinalState& cfs = apply<ChargedFinalState>(event, "CFS");
 
       // JADE hadronic event selection
@@ -78,12 +77,12 @@ namespace Rivet {
       // Make sure we don't run into a segfault by trying to fill non-existing histos
       int s = int(sqrtS()/GeV);
       if (s == 44 || s == 35) {
-        _h_thrust->fill(1. - thrust.thrust(), weight);
-        _h_MH->fill(sqrt(hemi.scaledM2high()), weight);
-        _h_BT->fill(hemi.Bsum(), weight);
-        _h_BW->fill(hemi.Bmax(), weight);
+        _h_thrust->fill(1. - thrust.thrust());
+        _h_MH->fill(sqrt(hemi.scaledM2high()));
+        _h_BT->fill(hemi.Bsum());
+        _h_BW->fill(hemi.Bmax());
       }
-      _h_y23->fill(y23, weight);
+      _h_y23->fill(y23);
     }
 
     /// Normalise histograms etc., after the run
@@ -106,12 +105,10 @@ namespace Rivet {
 
     Histo1DPtr _h_thrust, _h_MH, _h_BT, _h_BW, _h_y23;
 
-
   };
 
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(JADE_1998_S3612880);
+  RIVET_DECLARE_ALIASED_PLUGIN(JADE_1998_S3612880, JADE_1998_I447560);
 
 }

@@ -1,0 +1,74 @@
+{
+    "654756": [
+        "Quark helicity distributions in the nucleon for up, down, and strange quarks from semi-inclusive deep-inelastic scattering", 
+        "HERMES", 
+        "10.1103/PhysRevD.71.012003", 
+        null, 
+        "hep-ex/0407032", 
+        null, 
+        null, 
+        [
+            "DESY-04-107"
+        ]
+    ], 
+    "656015": [
+        "Single-spin asymmetries in semi-inclusive deep-inelastic scattering on a transversely polarized hydrogen target", 
+        "HERMES", 
+        "10.1103/PhysRevLett.94.012002", 
+        null, 
+        "hep-ex/0408013", 
+        null, 
+        null, 
+        [
+            "DESY-04-141"
+        ]
+    ], 
+    "658215": [
+        "The HERMES polarized hydrogen and deuterium gas target in the HERA electron storage ring", 
+        "HERMES", 
+        "10.1016/j.nima.2004.11.020", 
+        null, 
+        "physics/0408137", 
+        null, 
+        null, 
+        [
+            "DESY-04-128"
+        ]
+    ], 
+    "666724": [
+        "Search for an exotic S = -2, Q = -2 baryon resonance at a mass near 1862-MeV in quasi-real photoproduction", 
+        "HERMES", 
+        "10.1103/PhysRevD.71.032004", 
+        null, 
+        "hep-ex/0412027", 
+        null, 
+        null, 
+        [
+            "DESY-04-239"
+        ]
+    ], 
+    "682662": [
+        "Subleading-twist effects in single-spin asymmetries in semi-inclusive deep-inelastic scattering on a longitudinally polarized hydrogen target", 
+        "HERMES", 
+        "10.1016/j.physletb.2005.06.067", 
+        null, 
+        "hep-ex/0505042", 
+        null, 
+        null, 
+        [
+            "DESY-05-072"
+        ]
+    ], 
+    "684394": [
+        "First measurement of the tensor structure function b(1) of the deuteron", 
+        "HERMES", 
+        "10.1103/PhysRevLett.95.242001", 
+        null, 
+        "hep-ex/0506018", 
+        null, 
+        null, 
+        [
+            "DESY-05-077"
+        ]
+    ]
+}

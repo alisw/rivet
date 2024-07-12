@@ -1,0 +1,321 @@
+{
+    "623102": [
+        "Study of B- ---> D**0 pi- (D**0 ---> D(*)+ pi-) decays", 
+        "Belle", 
+        "10.1103/PhysRevD.69.112002", 
+        null, 
+        "hep-ex/0307021", 
+        null, 
+        null, 
+        []
+    ], 
+    "623743": [
+        "Measurements of the $D_{sJ}$ resonance properties", 
+        "Belle", 
+        "10.1103/PhysRevLett.92.012002", 
+        null, 
+        "hep-ex/0307052", 
+        null, 
+        null, 
+        []
+    ], 
+    "623994": [
+        "Observation of B+ ---> psi(3770) K+", 
+        "Belle", 
+        "10.1103/PhysRevLett.93.051803", 
+        null, 
+        "hep-ex/0307061", 
+        null, 
+        null, 
+        [
+            "BELLE-CONF-0303"
+        ]
+    ], 
+    "624535": [
+        "Study of B meson decays to three body charmless hadronic final states", 
+        "Belle", 
+        "10.1103/PhysRevD.69.012001", 
+        null, 
+        "hep-ex/0307082", 
+        null, 
+        null, 
+        []
+    ], 
+    "626959": [
+        "Observation of radiative B ---> phi K gamma decays", 
+        "Belle", 
+        "10.1103/PhysRevLett.92.051801", 
+        null, 
+        "hep-ex/0309006", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2003-11", 
+            "KEK-PREPRINT-2003-43"
+        ]
+    ], 
+    "628753": [
+        "Search for B- ---> J / psi Lambda anti-p decay", 
+        "Belle", 
+        "10.1103/PhysRevD.69.017101", 
+        null, 
+        "hep-ex/0309060", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2003-60", 
+            "BELLE-PREPRINT-2003-18"
+        ]
+    ], 
+    "630328": [
+        "Observation of B+ ---> p anti-p pi+, B0 ---> p anti-p K0, and B+ ---> p anti-p K*+", 
+        "Belle", 
+        "10.1103/PhysRevLett.92.131801", 
+        null, 
+        "hep-ex/0310018", 
+        null, 
+        null, 
+        [
+            "BELLE-CONF-0313"
+        ]
+    ], 
+    "630517": [
+        "An Upper bound on the decay tau ---> mu gamma from Belle", 
+        "Belle", 
+        "10.1103/PhysRevLett.92.171802", 
+        null, 
+        "hep-ex/0310029", 
+        null, 
+        null, 
+        []
+    ], 
+    "633879": [
+        "Measurement of |V(ub)| using inclusive B ---> X(u) l nu decays with a novel X(u) reconstruction method", 
+        "Belle", 
+        "10.1103/PhysRevLett.92.101801", 
+        null, 
+        "hep-ex/0311048", 
+        null, 
+        null, 
+        []
+    ], 
+    "634180": [
+        "Improved measurements of branching fractions for B ---> K pi, pi pi and K anti-K decays", 
+        "Belle", 
+        "10.1103/PhysRevD.69.111102", 
+        null, 
+        "hep-ex/0311061", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2003-87", 
+            "BELLE-PREPRINT-2003-26"
+        ]
+    ], 
+    "642912": [
+        "Observation of large $CP$ violation and evidence for direct $CP$ violation in $B^0 \\to \\pi^+\\pi^-$ decays", 
+        "Belle", 
+        "10.1103/PhysRevLett.93.021601", 
+        null, 
+        "hep-ex/0401029", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2003-110", 
+            "BELLE-PREPRINT-2004-1"
+        ]
+    ], 
+    "643565": [
+        "Measurement of the e+ e- ---> D(*)+ D(*)- cross-sections", 
+        "Belle", 
+        "10.1103/PhysRevD.70.071101", 
+        null, 
+        "hep-ex/0401038", 
+        null, 
+        null, 
+        [
+            "BELLE-PRERPINT-2004-3", 
+            "KEK-PREPRINT-2003-119"
+        ]
+    ], 
+    "644450": [
+        "Evidence for B+ ---> omega l+ nu", 
+        "Belle", 
+        "10.1103/PhysRevLett.93.131803", 
+        null, 
+        "hep-ex/0402023", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2004-4", 
+            "KEK-PREPRINT-2003-126"
+        ]
+    ], 
+    "645303": [
+        "Measurement of the $B \\to  K^* \\gamma$ branching fractions and asymmetries", 
+        "Belle", 
+        "10.1103/PhysRevD.69.112001", 
+        null, 
+        "hep-ex/0402042", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2004-5", 
+            "KEK-PREPRINT-2003-132"
+        ]
+    ], 
+    "645508": [
+        "An Inclusive measurement of the photon energy spectrum in b ---> s gamma decays", 
+        "Belle", 
+        "10.1103/PhysRevLett.93.061803", 
+        null, 
+        "hep-ex/0403004", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2004-6", 
+            "KEK-PREPRINT-2003-133"
+        ]
+    ], 
+    "646781": [
+        "Measurement of the branching fractions for B ---> omega K and B ---> omega pi", 
+        "Belle", 
+        "10.1103/PhysRevD.70.012001", 
+        null, 
+        "hep-ex/0403033", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2004-2", 
+            "KEK-PREPRINT-2003-114"
+        ]
+    ], 
+    "647205": [
+        "Search for neutrinoless decays tau ---> 3l", 
+        "Belle", 
+        "10.1016/j.physletb.2004.04.002", 
+        null, 
+        "hep-ex/0403039", 
+        null, 
+        null, 
+        []
+    ], 
+    "647970": [
+        "Search for the lepton flavor violating decay $\\tau^{-} \\to \\mu^{-} \\eta$ at Belle", 
+        "Belle", 
+        "10.1103/PhysRevLett.93.081803", 
+        null, 
+        "hep-ex/0404018", 
+        null, 
+        null, 
+        [
+            "BELLE-PRERPINT-2004-13", 
+            "KEK-PREPRINT-2004-9"
+        ]
+    ], 
+    "650874": [
+        "Evidence of B0 ---> rho0 pi0", 
+        "Belle", 
+        "10.1103/PhysRevLett.93.131802", 
+        null, 
+        "hep-ex/0405068", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2004-16", 
+            "BELLE-PREPRINT-2004-14"
+        ]
+    ], 
+    "653073": [
+        "Measurement of phi(3) with Dalitz plot analysis of B+- ---> D**(*) K+- decay", 
+        "Belle", 
+        "10.1103/PhysRevD.70.072003", 
+        null, 
+        "hep-ex/0406067", 
+        null, 
+        null, 
+        []
+    ], 
+    "653074": [
+        "Observation of B+ ---> Lambda anti-Lambda K+", 
+        "Belle", 
+        "10.1103/PhysRevLett.93.211801", 
+        null, 
+        "hep-ex/0406068", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2004-17", 
+            "KEK-PREPRINT-2004-24"
+        ]
+    ], 
+    "653245": [
+        "Observation of the decays B0 ---> K+ pi- pi0 and B0 ---> rho- K+", 
+        "Belle", 
+        "10.1016/j.physletb.2004.07.063", 
+        null, 
+        "hep-ex/0406075", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2004-25", 
+            "BELLE-PREPRINT-2004-18"
+        ]
+    ], 
+    "653673": [
+        "Study of double charmonium production in e+ e- annihilation at s**(1/2) ~ 10.6-GeV", 
+        "Belle", 
+        "10.1103/PhysRevD.70.071102", 
+        null, 
+        "hep-ex/0407009", 
+        null, 
+        null, 
+        []
+    ], 
+    "656476": [
+        "Search for CP violation in the decay B0 ---> D*+- D-+", 
+        "Belle", 
+        "10.1103/PhysRevLett.93.201802", 
+        null, 
+        "hep-ex/0408051", 
+        null, 
+        null, 
+        []
+    ], 
+    "657090": [
+        "Evidence for direct CP violation in B0 ---> K+ pi- decays", 
+        "Belle", 
+        "10.1103/PhysRevLett.93.191802", 
+        null, 
+        "hep-ex/0408100", 
+        null, 
+        null, 
+        []
+    ], 
+    "657095": [
+        "Study of time-dependent CP violation in B0 ---> J/psi pi0 decays", 
+        "Belle", 
+        "10.1103/PhysRevLett.93.261801", 
+        null, 
+        "hep-ex/0408105", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2004-23", 
+            "KEK-PREPRINT-2004-39"
+        ]
+    ], 
+    "658085": [
+        "Observation of B0 ---> D*-(5 pi)+, B+ ---> D*-(4 pi)++ and B+ ---> anti-D*0(5 pi)+", 
+        "Belle", 
+        "10.1103/PhysRevD.70.111103", 
+        null, 
+        "hep-ex/0409008", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2004-45", 
+            "BELLE-PREPRINT-2004-25"
+        ]
+    ]
+}

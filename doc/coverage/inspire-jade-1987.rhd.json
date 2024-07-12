@@ -1,0 +1,38 @@
+{
+    "235696": [
+        "Observation of Charmed Mesons in Photon-photon Collisions", 
+        "JADE", 
+        "10.1016/0370-2693(87)90584-3", 
+        null, 
+        null, 
+        "ins235696", 
+        null, 
+        [
+            "DESY-86-125"
+        ]
+    ], 
+    "236983": [
+        "Determination of Semimuonic Branching Ratios and Fragmentation Functions of Heavy Quarks in $e^+ e^-$ Annihilation at $s^*$*(1.2) = 34.6-{GeV}", 
+        "JADE", 
+        "10.1007/BF01552539", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-86-129"
+        ]
+    ], 
+    "246215": [
+        "Search for Leptoquarks and Other New Particles With Lepton - Hadron Signature in $e^+ e^-$ Interactions", 
+        "JADE", 
+        "10.1007/BF01556160", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-87-031"
+        ]
+    ]
+}

@@ -1,0 +1,119 @@
+{
+    "553002": [
+        "Measurement of CP violating asymmetries in $B^0$ decays to CP eigenstates", 
+        "BaBar", 
+        "10.1103/PhysRevLett.86.2515", 
+        null, 
+        "hep-ex/0102030", 
+        "ins553002", 
+        null, 
+        [
+            "SLAC-PUB-8777", 
+            "BABAR-PUB-01-01"
+        ]
+    ], 
+    "556049": [
+        "Measurement of the decays $B \\to \\phi K$ and $B \\to \\phi K^*$", 
+        "BaBar", 
+        "10.1103/PhysRevLett.87.151801", 
+        null, 
+        "hep-ex/0105001", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-8823", 
+            "BABAR-PUB-01-11"
+        ]
+    ], 
+    "557007": [
+        "Measurement of branching fractions and search for CP-violating charge asymmetries in charmless two-body $B$ decays into pions and kaons", 
+        "BaBar", 
+        "10.1103/PhysRevLett.87.151802", 
+        null, 
+        "hep-ex/0105061", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-8838", 
+            "BABAR-PUB-01-10"
+        ]
+    ], 
+    "558091": [
+        "Measurement of $J/\\psi$ production in continuum $e^+e^-$ annihilations near $\\sqrt{s}=10.6$ GeV", 
+        "BaBar", 
+        "10.1103/PhysRevLett.87.162002", 
+        null, 
+        "hep-ex/0106044", 
+        "ins558091", 
+        null, 
+        [
+            "BABAR-PUB-01-12", 
+            "SLAC-PUB-8854"
+        ]
+    ], 
+    "559625": [
+        "Observation of CP violation in the $B^0$ meson system", 
+        "BaBar", 
+        "10.1103/PhysRevLett.87.091801", 
+        null, 
+        "hep-ex/0107013", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-8904", 
+            "BABAR-PUB-01-18"
+        ]
+    ], 
+    "559767": [
+        "Measurement of the $B^0$ and $B^+$ meson lifetimes with fully reconstructed hadronic final states", 
+        "BaBar", 
+        "10.1103/PhysRevLett.87.201803", 
+        null, 
+        "hep-ex/0107019", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-8847", 
+            "BABAR-PUB-01-06"
+        ]
+    ], 
+    "560349": [
+        "Measurement of the $B \\to J/\\psi K^*(892)$ decay amplitudes", 
+        "BaBar", 
+        "10.1103/PhysRevLett.87.241801", 
+        null, 
+        "hep-ex/0107049", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-8898", 
+            "BABAR-PUB-01-05"
+        ]
+    ], 
+    "560551": [
+        "Search for the decay $B^0 \\to \\gamma \\gamma$", 
+        "BaBar", 
+        "10.1103/PhysRevLett.87.241803", 
+        null, 
+        "hep-ex/0107068", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-8931", 
+            "BABAR-PUB-01-16"
+        ]
+    ], 
+    "561241": [
+        "Measurements of the branching fractions of exclusive charmless $B$ meson decays with $\\eta^\\prime$ or $\\omega$ mesons", 
+        "BaBar", 
+        "10.1103/PhysRevLett.87.221802", 
+        null, 
+        "hep-ex/0108017", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-8956", 
+            "BABAR-PUB-01-15"
+        ]
+    ]
+}

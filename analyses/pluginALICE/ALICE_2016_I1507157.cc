@@ -4,133 +4,146 @@
 #include "Rivet/Projections/PrimaryParticles.hh"
 #include "Rivet/Projections/ChargedFinalState.hh"
 #include "Rivet/Projections/EventMixingFinalState.hh"
+
 namespace Rivet {
 
 
-  /// @brief ALICE correlations of identified particles in pp
+  /// @brief Angular correlations of identified particles in pp at 7 TeV.
+  ///
   /// Also showcasing use of EventMixingFinalState.
   class ALICE_2016_I1507157 : public Analysis {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(ALICE_2016_I1507157);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ALICE_2016_I1507157);
 
 
     /// @name Analysis methods
-    //@{
+    /// @{
+
+    /// @brief Calculate angular distance between particles.
+    double phaseDif(double a1, double a2, const pair<double, double>& edges) {
+      double dif = a1 - a2;
+      while (dif < edges.first)
+        dif += 2*M_PI;
+      while (dif > edges.second)
+        dif -= 2*M_PI;
+      return dif;
+    }
+
+
+    /// @brief Get the minimal and maximal x values from a Scatter2D (refdata).
+    pair<double, double> xEdges(const YODA::Scatter2D& h) {
+      double xMin = 0;
+      double xMax = 0;
+      for (const auto& p : h.points()) {
+        if (xMin > p.xMin()) xMin = p.xMin();
+        if (xMax < p.xMax()) xMax = p.xMax();
+      }
+      return {xMin, xMax};
+    }
+
 
     /// Book histograms and initialise projections before the run
     void init() {
 
-      double etamax = 0.8;
-      double pTmin = 0.5; // GeV
+      const double etamax = 0.8;
+      const double pTmin = 0.2; // GeV
+      const double pTmax = 2.5; //GeV
 
-      // Trigger
+      // Trigger projection.
       declare(ALICE::V0AndTrigger(), "V0-AND");
       // Charged tracks used to manage the mixing observable.
       ChargedFinalState cfsMult(Cuts::abseta < etamax);
-      addProjection(cfsMult, "CFSMult");
+      declare(cfsMult, "CFSMult");
 
       // Primary particles.
       PrimaryParticles pp({Rivet::PID::PIPLUS, Rivet::PID::KPLUS,
-            Rivet::PID::K0S, Rivet::PID::K0L, Rivet::PID::PROTON,
-            Rivet::PID::NEUTRON, Rivet::PID::LAMBDA, Rivet::PID::SIGMAMINUS,
-            Rivet::PID::SIGMAPLUS, Rivet::PID::XIMINUS, Rivet::PID::XI0,
-            Rivet::PID::OMEGAMINUS},Cuts::abseta < etamax && Cuts::pT > pTmin*GeV);
-      addProjection(pp,"APRIM");
+	      Rivet::PID::K0S, Rivet::PID::K0L, Rivet::PID::PROTON,
+	      Rivet::PID::NEUTRON, Rivet::PID::LAMBDA, Rivet::PID::SIGMAMINUS,
+       	Rivet::PID::SIGMAPLUS, Rivet::PID::XIMINUS, Rivet::PID::XI0,
+	      Rivet::PID::OMEGAMINUS},Cuts::abseta < etamax && 
+        Cuts::pT > pTmin*GeV && Cuts::pT < pTmax*GeV);
+      declare(pp,"APRIM");
 
       // The event mixing projection
-      declare(EventMixingFinalState(cfsMult, pp, 5, 0, 100, 10),"EVM");
+      declare(EventMixingFinalState(cfsMult, pp, 5, 0, 100, 10, defaultWeightIndex()),"EVM");
       // The particle pairs.
       pid = {{211, -211}, {321, -321}, {2212, -2212}, {3122, -3122}, {211, 211},
              {321, 321}, {2212, 2212}, {3122, 3122}, {2212, 3122}, {2212, -3122}};
+      // The differing pT cuts per pair, in GeV.
+      pTcuts = {{0.2, 0.2},{0.3, 0.3},{0.5,0.5},{0.6,0.6},{0.2,0.2},
+	      {0.3,0.3},{0.5,0.5},{0.6,0.6},{0.5,0.6},{0.5,0.6}};
       // The associated histograms in the data file.
       vector<string> refdata = {"d04-x01-y01","d04-x01-y02","d04-x01-y03",
-                                "d06-x01-y02","d05-x01-y01","d05-x01-y02","d05-x01-y03","d06-x01-y01",
-                                "d01-x01-y02","d02-x01-y02"};
+        "d06-x01-y02","d05-x01-y01","d05-x01-y02","d05-x01-y03","d06-x01-y01",
+        "d01-x01-y02","d02-x01-y02"};
+      // Resize all the analysis object containers to right size.
+      ratio.resize(refdata.size());
+      signal.resize(refdata.size());
+      background.resize(refdata.size());
+      nsp.resize(refdata.size());
+      nmp.resize(refdata.size());
       for (int i = 0, N = refdata.size(); i < N; ++i) {
+        const YODA::Scatter2D& tmp = refData(refdata[i]);
         // The ratio plots.
-        ratio.push_back(bookScatter2D(refdata[i], true));
-        // Signal and mixed background.
-        signal.push_back(bookHisto1D("/TMP/" + refdata[i] +
-                                     "-s", *ratio[i], refdata[i] + "-s"));
-        background.push_back(bookHisto1D("/TMP/" + refdata[i] +
-                                         "-b", *ratio[i], refdata[i] + "-b"));
-        // Number of signal and mixed pairs.
-        nsp.push_back(0.);
-        nmp.push_back(0.);
+        book(ratio[i], refdata[i], true);
+        // Signal and mixed background should not be displayed.
+        book(signal[i], "TMP/" + refdata[i] + "-s", tmp);
+        book(background[i], "TMP/" + refdata[i] + "-b", tmp);
+        // Number of signal and mixed pairs for normalization.
+        book(nsp[i],"TMP/nsp"+std::to_string(i));
+        book(nmp[i],"TMP/nmp"+std::to_string(i));
+        // The differing deltaphi histogram edges per pair.
+        deltaphi.push_back(xEdges(tmp));
       }
+    }
+
+
+    void fillPair(const Particle& p1, const Particle& p2, vector<Histo1DPtr>& histos, 
+      vector<CounterPtr>& sow) {
+	   if (isSame(p1,p2)) return;
+          // If the pair is not within eta acceptance, we can continue early.
+          if (abs(p1.eta() - p2.eta()) > 1.3) return;
+          // Figure out which pid pair we are looking at.
+          int iPair = -1;
+          for (int i = 0, N = pid.size(); i < N; ++i) {
+            if (pid[i].first == p1.pid() && pid[i].second == p2.pid()) {
+              iPair = i;
+              break;
+            }
+          }
+          // If the pair is not in the analysis, don't fill anything.
+          if (iPair < 0) return;
+          // Apply min pT cuts, varies for different species.
+          if (p1.pT() < pTcuts[iPair].first || p2.pT() < pTcuts[iPair].second) return;
+          const double dPhi = phaseDif(p1.phi(), p2.phi(), deltaphi[iPair]);
+          histos[iPair]->fill(dPhi);
+          sow[iPair]->fill();
     }
 
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-      const double weight = event.weight();
-
-      // Triggering
+      // Triggering.
       if (!apply<ALICE::V0AndTrigger>(event, "V0-AND")()) return;
 
-      // The primary particles
-      const PrimaryParticles& pp = apply<PrimaryParticles>(event, "APRIM");
-      const Particles pparticles = pp.particles();
+      // The projections for signal and mixed event background.
+      const PrimaryParticles& pp = 
+        applyProjection<PrimaryParticles>(event,"APRIM");
+      const EventMixingFinalState& evm = 
+        applyProjection<EventMixingFinalState>(event, "EVM");
 
-      // The mixed events
-      const EventMixingFinalState& evm = apply<EventMixingFinalState>(event, "EVM");
-      const vector<Particles> mixEvents = evm.getMixingEvents();
-      if (mixEvents.empty()) vetoEvent;
+      // Test if we have enough mixing events available to continue.
+      if (!evm.hasMixingEvents()) return;
 
-      // Make a vector of mixed event particles
-      vector<Particle> mixParticles;
-      size_t pSize = 0;
-      for (size_t i = 0; i < mixEvents.size(); ++i)
-        pSize += mixEvents[i].size();
-      mixParticles.reserve(pSize);
-      for (size_t i = 0; i < mixEvents.size(); ++i)
-        mixParticles.insert(mixParticles.end(), mixEvents[i].begin(), mixEvents[i].end());
-      random_shuffle(mixParticles.begin(), mixParticles.end());
-
-      for (size_t ip1 = 0; ip1 < pparticles.size()-1; ++ip1) {
-        const Particle& p1 = pparticles[ip1];
-
-        // Start by doing the signal distributions
-        for (size_t ip2 = 0; ip2 < pparticles.size(); ++ip1) {
-          if (ip1 == ip2) continue;
-          const Particle& p2 = pparticles[ip2];
-          const double dEta = deltaEta(p1, p2);
-          const double dPhi = deltaPhi(p1, p2, true);
-          if (dEta > 1.3) continue;
-          for (int i = 0, N = pid.size(); i < N; ++i) {
-            const int pid1 = pid[i].first;
-            const int pid2 = pid[i].second;
-            const bool samesign = (pid1 * pid2 > 0);
-            const bool pidmatch1 = (pid1 == p1.pid() && pid2 == p2.pid()) || (pid1 == -p1.pid() && pid2 == -p2.pid());
-            const bool pidmatch2 = abs(pid1) == abs(pid2) && pid1 == p1.pid() && pid2 == p2.pid();
-            const bool pidmatch3 = abs(pid1) != abs(pid2) && ( (pid1 == p1.pid() && pid2 == p2.pid()) || (pid2 == p1.pid() && pid1 == p2.pid()) );
-            if ((samesign && pidmatch1) || (!samesign && (pidmatch2 || pidmatch3))) {
-              signal[i]->fill(dPhi, weight);
-              nsp[i] += 1.0;
-            }
-          }
-        }
-
-        // Then do the background distribution
-        for (const Particle& pMix : mixParticles){
-          const double dEta = deltaEta(p1, pMix);
-          const double dPhi = deltaPhi(p1, pMix, true);
-          if (dEta > 1.3) continue;
-          for (int i = 0, N = pid.size(); i < N; ++i) {
-            const int pid1 = pid[i].first;
-            const int pid2 = pid[i].second;
-            const bool samesign = (pid1 * pid2 > 0);
-            const bool pidmatch1 = (pid1 == p1.pid() && pid2 == pMix.pid()) || (pid1 == -p1.pid() && pid2 == -pMix.pid());
-            const bool pidmatch2 = abs(pid1) == abs(pid2) && pid1 == p1.pid() && pid2 == pMix.pid();
-            const bool pidmatch3 = abs(pid1) != abs(pid2) && ( (pid1 == p1.pid() && pid2 == pMix.pid()) || (pid2 == p1.pid() && pid1 == pMix.pid()) );
-            if ((samesign && pidmatch1) || (!samesign && (pidmatch2 || pidmatch3))) {
-              background[i]->fill(dPhi, weight);
-              nmp[i] += 1.0;
-            }
-          }
-        }
+      for (const Particle& p1 : pp.particles()) {
+	      // First do the signal histograms. 
+        for (const Particle& p2 : pp.particles())
+	        fillPair(p1, p2, signal, nsp);
+	      // Then do the background
+        for (const Particle& p2 : evm.particles())
+	        fillPair(p1, p2, background, nmp);
       }
     }
 
@@ -138,30 +151,32 @@ namespace Rivet {
     /// Normalise histograms etc., after the run
     void finalize() {
       for (int i = 0, N = pid.size(); i < N; ++i) {
-        const double sc = nmp[i] / nsp[i];
+	    // Scaling factor eqns. (2)-(5) in the paper.
+        double sc = nmp[i]->sumW() / nsp[i]->sumW();
         signal[i]->scaleW(sc);
         divide(signal[i],background[i],ratio[i]);
       }
     }
 
-    //@}
+    /// @}
 
 
-    /// @name Histograms
-    //@{
+    /// Analysis variables.
     vector<pair<int, int> > pid;
+    vector<pair<double, double> > pTcuts;
+    vector<pair<double, double> > deltaphi;
+    /// @name Histograms and counters
+    /// @{
     vector<Histo1DPtr> signal;
     vector<Histo1DPtr> background;
     vector<Scatter2DPtr> ratio;
-    vector<double> nsp;
-    vector<double> nmp;
-
-    //@}
-
-
+    vector<CounterPtr> nsp;
+    vector<CounterPtr> nmp;
+    /// @}
   };
 
 
-  DECLARE_RIVET_PLUGIN(ALICE_2016_I1507157);
+  // The hook for the plugin system
+  RIVET_DECLARE_PLUGIN(ALICE_2016_I1507157);
 
 }

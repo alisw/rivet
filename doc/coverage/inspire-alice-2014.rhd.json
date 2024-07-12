@@ -1,0 +1,286 @@
+{
+    "1243865": [
+        "Multi-strange baryon production at mid-rapidity in Pb-Pb collisions at $\\sqrt{s_{NN}}$ = 2.76 TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2014.05.052", 
+        "1563672", 
+        "1307.5543", 
+        "ins1243865", 
+        null, 
+        [
+            "CERN-PH-EP-2013-134"
+        ]
+    ], 
+    "1244523": [
+        "Multiplicity Dependence of Pion, Kaon, Proton and Lambda Production in p-Pb Collisions at $\\sqrt{s_{NN}}$ = 5.02 TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2013.11.020", 
+        "1564748", 
+        "1307.6796", 
+        "ins1244523", 
+        null, 
+        [
+            "CERN-PH-EP-2013-135"
+        ]
+    ], 
+    "1251898": [
+        "$J/\\psi$ production and nuclear effects in p-Pb collisions at $\\sqrt{S_{NN}}$ = 5.02 TeV", 
+        "ALICE", 
+        "10.1007/JHEP02(2014)073", 
+        "1591637", 
+        "1308.6726", 
+        "ins1251898", 
+        null, 
+        [
+            "CERN-PH-EP-2013-163", 
+            "ALICE-PUBLIC-2013-002"
+        ]
+    ], 
+    "1262523": [
+        "Two- and three-pion quantum statistics correlations in Pb-Pb collisions at $\\sqrt{{s}_{NN}} =$ 2.76 TeV at the CERN Large Hadron Collider", 
+        "ALICE", 
+        "10.1103/PhysRevC.89.024911", 
+        "1622088", 
+        "1310.7808", 
+        "ins1262523", 
+        null, 
+        [
+            "CERN-PH-EP-2013-201"
+        ]
+    ], 
+    "1263062": [
+        "Centrality, rapidity and transverse momentum dependence of $J/\\psi$ suppression in Pb-Pb collisions at $\\sqrt{s_{\\rm NN}}$=2.76 TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2014.05.064", 
+        "1623945", 
+        "1311.0214", 
+        "ins1263062", 
+        null, 
+        [
+            "CERN-PH-EP-2013-203"
+        ]
+    ], 
+    "1263194": [
+        "Measurement of charged jet suppression in Pb-Pb collisions at $\\sqrt{s_{NN}}$ = 2.76 TeV", 
+        "ALICE", 
+        "10.1007/JHEP03(2014)013", 
+        "1624179", 
+        "1311.0633", 
+        "ins1263194", 
+        null, 
+        [
+            "CERN-PH-EP-2013-205"
+        ]
+    ], 
+    "1276299": [
+        "Production of charged pions, kaons and protons at large transverse momenta in pp and Pb\u2013Pb collisions at $\\sqrt{s_{\\rm NN}}$ =2.76 TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2014.07.011", 
+        "1641336", 
+        "1401.1250", 
+        "ins1276299", 
+        null, 
+        [
+            "CERN-PH-EP-2013-230"
+        ]
+    ], 
+    "1281831": [
+        "Performance of the ALICE Experiment at the CERN LHC", 
+        "ALICE", 
+        "10.1142/S0217751X14300440", 
+        "1648854", 
+        "1402.4476", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2014-031"
+        ]
+    ], 
+    "1285950": [
+        "Measurement of quarkonium production at forward rapidity in $pp$ collisions at $\\sqrt{s} = 7$ TeV", 
+        "ALICE", 
+        "10.1140/epjc/s10052-014-2974-4", 
+        "1666708", 
+        "1403.3648", 
+        "ins1285950", 
+        null, 
+        [
+            "CERN-PH-EP-2014-042"
+        ]
+    ], 
+    "1288705": [
+        "Freeze-out radii extracted from three-pion cumulants in pp, p\u2013Pb and Pb\u2013Pb collisions at the LHC", 
+        "ALICE", 
+        "10.1016/j.physletb.2014.10.034", 
+        "1690314", 
+        "1404.1194", 
+        "ins1288705", 
+        null, 
+        [
+            "CERN-PH-EP-2014-062", 
+            "ALICE-PUBLIC-2014-003"
+        ]
+    ], 
+    "1294934": [
+        "Measurement of visible cross sections in proton-lead collisions at $\\sqrt{s_{\\rm NN}}$ = 5.02 TeV in van der Meer scans with the ALICE detector", 
+        "ALICE", 
+        "10.1088/1748-0221/9/11/P11003", 
+        "1700665", 
+        "1405.1849", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2014-087"
+        ]
+    ], 
+    "1294938": [
+        "Azimuthal anisotropy of D meson production in Pb-Pb collisions at $\\sqrt{s_{\\rm NN}} = 2.76$ TeV", 
+        "ALICE", 
+        "10.1103/PhysRevC.90.034904", 
+        "1700395", 
+        "1405.2001", 
+        "ins1294938", 
+        null, 
+        [
+            "CERN-PH-EP-2014-083"
+        ]
+    ], 
+    "1295687": [
+        "Transverse momentum dependence of inclusive primary charged-particle production in p-Pb collisions at $\\sqrt{s_\\mathrm{{NN}}}=5.02~\\text {TeV}$", 
+        "ALICE", 
+        "10.1140/epjc/s10052-014-3054-5", 
+        "1700964", 
+        "1405.2737", 
+        "ins1295687", 
+        null, 
+        [
+            "CERN-PH-EP-2014-088"
+        ]
+    ], 
+    "1296081": [
+        "Measurement of prompt $D$-meson production in $p-Pb$ collisions at $\\sqrt{s_{NN}}$ = 5.02 TeV", 
+        "ALICE", 
+        "10.1103/PhysRevLett.113.232301", 
+        "1701894", 
+        "1405.3452", 
+        "ins1296081", 
+        null, 
+        [
+            "CERN-PH-EP-2014-090", 
+            "CERN-PH-EP-2014-90", 
+            "ALICE-PUBLIC-2015-001"
+        ]
+    ], 
+    "1296306": [
+        "Neutral pion production at midrapidity in pp and Pb-Pb collisions at $\\sqrt{s_{{\\mathrm {NN}}}}= 2.76\\,{\\mathrm {TeV}}$", 
+        "ALICE", 
+        "10.1140/epjc/s10052-014-3108-8", 
+        "1702183", 
+        "1405.3794", 
+        "ins1296306", 
+        null, 
+        [
+            "CERN-PH-EP-2014-091"
+        ]
+    ], 
+    "1296307": [
+        "Suppression of $\\psi$(2S) production in p-Pb collisions at $\\sqrt{s_{\\rm NN}}$ = 5.02 TeV", 
+        "ALICE", 
+        "10.1007/JHEP12(2014)073", 
+        "1702184", 
+        "1405.3796", 
+        "ins1296307", 
+        null, 
+        [
+            "CERN-PH-EP-2014-092"
+        ]
+    ], 
+    "1296861": [
+        "Beauty production in pp collisions at $\\sqrt{s}$ = 2.76 TeV measured via semi-electronic decays", 
+        "ALICE", 
+        "10.1016/j.physletb.2014.09.026", 
+        "1702572", 
+        "1405.4144", 
+        "ins1296861", 
+        null, 
+        [
+            "CERN-PH-EP-2014-089"
+        ]
+    ], 
+    "1297101": [
+        "Suppression of $\\Upsilon (1S)$ at forward rapidity in Pb-Pb collisions at $\\sqrt{s_{\\rm NN}} = 2.76$ TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2014.10.001", 
+        "1702834", 
+        "1405.4493", 
+        "ins1297101", 
+        null, 
+        [
+            "CERN-PH-EP-2014-103", 
+            "ALICE-PUBLIC-2014-001"
+        ]
+    ], 
+    "1300038": [
+        "Multiparticle azimuthal correlations in p -Pb and Pb-Pb collisions at the CERN Large Hadron Collider", 
+        "ALICE", 
+        "10.1103/PhysRevC.90.054901", 
+        "1708647", 
+        "1406.2474", 
+        "ins1300038", 
+        null, 
+        [
+            "CERN-PH-EP-2014-105"
+        ]
+    ], 
+    "1303903": [
+        "Exclusive $\\mathrm{J/}\\psi$ photoproduction off protons in ultra-peripheral p-Pb collisions at $\\sqrt{s_{\\rm NN}}=5.02$ TeV", 
+        "ALICE", 
+        "10.1103/PhysRevLett.113.232504", 
+        "1712778", 
+        "1406.7819", 
+        "ins1303903", 
+        null, 
+        [
+            "CERN-PH-EP-2014-149"
+        ]
+    ], 
+    "1305020": [
+        "Upgrade of the ALICE Experiment: Letter Of Intent", 
+        "ALICE", 
+        "10.1088/0954-3899/41/8/087001", 
+        "1475243", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-LHCC-2012-012", 
+            "CERN-LHCC-I-022", 
+            "ALICE-UG-001"
+        ]
+    ], 
+    "1305021": [
+        "Technical Design Report for the Upgrade of the ALICE Inner Tracking System", 
+        "ALICE", 
+        "10.1088/0954-3899/41/8/087002", 
+        "1625842", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-LHCC-2013-024", 
+            "ALICE-TDR-017"
+        ]
+    ], 
+    "1307102": [
+        "Event-by-event mean ${p}_{\\mathbf {T}}$ fluctuations in pp and Pb-Pb collisions at the LHC", 
+        "ALICE", 
+        "10.1140/epjc/s10052-014-3077-y", 
+        "1741643", 
+        "1407.5530", 
+        "ins1307102", 
+        null, 
+        [
+            "CERN-PH-EP-2014-169"
+        ]
+    ]
+}

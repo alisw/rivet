@@ -1,0 +1,50 @@
+{
+    "222219": [
+        "Observation of a New Charmed Meson.", 
+        "ARGUS", 
+        "10.1103/PhysRevLett.56.549", 
+        null, 
+        null, 
+        "ins222219", 
+        null, 
+        [
+            "DESY-85-119"
+        ]
+    ], 
+    "222610": [
+        "Search for Gluinos in Decays of the Chi($b$) (1 $p$ Wave Triplet) Meson", 
+        "ARGUS", 
+        "10.1016/0370-2693(86)90361-8", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-85/129"
+        ]
+    ], 
+    "227324": [
+        "An Upper Limit for Two Jet Production in Direct $\\Upsilon$ (1s) Decays", 
+        "ARGUS", 
+        "10.1007/BF01479524", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-86-002"
+        ]
+    ], 
+    "230951": [
+        "Determination of the Branching Ratio for the Decay B0 $\\to D^*- \\pi^+$", 
+        "ARGUS", 
+        "10.1016/0370-2693(86)91084-1", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-86-074"
+        ]
+    ]
+}

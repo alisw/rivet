@@ -1,0 +1,29 @@
+{
+    "1710347": [
+        "Elastic differential cross-section ${\\mathrm{d}}\\sigma /{\\mathrm{d}}t$ at $\\sqrt{s}=2.76\\hbox { TeV}$ and implications on the existence of a colourless C-odd three-gluon compound state", 
+        "TOTEM", 
+        "10.1140/epjc/s10052-020-7654-y", 
+        "2651236", 
+        "1812.08610", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2018-341", 
+            "TOTEM-2018-002"
+        ]
+    ], 
+    "1782637": [
+        "Measurement of single-diffractive dijet production in proton-proton collisions at $\\sqrt{s} =$ 8 TeV with the CMS and TOTEM experiments", 
+        "CMS", 
+        "10.1140/epjc/s10052-020-08562-y", 
+        "2711611", 
+        "2002.12146", 
+        "ins1782637", 
+        null, 
+        [
+            "CMS-FSQ-12-033", 
+            "TOTEM-2020-001", 
+            "CERN-EP-2019-260"
+        ]
+    ]
+}

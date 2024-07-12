@@ -1,0 +1,42 @@
+{
+    "813821": [
+        "Measurement of the branching fractions for J/psi ---> p anti-p eta and p anti-p eta-prime", 
+        "BES", 
+        "10.1016/j.physletb.2009.04.066", 
+        null, 
+        "0902.3501", 
+        null, 
+        null, 
+        []
+    ], 
+    "814778": [
+        "R value measurements for e+ e- annihilation at 2.60-GeV, 3.07-GeV and 3.65-GeV", 
+        "BES", 
+        "10.1016/j.physletb.2009.05.055", 
+        null, 
+        "0903.0900", 
+        "ins814778", 
+        null, 
+        []
+    ], 
+    "819937": [
+        "Partial wave analysis of J/psi ---> p anti-p pi0", 
+        "BES", 
+        "10.1103/PhysRevD.80.052004", 
+        null, 
+        "0905.1562", 
+        null, 
+        null, 
+        []
+    ], 
+    "835937": [
+        "Experimental studies of e+ e- ---> some charmless processes containing K0(S) at s**(1/2) = 3.773-GeV and 3.65-GeV", 
+        "BES", 
+        "10.1140/epjc/s10052-009-1157-1", 
+        null, 
+        null, 
+        null, 
+        null, 
+        []
+    ]
+}

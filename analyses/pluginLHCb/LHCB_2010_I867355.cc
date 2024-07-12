@@ -14,28 +14,26 @@ namespace Rivet {
     void init() {
 
       //@ Results are presented for two different fragmentation functions, LEP and Tevatron. Therefore, we have two sets of histograms.
-      _h_sigma_vs_eta_lep = bookHisto1D(1, 1, 1);
-      _h_sigma_vs_eta_tvt = bookHisto1D(1, 1, 2);
-      _h_sigma_total_lep  = bookHisto1D(2, 1, 1);
-      _h_sigma_total_tvt  = bookHisto1D(2, 1, 2);
+      book(_h_sigma_vs_eta_lep ,1, 1, 1);
+      book(_h_sigma_vs_eta_tvt ,1, 1, 2);
+      book(_h_sigma_total_lep  ,2, 1, 1);
+      book(_h_sigma_total_tvt  ,2, 1, 2);
 
     }
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-      double weight = event.weight();
-
       Particles bhadrons;
-      foreach (const GenParticle* p, particles(event.genEvent())) {
+      for(ConstGenParticlePtr p: HepMCUtils::particles(event.genEvent())) {
         if (!( PID::isHadron( p->pdg_id() ) && PID::hasBottom( p->pdg_id() )) ) continue;
 
-        const GenVertex* dv = p->end_vertex();
+        ConstGenVertexPtr dv = p->end_vertex();
 
         bool hasBdaughter = false;
         if ( PID::isHadron( p->pdg_id() ) && PID::hasBottom( p->pdg_id() )) { // selecting b-hadrons
           if (dv) {
-            for (GenVertex::particles_out_const_iterator pp = dv->particles_out_const_begin() ; pp != dv->particles_out_const_end() ; ++pp) {
-              if (PID::isHadron( (*pp)->pdg_id() ) && PID::hasBottom( (*pp)->pdg_id() )) {
+            for (ConstGenParticlePtr pp: HepMCUtils::particles(dv, Relatives::CHILDREN)){
+              if (PID::isHadron(pp->pdg_id() ) && PID::hasBottom(pp->pdg_id() )) {
                 hasBdaughter = true;
               }
             }
@@ -46,16 +44,16 @@ namespace Rivet {
         bhadrons += Particle(*p);
       }
 
-      foreach (const Particle& particle, bhadrons) {
+      for (const Particle& particle : bhadrons) {
 
         // take fabs() to use full statistics and then multiply weight by 0.5 because LHCb is single-sided
         double eta = fabs(particle.eta());
 
-        _h_sigma_vs_eta_lep->fill( eta, 0.5*weight );
-        _h_sigma_vs_eta_tvt->fill( eta, 0.5*weight );
+        _h_sigma_vs_eta_lep->fill( eta, 0.5 );
+        _h_sigma_vs_eta_tvt->fill( eta, 0.5 );
 
-        _h_sigma_total_lep->fill( eta, 0.5*weight ); // histogram for full kinematic range
-        _h_sigma_total_tvt->fill( eta, 0.5*weight ); // histogram for full kinematic range
+        _h_sigma_total_lep->fill( eta, 0.5 ); // histogram for full kinematic range
+        _h_sigma_total_tvt->fill( eta, 0.5 ); // histogram for full kinematic range
 
       }
 
@@ -85,6 +83,6 @@ namespace Rivet {
 
 
   // Hook for the plugin system
-  DECLARE_RIVET_PLUGIN(LHCB_2010_I867355);
+  RIVET_DECLARE_PLUGIN(LHCB_2010_I867355);
 
 }

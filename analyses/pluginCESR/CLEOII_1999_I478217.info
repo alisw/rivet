@@ -1,0 +1,38 @@
+Name: CLEOII_1999_I478217
+Year: 1999
+Summary: Spectra for $\Xi_c^{\prime}$ at 10.58 GeV
+Experiment: CLEOII
+Collider: CESR
+InspireID: 478217
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 82 (1999) 492-496
+RunInfo: e+e- to hadrons 
+Beams: [e+, e-]
+Energies: [10.58]
+Description:
+  'Spectrum for the average of $\Xi_c^{\prime0}$ and $\Xi_c^{\prime+}$ produced at 10.58 GeV measured by CLEOII.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Jessop:1998wt
+BibTeX: '@article{Jessop:1998wt,
+      author         = "Jessop, C. P. and others",
+      title          = "{Observation of two narrow states decaying into xi+(c)
+                        gamma and xi0(c) gamma}",
+      collaboration  = "CLEO",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "82",
+      year           = "1999",
+      pages          = "492-496",
+      doi            = "10.1103/PhysRevLett.82.492",
+      eprint         = "hep-ex/9810036",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "SLAC-REPRINT-1998-100, CLNS-98-1581, CLEO-98-13",
+      SLACcitation   = "%%CITATION = HEP-EX/9810036;%%"
+}'

@@ -4,62 +4,56 @@
 namespace Rivet {
 
 
-  int LeadingParticlesFinalState::compare(const Projection& p) const {
+  CmpState LeadingParticlesFinalState::compare(const Projection& p) const {
     // First compare the final states we are running on
-    int fscmp = mkNamedPCmp(p, "FS");
-    if (fscmp != EQUIVALENT) return fscmp;
+    CmpState fscmp = mkNamedPCmp(p, "FS");
+    if (fscmp != CmpState::EQ) return fscmp;
 
     // Then compare the two as final states
     const LeadingParticlesFinalState& other = dynamic_cast<const LeadingParticlesFinalState&>(p);
     fscmp = FinalState::compare(other);
-    if (fscmp != EQUIVALENT) return fscmp;
+    if (fscmp != CmpState::EQ) return fscmp;
 
-    int locmp = cmp(_leading_only, other._leading_only);
-    if (locmp != EQUIVALENT) return locmp;
+    CmpState locmp = cmp(_leading_only, other._leading_only);
+    if (locmp != CmpState::EQ) return locmp;
 
     // Finally compare the IDs
-    if (_ids < other._ids) return ORDERED;
-    else if (other._ids < _ids) return UNORDERED;
-    return EQUIVALENT;
+    if (_ids == other._ids) return CmpState::EQ;
+    return CmpState::NEQ;
   }
 
 
   void LeadingParticlesFinalState::project(const Event & e) {
     _theParticles.clear();
     const FinalState& fs = applyProjection<FinalState>(e, "FS");
-
-    // Temporary container
-    map<long, Particles::const_iterator> tmp;
-
     const Particles& particles = fs.particles();
     MSG_DEBUG("Original final state particles size " << particles.size());
-    Particles::const_iterator ifs;
-    for (ifs = particles.begin(); ifs != particles.end(); ++ifs) {
-      if (inList(*ifs) && FinalState::accept(*ifs->genParticle())) {
+
+    map<PdgId, const Particle*> tmp;
+    for (const Particle& p : particles) {
+      const PdgId pid = p.pid();
+      // If it's a PID we're looking for, and passes the cuts
+      if (_ids.find(pid) != _ids.end() && FinalState::accept(p.genParticle())) {
         // Look for an existing particle in tmp container
-        map < long, Particles::const_iterator >::const_iterator itmp = tmp.find(ifs->pid());
-        if (itmp != tmp.end()) {  // if a particle with this type has been already selected
+        if (tmp.find(pid) != tmp.end()) { // if a particle with this type has been already selected
+          const Particle& p2 = *tmp.find(pid)->second;
           // If the new pT is higher than the previous one, then substitute...
-          if (ifs->pT() > itmp->second->pT()) {
-            tmp[ifs->pid()] = ifs;
-          }
-          // ...otherwise insert in the container
+          if (p.pT() > p2.pT()) tmp[pid] = &p;
         } else {
-          tmp[ifs->pid()] = ifs;
+          // ...otherwise insert in the container
+          tmp[pid] = &p;
         }
       }
     }
 
     // Loop on the tmp container and fill _theParticles
-    map<long, Particles::const_iterator>::const_iterator i;
-    for (i = tmp.begin(); i != tmp.end(); ++i) {
-      MSG_DEBUG("LeadingParticlesFinalState is accepting particle ID " << i->second->pid()
-               << " with momentum " << i->second->momentum());
-      _theParticles.push_back(*(i->second));
+    for (const auto& id_p : tmp) {
+      MSG_DEBUG("Accepting particle ID " << id_p.first << " with momentum " << id_p.second->momentum());
+      _theParticles.push_back(*id_p.second);
     }
 
     if (_leading_only) {
-      double ptmax=0.0;
+      double ptmax = 0.0;
       Particle pmax;
 
       for (const Particle& p : _theParticles) {
@@ -72,13 +66,6 @@ namespace Rivet {
       _theParticles.clear();
       _theParticles.push_back(pmax);
     }
-  }
-
-
-  bool LeadingParticlesFinalState::inList(const Particle & particle) const {
-    std::set < long >::const_iterator ilist = _ids.find(particle.pid());
-    if (ilist != _ids.end()) return true;
-    return false;
   }
 
 

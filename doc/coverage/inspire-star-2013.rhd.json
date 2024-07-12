@@ -1,0 +1,105 @@
+{
+    "1117881": [
+        "Single Spin Asymmetry $A_N$ in Polarized Proton-Proton Elastic Scattering at $\\sqrt{s}=200$ GeV", 
+        "STAR", 
+        "10.1016/j.physletb.2013.01.014", 
+        null, 
+        "1206.1928", 
+        "ins1117881", 
+        null, 
+        []
+    ], 
+    "1127499": [
+        "$J/\\psi$ production at high transverse momenta in $p+p$ and Au+Au collisions at $\\sqrt{s_{NN}} = 200$ GeV", 
+        "STAR", 
+        "10.1016/j.physletb.2013.04.010", 
+        null, 
+        "1208.2736", 
+        "ins1127499", 
+        null, 
+        []
+    ], 
+    "1206352": [
+        "Experimental studies of di-jets in Au + Au collisions using angular correlations with respect to back-to-back leading hadrons", 
+        "STAR", 
+        "10.1103/PhysRevC.87.044903", 
+        null, 
+        "1212.1653", 
+        "ins1206352", 
+        null, 
+        []
+    ], 
+    "1207322": [
+        "Measurement of $J/\\psi$ Azimuthal Anisotropy in Au+Au Collisions at $\\sqrt{s_{NN}}$ = 200 GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.111.052301", 
+        null, 
+        "1212.3304", 
+        "ins1207322", 
+        null, 
+        []
+    ], 
+    "1210062": [
+        "Third Harmonic Flow of Charged Particles in Au+Au Collisions at sqrtsNN = 200 GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.88.014904", 
+        null, 
+        "1301.2187", 
+        "ins1210062", 
+        null, 
+        [
+            "LBNL (2013)", 
+            "LBNL-(2013)"
+        ]
+    ], 
+    "1210463": [
+        "Observation of an Energy-Dependent Difference in Elliptic Flow between Particles and Antiparticles in Relativistic Heavy Ion Collisions", 
+        "STAR", 
+        "10.1103/PhysRevLett.110.142301", 
+        null, 
+        "1301.2347", 
+        "ins1210463", 
+        null, 
+        []
+    ], 
+    "1210464": [
+        "Elliptic flow of identified hadrons in Au+Au collisions at $\\sqrt{s_{NN}}=$ 7.7-62.4 GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.88.014902", 
+        null, 
+        "1301.2348", 
+        null, 
+        null, 
+        []
+    ], 
+    "1216565": [
+        "System-size dependence of transverse momentum correlations at $\\sqrt{s_{NN}}=62.4$ and 200 GeV at the BNL Relativistic Heavy Ion Collider", 
+        "STAR", 
+        "10.1103/PhysRevC.87.064902", 
+        null, 
+        "1301.6633", 
+        "ins1216565", 
+        null, 
+        []
+    ], 
+    "1219133": [
+        "Freeze-out dynamics via charged kaon femtoscopy in $\\sqrt{{s}_{NN}}$ = 200 GeV central Au + Au collisions", 
+        "STAR", 
+        "10.1103/PhysRevC.88.034906", 
+        null, 
+        "1302.3168", 
+        "ins1219133", 
+        null, 
+        []
+    ], 
+    "1219828": [
+        "Fluctuations of charge separation  perpendicular to the event plane and local parity violation in $\\sqrt{s_{NN}}=200$ GeV Au+Au  collisions at the BNL Relativistic Heavy Ion Collider", 
+        "STAR", 
+        "10.1103/PhysRevC.88.064911", 
+        null, 
+        "1302.3802", 
+        "ins1219828", 
+        null, 
+        []
+    ]
+}

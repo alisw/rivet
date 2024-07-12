@@ -1,6 +1,7 @@
 // -*- C++ -*-
 #include "Rivet/Analyses/MC_ParticleAnalysis.hh"
-#include "Rivet/Projections/IdentifiedFinalState.hh"
+#include "Rivet/Projections/PromptFinalState.hh"
+#include "Rivet/Projections/DressedLeptons.hh"
 
 namespace Rivet {
 
@@ -14,19 +15,26 @@ namespace Rivet {
     {    }
 
 
-  public:
-
     void init() {
-      IdentifiedFinalState muons;
-      muons.acceptIdPair(PID::MUON);
-      declare(muons, "Muons");
+      const bool direct = getOption<bool>("DIRECT", false);
+      const bool dressed = getOption<bool>("DRESSED", direct);
+      MSG_DEBUG("Direct-only: " << direct << ", dressed: " << dressed);
+      FinalState muons(Cuts::abspid == PID::MUON);
+      if (!direct) {
+        declare(muons, "Muons");
+      } else if (!dressed) {
+        declare(PromptFinalState(muons), "Muons");
+      } else {
+        DressedLeptons dleps(FinalState(Cuts::abspid == PID::PHOTON), muons, 0.1);
+        declare(dleps, "Muons");
+      }
 
       MC_ParticleAnalysis::init();
     }
 
 
     void analyze(const Event& event) {
-      const Particles mus = apply<FinalState>(event, "Muons").particlesByPt(Cuts::pT > 0.5*GeV);
+      const Particles mus = apply<ParticleFinder>(event, "Muons").particlesByPt(Cuts::pT > 0.5*GeV);
       MC_ParticleAnalysis::_analyze(event, mus);
     }
 
@@ -38,7 +46,7 @@ namespace Rivet {
   };
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(MC_MUONS);
+
+  RIVET_DECLARE_PLUGIN(MC_MUONS);
 
 }

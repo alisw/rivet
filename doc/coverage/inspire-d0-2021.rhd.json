@@ -1,0 +1,27 @@
+{
+    "1808883": [
+        "Study of the normalized transverse momentum distribution of $W$ bosons produced in $p \\bar p$ collisions at $\\sqrt {s}$ = 1.96  TeV", 
+        "D0", 
+        "10.1103/PhysRevD.103.012003", 
+        "2725300", 
+        "2007.13504", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-20-354-E"
+        ]
+    ], 
+    "1835311": [
+        "Odderon Exchange from Elastic Scattering Differences between $pp$ and $p \\bar{p}$ Data at 1.96\u00a0TeV and from pp Forward Scattering Measurements", 
+        "TOTEM", 
+        "10.1103/PhysRevLett.127.062003", 
+        "2748561", 
+        "2012.03981", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-20-568-E", 
+            "\u00a0CERN-EP-2020-236"
+        ]
+    ]
+}

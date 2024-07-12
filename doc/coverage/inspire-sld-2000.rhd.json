@@ -1,0 +1,51 @@
+{
+    "509034": [
+        "Search for charmless hadronic decays of B mesons with the SLD detector", 
+        "SLD", 
+        "10.1103/PhysRevD.62.071101", 
+        null, 
+        "hep-ex/9910050", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-8280", 
+            "SCIPP-99-45"
+        ]
+    ], 
+    "512427": [
+        "Precise measurement of the b quark fragmentation function in Z0 boson decays", 
+        "SLD", 
+        "10.1103/PhysRevLett.84.4300", 
+        null, 
+        "hep-ex/9912058", 
+        "ins512427", 
+        null, 
+        [
+            "SLAC-PUB-8316"
+        ]
+    ], 
+    "526448": [
+        "A High precision measurement of the left-right Z boson cross-section asymmetry", 
+        "SLD", 
+        "10.1103/PhysRevLett.84.5945", 
+        null, 
+        "hep-ex/0004026", 
+        "ins526448", 
+        null, 
+        [
+            "SLAC-PUB-8401"
+        ]
+    ], 
+    "528730": [
+        "First direct measurement of the parity violating coupling of the Z0 to the s quark", 
+        "SLD", 
+        "10.1103/PhysRevLett.85.5059", 
+        null, 
+        "hep-ex/0006019", 
+        "ins528730", 
+        null, 
+        [
+            "SLAC-PUB-8408"
+        ]
+    ]
+}

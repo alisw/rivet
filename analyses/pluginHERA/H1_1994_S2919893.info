@@ -6,6 +6,7 @@ Collider: HERA
 SpiresID: 2919893
 InspireID: 372350
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Peter Richardson <peter.richardson@durham.ac.uk>
 References:
@@ -39,3 +40,7 @@ BibTeX: '@Article{Abt:1994ye,
      doi       = "10.1007/BF01580319",
      SLACcitation  = "%%CITATION = ZEPYA,C63,377;%%"
 }'
+
+ReleaseTests:
+ - $A DIS-e--LowQ2
+

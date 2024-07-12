@@ -1,0 +1,36 @@
+Name: BESIII_2017_I1511280
+Year: 2017
+Summary: Mass distributions in the decay $D^0\to K^-\pi^+\pi^+\pi^-$
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1511280
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 95 (2017) 7, 072010
+RunInfo: Any process producing D0 mesons
+Description:
+  'Measurement of the mass distributions in the decay $D^0\to K^-\pi^+\pi^+\pi^-$ by BES. The data were read from the plots in the paper and therefore for some points the error bars are the size of the point. It is also not clear that any resolution effects have been unfolded.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2017jyh
+BibTeX: '@article{BESIII:2017jyh,
+    author = "Ablikim, Medina and others",
+    collaboration = "BESIII",
+    title = "{Amplitude analysis of $D^{0} \rightarrow K^{-} \pi^{+} \pi^{+} \pi^{-}$}",
+    eprint = "1701.08591",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevD.95.072010",
+    journal = "Phys. Rev. D",
+    volume = "95",
+    number = "7",
+    pages = "072010",
+    year = "2017"
+}
+'

@@ -1,6 +1,7 @@
 Name: MC_ZZJETS
 Summary: Monte Carlo validation observables for $Z[e^+ \, e^-]Z[\mu^+ \, \mu^-]$ + jets production
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Frank Siegert <frank.siegert@cern.ch>
 References:
@@ -15,3 +16,7 @@ Description:
   properties of the Z bosons, properties of the leptons, correlations between
   the opposite charge leptons and correlations with jets.
 NeedCrossSection: yes
+
+ReleaseTests:
+ - $A LHC-ZZ-ll
+

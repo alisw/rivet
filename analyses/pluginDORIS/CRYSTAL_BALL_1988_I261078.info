@@ -1,0 +1,35 @@
+Name: CRYSTAL_BALL_1988_I261078
+Year: 1988
+Summary:  Measurement of $R$ for energies between 9.39 GeV
+Experiment: CRYSTAL_BALL
+Collider: DORIS
+InspireID: 261078
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B234 (1990) 525-533, 1990 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: no
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$ in $e^+e^-$ collisions by the Crystal Ball experiment
+   for 9.39  GeV.
+   The individual hadronic and muonic cross sections are also outputted to the yoda file
+   so that ratio $R$ can be recalculated if runs are combined.'
+Keywords: []
+BibKey: Jakubowski:1988cd
+BibTeX: '@article{Jakubowski:1988cd,
+      author         = "Jakubowski, Z. and others",
+      title          = "{Determination of $\gamma (e e$) of the $\Upsilon$ (1s)
+                        and $\Upsilon$ (2s) Resonances and Measurement of R at
+                        $W=9$.39-{GeV}}",
+      collaboration  = "Crystal Ball",
+      journal        = "Z. Phys.",
+      volume         = "C40",
+      year           = "1988",
+      pages          = "49",
+      doi            = "10.1007/BF01559717",
+      reportNumber   = "SLAC-PUB-4567, DESY-88-032",
+      SLACcitation   = "%%CITATION = ZEPYA,C40,49;%%"
+}'

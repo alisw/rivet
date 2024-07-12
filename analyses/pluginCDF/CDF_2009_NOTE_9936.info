@@ -5,6 +5,7 @@ Experiment: CDF
 Collider: Tevatron Run 2
 SpiresID: None
 Status: OBSOLETE
+Reentrant: true
 Authors:
  - Holger Schulz <holger.schulz@physik.hu-berlin.de>
 References:

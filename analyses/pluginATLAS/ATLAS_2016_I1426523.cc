@@ -15,7 +15,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2016_I1426523);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2016_I1426523);
 
 
     /// @name Analysis methods
@@ -38,13 +38,13 @@ namespace Rivet {
       PromptFinalState leptons(fs_z && (Cuts::abspid == PID::ELECTRON || Cuts::abspid == PID::MUON));
       leptons.acceptTauDecays(false);
       DressedLeptons dressedleptons(photons, leptons, 0.1, FS_Zlept, true);
-      addProjection(dressedleptons, "DressedLeptons");
+      declare(dressedleptons, "DressedLeptons");
 
       // Electrons and muons in Total PS
       PromptFinalState leptons_total(Cuts::abspid == PID::ELECTRON || Cuts::abspid == PID::MUON);
       leptons_total.acceptTauDecays(false);
       DressedLeptons dressedleptonsTotal(photons, leptons_total, 0.1, Cuts::open(), true);
-      addProjection(dressedleptonsTotal, "DressedLeptonsTotal");
+      declare(dressedleptonsTotal, "DressedLeptonsTotal");
 
       // Neutrinos
       IdentifiedFinalState nu_id;
@@ -61,24 +61,24 @@ namespace Rivet {
       declare(jets, "Jets");
 
       // Book histograms
-      _h["eee"]        = bookHisto1D(1, 1, 1);
-      _h["mee"]        = bookHisto1D(1, 1, 2);
-      _h["emm"]        = bookHisto1D(1, 1, 3);
-      _h["mmm"]        = bookHisto1D(1, 1, 4);
-      _h["fid"]        = bookHisto1D(1, 1, 5);
-      _h["eee_Plus"]   = bookHisto1D(2, 1, 1);
-      _h["mee_Plus"]   = bookHisto1D(2, 1, 2);
-      _h["emm_Plus"]   = bookHisto1D(2, 1, 3);
-      _h["mmm_Plus"]   = bookHisto1D(2, 1, 4);
-      _h["fid_Plus"]   = bookHisto1D(2, 1, 5);
-      _h["eee_Minus"]  = bookHisto1D(3, 1, 1);
-      _h["mee_Minus"]  = bookHisto1D(3, 1, 2);
-      _h["emm_Minus"]  = bookHisto1D(3, 1, 3);
-      _h["mmm_Minus"]  = bookHisto1D(3, 1, 4);
-      _h["fid_Minus"]  = bookHisto1D(3, 1, 5);
-      _h["total"]      = bookHisto1D(5, 1, 1);
-      _h["Njets"]      = bookHisto1D(27, 1, 1);
-      _h["Njets_norm"] = bookHisto1D(41, 1, 1);
+      book(_h["eee"]       , 1, 1, 1);
+      book(_h["mee"]       , 1, 1, 2);
+      book(_h["emm"]       , 1, 1, 3);
+      book(_h["mmm"]       , 1, 1, 4);
+      book(_h["fid"]       , 1, 1, 5);
+      book(_h["eee_Plus"]  , 2, 1, 1);
+      book(_h["mee_Plus"]  , 2, 1, 2);
+      book(_h["emm_Plus"]  , 2, 1, 3);
+      book(_h["mmm_Plus"]  , 2, 1, 4);
+      book(_h["fid_Plus"]  , 2, 1, 5);
+      book(_h["eee_Minus"] , 3, 1, 1);
+      book(_h["mee_Minus"] , 3, 1, 2);
+      book(_h["emm_Minus"] , 3, 1, 3);
+      book(_h["mmm_Minus"] , 3, 1, 4);
+      book(_h["fid_Minus"] , 3, 1, 5);
+      book(_h["total"]     , 5, 1, 1);
+      book(_h["Njets"]     , 27, 1, 1);
+      book(_h["Njets_norm"], 41, 1, 1);
 
       bookHandler("ZpT",	             12);
       bookHandler("ZpT_Plus",          13);
@@ -113,18 +113,15 @@ namespace Rivet {
     }
 
     void bookHandler(const string& tag, size_t ID) {
-      _s[tag] = bookScatter2D(ID, 1, 1);
-      const string code1 = makeAxisCode(ID, 1, 1);
-      const string code2 = makeAxisCode(ID, 1, 2);
-      _h[tag] = bookHisto1D(code2, refData(code1));
+      book(_s[tag], ID, 1, 1);
+      const string code1 = mkAxisCode(ID, 1, 1);
+      const string code2 = mkAxisCode(ID, 1, 2);
+      book(_h[tag], code2, refData(code1));
     }
 
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-
-      /// @todo Do the event by event analysis here
-      const double weight = event.weight();
 
       const vector<DressedLepton>& dressedleptons = apply<DressedLeptons>(event, "DressedLeptons").dressedLeptons();
       const vector<DressedLepton>& dressedleptonsTotal = apply<DressedLeptons>(event, "DressedLeptonsTotal").dressedLeptons();
@@ -174,20 +171,25 @@ namespace Rivet {
       WeightW3 = 1/(pow(MassW0*MassW0 - MW_PDG*MW_PDG,2) + pow(MW_PDG*GammaW_PDG,2));
       WeightTotal3 = WeightZ3*WeightW3;
       M3 = -1*WeightTotal3;
+      bool found = false;
 
       if( (M1 < M2 && M1 < M3) || (MassZ01 != 0 && MassW2 != 0 && MassZ02 == 0 && MassZ12 == 0) ){
         i = 0; j = 1; k = 2;
+        found = true;
       }
       if( (M2 < M1 && M2 < M3) || (MassZ02 != 0 && MassW1 != 0 && MassZ01 == 0 && MassZ12 == 0) ){
         i = 0; j = 2; k = 1;
+        found = true;
       }
       if( (M3 < M1 && M3 < M2) || (MassZ12 != 0 && MassW0 != 0 && MassZ01 == 0 && MassZ02 == 0) ){
         i = 1; j = 2; k = 0;
+        found = true;
       }
+      if (!found) vetoEvent;
 
       FourMomentum ZbosonTotal   = dressedleptonsTotal[i].momentum()+dressedleptonsTotal[j].momentum();
 
-      if ( (ZbosonTotal.mass() >= 66*GeV) && (ZbosonTotal.mass() <= 116*GeV) ) _h["total"]->fill(8000, weight);
+      if ( (ZbosonTotal.mass() >= 66*GeV) && (ZbosonTotal.mass() <= 116*GeV) ) _h["total"]->fill(8000);
 
       //---end Total PS
 
@@ -242,16 +244,20 @@ namespace Rivet {
       WeightW3 = 1/(pow(MassW0*MassW0 - MW_PDG*MW_PDG,2) + pow(MW_PDG*GammaW_PDG,2));
       WeightTotal3 = WeightZ3*WeightW3;
       M3 = -1*WeightTotal3;
-
+      found = false;
       if( (M1 < M2 && M1 < M3) || (MassZ01 != 0 && MassW2 != 0 && MassZ02 == 0 && MassZ12 == 0) ){
         i = 0; j = 1; k = 2;
+	found=true;
       }
       if( (M2 < M1 && M2 < M3) || (MassZ02 != 0 && MassW1 != 0 && MassZ01 == 0 && MassZ12 == 0) ){
         i = 0; j = 2; k = 1;
+	found=true;
       }
       if( (M3 < M1 && M3 < M2) || (MassZ12 != 0 && MassW0 != 0 && MassZ01 == 0 && MassZ02 == 0) ){
         i = 1; j = 2; k = 0;
+	found=true;
       }
+      if(!found) vetoEvent;
 
       FourMomentum Zlepton1 = dressedleptons[i].momentum();
       FourMomentum Zlepton2 = dressedleptons[j].momentum();
@@ -275,79 +281,79 @@ namespace Rivet {
 
       double AbsDeltay = fabs(Zboson.rapidity()-Wlepton.rapidity());
 
-      if (EventType == 3) _h["eee"]->fill(8000., weight);
-      if (EventType == 2) _h["mee"]->fill(8000., weight);
-      if (EventType == 1) _h["emm"]->fill(8000., weight);
-      if (EventType == 0) _h["mmm"]->fill(8000., weight);
-      _h["fid"]->fill(8000., weight);
+      if (EventType == 3) _h["eee"]->fill(8000.);
+      if (EventType == 2) _h["mee"]->fill(8000.);
+      if (EventType == 1) _h["emm"]->fill(8000.);
+      if (EventType == 0) _h["mmm"]->fill(8000.);
+      _h["fid"]->fill(8000.);
 
       if (EventCharge == 1) {
 
-        if (EventType == 3) _h["eee_Plus"]->fill(8000., weight);
-        if (EventType == 2) _h["mee_Plus"]->fill(8000., weight);
-        if (EventType == 1) _h["emm_Plus"]->fill(8000., weight);
-        if (EventType == 0) _h["mmm_Plus"]->fill(8000., weight);
-        _h["fid_Plus"]->fill(8000., weight);
+        if (EventType == 3) _h["eee_Plus"]->fill(8000.);
+        if (EventType == 2) _h["mee_Plus"]->fill(8000.);
+        if (EventType == 1) _h["emm_Plus"]->fill(8000.);
+        if (EventType == 0) _h["mmm_Plus"]->fill(8000.);
+        _h["fid_Plus"]->fill(8000.);
 
-        _h["Deltay_Plus"]->fill(AbsDeltay, weight);
-        _h["Deltay_Plus_norm"]->fill(AbsDeltay, weight);
-        fillWithOverflow("ZpT_Plus", Zboson.pT()/GeV, 220, weight);
-        fillWithOverflow("WpT_Plus", Wboson.pT()/GeV, 220, weight);
-        fillWithOverflow("mTWZ_Plus", mTWZ, 600, weight);
-        fillWithOverflow("pTv_Plus", neutrinos[0].pt(), 90, weight);
-        fillWithOverflow("ZpT_Plus_norm", Zboson.pT()/GeV, 220, weight);
-        fillWithOverflow("pTv_Plus_norm", neutrinos[0].pt()/GeV, 90, weight);
+        _h["Deltay_Plus"]->fill(AbsDeltay);
+        _h["Deltay_Plus_norm"]->fill(AbsDeltay);
+        fillWithOverflow("ZpT_Plus", Zboson.pT()/GeV, 220);
+        fillWithOverflow("WpT_Plus", Wboson.pT()/GeV, 220);
+        fillWithOverflow("mTWZ_Plus", mTWZ, 600);
+        fillWithOverflow("pTv_Plus", neutrinos[0].pt(), 90);
+        fillWithOverflow("ZpT_Plus_norm", Zboson.pT()/GeV, 220);
+        fillWithOverflow("pTv_Plus_norm", neutrinos[0].pt()/GeV, 90);
 
       } else {
 
-        if (EventType == 3) _h["eee_Minus"]->fill(8000., weight);
-        if (EventType == 2) _h["mee_Minus"]->fill(8000., weight);
-        if (EventType == 1) _h["emm_Minus"]->fill(8000., weight);
-        if (EventType == 0) _h["mmm_Minus"]->fill(8000., weight);
-        _h["fid_Minus"]->fill(8000., weight);
+        if (EventType == 3) _h["eee_Minus"]->fill(8000.);
+        if (EventType == 2) _h["mee_Minus"]->fill(8000.);
+        if (EventType == 1) _h["emm_Minus"]->fill(8000.);
+        if (EventType == 0) _h["mmm_Minus"]->fill(8000.);
+        _h["fid_Minus"]->fill(8000.);
 
-        _h["Deltay_Minus"]->fill(AbsDeltay, weight);
-        _h["Deltay_Minus_norm"]->fill(AbsDeltay, weight);
-        fillWithOverflow("ZpT_Minus", Zboson.pT()/GeV, 220, weight);
-        fillWithOverflow("WpT_Minus", Wboson.pT()/GeV, 220, weight);
-        fillWithOverflow("mTWZ_Minus", mTWZ, 600, weight);
-        fillWithOverflow("pTv_Minus", neutrinos[0].pt()/GeV, 90, weight);
-        fillWithOverflow("ZpT_Minus_norm", Zboson.pT()/GeV, 220, weight);
-        fillWithOverflow("pTv_Minus_norm", neutrinos[0].pt()/GeV, 90, weight);
+        _h["Deltay_Minus"]->fill(AbsDeltay);
+        _h["Deltay_Minus_norm"]->fill(AbsDeltay);
+        fillWithOverflow("ZpT_Minus", Zboson.pT()/GeV, 220);
+        fillWithOverflow("WpT_Minus", Wboson.pT()/GeV, 220);
+        fillWithOverflow("mTWZ_Minus", mTWZ, 600);
+        fillWithOverflow("pTv_Minus", neutrinos[0].pt()/GeV, 90);
+        fillWithOverflow("ZpT_Minus_norm", Zboson.pT()/GeV, 220);
+        fillWithOverflow("pTv_Minus_norm", neutrinos[0].pt()/GeV, 90);
 
       }
 
-      fillWithOverflow("ZpT", Zboson.pT()/GeV, 220, weight);
-      fillWithOverflow("WpT", Wboson.pT()/GeV, 220, weight);
-      fillWithOverflow("mTWZ", mTWZ, 600, weight);
-      fillWithOverflow("pTv", neutrinos[0].pt()/GeV, 90, weight);
+      fillWithOverflow("ZpT", Zboson.pT()/GeV, 220);
+      fillWithOverflow("WpT", Wboson.pT()/GeV, 220);
+      fillWithOverflow("mTWZ", mTWZ, 600);
+      fillWithOverflow("pTv", neutrinos[0].pt()/GeV, 90);
 
-      _h["Deltay"]->fill(AbsDeltay, weight);
+      _h["Deltay"]->fill(AbsDeltay);
 
-      fillWithOverflow("Njets", jets.size(), 5, weight);
-      fillWithOverflow("Njets_norm", jets.size(), 5, weight);
-      fillWithOverflow("ZpT_norm", Zboson.pT()/GeV, 220, weight);
-      fillWithOverflow("WpT_norm", Wboson.pT()/GeV, 220, weight);
-      fillWithOverflow("mTWZ_norm", mTWZ, 600, weight);
-      fillWithOverflow("pTv_norm", neutrinos[0].pt()/GeV, 90, weight);
+      fillWithOverflow("Njets", jets.size(), 5);
+      fillWithOverflow("Njets_norm", jets.size(), 5);
+      fillWithOverflow("ZpT_norm", Zboson.pT()/GeV, 220);
+      fillWithOverflow("WpT_norm", Wboson.pT()/GeV, 220);
+      fillWithOverflow("mTWZ_norm", mTWZ, 600);
+      fillWithOverflow("pTv_norm", neutrinos[0].pt()/GeV, 90);
 
-      _h["Deltay_norm"]->fill(AbsDeltay, weight);
+      _h["Deltay_norm"]->fill(AbsDeltay);
 
       if (jets.size()>1) {
         double mjj = (jets[0].momentum()+jets[1].momentum()).mass()/GeV;
-        fillWithOverflow("mjj",      mjj, 800, weight);
-        fillWithOverflow("mjj_norm", mjj, 800, weight);
+        fillWithOverflow("mjj",      mjj, 800);
+        fillWithOverflow("mjj_norm", mjj, 800);
         double DeltaYjj = fabs(jets[0].rapidity()-jets[1].rapidity());
-        fillWithOverflow("Deltayjj",      DeltaYjj, 5, weight);
-        fillWithOverflow("Deltayjj_norm", DeltaYjj, 5, weight);
+        fillWithOverflow("Deltayjj",      DeltaYjj, 5);
+        fillWithOverflow("Deltayjj_norm", DeltaYjj, 5);
       }
 
     }
 
 
-    void fillWithOverflow(const string& tag, const double value, const double overflow, const double weight){
-      if (value < overflow) _h[tag]->fill(value,   weight);
-      else _h[tag]->fill(overflow - 0.45,   weight);
+    void fillWithOverflow(const string& tag, const double value, const double overflow){
+      if (value < overflow) _h[tag]->fill(value);
+      else _h[tag]->fill(overflow - 0.45);
     }
 
 
@@ -357,16 +363,16 @@ namespace Rivet {
       const double xs_pb(crossSection() / picobarn);
       const double xs_fb(crossSection() / femtobarn);
       const double sumw(sumOfWeights());
-      MSG_INFO("Cross-Section/pb: " << xs_pb      );
-      MSG_INFO("Cross-Section/fb: " << xs_fb      );
-      MSG_INFO("Sum of weights  : " << sumw       );
-      MSG_INFO("nEvents         : " << numEvents());
+      MSG_DEBUG("Cross-Section/pb: " << xs_pb      );
+      MSG_DEBUG("Cross-Section/fb: " << xs_fb      );
+      MSG_DEBUG("Sum of weights  : " << sumw       );
+      MSG_DEBUG("nEvents         : " << numEvents());
 
       const double sf_pb(xs_pb / sumw);
       const double sf_fb(xs_fb / sumw);
 
-      MSG_INFO("sf_pb         : " << sf_pb);
-      MSG_INFO("sf_fb         : " << sf_fb);
+      MSG_DEBUG("sf_pb         : " << sf_pb);
+      MSG_DEBUG("sf_fb         : " << sf_fb);
 
       float totalBR= 4*0.1086*0.033658; // W and Z leptonic branching fractions
 
@@ -384,7 +390,9 @@ namespace Rivet {
         else                                                scale(it->second, sf_fb);
       }
       for (map<string, Scatter2DPtr>::iterator it = _s.begin(); it != _s.end(); ++it) {
+        // @todo replace with new YODA object?
         makeScatterWithoutDividingByBinwidth(it->first);
+        // @todo need this to disappear if we want reentrant safety
         removeAnalysisObject(_h[it->first]);
       }
     }
@@ -424,6 +432,6 @@ namespace Rivet {
   };
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2016_I1426523);
+  RIVET_DECLARE_PLUGIN(ATLAS_2016_I1426523);
 
 }

@@ -1,0 +1,430 @@
+{
+    "446671": [
+        "Search for chargino and neutralino production at $\\sqrt{s}$ = 170-GeV and 172-GeV at LEP", 
+        "OPAL", 
+        "10.1007/s100520050134", 
+        "331545", 
+        "hep-ex/9708018", 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-083"
+        ]
+    ], 
+    "446672": [
+        "Measurement of the quark to photon fragmentation function through the inclusive production of prompt photons in hadronic Z0 decays", 
+        "OPAL", 
+        "10.1007/s100520050122", 
+        "1142450", 
+        "hep-ex/9708020", 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-086", 
+            "CERN-PPE-97-86"
+        ]
+    ], 
+    "447145": [
+        "Measurement of f(c ---> D*+ X), f(b ---> D*+ X) and Gamma (c anti-c) / Gamma (hadronic) using D*+- mesons", 
+        "OPAL", 
+        "10.1007/s100520050095", 
+        "331622", 
+        "hep-ex/9708021", 
+        "ins447145", 
+        null, 
+        [
+            "CERN-PPE-97-093", 
+            "CERN-PPE-97-93"
+        ]
+    ], 
+    "447185": [
+        "A Measurement of the $B_s^0$ lifetime using reconstructed $D_s$ - mesons", 
+        "OPAL", 
+        "10.1007/s100520050150", 
+        "331911", 
+        "hep-ex/9708023", 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-095", 
+            "CERN-PPE-97-95"
+        ]
+    ], 
+    "447186": [
+        "Tests of the standard model and constraints on new physics from measurements of fermion pair production at 130-GeV to 172-GeV at LEP", 
+        "OPAL", 
+        "10.1007/s100520050152", 
+        "331912", 
+        "hep-ex/9708024", 
+        "ins447186", 
+        null, 
+        [
+            "CERN-PPE-97-101"
+        ]
+    ], 
+    "447188": [
+        "Polarization and forward - backward asymmetry of Lambda baryons in hadronic Z0 decays", 
+        "OPAL", 
+        "10.1007/s100520050123", 
+        "331914", 
+        "hep-ex/9708027", 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-104"
+        ]
+    ], 
+    "447377": [
+        "Multiplicity distributions of gluon and quark jets and tests of QCD analytic predictions", 
+        "OPAL", 
+        "10.1007/s100520050097", 
+        "332240", 
+        "hep-ex/9708029", 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-105"
+        ]
+    ], 
+    "448033": [
+        "Multiphoton final states in e+ e- collisions at s**(1/2) = 130-GeV - 172-GeV", 
+        "OPAL", 
+        "10.1007/s100520050059", 
+        "333313", 
+        "hep-ex/9709002", 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-109"
+        ]
+    ], 
+    "448034": [
+        "Search for the standard model higgs boson in e+ e- collisions at s**(1/2) = 161-GeV - 172-GeV", 
+        "OPAL", 
+        "10.1007/s100520050094", 
+        "333314", 
+        "hep-ex/9709003", 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-115"
+        ]
+    ], 
+    "448093": [
+        "Measurement of the $W$ boson mass and $W^{+} W^{-}$ production and decay properties in $e^{+} e^{-}$ collisions at $\\sqrt{s}$ = 172-GeV", 
+        "OPAL", 
+        "10.1007/s100520050093", 
+        "333403", 
+        "hep-ex/9709006", 
+        "ins448093", 
+        null, 
+        [
+            "CERN-PPE-97-116"
+        ]
+    ], 
+    "448664": [
+        "Search for a massive di-photon resonance at S**(1/2) = 91-GeV - 172-GeV", 
+        "OPAL", 
+        "10.1007/s100520050060", 
+        "334431", 
+        "hep-ex/9709022", 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-121"
+        ]
+    ], 
+    "448725": [
+        "Measurement of triple gauge boson couplings from $W^{+} W^{-}$ production at $S^{(1/2)}$ = 172-GeV", 
+        "OPAL", 
+        "10.1007/s100520050164", 
+        "334551", 
+        "hep-ex/9709023", 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-125"
+        ]
+    ], 
+    "448729": [
+        "Search for unstable heavy and excited leptons in e+ e- collisions at S**(1/2) = 170-GeV - 172-GeV", 
+        "OPAL", 
+        "10.1007/s100520050061", 
+        "334555", 
+        "hep-ex/9709027", 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-123"
+        ]
+    ], 
+    "449533": [
+        "Search for anomalous production of dilepton events with missing transverse momentum in e+ e- collisions at s**(1/2) = 161-GeV and 172-GeV", 
+        "OPAL", 
+        "10.1007/PL00021655", 
+        "336021", 
+        "hep-ex/9710010", 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-124"
+        ]
+    ], 
+    "450757": [
+        "Search for anomalous production of photonic events with missing energy in e+ e- collisions at s**(1/2) = 130-GeV to 172-GeV", 
+        "OPAL", 
+        "10.1007/s100520050165", 
+        "338310", 
+        "hep-ex/9801024", 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-132"
+        ]
+    ], 
+    "453111": [
+        "Measurement of the one prong hadronic tau branching ratios at LEP", 
+        "OPAL", 
+        "10.1007/s100520050197", 
+        "344584", 
+        "hep-ex/9801029", 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-152"
+        ]
+    ], 
+    "453562": [
+        "Measurements of the $B_s^0$ and $\\Lambda_b^0$ lifetimes", 
+        "OPAL", 
+        "10.1016/S0370-2693(98)00289-5", 
+        "344688", 
+        "hep-ex/9802002", 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-159"
+        ]
+    ], 
+    "453563": [
+        "Search for charged Higgs bosons in $e^{+} e^{-}$ collisions at $S^{(1/2)}$ = 130-GeV - 172-GeV", 
+        "OPAL", 
+        "10.1016/S0370-2693(98)00360-8", 
+        "344690", 
+        "hep-ex/9802004", 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-168"
+        ]
+    ], 
+    "465983": [
+        "Search for the $B_c$ meson in hadronic $Z^0$ decays", 
+        "OPAL", 
+        "10.1016/S0370-2693(97)01569-4", 
+        "338311", 
+        "hep-ex/9801026", 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-137"
+        ]
+    ], 
+    "466503": [
+        "Investigation of CP violation in $B^0 \\to J/\\psi K^0_{S}$ decays at LEP", 
+        "OPAL", 
+        "10.1007/s100520050284", 
+        "343890", 
+        "hep-ex/9801022", 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-001"
+        ]
+    ], 
+    "466883": [
+        "Determination of the production rate of D*0 mesons and of the ratio V / (V+P) in Z0 ---> c anti-c decays", 
+        "OPAL", 
+        "10.1007/s100520050244", 
+        "344904", 
+        "hep-ex/9802008", 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-006"
+        ]
+    ], 
+    "467092": [
+        "Production of f(0)(980), f(2)(1270) and phi(1020) in hadronic Z0 decay", 
+        "OPAL", 
+        "10.1007/s100520050183", 
+        "345800", 
+        "hep-ex/9802013", 
+        "ins467092", 
+        null, 
+        [
+            "CERN-EP-98-010", 
+            "CERN-EP-98-10"
+        ]
+    ], 
+    "467256": [
+        "Search for an excess in the production of four jet events from e+ e- collisions at S**(1/2) = 130-GeV - 184-GeV", 
+        "OPAL", 
+        "10.1016/S0370-2693(98)00470-5", 
+        "345837", 
+        "hep-ex/9802015", 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-013"
+        ]
+    ], 
+    "468441": [
+        "A Search for neutral Higgs bosons in the MSSM and models with two scalar field doublets", 
+        "OPAL", 
+        "10.1007/s100520050245", 
+        "349365", 
+        "hep-ex/9803019", 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-029"
+        ]
+    ], 
+    "468442": [
+        "An Upper limit on the anomalous magnetic moment of the tau lepton", 
+        "OPAL", 
+        "10.1016/S0370-2693(98)00520-6", 
+        "350093", 
+        "hep-ex/9803020", 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-033"
+        ]
+    ], 
+    "468524": [
+        "Search for stable and longlived massive charged particles in e+ e- collisions at s**(1/2) = 130-GeV - 183-GeV", 
+        "OPAL", 
+        "10.1016/S0370-2693(98)00518-8", 
+        "349366", 
+        "hep-ex/9803026", 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-039"
+        ]
+    ], 
+    "470419": [
+        "Photon and light meson production in hadronic Z0 decays", 
+        "OPAL", 
+        "10.1007/s100520050286", 
+        "354708", 
+        "hep-ex/9805011", 
+        "ins470419", 
+        null, 
+        [
+            "CERN-EP-98-054"
+        ]
+    ], 
+    "471655": [
+        "An Upper limit for the tau-neutrino mass from tau --> 5 pi+- tau-neutrino decays", 
+        "OPAL", 
+        "10.1007/s100520050264", 
+        "358479", 
+        "hep-ex/9806035", 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-055", 
+            "CERN-EP-98-55"
+        ]
+    ], 
+    "472242": [
+        "Bose-Einstein correlations of three charged pions in hadronic Z0 decays", 
+        "OPAL", 
+        "10.1007/s100520050265", 
+        "358480", 
+        "hep-ex/9806036", 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-068", 
+            "CERN-EP-98-68"
+        ]
+    ], 
+    "472640": [
+        "Multiphoton production in e+ e- collisions at S**(1/2) = 183-GeV", 
+        "OPAL", 
+        "10.1016/S0370-2693(98)01096-X", 
+        "362517", 
+        "hep-ex/9808012", 
+        "ins472640", 
+        null, 
+        [
+            "CERN-EP-98-092", 
+            "CERN-EP-98-92"
+        ]
+    ], 
+    "472641": [
+        "Search for Higgs bosons and new particles decaying into two photons at S**(1/2) = 183-GeV", 
+        "OPAL", 
+        "10.1016/S0370-2693(98)01095-8", 
+        "362617", 
+        "hep-ex/9808014", 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-093", 
+            "CERN-EP-98-93"
+        ]
+    ], 
+    "473701": [
+        "Production of chi (c2) mesons in photon-photon collisions at LEP", 
+        "OPAL", 
+        "10.1016/S0370-2693(98)01128-9", 
+        "362996", 
+        "hep-ex/9808025", 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-106"
+        ]
+    ], 
+    "474012": [
+        "Measurement of the average polarization of b baryons in hadronic Z0 decays", 
+        "OPAL", 
+        "10.1016/S0370-2693(98)01387-2", 
+        "362079", 
+        "hep-ex/9808006", 
+        "ins474012", 
+        null, 
+        [
+            "CERN-EP-98-119"
+        ]
+    ], 
+    "474013": [
+        "First measurement of Z / gamma* production in Compton scattering of quasireal photons", 
+        "OPAL", 
+        "10.1016/S0370-2693(98)01140-X", 
+        "363349", 
+        "hep-ex/9808030", 
+        "ins474013", 
+        null, 
+        [
+            "CERN-EP-98-120"
+        ]
+    ], 
+    "474666": [
+        "Measurement of the longitudinal cross-section using the direction of the thrust axis in hadronic events at LEP", 
+        "OPAL", 
+        "10.1016/S0370-2693(98)01172-1", 
+        "363613", 
+        "hep-ex/9808035", 
+        "ins474666", 
+        null, 
+        [
+            "CERN-EP-98-124"
+        ]
+    ]
+}

@@ -63,10 +63,10 @@ namespace Rivet {
       declare(jetpro, "jet");
 
       // Book histograms
-      _h_Wl1_pT_mumu = bookHisto1D(1, 1, 2);
-      _h_Wl1_pT_ee = bookHisto1D(1, 1, 1);
-      _h_Wl1_pT_emu = bookHisto1D(1, 1, 3);
-      _h_Wl1_pT_inclusive = bookHisto1D(4, 1, 1);
+      book(_h_Wl1_pT_mumu ,1, 1, 2);
+      book(_h_Wl1_pT_ee ,1, 1, 1);
+      book(_h_Wl1_pT_emu ,1, 1, 3);
+      book(_h_Wl1_pT_inclusive ,4, 1, 1);
     }
 
 
@@ -126,7 +126,7 @@ namespace Rivet {
       ///////////////////////////////////////////////////////////////////////////////////////////////////////////
       if (isolated_lepton.size() != 2) vetoEvent;
       sort(isolated_lepton.begin(), isolated_lepton.end(), cmpMomByPt);
-      if (isolated_lepton[0].pT() > 25*GeV && threeCharge(isolated_lepton[0]) != threeCharge(isolated_lepton[1])) {
+      if (isolated_lepton[0].pT() > 25*GeV && charge3(isolated_lepton[0]) != charge3(isolated_lepton[1])) {
         fiducial_lepton.insert(fiducial_lepton.end(), isolated_lepton.begin(), isolated_lepton.end());
       }
       if (fiducial_lepton.size() == 0) vetoEvent;
@@ -142,11 +142,11 @@ namespace Rivet {
       //
       /////////////////////////////////////////////////////////////////////////
       Jets alljets, vetojets;
-      foreach (const Jet& j, apply<FastJets>(e, "jet").jetsByPt(25)) {
+      for (const Jet& j : apply<FastJets>(e, "jet").jetsByPt(25)) {
         if (j.absrap() > 4.5 ) continue;
         alljets.push_back(j);
         bool deltaRcontrol = true;
-        foreach (DressedLepton& fl,fiducial_lepton) {
+        for (DressedLepton& fl : fiducial_lepton) {
           if (fl.constituentLepton().abspid() == PID::ELECTRON) { //electrons
             double deltaRjets = deltaR(fl.constituentLepton().momentum(), j.momentum(), RAPIDITY);
             if (deltaRjets <= 0.3) deltaRcontrol = false; //false if at least one electron is in the overlap region
@@ -171,12 +171,12 @@ namespace Rivet {
       vector<double> vL_MET_angle, vJet_MET_angle;
       vL_MET_angle.push_back(fabs(deltaPhi(fiducial_lepton[0].momentum(), mismom)));
       vL_MET_angle.push_back(fabs(deltaPhi(fiducial_lepton[1].momentum(), mismom)));
-      foreach (double& lM, vL_MET_angle) if (lM > M_PI) lM = 2*M_PI - lM;
+      for (double& lM : vL_MET_angle) if (lM > M_PI) lM = 2*M_PI - lM;
 
       std::sort(vL_MET_angle.begin(), vL_MET_angle.end());
       if (vetojets.size() == 0) delta_phi = vL_MET_angle[0];
       if (vetojets.size() > 0) {
-        foreach (Jet& vj, vetojets) {
+        for (Jet& vj : vetojets) {
           double jet_MET_angle = fabs(deltaPhi(vj.momentum(), mismom));
           if (jet_MET_angle > M_PI) jet_MET_angle = 2*M_PI - jet_MET_angle;
           vJet_MET_angle.push_back(jet_MET_angle);
@@ -201,9 +201,6 @@ namespace Rivet {
       //
       ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-      // Get event weight for histo filling
-      const double weight = e.weight();
-
       // ee channel
       if (fiducial_lepton[0].abspid() == PID::ELECTRON && fiducial_lepton[1].abspid() == PID::ELECTRON) {
         if (MET_rel <= 45*GeV) vetoEvent;
@@ -211,8 +208,8 @@ namespace Rivet {
         if (fabs(M_l1l2 - 91.1876*GeV) <= 15*GeV) vetoEvent;
         if (vetojets.size() != 0) vetoEvent;
         if (pT_l1l2 <= 30*GeV) vetoEvent;
-        _h_Wl1_pT_ee->fill(sqrtS()*GeV, weight);
-        _h_Wl1_pT_inclusive->fill(pT_l1, weight);
+        _h_Wl1_pT_ee->fill(sqrtS()*GeV);
+        _h_Wl1_pT_inclusive->fill(pT_l1);
       }
 
       // mumu channel
@@ -222,8 +219,8 @@ namespace Rivet {
         if (fabs(M_l1l2-91.1876*GeV) <= 15*GeV) vetoEvent;
         if (vetojets.size() != 0) vetoEvent;
         if (pT_l1l2 <= 30*GeV) vetoEvent;
-        _h_Wl1_pT_mumu->fill(sqrtS()*GeV, weight);
-        _h_Wl1_pT_inclusive->fill(pT_l1, weight);
+        _h_Wl1_pT_mumu->fill(sqrtS()*GeV);
+        _h_Wl1_pT_inclusive->fill(pT_l1);
       }
 
       // emu channel
@@ -232,8 +229,8 @@ namespace Rivet {
         if (M_l1l2 <= 10*GeV) vetoEvent;
         if (vetojets.size() != 0) vetoEvent;
         if (pT_l1l2 <= 30*GeV) vetoEvent;
-        _h_Wl1_pT_emu->fill(sqrtS()*GeV, weight);
-        _h_Wl1_pT_inclusive->fill(pT_l1, weight);
+        _h_Wl1_pT_emu->fill(sqrtS()*GeV);
+        _h_Wl1_pT_inclusive->fill(pT_l1);
       }
     }
 
@@ -256,6 +253,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2013_I1190187);
+  RIVET_DECLARE_PLUGIN(ATLAS_2013_I1190187);
 
 }

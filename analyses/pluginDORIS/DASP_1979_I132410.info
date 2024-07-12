@@ -1,0 +1,29 @@
+Name: DASP_1979_I132410
+Year: 1979
+Summary: Inclusive $\eta$ production rate for energies between 3.99 and 5.01 GeV
+Experiment: DASP
+Collider: DORIS
+InspireID: 132410
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B80 (1979) 412-418, 1979 
+RunInfo: e+e- to hadrons between 3.99 and 5.01 GeV
+NeedCrossSection: yes
+Beams: [e-, e+]
+Description:
+  'Measurement of the rate for inclusive $\eta$ production rate for energies between 3.99 and 5.01 GeV by the DASP experiment.'
+BibKey: Brandelik:1978yr
+BibTeX: '@article{Brandelik:1978yr,
+      author         = "Brandelik, R. and others",
+      title          = "{Production Characteristics of the F Meson}",
+      collaboration  = "DASP",
+      journal        = "Phys. Lett.",
+      volume         = "80B",
+      year           = "1979",
+      pages          = "412-418",
+      doi            = "10.1016/0370-2693(79)91203-6",
+      reportNumber   = "DESY-78-63",
+      SLACcitation   = "%%CITATION = PHLTA,80B,412;%%"
+}'

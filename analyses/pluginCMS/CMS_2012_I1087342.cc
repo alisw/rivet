@@ -19,13 +19,13 @@ namespace Rivet {
       const FinalState fs;
       declare(FastJets(fs, FastJets::ANTIKT, 0.5),"Jets");
 
-      _hist_jetpt_fwdincl = bookHisto1D(1, 1, 1);
-      _hist_jetpt_forward = bookHisto1D(2, 1, 1);
-      _hist_jetpt_central = bookHisto1D(3, 1, 1);
+      book(_hist_jetpt_fwdincl ,1, 1, 1);
+      book(_hist_jetpt_forward ,2, 1, 1);
+      book(_hist_jetpt_central ,3, 1, 1);
     }
 
     void analyze(const Event& event) {
-      const double weight = event.weight();
+      const double weight = 1.0;
 
       const FastJets& fj = apply<FastJets>(event,"Jets");
       const Jets jets = fj.jets(Cuts::ptIn(35*GeV, 150*GeV) && Cuts::abseta < 4.7);
@@ -33,7 +33,7 @@ namespace Rivet {
       double cjet_pt = 0.0;
       double fjet_pt = 0.0;
 
-      foreach(const Jet& j, jets) {
+      for(const Jet& j : jets) {
         double pT = j.pT();
         if (j.abseta() > 3.2) {
           _hist_jetpt_fwdincl->fill(j.pT()/GeV, weight);
@@ -71,6 +71,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CMS_2012_I1087342);
+  RIVET_DECLARE_PLUGIN(CMS_2012_I1087342);
 
 }

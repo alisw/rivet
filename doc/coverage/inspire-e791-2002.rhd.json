@@ -1,0 +1,26 @@
+{
+    "585322": [
+        "Dalitz Plot Analysis of the Decay $D^+ \\to K^- \\pi^+ \\pi^+$ and the Study of the $K\\pi$ Scalar Amplitudes",
+        "E791",
+        "10.1103/PhysRevLett.89.121801",
+        null,
+        "hep-ex/0204018",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-01-254-E"
+        ]
+    ],
+    "587686": [
+        "Differential Cross-Sections, Charge Production Asymmetry, and Spin Density Matrix Elements for $D^{*\\pm}$(2010) Produced in 500-GeV/c $\\pi^-$ Nucleon Interactions",
+        "Fermilab E791",
+        "10.1016/S0370-2693(02)02102-0",
+        null,
+        "hep-ex/0205099",
+        "ins587686",
+        null,
+        [
+            "FERMILAB-PUB-02-098-E"
+        ]
+    ]
+}

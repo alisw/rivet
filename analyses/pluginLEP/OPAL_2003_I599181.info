@@ -5,6 +5,7 @@ Experiment: OPAL
 Collider: LEP2
 InspireID: 599181
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Simone Amoroso <amoroso@cern.ch>
 References:
@@ -37,4 +38,8 @@ BibTeX: '@article{Abbiendi:2002vt,
       reportNumber   = "CERN-EP-2002-051",
       SLACcitation   = "%%CITATION = HEP-EX/0210031;%%"
 }'
+
+
+ReleaseTests:
+ - $A LEP-91
 

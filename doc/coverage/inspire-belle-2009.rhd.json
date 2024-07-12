@@ -1,0 +1,252 @@
+{
+    "796654": [
+        "Measurement of the Decay $B_s 0 \\to D_s - \\pi^{+}$ and Evidence for $B_s 0 \\to D_s \\pm K^\\pm$ in $e^+ e_-$ Annihilation at $\\sqrt{s}$ ~ 10.87-GeV", 
+        "Belle", 
+        "10.1103/PhysRevLett.102.021801", 
+        null, 
+        "0809.2526", 
+        null, 
+        null, 
+        [
+            "KEK-2008-27", 
+            "BELLE-2008-24"
+        ]
+    ], 
+    "799998": [
+        "Search for Lepton-Flavor-Violating tau Decays into Lepton and f0(980) Meson", 
+        "Belle", 
+        "10.1016/j.physletb.2009.01.058", 
+        null, 
+        "0810.3519", 
+        null, 
+        null, 
+        [
+            "KEK-2008-37", 
+            "BELLE-2008-27", 
+            "NTLP-2008-01"
+        ]
+    ], 
+    "801326": [
+        "Precise measurement of hadronic tau-decays with an eta meson", 
+        "Belle", 
+        "10.1016/j.physletb.2009.01.047", 
+        null, 
+        "0811.0088", 
+        null, 
+        null, 
+        [
+            "BELLE-2008-28", 
+            "KEK-2008-38", 
+            "NTLP-2008-03"
+        ]
+    ], 
+    "803343": [
+        "Observation of B0 ---> Lambda anti-Lambda K0 and B0 to Lambda anti-Lambda K*0 at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.79.052006", 
+        null, 
+        "0811.3826", 
+        null, 
+        null, 
+        [
+            "BELLE-2008-30", 
+            "KEK-2008-41"
+        ]
+    ], 
+    "809630": [
+        "Observation of the phi(1680) and the Y(2175) in e+e- ---> phi pi+ pi-", 
+        "Belle", 
+        "10.1103/PhysRevD.80.031101", 
+        null, 
+        "0808.0006", 
+        "ins809630", 
+        null, 
+        [
+            "BELLE-CONF-0865"
+        ]
+    ], 
+    "810744": [
+        "Measurement of the branching fraction for the decay Upsilon(4S) ---> Upsilon(1S) pi+ pi-", 
+        "Belle", 
+        "10.1103/PhysRevD.79.051103", 
+        null, 
+        "0901.1431", 
+        null, 
+        null, 
+        [
+            "BELLE-NOTE-1096"
+        ]
+    ], 
+    "811289": [
+        "Measurement of the e+ e- ---> J/psi c anti-c cross section at s**(1/2) ~10.6-GeV", 
+        "Belle", 
+        "10.1103/PhysRevD.79.071101", 
+        null, 
+        "0901.2775", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2009-2", 
+            "KEK-PREPRINT-2009-5"
+        ]
+    ], 
+    "811833": [
+        "Improved measurement of the polarization and time-dependent CP violation in the decay B0 ---> D*+ D*-", 
+        "Belle", 
+        "10.1103/PhysRevD.80.111104", 
+        null, 
+        "0901.4057", 
+        null, 
+        null, 
+        []
+    ], 
+    "814334": [
+        "Search for the X(1812) in B+- ---> K+- omega phi", 
+        "Belle", 
+        "10.1103/PhysRevD.79.071102", 
+        null, 
+        "0902.4757", 
+        null, 
+        null, 
+        []
+    ], 
+    "815978": [
+        "High-statistics study of neutral-pion pair production in two-photon collisions", 
+        "Belle", 
+        "10.1103/PhysRevD.79.052009", 
+        null, 
+        "0903.3697", 
+        "ins815978", 
+        null, 
+        [
+            "KEK-PREPRINT-2008-50", 
+            "BELLE-PREPRINT-2009-4"
+        ]
+    ], 
+    "816632": [
+        "Measurement of B ---> D(*)(s) K pi branching fractions", 
+        "Belle", 
+        "10.1103/PhysRevD.80.052005", 
+        null, 
+        "0903.4956", 
+        null, 
+        null, 
+        []
+    ], 
+    "816676": [
+        "Observation of the Doubly Cabibbo-Suppressed Decay D+(s) ---> K+ K+ pi-", 
+        "Belle", 
+        "10.1103/PhysRevLett.102.221802", 
+        null, 
+        "0903.5126", 
+        null, 
+        null, 
+        []
+    ], 
+    "817326": [
+        "Measurement of the Differential Branching Fraction and Forward-Backword Asymmetry for $B \\to K^{(*)}\\ell^+\\ell^-$", 
+        "Belle", 
+        "10.1103/PhysRevLett.103.171801", 
+        null, 
+        "0904.0770", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2009-7", 
+            "KEK-PREPRINT-2008-56"
+        ]
+    ], 
+    "819537": [
+        "Measurements of Charmless Hadronic b ---> s Penguin Decays in the pi+ pi- K+ pi- Final State and Observation of B0 ---> rho0 K+ pi-", 
+        "Belle", 
+        "10.1103/PhysRevD.80.051103", 
+        null, 
+        "0905.0763", 
+        null, 
+        null, 
+        []
+    ], 
+    "820737": [
+        "Dalitz analysis of B ---> K pi+ psi-prime decays and the Z(4430)+", 
+        "Belle", 
+        "10.1103/PhysRevD.80.031104", 
+        null, 
+        "0905.2869", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2009-9"
+        ]
+    ], 
+    "821323": [
+        "Measurement of y(CP) in D0 meson decays to the K0(S) K+ K- final state", 
+        "Belle", 
+        "10.1103/PhysRevD.80.052006", 
+        null, 
+        "0905.4185", 
+        null, 
+        null, 
+        [
+            "KEK-2009-4", 
+            "BELLE-2009-10", 
+            "KEK-PREPRINT-2009-4", 
+            "BELLE-PREPRINT-2009-10"
+        ]
+    ], 
+    "822474": [
+        "High-statistics study of eta pi0 production in two-photon collisions", 
+        "Belle", 
+        "10.1103/PhysRevD.80.032001", 
+        null, 
+        "0906.1464", 
+        "ins822474", 
+        null, 
+        []
+    ], 
+    "823878": [
+        "Measurement of cross sections of exclusive e+ e- ---> VP processes at s**(1/2) = 10.58-GeV", 
+        "Belle", 
+        "10.1016/j.physletb.2009.10.037", 
+        null, 
+        "0906.4214", 
+        "ins823878", 
+        null, 
+        []
+    ], 
+    "825222": [
+        "Measurement of Inclusive Radiative B-meson Decays with a Photon Energy Threshold of 1.7-GeV", 
+        "Belle", 
+        "10.1103/PhysRevLett.103.241801", 
+        null, 
+        "0907.1384", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2009-16", 
+            "KEK-PREPRINT-2009-14"
+        ]
+    ], 
+    "834191": [
+        "Measurement of D+ ---> K(S)0 K+ and D(S)+ ---> K(S)0 pi+ branching ratios", 
+        "Belle", 
+        "10.1103/PhysRevD.80.111101", 
+        null, 
+        "0910.3052", 
+        null, 
+        null, 
+        []
+    ], 
+    "835602": [
+        "Observation of B+ ---> p anti-Lambda pi+ pi- at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.80.111103", 
+        null, 
+        "0910.5817", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2009-21", 
+            "KEK-PREPRINT-2009-24"
+        ]
+    ]
+}

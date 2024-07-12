@@ -1,0 +1,130 @@
+{
+    "840027": [
+        "Readiness of the ATLAS Liquid Argon Calorimeter for LHC Collisions", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-010-1354-y", 
+        "1228823", 
+        "0912.2642", 
+        null, 
+        null, 
+        []
+    ], 
+    "846365": [
+        "Drift Time Measurement in the ATLAS Liquid Argon Electromagnetic Calorimeter using Cosmic Muons", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-010-1403-6", 
+        "1244611", 
+        "1002.4189", 
+        null, 
+        null, 
+        []
+    ], 
+    "849050": [
+        "Charged-particle multiplicities in $pp$ interactions at $\\sqrt{s}=900$ GeV measured with the ATLAS detector at the LHC", 
+        "ATLAS", 
+        "10.1016/j.physletb.2010.03.064", 
+        "1249427", 
+        "1003.3124", 
+        "ins849050", 
+        null, 
+        [
+            "CERN-PH-EP-2010-004"
+        ]
+    ], 
+    "853395": [
+        "The ATLAS Inner Detector commissioning and calibration", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-010-1366-7", 
+        "1262789", 
+        "1004.5293", 
+        null, 
+        null, 
+        []
+    ], 
+    "856179": [
+        "The ATLAS Simulation Infrastructure", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-010-1429-9", 
+        "1267853", 
+        "1005.4568", 
+        null, 
+        null, 
+        []
+    ], 
+    "856566": [
+        "Performance of the ATLAS Detector using First Collision Data", 
+        "ATLAS", 
+        "10.1007/JHEP09(2010)056", 
+        "1268564", 
+        "1005.5254", 
+        null, 
+        null, 
+        []
+    ], 
+    "859286": [
+        "Commissioning of the ATLAS Muon Spectrometer with Cosmic Rays", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-010-1415-2", 
+        "1275998", 
+        "1006.4384", 
+        null, 
+        null, 
+        []
+    ], 
+    "863749": [
+        "Readiness of the ATLAS Tile Calorimeter for LHC collisions", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-010-1508-y", 
+        "1282535", 
+        "1007.5423", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2010-024"
+        ]
+    ], 
+    "865423": [
+        "Search for New Particles in Two-Jet Final States in 7 TeV Proton-Proton Collisions with the ATLAS Detector at the LHC", 
+        "ATLAS", 
+        "10.1103/PhysRevLett.105.161801", 
+        "1285236", 
+        "1008.2461", 
+        "ins865423", 
+        null, 
+        [
+            "CERN-PH-EP-2010-028"
+        ]
+    ], 
+    "872570": [
+        "Measurement of the $W \\to \\ell\\nu$ and $Z/\\gamma^* \\to \\ell\\ell$ Production Cross Sections in Proton-Proton Collisions at $\\sqrt{s} = 7$ TeV with the ATLAS Detector", 
+        "ATLAS", 
+        "10.1007/JHEP12(2010)060", 
+        "1299479", 
+        "1010.2130", 
+        "ins872570", 
+        null, 
+        [
+            "CERN-PH-EP-2010-037"
+        ]
+    ], 
+    "874862": [
+        "Study of energy response and resolution of the ATLAS barrel calorimeter to hadrons of energies from 20-GeV to 350-GeV", 
+        "ATLAS", 
+        "10.1016/j.nima.2010.04.054", 
+        "1319302", 
+        null, 
+        null, 
+        null, 
+        []
+    ], 
+    "878733": [
+        "Observation of a Centrality-Dependent Dijet Asymmetry in Lead-Lead Collisions at $\\sqrt{s_{NN}}=2.77$ TeV with the ATLAS Detector at the LHC", 
+        "ATLAS", 
+        "10.1103/PhysRevLett.105.252303", 
+        "1309851", 
+        "1011.6182", 
+        "ins878733", 
+        null, 
+        []
+    ]
+}

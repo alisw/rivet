@@ -5,10 +5,12 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1326641
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Aliaksei Hrynevich <aliaksei.hrynevich@cern.ch>
  - Pavel Starovoitov <pavel.starovoitov@cern.ch>
 References:
+ - ATLAS-STDM-2013-09
  - arXiv:1411.1855 [hep-ex]
  - doi:10.1140/epjc/s10052-015-3363-3
  - Eur.Phys.J. C75 (2015) 228
@@ -17,6 +19,7 @@ RunInfo:
 NeedCrossSection: yes
 Beams: [p+, p+]
 Energies: [7000]
+Luminosity_fb: 4.51
 PtCuts: [150,100,50]
 Description:
    Double-differential three-jet production cross-sections have been measured in proton-proton collisions at a centre-of-mass energy of

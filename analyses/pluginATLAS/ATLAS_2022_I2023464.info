@@ -1,0 +1,39 @@
+Name: ATLAS_2022_I2023464
+Year: 2022
+Summary: H->yy differentual cross-sections at 13 TeV
+Experiment: ATLAS
+Collider: LHC
+InspireID: 2023464
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Giovanni Marchiori <giovanni.marchiori@cern.ch>
+References:
+ - 'JHEP 08 (2022) 027'
+ - 'DOI:10.1007/JHEP08(2022)027'
+ - 'arXiv:2202.00487 [hep-ex]'
+RunInfo: pp to Higgs to diphoton production at 13 TeV, include all processes (ggH, VBF, VH, ttH, bbH, tH)
+Beams: [p+, p+]
+Energies: [[6500,6500]]
+Luminosity_fb: 139.0
+Description:
+  'A measurement of inclusive and differential fiducial cross-sections for the production of the Higgs boson decaying into two photons is performed using 139 fb-1 of proton-proton collision data recorded at sqrt(s)=13 TeV by the ATLAS experiment at the Large Hadron Collider. The inclusive cross-section times branching ratio, in a fiducial region closely matching the experimental selection, is measured to be $67 \pm 6$ fb, which is in agreement with the state-of-the-art Standard Model prediction of $64 \pm 4$ fb. Extrapolating this result to the full phase space and correcting for the branching ratio, the total cross-section for Higgs boson production is estimated to be $58 \pm 6$ pb. In addition, the cross-sections in four fiducial regions sensitive to various Higgs boson production modes and differential cross-sections as a function of either one or two of several observables are measured. All the measurements are found to be in agreement with the Standard Model predictions. The measured distributions can be used to test the modelling of Higgs production by various theoretical calculations. In additions they can be used to constrain BSM effects. As an example, in the publication he measured transverse momentum distribution of the Higgs boson is used as an indirect probe of the Yukawa coupling of the Higgs boson to the bottom and charm quarks. In addition, five differential cross-section measurements are used to constrain anomalous Higgs boson couplings to vector bosons in the Standard Model effective field theory framework.'
+ValidationInfo:
+ReleaseTests:
+ - $A pp-13000-Hyy
+Keywords: ['Hadron-Hadron Scattering', 'Higgs Physics']
+BibKey: ATLAS:2022fnp
+BibTeX: '@article{ATLAS:2022fnp,
+    author = "{ATLAS Collaboration}",
+    title = "{Measurements of the Higgs boson inclusive and differential fiducial cross-sections in the diphoton decay channel with pp collisions at $ \sqrt{s} $ = 13 TeV with the ATLAS detector}",
+    eprint = "2202.00487",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CERN-EP-2021-227",
+    doi = "10.1007/JHEP08(2022)027",
+    journal = "JHEP",
+    volume = "08",
+    pages = "027",
+    year = "2022"
+}'
+

@@ -11,7 +11,7 @@ namespace Rivet {
 
     /// Constructor
     OPAL_2004_I648738()
-      : Analysis("OPAL_2004_I648738"), _sumW(3,0.)
+      : Analysis("OPAL_2004_I648738"), _sumW(3), _histo_xE(3)
     {    }
 
 
@@ -41,49 +41,51 @@ namespace Rivet {
       }
       assert(ih>0);
       // book the histograms
-      _histo_xE.push_back(bookHisto1D(ih+5,1,1));
-      _histo_xE.push_back(bookHisto1D(ih+5,1,2));
-      if(ih<5) _histo_xE.push_back(bookHisto1D(ih+5,1,3));
+      book(_histo_xE[0], ih+5,1,1);
+      book(_histo_xE[1], ih+5,1,2);
+      if(ih<5) book(_histo_xE[2] ,ih+5,1,3);
+      book(_sumW[0], "_sumW_0");
+      book(_sumW[1], "_sumW_1");
+      book(_sumW[2], "_sumW_2");
     }
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-      const double weight = event.weight();
       // find the initial quarks/gluons
-      ParticleVector initial;
-      for (const GenParticle* p : Rivet::particles(event.genEvent())) {
-	const GenVertex* pv = p->production_vertex();
-	const PdgId pid = abs(p->pdg_id());
-	if(!( (pid>=1&&pid<=5) || pid ==21) ) continue;
-	bool passed = false;
-	for (const GenParticle* pp : particles_in(pv)) {
-	  const PdgId ppid = abs(pp->pdg_id());
-	  passed = (ppid == PID::ELECTRON || ppid == PID::HIGGS || 
-		    ppid == PID::ZBOSON   || ppid == PID::GAMMA);
-	  if(passed) break;
-	}
-	if(passed) initial.push_back(Particle(*p));
-      }
-      if(initial.size()!=2) {
-	vetoEvent;
-      }
-      // type of event
-      unsigned int itype=2;
-      if(initial[0].pdgId()==-initial[1].pdgId()) {
-	PdgId pid = abs(initial[0].pdgId());
-	if(pid>=1&&pid<=4) 
-	  itype=0;
-	else
-	  itype=1;
-      }
-      assert(itype<_histo_xE.size());
+      Particles initial;
+      for (ConstGenParticlePtr p : HepMCUtils::particles(event.genEvent())) {
+        ConstGenVertexPtr pv = p->production_vertex();
+        const PdgId pid = abs(p->pdg_id());
+        if(!( (pid>=1&&pid<=5) || pid ==21) ) continue;
+        bool passed = false;
+        for (ConstGenParticlePtr pp : HepMCUtils::particles(pv, Relatives::PARENTS)) {
+          const PdgId ppid = abs(pp->pdg_id());
+          passed = (ppid == PID::ELECTRON || ppid == PID::HIGGS ||
+                    ppid == PID::ZBOSON   || ppid == PID::GAMMA);
+          if(passed) break;
+        }
+        if(passed) initial.push_back(Particle(*p));
+        }
+        if(initial.size()!=2) {
+          vetoEvent;
+        }
+        // type of event
+        unsigned int itype=2;
+        if(initial[0].pid()==-initial[1].pid()) {
+          PdgId pid = abs(initial[0].pid());
+          if(pid>=1&&pid<=4)
+            itype=0;
+          else
+            itype=1;
+        }
+        assert(itype<_histo_xE.size());
 
       // fill histograms
-      _sumW[itype] += 2.*weight;
+      _sumW[itype]->fill(2.);
       const Particles& chps = applyProjection<FinalState>(event, "CFS").particles();
-      foreach(const Particle& p, chps) {
+      for(const Particle& p : chps) {
         double xE = 2.*p.E()/sqrtS();
-	_histo_xE[itype]->fill(xE, weight);
+	_histo_xE[itype]->fill(xE);
       }
 
     }
@@ -92,7 +94,7 @@ namespace Rivet {
     /// Normalise histograms etc., after the run
     void finalize() {
       for(unsigned int ix=0;ix<_histo_xE.size();++ix) {
-	if(_sumW[ix]>0.) scale(_histo_xE[ix],1./_sumW[ix]);
+	if(_sumW[ix]->val()>0.) scale(_histo_xE[ix],1./ *_sumW[ix]);
       }
     }
     //@}
@@ -100,7 +102,7 @@ namespace Rivet {
 
   private:
 
-    vector<double> _sumW;
+    vector<CounterPtr> _sumW;
 
     /// @name Histograms
     //@{
@@ -111,6 +113,6 @@ namespace Rivet {
   };
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(OPAL_2004_I648738);
+  RIVET_DECLARE_PLUGIN(OPAL_2004_I648738);
 
 }

@@ -1,0 +1,40 @@
+Name: BABAR_2009_I821653
+Year: 2009
+Summary: $e^+e^-\to e^+e^-\pi^0$ via intermediate photons at 10.58 GeV
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 821653
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 80 (2009) 052002
+RunInfo: e+ e- > e+e- meson via photon photon -> meson
+Beams: [e+, e-]
+Energies: [10.58]
+Description:
+  'Measurement of the cross sections for the production of $\pi^0$ in photon-photon
+   collisions, i.e. $e^+e^-\to \gamma\gamma e^+e^-$ followed by $\gamma\gamma\to\pi^0$,
+   by the Babar experiment at 10.58 GeV'
+ValidationInfo:
+  'Herwig7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Aubert:2009mc
+BibTeX: '@article{Aubert:2009mc,
+    author = "Aubert, Bernard and others",
+    collaboration = "BaBar",
+    title = "{Measurement of the gamma gamma* ---\ensuremath{>} pi0 transition form factor}",
+    eprint = "0905.4778",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "SLAC-PUB-13641, BABAR-PUB-09-006",
+    doi = "10.1103/PhysRevD.80.052002",
+    journal = "Phys. Rev. D",
+    volume = "80",
+    pages = "052002",
+    year = "2009"
+}
+'

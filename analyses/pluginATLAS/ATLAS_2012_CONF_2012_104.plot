@@ -18,15 +18,15 @@ LogY=0
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2012_CONF_2012_104/hist_eTmiss_e
-Title=$E_{\mathrm{T}}^{\rm miss}$ in the electron channel
-XLabel=$E_{\mathrm{T}}^{\rm miss}$
+Title=$E_{\mathrm{T}}^\mathrm{miss}$ in the electron channel
+XLabel=$E_{\mathrm{T}}^\mathrm{miss}$
 YLabel=$\mathrm{Events}/40\,$GeV
 LogY=1
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2012_CONF_2012_104/hist_eTmiss_mu
-Title=$E_{\mathrm{T}}^{\rm miss}$ in the muon channel
-XLabel=$E_{\mathrm{T}}^{\rm miss}$
+Title=$E_{\mathrm{T}}^\mathrm{miss}$ in the muon channel
+XLabel=$E_{\mathrm{T}}^\mathrm{miss}$
 YLabel=$\mathrm{Events}/40\,$GeV
 LogY=1
 # END PLOT

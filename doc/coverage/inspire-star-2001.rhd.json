@@ -1,0 +1,72 @@
+{
+    "533414": [
+        "Elliptic flow in Au + Au collisions at (S(NN))**(1/2) = 130 GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.86.402", 
+        null, 
+        "nucl-ex/0009011", 
+        "ins533414", 
+        null, 
+        []
+    ], 
+    "555818": [
+        "Midrapidity anti-proton to proton ratio from Au + Au collisions at s(NN)**(1/2) = 130-GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.86.4778", 
+        null, 
+        "nucl-ex/0104022", 
+        "ins555818", 
+        null, 
+        []
+    ], 
+    "557767": [
+        "Multiplicity distribution and spectra of negatively charged hadrons in Au+Au collisions at s(NN)**(1/2) = 130-GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.87.112303", 
+        null, 
+        "nucl-ex/0106004", 
+        "ins557767", 
+        null, 
+        []
+    ], 
+    "559609": [
+        "Identified particle elliptic flow in Au + Au collisions at s(NN)**(1/2) = 130-GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.87.182301", 
+        null, 
+        "nucl-ex/0107003", 
+        "ins559609", 
+        null, 
+        []
+    ], 
+    "559861": [
+        "Pion interferometry of s(NN)**(1/2) = 130-GeV Au+Au collisions at RHIC", 
+        "STAR", 
+        "10.1103/PhysRevLett.87.082301", 
+        null, 
+        "nucl-ex/0107008", 
+        "ins559861", 
+        null, 
+        []
+    ], 
+    "561876": [
+        "Anti-deuteron and anti-He-3 production in s(NN)**(1/2) = 130-GeV Au+Au collisions", 
+        "STAR", 
+        "10.1103/PhysRevLett.87.262301", 
+        null, 
+        "nucl-ex/0108022", 
+        "ins561876", 
+        null, 
+        []
+    ], 
+    "564369": [
+        "Measurement of inclusive anti-protons from Au+Au collisions at (s(NN))**(1/2) = 130-GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.87.262302", 
+        null, 
+        "nucl-ex/0110009", 
+        "ins564369", 
+        null, 
+        []
+    ]
+}

@@ -33,7 +33,7 @@ namespace Rivet {
       fillMap(_partLftMap);
 
       int id_shift = 0;
-      if (fuzzyEquals(sqrtS(), 7*TeV)) id_shift = 1;
+      if (isCompatibleWithSqrtS(7000)) id_shift = 1;
       // define ratios if second pdgid in pair is -1, it means that is a antiparticle/particle ratio
 
       _ratiotype["pbarp"]         = make_pair(2212, -1);
@@ -55,27 +55,26 @@ namespace Rivet {
 
       // booking histograms
       for (it=_ratiotype.begin(); it!=_ratiotype.end(); it++) {
-        _h_ratio_lowpt [it->first] = bookScatter2D(_hepdataid[it->first], 1, 1);
-        _h_ratio_midpt [it->first] = bookScatter2D(_hepdataid[it->first], 1, 2);
-        _h_ratio_highpt[it->first] = bookScatter2D(_hepdataid[it->first], 1, 3);
-        _h_num_lowpt   [it->first] = bookHisto1D  ("TMP/num_l_"+it->first,refData(_hepdataid[it->first], 1, 1));
-        _h_num_midpt   [it->first] = bookHisto1D  ("TMP/num_m_"+it->first,refData(_hepdataid[it->first], 1, 2));
-        _h_num_highpt  [it->first] = bookHisto1D  ("TMP/num_h_"+it->first,refData(_hepdataid[it->first], 1, 3));
-        _h_den_lowpt   [it->first] = bookHisto1D  ("TMP/den_l_"+it->first,refData(_hepdataid[it->first], 1, 1));
-        _h_den_midpt   [it->first] = bookHisto1D  ("TMP/den_m_"+it->first,refData(_hepdataid[it->first], 1, 2));
-	_h_den_highpt  [it->first] = bookHisto1D  ("TMP/den_h_"+it->first,refData(_hepdataid[it->first], 1, 3));
+        book(_h_ratio_lowpt [it->first], _hepdataid[it->first], 1, 1);
+        book(_h_ratio_midpt [it->first], _hepdataid[it->first], 1, 2);
+        book(_h_ratio_highpt[it->first], _hepdataid[it->first], 1, 3);
+        book(_h_num_lowpt   [it->first], "TMP/num_l_"+it->first,refData(_hepdataid[it->first], 1, 1));
+        book(_h_num_midpt   [it->first], "TMP/num_m_"+it->first,refData(_hepdataid[it->first], 1, 2));
+        book(_h_num_highpt  [it->first], "TMP/num_h_"+it->first,refData(_hepdataid[it->first], 1, 3));
+        book(_h_den_lowpt   [it->first], "TMP/den_l_"+it->first,refData(_hepdataid[it->first], 1, 1));
+        book(_h_den_midpt   [it->first], "TMP/den_m_"+it->first,refData(_hepdataid[it->first], 1, 2));
+        book(_h_den_highpt  [it->first], "TMP/den_h_"+it->first,refData(_hepdataid[it->first], 1, 3));
       }
 
-      declare(ChargedFinalState(_eta_min, _eta_max, _pt_min*GeV), "CFS");
+      declare(ChargedFinalState(Cuts::etaIn(_eta_min, _eta_max) && Cuts::pT >= _pt_min*GeV), "CFS");
     }
 
 
     // Perform the per-event analysis
     void analyze(const Event& event) {
-      const double weight = event.weight();
       const ChargedFinalState& cfs = apply<ChargedFinalState>(event, "CFS");
 
-      foreach (const Particle& p, cfs.particles()) {
+      for (const Particle& p : cfs.particles()) {
         int id = p.pid();
         // continue if particle not a proton, a kaon or a pion
         if ( !( (abs(id) == 211) || (abs(id) == 321) || (abs(id) == 2212)))  {
@@ -102,36 +101,36 @@ namespace Rivet {
             // check ptbin
             if (pT < _pt1_edge) {
               // filling histos for numerator and denominator
-              if (id == -abs(it->second.first)) _h_num_lowpt[it->first]->fill(eta, weight);
-              if (id ==  abs(it->second.first)) _h_den_lowpt[it->first]->fill(eta, weight);
+              if (id == -abs(it->second.first)) _h_num_lowpt[it->first]->fill(eta);
+              if (id ==  abs(it->second.first)) _h_den_lowpt[it->first]->fill(eta);
             }
             else if (pT < _pt2_edge) {
               // filling histos for numerator and denominator
-              if (id == -abs(it->second.first)) _h_num_midpt[it->first]->fill(eta, weight);
-              if (id ==  abs(it->second.first)) _h_den_midpt[it->first]->fill(eta, weight);
+              if (id == -abs(it->second.first)) _h_num_midpt[it->first]->fill(eta);
+              if (id ==  abs(it->second.first)) _h_den_midpt[it->first]->fill(eta);
             }
             else {
               // filling histos for numerator and denominator
-              if (id == -abs(it->second.first)) _h_num_highpt[it->first]->fill(eta, weight);
-              if (id ==  abs(it->second.first)) _h_den_highpt[it->first]->fill(eta, weight);
+              if (id == -abs(it->second.first)) _h_num_highpt[it->first]->fill(eta);
+              if (id ==  abs(it->second.first)) _h_den_highpt[it->first]->fill(eta);
             }
           }
           else {
             // check what type of ratio is
             if (pT < _pt1_edge) {
               // filling histos for numerator and denominator
-              if (abs(id) == abs(it->second.first))  _h_num_lowpt[it->first]->fill(eta, weight);
-              if (abs(id) == abs(it->second.second)) _h_den_lowpt[it->first]->fill(eta, weight);
+              if (abs(id) == abs(it->second.first))  _h_num_lowpt[it->first]->fill(eta);
+              if (abs(id) == abs(it->second.second)) _h_den_lowpt[it->first]->fill(eta);
             }
             else if (pT < _pt2_edge) {
               // filling histos for numerator and denominator
-              if (abs(id) == abs(it->second.first))  _h_num_midpt[it->first]->fill(eta, weight);
-              if (abs(id) == abs(it->second.second)) _h_den_midpt[it->first]->fill(eta, weight);
+              if (abs(id) == abs(it->second.first))  _h_num_midpt[it->first]->fill(eta);
+              if (abs(id) == abs(it->second.second)) _h_den_midpt[it->first]->fill(eta);
             }
             else {
               // filling histos for numerator and denominator
-              if (abs(id) == abs(it->second.first))  _h_num_highpt[it->first]->fill(eta, weight);
-              if (abs(id) == abs(it->second.second)) _h_den_highpt[it->first]->fill(eta, weight);
+              if (abs(id) == abs(it->second.first))  _h_num_highpt[it->first]->fill(eta);
+              if (abs(id) == abs(it->second.second)) _h_den_highpt[it->first]->fill(eta);
             }
           }
         }
@@ -183,17 +182,18 @@ namespace Rivet {
     }
 
     // Data members like post-cuts event weight counters go here
-    const double getMotherLifeTimeSum(const Particle& p) {
-      if (p.genParticle() == NULL) return -1.;
+    double getMotherLifeTimeSum(const Particle& p) {
+      if (p.genParticle() == nullptr) return -1.;
       double lftSum = 0.;
       double plft = 0.;
-      const GenParticle* part = p.genParticle();
-      const GenVertex* ivtx = part->production_vertex();
-      while(ivtx)
-      {
-        if (ivtx->particles_in_size() < 1) { lftSum = -1.; break; };
-        const GenVertex::particles_in_const_iterator iPart_invtx = ivtx->particles_in_const_begin();
-        part = (*iPart_invtx);
+      ConstGenParticlePtr part = p.genParticle();
+      ConstGenVertexPtr ivtx = part->production_vertex();
+      while(ivtx){
+
+        vector<ConstGenParticlePtr> part_in = HepMCUtils::particles(ivtx, Relatives::PARENTS);
+
+        if (part_in.size() < 1) { lftSum = -1.; break; };
+        part = part_in.at(0);
         if ( !(part) ) { lftSum = -1.; break; };
         ivtx = part->production_vertex();
         if ( (part->pdg_id() == 2212) || !(ivtx) ) break; // reached beam
@@ -352,6 +352,6 @@ namespace Rivet {
 
 
   // Plugin hook
-  DECLARE_RIVET_PLUGIN(LHCB_2012_I1119400);
+  RIVET_DECLARE_PLUGIN(LHCB_2012_I1119400);
 
 }

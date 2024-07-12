@@ -11,7 +11,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(TASSO_1990_S2148048);
+    RIVET_DEFAULT_ANALYSIS_CTOR(TASSO_1990_S2148048);
 
 
     /// @name Analysis methods
@@ -19,7 +19,7 @@ namespace Rivet {
 
     /// Book histograms and initialise projections before the run
     void init() {
-      const ChargedFinalState cfs(-MAXDOUBLE, MAXDOUBLE, 0.1/GeV);
+      const ChargedFinalState cfs(Cuts::pT >=  0.1/GeV);
       declare(cfs, "CFS");
 
       // Thrust and sphericity
@@ -42,22 +42,20 @@ namespace Rivet {
           offset = 3;
           break;
       }
-      //_h_xp         = bookHisto1D( 2, 1, 1+offset);
-      _h_sphericity = bookHisto1D( 6, 1, 1+offset);
-      _h_aplanarity = bookHisto1D( 7, 1, 1+offset);
-      _h_thrust     = bookHisto1D( 8, 1, 1+offset);
+      book(_h_xp[0]      , 2, 1, 1+offset);
+      book(_h_xp[1]      , 3, 1, 1+offset);
+      book(_h_xi         , 4, 1, 1+offset);
+      book(_h_pT         , 5, 1, 1+offset);
+      book(_h_sphericity , 6, 1, 1+offset);
+      book(_h_aplanarity , 7, 1, 1+offset);
+      book(_h_thrust     , 8, 1, 1+offset);
+      book(_sumWPassed,"/TMP/_sumWPassed");
     }
 
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-      const double weight = event.weight();
       const ChargedFinalState& cfs = apply<ChargedFinalState>(event, "CFS");
-
-      //// Get beams and average beam momentum
-      //const ParticlePair& beams = apply<Beam>(event, "Beams").beams();
-      //const double meanBeamMom = ( beams.first.p3().mod() +
-                                   //beams.second.p3().mod() ) / 2.0;
 
       // TASSO hadronic event selection TODO: move this into a trigger definition
       // See page 2 in publication
@@ -80,7 +78,7 @@ namespace Rivet {
       }
 
       // Raise counter for events that pass trigger conditions
-      //_sumWPassed += event.weight();
+      _sumWPassed->fill();
 
       const Thrust& thrust = apply<Thrust>(event, "Thrust");
       //const Vector3 & thrustAxis = thrust.thrustAxis ();
@@ -92,25 +90,34 @@ namespace Rivet {
 
       const Sphericity& sphericity = apply<Sphericity>(event, "Sphericity");
 
-      //// Fill histograms in order of appearance in paper
-      //foreach (const Particle& p, cfs.particles()) {
-        //// Get momentum and energy of each particle.
-        //const Vector3 mom3 = p.p3();
-        //// Scaled momenta.
-        //const double mom = mom3.mod();
-        //const double scaledMom = mom/meanBeamMom;
-        //_h_xp->fill(scaledMom, weight);
-      //}
-      //
-      _h_sphericity->fill(sphericity.sphericity(), weight);
-      _h_aplanarity->fill(sphericity.aplanarity(), weight);
-      _h_thrust->fill(thrust.thrust(), weight);
+      // Fill histograms in order of appearance in paper
+      for (const Particle& p : cfs.particles()) {
+        // Get momentum and energy of each particle.
+        const Vector3 mom3 = p.p3();
+        // Scaled momenta.
+        const double mom = mom3.mod();
+        const double scaledMom = 2.*mom/sqrtS();
+        const double pTin = dot(mom3, sphericity.sphericityMajorAxis());
+        const double pTout = dot(mom3, sphericity.sphericityMinorAxis());
+	const double pT=sqrt(sqr(pTin)+sqr(pTout));
+        _h_xp[0]->fill(scaledMom);
+        _h_xp[1]->fill(scaledMom);
+	_h_xi   ->fill(-log(scaledMom));
+	_h_pT   ->fill(pT);
+      }
+      // event shapes
+      _h_sphericity->fill(sphericity.sphericity());
+      _h_aplanarity->fill(sphericity.aplanarity());
+      _h_thrust->fill(thrust.thrust());
     }
 
 
     /// Normalise histograms etc., after the run
     void finalize() {
-      //scale(_h_xp, _sumWPassed/(crossSection()*sumOfWeights()));
+      scale(_h_xp[0], 1./ *_sumWPassed);
+      scale(_h_xp[1], 1./ *_sumWPassed);
+      scale(_h_xi   , 1./ *_sumWPassed);
+      scale(_h_pT   , 1./ *_sumWPassed);
       normalize(_h_sphericity);
       normalize(_h_aplanarity);
       normalize(_h_thrust    );
@@ -123,7 +130,8 @@ namespace Rivet {
 
     /// @name Histograms
     //@{
-    Histo1DPtr _h_xp, _h_sphericity, _h_aplanarity, _h_thrust;
+    Histo1DPtr _h_xp[2], _h_xi, _h_pT, _h_sphericity, _h_aplanarity, _h_thrust;
+    CounterPtr _sumWPassed;
     //@}
 
 
@@ -131,7 +139,6 @@ namespace Rivet {
 
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(TASSO_1990_S2148048);
+  RIVET_DECLARE_ALIASED_PLUGIN(TASSO_1990_S2148048, TASSO_1990_I294755);
 
 }

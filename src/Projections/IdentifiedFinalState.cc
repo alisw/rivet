@@ -6,62 +6,49 @@ namespace Rivet {
 
   IdentifiedFinalState::IdentifiedFinalState(const FinalState& fsp, const vector<PdgId>& pids) {
     setName("IdentifiedFinalState");
-    addProjection(fsp, "FS");
-    acceptIds(pids);
-  }
-
-  IdentifiedFinalState::IdentifiedFinalState(const vector<PdgId>& pids, const FinalState& fsp) {
-    setName("IdentifiedFinalState");
-    addProjection(fsp, "FS");
+    declare(fsp, "FS");
     acceptIds(pids);
   }
 
   IdentifiedFinalState::IdentifiedFinalState(const FinalState& fsp, PdgId pid) {
     setName("IdentifiedFinalState");
-    addProjection(fsp, "FS");
+    declare(fsp, "FS");
     acceptId(pid);
   }
-
-  IdentifiedFinalState::IdentifiedFinalState(PdgId pid, const FinalState& fsp) {
-    setName("IdentifiedFinalState");
-    addProjection(fsp, "FS");
-    acceptId(pid);
-  }
-
 
   IdentifiedFinalState::IdentifiedFinalState(const Cut& c, const vector<PdgId>& pids) {
     setName("IdentifiedFinalState");
-    addProjection(FinalState(c), "FS");
+    declare(FinalState(c), "FS");
     acceptIds(pids);
   }
 
   IdentifiedFinalState::IdentifiedFinalState(const vector<PdgId>& pids, const Cut& c) {
     setName("IdentifiedFinalState");
-    addProjection(FinalState(c), "FS");
+    declare(FinalState(c), "FS");
     acceptIds(pids);
   }
 
   IdentifiedFinalState::IdentifiedFinalState(const Cut& c, PdgId pid) {
     setName("IdentifiedFinalState");
-    addProjection(FinalState(c), "FS");
+    declare(FinalState(c), "FS");
     acceptId(pid);
   }
 
   IdentifiedFinalState::IdentifiedFinalState(PdgId pid, const Cut& c) {
     setName("IdentifiedFinalState");
-    addProjection(FinalState(c), "FS");
+    declare(FinalState(c), "FS");
     acceptId(pid);
   }
 
 
 
-  int IdentifiedFinalState::compare(const Projection& p) const {
+  CmpState IdentifiedFinalState::compare(const Projection& p) const {
     const PCmp fscmp = mkNamedPCmp(p, "FS");
-    if (fscmp != EQUIVALENT) return fscmp;
+    if (fscmp != CmpState::EQ) return fscmp;
 
     const IdentifiedFinalState& other = dynamic_cast<const IdentifiedFinalState&>(p);
-    int pidssize = cmp(_pids.size(), other._pids.size());
-    if (pidssize != EQUIVALENT) return pidssize;
+    CmpState pidssize = cmp(_pids.size(), other._pids.size());
+    if (pidssize != CmpState::EQ) return pidssize;
     return cmp(_pids, other._pids);
   }
 

@@ -8,14 +8,12 @@
 namespace Rivet {
 
 
-  /// @brief  J/psi production at ATLAS
+  /// J/psi production at ATLAS
   class ATLAS_2011_S9035664: public Analysis {
   public:
 
     /// Constructor
-    ATLAS_2011_S9035664()
-      : Analysis("ATLAS_2011_S9035664")
-    {}
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2011_S9035664);
 
 
     /// @name Analysis methods
@@ -23,36 +21,32 @@ namespace Rivet {
 
     void init() {
       declare(UnstableParticles(), "UFS");
-      _nonPrRapHigh    = bookHisto1D( 14, 1, 1);
-      _nonPrRapMedHigh = bookHisto1D( 13, 1, 1);
-      _nonPrRapMedLow  = bookHisto1D( 12, 1, 1);
-      _nonPrRapLow     = bookHisto1D( 11, 1, 1);
-      _PrRapHigh       = bookHisto1D( 18, 1, 1);
-      _PrRapMedHigh    = bookHisto1D( 17, 1, 1);
-      _PrRapMedLow     = bookHisto1D( 16, 1, 1);
-      _PrRapLow        = bookHisto1D( 15, 1, 1);
-      _IncRapHigh      = bookHisto1D( 20, 1, 1);
-      _IncRapMedHigh   = bookHisto1D( 21, 1, 1);
-      _IncRapMedLow    = bookHisto1D( 22, 1, 1);
-      _IncRapLow       = bookHisto1D( 23, 1, 1);
+      book(_nonPrRapHigh    , 14, 1, 1);
+      book(_nonPrRapMedHigh , 13, 1, 1);
+      book(_nonPrRapMedLow  , 12, 1, 1);
+      book(_nonPrRapLow     , 11, 1, 1);
+      book(_PrRapHigh       , 18, 1, 1);
+      book(_PrRapMedHigh    , 17, 1, 1);
+      book(_PrRapMedLow     , 16, 1, 1);
+      book(_PrRapLow        , 15, 1, 1);
+      book(_IncRapHigh      , 20, 1, 1);
+      book(_IncRapMedHigh   , 21, 1, 1);
+      book(_IncRapMedLow    , 22, 1, 1);
+      book(_IncRapLow       , 23, 1, 1);
     }
 
 
     void analyze(const Event& e) {
 
-      // Get event weight for histo filling
-      const double weight = e.weight();
-
-
       // Final state of unstable particles to get particle spectra
-      const UnstableParticles& ufs = apply<UnstableFinalState>(e, "UFS");
+      const UnstableParticles& ufs = apply<UnstableParticles>(e, "UFS");
 
-      foreach (const Particle& p, ufs.particles()) {
+      for (const Particle& p : ufs.particles()) {
         if (p.abspid() != 443) continue;
-        const GenVertex* gv = p.genParticle()->production_vertex();
+        ConstGenVertexPtr gv = p.genParticle()->production_vertex();
         bool nonPrompt = false;
         if (gv) {
-          foreach (const GenParticle* pi, Rivet::particles(gv, HepMC::ancestors)) {
+          for (ConstGenParticlePtr pi: HepMCUtils::particles(gv, Relatives::ANCESTORS)) {
             const PdgId pid2 = pi->pdg_id();
             if (PID::isHadron(pid2) && PID::hasBottom(pid2)) {
               nonPrompt = true;
@@ -64,25 +58,25 @@ namespace Rivet {
         double xp = p.perp();
 
         if (absrap<=2.4 and absrap>2.) {
-          if (nonPrompt) _nonPrRapHigh->fill(xp, weight);
-          else if (!nonPrompt) _PrRapHigh->fill(xp, weight);
-          _IncRapHigh->fill(xp, weight);
+          if (nonPrompt) _nonPrRapHigh->fill(xp);
+          else if (!nonPrompt) _PrRapHigh->fill(xp);
+          _IncRapHigh->fill(xp);
         }
         else if (absrap<=2. and absrap>1.5) {
-          if (nonPrompt) _nonPrRapMedHigh->fill(xp, weight);
-          else if (!nonPrompt) _PrRapMedHigh->fill(xp, weight);
-          _IncRapMedHigh->fill(xp, weight);
+          if (nonPrompt) _nonPrRapMedHigh->fill(xp);
+          else if (!nonPrompt) _PrRapMedHigh->fill(xp);
+          _IncRapMedHigh->fill(xp);
         }
         else if (absrap<=1.5 and absrap>0.75) {
-          if (nonPrompt) _nonPrRapMedLow->fill(xp, weight);
-          else if (!nonPrompt) _PrRapMedLow->fill(xp, weight);
-          _IncRapMedLow->fill(xp, weight);
+          if (nonPrompt) _nonPrRapMedLow->fill(xp);
+          else if (!nonPrompt) _PrRapMedLow->fill(xp);
+          _IncRapMedLow->fill(xp);
         }
 
         else if (absrap<=0.75) {
-          if (nonPrompt) _nonPrRapLow->fill(xp, weight);
-          else if (!nonPrompt) _PrRapLow->fill(xp, weight);
-          _IncRapLow->fill(xp, weight);
+          if (nonPrompt) _nonPrRapLow->fill(xp);
+          else if (!nonPrompt) _PrRapLow->fill(xp);
+          _IncRapLow->fill(xp);
         }
       }
     }
@@ -128,11 +122,10 @@ namespace Rivet {
     Histo1DPtr _IncRapMedHigh;
     Histo1DPtr _IncRapMedLow;
     Histo1DPtr _IncRapLow;
-    //@}
 
   };
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2011_S9035664);
+
+  RIVET_DECLARE_ALIASED_PLUGIN(ATLAS_2011_S9035664, ATLAS_2011_I896268);
 
 }

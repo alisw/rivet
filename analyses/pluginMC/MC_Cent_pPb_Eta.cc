@@ -1,4 +1,5 @@
 // -*- C++ -*-
+#include "Rivet/Analysis.hh"
 #include "Rivet/Analyses/MC_Cent_pPb.hh"
 #include "Rivet/Tools/Percentile.hh"
 
@@ -9,7 +10,7 @@ class MC_Cent_pPb_Eta : public Analysis {
 
 public:
 
-  DEFAULT_RIVET_ANALYSIS_CTOR(MC_Cent_pPb_Eta);
+  RIVET_DEFAULT_ANALYSIS_CTOR(MC_Cent_pPb_Eta);
 
   /// Book histograms and initialise projections before the run
   void init() {
@@ -45,13 +46,12 @@ public:
 
   /// Perform the per-event analysis
   void analyze(const Event& event) {
-    const double weight = event.weight();
 
     if ( !apply<TriggerProjection>(event, "Trigger")() ) vetoEvent;
 
     _hEta->init(event);
     for ( const auto &p : apply<ChargedFinalState>(event,"CFS").particles() )
-      _hEta->fill(p.eta(), weight);
+      _hEta->fill(p.eta());
 
   }
     
@@ -73,6 +73,6 @@ private:
 
 
 // The hook for the plugin system
-DECLARE_RIVET_PLUGIN(MC_Cent_pPb_Eta);
+RIVET_DECLARE_PLUGIN(MC_Cent_pPb_Eta);
 
 }

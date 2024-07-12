@@ -1,0 +1,62 @@
+{
+    "168234": [
+        "Observation of a Charge Asymmetry in $e^+ e^- \\to \\mu^+ \\mu^-$", 
+        "JADE", 
+        "10.1016/0370-2693(82)91160-1", 
+        null, 
+        null, 
+        "ins168234", 
+        null, 
+        [
+            "DESY-81-072"
+        ]
+    ], 
+    "177090": [
+        "A Measurement of the Reaction $e^+ e^- \\to e^+ e^- \\eta^\\prime$ and the Radiative Width $\\Gamma (\\eta^\\prime \\to \\gamma \\gamma$) \nat {PETRA}", 
+        "JADE", 
+        "10.1016/0370-2693(82)90422-1", 
+        null, 
+        null, 
+        "ins177090", 
+        null, 
+        [
+            "DESY-82-007"
+        ]
+    ], 
+    "177210": [
+        "Observation of Four - Jet Structure in $e^+ e^-$ Annihilation at $\\sqrt{s}=33$-{GeV}", 
+        "JADE", 
+        "10.1016/0370-2693(82)90383-5", 
+        "137104", 
+        null, 
+        "ins177210", 
+        null, 
+        [
+            "DESY-82-016"
+        ]
+    ], 
+    "177466": [
+        "A Search for Charged Scalar Particles Pair Produced in $e^+ e^-$ Annihilation", 
+        "JADE", 
+        "10.1016/0370-2693(82)90149-6", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-82-023"
+        ]
+    ], 
+    "180033": [
+        "Differential Three Jet Cross-section in $e^+ e^-$ Annihilation and Comparison With Second Order Predictions of {QCD} and Abelian Vector Theory", 
+        "JADE", 
+        "10.1016/0370-2693(82)90285-4", 
+        null, 
+        null, 
+        "ins180033", 
+        null, 
+        [
+            "DESY-82-060"
+        ]
+    ]
+}

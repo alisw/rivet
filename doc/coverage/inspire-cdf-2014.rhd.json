@@ -1,0 +1,231 @@
+{
+    "1255304": [
+        "Study of Orbitally Excited $B$ Mesons and Evidence for a New $B\\pi$ Resonance", 
+        "CDF", 
+        "10.1103/PhysRevD.90.012013", 
+        "1602996", 
+        "1309.5961", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-13-393-E", 
+            "PUB-13-393-E-(FERMILAB)"
+        ]
+    ], 
+    "1256081": [
+        "Search for new physics in trilepton events and limits on the associated chargino-neutralino production at CDF", 
+        "CDF", 
+        "10.1103/PhysRevD.90.012011", 
+        "1604611", 
+        "1309.7509", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-13-446"
+        ]
+    ], 
+    "1256082": [
+        "Combination of Measurements of the Top-Quark Pair Production Cross Section from the Tevatron Collider", 
+        "CDF", 
+        "10.1103/PhysRevD.89.072001", 
+        "1604612", 
+        "1309.7570", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-13-432-E"
+        ]
+    ], 
+    "1263361": [
+        "Precise Measurement of the W -Boson Mass with the Collider Detector at Fermilab", 
+        "CDF", 
+        "10.1103/PhysRevD.89.072003", 
+        "1624473", 
+        "1311.0894", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-13-515-E"
+        ]
+    ], 
+    "1264262": [
+        "First Search for Exotic Z Boson Decays into Photons and Neutral Pions in Hadron Collisions", 
+        "CDF", 
+        "10.1103/PhysRevLett.112.111803", 
+        "1628231", 
+        "1311.3282", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-13-509-E"
+        ]
+    ], 
+    "1279918": [
+        "Evidence for $s$-channel Single-Top-Quark Production in Events with one Charged Lepton and two Jets at CDF", 
+        "CDF", 
+        "10.1103/PhysRevLett.112.231804", 
+        "1646288", 
+        "1402.0484", 
+        "ins1279918", 
+        null, 
+        [
+            "FERMILAB-PUB-14-015-E"
+        ]
+    ], 
+    "1280719": [
+        "Indirect measurement of $\\sin^2 \\theta_W$ (or $M_W$) using $\\mu^+\\mu^-$ pairs from $\\gamma^*/Z$ bosons produced in $p\\bar{p}$ collisions at a center-of-momentum energy of 1.96 TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.89.072005", 
+        "1647494", 
+        "1402.2239", 
+        "ins1280719", 
+        null, 
+        [
+            "FERMILAB-PUB-14-021-E"
+        ]
+    ], 
+    "1281537": [
+        "Search for $s$-Channel Single-Top-Quark Production in Events with Missing Energy Plus Jets in $p\\bar p$ Collisions at $\\sqrt s=$1.96  TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.112.231805", 
+        "1648750", 
+        "1402.3756", 
+        "ins1281537", 
+        null, 
+        [
+            "FERMILAB-PUB-14-027-E"
+        ]
+    ], 
+    "1282028": [
+        "Observation of s-channel production of single top quarks at the Tevatron", 
+        "CDF", 
+        "10.1103/PhysRevLett.112.231803", 
+        "1662835", 
+        "1402.5126", 
+        "ins1282028", 
+        null, 
+        [
+            "FERMILAB-PUB-14-031-E"
+        ]
+    ], 
+    "1282899": [
+        "Study of Top-Quark Production and Decays involving a Tau Lepton at CDF and Limits on a Charged-Higgs Boson Contribution", 
+        "CDF", 
+        "10.1103/PhysRevD.89.091101", 
+        "1665521", 
+        "1402.6728", 
+        "ins1282899", 
+        null, 
+        [
+            "FERMILAB-PUB-14-036"
+        ]
+    ], 
+    "1282906": [
+        "Invariant-mass distribution of jet pairs produced in association with a $W$ boson in $p \\bar{p}$ collisions at $\\sqrt{s}=1.96$ TeV using the full CDF Run II data set", 
+        "CDF", 
+        "10.1103/PhysRevD.89.092001", 
+        "1665527", 
+        "1402.7044", 
+        "ins1282906", 
+        null, 
+        [
+            "FERMILAB-PUB-14-037-E"
+        ]
+    ], 
+    "1285230": [
+        "Measurement of the ZZ production cross section using the full CDF II data set", 
+        "CDF", 
+        "10.1103/PhysRevD.89.112001", 
+        "1667697", 
+        "1403.2300", 
+        "ins1285230", 
+        null, 
+        [
+            "FERMILAB-PUB-14-047-E"
+        ]
+    ], 
+    "1286891": [
+        "Measurements of Direct CP -Violating Asymmetries in Charmless Decays of Bottom Baryons", 
+        "CDF", 
+        "10.1103/PhysRevLett.113.242001", 
+        "1670816", 
+        "1403.5586", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-14-055-E-PPD"
+        ]
+    ], 
+    "1287932": [
+        "Mass and lifetime measurements of bottom and charm baryons in $p\\bar p$ collisions at $\\sqrt{s}= 1.96$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.89.072014", 
+        "1692477", 
+        "1403.8126", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-14-061-E"
+        ]
+    ], 
+    "1290352": [
+        "Measurement of $B(t \\to Wb)/B(t \\to Wq)$ in Top-Quark-Pair Decays Using Dilepton Events and the Full CDF Run II Data Set", 
+        "CDF", 
+        "10.1103/PhysRevLett.112.221801", 
+        "1695289", 
+        "1404.3392", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-14-099-E"
+        ]
+    ], 
+    "1290358": [
+        "Measurement of the inclusive leptonic asymmetry in top-quark pairs that decay to two charged leptons at CDF", 
+        "CDF", 
+        "10.1103/PhysRevLett.113.042001", 
+        "1695295", 
+        "1404.3698", 
+        "ins1290358", 
+        null, 
+        [
+            "FERMILAB-PUB-14-096-E"
+        ]
+    ], 
+    "1306494": [
+        "Measurement of the Single Top Quark Production Cross Section and $|V_{tb}|$ in Events with One Charged Lepton, Large Missing Transverse Energy, and Jets at CDF", 
+        "CDF", 
+        "10.1103/PhysRevLett.113.261804", 
+        "1743344", 
+        "1407.4031", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-14-229-E"
+        ]
+    ], 
+    "1317646": [
+        "Measurement of the Top-Quark Mass in the All-Hadronic Channel Using the Full CDF Data Set", 
+        "CDF", 
+        "10.1103/PhysRevD.90.091101", 
+        "1756629", 
+        "1409.4906", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-14-338-E"
+        ]
+    ], 
+    "1323066": [
+        "Measurement of indirect CP-violating asymmetries in $D^0\\to K^+K^-$ and $D^0\\to \\pi^+\\pi^-$ decays at CDF", 
+        "CDF", 
+        "10.1103/PhysRevD.90.111103", 
+        "1956922", 
+        "1410.5435", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-14-429-PPD"
+        ]
+    ]
+}

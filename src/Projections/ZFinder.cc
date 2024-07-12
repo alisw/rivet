@@ -14,7 +14,7 @@ namespace Rivet {
                    double dRmax,
                    ChargedLeptons chLeptons,
                    ClusterPhotons clusterPhotons,
-                   PhotonTracking trackPhotons,
+                   AddPhotons trackPhotons,
                    double masstarget)
   {
     setName("ZFinder");
@@ -28,7 +28,7 @@ namespace Rivet {
     // Identify bare leptons for dressing
     // Bit of a code nightmare -- FS projection copy constructors don't work?
     /// @todo Fix FS copy constructors!!
-    if (chLeptons == PROMPTCHLEPTONS) {
+    if (chLeptons == ChargedLeptons::PROMPT) {
       PromptFinalState inputfs_prompt(inputfs);
       IdentifiedFinalState bareleptons = IdentifiedFinalState(inputfs_prompt);
       bareleptons.acceptIdPair(_pid);
@@ -40,15 +40,15 @@ namespace Rivet {
     }
 
     // Dress the bare leptons
-    const bool doClustering = (clusterPhotons != NOCLUSTER);
-    const bool useDecayPhotons = (clusterPhotons == CLUSTERALL);
+    const bool doClustering = (clusterPhotons != ClusterPhotons::NONE);
+    const bool useDecayPhotons = (clusterPhotons == ClusterPhotons::ALL);
     DressedLeptons leptons(inputfs, get<FinalState>("BareLeptons"), (doClustering ? dRmax : -1.0), fsCut, useDecayPhotons);
-    addProjection(leptons, "DressedLeptons");
+    declare(leptons, "DressedLeptons");
 
     // Identify the non-Z part of the event
     VetoedFinalState remainingFS;
     remainingFS.addVetoOnThisFinalState(*this);
-    addProjection(remainingFS, "RFS");
+    declare(remainingFS, "RFS");
   }
 
 
@@ -68,9 +68,9 @@ namespace Rivet {
   }
 
 
-  int ZFinder::compare(const Projection& p) const {
+  CmpState ZFinder::compare(const Projection& p) const {
     PCmp LCcmp = mkNamedPCmp(p, "DressedLeptons");
-    if (LCcmp != EQUIVALENT) return LCcmp;
+    if (LCcmp != CmpState::EQ) return LCcmp;
 
     const ZFinder& other = dynamic_cast<const ZFinder&>(p);
     return (cmp(_minmass, other._minmass) ||
@@ -106,8 +106,8 @@ namespace Rivet {
     const Particle& l2 = p2.charge() < 0 ? p2 : p1;
     MSG_TRACE("l1 = " << l1.constituents());
     MSG_TRACE("l2 = " << l2.constituents());
-    z.addConstituent(_trackPhotons == TRACK ? l1 : l1.constituents().front());
-    z.addConstituent(_trackPhotons == TRACK ? l2 : l2.constituents().front());
+    z.addConstituent(_trackPhotons == AddPhotons::YES ? l1 : l1.constituents().front());
+    z.addConstituent(_trackPhotons == AddPhotons::YES ? l2 : l2.constituents().front());
     MSG_DEBUG("Number of stored raw Z constituents = " << z.rawConstituents().size() << "  " << z.rawConstituents());
 
     // Register the completed Z

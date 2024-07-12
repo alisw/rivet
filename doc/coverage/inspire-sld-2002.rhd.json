@@ -1,0 +1,51 @@
+{
+    "565973": [
+        "Improved direct measurement of A(b) and A(c) at the Z0 pole using a lepton tag", 
+        "SLD", 
+        "10.1103/PhysRevLett.88.151801", 
+        null, 
+        "hep-ex/0111035", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-8951", 
+            "SCIPP-01-38"
+        ]
+    ], 
+    "582951": [
+        "Measurement of the b quark fragmentation function in Z0 decays", 
+        "SLD", 
+        "10.1103/PhysRevD.66.079905", 
+        null, 
+        "hep-ex/0202031", 
+        "ins582951", 
+        null, 
+        [
+            "SLAC-PUB-9087"
+        ]
+    ], 
+    "587018": [
+        "An Improved study of the structure of e+ e- ---> b anti-b g events and limits on the anomalous chromomagnetic coupling of the b quark", 
+        "SLD", 
+        "10.1103/PhysRevD.66.052001", 
+        null, 
+        "hep-ex/0205066", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9206"
+        ]
+    ], 
+    "590927": [
+        "A Search for time dependent B0(s) - anti-B0(s) oscillations using exclusively reconstructed D+-(s) mesons", 
+        "SLD", 
+        "10.1103/PhysRevD.66.032009", 
+        null, 
+        "hep-ex/0207048", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9286"
+        ]
+    ]
+}

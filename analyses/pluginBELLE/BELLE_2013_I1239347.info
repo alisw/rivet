@@ -1,0 +1,38 @@
+Name: BELLE_2013_I1239347
+Year: 2013
+Summary: Mass and angular distributions in the decay $B^0\to\psi(2S) K^+\pi^-$
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1239347
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>Your Name <your@email.address>
+References:
+ - Phys.Rev.D 88 (2013) 7, 074026
+RunInfo: Any process producing B0, originally Upsilon(4S) decay
+Description:
+  'Measurment of mass and angular distributions in  $B^0\to\psi(2s)K^++\pi^-$ decays. The
+   data were read from the figures in the paper and may not be corrected.'
+ValidationInfo:
+  'Herwig7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle:2013shl
+BibTeX: '@article{Belle:2013shl,
+    author = "Chilikin, K. and others",
+    collaboration = "Belle",
+    title = "{Experimental constraints on the spin and parity of the $Z$(4430)$^+$}",
+    eprint = "1306.4894",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BELLE-PREPRINT-2013-12, KEK-PREPRINT-2013-22",
+    doi = "10.1103/PhysRevD.88.074026",
+    journal = "Phys. Rev. D",
+    volume = "88",
+    number = "7",
+    pages = "074026",
+    year = "2013"
+}
+'

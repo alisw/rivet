@@ -16,7 +16,7 @@ namespace Rivet {
   public:
 
     // Default constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2016_I1492320);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2016_I1492320);
 
     /// @name Analysis methods
     //@{
@@ -55,10 +55,10 @@ namespace Rivet {
 
       // Histograms
       if (_mode != 2){
-	_h_fiducial_3l = bookCounter("d01-x01-y01");
+	book(_h_fiducial_3l, "d01-x01-y01");
       }
       if (_mode != 1){
-	_h_2l2j = bookCounter("d01-x01-y02");
+	book(_h_2l2j, "d01-x01-y02");
       }
     }
 
@@ -134,7 +134,7 @@ namespace Rivet {
 	    }
 	    // Fill histo
 	    if (!setVeto) {
-	      _h_fiducial_3l->fill(event.weight());
+	      _h_fiducial_3l->fill();
 	    }
 	  }
 	}
@@ -166,7 +166,7 @@ namespace Rivet {
 	  if (mll < 40*GeV) vetoEvent;
 
 	  // Require same-sign leading leptons
-	  if (leps[0].charge()*leps[0].charge() < 0) vetoEvent;
+	  if (leps[0].charge()*leps[1].charge() < 0) vetoEvent;
 
 	  // Veto di-electron combinations within 10 GeV of the Z mass
 	  if (fabs(mll - 91.188*GeV) < 10*GeV && leps[0].abspid() == PID::ELECTRON && leps[1].abspid() == PID::ELECTRON) vetoEvent;
@@ -202,7 +202,7 @@ namespace Rivet {
 	  if (met.vectorEt().mod() < 55*GeV && (leps[0].abspid() != PID::MUON || leps[1].abspid() != PID::MUON)) vetoEvent;
 
 	  // Fill counter
-	  _h_2l2j->fill(event.weight());
+	  _h_2l2j->fill();
 	}
       }
     }
@@ -212,10 +212,10 @@ namespace Rivet {
     /// Normalise histograms etc., after the run
     void finalize() {
       if (_mode != 2){
-	scale(_h_fiducial_3l, crossSection()/sumOfWeights()/femtobarn);
+        scale(_h_fiducial_3l, crossSection()/sumOfWeights()/femtobarn);
       }
       if (_mode != 1){
-	scale(_h_2l2j, crossSection()/sumOfWeights()/femtobarn);
+        scale(_h_2l2j, crossSection()/sumOfWeights()/femtobarn);
       }
     }
 
@@ -239,6 +239,6 @@ namespace Rivet {
 
 
   // Hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2016_I1492320);
+  RIVET_DECLARE_PLUGIN(ATLAS_2016_I1492320);
 
 }

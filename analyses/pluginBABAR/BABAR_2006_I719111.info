@@ -1,0 +1,34 @@
+Name: BABAR_2006_I719111
+Year: 2006
+Summary: Charm hadron spectra in $B^0$, $\bar{B}^0$ and $B^\pm$ decays 
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 719111
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D75 (2007) 072002
+RunInfo: Any process producing B0, Bbar0, B+, B-
+NeedCrossSection: no
+Description:
+  'Spectra of $D^0$, $\bar{D}^0$, $D^\pm$, $D_s^\pm$, $\Lambda^+_c$, $\bar\Lambda_c^-$ in
+   $B^0$, $\bar{B}^0$ and $B^\pm$ decays  measured by BaBar at the $\Upsilon(4S)$.'
+Keywords: []
+BibKey: Aubert:2006mp
+BibTeX: '@article{Aubert:2006mp,
+      author         = "Aubert, Bernard and others",
+      title          = "{Study of inclusive B- and anti-B0 decays to
+                        flavor-tagged D, D(s) and Lambda+(c)}",
+      collaboration  = "BaBar",
+      journal        = "Phys. Rev.",
+      volume         = "D75",
+      year           = "2007",
+      pages          = "072002",
+      doi            = "10.1103/PhysRevD.75.072002",
+      eprint         = "hep-ex/0606026",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "SLAC-PUB-11898, BABAR-PUB-06-020",
+      SLACcitation   = "%%CITATION = HEP-EX/0606026;%%"
+}'

@@ -1,6 +1,5 @@
 // -*- C++ -*-
 #include "Rivet/Analysis.hh"
-#include "Rivet/Tools/BinnedHistogram.hh"
 #include "Rivet/Projections/FinalState.hh"
 #include "Rivet/Projections/ChargedFinalState.hh"
 #include "Rivet/Projections/VisibleFinalState.hh"
@@ -50,16 +49,16 @@ namespace Rivet {
 
 
       /// Book histograms
-      _count_threeJA     = bookHisto1D("count_threeJA", 1, 0., 1.);
-      _count_threeJB     = bookHisto1D("count_threeJB", 1, 0., 1.);
-      _count_threeJC     = bookHisto1D("count_threeJC", 1, 0., 1.);
-      _count_threeJD     = bookHisto1D("count_threeJD", 1, 0., 1.);
-      _hist_meff_1bjet   = bookHisto1D("meff_1bjet", 32, 0., 1600.);
-      _hist_eTmiss_1bjet = bookHisto1D("eTmiss_1bjet", 6, 0., 600.);
-      _hist_pTj_1bjet    = bookHisto1D("pTjet_1bjet", 20, 0., 800.);
-      _hist_meff_2bjet   = bookHisto1D("meff_2bjet", 32, 0., 1600.);
-      _hist_eTmiss_2bjet = bookHisto1D("eTmiss_2bjet", 6, 0., 600.);
-      _hist_pTj_2bjet    = bookHisto1D("pTjet_2bjet", 20, 0., 800.);
+      book(_count_threeJA     ,"count_threeJA", 1, 0., 1.);
+      book(_count_threeJB     ,"count_threeJB", 1, 0., 1.);
+      book(_count_threeJC     ,"count_threeJC", 1, 0., 1.);
+      book(_count_threeJD     ,"count_threeJD", 1, 0., 1.);
+      book(_hist_meff_1bjet   ,"meff_1bjet", 32, 0., 1600.);
+      book(_hist_eTmiss_1bjet ,"eTmiss_1bjet", 6, 0., 600.);
+      book(_hist_pTj_1bjet    ,"pTjet_1bjet", 20, 0., 800.);
+      book(_hist_meff_2bjet   ,"meff_2bjet", 32, 0., 1600.);
+      book(_hist_eTmiss_2bjet ,"eTmiss_2bjet", 6, 0., 600.);
+      book(_hist_pTj_2bjet    ,"pTjet_2bjet", 20, 0., 800.);
 
 
     }
@@ -68,7 +67,7 @@ namespace Rivet {
     /// Perform the per-event analysis
     void analyze(const Event& event) {
 
-      const double weight = event.weight();
+      const double weight = 1.0;
 
       // Temp: calorimeter module failure with 10% acceptance loss;
       // region unknown ==> randomly choose 10% of events to be vetoed
@@ -77,7 +76,7 @@ namespace Rivet {
         vetoEvent;
 
       Jets tmp_cand_jets;
-      foreach (const Jet& jet,
+      for (const Jet& jet :
                apply<FastJets>(event, "AntiKtJets04").jetsByPt(20.0*GeV) ) {
         if ( fabs( jet.eta() ) < 2.8 ) {
           tmp_cand_jets.push_back(jet);
@@ -95,12 +94,12 @@ namespace Rivet {
 
 
       Jets cand_jets;
-      foreach ( const Jet& jet, tmp_cand_jets ) {
+      for ( const Jet& jet : tmp_cand_jets ) {
         if ( fabs( jet.eta() ) >= 2.8 )
           cand_jets.push_back( jet );
         else {
           bool away_from_e = true;
-          foreach ( const Particle & e, cand_e ) {
+          for ( const Particle & e : cand_e ) {
             if ( deltaR(e.momentum(),jet.momentum()) <= 0.2 ) {
               away_from_e = false;
               break;
@@ -114,9 +113,9 @@ namespace Rivet {
       Particles cand_lept;
 
       bool isolated_e;
-      foreach ( const Particle & e, cand_e ) {
+      for ( const Particle & e : cand_e ) {
         isolated_e = true;
-        foreach ( const Jet& jet, cand_jets ) {
+        for ( const Jet& jet : cand_jets ) {
           if ( deltaR(e.momentum(),jet.momentum()) < 0.4 )
             isolated_e = false;
         }
@@ -126,9 +125,9 @@ namespace Rivet {
 
 
       bool isolated_mu;
-      foreach ( const Particle & mu, cand_mu ) {
+      for ( const Particle & mu : cand_mu ) {
 	isolated_mu = true;
-	foreach ( const Jet& jet, cand_jets ) {
+	for ( const Jet& jet : cand_jets ) {
 	  if ( deltaR(mu.momentum(),jet.momentum()) < 0.4 )
 	    isolated_mu = false;
         }
@@ -141,7 +140,7 @@ namespace Rivet {
       Particles vfs_particles
         = apply<VisibleFinalState>(event, "vfs").particles();
       FourMomentum pTmiss;
-      foreach ( const Particle & p, vfs_particles ) {
+      for ( const Particle & p : vfs_particles ) {
         pTmiss -= p.momentum();
       }
       double eTmiss = pTmiss.pT();
@@ -149,7 +148,7 @@ namespace Rivet {
 
       // bjets
       Jets bjets,recon_jets;
-      foreach (const Jet& j, cand_jets) {
+      for (const Jet& j : cand_jets) {
 	if(fabs( j.eta() ) <= 2.8) {
 	  recon_jets.push_back(j);
 	  if ( fabs( j.eta() ) <= 2.5 && j.perp()>50. &&
@@ -319,6 +318,6 @@ int eTmisscut;
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2011_CONF_2011_098);
+  RIVET_DECLARE_PLUGIN(ATLAS_2011_CONF_2011_098);
 
 }

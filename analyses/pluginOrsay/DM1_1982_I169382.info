@@ -1,0 +1,33 @@
+Name: DM1_1982_I169382
+Year: 1982
+Summary:  Cross section for $e^+e^-\to K^+K^-\pi^+\pi^-$ between 1.3 and 2.2 GeV
+Experiment: DM1
+Collider: DCI
+InspireID: 169382
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B110 (1982) 335-338, 1982 
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+Description:
+  'Measurement of the cross section for $e^+e^-\to K^+K^-\pi^+\pi^-$ between 1.4 and 2.2 GeV.'
+Keywords: []
+BibKey: Cordier:1981en
+BibTeX: '@article{Cordier:1981en,
+      author         = "Cordier, A. and Bisello, D. and Bizot, J. C. and Buon, J.
+                        and Delcourt, B. and Fayard, L. and Mane, F.",
+      title          = "{Study of the $e^+ e^- \to \pi^+ \pi^- K^+ K^-$ Reaction
+                        From 1.4-{GeV} to 2.18-{GeV}}",
+      journal        = "Phys. Lett.",
+      volume         = "110B",
+      year           = "1982",
+      pages          = "335-338",
+      doi            = "10.1016/0370-2693(82)91267-9",
+      reportNumber   = "LAL-81/35",
+      SLACcitation   = "%%CITATION = PHLTA,110B,335;%%"
+}'

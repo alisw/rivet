@@ -12,7 +12,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2016_I1467454);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2016_I1467454);
     //@}
 
 
@@ -33,12 +33,12 @@ namespace Rivet {
       declare(zfinder, "ZFinder");
 
       size_t ch = _mode? 11 : 0; // offset
-      _hist_mll = bookHisto1D(18 + ch, 1, 1);
+      book(_hist_mll, 18 + ch, 1, 1);
 
       vector<double> mll_bins = { 116., 150., 200., 300., 500., 1500. };
       for (size_t i = 0; i < (mll_bins.size() - 1); ++i) {
-        _hist_rap.addHistogram( mll_bins[i], mll_bins[i+1], bookHisto1D(19 + ch + i, 1, 1));
-        _hist_deta.addHistogram(mll_bins[i], mll_bins[i+1], bookHisto1D(24 + ch + i, 1, 1));
+        {Histo1DPtr tmp; _hist_rap.add( mll_bins[i], mll_bins[i+1], book(tmp, 19 + ch + i, 1, 1));}
+        {Histo1DPtr tmp; _hist_deta.add(mll_bins[i], mll_bins[i+1], book(tmp, 24 + ch + i, 1, 1));}
       }
 
     }
@@ -57,10 +57,9 @@ namespace Rivet {
 
       if (el1.pT() > 40*GeV || el2.pT() > 40*GeV) {
         const double mass = z0.mass();
-        const double weight = event.weight();
-        _hist_mll->fill(mass/GeV, weight);
-        _hist_rap. fill(mass/GeV, z0.absrap(), weight);
-        _hist_deta.fill(mass/GeV, deltaEta(el1,el2), weight);
+        _hist_mll->fill(mass/GeV);
+        _hist_rap. fill(mass/GeV, z0.absrap());
+        _hist_deta.fill(mass/GeV, deltaEta(el1,el2));
       }
     }
 
@@ -85,11 +84,11 @@ namespace Rivet {
     /// @name Histograms
     //@{
     Histo1DPtr _hist_mll;
-    BinnedHistogram<double> _hist_rap, _hist_deta;
+    BinnedHistogram _hist_rap, _hist_deta;
     //@}
 
   };
 
-  DECLARE_RIVET_PLUGIN(ATLAS_2016_I1467454);
+  RIVET_DECLARE_PLUGIN(ATLAS_2016_I1467454);
 
 }

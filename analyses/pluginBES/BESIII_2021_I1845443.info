@@ -1,0 +1,39 @@
+Name: BESIII_2021_I1845443
+Year: 2021
+Summary: Cross section for $e^+e^-\to p \bar{p} \eta$ and $p \bar{p} \omega$ at energies between 3.773 and 4.600 GeV
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1845443
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 104 (2021) 9, 092008
+RunInfo: e+e- to hadrons
+Beams: [e+, e-]
+Description:
+  'Cross section for  $e^+e^-\to p \bar{p} \eta$ and $p \bar{p} \omega$ at energies between 3.773 and 4.600 GeV
+   measured by the BESIII collaboration.'
+ValidationInfo:
+  'Validated using Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2021vkt
+BibTeX: '@article{BESIII:2021vkt,
+    author = "Ablikim, Medina and others",
+    collaboration = "BESIII",
+    title = "{Cross section measurement of $e^+e^- \to p\bar{p}\eta$ and $e^+e^- \to p\bar{p}\omega$ at center-of-mass energies between 3.773~GeV and 4.6~GeV}",
+    eprint = "2102.04268",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevD.104.092008",
+    journal = "Phys. Rev. D",
+    volume = "104",
+    number = "9",
+    pages = "092008",
+    year = "2021"
+}'
+ToDo:
+ - Add dists in fig 2

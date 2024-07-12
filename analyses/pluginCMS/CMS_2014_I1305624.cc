@@ -115,12 +115,22 @@ namespace Rivet {
       declare(jets, "Jets");
 
       for (int ij=0; ij < NJETPTMN; ij++) {
-        _h_thrustc[ij] = bookHisto1D(1, 1, ij+1);
-        _h_broadt[ij] = bookHisto1D(1, 2, ij+1);
-        _h_tot3dmass[ij] = bookHisto1D(1, 3, ij+1);
-        _h_tottrnsmass[ij] = bookHisto1D(1, 4, ij+1);
-        _h_y23c[ij] = bookHisto1D(1, 5, ij+1);
+        book(_h_thrustc[ij] ,1, 1, ij+1);
+        book(_h_broadt[ij] ,1, 2, ij+1);
+        book(_h_tot3dmass[ij] ,1, 3, ij+1);
+        book(_h_tottrnsmass[ij] ,1, 4, ij+1);
+        book(_h_y23c[ij] ,1, 5, ij+1);
         //
+      }
+      _needBinInit = true;
+    }
+
+
+    /// Perform the per-event analysis
+    void analyze(const Event& event) {
+
+      if (_needBinInit) {
+      	for (int ij=0; ij < NJETPTMN; ij++) {
         _alow1[ij] = _h_thrustc[ij]->xMin();
         _alow2[ij] = _h_broadt[ij]->xMin();
         _alow3[ij] = _h_tot3dmass[ij]->xMin();
@@ -132,12 +142,10 @@ namespace Rivet {
         _ahgh3[ij] = _h_tot3dmass[ij]->xMax();
         _ahgh4[ij] = _h_tottrnsmass[ij]->xMax();
         _ahgh5[ij] = _h_y23c[ij]->xMax();
+
+        _needBinInit = false;
+	}
       }
-    }
-
-
-    /// Perform the per-event analysis
-    void analyze(const Event& event) {
 
       const Jets& jets = apply<FastJets>(event, "Jets").jetsByPt(30.0*GeV);
       if (jets.size() < 2) vetoEvent;
@@ -147,7 +155,7 @@ namespace Rivet {
       if (leadingpt < 110*GeV) vetoEvent;
 
       vector<double> jtpx, jtpy, jtpz, jten;
-      foreach (const Jet& j, jets) {
+      for (const Jet& j : jets) {
         if (j.abseta() < 2.4) {
           jtpx.push_back(j.px());
           jtpy.push_back(j.py());
@@ -160,7 +168,7 @@ namespace Rivet {
       const vector<double> eventvar = eventshape.getEventShapes();
       if (eventvar[NEVTVAR] < 0) vetoEvent; // Jets are not only one hemisphere
 
-      const double weight = event.weight();
+      const double weight = 1.0;
       for (int ij = NJETPTMN-1; ij >= 0; --ij) {
         if (leadingpt/GeV > LEADINGPTTHRESHOLD[ij]) {
           if (inRange(eventvar[0], _alow1[ij], _ahgh1[ij])) _h_thrustc[ij]->fill(eventvar[0], weight);
@@ -201,13 +209,14 @@ namespace Rivet {
     //@}
 
     // Data members
+    bool _needBinInit;
     double _alow1[NJETPTMN], _alow2[NJETPTMN], _alow3[NJETPTMN], _alow4[NJETPTMN], _alow5[NJETPTMN];
     double _ahgh1[NJETPTMN], _ahgh2[NJETPTMN], _ahgh3[NJETPTMN], _ahgh4[NJETPTMN], _ahgh5[NJETPTMN];
 
   };
 
 
-  DECLARE_RIVET_PLUGIN(CMS_2014_I1305624);
+  RIVET_DECLARE_PLUGIN(CMS_2014_I1305624);
 
 
 
@@ -228,9 +237,9 @@ namespace Rivet {
           ((size_t) _object_pz.size() != length) ||
           ((size_t) _object_e.size() != length)) {
         /// @todo Change to exception or assert
-        // cout << "ERROR!!!! Input vectors differ in size! Change that please!" << endl;
+        // cout << "ERROR!!!! Input vectors differ in size! Change that please!" << '\n';
         // cout<<"py_size: "<<_object_py.size()<<" ,pz_size: "<<_object_pz.size()
-        //     <<" ,px_size: "<<_object_px.size()<<" ,E_size: "<<_object_e.size()<<endl;
+        //     <<" ,px_size: "<<_object_px.size()<<" ,E_size: "<<_object_e.size()<<'\n';
         return 0;
       }
 
@@ -273,7 +282,7 @@ namespace Rivet {
           //      << " which is bigger than E = " << _object_e[k] <<" "
           //      << _object_px[k] <<" "<< _object_py[k] <<" "
           //      << _object_pz[k] <<" of total length "<< length
-          //      << endl;
+          //      << '\n';
           return 0;
         }
 
@@ -289,15 +298,15 @@ namespace Rivet {
         }
         if (_irap == 1) {
           if (_object_pz[k] == _object_e[k]) {
-            /// @todo Change to exception or assert
-            // cout << "ERROR!!! object "<<k<<" has Pz "<< _object_pz[k] <<" which is equal to E = "<< _object_e[k] <<endl;
+            /// @todo Change to exception
+            // cout << "ERROR!!! object "<<k<<" has Pz "<< _object_pz[k] <<" which is equal to E = "<< _object_e[k] <<'\n';
             return 0;
           }
           _object_eta[k]=0.5*log((_object_e[k]+_object_pz[k])/(_object_e[k]-_object_pz[k]));
         }
         if (_irap != 0 && _irap != 1) {
-          /// @todo Change to exception or assert
-          // cout << "ERROR!!!, The choice to use the rapidity y or the pseudorapidity eta is not set correctly! Change that please!" << endl;
+          /// @todo Change to exception
+          // cout << "ERROR!!!, The choice to use the rapidity y or the pseudorapidity eta is not set correctly! Change that please!" << '\n';
           return 0;
         }
         _object_phi[k] = atan2(_object_py[k], _object_px[k]);
@@ -345,10 +354,10 @@ namespace Rivet {
 
       if (object_px_in.size() != nin) {
         /// @todo Change to exception or assert
-        cout<<"ERROR!!! wrong dimension of 'in' momenta"<<endl;
+        cout << "ERROR!!! wrong dimension of 'in' momenta" << endl;
         //return 0; ///< @todo Why not do this?
       }
-      const size_t nout = length - nin;
+      // const size_t nout = length - nin;
 
       if (nin < _nmnjet) {
         for (int i = 0; i < NEVTVAR; i++) {
@@ -361,23 +370,23 @@ namespace Rivet {
       if (nin >= _nmnjet) {
         double p_sum_c = 0; //GMA
         double pt_sum_c = 0;
-        double eta_cw=0;
-        double px_sum_in = 0;
-        double py_sum_in = 0;
+        // double eta_cw = 0;
+        // double px_sum_in = 0;
+        // double py_sum_in = 0;
         for (size_t j = 0; j < nin; j++) {
           pt_sum_c += object_pt_in[j];
           p_sum_c += sqrt(pow(object_pt_in[j],2.) + pow(object_pz_in[j], 2.0)); //GMA
-          eta_cw += object_pt_in[j]*object_eta_in[j];
-          px_sum_in += object_px_in[j];
-          py_sum_in += object_py_in[j];
+          // eta_cw += object_pt_in[j]*object_eta_in[j];
+          // px_sum_in += object_px_in[j];
+          // py_sum_in += object_py_in[j];
         }
-        eta_cw /= pt_sum_c;
+        // eta_cw /= pt_sum_c;
 
-        double expTerm = 0;
-        for (size_t j = 0; j < nout; j++) {
-          expTerm += object_pt_out[j] * exp(-fabs(object_eta_out[j]-eta_cw));
-        }
-        expTerm /= pt_sum_c;
+        // double expTerm = 0;
+        // for (size_t j = 0; j < nout; j++) {
+        //   expTerm += object_pt_out[j] * exp(-fabs(object_eta_out[j]-eta_cw));
+        // }
+        // expTerm /= pt_sum_c;
 
         //the central global transverse thrust centrthr is calculated
         double centrthr = 0;
@@ -578,9 +587,6 @@ namespace Rivet {
       if (((size_t) in_object_py.size()!=y3_length) ||
           ((size_t) in_object_pz.size()!=y3_length) ||
           (in_object_e.size()!=y3_length)) {
-        // cout << "ERROR!!!! Input vectors differ in size! Change that please!" << endl;
-        // cout<<"py_size: "<<in_object_py.size()<<" ,pz_size: "<<in_object_pz.size()
-        //     <<" ,px_size: "<<in_object_px.size()<<" , E_size: "<<in_object_e.size() <<endl;
         return 0.0;
       }
 
@@ -821,7 +827,7 @@ namespace Rivet {
       length_thrust_calc = input_px.size();
       if (input_py.size() != length_thrust_calc) {
         /// @todo Change to exception or assert
-        cout<<"ERROR in thrust calculation!!! Size of input vectors differs. Change that please!"<<endl;
+        cout << "ERROR in thrust calculation!!! Size of input vectors differs. Change that please!" << endl;
         return thrust_values;
       }
 
@@ -892,7 +898,7 @@ namespace Rivet {
     double EventShape::_lorentz_sp(const vector<double>& a, const vector<double>& b) {
       size_t dim = (size_t) a.size();
       if (a.size()!=b.size()) {
-        cout<<"ERROR!!! Dimension of input vectors are different! Change that please!"<<endl;
+        cout << "ERROR!!! Dimension of input vectors are different! Change that please!" << endl;
         return 0;
       } else {
         double l_dot_product=a[dim-1]*b[dim-1];

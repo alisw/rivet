@@ -1,0 +1,134 @@
+{
+    "1375998": [
+        "Search for Violation of $CPT$ and Lorentz Invariance in ${B_s^0}$ Meson Oscillations", 
+        "D0", 
+        "10.1103/PhysRevLett.115.161601", 
+        "2025335", 
+        "1506.04123", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-15-258-E"
+        ]
+    ], 
+    "1387753": [
+        "Precise measurement of the top quark mass in dilepton decays using optimized neutrino weighting", 
+        "D0", 
+        "10.1016/j.physletb.2015.10.086", 
+        "2044632", 
+        "1508.03322", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-15-338-E"
+        ]
+    ], 
+    "1403548": [
+        "Evidence for simultaneous production of $J/\\psi$ and $\\Upsilon$ mesons", 
+        "D0", 
+        "10.1103/PhysRevLett.116.082002", 
+        "2065820", 
+        "1511.02428", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-15-485-E"
+        ]
+    ], 
+    "1404885": [
+        "Measurement of the forward-backward asymmetry of $\\Lambda$ and $\\bar{\\Lambda}$ production in $p \\bar{p}$ collisions", 
+        "D0", 
+        "10.1103/PhysRevD.93.032002", 
+        "2103063", 
+        "1511.05113", 
+        "ins1404885", 
+        null, 
+        [
+            "FERMILAB-PUB-15-496-E"
+        ]
+    ], 
+    "1409922": [
+        "Study of double parton interactions in diphoton + dijet events in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.96$ TeV", 
+        "D0", 
+        "10.1103/PhysRevD.93.052008", 
+        "2115614", 
+        "1512.05291", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-15-562-E"
+        ]
+    ], 
+    "1411650": [
+        "Measurement of Spin Correlation between Top and Antitop Quarks Produced in $p\\bar{p}$ Collisions at $\\sqrt{s} =$ 1.96 TeV", 
+        "D0", 
+        "10.1016/j.physletb.2016.03.053", 
+        "2118513", 
+        "1512.08818", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-15-581-E"
+        ]
+    ], 
+    "1423301": [
+        "Evidence for a $B_s^0 \\pi^\\pm$ state", 
+        "D0", 
+        "10.1103/PhysRevLett.117.022003", 
+        "2134236", 
+        "1602.07588", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-16-038-E"
+        ]
+    ], 
+    "1426128": [
+        "$B^{0}_{s}$ lifetime measurement in the CP-odd decay channel $B^{0}_{s} \\to J/\\psi f_{0}(980)$", 
+        "D0", 
+        "10.1103/PhysRevD.94.012001", 
+        "2137015", 
+        "1603.01302", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-16-071-E"
+        ]
+    ], 
+    "1457606": [
+        "Measurement of the Forward-Backward Asymmetries in the Production of \u039e and \u03a9 Baryons in $p\\overline{p}$ Collisions", 
+        "D0", 
+        "10.1103/PhysRevD.93.112001", 
+        "2152171", 
+        "1605.03513", 
+        "ins1457606", 
+        null, 
+        [
+            "FERMILAB-PUB-16-168-E"
+        ]
+    ], 
+    "1463281": [
+        "Measurement of the Inclusive $t\\bar{t}$ Production Cross Section in $p\\bar{p}$ Collisions at $\\sqrt{s}=1.96$ TeV and Determination of the Top Quark Pole Mass", 
+        "D0", 
+        "10.1103/PhysRevD.94.092004", 
+        "2154713", 
+        "1605.06168", 
+        "ins1463281", 
+        null, 
+        [
+            "FERMILAB-PUB-16-180-E"
+        ]
+    ], 
+    "1468398": [
+        "Measurement of the Top Quark Mass Using the Matrix Element Technique in Dilepton Final States", 
+        "D0", 
+        "10.1103/PhysRevD.94.032004", 
+        "2159879", 
+        "1606.02814", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-16-219-E"
+        ]
+    ]
+}

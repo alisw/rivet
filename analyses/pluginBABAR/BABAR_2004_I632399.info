@@ -1,0 +1,36 @@
+Name: BABAR_2004_I632399
+Year: 2004
+Summary: $\phi$ momentum spectra in $\Upsilon(4S)$ decays
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 632399
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - 
+RunInfo: Any process producing Upsilon(4S) originally e+e-
+Description:
+  'Measurement of the momentum spectrum of $\phi$ mesons produced in $B$ decays at the $\Upsilon(4S)$ resonance.'
+ValidationInfo:
+  'Herwig 7 events using EvtGen for the decays.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Aubert:2003fc
+BibTeX: '@article{Aubert:2003fc,
+      author         = "Aubert, Bernard and others",
+      title          = "{Measurement of the average $\phi$ multiplicity in $B$
+                        meson decay}",
+      collaboration  = "BaBar",
+      journal        = "Phys. Rev.",
+      volume         = "D69",
+      year           = "2004",
+      pages          = "052005",
+      doi            = "10.1103/PhysRevD.69.052005",
+      eprint         = "hep-ex/0311008",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "SLAC-PUB-10120, BABAR-03-029",
+      SLACcitation   = "%%CITATION = HEP-EX/0311008;%%"
+}'

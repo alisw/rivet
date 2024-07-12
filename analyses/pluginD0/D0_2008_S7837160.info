@@ -6,13 +6,14 @@ Collider: Tevatron Run 2
 SpiresID: 7837160
 InspireID: 791230
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Andy Buckley <andy.buckley@cern.ch>
  - Gavin Hesketh <gavin.hesketh@cern.ch>
 References:
  - Phys.Rev.Lett.101:211801,2008
  - doi:10.1103/PhysRevLett.101.211801
- - arXiv:0807.3367v1 [hep-ex]
+ - arXiv:0807.3367 [hep-ex]
 RunInfo:
   "* Event type: W production with decay to $e \\, \\nu_e$ only  
    * for Pythia 6: MSEL = 12, MDME(206,1) = 1
@@ -45,3 +46,7 @@ BibTeX: '@Article{Abazov:2008qv,
      doi       = "10.1103/PhysRevLett.101.211801",
      SLACcitation  = "%%CITATION = 0807.3367;%%"
 }'
+
+ReleaseTests:
+ - $A TVT-Run-II-W
+

@@ -1,0 +1,35 @@
+Name: CLEO_2004_I654843
+Year: 2004
+Summary:  $q^2$ spectra in $D^0\to (\pi^-,K^-) e^+\nu_e$ 
+Experiment: CLEO
+Collider: CESR
+InspireID: 654843
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 94 (2005) 011802
+RunInfo: any process producing charm mesons
+Description:
+  'Measurement of the $q^2$ spectra for semi-leptonic $D_0$ meson decays by CLEO.'
+ValidationInfo:
+  'Herwig 7 events at the psi(3770), using EvtGen for the D decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: CLEO:2004arv
+BibTeX: '@article{CLEO:2004arv,
+    author = "Huang, G. S. and others",
+    collaboration = "CLEO",
+    title = "{Study of semileptonic charm decays D0 ---\ensuremath{>} pi- l+ nu and D0 ---\ensuremath{>} K- l+ nu}",
+    eprint = "hep-ex/0407035",
+    archivePrefix = "arXiv",
+    reportNumber = "CLNS-04-1876, CLEO-04-06",
+    doi = "10.1103/PhysRevLett.94.011802",
+    journal = "Phys. Rev. Lett.",
+    volume = "94",
+    pages = "011802",
+    year = "2005"
+}
+'

@@ -1,0 +1,36 @@
+Name: BESIII_2017_I1621266
+Year: 2017
+Summary: Dalitz plot analysis of $J/\psi$ and $\psi(2S)\to\pi^+\pi^-\eta^\prime$
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1621266
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 96 (2017) 11, 112012
+RunInfo: Any process producing J/psi or psi(2S), originally e+e-
+Description:
+  'Measurement of the mass distributions in the decays  $J/\psi$ and $\psi(2S)\to\pi^+\pi^-\eta^\prime$ by BESIII. The data were read from the plots in the paper and therefore for some points the error bars are the size of the point. Also the sideband background from the plots has been subtracted. It is also not clear that any resolution effects have been unfolded.'
+ValidationInfo:
+  'Herwig7 events uing the model in the paper'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2017hup
+BibTeX: '@article{BESIII:2017hup,
+    author = "Ablikim, M. and others",
+    collaboration = "BESIII",
+    title = "{Study of $J/\psi$ and $\psi(3686)$ decays to $\pi^+\pi^-\eta^\prime$}",
+    eprint = "1709.00018",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevD.96.112012",
+    journal = "Phys. Rev. D",
+    volume = "96",
+    number = "11",
+    pages = "112012",
+    year = "2017"
+}
+'

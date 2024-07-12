@@ -1,0 +1,33 @@
+Name: BELLE_2022_I2163247
+Year: 2022
+Summary: Exclusive semileptonic $B^0\to\pi^-$ decays.
+Experiment: BELLE
+Collider: KEKB
+InspireID: 2163247
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - arXiv:2210.04224 [hep-ex]
+RunInfo: Any process producing B0, original e+ e- at Upsilon(4S)
+Description:
+  'Differential branching ratio, with respect to $q^2$ for the decays $B^0\to\pi^-\ell^+\nu_\ell$'
+ValidationInfo:
+  'Herwig 7 event using EvtGen for B decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle-II:2022imn
+BibTeX: '@article{Belle-II:2022imn,
+    author = "Adamczyk, K. and others",
+    collaboration = "Belle-II",
+    title = "{Determination of $|V_{ub}|$ from untagged $B^0\to\pi^- \ell^+ \nu_{\ell}$ decays using 2019-2021 Belle II data}",
+    eprint = "2210.04224",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BELLE2-CONF-PH-2022-017",
+    month = "10",
+    year = "2022"
+}
+'

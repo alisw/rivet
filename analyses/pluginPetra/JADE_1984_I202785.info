@@ -1,0 +1,31 @@
+Name: JADE_1984_I202785
+Year: 1984
+Summary: Spectrum for $D^{*+}$ production in $e^+e^-$ collisions at $E_{\text{CMS}}=34.4$
+Experiment: JADE
+Collider: Petra
+InspireID: 202785
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. 104B (1981) 325-329
+RunInfo: e+ e- to hadrons
+NeedCrossSection: yes
+Beams: [e+, e-]
+Energies: [34.4]
+Description:
+  'Measurement of the $D^{*+}$ momentum spectrum in $e^+e^-$ collisions for a centre-of-mass energy of 34.4 GeV by the JADE experiment at Petra. The angular distribution is also measured.'
+Keywords: []
+BibKey: Bartel:1984ud
+BibTeX: '@article{Bartel:1984ud,
+      author         = "Bartel, W. and others",
+      title          = "{Charged $D^*$ Production in $e^+ e^-$ Annihilation}",
+      collaboration  = "JADE",
+      journal        = "Phys. Lett.",
+      volume         = "146B",
+      year           = "1984",
+      pages          = "121-125",
+      doi            = "10.1016/0370-2693(84)90656-7",
+      reportNumber   = "DESY-84-059",
+      SLACcitation   = "%%CITATION = PHLTA,146B,121;%%"
+}'

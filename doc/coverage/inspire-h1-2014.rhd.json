@@ -1,0 +1,26 @@
+{
+    "1269731": [
+        "Measurement of inclusive $e p$ cross sections at high $Q^2$ at $\\sqrt s =$ 225 and 252 GeV and of the longitudinal proton structure function $F_L$ at HERA", 
+        "H1", 
+        "10.1140/epjc/s10052-014-2814-6", 
+        "1637625", 
+        "1312.4821", 
+        "ins1269731", 
+        null, 
+        [
+            "DESY-13-211"
+        ]
+    ], 
+    "1288065": [
+        "Measurement of Feynman-$x$ Spectra of Photons and Neutrons in the Very Forward Direction in Deep-Inelastic Scattering at HERA", 
+        "H1", 
+        "10.1140/epjc/s10052-014-2915-2", 
+        "1692765", 
+        "1404.0201", 
+        "ins1288065", 
+        null, 
+        [
+            "DESY-14-035"
+        ]
+    ]
+}

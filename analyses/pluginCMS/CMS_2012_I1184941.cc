@@ -18,10 +18,10 @@ namespace Rivet {
       FinalState fs;
       declare(fs, "FS");
 
-      const FastJets jets(FinalState(-4.9, 4.9, 0.0*GeV), FastJets::ANTIKT, 0.5);
+      const FastJets jets(FinalState((Cuts::etaIn(-4.9, 4.9))), FastJets::ANTIKT, 0.5);
       declare(jets, "AntiKtJets05");
 
-      _h_xi = bookHisto1D(1, 1, 1);
+      book(_h_xi ,1, 1, 1);
     }
 
 
@@ -35,7 +35,7 @@ namespace Rivet {
 
       const FinalState& fsp = apply<FinalState>(event, "FS");
 
-      foreach (const Particle& p, fsp.particles(cmpMomByEta)) {
+      for (const Particle& p : fsp.particles(cmpMomByEta)) {
         const double eta = p.eta();
         const double energy = p.E();
         const double costheta = cos(p.theta());
@@ -47,7 +47,7 @@ namespace Rivet {
       xiP = xiP / (sqrtS()/GeV);
       xiM = xiM / (sqrtS()/GeV);
 
-      const double weight = event.weight();
+      const double weight = 1.0;
       _h_xi->fill( xiM, weight ); // Fill the histogram both with xiP and xiM, and get the average in the endjob.
       _h_xi->fill( xiP, weight );
     }
@@ -65,6 +65,6 @@ namespace Rivet {
   };
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CMS_2012_I1184941);
+  RIVET_DECLARE_PLUGIN(CMS_2012_I1184941);
 
 }

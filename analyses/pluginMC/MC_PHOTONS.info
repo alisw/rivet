@@ -1,6 +1,7 @@
 Name: MC_PHOTONS
 Summary: Monte Carlo validation observables for general photons
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Steve Lloyd
  - Andy Buckley <andy.buckley@cern.ch>

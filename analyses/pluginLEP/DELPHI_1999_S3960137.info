@@ -32,3 +32,7 @@ BibTeX: '@Article{Abreu:1998nn,
      doi       = "10.1016/S0370-2693(99)00105-7",
      SLACcitation  = "%%CITATION = PHLTA,B449,364;%%"
 }'
+
+ReleaseTests:
+ - $A LEP-91
+

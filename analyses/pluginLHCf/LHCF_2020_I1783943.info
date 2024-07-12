@@ -1,0 +1,44 @@
+Name: LHCF_2020_I1783943
+Year: 2020
+Summary: Measurement of energy flow, cross section and average inelasticity of forward neutrons produced in $\sqrt{s} = 13$~TeV proton-proton collisions with the LHCf Arm2 detector
+Experiment: LHCF
+Collider: LHC
+InspireID: 1783943
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Eugenio Berti <eugenio.berti@fi.infn.it>
+ - LHCf collaboration <lhcf@isee.nagoya-u.ac.jp>
+References:
+ - 'JHEP 07 (2020) 16'
+ - 'DOI:10.1007/JHEP07(2020)016'
+ - 'arXiv:2003.02192'
+Keywords:
+ - Neutrons
+ - Forward Physics
+RunInfo: Measurement of the energy flow, the cross section and the average inelasticity of forward neutrons (+ antineutrons) produced in $\sqrt{s} = 13$~TeV proton-proton collisions. These quantities are derived from the inclusive differential production cross section measured, as a function of energy, in the six pseudorapidity regions corresponding to $\eta > 10.76$, $10.06 < \eta < 10.75$, $9.65 < \eta < 10.06$, $8.99 < \eta < 9.22$, $8.81 < \eta < 8.99$ and $8.65 < \eta < 8.80$. The measurements refer to all neutrons (and antineutrons) directly produced in the collisions or resulting from the decay of short life particles ($\mathrm{c \tau<1\,cm}$).
+NumEvents: 1000000
+NeedCrossSection: no
+Beams: [p+, p+]
+Energies: [13000]
+Description:
+'In this paper, we report the measurement of the energy flow, the cross section and the average inelasticity of forward neutrons (+ antineutrons) produced in $\sqrt{s} = 13$~TeV proton-proton collisions. These quantities are obtained from the inclusive differential production cross section, measured using the LHCf Arm2 detector at the CERN Large Hadron Collider. The measurements are performed in six pseudorapidity regions: three of them ($\eta > 10.75$, $8.99 < \eta < 9.21$ and $8.80 < \eta < 8.99$), albeit with smaller acceptance and larger uncertainties, were already published in a previous work, whereas the remaining three ($10.06 < \eta < 10.75$, $9.65 < \eta < 10.06$ and $8.65 < \eta < 8.80$) are presented here for the first time. The analysis was carried out using a data set acquired in June 2015 with a corresponding integrated luminosity of $\mathrm{0.194~nb^{-1}}$. Comparing the experimental measurements with the expectations of several hadronic interaction models used to simulate cosmic ray air showers, none of these generators resulted to have a satisfactory agreement in all the phase space selected for the analysis. The inclusive differential production cross section for $\eta > 10.75$ is not reproduced by any model, whereas the results still indicate a significant but less serious deviation at lower pseudorapidities. Depending on the pseudorapidity region, the generators showing the best overall agreement with data are either SIBYLL 2.3 or EPOS-LHC. Furthermore, apart from the most forward region, the derived energy flow and cross section distributions are best reproduced by EPOS-LHC. Finally, even if none of the models describe the elasticity distribution in a satisfactory way, the extracted average inelasticity is consistent with the QGSJET II-04 value, while most of the other generators give values that lie just outside the experimental uncertainties.'
+BibKey: LHCf:2020hjf
+BibTeX: '@article{LHCf:2020hjf,
+	    author = "Adriani, O. and others",
+	    title = "{Measurement of energy flow, cross section and average inelasticity of forward neutrons produced in $\sqrt{s}$ = 13 TeV proton-proton collisions with the LHCf Arm2 detector}",
+	    collaboration = "LHCf",
+	    journal = "JHEP",
+	    volume = "07",
+	    year = "2020",
+	    pages = "016",
+	    doi = "10.1007/JHEP07(2020)016",
+	    note = "[JHEP07,016(2020)]",
+	    eprint = "2003.02192",
+	    archivePrefix = "arXiv",
+	    primaryClass = "hep-ex",
+	    reportNumber = "CERN-EP-2020-029",
+	    SLACcitation   = "%%CITATION = ARXIV:2003.02192;%%"
+}'
+ReleaseTests:
+ - $A pp-13000-fwd-neutrons

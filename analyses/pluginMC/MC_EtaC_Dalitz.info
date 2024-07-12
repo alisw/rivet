@@ -1,0 +1,16 @@
+Name: MC_EtaC_Dalitz
+Summary: MC analysis of Dalitz plots in three-body $\eta_c$ decays
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+RunInfo: Any process producing eta_c mesons
+Description:
+  'Monte Carlo analysis of common three-body decays of $eta_c$ mesons.
+   The $\pi^+\pi^-\eta$, $\pi^0\pi^0\eta$, $\pi^+\pi^-\eta^\prime$, $\pi^0\pi^0\eta^\prime$, $K^+K^-\eta$, $K^0_{S,L}K^0_{S,L}\eta$, $K^+K^-\eta^\prime$, $K^0_{S,L}K^0_{S,L}\eta^\prime$,
+   $K^+K^-\pi^0$, $K^0_{S,L}K^0_{S,L}\pi^0$, $K^0_{S,L}K^+\pi^-$, $K^0_{S,L}K^-\pi^+$  modes are included.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []

@@ -5,6 +5,7 @@ Experiment: CMS
 Collider: LHC
 InspireID: 1256943
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Lorenzo Viliani <lorenzo.viliani@cern.ch>
  - Piergiulio Lenzi <piergiulio.lenzi@cern.ch>
@@ -23,6 +24,7 @@ NumEvents: 1000000
 NeedCrossSection: yes
 Beams: [p+, p+]
 Energies: [7000]
+Luminosity_fb: 5.2
 Description:
   'A study of proton-proton collisions in which two $b$-hadrons
   are produced in association with a $Z$ boson is reported. The
@@ -54,3 +56,8 @@ BibTeX: '@article{Chatrchyan:2013zja,
       reportNumber   = "CMS-EWK-11-015, CERN-PH-EP-2013-153",
       SLACcitation   = "%%CITATION = ARXIV:1310.1349;%%",
 }'
+
+ReleaseTests:
+ - $A LHC-Z-e
+ - $A-2 LHC-Z-mu
+

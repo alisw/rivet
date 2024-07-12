@@ -1,0 +1,320 @@
+{
+    "37303": [
+        "Precision measurement of the D(s)+* - D(s)+ mass difference", 
+        "CLEO", 
+        "10.1103/PhysRevD.50.1884", 
+        null, 
+        "hep-ph/9403327", 
+        null, 
+        null, 
+        [
+            "CLNS-94-1271", 
+            "CLEO-94-6", 
+            "CLNS94-1271"
+        ]
+    ], 
+    "37565": [
+        "Exclusive hadronic B decays to charm and charmonium final states", 
+        "CLEO", 
+        "10.1103/PhysRevD.50.43", 
+        null, 
+        "hep-ph/9403295", 
+        null, 
+        null, 
+        [
+            "CLNS-94-1270", 
+            "CLEO-94-5"
+        ]
+    ], 
+    "37661": [
+        "A Measurement of the branching fraction $\\mathcal{B} (\\tau^- \\to h^- \\pi^0 \\nu_{\\tau})$", 
+        "CLEO", 
+        "10.1103/PhysRevLett.72.3762", 
+        null, 
+        "hep-ph/9404310", 
+        null, 
+        null, 
+        [
+            "CLNS-94-1281", 
+            "CLEO-94-11"
+        ]
+    ], 
+    "356001": [
+        "Analysis of hadronic transitions in upsilon (3S) decays", 
+        "CLEO", 
+        "10.1103/PhysRevD.49.40", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-93-1234", 
+            "CLEO-93-12"
+        ]
+    ], 
+    "357603": [
+        "First measurement of Gamma (D(s)+ ---> mu+ neutrino) / gamma (D(s)+ ---> phi pi+)", 
+        "CLEO", 
+        "10.1103/PhysRevD.49.5690", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-93-1238", 
+            "CLEO-93-14"
+        ]
+    ], 
+    "358510": [
+        "Measurement of cross-section for gamma gamma ---> p anti-p", 
+        "CLEO", 
+        "10.1103/PhysRevD.50.5484", 
+        null, 
+        null, 
+        "ins358510", 
+        null, 
+        [
+            "CLNS-93-1245", 
+            "CLEO-93-17"
+        ]
+    ], 
+    "359316": [
+        "Measurement of two photon production of the chi(c2)", 
+        "CLEO", 
+        "10.1103/PhysRevD.50.4265", 
+        null, 
+        null, 
+        "ins359316", 
+        null, 
+        [
+            "CLNS-93-1250"
+        ]
+    ], 
+    "360703": [
+        "Observation of Lambda(c)+ decays to Lambda pi+ pi0, Sigma0 pi+, Sigma0 pi+ pi0, and Sigma0 pi- pi+ pi+", 
+        "CLEO", 
+        "10.1016/0370-2693(94)90100-7", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-93-1260", 
+            "CLEO-93-22"
+        ]
+    ], 
+    "360925": [
+        "Search for B0 decays to two charged leptons", 
+        "CLEO", 
+        "10.1103/PhysRevD.49.5701", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-93-1258", 
+            "CLEO-93-21"
+        ]
+    ], 
+    "361356": [
+        "Observation of inclusive B decays to the charmed baryons Sigma(c)++ and Sigma(c)0", 
+        "CLEO", 
+        "10.1103/PhysRevLett.73.1472", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-93-1264", 
+            "CLEO-93-24"
+        ]
+    ], 
+    "361358": [
+        "Observation of D0 ---> K+ pi-", 
+        "CLEO", 
+        "10.1103/PhysRevLett.72.1406", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-93-1262", 
+            "CLEO-93-23"
+        ]
+    ], 
+    "371608": [
+        "Observation of a new charmed strange meson", 
+        "CLEO", 
+        "10.1103/PhysRevLett.72.1972", 
+        null, 
+        "hep-ph/9403325", 
+        null, 
+        null, 
+        [
+            "CLNS-94-1266", 
+            "CLEO-94-1", 
+            "CLNS94-1266"
+        ]
+    ], 
+    "371609": [
+        "Luminosity measurement with the CLEO-II detector", 
+        "CLEO", 
+        "10.1016/0168-9002(94)90494-4", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-94-1268", 
+            "CLEO-94-3"
+        ]
+    ], 
+    "371610": [
+        "Measurement of the branching fraction for D+ ---> K- pi+ pi+", 
+        "CLEO", 
+        "10.1103/PhysRevLett.72.2328", 
+        null, 
+        "hep-ph/9403382", 
+        null, 
+        null, 
+        [
+            "CLNS-94-1267", 
+            "CLEO-94-2", 
+            "CLNS94-1267"
+        ]
+    ], 
+    "371611": [
+        "Study of the decay lambda(c)+ ---> Lambda lepton+ lepton-neutrino", 
+        "CLEO", 
+        "10.1016/0370-2693(94)90295-X", 
+        null, 
+        "hep-ph/9403326", 
+        null, 
+        null, 
+        [
+            "CLNS-94-1269", 
+            "CLEO-94-4"
+        ]
+    ], 
+    "371612": [
+        "A Measurement of B (D(s)+ ---> phi lepton+ neutrino) / b (D(s)+ ---> phi pi+)", 
+        "CLEO", 
+        "10.1016/0370-2693(94)90416-2", 
+        null, 
+        "hep-ph/9403328", 
+        null, 
+        null, 
+        [
+            "CLNS-94-1272", 
+            "CLEO-94-7", 
+            "CLNS94-1272"
+        ]
+    ], 
+    "372230": [
+        "Two photon production of charged pion and kaon pairs", 
+        "CLEO", 
+        "10.1103/PhysRevD.50.3027", 
+        null, 
+        "hep-ph/9403379", 
+        "ins372230", 
+        null, 
+        [
+            "CLNS-94-1274", 
+            "CLEO-94-9", 
+            "CLNS94-1274"
+        ]
+    ], 
+    "372231": [
+        "Measurement of Cabibbo suppressed decays of the tau lepton", 
+        "CLEO", 
+        "10.1103/PhysRevLett.73.1079", 
+        null, 
+        "hep-ph/9403329", 
+        null, 
+        null, 
+        [
+            "CLNS-94-1273", 
+            "CLEO-94-8", 
+            "CLNS94-1273"
+        ]
+    ], 
+    "372349": [
+        "Production and decay of D$_1$(2420)$^0$ and D$_2^*$(2460)$^0$", 
+        "CLEO", 
+        "10.1016/0370-2693(94)90968-7", 
+        null, 
+        "hep-ph/9403359", 
+        null, 
+        null, 
+        [
+            "CLNS-94-1280", 
+            "CLEO-94-10", 
+            "CLNS94-1280"
+        ]
+    ], 
+    "373188": [
+        "Study of the five charged pion decay of the tau lepton", 
+        "CLEO", 
+        "10.1103/PhysRevLett.73.934", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-94-1284", 
+            "CLEO-94-12"
+        ]
+    ], 
+    "374340": [
+        "Semileptonic branching fractions of charged and neutral B mesons", 
+        "CLEO", 
+        "10.1103/PhysRevLett.73.3503", 
+        null, 
+        "hep-ex/9406004", 
+        null, 
+        null, 
+        [
+            "CLNS-94-1286", 
+            "CLEO-94-16"
+        ]
+    ], 
+    "377119": [
+        "Search for neutrinoless decays of the tau lepton", 
+        "CLEO", 
+        "10.1103/PhysRevLett.73.1890", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-94-1287", 
+            "CLEO-94-15"
+        ]
+    ], 
+    "377393": [
+        "Measurement of the branching fraction for Upsilon (1S) ---> tau+ tau-", 
+        "CLEO", 
+        "10.1016/0370-2693(94)91309-9", 
+        null, 
+        "hep-ex/9409004", 
+        null, 
+        null, 
+        [
+            "CLNS-94-1297", 
+            "CLEO-94-20"
+        ]
+    ], 
+    "378319": [
+        "Observation of D1+ (2420) and D2*+ (2460)", 
+        "CLEO", 
+        "10.1016/0370-2693(94)01348-9", 
+        null, 
+        null, 
+        "ins378319", 
+        null, 
+        [
+            "CLNS-94-1298", 
+            "CLEO-94-21"
+        ]
+    ]
+}

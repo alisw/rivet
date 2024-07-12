@@ -1,0 +1,31 @@
+Name: BESIII_2022_I2088337
+Year: 2022
+Summary: Mass distributions in $D^0\to K^0_S\pi^+\pi^0\pi^0$ decays
+Experiment: BESIII
+Collider: BEPC
+InspireID: 2088337
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - arXiv:2205.14031 [hep-ex]
+Description:
+  'Measurement of the mass distributions in $D^0\to K^0_S\pi^+\pi^0\pi^0$ decays by the BESIII collaboration. The data were read from the plots in the paper and therefore for some points the error bars are the size of the point. It is also not clear that any resolution effects have been unfolded.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2022mji
+BibTeX: '@article{BESIII:2022mji,
+    author = "Ablikim, M. and others",
+    collaboration = "BESIII",
+    title = "{Measurements of the absolute branching fractions of hadronic $D$-meson decays involving kaons and pions}",
+    eprint = "2205.14031",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    month = "5",
+    year = "2022"
+}
+'

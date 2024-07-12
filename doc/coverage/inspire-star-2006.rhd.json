@@ -1,0 +1,142 @@
+{
+    "653486": [
+        "Hadronization geometry and charge-dependent number autocorrelations on axial momentum space in Au-Au collisions at s(NN)**(1/2) = 130-GeV", 
+        "STAR", 
+        "10.1016/j.physletb.2006.01.061", 
+        null, 
+        "nucl-ex/0406035", 
+        "ins653486", 
+        null, 
+        []
+    ], 
+    "663650": [
+        "Minijet deformation and charge-independent angular correlations on momentum subspace (eta, phi) in Au-Au collisions at s(NN)**(1/2) = 130-GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.73.064907", 
+        null, 
+        "nucl-ex/0411003", 
+        "ins663650", 
+        null, 
+        []
+    ], 
+    "693136": [
+        "Transverse-momentum p(t) correlations on (eta, phi) from mean-p(t) fluctuations in Au-Au collisions at s(NN)**1/2 = 200-GeV", 
+        "STAR", 
+        "10.1088/0954-3899/32/6/L02", 
+        null, 
+        "nucl-ex/0509030", 
+        "ins693136", 
+        null, 
+        []
+    ], 
+    "695404": [
+        "Directed flow in Au+Au collisions at s(NN)**(1/2) = 62-GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.73.034903", 
+        null, 
+        "nucl-ex/0510053", 
+        "ins695404", 
+        null, 
+        []
+    ], 
+    "696676": [
+        "Proton - lambda correlations in central Au+Au collisions at S(NN)**(1/2) = 200-GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.74.064906", 
+        null, 
+        "nucl-ex/0511003", 
+        "ins696676", 
+        null, 
+        []
+    ], 
+    "697905": [
+        "Multiplicity and pseudorapidity distributions of charged particles and photons at forward pseudorapidity in Au + Au collisions at s(NN)**(1/2) = 62.4-GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.73.034906", 
+        null, 
+        "nucl-ex/0511026", 
+        "ins697905", 
+        null, 
+        []
+    ], 
+    "709170": [
+        "Identified hadron spectra at large transverse momentum in p+p and d+Au collisions at s(NN)**(1/2) = 200-GeV", 
+        "STAR", 
+        "10.1016/j.physletb.2006.04.032", 
+        null, 
+        "nucl-ex/0601033", 
+        "ins709170", 
+        null, 
+        []
+    ], 
+    "710186": [
+        "Forward neutral pion production in p+p and d+Au collisions at s(NN)**(1/2) = 200-GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.97.152302", 
+        null, 
+        "nucl-ex/0602011", 
+        "ins710186", 
+        null, 
+        []
+    ], 
+    "715470": [
+        "Direct observation of dijets in central Au+Au collisions at s(NN)**(1/2) = 200-GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.97.162301", 
+        null, 
+        "nucl-ex/0604018", 
+        "ins715470", 
+        null, 
+        []
+    ], 
+    "715471": [
+        "Strange baryon resonance production in s(NN)**(1/2) = 200-GeV p+p and Au+Au collisions", 
+        "STAR", 
+        "10.1103/PhysRevLett.97.132301", 
+        null, 
+        "nucl-ex/0604019", 
+        "ins715471", 
+        null, 
+        []
+    ], 
+    "718231": [
+        "Identified baryon and meson distributions at large transverse momenta from Au+Au collisions at s(NN)**(1/2) = 200-GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.97.152301", 
+        null, 
+        "nucl-ex/0606003", 
+        "ins718231", 
+        null, 
+        []
+    ], 
+    "719969": [
+        "The Multiplicity dependence of inclusive $p_t$ spectra from $p p$ collisions at $\\sqrt{s}$ = 200-GeV", 
+        "STAR", 
+        "10.1103/PhysRevD.74.032006", 
+        null, 
+        "nucl-ex/0606028", 
+        null, 
+        null, 
+        []
+    ], 
+    "723366": [
+        "Neutral kaon interferometry in Au+Au collisions at s(NN)**(1/2) = 200-GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.74.054902", 
+        null, 
+        "nucl-ex/0608012", 
+        "ins723366", 
+        null, 
+        []
+    ], 
+    "723509": [
+        "Longitudinal double-spin asymmetry and cross section for inclusive jet production in polarized proton collisions at s**(1/2) = 200-GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.97.252001", 
+        null, 
+        "hep-ex/0608030", 
+        null, 
+        null, 
+        []
+    ]
+}

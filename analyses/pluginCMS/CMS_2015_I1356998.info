@@ -6,6 +6,7 @@ Collider: LHC
 SpireID:
 InspireID: 1356998
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Sercan Sen <Sercan.Sen@cern.ch>
  - Robert Ciesielski <Robert.Ciesielski@cern.ch>
@@ -14,7 +15,7 @@ Authors:
 References:
  - CMS-FSQ-12-005
  - CERN-PH-EP-2015-062
- - ARXIV:1503.08689 [hep-ex]
+ - arXiv:1503.08689 [hep-ex]
 RunInfo:
    Inelastic events (non-diffractive and inelastic diffractive).
 NumEvents: 2M

@@ -21,10 +21,6 @@ namespace Rivet {
     /// Construction using another FinalState and a Cuts object
     FinalState(const FinalState& fsp, const Cut& c);
 
-    /// Old constructor with numeric cut arguments, retained for compatibility
-    /// @deprecated Use the versions with Cut arguments
-    FinalState(double mineta, double maxeta, double minpt=0.0*GeV);
-
     /// Clone on the heap.
     DEFAULT_RIVET_PROJ_CLONE(FinalState);
 
@@ -35,7 +31,7 @@ namespace Rivet {
     virtual void project(const Event& e);
 
     /// Compare projections.
-    virtual int compare(const Projection& p) const;
+    virtual CmpState compare(const Projection& p) const;
 
     /// Decide if a particle is to be accepted or not.
     /// @todo Rename to _accept or acceptFinal?
@@ -45,6 +41,7 @@ namespace Rivet {
   private:
 
     // Hide lossy copy constructors for all classes derived from FinalState
+    /// @todo Can this be done better with the construction deletion syntax, or does that not inherit?
     template<typename T> FinalState(const T& rhs);
     template<typename T> FinalState const& operator=(T const& rhs);
 

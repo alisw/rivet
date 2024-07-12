@@ -1,0 +1,77 @@
+{
+    "332576": [
+        "An experimental study of muon pair production in tagged two photon interactions", 
+        "TOPAZ", 
+        "10.1016/0370-2693(92)90414-Y", 
+        null, 
+        null, 
+        "ins332576", 
+        null, 
+        [
+            "KEK-PREPRINT-91-208", 
+            "NWU-HEP-92-01", 
+            "DPNU-92-06", 
+            "INS-911", 
+            "KOBE-HEP-92-01", 
+            "OCU-HEP-92-01", 
+            "PU-92-658", 
+            "TIT-HEP-92-01", 
+            "TU-HEP-92-01", 
+            "TUAT-HEP-92-01", 
+            "UT-HE-92-03"
+        ]
+    ], 
+    "333342": [
+        "Experimental study of b quark jets in e+ e- annihilation at TRISTAN", 
+        "TOPAZ", 
+        "10.1016/0370-2693(92)90593-S", 
+        null, 
+        null, 
+        "ins333342", 
+        null, 
+        [
+            "KEK-PREPRINT-91-213", 
+            "DPNU-92-09", 
+            "KOBE-HEP-92-02", 
+            "TU-HEP-92-02", 
+            "UT-HE-92-04", 
+            "OCU-HEP-92-02", 
+            "INS-915", 
+            "NWU-HEP-92-02", 
+            "TUAT-HEP-92-02", 
+            "PU-92-659", 
+            "TIT-HEP-92-02"
+        ]
+    ], 
+    "336076": [
+        "Cross-sections and charge asymmetries for e+ e- ---> mu+ mu- and e+ e- ---> tau+ tau- reactions at s**(1/2) = 52-GeV - 61.4-GeV", 
+        "TOPAZ", 
+        "10.1016/0370-2693(92)90145-T", 
+        null, 
+        null, 
+        "ins336076", 
+        null, 
+        [
+            "KEK-PREPRINT-92-49", 
+            "DPNU-92-31", 
+            "KOBE-HEP-92-03", 
+            "TU-HEP-92-03", 
+            "OCU-HEP-92-03", 
+            "INS-938", 
+            "NWU-HEP-92-04", 
+            "TAUT-HEP-92-04", 
+            "PU-92-660", 
+            "TIT-HPE-92-05"
+        ]
+    ], 
+    "339575": [
+        "Studies of e+ e- ---> gamma gamma and gamma-gamma-gamma reactions", 
+        "TOPAZ", 
+        "10.1016/0370-2693(92)91940-B", 
+        null, 
+        null, 
+        "ins339575", 
+        null, 
+        []
+    ]
+}

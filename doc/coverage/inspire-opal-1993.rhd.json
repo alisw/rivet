@@ -1,0 +1,278 @@
+{
+    "341237": [
+        "A Study of K0(s) K0(s) Bose-Einstein correlations in hadronic Z0 decays", 
+        "OPAL", 
+        "10.1016/0370-2693(93)91851-D", 
+        "243594", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-92-192"
+        ]
+    ], 
+    "342766": [
+        "A Measurement of K*+- (892) production in hadronic Z0 decays", 
+        "OPAL", 
+        "10.1016/0370-2693(93)91075-X", 
+        "244828", 
+        null, 
+        "ins342766", 
+        null, 
+        [
+            "CERN-PPE-92-213"
+        ]
+    ], 
+    "342768": [
+        "A Study of the electric charge distributions of quark and gluon jets in hadronic Z0 decays", 
+        "OPAL", 
+        "10.1016/0370-2693(93)90437-M", 
+        "244832", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-92-217"
+        ]
+    ], 
+    "343082": [
+        "QCD coherence studies using two particle azimuthal correlations", 
+        "OPAL", 
+        "10.1007/BF01560339", 
+        "244831", 
+        null, 
+        "ins343082", 
+        null, 
+        [
+            "CERN-PPE-92-216"
+        ]
+    ], 
+    "343181": [
+        "Studies of strong and electroweak interactions using final state photon emission in hadronic Z0 decays", 
+        "OPAL", 
+        "10.1007/BF01557697", 
+        "244822", 
+        null, 
+        "ins343181", 
+        null, 
+        [
+            "CERN-PPE-92-215"
+        ]
+    ], 
+    "352696": [
+        "Precision measurements of the neutral current from hadron and lepton production at LEP", 
+        "OPAL", 
+        "10.1007/BF01560340", 
+        "245031", 
+        null, 
+        "ins352696", 
+        null, 
+        [
+            "CERN-PPE-93-03"
+        ]
+    ], 
+    "352789": [
+        "A Study of differences between quark and gluon jets using vertex tagging of quark jets", 
+        "OPAL", 
+        "10.1007/BF01557696", 
+        "245305", 
+        null, 
+        "ins352789", 
+        null, 
+        [
+            "CERN-PPE-93-02"
+        ]
+    ], 
+    "353460": [
+        "Evidence for chain - like production of strange baryon pairs in jets", 
+        "OPAL", 
+        "10.1016/0370-2693(93)91076-Y", 
+        "246596", 
+        null, 
+        "ins353460", 
+        null, 
+        [
+            "CERN-PPE-93-26"
+        ]
+    ], 
+    "353461": [
+        "Measurement of the B0 and B+ lifetimes", 
+        "OPAL", 
+        "10.1016/0370-2693(93)90215-4", 
+        "246814", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-33"
+        ]
+    ], 
+    "354000": [
+        "Measurement of the tau lifetime", 
+        "OPAL", 
+        "10.1007/BF01566683", 
+        "258785", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-09"
+        ]
+    ], 
+    "354187": [
+        "Measurement of gamma (Z0 ---> b anti-b) / gamma (z0 ---> hadrons) using leptons", 
+        "OPAL", 
+        "10.1007/BF01553012", 
+        "247102", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-46"
+        ]
+    ], 
+    "354188": [
+        "A Determination of alpha-s (M (Z0)) at LEP using resummed QCD calculations", 
+        "OPAL", 
+        "10.1007/BF01555834", 
+        "247103", 
+        null, 
+        "ins354188", 
+        null, 
+        [
+            "CERN-PPE-93-38"
+        ]
+    ], 
+    "355926": [
+        "Search for anomalous production of high mass photon pairs in e+ e- collisions at LEP", 
+        "OPAL", 
+        "10.1016/0370-2693(93)90586-7", 
+        "249292", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-67"
+        ]
+    ], 
+    "356097": [
+        "The Forward - backward asymmetry of e+ e- ---> b anti-b and e+ e- ---> c anti-c using leptons in hadronic Z0 decays", 
+        "OPAL", 
+        "10.1007/BF01650428", 
+        "249453", 
+        null, 
+        "ins356097", 
+        null, 
+        [
+            "CERN-PPE-93-78"
+        ]
+    ], 
+    "356098": [
+        "A Measurement of Gamma (Z0 ---> b anti-b) / Gamma (Z0 ---> hadrons) using an impact parameter technique", 
+        "OPAL", 
+        "10.1007/BF01558387", 
+        "249646", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-79"
+        ]
+    ], 
+    "356099": [
+        "Search for massive, unstable photinos that violate R-parity", 
+        "OPAL", 
+        "10.1016/0370-2693(93)91230-K", 
+        "250393", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-91"
+        ]
+    ], 
+    "356100": [
+        "Measurement of the average b hadron lifetime in Z0 decays", 
+        "OPAL", 
+        "10.1007/BF01474617", 
+        "250661", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-92"
+        ]
+    ], 
+    "357742": [
+        "Measurement of the B(s)0 lifetime", 
+        "OPAL", 
+        "10.1016/0370-2693(93)90989-U", 
+        "250898", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-95"
+        ]
+    ], 
+    "357748": [
+        "Measurement of the $B^0$ - $\\bar{B}^0$ mixing, Gamma (Z0 $\\to b \\bar{b}$) / Gamma (Z0 $\\to$ hadrons) and semileptonic branching ratios for $b$ flavored hadrons in hadronic z0 decays", 
+        "OPAL", 
+        "10.1007/BF01474616", 
+        "251127", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-106"
+        ]
+    ], 
+    "357912": [
+        "A test of the flavor independence of the strong interaction for five flavors", 
+        "OPAL", 
+        "10.1007/BF01560038", 
+        "251795", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-118"
+        ]
+    ], 
+    "358413": [
+        "A Measurement of the average lifetime of b flavored baryons", 
+        "OPAL", 
+        "10.1016/0370-2693(93)90349-M", 
+        "252424", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-132"
+        ]
+    ], 
+    "358414": [
+        "A Study of muon pair production and evidence for tau pair production in photon-photon collisions at LEP", 
+        "OPAL", 
+        "10.1007/BF01558388", 
+        "252423", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-145"
+        ]
+    ], 
+    "358416": [
+        "A Measurement of the forward - backward asymmetry of e+ e- ---> c anti-c and e+ e- ---> b anti-b at center-of-mass energies on and near the Z0 peak using D*+- mesons", 
+        "OPAL", 
+        "10.1007/BF01558389", 
+        "252659", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-149"
+        ]
+    ]
+}

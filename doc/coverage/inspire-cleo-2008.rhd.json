@@ -1,0 +1,351 @@
+{
+    "767218": [
+        "Comparison of D ---> K0(S) pi and D ---> K0(L) pi Decay Rates", 
+        "CLEO", 
+        "10.1103/PhysRevLett.100.091801", 
+        null, 
+        "0711.1463", 
+        null, 
+        null, 
+        [
+            "CLNS-07-2008", 
+            "CLEO-07-13"
+        ]
+    ], 
+    "769770": [
+        "A Study of the decays D0 ---> pi- e+ nu(e), D0 ---> K- e+ nu(e), D+ ---> pi0 e+ nu(e), and D+ ---> anti-K0 e+ nu(e)", 
+        "CLEO", 
+        "10.1103/PhysRevLett.100.251802", 
+        null, 
+        "0712.0998", 
+        null, 
+        null, 
+        [
+            "CLNS-06-1967", 
+            "CLEO-06-12"
+        ]
+    ], 
+    "769777": [
+        "A Study of the semileptonic charm decays D0 --->pi- e+ nu(e), D+ ---> pi0 e+ nu(e), D0 ---> K- e+ nu(e), and D+ ---> anti-K0 e+ nu(e)", 
+        "CLEO", 
+        "10.1103/PhysRevD.77.112005", 
+        null, 
+        "0712.1020", 
+        null, 
+        null, 
+        [
+            "CLNS-06-1968", 
+            "CLEO-06-13"
+        ]
+    ], 
+    "769930": [
+        "Measurement of the absolute branching fraction of D(s)+ ---> tau+ nu(tau) decay", 
+        "CLEO", 
+        "10.1103/PhysRevLett.100.161801", 
+        null, 
+        "0712.1175", 
+        null, 
+        null, 
+        [
+            "CLNS-07-2011", 
+            "CLEO-07-15"
+        ]
+    ], 
+    "776805": [
+        "Absolute Measurement of Hadronic Branching Fractions of the D(s)+ Meson", 
+        "CLEO", 
+        "10.1103/PhysRevLett.100.161804", 
+        null, 
+        "0801.0680", 
+        null, 
+        null, 
+        [
+            "CLNS-07-2016", 
+            "CLEO-07-20"
+        ]
+    ], 
+    "779522": [
+        "Determination of the Strong Phase in $D^0 \\to K^{+} \\pi^{-}$ Using Quantum-Correlated Measurements", 
+        "CLEO", 
+        "10.1103/PhysRevLett.100.221801", 
+        null, 
+        "0802.2264", 
+        null, 
+        null, 
+        [
+            "CLNS-07-2013", 
+            "CLEO-07-17"
+        ]
+    ], 
+    "779525": [
+        "Determination of the $D^0 \\to K^{+} \\pi^{-}$ Relative Strong Phase Using Quantum-Correlated Measurements in $e^{+} e^{-} \\to D^0 D^0$ bar at CLEO", 
+        "CLEO", 
+        "10.1103/PhysRevD.78.012001", 
+        null, 
+        "0802.2268", 
+        null, 
+        null, 
+        [
+            "CLNS-07-2014", 
+            "CLEO-07-18"
+        ]
+    ], 
+    "779705": [
+        "Measurement of exclusive D meson decays to eta and eta-prime final states and SU(3) amplitude analysis", 
+        "CLEO", 
+        "10.1103/PhysRevD.77.092003", 
+        null, 
+        "0802.2664", 
+        null, 
+        null, 
+        [
+            "CLNS-08-2017", 
+            "CLEO-08-01"
+        ]
+    ], 
+    "780363": [
+        "Dalitz plot analysis of the D+ ---> K- pi+ pi+ decay", 
+        "CLEO", 
+        "10.1103/PhysRevD.78.052001", 
+        null, 
+        "0802.4214", 
+        null, 
+        null, 
+        [
+            "CLNS-08-2018", 
+            "CLEO-08-02"
+        ]
+    ], 
+    "780807": [
+        "Absolute Branching Fractions of Cabibbo-Suppressed D ---> K anti-K Decays", 
+        "CLEO", 
+        "10.1103/PhysRevD.77.091106", 
+        null, 
+        "0803.0793", 
+        null, 
+        null, 
+        [
+            "CLNS-07-2012", 
+            "CLEO-07-16"
+        ]
+    ], 
+    "780910": [
+        "First Observation of the Decay D(s)+ ---> p anti-n", 
+        "CLEO", 
+        "10.1103/PhysRevLett.100.181802", 
+        null, 
+        "0803.1118", 
+        null, 
+        null, 
+        [
+            "CLNS-08-2022-CLEO-08-06"
+        ]
+    ], 
+    "781671": [
+        "Two-Photon Widths of the chi(cJ) States of Charmonium", 
+        "CLEO", 
+        "10.1103/PhysRevD.78.091501", 
+        null, 
+        "0803.2869", 
+        null, 
+        null, 
+        [
+            "CLNS-08-2019", 
+            "CLEO-08-03"
+        ]
+    ], 
+    "784516": [
+        "Branching Fractions for Transitions of psi(2S) to J/psi", 
+        "CLEO", 
+        "10.1103/PhysRevD.78.011102", 
+        null, 
+        "0804.4432", 
+        null, 
+        null, 
+        [
+            "CLNS-08-2025", 
+            "CLEO-08-08"
+        ]
+    ], 
+    "786911": [
+        "Precision Measurement of the Mass of the h(c)(P-1(1)) State of Charmonium", 
+        "CLEO", 
+        "10.1103/PhysRevLett.101.182003", 
+        null, 
+        "0805.4599", 
+        null, 
+        null, 
+        [
+            "CLNS-08-2020", 
+            "CLEO-08-04"
+        ]
+    ], 
+    "787103": [
+        "Inclusive Radiative J/psi Decays", 
+        "CLEO", 
+        "10.1103/PhysRevD.78.032012", 
+        null, 
+        "0806.0315", 
+        null, 
+        null, 
+        [
+            "CLNS-08-2026", 
+            "CLEO-08-09"
+        ]
+    ], 
+    "787282": [
+        "Observation of J/psi --> 3 gamma", 
+        "CLEO", 
+        "10.1103/PhysRevLett.101.101801", 
+        null, 
+        "0806.0671", 
+        null, 
+        null, 
+        [
+            "CLNS-08-2027", 
+            "CLEO-08-10"
+        ]
+    ], 
+    "787608": [
+        "First Observation of Exclusive chi(cJ) Decays to Two Charged and Two Neutral Hadrons", 
+        "CLEO", 
+        "10.1103/PhysRevD.78.092004", 
+        null, 
+        "0806.1227", 
+        null, 
+        null, 
+        [
+            "CLNS-07-2007", 
+            "CLEO-07-12"
+        ]
+    ], 
+    "787786": [
+        "Measurement of exclusive baryon-antibaryon decays of chicJ mesons", 
+        "CLEO", 
+        "10.1103/PhysRevD.78.031101", 
+        null, 
+        "0806.1715", 
+        null, 
+        null, 
+        [
+            "CLNS-08-2028"
+        ]
+    ], 
+    "788072": [
+        "Precision Measurement of B(D+ ---> mu+ nu) and the Pseudoscalar Decay Constant f(D+)", 
+        "CLEO", 
+        "10.1103/PhysRevD.78.052003", 
+        null, 
+        "0806.2112", 
+        null, 
+        null, 
+        [
+            "CLNS-08-2029", 
+            "CLEO-08-12"
+        ]
+    ], 
+    "788313": [
+        "Measurement of the eta-prime-meson mass using J/psi ---> gamma eta-prime", 
+        "CLEO", 
+        "10.1103/PhysRevLett.101.182002", 
+        null, 
+        "0806.2344", 
+        null, 
+        null, 
+        [
+            "CLNS-08-2030", 
+            "CLEO-08-13"
+        ]
+    ], 
+    "788648": [
+        "Observation of Upsilon(2S) ---> eta Upsilon(1S) and search for related transitions", 
+        "CLEO", 
+        "10.1103/PhysRevLett.101.192001", 
+        null, 
+        "0806.3027", 
+        null, 
+        null, 
+        [
+            "CLNS-08-2031", 
+            "CLEO-08-14"
+        ]
+    ], 
+    "790315": [
+        "Search for Very Light CP-Odd Higgs Boson in Radiative Decays of Upsilon(S-1)", 
+        "CLEO", 
+        "10.1103/PhysRevLett.101.151802", 
+        null, 
+        "0807.1427", 
+        null, 
+        null, 
+        [
+            "CLNS-08-2033", 
+            "CLEO-08-16"
+        ]
+    ], 
+    "790943": [
+        "Search for Lepton Flavor Violation in Upsilon Decays", 
+        "CLEO", 
+        "10.1103/PhysRevLett.101.201601", 
+        null, 
+        "0807.2695", 
+        null, 
+        null, 
+        [
+            "CLNS-08-2035", 
+            "CLEO-08-18"
+        ]
+    ], 
+    "791355": [
+        "Observation of chi(cJ) radiative decays to light vector mesons", 
+        "CLEO", 
+        "10.1103/PhysRevLett.101.151801", 
+        null, 
+        "0807.3718", 
+        null, 
+        null, 
+        [
+            "CLNS-08-2034", 
+            "CLEO-08-17"
+        ]
+    ], 
+    "791378": [
+        "Inclusive chi(bJ)(nP) Decays to D0 X", 
+        "CLEO", 
+        "10.1103/PhysRevD.78.092007", 
+        null, 
+        "0807.3757", 
+        null, 
+        null, 
+        [
+            "CLNS-08-2024", 
+            "CLEO-08-07"
+        ]
+    ], 
+    "791716": [
+        "Search for CP Violation in the Dalitz-Plot Analysis of D+- ---> K+ K- pi+-", 
+        "CLEO", 
+        "10.1103/PhysRevD.78.072003", 
+        null, 
+        "0807.4545", 
+        null, 
+        null, 
+        [
+            "CLNS-08-2036", 
+            "CLEO-08-19"
+        ]
+    ], 
+    "792583": [
+        "Observation of chi(b)(1P(J),2P(J)) decays to light hadrons", 
+        "CLEO", 
+        "10.1103/PhysRevD.78.091103", 
+        null, 
+        "0808.0933", 
+        null, 
+        null, 
+        [
+            "CLNS-08-2037", 
+            "CLEO-09-20"
+        ]
+    ]
+}

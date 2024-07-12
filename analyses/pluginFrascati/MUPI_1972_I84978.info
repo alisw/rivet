@@ -1,0 +1,35 @@
+Name: MUPI_1972_I84978
+Year: 1972
+Summary: Measurement of $R$ and the hadronic cross section for energies between 1.2 and 2.1 GeV
+Experiment: MUPI
+Collider: ADONE
+InspireID: 84978
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B218 (1989) 499-507, 1989 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: yes
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$ and the hadronic cross seection in $e^+e^-$ collisions by
+   the Mu-Pi group for energies between 1.2 and 2.1 GeV.
+   The muonic cross section is also outputted to the yoda file
+   so that ratio $R$ can be recalcuated if runs are combined.'
+Keywords: []
+BibKey: Ceradini:1973pr
+BibTeX: '@article{Ceradini:1973pr,
+      author         = "Ceradini, F. and Santonico, R. and Conversi, M. and
+                        Paoluzi, L. and Grilli, M. and Iarocci, E. and
+                        Spillantini, P. and Valente, V. and Visentin, R. and
+                        Nigro, M.",
+      title          = "{Multiplicity in hadron production by e+ e- colliding
+                        beams}",
+      journal        = "Phys. Lett.",
+      volume         = "42B",
+      year           = "1972",
+      pages          = "501-503",
+      doi            = "10.1016/0370-2693(72)90116-5",
+      SLACcitation   = "%%CITATION = PHLTA,42B,501;%%"
+}'

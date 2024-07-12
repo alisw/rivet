@@ -1,0 +1,17 @@
+#! /usr/bin/env bash
+
+## Remove this year's data, so it can be refreshed
+THISYEAR=$(date +"%Y")
+rm inspire-*-$THISYEAR.*.json
+
+## Get any missing Inspire-JSON files
+./get-json-inspire
+
+## Process the ins.json files into rhd.json ones with the minimal info for Rivet/HD coverage
+./get-rivethd-json *.ins.json
+
+## Refresh the missing-analyses list
+test inspire-missing.ins.json && mv inspire-missing.ins.json{,.bak}
+rm -f inspire-missing.rhd.json
+./get-json-missing
+./get-rivethd-json inspire-missing.ins.json

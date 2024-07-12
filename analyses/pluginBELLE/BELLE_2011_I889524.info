@@ -1,0 +1,35 @@
+Name: BELLE_2011_I889524
+Year: 2011
+Summary: Mass and angular distributions in $B^0_S\to J\psi\pi^+\pi^-$
+Experiment: BELLE
+Collider: KEKB
+InspireID: 889524
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 106 (2011) 121802
+RunInfo: Any process producing B_s0, original Upsilon(5S) decay
+Description:
+  'THe $\pi^+\pi^-$ mass distribution and helcity angle distributions in the $f_0(980)$ and $f_0(1370)$ mass regions for the decay $B^0_S\to J\psi\pi^+\pi^-$ measured by BELLE'
+ValidationInfo:
+  'Herwig 7 events using EvtGen for B decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle:2011phz
+BibTeX: '@article{Belle:2011phz,
+    author = "Li, J. and others",
+    collaboration = "Belle",
+    title = "{Observation of $B_s^0\to J/\psi f_0(980)$ and Evidence for $B_s^0\to J/\psi f_0(1370)$}",
+    eprint = "1102.2759",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevLett.106.121802",
+    journal = "Phys. Rev. Lett.",
+    volume = "106",
+    pages = "121802",
+    year = "2011"
+}
+'

@@ -1,0 +1,66 @@
+{
+    "251272": [
+        "A Search for Sequential Heavy Leptons at the Energy $\\sqrt{s}=52$-{GeV} at Tristan", 
+        "Venus", 
+        "10.1103/PhysRevLett.59.2915", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-87-82", 
+            "KOBE-HEP-87-04", 
+            "KUNS-894", 
+            "OULNS-87-6", 
+            "TMUP-HEL-87-23"
+        ]
+    ], 
+    "251274": [
+        "Measurement of R and Search for New Heavy Quarks in $e^+ e^-$ Annihilation at 50-{GeV} and 52-{GeV} Center-of-mass Energies", 
+        "Venus", 
+        "10.1016/0370-2693(87)90920-8", 
+        null, 
+        null, 
+        "ins251274", 
+        null, 
+        [
+            "KEK-PREPRINT-87-81", 
+            "KOBE-HEP-87-03", 
+            "KUNS-893", 
+            "OULNS-87-5", 
+            "TMUP-HEL-87-22"
+        ]
+    ], 
+    "251275": [
+        "Search for the Top Quark in $e^+ e^-$ Annihilation at $\\sqrt{s}=50$-{GeV}: The First Result From the Venus Detector at Tristan", 
+        "VENUS", 
+        "10.1143/JPSJ.56.3763", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-87-79", 
+            "KOBE-HEP-87-01", 
+            "KUNS-891", 
+            "OULNS-87-3", 
+            "TMUP-HEL-87-20"
+        ]
+    ], 
+    "251276": [
+        "Measurement of the Reactions $e^+ e^- \\to e^+ e^-$ and $e^+ e^- \\to \\gamma \\gamma$ at $\\sqrt{s}=52$-{GeV}", 
+        "VENUS", 
+        "10.1143/JPSJ.56.3767", 
+        null, 
+        null, 
+        "ins251276", 
+        null, 
+        [
+            "KEK-PREPRINT-87-80", 
+            "KOBE-HEP-87-02", 
+            "KUNS-892", 
+            "OULNS-87-4", 
+            "TMUP-HEL-87-21"
+        ]
+    ]
+}

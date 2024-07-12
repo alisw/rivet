@@ -1,0 +1,36 @@
+Name: LHCB_2020_I1787090
+Year: 2020
+Summary:  Differential Decay Rate for $B^0_s\to D_s^{*-} \mu^+\nu_\mu$
+Experiment: LHCB
+Collider: LHC
+InspireID: 1787090
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardsomn <peter.richardson@durham.ac.uk>
+References:
+ - JHEP 12 (2020) 144
+RunInfo: Any process producing Bs0 mesons, originally pp
+Description:
+  'Differential decay rates for semileptonic $B^0_s\to D_s^{*-} \mu^+\nu_\mu$ decays.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: LHCb:2020hpv
+BibTeX: '@article{LHCb:2020hpv,
+    author = "Aaij, Roel and others",
+    collaboration = "LHCb",
+    title = "{Measurement of the shape of the $ {B}_s^0\to {D}_s^{\ast -}{\mu}^{+}{\nu}_{\mu } $ differential decay rate}",
+    eprint = "2003.08453",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "LHCb-PAPER-2019-046, CERN-EP-2020-026",
+    doi = "10.1007/JHEP12(2020)144",
+    journal = "JHEP",
+    volume = "12",
+    pages = "144",
+    year = "2020"
+}
+'

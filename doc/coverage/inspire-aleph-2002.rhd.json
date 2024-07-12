@@ -1,0 +1,206 @@
+{
+    "560962": [
+        "Inclusive semileptonic branching ratios of b hadrons produced in Z decays", 
+        "ALEPH", 
+        "10.1007/s100520100851", 
+        "511722", 
+        "hep-ex/0108007", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2001-057"
+        ]
+    ], 
+    "567914": [
+        "Production of D**(s) mesons in hadronic Z decays", 
+        "ALEPH", 
+        "10.1016/S0370-2693(01)01465-4", 
+        "529003", 
+        "hep-ex/0112010", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2001-085"
+        ]
+    ], 
+    "567915": [
+        "Search for scalar leptons in e+ e- collisions at center-of-mass energies up to 209-GeV", 
+        "ALEPH", 
+        "10.1016/S0370-2693(01)01494-0", 
+        "529238", 
+        "hep-ex/0112011", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2001-086"
+        ]
+    ], 
+    "569165": [
+        "Inclusive production of the omega and eta mesons in Z decays, and the muonic branching ratio of the omega", 
+        "ALEPH", 
+        "10.1016/S0370-2693(02)01220-0", 
+        "531648", 
+        "hep-ex/0201012", 
+        "ins569165", 
+        null, 
+        [
+            "CERN-EP-2001-090"
+        ]
+    ], 
+    "569166": [
+        "Final results of the searches for neutral Higgs bosons in e+ e- collisions at s**(1/2) up to 209-GeV", 
+        "ALEPH", 
+        "10.1016/S0370-2693(01)01487-3", 
+        "531810", 
+        "hep-ex/0201014", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2001-095"
+        ]
+    ], 
+    "570407": [
+        "Measurement of the forward backward asymmetry in Z --> b anti-b and Z --> c anti-c decays with leptons", 
+        "ALEPH", 
+        "10.1007/s100520200950", 
+        "532585", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-2001-097"
+        ]
+    ], 
+    "581519": [
+        "Search for R-parity violating production of single sneutrinos in e+ e- collisions at s**(1/2) = 189-GeV to 209-GeV", 
+        "ALEPH", 
+        "10.1007/s10052-002-1010-2", 
+        "531635", 
+        "hep-ex/0201013", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2001-094"
+        ]
+    ], 
+    "581750": [
+        "Leptonic decays of the D(s) meson", 
+        "ALEPH", 
+        "10.1016/S0370-2693(02)01212-1", 
+        "533441", 
+        "hep-ex/0201024", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2002-001"
+        ]
+    ], 
+    "582528": [
+        "Search for gamma gamma ---> eta(b) in e+ e- collisions at LEP-2", 
+        "ALEPH", 
+        "10.1016/S0370-2693(02)01329-1", 
+        "536652", 
+        "hep-ex/0202011", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2002-009"
+        ]
+    ], 
+    "584019": [
+        "Search for charginos nearly mass degenerate with the lightest neutralino in e+ e- collisions at center-of-mass energies up to 209-GeV", 
+        "ALEPH", 
+        "10.1016/S0370-2693(02)01584-8", 
+        "540911", 
+        "hep-ex/0203020", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2002-020"
+        ]
+    ], 
+    "584153": [
+        "Search for gauge mediated SUSY breaking topologies in $e^{+} e^{-}$ collisions at center-of-mass energies up to 209-GeV", 
+        "ALEPH", 
+        "10.1007/s10052-002-1005-z", 
+        "542671", 
+        "hep-ex/0203024", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2002-021"
+        ]
+    ], 
+    "586044": [
+        "Search for scalar quarks in $e^{+} e^{-}$ collisions at $\\sqrt{s}$ up to 209-GeV", 
+        "ALEPH", 
+        "10.1016/S0370-2693(02)01827-0", 
+        "548129", 
+        "hep-ex/0204036", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2002-026"
+        ]
+    ], 
+    "586918": [
+        "A Flavor independent Higgs boson search in e+ e- collisions at s**(1/2) up to 209-GeV", 
+        "ALEPH", 
+        "10.1016/S0370-2693(02)02241-4", 
+        "551072", 
+        "hep-ex/0205055", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2002-027"
+        ]
+    ], 
+    "589410": [
+        "Search for single top production in $e^{+} e^{-}$ collisions at $\\sqrt{s}$ up to 209-GeV", 
+        "ALEPH", 
+        "10.1016/S0370-2693(02)02307-9", 
+        "564357", 
+        "hep-ex/0206070", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2002-042"
+        ]
+    ], 
+    "591126": [
+        "Search for charged Higgs bosons in $e^{+} e^{-}$ collisions at energies up to $\\sqrt{s}$ = 209-GeV", 
+        "ALEPH", 
+        "10.1016/S0370-2693(02)02380-8", 
+        "571873", 
+        "hep-ex/0207054", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2002-054"
+        ]
+    ], 
+    "591226": [
+        "Absolute lower limits on the masses of selectrons and sneutrinos in the MSSM", 
+        "ALEPH", 
+        "10.1016/S0370-2693(02)02471-1", 
+        "571868", 
+        "hep-ex/0207056", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2002-055"
+        ]
+    ], 
+    "591959": [
+        "Search for gamma gamma decays of a Higgs boson in e+ e- collisions at s**(1/2) up to 209-GeV", 
+        "ALEPH", 
+        "10.1016/S0370-2693(02)02242-6", 
+        "564949", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-2002-044"
+        ]
+    ]
+}

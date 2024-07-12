@@ -1,0 +1,33 @@
+Name: LENA_1982_I179431
+Year: 1982
+Summary: Measurement of $R$ between 7.4 and 9.4 GeV
+Experiment: LENA
+Collider: DORIS
+InspireID: 179431
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Z.Phys. C15 (1982) 299, 1982 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: no
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$ in $e^+e^-$ collisions by LENA for energies between .4 and 9.4 GeV.
+   The individual hadronic and muonic cross sections are also outputted to the yoda file
+   so that ratio $R$ can be recalculated if runs are combined.'
+Keywords: []
+BibKey: Niczyporuk:1982ya
+BibTeX: '@article{Niczyporuk:1982ya,
+      author         = "Niczyporuk, B. and others",
+      title          = "{Measurement of R in $e^+ e^-$ Annihilation for
+                        $\sqrt{s}$ Between 7.4-{GeV} and 9.4-{GeV}}",
+      collaboration  = "LENA",
+      journal        = "Z. Phys.",
+      volume         = "C15",
+      year           = "1982",
+      pages          = "299",
+      doi            = "10.1007/BF01614421",
+      reportNumber   = "DESY-82-052",
+      SLACcitation   = "%%CITATION = ZEPYA,C15,299;%%"
+}'

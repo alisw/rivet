@@ -1,0 +1,36 @@
+Name: BABAR_2013_I1272843
+Year: 2013
+Summary: Differential branching ratios and $CP$ asymmetries in $B\to X_s\ell^+\ell^-$
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 1272843
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 112 (2014) 211802
+RunInfo: Any process producing B+ and B0, originally Upsilon(4S) decay
+Description:
+  'Differential branching ratios and $CP$ asymmetries in $B\to X_s\ell^+\ell^-$'
+ValidationInfo:
+  'Herwig7 events using EvtGen for decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BaBar:2013qry
+BibTeX: '@article{BaBar:2013qry,
+    author = "Lees, J. P. and others",
+    collaboration = "BaBar",
+    title = "{Measurement of the $B \to X_s l^+l^-$ branching fraction and search for direct CP violation from a sum of exclusive final states}",
+    eprint = "1312.5364",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BABAR-PUB-13-01, SLAC-PUB-15866",
+    doi = "10.1103/PhysRevLett.112.211802",
+    journal = "Phys. Rev. Lett.",
+    volume = "112",
+    pages = "211802",
+    year = "2014"
+}
+'

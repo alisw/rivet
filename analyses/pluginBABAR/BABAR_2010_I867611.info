@@ -1,0 +1,38 @@
+Name: BABAR_2010_I867611
+Year: 2010
+Summary: Helicity angle distributions in excited $D$ meson decays
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 867611
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D82 (2010) 111101
+RunInfo: Any process producing excited $D$ mesons
+NeedCrossSection: no
+Description:
+  'The decays $D^{**} \to D^{*+}\pi^-\to D^0\pi^+\pi^-$ are used to measure the helicity angle,
+   i.e. the angle between the two pions in the rest frame of the $D^*$. The decays of $D_1(2420)^0$,
+   $D^*_2(2460)^0$, $D(2550)^0$, $D^*(2600)$, $D(2750)$ were measured. The data were read from the plots in the papers and therefore for the $D_1(2420)^0$,
+   $D^*_2(2460)^0$ the error bars are the size of the points in the plots.'
+Keywords: []
+BibKey: delAmoSanchez:2010vq
+BibTeX: '@article{delAmoSanchez:2010vq,
+      author         = "del Amo Sanchez, P. and others",
+      title          = "{Observation of new resonances decaying to $D\pi$ and
+                        $D^*\pi$ in inclusive $e^+e^-$ collisions near
+                        $\sqrt{s}=$10.58 GeV}",
+      collaboration  = "BaBar",
+      journal        = "Phys. Rev.",
+      volume         = "D82",
+      year           = "2010",
+      pages          = "111101",
+      doi            = "10.1103/PhysRevD.82.111101",
+      eprint         = "1009.2076",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "BABAR-PUB-10-020, SLAC-PUB-14246",
+      SLACcitation   = "%%CITATION = ARXIV:1009.2076;%%"
+}'

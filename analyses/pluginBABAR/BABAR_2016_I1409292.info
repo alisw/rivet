@@ -1,0 +1,37 @@
+Name: BABAR_2016_I1409292
+Year: 2016
+Summary: Mass spectra in $B^+\to K^+\pi^+\pi^-\gamma$ decays
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 1409292
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 93 (2016) 5, 052013
+RunInfo: Any process making $B^+$ mesons, originally $\Upslion(4S)$ decay. 
+Description:
+  'Mass spectra in $B^+\to K^+\pi^+\pi^-\gamma$ decays measured by BABAR. Useful for testing the implementation of these decays'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BaBar:2015chw
+BibTeX: '@article{BaBar:2015chw,
+    author = "del Amo Sanchez, P. and others",
+    collaboration = "BaBar",
+    title = "{Time-dependent analysis of $B^0 \to {{K^0_{S}}} \pi^- \pi^+ \gamma$ decays and studies of the $K^+\pi^-\pi^+$ system in $B^+ \to K^+ \pi^- \pi^+ \gamma$ decays}",
+    eprint = "1512.03579",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BABAR-PUB-15-006, SLAC-PUB-16443",
+    doi = "10.1103/PhysRevD.93.052013",
+    journal = "Phys. Rev. D",
+    volume = "93",
+    number = "5",
+    pages = "052013",
+    year = "2016"
+}
+'

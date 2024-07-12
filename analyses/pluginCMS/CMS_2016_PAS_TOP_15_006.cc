@@ -1,3 +1,4 @@
+// -*- C++ -*-
 #include "Rivet/Analysis.hh"
 #include "Rivet/Projections/FinalState.hh"
 #include "Rivet/Projections/FastJets.hh"
@@ -13,7 +14,8 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(CMS_2016_PAS_TOP_15_006);
+    RIVET_DEFAULT_ANALYSIS_CTOR(CMS_2016_PAS_TOP_15_006);
+
 
     /// @name Analysis methods
     //@{
@@ -25,25 +27,21 @@ namespace Rivet {
       FinalState fs;
       Cut superLooseLeptonCuts = Cuts::pt > 5*GeV;
       SpecialDressedLeptons dressedleptons(fs, superLooseLeptonCuts);
-      addProjection(dressedleptons, "DressedLeptons");
+      declare(dressedleptons, "DressedLeptons");
 
       // Projection for jets
       VetoedFinalState fsForJets(fs);
       fsForJets.addVetoOnThisFinalState(dressedleptons);
-      addProjection(FastJets(fsForJets, FastJets::ANTIKT, 0.5), "Jets");
+      declare(FastJets(fsForJets, FastJets::ANTIKT, 0.5), "Jets");
 
       // Booking of histograms
-      _normedElectronMuonHisto = bookHisto1D("normedElectronMuonHisto", 7, 3.5, 10.5,
-                                             "Normalized differential cross section in lepton+jets channel", "Jet multiplicity", "Normed units");
-      _absXSElectronMuonHisto = bookHisto1D("absXSElectronMuonHisto", 7, 3.5, 10.5,
-                                            "Differential cross section in lepton+jets channel", "Jet multiplicity", "pb");
+      book(_normedElectronMuonHisto, "normedElectronMuonHisto", 7, 3.5, 10.5);
+      book(_absXSElectronMuonHisto , "absXSElectronMuonHisto", 7, 3.5, 10.5);
     }
 
 
     /// Per-event analysis
     void analyze(const Event& event) {
-      const double weight = event.weight();
-
       // Select ttbar -> lepton+jets
       const SpecialDressedLeptons& dressedleptons = applyProjection<SpecialDressedLeptons>(event, "DressedLeptons");
       vector<FourMomentum> selleptons;
@@ -71,8 +69,8 @@ namespace Rivet {
       if (nJets < 4 || nBJets < 2) vetoEvent;
 
       // Fill histograms
-      _normedElectronMuonHisto->fill(min(nJets, 10), weight);
-      _absXSElectronMuonHisto ->fill(min(nJets, 10), weight);
+      _normedElectronMuonHisto->fill(min(nJets, 10));
+      _absXSElectronMuonHisto ->fill(min(nJets, 10));
     }
 
 
@@ -106,8 +104,8 @@ namespace Rivet {
         ifs.acceptIdPair(PID::PHOTON);
         ifs.acceptIdPair(PID::ELECTRON);
         ifs.acceptIdPair(PID::MUON);
-        addProjection(ifs, "IFS");
-        addProjection(FastJets(ifs, FastJets::ANTIKT, 0.1), "LeptonJets");
+        declare(ifs, "IFS");
+        declare(FastJets(ifs, FastJets::ANTIKT, 0.1), "LeptonJets");
       }
 
       /// Clone on the heap
@@ -134,12 +132,12 @@ namespace Rivet {
             }
           }
           // Central lepton must be the major component
-          if ((lepCand.pt() < jet.pt()/2.) || (lepCand.pdgId() == 0)) continue;
+          if ((lepCand.pt() < jet.pt()/2.) || (!lepCand.isChargedLepton())) continue;
 
           DressedLepton lepton = DressedLepton(lepCand);
           for (const Particle& cand : jet.particles()) {
             if (isSame(cand, lepCand)) continue;
-            lepton.addPhoton(cand, true);
+            lepton.addConstituent(cand, true);
           }
           allClusteredLeptons.push_back(lepton);
         }
@@ -171,6 +169,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CMS_2016_PAS_TOP_15_006);
+  RIVET_DECLARE_PLUGIN(CMS_2016_PAS_TOP_15_006);
 
 }

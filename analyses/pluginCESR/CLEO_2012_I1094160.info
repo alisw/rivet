@@ -1,0 +1,38 @@
+Name: CLEO_2012_I1094160
+Year: 2012
+Summary: Dalitz plot analysis of $D^0\to K^0_SK^\pm\pi^\mp$
+Experiment: CLEO
+Collider: CESR
+InspireID: 1094160
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 85 (2012) 092016
+RunInfo: Any process producing D0
+Description:
+  'Measurement of Kinematic distributions  in the decays $D^0\to K^0_SK^\pm\pi^\mp$. The data were read from the plots in the paper.
+   Resolution/acceptance effects have been not unfolded. Given the agreement with the model in the paper this analysis should only be used for qualitative studies.'
+ValidationInfo:
+  'Compared Herwig events using the same model for the decay as in the paper.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: CLEO:2012obf
+BibTeX: '@article{CLEO:2012obf,
+    author = "Insler, J. and others",
+    collaboration = "CLEO",
+    title = "{Studies of the decays $D^0 \rightarrow K_S^0K^-\pi^+$ and $D^0 \rightarrow K_S^0K^+\pi^-$}",
+    eprint = "1203.3804",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CLNS-11-2081, CLEO-11-07",
+    doi = "10.1103/PhysRevD.85.092016",
+    journal = "Phys. Rev. D",
+    volume = "85",
+    pages = "092016",
+    year = "2012",
+    note = "[Erratum: Phys.Rev.D 94, 099905 (2016)]"
+}
+'

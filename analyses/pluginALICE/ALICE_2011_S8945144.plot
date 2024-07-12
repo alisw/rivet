@@ -1,6 +1,6 @@
 # BEGIN PLOT /ALICE_2011_S8945144/d0
 XLabel=$p_\perp$ [GeV/c]
-YLabel=$1/N_\text{event} d^{2}N/dy/dp_\perp$ [GeV/c]$^{-1}$
+YLabel=$1/N_\mathrm{event} d^{2}N/dy/dp_\perp$ [GeV/c]$^{-1}$
 # END PLOT
 
 

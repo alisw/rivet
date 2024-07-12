@@ -1,0 +1,265 @@
+{
+    "380423": [
+        "Measurement of the b ---> tau- anti-tau-neutrino X branching ratio and an upper limit on B- ---> tau- anti-tau-neutrino", 
+        "ALEPH", 
+        "10.1016/0370-2693(94)01584-Y", 
+        "271815", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-165", 
+            "FSU-SCRI-95-22"
+        ]
+    ], 
+    "380424": [
+        "Study of the four fermion final state at the Z resonance", 
+        "ALEPH", 
+        "10.1007/BF01496576", 
+        "271816", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-169", 
+            "FSU-SCRI-95-54"
+        ]
+    ], 
+    "381617": [
+        "Performance of the ALEPH detector at LEP", 
+        "ALEPH", 
+        "10.1016/0168-9002(95)00138-7", 
+        "272484", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-170", 
+            "FSU-SCRI-95-70"
+        ]
+    ], 
+    "381645": [
+        "Search for CP violation in the decay Z ---> tau+ tau-", 
+        "ALEPH", 
+        "10.1016/0370-2693(95)00093-Z", 
+        "272485", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-175", 
+            "FSU-SCRI-94-128"
+        ]
+    ], 
+    "381665": [
+        "A Study of D*+ pi- production in semileptonic B decay", 
+        "ALEPH", 
+        "10.1016/0370-2693(94)01585-Z", 
+        "272140", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-173", 
+            "FSU-SCRI-95-31"
+        ]
+    ], 
+    "382058": [
+        "Study of the subjet structure of quark and gluon jets", 
+        "ALEPH", 
+        "10.1016/0370-2693(95)00037-L", 
+        "274604", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-208"
+        ]
+    ], 
+    "382179": [
+        "Inclusive pi+-, K+- and (p, anti-p) differential cross-sections at the Z resonance", 
+        "ALEPH", 
+        "10.1007/BF01556360", 
+        "273853", 
+        null, 
+        "ins382179", 
+        null, 
+        [
+            "CERN-PPE-94-201", 
+            "FSU-SCRI-95-62"
+        ]
+    ], 
+    "382207": [
+        "Michel parameters and tau-neutrino helicity from decay correlations in Z --> tau+ tau-", 
+        "ALEPH", 
+        "10.1016/0370-2693(95)00107-V", 
+        "274665", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-209"
+        ]
+    ], 
+    "392865": [
+        "An Upper limit for the tau-neutrino mass from tau --> 5 pi (pi0) tau-neutrino decays", 
+        "ALEPH", 
+        "10.1016/0370-2693(95)00248-J", 
+        "276652", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-95-03", 
+            "CERN-PPE-95-3", 
+            "CERN-PPE-95-003", 
+            "FSU-SCRI-95-69"
+        ]
+    ], 
+    "392978": [
+        "Search for supersymmetric particles with R-parity violation in $Z$ decays", 
+        "ALEPH", 
+        "10.1016/0370-2693(95)00257-L", 
+        "277364", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-95-015", 
+            "CERN-PPE-95-15", 
+            "FSU-SCRI-95-63"
+        ]
+    ], 
+    "393416": [
+        "Test of the flavor independence of alpha-s", 
+        "ALEPH", 
+        "10.1016/0370-2693(95)00713-U", 
+        "278475", 
+        null, 
+        "ins393416", 
+        null, 
+        [
+            "CERN-PPE-95-018", 
+            "CERN-PPE-95-18", 
+            "FSU-SCRI-95-98"
+        ]
+    ], 
+    "394752": [
+        "Measurement of the D*+- cross-section in two photon collisions at LEP", 
+        "ALEPH", 
+        "10.1016/0370-2693(95)00758-D", 
+        "281108", 
+        null, 
+        "ins394752", 
+        null, 
+        [
+            "CERN-PPE-95-40", 
+            "CERN-PPE-95-040", 
+            "FSU-SCRI-95-100"
+        ]
+    ], 
+    "394753": [
+        "The Forward - backward asymmetry for charm quarks at the Z pole", 
+        "ALEPH", 
+        "10.1016/0370-2693(95)00519-Q", 
+        "281109", 
+        null, 
+        "ins394753", 
+        null, 
+        [
+            "CERN-PPE-95-44", 
+            "CERN-PPE-95-044", 
+            "FSU-SCRI-95-87"
+        ]
+    ], 
+    "396398": [
+        "Measurements of the $b$ baryon lifetime", 
+        "ALEPH", 
+        "10.1016/0370-2693(95)00980-Y", 
+        "283502", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-95-65", 
+            "CERN-PPE-95-065"
+        ]
+    ], 
+    "396889": [
+        "Measurements of the charged particle multiplicity distribution in restricted rapidity intervals", 
+        "ALEPH", 
+        "10.1007/BF02907382", 
+        "287513", 
+        null, 
+        "ins396889", 
+        null, 
+        [
+            "CERN-PPE-95-082", 
+            "CERN-PPE-95-82"
+        ]
+    ], 
+    "396895": [
+        "Limit on B(s)0 oscillation using a jet charge method", 
+        "ALEPH", 
+        "10.1016/0370-2693(95)00823-4", 
+        "287512", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-95-084", 
+            "CERN-PPE-95-84", 
+            "FSU-SCRI-95-99"
+        ]
+    ], 
+    "398195": [
+        "Measurement of alpha-s from scaling violations in fragmentation functions in e+ e- annihilation", 
+        "ALEPH", 
+        "10.1016/0370-2693(95)00917-A", 
+        "285018", 
+        null, 
+        "ins398195", 
+        null, 
+        [
+            "CERN-PPE-95-096", 
+            "CERN-PPE-95-96"
+        ]
+    ], 
+    "398319": [
+        "Measurement of the effective b quark fragmentation function at the Z resonance", 
+        "ALEPH", 
+        "10.1016/0370-2693(95)00988-W", 
+        "285912", 
+        null, 
+        "ins398319", 
+        null, 
+        [
+            "CERN-PPE-95-113"
+        ]
+    ], 
+    "398339": [
+        "A Measurement of the |V(cb)| from anti-B(0) --> D*+- lepton- anti-lepton-neutrino", 
+        "ALEPH", 
+        "10.1016/0370-2693(95)01021-H", 
+        "398954", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-95-094", 
+            "CERN-PPE-95-94"
+        ]
+    ], 
+    "400822": [
+        "Measurement of the $B_s$ 0 lifetime and production rate with $D_s - \\ell^+$ combinations in $Z$ decays", 
+        "ALEPH", 
+        "10.1016/0370-2693(95)01173-N", 
+        "290409", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-95-125"
+        ]
+    ]
+}

@@ -1,0 +1,745 @@
+{
+    "926280": [
+        "Observation of $J/\\psi$ pair production in $pp$ collisions at $\\sqrt{s}=7 TeV$", 
+        "LHCb", 
+        "10.1016/j.physletb.2011.12.015", 
+        "1376436", 
+        "1109.0963", 
+        "ins926280", 
+        null, 
+        [
+            "LHCB-PAPER-2011-013", 
+            "CERN-PH-EP-2011-135"
+        ]
+    ], 
+    "930219": [
+        "Measurements of the Branching fractions for $B_{(s)} \\to D_{(s)}\\pi\\pi\\pi$ and $\\Lambda_b^0 \\to \\Lambda_c^+\\pi\\pi\\pi$", 
+        "LHCb", 
+        "10.1103/PhysRevD.84.092001", 
+        "1387034", 
+        "1109.6831", 
+        null, 
+        null, 
+        [
+            "LHCB-PAPER-2011-016", 
+            "CERN-PH-EP-2011-151"
+        ]
+    ], 
+    "930417": [
+        "Search for the lepton number violating decays $B^{+}\\to \\pi^- \\mu^+ \\mu^+$ and $B^{+}\\to K^- \\mu^+ \\mu^+$", 
+        "LHCb", 
+        "10.1103/PhysRevLett.108.101601", 
+        "1387555", 
+        "1110.0730", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-156", 
+            "LHCB-PAPER-2011-009"
+        ]
+    ], 
+    "939619": [
+        "Absolute luminosity measurements with the LHCb detector at the LHC", 
+        "LHCb", 
+        "10.1088/1748-0221/7/01/P01010", 
+        "1389907", 
+        "1110.2866", 
+        null, 
+        null, 
+        [
+            "LHCB-PAPER-2011-015", 
+            "CERN-PH-EP-2011-157"
+        ]
+    ], 
+    "944152": [
+        "Measurement of the effective $B^0_s\\rightarrow K^+K^-$ lifetime", 
+        "LHCb", 
+        "10.1016/j.physletb.2011.12.058", 
+        "1395376", 
+        "1111.0521", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-167", 
+            "LHCB-PAPER-2011-014"
+        ]
+    ], 
+    "945381": [
+        "Measurement of $b$-hadron production fractions in $7~\\rm{TeV}$ pp collisions", 
+        "LHCb", 
+        "10.1103/PhysRevD.85.032008", 
+        "1390838", 
+        "1111.2357", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-172", 
+            "LHCB-PAPER-2011-018"
+        ]
+    ], 
+    "946440": [
+        "First observation of the decay $B^0_s \\to K^{*0} \\bar{K}^{*0}$", 
+        "LHCb", 
+        "10.1016/j.physletb.2012.02.001", 
+        "1399527", 
+        "1111.4183", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-183", 
+            "LHCB-PAPER-2011-012"
+        ]
+    ], 
+    "1079920": [
+        "Evidence for CP violation in time-integrated $D^0 \\to h^-h^+$ decay rates", 
+        "LHCb", 
+        "10.1103/PhysRevLett.108.111602", 
+        "1404248", 
+        "1112.0938", 
+        null, 
+        null, 
+        [
+            "LHCB-PAPER-2011-023", 
+            "CERN-PH-EP-2011-208"
+        ]
+    ], 
+    "1080385": [
+        "Search for the rare decays $B^0_s \\to \\mu^+ \\mu^-$ and $B^0 \\to \\mu^+ \\mu^-$", 
+        "LHCb", 
+        "10.1016/j.physletb.2012.01.038", 
+        "1405371", 
+        "1112.1600", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-186", 
+            "LHCB-PAPER-2011-025"
+        ]
+    ], 
+    "1081268": [
+        "Measurement of the CP violating phase $\\phi_s$ in $\\bar{B}^0_s \\to J/\\psi f_0(980)$", 
+        "LHCb", 
+        "10.1016/j.physletb.2012.01.017", 
+        "1406788", 
+        "1112.3056", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-205", 
+            "LHCB-PAPER-2011-031"
+        ]
+    ], 
+    "1081275": [
+        "Measurement of the CP-violating phase $\\phi_s$ in the decay $B^0_s\\to J/\\psi \\phi$", 
+        "LHCb", 
+        "10.1103/PhysRevLett.108.101803", 
+        "1407836", 
+        "1112.3183", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-214", 
+            "LHCB-PAPER-2011-021"
+        ]
+    ], 
+    "1081581": [
+        "Differential branching fraction and angular analysis of the decay $B^{0} \\to K^{*0} \\mu^+ \\mu^-$", 
+        "LHCb", 
+        "10.1103/PhysRevLett.108.181806", 
+        "1407841", 
+        "1112.3515", 
+        null, 
+        null, 
+        [
+            "LHCB-PAPER-2011-020", 
+            "CERN-PH-EP-2011-211"
+        ]
+    ], 
+    "1082063": [
+        "Measurement of the $B^0_s - \\bar{B}^0_s$ oscillation frequency $\\Delta m_s$ in $B^0_s \\to D_s^-(3) \\pi$ decays", 
+        "LHCb", 
+        "10.1016/j.physletb.2012.02.031", 
+        "1408725", 
+        "1112.4311", 
+        null, 
+        null, 
+        [
+            "LHCB-PAPER-2011-010", 
+            "CERN-PH-EP-2011-194"
+        ]
+    ], 
+    "1082327": [
+        "Measurement of mixing and CP violation parameters in two-body charm decays", 
+        "LHCb", 
+        "10.1007/JHEP04(2012)129", 
+        "1408728", 
+        "1112.4698", 
+        null, 
+        null, 
+        [
+            "LHCB-PAPER-2011-032", 
+            "CERN-PH-EP-2011-206"
+        ]
+    ], 
+    "1082328": [
+        "Observation of $B_s \\to J/\\psi f^\\prime_2(1525)$ in $J/\\psi K^+K^-$ final states", 
+        "LHCb", 
+        "10.1103/PhysRevLett.108.151801", 
+        "1409178", 
+        "1112.4695", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-212", 
+            "LHCB-PAPER-2011-026"
+        ]
+    ], 
+    "1082369": [
+        "Measurement of charged particle multiplicities in $pp$ collisions at ${\\sqrt{s} =7}$TeV in the forward region", 
+        "LHCb", 
+        "10.1140/epjc/s10052-012-1947-8", 
+        "1408724", 
+        "1112.4592", 
+        "ins1082369", 
+        null, 
+        [
+            "LHCB-PAPER-2011-011", 
+            "CERN-PH-EP-2011-209"
+        ]
+    ], 
+    "1082449": [
+        "Measurement of $b$-hadron masses", 
+        "LHCb", 
+        "10.1016/j.physletb.2012.01.058", 
+        "1409179", 
+        "1112.4896", 
+        null, 
+        null, 
+        [
+            "LHCB-PAPER-2011-035", 
+            "CERN-PH-EP-2011-226"
+        ]
+    ], 
+    "1082706": [
+        "Observation of $X(3872) $ production in $pp$ collisions at $\\sqrt{s}=7$ TeV", 
+        "LHCb", 
+        "10.1140/epjc/s10052-012-1972-7", 
+        "1414830", 
+        "1112.5310", 
+        null, 
+        null, 
+        [
+            "LHCB-PAPER-2011-034", 
+            "CERN-PH-EP-2011-216"
+        ]
+    ], 
+    "1085516": [
+        "First observation of the decays $\\bar{B}^0 \\to D^{+} K^{-} \\pi^{+} \\pi^{-}$ and $B^{-} \\to D^0 K^{-} \\pi^{+} \\pi^{-}$", 
+        "LHCb", 
+        "10.1103/PhysRevLett.108.161801", 
+        "1415736", 
+        "1201.4402", 
+        null, 
+        null, 
+        [
+            "LHCB-PAPER-2011-040", 
+            "CERN-EP-PH-2011-229", 
+            "CERN-PH-EP-2011-229"
+        ]
+    ], 
+    "1085982": [
+        "Searches for Majorana neutrinos in $B^-$ decays", 
+        "LHCb", 
+        "10.1103/PhysRevD.85.112004", 
+        "1419711", 
+        "1201.5600", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2012-006", 
+            "LHCB-PAPER-2011-038"
+        ]
+    ], 
+    "1087907": [
+        "Measurement of the cross-section ratio $\\sigma(\\chi_{c2})/\\sigma(\\chi_{c1})$ for prompt $\\chi_c$ production at $\\sqrt{s}=7$ TeV", 
+        "LHCb", 
+        "10.1016/j.physletb.2012.06.077", 
+        "1421558", 
+        "1202.1080", 
+        "ins1087907", 
+        null, 
+        [
+            "LHCB-PAPER-2011-019", 
+            "CERN-PH-EP-2011-227"
+        ]
+    ], 
+    "1089837": [
+        "Determination of the sign of the decay width difference in the $B_s$ system", 
+        "LHCb", 
+        "10.1103/PhysRevLett.108.241801", 
+        "1426261", 
+        "1202.4717", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2012-050", 
+            "LHCB-PAPER-2011-028"
+        ]
+    ], 
+    "1089993": [
+        "Measurement of the $B^\\pm$ production cross-section in $pp$ collisions at $\\sqrt{s}=7$ TeV", 
+        "LHCb", 
+        "10.1007/JHEP04(2012)093", 
+        "1426678", 
+        "1202.4812", 
+        "ins1089993", 
+        null, 
+        [
+            "CERN-PH-EP-2012-047", 
+            "LHCB-PAPER-2011-043"
+        ]
+    ], 
+    "1090061": [
+        "Opposite-side flavour tagging of B mesons at the LHCb experiment", 
+        "LHCb", 
+        "10.1140/epjc/s10052-012-2022-1", 
+        "1427710", 
+        "1202.4979", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2012-039", 
+            "LHCB-PAPER-2011-027"
+        ]
+    ], 
+    "1090150": [
+        "Search for the $X(4140)$ state in $B^+ \\to J/\\psi \\phi K^+$ decays", 
+        "LHCb", 
+        "10.1103/PhysRevD.85.091103", 
+        "1426677", 
+        "1202.5087", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2012-004", 
+            "LHCB-PAPER-2011-033"
+        ]
+    ], 
+    "1090895": [
+        "First evidence of direct  $C\\!P$ violation in charmless two-body decays of $B^0_s$ mesons", 
+        "LHCb", 
+        "10.1103/PhysRevLett.108.201601", 
+        "1427771", 
+        "1202.6251", 
+        null, 
+        null, 
+        [
+            "LHCB-PAPER-2011-029", 
+            "CERN-PH-EP-2012-058"
+        ]
+    ], 
+    "1090962": [
+        "Measurement of the ratio of branching fractions $\\mathcal{B}(B^0\\to K^{*0}\\gamma)/\\mathcal{B}(B_s^0\\to\\phi\\gamma)$", 
+        "LHCb", 
+        "10.1103/PhysRevD.85.112013", 
+        "1428519", 
+        "1202.6267", 
+        null, 
+        null, 
+        [
+            "LHCB-PAPER-2011-042", 
+            "CERN-PH-EP-2012-041"
+        ]
+    ], 
+    "1091071": [
+        "Measurement of Upsilon production in pp collisions at $\\sqrt{s}$ = 7 TeV", 
+        "LHCb", 
+        "10.1140/epjc/s10052-012-2025-y", 
+        "1428520", 
+        "1202.6579", 
+        "ins1091071", 
+        null, 
+        [
+            "CERN-PH-EP-2012-051", 
+            "LHCB-PAPER-2011-036"
+        ]
+    ], 
+    "1094045": [
+        "Measurements of the branching fractions and $C\\!P$ asymmetries of $B^{\\pm} \\to J\\!/\\!\\psi\\, \\pi^{\\pm}$ and $B^{\\pm} \\to \\psi(2S) \\pi^{\\pm}$ decays", 
+        "LHCb", 
+        "10.1103/PhysRevD.85.091105", 
+        "1432547", 
+        "1203.3592", 
+        null, 
+        null, 
+        [
+            "LHCB-PAPER-2011-024", 
+            "CERN-PH-EP-2012-070"
+        ]
+    ], 
+    "1094080": [
+        "Observation of CP violation in $B^\\pm \\to DK^\\pm$ decays", 
+        "LHCb", 
+        "10.1016/j.physletb.2012.04.060", 
+        "1432548", 
+        "1203.3662", 
+        null, 
+        null, 
+        [
+            "LHCB-PAPER-2012-001", 
+            "CERN-PH-EP-2012-071"
+        ]
+    ], 
+    "1094383": [
+        "Strong constraints on the rare decays $B_s \\to \\mu^+ \\mu^-$ and $B^0 \\to \\mu^+ \\mu^-$", 
+        "LHCb", 
+        "10.1103/PhysRevLett.108.231801", 
+        "1432963", 
+        "1203.4493", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2012-072", 
+            "LHCB-PAPER-2012-007"
+        ]
+    ], 
+    "1097092": [
+        "First observation of the decay $B_c^+ \\to J/\\psi \\pi^+\\pi^-\\pi^+$", 
+        "LHCb", 
+        "10.1103/PhysRevLett.108.251802", 
+        "1443492", 
+        "1204.0079", 
+        null, 
+        null, 
+        [
+            "LHCB-PAPER-2011-044", 
+            "CERN-PH-EP-2012-090"
+        ]
+    ], 
+    "1104751": [
+        "Measurements of the branching fractions of the decays $B^{0}_{s} \\to D^{\\mp}_{s} K^{\\pm} $ and $B^{0}_{s} \\to D^{-}_{s} \\pi^{+}$", 
+        "LHCb", 
+        "10.1007/JHEP06(2012)115", 
+        "1443914", 
+        "1204.1237", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2012-091", 
+            "LHCB-PAPER-2011-022"
+        ]
+    ], 
+    "1104754": [
+        "Measurement of $\\psi(2S)$ meson production in $pp$ collisions at $\\sqrt{s}$=7 TeV", 
+        "LHCb", 
+        "10.1140/epjc/s10052-012-2100-4", 
+        "1439233", 
+        "1204.1258", 
+        "ins1104754", 
+        null, 
+        [
+            "CERN-PH-EP-2012-094", 
+            "LHCB-PAPER-2011-045"
+        ]
+    ], 
+    "1107645": [
+        "Measurement of the ratio of prompt $\\chi_{c}$ to $J/\\psi$ production in $pp$ collisions at $\\sqrt{s}=7$ TeV", 
+        "LHCb", 
+        "10.1016/j.physletb.2012.10.068", 
+        "1443497", 
+        "1204.1462", 
+        "ins1107645", 
+        null, 
+        [
+            "CERN-PH-EP-2012-068", 
+            "LHCB-PAPER-2011-030"
+        ]
+    ], 
+    "1107729": [
+        "Inclusive $W$ and $Z$ production in the forward region at $\\sqrt{s} = 7$ TeV", 
+        "LHCb", 
+        "10.1007/JHEP06(2012)058", 
+        "1439627", 
+        "1204.1620", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2012-099", 
+            "LHCB-PAPER-2012-008"
+        ]
+    ], 
+    "1110692": [
+        "Measurement of the polarization amplitudes and triple product asymmetries in the $B_s^0 \\to \\phi\\phi$ decay", 
+        "LHCb", 
+        "10.1016/j.physletb.2012.06.012", 
+        "1440824", 
+        "1204.2813", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2012-092", 
+            "LHCB-PAPER-2012-004"
+        ]
+    ], 
+    "1112264": [
+        "Analysis of the resonant components in $B_s \\to J/\\psi\\pi^+\\pi^-$", 
+        "LHCb", 
+        "10.1103/PhysRevD.86.052006", 
+        "1444074", 
+        "1204.5643", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2012-111", 
+            "LHCB-PAPER-2012-005"
+        ]
+    ], 
+    "1112268": [
+        "Measurement of the CP-violating phase $\\phi_s$ in $\\overline{B}^0_s \\to J/\\psi\\pi^+\\pi^-$ decays", 
+        "LHCb", 
+        "10.1016/j.physletb.2012.06.032", 
+        "1444102", 
+        "1204.5675", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2012-107", 
+            "LHCb-PAPER-2012-006"
+        ]
+    ], 
+    "1113593": [
+        "Measurement of the $D_s^+ - D_s^-$ production asymmetry in 7 TeV $pp$ collisions", 
+        "LHCb", 
+        "10.1016/j.physletb.2012.06.001", 
+        "1446397", 
+        "1205.0897", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2012-114", 
+            "LHCB-PAPER-2012-009"
+        ]
+    ], 
+    "1113594": [
+        "Measurement of relative branching fractions of B decays to $\\psi(2S)$ and $J/\\psi$ mesons", 
+        "LHCb", 
+        "10.1140/epjc/s10052-012-2118-7", 
+        "1446413", 
+        "1205.0918", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2012-113", 
+            "LHCB-PAPER-2012-010"
+        ]
+    ], 
+    "1113595": [
+        "Measurement of the $B_s^0\\to J/\\psi K_S^0$ branching fraction", 
+        "LHCb", 
+        "10.1016/j.physletb.2012.05.062", 
+        "1446426", 
+        "1205.0934", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2012-115", 
+            "LHCB-PAPER-2011-041"
+        ]
+    ], 
+    "1113596": [
+        "Observation of double charm production involving open charm in pp collisions at $\\sqrt{s}$ = 7 TeV", 
+        "LHCb", 
+        "10.1007/JHEP06(2012)141", 
+        "1446466", 
+        "1205.0975", 
+        "ins1113596", 
+        null, 
+        [
+            "CERN-PH-EP-2012-109", 
+            "LHCB-PAPER-2012-003"
+        ]
+    ], 
+    "1114752": [
+        "Measurement of the isospin asymmetry in $B \\to K^{(*)}\\mu^+\\mu^-$ decays", 
+        "LHCb", 
+        "10.1007/JHEP07(2012)133", 
+        "1446187", 
+        "1205.3422", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2012-129", 
+            "LHCB-PAPER-2012-011"
+        ]
+    ], 
+    "1114753": [
+        "Observation of excited $\\Lambda_b^0$ baryons", 
+        "LHCb", 
+        "10.1103/PhysRevLett.109.172003", 
+        "1449721", 
+        "1205.3452", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2012-128", 
+            "LHCB-PAPER-2012-012", 
+            "LHCB-PAPER-2012-12"
+        ]
+    ], 
+    "1118162": [
+        "Measurement of $b$-hadron branching fractions for two-body decays into charmless charged hadrons", 
+        "LHCb", 
+        "10.1007/JHEP10(2012)037", 
+        "1456204", 
+        "1206.2794", 
+        null, 
+        null, 
+        [
+            "LHCB-PAPER-2012-002", 
+            "CERN-PH-EP-2012-161"
+        ]
+    ], 
+    "1119400": [
+        "Measurement of prompt hadron production ratios in $pp$ collisions at $\\sqrt{s} = $ 0.9 and 7 TeV", 
+        "LHCb", 
+        "10.1140/epjc/s10052-012-2168-x", 
+        "1457946", 
+        "1206.5160", 
+        "ins1119400", 
+        null, 
+        [
+            "CERN-PH-EP-2012-171", 
+            "LHCB-PAPER-2011-037"
+        ]
+    ], 
+    "1121120": [
+        "Measurement of the $B_s$ effective lifetime in the $J/\\psi f_0(980)$ final state", 
+        "LHCb", 
+        "10.1103/PhysRevLett.109.152002", 
+        "1461290", 
+        "1207.0878", 
+        null, 
+        null, 
+        [
+            "LHCb-PAPER-2012-017", 
+            "CERN-PH-EP-2012-180"
+        ]
+    ], 
+    "1123797": [
+        "Observation of $B^0 \\to \\bar{D}^0 K^+ K^-$ and evidence of $B^0_s \\to \\bar{D}^0 K^+ K^-$", 
+        "LHCb", 
+        "10.1103/PhysRevLett.109.131801", 
+        "1464076", 
+        "1207.5991", 
+        null, 
+        null, 
+        [
+            "LHCB-PAPER-2012-018", 
+            "CERN-PH-EP-2012-198"
+        ]
+    ], 
+    "1123798": [
+        "Measurement of the effective $B_s^0 \\rightarrow K^+ K^-$ lifetime", 
+        "LHCb", 
+        "10.1016/j.physletb.2012.08.033", 
+        "1463886", 
+        "1207.5993", 
+        null, 
+        null, 
+        [
+            "LHCB-PAPER-2012-013", 
+            "CERN-PH-EP-2012-172"
+        ]
+    ], 
+    "1123799": [
+        "Study of $D_{sJ}$ decays to $D^+K^0_S$ and $D^0K^+$ final states in $pp$ collisions", 
+        "LHCb", 
+        "10.1007/JHEP10(2012)151", 
+        "1463853", 
+        "1207.6016", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2012-181", 
+            "LHCB-PAPER-2012-016"
+        ]
+    ], 
+    "1125853": [
+        "Measurement of the $B^0_s \\rightarrow J/\\psi \\bar{K}^{*0}$ branching fraction and angular amplitudes", 
+        "LHCb", 
+        "10.1103/PhysRevD.86.071102", 
+        "1471720", 
+        "1208.0738", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2012-214", 
+            "LHCB-PAPER-2012-014"
+        ]
+    ], 
+    "1184177": [
+        "Measurement of the fraction of $\\Upsilon(1S)$ originating from $\\chi_b(1P)$ decays in $pp$ collisions at $\\sqrt{s} = 7$ TeV", 
+        "LHCb", 
+        "10.1007/JHEP11(2012)031", 
+        "1476532", 
+        "1209.0282", 
+        "ins1184177", 
+        null, 
+        [
+            "CERN-PH-EP-2012-237", 
+            "LHCB-PAPER-2012-015"
+        ]
+    ], 
+    "1188009": [
+        "Measurements of $B_c^+$ production and mass with the $B_c^+ \\to J/\\psi \\pi^+$ decay", 
+        "LHCb", 
+        "10.1103/PhysRevLett.109.232001", 
+        "1483208", 
+        "1209.5634", 
+        null, 
+        null, 
+        [
+            "LHCB-PAPER-2012-028", 
+            "CERN-PH-EP-2012-275"
+        ]
+    ], 
+    "1188164": [
+        "A model-independent Dalitz plot analysis of $B^\\pm \\to D K^\\pm$ with $D \\to K^0_{\\rm S} h^+h^-$ ($h=\\pi, K$) decays and constraints on the CKM angle $\\gamma$", 
+        "LHCb", 
+        "10.1016/j.physletb.2012.10.020", 
+        "1483187", 
+        "1209.5869", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2012-268", 
+            "LHCB-PAPER-2012-027"
+        ]
+    ], 
+    "1189993": [
+        "First observation of the decay $B^{+} \\rightarrow \\pi^{+} \\mu^{+} \\mu^{-}$", 
+        "LHCb", 
+        "10.1007/JHEP12(2012)125", 
+        "1484974", 
+        "1210.2645", 
+        null, 
+        null, 
+        [
+            "LHCB-PAPER-2012-020", 
+            "CERN-PH-EP-2012-284"
+        ]
+    ], 
+    "1199002": [
+        "First observation of the decays $\\bar{B}^0_{(s)}\\to D_s^+K^-\\pi^+\\pi^-$ and $\\bar{B}^0_s\\to D_{s1}(2536)^+\\pi^-$", 
+        "LHCb", 
+        "10.1103/PhysRevD.86.112005", 
+        "1492810", 
+        "1211.1541", 
+        null, 
+        null, 
+        [
+            "LHCB-PAPER-2012-033", 
+            "CERN-PH-EP-2012-327"
+        ]
+    ]
+}

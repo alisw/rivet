@@ -29,7 +29,7 @@ namespace Rivet {
       declare(fj, "KtJetsD05");
 
       // Leading photon
-      LeadingParticlesFinalState photonfs(PromptFinalState(FinalState(-2.37, 2.37, 45.0*GeV)));
+      LeadingParticlesFinalState photonfs(PromptFinalState(FinalState((Cuts::etaIn(-2.37, 2.37) && Cuts::pT >=  45.0*GeV))));
       photonfs.addParticleId(PID::PHOTON);
       declare(photonfs, "LeadingPhoton");
 
@@ -44,13 +44,13 @@ namespace Rivet {
       declare(jetpro, "Jets");
 
       // Histograms
-      _h_ph_pt      = bookHisto1D(1, 1, 1);
-      _h_jet_pt     = bookHisto1D(2, 1, 1);
-      _h_jet_rap    = bookHisto1D(3, 1, 1);
-      _h_dphi_phjet = bookHisto1D(4, 1, 1);
-      _h_costheta_biased_phjet = bookHisto1D(5, 1, 1);
-      _h_mass_phjet            = bookHisto1D(6, 1, 1);
-      _h_costheta_phjet        = bookHisto1D(7, 1, 1);
+      book(_h_ph_pt      ,1, 1, 1);
+      book(_h_jet_pt     ,2, 1, 1);
+      book(_h_jet_rap    ,3, 1, 1);
+      book(_h_dphi_phjet ,4, 1, 1);
+      book(_h_costheta_biased_phjet ,5, 1, 1);
+      book(_h_mass_phjet            ,6, 1, 1);
+      book(_h_costheta_phjet        ,7, 1, 1);
 
     }
 
@@ -95,7 +95,7 @@ namespace Rivet {
       vector< vector<double> > ptDensities(_eta_bins_areaoffset.size()-1);
       FastJets fast_jets = apply<FastJets>(event, "KtJetsD05");
       const auto clust_seq_area = fast_jets.clusterSeqArea();
-      foreach (const Jet& jet, fast_jets.jets()) {
+      for (const Jet& jet : fast_jets.jets()) {
         const double area = clust_seq_area->area(jet);
         if (area > 1e-4 && jet.abseta() < _eta_bins_areaoffset.back())
           ptDensities.at( getEtaBin(jet.abseta()) ).push_back(jet.pT()/area);
@@ -115,20 +115,19 @@ namespace Rivet {
       if (mom_in_EtCone.Et() - correction >= 4*GeV)  vetoEvent;
 
       // Fill histos
-      const double weight = event.weight();
       const double dy = deltaRap(photon, leadingJet);
       const double costheta_yj = tanh(dy/2);
-      _h_ph_pt->fill(photon.pT()/GeV, weight);
-      _h_jet_pt->fill(leadingJet.pT()/GeV, weight);
-      _h_jet_rap->fill(leadingJet.absrap(), weight);
-      _h_dphi_phjet->fill(deltaPhi(photon, leadingJet), weight);
-      _h_costheta_biased_phjet->fill(costheta_yj, weight);
+      _h_ph_pt->fill(photon.pT()/GeV);
+      _h_jet_pt->fill(leadingJet.pT()/GeV);
+      _h_jet_rap->fill(leadingJet.absrap());
+      _h_dphi_phjet->fill(deltaPhi(photon, leadingJet));
+      _h_costheta_biased_phjet->fill(costheta_yj);
       if (costheta_yj < 0.829022) {
         const FourMomentum yj = photon.momentum() + leadingJet.momentum();
         if (yj.mass() > 160.939*GeV) {
           if (fabs(photon.eta() + leadingJet.rap()) < 2.37) {
-            _h_mass_phjet->fill(yj.mass()/GeV, weight);
-            _h_costheta_phjet->fill(costheta_yj, weight);
+            _h_mass_phjet->fill(yj.mass()/GeV);
+            _h_costheta_phjet->fill(costheta_yj);
           }
         }
       }
@@ -158,7 +157,7 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2013_I1244522);
+  RIVET_DECLARE_PLUGIN(ATLAS_2013_I1244522);
 
 
 }

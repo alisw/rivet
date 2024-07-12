@@ -1,0 +1,40 @@
+Name: BABAR_2010_I864027
+Year: 2010
+Summary: $e^+e^-\to D^{(*)+}_sD^{(*)-}_s$ cross sections near threshold
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 864027
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D82 (2010) 052004
+RunInfo: e+ e- to hadrons
+Beams: [e+, e-]
+#Energies: [[6500,6500]]
+#Luminosity_fb: 139.0
+Description:
+  '$e^+e^-\to D^{(*)+}_sD^{(*)-}_s$ cross sections measured near threshold by BABAR using ISR.'
+ValidationInfo:
+  'Herwig7 e+e- events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: delAmoSanchez:2010aa
+BibTeX: '@article{delAmoSanchez:2010aa,
+      author         = "del Amo Sanchez, P. and others",
+      title          = "{Exclusive Production of $D^+_s D^-_s$, $D^{*+}_s D^-_s$,
+                        and $D^{*+}_s D^{*-}_s$ via $e^+ e^-$ Annihilation with
+                        Initial-State-Radiation}",
+      collaboration  = "BaBar",
+      journal        = "Phys. Rev.",
+      volume         = "D82",
+      year           = "2010",
+      pages          = "052004",
+      doi            = "10.1103/PhysRevD.82.052004",
+      eprint         = "1008.0338",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "SLAC-PUB-14209, BABAR-PUB-10-015",
+      SLACcitation   = "%%CITATION = ARXIV:1008.0338;%%"
+}'

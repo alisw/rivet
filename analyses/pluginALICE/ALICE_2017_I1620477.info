@@ -6,7 +6,7 @@ Collider: LHC
 InspireID: 1620477
 Status: VALIDATED
 Authors:
-  - Hendrik Poppenborg hendrik.poppenborg@cern.ch
+  - Hendrik Poppenborg <hendrik.poppenborg@cern.ch>
 References:
   - "Eur. Phys. J. C (2018) 78: 263"
   - 10.1140/epjc/s10052-018-5612-8
@@ -18,7 +18,7 @@ Description:
   $0.3<p_T<35~GeV/c$ and $0.5<p_T<35~GeV/c$, respectively, and the ratio $\pi^{0}/\eta$,
   obtained at mid-rapidity in $pp$ collisions at $\sqrt(s) = 8\,$TeV with ALICE at the LHC.
 BibKey: Acharya:2017tlv
-BibTex: '@article{Acharya:2017tlv,
+BibTeX: '@article{Acharya:2017tlv,
       author         = "Acharya, Shreyasi and others",
       title          = "{$\pi^0$ and $\eta$ meson production in proton-proton
                         collisions at $\sqrt{s}=8$ TeV}",

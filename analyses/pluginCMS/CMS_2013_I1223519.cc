@@ -9,12 +9,12 @@
 namespace Rivet {
 
 
-  /// @brief Add a short analysis description here
+  /// @brief Searches for SUSY using $\alpha_T$ and $b$-quark multiplicity at 8~\TeV
   class CMS_2013_I1223519 : public Analysis {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(CMS_2013_I1223519);
+    RIVET_DEFAULT_ANALYSIS_CTOR(CMS_2013_I1223519);
 
 
     /// @name Analysis methods
@@ -55,8 +55,8 @@ namespace Rivet {
 
 
       // Book histograms
-      _h_alphaT23 = bookHisto1D("alphaT23", 15, 0, 3);
-      _h_alphaT4 = bookHisto1D("alphaT4", 15, 0, 3);
+      book(_h_alphaT23, "alphaT23", 15, 0, 3);
+      book(_h_alphaT4 , "alphaT4", 15, 0, 3);
       /// @todo Add HT histograms
 
       // Book counters
@@ -66,13 +66,13 @@ namespace Rivet {
         for (size_t nb = 0; nb < njmax; ++nb) {
           for (size_t iht = 0; iht < 8; ++iht) {
             const size_t i = 8 * ((inj == 0 ? 0 : 3) + nb) + iht;
-            _h_srcounters[i] = bookCounter("srcount_j" + toString(njmax) + "_b" + toString(nb) + "_ht" + toString(iht+1));
+            book(_h_srcounters[i], "srcount_j" + toString(njmax) + "_b" + toString(nb) + "_ht" + toString(iht+1));
           }
         }
       }
       // Special nj >= 4, nb >= 4 bins
       for (size_t iht = 0; iht < 3; ++iht) {
-        _h_srcounters[8*7 + iht] = bookCounter("srcount_j4_b4_ht" + toString(iht+1));
+        book(_h_srcounters[8*7 + iht], "srcount_j4_b4_ht" + toString(iht+1));
       }
 
     }
@@ -123,9 +123,9 @@ namespace Rivet {
       const Jets jets37 = filter_select(alljets, Cuts::Et > 37*GeV);
       const Jets jets43 = filter_select(jets37, Cuts::Et > 43*GeV);
       const Jets jets50 = filter_select(jets43, Cuts::Et > 50*GeV);
-      const double ht37 = sum(jets37, Et, 0.0);
-      const double ht43 = sum(jets43, Et, 0.0);
-      const double ht50 = sum(jets50, Et, 0.0);
+      const double ht37 = sum(jets37, Kin::Et, 0.0);
+      const double ht43 = sum(jets43, Kin::Et, 0.0);
+      const double ht50 = sum(jets50, Kin::Et, 0.0);
 
       // Find the relevant HT bin and apply leading jet event-selection cuts
       static const vector<double> htcuts = { /* 275., 325., */ 375., 475., 575., 675., 775., 875.}; //< comment to avoid jets50 "fall-down"
@@ -153,9 +153,9 @@ namespace Rivet {
 
       // Compute DeltaHT = minimum difference of "dijet" ETs, i.e. max(|1+2-3|, |1+3-2|, |2+3-1|)
       double deltaht = -1;
-      vector<double> jetets; transform(jets, jetets, Et);
+      vector<double> jetets; transform(jets, jetets, Kin::Et);
       for (int i = 1; i < (1 << (jetets.size()-1)); ++i) { // count from 1 to 2**N-1, i.e. through all heterogeneous bitmasks with MSB(2**N)==0
-        const bitset<10> bits(i); /// @warning There'd better not be more than 10 jets...
+        const std::bitset<10> bits(i); /// @warning There'd better not be more than 10 jets...
         const double htdiff = partition_diff(bits, jetets);
         // MSG_INFO(bits.to_string() << " => " << htdiff);
         if (deltaht < 0 || htdiff < deltaht) deltaht = htdiff;
@@ -179,7 +179,7 @@ namespace Rivet {
       /// @todo Need to include trigger efficiency sampling or weighting?
 
       // Fill histograms
-      const double weight = event.weight();
+      const double weight = 1.0;
       const size_t inj = nj < 4 ? 0 : 1;
       const size_t inb = nb < 4 ? nb : 4;
       if (iht >= 2)
@@ -198,7 +198,8 @@ namespace Rivet {
     void finalize() {
 
       const double sf = crossSection()/femtobarn*11.7/sumOfWeights();
-      scale({_h_alphaT23,_h_alphaT4}, sf);
+      scale(_h_alphaT23, sf);
+      scale(_h_alphaT4, sf);
       for (size_t i = 0; i < 8*7+3; ++i)
         scale(_h_srcounters[i], sf);
 
@@ -212,7 +213,8 @@ namespace Rivet {
 
     /// Sum the given values into two subsets according to the provided bitmask
     template <size_t N>
-    pair<double, double> partition_sum(const bitset<N>& mask, const vector<double>& vals) const {
+    pair<double, double> partition_sum(const std::bitset<N>& mask,
+                                       const vector<double>& vals) const {
       pair<double, double> rtn(0., 0.);
       for (size_t i = 0; i < vals.size(); ++i) {
         (!mask[vals.size()-1-i] ? rtn.first : rtn.second) += vals[i];
@@ -222,7 +224,7 @@ namespace Rivet {
 
     /// Return the difference between summed subsets according to the provided bitmask
     template <size_t N>
-    double partition_diff(const bitset<N>& mask, const vector<double>& vals) const {
+    double partition_diff(const std::bitset<N>& mask, const vector<double>& vals) const {
       const pair<double, double> sums = partition_sum(mask, vals);
       const double diff = fabs(sums.first - sums.second);
       MSG_TRACE(mask.to_string() << ": " << sums.first << "/" << sums.second << " => " << diff);
@@ -243,7 +245,7 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CMS_2013_I1223519);
+  RIVET_DECLARE_PLUGIN(CMS_2013_I1223519);
 
 
 }

@@ -1,0 +1,46 @@
+Name: HERA_2015_I1377206
+Year: 2015
+Summary: Measurement of sigma_red (F2) of H1 and ZEUS at different beam energies
+Experiment: H1
+Collider: HERA
+InspireID: 1377206
+Status: VALIDATED
+Reentrant: true
+Authors: 
+ - Hannes Jung (DESY) <hannes.jung@desy.de> 
+ - Tymoteusz Strozniak <tymoteusz.strozniak@desy.de>
+References: 
+ - Eur.Phys.J. C75 (2015), 580, 
+ - arXiv:1506.06042
+RunInfo: Cover full range in Bjorken-y
+NeedCrossSection: yes
+Beams: [[e+, p+],[p+,e+],[e-, p+],[p+,e-]]
+Options:
+ - ENERGY=225,251,300,318
+ - BEAM=EMINUS,EPLUS
+#Energies: [[27.5,920],[920,27.5],[27.5,920],[920,27.5]]
+#Luminosity_fb: <Insert integrated luminosity, in inverse fb>
+Description: 'A combination is presented of all inclusive deep inelastic cross sections previously published by the H1 and ZEUS collaborations at HERA for neutral and charged current ep scattering for zero beam polarisation. The data were taken at proton beam energies of 920, 820, 575 and 460 GeV and an electron beam energy of 27.5GeV. The data correspond to an integrated luminosity of about 1 fb^-1 and span six orders of magnitude in negative four-momentum-transfer squared, Q2, and Bjorken x . The correlations of the systematic uncertainties were evaluated and taken into account for the combination. The combined cross sections were input to QCD analyses at leading order, next-to-leading order and at next-to-next-to-leading order, providing a new set of parton distribution functions, called HERAPDF2.0.. The energy and beam options need to be specified when using rivet-merge.'
+ValidationInfo: 'Note, that Q2-bins were not defined in Hepdata, for the plugin they are defined by hand from the Q2 distribution. The x-bins were defined according to the corresponding x-ranges. Be aware, the hepdata file needed manual adjustment to be useful in the plugin.'
+# Keywords:[]
+BibKey: Abramowicz:2015mha
+BibTeX: '@article{Abramowicz:2015mha,
+      author         = "Abramowicz, H. and others",
+      title          = "{Combination of measurements of inclusive deep inelastic
+                        ${e^{\pm }p}$ scattering cross sections and QCD analysis
+                        of HERA data}",
+      collaboration  = "H1, ZEUS",
+      journal        = "Eur. Phys. J.",
+      volume         = "C75",
+      year           = "2015",
+      number         = "12",
+      pages          = "580",
+      doi            = "10.1140/epjc/s10052-015-3710-4",
+      eprint         = "1506.06042",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "DESY-15-039",
+      SLACcitation   = "%%CITATION = ARXIV:1506.06042;%%"
+}'
+ReleaseTests:
+ - $A DIS-e+-HighQ2 :BEAM=EPLUS:ENERGY=300.

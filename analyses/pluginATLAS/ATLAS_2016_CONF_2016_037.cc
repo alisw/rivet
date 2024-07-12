@@ -17,7 +17,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2016_CONF_2016_037);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2016_CONF_2016_037);
 
 
     /// @name Analysis methods
@@ -43,7 +43,7 @@ namespace Rivet {
 
       FinalState es(Cuts::abspid == PID::ELECTRON && Cuts::abseta < 2.47 && !Cuts::absetaIn(1.37, 1.52) && Cuts::pT > 10*GeV);
       declare(es, "TruthElectrons");
-      declare(SmearedParticles(es, ELECTRON_EFF_ATLAS_RUN2, ELECTRON_SMEAR_ATLAS_RUN2), "Electrons");
+      declare(SmearedParticles(es, ELECTRON_RECOEFF_ATLAS_RUN2, ELECTRON_SMEAR_ATLAS_RUN2), "Electrons");
 
       FinalState mus(Cuts::abspid == PID::MUON && Cuts::abseta < 2.5 && Cuts::pT > 10*GeV);
       declare(mus, "TruthMuons");
@@ -55,15 +55,15 @@ namespace Rivet {
 
 
       // Book histograms/counters
-      _h_3l1 = bookCounter("SR3l1");
-      _h_3l2 = bookCounter("SR3l2");
-      _h_0b1 = bookCounter("SR0b1");
-      _h_0b2 = bookCounter("SR0b2");
-      _h_1b = bookCounter("SR1b");
-      _h_3b = bookCounter("SR3b");
-      _h_1bDD = bookCounter("SR1bDD");
-      _h_3bDD = bookCounter("SR3bDD");
-      _h_1bGG = bookCounter("SR1bGG");
+      book(_h_3l1,"SR3l1");
+      book(_h_3l2,"SR3l2");
+      book(_h_0b1,"SR0b1");
+      book(_h_0b2,"SR0b2");
+      book(_h_1b,"SR1b");
+      book(_h_3b,"SR3b");
+      book(_h_1bDD,"SR1bDD");
+      book(_h_3bDD,"SR3bDD");
+      book(_h_1bGG,"SR1bGG");
 
     }
 
@@ -112,7 +112,7 @@ namespace Rivet {
       // Lepton isolation
       Particles sigelecs = filter_select(elecs, Cuts::abseta < 2);
       Particles sigmuons = muons;
-      ifilter_select(sigelecs, ParticleEffFilter(ELECTRON_IDEFF_ATLAS_RUN2_MEDIUM));
+      ifilter_select(sigelecs, ParticleEffFilter(ELECTRON_EFF_ATLAS_RUN2_MEDIUM));
       const Particles trks = apply<ParticleFinder>(event, "Tracks").particles();
       const Particles clus = apply<ParticleFinder>(event, "Clusters").particles();
       ifilter_discard(sigelecs, [&](const Particle& e) {
@@ -157,17 +157,16 @@ namespace Rivet {
       const double meff = sum(sigjets, pT, 0.0) + sum(sigleptons, pT, 0.0);
 
       // Fill counters
-      const double w = event.weight();
-      if (sigleptons.size() >= 3 && sigbjets.empty() && sigjets40.size() >= 4 && etmiss > 150*GeV) _h_3l1->fill(w);
-      if (sigleptons.size() >= 3 && sigbjets.empty() && sigjets40.size() >= 4 && etmiss > 200*GeV && meff > 1500*GeV) _h_3l2->fill(w);
-      if (sigleptons.size() >= 2 && sigbjets.empty() && sigjets25.size() >= 6 && etmiss > 150*GeV && meff > 500*GeV) _h_0b1->fill(w);
-      if (sigleptons.size() >= 2 && sigbjets.empty() && sigjets40.size() >= 6 && etmiss > 150*GeV && meff > 900*GeV) _h_0b2->fill(w);
-      if (sigleptons.size() >= 2 && sigbjets.size() >= 1 && sigjets25.size() >= 6 && etmiss > 200*GeV && meff > 650*GeV) _h_1b->fill(w);
-      if (sigleptons.size() >= 2 && sigbjets.size() >= 3 && sigjets25.size() >= 6 && etmiss > 150*GeV && meff > 600*GeV) _h_3b->fill(w);
+      if (sigleptons.size() >= 3 && sigbjets.empty() && sigjets40.size() >= 4 && etmiss > 150*GeV) _h_3l1->fill();
+      if (sigleptons.size() >= 3 && sigbjets.empty() && sigjets40.size() >= 4 && etmiss > 200*GeV && meff > 1500*GeV) _h_3l2->fill();
+      if (sigleptons.size() >= 2 && sigbjets.empty() && sigjets25.size() >= 6 && etmiss > 150*GeV && meff > 500*GeV) _h_0b1->fill();
+      if (sigleptons.size() >= 2 && sigbjets.empty() && sigjets40.size() >= 6 && etmiss > 150*GeV && meff > 900*GeV) _h_0b2->fill();
+      if (sigleptons.size() >= 2 && sigbjets.size() >= 1 && sigjets25.size() >= 6 && etmiss > 200*GeV && meff > 650*GeV) _h_1b->fill();
+      if (sigleptons.size() >= 2 && sigbjets.size() >= 3 && sigjets25.size() >= 6 && etmiss > 150*GeV && meff > 600*GeV) _h_3b->fill();
       if (filter_select(sigleptons, Cuts::charge < 0).size() >= 2) {
-        if (sigleptons.size() >= 2 && sigbjets.size() >= 1 && sigjets50.size() >= 6 && meff > 1200*GeV) _h_1bDD->fill(w);
-        if (sigleptons.size() >= 2 && sigbjets.size() >= 3 && sigjets50.size() >= 6 && meff > 1000*GeV) _h_3bDD->fill(w);
-        if (sigleptons.size() >= 2 && sigbjets.size() >= 1 && sigjets50.size() >= 6 && meff > 1800*GeV) _h_1bGG->fill(w);
+        if (sigleptons.size() >= 2 && sigbjets.size() >= 1 && sigjets50.size() >= 6 && meff > 1200*GeV) _h_1bDD->fill();
+        if (sigleptons.size() >= 2 && sigbjets.size() >= 3 && sigjets50.size() >= 6 && meff > 1000*GeV) _h_3bDD->fill();
+        if (sigleptons.size() >= 2 && sigbjets.size() >= 1 && sigjets50.size() >= 6 && meff > 1800*GeV) _h_1bGG->fill();
       }
 
     }
@@ -177,7 +176,9 @@ namespace Rivet {
     void finalize() {
 
       const double sf = 13.2*crossSection()/femtobarn/sumOfWeights();
-      scale({_h_3l1, _h_3l2, _h_0b1, _h_0b2, _h_1b, _h_3b, _h_1bDD, _h_3bDD, _h_1bGG}, sf);
+      scale(_h_3l1, sf); scale(_h_3l2, sf); scale(_h_0b1, sf);
+      scale(_h_0b2, sf); scale(_h_1b, sf); scale(_h_3b, sf);
+      scale(_h_1bDD, sf); scale(_h_3bDD, sf); scale(_h_1bGG, sf);
 
     }
 
@@ -197,7 +198,7 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2016_CONF_2016_037);
+  RIVET_DECLARE_PLUGIN(ATLAS_2016_CONF_2016_037);
 
 
 }

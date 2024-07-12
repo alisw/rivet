@@ -5,6 +5,7 @@ Experiment: CMS
 Collider: LHC
 InspireID: 1605749
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Debarati Roy <debarati.roy@cern.ch>
  - Andreas Hinzmann <andreas.hinzmann@cern.ch>

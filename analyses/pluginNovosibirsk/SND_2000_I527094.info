@@ -1,0 +1,30 @@
+Name: SND_2000_I527094
+Year: 2000
+Summary: Mass spectrum of $\pi^0\pi^0$ in $\phi\to\pi^0\pi^0\gamma$ decays
+Experiment: SND
+Collider: VEPP-2M
+InspireID: 527094
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B485 (2000) 349-356
+RunInfo:   Any process producing phi mesons
+Description:
+  'Mass spectra for $\pi^0\pi^0$ in $\phi$ decays to $\pi^0\pi^0\gamma$
+   measured by SND.'
+Keywords: []
+BibKey: Achasov:2000ym
+BibTeX: '@article{Achasov:2000ym,
+      author         = "Achasov, M. N. and others",
+      title          = "{The phi(1020) ---&gt; pi0 pi0 gamma decay}",
+      journal        = "Phys. Lett.",
+      volume         = "B485",
+      year           = "2000",
+      pages          = "349-356",
+      doi            = "10.1016/S0370-2693(00)00705-X",
+      eprint         = "hep-ex/0005017",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = HEP-EX/0005017;%%"
+}'

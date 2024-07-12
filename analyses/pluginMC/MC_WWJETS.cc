@@ -41,13 +41,13 @@ namespace Rivet {
       declare(jetpro, "Jets");
 
       // correlations with jets
-      _h_WW_jet1_deta = bookHisto1D("WW_jet1_deta", 70, -7.0, 7.0);
-      _h_WW_jet1_dR = bookHisto1D("WW_jet1_dR", 25, 1.5, 7.0);
-      _h_We_jet1_dR = bookHisto1D("We_jet1_dR", 25, 0.0, 7.0);
+      book(_h_WW_jet1_deta ,"WW_jet1_deta", 70, -7.0, 7.0);
+      book(_h_WW_jet1_dR ,"WW_jet1_dR", 25, 1.5, 7.0);
+      book(_h_We_jet1_dR ,"We_jet1_dR", 25, 0.0, 7.0);
 
       // global stuff
-      _h_HT = bookHisto1D("HT", logspace(100, 100.0, 0.5*(sqrtS()>0.?sqrtS():14000.)));
-      _h_jets_m_12 = bookHisto1D("jets_m_12", logspace(100, 1.0, 0.25*(sqrtS()>0.?sqrtS():14000.)));
+      book(_h_HT ,"HT", logspace(100, 100.0, 0.5*(sqrtS()>0.?sqrtS():14000.)));
+      book(_h_jets_m_12 ,"jets_m_12", logspace(100, 1.0, 0.25*(sqrtS()>0.?sqrtS():14000.)));
 
       MC_JetAnalysis::init();
     }
@@ -56,7 +56,7 @@ namespace Rivet {
 
     /// Do the analysis
     void analyze(const Event& e) {
-      const double weight = e.weight();
+      const double weight = 1.0;
 
       const WFinder& wenufinder = apply<WFinder>(e, "WenuFinder");
       if (wenufinder.bosons().size() !=1 ) vetoEvent;
@@ -81,7 +81,7 @@ namespace Rivet {
       }
 
       double HT = ep.pT() + mm.pT() + FourMomentum(enu+mnu).pT();
-      foreach (const Jet& jet, jets) HT += jet.pT();
+      for (const Jet& jet : jets) HT += jet.pT();
       if (HT > 0.0) _h_HT->fill(HT/GeV, weight);
 
       if (jets.size() > 1) {
@@ -124,6 +124,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(MC_WWJETS);
+  RIVET_DECLARE_PLUGIN(MC_WWJETS);
 
 }

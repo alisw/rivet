@@ -1,0 +1,420 @@
+{
+    "495314": [
+        "Hadronic structure in the decay tau- ---> tau-neutrino pi- pi0 pi0 and the sign of the tau-neutrino helicity", 
+        "CLEO", 
+        "10.1103/PhysRevD.61.012002", 
+        null, 
+        "hep-ex/9902022", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1999-097", 
+            "CLNS-99-1601", 
+            "CLEO-99-01"
+        ]
+    ], 
+    "500781": [
+        "Measurement of B ---> rho lepton neutrino decay and |V(ub)|", 
+        "CLEO", 
+        "10.1103/PhysRevD.61.052001", 
+        null, 
+        "hep-ex/9905056", 
+        "ins500781", 
+        null, 
+        [
+            "SLAC-REPRINT-1999-098", 
+            "CLNS-99-1611", 
+            "CLEO-99-3"
+        ]
+    ], 
+    "501487": [
+        "Limit on tau-neutrino mass from tau- ---> pi- pi+ pi- pi0 tau-neutrino", 
+        "CLEO", 
+        "10.1103/PhysRevD.61.052002", 
+        null, 
+        "hep-ex/9906015", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1999-100", 
+            "CLNS-99-1621", 
+            "CLEO-99-5"
+        ]
+    ], 
+    "504325": [
+        "Rare decays of the eta-prime", 
+        "CLEO", 
+        "10.1103/PhysRevLett.84.26", 
+        null, 
+        "hep-ex/9907046", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1999-101", 
+            "CLNS-99-1625", 
+            "CLEO-99-6"
+        ]
+    ], 
+    "504672": [
+        "Charged track multiplicity in $B$ meson decay", 
+        "CLEO", 
+        "10.1103/PhysRevD.61.072002", 
+        null, 
+        "hep-ex/9907057", 
+        "ins504672", 
+        null, 
+        [
+            "SLAC-REPRINT-1999-103", 
+            "CLNS-99-1626", 
+            "CLEO-99-7"
+        ]
+    ], 
+    "505111": [
+        "First observation of the decay B ---> J / psi phi K", 
+        "CLEO", 
+        "10.1103/PhysRevLett.84.1393", 
+        null, 
+        "hep-ex/9908014", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1999-105", 
+            "CLEO-CONF-99-15"
+        ]
+    ], 
+    "505170": [
+        "Resonant structure of tau ---> three pi pi0 neutrino(tau) and tau ---> omega pi neutrino(tau) decays", 
+        "CLEO", 
+        "10.1103/PhysRevD.61.072003", 
+        null, 
+        "hep-ex/9908024", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1999-109", 
+            "CLNS-99-1631", 
+            "CLEO-99-11"
+        ]
+    ], 
+    "505174": [
+        "Structure functions in the decay tau-+ ---> pi-+ pi0 pi0 neutrino(tau)", 
+        "CLEO", 
+        "10.1103/PhysRevD.61.052004", 
+        null, 
+        "hep-ex/9908030", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1999-112", 
+            "CLNS-99-1628", 
+            "CLEO-99-8"
+        ]
+    ], 
+    "507821": [
+        "Observation of radiative leptonic decay of the tau lepton", 
+        "CLEO", 
+        "10.1103/PhysRevLett.84.830", 
+        null, 
+        "hep-ex/9909050", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1999-115", 
+            "CLNS-99-1634", 
+            "CLEO-99-12"
+        ]
+    ], 
+    "508944": [
+        "Hadronic structure in the decay tau- ---> pi- pi0 neutrino(tau)", 
+        "CLEO", 
+        "10.1103/PhysRevD.61.112002", 
+        null, 
+        "hep-ex/9910046", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1999-116", 
+            "CLNS-99-1635", 
+            "CLEO-99-13"
+        ]
+    ], 
+    "509175": [
+        "Update of the search for the neutrinoless decay tau ---> muon gamma", 
+        "CLEO", 
+        "10.1103/PhysRevD.61.071101", 
+        null, 
+        "hep-ex/9910060", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1999-117", 
+            "CLNS-99-1638", 
+            "CLEO-99-14"
+        ]
+    ], 
+    "512426": [
+        "Study of exclusive radiative B meson decays", 
+        "CLEO", 
+        "10.1103/PhysRevLett.84.5283", 
+        null, 
+        "hep-ex/9912057", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1999-118", 
+            "CLNS-99-1653", 
+            "CLEO-99-20"
+        ]
+    ], 
+    "512428": [
+        "Two-body B meson decays to eta and eta-prime: Observation of B ---> eta K*", 
+        "CLEO", 
+        "10.1103/PhysRevLett.85.520", 
+        null, 
+        "hep-ex/9912059", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1999-119", 
+            "CLNS-99-1649", 
+            "CLEO-99-16"
+        ]
+    ], 
+    "512778": [
+        "Search for the decay anti-B0 ---> D*0 gamma", 
+        "CLEO", 
+        "10.1103/PhysRevLett.84.4292", 
+        null, 
+        "hep-ex/0001002", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1999-120", 
+            "CLNS-99-1655", 
+            "CLEO-99-21"
+        ]
+    ], 
+    "513379": [
+        "Search for D0 - anti-D0 mixing", 
+        "CLEO", 
+        "10.1103/PhysRevLett.84.5038", 
+        null, 
+        "hep-ex/0001060", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1999-121", 
+            "CLNS-99-1659", 
+            "CLEO-99-23"
+        ]
+    ], 
+    "522755": [
+        "Measurement of charge asymmetries in charmless hadronic in b meson decays", 
+        "CLEO", 
+        "10.1103/PhysRevLett.85.525", 
+        null, 
+        "hep-ex/0001009", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-2000-080", 
+            "CLNS-99-1651A", 
+            "CLEO-99-17", 
+            "CLNS-99-1651"
+        ]
+    ], 
+    "522777": [
+        "Measurement of the B0 and B+ meson masses from B0 ---> psi(psi-prime) K0(s) and B+ ---> psi(psi-prime) K+ decays", 
+        "CLEO", 
+        "10.1103/PhysRevD.61.111101", 
+        null, 
+        "hep-ex/0001013", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-2000-082", 
+            "CLNS-99-1658", 
+            "CLEO-99-22"
+        ]
+    ], 
+    "524449": [
+        "Study of the decays $B^0 \\to D^{*}$ + $D^{*-}$", 
+        "CLEO", 
+        "10.1103/PhysRevD.62.032005", 
+        null, 
+        "hep-ex/0002065", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-2000-083", 
+            "CLNS-00-1663", 
+            "CLEO-00-02"
+        ]
+    ], 
+    "524526": [
+        "Search for CP violation in $B^\\pm \\to J/\\psi K^\\pm$ and $B^\\pm \\to \\psi_{2S} K^\\pm$ decays", 
+        "CLEO", 
+        "10.1103/PhysRevLett.84.5940", 
+        null, 
+        "hep-ex/0003004", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-2000-084", 
+            "CLNS-00-1661", 
+            "CLEO-00-01"
+        ]
+    ], 
+    "525697": [
+        "Measurement of B(Lambda+(c) ---> p K- pi+)", 
+        "CLEO", 
+        "10.1103/PhysRevD.62.072005", 
+        null, 
+        "hep-ex/0004001", 
+        "ins525697", 
+        null, 
+        [
+            "SLAC-REPRINT-2000-085", 
+            "CLNS-00-1664", 
+            "CLEO-00-3"
+        ]
+    ], 
+    "525698": [
+        "Resonance structure of tau- ---> K- pi+ pi- nu(tau) decays", 
+        "CLEO", 
+        "10.1103/PhysRevD.62.072006", 
+        null, 
+        "hep-ex/0004002", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-2000-086", 
+            "CLNS-00-1666", 
+            "CLEO-00-4"
+        ]
+    ], 
+    "526554": [
+        "Measurements of charm fragmentation into D*+(s) and D+(s) in e+ e- annihilations at S**(1/2) = 10.5-GeV", 
+        "CLEO", 
+        "10.1103/PhysRevD.62.072003", 
+        null, 
+        "hep-ex/0004028", 
+        "ins526554", 
+        null, 
+        [
+            "SLAC-REPRINT-2000-087", 
+            "CLNS-00-1667", 
+            "CLEO-00-5"
+        ]
+    ], 
+    "526644": [
+        "Study of exclusive two-body $B^0$ meson decays to charmonium", 
+        "CLEO", 
+        "10.1103/PhysRevD.62.051101", 
+        null, 
+        "hep-ex/0004032", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-2000-088", 
+            "CLNS-00-1671", 
+            "CLEO-00-8"
+        ]
+    ], 
+    "526692": [
+        "Measurement of the product branching fraction b(c ---> theta(c) X) B(theta(c) ---> Lambda X)", 
+        "CLEO", 
+        "10.1103/PhysRevD.62.092007", 
+        null, 
+        "hep-ex/0004033", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-2000-089", 
+            "CLNS-99-1630", 
+            "CLEO-99-10"
+        ]
+    ], 
+    "526928": [
+        "Precise measurement of $B^0 \\bar{B}^0$ mixing parameters at the $\\Upsilon$(4S)", 
+        "CLEO", 
+        "10.1016/S0370-2693(00)00990-4", 
+        null, 
+        "hep-ex/0005013", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-2000-090", 
+            "CLNS-00-1668", 
+            "CLEO-00-6"
+        ]
+    ], 
+    "528371": [
+        "Study of charmless hadronic B meson decays to pseudoscalar vector final states", 
+        "CLEO", 
+        "10.1103/PhysRevLett.85.2881", 
+        null, 
+        "hep-ex/0006008", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-2000-062", 
+            "CLNS-99-1652", 
+            "CLEO-99-19"
+        ]
+    ], 
+    "529158": [
+        "Measurements of the mass, total width and two photon partial width of the eta(c) meson", 
+        "CLEO", 
+        "10.1103/PhysRevLett.85.3095", 
+        null, 
+        "hep-ex/0006026", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-2000-063", 
+            "CLNS-00-1673", 
+            "CLEO-00-09"
+        ]
+    ], 
+    "530546": [
+        "Search for decays of $B^0$ mesons into pairs of leptons: $B^0 \\to e^{+} e^{-}$, $B^0 \\to$ muon+ muon- and $B^0 \\to e^\\pm$ muon-+", 
+        "CLEO", 
+        "10.1103/PhysRevD.62.091102", 
+        null, 
+        "hep-ex/0007042", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-2000-065", 
+            "CLNS-00-1679", 
+            "CLEO-00-11"
+        ]
+    ], 
+    "531470": [
+        "Measurements of B ---> D(*)(S)+ D+(*) branching fractions", 
+        "CLEO", 
+        "10.1103/PhysRevD.62.112003", 
+        null, 
+        "hep-ex/0008015", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-2000-072", 
+            "CLNS-00-1683", 
+            "CLEO-00-15"
+        ]
+    ], 
+    "532734": [
+        "Observation of B --> K+- pi0 and B --> K0 pi0, and evidence for B --> pi+ pi-", 
+        "CLEO", 
+        "10.1103/PhysRevLett.85.515", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-2000-061"
+        ]
+    ]
+}

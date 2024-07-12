@@ -1,0 +1,83 @@
+{
+    "563492": [
+        "Radiative decay of the psi(2S) into two pseudoscalar mesons", 
+        "BES", 
+        "10.1103/PhysRevD.67.032004", 
+        null, 
+        "hep-ex/0109040", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9157"
+        ]
+    ], 
+    "598375": [
+        "psi(2S) two-body and three-body hadronic decays", 
+        "BES", 
+        "10.1103/PhysRevD.67.052002", 
+        null, 
+        "hep-ex/0209080", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9569"
+        ]
+    ], 
+    "611141": [
+        "Measurements of the mass and full width of the eta(c) meson", 
+        "BES", 
+        "10.1016/S0370-2693(03)00074-1", 
+        null, 
+        "hep-ex/0301004", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9671"
+        ]
+    ], 
+    "614663": [
+        "Search for lepton flavor violation process J / psi ---> e mu", 
+        "BES", 
+        "10.1016/S0370-2693(03)00391-5", 
+        null, 
+        "hep-ex/0303005", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9708"
+        ]
+    ], 
+    "614664": [
+        "Observation of a near threshold enhancement in th p anti-p mass spectrum from radiative J / psi ---> gamma p anti-p decays", 
+        "BES", 
+        "10.1103/PhysRevLett.91.022001", 
+        null, 
+        "hep-ex/0303006", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9709", 
+            "UH-511-1019-03"
+        ]
+    ], 
+    "616525": [
+        "First evidence of Lambda anti-Lambda in chi(cJ) decays", 
+        "BES", 
+        "10.1103/PhysRevD.67.112001", 
+        null, 
+        "hep-ex/0304012", 
+        null, 
+        null, 
+        []
+    ], 
+    "623925": [
+        "Partial wave analyses of J / psi ---> gamma K+ K- and gamma K0(S) K0(S)", 
+        "BES", 
+        "10.1103/PhysRevD.68.052003", 
+        null, 
+        "hep-ex/0307058", 
+        null, 
+        null, 
+        []
+    ]
+}

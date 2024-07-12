@@ -1,0 +1,88 @@
+{
+    "1220862": [
+        "Measurement of proton-proton elastic scattering and total cross-section at S**(1/2) = 7-TeV", 
+        "TOTEM", 
+        "10.1209/0295-5075/101/21002", 
+        "1472948", 
+        null, 
+        "ins1220862", 
+        null, 
+        [
+            "TOTEM-2012-002", 
+            "CERN-PH-EP-2012-239"
+        ]
+    ], 
+    "1220863": [
+        "Measurement of proton-proton inelastic scattering cross-section at $\\sqrt{s}$ = 7 TeV", 
+        "TOTEM", 
+        "10.1209/0295-5075/101/21003", 
+        "1709385", 
+        null, 
+        null, 
+        null, 
+        [
+            "TOTEM-2012\u2013003", 
+            "CERN-PH-EP-2012-352"
+        ]
+    ], 
+    "1220864": [
+        "Luminosity-independent measurements of total, elastic and inelastic cross-sections at $\\sqrt{s} = 7$ TeV", 
+        "TOTEM", 
+        "10.1209/0295-5075/101/21004", 
+        "1709386", 
+        null, 
+        null, 
+        null, 
+        [
+            "TOTEM-2012-004", 
+            "CERN-PH-EP-2012-353"
+        ]
+    ], 
+    "1239222": [
+        "Performance of almost edgeless silicon detectors in CTS and 3D-planar technologies", 
+        "TOTEM", 
+        "10.1088/1748-0221/8/06/P06009", 
+        "1709398", 
+        null, 
+        null, 
+        null, 
+        []
+    ], 
+    "1251291": [
+        "Luminosity-Independent Measurement of the Proton-Proton Total Cross Section at $\\sqrt{s}=8$  TeV", 
+        "TOTEM", 
+        "10.1103/PhysRevLett.111.012001", 
+        "1495764", 
+        null, 
+        null, 
+        null, 
+        [
+            "TOTEM-2012-005", 
+            "CERN-PH-EP-2012-354"
+        ]
+    ], 
+    "1251897": [
+        "Double diffractive cross-section measurement in the forward region at the LHC", 
+        "TOTEM", 
+        "10.1103/PhysRevLett.111.262001", 
+        "1595226", 
+        "1308.6722", 
+        "ins1251897", 
+        null, 
+        [
+            "CERN-PH-EP-2013-170"
+        ]
+    ], 
+    "1257991": [
+        "Performance of the TOTEM Detectors at the LHC", 
+        "TOTEM", 
+        "10.1142/S0217751X13300469", 
+        "1598868", 
+        "1310.2908", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2013-173"
+        ]
+    ]
+}

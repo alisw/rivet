@@ -1,0 +1,86 @@
+{
+    "1225526": [
+        "Measurement of $ D^{*\\pm}$ production in deep inelastic scattering at HERA", 
+        "ZEUS", 
+        "10.1007/JHEP05(2013)097", 
+        "1532837", 
+        "1303.6578", 
+        "ins1225526", 
+        null, 
+        [
+            "DESY-13-054"
+        ]
+    ], 
+    "1267651": [
+        "Photoproduction of Isolated Photons, Inclusively and with a Jet, at HERA", 
+        "ZEUS", 
+        "10.1016/j.physletb.2014.01.062", 
+        null, 
+        "1312.1539", 
+        "ins1267651", 
+        null, 
+        [
+            "DESY-13-234"
+        ]
+    ], 
+    "1269458": [
+        "Measurement of neutral current e$\\pm$p cross sections at high Bjorken x with the ZEUS detector", 
+        "ZEUS", 
+        "10.1103/PhysRevD.89.072007", 
+        null, 
+        "1312.4438", 
+        "ins1269458", 
+        null, 
+        [
+            "DESY-13-245"
+        ]
+    ], 
+    "1292476": [
+        "Deep inelastic cross-section measurements at large y with the ZEUS detector at HERA", 
+        "ZEUS", 
+        "10.1103/PhysRevD.90.072002", 
+        null, 
+        "1404.6376", 
+        "ins1292476", 
+        null, 
+        [
+            "DESY-14-053"
+        ]
+    ], 
+    "1297225": [
+        "Measurement of $D^{\\ast}$ photoproduction at three different centre-of-mass energies at HERA", 
+        "ZEUS", 
+        "10.1007/JHEP10(2014)003", 
+        null, 
+        "1405.5068", 
+        "ins1297225", 
+        null, 
+        [
+            "DESY-14-082"
+        ]
+    ], 
+    "1298276": [
+        "Measurement of beauty and charm production in deep inelastic scattering at HERA and measurement of the beauty-quark mass", 
+        "ZEUS", 
+        "10.1007/JHEP09(2014)127", 
+        "1705213", 
+        "1405.6915", 
+        "ins1298276", 
+        null, 
+        [
+            "DESY-14-083"
+        ]
+    ], 
+    "1298390": [
+        "Further studies of the photoproduction of isolated photons with a jet at HERA", 
+        "ZEUS", 
+        "10.1007/JHEP08(2014)023", 
+        null, 
+        "1405.7127", 
+        "ins1298390", 
+        null, 
+        [
+            "DESY-14-086"
+        ]
+    ]
+}

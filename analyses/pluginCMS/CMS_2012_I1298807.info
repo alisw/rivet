@@ -5,11 +5,12 @@ Experiment: CMS
 Collider: LHC
 InspireID: 1298807
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Alexander Savin
  - Ian Ross
 References:
- - arXiv:hep-ex/1406.0113
+ - arXiv:1406.0113 [hep-ex]
 NeedCrossSection: no
 Beams:  [p+, p+]
 Energies: [8000]
@@ -43,3 +44,7 @@ BibTeX: '@article{Chatrchyan:2011wt,
       reportNumber   = "CERN-PH-EP-2014-080",
       SLACcitation   = "%%CITATION = ARXIV:1406.0113;%%",
 }'
+
+ReleaseTests:
+ - $A LHC-8-ZZ-lv
+

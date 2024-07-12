@@ -1,0 +1,208 @@
+{
+    "629858": [
+        "Search for scalar leptons and scalar quarks at LEP", 
+        "L3", 
+        "10.1016/j.physletb.2003.10.010", 
+        "646776", 
+        "hep-ex/0310007", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-059"
+        ]
+    ], 
+    "634946": [
+        "Search for color singlet and color reconnection effects in hadronic $Z$ decays at LEP", 
+        "L3", 
+        "10.1016/j.physletb.2003.12.003", 
+        "690332", 
+        "hep-ex/0312026", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-047"
+        ]
+    ], 
+    "636939": [
+        "Measurement of the Z boson mass using e+ e- ---> Z gamma events at center of mass energies above the Z pole", 
+        "L3", 
+        "10.1016/j.physletb.2004.01.074", 
+        "709152", 
+        "hep-ex/0402001", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-074"
+        ]
+    ], 
+    "636940": [
+        "Single photon and multiphoton events with missing energy in $e^{+} e^{-}$ collisions at LEP", 
+        "L3", 
+        "10.1016/j.physletb.2004.01.010", 
+        "709153", 
+        "hep-ex/0402002", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-068"
+        ]
+    ], 
+    "636941": [
+        "Flavor independent search for neutral Higgs bosons at LEP", 
+        "L3", 
+        "10.1016/j.physletb.2003.12.039", 
+        "709155", 
+        "hep-ex/0402003", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-069"
+        ]
+    ], 
+    "637287": [
+        "Inclusive lambda production in two photon collisions at LEP", 
+        "L3", 
+        "10.1016/j.physletb.2004.02.030", 
+        "720072", 
+        "hep-ex/0402035", 
+        "ins637287", 
+        null, 
+        [
+            "CERN-EP-2003-085"
+        ]
+    ], 
+    "645126": [
+        "Measurement of triple gauge boson couplings of the $W$ boson at LEP", 
+        "L3", 
+        "10.1016/j.physletb.2004.02.045", 
+        "720073", 
+        "hep-ex/0402036", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-086"
+        ]
+    ], 
+    "645127": [
+        "Muon pair and tau pair production in two photon collisions at LEP", 
+        "L3", 
+        "10.1016/j.physletb.2004.02.012", 
+        "720074", 
+        "hep-ex/0402037", 
+        "ins645127", 
+        null, 
+        [
+            "CERN-EP-2003-080"
+        ]
+    ], 
+    "646971": [
+        "Search for anomalous couplings in the Higgs sector at LEP", 
+        "L3", 
+        "10.1016/j.physletb.2004.03.048", 
+        "726547", 
+        "hep-ex/0403037", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2004-002", 
+            "CERN-EP-PH-2004-02"
+        ]
+    ], 
+    "652683": [
+        "Studies of hadronic event structure in $e^{+} e^{-}$ annihilation from 30-GeV to 209-GeV with the L3 detector", 
+        "L3", 
+        "10.1016/j.physrep.2004.07.002", 
+        "744196", 
+        "hep-ex/0406049", 
+        "ins652683", 
+        null, 
+        [
+            "CERN-PH-EP-2004-024", 
+            "CERN-EP-PH-2004-024"
+        ]
+    ], 
+    "653297": [
+        "Measurement of the atmospheric muon spectrum from 20-GeV to 3000-GeV", 
+        "L3", 
+        "10.1016/j.physletb.2004.08.003", 
+        "740972", 
+        "hep-ex/0408114", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2004-023"
+        ]
+    ], 
+    "653835": [
+        "Study of the $e^{+} e^{-} \\to Z \\gamma$ process at LEP and limits on triple neutral-gauge-boson couplings", 
+        "L3", 
+        "10.1016/j.physletb.2004.07.002", 
+        "768638", 
+        "hep-ex/0407012", 
+        "ins653835", 
+        null, 
+        [
+            "CERN-PH-EP-2004-014"
+        ]
+    ], 
+    "654174": [
+        "Search for branons at LEP", 
+        "L3", 
+        "10.1016/j.physletb.2004.07.014", 
+        "772827", 
+        "hep-ex/0407017", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2004-016"
+        ]
+    ], 
+    "654177": [
+        "Measurement of exclusive rho+ rho- production in high-Q**2 two-photon collisions at LEP", 
+        "L3", 
+        "10.1016/j.physletb.2004.07.013", 
+        "772830", 
+        "hep-ex/0407020", 
+        "ins654177", 
+        null, 
+        [
+            "CERN-PH-EP-2004-005"
+        ]
+    ], 
+    "658254": [
+        "Measurement of the cross section of W-boson pair production at LEP", 
+        "L3", 
+        "10.1016/j.physletb.2004.08.060", 
+        "791445", 
+        "hep-ex/0409016", 
+        "ins658254", 
+        null, 
+        [
+            "CERN-PH-EP-2004-026"
+        ]
+    ], 
+    "661114": [
+        "Inclusive jet production in two-photon collisions at LEP", 
+        "L3", 
+        "10.1016/j.physletb.2004.10.003", 
+        "796934", 
+        "hep-ex/0410012", 
+        "ins661114", 
+        null, 
+        [
+            "CERN-EP-2003-055"
+        ]
+    ], 
+    "662726": [
+        "Measurement of exclusive rho0 rho0 production in mid-virtuality two-photon interactions at LEP", 
+        "L3", 
+        "10.1016/j.physletb.2004.10.049", 
+        "800182", 
+        "hep-ex/0410073", 
+        "ins662726", 
+        null, 
+        [
+            "CERN-PH-EP-2004-049"
+        ]
+    ]
+}

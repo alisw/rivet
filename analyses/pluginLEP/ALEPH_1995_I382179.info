@@ -29,3 +29,7 @@ BibTeX: '@article{Buskulic:1994ft,
       SLACcitation   = "%%CITATION = ZEPYA,C66,355;%%"
 }'
 
+
+ReleaseTests:
+ - $A LEP-91
+

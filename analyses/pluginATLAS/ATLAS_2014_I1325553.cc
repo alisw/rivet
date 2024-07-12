@@ -39,7 +39,8 @@ namespace Rivet {
       size_t ptDsOffset(0);
       for (size_t alg = 0; alg < 2; ++alg) {
         for (size_t i = 0; i < 6; ++i) {
-          _pt[alg].addHistogram(ybins[i], ybins[i + 1], bookHisto1D(1 + ptDsOffset, 1, 1));
+          Histo1DPtr tmp;
+          _pt[alg].add(ybins[i], ybins[i + 1], book(tmp, 1 + ptDsOffset, 1, 1));
           ptDsOffset += 1;
         }
       }
@@ -56,13 +57,13 @@ namespace Rivet {
       for (size_t alg = 0; alg < 2; ++alg) {
 
         // fill the 1D pt histograms with all the jets passing the cuts
-        foreach (const Jet& jet, jetAr[alg]) {
+        for (const Jet& jet : jetAr[alg]) {
           const double absrap = jet.absrap();
           if (absrap < 3.0) {
-	          const double pt = jet.pT();
-	          if (pt/GeV > 100*GeV) {
-	            _pt[alg].fill(absrap, pt/GeV, event.weight());
-	          }
+            const double pt = jet.pT();
+            if (pt/GeV > 100*GeV) {
+              _pt[alg].fill(absrap, pt/GeV);
+            }
           }
         }
       }
@@ -72,14 +73,10 @@ namespace Rivet {
     /// Normalise histograms etc., after the run
     void finalize() {
 
-
       /// Print summary info
       const double xs_pb( crossSection() / picobarn );
       const double sumW( sumOfWeights() );
       const double xs_norm_factor( 0.5*xs_pb / sumW );
-      MSG_INFO( "Cross-Section/pb     : " << xs_pb       );
-      MSG_INFO( "Sum of weights       : " << sumW        );
-      MSG_INFO( "nEvents              : " << numEvents() );
 
       for (size_t alg = 0; alg < 2; ++alg) {
         _pt[alg].scale(xs_norm_factor, this);
@@ -95,12 +92,11 @@ namespace Rivet {
     enum Alg { AKT4=0, AKT6=1 };
 
     /// The inclusive jet spectrum binned in rapidity for akt6 and akt4 jets (array index is jet type from enum above)
-    BinnedHistogram<double> _pt[2];
+    BinnedHistogram _pt[2];
 
   };
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2014_I1325553);
+  RIVET_DECLARE_PLUGIN(ATLAS_2014_I1325553);
 
 }

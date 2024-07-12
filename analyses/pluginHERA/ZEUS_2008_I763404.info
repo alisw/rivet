@@ -25,12 +25,12 @@ PtCuts: [0]
 Description:
   ZEUS analysis for diffractive photoproduction of dijets in proton-positron
   collisions with beam energies of 920~GeV on 27.5~GeV at the ep collider HERA
-  using an integrated luminosity of 77.2 pb−1. The measurements were made in the
+  using an integrated luminosity of 77.2 pb-1. The measurements were made in the
   kinematic range Q2 < 1 GeV^2, 0.20 < y < 0.85 and xIP < 0.025, where Q2 is the
   photon virtuality, y is the inelasticity and xIP is the fraction of the proton
   momentum taken by the diffractive exchange. The two jets with the highest
   transverse energy, Ejet, were required to satisfy E_jet > 7.5 and 6.5 GeV,
-  respectively, and to lie in the pseudorapidity range −1.5 < η_{jet} < 1.5.
+  respectively, and to lie in the pseudorapidity range -1.5 < η_{jet} < 1.5.
 BibKey: Chekanov:2007rh
 BibTeX: '@article{Chekanov:2007rh,
       author         = "Chekanov, Sergei and others",
@@ -48,3 +48,7 @@ BibTeX: '@article{Chekanov:2007rh,
       reportNumber   = "DESY-07-161",
       SLACcitation   = "%%CITATION = ARXIV:0710.1498;%%"
 }'
+
+ReleaseTests:
+ - $A HERA-II-GammaP-Gap
+

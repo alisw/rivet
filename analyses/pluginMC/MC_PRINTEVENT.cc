@@ -147,6 +147,13 @@ namespace Rivet {
       /// @todo Wouldn't this be nice... if HepMC::IO_AsciiParticles was sane :-/
       // printEvent(event.genEvent());
 
+      #ifdef RIVET_ENABLE_HEPMC_3
+      
+      /// @todo gonna try this instead of replicating everything below
+      RivetHepMC::Print::content(*(event.genEvent()));
+      
+      #else
+      
       const GenEvent* evt = event.genEvent();
 
       cout << string(120, '=') << "\n" << endl;
@@ -154,7 +161,7 @@ namespace Rivet {
       // Weights
       cout << "Weights(" << evt->weights().size() << ")=";
       /// @todo Re-enable
-      // foreach (double w,  evt->weights())
+      // for (double w,  evt->weights())
       //   cout << w << " ";
       cout << "\n"
            << "EventScale " << evt->event_scale()
@@ -235,6 +242,8 @@ namespace Rivet {
       }
 
       cout << "\n" << endl;
+      
+      #endif // VERSION_CODE >= 3000000
     }
 
 
@@ -253,6 +262,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(MC_PRINTEVENT);
+  RIVET_DECLARE_PLUGIN(MC_PRINTEVENT);
 
 }

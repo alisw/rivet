@@ -1,0 +1,40 @@
+Name: BELLE_2009_I803343
+Year: 2009
+Summary: Mass and angular distributions in $B\to\Lambda^0\bar\Lambda^0 K^{(*)}$ 
+Experiment: BELLE
+Collider: KEKB
+InspireID: 803343
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardsom@durham.ac.uk>
+References:
+ - Phys.Rev.D 79 (2009) 052006
+RunInfo: Any process producing B0, originally Upsilon(4S) decay
+Description:
+'Measurement of mass and angular distributions in $B^0\to\Lambda^0\bar\Lambda^0 K^0$,
+$B^+\to\Lambda^0\bar\Lambda^0 K^+$ and $B^0\to\Lambda^0\bar\Lambda^0 K^{*0}$.
+The data for the mass spectra was read from the tables in the paper and are fully corrected, while
+those for the angular distributions in the threshold region were read from the figures and may not be
+corrected.'
+ValidationInfo:
+  'Herwig7 events using EvtGen for decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle:2008kpj
+BibTeX: '@article{Belle:2008kpj,
+    author = "Chang, Y. -W. and others",
+    collaboration = "Belle",
+    title = "{Observation of B0 ---\ensuremath{>} Lambda anti-Lambda K0 and B0 to Lambda anti-Lambda K*0 at Belle}",
+    eprint = "0811.3826",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BELLE-2008-30, KEK-2008-41",
+    doi = "10.1103/PhysRevD.79.052006",
+    journal = "Phys. Rev. D",
+    volume = "79",
+    pages = "052006",
+    year = "2009"
+}
+'

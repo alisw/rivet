@@ -1,0 +1,16 @@
+RIVETBUILD := RIVET_BUILD_BEFORE_INSTALL=1 bash $(top_builddir)/bin/rivet-build
+
+%.so:
+	@+echo && $(RIVETBUILD) $@ $^ -I$(top_builddir)/include
+
+RivetLWTNN.so: EXAMPLE_LWTNN.cc
+	@+echo && $(RIVETBUILD) $@ $^ -I$(top_builddir)/include -I$(LWTNN_PREFIX)/include -L$(LWTNN_PREFIX)/lib -llwtnn
+
+RivetROOT.so: EXAMPLE_NTUPLE_ROOT.cc
+	@+echo && $(RIVETBUILD) $@ $^ `root-config --cflags --libs`
+
+RivetHTT.so: EXAMPLE_HTT.cc
+	@+echo && $(RIVETBUILD) $@ $^ -I$(HEPTOPTAGGER_PREFIX)/include
+
+RivetONNX.so: EXAMPLE_ONNX.cc
+	@+echo && $(RIVETBUILD) $@ $^ -I$(top_builddir)/include -I$(ONNX_PREFIX)/include -L$(ONNX_PREFIX)/lib -lonnxruntime

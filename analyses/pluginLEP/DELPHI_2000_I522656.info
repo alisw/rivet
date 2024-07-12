@@ -1,0 +1,36 @@
+Name: DELPHI_2000_I522656
+Year: 2000
+Summary: Events shapes at MZ as function of thrust direction
+Experiment: DELPHI
+Collider: LEP
+InspireID: 522656
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Eur.Phys.J.C 14 (2000) 557-584, 2000
+RunInfo: e+ e- to hadrons
+Beams: [e+, e-]
+Energies: [91.2]
+Description:
+  'Measurement of event shapes for different ranges of the angle between the thrust axis and the beam. Jet rate using a mass measure or the Geneva algorithm are not implemented.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: DELPHI:2000uri
+BibTeX: '@article{DELPHI:2000uri,
+    author = "Abreu, P. and others",
+    collaboration = "DELPHI",
+    title = "{Consistent measurements of alpha(s) from precise oriented event shape distributions}",
+    eprint = "hep-ex/0002026",
+    archivePrefix = "arXiv",
+    reportNumber = "CERN-EP-99-133",
+    doi = "10.1007/s100520000354",
+    journal = "Eur. Phys. J. C",
+    volume = "14",
+    pages = "557--584",
+    year = "2000"
+}
+'

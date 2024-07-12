@@ -1,0 +1,31 @@
+Name: AMY_1990_I298238
+Year: 1990
+Summary:  Measurement of the $\tau$ polarization at $E_{\text{CMS}}=57$ GeV
+Experiment: AMY
+Collider: Tristan
+InspireID: 298238
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - KEK-PREPRINT-90-70, AMY-90-9
+RunInfo: e+ e- > tau+ tau-
+Beams: [e+, e-]
+Energies: [57.]
+Description:
+  'Measurement of the $\tau$ lepton polarization in $e^+e^-\to\tau^+\tau^-$ at $E_{\text{CMS}}=57$ GeV by the AMY collaboration at Tristan.'
+ValidationInfo:
+  'Herwig7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Lee:1990yw
+BibTeX: '@inproceedings{Lee:1990yw,
+    author = "Lee, M.H. and others",
+    collaboration = "AMY",
+    title = "{Measurement of the polarization of $\tau$ leptons from $e^+e^-$ at $\sqrt{s} = 57$ GeV}",
+    booktitle = "{25th International Conference on High-energy Physics}",
+    reportNumber = "KEK-PREPRINT-90-70, AMY-90-9",
+    month = "8",
+    year = "1990"
+}'

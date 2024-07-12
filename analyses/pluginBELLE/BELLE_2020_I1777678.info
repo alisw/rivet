@@ -1,0 +1,37 @@
+Name: BELLE_2020_I1777678
+Year: 2020
+Summary: Single and dihadron scaled momenta spectra at 10.58 GeV
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1777678
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 101 (2020) 9, 092004
+RunInfo: e+ e- to hadrons
+Beams: [e+, e-]
+Energies: [10.58]
+Description:
+  'Measurement of single and di-hadron spectra by the BELLE collaboration at 10.58 GeV'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: 
+BibTeX: '@article{Seidl:2020mqc,
+    author = "Seidl, R. and others",
+    collaboration = "Belle",
+    title = "{Update of inclusive cross sections of single and pairs of identified light charged hadrons}",
+    eprint = "2001.10194",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "Belle Preprint 2020-01, KEK Preprint 2019-56",
+    doi = "10.1103/PhysRevD.101.092004",
+    journal = "Phys. Rev. D",
+    volume = "101",
+    number = "9",
+    pages = "092004",
+    year = "2020"
+}'

@@ -1,0 +1,235 @@
+{
+    "1373915": [
+        "Amplitude analysis of the \u03c0$^0$\u03c0$^0$ system produced in radiative J/\u03c8 decays", 
+        "BESIII", 
+        "10.1103/PhysRevD.92.052003", 
+        null, 
+        "1506.00546", 
+        null, 
+        null, 
+        []
+    ], 
+    "1384778": [
+        "Measurement of azimuthal asymmetries in inclusive charged dipion production in $e^+e^-$ annihilations at $\\sqrt{s}$ = 3.65 GeV", 
+        "BESIII", 
+        "10.1103/PhysRevLett.116.042001", 
+        null, 
+        "1507.06824", 
+        "ins1384778", 
+        null, 
+        []
+    ], 
+    "1385603": [
+        "Measurement of the $e^+ e^\u2212 \\to \\pi^+ \\pi^\u2212$ cross section between 600 and 900 MeV using initial state radiation", 
+        "BESIII", 
+        "10.1016/j.physletb.2015.11.043", 
+        null, 
+        "1507.08188", 
+        "ins1385603", 
+        null, 
+        []
+    ], 
+    "1401373": [
+        "Measurement of the center-of-mass energies at BESIII via the di-muon process", 
+        "BESIII", 
+        "10.1088/1674-1137/40/6/063001", 
+        null, 
+        "1510.08654", 
+        null, 
+        null, 
+        [
+            "40", 
+            "063001(2016)"
+        ]
+    ], 
+    "1402800": [
+        "Measurement of the branching fraction for $\\psi(3770) \\to \\gamma \\chi_{c0}$", 
+        "BESIII", 
+        "10.1016/j.physletb.2015.11.074", 
+        null, 
+        "1511.01203", 
+        null, 
+        null, 
+        []
+    ], 
+    "1406936": [
+        "Measurements of absolute hadronic branching fractions of $\\Lambda_{c}^{+}$ baryon", 
+        "BESIII", 
+        "10.1103/PhysRevLett.116.052001", 
+        null, 
+        "1511.08380", 
+        null, 
+        null, 
+        []
+    ], 
+    "1406939": [
+        "Observation of $e^+e^- \\rightarrow \\omega \\chi_{c1,2}$ near $\\sqrt{s}$ = 4.42 and 4.6 GeV", 
+        "BESIII", 
+        "10.1103/PhysRevD.93.011102", 
+        null, 
+        "1511.08564", 
+        "ins1406939", 
+        null, 
+        []
+    ], 
+    "1411080": [
+        "Observation of the Singly Cabibbo-Suppressed Decay $D^{+}\\to\\omega\\pi^{+}$ and Evidence for $D^{0}\\to\\omega\\pi^{0}$", 
+        "BESIII", 
+        "10.1103/PhysRevLett.116.082001", 
+        null, 
+        "1512.06998", 
+        null, 
+        null, 
+        []
+    ], 
+    "1411448": [
+        "Study of $J/\\psi\\to p\\bar{p}\\phi$ at BESIII", 
+        "BESIII", 
+        "10.1103/PhysRevD.93.052010", 
+        null, 
+        "1512.08197", 
+        null, 
+        null, 
+        []
+    ], 
+    "1411645": [
+        "Study of $D^{+} \\to K^{-} \\pi^+ e^+ \\nu_e$", 
+        "BESIII", 
+        "10.1103/PhysRevD.94.032001", 
+        null, 
+        "1512.08627", 
+        "ins1411645", 
+        null, 
+        []
+    ], 
+    "1419650": [
+        "Observation of pseudoscalar and tensor resonances in $J/\\psi\\to \\gamma \\phi \\phi$", 
+        "BESIII", 
+        "10.1103/PhysRevD.93.112011", 
+        null, 
+        "1602.01523", 
+        null, 
+        null, 
+        []
+    ], 
+    "1422780": [
+        "Study of $\\psi$ decays to the $\\Xi^{-}\\bar\\Xi^{+}$ and $\\Sigma(1385)^{\\mp}\\bar\\Sigma(1385)^{\\pm}$ final states", 
+        "BESIII", 
+        "10.1103/PhysRevD.93.072003", 
+        null, 
+        "1602.06754", 
+        "ins1422780", 
+        null, 
+        []
+    ], 
+    "1423294": [
+        "Search for the weak decay $\\eta^{\\prime}\\to K^{\\pm}\\pi^{\\mp}$ and precise measurement of the branching fraction ${\\cal B}(J/\\psi\\to\\phi\\eta^{\\prime})$", 
+        "BESIII", 
+        "10.1103/PhysRevD.93.072008", 
+        null, 
+        "1602.07405", 
+        null, 
+        null, 
+        []
+    ], 
+    "1428663": [
+        "Observation of $h_{c}$ radiative decay $h_{c} \\rightarrow \\gamma \\eta'$ and evidence for $h_{c} \\rightarrow \\gamma \\eta$", 
+        "BESIII", 
+        "10.1103/PhysRevLett.116.251802", 
+        null, 
+        "1603.04936", 
+        null, 
+        null, 
+        []
+    ], 
+    "1437949": [
+        "Observation of an anomalous line shape of the $\\eta^{\\prime}\\pi^{+}\\pi^{-}$ mass spectrum near the $p\\bar{p}$ mass threshold in $J/\\psi\\rightarrow\\gamma\\eta^{\\prime}\\pi^{+}\\pi^{-}$", 
+        "BESIII", 
+        "10.1103/PhysRevLett.117.042002", 
+        null, 
+        "1603.09653", 
+        null, 
+        null, 
+        []
+    ], 
+    "1444514": [
+        "Measurement of the leptonic decay width of $J/\\psi$ using initial state radiation", 
+        "BESIII", 
+        "10.1016/j.physletb.2016.08.011", 
+        null, 
+        "1604.01924", 
+        null, 
+        null, 
+        []
+    ], 
+    "1454208": [
+        "Improved measurement of the absolute branching fraction of $D^{+}\\rightarrow \\bar{K}^0 \\mu ^{+}\\nu _{\\mu }$", 
+        "BESIII", 
+        "10.1140/epjc/s10052-016-4198-2", 
+        null, 
+        "1605.00068", 
+        null, 
+        null, 
+        []
+    ], 
+    "1454218": [
+        "Measurement of the absolute branching fraction of $D^{+}\\rightarrow\\bar K^0 e^{+}\\nu_{e}$ via $\\bar K^0\\to\\pi^0\\pi^0$", 
+        "BESIII", 
+        "10.1088/1674-1137/40/11/113001", 
+        null, 
+        "1605.00208", 
+        null, 
+        null, 
+        []
+    ], 
+    "1457597": [
+        "Observation of $e^{+}e^{-} \\to \\eta^{\\prime} J/\\psi$ at center-of-mass energies between 4.189 and 4.600 GeV", 
+        "BESIII", 
+        "10.1103/PhysRevD.94.032009", 
+        null, 
+        "1605.03256", 
+        "ins1457597", 
+        null, 
+        []
+    ], 
+    "1478790": [
+        "Measurement of Singly Cabibbo Suppressed Decays $\\Lambda_c^{+}\\to p\\pi^{+}\\pi^{-}$ and $\\Lambda_c^{+}\\to pK^{+}K^{-}$", 
+        "BESIII", 
+        "10.1103/PhysRevLett.117.232002", 
+        null, 
+        "1608.00407", 
+        null, 
+        null, 
+        []
+    ], 
+    "1482937": [
+        "Measurements of the absolute branching fractions for $D_{s}^{+}\\rightarrow\\eta e^{+}\\nu_{e}$ and $D_{s}^{+}\\rightarrow\\eta^{\\prime} e^{+}\\nu_{e}$", 
+        "BESIII", 
+        "10.1103/PhysRevD.94.112003", 
+        null, 
+        "1608.06484", 
+        null, 
+        null, 
+        []
+    ], 
+    "1483097": [
+        "Measurement of the $D_s^+ \\to \\ell^+\\nu_\\ell$ branching fractions and the decay constant $f_{D_s^+}$", 
+        "BESIII", 
+        "10.1103/PhysRevD.94.072004", 
+        null, 
+        "1608.06732", 
+        null, 
+        null, 
+        []
+    ], 
+    "1484158": [
+        "Observation of $J/\\psi\\to \\gamma\\eta\\pi^{0}$", 
+        "BESIII", 
+        "10.1103/PhysRevD.94.072005", 
+        null, 
+        "1608.07393", 
+        null, 
+        null, 
+        []
+    ]
+}

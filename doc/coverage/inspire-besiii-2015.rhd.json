@@ -1,0 +1,352 @@
+{
+    "1311327": [
+        "Observation of $J/\\psi \\rightarrow p\\bar{p}a_{0}(980)$ at BESIII", 
+        "BESIII", 
+        "10.1103/PhysRevD.90.052009", 
+        null, 
+        "1408.3938", 
+        null, 
+        null, 
+        []
+    ], 
+    "1323621": [
+        "Study of $e^+e^-\\to\\omega\\chi_{cJ}$ at center-of-mass energies from 4.21 to 4.42 GeV", 
+        "BESIII", 
+        "10.1103/PhysRevLett.114.092003", 
+        null, 
+        "1410.6538", 
+        null, 
+        null, 
+        []
+    ], 
+    "1329785": [
+        "Evidence for $e^+e^-\\to\\gamma\\chi_{c1, 2}$ at center-of-mass energies from 4.009 to 4.360 GeV", 
+        "BESIII", 
+        "10.1088/1674-1137/39/4/041001", 
+        null, 
+        "1411.6336", 
+        "ins1329785", 
+        null, 
+        []
+    ], 
+    "1332927": [
+        "Search for the Y(4140) via $e^+e^- \u2192 \u03b3\u03d5J/\u03c8$ at $\\sqrt{s}$=4.23 , 4.26 and 4.36 GeV", 
+        "BESIII", 
+        "10.1103/PhysRevD.91.032002", 
+        null, 
+        "1412.1867", 
+        null, 
+        null, 
+        []
+    ], 
+    "1334358": [
+        "Precision measurement of the $D^{*0}$ decay branching fractions", 
+        "BESIII", 
+        "10.1103/PhysRevD.91.031101", 
+        null, 
+        "1412.4566", 
+        null, 
+        null, 
+        []
+    ], 
+    "1334688": [
+        "Study of $J/\\psi \\to \\eta \\phi \\pi^+ \\pi^-$ at BESIII", 
+        "BESIII", 
+        "10.1103/PhysRevD.91.052017", 
+        null, 
+        "1412.5258", 
+        null, 
+        null, 
+        []
+    ], 
+    "1337473": [
+        "Measurement of $y_{CP}$ in $D^0-\\overline{D}^0$ oscillation using quantum correlations in $e^+e^-\\to D^0\\overline{D}^0$ at $\\sqrt{s}$ = 3.773\\,GeV", 
+        "BESIII", 
+        "10.1016/j.physletb.2015.04.008", 
+        null, 
+        "1501.01378", 
+        null, 
+        null, 
+        []
+    ], 
+    "1343515": [
+        "Searches for isospin-violating transitions $\\chi_{c0,2} \\rightarrow \\pi^{0} \\eta_{c}$", 
+        "BESIII", 
+        "10.1103/PhysRevD.91.112018", 
+        "1987884", 
+        "1502.02641", 
+        null, 
+        null, 
+        []
+    ], 
+    "1351765": [
+        "Precision measurement of the integrated luminosity of the data taken by BESIII at center of mass energies between 3.810 GeV and 4.600 GeV", 
+        "BESIII", 
+        "10.1088/1674-1137/39/9/093001", 
+        null, 
+        "1503.03408", 
+        null, 
+        null, 
+        []
+    ], 
+    "1352828": [
+        "Study of $\\chi_{cJ}$ decaying into $\\phi$ $K^*(892)$ $\\bar{K}$", 
+        "BESIII", 
+        "10.1103/PhysRevD.91.112008", 
+        null, 
+        "1503.04699", 
+        null, 
+        null, 
+        []
+    ], 
+    "1355215": [
+        "Measurement of the $e^{+}e^{-} \\to \\eta J/\\psi$ cross section and search for $e^{+}e^{-} \\to \\pi^{0} J/\\psi$ at center-of-mass energies between 3.810 and 4.600 GeV", 
+        "BESIII", 
+        "10.1103/PhysRevD.91.112005", 
+        null, 
+        "1503.06644", 
+        "ins1355215", 
+        null, 
+        []
+    ], 
+    "1356733": [
+        "Observation of the $\\psi(1^3D_2)$ state in $e^+e^-\\to\\pi^+\\pi^-\\gamma\\chi_{c1}$ at BESIII", 
+        "BESIII", 
+        "10.1103/PhysRevLett.115.011803", 
+        null, 
+        "1503.08203", 
+        null, 
+        null, 
+        []
+    ], 
+    "1358401": [
+        "Measurements of $\\psi(3686) \\to K^{-} \\Lambda \\bar{\\Xi}^{+} +c.c.$ and $\\psi(3686) \\to \\gamma K^{-} \\Lambda \\bar{\\Xi}^{+} +c.c$", 
+        "BESIII", 
+        "10.1103/PhysRevD.91.092006", 
+        null, 
+        "1504.02025", 
+        null, 
+        null, 
+        []
+    ], 
+    "1358937": [
+        "Measurement of the proton form factor by studying $e^{+} e^{-}\\rightarrow p\\bar{p}$", 
+        "BESIII", 
+        "10.1103/PhysRevD.91.112004", 
+        null, 
+        "1504.02680", 
+        "ins1358937", 
+        null, 
+        []
+    ], 
+    "1359292": [
+        "Observation of the electromagnetic doubly OZI-suppressed decay $J/\\psi \\rightarrow \\phi \\pi^{0}$", 
+        "BESIII", 
+        "10.1103/PhysRevD.91.112001", 
+        null, 
+        "1504.03194", 
+        null, 
+        null, 
+        []
+    ], 
+    "1364494": [
+        "Observation of the Dalitz Decay $\\eta' \\to \\gamma e^+e^-$", 
+        "BESIII", 
+        "10.1103/PhysRevD.92.012001", 
+        null, 
+        "1504.06016", 
+        "ins1364494", 
+        null, 
+        []
+    ], 
+    "1365090": [
+        "Measurement of $\\mathcal B(\\psi(3770)\\to\\gamma \\chi_{c1})$ and search for $\\psi(3770)\\to\\gamma \\chi_{c2}$", 
+        "BESIII", 
+        "10.1103/PhysRevD.91.092009", 
+        null, 
+        "1504.07450", 
+        null, 
+        null, 
+        []
+    ], 
+    "1366025": [
+        "Search for the isospin violating decay Y(4260)\u2192J/\u03c8\u03b7\u03c0$^0$", 
+        "BESIII", 
+        "10.1103/PhysRevD.92.012008", 
+        null, 
+        "1505.00539", 
+        "ins1366025", 
+        null, 
+        []
+    ], 
+    "1369100": [
+        "An improved limit for \u0393$_{ee}$ of X(3872) and \u0393$_{ee}$ measurement of \u03c8(3686)", 
+        "BESIII", 
+        "10.1016/j.physletb.2015.08.013", 
+        null, 
+        "1505.02559", 
+        null, 
+        null, 
+        []
+    ], 
+    "1369343": [
+        "Search for $D^0\\to\\gamma\\gamma$ and improved measurement of the branching fraction for $D^0 \\to \\pi^0\\pi^0$", 
+        "BESIII", 
+        "10.1103/PhysRevD.91.112015", 
+        null, 
+        "1505.03087", 
+        null, 
+        null, 
+        []
+    ], 
+    "1372726": [
+        "Observation of the isospin-violating decay J/\u03c8\u2192\u03d5\u03c0$^0$f$_0$(980)", 
+        "BESIII", 
+        "10.1103/PhysRevD.92.012007", 
+        null, 
+        "1505.06283", 
+        null, 
+        null, 
+        []
+    ], 
+    "1373915": [
+        "Amplitude analysis of the \u03c0$^0$\u03c0$^0$ system produced in radiative J/\u03c8 decays", 
+        "BESIII", 
+        "10.1103/PhysRevD.92.052003", 
+        null, 
+        "1506.00546", 
+        null, 
+        null, 
+        []
+    ], 
+    "1376282": [
+        "Observation and Spin-Parity Determination of the X(1835) in J/\u03c8 \u2192 \u03b3$K_S^0K_S^0\u03b7$", 
+        "BESIII", 
+        "10.1103/PhysRevLett.115.091803", 
+        null, 
+        "1506.04807", 
+        null, 
+        null, 
+        []
+    ], 
+    "1376484": [
+        "Measurement of the Matrix Elements for the Decays $\\eta \\rightarrow \\pi^{+}\\pi^{-}\\pi^0$ and $\\eta/\\eta^{\\prime}\\rightarrow\\pi^0\\pi^0\\pi^0$", 
+        "BESIII", 
+        "10.1103/PhysRevD.92.012014", 
+        null, 
+        "1506.05360", 
+        null, 
+        null, 
+        []
+    ], 
+    "1377204": [
+        "Observation of $Z_c(3900)^{0}$ in $e^+e^-\\to\\pi^0\\pi^0 J/\\psi$", 
+        "BESIII", 
+        "10.1103/PhysRevLett.115.112003", 
+        null, 
+        "1506.06018", 
+        "ins1377204", 
+        null, 
+        []
+    ], 
+    "1380447": [
+        "Measurement of the branching fractions of $D_{s}^{+}\\rightarrow \\eta'X$ and $D_{s}^{+}\\rightarrow \\eta'\\rho^{+}$ in $e^+e^-\\to D^+_{s}D^-_{s}$", 
+        "BESIII", 
+        "10.1016/j.physletb.2015.09.059", 
+        null, 
+        "1506.08952", 
+        null, 
+        null, 
+        []
+    ], 
+    "1381936": [
+        "Search for $Z_c(3900)^\\pm\\to\\omega\\pi^\\pm$", 
+        "BESIII", 
+        "10.1103/PhysRevD.92.032009", 
+        null, 
+        "1507.02068", 
+        null, 
+        null, 
+        []
+    ], 
+    "1382146": [
+        "Observation of a neutral charmoniumlike state $Z_c(4025)^0$ in $e^{+} e^{-} \\to (D^{*} \\bar{D}^{*})^{0} \\pi^0$", 
+        "BESIII", 
+        "10.1103/PhysRevLett.115.182002", 
+        null, 
+        "1507.02404", 
+        null, 
+        null, 
+        []
+    ], 
+    "1384776": [
+        "Observation of $\\eta^{\\prime}\\to\\omega e^{+} e^{-}$", 
+        "BESIII", 
+        "10.1103/PhysRevD.92.051101", 
+        null, 
+        "1507.06734", 
+        null, 
+        null, 
+        []
+    ], 
+    "1386254": [
+        "Measurement of the form factors in the decay $D^+ \\to \\omega e^+ \\nu_{e}$ and search for the decay $D^+ \\to \\phi e^+ \\nu_{e}$", 
+        "BESIII", 
+        "10.1103/PhysRevD.92.071101", 
+        null, 
+        "1508.00151", 
+        null, 
+        null, 
+        []
+    ], 
+    "1391138": [
+        "Study of Dynamics of $D^0 \\to K^- e^+ \\nu_{e}$ and $D^0\\to\\pi^- e^+ \\nu_{e}$ Decays", 
+        "BESIII", 
+        "10.1103/PhysRevD.92.072012", 
+        null, 
+        "1508.07560", 
+        "ins1391138", 
+        null, 
+        []
+    ], 
+    "1391798": [
+        "Confirmation of a charged charmoniumlike state $Z_c(3885)^{\\mp}$ in $e^+e^-\\to\\pi^{\\pm}(D\\bar{D}^*)^\\mp$ with double $D$ tag", 
+        "BESIII", 
+        "10.1103/PhysRevD.92.092006", 
+        null, 
+        "1509.01398", 
+        null, 
+        null, 
+        []
+    ], 
+    "1393996": [
+        "Observation of a Neutral Structure near the $D\\bar{D}^{*}$ Mass Threshold in $e^{+}e^{-}\\to (D \\bar{D}^*)^0\\pi^0$ at $\\sqrt{s}$ = 4.226 and 4.257 GeV", 
+        "BESIII", 
+        "10.1103/PhysRevLett.115.222002", 
+        null, 
+        "1509.05620", 
+        null, 
+        null, 
+        []
+    ], 
+    "1395615": [
+        "Study of decay dynamics and $CP$ asymmetry in $D^+ \\to K^0_L e^+ \\nu_e$ decay", 
+        "BESIII", 
+        "10.1103/PhysRevD.92.112008", 
+        null, 
+        "1510.00308", 
+        null, 
+        null, 
+        []
+    ], 
+    "1396998": [
+        "Measurement of the absolute branching fraction for $\\Lambda^+_{c}\\to \\Lambda e^+\\nu_e$", 
+        "BESIII", 
+        "10.1103/PhysRevLett.115.221805", 
+        null, 
+        "1510.02610", 
+        null, 
+        null, 
+        []
+    ]
+}

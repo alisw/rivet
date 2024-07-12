@@ -1,0 +1,144 @@
+{
+    "944146": [
+        "Measurements of the mass and width of the $\\eta_c$ using $\\psi' -> \\gamma \\eta_c$", 
+        "BESIII", 
+        "10.1103/PhysRevLett.108.222002", 
+        null, 
+        "1111.0398", 
+        null, 
+        null, 
+        []
+    ], 
+    "945306": [
+        "Search for a light Higgs-like boson $A^0$ in $J/\\psi$ radiative decays", 
+        "BESIII", 
+        "10.1103/PhysRevD.85.092012", 
+        null, 
+        "1111.2112", 
+        null, 
+        null, 
+        []
+    ], 
+    "1079921": [
+        "Spin-Parity Analysis of $p\\bar{p}$ Mass Threshold Structure in $J/\\psi$ and $\\psi^\\prime$ Radiative Decays", 
+        "BESIII", 
+        "10.1103/PhysRevLett.108.112003", 
+        null, 
+        "1112.0942", 
+        null, 
+        null, 
+        []
+    ], 
+    "1084539": [
+        "First observation of $\\eta(1405)$ decays into $f_{0}(980)\\pi^0$", 
+        "BESIII", 
+        "10.1103/PhysRevLett.108.182001", 
+        null, 
+        "1201.2737", 
+        null, 
+        null, 
+        []
+    ], 
+    "1088606": [
+        "Precision measurement of the branching fractions of J/$\\psi -> \\pi^+\\pi^-\\pi^0$ and $\\psi' -> \\pi^+\\pi^-\\pi^0$", 
+        "BESIII", 
+        "10.1016/j.physletb.2012.03.036", 
+        null, 
+        "1202.2048", 
+        null, 
+        null, 
+        []
+    ], 
+    "1097066": [
+        "Evidence for the Direct Two-Photon Transition from $\\psi(3686)$ to $J/\\psi$", 
+        "BESIII", 
+        "10.1103/PhysRevLett.109.172002", 
+        null, 
+        "1204.0246", 
+        null, 
+        null, 
+        []
+    ], 
+    "1113599": [
+        "Study of $J/\\psi\\to p\\bar{p}$ and $J/\\psi\\to n\\bar{n}$", 
+        "BESIII", 
+        "10.1103/PhysRevD.86.032014", 
+        null, 
+        "1205.1036", 
+        null, 
+        null, 
+        []
+    ], 
+    "1115469": [
+        "Two-photon widths of the $\\chi_{c0, 2}$ states and helicity analysis for $\\chi_{c2}\\ar\\gamma\\gamma$}", 
+        "BESIII", 
+        "10.1103/PhysRevD.85.112008", 
+        null, 
+        "1205.4284", 
+        null, 
+        null, 
+        []
+    ], 
+    "1121378": [
+        "First observation of the isospin violating decay $J/\\psi\\rightarrow \\Lambda\\bar{\\Sigma}^{0}+c.c.$", 
+        "BESIII", 
+        "10.1103/PhysRevD.86.032008", 
+        null, 
+        "1207.1201", 
+        null, 
+        null, 
+        []
+    ], 
+    "1122175": [
+        "Determination of the number of $J/\\psi$ events with $J/\\psi \\rightarrow \\, inclusive$ decays", 
+        "BESIII", 
+        "10.1088/1674-1137/36/10/001", 
+        null, 
+        "1207.2865", 
+        null, 
+        null, 
+        [
+            "2012-0173"
+        ]
+    ], 
+    "1123658": [
+        "Observation of $\\chi_{cJ}$ Decays to $\\Lambda \\bar{\\Lambda}\\pi^{+}\\pi^{-}$", 
+        "BESIII", 
+        "10.1103/PhysRevD.86.052004", 
+        null, 
+        "1207.5646", 
+        null, 
+        null, 
+        []
+    ], 
+    "1126960": [
+        "Observation of $e^{+}e^{-} \\to \\eta J/\\psi$ at center-of-mass energy $sqrt{s}=4.009$ GeV", 
+        "BESIII", 
+        "10.1103/PhysRevD.86.071101", 
+        null, 
+        "1208.1857", 
+        null, 
+        null, 
+        []
+    ], 
+    "1128258": [
+        "Measurement of $\\chi_{cJ}$ decaying into $p\\bar{n}\\pi^{-}$ and $p\\bar{n}\\pi^{-}\\pi^{0}$", 
+        "BESIII", 
+        "10.1103/PhysRevD.86.052011", 
+        null, 
+        "1208.3721", 
+        null, 
+        null, 
+        []
+    ], 
+    "1187787": [
+        "Study of $\\psi(3686)\\to\\pi^0 h_c, h_c\\to\\gamma\\eta_c$ via $\\eta_c$ exclusive decays", 
+        "BESIII", 
+        "10.1103/PhysRevD.86.092009", 
+        null, 
+        "1209.4963", 
+        null, 
+        null, 
+        []
+    ]
+}

@@ -1,0 +1,102 @@
+{
+    "590820": [
+        "Centrality dependence of the high p(T) charged hadron suppression in Au+Au collisions at s(NN)**(1/2) = 130-GeV", 
+        "PHENIX", 
+        "10.1016/S0370-2693(03)00423-4", 
+        null, 
+        "nucl-ex/0207009", 
+        null, 
+        null, 
+        []
+    ], 
+    "617784": [
+        "Mid-rapidity neutral pion production in proton proton collisions at $\\sqrt{s}$ = 200-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.91.241803", 
+        null, 
+        "hep-ex/0304038", 
+        "ins617784", 
+        null, 
+        []
+    ], 
+    "617814": [
+        "Suppressed $\\pi^0$ production at large transverse momentum in central Au+ Au collisions at $\\sqrt{S_{NN}}$ = 200 GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.91.072301", 
+        null, 
+        "nucl-ex/0304022", 
+        null, 
+        null, 
+        []
+    ], 
+    "619061": [
+        "Elliptic flow of identified hadrons in Au+Au collisions at s(NN)**(1/2) = 200-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.91.182301", 
+        null, 
+        "nucl-ex/0305013", 
+        null, 
+        null, 
+        []
+    ], 
+    "619987": [
+        "Scaling properties of proton and anti-proton production in s(NN)**(1/2) 200-GeV Au+Au collisions", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.91.172301", 
+        null, 
+        "nucl-ex/0305036", 
+        null, 
+        null, 
+        []
+    ], 
+    "621391": [
+        "Absence of suppression in particle production at large transverse momentum in S(NN)**(1/2) = 200-GeV d + Au collisions", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.91.072303", 
+        null, 
+        "nucl-ex/0306021", 
+        null, 
+        null, 
+        []
+    ], 
+    "627886": [
+        "PHENIX detector overview", 
+        "PHENIX", 
+        "10.1016/S0168-9002(02)01950-2", 
+        null, 
+        null, 
+        null, 
+        null, 
+        []
+    ], 
+    "627888": [
+        "PHENIX central arm tracking detectors", 
+        "PHENIX", 
+        "10.1016/S0168-9002(02)01952-6", 
+        null, 
+        null, 
+        null, 
+        null, 
+        []
+    ], 
+    "627891": [
+        "PHENIX muon arms", 
+        "PHENIX", 
+        "10.1016/S0168-9002(02)01955-1", 
+        null, 
+        null, 
+        null, 
+        null, 
+        []
+    ], 
+    "627893": [
+        "PHENIX on-line systems", 
+        "PHENIX", 
+        "10.1016/S0168-9002(02)01957-5", 
+        null, 
+        null, 
+        null, 
+        null, 
+        []
+    ]
+}

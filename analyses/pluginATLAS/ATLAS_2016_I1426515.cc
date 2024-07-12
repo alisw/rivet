@@ -16,7 +16,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2016_I1426515);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2016_I1426515);
 
 
     /// Book histograms and initialise projections before the run
@@ -52,44 +52,44 @@ namespace Rivet {
       // Get MET from generic invisibles
       VetoedFinalState ivfs(fs);
       ivfs.addVetoOnThisFinalState(VisibleFinalState(fs));
-      addProjection(ivfs, "InvisibleFS");
+      declare(ivfs, "InvisibleFS");
 
       // Project jets
-      FastJets jets(fs, FastJets::ANTIKT, 0.4, JetAlg::NO_MUONS, JetAlg::NO_INVISIBLES);
-      addProjection(jets, "jets");
+      FastJets jets(fs, FastJets::ANTIKT, 0.4, JetAlg::Muons::NONE, JetAlg::Invisibles::NONE);
+      declare(jets, "jets");
 
 
       // Integrated cross sections
       // d01 ee/mm fiducial integrated cross sections
-      _hist_mm_fid_intxsec = bookHisto1D(1, 1, 1);
-      _hist_ee_fid_intxsec = bookHisto1D(1, 1, 2);
+      book(_hist_mm_fid_intxsec, 1, 1, 1);
+      book(_hist_ee_fid_intxsec, 1, 1, 2);
 
       // d02 emme fiducial integrated cross sections
-      _hist_emme_fid_intxsec = bookHisto1D(2, 1, 1);
+      book(_hist_emme_fid_intxsec, 2, 1, 1);
 
       // d10  emme fiducial differential cross section (leading lepton ptlead + ptlead normalized)
-      _hist_emme_fid_ptlead = bookHisto1D(10, 1, 1);
-      _hist_emme_fid_ptleadnorm = bookHisto1D(10, 1, 2);
+      book(_hist_emme_fid_ptlead, 10, 1, 1);
+      book(_hist_emme_fid_ptleadnorm, 10, 1, 2);
 
       // d11  emme fiducial differential cross section (dilepton-system ptll + ptll normalized)
-      _hist_emme_fid_ptll = bookHisto1D(11, 1, 1);
-      _hist_emme_fid_ptllnorm = bookHisto1D(11, 1, 2);
+      book(_hist_emme_fid_ptll, 11, 1, 1);
+      book(_hist_emme_fid_ptllnorm, 11, 1, 2);
 
       // d12  emme fiducial differential cross section (dilepton-system mll + mll normalized)
-      _hist_emme_fid_mll = bookHisto1D(12, 1, 1);
-      _hist_emme_fid_mllnorm = bookHisto1D(12, 1, 2);
+      book(_hist_emme_fid_mll, 12, 1, 1);
+      book(_hist_emme_fid_mllnorm, 12, 1, 2);
 
       // d13  emme fiducial differential cross section (dilepton-system delta_phi_ll + dphill normalized)
-      _hist_emme_fid_dphill = bookHisto1D(13, 1, 1);
-      _hist_emme_fid_dphillnorm = bookHisto1D(13, 1, 2);
+      book(_hist_emme_fid_dphill, 13, 1, 1);
+      book(_hist_emme_fid_dphillnorm, 13, 1, 2);
 
       // d14  emme fiducial differential cross section (absolute rapidity of dilepton-system y_ll + y_ll normalized)
-      _hist_emme_fid_yll = bookHisto1D(14, 1, 1);
-      _hist_emme_fid_yllnorm = bookHisto1D(14, 1, 2);
+      book(_hist_emme_fid_yll, 14, 1, 1);
+      book(_hist_emme_fid_yllnorm, 14, 1, 2);
 
       // d15  emme fiducial differential cross section (absolute costheta* of dilepton-system costhetastar_ll + costhetastar_ll normalized)
-      _hist_emme_fid_costhetastarll = bookHisto1D(15, 1, 1);
-      _hist_emme_fid_costhetastarllnorm = bookHisto1D(15, 1, 2);
+      book(_hist_emme_fid_costhetastarll, 15, 1, 1);
+      book(_hist_emme_fid_costhetastarllnorm, 15, 1, 2);
 
     }
 
@@ -188,33 +188,32 @@ namespace Rivet {
       if (!jets_selected.empty()) vetoEvent;
 
       // Fill histograms
-      const double weight = event.weight();
       if (channel == 1) {
-        _hist_mm_fid_intxsec->fill(1.0, weight);
+        _hist_mm_fid_intxsec->fill(1.0);
 
       } else if (channel == 2) {
-        _hist_ee_fid_intxsec->fill(1.0, weight);
+        _hist_ee_fid_intxsec->fill(1.0);
 
       } else if (channel == 3 || channel == 4) {
-        _hist_emme_fid_intxsec->fill(1.0, weight);
+        _hist_emme_fid_intxsec->fill(1.0);
 
-        _hist_emme_fid_ptlead->fill(lep1->pT()/GeV, weight);
-        _hist_emme_fid_ptleadnorm->fill(lep1->pT()/GeV, weight);
+        _hist_emme_fid_ptlead->fill(lep1->pT()/GeV);
+        _hist_emme_fid_ptleadnorm->fill(lep1->pT()/GeV);
 
-        _hist_emme_fid_ptll->fill(ptll, weight);
-        _hist_emme_fid_ptllnorm->fill(ptll, weight);
+        _hist_emme_fid_ptll->fill(ptll);
+        _hist_emme_fid_ptllnorm->fill(ptll);
 
-        _hist_emme_fid_mll->fill(Mll, weight);
-        _hist_emme_fid_mllnorm->fill(Mll, weight);
+        _hist_emme_fid_mll->fill(Mll);
+        _hist_emme_fid_mllnorm->fill(Mll);
 
-        _hist_emme_fid_dphill->fill(DPhill, weight);
-        _hist_emme_fid_dphillnorm->fill(DPhill, weight);
+        _hist_emme_fid_dphill->fill(DPhill);
+        _hist_emme_fid_dphillnorm->fill(DPhill);
 
-        _hist_emme_fid_yll->fill(Yll, weight);
-        _hist_emme_fid_yllnorm->fill(Yll, weight);
+        _hist_emme_fid_yll->fill(Yll);
+        _hist_emme_fid_yllnorm->fill(Yll);
 
-        _hist_emme_fid_costhetastarll->fill(costhetastar, weight);
-        _hist_emme_fid_costhetastarllnorm->fill(costhetastar, weight);
+        _hist_emme_fid_costhetastarll->fill(costhetastar);
+        _hist_emme_fid_costhetastarllnorm->fill(costhetastar);
       }
     }
 
@@ -222,11 +221,14 @@ namespace Rivet {
     /// Normalise histograms etc., after the run
     void finalize() {
       const double sf(crossSection()/femtobarn/sumOfWeights());
-      scale({_hist_mm_fid_intxsec, _hist_ee_fid_intxsec, _hist_emme_fid_intxsec}, sf);
-      scale({_hist_emme_fid_ptlead, _hist_emme_fid_ptll, _hist_emme_fid_mll,
-            _hist_emme_fid_dphill, _hist_emme_fid_yll, _hist_emme_fid_costhetastarll}, sf);
-      normalize({_hist_emme_fid_ptleadnorm, _hist_emme_fid_ptllnorm, _hist_emme_fid_mllnorm,
-            _hist_emme_fid_dphillnorm, _hist_emme_fid_yllnorm, _hist_emme_fid_costhetastarllnorm});
+      scale(_hist_mm_fid_intxsec, sf); scale(_hist_ee_fid_intxsec, sf);
+      scale(_hist_emme_fid_intxsec, sf); scale(_hist_emme_fid_ptlead, sf);
+      scale(_hist_emme_fid_ptll, sf); scale(_hist_emme_fid_mll, sf);
+      scale(_hist_emme_fid_dphill, sf); scale(_hist_emme_fid_yll, sf);
+      scale(_hist_emme_fid_costhetastarll, sf);
+      normalize(_hist_emme_fid_ptleadnorm); normalize(_hist_emme_fid_ptllnorm);
+      normalize(_hist_emme_fid_mllnorm); normalize(_hist_emme_fid_dphillnorm);
+      normalize(_hist_emme_fid_yllnorm); normalize(_hist_emme_fid_costhetastarllnorm);
     }
 
 
@@ -264,6 +266,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2016_I1426515);
+  RIVET_DECLARE_PLUGIN(ATLAS_2016_I1426515);
 
 }

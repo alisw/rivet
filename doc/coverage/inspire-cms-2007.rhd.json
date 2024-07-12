@@ -1,0 +1,27 @@
+{
+    "754149": [
+        "CMS physics technical design report: Addendum on high density QCD with heavy ions", 
+        "CMS", 
+        "10.1088/0954-3899/34/11/008", 
+        "1019832", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-LHCC-2007-009"
+        ]
+    ], 
+    "765060": [
+        "CMS technical design report, volume II: Physics performance", 
+        "CMS", 
+        "10.1088/0954-3899/34/6/S01", 
+        "942733", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-LHCC-2006-021", 
+            "CMS-TDR-008-2"
+        ]
+    ]
+}

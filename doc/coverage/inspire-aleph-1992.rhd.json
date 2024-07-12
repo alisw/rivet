@@ -1,0 +1,256 @@
+{
+    "317141": [
+        "Improved measurements of electroweak parameters from $Z$ decays into fermion pairs", 
+        "ALEPH", 
+        "10.1007/BF01483868", 
+        "222160", 
+        null, 
+        "ins317141", 
+        null, 
+        [
+            "CERN-PPE-91-105"
+        ]
+    ], 
+    "318145": [
+        "An Investigation into intermittency", 
+        "ALEPH", 
+        "10.1007/BF01483869", 
+        "223855", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-91-121"
+        ]
+    ], 
+    "319519": [
+        "Searches for new particles in $Z$ decays using the ALEPH detector", 
+        "ALEPH", 
+        "10.1016/0370-1573(92)90177-2", 
+        "225868", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-91-149"
+        ]
+    ], 
+    "319668": [
+        "Measurement of the absolute luminosity with the ALEPH detector", 
+        "ALEPH", 
+        "10.1007/BF01625896", 
+        "224392", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-91-129"
+        ]
+    ], 
+    "321380": [
+        "A Study of Bose-Einstein correlations in e+ e- annihilation at 91-GeV", 
+        "ALEPH", 
+        "10.1007/BF01881709", 
+        "226991", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-91-183"
+        ]
+    ], 
+    "322198": [
+        "Measurement of tau branching ratios", 
+        "ALEPH", 
+        "10.1007/BF01566649", 
+        "227333", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-91-186"
+        ]
+    ], 
+    "322483": [
+        "Electroweak parameters of the $Z^0$ resonance and the Standard Model: the LEP Collaborations", 
+        "LEP", 
+        "10.1016/0370-2693(92)90572-L", 
+        "229120", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-91-232"
+        ]
+    ], 
+    "322548": [
+        "Evidence for b baryons in Z decays", 
+        "ALEPH", 
+        "10.1016/0370-2693(92)90736-N", 
+        "229037", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-91-229"
+        ]
+    ], 
+    "332616": [
+        "Measurement of the tau lepton lifetime", 
+        "ALEPH", 
+        "10.1016/0370-2693(92)90413-X", 
+        "231632", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-92-003"
+        ]
+    ], 
+    "333127": [
+        "Evidence for the triple gluon vertex from measurements of the QCD color factors in Z decay into four jets", 
+        "ALEPH", 
+        "10.1016/0370-2693(92)91941-2", 
+        "233709", 
+        null, 
+        "ins333127", 
+        null, 
+        [
+            "CERN-PPE-92-31"
+        ]
+    ], 
+    "333334": [
+        "Measurement of alpha-s in hadronic Z decays using all orders resummed predictions", 
+        "ALEPH", 
+        "10.1016/0370-2693(92)91942-3", 
+        "235193", 
+        null, 
+        "ins333334", 
+        null, 
+        [
+            "CERN-PPE-92-033"
+        ]
+    ], 
+    "334322": [
+        "Search for a very light CP odd neutral Higgs boson of the MSSM", 
+        "ALEPH", 
+        "10.1016/0370-2693(92)91469-P", 
+        "236523", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-92-059"
+        ]
+    ], 
+    "334323": [
+        "Measurement of B - anti-B mixing at the Z using a jet charge method", 
+        "ALEPH", 
+        "10.1016/0370-2693(92)91943-4", 
+        "235772", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-92-048"
+        ]
+    ], 
+    "334575": [
+        "Measurement of the production rates of eta and eta-prime in hadronic Z decays", 
+        "ALEPH", 
+        "10.1016/0370-2693(92)90633-F", 
+        "236947", 
+        null, 
+        "ins334575", 
+        null, 
+        [
+            "CERN-PPE-92-074"
+        ]
+    ], 
+    "334577": [
+        "Properties of hadronic Z decays and test of QCD generators", 
+        "ALEPH", 
+        "10.1007/BF01482583", 
+        "236710", 
+        null, 
+        "ins334577", 
+        null, 
+        [
+            "CERN-PPE-92-062"
+        ]
+    ], 
+    "336183": [
+        "Observation of the semileptonic decays of B(s) and LAMBDA(b) hadrons at LEP", 
+        "ALEPH", 
+        "10.1016/0370-2693(92)91654-R", 
+        "236967", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-92-073", 
+            "CERN-PPE-92-73"
+        ]
+    ], 
+    "338067": [
+        "Updated measurement of the average B hadron lifetime", 
+        "ALEPH", 
+        "10.1016/0370-2693(92)90108-G", 
+        "240072", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-92-133"
+        ]
+    ], 
+    "339967": [
+        "A Measurement of the b baryon lifetime", 
+        "ALEPH", 
+        "10.1016/0370-2693(92)91284-G", 
+        "240245", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-92-138"
+        ]
+    ], 
+    "340583": [
+        "Measurements of mean lifetime and branching fractions of b hadrons decaying to J / psi", 
+        "ALEPH", 
+        "10.1016/0370-2693(92)91581-S", 
+        "240996", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-92-142", 
+            "FSU-SCRI-93-71"
+        ]
+    ], 
+    "341557": [
+        "Search for CP violation in Z ---> tau tau", 
+        "ALEPH", 
+        "10.1016/0370-2693(92)91285-H", 
+        "242024", 
+        null, 
+        "ins341557", 
+        null, 
+        [
+            "CERN-PPE-92-161"
+        ]
+    ], 
+    "341725": [
+        "A Precise measurement of the tau lepton lifetime", 
+        "ALEPH", 
+        "10.1016/0370-2693(92)91283-F", 
+        "243310", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-92-186"
+        ]
+    ]
+}

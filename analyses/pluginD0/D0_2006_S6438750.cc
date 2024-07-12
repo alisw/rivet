@@ -8,25 +8,17 @@ namespace Rivet {
 
 
   /// @brief D0 inclusive isolated photon cross-section vs. \f$ p_\perp(gamma) \f$.
+  ///
   /// @author Andy Buckley
   /// @author Gavin Hesketh
   class D0_2006_S6438750 : public Analysis {
-
   public:
 
-    /// @name Constructors etc.
-    //@{
-
-    /// Default constructor.
-    D0_2006_S6438750()
-      : Analysis("D0_2006_S6438750")
-    {    }
-
-    //@}
+    RIVET_DEFAULT_ANALYSIS_CTOR(D0_2006_S6438750);
 
 
     /// @name Analysis methods
-    //@{
+    /// @{
 
     void init() {
       // General FS for photon isolation
@@ -34,12 +26,12 @@ namespace Rivet {
       declare(fs, "AllFS");
 
       // Get leading photon
-      LeadingParticlesFinalState photonfs(FinalState(-0.9, 0.9, 23.0*GeV));
+      LeadingParticlesFinalState photonfs(FinalState((Cuts::etaIn(-0.9, 0.9) && Cuts::pT >=  23.0*GeV)));
       photonfs.addParticleId(PID::PHOTON);
       declare(photonfs, "LeadingPhoton");
 
       // Book histograms
-      _h_pTgamma = bookHisto1D(1, 1, 1);
+      book(_h_pTgamma ,1, 1, 1);
     }
 
 
@@ -58,7 +50,7 @@ namespace Rivet {
       double eta_P = photon.eta();
       double phi_P = photon.phi();
       double econe = 0.0;
-      foreach (const Particle& p, apply<FinalState>(event, "AllFS").particles()) {
+      for (const Particle& p : apply<FinalState>(event, "AllFS").particles()) {
         if (deltaR(eta_P, phi_P,
                    p.eta(), p.phi()) < 0.4) {
           econe += p.E();
@@ -69,10 +61,8 @@ namespace Rivet {
       }
 
       // Fill histo
-      const double weight = event.weight();
-      _h_pTgamma->fill(photon.pT(), weight);
+      _h_pTgamma->fill(photon.pT());
     }
-
 
 
     // Finalize
@@ -82,21 +72,20 @@ namespace Rivet {
       scale(_h_pTgamma, 1/lumi_gen * 1/1.8);
     }
 
-    //@}
+    /// @}
 
 
   private:
 
     /// @name Histograms
-    //@{
+    /// @{
     Histo1DPtr _h_pTgamma;
-    //@}
+    /// @}
 
   };
 
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(D0_2006_S6438750);
+  RIVET_DECLARE_ALIASED_PLUGIN(D0_2006_S6438750, D0_2006_I698784);
 
 }

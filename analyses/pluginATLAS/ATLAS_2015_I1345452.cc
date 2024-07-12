@@ -19,7 +19,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2015_I1345452);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2015_I1345452);
 
 
     void init() {
@@ -81,27 +81,27 @@ namespace Rivet {
       declare(jets, "jets");
 
       //pseudotop leptons and hadrons
-      _h["ptpseudotophadron_mu"]     = bookHisto1D( 1, 1, 2);
-      _h["ptpseudotophadron_el"]     = bookHisto1D( 2, 1, 2);
-      _h["absrappseudotophadron_mu"] = bookHisto1D( 3, 1, 2);
-      _h["absrappseudotophadron_el"] = bookHisto1D( 4, 1, 2);
-      _h["ptpseudotoplepton_mu"]     = bookHisto1D( 5, 1, 2);
-      _h["ptpseudotoplepton_el"]     = bookHisto1D( 6, 1, 2);
-      _h["absrappseudotoplepton_mu"] = bookHisto1D( 7, 1, 2);
-      _h["absrappseudotoplepton_el"] = bookHisto1D( 8, 1, 2);
-      _h["ptttbar_mu"]               = bookHisto1D( 9, 1, 2);
-      _h["ptttbar_el"]               = bookHisto1D(10, 1, 2);
-      _h["absrapttbar_mu"]           = bookHisto1D(11, 1, 2);
-      _h["absrapttbar_el"]           = bookHisto1D(12, 1, 2);
-      _h["ttbarmass_mu"]             = bookHisto1D(13, 1, 2);
-      _h["ttbarmass_el"]             = bookHisto1D(14, 1, 2);
-      _h["ptpseudotophadron"]        = bookHisto1D(15, 1, 2);
-      _h["absrappseudotophadron"]    = bookHisto1D(16, 1, 2);
-      _h["ptpseudotoplepton"]        = bookHisto1D(17, 1, 2);
-      _h["absrappseudotoplepton"]    = bookHisto1D(18, 1, 2);
-      _h["ptttbar"]                  = bookHisto1D(19, 1, 2);
-      _h["absrapttbar"]              = bookHisto1D(20, 1, 2);
-      _h["ttbarmass"]                = bookHisto1D(21, 1, 2);
+      book(_h["ptpseudotophadron_mu"]     , 1, 1, 2);
+      book(_h["ptpseudotophadron_el"]     , 2, 1, 2);
+      book(_h["absrappseudotophadron_mu"] , 3, 1, 2);
+      book(_h["absrappseudotophadron_el"] , 4, 1, 2);
+      book(_h["ptpseudotoplepton_mu"]     , 5, 1, 2);
+      book(_h["ptpseudotoplepton_el"]     , 6, 1, 2);
+      book(_h["absrappseudotoplepton_mu"] , 7, 1, 2);
+      book(_h["absrappseudotoplepton_el"] , 8, 1, 2);
+      book(_h["ptttbar_mu"]               , 9, 1, 2);
+      book(_h["ptttbar_el"]               ,10, 1, 2);
+      book(_h["absrapttbar_mu"]           ,11, 1, 2);
+      book(_h["absrapttbar_el"]           ,12, 1, 2);
+      book(_h["ttbarmass_mu"]             ,13, 1, 2);
+      book(_h["ttbarmass_el"]             ,14, 1, 2);
+      book(_h["ptpseudotophadron"]        ,15, 1, 2);
+      book(_h["absrappseudotophadron"]    ,16, 1, 2);
+      book(_h["ptpseudotoplepton"]        ,17, 1, 2);
+      book(_h["absrappseudotoplepton"]    ,18, 1, 2);
+      book(_h["ptttbar"]                  ,19, 1, 2);
+      book(_h["absrapttbar"]              ,20, 1, 2);
+      book(_h["ttbarmass"]                ,21, 1, 2);
 
     }
 
@@ -117,7 +117,7 @@ namespace Rivet {
 
       //get true l+jets events by removing events with more than 1 electron||muon neutrino
       unsigned int n_elmu_neutrinos = 0;
-      foreach (const Particle p, _neutrinos) {
+      for (const Particle & p : _neutrinos) {
         if (p.abspid() == 12 || p.abspid() == 14)  ++n_elmu_neutrinos;
       }
       if (n_elmu_neutrinos != 1)  vetoEvent;
@@ -130,13 +130,13 @@ namespace Rivet {
       // Calculate the missing ET, using the prompt neutrinos only (really?)
       /// @todo Why not use MissingMomentum?
       FourMomentum met;
-      foreach (const Particle& p, _neutrinos)  met += p.momentum();
+      for (const Particle& p : _neutrinos)  met += p.momentum();
 
       //remove jets if they are within dR < 0.2 of lepton
       Jets jets;
-      foreach(const Jet& jet, all_jets) {
+      for(const Jet& jet : all_jets) {
         bool keep = true;
-        foreach (const DressedLepton& el, _vetodressedelectrons) {
+        for (const DressedLepton& el : _vetodressedelectrons) {
           keep &= deltaR(jet, el) >= 0.2;
         }
         if (keep)  jets += jet;
@@ -146,15 +146,15 @@ namespace Rivet {
       Jets bjets, lightjets;
       for (unsigned int i = 0; i < jets.size(); ++i) {
         const Jet& jet = jets[i];
-        foreach (const DressedLepton& el, _dressedelectrons)  overlap |= deltaR(jet, el) < 0.4;
-        foreach (const DressedLepton& mu, _dressedmuons)      overlap |= deltaR(jet, mu) < 0.4;
+        for (const DressedLepton& el : _dressedelectrons)  overlap |= deltaR(jet, el) < 0.4;
+        for (const DressedLepton& mu : _dressedmuons)      overlap |= deltaR(jet, mu) < 0.4;
         for (unsigned int j = i + 1; j < jets.size(); ++j) {
           overlap |= deltaR(jet, jets[j]) < 0.5;
         }
         //// Count the number of b-tags
         bool b_tagged = false;           //  This is closer to the
         Particles bTags = jet.bTags();   //  analysis. Something
-        foreach ( Particle b, bTags ) {  //  about ghost-associated
+        for ( Particle b : bTags ) {  //  about ghost-associated
           b_tagged |= b.pT() > 5*GeV;    //  B-hadrons
         }                                //
         if ( b_tagged )  bjets += jet;
@@ -208,34 +208,32 @@ namespace Rivet {
       if (!pass_eljets && !pass_mujets) vetoEvent;
 
       // Fill histograms
-      const double weight = event.weight();
-
       //pseudotop hadrons and leptons fill histogram
-      _h["ptpseudotoplepton"]->fill(    ppseudotoplepton.pt(),     weight); //pT of pseudo top lepton
-      _h["absrappseudotoplepton"]->fill(ppseudotoplepton.absrap(), weight); //absolute rapidity of pseudo top lepton
-      _h["ptpseudotophadron"]->fill(    ppseudotophadron.pt(),     weight); //pT of pseudo top hadron
-      _h["absrappseudotophadron"]->fill(ppseudotophadron.absrap(), weight); //absolute rapidity of pseudo top hadron
-      _h["absrapttbar"]->fill(          pttbar.absrap(),           weight); //absolute rapidity of ttbar
-      _h["ttbarmass"]->fill(            pttbar.mass(),             weight); //mass of ttbar
-      _h["ptttbar"]->fill(              pttbar.pt(),               weight); //fill pT of ttbar in combined channel
+      _h["ptpseudotoplepton"]->fill(    ppseudotoplepton.pt()); //pT of pseudo top lepton
+      _h["absrappseudotoplepton"]->fill(ppseudotoplepton.absrap()); //absolute rapidity of pseudo top lepton
+      _h["ptpseudotophadron"]->fill(    ppseudotophadron.pt()); //pT of pseudo top hadron
+      _h["absrappseudotophadron"]->fill(ppseudotophadron.absrap()); //absolute rapidity of pseudo top hadron
+      _h["absrapttbar"]->fill(          pttbar.absrap()); //absolute rapidity of ttbar
+      _h["ttbarmass"]->fill(            pttbar.mass()); //mass of ttbar
+      _h["ptttbar"]->fill(              pttbar.pt()); //fill pT of ttbar in combined channel
 
       if (pass_eljets) { // electron channel fill histogram
-        _h["ptpseudotoplepton_el"]->fill(    ppseudotoplepton.pt(),     weight); //pT of pseudo top lepton
-        _h["absrappseudotoplepton_el"]->fill(ppseudotoplepton.absrap(), weight); //absolute rapidity of pseudo top lepton
-        _h["ptpseudotophadron_el"]->fill(    ppseudotophadron.pt(),     weight); //pT of pseudo top hadron
-        _h["absrappseudotophadron_el"]->fill(ppseudotophadron.absrap(), weight); //absolute rapidity of pseudo top hadron
-        _h["absrapttbar_el"]->fill(          pttbar.absrap(),           weight); //absolute rapidity of ttbar
-        _h["ttbarmass_el"]->fill(            pttbar.mass(),             weight); // fill electron channel ttbar mass
-        _h["ptttbar_el"]->fill(              pttbar.pt(),               weight); //fill pT of ttbar in electron channel
+        _h["ptpseudotoplepton_el"]->fill(    ppseudotoplepton.pt()); //pT of pseudo top lepton
+        _h["absrappseudotoplepton_el"]->fill(ppseudotoplepton.absrap()); //absolute rapidity of pseudo top lepton
+        _h["ptpseudotophadron_el"]->fill(    ppseudotophadron.pt()); //pT of pseudo top hadron
+        _h["absrappseudotophadron_el"]->fill(ppseudotophadron.absrap()); //absolute rapidity of pseudo top hadron
+        _h["absrapttbar_el"]->fill(          pttbar.absrap()); //absolute rapidity of ttbar
+        _h["ttbarmass_el"]->fill(            pttbar.mass()); // fill electron channel ttbar mass
+        _h["ptttbar_el"]->fill(              pttbar.pt()); //fill pT of ttbar in electron channel
       }
       else { // muon channel fill histogram
-        _h["ptpseudotoplepton_mu"]->fill(    ppseudotoplepton.pt(),     weight); //pT of pseudo top lepton
-        _h["absrappseudotoplepton_mu"]->fill(ppseudotoplepton.absrap(), weight); //absolute rapidity of pseudo top lepton
-        _h["ptpseudotophadron_mu"]->fill(    ppseudotophadron.pt(),     weight); //pT of pseudo top hadron
-        _h["absrappseudotophadron_mu"]->fill(ppseudotophadron.absrap(), weight); //absolute rapidity of pseudo top hadron
-        _h["absrapttbar_mu"]->fill(          pttbar.absrap(),           weight); //absolute rapidity of ttbar
-        _h["ttbarmass_mu"]->fill(            pttbar.mass(),             weight); //fill muon channel histograms
-        _h["ptttbar_mu"]->fill(              pttbar.pt(),               weight); //fill pT of ttbar in electron channel
+        _h["ptpseudotoplepton_mu"]->fill(    ppseudotoplepton.pt()); //pT of pseudo top lepton
+        _h["absrappseudotoplepton_mu"]->fill(ppseudotoplepton.absrap()); //absolute rapidity of pseudo top lepton
+        _h["ptpseudotophadron_mu"]->fill(    ppseudotophadron.pt()); //pT of pseudo top hadron
+        _h["absrappseudotophadron_mu"]->fill(ppseudotophadron.absrap()); //absolute rapidity of pseudo top hadron
+        _h["absrapttbar_mu"]->fill(          pttbar.absrap()); //absolute rapidity of ttbar
+        _h["ttbarmass_mu"]->fill(            pttbar.mass()); //fill muon channel histograms
+        _h["ptttbar_mu"]->fill(              pttbar.pt()); //fill pT of ttbar in electron channel
       }
     }
 
@@ -269,7 +267,7 @@ namespace Rivet {
         if (absquad[0] < absquad[1])  pzneutrino = quad[0];
         else                          pzneutrino = quad[1];
       }
-      if ( !std::isfinite(pzneutrino) )  std::cout << "Found non-finite value" << std::endl;
+      if ( !std::isfinite(pzneutrino) )  std::cout << "Found non-finite value\n";
       return pzneutrino;
     }
 
@@ -284,6 +282,6 @@ namespace Rivet {
   };
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2015_I1345452);
+  RIVET_DECLARE_PLUGIN(ATLAS_2015_I1345452);
 
 }

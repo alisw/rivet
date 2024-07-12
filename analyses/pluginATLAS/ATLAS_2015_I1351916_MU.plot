@@ -8,7 +8,7 @@ YMin=-0.7
 RatioPlotYMax=3.0
 RatioPlotYMin=-3.0
 XLabel=$m_{\mu\mu}$ [GeV]
-YLabel=$A_\text{FB}$
+YLabel=$A_\mathrm{FB}$
 LegendXPos=0.1
 # END PLOT
 

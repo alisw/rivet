@@ -2,6 +2,7 @@
 XTwosidedTicks=1
 YTwosidedTicks=1
 LegendAlign=r
+LogY=1
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2017_I1591327/d02-x01-y01
@@ -12,14 +13,14 @@ YLabel=$\mathrm{d}\sigma/\mathrm{d}m_{\gamma\gamma}$ [fb GeV$^{-1}$]
 
 # BEGIN PLOT /ATLAS_2017_I1591327/d03-x01-y01
 Title=$p_\perp$ of the di-photon system
-XLabel=$p_\text{T}^{\gamma\gamma}$ [GeV]
-YLabel=$\mathrm{d}\sigma/\mathrm{d}p_\text{T}^{\gamma\gamma}$ [fb GeV$^{-1}$]
+XLabel=$p_\mathrm{T}^{\gamma\gamma}$ [GeV]
+YLabel=$\mathrm{d}\sigma/\mathrm{d}p_\mathrm{T}^{\gamma\gamma}$ [fb GeV$^{-1}$]
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2017_I1591327/d04-x01-y01
 Title=$a_\perp$ of the di-photon system
-XLabel=$a_\text{T}$ [GeV]
-YLabel=$\mathrm{d}\sigma/\mathrm{d}a_\text{T}$ [fb GeV$^{-1}$]
+XLabel=$a_\mathrm{T}$ [GeV]
+YLabel=$\mathrm{d}\sigma/\mathrm{d}a_\mathrm{T}$ [fb GeV$^{-1}$]
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2017_I1591327/d05-x01-y01
@@ -37,6 +38,7 @@ YLabel=$\mathrm{d}\sigma/\mathrm{d}|\cos\theta_{\eta}^\ast|$ [fb]
 LegendYPos=0.3
 LegendXPos=0.05
 LegendAlign=l
+LogY=0
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2017_I1591327/d07-x01-y01

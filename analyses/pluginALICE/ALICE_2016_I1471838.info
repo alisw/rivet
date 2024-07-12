@@ -5,6 +5,7 @@ Experiment: ALICE
 Collider: LHC
 InspireID: 1471838
 Status: UNVALIDATED
+Reentrant: true
 Authors:
  - Christian Bierlich <christian.bierlich@thep.lu.se>
 References:
@@ -15,8 +16,7 @@ NeedCrossSection: no
 Beams: [p+, p+]
 Energies: [7000]
 Options:
- - cent=REF,GEN,IMP,USR
-Reentrant: True
+ - cent=REF,GEN,IMP,USR,RAW
 Description:
   'Measurements of pT spectra and yields of (multi)strange hadrons, as well as 
    protons and pions (yields only) in forward multiplicity classes at 7 TeV.

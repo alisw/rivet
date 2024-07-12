@@ -1,0 +1,158 @@
+{
+    "472305": [
+        "Dijet event rates in deep inelastic scattering at HERA", 
+        "H1", 
+        "10.1007/s100520050705", 
+        null, 
+        "hep-ex/9806029", 
+        "ins472305", 
+        null, 
+        [
+            "DESY-98-076"
+        ]
+    ], 
+    "481113": [
+        "Measurement of dijet cross-sections at low Q**2 and the extraction of an effective parton density for the virtual photon", 
+        "H1", 
+        "10.1007/s100520050704", 
+        null, 
+        "hep-ex/9812024", 
+        "ins481113", 
+        null, 
+        [
+            "DESY-98-205"
+        ]
+    ], 
+    "495311": [
+        "Elastic electroproduction of rho mesons at HERA", 
+        "H1", 
+        "10.1007/s100520050703", 
+        null, 
+        "hep-ex/9902019", 
+        "ins495311", 
+        null, 
+        [
+            "DESY-99-010"
+        ]
+    ], 
+    "503019": [
+        "A Search for leptoquark bosons and lepton flavor violation in $e^{+} p$ collisions at HERA", 
+        "H1", 
+        "10.1007/s100520050646", 
+        null, 
+        "hep-ex/9907002", 
+        null, 
+        null, 
+        [
+            "DESY-99-081"
+        ]
+    ], 
+    "503947": [
+        "Measurements of transverse energy flow in deep inelastic scattering at HERA", 
+        "H1", 
+        "10.1007/s100520000287", 
+        null, 
+        "hep-ex/9907027", 
+        "ins503947", 
+        null, 
+        [
+            "DESY-99-091"
+        ]
+    ], 
+    "506029": [
+        "Measurement of neutral and charged current cross-sections in positron proton collisions at large momentum transfer", 
+        "H1", 
+        "10.1007/s100520000316", 
+        null, 
+        "hep-ex/9908059", 
+        "ins506029", 
+        null, 
+        [
+            "DESY-99-107"
+        ]
+    ], 
+    "512347": [
+        "Investigation of power corrections to event shape variables measured in deep inelastic scattering", 
+        "H1", 
+        "10.1007/s100520000344", 
+        null, 
+        "hep-ex/9912052", 
+        "ins512347", 
+        null, 
+        [
+            "DESY-99-193"
+        ]
+    ], 
+    "524524": [
+        "Search for compositeness, leptoquarks and large extra dimensions in $e q$ contact interactions at HERA", 
+        "H1", 
+        "10.1016/S0370-2693(00)00332-4", 
+        "429435", 
+        "hep-ex/0003002", 
+        null, 
+        null, 
+        [
+            "DESY-00-027"
+        ]
+    ], 
+    "524764": [
+        "Measurement of dijet cross-sections in photoproduction and photon structure", 
+        "H1", 
+        "10.1016/S0370-2693(00)00576-1", 
+        "430467", 
+        "hep-ex/0003011", 
+        "ins524764", 
+        null, 
+        [
+            "DESY-00-035"
+        ]
+    ], 
+    "525022": [
+        "Elastic photoproduction of J / psi and Upsilon mesons at HERA", 
+        "H1", 
+        "10.1016/S0370-2693(00)00530-X", 
+        "431213", 
+        "hep-ex/0003020", 
+        "ins525022", 
+        null, 
+        [
+            "DESY-00-037"
+        ]
+    ], 
+    "526887": [
+        "Measurement of elastic electroproduction of phi mesons at HERA", 
+        "H1", 
+        "10.1016/S0370-2693(00)00613-4", 
+        "436858", 
+        "hep-ex/0005010", 
+        "ins526887", 
+        null, 
+        [
+            "DESY-00-070"
+        ]
+    ], 
+    "528728": [
+        "Inclusive photoproduction of neutral pions in the photon hemisphere at HERA", 
+        "H1", 
+        "10.1007/s100520000526", 
+        "442250", 
+        "hep-ex/0006017", 
+        "ins528728", 
+        null, 
+        [
+            "DESY-00-085"
+        ]
+    ], 
+    "530500": [
+        "A Search for excited fermions at HERA", 
+        "H1", 
+        "10.1007/s100520000503", 
+        "447717", 
+        "hep-ex/0007035", 
+        null, 
+        null, 
+        [
+            "DESY-00-102"
+        ]
+    ]
+}

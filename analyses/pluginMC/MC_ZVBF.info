@@ -1,0 +1,23 @@
+Name: MC_ZVBF
+Summary: Monte Carlo validation observables for VBF $Z[\ell^+ \, \ell^-]$ + 2 jet production
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Christian Gutschow <chris.g@cern.ch>
+References:
+RunInfo:
+  $\ell^+ \ell^-$ + 2 jets analysis. Needs mass cut on lepton pair to avoid
+  photon singularity, e.g. a min range of $66 < m_{ll} < 116$ GeV
+Options:
+ - LMODE=EL,MU
+ - SCHEME=DRESSED,BARE
+PtCuts: [0]
+WriterDoublePrecision: 'jet_veto_eff|jve_mjj|m_jj'
+Description:
+  Available observables are the pT of jets 1-4, jet multiplicity,
+  $\Delta\eta(Z, \text{jet1})$, $\Delta R(\text{jet2}, \text{jet3})$,
+  $m_{jj}$, $H_\text{T}$ and third-jet centrality.
+
+ReleaseTests:
+ - $A pp-13000-eejj :ENERGY=13000.
+

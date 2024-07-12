@@ -8,8 +8,8 @@
 
 # BEGIN PLOT /CDF_2012_I1124333/d02-x01-y01
 Title=$p_\perp(Z)$ in $Z \to e^+ e^-$ events
-XLabel=$p_\perp(Z)$ [$\text{GeV}\!/\!c$]
-YLabel=$\mathrm{d}{\sigma}/\mathrm{d}{p_\perp(Z)}$ [$\text{pb} / (\text{GeV}\!/\!c)$]
+XLabel=$p_\perp(Z)$ [$\mathrm{GeV}\!/\!c$]
+YLabel=$\mathrm{d}{\sigma}/\mathrm{d}{p_\perp(Z)}$ [$\mathrm{pb} / (\mathrm{GeV}\!/\!c)$]
 # END PLOT
 
 

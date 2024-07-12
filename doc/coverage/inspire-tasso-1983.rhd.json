@@ -1,0 +1,74 @@
+{
+    "181468": [
+        "Production of $K \\bar{K}$ Pairs in Photon-photon Collisions and the Excitation of the Tensor Meson F-prime (1515)", 
+        "TASSO", 
+        "10.1016/0370-2693(83)90917-6", 
+        null, 
+        null, 
+        "ins181468", 
+        null, 
+        [
+            "DESY-82-071"
+        ]
+    ], 
+    "181469": [
+        "Search for Charged Higgs and Technipions at {PETRA}", 
+        "TASSO", 
+        "10.1016/0370-2693(83)91176-0", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-82-069"
+        ]
+    ], 
+    "181470": [
+        "Charged Hadron Composition of the Final State in e+ e- Annihilation at High-Energies", 
+        "TASSO", 
+        "10.1007/BF01577813", 
+        null, 
+        null, 
+        "ins181470", 
+        null, 
+        [
+            "DESY-82-070"
+        ]
+    ], 
+    "191417": [
+        "Differential Cross-sections for $\\gamma \\gamma \\to p \\bar{p}$ in the Center-of-mass Energy Range From 2.0-{GeV} to 3.1-{GeV}", 
+        "TASSO", 
+        "10.1016/0370-2693(83)91541-1", 
+        null, 
+        null, 
+        "ins191417", 
+        null, 
+        [
+            "DESY-83-064"
+        ]
+    ], 
+    "192072": [
+        "Observation of Xi-, Anti-xi- Production in $e^+ e^-$ Annihilation", 
+        "TASSO", 
+        "10.1016/0370-2693(83)91154-1", 
+        "147162", 
+        null, 
+        "ins192072", 
+        null, 
+        [
+            "DESY-83-071"
+        ]
+    ], 
+    "196842": [
+        "D*+- Production by e+ e- Annihilation Near 34.4-GeV Center-Of-Mass Energy", 
+        "TASSO", 
+        "10.1016/0370-2693(83)90372-6", 
+        null, 
+        null, 
+        "ins196842", 
+        null, 
+        [
+            "DESY-83-010"
+        ]
+    ]
+}

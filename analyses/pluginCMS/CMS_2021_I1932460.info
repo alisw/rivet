@@ -1,0 +1,37 @@
+Name: CMS_2021_I1932460
+Year: 2021
+Summary: Measurement of double-parton scattering in inclusive production of four jets with low transverse momentum in proton-proton collisions at $\sqrt{s}$ = 13 TeV.
+Experiment: CMS
+Collider: LHC
+InspireID: 1932460
+Status: VALIDATED
+Authors:
+ - cms-pag-conveners-smp@cern.ch
+ - Maxim Pieters <maxim.pieters@uantwerpen.be>
+ - Hans Van Haevermaet <hans.vanhaevermaet@uantwerpen.be>
+ - Pierre Van Mechelen <pierre.vanmechelen@uantwerpen.be>
+References:
+ - CMS-SMP-20-007
+ - arXiv:2109.13822
+RunInfo: Event types Hard QCD; Cuts jet $\pT > 20$ GeV, $|\eta|$ < 4.7.
+Beams: [p+, p+]
+Energies: [13000]
+Luminosity_fb: 0.000042
+Description:  
+  'A measurement of inclusive four-jet production in proton-proton collisions at a center-of-mass energy of 13 TeV is presented. The transverse momenta of jets within $| \eta | < 4.7$ reach down to 35, 30, 25, and 20 GeV for the first-, second-, third-, and fourth- leading jet, respectively. Differential cross sections are measured as functions of the jet transverse momentum, jet pseudorapidity, and several other observables that describe the angular correlations between the jets. The measured distributions show sensitivity to different aspects of the underlying event, parton shower, and matrix element calculations. In particular, the interplay between angular correlations caused by parton shower and double-parton scattering contributions is shown to be important. The double-parton scattering contribution is extracted by means of a template fit to the data, using distributions for single-parton scattering obtained from Monte Carlo event generators and a double-parton scattering distribution constructed from inclusive single-jet events in data. The effective double-parton scattering cross section is calculated and discussed in view of previous measurements and of its dependence on the models used to describe the single-parton scattering background.'
+Keywords: ["double-parton scattering", "inclusive four jets production", "low transverse momentum", "proton-proton collisions"]
+BibKey: CMS:2021lxi
+BibTeX: '@article{CMS:2021lxi,
+    author = "Tumasyan, Armen and others",
+    collaboration = "CMS",
+    title = "{Measurement of double-parton scattering in inclusive production of four jets with low transverse momentum in proton-proton collisions at $\sqrt{s}$ = 13 TeV}",
+    eprint = "2109.13822",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CMS-SMP-20-007, CERN-EP-2021-171",
+    month = "9",
+    year = "2021"
+}'
+
+ReleaseTests:
+ - $A LHC-13-Jets-4

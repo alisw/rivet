@@ -1,0 +1,36 @@
+Name: BELLE_2020_I1789775
+Year: 2020
+Summary: Cross section for $e^+e^-\to D_s^+D^{*-}_{s2}-\text{c.c.}$ between 4.52 and 5.6 GeV
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1789775
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 101 (2020) 9, 091101
+RunInfo: e+ e- to hadrons
+Beams: [e+, e-]
+Description:
+  'Measurement of the cross section for $e^+e^-\to D_s^+D^{*-}_{s2}+\text{c.c.}$ times the branching ratio for $D^{*-}_{s2}\to \bar{D}^0K^-$ for
+   centre-of-mass energies between 4.52 and 5.6 GeV by the BELLE collaboration.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Jia:2020epr
+BibTeX: '@article{Jia:2020epr,
+    author = "Jia, S. and others",
+    collaboration = "Belle",
+    title = "{Evidence for a vector charmoniumlike state in $e^+e^- \to D^+_sD^*_{s2}(2573)^-+c.c.$}",
+    eprint = "2004.02404",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevD.101.091101",
+    journal = "Phys. Rev. D",
+    volume = "101",
+    number = "9",
+    pages = "091101",
+    year = "2020"
+}'

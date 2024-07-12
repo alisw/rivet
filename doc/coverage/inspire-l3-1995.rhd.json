@@ -1,0 +1,164 @@
+{
+    "381046": [
+        "B* production in Z decays at LEP", 
+        "L3", 
+        "10.1016/0370-2693(95)01611-S", 
+        "269803", 
+        null, 
+        "ins381046", 
+        null, 
+        [
+            "CERN-PPE-94-143"
+        ]
+    ], 
+    "381075": [
+        "Energy and particle flow in three jet and radiative two jet events from hadronic Z decays", 
+        "L3", 
+        "10.1016/0370-2693(94)01486-V", 
+        "271809", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-164"
+        ]
+    ], 
+    "382038": [
+        "Measurement of exclusive branching fractions of hadronic one space prong tau decays", 
+        "L3", 
+        "10.1016/0370-2693(94)01587-3", 
+        "272769", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-178"
+        ]
+    ], 
+    "382187": [
+        "Search for anomalous Z --> gamma gamma gamma events at LEP", 
+        "L3", 
+        "10.1016/0370-2693(95)01612-T", 
+        "273745", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-186"
+        ]
+    ], 
+    "382382": [
+        "Measurement of energetic single photon production at LEP", 
+        "L3", 
+        "10.1016/0370-2693(95)00023-E", 
+        "275490", 
+        null, 
+        "ins382382", 
+        null, 
+        [
+            "CERN-PPE-94-216"
+        ]
+    ], 
+    "392529": [
+        "Measurement of the weak charged current structure in semileptonic b hadron decays at the Z peak", 
+        "L3", 
+        "10.1016/0370-2693(95)00401-6", 
+        "276034", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-95-05", 
+            "CERN-PPE-95-5", 
+            "CERN-PPE-95-005"
+        ]
+    ], 
+    "392892": [
+        "Search for neutralinos in $Z$ decays", 
+        "L3", 
+        "10.1016/0370-2693(95)00260-R", 
+        "277003", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-95-014", 
+            "CERN-PPE-95-14"
+        ]
+    ], 
+    "394354": [
+        "Tests of QED at LEP energies using e+ e- --> gamma gamma (gamma) and e+ e- --> lepton+ lepton- gamma gamma", 
+        "L3", 
+        "10.1016/0370-2693(95)00527-R", 
+        "280457", 
+        null, 
+        "ins394354", 
+        null, 
+        [
+            "CERN-PPE-95-41", 
+            "CERN-PPE-95-041"
+        ]
+    ], 
+    "394961": [
+        "Evidence for gluon interference in hadronic Z decays", 
+        "L3", 
+        "10.1016/0370-2693(95)00552-V", 
+        "281438", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-95-49", 
+            "CERN-PPE-95-049"
+        ]
+    ], 
+    "395025": [
+        "One prong tau decays with neutral kaons", 
+        "L3", 
+        "10.1016/0370-2693(95)00509-J", 
+        "281611", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-95-42", 
+            "CERN-PPE-95-042"
+        ]
+    ], 
+    "398498": [
+        "Study of the K(s)0 K(s)0 final state in two photon collisions", 
+        "L3", 
+        "10.1016/0370-2693(95)01041-N", 
+        "288344", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-95-118"
+        ]
+    ], 
+    "400001": [
+        "Search for neutral charmless B decays at LEP", 
+        "L3", 
+        "10.1016/0370-2693(95)01042-O", 
+        "288280", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-95-124"
+        ]
+    ], 
+    "400574": [
+        "Search for the decays B(d)0 --> gamma gamma and B(s)0 --> gamma gamma", 
+        "L3", 
+        "10.1016/0370-2693(95)01224-E", 
+        "289193", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-95-136"
+        ]
+    ]
+}

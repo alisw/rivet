@@ -22,20 +22,11 @@ namespace Rivet {
       Scatter2DPtr ratio; // Rjets plot
     };
 
-    typedef map<string, Plots> PlotMap;
-    typedef PlotMap::value_type PlotMapPair;
-
     //@}
 
 
     /// Constructor
-    ATLAS_2014_I1312627(std::string name="ATLAS_2014_I1312627")
-      : Analysis(name)
-    {
-      _mode = 0; // using electron channel for combined data by default
-      setNeedsCrossSection(true);
-    }
-
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2014_I1312627);
 
     /// @name Analysis methods
     //@{
@@ -43,31 +34,37 @@ namespace Rivet {
     /// Book histograms and initialise projections before the run
     void init() {
 
+      // get option
+      _mode = 0;
+      if ( getOption("LMODE") == "EL" )  _mode = 1;
+      if ( getOption("LMODE") == "MU" )  _mode = 2;
+
       // Set up cuts
       Cut cuts;
       if (_mode == 2) { // muon channel
-        cuts = (Cuts::pT > 25.0*GeV) & Cuts::etaIn(-2.4, 2.4);
+        cuts = Cuts::pT > 25*GeV && Cuts::abseta < 2.4;;
       } else if (_mode) { // electron channel
-        cuts = (Cuts::pT > 25.0*GeV) & ( Cuts::etaIn(-2.47, -1.52) | Cuts::etaIn(-1.37, 1.37) | Cuts::etaIn(1.52, 2.47) );
+        cuts = Cuts::pT > 25*GeV && ( Cuts::etaIn(-2.47, -1.52) || Cuts::etaIn(-1.37, 1.37) || Cuts::etaIn(1.52, 2.47) );
       } else { // combined data extrapolated to common phase space
-        cuts = (Cuts::pT > 25.0*GeV) & Cuts::etaIn(-2.5, 2.5);
+        cuts = Cuts::pT > 25*GeV && Cuts::abseta < 2.5;
       }
 
       // Boson finders
       FinalState fs;
-      WFinder wfinder(fs, cuts, _mode > 1? PID::MUON : PID::ELECTRON, 40.0*GeV, MAXDOUBLE, 0.0*GeV, 0.1,
-                      WFinder::CLUSTERNODECAY, WFinder::NOTRACK, WFinder::TRANSMASS);
+      WFinder wfinder(fs, cuts, _mode > 1? PID::MUON : PID::ELECTRON, 40*GeV, 8*TeV, 0., 0.1, 
+				              WFinder::ChargedLeptons::PROMPT, WFinder::ClusterPhotons::NODECAY, 
+                      WFinder::AddPhotons::NO, WFinder::MassWindow::MT);
       declare(wfinder, "WF");
 
-      ZFinder zfinder(fs, cuts, _mode > 1? PID::MUON : PID::ELECTRON, 66.0*GeV, 116.0*GeV, 0.1, ZFinder::CLUSTERNODECAY, ZFinder::NOTRACK);
+      ZFinder zfinder(fs, cuts, _mode > 1? PID::MUON : PID::ELECTRON, 66*GeV, 116*GeV, 0.1, 
+                      ZFinder::ChargedLeptons::PROMPT, ZFinder::ClusterPhotons::NODECAY, ZFinder::AddPhotons::NO);
       declare(zfinder, "ZF");
 
       // Jets
       VetoedFinalState jet_fs(fs);
       jet_fs.addVetoOnThisFinalState(getProjection<WFinder>("WF"));
       jet_fs.addVetoOnThisFinalState(getProjection<ZFinder>("ZF"));
-      FastJets jets(jet_fs, FastJets::ANTIKT, 0.4);
-      jets.useInvisibles(true);
+      FastJets jets(jet_fs, FastJets::ANTIKT, 0.4, JetAlg::Muons::ALL, JetAlg::Invisibles::ALL);
       declare(jets, "Jets");
 
 
@@ -93,9 +90,9 @@ namespace Rivet {
       hInit("Rap3_N3incl", "d20"); // sub-subleading jet rapidity, at least 3 jets
 
       // Also book numerator and denominator for Rjets plots
-      foreach (PlotMapPair& str_plot, _plots) {
-        str_plot.second.comp[0] = bookHisto1D( str_plot.second.ref + "2" + _suff, *(str_plot.second.ratio) );
-        str_plot.second.comp[1] = bookHisto1D( str_plot.second.ref + "3" + _suff, *(str_plot.second.ratio) );
+      for (auto& item : _plots) {
+        book(item.second.comp[0], item.second.ref + "2" + _suff, refData(item.second.ref + "1" + _suff));
+        book(item.second.comp[1], item.second.ref + "3" + _suff, refData(item.second.ref + "1" + _suff));
       }
     }
 
@@ -110,19 +107,18 @@ namespace Rivet {
 
       // Retrieve jets
       const JetAlg& jetfs = apply<JetAlg>(event, "Jets");
-      Jets all_jets = jetfs.jetsByPt(Cuts::pT > 30*GeV && Cuts::absrap < 4.4);
+      Jets jets = jetfs.jetsByPt(Cuts::pT > 30*GeV && Cuts::absrap < 4.4);
 
       // Apply boson cuts and fill histograms
-      const double weight = event.weight();
       if (!zf.empty()) {
         const Particles& leptons = zf.constituents();
         if (oppSign(leptons[0], leptons[1]) && deltaR(leptons[0], leptons[1]) > 0.2)
-          fillPlots(leptons, all_jets, weight, 1);
+          fillPlots(leptons, jets, 1);
       }
       if (!wf.empty()) {
         const Particles& leptons = wf.constituentLeptons();
         if (wf.constituentNeutrino().pT() > 25*GeV && wf.mT() > 40*GeV )
-          fillPlots(leptons, all_jets, weight, 0);
+          fillPlots(leptons, jets, 0);
       }
     }
 
@@ -131,10 +127,10 @@ namespace Rivet {
     void finalize() {
       ///  Normalise, scale and otherwise manipulate histograms here
       const double sf( crossSection() / sumOfWeights() );
-      foreach (PlotMapPair& str_plot, _plots) {
-        scale(str_plot.second.comp[0], sf);
-        scale(str_plot.second.comp[1], sf);
-        divide(str_plot.second.comp[0], str_plot.second.comp[1], str_plot.second.ratio);
+      for (const auto& item : _plots) {
+        scale(item.second.comp[0], sf);
+        scale(item.second.comp[1], sf);
+        divide(item.second.comp[0], item.second.comp[1], item.second.ratio);
       }
     }
     //@}
@@ -144,61 +140,53 @@ namespace Rivet {
     //@{
 
     /// Histogram filling function, to avoid duplication
-    void fillPlots(const Particles& leptons, Jets& all_jets, const double& weight, int isZ) {
+    void fillPlots(const Particles& leptons, Jets& jets, int isZ) {
       // Do jet-lepton overlap removal
-      Jets jets;
-      foreach (const Jet& j, all_jets) {
-        /// @todo A nice place for a lambda and any() logic when C++11 is available
-        bool keep = true;
-        foreach (const Particle& l, leptons) keep &= deltaR(j, l) > 0.5;
-        if (keep)  jets.push_back(j);
-      }
+      idiscardIfAnyDeltaRLess(jets, leptons, 0.5);
 
       // Calculate jet ST
       const size_t njets = jets.size();
-      double ST = 0.0; // scalar pT sum of all selected jets
-      for (size_t i = 0; i < njets; ++i)
-        ST += jets[i].pT() * GeV;
+      const double ST = sum(jets, pT, 0.0)/GeV;
 
       // Fill jet histos
-      _plots["Njets_excl"].comp[isZ]->fill(njets + 0.5, weight);
+      _plots["Njets_excl"].comp[isZ]->fill(njets + 0.5);
       for (size_t i = 0; i <= njets; ++i)
-        _plots["Njets_incl"].comp[isZ]->fill(i + 0.5, weight);
+        _plots["Njets_incl"].comp[isZ]->fill(i + 0.5);
 
       if (njets > 0) {
         const double pT1  = jets[0].pT()/GeV;
         const double rap1 = jets[0].absrap();
-        _plots["Pt1_N1incl" ].comp[isZ]->fill(pT1,  weight);
-        _plots["Rap1_N1incl"].comp[isZ]->fill(rap1, weight);
+        _plots["Pt1_N1incl" ].comp[isZ]->fill(pT1);
+        _plots["Rap1_N1incl"].comp[isZ]->fill(rap1);
 
         if (njets == 1) {
-          _plots["Pt1_N1excl"].comp[isZ]->fill(pT1, weight);
+          _plots["Pt1_N1excl"].comp[isZ]->fill(pT1);
         } else if (njets > 1) {
           const double pT2  = jets[1].pT()/GeV;
           const double rap2 = jets[1].absrap();
           const double dR   = deltaR(jets[0], jets[1]);
           const double dPhi = deltaPhi(jets[0], jets[1]);
           const double mjj  = (jets[0].momentum() + jets[1].momentum()).mass()/GeV;
-          _plots["Pt1_N2incl" ].comp[isZ]->fill(pT1,  weight);
-          _plots["Pt2_N2incl" ].comp[isZ]->fill(pT2,  weight);
-          _plots["Rap2_N2incl"].comp[isZ]->fill(rap2, weight);
-          _plots["DR_N2incl"  ].comp[isZ]->fill(dR,   weight);
-          _plots["DPhi_N2incl"].comp[isZ]->fill(dPhi, weight);
-          _plots["Mjj_N2incl" ].comp[isZ]->fill(mjj,  weight);
-          _plots["ST_N2incl"  ].comp[isZ]->fill(ST,   weight);
+          _plots["Pt1_N2incl" ].comp[isZ]->fill(pT1);
+          _plots["Pt2_N2incl" ].comp[isZ]->fill(pT2);
+          _plots["Rap2_N2incl"].comp[isZ]->fill(rap2);
+          _plots["DR_N2incl"  ].comp[isZ]->fill(dR);
+          _plots["DPhi_N2incl"].comp[isZ]->fill(dPhi);
+          _plots["Mjj_N2incl" ].comp[isZ]->fill(mjj);
+          _plots["ST_N2incl"  ].comp[isZ]->fill(ST);
 
           if (njets == 2) {
-            _plots["ST_N2excl"].comp[isZ]->fill(ST, weight);
+            _plots["ST_N2excl"].comp[isZ]->fill(ST);
           } else if (njets > 2) {
             const double pT3  = jets[2].pT()/GeV;
             const double rap3 = jets[2].absrap();
-            _plots["Pt1_N3incl" ].comp[isZ]->fill(pT1,  weight);
-            _plots["Pt3_N3incl" ].comp[isZ]->fill(pT3,  weight);
-            _plots["Rap3_N3incl"].comp[isZ]->fill(rap3, weight);
-            _plots["ST_N3incl"  ].comp[isZ]->fill(ST,   weight);
+            _plots["Pt1_N3incl" ].comp[isZ]->fill(pT1);
+            _plots["Pt3_N3incl" ].comp[isZ]->fill(pT3);
+            _plots["Rap3_N3incl"].comp[isZ]->fill(rap3);
+            _plots["ST_N3incl"  ].comp[isZ]->fill(ST);
 
             if (njets == 3)
-              _plots["ST_N3excl"].comp[isZ]->fill(ST, weight);
+              _plots["ST_N3excl"].comp[isZ]->fill(ST);
           }
         }
       }
@@ -209,7 +197,7 @@ namespace Rivet {
     void hInit(string label, string ident) {
       string pre = ident + "-x0";
       _plots[label].ref = pre;
-      _plots[label].ratio = bookScatter2D(pre + "1" + _suff, true);
+      book(_plots[label].ratio, pre + "1" + _suff, true);
     }
 
     //@}
@@ -225,34 +213,10 @@ namespace Rivet {
   private:
 
     /// @name Map of histograms
-    PlotMap _plots;
+    map<string, Plots> _plots;
 
   };
-
-
-
-  /// Electron-specific version of the ATLAS_2014_I1312627 R-jets analysis
-  class ATLAS_2014_I1312627_EL : public ATLAS_2014_I1312627 {
-  public:
-    ATLAS_2014_I1312627_EL()
-      : ATLAS_2014_I1312627("ATLAS_2014_I1312627_EL")
-    { _mode = 1; }
-  };
-
-
-  /// Muon-specific version of the ATLAS_2014_I1312627 R-jets analysis
-  class ATLAS_2014_I1312627_MU : public ATLAS_2014_I1312627 {
-  public:
-    ATLAS_2014_I1312627_MU()
-      : ATLAS_2014_I1312627("ATLAS_2014_I1312627_MU")
-    { _mode = 2; }
-  };
-
 
   // Hooks for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2014_I1312627);
-  DECLARE_RIVET_PLUGIN(ATLAS_2014_I1312627_EL);
-  DECLARE_RIVET_PLUGIN(ATLAS_2014_I1312627_MU);
-
-
+  RIVET_DECLARE_PLUGIN(ATLAS_2014_I1312627);
 }

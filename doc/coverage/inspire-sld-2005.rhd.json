@@ -1,0 +1,26 @@
+{
+    "662030": [
+        "Direct measurements of A(b) and A(c) using vertex/kaon charge tags at SLD", 
+        "SLD", 
+        "10.1103/PhysRevLett.94.091801", 
+        null, 
+        "hep-ex/0410042", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-10774"
+        ]
+    ], 
+    "677624": [
+        "Measurement of the branching ratio of the Z0 into heavy quarks", 
+        "SLD", 
+        "10.1103/PhysRevD.71.112004", 
+        null, 
+        "hep-ex/0503005", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9941"
+        ]
+    ]
+}

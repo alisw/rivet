@@ -1,0 +1,159 @@
+{
+    "561135": [
+        "Cherenkov Particle Identification in FOCUS",
+        "FOCUS",
+        "10.1016/S0168-9002(01)01975-1",
+        null,
+        "hep-ex/0108011",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-01-243-E"
+        ]
+    ],
+    "562880": [
+        "Search for CP Violation in the Decays $D^+ \\to K_{S \\pi^+}$ and $D^+ \\to K_S K^+$",
+        "FOCUS",
+        "10.1103/PhysRevLett.88.041602",
+        null,
+        "hep-ex/0109022",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-01-266-E",
+            "CU-HEP-2001-1"
+        ]
+    ],
+    "562946": [
+        "Reconstruction of Vees, Kinks, $\\Xi^-$'s, and $\\Omega^-$'s in the FOCUS Spectrometer",
+        "FOCUS",
+        "10.1016/S0168-9002(01)02065-4",
+        null,
+        "hep-ex/0109028",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-01-244-E"
+        ]
+    ],
+    "565986": [
+        "Measurement of Natural Widths of $\\Sigma^0_c$ and $\\Sigma^{++}_c$ Baryons",
+        "FOCUS",
+        "10.1016/S0370-2693(01)01444-7",
+        null,
+        "hep-ex/0111027",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-01-356-E"
+        ]
+    ],
+    "582481": [
+        "A High Statistics Measurement of the $\\Lambda^+_c$ Lifetime",
+        "FOCUS",
+        "10.1103/PhysRevLett.88.161801",
+        null,
+        "hep-ex/0202001",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-02-015-E"
+        ]
+    ],
+    "584268": [
+        "Evidence for New Interference Phenomena in the Decay $D^+ \\to K^- \\pi^+ \\mu^+ \\nu$",
+        "FOCUS",
+        "10.1016/S0370-2693(02)01715-X",
+        null,
+        "hep-ex/0203031",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-02-054-E"
+        ]
+    ],
+    "584712": [
+        "New Measurements of the $D^0$ and $D^+$ Lifetimes",
+        "FOCUS",
+        "10.1016/S0370-2693(02)01934-2",
+        null,
+        "hep-ex/0203037",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-02-059-E"
+        ]
+    ],
+    "587985": [
+        "Measurements of Relative Branching Ratios of $\\Lambda^+_c$ Decays into States Containing $\\Sigma$",
+        "FOCUS",
+        "10.1016/S0370-2693(02)02103-2",
+        null,
+        "hep-ex/0206013",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-02-113-E"
+        ]
+    ],
+    "588872": [
+        "Measurement of the $D^+$ and $D^+_s$ Decays into $K^+ K^- K^+$",
+        "FOCUS",
+        "10.1016/S0370-2693(02)02240-2",
+        null,
+        "hep-ex/0206049",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-02-140-E"
+        ]
+    ],
+    "588943": [
+        "New Measurements of the $\\frac{\\Gamma(D^+ \\to \\bar{K}^{*0} \\mu^+ \\nu)} {\\Gamma(D^+ \\to K^- \\pi^+ \\pi^+)}$ and $\\frac{\\Gamma(D^+_s \\to \\phi \\mu^+ \\nu)} {\\Gamma(D^+_s \\to \\phi \\pi^+)}$ Branching Ratios",
+        "Focus",
+        "10.1016/S0370-2693(02)02272-4",
+        null,
+        "hep-ex/0206056",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-02-125-E"
+        ]
+    ],
+    "589409": [
+        "A New Measurement of the $\\Xi^0_c$ Lifetime",
+        "Focus",
+        "10.1016/S0370-2693(02)02239-6",
+        null,
+        "hep-ex/0206069",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-02-141-E"
+        ]
+    ],
+    "590928": [
+        "New Measurements of the $D^+ \\to \\overline{K}^{*0} \\mu^+ \\nu$ Form-Factor Ratios",
+        "FOCUS",
+        "10.1016/S0370-2693(02)02386-9",
+        null,
+        "hep-ex/0207049",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-02-161-E"
+        ]
+    ],
+    "593187": [
+        "Observation of a $1750-MeV/c^{2}$ Enhancement in the Diffractive Photoproduction of $K^{+} K^{-}$",
+        "FOCUS",
+        "10.1016/S0370-2693(02)02561-3",
+        null,
+        "hep-ex/0208027",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-02-191-E"
+        ]
+    ]
+}

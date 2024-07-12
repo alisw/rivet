@@ -1,0 +1,27 @@
+{
+    "1518782": [
+        "Measurement of forward photon production cross-section in proton\u2013proton collisions at $\\sqrt{s}$ = 13 TeV with the LHCf detector", 
+        "LHCf", 
+        "10.1016/j.physletb.2017.12.050", 
+        "2255884", 
+        "1703.07678", 
+        "ins1518782", 
+        null, 
+        [
+            "CERN-EP-2017-051", 
+            "CERN-EP-DRAFT-LHCf-2017-001"
+        ]
+    ], 
+    "1692008": [
+        "Measurement of inclusive forward neutron production cross section in proton-proton collisions at $ \\sqrt{s}=13 $ TeV with the LHCf Arm2 detector", 
+        "LHCf", 
+        "10.1007/JHEP11(2018)073", 
+        "2636348", 
+        "1808.09877", 
+        "ins1692008", 
+        null, 
+        [
+            "CERN-EP-2018-239"
+        ]
+    ]
+}

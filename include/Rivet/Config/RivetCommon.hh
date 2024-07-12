@@ -3,11 +3,6 @@
 
 // Convenience build-setup header for Rivet internal use
 
-
-// Automatic build info from autoconf
-#include "Rivet/Config/RivetConfig.hh"
-#include "Rivet/Config/BuildOptions.hh"
-
 #include "Rivet/Tools/RivetSTL.hh"
 #include "Rivet/Tools/RivetHepMC.hh"
 
@@ -22,8 +17,5 @@
 
 #include "Rivet/Math/Math.hh"
 #include "Rivet/Math/Vectors.hh"
-
-// #include "Rivet/Tools/Cmp.hh"
-// #include "Rivet/Tools/Cuts.hh"
 
 #endif

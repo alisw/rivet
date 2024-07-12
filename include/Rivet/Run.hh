@@ -4,6 +4,7 @@
 
 #include "Rivet/Tools/RivetSTL.hh"
 #include "Rivet/Tools/RivetHepMC.hh"
+#include "Rivet/Tools/Logging.hh"
 
 namespace Rivet {
 
@@ -16,35 +17,27 @@ namespace Rivet {
   class Run {
   public:
 
-    /// @name Standard constructors and destructors. */
-    //@{
-    /// The standard constructor.
+    /// Standard constructor.
     Run(AnalysisHandler& ah);
 
-    /// The destructor
+    /// Destructor
     ~Run();
-    //@}
 
-
-  public:
 
     /// @name Set run properties
-    //@{
+    /// @{
 
     /// Get the cross-section for this run.
-    Run& setCrossSection(const double xs);
-
-    /// Get the current cross-section from the analysis handler in pb.
-    double crossSection() const;
+    Run& setCrossSection(double xs);
 
     /// Declare whether to list available analyses
-    Run& setListAnalyses(const bool dolist);
+    Run& setListAnalyses(bool dolist);
 
-    //@}
+    /// @}
 
 
     /// @name File processing stages
-    //@{
+    /// @{
 
     /// Set up HepMC file readers (using the appropriate file weight for the first file)
     bool init(const std::string& evtfile, double weight=1.0);
@@ -54,9 +47,13 @@ namespace Rivet {
 
     /// Read the next HepMC event
     bool readEvent();
-    
+
     /// Read the next HepMC event only to skip it
-    bool skipEvent();
+    //bool skipEvent();
+
+    /// Return the number of (collapsed) events read in from HepMC,
+    /// including current partial event in case of sub-events
+    size_t numEvents() const { return _evtcount; }
 
     /// Handle next event
     bool processEvent();
@@ -64,33 +61,42 @@ namespace Rivet {
     /// Close up HepMC I/O
     bool finalize();
 
-    //@}
+    /// @}
 
 
   private:
+
+    /// Get a Log object
+    Log& getLog() const;
 
     /// AnalysisHandler object
     AnalysisHandler& _ah;
 
     /// @name Run variables obtained from events or command line
-    //@{
+    /// @{
 
     /// @brief An extra event weight scaling per event file.
     /// Useful for e.g. AlpGen n-parton event file combination.
-    double _fileweight;
+    double _fileweight = 1.0;
 
     /// Cross-section from command line.
-    double _xs;
+    double _xs = NAN;
 
-    //@}
+    /// Number of (collapsed) events read from file so far
+    size_t _evtcount = 0;
+
+    /// Current event number to keep track of sub-events
+    int _evtnumber = -1;
+
+    /// @}
 
 
     /// Flag to show list of analyses
-    bool _listAnalyses;
+    bool _listAnalyses = false;
 
 
     /// @name HepMC I/O members
-    //@{
+    /// @{
 
     /// Current event
     std::shared_ptr<GenEvent> _evt;
@@ -98,10 +104,10 @@ namespace Rivet {
     /// Output stream for HepMC writer
     std::shared_ptr<std::istream> _istr;
 
-    /// HepMC I/O writer
-    std::shared_ptr<HepMC::IO_GenEvent> _io;
+    /// HepMC reader
+    std::shared_ptr<HepMC_IO_type> _hepmcReader;
 
-    //@}
+    /// @}
 
   };
 

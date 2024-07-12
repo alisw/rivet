@@ -8,18 +8,18 @@ LegendAlign=r
 
 # BEGIN PLOT /ATLAS_2016_I1467454/d18
 XLabel=$m_{\ell\ell}$ [GeV]
-YLabel=$\frac{\text{d}\sigma}{\text{d} m_{\ell\ell}}$ [pb/GeV]
+YLabel=$\frac{\mathrm{d}\sigma}{\mathrm{d} m_{\ell\ell}}$ [pb/GeV]
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2016_I1467454/d19
 XLabel=$|y_{\ell\ell}|$
-YLabel=$\frac{\text{d}^2\sigma}{\text{d} m_{\ell\ell} \text{d}y_{\ell\ell}}$ [pb/GeV]
+YLabel=$\frac{\mathrm{d}^2\sigma}{\mathrm{d} m_{\ell\ell} \mathrm{d}y_{\ell\ell}}$ [pb/GeV]
 Title=116 GeV $< m_{\ell\ell} <$ 150 GeV
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2016_I1467454/d2[0-3]
 XLabel=$|y_{\ell\ell}|$
-YLabel=$\frac{\text{d}^2\sigma}{\text{d} m_{\ell\ell} \text{d}y_{\ell\ell}}$ [pb/GeV]
+YLabel=$\frac{\mathrm{d}^2\sigma}{\mathrm{d} m_{\ell\ell} \mathrm{d}y_{\ell\ell}}$ [pb/GeV]
 Title=150 GeV $< m_{\ell\ell} <$ 200 GeV
 # END PLOT
 
@@ -37,7 +37,7 @@ Title=500 GeV $< m_{\ell\ell} <$ 1500 GeV
 
 # BEGIN PLOT /ATLAS_2016_I1467454/d2[4-8]
 XLabel=$|\Delta\eta_{\ell\ell}|$
-YLabel=$\frac{\text{d}^2\sigma}{\text{d} m_{\ell\ell} \text{d}\Delta\eta_{\ell\ell}}$ [pb/GeV]
+YLabel=$\frac{\mathrm{d}^2\sigma}{\mathrm{d} m_{\ell\ell} \mathrm{d}\Delta\eta_{\ell\ell}}$ [pb/GeV]
 Title=116 GeV $< m_{\ell\ell} <$ 150 GeV
 # END PLOT
 
@@ -59,26 +59,26 @@ Title=500 GeV $< m_{\ell\ell} <$ 1500 GeV
 
 # BEGIN PLOT /ATLAS_2016_I1467454/d29
 XLabel=$m_{\mu\mu}$ [GeV]
-YLabel=$\frac{\text{d}\sigma}{\text{d} m_{\mu\mu}}$ [pb/GeV]
+YLabel=$\frac{\mathrm{d}\sigma}{\mathrm{d} m_{\mu\mu}}$ [pb/GeV]
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2016_I1467454/d30
 XLabel=$|y_{\mu\mu}|$
-YLabel=$\frac{\text{d}^2\sigma}{\text{d} m_{\mu\mu} \text{d}y_{\mu\mu}}$ [pb/GeV]
+YLabel=$\frac{\mathrm{d}^2\sigma}{\mathrm{d} m_{\mu\mu} \mathrm{d}y_{\mu\mu}}$ [pb/GeV]
 Title=116 GeV $< m_{\mu\mu} <$ 150 GeV
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2016_I1467454/d3[1-4]
 XLabel=$|y_{\mu\mu}|$
-YLabel=$\frac{\text{d}^2\sigma}{\text{d} m_{\mu\mu} \text{d}y_{\mu\mu}}$ [pb/GeV]
+YLabel=$\frac{\mathrm{d}^2\sigma}{\mathrm{d} m_{\mu\mu} \mathrm{d}y_{\mu\mu}}$ [pb/GeV]
 Title=150 GeV $< m_{\mu\mu} <$ 200 GeV
 # END PLOT
 
-# BEGIN PLOT /ATLAS_2016_I1467454/d35
+# BEGIN PLOT /ATLAS_2016_I1467454/d32
 Title=200 GeV $< m_{\mu\mu} <$ 300 GeV
 # END PLOT
 
-# BEGIN PLOT /ATLAS_2016_I1467454/d36
+# BEGIN PLOT /ATLAS_2016_I1467454/d33
 Title=300 GeV $< m_{\mu\mu} <$ 500 GeV
 # END PLOT
 
@@ -88,7 +88,7 @@ Title=500 GeV $< m_{\mu\mu} <$ 1500 GeV
 
 # BEGIN PLOT /ATLAS_2016_I1467454/d3[5-9]
 XLabel=$|\Delta\eta_{\mu\mu}|$
-YLabel=$\frac{\text{d}^2\sigma}{\text{d} m_{\mu\mu} \text{d}\Delta\eta_{\mu\mu}}$ [pb/GeV]
+YLabel=$\frac{\mathrm{d}^2\sigma}{\mathrm{d} m_{\mu\mu} \mathrm{d}\Delta\eta_{\mu\mu}}$ [pb/GeV]
 Title=116 GeV $< m_{\mu\mu} <$ 150 GeV
 # END PLOT
 
@@ -107,4 +107,3 @@ Title=300 GeV $< m_{\mu\mu} <$ 500 GeV
 # BEGIN PLOT /ATLAS_2016_I1467454/d39
 Title=500 GeV $< m_{\mu\mu} <$ 1500 GeV
 # END PLOT
-

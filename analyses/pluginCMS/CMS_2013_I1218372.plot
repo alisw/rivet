@@ -1,6 +1,6 @@
 # BEGIN PLOT /CMS_2013_I1218372/d0
 XLabel=Leading charged jet $p_\perp$ [GeV]
-YLabel=$(\mathrm{d}E^\text{hard} / \mathrm{d}\eta) / (\mathrm{d} E^\text{incl} / \mathrm{d}\eta)$
+YLabel=$(\mathrm{d}E^\mathrm{hard} / \mathrm{d}\eta) / (\mathrm{d} E^\mathrm{incl} / \mathrm{d}\eta)$
 LegendXPos=0.05
 LogY=0
 # END PLOT

@@ -1,0 +1,62 @@
+{
+    "1311486": [
+        "Odd and even partial waves of $\\eta\\pi^-$ and $\\eta'\\pi^-$ in $\\pi^-p\\to\\eta^{(\\prime)}\\pi^-p$ at $191\\,\\textrm{GeV}/c$", 
+        "COMPASS", 
+        "10.1016/j.physletb.2014.11.058", 
+        "1747555", 
+        "1408.4286", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2014-204"
+        ]
+    ], 
+    "1487432": [
+        "Azimuthal asymmetries of charged hadrons produced in high-energy muon scattering off longitudinally polarised deuterons", 
+        "COMPASS", 
+        "10.1140/epjc/s10052-018-6379-7", 
+        "2217387", 
+        "1609.06062", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2016-245"
+        ]
+    ], 
+    "1727197": [
+        "Measurement of the cross section for hard exclusive $\\pi^0$ muoproduction on the proton", 
+        "COMPASS", 
+        "10.1016/j.physletb.2020.135454", 
+        "2669550", 
+        "1903.12030", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2019-049"
+        ]
+    ], 
+    "1772229": [
+        "Contribution of exclusive diffractive processes to the measured azimuthal asymmetries in SIDIS", 
+        "COMPASS", 
+        "10.1016/j.nuclphysb.2020.115039", 
+        "2704708", 
+        "1912.10322", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2019-286"
+        ]
+    ], 
+    "1788430": [
+        "Antiproton over proton and K$^-$ over K$^+$ multiplicity ratios at high $z$ in DIS", 
+        "COMPASS", 
+        "10.1016/j.physletb.2020.135600", 
+        "2713404", 
+        "2003.11791", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2020-041"
+        ]
+    ]
+}

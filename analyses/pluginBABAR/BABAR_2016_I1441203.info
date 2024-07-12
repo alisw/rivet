@@ -1,0 +1,36 @@
+Name: BABAR_2016_I1441203
+Year: 2016
+Summary: Dalitz plot analysis of $D^0\to \pi^+\pi^-\pi^0$
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 1441203
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 93 (2016) 11, 112014
+Description:
+  'Measurement of the mass distributions in the decay $D^0\to \pi^+\pi^-\pi^0$. The data were read from the plots in the paper and the background subtracted.
+   Resolution/acceptance effects have been unfolded and given the agreement with the model in the paper this analysis should only be used for qualitative studies.'
+ValidationInfo:
+  'Herwig 7 events using model from paper'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BaBar:2016kvp
+BibTeX: '@article{BaBar:2016kvp,
+    author = "Lees, J. P. and others",
+    collaboration = "BaBar",
+    title = "{Measurement of the neutral $D$ meson mixing parameters in a time-dependent amplitude analysis of the $D^0\to\pi^+\pi^-\pi^0$ decay}",
+    eprint = "1604.00857",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BABAR-PUB-15-009, SLAC-PUB-16505",
+    doi = "10.1103/PhysRevD.93.112014",
+    journal = "Phys. Rev. D",
+    volume = "93",
+    number = "11",
+    pages = "112014",
+    year = "2016"
+}'

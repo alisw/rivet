@@ -1,0 +1,37 @@
+Name: HyperCP_2005_I677384
+Year: 2005
+Summary: Measurement of asymmetry in $\Omega^-\to\Lambda^0K^-$
+Experiment: HyperCP
+InspireID: 677384
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D71 (2005) 051102
+RunInfo: Any process producing Omega baryons
+NeedCrossSection: no
+Description:
+  'The Hyper CP experiment measured the asymmetry parameter in the decay $\Omega^-\to\Lambda^0K^-$, in practice
+   this is a fit to a normalised distribution $\frac12(1+\alpha\cos\theta)$.
+   The paper only gives the number for the $\alpha$ parameter and not the distribution, so the
+   distribution is calculated. The $\alpha$ parameter is then extracted using a $\chi^2$ fit.
+   This analysis is useful for testing spin correlations
+   in hadron decays.'
+Keywords: []
+BibKey: Chen:2005aza
+BibTeX: '@article{Chen:2005aza,
+      author         = "Chen, Y. C. and others",
+      title          = "{Measurement of the alpha asymmetry parameter for the
+                        Omega- ---&gt; Lambda K- decay}",
+      collaboration  = "HyperCP",
+      journal        = "Phys. Rev.",
+      volume         = "D71",
+      year           = "2005",
+      pages          = "051102",
+      doi            = "10.1103/PhysRevD.71.051102",
+      eprint         = "hep-ex/0502043",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "FERMILAB-PUB-05-026-E",
+      SLACcitation   = "%%CITATION = HEP-EX/0502043;%%"
+}'

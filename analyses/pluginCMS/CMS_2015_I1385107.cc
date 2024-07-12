@@ -29,14 +29,14 @@ namespace Rivet {
       const FastJets jetpro(cfsforjet, FastJets::SISCONE, 0.5);
       declare(jetpro, "Jets");
 
-      _h_Nch_TransAVE_vs_pT = bookProfile1D(1, 1, 1); // Nch vs. pT_max      (TransAVE)
-      _h_Sum_TransAVE_vs_pT = bookProfile1D(2, 1, 1); // sum(pT) vs. pT_max  (TransAVE)
-      _h_Nch_TransMAX_vs_pT = bookProfile1D(3, 1, 1); // Nch vs. pT_max      (TransMAX)
-      _h_Sum_TransMAX_vs_pT = bookProfile1D(4, 1, 1); // sum(pT) vs. pT_max  (TransMAX)
-      _h_Nch_TransMIN_vs_pT = bookProfile1D(5, 1, 1); // Nch vs. pT_max      (TransMIN)
-      _h_Sum_TransMIN_vs_pT = bookProfile1D(6, 1, 1); // sum(pT) vs. pT_max  (TransMIN)
-      _h_Nch_TransDIF_vs_pT = bookProfile1D(7, 1, 1); // Nch vs. pT_max      (TransDIF)
-      _h_Sum_TransDIF_vs_pT = bookProfile1D(8, 1, 1); // sum(pT) vs. pT_max  (TransDIF)
+      book(_h_Nch_TransAVE_vs_pT ,1, 1, 1); // Nch vs. pT_max      (TransAVE)
+      book(_h_Sum_TransAVE_vs_pT ,2, 1, 1); // sum(pT) vs. pT_max  (TransAVE)
+      book(_h_Nch_TransMAX_vs_pT ,3, 1, 1); // Nch vs. pT_max      (TransMAX)
+      book(_h_Sum_TransMAX_vs_pT ,4, 1, 1); // sum(pT) vs. pT_max  (TransMAX)
+      book(_h_Nch_TransMIN_vs_pT ,5, 1, 1); // Nch vs. pT_max      (TransMIN)
+      book(_h_Sum_TransMIN_vs_pT ,6, 1, 1); // sum(pT) vs. pT_max  (TransMIN)
+      book(_h_Nch_TransDIF_vs_pT ,7, 1, 1); // Nch vs. pT_max      (TransDIF)
+      book(_h_Sum_TransDIF_vs_pT ,8, 1, 1); // sum(pT) vs. pT_max  (TransDIF)
     }
 
 
@@ -53,7 +53,7 @@ namespace Rivet {
 
       // Find the lead jet, applying a restriction that the jets must be within |eta| < 2.
       FourMomentum p_lead;
-      foreach (const Jet& j, apply<FastJets>(event, "Jets").jetsByPt(1*GeV)) {
+      for (const Jet& j : apply<FastJets>(event, "Jets").jetsByPt(1*GeV)) {
         if (j.abseta() < 2.0) {
           p_lead = j.momentum();
           break;
@@ -67,7 +67,7 @@ namespace Rivet {
       Particles particles = apply<ChargedFinalState>(event, "CFS").particlesByPt();
       int nch_TransLeft = 0, nch_TransRight = 0;
       double ptSum_TransLeft = 0., ptSum_TransRight = 0.;
-      foreach (const Particle& p, particles) {
+      for (const Particle& p : particles) {
         const double dphi = signedDeltaPhi(phi_lead, p.momentum().phi());
         if (!inRange(fabs(dphi), PI/3, 2*PI/3.)) continue; //< only fill trans regions
         if (dphi < 0) {  // Transverse Right region
@@ -91,18 +91,17 @@ namespace Rivet {
       const double ptSum_TransDIF = ptSum_TransMAX - ptSum_TransMIN;
 
       // Fill profiles
-      const double weight = event.weight();
-      _h_Nch_TransMIN_vs_pT->fill(pT_lead/GeV, 1/AREA6 * nch_TransMIN, weight);
-      _h_Sum_TransMIN_vs_pT->fill(pT_lead/GeV, 1/AREA6 * ptSum_TransMIN, weight);
+      _h_Nch_TransMIN_vs_pT->fill(pT_lead/GeV, 1/AREA6 * nch_TransMIN);
+      _h_Sum_TransMIN_vs_pT->fill(pT_lead/GeV, 1/AREA6 * ptSum_TransMIN);
       //
-      _h_Nch_TransMAX_vs_pT->fill(pT_lead/GeV, 1/AREA6 * nch_TransMAX, weight);
-      _h_Sum_TransMAX_vs_pT->fill(pT_lead/GeV, 1/AREA6 * ptSum_TransMAX, weight);
+      _h_Nch_TransMAX_vs_pT->fill(pT_lead/GeV, 1/AREA6 * nch_TransMAX);
+      _h_Sum_TransMAX_vs_pT->fill(pT_lead/GeV, 1/AREA6 * ptSum_TransMAX);
       //
-      _h_Nch_TransAVE_vs_pT->fill(pT_lead/GeV, 1/AREA3 * nch_TransSUM, weight);
-      _h_Sum_TransAVE_vs_pT->fill(pT_lead/GeV, 1/AREA3 * ptSum_TransSUM, weight);
+      _h_Nch_TransAVE_vs_pT->fill(pT_lead/GeV, 1/AREA3 * nch_TransSUM);
+      _h_Sum_TransAVE_vs_pT->fill(pT_lead/GeV, 1/AREA3 * ptSum_TransSUM);
       //
-      _h_Nch_TransDIF_vs_pT->fill(pT_lead/GeV, 1/AREA6 * nch_TransDIF, weight);
-      _h_Sum_TransDIF_vs_pT->fill(pT_lead/GeV, 1/AREA6 * ptSum_TransDIF, weight);
+      _h_Nch_TransDIF_vs_pT->fill(pT_lead/GeV, 1/AREA6 * nch_TransDIF);
+      _h_Sum_TransDIF_vs_pT->fill(pT_lead/GeV, 1/AREA6 * ptSum_TransDIF);
     }
 
 
@@ -121,6 +120,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CMS_2015_I1385107);
+  RIVET_DECLARE_PLUGIN(CMS_2015_I1385107);
 
 }

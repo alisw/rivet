@@ -12,7 +12,7 @@ END PLOT
 BEGIN PLOT /ATLAS_2017_I1624693/d02-x01-y01
 Title=
 XLabel=$Q$ [GeV]
-YLabel=$\Delta_\text{3h} (Q)$
+YLabel=$\Delta_\mathrm{3h} (Q)$
 LogY=0
 LegendXPos=0.98
 LegendYPos=0.3
@@ -21,7 +21,7 @@ RatioPlotMode=deviation
 END PLOT
 
 BEGIN PLOT /ATLAS_2017_I1624693/d03-x01-y01
-Title=$m_\text{3h} < 0.59$ GeV
+Title=$m_\mathrm{3h} < 0.59$ GeV
 XLabel=$X$
 YLabel=$Y$
 ZLabel=$N_\text{3h} / N_\text{ch}$
@@ -33,7 +33,7 @@ ZMin=0.00000011
 END PLOT
 
 BEGIN PLOT /ATLAS_2017_I1624693/d03-x01-y02
-Title=$m_\text{3h} < 0.59$ GeV
+Title=$m_\mathrm{3h} < 0.59$ GeV
 XLabel=$X$
 YLabel=$Y$
 ZLabel=(data - MC)/$\sigma$

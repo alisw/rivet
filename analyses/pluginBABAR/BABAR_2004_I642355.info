@@ -1,0 +1,36 @@
+Name: BABAR_2004_I642355
+Year: 2004
+Summary: Measurement of the mass $m_X$ produced in $B\to\eta^\prime X_s$
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 642355
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uK>
+References:
+ - Phys.Rev.Lett. 93 (2004) 061801
+RunInfo: Any process producing Upsilon(4S), originally e+e-
+Description:
+  'Measurement of the mass $m_X$ produced in $B\to\eta^\prime X_s$ where the $\eta^\prime$ meson has momentum $2<p<2.7$ GeV in the $\Upsilon(4S)$ rest frame.'
+ValidationInfo:
+  'Herwig 7 events using EvtGen for the decays.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Aubert:2004eq
+BibTeX: '@article{Aubert:2004eq,
+      author         = "Aubert, Bernard and others",
+      title          = "{Study of high momentum $\eta^\prime$ production in $B
+                        \to \eta^\prime X_s$}",
+      collaboration  = "BaBar",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "93",
+      year           = "2004",
+      pages          = "061801",
+      doi            = "10.1103/PhysRevLett.93.061801",
+      eprint         = "hep-ex/0401006",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "SLAC-PUB-10295, BABAR-PUB-03-038",
+      SLACcitation   = "%%CITATION = HEP-EX/0401006;%%"
+}'

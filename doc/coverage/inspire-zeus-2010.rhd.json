@@ -1,0 +1,159 @@
+{
+    "818536": [
+        "Measurement of charm and beauty production in deep inelastic ep scattering from decays into muons at HERA", 
+        "ZEUS", 
+        "10.1140/epjc/s10052-009-1193-x", 
+        null, 
+        "0904.3487", 
+        null, 
+        null, 
+        [
+            "DESY-09-056"
+        ]
+    ], 
+    "831440": [
+        "Measurement of dijet photoproduction for events with a leading neutron at HERA", 
+        "ZEUS", 
+        "10.1016/j.nuclphysb.2009.10.002", 
+        null, 
+        "0909.3032", 
+        "ins831440", 
+        null, 
+        [
+            "DESY-09-139"
+        ]
+    ], 
+    "831986": [
+        "Measurement of isolated photon production in deep inelastic ep scattering", 
+        "ZEUS", 
+        "10.1016/j.physletb.2010.02.045", 
+        null, 
+        "0909.4223", 
+        "ins831986", 
+        null, 
+        [
+            "DESY-09-142", 
+            "DESY-09-142.REV"
+        ]
+    ], 
+    "833339": [
+        "Measurement of J/psi photoproduction at large momentum transfer at HERA", 
+        "ZEUS", 
+        "10.1007/JHEP05(2010)085", 
+        null, 
+        "0910.1235", 
+        "ins833339", 
+        null, 
+        [
+            "DESY-09-137"
+        ]
+    ], 
+    "836096": [
+        "Events with an Isolated Lepton and Missing Transverse Momentum and Measurement of W Production at HERA", 
+        "H1", 
+        "10.1007/JHEP03(2010)035", 
+        "1217321", 
+        "0911.0858", 
+        null, 
+        null, 
+        [
+            "DESY-09-140"
+        ]
+    ], 
+    "836107": [
+        "Combined Measurement and QCD Analysis of the Inclusive e+- p Scattering Cross Sections at HERA", 
+        "H1", 
+        "10.1007/JHEP01(2010)109", 
+        "1217344", 
+        "0911.0884", 
+        "ins836107", 
+        null, 
+        [
+            "DESY-09-158"
+        ]
+    ], 
+    "837492": [
+        "A QCD analysis of ZEUS diffractive data", 
+        "ZEUS", 
+        "10.1016/j.nuclphysb.2010.01.014", 
+        null, 
+        "0911.4119", 
+        null, 
+        null, 
+        [
+            "DESY-09-191"
+        ]
+    ], 
+    "844129": [
+        "Scaled momentum spectra in deep inelastic scattering at HERA", 
+        "ZEUS", 
+        "10.1007/JHEP06(2010)009", 
+        null, 
+        "1001.4026", 
+        "ins844129", 
+        null, 
+        [
+            "DESY-09-229"
+        ]
+    ], 
+    "848883": [
+        "Inclusive-jet cross sections in NC DIS at HERA and a comparison of the kT, anti-kT and SIScone jet algorithms", 
+        "ZEUS", 
+        "10.1016/j.physletb.2010.06.015", 
+        null, 
+        "1003.2923", 
+        "ins848883", 
+        null, 
+        [
+            "DESY-10-034"
+        ]
+    ], 
+    "855232": [
+        "Measurement of beauty production in DIS and $F_2^{b\\bar{b}}$ extraction at ZEUS", 
+        "ZEUS", 
+        "10.1140/epjc/s10052-010-1423-2", 
+        null, 
+        "1005.3396", 
+        "ins855232", 
+        null, 
+        [
+            "DESY-10-047"
+        ]
+    ], 
+    "860842": [
+        "Measurement of $D^+$ and $\\Lambda_{c}^{+}$ production in deep inelastic scattering at HERA", 
+        "ZEUS", 
+        "10.1007/JHEP11(2010)009", 
+        null, 
+        "1007.1945", 
+        "ins860842", 
+        null, 
+        [
+            "DESY-10-064"
+        ]
+    ], 
+    "865819": [
+        "Measurement of high-$Q^2$ charged current deep inelastic scattering cross sections with a longitudinally polarised positron beam at HERA", 
+        "ZEUS", 
+        "10.1140/epjc/s10052-010-1498-9", 
+        null, 
+        "1008.3493", 
+        null, 
+        null, 
+        [
+            "DESY-10-129"
+        ]
+    ], 
+    "875006": [
+        "Inclusive dijet cross sections in neutral current deep inelastic scattering at HERA", 
+        "ZEUS", 
+        "10.1140/epjc/s10052-010-1504-2", 
+        null, 
+        "1010.6167", 
+        "ins875006", 
+        null, 
+        [
+            "DESY-10-170"
+        ]
+    ]
+}

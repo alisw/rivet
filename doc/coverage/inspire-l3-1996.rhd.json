@@ -1,0 +1,192 @@
+{
+    "404602": [
+        "Measurement of eta production in two and three jet events from hadronic Z decays at LEP", 
+        "L3", 
+        "10.1016/0370-2693(96)00095-0", 
+        "294949", 
+        null, 
+        "ins404602", 
+        null, 
+        [
+            "CERN-PPE-95-182"
+        ]
+    ], 
+    "404603": [
+        "Search for excited leptons in e+ e annihilation at s**(1/2) = 130-GeV - 140-GeV", 
+        "L3", 
+        "10.1016/0370-2693(96)00045-7", 
+        "294950", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-95-190"
+        ]
+    ], 
+    "404604": [
+        "Measurement of hadron and lepton pair production at 130-GeV < $\\sqrt{s}$ < 140-GeV at LEP", 
+        "L3", 
+        "10.1016/0370-2693(96)00039-1", 
+        "294952", 
+        null, 
+        "ins404604", 
+        null, 
+        [
+            "CERN-PPE-95-191"
+        ]
+    ], 
+    "404916": [
+        "Study of the structure of hadronic events and determination of alpha-s at s**(1/2) = 130-GeV and 136-GeV", 
+        "L3", 
+        "10.1016/0370-2693(96)00096-2", 
+        "295280", 
+        null, 
+        "ins404916", 
+        null, 
+        [
+            "CERN-PPE-95-192"
+        ]
+    ], 
+    "416744": [
+        "Measurement of muon pair production at 50-GeV < s**(1/2) < 86-GeV at LEP", 
+        "L3", 
+        "10.1016/0370-2693(96)00257-2", 
+        "298592", 
+        null, 
+        "ins416744", 
+        null, 
+        [
+            "CERN-PPE-96-024", 
+            "CERN-PPE-96-24"
+        ]
+    ], 
+    "418003": [
+        "Search for supersymmetric particles at 130-GeV < $\\sqrt{s}$ < 140-GeV at LEP", 
+        "L3", 
+        "10.1016/0370-2693(96)00368-1", 
+        "301461", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-029", 
+            "CERN-PPE-96-29"
+        ]
+    ], 
+    "418087": [
+        "Search for unstable sequential neutral and charged heavy leptons in e+ e- annihilation at s**(1/2) = 130-GeV and 136-GeV", 
+        "L3", 
+        "10.1016/0370-2693(96)00466-2", 
+        "301832", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-038", 
+            "CERN-PPE-96-38"
+        ]
+    ], 
+    "418417": [
+        "Measurement of the Michel parameters and the average tau-neutrino helicity from tau decays in e+ e- ---> tau+ tau-", 
+        "L3", 
+        "10.1016/0370-2693(96)00467-4", 
+        "302200", 
+        null, 
+        "ins418417", 
+        null, 
+        [
+            "CERN-PPE-96-046", 
+            "CERN-PPE-96-46"
+        ]
+    ], 
+    "418663": [
+        "Search for new particles in hadronic events with isolated photons", 
+        "L3", 
+        "10.1016/S0370-2693(96)00519-9", 
+        "302801", 
+        null, 
+        "ins418663", 
+        null, 
+        [
+            "CERN-PPE-96-050", 
+            "CERN-PPE-96-50"
+        ]
+    ], 
+    "418664": [
+        "Observation of multiple hard photon final states at s**(1/2) = 130-GeV - 140-GeV at LEP", 
+        "L3", 
+        "10.1016/0370-2693(96)00612-0", 
+        "302710", 
+        null, 
+        "ins418664", 
+        null, 
+        [
+            "CERN-PPE-96-048", 
+            "CERN-PPE-96-48"
+        ]
+    ], 
+    "418665": [
+        "Measurement of the branching ratios b --> e neutrino X, mu neutrino X, tau-neutrino X and neutrino X", 
+        "L3", 
+        "10.1007/s002880050184", 
+        "302713", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-049", 
+            "CERN-PPE-96-49"
+        ]
+    ], 
+    "420343": [
+        "Measurement of the B(d)0 meson oscillation frequency", 
+        "L3", 
+        "10.1016/0370-2693(96)00768-X", 
+        "306348", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-073", 
+            "CERN-PPE-96-73"
+        ]
+    ], 
+    "421562": [
+        "Search for neutral Higgs boson production through the process e+ e- --> Z* H0", 
+        "L3", 
+        "10.1016/0370-2693(96)00987-2", 
+        "309217", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-095", 
+            "CERN-PPE-96-95"
+        ]
+    ], 
+    "424070": [
+        "Measurement of the lifetime of the tau lepton", 
+        "L3", 
+        "10.1016/S0370-2693(96)01392-5", 
+        "311363", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-124"
+        ]
+    ], 
+    "428073": [
+        "The Forward muon detector of L3", 
+        "L3 F/B Muon Group", 
+        "10.1016/S0168-9002(96)00777-2", 
+        "309554", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-097", 
+            "CERN-PPE-96-97"
+        ]
+    ]
+}

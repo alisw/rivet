@@ -1,0 +1,26 @@
+{
+    "511512": [
+        "Measurement of K* anti-K* production in two photon interactions", 
+        "ARGUS", 
+        "10.1007/s100520000408", 
+        null, 
+        null, 
+        "ins511512", 
+        null, 
+        [
+            "DESY-99-184"
+        ]
+    ], 
+    "526643": [
+        "A Search for the electric dipole moment of the tau lepton", 
+        "ARGUS", 
+        "10.1016/S0370-2693(00)00630-4", 
+        null, 
+        "hep-ex/0004031", 
+        "ins526643", 
+        null, 
+        [
+            "DESY-00-064"
+        ]
+    ]
+}

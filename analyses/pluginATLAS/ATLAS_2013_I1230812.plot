@@ -1,7 +1,12 @@
+# BEGIN PLOT /ATLAS_2013_I1230812/.*
+LogY=1
+# END PLOT
+
+
 # BEGIN PLOT /ATLAS_2013_I1230812.*/d01-x01-y.*
 Title=Inclusive jet multiplicity
-XLabel=$N_\text{jet}$
-YLabel=$\sigma(Z/\gamma^*(\to \ell^+\ell^-)+\geq N_\text{jet})$ [pb]
+XLabel=$N_\mathrm{jet}$
+YLabel=$\sigma(Z/\gamma^*(\to \ell^+\ell^-)+\geq N_\mathrm{jet})$ [pb]
 LegendYPos=0.5
 LegendXPos=0.05
 XMinorTickMarks=0
@@ -9,17 +14,16 @@ XMinorTickMarks=0
 
 # BEGIN PLOT /ATLAS_2013_I1230812.*/d02-x01-y.*
 Title=Inclusive jet multiplicity ratio
-XLabel=$N_\text{jet}$
-YLabel=$\sigma(\geq N_\text{jet})/\sigma(\geq N_\text{jet}-1)$
-LogY=0
+XLabel=$N_\mathrm{jet}$
+YLabel=$\sigma(\geq N_\mathrm{jet})/\sigma(\geq N_\mathrm{jet}-1)$
 LegendYPos=0.4
 XMinorTickMarks=0
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2013_I1230812.*/d03-x01-y.*
 Title=Exclusive jet multiplicity
-XLabel=$N_\text{jet}$
-YLabel=$\sigma(Z/\gamma^*(\to \ell^+\ell^-)+ N_\text{jet})$ [pb]
+XLabel=$N_\mathrm{jet}$
+YLabel=$\sigma(Z/\gamma^*(\to \ell^+\ell^-)+ N_\mathrm{jet})$ [pb]
 LegendYPos=0.5
 LegendXPos=0.05
 XMinorTickMarks=0
@@ -27,35 +31,33 @@ XMinorTickMarks=0
 
 # BEGIN PLOT /ATLAS_2013_I1230812.*/d04-x01-y.*
 Title=Exclusive jet multiplicity ratio
-XLabel=$N_\text{jet}$
-YLabel=$\sigma(N_\text{jet})/\sigma(N_\text{jet}-1)$
-LogY=0
+XLabel=$N_\mathrm{jet}$
+YLabel=$\sigma(N_\mathrm{jet})/\sigma(N_\mathrm{jet}-1)$
 LegendYPos=0.4
 XMinorTickMarks=0
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2013_I1230812.*/d05-x01-y.*
-Title=Exclusive jet multiplicity ($p_\perp^\text{jet1}>150$ GeV)
-XLabel=$N_\text{jet}$
-YLabel=$\sigma(Z/\gamma^*(\to \ell^+\ell^-)+ N_\text{jet})$ [pb]
+Title=Exclusive jet multiplicity ($p_\perp^\mathrm{jet1}>150$ GeV)
+XLabel=$N_\mathrm{jet}$
+YLabel=$\sigma(Z/\gamma^*(\to \ell^+\ell^-)+ N_\mathrm{jet})$ [pb]
 LegendYPos=0.5
 LegendXPos=0.05
 XMinorTickMarks=0
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2013_I1230812.*/d06-x01-y.*
-Title=Exclusive jet multiplicity ratio ($p_\perp^\text{jet1}>150$ GeV)
-XLabel=$N_\text{jet}$
-YLabel=$\sigma(N_\text{jet})/\sigma(N_\text{jet}-1)$
-LogY=0
+Title=Exclusive jet multiplicity ratio ($p_\perp^\mathrm{jet1}>150$ GeV)
+XLabel=$N_\mathrm{jet}$
+YLabel=$\sigma(N_\mathrm{jet})/\sigma(N_\mathrm{jet}-1)$
 LegendAlign=r
 XMinorTickMarks=0
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2013_I1230812.*/d07-x01-y.*
 Title=Exclusive jet multiplicity (VBF selection)
-XLabel=$N_\text{jet}$
-YLabel=$\sigma(Z/\gamma^*(\to \ell^+\ell^-)+ N_\text{jet})$ [pb]
+XLabel=$N_\mathrm{jet}$
+YLabel=$\sigma(Z/\gamma^*(\to \ell^+\ell^-)+ N_\mathrm{jet})$ [pb]
 LegendYPos=0.5
 LegendXPos=0.05
 XMinorTickMarks=0
@@ -63,9 +65,8 @@ XMinorTickMarks=0
 
 # BEGIN PLOT /ATLAS_2013_I1230812.*/d08-x01-y.*
 Title=Exclusive jet multiplicity ratio (VBF selection)
-XLabel=$N_\text{jet}$
-YLabel=$\sigma(N_\text{jet})/\sigma(N_\text{jet}-1)$
-LogY=0
+XLabel=$N_\mathrm{jet}$
+YLabel=$\sigma(N_\mathrm{jet})/\sigma(N_\mathrm{jet}-1)$
 LegendYPos=0.4
 XMinorTickMarks=0
 XMajorTickMarks=10
@@ -135,6 +136,7 @@ YLabel=d$\sigma$/d$|y|$ [pb]
 LegendAlign=l
 LegendYPos=0.5
 LegendXPos=0.05
+LogY=0
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2013_I1230812.*/d18-x01-y.*
@@ -144,6 +146,7 @@ YLabel=d$\sigma$/d$|y|$ [pb]
 LegendAlign=l
 LegendYPos=0.5
 LegendXPos=0.05
+LogY=0
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2013_I1230812.*/d19-x01-y.*
@@ -153,6 +156,7 @@ YLabel=d$\sigma$/d$|y|$ [pb]
 LegendAlign=l
 LegendYPos=0.5
 LegendXPos=0.05
+LogY=0
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2013_I1230812.*/d20-x01-y.*
@@ -162,6 +166,7 @@ YLabel=d$\sigma$/d$|y|$ [pb]
 LegendAlign=l
 LegendYPos=0.5
 LegendXPos=0.05
+LogY=0
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2013_I1230812.*/d21-x01-y.*
@@ -171,6 +176,7 @@ YLabel=d$\sigma$/d$|\Delta y|$ [pb]
 LegendAlign=l
 LegendYPos=0.5
 LegendXPos=0.05
+LogY=0
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2013_I1230812.*/d22-x01-y.*
@@ -211,6 +217,7 @@ YLabel=d$\sigma$/d$|y|$ [pb]
 LegendAlign=l
 LegendXPos=0.05
 LegendYPos=0.5
+LogY=0
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2013_I1230812.*/d27-x01-y.*
@@ -228,42 +235,42 @@ LegendAlign=r
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2013_I1230812/d01-x01-y02
-YLabel=$\sigma(Z/\gamma^*(\to \text{e}^+\text{e}^-)+\geq N_\text{jet})$ [pb]
+YLabel=$\sigma(Z/\gamma^*(\to \mathrm{e}^+\mathrm{e}^-)+\geq N_\mathrm{jet})$ [pb]
 CustomLegend=$Z/\gamma^*\to \text{e}^+\text{e}^-$
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2013_I1230812/d03-x01-y02
-YLabel=$\sigma(Z/\gamma^*(\to \text{e}^+\text{e}^-)+ N_\text{jet})$ [pb]
+YLabel=$\sigma(Z/\gamma^*(\to \mathrm{e}^+\mathrm{e}^-)+ N_\mathrm{jet})$ [pb]
 CustomLegend=$Z/\gamma^*\to \text{e}^+\text{e}^-$
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2013_I1230812/d05-x01-y02
-YLabel=$\sigma(Z/\gamma^*(\to \text{e}^+\text{e}^-)+ N_\text{jet})$ [pb]
+YLabel=$\sigma(Z/\gamma^*(\to \mathrm{e}^+\mathrm{e}^-)+ N_\mathrm{jet})$ [pb]
 CustomLegend=$Z/\gamma^*\to \text{e}^+\text{e}^-$
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2013_I1230812/d07-x01-y02
-YLabel=$\sigma(Z/\gamma^*(\to \text{e}^+\text{e}^-)+ N_\text{jet})$ [pb]
+YLabel=$\sigma(Z/\gamma^*(\to \mathrm{e}^+\mathrm{e}^-)+ N_\mathrm{jet})$ [pb]
 CustomLegend=$Z/\gamma^*\to \text{e}^+\text{e}^-$
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2013_I1230812/d01-x01-y03
-YLabel=$\sigma(Z/\gamma^*(\to \mu^+\mu^-)+\geq N_\text{jet})$ [pb]
+YLabel=$\sigma(Z/\gamma^*(\to \mu^+\mu^-)+\geq N_\mathrm{jet})$ [pb]
 CustomLegend=$Z/\gamma^*\to \mu^+\mu^-$
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2013_I1230812/d03-x01-y03
-YLabel=$\sigma(Z/\gamma^*(\to \mu^+\mu^-)+ N_\text{jet})$ [pb]
+YLabel=$\sigma(Z/\gamma^*(\to \mu^+\mu^-)+ N_\mathrm{jet})$ [pb]
 CustomLegend=$Z/\gamma^*\to \mu^+\mu^-$
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2013_I1230812/d05-x01-y03
-YLabel=$\sigma(Z/\gamma^*(\to \mu^+\mu^-)+ N_\text{jet})$ [pb]
+YLabel=$\sigma(Z/\gamma^*(\to \mu^+\mu^-)+ N_\mathrm{jet})$ [pb]
 CustomLegend=$Z/\gamma^*\to \mu^+\mu^-$
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2013_I1230812/d07-x01-y03
-YLabel=$\sigma(Z/\gamma^*(\to \mu^+\mu^-)+ N_\text{jet})$ [pb]
+YLabel=$\sigma(Z/\gamma^*(\to \mu^+\mu^-)+ N_\mathrm{jet})$ [pb]
 CustomLegend=$Z/\gamma^*\to \mu^+\mu^-$
 # END PLOT
 

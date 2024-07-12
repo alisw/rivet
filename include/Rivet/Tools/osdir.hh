@@ -21,7 +21,7 @@
 
 /// @cond OSDIR
 
-#if defined(unix) || defined(__unix) || defined(__unix__)
+#if defined(unix) || defined(__unix) || defined(__unix__) || (defined(__APPLE__) && defined(__MACH__))
 #define OSLINK_OSDIR_POSIX
 #elif defined(_WIN32)
 #define OSLINK_OSDIR_WINDOWS
@@ -194,4 +194,3 @@ namespace oslink
  * END OF TERMS AND CONDITIONS
  *
  */
-

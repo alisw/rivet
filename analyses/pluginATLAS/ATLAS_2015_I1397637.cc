@@ -15,7 +15,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2015_I1397637);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2015_I1397637);
 
 
     /// Book projections and histograms
@@ -84,20 +84,20 @@ namespace Rivet {
       // Small-R jets
       /// @todo Use extra constructor args
       FastJets jets(vfs, FastJets::ANTIKT, 0.4);
-      jets.useInvisibles(JetAlg::ALL_INVISIBLES);
-      jets.useMuons(JetAlg::DECAY_MUONS);
+      jets.useInvisibles(JetAlg::Invisibles::ALL);
+      jets.useMuons(JetAlg::Muons::DECAY);
       declare(jets, "jets");
 
       // Large-R jets
       /// @todo Use extra constructor args
       FastJets large_jets(vfs, FastJets::ANTIKT, 1.0);
-      large_jets.useInvisibles(JetAlg::ALL_INVISIBLES);
-      large_jets.useMuons(JetAlg::DECAY_MUONS);
+      large_jets.useInvisibles(JetAlg::Invisibles::ALL);
+      large_jets.useMuons(JetAlg::Muons::DECAY);
       declare(large_jets, "fat_jets");
 
 
       /// Book histogram
-      _h_pttop = bookHisto1D(1, 1, 1);
+      book(_h_pttop ,1, 1, 1);
     }
 
 
@@ -196,7 +196,7 @@ namespace Rivet {
       }
 
       // Fill histo if selection passed
-      if (hadbtag || lepbtag) _h_pttop->fill(fjet.pT()/GeV, event.weight());
+      if (hadbtag || lepbtag) _h_pttop->fill(fjet.pT()/GeV);
     }
 
 
@@ -213,6 +213,6 @@ namespace Rivet {
   };
 
 
-  DECLARE_RIVET_PLUGIN(ATLAS_2015_I1397637);
+  RIVET_DECLARE_PLUGIN(ATLAS_2015_I1397637);
 
 }

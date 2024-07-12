@@ -5,6 +5,7 @@ Experiment: CMS
 Collider: LHC
 InspireID: 1087342
 Status: VALIDATED
+Reentrant: true
 Authors:
   - Albert Knutsson <albert.knutsson@cern.ch>
   - Rasmus Sloth Hansen <rsh07@phys.au.dk>
@@ -40,3 +41,16 @@ BibTeX: '@article{Chatrchyan:2012gwa,
       primaryClass   = "hep-ex",
       reportNumber   = "CMS-FWD-11-002, CERN-PH-EP-2011-179",
       SLACcitation   = "%%CITATION = ARXIV:1202.0704;%%",}'
+
+ReleaseTests:
+ - $A LHC-7-Jets-0
+ - $A-2 LHC-7-Jets-1
+ - $A-3 LHC-7-Jets-10
+ - $A-4 LHC-7-Jets-2
+ - $A-5 LHC-7-Jets-3
+ - $A-6 LHC-7-Jets-4
+ - $A-7 LHC-7-Jets-6
+ - $A-8 LHC-7-Jets-7
+ - $A-9 LHC-7-Jets-8
+ - $A-10 LHC-7-Jets-9
+

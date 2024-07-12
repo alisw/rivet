@@ -5,19 +5,19 @@ LegendYPos=0.4
 
 # BEGIN PLOT /CMS_2012_I1107658/d0[1-3]
 XLabel=$p_\perp(\mu\mu)$ [GeV]
-YLabel=$\langle\mathrm{d}^2 N_\text{chg}/\mathrm{d}\eta\mathrm{d}\phi\rangle$
+YLabel=$\langle\mathrm{d}^2 N_\mathrm{chg}/\mathrm{d}\eta\mathrm{d}\phi\rangle$
 # END PLOT
 
 # BEGIN PLOT /CMS_2012_I1107658/d01-x01-y01
-Title=Toward $N_\text{chg}$ density vs $p_\perp^{\mu\mu}$
+Title=Toward $N_\mathrm{chg}$ density vs $p_\perp^{\mu\mu}$
 # END PLOT
 
 # BEGIN PLOT /CMS_2012_I1107658/d02-x01-y01
-Title=Transverse $N_\text{chg}$ density vs $p_\perp^{\mu\mu}$
+Title=Transverse $N_\mathrm{chg}$ density vs $p_\perp^{\mu\mu}$
 # END PLOT
 
 # BEGIN PLOT /CMS_2012_I1107658/d03-x01-y01
-Title=Away $N_\text{chg}$ density vs $p_\perp^{\mu\mu}$
+Title=Away $N_\mathrm{chg}$ density vs $p_\perp^{\mu\mu}$
 # END PLOT
 
 
@@ -66,8 +66,8 @@ LegendYPos=0.4
 # END PLOT
 
 # BEGIN PLOT /CMS_2012_I1107658/d10-x01-y01
-Title=Towards $+$ transverse $N_\text{chg}$ density vs $m_{\mu\mu}$, $p_\perp^{\mu\mu} < 5$ GeV
-YLabel=$\langle\mathrm{d}^2 N_\text{chg}/\mathrm{d}\eta\mathrm{d}\phi\rangle$
+Title=Towards $+$ transverse $N_\mathrm{chg}$ density vs $m_{\mu\mu}$, $p_\perp^{\mu\mu} < 5$ GeV
+YLabel=$\langle\mathrm{d}^2 N_\mathrm{chg}/\mathrm{d}\eta\mathrm{d}\phi\rangle$
 # END PLOT
 
 # BEGIN PLOT /CMS_2012_I1107658/d11-x01-y01
@@ -83,27 +83,27 @@ YLabel=$\langle p_\perp \rangle$
 
 
 # BEGIN PLOT /CMS_2012_I1107658/d1[3-5]
-XLabel=$N_\text{chg}$
-YLabel=$1/N_\text{ev} \; \mathrm{d} N_\text{ev} / \mathrm{d} N_\text{chg}$
+XLabel=$N_\mathrm{chg}$
+YLabel=$1/N_\mathrm{ev} \; \mathrm{d} N_\mathrm{ev} / \mathrm{d} N_\mathrm{chg}$
 # END PLOT
 
 # BEGIN PLOT /CMS_2012_I1107658/d13-x01-y01
-Title=Toward $N_\text{chg}$
+Title=Toward $N_\mathrm{chg}$
 # END PLOT
 
 # BEGIN PLOT /CMS_2012_I1107658/d14-x01-y01
-Title=Transverse $N_\text{chg}$
+Title=Transverse $N_\mathrm{chg}$
 # END PLOT
 
 # BEGIN PLOT /CMS_2012_I1107658/d15-x01-y01
-Title=Away $N_\text{chg}$
+Title=Away $N_\mathrm{chg}$
 # END PLOT
 
 
 
 # BEGIN PLOT /CMS_2012_I1107658/d1[6-8]
 XLabel=$p_\perp$ [GeV]
-YLabel=$1/N_\text{ev} \; \mathrm{d} N_\text{chg} / \mathrm{d} p_\perp$ [GeV$^{-1}$]
+YLabel=$1/N_\mathrm{ev} \; \mathrm{d} N_\mathrm{chg} / \mathrm{d} p_\perp$ [GeV$^{-1}$]
 # END PLOT
 
 # BEGIN PLOT /CMS_2012_I1107658/d16-x01-y01
@@ -120,13 +120,13 @@ Title=Away $p_\perp$
 
 
 # BEGIN PLOT /CMS_2012_I1107658/d19-x01-y01
-Title=Transverse $N_\text{chg}$, $p_\perp(\mu\mu) < 5$ GeV
-XLabel=$N_\text{chg}$
-YLabel=$1/N_\text{ev} \; \mathrm{d} N_\text{ev} / \mathrm{d} N_\text{chg}$
+Title=Transverse $N_\mathrm{chg}$, $p_\perp(\mu\mu) < 5$ GeV
+XLabel=$N_\mathrm{chg}$
+YLabel=$1/N_\mathrm{ev} \; \mathrm{d} N_\mathrm{ev} / \mathrm{d} N_\mathrm{chg}$
 # END PLOT
 
 # BEGIN PLOT /CMS_2012_I1107658/d20-x01-y01
 Title=Transverse $p_\perp$, $p_\perp(\mu\mu) < 5$ GeV
 XLabel=$p_\perp$ [GeV]
-YLabel=$1/N_\text{ev} \; \mathrm{d} N_\text{chg} / \mathrm{d} p_\perp$ [GeV$^{-1}$]
+YLabel=$1/N_\mathrm{ev} \; \mathrm{d} N_\mathrm{chg} / \mathrm{d} p_\perp$ [GeV$^{-1}$]
 # END PLOT

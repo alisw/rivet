@@ -16,7 +16,7 @@ namespace Rivet {
   public:
 
     // Minimal constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(CMS_2016_I1473674);
+    RIVET_DEFAULT_ANALYSIS_CTOR(CMS_2016_I1473674);
 
 
     // Set up projections and book histograms
@@ -26,8 +26,8 @@ namespace Rivet {
       FinalState fs;
 
       // Parton level top quarks
-      declare(PartonicTops(PartonicTops::E_MU, false), "LeptonicPartonTops");
-      declare(PartonicTops(PartonicTops::HADRONIC),    "HadronicPartonTops");
+      declare(PartonicTops(PartonicTops::DecayMode::E_MU, false), "LeptonicPartonTops");
+      declare(PartonicTops(PartonicTops::DecayMode::HADRONIC),    "HadronicPartonTops");
 
       // Projections for dressed electrons and muons
       IdentifiedFinalState photons(fs);
@@ -36,37 +36,37 @@ namespace Rivet {
       IdentifiedFinalState el_id(fs);
       el_id.acceptIdPair(PID::ELECTRON);
       PromptFinalState electrons(el_id);
-      addProjection(electrons, "Electrons");
+      declare(electrons, "Electrons");
       DressedLeptons dressed_electrons(photons, electrons, 0.1);
-      addProjection(dressed_electrons, "DressedElectrons");
+      declare(dressed_electrons, "DressedElectrons");
       //
       IdentifiedFinalState mu_id(fs);
       mu_id.acceptIdPair(PID::MUON);
       PromptFinalState muons(mu_id);
-      addProjection(muons, "Muons");
+      declare(muons, "Muons");
       DressedLeptons dressed_muons(photons, muons, 0.1);
-      addProjection(dressed_muons, "DressedMuons");
+      declare(dressed_muons, "DressedMuons");
 
       // Projection for jets
-      VetoedFinalState fs_jets(FinalState(-MAXDOUBLE, MAXDOUBLE, 0*GeV));
+      VetoedFinalState fs_jets;
       fs_jets.addVetoOnThisFinalState(dressed_muons);
-      addProjection(FastJets(fs_jets, FastJets::ANTIKT, 0.5), "Jets");
+      declare(FastJets(fs_jets, FastJets::ANTIKT, 0.5), "Jets");
 
       // Projections for MET
-      addProjection(MissingMomentum(), "MET");
+      declare(MissingMomentum(), "MET");
 
 
       // Booking of histograms
-      _hist_met = bookHisto1D(5, 1, 1);
-      _hist_ht  = bookHisto1D(6, 1, 1);
-      _hist_st  = bookHisto1D(7, 1, 1);
-      _hist_wpt = bookHisto1D(8, 1, 1);
+      book(_hist_met ,5, 1, 1);
+      book(_hist_ht  ,6, 1, 1);
+      book(_hist_st  ,7, 1, 1);
+      book(_hist_wpt ,8, 1, 1);
     }
 
 
     /// Per-event analysis
     void analyze(const Event& event) {
-      const double weight = event.weight();
+      const double weight = 1.0;
 
       // Select ttbar -> lepton+jets at parton level, removing tau decays
       const Particles leptonicpartontops = apply<ParticleFinder>(event, "LeptonicPartonTops").particlesByPt();
@@ -119,6 +119,6 @@ namespace Rivet {
   };
 
 
-  DECLARE_RIVET_PLUGIN(CMS_2016_I1473674);
+  RIVET_DECLARE_PLUGIN(CMS_2016_I1473674);
 
 }

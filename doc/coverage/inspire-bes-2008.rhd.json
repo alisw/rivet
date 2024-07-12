@@ -1,0 +1,142 @@
+{
+    "756331": [
+        "Search for the rare decays J / psi ---> D-(S) pi+, J / psi ---> D- pi+, and J / psi ---> anti-D0 anti-K0", 
+        "BES", 
+        "10.1016/j.physletb.2008.04.028", 
+        "1048035", 
+        "0707.3005", 
+        null, 
+        null, 
+        []
+    ], 
+    "762536": [
+        "Search for the invisible decay of J / psi in psi(2S) --- pi+ pi- J / psi", 
+        "BES", 
+        "10.1103/PhysRevLett.100.192001", 
+        null, 
+        "0710.0039", 
+        null, 
+        null, 
+        []
+    ], 
+    "764345": [
+        "First observation of J / psi and psi(2S) decaying to n K0(S) anti-Lambda + c.c", 
+        "BES", 
+        "10.1016/j.physletb.2007.11.087", 
+        null, 
+        "0710.3091", 
+        null, 
+        null, 
+        []
+    ], 
+    "765873": [
+        "Study of J / psi decaying into omega p anti-p", 
+        "BES", 
+        "10.1140/epjc/s10052-007-0467-4", 
+        null, 
+        "0710.5369", 
+        null, 
+        null, 
+        []
+    ], 
+    "769913": [
+        "Observation of Y(2175) in J / psi ---> eta phi f(0)(980)", 
+        "BES", 
+        "10.1103/PhysRevLett.100.102003", 
+        null, 
+        "0712.1143", 
+        null, 
+        null, 
+        []
+    ], 
+    "770041": [
+        "Measurements of J/psi decays into omega K anti-K pi and phi K anti-K pi and eta K0(S) K+- pi-+", 
+        "BES", 
+        "10.1103/PhysRevD.77.032005", 
+        null, 
+        "0712.1411", 
+        null, 
+        null, 
+        []
+    ], 
+    "772938": [
+        "Search for the decays J/psi ---> gamma rho phi and J/psi ---> gamma rho omega", 
+        "BES", 
+        "10.1103/PhysRevD.77.012001", 
+        null, 
+        "0710.2979", 
+        null, 
+        null, 
+        []
+    ], 
+    "778129": [
+        "Partial wave analysis of J / psi ---> gamma phi phi", 
+        "BES", 
+        "10.1016/j.physletb.2008.03.027", 
+        null, 
+        "0801.3885", 
+        null, 
+        null, 
+        []
+    ], 
+    "779017": [
+        "Direct measurements of the cross sections for e+ e- ---> hadrons (non-D anti-D) in the range from 3.65-GeV to 3.87-GeV and the branching fraction for psi(3770) ---> non-D anti-D", 
+        "BES", 
+        "10.1016/j.physletb.2007.11.078", 
+        null, 
+        null, 
+        null, 
+        null, 
+        []
+    ], 
+    "783097": [
+        "Direct Measurements of Absolute Branching Fractions for D0 and D+ Inclusive Semimuonic Decays", 
+        "BES", 
+        "10.1016/j.physletb.2008.05.054", 
+        null, 
+        "0804.1454", 
+        null, 
+        null, 
+        []
+    ], 
+    "799097": [
+        "First measurements of J/Psi decays into Sigma+ anti-Sigma- and Xi0 anti-Xi0", 
+        "BES", 
+        "10.1103/PhysRevD.78.092005", 
+        null, 
+        "0810.1896", 
+        null, 
+        null, 
+        []
+    ], 
+    "801208": [
+        "Measurements of the observed cross sections for e+ e- ---> exclusive light hadrons containing K0(S) meson at s**(1/2) = 3.773-GeV and 3.650-GeV", 
+        "BES", 
+        "10.1016/j.physletb.2008.10.050", 
+        null, 
+        "0810.5608", 
+        "ins801208", 
+        null, 
+        []
+    ], 
+    "801210": [
+        "Measurements of the observed cross sections for e+e- ---> exclusive light hadrons containing pi0 pi0 at s**(1/) = 3.773, 3.650 and 3.6648-GeV", 
+        "BES", 
+        "10.1016/j.physletb.2008.10.051", 
+        null, 
+        "0810.5611", 
+        "ins801210", 
+        null, 
+        []
+    ], 
+    "802372": [
+        "Measurements of the line shapes of D anti-D production and the ratio of the production rates of D+ D- and D0 anti-D0 in e+ e- annihilation at psi(3770) resonance", 
+        "BES", 
+        "10.1016/j.physletb.2008.08.067", 
+        null, 
+        null, 
+        null, 
+        null, 
+        []
+    ]
+}

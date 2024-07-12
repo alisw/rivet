@@ -1,0 +1,367 @@
+{
+    "448370": [
+        "Measurement of the quark and gluon fragmentation functions in Z0 hadronic decays", 
+        "DELPHI", 
+        "10.1007/s100529801013", 
+        "333767", 
+        null, 
+        "ins448370", 
+        null, 
+        [
+            "CERN-PPE-97-108"
+        ]
+    ], 
+    "477802": [
+        "Search for scalar fermions and longlived scalar leptons at center-of-mass energies of 130-GeV to 172-GeV", 
+        "DELPHI", 
+        "10.1007/s100529801043", 
+        "366778", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-116"
+        ]
+    ], 
+    "477804": [
+        "Search for pair produced neutralinos in events with photons and missing energy from $e^{+} e^{-}$ collisions at $S^{(1/2)}$ = 130-GeV to 183-GeV", 
+        "DELPHI", 
+        "10.1007/s100529801044", 
+        "366987", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-142"
+        ]
+    ], 
+    "478903": [
+        "Search for composite and exotic fermions at LEP-2", 
+        "DELPHI", 
+        "10.1007/s100529901074", 
+        "370236", 
+        "hep-ex/9811005", 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-169"
+        ]
+    ], 
+    "478904": [
+        "Search for lightest neutralino and stau pair production in light gravitino scenarios with stau NLSP", 
+        "DELPHI", 
+        "10.1007/s100529901073", 
+        "370237", 
+        "hep-ex/9811006", 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-170"
+        ]
+    ], 
+    "480435": [
+        "Search for Leptoquarks and FCNC in $e^{+} e^{-}$ annihilations at $S^{(1/2)}$ = 183-GeV", 
+        "DELPHI", 
+        "10.1016/S0370-2693(98)01525-1", 
+        "372595", 
+        "hep-ex/9903072", 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-177"
+        ]
+    ], 
+    "480437": [
+        "Search for charginos, neutralinos and gravitinos in e$^+$ e$^-$ interactions at $\\sqrt s$ = 183 GeV", 
+        "DELPHI", 
+        "10.1016/S0370-2693(98)01526-3", 
+        "372493", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-176"
+        ]
+    ], 
+    "481162": [
+        "A Precise measurement of the partial decay width ratio R(b)**0 = Gamma(b anti-b) / Gamma(had)", 
+        "DELPHI", 
+        "10.1007/s100520050766", 
+        "374236", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-180"
+        ]
+    ], 
+    "481760": [
+        "Measurement of A(FB)(b anti-b) in hadronic Z decays using a jet charge technique", 
+        "DELPHI", 
+        "10.1007/s100520050030", 
+        "376429", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-189"
+        ]
+    ], 
+    "482650": [
+        "Study of the four-jet anomaly observed at LEP center-of-mass energies of 130-GeV and 136-GeV", 
+        "DELPHI", 
+        "10.1016/S0370-2693(99)00066-0", 
+        "377623", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-198"
+        ]
+    ], 
+    "482816": [
+        "Measurement of inclusive rho0, f(0)(980), f(2)(1270), K*0(2)(1430) and f-prime(2)(1525) production in Z0 decays", 
+        "DELPHI", 
+        "10.1016/S0370-2693(99)00105-7", 
+        "378022", 
+        null, 
+        "ins482816", 
+        null, 
+        [
+            "CERN-EP-98-199"
+        ]
+    ], 
+    "495414": [
+        "The Scale dependence of the hadron multiplicity in quark and gluon jets and a precise determination of C(A) / C(F)", 
+        "DELPHI", 
+        "10.1016/S0370-2693(99)00112-4", 
+        "378314", 
+        "hep-ex/9903073", 
+        "ins495414", 
+        null, 
+        [
+            "CERN-EP-99-003", 
+            "CERN-EP-99-03", 
+            "CERN-EP-99-3"
+        ]
+    ], 
+    "495462": [
+        "Measurement and interpretation of fermion pair production at LEP energies from 130-GeV to 172-GeV", 
+        "DELPHI", 
+        "10.1007/s100520050643", 
+        "379584", 
+        null, 
+        "ins495462", 
+        null, 
+        [
+            "CERN-EP-99-005", 
+            "CERN-EP-99-05", 
+            "CERN-EP-99-5"
+        ]
+    ], 
+    "495463": [
+        "Search for neutral Higgs bosons in e+ e- collisions at S**(1/2) = 183-GeV", 
+        "DELPHI", 
+        "10.1007/s100520050600", 
+        "380495", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-006", 
+            "CERN-EP-99-06", 
+            "CERN-EP-99-6"
+        ]
+    ], 
+    "495464": [
+        "Measurement of the forward backward asymmetry of c and b quarks at the Z pole using reconstructed D mesons", 
+        "DELPHI", 
+        "10.1007/s100520050584", 
+        "379588", 
+        "hep-ex/9903074", 
+        "ins495464", 
+        null, 
+        [
+            "CERN-EP-99-007", 
+            "CERN-EP-99-07", 
+            "CERN-EP-99-7"
+        ]
+    ], 
+    "497256": [
+        "Search for charginos nearly mass - degenerate with the lightest neutralino", 
+        "DELPHI", 
+        "10.1007/s100520050610", 
+        "382452", 
+        "hep-ex/9903071", 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-037", 
+            "CERN-EP-99-37"
+        ]
+    ], 
+    "498282": [
+        "Measurement of the lifetime of $b$ - baryons", 
+        "DELPHI", 
+        "10.1007/s100520050582", 
+        "380801", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-016", 
+            "CERN-EP-99-16"
+        ]
+    ], 
+    "499181": [
+        "W pair production cross-section and W branching fractions in e+ e- interactions at 183-GeV", 
+        "DELPHI", 
+        "10.1016/S0370-2693(99)00488-8", 
+        "386079", 
+        null, 
+        "ins499181", 
+        null, 
+        [
+            "CERN-EP-99-047", 
+            "CERN-EP-99-47"
+        ]
+    ], 
+    "499182": [
+        "Measurements of the leptonic branching fractions of the tau", 
+        "DELPHI", 
+        "10.1007/s100520050583", 
+        "386078", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-046", 
+            "CERN-EP-99-46"
+        ]
+    ], 
+    "499183": [
+        "Energy dependence of event shapes and of alpha(s) at LEP-2", 
+        "DELPHI", 
+        "10.1016/S0370-2693(99)00472-4", 
+        "386077", 
+        null, 
+        "ins499183", 
+        null, 
+        [
+            "CERN-EP-99-044", 
+            "CERN-EP-99-44"
+        ]
+    ], 
+    "500042": [
+        "Multiplicity fluctuations in one-dimensional and two-dimensional angular intervals compared with analytic QCD calculations", 
+        "DELPHI", 
+        "10.1016/S0370-2693(99)00550-X", 
+        "387686", 
+        "hep-ph/9905367", 
+        null, 
+        null, 
+        [
+            "HEPHY-PUB-715-99", 
+            "CERN-EP-99-056"
+        ]
+    ], 
+    "501453": [
+        "Energy dependence of inclusive spectra in e+ e- annihilation", 
+        "DELPHI", 
+        "10.1016/S0370-2693(99)00601-2", 
+        "393659", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-057"
+        ]
+    ], 
+    "501454": [
+        "Search for the Higgs boson in events with isolated photons at LEP-2", 
+        "DELPHI", 
+        "10.1016/S0370-2693(99)00598-5", 
+        "409209", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-058"
+        ]
+    ], 
+    "501455": [
+        "A Search for invisible Higgs bosons produced in e+ e- interactions at LEP-2 energies", 
+        "DELPHI", 
+        "10.1016/S0370-2693(99)00597-3", 
+        "393661", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-059"
+        ]
+    ], 
+    "501456": [
+        "Measurements of the trilinear gauge boson couplings W W V (V = gamma,Z) in e+ e- collisions at 183-GeV", 
+        "DELPHI", 
+        "10.1016/S0370-2693(99)00671-1", 
+        "393662", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-062"
+        ]
+    ], 
+    "502748": [
+        "Search for charged Higgs bosons at LEP-2", 
+        "DELPHI", 
+        "10.1016/S0370-2693(99)00771-6", 
+        "393542", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-077", 
+            "CERN-EP-99-77"
+        ]
+    ], 
+    "504104": [
+        "Measurement of the rate of b anti-b b anti-b events in hadronic Z decays and the extraction of the gluon splitting into b anti-b", 
+        "DELPHI", 
+        "10.1016/S0370-2693(99)00905-3", 
+        "393663", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-081", 
+            "CERN-EP-99-81"
+        ]
+    ], 
+    "504107": [
+        "Measurement of the mass of the W boson using direct reconstruction at S**(1/2) = 183-GeV", 
+        "DELPHI", 
+        "10.1016/S0370-2693(99)00904-1", 
+        "393543", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-079", 
+            "CERN-EP-99-79"
+        ]
+    ], 
+    "507867": [
+        "Search for chargino pair production in scenarios with gravitino LSP and stau NLSP at S**(1/2) approximately equal to 183-GeV at LEP", 
+        "DELPHI", 
+        "10.1016/S0370-2693(99)01105-3", 
+        "401266", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-107"
+        ]
+    ]
+}

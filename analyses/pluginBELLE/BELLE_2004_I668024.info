@@ -1,0 +1,39 @@
+Name: BELLE_2004_I668024
+Year: 2004
+Summary: Rate and spectra for the production of $\Sigma_c(2800)$
+Experiment: BELLE
+Collider: KEKB
+InspireID: 668024
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 94 (2005) 122002
+RunInfo: e+e- to hadrons
+Beams: [e+,e-]
+Energies: [10.58]
+Description:
+  'Measurement of the rate and scaled momentum spectra for the production of
+   $\Sigma_c(2800)^0$, $\Sigma_c(2800)^+$ and $\Sigma_c(2800)^{++}$ baryons by BELLE.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Mizuk:2004yu
+BibTeX: '@article{Mizuk:2004yu,
+      author         = "Mizuk, R. and others",
+      title          = "{Observation of an isotriplet of excited charmed baryons
+                        decaying to Lambda+(c) pi}",
+      collaboration  = "Belle",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "94",
+      year           = "2005",
+      pages          = "122002",
+      doi            = "10.1103/PhysRevLett.94.122002",
+      eprint         = "hep-ex/0412069",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "BELLE-PREPRINT-2004-36, KEK-PREPRINT-2004-74",
+      SLACcitation   = "%%CITATION = HEP-EX/0412069;%%"
+}'

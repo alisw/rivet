@@ -3,28 +3,24 @@
 #include "Rivet/Projections/Beam.hh"
 #include "Rivet/Projections/FinalState.hh"
 #include "Rivet/Projections/ChargedFinalState.hh"
+
+#define I_KNOW_THE_INITIAL_QUARKS_PROJECTION_IS_DODGY_BUT_NEED_TO_USE_IT
 #include "Rivet/Projections/InitialQuarks.hh"
 
 namespace Rivet {
 
 
   /// @brief OPAL flavour-dependent fragmentation paper
+  ///
   /// @author Hendrik Hoeth
   class OPAL_1998_S3780481 : public Analysis {
   public:
 
-    /// Constructor
-    OPAL_1998_S3780481() : Analysis("OPAL_1998_S3780481") {
-      // Counters
-      _weightedTotalPartNum = 0;
-      _SumOfudsWeights = 0;
-      _SumOfcWeights = 0;
-      _SumOfbWeights = 0;
-    }
+    RIVET_DEFAULT_ANALYSIS_CTOR(OPAL_1998_S3780481);
 
 
     /// @name Analysis methods
-    //@{
+    /// @{
 
     void analyze(const Event& e) {
       // First, veto on leptonic events by requiring at least 4 charged FS particles
@@ -38,9 +34,7 @@ namespace Rivet {
       }
       MSG_DEBUG("Passed ncharged cut");
 
-      // Get event weight for histo filling
-      const double weight = e.weight();
-      _weightedTotalPartNum += numParticles * weight;
+      _weightedTotalPartNum->fill(numParticles);
 
       // Get beams and average beam momentum
       const ParticlePair& beams = apply<Beam>(e, "Beams").beams();
@@ -58,7 +52,7 @@ namespace Rivet {
         flavour = iqf.particles().front().abspid();
       } else {
         map<int, double> quarkmap;
-        foreach (const Particle& p, iqf.particles()) {
+        for (const Particle& p : iqf.particles()) {
           if (quarkmap[p.pid()] < p.E()) {
             quarkmap[p.pid()] = p.E();
           }
@@ -75,40 +69,40 @@ namespace Rivet {
       case 1:
       case 2:
       case 3:
-        _SumOfudsWeights += weight;
+        _SumOfudsWeights->fill();
         break;
       case 4:
-        _SumOfcWeights += weight;
+        _SumOfcWeights->fill();
         break;
       case 5:
-        _SumOfbWeights += weight;
+        _SumOfbWeights->fill();
         break;
       }
 
-      foreach (const Particle& p, fs.particles()) {
+      for (const Particle& p : fs.particles()) {
         const double xp = p.p3().mod()/meanBeamMom;
         const double logxp = -std::log(xp);
-        _histXpall->fill(xp, weight);
-        _histLogXpall->fill(logxp, weight);
-        _histMultiChargedall->fill(_histMultiChargedall->bin(0).xMid(), weight);
+        _histXpall->fill(xp);
+        _histLogXpall->fill(logxp);
+        _histMultiChargedall->fill(_histMultiChargedall->bin(0).xMid());
         switch (flavour) {
           /// @todo Use PDG code enums
         case PID::DQUARK:
         case PID::UQUARK:
         case PID::SQUARK:
-          _histXpuds->fill(xp, weight);
-          _histLogXpuds->fill(logxp, weight);
-          _histMultiChargeduds->fill(_histMultiChargeduds->bin(0).xMid(), weight);
+          _histXpuds->fill(xp);
+          _histLogXpuds->fill(logxp);
+          _histMultiChargeduds->fill(_histMultiChargeduds->bin(0).xMid());
           break;
         case PID::CQUARK:
-          _histXpc->fill(xp, weight);
-          _histLogXpc->fill(logxp, weight);
-          _histMultiChargedc->fill(_histMultiChargedc->bin(0).xMid(), weight);
+          _histXpc->fill(xp);
+          _histLogXpc->fill(logxp);
+          _histMultiChargedc->fill(_histMultiChargedc->bin(0).xMid());
           break;
         case PID::BQUARK:
-          _histXpb->fill(xp, weight);
-          _histLogXpb->fill(logxp, weight);
-          _histMultiChargedb->fill(_histMultiChargedb->bin(0).xMid(), weight);
+          _histXpb->fill(xp);
+          _histLogXpb->fill(logxp);
+          _histMultiChargedb->fill(_histMultiChargedb->bin(0).xMid());
           break;
         }
       }
@@ -123,24 +117,29 @@ namespace Rivet {
       declare(InitialQuarks(), "IQF");
 
       // Book histos
-      _histXpuds           = bookHisto1D(1, 1, 1);
-      _histXpc             = bookHisto1D(2, 1, 1);
-      _histXpb             = bookHisto1D(3, 1, 1);
-      _histXpall           = bookHisto1D(4, 1, 1);
-      _histLogXpuds        = bookHisto1D(5, 1, 1);
-      _histLogXpc          = bookHisto1D(6, 1, 1);
-      _histLogXpb          = bookHisto1D(7, 1, 1);
-      _histLogXpall        = bookHisto1D(8, 1, 1);
-      _histMultiChargeduds = bookHisto1D(9, 1, 1);
-      _histMultiChargedc   = bookHisto1D(9, 1, 2);
-      _histMultiChargedb   = bookHisto1D(9, 1, 3);
-      _histMultiChargedall = bookHisto1D(9, 1, 4);
+      book(_histXpuds           ,1, 1, 1);
+      book(_histXpc             ,2, 1, 1);
+      book(_histXpb             ,3, 1, 1);
+      book(_histXpall           ,4, 1, 1);
+      book(_histLogXpuds        ,5, 1, 1);
+      book(_histLogXpc          ,6, 1, 1);
+      book(_histLogXpb          ,7, 1, 1);
+      book(_histLogXpall        ,8, 1, 1);
+      book(_histMultiChargeduds ,9, 1, 1);
+      book(_histMultiChargedc   ,9, 1, 2);
+      book(_histMultiChargedb   ,9, 1, 3);
+      book(_histMultiChargedall ,9, 1, 4);
+      // Counters
+      book(_weightedTotalPartNum, "_TotalPartNum");
+      book(_SumOfudsWeights, "_udsWeights");
+      book(_SumOfcWeights, "_cWeights");
+      book(_SumOfbWeights, "_bWeights");
     }
 
 
     /// Finalize
     void finalize() {
-      const double avgNumParts = _weightedTotalPartNum / sumOfWeights();
+      const double avgNumParts = dbl(*_weightedTotalPartNum) / sumOfWeights();
       normalize(_histXpuds    , avgNumParts);
       normalize(_histXpc      , avgNumParts);
       normalize(_histXpb      , avgNumParts);
@@ -150,13 +149,13 @@ namespace Rivet {
       normalize(_histLogXpb   , avgNumParts);
       normalize(_histLogXpall , avgNumParts);
 
-      scale(_histMultiChargeduds, 1.0/_SumOfudsWeights);
-      scale(_histMultiChargedc  , 1.0/_SumOfcWeights);
-      scale(_histMultiChargedb  , 1.0/_SumOfbWeights);
+      scale(_histMultiChargeduds, 1.0/ *_SumOfudsWeights);
+      scale(_histMultiChargedc  , 1.0/ *_SumOfcWeights);
+      scale(_histMultiChargedb  , 1.0/ *_SumOfbWeights);
       scale(_histMultiChargedall, 1.0/sumOfWeights());
     }
 
-    //@}
+    /// @}
 
 
   private:
@@ -164,11 +163,12 @@ namespace Rivet {
     /// Store the weighted sums of numbers of charged / charged+neutral
     /// particles - used to calculate average number of particles for the
     /// inclusive single particle distributions' normalisations.
-    double _weightedTotalPartNum;
+    /// @{
+    CounterPtr _weightedTotalPartNum;
 
-    double _SumOfudsWeights;
-    double _SumOfcWeights;
-    double _SumOfbWeights;
+    CounterPtr _SumOfudsWeights;
+    CounterPtr _SumOfcWeights;
+    CounterPtr _SumOfbWeights;
 
     Histo1DPtr _histXpuds;
     Histo1DPtr _histXpc;
@@ -182,14 +182,12 @@ namespace Rivet {
     Histo1DPtr _histMultiChargedc;
     Histo1DPtr _histMultiChargedb;
     Histo1DPtr _histMultiChargedall;
-
-    //@}
+    /// @}
 
   };
 
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(OPAL_1998_S3780481);
+  RIVET_DECLARE_ALIASED_PLUGIN(OPAL_1998_S3780481, OPAL_1998_I472637);
 
 }

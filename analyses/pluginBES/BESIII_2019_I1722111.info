@@ -1,0 +1,34 @@
+Name: BESIII_2019_I1722111
+Year: 2019
+Summary: $\psi(2S)\to p \bar{p}\phi$
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1722111
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 99 (2019) 11, 112010
+RunInfo: Any process producing psi(2S) originally e+e-
+Description:
+  'Measurement of the mass distributions in the decay $\psi(2S)\to p \bar{p}\phi$. The data were read from the plots in the paper. It is also not clear that any resolution effects have been unfolded.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2019rth
+BibTeX: '@article{BESIII:2019rth,
+    author = "Ablikim, Medina and others",
+    collaboration = "BESIII",
+    title = "{Observation of $\psi(3686)\to p\bar{p}\phi$}",
+    eprint = "1902.09756",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevD.99.112010",
+    journal = "Phys. Rev. D",
+    volume = "99",
+    number = "11",
+    pages = "112010",
+    year = "2019"
+}
+'

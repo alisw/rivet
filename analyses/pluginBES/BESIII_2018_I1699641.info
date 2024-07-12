@@ -1,0 +1,31 @@
+Name: BESIII_2018_I1699641
+Year: 2018
+Summary:  Cross section for $e^+e^-\to K^0_SK^\pm\pi^\mp\pi^0$ and $K^0_SK^\pm\pi^\mp\eta$ between 3.90 to 4.60 GeV
+Experiment: BESIII
+Collider:  BEPC II
+InspireID: 1699641
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - arXiv:1810.09395
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Description:
+  'Measurement of the cross section for  $e^+e^-\to K^0_SK^\pm\pi^\mp\pi^0$ and $K^0_SK^\pm\pi^\mp\eta$ between 3.90 to 4.60 GeV.'
+Keywords:
+BibKey: Ablikim:2018ddb
+BibTeX: '@article{Ablikim:2018ddb,
+      author         = "Ablikim, Medina and others",
+      title          = "{Measurements of $e^+e^- \to
+                        K_{S}^{0}K^{\pm}\pi^{\mp}\pi^0$ and
+                        $K_{S}^{0}K^{\pm}\pi^{\mp}\eta$ at center-of-mass energies
+                        from $3.90$ to $4.60~\mathrm{GeV}$}",
+      collaboration  = "BESIII",
+      year           = "2018",
+      eprint         = "1810.09395",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1810.09395;%%"
+}'

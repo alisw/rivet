@@ -46,7 +46,7 @@ LogY=1
 
 # BEGIN PLOT /ATLAS_2011_S8983313/Et_miss
 Title=Missing transverse Energy
-XLabel=$E_{\mathrm{T}}^{\rm miss}$ [GeV]
+XLabel=$E_{\mathrm{T}}^\mathrm{miss}$ [GeV]
 YLabel=$\mathrm{Events}/50 \mathrm{GeV}$
 LogY=1
 # END PLOT

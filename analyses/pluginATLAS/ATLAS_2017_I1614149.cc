@@ -7,9 +7,10 @@
 #include "Rivet/Projections/DressedLeptons.hh"
 #include "Rivet/Projections/FastJets.hh"
 #include "Rivet/Projections/MissingMomentum.hh"
-#include "Rivet/Tools/fjcontrib/Njettiness.hh"
-#include "Rivet/Tools/fjcontrib/Nsubjettiness.hh"
-#include "Rivet/Tools/fjcontrib/NjettinessPlugin.hh"
+
+#include "fastjet/contrib/Njettiness.hh"
+#include "fastjet/contrib/Nsubjettiness.hh"
+#include "fastjet/contrib/NjettinessPlugin.hh"
 
 namespace Rivet {
 
@@ -19,7 +20,7 @@ namespace Rivet {
 
     /// Constructor
     ///@brief: Resolved and boosted ttbar l+jets cross sections at 13 TeV
-    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2017_I1614149);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2017_I1614149);
 
     void init() {
       // Eta ranges
@@ -42,12 +43,12 @@ namespace Rivet {
 
       PromptFinalState photons(ph_id);
       photons.acceptTauDecays(true);
-      addProjection(photons, "photons");
+      declare(photons, "photons");
 
       PromptFinalState electrons(el_id);
       electrons.acceptTauDecays(true);
       DressedLeptons dressedelectrons(photons, electrons, 0.1, lep_cuts);
-      addProjection(dressedelectrons, "elecs");
+      declare(dressedelectrons, "elecs");
       DressedLeptons ewdressedelectrons(all_photons, electrons, 0.1, eta_full);
 
       // Projection to find the muons
@@ -57,7 +58,7 @@ namespace Rivet {
       PromptFinalState muons(mu_id);
       muons.acceptTauDecays(true);
       DressedLeptons dressedmuons(photons, muons, 0.1, lep_cuts);
-      addProjection(dressedmuons, "muons");
+      declare(dressedmuons, "muons");
       DressedLeptons ewdressedmuons(all_photons, muons, 0.1, eta_full);
 
       // Projection to find MET
@@ -74,17 +75,16 @@ namespace Rivet {
       vfs.addVetoOnThisFinalState(ewdressedelectrons);
       vfs.addVetoOnThisFinalState(ewdressedmuons);
       vfs.addVetoOnThisFinalState(neutrinos);
-      FastJets jets(vfs, FastJets::ANTIKT, 0.4);
-      jets.useInvisibles(true);
-      addProjection(jets, "jets");
+      FastJets jets(vfs, FastJets::ANTIKT, 0.4, JetAlg::Muons::ALL, JetAlg::Invisibles::ALL);
+      declare(jets, "jets");
 
       // Addition of the large-R jets
       VetoedFinalState vfs1(fs);
       vfs1.addVetoOnThisFinalState(neutrinos);
       FastJets fjets(vfs1, FastJets::ANTIKT, 1.);
-      fjets.useInvisibles(JetAlg::NO_INVISIBLES);
-      fjets.useMuons(JetAlg::NO_MUONS);
-      addProjection(fjets, "fjets");
+      fjets.useInvisibles(JetAlg::Invisibles::NONE);
+      fjets.useMuons(JetAlg::Muons::NONE);
+      declare(fjets, "fjets");
 
       bookHists("top_pt_res", 15);
       bookHists("top_absrap_res", 17);
@@ -99,14 +99,11 @@ namespace Rivet {
 
     void analyze(const Event& event) {
 
-      const double weight = event.weight();
-
       // Get the selected objects, using the projections.
       vector<DressedLepton> electrons = apply<DressedLeptons>(event, "elecs").dressedLeptons();
       vector<DressedLepton> muons     = apply<DressedLeptons>(event, "muons").dressedLeptons();
       const Jets& jets  = apply<FastJets>(event, "jets").jetsByPt(Cuts::pT > 25*GeV && Cuts::abseta < 2.5);
       const PseudoJets& all_fjets  = apply<FastJets>(event, "fjets").pseudoJetsByPt();
-
 
       // get MET
       const Vector3 met = apply<MissingMomentum>(event, "MET").vectorMPT();
@@ -265,18 +262,18 @@ namespace Rivet {
         FourMomentum ppseudotophadron = pbjet2 + pWhadron;
         FourMomentum pttbar = ppseudotoplepton + ppseudotophadron;
 
-        fillHists("top_pt_res", ppseudotophadron.pt()/GeV, weight);
-        fillHists("top_absrap_res", ppseudotophadron.absrap(), weight);
-        fillHists("ttbar_pt_res", pttbar.pt()/GeV, weight);
-        fillHists("ttbar_absrap_res", pttbar.absrap(), weight);
-        fillHists("ttbar_m_res", pttbar.mass()/GeV, weight);
+        fillHists("top_pt_res", ppseudotophadron.pt()/GeV);
+        fillHists("top_absrap_res", ppseudotophadron.absrap());
+        fillHists("ttbar_pt_res", pttbar.pt()/GeV);
+        fillHists("ttbar_absrap_res", pttbar.absrap());
+        fillHists("ttbar_m_res", pttbar.mass()/GeV);
       }
 
       if (pass_boosted) {// Boosted selection
         double hadtop_pt= momentum(trimmed_jets.at(fatJetIndex)).pt() / GeV;
         double hadtop_absrap= momentum(trimmed_jets.at(fatJetIndex)).absrap();
-        fillHists("top_pt_boost", hadtop_pt, weight);
-        fillHists("top_absrap_boost", hadtop_absrap, weight);
+        fillHists("top_pt_boost", hadtop_pt);
+        fillHists("top_absrap_boost", hadtop_absrap);
       }
     }
 
@@ -292,14 +289,14 @@ namespace Rivet {
 
 
     void bookHists(std::string name, unsigned int index) {
-      _h[name] = bookHisto1D(index, 1 ,1);
-      _h[name + "_norm"] = bookHisto1D(index + 1, 1 ,1);
+      book(_h[name], index, 1 ,1);
+      book(_h[name + "_norm"], index + 1, 1, 1);
     }
 
 
-    void fillHists(std::string name, double value, double weight) {
-      _h[name]->fill(value, weight);
-      _h[name + "_norm"]->fill(value, weight);
+    void fillHists(std::string name, double value) {
+      _h[name]->fill(value);
+      _h[name + "_norm"]->fill(value);
     }
 
 
@@ -310,16 +307,16 @@ namespace Rivet {
 
     double tau32(const fastjet::PseudoJet &jet, double jet_rad) const {
       double alpha = 1.0;
-      fjcontrib::Nsubjettiness::NormalizedCutoffMeasure normalized_measure(alpha, jet_rad, 1000000);
+      fjcontrib::NormalizedCutoffMeasure normalized_measure(alpha, jet_rad, 1000000);
       // WTA definition
       // Nsubjettiness::OnePass_WTA_KT_Axes wta_kt_axes;
       // as in JetSubStructure recommendations
-      fjcontrib::Nsubjettiness::KT_Axes kt_axes;
+      fjcontrib::KT_Axes kt_axes;
 
       /// NsubjettinessRatio uses the results from Nsubjettiness to calculate the ratio
       /// tau_N/tau_M, where N and M are specified by the user. The ratio of different tau values
       /// is often used in analyses, so this class is helpful to streamline code.
-      fjcontrib::Nsubjettiness::NsubjettinessRatio tau32_kt(3, 2, kt_axes, normalized_measure);
+      fjcontrib::NsubjettinessRatio tau32_kt(3, 2, kt_axes, normalized_measure);
 
       double tau32 = tau32_kt.result(jet);
       return tau32;
@@ -357,7 +354,6 @@ namespace Rivet {
   };
 
 
-  DECLARE_RIVET_PLUGIN(ATLAS_2017_I1614149);
-
+  RIVET_DECLARE_PLUGIN(ATLAS_2017_I1614149);
 
 }

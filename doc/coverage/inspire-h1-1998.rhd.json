@@ -1,0 +1,86 @@
+{
+    "448035": [
+        "Measurement of the inclusive dijet cross-section in photoproduction and determination of an effective parton distribution in the photon", 
+        "H1", 
+        "10.1007/s100520050064", 
+        null, 
+        "hep-ex/9709004", 
+        "ins448035", 
+        null, 
+        [
+            "DESY-97-164"
+        ]
+    ], 
+    "451036": [
+        "Thrust jet analysis of deep inelastic large rapidity gap events", 
+        "H1", 
+        "10.1007/s100520050098", 
+        null, 
+        "hep-ex/9711006", 
+        "ins451036", 
+        null, 
+        [
+            "DESY-97-210"
+        ]
+    ], 
+    "451266": [
+        "Photoproduction of psi (2S) mesons at HERA", 
+        "H1", 
+        "10.1016/S0370-2693(97)01529-3", 
+        null, 
+        "hep-ex/9711012", 
+        "ins451266", 
+        null, 
+        [
+            "DESY-97-228"
+        ]
+    ], 
+    "468748": [
+        "Hadron production in diffractive deep inelastic scattering", 
+        "H1", 
+        "10.1016/S0370-2693(98)00426-2", 
+        null, 
+        "hep-ex/9803032", 
+        "ins468748", 
+        null, 
+        [
+            "DESY-98-029"
+        ]
+    ], 
+    "469495": [
+        "Multiplicity structure of the hadronic final state in diffractive deep inelastic scattering at HERA", 
+        "H1", 
+        "10.1007/s100529800963", 
+        null, 
+        "hep-ex/9804012", 
+        "ins469495", 
+        null, 
+        [
+            "DESY-98-044"
+        ]
+    ], 
+    "471583": [
+        "Observation of events with an isolated high-energy lepton and missing transverse momentum at HERA", 
+        "H1", 
+        "10.1007/s100520050302", 
+        null, 
+        "hep-ex/9806009", 
+        null, 
+        null, 
+        [
+            "DESY-98-063"
+        ]
+    ], 
+    "472304": [
+        "Differential (2+1) jet event rates and determination of alpha(s) in deep inelastic scattering at HERA", 
+        "H1", 
+        "10.1007/s100529800988", 
+        null, 
+        "hep-ex/9806028", 
+        "ins472304", 
+        null, 
+        [
+            "DESY-98-075"
+        ]
+    ]
+}

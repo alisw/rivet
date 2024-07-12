@@ -1,0 +1,56 @@
+Name: LHCB_2021_I1990313
+Year: 2021
+Summary: Forward $Z$ boson production cross-section in proton-proton collisions at $\sqrt{s}=13$ TeV
+Experiment: LHCB
+Collider: LHC
+InspireID: 1990313
+Status: VALIDATED
+Reentrant: True
+Authors:
+ - Hang Yin <hang.yin@cern.ch>
+References:
+ - 'JHEP 07 (2022) 026'
+ - 'DOI:10.1007/JHEP07(2022)026'
+ - 'arXiv:2112.07458'
+RunInfo: 'Proton-proton collisions at $\sqrt{s}=13$ TeV, measurement of the $Z$ boson production cross section in the forward region.
+The production cross-section is measured using the $Z\to\mu^+\mu^-$ events in the fiducial region, defined as pseudorapidity $2.0<\eta<4.5$
+and $p_T>20$ GeV/$c$ for both constituent muons, and dimuon invariant mass $60<M_{\mu\mu}<120$ GeV/$c^{2}$.'
+Beams: [p+, p+]
+Energies: [[6500,6500]]
+Luminosity_fb: 5.1
+NeedCrosssection: yes
+NumEvents: 100000
+Description:
+  'A precision measurement of the $Z^0$ boson production cross-section at $\sqrt{s} = 13$ TeV in the forward region
+is presented, using $pp$ collision data collected by the LHCb detector, 
+corresponding to an integrated luminosity of 5.1 fb$^{-1}$. 
+The production cross-section is measured using $Z \to \mu^+ \mu^-$ events within the fiducial region defined as 
+pseudorapidity $2.0<\eta<4.5$ and transverse momentum $p_{T}>20$ GeV$/c$ for both muons
+and dimuon invariant mass $60<M_{\mu\mu}<120$ GeV$/c^{2}$.
+ The integrated cross-section is determined to be
+\begin{equation*}
+\sigma(Z\to\mu^+\mu^-) = 196.4 \pm0.2\pm 1.6\pm 3.9 \ \mathrm{pb},
+\end{equation*}
+where the first uncertainty is statistical, the second is systematic, and the third is due to the luminosity determination.
+The measured results are in agreement with theoretical predictions within uncertainties.'
+ValidationInfo:
+  'Module was used to reproduce distributions in good agreement with measurements (as in published paper) for predictions of LHCb internal tune based on PYTHIA8 and EvtGen (in RIVET 3.1.4). Moreover, PYTHIA 8.307 (from PYTHIA-RIVET 3.1.7 docker image) was used stand-alone with the default tune and with values from LHCb tune for some of the parameters with major impact on prediction (e.g. sigmaProcess:alphaSorder), but also external LHAPDF6 set used by LHCb MC event generator. A tendency to reproduce results of the LHCb tune was seen and consider as satisfactory indicator for code validation.'
+ReleaseTests:
+ - $A LHC-13-Z-mu
+Keywords: ['Electroweak Interaction', 'Forward Physics', 'Hadron-Hadron Scattering', 'Particle and Resonance Production']
+BibKey: 
+BibTeX: '@article{LHCb:2021huf,
+    author = "Aaij, R. and others",
+    collaboration = "LHCb",
+    title = "{Precision measurement of forward $Z$ boson production in proton-proton collisions at $\sqrt{s} = 13$ TeV}",
+    eprint = "2112.07458",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "LHCb-PAPER-2021-037, CERN-EP-2021-246",
+    doi = "10.1007/JHEP07(2022)026",
+    journal = "JHEP",
+    volume = "07",
+    pages = "026",
+    year = "2022"
+}'
+

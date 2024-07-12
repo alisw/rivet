@@ -106,6 +106,10 @@ def detex(tex):
     """
     if not tex:
         return tex
+    import sys
+    if sys.version_info[0] < 3:
+        # we don't want to handle non-ascii chars in Python2 anymore
+        return tex
     from distutils.spawn import find_executable
     if not find_executable("pandoc"):
         return tex

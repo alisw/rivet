@@ -1,0 +1,36 @@
+Name: BESIII_2019_I1716256
+Year: 2019
+Summary: Form factors for the decays $\chi_{c(1,2)}\to J/\psi \mu^+\mu^-$
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1716256
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 99 (2019) 5, 051101
+Description:
+  'Measurement of the form factors and differential branching ratios
+   for the decays $\chi_{c(1,2)}\to J/\psi \mu^+\mu^-$ by the BESIII collaboration.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2019yeu
+BibTeX: '@article{BESIII:2019yeu,
+    author = "Ablikim, Medina and others",
+    collaboration = "BESIII",
+    title = "{Study of electromagnetic Dalitz decays $\chi_{cJ} \rightarrow \mu^{+}\mu^{-}J/\psi$}",
+    eprint = "1901.06627",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevD.99.051101",
+    journal = "Phys. Rev. D",
+    volume = "99",
+    number = "5",
+    pages = "051101",
+    year = "2019"
+}
+'

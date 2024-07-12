@@ -1,0 +1,33 @@
+Name: BESIII_2022_I2038523
+Year: 2022
+Summary: Hadronic mass in  $D^+_s\to \pi^0\pi^0 e^+\nu_e$
+Experiment: BESIII
+Collider: BEPC
+InspireID: 2038523
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 105 (2022) 3, L031101
+RunInfo: Any process producing Ds+
+Description:
+  'Measurement of the hadronic mass in  $D^+_s\to \pi^0\pi^0 e^+\nu_e$ by BES-III. N.B. the plots where read from the paper and may not have been corrected for acceptance.'
+ValidationInfo:
+  'Herwig 7 events using EvtGen for the decays.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2022dxg
+BibTeX: '@article{BESIII:2022dxg,
+    author = "Ablikim, M. and others",
+    collaboration = "BESIII",
+    title = "{Study of light scalar mesons through $D^+_s \to \pi^0\pi^0e^+ \nu_e$ and $K^0_S K^0_S e^+ \nu_e$ decays}",
+    doi = "10.1103/PhysRevD.105.L031101",
+    journal = "Phys. Rev. D",
+    volume = "105",
+    number = "3",
+    pages = "L031101",
+    year = "2022"
+}
+'

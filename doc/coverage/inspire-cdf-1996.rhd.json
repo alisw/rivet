@@ -1,0 +1,260 @@
+{
+    "398841": [
+        "Measurement of correlated $\\mu - \\bar{b}$ jet cross-sections in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.53.1051", 
+        null, 
+        "hep-ex/9508017", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-95-289-E", 
+            "ANL-HEP-PR-96-26"
+        ]
+    ], 
+    "399854": [
+        "Measurement of $\\sigma \\cdot B (W \\to e \\nu)$ and $\\sigma \\cdot B(Z^0 \\to e^+e^-)$ in $p\\bar{p}$ Collisions at $\\sqrt{s}=1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.76.3070", 
+        null, 
+        "hep-ex/9509010", 
+        "ins399854", 
+        null, 
+        [
+            "FERMILAB-PUB-95-301-E", 
+            "CDF-PUB-ELECTROWEAK-PUBLIC-3312"
+        ]
+    ], 
+    "400161": [
+        "Measurement of the mass of the $B_s^0$ meson", 
+        "CDF", 
+        "10.1103/PhysRevD.53.3496", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-95-317-E"
+        ]
+    ], 
+    "402726": [
+        "Reconstruction of $B^0 \\to J/\\psi K_s^0$ and measurement of ratios of branching ratios involving $B \\to J/\\psi K^*$", 
+        "CDF", 
+        "10.1103/PhysRevLett.76.2015", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-95-368-E"
+        ]
+    ], 
+    "403726": [
+        "Search for gluino and squark cascade decays at the Fermilab Tevatron Collider", 
+        "CDF", 
+        "10.1103/PhysRevLett.76.2006", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-95-399-E", 
+            "CDF-PUB-EXOTIC-3404"
+        ]
+    ], 
+    "404179": [
+        "Search for Charged Higgs Decays of the Top Quark using Hadronic Tau Decays", 
+        "CDF", 
+        "10.1103/PhysRevD.54.735", 
+        null, 
+        "hep-ex/9601003", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-96-004-E"
+        ]
+    ], 
+    "404274": [
+        "Search for the Rare Decay $W^\\pm \\to \\pi^\\pm + \\gamma$", 
+        "CDF", 
+        "10.1103/PhysRevLett.76.2852", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-95-386-E", 
+            "CDF-3131"
+        ]
+    ], 
+    "415602": [
+        "Inclusive jet cross section in ${\\bar p p}$ collisions at $\\sqrt{s}=1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.77.438", 
+        null, 
+        "hep-ex/9601008", 
+        "ins415602", 
+        null, 
+        [
+            "FERMILAB-PUB-96-020-E", 
+            "ANL-HEP-PR-96-104"
+        ]
+    ], 
+    "415860": [
+        "Search for chargino - neutralino production in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.76.4307", 
+        null, 
+        "hep-ex/9603001", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-96-029-E", 
+            "CDF-PUB-EXOTIC-CDFR-3440"
+        ]
+    ], 
+    "416236": [
+        "Measurement of the $B^-$ and $\\bar{B}^0$ meson lifetimes using semileptonic decays", 
+        "CDF", 
+        "10.1103/PhysRevLett.76.4462", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-96-041-E", 
+            "CDF-PUB-BOTTOM-PUB-3492"
+        ]
+    ], 
+    "416237": [
+        "Search for flavor changing neutral current $B$ meson decays in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.76.4675", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-96-040-E", 
+            "CDF-PUB-BOTTOM-PUBLIC-3332"
+        ]
+    ], 
+    "416570": [
+        "Properties of jets in Z boson events from 1.8 TeV $\\bar{p}p$ collisions", 
+        "CDF", 
+        "10.1103/PhysRevLett.77.448", 
+        null, 
+        "hep-ex/9603003", 
+        "ins416570", 
+        null, 
+        [
+            "FERMILAB-PUB-96-056-E"
+        ]
+    ], 
+    "417098": [
+        "Forward-backward charge asymmetry of electron pairs above the $Z^0$ pole", 
+        "CDF", 
+        "10.1103/PhysRevLett.77.2616", 
+        null, 
+        null, 
+        "ins417098", 
+        null, 
+        [
+            "FERMILAB-PUB-96-071-E", 
+            "CDF-PUB-ELECTROWEAK-CDFR-3493"
+        ]
+    ], 
+    "418325": [
+        "Measurement of $\\Lambda_b^0$ lifetime using $\\Lambda_b^0 \\to \\Lambda_c^+ \\ell^- \\bar{\\nu}$", 
+        "CDF", 
+        "10.1103/PhysRevLett.77.1439", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-96-089-E"
+        ]
+    ], 
+    "418433": [
+        "Measurement of the Lifetime of the $B_s^0$ Meson Using the Exclusive Decay Mode $B_s^0 \\to J/\\psi \\phi$", 
+        "CDF", 
+        "10.1103/PhysRevLett.77.1945", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-96-101-E", 
+            "FERMILAB-PUB-98-173-EA"
+        ]
+    ], 
+    "418504": [
+        "Further properties of high mass multi - jet events at the Fermilab proton - anti-proton collider", 
+        "CDF", 
+        "10.1103/PhysRevD.54.4221", 
+        null, 
+        "hep-ex/9605004", 
+        "ins418504", 
+        null, 
+        [
+            "FERMILAB-PUB-96-098-E", 
+            "FERMILAB-PUB-98-173-EU"
+        ]
+    ], 
+    "419439": [
+        "Ratios of bottom meson branching fractions involving $J/\\psi$ mesons and determination of $b$ quark fragmentation fractions", 
+        "CDF", 
+        "10.1103/PhysRevD.54.6596", 
+        null, 
+        "hep-ex/9607003", 
+        "ins419439", 
+        null, 
+        [
+            "FERMILAB-PUB-96-119-E", 
+            "FERMILAB-PUB-98-173-EV"
+        ]
+    ], 
+    "420169": [
+        "Measurement of the $\\gamma + D^{*\\pm}$ cross section in $\\bar{p}p$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.77.5005", 
+        null, 
+        null, 
+        "ins420169", 
+        null, 
+        [
+            "FERMILAB-PUB-96-152-E", 
+            "FERMILAB-PUB-98-173-EB"
+        ]
+    ], 
+    "423148": [
+        "Measurement of the branching fraction $B(B_u^+ \\to J/\\psi \\pi^+)$ and search for $B_c^+ \\to J/\\psi \\pi^+$", 
+        "CDF", 
+        "10.1103/PhysRevLett.77.5176", 
+        null, 
+        null, 
+        "ins423148", 
+        null, 
+        [
+            "FERMILAB-PUB-96-300-E", 
+            "CDF-PUB-BOTTOM-CDFR-3690", 
+            "FERMILAB-PUB-98-173-EC"
+        ]
+    ], 
+    "423414": [
+        "Measurement of dijet angular distributions at CDF", 
+        "CDF", 
+        "10.1103/PhysRevLett.77.5336", 
+        null, 
+        "hep-ex/9609011", 
+        "ins423414", 
+        null, 
+        [
+            "FERMILAB-PUB-96-317-E", 
+            "CDF-PUB-JET-PUBLIC-3773", 
+            "FERMILAB-PUB-98-173-ED", 
+            "FERMILAB-PUB-98-173-EG"
+        ]
+    ]
+}

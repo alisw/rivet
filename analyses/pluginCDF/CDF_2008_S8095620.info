@@ -6,13 +6,14 @@ Collider: Tevatron Run 2
 SpiresID: 8095620
 InspireID: 806082
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Emily Nurse <nurse@hep.ucl.ac.uk>
- - Steffen Schumann <s.schumann(at)thphys.uni-heidelberg.de>
+ - Steffen Schumann <s.schumann@thphys.uni-heidelberg.de>
 References:
  - arXiv:0812.4458
 RunInfo:
-  Requires the process $p\bar{p} \rightarrow {Z} \rightarrow{\ell}\ell$, where $\ell$ is $e$ or $\mu$. Additional hard jets will also have to be included to get a good description. 
+  Requires the process $p\bar{p} \rightarrow {Z} \rightarrow{\ell}\ell$, where $\ell$ is $e$ or $\mu$. Additional hard jets will also have to be included to get a good description.
 NumEvents: 1000000
 Beams: [p-, p+]
 Energies: [1960]
@@ -47,3 +48,8 @@ BibTeX: '@Article{Aaltonen:2008mt,
      doi       = "10.1103/PhysRevD.79.052008",
      SLACcitation  = "%%CITATION = 0812.4458;%%"
 }'
+
+ReleaseTests:
+ - $A TVT-Run-II-Z-e
+ - $A-2 TVT-Run-II-Z-mu
+

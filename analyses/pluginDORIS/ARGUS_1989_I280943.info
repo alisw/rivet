@@ -1,0 +1,34 @@
+Name: ARGUS_1989_I280943
+Year: 1989
+Summary: Spectra and decay distributions for $D_1(2420)^0$ and $D^*_2(2460)^0$ production in $e^+e^-$ collisions at 10 GeV
+Experiment: ARGUS
+Collider: DORIS
+InspireID: 280943
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B232 (1989) 398-404
+RunInfo: e+e- to hadrons
+NeedCrossSection: no
+Beams: [e-, e+]
+Energies: 10
+Description:
+  'Measurements of the scaled momentum spectrum for $D_1(2420)^0$ and $D^*_2(2460)^0$ production in $e^+e^-$ collisions at 10 GeV.
+   The decays $D_1(2420)^0, D^*_2(2460)^0 \to D^{*+}\pi^-\to D^0\pi^+\pi^-$ were used and the helicity angle,
+   i.e. the angle between the two pions in the rest frame of the $D^*$ are is measured. '
+Keywords: []
+BibKey: Albrecht:1989pa
+BibTeX: '@article{Albrecht:1989pa,
+      author         = "Albrecht, H. and others",
+      title          = "{Resonance Decomposition of the $D^*$0 (2420) Through a
+                        Decay Angular Analysis}",
+      collaboration  = "ARGUS",
+      journal        = "Phys. Lett.",
+      volume         = "B232",
+      year           = "1989",
+      pages          = "398-404",
+      doi            = "10.1016/0370-2693(89)90764-8",
+      reportNumber   = "DESY-89-103",
+      SLACcitation   = "%%CITATION = PHLTA,B232,398;%%"
+}'

@@ -5,9 +5,11 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 928289
 Status: VALIDATED
+Reentrant: true
 Authors:
- - Roman Lysak <roman.lysak@cern.ch>, Christian Gutschow <chris.g@cern.ch>
-#References:
+ - Roman Lysak <roman.lysak@cern.ch>
+ - Christian Gutschow <chris.g@cern.ch>
+References:
  - Phys.Rev. D85 (2012) 072004
  - doi:10.1103/PhysRevD.85.072004
  - arXiv:1109.5141 [hep-ex]
@@ -45,3 +47,8 @@ BibTeX: '@article{Aad:2011dm,
       reportNumber   = "CERN-PH-EP-2011-143",
       SLACcitation   = "%%CITATION = ARXIV:1109.5141;%%",
 }'
+
+ReleaseTests:
+ - $A LHC-W-e
+ - $A-2 LHC-W-mu
+

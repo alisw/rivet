@@ -1,0 +1,39 @@
+Name: BESIII_2015_I1376282
+Year: 2015
+Summary: Mass and angular distributions in $J/\psi\to\gamma K^0_SK^0_S\eta$ decays
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1376282
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 115 (2015) 9, 091803
+RunInfo: e+e- > J/psi
+NeedCrossSection: no
+Beams: [e-, e+]
+Energies: [3.1]
+Description:
+  'Measurement of mass and angular distributions in $J/\psi\to\gamma K^0_SK^0_S\eta$ decays.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2015xco
+BibTeX: '@article{BESIII:2015xco,
+    author = "Ablikim, M. and others",
+    collaboration = "BESIII",
+    title = "{Observation and Spin-Parity Determination of the X(1835) in J/\ensuremath{\psi} \textrightarrow{} \ensuremath{\gamma}$K_S^0K_S^0η$}",
+    eprint = "1506.04807",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevLett.115.091803",
+    journal = "Phys. Rev. Lett.",
+    volume = "115",
+    number = "9",
+    pages = "091803",
+    year = "2015"
+}
+'

@@ -1,0 +1,162 @@
+{
+    "717744": [
+        "Evidence for a long-range component in the pion emission source in Au + Au collisions at s(NN)**(1/2) = 200-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.98.132301", 
+        null, 
+        "nucl-ex/0605032", 
+        null, 
+        null, 
+        []
+    ], 
+    "723948": [
+        "Scaling properties of azimuthal anisotropy in Au+Au and Cu+Cu collisions at s(NN) = 200-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.98.162301", 
+        null, 
+        "nucl-ex/0608033", 
+        null, 
+        null, 
+        []
+    ], 
+    "726259": [
+        "Measurement of direct photon production in p + p collisions at s**(1/2) = 200-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.98.012002", 
+        null, 
+        "hep-ex/0609031", 
+        null, 
+        null, 
+        []
+    ], 
+    "726260": [
+        "Measurement of Single Muons at Forward Rapidity in p+p Collisions at s**(1/2) = 200-GeV and Implications for Charm Production", 
+        "PHENIX", 
+        "10.1103/PhysRevD.76.092002", 
+        null, 
+        "hep-ex/0609032", 
+        "ins726260", 
+        null, 
+        []
+    ], 
+    "729950": [
+        "Centrality dependence of pi0 and eta production at large transverse momentum in s(NN)**(1/2) = 200-GeV d+Au collisions", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.98.172302", 
+        null, 
+        "nucl-ex/0610036", 
+        null, 
+        null, 
+        []
+    ], 
+    "731133": [
+        "High transverse momentum $\\eta$ meson production in $p^+ p$, $d^+$ Au and Au+Au collisions at $S(NN) ^{(1/2)}$ = 200-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.75.024909", 
+        null, 
+        "nucl-ex/0611006", 
+        "ins731133", 
+        null, 
+        []
+    ], 
+    "731134": [
+        "A Detailed Study of High-p(T) Neutral Pion Suppression and Azimuthal Anisotropy in Au+Au Collisions at s(NN)**(1/2) = 200-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.76.034904", 
+        null, 
+        "nucl-ex/0611007", 
+        null, 
+        null, 
+        []
+    ], 
+    "731611": [
+        "$J/\\psi$ production versus transverse momentum and rapidity in $p^+ p$ collisions at $\\sqrt{s}$ = 200-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.98.232002", 
+        null, 
+        "hep-ex/0611020", 
+        "ins731611", 
+        null, 
+        []
+    ], 
+    "731666": [
+        "Correlated Production of p and anti-p in Au+Au Collisions at s(NN)**(1/2) = 200-GeV", 
+        "PHENIX", 
+        "10.1016/j.physletb.2007.04.029", 
+        null, 
+        "nucl-ex/0611016", 
+        null, 
+        null, 
+        []
+    ], 
+    "731668": [
+        "Energy Loss and Flow of Heavy Quarks in Au+Au Collisions at s(NN)**(1/2) = 200-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.98.172301", 
+        null, 
+        "nucl-ex/0611018", 
+        "ins731668", 
+        null, 
+        []
+    ], 
+    "731669": [
+        "System Size and Energy Dependence of Jet-Induced Hadron Pair Correlation Shapes in Cu$+$Cu and Au$+$Au Collisions at $\\sqrt{s_{NN}=$ 200 and 62.4 GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.98.232302", 
+        null, 
+        "nucl-ex/0611019", 
+        null, 
+        null, 
+        []
+    ], 
+    "731670": [
+        "$J/\\psi$ Production vs Centrality, Transverse Momentum, and Rapidity in Au+Au Collisions at $\\sqrt{s_{NN}} = 200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.98.232301", 
+        null, 
+        "nucl-ex/0611020", 
+        "ins731670", 
+        null, 
+        []
+    ], 
+    "732097": [
+        "Production of omega mesons at Large Transverse Momenta in p + p and d + Au Collisions at s**(1/2)(NN) = 200-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.75.051902", 
+        null, 
+        "nucl-ex/0611031", 
+        null, 
+        null, 
+        []
+    ], 
+    "746499": [
+        "Elliptic flow for phi mesons and (anti)deuterons in Au + Au collisions at s(NN)**(1/2) = 200-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.99.052301", 
+        null, 
+        "nucl-ex/0703024", 
+        null, 
+        null, 
+        []
+    ], 
+    "749066": [
+        "Measurement of density correlations in pseudorapidity via charged particle multiplicity fluctuations in Au+Au collisions at s(NN)**(1/2) = 200-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.76.034903", 
+        null, 
+        "0704.2894", 
+        null, 
+        null, 
+        []
+    ], 
+    "749394": [
+        "Inclusive cross-section and double helicity asymmetry for $\\pi^0$ production in $p + p$ collisions at $\\sqrt{s} =$ 200 GeV: Implications for the polarized gluon distribution in the proton", 
+        "PHENIX", 
+        "10.1103/PhysRevD.76.051106", 
+        null, 
+        "0704.3599", 
+        null, 
+        null, 
+        []
+    ]
+}

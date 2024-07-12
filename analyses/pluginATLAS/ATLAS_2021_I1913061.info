@@ -1,0 +1,49 @@
+Name: ATLAS_2021_I1913061
+Year: 2021
+Summary: b-fragmentation at 13 TeV
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1913061
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Javier Llorente <javier.llorente.merino@cern.ch>
+References:
+ - arXiv:2108.11650 [hep-ex]
+Keywords:
+ - b-jet
+ - fragmentation
+RunInfo:
+  pp interactions at 13000 GeV. Particles with c*tau>10mm are stable.
+Beams: [p+, p+]
+Energies: [13000]
+Luminosity_fb: 139
+PtCuts: [50.0]
+Description:
+ 'The fragmentation properties of jets containing $b$-hadrons are studied using charged
+ $B$-mesons in 139 fb$^{-1}$ of $pp$ collisions at $\sqrt{s} = 13$ TeV, recorded with
+ the ATLAS detector at the LHC during the period from 2015 to 2018. The $B$ mesons are
+ reconstructed using the decay of $B^{\pm}$ into $J/\psi K^{\pm}$, with the $J/\psi$
+ decaying into a pair of muons. Jets are reconstructed using the anti-$k_t$ algorithm
+ with radius parameter $R=0.4$. The measurement determines the longitudinal and
+ transverse momentum profiles of the reconstructed $B$-hadrons with respect to the
+ axes of the jets to which they are geometrically associated. These distributions are
+ measured in intervals of the jet transverse momentum, ranging from 50 GeV to above
+ 100 GeV. The results are corrected for detector effects and compared with several
+ Monte Carlo predictions using different parton shower and hadronisation models. The
+ results for the longitudinal and transverse profiles provide useful inputs to improve
+ the description of heavy-flavour fragmentation in jets.'
+ReleaseTests:
+ - $A pp-13000-B2JpsiK
+BibKey: ATLAS:2021agf
+BibTeX: '@article{ATLAS:2021agf,
+    	author = "Aad, Georges and others",
+    	collaboration = "ATLAS",
+    	title = "{Measurement of $b$-quark fragmentation properties in jets using the decay $B^{\pm} \to J/\psi K^{\pm}$ in $pp$ collisions at $\sqrt{s} = 13$ TeV with the ATLAS detector}",
+    	eprint = "2108.11650",
+    	archivePrefix = "arXiv",
+    	primaryClass = "hep-ex",
+    	reportNumber = "CERN-EP-2021-123",
+    	month = "8",
+    	year = "2021"
+}'

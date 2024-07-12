@@ -1,0 +1,240 @@
+{
+    "1692393": [
+        "The Belle II Physics Book", 
+        "Belle-II", 
+        "10.1093/ptep/ptz106", 
+        "2644278", 
+        "1808.10567", 
+        null, 
+        null, 
+        [
+            "KEK Preprint 2018-27", 
+            "BELLE2-PUB-PH-2018-001", 
+            "FERMILAB-PUB-18-398-T", 
+            "JLAB-THY-18-2780", 
+            "INT-PUB-18-047", 
+            "UWThPh 2018-26"
+        ]
+    ], 
+    "1736811": [
+        "Belle II pixel detector: Performance of final DEPFET modules", 
+        "Belle-II", 
+        "10.1016/j.nima.2019.05.063", 
+        null, 
+        null, 
+        null, 
+        null, 
+        []
+    ], 
+    "1758794": [
+        "Measurement of $\\mathcal{R}(D)$ and $\\mathcal{R}(D^*)$ with a semileptonic tagging method", 
+        "Belle", 
+        "10.1103/PhysRevLett.124.161803", 
+        null, 
+        "1910.05864", 
+        null, 
+        null, 
+        [
+            "Belle-2019-18", 
+            "KEK-2019-40"
+        ]
+    ], 
+    "1758860": [
+        "Measurement of the integrated luminosity of the Phase 2 data of the Belle II experiment", 
+        "Belle-II", 
+        "10.1088/1674-1137/44/2/021001", 
+        null, 
+        "1910.05365", 
+        null, 
+        null, 
+        [
+            "Belle II Preprint 2019-001; KEK Preprint 2019-44"
+        ]
+    ], 
+    "1760715": [
+        "Observation of the Radiative Decays of $\\Upsilon(1S)$ to $\\chi_{c1}$", 
+        "Belle", 
+        "10.1103/PhysRevLett.124.122001", 
+        null, 
+        "1910.10915", 
+        null, 
+        null, 
+        []
+    ], 
+    "1763802": [
+        "Search for $B^+ \\to \\mu^+\\, \\nu_\\mu$ and $B^+ \\to \\mu^+\\, N$ with inclusive tagging", 
+        "Belle", 
+        "10.1103/PhysRevD.101.032007", 
+        null, 
+        "1911.03186", 
+        null, 
+        null, 
+        [
+            "Belle Preprint 2019-17", 
+            "KEK Preprint 2019-39"
+        ]
+    ], 
+    "1770445": [
+        "Study of $B \\to p {\\bar p} \\pi \\pi$", 
+        "Belle", 
+        "10.1103/PhysRevD.101.052012", 
+        null, 
+        "1912.05999", 
+        null, 
+        null, 
+        [
+            "Belle Preprint 2019-16", 
+            "KEK Preprint 2019-23"
+        ]
+    ], 
+    "1772245": [
+        "Measurement of the charm-mixing parameter $y_{CP}$ in $D^{0}\\to K^{0}_{S}\\omega$ decays at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.102.071102", 
+        null, 
+        "1912.10912", 
+        null, 
+        null, 
+        [
+            "Belle Preprint 2019-22", 
+            "KEK Preprint 2019-52"
+        ]
+    ], 
+    "1773086": [
+        "Search for an Invisibly Decaying $Z^{\\prime}$ Boson at Belle II in $e^+ e^- \\to \\mu^+ \\mu^- (e^{\\pm} \\mu^{\\mp})$ Plus Missing Energy Final States", 
+        "Belle-II", 
+        "10.1103/PhysRevLett.124.141801", 
+        null, 
+        "1912.11276", 
+        null, 
+        null, 
+        [
+            "Belle II Preprint 2019-002", 
+            "KEK Preprint 2019-55,"
+        ]
+    ], 
+    "1777678": [
+        "Update of inclusive cross sections of single and pairs of identified light charged hadrons", 
+        "Belle", 
+        "10.1103/PhysRevD.101.092004", 
+        null, 
+        "2001.10194", 
+        null, 
+        null, 
+        [
+            "Belle Preprint 2020-01", 
+            "KEK Preprint 2019-56"
+        ]
+    ], 
+    "1785816": [
+        "Dalitz analysis of $D^{0}\\to K^{-}\\pi^{+}\\eta$ decays at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.102.012002", 
+        null, 
+        "2003.07759", 
+        null, 
+        null, 
+        [
+            "KEK Preprint 2019-60", 
+            "Belle Preprint 2020-04", 
+            "KEK Preprint 2020-04", 
+            "UCHEP-20-01"
+        ]
+    ], 
+    "1785928": [
+        "First search for the $\\eta_{c2}(1D)$ in $B$ decays at Belle", 
+        "Belle", 
+        "10.1007/JHEP05(2020)034", 
+        null, 
+        "2003.08335", 
+        null, 
+        null, 
+        [
+            "Belle Preprint 2020-02; KEK Preprint 2019-58"
+        ]
+    ], 
+    "1789775": [
+        "Evidence for a vector charmoniumlike state in $e^+e^- \\to D^+_sD^*_{s2}(2573)^-+c.c.$", 
+        "Belle", 
+        "10.1103/PhysRevD.101.091101", 
+        null, 
+        "2004.02404", 
+        null, 
+        null, 
+        []
+    ], 
+    "1790502": [
+        "Search for $B^0$ decays to invisible final states ($+\\gamma$) at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.102.012003", 
+        null, 
+        "2004.03826", 
+        null, 
+        null, 
+        []
+    ], 
+    "1808873": [
+        "Search for Axion-Like Particles produced in $e^+e^-$ collisions at Belle II", 
+        "Belle-II", 
+        "10.1103/PhysRevLett.125.161806", 
+        null, 
+        "2007.13071", 
+        null, 
+        null, 
+        [
+            "Belle II Preprint 2020-001", 
+            "KEK Preprint 2020-10"
+        ]
+    ], 
+    "1814029": [
+        "Search for a doubly-charged $DDK$ bound state in $\\Upsilon(1S,2S)$ inclusive decays and via direct production in $e^+e^-$ collisions at $\\sqrt{s}$ = 10.520, 10.580, and 10.867 GeV", 
+        "Belle", 
+        "10.1103/PhysRevD.102.112001", 
+        null, 
+        "2008.13341", 
+        null, 
+        null, 
+        [
+            "Belle Preprint # 2020-10", 
+            "KEK Preprint # 2020-11"
+        ]
+    ], 
+    "1815814": [
+        "Study of electromagnetic decays of orbitally excited $\\Xi_c$ baryons", 
+        "Belle", 
+        "10.1103/PhysRevD.102.071103", 
+        null, 
+        "2009.03951", 
+        null, 
+        null, 
+        [
+            "Belle Preprint 2019-07 KEK Prepint 2020-6"
+        ]
+    ], 
+    "1818836": [
+        "Search for transitions from  $\\Upsilon(4S)$ and $\\Upsilon (5S)$ to $\\eta_b(1S)$ and $\\eta_b(2S)$ with emission of an $\\omega$ meson", 
+        "Belle", 
+        "10.1103/PhysRevD.102.092011", 
+        null, 
+        "2009.11720", 
+        null, 
+        null, 
+        [
+            "Belle Preprint 2020-15", 
+            "KEK Preprint 2020-17"
+        ]
+    ], 
+    "1826787": [
+        "Search for lepton-number- and baryon-number-violating tau decays at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.102.111101", 
+        null, 
+        "2010.15361", 
+        null, 
+        null, 
+        [
+            "Belle Preprint 2020-16", 
+            "KEK Preprint 2020-33"
+        ]
+    ]
+}

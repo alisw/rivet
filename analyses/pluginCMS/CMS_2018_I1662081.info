@@ -5,6 +5,7 @@ Experiment: CMS
 Collider: LHC
 InspireID: 1662081
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Doug Burns <Douglas.Burns@cern.ch>
  - Emyr Clement <Emyr.Clement@bristol.ac.uk>
@@ -16,7 +17,7 @@ References:
  - Submitted to JHEP
 RunInfo:
   ttbar events at sqrt(s) = 13 TeV, lepton+jets selection at particle level
-Luminosity: 35.9 / fb
+Luminosity_fb: 35.9
 Beams: [p+, p+]
 Energies: [13000]
 Description:
@@ -49,3 +50,5 @@ BibTeX: '@article{Sirunyan:2018ptc,
       reportNumber   = "CMS-TOP-16-014, CERN-EP-2018-013",
       SLACcitation   = "%%CITATION = ARXIV:1803.03991;%%"
 }'
+ReleaseTests:
+ - $A LHC-13-Top-All

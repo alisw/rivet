@@ -1,0 +1,35 @@
+Name: BESIII_2017_I1490896
+Year: 2017
+Summary: $\chi_{c1}\to \eta\pi^+\pi^-$
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1490896
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 95 (2017) 3, 032002
+RunInfo : Any process producing chi_c1
+Description:
+  'Measurement of the mass distributions in the decays $\chi_{c1}\to \eta\pi^+\pi^-$.
+   The data were read from the plots in the paper and may not be corrected for efficiency.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2016tqo
+BibTeX: '@article{BESIII:2016tqo,
+    author = "Ablikim, Medina and others",
+    collaboration = "BESIII",
+    title = "{Amplitude analysis of the $\chi_{c1} \to \eta\pi^+\pi^-$ decays}",
+    eprint = "1610.02479",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevD.95.032002",
+    journal = "Phys. Rev. D",
+    volume = "95",
+    number = "3",
+    pages = "032002",
+    year = "2017"
+}
+'

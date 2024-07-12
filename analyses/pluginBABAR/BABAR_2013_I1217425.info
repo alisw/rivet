@@ -1,0 +1,38 @@
+Name: BABAR_2013_I1217425
+Year: 2013
+Summary: Mass distributions in the decay $\bar{B}^0\to\Lambda_c^+\bar{p}\pi^+\pi^-$
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 1217425
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 87 (2013) 9, 092004
+RunInfo: Any process producing B0/Bbar0, original e+e- at Upsilon(4S)
+Description:
+'Measurements of mass distributions in $\bar{B}^0\to\Lambda_c^+\bar{p}\pi^+\pi^-$ and modes with intermediate states.
+ The data were read from the plots in the paper but are background subtracted and efficiency corrected.'
+ValidationInfo:
+  'Herwig 7 event using EvtGen for decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BaBar:2013sph
+BibTeX: '@article{BaBar:2013sph,
+    author = "Lees, J. P. and others",
+    collaboration = "BaBar",
+    title = "{Study of the decay $\bar{B}^{0}\rightarrow\Lambda_{c}^{+}\bar{p}\pi^{+}\pi^{-}$ and its intermediate states}",
+    eprint = "1302.0191",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BABAR-PUB-12-028, SLAC-PUB-15363",
+    doi = "10.1103/PhysRevD.87.092004",
+    journal = "Phys. Rev. D",
+    volume = "87",
+    number = "9",
+    pages = "092004",
+    year = "2013"
+}
+'

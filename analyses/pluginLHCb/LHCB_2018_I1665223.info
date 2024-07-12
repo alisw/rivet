@@ -1,0 +1,41 @@
+Name: LHCB_2018_I1665223
+Year: 2018
+Summary: Measurement of $pp$ inelastic cross-section at 13 TeV using prompt, long-lived particles in the LHCb fiducial phase-space
+Experiment: LHCB
+Collider: LHC
+InspireID: 1665223
+Status: VALIDATED
+Authors:
+ - Michael Schmelling <michael.schmelling@mpi-hd.mpg.de>
+ - Alex Grecu <alexandru.grecu@nipne.ro>
+References:
+ - JHEP 1806 (2018) 100
+ - DOI:10.1007/JHEP06(2018)100
+ - arXiv:1803.10974
+ - LHCb-PAPER-2018-003, CERN-EP-2018-044
+RunInfo: Proton-proton interactions at 13 TeV centre-of-mass energy. LHCb minimum bias, inelastic events.
+NeedCrossSection: yes
+NumEvents: 100000
+Beams: [p+, p+]
+Energies: [13000]
+Description:
+  'LHCb measurement of the inelastic interaction cross-section in proton-proton collisions at $\sqrt{s}=13$ TeV. Events are selected if they contain at least one prompt long-lived charged particle with momentum $p > 2$ GeV$/c$ and pseudorapidity ($\eta$) in the range $2 < \eta < 5$. A particle is long-lived if its proper (mean) lifetime is larger than $0.3 \times 10^{-10}$ s, (proper $c\tau > 9$ mm) and it is prompt if it is produced directly in the $pp$ collision or if none of its ancestors is long-lived. This definition is recommended by the LHC Minimum Bias and Underlying Event working group. Prompt long-lived charged hadrons should be used themselves in vetoing events rather than their charged decay products (e.g. Sigma +/-, Xi and Omega decays are blocked).'
+Keywords: ['pp collisions','prompt, long-lived charged particles','inelastic scattering','LHCb','CERN LHC','total cross-section','13000 GeV c.m.s.']
+BibKey: Aaij:2018okq
+BibTeX: '@article{Aaij:2018okq,
+      author         = "Aaij, Roel and others",
+      title          = "{Measurement of the inelastic $pp$ cross-section at a
+                        centre-of-mass energy of 13 TeV}",
+      collaboration  = "LHCb",
+      journal        = "JHEP",
+      volume         = "06",
+      year           = "2018",
+      pages          = "100",
+      doi            = "10.1007/JHEP06(2018)100",
+      eprint         = "1803.10974",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "LHCb-PAPER-2018-003, CERN-EP-2018-044,
+                        LHCB-PAPER-2018-003",
+      SLACcitation   = "%%CITATION = ARXIV:1803.10974;%%"
+}'

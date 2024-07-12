@@ -1,0 +1,110 @@
+\RequirePackage{fix-cm}
+%\documentclass{svjour3}                     % onecolumn (standard format)
+%\documentclass[smallcondensed]{svjour3}     % onecolumn (ditto)
+\documentclass[epjc3]{svjour3}       % onecolumn (second format)
+%\documentclass[twocolumn]{svjour3}          % twocolumn
+%\documentclass[preprint,12pt]{elsarticle}
+
+\input{preamble}
+
+\def\part#1{\section*{\large #1}}
+
+\RequirePackage[T1]{fontenc}
+
+\smartqed  % flush right qed marks, e.g. at end of proof
+
+\RequirePackage{graphicx}
+\RequirePackage{mathptmx}      % use Times fonts if available on your TeX system
+\RequirePackage{flushend}
+\RequirePackage[numbers,sort&compress]{natbib}
+\RequirePackage[colorlinks,citecolor=blue,urlcolor=blue,linkcolor=blue]{hyperref}
+\journalname{Eur. Phys. J. C}
+
+\begin{document}
+
+  
+  \title{Rivet user manual}
+
+  \author{Andy~Buckley\thanksref{inst:a}
+    \and
+    Jonathan~Butterworth\thanksref{inst:b}
+    \and
+    David~Grellscheid\thanksref{inst:c}
+    \and
+    Hendrik~Hoeth\thanksref{inst:c}
+    \and
+    Leif~L\"onnblad\thanksref{inst:d}
+    \and
+    James~Monk\thanksref{inst:b}
+    \and
+    Holger~Schulz\thanksref{inst:e}
+    \and
+    Frank~Siegert\thanksref{inst:f,corrauthor}}
+
+
+\institute{PPE Group, School of Physics, University of Edinburgh, UK\label{inst:a}
+    \and
+  HEP Group, Dept. of Physics and Astronomy, UCL, London, UK\label{inst:b}
+    \and
+  IPPP, Durham University, UK\label{inst:c}
+    \and
+  Theoretical Physics, Lund University, Sweden.\label{inst:d}
+    \and
+  Institut f\"ur Physik, Berlin Humboldt University, Germany.\label{inst:e}
+    \and
+  Physikalisches Institut, Freiburg University, Germany.\label{inst:f}
+  \and
+  corresponding author\label{corrauthor}}
+
+%  \cortext[author]{Corresponding author.\\\textit{E-mail address:} frank.siegert@cern.ch}
+
+
+\maketitle
+
+  \begin{abstract}
+    This is the manual and user guide for the Rivet system for the
+    validation and tuning of Monte Carlo event generators. As well as the core
+    Rivet library, this manual describes the usage of the \kbd{rivet} program and
+    the AGILe generator interface library. The depth and level of description is
+    chosen for users of the system, starting with the basics of using validation
+    code written by others, and then covering sufficient details to write new
+    Rivet analyses and calculational components.
+  \end{abstract}
+  \keywords{Event generator; simulation; validation; tuning; QCD}
+
+\section{Introduction}
+\label{sec:intro}
+\input{intro}
+
+\cleardoublepage
+
+\part{Part I: Getting started with Rivet}
+\label{part:gettingstarted}
+\input{gettingstarted}
+
+\cleardoublepage
+
+\part{Part II: How Rivet works}
+\label{part:writinganalyses}
+\input{writinganalyses}
+
+\cleardoublepage
+
+\part{Part III: Appendices}
+\appendix
+
+\section{Typical \kbd{agile-runmc} commands}
+\label{app:agilerunmc}
+\input{agilerunmc}
+
+\section{Acknowledgements}
+\label{app:acknowledgements}
+\input{acknowledgements}
+
+
+\cleardoublepage
+
+\bibliographystyle{h-physrev3}
+\bibliography{refs}
+
+\end{document}

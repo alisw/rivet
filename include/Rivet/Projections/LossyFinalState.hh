@@ -25,18 +25,15 @@ namespace Rivet {
       : _filter(filter)
     {
       setName("LossyFinalState");
-      addProjection(fsp, "FS");
+      declare(fsp, "FS");
     }
 
     /// Stand-alone constructor. Initialises the base FinalState projection.
-    LossyFinalState(FILTER filter,
-                    double mineta = -MAXDOUBLE,
-                    double maxeta = MAXDOUBLE,
-                    double minpt = 0.0)
+    LossyFinalState(FILTER filter, const Cut& c=Cuts::open())
       : _filter(filter)
     {
       setName("LossyFinalState");
-      addProjection(FinalState(mineta, maxeta, minpt), "FS");
+      declare(FinalState(c), "FS");
     }
 
     /// Virtual destructor, to allow subclassing
@@ -51,19 +48,19 @@ namespace Rivet {
     /// Apply the projection on the supplied event.
     void project(const Event& e) {
       const FinalState& fs = applyProjection<FinalState>(e, "FS");
-      getLog() << Log::DEBUG << "Pre-loss number of FS particles = " << fs.particles().size() << endl;
+      getLog() << Log::DEBUG << "Pre-loss number of FS particles = " << fs.particles().size() << '\n';
       _theParticles.clear();
       std::remove_copy_if(fs.particles().begin(), fs.particles().end(),
                           std::back_inserter(_theParticles), _filter);
-      getLog() << Log::DEBUG << "Filtered number of FS particles = " << _theParticles.size() << endl;
+      getLog() << Log::DEBUG << "Filtered number of FS particles = " << _theParticles.size() << '\n';
     }
 
 
     /// Compare projections.
-    int compare(const Projection& p) const {
+    CmpState compare(const Projection& p) const {
       const LossyFinalState<FILTER>& other = pcast< LossyFinalState<FILTER> >(p);
-      const int fscmp = mkNamedPCmp(other, "FS");
-      if (fscmp) return fscmp;
+      const CmpState fscmp = mkNamedPCmp(other, "FS");
+      if (fscmp != CmpState::EQ) return fscmp;
       return _filter.compare(other._filter);
     }
 

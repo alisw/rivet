@@ -1,0 +1,349 @@
+{
+    "920989": [
+        "Branching Fraction Measurements of the Color-Suppressed Decays $\\bar{B}^0 \\to D^{(*)0} \\pi^0$, $D^{(*)0} \\eta$, $D^{(*)0} \\omega$, and $D^{(*)0} \\eta^\\prime$ and Measurement of the Polarization in the Decay $\\bar{B}^0 \\to D^{*0} \\omega$", 
+        "BaBar", 
+        "10.1103/PhysRevD.84.112007", 
+        null, 
+        "1107.5751", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-11-013", 
+            "SLAC-PUB-14521"
+        ]
+    ], 
+    "1116411": [
+        "Branching fraction measurement of $B^+ \\to \\omega \\ell^+ \\nu$ decays", 
+        "BaBar", 
+        "10.1103/PhysRevD.87.032004", 
+        null, 
+        "1205.6245", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-15029", 
+            "BABAR-PUB-12-005"
+        ]
+    ], 
+    "1118428": [
+        "Measurement of CP Asymmetries and Branching Fractions in Charmless Two-Body $B$-Meson Decays to Pions and Kaons", 
+        "BaBar", 
+        "10.1103/PhysRevD.87.052009", 
+        null, 
+        "1206.3525", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-15086", 
+            "BABAR-PUB-12-017"
+        ]
+    ], 
+    "1120999": [
+        "Evidence of $B^+ \\to \\tau^+\\nu$ decays with hadronic B tags", 
+        "BaBar", 
+        "10.1103/PhysRevD.88.031102", 
+        null, 
+        "1207.0698", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-12-20", 
+            "SLAC-PUB-15134"
+        ]
+    ], 
+    "1186384": [
+        "Measurement of $D^0-\\bar{D}^0$ Mixing and CP Violation in Two-Body $D^0$ Decays", 
+        "BaBar", 
+        "10.1103/PhysRevD.87.012004", 
+        null, 
+        "1209.3896", 
+        null, 
+        null, 
+        []
+    ], 
+    "1188886": [
+        "Search for di-muon decays of a low-mass Higgs boson in radiative decays of the \u03a5(1S)", 
+        "BaBar", 
+        "10.1103/PhysRevD.87.031102", 
+        null, 
+        "1210.0287", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-12-023", 
+            "SLAC-PUB-15252"
+        ]
+    ], 
+    "1192035": [
+        "Search for a low-mass scalar Higgs boson decaying to a tau pair in single-photon decays of $\\Upsilon(1S)$", 
+        "BaBar", 
+        "10.1103/PhysRevD.88.071102", 
+        null, 
+        "1210.5669", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-2012-019", 
+            "SLAC-PUB-15264"
+        ]
+    ], 
+    "1206605": [
+        "Search for direct CP violation in singly Cabibbo-suppressed D\u00b1\u2192K+K-\u03c0\u00b1 decays", 
+        "BaBar", 
+        "10.1103/PhysRevD.87.052010", 
+        null, 
+        "1212.1856", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-12-014", 
+            "SLAC-PUB-15077"
+        ]
+    ], 
+    "1207260": [
+        "Search for CP violation in the Decays $D^{\\pm} \\to K^0_{\\scriptscriptstyle S} K^\\pm$, $D_s^{\\pm} \\to K^0_{\\scriptscriptstyle S} K^\\pm$, and $D_s^{\\pm}\\to K^0_{\\scriptscriptstyle S} \\pi^\\pm$", 
+        "BaBar", 
+        "10.1103/PhysRevD.87.052012", 
+        null, 
+        "1212.3003", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-12-029", 
+            "SLAC-PUB-15318"
+        ]
+    ], 
+    "1209559": [
+        "Observation of direct CP violation in the measurement of the Cabibbo-Kobayashi-Maskawa angle gamma with $B^\\pm\\to D^{(*)}K^{(*)\\pm}$ decays", 
+        "BaBar", 
+        "10.1103/PhysRevD.87.052015", 
+        null, 
+        "1301.1029", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-12-025", 
+            "SLAC-PUB-15328"
+        ]
+    ], 
+    "1210649": [
+        "Time-Integrated Luminosity Recorded by the BABAR Detector at the PEP-II $e^+ e^-$ Collider", 
+        "BaBar", 
+        "10.1016/j.nima.2013.04.029", 
+        null, 
+        "1301.2703", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-12-031", 
+            "SLAC-PUB-15347"
+        ]
+    ], 
+    "1217421": [
+        "Study of $e^+e^- \\to p \\bar{p}$ via initial-state radiation at BABAR", 
+        "BaBar", 
+        "10.1103/PhysRevD.87.092005", 
+        null, 
+        "1302.0055", 
+        "ins1217421", 
+        null, 
+        [
+            "BABAR-PUB-12-030", 
+            "SLAC-PUB-15324"
+        ]
+    ], 
+    "1217425": [
+        "Study of the decay $\\bar{B}^{0}\\rightarrow\\Lambda_{c}^{+}\\bar{p}\\pi^{+}\\pi^{-}$ and its intermediate states", 
+        "BaBar", 
+        "10.1103/PhysRevD.87.092004", 
+        null, 
+        "1302.0191", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-12-028", 
+            "SLAC-PUB-15363"
+        ]
+    ], 
+    "1222328": [
+        "Measurement of an Excess of $\\bar{B} \\to D^{(*)}\\tau^- \\bar{\\nu}_\\tau$ Decays and Implications for Charged Higgs Bosons", 
+        "BaBar", 
+        "10.1103/PhysRevD.88.072012", 
+        null, 
+        "1303.0571", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-13-001", 
+            "SLAC-PUB-15381"
+        ]
+    ], 
+    "1225276": [
+        "Search for the rare decays $B \u2192 \u03c0\u2113^+\u2113^-$ and $B^0 \u2192 \u03b7\u2113^+\u2113^-$", 
+        "BaBar", 
+        "10.1103/PhysRevD.88.032012", 
+        null, 
+        "1303.6010", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-12-33", 
+            "SLAC-PUB-15401"
+        ]
+    ], 
+    "1225884": [
+        "Search for $B \\to K^{(*)} \\nu \\overline \\nu$ and invisible quarkonium decays", 
+        "BaBar", 
+        "10.1103/PhysRevD.87.112005", 
+        null, 
+        "1303.7465", 
+        null, 
+        null, 
+        [
+            "BABAR-CONF-13-002", 
+            "SLAC-PUB-15411", 
+            "BABAR-PUB-13-002"
+        ]
+    ], 
+    "1228201": [
+        "Measurement of CP-violating asymmetries in $B^0 \\to (\\rho \\pi)^0$ decays using a time-dependent Dalitz plot analysis", 
+        "BaBar", 
+        "10.1103/PhysRevD.88.012003", 
+        null, 
+        "1304.3503", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-12-026", 
+            "SLAC-PUB-15425"
+        ]
+    ], 
+    "1228910": [
+        "Measurement of the $D^*(2010)^+$ natural line width and the $D^*(2010)^+ - D^0$ mass difference", 
+        "BaBar", 
+        "10.1103/PhysRevD.88.052003", 
+        null, 
+        "1304.5009", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-12-032", 
+            "SLAC-PUB-15374"
+        ]
+    ], 
+    "1229331": [
+        "Measurement of the $D*(2010)^+$ meson width and the $D*(2010)^+ - D^0$ mass difference", 
+        "BaBar", 
+        "10.1103/PhysRevLett.111.111801", 
+        null, 
+        "1304.5657", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-13-004", 
+            "SLAC-PUB-15424"
+        ]
+    ], 
+    "1232210": [
+        "Search for $CP$ Violation in $B^0$-$\\bar{B}^0$ Mixing using Partial Reconstruction of $B^0 \\to D^{*-}X\\ell^+ \\nu_\\ell$ and a Kaon Tag", 
+        "BaBar", 
+        "10.1103/PhysRevLett.111.101802", 
+        null, 
+        "1305.1575", 
+        null, 
+        null, 
+        []
+    ], 
+    "1233527": [
+        "The BABAR Detector: Upgrades, Operation and Performance", 
+        "BaBar", 
+        "10.1016/j.nima.2013.05.107", 
+        null, 
+        "1305.3560", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-13-009", 
+            "SLAC-PUB-15456"
+        ]
+    ], 
+    "1238276": [
+        "Production of charged pions, kaons, and protons in $e^+e^-$ annihilations into hadrons at $\\sqrt{s}$=10.54  GeV", 
+        "BaBar", 
+        "10.1103/PhysRevD.88.032011", 
+        null, 
+        "1306.2895", 
+        "ins1238276", 
+        null, 
+        [
+            "BABAR-PUB-13-003", 
+            "SLAC-PUB-15524"
+        ]
+    ], 
+    "1238807": [
+        "Precision measurement of the $e^+e^- \u2192 K^+K^-(\u03b3)$ cross section with the initial-state radiation method at BABAR", 
+        "BaBar", 
+        "10.1103/PhysRevD.88.032013", 
+        null, 
+        "1306.3600", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-13-006", 
+            "SLAC-PUB-15487"
+        ]
+    ], 
+    "1243605": [
+        "Search for a light Higgs boson decaying to two gluons or $s\\bar{s}$ in the radiative decays of $\\Upsilon(1S)$", 
+        "BaBar", 
+        "10.1103/PhysRevD.88.031701", 
+        null, 
+        "1307.5306", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-13-013", 
+            "SLAC-PUB-15687"
+        ]
+    ], 
+    "1246781": [
+        "Measurement of the Mass of the D0 Meson", 
+        "BaBar", 
+        "10.1103/PhysRevD.88.071104", 
+        null, 
+        "1308.1151", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-13-011", 
+            "SLAC-PUB-15515"
+        ]
+    ], 
+    "1247058": [
+        "Measurement of the $e^+e^- \\to p\\bar{p}$ cross section in the energy range from 3.0 to 6.5 GeV", 
+        "BaBar", 
+        "10.1103/PhysRevD.88.072009", 
+        null, 
+        "1308.1795", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-13-010", 
+            "SLAC-PUB-15707", 
+            "SLAC-PUB-15705"
+        ]
+    ], 
+    "1247460": [
+        "Measurement of the $B^+ \\to \\omega \\ell^+ \\nu$ branching fraction with semileptonically tagged B mesons", 
+        "BaBar", 
+        "10.1103/PhysRevD.88.072006", 
+        null, 
+        "1308.2589", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-13-007", 
+            "SLAC-PUB-15644"
+        ]
+    ]
+}

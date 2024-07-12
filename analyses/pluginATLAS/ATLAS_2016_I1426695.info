@@ -5,9 +5,11 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1426695
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Roman Lysak <roman.lysak@cern.ch>
 References:
+ - ATLAS-STDM-2014-19
  - Eur.Phys.J. C76 (2016) no.7, 403
  - doi:10.1140/epjc/s10052-016-4203-9
  - arXiv:1603.02439 [hep-ex]
@@ -44,3 +46,7 @@ BibTeX: '@article{Aad:2016xww,
       reportNumber   = "CERN-EP-2016-020",
       SLACcitation   = "%%CITATION = ARXIV:1603.02439;%%"
 }'
+
+ReleaseTests:
+ - $A LHC-8-UE
+

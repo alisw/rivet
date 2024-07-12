@@ -1,0 +1,152 @@
+{
+    "260716": [
+        "A Study of Jets From $b$ Quarks Produced in $e^+ e^-$ Annihilations at $\\sqrt{s}=35$-{GeV} to 46-{GeV}.", 
+        "TASSO", 
+        "10.1007/BF01565125", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-88-112"
+        ]
+    ], 
+    "261668": [
+        "A Measurement of Muon Pair Production in $e^+ e^-$ Annihilation at Center-of-mass Energies 35-{GeV} $\\le \\sqrt{s} \\le$ 46.8-{GeV}", 
+        "TASSO", 
+        "10.1007/BF01555879", 
+        null, 
+        null, 
+        "ins261668", 
+        null, 
+        [
+            "DESY-88-059", 
+            "OXFORD-NP-33-88"
+        ]
+    ], 
+    "261669": [
+        "Study of $\\eta_c$ Production in Two Photon Collisions", 
+        "TASSO", 
+        "10.1007/BF01564698", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-88-050", 
+            "WIS-88-15-PH"
+        ]
+    ], 
+    "266893": [
+        "Strange Baryon Production in e+ e- Annihilation", 
+        "TASSO", 
+        "10.1007/BF01674451", 
+        null, 
+        null, 
+        "ins266893", 
+        null, 
+        [
+            "DESY-88-173", 
+            "OUNP-89-3"
+        ]
+    ], 
+    "266894": [
+        "Measurement of the Average Lifetime of B Hadrons", 
+        "TASSO", 
+        "10.1007/BF01548581", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-88-159"
+        ]
+    ], 
+    "267755": [
+        "Pion, Kaon and Proton Cross-sections in $e^+ e^-$ Annihilation at 34-{GeV} and 44-{GeV} Center-of-mass Energy", 
+        "TASSO", 
+        "10.1007/BF01555856", 
+        null, 
+        null, 
+        "ins267755", 
+        null, 
+        [
+            "DESY-88-164"
+        ]
+    ], 
+    "277210": [
+        "Comparison of Inclusive Fractional Momentum Distributions of Quark and Gluon Jets Produced in $e^+ e^-$ Annihilation", 
+        "TASSO", 
+        "10.1007/BF01556665", 
+        null, 
+        null, 
+        "ins277210", 
+        null, 
+        [
+            "DESY-89-032", 
+            "WIS-89-7-PH"
+        ]
+    ], 
+    "277658": [
+        "Charged Multiplicity Distributions and Correlations in e+ e- Annihilation at PETRA Energies", 
+        "TASSO", 
+        "10.1007/BF01674450", 
+        null, 
+        null, 
+        "ins277658", 
+        null, 
+        [
+            "DESY-89-038"
+        ]
+    ], 
+    "277662": [
+        "A Measurement of Electroweak Effects in the Reaction $e^+ e^- \\to \\tau^+ \\tau^-$ at 35-{GeV} and 42.4-{GeV}", 
+        "TASSO", 
+        "10.1007/BF01550932", 
+        null, 
+        null, 
+        "ins277662", 
+        null, 
+        [
+            "DESY-89-035"
+        ]
+    ], 
+    "278856": [
+        "Production and Decay of Charmed Mesons in $e^+ e^-$ Annihilation at $\\sqrt{s}$ > 28-{GeV}", 
+        "TASSO", 
+        "10.1007/BF01415550", 
+        null, 
+        null, 
+        "ins278856", 
+        null, 
+        [
+            "DESY-89-053"
+        ]
+    ], 
+    "279165": [
+        "Experimental Study of Jet Masses in $e^+ e^-$ Annihilation at $c$.m. Energies Between 12-{GeV} and 43.5-{GeV}", 
+        "TASSO", 
+        "10.1007/BF01556666", 
+        null, 
+        null, 
+        "ins279165", 
+        null, 
+        [
+            "DESY-89-069", 
+            "FTUAM-EP-89-03"
+        ]
+    ], 
+    "281159": [
+        "Study of Intermittency in Electron - Positron Annihilation Into Hadrons", 
+        "TASSO", 
+        "10.1016/0370-2693(89)90707-7", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-89-092", 
+            "WIS-89-33-PH"
+        ]
+    ]
+}

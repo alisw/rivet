@@ -1,0 +1,98 @@
+{
+    "1180018": [
+        "Production of the excited charm mesons $D_1$ and $D^*_2$ at HERA", 
+        "ZEUS", 
+        "10.1016/j.nuclphysb.2012.09.007", 
+        null, 
+        "1208.4468", 
+        null, 
+        null, 
+        [
+            "DESY-12-144"
+        ]
+    ], 
+    "1183813": [
+        "Measurement of high-Q2 neutral current deep inelastic $e^+p$ scattering cross sections with a longitudinally polarized positron beam at HERA", 
+        "ZEUS", 
+        "10.1103/PhysRevD.87.052014", 
+        null, 
+        "1208.6138", 
+        "ins1183813", 
+        null, 
+        [
+            "DESY-12-145"
+        ]
+    ], 
+    "1191900": [
+        "Production of $Z^0$ bosons in elastic and quasi-elastic $ep$ collisions at HERA", 
+        "ZEUS", 
+        "10.1016/j.physletb.2012.11.051", 
+        null, 
+        "1210.5511", 
+        null, 
+        null, 
+        [
+            "DESY-12-168"
+        ]
+    ], 
+    "1198429": [
+        "Combination and QCD Analysis of Charm Production Cross Section Measurements in Deep-Inelastic ep Scattering at HERA", 
+        "H1", 
+        "10.1140/epjc/s10052-013-2311-3", 
+        null, 
+        "1211.1182", 
+        null, 
+        null, 
+        [
+            "DESY-12-172"
+        ]
+    ], 
+    "1204785": [
+        "Measurement of inelastic $J/\\psi$ and $\\psi^\\prime$ photoproduction at HERA", 
+        "ZEUS", 
+        "10.1007/JHEP02(2013)071", 
+        null, 
+        "1211.6946", 
+        "ins1204785", 
+        null, 
+        [
+            "DESY-12-226"
+        ]
+    ], 
+    "1220382": [
+        "Measurement of $D^\\pm$ production in deep inelastic $ep$ scattering with the ZEUS detector at HERA", 
+        "ZEUS", 
+        "10.1007/JHEP05(2013)023", 
+        null, 
+        "1302.5058", 
+        "ins1220382", 
+        null, 
+        [
+            "DESY-13-028"
+        ]
+    ], 
+    "1225526": [
+        "Measurement of $ D^{*\\pm}$ production in deep inelastic scattering at HERA", 
+        "ZEUS", 
+        "10.1007/JHEP05(2013)097", 
+        "1532837", 
+        "1303.6578", 
+        "ins1225526", 
+        null, 
+        [
+            "DESY-13-054"
+        ]
+    ], 
+    "1239346": [
+        "Measurement of charm fragmentation fractions in photoproduction at HERA", 
+        "ZEUS", 
+        "10.1007/JHEP09(2013)058", 
+        null, 
+        "1306.4862", 
+        null, 
+        null, 
+        [
+            "DESY-13-106"
+        ]
+    ]
+}

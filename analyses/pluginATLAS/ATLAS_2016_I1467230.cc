@@ -24,7 +24,7 @@ namespace Rivet {
 
 
     /// Default constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2016_I1467230);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2016_I1467230);
 
 
     /// Initialization, called once before running
@@ -32,7 +32,7 @@ namespace Rivet {
 
       for (int iT = 0; iT < kNPartTypes; ++iT) {
         for (int iR = 0; iR < kNregions; ++iR) {
-          _sumW[iT][iR] = 0.;
+          book(_sumW[iT][iR], "_sumW" + to_str(iT) + to_str(iR));
         }
       }
 
@@ -41,10 +41,10 @@ namespace Rivet {
 
       for (int iT = 0; iT < kNPartTypes; ++iT) {
         for (int iR = 0; iR < kNregions; ++iR) {
-          _hist_nch  [iT][iR] = bookHisto1D  ( 1, iR + 1, iT + 1);
-          _hist_pt   [iT][iR] = bookHisto1D  ( 2, iR + 1, iT + 1);
-          _hist_eta  [iT][iR] = bookHisto1D  ( 3, iR + 1, iT + 1);
-          _hist_ptnch[iT][iR] = bookProfile1D( 4, iR + 1, iT + 1);
+          book(_hist_nch  [iT][iR],  1, iR + 1, iT + 1);
+          book(_hist_pt   [iT][iR],  2, iR + 1, iT + 1);
+          book(_hist_eta  [iT][iR],  3, iR + 1, iT + 1);
+          book(_hist_ptnch[iT][iR],  4, iR + 1, iT + 1);
         }
       }
 
@@ -52,25 +52,24 @@ namespace Rivet {
 
 
     /// Fill histograms for the given particle selection and phase-space region
-    void fillPtEtaNch(const Particles& particles, int ptype, int iRegion, double weight) {
+    void fillPtEtaNch(const Particles& particles, int ptype, int iRegion) {
 
       // Skip if event fails multiplicity cut
       const size_t nch = particles.size();
       if (nch < 2) return;
 
-      // Fill event weight info
-      _sumW[ptype][iRegion] += weight;
+      _sumW[ptype][iRegion]->fill();
 
       // Fill nch
-      _hist_nch[ptype][iRegion]->fill(nch, weight);
+      _hist_nch[ptype][iRegion]->fill(nch);
 
       // Loop over particles, fill pT, eta and ptnch
       for (const Particle& p : particles)  {
         const double pt  = p.pT()/GeV;
         const double eta = p.eta();
-        _hist_pt   [ptype][iRegion]->fill(pt , weight/pt);
-        _hist_eta  [ptype][iRegion]->fill(eta, weight);
-        _hist_ptnch[ptype][iRegion]->fill(nch, pt, weight);
+        _hist_pt   [ptype][iRegion]->fill(pt , 1.0/pt);
+        _hist_eta  [ptype][iRegion]->fill(eta);
+        _hist_ptnch[ptype][iRegion]->fill(nch, pt);
       }
     }
 
@@ -88,8 +87,8 @@ namespace Rivet {
 
       // Fill all histograms
       for (int iR = 0; iR < kNregions; ++iR)  {
-        fillPtEtaNch(pall,       k_AllCharged, iR, event.weight());
-        fillPtEtaNch(pnostrange, k_NoStrange,  iR, event.weight());
+        fillPtEtaNch(pall,       k_AllCharged, iR);
+        fillPtEtaNch(pnostrange, k_NoStrange,  iR);
       }
 
     }
@@ -101,10 +100,10 @@ namespace Rivet {
       // Scale all histograms
       for (int iT = 0; iT < kNPartTypes; ++iT) {
         for (int iR = 0; iR < kNregions; ++iR) {
-          if (_sumW[iT][iR] > 0) {
-            scale(_hist_nch[iT][iR], 1.0/_sumW[iT][iR]);
-            scale(_hist_pt [iT][iR], 1.0/_sumW[iT][iR]/TWOPI/5.);
-            scale(_hist_eta[iT][iR], 1.0/_sumW[iT][iR]);
+          if (_sumW[iT][iR]->val() > 0) {
+            scale(_hist_nch[iT][iR], 1.0/ *_sumW[iT][iR]);
+            scale(_hist_pt [iT][iR], 1.0/ dbl(*_sumW[iT][iR])/TWOPI/5.);
+            scale(_hist_eta[iT][iR], 1.0/ *_sumW[iT][iR]);
           }
         }
       }
@@ -115,7 +114,7 @@ namespace Rivet {
   private:
 
     /// Weight sums
-    double _sumW[kNPartTypes][kNregions];
+    CounterPtr _sumW[kNPartTypes][kNregions];
 
     /// @name Histogram arrays
     //@{
@@ -129,6 +128,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2016_I1467230);
+  RIVET_DECLARE_PLUGIN(ATLAS_2016_I1467230);
 
 }

@@ -17,18 +17,17 @@ namespace Rivet {
     void init() {
       FinalState fs;
       FastJets antikt(fs, FastJets::ANTIKT, 0.4);
-      addProjection(antikt, "ANTIKT");
-      _h_chi_dijet.addHistogram(6000., 13000., bookHisto1D(1, 1, 1));
-      _h_chi_dijet.addHistogram(5400., 6000., bookHisto1D(2, 1, 1));
-      _h_chi_dijet.addHistogram(4800., 5400., bookHisto1D(3, 1, 1));
-      _h_chi_dijet.addHistogram(4200., 4800., bookHisto1D(4, 1, 1));
-      _h_chi_dijet.addHistogram(3600., 4200., bookHisto1D(5, 1, 1));
-      _h_chi_dijet.addHistogram(3000., 3600., bookHisto1D(6, 1, 1));
-      _h_chi_dijet.addHistogram(2400., 3000., bookHisto1D(7, 1, 1));
+      declare(antikt, "ANTIKT");
+      {Histo1DPtr tmp; _h_chi_dijet.add(6000., 13000., book(tmp,1, 1, 1));}
+      {Histo1DPtr tmp; _h_chi_dijet.add(5400., 6000., book(tmp,2, 1, 1));}
+      {Histo1DPtr tmp; _h_chi_dijet.add(4800., 5400., book(tmp,3, 1, 1));}
+      {Histo1DPtr tmp; _h_chi_dijet.add(4200., 4800., book(tmp,4, 1, 1));}
+      {Histo1DPtr tmp; _h_chi_dijet.add(3600., 4200., book(tmp,5, 1, 1));}
+      {Histo1DPtr tmp; _h_chi_dijet.add(3000., 3600., book(tmp,6, 1, 1));}
+      {Histo1DPtr tmp; _h_chi_dijet.add(2400., 3000., book(tmp,7, 1, 1));}
     }
 
     void analyze(const Event& event) {
-      const double weight = event.weight();
       const Jets& jets = applyProjection<JetAlg>(event, "ANTIKT").jetsByPt();
       if (jets.size() < 2) vetoEvent;
       FourMomentum j0(jets[0].momentum());
@@ -38,12 +37,12 @@ namespace Rivet {
       if (fabs(y0+y1)/2. > 1.11) vetoEvent;
       double mjj = FourMomentum(j0+j1).mass();
       double chi = exp(fabs(y0-y1));
-      if(chi<16.)  _h_chi_dijet.fill(mjj, chi, weight);
+      if(chi<16.)  _h_chi_dijet.fill(mjj, chi);
     }
 
 
     void finalize() {
-      foreach (Histo1DPtr hist, _h_chi_dijet.getHistograms()) {
+      for (Histo1DPtr hist : _h_chi_dijet.histos()) {
         normalize(hist);
       }
     }
@@ -51,13 +50,13 @@ namespace Rivet {
 
   private:
 
-    BinnedHistogram<double> _h_chi_dijet;
+    BinnedHistogram _h_chi_dijet;
 
   };
 
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CMS_2018_I1663452);
+  RIVET_DECLARE_PLUGIN(CMS_2018_I1663452);
 
 }

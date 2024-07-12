@@ -1,0 +1,37 @@
+Name: DELPHI_1999_I499183
+Year: 1999
+Summary: Event Shapes at 133, 161, 172 and 183 GeV
+Experiment: DELPHI
+Collider: LEP
+InspireID: 499183
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B456 (1999) 322-340, 1999 
+RunInfo:
+	e+e- to hadrons. Beam energy must be specified as analysis option "ENERGY" when rivet-merging samples.
+NeedCrossSection: no
+Beams: [e-, e+]
+Energies: [133,161,172,183]
+Options:
+ - ENERGY=133,161,172,183
+Description:
+  'A wide range of event shapes in $e^+e^-$ collisions for centre-of-mass energies 133, 161, 172 and 183 GeV.
+   Beam energy must be specified as analysis option "ENERGY" when rivet-merging samples.'
+Keywords: []
+BibKey: Abreu:1999rc
+BibTeX: '@article{Abreu:1999rc,
+      author         = "Abreu, P. and others",
+      title          = "{Energy dependence of event shapes and of alpha(s) at
+                        LEP-2}",
+      collaboration  = "DELPHI",
+      journal        = "Phys. Lett.",
+      volume         = "B456",
+      year           = "1999",
+      pages          = "322-340",
+      doi            = "10.1016/S0370-2693(99)00472-4",
+      reportNumber   = "CERN-EP-99-044, CERN-EP-99-44",
+      SLACcitation   = "%%CITATION = PHLTA,B456,322;%%"
+}'

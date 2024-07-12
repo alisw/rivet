@@ -1,0 +1,137 @@
+{
+    "401305": [
+        "Measurement of the proton structure function F2 at low x and low q**2 at HERA", 
+        "ZEUS", 
+        "10.1007/s002880050064", 
+        null, 
+        "hep-ex/9510009", 
+        "ins401305", 
+        null, 
+        [
+            "DESY-95-193", 
+            "ANL-HEP-PR-96-88"
+        ]
+    ], 
+    "401492": [
+        "Rapidity gaps between jets in photoproduction at HERA", 
+        "ZEUS", 
+        "10.1016/0370-2693(95)01588-4", 
+        null, 
+        "hep-ex/9510012", 
+        "ins401492", 
+        null, 
+        [
+            "DESY-95-194"
+        ]
+    ], 
+    "402646": [
+        "Inclusive charged particle distributions in deep inelastic scattering events at HERA", 
+        "ZEUS", 
+        "10.1007/s002880050075", 
+        null, 
+        "hep-ex/9511010", 
+        "ins402646", 
+        null, 
+        [
+            "DESY-95-221"
+        ]
+    ], 
+    "415642": [
+        "Measurement of elastic $\\phi$ photoproduction at HERA", 
+        "ZEUS", 
+        "10.1016/0370-2693(96)00172-4", 
+        null, 
+        "hep-ex/9601009", 
+        "ins415642", 
+        null, 
+        [
+            "DESY-96-002"
+        ]
+    ], 
+    "415942": [
+        "Measurement of the diffractive cross-section in deep inelastic scattering", 
+        "ZEUS", 
+        "10.1007/s002880050118", 
+        null, 
+        "hep-ex/9602010", 
+        "ins415942", 
+        null, 
+        [
+            "DESY-96-018", 
+            "ANL-HEP-PR-96-89"
+        ]
+    ], 
+    "418041": [
+        "Measurement of the reaction gamma* p --> phi p in deep inelastic e+ p scattering at HERA", 
+        "ZEUS", 
+        "10.1016/0370-2693(96)00603-X", 
+        null, 
+        "hep-ex/9604008", 
+        "ins418041", 
+        null, 
+        [
+            "DESY-96-067", 
+            "ANL-HEP-PR-96-87"
+        ]
+    ], 
+    "418926": [
+        "Dijet angular distributions in direct and resolved photoproduction at HERA", 
+        "ZEUS", 
+        "10.1016/0370-2693(96)00931-8", 
+        null, 
+        "hep-ex/9605009", 
+        "ins418926", 
+        null, 
+        [
+            "DESY-96-094"
+        ]
+    ], 
+    "419261": [
+        "Observation of events with an energetic forward neutron in deep inelastic scattering at HERA", 
+        "ZEUS", 
+        "10.1016/0370-2693(96)00688-0", 
+        null, 
+        "hep-ex/9606006", 
+        null, 
+        null, 
+        [
+            "DESY-96-093"
+        ]
+    ], 
+    "420053": [
+        "Study of charged current $e p$ interactions at $Q^{2}$ > $200-Gev^{2}$ with the ZEUS detector at HERA", 
+        "ZEUS", 
+        "10.1007/s002880050222", 
+        null, 
+        "hep-ex/9606014", 
+        "ins420053", 
+        null, 
+        [
+            "DESY-96-104"
+        ]
+    ], 
+    "420332": [
+        "Measurement of the F2 structure function in deep inelastic e+ p scattering using 1994 data from the ZEUS detector at HERA", 
+        "ZEUS", 
+        "10.1007/s002880050260", 
+        null, 
+        "hep-ex/9607002", 
+        "ins420332", 
+        null, 
+        [
+            "DESY-96-076"
+        ]
+    ], 
+    "422159": [
+        "Measurement of elastic omega photoproduction at HERA", 
+        "ZEUS", 
+        "10.1007/s002880050297", 
+        null, 
+        "hep-ex/9608010", 
+        "ins422159", 
+        null, 
+        [
+            "DESY-96-159"
+        ]
+    ]
+}

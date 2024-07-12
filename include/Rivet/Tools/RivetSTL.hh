@@ -4,38 +4,53 @@
 #include <string>
 #include <array>
 #include <vector>
-#include <set>
 #include <list>
+#include <set>
 #include <map>
-#include <utility>
-#include <tuple>
-#include <algorithm>
-#include <type_traits>
-#include <stdexcept>
-#include <cassert>
 #include <memory>
-#include <typeinfo>
-#include <sstream>
-#include <fstream>
-#include <iostream>
-#include <iomanip>
-#include <cmath>
-#include <limits>
 #include <functional>
-
-
-#ifndef foreach
-/// @decl A foreach macro for backward compatibility with BOOST_FOREACH
-#define foreach(value, container) for (value : container)
-#endif
-
+#include <ostream>
+#include <fstream>
+#include <sstream>
+// #include <tuple>
+// #include <utility>
+// #include <algorithm>
+// #include <cassert>
+// #include <typeinfo>
+// #include <iomanip>
+// #include <cmath>
+// #include <limits>
 
 namespace Rivet {
 
 
   /// We implicitly use STL entities in the Rivet namespace
-  using namespace std;
+  // using namespace std;
+  using std::string;
+  using std::to_string;
 
+  using std::ifstream;
+  using std::ofstream;
+
+  using std::array;
+  using std::vector;
+  using std::list;
+  using std::set;
+  using std::multiset;
+  using std::map;
+  using std::multimap;
+  using std::pair;
+  using std::make_pair;
+
+  using std::unique_ptr;
+  using std::shared_ptr;
+  using std::make_shared;
+  using std::make_unique;
+  using std::dynamic_pointer_cast;
+
+  using std::initializer_list;
+
+  using std::function;
 
   /// @name Streaming containers as string reps
   /// @todo Make these named toStr rather than operator<<
@@ -66,6 +81,13 @@ namespace Rivet {
 
   //@}
 
+  /// @name Convenience container typedefs
+  //@{
+  typedef vector<std::string> strings;
+  typedef vector<double> doubles;
+  typedef vector<float> floats;
+  typedef vector<int> ints;
+  //@}
 
   /// @name Boolean-return container searching
   //@{
@@ -129,17 +151,17 @@ namespace std {
 
   /// Append a single item to vector @a v
   template <typename T>
-  inline void operator+=(std::vector<T>& v, const T& x) { v.push_back(x); }
+  inline void operator += (std::vector<T>& v, const T& x) { v.push_back(x); }
 
   /// Append all the items from vector @a v2 to vector @a v1
   template <typename T>
-  inline void operator+=(std::vector<T>& v1, const std::vector<T>& v2) {
+  inline void operator += (std::vector<T>& v1, const std::vector<T>& v2) {
     for (const auto& x : v2) v1.push_back(x);
   }
 
   /// Create a new vector from the concatenated items in vectors @a v1 and @a v2
   template <typename T>
-  inline std::vector<T> operator+(const std::vector<T>& v1, const std::vector<T>& v2) {
+  inline std::vector<T> operator + (const std::vector<T>& v1, const std::vector<T>& v2) {
     std::vector<T> rtn(v1);
     rtn += v2;
     return rtn;
@@ -148,13 +170,13 @@ namespace std {
 
   /// Merge the contents of set @a s2 into @a s1
   template <typename T>
-  inline void operator+=(std::set<T>& s1, const std::set<T>& s2) {
+  inline void operator += (std::set<T>& s1, const std::set<T>& s2) {
     for (const auto& x : s2) s1.insert(x);
   }
 
   /// Merge the contents of sets @a s1 and @a s2
   template <typename T>
-  inline std::set<T> operator+(const std::set<T>& s1, const std::set<T>& s2) {
+  inline std::set<T> operator + (const std::set<T>& s1, const std::set<T>& s2) {
     std::set<T> rtn(s1);
     rtn += s2;
     return rtn;
@@ -168,10 +190,10 @@ namespace std {
 
   /// Get a function pointer / hash integer from an std::function
   template<typename T, typename... U>
-  inline size_t get_address(std::function<T(U...)> f) {
+  inline uintptr_t get_address(std::function<T(U...)> f) {
     typedef T(fnType)(U...);
     fnType ** fnPointer = f.template target<fnType*>();
-    return (fnPointer != nullptr) ? reinterpret_cast<size_t>(*fnPointer) : 0;
+    return (fnPointer != nullptr) ? reinterpret_cast<uintptr_t>(*fnPointer) : 0;
   }
 
   //@}

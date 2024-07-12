@@ -1,0 +1,38 @@
+Name: BABAR_2011_I920989
+Year: 2011
+Summary: Helicity angles in the decay $B^0\to D^{*0}\omega$
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 920989
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson
+References:
+ - Phys.Rev.D 84 (2011) 112007,
+RunInfo: Any process producing Bbar0, originally Upsilon(4S) decay
+Description:
+  'Measurement of the helicity angles in the decay $B^0\to D^{*0}\omega$. The data were
+   read from the plots in the paper andmay not have been corrected.'
+ValidationInfo:
+  'Herwig 7 events using EvtGen for B decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BaBar:2011qjw
+BibTeX: '@article{BaBar:2011qjw,
+    author = "Lees, J. P. and others",
+    collaboration = "BaBar",
+    title = "{Branching Fraction Measurements of the Color-Suppressed Decays $\bar{B}^0 \to D^{(*)0} \pi^0$, $D^{(*)0} \eta$, $D^{(*)0} \omega$, and $D^{(*)0} \eta^\prime$ and Measurement of the Polarization in the Decay $\bar{B}^0 \to D^{*0} \omega$}",
+    eprint = "1107.5751",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BABAR-PUB-11-013, SLAC-PUB-14521",
+    doi = "10.1103/PhysRevD.84.112007",
+    journal = "Phys. Rev. D",
+    volume = "84",
+    pages = "112007",
+    year = "2011",
+    note = "[Erratum: Phys.Rev.D 87, 039901 (2013)]"
+}
+'

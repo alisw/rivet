@@ -1,0 +1,34 @@
+Name: FOCUS_2004_I663820
+Year: 2004
+Summary: Mass distributions in the decay $D^0\to K^+K^-\pi^+\pi^-$
+Experiment: FOCUS
+Collider: Fermilab 
+InspireID: 663820
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett.B 610 (2005) 225-234
+Description:
+  'Measurement of the mass distributions in the decay $D^0\to K^+K^-\pi^+\pi^-$ by FOCUS. The data were read from the plots in the paper and therefore for some points the error bars are the size of the point. It is also not clear that any resolution effects have been unfolded.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: FOCUS:2004prc
+BibTeX: '@article{FOCUS:2004prc,
+    author = "Link, J. M. and others",
+    collaboration = "FOCUS",
+    title = "{Study of the D0 ---\ensuremath{>} K+ K- pi+ pi-}",
+    eprint = "hep-ex/0411031",
+    archivePrefix = "arXiv",
+    reportNumber = "FERMILAB-PUB-04-326-E",
+    doi = "10.1016/j.physletb.2005.02.005",
+    journal = "Phys. Lett. B",
+    volume = "610",
+    pages = "225--234",
+    year = "2005"
+}
+'

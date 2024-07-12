@@ -12,6 +12,7 @@ namespace Rivet {
 
   /// @brief CDF Run II analysis: jet \f$ p_T \f$ and \f$ \eta \f$
   ///   distributions in Z + (b) jet production
+  ///
   /// @author Lars Sonnenschein
   ///
   /// This CDF analysis provides \f$ p_T \f$ and \f$ \eta \f$ distributions of
@@ -20,18 +21,14 @@ namespace Rivet {
   public:
 
     /// Constructor
-    CDF_2006_S6653332()
-      : Analysis("CDF_2006_S6653332"),
-        _Rjet(0.7), _JetPtCut(20.), _JetEtaCut(1.5), _Lep1PtCut(18.), _Lep2PtCut(10.), _LepEtaCut(1.1),
-        _sumWeightsWithZ(0.0), _sumWeightsWithZJet(0.0)
-    {    }
+    RIVET_DEFAULT_ANALYSIS_CTOR(CDF_2006_S6653332);
 
 
     /// @name Analysis methods
     //@{
 
     void init() {
-      const FinalState fs(-3.6, 3.6);
+      const FinalState fs(Cuts::abseta < 3.6);
       declare(fs, "FS");
 
       // Create a final state with any e+e- or mu+mu- pair with
@@ -39,7 +36,7 @@ namespace Rivet {
       vector<pair<PdgId,PdgId> > vids;
       vids.push_back(make_pair(PID::ELECTRON, PID::POSITRON));
       vids.push_back(make_pair(PID::MUON, PID::ANTIMUON));
-      FinalState fs2(-3.6, 3.6);
+      FinalState fs2((Cuts::etaIn(-3.6, 3.6)));
       InvMassFinalState invfs(fs2, vids, 66*GeV, 116*GeV);
       declare(invfs, "INVFS");
 
@@ -50,9 +47,11 @@ namespace Rivet {
       declare(FastJets(vfs, FastJets::CDFMIDPOINT, 0.7), "Jets");
 
       // Book histograms
-      _sigmaBJet = bookHisto1D(1, 1, 1);
-      _ratioBJetToZ = bookHisto1D(2, 1, 1);
-      _ratioBJetToJet = bookHisto1D(3, 1, 1);
+      book(_sigmaBJet ,1, 1, 1);
+      book(_ratioBJetToZ ,2, 1, 1);
+      book(_ratioBJetToJet ,3, 1, 1);
+      book(_sumWeightsWithZ, "sumWeightsWithZ");
+      book(_sumWeightsWithZJet, "sumWeightsWithZJet");
     }
 
 
@@ -75,7 +74,7 @@ namespace Rivet {
       if (ZDecayProducts[0].abspid()==13 && Lep1Eta > 1. && Lep2Eta > 1.) vetoEvent;
       if (Lep1Pt < _Lep1PtCut && Lep2Pt < _Lep2PtCut) vetoEvent;
 
-      _sumWeightsWithZ += event.weight();
+      _sumWeightsWithZ->fill();
 
       /// @todo Write out a warning if there are more than two decay products
       FourMomentum Zmom = ZDecayProducts[0].momentum() +  ZDecayProducts[1].momentum();
@@ -83,10 +82,10 @@ namespace Rivet {
       // Put all b-quarks in a vector
       /// @todo Use jet contents rather than accessing quarks directly
       Particles bquarks;
-      /// @todo Use nicer looping
-      for (GenEvent::particle_const_iterator p = event.genEvent()->particles_begin(); p != event.genEvent()->particles_end(); ++p) {
-        if ( std::abs((*p)->pdg_id()) == PID::BQUARK ) {
-          bquarks.push_back(Particle(**p));
+      /// @todo is this HepMC wrangling necessary?
+      for (ConstGenParticlePtr p: HepMCUtils::particles(event.genEvent())) {
+        if ( std::abs(p->pdg_id()) == PID::BQUARK ) {
+          bquarks.push_back(Particle(*p));
         }
       }
 
@@ -108,7 +107,7 @@ namespace Rivet {
           // Does the jet contain a b-quark?
           /// @todo Use jet contents rather than accessing quarks directly
           bool bjet = false;
-          foreach (const Particle& bquark,  bquarks) {
+          for (const Particle& bquark : bquarks) {
             if (deltaR(jt->rapidity(), jt->phi(), bquark.rapidity(), bquark.phi()) <= _Rjet) {
               bjet = true;
               break;
@@ -120,11 +119,11 @@ namespace Rivet {
         }
       } // end loop around jets
 
-      if (numJet > 0) _sumWeightsWithZJet += event.weight();
+      if (numJet > 0) _sumWeightsWithZJet->fill();
       if (numBJet > 0) {
-        _sigmaBJet->fill(1960.0,event.weight());
-        _ratioBJetToZ->fill(1960.0,event.weight());
-        _ratioBJetToJet->fill(1960.0,event.weight());
+        _sigmaBJet->fill(1960.0);
+        _ratioBJetToZ->fill(1960.0);
+        _ratioBJetToJet->fill(1960.0);
       }
 
     }
@@ -133,12 +132,12 @@ namespace Rivet {
     /// Finalize
     void finalize() {
       MSG_DEBUG("Total sum of weights = " << sumOfWeights());
-      MSG_DEBUG("Sum of weights for Z production in mass range = " << _sumWeightsWithZ);
-      MSG_DEBUG("Sum of weights for Z+jet production in mass range = " << _sumWeightsWithZJet);
+      MSG_DEBUG("Sum of weights for Z production in mass range = " << dbl(*_sumWeightsWithZ));
+      MSG_DEBUG("Sum of weights for Z+jet production in mass range = " << dbl(*_sumWeightsWithZJet));
 
       scale(_sigmaBJet, crossSection()/sumOfWeights());
-      scale(_ratioBJetToZ, 1.0/_sumWeightsWithZ);
-      scale(_ratioBJetToJet, 1.0/_sumWeightsWithZJet);
+      scale(_ratioBJetToZ, 1.0/ *_sumWeightsWithZ);
+      scale(_ratioBJetToJet, 1.0/ *_sumWeightsWithZJet);
     }
 
     //@}
@@ -147,31 +146,32 @@ namespace Rivet {
   private:
 
     /// @name Cuts and counters
-    //@{
-    double _Rjet;
-    double _JetPtCut;
-    double _JetEtaCut;
-    double _Lep1PtCut;
-    double _Lep2PtCut;
-    double _LepEtaCut;
+    /// @{
+    const double _Rjet = 0.7;
+    const double _JetPtCut = 20.;
+    const double _JetEtaCut = 1.5;
+    const double _Lep1PtCut = 18.;
+    const double _Lep2PtCut = 10.;
+    const double _LepEtaCut = 1.1;
+    /// @}
 
-    double _sumWeightsWithZ;
-    double _sumWeightsWithZJet;
-
-    //@}
+    /// @name Cuts and counters
+    /// @{
+    CounterPtr _sumWeightsWithZ;
+    CounterPtr _sumWeightsWithZJet;
+    /// @}
 
     /// @name Histograms
-    //@{
+    /// @{
     Histo1DPtr _sigmaBJet;
     Histo1DPtr _ratioBJetToZ;
     Histo1DPtr _ratioBJetToJet;
-    //@}
+    /// @}
 
   };
 
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CDF_2006_S6653332);
+  RIVET_DECLARE_ALIASED_PLUGIN(CDF_2006_S6653332, CDF_2006_I717572);
 
 }

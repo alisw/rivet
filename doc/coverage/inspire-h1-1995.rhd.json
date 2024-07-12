@@ -1,0 +1,170 @@
+{
+    "380162": [
+        "Observation of hard processes in rapidity gap events in gamma p interactions at HERA", 
+        "H1", 
+        "10.1016/0550-3213(94)00541-L", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-94-198"
+        ]
+    ], 
+    "380945": [
+        "Determination of the strong coupling constant from jet rates in deep inelastic scattering", 
+        "H1", 
+        "10.1016/0370-2693(95)00095-3", 
+        null, 
+        null, 
+        "ins380945", 
+        null, 
+        [
+            "DESY-94-220"
+        ]
+    ], 
+    "392680": [
+        "A Measurement of the proton structure function f2 (x, Q**2)", 
+        "H1", 
+        "10.1016/0550-3213(95)98236-U", 
+        null, 
+        "hep-ex/9503001", 
+        "ins392680", 
+        null, 
+        [
+            "DESY-95-006"
+        ]
+    ], 
+    "393286": [
+        "First measurement of the deep inelastic structure of proton diffraction", 
+        "H1", 
+        "10.1016/0370-2693(95)00279-T", 
+        null, 
+        "hep-ex/9503005", 
+        "ins393286", 
+        null, 
+        [
+            "DESY-95-036"
+        ]
+    ], 
+    "393526": [
+        "Experimental study of hard photon radiation processes at HERA", 
+        "H1", 
+        "10.1007/BF01579628", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-95-024"
+        ]
+    ], 
+    "394176": [
+        "Inclusive parton cross-sections in photoproduction and photon structure", 
+        "H1", 
+        "10.1016/0550-3213(95)00230-P", 
+        null, 
+        "hep-ex/9504004", 
+        "ins394176", 
+        null, 
+        [
+            "DESY-95-062"
+        ]
+    ], 
+    "394404": [
+        "Leptoquarks and compositeness scales from a contact interaction analysis of deep inelastic e+- p scattering at HERA", 
+        "H1", 
+        "10.1016/0370-2693(95)00611-N", 
+        null, 
+        "hep-ex/9504008", 
+        "ins394404", 
+        null, 
+        [
+            "DESY-95-079"
+        ]
+    ], 
+    "394793": [
+        "A Study of the fragmentation of quarks in e- p collisions at HERA", 
+        "H1", 
+        "10.1016/0550-3213(95)91599-H", 
+        null, 
+        "hep-ex/9505003", 
+        "ins394793", 
+        null, 
+        [
+            "DESY-95-072"
+        ]
+    ], 
+    "395643": [
+        "A Direct determination of the gluon density in the proton at low x", 
+        "H1", 
+        "10.1016/0550-3213(95)00348-V", 
+        null, 
+        "hep-ex/9505014", 
+        "ins395643", 
+        null, 
+        [
+            "DESY-95-086"
+        ]
+    ], 
+    "395814": [
+        "The Gluon density of the proton at low x from a QCD analysis of F2", 
+        "H1", 
+        "10.1016/0370-2693(95)00720-6", 
+        null, 
+        "hep-ex/9506001", 
+        "ins395814", 
+        null, 
+        [
+            "DESY-95-081"
+        ]
+    ], 
+    "395960": [
+        "Measurement of the $e^{+}$ and $e^{-}$ induced charged current cross-sections at HERA", 
+        "H1", 
+        "10.1007/BF01553982", 
+        null, 
+        "hep-ex/9506002", 
+        "ins395960", 
+        null, 
+        [
+            "DESY-95-102"
+        ]
+    ], 
+    "396365": [
+        "Transverse energy and forward jet production in the low x regime at HERA", 
+        "H1", 
+        "10.1016/0370-2693(95)00804-T", 
+        null, 
+        "hep-ex/9506012", 
+        "ins396365", 
+        null, 
+        [
+            "DESY-95-108"
+        ]
+    ], 
+    "398259": [
+        "Comparison of deep inelastic scattering with photoproduction interactions at HERA", 
+        "H1", 
+        "10.1016/0370-2693(95)01054-T", 
+        null, 
+        "hep-ex/9508013", 
+        null, 
+        null, 
+        [
+            "DESY-95-156"
+        ]
+    ], 
+    "399015": [
+        "Measurement of the total photon-proton cross-section and its decomposition at 200-GeV center-of-mass energy", 
+        "H1", 
+        "10.1007/s002880050003", 
+        null, 
+        "hep-ex/9509001", 
+        "ins399015", 
+        null, 
+        [
+            "DESY-95-162"
+        ]
+    ]
+}

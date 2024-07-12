@@ -3,6 +3,10 @@
 
 #include "Rivet/Tools/Utils.hh"
 
+#include <sstream>      // std::stringstream
+#include <iostream>
+#include <iomanip>
+
 namespace Rivet {
 
 
@@ -16,19 +20,25 @@ namespace Rivet {
 
     /// Proper constructor
     Cutflow(const string& cfname, const vector<string>& cutnames)
-      : name(cfname), ncuts(cutnames.size()), cuts(cutnames), counts(ncuts+1, 0)
+      : name(cfname), ncuts(cutnames.size()), cuts(cutnames), counts(ncuts+1, 0), icurr(0)
     {  }
+
 
     /// @brief Fill the pre-cut counter
     void fillinit(double weight=1.) {
-      counts.front() += weight;
+      counts[0] += weight;
+      icurr = 1;
     }
+
 
     /// @brief Fill the @a {icut}'th post-cut counter, starting at icut=1 for first cut
     ///
     /// @note Returns the cut result to allow 'side-effect' cut-flow filling in an if-statement
     bool fill(size_t icut, bool cutresult=true, double weight=1.) {
+      if (icut == 0)
+        throw RangeError("Cut number must be greater than 0");
       if (cutresult) counts.at(icut) += weight;
+      icurr = icut + 1;
       return cutresult;
     }
 
@@ -42,27 +52,53 @@ namespace Rivet {
       return fill(icut, true, weight);
     }
 
-    /// @brief Fill all cut-state counters from an Ncut-element results vector
-    ///
-    /// This function is to be used to fill all of an event's pre- and post-cut
-    /// state counters at once, including the incoming event counter. It must not be
-    /// mixed with calls to the @c fill(size_t, bool) and @c fillinit() methods,
-    /// or double-counting will occur.
+    /// @brief Fill cut-state counters from an n-element results vector, starting at icut
     ///
     /// @note Returns the overall cut result to allow 'side-effect' cut-flow filling in an if-statement
-    bool fill(const vector<bool>& cutresults, double weight=1.) {
-      if (cutresults.size() != ncuts)
+    bool fill(size_t icut, const vector<bool>& cutresults, double weight=1.) {
+      if (icut == 0)
+        throw RangeError("Cut number must be greater than 0");
+      if (icut+cutresults.size() > ncuts+1)
         throw RangeError("Number of filled cut results needs to match the Cutflow construction");
-      counts.front() += 1;
-      for (size_t i = 0; i < ncuts; ++i) {
-        if (cutresults[i]) counts.at(i+1) += weight; else break;
-      }
-      return all(cutresults);
+      bool rtn = true;
+      for (size_t i = 0; i < cutresults.size(); ++i)
+        if (!fill(icut+i, cutresults[i], weight)) { rtn = false; break; }
+      icurr = icut + cutresults.size();
+      return rtn;
     }
 
-    /// @todo Add a fillnext(), keeping track of current ifill
 
-    /// @todo Add a fillhead() (or vector fillnext()?)
+    /// @brief Fill the next post-cut counter
+    ///
+    /// @note Returns the cut result to allow 'side-effect' cut-flow filling in an if-statement
+    bool fillnext(bool cutresult, double weight=1.) {
+      return fill(icurr, cutresult, weight);
+    }
+
+    /// @brief Fill the next post-cut counter, assuming a true result
+    ///
+    /// @note Returns the cut result to allow 'side-effect' cut-flow filling in an if-statement
+    bool fillnext(double weight=1.) {
+      return fill(icurr, true, weight);
+    }
+
+    /// @brief Fill the next cut-state counters from an n-element results vector
+    ///
+    /// @note Returns the cut result to allow 'side-effect' cut-flow filling in an if-statement
+    bool fillnext(const vector<bool>& cutresults, double weight=1.) {
+      return fill(icurr, cutresults, weight);
+    }
+
+
+    /// @brief Fill all cut-state counters from an Ncut-element results vector, starting at icut=1
+    ///
+    /// @deprecated Prefer to use vector fillinit() and vector fill()
+    bool fillall(const vector<bool>& cutresults, double weight=1.) {
+      if (cutresults.size() != ncuts)
+        throw RangeError("Number of filled cut results needs to match the Cutflow construction");
+      // if (icut == 0) { fillinit(weight); icut = 1; }
+      return fill(1, cutresults, weight);
+    }
 
     /// @brief Fill the N trailing post-cut counters, when supplied with an N-element results vector
     ///
@@ -70,16 +106,20 @@ namespace Rivet {
     /// allows mixing of cut-flow filling with higher-level analyze() function escapes such as
     /// the vetoEvent directive. The initial state (state 0) is not incremented.
     ///
+    /// @deprecated Now prefer to use vector fillnext()
+    ///
     /// @note Returns the overall cut result to allow 'side-effect' cut-flow filling in an if-statement
     bool filltail(const vector<bool>& cutresults, double weight=1.) {
-      if (cutresults.size() > ncuts)
-        throw RangeError("Number of filled cut results needs to match the Cutflow construction");
-      const size_t offset = counts.size() - cutresults.size();
-      for (size_t i = 0; i < cutresults.size(); ++i) {
-        if (cutresults[i]) counts.at(offset+i) += weight; else break;
-      }
-      return all(cutresults);
+      // if (cutresults.size() > ncuts)
+      //   throw RangeError("Number of filled cut results needs to match the Cutflow construction");
+      // const size_t offset = counts.size() - cutresults.size();
+      // for (size_t i = 0; i < cutresults.size(); ++i) {
+      //   if (cutresults[i]) counts.at(offset+i) += weight; else break;
+      // }
+      // return all(cutresults);
+      return fill(ncuts+1-cutresults.size(), cutresults, weight);
     }
+
 
     /// Scale the cutflow weights by the given factor
     void scale(double factor) {
@@ -91,10 +131,12 @@ namespace Rivet {
       scale(norm/counts.at(icut));
     }
 
+
     /// Create a string representation
     string str() const {
+      using namespace std;
       stringstream ss;
-      ss << fixed << setprecision(1) << counts.front();
+      ss << fixed << std::setprecision(1) << counts.front();
       const size_t count0len = ss.str().length();
       ss.str("");
       ss << name << " cut-flow:\n";
@@ -125,20 +167,21 @@ namespace Rivet {
     }
 
     /// Print string representation to a stream
-    void print(ostream& os) const {
-      os << str() << flush;
+    void print(std::ostream& os) const {
+      os << str() << std::flush;
     }
 
     string name;
     size_t ncuts;
     vector<string> cuts;
     vector<double> counts;
+    size_t icurr;
 
   };
 
 
   /// Print a Cutflow to a stream
-  inline ostream& operator << (ostream& os, const Cutflow& cf) {
+  inline std::ostream& operator << (std::ostream& os, const Cutflow& cf) {
     return os << cf.str();
   }
 
@@ -153,6 +196,7 @@ namespace Rivet {
     /// Populating constructor
     Cutflows(const vector<Cutflow>& cutflows) : cfs(cutflows) {  }
 
+
     /// Append a provided Cutflow to the list
     void addCutflow(const Cutflow& cf) {
       cfs.push_back(cf);
@@ -162,6 +206,7 @@ namespace Rivet {
     void addCutflow(const string& cfname, const vector<string>& cutnames) {
       cfs.push_back(Cutflow(cfname, cutnames));
     }
+
 
     /// Access the @a i'th Cutflow
     Cutflow& operator [] (size_t i) { return cfs[i]; }
@@ -181,10 +226,12 @@ namespace Rivet {
       throw UserError("Requested cut-flow name '" + name + "' does not exist");
     }
 
+
     /// Fill the pre-cuts state counter for all contained {Cutflow}s
     void fillinit(double weight=1.) {
       for (Cutflow& cf : cfs) cf.fillinit(weight);
     }
+
 
     /// @brief Fill the @a {icut}'th post-cut counter, starting at icut=1 for first cut, with the same result for all {Cutflow}s
     bool fill(size_t icut, bool cutresult=true, double weight=1.) {
@@ -202,9 +249,51 @@ namespace Rivet {
       return fill(icut, true, weight);
     }
 
-    /// @todo Add a fillnext(), keeping track of current ifill
+    /// @brief Fill cut-state counters from an n-element results vector, starting at icut
+    ///
+    /// @note Returns the overall cut result to allow 'side-effect' cut-flow filling in an if-statement
+    bool fill(size_t icut, const vector<bool>& cutresults, double weight=1.) {
+      bool rtn;
+      for (Cutflow& cf : cfs) rtn = cf.fill(icut, cutresults, weight);
+      return rtn;
+    }
 
-    /// @todo Add a fillhead() (or vector fillnext()?)
+
+    /// @brief Fill the next post-cut counter
+    ///
+    /// @note Returns the cut result to allow 'side-effect' cut-flow filling in an if-statement
+    bool fillnext(bool cutresult, double weight=1.) {
+      for (Cutflow& cf : cfs) cf.fillnext(cutresult, weight);
+      return cutresult;
+    }
+
+    /// @brief Fill the next post-cut counter, assuming a true result
+    ///
+    /// @note Returns the cut result to allow 'side-effect' cut-flow filling in an if-statement
+    bool fillnext(double weight=1.) {
+      for (Cutflow& cf : cfs) cf.fillnext(weight);
+      return true;
+    }
+
+    /// @brief Fill the next cut-state counters from an n-element results vector
+    ///
+    /// @note Returns the cut result to allow 'side-effect' cut-flow filling in an if-statement
+    bool fillnext(const vector<bool>& cutresults, double weight=1.) {
+      bool rtn;
+      for (Cutflow& cf : cfs) rtn = cf.fillnext(cutresults, weight);
+      return rtn;
+    }
+
+
+    /// @brief Fill all cut-state counters from an Ncut-element results vector, starting at icut=1
+    ///
+    /// @deprecated Prefer to use vector fillinit() and vector fill()
+    bool fillall(const vector<bool>& cutresults, double weight=1.) {
+      bool rtn;
+      for (Cutflow& cf : cfs) rtn = cf.fillall(cutresults, weight);
+      return rtn;
+    }
+
 
     /// Scale the contained {Cutflow}s by the given factor
     void scale(double factor) {
@@ -217,25 +306,28 @@ namespace Rivet {
       for (Cutflow& cf : cfs) cf.normalize(norm, icut);
     }
 
+
     /// Create a string representation
     string str() const {
-      stringstream ss;
+      std::stringstream ss;
       for (const Cutflow& cf : cfs)
         ss << cf << "\n\n";
       return ss.str();
     }
 
     /// Print string representation to a stream
-    void print(ostream& os) const {
-      os << str() << flush;
+    void print(std::ostream& os) const {
+      os << str() << std::flush;
     }
+
 
     vector<Cutflow> cfs;
 
   };
 
+
   /// Print a Cutflows to a stream
-  inline ostream& operator << (ostream& os, const Cutflows& cfs) {
+  inline std::ostream& operator << (std::ostream& os, const Cutflows& cfs) {
     return os << cfs.str();
   }
 

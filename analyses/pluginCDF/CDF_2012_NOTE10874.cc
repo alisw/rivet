@@ -18,18 +18,18 @@ namespace Rivet {
   public:
 
     void init() {
-      const ChargedFinalState cfs(-1.0, 1.0, 0.5*GeV);
+      const ChargedFinalState cfs((Cuts::etaIn(-1.0, 1.0) && Cuts::pT >=  0.5*GeV));
       declare(cfs, "CFS");
 
       int isqrts = -1;
-      if (fuzzyEquals(sqrtS(), 300*GeV)) isqrts = 1;
-      else if (fuzzyEquals(sqrtS(), 900*GeV)) isqrts = 2;
-      else if (fuzzyEquals(sqrtS(), 1960*GeV)) isqrts = 3;
+      if (isCompatibleWithSqrtS(300)) isqrts = 1;
+      else if (isCompatibleWithSqrtS(900)) isqrts = 2;
+      else if (isCompatibleWithSqrtS(1960)) isqrts = 3;
       assert(isqrts >= 0);
 
-      _h_nch_transverse = bookProfile1D(1,1,isqrts);
-      _h_ptSumDen = bookProfile1D(2,1,isqrts);
-      _h_avePt = bookProfile1D(3,1,isqrts);
+      book(_h_nch_transverse ,1,1,isqrts);
+      book(_h_ptSumDen ,2,1,isqrts);
+      book(_h_avePt ,3,1,isqrts);
     }
 
     // Little helper function to identify Delta(phi) regions
@@ -42,8 +42,6 @@ namespace Rivet {
 
 
     void analyze(const Event& event) {
-      const double weight = event.weight();
-
       const ChargedFinalState& cfs = apply<ChargedFinalState>(event, "CFS");
       if (cfs.size() < 1) {
         vetoEvent;
@@ -56,7 +54,7 @@ namespace Rivet {
 
       int    tNch = 0;
       double ptSum = 0.0;
-      foreach (const Particle& p, particles) {
+      for (const Particle& p : particles) {
         const double pT = p.pT();
         const double dPhi = deltaPhi(philead, p.phi());
         const int ir = region_index(dPhi);
@@ -68,11 +66,11 @@ namespace Rivet {
 
       const double dEtadPhi = 4.0*PI/3.0;
 
-      _h_nch_transverse->fill(pTlead/GeV, tNch/dEtadPhi, weight);
-      _h_ptSumDen->fill(pTlead/GeV, ptSum/dEtadPhi, weight);
+      _h_nch_transverse->fill(pTlead/GeV, tNch/dEtadPhi);
+      _h_ptSumDen->fill(pTlead/GeV, ptSum/dEtadPhi);
 
       if (tNch > 0) {
-        _h_avePt->fill(pTlead/GeV, ptSum/tNch, weight);
+        _h_avePt->fill(pTlead/GeV, ptSum/tNch);
       }
     }
 
@@ -89,6 +87,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CDF_2012_NOTE10874);
+  RIVET_DECLARE_PLUGIN(CDF_2012_NOTE10874);
 
 }

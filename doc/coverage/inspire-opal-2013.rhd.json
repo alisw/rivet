@@ -1,0 +1,26 @@
+{
+    "1216295": [
+        "Search for Charged Higgs bosons: Combined Results Using LEP Data", 
+        "ALEPH", 
+        "10.1140/epjc/s10052-013-2463-1", 
+        "1501120", 
+        "1301.6065", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2012-369"
+        ]
+    ], 
+    "1219330": [
+        "Electroweak Measurements in Electron-Positron Collisions at W-Boson-Pair Energies at LEP", 
+        "ALEPH", 
+        "10.1016/j.physrep.2013.07.004", 
+        "1516169", 
+        "1302.3415", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2013-022"
+        ]
+    ]
+}

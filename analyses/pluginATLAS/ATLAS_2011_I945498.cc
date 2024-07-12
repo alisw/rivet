@@ -29,28 +29,28 @@ namespace Rivet {
       _isZeeSample = false;
       _isZmmSample = false;
       for (size_t chn = 0; chn < 3; ++chn) {
-        weights_nj0[chn] = 0;
-        weights_nj1[chn] = 0;
-        weights_nj2[chn] = 0;
-        weights_nj3[chn] = 0;
-        weights_nj4[chn] = 0;
+        book(weights_nj0[chn], "weights_nj0_" + to_str(chn));
+        book(weights_nj1[chn], "weights_nj1_" + to_str(chn));
+        book(weights_nj2[chn], "weights_nj2_" + to_str(chn));
+        book(weights_nj3[chn], "weights_nj3_" + to_str(chn));
+        book(weights_nj4[chn], "weights_nj4_" + to_str(chn));
       }
 
       // Set up projections
 	  FinalState fs;
-      ZFinder zfinder_mu(fs, Cuts::abseta < 2.4 && Cuts::pT > 20*GeV, PID::MUON, 66*GeV, 116*GeV, 0.1, ZFinder::CLUSTERNODECAY);
+      ZFinder zfinder_mu(fs, Cuts::abseta < 2.4 && Cuts::pT > 20*GeV, PID::MUON, 66*GeV, 116*GeV, 0.1, ZFinder::ClusterPhotons::NODECAY);
       declare(zfinder_mu, "ZFinder_mu");
 
       Cut cuts = (Cuts::abseta < 1.37 || Cuts::absetaIn(1.52, 2.47)) && Cuts::pT > 20*GeV;
 
-      ZFinder zfinder_el(fs, cuts, PID::ELECTRON, 66*GeV, 116*GeV, 0.1, ZFinder::CLUSTERNODECAY);
+      ZFinder zfinder_el(fs, cuts, PID::ELECTRON, 66*GeV, 116*GeV, 0.1, ZFinder::ClusterPhotons::NODECAY);
       declare(zfinder_el, "ZFinder_el");
 
 	  Cut cuts25_20 = Cuts::abseta < 2.5 && Cuts::pT > 20*GeV;
       // For combined cross-sections (combined phase space + dressed level)
-      ZFinder zfinder_comb_mu(fs, cuts25_20, PID::MUON, 66.0*GeV, 116.0*GeV, 0.1, ZFinder::CLUSTERNODECAY);
+      ZFinder zfinder_comb_mu(fs, cuts25_20, PID::MUON, 66.0*GeV, 116.0*GeV, 0.1, ZFinder::ClusterPhotons::NODECAY);
       declare(zfinder_comb_mu, "ZFinder_comb_mu");
-      ZFinder zfinder_comb_el(fs, cuts25_20, PID::ELECTRON, 66.0*GeV, 116.0*GeV, 0.1, ZFinder::CLUSTERNODECAY);
+      ZFinder zfinder_comb_el(fs, cuts25_20, PID::ELECTRON, 66.0*GeV, 116.0*GeV, 0.1, ZFinder::ClusterPhotons::NODECAY);
       declare(zfinder_comb_el, "ZFinder_comb_el");
 
       // Define veto FS in order to prevent Z-decay products entering the jet algorithm
@@ -70,18 +70,18 @@ namespace Rivet {
 
       // 0=el, 1=mu, 2=comb
       for (size_t chn = 0; chn < 3; ++chn) {
-        _h_njet_incl[chn]  = bookHisto1D(1, 1, chn+1);
-        _h_njet_ratio[chn] = bookScatter2D(2, 1, chn+1);
-        _h_ptjet[chn]      = bookHisto1D(3, 1, chn+1);
-        _h_ptlead[chn]     = bookHisto1D(4, 1, chn+1);
-        _h_ptseclead[chn]  = bookHisto1D(5, 1, chn+1);
-        _h_yjet[chn]       = bookHisto1D(6, 1, chn+1);
-        _h_ylead[chn]      = bookHisto1D(7, 1, chn+1);
-        _h_yseclead[chn]   = bookHisto1D(8, 1, chn+1);
-        _h_mass[chn]       = bookHisto1D(9, 1, chn+1);
-        _h_deltay[chn]     = bookHisto1D(10, 1, chn+1);
-        _h_deltaphi[chn]   = bookHisto1D(11, 1, chn+1);
-        _h_deltaR[chn]     = bookHisto1D(12, 1, chn+1);
+        book(_h_njet_incl[chn]  ,1, 1, chn+1);
+        book(_h_njet_ratio[chn] ,2, 1, chn+1);
+        book(_h_ptjet[chn]      ,3, 1, chn+1);
+        book(_h_ptlead[chn]     ,4, 1, chn+1);
+        book(_h_ptseclead[chn]  ,5, 1, chn+1);
+        book(_h_yjet[chn]       ,6, 1, chn+1);
+        book(_h_ylead[chn]      ,7, 1, chn+1);
+        book(_h_yseclead[chn]   ,8, 1, chn+1);
+        book(_h_mass[chn]       ,9, 1, chn+1);
+        book(_h_deltay[chn]     ,10, 1, chn+1);
+        book(_h_deltaphi[chn]   ,11, 1, chn+1);
+        book(_h_deltaR[chn]     ,12, 1, chn+1);
       }
     }
 
@@ -92,7 +92,7 @@ namespace Rivet {
       const FourMomentum l1 = zf->constituents()[0].momentum();
       const FourMomentum l2 = zf->constituents()[1].momentum();
       Jets jets;
-      foreach (const Jet& jet, allJets->jetsByPt(30*GeV)) {
+      for (const Jet& jet : allJets->jetsByPt(30*GeV)) {
         const FourMomentum jmom = jet.momentum();
         if (jmom.absrap() < 4.4 &&
             deltaR(l1, jmom) > 0.5  && deltaR(l2, jmom) > 0.5) {
@@ -105,8 +105,6 @@ namespace Rivet {
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-      const double weight = event.weight();
-
       vector<const ZFinder*> zfs;
       zfs.push_back(& (apply<ZFinder>(event, "ZFinder_el")));
       zfs.push_back(& (apply<ZFinder>(event, "ZFinder_mu")));
@@ -154,29 +152,29 @@ namespace Rivet {
 
         switch (jets.size()) {
         case 0:
-          weights_nj0[chn] += weight;
+          weights_nj0[chn]->fill();
           break;
         case 1:
-          weights_nj0[chn] += weight;
-          weights_nj1[chn] += weight;
+          weights_nj0[chn]->fill();
+          weights_nj1[chn]->fill();
           break;
         case 2:
-          weights_nj0[chn] += weight;
-          weights_nj1[chn] += weight;
-          weights_nj2[chn] += weight;
+          weights_nj0[chn]->fill();
+          weights_nj1[chn]->fill();
+          weights_nj2[chn]->fill();
           break;
         case 3:
-          weights_nj0[chn] += weight;
-          weights_nj1[chn] += weight;
-          weights_nj2[chn] += weight;
-          weights_nj3[chn] += weight;
+          weights_nj0[chn]->fill();
+          weights_nj1[chn]->fill();
+          weights_nj2[chn]->fill();
+          weights_nj3[chn]->fill();
           break;
         default: // >= 4
-          weights_nj0[chn] += weight;
-          weights_nj1[chn] += weight;
-          weights_nj2[chn] += weight;
-          weights_nj3[chn] += weight;
-          weights_nj4[chn] += weight;
+          weights_nj0[chn]->fill();
+          weights_nj1[chn]->fill();
+          weights_nj2[chn]->fill();
+          weights_nj3[chn]->fill();
+          weights_nj4[chn]->fill();
         }
 
         // Require at least one jet
@@ -184,37 +182,37 @@ namespace Rivet {
 
         // Fill jet multiplicities
         for (size_t ijet = 1; ijet <= jets.size(); ++ijet) {
-          _h_njet_incl[chn]->fill(ijet, weight);
+          _h_njet_incl[chn]->fill(ijet);
         }
 
         // Loop over selected jets, fill inclusive jet distributions
         for (size_t ijet = 0; ijet < jets.size(); ++ijet) {
-          _h_ptjet[chn]->fill(jets[ijet].pT()/GeV, weight);
-          _h_yjet [chn]->fill(fabs(jets[ijet].rapidity()), weight);
+          _h_ptjet[chn]->fill(jets[ijet].pT()/GeV);
+          _h_yjet [chn]->fill(fabs(jets[ijet].rapidity()));
         }
 
         // Leading jet histos
         const double ptlead   = jets[0].pT()/GeV;
         const double yabslead = fabs(jets[0].rapidity());
-        _h_ptlead[chn]->fill(ptlead,   weight);
-        _h_ylead [chn]->fill(yabslead, weight);
+        _h_ptlead[chn]->fill(ptlead);
+        _h_ylead [chn]->fill(yabslead);
 
         if (jets.size() >= 2) {
           // Second jet histos
           const double pt2ndlead   = jets[1].pT()/GeV;
           const double yabs2ndlead = fabs(jets[1].rapidity());
-          _h_ptseclead[chn] ->fill(pt2ndlead,   weight);
-          _h_yseclead [chn] ->fill(yabs2ndlead, weight);
+          _h_ptseclead[chn] ->fill(pt2ndlead);
+          _h_yseclead [chn] ->fill(yabs2ndlead);
 
           // Dijet histos
           const double deltaphi = fabs(deltaPhi(jets[1], jets[0]));
           const double deltarap = fabs(jets[0].rapidity() - jets[1].rapidity()) ;
           const double deltar   = fabs(deltaR(jets[0], jets[1], RAPIDITY));
           const double mass     = (jets[0].momentum() + jets[1].momentum()).mass();
-          _h_mass    [chn] ->fill(mass/GeV, weight);
-          _h_deltay  [chn] ->fill(deltarap, weight);
-          _h_deltaphi[chn] ->fill(deltaphi, weight);
-          _h_deltaR  [chn] ->fill(deltar,   weight);
+          _h_mass    [chn] ->fill(mass/GeV);
+          _h_deltay  [chn] ->fill(deltarap);
+          _h_deltaphi[chn] ->fill(deltaphi);
+          _h_deltaR  [chn] ->fill(deltar);
         }
       }
     }
@@ -239,18 +237,19 @@ namespace Rivet {
     void finalize() {
       // Fill ratio histograms
       for (size_t chn = 0; chn < 3; ++chn) {
-        _h_njet_ratio[chn]->addPoint(1, ratio(weights_nj1[chn], weights_nj0[chn]), 0.5, ratio_err(weights_nj1[chn], weights_nj0[chn]));
-        _h_njet_ratio[chn]->addPoint(2, ratio(weights_nj2[chn], weights_nj1[chn]), 0.5, ratio_err(weights_nj2[chn], weights_nj1[chn]));
-        _h_njet_ratio[chn]->addPoint(3, ratio(weights_nj3[chn], weights_nj2[chn]), 0.5, ratio_err(weights_nj3[chn], weights_nj2[chn]));
-        _h_njet_ratio[chn]->addPoint(4, ratio(weights_nj4[chn], weights_nj3[chn]), 0.5, ratio_err(weights_nj4[chn], weights_nj3[chn]));
+        _h_njet_ratio[chn]->addPoint(1, ratio(weights_nj1[chn]->val(), weights_nj0[chn]->val()), 0.5, ratio_err(weights_nj1[chn]->val(), weights_nj0[chn]->val()));
+        _h_njet_ratio[chn]->addPoint(2, ratio(weights_nj2[chn]->val(), weights_nj1[chn]->val()), 0.5, ratio_err(weights_nj2[chn]->val(), weights_nj1[chn]->val()));
+        _h_njet_ratio[chn]->addPoint(3, ratio(weights_nj3[chn]->val(), weights_nj2[chn]->val()), 0.5, ratio_err(weights_nj3[chn]->val(), weights_nj2[chn]->val()));
+        _h_njet_ratio[chn]->addPoint(4, ratio(weights_nj4[chn]->val(), weights_nj3[chn]->val()), 0.5, ratio_err(weights_nj4[chn]->val(), weights_nj3[chn]->val()));
       }
 
       // Scale other histos
       for (size_t chn = 0; chn < 3; ++chn) {
         // For ee and mumu channels: normalize to Njet inclusive cross-section
-        double xs = (chn == 2) ? crossSectionPerEvent()/picobarn : 1 / weights_nj0[chn];
+        double xs = crossSectionPerEvent()/picobarn;
+        if (chn != 2 && weights_nj0[chn]->val() != 0.)  xs = 1.0 / weights_nj0[chn]->val();
         // For inclusive MC sample(ee/mmu channels together) we want the single-lepton-flavor xsec
-        if (_isZeeSample && _isZmmSample) xs /= 2;
+        if (_isZeeSample && _isZmmSample) xs *= 0.5;
 
         // Special case histogram: always not normalized
         scale(_h_njet_incl[chn], (chn < 2) ? crossSectionPerEvent()/picobarn : xs);
@@ -277,11 +276,11 @@ namespace Rivet {
     bool _isZeeSample;
     bool _isZmmSample;
 
-    double weights_nj0[3];
-    double weights_nj1[3];
-    double weights_nj2[3];
-    double weights_nj3[3];
-    double weights_nj4[3];
+    CounterPtr weights_nj0[3];
+    CounterPtr weights_nj1[3];
+    CounterPtr weights_nj2[3];
+    CounterPtr weights_nj3[3];
+    CounterPtr weights_nj4[3];
 
     Scatter2DPtr _h_njet_ratio[3];
     Histo1DPtr _h_njet_incl[3];
@@ -299,7 +298,7 @@ namespace Rivet {
   };
 
 
-  DECLARE_RIVET_PLUGIN(ATLAS_2011_I945498);
+  RIVET_DECLARE_PLUGIN(ATLAS_2011_I945498);
 
 
 }

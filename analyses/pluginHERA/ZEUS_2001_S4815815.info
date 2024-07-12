@@ -6,6 +6,7 @@ Collider: HERA Run I
 SpiresID: 4815815
 InspireID: 568665
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Andy Buckley <andy.buckley@cern.ch>
  - Ilkka Helenius <ilkka.helenius@uni-tuebingen.de>
@@ -34,8 +35,8 @@ Description:
   and 0.1. The fractional momentum of the partons from the photon,
   $x_\gamma$, is in the region 0.1 to 1. Jets are reconstructed in the
   range $-1 < |\eta| < 2.4$ using the $k_\perp$ algorithm with an $R$
-  parameter of 1.0. The minimum \pT of the leading jet should be greater
-  than 14~GeV, and at least one other jet must have $\pT > 11$~GeV.
+  parameter of 1.0. The minimum $p_\perp$ of the leading jet should be greater
+  than 14~GeV, and at least one other jet must have $p_\perp$ > 11$~GeV.
 BibKey: Chekanov:2001bw
 BibTeX: '@Article{Chekanov:2001bw,
      author    = "Chekanov, S. and others",

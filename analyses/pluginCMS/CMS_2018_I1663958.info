@@ -1,10 +1,11 @@
 Name: CMS_2018_I1663958
 Year: 2018
-Summary: Differential cross sections for top quark pair production using the lepton+jets final state in proton proton collisions at 13 TeV
+Summary:  ttbar lepton+jets 13 TeV
 Experiment: CMS
 Collider: LHC
 InspireID: 1663958
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Otto Hindrichs <otto.heinz.hindrichs@cern.ch>
 References:
@@ -15,7 +16,7 @@ RunInfo:
   pp QCD interactions at $\sqrt{s} = 13$ TeV. Data collected by CMS during the year 2015. Selection of lepton+jets top pair candidate events at particle level.
 NumEvents: 570000
 NeedCrossSection: no
-Luminosity: 35.8 /fb
+Luminosity_fb: 35.8
 Beams: [p+, p+]
 Energies: [13000]
 Description:
@@ -34,3 +35,26 @@ This analysis is to be run on $\text{t}\bar{\text{t}}$ Monte Carlo. The particle
 
 A W boson is reconstructed from a lepton and the sum of the neutrino energies, while another W boson is reconstructed from a light jet pair. The two top quarks are reconstructed by combining b jets to these W boson. A check based on the W boson and top quark masses is performed to choose the proper combinations.
 '
+BibKey: Sirunyan:2018wem
+BibTeX:
+  ' @article{Sirunyan:2018wem,
+      author         = "Sirunyan, Albert M and others",
+      title          = "{Measurement of differential cross sections for the
+                        production of top quark pairs and of additional jets in
+                        lepton+jets events from pp collisions at $\sqrt{s} =$ 13
+                        TeV}",
+      collaboration  = "CMS",
+      journal        = "Phys. Rev.",
+      volume         = "D97",
+      year           = "2018",
+      number         = "11",
+      pages          = "112003",
+      doi            = "10.1103/PhysRevD.97.112003",
+      eprint         = "1803.08856",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CMS-TOP-17-002, CERN-EP-2018-039",
+      SLACcitation   = "%%CITATION = ARXIV:1803.08856;%%"
+}'
+ReleaseTests:
+ - $A LHC-13-Top-All

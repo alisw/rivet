@@ -20,7 +20,7 @@ namespace std {
   /// This is the function called when comparing two (const) pointers to Rivet::Projection.
   template <>
   struct less<const Rivet::Projection*>
-    : public binary_function<const Rivet::Projection*, const Rivet::Projection*, bool> {
+  {
     bool operator()(const Rivet::Projection* x, const Rivet::Projection* y) const;
   };
 

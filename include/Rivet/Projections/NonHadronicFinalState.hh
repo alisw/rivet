@@ -20,15 +20,13 @@ namespace Rivet {
     NonHadronicFinalState(FinalState& fsp)
     {
       setName("NonHadronicFinalState");
-      addProjection(fsp, "FS");
+      declare(fsp, "FS");
     }
 
-    NonHadronicFinalState(double mineta = -MAXDOUBLE,
-			  double maxeta = MAXDOUBLE,
-			  double minpt = 0.0*GeV)
+    NonHadronicFinalState(const Cut& c=Cuts::open())
     {
       setName("NonHadronicFinalState");
-      addProjection(FinalState(mineta, maxeta, minpt), "FS");
+      declare(FinalState(c), "FS");
     }
 
     /// Clone on the heap.
@@ -39,7 +37,7 @@ namespace Rivet {
     void project(const Event& e);
 
     /// Compare projections.
-    int compare(const Projection& p) const;
+    CmpState compare(const Projection& p) const;
 
   };
 

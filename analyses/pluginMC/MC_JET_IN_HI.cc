@@ -17,7 +17,7 @@ namespace Rivet {
     //@{
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(MC_JET_IN_HI);
+    RIVET_DEFAULT_ANALYSIS_CTOR(MC_JET_IN_HI);
 
     //@}
 
@@ -42,8 +42,8 @@ namespace Rivet {
       FinalState fs(Cuts::abseta < 2.5);
       declare(fs, "FS");
  
-      ZFinder zfinder(fs, Cuts::abseta < 2.5 && Cuts::pT > 30*GeV, PID::MUON, 80*GeV, 100*GeV,
-                      0.2, ZFinder::CLUSTERNODECAY, ZFinder::TRACK);
+      ZFinder zfinder(fs, Cuts::abseta < 2.5 && Cuts::pT > 30*GeV, PID::MUON, 80*GeV, 100*GeV, 0.2,
+                      ZFinder::ChargedLeptons::PROMPT, ZFinder::ClusterPhotons::NODECAY, ZFinder::AddPhotons::YES);
       declare(zfinder, "ZFinder");
 
       // Z+jet jet collections
@@ -54,18 +54,20 @@ namespace Rivet {
 
       jetFinders = {"JetsAK3", "JetsAK5", "JetsAK7", "JetsAK9"};
       
+      h_zpT.resize(jetFinders.size());
+      h_jetpT.resize(jetFinders.size());
       for (size_t i = 0; i < jetFinders.size(); ++i) {
         string s = jetFinders[i];
-	h_zpT.push_back(bookHisto1D(s + "zpT",logspace(50, 1.0,1000)));
-	h_jetpT.push_back(bookHisto1D(s + "jetpT",logspace(50, 1.0,1000)));
+        book(h_zpT[i], s + "zpT",logspace(50, 1.0,1000));
+        book(h_jetpT[i], s + "jetpT",logspace(50, 1.0,1000));
       }
-      incSow = bookCounter("incSow");
+      book(incSow, "incSow");
 
       centData = {0., 0.2, 0.4, 0.6, 0.8,};
       for (size_t i = 0; i < centData.size(); ++i) {
-        c_jetpT[centData[i]] = bookHisto1D("cjetpT" + ts(i),logspace(100, 10.0,1000));
-        c_zpT[centData[i]] = bookHisto1D("czpt" + ts(i),logspace(100, 10.0,1000));
-	sow[centData[i]] = bookCounter("sow_" + ts(i));
+        book(c_jetpT[centData[i]], "cjetpT" + ts(i),logspace(100, 10.0,1000));
+        book(c_zpT[centData[i]], "czpt" + ts(i),logspace(100, 10.0,1000));
+	      book(sow[centData[i]], "sow_" + ts(i));
       }
     }
 
@@ -78,7 +80,6 @@ namespace Rivet {
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-      const double weight = event.weight();
       
       // Get the Z
       const ZFinder& zfinder = apply<ZFinder>(event, "ZFinder");
@@ -97,8 +98,8 @@ namespace Rivet {
       auto sowItr = sow.upper_bound(c);
       if (jetpTItr == c_jetpT.end() || zpTItr == c_zpT.end() || 
         sowItr == sow.end()) vetoEvent;
-      sowItr->second->fill(weight);
-      incSow->fill(weight);
+      sowItr->second->fill();
+      incSow->fill();
       // Get the  jets
       for (size_t i = 0; i < jetFinders.size(); ++i ) {
         const PseudoJets& psjets = apply<FastJets>(event, 
@@ -108,12 +109,12 @@ namespace Rivet {
         const fastjet::PseudoJet& j0 = psjets[0];
 	if (isBackToBack_zj(zfinder, j0)) {
 	    // Fill the centrality inclusive histograms
-	    h_zpT[i]->fill(z.pT(),weight);
-	    h_jetpT[i]->fill(j0.perp(),weight);
+	    h_zpT[i]->fill(z.pT());
+	    h_jetpT[i]->fill(j0.perp());
 	    // Fill centrality dept histograms only for R = 0.3
 	    if (i == 0) {
-              jetpTItr->second->fill(j0.perp(),weight);
-	      zpTItr->second->fill(z.pT(),weight);
+              jetpTItr->second->fill(j0.perp());
+	      zpTItr->second->fill(z.pT());
 	    }
 	  }
         }
@@ -138,22 +139,22 @@ namespace Rivet {
 
 
   private:
-  vector<string> jetFinders;
-  // Centrality inclusive histograms
-  vector<Histo1DPtr> h_zpT;
-  vector<Histo1DPtr> h_jetpT;
-  CounterPtr incSow;
-  // Centrality intervals
-  vector<double> centData;
-  // Centrality binned histograms
-  map<double, Histo1DPtr> c_jetpT;
-  map<double, Histo1DPtr> c_zpT;
-  map<double, CounterPtr> sow;
+    vector<string> jetFinders;
+    // Centrality inclusive histograms
+    vector<Histo1DPtr> h_zpT;
+    vector<Histo1DPtr> h_jetpT;
+    CounterPtr incSow;
+    // Centrality intervals
+    vector<double> centData;
+    // Centrality binned histograms
+    map<double, Histo1DPtr> c_jetpT;
+    map<double, Histo1DPtr> c_zpT;
+    map<double, CounterPtr> sow;
 
   };
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(MC_JET_IN_HI);
+  RIVET_DECLARE_PLUGIN(MC_JET_IN_HI);
 
 }

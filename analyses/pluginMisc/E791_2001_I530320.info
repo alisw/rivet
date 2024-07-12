@@ -1,0 +1,37 @@
+Name: E791_2001_I530320
+Year: 2001
+Summary: Dalitz plot analysis of $D^+\to \pi^+\pi^+\pi^-$
+Experiment: E791
+Collider: Fermilab
+InspireID: 530320
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 86 (2001) 770-774
+RunInfo: Any process producing D+ -> pi+ pi+ pi-
+Description:
+  'Measurement of the mass distributions in the decay $D^+\to \pi^+\pi^+\pi^-$.
+   The data were read from the plots in the paper.
+   Resolution/acceptance effects have been not unfolded and given the agreement with the model in the paper this analysis should only be used for qualitative studies.'
+ValidationInfo:
+  'Herwig 7 events using model from paper'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: E791:2000vek
+BibTeX: '@article{E791:2000vek,
+    author = "Aitala, E. M. and others",
+    collaboration = "E791",
+    title = "{Experimental evidence for a light and broad scalar resonance in $D^+ \to \pi^- \pi^+ \pi^+$ decay}",
+    eprint = "hep-ex/0007028",
+    archivePrefix = "arXiv",
+    reportNumber = "CBPF-NF-056-00, FERMILAB-PUB-99-322-E",
+    doi = "10.1103/PhysRevLett.86.770",
+    journal = "Phys. Rev. Lett.",
+    volume = "86",
+    pages = "770--774",
+    year = "2001"
+}
+'

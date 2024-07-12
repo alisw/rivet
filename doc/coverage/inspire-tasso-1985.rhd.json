@@ -1,0 +1,75 @@
+{
+    "205119": [
+        "A Detailed Study of Strange Particle Production in $e^+ e^-$ Annihilation at High-energy", 
+        "TASSO", 
+        "10.1007/BF01642477", 
+        null, 
+        null, 
+        "ins205119", 
+        null, 
+        [
+            "DESY-84-093"
+        ]
+    ], 
+    "205120": [
+        "The Production and Decay of Tau Leptons in $e^+ e^-$ Annihilation at {PETRA} Energies", 
+        "TASSO", 
+        "10.1007/BF01551794", 
+        null, 
+        null, 
+        "ins205120", 
+        null, 
+        [
+            "DESY-84-091", 
+            "OUNP 65/84"
+        ]
+    ], 
+    "212873": [
+        "Search for Spinless Bosons in $e^+ e^-$ Annihilation", 
+        "TASSO", 
+        "10.1016/0370-2693(85)90593-3", 
+        null, 
+        null, 
+        "ins212873", 
+        null, 
+        [
+            "DESY-85-001"
+        ]
+    ], 
+    "220909": [
+        "Particle Correlation Observed in e$^{+} $e$^{-}$ Annihilations Into Hadrons at c.m. Energies Between 29-{GeV} and 37-{GeV}", 
+        "TASSO", 
+        "10.1007/BF01565181", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-85-077"
+        ]
+    ], 
+    "220910": [
+        "A Study of Three Jet Events in e+ e- Annihilation Into Hadrons at 34.6-GeV Center-Of-Mass Energy", 
+        "TASSO", 
+        "10.1007/BF01571375", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-85-063"
+        ]
+    ], 
+    "220941": [
+        "Search for Two Photon Production of Resonances Decaying Into $K \\bar{K}$ and $K \\bar{K} \\pi$", 
+        "TASSO", 
+        "10.1007/BF01550816", 
+        null, 
+        null, 
+        "ins220941", 
+        null, 
+        [
+            "DESY-85-093"
+        ]
+    ]
+}

@@ -1,0 +1,37 @@
+Name: BABAR_2017_I1336340
+Year: 2017
+Summary: Mass distributions in $B^\pm\to  K^0_S \pi^\pm\pi^0$
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 1336340
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 96 (2017) 7, 072001
+RunInfo: Any process producing B+/- originally Upsilon(4S) decays
+Description:
+  'Mass distributions in $B^\pm\to  K^0_S \pi^\pm\pi^0$. The data were read from the plot in the paper and the backgrounds given subtracted, however the backgrounds are large.'
+ValidationInfo:
+  'Herwig 7 events using EvtGen for decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BaBar:2015pwa
+BibTeX: '@article{BaBar:2015pwa,
+    author = "Lees, J. P. and others",
+    collaboration = "BaBar",
+    title = "{Evidence for $CP$ violation in $B^{+} \to K^{*}(892)^{+} \pi^{0}$ from a Dalitz plot analysis of $B^{+} \to K^{0}_{S} \pi^{+} \pi^{0}$ decays}",
+    eprint = "1501.00705",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BABAR-PUB-14-011, SLAC-PUB-16186, BABAR-PUB-14/011, SLAC-PUB-16186",
+    doi = "10.1103/PhysRevD.96.072001",
+    journal = "Phys. Rev. D",
+    volume = "96",
+    number = "7",
+    pages = "072001",
+    year = "2017"
+}
+'

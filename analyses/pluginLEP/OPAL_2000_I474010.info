@@ -1,0 +1,35 @@
+Name: OPAL_2000_I474010
+Year: 2000
+Summary: Correlations for $\Lambda^0$ and $\bar\Lambda^0$ production at LEP1
+Experiment: OPAL
+Collider: LEP
+InspireID: 474010
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Eur.Phys.J. C13 (2000) 185-195
+RunInfo: e+e- to hadrons
+NeedCrossSection: no
+Beams: [e-, e+]
+#Energies: 91.2
+Description:
+  'Measurement of the correlations between the production of $\Lambda^0$ and $\bar\Lambda^0$ baryons at LEP1, which is useful for testing models of baryon production.'
+Keywords: []
+BibKey: Abbiendi:1998ux
+BibTeX: '@article{Abbiendi:1998ux,
+      author         = "Abbiendi, G. and others",
+      title          = "{A Study of parton fragmentation in hadronic Z0 decays
+                        using Lambda anti-Lambda correlations}",
+      collaboration  = "OPAL",
+      journal        = "Eur. Phys. J.",
+      volume         = "C13",
+      year           = "2000",
+      pages          = "185-195",
+      doi            = "10.1007/s100520000207, 10.1007/s100520050685",
+      eprint         = "hep-ex/9808031",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-EP-98-114",
+      SLACcitation   = "%%CITATION = HEP-EX/9808031;%%"
+}'

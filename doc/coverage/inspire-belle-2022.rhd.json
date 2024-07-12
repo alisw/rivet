@@ -1,0 +1,257 @@
+{
+    "1860983": [
+        "Measurement of the branching fractions of the <math display=\"inline\"><msup><mi>B</mi><mo>+</mo></msup><mo stretchy=\"false\">\u2192</mo><mi>\u03b7</mi><msup><mo>\u2113</mo><mo>+</mo></msup><msub><mi>\u03bd</mi><mo>\u2113</mo></msub></math> and <math display=\"inline\"><msup><mi>B</mi><mo>+</mo></msup><mo stretchy=\"false\">\u2192</mo><msup><mi>\u03b7</mi><mo>\u2032</mo></msup><msup><mo>\u2113</mo><mo>+</mo></msup><msub><mi>\u03bd</mi><mo>\u2113</mo></msub></math> decays with signal-side only reconstruction in the full <math display=\"inline\"><msup><mi>q</mi><mn>2</mn></msup></math> range",
+        "Belle",
+        "10.1103/PhysRevD.106.032013",
+        null,
+        "2104.13354",
+        null,
+        null,
+        [
+            "Belle Preprint 2021-07",
+            "KEK Preprint 2021-3"
+        ]
+    ],
+    "1863389": [
+        "Study of <math display=\"inline\"><mi>\u03b3</mi><mi>\u03b3</mi><mo stretchy=\"false\">\u2192</mo><mi>\u03b3</mi><mi>\u03c8</mi><mo stretchy=\"false\">(</mo><mn>2</mn><mi>S</mi><mo stretchy=\"false\">)</mo></math> at Belle",
+        "Belle",
+        "10.1103/PhysRevD.105.112011",
+        null,
+        "2105.06605",
+        null,
+        null,
+        []
+    ],
+    "1912559": [
+        "An improved search for the electric dipole moment of the $\\tau$ lepton",
+        "Belle",
+        "10.1007/JHEP04(2022)110",
+        null,
+        "2108.11543",
+        null,
+        null,
+        [
+            "Belle Preprint 2021-22",
+            "KEK Preprint 2021-26"
+        ]
+    ],
+    "1923635": [
+        "Search for <math display=\"inline\"><mrow><msup><mrow><mi>Z</mi></mrow><mrow><mo>\u2032</mo></mrow></msup><mo stretchy=\"false\">\u2192</mo><msup><mrow><mi>\u03bc</mi></mrow><mrow><mo>+</mo></mrow></msup><msup><mrow><mi>\u03bc</mi></mrow><mrow><mo>-</mo></mrow></msup></mrow></math> in the <math display=\"inline\"><mrow><msub><mrow><mi>L</mi></mrow><mrow><mi>\u03bc</mi></mrow></msub><mo>-</mo><msub><mrow><mi>L</mi></mrow><mrow><mi>\u03c4</mi></mrow></msub></mrow></math> gauge-symmetric model at Belle",
+        "Belle",
+        "10.1103/PhysRevD.106.012003",
+        null,
+        "2109.08596",
+        null,
+        null,
+        [
+            "Belle Preprint 2021-20 KEK Preprint 2021-24"
+        ]
+    ],
+    "1938246": [
+        "B-flavor tagging at Belle II",
+        "Belle-II",
+        "10.1140/epjc/s10052-022-10180-9",
+        null,
+        "2110.00790",
+        null,
+        null,
+        [
+            "BELLE2-PUB-TE-2021-002"
+        ]
+    ],
+    "1951031": [
+        "Combined analysis of Belle and Belle II data to determine the CKM angle $ \\phi_{3} $ using $B^+ \\to D(K_{S}^0 h^- h^+) h^+$ decays",
+        "Belle",
+        "10.1007/JHEP02(2022)063",
+        null,
+        "2110.12125",
+        null,
+        null,
+        [
+            "Belle II Preprint 2021-003",
+            "KEK Preprint 2021-28"
+        ]
+    ],
+    "1953586": [
+        "Search for $B^0$ meson decays into $\\Lambda$ and missing energy with a hadronic tagging method at Belle",
+        "Belle",
+        "10.1103/PhysRevD.105.L051101",
+        null,
+        "2110.14086",
+        null,
+        null,
+        [
+            "Belle Preprint 2021-24; KEK Preprint 2021-29; PNNL-SA-167279"
+        ]
+    ],
+    "1964638": [
+        "Study of $\\overline{B}{}^0\\rightarrow D^{+}h^{-} (h=K/\\pi)$ decays at Belle",
+        "Belle",
+        "10.1103/PhysRevD.105.012003",
+        null,
+        "2111.04978",
+        null,
+        null,
+        [
+            "Belle Preprint 2021-25",
+            "KEK Preprint 2021-30"
+        ]
+    ],
+    "1970528": [
+        "Measurements of the branching fractions of $\\Xi_c^0 \\to \\Lambda K_S^0$, $\\Xi_c^0 \\to \\Sigma^0 K_S^0$, and $\\Xi_c^0 \\to \\Sigma^+ K^-$ decays at Belle",
+        "Belle",
+        "10.1103/PhysRevD.105.L011102",
+        null,
+        "2111.08981",
+        null,
+        null,
+        [
+            "Belle Preprint 2021-27; KEK Preprint 2021-32"
+        ]
+    ],
+    "1975806": [
+        "Measurement of the branching fraction and $CP$ asymmetry for $B\\to\\bar{D}^{0} \\pi$ decays",
+        "Belle",
+        "10.1103/PhysRevD.105.072007",
+        null,
+        "2111.12337",
+        null,
+        null,
+        [
+            "Belle Preprint 2021-17",
+            "KEK Preprint 2021-15"
+        ]
+    ],
+    "1979565": [
+        "Search for the decay $B_s^0\\rightarrow\\eta\\eta$",
+        "Belle",
+        "10.1103/PhysRevD.105.012007",
+        null,
+        "2111.14437",
+        null,
+        null,
+        [
+            "Belle Preprint 2021-26",
+            "KEK Preprint 2021-31"
+        ]
+    ],
+    "1984768": [
+        "Search for tetraquark states $X_{cc\\bar{s}\\bar{s}}$ in $D_{s}^{+}D_{s}^{+}~(D_{s}^{*+}D_{s}^{*+})$ final states at Belle",
+        "Belle",
+        "10.1103/PhysRevD.105.032002",
+        null,
+        "2112.02497",
+        null,
+        null,
+        [
+            "Belle Preprint 2021-28; KEK Preprint 2021-33"
+        ]
+    ],
+    "1993935": [
+        "First test of lepton flavor universality in the charmed baryon decays <math display=\"inline\"><mrow><msubsup><mrow><mi mathvariant=\"normal\">\u03a9</mi></mrow><mrow><mi>c</mi></mrow><mrow><mn>0</mn></mrow></msubsup><mo stretchy=\"false\">\u2192</mo><msup><mrow><mi mathvariant=\"normal\">\u03a9</mi></mrow><mrow><mo>-</mo></mrow></msup><msup><mrow><mo>\u2113</mo></mrow><mrow><mo>+</mo></mrow></msup><msub><mrow><mi>\u03bd</mi></mrow><mrow><mo>\u2113</mo></mrow></msub></mrow></math> using data of the Belle experiment",
+        "Belle",
+        "10.1103/PhysRevD.105.L091101",
+        null,
+        "2112.10367",
+        null,
+        null,
+        [
+            "Belle Preprint 2021-29; KEK Preprint 2021-34"
+        ]
+    ],
+    "1995840": [
+        "Search for a light Higgs boson in single-photon decays of $\\Upsilon(1S)$ using $\\Upsilon(2S) \\to \\pi^+ \\pi^- \\Upsilon(1S)$ tagging method",
+        "Belle",
+        "10.1103/PhysRevLett.128.081804",
+        "2802267",
+        "2112.11852",
+        null,
+        null,
+        [
+            "Belle Preprint 2021-30; KEK Preprint 2021-35"
+        ]
+    ],
+    "1998668": [
+        "First Measurement of the $\\Lambda_c^+ \\to p \\eta'$ decay",
+        "Belle",
+        "10.1007/JHEP03(2022)090",
+        null,
+        "2112.14276",
+        null,
+        null,
+        [
+            "Belle Preprint 2021-19; KEK Preprint 2021-23"
+        ]
+    ],
+    "2001955": [
+        "Measurement of Two-Particle Correlations of Hadrons in e+e- Collisions at Belle",
+        "Belle",
+        "10.1103/PhysRevLett.128.142005",
+        null,
+        "2201.01694",
+        null,
+        null,
+        [
+            "Belle Preprint 2021-32; KEK Preprint 2021-57"
+        ]
+    ],
+    "2004394": [
+        "Search for the decay <math display=\"inline\"><msubsup><mi>B</mi><mi>s</mi><mn>0</mn></msubsup><mo stretchy=\"false\">\u2192</mo><msup><mi>\u03b7</mi><mo>\u2032</mo></msup><msubsup><mi>K</mi><mi>S</mi><mn>0</mn></msubsup></math>",
+        "Belle",
+        "10.1103/PhysRevD.106.L051103",
+        null,
+        "2201.01851",
+        null,
+        null,
+        [
+            "Belle Preprint 2022-001",
+            "Belle II Preprint 2022-001",
+            "KEK Preprint 2021-58"
+        ]
+    ],
+    "2009463": [
+        "Measurement of $\\mathcal B (B_s \\to D_sX)$ with $B_s$ semileptonic tagging",
+        "Belle",
+        "10.1103/PhysRevD.105.012004",
+        null,
+        "2106.11265",
+        null,
+        null,
+        [
+            "Belle Preprint 2020-21 KEK Preprint 2020-38",
+            "University of\n  Cincinnati Preprint UCHEP-21-05"
+        ]
+    ],
+    "2016386": [
+        "Search for charged lepton flavor violating decays of $\\Upsilon(1S)$",
+        "Belle",
+        "10.1007/JHEP05(2022)095",
+        null,
+        "2201.09620",
+        null,
+        null,
+        [
+            "Belle Preprint 2022-02; KEK Preprint 2021-59"
+        ]
+    ],
+    "2016485": [
+        "The design, construction, operation and performance of the Belle\u00a0II silicon vertex detector",
+        "Belle-II SVD",
+        "10.1088/1748-0221/17/11/P11042",
+        null,
+        "2201.09824",
+        null,
+        null,
+        []
+    ],
+    "2127002": [
+        "Search for the radiative penguin decays <math display=\"inline\"><msup><mi>B</mi><mn>0</mn></msup><mo stretchy=\"false\">\u2192</mo><msubsup><mi>K</mi><mi>S</mi><mn>0</mn></msubsup><msubsup><mi>K</mi><mi>S</mi><mn>0</mn></msubsup><mi>\u03b3</mi></math> in the Belle experiment",
+        "Belle",
+        "10.1103/PhysRevD.106.012006",
+        null,
+        null,
+        null,
+        null,
+        []
+    ]
+}

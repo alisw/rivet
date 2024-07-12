@@ -1,0 +1,81 @@
+BEGIN YODA_SCATTER2D_V2 /REF/OPAL_1995_I393503/d01-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.01, up: 0.01}, sys: {dn: -0.04, up: 0.04}}}
+
+IsRef: 1
+Path: /REF/OPAL_1995_I393503/d01-x01-y01
+Title: doi:10.17182/hepdata.48008.v1/t1
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+9.120000e+01	0.000000e+00	0.000000e+00	1.990000e+00	4.123106e-02	4.123106e-02
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/OPAL_1995_I393503/d02-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.4, up: 0.4}, sys: {dn: -1.1, up: 1.1}, 'sys,Additional overall normalisation error.': {dn: -0.508, up: 0.508}}, 1: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -1.0, up: 1.0}, 'sys,Additional overall normalisation error.': {dn: -0.486, up: 0.486}}, 2: {stat: {dn: -0.2, up: 0.2}, sys: {dn: -0.8, up: 0.8}, 'sys,Additional overall normalisation error.': {dn: -0.382, up: 0.382}}, 3: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -0.6, up: 0.6}, 'sys,Additional overall normalisation error.': {dn: -0.306, up: 0.306}}, 4: {stat: {dn: -0.13, up: 0.13}, sys: {dn: -0.54, up: 0.54}, 'sys,Additional overall normalisation error.': {dn: -0.26, up: 0.26}}, 5: {stat: {dn: -0.12, up: 0.12}, sys: {dn: -0.46, up: 0.46}, 'sys,Additional overall normalisation error.': {dn: -0.22, up: 0.22}}, 6: {stat: {dn: -0.11, up: 0.11}, sys: {dn: -0.39, up: 0.39}, 'sys,Additional overall normalisation error.': {dn: -0.1848, up: 0.1848}}, 7: {stat: {dn: -0.1, up: 0.1}, sys: {dn: -0.36, up: 0.36}, 'sys,Additional overall normalisation error.': {dn: -0.1672, up: 0.1672}}, 8: {stat: {dn: -0.09, up: 0.09}, sys: {dn: -0.3, up: 0.3}, 'sys,Additional overall normalisation error.': {dn: -0.1384, up: 0.1384}}, 9: {stat: {dn: -0.05, up: 0.05}, sys: {dn: -0.24, up: 0.24}, 'sys,Additional overall normalisation error.': {dn: -0.11320000000000001, up: 0.11320000000000001}}, 10: {stat: {dn: -0.05, up: 0.05}, sys: {dn: -0.19, up: 0.19}, 'sys,Additional overall normalisation error.': {dn: -0.0886, up: 0.0886}}, 11: {stat: {dn: -0.03, up: 0.03}, sys: {dn: -0.13, up: 0.13}, 'sys,Additional overall normalisation error.': {dn: -0.061200000000000004, up: 0.061200000000000004}}, 12: {stat: {dn: -0.02, up: 0.02}, sys: {dn: -0.08, up: 0.08}, 'sys,Additional overall normalisation error.': {dn: -0.0384, up: 0.0384}}, 13: {stat: {dn: -0.019, up: 0.019}, sys: {dn: -0.055, up: 0.055}, 'sys,Additional overall normalisation error.': {dn: -0.025, up: 0.025}}, 14: {stat: {dn: -0.016, up: 0.016}, sys: {dn: -0.039, up: 0.039}, 'sys,Additional overall normalisation error.': {dn: -0.01698, up: 0.01698}}, 15: {stat: {dn: -0.014, up: 0.014}, sys: {dn: -0.028, up: 0.028}, 'sys,Additional overall normalisation error.': {dn: -0.011439999999999999, up: 0.011439999999999999}}, 16: {stat: {dn: -0.012, up: 0.012}, sys: {dn: -0.02, up: 0.02}, 'sys,Additional overall normalisation error.': {dn: -0.0077800000000000005, up: 0.0077800000000000005}}, 17: {stat: {dn: -0.009, up: 0.009}, sys: {dn: -0.014, up: 0.014}, 'sys,Additional overall normalisation error.': {dn: -0.005, up: 0.005}}, 18: {stat: {dn: -0.005, up: 0.005}, sys: {dn: -0.009, up: 0.009}, 'sys,Additional overall normalisation error.': {dn: -0.00322, up: 0.00322}}, 19: {stat: {dn: -0.002, up: 0.002}, sys: {dn: -0.003, up: 0.003}, 'sys,Additional overall normalisation error.': {dn: -0.001, up: 0.001}}}
+
+IsRef: 1
+Path: /REF/OPAL_1995_I393503/d02-x01-y01
+Title: doi:10.17182/hepdata.48008.v1/t2
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.400000e-02	2.600000e-03	6.000000e-03	2.540000e+01	1.275956e+00	1.275956e+00
+2.500000e-02	5.000000e-03	5.000000e-03	2.430000e+01	1.129688e+00	1.129688e+00
+3.500000e-02	5.000000e-03	5.000000e-03	1.910000e+01	9.088036e-01	9.088036e-01
+4.500000e-02	5.000000e-03	5.000000e-03	1.530000e+01	6.809082e-01	6.809082e-01
+5.500000e-02	5.000000e-03	5.000000e-03	1.300000e+01	6.132699e-01	6.132699e-01
+6.500000e-02	5.000000e-03	5.000000e-03	1.100000e+01	5.238320e-01	5.238320e-01
+7.500000e-02	5.000000e-03	5.000000e-03	9.240000e+00	4.453662e-01	4.453662e-01
+8.500000e-02	5.000000e-03	5.000000e-03	8.360000e+00	4.093359e-01	4.093359e-01
+9.500000e-02	5.000000e-03	5.000000e-03	6.920000e+00	3.424245e-01	3.424245e-01
+1.110000e-01	1.100000e-02	1.400000e-02	5.660000e+00	2.700264e-01	2.700264e-01
+1.360000e-01	1.100000e-02	1.400000e-02	4.430000e+00	2.155225e-01	2.155225e-01
+1.720000e-01	2.200000e-02	2.800000e-02	3.060000e+00	1.467837e-01	1.467837e-01
+2.230000e-01	2.300000e-02	2.700000e-02	1.920000e+00	9.096461e-02	9.096461e-02
+2.730000e-01	2.300000e-02	2.700000e-02	1.250000e+00	6.333246e-02	6.333246e-02
+3.230000e-01	2.300000e-02	2.700000e-02	8.490000e-01	4.544580e-02	4.544580e-02
+3.730000e-01	2.300000e-02	2.700000e-02	5.720000e-01	3.332977e-02	3.332977e-02
+4.240000e-01	2.400000e-02	2.600000e-02	3.890000e-01	2.458716e-02	2.458716e-02
+4.740000e-01	2.400000e-02	2.600000e-02	2.500000e-01	1.737815e-02	1.737815e-02
+5.490000e-01	4.900000e-02	5.100000e-02	1.610000e-01	1.078742e-02	1.078742e-02
+6.890000e-01	8.900000e-02	1.110000e-01	5.000000e-02	3.741657e-03	3.741657e-03
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/OPAL_1995_I393503/d03-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.002, up: 0.002}, sys: {dn: -0.001, up: 0.001}, 'sys,Additional overall normalisation error.': {dn: -0.0005, up: 0.0005}}, 1: {stat: {dn: -0.002, up: 0.002}, sys: {dn: -0.003, up: 0.003}, 'sys,Additional overall normalisation error.': {dn: -0.00122, up: 0.00122}}, 2: {stat: {dn: -0.003, up: 0.003}, sys: {dn: -0.006, up: 0.006}, 'sys,Additional overall normalisation error.': {dn: -0.00222, up: 0.00222}}, 3: {stat: {dn: -0.004, up: 0.004}, sys: {dn: -0.01, up: 0.01}, 'sys,Additional overall normalisation error.': {dn: -0.0035399999999999997, up: 0.0035399999999999997}}, 4: {stat: {dn: -0.005, up: 0.005}, sys: {dn: -0.014, up: 0.014}, 'sys,Additional overall normalisation error.': {dn: -0.00534, up: 0.00534}}, 5: {stat: {dn: -0.005, up: 0.005}, sys: {dn: -0.018, up: 0.018}, 'sys,Additional overall normalisation error.': {dn: -0.006919999999999999, up: 0.006919999999999999}}, 6: {stat: {dn: -0.006, up: 0.006}, sys: {dn: -0.022, up: 0.022}, 'sys,Additional overall normalisation error.': {dn: -0.00842, up: 0.00842}}, 7: {stat: {dn: -0.006, up: 0.006}, sys: {dn: -0.027, up: 0.027}, 'sys,Additional overall normalisation error.': {dn: -0.0102, up: 0.0102}}, 8: {stat: {dn: -0.006, up: 0.006}, sys: {dn: -0.031, up: 0.031}, 'sys,Additional overall normalisation error.': {dn: -0.011519999999999999, up: 0.011519999999999999}}, 9: {stat: {dn: -0.006, up: 0.006}, sys: {dn: -0.034, up: 0.034}, 'sys,Additional overall normalisation error.': {dn: -0.01256, up: 0.01256}}, 10: {stat: {dn: -0.007, up: 0.007}, sys: {dn: -0.036, up: 0.036}, 'sys,Additional overall normalisation error.': {dn: -0.013580000000000002, up: 0.013580000000000002}}, 11: {stat: {dn: -0.007, up: 0.007}, sys: {dn: -0.037, up: 0.037}, 'sys,Additional overall normalisation error.': {dn: -0.014039999999999999, up: 0.014039999999999999}}, 12: {stat: {dn: -0.007, up: 0.007}, sys: {dn: -0.038, up: 0.038}, 'sys,Additional overall normalisation error.': {dn: -0.014199999999999999, up: 0.014199999999999999}}, 13: {stat: {dn: -0.007, up: 0.007}, sys: {dn: -0.037, up: 0.037}, 'sys,Additional overall normalisation error.': {dn: -0.013919999999999998, up: 0.013919999999999998}}, 14: {stat: {dn: -0.007, up: 0.007}, sys: {dn: -0.036, up: 0.036}, 'sys,Additional overall normalisation error.': {dn: -0.013340000000000001, up: 0.013340000000000001}}, 15: {stat: {dn: -0.008, up: 0.008}, sys: {dn: -0.034, up: 0.034}, 'sys,Additional overall normalisation error.': {dn: -0.0129, up: 0.0129}}, 16: {stat: {dn: -0.008, up: 0.008}, sys: {dn: -0.031, up: 0.031}, 'sys,Additional overall normalisation error.': {dn: -0.011479999999999999, up: 0.011479999999999999}}, 17: {stat: {dn: -0.008, up: 0.008}, sys: {dn: -0.027, up: 0.027}, 'sys,Additional overall normalisation error.': {dn: -0.01034, up: 0.01034}}, 18: {stat: {dn: -0.008, up: 0.008}, sys: {dn: -0.024, up: 0.024}, 'sys,Additional overall normalisation error.': {dn: -0.00918, up: 0.00918}}, 19: {stat: {dn: -0.008, up: 0.008}, sys: {dn: -0.019, up: 0.019}, 'sys,Additional overall normalisation error.': {dn: -0.00712, up: 0.00712}}, 20: {stat: {dn: -0.009, up: 0.009}, sys: {dn: -0.015, up: 0.015}, 'sys,Additional overall normalisation error.': {dn: -0.00582, up: 0.00582}}, 21: {stat: {dn: -0.008, up: 0.008}, sys: {dn: -0.011, up: 0.011}, 'sys,Additional overall normalisation error.': {dn: -0.00388, up: 0.00388}}, 22: {stat: {dn: -0.009, up: 0.009}, sys: {dn: -0.007, up: 0.007}, 'sys,Additional overall normalisation error.': {dn: -0.00256, up: 0.00256}}, 23: {stat: {dn: -0.008, up: 0.008}, sys: {dn: -0.005, up: 0.005}, 'sys,Additional overall normalisation error.': {dn: -0.00188, up: 0.00188}}, 24: {stat: {dn: -0.009, up: 0.009}, sys: {dn: -0.005, up: 0.005}, 'sys,Additional overall normalisation error.': {dn: -0.0018, up: 0.0018}}, 25: {stat: {dn: -0.006, up: 0.006}, sys: {dn: -0.002, up: 0.002}, 'sys,Additional overall normalisation error.': {dn: -0.0008, up: 0.0008}}, 26: {stat: {dn: -0.008, up: 0.008}, sys: {dn: -0.002, up: 0.002}, 'sys,Additional overall normalisation error.': {dn: -0.00068, up: 0.00068}}}
+
+IsRef: 1
+Path: /REF/OPAL_1995_I393503/d03-x01-y01
+Title: doi:10.17182/hepdata.48008.v1/t3
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+3.000000e-01	1.000000e-01	1.000000e-01	2.500000e-02	2.291288e-03	2.291288e-03
+5.000000e-01	1.000000e-01	1.000000e-01	6.100000e-02	3.806363e-03	3.806363e-03
+7.000000e-01	1.000000e-01	1.000000e-01	1.110000e-01	7.066003e-03	7.066003e-03
+9.000000e-01	1.000000e-01	1.000000e-01	1.770000e-01	1.133718e-02	1.133718e-02
+1.100000e+00	1.000000e-01	1.000000e-01	2.670000e-01	1.579606e-02	1.579606e-02
+1.300000e+00	1.000000e-01	1.000000e-01	3.460000e-01	1.992201e-02	1.992201e-02
+1.500000e+00	1.000000e-01	1.000000e-01	4.210000e-01	2.430836e-02	2.430836e-02
+1.700000e+00	1.000000e-01	1.000000e-01	5.100000e-01	2.947948e-02	2.947948e-02
+1.900000e+00	1.000000e-01	1.000000e-01	5.760000e-01	3.361116e-02	3.361116e-02
+2.100000e+00	1.000000e-01	1.000000e-01	6.280000e-01	3.673899e-02	3.673899e-02
+2.300000e+00	1.000000e-01	1.000000e-01	6.790000e-01	3.910775e-02	3.910775e-02
+2.500000e+00	1.000000e-01	1.000000e-01	7.020000e-01	4.018858e-02	4.018858e-02
+2.700000e+00	1.000000e-01	1.000000e-01	7.100000e-01	4.116601e-02	4.116601e-02
+2.900000e+00	1.000000e-01	1.000000e-01	6.960000e-01	4.014681e-02	4.014681e-02
+3.100000e+00	1.000000e-01	1.000000e-01	6.670000e-01	3.902506e-02	3.902506e-02
+3.300000e+00	1.000000e-01	1.000000e-01	6.450000e-01	3.723453e-02	3.723453e-02
+3.500000e+00	1.000000e-01	1.000000e-01	5.740000e-01	3.401162e-02	3.401162e-02
+3.700000e+00	1.000000e-01	1.000000e-01	5.170000e-01	2.999859e-02	2.999859e-02
+3.900000e+00	1.000000e-01	1.000000e-01	4.590000e-01	2.691231e-02	2.691231e-02
+4.100000e+00	1.000000e-01	1.000000e-01	3.560000e-01	2.181042e-02	2.181042e-02
+4.300000e+00	1.000000e-01	1.000000e-01	2.910000e-01	1.843563e-02	1.843563e-02
+4.500000e+00	1.000000e-01	1.000000e-01	1.940000e-01	1.414406e-02	1.414406e-02
+4.700000e+00	1.000000e-01	1.000000e-01	1.280000e-01	1.168562e-02	1.168562e-02
+4.900000e+00	1.000000e-01	1.000000e-01	9.400000e-02	9.619480e-03	9.619480e-03
+5.100000e+00	1.000000e-01	1.000000e-01	9.000000e-02	1.045179e-02	1.045179e-02
+5.300000e+00	1.000000e-01	1.000000e-01	4.000000e-02	6.374951e-03	6.374951e-03
+5.500000e+00	1.000000e-01	1.000000e-01	3.400000e-02	8.274201e-03	8.274201e-03
+END YODA_SCATTER2D_V2

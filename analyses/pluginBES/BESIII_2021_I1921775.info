@@ -1,0 +1,38 @@
+Name: BESIII_2021_I1921775
+Year: 2021
+Summary: Analysis of $\psi(2S)$ decays to $\Xi^{*0}\bar\Xi^{*0}$
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1921775
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 104 (2021) 9, 092012
+RunInfo: e+e- -> Psi(2S)
+NeedCrossSection: no
+Beams: [e-, e+]
+Energies: [3.69]
+Description:
+  'Analysis of the angular distribution of the baryons produced in $e^+e^-\to \psi(2S) \to \Xi^{*0}\bar\Xi^{*0}$.
+   Gives information about the decay and is useful for testing correlations in hadron decays.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2021gca
+BibTeX: '@article{BESIII:2021gca,
+    author = "Ablikim, M. and others",
+    collaboration = "BESIII",
+    title = "{Observation of $\psi(3686)\to\Xi(1530)^{0}\bar{\Xi}(1530)^{0}$ and $\Xi(1530)^{0}\bar{\Xi}^0$}",
+    eprint = "2109.06621",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevD.104.092012",
+    journal = "Phys. Rev. D",
+    volume = "104",
+    number = "9",
+    pages = "092012",
+    year = "2021"
+}
+'

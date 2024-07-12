@@ -5,12 +5,13 @@ Experiment: CMS
 Collider: LHC
 InspireID: 1122847
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Markus Radziej <radziej@physik.rwth-aachen.de>
 References:
  - Phys. Lett. B 718 (2013) 752
  - doi:10.1016/j.physletb.2012.10.082
- - http://arxiv.org/abs/1207.3973
+ - arXiv:1207.3973
 RunInfo:
   Drell-Yan events with an electron or muon final state are necessary. High
   statistics as well as a NLO generator are recommended for a good agreement
@@ -44,3 +45,8 @@ BibTeX: '@article{Chatrchyan:2012dc,
       reportNumber   = "CMS-EWK-11-004, CERN-PH-EP-2012-187",
       SLACcitation   = "%%CITATION = ARXIV:1207.3973;%%",
 }'
+
+ReleaseTests:
+ - $A LHC-Z-e
+ - $A-2 LHC-Z-mu
+

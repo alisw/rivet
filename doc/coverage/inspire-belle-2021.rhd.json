@@ -1,0 +1,208 @@
+{
+    "1693396": [
+        "Measurement of the CKM matrix element $|V_{cb}|$ from $B^0\\to D^{*-}\\ell^ {+} \\nu_\\ell$ at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.100.052007", 
+        null, 
+        "1809.03290", 
+        null, 
+        null, 
+        []
+    ], 
+    "1728173": [
+        "Test of Lepton-Flavor Universality in ${B\\to K^\\ast\\ell^+\\ell^-}$ Decays at Belle", 
+        "Belle", 
+        "10.1103/PhysRevLett.126.161801", 
+        null, 
+        "1904.02440", 
+        null, 
+        null, 
+        [
+            "BELLE-CONF-1901"
+        ]
+    ], 
+    "1748231": [
+        "Test of lepton flavor universality and search for lepton flavor violation in $B \\rightarrow K\\ell \\ell$ decays", 
+        "BELLE", 
+        "10.1007/JHEP03(2021)105", 
+        null, 
+        "1908.01848", 
+        null, 
+        null, 
+        [
+            "BELLE-CONF-1904"
+        ]
+    ], 
+    "1796822": [
+        "Measurement of the branching fraction of the decay $\\boldsymbol{B^{+}\\to\\pi^{+}\\pi^{-}\\ell^{+}\\nu_\\ell}$ in fully reconstructed events at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.103.112001", 
+        null, 
+        "2005.07766", 
+        null, 
+        null, 
+        [
+            "Belle preprint 2020-06", 
+            "KEK preprint 2020-04"
+        ]
+    ], 
+    "1806546": [
+        "Evidence for $X(3872)\\rightarrow J/\\psi \\pi^+\\pi^-$ Produced in Single-Tag Two-Photon Interactions", 
+        "Belle", 
+        "10.1103/PhysRevLett.126.122001", 
+        null, 
+        "2007.05696", 
+        null, 
+        null, 
+        [
+            "Belle Preprint 2020-08", 
+            "KEK Preprint 2020-07"
+        ]
+    ], 
+    "1809180": [
+        "First determination of the spin and parity of the charmed-strange baryon $\\Xi_{c}(2970)^+$", 
+        "Belle", 
+        "10.1103/PhysRevD.103.L111101", 
+        null, 
+        "2007.14700", 
+        null, 
+        null, 
+        [
+            "BELLE Preprint 2020-09"
+        ]
+    ], 
+    "1813380": [
+        "Measurement of branching fractions of  $\\Lambda_{c}^{+} \\rightarrow \\eta\\Lambda\\pi^{+}$, $\\eta \\Sigma^{0} \\pi^{+}$, $\\Lambda(1670) \\pi^{+}$, and $\\eta \\Sigma(1385)^{+}$", 
+        "Belle", 
+        "10.1103/PhysRevD.103.052005", 
+        null, 
+        "2008.11575", 
+        null, 
+        null, 
+        []
+    ], 
+    "1827501": [
+        "Measurement of time-dependent $CP$ violation parameters in $B^0 \\to K_0^SK_0^SK_0^S$ decays at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.103.032003", 
+        null, 
+        "2011.00793", 
+        null, 
+        null, 
+        [
+            "Belle Preprint 2020-17", 
+            "KEK Preprint 2020-34"
+        ]
+    ], 
+    "1834979": [
+        "Commissioning and performance of the Belle II pixel detector", 
+        "Belle-II DEPFET", 
+        "10.1016/j.nima.2020.164875", 
+        null, 
+        null, 
+        null, 
+        null, 
+        []
+    ], 
+    "1835062": [
+        "Search for the dark photon in $B^0 \\to A^{\\prime} A^{\\prime}$, $A^{\\prime} \\to e^+ e^-$, $\\mu^+ \\mu^-$, and $\\pi^+ \\pi^-$ decays at Belle", 
+        "Belle", 
+        "10.1007/JHEP04(2021)191", 
+        null, 
+        "2012.02538", 
+        null, 
+        null, 
+        [
+            "Belle Preprint 2020-19", 
+            "KEK Preprint 2020-36"
+        ]
+    ], 
+    "1835729": [
+        "Measurement of the resonant and nonresonant branching ratios in $\\Xi_{c}^{0} \\rightarrow \\Xi^{0} K^+ K^-$", 
+        "Belle", 
+        "10.1103/PhysRevD.103.112002", 
+        null, 
+        "2012.05607", 
+        null, 
+        null, 
+        []
+    ], 
+    "1841899": [
+        "Measurement of branching fraction and search for $CP$ violation in $B\\to \\phi \\phi K$", 
+        "Belle", 
+        "10.1103/PhysRevD.103.052013", 
+        null, 
+        "2101.07753", 
+        null, 
+        null, 
+        [
+            "Belle Preprint 2020-20", 
+            "KEK Preprint 2020-37"
+        ]
+    ], 
+    "1844263": [
+        "Measurements of partial branching fractions of inclusive B\u2192Xu\u2113+\u03bd\u2113 decays with hadronic tagging", 
+        "Belle", 
+        "10.1103/PhysRevD.104.012008", 
+        "2775941", 
+        "2102.00020", 
+        null, 
+        null, 
+        [
+            "Belle Preprint 2020-22", 
+            "KEK Preprint 2020-39"
+        ]
+    ], 
+    "1847767": [
+        "Search for Bs0\u2192\u03b7\u2032Xss\u00af at Belle using a semi-inclusive method", 
+        "Belle", 
+        "10.1103/PhysRevD.104.012007", 
+        null, 
+        "2102.10266", 
+        null, 
+        null, 
+        [
+            "Belle Preprint 2021-01", 
+            "KEK Preprint 2020-40"
+        ]
+    ], 
+    "1848219": [
+        "Measurements of the branching fractions of $\\Lambda_c^+ \\to p \\eta$ and $\\Lambda_c^+ \\to p \\pi^0$ decays at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.103.072004", 
+        null, 
+        "2102.12226", 
+        null, 
+        null, 
+        [
+            "Belle Preprint 2021-02; KEK Preprint 2020-42", 
+            "Belle Preprint 2021-02", 
+            "KEK Preprint 2020-42"
+        ]
+    ], 
+    "1852254": [
+        "Measurement of branching fractions and $CP$ asymmetries for $D_s^{+} \\rightarrow K^+ (\\eta, \\pi^0) $ and $D_s^{+} \\rightarrow \\pi^+ (\\eta, \\pi^0)$ decays at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.103.112005", 
+        null, 
+        "2103.09969", 
+        null, 
+        null, 
+        [
+            "Belle Preprint 2021-04; KEK Preprint 2020-46; UC Preprint\n  UCHEP-21-02"
+        ]
+    ], 
+    "1859137": [
+        "Measurement of the energy dependence of the e$^{+}$e$^{\u2212}$ \u2192 $ B\\overline{B} $, $ B{\\overline{B}}^{\\ast } $ and $ {B}^{\\ast }{\\overline{B}}^{\\ast } $ exclusive cross sections", 
+        "Belle", 
+        "10.1007/JHEP06(2021)137", 
+        null, 
+        "2104.08371", 
+        null, 
+        null, 
+        [
+            "Belle Preprint 2021-05", 
+            "KEK Preprint 2021-1"
+        ]
+    ]
+}

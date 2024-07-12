@@ -1,0 +1,36 @@
+Name: BABAR_2009_I827787
+Year: 2009
+Summary: Hadronic mass moments in $B\to X_c\ell^-\bar\nu_\ell$
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 827787
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 81 (2010) 032003
+RunInfo: Any process producing B0/B+, originally Upsilon(4S) decays
+Description:
+  'Measurement of the moments of the hadronic mass in $B\to X_c\ell^-\bar\nu_\ell$.'
+ValidationInfo:
+  'Herwig7 events using EvtGen for decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BaBar:2009zpz
+BibTeX: '@article{BaBar:2009zpz,
+    author = "Aubert, Bernard and others",
+    collaboration = "BaBar",
+    title = "{Measurement and interpretation of moments in inclusive semileptonic decays anti-B ---\ensuremath{>} X(c) l- anti-nu}",
+    eprint = "0908.0415",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "SLAC-PUB-13735, BABAR-PUB-09-004",
+    doi = "10.1103/PhysRevD.81.032003",
+    journal = "Phys. Rev. D",
+    volume = "81",
+    pages = "032003",
+    year = "2010"
+}
+'

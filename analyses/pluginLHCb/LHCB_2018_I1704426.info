@@ -1,0 +1,36 @@
+Name: LHCB_2018_I1704426
+Year: 2018
+Summary: Mass distributions in the decays $D^0\to K^+K^-\pi^+\pi^-$
+Experiment: LHCB
+Collider: LHC
+InspireID: 1704426
+Status: VALIDATED NOHEPDATA
+Reentrant:  true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - JHEP 02 (2019) 126
+RunInfo: Any process producing D0 mesons
+Description:
+  'Measurement of the mass distributions in the decay $D^0\to K^+K^-\pi^+\pi^-$ by LHCb. The data were extracted from the plots in the paper. It is also not clear that any resolution effects have been unfolded.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: LHCb:2018mzv
+BibTeX: '@article{LHCb:2018mzv,
+    author = "Aaij, Roel and others",
+    collaboration = "LHCb",
+    title = "{Search for $CP$ violation through an amplitude analysis of $D^0 \to K^+ K^- \pi^+ \pi^-$ decays}",
+    eprint = "1811.08304",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "LHCb-PAPER-2018-041, CERN-EP-2018-299",
+    doi = "10.1007/JHEP02(2019)126",
+    journal = "JHEP",
+    volume = "02",
+    pages = "126",
+    year = "2019"
+}
+'

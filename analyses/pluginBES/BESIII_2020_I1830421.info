@@ -1,0 +1,36 @@
+Name: BESIII_2020_I1830421
+Year: 2020
+Summary: $\eta^\prime\to \pi^+\pi^-e^+e^-$ decays
+Experiment: BESIII
+Collider: BEPC 
+InspireID: 1830421
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 103 (2021) 9, 092005
+RunInfo:
+  Events with eta prime decays, either particle guns or collisions.
+Description:
+  'Differential decay rates for $\eta^\prime\to \pi^+\pi^-e^+e^-$ decays. Due to the resolution and backgrounds only the pion pair mass is used.
+   The data were read from the plots in the paper.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2020otu
+BibTeX: '@article{BESIII:2020otu,
+    author = "Ablikim, Medina and others",
+    collaboration = "BESIII",
+    title = "{Measurement of the branching fraction of and search for a CP -violating asymmetry in $\eta^\prime \to \pi^+ \pi^- e^+ e^-$ at BESIII}",
+    eprint = "2011.07902",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevD.103.092005",
+    journal = "Phys. Rev. D",
+    volume = "103",
+    number = "9",
+    pages = "092005",
+    year = "2021"
+}
+'

@@ -38,3 +38,7 @@ BibTeX: '@article{DELPHI:2011aa,
       reportNumber   = "CERN-PH-EP-2010-057",
       SLACcitation   = "%%CITATION = ARXIV:1102.4748;%%"
 }'
+
+ReleaseTests:
+ - $A LEP-91
+

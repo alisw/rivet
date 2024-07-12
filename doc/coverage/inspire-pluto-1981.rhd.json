@@ -1,0 +1,86 @@
+{
+    "155594": [
+        "INELASTIC ELECTRON PHOTON SCATTERING AT MODERATE FOUR MOMENTUM TRANSFERS", 
+        "PLUTO", 
+        "10.1016/0370-2693(81)91127-8", 
+        null, 
+        null, 
+        "ins155594", 
+        null, 
+        [
+            "DESY-80-94"
+        ]
+    ], 
+    "156511": [
+        "Observation of {QCD} Effects in Transverse Momenta of $e^+ e^-$ Jets", 
+        "PLUTO", 
+        "10.1016/0370-2693(81)90103-9", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-80-111"
+        ]
+    ], 
+    "156659": [
+        "Topology of the $\\Upsilon$ Decay", 
+        "PLUTO", 
+        "10.1007/BF01547873", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-80-117"
+        ]
+    ], 
+    "156660": [
+        "Experimental Test of Electroweak Effects at {PETRA} Energies", 
+        "PLUTO", 
+        "10.1007/BF01431561", 
+        null, 
+        null, 
+        "ins156660", 
+        null, 
+        [
+            "DESY-80-116"
+        ]
+    ], 
+    "164302": [
+        "Lepton Pair Production and Search for a New Heavy Lepton in $e^+ e^-$ Annihilation", 
+        "PLUTO", 
+        "10.1016/0370-2693(81)91186-2", 
+        null, 
+        null, 
+        "ins164302", 
+        null, 
+        [
+            "DESY-81-001"
+        ]
+    ], 
+    "165122": [
+        "Inclusive $K^0$ Production in $e^+ e^-$ Annihilation for 9.3-{GeV} $<\\sqrt{s}<$  31.6-{GeV}", 
+        "PLUTO", 
+        "10.1016/0370-2693(81)90859-5", 
+        null, 
+        null, 
+        "ins165122", 
+        null, 
+        [
+            "DESY-81-018"
+        ]
+    ], 
+    "167681": [
+        "First Measurement of the Photon Structure Function F2", 
+        "PLUTO", 
+        "10.1016/0370-2693(81)91174-6", 
+        null, 
+        null, 
+        "ins167681", 
+        null, 
+        [
+            "DESY-81-051"
+        ]
+    ]
+}

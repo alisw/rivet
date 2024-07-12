@@ -1,0 +1,343 @@
+{
+    "658082": [
+        "Study of decay mechanisms in B- ---> Lambda/c+ anti-p pi- decays and observation of low-mass structure in the Lambda/c+ anti-p system", 
+        "Belle", 
+        "10.1103/PhysRevLett.97.242001", 
+        null, 
+        "hep-ex/0409005", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2006-31", 
+            "KEK-PREPRINT-2006-48"
+        ]
+    ], 
+    "682183": [
+        "Charge asymmetry of same-sign dileptons in $B^0$ - $\\bar{B}^0$ mixing", 
+        "Belle", 
+        "10.1103/PhysRevD.73.112002", 
+        null, 
+        "hep-ex/0505017", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2005-19", 
+            "KEK-PREPRINT-2005-17"
+        ]
+    ], 
+    "686014": [
+        "Charm hadrons from fragmentation and B decays in e+ e- annihilation at s**(1/2) = 10.6-GeV", 
+        "Belle", 
+        "10.1103/PhysRevD.73.032002", 
+        null, 
+        "hep-ex/0506068", 
+        "ins686014", 
+        null, 
+        [
+            "BELLE-PREPRINT-2005-23", 
+            "KEK-PREPRINT-2005-34"
+        ]
+    ], 
+    "688850": [
+        "Measurement of branching fraction and direct CP asymmetry in B0 ---> rho0 pi0 decays", 
+        "Belle", 
+        "10.1103/PhysRevD.73.111105", 
+        null, 
+        "hep-ex/0508007", 
+        null, 
+        null, 
+        []
+    ], 
+    "689881": [
+        "Measurement of branching fractions for B ---> chi(c1(2)) K (K*) at BELLE", 
+        "Belle", 
+        "10.1016/j.physletb.2006.01.013", 
+        null, 
+        "hep-ex/0508032", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2005-50", 
+            "BELLE-PREPRINT-2005-27"
+        ]
+    ], 
+    "690361": [
+        "Search for lepton and baryon number violating tau- decays into anti-Lambda pi- and Lambda pi-", 
+        "Belle", 
+        "10.1016/j.physletb.2005.10.024", 
+        null, 
+        "hep-ex/0508044", 
+        null, 
+        null, 
+        [
+            "BELLE-PRERPINT-2005-31", 
+            "KEK-PREPRINT-2005-58"
+        ]
+    ], 
+    "696226": [
+        "Observation of B+ ---> anti-xi(c)0 Lambda(c)+ and evidence for B0 ---> anti-xi(c)- Lambda(c)+", 
+        "Belle", 
+        "10.1103/PhysRevD.74.111105", 
+        null, 
+        "hep-ex/0510074", 
+        null, 
+        null, 
+        []
+    ], 
+    "700451": [
+        "Observation of a chi-prime(c2) candidate in gamma gamma ---> D anti-D production at BELLE", 
+        "Belle", 
+        "10.1103/PhysRevLett.96.082003", 
+        null, 
+        "hep-ex/0512035", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2005-35", 
+            "KEK-PREPRINT-2005-87"
+        ]
+    ], 
+    "701360": [
+        "Evidence for large direct CP violation in B+- ---> rho(770)0K+- from analysis of the three-body charmless B+- --->K+- pi+- pi-+ decay", 
+        "Belle", 
+        "10.1103/PhysRevLett.96.251803", 
+        null, 
+        "hep-ex/0512066", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2005-36"
+        ]
+    ], 
+    "708553": [
+        "Measurement of the branching fraction, polarization, and CP asymmetry for B0 ---> rho+ rho- decays, and determination of the CKM phase phi(2)", 
+        "Belle", 
+        "10.1103/PhysRevLett.96.171801", 
+        null, 
+        "hep-ex/0601024", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2006-3", 
+            "KEK-PREPRINT-2005-94", 
+            "UCHEP-06-01"
+        ]
+    ], 
+    "708708": [
+        "Improved constraints on D0 - anti-D0 mixing in D0 ---> K+ pi- decays at BELLE", 
+        "Belle", 
+        "10.1103/PhysRevLett.96.151801", 
+        null, 
+        "hep-ex/0601029", 
+        null, 
+        null, 
+        [
+            "KEK-PRERPINT-2005-92", 
+            "BELLE-PRERPINT-2006-2"
+        ]
+    ], 
+    "708781": [
+        "Study of B+- ---> D(CP)K+- and D*(CP)K+- decays", 
+        "Belle", 
+        "10.1103/PhysRevD.73.051106", 
+        null, 
+        "hep-ex/0601032", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2006-1", 
+            "KEK-PREPRINT-2005-91"
+        ]
+    ], 
+    "711492": [
+        "Evidence for B ---> eta-prime pi and improved measurements for B ---> eta-prime K", 
+        "Belle", 
+        "10.1103/PhysRevLett.97.061802", 
+        null, 
+        "hep-ex/0603001", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2005-103", 
+            "BELLE-PREPRINT-2006-7"
+        ]
+    ], 
+    "712066": [
+        "Measurement of Forward-Backward Asymmetry and Wilson Coefficients in B ---> K* l+ l-", 
+        "Belle", 
+        "10.1103/PhysRevLett.96.251801", 
+        null, 
+        "hep-ex/0603018", 
+        null, 
+        null, 
+        [
+            "BELLE-2006-09", 
+            "KEK-2005-106"
+        ]
+    ], 
+    "712736": [
+        "Search for neutrinoless decays tau ---> l h h and tau ---> l V0", 
+        "Belle", 
+        "10.1016/j.physletb.2006.07.025", 
+        null, 
+        "hep-ex/0603036", 
+        null, 
+        null, 
+        []
+    ], 
+    "713982": [
+        "Measurements of CP violation in B0 ---> D*- pi+ and B0 ---> D- pi+ decays", 
+        "Belle", 
+        "10.1103/PhysRevD.73.092003", 
+        null, 
+        "hep-ex/0604013", 
+        null, 
+        null, 
+        []
+    ], 
+    "714148": [
+        "Evidence of the Purely Leptonic Decay B- ---> tau- anti-nu(tau)", 
+        "Belle", 
+        "10.1103/PhysRevLett.97.251802", 
+        null, 
+        "hep-ex/0604018", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2006-11"
+        ]
+    ], 
+    "715430": [
+        "Measurement of D0 ---> pi l nu (Kl nu) Form Factors and Absolute Branching Fractions", 
+        "Belle", 
+        "10.1103/PhysRevLett.97.061804", 
+        null, 
+        "hep-ex/0604049", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2006-12"
+        ]
+    ], 
+    "715530": [
+        "Measurement of phi(3) with Dalitz plot analysis of B+ ---> D(*)K(*)+ decay", 
+        "Belle", 
+        "10.1103/PhysRevD.73.112009", 
+        null, 
+        "hep-ex/0604054", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2006-14", 
+            "KEK-PREPRINT-2006-8"
+        ]
+    ], 
+    "715830": [
+        "Search for the h(c) meson in B+- ---> h(c) K+-", 
+        "Belle", 
+        "10.1103/PhysRevD.74.012007", 
+        null, 
+        "hep-ex/0605007", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2006-15", 
+            "KEK-PREPRINT-2006-15"
+        ]
+    ], 
+    "716410": [
+        "Measurement of the quark mixing parameter cos(2phi(1)) using time-dependent Dalitz analysis of anti-B0 ---> D [K(s)0 pi+ pi-] h0", 
+        "Belle", 
+        "10.1103/PhysRevLett.97.081801", 
+        null, 
+        "hep-ex/0605023", 
+        null, 
+        null, 
+        []
+    ], 
+    "716412": [
+        "Search for lepton flavor violating tau- decays Including with a K0(s) meson", 
+        "Belle", 
+        "10.1016/j.physletb.2006.05.086", 
+        null, 
+        "hep-ex/0605025", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2006-16", 
+            "KEK-PREPRINT-2006-12"
+        ]
+    ], 
+    "718970": [
+        "Study of J/psi to p anti-p, Lambda anti-Lambda and observation of eta(c) to Lambda anti-Lambda at Belle", 
+        "Belle", 
+        "10.1103/PhysRevLett.97.162003", 
+        null, 
+        "hep-ex/0606022", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2006-18", 
+            "KEK-PREPRINT-2006-15"
+        ]
+    ], 
+    "719875": [
+        "Observation of new states decaying into Lambda(c)+ K- pi+ and Lambda(c)+ K0(S) pi-", 
+        "Belle", 
+        "10.1103/PhysRevLett.97.162001", 
+        null, 
+        "hep-ex/0606051", 
+        null, 
+        null, 
+        []
+    ], 
+    "720033": [
+        "Observation of a Near-threshold D0 anti-D0 pi0 Enhancement in B ---> D0 anti-D0 pi0 K Decay", 
+        "Belle", 
+        "10.1103/PhysRevLett.97.162002", 
+        null, 
+        "hep-ex/0606055", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2006-16", 
+            "BELLE-PREPRINT-2006-19"
+        ]
+    ], 
+    "721820": [
+        "Improved measurements of color-suppressed decays anti-B0 ---> D0 pi0, D0 eta, D0 omega, D*0 pi0, D*0 eta and D*0 omega", 
+        "Belle", 
+        "10.1103/PhysRevD.74.092002", 
+        null, 
+        "hep-ex/0607029", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2006-17", 
+            "BELLE-PREPRINT-2006-20"
+        ]
+    ], 
+    "725750": [
+        "First Observation of the Decay tau- ---> phi K- nu(tau)", 
+        "Belle", 
+        "10.1016/j.physletb.2006.10.027", 
+        null, 
+        "hep-ex/0609018", 
+        null, 
+        null, 
+        [
+            "BELLE-2006-24", 
+            "KEK-2006-32"
+        ]
+    ], 
+    "735859": [
+        "Improved measurements of branching fractions and CP partial rate asymmetries for B--->omegaK and B--->omegapi", 
+        "Belle", 
+        "10.1103/PhysRevD.74.111101", 
+        null, 
+        "hep-ex/0609022", 
+        null, 
+        null, 
+        []
+    ]
+}

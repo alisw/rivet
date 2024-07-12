@@ -1,0 +1,3 @@
+#! /usr/bin/env bash
+
+dos2unix analyses/plugin*/*.{cc,info,yoda,plot}

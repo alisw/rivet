@@ -10,7 +10,7 @@ Authors:
 References:
  - EPJ C75,126
  - CERN-PH-EP-2014-260
- - arxiv:1411.4963
+ - arXiv:1411.4963
 RunInfo:
    $pp$ QCD interactions at 8 TeV.
 NumEvents: 100000
@@ -49,3 +49,7 @@ BibTeX: '@article{Antchev:2014lez,
       primaryClass   = "hep-ex",
       reportNumber   = "CERN-PH-EP-2014-260",
       SLACcitation   = "%%CITATION = ARXIV:1411.4963;%%"}'
+
+ReleaseTests:
+ - $A LHC-8-UE
+

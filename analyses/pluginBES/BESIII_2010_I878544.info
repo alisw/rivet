@@ -1,0 +1,36 @@
+Name: BESIII_2010_I878544
+Year: 2010
+Summary: Mass distributions in $\chi_{cJ}\to 4\pi^0$
+Experiment: BESIII
+Collider: BEPC
+InspireID: 878544
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 83 (2011) 012006
+RunInfo : Any process producing chi_c0,1,2
+Description:
+  'easurement of the mass distributions in the decays $\chi_{cJ}\to 4\pi^0$.
+   The data were read from the plots in the paper and may not be corrected for backgrounds and efficiency.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2010mhh
+BibTeX: '@article{BESIII:2010mhh,
+    author = "Ablikim, M. and others",
+    collaboration = "BESIII",
+    title = "{First Observation of the Decays $\chi_{cJ} \to \pi^0 \pi^0 \pi^0 \pi^0$}",
+    eprint = "1011.6556",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevD.83.012006",
+    journal = "Phys. Rev. D",
+    volume = "83",
+    pages = "012006",
+    year = "2011"
+}
+'

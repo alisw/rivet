@@ -1,0 +1,92 @@
+{
+    "1107625": [
+        "Evolution of $\\pi^0$ suppression in Au+Au collisions from $\\sqrt{s_{NN}} = 39$ to 200 GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.109.152301", 
+        null, 
+        "1204.1526", 
+        "ins1107625", 
+        null, 
+        []
+    ], 
+    "1741109": [
+        "Nuclear-modification factor of charged hadrons at forward and backward rapidity in $p+$Al and $p+$Au collisions at $\\sqrt{s_{_{NN}}}=200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.101.034910", 
+        null, 
+        "1906.09928", 
+        null, 
+        null, 
+        []
+    ], 
+    "1762446": [
+        "Measurement of $J/\\psi$ at forward and backward rapidity in $p+p$, $p+A$l, $p+A$u, and $^3$He$+$Au collisions at $\\sqrt{s_{_{NN}}}=200~{\\rm GeV}$", 
+        "PHENIX", 
+        "10.1103/PhysRevC.102.014902", 
+        null, 
+        "1910.14487", 
+        "ins1762446", 
+        null, 
+        []
+    ], 
+    "1773662": [
+        "$J/\\psi$ and $\\psi(2S)$ production at forward rapidity in $p$+$p$ collisions at $\\sqrt{s}=510$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevD.101.052006", 
+        null, 
+        "1912.13424", 
+        null, 
+        null, 
+        []
+    ], 
+    "1789851": [
+        "Measurement of charged pion double spin asymmetries at midrapidity in longitudinally polarized $p+p$ collisions at $\\sqrt {s}$ = 510  GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevD.102.032001", 
+        null, 
+        "2004.02681", 
+        "ins1789851", 
+        null, 
+        []
+    ], 
+    "1798493": [
+        "Measurement of jet-medium interactions via direct photon-hadron correlations in Au$+$Au and $d$ $+$Au collisions at $\\sqrt{s_{_{NN}}}=200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.102.054910", 
+        null, 
+        "2005.14270", 
+        "ins1798493", 
+        null, 
+        []
+    ], 
+    "1798526": [
+        "Production of $\\pi^0$ and $\\eta$ mesons in U+U collisions at $\\sqrt{s_{NN}}=$192 GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.102.064905", 
+        null, 
+        "2005.14686", 
+        null, 
+        null, 
+        []
+    ], 
+    "1798581": [
+        "Polarization and cross section of midrapidity J/$\\psi$ production in $p+p$ collisions at $\\sqrt {s}$ = 510  GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevD.102.072008", 
+        null, 
+        "2005.14273", 
+        null, 
+        null, 
+        []
+    ], 
+    "1798586": [
+        "Production of $b\\bar{b}$ at forward rapidity in $p$+$p$ collisions at $\\sqrt{s}=510$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevD.102.092002", 
+        null, 
+        "2005.14276", 
+        null, 
+        null, 
+        []
+    ]
+}

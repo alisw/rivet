@@ -1,0 +1,22 @@
+{
+    "539140": [
+        "Centrality dependence of charged particle multiplicity in Au - Au collisions at S(NN)**(1/2) = 130-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.86.3500", 
+        null, 
+        "nucl-ex/0012008", 
+        "ins539140", 
+        null, 
+        []
+    ], 
+    "555603": [
+        "Measurement of the mid-rapidity transverse energy distribution from s(NN)**(1/2) = 130-GeV Au + Au collisions at RHIC", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.87.052301", 
+        "496546", 
+        "nucl-ex/0104015", 
+        "ins555603", 
+        null, 
+        []
+    ]
+}

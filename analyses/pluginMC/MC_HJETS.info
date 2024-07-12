@@ -1,6 +1,7 @@
 Name: MC_HJETS
 Summary: Monte Carlo validation observables for $h[\tau^+ \, \tau^-]$ + jets production
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Frank Siegert <frank.siegert@cern.ch>
 RunInfo:
@@ -13,3 +14,9 @@ Description:
   \text{jet3})$, differential jet rates 0->1, 1->2, 2->3, 3->4, and integrated
   0--4 jet rates.
 NeedCrossSection: yes
+
+ReleaseTests:
+ - $A LHC-VBF
+ - $A-2 LHC-ggH
+ - $A-3 LHC-ggHJet
+

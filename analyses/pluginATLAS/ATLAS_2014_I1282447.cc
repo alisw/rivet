@@ -134,7 +134,7 @@ namespace Rivet {
     /// Constructor
     ATLAS_2014_I1282447() : Analysis("ATLAS_2014_I1282447")
     {
-      setNeedsCrossSection(true);
+
     }
 
 
@@ -150,10 +150,10 @@ namespace Rivet {
       Cut cuts = Cuts::etaIn(-2.5, 2.5) & (Cuts::pT > 20*GeV);
 
       /// should use sample WITHOUT QED radiation off the electron
-      WFinder wfinder_born_el(fs, cuts, PID::ELECTRON, 25*GeV, 8000*GeV, 15*GeV, 0.1, WFinder::CLUSTERALL, WFinder::TRACK);
+      WFinder wfinder_born_el(fs, cuts, PID::ELECTRON, 25*GeV, 8000*GeV, 15*GeV, 0.1, WFinder::ChargedLeptons::PROMPT, WFinder::ClusterPhotons::ALL, WFinder::AddPhotons::YES);
       declare(wfinder_born_el, "WFinder_born_el");
 
-      WFinder wfinder_born_mu(fs, cuts, PID::MUON    , 25*GeV, 8000*GeV, 15*GeV, 0.1, WFinder::CLUSTERALL, WFinder::TRACK);
+      WFinder wfinder_born_mu(fs, cuts, PID::MUON    , 25*GeV, 8000*GeV, 15*GeV, 0.1, WFinder::ChargedLeptons::PROMPT, WFinder::ClusterPhotons::ALL, WFinder::AddPhotons::YES);
       declare(wfinder_born_mu, "WFinder_born_mu");
 
       // all hadrons that could be coming from a charm decay --
@@ -176,64 +176,62 @@ namespace Rivet {
       // Book histograms
 
       // charge separated integrated cross sections
-      _hist_wcjet_charge  = bookHisto1D("d01-x01-y01");
-      _hist_wd_charge     = bookHisto1D("d01-x01-y02");
-      _hist_wdstar_charge = bookHisto1D("d01-x01-y03");
+      book(_hist_wcjet_charge  ,"d01-x01-y01");
+      book(_hist_wd_charge     ,"d01-x01-y02");
+      book(_hist_wdstar_charge ,"d01-x01-y03");
 
       // charge integrated total cross sections
-      _hist_wcjet_ratio = bookScatter2D("d02-x01-y01");
-      _hist_wd_ratio    = bookScatter2D("d02-x01-y02");
+      book(_hist_wcjet_ratio,"d02-x01-y01");
+      book(_hist_wd_ratio   ,"d02-x01-y02");
 
-      _hist_wcjet_minus = bookHisto1D("d02-x01-y01_minus");
-      _hist_wd_minus    = bookHisto1D("d02-x01-y02_minus");
+      book(_hist_wcjet_minus ,"d02-x01-y01_minus");
+      book(_hist_wd_minus    ,"d02-x01-y02_minus");
 
-      _hist_wcjet_plus  = bookHisto1D("d02-x01-y01_plus");
-      _hist_wd_plus     = bookHisto1D("d02-x01-y02_plus");
+      book(_hist_wcjet_plus  ,"d02-x01-y01_plus");
+      book(_hist_wd_plus     ,"d02-x01-y02_plus");
 
       // eta distributions
-      _hist_wplus_wcjet_eta_lep   = bookHisto1D("d03-x01-y01");
-      _hist_wminus_wcjet_eta_lep  = bookHisto1D("d03-x01-y02");
+      book(_hist_wplus_wcjet_eta_lep   ,"d03-x01-y01");
+      book(_hist_wminus_wcjet_eta_lep  ,"d03-x01-y02");
 
-      _hist_wplus_wdminus_eta_lep = bookHisto1D("d04-x01-y01");
-      _hist_wminus_wdplus_eta_lep = bookHisto1D("d04-x01-y02");
-      _hist_wplus_wdstar_eta_lep  = bookHisto1D("d04-x01-y03");
-      _hist_wminus_wdstar_eta_lep = bookHisto1D("d04-x01-y04");
+      book(_hist_wplus_wdminus_eta_lep ,"d04-x01-y01");
+      book(_hist_wminus_wdplus_eta_lep ,"d04-x01-y02");
+      book(_hist_wplus_wdstar_eta_lep  ,"d04-x01-y03");
+      book(_hist_wminus_wdstar_eta_lep ,"d04-x01-y04");
 
       // ratio of cross section (WD over W inclusive) // postprocess!
-      _hist_w_inc             = bookHisto1D("d05-x01-y01");
-      _hist_wd_winc_ratio     = bookScatter2D("d05-x01-y02");
-      _hist_wdstar_winc_ratio = bookScatter2D("d05-x01-y03");
+      book(_hist_w_inc             ,"d05-x01-y01");
+      book(_hist_wd_winc_ratio    ,"d05-x01-y02");
+      book(_hist_wdstar_winc_ratio,"d05-x01-y03");
 
       // ratio of cross section (WD over W inclusive -- function of pT of D meson)
-      _hist_wplusd_wplusinc_pt_ratio       = bookScatter2D("d06-x01-y01");
-      _hist_wminusd_wminusinc_pt_ratio     = bookScatter2D("d06-x01-y02");
-      _hist_wplusdstar_wplusinc_pt_ratio   = bookScatter2D("d06-x01-y03");
-      _hist_wminusdstar_wminusinc_pt_ratio = bookScatter2D("d06-x01-y04");
+      book(_hist_wplusd_wplusinc_pt_ratio      ,"d06-x01-y01");
+      book(_hist_wminusd_wminusinc_pt_ratio    ,"d06-x01-y02");
+      book(_hist_wplusdstar_wplusinc_pt_ratio  ,"d06-x01-y03");
+      book(_hist_wminusdstar_wminusinc_pt_ratio,"d06-x01-y04");
 
       // could use for postprocessing!
-      _hist_wplusd_wplusinc_pt       = bookHisto1D("d06-x01-y01_wplus");
-      _hist_wminusd_wminusinc_pt     = bookHisto1D("d06-x01-y02_wminus");
-      _hist_wplusdstar_wplusinc_pt   = bookHisto1D("d06-x01-y03_wplus");
-      _hist_wminusdstar_wminusinc_pt = bookHisto1D("d06-x01-y04_wminus");
+      book(_hist_wplusd_wplusinc_pt       ,"d06-x01-y01_wplus");
+      book(_hist_wminusd_wminusinc_pt     ,"d06-x01-y02_wminus");
+      book(_hist_wplusdstar_wplusinc_pt   ,"d06-x01-y03_wplus");
+      book(_hist_wminusdstar_wminusinc_pt ,"d06-x01-y04_wminus");
 
-      _hist_wplus_winc  = bookHisto1D("d06-x01-y01_winc");
-      _hist_wminus_winc = bookHisto1D("d06-x01-y02_winc");
+      book(_hist_wplus_winc  ,"d06-x01-y01_winc");
+      book(_hist_wminus_winc ,"d06-x01-y02_winc");
 
       // jet multiplicity of charge integrated W+cjet cross section (+0 or +1 jet in addition to the charm jet)
-      _hist_wcjet_jets  = bookHisto1D("d07-x01-y01");
+      book(_hist_wcjet_jets  ,"d07-x01-y01");
 
       // jet multiplicity of W+cjet cross section ratio (+0 or +1 jet in addition to the charm jet)
-      _hist_wcjet_jets_ratio  = bookScatter2D("d08-x01-y01");
-      _hist_wcjet_jets_plus   = bookHisto1D("d08-x01-y01_plus");
-      _hist_wcjet_jets_minus  = bookHisto1D("d08-x01-y01_minus");
+      book(_hist_wcjet_jets_ratio ,"d08-x01-y01");
+      book(_hist_wcjet_jets_plus   ,"d08-x01-y01_plus");
+      book(_hist_wcjet_jets_minus  ,"d08-x01-y01_minus");
 
     }
 
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-
-      const double weight = event.weight();
 
       double charge_weight = 0; // account for OS/SS events
 
@@ -277,22 +275,22 @@ namespace Rivet {
       }
 
       if (lepton_charge > 0) {
-        _hist_wplus_winc->fill(10., weight);
-        _hist_wplus_winc->fill(16., weight);
-        _hist_wplus_winc->fill(30., weight);
-        _hist_wplus_winc->fill(60., weight);
-        _hist_w_inc->fill(+1, weight);
+        _hist_wplus_winc->fill(10.);
+        _hist_wplus_winc->fill(16.);
+        _hist_wplus_winc->fill(30.);
+        _hist_wplus_winc->fill(60.);
+        _hist_w_inc->fill(+1);
       }
       else if (lepton_charge < 0) {
-        _hist_wminus_winc->fill(10., weight);
-        _hist_wminus_winc->fill(16., weight);
-        _hist_wminus_winc->fill(30., weight);
-        _hist_wminus_winc->fill(60., weight);
-        _hist_w_inc->fill(-1, weight);
+        _hist_wminus_winc->fill(10.);
+        _hist_wminus_winc->fill(16.);
+        _hist_wminus_winc->fill(30.);
+        _hist_wminus_winc->fill(60.);
+        _hist_w_inc->fill(-1);
       }
 
       // Find hadrons in the event
-      const UnstableParticles& fs = apply<UnstableFinalState>(event, "hadrons");
+      const UnstableParticles& fs = apply<UnstableParticles>(event, "hadrons");
 
       /// FIND Different channels
       // 1: wcjet
@@ -310,10 +308,11 @@ namespace Rivet {
       if (matched_charmHadron > -1) {
         for (const Jet& j : jets) {
           mat_jet = false;
+
           njets += 1;
           for (const Particle& p : fs.particles()) {
             /// @todo Avoid touching HepMC!
-            const GenParticle* part = p.genParticle();
+            ConstGenParticlePtr part = p.genParticle();
             if (p.hasCharm()) {
               //if(isFromBDecay(p)) continue;
               if (p.fromBottom()) continue;
@@ -336,19 +335,19 @@ namespace Rivet {
 
         if (nj == 1)  {
           if (lepton_charge > 0) {
-            _hist_wcjet_charge        ->fill(         1, weight*charge_weight);
-            _hist_wcjet_plus          ->fill(         0, weight*charge_weight);
-            _hist_wplus_wcjet_eta_lep ->fill(lepton_eta, weight*charge_weight);
-            _hist_wcjet_jets_plus     ->fill(njets-1   , weight*charge_weight);
+            _hist_wcjet_charge        ->fill(         1, charge_weight);
+            _hist_wcjet_plus          ->fill(         0, charge_weight);
+            _hist_wplus_wcjet_eta_lep ->fill(lepton_eta, charge_weight);
+            _hist_wcjet_jets_plus     ->fill(njets-1   , charge_weight);
           }
           else if (lepton_charge < 0) {
-            _hist_wcjet_charge        ->fill(        -1, weight*charge_weight);
-            _hist_wcjet_minus         ->fill(         0, weight*charge_weight);
-            _hist_wminus_wcjet_eta_lep->fill(lepton_eta, weight*charge_weight);
-            _hist_wcjet_jets_minus    ->fill(njets-1   , weight*charge_weight);
+            _hist_wcjet_charge        ->fill(        -1, charge_weight);
+            _hist_wcjet_minus         ->fill(         0, charge_weight);
+            _hist_wminus_wcjet_eta_lep->fill(lepton_eta, charge_weight);
+            _hist_wcjet_jets_minus    ->fill(njets-1   , charge_weight);
           }
 
-          _hist_wcjet_jets->fill(njets-1, weight*charge_weight);
+          _hist_wcjet_jets->fill(njets-1, charge_weight);
         }
       }
 
@@ -357,7 +356,7 @@ namespace Rivet {
       for (const Particle& p : fs.particles()) {
 
         /// @todo Avoid touching HepMC!
-        const GenParticle* part = p.genParticle();
+        ConstGenParticlePtr part = p.genParticle();
         if (p.pT() < 8*GeV)       continue;
         if (fabs(p.eta()) > 2.2)  continue;
 
@@ -368,16 +367,16 @@ namespace Rivet {
 
           // fill histos
           if (lepton_charge > 0) {
-            _hist_wd_charge            ->fill(         1, weight*charge_weight);
-            _hist_wd_plus              ->fill(         0, weight*charge_weight);
-            _hist_wplus_wdminus_eta_lep->fill(lepton_eta, weight*charge_weight);
-            _hist_wplusd_wplusinc_pt   ->fill(    p.pT(), weight*charge_weight);
+            _hist_wd_charge            ->fill(         1, charge_weight);
+            _hist_wd_plus              ->fill(         0, charge_weight);
+            _hist_wplus_wdminus_eta_lep->fill(lepton_eta, charge_weight);
+            _hist_wplusd_wplusinc_pt   ->fill(    p.pT(), charge_weight);
           }
           else if (lepton_charge < 0) {
-            _hist_wd_charge            ->fill(        -1, weight*charge_weight);
-            _hist_wd_minus             ->fill(         0, weight*charge_weight);
-            _hist_wminus_wdplus_eta_lep->fill(lepton_eta, weight*charge_weight);
-            _hist_wminusd_wminusinc_pt ->fill(p.pT()    , weight*charge_weight);
+            _hist_wd_charge            ->fill(        -1, charge_weight);
+            _hist_wd_minus             ->fill(         0, charge_weight);
+            _hist_wminus_wdplus_eta_lep->fill(lepton_eta, charge_weight);
+            _hist_wminusd_wminusinc_pt ->fill(p.pT()    , charge_weight);
           }
         }
 
@@ -387,16 +386,16 @@ namespace Rivet {
           else charge_weight = +1;
 
           if (lepton_charge > 0) {
-            _hist_wdstar_charge->fill(+1, weight*charge_weight);
-            _hist_wd_plus->fill( 0, weight*charge_weight);
-            _hist_wplus_wdstar_eta_lep->fill( lepton_eta, weight*charge_weight);
-            _hist_wplusdstar_wplusinc_pt->fill(  p.pT(), weight*charge_weight);
+            _hist_wdstar_charge->fill(+1, charge_weight);
+            _hist_wd_plus->fill( 0, charge_weight);
+            _hist_wplus_wdstar_eta_lep->fill( lepton_eta, charge_weight);
+            _hist_wplusdstar_wplusinc_pt->fill(  p.pT(), charge_weight);
           }
           else if (lepton_charge < 0) {
-            _hist_wdstar_charge->fill(-1, weight*charge_weight);
-            _hist_wd_minus->fill(0, weight*charge_weight);
-            _hist_wminus_wdstar_eta_lep->fill(lepton_eta, weight*charge_weight);
-            _hist_wminusdstar_wminusinc_pt->fill(p.pT(), weight*charge_weight);
+            _hist_wdstar_charge->fill(-1, charge_weight);
+            _hist_wd_minus->fill(0, charge_weight);
+            _hist_wminus_wdstar_eta_lep->fill(lepton_eta, charge_weight);
+            _hist_wminusdstar_wminusinc_pt->fill(p.pT(), charge_weight);
           }
         }
       }
@@ -472,17 +471,20 @@ namespace Rivet {
     // Data members like post-cuts event weight counters go here
 
     // Check whether particle comes from b-decay
-    /// @todo Use built-in method and avoid HepMC
     bool isFromBDecay(const Particle& p) {
-
+      
+      /// @todo I think we can just replicated the original behaviour with this call
+      /// Note slight difference to Rivet's native Particle::fromBottom method!
+      return p.hasAncestorWith([](const Particle &p)->bool{return p.hasBottom();});
+      /*
       bool isfromB = false;
 
       if (p.genParticle() == nullptr)  return false;
 
-      const GenParticle* part = p.genParticle();
-      const GenVertex* ivtx = const_cast<const GenVertex*>(part->production_vertex());
+      ConstGenParticlePtr part = p.genParticle();
+      ConstGenVertexPtr ivtx = part->production_vertex();
       while (ivtx) {
-        if (ivtx->particles_in_size() < 1) {
+        if (ivtx->particles_in().size() < 1) {
           isfromB = false;
           break;
         }
@@ -493,30 +495,31 @@ namespace Rivet {
           break;
         }
         isfromB = PID::hasBottom(part->pdg_id());
+
         if (isfromB == true)  break;
-        ivtx = const_cast<const GenVertex*>(part->production_vertex());
+        ivtx = part->production_vertex();
         if ( part->pdg_id() == 2212 || !ivtx )  break; // reached beam
       }
       return isfromB;
+       */
     }
 
 
     // Check whether particle has charmed children
     /// @todo Use built-in method and avoid HepMC!
-    bool hasCharmedChildren(const GenParticle *part) {
+    bool hasCharmedChildren(ConstGenParticlePtr part) {
 
       bool hasCharmedChild = false;
       if (part == nullptr)  return false;
 
-      const GenVertex* ivtx = const_cast<const GenVertex*>(part->end_vertex());
+      ConstGenVertexPtr ivtx = part->end_vertex();
       if (ivtx == nullptr)  return false;
 
       // if (ivtx->particles_out_size() < 2) return false;
-      HepMC::GenVertex::particles_out_const_iterator iPart_invtx = ivtx->particles_out_const_begin();
-      HepMC::GenVertex::particles_out_const_iterator end_invtx = ivtx->particles_out_const_end();
+      //HepMC::GenVertex::particles_out_const_iterator iPart_invtx = ivtx->particles_out_const_begin();
+      //HepMC::GenVertex::particles_out_const_iterator end_invtx = ivtx->particles_out_const_end();
 
-      for ( ; iPart_invtx != end_invtx; iPart_invtx++ ) {
-        const GenParticle* p2 = (*iPart_invtx);
+      for(ConstGenParticlePtr p2: HepMCUtils::particles(ivtx, Relatives::CHILDREN)){
         if (p2 == part)  continue;
         hasCharmedChild = PID::hasCharm(p2->pdg_id());
         if (hasCharmedChild == true)  break;
@@ -592,6 +595,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2014_I1282447);
+  RIVET_DECLARE_PLUGIN(ATLAS_2014_I1282447);
 
 }

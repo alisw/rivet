@@ -15,19 +15,17 @@ namespace Rivet {
 
     /// Book projections and histograms
     void init() {
-      addProjection(FinalState(),"FS");
-      _h_xsec = bookHisto1D(1, 1, 1);
+      declare(FinalState(),"FS");
+      book(_h_xsec, 1, 1, 1);
     }
 
 
     /// Analyze each event
     void analyze(const Event& event) {
 
-      const double weight = event.weight();
-
       const FinalState& fs = applyProjection<FinalState>(event, "FS");
       if (fs.size() < 3) vetoEvent; // veto on elastic events
-      const ParticleVector particlesByRapidity = fs.particles(cmpMomByRap);
+      const Particles particlesByRapidity = fs.particles(cmpMomByRap);
       const size_t num_particles = particlesByRapidity.size();
 
       vector<double> gaps;
@@ -63,8 +61,8 @@ namespace Rivet {
       double xiy = (My * My) / (sqrtS()/GeV * sqrtS()/GeV);
       double xi  = max(xix, xiy);
 
-      if (xi > _xi_hf_cut) _h_xsec->fill(0.5, weight);
-      if (xix > _xi_castor_cut || xiy > _xi_hf_cut) _h_xsec->fill(1.5, weight);
+      if (xi > _xi_hf_cut) _h_xsec->fill(0.5);
+      if (xix > _xi_castor_cut || xiy > _xi_hf_cut) _h_xsec->fill(1.5);
     }
 
 
@@ -83,6 +81,6 @@ namespace Rivet {
   };
 
 
-  DECLARE_RIVET_PLUGIN(CMS_2018_I1653948);
+  RIVET_DECLARE_PLUGIN(CMS_2018_I1653948);
 
 }

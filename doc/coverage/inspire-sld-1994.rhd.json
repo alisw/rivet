@@ -1,0 +1,39 @@
+{
+    "360333": [
+        "Measurement of the charged multiplicity of Z0 ---> b anti-b events", 
+        "SLD", 
+        "10.1103/PhysRevLett.72.3145", 
+        null, 
+        "hep-ex/9405004", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-6372", 
+            "LBL-34732"
+        ]
+    ], 
+    "373005": [
+        "Measurement of alpha-s from energy-energy correlations at the Z0 resonance", 
+        "SLD", 
+        "10.1103/PhysRevD.50.5580", 
+        null, 
+        "hep-ex/9405006", 
+        "ins373005", 
+        null, 
+        [
+            "SLAC-PUB-6451"
+        ]
+    ], 
+    "373007": [
+        "Precise measurement of the left-right cross-section asymmetry in Z boson production by e+ e- collisions", 
+        "SLD", 
+        "10.1103/PhysRevLett.73.25", 
+        null, 
+        "hep-ex/9404001", 
+        "ins373007", 
+        null, 
+        [
+            "SLAC-PUB-6456"
+        ]
+    ]
+}

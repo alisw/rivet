@@ -5,9 +5,11 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1307243
 Status: VALIDATED
+Reentrant: false
 Authors:
  - James Robinson <james.robinson@cern.ch>
 References:
+ - ATLAS-STDM-2012-17
  - EPJ C74,3117 (2014)
  - doi:10.1140/epjc/s10052-014-3117-7
  - arXiv:hep-ex/1407.5756
@@ -16,6 +18,7 @@ RunInfo:
 NumEvents: 1000000
 Beams: [p+, p+]
 Energies: [7000]
+Luminosity_fb: 4.5
 PtCuts: [60, 50]
 NeedCrossSection: True
 Description:
@@ -45,3 +48,15 @@ BibTeX: '@article{Aad:2014pua,
       reportNumber   = "CERN-PH-EP-2014-132",
       SLACcitation   = "%%CITATION = ARXIV:1407.5756;%%",
 }'
+
+ReleaseTests:
+ - $A LHC-7-Jets-10
+ - $A-2 LHC-7-Jets-2
+ - $A-3 LHC-7-Jets-3
+ - $A-4 LHC-7-Jets-4
+ - $A-5 LHC-7-Jets-5
+ - $A-6 LHC-7-Jets-6
+ - $A-7 LHC-7-Jets-7
+ - $A-8 LHC-7-Jets-8
+ - $A-9 LHC-7-Jets-9
+

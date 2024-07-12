@@ -1,0 +1,41 @@
+Name: DELPHI_2000_I524694
+Year: 2000
+Summary: $\Sigma^-$ and $\Lambda(1520)$ production at the $Z^0$ pole from DELPHI
+Experiment: DELPHI
+Collider: LEP
+InspireID: 524694
+Status: VALIDATED 
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B475 (2000) 429-447, 2000 
+RunInfo: 
+  Hadronic Z decay events generated on the Z pole ($\sqrt{s} = 91.2$ GeV)
+NeedCrossSection: no
+Beams: [e+, e-]
+Energies: [91.2]
+Description:
+  'Measurement of the $\Sigma^-$ and $\Lambda^0(1520)$ scaled
+  momentum distributions by DELPHI at LEP 1'
+Keywords: []
+BibKey: Abreu:2000nu
+BibTeX: '@article{Abreu:2000nu,
+      author         = "Abreu, P. and others",
+      title          = "{Inclusive Sigma- and Lambda(1520) production in hadronic
+                        Z decays}",
+      collaboration  = "DELPHI",
+      journal        = "Phys. Lett.",
+      volume         = "B475",
+      year           = "2000",
+      pages          = "429-447",
+      doi            = "10.1016/S0370-2693(00)00081-2",
+      eprint         = "hep-ex/0103020",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-EP-2000-009",
+      SLACcitation   = "%%CITATION = HEP-EX/0103020;%%"
+}'
+
+ReleaseTests:
+ - $A LEP-91
+

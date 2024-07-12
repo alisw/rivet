@@ -13,7 +13,7 @@ namespace Rivet {
     : Analysis(name), m_njet(njet), m_jetpro_name(jetpro_name),
       _h_log10_d(njet), _h_log10_R(njet+1)
   {
-    setNeedsCrossSection(true); // legitimate use, since a base class has no .info file!
+
   }
 
 
@@ -23,19 +23,19 @@ namespace Rivet {
 
     for (size_t i = 0; i < m_njet; ++i) {
       string dname = "log10_d_" + to_str(i) + to_str(i+1);
-      _h_log10_d[i] = bookHisto1D(dname, 100, 0.2, log10(0.5*sqrts/GeV));
+      book(_h_log10_d[i] ,dname, 100, 0.2, log10(0.5*sqrts/GeV));
       string Rname = "log10_R_" + to_str(i);
-      _h_log10_R[i] = bookScatter2D(Rname, 50, 0.2, log10(0.5*sqrts/GeV));
+      book(_h_log10_R[i], Rname, 50, 0.2, log10(0.5*sqrts/GeV));
     }
     string Rname = "log10_R_" + to_str(m_njet);
-    _h_log10_R[m_njet] = bookScatter2D(Rname, 50, 0.2, log10(0.5*sqrts/GeV));
+    book(_h_log10_R[m_njet], Rname, 50, 0.2, log10(0.5*sqrts/GeV));
   }
 
 
 
   // Do the analysis
   void MC_JetSplittings::analyze(const Event & e) {
-    const double weight = e.weight();
+    const double weight = 1.0;
 
     const FastJets& jetpro = apply<FastJets>(e, m_jetpro_name);
     const auto seq = jetpro.clusterSeq();

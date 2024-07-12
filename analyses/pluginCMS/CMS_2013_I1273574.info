@@ -5,9 +5,10 @@ Experiment: CMS
 Collider: LHC
 InspireID: 1273574
 Status: VALIDATED
+Reentrant: true
 Authors:
- - P. Gunnellini
- - A. Buckley
+ - P. Gunnellini <paolo.gunnellini@desy.de>
+ - A. Buckley <andy.buckley@cern.ch>
 References:
  - CMS-FSQ-12-013
  - CERN-PH-EP-2013-229
@@ -19,6 +20,7 @@ NumEvents: 500000
 NeedCrossSection: yes
 Beams: [p+, p+]
 Energies: [7000]
+Luminosity_fb: 0.036
 PtCuts: 2 jets with $\pT > 50$ GeV; 2 jets with $\pT > 20$ GeV
 Description:
   Measurements are presented of exclusive 4-jet production cross
@@ -42,3 +44,16 @@ BibTeX: '@article{Chatrchyan:2013qza,
       reportNumber   = "CMS-FSQ-12-013, CERN-PH-EP-2013-229",
       SLACcitation   = "%%CITATION = ARXIV:1312.6440;%%",
 }'
+
+ReleaseTests:
+ - $A LHC-7-Jets-1
+ - $A-2 LHC-7-Jets-10
+ - $A-3 LHC-7-Jets-2
+ - $A-4 LHC-7-Jets-3
+ - $A-5 LHC-7-Jets-4
+ - $A-6 LHC-7-Jets-5
+ - $A-7 LHC-7-Jets-6
+ - $A-8 LHC-7-Jets-7
+ - $A-9 LHC-7-Jets-8
+ - $A-10 LHC-7-Jets-9
+

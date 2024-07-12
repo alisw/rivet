@@ -14,9 +14,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    ATLAS_2011_S8983313()
-      : Analysis("ATLAS_2011_S8983313")
-    {    }
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2011_S8983313);
 
 
     /// @name Analysis methods
@@ -55,21 +53,21 @@ namespace Rivet {
       declare(VisibleFinalState(Cuts::abseta < 4.9),"vfs");
 
       /// Book histograms
-      _count_A = bookHisto1D("count_A", 1, 0., 1.);
-      _count_B = bookHisto1D("count_B", 1, 0., 1.);
-      _count_C = bookHisto1D("count_C", 1, 0., 1.);
-      _count_D = bookHisto1D("count_D", 1, 0., 1.);
+      book(_count_A ,"count_A", 1, 0., 1.);
+      book(_count_B ,"count_B", 1, 0., 1.);
+      book(_count_C ,"count_C", 1, 0., 1.);
+      book(_count_D ,"count_D", 1, 0., 1.);
 
-      _hist_meff_A  = bookHisto1D("m_eff_A", 30, 0., 3000.);
-      _hist_mT2_B   = bookHisto1D("m_T2", 25, 0., 1000.);
-      _hist_meff_CD = bookHisto1D("m_eff_C_D", 30, 0., 3000.);
-      _hist_eTmiss  = bookHisto1D("Et_miss", 20, 0., 1000.);
+      book(_hist_meff_A  ,"m_eff_A", 30, 0., 3000.);
+      book(_hist_mT2_B   ,"m_T2", 25, 0., 1000.);
+      book(_hist_meff_CD ,"m_eff_C_D", 30, 0., 3000.);
+      book(_hist_eTmiss  ,"Et_miss", 20, 0., 1000.);
     }
 
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-      const double weight = event.weight();
+      const double weight = 1.0;
 
       Particles veto_e = apply<IdentifiedFinalState>(event, "veto_elecs").particles();
       if ( ! veto_e.empty() ) {
@@ -83,21 +81,21 @@ namespace Rivet {
 
       Particles cand_mu;
       Particles chg_tracks = apply<ChargedFinalState>(event, "cfs").particles();
-      foreach ( const Particle & mu, apply<IdentifiedFinalState>(event, "muons").particlesByPt() ) {
+      for ( const Particle & mu : apply<IdentifiedFinalState>(event, "muons").particlesByPt() ) {
         double pTinCone = -mu.pT();
-        foreach ( const Particle & track, chg_tracks ) {
+        for ( const Particle & track : chg_tracks ) {
           if ( deltaR(mu, track) <= 0.2 ) pTinCone += track.pT();
         }
         if ( pTinCone < 1.8*GeV ) cand_mu.push_back(mu);
       }
 
       Jets cand_jets_2;
-      foreach (const Jet& jet, cand_jets) {
+      for (const Jet& jet : cand_jets) {
         if (jet.abseta() >= 2.5)
           cand_jets_2.push_back(jet);
         else {
           bool away_from_e = true;
-          foreach (const Particle& e, cand_e) {
+          for (const Particle& e : cand_e) {
             if (deltaR(e, jet) <= 0.2 ) {
               away_from_e = false;
               break;
@@ -109,9 +107,9 @@ namespace Rivet {
       }
 
       Particles recon_e, recon_mu;
-      foreach ( const Particle & e, cand_e ) {
+      for ( const Particle & e : cand_e ) {
         bool away = true;
-        foreach ( const Jet& jet, cand_jets_2 ) {
+        for ( const Jet& jet : cand_jets_2 ) {
           if ( deltaR(e, jet) < 0.4 ) {
             away = false;
             break;
@@ -121,9 +119,9 @@ namespace Rivet {
           recon_e.push_back( e );
       }
 
-      foreach ( const Particle & mu, cand_mu ) {
+      for ( const Particle & mu : cand_mu ) {
         bool away = true;
-        foreach ( const Jet& jet, cand_jets_2 ) {
+        for ( const Jet& jet : cand_jets_2 ) {
           if ( deltaR(mu, jet) < 0.4 ) {
             away = false;
             break;
@@ -137,7 +135,7 @@ namespace Rivet {
       // pTmiss
       Particles vfs_particles = apply<VisibleFinalState>(event, "vfs").particles();
       FourMomentum pTmiss;
-      foreach ( const Particle & p, vfs_particles ) {
+      for ( const Particle & p : vfs_particles ) {
         pTmiss -= p.momentum();
       }
       double eTmiss = pTmiss.pT();
@@ -145,7 +143,7 @@ namespace Rivet {
 
       // final jet filter
       Jets recon_jets;
-      foreach ( const Jet& jet, cand_jets_2 ) {
+      for ( const Jet& jet : cand_jets_2 ) {
         if ( jet.abseta() <= 2.5 ) recon_jets.push_back( jet );
       }
 
@@ -175,7 +173,7 @@ namespace Rivet {
       int Njets = 0;
       double min_dPhi = 999.999;
       double pTmiss_phi = pTmiss.phi();
-      foreach ( const Jet& jet, recon_jets ) {
+      for ( const Jet& jet : recon_jets ) {
         if ( jet.pT() > 40 * GeV ) {
           if ( Njets < 3 )
             min_dPhi = min( min_dPhi, deltaPhi( pTmiss_phi, jet.phi() ) );
@@ -290,7 +288,6 @@ namespace Rivet {
 
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2011_S8983313);
+  RIVET_DECLARE_ALIASED_PLUGIN(ATLAS_2011_S8983313, ATLAS_2011_I890749);
 
 }

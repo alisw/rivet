@@ -1,0 +1,281 @@
+{
+    "523127": [
+        "Bose-Einstein correlations in K+- K+- pairs from Z0 decays into two hadronic jets", 
+        "OPAL", 
+        "10.1007/s100520100715", 
+        "422314", 
+        "hep-ex/0001045", 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-163"
+        ]
+    ], 
+    "529859": [
+        "Searches for prompt light gravitino signatures in e+ e- collisions at S**(1/2) = 189-GeV", 
+        "OPAL", 
+        "10.1016/S0370-2693(01)00101-0", 
+        "446468", 
+        "hep-ex/0007014", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-078"
+        ]
+    ], 
+    "530544": [
+        "Two Higgs doublet model and model independent interpretation of neutral Higgs boson searches", 
+        "OPAL", 
+        "10.1007/s100520000544", 
+        "448009", 
+        "hep-ex/0007040", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-092"
+        ]
+    ], 
+    "533108": [
+        "A Study of one prong tau decays with a charged kaon", 
+        "OPAL", 
+        "10.1007/s100520100632", 
+        "457400", 
+        "hep-ex/0009017", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-091", 
+            "OPAL-PR-315"
+        ]
+    ], 
+    "533109": [
+        "Measurement of the mass and width of the $W$ boson in $e^{+} e^{-}$ collisions at 189-GeV", 
+        "OPAL", 
+        "10.1016/S0370-2693(01)00131-9", 
+        "457401", 
+        "hep-ex/0009018", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-099"
+        ]
+    ], 
+    "533112": [
+        "Measurement of $W$ boson polarizations and CP violating triple gauge couplings from $W^{+} W^{-}$ production at LEP", 
+        "OPAL", 
+        "10.1007/s100520100602", 
+        "457404", 
+        "hep-ex/0009021", 
+        "ins533112", 
+        null, 
+        [
+            "CERN-EP-2000-113"
+        ]
+    ], 
+    "533113": [
+        "Measurement of triple gauge boson couplings from $W^{+} W^{-}$ production at LEP energies up to 189-GeV", 
+        "OPAL", 
+        "10.1007/s100520100597", 
+        "457405", 
+        "hep-ex/0009022", 
+        "ins533113", 
+        null, 
+        [
+            "CERN-EP-2000-114"
+        ]
+    ], 
+    "535059": [
+        "Production rates of b anti-b quark pairs from gluons and b anti-b b anti-b events in hadronic Z0 decays", 
+        "OPAL", 
+        "10.1007/s100520100580", 
+        "468615", 
+        "hep-ex/0010029", 
+        "ins535059", 
+        null, 
+        [
+            "CERN-EP-2000-123"
+        ]
+    ], 
+    "536266": [
+        "Charged multiplicities in Z decays into u, d, and s quarks", 
+        "OPAL", 
+        "10.1007/s100520100611", 
+        "475653", 
+        "hep-ex/0011022", 
+        "ins536266", 
+        null, 
+        [
+            "CERN-EP-2000-128"
+        ]
+    ], 
+    "537026": [
+        "A Study of $B_s$ meson oscillation using $D_s$ - lepton correlations", 
+        "OPAL", 
+        "10.1007/s100520100591", 
+        "477514", 
+        "hep-ex/0011052", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-136", 
+            "OPAL-PR-327"
+        ]
+    ], 
+    "538108": [
+        "Precise determination of the Z resonance parameters at LEP: 'Zedometry'", 
+        "OPAL", 
+        "10.1007/s100520100627", 
+        "479562", 
+        "hep-ex/0012018", 
+        "ins538108", 
+        null, 
+        [
+            "CERN-EP-2000-148", 
+            "OPAL-PR-328"
+        ]
+    ], 
+    "539860": [
+        "Search for the standard model Higgs boson in e+ e- collisions at s**(1/2) approximately = 192-GeV - 209-GeV", 
+        "OPAL", 
+        "10.1016/S0370-2693(01)00070-3", 
+        "483261", 
+        "hep-ex/0101014", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-156"
+        ]
+    ], 
+    "552446": [
+        "A Simultaneous measurement of the QCD color factors and the strong coupling", 
+        "OPAL", 
+        "10.1007/s100520100699", 
+        "485113", 
+        "hep-ex/0101044", 
+        "ins552446", 
+        null, 
+        [
+            "CERN-EP-2001-001"
+        ]
+    ], 
+    "552447": [
+        "A Search for a narrow radial excitation of the D*+- meson", 
+        "OPAL", 
+        "10.1007/s100520100696", 
+        "485114", 
+        "hep-ex/0101045", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2001-003"
+        ]
+    ], 
+    "553945": [
+        "Measurement of the branching ratio for D(s)- ---> tau- anti-nu(tau) decays", 
+        "OPAL", 
+        "10.1016/S0370-2693(01)00936-4", 
+        "490503", 
+        "hep-ex/0103012", 
+        "ins553945", 
+        null, 
+        [
+            "CERN-EP-2001-019"
+        ]
+    ], 
+    "554583": [
+        "Precision neutral current asymmetry parameter measurements from the tau polarization at LEP", 
+        "OPAL", 
+        "10.1007/s100520100714", 
+        "492929", 
+        "hep-ex/0103045", 
+        "ins554583", 
+        null, 
+        [
+            "CERN-EP-2001-023"
+        ]
+    ], 
+    "556769": [
+        "Determination of the b quark mass at the Z mass scale", 
+        "OPAL", 
+        "10.1007/s100520100746", 
+        "517765", 
+        "hep-ex/0105046", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2001-034"
+        ]
+    ], 
+    "559675": [
+        "Measurement of |V(ub)| using b hadron semileptonic decay", 
+        "OPAL", 
+        "10.1007/s100520100764", 
+        "508609", 
+        "hep-ex/0107016", 
+        "ins559675", 
+        null, 
+        [
+            "CERN-EP-2001-044"
+        ]
+    ], 
+    "560306": [
+        "Angular analysis of the muon pair asymmetry at LEP I", 
+        "OPAL", 
+        "10.1016/S0370-2693(01)00896-6", 
+        "509819", 
+        "hep-ex/0107046", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2001-052"
+        ]
+    ], 
+    "561580": [
+        "Measurement of the branching ratio for the process b ---> tau- anti-nu(tau) X", 
+        "OPAL", 
+        "10.1016/S0370-2693(01)01012-7", 
+        "514461", 
+        "hep-ex/0108031", 
+        "ins561580", 
+        null, 
+        [
+            "CERN-EP-2001-058"
+        ]
+    ], 
+    "562543": [
+        "Search for lepton flavor violation in e+ e- collisions at s**(1/2) = 189-GeV - 209-GeV", 
+        "OPAL", 
+        "10.1016/S0370-2693(01)01086-3", 
+        "517184", 
+        "hep-ex/0109011", 
+        "ins562543", 
+        null, 
+        [
+            "CERN-EP-2001-061"
+        ]
+    ], 
+    "563782": [
+        "Search for single top quark production at LEP-2", 
+        "OPAL", 
+        "10.1016/S0370-2693(01)01195-9", 
+        "521334", 
+        "hep-ex/0110009", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2001-066"
+        ]
+    ], 
+    "564765": [
+        "Genuine correlations of like - sign particles in hadronic Z0 decays", 
+        "OPAL", 
+        "10.1016/S0370-2693(01)01332-6", 
+        "523808", 
+        "hep-ex/0110051", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2001-070"
+        ]
+    ]
+}

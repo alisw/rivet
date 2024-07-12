@@ -5,8 +5,8 @@ CustomLegend=\boldmath$p_\perp^\text{jet}>20$ \bf{GeV}
 
 # BEGIN PLOT /ATLAS_2012_I1083318/d01-x01-y0[12]
 Title=Inclusive Jet Multiplicity
-XLabel=$N_{\text{jet}}$
-YLabel=$\sigma(W \, + \geq N_{\text{jet}}\;\text{jets})$ [pb]
+XLabel=$N_{\mathrm{jet}}$
+YLabel=$\sigma(W \, + \geq N_{\mathrm{jet}}\;\mathrm{jets})$ [pb]
 XMajorTickMarks=10
 XMinorTickMarks=0
 RatioPlotYMin=0.0
@@ -15,8 +15,8 @@ RatioPlotYMax=2.0
 
 # BEGIN PLOT /ATLAS_2012_I1083318/d02-x01-y0[12]
 Title=Inclusive Jet Multiplicity Ratio
-XLabel=$N_{\text{jet}}$
-YLabel=$\sigma(\geq N_{\text{jet}}\;\text{jets})/\sigma(\geq N_{\text{jet}}-1\;\text{jets})$
+XLabel=$N_{\mathrm{jet}}$
+YLabel=$\sigma(\geq N_{\mathrm{jet}}\;\mathrm{jets})/\sigma(\geq N_{\mathrm{jet}}-1\;\mathrm{jets})$
 LogY=0
 RatioPlot=0
 XMajorTickMarks=10
@@ -176,7 +176,7 @@ LegendXPos=0.05
 
 # BEGIN PLOT /ATLAS_2012_I1083318/d21-x01-y0[12]
 Title=Lepton-Jet Rapidity Difference
-XLabel=$y(\text{Lepton})-y(\text{First Jet})$
+XLabel=$y(\mathrm{Lepton})-y(\mathrm{First~Jet})$
 YLabel=d$\sigma$/d$\Delta y$ [pb]
 LogY=0
 RatioPlotYMin=0.0
@@ -186,7 +186,7 @@ LegendXPos=0.05
 
 # BEGIN PLOT /ATLAS_2012_I1083318/d22-x01-y0[12]
 Title=Lepton-Jet Rapidity Sum
-XLabel=$y(\text{Lepton})+y(\text{First Jet})$
+XLabel=$y(\mathrm{Lepton})+y(\mathrm{First~Jet})$
 YLabel=d$\sigma$/d$\Sigma y$ [pb]
 LogY=0
 RatioPlotYMin=0.25

@@ -19,6 +19,8 @@ namespace Rivet {
   /// whether intermediate tau or muon decays invalidate a particle's promptness.
   ///
   /// @todo Decide how to treat brem photons off prompt leptons -- are they also prompt? "Decay" does not change the lepton PID...
+  ///
+  /// @todo Use enums for tau, mu, brem
   class PromptFinalState : public FinalState {
   public:
 
@@ -52,10 +54,10 @@ namespace Rivet {
     void project(const Event& e);
 
     /// Compare projections.
-    int compare(const Projection& p) const;
+    CmpState compare(const Projection& p) const;
 
 
-  private:
+  protected:
 
     bool _acceptMuDecays, _acceptTauDecays;
 

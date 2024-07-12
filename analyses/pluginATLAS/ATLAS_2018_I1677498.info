@@ -5,10 +5,12 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1677498
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Christian Herwig <herwig@cern.ch>
  - Christian Gutschow <chris.g@cern.ch>
 References:
+ - ATLAS-TOPQ-2017-05
  - Phys.Rev.Lett. 121 (2018) no.15, 152002
  - arXiv:1806.04667 [hep-ex]
 Keywords:
@@ -37,7 +39,7 @@ Description:
   description of the data in the measured region of phase space most sensitive to these effects. These results provide an important 
   constraint on interference models and will guide future model development and tuning.'
 BibKey: Aaboud:2018bir
-BibTex: '@article{Aaboud:2018bir,
+BibTeX: '@article{Aaboud:2018bir,
       author         = "Aaboud, Morad and others",
       title          = "{Probing the quantum interference between singly and
                         doubly resonant top-quark production in $pp$ collisions at

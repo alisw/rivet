@@ -75,7 +75,7 @@ RatioPlotYMax=3
 
 # BEGIN PLOT /CMS_2016_I1413748/d41-x01-y01
 XLabel=$M_\mathrm{t\bar{t}}$
-YLabel=$A_{P}^{\rm{CPV}}$
+YLabel=$A_{P}^{\mathrm{CPV}}$
 RatioPlotMode=deviation
 RatioPlotYMin=-3
 RatioPlotYMax=3
@@ -115,7 +115,7 @@ RatioPlotYMax=3
 
 # BEGIN PLOT /CMS_2016_I1413748/d71-x01-y01
 XLabel=$p_\mathrm{T}^\mathrm{t\bar{t}}$
-YLabel=$A_{P}^{\rm{CPV}}$
+YLabel=$A_{P}^{\mathrm{CPV}}$
 RatioPlotMode=deviation
 RatioPlotYMin=-3
 RatioPlotYMax=3
@@ -155,7 +155,7 @@ RatioPlotYMax=3
 
 # BEGIN PLOT /CMS_2016_I1413748/d101-x01-y01
 XLabel=$\left|y_\mathrm{t\bar{t}}\right|$
-YLabel=$A_{P}^{\rm{CPV}}$
+YLabel=$A_{P}^{\mathrm{CPV}}$
 RatioPlotMode=deviation
 RatioPlotYMin=-3
 RatioPlotYMax=3

@@ -1,0 +1,37 @@
+Name: BESIII_2022_I1900094
+Year: 2022
+Summary: Polarization in $D^0\to\omega\phi$
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1900094
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 128 (2022) 1, 011803
+RunInfo: Any process producing D0 mesons
+Description:
+  'Measurement of polarization in the decay $D^0\to\omega\phi$ by BESIII. Data read from the plots in the paper.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2021raf
+BibTeX: '@article{BESIII:2021raf,
+    author = "Ablikim, M. and others",
+    collaboration = "BESIII",
+    title = "{First Measurement of Polarizations in the Decay $D^0 \to \omega \phi$}",
+    eprint = "2108.02405",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BAM-404",
+    doi = "10.1103/PhysRevLett.128.011803",
+    journal = "Phys. Rev. Lett.",
+    volume = "128",
+    number = "1",
+    pages = "011803",
+    year = "2022"
+}
+'

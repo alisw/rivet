@@ -1,0 +1,259 @@
+{
+    "317507": [
+        "Search for excited charged leptons in Z0 decays", 
+        "DELPHI", 
+        "10.1007/BF01483871", 
+        "221665", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-91-100"
+        ]
+    ], 
+    "317816": [
+        "Study of orientation of three jet events in Z0 hadronic decays using the DELPHI detector", 
+        "DELPHI", 
+        "10.1016/0370-2693(92)92023-A", 
+        "222638", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-91-79"
+        ]
+    ], 
+    "319665": [
+        "Search for scalar leptoquarks from Z0 decays", 
+        "DELPHI", 
+        "10.1016/0370-2693(92)90878-8", 
+        "225038", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-91-138"
+        ]
+    ], 
+    "319666": [
+        "A Search for neutral Higgs particles in Z0 decays", 
+        "DELPHI", 
+        "10.1016/0550-3213(92)90447-J", 
+        "224641", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-91-132"
+        ]
+    ], 
+    "319667": [
+        "Measurement of the average lifetime of B hadrons", 
+        "DELPHI", 
+        "10.1007/BF01559733", 
+        "225028", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-91-131"
+        ]
+    ], 
+    "321409": [
+        "Study of final state photons in hadronic Z0 decay and limits on new phenomena", 
+        "DELPHI", 
+        "10.1007/BF01559732", 
+        "226479", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-91-174"
+        ]
+    ], 
+    "322262": [
+        "Searches for heavy neutrinos from Z decays", 
+        "DELPHI", 
+        "10.1016/0370-2693(92)90528-C", 
+        "226784", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-91-175"
+        ]
+    ], 
+    "322324": [
+        "Multiplicity dependence of mean transverse momentum in e+ e- annihilations at LEP energies", 
+        "DELPHI", 
+        "10.1016/0370-2693(92)90573-M", 
+        "227443", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-91-194"
+        ]
+    ], 
+    "322483": [
+        "Electroweak parameters of the $Z^0$ resonance and the Standard Model: the LEP Collaborations", 
+        "LEP", 
+        "10.1016/0370-2693(92)90572-L", 
+        "229120", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-91-232"
+        ]
+    ], 
+    "322497": [
+        "A Measurement of sin**2 theta(W) from the charge asymmetry of hadronic events at the Z0 peak", 
+        "DELPHI", 
+        "10.1016/0370-2693(92)90760-2", 
+        "228234", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-91-211"
+        ]
+    ], 
+    "322498": [
+        "A Measurement of the b anti-b forward backward asymmetry using the semileptonic decay into muons", 
+        "DELPHI", 
+        "10.1016/0370-2693(92)91680-8", 
+        "228057", 
+        null, 
+        "ins322498", 
+        null, 
+        [
+            "CERN-PPE-91-213"
+        ]
+    ], 
+    "322503": [
+        "Production of strange particles in the hadronic decays of the Z0", 
+        "DELPHI", 
+        "10.1016/0370-2693(92)90879-9", 
+        "227431", 
+        null, 
+        "ins322503", 
+        null, 
+        [
+            "CERN-PPE-91-207"
+        ]
+    ], 
+    "332687": [
+        "Measurement of the Z0 branching fraction to b quark pairs using the boosted sphericity product", 
+        "DELPHI", 
+        "10.1016/0370-2693(92)91159-7", 
+        "231978", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-92-007"
+        ]
+    ], 
+    "333272": [
+        "Determination of alpha(s) in second order QCD from hadronic Z decays", 
+        "DELPHI", 
+        "10.1007/BF01881708", 
+        "231982", 
+        null, 
+        "ins333272", 
+        null, 
+        [
+            "CERN-PPE-91-181-REV", 
+            "CERN-PPE-91-181"
+        ]
+    ], 
+    "334947": [
+        "A Study of the decays of tau leptons produced on the Z resonance at LEP", 
+        "DELPHI", 
+        "10.1007/BF01561293", 
+        "236616", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-92-060", 
+            "CERN-PPE-92-60"
+        ]
+    ], 
+    "334948": [
+        "Charged particle multiplicity distributions for fixed number of jets in Z0 hadronic decays", 
+        "DELPHI", 
+        "10.1007/BF01589707", 
+        "236718", 
+        null, 
+        "ins334948", 
+        null, 
+        [
+            "CERN-PPE-92-064", 
+            "CERN-PPE-92-64"
+        ]
+    ], 
+    "335149": [
+        "Measurement of the partial width of the Z0 into b anti-b final states using their semileptonic decays", 
+        "DELPHI", 
+        "10.1007/BF01589706", 
+        "237825", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-92-079", 
+            "CERN-PPE-92-79"
+        ]
+    ], 
+    "335153": [
+        "Bose-Einstein correlations in the hadronic decays of the Z0", 
+        "DELPHI", 
+        "10.1016/0370-2693(92)90181-3", 
+        "236995", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-92-075", 
+            "CERN-PPE-92-75"
+        ]
+    ], 
+    "336768": [
+        "Evidence for $B_s^0$ meson production in $Z^0$ decays", 
+        "DELPHI", 
+        "10.1016/0370-2693(92)91385-M", 
+        "238451", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-92-104"
+        ]
+    ], 
+    "338069": [
+        "Multiplicity fluctuations in hadronic final states from the decay of the Z0", 
+        "DELPHI", 
+        "10.1016/0550-3213(92)90574-U", 
+        "239390", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-92-120"
+        ]
+    ], 
+    "341561": [
+        "Classification of the hadronic decays of the Z0 into b and c quark pairs using a neural network", 
+        "DELPHI", 
+        "10.1016/0370-2693(92)91580-3", 
+        "241402", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-92-151"
+        ]
+    ]
+}

@@ -1,0 +1,8 @@
+#ifndef RIVET_LOGGING_FHH
+#define RIVET_LOGGING_FHH
+
+namespace Rivet {
+  class Log;
+}
+
+#endif

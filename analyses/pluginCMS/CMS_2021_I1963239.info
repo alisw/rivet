@@ -1,0 +1,54 @@
+Name: CMS_2021_I1963239
+Year: 2021
+Summary: Measurement of inclusive and Mueller-Navelet dijet cross sections and their ratios at 2.76 TeV
+Experiment: CMS
+Collider: LHC
+InspireID: 1963239
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - cms-pag-conveners-smp@cern.ch
+ - Anatolii Egorov <anatolii.egorov1902@gmail.com>
+ - Victor Kim <victor.kim@cern.ch>
+ - Victor Murzin
+ - Vadim Oreshkin
+ - Vladimir Gavrilov
+ - Grigory Pivovarov
+ - Grigory Safronov
+References:
+ - JHEP 03 (2022) 189
+ - CMS-FSQ-13-004
+ - arXiv:2111.04605
+RunInfo: pp QCD interactions at $\sqrt{s} = 2.76$ TeV. Data collected by CMS during the year 2013.
+Beams: [p+, p+]
+Energies: [2760]
+Luminosity_fb: 5.4e-3
+Description:
+   'This is a measurement of the differential cross sections of inclusive
+   and Mueller-Navelet dijet production as a function of the absolute distance in
+   rapidity, $\Delta y$, between jets. The ratios of inclusive to exclusive dijet
+   production, the Mueller-Navelet to exclusive dijet production,
+   as well as the ratios of inclusive to exclusive with veto and
+   Mueller-Navelet to exclusive with veto  is also measured.
+   These measurements were performed with the CMS
+   detector in proton-proton collisions at $\sqrt{s} = 2.76$ TeV for
+   jets with $p_T > 35$ GeV and $|y| < 4.7$, with integrated luminosity of
+   5.4pb^-1. The measured observables are
+   corrected for detector effects.'
+BibKey: CMS:2021maw
+BibTeX: '@article{CMS:2021maw,
+    author = "Tumasyan, Armen and others",
+    collaboration = "CMS",
+    title = "{Study of dijet events with large rapidity separation in proton-proton collisions at $ \sqrt{s} $ = 2.76 TeV}",
+    eprint = "2111.04605",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CMS-FSQ-13-004, CERN-EP-2021-173",
+    doi = "10.1007/JHEP03(2022)189",
+    journal = "JHEP",
+    volume = "03",
+    pages = "189",
+    year = "2022"
+}'
+ReleaseTests:
+ - $A pp-2760-jj

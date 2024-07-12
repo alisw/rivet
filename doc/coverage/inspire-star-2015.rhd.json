@@ -1,0 +1,162 @@
+{
+    "1269346": [
+        "Suppression of $\\Upsilon$ production in d+Au and Au+Au collisions at $\\sqrt{s_{NN}}$=200 GeV", 
+        "STAR", 
+        "10.1016/j.physletb.2014.06.028", 
+        null, 
+        "1312.3675", 
+        "ins1269346", 
+        null, 
+        []
+    ], 
+    "1286656": [
+        "Beam-energy-dependent two-pion interferometry and the freeze-out eccentricity of pions measured in heavy ion collisions at the STAR detector", 
+        "STAR", 
+        "10.1103/PhysRevC.92.014904", 
+        null, 
+        "1403.4972", 
+        "ins1286656", 
+        null, 
+        []
+    ], 
+    "1297229": [
+        "Precision Measurement of the Longitudinal Double-spin Asymmetry for Inclusive Jet Production in Polarized Proton Collisions at $\\sqrt{s}=200$ GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.115.092002", 
+        null, 
+        "1405.5134", 
+        "ins1297229", 
+        null, 
+        []
+    ], 
+    "1311513": [
+        "$\\Lambda\\Lambda$ Correlation Function in Au+Au collisions at $\\sqrt{s_{NN}}=$ 200 GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.114.022301", 
+        null, 
+        "1408.4360", 
+        "ins1311513", 
+        null, 
+        []
+    ], 
+    "1311834": [
+        "Charged-to-neutral correlation at forward rapidity in Au+Au collisions at $\\sqrt{s_{NN}}$=200 GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.91.034905", 
+        null, 
+        "1408.5017", 
+        "ins1311834", 
+        null, 
+        []
+    ], 
+    "1315466": [
+        "Isolation of Flow and Nonflow Correlations by Two- and Four-Particle Cumulant Measurements of Azimuthal Harmonics in $\\sqrt{s_{_{\\rm NN}}} =$ 200 GeV Au+Au Collisions", 
+        "STAR", 
+        "10.1016/j.physletb.2015.04.033", 
+        null, 
+        "1409.2043", 
+        "ins1315466", 
+        null, 
+        []
+    ], 
+    "1322126": [
+        "Di-hadron correlations with identified leading hadrons in 200 GeV Au + Au and d + Au collisions at STAR", 
+        "STAR", 
+        "10.1016/j.physletb.2015.10.037", 
+        null, 
+        "1410.3524", 
+        "ins1322126", 
+        null, 
+        []
+    ], 
+    "1322965": [
+        "Energy Dependence of $K/\\pi$, $p/\\pi$, and $K/p$ Fluctuations in Au+Au Collisions from $\\rm \\sqrt{s_{NN}}$ = 7.7 to 200 GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.92.021901", 
+        null, 
+        "1410.5375", 
+        "ins1322965", 
+        null, 
+        []
+    ], 
+    "1335765": [
+        "Effect of event selection on jetlike correlation measurement in $d$+Au collisions at $\\sqrt{s_{\\rm{NN}}}=200$ GeV", 
+        "STAR", 
+        "10.1016/j.physletb.2015.02.068", 
+        null, 
+        "1412.8437", 
+        "ins1335765", 
+        null, 
+        []
+    ], 
+    "1340691": [
+        "Energy dependence of acceptance-corrected dielectron excess mass spectrum at mid-rapidity in Au$+$Au collisions at $\\sqrt{s_{NN}} =$ 19.6  and 200 GeV", 
+        "STAR", 
+        "10.1016/j.physletb.2015.08.044", 
+        null, 
+        "1501.05341", 
+        "ins1340691", 
+        null, 
+        []
+    ], 
+    "1346551": [
+        "Long-range pseudorapidity dihadron correlations in $d$+Au collisions at $\\sqrt{s_{\\rm NN}}=200$ GeV", 
+        "STAR", 
+        "10.1016/j.physletb.2015.05.075", 
+        null, 
+        "1502.07652", 
+        "ins1346551", 
+        null, 
+        []
+    ], 
+    "1357596": [
+        "Observation of Transverse Spin-Dependent Azimuthal Correlations of Charged Pion Pairs in $p^\\uparrow+p$ at $\\sqrt{s}=200$ GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.115.242501", 
+        null, 
+        "1504.00415", 
+        "ins1357596", 
+        null, 
+        []
+    ], 
+    "1357992": [
+        "Measurements of Dielectron Production in Au$+$Au Collisions at $\\sqrt{s_{\\rm NN}}$ = 200 GeV from the STAR Experiment", 
+        "STAR", 
+        "10.1103/PhysRevC.92.024912", 
+        null, 
+        "1504.01317", 
+        "ins1357992", 
+        null, 
+        []
+    ], 
+    "1358666": [
+        "Observation of charge asymmetry dependence of pion elliptic flow and the possible chiral magnetic wave in heavy-ion collisions", 
+        "STAR", 
+        "10.1103/PhysRevLett.114.252302", 
+        null, 
+        "1504.02175", 
+        "ins1358666", 
+        null, 
+        []
+    ], 
+    "1373553": [
+        "Azimuthal anisotropy in U$+$U and Au$+$Au collisions at RHIC", 
+        "STAR", 
+        "10.1103/PhysRevLett.115.222301", 
+        null, 
+        "1505.07812", 
+        "ins1373553", 
+        null, 
+        []
+    ], 
+    "1385105": [
+        "Measurement of Interaction between Antiprotons", 
+        "STAR", 
+        "10.1038/nature15724", 
+        null, 
+        "1507.07158", 
+        "ins1385105", 
+        null, 
+        []
+    ]
+}

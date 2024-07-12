@@ -5,9 +5,11 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1397635
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Reinhard Schwienhorst <schwier@cern.ch>
 References:
+ - ATLAS-TOPQ-2012-20
  - JHEP01 (2016) 064
  - doi:10.1007/JHEP01(2016)064
  - arXiv:1510.03752 [hep-ex]
@@ -42,3 +44,7 @@ BibTeX: '@article{Aad:2015eto,
       reportNumber   = "CERN-PH-2015-230, CERN-PH-EP-2015-230",
       SLACcitation   = "%%CITATION = ARXIV:1510.03752;%%"
 }'
+
+ReleaseTests:
+ - $A LHC-8-Top-All
+

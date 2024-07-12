@@ -1,82 +1,54 @@
 // -*- C++ -*-
 #include "Rivet/Analysis.hh"
 #include "Rivet/Projections/ChargedFinalState.hh"
-#include "Rivet/Projections/LossyFinalState.hh"
+#include "Rivet/Projections/SmearedParticles.hh"
 
 namespace Rivet {
 
 
-  /// @todo Replace with SmearedParticles
-  class STARRandomFilter {
-  public:
-
-    STARRandomFilter() { }
-
-    // Return true to throw away a particle
-    bool operator()(const Particle& p) {
-      /// @todo Use a better RNG?
-      size_t idx = int(floor(p.pT()/MeV/50));
-      if (idx > 11) idx = 11;
-      return (rand()/static_cast<double>(RAND_MAX) > _trkeff[idx]);
-    }
-
-    int compare(const STARRandomFilter& other) const {
-      return true;
-    }
-
-  private:
-
-    const static double _trkeff[12];
-
-  };
-
-
-  // Here we have the track reconstruction efficiencies for tracks with pT from 0 to 600 MeV
-  // in steps of 50 MeV. The efficiency is assumed to be 0.88 for pT >= 600 MeV
-  const double STARRandomFilter::_trkeff[12] = {0,0,0.38,0.72,0.78,0.81,0.82,0.84,0.85,0.86,0.87,0.88};
-
-
-
+  /// Multiplicities and pT spectra from STAR for pp at 200 GeV
   class STAR_2008_S7869363 : public Analysis {
   public:
 
-    /// @name Constructors etc.
-    //@{
-
     /// Constructor
-    STAR_2008_S7869363()
-      : Analysis("STAR_2008_S7869363"),
-        nCutsPassed(0),
-        nPi(0), nPiPlus(0), nKaon(0), nKaonPlus(0), nProton(0), nAntiProton(0)
-    {    }
+    RIVET_DEFAULT_ANALYSIS_CTOR(STAR_2008_S7869363);
 
-    //@}
-
-
-  public:
 
     /// @name Analysis methods
-    //@{
+    /// @{
 
     /// Book histograms and initialise projections before the run
     void init() {
-      const ChargedFinalState cfs(-0.5, 0.5, 0.2*GeV);
-      const LossyFinalState<STARRandomFilter> lfs(cfs, STARRandomFilter());
+      const ChargedFinalState cfs(Cuts::abseta < 0.5 && Cuts::pT >  0.2*GeV);
+      const SmearedParticles lfs(cfs, [](const Particle& p) {
+          // Track reconstruction efficiencies for tracks with pT from 0 to 600 MeV
+          // in steps of 50 MeV. The efficiency is assumed to be 0.88 for pT >= 600 MeV
+          const static vector<double> TRKEFF = {0,0,0.38,0.72,0.78,0.81,0.82,0.84,0.85,0.86,0.87,0.88};
+          const size_t idx = size_t(min(floor(p.pT()/MeV/50), 11.));
+          return TRKEFF[idx];
+        });
       declare(lfs, "FS");
 
-      _h_dNch           = bookHisto1D(1, 1, 1);
-      _h_dpT_Pi         = bookHisto1D(2, 1, 1);
-      _h_dpT_Piplus     = bookHisto1D(2, 1, 2);
-      _h_dpT_Kaon       = bookHisto1D(2, 1, 3);
-      _h_dpT_Kaonplus   = bookHisto1D(2, 1, 4);
-      _h_dpT_AntiProton = bookHisto1D(2, 1, 5);
-      _h_dpT_Proton     = bookHisto1D(2, 1, 6);
+      book(_h_dNch           ,1, 1, 1);
+      book(_h_dpT_Pi         ,2, 1, 1);
+      book(_h_dpT_Piplus     ,2, 1, 2);
+      book(_h_dpT_Kaon       ,2, 1, 3);
+      book(_h_dpT_Kaonplus   ,2, 1, 4);
+      book(_h_dpT_AntiProton ,2, 1, 5);
+      book(_h_dpT_Proton     ,2, 1, 6);
+      // book(nCutsPassed, "nCutsPassed");
+      // book(nPi, "nPi");
+      // book(nPiPlus, "nPiPlus");
+      // book(nKaon, "nKaon");
+      // book(nKaonPlus, "nKaonPlus");
+      // book(nProton, "nProton");
+      // book(nAntiProton, "nAntiProton");
     }
 
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-      const FinalState& charged = apply<FinalState>(event, "FS");
+      const ParticleFinder& charged = apply<ParticleFinder>(event, "FS");
 
       // Vertex reconstruction efficiencies as a function of charged multiplicity.
       // For events with more than 23 reconstructed tracks the efficiency is 100%.
@@ -89,38 +61,38 @@ namespace Rivet {
         vtxeff = vtxeffs[charged.particles().size()];
       }
 
-      const double weight = vtxeff * event.weight();
+      const double weight = vtxeff;
 
-      foreach (const Particle& p, charged.particles()) {
+      for (const Particle& p : charged.particles()) {
         double pT = p.pT()/GeV;
         double y = p.rapidity();
         if (fabs(y) < 0.1) {
-          nCutsPassed += weight;
+          // nCutsPassed->fill(weight);
           const PdgId id = p.pid();
           switch (id) {
           case -211:
             _h_dpT_Pi->fill(pT, weight/(TWOPI*pT*0.2));
-            nPi += weight;
+            // nPi->fill(weight);
             break;
           case 211:
             _h_dpT_Piplus->fill(pT, weight/(TWOPI*pT*0.2));
-            nPiPlus += weight;
+            // nPiPlus->fill(weight);
             break;
           case -321:
             _h_dpT_Kaon->fill(pT, weight/(TWOPI*pT*0.2));
-            nKaon += weight;
+            // nKaon->fill(weight);
             break;
           case 321:
             _h_dpT_Kaonplus->fill(pT, weight/(TWOPI*pT*0.2));
-            nKaonPlus += weight;
+            // nKaonPlus->fill(weight);
             break;
           case -2212:
             _h_dpT_AntiProton->fill(pT, weight/(TWOPI*pT*0.2));
-            nAntiProton += weight;
+            // nAntiProton->fill(weight);
             break;
           case 2212:
             _h_dpT_Proton->fill(pT, weight/(TWOPI*pT*0.2));
-            nProton += weight;
+            // nProton->fill(weight);
             break;
           }
         }
@@ -146,23 +118,23 @@ namespace Rivet {
       normalize(_h_dpT_Proton    , 0.016511 );
     }
 
+    /// @}
 
-  private:
 
-
+    /// @name Histograms
+    /// @{
     Histo1DPtr _h_dNch;
-
     Histo1DPtr _h_dpT_Pi, _h_dpT_Piplus;
     Histo1DPtr _h_dpT_Kaon, _h_dpT_Kaonplus;
     Histo1DPtr _h_dpT_AntiProton, _h_dpT_Proton;
-
     Profile1DPtr _h_pT_vs_Nch;
-    double nCutsPassed, nPi, nPiPlus, nKaon, nKaonPlus, nProton, nAntiProton;
+    //CounterPtr nCutsPassed, nPi, nPiPlus, nKaon, nKaonPlus, nProton, nAntiProton;
+    ///@}
+
   };
 
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(STAR_2008_S7869363);
+  RIVET_DECLARE_ALIASED_PLUGIN(STAR_2008_S7869363, STAR_2008_I793126);
 
 }

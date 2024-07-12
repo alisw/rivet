@@ -1,0 +1,34 @@
+Name: BABAR_2018_I1647139
+Year: 2018
+Summary: Cross section for $e^+e^-\to\eta\pi^+\pi^-$ between 1.2 and 3.5 GeV
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 1647139
+Status: VALIDATED NOHEPDATA
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+- Phys.Rev. D97 (2018) 052007
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams:  [e+,e-]
+Description:
+  'Measurement of the cross section for $e^+e^-\to\eta\pi^+\pi^-$ at energies between 1.2 and 3.5 GeV using radiative events.'
+Keywords:
+BibKey: TheBABAR:2018vvb
+BibTeX: '@article{TheBABAR:2018vvb,
+      author         = "Lees, J. P. and others",
+      title          = "{Study of the process $e^+e^- \to \pi^+\pi^-\eta $ using
+                        initial state radiation}",
+      collaboration  = "BaBar",
+      journal        = "Phys. Rev.",
+      volume         = "D97",
+      year           = "2018",
+      pages          = "052007",
+      doi            = "10.1103/PhysRevD.97.052007",
+      eprint         = "1801.02960",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "BABAR-PUB-17-003, SLAC-PUB-17204",
+      SLACcitation   = "%%CITATION = ARXIV:1801.02960;%%"
+}'

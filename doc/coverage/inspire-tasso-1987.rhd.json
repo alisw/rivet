@@ -1,0 +1,30 @@
+{
+    "236264": [
+        "A Measurement of the $D(s$) Lifetime", 
+        "TASSO", 
+        "10.1007/BF01570766", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "RAL-86-109", 
+            "DESY-86-159", 
+            "WIS-86-66-PH"
+        ]
+    ], 
+    "248660": [
+        "A Study of Energy-energy Correlations Between 12-{GeV} and 46.8-{GeV} {CM} Energies", 
+        "TASSO", 
+        "10.1007/BF01573928", 
+        null, 
+        null, 
+        "ins248660", 
+        null, 
+        [
+            "DESY-87-081", 
+            "FTUAM-EP-87-04", 
+            "SI-87-12"
+        ]
+    ]
+}

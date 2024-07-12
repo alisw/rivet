@@ -1,0 +1,62 @@
+{
+    "691576": [
+        "Precision electroweak measurements on the $Z$ resonance", 
+        "ALEPH", 
+        "10.1016/j.physrep.2005.12.006", 
+        "892831", 
+        "hep-ex/0509008", 
+        null, 
+        null, 
+        [
+            "SLAC-R-774"
+        ]
+    ], 
+    "711130": [
+        "Search for neutral MSSM Higgs bosons at LEP", 
+        "ALEPH", 
+        "10.1140/epjc/s2006-02569-7", 
+        "930093", 
+        "hep-ex/0602042", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2006-001"
+        ]
+    ], 
+    "714248": [
+        "Deuteron and anti-deuteron production in e+ e- collisions at the Z resonance", 
+        "ALEPH", 
+        "10.1016/j.physletb.2006.06.043", 
+        "947277", 
+        "hep-ex/0604023", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2006-009"
+        ]
+    ], 
+    "715094": [
+        "Test of Colour Reconnection Models using Three-Jet Events in Hadronic Z Decays", 
+        "ALEPH", 
+        "10.1140/epjc/s10052-006-0017-5", 
+        "943713", 
+        "hep-ex/0604042", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2006-020"
+        ]
+    ], 
+    "715982": [
+        "Measurement of the $W$ boson mass and width in $e^{+} e^{-}$ collisions at LEP", 
+        "ALEPH", 
+        "10.1140/epjc/s2006-02576-8", 
+        "936920", 
+        "hep-ex/0605011", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2006-004"
+        ]
+    ]
+}

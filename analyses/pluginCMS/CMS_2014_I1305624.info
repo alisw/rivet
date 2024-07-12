@@ -5,6 +5,7 @@ Experiment: CMS
 Collider: LHC
 InspireID: 1305624
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Sunanda Banerjee <Sunanda.Banerjee@cern.ch>
  - Sandeep Bhowmik <Sandeep.Bhowmik@cern.ch>
@@ -115,3 +116,10 @@ BibTeX: '@article{Khachatryan:2014ika,
       reportNumber   = "CMS-SMP-12-022, CERN-PH-EP-2014-146",
       SLACcitation   = "%%CITATION = ARXIV:1407.2856;%%",
 }'
+
+ReleaseTests:
+ - $A LHC-7-Jets-4
+ - $A-2 LHC-7-Jets-5
+ - $A-3 LHC-7-Jets-6
+ - $A-4 LHC-7-Jets-7
+

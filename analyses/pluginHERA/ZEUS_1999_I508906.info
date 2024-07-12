@@ -1,0 +1,38 @@
+Name: ZEUS_1999_I508906
+Year: 1999
+Summary: Measurement of the E**2(T,jet) / Q**2 dependence of forward jet production at HERA
+Experiment: ZEUS
+Collider: HERA
+InspireID: 508906
+Status: VALIDATED
+Reentrant: True
+Authors:
+ - Wendy Zhang <wz306@cam.ac.uk>
+ - Hannes Jung <hannes.jung@desy.de>
+References:
+ - Phys.Lett.B 474 (2000) 223
+ - doi:10.1016/S0370-2693(99)01478-1
+ - arXiv:hep-ex/9910043
+ - DESY-99-162
+Beams: [[e+, p+],[p+,e+]]
+Energies: [[27.5,820],[820,27.5]]
+Description:
+  'The forward-jet cross section in deep inelastic ep scattering has been measured using the ZEUS detector at HERA with an integrated luminosity of 6.36 pb$^{-1}$. The jet cross section is presented as a function of jet transverse energy squared, E(T,jet)^2, and Q^2 in the kinematic ranges 10^-2<E(T,jet)^2/Q^2<10^2 and 2.5 10^-4<x<8.0 10^-2. Since the perturbative QCD predictions for this cross section are sensitive to the treatment of the log(E_T/Q)^2 terms, this measurement provides an important test. '
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: ZEUS:1999nrh
+BibTeX: '@article{ZEUS:1999nrh,
+    author = "Breitweg, J. and others",
+    collaboration = "ZEUS",
+    title = "{Measurement of the E**2(T,jet) / Q**2 dependence of forward jet production at HERA}",
+    eprint = "hep-ex/9910043",
+    archivePrefix = "arXiv",
+    reportNumber = "DESY-99-162, ANL-HEP-PR-99-121",
+    doi = "10.1016/S0370-2693(99)01478-1",
+    journal = "Phys. Lett. B",
+    volume = "474",
+    pages = "223--233",
+    year = "2000"
+}'
+

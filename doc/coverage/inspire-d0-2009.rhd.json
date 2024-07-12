@@ -1,0 +1,518 @@
+{
+    "717023": [
+        "Search for particles decaying into a $Z$ boson and a photon in $p\\bar{p}$ collisions at $\\sqrt{s}$ = 1.96 TeV", 
+        "D0", 
+        "10.1016/j.physletb.2006.08.079", 
+        null, 
+        "hep-ex/0605064", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-06-109-E"
+        ]
+    ], 
+    "771358": [
+        "Measurement of the $B^0_{s}$ semileptonic branching ratio to an orbitally excited $D_s$ state, Br($B^0_s\\to D^-_{s1}(2536) \\mu^{+} \\nu X$)", 
+        "D0", 
+        "10.1103/PhysRevLett.102.051801", 
+        null, 
+        "0712.3789", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-07-659-E"
+        ]
+    ], 
+    "785962": [
+        "Relative rates of $B$ meson decays into $\\psi_{2S}$ and $J/\\psi$ mesons", 
+        "D0", 
+        "10.1103/PhysRevD.79.111102", 
+        null, 
+        "0805.2576", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-08-134-E"
+        ]
+    ], 
+    "786093": [
+        "Measurement of the lifetime of the $B_c^\\pm$ meson in the semileptonic decay channel", 
+        "D0", 
+        "10.1103/PhysRevLett.102.092001", 
+        null, 
+        "0805.2614", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-08-136-E"
+        ]
+    ], 
+    "787233": [
+        "Search for a scalar or vector particle decaying into $Z \\gamma$ in $p \\bar{p}$ collisions at $\\sqrt{s}$=1.96 TeV", 
+        "D0", 
+        "10.1016/j.physletb.2008.12.009", 
+        null, 
+        "0806.0611", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-08-154-E"
+        ]
+    ], 
+    "790012": [
+        "Search for charged Higgs bosons decaying to top and bottom quarks in $p \\bar{p}$ collisions", 
+        "D0", 
+        "10.1103/PhysRevLett.102.191802", 
+        null, 
+        "0807.0859", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-08-229-E"
+        ]
+    ], 
+    "792818": [
+        "Measurement of $\\sigma(p\\bar{p} \\to Z + X)$ Br($Z \\to \\tau^+ \\tau^-$) at $\\sqrt{s}$ = 1.96-TeV", 
+        "D0", 
+        "10.1016/j.physletb.2008.11.010", 
+        null, 
+        "0808.1306", 
+        "ins792818", 
+        null, 
+        [
+            "FERMILAB-PUB-08-295-E"
+        ]
+    ], 
+    "793104": [
+        "A Search for associated $W$ and Higgs Boson production in $p \\bar{p}$ collisions at $\\sqrt{s}$ = 1.96-TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.102.051803", 
+        null, 
+        "0808.1970", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-08-297-E"
+        ]
+    ], 
+    "794026": [
+        "Search for pair production of second generation scalar leptoquarks", 
+        "D0", 
+        "10.1016/j.physletb.2008.12.017", 
+        null, 
+        "0808.4023", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-08-334-E"
+        ]
+    ], 
+    "796811": [
+        "Search for Large extra spatial dimensions in the dielectron and diphoton channels in $p \\bar{p}$ collisions at $\\sqrt{s}$ = 1.96-TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.102.051601", 
+        null, 
+        "0809.2813", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-08-368-E"
+        ]
+    ], 
+    "797660": [
+        "Search for Long-Lived Charged Massive Particles with the D0 Detector", 
+        "D0", 
+        "10.1103/PhysRevLett.102.161802", 
+        null, 
+        "0809.4472", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-08-409-E"
+        ]
+    ], 
+    "798131": [
+        "Measurement of the angular and lifetime parameters of the decays $B^0_{d} \\to J/\\psi K^{*0}$ and $B^0_{s} \\to J/\\psi \\phi$", 
+        "D0", 
+        "10.1103/PhysRevLett.102.032001", 
+        null, 
+        "0810.0037", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-08-418-E"
+        ]
+    ], 
+    "800235": [
+        "Evidence of $WW+WZ$ production with lepton + jets final states in proton-antiproton collisions at $\\sqrt{s}$ =1.96 TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.102.161801", 
+        null, 
+        "0810.3873", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-08-457-E"
+        ]
+    ], 
+    "801310": [
+        "Search for neutral Higgs bosons at high $\\tan\\beta$ in the $b(h/H/A) \\to b \\tau^+ \\tau^-$ channel", 
+        "D0", 
+        "10.1103/PhysRevLett.102.051804", 
+        null, 
+        "0811.0024", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-08-451-E"
+        ]
+    ], 
+    "801554": [
+        "Search for the lightest scalar top quark in events with two leptons in $p\\bar{p}$ collisions at $\\sqrt{s}$ = 1.96-TeV", 
+        "D0", 
+        "10.1016/j.physletb.2009.04.039", 
+        null, 
+        "0811.0459", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-08-508-E"
+        ]
+    ], 
+    "802533": [
+        "Evidence for decay $B_s^0 \\to D_s^{(*)}D_s^{(*)}$ and a measurement of $\\Delta\\Gamma_s^{CP}/\\Gamma_s$", 
+        "D0", 
+        "10.1103/PhysRevLett.102.091801", 
+        null, 
+        "0811.2173", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-08-518-E"
+        ]
+    ], 
+    "810174": [
+        "Search for anomalous top quark couplings with the D0 detector", 
+        "D0", 
+        "10.1103/PhysRevLett.102.092002", 
+        null, 
+        "0901.0151", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-08-583-E"
+        ]
+    ], 
+    "810372": [
+        "Search for associated production of charginos and neutralinos in the trilepton final state using 2.3 fb$^{-1}$ of data", 
+        "D0", 
+        "10.1016/j.physletb.2009.08.011", 
+        null, 
+        "0901.0646", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-003-E"
+        ]
+    ], 
+    "810425": [
+        "Measurement of gamma + b + X and gamma + c + X production cross sections in p anti-p collisions at s**(1/2) = 1.96-TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.102.192002", 
+        null, 
+        "0901.0739", 
+        "ins810425", 
+        null, 
+        [
+            "FERMILAB-PUB-08-582-E"
+        ]
+    ], 
+    "810576": [
+        "Search for admixture of scalar top quarks in the t anti-t lepton+jets final state at s**(1/2) = 1.96-TeV", 
+        "D0", 
+        "10.1016/j.physletb.2009.02.027", 
+        null, 
+        "0901.1063", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-005-E"
+        ]
+    ], 
+    "810936": [
+        "Search for Resonant Diphoton Production with the D0 Detector", 
+        "D0", 
+        "10.1103/PhysRevLett.102.231801", 
+        null, 
+        "0901.1887", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-006-E"
+        ]
+    ], 
+    "811044": [
+        "Measurement of the t anti-t production cross section and top quark mass extraction using dilepton events in p anti-p collisions", 
+        "D0", 
+        "10.1016/j.physletb.2009.07.032", 
+        null, 
+        "0901.2137", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-013-E"
+        ]
+    ], 
+    "813174": [
+        "Measurement of the Z gamma ---> nu anti-nu gamma cross section and limits on anomalous Z Z gamma and Z gamma gamma couplings in p anti-p collisions at s**(1/2) = 1.96-TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.102.201802", 
+        null, 
+        "0902.2157", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-046-E"
+        ]
+    ], 
+    "814750": [
+        "Observation of Single Top Quark Production", 
+        "D0", 
+        "10.1103/PhysRevLett.103.092001", 
+        null, 
+        "0903.0850", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-056-E"
+        ]
+    ], 
+    "815094": [
+        "Measurements of differential cross sections of Z/gamma*+jets+X events in proton anti-proton collisions at s**(1/2) = 1.96-TeV", 
+        "D0", 
+        "10.1016/j.physletb.2009.05.058", 
+        null, 
+        "0903.1748", 
+        "ins815094", 
+        null, 
+        [
+            "FERMILAB-PUB-09-066-E"
+        ]
+    ], 
+    "816455": [
+        "Search for the standard model Higgs boson in tau final states", 
+        "D0", 
+        "10.1103/PhysRevLett.102.251801", 
+        null, 
+        "0903.4800", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-089-E"
+        ]
+    ], 
+    "816830": [
+        "Combination of t anti-t cross section measurements and constraints on the mass of the top quark and its decays into charged Higgs bosons", 
+        "D0", 
+        "10.1103/PhysRevD.80.071102", 
+        null, 
+        "0903.5525", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-092-E"
+        ]
+    ], 
+    "817299": [
+        "Measurement of the WW production cross section with dilepton final states in p anti-p collisions at s**(1/2) = 1.96-TeV and limits on anomalous trilinear gauge couplings", 
+        "D0", 
+        "10.1103/PhysRevLett.103.191801", 
+        null, 
+        "0904.0673", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-094-E"
+        ]
+    ], 
+    "818406": [
+        "Measurement of the Top Quark Mass in Final States with Two Leptons", 
+        "D0", 
+        "10.1103/PhysRevD.80.092006", 
+        null, 
+        "0904.3195", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-125-E"
+        ]
+    ], 
+    "819905": [
+        "Search for dark photons from supersymmetric hidden valleys", 
+        "D0", 
+        "10.1103/PhysRevLett.103.081802", 
+        null, 
+        "0905.1478", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-229-E"
+        ]
+    ], 
+    "820955": [
+        "Search for NMSSM Higgs bosons in the h ---> aa ---> mu mu mu mu, mu mu tau tau channels using p anti-p collisions at s**(1/2) = 1.96-TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.103.061801", 
+        null, 
+        "0905.3381", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-257-E"
+        ]
+    ], 
+    "821287": [
+        "Search for squark production in events with jets, hadronically decaying tau leptons and missing transverse energy at s**(1/2) = 1.96-TeV", 
+        "D0", 
+        "10.1016/j.physletb.2009.08.002", 
+        null, 
+        "0905.4086", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-268-E"
+        ]
+    ], 
+    "822373": [
+        "Direct measurement of the mass difference between top and antitop quarks", 
+        "D0", 
+        "10.1103/PhysRevLett.103.132001", 
+        null, 
+        "0906.1172", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-285-E"
+        ]
+    ], 
+    "822614": [
+        "Search for Resonant Pair Production of long-lived particles decaying to b anti-b in p anti-p collisions at s**(1/2) = 1.96-TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.103.071801", 
+        null, 
+        "0906.1787", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-299-E"
+        ]
+    ], 
+    "824127": [
+        "Measurement of dijet angular distributions at s**(1/2) = 1.96-TeV and searches for quark compositeness and extra spatial dimensions", 
+        "D0", 
+        "10.1103/PhysRevLett.103.191803", 
+        null, 
+        "0906.4819", 
+        "ins824127", 
+        null, 
+        [
+            "FERMILAB-PUB-09-326-E"
+        ]
+    ], 
+    "824331": [
+        "Search for charged Higgs bosons in decays of top quarks", 
+        "D0", 
+        "10.1103/PhysRevD.80.051107", 
+        null, 
+        "0906.5326", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-329-E"
+        ]
+    ], 
+    "825055": [
+        "Search for pair production of first-generation leptoquarks in p anti-p collisions at s**(1/2) = 1.96-TeV", 
+        "D0", 
+        "10.1016/j.physletb.2009.10.016", 
+        null, 
+        "0907.1048", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-342-E"
+        ]
+    ], 
+    "826333": [
+        "A Novel method for modeling the recoil in W boson events at hadron collider", 
+        "D0", 
+        "10.1016/j.nima.2009.08.056", 
+        null, 
+        "0907.3713", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-363-E"
+        ]
+    ], 
+    "826814": [
+        "Measurement of trilinear gauge boson couplings from WW + WZ ---> l nu j j events in p anti-p collisions at s**(1/2) = 1.96 TeV", 
+        "D0", 
+        "10.1103/PhysRevD.80.053012", 
+        null, 
+        "0907.4398", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-376-E"
+        ]
+    ], 
+    "827966": [
+        "Measurement of the W boson mass", 
+        "D0", 
+        "10.1103/PhysRevLett.103.141801", 
+        null, 
+        "0908.0766", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-388-E"
+        ]
+    ], 
+    "828423": [
+        "Search for Charged Higgs Bosons in Top Quark Decays", 
+        "D0", 
+        "10.1016/j.physletb.2009.11.016", 
+        null, 
+        "0908.1811", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-393-E"
+        ]
+    ], 
+    "832308": [
+        "Direct measurement of the W boson width", 
+        "D0", 
+        "10.1103/PhysRevLett.103.231802", 
+        null, 
+        "0909.4814", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-449-E"
+        ]
+    ], 
+    "836929": [
+        "Determination of the strong coupling constant from the inclusive jet cross section in $p\\bar{p}$ collisions at sqrt(s)=1.96 TeV", 
+        "D0", 
+        "10.1103/PhysRevD.80.111107", 
+        null, 
+        "0911.2710", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-558-E"
+        ]
+    ]
+}

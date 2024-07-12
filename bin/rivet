@@ -14,11 +14,16 @@ Examples:
   %(prog)s [options] fifo.hepmc
 
 
-ENVIRONMENT:
+Environment variables:
+
  * RIVET_ANALYSIS_PATH: list of paths to be searched for plugin analysis libraries at runtime
  * RIVET_DATA_PATH: list of paths to be searched for data files (defaults to use analysis path)
- * RIVET_WEIGHT_INDEX: the numerical weight-vector index to use in this run (default = 0; -1 = ignore weights)
- * See the documentation for more environment variables.
+ * RIVET_REF_PATH: list of paths to be searched for reference data files (defaults to use data path)
+ * RIVET_INFO_PATH: list of paths to be searched for analysis info files (defaults to use data path)
+ * RIVET_PLOT_PATH: list of paths to be searched for plot-style files (defaults to use data path)
+ * RIVET_ANALYSIS_PLUGINS: list of paths to be searched for data files (defaults to use data path)
+ * RIVET_RANDOM_SEED: force the random seed used by the detector smearing system
+ * RIVET_STRIP_HEPMC: reduce the complexity of HepMC events before analysis (experimental)
 """
 
 from __future__ import print_function
@@ -27,20 +32,21 @@ import os, sys
 ## Load the rivet module
 try:
     import rivet
-except:
+except Exception as e:
     ## If rivet loading failed, try to bootstrap the Python path!
-    try:
-        # TODO: Is this a good idea? Maybe just notify the user that their PYTHONPATH is wrong?
-        import commands
-        modname = sys.modules[__name__].__file__
-        binpath = os.path.dirname(modname)
-        rivetconfigpath = os.path.join(binpath, "rivet-config")
-        rivetpypath = commands.getoutput(rivetconfigpath + " --pythonpath")
-        sys.path.append(rivetpypath)
-        import rivet
-    except:
-        sys.stderr.write("The rivet Python module could not be loaded: is your PYTHONPATH set correctly?\n")
-        sys.exit(5)
+    # try:
+    #     # TODO: Is this a good idea? Maybe just notify the user that their PYTHONPATH is wrong?
+    #     import commands
+    #     modname = sys.modules[__name__].__file__
+    #     binpath = os.path.dirname(modname)
+    #     rivetconfigpath = os.path.join(binpath, "rivet-config")
+    #     rivetpypath = commands.getoutput(rivetconfigpath + " --pythonpath")
+    #     sys.path.append(rivetpypath)
+    #     import rivet
+    sys.stderr.write("The rivet Python module could not be loaded: are your PYTHONPATH and (DY)LD_LIBRARY_PATH set correctly?\n")
+    sys.stderr.write("Try running 'python -c \"import rivet\"' at the command line (or \"import rivet\" in a Python REPL)\n")
+    sys.stderr.write("Full error message:\n{}\n".format(e))
+    sys.exit(5)
 
 rivet.util.check_python_version()
 rivet.util.set_process_name("rivet")
@@ -78,8 +84,9 @@ anagroup.add_argument("--pwd", dest="ANALYSIS_PATH_PWD", action="store_true", de
 extragroup = parser.add_argument_group("Extra run settings")
 extragroup.add_argument("-o", "-H", "--histo-file", dest="HISTOFILE",
                         default="Rivet.yoda", help="specify the output histo file path (default = %(default)s)")
-extragroup.add_argument("-p", "--preload-file", dest="PRELOADFILE",
-                        default=None, help="specify and old yoda file to initialize (default = %(default)s)")
+extragroup.add_argument("-p", "--preload-file", "--preload-files", dest="PRELOADFILES", action="append", default=[],
+                        help="specify a pre-existing YODA file (or comma-separated list of files)"
+                        "to read in, for initializing the histograms (default = none)")
 extragroup.add_argument("--no-histo-file", dest="WRITE_DATA", action="store_false", default=True,
                         help="don't write out any histogram file at the end of the run (default = write)")
 extragroup.add_argument("-x", "--cross-section", dest="CROSS_SECTION",
@@ -91,6 +98,20 @@ extragroup.add_argument("-n", "--nevts", dest="MAXEVTNUM", type=int,
 extragroup.add_argument("--nskip", dest="EVTSKIPNUM", type=int,
                         default=0, metavar="NUM",
                         help="skip NUM events read from input before beginning processing")
+extragroup.add_argument("--skip-weights", "--skip-multiweights", dest="SKIP_WEIGHTS", action="store_true",
+                      default=False, help="only run on the nominal weight")
+extragroup.add_argument("--match-weights", dest="MATCH_WEIGHTS", default="",
+                        help="select weight variations matching this comma-separated list of weight names "
+                        "(supports regular expressions). Nominal weight cannot be skipped.")
+extragroup.add_argument("--unmatch-weights", dest="UNMATCH_WEIGHTS", default="",
+                        help="deselect weight variations matching this comma-separated list of weight names "
+                        "(supports regular expressions). Nominal weight cannot be skipped.")
+extragroup.add_argument("--nominal-weight", "--default-weight", dest="NOMINAL_WEIGHT", default="",
+                        help="specify the nominal weight name from the variations ")
+extragroup.add_argument("--weight-cap", dest="WEIGHT_CAP", type=float,
+                      default=None, help="set maximum abs(weight) to be used for histogram fills")
+extragroup.add_argument("--nlo-smearing", dest="NLO_SMEARING", type=float,
+                      default=0.0, help=" If larger than zero, smear histogram fillings to avoid that NLO counter events end up on the other side of a bin-boundary as compared to the corresponding real event in a fill. The fills will be smeared over the given fraction of the bin width.")
 extragroup.add_argument("--runname", dest="RUN_NAME", default=None, metavar="NAME",
                         help="give an optional run name, to be prepended as a 'top level directory' in histo paths")
 extragroup.add_argument("--ignore-beams", dest="IGNORE_BEAMS", action="store_true", default=False,
@@ -99,7 +120,7 @@ extragroup.add_argument("--ignore-beams", dest="IGNORE_BEAMS", action="store_tru
 extragroup.add_argument("-d", "--dump", "--histo-interval", dest="DUMP_PERIOD", type=int,
                         default=1000, metavar="NUM",
                         help="specify the number of events between histogram file updates, "
-                        "default = %default. Set to 0 to only write out at the end of the run. "
+                        "default = %(default)s. Set to 0 to only write out at the end of the run. "
                         "Note that intermediate histograms will be those from the analyze step "
                         "only, except for analyses explicitly declared Reentrant for which the "
                         "finalize function is executed first.")
@@ -183,13 +204,13 @@ def getAnalysesByKeyword(alist, kstring):
 
     for a in alist:
         kwds = set([i.lower() for i in rivet.AnalysisLoader.getAnalysis(a).keywords()])
-        if kwds.intersection(veto) and len(kwds.intersection(add)) == len(list(add)):
+        if kwds.isdisjoint(veto) and add.issubset(kwds):
             ret.append(a)
     return ret
 
 
 ## List of analyses
-all_analyses = rivet.AnalysisLoader.analysisNames()
+all_analyses = rivet.AnalysisLoader.analysisNames() #< excludes aliases
 if args.LIST_ANALYSES:
     ## Treat args as case-insensitive regexes if present
     regexes = None
@@ -214,9 +235,9 @@ if args.LIST_ANALYSES:
             msg.append('')
             if args.LOGLEVEL <= logging.INFO:
                 a = rivet.AnalysisLoader.getAnalysis(aname)
-                st = "" if a.status() == "VALIDATED" else ("[%s] " % a.status())
+                st = "" if "VALIDATED" in a.status() else "[UNVALIDATED]" #("[%s] " % a.status())
                 # detex will very likely introduce some non-ASCII chars from
-                # greek names in analysis titles.
+                # Greek names in analysis titles.
                 # The u"" prefix and explicit print encoding are necessary for
                 # py2 to handle this properly
                 msg[-1] = u"%s%s" % (st, a.summary())
@@ -227,8 +248,7 @@ if args.LIST_ANALYSES:
                         msg[-1] += u"  [ \int L = %s fb^{-1} ]" % a.luminosityfb()
     msg = rivet.util.detex(msg)
     retlist = '\n'.join([ u"%-25s   %s" % (a,m) for a,m in zip(names,msg) ])
-    if type(u'') is not str:
-        retlist = retlist.encode('utf-8')
+    #retlist = retlist.encode('utf-8')
     print(retlist)
     sys.exit(0)
 
@@ -273,17 +293,20 @@ if len(args.SHOW_ANALYSES) > 0:
         msg += name + "\n"
         msg += (len(name) * "=") + "\n\n"
         msg += rivet.util.detex(ana.summary()) + "\n\n"
-        msg += "Status: " + ana.status() + "\n\n"
+        msg += "Status: " + ana.status() + "\n"
+        msg += "URL: https://rivet.hepforge.org/analyses/{}.html".format(name) + "\n"
+        msg += "\n"
 
         # TODO: reduce to only show Inspire in v3
         if ana.inspireId():
             msg += "Inspire ID: " + ana.inspireId() + "\n"
-            msg += "Inspire URL: http://inspire-hep.net/record/" + ana.inspireId() + "\n"
-            msg += "HepData URL: http://hepdata.net/record/ins" + ana.inspireId() + "\n"
+            msg += "Inspire URL: https://inspirehep.net/literature/" + ana.inspireId() + "\n"
+            msg += "HepData URL: https://hepdata.net/record/ins" + ana.inspireId() + "\n"
         elif ana.spiresId():
             msg += "Spires ID: " + ana.spiresId() + "\n"
-            msg += "Inspire URL: http://inspire-hep.net/search?p=find+key+" + ana.spiresId() + "\n"
-            msg += "HepData URL: http://hepdata.cedar.ac.uk/view/irn" + ana.spiresId() + "\n"
+            msg += "Inspire URL: https://inspirehep.net/literature?q=" + ana.spiresId() + "\n"
+            msg += "HepData URL: https://hepdata.cedar.ac.uk/view/irn" + ana.spiresId() + "\n"
+
 
         if ana.year():
             msg += "Year of publication: " + ana.year() + "\n"
@@ -315,6 +338,20 @@ if len(args.SHOW_ANALYSES) > 0:
                     return "p+"
                 elif pid == -2212:
                     return "p-"
+                elif pid == 1000010020:
+                    return "d"
+                elif pid == 1000130270:
+                    return "Al"
+                elif pid == 1000290630:
+                    return "Cu"
+                elif pid == 1000541290:
+                    return "Xe"
+                elif pid == 1000791970:
+                    return "Au"
+                elif pid == 1000822080:
+                    return "Pb"
+                elif pid == 1000922380:
+                    return "U"
                 elif pid == 10000:
                     return "*"
                 else:
@@ -322,10 +359,10 @@ if len(args.SHOW_ANALYSES) > 0:
             beamstrs = []
             for bp in ana.requiredBeams():
                 beamstrs.append(pid_to_str(bp[0]) + " " + pid_to_str(bp[1]))
-            msg += "Beams:" + ", ".join(beamstrs) + "\n"
+            msg += "Beams: " + ", ".join(beamstrs) + "\n"
 
         if ana.requiredEnergies():
-            msg += "Beam energies:" + "; ".join(["(%0.1f, %0.1f) GeV\n" % (epair[0], epair[1]) for epair in ana.requiredEnergies()])
+            msg += "Beam energies: " + "; ".join(["(%0.1f, %0.1f) GeV\n" % (epair[0], epair[1]) for epair in ana.requiredEnergies()])
         else:
             msg += "Beam energies: ANY\n"
 
@@ -336,13 +373,13 @@ if len(args.SHOW_ANALYSES) > 0:
                 msg += twrap.fill(l) + "\n"
 
         if ana.luminosityfb():
-            msg+= "\nIntegrated data luminosity = %s inverse fb.\n"%ana.luminosityfb()
+            msg += "\nIntegrated data luminosity = %s inverse fb.\n"%ana.luminosityfb()
 
         if ana.keywords():
             msg += "\nAnalysis keywords:"
             for k in ana.keywords():
                 msg += " %s"%k
-            msg+= "\n\n"
+            msg += "\n\n"
 
         if ana.references():
             msg += "\n" + "References:\n"
@@ -367,8 +404,7 @@ if len(args.SHOW_ANALYSES) > 0:
             import tempfile, subprocess
             tffd, tfpath = tempfile.mkstemp(prefix="rivet-show.")
             msgsum = u"\n\n".join(msgs)
-            if type(u'') is not str:
-                msgsum = msgsum.encode('utf-8')
+            msgsum = msgsum.encode('utf-8')
             os.write(tffd, msgsum)
             if sys.stdout.isatty():
                 pager = subprocess.Popen(["less", "-FX", tfpath]) #, stdin=subprocess.PIPE)
@@ -481,9 +517,14 @@ def logNEvt(n, starttime, maxevtnum):
         nevtloglevel = logging.INFO
     else:
         nevtloglevel = logging.DEBUG
+
+    if logging.getLogger().getEffectiveLevel() > nevtloglevel:
+        return
+
     currenttime = datetime.datetime.now().replace(microsecond=0)
     elapsedtime = currenttime - starttime
-    logging.log(nevtloglevel, "Event %d (%s elapsed)" % (n, str(elapsedtime)))
+    msg = "Event {:d} ({} elapsed)".format(n, str(elapsedtime))
+
     # if maxevtnum is None:
     #     logging.log(nevtloglevel, "Event %d (%s elapsed)" % (n, str(elapsedtime)))
     # else:
@@ -492,8 +533,14 @@ def logNEvt(n, starttime, maxevtnum):
     #     logging.log(nevtloglevel, "Event %d (%d s elapsed / %d s left) -> ETA: %s" %
     #                 (n, elapsedtime, remainingtime, eta))
 
+    if sys.stdout.isatty() and nevtloglevel <= logging.INFO:
+        print(msg, end="\r")
+        sys.stdout.flush()
+    else:
+        logging.log(nevtloglevel, msg)
 
-## Do some checks on output histo file, before we stat the event loop
+
+## Do some checks on output histo file, before we start the event loop
 histo_parentdir = os.path.dirname(os.path.abspath(args.HISTOFILE))
 if not os.path.exists(histo_parentdir):
   logging.error('Parent path of output histogram file does not exist: %s\nExiting.' % histo_parentdir)
@@ -507,10 +554,18 @@ if not os.access(histo_parentdir,os.W_OK):
 RUNNAME = args.RUN_NAME or ""
 ah = rivet.AnalysisHandler(RUNNAME)
 ah.setIgnoreBeams(args.IGNORE_BEAMS)
+ah.skipMultiWeights(args.SKIP_WEIGHTS)
+ah.selectMultiWeights(args.MATCH_WEIGHTS)
+ah.deselectMultiWeights(args.UNMATCH_WEIGHTS)
+ah.setNominalWeightName(args.NOMINAL_WEIGHT)
+if args.WEIGHT_CAP is not None:
+    ah.setWeightCap(args.WEIGHT_CAP)
+
+ah.setNLOSmearing(args.NLO_SMEARING)
 
 for a in args.ANALYSES:
     ## Print warning message and exit if not a valid analysis name
-    if not rivet.stripOptions(a) in all_analyses:
+    if not rivet.stripOptions(a) in rivet.AnalysisLoader.allAnalysisNames():
         logging.warning("'%s' is not a known Rivet analysis! Do you need to set RIVET_ANALYSIS_PATH or use the --pwd switch?\n" % a)
         # TODO: lay out more neatly, or even try for a "did you mean XXXX?" heuristic?
         logging.warning("There are %d currently available analyses:\n" % len(all_analyses) + ", ".join(all_analyses))
@@ -518,8 +573,9 @@ for a in args.ANALYSES:
     logging.debug("Adding analysis '%s'" % a)
     ah.addAnalysis(a)
 
-if args.PRELOADFILE is not None:
-    ah.readData(args.PRELOADFILE)
+for plfarg in args.PRELOADFILES:
+    for plf in plfarg.split(","):
+        ah.readData(plf)
 
 if args.DUMP_PERIOD:
     ah.dump(args.HISTOFILE, args.DUMP_PERIOD)
@@ -591,7 +647,7 @@ except Exception as ex:
     sys.exit(3)
 
 ## Event loop
-evtnum = 0
+old_evtnum = 0
 for fileidx, hepmcfile in enumerate(HEPMCFILES):
     ## Apply a file-level weight derived from the filename
     hepmcfileweight = 1.0
@@ -611,23 +667,30 @@ for fileidx, hepmcfile in enumerate(HEPMCFILES):
             continue
 
     ## Announce new file
+    print()
     msg = "Reading events from '%s'" % hepmcfile
     if hepmcfileweight != 1.0:
         msg += " (file weight = %e)" % hepmcfileweight
     logging.info(msg)
 
     ## The event loop
-    while args.MAXEVTNUM is None or evtnum-args.EVTSKIPNUM < args.MAXEVTNUM:
-        evtnum += 1
+    while args.MAXEVTNUM is None or old_evtnum-args.EVTSKIPNUM < args.MAXEVTNUM:
+        evtnum = run.numEvents() # only updates when event number changes
 
         ## Optional event skipping
         if evtnum <= args.EVTSKIPNUM:
+            if evtnum != old_evtnum:
+              old_evtnum = evtnum
+              if evtnum % 1000 == 0:
+                  logging.info("Skipping event #%i" % evtnum)
             logging.debug("Skipping event #%i" % evtnum)
-            run.skipEvent();
+            run.readEvent();
             continue
 
         ## Only log the event number once we're actually processing
-        logNEvt(evtnum, starttime, args.MAXEVTNUM)
+        if evtnum != old_evtnum:
+          old_evtnum = evtnum
+          logNEvt(evtnum, starttime, args.MAXEVTNUM)
 
         ## Process this event
         processed_ok = run.processEvent()
@@ -657,18 +720,18 @@ for fileidx, hepmcfile in enumerate(HEPMCFILES):
             sys.exit(3)
 
 ## Print end-of-loop messages
+print("\n")
 loopendtime = datetime.datetime.now().replace(microsecond=0)
 logging.info("Finished event loop at %s" % str(loopendtime))
-logging.info("Cross-section = %e pb" % ah.crossSection())
-print()
-
+logging.info("Cross-section = %e pb" % ah.nominalCrossSection())
 
 ## Finalize and write out data file
 run.finalize()
 if args.WRITE_DATA:
     ah.writeData(args.HISTOFILE)
+
+## Print end-of-run messages
 print()
 endtime = datetime.datetime.now().replace(microsecond=0)
 logging.info("Rivet run completed at %s, time elapsed = %s" % (str(endtime), str(endtime-starttime)))
-print()
 logging.info("Histograms written to %s" % os.path.abspath(args.HISTOFILE))

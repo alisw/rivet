@@ -10,8 +10,10 @@
 namespace Rivet {
 /// Common projections for ATLAS trigger conditions and centrality.
 
-  namespace ATLAS {  
-/// Centrality projection for pPb collisions (one sided)
+  namespace ATLAS {
+
+
+    /// Centrality projection for pPb collisions (one sided)
 class SumET_PB_Centrality: public SingleValueProjection {
 
 public:
@@ -38,14 +40,15 @@ protected:
     }
     set(estimate);
   }
-  
+
   /// Compare projections
-  int compare(const Projection& p) const {
+  CmpState compare(const Projection& p) const {
     return mkNamedPCmp(p, "SumET_PB_Centrality");
   }
 
 };
-    
+
+
 /// Centrality projection for PbPb collisions (two sided)
 class SumET_PBPB_Centrality: public SingleValueProjection {
 
@@ -73,14 +76,14 @@ protected:
     }
     set(estimate);
   }
-  
+
   /// Compare projections
-  int compare(const Projection& p) const {
+  CmpState compare(const Projection& p) const {
     return mkNamedPCmp(p, "SumET_PBPB_Centrality");
   }
 
 };
-    
+
 /// ATLAS min bias trigger conditions.
 class MinBiasTrigger: public TriggerProjection {
 
@@ -106,14 +109,15 @@ protected:
 	   applyProjection<FinalState>(event,"MBB").particles().empty() )
         fail();
   }
-  
+
   /// Compare projections
-  int compare(const Projection& p) const {
+  CmpState compare(const Projection& p) const {
     return mkNamedPCmp(p, "MBF") || mkNamedPCmp(p, "MBB");
   }
 
 };
-    
+
+
 }
 }
 

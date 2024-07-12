@@ -1,0 +1,87 @@
+{
+    "763352": [
+        "Measurement of the Tau Lepton Polarisation at LEP2", 
+        "DELPHI", 
+        "10.1016/j.physletb.2007.10.022", 
+        "1061356", 
+        "0710.1368", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2007-010"
+        ]
+    ], 
+    "773136": [
+        "Higgs boson searches in CP-conserving and CP-violating MSSM scenarios with the DELPHI detector", 
+        "DELPHI", 
+        "10.1140/epjc/s10052-008-0647-x", 
+        "1080349", 
+        "0801.3586", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2007-029", 
+            "DAPNIA-07-150"
+        ]
+    ], 
+    "775920": [
+        "Observation of the Muon Inner Bremsstrahlung at LEP1", 
+        "DELPHI", 
+        "10.1140/epjc/s10052-008-0779-z", 
+        "1158111", 
+        "0901.4488", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2007-012"
+        ]
+    ], 
+    "777039": [
+        "Study of W boson polarisations and Triple Gauge boson Couplings in the reaction e+e- ---> W+W- at LEP 2", 
+        "DELPHI", 
+        "10.1140/epjc/s10052-008-0528-3", 
+        "1079820", 
+        "0801.1235", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2007-036"
+        ]
+    ], 
+    "781550": [
+        "Measurement of the Mass and Width of the $W$ Boson in $e^{+} e^{-}$ Collisions at $\\sqrt{s}$ = 161-GeV - 209-GeV", 
+        "DELPHI", 
+        "10.1140/epjc/s10052-008-0585-7", 
+        "1094865", 
+        "0803.2534", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2007-026"
+        ]
+    ], 
+    "784219": [
+        "Study of b-quark mass effects in multijet topologies with the DELPHI detector at LEP", 
+        "DELPHI", 
+        "10.1140/epjc/s10052-008-0631-5", 
+        "1101418", 
+        "0804.3883", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2007-011"
+        ]
+    ], 
+    "806241": [
+        "Di-jet production in gamma gamma collisions at LEP2", 
+        "DELPHI", 
+        "10.1140/epjc/s10052-008-0777-1", 
+        "1158121", 
+        "0901.4500", 
+        "ins806241", 
+        null, 
+        [
+            "CERN-PH-EP-2008-012"
+        ]
+    ]
+}

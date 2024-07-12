@@ -6,6 +6,7 @@ Collider: LHC
 SpiresID: 9279938
 InspireID: 954992
 Status: VALIDATED
+Reentrant: true
 Authors:
  - David d'Enterria <dde@cern.ch>
  - Jonathan Hollar <jjhollar@mail.cern.ch>
@@ -42,3 +43,7 @@ BibTeX: '@article{Chatrchyan:2011ci,
       primaryClass   = "hep-ex",
       reportNumber   = "CERN-PH-EP-2011-187, CMS-FWD-10-005",
       SLACcitation   = "%%CITATION = ARXIV:1111.5536;%%",}'
+
+ReleaseTests:
+ - $A LHC-GammaGamma-7
+

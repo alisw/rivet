@@ -1,0 +1,37 @@
+Name: BELLE_2019_I1693396
+Year: 2019
+Summary: Decay kinematics of semileptonic $B^0\to D^{*-}$ decays.
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1693396
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durhamm.ac.uk>
+References:
+ - Phys.Rev.D 100 (2019) 5, 052007
+RunInfo: Any process producing B0
+Description:
+  'Measurement of recoil w, helicity and decay plane angles of semileptonc $\bar{B}^0$ to $D^{*+}$ decays. N.B. the data is not unfolded but the efficiencies and response matrices used in the paper are applied to the results of the simulation.'
+ValidationInfo:
+  'Herwig 7 events using EvtGen for decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle:2018ezy
+BibTeX: '@article{Belle:2018ezy,
+    author = "Waheed, E. and others",
+    collaboration = "Belle",
+    title = "{Measurement of the CKM matrix element $|V_{cb}|$ from $B^0\to D^{*-}\ell^ {+} \nu_\ell$ at Belle}",
+    eprint = "1809.03290",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevD.100.052007",
+    journal = "Phys. Rev. D",
+    volume = "100",
+    number = "5",
+    pages = "052007",
+    year = "2019",
+    note = "[Erratum: Phys.Rev.D 103, 079901 (2021)]"
+}
+'

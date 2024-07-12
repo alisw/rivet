@@ -1,0 +1,340 @@
+{
+    "421546": [
+        "Studies of QCD in e+ e- ---> hadrons at E(cm) = 130-GeV and 136-GeV", 
+        "ALEPH", 
+        "10.1007/s002880050330", 
+        "300418", 
+        null, 
+        "ins421546", 
+        null, 
+        [
+            "CERN-PPE-96-043", 
+            "CERN-PPE-96-43", 
+            "FSU-SCRI-97-29"
+        ]
+    ], 
+    "421548": [
+        "Transverse momentum correlations in hadronic Z decays", 
+        "ALEPH", 
+        "10.1007/s002880050331", 
+        "307582", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-085"
+        ]
+    ], 
+    "421561": [
+        "Production of orbitally excited charm mesons in semileptonic B decays", 
+        "ALEPH", 
+        "10.1007/s002880050351", 
+        "307858", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-092", 
+            "CERN-PPE-96-92", 
+            "FSU-SCRI-97-49"
+        ]
+    ], 
+    "421984": [
+        "A Study of tau decays involving eta and omega mesons", 
+        "ALEPH", 
+        "10.1007/s002880050387", 
+        "309219", 
+        null, 
+        "ins421984", 
+        null, 
+        [
+            "CERN-PPE-96-103", 
+            "FSU-SCRI-97-50"
+        ]
+    ], 
+    "421985": [
+        "Improved measurement of the B(d)0 - anti-B(d)0 oscillation frequency", 
+        "ALEPH", 
+        "10.1007/s002880050483", 
+        "309218", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-102", 
+            "FSU-SCRI-97-99"
+        ]
+    ], 
+    "425943": [
+        "Measurements of |V(cb)|, form-factors and branching fractions in the decays anti-B0 ---> D*+ lepton- anti-lepton-neutrino and anti-B0 ---> D+ lepton- anti-lepton-neutrino", 
+        "ALEPH", 
+        "10.1016/S0370-2693(97)00071-3", 
+        "314389", 
+        null, 
+        "ins425943", 
+        null, 
+        [
+            "CERN-PPE-96-150"
+        ]
+    ], 
+    "427131": [
+        "Inclusive production of neutral pions in hadronic Z decays", 
+        "ALEPH", 
+        "10.1007/s002880050407", 
+        "316274", 
+        null, 
+        "ins427131", 
+        null, 
+        [
+            "CERN-PPE-96-168", 
+            "FSU-SCRI-97-74"
+        ]
+    ], 
+    "439797": [
+        "The Topology dependence of charged particle multiplicities in three jet events", 
+        "ALEPH", 
+        "10.1007/s002880050543", 
+        "318825", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-003", 
+            "CERN-PPE-97-03", 
+            "CERN-PPE-97-3"
+        ]
+    ], 
+    "440051": [
+        "A Measurement of the QCD color factors and a limit on the light gluino", 
+        "ALEPH", 
+        "10.1007/s002880050522", 
+        "319350", 
+        null, 
+        "ins440051", 
+        null, 
+        [
+            "CERN-PPE-97-002", 
+            "CERN-PPE-97-02", 
+            "CERN-PPE-97-2", 
+            "FSU-SCRI-97-126"
+        ]
+    ], 
+    "440218": [
+        "Study of the muon pair production at center-of-mass energies from 20-GeV to 136-GeV with the ALEPH detector", 
+        "ALEPH", 
+        "10.1016/S0370-2693(97)00353-5", 
+        "319827", 
+        null, 
+        "ins440218", 
+        null, 
+        [
+            "CERN-PPE-97-010", 
+            "CERN-PPE-97-10", 
+            "FSU-SCRI-97-92"
+        ]
+    ], 
+    "440588": [
+        "Measurement of the spectral functions of vector current hadronic tau decays", 
+        "ALEPH", 
+        "10.1007/s002880050523", 
+        "320868", 
+        null, 
+        "ins440588", 
+        null, 
+        [
+            "CERN-PPE-97-013", 
+            "CERN-PPE-97-13"
+        ]
+    ], 
+    "440589": [
+        "Measurement of the tau lepton lifetime with the three-dimensional impact parameter method", 
+        "ALEPH", 
+        "10.1007/s002880050401", 
+        "320869", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-016", 
+            "CERN-PPE-97-16", 
+            "FSU-SCRI-97-76"
+        ]
+    ], 
+    "440724": [
+        "A Measurement of R(b) using a lifetime mass tag", 
+        "ALEPH", 
+        "10.1016/S0370-2693(97)00406-1", 
+        "321134", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-017", 
+            "CERN-PPE-97-17", 
+            "FSU-SCRI-97-77"
+        ]
+    ], 
+    "440725": [
+        "A Measurement of R(b) using mutually exclusive tags", 
+        "ALEPH", 
+        "10.1016/S0370-2693(97)00407-3", 
+        "321135", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-018", 
+            "CERN-PPE-97-18", 
+            "FSU-SCRI-97-78"
+        ]
+    ], 
+    "441187": [
+        "Measurement of the branching fraction for D0 ---> K- pi+", 
+        "ALEPH", 
+        "10.1016/S0370-2693(97)00585-6", 
+        "322315", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-024", 
+            "CERN-PPE-97-24"
+        ]
+    ], 
+    "441188": [
+        "Measurement of the $W$ mass in $e^{+} e^{-}$ collisions at production threshold", 
+        "ALEPH", 
+        "10.1016/S0370-2693(97)00460-7", 
+        "322316", 
+        null, 
+        "ins441188", 
+        null, 
+        [
+            "CERN-PPE-97-025", 
+            "CERN-PPE-97-25"
+        ]
+    ], 
+    "441373": [
+        "Search for the $B_c$ meson in hadronic $Z$ decays", 
+        "ALEPH", 
+        "10.1016/S0370-2693(97)00461-9", 
+        "322714", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-026", 
+            "CERN-PPE-97-26", 
+            "FSU-SCRI-97-79"
+        ]
+    ], 
+    "443356": [
+        "Measurement of the transverse spin correlations in the decay Z ---> tau+ tau-", 
+        "ALEPH", 
+        "10.1016/S0370-2693(97)00664-3", 
+        "326598", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-047", 
+            "CERN-PPE-97-47"
+        ]
+    ], 
+    "443920": [
+        "Search for sleptons in e+ e- collisions at center-of-mass energies of 161-GeV and 172-GeV", 
+        "ALEPH", 
+        "10.1016/S0370-2693(97)00892-7", 
+        "327212", 
+        "hep-ex/9706006", 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-056", 
+            "CERN-PPE-97-56", 
+            "FSU-SCRI-97-125"
+        ]
+    ], 
+    "444313": [
+        "Search for pair production of longlived heavy charged particles in e+ e- annihilation", 
+        "ALEPH", 
+        "10.1016/S0370-2693(97)00715-6", 
+        "325273", 
+        "hep-ex/9706013", 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-041", 
+            "CERN-PPE-97-41"
+        ]
+    ], 
+    "444981": [
+        "Search for the Standard Model Higgs boson in e+ e- collisions at s**(1/2) = 161-GeV, 170-GeV and 172-GeV", 
+        "ALEPH", 
+        "10.1016/S0370-2693(97)01110-6", 
+        "328732", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-070", 
+            "CERN-PPE-97-70", 
+            "FSU-SCRI-98-09"
+        ]
+    ], 
+    "445331": [
+        "Search for the neutral Higgs bosons of the MSSM in e+ e- collisions at s**(1/2) from 130-GeV to 172-GeV", 
+        "ALEPH", 
+        "10.1016/S0370-2693(97)01112-X", 
+        "329544", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-071", 
+            "CERN-PPE-97-71", 
+            "FSU-SCRI-98-10"
+        ]
+    ], 
+    "446719": [
+        "Searches for scalar top and scalar bottom quarks at LEP-2", 
+        "ALEPH", 
+        "10.1016/S0370-2693(97)01178-7", 
+        "331194", 
+        "hep-ex/9708013", 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-084", 
+            "CERN-PPE-97-84", 
+            "FSU-SCRI-98-11"
+        ]
+    ], 
+    "446939": [
+        "Updated measurement of the tau lepton lifetime", 
+        "ALEPH", 
+        "10.1016/S0370-2693(97)01116-7", 
+        "331609", 
+        "hep-ex/9710026", 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-090", 
+            "CERN-PPE-97-90", 
+            "FSU-SCRI-98-12"
+        ]
+    ], 
+    "446940": [
+        "Measurement of the W pair cross-section in e+ e- collisions at 172-GeV", 
+        "ALEPH", 
+        "10.1016/S0370-2693(97)01266-5", 
+        "331610", 
+        null, 
+        "ins446940", 
+        null, 
+        [
+            "CERN-PPE-97-102", 
+            "FSU-SCRI-98-13"
+        ]
+    ]
+}

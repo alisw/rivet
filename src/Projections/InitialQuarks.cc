@@ -1,25 +1,26 @@
 // -*- C++ -*-
+#define I_KNOW_THE_INITIAL_QUARKS_PROJECTION_IS_DODGY_BUT_NEED_TO_USE_IT
 #include "Rivet/Projections/InitialQuarks.hh"
 
 namespace Rivet {
 
 
-  int InitialQuarks::compare(const Projection& p) const {
-    return EQUIVALENT;
+  CmpState InitialQuarks::compare(const Projection& p) const {
+    return CmpState::EQ;
   }
 
 
   void InitialQuarks::project(const Event& e) {
     _theParticles.clear();
 
-    for (const GenParticle* p : Rivet::particles(e.genEvent())) {
-      const GenVertex* pv = p->production_vertex();
-      const GenVertex* dv = p->end_vertex();
+    for (ConstGenParticlePtr p : HepMCUtils::particles(e.genEvent())) {
+      ConstGenVertexPtr pv = p->production_vertex();
+      ConstGenVertexPtr dv = p->end_vertex();
       const PdgId pid = abs(p->pdg_id());
       bool passed = inRange((long)pid, 1, 6);
       if (passed) {
         if (pv != 0) {
-          for (const GenParticle* pp : particles_in(pv)) {
+          for (ConstGenParticlePtr pp : HepMCUtils::particles(pv, Relatives::PARENTS)){
             // Only accept if parent is electron or Z0
             const PdgId pid = abs(pp->pdg_id());
             passed = (pid == PID::ELECTRON || abs(pp->pdg_id()) == PID::ZBOSON || abs(pp->pdg_id()) == PID::GAMMA);
@@ -37,17 +38,17 @@ namespace Rivet {
                   << "ID = " << p->pdg_id() << ", status = " << st << ", pT = " << pT
                   << ", eta = " << eta << ": result = " << passed);
         if (pv != 0) {
-          for (const GenParticle* pp : particles_in(pv)) {
+          for (ConstGenParticlePtr pp : HepMCUtils::particles(pv, Relatives::PARENTS)) {
             MSG_TRACE(std::boolalpha << " parent ID = " << pp->pdg_id());
           }
         }
         if (dv != 0) {
-          for (const GenParticle* pp : particles_out(dv)) {
+          for (ConstGenParticlePtr pp : HepMCUtils::particles(dv, Relatives::CHILDREN)) {
             MSG_TRACE(std::boolalpha << " child ID  = " << pp->pdg_id());
           }
         }
       }
-      if (passed) _theParticles.push_back(Particle(*p));
+      if (passed) _theParticles.push_back(Particle(p));
     }
     MSG_DEBUG("Number of initial quarks = " << _theParticles.size());
     if (!_theParticles.empty()) {

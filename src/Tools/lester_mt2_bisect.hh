@@ -256,7 +256,7 @@ bool __private_ellipsesAreDisjoint(const double coeffLamPow3, const double coeff
           ( (a >= 0 && thing1 > 0 && 3.0*a*c + b*a*a - 4.0*b*b< 0 && thing2 > 0) ||
                                  (a <  0 && thing1 > 0                                 && thing2 > 0))
 
-          ) << std::endl;
+          ) << '\n';
   }
 #endif
 
@@ -287,8 +287,6 @@ bool __private_ellipsesAreDisjoint(const double coeffLamPow3, const double coeff
 #ifndef ASYMM_MT2_BISECT_H
 #define ASYMM_MT2_BISECT_H
 
-#include <iostream>
-#include <iomanip>
 #include <cmath>
 #include <cassert>
 
@@ -320,33 +318,33 @@ class asymm_mt2_lester_bisect {
     return sqrt(mT2_Sq);
   }
 
-  static void disableCopyrightMessage(const bool printIfFirst=false) {
-    static bool first = true;
-    if (first && printIfFirst) {
-    std::cout
-      << "\n\n"
-      << "#=========================================================\n"
-      << "# To disable this message, place a call to \n"
-      << "# \n"
-      << "#     asymm_mt2_lester_bisect::disableCopyrightMessage();\n"
-      << "# \n"
-      << "# somewhere before you begin to calculate your MT2 values.\n"
-      << "#=========================================================\n"
-      << "# You are calculating symmetric or asymmetric MT2 using\n"
-      << "# the implementation defined in:\n"
-      << "# \n"
-      << "#     http://arxiv.org/abs/1411.4312\n"
-      << "# \n"
-      << "# Please cite the paper above if you use the MT2 values\n"
-      << "# for a scholarly purpose. For the variable MT2 itself,\n"
-      << "# please also cite:\n"
-      << "# \n"
-      << "#     http://arxiv.org/abs/hep-ph/9906349\n"
-      << "#=========================================================\n"
-      << "\n\n" << std::flush;
-    }
-    first = false;
-  }
+  // static void disableCopyrightMessage(const bool printIfFirst=false) {
+  //   static bool first = true;
+  //   if (first && printIfFirst) {
+  //   std::cout
+  //     << "\n\n"
+  //     << "#=========================================================\n"
+  //     << "# To disable this message, place a call to \n"
+  //     << "# \n"
+  //     << "#     asymm_mt2_lester_bisect::disableCopyrightMessage();\n"
+  //     << "# \n"
+  //     << "# somewhere before you begin to calculate your MT2 values.\n"
+  //     << "#=========================================================\n"
+  //     << "# You are calculating symmetric or asymmetric MT2 using\n"
+  //     << "# the implementation defined in:\n"
+  //     << "# \n"
+  //     << "#     http://arxiv.org/abs/1411.4312\n"
+  //     << "# \n"
+  //     << "# Please cite the paper above if you use the MT2 values\n"
+  //     << "# for a scholarly purpose. For the variable MT2 itself,\n"
+  //     << "# please also cite:\n"
+  //     << "# \n"
+  //     << "#     http://arxiv.org/abs/hep-ph/9906349\n"
+  //     << "#=========================================================\n"
+  //     << "\n\n" << std::flush;
+  //   }
+  //   first = false;
+  // }
 
   static double get_mT2_Sq( // returns square of asymmetric mT2 (which is >=0), or returns a negative number (such as MT2_ERROR) in the case of an error.
     const double mVis1, const double pxVis1, const double pyVis1,
@@ -358,7 +356,7 @@ class asymm_mt2_lester_bisect {
       ) {
 
 
-    disableCopyrightMessage(true); // By supplying an argument to disable, we actually ask for the message to be printed, if printing is not already disabled.   This counterintuitive function naming is to avoid the need to introduce static variable initialisations ....
+    //disableCopyrightMessage(true); // By supplying an argument to disable, we actually ask for the message to be printed, if printing is not already disabled.   This counterintuitive function naming is to avoid the need to introduce static variable initialisations ....
 
     const double m1Min = mVis1+mInvis1; // when parent has this mass, ellipse 1 has smallest physical size
     const double m2Min = mVis2+mInvis2; // when parent has this mass, ellipse 2 has smallest physical size
@@ -432,7 +430,7 @@ class asymm_mt2_lester_bisect {
       }
 
       if (attempts>=maxAttempts) {
-        std::cerr << "MT2 algorithm failed to find upper bound to MT2" << std::endl;
+        //std::cerr << "MT2 algorithm failed to find upper bound to MT2\n";
         return MT2_ERROR;
       }
 
@@ -457,7 +455,7 @@ class asymm_mt2_lester_bisect {
       if (trialM<=mLower || trialM>=mUpper) {
         // We reached a numerical precision limit:  the interval can no longer be bisected!
 #ifdef LESTER_DBG
-        std::cout << " MACHINE_PREC " << std::setprecision(10) << mLower << " " << trialM << " " << mUpper << " " << mUpper-mLower << " " << desiredPrecisionOnMT2 << std::endl;
+        std::cout << " MACHINE_PREC " << std::setprecision(10) << mLower << " " << trialM << " " << mUpper << " " << mUpper-mLower << " " << desiredPrecisionOnMT2 << '\n';
 #endif
         return trialM*trialM;
       }
@@ -482,7 +480,7 @@ class asymm_mt2_lester_bisect {
       } catch (...) {
         // The test for ellipses being disjoint failed ... this means the ellipses became degenerate, which can only happen right at the bottom of the MT2 search range (subject to numerical precision).  So:
 #ifdef LESTER_DBG
-        std::cout << " THROW " << std::endl;
+        std::cout << " THROW \n";
 #endif
         return mLower*mLower;
       }
@@ -491,7 +489,7 @@ class asymm_mt2_lester_bisect {
     const double mAns = (mLower+mUpper)/2.0;
 
 #ifdef LESTER_DBG
-    std::cout << " USER_PREC " << std::endl;
+    std::cout << " USER_PREC \n";
 #endif
     return mAns*mAns;
   };
@@ -533,11 +531,11 @@ class asymm_mt2_lester_bisect {
   }
 };
 
-void myversion(){
+// void myversion(){
 
-  std::cout << "Version is : 2014_11_13" << std::endl;
+//   std::cout << "Version is : 2014_11_13\n";
 
-}
+// }
 
 double MT(double px1, double px2, double py1, double py2, double m1 , double m2){
   double E1 = sqrt(px1*px1+py1*py1+m1*m1);

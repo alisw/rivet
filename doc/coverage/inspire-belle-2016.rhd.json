@@ -1,0 +1,289 @@
+{
+    "1283183": [
+        "Measurement of the lepton forward-backward asymmetry in $B \\rightarrow X_s \\ell^+ \\ell^-$ decays with a sum of exclusive modes", 
+        "Belle", 
+        "10.1103/PhysRevD.93.059901", 
+        null, 
+        "1402.7134", 
+        "ins1283183", 
+        null, 
+        [
+            "BELLE-PREPRINT-2014-1", 
+            "KEK-PREPRINT-2013-60"
+        ]
+    ], 
+    "1336624": [
+        "Measurements of the $\\Upsilon$(10860) and $\\Upsilon$(11020) resonances via $\\sigma(e^+e^-\\to \\Upsilon(nS)\\pi^+ \\pi^-)$", 
+        "Belle", 
+        "10.1103/PhysRevD.93.011101", 
+        null, 
+        "1501.01137", 
+        null, 
+        null, 
+        []
+    ], 
+    "1389855": [
+        "Energy scan of the $e^+e^- \\to h_b(nP)\\pi^+\\pi^-$ $(n=1,2)$ cross sections and evidence for $\\Upsilon(11020)$ decays into charged bottomonium-like states", 
+        "Belle", 
+        "10.1103/PhysRevLett.117.142001", 
+        "2047225", 
+        "1508.06562", 
+        "ins1389855", 
+        null, 
+        [
+            "BELLE-CONF-1503"
+        ]
+    ], 
+    "1390112": [
+        "Study of $\\pi^0$ pair production in single-tag two-photon collisions", 
+        "Belle", 
+        "10.1103/PhysRevD.93.032003", 
+        null, 
+        "1508.06757", 
+        "ins1390112", 
+        null, 
+        [
+            "BELLE-PREPRINT-2015-15", 
+            "KEK-PREPRINT-2015-24"
+        ]
+    ], 
+    "1391645": [
+        "First model-independent Dalitz analysis of $B^0 \\to DK^{*0}$, $D\\to K_S^0\\pi^+\\pi^-$ decay", 
+        "Belle", 
+        "10.1093/ptep/ptw030", 
+        null, 
+        "1509.01098", 
+        null, 
+        null, 
+        []
+    ], 
+    "1394389": [
+        "Search for $B^0 \\to \\pi^- \\tau^+ \\nu_\\tau$ with hadronic tagging at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.93.032007", 
+        null, 
+        "1509.06521", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2015-23"
+        ]
+    ], 
+    "1395100": [
+        "Measurement of $D^0 \u2013 \\bar {D^0}$ mixing and search for CP violation in $D^0 \\to K^+ K^\u2212, \\pi^+ \\pi^\u2212$ decays with the full Belle data set", 
+        "Belle", 
+        "10.1016/j.physletb.2015.12.025", 
+        null, 
+        "1509.08266", 
+        null, 
+        null, 
+        []
+    ], 
+    "1396144": [
+        "Study of $\\mathbf{B^{0}\\rightarrow\\rho^{+}\\rho^{-}}$ decays and implications for the CKM angle $\\mathbf{\\phi_2}$", 
+        "Belle", 
+        "10.1103/PhysRevD.93.032010", 
+        null, 
+        "1510.01245", 
+        null, 
+        null, 
+        []
+    ], 
+    "1397632": [
+        "Measurement of the decay $B\\to D\\ell\\nu_\\ell$ in fully reconstructed events and determination of the Cabibbo-Kobayashi-Maskawa matrix element $|V_{cb}|$", 
+        "Belle", 
+        "10.1103/PhysRevD.93.032006", 
+        null, 
+        "1510.03657", 
+        "ins1397632", 
+        null, 
+        [
+            "BELLE-PREPRINT-2015-16", 
+            "KEK-PREPRINT-2015-43"
+        ]
+    ], 
+    "1408515": [
+        "Observation of the decay $B_s^0\\rightarrow K^0\\overline{K}^0$", 
+        "Belle", 
+        "10.1103/PhysRevLett.116.161801", 
+        null, 
+        "1512.02145", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2015-19", 
+            "KEK-PREPRINT-2015-53", 
+            "UNIVERSITY-OF --CINCINNATI-PREPRINT-UCHEP-15-07"
+        ]
+    ], 
+    "1408873": [
+        "Inclusive and exclusive measurements of $B$ decays to $\\chi_{c1}$ and $\\chi_{c2}$ at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.93.052016", 
+        null, 
+        "1512.02672", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2015-21", 
+            "KEK-PREPRINT-2015-56-(BELLE-COLLABORATION)"
+        ]
+    ], 
+    "1408879": [
+        "Search for the rare decay $D^0\\to\\gamma\\gamma$ at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.93.051102", 
+        null, 
+        "1512.02992", 
+        null, 
+        null, 
+        []
+    ], 
+    "1411075": [
+        "First observation of the decay B$^0\\to \\psi$(2S)$\\pi^0$", 
+        "Belle", 
+        "10.1103/PhysRevD.93.031101", 
+        null, 
+        "1512.06895", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-15-20", 
+            "KEK-PREPRINT-15-54"
+        ]
+    ], 
+    "1411218": [
+        "First Observation of Doubly Cabibbo-Suppressed Decay of a Charmed Baryon: $\\Lambda^{+}_{c} \\rightarrow p K^{+} \\pi^{-}$", 
+        "Belle", 
+        "10.1103/PhysRevLett.117.011801", 
+        null, 
+        "1512.07366", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2015-22", 
+            "KEK-PREPRINT-2015-62", 
+            "BELLE-2015-22", 
+            "KEK-2015-62"
+        ]
+    ], 
+    "1411223": [
+        "Observation of Zb(10610) and Zb(10650) Decaying to B Mesons", 
+        "Belle", 
+        "10.1103/PhysRevLett.116.212001", 
+        null, 
+        "1512.07419", 
+        null, 
+        null, 
+        []
+    ], 
+    "1430903": [
+        "Search for the decay B0\u2192\u03d5\u03b3", 
+        "Belle", 
+        "10.1103/PhysRevD.93.111101", 
+        null, 
+        "1603.06546", 
+        null, 
+        null, 
+        [
+            "UCHEP-16-01"
+        ]
+    ], 
+    "1444981": [
+        "First observation of $\\gamma \\gamma \\to p \\bar{p} K^+ K^-$ and search for exotic baryons in $pK$ systems", 
+        "Belle", 
+        "10.1103/PhysRevD.93.112017", 
+        null, 
+        "1604.02525", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2016-02", 
+            "KEK-PREPRINT-2016-1"
+        ]
+    ], 
+    "1454405": [
+        "Search for $XYZ$ states in $\\Upsilon(1S)$ inclusive decays", 
+        "Belle", 
+        "10.1103/PhysRevD.93.112013", 
+        null, 
+        "1605.00990", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2016-04", 
+            "KEK-PREPRINT-2016-3", 
+            "BELLE-2016-04", 
+            "KEK-2016-3"
+        ]
+    ], 
+    "1459050": [
+        "Search for a massive invisible particle $X^0$ in $B^{+}\\to e^{+}X^{0}$ and $B^{+}\\to \\mu^{+}X^{0}$ decays", 
+        "Belle", 
+        "10.1103/PhysRevD.94.012003", 
+        null, 
+        "1605.04430", 
+        "ins1459050", 
+        null, 
+        [
+            "BELLE-PREPRINT-2016-03", 
+            "KEK-PREPRINT-2016-2"
+        ]
+    ], 
+    "1466295": [
+        "Studies of charmed strange baryons in the $\\Lambda$D final state at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.94.032002", 
+        null, 
+        "1605.09103", 
+        null, 
+        null, 
+        []
+    ], 
+    "1477208": [
+        "Measurement of the CKM angle $\\varphi_1$ in $B^0\\to\\bar{D}{}^{(*)0}h^0$, $\\bar{D}{}^0\\to K_S^0\\pi^+\\pi^-$ decays with time-dependent binned Dalitz plot analysis", 
+        "Belle", 
+        "10.1103/PhysRevD.94.052004", 
+        null, 
+        "1607.05813", 
+        null, 
+        null, 
+        []
+    ], 
+    "1477810": [
+        "Study of Excited $\\Xi_c$ States Decaying into $\\Xi_c^0$ and $\\Xi_c^+$ Baryons", 
+        "Belle", 
+        "10.1103/PhysRevD.94.052011", 
+        null, 
+        "1607.07123", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2016-07", 
+            "KEK-PREPRINT-2016-7"
+        ]
+    ], 
+    "1478188": [
+        "Measurement of the branching ratio of $\\bar{B}^0 \\rightarrow D^{*+} \\tau^- \\bar{\\nu}_{\\tau}$ relative to $\\bar{B}^0 \\rightarrow D^{*+} \\ell^- \\bar{\\nu}_{\\ell}$ decays with a semileptonic tagging method", 
+        "Belle", 
+        "10.1103/PhysRevD.94.072007", 
+        null, 
+        "1607.07923", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2016-8", 
+            "BELLE-PREPRINT-2016-8"
+        ]
+    ], 
+    "1487285": [
+        "Search for a dark vector gauge boson decaying to $\\pi^+ \\pi^-$ using $\\eta \\rightarrow \\pi^+\\pi^- \\gamma$ decays", 
+        "Belle", 
+        "10.1103/PhysRevD.94.092006", 
+        null, 
+        "1609.05599", 
+        null, 
+        null, 
+        []
+    ]
+}

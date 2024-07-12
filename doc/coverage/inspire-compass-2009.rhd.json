@@ -1,0 +1,49 @@
+{
+    "779473": [
+        "Collins and Sivers asymmetries for pions and kaons in muon-deuteron DIS", 
+        "COMPASS", 
+        "10.1016/j.physletb.2009.01.060", 
+        "1089356", 
+        "0802.2160", 
+        "ins779473", 
+        null, 
+        [
+            "IRFU-08-15", 
+            "CERN-PH-EP-2008-002"
+        ]
+    ], 
+    "818414": [
+        "Gluon polarisation in the nucleon and longitudinal double spin asymmetries from open charm muoproduction", 
+        "COMPASS", 
+        "10.1016/j.physletb.2009.04.059", 
+        "1173518", 
+        "0904.3209", 
+        null, 
+        null, 
+        []
+    ], 
+    "820721": [
+        "Flavour Separation of Helicity Distributions from Deep Inelastic Muon-Deuteron Scattering", 
+        "COMPASS", 
+        "10.1016/j.physletb.2009.08.065", 
+        "1182104", 
+        "0905.2828", 
+        "ins820721", 
+        null, 
+        [
+            "CERN-PH-EP-2009-008"
+        ]
+    ], 
+    "824774": [
+        "Measurement of the Longitudinal Spin Transfer to Lambda and Anti-Lambda Hyperons in Polarised Muon DIS", 
+        "COMPASS", 
+        "10.1140/epjc/s10052-009-1143-7", 
+        "1187754", 
+        "0907.0388", 
+        "ins824774", 
+        null, 
+        [
+            "CERN-PH-EP-2009-011"
+        ]
+    ]
+}

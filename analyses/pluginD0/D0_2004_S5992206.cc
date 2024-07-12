@@ -8,54 +8,43 @@
 namespace Rivet {
 
 
-  /* @brief D0 Run II angular correlations in di-jet events
-   * @author Lars Sonnenschein
-   *
-   * Measurement of angular correlations in di-jet events.
-   *
-   * @par Run conditions
-   *
-   * @arg \f$ \sqrt{s} = \f$ 1960 GeV
-   * @arg Run with generic QCD events.
-   * @arg Several \f$ p_\perp^\text{min} \f$ cutoffs are probably required to fill the histograms:
-   *   @arg \f$ p_\perp^\text{min} = \f$ 50, 75, 100, 150 GeV for the four pT ranges respecively
-   *
-   */
+  /// @brief D0 Run II angular correlations in di-jet events
+  /// @author Lars Sonnenschein
+  ///
+  /// Measurement of angular correlations in di-jet events.
+  ///
+  /// @par Run conditions
+  /// @arg \f$ \sqrt{s} = \f$ 1960 GeV
+  /// @arg Run with generic QCD events.
+  /// @arg Several \f$ p_\perp^\text{min} \f$ cutoffs are probably required to fill the histograms:
+  /// @arg \f$ p_\perp^\text{min} = \f$ 50, 75, 100, 150 GeV for the four pT ranges respecively
+  ///
   class D0_2004_S5992206 : public Analysis {
-
   public:
 
-    /// @name Constructors etc.
-    //@{
-
-    /// Constructor.
-    D0_2004_S5992206()
-      : Analysis("D0_2004_S5992206")
-    {  }
-
-    //@}
+    RIVET_DEFAULT_ANALYSIS_CTOR(D0_2004_S5992206);
 
 
     /// @name Analysis methods
-    //@{
+    /// @{
 
     void init() {
       // Final state for jets, mET etc.
-      const FinalState fs(-3.0, 3.0);
+      const FinalState fs((Cuts::etaIn(-3.0, 3.0)));
       declare(fs, "FS");
       // Veto neutrinos, and muons with pT above 1.0 GeV
       VetoedFinalState vfs(fs);
       vfs.vetoNeutrinos();
-      vfs.addVetoPairDetail(PID::MUON, 1.0*GeV, MAXDOUBLE);
+      vfs.addVetoPairDetail(PID::MUON, 1.0*GeV, DBL_MAX);
       declare(vfs, "VFS");
       declare(FastJets(vfs, FastJets::D0ILCONE, 0.7), "Jets");
       declare(MissingMomentum(vfs), "CalMET");
 
       // Book histograms
-      _histJetAzimuth_pTmax75_100  = bookHisto1D(1, 2, 1);
-      _histJetAzimuth_pTmax100_130 = bookHisto1D(2, 2, 1);
-      _histJetAzimuth_pTmax130_180 = bookHisto1D(3, 2, 1);
-      _histJetAzimuth_pTmax180_    = bookHisto1D(4, 2, 1);
+      book(_histJetAzimuth_pTmax75_100  ,1, 2, 1);
+      book(_histJetAzimuth_pTmax100_130 ,2, 2, 1);
+      book(_histJetAzimuth_pTmax130_180 ,3, 2, 1);
+      book(_histJetAzimuth_pTmax180_    ,4, 2, 1);
     }
 
 
@@ -90,16 +79,15 @@ namespace Rivet {
       }
 
       if (pT1/GeV >= 75.0) {
-        const double weight = event.weight();
         const double dphi = deltaPhi(jets[0].phi(), jets[1].phi());
         if (inRange(pT1/GeV, 75.0, 100.0)) {
-          _histJetAzimuth_pTmax75_100->fill(dphi, weight);
+          _histJetAzimuth_pTmax75_100->fill(dphi);
         } else if (inRange(pT1/GeV, 100.0, 130.0)) {
-          _histJetAzimuth_pTmax100_130->fill(dphi, weight);
+          _histJetAzimuth_pTmax100_130->fill(dphi);
         } else if (inRange(pT1/GeV, 130.0, 180.0)) {
-          _histJetAzimuth_pTmax130_180->fill(dphi, weight);
+          _histJetAzimuth_pTmax130_180->fill(dphi);
         } else if (pT1/GeV > 180.0) {
-          _histJetAzimuth_pTmax180_->fill(dphi, weight);
+          _histJetAzimuth_pTmax180_->fill(dphi);
         }
       }
 
@@ -115,24 +103,23 @@ namespace Rivet {
       normalize(_histJetAzimuth_pTmax180_);
     }
 
-    //@}
+    /// @}
 
 
   private:
 
     /// @name Histograms
-    //@{
+    /// @{
     Histo1DPtr _histJetAzimuth_pTmax75_100;
     Histo1DPtr _histJetAzimuth_pTmax100_130;
     Histo1DPtr _histJetAzimuth_pTmax130_180;
     Histo1DPtr _histJetAzimuth_pTmax180_;
-    //@}
+    /// @}
 
   };
 
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(D0_2004_S5992206);
+  RIVET_DECLARE_ALIASED_PLUGIN(D0_2004_S5992206, D0_2004_I659398);
 
 }

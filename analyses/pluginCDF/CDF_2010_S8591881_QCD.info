@@ -6,6 +6,7 @@ Collider: Tevatron Run 2
 SpiresID: 8591881
 InspireID: 849042
 Status: VALIDATED
+Reentrant: false
 Authors:
  - Hendrik Hoeth <hendrik.hoeth@cern.ch>
 References:
@@ -29,3 +30,14 @@ Description:
   event analysis. The leading jet defines the $\phi$ direction of the
   toward region. The transverse regions are most sensitive to the
   underlying event.
+
+ReleaseTests:
+ - $A TVT-Run-II-Jets-0
+ - $A-2 TVT-Run-II-Jets-1
+ - $A-3 TVT-Run-II-Jets-2
+ - $A-4 TVT-Run-II-Jets-3
+ - $A-5 TVT-Run-II-Jets-4
+ - $A-6 TVT-Run-II-Jets-5
+ - $A-7 TVT-Run-II-Jets-6
+ - $A-8 TVT-Run-II-Jets-7
+

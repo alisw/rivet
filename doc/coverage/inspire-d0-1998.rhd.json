@@ -1,0 +1,220 @@
+{
+    "427311": [
+        "Search for top squark pair production in the dielectron channel", 
+        "D0", 
+        "10.1103/PhysRevD.57.589", 
+        null, 
+        "hep-ex/9612009", 
+        "ins427311", 
+        null, 
+        [
+            "FERMILAB-PUB-96-449-E", 
+            "D0-PUB-96-15", 
+            "FSU-SCRI-97-72"
+        ]
+    ], 
+    "443294": [
+        "Search for the trilepton signature from the associated production of SUSY $\\tilde{\\chi}_1^\\pm \\tilde{\\chi}_2^0$ gauginos", 
+        "D0", 
+        "10.1103/PhysRevLett.80.1591", 
+        null, 
+        "hep-ex/9705015", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-97-153-E"
+        ]
+    ], 
+    "444361": [
+        "Measurement of the top quark mass using dilepton events", 
+        "D0", 
+        "10.1103/PhysRevLett.80.2063", 
+        null, 
+        "hep-ex/9706014", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-97-172-E"
+        ]
+    ], 
+    "445265": [
+        "Measurement of dijet angular distributions and search for quark compositeness", 
+        "D0", 
+        "10.1103/PhysRevLett.80.666", 
+        null, 
+        "hep-ex/9707016", 
+        "ins445265", 
+        null, 
+        [
+            "FERMILAB-PUB-97-237-E"
+        ]
+    ], 
+    "446733": [
+        "Experimental search for chargino and neutralino production via gauge mediated supersymmetry breaking models", 
+        "D0", 
+        "10.1103/PhysRevLett.80.442", 
+        null, 
+        "hep-ex/9708005", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-97-273-E"
+        ]
+    ], 
+    "449539": [
+        "Determination of the mass of the $W$ boson using the D\\O\\ detector at the Tevatron", 
+        "D0", 
+        "10.1103/PhysRevD.58.012002", 
+        null, 
+        "hep-ex/9710007", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-97-328-E"
+        ]
+    ], 
+    "450538": [
+        "Search for first generation scalar leptoquark pairs in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.80.2051", 
+        null, 
+        "hep-ex/9710032", 
+        "ins450538", 
+        null, 
+        [
+            "FERMILAB-PUB-97-344-E"
+        ]
+    ], 
+    "452732": [
+        "A measurement of the $W$ boson mass", 
+        "D0", 
+        "10.1103/PhysRevLett.80.3008", 
+        null, 
+        "hep-ex/9712028", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-97-423-E"
+        ]
+    ], 
+    "452733": [
+        "A measurement of the $W$ boson mass", 
+        "D0", 
+        "10.1103/PhysRevD.58.092003", 
+        null, 
+        "hep-ex/9712029", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-97-422-E"
+        ]
+    ], 
+    "465977": [
+        "$Z \\gamma$ production in $\\bar{p} p$ collisions $S^{(1/2)}$ = 1.8-TeV and limits on anomalous $Z Z \\gamma$ and $Z \\gamma \\gamma$ couplings", 
+        "D0", 
+        "10.1103/PhysRevD.57.R3817", 
+        null, 
+        "hep-ex/9710031", 
+        "ins465977", 
+        null, 
+        [
+            "FERMILAB-PUB-97-363-E"
+        ]
+    ], 
+    "466578": [
+        "Direct measurement of the top quark mass at D0", 
+        "D0", 
+        "10.1103/PhysRevD.58.052001", 
+        null, 
+        "hep-ex/9801025", 
+        "ins466578", 
+        null, 
+        [
+            "FERMILAB-PUB-98-031-E"
+        ]
+    ], 
+    "466644": [
+        "Search for the decay $b \\to X_s$ $\\mu^+ \\mu^-$", 
+        "D0", 
+        "10.1016/S0370-2693(98)00161-0", 
+        null, 
+        "hep-ex/9801027", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-98-033-E"
+        ]
+    ], 
+    "467749": [
+        "Measurement of the shape of the transverse momentum distribution of $W$ bosons produced in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.80.5498", 
+        null, 
+        "hep-ex/9803003", 
+        "ins467749", 
+        null, 
+        [
+            "FERMILAB-PUB-98-075-E"
+        ]
+    ], 
+    "467750": [
+        "Limits on $W W \\gamma$ and $W W Z$ couplings from $W$ boson pair production", 
+        "D0", 
+        "10.1103/PhysRevD.58.051101", 
+        null, 
+        "hep-ex/9803004", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-98-076-E"
+        ]
+    ], 
+    "468037": [
+        "Search for charge 1/3 third generation leptoquarks in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.81.38", 
+        null, 
+        "hep-ex/9803009", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-98-081-E"
+        ]
+    ], 
+    "468342": [
+        "Limits on anomalous $W W \\gamma$ and $W W Z$ couplings", 
+        "D0", 
+        "10.1103/PhysRevD.58.031102", 
+        null, 
+        "hep-ex/9803017", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-98-094-E"
+        ]
+    ], 
+    "468445": [
+        "A Search for heavy point - like Dirac monopoles", 
+        "D0", 
+        "10.1103/PhysRevLett.81.524", 
+        null, 
+        "hep-ex/9803023", 
+        "ins468445", 
+        null, 
+        [
+            "FERMILAB-PUB-98-095-E"
+        ]
+    ], 
+    "476389": [
+        "Probing Hard Color-Singlet Exchange in $p\\bar{p}$ Collisions at $\\sqrt{s} = 630$ GeV and 1800 GeV", 
+        "D0", 
+        "10.1016/S0370-2693(98)01238-6", 
+        null, 
+        "hep-ex/9809016", 
+        "ins476389", 
+        null, 
+        [
+            "FERMILAB-PUB-98-285-E"
+        ]
+    ]
+}

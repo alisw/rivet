@@ -1,0 +1,48 @@
+{
+    "132045": [
+        "Charged Pion, Kaon and Nucleon Production by e+ e- Annihilation for C.M. Energies Between 3.6-GeV and 5.2-GeV", 
+        "DASP", 
+        "10.1016/0550-3213(79)90134-2", 
+        null, 
+        null, 
+        "ins132045", 
+        null, 
+        [
+            "DESY-78-50"
+        ]
+    ], 
+    "132410": [
+        "Production Characteristics of the F Meson", 
+        "DASP", 
+        "10.1016/0370-2693(79)91203-6", 
+        null, 
+        null, 
+        "ins132410", 
+        null, 
+        [
+            "DESY-78-63"
+        ]
+    ], 
+    "141547": [
+        "Experimental Results on the Decay Sequences $\\psi^\\prime$ (3685) $\\to \\gamma P(c$) / $\\chi \\to \\gamma \\gamma J/\\psi$, $\\gamma \\pi^+ \\pi^-$, $\\gamma K^+ K^-$ and the Decays $\\psi^\\prime \\to \\eta J/\\psi$, $\\pi^0 J/\\psi$", 
+        "DASP", 
+        "10.1016/0550-3213(79)90067-1", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-79-31"
+        ]
+    ], 
+    "145403": [
+        "RESULTS FROM DASP ON E+ E- ANNIHILATION BETWEEN 3.1-GEV AND 5.2-GEV", 
+        "DASP", 
+        "10.1007/BF01440224", 
+        null, 
+        null, 
+        "ins145403", 
+        null, 
+        []
+    ]
+}

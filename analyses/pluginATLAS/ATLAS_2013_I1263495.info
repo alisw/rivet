@@ -5,9 +5,11 @@ Experiment: ATLAS
 Collider: LHC 7TeV
 InspireID: 1263495
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Giovanni Marchiori <giovanni.marchiori@cern.ch>
 References:
+ - ATLAS-STDM-2012-16
  - arXiv:1311.1440 [hep-ex]
  - Phys.Rev. D89 (2014) 052004
 RunInfo:
@@ -15,6 +17,7 @@ RunInfo:
 NumEvents: 1000000
 Beams: [p+, p+]
 Energies: [7000]
+Luminosity_fb: 4.6
 PtCuts: [100]
 Description:
   'A measurement of the cross section for the production of isolated prompt photons
@@ -45,3 +48,10 @@ BibTeX: '@article{Aad:2013zba,
       reportNumber   = "CERN-PH-EP-2013-164",
       SLACcitation   = "%%CITATION = ARXIV:1311.1440;%%",
 }'
+
+ReleaseTests:
+ - $A LHC-7-PromptPhoton-1
+ - $A-2 LHC-7-PromptPhoton-2
+ - $A-3 LHC-7-PromptPhoton-3
+ - $A-4 LHC-7-PromptPhoton-4
+

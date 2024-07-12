@@ -9,13 +9,16 @@
 namespace Rivet {
 
 
-  /// @name Particle filtering, efficiency and smearing utils
-  //@{
+  /// @ingroup smearing
+  /// @{
 
-  /// @name Typedef for Particle smearing functions/functors
+  /// @defgroup smearing_particle Generic particle filtering, efficiency and smearing utils
+  /// @{
+
+  /// Typedef for Particle smearing functions/functors
   typedef function<Particle(const Particle&)> ParticleSmearFn;
 
-  /// @name Typedef for Particle efficiency functions/functors
+  /// Typedef for Particle efficiency functions/functors
   typedef function<double(const Particle&)> ParticleEffFn;
 
 
@@ -74,11 +77,11 @@ namespace Rivet {
     }
 
     /// Compare to another, for use in the projection system
-    int cmp(const ParticleEffSmearFn& other) const {
+    CmpState cmp(const ParticleEffSmearFn& other) const {
       // cout << "Eff hashes = " << get_address(efn) << "," << get_address(other.efn) << "; "
-      //      << "smear hashes = " << get_address(sfn) << "," << get_address(other.sfn) << endl;
-      if (get_address(sfn) == 0 || get_address(other.sfn) == 0) return UNDEFINED;
-      if (get_address(efn) == 0 || get_address(other.efn) == 0) return UNDEFINED;
+      //      << "smear hashes = " << get_address(sfn) << "," << get_address(other.sfn) << '\n';
+      if (get_address(sfn) == 0 || get_address(other.sfn) == 0) return CmpState::NEQ;
+      if (get_address(efn) == 0 || get_address(other.efn) == 0) return CmpState::NEQ;
       return Rivet::cmp(get_address(sfn), get_address(other.sfn)) || Rivet::cmp(get_address(efn), get_address(other.efn));
     }
 
@@ -98,8 +101,9 @@ namespace Rivet {
     return rand01() < feff(p);
   }
 
-  /// A functor to return true if Particle @a p survives a random efficiency selection
-  /// @deprecated Prefer
+  /// @brief A functor to return true if Particle @a p survives a random efficiency selection
+  ///
+  /// @deprecated Prefer... ?
   struct ParticleEffFilter {
     template <typename FN>
     ParticleEffFilter(const FN& feff) : _feff(feff) {}
@@ -110,8 +114,9 @@ namespace Rivet {
   };
   using particleEffFilter = ParticleEffFilter;
 
-  //@}
+  /// @}
 
+  /// @}
 
 }
 

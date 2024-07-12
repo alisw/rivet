@@ -1,0 +1,316 @@
+{
+    "1094079": [
+        "Inclusive $J/\\psi$ production in $pp$ collisions at $\\sqrt{s} = 2.76$ TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2012.10.078", 
+        "1425908", 
+        "1203.3641", 
+        "ins1094079", 
+        null, 
+        [
+            "CERN-PH-EP-2012-055"
+        ]
+    ], 
+    "1288320": [
+        "$K^*(892)^0$ and $\u03d5(1020)$ production in Pb-Pb collisions at $\\sqrt{s{NN}}$ = 2.76 TeV", 
+        "ALICE", 
+        "10.1103/PhysRevC.91.024609", 
+        "1692998", 
+        "1404.0495", 
+        "ins1288320", 
+        null, 
+        [
+            "CERN-PH-EP-2014-060"
+        ]
+    ], 
+    "1296860": [
+        "Measurement of electrons from semileptonic heavy-flavor hadron decays in $pp$ collisions at $\\sqrt{s} = 2.76$ TeV", 
+        "ALICE", 
+        "10.1103/PhysRevD.91.012001", 
+        "1702571", 
+        "1405.4117", 
+        "ins1296860", 
+        null, 
+        [
+            "CERN-PH-EP-2014-097"
+        ]
+    ], 
+    "1297103": [
+        "Elliptic flow of identified hadrons in Pb-Pb collisions at $ \\sqrt{s_{\\mathrm{NN}}}=2.76 $ TeV", 
+        "ALICE", 
+        "10.1007/JHEP06(2015)190", 
+        "1702836", 
+        "1405.4632", 
+        "ins1297103", 
+        null, 
+        [
+            "CERN-PH-EP-2014-104"
+        ]
+    ], 
+    "1300380": [
+        "Production of $\\Sigma(1385)^{\\pm}$ and $\\Xi(1530)^{0}$ in proton-proton collisions at $\\sqrt{s}=$ 7 TeV", 
+        "ALICE", 
+        "10.1140/epjc/s10052-014-3191-x", 
+        "1709031", 
+        "1406.3206", 
+        "ins1300380", 
+        null, 
+        [
+            "CERN-PH-EP-2014-128"
+        ]
+    ], 
+    "1301858": [
+        "Multiplicity dependence of jet-like two-particle correlation structures in p\u2013Pb collisions at $\\sqrt{s_{NN}}$=5.02 TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2014.11.028", 
+        "1697849", 
+        "1406.5463", 
+        "ins1301858", 
+        null, 
+        [
+            "CERN-PH-EP-2014-084"
+        ]
+    ], 
+    "1321022": [
+        "Production of inclusive $\\Upsilon$(1S) and $\\Upsilon$(2S) in p-Pb collisions at $\\mathbf{\\sqrt{s_{{\\rm NN}}} = 5.02}$ TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2014.11.041", 
+        "1953948", 
+        "1410.2234", 
+        "ins1321022", 
+        null, 
+        [
+            "CERN-PH-EP-2014-196", 
+            "ALICE-PUBLIC-2014-002"
+        ]
+    ], 
+    "1328629": [
+        "Charged jet cross sections and properties in proton-proton collisions at $\\sqrt{s}=7$ TeV", 
+        "ALICE", 
+        "10.1103/PhysRevD.91.112012", 
+        "1970694", 
+        "1411.4969", 
+        "ins1328629", 
+        null, 
+        [
+            "CERN-PH-EP-2014-254"
+        ]
+    ], 
+    "1328669": [
+        "Inclusive photon production at forward rapidities in proton-proton collisions at $\\sqrt{s}$ = 0.9, 2.76 and 7 TeV", 
+        "ALICE", 
+        "10.1140/epjc/s10052-015-3356-2", 
+        "1970776", 
+        "1411.4981", 
+        "ins1328669", 
+        null, 
+        [
+            "CERN-PH-EP-2014-280"
+        ]
+    ], 
+    "1335350": [
+        "Centrality dependence of particle production in p-Pb collisions at $\\sqrt{s_{\\rm NN} }$= 5.02 TeV", 
+        "ALICE", 
+        "10.1103/PhysRevC.91.064905", 
+        "1978606", 
+        "1412.6828", 
+        "ins1335350", 
+        null, 
+        [
+            "CERN-PH-EP-2014-281"
+        ]
+    ], 
+    "1342496": [
+        "Forward-backward multiplicity correlations in pp collisions at $ \\sqrt{s} $ = 0.9, 2.76 and 7 TeV", 
+        "ALICE", 
+        "10.1007/JHEP05(2015)097", 
+        "1984764", 
+        "1502.00230", 
+        "ins1342496", 
+        null, 
+        [
+            "CERN-PH-EP-2015-012"
+        ]
+    ], 
+    "1342499": [
+        "Two-pion femtoscopy in p-Pb collisions at $\\sqrt{s_{\\rm NN}}=5.02$ TeV", 
+        "ALICE", 
+        "10.1103/PhysRevC.91.034906", 
+        "1984767", 
+        "1502.00559", 
+        "ins1342499", 
+        null, 
+        [
+            "CERN-PH-EP-2015-019"
+        ]
+    ], 
+    "1343112": [
+        "Measurement of jet suppression in central Pb-Pb collisions at $\\sqrt{s_{\\rm NN}}$ = 2.76 TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2015.04.039", 
+        "1987206", 
+        "1502.01689", 
+        "ins1343112", 
+        null, 
+        [
+            "CERN-PH-EP-2015-023"
+        ]
+    ], 
+    "1346963": [
+        "Measurement of charged jet production cross sections and nuclear modification in p-Pb collisions at $\\sqrt{s_\\rm{NN}} = 5.02$ TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2015.07.054", 
+        "1996438", 
+        "1503.00681", 
+        "ins1346963", 
+        null, 
+        [
+            "CERN-PH-EP-2015-040"
+        ]
+    ], 
+    "1351451": [
+        "Measurement of dijet $k_T$ in p\u2013Pb collisions at $\\sqrt{s}_{NN}$=5.02 TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2015.05.033", 
+        "1992903", 
+        "1503.03050", 
+        "ins1351451", 
+        null, 
+        [
+            "CERN-PH-EP-2015-041"
+        ]
+    ], 
+    "1355544": [
+        "Rapidity and transverse-momentum dependence of the inclusive J/$\\psi$ nuclear modification factor in p-Pb collisions at $ \\sqrt{s_{N\\ N}} =$ 5.02 TeV", 
+        "ALICE", 
+        "10.1007/JHEP06(2015)055", 
+        "2004578", 
+        "1503.07179", 
+        "ins1355544", 
+        null, 
+        [
+            "CERN-PH-EP-2015-030"
+        ]
+    ], 
+    "1357206": [
+        "Coherent \u03c1$^{0}$ photoproduction in ultra-peripheral Pb-Pb collisions at $ \\sqrt{s_{\\mathrm{NN}}}=2.76 $ TeV", 
+        "ALICE", 
+        "10.1007/JHEP09(2015)095", 
+        "2005513", 
+        "1503.09177", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-082"
+        ]
+    ], 
+    "1357424": [
+        "Measurement of pion, kaon and proton production in proton\u2013proton collisions at $\\sqrt{s} = 7$ TeV", 
+        "ALICE", 
+        "10.1140/epjc/s10052-015-3422-9", 
+        "1999164", 
+        "1504.00024", 
+        "ins1357424", 
+        null, 
+        [
+            "CERN-PH-EP-2015-068"
+        ]
+    ], 
+    "1364887": [
+        "Inclusive, prompt and non-prompt J/$\\psi$ production at mid-rapidity in Pb-Pb collisions at $\\sqrt{s_{\\rm NN}}$ = 2.76 TeV", 
+        "ALICE", 
+        "10.1007/JHEP07(2015)051", 
+        "2012463", 
+        "1504.07151", 
+        "ins1364887", 
+        null, 
+        [
+            "CERN-PH-EP-2015-092"
+        ]
+    ], 
+    "1366028": [
+        "Measurement of charm and beauty production at central rapidity versus charged-particle multiplicity in proton-proton collisions at $ \\sqrt{s}=7 $ TeV", 
+        "ALICE", 
+        "10.1007/JHEP09(2015)148", 
+        "2005107", 
+        "1505.00664", 
+        "ins1366028", 
+        null, 
+        [
+            "CERN-PH-EP-2015-091"
+        ]
+    ], 
+    "1376027": [
+        "Measurement of jet quenching with semi-inclusive hadron-jet distributions in central Pb-Pb collisions at $ \\sqrt{s_{\\mathrm{NN}}}=2.76 $ TeV", 
+        "ALICE", 
+        "10.1007/JHEP09(2015)170", 
+        "2025364", 
+        "1506.03984", 
+        "ins1376027", 
+        null, 
+        [
+            "CERN-PH-EP-2015-136"
+        ]
+    ], 
+    "1377363": [
+        "Centrality dependence of high-p$_{T}$ D meson suppression in Pb-Pb collisions at $ \\sqrt{s_{\\mathrm{N}\\mathrm{N}}}=2.76 $ TeV", 
+        "ALICE", 
+        "10.1007/JHEP11(2015)205", 
+        "2025647", 
+        "1506.06604", 
+        "ins1377363", 
+        null, 
+        [
+            "CERN-PH-EP-2015-151"
+        ]
+    ], 
+    "1379971": [
+        "One-dimensional pion, kaon, and proton femtoscopy in Pb-Pb collisions at $\\sqrt{s_{\\rm {NN}}}$ =2.76 TeV", 
+        "ALICE", 
+        "10.1103/PhysRevC.92.054908", 
+        "2029802", 
+        "1506.07884", 
+        "ins1379971", 
+        null, 
+        [
+            "CERN-PH-EP-2015-106"
+        ]
+    ], 
+    "1380193": [
+        "Centrality dependence of inclusive J/\u03c8 production in p-Pb collisions at $ \\sqrt{s_{\\mathrm{NN}}}=5.02 $ TeV", 
+        "ALICE", 
+        "10.1007/JHEP11(2015)127", 
+        "2029825", 
+        "1506.08808", 
+        "ins1380193", 
+        null, 
+        [
+            "CERN-PH-EP-2015-158"
+        ]
+    ], 
+    "1388181": [
+        "Precision measurement of the mass difference between light nuclei and anti-nuclei", 
+        "ALICE", 
+        "10.1038/nphys3432", 
+        "1989150", 
+        "1508.03986", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-035", 
+            "ALICE-PUBLIC-2015-002"
+        ]
+    ], 
+    "1388730": [
+        "Coherent $\\psi$(2S) photo-production in ultra-peripheral Pb Pb collisions at $\\sqrt{s}_{\\rm NN}$ = 2.76 TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2015.10.040", 
+        "2026383", 
+        "1508.05076", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-156"
+        ]
+    ]
+}

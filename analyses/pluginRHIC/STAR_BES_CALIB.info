@@ -1,0 +1,15 @@
+Name: STAR_BES_CALIB
+Summary: STAR Beam Energy Scan centrality calibration analysis.
+Status: UNVALIDATED
+Authors:
+ - Christian Bierlich <christian.bierlich@thep.lu.se>
+NumEvents: 50000
+References:
+RunInfo: Any!
+Description:
+   'Calibration analysis for Beam energy scan AuAu centrality. The centrality number of 
+   charged particles at mid-rapidity. No reference yoda file.'
+References:
+Keywords: []
+ReleaseTests:
+ - $A RHIC-200-AuAu

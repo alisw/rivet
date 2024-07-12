@@ -1,0 +1,214 @@
+{
+    "472302": [
+        "Measurement of the $B_d^0 - \\overline{B}_d^0$ flavor oscillation frequency and study of same side flavor tagging of $B$ mesons in $p\\bar{p}$ collisions", 
+        "CDF", 
+        "10.1103/PhysRevD.59.032001", 
+        null, 
+        "hep-ex/9806026", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-98-188-E", 
+            "CDF-PUB-BOTTOM-CDFR-4572"
+        ]
+    ], 
+    "472343": [
+        "Searches for new physics in diphoton events in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.59.092002", 
+        null, 
+        "hep-ex/9806034", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-98-206-E"
+        ]
+    ], 
+    "474196": [
+        "Measurement of the $B_s^0$ meson lifetime using semileptonic decays", 
+        "CDF", 
+        "10.1103/PhysRevD.59.032004", 
+        null, 
+        "hep-ex/9808003", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-98-172-E"
+        ]
+    ], 
+    "476587": [
+        "Search for New Particles Decaying to $b\\bar{b}$ in $p\\bar{p}$ Collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.82.2038", 
+        null, 
+        "hep-ex/9809022", 
+        "ins476587", 
+        null, 
+        [
+            "FERMILAB-PUB-98-290-E"
+        ]
+    ], 
+    "476839": [
+        "Measurement of $Z^0$ and Drell-Yan production cross section using dimuons in $\\bar{p}p$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.59.052002", 
+        null, 
+        null, 
+        "ins476839", 
+        null, 
+        [
+            "FERMILAB-PUB-98-280-E"
+        ]
+    ], 
+    "477682": [
+        "Measurement of the top quark mass with the collider detector at Fermilab", 
+        "CDF", 
+        "10.1103/PhysRevLett.82.271", 
+        null, 
+        "hep-ex/9810029", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-98-319-E", 
+            "CDF-ANAL-TOP-PUBLIC-4619"
+        ]
+    ], 
+    "477855": [
+        "Search for a technicolor omega(T) particle in events with a photon and a b quark jet at CDF", 
+        "CDF", 
+        "10.1103/PhysRevLett.83.3124", 
+        null, 
+        "hep-ex/9810031", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-98-321-E", 
+            "CDF-PUB-EXOTIC-CDFR-4674"
+        ]
+    ], 
+    "477935": [
+        "Kinematics of $t\\bar{t}$ events at CDF", 
+        "CDF", 
+        "10.1103/PhysRevD.59.092001", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-98-327-E", 
+            "CDF-PUB-TOP-CDFR-3985"
+        ]
+    ], 
+    "478880": [
+        "Search for third-generation leptoquarks from technicolor models in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.82.3206", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-98-352-E"
+        ]
+    ], 
+    "480447": [
+        "Search for $R$-parity violating supersymmetry using like-sign dielectrons in $p \\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.83.2133", 
+        null, 
+        "hep-ex/9908063", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-98-374-E", 
+            "CDF-PUB-EXOTIC-CDFR-4704"
+        ]
+    ], 
+    "482066": [
+        "A search for $B_s^0 \\overline{B}_s^0$ oscillations using the semileptonic decay $B_s^0 \\to \\phi \\ell^+ X \\nu$", 
+        "CDF", 
+        "10.1103/PhysRevLett.82.3576", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-98-401-E", 
+            "CDF-ANAL-BOTTOM-CDFR-4787"
+        ]
+    ], 
+    "494764": [
+        "Measurement of the associated $\\gamma + \\mu^\\pm$ production cross section in $p \\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.60.092003", 
+        null, 
+        "hep-ex/9902001", 
+        "ins494764", 
+        null, 
+        [
+            "FERMILAB-PUB-99-021-E"
+        ]
+    ], 
+    "496509": [
+        "Measurement of $B^0 \\overline{B}^0$ flavor oscillations using jet-charge and lepton flavor tagging in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.60.072003", 
+        null, 
+        "hep-ex/9903011", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-99-019-E"
+        ]
+    ], 
+    "497432": [
+        "Measurement of the $B_d^0 \\overline{B}_d^0$ oscillation frequency using dimuon data in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.60.051101", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-99-030-E", 
+            "CDF-PUB-BOTTOM-PUBLIC-4805"
+        ]
+    ], 
+    "499281": [
+        "Search for the flavor-changing neutral current decays $B^+ \\to \\mu^+ \\mu^- K^+$ and $B^0 \\to \\mu^+ \\mu^- K^{*0}$", 
+        "CDF", 
+        "10.1103/PhysRevLett.83.3378", 
+        null, 
+        "hep-ex/9905004", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-99-138-E"
+        ]
+    ], 
+    "504668": [
+        "Measurement of the $B^0 \\overline{B}^0$ oscillation frequency using $\\ell^- D^{*+}$ pairs and lepton flavor tags", 
+        "CDF", 
+        "10.1103/PhysRevD.60.112004", 
+        null, 
+        "hep-ex/9907053", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-99-210-E", 
+            "CDF-PUB-BOTTOM-PUBLIC-4966"
+        ]
+    ], 
+    "508337": [
+        "Measurement of $b$ quark fragmentation fractions in the production of strange and light $B$ mesons in $p\\bar{p}$ collisions at $\\sqrt{s}=1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.60.092005", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-99-413-CD"
+        ]
+    ]
+}

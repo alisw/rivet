@@ -33,9 +33,9 @@ YLabel=$\Gamma(\tau\to \pi^0\pi^\pm \nu_\tau)$
 LogY=0
 # END PLOT
 # BEGIN PLOT /PDG_TAUS/d02-x01-y04
-Title=Branching fraction $\tau\to \pi^0\K^\pm \nu_\tau$
+Title=Branching fraction $\tau\to \pi^0 K^\pm \nu_\tau$
 XLabel=
-YLabel=$\Gamma(\tau\to \pi^0\K^\pm \nu_\tau)$
+YLabel=$\Gamma(\tau\to \pi^0 K^\pm \nu_\tau)$
 LogY=0
 # END PLOT
 # BEGIN PLOT /PDG_TAUS/d02-x01-y05
@@ -59,6 +59,6 @@ LogY=0
 # BEGIN PLOT /PDG_TAUS/d02-x03-y01
 Title=Branching fraction $\tau\to$ 5 charged particles
 XLabel=
-YLabel=$\Gamma(\tau\to 5\text{ prong})$
+YLabel=$\Gamma(\tau\to 5\mathrm{~prong})$
 LogY=0
 # END PLOT

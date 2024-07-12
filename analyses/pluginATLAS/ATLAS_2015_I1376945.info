@@ -5,10 +5,12 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1376945
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Ben Nachman <benjamin.philip.nachman@cern.ch>
  - Christian Gutschow <chris.g@cern.ch>
 References:
+ - ATLAS-TOPQ-2014-09
  - arXiv:1506.05629 [hep-ex]
 RunInfo:
   ttbar production with one W decaying leptonically, the other one hadronically
@@ -36,3 +38,7 @@ BibTeX: '@article{Aad:2015lxa,
       reportNumber   = "CERN-PH-EP-2015-128",
       SLACcitation   = "%%CITATION = ARXIV:1506.05629;%%"
 }'
+
+ReleaseTests:
+ - $A LHC-8-Top-All
+

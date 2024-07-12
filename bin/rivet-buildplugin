@@ -1,0 +1,4 @@
+#! /usr/bin/env bash
+
+echo "WARNING: rivet-buildplugin is deprecated, please switch to using rivet-build" 1>&2
+rivet-build $*

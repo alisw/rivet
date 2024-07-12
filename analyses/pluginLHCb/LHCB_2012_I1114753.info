@@ -1,0 +1,37 @@
+Name: LHCB_2012_I1114753
+Year: 2012
+Summary: $\pi^+\pi^-$ mass distribution in $\Lambda_b^{*0}(5920)\to\Lambda_b^0\pi^+\pi^-$ decays
+Experiment: LHCB
+Collider: LHC
+InspireID: 1114753
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ -     Phys.Rev.Lett. 109 (2012) 172003
+RunInfo: any process producing lambda_b(5920), original pp
+Description:
+'Measurement of the production of excited $\Lambda_b$ baryons by LHCb. The only interesting distribution from a simulation perspective is the
+mass disutribution of $\pi^+\pi^-$ in $\Lambda_b^{*0}(5920)\to\Lambda_b^0\pi^+\pi^-$ decays which is sensitive to the decay model used for this decay mode.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: LHCb:2012kxf
+BibTeX: '@article{LHCb:2012kxf,
+    author = "Aaij, R and others",
+    collaboration = "LHCb",
+    title = "{Observation of excited $\Lambda_b^0$ baryons}",
+    eprint = "1205.3452",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CERN-PH-EP-2012-128, LHCB-PAPER-2012-012, LHCB-PAPER-2012-12",
+    doi = "10.1103/PhysRevLett.109.172003",
+    journal = "Phys. Rev. Lett.",
+    volume = "109",
+    pages = "172003",
+    year = "2012"
+}
+'

@@ -1,0 +1,214 @@
+{
+    "340125": [
+        "A Measurement of jet shapes in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.70.713", 
+        null, 
+        null, 
+        "ins340125", 
+        null, 
+        [
+            "FERMILAB-PUB-92-167-E", 
+            "ANL-HEP-PR-93-46"
+        ]
+    ], 
+    "341734": [
+        "Search for $\\Lambda_b \\to J/\\psi \\Lambda^0$ in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.47.R2639", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-92-250-E", 
+            "ANL-HEP-PR-93-47"
+        ]
+    ], 
+    "341846": [
+        "Comparison of jet production in $\\bar{p}p$ collisions at $\\sqrt{s} = 546$ GeV and 1800 GeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.70.1376", 
+        null, 
+        null, 
+        "ins341846", 
+        null, 
+        [
+            "FERMILAB-PUB-92-286-E", 
+            "CDF-PUB-JET-PUBLIC-1792", 
+            "ANL-HEP-PR-93-53"
+        ]
+    ], 
+    "343802": [
+        "Measurement of the cross-section for production of two isolated prompt photons in $\\bar{p}p$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.70.2232", 
+        null, 
+        null, 
+        "ins343802", 
+        null, 
+        [
+            "FERMILAB-PUB-92-380-E", 
+            "CDF-PUB-JET-CDFR-1770", 
+            "ANL-HEP-PR-93-59"
+        ]
+    ], 
+    "353026": [
+        "A Prompt photon cross-section measurement in $\\bar{p}p$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.48.2998", 
+        null, 
+        null, 
+        "ins353026", 
+        null, 
+        [
+            "ANL-HEP-PR-93-09", 
+            "FERMILAB-PUB-92-001-E"
+        ]
+    ], 
+    "353889": [
+        "Measurement of the dijet mass distribution in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.48.998", 
+        null, 
+        null, 
+        "ins353889", 
+        null, 
+        [
+            "FERMILAB-PUB-93-017-E", 
+            "CDF-ANAL-JET-PUBLIC-1818", 
+            "ANL-HEP-PR-93-81"
+        ]
+    ], 
+    "354237": [
+        "The Center-of-mass angular distribution of prompt photons produced in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.71.679", 
+        null, 
+        null, 
+        "ins354237", 
+        null, 
+        [
+            "FERMILAB-PUB-93-032-E", 
+            "CDF-PUB-JET-PUBLIC-1915", 
+            "ANL-HEP-PR-93-84"
+        ]
+    ], 
+    "355096": [
+        "Measurement of jet multiplicity in W events produced in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8-$Tev", 
+        "CDF", 
+        "10.1103/PhysRevLett.70.4042", 
+        null, 
+        null, 
+        "ins355096", 
+        null, 
+        [
+            "FERMILAB-PUB-93-063-E", 
+            "CDF-DOC-ELECTROWEAK-CDFR-1951", 
+            "ANL-HEP-PR-93-82"
+        ]
+    ], 
+    "355097": [
+        "Measurement of the bottom quark production cross-section using semileptonic decay electrons in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.71.500", 
+        null, 
+        null, 
+        "ins355097", 
+        null, 
+        [
+            "FERMILAB-PUB-93-091-E", 
+            "CDF-PUB-HEAVYFLAVOR-PUBLIC-1653", 
+            "ANL-HEP-PR-93-83"
+        ]
+    ], 
+    "355213": [
+        "A Search for first generation leptoquarks in $\\bar{p}p$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.48.R3939", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-93-070-E"
+        ]
+    ], 
+    "355834": [
+        "Observation of the decay $B_s^0 \\to J/\\psi \\phi$ in $\\bar{p}p$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.71.1685", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-93-141-E", 
+            "CDF-PUB-BOTTOM-PUBLIC-2077"
+        ]
+    ], 
+    "356237": [
+        "Measurement of bottom quark production in 1.8 TeV $p\\bar{p}$ collisions using semileptonic decay muons", 
+        "CDF", 
+        "10.1103/PhysRevLett.71.2396", 
+        null, 
+        null, 
+        "ins356237", 
+        null, 
+        [
+            "FERMILAB-PUB-93-145-E"
+        ]
+    ], 
+    "356297": [
+        "Measurement of the average lifetime of B hadrons produced in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.71.3421", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-93-158-E", 
+            "ANL-HEP-PR-94-22"
+        ]
+    ], 
+    "356676": [
+        "Search for quark compositeness, axigluons and heavy particles using the dijet invariant mass spectrum observed in $p\\bar{p}$ collisions", 
+        "CDF", 
+        "10.1103/PhysRevLett.71.2542", 
+        null, 
+        null, 
+        "ins356676", 
+        null, 
+        [
+            "FERMILAB-PUB-93-151-E", 
+            "CDF-ANAL-JET-CDFR-2064"
+        ]
+    ], 
+    "357240": [
+        "Inclusive $\\chi_c$ and $b$ quark production in $\\bar{p}p$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.71.2537", 
+        null, 
+        null, 
+        "ins357240", 
+        null, 
+        [
+            "FERMILAB-PUB-93-106-E", 
+            "CDF-PUB-BOTTOM-CDFR-1988"
+        ]
+    ], 
+    "357601": [
+        "Study of four jet events and evidence for double parton interactions in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.47.4857", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "ANL-HEP-PR-93-58", 
+            "FERMILAB-PUB-93-003-E"
+        ]
+    ]
+}

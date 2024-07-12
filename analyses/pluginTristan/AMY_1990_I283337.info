@@ -1,0 +1,32 @@
+Name: AMY_1990_I283337
+Year: 1990
+Summary: Event shapes in $e^+e^-$ collisions at 55.2 GeV
+Experiment: AMY
+Collider: Tristan
+InspireID: 283337
+Status: VALIDATED
+Authors:
+ - Your Name <your@email.address>
+References:
+ - Phys.Rev. D41 (1990) 2675, 1990
+RunInfo: e+e- to hadrons
+NeedCrossSection: no
+Beams: [e-, e+]
+Energies: [55.2]
+Description:
+  'Measurement of a wide range of event shapes by the AMY experiment at Tristan with an average centre-of-mass energy of $55.2$ GeV.'
+Keywords: []
+BibKey: Li:1989sn
+BibTeX: '@article{Li:1989sn,
+      author         = "Li, Y. K. and others",
+      title          = "{Multi - hadron event properties in $e^+e^-$ annihilation
+                        at $\sqrt{s} = 52$ GeV to 57-GeV}",
+      collaboration  = "AMY",
+      journal        = "Phys. Rev.",
+      volume         = "D41",
+      year           = "1990",
+      pages          = "2675",
+      doi            = "10.1103/PhysRevD.41.2675",
+      reportNumber   = "KEK-PREPRINT-89-149, AMY-89-19",
+      SLACcitation   = "%%CITATION = PHRVA,D41,2675;%%"
+}'

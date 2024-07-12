@@ -21,12 +21,12 @@ namespace Rivet {
     // Book histograms and initialise projections before the run
     void init() {
       // Projections
-      const FinalState fs(-5.0, 5.0, 0.0*GeV);
-      addProjection(FastJets(fs, FastJets::ANTIKT, 0.5), "Jets");
+      const FinalState fs((Cuts::etaIn(-5.0, 5.0)));
+      declare(FastJets(fs, FastJets::ANTIKT, 0.5), "Jets");
 
       // Jet Charge Histos
       for (int i = 1; i <= 18; i++) {
-        _h_Charge[i - 1] = bookHisto1D(i, 1, 1);
+        book(_h_Charge[i - 1], i, 1, 1);
       }
     }
 
@@ -46,8 +46,6 @@ namespace Rivet {
         vetoEvent;
       }
 
-      const double weight = event.weight();
-
       vector<Particle> constituents1 = jets[0].constituents();
       std::vector<double> numerator(9, 0), denominator(9, 0);
 
@@ -61,8 +59,8 @@ namespace Rivet {
 
       if (constituents1.size() > 0) {
         for (unsigned j = 0; j < constituents1.size(); j++) {
-          if (std::abs(constituents1[j].pdgId()) > 9 &&
-              std::abs(constituents1[j].pdgId())!= 21) {
+          if (std::abs(constituents1[j].pid()) > 9 &&
+              std::abs(constituents1[j].pid())!= 21) {
             if (constituents1[j].pt() > 1*GeV) {
               double charge = constituents1[j].charge();
               double mom = constituents1[j].pt();
@@ -103,28 +101,28 @@ namespace Rivet {
       t_jetchargeT1k6 = (denominator[7] > 0) ? numerator[7] / denominator[7] : 0;
       t_jetchargeT1k3 = (denominator[8] > 0) ? numerator[8] / denominator[8] : 0;
 
-      _h_Charge[0]->fill(t_jetcharge1, weight);
-      _h_Charge[1]->fill(t_jetcharge1k6, weight);
-      _h_Charge[2]->fill(t_jetcharge1k3, weight);
-      _h_Charge[3]->fill(t_jetchargeL1, weight);
-      _h_Charge[4]->fill(t_jetchargeL1k6, weight);
-      _h_Charge[5]->fill(t_jetchargeL1k3, weight);
-      _h_Charge[6]->fill(t_jetchargeT1, weight);
-      _h_Charge[7]->fill(t_jetchargeT1k6, weight);
-      _h_Charge[8]->fill(t_jetchargeT1k3, weight);
+      _h_Charge[0]->fill(t_jetcharge1);
+      _h_Charge[1]->fill(t_jetcharge1k6);
+      _h_Charge[2]->fill(t_jetcharge1k3);
+      _h_Charge[3]->fill(t_jetchargeL1);
+      _h_Charge[4]->fill(t_jetchargeL1k6);
+      _h_Charge[5]->fill(t_jetchargeL1k3);
+      _h_Charge[6]->fill(t_jetchargeT1);
+      _h_Charge[7]->fill(t_jetchargeT1k6);
+      _h_Charge[8]->fill(t_jetchargeT1k3);
 
       if (leadingpt > 400 && leadingpt < 700) {
-        _h_Charge[9]->fill(t_jetcharge1k6, weight);
-        _h_Charge[12]->fill(t_jetchargeL1k6, weight);
-        _h_Charge[15]->fill(t_jetchargeT1k6, weight);
+        _h_Charge[9]->fill(t_jetcharge1k6);
+        _h_Charge[12]->fill(t_jetchargeL1k6);
+        _h_Charge[15]->fill(t_jetchargeT1k6);
       } else if (leadingpt > 700 && leadingpt < 1000) {
-        _h_Charge[10]->fill(t_jetcharge1k6, weight);
-        _h_Charge[13]->fill(t_jetchargeL1k6, weight);
-        _h_Charge[16]->fill(t_jetchargeT1k6, weight);
+        _h_Charge[10]->fill(t_jetcharge1k6);
+        _h_Charge[13]->fill(t_jetchargeL1k6);
+        _h_Charge[16]->fill(t_jetchargeT1k6);
       } else if (leadingpt > 1000 && leadingpt < 1800) {
-        _h_Charge[11]->fill(t_jetcharge1k6, weight);
-        _h_Charge[14]->fill(t_jetchargeL1k6, weight);
-        _h_Charge[17]->fill(t_jetchargeT1k6, weight);
+        _h_Charge[11]->fill(t_jetcharge1k6);
+        _h_Charge[14]->fill(t_jetchargeL1k6);
+        _h_Charge[17]->fill(t_jetchargeT1k6);
       }
     }
 
@@ -140,5 +138,5 @@ namespace Rivet {
   };
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CMS_2017_I1605749);
+  RIVET_DECLARE_PLUGIN(CMS_2017_I1605749);
 }

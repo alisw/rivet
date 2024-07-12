@@ -1,0 +1,38 @@
+Name: BELLE_2018_I1698390
+Year: 2018
+Summary: Mass distribution in $\Xi_c^+\to\Xi^-\pi^+\pi^+$
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1698390
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - 
+RunInfo: Any process producing Xi_c
+Description:
+'Measurement of the $\Xi^-\pi^+$ mass distribution in $\Xi_c^+\to\Xi^-\pi^+\pi^+$. N.B. data read from figure in
+paper and background extracted using line on the figure subtracted.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Sumihama:2018moz
+BibTeX: '@article{Sumihama:2018moz,
+      author         = "Sumihama, M. and others",
+      title          = "{Observation of $\Xi(1620)^0$ and evidence for
+                        $\Xi(1690)^0$ in $\Xi_c^+ \rightarrow \Xi^-\pi^+\pi^+$
+                        decays}",
+      collaboration  = "Belle",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "122",
+      year           = "2019",
+      number         = "7",
+      pages          = "072501",
+      doi            = "10.1103/PhysRevLett.122.072501",
+      eprint         = "1810.06181",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1810.06181;%%"
+}'

@@ -1,0 +1,132 @@
+{
+    "426498": [
+        "Search for a fourth generation charge -1/3 quark via flavor changing neutral current decay", 
+        "D0", 
+        "10.1103/PhysRevLett.78.3818", 
+        null, 
+        "hep-ex/9611021", 
+        "ins426498", 
+        null, 
+        [
+            "FERMILAB-PUB-96-430-E", 
+            "FSU-SCRI-97-63"
+        ]
+    ], 
+    "426909": [
+        "Limits on anomalous $W W \\gamma$ couplings from $p\\bar{p} \\to W \\gamma + X$ events at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.78.3634", 
+        null, 
+        "hep-ex/9612002", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-96-434-E", 
+            "D0-PUB-96-14", 
+            "FSU-SCRI-97-71"
+        ]
+    ], 
+    "427309": [
+        "Search for diphoton events with large missing transverse energy in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.78.2070", 
+        null, 
+        "hep-ex/9612011", 
+        "ins427309", 
+        null, 
+        [
+            "FERMILAB-PUB-96-446-E", 
+            "FSU-SCRI-97-64"
+        ]
+    ], 
+    "440634": [
+        "Study of the $Z Z \\gamma$ and $Z \\gamma \\gamma$ couplings in $Z (\\nu \\nu) \\gamma$ production", 
+        "D0", 
+        "10.1103/PhysRevLett.78.3640", 
+        null, 
+        "hep-ex/9702011", 
+        "ins440634", 
+        null, 
+        [
+            "FERMILAB-PUB-97-047-E", 
+            "FSU-SCRI-97-70"
+        ]
+    ], 
+    "441152": [
+        "Direct measurement of the top quark mass", 
+        "D0", 
+        "10.1103/PhysRevLett.79.1197", 
+        null, 
+        "hep-ex/9703008", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-97-059-E", 
+            "FSU-SCRI-97-73"
+        ]
+    ], 
+    "441947": [
+        "Studies of gauge boson pair production and trilinear couplings", 
+        "D0", 
+        "10.1103/PhysRevD.56.6742", 
+        null, 
+        "hep-ex/9704004", 
+        "ins441947", 
+        null, 
+        [
+            "FERMILAB-PUB-97-088-E", 
+            "FSU-SCRI-97-56"
+        ]
+    ], 
+    "442536": [
+        "Measurement of the top quark pair production cross section in $p\\bar{p}$ collisions", 
+        "D0", 
+        "10.1103/PhysRevLett.79.1203", 
+        null, 
+        "hep-ex/9704015", 
+        "ins442536", 
+        null, 
+        [
+            "FERMILAB-PUB-97-109-E", 
+            "FSU-SCRI-97-55"
+        ]
+    ], 
+    "443148": [
+        "Limits on $W W Z$ and $W W \\gamma$ couplings from $p\\bar{p} \\to e \\nu j j X$ events at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.79.1441", 
+        null, 
+        "hep-ex/9705010", 
+        "ins443148", 
+        null, 
+        [
+            "FERMILAB-PUB-97-136-E", 
+            "FSU-SCRI-97-54"
+        ]
+    ], 
+    "444264": [
+        "Color coherent radiation in multijet events from $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1016/S0370-2693(97)01190-8", 
+        null, 
+        "hep-ex/9706012", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-97-201-E"
+        ]
+    ], 
+    "446155": [
+        "Search for scalar leptoquark pairs decaying to electrons and jets in $\\bar{p}p$ collisions", 
+        "D0", 
+        "10.1103/PhysRevLett.79.4321", 
+        null, 
+        "hep-ex/9707033", 
+        "ins446155", 
+        null, 
+        [
+            "FERMILAB-PUB-97-252-E", 
+            "D0-PUB-97-5"
+        ]
+    ]
+}

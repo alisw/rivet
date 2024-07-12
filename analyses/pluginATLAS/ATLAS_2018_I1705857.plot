@@ -242,7 +242,7 @@ YLabel=$\frac{1}{\sigma_{t\bar{t}b}} \frac{d \sigma_{t\bar{t}b}}{d p_{\mathrm{T}
 # BEGIN PLOT /ATLAS_2018_I1705857/d31-x01-y01
 Title=$e\mu$ channel
 XLabel=$\Delta R_{b_1, b_2}$
-YLabel=$\frac{1}{\sigma_{t\bar{t}b}} \frac{d \sigma_{t\bar{t}b}}{d \Deta R_{b_1 b_2}}$
+YLabel=$\frac{1}{\sigma_{t\bar{t}b}} \frac{d \sigma_{t\bar{t}b}}{d \Delta R_{b_1 b_2}}$
 LogX=0
 LogY=0
 LegendAlign=r

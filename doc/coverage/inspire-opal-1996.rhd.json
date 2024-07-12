@@ -1,0 +1,389 @@
+{
+    "397395": [
+        "Measurement of the average $b$ baryon lifetime and the product branching ratio f ($b \\to Lambda_b$ ) x BR (Lambda($b$) $\\to \\Lambda \\ell^-$ anti-neutrino $X^{)}$", 
+        "OPAL", 
+        "10.1007/s002880050020", 
+        "284630", 
+        null, 
+        "ins397395", 
+        null, 
+        [
+            "CERN-PPE-95-090", 
+            "CERN-PPE-95-90"
+        ]
+    ], 
+    "399990": [
+        "A Comparison of $b$ and ($u d s^{)}$ quark jets to gluon jets", 
+        "OPAL", 
+        "10.1007/s002880050059", 
+        "288348", 
+        null, 
+        "ins399990", 
+        null, 
+        [
+            "CERN-PPE-95-126"
+        ]
+    ], 
+    "401601": [
+        "Measurement of the tau- ---> e- anti-electron-neutrino tau-neutrino branching ratio", 
+        "OPAL", 
+        "10.1016/0370-2693(95)01600-7", 
+        "291778", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-95-142"
+        ]
+    ], 
+    "402487": [
+        "$J/\\psi$ and $\\psi^\\prime$ production in hadronic $Z^0$ decays", 
+        "OPAL", 
+        "10.1007/s002880050096", 
+        "291780", 
+        null, 
+        "ins402487", 
+        null, 
+        [
+            "CERN-PPE-95-153"
+        ]
+    ], 
+    "402488": [
+        "Test of the exponential decay law at short decay times using $\\tau$ leptons", 
+        "OPAL", 
+        "10.1016/0370-2693(95)01540-X", 
+        "291781", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-95-155"
+        ]
+    ], 
+    "404106": [
+        "Measurement of the heavy quark forward - backward asymmetries and average $B$ mixing using leptons in multi - hadronic events", 
+        "OPAL", 
+        "10.1007/s002880050114", 
+        "296327", 
+        null, 
+        "ins404106", 
+        null, 
+        [
+            "CERN-PPE-95-179"
+        ]
+    ], 
+    "404605": [
+        "Search for a narrow resonance in Z0 decays into hadrons and isolated photons", 
+        "OPAL", 
+        "10.1007/s002880050143", 
+        "294955", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-95-193"
+        ]
+    ], 
+    "404814": [
+        "Search for charged Higgs bosons using the OPAL detector at LEP", 
+        "OPAL", 
+        "10.1016/0370-2693(96)00029-9", 
+        "293381", 
+        null, 
+        "ins404814", 
+        null, 
+        [
+            "CERN-PPE-95-180"
+        ]
+    ], 
+    "404815": [
+        "Observation of Upsilon production in hadronic Z0 decays", 
+        "OPAL", 
+        "10.1016/0370-2693(96)00070-6", 
+        "293387", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-95-181"
+        ]
+    ], 
+    "416351": [
+        "Improved measurement of the lifetime of the tau lepton", 
+        "OPAL", 
+        "10.1016/0370-2693(96)00255-9", 
+        "297389", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-018", 
+            "CERN-PPE-96-18"
+        ]
+    ], 
+    "416353": [
+        "Topological search for the production of neutralinos and scalar particles", 
+        "OPAL", 
+        "10.1016/0370-2693(96)00502-3", 
+        "297391", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-019", 
+            "CERN-PPE-96-19"
+        ]
+    ], 
+    "416354": [
+        "Search for chargino and neutralino production using the OPAL detector at s**(1/2) = 130-GEV - 136-GeV at LEP", 
+        "OPAL", 
+        "10.1016/0370-2693(96)00301-2", 
+        "297392", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-020", 
+            "CERN-PPE-96-20"
+        ]
+    ], 
+    "416745": [
+        "Measurement of cross-sections and asymmetries in e+ e- collisions at 130-GeV - 140-GeV center-of-mass energy", 
+        "OPAL", 
+        "10.1016/0370-2693(96)00394-2", 
+        "298598", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-025", 
+            "CERN-PPE-96-25"
+        ]
+    ], 
+    "418006": [
+        "Upper limit on the tau-neutrino mass from tau --> 3 h tau-neutrino decays", 
+        "OPAL", 
+        "10.1007/s002880050240", 
+        "301467", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-042", 
+            "CERN-PPE-96-42"
+        ]
+    ], 
+    "418007": [
+        "QCD studies with e+ e- annihilation data at 130-GeV and 136-GeV", 
+        "OPAL", 
+        "10.1007/s002880050237", 
+        "301471", 
+        null, 
+        "ins418007", 
+        null, 
+        [
+            "CERN-PPE-96-047", 
+            "CERN-PPE-96-47"
+        ]
+    ], 
+    "418010": [
+        "A Study of four fermion final states with high multiplicity at LEP", 
+        "OPAL", 
+        "10.1016/0370-2693(96)00397-8", 
+        "300738", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-031", 
+            "CERN-PPE-96-31"
+        ]
+    ], 
+    "418011": [
+        "Measurements with photonic events in e+ e- collisions at center-of-mass energies of 130-GeV - 140-GeV", 
+        "OPAL", 
+        "10.1016/0370-2693(96)00488-1", 
+        "300743", 
+        null, 
+        "ins418011", 
+        null, 
+        [
+            "CERN-PPE-96-039", 
+            "CERN-PPE-96-39"
+        ]
+    ], 
+    "418670": [
+        "A Study of charm hadron production in Z0 ---> c anti-c and Z0 ---> b anti-b decays at LEP", 
+        "OPAL", 
+        "10.1007/s002880050218", 
+        "302729", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-051", 
+            "CERN-PPE-96-51"
+        ]
+    ], 
+    "419908": [
+        "Prompt J / psi production in hadronic Z0 decays", 
+        "OPAL", 
+        "10.1016/0370-2693(96)00656-9", 
+        "305082", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-062", 
+            "CERN-PPE-96-62"
+        ]
+    ], 
+    "419909": [
+        "A First measurement of the Lambda anti-Lambda and Lambda Lambda (anti-Lambda anti-Lambda) spin compositions in hadronic Z0 decays", 
+        "OPAL", 
+        "10.1016/0370-2693(96)00860-X", 
+        "305084", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-068", 
+            "CERN-PPE-96-68"
+        ]
+    ], 
+    "420345": [
+        "A Measurement of the $B_d^0$ oscillation frequency using leptons and $D^{*+-}$ mesons", 
+        "OPAL", 
+        "10.1007/s002880050258", 
+        "305984", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-074"
+        ]
+    ], 
+    "421815": [
+        "A Precise measurement of the tau polarization and its forward - backward asymmetry at LEP", 
+        "OPAL", 
+        "10.1007/s002880050257", 
+        "307854", 
+        null, 
+        "ins421815", 
+        null, 
+        [
+            "CERN-PPE-96-078"
+        ]
+    ], 
+    "421816": [
+        "Multiplicity dependence of Bose-Einstein correlations in hadronic Z0 decays", 
+        "OPAL", 
+        "10.1007/s002880050259", 
+        "308432", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-090", 
+            "CERN-PPE-96-90"
+        ]
+    ], 
+    "421817": [
+        "Search for unstable neutral and charged heavy leptons in e+ e- collisions at s**(1/2) = 130-GeV and 136-GeV", 
+        "OPAL", 
+        "10.1016/0370-2693(96)00963-X", 
+        "307595", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-093"
+        ]
+    ], 
+    "421818": [
+        "Search for excited leptons in e+ e- collisions at s**(1/2) = 130-GeV and 136-GeV", 
+        "OPAL", 
+        "10.1016/0370-2693(96)01078-7", 
+        "307602", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-094", 
+            "CERN-PPE-96-94"
+        ]
+    ], 
+    "421997": [
+        "Test of the four fermion contact interaction in e+ e- collisions at 130-GeV - 140-GeV", 
+        "OPAL", 
+        "10.1016/0370-2693(96)01156-2", 
+        "308304", 
+        null, 
+        "ins421997", 
+        null, 
+        [
+            "CERN-PPE-96-098", 
+            "CERN-PPE-96-98"
+        ]
+    ], 
+    "423486": [
+        "Test of QCD analytic predictions for the multiplicity ratio between gluon and quark jets", 
+        "OPAL", 
+        "10.1016/S0370-2693(96)01319-6", 
+        "310261", 
+        null, 
+        "ins423486", 
+        null, 
+        [
+            "CERN-PPE-96-116"
+        ]
+    ], 
+    "423574": [
+        "Measurement of the branching fraction of the radiative decay tau- ---> mu- anti-muon-neutrino tau-neutrino gamma", 
+        "OPAL", 
+        "10.1016/S0370-2693(96)01284-1", 
+        "311024", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-121"
+        ]
+    ], 
+    "424636": [
+        "Search for chargino and neutralino production in $e^{+} e^{-}$ collisions at $\\sqrt{s}$ = 161-GeV", 
+        "OPAL", 
+        "10.1016/S0370-2693(96)01451-7", 
+        "312701", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-135"
+        ]
+    ], 
+    "424637": [
+        "Search for scalar top and scalar bottom quarks using the OPAL detector at LEP", 
+        "OPAL", 
+        "10.1016/S0370-2693(96)01395-0", 
+        "312700", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-133"
+        ]
+    ], 
+    "425320": [
+        "Measurement of the mass of the $W$ boson in $e^{+} e^{-}$ collisions at $S^{(1/2)}$ = 161-GeV", 
+        "OPAL", 
+        "10.1016/S0370-2693(96)01452-9", 
+        "313688", 
+        null, 
+        "ins425320", 
+        null, 
+        [
+            "CERN-PPE-96-141"
+        ]
+    ]
+}

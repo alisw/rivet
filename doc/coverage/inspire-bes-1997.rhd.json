@@ -1,0 +1,35 @@
+{
+    "447848": [
+        "A Measurement of the branching fraction of D(s) inclusive semileptonic decay D(s)+ ---> e+ X", 
+        "BES", 
+        "10.1103/PhysRevD.56.3779", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1997-092", 
+            "PRINT-97-223"
+        ]
+    ], 
+    "455728": [
+        "Experimental study of hadron inclusive production in J / psi energy region", 
+        "BES", 
+        null, 
+        null, 
+        null, 
+        null, 
+        null, 
+        []
+    ], 
+    "459423": [
+        "Measurement of the branching ratios for J / psi --> gamma pi0, gamma eta, gamma eta' --> 3gamma on the BES", 
+        "BES", 
+        null, 
+        null, 
+        null, 
+        null, 
+        null, 
+        []
+    ]
+}

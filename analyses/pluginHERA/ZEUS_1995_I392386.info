@@ -1,0 +1,39 @@
+Name: ZEUS_1995_I392386
+Year: 1995
+Summary: Charged particle multiplicity and momentum spectra in Breit frame at ZEUS
+Experiment: ZEUS
+Collider: HERA
+InspireID: 392386
+Status: VALIDATED 
+Reentrant: True
+Authors:
+ - Suzie Kim <susie.kim@desy.de>
+ - Hannes Jung <hannes.jung@desy.de>
+References:
+ - Z.Phys.C67:93-108,1995
+ - DOI:10.1007/BF01564824
+ - arXiv:hep-ex/9501012
+ - DESY 95-007
+Beams: [[e-, p+],[p+,e-]]
+Energies: [[26.7,820],[820,26.7]]
+Description: 'Charged particle multiplicity and momentum spectra in Deep Inelastic Scattering event are measured at ZEUS. The analysis is performed in Breit frame. The analysis covers the kinematic range of $10 < Q^2 < 1280$ GeV$^2$ and $6 \times 10^{-4} < x_{bj} < 5 \times 10^{-2}$. '
+ValidationInfo:
+  'Validated with RivetHZTool'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: ZEUS:1995red
+BibTeX: '@article{ZEUS:1995red,
+    author = "Derrick, M. and others",
+    collaboration = "ZEUS",
+    title = "{Measurement of multiplicity and momentum spectra in the current fragmentation region of the Breit frame at HERA}",
+    eprint = "hep-ex/9501012",
+    archivePrefix = "arXiv",
+    reportNumber = "DESY-95-007",
+    doi = "10.1007/BF01564824",
+    journal = "Z. Phys. C",
+    volume = "67",
+    pages = "93--108",
+    year = "1995"
+}'
+

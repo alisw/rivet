@@ -10,7 +10,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(MC_DILEPTON);
+    RIVET_DEFAULT_ANALYSIS_CTOR(MC_DILEPTON);
 
 
     /// @name Analysis methods
@@ -24,38 +24,36 @@ namespace Rivet {
                                && Cuts::abseta < 5 && Cuts::pT > 10*GeV), "Leptons");
 
       // Book histograms
-      _h_pt_l1 = bookHisto1D("lep1_pt", logspace(40, 10, 400));
-      _h_costheta_l1 = bookHisto1D("lep1_costheta", linspace(25, -1, 1));
-      _h_ppara_l1 = bookHisto1D("lep1_ppara", linspace(40, -50, 350));
-      _h_pperp_l1 = bookHisto1D("lep1_pperp", linspace(25, 0, 100));
+      book(_h_pt_l1, "lep1_pt", logspace(40, 10, 400));
+      book(_h_costheta_l1, "lep1_costheta", linspace(25, -1, 1));
+      book(_h_ppara_l1, "lep1_ppara", linspace(40, -50, 350));
+      book(_h_pperp_l1, "lep1_pperp", linspace(25, 0, 100));
       //
-      _h_pt_l2 = bookHisto1D("lep2_pt", logspace(40, 10, 400));
-      _h_costheta_l2 = bookHisto1D("lep2_costheta", linspace(25, -1, 1));
-      _h_ppara_l2 = bookHisto1D("lep2_ppara", linspace(40, -50, 350));
-      _h_pperp_l2 = bookHisto1D("lep2_pperp", linspace(25, 0, 100));
+      book(_h_pt_l2, "lep2_pt", logspace(40, 10, 400));
+      book(_h_costheta_l2, "lep2_costheta", linspace(25, -1, 1));
+      book(_h_ppara_l2, "lep2_ppara", linspace(40, -50, 350));
+      book(_h_pperp_l2, "lep2_pperp", linspace(25, 0, 100));
       //
-      _h_costheta_com_l1 = bookHisto1D("com_costheta_l1", linspace(25, -1, 1));
-      _h_costheta_com_l2 = bookHisto1D("com_costheta_l2", linspace(25, -1, 1));
-      _h_ppara_com_l1 = bookHisto1D("com_ppara_l1", linspace(25, -50, 50));
-      _h_ppara_com_l2 = bookHisto1D("com_ppara_l2", linspace(25, -50, 50));
+      book(_h_costheta_com_l1, "com_costheta_l1", linspace(25, -1, 1));
+      book(_h_costheta_com_l2, "com_costheta_l2", linspace(25, -1, 1));
+      book(_h_ppara_com_l1, "com_ppara_l1", linspace(25, -50, 50));
+      book(_h_ppara_com_l2, "com_ppara_l2", linspace(25, -50, 50));
       //
-      _h_costheta_com = bookHisto1D("com_costheta", linspace(25, -1, 1));
-      _h_ppara_com = bookHisto1D("com_ppara", linspace(25, -50, 50));
-      _h_pperp_com = bookHisto1D("com_pperp", linspace(25, 0, 100));
+      book(_h_costheta_com, "com_costheta", linspace(25, -1, 1));
+      book(_h_ppara_com, "com_ppara", linspace(25, -50, 50));
+      book(_h_pperp_com, "com_pperp", linspace(25, 0, 100));
 
     }
 
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-      const double weight = event.weight();
-
       const Particles& leptons = apply<FinalState>(event, "Leptons").particlesByPt();
       if (leptons.size() != 2) vetoEvent;
       const Particle& l1 = leptons[0];
       const Particle& l2 = leptons[1];
-      _h_pt_l1->fill(l1.pT()/GeV, weight);
-      _h_pt_l2->fill(l2.pT()/GeV, weight);
+      _h_pt_l1->fill(l1.pT()/GeV);
+      _h_pt_l2->fill(l2.pT()/GeV);
 
       const FourMomentum pcom = l1.mom() + l2.mom();
       const Vector3 betacom = pcom.betaVec();
@@ -65,16 +63,16 @@ namespace Rivet {
       const double l1_costheta = cos(l1.p3().angle(unitboostvec));
       const double l1_ppara = l2.p3().dot(unitboostvec);
       const double l1_pperp = l2.p3().cross(unitboostvec).mod();
-      _h_costheta_l1->fill(l1_costheta, weight);
-      _h_ppara_l1->fill(l1_ppara, weight);
-      _h_pperp_l1->fill(l1_pperp, weight);
+      _h_costheta_l1->fill(l1_costheta);
+      _h_ppara_l1->fill(l1_ppara);
+      _h_pperp_l1->fill(l1_pperp);
 
       const double l2_costheta = cos(l2.p3().angle(unitboostvec));
       const double l2_ppara = l2.p3().dot(unitboostvec);
       const double l2_pperp = l2.p3().cross(unitboostvec).mod();
-      _h_costheta_l2->fill(l2_costheta, weight);
-      _h_ppara_l2->fill(l2_ppara, weight);
-      _h_pperp_l2->fill(l2_pperp, weight);
+      _h_costheta_l2->fill(l2_costheta);
+      _h_ppara_l2->fill(l2_ppara);
+      _h_pperp_l2->fill(l2_pperp);
 
       const FourMomentum p1com = comboost.transform(l1.mom());
       const FourMomentum p2com = comboost.transform(l2.mom());
@@ -90,25 +88,25 @@ namespace Rivet {
       const double com_pperp2 = p2com.p3().cross(unitboostvec).mod();
       MSG_DEBUG("CoM p_pperps: " << com_pperp1 << ", " << com_pperp2);
       // assert(com_pperp1 == com_pperp2 && "CoM p_perps differ");
-      _h_costheta_com_l1->fill(com_costheta1, weight);
-      _h_costheta_com_l2->fill(com_costheta2, weight);
-      _h_costheta_com->fill(com_costheta1, 0.5*weight);
-      _h_costheta_com->fill(com_costheta2, 0.5*weight);
-      _h_ppara_com_l1->fill(com_ppara1, weight);
-      _h_ppara_com_l2->fill(com_ppara2, weight);
-      _h_ppara_com->fill(com_ppara1, 0.5*weight);
-      _h_ppara_com->fill(com_ppara2, 0.5*weight);
-      _h_pperp_com->fill(com_pperp1, weight);
+      _h_costheta_com_l1->fill(com_costheta1);
+      _h_costheta_com_l2->fill(com_costheta2);
+      _h_costheta_com->fill(com_costheta1, 0.5);
+      _h_costheta_com->fill(com_costheta2, 0.5);
+      _h_ppara_com_l1->fill(com_ppara1);
+      _h_ppara_com_l2->fill(com_ppara2);
+      _h_ppara_com->fill(com_ppara1, 0.5);
+      _h_ppara_com->fill(com_ppara2, 0.5);
+      _h_pperp_com->fill(com_pperp1);
     }
 
 
     /// Normalise histograms etc., after the run
     void finalize() {
-      normalize({_h_pt_l1, _h_pt_l2});
-      normalize({_h_ppara_com, _h_pperp_com, _h_costheta_com});
-      normalize({_h_ppara_com_l1, _h_ppara_com_l2, _h_costheta_com_l1, _h_costheta_com_l2});
-      normalize({_h_ppara_l1, _h_pperp_l1, _h_costheta_l1});
-      normalize({_h_ppara_l2, _h_pperp_l2, _h_costheta_l2});
+      normalize(_h_pt_l1); normalize(_h_pt_l2); normalize(_h_ppara_com); 
+      normalize(_h_pperp_com); normalize(_h_costheta_com); normalize(_h_ppara_com_l1); 
+      normalize(_h_ppara_com_l2); normalize(_h_costheta_com_l1); normalize(_h_costheta_com_l2);
+      normalize(_h_ppara_l1); normalize(_h_pperp_l1); normalize(_h_costheta_l1);
+      normalize(_h_ppara_l2); normalize(_h_pperp_l2); normalize(_h_costheta_l2);
     }
 
     //@}
@@ -128,7 +126,7 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(MC_DILEPTON);
+  RIVET_DECLARE_PLUGIN(MC_DILEPTON);
 
 
 }

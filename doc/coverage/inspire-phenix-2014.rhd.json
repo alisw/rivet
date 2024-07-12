@@ -1,0 +1,122 @@
+{
+    "1256626": [
+        "Cold-Nuclear-Matter Effects on Heavy-Quark Production at Forward and Backward Rapidity in d+Au Collisions at $\\sqrt{s_{NN}}=200$  GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.112.252301", 
+        null, 
+        "1310.1005", 
+        null, 
+        null, 
+        []
+    ], 
+    "1261055": [
+        "Centrality categorization for $R_{p(d)+A}$ in high-energy collisions", 
+        "PHENIX", 
+        "10.1103/PhysRevC.90.034902", 
+        null, 
+        "1310.4793", 
+        null, 
+        null, 
+        []
+    ], 
+    "1262739": [
+        "System-size dependence of open-heavy-flavor production in nucleus-nucleus collisions at $\\sqrt{s_{_{NN}}}$=200 GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.90.034903", 
+        null, 
+        "1310.8286", 
+        null, 
+        null, 
+        []
+    ], 
+    "1263517": [
+        "Heavy-flavor electron-muon correlations in $p+p$ and $d$+Au collisions at $\\sqrt{s_{_{NN}}}$ = 200 GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.89.034915", 
+        null, 
+        "1311.1427", 
+        null, 
+        null, 
+        []
+    ], 
+    "1268155": [
+        "Measurement of transverse-single-spin asymmetries for midrapidity and forward-rapidity production of hadrons in polarized p+p collisions at $\\sqrt{s}=$200 and 62.4 GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevD.90.012006", 
+        null, 
+        "1312.1995", 
+        null, 
+        null, 
+        []
+    ], 
+    "1273625": [
+        "Transverse-energy distributions at midrapidity in p+p , d+Au , and Au+Au collisions at $\\sqrt{s_{NN}}=62.4\u2013200$ GeV and implications for particle-production models", 
+        "PHENIX", 
+        "10.1103/PhysRevC.89.044905", 
+        null, 
+        "1312.6676", 
+        "ins1273625", 
+        null, 
+        []
+    ], 
+    "1279634": [
+        "Azimuthal-angle dependence of charged-pion-interferometry measurements with respect to second- and third-order event planes in Au$+$Au collisions at $\\sqrt{s_{_{NN}}}=200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.112.222301", 
+        null, 
+        "1401.7680", 
+        null, 
+        null, 
+        []
+    ], 
+    "1282448": [
+        "Inclusive double-helicity asymmetries in neutral-pion and eta-meson production in $\\vec{p}+\\vec{p}$ collisions at $\\sqrt{s}=200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevD.90.012007", 
+        null, 
+        "1402.6296", 
+        "ins1282448", 
+        null, 
+        []
+    ], 
+    "1288921": [
+        "Nuclear matter effects on $J/\\psi$ production in asymmetric Cu+Au collisions at $\\sqrt{s_{_{NN}}}$ = 200 GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.90.064908", 
+        null, 
+        "1404.1873", 
+        null, 
+        null, 
+        []
+    ], 
+    "1296111": [
+        "Measurement of $K_S^0$ and $K^{*0}$ in $p+p$, $d+Au$, and $Cu+Cu$ collisions at $\\sqrt{s_{_{NN}}}=200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.90.054905", 
+        null, 
+        "1405.3628", 
+        null, 
+        null, 
+        []
+    ], 
+    "1296835": [
+        "Low-mass vector-meson production at forward rapidity in $p+p$ collisions at $\\sqrt{s}=200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevD.90.052002", 
+        null, 
+        "1405.4260", 
+        "ins1296835", 
+        null, 
+        []
+    ], 
+    "1300542": [
+        "Cross section and transverse single-spin asymmetry of $\\eta$ mesons in $p^{\\uparrow}+p$ collisions at $\\sqrt{s}=200$ GeV at forward rapidity", 
+        "PHENIX", 
+        "10.1103/PhysRevD.90.072008", 
+        null, 
+        "1406.3541", 
+        "ins1300542", 
+        null, 
+        []
+    ]
+}

@@ -1,0 +1,52 @@
+Name: ATLAS_2022_I2152933
+Year: 2022
+Summary: Measurement of observables sensitive to colour reconnection in ttbar dileptonic emu channel at 13 TeV
+Experiment: ATLAS
+Collider: LHC
+InspireID: 2152933
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Shayma Wahdan <shayma.wahdan@cern.ch>
+ - Dominic Hirschbuhl <Dominic.Hirschbuehl@cern.ch>
+ - Andrea Helen Knue <andrea.helen.knue@cern.ch>
+References:
+ - arXiv:2209.07874 [hep-ex] 
+ - ATLAS-TOPQ-2019-01
+Keywords:
+  - ttbar
+  - dileptonic
+  - colour reconnection 
+RunInfo: dileptonic top-quark pair production 
+Beams: [p+, p+]
+Energies: [13000]
+Luminosity_fb: 139.0
+Description:
+  'A measurement of observables sensitive to effects of colour reconnection in top-quark 
+  pair-production events is presented using 139 fb$^{-1}$ of 13 TeV proton--proton collision data 
+  collected by the ATLAS detector at the LHC. Events are selected by requiring exactly one 
+  isolated electron and one isolated muon with opposite charge and two or three jets, 
+  where exactly two jets are required to be $b$-tagged. For the selected events, 
+  measurements are presented for the charged-particle multiplicity, 
+  the scalar sum of the transverse momenta of the charged particles, 
+  and the same scalar sum in bins of charged-particle multiplicity.  
+  These observables are unfolded to the stable-particle level, thereby correcting 
+  for migration effects due to finite detector resolution, acceptance and efficiency effects. 
+  The particle-level measurements are compared with different colour reconnection models 
+  in Monte Carlo generators. These measurements disfavour some of the colour 
+  reconnection models and provide inputs to future optimisation of the parameters in 
+  Monte Carlo generators.'
+BibKey: ATLAS:2022ctr
+BibTeX: '@article{ATLAS:2022ctr,
+    collaboration = "ATLAS",
+    title = "{Measurements of observables sensitive to colour reconnection in $t\bar{t}$ events with the ATLAS detector at $\sqrt{s}=13$ TeV}",
+    eprint = "2209.07874",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CERN-EP-2022-167",
+    month = "9",
+    year = "2022"
+}'
+
+ReleaseTests:
+ - $A LHC-13-Top-L

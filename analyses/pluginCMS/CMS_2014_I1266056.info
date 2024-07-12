@@ -5,6 +5,7 @@ Experiment: CMS
 Collider: LHC
 InspireID: 1266056
 Status: UNVALIDATED
+Reentrant: true
 Authors:
  - David Grellscheid <david.grellscheid@durham.ac.uk>
 References:
@@ -14,6 +15,7 @@ RunInfo:
 NumEvents: 1000000
 Beams: [p+, p+]
 Energies: [7000]
+Luminosity_fb: 2.14
 Description:
   'A measurement of the triple differential cross section in photon+jets final states 
   in $pp$ collisions at $\sqrt{s} = 7$ TeV.

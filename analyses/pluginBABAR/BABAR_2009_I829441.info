@@ -1,0 +1,38 @@
+Name: BABAR_2009_I829441
+Year: 2009
+Summary: Cross section for $e^+e^-\to \pi^+\pi^-$ below 3 GeV
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 829441
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 103 (2009) 231801
+ - Phys.Rev. D86 (2012) 032013
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+Description:
+  'Measurement of the cross section for $e^+e^-\to \pi^+\pi^-$ at energies near the $\rho$ mass.'
+Keywords: []
+BibKey: Aubert:2009ad
+BibTeX: '@article{Aubert:2009ad,
+      author         = "Aubert, Bernard and others",
+      title          = "{Precise measurement of the e+ e- ---&gt; pi+ pi- (gamma)
+                        cross section with the Initial State Radiation method at
+                        BABAR}",
+      collaboration  = "BaBar",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "103",
+      year           = "2009",
+      pages          = "231801",
+      doi            = "10.1103/PhysRevLett.103.231801",
+      eprint         = "0908.3589",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "SLAC-PUB-13754, BABAR-PUB-09-027",
+      SLACcitation   = "%%CITATION = ARXIV:0908.3589;%%"
+}'

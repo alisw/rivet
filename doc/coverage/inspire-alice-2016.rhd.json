@@ -1,0 +1,477 @@
+{
+    "1126962": [
+        "Measurement of electrons from beauty hadron decays in $pp$ collisions at $\\sqrt{s}=7$ TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2013.01.069", 
+        "1472421", 
+        "1208.1902", 
+        "ins1126962", 
+        null, 
+        [
+            "CERN-PH-EP-2012-229"
+        ]
+    ], 
+    "1377750": [
+        "Centrality dependence of the nuclear modification factor of charged pions, kaons, and protons in Pb-Pb collisions at $\\sqrt{s_{\\rm NN}}=2.76$ TeV", 
+        "ALICE", 
+        "10.1103/PhysRevC.93.034913", 
+        "2026062", 
+        "1506.07287", 
+        "ins1377750", 
+        null, 
+        [
+            "CERN-PH-EP-2015-152"
+        ]
+    ], 
+    "1377753": [
+        "Search for weakly decaying $\\overline{\\Lambda\\mathrm{n}}$ and $\\Lambda\\Lambda $ exotic bound states in central Pb-Pb collisions at $\\sqrt{s_{\\rm NN}}$ = 2.76 TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2015.11.048", 
+        "2034421", 
+        "1506.07499", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-069"
+        ]
+    ], 
+    "1379977": [
+        "Forward-central two-particle correlations in p-Pb collisions at $\\sqrt{s_{\\rm NN}}$ = 5.02 TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2015.12.010", 
+        "2029808", 
+        "1506.08032", 
+        "ins1379977", 
+        null, 
+        [
+            "CERN-PH-EP-2015-155"
+        ]
+    ], 
+    "1380192": [
+        "Differential studies of inclusive J/\u03c8 and \u03c8(2S) production at forward rapidity in Pb-Pb collisions at $ \\sqrt{s_{\\mathrm{NN}}}=2.76 $ TeV", 
+        "ALICE", 
+        "10.1007/JHEP05(2016)179", 
+        "2029824", 
+        "1506.08804", 
+        "ins1380192", 
+        null, 
+        [
+            "CERN-PH-EP-2015-157"
+        ]
+    ], 
+    "1380234": [
+        "$^{3}_{\\Lambda}\\mathrm H$ and $^{3}_{\\bar{\\Lambda}} \\overline{\\mathrm H}$ production in Pb-Pb collisions at $\\sqrt{s_{\\rm NN}} =$ 2.76 TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2016.01.040", 
+        "2029884", 
+        "1506.08453", 
+        "ins1380234", 
+        null, 
+        [
+            "CERN-PH-EP-2015-105"
+        ]
+    ], 
+    "1380491": [
+        "Production of light nuclei and anti-nuclei in pp and Pb-Pb collisions at energies available at the CERN Large Hadron Collider", 
+        "ALICE", 
+        "10.1103/PhysRevC.93.024917", 
+        "2030480", 
+        "1506.08951", 
+        "ins1380491", 
+        null, 
+        [
+            "CERN-PH-EP-2015-025"
+        ]
+    ], 
+    "1382591": [
+        "Elliptic flow of muons from heavy-flavour hadron decays at forward rapidity in Pb\u2013Pb collisions at $\\sqrt{s_{\\rm NN}}= 2.76$ TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2015.11.059", 
+        "2033884", 
+        "1507.03134", 
+        "ins1382591", 
+        null, 
+        [
+            "CERN-PH-EP-2015-173"
+        ]
+    ], 
+    "1384270": [
+        "Event shape engineering for inclusive spectra and elliptic flow in Pb-Pb collisions at $\\sqrt{s_\\rm{NN}}=2.76$ TeV", 
+        "ALICE", 
+        "10.1103/PhysRevC.93.034916", 
+        "2036935", 
+        "1507.06194", 
+        "ins1384270", 
+        null, 
+        [
+            "CERN-PH-EP-2015-171"
+        ]
+    ], 
+    "1384807": [
+        "Centrality dependence of pion freeze-out radii in Pb-Pb collisions at $\\sqrt{s}_{NN}=$ 2.76 TeV", 
+        "ALICE", 
+        "10.1103/PhysRevC.93.024905", 
+        "2037814", 
+        "1507.06842", 
+        "ins1384807", 
+        null, 
+        [
+            "CERN-PH-EP-2015-140"
+        ]
+    ], 
+    "1385276": [
+        "Study of cosmic ray events with high muon multiplicity using the ALICE detector at the CERN Large Hadron Collider", 
+        "ALICE", 
+        "10.1088/1475-7516/2016/01/032", 
+        "2038804", 
+        "1507.07577", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-196", 
+            "ALICE-PUBLIC-2016-003"
+        ]
+    ], 
+    "1394580": [
+        "Transverse momentum dependence of D-meson production in Pb-Pb collisions at $ \\sqrt{{\\mathrm{s}}_{\\mathrm{NN}}}=$ 2.76  TeV", 
+        "ALICE", 
+        "10.1007/JHEP03(2016)081", 
+        "2051865", 
+        "1509.06888", 
+        "ins1394580", 
+        null, 
+        [
+            "CERN-PH-EP-2015-252"
+        ]
+    ], 
+    "1394672": [
+        "Multiplicity and transverse momentum evolution of charge-dependent correlations in pp, p\u2013Pb, and Pb\u2013Pb collisions at the LHC", 
+        "ALICE", 
+        "10.1140/epjc/s10052-016-3915-1", 
+        "2055040", 
+        "1509.07255", 
+        "ins1394672", 
+        null, 
+        [
+            "CERN-PH-EP-2015-263"
+        ]
+    ], 
+    "1394675": [
+        "Measurement of D$_{s}^{+}$ production and nuclear modification factor in Pb-Pb collisions at $ \\sqrt{{\\mathrm{s}}_{\\mathrm{NN}}}=$ 2.76 TeV", 
+        "ALICE", 
+        "10.1007/JHEP03(2016)082", 
+        "2051869", 
+        "1509.07287", 
+        "ins1394675", 
+        null, 
+        [
+            "CERN-PH-EP-2015-253"
+        ]
+    ], 
+    "1394676": [
+        "Centrality evolution of the charged-particle pseudorapidity density over a broad pseudorapidity range in Pb-Pb collisions at $\\sqrt{s_{\\rm NN}} =$ 2.76 TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2015.12.082", 
+        "2052525", 
+        "1509.07299", 
+        "ins1394676", 
+        null, 
+        [
+            "CERN-PH-EP-2015-257", 
+            "ALICE-PUBLIC-2015-010"
+        ]
+    ], 
+    "1394677": [
+        "Direct photon production in Pb-Pb collisions at $\\sqrt{s_\\rm{NN}} =$ 2.76 TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2016.01.020", 
+        "2051887", 
+        "1509.07324", 
+        "ins1394677", 
+        null, 
+        [
+            "CERN-PH-EP-2015-254", 
+            "ALICE-PUBLIC-2015-007"
+        ]
+    ], 
+    "1394678": [
+        "Azimuthal anisotropy of charged jet production in $\\sqrt{s_{\\rm NN}}$ = 2.76 TeV Pb-Pb collisions", 
+        "ALICE", 
+        "10.1016/j.physletb.2015.12.047", 
+        "2052528", 
+        "1509.07334", 
+        "ins1394678", 
+        null, 
+        [
+            "CERN-PH-EP-2015-258"
+        ]
+    ], 
+    "1394682": [
+        "Measurement of electrons from heavy-flavour hadron decays in p-Pb collisions at $\\sqrt{s_{\\rm NN}} =$ 5.02 TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2015.12.067", 
+        "2053198", 
+        "1509.07491", 
+        "ins1394682", 
+        null, 
+        [
+            "CERN-PH-EP-2015-262"
+        ]
+    ], 
+    "1395099": [
+        "Inclusive quarkonium production at forward rapidity in pp collisions at $\\sqrt{s}=8$ TeV", 
+        "ALICE", 
+        "10.1140/epjc/s10052-016-3987-y", 
+        "2053775", 
+        "1509.08258", 
+        "ins1395099", 
+        null, 
+        [
+            "CERN-PH-EP-2015-267"
+        ]
+    ], 
+    "1395253": [
+        "Pseudorapidity and transverse-momentum distributions of charged particles in proton\u2013proton collisions at $\\sqrt s=$ 13 TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2015.12.030", 
+        "2056018", 
+        "1509.08734", 
+        "ins1395253", 
+        null, 
+        [
+            "CERN-PH-EP-2015-270", 
+            "ALICE-PUBLIC-2015-005"
+        ]
+    ], 
+    "1395296": [
+        "Measurement of an excess in the yield of $J/\\psi$ at very low $p_{\\rm T}$ in Pb-Pb collisions at $\\sqrt{s_{\\rm NN}}$ = 2.76 TeV", 
+        "ALICE", 
+        "10.1103/PhysRevLett.116.222301", 
+        "2053776", 
+        "1509.08802", 
+        "ins1395296", 
+        null, 
+        [
+            "CERN-PH-EP-2015-268"
+        ]
+    ], 
+    "1410144": [
+        "Charge-dependent flow and the search for the chiral magnetic wave in Pb-Pb collisions at $\\sqrt{s_{\\rm NN}} =$ 2.76 TeV", 
+        "ALICE", 
+        "10.1103/PhysRevC.93.044903", 
+        "2109975", 
+        "1512.05739", 
+        "ins1410144", 
+        null, 
+        [
+            "CERN-PH-EP-2015-316"
+        ]
+    ], 
+    "1410589": [
+        "Centrality dependence of the charged-particle multiplicity density at midrapidity in Pb-Pb collisions at $\\sqrt{s_{\\rm NN}}$ = 5.02 TeV", 
+        "ALICE", 
+        "10.1103/PhysRevLett.116.222302", 
+        "2113256", 
+        "1512.06104", 
+        "ins1410589", 
+        null, 
+        [
+            "CERN-PH-EP-2015-324", 
+            "ALICE-PUBLIC-2015-008"
+        ]
+    ], 
+    "1411084": [
+        "Multi-strange baryon production in p-Pb collisions at $\\sqrt{s_\\mathbf{NN}}=5.02$ TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2016.05.027", 
+        "2117760", 
+        "1512.07227", 
+        "ins1411084", 
+        null, 
+        [
+            "CERN-PH-EP-2015-327"
+        ]
+    ], 
+    "1411653": [
+        "Multipion Bose-Einstein correlations in pp,p -Pb, and Pb-Pb collisions at energies available at the CERN Large Hadron Collider", 
+        "ALICE", 
+        "10.1103/PhysRevC.93.054908", 
+        "2118516", 
+        "1512.08902", 
+        "ins1411653", 
+        null, 
+        [
+            "CERN-PH-EP-2015-330", 
+            "ALICE-PUBLIC-2015-009"
+        ]
+    ], 
+    "1415274": [
+        "Multiplicity dependence of charged pion, kaon, and (anti)proton production at large transverse momentum in p-Pb collisions at $\\mathbf{\\sqrt{{\\textit s}_{\\rm NN}}}$ = 5.02 TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2016.07.050", 
+        "2124348", 
+        "1601.03658", 
+        "ins1415274", 
+        null, 
+        [
+            "CERN-EP-2016-003"
+        ]
+    ], 
+    "1418181": [
+        "Production of K$^{*}$ (892)$^{0}$ and $\\phi $ (1020) in p\u2013Pb collisions at $\\sqrt{s_{{\\text {NN}}}}$ = 5.02 TeV", 
+        "ALICE", 
+        "10.1140/epjc/s10052-016-4088-7", 
+        "2127657", 
+        "1601.07868", 
+        "ins1418181", 
+        null, 
+        [
+            "CERN-PH-EP-2015-326"
+        ]
+    ], 
+    "1419244": [
+        "Anisotropic flow of charged particles in Pb-Pb collisions at $\\sqrt{s_{\\rm NN}}=5.02$ TeV", 
+        "ALICE", 
+        "10.1103/PhysRevLett.116.132302", 
+        "2126032", 
+        "1602.01119", 
+        "ins1419244", 
+        null, 
+        [
+            "CERN-EP-2016-018"
+        ]
+    ], 
+    "1419249": [
+        "Particle identification in ALICE: a Bayesian approach", 
+        "ALICE", 
+        "10.1140/epjp/i2016-16168-5", 
+        "2127042", 
+        "1602.01392", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2016-023"
+        ]
+    ], 
+    "1423072": [
+        "Measurement of D-meson production versus multiplicity in p-Pb collisions at $ \\sqrt{{\\mathrm{s}}_{\\mathrm{NN}}}=5.02 $ TeV", 
+        "ALICE", 
+        "10.1007/JHEP08(2016)078", 
+        "2134226", 
+        "1602.07240", 
+        "ins1423072", 
+        null, 
+        [
+            "CERN-EP-2016-034"
+        ]
+    ], 
+    "1426826": [
+        "Centrality dependence of $\\mathbf{\\psi}$(2S) suppression in p-Pb collisions at $\\mathbf{\\sqrt{{\\textit s}_{\\rm NN}}}$ = 5.02 TeV", 
+        "ALICE", 
+        "10.1007/JHEP06(2016)050", 
+        "2138163", 
+        "1603.02816", 
+        "ins1426826", 
+        null, 
+        [
+            "CERN-EP-2016-046"
+        ]
+    ], 
+    "1427026": [
+        "Centrality dependence of charged jet production in p\u2013Pb collisions at $\\sqrt{s_\\mathrm{NN}}$ = 5.02 TeV", 
+        "ALICE", 
+        "10.1140/epjc/s10052-016-4107-8", 
+        "2138593", 
+        "1603.03402", 
+        "ins1427026", 
+        null, 
+        [
+            "CERN-EP-2016-052", 
+            "ALICE-PUBLIC-2016-001"
+        ]
+    ], 
+    "1427723": [
+        "Measurement of transverse energy at midrapidity in Pb-Pb collisions at $\\sqrt{s_{\\rm NN}} = 2.76$ TeV", 
+        "ALICE", 
+        "10.1103/PhysRevC.94.034903", 
+        "2139456", 
+        "1603.04775", 
+        "ins1427723", 
+        null, 
+        [
+            "CERN-EP-2016-071"
+        ]
+    ], 
+    "1452590": [
+        "Correlated event-by-event fluctuations of flow harmonics in Pb-Pb collisions at $\\sqrt{s_{_{\\rm NN}}}=2.76$ TeV", 
+        "ALICE", 
+        "10.1103/PhysRevLett.117.182301", 
+        "2147403", 
+        "1604.07663", 
+        "ins1452590", 
+        null, 
+        [
+            "CERN-EP-2016-102"
+        ]
+    ], 
+    "1456145": [
+        "Pseudorapidity dependence of the anisotropic flow of charged particles in Pb-Pb collisions at $\\sqrt{s_{\\rm NN}}=2.76$ TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2016.07.017", 
+        "2151170", 
+        "1605.02035", 
+        "ins1456145", 
+        null, 
+        [
+            "CERN-EP-2016-115"
+        ]
+    ], 
+    "1465513": [
+        "$D$-meson production in $p$-Pb collisions at $\\sqrt{s_{\\rm NN}}=$5.02 TeV and in pp collisions at $\\sqrt{s}=$7 TeV", 
+        "ALICE", 
+        "10.1103/PhysRevC.94.054908", 
+        "2153377", 
+        "1605.07569", 
+        "ins1465513", 
+        null, 
+        [
+            "CERN-EP-2016-127"
+        ]
+    ], 
+    "1466626": [
+        "Elliptic flow of electrons from heavy-flavour hadron decays at mid-rapidity in Pb-Pb collisions at $ \\sqrt{{\\mathrm{s}}_{\\mathrm{NN}}}=2.76 $ TeV", 
+        "ALICE", 
+        "10.1007/JHEP09(2016)028", 
+        "2154390", 
+        "1606.00321", 
+        "ins1466626", 
+        null, 
+        [
+            "CERN-EP-2016-136"
+        ]
+    ], 
+    "1471285": [
+        "Higher harmonic flow coefficients of identified hadrons in Pb-Pb collisions at $\\sqrt{s_{\\rm NN}}$ = 2.76 TeV", 
+        "ALICE", 
+        "10.1007/JHEP09(2016)164", 
+        "2162576", 
+        "1606.06057", 
+        "ins1471285", 
+        null, 
+        [
+            "CERN-EP-2016-159"
+        ]
+    ], 
+    "1483164": [
+        "Jet-like correlations with neutral pion triggers in pp and central Pb\u2013Pb collisions at 2.76 TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2016.10.048", 
+        "2210751", 
+        "1608.07201", 
+        "ins1483164", 
+        null, 
+        [
+            "CERN-EP-2016-195"
+        ]
+    ]
+}

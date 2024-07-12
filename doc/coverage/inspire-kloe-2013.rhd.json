@@ -1,0 +1,52 @@
+{
+    "1186739": [
+        "Measurement of $\\Gamma(\\eta \\to \\pi^+\\pi^-\\gamma)/\\Gamma(\\eta \\to \\pi^+\\pi^-\\pi^0)$ with the KLOE Detector", 
+        "KLOE", 
+        "10.1016/j.physletb.2012.11.032", 
+        "1479245", 
+        "1209.4611", 
+        null, 
+        null, 
+        []
+    ], 
+    "1190672": [
+        "Limit on the production of a light vector gauge boson in phi meson decays with the KLOE detector", 
+        "KLOE-2", 
+        "10.1016/j.physletb.2013.01.067", 
+        null, 
+        "1210.3927", 
+        null, 
+        null, 
+        []
+    ], 
+    "1199266": [
+        "Measurement of $\\eta$ meson production in $\\gamma\\gamma$ interactions and $\\Gamma(\\eta\\to\\gamma\\gamma)$ with the KLOE detector", 
+        "KLOE-2", 
+        "10.1007/JHEP01(2013)119", 
+        null, 
+        "1211.1845", 
+        null, 
+        null, 
+        []
+    ], 
+    "1208095": [
+        "Precision measurement of $\\sigma(e^+e^-\\rightarrow \\pi^+\\pi^-\\gamma)/ \\sigma(e^+e^-\\rightarrow \\mu^+\\mu^-\\gamma)$ and determination of the $\\pi^+\\pi^-$ contribution to the muon anomaly with the KLOE detector", 
+        "KLOE", 
+        "10.1016/j.physletb.2013.02.029", 
+        "1501416", 
+        "1212.4524", 
+        null, 
+        null, 
+        []
+    ], 
+    "1217124": [
+        "A new limit on the CP violating decay $K_S \\to 3\\pi^0$ with the KLOE experiment", 
+        "KLOE", 
+        "10.1016/j.physletb.2013.05.008", 
+        null, 
+        "1301.7623", 
+        null, 
+        null, 
+        []
+    ]
+}

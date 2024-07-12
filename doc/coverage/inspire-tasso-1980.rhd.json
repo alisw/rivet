@@ -1,0 +1,110 @@
+{
+    "143690": [
+        "E+ e- Annihilation at High-Energies and Search for the t-Quark Continuum Contribution", 
+        "TASSO", 
+        "10.1007/BF01554391", 
+        null, 
+        null, 
+        "ins143690", 
+        null, 
+        [
+            "DESY-79/74"
+        ]
+    ], 
+    "143691": [
+        "Rapid Growth of Charged Particle Multiplicity in High-Energy e+ e- Annihilations", 
+        "TASSO", 
+        "10.1016/0370-2693(80)90156-2", 
+        null, 
+        null, 
+        "ins143691", 
+        null, 
+        [
+            "DESY-79/73"
+        ]
+    ], 
+    "152593": [
+        "Production and Properties of the $\\tau$ Lepton in $e^+ e^-$ Annihilation at c.m. Energies From 12-{GeV} to 31.6-{GeV}", 
+        "TASSO", 
+        "10.1016/0370-2693(80)90337-8", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-80-12"
+        ]
+    ], 
+    "153127": [
+        "Test of {QED} in $e^+ e^-$ Annihilation at Energies Between 12-{GeV} and 31.6-{GeV}", 
+        "TASSO", 
+        "10.1016/0370-2693(80)90872-2", 
+        null, 
+        null, 
+        "ins153127", 
+        null, 
+        [
+            "DESY-80-33"
+        ]
+    ], 
+    "153341": [
+        "$K^0$ Production in $e^+ e^-$ Annihilations at 30-{GeV} Center-of-mass Energy", 
+        "TASSO", 
+        "10.1016/0370-2693(80)90833-3", 
+        null, 
+        null, 
+        "ins153341", 
+        null, 
+        [
+            "DESY-80-39"
+        ]
+    ], 
+    "153511": [
+        "Comparison of e+ e- Annihilation with QCD and Determination of the Strong Coupling Constant", 
+        "TASSO", 
+        "10.1016/0370-2693(80)90914-4", 
+        null, 
+        null, 
+        "ins153511", 
+        null, 
+        [
+            "DESY-80-40"
+        ]
+    ], 
+    "153656": [
+        "Charged Pion, Kaon, Proton and anti-Proton Production in High-Energy e+ e- Annihilation", 
+        "TASSO", 
+        "10.1016/0370-2693(80)90915-6", 
+        null, 
+        null, 
+        "ins153656", 
+        null, 
+        [
+            "DESY-80-49"
+        ]
+    ], 
+    "154418": [
+        "Rho rho Production by Two Photon Scattering", 
+        "TASSO", 
+        "10.1016/0370-2693(80)90638-3", 
+        null, 
+        null, 
+        "ins154418", 
+        null, 
+        [
+            "DESY-80-77"
+        ]
+    ], 
+    "154815": [
+        "Evidence for a Spin One Gluon in Three Jet Events", 
+        "TASSO", 
+        "10.1016/0370-2693(80)90639-5", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-80-80"
+        ]
+    ]
+}

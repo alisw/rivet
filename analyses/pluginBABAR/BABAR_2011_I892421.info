@@ -1,0 +1,38 @@
+Name: BABAR_2011_I892421
+Year: 2011
+Summary: Decay angles in $D_{s1}(2536)^+\to D^{*+}K^0$
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 892421
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D83 (2011) 072003
+RunInfo: e+e- to hadrons
+Beams: [e-, e+]
+Energies: [10.58]
+Description:
+  'Measurement of decay angles in the decay $D_{s1}(2536)^+\to D^{*+}K^0$ by BaBar.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Lees:2011um
+BibTeX: '@article{Lees:2011um,
+      author         = "Lees, J. P. and others",
+      title          = "{Measurement of the mass and width of the D(s1)(2536)+
+                        meson}",
+      collaboration  = "BaBar",
+      journal        = "Phys. Rev.",
+      volume         = "D83",
+      year           = "2011",
+      pages          = "072003",
+      doi            = "10.1103/PhysRevD.83.072003",
+      eprint         = "1103.2675",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "BABAR-PUB-10-031, SLAC-PUB-14400",
+      SLACcitation   = "%%CITATION = ARXIV:1103.2675;%%"
+}'

@@ -1,0 +1,140 @@
+BEGIN YODA_SCATTER2D_V2 /REF/ATLAS_2018_I1698006/d01-x01-y01
+ErrorBreakdown: {0: {stat: {dn: -3.5, up: 3.6}, sys: {dn: -6.2, up: 6.9}, 'sys,lumi': {dn: -2.0, up: 1.7}}, 1: {stat: {dn: -2.3, up: 2.4}, sys: {dn: -3.6, up: 4.0}, 'sys,lumi': {dn: -1.1, up: 1.2}}}
+IsRef: 1
+Path: /REF/ATLAS_2018_I1698006/d01-x01-y01
+Title: doi:10.17182/hepdata.83965.v1/t1
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.000000e+00	5.000000e-01	5.000000e-01	8.370000e+01	7.395269e+00	7.966179e+00
+2.000000e+00	5.000000e-01	5.000000e-01	5.240000e+01	4.411349e+00	4.816638e+00
+END YODA_SCATTER2D_V2
+
+
+BEGIN YODA_SCATTER2D_V2 /REF/ATLAS_2018_I1698006/d02-x01-y01
+ErrorBreakdown: {0: {stat: {dn: -0.03374, up: 0.03374}, sys: {dn: -0.1075, up: 0.1075}}, 1: {stat: {dn: -0.02483, up: 0.02483}, sys: {dn: -0.03557, up: 0.03557}}, 2: {stat: {dn: -0.01007, up: 0.01007}, sys: {dn: -0.01393, up: 0.01393}}, 3: {stat: {dn: -0.005852, up: 0.005852}, sys: {dn: -0.006524, up: 0.006524}}, 4: {stat: {dn: -0.002424, up: 0.002424}, sys: {dn: -0.001894, up: 0.001894}}, 5: {stat: {dn: -0.0002353, up: 0.0002353}, sys: {dn: -0.0001788, up: 0.0001788}}}
+IsRef: 1
+Path: /REF/ATLAS_2018_I1698006/d02-x01-y01
+Title: doi:10.17182/hepdata.83965.v1/t2
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.750000e+02	2.500000e+01	2.500000e+01	8.626000e-01	1.126705e-01	1.126705e-01
+2.250000e+02	2.500000e+01	2.500000e+01	4.053000e-01	4.337919e-02	4.337919e-02
+3.000000e+02	5.000000e+01	5.000000e+01	1.460000e-01	1.718865e-02	1.718865e-02
+4.000000e+02	5.000000e+01	5.000000e+01	3.947000e-02	8.764045e-03	8.764045e-03
+5.250000e+02	7.500000e+01	7.500000e+01	8.900000e-03	3.076201e-03	3.076201e-03
+8.500000e+02	2.500000e+02	2.500000e+02	4.364000e-06	2.955259e-04	2.955259e-04
+END YODA_SCATTER2D_V2
+
+
+BEGIN YODA_SCATTER2D_V2 /REF/ATLAS_2018_I1698006/d03-x01-y01
+ErrorBreakdown: {0: {stat: {dn: -0.02882, up: 0.02882}, sys: {dn: -0.07459, up: 0.07459}}, 1: {stat: {dn: -0.01745, up: 0.01745}, sys: {dn: -0.02102, up: 0.02102}}, 2: {stat: {dn: -0.006421, up: 0.006421}, sys: {dn: -0.005804, up: 0.005804}}, 3: {stat: {dn: -0.003029, up: 0.003029}, sys: {dn: -0.002051, up: 0.002051}}, 4: {stat: {dn: -0.001061, up: 0.001061}, sys: {dn: -0.0002836, up: 0.0002836}}, 5: {stat: {dn: -0.0002019, up: 0.0002019}, sys: {dn: -6.611e-05, up: 6.611e-05}}}
+IsRef: 1
+Path: /REF/ATLAS_2018_I1698006/d03-x01-y01
+Title: doi:10.17182/hepdata.83965.v1/t3
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.750000e+02	2.500000e+01	2.500000e+01	6.434000e-01	7.996412e-02	7.996412e-02
+2.250000e+02	2.500000e+01	2.500000e+01	2.428000e-01	2.731928e-02	2.731928e-02
+3.000000e+02	5.000000e+01	5.000000e+01	7.896000e-02	8.655383e-03	8.655383e-03
+4.000000e+02	5.000000e+01	5.000000e+01	1.737000e-02	3.658065e-03	3.658065e-03
+5.250000e+02	7.500000e+01	7.500000e+01	3.232000e-03	1.098249e-03	1.098249e-03
+8.500000e+02	2.500000e+02	2.500000e+02	4.515000e-04	2.124480e-04	2.124480e-04
+END YODA_SCATTER2D_V2
+
+
+BEGIN YODA_SCATTER2D_V2 /REF/ATLAS_2018_I1698006/d04-x01-y01
+ErrorBreakdown: {0: {stat: {dn: -0.03664, up: 0.03664}, sys: {dn: -0.1144, up: 0.1144}}, 1: {stat: {dn: -0.02618, up: 0.02618}, sys: {dn: -0.03918, up: 0.03918}}, 2: {stat: {dn: -0.01024, up: 0.01024}, sys: {dn: -0.01541, up: 0.01541}}, 3: {stat: {dn: -0.005338, up: 0.005338}, sys: {dn: -0.004292, up: 0.004292}}, 4: {stat: {dn: -0.002436, up: 0.002436}, sys: {dn: -0.00143, up: 0.00143}}, 5: {stat: {dn: -0.0004024, up: 0.0004024}, sys: {dn: -0.0002027, up: 0.0002027}}}
+IsRef: 1
+Path: /REF/ATLAS_2018_I1698006/d04-x01-y01
+Title: doi:10.17182/hepdata.83965.v1/t4
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.750000e+02	2.500000e+01	2.500000e+01	8.150000e-01	1.201243e-01	1.201243e-01
+2.250000e+02	2.500000e+01	2.500000e+01	4.354000e-01	4.712181e-02	4.712181e-02
+3.000000e+02	5.000000e+01	5.000000e+01	1.496000e-01	1.850205e-02	1.850205e-02
+4.000000e+02	5.000000e+01	5.000000e+01	3.626000e-02	6.849490e-03	6.849490e-03
+5.250000e+02	7.500000e+01	7.500000e+01	1.105000e-02	2.824712e-03	2.824712e-03
+8.500000e+02	2.500000e+02	2.500000e+02	1.400000e-03	4.505697e-04	4.505697e-04
+END YODA_SCATTER2D_V2
+
+
+BEGIN YODA_SCATTER2D_V2 /REF/ATLAS_2018_I1698006/d05-x01-y01
+ErrorBreakdown: {0: {stat: {dn: -0.02953, up: 0.02953}, sys: {dn: -0.0796, up: 0.0796}}, 1: {stat: {dn: -0.01915, up: 0.01915}, sys: {dn: -0.02221, up: 0.02221}}, 2: {stat: {dn: -0.006774, up: 0.006774}, sys: {dn: -0.005916, up: 0.005916}}, 3: {stat: {dn: -0.003163, up: 0.003163}, sys: {dn: -0.001364, up: 0.001364}}, 4: {stat: {dn: -0.00117, up: 0.00117}, sys: {dn: -0.0002785, up: 0.0002785}}, 5: {stat: {dn: -0.0002148, up: 0.0002148}, sys: {dn: -9.972e-05, up: 9.972e-05}}}
+IsRef: 1
+Path: /REF/ATLAS_2018_I1698006/d05-x01-y01
+Title: doi:10.17182/hepdata.83965.v1/t5
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.750000e+02	2.500000e+01	2.500000e+01	6.078000e-01	8.490101e-02	8.490101e-02
+2.250000e+02	2.500000e+01	2.500000e+01	2.805000e-01	2.932587e-02	2.932587e-02
+3.000000e+02	5.000000e+01	5.000000e+01	7.915000e-02	8.993672e-03	8.993672e-03
+4.000000e+02	5.000000e+01	5.000000e+01	1.572000e-02	3.444570e-03	3.444570e-03
+5.250000e+02	7.500000e+01	7.500000e+01	3.178000e-03	1.202690e-03	1.202690e-03
+8.500000e+02	2.500000e+02	2.500000e+02	5.138000e-04	2.368187e-04	2.368187e-04
+END YODA_SCATTER2D_V2
+
+
+BEGIN YODA_SCATTER2D_V2 /REF/ATLAS_2018_I1698006/d06-x01-y01
+ErrorBreakdown: {0: {stat: {dn: -1.647, up: 1.647}, sys: {dn: -5.074, up: 5.074}}, 1: {stat: {dn: -1.357, up: 1.357}, sys: {dn: -2.419, up: 2.419}}, 2: {stat: {dn: -1.338, up: 1.338}, sys: {dn: -2.335, up: 2.335}}, 3: {stat: {dn: -0.2625, up: 0.2625}, sys: {dn: -0.3106, up: 0.3106}}}
+IsRef: 1
+Path: /REF/ATLAS_2018_I1698006/d06-x01-y01
+Title: doi:10.17182/hepdata.83965.v1/t6
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+0.000000e+00	5.000000e-01	5.000000e-01	5.296000e+01	5.334612e+00	5.334612e+00
+1.000000e+00	5.000000e-01	5.000000e-01	1.772000e+01	2.773628e+00	2.773628e+00
+2.000000e+00	5.000000e-01	5.000000e-01	8.041000e+00	2.691184e+00	2.691184e+00
+6.000000e+00	3.500000e+00	3.500000e+00	1.439000e+00	4.066677e-01	4.066677e-01
+END YODA_SCATTER2D_V2
+
+
+BEGIN YODA_SCATTER2D_V2 /REF/ATLAS_2018_I1698006/d07-x01-y01
+ErrorBreakdown: {}
+IsRef: 1
+Path: /REF/ATLAS_2018_I1698006/d07-x01-y01
+Title: doi:10.17182/hepdata.83965.v1/t7
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+END YODA_SCATTER2D_V2
+
+
+BEGIN YODA_SCATTER2D_V2 /REF/ATLAS_2018_I1698006/d07-x01-y02
+ErrorBreakdown: {}
+IsRef: 1
+Path: /REF/ATLAS_2018_I1698006/d07-x01-y02
+Title: doi:10.17182/hepdata.83965.v1/t7
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+END YODA_SCATTER2D_V2
+
+
+BEGIN YODA_SCATTER2D_V2 /REF/ATLAS_2018_I1698006/d08-x01-y01
+ErrorBreakdown: {}
+IsRef: 1
+Path: /REF/ATLAS_2018_I1698006/d08-x01-y01
+Title: doi:10.17182/hepdata.83965.v1/t8
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+END YODA_SCATTER2D_V2
+
+
+BEGIN YODA_SCATTER2D_V2 /REF/ATLAS_2018_I1698006/d08-x01-y02
+ErrorBreakdown: {}
+IsRef: 1
+Path: /REF/ATLAS_2018_I1698006/d08-x01-y02
+Title: doi:10.17182/hepdata.83965.v1/t8
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+END YODA_SCATTER2D_V2
+
+

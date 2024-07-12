@@ -12,7 +12,7 @@ namespace Rivet {
   public:
 
     /// Default constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2014_I1310835);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2014_I1310835);
 
     void init() {
       const FinalState fs(Cuts::abseta < 5.0);
@@ -26,22 +26,22 @@ namespace Rivet {
       // Selection: lepton selection
       Cut etaranges_el = Cuts::abseta < 2.47 && Cuts::pT > 7*GeV; 
       DressedLeptons electron_sel4l(photons, bare_el, 0.1, etaranges_el, false);
-      addProjection(electron_sel4l, "electrons");
+      declare(electron_sel4l, "electrons");
  
       Cut etaranges_mu = Cuts::abseta < 2.7 && Cuts::pT > 6*GeV;
       DressedLeptons muon_sel4l(photons, bare_mu, 0.1, etaranges_mu, false);
-      addProjection(muon_sel4l, "muons");
+      declare(muon_sel4l, "muons");
 
-      FastJets jetpro(fs, FastJets::ANTIKT, 0.4, JetAlg::NO_MUONS, JetAlg::NO_INVISIBLES);
-      addProjection(jetpro, "jet");
+      FastJets jetpro(fs, FastJets::ANTIKT, 0.4, JetAlg::Muons::NONE, JetAlg::Invisibles::NONE);
+      declare(jetpro, "jet");
 
       // Book histos
-      _h_pt           = bookHisto1D(1, 1, 1);
-      _h_rapidity     = bookHisto1D(2, 1, 1);
-      _h_m34          = bookHisto1D(3, 1, 1);
-      _h_costheta     = bookHisto1D(4, 1, 1);
-      _h_njets        = bookHisto1D(5, 1, 1);
-      _h_leadingjetpt = bookHisto1D(6, 1, 1);
+      book(_h_pt          , 1, 1, 1);
+      book(_h_rapidity    , 2, 1, 1);
+      book(_h_m34         , 3, 1, 1);
+      book(_h_costheta    , 4, 1, 1);
+      book(_h_njets       , 5, 1, 1);
+      book(_h_leadingjetpt, 6, 1, 1);
 
     }
 
@@ -50,9 +50,6 @@ namespace Rivet {
     /// Do the analysis
     void analyze(const Event& e) {
       
-
-      const double weight = e.weight();
-
       ////////////////////////////////////////////////////////////////////
       // preselection of leptons for ZZ-> llll final state
       ////////////////////////////////////////////////////////////////////
@@ -186,8 +183,8 @@ namespace Rivet {
       double H4l_pt       = Higgs.pt()/GeV; 
       double H4l_rapidity = Higgs.absrap(); 
       LorentzTransform HRF_boost;
-      //HRF_boost.mkFrameTransformFromBeta(Higgs.boostVector());
-      HRF_boost.setBetaVec(- Higgs.boostVector());
+      //HRF_boost.mkFrameTransformFromBeta(Higgs.betaVec());
+      HRF_boost.setBetaVec(- Higgs.betaVec());
       FourMomentum Z1_in_HRF = HRF_boost.transform( Z1.mom() );
       double H4l_costheta = fabs(cos( Z1_in_HRF.theta())); 
       double H4l_m34      = Z2.mom().mass()/GeV;
@@ -219,12 +216,12 @@ namespace Rivet {
       ////////////////////////////////////////////////////////////////////////////
 
 
-      _h_pt->fill(H4l_pt, weight);
-      _h_rapidity->fill(H4l_rapidity, weight);
-      _h_costheta->fill(H4l_costheta, weight);
-      _h_m34->fill(H4l_m34, weight);
-      _h_njets->fill(n_jets + 1, weight);
-      _h_leadingjetpt->fill(leading_jet_pt, weight);
+      _h_pt->fill(H4l_pt);
+      _h_rapidity->fill(H4l_rapidity);
+      _h_costheta->fill(H4l_costheta);
+      _h_m34->fill(H4l_m34);
+      _h_njets->fill(n_jets + 1);
+      _h_leadingjetpt->fill(leading_jet_pt);
 
 
     }
@@ -242,11 +239,6 @@ namespace Rivet {
     void finalize() {
 
       const double norm = crossSection()/sumOfWeights()/femtobarn;
-      std::cout << "xsec: " << crossSection() << std::endl;
-      std::cout << "sumw: " << sumOfWeights() << std::endl;
-      std::cout << "femb: " << femtobarn << std::endl;
-      std::cout << "norm: " << norm << std::endl;
-
       scale(_h_pt, norm);
       scale(_h_rapidity, norm);
       scale(_h_costheta, norm);
@@ -265,6 +257,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2014_I1310835);
+  RIVET_DECLARE_PLUGIN(ATLAS_2014_I1310835);
 
 }

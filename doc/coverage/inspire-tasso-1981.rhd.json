@@ -1,0 +1,62 @@
+{
+    "156513": [
+        "Search for New Sequential Leptons in $e^+ e^-$ Annihilation at {PETRA} Energies", 
+        "TASSO", 
+        "10.1016/0370-2693(81)90972-2", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-80-108"
+        ]
+    ], 
+    "164117": [
+        "Evidence for Charged Primary Partons in e+ e- ---> Two Jets", 
+        "TASSO", 
+        "10.1016/0370-2693(81)90104-0", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-81-005"
+        ]
+    ], 
+    "165769": [
+        "Two Photon Excitation of the Tensor Meson F0 (1270)", 
+        "Tasso", 
+        "10.1007/BF01547482", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-81-026"
+        ]
+    ], 
+    "166367": [
+        "$\\Lambda$, $\\bar{\\Lambda}$ Production in $e^+ e^-$ Annihilation at 33-{GeV} Center-of-mass Energy", 
+        "TASSO", 
+        "10.1016/0370-2693(81)90045-9", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-81-039"
+        ]
+    ], 
+    "167417": [
+        "High $p_T$ Hadron Production in Photon - Photon Collisions", 
+        "TASSO", 
+        "10.1016/0370-2693(81)90833-9", 
+        null, 
+        null, 
+        "ins167417", 
+        null, 
+        [
+            "DESY-81-053"
+        ]
+    ]
+}

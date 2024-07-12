@@ -1,0 +1,183 @@
+{
+    "618376": [
+        "Search for pair production of scalar top quarks in $R$-parity violating decay modes in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.92.051803", 
+        null, 
+        "hep-ex/0305010", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-03-070-E"
+        ]
+    ], 
+    "627594": [
+        "Measurement of the average time-integrated mixing probability of $b$-flavored hadrons produced at the Tevatron", 
+        "CDF", 
+        "10.1103/PhysRevD.69.012002", 
+        null, 
+        "hep-ex/0309030", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-03-257-E"
+        ]
+    ], 
+    "628308": [
+        "Search for Kaluza-Klein graviton emission in $p \\bar{p}$ collisions at $\\sqrt{s}$ = 1.8-TeV using the missing energy signature", 
+        "CDF", 
+        "10.1103/PhysRevLett.92.121802", 
+        null, 
+        "hep-ex/0309051", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-03-285-E"
+        ]
+    ], 
+    "632742": [
+        "Inclusive double pomeron exchange at the Fermilab Tevatron $\\bar{p}p$ collider", 
+        "CDF", 
+        "10.1103/PhysRevLett.93.141601", 
+        null, 
+        "hep-ex/0311023", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-03-043-E"
+        ]
+    ], 
+    "633601": [
+        "Combination of CDF and D0 Results on $W$ Boson Mass and Width", 
+        "CDF", 
+        "10.1103/PhysRevD.70.092008", 
+        null, 
+        "hep-ex/0311039", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-03-490-E"
+        ]
+    ], 
+    "633975": [
+        "Measurement of the polar-angle distribution of leptons from $W$ boson decay as a function of the W transverse momentum in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.70.032004", 
+        null, 
+        "hep-ex/0311050", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-03-381-E"
+        ]
+    ], 
+    "634047": [
+        "Heavy flavor properties of jets produced in $p \\bar{p}$ interactions at $\\sqrt{s}$ = 1.8-TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.69.072004", 
+        null, 
+        "hep-ex/0311051", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-03-382-E"
+        ]
+    ], 
+    "634753": [
+        "Observation of the narrow state $X(3872) \\to J/\\psi \\pi^+ \\pi^-$ in $\\bar{p}p$ collisions at $\\sqrt{s} = 1.96$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.93.072001", 
+        null, 
+        "hep-ex/0312021", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-03-393-E"
+        ]
+    ], 
+    "646686": [
+        "Search for $B_s^0 \\to \\mu^+ \\mu^-$ and $B_d^0 \\to \\mu^+ \\mu^-$ decays in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.96$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.93.032001", 
+        null, 
+        "hep-ex/0403032", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-04-036-E"
+        ]
+    ], 
+    "647164": [
+        "Optimized search for single top quark production at the Fermilab tevatron", 
+        "CDF", 
+        "10.1103/PhysRevD.69.052003", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-03-388-E"
+        ]
+    ], 
+    "647490": [
+        "The underlying event in hard interactions at the Tevatron $\\bar{p}p$ collider", 
+        "CDF", 
+        "10.1103/PhysRevD.70.072002", 
+        null, 
+        "hep-ex/0404004", 
+        "ins647490", 
+        null, 
+        [
+            "FERMILAB-PUB-04-041-E"
+        ]
+    ], 
+    "648506": [
+        "Direct photon cross section with conversions at CDF", 
+        "CDF", 
+        "10.1103/PhysRevD.70.074008", 
+        null, 
+        "hep-ex/0404022", 
+        "ins648506", 
+        null, 
+        [
+            "FERMILAB-PUB-04-044-E", 
+            "FERMILAB-PUB-04-044E"
+        ]
+    ], 
+    "649267": [
+        "Measurement of the $t\\bar{t}$ production cross section in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.96$ TeV using dilepton events", 
+        "CDF", 
+        "10.1103/PhysRevLett.93.142001", 
+        null, 
+        "hep-ex/0404036", 
+        "ins649267", 
+        null, 
+        [
+            "FERMILAB-PUB-04-051-E"
+        ]
+    ], 
+    "650730": [
+        "Inclusive search for anomalous production of high $p_T$ like-sign lepton pairs in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.93.061802", 
+        null, 
+        "hep-ex/0405063", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-04-017-E"
+        ]
+    ], 
+    "653243": [
+        "Search for doubly-charged Higgs bosons decaying to dileptons in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.96$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.93.221802", 
+        null, 
+        "hep-ex/0406073", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-04-112-E"
+        ]
+    ]
+}

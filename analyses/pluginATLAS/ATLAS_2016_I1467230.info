@@ -3,11 +3,13 @@ Year: 2016
 Summary: Track-based minimum bias with low-pT tracks at 13 TeV
 Experiment: ATLAS
 Collider: LHC
-SpiresID: 1467230
+InspireID: 1467230
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Roman Lysak <roman.lysak@cern.ch>
 References:
+ - ATLAS-STDM-2015-17
  - "Eur.Phys.J. C76 (2016) no.9, 502"
  - "doi:10.1140/epjc/s10052-016-4335-y"
  - "arXiv:1606.01133 [hep-ex]"
@@ -17,7 +19,7 @@ Keywords:
 RunInfo:
   "$pp$ QCD interactions at 13 TeV. Diffractive events should
   be included. Multiple kinematic cuts should not be required."
-Luminosity_fb: 1.51*E-07
+Luminosity_fb: 1.51E-7
 Beams: [p+, p+]
 Energies: [13000]
 PtCuts: [0.1]
@@ -48,3 +50,8 @@ BibTeX: '@article{Aaboud:2016itf,
       reportNumber   = "CERN-EP-2016-099",
       SLACcitation   = "%%CITATION = ARXIV:1606.01133;%%"
 }'
+
+ReleaseTests:
+ - $A LHC-13-UE-Long
+ - $A-2 LHC-13-UE
+

@@ -1,0 +1,42 @@
+Name: H1_2007_I736052
+Year: 2007
+Summary:  Measurement of inclusive production of D* mesons both with and without dijet production in DIS collisions (H1)
+Experiment: H1
+Collider: HERA
+InspireID: 736052
+Status: VALIDATED
+Reentrant: True
+Authors:
+ - Maksim Davydov <davydov.mm17@physics.msu.ru>
+ - Hannes Jung <hannes.jung@desy.de>
+References:
+ - 'Eur.Phys.J.C 51 (2007) 271'
+ - 'DOI: 10.1140/epjc/s10052-007-0296-5'
+ - 'arXiv:hep-ex/0701023 ' 
+ - 'DESY-06-240'
+Beams: [[e+, p+],[p+,e+]]
+Energies: [[27.5,920],[920,27.5]]
+Description:
+  'Inclusive $D^*$ production is measured in deep-inelastic $ep$ scattering at HERA with the H1 detector. In addition, the production of dijets in events with a $D^*$ meson is investigated. The analysis covers values of photon virtuality $2< Q^2 \leq 100$ GeV$^2$ and of inelasticity $0.05 \leq y \leq 0.7$. Differential cross sections are measured as a function of $Q^2$ and $x$ and of various $D^*$ meson and jet observables.'
+ValidationInfo:
+  'A description of the process used to validate the Rivet code against
+  the original experimental analysis. Cut-flow tables and similar information
+  are welcome'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: H1:2006phr
+BibTeX: '@article{H1:2006phr,
+    author = "Aktas, A. and others",
+    collaboration = "H1",
+    title = "{Production of D*+- Mesons with Dijets in Deep-Inelastic Scattering at HERA}",
+    eprint = "hep-ex/0701023",
+    archivePrefix = "arXiv",
+    reportNumber = "DESY-06-240",
+    doi = "10.1140/epjc/s10052-007-0296-5",
+    journal = "Eur. Phys. J. C",
+    volume = "51",
+    pages = "271--287",
+    year = "2007"
+}'
+

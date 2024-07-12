@@ -1,0 +1,247 @@
+{
+    "511161": [
+        "Observation of orbitally excited $B$ mesons in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.64.072002", 
+        null, 
+        null, 
+        "ins511161", 
+        null, 
+        [
+            "FERMILAB-PUB-99-330-E"
+        ]
+    ], 
+    "529157": [
+        "Measurement of $d(\\sigma)/dy$ for high mass Drell-Yan $e^+e^-$ pairs from $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.63.011101", 
+        null, 
+        "hep-ex/0006025", 
+        "ins529157", 
+        null, 
+        [
+            "FERMILAB-PUB-00-133-E"
+        ]
+    ], 
+    "529252": [
+        "Measurement of the top quark mass with the Collider Detector at Fermilab", 
+        "CDF", 
+        "10.1103/PhysRevD.63.032003", 
+        null, 
+        "hep-ex/0006028", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-00-127-E", 
+            "FERMILAB-PUB-00-128-E"
+        ]
+    ], 
+    "530708": [
+        "Measurement of the $W$ boson mass with the Collider Detector at Fermilab", 
+        "CDF", 
+        "10.1103/PhysRevD.64.052001", 
+        null, 
+        "hep-ex/0007044", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-00-158-E"
+        ]
+    ], 
+    "533836": [
+        "Test of enhanced leading order QCD in $W$ boson plus jets events from 1.8 TeV $\\bar{p}p$ collisions", 
+        "CDF", 
+        "10.1103/PhysRevD.63.072003", 
+        null, 
+        null, 
+        "ins533836", 
+        null, 
+        [
+            "FERMILAB-PUB-00-196-E"
+        ]
+    ], 
+    "535426": [
+        "Search for neutral supersymmetric Higgs bosons in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.86.4472", 
+        null, 
+        "hep-ex/0010052", 
+        "ins535426", 
+        null, 
+        [
+            "FERMILAB-PUB-00-258-E", 
+            "CDF-ANAL-EXOTIC-5328"
+        ]
+    ], 
+    "536073": [
+        "Search for the supersymmetric partner of the top quark in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.63.091101", 
+        null, 
+        "hep-ex/0011004", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-00-288-E"
+        ]
+    ], 
+    "536123": [
+        "Measurement of the top quark $p_T$ distribution", 
+        "CDF", 
+        "10.1103/PhysRevLett.87.102001", 
+        null, 
+        null, 
+        "ins536123", 
+        null, 
+        [
+            "FERMILAB-PUB-00-101-E"
+        ]
+    ], 
+    "538041": [
+        "Measurement of the two-jet differential cross section in $p\\bar{p}$ collisions at $\\sqrt{s} = 1800$ GeV", 
+        "CDF", 
+        "10.1103/PhysRevD.64.012001", 
+        null, 
+        "hep-ex/0012013", 
+        "ins538041", 
+        null, 
+        [
+            "FERMILAB-PUB-00-311-E"
+        ]
+    ], 
+    "538411": [
+        "First measurement of the ratio $B(t \\to W b)/B(t \\to W q)$ and associated limit on the CKM element $|V_{tb}|$", 
+        "CDF", 
+        "10.1103/PhysRevLett.86.3233", 
+        null, 
+        "hep-ex/0012029", 
+        "ins538411", 
+        null, 
+        [
+            "FERMILAB-PUB-00-340-E"
+        ]
+    ], 
+    "552302": [
+        "Measurement of the $t\\bar{t}$ Production Cross Section in $p\\bar{p}$ Collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.64.032002", 
+        null, 
+        "hep-ex/0101036", 
+        "ins552302", 
+        null, 
+        [
+            "FERMILAB-PUB-01-007-E"
+        ]
+    ], 
+    "552797": [
+        "Measurement of the Inclusive Jet Cross Section in $\\bar{p}p$ Collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.64.032001", 
+        null, 
+        "hep-ph/0102074", 
+        "ins552797", 
+        null, 
+        [
+            "FERMILAB-PUB-01-008-E", 
+            "FNAL-PUB-01-008-E"
+        ]
+    ], 
+    "557012": [
+        "Search for Narrow Diphoton Resonances and for $\\gamma \\gamma + W / Z$ Signatures in $p\\bar{p}$ Collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.64.092002", 
+        null, 
+        "hep-ex/0105066", 
+        "ins557012", 
+        null, 
+        [
+            "FERMILAB-PUB-01-073-E"
+        ]
+    ], 
+    "557212": [
+        "Double Diffraction Dissociation at the Fermilab Tevatron Collider", 
+        "CDF", 
+        "10.1103/PhysRevLett.87.141802", 
+        null, 
+        "hep-ex/0107070", 
+        "ins557212", 
+        null, 
+        [
+            "FERMILAB-PUB-01-063-E"
+        ]
+    ], 
+    "557478": [
+        "Production of $\\chi_{c1}$ and $\\chi_{c2}$ in $p\\bar{p}$ Collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.86.3963", 
+        null, 
+        null, 
+        "ins557478", 
+        null, 
+        [
+            "FERMILAB-PUB-01-484-E", 
+            "CDF-5319"
+        ]
+    ], 
+    "558278": [
+        "Measurement of $d(\\sigma)/dM$ and Forward-Backward Charge Asymmetry for High Mass Drell-Yan $e^+e^-$ Pairs from $p\\bar{p}$ Collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.87.131802", 
+        null, 
+        "hep-ex/0106047", 
+        "ins558278", 
+        null, 
+        [
+            "FERMILAB-PUB-01-116-E"
+        ]
+    ], 
+    "558408": [
+        "Search for Gluinos and Squarks Using Like-Sign Dileptons in $p\\bar{p}$ Collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.87.251803", 
+        null, 
+        "hep-ex/0106061", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-01-111-E", 
+            "CDF-PUB-EXOTIC-PUBLIC-5580"
+        ]
+    ], 
+    "559483": [
+        "Search for Quark Lepton Compositeness and a Heavy $W^\\prime$ Boson Using the $e \\nu$ Channel in $p\\bar{p}$ Collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.87.231803", 
+        null, 
+        "hep-ex/0107008", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-01-222-E"
+        ]
+    ], 
+    "560273": [
+        "Charged Particle Multiplicity in Jets in $p\\bar{p}$ Collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.87.211804", 
+        null, 
+        null, 
+        "ins560273", 
+        null, 
+        [
+            "FERMILAB-PUB-01-106-E"
+        ]
+    ], 
+    "560628": [
+        "Observation of Diffractive $J/\\psi$ Production at the Fermilab Tevatron", 
+        "CDF", 
+        "10.1103/PhysRevLett.87.241802", 
+        null, 
+        "hep-ex/0107071", 
+        "ins560628", 
+        null, 
+        [
+            "FERMILAB-PUB-01-225-E"
+        ]
+    ]
+}

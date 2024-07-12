@@ -5,12 +5,13 @@ Experiment: CMS
 Collider: LHC
 InspireID: 1491953
 Status: VALIDATED
+Reentrant: true
 Authors:
- - Emanuela.Barberis@cern.ch
- - b.bhawandeep@cern.ch
- - apichart.hortiangtham@cern.ch
- - Kadir.Ocalan@cern.ch
- - philippe.gras@cern.ch
+ - Emanuela Barberis <Emanuela.Barberis@cern.ch>
+ - B. Bhawandeep <b.bhawandeep@cern.ch>
+ - Apichart Hortiangtham <apichart.hortiangtham@cern.ch>
+ - Kadir Ocalan <Kadir.Ocalan@cern.ch>
+ - Philippe Gras <philippe.gras@cern.ch>
 References:
  - Phys.Rev. D95 (2017) 052002
  - doi:10.1103/PhysRevD.95.052002
@@ -20,6 +21,7 @@ RunInfo:
   8 TeV $pp \to W+jets$.
 Beams: [p+, p+]
 Energies: [8000]
+Luminosity_fb: 19.6
 NumEvents: 76000000
 NeedCrossSection: True
 Description:

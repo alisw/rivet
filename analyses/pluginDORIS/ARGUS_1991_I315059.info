@@ -1,0 +1,31 @@
+Name: ARGUS_1991_I315059
+Year: 1991
+Summary: $D^0$, $D^+$, $D^{*+}$ production in $e^+e^-$ annihilation at 10.47 GeV, and $B$ decays
+Experiment: ARGUS
+Collider: DORIS
+InspireID: 315059
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Z.Phys. C52 (1991) 353-360, 1991 
+RunInfo: e+e- to hadrons, at 10.58 GeV, or Upsilon(4S)
+NeedCrossSection: yes
+Beams: [e-, e+]
+Description:
+  'Measurement of the scaled momentum spectra for  $D^0$, $D^+$, $D^{*+}$ production in $e^+e^-$ annihilation at 10.47 GeV, and from $B$ decays at the $\Upsilon(4S)$.'
+Keywords: []
+BibKey: Albrecht:1991ss
+BibTeX: '@article{Albrecht:1991ss,
+      author         = "Albrecht, H. and others",
+      title          = "{Inclusive production of D0, D+ and D*+ (2010) mesons in
+                        B decays and nonresonant e+ e- annihilation at 10.6-GeV}",
+      collaboration  = "ARGUS",
+      journal        = "Z. Phys.",
+      volume         = "C52",
+      year           = "1991",
+      pages          = "353-360",
+      doi            = "10.1007/BF01559430",
+      reportNumber   = "DESY-91-023",
+      SLACcitation   = "%%CITATION = ZEPYA,C52,353;%%"
+}'

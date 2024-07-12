@@ -9,24 +9,22 @@ namespace Rivet {
 
 
   /// @brief OPAL Delta++ fragmentation function paper
+  ///
   /// @author Peter Richardson
   class OPAL_1995_S3198391 : public Analysis {
   public:
 
-    /// Constructor
-    OPAL_1995_S3198391()
-      : Analysis("OPAL_1995_S3198391")
-    {}
+    RIVET_DEFAULT_ANALYSIS_CTOR(OPAL_1995_S3198391);
 
 
     /// @name Analysis methods
-    //@{
+    /// @{
 
     void init() {
       declare(Beam(), "Beams");
       declare(ChargedFinalState(), "FS");
       declare(UnstableParticles(), "UFS");
-      _histXpDelta   = bookHisto1D( 1, 1, 1);
+      book(_histXpDelta, 1, 1, 1);
     }
 
 
@@ -42,9 +40,6 @@ namespace Rivet {
       }
       MSG_DEBUG("Passed leptonic event cut");
 
-      // Get event weight for histo filling
-      const double weight = e.weight();
-
       // Get beams and average beam momentum
       const ParticlePair& beams = apply<Beam>(e, "Beams").beams();
       const double meanBeamMom = ( beams.first.p3().mod() +
@@ -52,12 +47,12 @@ namespace Rivet {
       MSG_DEBUG("Avg beam momentum = " << meanBeamMom);
 
       // Final state of unstable particles to get particle spectra
-      const UnstableParticles& ufs = apply<UnstableFinalState>(e, "UFS");
+      const UnstableParticles& ufs = apply<UnstableParticles>(e, "UFS");
 
-      foreach (const Particle& p, ufs.particles()) {
+      for (const Particle& p : ufs.particles()) {
         if(p.abspid()==2224) {
           double xp = p.p3().mod()/meanBeamMom;
-          _histXpDelta->fill(xp, weight);
+          _histXpDelta->fill(xp);
         }
       }
     }
@@ -68,17 +63,17 @@ namespace Rivet {
       scale(_histXpDelta, 1./sumOfWeights());
     }
 
-    //@}
+    /// @}
 
 
   private:
 
       Histo1DPtr _histXpDelta;
-    //@}
 
   };
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(OPAL_1995_S3198391);
+
+
+  RIVET_DECLARE_ALIASED_PLUGIN(OPAL_1995_S3198391, OPAL_1995_I398320);
 
 }

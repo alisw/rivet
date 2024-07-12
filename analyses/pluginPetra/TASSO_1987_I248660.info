@@ -1,0 +1,36 @@
+Name: TASSO_1987_I248660
+Year: 1987
+Summary: Energy-Energy correlations between 12 and 46.8 GeV
+Experiment: TASSO
+Collider: Petra
+InspireID: 248660
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Z.Phys. C36 (1987) 349-361, 1987
+RunInfo: e+e- to hadrons at the relevant CMS energies.  Beam energy must be specified as analysis option "ENERGY" when rivet-merging samples.
+NeedCrossSection: no
+Beams: [e+, e-]
+Energies: [14.0,22.0,34.8,43.5]
+Options:
+ - ENERGY=14.0,22.0,34.8,43.5
+Description:
+  'Measurement of the energy-energy correlation at centre-of-mass energies between 12 and 46.8 GeV.
+  Beam energy must be specified as analysis option "ENERGY" when rivet-merging samples.'
+Keywords: []
+BibKey: Braunschweig:1987ig
+BibTeX: '@article{Braunschweig:1987ig,
+      author         = "Braunschweig, W. and others",
+      title          = "{A Study of Energy-energy Correlations Between 12-{GeV}
+                        and 46.8-{GeV} {CM} Energies}",
+      collaboration  = "TASSO",
+      journal        = "Z. Phys.",
+      volume         = "C36",
+      year           = "1987",
+      pages          = "349-361",
+      doi            = "10.1007/BF01573928",
+      reportNumber   = "DESY-87-081, FTUAM-EP-87-04, SI-87-12",
+      SLACcitation   = "%%CITATION = ZEPYA,C36,349;%%"
+}'

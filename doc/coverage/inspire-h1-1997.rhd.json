@@ -1,0 +1,196 @@
+{
+    "423350": [
+        "Search for excited fermions with the H1 detector", 
+        "H1", 
+        "10.1016/S0550-3213(96)00591-3", 
+        null, 
+        "hep-ex/9609008", 
+        null, 
+        null, 
+        [
+            "DESY-96-163"
+        ]
+    ], 
+    "424463": [
+        "Measurement of charged particle transverse momentum spectra in deep inelastic scattering", 
+        "H1", 
+        "10.1016/S0550-3213(96)00675-X", 
+        null, 
+        "hep-ex/9610006", 
+        "ins424463", 
+        null, 
+        [
+            "DESY-96-215"
+        ]
+    ], 
+    "425598": [
+        "Scale influence on the energy dependence of photon - proton cross-sections", 
+        "H1", 
+        "10.1016/S0370-2693(96)01594-8", 
+        null, 
+        "hep-ex/9611004", 
+        "ins425598", 
+        null, 
+        [
+            "DESY-96-224"
+        ]
+    ], 
+    "426362": [
+        "Determination of the longitudinal proton structure function F(L) (x, Q**2) at low x", 
+        "H1", 
+        "10.1016/S0370-2693(96)01684-X", 
+        null, 
+        "hep-ex/9611017", 
+        "ins426362", 
+        null, 
+        [
+            "DESY-96-236"
+        ]
+    ], 
+    "428367": [
+        "The H1 detector at HERA", 
+        "H1", 
+        "10.1016/S0168-9002(96)00893-5", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1996-078"
+        ]
+    ], 
+    "429800": [
+        "The Tracking, calorimeter and muon detectors of the H1 experiment at HERA", 
+        "H1", 
+        "10.1016/S0168-9002(96)00894-7", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1996-034"
+        ]
+    ], 
+    "440126": [
+        "Diffraction dissociation in photoproduction at HERA", 
+        "H1", 
+        "10.1007/s002880050385", 
+        null, 
+        "hep-ex/9702003", 
+        "ins440126", 
+        null, 
+        [
+            "DESY-97-009"
+        ]
+    ], 
+    "440537": [
+        "Observation of events at very high $Q^{2}$ in $e p$ collisions at HERA", 
+        "H1", 
+        "10.1007/s002880050383", 
+        null, 
+        "hep-ex/9702012", 
+        null, 
+        null, 
+        [
+            "DESY-97-024", 
+            "DESY-97-24", 
+            "DAPNIA-SPP-97-18"
+        ]
+    ], 
+    "441392": [
+        "A Measurement of the proton structure function f2 (x, q**2) at low x and low q**2 at HERA", 
+        "H1", 
+        "10.1016/S0550-3213(97)00301-5", 
+        null, 
+        "hep-ex/9703012", 
+        "ins441392", 
+        null, 
+        [
+            "DESY-97-042"
+        ]
+    ], 
+    "442752": [
+        "Bose-Einstein correlations in deep inelastic e p scattering at HERA", 
+        "H1", 
+        "10.1007/s002880050486", 
+        null, 
+        "hep-ex/9705001", 
+        null, 
+        null, 
+        [
+            "DESY-97-075"
+        ]
+    ], 
+    "443293": [
+        "Proton dissociative $\\rho$ and elastic $\\phi$ electroproduction at HERA", 
+        "H1", 
+        "10.1007/s002880050506", 
+        null, 
+        "hep-ex/9705014", 
+        "ins443293", 
+        null, 
+        [
+            "DESY-97-082"
+        ]
+    ], 
+    "443582": [
+        "Photoproduction of K0 and Lambda at HERA and a comparison with deep inelastic scattering", 
+        "H1", 
+        "10.1007/s002880050545", 
+        null, 
+        "hep-ex/9705018", 
+        "ins443582", 
+        null, 
+        [
+            "DESY-97-095"
+        ]
+    ], 
+    "443753": [
+        "Measurement of event shape variables in deep inelastic e p scattering", 
+        "H1", 
+        "10.1016/S0370-2693(97)00754-5", 
+        null, 
+        "hep-ex/9706002", 
+        "ins443753", 
+        null, 
+        [
+            "DESY-97-098"
+        ]
+    ], 
+    "445116": [
+        "Evolution of e p fragmentation and multiplicity distributions in the Breit frame", 
+        "H1", 
+        "10.1016/S0550-3213(97)00585-3", 
+        null, 
+        "hep-ex/9707005", 
+        "ins445116", 
+        null, 
+        [
+            "DESY-97-108"
+        ]
+    ], 
+    "447269": [
+        "Inclusive measurement of diffractive deep inelastic ep scattering", 
+        "H1", 
+        "10.1007/s002880050584", 
+        null, 
+        "hep-ex/9708016", 
+        "ins447269", 
+        null, 
+        [
+            "DESY-97-158"
+        ]
+    ], 
+    "448449": [
+        "Low Q**2 jet production at HERA and virtual photon structure", 
+        "H1", 
+        "10.1016/S0370-2693(97)01264-1", 
+        null, 
+        "hep-ex/9709017", 
+        "ins448449", 
+        null, 
+        [
+            "DESY-97-179"
+        ]
+    ]
+}

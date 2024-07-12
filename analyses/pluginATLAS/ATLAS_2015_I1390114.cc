@@ -13,7 +13,7 @@ namespace Rivet {
   class ATLAS_2015_I1390114 : public Analysis {
   public:
 
-    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2015_I1390114);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2015_I1390114);
 
 
     void init() {
@@ -64,15 +64,13 @@ namespace Rivet {
       jets.useInvisibles();
       declare(jets, "jets");
 
-      _histo = bookHisto1D(1,1,1);
-      _ratio = bookScatter2D(2,1,1, true);
-      _aux   = bookHisto1D("_aux", 1, 0.5, 1.5);
+      book(_histo ,1,1,1);
+      book(_ratio, 2,1,1, true);
+      book(_aux   ,"_aux", 1, 0.5, 1.5);
     }
 
 
     void analyze(const Event& event) {
-
-      const double weight = event.weight();
 
       // Get the selected objects, using the projections.
       vector<DressedLepton> electrons = apply<DressedLeptons>(event, "dressedelectrons").dressedLeptons();
@@ -83,13 +81,13 @@ namespace Rivet {
       Jets bjets;
 
       // Check overlap of jets/leptons.
-      foreach (Jet jet, jets) {
+      for (Jet jet : jets) {
         // if dR(el,jet) < 0.4 skip the event
-        foreach (DressedLepton el, electrons) {
+        for (DressedLepton el : electrons) {
           if (deltaR(jet, el) < 0.4)  vetoEvent;
         }
         // if dR(mu,jet) < 0.4 skip the event
-        foreach (DressedLepton mu, muons) {
+        for (DressedLepton mu : muons) {
           if (deltaR(jet, mu) < 0.4)  vetoEvent;
         }
         // Count the number of b-tags
@@ -101,13 +99,13 @@ namespace Rivet {
 
       // Evaluate basic event selection
       bool pass_1lep = (electrons.size() == 1 && muons.empty()) || (muons.size() == 1 && electrons.empty());
-      if (pass_1lep && bjets.size() >= 3 && jets.size() >= 5)  _histo->fill(1, weight);
+      if (pass_1lep && bjets.size() >= 3 && jets.size() >= 5)  _histo->fill(1);
 
       if (muons.size() == 1 && electrons.size() == 1 && bjets.size() >= 3) {
-        if (muons[0].charge() * electrons[0].charge() < 0.0)  _histo->fill(2, weight);
+        if (muons[0].charge() * electrons[0].charge() < 0.0)  _histo->fill(2);
       }
 
-      DressedLepton *lep1 = NULL, *lep2 = NULL;
+      DressedLepton *lep1 = nullptr, *lep2 = nullptr;
       bool zveto = false;
       if (electrons.size() == 2 && muons.empty()) {
         lep1 = &electrons[0];
@@ -126,11 +124,11 @@ namespace Rivet {
         double mass = (lep1->momentum() + lep2->momentum()).mass();
         bool pass_2lep = mass > 15*GeV && (zveto || !(mass > 81*GeV && mass < 101*GeV));
         if ( pass_2lep && bjets.size() >= 4) {
-          _histo->fill(3, weight);
-          _histo->fill(4, weight);
+          _histo->fill(3);
+          _histo->fill(4);
         }
         if ( pass_2lep && jets.size() >= 4) {
-          _aux->fill(1, weight);
+          _aux->fill(1);
         }
       }
     }
@@ -165,6 +163,6 @@ namespace Rivet {
 
 
   // Hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2015_I1390114);
+  RIVET_DECLARE_PLUGIN(ATLAS_2015_I1390114);
 
 }

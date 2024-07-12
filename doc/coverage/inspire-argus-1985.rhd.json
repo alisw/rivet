@@ -1,0 +1,134 @@
+{
+    "204851": [
+        "Production and Decay of the Charged D* Mesons in e+ e- Annihilation at 10-GeV Center-Of-Mass Energy", 
+        "ARGUS", 
+        "10.1016/0370-2693(85)90177-7", 
+        null, 
+        null, 
+        "ins204851", 
+        null, 
+        [
+            "DESY-84-073"
+        ]
+    ], 
+    "207949": [
+        "Production and Decay of the F Meson in $e^+ e^-$ Annihilation at 10-{GeV} Center-of-mass Energy", 
+        "ARGUS", 
+        "10.1016/0370-2693(85)90562-3", 
+        null, 
+        null, 
+        "ins207949", 
+        null, 
+        [
+            "DESY-84-043"
+        ]
+    ], 
+    "213080": [
+        "Search for Narrow States Coupling to $\\tau$ Pairs in Radiative Upsilon Decays", 
+        "ARGUS", 
+        "10.1016/0370-2693(85)90429-0", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-85-014"
+        ]
+    ], 
+    "213240": [
+        "A Determination of the Muon Pair Branching Ratio of the Upsilon-prime Meson", 
+        "ARGUS", 
+        "10.1007/BF01550247", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-85-021"
+        ]
+    ], 
+    "214357": [
+        "Search for Fractionally Charged Particles Produced in $e^+ e^-$ Annihilation", 
+        "ARGUS", 
+        "10.1016/0370-2693(85)91369-3", 
+        null, 
+        null, 
+        "ins214357", 
+        null, 
+        [
+            "DESY-85-037"
+        ]
+    ], 
+    "214358": [
+        "Observation of Anti-deuteron Production in Electron - Positron Annihilation at 10-{GeV} Center-of-mass Energy", 
+        "ARGUS", 
+        "10.1016/0370-2693(85)90675-6", 
+        null, 
+        null, 
+        "ins214358", 
+        null, 
+        [
+            "DESY-85-034"
+        ]
+    ], 
+    "215990": [
+        "An Upper Limit on the Mass of the $\\nu_\\tau$", 
+        "ARGUS", 
+        "10.1016/0370-2693(85)90305-3", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-85-054"
+        ]
+    ], 
+    "216797": [
+        "Direct Evidence for W Exchange in Charmed Meson Decay", 
+        "ARGUS", 
+        "10.1016/0370-2693(85)90805-6", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-85-048"
+        ]
+    ], 
+    "221001": [
+        "Radiative Decays of the $\\Upsilon$ (2s) Into the Three Chi($b$) States.", 
+        "ARGUS", 
+        "10.1016/0370-2693(85)91338-3", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-85-068"
+        ]
+    ], 
+    "221003": [
+        "OBSERVATION OF B MESON DECAY INTO J / psi", 
+        "ARGUS", 
+        "10.1016/0370-2693(85)90948-7", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-85-070"
+        ]
+    ], 
+    "221006": [
+        "Upper Limit for the Emission of Monoenergetic Photons in $\\Upsilon$ (1s) and $\\Upsilon$ (2s) Meson Decays", 
+        "ARGUS", 
+        "10.1007/BF01550813", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-85-083"
+        ]
+    ]
+}

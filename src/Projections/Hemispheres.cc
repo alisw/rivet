@@ -83,6 +83,9 @@ namespace Rivet {
     const int maxMassID = (mass2With >= mass2Against);
     const int maxBroadID = (broadWith >= broadAgainst);
     _highMassEqMaxBroad = (maxMassID == maxBroadID);
+
+    // Calculate direction correlation flag
+    _highMassDirection = mass2With>mass2Against;
   }
 
 

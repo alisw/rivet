@@ -6,7 +6,7 @@ namespace Rivet {
 
   FParameter::FParameter(const FinalState& fsp) {
     setName("FParameter");
-    addProjection(fsp, "FS");
+    declare(fsp, "FS");
     clear();
   }
 

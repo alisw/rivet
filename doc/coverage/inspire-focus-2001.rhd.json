@@ -1,0 +1,50 @@
+{
+    "539005": [
+        "A Study of the decay D0 ---> K+ pi-",
+        "FOCUS",
+        "10.1103/PhysRevLett.86.2955",
+        null,
+        "hep-ex/0012048",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-00-341-E"
+        ]
+    ],
+    "553350": [
+        "Measurement of the Relative Branching Ratio BR($\\Xi^+_c \\to p^+ K^- \\pi^+$) / BR($\\Xi^+_c \\to \\Xi^- \\pi^+ \\pi^+$)",
+        "FOCUS",
+        "10.1016/S0370-2693(01)00590-1",
+        null,
+        "hep-ex/0102040",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-01-025-E"
+        ]
+    ],
+    "556583": [
+        "A Measurement of the Branching Ratios of $D^+$ and $D^+_s$ Hadronic Decays to Four-Body Final States Containing a $K_S$",
+        "FOCUS",
+        "10.1103/PhysRevLett.87.162001",
+        null,
+        "hep-ex/0105031",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-01-071-E"
+        ]
+    ],
+    "563670": [
+        "A New Measurement of the $\\Xi^+_c$ Lifetime",
+        "FOCUS",
+        "10.1016/S0370-2693(01)01322-3",
+        null,
+        "hep-ex/0110002",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-01-296-E"
+        ]
+    ]
+}

@@ -1,0 +1,37 @@
+Name: BELLE_2011_I878228
+Year: 2011
+Summary: $e^+e^-\to D^{(*)+}_sD^{(*)-}_s$ cross sections near threshold
+Experiment: BELLE
+Collider: KEKB
+InspireID: 878228
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D83 (2011) 011101
+RunInfo:  e+e- to hadrons, plus muons for normalisation of R
+Beams: [e+, e-]
+Description:
+'$e^+e^-\to D^{(*)+}_sD^{(*)-}_s$ cross sections measured near threshold by BELLE using ISR. Cross sections for individual states,
+ and $R$ for the sum'
+ValidationInfo:
+  'Herwig7 e+e- events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Pakhlova:2010ek
+BibTeX: '@article{Pakhlova:2010ek,
+      author         = "Pakhlova, G. and others",
+      title          = "{Measurement of $e^+e^-\to D_s^{(*)+} D_s^{(*)-}$ cross
+                        sections near threshold using initial-state radiation}",
+      collaboration  = "Belle",
+      journal        = "Phys. Rev.",
+      volume         = "D83",
+      year           = "2011",
+      pages          = "011101",
+      doi            = "10.1103/PhysRevD.83.011101",
+      eprint         = "1011.4397",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1011.4397;%%"
+}'

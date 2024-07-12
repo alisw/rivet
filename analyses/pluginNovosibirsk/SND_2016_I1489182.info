@@ -1,0 +1,35 @@
+Name: SND_2016_I1489182
+Year: 2016
+Summary:  Cross section for $e^+e^-\to\omega\pi^0\to\pi^0\pi^0\gamma$ between 1.05 and 2 GeV
+Experiment: SND
+Collider: VEPP-2M
+InspireID: 1489182
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D94 (2016) no.11, 112001
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+Description:
+  'Measurement of the cross section for $e^+e^-\to\omega\pi^0\to\pi^0\pi^0\gamma$ at energies between 1.05 and 2 GeV.'
+Keywords:
+BibKey: Achasov:2016zvn
+BibTeX: '@article{Achasov:2016zvn,
+      author         = "Achasov, M. N. and others",
+      title          = "{Updated measurement of the $e^+e^- \to \omega \pi^0 \to
+                        \pi^0\pi^0\gamma$ cross section with the SND detector}",
+      journal        = "Phys. Rev.",
+      volume         = "D94",
+      year           = "2016",
+      number         = "11",
+      pages          = "112001",
+      doi            = "10.1103/PhysRevD.94.112001",
+      eprint         = "1610.00235",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1610.00235;%%"
+}'

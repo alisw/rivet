@@ -1,0 +1,102 @@
+{
+    "721275": [
+        "Transverse momentum and centrality dependence of high-$p_T$ non-photonic electron suppression in Au+Au collisions at $\\sqrt{s_{NN}} = 200$\\,GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.98.192301", 
+        null, 
+        "nucl-ex/0607012", 
+        "ins721275", 
+        null, 
+        []
+    ], 
+    "850950": [
+        "Pion femtoscopy in $p^+ p$ collisions at $\\sqrt{s}=200$ GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.83.064905", 
+        null, 
+        "1004.0925", 
+        "ins850950", 
+        null, 
+        []
+    ], 
+    "857694": [
+        "$K^{*0}$ production in Cu+Cu and Au+Au collisions at $\\sqrt{s_NN} = 62.4$ GeV and 200 GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.84.034909", 
+        null, 
+        "1006.1961", 
+        null, 
+        null, 
+        []
+    ], 
+    "865572": [
+        "Scaling properties at freeze-out in relativistic heavy ion collisions", 
+        "STAR", 
+        "10.1103/PhysRevC.83.034910", 
+        null, 
+        "1008.3133", 
+        null, 
+        null, 
+        []
+    ], 
+    "866968": [
+        "Measurement of the parity-violating longitudinal single-spin asymmetry for $W^{\\pm}$ boson production in polarized proton-proton collisions at $\\sqrt{s} = 500-GeV$", 
+        "STAR", 
+        "10.1103/PhysRevLett.106.062002", 
+        null, 
+        "1009.0326", 
+        null, 
+        null, 
+        []
+    ], 
+    "871561": [
+        "Strange and Multi-strange Particle Production in Au+Au Collisions at $\\sqrt{s_{NN}}$ = 62.4 GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.83.024901", 
+        null, 
+        "1010.0142", 
+        "ins871561", 
+        null, 
+        []
+    ], 
+    "889553": [
+        "Studies of di-jet survival and surface emission bias in Au+Au collisions via angular correlations with respect to back-to-back leading hadrons", 
+        "STAR", 
+        "10.1103/PhysRevC.83.061901", 
+        null, 
+        "1102.2669", 
+        "ins889553", 
+        null, 
+        []
+    ], 
+    "889563": [
+        "High $p_{T}$ non-photonic electron production in $p+p$ collisions at $\\sqrt{s} = 200$ GeV", 
+        "STAR", 
+        "10.1103/PhysRevD.83.052006", 
+        null, 
+        "1102.2611", 
+        "ins889563", 
+        null, 
+        []
+    ], 
+    "893021": [
+        "Observation of the antimatter helium-4 nucleus", 
+        "STAR", 
+        "10.1038/nature10079", 
+        null, 
+        "1103.3312", 
+        "ins893021", 
+        null, 
+        []
+    ], 
+    "914546": [
+        "Evolution of the differential transverse momentum correlation function with centrality in Au$+$Au collisions at $\\sqrt{s_{NN}} =$ 200 GeV", 
+        "STAR", 
+        "10.1016/j.physletb.2011.09.075", 
+        null, 
+        "1106.4334", 
+        null, 
+        null, 
+        []
+    ]
+}

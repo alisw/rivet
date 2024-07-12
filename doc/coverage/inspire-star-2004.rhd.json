@@ -1,0 +1,154 @@
+{
+    "588342": [
+        "Kaon production and kaon to pion ratio in Au+Au collisions at s(NN)**1/2 = 130-GeV", 
+        "STAR", 
+        "10.1016/j.physletb.2004.06.044", 
+        null, 
+        "nucl-ex/0206008", 
+        "ins588342", 
+        null, 
+        []
+    ], 
+    "620309": [
+        "Particle type dependence of azimuthal anisotropy and nuclear modification of particle production in Au + Au collisions at s(NN)**(1/2) = 200-GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.92.052302", 
+        null, 
+        "nucl-ex/0306007", 
+        "ins620309", 
+        null, 
+        []
+    ], 
+    "621642": [
+        "Rapidity and centrality dependence of proton and anti-proton production from Au-197 + Au-197 collisions at (S(NN))**(1/2)) = 130-GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.70.041901", 
+        null, 
+        "nucl-ex/0306029", 
+        "ins621642", 
+        null, 
+        []
+    ], 
+    "624475": [
+        "Rho0 production and possible modification in Au+Au and p+p collisions at S(NN)**1/2 = 200-GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.92.092301", 
+        null, 
+        "nucl-ex/0307023", 
+        "ins624475", 
+        null, 
+        []
+    ], 
+    "624566": [
+        "Multistrange baryon production in Au-Au collisions at S(NN)**1/2 = 130 GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.92.182301", 
+        null, 
+        "nucl-ex/0307024", 
+        "ins624566", 
+        null, 
+        []
+    ], 
+    "630160": [
+        "Identified particle distributions in pp and Au+Au collisions at s(NN)**(1/2) = 200 GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.92.112301", 
+        null, 
+        "nucl-ex/0310004", 
+        "ins630160", 
+        null, 
+        []
+    ], 
+    "631713": [
+        "Azimuthal anisotropy at RHIC: The First and fourth harmonics", 
+        "STAR", 
+        "10.1103/PhysRevLett.92.062301", 
+        null, 
+        "nucl-ex/0310029", 
+        null, 
+        null, 
+        []
+    ], 
+    "631869": [
+        "Cross-sections and transverse single spin asymmetries in forward neutral pion production from proton collisions at s**(1/2) = 200- GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.92.171801", 
+        null, 
+        "hep-ex/0310058", 
+        "ins631869", 
+        null, 
+        [
+            "NONUM-198439"
+        ]
+    ], 
+    "635102": [
+        "Azimuthally sensitive HBT in Au + Au collisions at s(NN)**(1/2) = 200-GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.93.012301", 
+        null, 
+        "nucl-ex/0312009", 
+        "ins635102", 
+        null, 
+        []
+    ], 
+    "642374": [
+        "Photon and neutral pion production in Au + Au collisions at s(NN)**(1/2) = 130-GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.70.044902", 
+        "704944", 
+        "nucl-ex/0401008", 
+        "ins642374", 
+        null, 
+        []
+    ], 
+    "647869": [
+        "Production of e+ e- pairs accompanied by nuclear dissociation in ultra-peripheral heavy ion collision", 
+        "STAR", 
+        "10.1103/PhysRevC.70.031902", 
+        null, 
+        "nucl-ex/0404012", 
+        "ins647869", 
+        null, 
+        []
+    ], 
+    "648464": [
+        "Centrality and pseudorapidity dependence of charged hadron production at intermediate $p_{T}$ in Au + Au collisions at $\\sqrt{s_{NN}}$ = 130-GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.70.044901", 
+        null, 
+        "nucl-ex/0404020", 
+        "ins648464", 
+        null, 
+        []
+    ], 
+    "653797": [
+        "Measurements of transverse energy distributions in Au + Au collisions at s(NN)**(1/2) = 200-GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.70.054907", 
+        null, 
+        "nucl-ex/0407003", 
+        "ins653797", 
+        null, 
+        []
+    ], 
+    "654226": [
+        "Azimuthal anisotropy and correlations at large transverse momenta in p+p and Au+Au collisions at s(NN)**(1/2) = 200-GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.93.252301", 
+        null, 
+        "nucl-ex/0407007", 
+        "ins654226", 
+        null, 
+        []
+    ], 
+    "656934": [
+        "Pseudorapidity asymmetry and centrality dependence of charged hadron spectra in d + Au collisions at S(NN)**(1/2) = 200-GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.70.064907", 
+        null, 
+        "nucl-ex/0408016", 
+        "ins656934", 
+        null, 
+        []
+    ]
+}

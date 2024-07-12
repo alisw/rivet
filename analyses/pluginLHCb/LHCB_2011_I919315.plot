@@ -1,14 +1,14 @@
 # BEGIN PLOT /LHCB_2011_I919315/d0[2-6]-x01-y..
 Title=Transverse momentum of $\Phi$-mesons
 XLabel=$p_T^\Phi$ [GeV]
-YLabel=$\text{d}\sigma /\text{d}p_\perp$ $[\mu \text{b}/\text{MeV}]$
+YLabel=$\mathrm{d}\sigma /\mathrm{d}p_\perp$ $[\mu \mathrm{b}/\mathrm{MeV}]$
 LogY=1
 # END PLOT
 
 # BEGIN PLOT /LHCB_2011_I919315/d01-x02-y01
 Title=Rapidity of $\Phi$-mesons
 XLabel=$y^\Phi$
-YLabel=$\text{d}\sigma /\text{d}y$ $[\mu \text{b}]$
+YLabel=$\mathrm{d}\sigma /\mathrm{d}y$ $[\mu \mathrm{b}]$
 LogY=0
 CustomLegend=$(0.6 < p_\perp^\Phi/\text{GeV} < 5.0)$
 LegendXPos=0.05
@@ -58,13 +58,13 @@ CustomLegend=$(3.88<y^\Phi<4.06)$
 # BEGIN PLOT /LHCB_2011_I919315/d07-x01-y01
 Title=Transverse momentum of $\Phi$-mesons
 XLabel=$p_T^\Phi$ [MeV]
-YLabel=$\text{d}\sigma /\text{d}p_\perp$ $[\mu \text{b}/\text{MeV}]$
+YLabel=$\mathrm{d}\sigma /\mathrm{d}p_\perp$ $[\mu \mathrm{b}/\mathrm{MeV}]$
 LogY=1
 # END PLOT
 
 # BEGIN PLOT /LHCB_2011_I919315/d08-x01-y01
 Title=Rapidity of $\Phi$-mesons
 XLabel=$y^\Phi$
-YLabel=$\text{d}\sigma /\text{d}y$ $[\mu \text{b}]$
+YLabel=$\mathrm{d}\sigma /\mathrm{d}y$ $[\mu \mathrm{b}]$
 LogY=1
 # END PLOT

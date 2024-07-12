@@ -1,0 +1,139 @@
+{
+    "200040": [
+        "Prompt electron production in $e^+e^-$ annihilations at 29-GeV", 
+        "TPC/Two Gamma", 
+        "10.1007/BF01642478", 
+        null, 
+        null, 
+        "ins200040", 
+        null, 
+        [
+            "UT-HE-84/03", 
+            "LBL-17545"
+        ]
+    ], 
+    "204889": [
+        "lambda production of $e^+e^-$ annihilation at 29-GeV", 
+        "TPC/Two Gamma", 
+        "10.1103/PhysRevLett.54.274", 
+        null, 
+        null, 
+        "ins204889", 
+        null, 
+        [
+            "UT-HE-84-14", 
+            "LBL-18382"
+        ]
+    ], 
+    "205658": [
+        "Measurement of the Total Hadronic Cross-section in Photon-photon Interactions", 
+        "TPC/Two Gamma", 
+        "10.1103/PhysRevLett.54.763", 
+        null, 
+        null, 
+        "ins205658", 
+        null, 
+        [
+            "UCSD-HE2 84-01"
+        ]
+    ], 
+    "205868": [
+        "Inclusive $\\gamma$ and $\\pi^0$ production cross-sections and energy fractions in $e^+e^-$ annihilation at 29-GeV", 
+        "TPC/Two Gamma", 
+        "10.1007/BF01556608", 
+        null, 
+        null, 
+        "ins205868", 
+        null, 
+        [
+            "LBL-18326", 
+            "TPC-UT-84-14"
+        ]
+    ], 
+    "205870": [
+        "Study of bose-einstein correlations in $e^+e^-$ annihilation at 29-GeV", 
+        "TPC/Two Gamma", 
+        "10.1103/PhysRevD.31.996", 
+        null, 
+        null, 
+        "ins205870", 
+        null, 
+        [
+            "LBL-18478"
+        ]
+    ], 
+    "205871": [
+        "Tests of models for parton fragmentation using three jet events in $e^+e^-$ annihiliation at $\\sqrt{s} = 29$ GeV", 
+        "TPC/Two Gamma", 
+        "10.1103/PhysRevLett.54.270", 
+        null, 
+        null, 
+        "ins205871", 
+        null, 
+        [
+            "LBL-18407", 
+            "TPC-LBL-84-44"
+        ]
+    ], 
+    "206144": [
+        "Tests of models for quark and gluon fragmentation in $e^+e^-$ annihilation $\\sqrt{s} = 29$ GeV", 
+        "TPC/Two Gamma", 
+        "10.1007/BF01550246", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "LBL-18408", 
+            "TPC-LBL-84-85"
+        ]
+    ], 
+    "212841": [
+        "Quark fragmentation functions and long range correlations in $e^+e^-$ annihiliation at $\\sqrt{s} = 29$ GeV", 
+        "TPC/Two Gamma", 
+        "10.1007/BF01436502", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "LBL-18911"
+        ]
+    ], 
+    "213118": [
+        "Prompt muon production in $e^+e^-$ annihilations at 29-GeV", 
+        "TPC/Two Gamma", 
+        "10.1103/PhysRevD.31.2719", 
+        null, 
+        null, 
+        "ins213118", 
+        null, 
+        [
+            "JHU-8501"
+        ]
+    ], 
+    "213402": [
+        "Exclusive production of $K^+ K^- \\pi^+ \\pi^-$ in photon-photon collisions", 
+        "TPC/Two Gamma", 
+        "10.1103/PhysRevLett.54.2564", 
+        null, 
+        null, 
+        "ins213402", 
+        null, 
+        [
+            "UCR-TPC-85-08"
+        ]
+    ], 
+    "214133": [
+        "Baryon production in $e^+e^-$ annihilation at $\\sqrt{s}=29$ GeV: clusters, diquarks, popcorn?", 
+        "TPC/Two Gamma", 
+        "10.1103/PhysRevLett.55.1047", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "LBL-19566"
+        ]
+    ]
+}

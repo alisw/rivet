@@ -1,0 +1,32 @@
+Name: BELLE_2022_I2140379
+Year: 2022
+Summary: Decay asymmetries in $\Lambda_c^+ \to \Sigma^+ \pi^0$, $\Sigma^+ \eta$, and $\Sigma^+ \eta^\prime$
+Experiment: BELLE
+Collider: KEKB
+InspireID: 2140379
+Status: VALIDATED NOHEPDATA SINGLEWEIGHT
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - arXiv:2208.10825 [hep-ex]
+RunInfo: Any process producing Lambda_c baryons
+Description:
+  'Decay asymmetries in $\Lambda_c^+ \to \Sigma^+ \pi^0$, $\Sigma^+ \eta$, and $\Sigma^+ \eta^\prime$'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle:2022bsi
+BibTeX: '@article{Belle:2022bsi,
+    collaboration = "Belle",
+    title = "{Measurements of branching fractions of $\Lambda_c^+ \to \Sigma^+ \eta$ and $\Lambda_c^+ \to \Sigma^+ \eta^\prime$ and asymmetry parameters of $\Lambda_c^+ \to \Sigma^+ \pi^0$, $\Lambda_c^+ \to \Sigma^+ \eta$, and $\Lambda_c^+ \to \Sigma^+ \eta^\prime$}",
+    eprint = "2208.10825",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "Belle Preprint 2022-19; KEK Preprint 2022-25",
+    month = "8",
+    year = "2022"
+}
+'

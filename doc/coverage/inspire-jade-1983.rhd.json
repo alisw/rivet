@@ -1,0 +1,110 @@
+{
+    "180758": [
+        "Experimental Study of the Photon Structure Function F(2) in the High $Q^2$ Region", 
+        "JADE", 
+        "10.1016/0370-2693(83)90915-2", 
+        null, 
+        null, 
+        "ins180758", 
+        null, 
+        [
+            "DESY-82-064"
+        ]
+    ], 
+    "182584": [
+        "Experimental Evidence for Differences in $p_T$ Between Quark Jets and Gluon Jets", 
+        "JADE", 
+        "10.1016/0370-2693(83)90994-2", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-82-086"
+        ]
+    ], 
+    "188750": [
+        "A Search for Heavy Leptons at {PETRA}", 
+        "JADE", 
+        "10.1016/0370-2693(83)91217-0", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-83-002"
+        ]
+    ], 
+    "190818": [
+        "Charged Particle and Neutral Kaon Production in e+ e- Annihilation at PETRA", 
+        "JADE", 
+        null, 
+        null, 
+        null, 
+        "ins190818", 
+        null, 
+        [
+            "DESY-83-042"
+        ]
+    ], 
+    "191159": [
+        "Precise Measurement of Total Cross-Sections for the Process e+ e- ---> Multi-Hadrons in the Center-Of-Mass Energy Range Between 12.0-GeV and 36.4-GeV", 
+        "JADE", 
+        "10.1016/0370-2693(83)90746-3", 
+        null, 
+        null, 
+        "ins191159", 
+        null, 
+        [
+            "DESY-83-050"
+        ]
+    ], 
+    "191231": [
+        "Measurement of the Processes $e^+ e^- \\to e^+ e^-$ and $e^+ e^- \\to \\gamma \\gamma$ at {PETRA}", 
+        "JADE", 
+        "10.1007/BF01572248", 
+        null, 
+        null, 
+        "ins191231", 
+        null, 
+        [
+            "DESY-83-035"
+        ]
+    ], 
+    "191416": [
+        "Observation of Inclusive $\\eta$ Production in $e^+ e^-$ Annihilation at {CM} Energies of 34-{GeV}", 
+        "JADE", 
+        "10.1016/0370-2693(83)91542-3", 
+        null, 
+        null, 
+        "ins191416", 
+        null, 
+        [
+            "DESY-83-063"
+        ]
+    ], 
+    "192311": [
+        "Particle Distribution in Three Jet Events Produced by e+ e- Annihilation", 
+        "JADE", 
+        "10.1007/BF01648774", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-83-080"
+        ]
+    ], 
+    "192316": [
+        "A Search for Flavor Changing Neutral Currents in $b$ Decay at {PETRA}", 
+        "JADE", 
+        "10.1016/0370-2693(83)90258-7", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-83-049"
+        ]
+    ]
+}

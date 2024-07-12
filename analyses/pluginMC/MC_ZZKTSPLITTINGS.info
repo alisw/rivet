@@ -1,6 +1,7 @@
 Name: MC_ZZKTSPLITTINGS
 Summary: Monte Carlo validation observables for $Z[e^+ \, e^-]Z[\mu^+ \, \mu^-]$ + jets production
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Frank Siegert <frank.siegert@cern.ch>
 References:

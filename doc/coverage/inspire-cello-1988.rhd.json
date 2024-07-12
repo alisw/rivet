@@ -1,0 +1,66 @@
+{
+    "250274": [
+        "Upper Limit for the Decay $\\tau \\to \\eta \\pi$ Neutrino", 
+        "CELLO", 
+        "10.1016/0370-2693(88)91141-0", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-87-127"
+        ]
+    ], 
+    "251506": [
+        "A STUDY OF THE THREE AND FOUR PHOTON FINAL STATES PRODUCED IN e+ e- ANNIHILATION AT 35-GeV <= S**(1/2) <= 46.8-GeV", 
+        "CELLO", 
+        "10.1016/0370-2693(88)90871-4", 
+        null, 
+        null, 
+        "ins251506", 
+        null, 
+        [
+            "Print-87-1062 (DESY)", 
+            "DESY-87-150", 
+            "LAL-87/54"
+        ]
+    ], 
+    "261670": [
+        "Neutrino Counting With the Cello Detector and Search for Supersymmetric Particles", 
+        "CELLO", 
+        "10.1016/0370-2693(88)91094-5", 
+        null, 
+        null, 
+        "ins261670", 
+        null, 
+        [
+            "DESY-88-052"
+        ]
+    ], 
+    "261820": [
+        "A Search for New Leptons", 
+        "CELLO", 
+        "10.1007/BF01412573", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-88-060", 
+            "SACLAY-DPhPE-88/07"
+        ]
+    ], 
+    "262955": [
+        "AN ANALYSIS OF MULTI - HADRONIC EVENTS PRODUCED WITH TWO ENERGETIC LEPTONS IN e+ e- ANNIHILATION", 
+        "CELLO", 
+        "10.1016/0370-2693(88)91808-4", 
+        null, 
+        null, 
+        "ins262955", 
+        null, 
+        [
+            "DESY-88-086", 
+            "LAL-88-27"
+        ]
+    ]
+}

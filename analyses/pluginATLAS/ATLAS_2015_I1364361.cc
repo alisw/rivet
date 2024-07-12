@@ -18,7 +18,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2015_I1364361);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2015_I1364361);
 
 
     /// Book histograms and initialise projections before the run
@@ -29,10 +29,10 @@ namespace Rivet {
       declare(fs, "FS");
 
       // Histograms with data bins
-      _h_pTH_incl   = bookHisto1D(1,1,1);
-      _h_yH_incl    = bookHisto1D(2,1,1);
-      _h_Njets_incl = bookHisto1D(3,1,1);
-      _h_pTj1_incl  = bookHisto1D(4,1,1);
+      book(_h_pTH_incl   ,1,1,1);
+      book(_h_yH_incl    ,2,1,1);
+      book(_h_Njets_incl ,3,1,1);
+      book(_h_pTj1_incl  ,4,1,1);
     }
 
 
@@ -64,7 +64,7 @@ namespace Rivet {
 
       // Loop over final state particles and fill various particle vectors
       Particles leptons, photons, jet_ptcls;
-      foreach ( const Particle& ptcl, fs ) {
+      for ( const Particle& ptcl : fs ) {
         // Do not include the Higgs in jet finding!
         if ( ptcl.pid() == PID::HIGGSBOSON ) continue;
         // Neutrinos not from hadronisation
@@ -85,9 +85,9 @@ namespace Rivet {
 
       // Match FS photons to leptons within cone R=0.1
       // If they are not 'dressing' photons, add to jet particle vector
-      foreach ( const Particle& ph, photons ) {
+      for ( const Particle& ph : photons ) {
         bool fsr_photon = false;
-        foreach ( const Particle& lep, leptons ) {
+        for ( const Particle& lep : leptons ) {
           if ( deltaR(ph.momentum(),lep.momentum()) < 0.1 ){
             fsr_photon=true;
             continue;
@@ -105,11 +105,11 @@ namespace Rivet {
       // jet_pro.calc(jet_ptcls);
       // Jets jets = jet_pro.jetsByPt(Cuts::pT > 30*GeV && Cuts::absrap < 4.4);
 
-      const double weight = event.weight();
-      _h_pTH_incl->fill(higgs.pT(), weight);
-      _h_yH_incl->fill(higgs.absrap(), weight);
-      _h_Njets_incl->fill(jets.size() > 3 ? 3 : jets.size(), weight);
-      _h_pTj1_incl->fill(jets.empty() ? 0 : jets[0].pT(), weight);
+      size_t njets = jets.size() > 3 ? 3 : jets.size();
+      _h_pTH_incl->fill(higgs.pT());
+      _h_yH_incl->fill(higgs.absrap());
+      _h_Njets_incl->fill(njets + 1); // accounts for HEPData offset
+      _h_pTj1_incl->fill(jets.empty() ? 0 : jets[0].pT());
     }
 
 
@@ -131,7 +131,7 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2015_I1364361);
+  RIVET_DECLARE_PLUGIN(ATLAS_2015_I1364361);
 
 
 }

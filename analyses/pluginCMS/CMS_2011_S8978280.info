@@ -6,6 +6,7 @@ Collider: LHC
 SpiresID: 8978280
 InspireID: 890166
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Kevin Stenson <kevin.stenson@colorado.edu>
 References:
@@ -16,9 +17,12 @@ RunInfo:
    Non-single-diffractive (NSD) events only.  Should include double-diffractive (DD) events
    and non-diffractive (ND) events but NOT single-diffractive (SD) events. For example, in Pythia6 the
    SD processes to be turned off are 92 and 93, and in Pythia8 the SD processes are 103 and
-   104 (also called SoftQCD:singleDiffractive).
+   104 (also called SoftQCD:singleDiffractive). Beam energy must be specified as analysis option "ENERGY"
+   (900 or 7000) when rivet-merging samples.
 NumEvents: 1000000
 Beams: [p+, p+]
+Options:
+ - ENERGY=900,7000
 Energies: [900, 7000]
 PtCuts:
 Description:
@@ -38,6 +42,7 @@ Description:
    trigger, as predicted by PYTHIA6. The uncertainties connected with
    correct or uncorrect modelling of diffraction were included in the
    systematic errors.
+   Beam energy must be specified as analysis option "ENERGY" when rivet-merging samples.
 BibKey: Khachatryan:2011tm
 BibTeX: '@Article{Khachatryan:2011tm,
      author    = "Khachatryan, Vardan and others",

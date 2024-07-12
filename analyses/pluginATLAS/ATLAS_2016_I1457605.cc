@@ -13,29 +13,29 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2016_I1457605);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2016_I1457605);
 
     /// Book histograms and initialise projections before the run
     void init() {
 
       FinalState fs;
-      addProjection(fs, "FS");
+      declare(fs, "FS");
 
       // Consider the final state jets for the energy density calculation
       FastJets fj(fs, FastJets::KT, 0.5);
       fj.useJetArea(new fastjet::AreaDefinition(fastjet::VoronoiAreaSpec()));
-      addProjection(fj, "KtJetsD05");
+      declare(fj, "KtJetsD05");
 
       // Consider the leading pt photon with |eta| < 2.37 and pT > 25 GeV
       LeadingParticlesFinalState photonfs(PromptFinalState(FinalState(Cuts::abseta < 2.37 && Cuts::pT > 25*GeV)));
       photonfs.addParticleId(PID::PHOTON);
-      addProjection(photonfs, "LeadingPhoton");
+      declare(photonfs, "LeadingPhoton");
 
       // Book the dsigma/dEt (in eta bins) histograms
       for (size_t i = 0; i < _eta_bins.size() - 1; ++i) {
         if (fuzzyEquals(_eta_bins[i], 1.37)) continue; // skip this bin
         int offset = i > 2? 0 : 1;
-        _h_Et_photon[i] = bookHisto1D(i + offset, 1, 1);
+        book(_h_Et_photon[i] ,i + offset, 1, 1);
       }
 
     }
@@ -101,7 +101,7 @@ namespace Rivet {
 
       // Fill histograms
       const size_t eta_bin = _getEtaBin(leadingPhoton.abseta(), false);
-      _h_Et_photon[eta_bin]->fill(leadingPhoton.Et(), event.weight());
+      _h_Et_photon[eta_bin]->fill(leadingPhoton.Et());
     }
 
 
@@ -125,6 +125,6 @@ namespace Rivet {
   };
 
 
-  DECLARE_RIVET_PLUGIN(ATLAS_2016_I1457605);
+  RIVET_DECLARE_PLUGIN(ATLAS_2016_I1457605);
 
 }

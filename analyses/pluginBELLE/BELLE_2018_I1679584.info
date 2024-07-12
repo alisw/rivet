@@ -1,0 +1,37 @@
+Name: BELLE_2018_I1679584
+Year: 2018
+Summary: Mass distributions in $\bar{B}^0\to\Lambda^+_c\bar{\Lambda}^-_c\bar{K}^0$
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1679584
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Eur.Phys.J.C 78 (2018) 11, 928
+RunInfo: Any process producing B0, originally e+e- at Upsilon(4S)
+Description:
+  'Mass distributions in $\bar{B}^0\to\Lambda^+_c\bar{\Lambda}^-_c\bar{K}^0$. Data read from plots and sidebands given subtracted.'
+ValidationInfo:
+  'Herwig 7 events using EvtGen for B decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle:2018yob
+BibTeX: '@article{Belle:2018yob,
+    author = "Li, Y. B. and others",
+    collaboration = "Belle",
+    title = "{Evidence of a structure in $\bar{K}^{0} \Lambda _{c}^{+}$ consistent with a charged $\Xi _c(2930)^{+}$ , and updated measurement of $\bar{B}^{0} \rightarrow \bar{K}^{0} \Lambda _{c}^{+} \bar{\Lambda }_{c}^{-}$ at Belle}",
+    eprint = "1806.09182",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "Belle Preprint \# 2018-10; KEK Preprint \# 2018-16, BELLE-PREPRINT-2018-10, KEK-PREPRINT-2018-16",
+    doi = "10.1140/epjc/s10052-018-6425-5",
+    journal = "Eur. Phys. J. C",
+    volume = "78",
+    number = "11",
+    pages = "928",
+    year = "2018"
+}
+'

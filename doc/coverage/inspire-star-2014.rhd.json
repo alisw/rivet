@@ -1,0 +1,154 @@
+{
+    "1221099": [
+        "Jet-Hadron Correlations in $\\sqrt{s_{NN}} = 200$ GeV $p+p$ and Central $Au+Au$ Collisions", 
+        "STAR", 
+        "10.1103/PhysRevLett.112.122301", 
+        null, 
+        "1302.6184", 
+        "ins1221099", 
+        null, 
+        []
+    ], 
+    "1222542": [
+        "Measurement of charge multiplicity asymmetry correlations in high-energy nucleus-nucleus collisions at $\\sqrt{{s}_{NN}} =$ 200 GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.89.044908", 
+        null, 
+        "1303.0901", 
+        "ins1222542", 
+        null, 
+        []
+    ], 
+    "1253360": [
+        "Neutral pion cross section and spin asymmetries at intermediate pseudorapidity in polarized proton collisions at $\\sqrt{s} = 200$ GeV", 
+        "STAR", 
+        "10.1103/PhysRevD.89.012001", 
+        null, 
+        "1309.1800", 
+        "ins1253360", 
+        null, 
+        []
+    ], 
+    "1255072": [
+        "Energy Dependence of Moments of Net-proton Multiplicity Distributions at RHIC", 
+        "STAR", 
+        "10.1103/PhysRevLett.112.032302", 
+        null, 
+        "1309.5681", 
+        "ins1255072", 
+        null, 
+        []
+    ], 
+    "1258446": [
+        "$J/\\psi$ production at low $p_T$ in Au + Au and Cu + Cu collisions at $\\sqrt{s_{NN}}=200$ GeV with the STAR detector", 
+        "STAR", 
+        "10.1103/PhysRevC.90.024906", 
+        null, 
+        "1310.3563", 
+        "ins1258446", 
+        null, 
+        []
+    ], 
+    "1263695": [
+        "J/\u03c8 polarization in p+p collisions at  $\\sqrt{s}$ = 200 GeV in STAR", 
+        "STAR", 
+        "10.1016/j.physletb.2014.10.049", 
+        null, 
+        "1311.1621", 
+        "ins1263695", 
+        null, 
+        [
+            "WUT-13-01"
+        ]
+    ], 
+    "1269346": [
+        "Suppression of $\\Upsilon$ production in d+Au and Au+Au collisions at $\\sqrt{s_{NN}}$=200 GeV", 
+        "STAR", 
+        "10.1016/j.physletb.2014.06.028", 
+        null, 
+        "1312.3675", 
+        "ins1269346", 
+        null, 
+        []
+    ], 
+    "1275614": [
+        "Dielectron Mass Spectra from Au+Au Collisions at $\\sqrt{s_{\\rm NN}}$ = 200 GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.113.022301", 
+        null, 
+        "1312.7397", 
+        "ins1275614", 
+        null, 
+        []
+    ], 
+    "1277069": [
+        "Beam-Energy Dependence of the Directed Flow of Protons, Antiprotons, and Pions in Au+Au Collisions", 
+        "STAR", 
+        "10.1103/PhysRevLett.112.162301", 
+        null, 
+        "1401.3043", 
+        null, 
+        null, 
+        []
+    ], 
+    "1280557": [
+        "Beam energy dependence of moments of the net-charge multiplicity distributions in Au+Au collisions at RHIC", 
+        "STAR", 
+        "10.1103/PhysRevLett.113.092301", 
+        null, 
+        "1402.1558", 
+        null, 
+        null, 
+        []
+    ], 
+    "1280745": [
+        "Dielectron azimuthal anisotropy at mid-rapidity in Au + Au collisions at $\\sqrt{s_{_{NN}}} = 200$ GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.90.064904", 
+        null, 
+        "1402.1791", 
+        "ins1280745", 
+        null, 
+        []
+    ], 
+    "1288534": [
+        "Event-plane-dependent dihadron correlations with harmonic $v_n$ subtraction in Au + Au collisions at $\\sqrt{s_{NN}}=200$ GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.89.041901", 
+        null, 
+        "1404.1070", 
+        "ins1288534", 
+        null, 
+        []
+    ], 
+    "1288917": [
+        "Beam-energy dependence of charge separation along the magnetic field in Au+Au collisions at RHIC", 
+        "STAR", 
+        "10.1103/PhysRevLett.113.052302", 
+        null, 
+        "1404.1433", 
+        "ins1288917", 
+        null, 
+        []
+    ], 
+    "1292132": [
+        "Observation of $D^0$ Meson Nuclear Modifications in Au+Au Collisions at $\\sqrt{s_{NN}}=200$  GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.113.142301", 
+        null, 
+        "1404.6185", 
+        "ins1292132", 
+        null, 
+        []
+    ], 
+    "1292792": [
+        "Measurement of longitudinal spin asymmetries for weak boson production in polarized proton-proton collisions at RHIC", 
+        "STAR", 
+        "10.1103/PhysRevLett.113.072301", 
+        null, 
+        "1404.6880", 
+        "ins1292792", 
+        null, 
+        []
+    ]
+}

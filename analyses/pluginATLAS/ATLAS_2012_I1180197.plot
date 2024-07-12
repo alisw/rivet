@@ -66,8 +66,8 @@ YLabel=$\mathrm{Events}/200 \mathrm{GeV}$
 LogY=1
 # END PLOT
 # BEGIN PLOT /ATLAS_2012_I1180197/hist_1l_eTmiss_m_eff_soft
-Title=Ratio $E_{\mathrm{T}}^{\rm miss}/m_{\mathrm{eff}}$ in the 1 soft lepton channel
-XLabel=$E_{\mathrm{T}}^{\rm miss}/m_{\mathrm{eff}}$
+Title=Ratio $E_{\mathrm{T}}^\mathrm{miss}/m_{\mathrm{eff}}$ in the 1 soft lepton channel
+XLabel=$E_{\mathrm{T}}^\mathrm{miss}/m_{\mathrm{eff}}$
 YLabel=$\mathrm{Events}/0.1$
 LogY=0
 # END PLOT

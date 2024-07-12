@@ -1,0 +1,38 @@
+{
+    "636222": [
+        "Beauty photoproduction measured using decays into muons in dijet events in e p collisions at s**(1/2) = 318-GeV", 
+        "ZEUS", 
+        "10.1103/PhysRevD.70.012008", 
+        null, 
+        "hep-ex/0312057", 
+        "ins636222", 
+        null, 
+        [
+            "DESY-03-212"
+        ]
+    ], 
+    "676876": [
+        "Forward jet production in deep inelastic ep scattering and low-x parton dynamics at HERA", 
+        "ZEUS", 
+        "10.1016/j.physletb.2005.09.066", 
+        null, 
+        "hep-ex/0502029", 
+        "ins676876", 
+        null, 
+        [
+            "DESY-05-017"
+        ]
+    ], 
+    "710347": [
+        "Measurement of high-Q**2 deep inelastic scattering cross sections with a longitudinally polarised positron beam at HERA", 
+        "ZEUS", 
+        "10.1016/j.physletb.2006.04.047", 
+        null, 
+        "hep-ex/0602026", 
+        "ins710347", 
+        null, 
+        [
+            "DESY-06-015"
+        ]
+    ]
+}

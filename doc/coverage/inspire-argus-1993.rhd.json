@@ -1,0 +1,122 @@
+{
+    "339268": [
+        "Analysis of the decay tau- ---> pi- pi- pi+ tau-neutrino and determination of the a1 (1260) resonance parameters", 
+        "ARGUS", 
+        "10.1007/BF01554080", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-92-125"
+        ]
+    ], 
+    "340585": [
+        "Investigation of the decays anti-B0 ---> D*+ lepton- anti-neutrino and anti-B ---> D** lepton- anti-neutrino", 
+        "ARGUS", 
+        null, 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-92-146"
+        ]
+    ], 
+    "340894": [
+        "Inclusive production of charged pions, kaons and protons in upsilon (4S) decays", 
+        "ARGUS", 
+        "10.1007/BF01560337", 
+        null, 
+        null, 
+        "ins340894", 
+        null, 
+        [
+            "DESY-92-155"
+        ]
+    ], 
+    "342061": [
+        "Inclusive production of eta-prime (958) and f0 (975) mesons in the upsilon energy region", 
+        "ARGUS", 
+        "10.1007/BF01560338", 
+        null, 
+        null, 
+        "ins342061", 
+        null, 
+        [
+            "DESY-92-174"
+        ]
+    ], 
+    "342661": [
+        "Observation of xi(c)0 semileptonic decay", 
+        "ARGUS", 
+        "10.1016/0370-2693(93)91447-U", 
+        null, 
+        null, 
+        "ins342661", 
+        null, 
+        [
+            "DESY-92-184"
+        ]
+    ], 
+    "352983": [
+        "A Partial wave analysis of the decay D0 ---> K0(s) pi+ pi-", 
+        "ARGUS", 
+        "10.1016/0370-2693(93)91309-B", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-93-003"
+        ]
+    ], 
+    "354225": [
+        "Search for rare B meson decays into D(s)+ mesons", 
+        "ARGUS", 
+        "10.1007/BF01650427", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-93-054"
+        ]
+    ], 
+    "357132": [
+        "Observation of a new charmed baryon", 
+        "ARGUS", 
+        "10.1016/0370-2693(93)91598-H", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-93-101"
+        ]
+    ], 
+    "357133": [
+        "A Model independent determination of the inclusive semileptonic decay fraction of B mesons", 
+        "ARGUS", 
+        "10.1016/0370-2693(93)90146-9", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-93-104"
+        ]
+    ], 
+    "357412": [
+        "A Determination of two Michel parameters in purely leptonic tau decays", 
+        "ARGUS", 
+        "10.1016/0370-2693(93)91051-N", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-93-108"
+        ]
+    ]
+}

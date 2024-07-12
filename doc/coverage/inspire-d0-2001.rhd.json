@@ -1,0 +1,182 @@
+{
+    "524477": [
+        "A search for dilepton signatures from minimal low-energy supergravity in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1103/PhysRevD.63.091102", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-00-042-E"
+        ]
+    ], 
+    "532478": [
+        "Search for large extra dimensions in dielectron and diphoton production", 
+        "D0", 
+        "10.1103/PhysRevLett.86.1156", 
+        null, 
+        "hep-ex/0008065", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-00-210-E"
+        ]
+    ], 
+    "532551": [
+        "The ratio of jet cross sections at $\\sqrt{s} = 630$ GeV and 1800 GeV", 
+        "D0", 
+        "10.1103/PhysRevLett.86.2523", 
+        null, 
+        "hep-ex/0008072", 
+        "ins532551", 
+        null, 
+        [
+            "FERMILAB-PUB-00-213-E"
+        ]
+    ], 
+    "532905": [
+        "Ratios of multijet cross sections in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.86.1955", 
+        null, 
+        "hep-ex/0009012", 
+        "ins532905", 
+        null, 
+        [
+            "FERMILAB-PUB-00-218-E"
+        ]
+    ], 
+    "533572": [
+        "Measurement of the angular distribution of electrons from $W \\to e \\nu$ decays observed in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1103/PhysRevD.63.072001", 
+        null, 
+        "hep-ex/0009034", 
+        "ins533572", 
+        null, 
+        [
+            "FERMILAB-PUB-00-228-E"
+        ]
+    ], 
+    "535017": [
+        "Differential cross section for $W$ boson production as a function of transverse momentum in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1016/S0370-2693(01)00628-1", 
+        null, 
+        "hep-ex/0010026", 
+        "ins535017", 
+        null, 
+        [
+            "FERMILAB-PUB-00-268-E"
+        ]
+    ], 
+    "536691": [
+        "Inclusive jet production in $p\\bar{p}$ collisions", 
+        "D0", 
+        "10.1103/PhysRevLett.86.1707", 
+        null, 
+        "hep-ex/0011036", 
+        "ins536691", 
+        null, 
+        [
+            "FERMILAB-PUB-00-271-E"
+        ]
+    ], 
+    "537156": [
+        "A Quasi model independent search for new physics at large transverse momentum", 
+        "D0", 
+        "10.1103/PhysRevD.64.012004", 
+        null, 
+        "hep-ex/0011067", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-00-302-E"
+        ]
+    ], 
+    "539003": [
+        "High-$p_T$ jets in $\\bar{p}p$ collisions at $\\sqrt{s} = 630$ GeV and 1800 GeV", 
+        "D0", 
+        "10.1103/PhysRevD.64.032003", 
+        null, 
+        "hep-ex/0012046", 
+        "ins539003", 
+        null, 
+        [
+            "FERMILAB-PUB-00-216-E"
+        ]
+    ], 
+    "551724": [
+        "A quasi-model-independent search for new high $p_T$ physics at D\\O", 
+        "D0", 
+        "10.1103/PhysRevLett.86.3712", 
+        null, 
+        "hep-ex/0011071", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-00-304-E"
+        ]
+    ], 
+    "553498": [
+        "Search for Heavy Particles Decaying into Electron Positron Pairs in $p\\bar{p}$ Collisions", 
+        "D0", 
+        "10.1103/PhysRevLett.87.061802", 
+        null, 
+        "hep-ex/0102048", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-01-024-E"
+        ]
+    ], 
+    "557085": [
+        "Search for First Generation Scalar and Vector Leptoquarks", 
+        "D0", 
+        "10.1103/PhysRevD.64.092004", 
+        null, 
+        "hep-ex/0105072", 
+        "ins557085", 
+        null, 
+        [
+            "FERMILAB-PUB-01-057-E"
+        ]
+    ], 
+    "558086": [
+        "Search for New Physics Using QUAERO: A General Interface to D0 Event Data", 
+        "D0", 
+        "10.1103/PhysRevLett.87.231801", 
+        null, 
+        "hep-ex/0106039", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-01-105-E"
+        ]
+    ], 
+    "558406": [
+        "Search for Single Top Quark Production at D0 Using Neural Networks", 
+        "D0", 
+        "10.1016/S0370-2693(01)01009-7", 
+        null, 
+        "hep-ex/0106059", 
+        "ins558406", 
+        null, 
+        [
+            "FERMILAB-PUB-01-102-E"
+        ]
+    ], 
+    "559624": [
+        "Measurement of the Ratio of Differential Cross Sections for $W$ and $Z$ Boson Production as a Function of Transverse Momentum in $p\\bar{p}$ Collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1016/S0370-2693(01)01020-6", 
+        null, 
+        "hep-ex/0107012", 
+        "ins559624", 
+        null, 
+        [
+            "FERMILAB-PUB-01-212-E"
+        ]
+    ]
+}

@@ -1,0 +1,88 @@
+{
+    "342063": [
+        "Initial study of deep inelastic scattering with ZEUS at HERA", 
+        "ZEUS", 
+        "10.1016/0370-2693(93)90065-P", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-92-180"
+        ]
+    ], 
+    "353281": [
+        "Search for leptoquarks with the ZEUS detector", 
+        "ZEUS", 
+        "10.1016/0370-2693(93)91155-G", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-93-017"
+        ]
+    ], 
+    "353462": [
+        "Observation of two jet production in deep inelastic scattering at HERA", 
+        "ZEUS", 
+        "10.1016/0370-2693(93)91154-F", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-93-030", 
+            "ANL-HEP-PR-93-54"
+        ]
+    ], 
+    "355326": [
+        "Hadronic energy distributions in deep inelastic electron - proton scattering", 
+        "ZEUS", 
+        "10.1007/BF01566687", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-93-068", 
+            "ANL-HEP-PR-93-74"
+        ]
+    ], 
+    "355574": [
+        "Search for excited electrons using the ZEUS detector", 
+        "ZEUS", 
+        "10.1016/0370-2693(93)90680-G", 
+        null, 
+        null, 
+        "ins355574", 
+        null, 
+        [
+            "DESY-93-075"
+        ]
+    ], 
+    "356445": [
+        "Observation of events with a large rapidity gap in deep inelastic scattering at HERA", 
+        "ZEUS", 
+        "10.1016/0370-2693(93)91645-4", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-93-093"
+        ]
+    ], 
+    "357414": [
+        "Measurement of the proton structure function F2 in e p scattering at HERA", 
+        "ZEUS", 
+        "10.1016/0370-2693(93)90347-K", 
+        null, 
+        null, 
+        "ins357414", 
+        null, 
+        [
+            "DESY-93-110"
+        ]
+    ]
+}

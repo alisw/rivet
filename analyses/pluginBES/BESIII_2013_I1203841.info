@@ -1,0 +1,39 @@
+Name: BESIII_2013_I1203841
+Year: 2013
+Summary: Mass and angular distributions in $J/\psi\to\gamma\omega\phi$ decays
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1203841
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 87 (2013) 3, 032008
+RunInfo: e+e- > J/psi
+NeedCrossSection: no
+Beams: [e-, e+]
+Energies: [3.1]
+Description:
+  'Measurement of mass and angular distributions in $J/\psi\to\gamma\omega\phi$ decays.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2012rtd
+BibTeX: '@article{BESIII:2012rtd,
+    author = "Ablikim, M. and others",
+    collaboration = "BESIII",
+    title = "{Study of the near-threshold \ensuremath{\omega}\ensuremath{\phi} mass enhancement in doubly OZI-suppressed $J/\psi \to \gamma\omega\phi$~~decays}",
+    eprint = "1211.5668",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevD.87.032008",
+    journal = "Phys. Rev. D",
+    volume = "87",
+    number = "3",
+    pages = "032008",
+    year = "2013"
+}
+'

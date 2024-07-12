@@ -1,0 +1,34 @@
+Name: CMD2_2003_I601222
+Year: 2003
+Summary: Cross section for $e^+e^-\to K^0_SK^0_L$ at energies between 1.05 and 1.38 GeV
+Experiment: CMD2
+Collider: VEPP-2M
+InspireID: 601222
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B551 (2003) 27-34, 2003
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+Description:
+  'Measurement of the cross section for $e^+e^-\to K^0_SK^0_L$ at energies between 1.05 and 1.38 GeV.'
+Keywords:
+BibKey: Akhmetshin:2002vj
+BibTeX: '@article{Akhmetshin:2002vj,
+      author         = "Akhmetshin, R. R. and others",
+      title          = "{Study of the process e+ e- ---&gt; K0(L) K0(S) in the CM
+                        energy range 1.05-GeV to 1.38-GeV with CMD-2}",
+      journal        = "Phys. Lett.",
+      volume         = "B551",
+      year           = "2003",
+      pages          = "27-34",
+      doi            = "10.1016/S0370-2693(02)02985-4",
+      eprint         = "hep-ex/0211004",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = HEP-EX/0211004;%%"
+}'

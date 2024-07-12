@@ -5,9 +5,11 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1219109
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Christian Gutschow <chris.g@cern.ch>
 References:
+ - ATLAS-STDM-2012-11
  - JHEP 1306 (2013) 084
  - doi:10.1007/JHEP06(2013)084
  - arXiv:1302.2929 [hep-ex]
@@ -16,6 +18,7 @@ RunInfo:
 NumEvents: 1000000
 Beams: [p+, p+]
 Energies: [7000]
+Luminosity_fb: 4.6
 PtCuts: [25,25]
 NeedCrossSection: True
 Options:

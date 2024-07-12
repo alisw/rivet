@@ -1,0 +1,26 @@
+{
+    "628567": [
+        "First measurement of the double inclusive B / anti-B hadron energy distribution in e+ e- annihilations, and of angle dependent moments of the B and anti-B energies", 
+        "SLD", 
+        "10.1016/j.physletb.2003.10.057", 
+        null, 
+        "hep-ex/0309058", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9966"
+        ]
+    ], 
+    "630327": [
+        "Production of $\\pi^+$, $\\pi^-$, $K^+$, $K^-$, p and $\\bar{\\rm p}$                                                                                        in Light ($uds$), $c$ and $b$ Jets from $Z^0$ Decays", 
+        "SLD", 
+        "10.1103/PhysRevD.69.072003", 
+        null, 
+        "hep-ex/0310017", 
+        "ins630327", 
+        null, 
+        [
+            "SLAC-PUB-9949"
+        ]
+    ]
+}

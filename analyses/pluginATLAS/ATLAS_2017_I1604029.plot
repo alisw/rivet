@@ -9,13 +9,13 @@ LogY=0
 
 # BEGIN PLOT /ATLAS_2017_I1604029/d02
 Title=
-XLabel=Photon $p_\text{T}$ [GeV]
-YLabel=$\text{d}\sigma / \text{d} p_\text{T}$ [fb/GeV]
+XLabel=Photon $p_\mathrm{T}$ [GeV]
+YLabel=$\mathrm{d}\sigma / \mathrm{d} p_\mathrm{T}$ [fb/GeV]
 # END PLOT
  
 # BEGIN PLOT /ATLAS_2017_I1604029/d03
 Title=
 XLabel=Photon $|\eta|$
-YLabel=$\text{d}\sigma / \text{d}|\eta|$ [fb]
+YLabel=$\mathrm{d}\sigma / \mathrm{d}|\eta|$ [fb]
 # END PLOT
 

@@ -1,0 +1,142 @@
+{
+    "852260": [
+        "Nuclear modification factors of $\\phi$ mesons in $d+$Au, Cu+Cu and Au+Au collisions at sqrt(S_NN) =200 GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.83.024909", 
+        null, 
+        "1004.3532", 
+        null, 
+        null, 
+        []
+    ], 
+    "854475": [
+        "Heavy Quark Production in $p+p$ and Energy Loss and Flow of Heavy Quarks in Au+Au Collisions at $\\sqrt{s_{NN}}=200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.84.044905", 
+        null, 
+        "1005.1627", 
+        null, 
+        null, 
+        []
+    ], 
+    "855102": [
+        "Measurement of neutral mesons in p+p collisions at $\\sqrt{s}$= 200 GeV and scaling properties of hadron production", 
+        "PHENIX", 
+        "10.1103/PhysRevD.83.052004", 
+        null, 
+        "1005.3674", 
+        null, 
+        null, 
+        []
+    ], 
+    "866922": [
+        "Cross Section and Parity Violating Spin Asymmetries of $W^\\pm$ Boson Production in Polarized $p+p$ Collisions at $\\sqrt{s}=500$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.106.062001", 
+        null, 
+        "1009.0505", 
+        null, 
+        null, 
+        []
+    ], 
+    "870912": [
+        "Event Structure and Double Helicity Asymmetry in Jet Production from Polarized $p+p$ Collisions at $\\sqrt{s} = 200$~GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevD.84.012006", 
+        null, 
+        "1009.4921", 
+        null, 
+        null, 
+        []
+    ], 
+    "871225": [
+        "Cross section and double helicity asymmetry for $\\eta$ mesons and their comparison to neutral pion production in $p+p$ collisions at $\\sqrt{s}$=200 GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevD.83.032001", 
+        null, 
+        "1009.6224", 
+        null, 
+        null, 
+        []
+    ], 
+    "871818": [
+        "Cold Nuclear Matter Effects on $J/\\psi$ Yields as a Function of Rapidity and Nuclear Geometry in Deuteron-Gold Collisions at $\\sqrt{s_{NN}}=200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.107.142301", 
+        null, 
+        "1010.1246", 
+        null, 
+        null, 
+        []
+    ], 
+    "872172": [
+        "Suppression of away-side jet fragments with respect to the reaction plane in Au+Au collisions at $\\sqrt{s_{NN}}=200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.84.024904", 
+        null, 
+        "1010.1521", 
+        "ins872172", 
+        null, 
+        []
+    ], 
+    "875728": [
+        "Azimuthal correlations of electrons from heavy-flavor decay with hadrons in $p^+ p$ and Au+Au collisions at $\\sqrt{s_{NN}}=200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.83.044912", 
+        null, 
+        "1011.1477", 
+        null, 
+        null, 
+        []
+    ], 
+    "886590": [
+        "Identified charged hadron production in $p+p$ collisions at $\\sqrt{s}=200$ and 62.4 GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.83.064903", 
+        null, 
+        "1102.0753", 
+        "ins886590", 
+        null, 
+        []
+    ], 
+    "894560": [
+        "$J/\\psi$ suppression at forward rapidity in Au+Au collisions at $\\sqrt{s_{NN}}=200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.84.054912", 
+        null, 
+        "1103.6269", 
+        null, 
+        null, 
+        []
+    ], 
+    "900308": [
+        "Production of $\\omega$ mesons in $p+p$, d+Au, Cu+Cu, and Au+Au collisions at $\\sqrt{s_NN}=200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.84.044902", 
+        null, 
+        "1105.3467", 
+        null, 
+        null, 
+        []
+    ], 
+    "900703": [
+        "Measurements of Higher-Order Flow Harmonics in Au+Au Collisions at $\\sqrt{s_{NN}} = 200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.107.252301", 
+        null, 
+        "1105.3928", 
+        "ins900703", 
+        null, 
+        []
+    ], 
+    "901235": [
+        "Suppression of back-to-back hadron pairs at forward rapidity in $d+$Au Collisions at $\\sqrt{s_{NN}}=200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.107.172301", 
+        null, 
+        "1105.5112", 
+        null, 
+        null, 
+        []
+    ]
+}

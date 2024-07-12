@@ -1,0 +1,106 @@
+{
+    "29006": [
+        "Study of D0 decays into final states with a pi0 or eta", 
+        "CLEO", 
+        "10.1103/PhysRevD.43.2836", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-90-1030", 
+            "CLEO-90-11"
+        ]
+    ], 
+    "29927": [
+        "Measurement of the inclusive B* cross-section above the Upsilon (4S)", 
+        "CLEO-II", 
+        "10.1103/PhysRevLett.67.1692", 
+        null, 
+        null, 
+        "ins29927", 
+        null, 
+        [
+            "CLNS-91-1089", 
+            "CLEO-91-5"
+        ]
+    ], 
+    "30059": [
+        "Inclusive chi(2 p) production in upsilon (3s) decay", 
+        "CLEO-II", 
+        "10.1103/PhysRevLett.67.1696", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-91-1091", 
+            "CLEO-91-6"
+        ]
+    ], 
+    "297902": [
+        "Exclusive and inclusive semileptonic decays of B mesons to D mesons", 
+        "CLEO", 
+        "10.1103/PhysRevD.43.651", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-90-989", 
+            "CLEO-90-4"
+        ]
+    ], 
+    "298611": [
+        "Inclusive production of the charmed baryon Lambda(c) from e+ e- annihilations at s**(1/2) = 10.55-GeV", 
+        "CLEO", 
+        "10.1103/PhysRevD.43.3599", 
+        null, 
+        null, 
+        "ins298611", 
+        null, 
+        [
+            "CLNS-90-992", 
+            "CLEO-90-5"
+        ]
+    ], 
+    "314060": [
+        "Study of continuum D*+ spin alignment", 
+        "CLEO", 
+        "10.1103/PhysRevD.44.593", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-91-1042", 
+            "CLEO-91-1"
+        ]
+    ], 
+    "315182": [
+        "Unusual decay modes of D0 and D+ mesons", 
+        "CLEO", 
+        "10.1103/PhysRevD.44.3383", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-91-1058", 
+            "CLEO-91-2"
+        ]
+    ], 
+    "315516": [
+        "Measurement of the ratio B (D0 ---> K*- e+ electron-neutrino) / B (D0 ---> K- e+ electron-neutrino)", 
+        "CLEO", 
+        "10.1103/PhysRevD.44.3394", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-91-1083", 
+            "CLEO-91-4"
+        ]
+    ]
+}

@@ -1,0 +1,35 @@
+Name: BABAR_2006_I731865
+Year: 2006
+Summary:  Cross section for $\phi\eta$  at 10.58 GeV
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 731865
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - PR D74,111103
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+  'Measurement of the cross section for $\phi\eta$ at 10.58 GeV'
+Keywords: []
+BibKey: Aubert:2006xw
+BibTeX: '@article{Aubert:2006xw,
+      author         = "Aubert, Bernard and others",
+      title          = "{Observation of the Exclusive Reaction $e^{+} e^{-} \to
+                        \phi \eta$ at $\sqrt{s}$ = 10.58-GeV}",
+      collaboration  = "BaBar",
+      journal        = "Phys. Rev.",
+      volume         = "D74",
+      year           = "2006",
+      pages          = "111103",
+      doi            = "10.1103/PhysRevD.74.111103",
+      eprint         = "hep-ex/0611028",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "SLAC-PUB-12200, BABAR-PUB-06-065",
+      SLACcitation   = "%%CITATION = HEP-EX/0611028;%%"
+}'

@@ -1,0 +1,36 @@
+Name: CLEOC_2005_I693873
+Year: 2005
+Summary: Cross section for $e^+e^-\to \pi^+\pi^-$, $K^+K^-$ and $p\bar{p}$ at 3.671 GeV
+Experiment: CLEOC
+Collider: CESR
+InspireID: 693873
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 95 (2005) 261803
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e-, e+]
+Energies: [3.671]
+Luminosity_fb: 
+Description:
+  'Measurement of the cross section for  $e^+e^-\to \pi^+\pi^-$, $K^+K^-$ and $p\bar{p}$ at 3.671 GeV by CLEO-c.'
+Keywords: []
+BibKey: Pedlar:2005sj
+BibTeX: '@article{Pedlar:2005sj,
+      author         = "Pedlar, T. K. and others",
+      title          = "{Precision measurements of the timelike electromagnetic
+                        form-factors of pion, kaon, and proton}",
+      collaboration  = "CLEO",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "95",
+      year           = "2005",
+      pages          = "261803",
+      doi            = "10.1103/PhysRevLett.95.261803",
+      eprint         = "hep-ex/0510005",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CLNS-05-1936, CLEO-05-24",
+      SLACcitation   = "%%CITATION = HEP-EX/0510005;%%"
+}'

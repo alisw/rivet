@@ -1,0 +1,228 @@
+{
+    "620566": [
+        "Tests of models of color reconnection and a search for glueballs using gluon jets with a rapidity gap", 
+        "OPAL", 
+        "10.1140/epjc/s2004-01809-2", 
+        "620153", 
+        "hep-ex/0306021", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-031"
+        ]
+    ], 
+    "626316": [
+        "A Study of charm production in beauty decays with the OPAL detector at LEP", 
+        "OPAL", 
+        "10.1140/epjc/s2004-01810-9", 
+        "638566", 
+        "hep-ex/0308050", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-050"
+        ]
+    ], 
+    "626732": [
+        "Measurement of charged current triple gauge boson couplings using $W$ pairs at LEP", 
+        "OPAL", 
+        "10.1140/epjc/s2003-01524-6", 
+        "638594", 
+        "hep-ex/0308067", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-042"
+        ]
+    ], 
+    "627211": [
+        "A Study of $W^{+} W^{-} \\gamma$ events at LEP", 
+        "OPAL", 
+        "10.1016/j.physletb.2003.10.063", 
+        "640531", 
+        "hep-ex/0309013", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-043"
+        ]
+    ], 
+    "627212": [
+        "Search for anomalous production of dilepton events with missing transverse momentum in e+ e- collisions at s**(1/2) = 183-Gev to 209-GeV", 
+        "OPAL", 
+        "10.1140/epjc/s2003-01466-y", 
+        "640541", 
+        "hep-ex/0309014", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-040"
+        ]
+    ], 
+    "628491": [
+        "Tests of the standard model and constraints on new physics from measurements of fermion pair production at 189-GeV to 209-GeV at LEP", 
+        "OPAL", 
+        "10.1140/epjc/s2004-01595-9", 
+        "642166", 
+        "hep-ex/0309053", 
+        "ins628491", 
+        null, 
+        [
+            "CERN-EP-2003-053"
+        ]
+    ], 
+    "631361": [
+        "Experimental studies of unbiased gluon jets from $e^{+} e^{-}$ annihilations using the jet boost algorithm", 
+        "OPAL", 
+        "10.1103/PhysRevD.69.032002", 
+        "678203", 
+        "hep-ex/0310048", 
+        "ins631361", 
+        null, 
+        [
+            "CERN-EP-2003-067"
+        ]
+    ], 
+    "631529": [
+        "Search for R parity violating decays of scalar fermions at LEP", 
+        "OPAL", 
+        "10.1140/epjc/s2004-01596-8", 
+        "678580", 
+        "hep-ex/0310054", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-036"
+        ]
+    ], 
+    "635448": [
+        "Flavor independent search for Higgs bosons decaying into hadronic final states in e+ e- collisions at LEP", 
+        "OPAL", 
+        "10.1016/j.physletb.2004.06.083", 
+        "691433", 
+        "hep-ex/0312042", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-081"
+        ]
+    ], 
+    "635543": [
+        "Measurement of the partial widths of the Z into up and down type quarks", 
+        "OPAL", 
+        "10.1016/j.physletb.2004.02.046", 
+        "692245", 
+        "hep-ex/0312043", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-082"
+        ]
+    ], 
+    "635790": [
+        "W boson polarization at LEP2", 
+        "OPAL", 
+        "10.1016/j.physletb.2004.02.003", 
+        "692753", 
+        "hep-ex/0312047", 
+        "ins635790", 
+        null, 
+        [
+            "CERN-EP-2003-088"
+        ]
+    ], 
+    "636844": [
+        "Search for chargino and neutralino production at s**(1/2) = 192-GeV to 209 GeV at LEP", 
+        "OPAL", 
+        "10.1140/epjc/s2004-01758-8", 
+        "706530", 
+        "hep-ex/0401026", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-090"
+        ]
+    ], 
+    "644374": [
+        "Constraints on anomalous quartic gauge boson couplings from nu anti-nu gamma gamma and q anti-q gamma gamma events at LEP-2", 
+        "OPAL", 
+        "10.1103/PhysRevD.70.032005", 
+        "710704", 
+        "hep-ex/0402021", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2004-003"
+        ]
+    ], 
+    "647348": [
+        "Study of Bose-Einstein correlations in $e^+ e^- \\to W^+ W^-$ events at LEP", 
+        "OPAL", 
+        "10.1140/epjc/s2004-01961-7", 
+        "727261", 
+        "hep-ex/0403055", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2004-008"
+        ]
+    ], 
+    "648738": [
+        "Scaling violations of quark and gluon jet fragmentation functions in e+ e- annihilations at s**(1/2) = 91.2-GeV and 183-GeV to 209-GeV", 
+        "OPAL", 
+        "10.1140/epjc/s2004-01964-4", 
+        "731084", 
+        "hep-ex/0404026", 
+        "ins648738", 
+        null, 
+        [
+            "CERN-PH-EP-2004-011"
+        ]
+    ], 
+    "651512": [
+        "Measurement of the strange spectral function in hadronic tau decays", 
+        "OPAL", 
+        "10.1140/epjc/s2004-01877-2", 
+        "729168", 
+        "hep-ex/0406007", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2004-010"
+        ]
+    ], 
+    "652767": [
+        "Search for neutral Higgs boson in CP-conserving and CP-violating MSSM scenarios", 
+        "OPAL", 
+        "10.1140/epjc/s2004-01962-6", 
+        "736931", 
+        "hep-ex/0406057", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2004-020"
+        ]
+    ], 
+    "656640": [
+        "Multi-photon events with large missing energy in $e^+ e^-$ collisions at $\\sqrt{s}$ = 192-GeV - 209-GeV", 
+        "OPAL", 
+        "10.1016/j.physletb.2004.09.059", 
+        "786367", 
+        "hep-ex/0412011", 
+        null, 
+        null, 
+        []
+    ], 
+    "657367": [
+        "Determination of the LEP beam energy using radiative fermion-pair events", 
+        "OPAL", 
+        "10.1016/j.physletb.2004.10.046", 
+        "790169", 
+        "hep-ex/0408130", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2004-042"
+        ]
+    ]
+}

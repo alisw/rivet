@@ -1,0 +1,70 @@
+{
+    "353233": [
+        "Search for heavy neutral spinless particles using e+ e- ---> e+ e- and e+ e- ---> gamma gamma reactions in the center-of-mass energy range between 54-GeV and 64-GeV", 
+        "VENUS", 
+        "10.1016/0370-2693(93)90645-X", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-92-198", 
+            "HUPD-9307", 
+            "KOBE-HEP-93-02", 
+            "KUNS-1182", 
+            "OULNS-92-05", 
+            "TMUP-HEP-93-2"
+        ]
+    ], 
+    "353849": [
+        "Particle spectrum in gluon jets produced in e+ e- annihilations at s**(1/2) around 58-GeV", 
+        "VENUS", 
+        "10.1103/PhysRevLett.71.38", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-92-220", 
+            "HUPD-93-08", 
+            "KOBE-HEP-93-03", 
+            "KUNS-1183", 
+            "OULNS-92-06", 
+            "TMU-HEP-93-3"
+        ]
+    ], 
+    "353854": [
+        "A Study of charged D* production in e+ e- annihilation at an average center-of-mass energy of 58-GeV", 
+        "VENUS", 
+        "10.1016/0370-2693(93)91220-H", 
+        null, 
+        null, 
+        "ins353854", 
+        null, 
+        [
+            "KEK-PREPRINT-92-194", 
+            "HUPD-9306", 
+            "KOBE-HEP-93-01", 
+            "KUNS-1181", 
+            "OULNS-92-04", 
+            "TMU-HEP-93-1"
+        ]
+    ], 
+    "355172": [
+        "A Study of the charm and bottom quark production in e+ e- annihilation at s**(1/2) = 58-GeV using prompt electrons", 
+        "VENUS", 
+        "10.1016/0370-2693(93)91226-D", 
+        null, 
+        null, 
+        "ins355172", 
+        null, 
+        [
+            "KEK-PREPRINT-93-31", 
+            "HUPD-9309", 
+            "KOBE-HEP-93-05", 
+            "KUNS-1185", 
+            "OULNS-92-10", 
+            "TMU-HEP-93-4"
+        ]
+    ]
+}

@@ -1,0 +1,251 @@
+{
+    "471053": [
+        "Determination of |V(ub)| from the measurement of the inclusive charmless semileptonic branching ratio of b hadrons", 
+        "ALEPH", 
+        "10.1007/s100529801031", 
+        "355437", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-067", 
+            "CERN-EP-98-67"
+        ]
+    ], 
+    "473948": [
+        "Search for B0(s) oscillations using inclusive lepton events", 
+        "ALEPH", 
+        "10.1007/s100529901108", 
+        "360431", 
+        "hep-ex/9811018", 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-117"
+        ]
+    ], 
+    "477805": [
+        "Search for the standard model Higgs boson at the LEP-2 collider near S**(1/2) = 183-GeV", 
+        "ALEPH", 
+        "10.1016/S0370-2693(98)01239-8", 
+        "367644", 
+        "hep-ex/9811032", 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-144"
+        ]
+    ], 
+    "477806": [
+        "Searches for the neutral Higgs bosons of the MSSM in $e^+e^-$ collisions at center-of-mass energies of 181-GeV to 184-GeV", 
+        "ALEPH", 
+        "10.1016/S0370-2693(98)01240-4", 
+        "367649", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-145"
+        ]
+    ], 
+    "477807": [
+        "Search for supersymmetry with a dominant R-parity violating LQ $\\bar{D}$ coupling in $e^{+} e^{-}$ collisions at center-of-mass energies of 130-GeV to 172-GeV", 
+        "ALEPH", 
+        "10.1007/s100529901086", 
+        "367650", 
+        "hep-ex/9811033", 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-147"
+        ]
+    ], 
+    "481759": [
+        "Analysis of transverse momentum correlations in hadronic Z decays", 
+        "ALEPH", 
+        "10.1016/S0370-2693(98)01572-X", 
+        "373978", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-187"
+        ]
+    ], 
+    "495411": [
+        "Search for charged Higgs bosons in $e^{+} e^{-}$ collisions at $S^{(1/2)}$ = 181-GeV - 184-GeV", 
+        "ALEPH", 
+        "10.1016/S0370-2693(99)00149-5", 
+        "378899", 
+        "hep-ex/9902031", 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-011", 
+            "CERN-EP-99-11"
+        ]
+    ], 
+    "495413": [
+        "Search for invisible Higgs boson decays in e+ e- collisions at center-of-mass energies up to 184-GeV", 
+        "ALEPH", 
+        "10.1016/S0370-2693(99)00117-3", 
+        "378410", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-008", 
+            "CERN-EP-99-08", 
+            "CERN-EP-99-8"
+        ]
+    ], 
+    "495805": [
+        "Search for charginos and neutralinos in $e^{+} e^{-}$ collisions at center-of-mass energies near 183-GeV and constraints on the MSSM parameter space", 
+        "ALEPH", 
+        "10.1007/s100520050627", 
+        "379808", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-014", 
+            "CERN-EP-99-14"
+        ]
+    ], 
+    "496586": [
+        "One prong tau decays with kaons", 
+        "ALEPH", 
+        "10.1007/s100529900146", 
+        "381245", 
+        "hep-ex/9903014", 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-025"
+        ]
+    ], 
+    "496587": [
+        "Study of tau decays involving kaons, spectral functions and determination of the strange quark mass", 
+        "ALEPH", 
+        "10.1007/s100520050659", 
+        "381419", 
+        "hep-ex/9903015", 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-026"
+        ]
+    ], 
+    "497105": [
+        "Measurement of W pair production in e+ e- collisions at 183-GeV", 
+        "ALEPH", 
+        "10.1016/S0370-2693(99)00304-4", 
+        "382142", 
+        "hep-ex/9903053", 
+        "ins497105", 
+        null, 
+        [
+            "CERN-EP-99-035", 
+            "CERN-EP-99-35"
+        ]
+    ], 
+    "497260": [
+        "Measurement of the $W$ mass in $e^{+} e^{-}$ collisions at 183-GeV", 
+        "ALEPH", 
+        "10.1016/S0370-2693(99)00305-6", 
+        "395223", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-027", 
+            "CERN-EP-99-27"
+        ]
+    ], 
+    "499917": [
+        "Measurement of the hadronic photon structure function at LEP-1 for (Q**2) values between 9.9-GeV**2 and 284-GeV**2", 
+        "ALEPH", 
+        "10.1016/S0370-2693(99)00559-6", 
+        "409273", 
+        null, 
+        "ins499917", 
+        null, 
+        [
+            "CERN-EP-99-063", 
+            "CERN-EP-99-63"
+        ]
+    ], 
+    "503551": [
+        "A Study of single $W$ production in $e^{+} e^{-}$ collisions at $S^{(1/2)}$ = 161-GeV to 183-GeV", 
+        "ALEPH", 
+        "10.1016/S0370-2693(99)00899-0", 
+        "392969", 
+        null, 
+        "ins503551", 
+        null, 
+        [
+            "CERN-EP-99-086", 
+            "CERN-EP-99-86"
+        ]
+    ], 
+    "504170": [
+        "Determination of the LEP center-of-mass energy from Z gamma events", 
+        "ALEPH", 
+        "10.1016/S0370-2693(99)00903-X", 
+        "394166", 
+        "hep-ex/9907043", 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-092"
+        ]
+    ], 
+    "507735": [
+        "Search for an invisibly decaying Higgs boson in e+ e- collisions at 189-GeV", 
+        "ALEPH", 
+        "10.1016/S0370-2693(99)01104-1", 
+        "401153", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-125"
+        ]
+    ], 
+    "507736": [
+        "A Direct measurement of |V(cs)| in hadronic W decays using a charm tag", 
+        "ALEPH", 
+        "10.1016/S0370-2693(99)01088-6", 
+        "401152", 
+        null, 
+        "ins507736", 
+        null, 
+        [
+            "CERN-EP-99-124"
+        ]
+    ], 
+    "509241": [
+        "Measurement of the e+ e- ---> Z Z production cross-section at center-of-mass energies of 183-GeV and 189-GeV", 
+        "ALEPH", 
+        "10.1016/S0370-2693(99)01288-5", 
+        "404700", 
+        "hep-ex/9911003", 
+        "ins509241", 
+        null, 
+        [
+            "CERN-EP-99-141"
+        ]
+    ], 
+    "509442": [
+        "Searches for sleptons and squarks in e+ e- collisions at 189-GeV", 
+        "ALEPH", 
+        "10.1016/S0370-2693(99)01280-0", 
+        "404862", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-140"
+        ]
+    ]
+}

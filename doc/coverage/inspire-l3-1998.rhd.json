@@ -1,0 +1,354 @@
+{
+    "443801": [
+        "K(s)0 and Lambda production in quark and gluon jets at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(97)00864-2", 
+        "327014", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-050", 
+            "CERN-PPE-97-50"
+        ]
+    ], 
+    "446783": [
+        "Missing mass spectra in hadronic events from e+ e- collisions at s**(1/2) = 161-GeV - 172-GeV and limits on invisible Higgs decay", 
+        "L3", 
+        "10.1016/S0370-2693(97)01394-4", 
+        "331325", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-097", 
+            "CERN-PPE-97-97"
+        ]
+    ], 
+    "447945": [
+        "Measurement of eta-prime (958) formation in two photon collisions at LEP-1", 
+        "L3", 
+        "10.1016/S0370-2693(97)01219-7", 
+        "332922", 
+        null, 
+        "ins447945", 
+        null, 
+        [
+            "CERN-PPE-97-110"
+        ]
+    ], 
+    "449593": [
+        "Measurement of the average lifetime of $b$ hadrons in $Z$ decays", 
+        "L3", 
+        "10.1016/S0370-2693(97)01379-8", 
+        "335781", 
+        null, 
+        "ins449593", 
+        null, 
+        [
+            "CERN-PPE-97-127"
+        ]
+    ], 
+    "449594": [
+        "Search for scalar leptons, charginos and neutralinos in $e^{+} e^{-}$ collisions at $\\sqrt{s}$ = 161-GeV to 172-GeV", 
+        "L3", 
+        "10.1007/s100520050198", 
+        "335782", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-130"
+        ]
+    ], 
+    "453761": [
+        "Local multiplicity fluctuations in hadronic Z decay", 
+        "L3", 
+        "10.1016/S0370-2693(98)00438-9", 
+        "343786", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-165"
+        ]
+    ], 
+    "467572": [
+        "Measurement of the weak dipole moments of the tau lepton", 
+        "L3", 
+        "10.1016/S0370-2693(98)00290-1", 
+        "346211", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-015", 
+            "CERN-EP-98-15"
+        ]
+    ], 
+    "467577": [
+        "Angular multiplicity fluctuations in hadronic Z decays and comparison to QCD models and analytical calculations", 
+        "L3", 
+        "10.1016/S0370-2693(98)00386-4", 
+        "346640", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-023", 
+            "CERN-EP-98-23"
+        ]
+    ], 
+    "467821": [
+        "Measurement of the B0(d) - anti-B0(d) oscillation frequency", 
+        "L3", 
+        "10.1007/s100520050262", 
+        "347463", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-028", 
+            "CERN-EP-98-28"
+        ]
+    ], 
+    "467928": [
+        "Determination of the number of light neutrino species from single photon production at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(98)00519-X", 
+        "347842", 
+        null, 
+        "ins467928", 
+        null, 
+        [
+            "CERN-EP-98-025", 
+            "CERN-EP-98-25"
+        ]
+    ], 
+    "467929": [
+        "Measurement of tau polarization at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(98)00406-7", 
+        "347858", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-026", 
+            "CERN-EP-98-26"
+        ]
+    ], 
+    "468272": [
+        "Search for new physics phenomena in fermion pair production at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(98)00641-8", 
+        "349035", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-031", 
+            "CERN-EP-98-31"
+        ]
+    ], 
+    "468854": [
+        "Measurement of the anomalous magnetic and electric dipole moments of the tau lepton", 
+        "L3", 
+        "10.1016/S0370-2693(98)00736-9", 
+        "373113", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-045", 
+            "CERN-EP-98-45"
+        ]
+    ], 
+    "469368": [
+        "Search for the standard model Higgs boson in e+ e- interactions at S**(1/2) = 183-GeV", 
+        "L3", 
+        "10.1016/S0370-2693(98)00568-1", 
+        "352316", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-052", 
+            "CERN-EP-98-52"
+        ]
+    ], 
+    "470826": [
+        "Search for neutral Higgs bosons of the minimal supersymmetric standard model in $e^{+} e^{-}$ interactions at $\\sqrt{s}$ = 130-GeV - 183-GeV", 
+        "L3", 
+        "10.1016/S0370-2693(98)01002-8", 
+        "355144", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-072", 
+            "CERN-EP-98-72"
+        ]
+    ], 
+    "470997": [
+        "Photon structure functions and azimuthal correlations of lepton pairs in tagged gamma gamma collisions", 
+        "L3", 
+        "10.1016/S0370-2693(98)01162-9", 
+        "433017", 
+        null, 
+        "ins470997", 
+        null, 
+        [
+            "CERN-EP-98-060", 
+            "CERN-EP-98-60"
+        ]
+    ], 
+    "472642": [
+        "Study of anomalous $Z Z \\gamma$ and $Z \\gamma \\gamma$ couplings at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(98)00883-1", 
+        "359227", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-096", 
+            "CERN-EP-98-96"
+        ]
+    ], 
+    "472643": [
+        "Measurement of the inclusive charmless semileptonic branching fraction of beauty hadrons and a determination of |V(ub)| at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(98)00941-1", 
+        "359228", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-097", 
+            "CERN-EP-98-97"
+        ]
+    ], 
+    "472644": [
+        "Study of the hadronic photon structure function F(2)**gamma at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(98)01025-9", 
+        "359365", 
+        null, 
+        "ins472644", 
+        null, 
+        [
+            "CERN-EP-98-098", 
+            "CERN-EP-98-98"
+        ]
+    ], 
+    "472645": [
+        "Production of single $W$ bosons in $e^{+} e^{-}$ interactions at 130-GeV <= $S^{(1/2)}$ <= 183-GeV and limits on anomalous $W W \\gamma$ couplings", 
+        "L3", 
+        "10.1016/S0370-2693(98)01027-2", 
+        "359482", 
+        null, 
+        "ins472645", 
+        null, 
+        [
+            "CERN-EP-98-099", 
+            "CERN-EP-98-99"
+        ]
+    ], 
+    "472953": [
+        "Test of CP invariance in Z ---> mu+ mu- gamma decay", 
+        "L3", 
+        "10.1016/S0370-2693(98)00965-4", 
+        "359489", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-100"
+        ]
+    ], 
+    "473410": [
+        "Measurement of radiative Bhabha and quasireal Compton scattering", 
+        "L3", 
+        "10.1016/S0370-2693(98)01173-3", 
+        "359615", 
+        null, 
+        "ins473410", 
+        null, 
+        [
+            "CERN-EP-98-109"
+        ]
+    ], 
+    "474663": [
+        "Measurement of $W$ pair cross-sections in $e^{+} e^{-}$ interactions at $S^{(1/2)}$ = 183-GeV and $W$ decay branching fractions", 
+        "L3", 
+        "10.1016/S0370-2693(98)01036-3", 
+        "362131", 
+        null, 
+        "ins474663", 
+        null, 
+        [
+            "CERN-EP-98-121"
+        ]
+    ], 
+    "474665": [
+        "Measurement of the Michel parameters and the average tau-neutrino helicity from tau decays at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(98)01082-X", 
+        "362132", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-123"
+        ]
+    ], 
+    "476583": [
+        "Upper limit on the lifetime difference of shortlived and longlived $B^0_{s}$ mesons", 
+        "L3", 
+        "10.1016/S0370-2693(98)01114-9", 
+        "365432", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-127"
+        ]
+    ], 
+    "476784": [
+        "Measurement of the effective weak mixing angle by jet charge asymmetry in hadronic decays of the Z boson", 
+        "L3", 
+        "10.1016/S0370-2693(98)01174-5", 
+        "366001", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-134"
+        ]
+    ], 
+    "477808": [
+        "QCD results from studies of hadronic events produced in e+ e- annihilations at S**(1/2) = 183-GeV", 
+        "L3", 
+        "10.1016/S0370-2693(98)01404-X", 
+        "367959", 
+        null, 
+        "ins477808", 
+        null, 
+        [
+            "CERN-EP-98-148"
+        ]
+    ], 
+    "477810": [
+        "Single and multiphoton events with missing energy in e+ e- collisions at S**(1/2) = 183-GeV", 
+        "L3", 
+        "10.1016/S0370-2693(98)01403-8", 
+        "367968", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-150"
+        ]
+    ]
+}

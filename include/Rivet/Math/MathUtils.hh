@@ -2,11 +2,14 @@
 #ifndef RIVET_MathUtils_HH
 #define RIVET_MathUtils_HH
 
-#include "Rivet/Math/MathHeader.hh"
+#include "Rivet/Math/MathConstants.hh"
 #include <type_traits>
 #include <cassert>
 
 namespace Rivet {
+
+
+  /// @defgroup mathutils Maths utilities
 
 
   /// @name Comparison functions for safe (floating point) equality tests
@@ -32,6 +35,15 @@ namespace Rivet {
     return val == 0;
   }
 
+  /// @brief Check if a number is NaN
+  template <typename NUM>
+  inline typename std::enable_if<std::is_floating_point<NUM>::value, bool>::type
+  isNaN(NUM val) { return std::isnan(val); }
+
+  /// @brief Check if a number is non-NaN
+  template <typename NUM>
+  inline typename std::enable_if<std::is_floating_point<NUM>::value, bool>::type
+  notNaN(NUM val) { return !std::isnan(val); }
 
   /// @brief Compare two numbers for equality with a degree of fuzziness
   ///
@@ -80,6 +92,24 @@ namespace Rivet {
     std::is_arithmetic<N1>::value && std::is_arithmetic<N2>::value, bool>::type
   fuzzyLessEquals(N1 a, N2 b, double tolerance=1e-5) {
     return a < b || fuzzyEquals(a, b, tolerance);
+  }
+
+  /// @brief Get the minimum of two numbers
+  template <typename N1, typename N2>
+  inline typename std::enable_if<
+    std::is_arithmetic<N1>::value && std::is_arithmetic<N2>::value,
+    typename std::common_type<N1,N2>::type >::type
+  min(N1 a, N2 b) {
+    return a > b ? b : a;
+  }
+
+  /// @brief Get the maximum of two numbers
+  template <typename N1, typename N2>
+  inline typename std::enable_if<
+    std::is_arithmetic<N1>::value && std::is_arithmetic<N2>::value,
+    typename std::common_type<N1,N2>::type >::type
+  max(N1 a, N2 b) {
+    return a > b ? a : b;
   }
 
   //@}
@@ -222,7 +252,7 @@ namespace Rivet {
 
   /// A more efficient version of pow for raising numbers to integer powers.
   template <typename NUM>
-  inline typename std::enable_if<std::is_arithmetic<NUM>::value, NUM>::type
+  constexpr inline typename std::enable_if<std::is_arithmetic<NUM>::value, NUM>::type
   intpow(NUM val, unsigned int exp) {
     assert(exp >= 0);
     if (exp == 0) return (NUM) 1;
@@ -232,7 +262,7 @@ namespace Rivet {
 
   /// Find the sign of a number
   template <typename NUM>
-  inline typename std::enable_if<std::is_arithmetic<NUM>::value, int>::type
+  constexpr inline typename std::enable_if<std::is_arithmetic<NUM>::value, int>::type
   sign(NUM val) {
     if (isZero(val)) return ZERO;
     const int valsign = (val > 0) ? PLUS : MINUS;
@@ -266,10 +296,11 @@ namespace Rivet {
 
   /// @brief Make a list of @a nbins + 1 values equally spaced between @a start and @a end inclusive.
   ///
-  /// NB. The arg ordering and the meaning of the nbins variable is "histogram-like",
+  /// @note The arg ordering and the meaning of the nbins variable is "histogram-like",
   /// as opposed to the Numpy/Matlab version.
+  ///
+  /// @todo Move to HEPUtils
   inline vector<double> linspace(size_t nbins, double start, double end, bool include_end=true) {
-    assert(end >= start);
     assert(nbins > 0);
     vector<double> rtn;
     const double interval = (end-start)/static_cast<double>(nbins);
@@ -282,31 +313,108 @@ namespace Rivet {
   }
 
 
-  /// @brief Make a list of @a nbins + 1 values exponentially spaced between @a start and @a end inclusive.
+  /// @brief Make a list of values equally spaced by @a step between @a start and @a end inclusive.
   ///
-  /// NB. The arg ordering and the meaning of the nbins variable is "histogram-like",
-  /// as opposed to the Numpy/Matlab version, and the start and end arguments are expressed
-  /// in "normal" space, rather than as the logarithms of the start/end values as in Numpy/Matlab.
-  inline vector<double> logspace(size_t nbins, double start, double end, bool include_end=true) {
-    assert(end >= start);
-    assert(start > 0);
-    assert(nbins > 0);
-    const double logstart = std::log(start);
-    const double logend = std::log(end);
-    const vector<double> logvals = linspace(nbins, logstart, logend, false);
-    assert(logvals.size() == nbins);
-    vector<double> rtn; rtn.reserve(nbins+1);
-    rtn.push_back(start); //< exact start, not exp(log(start))
-    for (size_t i = 1; i < logvals.size(); ++i) {
-      rtn.push_back(std::exp(logvals[i]));
+  /// The values will start at @a start and be equally spaced up to the highest
+  /// increment less than or equal to @a end. If @a include_end is given, the @a
+  /// end value will be appended if distinct by @a tol times @a step.
+  ///
+  /// @note The arg ordering is "Rivet-like", cf. linspace() and logspace(),
+  /// as opposed to the Numpy/Matlab arange() function (whose name inspired this,
+  /// but we preferred to keep the "space" nomenclature for consistence.)
+  ///
+  /// @todo Move to HEPUtils
+  inline vector<double> aspace(double step, double start, double end, bool include_end=true, double tol=1e-2) {
+    assert( (end-start)*step > 0); //< ensure the step is going in the direction from start to end
+    vector<double> rtn;
+    double next = start;
+    while (true) {
+      if (next > end) break;
+      rtn.push_back(next);
+      next += step;
     }
-    assert(rtn.size() == nbins);
-    if (include_end) rtn.push_back(end); //< exact end, not exp(n * loginterval)
+    if (include_end) {
+      if (end - rtn[rtn.size()-1] > tol*step) rtn.push_back(end);
+    }
     return rtn;
   }
 
 
-  /// @todo geomspace
+  /// Produce a vector of x values which are equally spaced in fn(x)
+  ///
+  /// @todo Move to HEPUtils
+  inline vector<double> fnspace(size_t nbins, double start, double end,
+                                const std::function<double(double)>& fn, const std::function<double(double)>& invfn,
+                                bool include_end=true) {
+    // assert(end >= start);
+    assert(nbins > 0);
+    const double pmin = fn(start);
+    const double pmax = fn(end);
+    const vector<double> edges = linspace(nbins, pmin, pmax, false);
+    assert(edges.size() == nbins);
+    vector<double> rtn; rtn.reserve(nbins+1);
+    rtn.push_back(start); //< exact start, not round-tripped
+    for (size_t i = 1; i < edges.size(); ++i) {
+      rtn.push_back(invfn(edges[i]));
+    }
+    assert(rtn.size() == nbins);
+    if (include_end) rtn.push_back(end); //< exact end
+    return rtn;
+  }
+
+
+  /// @brief Make a list of @a nbins + 1 values exponentially spaced between @a start and @a end inclusive.
+  ///
+  /// The naming is because the values are uniformly spaced in log(x).
+  ///
+  /// @note The arg ordering and the meaning of the nbins variable is "histogram-like",
+  /// as opposed to the Numpy/Matlab version, and the start and end arguments are expressed
+  /// in "normal" space, rather than as the logarithms of the start/end values as in Numpy/Matlab.
+  ///
+  /// @todo Move to HEPUtils
+  inline vector<double> logspace(size_t nbins, double start, double end, bool include_end=true) {
+    return fnspace(nbins, start, end,
+                   [](double x){ return std::log(x); },
+                   [](double x){ return std::exp(x); },
+                   include_end);
+  }
+
+
+  /// @brief Make a list of @a nbins + 1 values power-law spaced between @a start and @a end inclusive.
+  ///
+  /// The naming is because the values are uniformly spaced in x^n.
+  ///
+  /// @note The arg ordering and the meaning of the nbins variable is "histogram-like",
+  /// as opposed to the Numpy/Matlab version, and the start and end arguments are expressed
+  /// in terms of x rather than its transform.
+  ///
+  /// @todo Move to HEPUtils
+  inline vector<double> powspace(size_t nbins, double start, double end, double npow, bool include_end=true) {
+    assert(start >= 0); //< non-integer powers are complex for negative numbers... don't go there
+    return fnspace(nbins, start, end,
+                   [&](double x){ return std::pow(x, npow); },
+                   [&](double x){ return std::pow(x, 1/npow); },
+                   include_end);
+  }
+
+  /// @brief Make a list of @a nbins + 1 values equally spaced in the CDF of x^n between @a start and @a end inclusive.
+  ///
+  /// The naming is because the values are uniformly spaced in the integral x^n, implementing an inverse-CDF
+  /// transform cf. random sampling from the power-law distribution. A histogram binned this way and filled
+  /// with samples from x^n will asymptotically have equal populations and hence stat errors in each bin.
+  ///
+  /// @note The arg ordering and the meaning of the nbins variable is "histogram-like",
+  /// as opposed to the Numpy/Matlab version, and the start and end arguments are expressed
+  /// in terms of x rather than its transform.
+  ///
+  /// @todo Move to HEPUtils
+  inline vector<double> powdbnspace(size_t nbins, double start, double end, double npow, bool include_end=true) {
+    assert(start >= 0); //< non-integer powers are complex for negative numbers... don't go there
+    return fnspace(nbins, start, end,
+                   [&](double x){ return std::pow(x, npow+1) / (npow+1); },
+                   [&](double x){ return std::pow((npow+1) * x, 1/(npow+1)); },
+                   include_end);
+  }
 
 
   /// @brief Make a list of @a nbins + 1 values spaced for equal area
@@ -315,20 +423,12 @@ namespace Rivet {
   ///
   /// @note The arg ordering and the meaning of the nbins variable is "histogram-like",
   /// as opposed to the Numpy/Matlab version, and the start and end arguments are expressed
-  /// in "normal" space.
-  inline vector<double> bwspace(size_t nbins, double start, double end, double mu, double gamma) {
-    assert(end >= start);
-    assert(nbins > 0);
-    const double pmin = cdfBW(start, mu, gamma);
-    const double pmax = cdfBW(end,   mu, gamma);
-    const vector<double> edges = linspace(nbins, pmin, pmax);
-    assert(edges.size() == nbins+1);
-    vector<double> rtn;
-    for (double edge : edges) {
-      rtn.push_back(invcdfBW(edge, mu, gamma));
-    }
-    assert(rtn.size() == nbins+1);
-    return rtn;
+  /// in terms of x rather than its transform.
+  inline vector<double> bwdbnspace(size_t nbins, double start, double end, double mu, double gamma, bool include_end=true) {
+    return fnspace(nbins, start, end,
+                   [&](double x){ return cdfBW(x, mu, gamma); },
+                   [&](double x){ return invcdfBW(x, mu, gamma); },
+                   include_end);
   }
 
 
@@ -604,11 +704,11 @@ namespace Rivet {
   inline double rapidity(double E, double pz) {
     if (isZero(E - pz)) {
       throw std::runtime_error("Divergent positive rapidity");
-      return MAXDOUBLE;
+      return DBL_MAX;
     }
     if (isZero(E + pz)) {
       throw std::runtime_error("Divergent negative rapidity");
-      return -MAXDOUBLE;
+      return -DBL_MAX;
     }
     return 0.5*log((E+pz)/(E-pz));
   }

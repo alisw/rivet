@@ -1,5 +1,4 @@
 #include "Rivet/Analysis.hh"
-#include "Rivet/Tools/BinnedHistogram.hh"
 #include "Rivet/Projections/FinalState.hh"
 #include "Rivet/Projections/FastJets.hh"
 #include "Rivet/Projections/ZFinder.hh"
@@ -14,7 +13,7 @@ namespace Rivet {
   public:
 
     // Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(CMS_2013_I1258128);
+    RIVET_DEFAULT_ANALYSIS_CTOR(CMS_2013_I1258128);
 
 
     void init() {
@@ -30,7 +29,7 @@ namespace Rivet {
       declare(zfm, "ZFM");
 
       // Try to get the leading photon
-      LeadingParticlesFinalState photonfs(FinalState(-2.5, 2.5, 40.0*GeV));
+      LeadingParticlesFinalState photonfs(FinalState((Cuts::etaIn(-2.5, 2.5) && Cuts::pT >=  40.0*GeV)));
       photonfs.addParticleId(PID::PHOTON);
       declare(photonfs, "LeadingPhoton");
 
@@ -39,14 +38,14 @@ namespace Rivet {
       declare(jets, "JETS");
 
       // Histograms
-      _hist1YZ      = bookHisto1D(1, 1, 1);
-      _hist1YJet    = bookHisto1D(2, 1, 1);
-      _hist1YSum    = bookHisto1D(3, 1, 1);
-	  _hist1YDif	= bookHisto1D(4, 1, 1);
-	  _hist2YPhoton = bookHisto1D(5, 1, 1);
-	  _hist2YJet	= bookHisto1D(6, 1, 1);
-	  _hist2YSum	= bookHisto1D(7, 1, 1);
-	  _hist2YDif	= bookHisto1D(8, 1, 1);
+      book(_hist1YZ      ,1, 1, 1);
+      book(_hist1YJet    ,2, 1, 1);
+      book(_hist1YSum    ,3, 1, 1);
+book(	  _hist1YDif	,4, 1, 1);
+book(	  _hist2YPhoton ,5, 1, 1);
+book(	  _hist2YJet	,6, 1, 1);
+book(	  _hist2YSum	,7, 1, 1);
+book(	  _hist2YDif	,8, 1, 1);
     }
 
 
@@ -57,8 +56,8 @@ namespace Rivet {
       if (zfe.empty() && zfm.empty()) vetoEvent;
 
       // Choose the Z candidate
-      const ParticleVector& z = (!zfm.empty()) ? zfm.bosons() : zfe.bosons();
-      const ParticleVector& clusteredConstituents = (!zfm.empty()) ? zfm.constituents() : zfe.constituents();
+      const Particles& z = (!zfm.empty()) ? zfm.bosons() : zfe.bosons();
+      const Particles& clusteredConstituents = (!zfm.empty()) ? zfm.constituents() : zfe.constituents();
 
       // Insist that the Z is in a high-pT (boosted) regime
       if (z[0].pT() < 40*GeV) return;
@@ -70,9 +69,9 @@ namespace Rivet {
 
       // Clean the jets against the lepton candidates with a DeltaR cut of 0.5
       vector<const Jet*> cleanedJets;
-      foreach (const Jet& j, jets) {
+      for (const Jet& j : jets) {
         bool isolated = true;
-        foreach (const Particle& p, clusteredConstituents) {
+        for (const Particle& p : clusteredConstituents) {
           if (deltaR(p, j) < 0.5) {
             isolated = false;
             break;
@@ -84,7 +83,7 @@ namespace Rivet {
       if (cleanedJets.size() != 1) return;
 
       // Fill histos
-      const double weight = event.weight();
+      const double weight = 1.0;
       const double yz = z[0].rapidity();
       const double yjet = cleanedJets[0]->momentum().rapidity();
       _hist1YZ->fill(fabs(yz), weight);
@@ -109,14 +108,14 @@ namespace Rivet {
 
       // Clean the jets against the photon candidate with a DeltaR cut of 0.5
       vector<const Jet*> cleanedJets;
-      foreach (const Jet& j, jets)
+      for (const Jet& j : jets)
         if (deltaR(photon, j) > 0.5)
           cleanedJets.push_back(&j);
       // Require exactly 1 jet
       if (cleanedJets.size() != 1) return;
 
       // Fill histos
-      const double weight = event.weight();
+      const double weight = 1.0;
       const double ypho = photon.rapidity();
       const double yjet = cleanedJets[0]->momentum().rapidity();
       _hist2YPhoton->fill(fabs(ypho), weight);
@@ -161,6 +160,6 @@ namespace Rivet {
 
 
   // Plugin system hook
-  DECLARE_RIVET_PLUGIN(CMS_2013_I1258128);
+  RIVET_DECLARE_PLUGIN(CMS_2013_I1258128);
 
 }

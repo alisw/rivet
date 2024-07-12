@@ -1,5 +1,5 @@
 # BEGIN PLOT /ATLAS_2012_I1204447/.*
-YLabel=$N_\text{events}$
+YLabel=$N_\mathrm{events}$
 LegendYPos=0.5
 LegendXPos=0.05
 XMinorTickMarks=0
@@ -8,39 +8,39 @@ XMinorTickMarks=0
 
 # BEGIN PLOT /ATLAS_2012_I1204447/HTlep_all
 Title=Transverse scalar sum of leptons $p_T$
-XLabel=$H_T^\text{leptons} [GeV]$
+XLabel=$H_T^\mathrm{leptons} [GeV]$
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2012_I1204447/HTjets_all
 Title=Transverse scalar sum of jets $p_T$
-XLabel=$H_T^\text{jets} [GeV]$
+XLabel=$H_T^\mathrm{jets} [GeV]$
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2012_I1204447/MET_all
 Title=Missing $E_T$
-XLabel=$E_T^\text{miss} [GeV]$
+XLabel=$E_T^\mathrm{miss} [GeV]$
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2012_I1204447/Meff_all
-Title=Scalar sum of $E_T^\text{miss}, $H_T^\text{jets}, $H_T^\text{jets}$ and $H_T^\text{leptons}$
-XLabel=$m_\text{eff} [GeV]$
+Title=Scalar sum of $E_T^\mathrm{miss}$, $H_T^\mathrm{jets}$, $H_T^\mathrm{jets}$ and $H_T^\mathrm{leptons}$
+XLabel=$m_\mathrm{eff} [GeV]$
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2012_I1204447/e_n
 Title=Number of electrons
-XLabel=$N_\text{electron}$
+XLabel=$N_\mathrm{electron}$
 XMinorTickMarks=1
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2012_I1204447/mu_n
 Title=Number of muons
-XLabel=$N_\text{muon}$
+XLabel=$N_\mathrm{muon}$
 XMinorTickMarks=1
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2012_I1204447/tau_n
 Title=Number of taus
-XLabel=$N_\text{tau}$
+XLabel=$N_\mathrm{tau}$
 XMinorTickMarks=1
 # END PLOT
 

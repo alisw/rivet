@@ -1,0 +1,231 @@
+{
+    "608565": [
+        "b tagging in DELPHI at LEP", 
+        "DELPHI", 
+        "10.1140/epjc/s2003-01441-8", 
+        "679353", 
+        "hep-ex/0311003", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2002-088"
+        ]
+    ], 
+    "614953": [
+        "Final results from DELPHI on the searches for SM and MSSM neutral Higgs bosons", 
+        "DELPHI", 
+        "10.1140/epjc/s2003-01394-x", 
+        "608621", 
+        "hep-ex/0303013", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-008"
+        ]
+    ], 
+    "635851": [
+        "Measurement of the W pair production cross-section and W branching ratios in e+ e- collisions at s**(1/2) = 161-GeV to 209-GeV", 
+        "DELPHI", 
+        "10.1140/epjc/s2004-01709-5", 
+        "727439", 
+        "hep-ex/0403042", 
+        "ins635851", 
+        null, 
+        [
+            "CERN-EP-2003-071"
+        ]
+    ], 
+    "636842": [
+        "Searches for invisibly decaying Higgs bosons with the DELPHI detector at LEP", 
+        "DELPHI", 
+        "10.1140/epjc/s2003-01469-8", 
+        "706527", 
+        "hep-ex/0401022", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-046"
+        ]
+    ], 
+    "636843": [
+        "A Precise measurement of the $B^{+}$, $B^0$ and mean $b$ hadron lifetime with the DELPHI detector at LEP1", 
+        "DELPHI", 
+        "10.1140/epjc/s2004-01599-5", 
+        "706529", 
+        "hep-ex/0401025", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-065"
+        ]
+    ], 
+    "637613": [
+        "Measurement of the Lambda0(b) decay form-factor", 
+        "DELPHI", 
+        "10.1016/j.physletb.2004.01.086", 
+        "727437", 
+        "hep-ex/0403040", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-056"
+        ]
+    ], 
+    "637614": [
+        "Measurement of the forward backward asymmetries of e+ e- ---> Z ---> b anti-b and e+ e- ---> Z -> c anti-c using prompt leptons", 
+        "DELPHI", 
+        "10.1140/epjc/s2004-01708-6", 
+        "727438", 
+        "hep-ex/0403041", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-083"
+        ]
+    ], 
+    "637615": [
+        "Search for SUSY in the AMSB scenario with the DELPHI detector", 
+        "DELPHI", 
+        "10.1140/epjc/s2004-01715-7", 
+        "727444", 
+        "hep-ex/0403047", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-048"
+        ]
+    ], 
+    "637639": [
+        "Search for charged Higgs bosons at LEP in general two Higgs doublet models", 
+        "DELPHI", 
+        "10.1140/epjc/s2004-01732-6", 
+        "729939", 
+        "hep-ex/0404012", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-064"
+        ]
+    ], 
+    "637640": [
+        "Search for  $B^0_s$-$\\overline{B^0_s}$ oscillations in DELPHI using high-$p_t$ leptons", 
+        "DELPHI", 
+        "10.1140/epjc/s2004-01827-0", 
+        "729940", 
+        "hep-ex/0404013", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-089"
+        ]
+    ], 
+    "637641": [
+        "Search for single top production via FCNC at LEP at $\\sqrt{s}$ = 189-GeV to 208-GeV", 
+        "DELPHI", 
+        "10.1016/j.physletb.2004.03.051", 
+        "729941", 
+        "hep-ex/0404014", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-066"
+        ]
+    ], 
+    "638198": [
+        "Search for supersymmetric particles assuming R-parity nonconservation in e+ e- collisions at s**(1/2) = 192-GeV to 208-GeV", 
+        "DELPHI", 
+        "10.1140/epjc/s2004-01881-6", 
+        "739161", 
+        "hep-ex/0406009", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-092"
+        ]
+    ], 
+    "638199": [
+        "Study of tau-pair production in photon-photon collisions at LEP and limits on the anomalous electromagnetic moments of the tau lepton", 
+        "DELPHI", 
+        "10.1140/epjc/s2004-01852-y", 
+        "739162", 
+        "hep-ex/0406010", 
+        "ins638199", 
+        null, 
+        [
+            "CERN-EP-2003-058"
+        ]
+    ], 
+    "638200": [
+        "Search for fermiophobic Higgs bosons in final states with photons at LEP 2", 
+        "DELPHI", 
+        "10.1140/epjc/s2004-01869-2", 
+        "739164", 
+        "hep-ex/0406012", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-087"
+        ]
+    ], 
+    "638858": [
+        "A Precise measurement of the tau lifetime", 
+        "DELPHI", 
+        "10.1140/epjc/s2004-01953-7", 
+        "796932", 
+        "hep-ex/0410010", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-070"
+        ]
+    ], 
+    "642852": [
+        "Measurement of |V(cb)| using the semileptonic decay anti-B0(d) ---> D*+ l- anti-nu(l)", 
+        "DELPHI", 
+        "10.1140/epjc/s2004-01598-6", 
+        "706528", 
+        "hep-ex/0401023", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-057"
+        ]
+    ], 
+    "651514": [
+        "The Measurement of alpha(s) from event shapes with the DELPHI detector at the highest LEP energies", 
+        "DELPHI", 
+        "10.1140/epjc/s2004-01889-x", 
+        "909131", 
+        "hep-ex/0406011", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2004-007", 
+            "CERN-EP-2004-007"
+        ]
+    ], 
+    "660565": [
+        "Determination of the e+ e- ---> gamma gamma (gamma) cross-section at LEP 2", 
+        "DELPHI", 
+        "10.1140/epjc/s2004-01990-2", 
+        "795531", 
+        "hep-ex/0409058", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2004-017"
+        ]
+    ], 
+    "661247": [
+        "Searches for neutral higgs bosons in extended models", 
+        "DELPHI", 
+        "10.1140/epjc/s2004-02011-4", 
+        "797227", 
+        "hep-ex/0410017", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-061"
+        ]
+    ]
+}

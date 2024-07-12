@@ -1,0 +1,35 @@
+Name: BESIII_2012_I1187787
+Year: 2012
+Summary: Dalitz plot analysis of $\eta_c\to K^0_SK^\pm\pi^\mp$
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1187787
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 86 (2012) 092009
+RunInfo: Any process producing eta_c (originally psi(2S) -> gamma eta_c)
+Description:
+  'Measurement of the mass distributions in the decays $\eta_c\to K^0_SK^\pm\pi^\mp$ by BESIII. The data were read from the plots in the paper and therefore for some points the error bars are the size of the point. It is also not clear that any resolution effects have been unfolded.'
+ValidationInfo:
+  'Herwig 7 events using model from paper'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2012urf
+BibTeX: '@article{BESIII:2012urf,
+    author = "Ablikim, M. and others",
+    collaboration = "BESIII",
+    title = "{Study of $\psi(3686)\to\pi^0 h_c, h_c\to\gamma\eta_c$ via $\eta_c$ exclusive decays}",
+    eprint = "1209.4963",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevD.86.092009",
+    journal = "Phys. Rev. D",
+    volume = "86",
+    pages = "092009",
+    year = "2012"
+}
+'

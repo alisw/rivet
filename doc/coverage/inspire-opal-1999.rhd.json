@@ -1,0 +1,380 @@
+{
+    "470732": [
+        "Production of K0(S) and Lambda in quark and gluon jets from Z0 decay", 
+        "OPAL", 
+        "10.1007/s100529901058", 
+        "354700", 
+        "hep-ex/9805025", 
+        "ins470732", 
+        null, 
+        [
+            "CERN-EP-98-058", 
+            "CERN-EP-98-58"
+        ]
+    ], 
+    "472637": [
+        "Measurements of flavor dependent fragmentation functions in Z0 --> q anti-q events", 
+        "OPAL", 
+        "10.1007/s100529901067", 
+        "359012", 
+        "hep-ex/9807004", 
+        "ins472637", 
+        null, 
+        [
+            "CERN-EP-98-089", 
+            "CERN-EP-98-89"
+        ]
+    ], 
+    "472638": [
+        "Measurement of tau branching ratios to five charged hadrons", 
+        "OPAL", 
+        "10.1007/s100529901057", 
+        "360850", 
+        "hep-ex/9808011", 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-090", 
+            "CERN-EP-98-90"
+        ]
+    ], 
+    "472639": [
+        "Inclusive production of charged hadrons and K0(S) mesons in photon-photon collisions", 
+        "OPAL", 
+        "10.1007/s100529801028", 
+        "362339", 
+        "hep-ex/9808009", 
+        "ins472639", 
+        null, 
+        [
+            "CERN-EP-98-091", 
+            "CERN-EP-98-91"
+        ]
+    ], 
+    "472955": [
+        "Measurement of the strong coupling constant alpha(s) and the vector and axial vector spectral functions in hadronic tau decays", 
+        "OPAL", 
+        "10.1007/s100529901061", 
+        "362839", 
+        "hep-ex/9808019", 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-102"
+        ]
+    ], 
+    "472956": [
+        "Measurement of the Michel parameters in leptonic tau decays", 
+        "OPAL", 
+        "10.1007/s100529901080", 
+        "362688", 
+        "hep-ex/9808016", 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-104"
+        ]
+    ], 
+    "473699": [
+        "Tests of the standard model and constraints on new physics from measurements of fermion pair production at 183-GeV at LEP", 
+        "OPAL", 
+        "10.1007/s100529801027", 
+        "362994", 
+        "hep-ex/9808023", 
+        "ins473699", 
+        null, 
+        [
+            "CERN-EP-98-108"
+        ]
+    ], 
+    "473700": [
+        "Search for scalar top and scalar bottom quarks at $S^{(1/2)}$ = 183-GeV at LEP", 
+        "OPAL", 
+        "10.1007/s100529801042", 
+        "363146", 
+        "hep-ex/9808026", 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-107"
+        ]
+    ], 
+    "474009": [
+        "Dijet production in photon-photon collisions at $S^{(1/2)}$ (ee) = 161-GeV and 172-GeV", 
+        "OPAL", 
+        "10.1007/s100529900139", 
+        "363269", 
+        "hep-ex/9808027", 
+        "ins474009", 
+        null, 
+        [
+            "CERN-EP-98-113"
+        ]
+    ], 
+    "476786": [
+        "A Measurement of R(b) using a double tagging method", 
+        "OPAL", 
+        "10.1007/s100529901087", 
+        "368023", 
+        "hep-ex/9810002", 
+        "ins476786", 
+        null, 
+        [
+            "CERN-EP-98-137"
+        ]
+    ], 
+    "477045": [
+        "Search for chargino and neutralino production at S**(1/2) = 181-GeV - 184-GeV at LEP", 
+        "OPAL", 
+        "10.1007/s100529901059", 
+        "366915", 
+        "hep-ex/9809031", 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-136"
+        ]
+    ], 
+    "477517": [
+        "Measurement of the semileptonic branching ratio of charm hadrons produced in Z0 ---> c anti-c decays", 
+        "OPAL", 
+        "10.1007/s100529900020", 
+        "367461", 
+        "hep-ex/9810016", 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-146"
+        ]
+    ], 
+    "477626": [
+        "Search for anomalous photonic events with missing energy in e+ e- collisions at S**(1/2) = 130-GeV, 136-GeV and 183-GeV", 
+        "OPAL", 
+        "10.1007/s100520050442", 
+        "367696", 
+        "hep-ex/9810021", 
+        "ins477626", 
+        null, 
+        [
+            "CERN-EP-98-143"
+        ]
+    ], 
+    "479051": [
+        "$W^{+} W^{-}$ production and triple gauge boson couplings at LEP energies up to 183-GeV", 
+        "OPAL", 
+        "10.1007/s100529901106", 
+        "371540", 
+        "hep-ex/9811028", 
+        "ins479051", 
+        null, 
+        [
+            "CERN-EP-98-167"
+        ]
+    ], 
+    "479332": [
+        "Search for Higgs bosons in $e^{+} e^{-}$ collisions at 183-GeV", 
+        "OPAL", 
+        "10.1007/s100529901102", 
+        "371537", 
+        "hep-ex/9811025", 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-173"
+        ]
+    ], 
+    "479567": [
+        "Bose-Einstein correlations in $e^+e^- \\to W^+W^-$ at 172-GeV and 183-GeV", 
+        "OPAL", 
+        "10.1007/s100529900014", 
+        "371542", 
+        "hep-ex/9811030", 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-174"
+        ]
+    ], 
+    "480847": [
+        "A Measurement of the tau- ---> e- anti-neutrino(e) neutrino(tau) branching ratio", 
+        "OPAL", 
+        "10.1016/S0370-2693(98)01553-6", 
+        "374322", 
+        "hep-ex/9812017", 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-175"
+        ]
+    ], 
+    "480942": [
+        "A Measurement of the product branching ratio f(b ---> Lambda(b)) x BR(Lambda(b) ---> Lambda X) in Z0 decays", 
+        "OPAL", 
+        "10.1007/s100520050508", 
+        "374462", 
+        "hep-ex/9812018", 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-186"
+        ]
+    ], 
+    "482054": [
+        "Search for baryon and lepton number violating Z0 decays", 
+        "OPAL", 
+        "10.1016/S0370-2693(98)01570-6", 
+        "376215", 
+        "hep-ex/9901011", 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-194"
+        ]
+    ], 
+    "482314": [
+        "Color reconnection studies in e+ e- ---> W+ W- at S**(1/2) = 183-GeV", 
+        "OPAL", 
+        "10.1016/S0370-2693(99)00309-3", 
+        "376591", 
+        "hep-ex/9901019", 
+        "ins482314", 
+        null, 
+        [
+            "CERN-PPE-98-196", 
+            "CERN-PPE-98-0196", 
+            "CERN-EP-98-196"
+        ]
+    ], 
+    "482345": [
+        "Measurement of the $W$ mass and width in $e^{+} e^{-}$ collisions at 183-GeV", 
+        "OPAL", 
+        "10.1016/S0370-2693(99)00308-1", 
+        "376845", 
+        "hep-ex/9901025", 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-197"
+        ]
+    ], 
+    "482521": [
+        "Searches for R-parity violating decays of gauginos at 183-GeV at LEP", 
+        "OPAL", 
+        "10.1007/s100520050660", 
+        "377682", 
+        "hep-ex/9901037", 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-203"
+        ]
+    ], 
+    "495313": [
+        "Intermittency and correlations in hadronic Z0 decays", 
+        "OPAL", 
+        "10.1007/s100520050629", 
+        "380836", 
+        "hep-ex/9902021", 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-009"
+        ]
+    ], 
+    "495378": [
+        "Measurements of the QED structure of the photon", 
+        "OPAL", 
+        "10.1007/s100520050644", 
+        "379525", 
+        "hep-ex/9902024", 
+        "ins495378", 
+        null, 
+        [
+            "CERN-EP-99-010"
+        ]
+    ], 
+    "496755": [
+        "Experimental properties of gluon and quark jets from a point source", 
+        "OPAL", 
+        "10.1007/s100520050628", 
+        "381808", 
+        "hep-ex/9903027", 
+        "ins496755", 
+        null, 
+        [
+            "CERN-EP-99-028"
+        ]
+    ], 
+    "497623": [
+        "Search for scalar top and scalar bottom quarks at S**(1/2) = 189-GeV at LEP", 
+        "OPAL", 
+        "10.1016/S0370-2693(99)00440-2", 
+        "383690", 
+        "hep-ex/9903070", 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-036"
+        ]
+    ], 
+    "498246": [
+        "Test of the flavor independence of alpha(s) using next-to-leading order calculations for heavy quarks", 
+        "OPAL", 
+        "10.1007/s100520050661", 
+        "384672", 
+        "hep-ex/9904013", 
+        "ins498246", 
+        null, 
+        [
+            "CERN-EP-99-045"
+        ]
+    ], 
+    "504733": [
+        "Search for Higgs bosons and other massive states decaying into two photons in e+ e- collisions at 189-GeV", 
+        "OPAL", 
+        "10.1016/S0370-2693(99)00861-8", 
+        "395055", 
+        "hep-ex/9907060", 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-084"
+        ]
+    ], 
+    "504734": [
+        "A Study of B0(S) meson oscillation using hadronic Z0 decays containing leptons", 
+        "OPAL", 
+        "10.1007/s100520050658", 
+        "395056", 
+        "hep-ex/9907061", 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-085"
+        ]
+    ], 
+    "504780": [
+        "Multiphoton production in e+ e- collisions at S**(1/2) = 189-GeV", 
+        "OPAL", 
+        "10.1016/S0370-2693(99)01092-8", 
+        "395282", 
+        "hep-ex/9907064", 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-088"
+        ]
+    ], 
+    "509394": [
+        "Measurement of the $W^{+} W^{-} \\gamma$ cross-section and first direct limits on anomalous electroweak quartic gauge couplings", 
+        "OPAL", 
+        "10.1016/S0370-2693(99)01357-X", 
+        "405987", 
+        "hep-ex/9910069", 
+        "ins509394", 
+        null, 
+        [
+            "CERN-EP-99-130"
+        ]
+    ]
+}

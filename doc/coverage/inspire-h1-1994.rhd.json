@@ -1,0 +1,110 @@
+{
+    "359105": [
+        "A Measurement of multi - jet rates in deep inelastic scattering at HERA", 
+        "H1", 
+        "10.1007/BF01641887", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-93-137"
+        ]
+    ], 
+    "360235": [
+        "Scaling violations of the proton structure function f2 at small x", 
+        "H1", 
+        "10.1016/0370-2693(94)90344-1", 
+        null, 
+        null, 
+        "ins360235", 
+        null, 
+        [
+            "DESY-93-146"
+        ]
+    ], 
+    "371597": [
+        "First measurement of the charged current cross-section at HERA", 
+        "H1", 
+        "10.1016/0370-2693(94)90414-6", 
+        null, 
+        null, 
+        "ins371597", 
+        null, 
+        [
+            "DESY-94-012"
+        ]
+    ], 
+    "372256": [
+        "Inclusive charged particle cross-sections in photoproduction at HERA", 
+        "H1", 
+        "10.1016/0370-2693(94)90448-0", 
+        null, 
+        null, 
+        "ins372256", 
+        null, 
+        [
+            "DESY-94-030"
+        ]
+    ], 
+    "372350": [
+        "Energy flow and charged particle spectrum in deep inelastic scattering at HERA", 
+        "H1", 
+        "10.1007/BF01580319", 
+        null, 
+        null, 
+        "ins372350", 
+        null, 
+        [
+            "DESY-94-033"
+        ]
+    ], 
+    "375557": [
+        "Deep inelastic scattering events with a large rapidity gap at HERA", 
+        "H1", 
+        "10.1016/0550-3213(94)90151-1", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-94-133"
+        ]
+    ], 
+    "376099": [
+        "A Search for heavy leptons at HERA", 
+        "H1", 
+        "10.1016/0370-2693(94)01301-2", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-94-138"
+        ]
+    ], 
+    "376566": [
+        "Photoproduction of J / psi mesons at HERA", 
+        "H1", 
+        "10.1016/0370-2693(94)90806-0", 
+        null, 
+        null, 
+        "ins376566", 
+        null, 
+        [
+            "DESY-94-153"
+        ]
+    ], 
+    "376921": [
+        "A Search for leptoquarks and squarks at HERA", 
+        "H1", 
+        "10.1007/BF01957769", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-94-154"
+        ]
+    ]
+}

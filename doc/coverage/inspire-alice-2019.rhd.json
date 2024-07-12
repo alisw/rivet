@@ -1,0 +1,530 @@
+{
+    "1507157": [
+        "Insight into particle production mechanisms via angular correlations of identified particles in pp collisions at $\\sqrt{\\mathrm{s}}=7$  TeV", 
+        "ALICE", 
+        "10.1140/epjc/s10052-017-5129-6", 
+        "2239958", 
+        "1612.08975", 
+        "ins1507157", 
+        null, 
+        [
+            "CERN-EP-2016-322"
+        ]
+    ], 
+    "1644609": [
+        "Relative particle yield fluctuations in $\\text{ Pb-Pb }$ collisions at $\\sqrt{s_\\mathrm{{NN}}} =2.76\\hbox { TeV}$", 
+        "ALICE", 
+        "10.1140/epjc/s10052-019-6711-x", 
+        "2294919", 
+        "1712.07929", 
+        "ins1644609", 
+        null, 
+        [
+            "CERN-EP-2017-318"
+        ]
+    ], 
+    "1664312": [
+        "Direct photon production at low transverse momentum in proton-proton collisions at $\\mathbf{\\sqrt{s}=2.76}$ and 8 TeV", 
+        "ALICE", 
+        "10.1103/PhysRevC.99.024912", 
+        "2308256", 
+        "1803.09857", 
+        "ins1664312", 
+        null, 
+        [
+            "CERN-EP-2018-045"
+        ]
+    ], 
+    "1672756": [
+        "Centrality and pseudorapidity dependence of the charged-particle multiplicity density in Xe\u2013Xe collisions at $\\sqrt{s_{\\rm NN}}$ =5.44TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2018.12.048", 
+        "2316786", 
+        "1805.04432", 
+        "ins1672756", 
+        null, 
+        [
+            "CERN-EP-2018-120"
+        ]
+    ], 
+    "1672765": [
+        "Two particle differential transverse momentum and number density correlations in p-Pb and Pb-Pb at the LHC", 
+        "ALICE", 
+        "10.1103/PhysRevC.100.044903", 
+        "2316778", 
+        "1805.04422", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2018-118"
+        ]
+    ], 
+    "1672788": [
+        "Dielectron and heavy-quark production in inelastic and high-multiplicity proton\u2013proton collisions at $\\sqrt {s_{NN}}=$ 13TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2018.11.009", 
+        "2316934", 
+        "1805.04407", 
+        "ins1672788", 
+        null, 
+        [
+            "CERN-EP-2018-122"
+        ]
+    ], 
+    "1672789": [
+        "Direct photon elliptic flow in Pb-Pb collisions at $\\sqrt{s_{\\rm NN}}$ = 2.76 TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2018.11.039", 
+        "2316393", 
+        "1805.04403", 
+        "ins1672789", 
+        null, 
+        [
+            "CERN-EP-2018-117"
+        ]
+    ], 
+    "1672790": [
+        "Transverse momentum spectra and nuclear modification factors of charged particles in Xe-Xe collisions at $\\sqrt{s_{\\rm NN}}$ = 5.44 TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2018.10.052", 
+        "2316249", 
+        "1805.04399", 
+        "ins1672790", 
+        null, 
+        [
+            "CERN-EP-2018-112"
+        ]
+    ], 
+    "1672798": [
+        "$\\Upsilon$ suppression at forward rapidity in Pb-Pb collisions at $\\sqrt{s_{\\rm NN}}$ = 5.02 TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2018.11.067", 
+        "2316306", 
+        "1805.04387", 
+        "ins1672798", 
+        null, 
+        [
+            "CERN-EP-2018-114"
+        ]
+    ], 
+    "1672806": [
+        "Suppression of $\\Lambda(1520)$ resonance production in central Pb-Pb collisions at $\\sqrt{s_{\\rm NN}}$ = 2.76 TeV", 
+        "ALICE", 
+        "10.1103/PhysRevC.99.024905", 
+        "2316371", 
+        "1805.04361", 
+        "ins1672806", 
+        null, 
+        [
+            "CERN-EP-2018-116"
+        ]
+    ], 
+    "1672812": [
+        "Azimuthal Anisotropy of Heavy-Flavor Decay Electrons in $p$-Pb Collisions at $ \\sqrt{s_{\\rm NN}}$ = 5.02 TeV", 
+        "ALICE", 
+        "10.1103/PhysRevLett.122.072301", 
+        "2316782", 
+        "1805.04367", 
+        "ins1672812", 
+        null, 
+        [
+            "CERN-EP-2018-119"
+        ]
+    ], 
+    "1672860": [
+        "Production of the $\\rho$(770)${^{0}}$ meson in pp and Pb-Pb collisions at $\\sqrt{s_{\\rm NN}}$ = 2.76 TeV", 
+        "ALICE", 
+        "10.1103/PhysRevC.99.064901", 
+        "2316135", 
+        "1805.04365", 
+        "ins1672860", 
+        null, 
+        [
+            "CERN-EP-2018-106"
+        ]
+    ], 
+    "1672944": [
+        "Analysis of the apparent nuclear modification in peripheral Pb\u2013Pb collisions at 5.02 TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2019.04.047", 
+        "2316322", 
+        "1805.05212", 
+        "ins1672944", 
+        null, 
+        [
+            "CERN-EP-2018-115"
+        ]
+    ], 
+    "1675759": [
+        "p-p, p-$\\Lambda$ and $\\Lambda$-$\\Lambda$ correlations studied via femtoscopy in pp reactions at $\\sqrt{s}$ = 7 TeV", 
+        "ALICE", 
+        "10.1103/PhysRevC.99.024001", 
+        "2320574", 
+        "1805.12455", 
+        "ins1675759", 
+        null, 
+        [
+            "CERN-EP-2018-150"
+        ]
+    ], 
+    "1680638": [
+        "Measurement of dielectron production in central Pb-Pb collisions at $\\sqrt{{\\textit{s}}_{\\mathrm{NN}}}$ = 2.76 TeV", 
+        "ALICE", 
+        "10.1103/PhysRevC.99.024002", 
+        "2625083", 
+        "1807.00923", 
+        "ins1680638", 
+        null, 
+        [
+            "CERN-EP-2018-181"
+        ]
+    ], 
+    "1684320": [
+        "Multiplicity dependence of light-flavor hadron production in pp collisions at $\\sqrt{s}$ = 7 TeV", 
+        "ALICE", 
+        "10.1103/PhysRevC.99.024906", 
+        "2632051", 
+        "1807.11321", 
+        "ins1684320", 
+        null, 
+        [
+            "CERN-EP-2018-209"
+        ]
+    ], 
+    "1693305": [
+        "Energy dependence of exclusive $\\mathrm {J}/\\psi $ photoproduction off protons in ultra-peripheral p\u2013Pb collisions at $\\sqrt{s_{\\mathrm {\\scriptscriptstyle NN}}} = 5.02$ TeV", 
+        "ALICE", 
+        "10.1140/epjc/s10052-019-6816-2", 
+        "2636152", 
+        "1809.03235", 
+        "ins1693305", 
+        null, 
+        [
+            "CERN-EP-2018-236"
+        ]
+    ], 
+    "1693308": [
+        "Charged jet cross section and fragmentation in proton-proton collisions at $\\sqrt{s}$ = 7 TeV", 
+        "ALICE", 
+        "10.1103/PhysRevD.99.012016", 
+        "2636150", 
+        "1809.03232", 
+        "ins1693308", 
+        null, 
+        [
+            "CERN-EP-2018-235"
+        ]
+    ], 
+    "1695028": [
+        "Measuring K$^0_{\\rm S}$K$^{\\rm{\\pm}}$ interactions using pp collisions at $\\sqrt{s}=7$ TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2018.12.033", 
+        "2636148", 
+        "1809.07899", 
+        "ins1695028", 
+        null, 
+        [
+            "CERN-EP-2018-234"
+        ]
+    ], 
+    "1695334": [
+        "Event-shape engineering for the D-meson elliptic flow in mid-central Pb-Pb collisions at $\\sqrt{s_{\\rm NN}} =5.02$ TeV", 
+        "ALICE", 
+        "10.1007/JHEP02(2019)150", 
+        "2638995", 
+        "1809.09371", 
+        "ins1695334", 
+        null, 
+        [
+            "CERN-EP-2018-260"
+        ]
+    ], 
+    "1696315": [
+        "$\\Lambda_\\mathrm{c}^+$ production in Pb-Pb collisions at $\\sqrt{s_{\\rm NN}} = 5.02$ TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2019.04.046", 
+        "2639229", 
+        "1809.10922", 
+        "ins1696315", 
+        null, 
+        [
+            "CERN-EP-2018-261"
+        ]
+    ], 
+    "1704923": [
+        "Jet fragmentation transverse momentum measurements from di-hadron correlations in $\\sqrt{s}$ = 7 TeV pp and $\\sqrt{s_{\\rm{NN}}}$ = 5.02 TeV p-Pb collisions", 
+        "ALICE", 
+        "10.1007/JHEP03(2019)169", 
+        "2645852", 
+        "1811.09742", 
+        "ins1704923", 
+        null, 
+        [
+            "CERN-EP-2018-303"
+        ]
+    ], 
+    "1706006": [
+        "Study of J/$\\psi$ azimuthal anisotropy at forward rapidity in Pb-Pb collisions at $ \\sqrt{s_{\\mathrm{NN}}}=5.02 $ TeV", 
+        "ALICE", 
+        "10.1007/JHEP02(2019)012", 
+        "2648673", 
+        "1811.12727", 
+        "ins1706006", 
+        null, 
+        [
+            "CERN-EP-2018-319"
+        ]
+    ], 
+    "1706753": [
+        "Charged-particle pseudorapidity density at mid-rapidity in p-Pb collisions at $\\sqrt{s_{\\rm{NN}}}$ = 8.16 TeV", 
+        "ALICE", 
+        "10.1140/epjc/s10052-019-6801-9", 
+        "2647806", 
+        "1812.01312", 
+        "ins1706753", 
+        null, 
+        [
+            "CERN-EP-2018-315"
+        ]
+    ], 
+    "1710095": [
+        "Real-time data processing in the ALICE High Level Trigger at the LHC", 
+        "ALICE", 
+        "10.1016/j.cpc.2019.04.011", 
+        "2651166", 
+        "1812.08036", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2018-337"
+        ]
+    ], 
+    "1714695": [
+        "Event-shape and multiplicity dependence of freeze-out radii in pp collisions at $ \\sqrt{s} $ = 7 TeV", 
+        "ALICE", 
+        "10.1007/JHEP09(2019)108", 
+        "2650113", 
+        "1901.05518", 
+        "ins1714695", 
+        null, 
+        [
+            "CERN-EP-2018-332"
+        ]
+    ], 
+    "1716440": [
+        "Measurement of ${{\\mathrm{D}}^0}$ , ${{\\mathrm{D}}^+}$ , ${{\\mathrm{D}}^{*+}}$ and ${{\\mathrm{D}}^+_{\\mathrm{s}}}$ production in pp collisions at ${\\sqrt{{\\textit{s}}}~=~5.02~{\\text {TeV}}}$ with ALICE", 
+        "ALICE", 
+        "10.1140/epjc/s10052-019-6873-6", 
+        "2653801", 
+        "1901.07979", 
+        "ins1716440", 
+        null, 
+        [
+            "CERN-EP-2019-004"
+        ]
+    ], 
+    "1720637": [
+        "Calibration of the photon spectrometer PHOS of the ALICE experiment", 
+        "ALICE", 
+        "10.1088/1748-0221/14/05/P05025", 
+        "2657572", 
+        "1902.06145", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2019-020"
+        ]
+    ], 
+    "1721729": [
+        "Multiplicity dependence of (anti-)deuteron production in pp collisions at $\\sqrt{s}$ = 7 TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2019.05.028", 
+        "2658213", 
+        "1902.09290", 
+        "ins1721729", 
+        null, 
+        [
+            "CERN-EP-2019-024"
+        ]
+    ], 
+    "1723697": [
+        "Investigations of Anisotropic Flow Using Multiparticle Azimuthal Correlations in pp, p-Pb, Xe-Xe, and Pb-Pb Collisions at the LHC", 
+        "ALICE", 
+        "10.1103/PhysRevLett.123.142301", 
+        "2661740", 
+        "1903.01790", 
+        "ins1723697", 
+        null, 
+        [
+            "CERN-EP-2019-033"
+        ]
+    ], 
+    "1727337": [
+        "One-dimensional charged kaon femtoscopy in p-Pb collisions at $\\sqrt{s_{\\rm NN}}$ = 5.02 TeV", 
+        "ALICE", 
+        "10.1103/PhysRevC.100.024002", 
+        "2668680", 
+        "1903.12310", 
+        "ins1727337", 
+        null, 
+        [
+            "CERN-EP-2019-054"
+        ]
+    ], 
+    "1729529": [
+        "Coherent J/$\\psi$ photoproduction at forward rapidity in ultra-peripheral Pb-Pb collisions at $\\sqrt{s_{\\rm{NN}}}=5.02$ TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2019.134926", 
+        "2670306", 
+        "1904.06272", 
+        "ins1729529", 
+        null, 
+        [
+            "CERN-EP-2019-069"
+        ]
+    ], 
+    "1731784": [
+        "First Observation of an Attractive Interaction between a Proton and a Cascade Baryon", 
+        "ALICE", 
+        "10.1103/PhysRevLett.123.112002", 
+        "2672251", 
+        "1904.12198", 
+        "ins1731784", 
+        null, 
+        [
+            "CERN-EP-2019-080"
+        ]
+    ], 
+    "1732232": [
+        "Measurement of jet radial profiles in Pb$\u2013$Pb collisions at $\\sqrt{s_{\\rm NN}}=$ 2.76 TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2019.07.020", 
+        "2672211", 
+        "1904.13118", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2019-079"
+        ]
+    ], 
+    "1733683": [
+        "Measurement of the production of charm jets tagged with D$^{0}$ mesons in pp collisions at $ \\sqrt{\\mathrm{s}}=7 $ TeV", 
+        "ALICE", 
+        "10.1007/JHEP08(2019)133", 
+        "2672253", 
+        "1905.02510", 
+        "ins1733683", 
+        null, 
+        [
+            "CERN-EP-2019-081"
+        ]
+    ], 
+    "1733689": [
+        "Measurement of charged jet cross section in $pp$ collisions at ${\\sqrt{s}=5.02}$ TeV", 
+        "ALICE", 
+        "10.1103/PhysRevD.100.092004", 
+        "2670641", 
+        "1905.02536", 
+        "ins1733689", 
+        null, 
+        [
+            "CERN-EP-2019-070"
+        ]
+    ], 
+    "1735344": [
+        "Production of muons from heavy-flavour hadron decays in pp collisions at $ \\sqrt{s} $ = 5.02 TeV", 
+        "ALICE", 
+        "10.1007/JHEP09(2019)008", 
+        "2672188", 
+        "1905.07207", 
+        "ins1735344", 
+        null, 
+        [
+            "CERN-EP-2019-078"
+        ]
+    ], 
+    "1735345": [
+        "Charged-particle production as a function of multiplicity and transverse spherocity in pp collisions at $\\sqrt{s} =5.02$ and 13 TeV", 
+        "ALICE", 
+        "10.1140/epjc/s10052-019-7350-y", 
+        "2673221", 
+        "1905.07208", 
+        "ins1735345", 
+        null, 
+        [
+            "CERN-EP-2019-094"
+        ]
+    ], 
+    "1735349": [
+        "Study of the $\\Lambda$-$\\Lambda$ interaction with femtoscopy correlations in pp and p-Pb collisions at the LHC", 
+        "ALICE", 
+        "10.1016/j.physletb.2019.134822", 
+        "2673333", 
+        "1905.07209", 
+        "ins1735349", 
+        null, 
+        [
+            "CERN-EP-2019-096"
+        ]
+    ], 
+    "1735351": [
+        "Inclusive J/\u03c8 production at mid-rapidity in pp collisions at $ \\sqrt{s} $ = 5.02 TeV", 
+        "ALICE", 
+        "10.1007/JHEP10(2019)084", 
+        "2674130", 
+        "1905.07211", 
+        "ins1735351", 
+        null, 
+        [
+            "CERN-EP-2019-101"
+        ]
+    ], 
+    "1738300": [
+        "Measurement of the inclusive isolated photon production cross section in pp collisions at $\\sqrt{s}=7$ TeV", 
+        "ALICE", 
+        "10.1140/epjc/s10052-019-7389-9", 
+        "2676329", 
+        "1906.01371", 
+        "ins1738300", 
+        null, 
+        [
+            "CERN-EP-2019-117"
+        ]
+    ], 
+    "1738950": [
+        "Measurement of prompt D$^{0}$, D$^{+}$, D$^{*+}$, and $ {\\mathrm{D}}_{\\mathrm{S}}^{+} $ production in p\u2013Pb collisions at $ \\sqrt{{\\mathrm{s}}_{\\mathrm{NN}}} $ = 5.02 TeV", 
+        "ALICE", 
+        "10.1007/JHEP12(2019)092", 
+        "2677034", 
+        "1906.03425", 
+        "ins1738950", 
+        null, 
+        [
+            "CERN-EP-2019-125"
+        ]
+    ], 
+    "1742764": [
+        "Measurement of $\\Upsilon(1{\\rm S})$ elliptic flow at forward rapidity in Pb-Pb collisions at $\\sqrt{s_{\\rm{NN}}}=5.02$ TeV", 
+        "ALICE", 
+        "10.1103/PhysRevLett.123.192301", 
+        "2681098", 
+        "1907.03169", 
+        "ins1742764", 
+        null, 
+        [
+            "CERN-EP-2019-144"
+        ]
+    ], 
+    "1743989": [
+        "$^3_\\Lambda\\mathrm{H}$ and $^3_{\\bar{\\Lambda}}\\mathrm{\\overline{H}}$ lifetime measurement in Pb-Pb collisions at $\\sqrt{s_{\\mathrm{NN}}} = $ 5.02 TeV via two-body decay", 
+        "ALICE", 
+        "10.1016/j.physletb.2019.134905", 
+        "2681904", 
+        "1907.06906", 
+        "ins1743989", 
+        null, 
+        [
+            "CERN-EP-2019-148"
+        ]
+    ]
+}

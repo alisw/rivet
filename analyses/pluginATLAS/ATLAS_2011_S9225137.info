@@ -1,14 +1,16 @@
 Name: ATLAS_2011_S9225137
 Year: 2011
-Summary: High jet multiplicity squark and gluino search
+Summary: High-jet-multiplicity squark and gluino search
 Experiment: ATLAS
 Collider: LHC
 SpiresID: 9225137
 InspireID: 939504
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Peter Richardson <peter.richardson@durham.ac.uk>
 References:
+ - ATLAS-SUSY-2011-13
  - arXiv:1110.2299
 RunInfo:
   BSM signal events at 7000 GeV.

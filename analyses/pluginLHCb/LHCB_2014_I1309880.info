@@ -1,0 +1,38 @@
+Name: LHCB_2014_I1309880
+Year: 2014
+Summary: Mass distributions in $B_c^+\to J/\psi p\bar{p}\pi^+$
+Experiment: LHCB
+Collider: LHC
+InspireID: 1309880
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 113 (2014) 15, 152003
+RunInfo: Any process producing B_c+, originally pp
+Description:
+'Mass distributions in $B_c^+\to J/\psi p\bar{p}\pi^+$.
+The data were extracted from the plots in the paper and may not be corrected for efficiency and acceptance.'
+ValidationInfo:
+  'Herwig7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: LHCb:2014ebd
+BibTeX: '@article{LHCb:2014ebd,
+    author = "Aaij, Roel and others",
+    collaboration = "LHCb",
+    title = "{First observation of a baryonic $B_c^+$ decay}",
+    eprint = "1408.0971",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CERN-PH-EP-2014-187, LHCB-PAPER-2014-039",
+    doi = "10.1103/PhysRevLett.113.152003",
+    journal = "Phys. Rev. Lett.",
+    volume = "113",
+    number = "15",
+    pages = "152003",
+    year = "2014"
+}
+'

@@ -1,0 +1,82 @@
+{
+    "750816": [
+        "Enhanced strange baryon production in Au + Au collisions compared to p + p at s(NN)**(1/2) = 200-GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.77.044908", 
+        null, 
+        "0705.2511", 
+        null, 
+        null, 
+        []
+    ], 
+    "763822": [
+        "Longitudinal double-spin asymmetry for inclusive jet production in p+p collisions at s**(1/2) = 200-GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.100.232003", 
+        null, 
+        "0710.2048", 
+        "ins763822", 
+        null, 
+        []
+    ], 
+    "771169": [
+        "$\\rho^0$ photoproduction in ultraperipheral relativistic heavy ion collisions at $\\sqrt{s_{NN}}$ = 200 GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.77.034910", 
+        null, 
+        "0712.3320", 
+        "ins771169", 
+        null, 
+        []
+    ], 
+    "776722": [
+        "Hadronic resonance production in d+Au collisions at s(NN)**(1/2) = 200-GeV at RHIC", 
+        "STAR", 
+        "10.1103/PhysRevC.78.044906", 
+        null, 
+        "0801.0450", 
+        "ins776722", 
+        null, 
+        []
+    ], 
+    "777248": [
+        "Spin alignment measurements of the K*0(892) and phi (1020) vector mesons in heavy ion collisions at s(NN)**(1/2) = 200 GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.77.061902", 
+        null, 
+        "0801.1729", 
+        "ins777248", 
+        null, 
+        []
+    ], 
+    "777766": [
+        "Forward Neutral Pion Transverse Single Spin Asymmetries in p+p Collisions at s**(1/2) = 200-GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.101.222001", 
+        null, 
+        "0801.2990", 
+        "ins777766", 
+        null, 
+        []
+    ], 
+    "777954": [
+        "Centrality dependence of charged hadron and strange hadron elliptic flow from s(NN)**(1/2) = 200-GeV Au + Au collisions", 
+        "STAR", 
+        "10.1103/PhysRevC.77.054901", 
+        null, 
+        "0801.3466", 
+        "ins777954", 
+        null, 
+        []
+    ], 
+    "790350": [
+        "System-size independence of directed flow at the Relativistic Heavy-Ion Collider", 
+        "STAR", 
+        "10.1103/PhysRevLett.101.252301", 
+        null, 
+        "0807.1518", 
+        "ins790350", 
+        null, 
+        []
+    ]
+}

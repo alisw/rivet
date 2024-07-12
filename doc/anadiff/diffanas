@@ -1,0 +1,48 @@
+#! /usr/bin/env bash
+
+# TODO: rewrite in Python?
+
+echo PYTHONPATH=$PYTHONPATH 1>&2
+
+## Get list of all tags excluding tip
+declare -a tags
+for t in $(git tag | sort -r); do tags+=($t); done
+let numtags=${#tags[@]}
+
+## Write out ana files per tag
+let N=$numtags-1
+for i in `seq 0 $N`; do
+    tag=${tags[$i]}
+
+    tagfile="analist-$tag.dat"
+    test -e "$tagfile" && continue
+    echo "Writing analysis list to $tagfile" 1>&2
+
+    > $tagfile
+    git ls-tree --full-tree -r --name-only $tag src/Analysis/ src/Analyses/ analyses/ | grep "\.cc" | \
+        while read i; do basename $i .cc >> $tagfile; done
+    sort $tagfile > $$ && mv $$ $tagfile
+done
+
+## Diff ana lists between all tags
+echo "Rivet analysis diffs"
+echo "===================="
+let numdiffs=$numtags-1
+let N=$numdiffs-1
+for i in `seq 0 $N`; do
+    let j=$i+1
+    rev0=${tags[$j]}
+    rev1=${tags[$i]}
+    echo -e "\n$rev0 -> $rev1"
+
+    tagfile0="analist-$rev0.dat"
+    tagfile1="analist-$rev1.dat"
+
+    anas=$(comm -13 $tagfile0 $tagfile1)
+    test -n "$(echo $anas)" && { echo -e "\n  Added:"; echo $anas | xargs rivet --list-analyses | while read l; do echo "    $l"; done; }
+
+    anas=$(comm -23 $tagfile0 $tagfile1)
+    test -n "$(echo $anas)" && { echo -e "\n  Removed:"; echo $anas | sed -e 's/\ \+/\n/g' | while read l; do echo "    $l"; done; }
+
+    echo
+done

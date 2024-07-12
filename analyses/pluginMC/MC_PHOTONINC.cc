@@ -24,11 +24,11 @@ namespace Rivet {
     /// Book histograms
     void init() {
       // General FS
-      FinalState fs(-5.0, 5.0);
+      FinalState fs((Cuts::etaIn(-5.0, 5.0)));
       declare(fs, "FS");
 
       // Get leading photon
-      LeadingParticlesFinalState photonfs(FinalState(-1.0, 1.0, 30.0*GeV));
+      LeadingParticlesFinalState photonfs(FinalState(Cuts::abseta < 2.5 && Cuts::pT >=  30*GeV));
       photonfs.addParticleId(PID::PHOTON);
       declare(photonfs, "LeadingPhoton");
 
@@ -37,9 +37,9 @@ namespace Rivet {
       vfs.addVetoOnThisFinalState(photonfs);
       declare(vfs, "JetFS");
 
-      _h_photon_pT = bookHisto1D("photon_pT", logspace(50, 30.0, 0.5*(sqrtS()>0.?sqrtS():14000.)));
-      _h_photon_pT_lin = bookHisto1D("photon_pT_lin", 50, 0.0, 70.0);
-      _h_photon_y = bookHisto1D("photon_y", 50, -5.0, 5.0);
+      book(_h_photon_pT ,"photon_pT", logspace(50, 30.0, 0.5*(sqrtS()>0.?sqrtS():14000.)));
+      book(_h_photon_pT_lin ,"photon_pT_lin", 50, 0.0, 70.0);
+      book(_h_photon_y ,"photon_y", 50, -5.0, 5.0);
     }
 
 
@@ -59,12 +59,12 @@ namespace Rivet {
       }
 
       // Passed cuts, so get the weight
-      const double weight = e.weight();
+      const double weight = 1.0;
 
       // Isolate photon by ensuring that a 0.4 cone around it contains less than 7% of the photon's energy
       const double egamma = photon.E();
       double econe = 0.0;
-      foreach (const Particle& p, fs.particles()) {
+      for (const Particle& p : fs.particles()) {
         if (deltaR(photon, p.momentum()) < 0.4) {
           econe += p.E();
           // Veto as soon as E_cone gets larger
@@ -104,6 +104,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(MC_PHOTONINC);
+  RIVET_DECLARE_PLUGIN(MC_PHOTONINC);
 
 }

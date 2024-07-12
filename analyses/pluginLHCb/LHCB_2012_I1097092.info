@@ -1,0 +1,38 @@
+Name: LHCB_2012_I1097092
+Year: 2012
+Summary: $B_c^+\to J/\psi\pi^+$ and $B_c^+\to J/\psi\pi^+\pi^+\pi^-$
+Experiment: LHCB
+Collider: LHC
+InspireID: 1097092
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phy.Rev.Lett. 108 (2012) 251802
+RunInfo: Any process producing B_c+, originally pp
+Description:
+'Angular distributions in between the muons  $B_c^+\to J/\psi\pi^+$ and $B_c^+\to J/\psi\pi^+\pi^+\pi^-$
+with the muons from $J/\psi\to\mu^+\mu^-$ and mass distributions in  $B_c^+\to J/\psi\pi^+\pi^+\pi^-$.
+The data were read from the plots in the paper and may not be corrected for efficiency and acceptance.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: LHCb:2012ag
+BibTeX: '@article{LHCb:2012ag,
+    author = "Aaij, R and others",
+    collaboration = "LHCb",
+    title = "{First observation of the decay $B_c^+ \to J/\psi \pi^+\pi^-\pi^+$}",
+    eprint = "1204.0079",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "LHCB-PAPER-2011-044, CERN-PH-EP-2012-090",
+    doi = "10.1103/PhysRevLett.108.251802",
+    journal = "Phys. Rev. Lett.",
+    volume = "108",
+    pages = "251802",
+    year = "2012"
+}
+'

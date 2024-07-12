@@ -18,32 +18,34 @@ namespace Rivet {
   class ZFinder : public ParticleFinder {
   public:
 
-    enum ChargedLeptons { PROMPTCHLEPTONS=0, ALLCHLEPTONS };
-    enum ClusterPhotons { NOCLUSTER=0, CLUSTERNODECAY=1, CLUSTERALL };
-    enum PhotonTracking { NOTRACK=0, TRACK=1 };
+    enum class ChargedLeptons { PROMPT, ALL };
+    enum class ClusterPhotons { NONE, NODECAY, ALL };
+    enum class AddPhotons { NO, YES };
 
     /// @name Constructors
     //@{
 
-    /// Constructor taking cuts object
+    /// @brief Constructor taking cuts object
+    ///
     /// @param inputfs Input final state
-    /// @param cuts lepton cuts
-    /// @param pid type of the leptons
-    /// @param minmass,maxmass mass window
-    /// @param dRmax maximum dR of photons around leptons to take into account
+    /// @param cuts  Lepton cuts
+    /// @param pid  Type of the leptons
+    /// @param minmass,maxmass  Dilepton mass window
+    /// @param dRmax  Maximum dR of photons around leptons to take into account
     ///  for Z reconstruction (only relevant if one of the following are true)
-    /// @param clusterPhotons whether such photons are supposed to be
+    /// @param chLeptons  The type of charged leptons considered
+    /// @param clusterPhotons  Whether such photons are supposed to be
     ///  clustered to the lepton objects and thus Z mom
-    /// @param trackPhotons whether such photons should be added to _theParticles
-    ///  (cf. _trackPhotons)
+    /// @param trackPhotons  Whether such photons should be considered constituent particles
+    /// @param masstarget  The expected (transverse) mass value, if resolving ambiguities
     ZFinder(const FinalState& inputfs,
             const Cut& cuts,
             PdgId pid,
             double minmass, double maxmass,
             double dRmax=0.1,
-            ChargedLeptons chLeptons=PROMPTCHLEPTONS,
-            ClusterPhotons clusterPhotons=CLUSTERNODECAY,
-            PhotonTracking trackPhotons=NOTRACK,
+            ChargedLeptons chLeptons=ChargedLeptons::PROMPT,
+            ClusterPhotons clusterPhotons=ClusterPhotons::NODECAY,
+            AddPhotons trackPhotons=AddPhotons::NO,
             double masstarget=91.2*GeV);
 
     /// Backward-compatible constructor with implicit chLeptons mode = PROMPTCHLEPTONS
@@ -54,10 +56,10 @@ namespace Rivet {
             double minmass, double maxmass,
             double dRmax,
             ClusterPhotons clusterPhotons,
-            PhotonTracking trackPhotons=NOTRACK,
+            AddPhotons trackPhotons=AddPhotons::NO,
             double masstarget=91.2*GeV)
       : ZFinder(inputfs, cuts, pid, minmass, maxmass,
-                dRmax, PROMPTCHLEPTONS, clusterPhotons, trackPhotons, masstarget)
+                dRmax, ChargedLeptons::PROMPT, clusterPhotons, trackPhotons, masstarget)
     {   }
 
 
@@ -95,7 +97,7 @@ namespace Rivet {
     void project(const Event& e);
 
     /// Compare projections.
-    int compare(const Projection& p) const;
+    CmpState compare(const Projection& p) const;
 
 
   public:
@@ -104,14 +106,14 @@ namespace Rivet {
     void clear() { _theParticles.clear(); }
 
 
-  private:
+  protected:
 
     /// Mass cuts to apply to clustered leptons (cf. InvMassFinalState)
     double _minmass, _maxmass, _masstarget;
 
     /// Switch for tracking of photons (whether to include them in the Z particle)
     /// This is relevant when the clustered photons need to be excluded from e.g. a jet finder
-    PhotonTracking _trackPhotons;
+    AddPhotons _trackPhotons;
 
     /// Lepton flavour
     PdgId _pid;

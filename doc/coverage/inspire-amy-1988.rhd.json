@@ -1,0 +1,41 @@
+{
+    "251270": [
+        "Measurements of $R$ and a search for heavy quark production in $e^+e^-$ annihilation at $\\sqrt{s} = 50$ GeV and 52 GeV", 
+        "AMY", 
+        "10.1103/PhysRevLett.60.93", 
+        null, 
+        null, 
+        "ins251270", 
+        null, 
+        [
+            "KEK-PREPRINT-87-84", 
+            "AMY-87-03"
+        ]
+    ], 
+    "252969": [
+        "Search for isolated leptons in low thrust $e^+e^-$ annihilation events at $\\sqrt{s} = 50$ GeV and 52-GeV", 
+        "AMY", 
+        "10.1103/PhysRevLett.60.2359", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "KEK-Preprint-87-142"
+        ]
+    ], 
+    "261848": [
+        "Experimental mass limit for a fourth generation sequential lepton from $e^+e^-$ annihilations at $\\sqrt{s} = 56$ GeV", 
+        "AMY", 
+        "10.1103/PhysRevLett.61.911", 
+        null, 
+        null, 
+        "ins261848", 
+        null, 
+        [
+            "KEK-Preprint-88-8", 
+            "KNUHEP-88-01", 
+            "AMY-88-01"
+        ]
+    ]
+}

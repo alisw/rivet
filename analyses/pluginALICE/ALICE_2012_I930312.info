@@ -6,6 +6,7 @@ Collider: LHC
 SpireID: 
 InspireID: 930312
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Przemyslaw Karczmarczyk <przemyslaw.karczmarczyk@cern.ch>
  - Jan Fiete Grosse-Oetringhaus <Jan.Fiete.Grosse-Oetringhaus@cern.ch>
@@ -15,8 +16,9 @@ References:
 RunInfo:
 NumEvents:
 Options:
- - cent=REF,GEN,IMP,USR 
-Beams: [[p, p], [1000822080, 1000822080]]
+ - cent=REF,GEN,IMP,USR,RAW
+ - beam=HI,PP
+Beams: [[p, p], [Pb, Pb]]
 # This is _total_ energy of beams, so this becomes 208*2760=574080
 Energies: [2760, 574080]
 Description:
@@ -39,4 +41,3 @@ BibTeX: '@article{Aamodt:2011vg,
       reportNumber   = "CERN-PH-EP-2011-161",
       SLACcitation   = "%%CITATION = ARXIV:1110.0121;%%"
 }'
-Reentrant: True

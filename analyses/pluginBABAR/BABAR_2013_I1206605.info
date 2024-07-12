@@ -1,0 +1,37 @@
+Name: BABAR_2013_I1206605
+Year: 2013
+Summary: Dalitz plot analysis of $D^+\to K^+K^-\pi^+$
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 1206605
+Status: VALIDATED NOHEPDATA
+Reentrant: false
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 87 (2013) 5, 052010
+RunInfo: Any process producing D0
+Description:
+  'Kinematic distributions  in the decay $D^+\to \to K^+K^-\pi^+$. Resolution/acceptance effects have been not unfolded. Given the agreement with the model in the paper this analysis should only be used for qualitative studies.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BaBar:2012ize
+BibTeX: '@article{BaBar:2012ize,
+    author = "Lees, J. P. and others",
+    collaboration = "BaBar",
+    title = "{Search for direct CP violation in singly Cabibbo-suppressed D\ensuremath{\pm}\textrightarrow{}K+K-\ensuremath{\pi}\ensuremath{\pm} decays}",
+    eprint = "1212.1856",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BABAR-PUB-12-014, SLAC-PUB-15077",
+    doi = "10.1103/PhysRevD.87.052010",
+    journal = "Phys. Rev. D",
+    volume = "87",
+    number = "5",
+    pages = "052010",
+    year = "2013"
+}
+'

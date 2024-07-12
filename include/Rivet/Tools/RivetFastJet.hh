@@ -2,6 +2,7 @@
 #define RIVET_RIVETFASTJET_HH
 
 #include "Rivet/Config/RivetCommon.hh"
+#include "Rivet/Math/Vectors.hh"
 
 #include "fastjet/JetDefinition.hh"
 #include "fastjet/AreaDefinition.hh"
@@ -11,8 +12,13 @@
 #include "fastjet/tools/Filter.hh"
 #include "fastjet/tools/Recluster.hh"
 
+namespace fastjet {
+  namespace contrib { }
+}
+
 namespace Rivet {
 
+  namespace fjcontrib = fastjet::contrib;
 
   /// Unscoped awareness of FastJet's PseudoJet
   using fastjet::PseudoJet;

@@ -20,7 +20,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(ZEUS_2001_S4815815);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ZEUS_2001_S4815815);
 
 
     /// @name Analysis methods
@@ -33,39 +33,39 @@ namespace Rivet {
       /// @todo Acceptance
       // checking recombination scheme and radius checked with original code from M.Wing
       FinalState fs;
-      declare(FastJets(fs, fastjet::JetAlgorithm::kt_algorithm, fastjet::RecombinationScheme::Et_scheme, 1.0), "Jets"); 
+      declare(FastJets(fs, fastjet::JetAlgorithm::kt_algorithm, fastjet::RecombinationScheme::Et_scheme, 1.0), "Jets");
       declare(DISKinematics(), "Kinematics");
 
       // Table 1
-      _h_costh[0] = bookHisto1D(1, 1, 1);
-      _h_costh[1] = bookHisto1D(1, 1, 2);
+      book(_h_costh[0] ,1, 1, 1);
+      book(_h_costh[1] ,1, 1, 2);
       // Table 2
-      _h_etjet1[1][0] = bookHisto1D(2, 1, 1);
-      _h_etjet1[1][1] = bookHisto1D(3, 1, 1);
-      _h_etjet1[1][2] = bookHisto1D(4, 1, 1);
-      _h_etjet1[1][3] = bookHisto1D(5, 1, 1);
-      _h_etjet1[1][4] = bookHisto1D(6, 1, 1);
-      _h_etjet1[1][5] = bookHisto1D(7, 1, 1);
+      book(_h_etjet1[1][0] ,2, 1, 1);
+      book(_h_etjet1[1][1] ,3, 1, 1);
+      book(_h_etjet1[1][2] ,4, 1, 1);
+      book(_h_etjet1[1][3] ,5, 1, 1);
+      book(_h_etjet1[1][4] ,6, 1, 1);
+      book(_h_etjet1[1][5] ,7, 1, 1);
       // Table 3
-      _h_etjet1[0][0] = bookHisto1D(8, 1, 1);
-      _h_etjet1[0][1] = bookHisto1D(9, 1, 1);
-      _h_etjet1[0][2] = bookHisto1D(10, 1, 1);
-      _h_etjet1[0][3] = bookHisto1D(11, 1, 1);
-      _h_etjet1[0][4] = bookHisto1D(12, 1, 1);
-      _h_etjet1[0][5] = bookHisto1D(13, 1, 1);
+      book(_h_etjet1[0][0] ,8, 1, 1);
+      book(_h_etjet1[0][1] ,9, 1, 1);
+      book(_h_etjet1[0][2] ,10, 1, 1);
+      book(_h_etjet1[0][3] ,11, 1, 1);
+      book(_h_etjet1[0][4] ,12, 1, 1);
+      book(_h_etjet1[0][5] ,13, 1, 1);
       // Table 4
-      _h_etajet2[1][0] = bookHisto1D(14, 1, 1);
-      _h_etajet2[1][1] = bookHisto1D(15, 1, 1);
-      _h_etajet2[1][2] = bookHisto1D(16, 1, 1);
+      book(_h_etajet2[1][0] ,14, 1, 1);
+      book(_h_etajet2[1][1] ,15, 1, 1);
+      book(_h_etajet2[1][2] ,16, 1, 1);
       // Table 5
-      _h_etajet2[0][0] = bookHisto1D(17, 1, 1);
-      _h_etajet2[0][1] = bookHisto1D(18, 1, 1);
-      _h_etajet2[0][2] = bookHisto1D(19, 1, 1);
+      book(_h_etajet2[0][0] ,17, 1, 1);
+      book(_h_etajet2[0][1] ,18, 1, 1);
+      book(_h_etajet2[0][2] ,19, 1, 1);
       // Table 6
-      _h_xobsy[0] = bookHisto1D(20, 1, 1);
-      _h_xobsy[1] = bookHisto1D(21, 1, 1);
-      _h_xobsy[2] = bookHisto1D(22, 1, 1);
-      _h_xobsy[3] = bookHisto1D(23, 1, 1);
+      book(_h_xobsy[0] ,20, 1, 1);
+      book(_h_xobsy[1] ,21, 1, 1);
+      book(_h_xobsy[2] ,22, 1, 1);
+      book(_h_xobsy[3] ,23, 1, 1);
     }
 
 
@@ -105,43 +105,42 @@ namespace Rivet {
       const double mjj = sqrt( 2.*j1.Et()*j2.Et()*( cosh(j1.eta() - j2.eta()) - cos(j1.phi() - j2.phi()) ) );
 
       // Fill histograms
-      const double weight = event.weight();
       // T1
       if (mjj > 42*GeV && inRange(etabar, 0.1, 1.3))
-        _h_costh[i_xyobs]->fill(abs(costhetastar), weight);
+        _h_costh[i_xyobs]->fill(abs(costhetastar));
       // T2, T3: Symmetrize eta selection, each event contribute twice to the cross section
       for (size_t isel = 0; isel < 2; ++isel) {
         double etaJet1 = (isel == 0) ? orientation*j1.eta() : orientation*j2.eta();
         double etaJet2 = (isel == 0) ? orientation*j2.eta() : orientation*j1.eta();
         if (inRange(etaJet1, -1, 0) && inRange(etaJet2, -1, 0))
-          _h_etjet1[i_xyobs][0]->fill(j1.Et()/GeV, weight);
+          _h_etjet1[i_xyobs][0]->fill(j1.Et()/GeV);
         else if (inRange(etaJet1, 0, 1) && inRange(etaJet2, -1, 0))
-          _h_etjet1[i_xyobs][1]->fill(j1.Et()/GeV, weight);
+          _h_etjet1[i_xyobs][1]->fill(j1.Et()/GeV);
         else if (inRange(etaJet1, 0, 1) && inRange(etaJet2, 0, 1))
-          _h_etjet1[i_xyobs][2]->fill(j1.Et()/GeV, weight);
+          _h_etjet1[i_xyobs][2]->fill(j1.Et()/GeV);
         else if (inRange(etaJet1, 1, 2.4) && inRange(etaJet2, -1, 0))
-          _h_etjet1[i_xyobs][3]->fill(j1.Et()/GeV, weight);
+          _h_etjet1[i_xyobs][3]->fill(j1.Et()/GeV);
         else if (inRange(etaJet1, 1, 2.4) && inRange(etaJet2, 0, 1))
-          _h_etjet1[i_xyobs][4]->fill(j1.Et()/GeV, weight);
+          _h_etjet1[i_xyobs][4]->fill(j1.Et()/GeV);
         else if (inRange(etaJet1, 1, 2.4) && inRange(etaJet2, 1, 2.4))
-          _h_etjet1[i_xyobs][5]->fill(j1.Et()/GeV, weight);
+          _h_etjet1[i_xyobs][5]->fill(j1.Et()/GeV);
         // T4, T5
         if (inRange(etaJet1, -1, 0))
-          _h_etajet2[i_xyobs][0]->fill(etaJet2, weight);
+          _h_etajet2[i_xyobs][0]->fill(etaJet2);
         else if (inRange(etaJet1, 0, 1))
-          _h_etajet2[i_xyobs][1]->fill(etaJet2, weight);
+          _h_etajet2[i_xyobs][1]->fill(etaJet2);
         else if (inRange(etaJet1, 1, 2.4))
-          _h_etajet2[i_xyobs][2]->fill(etaJet2, weight);
+          _h_etajet2[i_xyobs][2]->fill(etaJet2);
       }
       // T6
       if (inRange(j1.Et()/GeV, 14, 17))
-        _h_xobsy[0]->fill(xyobs, weight);
+        _h_xobsy[0]->fill(xyobs);
       else if (inRange(j1.Et()/GeV, 17, 25))
-        _h_xobsy[1]->fill(xyobs, weight);
+        _h_xobsy[1]->fill(xyobs);
       else if (inRange(j1.Et()/GeV, 25, 35))
-        _h_xobsy[2]->fill(xyobs, weight);
+        _h_xobsy[2]->fill(xyobs);
       else if (inRange(j1.Et()/GeV, 35, 90))
-        _h_xobsy[3]->fill(xyobs, weight);
+        _h_xobsy[3]->fill(xyobs);
     }
 
 
@@ -169,6 +168,6 @@ namespace Rivet {
   };
 
 
-  DECLARE_RIVET_PLUGIN(ZEUS_2001_S4815815);
+  RIVET_DECLARE_ALIASED_PLUGIN(ZEUS_2001_S4815815, ZEUS_2001_I568665);
 
 }

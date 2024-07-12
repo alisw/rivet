@@ -17,7 +17,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2016_CONF_2016_078);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2016_CONF_2016_078);
 
 
     /// @name Analysis methods
@@ -42,7 +42,7 @@ namespace Rivet {
 
       PromptFinalState es(Cuts::abseta < 2.47 && Cuts::abspid == PID::ELECTRON, true, true);
       declare(es, "TruthElectrons");
-      declare(SmearedParticles(es, ELECTRON_EFF_ATLAS_RUN2, ELECTRON_SMEAR_ATLAS_RUN2), "RecoElectrons");
+      declare(SmearedParticles(es, ELECTRON_RECOEFF_ATLAS_RUN2, ELECTRON_SMEAR_ATLAS_RUN2), "RecoElectrons");
 
       PromptFinalState mus(Cuts::abseta < 2.7 && Cuts::abspid == PID::MUON, true);
       declare(mus, "TruthMuons");
@@ -50,19 +50,19 @@ namespace Rivet {
 
 
       // Book histograms/counters
-      _h_2j_0800 = bookCounter("2j-0800");
-      _h_2j_1200 = bookCounter("2j-1200");
-      _h_2j_1600 = bookCounter("2j-1600");
-      _h_2j_2000 = bookCounter("2j-2000");
-      _h_3j_1200 = bookCounter("2j-2000");
-      _h_4j_1000 = bookCounter("4j-1000");
-      _h_4j_1400 = bookCounter("4j-1400");
-      _h_4j_1800 = bookCounter("4j-1800");
-      _h_4j_2200 = bookCounter("4j-2200");
-      _h_4j_2600 = bookCounter("4j-2600");
-      _h_5j_1400 = bookCounter("5j-1400");
-      _h_6j_1800 = bookCounter("6j-1800");
-      _h_6j_2200 = bookCounter("6j-2200");
+      book(_h_2j_0800,"2j-0800");
+      book(_h_2j_1200,"2j-1200");
+      book(_h_2j_1600,"2j-1600");
+      book(_h_2j_2000,"2j-2000");
+      book(_h_3j_1200,"2j-2000");
+      book(_h_4j_1000,"4j-1000");
+      book(_h_4j_1400,"4j-1400");
+      book(_h_4j_1800,"4j-1800");
+      book(_h_4j_2200,"4j-2200");
+      book(_h_4j_2600,"4j-2600");
+      book(_h_5j_1400,"5j-1400");
+      book(_h_6j_1800,"6j-1800");
+      book(_h_6j_2200,"6j-2200");
 
 
       // Book cut-flows
@@ -123,7 +123,7 @@ namespace Rivet {
             return trks.size() < 3 || (m.pT() > 2*j.pT() && m.pT() > 0.7*sum(trks, pT, 0.0));
           });
       // Loose electron selection
-      ifilter_select(elecs, ParticleEffFilter(ELECTRON_IDEFF_ATLAS_RUN2_LOOSE));
+      ifilter_select(elecs, ParticleEffFilter(ELECTRON_EFF_ATLAS_RUN2_LOOSE));
 
       // Veto the event if there are any remaining baseline leptons
       if (!elecs.empty()) vetoEvent;
@@ -173,45 +173,43 @@ namespace Rivet {
       //////////////////
 
 
-      const double w = event.weight();
-
       // 2 jet regions
       if (dphimin_123 > 0.8 && dphimin_more > 0.4) {
         if (jetpts50[1] > 200*GeV && etamax_2 < 0.8) { //< implicit pT[0] cut
-          if (met_sqrtHT > 14*sqrt(GeV) && meff_incl > 800*GeV) _h_2j_0800->fill(w);
+          if (met_sqrtHT > 14*sqrt(GeV) && meff_incl > 800*GeV) _h_2j_0800->fill();
         }
         if (jetpts50[1] > 250*GeV && etamax_2 < 1.2) { //< implicit pT[0] cut
-          if (met_sqrtHT > 16*sqrt(GeV) && meff_incl > 1200*GeV) _h_2j_1200->fill(w);
-          if (met_sqrtHT > 18*sqrt(GeV) && meff_incl > 1600*GeV) _h_2j_1600->fill(w);
-          if (met_sqrtHT > 20*sqrt(GeV) && meff_incl > 2000*GeV) _h_2j_2000->fill(w);
+          if (met_sqrtHT > 16*sqrt(GeV) && meff_incl > 1200*GeV) _h_2j_1200->fill();
+          if (met_sqrtHT > 18*sqrt(GeV) && meff_incl > 1600*GeV) _h_2j_1600->fill();
+          if (met_sqrtHT > 20*sqrt(GeV) && meff_incl > 2000*GeV) _h_2j_2000->fill();
         }
       }
 
       // 3 jet region
       if (njets50 >= 3 && dphimin_123 > 0.4 && dphimin_more > 0.2) {
         if (jetpts50[0] > 600*GeV && jetpts50[2] > 50*GeV) { //< implicit pT[1] cut
-          if (met_sqrtHT > 16*sqrt(GeV) && meff_incl > 1200*GeV) _h_3j_1200->fill(w);
+          if (met_sqrtHT > 16*sqrt(GeV) && meff_incl > 1200*GeV) _h_3j_1200->fill();
         }
       }
 
       // 4 jet regions (note implicit pT[1,2] cuts)
       if (njets50 >= 4 && dphimin_123 > 0.4 && dphimin_more > 0.4 && jetpts50[0] > 200*GeV && aplanarity > 0.04) {
-        if (jetpts50[3] > 100*GeV && etamax_4 < 1.2 && met_meff_4 > 0.25*sqrt(GeV) && meff_incl > 1000*GeV) _h_4j_1000->fill(w);
-        if (jetpts50[3] > 100*GeV && etamax_4 < 2.0 && met_meff_4 > 0.25*sqrt(GeV) && meff_incl > 1400*GeV) _h_4j_1400->fill(w);
-        if (jetpts50[3] > 100*GeV && etamax_4 < 2.0 && met_meff_4 > 0.20*sqrt(GeV) && meff_incl > 1800*GeV) _h_4j_1800->fill(w);
-        if (jetpts50[3] > 150*GeV && etamax_4 < 2.0 && met_meff_4 > 0.20*sqrt(GeV) && meff_incl > 2200*GeV) _h_4j_2200->fill(w);
-        if (jetpts50[3] > 150*GeV &&                   met_meff_4 > 0.20*sqrt(GeV) && meff_incl > 2600*GeV) _h_4j_2600->fill(w);
+        if (jetpts50[3] > 100*GeV && etamax_4 < 1.2 && met_meff_4 > 0.25*sqrt(GeV) && meff_incl > 1000*GeV) _h_4j_1000->fill();
+        if (jetpts50[3] > 100*GeV && etamax_4 < 2.0 && met_meff_4 > 0.25*sqrt(GeV) && meff_incl > 1400*GeV) _h_4j_1400->fill();
+        if (jetpts50[3] > 100*GeV && etamax_4 < 2.0 && met_meff_4 > 0.20*sqrt(GeV) && meff_incl > 1800*GeV) _h_4j_1800->fill();
+        if (jetpts50[3] > 150*GeV && etamax_4 < 2.0 && met_meff_4 > 0.20*sqrt(GeV) && meff_incl > 2200*GeV) _h_4j_2200->fill();
+        if (jetpts50[3] > 150*GeV &&                   met_meff_4 > 0.20*sqrt(GeV) && meff_incl > 2600*GeV) _h_4j_2600->fill();
       }
 
       // 5 jet region (note implicit pT[1,2,3] cuts)
       if (njets50 >= 5 && dphimin_123 > 0.4 && dphimin_more > 0.2 && jetpts50[0] > 500*GeV) {
-        if (jetpts50[4] > 50*GeV && met_meff_5 > 0.3*sqrt(GeV) && meff_incl > 1400*GeV) _h_5j_1400->fill(w);
+        if (jetpts50[4] > 50*GeV && met_meff_5 > 0.3*sqrt(GeV) && meff_incl > 1400*GeV) _h_5j_1400->fill();
       }
 
       // 6 jet regions (note implicit pT[1,2,3,4] cuts)
       if (njets50 >= 6 && dphimin_123 > 0.4 && dphimin_more > 0.2 && jetpts50[0] > 200*GeV && aplanarity > 0.08) {
-        if (jetpts50[5] >  50*GeV && etamax_6 < 2.0 && met_meff_6*sqrt(GeV) > 0.20 && meff_incl > 1800*GeV) _h_6j_1800->fill(w);
-        if (jetpts50[5] > 100*GeV &&                   met_meff_6*sqrt(GeV) > 0.15 && meff_incl > 2200*GeV) _h_6j_2200->fill(w);
+        if (jetpts50[5] >  50*GeV && etamax_6 < 2.0 && met_meff_6*sqrt(GeV) > 0.20 && meff_incl > 1800*GeV) _h_6j_1800->fill();
+        if (jetpts50[5] > 100*GeV &&                   met_meff_6*sqrt(GeV) > 0.15 && meff_incl > 2200*GeV) _h_6j_2200->fill();
       }
 
       // Cutflows
@@ -236,11 +234,11 @@ namespace Rivet {
     void finalize() {
 
       const double sf = 13.3*crossSection()/femtobarn/sumOfWeights();
-      scale({_h_2j_0800, _h_2j_1200, _h_2j_1600, _h_2j_2000}, sf);
-      scale( _h_3j_1200, sf);
-      scale({_h_4j_1000, _h_4j_1400, _h_4j_1800, _h_4j_2200, _h_4j_2600}, sf);
-      scale( _h_5j_1400, sf);
-      scale({_h_6j_1800, _h_6j_2200}, sf);
+      scale(_h_2j_0800, sf); scale(_h_2j_1200, sf); scale(_h_2j_1600, sf);
+      scale(_h_2j_2000, sf); scale(_h_3j_1200, sf); scale(_h_4j_1000, sf);
+      scale(_h_4j_1400, sf); scale(_h_4j_1800, sf); scale(_h_4j_2200, sf);
+      scale(_h_4j_2600, sf); scale(_h_5j_1400, sf); scale(_h_6j_1800, sf);
+      scale(_h_6j_2200, sf);
 
       _flows.scale(sf);
       MSG_INFO("CUTFLOWS:\n\n" << _flows);
@@ -264,10 +262,6 @@ namespace Rivet {
 
   };
 
-
-
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2016_CONF_2016_078);
-
-
+  RIVET_DECLARE_PLUGIN(ATLAS_2016_CONF_2016_078);
 }

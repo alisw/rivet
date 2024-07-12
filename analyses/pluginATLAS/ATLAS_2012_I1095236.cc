@@ -1,6 +1,5 @@
 // -*- C++ -*-
 #include "Rivet/Analysis.hh"
-#include "Rivet/Tools/BinnedHistogram.hh"
 #include "Rivet/Projections/FinalState.hh"
 #include "Rivet/Projections/ChargedFinalState.hh"
 #include "Rivet/Projections/VisibleFinalState.hh"
@@ -46,38 +45,38 @@ namespace Rivet {
       declare(ChargedFinalState(Cuts::abseta < 3.0),"cfs");
 
       // Used for pTmiss
-      declare(VisibleFinalState(-4.9,4.9),"vfs");
+      declare(VisibleFinalState((Cuts::etaIn(-4.9,4.9))),"vfs");
 
       // Book histograms
-      _count_SR0_A1 = bookHisto1D("count_SR0_A1", 1, 0., 1.);
-      _count_SR0_B1 = bookHisto1D("count_SR0_B1", 1, 0., 1.);
-      _count_SR0_C1 = bookHisto1D("count_SR0_C1", 1, 0., 1.);
-      _count_SR0_A2 = bookHisto1D("count_SR0_A2", 1, 0., 1.);
-      _count_SR0_B2 = bookHisto1D("count_SR0_B2", 1, 0., 1.);
-      _count_SR0_C2 = bookHisto1D("count_SR0_C2", 1, 0., 1.);
-      _count_SR1_D  = bookHisto1D("count_SR1_D" , 1, 0., 1.);
-      _count_SR1_E  = bookHisto1D("count_SR1_E" , 1, 0., 1.);
+      book(_count_SR0_A1 ,"count_SR0_A1", 1, 0., 1.);
+      book(_count_SR0_B1 ,"count_SR0_B1", 1, 0., 1.);
+      book(_count_SR0_C1 ,"count_SR0_C1", 1, 0., 1.);
+      book(_count_SR0_A2 ,"count_SR0_A2", 1, 0., 1.);
+      book(_count_SR0_B2 ,"count_SR0_B2", 1, 0., 1.);
+      book(_count_SR0_C2 ,"count_SR0_C2", 1, 0., 1.);
+      book(_count_SR1_D  ,"count_SR1_D" , 1, 0., 1.);
+      book(_count_SR1_E  ,"count_SR1_E" , 1, 0., 1.);
 
-      _hist_meff_SR0_A1   = bookHisto1D("hist_m_eff_SR0_A1", 14, 400., 1800.);
-      _hist_meff_SR0_A2   = bookHisto1D("hist_m_eff_SR0_A2", 14, 400., 1800.);
-      _hist_meff_SR1_D_e  = bookHisto1D("hist_meff_SR1_D_e" , 16, 600., 2200.);
-      _hist_meff_SR1_D_mu = bookHisto1D("hist_meff_SR1_D_mu", 16, 600., 2200.);
+      book(_hist_meff_SR0_A1   ,"hist_m_eff_SR0_A1", 14, 400., 1800.);
+      book(_hist_meff_SR0_A2   ,"hist_m_eff_SR0_A2", 14, 400., 1800.);
+      book(_hist_meff_SR1_D_e  ,"hist_meff_SR1_D_e" , 16, 600., 2200.);
+      book(_hist_meff_SR1_D_mu ,"hist_meff_SR1_D_mu", 16, 600., 2200.);
 
-      _hist_met_SR0_A1    = bookHisto1D("hist_met_SR0_A1", 14, 0., 700.);
-      _hist_met_SR0_A2    = bookHisto1D("hist_met_SR0_A2", 14, 0., 700.);
-      _hist_met_SR0_D_e   = bookHisto1D("hist_met_SR1_D_e" , 15, 0., 600.);
-      _hist_met_SR0_D_mu  = bookHisto1D("hist_met_SR1_D_mu", 15, 0., 600.);
+      book(_hist_met_SR0_A1    ,"hist_met_SR0_A1", 14, 0., 700.);
+      book(_hist_met_SR0_A2    ,"hist_met_SR0_A2", 14, 0., 700.);
+      book(_hist_met_SR0_D_e   ,"hist_met_SR1_D_e" , 15, 0., 600.);
+      book(_hist_met_SR0_D_mu  ,"hist_met_SR1_D_mu", 15, 0., 600.);
 
     }
 
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-      const double weight = event.weight();
+      const double weight = 1.0;
 
       Jets cand_jets;
       const Jets jets = apply<FastJets>(event, "AntiKtJets04").jetsByPt(20.0*GeV);
-      foreach (const Jet& jet, jets) {
+      for (const Jet& jet : jets) {
         if ( fabs( jet.eta() ) < 2.8 ) {
           cand_jets.push_back(jet);
         }
@@ -88,10 +87,10 @@ namespace Rivet {
       const Particles cand_mu = apply<IdentifiedFinalState>(event, "muons").particlesByPt();
       // Resolve jet-lepton overlap for jets with |eta| < 2.8
       Jets recon_jets;
-      foreach ( const Jet& jet, cand_jets ) {
+      for ( const Jet& jet : cand_jets ) {
         if ( fabs( jet.eta() ) >= 2.8 ) continue;
         bool away_from_e = true;
-        foreach ( const Particle & e, cand_e ) {
+        for ( const Particle & e : cand_e ) {
           if ( deltaR(e.momentum(),jet.momentum()) <= 0.2 ) {
             away_from_e = false;
             break;
@@ -102,9 +101,9 @@ namespace Rivet {
 
       // get the loose leptons used to define the 0 lepton channel
       Particles loose_e, loose_mu;
-      foreach ( const Particle & e, cand_e ) {
+      for ( const Particle & e  : cand_e ) {
         bool away = true;
-        foreach ( const Jet& jet, recon_jets ) {
+        for ( const Jet& jet  : recon_jets ) {
           if ( deltaR(e.momentum(),jet.momentum()) < 0.4 ) {
             away = false;
             break;
@@ -112,9 +111,9 @@ namespace Rivet {
         }
         if ( away ) loose_e.push_back( e );
       }
-      foreach ( const Particle & mu, cand_mu ) {
+      for ( const Particle & mu  : cand_mu ) {
         bool away = true;
-        foreach ( const Jet& jet, recon_jets ) {
+        for ( const Jet& jet  : recon_jets ) {
           if ( deltaR(mu.momentum(),jet.momentum()) < 0.4 ) {
             away = false;
             break;
@@ -126,10 +125,10 @@ namespace Rivet {
       Particles tight_mu;
       Particles chg_tracks =
         apply<ChargedFinalState>(event, "cfs").particles();
-      foreach ( const Particle & mu, loose_mu) {
+      for ( const Particle & mu  : loose_mu) {
         if(mu.perp()<20.) continue;
         double pTinCone = -mu.pT();
-        foreach ( const Particle & track, chg_tracks ) {
+        for ( const Particle & track  : chg_tracks ) {
           if ( deltaR(mu.momentum(),track.momentum()) <= 0.2 )
             pTinCone += track.pT();
         }
@@ -137,10 +136,10 @@ namespace Rivet {
           tight_mu.push_back(mu);
       }
       Particles tight_e;
-      foreach ( const Particle & e, loose_e ) {
+      for ( const Particle & e  : loose_e ) {
         if(e.perp()<25.) continue;
         double pTinCone = -e.perp();
-        foreach ( const Particle & track, chg_tracks ) {
+        for ( const Particle & track  : chg_tracks ) {
           if ( deltaR(e.momentum(),track.momentum()) <= 0.2 )
             pTinCone += track.pT();
         }
@@ -153,14 +152,14 @@ namespace Rivet {
       Particles vfs_particles =
         apply<VisibleFinalState>(event, "vfs").particles();
       FourMomentum pTmiss;
-      foreach ( const Particle & p, vfs_particles ) {
+      for ( const Particle & p : vfs_particles ) {
         pTmiss -= p.momentum();
       }
       double eTmiss = pTmiss.pT();
 
       // get the number of b-tagged jets
       unsigned int ntagged=0;
-      foreach (const Jet & jet, recon_jets ) {
+      for (const Jet & jet : recon_jets ) {
         if(jet.perp()>50. && abs(jet.eta())<2.5 &&
            jet.bTagged() && rand()/static_cast<double>(RAND_MAX)<=0.60)
           ++ntagged;
@@ -168,7 +167,7 @@ namespace Rivet {
 
       // ATLAS calo problem
       if(rand()/static_cast<double>(RAND_MAX)<=0.42) {
-        foreach ( const Jet & jet, recon_jets ) {
+        for ( const Jet & jet : recon_jets ) {
           double eta = jet.rapidity();
           double phi = jet.azimuthalAngle(MINUSPI_PLUSPI);
           if(jet.perp()>50 && eta>-0.1&&eta<1.5&&phi>-0.9&&phi<-0.5)
@@ -207,8 +206,8 @@ namespace Rivet {
         for(unsigned int ix=0;ix<3;++ix) {
           if(fabs(recon_jets[ix].eta())>2.) continue;
           double trackpT=0;
-          foreach(const Particle & p, recon_jets[ix].particles()) {
-            if(PID::threeCharge(p.pid())==0) continue;
+          for(const Particle & p : recon_jets[ix].particles()) {
+            if(PID::charge3(p.pid())==0) continue;
             trackpT += p.perp();
           }
           if(trackpT/recon_jets[ix].perp()<0.05)
@@ -322,6 +321,6 @@ namespace Rivet {
 
 
   // This global object acts as a hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2012_I1095236);
+  RIVET_DECLARE_PLUGIN(ATLAS_2012_I1095236);
 
 }

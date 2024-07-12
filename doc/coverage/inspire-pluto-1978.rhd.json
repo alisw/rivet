@@ -1,0 +1,74 @@
+{
+    "121939": [
+        "Measurement of the J/psi Radiative Decay Into F0 (1270) gamma", 
+        "PLUTO", 
+        "10.1016/0370-2693(78)90742-6", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-77-72"
+        ]
+    ], 
+    "122092": [
+        "Evidence for the tau --> Neutrino rho pi Decay Mode", 
+        "PLUTO", 
+        "10.1016/0370-2693(78)90181-8", 
+        null, 
+        null, 
+        "ins122092", 
+        null, 
+        [
+            "DESY-77-78"
+        ]
+    ], 
+    "130051": [
+        "Measurement of the F0 (1270) Polarization in the $J/\\psi \\to$ F0 $\\gamma$ Decay", 
+        "Pluto", 
+        "10.1016/0370-2693(78)90876-6", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-78-20"
+        ]
+    ], 
+    "130053": [
+        "Observation of a Narrow Resonance Formed in e+ e- Annihilation at 9.46-GeV", 
+        "Pluto", 
+        "10.1016/0370-2693(78)90287-3", 
+        null, 
+        null, 
+        "ins130053", 
+        null, 
+        [
+            "DESY-78-21"
+        ]
+    ], 
+    "131099": [
+        "Observation of the Decay $\\tau \\to \\pi$ Neutrino", 
+        "Pluto", 
+        "10.1016/0370-2693(78)90373-8", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-78-30"
+        ]
+    ], 
+    "131403": [
+        "A Study of Jets in electron Positron Annihilation Into Hadrons in the Energy Range 3.1-GeV to 9.5-GeV", 
+        "PLUTO", 
+        "10.1016/0370-2693(78)90377-5", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-78-39"
+        ]
+    ]
+}

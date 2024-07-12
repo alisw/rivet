@@ -1,0 +1,36 @@
+Name: BABAR_2012_I1081760
+Year: 2012
+Summary: $\pi^+\pi^-$ mass distribution in $B^0\to\pi^+\pi^-K^{*0}$ decays
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 1081760
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 85 (2012) 072005
+RunInfo: Any process producing B0, originally Upsilon(4S) decays
+Description:
+  'Measurement of the $\pi^+\pi^-$ mass distribution in $B^0\to\pi^+\pi^-K^{*0}$ decays. The other distriubutions in the paper are designed solely to isolate various resonant components and are therefore not implemented.'
+ValidationInfo:
+  'herwig 7  events using EvTGen for B decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BaBar:2011ryf
+BibTeX: '@article{BaBar:2011ryf,
+    author = "Lees, J. P. and others",
+    collaboration = "BaBar",
+    title = "{$B^0$ meson decays to $\rho^0 K^{*0}$, $f_0 K^{*0}$, and $\rho^-K^{*+}$, including higher $K^*$ resonances}",
+    eprint = "1112.3896",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BABAR-PUB-11-010, SLAC-PUB-14842",
+    doi = "10.1103/PhysRevD.85.072005",
+    journal = "Phys. Rev. D",
+    volume = "85",
+    pages = "072005",
+    year = "2012"
+}
+'

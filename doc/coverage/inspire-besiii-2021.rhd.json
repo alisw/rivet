@@ -1,0 +1,292 @@
+{
+    "1385603": [
+        "Measurement of the $e^+ e^\u2212 \\to \\pi^+ \\pi^\u2212$ cross section between 600 and 900 MeV using initial state radiation", 
+        "BESIII", 
+        "10.1016/j.physletb.2015.11.043", 
+        null, 
+        "1507.08188", 
+        "ins1385603", 
+        null, 
+        []
+    ], 
+    "1805771": [
+        "Model-Independent Determination of the Spin of the $\\Omega^-$ and Its Polarization Alignment in $\\psi(3686)\\to \\Omega^- \\bar \\Omega^+$", 
+        "BESIII", 
+        "10.1103/PhysRevLett.126.092002", 
+        null, 
+        "2007.03679", 
+        null, 
+        null, 
+        []
+    ], 
+    "1814783": [
+        "Measurements of $\\Sigma^+$ and $\\Sigma^-$ time-like electromagnetic form factors for center-of-mass energies from 2.3864 to 3.0200 GeV", 
+        "BESIII", 
+        "10.1016/j.physletb.2021.136110", 
+        null, 
+        "2009.01404", 
+        null, 
+        null, 
+        []
+    ], 
+    "1817739": [
+        "Observation of a resonant structure in $e^{+}e^{-} \\to \\omega\\eta$ and another in $e^{+}e^{-} \\to \\omega\\pi^{0}$ at center-of-mass energies between 2.00 and 3.08 GeV", 
+        "BESIII", 
+        "10.1016/j.physletb.2020.136059", 
+        null, 
+        "2009.08099", 
+        null, 
+        null, 
+        []
+    ], 
+    "1818830": [
+        "Study of BESIII trigger efficiencies with the 2018 $J/\\psi$ data", 
+        "BESIII", 
+        "10.1088/1674-1137/abcfab", 
+        null, 
+        "2009.11566", 
+        null, 
+        null, 
+        []
+    ], 
+    "1823448": [
+        "Measurement of cross section for $e^+e^-\\to\\Xi^-\\bar{\\Xi}^+$ near threshold at BESIII", 
+        "BESIII", 
+        "10.1103/PhysRevD.103.012005", 
+        null, 
+        "2010.08320", 
+        null, 
+        null, 
+        []
+    ], 
+    "1826422": [
+        "Measurements of $e^+e^-\\rightarrow \\eta_{\\rm c}\\pi^+ \\pi^-\\pi^0$, $\\eta_{\\rm c}\\pi^+ \\pi^-$ and $\\eta_{\\rm c}\\pi^0\\gamma$ at $\\sqrt{s}$ from 4.18 to 4.60\\,GeV, and search for a $Z_{\\rm c}$ state close to the $D\\bar{D}$ threshold decaying to $\\eta_{\\rm c}\\pi$ at $\\sqrt{s}$ = 4.23 GeV", 
+        "BESIII", 
+        "10.1103/PhysRevD.103.032006", 
+        null, 
+        "2010.14415", 
+        null, 
+        null, 
+        []
+    ], 
+    "1827567": [
+        "Determination of the  $\\Lambda_c^+$ spin via the reaction $e^+e^-\\to\\Lambda_c^+\\bar\\Lambda_c^-$", 
+        "BESIII", 
+        "10.1103/PhysRevD.103.L091101", 
+        null, 
+        "2011.00396", 
+        null, 
+        null, 
+        []
+    ], 
+    "1830421": [
+        "Measurement of the branching fraction of and search for a CP -violating asymmetry in $\\eta' \\to \\pi^+ \\pi^- e^+ e^-$ at BESIII", 
+        "BESIII", 
+        "10.1103/PhysRevD.103.092005", 
+        null, 
+        "2011.07902", 
+        null, 
+        null, 
+        []
+    ], 
+    "1830518": [
+        "Observation of a Near-Threshold Structure in the $K^+$ Recoil-Mass Spectra in $e^+e^- \\rightarrow K^+(D_s^-D^{*0}+D_s^{*-}D^0$)", 
+        "BESIII", 
+        "10.1103/PhysRevLett.126.102001", 
+        null, 
+        "2011.07855", 
+        null, 
+        null, 
+        []
+    ], 
+    "1830524": [
+        "Amplitude analysis and branching fraction measurement of $D_{s}^{+} \\rightarrow K^{+}K^{-}\\pi^{+}$", 
+        "BESIII", 
+        "10.1103/PhysRevD.104.012016", 
+        null, 
+        "2011.08041", 
+        null, 
+        null, 
+        []
+    ], 
+    "1833702": [
+        "Search for the reaction channel $e^+e^- \\rightarrow \\eta_c\\eta \\pi^+\\pi^-$ at center-of-mass energies from 4.23 to 4.60 GeV", 
+        "BESIII", 
+        "10.1103/PhysRevD.103.032004", 
+        null, 
+        "2011.13850", 
+        null, 
+        null, 
+        []
+    ], 
+    "1835071": [
+        "Search for the reaction $e^{+}e^{-} \\rightarrow \\chi_{cJ} \\pi^+ \\pi^-$ and a charmonium-like structure decaying to $\\chi_{cJ}\\pi ^{\\pm}$ between 4.18 and 4.60 GeV", 
+        "BESIII", 
+        "10.1103/PhysRevD.103.052010", 
+        null, 
+        "2012.02682", 
+        null, 
+        null, 
+        []
+    ], 
+    "1835521": [
+        "Observation of $\\eta^\\prime\\rightarrow\\pi^+\\pi^-\\mu^+\\mu^-$", 
+        "BESIII", 
+        "10.1103/PhysRevD.103.072006", 
+        null, 
+        "2012.04257", 
+        null, 
+        null, 
+        []
+    ], 
+    "1835598": [
+        "Search for the lepton number violating decay $\\Sigma^{-} \\to p e^{-} e^{-}$ and the rare inclusive decay $\\Sigma^{-} \\to \\Sigma^{+} X$", 
+        "BESIII", 
+        "10.1103/PhysRevD.103.052011", 
+        null, 
+        "2012.03592", 
+        null, 
+        null, 
+        []
+    ], 
+    "1836284": [
+        "Search for the $X(2370)$ and observation of $\\eta_{c}\\to\\eta\\eta\\eta^\\prime$ in $J/\\psi\\to\\gamma\\eta\\eta\\eta^{\\prime}$", 
+        "BESIII", 
+        "10.1103/PhysRevD.103.012009", 
+        null, 
+        "2012.06177", 
+        null, 
+        null, 
+        []
+    ], 
+    "1836509": [
+        "Measurement of the Born cross sections for $e^+e^- \\to \\eta^\\prime \\pi^{+}\\pi^{-}$ at center-of-mass energies between $2.00$ and $3.08$~GeV", 
+        "BESIII", 
+        "10.1103/PhysRevD.103.072007", 
+        null, 
+        "2012.07360", 
+        null, 
+        null, 
+        []
+    ], 
+    "1837725": [
+        "Study of $e^+e^- \\to 2(p\\bar{p})$ at center-of-mass energies between 4.0 and 4.6 GeV", 
+        "BESIII", 
+        "10.1103/PhysRevD.103.052003", 
+        null, 
+        "2012.11079", 
+        null, 
+        null, 
+        []
+    ], 
+    "1837968": [
+        "Measurement of the absolute branching fraction of $\\Lambda_c^+\\to p K^0_{\\mathrm{S}}\\eta$ decays", 
+        "BESIII", 
+        "10.1016/j.physletb.2021.136327", 
+        null, 
+        "2012.11106", 
+        null, 
+        null, 
+        []
+    ], 
+    "1844229": [
+        "Study of $e^+e^- \\rightarrow \\pi^{0}X(3872)\\gamma$ and search for $Z_c(4020)^{0}\\rightarrow X(3872)\\gamma$", 
+        "BESIII", 
+        "10.1103/PhysRevD.104.012001", 
+        null, 
+        "2102.00644", 
+        null, 
+        null, 
+        []
+    ], 
+    "1845444": [
+        "Amplitude analysis and branching-fraction measurement of $D^{+}_{s}\\rightarrow K^{0}_{S}K^{-}\\pi^{+}\\pi^{+}$", 
+        "BESIII", 
+        "10.1103/PhysRevD.103.092006", 
+        null, 
+        "2102.03808", 
+        null, 
+        null, 
+        []
+    ], 
+    "1847766": [
+        "Measurement of proton electromagnetic form factors in the time-like region using initial state radiation at BESIII", 
+        "BESIII", 
+        "10.1016/j.physletb.2021.136328", 
+        null, 
+        "2102.10337", 
+        null, 
+        null, 
+        []
+    ], 
+    "1847772": [
+        "Search for new decay modes of the $\\psi_2(3823)$ and the process $e^+e^-\\rightarrow\\pi^0\\pi^0\\psi_2(3823)$", 
+        "BESIII", 
+        "10.1103/PhysRevD.103.L091102", 
+        null, 
+        "2102.10845", 
+        null, 
+        null, 
+        []
+    ], 
+    "1850941": [
+        "Measurement of the $D \\to K^-\\pi^+\\pi^+\\pi^-$ and $D \\to K^-\\pi^+\\pi^0$ coherence factors and average strong-phase differences in quantum-correlated ${D\\bar{D}}$ decays", 
+        "BESIII", 
+        "10.1007/JHEP05(2021)164", 
+        null, 
+        "2103.05988", 
+        null, 
+        null, 
+        []
+    ], 
+    "1852814": [
+        "Search for the charged lepton flavor violating decay $J/\\psi\\to e\\tau$", 
+        "BESIII", 
+        "10.1103/PhysRevD.103.112007", 
+        null, 
+        "2103.11540", 
+        null, 
+        null, 
+        []
+    ], 
+    "1852819": [
+        "Search for the decay $D_s^+\\to a_0(980)^0e^+\\nu_e$", 
+        "BESIII", 
+        "10.1103/PhysRevD.103.092004", 
+        null, 
+        "2103.11855", 
+        null, 
+        null, 
+        []
+    ], 
+    "1854822": [
+        "Measurements of the branching fractions of $\\psi(3686)\\rightarrow\\bar{\\Sigma}^{0}\\Lambda+c.c.$ and $\\chi_{cJ (J = 0,1,2)} \\rightarrow \\Lambda \\bar{\\Lambda}$", 
+        "BESIII", 
+        "10.1103/PhysRevD.103.112004", 
+        null, 
+        "2103.16779", 
+        null, 
+        null, 
+        []
+    ], 
+    "1858485": [
+        "Measurement of the absolute branching fraction of inclusive semielectronic $D_s^+$ decays", 
+        "BESIII", 
+        "10.1103/PhysRevD.104.012003", 
+        null, 
+        "2104.07311", 
+        null, 
+        null, 
+        []
+    ], 
+    "1863642": [
+        "Measurement of the branching fraction of leptonic decay $D_s^+\\to\\tau^+\\nu_\\tau$ via $\\tau^+\\to\\pi^+\\pi^0\\bar \\nu_\\tau$", 
+        "BESIII", 
+        "10.1103/PhysRevD.104.032001", 
+        null, 
+        "2105.07178", 
+        null, 
+        null, 
+        []
+    ]
+}

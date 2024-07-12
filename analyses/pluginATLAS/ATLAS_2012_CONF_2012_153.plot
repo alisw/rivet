@@ -12,13 +12,13 @@ LogY=0
 # END PLOT
 # BEGIN PLOT /ATLAS_2012_CONF_2012_153/hist_etmiss
 Title=Missing Transverse Energy
-XLabel=$E^{\rm miss}_{\mathrm{T}}$ [GeV]
-YLabel=$\mathrm{Events}/20$\,GeV
+XLabel=$E^\mathrm{miss}_{\mathrm{T}}$ [GeV]
+YLabel=$\mathrm{Events}/20$$\,$GeV
 LogY=1
 # END PLOT
 # BEGIN PLOT /ATLAS_2012_CONF_2012_153/hist_m_eff
 Title=Effective Mass
 XLabel=$M_{\mathrm{eff}}$ [GeV]
-YLabel=$\mathrm{Events}/20$\,GeV
+YLabel=$\mathrm{Events}/20$$\,$GeV
 LogY=1
 # END PLOT

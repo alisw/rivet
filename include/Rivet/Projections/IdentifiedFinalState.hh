@@ -17,19 +17,8 @@ namespace Rivet {
     /// Constructor with a FinalState and optional list of PDG ID codes.
     IdentifiedFinalState(const FinalState& fsp, const vector<PdgId>& pids=vector<PdgId>());
 
-    /// Constructor with a list of PDG ID codes and a FinalState
-    /// @deprecated Use the version with FinalState as 1st arg
-    DEPRECATED("Use the version with FinalState as 1st arg")
-    IdentifiedFinalState(const vector<PdgId>& pids, const FinalState& fsp);
-
     /// Constructor with a FinalState and a single PDG ID code.
     IdentifiedFinalState(const FinalState& fsp, PdgId pid);
-
-    /// Constructor with a single PDG ID code and a FinalState.
-    /// @deprecated Use the version with FinalState as 1st arg
-    DEPRECATED("Use the version with FinalState as 1st arg")
-    IdentifiedFinalState(PdgId pid, const FinalState& fsp);
-
 
     /// Construction using optional Cuts object and optional list of PDG ID codes
     IdentifiedFinalState(const Cut& c=Cuts::open(), const vector<PdgId>& pids=vector<PdgId>());
@@ -114,12 +103,12 @@ namespace Rivet {
     void project(const Event& e);
 
     /// Compare projections.
-    int compare(const Projection& p) const;
+    CmpState compare(const Projection& p) const;
 
 
-  private:
+  protected:
 
-    /// The final-state particles.
+    /// The accepted final-state particle IDs.
     set<PdgId> _pids;
 
     // A vector of all other particles in the final state
@@ -129,6 +118,5 @@ namespace Rivet {
 
 
 }
-
 
 #endif

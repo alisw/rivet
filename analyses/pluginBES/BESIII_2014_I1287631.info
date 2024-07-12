@@ -1,0 +1,36 @@
+Name: BESIII_2014_I1287631
+Year: 2014
+Summary: $e^+e^-$ mass distribution in $J/\psi\to e^+e^-$ $+\eta^\prime,$ $\eta$ or $\pi^0$ 
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1287631
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 89 (2014) 9, 092008
+RunInfo: Any process producing J/psi
+Description:
+  '$e^+e^-$ mass distribution in $J/\psi\to e^+e^-$ $+\eta^\prime,$ $\eta$ or $\pi^0$. Data read from plots in paper.Mass distributions are not efficiency corrected.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2014dax
+BibTeX: '@article{BESIII:2014dax,
+    author = "Ablikim, M. and others",
+    collaboration = "BESIII",
+    title = "{Observation of electromagnetic Dalitz decays $J/\psi \to P e^+e^-$}",
+    eprint = "1403.7042",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevD.89.092008",
+    journal = "Phys. Rev. D",
+    volume = "89",
+    number = "9",
+    pages = "092008",
+    year = "2014"
+}
+'

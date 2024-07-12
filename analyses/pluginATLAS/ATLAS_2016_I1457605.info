@@ -5,14 +5,17 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1457605
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Mark Stockton <chris.g@cern.ch>
 References:
+ - ATLAS-STDM-2014-09
  - arXiv:1605.03495 [hep-ex]
 RunInfo:
   Inclusive prompt photon production
 Beams: [p+, p+]
 Energies: [8000]
+Luminosity_fb: 20.2
 PtCuts: [25]
 NeedCrossSection: True
 Description:
@@ -36,3 +39,10 @@ BibTeX: '@article{Aad:2016xcr,
       reportNumber   = "CERN-EP-2016-035",
       SLACcitation   = "%%CITATION = ARXIV:1605.03495;%%"
 }'
+
+ReleaseTests:
+ - $A LHC-8-PromptPhoton-1
+ - $A-2 LHC-8-PromptPhoton-2
+ - $A-3 LHC-8-PromptPhoton-3
+ - $A-4 LHC-8-PromptPhoton-4
+

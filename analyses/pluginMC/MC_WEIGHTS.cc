@@ -1,86 +1,77 @@
 // -*- C++ -*-
 #include "Rivet/Analysis.hh"
+#include "Rivet/AnalysisHandler.hh"
 
 namespace Rivet {
 
-  /// @brief Analysis for the generated cross section
+
+  /// Analysis of the generated event-weight distributions
   class MC_WEIGHTS : public Analysis {
   public:
 
-    /// @name Constructors etc.
-    //@{
+    RIVET_DEFAULT_ANALYSIS_CTOR(MC_WEIGHTS);
 
-    /// Constructor
-    MC_WEIGHTS()
-      : Analysis("MC_WEIGHTS")
-    {    }
-
-    //@}
-
-
-  public:
 
     /// @name Analysis methods
-    //@{
+    /// @{
 
     /// Book histograms and initialise projections before the run
     void init() {
       /// @todo Convert to Scatter1D or Counter
-      _h_weight_100 = bookHisto1D("weight_100", 200, -100.0, 100.0);
-      _h_weight_10  = bookHisto1D("weight_10", 200, -10.0, 10.0);
-      _h_logweight_pos  = bookHisto1D("logweight_pos", logspace(100, 0.1, 10000.0));
-      _h_logweight_neg  = bookHisto1D("logweight_neg", logspace(100, 0.1, 10000.0));
+      book(_h_weight_100, "weight_100", 200, -100.0, 100.0);
+      book(_h_weight_10,  "weight_10",  200,  -10.0,  10.0);
+      book(_h_logweight_pos, "logweight_pos", logspace(100, 0.1, 10000.0));
+      book(_h_logweight_neg, "logweight_neg", logspace(100, 0.1, 10000.0));
 
-      _h_xsfraction_neg   = bookScatter2D("xsfraction_neg");
-
-      _sow_pos = _sow_neg = _nevts = 0.;
+      book(_h_xsfraction_neg, "xsfraction_neg");
     }
 
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-      double w = event.weight();
 
-      _nevts += 1.0;
-      _h_weight_100->fill(w, 1.0);
-      _h_weight_10->fill(w, 1.0);
-      if (w<0.0) {
-        _h_logweight_neg->fill(fabs(w), 1.0);
-        _sow_neg += fabs(w);
-      }
-      else {
-        _h_logweight_pos->fill(w, 1.0);
-        _sow_pos += w;
+      const size_t numWeights = event.weights().size();
+      for (size_t m = 0; m < numWeights; ++m) {
+        const double weight = event.weights()[m];
+        _h_weight_100.get()->_getPersistent(m)->fill(weight, 1.0);
+        _h_weight_10.get()->_getPersistent(m)->fill(weight, 1.0);
+        if (weight < 0.) {
+          _h_logweight_neg.get()->_getPersistent(m)->fill(fabs(weight), 1.0);
+        } else {
+          _h_logweight_pos.get()->_getPersistent(m)->fill(weight, 1.0);
+        }
       }
     }
 
 
     /// Normalise histograms etc., after the run
     void finalize() {
-      scale(_h_weight_100, 1.0/_nevts);
-      scale(_h_weight_10, 1.0/_nevts);
-      scale(_h_logweight_pos, 1.0/_nevts);
-      scale(_h_logweight_neg, 1.0/_nevts);
-      /// @todo correct unc estimate:
-      _h_xsfraction_neg->addPoint(0, _sow_neg/(_sow_neg+_sow_pos), 0.5, 0.0);
+      const double sf = 1.0 / numEvents();
+      scale(_h_weight_100, sf);
+      scale(_h_weight_10, sf);
+      scale(_h_logweight_pos, sf);
+      scale(_h_logweight_neg, sf);
+
+      const double totalSumW  = _h_logweight_neg->sumW() + _h_logweight_pos->sumW();
+      const double totalSumW2 = _h_logweight_neg->sumW2() + _h_logweight_pos->sumW2();
+      const double negFrac = _h_logweight_neg->sumW() / totalSumW;
+      const double negFracErr = negFrac * totalSumW / sqrt(totalSumW2);
+      _h_xsfraction_neg->addPoint(0, negFrac, 0.5, negFracErr);
     }
 
-    //@}
+    /// @}
 
-
-  private:
 
     /// @name Histograms
-    //@{
+    /// @{
     Scatter2DPtr _h_xsfraction_neg;
     Histo1DPtr _h_weight_100, _h_weight_10, _h_logweight_pos, _h_logweight_neg;
-    double _sow_pos, _sow_neg, _nevts;
-    //@}
+    /// @}
 
   };
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(MC_WEIGHTS);
+
+  RIVET_DECLARE_PLUGIN(MC_WEIGHTS);
 
 }

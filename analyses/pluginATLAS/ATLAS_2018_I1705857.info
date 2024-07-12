@@ -5,11 +5,13 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1705857
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Stewart Swift <stewart.patrick.swift@cern.ch>
  - Tom Neep <tom.neep@cern.ch>
  - Christian Gutschow <chris.g@cern.ch>
 References:
+ - ATLAS-TOPQ-2017-12
  - submitted to JHEP
  - arXiv:1811.12113 [hep-ex]
 Keywords:
@@ -38,7 +40,7 @@ Description:
   uncertainties in the predictions. Comparisons of state-of-the-art theoretical predictions with the differential measurements are
   shown and good agreement with data is found for most of them.'
 BibKey: Aaboud:2018eki
-BibTex: '@article{Aaboud:2018eki,
+BibTeX: '@article{Aaboud:2018eki,
       author         = "Aaboud, Morad and others",
       title          = "{Measurements of fiducial and differential cross-sections
                         of $t\bar{t}$ production with additional heavy-flavour

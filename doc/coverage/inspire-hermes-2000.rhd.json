@@ -1,0 +1,75 @@
+{
+    "503784": [
+        "Measurement of the spin asymmetry in the photoproduction of pairs of high p(T) hadrons at HERMES", 
+        "HERMES", 
+        "10.1103/PhysRevLett.84.2584", 
+        null, 
+        "hep-ex/9907020", 
+        "ins503784", 
+        null, 
+        [
+            "DESY-99-071"
+        ]
+    ], 
+    "509270": [
+        "Observation of a single spin azimuthal asymmetry in semiinclusive pion electro production", 
+        "HERMES", 
+        "10.1103/PhysRevLett.84.4047", 
+        null, 
+        "hep-ex/9910062", 
+        null, 
+        null, 
+        [
+            "DESY-99-149"
+        ]
+    ], 
+    "509396": [
+        "Nuclear effects on R = $\\sigma_L$ / $\\sigma_T$ in deep inelastic scattering", 
+        "HERMES", 
+        "10.1016/S0370-2693(99)01493-8", 
+        null, 
+        "hep-ex/9910071", 
+        null, 
+        null, 
+        [
+            "DESY-99-150", 
+            "DESY-02-092"
+        ]
+    ], 
+    "523690": [
+        "Measurement of angular distributions and R = sigma(L) / sigma(T) in diffractive electroproduction of rho0 mesons", 
+        "HERMES", 
+        "10.1007/s100520000536", 
+        null, 
+        "hep-ex/0002016", 
+        null, 
+        null, 
+        [
+            "DESY-99-199"
+        ]
+    ], 
+    "526550": [
+        "Exclusive leptoproduction of rho0 mesons from hydrogen at intermediate virtual photon energies", 
+        "HERMES", 
+        "10.1007/s100520000483", 
+        null, 
+        "hep-ex/0004023", 
+        "ins526550", 
+        null, 
+        [
+            "DESY-00-058"
+        ]
+    ], 
+    "531949": [
+        "The Q**2 dependence of the generalized Gerasimov-Drell-Hearn integral for the proton", 
+        "HERMES", 
+        "10.1016/S0370-2693(00)01111-4", 
+        null, 
+        "hep-ex/0008037", 
+        "ins531949", 
+        null, 
+        [
+            "DESY-00-096"
+        ]
+    ]
+}

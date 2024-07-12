@@ -5,6 +5,7 @@ Experiment: CMS
 Collider: LHC
 InspireID: 1476015
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Alexis Descroix
  - Frederik Schaaf
@@ -33,3 +34,5 @@ BibTeX: '@article{CMS:2016ooc,
       reportNumber   = "CMS-PAS-TOP-15-006",
       SLACcitation   = "%%CITATION = CMS-PAS-TOP-15-006;%%"
 }'
+ReleaseTests:
+ - $A LHC-8-Top-All

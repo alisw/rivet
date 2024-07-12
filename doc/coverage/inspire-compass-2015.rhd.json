@@ -1,0 +1,86 @@
+{
+    "1236358": [
+        "Hadron Transverse Momentum Distributions in Muon Deep Inelastic Scattering at 160 GeV/$c$", 
+        "COMPASS", 
+        "10.1140/epjc/s10052-013-2531-6", 
+        "1552503", 
+        "1305.7317", 
+        "ins1236358", 
+        null, 
+        [
+            "CERN-PH-EP-2013-091"
+        ]
+    ], 
+    "1298026": [
+        "Measurement of the charged-pion polarizability", 
+        "COMPASS", 
+        "10.1103/PhysRevLett.114.062002", 
+        "1702252", 
+        "1405.6377", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2014-109"
+        ]
+    ], 
+    "1307417": [
+        "Search for exclusive photoproduction of Z$_c^{\\pm}$(3900) at COMPASS", 
+        "COMPASS", 
+        "10.1016/j.physletb.2015.01.042", 
+        "1743884", 
+        "1407.6186", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2014-180"
+        ]
+    ], 
+    "1311486": [
+        "Odd and even partial waves of $\\eta\\pi^-$ and $\\eta'\\pi^-$ in $\\pi^-p\\to\\eta^{(\\prime)}\\pi^-p$ at $191\\,\\textrm{GeV}/c$", 
+        "COMPASS", 
+        "10.1016/j.physletb.2014.11.058", 
+        "1747555", 
+        "1408.4286", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2014-204"
+        ]
+    ], 
+    "1311491": [
+        "Collins and Sivers asymmetries in muonproduction of pions and kaons off transversely polarised protons", 
+        "COMPASS", 
+        "10.1016/j.physletb.2015.03.056", 
+        "1750692", 
+        "1408.4405", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2014-213"
+        ]
+    ], 
+    "1320774": [
+        "The COMPASS Setup for Physics with Hadron Beams", 
+        "COMPASS", 
+        "10.1016/j.nima.2015.01.035", 
+        "1950827", 
+        "1410.1797", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2014-247"
+        ]
+    ], 
+    "1340854": [
+        "Observation of a New Narrow Axial-Vector Meson $a_1$(1420)", 
+        "COMPASS", 
+        "10.1103/PhysRevLett.115.082001", 
+        "1982453", 
+        "1501.05732", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-015"
+        ]
+    ]
+}

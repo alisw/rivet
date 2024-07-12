@@ -5,11 +5,13 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 925932
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Elena Yatsenko <elena.yatsenko@desy.de>
  - Judith Katzy <jkatzy@mail.cern.ch>
 References:
- - arXiv:1108.6308v1 [hep-ex]
+ - ATLAS-STDM-2011-15
+ - arXiv:1108.6308 [hep-ex]
 RunInfo:
   Run with $W$ decays to $e\,\nu_e$ and/or $\mu\,\nu_\mu$.
 NumEvents: 100k
@@ -17,7 +19,7 @@ Beams: [p+, p+]
 Energies: [7000]
 PtCuts: [0]
 Description:
-  The W pT at $\sqrt{s} = 7$\;TeV is measured using $W\to e \, \nu_e$ and $W\to \mu \, \nu_\mu$
+  The W pT at $\sqrt{s} = 7$~TeV is measured using $W\to e \, \nu_e$ and $W\to \mu \, \nu_\mu$
   decay channels. The dressed leptons kinematics calculated from the sum of the post-FSR
   lepton momentum and the momenta of all photons radiated in a cone around the lepton,
   while the bare uses the lepton kinematics after all QED radiation.
@@ -33,3 +35,8 @@ BibTeX: '@article{Aad:2011fp,
       archivePrefix  = "arXiv",
       primaryClass   = "hep-ex",
 }'
+
+ReleaseTests:
+ - $A LHC-W-e
+ - $A-2 LHC-W-mu
+

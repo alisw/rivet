@@ -1,0 +1,3 @@
+BEGIN PLOT /EXAMPLE_ONNX/DNN_output
+Title=[DNN output]
+END PLOT

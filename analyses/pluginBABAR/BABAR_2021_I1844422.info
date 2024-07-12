@@ -1,0 +1,35 @@
+Name: BABAR_2021_I1844422
+Year: 2021
+Summary: Cross sections for $e^+e^-\to 2\pi^+2\pi^-3\pi^0$ and $2\pi^+2\pi^-2\pi^0\eta$ from threshold to 4.5 GeV
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 1844422
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - 'arXiv:2102.01314'
+RunInfo: e+e- to hadrons
+Beams: [e+, e-]
+Description:
+'Measurement of the cross sections for $e^+e^-\to 2\pi^+2\pi^-3\pi^0$ and $2\pi^+2\pi^-2\pi^0\eta$ from threshold to 4.5 GeV
+by BaBar. The $2\pi^+2\pi^-\eta$, $\omega\pi^0\eta$, $\pi^+\pi^-2\pi^0\omega$, $\pi^+\pi^-2\pi^0\eta$ resonant subprocesses are
+also measured.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BABAR:2021ywk
+BibTeX: '@article{BABAR:2021ywk,
+    author = "Lees, J. P. and others",
+    collaboration = "BaBar",
+    title = "{Study of the reactions $e^+e^-\to2(\pi^+\pi^-)\pi^0\pi^0\pi^0$ and $e^+e^-\to2(\pi^+\pi^-)\pi^0\pi^0\eta$ at center-of-mass energies from threshold to 4.5 GeV using initial-state radiation}",
+    eprint = "2102.01314",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "SLAC-PUB-17587, BaBar-PUB-20004",
+    month = "2",
+    year = "2021"
+}

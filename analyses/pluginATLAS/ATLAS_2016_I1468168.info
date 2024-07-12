@@ -5,11 +5,13 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1468168
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Tom Neep <tom.neep@cern.ch>
  - Barbara Alvarez Gonzalez <barbara.alvarez.gonzalez@cern.ch>
  - Yang Qin <yang.qin@cern.ch>
 References:
+ - ATLAS-TOPQ-2015-09
  - Submitted to PLB
  - arXiv:1606.02699 [hep-ex]
 RunInfo:
@@ -44,3 +46,7 @@ BibTeX: '@article{Aaboud:2016pbd,
       reportNumber   = "CERN-EP-2016-088",
       SLACcitation   = "%%CITATION = ARXIV:1606.02699;%%"
 }'
+
+ReleaseTests:
+ - $A LHC-13-Top-All
+

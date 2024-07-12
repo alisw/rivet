@@ -1,0 +1,144 @@
+{
+    "656302": [
+        "Transverse momentum correlations and minijet dissipation in Au-Au collisions at s(NN)**(1/2)-GeV", 
+        "STAR", 
+        "10.1088/0954-3899/34/5/002", 
+        null, 
+        "nucl-ex/0408012", 
+        "ins656302", 
+        null, 
+        []
+    ], 
+    "698939": [
+        "Strangelet search at RHIC", 
+        "STAR", 
+        "10.1103/PhysRevC.76.011901", 
+        null, 
+        "nucl-ex/0511047", 
+        "ins698939", 
+        null, 
+        []
+    ], 
+    "717232": [
+        "The Energy dependence of $p_t$ angular correlations inferred from mean-p($t$) fluctuation scale dependence in heavy ion collisions at the SPS and RHIC", 
+        "STAR", 
+        "10.1088/0954-3899/34/3/004", 
+        null, 
+        "nucl-ex/0605021", 
+        "ins717232", 
+        null, 
+        []
+    ], 
+    "718755": [
+        "Scaling Properties of Hyperon Production in Au+Au Collisions at s**(1/2) = 200-GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.98.062301", 
+        null, 
+        "nucl-ex/0606014", 
+        "ins718755", 
+        null, 
+        []
+    ], 
+    "721060": [
+        "Delta phi Delta eta Correlations in Central Au+Au Collisions at s(NN)**(1/2) = 200-Gev", 
+        "STAR", 
+        "10.1103/PhysRevC.75.034901", 
+        null, 
+        "nucl-ex/0607003", 
+        null, 
+        null, 
+        []
+    ], 
+    "721275": [
+        "Transverse momentum and centrality dependence of high-$p_T$ non-photonic electron suppression in Au+Au collisions at $\\sqrt{s_{NN}} = 200$\\,GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.98.192301", 
+        null, 
+        "nucl-ex/0607012", 
+        "ins721275", 
+        null, 
+        []
+    ], 
+    "722757": [
+        "Strange particle production in p+p collisions at s**(1/2) = 200-GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.75.064901", 
+        null, 
+        "nucl-ex/0607033", 
+        "ins722757", 
+        null, 
+        []
+    ], 
+    "726101": [
+        "Rapidity and species dependence of particle production at large transverse momentum for d+Au collisions at s(NN)**(1/2) = 200-GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.76.054903", 
+        null, 
+        "nucl-ex/0609021", 
+        "ins726101", 
+        null, 
+        []
+    ], 
+    "741917": [
+        "Mass, quark-number, and $\\sqrt{s_{NN}}$ dependence of the second and fourth flow harmonics in ultra-relativistic nucleus-nucleus collisions", 
+        "STAR", 
+        "10.1103/PhysRevC.75.054906", 
+        null, 
+        "nucl-ex/0701010", 
+        null, 
+        null, 
+        []
+    ], 
+    "746872": [
+        "Partonic flow and phi-meson production in Au + Au collisions at s(NN)**(1/2) = 200-GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.99.112301", 
+        null, 
+        "nucl-ex/0703033", 
+        "ins746872", 
+        null, 
+        []
+    ], 
+    "747299": [
+        "Energy dependence of pi+-, p and anti-p transverse momentum spectra for Au+Au collisions at s(NN)**(1/2) = 62.4 and 200-GeV", 
+        "STAR", 
+        "10.1016/j.physletb.2007.06.035", 
+        null, 
+        "nucl-ex/0703040", 
+        "ins747299", 
+        null, 
+        []
+    ], 
+    "750410": [
+        "Global polarization measurement in Au+Au collisions", 
+        "STAR", 
+        "10.1103/PhysRevC.76.024915", 
+        null, 
+        "0705.1691", 
+        "ins750410", 
+        null, 
+        [
+            "STAR-05-11-2007"
+        ]
+    ], 
+    "751885": [
+        "Measurement of transverse single-spin asymmetries for di-jet production in proton-proton collisions at s**(1/2) = 200-GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.99.142003", 
+        null, 
+        "0705.4629", 
+        "ins751885", 
+        null, 
+        []
+    ], 
+    "752244": [
+        "Forward Lambda production and nuclear stopping power in d + Au collisions at s(NN)**(1/2) = 200-GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.76.064904", 
+        null, 
+        "0706.0472", 
+        "ins752244", 
+        null, 
+        []
+    ]
+}

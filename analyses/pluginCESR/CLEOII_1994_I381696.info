@@ -1,0 +1,35 @@
+Name: CLEOII_1994_I381696
+Year: 1994
+Summary: Spectrum for $\Lambda_c^+(2595)$ and $\Lambda_c^+(2625)$ production at 10.58 GeV
+Experiment: CLEOII
+Collider: CESR
+InspireID: 381696
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 74 (1995) 3331-3335
+RunInfo: e+e- to hadrons 
+Beams: [e+, e-]
+Energies: [10.58]
+Description:
+  'Spectrum for  $\Lambda_c^+(2595)$ and $\Lambda_c^+(2625)$ production at 10.58 GeV measured by CLEOII.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Edwards:1994ar
+BibTeX: '@article{Edwards:1994ar,
+      author         = "Edwards, K. W. and others",
+      title          = "{Observation of excited baryon states decaying to
+                        Lambda(c)+ pi+ pi-}",
+      collaboration  = "CLEO",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "74",
+      year           = "1995",
+      pages          = "3331-3335",
+      doi            = "10.1103/PhysRevLett.74.3331",
+      reportNumber   = "CLNS-94-1304, CLEO-94-22",
+      SLACcitation   = "%%CITATION = PRLTA,74,3331;%%"
+}'

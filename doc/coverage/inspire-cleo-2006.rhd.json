@@ -1,0 +1,365 @@
+{
+    "679506": [
+        "Measurement of absolute hadronic branching fractions of D mesons and e+ e- ---> D anti-D cross sections at E(cm) = 3773-MeV", 
+        "CLEO", 
+        "10.1103/PhysRevLett.95.121801", 
+        null, 
+        "hep-ex/0504003", 
+        null, 
+        null, 
+        [
+            "CLNS-05-1914", 
+            "CLEO-05-6"
+        ]
+    ], 
+    "689416": [
+        "Observation of psi(3770) ---> pi pi J/psi and measurement of Gamma(ee) [psi(2S)]", 
+        "CLEO", 
+        "10.1103/PhysRevLett.96.082004", 
+        null, 
+        "hep-ex/0508023", 
+        null, 
+        null, 
+        [
+            "CLNS05-1926", 
+            "CLEO-05-14"
+        ]
+    ], 
+    "691720": [
+        "Decay of the psi(3770) to light hadrons", 
+        "CLEO", 
+        "10.1103/PhysRevD.73.012002", 
+        null, 
+        "hep-ex/0509011", 
+        "ins691720", 
+        null, 
+        [
+            "CLNS-05-1933", 
+            "CLEO-05-21"
+        ]
+    ], 
+    "692989": [
+        "First observation of psi(3770) ---> gamma chi(c1) ---> gamma gamma J/psi", 
+        "CLEO", 
+        "10.1103/PhysRevLett.96.182002", 
+        null, 
+        "hep-ex/0509030", 
+        null, 
+        null, 
+        [
+            "CLNS-05-1931", 
+            "CLEO-05-19"
+        ]
+    ], 
+    "693643": [
+        "Search for exclusive multi-body non-D anti-D decays at the psi(3770)", 
+        "CLEO", 
+        "10.1103/PhysRevLett.96.032003", 
+        null, 
+        "hep-ex/0509046", 
+        null, 
+        null, 
+        [
+            "CLNS-05-1921", 
+            "CLEO-05-13"
+        ]
+    ], 
+    "694170": [
+        "Radiative decays of the upsilon(1S) to a pair of charged hadrons", 
+        "CLEO", 
+        "10.1103/PhysRevD.73.032001", 
+        null, 
+        "hep-ex/0510015", 
+        null, 
+        null, 
+        [
+            "CLNS05-1929", 
+            "CLEO-05-17"
+        ]
+    ], 
+    "694776": [
+        "Two photon width of chi(c2)", 
+        "CLEO", 
+        "10.1103/PhysRevD.73.071101", 
+        null, 
+        "hep-ex/0510033", 
+        null, 
+        null, 
+        [
+            "CLNS-05-1935", 
+            "CLEO-05-23"
+        ]
+    ], 
+    "694869": [
+        "Observation of B*(s) anti-B*(s) production at the upsilon(5S) resonance", 
+        "CLEO", 
+        "10.1103/PhysRevLett.96.022002", 
+        null, 
+        "hep-ex/0510034", 
+        null, 
+        null, 
+        [
+            "CLNS-05-1934", 
+            "CLEO-05-22"
+        ]
+    ], 
+    "697074": [
+        "Experimental study of chi(b)(2P) ---> pi pi chi(b)(1P)", 
+        "CLEO", 
+        "10.1103/PhysRevD.73.012003", 
+        null, 
+        "hep-ex/0511019", 
+        null, 
+        null, 
+        [
+            "CLNS-05-1937", 
+            "CLEO-05-25"
+        ]
+    ], 
+    "700760": [
+        "Measurement of Gamma(ee)(J/psi), Gamma(tot)(J/psi), and Gamma(ee)[psi(2S)]/Gamma(ee)(J/psi)", 
+        "CLEO", 
+        "10.1103/PhysRevD.73.051103", 
+        null, 
+        "hep-ex/0512046", 
+        null, 
+        null, 
+        [
+            "CLNS-05-1945", 
+            "CLEO-05-31"
+        ]
+    ], 
+    "701099": [
+        "Di-electron widths of the Upsilon(1S,2S,3S) resonances", 
+        "CLEO", 
+        "10.1103/PhysRevLett.96.092003", 
+        null, 
+        "hep-ex/0512056", 
+        null, 
+        null, 
+        [
+            "CLNS-05-1944", 
+            "CLEO-05-30"
+        ]
+    ], 
+    "701217": [
+        "Measurement of the direct photon momentum spectrum in upsilon(1S), upsilon(2S), and upsilon(3S) decays", 
+        "CLEO", 
+        "10.1103/PhysRevD.74.012003", 
+        null, 
+        "hep-ex/0512061", 
+        null, 
+        null, 
+        [
+            "CLNS-05-1927", 
+            "CLEO-05-15"
+        ]
+    ], 
+    "701316": [
+        "New measurements of Cabibbo-suppressed decays of D mesons in CLEO-c", 
+        "CLEO", 
+        "10.1103/PhysRevLett.96.081802", 
+        null, 
+        "hep-ex/0512063", 
+        null, 
+        null, 
+        [
+            "CLNS-05-1943", 
+            "CLEO-05-29"
+        ]
+    ], 
+    "708627": [
+        "Experimental limits on weak annihilation contributions to B ---> u l nu decay", 
+        "CLEO", 
+        "10.1103/PhysRevLett.96.121801", 
+        null, 
+        "hep-ex/0601027", 
+        null, 
+        null, 
+        [
+            "CLNS-05-1938", 
+            "CLEO-05-26"
+        ]
+    ], 
+    "709461": [
+        "First measurements of the exclusive decays of the upsilon(5S) to B meson final states and improved B*(S) mass measurement", 
+        "CLEO", 
+        "10.1103/PhysRevLett.96.152001", 
+        null, 
+        "hep-ex/0601044", 
+        null, 
+        null, 
+        [
+            "CLNS-06-1950", 
+            "CLEO-06-1"
+        ]
+    ], 
+    "710864": [
+        "Charmonium decays of Y(4260), psi(4160) and psi(4040)", 
+        "CLEO", 
+        "10.1103/PhysRevLett.96.162003", 
+        null, 
+        "hep-ex/0602034", 
+        null, 
+        null, 
+        [
+            "CLNS-06-1952", 
+            "CLEO-06-02"
+        ]
+    ], 
+    "712068": [
+        "Measurement of interference between electromagnetic and strong amplitudes in psi(2S) decays to two pseudoscalar mesons", 
+        "CLEO", 
+        "10.1103/PhysRevD.74.011105", 
+        null, 
+        "hep-ex/0603020", 
+        null, 
+        null, 
+        [
+            "CLNS-05-1947", 
+            "CLEO-05-33"
+        ]
+    ], 
+    "712308": [
+        "Search for the non-D anti-D decay psi(3770) ---> K0(S) K0(L)", 
+        "CLEO", 
+        "10.1103/PhysRevD.75.119903", 
+        null, 
+        "hep-ex/0603026", 
+        null, 
+        null, 
+        [
+            "CLNS-05-1946", 
+            "CLEO-05-32"
+        ]
+    ], 
+    "715095": [
+        "An Investigation of D+ ---> tau+ nu", 
+        "CLEO", 
+        "10.1103/PhysRevD.73.112005", 
+        null, 
+        "hep-ex/0604043", 
+        null, 
+        null, 
+        [
+            "CLNS-06-1958", 
+            "CLEO-06-7"
+        ]
+    ], 
+    "715096": [
+        "Absolute Branching Fraction Measurements for D+ and D0 Inclusive Semileptonic Decays", 
+        "CLEO", 
+        "10.1103/PhysRevLett.97.251801", 
+        null, 
+        "hep-ex/0604044", 
+        null, 
+        null, 
+        [
+            "CLNS-06-1957", 
+            "CLEO-06-6"
+        ]
+    ], 
+    "717029": [
+        "Observation of psi(3770) ---> gamma chi(c)0", 
+        "CLEO", 
+        "10.1103/PhysRevD.74.031106", 
+        null, 
+        "hep-ex/0605070", 
+        null, 
+        null, 
+        [
+            "CLNS-06-1955"
+        ]
+    ], 
+    "718423": [
+        "Model independent measurement of form-factors in the decay D+ ---> K- pi+ e+ nu(e)", 
+        "CLEO", 
+        "10.1103/PhysRevD.74.052001", 
+        null, 
+        "hep-ex/0606010", 
+        null, 
+        null, 
+        [
+            "CLNS-06-1960", 
+            "CLEO-06-09"
+        ]
+    ], 
+    "719683": [
+        "Measurement of interfering K*+ K- and K*- K+ amplitudes in the decay D0 ---> K+ K- pi0", 
+        "CLEO", 
+        "10.1103/PhysRevD.74.031108", 
+        null, 
+        "hep-ex/0606045", 
+        null, 
+        null, 
+        [
+            "CLNS-06-1956", 
+            "CLEO-06-5"
+        ]
+    ], 
+    "725482": [
+        "Branching Fraction for the Doubly-Cabibbo-Suppressed Decay D+ ---> K+ pi0", 
+        "CLEO", 
+        "10.1103/PhysRevD.74.071102", 
+        null, 
+        "hep-ex/0609008", 
+        null, 
+        null, 
+        [
+            "CLNS-06-1969", 
+            "CLEO-06-14"
+        ]
+    ], 
+    "728043": [
+        "Measurement of inclusive production of eta, eta-prime and phi mesons in D0, D+ and D(s)+ decays", 
+        "CLEO", 
+        "10.1103/PhysRevD.74.112005", 
+        null, 
+        "hep-ex/0610008", 
+        null, 
+        null, 
+        [
+            "CLNS06-1975", 
+            "CLEO-06-17"
+        ]
+    ], 
+    "728679": [
+        "Improved Measurement of the Branching Fraction and Energy Spectrum of eta-prime from Upsilon(1S) Decays", 
+        "CLEO", 
+        "10.1103/PhysRevD.75.119902", 
+        null, 
+        "hep-ex/0610032", 
+        null, 
+        null, 
+        [
+            "CLNS-06-1970", 
+            "CLEO-06-15"
+        ]
+    ], 
+    "731612": [
+        "Confirmation of the Y(4260) resonance production in ISR", 
+        "CLEO", 
+        "10.1103/PhysRevD.74.091104", 
+        null, 
+        "hep-ex/0611021", 
+        null, 
+        null, 
+        [
+            "CLNS-06-1977", 
+            "CLEO-06-19"
+        ]
+    ], 
+    "1650066": [
+        "Measurement of $\\sigma(e^+e^- \\to \\psi(3770) \\to hadrons)$ at $E_{c.m.}$ = 3773 MeV", 
+        "CLEO", 
+        "10.1103/PhysRevLett.96.092002", 
+        null, 
+        "1004.1358", 
+        "ins1650066", 
+        null, 
+        [
+            "CLNS-05-1939", 
+            "CLEO-05-27"
+        ]
+    ]
+}

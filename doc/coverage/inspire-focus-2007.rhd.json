@@ -1,0 +1,39 @@
+{
+    "734494": [
+        "A Non-parametric approach to measuring the $K^{-} \\pi^{+}$ amplitudes in $D^{+} \\to K^{-} K^{+} \\pi^{+}$ decay",
+        "FOCUS",
+        "10.1016/j.physletb.2007.03.010",
+        null,
+        "hep-ex/0612032",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-06-483-E"
+        ]
+    ],
+    "741543": [
+        "Study of the $D^0 \\to \\pi^{-} \\pi^{+} \\pi^{-} \\pi^{+}$ decay",
+        "FOCUS",
+        "10.1103/PhysRevD.75.052003",
+        null,
+        "hep-ex/0701001",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-06-491-E"
+        ]
+    ],
+    "750701": [
+        "Dalitz plot analysis of the $D^{+} \\to K^{-} \\pi^{+} \\pi^{+}$ decay in the FOCUS experiment",
+        "FOCUS",
+        "10.1016/j.physletb.2007.06.070",
+        null,
+        "0705.2248",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-07-127-E",
+            "FERMILAB-PUB-07-127E"
+        ]
+    ]
+}

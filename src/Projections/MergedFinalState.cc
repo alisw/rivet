@@ -4,7 +4,7 @@
 namespace Rivet {
 
 
-  int MergedFinalState::compare(const Projection& p) const {
+  CmpState MergedFinalState::compare(const Projection& p) const {
     /// @todo: Currently A+B is not recognised to be the same as B+A.
     return mkNamedPCmp(p, "FSA") || mkNamedPCmp(p, "FSB");
   }
@@ -18,18 +18,18 @@ namespace Rivet {
       _theParticles.push_back(pa);
     }
     for (const Particle& pb : fsb.particles()){
-      const GenParticle* originalb = pb.genParticle();
+      ConstGenParticlePtr originalb = pb.genParticle();
       bool notfound = true;
       for (const Particle& pa : fsa.particles()){
-        const GenParticle* originala = pa.genParticle();
+        ConstGenParticlePtr originala = pa.genParticle();
+        
         if (originala == originalb) {
           notfound = false;
           break;
         }
       }
-      if (notfound) {
-        _theParticles.push_back(pb);
-      }
+      if (notfound) _theParticles.push_back(pb);
+
     }
     MSG_DEBUG("Number of particles in the two final states to be merged: = \n"
               << "   1st final state = " << fsa.particles().size() << "\n"

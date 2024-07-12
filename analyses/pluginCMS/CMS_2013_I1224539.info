@@ -1,0 +1,56 @@
+Name: CMS_2013_I1224539
+Year: 2013
+Summary: CMS jet mass measurement in $W, Z$ and dijet events
+Experiment: CMS
+Collider: LHC
+InspireID: 1224539
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Salvatore Rappoccio <salvatore.rappoccio@cern.ch>
+ - Nhan Tran <ntran@fnal.gov>
+ - Kalanand Mishra <kalanand@fnal.gov>
+ - dlopes@mail.cern.ch
+RunInfo:
+  7 TeV $pp$ collisions. Events are required to have a electron channel $Z$ with $\pT > 120$ GeV,
+  and at least 1 jet opposed to the $Z$ with $\pT > 50$ GeV and $|y| < 2.4$.
+NumEvents: 200000
+NeedCrossSection: no
+Options:
+ - JMODE=W,Z,DIJET
+Beams: [p+, p+]
+Energies: [7000]
+Luminosity_fb: 5.0
+Description:
+  'Measurements of the mass spectra of the jets in dijet and $W/Z$+jet events from proton--proton
+  collisions at a centre-of-mass energy of 7 TeV using a data sample of integrated luminosity of
+  5 fb$^-1$. The jets are reconstructed using the both the anti-$k_T$ algorithm with $R=0.7$ (AK7) and the
+  Cambridge-Aachen algorithm with $R=0.8$ (CA8) and $R=1.2$ (CA12) with several grooming
+  techniques applied (ungroomed, filtered, pruned and trimmed). See the text of the paper for
+  more details. For the dijet events the distributions are presented as a function of the mean
+  Mass of the two leading jets in bins of the mean \pT of the two jets.'
+References:
+  - arXiv:1303.4811
+BibKey: 'Chatrchyan:2013vbb'
+BibTeX: '@article{Chatrchyan:2013vbb,
+      author         = "Chatrchyan, Serguei and others",
+      title          = "{Studies of Jet Mass in Dijet and W/Z + Jet Events}",
+      collaboration  = "CMS",
+      journal        = "JHEP",
+      volume         = "05",
+      year           = "2013",
+      pages          = "090",
+      doi            = "10.1007/JHEP05(2013)090",
+      eprint         = "1303.4811",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CMS-SMP-12-019, CERN-PH-EP-2013-016",
+      SLACcitation   = "%%CITATION = ARXIV:1303.4811;%%"
+}'
+
+ReleaseTests:
+ - $A LHC-7-Z-Jet-0-e
+ - $A-2 LHC-7-Z-Jet-1-e
+ - $A-3 LHC-7-Z-Jet-2-e
+ - $A-4 LHC-7-Z-Jet-3-e
+

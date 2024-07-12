@@ -33,7 +33,7 @@ namespace Rivet {
       declare(FS,"FS");
 
       // Project photons with pT > 25 GeV and |eta| < 2.37
-      PromptFinalState ph_FS(Cuts::abseta<2.37 && Cuts::pT>25*GeV);
+      PromptFinalState ph_FS(Cuts::abseta<2.37 && Cuts::pT>25*GeV && Cuts::pid == PID::PHOTON);
       declare(ph_FS, "PH_FS");
 
       // Project photons for dressing
@@ -66,53 +66,51 @@ namespace Rivet {
 
       // Book histograms
       // 1D distributions
-      _h_pT_yy         = bookHisto1D(1,1,1);
-      _h_y_yy          = bookHisto1D(2,1,1);
-      _h_Njets30       = bookHisto1D(3,1,1);
-      _h_Njets50       = bookHisto1D(4,1,1);
-      _h_pT_j1         = bookHisto1D(5,1,1);
-      _h_y_j1          = bookHisto1D(6,1,1);
-      _h_HT            = bookHisto1D(7,1,1);
-      _h_pT_j2         = bookHisto1D(8,1,1);
-      _h_Dy_jj         = bookHisto1D(9,1,1);
-      _h_Dphi_yy_jj    = bookHisto1D(10,1,1);
-      _h_cosTS_CS      = bookHisto1D(11,1,1);
-      _h_cosTS_CS_5bin = bookHisto1D(12,1,1);
-      _h_Dphi_jj       = bookHisto1D(13,1,1);
-      _h_pTt_yy        = bookHisto1D(14,1,1);
-      _h_Dy_yy         = bookHisto1D(15,1,1);
-      _h_tau_jet       = bookHisto1D(16,1,1);
-      _h_sum_tau_jet   = bookHisto1D(17,1,1);
-      _h_y_j2          = bookHisto1D(18,1,1);
-      _h_pT_j3         = bookHisto1D(19,1,1);
-      _h_m_jj          = bookHisto1D(20,1,1);
-      _h_pT_yy_jj      = bookHisto1D(21,1,1);
+      book(_h_pT_yy         ,1,1,1);
+      book(_h_y_yy          ,2,1,1);
+      book(_h_Njets30       ,3,1,1);
+      book(_h_Njets50       ,4,1,1);
+      book(_h_pT_j1         ,5,1,1);
+      book(_h_y_j1          ,6,1,1);
+      book(_h_HT            ,7,1,1);
+      book(_h_pT_j2         ,8,1,1);
+      book(_h_Dy_jj         ,9,1,1);
+      book(_h_Dphi_yy_jj    ,10,1,1);
+      book(_h_cosTS_CS      ,11,1,1);
+      book(_h_cosTS_CS_5bin ,12,1,1);
+      book(_h_Dphi_jj       ,13,1,1);
+      book(_h_pTt_yy        ,14,1,1);
+      book(_h_Dy_yy         ,15,1,1);
+      book(_h_tau_jet       ,16,1,1);
+      book(_h_sum_tau_jet   ,17,1,1);
+      book(_h_y_j2          ,18,1,1);
+      book(_h_pT_j3         ,19,1,1);
+      book(_h_m_jj          ,20,1,1);
+      book(_h_pT_yy_jj      ,21,1,1);
 
       // 2D distributions of cosTS_CS x pT_yy
-      _h_cosTS_pTyy_low  = bookHisto1D(22,1,1);
-      _h_cosTS_pTyy_high = bookHisto1D(22,1,2);
-      _h_cosTS_pTyy_rest = bookHisto1D(22,1,3);
+      book(_h_cosTS_pTyy_low,  22,1,1);
+      book(_h_cosTS_pTyy_high, 22,1,2);
+      book(_h_cosTS_pTyy_rest, 22,1,3);
 
       // 2D distributions of Njets x pT_yy
-      _h_pTyy_Njets0 = bookHisto1D(23,1,1);
-      _h_pTyy_Njets1 = bookHisto1D(23,1,2);
-      _h_pTyy_Njets2 = bookHisto1D(23,1,3);
+      book(_h_pTyy_Njets0, 23,1,1);
+      book(_h_pTyy_Njets1, 23,1,2);
+      book(_h_pTyy_Njets2, 23,1,3);
 
-      _h_pTj1_excl = bookHisto1D(24,1,1);
+      book(_h_pTj1_excl, 24,1,1);
 
       // Fiducial regions
-      _h_fidXSecs = bookHisto1D(30,1,1);
+      book(_h_fidXSecs, 30,1,1);
     }
 
     // Perform the per-event analysis
     void analyze(const Event& event) {
 
-      const double weight = event.weight();
-
       // Get final state particles
-      const ParticleVector& FS_ptcls         = apply<FinalState>(event, "FS").particles();
-      const ParticleVector& ptcls_veto_mu_nu = apply<VetoedFinalState>(event, "VETO_MU_NU_FS").particles();
-      const ParticleVector& photons          = apply<PromptFinalState>(event, "PH_FS").particlesByPt();
+      const Particles& FS_ptcls         = apply<FinalState>(event, "FS").particles();
+      const Particles& ptcls_veto_mu_nu = apply<VetoedFinalState>(event, "VETO_MU_NU_FS").particles();
+      const Particles& photons          = apply<PromptFinalState>(event, "PH_FS").particlesByPt();
       vector<DressedLepton> good_el          = apply<DressedLeptons>(event, "EL_DRESSED_FS").dressedLeptons();
       vector<DressedLepton> good_mu          = apply<DressedLeptons>(event, "MU_DRESSED_FS").dressedLeptons();
 
@@ -164,12 +162,12 @@ namespace Rivet {
       // Find prompt, invisible particles for missing ET calculation
       // Based on VisibleFinalState projection
       FourMomentum invisible(0,0,0,0);
-      foreach (const Particle& p, FS_ptcls) {
+      for (const Particle& p : FS_ptcls) {
 
         // Veto non-prompt particles (from hadron or tau decay)
         if ( !p.isPrompt() ) continue;
         // Charged particles are visible
-        if ( PID::threeCharge( p.pid() ) != 0 ) continue;
+        if ( PID::charge3( p.pid() ) != 0 ) continue;
         // Neutral hadrons are visible
         if ( PID::isHadron( p.pid() ) ) continue;
         // Photons are visible
@@ -208,13 +206,13 @@ namespace Rivet {
       }
 
       // Fiducial regions
-      _h_fidXSecs->fill(1, weight);
-      if ( jets_30.size() >= 1 ) _h_fidXSecs->fill(2, weight);
-      if ( jets_30.size() >= 2 ) _h_fidXSecs->fill(3, weight);
-      if ( jets_30.size() >= 3 ) _h_fidXSecs->fill(4, weight);
-      if ( jets_30.size() >= 2 && passVBFCuts(y1 + y2, jets_30[0].momentum(), jets_30[1].momentum()) ) _h_fidXSecs->fill(5, weight);
-      if ( (good_el.size() + good_mu.size()) > 0 ) _h_fidXSecs->fill(6, weight);
-      if ( MET > 80 ) _h_fidXSecs->fill(7, weight);
+      _h_fidXSecs->fill(1);
+      if ( jets_30.size() >= 1 ) _h_fidXSecs->fill(2);
+      if ( jets_30.size() >= 2 ) _h_fidXSecs->fill(3);
+      if ( jets_30.size() >= 3 ) _h_fidXSecs->fill(4);
+      if ( jets_30.size() >= 2 && passVBFCuts(y1 + y2, jets_30.at(0).momentum(), jets_30.at(1).momentum()) ) _h_fidXSecs->fill(5);
+      if ( (good_el.size() + good_mu.size()) > 0 ) _h_fidXSecs->fill(6);
+      if ( MET > 80 ) _h_fidXSecs->fill(7);
 
       // Fill histograms
       // Inclusive variables
@@ -226,8 +224,8 @@ namespace Rivet {
 
       _Njets30 = jets_30.size() > 3 ? 3 : jets_30.size();
       _Njets50 = jets_50.size() > 3 ? 3 : jets_50.size();
-      _h_Njets30->fill(_Njets30, weight);
-      _h_Njets50->fill(_Njets50, weight);
+      _h_Njets30->fill(_Njets30);
+      _h_Njets50->fill(_Njets50);
 
       _pT_j1 = jets_30.size() > 0 ? jets_30[0].momentum().pT() : 0.;
       _pT_j2 = jets_30.size() > 1 ? jets_30[1].momentum().pT() : 0.;
@@ -239,24 +237,24 @@ namespace Rivet {
       _tau_jet     = tau_jet_max(y1 + y2, jets_25);
       _sum_tau_jet = sum_tau_jet(y1 + y2, jets_25);
 
-      _h_pT_yy        ->fill(_pT_yy    ,weight);
-      _h_y_yy         ->fill(_y_yy     ,weight);
-      _h_pT_j1        ->fill(_pT_j1    ,weight);
-      _h_cosTS_CS     ->fill(_cosTS_CS ,weight);
-      _h_cosTS_CS_5bin->fill(_cosTS_CS ,weight);
-      _h_HT           ->fill(_HT       ,weight);
-      _h_pTt_yy       ->fill(_pTt_yy   ,weight);
-      _h_Dy_yy        ->fill(_Dy_yy    ,weight);
-      _h_tau_jet      ->fill(_tau_jet  ,weight);
-      _h_sum_tau_jet  ->fill(_sum_tau_jet,weight);
+      _h_pT_yy        ->fill(_pT_yy);
+      _h_y_yy         ->fill(_y_yy);
+      _h_pT_j1        ->fill(_pT_j1);
+      _h_cosTS_CS     ->fill(_cosTS_CS);
+      _h_cosTS_CS_5bin->fill(_cosTS_CS);
+      _h_HT           ->fill(_HT);
+      _h_pTt_yy       ->fill(_pTt_yy);
+      _h_Dy_yy        ->fill(_Dy_yy);
+      _h_tau_jet      ->fill(_tau_jet);
+      _h_sum_tau_jet  ->fill(_sum_tau_jet);
 
       // >=1 jet variables
       if ( jets_30.size() >= 1 ) {
         FourMomentum j1 = jets_30[0].momentum();
         _y_j1 = j1.absrap();
 
-        _h_pT_j2->fill(_pT_j2 ,weight);
-        _h_y_j1 ->fill(_y_j1  ,weight);
+	_h_pT_j2->fill(_pT_j2);
+	_h_y_j1 ->fill(_y_j1);
       }
 
       // >=2 jet variables
@@ -271,32 +269,32 @@ namespace Rivet {
         _pT_yy_jj   = (y1 + y2 + j1 + j2).pT();
         _y_j2       = j2.absrap();
 
-        _h_Dy_jj      ->fill(_Dy_jj     ,weight);
-        _h_Dphi_jj    ->fill(_Dphi_jj   ,weight);
-        _h_Dphi_yy_jj ->fill(_Dphi_yy_jj,weight);
-        _h_m_jj       ->fill(_m_jj      ,weight);
-        _h_pT_yy_jj   ->fill(_pT_yy_jj  ,weight);
-        _h_pT_j3      ->fill(_pT_j3     ,weight);
-        _h_y_j2       ->fill(_y_j2      ,weight);
+	_h_Dy_jj      ->fill(_Dy_jj);
+	_h_Dphi_jj    ->fill(_Dphi_jj);
+	_h_Dphi_yy_jj ->fill(_Dphi_yy_jj);
+	_h_m_jj       ->fill(_m_jj);
+	_h_pT_yy_jj   ->fill(_pT_yy_jj);
+	_h_pT_j3      ->fill(_pT_j3);
+	_h_y_j2       ->fill(_y_j2);
       }
 
       // 2D distributions of cosTS_CS x pT_yy
       if ( _pT_yy < 80 )
-        _h_cosTS_pTyy_low->fill(_cosTS_CS, weight);
+	_h_cosTS_pTyy_low->fill(_cosTS_CS);
       else if ( _pT_yy > 80 && _pT_yy < 200 )
-        _h_cosTS_pTyy_high->fill(_cosTS_CS,weight);
+	_h_cosTS_pTyy_high->fill(_cosTS_CS);
       else if ( _pT_yy > 200 )
-        _h_cosTS_pTyy_rest->fill(_cosTS_CS,weight);
+	_h_cosTS_pTyy_rest->fill(_cosTS_CS);
 
       // 2D distributions of pT_yy x Njets
       if ( _Njets30 == 0 )
-        _h_pTyy_Njets0->fill(_pT_yy, weight);
+	_h_pTyy_Njets0->fill(_pT_yy);
       else if ( _Njets30 == 1 )
-        _h_pTyy_Njets1->fill(_pT_yy, weight);
+	_h_pTyy_Njets1->fill(_pT_yy);
       else if ( _Njets30 >= 2 )
-        _h_pTyy_Njets2->fill(_pT_yy, weight);
+	_h_pTyy_Njets2->fill(_pT_yy);
 
-      if ( _Njets30 == 1 ) _h_pTj1_excl->fill(_pT_j1, weight);
+      if ( _Njets30 == 1 ) _h_pTj1_excl->fill(_pT_j1);
 
     }
 
@@ -432,7 +430,7 @@ namespace Rivet {
     double _sum_tau_jet;
   };
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2014_I1306615);
+
+  RIVET_DECLARE_PLUGIN(ATLAS_2014_I1306615);
 
 }

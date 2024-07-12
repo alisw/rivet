@@ -1,0 +1,26 @@
+{
+    "1861148": [
+        "Probing transversity by measuring \u039b polarisation in SIDIS",
+        "COMPASS",
+        "10.1016/j.physletb.2021.136834",
+        "2765339",
+        "2104.13585",
+        null,
+        null,
+        [
+            "CERN-EP-2021-072"
+        ]
+    ],
+    "1898933": [
+        "Exotic meson $\\pi_1(1600)$ with $J^{PC} = 1^{-+}$ and its decay into $\\rho(770)\\pi$",
+        "COMPASS",
+        "10.1103/PhysRevD.105.012005",
+        "2779960",
+        "2108.01744",
+        "ins1898933",
+        null,
+        [
+            "CERN-EP-2021\u2013162"
+        ]
+    ]
+}

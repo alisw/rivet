@@ -2,6 +2,7 @@
 #include "Rivet/Analysis.hh"
 #include "Rivet/Projections/FinalState.hh"
 #include "Rivet/Projections/IdentifiedFinalState.hh"
+#include <array>
 
 namespace Rivet {
 
@@ -10,10 +11,7 @@ namespace Rivet {
   class CDF_2005_S6080774 : public Analysis {
   public:
 
-    /// Constructor
-    CDF_2005_S6080774()
-      : Analysis("CDF_2005_S6080774")
-    {    }
+    RIVET_DEFAULT_ANALYSIS_CTOR(CDF_2005_S6080774);
 
 
     /// @name Analysis methods
@@ -27,17 +25,15 @@ namespace Rivet {
       ifs.acceptId(PID::PHOTON);
       declare(ifs, "IFS");
 
-      for (size_t yAxisId=1; yAxisId<5; ++yAxisId) {
-        _h_m_PP.push_back(bookHisto1D(1, 1, yAxisId));
-        _h_pT_PP.push_back(bookHisto1D(2, 1, yAxisId));
-        _h_dphi_PP.push_back(bookHisto1D(3, 1, yAxisId));
+      for (size_t yAxisId=0; yAxisId<4; ++yAxisId) {
+        book(_h_m_PP[yAxisId],    1, 1, yAxisId + 1);
+        book(_h_pT_PP[yAxisId],   2, 1, yAxisId + 1);
+        book(_h_dphi_PP[yAxisId], 3, 1, yAxisId + 1);
       }
     }
 
 
     void analyze(const Event& event) {
-      const double weight = event.weight();
-
       Particles photons = apply<IdentifiedFinalState>(event, "IFS").particlesByPt();
       if (photons.size() < 2 || photons[0].pT() < 14.0*GeV) {
         vetoEvent;
@@ -46,11 +42,11 @@ namespace Rivet {
       // Isolate photons with ET_sum in cone
       Particles isolated_photons;
       Particles fs = apply<FinalState>(event, "FS").particles();
-      foreach (const Particle& photon, photons) {
+      for (const Particle& photon : photons) {
         FourMomentum mom_in_cone;
         double eta_P = photon.eta();
         double phi_P = photon.phi();
-        foreach (const Particle& p, fs) {
+        for (const Particle& p : fs) {
           if (deltaR(eta_P, phi_P, p.eta(), p.phi()) < 0.4) {
             mom_in_cone += p.momentum();
           }
@@ -66,10 +62,10 @@ namespace Rivet {
 
       FourMomentum mom_PP = isolated_photons[0].momentum() + isolated_photons[1].momentum();
       for (size_t i=0; i<4; ++i) {
-        _h_m_PP[i]->fill(mom_PP.mass(), weight);
-        _h_pT_PP[i]->fill(mom_PP.pT(), weight);
+        _h_m_PP[i]->fill(mom_PP.mass());
+        _h_pT_PP[i]->fill(mom_PP.pT());
         _h_dphi_PP[i]->fill(mapAngle0ToPi(isolated_photons[0].phi()-
-                                          isolated_photons[1].phi())/M_PI, weight);
+                                          isolated_photons[1].phi())/M_PI);
       }
     }
 
@@ -89,17 +85,15 @@ namespace Rivet {
 
     /// @name Histograms
     //@{
-    std::vector<Histo1DPtr> _h_m_PP;
-    std::vector<Histo1DPtr> _h_pT_PP;
-    std::vector<Histo1DPtr> _h_dphi_PP;
+    std::array<Histo1DPtr,4> _h_m_PP;
+    std::array<Histo1DPtr,4> _h_pT_PP;
+    std::array<Histo1DPtr,4> _h_dphi_PP;
     //@}
-
 
   };
 
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CDF_2005_S6080774);
+  RIVET_DECLARE_ALIASED_PLUGIN(CDF_2005_S6080774, CDF_2005_I667384);
 
 }

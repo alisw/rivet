@@ -1,0 +1,37 @@
+Name: BESIII_2020_I1762922
+Year: 2020
+Summary: Cross Section for $e^+e^-\to\eta^\prime J/\psi$ for energies between 4.178 and 4.6 GeV
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1762922
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D101 (2020) no.1, 012008
+RunInfo: e+ e- to hadrons
+Beams: [e+, e-]
+Description:
+  'Cross section for  $e^+e^-\to\eta J/\psi$ for energies between 4.178 and 4.6 GeV measured by the BESIII collaboration.'
+ValidationInfo:
+  ''
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Ablikim:2019bwn
+BibTeX: '@article{Ablikim:2019bwn,
+      author         = "Ablikim, Medina and others",
+      title          = "{Cross section measurement of $e^+e^- \rightarrow
+                        \eta^\prime J/\psi$ from $\sqrt{s} = 4.178$ to $4.600$ GeV}",
+      collaboration  = "BESIII",
+      journal        = "Phys. Rev.",
+      volume         = "D101",
+      year           = "2020",
+      number         = "1",
+      pages          = "012008",
+      doi            = "10.1103/PhysRevD.101.012008",
+      eprint         = "1911.00885",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1911.00885;%%"
+}'

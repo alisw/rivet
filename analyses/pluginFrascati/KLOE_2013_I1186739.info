@@ -1,0 +1,35 @@
+Name: KLOE_2013_I1186739
+Year: 2013
+Summary: $\eta\to\pi^+\pi^-\gamma$ decays
+Experiment: KLOE
+Collider: DAPHNE
+InspireID: 1186739
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett.B 718 (2013) 910-914
+RunInfo: Events with eta decays, either particle guns or collisions.
+Description:
+  'Differential decay rates for $\eta\to \pi^+\pi^-\gamma$ decays. Data read from plots and error bars are the size of the point. The data is corrected and background subtracted.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: KLOE:2012rfx
+BibTeX: '@article{KLOE:2012rfx,
+    author = "Babusci, D. and others",
+    collaboration = "KLOE",
+    title = "{Measurement of $\Gamma(\eta \to \pi^+\pi^-\gamma)/\Gamma(\eta \to \pi^+\pi^-\pi^0)$ with the KLOE Detector}",
+    eprint = "1209.4611",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1016/j.physletb.2012.11.032",
+    journal = "Phys. Lett. B",
+    volume = "718",
+    pages = "910--914",
+    year = "2013"
+}
+'

@@ -15,7 +15,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(CMS_2015_I1310737);
+    RIVET_DEFAULT_ANALYSIS_CTOR(CMS_2015_I1310737);
 
 
     /// Book histograms and initialise projections before the run
@@ -40,20 +40,20 @@ namespace Rivet {
       declare(akt05Jets, "AntiKt05Jets");
 
 
-      _h_excmult_jets_tot = bookHisto1D(1, 1, 1);
-      _h_incmult_jets_tot = bookHisto1D(2, 1, 1);
-      _h_leading_jet_pt_tot = bookHisto1D(3, 1, 1);
-      _h_second_jet_pt_tot = bookHisto1D(4, 1, 1);
-      _h_third_jet_pt_tot = bookHisto1D(5, 1, 1);
-      _h_fourth_jet_pt_tot = bookHisto1D(6, 1, 1);
-      _h_leading_jet_eta_tot = bookHisto1D(7, 1, 1);
-      _h_second_jet_eta_tot = bookHisto1D(8, 1, 1);
-      _h_third_jet_eta_tot = bookHisto1D(9, 1, 1);
-      _h_fourth_jet_eta_tot = bookHisto1D(10, 1, 1);
-      _h_ht1_tot = bookHisto1D(11, 1, 1);
-      _h_ht2_tot = bookHisto1D(12, 1, 1);
-      _h_ht3_tot = bookHisto1D(13, 1, 1);
-      _h_ht4_tot = bookHisto1D(14, 1, 1);
+      book(_h_excmult_jets_tot ,1, 1, 1);
+      book(_h_incmult_jets_tot ,2, 1, 1);
+      book(_h_leading_jet_pt_tot ,3, 1, 1);
+      book(_h_second_jet_pt_tot ,4, 1, 1);
+      book(_h_third_jet_pt_tot ,5, 1, 1);
+      book(_h_fourth_jet_pt_tot ,6, 1, 1);
+      book(_h_leading_jet_eta_tot ,7, 1, 1);
+      book(_h_second_jet_eta_tot ,8, 1, 1);
+      book(_h_third_jet_eta_tot ,9, 1, 1);
+      book(_h_fourth_jet_eta_tot ,10, 1, 1);
+      book(_h_ht1_tot ,11, 1, 1);
+      book(_h_ht2_tot ,12, 1, 1);
+      book(_h_ht3_tot ,13, 1, 1);
+      book(_h_ht4_tot ,14, 1, 1);
     }
 
 
@@ -83,12 +83,12 @@ namespace Rivet {
       // Perform lepton-jet overlap and HT calculation
       double ht = 0;
       Jets goodjets;
-      foreach (const Jet& j, jets) {
+      for (const Jet& j : jets) {
         // Decide if this jet is "good", i.e. isolated from the leptons
         /// @todo Nice use-case for any() and a C++11 lambda
         bool overlap = false;
-        foreach (const Particle& l, dressedLeptons) {
-          if (Rivet::deltaR(j, l) < 0.5) {
+        for (const Particle& l : dressedLeptons) {
+          if (deltaR(j, l) < 0.5) {
             overlap = true;
             break;
           }
@@ -111,7 +111,7 @@ namespace Rivet {
 
 
       // Weight to be used for histo filling
-      const double w = 0.5 * event.weight();
+      const double w = 0.5 * 1.0;
 
       // Fill jet number integral histograms
       _h_excmult_jets_tot->fill(goodjets.size(), w);
@@ -153,11 +153,6 @@ namespace Rivet {
 
       const double norm = (sumOfWeights() != 0) ? crossSection()/sumOfWeights() : 1.0;
 
-      MSG_INFO("Cross section = " << std::setfill(' ') << std::setw(14) << std::fixed << std::setprecision(3) << crossSection() << " pb");
-      MSG_INFO("# Events      = " << std::setfill(' ') << std::setw(14) << std::fixed << std::setprecision(3) << numEvents() );
-      MSG_INFO("SumW          = " << std::setfill(' ') << std::setw(14) << std::fixed << std::setprecision(3) << sumOfWeights());
-      MSG_INFO("Norm factor   = " << std::setfill(' ') << std::setw(14) << std::fixed << std::setprecision(6) << norm);
-
       scale(_h_excmult_jets_tot, norm );
       scale(_h_incmult_jets_tot, norm );
       scale(_h_leading_jet_pt_tot, norm );
@@ -187,7 +182,7 @@ namespace Rivet {
   };
 
 
-  DECLARE_RIVET_PLUGIN(CMS_2015_I1310737);
+  RIVET_DECLARE_PLUGIN(CMS_2015_I1310737);
 
 
 }

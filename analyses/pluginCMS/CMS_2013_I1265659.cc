@@ -17,11 +17,11 @@ namespace Rivet {
 
     /// Book histograms and initialise projections before the run
     void init() {
-      const FastJets jets(FinalState(-10, 10, 0.0*GeV), FastJets::ANTIKT, 0.5);
+      const FastJets jets(FinalState((Cuts::etaIn(-10, 10))), FastJets::ANTIKT, 0.5);
       declare(jets, "Jets");
 
-      _h_hTotD = bookHisto1D(1, 1, 1);
-      _h_hTotDF = bookHisto1D(1, 1, 2);
+      book(_h_hTotD ,1, 1, 1);
+      book(_h_hTotDF ,1, 1, 2);
     }
 
 
@@ -54,7 +54,7 @@ namespace Rivet {
 
       // Calc beta and fill histogram (choose central or fwd histo inline)
       double beta = fabs(atan2(dPhi23, sign(jet2.eta())*dEta23));
-      ((jet2.abseta() < 0.8) ? _h_hTotD : _h_hTotDF)->fill(beta, event.weight());
+      ((jet2.abseta() < 0.8) ? _h_hTotD : _h_hTotDF)->fill(beta, 1.0);
     }
 
 
@@ -78,6 +78,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CMS_2013_I1265659);
+  RIVET_DECLARE_PLUGIN(CMS_2013_I1265659);
 
 }

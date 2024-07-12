@@ -1,0 +1,32 @@
+Name: SND_2020_I1800477
+Year: 2020
+Summary: Cross section for $e^+e^-\to\eta\pi^0\gamma$ between 1.05 and 2 GeV
+Experiment: SND
+Collider: VEPP-2000
+InspireID: 1800477
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - arXiv:2006.05465
+RunInfo: e+ e- to hadrons
+Beams: [e+, e-]
+Description:
+  'Cross section for $e^+e^-\to\eta\pi^0\gamma$ between 1.05 and 2 GeV by SND.
+   The $\omega\eta$ and radiative subprocesses are also measured.'
+ValidationInfo:
+  'Herwig 7 events using low energy hadronic currents.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Achasov:2020yrt
+BibTeX: '@article{Achasov:2020yrt,
+    author = "Achasov, M.N. and others",
+    collaboration = "SND",
+    title = "{Study of the process $e^+e^- \to \eta\pi^0\gamma$ in the energy range $\sqrt{s} = \mbox{1.05-2.00}$ GeV with the SND detector}",
+    eprint = "2006.05465",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    month = "6",
+    year = "2020"
+}'

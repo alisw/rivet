@@ -1,6 +1,7 @@
 Name: MC_PDFS
 Summary: Analysis to study PDF sampling in any MC run
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Andy Buckley <andy.buckley@cern.ch>
 NumEvents: 10000

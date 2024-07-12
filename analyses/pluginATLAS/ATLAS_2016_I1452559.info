@@ -5,10 +5,12 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1452559
 Status: UNVALIDATED
+Reentrant: true
 Authors:
  - Andy Buckley <andy.buckley@cern.ch>
  - Shehu AbdusSalam <shehu@cantab.net>
 References:
+ - ATLAS-EXOT-2015-03
  - 'Phys.Rev. D94 (2016) no.3, 032005'
  - 'DOI: 10.1103/PhysRevD.94.032005'
  - 'CERN-EP-2016-075'
@@ -21,11 +23,11 @@ Energies: [13000]
 Description:
   'A search for new phenomena in final states with an energetic jet and large missing
   transverse momentum. The search uses proton-proton collision data corresponding to
-  an integrated luminosity of 3.2/fb of $pp$ collisions at 13\;\TeV, collected in 2015
+  an integrated luminosity of 3.2/fb of $pp$ collisions at 13~\TeV, collected in 2015
   with the ATLAS detector. Events are required to have at least one jet with a
   transverse momentum above 250 GeV and no leptons. Several signal regions are considered
   with increasing missing-transverse-momentum requirements between $E_T^\mathrm{miss} >
-  250\;\GeV$ and 700\;\GeV. Good agreement is observed between the number of events
+  250~\GeV$ and 700~\GeV. Good agreement is observed between the number of events
   in data and Standard Model predictions.'
 Keywords: [search, bsm, 1jet, monojet, 0lepton]
 Luminosity_fb: 3.2
@@ -34,7 +36,7 @@ BibTeX: '@article{Aaboud:2016tnv,
       author         = "Aaboud, Morad and others",
       title          = "{Search for new phenomena in final states with an
                         energetic jet and large missing transverse momentum in
-                        $pp$ collisions at $\sqrt{s}=13\;\TeV$ using the ATLAS
+                        $pp$ collisions at $\sqrt{s}=13~\TeV$ using the ATLAS
                         detector}",
       collaboration  = "ATLAS",
       journal        = "Phys. Rev.",

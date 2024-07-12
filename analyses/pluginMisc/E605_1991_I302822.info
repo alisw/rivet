@@ -1,0 +1,37 @@
+Name: E605_1991_I302822
+Year: 1991
+Summary: Dimuon production in proton-copper collisions at $\sqrt{s} = 38.8$ GeV
+Experiment: E605
+Collider: Fermilab
+InspireID: 302822
+Status: VALIDATED
+Reentrant: true
+Authors:
+  Hannes Jung <hannes.jung@desy.de>
+References:
+  - "Phys. Rev., D43(1991), 2815-2836"
+  - "DOI: 10.1103/PhysRevD.43.2815"
+NeedCrossSection: no
+Beams: [p+, p+]
+Energies: [38.8]
+Description:
+  'Experimental results on the production of dimuons by 800-GeV
+  protons incident on a copper target are presented. The results include
+  measurements of both the continuum of dimuons and the dimuon decays of the
+  three lowest-mass $\Upsilon$ states.'
+Keywords: [dimuon]
+BibKey: Moreno:1990sf
+BibTeX: '@article{Moreno:1990sf,
+      author         = "Moreno, G. and others",
+      title          = "{Dimuon production in proton - copper collisions at
+                        $\sqrt{s}$ = 38.8-GeV}",
+      journal        = "Phys. Rev.",
+      volume         = "D43",
+      year           = "1991",
+      pages          = "2815-2836",
+      doi            = "10.1103/PhysRevD.43.2815",
+      reportNumber   = "FERMILAB-PUB-90-223-E",
+      SLACcitation   = "%%CITATION = PHRVA,D43,2815;%%"
+}'
+ReleaseTests:
+ - $A pp-39-Zmm

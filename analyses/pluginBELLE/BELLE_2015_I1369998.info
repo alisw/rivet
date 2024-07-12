@@ -1,0 +1,38 @@
+Name: BELLE_2015_I1369998
+Year: 2015
+Summary: $\bar{B}^0\to D^{*+}\omega\pi^-$ decays
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1369998
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 92 (2015) 1, 012013
+ - JHEP 09 (2011) 129
+RunInfo: Any process producing B0, originally e+e- at Upsilon(4S)
+Description:
+  'Mass and aangular distributions in $\bar{B}^0\to D^{*+}\omega\pi^-$ decays. Data read from plots with the backgrounds given subtracted.'
+ValidationInfo:
+  'Herwig 7 events using EvtGen for B decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle:2015fvz
+BibTeX: '@article{Belle:2015fvz,
+    author = "Matvienko, D. and others",
+    collaboration = "Belle",
+    title = "{Study of $D^{**}$ production and light hadronic states in the $\bar{B}^0 \to D^{*+} \omega \pi^-$ decay}",
+    eprint = "1505.03362",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BELLE-PREPRINT-2015-8, KEK-PREPRINT-2015-5",
+    doi = "10.1103/PhysRevD.92.012013",
+    journal = "Phys. Rev. D",
+    volume = "92",
+    number = "1",
+    pages = "012013",
+    year = "2015"
+}
+'

@@ -1,0 +1,35 @@
+Name: CLEO_1998_I445351
+Year: 1998
+Summary: Measurement of $R$ at 10.52 GeV
+Experiment: CLEO
+Collider: CESR
+InspireID: 445351
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D57 (1998) 1350-1358, 1998 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: yes
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$ in $e^+e^-$ collisions by CLEO for 10.52 GeV.
+   The individual hadronic and muonic cross sections are also outputted to the yoda file
+   so that ratio $R$ can be recalcuated if runs are combined.'
+BibKey: Ammar:1997sk
+BibTeX: '@article{Ammar:1997sk,
+      author         = "Ammar, R. and others",
+      title          = "{A Measurement of the total cross-section for e+ e- ---&gt;
+                        hadrons at s**(1/2) = 10.52-GeV}",
+      collaboration  = "CLEO",
+      journal        = "Phys. Rev.",
+      volume         = "D57",
+      year           = "1998",
+      pages          = "1350-1358",
+      doi            = "10.1103/PhysRevD.57.1350",
+      eprint         = "hep-ex/9707018",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "SLAC-PUB-9765, CLNS-97-1493, CLEO-97-14",
+      SLACcitation   = "%%CITATION = HEP-EX/9707018;%%"
+}'

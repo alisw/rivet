@@ -18,9 +18,9 @@ namespace Rivet {
     void init() {
       declare(FinalState(), "FS");
 
-      _h_totEnergy = bookHisto1D(1, 1, 1);
-      _h_emEnergy = bookHisto1D(2, 1, 1);
-      _h_hadEnergy = bookHisto1D(3, 1, 1);
+      book(_h_totEnergy, 1, 1, 1);
+      book(_h_emEnergy , 2, 1, 1);
+      book(_h_hadEnergy, 3, 1, 1);
     }
 
 
@@ -58,7 +58,7 @@ namespace Rivet {
         if (p.abspid() != PID::ELECTRON && p.abspid() != PID::PHOTON && p.abspid() != 111) hadEnergy += p.energy();
       }
 
-      const double weight = event.weight();
+      const double weight = 1.0;
       _h_totEnergy->fill(totEnergy/GeV, weight);
       _h_emEnergy->fill(emEnergy/GeV, weight);
       _h_hadEnergy->fill(hadEnergy/GeV, weight);
@@ -67,7 +67,10 @@ namespace Rivet {
 
     /// Normalize histograms
     void finalize() {
-      scale({_h_totEnergy, _h_emEnergy, _h_hadEnergy}, crossSection()/microbarn/sumOfWeights());
+      const double sf = crossSection()/microbarn/sumOfWeights();
+      scale(_h_totEnergy, sf);
+      scale(_h_emEnergy, sf);
+      scale(_h_hadEnergy, sf);
     }
 
 
@@ -78,6 +81,6 @@ namespace Rivet {
   };
 
 
-  DECLARE_RIVET_PLUGIN(CMS_2017_I1511284);
+  RIVET_DECLARE_PLUGIN(CMS_2017_I1511284);
 
 }

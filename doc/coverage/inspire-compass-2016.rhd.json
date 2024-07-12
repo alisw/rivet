@@ -1,0 +1,38 @@
+{
+    "1357198": [
+        "The spin structure function $g_1^{\\rm p}$ of the proton and a test of the Bjorken sum rule", 
+        "COMPASS", 
+        "10.1016/j.physletb.2015.11.064", 
+        "2004412", 
+        "1503.08935", 
+        "ins1357198", 
+        null, 
+        [
+            "CERN-PH-EP-2015-085"
+        ]
+    ], 
+    "1385314": [
+        "Interplay among transversity induced asymmetries in hadron leptoproduction", 
+        "COMPASS", 
+        "10.1016/j.physletb.2015.12.042", 
+        "2038930", 
+        "1507.07593", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-199"
+        ]
+    ], 
+    "1393061": [
+        "Longitudinal double spin asymmetries in single hadron quasi-real photoproduction at high $p_T$", 
+        "COMPASS", 
+        "10.1016/j.physletb.2015.12.035", 
+        "2052089", 
+        "1509.03526", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-245"
+        ]
+    ]
+}

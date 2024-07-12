@@ -1,0 +1,142 @@
+{
+    "918779": [
+        "Strangeness Enhancement in Cu+Cu and Au+Au Collisions at $\\sqrt{s_{NN}} = 200$ GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.108.072301", 
+        null, 
+        "1107.2955", 
+        "ins918779", 
+        null, 
+        []
+    ], 
+    "919778": [
+        "$\\rho^{0}$ Photoproduction in AuAu Collisions at $\\sqrt{s_{NN}}$=62.4 GeV with STAR", 
+        "STAR", 
+        "10.1103/PhysRevC.85.014910", 
+        null, 
+        "1107.4630", 
+        "ins919778", 
+        null, 
+        []
+    ], 
+    "927960": [
+        "Anomalous centrality evolution of two-particle angular correlations from Au-Au collisions at $\\sqrt{s_{\\rm NN}}$ = 62 and 200 GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.86.064902", 
+        null, 
+        "1109.4380", 
+        "ins927960", 
+        null, 
+        []
+    ], 
+    "929522": [
+        "Directed and elliptic flow of charged particles in Cu+Cu collisions at $\\sqrt{s_{NN}} =$ 22.4 GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.85.014901", 
+        null, 
+        "1109.5446", 
+        "ins929522", 
+        null, 
+        []
+    ], 
+    "930463": [
+        "Identified hadron compositions in p+p and Au+Au collisions at high transverse momenta at $\\sqrt{s_{_{NN}}} = 200$ GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.108.072302", 
+        null, 
+        "1110.0579", 
+        "ins930463", 
+        null, 
+        []
+    ], 
+    "943192": [
+        "System size and energy dependence of near-side di-hadron correlations", 
+        "STAR", 
+        "10.1103/PhysRevC.85.014903", 
+        null, 
+        "1110.5800", 
+        "ins943192", 
+        null, 
+        []
+    ], 
+    "955160": [
+        "Energy and system-size dependence of two- and four-particle $v_2$ measurements in heavy-ion collisions at RHIC and their implications on flow fluctuations and nonflow", 
+        "STAR", 
+        "10.1103/PhysRevC.86.014904", 
+        null, 
+        "1111.5637", 
+        "ins955160", 
+        null, 
+        []
+    ], 
+    "1081120": [
+        "Measurement of the $W \\to e \\nu$ and $Z/\\gamma^* \\to e^+e^-$ Production Cross Sections at Mid-rapidity in Proton-Proton Collisions at $\\sqrt{s}$ = 500 GeV", 
+        "STAR", 
+        "10.1103/PhysRevD.85.092010", 
+        null, 
+        "1112.2980", 
+        "ins1081120", 
+        null, 
+        []
+    ], 
+    "1081744": [
+        "Directed Flow of Identified Particles in Au + Au Collisions at $\\sqrt{s{_NN}} = 200$ GeV at RHIC", 
+        "STAR", 
+        "10.1103/PhysRevLett.108.202301", 
+        null, 
+        "1112.3930", 
+        "ins1081744", 
+        null, 
+        []
+    ], 
+    "1107765": [
+        "Di-electron spectrum at mid-rapidity in $p+p$ collisions at $\\sqrt{s} = 200$ GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.86.024906", 
+        null, 
+        "1204.1890", 
+        null, 
+        null, 
+        []
+    ], 
+    "1111571": [
+        "Measurements of $D^{0}$ and $D^{*}$ Production in $p+p$ Collisions at $\\sqrt{s} = 200$ GeV", 
+        "STAR", 
+        "10.1103/PhysRevD.86.072013", 
+        null, 
+        "1204.4244", 
+        "ins1111571", 
+        null, 
+        []
+    ], 
+    "1114529": [
+        "Longitudinal and transverse spin asymmetries for inclusive jet production at mid-rapidity in polarized $p+p$ collisions at $\\sqrt{s}=200$ GeV", 
+        "STAR", 
+        "10.1103/PhysRevD.86.032006", 
+        null, 
+        "1205.2735", 
+        "ins1114529", 
+        null, 
+        []
+    ], 
+    "1116643": [
+        "Transverse Single-Spin Asymmetry and Cross-Section for $\\pi^0$ and $\\eta$ Mesons at Large Feynman-$x$ in Polarized $p+p$ Collisions at $\\sqrt{s}=200$ GeV", 
+        "STAR", 
+        "10.1103/PhysRevD.86.051101", 
+        null, 
+        "1205.6826", 
+        "ins1116643", 
+        null, 
+        []
+    ], 
+    "1119620": [
+        "Inclusive charged hadron elliptic flow in Au + Au collisions at $\\sqrt{s_{NN}}$ = 7.7 - 39 GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.86.054908", 
+        null, 
+        "1206.5528", 
+        "ins1119620", 
+        null, 
+        []
+    ]
+}

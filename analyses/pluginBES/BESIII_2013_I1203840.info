@@ -1,0 +1,36 @@
+Name: BESIII_2013_I1203840
+Year: 2013
+Summary: $\psi(2S)\to \bar{p}K^+\Sigma^0$ and $\chi_{cJ}\to\bar{p}K^+\Lambda^0$ 
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1203840
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 87 (2013) 1, 012007
+RunInfo: Any process producing psi(2S) and chi_c originally e+e-
+Description:
+  'Measurements of mass distributions in the decays $\psi(2S)\to \bar{p}K^+\Sigma^0$ and $\chi_{cJ}\to\bar{p}K^+\Lambda^0$. The data were read from the plots in the paper and may not be corrected for efficiency or background.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2012koo
+BibTeX: '@article{BESIII:2012koo,
+    author = "Ablikim, M. and others",
+    collaboration = "BESIII",
+    title = "{Measurements of $\psi^\prime \to \bar{p} K^+ \Sigma^0$ and $\chi_{cj} \to \bar{p} K^+ \Lambda$}",
+    eprint = "1211.5631",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevD.87.012007",
+    journal = "Phys. Rev. D",
+    volume = "87",
+    number = "1",
+    pages = "012007",
+    year = "2013"
+}
+'

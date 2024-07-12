@@ -5,12 +5,14 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1492320
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Alex Long <b.long@cern.ch>
  - Ismet Siral <ismet.siral@cern.ch>
  - Louis Helary <louis.helary@cern.ch>
  - Christian Gutschow <chris.g@cern.ch>
 References:
+ - ATLAS-STDM-2015-07
  - arXiv:1610.05088 [hep-ex]
 Keywords:
  - 3boson

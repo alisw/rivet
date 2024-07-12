@@ -1,0 +1,11 @@
+Name: MC_OmegaPhia1_3Pion_Decay
+Summary: MC analysis of $\omega$, $\phi$ and $a_1\to3\pi$ decays
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+RunInfo: Any process producing a1, omega or phi mesons
+NeedCrossSection: no
+Description:
+  'Analysis of the mass distributions and Dalitz plots in $a_1\to3\pi$ and $\omega,\phi\to\pi^+\pi^-\pi^0$ decays.
+   Based on old Herwig++ internal analysis.'

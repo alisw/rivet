@@ -7,6 +7,8 @@
 
 namespace Rivet {
 
+  using namespace std;
+
 
   // Return a thread-safe random number generator
   mt19937& rng() {
@@ -59,6 +61,57 @@ namespace Rivet {
     const double x = d(rng());
     //cout << "RANDLOGNORM -> " << x << endl;
     return x;
+  }
+
+
+  // Return a random number sampled from a Crystal Ball distribution
+  double randcrystalball(double alpha, double n, double mu, double sigma) {
+    const double aalpha = fabs(alpha);
+    const double nalpha = n/aalpha;
+    const double C = nalpha / (n-1) * exp(-sqr(aalpha)/2.);
+    const double D = sqrt(M_PI/2) * (1 + std::erf(aalpha/M_SQRT2));
+    const double normfrac = D / (C+D);
+    if (rand01() < normfrac) { // Sample from (the relevant bit of) the Gaussian
+      while (1) { // sample until we get a value that isn't in the power-law tail
+        const double x = randnorm(mu, sigma);
+        if (x-mu >= -alpha*sigma) return x;
+      }
+    } else { // Sample from the power-law tail
+      // Cf. https://stackoverflow.com/questions/918736/random-number-generator-that-produces-a-power-law-distribution
+      const double xt = nalpha * pow(1-rand01(), 1/(1-n));
+      const double x = sigma*(nalpha - xt - aalpha) + mu;
+      return x;
+    }
+    return NAN;
+  }
+
+
+
+  double pNorm(double x, double mu, double sigma) {
+    const double dx = x - mu;
+    const double y = dx/sigma;
+    const double p = exp(-y*y/2.);
+    return p / sqrt(TWOPI) / sigma;
+  }
+
+  double pCrystalBall(double x, double alpha, double n, double mu, double sigma) {
+    const double dx = x - mu;
+    const double y = dx/sigma;
+    const double aalpha = fabs(alpha);
+    const double nalpha = n/aalpha;
+    double p = -1;
+    if (y < -alpha) { // CB part
+      const double A = pow(nalpha,n) * exp(-sqr(aalpha)/2.);
+      const double B = nalpha - aalpha;
+      p = A * pow(B-y, -n);
+    } else { // Gaussian part
+      p = exp(-y*y/2.);
+    }
+    // Normalize
+    const double C = nalpha / (n-1) * exp(-sqr(aalpha)/2.);
+    const double D = sqrt(M_PI/2) * (1 + std::erf(aalpha/M_SQRT2));
+    const double Z = sigma * (C + D);
+    return p/Z;
   }
 
 

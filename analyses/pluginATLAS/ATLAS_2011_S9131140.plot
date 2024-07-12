@@ -1,5 +1,5 @@
 # BEGIN PLOT /ATLAS_2011_S9131140/d.*
-YLabel=$1/\sigma\mathrm{d}\sigma/\mathrm{d}p_\perp$ [$\text{GeV}^{-1}$]
+YLabel=$1/\sigma\mathrm{d}\sigma/\mathrm{d}p_\perp$ [$\mathrm{GeV}^{-1}$]
 LogX=1
 XMin=1.0
 YMin=0.000001

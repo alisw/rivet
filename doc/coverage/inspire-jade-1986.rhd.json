@@ -1,0 +1,50 @@
+{
+    "222566": [
+        "Tests of the Standard Model in Leptonic Reactions at {PETRA} Energies", 
+        "JADE", 
+        "10.1007/BF01557600", 
+        null, 
+        null, 
+        "ins222566", 
+        null, 
+        [
+            "DESY-85-131"
+        ]
+    ], 
+    "227325": [
+        "Lepton Pair Production in Double Tagged Two Photon Interactions", 
+        "JADE", 
+        "10.1007/BF01571802", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-86-005"
+        ]
+    ], 
+    "227326": [
+        "Determination of the $B$ Lifetime", 
+        "JADE", 
+        "10.1007/BF01588031", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-86-001"
+        ]
+    ], 
+    "231554": [
+        "Exclusive Production of Proton Anti-proton Pairs in Photon-photon Collisions", 
+        "JADE", 
+        "10.1016/0370-2693(86)91114-7", 
+        null, 
+        null, 
+        "ins231554", 
+        null, 
+        [
+            "DESY-86-043"
+        ]
+    ]
+}

@@ -16,74 +16,43 @@ namespace Rivet {
   class WFinder : public ParticleFinder {
   public:
 
-    enum ChargedLeptons { PROMPTCHLEPTONS=0, ALLCHLEPTONS };
-    enum ClusterPhotons { NOCLUSTER=0, CLUSTERNODECAY=1, CLUSTERALL };
-    enum PhotonTracking { NOTRACK=0, TRACK=1 };
-    enum MassWindow { MASS=0, TRANSMASS=1 };
+    enum class ChargedLeptons { PROMPT, ALL };
+    enum class ClusterPhotons { NONE, NODECAY, ALL };
+    enum class AddPhotons { NO, YES };
+    enum class MassWindow { M, MT };
 
 
     /// @name Constructors
     //@{
 
-    /// Constructor taking cuts object
-    /// @param inputfs Input final state
-    /// @param leptoncuts Charged lepton cuts
-    /// @param pid Type of the charged lepton
-    /// @param minmass,maxmass (Transverse) mass window
-    /// @param missingET Minimal amount of missing ET (neutrinos) required
-    /// @param dRmax Maximum dR of photons around charged lepton to take into account
-    ///  for W reconstruction (only relevant if one of the following are true)
-    /// @param chLeptons Only use prompt charged leptons, or any charged leptons?
-    /// @param clusterPhotons Whether such photons are supposed to be
-    ///  clustered to the lepton object and thus W mom
-    /// @param trackPhotons Whether such photons should be added to _theParticles
-    /// @param masstype Whether mass window should be applied using m or mT
+    /// @brief Constructor taking cuts object
     ///
-    /// @todo Revisit NOTRACK as default?
+    /// @param inputfs  Input final state
+    /// @param leptoncuts  Charged lepton cuts
+    /// @param pid  Type of the charged lepton
+    /// @param minmass,maxmass  (Transverse) mass window
+    /// @param missingET  Minimal amount of missing ET (neutrinos) required
+    /// @param dRmax  Maximum dR of photons around charged lepton to take into account
+    ///  for W reconstruction (only relevant if one of the following are true)
+    /// @param chLeptons  Only use prompt charged leptons, or any charged leptons?
+    /// @param clusterPhotons  Whether such photons are supposed to be
+    ///  clustered to the lepton object and thus W mom
+    /// @param trackPhotons  Whether such photons should be added to _theParticles
+    /// @param masstype  Whether mass window should be applied using m or mT
+    /// @param masstarget  The expected (transverse) mass value, if resolving ambiguities
+    ///
+    /// @todo Revisit AddPhotons::NO as default?
     WFinder(const FinalState& inputfs,
             const Cut& leptoncuts,
             PdgId pid,
             double minmass, double maxmass,
             double missingET,
             double dRmax=0.1,
-            ChargedLeptons chLeptons=PROMPTCHLEPTONS,
-            ClusterPhotons clusterPhotons=CLUSTERNODECAY,
-            PhotonTracking trackPhotons=NOTRACK,
-            MassWindow masstype=MASS,
+            ChargedLeptons chLeptons=ChargedLeptons::PROMPT,
+            ClusterPhotons clusterPhotons=ClusterPhotons::NODECAY,
+            AddPhotons trackPhotons=AddPhotons::NO,
+            MassWindow masstype=MassWindow::M,
             double masstarget=80.4*GeV);
-
-    /// Backward-compatible constructor with implicit chLeptons mode = PROMPTCHLEPTONS
-    /// @deprecated Remove this and always use the constructor with chLeptons argument.
-    WFinder(const FinalState& inputfs,
-            const Cut& leptoncuts,
-            PdgId pid,
-            double minmass, double maxmass,
-            double missingET,
-            double dRmax,
-            ClusterPhotons clusterPhotons,
-            PhotonTracking trackPhotons=NOTRACK,
-            MassWindow masstype=MASS,
-            double masstarget=80.4*GeV)
-      : WFinder(inputfs, leptoncuts, pid, minmass, maxmass, missingET,
-                dRmax, PROMPTCHLEPTONS, clusterPhotons, trackPhotons, masstype, masstarget)
-    {   }
-
-    // /// Constructor with more convenient argument ordering and default args
-    // ///
-    // /// @todo Revisit NOTRACK as default?
-    // WFinder(const FinalState& inputfs,
-    //         const Cut& leptoncuts,
-    //         PdgId pid,
-    //         double minmass, double maxmass,
-    //         double missingET,
-    //         MassWindow masstype,
-    //         double masstarget=80.4*GeV,
-    //         ClusterPhotons clusterPhotons=CLUSTERNODECAY,
-    //         double dRmax=0.1,
-    //         PhotonTracking trackPhotons=NOTRACK)
-    //   : WFinder(inputfs, leptoncuts, pid, minmass, maxmass, missingET,
-    //             dRmax, clusterPhotons, trackPhotons, masstype, masstarget)
-    // {    }
 
     /// Clone on the heap.
     DEFAULT_RIVET_PROJ_CLONE(WFinder);
@@ -140,7 +109,7 @@ namespace Rivet {
     void project(const Event& e);
 
     /// Compare projections.
-    int compare(const Projection& p) const;
+    CmpState compare(const Projection& p) const;
 
 
   public:
@@ -149,7 +118,7 @@ namespace Rivet {
     void clear() { _theParticles.clear(); }
 
 
-  private:
+  protected:
 
     /// (Transverse) mass cuts
     double _minmass, _maxmass, _masstarget;
@@ -162,7 +131,7 @@ namespace Rivet {
 
     /// Switch for tracking of photons (whether to include them in the W particle)
     /// This is relevant when the clustered photons need to be excluded from e.g. a jet finder
-    PhotonTracking _trackPhotons;
+    AddPhotons _trackPhotons;
 
     /// Charged lepton flavour
     PdgId _pid;

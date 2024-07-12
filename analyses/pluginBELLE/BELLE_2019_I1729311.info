@@ -1,0 +1,37 @@
+Name: BELLE_2019_I1729311
+Year: 2019
+Summary: $B^0\to p \bar{p}\pi^0$
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1729311
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 99 (2019) 9, 091104
+RunInfo: Any process producing B0 originally e+e- at Upsilon(4S)
+Description:
+  'Measurement of the mass distributions in the decay $B^0\to p \bar{p}\pi^0$. The data were read from the plots in the paper, but is corrected for detector efficiency.'
+ValidationInfo:
+  'Herwig7 events using EvtGen for decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle:2019abe
+BibTeX: '@article{Belle:2019abe,
+    author = "Pal, B. and others",
+    collaboration = "Belle",
+    title = "{Evidence for the decay $B^0\to p\bar{p}\pi^0$}",
+    eprint = "1904.05713",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "Belle Preprint 2019-04, KEK Preprint 2018-91",
+    doi = "10.1103/PhysRevD.99.091104",
+    journal = "Phys. Rev. D",
+    volume = "99",
+    number = "9",
+    pages = "091104",
+    year = "2019"
+}
+'

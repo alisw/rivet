@@ -5,12 +5,14 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 945498
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Evelin Meoni <evelin.meoni@cern.ch>
- - Holger Schulz
+ - Holger Schulz <holger.schulz@fnal.gov>
  - Roman Lysak <roman.lysak@cern.ch>
 References:
- - arXiv:1111.2690v1 [hep-ex]
+ - ATLAS-STDM-2011-27
+ - arXiv:1111.2690 [hep-ex]
  - CERN-PH-EP-2011-162
 RunInfo:
   Z+jets, electronic and/or muonic Z-decays. Jets with transverse momentum $p_T > 30$ GeV and jet rapidity $|y| < 4.4$.
@@ -39,3 +41,8 @@ BibTeX: '@article{Aad:2011qv,
       reportNumber   = "CERN-PH-EP-2011-162",
       SLACcitation   = "%%CITATION = ARXIV:1111.2690;%%",
 }'
+
+ReleaseTests:
+ - $A LHC-Z-e
+ - $A-2 LHC-Z-mu
+

@@ -1,0 +1,1610 @@
+{
+    "1393258": [
+        "Search for single production of scalar leptoquarks in proton-proton collisions at $\\sqrt{s} = 8$ $TeV$", 
+        "CMS", 
+        "10.1103/PhysRevD.93.032005", 
+        "2052016", 
+        "1509.03750", 
+        null, 
+        null, 
+        [
+            "CMS-EXO-12-043", 
+            "CERN-PH-EP-2015-149"
+        ]
+    ], 
+    "1424842": [
+        "Measurements of the $\\mathrm{t}\\overline{\\mathrm{t}}$ production cross section in lepton+jets final states in pp collisions at 8 $\\,\\text {TeV}$ and ratio of 8 to 7  $\\,\\text {TeV}$ cross sections", 
+        "CMS", 
+        "10.1140/epjc/s10052-016-4504-z", 
+        "2135205", 
+        "1602.09024", 
+        null, 
+        null, 
+        [
+            "CMS-TOP-12-006", 
+            "CERN-EP-2016-016"
+        ]
+    ], 
+    "1449080": [
+        "Pseudorapidity dependence of long-range two-particle correlations in $p$Pb collisions at $\\sqrt {s_{NN}}=$ 5.02 TeV", 
+        "CMS", 
+        "10.1103/PhysRevC.96.014915", 
+        "2147354", 
+        "1604.05347", 
+        null, 
+        null, 
+        [
+            "CMS-HIN-14-008", 
+            "CERN-EP-2016-042"
+        ]
+    ], 
+    "1464834": [
+        "Multiplicity and rapidity dependence of strange hadron production in pp, pPb, and PbPb collisions at the LHC", 
+        "CMS", 
+        "10.1016/j.physletb.2017.01.075", 
+        "2154628", 
+        "1605.06699", 
+        "ins1464834", 
+        null, 
+        [
+            "CMS-HIN-15-006", 
+            "CERN-EP-2016-105"
+        ]
+    ], 
+    "1464840": [
+        "Coherent $J/\\psi$ photoproduction in ultra-peripheral PbPb collisions at $\\sqrt {s_{NN}} =$ 2.76 TeV with the CMS experiment", 
+        "CMS", 
+        "10.1016/j.physletb.2017.07.001", 
+        "2154908", 
+        "1605.06966", 
+        null, 
+        null, 
+        [
+            "CMS-HIN-12-009", 
+            "CERN-EP-2016-098"
+        ]
+    ], 
+    "1466293": [
+        "Search for top squark pair production in compressed-mass-spectrum scenarios in proton-proton collisions at $\\sqrt{s}$ = 8 TeV using the $\\alpha_T$ variable", 
+        "CMS", 
+        "10.1016/j.physletb.2017.02.007", 
+        "2156414", 
+        "1605.08993", 
+        null, 
+        null, 
+        [
+            "CMS-SUS-14-006", 
+            "CERN-EP-2016-103"
+        ]
+    ], 
+    "1466301": [
+        "Search for Dark Matter and Supersymmetry with a Compressed Mass Spectrum in the Vector Boson Fusion Topology in Proton-Proton Collisions at $\\sqrt{s} =$ 8  TeV", 
+        "CMS", 
+        "10.1103/PhysRevLett.118.021802", 
+        "2156688", 
+        "1605.09305", 
+        null, 
+        null, 
+        [
+            "CMS-SUS-14-019", 
+            "CERN-EP-2016-096"
+        ]
+    ], 
+    "1467451": [
+        "Measurement of the transverse momentum spectrum of the Higgs boson produced in pp collisions at $ \\sqrt{s}=8 $ TeV using $H \\to WW$ decays", 
+        "CMS", 
+        "10.1007/JHEP03(2017)032", 
+        "2158105", 
+        "1606.01522", 
+        "ins1467451", 
+        null, 
+        [
+            "CMS-HIG-15-010", 
+            "CERN-EP-2016-125"
+        ]
+    ], 
+    "1471281": [
+        "Measurement of the transverse momentum spectra of weak vector bosons produced in proton-proton collisions at $ \\sqrt{s}=8 $ TeV", 
+        "CMS", 
+        "10.1007/JHEP02(2017)096", 
+        "2162036", 
+        "1606.05864", 
+        "ins1471281", 
+        null, 
+        [
+            "CMS-SMP-14-012", 
+            "CERN-EP-2016-152"
+        ]
+    ], 
+    "1471287": [
+        "Evidence for collectivity in pp collisions at the LHC", 
+        "CMS", 
+        "10.1016/j.physletb.2016.12.009", 
+        "2162424", 
+        "1606.06198", 
+        "ins1471287", 
+        null, 
+        [
+            "CMS-HIN-16-010", 
+            "CERN-EP-2016-147"
+        ]
+    ], 
+    "1475003": [
+        "Observation of the decay $B^+ \\to \\psi(2S) \\phi(1020) K^+$ in pp collisions at $\\sqrt s =$ 8 TeV", 
+        "CMS", 
+        "10.1016/j.physletb.2016.11.001", 
+        "2198005", 
+        "1607.02638", 
+        null, 
+        null, 
+        [
+            "CMS-BPH-13-009", 
+            "CERN-EP-2016-161"
+        ]
+    ], 
+    "1475475": [
+        "Jet energy scale and resolution in the CMS experiment in pp collisions at 8 TeV", 
+        "CMS", 
+        "10.1088/1748-0221/12/02/P02014", 
+        "2198719", 
+        "1607.03663", 
+        null, 
+        null, 
+        [
+            "CMS-JME-13-004", 
+            "CERN-PH-EP-2015-305"
+        ]
+    ], 
+    "1477207": [
+        "Search for dark matter in proton-proton collisions at 8 TeV with missing transverse momentum and vector boson tagged jets", 
+        "CMS", 
+        "10.1007/JHEP12(2016)083", 
+        "2200356", 
+        "1607.05764", 
+        null, 
+        null, 
+        [
+            "CMS-EXO-12-055", 
+            "CERN-EP-2016-178"
+        ]
+    ], 
+    "1477805": [
+        "Measurement of the WZ production cross section in pp collisions at $\\sqrt{s} =$ 13 TeV", 
+        "CMS", 
+        "10.1016/j.physletb.2017.01.011", 
+        "2201221", 
+        "1607.06943", 
+        "ins1477805", 
+        null, 
+        [
+            "CMS-SMP-16-002", 
+            "CERN-EP-2016-169"
+        ]
+    ], 
+    "1478600": [
+        "Measurement of the ZZ production cross section and Z $\\to \\ell^+\\ell^-\\ell'^+\\ell'^-$ branching fraction in pp collisions at $\\sqrt s$=13 TeV", 
+        "CMS", 
+        "10.1016/j.physletb.2016.10.054", 
+        "2202723", 
+        "1607.08834", 
+        "ins1478600", 
+        null, 
+        [
+            "CMS-SMP-16-001", 
+            "CERN-EP-2016-174"
+        ]
+    ], 
+    "1479163": [
+        "Search for new phenomena in events with high jet multiplicity and low missing transverse momentum in proton\u2013proton collisions at $\\sqrt{s}=8$ TeV", 
+        "CMS", 
+        "10.1016/j.physletb.2017.01.073", 
+        "2204905", 
+        "1608.01224", 
+        null, 
+        null, 
+        [
+            "CMS-EXO-13-001", 
+            "CERN-EP-2016-187"
+        ]
+    ], 
+    "1484162": [
+        "Measurement of the production cross section of a W boson in association with two b jets in pp collisions at $\\sqrt{s} = 8{\\,\\mathrm{{TeV}}} $", 
+        "CMS", 
+        "10.1140/epjc/s10052-016-4573-z", 
+        "2210676", 
+        "1608.07561", 
+        "ins1484162", 
+        null, 
+        [
+            "CMS-SMP-14-020", 
+            "CERN-EP-2016-190"
+        ]
+    ], 
+    "1485195": [
+        "Measurement of the total and differential inclusive $B^+$ hadron cross sections in pp collisions at $\\sqrt{s}$ = 13 TeV", 
+        "CMS", 
+        "10.1016/j.physletb.2017.05.074", 
+        "2212909", 
+        "1609.00873", 
+        "ins1485195", 
+        null, 
+        [
+            "CMS-BPH-15-004", 
+            "CERN-EP-2016-198"
+        ]
+    ], 
+    "1485699": [
+        "The CMS trigger system", 
+        "CMS", 
+        "10.1088/1748-0221/12/01/P01020", 
+        "2212926", 
+        "1609.02366", 
+        null, 
+        null, 
+        [
+            "CMS-TRG-12-001", 
+            "CERN-EP-2016-160"
+        ]
+    ], 
+    "1485702": [
+        "Search for high-mass diphoton resonances in proton\u2013proton collisions at 13 TeV and combination with 8 TeV search", 
+        "CMS", 
+        "10.1016/j.physletb.2017.01.027", 
+        "2214171", 
+        "1609.02507", 
+        null, 
+        null, 
+        [
+            "CMS-EXO-16-027", 
+            "CERN-EP-2016-216", 
+            "CMS-EXO-16-02"
+        ]
+    ], 
+    "1487277": [
+        "Measurement and QCD analysis of double-differential inclusive jet cross sections in pp collisions at $ \\sqrt{s}=8 $ TeV and cross section ratios to 2.76 and 7 TeV", 
+        "CMS", 
+        "10.1007/JHEP03(2017)156", 
+        "2216310", 
+        "1609.05331", 
+        "ins1487277", 
+        null, 
+        [
+            "CMS-SMP-14-001", 
+            "CERN-EP-2016-196"
+        ]
+    ], 
+    "1487278": [
+        "Measurement of inclusive jet cross sections in $pp$ and PbPb collisions at $\\sqrt{s_{NN}}=$ 2.76 TeV", 
+        "CMS", 
+        "10.1103/PhysRevC.96.015202", 
+        "2216315", 
+        "1609.05383", 
+        "ins1487278", 
+        null, 
+        [
+            "CMS-HIN-13-005", 
+            "CERN-EP-2016-217"
+        ]
+    ], 
+    "1487279": [
+        "Search for narrow resonances in dilepton mass spectra in proton-proton collisions at $\\sqrt{s}$ = 13 TeV and combination with 8 TeV data", 
+        "CMS", 
+        "10.1016/j.physletb.2017.02.010", 
+        "2216321", 
+        "1609.05391", 
+        null, 
+        null, 
+        [
+            "CMS-EXO-15-005", 
+            "CERN-EP-2016-209"
+        ]
+    ], 
+    "1487288": [
+        "Measurement of the WZ production cross section in pp collisions at $\\sqrt{s} = 7$ and 8 $\\,\\text{TeV}$ and search for anomalous triple gauge couplings at $\\sqrt{s} = 8\\,\\text{TeV} $", 
+        "CMS", 
+        "10.1140/epjc/s10052-017-4730-z", 
+        "2216557", 
+        "1609.05721", 
+        "ins1487288", 
+        null, 
+        [
+            "CMS-SMP-14-014", 
+            "CERN-EP-2016-205"
+        ]
+    ], 
+    "1488103": [
+        "Inclusive search for supersymmetry using razor variables in pp collisions at $\\sqrt s=$ 13  TeV", 
+        "CMS", 
+        "10.1103/PhysRevD.95.012003", 
+        "2218072", 
+        "1609.07658", 
+        null, 
+        null, 
+        [
+            "CMS-SUS-15-004", 
+            "CERN-EP-2016-214"
+        ]
+    ], 
+    "1488581": [
+        "Search for supersymmetry in events with one lepton and multiple jets in proton-proton collisions at $\\sqrt{s} =$ 13 TeV", 
+        "CMS", 
+        "10.1103/PhysRevD.95.012011", 
+        "2220481", 
+        "1609.09386", 
+        null, 
+        null, 
+        [
+            "CMS-SUS-15-006", 
+            "CERN-EP-2016-239"
+        ]
+    ], 
+    "1489183": [
+        "Observation of charge-dependent azimuthal correlations in $p$-Pb collisions and its implication for the search for the chiral magnetic effect", 
+        "CMS", 
+        "10.1103/PhysRevLett.118.122301", 
+        "2220897", 
+        "1610.00263", 
+        "ins1489183", 
+        null, 
+        [
+            "CMS-HIN-16-009", 
+            "CERN-EP-2016-236"
+        ]
+    ], 
+    "1489189": [
+        "Suppression and azimuthal anisotropy of prompt and nonprompt ${\\mathrm{J}}/\\psi $ production in PbPb collisions at $\\sqrt{{s_{_{\\text {NN}}}}} =2.76$ $\\,\\mathrm{TeV}$", 
+        "CMS", 
+        "10.1140/epjc/s10052-017-4781-1", 
+        "2221185", 
+        "1610.00613", 
+        "ins1489189", 
+        null, 
+        [
+            "CMS-HIN-14-005", 
+            "CERN-EP-2016-243"
+        ]
+    ], 
+    "1489193": [
+        "Cross section measurement of $t$-channel single top quark production in pp collisions at $\\sqrt s =$ 13 TeV", 
+        "CMS", 
+        "10.1016/j.physletb.2017.07.047", 
+        "2221184", 
+        "1610.00678", 
+        null, 
+        null, 
+        [
+            "CMS-TOP-16-003", 
+            "CERN-EP-2016-233"
+        ]
+    ], 
+    "1490903": [
+        "Search for high-mass Z$\\gamma$ resonances in $\\mathrm{ e }^{+}\\mathrm{ e }^{-}\\gamma $ and $ \\mu^{+}\\mu^{-}\\gamma$ final states in proton-proton collisions at $\\sqrt{s} =$ 8 and 13 TeV", 
+        "CMS", 
+        "10.1007/JHEP01(2017)076", 
+        "2223514", 
+        "1610.02960", 
+        null, 
+        null, 
+        [
+            "CMS-EXO-16-021", 
+            "CERN-EP-2016-230"
+        ]
+    ], 
+    "1491379": [
+        "Search for anomalous Wtb couplings and flavour-changing neutral currents in t-channel single top quark production in pp collisions at $\\sqrt{s} =$ 7 and 8 TeV", 
+        "CMS", 
+        "10.1007/JHEP02(2017)028", 
+        "2223855", 
+        "1610.03545", 
+        "ins1491379", 
+        null, 
+        [
+            "CMS-TOP-14-007", 
+            "CERN-EP-2016-207"
+        ]
+    ], 
+    "1491950": [
+        "Measurement of differential cross sections for top quark pair production using the lepton+jets final state in proton-proton collisions at 13 TeV", 
+        "CMS", 
+        "10.1103/PhysRevD.95.092001", 
+        "2224321", 
+        "1610.04191", 
+        "ins1491950", 
+        null, 
+        [
+            "CMS-TOP-16-008", 
+            "CERN-EP-2016-227"
+        ]
+    ], 
+    "1491953": [
+        "Measurements of differential cross sections for associated production of a W boson and jets in proton-proton collisions at $\\sqrt{s} =$ 8 TeV", 
+        "CMS", 
+        "10.1103/PhysRevD.95.052002", 
+        "2224398", 
+        "1610.04222", 
+        "ins1491953", 
+        null, 
+        [
+            "CMS-SMP-14-023", 
+            "CERN-EP-2016-231", 
+            "CERN-PH-EP-2016-231"
+        ]
+    ], 
+    "1492316": [
+        "Search for top quark decays via Higgs-boson-mediated flavor-changing neutral currents in pp collisions at $ \\sqrt{s}=8 $ TeV", 
+        "CMS", 
+        "10.1007/JHEP02(2017)079", 
+        "2225240", 
+        "1610.04857", 
+        null, 
+        null, 
+        [
+            "CMS-TOP-13-017", 
+            "CERN-EP-2016-208"
+        ]
+    ], 
+    "1492317": [
+        "Search for electroweak production of charginos in final states with two \u03c4 leptons in pp collisions at $ \\sqrt{s}=8 $ TeV", 
+        "CMS", 
+        "10.1007/JHEP04(2017)018", 
+        "2225241", 
+        "1610.04870", 
+        null, 
+        null, 
+        [
+            "CMS-SUS-14-022", 
+            "CERN-EP-2016-225"
+        ]
+    ], 
+    "1492321": [
+        "Search for R-parity violating supersymmetry with displaced vertices in proton-proton collisions at $\\sqrt{s}$ = 8 TeV", 
+        "CMS", 
+        "10.1103/PhysRevD.95.012009", 
+        "2225594", 
+        "1610.05133", 
+        null, 
+        null, 
+        [
+            "CMS-SUS-14-020", 
+            "CERN-EP-2016-224"
+        ]
+    ], 
+    "1494067": [
+        "Observation of $\\Upsilon$(1S) pair production in proton-proton collisions at $ \\sqrt{s}=8 $ TeV", 
+        "CMS", 
+        "10.1007/JHEP05(2017)013", 
+        "2226819", 
+        "1610.07095", 
+        null, 
+        null, 
+        [
+            "CMS-BPH-14-008", 
+            "CERN-EP-2016-237"
+        ]
+    ], 
+    "1494580": [
+        "Search for heavy resonances decaying into a vector boson and a Higgs boson in final states with charged leptons, neutrinos, and b quarks", 
+        "CMS", 
+        "10.1016/j.physletb.2017.02.040", 
+        "2227285", 
+        "1610.08066", 
+        null, 
+        null, 
+        [
+            "CMS-B2G-16-003", 
+            "CERN-EP-2016-226"
+        ]
+    ], 
+    "1495025": [
+        "Searches for invisible decays of the Higgs boson in pp collisions at $\\sqrt{s}$ = 7, 8, and 13 TeV", 
+        "CMS", 
+        "10.1007/JHEP02(2017)135", 
+        "2228305", 
+        "1610.09218", 
+        "ins1495025", 
+        null, 
+        [
+            "CMS-HIG-16-016", 
+            "CERN-EP-2016-240"
+        ]
+    ], 
+    "1495237": [
+        "Measurement of the mass difference between top quark and antiquark in pp collisions at $\\sqrt{s} = 8$ TeV", 
+        "CMS", 
+        "10.1016/j.physletb.2017.04.028", 
+        "2228337", 
+        "1610.09551", 
+        null, 
+        null, 
+        [
+            "CMS-TOP-12-031", 
+            "CERN-EP-2016-249"
+        ]
+    ], 
+    "1495423": [
+        "A search for new phenomena in pp collisions at $\\sqrt{s} = 13\\,\\text {TeV} $ in final states with missing transverse momentum and at least one jet using the $\\alpha _{\\mathrm {T}}$ variable", 
+        "CMS", 
+        "10.1140/epjc/s10052-017-4787-8", 
+        "2228997", 
+        "1611.00338", 
+        "ins1495423", 
+        null, 
+        [
+            "CMS-SUS-15-005", 
+            "CERN-EP-2016-246"
+        ]
+    ], 
+    "1495840": [
+        "Relative Modification of Prompt \u03c8(2S) and J/\u03c8 Yields from pp to PbPb Collisions at $\\sqrt{s_{NN}}=5.02$ TeV", 
+        "CMS", 
+        "10.1103/PhysRevLett.118.162301", 
+        "2230651", 
+        "1611.01438", 
+        "ins1495840", 
+        null, 
+        [
+            "CMS-HIN-16-004", 
+            "CERN-EP-2016-258"
+        ]
+    ], 
+    "1495866": [
+        "Suppression of $\\Upsilon(1S), \\Upsilon(2S)$ and $\\Upsilon(3S)$ production in PbPb collisions at $\\sqrt{s_{\\rm NN}}$ = 2.76 TeV", 
+        "CMS", 
+        "10.1016/j.physletb.2017.04.031", 
+        "2230706", 
+        "1611.01510", 
+        "ins1495866", 
+        null, 
+        [
+            "CMS-HIN-15-001", 
+            "CERN-EP-2016-248"
+        ]
+    ], 
+    "1496050": [
+        "Charged-particle nuclear modification factors in PbPb and pPb collisions at $ \\sqrt{s_{\\mathrm{N}\\;\\mathrm{N}}}=5.02 $ TeV", 
+        "CMS", 
+        "10.1007/JHEP04(2017)039", 
+        "2230024", 
+        "1611.01664", 
+        "ins1496050", 
+        null, 
+        [
+            "CMS-HIN-15-015", 
+            "CERN-EP-2016-242"
+        ]
+    ], 
+    "1497514": [
+        "Search for dijet resonances in proton\u2013proton collisions at $\\sqrt{s}$ = 13 TeV and constraints on dark matter and other models", 
+        "CMS", 
+        "10.1016/j.physletb.2017.02.012", 
+        "2232269", 
+        "1611.03568", 
+        null, 
+        null, 
+        [
+            "CMS-EXO-16-032", 
+            "CERN-EP-2016-277"
+        ]
+    ], 
+    "1497519": [
+        "Measurements of differential production cross sections for a Z boson in association with jets in pp collisions at $ \\sqrt{s}=8 $ TeV", 
+        "CMS", 
+        "10.1007/JHEP04(2017)022", 
+        "2232270", 
+        "1611.03844", 
+        null, 
+        null, 
+        [
+            "CMS-SMP-14-013", 
+            "CERN-EP-2016-256"
+        ]
+    ], 
+    "1497736": [
+        "Measurement of the $t\\bar{t}$ production cross section using events in the e$\\mu$ final state in pp collisions at $\\sqrt{s} =$ 13 TeV", 
+        "CMS", 
+        "10.1140/epjc/s10052-017-4718-8", 
+        "2232274", 
+        "1611.04040", 
+        "ins1497736", 
+        null, 
+        [
+            "CMS-TOP-16-005", 
+            "CERN-EP-2016-265"
+        ]
+    ], 
+    "1499471": [
+        "Measurements of the associated production of a Z boson and b jets in pp collisions at ${\\sqrt{s}} = 8\\,\\text {TeV} $", 
+        "CMS", 
+        "10.1140/epjc/s10052-017-5140-y", 
+        "2233940", 
+        "1611.06507", 
+        "ins1499471", 
+        null, 
+        [
+            "CMS-SMP-14-010", 
+            "CERN-EP-2016-254"
+        ]
+    ], 
+    "1499476": [
+        "Search for heavy resonances decaying to tau lepton pairs in proton-proton collisions at $ \\sqrt{s}=13 $ TeV", 
+        "CMS", 
+        "10.1007/JHEP02(2017)048", 
+        "2233960", 
+        "1611.06594", 
+        null, 
+        null, 
+        [
+            "CMS-EXO-16-008", 
+            "CERN-EP-2016-273"
+        ]
+    ], 
+    "1499477": [
+        "Search for supersymmetry in events with photons and missing transverse energy in pp collisions at 13 TeV", 
+        "CMS", 
+        "10.1016/j.physletb.2017.04.005", 
+        "2234120", 
+        "1611.06604", 
+        null, 
+        null, 
+        [
+            "CMS-SUS-15-012", 
+            "CERN-EP-2016-269"
+        ]
+    ], 
+    "1500513": [
+        "Search for CP violation in $ t\\overline{t} $ production and decay in proton-proton collisions at $ \\sqrt{s}=8 $ TeV", 
+        "CMS", 
+        "10.1007/JHEP03(2017)101", 
+        "2235527", 
+        "1611.08931", 
+        null, 
+        null, 
+        [
+            "CMS-TOP-16-001", 
+            "CERN-EP-2016-266", 
+            "CMS-TO-16-001"
+        ]
+    ], 
+    "1501681": [
+        "Search for single production of a heavy vector-like T quark decaying to a Higgs boson and a top quark with a lepton and jets in the final state", 
+        "CMS", 
+        "10.1016/j.physletb.2017.05.019", 
+        "2237477", 
+        "1612.00999", 
+        null, 
+        null, 
+        [
+            "CMS-B2G-15-008", 
+            "CERN-EP-2016-279"
+        ]
+    ], 
+    "1501683": [
+        "Search for heavy neutrinos or third-generation leptoquarks in final states with two hadronically decaying $\\tau$ leptons and two jets in proton-proton collisions at $ \\sqrt{s}=13 $ TeV", 
+        "CMS", 
+        "10.1007/JHEP03(2017)077", 
+        "2237517", 
+        "1612.01190", 
+        null, 
+        null, 
+        [
+            "CMS-EXO-16-016", 
+            "CERN-EP-2016-286"
+        ]
+    ], 
+    "1502925": [
+        "Searches for pair production of third-generation squarks in $\\sqrt{s}=13$ $\\,\\text {TeV}$ pp collisions", 
+        "CMS", 
+        "10.1140/epjc/s10052-017-4853-2", 
+        "2238896", 
+        "1612.03877", 
+        null, 
+        null, 
+        [
+            "CMS-SUS-16-008", 
+            "CERN-EP-2016-284"
+        ]
+    ], 
+    "1504209": [
+        "Search for electroweak production of a vector-like quark decaying to a top quark and a Higgs boson using boosted topologies in fully hadronic final states", 
+        "CMS", 
+        "10.1007/JHEP04(2017)136", 
+        "2239298", 
+        "1612.05336", 
+        null, 
+        null, 
+        [
+            "CMS-B2G-16-005", 
+            "CERN-EP-2016-290"
+        ]
+    ], 
+    "1507091": [
+        "Measurements of the charm jet cross section and nuclear modification factor in pPb collisions at $\\sqrt{{s}_{NN}}$ = 5.02 TeV", 
+        "CMS", 
+        "10.1016/j.physletb.2017.06.053", 
+        "2239948", 
+        "1612.08972", 
+        "ins1507091", 
+        null, 
+        [
+            "CMS-HIN-15-012", 
+            "CERN-EP-2016-274"
+        ]
+    ], 
+    "1507094": [
+        "Search for massive resonances decaying into WW, WZ or ZZ bosons in proton-proton collisions at $\\sqrt{s} = $ 13 TeV", 
+        "CMS", 
+        "10.1007/JHEP03(2017)162", 
+        "2239951", 
+        "1612.09159", 
+        null, 
+        null, 
+        [
+            "CMS-B2G-16-004", 
+            "CERN-EP-2016-296"
+        ]
+    ], 
+    "1507095": [
+        "Measurement of electroweak-induced production of W$\\gamma$ with two jets in pp collisions at $ \\sqrt{s}=8 $ TeV and constraints on anomalous quartic gauge couplings", 
+        "CMS", 
+        "10.1007/JHEP06(2017)106", 
+        "2239956", 
+        "1612.09256", 
+        "ins1507095", 
+        null, 
+        [
+            "CMS-SMP-14-011", 
+            "CERN-EP-2016-289"
+        ]
+    ], 
+    "1507096": [
+        "Search for heavy gauge W' boson in events with an energetic lepton and large missing transverse momentum at $ \\sqrt{s} = $ 13 TeV", 
+        "CMS", 
+        "10.1016/j.physletb.2017.04.043", 
+        "2239955", 
+        "1612.09274", 
+        null, 
+        null, 
+        [
+            "CMS-EXO-15-006", 
+            "CERN-EP-2016-281"
+        ]
+    ], 
+    "1507303": [
+        "Search for high-mass $\\mathrm{ Z }\\gamma$ resonances in proton-proton collisions at $\\sqrt{s}=$ 8 and 13 TeV using jet substructure techniques", 
+        "CMS", 
+        "10.1016/j.physletb.2017.06.062", 
+        "2239967", 
+        "1612.09516", 
+        null, 
+        null, 
+        [
+            "CMS-EXO-16-025", 
+            "CERN-EP-2016-300"
+        ]
+    ], 
+    "1507892": [
+        "Search for leptophobic Z\u2032 bosons decaying into four-lepton final states in proton\u2013proton collisions at $\\sqrt s$ =8TeV", 
+        "CMS", 
+        "10.1016/j.physletb.2017.08.069", 
+        "2240207", 
+        "1701.01345", 
+        null, 
+        null, 
+        [
+            "CMS-EXO-14-006", 
+            "CERN-EP-2016-295"
+        ]
+    ], 
+    "1508171": [
+        "Search for supersymmetry in the all-hadronic final state using top quark tagging in pp collisions at $\\sqrt s = 13$ TeV", 
+        "CMS", 
+        "10.1103/PhysRevD.96.012004", 
+        "2240708", 
+        "1701.01954", 
+        null, 
+        null, 
+        [
+            "CMS-SUS-16-009", 
+            "CERN-EP-2016-293"
+        ]
+    ], 
+    "1508172": [
+        "Mechanical stability of the CMS strip tracker measured with a laser alignment system", 
+        "CMS", 
+        "10.1088/1748-0221/12/04/P04023", 
+        "2240711", 
+        "1701.02022", 
+        null, 
+        null, 
+        [
+            "CMS-TRK-15-002", 
+            "CERN-EP-2016-320"
+        ]
+    ], 
+    "1508173": [
+        "Search for light bosons in decays of the 125 GeV Higgs boson in proton-proton collisions at $ \\sqrt{s}=8 $ TeV", 
+        "CMS", 
+        "10.1007/JHEP10(2017)076", 
+        "2240709", 
+        "1701.02032", 
+        "ins1508173", 
+        null, 
+        [
+            "CMS-HIG-16-015", 
+            "CERN-EP-2016-292"
+        ]
+    ], 
+    "1508174": [
+        "Search for dark matter and unparticles in events with a Z boson and missing transverse momentum in proton-proton collisions at $ \\sqrt{s}=13 $ TeV", 
+        "CMS", 
+        "10.1007/JHEP03(2017)061", 
+        "2240713", 
+        "1701.02042", 
+        null, 
+        null, 
+        [
+            "CMS-EXO-16-010", 
+            "CERN-EP-2016-309"
+        ]
+    ], 
+    "1510260": [
+        "Measurement of the $t \\bar t$ production cross section using events with one lepton and at least one jet in pp collisions at $\\sqrt{s}$  = 13 TeV", 
+        "CMS", 
+        "10.1007/JHEP09(2017)051", 
+        "2242828", 
+        "1701.06228", 
+        null, 
+        null, 
+        [
+            "CMS-TOP-16-006", 
+            "CERN-EP-2016-321"
+        ]
+    ], 
+    "1510442": [
+        "Search for new phenomena with multiple charged leptons in proton\u2013proton collisions at $\\sqrt{s}= 13$ $\\,\\text {TeV}$", 
+        "CMS", 
+        "10.1140/epjc/s10052-017-5182-1", 
+        "2242915", 
+        "1701.06940", 
+        null, 
+        null, 
+        [
+            "CMS-SUS-16-003", 
+            "CERN-EP-2016-306"
+        ]
+    ], 
+    "1510567": [
+        "Search for single production of vector-like quarks decaying to a Z boson and a top or a bottom quark in proton-proton collisions at $ \\sqrt{s}=13 $ TeV", 
+        "CMS", 
+        "10.1007/JHEP05(2017)029", 
+        "2243017", 
+        "1701.07409", 
+        null, 
+        null, 
+        [
+            "CMS-B2G-16-001", 
+            "CERN-EP-2016-326"
+        ]
+    ], 
+    "1511277": [
+        "Search for single production of vector-like quarks decaying into a b quark and a W boson in proton-proton collisions at $\\sqrt s =$ 13 TeV", 
+        "CMS", 
+        "10.1016/j.physletb.2017.07.022", 
+        "2243273", 
+        "1701.08328", 
+        null, 
+        null, 
+        [
+            "CMS-B2G-16-006", 
+            "CERN-EP-2016-319"
+        ]
+    ], 
+    "1511284": [
+        "Measurement of the inclusive energy spectrum in the very forward direction in proton-proton collisions at $ \\sqrt{s}=13 $ TeV", 
+        "CMS", 
+        "10.1007/JHEP08(2017)046", 
+        "2243454", 
+        "1701.08695", 
+        "ins1511284", 
+        null, 
+        [
+            "CMS-FSQ-16-002", 
+            "CERN-EP-2016-313"
+        ]
+    ], 
+    "1512112": [
+        "Study of Jet Quenching with $Z+\\text{jet}$ Correlations in Pb-Pb and $pp$ Collisions at ${\\sqrt{s}}_{NN}=5.02\\text{ }\\text{ }\\mathrm{TeV}$", 
+        "CMS", 
+        "10.1103/PhysRevLett.119.082301", 
+        "2244354", 
+        "1702.01060", 
+        "ins1512112", 
+        null, 
+        [
+            "CMS-HIN-15-013", 
+            "CERN-EP-2017-002"
+        ]
+    ], 
+    "1512295": [
+        "Search for associated production of a Z boson with a single top quark and for tZ flavour-changing interactions in pp collisions at $ \\sqrt{s}=8 $ TeV", 
+        "CMS", 
+        "10.1007/JHEP07(2017)003", 
+        "2244396", 
+        "1702.01404", 
+        null, 
+        null, 
+        [
+            "CMS-TOP-12-039", 
+            "CERN-EP-2016-324"
+        ]
+    ], 
+    "1512296": [
+        "Measurement of prompt and nonprompt $\\mathrm{J}/{\\psi }$ production in $\\mathrm {p}\\mathrm {p}$ and $\\mathrm {p}\\mathrm {Pb}$ collisions at $\\sqrt{s_{\\mathrm {NN}}} =5.02\\,\\text {TeV} $", 
+        "CMS", 
+        "10.1140/epjc/s10052-017-4828-3", 
+        "2244431", 
+        "1702.01462", 
+        "ins1512296", 
+        null, 
+        [
+            "CMS-HIN-14-009", 
+            "CERN-EP-2017-009"
+        ]
+    ], 
+    "1512924": [
+        "Measurement of the cross section for electroweak production of Z$\\gamma$ in association with two jets and constraints on anomalous quartic gauge couplings in proton\u2013proton collisions at $\\sqrt{s} = 8$ TeV", 
+        "CMS", 
+        "10.1016/j.physletb.2017.04.071", 
+        "2245557", 
+        "1702.03025", 
+        "ins1512924", 
+        null, 
+        [
+            "CMS-SMP-14-018", 
+            "CERN-EP-2016-308"
+        ]
+    ], 
+    "1513926": [
+        "The Triple GEM Detector Control System for CMS forward muon spectrometer upgrade", 
+        "CMS muon", 
+        "10.1088/1748-0221/12/02/P02003", 
+        "2270069", 
+        null, 
+        null, 
+        null, 
+        []
+    ], 
+    "1514542": [
+        "Search for standard model production of four top quarks in proton-proton collisions at $\\sqrt{s}$ = 13 TeV", 
+        "CMS", 
+        "10.1016/j.physletb.2017.06.064", 
+        "2253045", 
+        "1702.06164", 
+        null, 
+        null, 
+        [
+            "CMS-TOP-16-016", 
+            "CERN-EP-2017-023"
+        ]
+    ], 
+    "1516191": [
+        "Measurement of double-differential cross sections for top quark pair production in pp collisions at $\\sqrt{s} = 8$ $\\,\\text {TeV}$ and impact on parton distribution functions", 
+        "CMS", 
+        "10.1140/epjc/s10052-017-4984-5", 
+        "2254647", 
+        "1703.01630", 
+        "ins1516191", 
+        null, 
+        [
+            "CMS-TOP-14-013", 
+            "CERN-EP-2017-030"
+        ]
+    ], 
+    "1516193": [
+        "Search for dark matter produced with an energetic jet or a hadronically decaying W or Z boson at $ \\sqrt{s}=13 $ TeV", 
+        "CMS", 
+        "10.1007/JHEP07(2017)014", 
+        "2254644", 
+        "1703.01651", 
+        null, 
+        null, 
+        [
+            "CMS-EXO-16-037", 
+            "CERN-EP-2017-031"
+        ]
+    ], 
+    "1516412": [
+        "Measurement of the top quark mass using single top quark events in proton-proton collisions at $\\sqrt{s}= 8$  TeV", 
+        "CMS", 
+        "10.1140/epjc/s10052-017-4912-8", 
+        "2254954", 
+        "1703.02530", 
+        null, 
+        null, 
+        [
+            "CMS-TOP-15-001", 
+            "CERN-EP-2017-012"
+        ]
+    ], 
+    "1517191": [
+        "Search for third-generation scalar leptoquarks and heavy right-handed neutrinos in final states with two tau leptons and two jets in proton-proton collisions at $ \\sqrt{s}=13 $ TeV", 
+        "CMS", 
+        "10.1007/JHEP07(2017)121", 
+        "2255347", 
+        "1703.03995", 
+        null, 
+        null, 
+        [
+            "CMS-EXO-16-023", 
+            "CERN-EP-2017-025"
+        ]
+    ], 
+    "1517496": [
+        "Search for associated production of dark matter with a Higgs boson decaying to $ \\mathrm{b}\\overline{\\mathrm{b}} $ or $\\gamma \\gamma$ at $ \\sqrt{s}=13$ TeV", 
+        "CMS", 
+        "10.1007/JHEP10(2017)180", 
+        "2255523", 
+        "1703.05236", 
+        null, 
+        null, 
+        [
+            "CMS-EXO-16-012", 
+            "CERN-EP-2017-027"
+        ]
+    ], 
+    "1518145": [
+        "Search for anomalous couplings in boosted $\\mathrm{ WW/WZ }\\to\\ell\\nu\\mathrm{ q \\bar{q} }$ production in proton-proton collisions at $\\sqrt{s} =$ 8 TeV", 
+        "CMS", 
+        "10.1016/j.physletb.2017.06.009", 
+        "2256070", 
+        "1703.06095", 
+        "ins1518145", 
+        null, 
+        [
+            "CMS-SMP-13-008", 
+            "CERN-EP-2017-029"
+        ]
+    ], 
+    "1518399": [
+        "Measurement of the jet mass in highly boosted ${\\mathrm{t}}\\overline{\\mathrm{t}}$ events from pp collisions at $\\sqrt{s}=8$ $\\,\\text {TeV}$", 
+        "CMS", 
+        "10.1140/epjc/s10052-017-5030-3", 
+        "2256069", 
+        "1703.06330", 
+        null, 
+        null, 
+        [
+            "CMS-TOP-15-015", 
+            "CERN-EP-2017-018"
+        ]
+    ], 
+    "1518400": [
+        "Search for a heavy resonance decaying to a top quark and a vector-like top quark at $ \\sqrt{s}=13 $ TeV", 
+        "CMS", 
+        "10.1007/JHEP09(2017)053", 
+        "2256071", 
+        "1703.06352", 
+        null, 
+        null, 
+        [
+            "CMS-B2G-16-013", 
+            "CERN-EP-2017-035"
+        ]
+    ], 
+    "1519995": [
+        "Search for new physics with dijet angular distributions in proton-proton collisions at $ \\sqrt{s}=13 $ TeV", 
+        "CMS", 
+        "10.1007/JHEP07(2017)013", 
+        "2257493", 
+        "1703.09986", 
+        "ins1519995", 
+        null, 
+        [
+            "CMS-EXO-15-009", 
+            "CERN-EP-2017-047"
+        ]
+    ], 
+    "1589287": [
+        "Measurements of the pp $\\to W\\gamma\\gamma$ and pp $\\to Z\\gamma\\gamma$ cross sections and limits on anomalous quartic gauge couplings at $ \\sqrt{s}=8 $ TeV", 
+        "CMS", 
+        "10.1007/JHEP10(2017)072", 
+        "2257972", 
+        "1704.00366", 
+        "ins1589287", 
+        null, 
+        [
+            "CMS-SMP-15-008", 
+            "CERN-EP-2017-039"
+        ]
+    ], 
+    "1591147": [
+        "Search for $ \\mathrm{t}\\overline{\\mathrm{t}} $ resonances in highly boosted lepton+jets and fully hadronic final states in proton-proton collisions at $ \\sqrt{s}=13 $ TeV", 
+        "CMS", 
+        "10.1007/JHEP07(2017)001", 
+        "2259455", 
+        "1704.03366", 
+        null, 
+        null, 
+        [
+            "CMS-B2G-16-015", 
+            "CERN-EP-2017-049"
+        ]
+    ], 
+    "1593762": [
+        "Measurement of the top quark mass in the dileptonic $t\\bar{t}$ decay channel using the mass observables $M_{b\\ell}$, $M_{T2}$, and $M_{b\\ell\\nu}$ in pp collisions at $\\sqrt{s}=8$ TeV", 
+        "CMS", 
+        "10.1103/PhysRevD.96.032002", 
+        "2260600", 
+        "1704.06142", 
+        null, 
+        null, 
+        [
+            "CMS-TOP-15-008", 
+            "CERN-EP-2017-050"
+        ]
+    ], 
+    "1594731": [
+        "Search for physics beyond the standard model in events with two leptons of same sign, missing transverse momentum, and jets in proton\u2013proton collisions at $\\sqrt{s} = 13\\,\\text {TeV} $", 
+        "CMS", 
+        "10.1140/epjc/s10052-017-5079-z", 
+        "2260986", 
+        "1704.07323", 
+        null, 
+        null, 
+        [
+            "CMS-SUS-16-035", 
+            "CERN-EP-2017-071"
+        ]
+    ], 
+    "1594909": [
+        "Search for supersymmetry in multijet events with missing transverse momentum in proton-proton collisions at 13 TeV", 
+        "CMS", 
+        "10.1103/PhysRevD.96.032003", 
+        "2261105", 
+        "1704.07781", 
+        "ins1594909", 
+        null, 
+        [
+            "CMS-SUS-16-033", 
+            "CERN-EP-2017-072"
+        ]
+    ], 
+    "1598036": [
+        "Search for black holes in high-multiplicity final states in proton-proton collisions at $ \\sqrt{s}=$13 TeV", 
+        "CMS", 
+        "10.1016/j.physletb.2017.09.053", 
+        "2262044", 
+        "1705.01403", 
+        null, 
+        null, 
+        [
+            "CMS-EXO-15-007", 
+            "CERN-EP-2017-074"
+        ]
+    ], 
+    "1598460": [
+        "Measurement of the triple-differential dijet cross section in proton-proton collisions at $\\sqrt{s}=8\\,\\text {TeV} $ and constraints on parton distribution functions", 
+        "CMS", 
+        "10.1140/epjc/s10052-017-5286-7", 
+        "2262829", 
+        "1705.02628", 
+        "ins1598460", 
+        null, 
+        [
+            "CMS-SMP-16-011", 
+            "CERN-EP-2017-061"
+        ]
+    ], 
+    "1598467": [
+        "Search for Charged Higgs Bosons Produced via Vector Boson Fusion and Decaying into a Pair of $W$ and $Z$ Bosons Using $pp$ Collisions at $\\sqrt{s}=13\\text{ }\\text{ }\\mathrm{TeV}$", 
+        "CMS", 
+        "10.1103/PhysRevLett.119.141802", 
+        "2262834", 
+        "1705.02942", 
+        "ins1598467", 
+        null, 
+        [
+            "CMS-HIG-16-027", 
+            "CERN-EP-2017-068"
+        ]
+    ], 
+    "1599400": [
+        "Search for new phenomena with the $M_{\\mathrm {T2}}$ variable in the all-hadronic final state produced in proton\u2013proton collisions at $\\sqrt{s} = 13$ $\\,\\text {TeV}$", 
+        "CMS", 
+        "10.1140/epjc/s10052-017-5267-x", 
+        "2264381", 
+        "1705.04650", 
+        null, 
+        null, 
+        [
+            "CMS-SUS-16-036", 
+            "CERN-EP-2017-084"
+        ]
+    ], 
+    "1599402": [
+        "Search for Supersymmetry in $pp$ Collisions at $\\sqrt{s}=13\\text{ }\\text{ }\\mathrm{TeV}$ in the Single-Lepton Final State Using the Sum of Masses of Large-Radius Jets", 
+        "CMS", 
+        "10.1103/PhysRevLett.119.151802", 
+        "2264382", 
+        "1705.04673", 
+        "ins1599402", 
+        null, 
+        [
+            "CMS-SUS-16-037", 
+            "CERN-EP-2017-088"
+        ]
+    ], 
+    "1599548": [
+        "Measurement of the ${B}^{\\pm}$ Meson Nuclear Modification Factor in Pb-Pb Collisions at $\\sqrt{{s}_{NN}}=5.02\\text{ }\\text{ }\\mathrm{TeV}$", 
+        "CMS", 
+        "10.1103/PhysRevLett.119.152301", 
+        "2264429", 
+        "1705.04727", 
+        "ins1599548", 
+        null, 
+        [
+            "CMS-HIN-16-011", 
+            "CERN-EP-2017-076"
+        ]
+    ], 
+    "1601294": [
+        "Combination of searches for heavy resonances decaying to WW, WZ, ZZ, WH, and ZH boson pairs in proton\u2013proton collisions at $\\sqrt{s}=8$ and 13 TeV", 
+        "CMS", 
+        "10.1016/j.physletb.2017.09.083", 
+        "2265922", 
+        "1705.09171", 
+        null, 
+        null, 
+        [
+            "CMS-B2G-16-007", 
+            "CERN-EP-2017-077"
+        ]
+    ], 
+    "1601645": [
+        "Search for Low Mass Vector Resonances Decaying to Quark-Antiquark Pairs in Proton-Proton Collisions at $\\sqrt{s}=13\\text{ }\\text{ }\\mathrm{TeV}$", 
+        "CMS", 
+        "10.1103/PhysRevLett.119.111802", 
+        "2266573", 
+        "1705.10532", 
+        null, 
+        null, 
+        [
+            "CMS-EXO-16-030", 
+            "CERN-EP-2017-098"
+        ]
+    ], 
+    "1601901": [
+        "Search for top quark partners with charge 5/3 in proton-proton collisions at $ \\sqrt{s}=13 $ TeV", 
+        "CMS", 
+        "10.1007/JHEP08(2017)073", 
+        "2266637", 
+        "1705.10967", 
+        null, 
+        null, 
+        [
+            "CMS-B2G-15-006", 
+            "CERN-EP-2017-102"
+        ]
+    ], 
+    "1603635": [
+        "Search for dark matter produced in association with heavy-flavor quark pairs in proton-proton collisions at $\\sqrt{s}=13$ TeV", 
+        "CMS", 
+        "10.1140/epjc/s10052-017-5317-4", 
+        "2268212", 
+        "1706.02581", 
+        null, 
+        null, 
+        [
+            "CMS-EXO-16-005", 
+            "CERN-EP-2017-087"
+        ]
+    ], 
+    "1604273": [
+        "Search for pair production of vector-like T and B quarks in single-lepton final states using boosted jet substructure in proton-proton collisions at  $\\sqrt{s}=13$ TeV", 
+        "CMS", 
+        "10.1007/JHEP11(2017)085", 
+        "2268507", 
+        "1706.03408", 
+        null, 
+        null, 
+        [
+            "CMS-B2G-16-024", 
+            "CERN-EP-2017-107"
+        ]
+    ], 
+    "1604886": [
+        "Search for new physics in the monophoton final state in proton-proton collisions at $ \\sqrt{s}=13 $ TeV", 
+        "CMS", 
+        "10.1007/JHEP10(2017)073", 
+        "2268672", 
+        "1706.03794", 
+        null, 
+        null, 
+        [
+            "CMS-EXO-16-039", 
+            "CERN-EP-2017-097"
+        ]
+    ], 
+    "1605124": [
+        "Searches for W\u2032 bosons decaying to a top quark and a bottom quark in proton-proton collisions at 13 TeV", 
+        "CMS", 
+        "10.1007/JHEP08(2017)029", 
+        "2268946", 
+        "1706.04260", 
+        null, 
+        null, 
+        [
+            "CMS-B2G-16-016", 
+            "CERN-EP-2017-090"
+        ]
+    ], 
+    "1605128": [
+        "Search for top squark pair production in pp collisions at $ \\sqrt{s}=13 $ TeV using single lepton events", 
+        "CMS", 
+        "10.1007/JHEP10(2017)019", 
+        "2269047", 
+        "1706.04402", 
+        "ins1605128", 
+        null, 
+        [
+            "CMS-SUS-16-051", 
+            "CERN-EP-2017-109"
+        ]
+    ], 
+    "1605397": [
+        "Particle-flow reconstruction and global event description with the CMS detector", 
+        "CMS", 
+        "10.1088/1748-0221/12/10/P10003", 
+        "2270046", 
+        "1706.04965", 
+        null, 
+        null, 
+        [
+            "CMS-PRF-14-001", 
+            "CERN-EP-2017-110"
+        ]
+    ], 
+    "1605749": [
+        "Measurements of jet charge with dijet events in pp collisions at $\\sqrt{s}=8$ TeV", 
+        "CMS", 
+        "10.1007/JHEP10(2017)131", 
+        "2270416", 
+        "1706.05868", 
+        "ins1605749", 
+        null, 
+        [
+            "CMS-SMP-15-003", 
+            "CERN-EP-2017-085"
+        ]
+    ], 
+    "1607560": [
+        "Measurement of the semileptonic $ \\mathrm{t}\\overline{\\mathrm{t}} $ + \u03b3 production cross section in pp collisions at $ \\sqrt{s}=8 $ TeV", 
+        "CMS", 
+        "10.1007/JHEP10(2017)006", 
+        "2271500", 
+        "1706.08128", 
+        null, 
+        null, 
+        [
+            "CMS-TOP-14-008", 
+            "CERN-EP-2017-112"
+        ]
+    ], 
+    "1607793": [
+        "Search for a heavy composite Majorana neutrino in the final state with two leptons and two quarks at $\\sqrt{s}=13$ TeV", 
+        "CMS", 
+        "10.1016/j.physletb.2017.11.001", 
+        "2271762", 
+        "1706.08578", 
+        "ins1607793", 
+        null, 
+        [
+            "CMS-EXO-16-026", 
+            "CERN-EP-2017-125"
+        ]
+    ], 
+    "1608161": [
+        "Search for electroweak production of charginos and neutralinos in WH events in proton-proton collisions at $ \\sqrt{s}=13 $ TeV", 
+        "CMS", 
+        "10.1007/JHEP11(2017)029", 
+        "2272346", 
+        "1706.09933", 
+        null, 
+        null, 
+        [
+            "CMS-SUS-16-043", 
+            "CERN-EP-2017-113"
+        ]
+    ], 
+    "1608162": [
+        "Measurements of properties of the Higgs boson decaying into the four-lepton final state in pp collisions at $ \\sqrt{s}=13 $ TeV", 
+        "CMS", 
+        "10.1007/JHEP11(2017)047", 
+        "2272260", 
+        "1706.09936", 
+        "ins1608162", 
+        null, 
+        [
+            "CMS-HIG-16-041", 
+            "CERN-EP-2017-123"
+        ]
+    ], 
+    "1608166": [
+        "Measurement of charged pion, kaon, and proton production in proton-proton collisions at $\\sqrt{s}=13$ TeV", 
+        "CMS", 
+        "10.1103/PhysRevD.96.112003", 
+        "2272349", 
+        "1706.10194", 
+        "ins1608166", 
+        null, 
+        [
+            "CMS-FSQ-16-004", 
+            "CERN-EP-2017-091"
+        ]
+    ], 
+    "1608383": [
+        "Search for Higgs boson pair production in the $bb\\tau\\tau$ final state in proton-proton collisions at $\\sqrt{(}s)=8\\text{ }\\text{ }\\mathrm{TeV}$", 
+        "CMS", 
+        "10.1103/PhysRevD.96.072004", 
+        "2272705", 
+        "1707.00350", 
+        null, 
+        null, 
+        [
+            "CMS-HIG-15-013", 
+            "CERN-EP-2017-104"
+        ]
+    ], 
+    "1608386": [
+        "Constraints on anomalous Higgs boson couplings using production and decay information in the four-lepton final state", 
+        "CMS", 
+        "10.1016/j.physletb.2017.10.021", 
+        "2272930", 
+        "1707.00541", 
+        "ins1608386", 
+        null, 
+        [
+            "CMS-HIG-17-011", 
+            "CERN-EP-2017-143"
+        ]
+    ], 
+    "1608556": [
+        "P-Type Silicon Strip Sensors for the new CMS Tracker at HL-LHC", 
+        "CMS", 
+        "10.1088/1748-0221/12/06/P06018", 
+        "2275928", 
+        null, 
+        null, 
+        null, 
+        []
+    ], 
+    "1608774": [
+        "Search for heavy resonances that decay into a vector boson and a Higgs boson in hadronic final states at $\\sqrt{s} = 13$ $\\,\\text {TeV}$", 
+        "CMS", 
+        "10.1140/epjc/s10052-017-5192-z", 
+        "2273283", 
+        "1707.01303", 
+        null, 
+        null, 
+        [
+            "CMS-B2G-17-002", 
+            "CERN-EP-2017-128"
+        ]
+    ], 
+    "1609449": [
+        "Search for direct production of supersymmetric partners of the top quark in the all-jets final state in proton-proton collisions at $ \\sqrt{s}=13 $ TeV", 
+        "CMS", 
+        "10.1007/JHEP10(2017)005", 
+        "2274031", 
+        "1707.03316", 
+        null, 
+        null, 
+        [
+            "CMS-SUS-16-049", 
+            "CERN-EP-2017-129"
+        ]
+    ], 
+    "1610623": [
+        "Measurement of the differential cross sections for the associated production of a $W$ boson and jets in proton-proton collisions at $\\sqrt{s}=13$ TeV", 
+        "CMS", 
+        "10.1103/PhysRevD.96.072005", 
+        "2275059", 
+        "1707.05979", 
+        "ins1610623", 
+        null, 
+        [
+            "CMS-SMP-16-005", 
+            "CERN-EP-2017-142"
+        ]
+    ], 
+    "1610629": [
+        "Search for supersymmetry in events with at least one photon, missing transverse momentum, and large transverse event activity in proton-proton collisions at $ \\sqrt{s}=13 $ TeV", 
+        "CMS", 
+        "10.1007/JHEP12(2017)142", 
+        "2275103", 
+        "1707.06193", 
+        "ins1610629", 
+        null, 
+        [
+            "CMS-SUS-16-047", 
+            "CERN-EP-2017-130"
+        ]
+    ], 
+    "1611300": [
+        "Search for a light pseudoscalar Higgs boson produced in association with bottom quarks in pp collisions at $ \\sqrt{s}=8 $ TeV", 
+        "CMS", 
+        "10.1007/JHEP11(2017)010", 
+        "2275491", 
+        "1707.07283", 
+        null, 
+        null, 
+        [
+            "CMS-HIG-15-009", 
+            "CERN-EP-2017-159"
+        ]
+    ], 
+    "1615207": [
+        "Measurement of vector boson scattering and constraints on anomalous quartic couplings from events with four leptons and two jets in proton\u2013proton collisions at $\\sqrt{s}=$ 13 TeV", 
+        "CMS", 
+        "10.1016/j.physletb.2017.10.020", 
+        "2278242", 
+        "1708.02812", 
+        "ins1615207", 
+        null, 
+        [
+            "CMS-SMP-17-006", 
+            "CERN-EP-2017-177"
+        ]
+    ], 
+    "1618346": [
+        "Principal-component analysis of two-particle azimuthal correlations in PbPb and $p\\text{Pb}$ collisions at CMS", 
+        "CMS", 
+        "10.1103/PhysRevC.96.064902", 
+        "2280746", 
+        "1708.07113", 
+        "ins1618346", 
+        null, 
+        [
+            "CMS-HIN-15-010", 
+            "CERN-EP-2017-133"
+        ]
+    ], 
+    "1620205": [
+        "Search for Evidence of the Type-III Seesaw Mechanism in Multilepton Final States in Proton-Proton Collisions at $\\sqrt{s}=13\\text{ }\\text{ }\\mathrm{TeV}$", 
+        "CMS", 
+        "10.1103/PhysRevLett.119.221802", 
+        "2281061", 
+        "1708.07962", 
+        null, 
+        null, 
+        [
+            "CMS-EXO-17-006", 
+            "CERN-EP-2017-194"
+        ]
+    ], 
+    "1624694": [
+        "Observation of top quark production in proton-nucleus collisions", 
+        "CMS", 
+        "10.1103/PhysRevLett.119.242001", 
+        "2285287", 
+        "1709.07411", 
+        "ins1624694", 
+        null, 
+        [
+            "CMS-HIN-17-002", 
+            "CERN-EP-2017-239"
+        ]
+    ], 
+    "1646584": [
+        "Radioactive source calibration test of the CMS Hadron Endcap Calorimeter test wedge with Phase I upgrade electronics", 
+        "CMS HCAL", 
+        "10.1088/1748-0221/12/12/P12034", 
+        "2306214", 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-18-416-CMS"
+        ]
+    ]
+}

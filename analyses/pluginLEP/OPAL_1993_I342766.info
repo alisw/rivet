@@ -31,3 +31,7 @@ BibTeX: '@article{Acton:1992us,
       SLACcitation   = "%%CITATION = PHLTA,B305,407;%%"
 }'
 
+
+ReleaseTests:
+ - $A LEP-91
+

@@ -1,0 +1,35 @@
+Name: BESIII_2012_I1088606
+Year: 2012
+Summary: Mass distributions in $J/\psi$ and $\psi(2S)$ to $\pi^+\pi^-\pi^0$
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1088606
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett.B 710 (2012) 594-599
+RunInfo: Any process producing J/psi or psi(2S), originally e+e-
+Description:
+  'Measurement of the $\pi\pi$ mass distribution in the decays  $J/\psi$ and $\psi(2S)$ to $\pi^+\pi^-\pi^0$ be BES. N.B. data read from plots and may not be corrected.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2012vmy
+BibTeX: '@article{BESIII:2012vmy,
+    author = "Ablikim, M. and others",
+    collaboration = "BESIII",
+    title = "{Precision measurement of the branching fractions of J/$\psi -> \pi^+\pi^-\pi^0$ and $\psi^\prime -> \pi^+\pi^-\pi^0$}",
+    eprint = "1202.2048",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1016/j.physletb.2012.03.036",
+    journal = "Phys. Lett. B",
+    volume = "710",
+    pages = "594--599",
+    year = "2012"
+}
+'

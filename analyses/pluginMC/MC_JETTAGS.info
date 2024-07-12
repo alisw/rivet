@@ -1,6 +1,7 @@
 Name: MC_JETTAGS
 Summary: Monte Carlo validation analysis for ideal heavy flavour tagging observables
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Andy Buckley <andy.buckley@cern.ch>
 RunInfo:

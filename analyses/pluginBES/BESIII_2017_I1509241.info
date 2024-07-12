@@ -1,0 +1,38 @@
+Name: BESIII_2017_I1509241
+Year: 2017
+Summary: Cross section for $e^+e^-\to p \bar{p} \pi^0$ at energies between 4.008 and 4.600 GeV
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1509241
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B771 (2017) 45-51
+RunInfo: e+e- to hadrons
+Beams: [e+, e-]
+Description:
+  'Cross section for $e^+e^-\to p \bar{p} \pi^0$ at energies between 4.008 and 4.600 GeV measured by the BESIII collaboration.'
+ValidationInfo:
+  'Validated using Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Ablikim:2017gtb
+BibTeX: '@article{Ablikim:2017gtb,
+      author         = "Ablikim, Medina and others",
+      title          = "{Cross section measurements of $e^{+}e^{-}\rightarrow p
+                        \bar{p} \pi^{0}$ at center-of-mass energies between 4.008
+                        and 4.600 GeV}",
+      collaboration  = "BESIII",
+      journal        = "Phys. Lett.",
+      volume         = "B771",
+      year           = "2017",
+      pages          = "45-51",
+      doi            = "10.1016/j.physletb.2017.05.033",
+      eprint         = "1701.04198",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1701.04198;%%"
+}'

@@ -14,7 +14,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(MC_REENTRANT);
+    RIVET_DEFAULT_ANALYSIS_CTOR(MC_REENTRANT);
 
 
     /// @name Analysis methods
@@ -29,28 +29,26 @@ namespace Rivet {
       declare(ChargedFinalState(fs), "CFS");
 
       // Histograms. Booked for both 900 GeV and 7 TeV and their ratio.
-      _histEta70    = bookHisto1D("Eta70", 50, -5, 5);
-      _histEta09    = bookHisto1D("Eta09", 50, -5, 5);
-      _histEtaR     = bookScatter2D("EtaR", 50, -5, 5);
+      book(_histEta70, "Eta70", 50, -5, 5);
+      book(_histEta09, "Eta09", 50, -5, 5);
+      book(_histEtaR , "EtaR",  50, -5, 5);
       fill70 = fill09 = false;
     }
 
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-      const double weight = event.weight();
-
-      if (fuzzyEquals(sqrtS()/GeV, 900))
+      if (isCompatibleWithSqrtS(900))
         fill09 = true;
-      else if (fuzzyEquals(sqrtS()/GeV, 7000))
+      else if (isCompatibleWithSqrtS(7000))
         fill70 = true;
 
       const FinalState& cfs = apply<FinalState>(event, "CFS");
       for (const Particle& p : cfs.particles()) {
-        if (fuzzyEquals(sqrtS()/GeV, 900))
-          _histEta09->fill(p.eta(), weight);
-        else if (fuzzyEquals(sqrtS()/GeV, 7000))
-          _histEta70->fill(p.eta(), weight);
+        if (isCompatibleWithSqrtS(900))
+          _histEta09->fill(p.eta());
+        else if (isCompatibleWithSqrtS(7000))
+          _histEta70->fill(p.eta());
       }
     }
 
@@ -80,6 +78,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(MC_REENTRANT);
+  RIVET_DECLARE_PLUGIN(MC_REENTRANT);
 
 }

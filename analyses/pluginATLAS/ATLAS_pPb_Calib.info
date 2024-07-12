@@ -2,7 +2,7 @@ Name: ATLAS_pPb_Calib
 Summary: ATLAS proton-lead centrality calibration analysis.
 Status: UNVALIDATED
 Authors:
- - Leif Lönnblad <leif.lonnblad@thep.lu.se>
+ - Leif Lonnblad <leif.lonnblad@thep.lu.se>
 NumEvents: 50000
 References:
  - arXiv:1508.00848 [hep-ex], Eur.Phys.J. C76 (2016) no.4, 199
@@ -13,7 +13,8 @@ Description:
    contains the experimental centrality calibration, but extracted
    from the plot in the paper. Note that this has not been unfolded
    for detector effects.'
-
+ReleaseTests:
+ - $A LHC-5020-pPb
 BibKey: Aad:2015zza
 BibTeX: '@article{Aad:2015zza,
       author         = "Aad, Georges and others",

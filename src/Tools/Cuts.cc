@@ -2,8 +2,8 @@
 #include "Rivet/Particle.hh"
 #include "Rivet/Jet.hh"
 #include "Rivet/Math/Vectors.hh"
+#include "Rivet/Tools/RivetHepMC.hh"
 #include "fastjet/PseudoJet.hh"
-#include "HepMC/SimpleVector.h"
 
 /// @todo Identify what can go into anonymous namespace
 
@@ -43,6 +43,8 @@ namespace Rivet {
       return "3Q"; break;
     case Cuts::abscharge3:
       return "|3Q|"; break;
+    case Cuts::pz: //case Cuts::pt:
+      return "pz"; break;
     }
     return "???";
   }
@@ -384,6 +386,7 @@ namespace Rivet {
       case Cuts::abscharge:  return p_.abscharge();
       case Cuts::charge3:    return p_.charge3();
       case Cuts::abscharge3: return p_.abscharge3();
+      case Cuts::pz:         return p_.pz();
       default: qty_not_found();
       }
       return -999.;
@@ -411,6 +414,7 @@ namespace Rivet {
       case Cuts::eta:    return fm_.eta();
       case Cuts::abseta: return fm_.abseta();
       case Cuts::phi:    return fm_.phi();
+      case Cuts::pz:     return fm_.pz();
       default: qty_not_found();
       }
       return -999.;
@@ -438,6 +442,7 @@ namespace Rivet {
       case Cuts::eta:    return jet_.pseudorapidity();
       case Cuts::abseta: return std::abs(jet_.pseudorapidity());
       case Cuts::phi:    return jet_.phi();
+      case Cuts::pz:     return jet_.pz();
       default: qty_not_found();
       }
       return -999.;
@@ -464,6 +469,7 @@ namespace Rivet {
       case Cuts::eta:    return pjet_.eta();
       case Cuts::abseta: return std::abs(pjet_.eta());
       case Cuts::phi:    return pjet_.phi();
+      case Cuts::pz:     return pjet_.pz();
       default: qty_not_found();
       }
       return -999.;
@@ -477,9 +483,9 @@ namespace Rivet {
 
 
   template<>
-  class Cuttable<HepMC::FourVector> : public CuttableBase {
+  class Cuttable<RivetHepMC::FourVector> : public CuttableBase {
   public:
-    Cuttable(const HepMC::FourVector& vec) : vec_(vec) {}
+    Cuttable(const RivetHepMC::FourVector& vec) : vec_(vec) {}
     double getValue(Cuts::Quantity qty) const {
       switch ( qty ) {
       case Cuts::pT:     return vec_.perp();
@@ -491,16 +497,17 @@ namespace Rivet {
       case Cuts::eta:    return vec_.pseudoRapidity();
       case Cuts::abseta: return std::abs(vec_.pseudoRapidity());
       case Cuts::phi:    return vec_.phi();
+      case Cuts::pz:    return vec_.pz();
       default: qty_not_found();
       }
       return -999.;
     }
 
   private:
-    const HepMC::FourVector& vec_;
+    const RivetHepMC::FourVector& vec_;
   };
 
-  SPECIALISE_ACCEPT(HepMC::FourVector)
+  SPECIALISE_ACCEPT(RivetHepMC::FourVector)
 
 
 }

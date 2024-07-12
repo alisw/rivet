@@ -1,0 +1,34 @@
+Name: CLEO_2000_I537236
+Year: 2000
+Summary: Decay asymmetries in $\Xi^0_c\to\Xi^-\pi^+$
+Experiment: CLEO
+Collider: CESR
+InspireID: 537236
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B634 (2006) 165-172
+RunInfo: Any process producing Lambda_c baryons
+Description:
+'Measurement of the decay asymmetries in $\Xi^0_c\to\Xi^-\pi^+$ by the CLEO experiment.
+ The asymmetry parameter is extracted by fitting to normalised angular distribution. This analysis is useful for testing spin correlations
+ in hadron decays.'
+Keywords: []
+BibKey: Chan:2000kg
+BibTeX: '@article{Chan:2000kg,
+      author         = "Chan, S. and others",
+      title          = "{A Measurement of the decay asymmetry parameters in
+                        Xi0(c) ---&gt; Xi- pi+}",
+      collaboration  = "CLEO",
+      journal        = "Phys. Rev.",
+      volume         = "D63",
+      year           = "2001",
+      pages          = "111102",
+      doi            = "10.1103/PhysRevD.63.111102",
+      eprint         = "hep-ex/0011073",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "SLAC-REPRINT-2000-094, CLNS-98-1586, CLEO-98-15",
+      SLACcitation   = "%%CITATION = HEP-EX/0011073;%%"
+}'

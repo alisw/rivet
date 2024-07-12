@@ -1,0 +1,33 @@
+Name: BESII_2005_I690784
+Year: 2005
+Summary:  $\chi_{c0}\to \pi^+\pi^- K^+K^-$
+Experiment: BESII
+Collider: BEPC
+InspireID: 690784
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 72 (2005) 092002
+RunInfo : Any process producing chi_c0
+Description:
+  'Measurement of the mass distributions in the decays $\chi_{c0}\to \pi^+\pi^- K^+K^-$.
+   The data were read from the plots in the paper and may not be corrected for backgrounds and efficiency.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BES:2005iaq
+BibTeX: '@article{BES:2005iaq,
+    author = "Ablikim, M. and others",
+    collaboration = "BES",
+    title = "{Partial wave analysis of chi(c0) ---\ensuremath{>} pi+ pi- K+ K-}",
+    eprint = "hep-ex/0508050",
+    archivePrefix = "arXiv",
+    doi = "10.1103/PhysRevD.72.092002",
+    journal = "Phys. Rev. D",
+    volume = "72",
+    pages = "092002",
+    year = "2005"
+}
+'

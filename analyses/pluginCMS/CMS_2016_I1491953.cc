@@ -12,7 +12,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(CMS_2016_I1491953);
+    RIVET_DEFAULT_ANALYSIS_CTOR(CMS_2016_I1491953);
 
 
     /// @name Analysis methods
@@ -24,8 +24,8 @@ namespace Rivet {
       // Initialise and register projections
       FinalState fs;
       WFinder wfinder_mu(fs, Cuts::abseta < 2.4 && Cuts::pT > 0*GeV, PID::MUON, 0*GeV, 1000000*GeV,
-                         0*GeV, 0.1, WFinder::CLUSTERNODECAY, WFinder::TRACK, WFinder::TRANSMASS);
-      addProjection(wfinder_mu, "WFinder_mu");
+                         0*GeV, 0.1, WFinder::ChargedLeptons::PROMPT, WFinder::ClusterPhotons::NODECAY, WFinder::AddPhotons::YES, WFinder::MassWindow::MT);
+      declare(wfinder_mu, "WFinder_mu");
 
       // Define veto FS
       VetoedFinalState vfs;
@@ -34,76 +34,74 @@ namespace Rivet {
       vfs.vetoNeutrinos();
 
       FastJets fastjets(vfs, FastJets::ANTIKT, 0.5);
-      addProjection(fastjets, "Jets");
+      declare(fastjets, "Jets");
 
-      _hist_Mult_exc      = bookHisto1D("d01-x01-y01");
-      _hist_inc_WJetMult  = bookHisto1D("d02-x01-y01");
+      book(_hist_Mult_exc      ,1,1,1);
+      book(_hist_inc_WJetMult  ,2,1,1);
 
-      _hist_addJetPt1j = bookHisto1D("d03-x01-y01");
-      _hist_addJetPt2j = bookHisto1D("d04-x01-y01");
-      _hist_addJetPt3j = bookHisto1D("d05-x01-y01");
-      _hist_addJetPt4j = bookHisto1D("d06-x01-y01");
+      book(_hist_addJetPt1j ,3,1,1);
+      book(_hist_addJetPt2j ,4,1,1);
+      book(_hist_addJetPt3j ,5,1,1);
+      book(_hist_addJetPt4j ,6,1,1);
 
-      _hist_addHt_1j = bookHisto1D("d07-x01-y01");
-      _hist_addHt_2j = bookHisto1D("d08-x01-y01");
-      _hist_addHt_3j = bookHisto1D("d09-x01-y01");
-      _hist_addHt_4j = bookHisto1D("d10-x01-y01");
+      book(_hist_addHt_1j ,7,1,1);
+      book(_hist_addHt_2j ,8,1,1);
+      book(_hist_addHt_3j ,9,1,1);
+      book(_hist_addHt_4j ,10,1,1);
 
-      _hist_diJetPt_2j = bookHisto1D("d11-x01-y01");
-      _hist_diJetPt_3j = bookHisto1D("d12-x01-y01");
-      _hist_diJetPt_4j = bookHisto1D("d13-x01-y01");
+      book(_hist_diJetPt_2j ,11,1,1);
+      book(_hist_diJetPt_3j ,12,1,1);
+      book(_hist_diJetPt_4j ,13,1,1);
 
-      _hist_dijetM_2j = bookHisto1D("d14-x01-y01");
-      _hist_dijetM_3j = bookHisto1D("d15-x01-y01");
-      _hist_dijetM_4j = bookHisto1D("d16-x01-y01");
+      book(_hist_dijetM_2j ,14,1,1);
+      book(_hist_dijetM_3j ,15,1,1);
+      book(_hist_dijetM_4j ,16,1,1);
 
-      _hist_Jeteta1j = bookHisto1D("d17-x01-y01");
-      _hist_Jeteta2j = bookHisto1D("d18-x01-y01");
-      _hist_Jeteta3j = bookHisto1D("d19-x01-y01");
-      _hist_Jeteta4j = bookHisto1D("d20-x01-y01");
+      book(_hist_Jeteta1j ,17,1,1);
+      book(_hist_Jeteta2j ,18,1,1);
+      book(_hist_Jeteta3j ,19,1,1);
+      book(_hist_Jeteta4j ,20,1,1);
 
-      _hist_dyj1j2_2j = bookHisto1D("d21-x01-y01");
-      _hist_dyj1j2_3j = bookHisto1D("d22-x01-y01");
-      _hist_dyj1j2_4j = bookHisto1D("d23-x01-y01");
+      book(_hist_dyj1j2_2j ,21,1,1);
+      book(_hist_dyj1j2_3j ,22,1,1);
+      book(_hist_dyj1j2_4j ,23,1,1);
 
-      _hist_dyj1j3_3j = bookHisto1D("d24-x01-y01");
-      _hist_dyj2j3_3j = bookHisto1D("d25-x01-y01");
+      book(_hist_dyj1j3_3j ,24,1,1);
+      book(_hist_dyj2j3_3j ,25,1,1);
 
-      _hist_dyjFjB_2j = bookHisto1D("d26-x01-y01");
-      _hist_dyjFjB_3j = bookHisto1D("d27-x01-y01");
-      _hist_dyjFjB_4j = bookHisto1D("d28-x01-y01");
+      book(_hist_dyjFjB_2j ,26,1,1);
+      book(_hist_dyjFjB_3j ,27,1,1);
+      book(_hist_dyjFjB_4j ,28,1,1);
 
-      _hist_dphij1j2_2j = bookHisto1D("d29-x01-y01");
-      _hist_dphijFjB_2j = bookHisto1D("d30-x01-y01");
-      _hist_dRj1j2_2j = bookHisto1D("d31-x01-y01");
+      book(_hist_dphij1j2_2j ,29,1,1);
+      book(_hist_dphijFjB_2j ,30,1,1);
+      book(_hist_dRj1j2_2j ,31,1,1);
 
-      _hist_dphij1mu_1j = bookHisto1D("d32-x01-y01");
-      _hist_dphij2mu_2j = bookHisto1D("d33-x01-y01");
-      _hist_dphij3mu_3j = bookHisto1D("d34-x01-y01");
-      _hist_dphij4mu_4j = bookHisto1D("d35-x01-y01");
+      book(_hist_dphij1mu_1j ,32,1,1);
+      book(_hist_dphij2mu_2j ,33,1,1);
+      book(_hist_dphij3mu_3j ,34,1,1);
+      book(_hist_dphij4mu_4j ,35,1,1);
 
-      _hist_MeanNJht_1j     = bookProfile1D("d36-x01-y01");
-      _hist_MeanNJht_2j     = bookProfile1D("d37-x01-y01");
-      _hist_MeanNJdyj1j2_2j = bookProfile1D("d38-x01-y01");
-      _hist_MeanNJdyjFjB_2j = bookProfile1D("d39-x01-y01");
+      book(_hist_MeanNJht_1j     ,36,1,1);
+      book(_hist_MeanNJht_2j     ,37,1,1);
+      book(_hist_MeanNJdyj1j2_2j ,38,1,1);
+      book(_hist_MeanNJdyjFjB_2j ,39,1,1);
 
     }
 
 
     // Define function used for filiing inc Njets histo
-    void _fill(Histo1DPtr& _histJetMult, const double& weight, vector<FourMomentum>& finaljet_list) {
-      _histJetMult->fill(0, weight);
+    void _fill(Histo1DPtr& _histJetMult, vector<FourMomentum>& finaljet_list) {
+      _histJetMult->fill(0);
       for (size_t i = 0 ; i < finaljet_list.size() ; ++i) {
         if (i == 7) break;
-        _histJetMult->fill(i+1, weight);  // inclusive multiplicity
+        _histJetMult->fill(i+1);  // inclusive multiplicity
       }
     }
 
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-
-      const double weight = event.weight();
       const WFinder& wfinder_mu = apply<WFinder>(event, "WFinder_mu");
       if (wfinder_mu.bosons().size() != 1) vetoEvent;
 
@@ -112,7 +110,6 @@ namespace Rivet {
       //double WmT = sqrt( 2 * lepton0.pT() * neutrino.pT() * (1 - cos(deltaPhi(lepton0, neutrino))) );
 
       const FourMomentum& lepton0 = wfinder_mu.constituentLepton().momentum();
-      //const FourMomentum& neutrino = wfinder_mu.constituentNeutrino().momentum();
       double WmT = wfinder_mu.mT();
 
       if (WmT < 50.0*GeV) vetoEvent;
@@ -135,69 +132,69 @@ namespace Rivet {
 
       // Multiplicity exc plot.
       if (finaljet_list.size()<=7) {
-        _hist_Mult_exc->fill(finaljet_list.size(), weight);
+        _hist_Mult_exc->fill(finaljet_list.size());
       } else if (finaljet_list.size()>7){
-        _hist_Mult_exc->fill(7., weight);
+        _hist_Mult_exc->fill(7.);
       }
       // Multiplicity inc plot.
-      _fill(_hist_inc_WJetMult, weight, finaljet_list);
+      _fill(_hist_inc_WJetMult, finaljet_list);
 
       if (finaljet_list.size()>=1) {
-        _hist_addJetPt1j->fill(finaljet_list[0].pT(), weight);
-        _hist_Jeteta1j->fill(fabs(finaljet_list[0].eta()), weight);
-        _hist_addHt_1j->fill(HT, weight);
-        _hist_dphij1mu_1j->fill( deltaPhi(finaljet_list[0].phi(), lepton0.phi()), weight );
-        _hist_MeanNJht_1j->fill( HT, finaljet_list.size(), weight);
+        _hist_addJetPt1j->fill(finaljet_list[0].pT());
+        _hist_Jeteta1j->fill(fabs(finaljet_list[0].eta()));
+        _hist_addHt_1j->fill(HT);
+        _hist_dphij1mu_1j->fill( deltaPhi(finaljet_list[0].phi(), lepton0.phi()) );
+        _hist_MeanNJht_1j->fill( HT, finaljet_list.size());
       }
 
       if (finaljet_list.size()>=2) {
-        _hist_addJetPt2j->fill(finaljet_list[1].pT(), weight);
-        _hist_Jeteta2j->fill(fabs(finaljet_list[1].eta()), weight);
-        _hist_addHt_2j->fill(HT, weight);
+        _hist_addJetPt2j->fill(finaljet_list[1].pT());
+        _hist_Jeteta2j->fill(fabs(finaljet_list[1].eta()));
+        _hist_addHt_2j->fill(HT);
 
-        _hist_dyj1j2_2j   ->fill( fabs(finaljet_list[0].rapidity() - finaljet_list[1].rapidity()), weight);
-        _hist_dyjFjB_2j   ->fill( fabs(jListRap[0].rapidity() - jListRap[jListRap.size()-1].rapidity()), weight);
-        _hist_dphij1j2_2j ->fill( deltaPhi(finaljet_list[0].phi(), finaljet_list[1].phi()), weight);
-        _hist_dphijFjB_2j ->fill( deltaPhi(jListRap[0].phi(), jListRap[jListRap.size()-1].phi()) , weight);
+        _hist_dyj1j2_2j   ->fill( fabs(finaljet_list[0].rapidity() - finaljet_list[1].rapidity()));
+        _hist_dyjFjB_2j   ->fill( fabs(jListRap[0].rapidity() - jListRap[jListRap.size()-1].rapidity()));
+        _hist_dphij1j2_2j ->fill( deltaPhi(finaljet_list[0].phi(), finaljet_list[1].phi()));
+        _hist_dphijFjB_2j ->fill( deltaPhi(jListRap[0].phi(), jListRap[jListRap.size()-1].phi()) );
 
-        _hist_dijetM_2j   ->fill( (add(finaljet_list[0], finaljet_list[1])).mass(), weight);
-        _hist_diJetPt_2j  ->fill( (add(finaljet_list[0], finaljet_list[1])).pT(), weight);
-        _hist_dRj1j2_2j   ->fill( deltaR(finaljet_list[0].rapidity(), finaljet_list[0].phi(), finaljet_list[1].rapidity(), finaljet_list[1].phi()), weight);
+        _hist_dijetM_2j   ->fill( (add(finaljet_list[0], finaljet_list[1])).mass());
+        _hist_diJetPt_2j  ->fill( (add(finaljet_list[0], finaljet_list[1])).pT());
+        _hist_dRj1j2_2j   ->fill( deltaR(finaljet_list[0].rapidity(), finaljet_list[0].phi(), finaljet_list[1].rapidity(), finaljet_list[1].phi()));
 
-        _hist_dphij2mu_2j ->fill( deltaPhi(finaljet_list[1].phi(), lepton0.phi()), weight );
+        _hist_dphij2mu_2j ->fill( deltaPhi(finaljet_list[1].phi(), lepton0.phi()) );
 
-        _hist_MeanNJht_2j->fill( HT, finaljet_list.size(), weight);
-        _hist_MeanNJdyj1j2_2j->fill( fabs(finaljet_list[0].rapidity() - finaljet_list[1].rapidity()), finaljet_list.size(), weight);
-        _hist_MeanNJdyjFjB_2j->fill( fabs(jListRap[0].rapidity() - jListRap[jListRap.size()-1].rapidity()), finaljet_list.size(), weight);
+        _hist_MeanNJht_2j->fill( HT, finaljet_list.size());
+        _hist_MeanNJdyj1j2_2j->fill( fabs(finaljet_list[0].rapidity() - finaljet_list[1].rapidity()), finaljet_list.size());
+        _hist_MeanNJdyjFjB_2j->fill( fabs(jListRap[0].rapidity() - jListRap[jListRap.size()-1].rapidity()), finaljet_list.size());
       }
 
       if (finaljet_list.size()>=3) {
-        _hist_addJetPt3j->fill(finaljet_list[2].pT(), weight);
-        _hist_Jeteta3j->fill(fabs(finaljet_list[2].eta()), weight);
-        _hist_addHt_3j->fill(HT, weight);
+        _hist_addJetPt3j->fill(finaljet_list[2].pT());
+        _hist_Jeteta3j->fill(fabs(finaljet_list[2].eta()));
+        _hist_addHt_3j->fill(HT);
 
-        _hist_dyj1j2_3j     ->fill( fabs(finaljet_list[0].rapidity() - finaljet_list[1].rapidity()), weight);
-        _hist_dyj1j3_3j     ->fill( fabs(finaljet_list[0].rapidity() - finaljet_list[2].rapidity()), weight);
-        _hist_dyj2j3_3j     ->fill( fabs(finaljet_list[1].rapidity() - finaljet_list[2].rapidity()), weight);
-        _hist_dyjFjB_3j     ->fill( fabs(jListRap[0].rapidity() - jListRap[jListRap.size()-1].rapidity()), weight);
+        _hist_dyj1j2_3j     ->fill( fabs(finaljet_list[0].rapidity() - finaljet_list[1].rapidity()));
+        _hist_dyj1j3_3j     ->fill( fabs(finaljet_list[0].rapidity() - finaljet_list[2].rapidity()));
+        _hist_dyj2j3_3j     ->fill( fabs(finaljet_list[1].rapidity() - finaljet_list[2].rapidity()));
+        _hist_dyjFjB_3j     ->fill( fabs(jListRap[0].rapidity() - jListRap[jListRap.size()-1].rapidity()));
 
-        _hist_dijetM_3j  ->fill( (add(finaljet_list[0], finaljet_list[1])).mass(), weight);
-        _hist_diJetPt_3j ->fill( (add(finaljet_list[0], finaljet_list[1])).pT(), weight);
+        _hist_dijetM_3j  ->fill( (add(finaljet_list[0], finaljet_list[1])).mass());
+        _hist_diJetPt_3j ->fill( (add(finaljet_list[0], finaljet_list[1])).pT());
 
-        _hist_dphij3mu_3j->fill( deltaPhi(finaljet_list[2].phi(), lepton0.phi()), weight );
+        _hist_dphij3mu_3j->fill( deltaPhi(finaljet_list[2].phi(), lepton0.phi()) );
       }
 
       if (finaljet_list.size()>=4) {
-        _hist_addJetPt4j->fill(finaljet_list[3].pT(), weight);
-        _hist_Jeteta4j->fill(fabs(finaljet_list[3].eta()), weight);
-        _hist_addHt_4j->fill(HT, weight);
+        _hist_addJetPt4j->fill(finaljet_list[3].pT());
+        _hist_Jeteta4j->fill(fabs(finaljet_list[3].eta()));
+        _hist_addHt_4j->fill(HT);
 
-        _hist_dyj1j2_4j     ->fill( fabs(finaljet_list[0].rapidity() - finaljet_list[1].rapidity()), weight);
-        _hist_dyjFjB_4j     ->fill( fabs(jListRap[0].rapidity() - jListRap[jListRap.size()-1].rapidity()), weight);
+        _hist_dyj1j2_4j     ->fill( fabs(finaljet_list[0].rapidity() - finaljet_list[1].rapidity()));
+        _hist_dyjFjB_4j     ->fill( fabs(jListRap[0].rapidity() - jListRap[jListRap.size()-1].rapidity()));
 
-        _hist_dijetM_4j  ->fill( (add(finaljet_list[0], finaljet_list[1])).mass(), weight);
-        _hist_diJetPt_4j ->fill( (add(finaljet_list[0], finaljet_list[1])).pT(), weight);
-        _hist_dphij4mu_4j->fill( deltaPhi(finaljet_list[3].phi(), lepton0.phi()), weight );
+        _hist_dijetM_4j  ->fill( (add(finaljet_list[0], finaljet_list[1])).mass());
+        _hist_diJetPt_4j ->fill( (add(finaljet_list[0], finaljet_list[1])).pT());
+        _hist_dphij4mu_4j->fill( deltaPhi(finaljet_list[3].phi(), lepton0.phi()) );
       }
 
     } //void loop
@@ -328,7 +325,7 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CMS_2016_I1491953);
+  RIVET_DECLARE_PLUGIN(CMS_2016_I1491953);
 
 
 }

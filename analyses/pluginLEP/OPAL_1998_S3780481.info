@@ -3,9 +3,9 @@ Year: 1998
 Summary: Measurements of flavor dependent fragmentation functions in $Z^0 -> q \bar{q}$ events
 Experiment: OPAL
 Collider: LEP 1
-SpiresID: 3780481
 InspireID: 472637
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Hendrik Hoeth <hendrik.hoeth@cern.ch>
 References:
@@ -37,3 +37,7 @@ BibTeX: '@Article{Ackerstaff:1998hz,
      doi       = "10.1007/s100529901067",
      SLACcitation  = "%%CITATION = HEP-EX/9807004;%%"
 }'
+
+ReleaseTests:
+ - $A LEP-91
+

@@ -1,0 +1,62 @@
+{
+    "1372086": [
+        "Production of exclusive dijets in diffractive deep inelastic scattering at HERA", 
+        "ZEUS", 
+        "10.1140/epjc/s10052-015-3849-z", 
+        null, 
+        "1505.05783", 
+        "ins1372086", 
+        null, 
+        [
+            "DESY-15-070"
+        ]
+    ], 
+    "1437948": [
+        "Combined QCD and electroweak analysis of HERA data", 
+        "ZEUS", 
+        "10.1103/PhysRevD.93.092002", 
+        "2143015", 
+        "1603.09628", 
+        null, 
+        null, 
+        [
+            "DESY-16-039"
+        ]
+    ], 
+    "1442358": [
+        "Limits on the effective quark radius from inclusive $ep$ scattering at HERA", 
+        "ZEUS", 
+        "10.1016/j.physletb.2016.04.007", 
+        "2144113", 
+        "1604.01280", 
+        null, 
+        null, 
+        [
+            "DESY-16-035"
+        ]
+    ], 
+    "1444882": [
+        "Search for a narrow baryonic state decaying to ${pK^0_S}$ and ${\\bar{p}K^0_S}$ in deep inelastic scattering at HERA", 
+        "ZEUS", 
+        "10.1016/j.physletb.2016.06.001", 
+        "2145198", 
+        "1604.02220", 
+        null, 
+        null, 
+        [
+            "DESY-16-065"
+        ]
+    ], 
+    "1649636": [
+        "Measurement of the cross-section ratio $\\sigma_{\\psi(2S)}/\\sigma_{J/\\psi(1S)}$ in deep inelastic exclusive $ep$ scattering at HERA", 
+        "ZEUS", 
+        "10.1016/j.nuclphysb.2016.06.010", 
+        "2195069", 
+        "1606.08652", 
+        null, 
+        null, 
+        [
+            "DESY-16-008"
+        ]
+    ]
+}

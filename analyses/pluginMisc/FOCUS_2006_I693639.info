@@ -1,0 +1,36 @@
+Name: FOCUS_2006_I693639
+Year: 2006
+Summary: Decay asymmetries in $\Lambda^+_c\to\Lambda^0\pi^+$
+Experiment: FOCUS
+InspireID: 693639
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B634 (2006) 165-172
+RunInfo: Any process producing Lambda_c baryons
+Description:
+'Measurement of the decay asymmetries in $\Lambda^+_c\to\Lambda^0\pi^+$ by the FOCUS experiment.
+ The asymmetry parameter is extracted by fitting to normalised angular distribution. N.B. the product of the asymmetry parameters for
+ the $\Lambda_c$ and daughter baryon is implemented as this is what is measured, rather than the extracted
+ parameter for the $\Lambda_c$ which relies on other measurements of the parameter for the daughter baryon.
+ This analysis is useful for testing spin correlations
+ in hadron decays.'
+Keywords: []
+BibKey: Link:2005ft
+BibTeX: '@article{Link:2005ft,
+      author         = "Link, J. M. and others",
+      title          = "{Study of the decay asymmetry parameter and CP violation
+                        parameter in the Lambda(c)+ ---&gt; Lambda pi+ decay}",
+      collaboration  = "FOCUS",
+      journal        = "Phys. Lett.",
+      volume         = "B634",
+      year           = "2006",
+      pages          = "165-172",
+      doi            = "10.1016/j.physletb.2006.01.017",
+      eprint         = "hep-ex/0509042",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "FERMILAB-PUB-05-424-E",
+      SLACcitation   = "%%CITATION = HEP-EX/0509042;%%"
+}'

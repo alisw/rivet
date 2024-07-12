@@ -1,0 +1,41 @@
+{
+    "281351": [
+        "A measurement of the total hadronic cross-section in tagged $\\gamma\\gamma$ reactions", 
+        "TPC/Two Gamma", 
+        "10.1103/PhysRevD.41.2667", 
+        null, 
+        null, 
+        "ins281351", 
+        null, 
+        [
+            "SLAC-PUB-5101", 
+            "UC-IIRPA-89-02"
+        ]
+    ], 
+    "294346": [
+        "Investigation of the electromagnetic structure of $\\eta$ and $\\eta^\\prime$ mesons by two photon interactions", 
+        "TPC/Two Gamma", 
+        "10.1103/PhysRevLett.64.172", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "UCSB-HEP-89-04"
+        ]
+    ], 
+    "299662": [
+        "Inclusive $D^{*\\pm}$ production in photon-photon collisions", 
+        "TPC/Two-Gamma", 
+        "10.1016/0370-2693(90)90578-T", 
+        null, 
+        null, 
+        "ins299662", 
+        null, 
+        [
+            "SLAC-PUB-5348", 
+            "NIKHEF-H-90-16", 
+            "LBL-29657"
+        ]
+    ]
+}

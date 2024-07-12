@@ -1,0 +1,182 @@
+{
+    "251097": [
+        "Hyperon Production in $e^+ e^-$ Annihilation at 10-{GeV} Center-of-mass Energy", 
+        "ARGUS", 
+        "10.1007/BF01550992", 
+        null, 
+        null, 
+        "ins251097", 
+        null, 
+        [
+            "DESY-87-141"
+        ]
+    ], 
+    "251558": [
+        "Measurement of $D$(s)* - $D$(s) Mass Difference", 
+        "ARGUS", 
+        "10.1016/0370-2693(88)90589-8", 
+        null, 
+        null, 
+        "ins251558", 
+        null, 
+        [
+            "DESY-87-156"
+        ]
+    ], 
+    "260762": [
+        "Observation of Inclusive $B$ Meson Decays Into $\\Lambda(c$)+ Baryons", 
+        "ARGUS", 
+        "10.1016/0370-2693(88)90383-8", 
+        null, 
+        null, 
+        "ins260762", 
+        null, 
+        [
+            "DESY-88-012"
+        ]
+    ], 
+    "260826": [
+        "Observation of the Charmed Baryon $\\Lambda(c$) in $e^+ e^-$ Annihilation at 10-{GeV}", 
+        "ARGUS", 
+        "10.1016/0370-2693(88)90896-9", 
+        null, 
+        null, 
+        "ins260826", 
+        null, 
+        [
+            "DESY-88-011"
+        ]
+    ], 
+    "260828": [
+        "A Search for $\\omega \\phi$ and $\\phi \\phi$ Production in the Reactions $\\gamma \\gamma \\to K^+ K^- \\pi^+ \\pi^- \\pi^0$ and $\\gamma \\gamma \\to 2 K^+ 2 K^-$", 
+        "ARGUS", 
+        "10.1016/0370-2693(88)90385-1", 
+        null, 
+        null, 
+        "ins260828", 
+        null, 
+        [
+            "DESY-88-016"
+        ]
+    ], 
+    "261485": [
+        "Lifetimes of Charmed Mesons", 
+        "ARGUS", 
+        "10.1016/0370-2693(88)90384-X", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-88-037"
+        ]
+    ], 
+    "261672": [
+        "Observation of the Charmed Baryon $\\Sigma(c$) in $e^+ e^-$ Annihilations", 
+        "ARGUS", 
+        "10.1016/0370-2693(88)91899-0", 
+        null, 
+        null, 
+        "ins261672", 
+        null, 
+        [
+            "DESY-88-058"
+        ]
+    ], 
+    "261673": [
+        "Observation of the Charmless B Meson Decays", 
+        "ARGUS", 
+        "10.1016/0370-2693(88)91842-4", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-88-056"
+        ]
+    ], 
+    "261674": [
+        "Search for D0 Decays Into Lepton Pairs", 
+        "ARGUS", 
+        "10.1016/0370-2693(88)90967-7", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-88-053"
+        ]
+    ], 
+    "261819": [
+        "Search for the Decay $B \\to$ K* $\\gamma$", 
+        "ARGUS", 
+        "10.1016/0370-2693(88)90382-6", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-88-062"
+        ]
+    ], 
+    "262415": [
+        "Observation of the Orbitally Excited $\\Lambda(1520)$ Baryon in $e^+ e^-$ Annihilation", 
+        "ARGUS", 
+        "10.1016/0370-2693(88)91461-X", 
+        null, 
+        null, 
+        "ins262415", 
+        null, 
+        [
+            "DESY-88-072"
+        ]
+    ], 
+    "262713": [
+        "First Observation of $\\gamma \\gamma \\to K^*+ K^*$-", 
+        "ARGUS", 
+        "10.1016/0370-2693(88)91810-2", 
+        null, 
+        null, 
+        "ins262713", 
+        null, 
+        [
+            "DESY-88-084"
+        ]
+    ], 
+    "262956": [
+        "Measurement of the Decays $\\tau^- \\to K^*$- \\nu_\\tau$ and $\\tau^- \\to \\rho^- $\\nu_\\tau$", 
+        "ARGUS", 
+        "10.1007/BF01412572", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-88-088"
+        ]
+    ], 
+    "264583": [
+        "$B$ Meson Decays to $D \\pi$ and $D \\rho$", 
+        "ARGUS", 
+        "10.1016/0370-2693(88)91460-8", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-88-131"
+        ]
+    ], 
+    "265268": [
+        "Upper Limits for the Decay of $\\tau$ Leptons Into $\\eta$ Mesons", 
+        "ARGUS", 
+        "10.1007/BF01585624", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-88-113"
+        ]
+    ]
+}

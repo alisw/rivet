@@ -17,22 +17,19 @@ namespace Rivet {
   public:
 
     /// Constructor: the supplied FinalState projection is assumed to live through the run.
-    HadronicFinalState(const FinalState& fsp)
-    {
+    HadronicFinalState(const FinalState& fsp) {
       setName("HadronicFinalState");
-      addProjection(fsp, "FS");
+      declare(fsp, "FS");
     }
 
-    HadronicFinalState(double mineta = -MAXDOUBLE,
-                       double maxeta = MAXDOUBLE,
-                       double minpt = 0.0*GeV)
-    {
+    HadronicFinalState(const Cut& c=Cuts::open()) {
       setName("HadronicFinalState");
-      addProjection(FinalState(mineta, maxeta, minpt), "FS");
+      declare(FinalState(c), "FS");
     }
 
     /// Clone on the heap.
     DEFAULT_RIVET_PROJ_CLONE(HadronicFinalState);
+
 
   protected:
 
@@ -40,12 +37,11 @@ namespace Rivet {
     void project(const Event& e);
 
     /// Compare projections.
-    int compare(const Projection& p) const;
+    CmpState compare(const Projection& p) const;
 
   };
 
 
 }
-
 
 #endif

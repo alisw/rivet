@@ -1,0 +1,35 @@
+Name: BESIII_2019_I1773081
+Year: 2019
+Summary: $e^+e^-\to\pi^+\pi^-\pi^0$ cross section between 0.7 GeV to 3.0 GeV
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1773081
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - arXiv:1912.11208
+RunInfo: e+e- to hadrons
+Beams: [e+, e-]
+Description:
+  'Cross section for  $e^+e^-\to\pi^+\pi^-\pi^0$ cross section for centre-of-mass energies between 0.7 GeV to 3.0 GeV
+   measured by the BES III experiment using radiative return.'
+ValidationInfo:
+  'Herwig events, as part of the Herwig test suite, generated using low energy hadronic currents were
+   compared to the data.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Ablikim:2019sjw
+BibTeX: '@article{Ablikim:2019sjw,
+      author         = "Ablikim, M. and others",
+      title          = "{Measurement of the $e^+e^-\to\pi^+\pi^-\pi^0$ cross
+                        section from 0.7 GeV to 3.0 GeV via initial-state
+                        radiation}",
+      collaboration  = "BESIII",
+      year           = "2019",
+      eprint         = "1912.11208",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1912.11208;%%"
+}'

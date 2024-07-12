@@ -1,0 +1,38 @@
+Name: BELLE_2016_I1283183
+Year: 2016
+Summary: Lepton Forward-Backward Asymmetry in $B\to X_s\ell^+\ell^-$
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1283183
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 93 (2016) 3, 032008
+RunInfo: Any process producing B0, B+ mesons, original Upsilon(4S) decays
+Description:
+  'Measurement of the lepton forward-backward asymmetry in $B\to X_s\ell^+\ell^-$ in 4 $q^2$ bins.'
+ValidationInfo:
+  'Herwig7 events using EvtGen for decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle:2014owz
+BibTeX: '@article{Belle:2014owz,
+    author = "Sato, Y. and others",
+    collaboration = "Belle",
+    title = "{Measurement of the lepton forward-backward asymmetry in $B \rightarrow X_s \ell^+ \ell^-$ decays with a sum of exclusive modes}",
+    eprint = "1402.7134",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BELLE-PREPRINT-2014-1, KEK-PREPRINT-2013-60",
+    doi = "10.1103/PhysRevD.93.059901",
+    journal = "Phys. Rev. D",
+    volume = "93",
+    number = "3",
+    pages = "032008",
+    year = "2016",
+    note = "[Addendum: Phys.Rev.D 93, 059901 (2016)]"
+}
+'

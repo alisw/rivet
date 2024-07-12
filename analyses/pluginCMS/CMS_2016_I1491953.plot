@@ -1,13 +1,13 @@
 # BEGIN PLOT /CMS_2016_I1491953/d01-x01-y01
 Title=CMS, sqrt(s) = 8 TeV, W+jets
 XLabel=EXCLUSIVE JET MULTIPLICITY
-YLabel=$\sigma(W\rightarrow \mu \nu + N \text{ jets})$ [PB]
+YLabel=$\sigma(W\rightarrow \mu \nu + N \mathrm{~jets})$ [PB]
 # END PLOT
 
 # BEGIN PLOT /CMS_2016_I1491953/d02-x01-y01
 Title=CMS, sqrt(s) = 8 TeV, W+jets
 XLabel=INCLUSIVE JET MULTIPLICITY
-YLabel=$\sigma(W\rightarrow \mu \nu + \ge N \text{ jets})$ [PB]
+YLabel=$\sigma(W\rightarrow \mu \nu + \geq N \mathrm{~jets})$ [PB]
 # END PLOT
 
 # BEGIN PLOT /CMS_2016_I1491953/d03-x01-y01
@@ -36,61 +36,61 @@ YLabel=D(SIG)/D(PT) [PB/GEV]
 
 # BEGIN PLOT /CMS_2016_I1491953/d07-x01-y01
 Title=CMS, sqrt(s) = 8 TeV, W+jets
-XLabel=HT ($\ge 1$ JET) [GEV]
+XLabel=HT ($\geq 1$ JET) [GEV]
 YLabel=D(SIG)/D(HT) [PB/GEV]
 # END PLOT
 
 # BEGIN PLOT /CMS_2016_I1491953/d08-x01-y01
 Title=CMS, sqrt(s) = 8 TeV, W+jets
-XLabel=HT ($\ge 2$ JET) [GEV]
+XLabel=HT ($\geq 2$ JET) [GEV]
 YLabel=D(SIG)/D(HT) [PB/GEV]
 # END PLOT
 
 # BEGIN PLOT /CMS_2016_I1491953/d09-x01-y01
 Title=CMS, sqrt(s) = 8 TeV, W+jets
-XLabel=HT ($\ge 3$ JET) [GEV]
+XLabel=HT ($\geq 3$ JET) [GEV]
 YLabel=D(SIG)/D(HT) [PB/GEV]
 # END PLOT
 
 # BEGIN PLOT /CMS_2016_I1491953/d10-x01-y01
 Title=CMS, sqrt(s) = 8 TeV, W+jets
-XLabel=HT ($\ge 4$ JET) [GEV]
+XLabel=HT ($\geq 4$ JET) [GEV]
 YLabel=D(SIG)/D(HT) [PB/GEV]
 # END PLOT
 
 # BEGIN PLOT /CMS_2016_I1491953/d11-x01-y01
 Title=CMS, sqrt(s) = 8 TeV, W+jets
-XLabel=DIJET PT ($\ge 2$ JET) [GEV]
+XLabel=DIJET PT ($\geq 2$ JET) [GEV]
 YLabel=D(SIG)/D(PT) [PB/GEV]
 # END PLOT
 
 # BEGIN PLOT /CMS_2016_I1491953/d12-x01-y01
 Title=CMS, sqrt(s) = 8 TeV, W+jets
-XLabel=DIJET PT ($\ge 3$ JET) [GEV]
+XLabel=DIJET PT ($\geq 3$ JET) [GEV]
 YLabel=D(SIG)/D(PT) [PB/GEV]
 # END PLOT
 
 # BEGIN PLOT /CMS_2016_I1491953/d13-x01-y01
 Title=CMS, sqrt(s) = 8 TeV, W+jets
-XLabel=DIJET PT ($\ge 4$ JET) [GEV]
+XLabel=DIJET PT ($\geq 4$ JET) [GEV]
 YLabel=D(SIG)/D(PT) [PB/GEV]
 # END PLOT
 
 # BEGIN PLOT /CMS_2016_I1491953/d14-x01-y01
 Title=CMS, sqrt(s) = 8 TeV, W+jets
-XLabel=DIJET INVARIANT MASS ($\ge 2$ JET) [GEV]
+XLabel=DIJET INVARIANT MASS ($\geq 2$ JET) [GEV]
 YLabel=D(SIG)/D(MASS) [PB/GEV]
 # END PLOT
 
 # BEGIN PLOT /CMS_2016_I1491953/d15-x01-y01
 Title=CMS, sqrt(s) = 8 TeV, W+jets
-XLabel=DIJET INVARIANT MASS ($\ge 3$ JET) [GEV]
+XLabel=DIJET INVARIANT MASS ($\geq 3$ JET) [GEV]
 YLabel=D(SIG)/D(MASS) [PB/GEV]
 # END PLOT
 
 # BEGIN PLOT /CMS_2016_I1491953/d16-x01-y01
 Title=CMS, sqrt(s) = 8 TeV, W+jets
-XLabel=DIJET INVARIANT MASS ($\ge 4$ JET) [GEV]
+XLabel=DIJET INVARIANT MASS ($\geq 4$ JET) [GEV]
 YLabel=D(SIG)/D(MASS) [PB/GEV]
 # END PLOT
 
@@ -120,19 +120,19 @@ YLabel=D(SIG)/D(ABS(ETA)) [PB]
 
 # BEGIN PLOT /CMS_2016_I1491953/d21-x01-y01
 Title=CMS, sqrt(s) = 8 TeV, W+jets
-XLabel=ABS(RAP(JET1)-RAP(JET2)) ($\ge 2$ JET)
+XLabel=ABS(RAP(JET1)-RAP(JET2)) ($\geq 2$ JET)
 YLabel=D(SIG)/D(ABS(RAP(JET1)-RAP(JET2))) [PB]
 # END PLOT
 
 # BEGIN PLOT /CMS_2016_I1491953/d22-x01-y01
 Title=CMS, sqrt(s) = 8 TeV, W+jets
-XLabel=ABS(RAP(JET1)-RAP(JET2)) ($\ge 3$ JET)
+XLabel=ABS(RAP(JET1)-RAP(JET2)) ($\geq 3$ JET)
 YLabel=D(SIG)/D(ABS(RAP(JET1)-RAP(JET2))) [PB]
 # END PLOT
 
 # BEGIN PLOT /CMS_2016_I1491953/d23-x01-y01
 Title=CMS, sqrt(s) = 8 TeV, W+jets
-XLabel=ABS(RAP(JET1)-RAP(JET2)) ($\ge 4$ JET)
+XLabel=ABS(RAP(JET1)-RAP(JET2)) ($\geq 4$ JET)
 YLabel=D(SIG)/D(ABS(RAP(JET1)-RAP(JET2))) [PB]
 # END PLOT
 
@@ -150,19 +150,19 @@ YLabel=D(SIG)/D(ABS(RAP(JET2)-RAP(JET3))) [PB]
 
 # BEGIN PLOT /CMS_2016_I1491953/d26-x01-y01
 Title=CMS, sqrt(s) = 8 TeV, W+jets
-XLabel=RAP(JETF)-RAP(JETB) ($\ge 2$ JET)
+XLabel=RAP(JETF)-RAP(JETB) ($\geq 2$ JET)
 YLabel=D(SIG)/D(ABS(RAP(JETF)-RAP(JETB))) [PB]
 # END PLOT
 
 # BEGIN PLOT /CMS_2016_I1491953/d27-x01-y01
 Title=CMS, sqrt(s) = 8 TeV, W+jets
-XLabel=RAP(JETF)-RAP(JETB) ($\ge 3$ JET)
+XLabel=RAP(JETF)-RAP(JETB) ($\geq 3$ JET)
 YLabel=D(SIG)/D(ABS(RAP(JETF)-RAP(JETB))) [PB]
 # END PLOT
 
 # BEGIN PLOT /CMS_2016_I1491953/d28-x01-y01
 Title=CMS, sqrt(s) = 8 TeV, W+jets
-XLabel=RAP(JETF)-RAP(JETB) ($\ge 4$ JET)
+XLabel=RAP(JETF)-RAP(JETB) ($\geq 4$ JET)
 YLabel=D(SIG)/D(ABS(RAP(JETF)-RAP(JETB))) [PB]
 # END PLOT
 
@@ -211,27 +211,27 @@ YLabel=D(SIG)/D(DELTAPHI) [PB/RAD]
 # BEGIN PLOT /CMS_2016_I1491953/d36-x01-y01
 Title=CMS, sqrt(s) = 8 TeV, W+jets
 LogY=0
-XLabel=HT ($\ge 1$ JET) [GEV]
+XLabel=HT ($\geq 1$ JET) [GEV]
 YLabel=MEAN(MULT(JET))
 # END PLOT
 
 # BEGIN PLOT /CMS_2016_I1491953/d37-x01-y01
 Title=CMS, sqrt(s) = 8 TeV, W+jets
 LogY=0
-XLabel=HT ($\ge 2$ JET) [GEV]
+XLabel=HT ($\geq 2$ JET) [GEV]
 YLabel=MEAN(MULT(JET))
 # END PLOT
 
 # BEGIN PLOT /CMS_2016_I1491953/d38-x01-y01
 Title=CMS, sqrt(s) = 8 TeV, W+jets
 LogY=0
-XLabel=ABS(RAP(JET1)-RAP(JET2)) ($\ge 2$ JET)
+XLabel=ABS(RAP(JET1)-RAP(JET2)) ($\geq 2$ JET)
 YLabel=MEAN(MULT(JET))
 # END PLOT
 
 # BEGIN PLOT /CMS_2016_I1491953/d39-x01-y01
 Title=CMS, sqrt(s) = 8 TeV, W+jets
 LogY=0
-XLabel=ABS(RAP(JETF)-RAP(JETB)) ($\ge 2$ JET)
+XLabel=ABS(RAP(JETF)-RAP(JETB)) ($\geq 2$ JET)
 YLabel=MEAN(MULT(JET))
 # END PLOT

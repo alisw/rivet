@@ -1,0 +1,300 @@
+{
+    "897764": [
+        "Rapidity and transverse momentum dependence of inclusive J$/\\psi$ production in $pp$ collisions at $\\sqrt{s} = 7$ TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2011.09.054", 
+        "1348393", 
+        "1105.0380", 
+        "ins897764", 
+        null, 
+        [
+            "CERN-PH-EP-2011-057"
+        ]
+    ], 
+    "927105": [
+        "Harmonic decomposition of two-particle angular correlations in Pb-Pb collisions at $\\sqrt{s_{NN}}=$ 2.76 TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2012.01.060", 
+        "1381944", 
+        "1109.2501", 
+        "ins927105", 
+        null, 
+        [
+            "CERN-PH-EP-2011-152"
+        ]
+    ], 
+    "930312": [
+        "Particle-yield modification in jet-like azimuthal di-hadron correlations in Pb-Pb collisions at $\\sqrt{s_{NN}} = 2.76$ TeV", 
+        "ALICE", 
+        "10.1103/PhysRevLett.108.092301", 
+        "1384474", 
+        "1110.0121", 
+        "ins930312", 
+        null, 
+        [
+            "CERN-PH-EP-2011-161"
+        ]
+    ], 
+    "944730": [
+        "$J/\\psi$ polarization in $pp$ collisions at $\\sqrt{s}=7$ TeV", 
+        "ALICE", 
+        "10.1103/PhysRevLett.108.082001", 
+        "1396906", 
+        "1111.1630", 
+        "ins944730", 
+        null, 
+        [
+            "CERN-PH-EP-2011-182"
+        ]
+    ], 
+    "944757": [
+        "Measurement of charm production at central rapidity in proton-proton collisions at $\\sqrt{s} = 7$ TeV", 
+        "ALICE", 
+        "10.1007/JHEP01(2012)128", 
+        "1394233", 
+        "1111.1553", 
+        "ins944757", 
+        null, 
+        [
+            "CERN-PH-EP-2011-181"
+        ]
+    ], 
+    "1080735": [
+        "Underlying Event measurements in $pp$ collisions at $\\sqrt{s}=0.9$ and 7 TeV with the ALICE experiment at the LHC", 
+        "ALICE", 
+        "10.1007/JHEP07(2012)116", 
+        "1402589", 
+        "1112.2082", 
+        "ins1080735", 
+        null, 
+        [
+            "CERN-PH-EP-2011-204"
+        ]
+    ], 
+    "1080945": [
+        "Light vector meson production in $pp$ collisions at $\\sqrt{s}=7$ TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2012.03.038", 
+        "1400676", 
+        "1112.2222", 
+        "ins1080945", 
+        null, 
+        [
+            "CERN-PH-EP-2011-196"
+        ]
+    ], 
+    "1084331": [
+        "Measurement of Event Background Fluctuations for Charged Particle Jet Reconstruction in Pb-Pb collisions at $\\sqrt{s_{NN}} = 2.76$ TeV", 
+        "ALICE", 
+        "10.1007/JHEP03(2012)053", 
+        "1415766", 
+        "1201.2423", 
+        "ins1084331", 
+        null, 
+        [
+            "CERN-PH-EP-2012-002"
+        ]
+    ], 
+    "1084981": [
+        "Heavy flavour decay muon production at forward rapidity in proton\u2013proton collisions at $\\sqrt{s} =$ 7 TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2012.01.063", 
+        "1417687", 
+        "1201.3791", 
+        "ins1084981", 
+        null, 
+        [
+            "CERN-PH-EP-2011-215"
+        ]
+    ], 
+    "1088222": [
+        "$J/\\psi$ suppression at forward rapidity in Pb-Pb collisions at $\\sqrt{s_{NN}}=2.76$ TeV", 
+        "ALICE", 
+        "10.1103/PhysRevLett.109.072301", 
+        "1416074", 
+        "1202.1383", 
+        "ins1088222", 
+        null, 
+        [
+            "CERN-PH-EP-2012-012"
+        ]
+    ], 
+    "1088833": [
+        "$J/\\psi$ Production as a Function of Charged Particle Multiplicity in $pp$ Collisions at $\\sqrt{s} = 7$ TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2012.04.052", 
+        "1419772", 
+        "1202.2816", 
+        "ins1088833", 
+        null, 
+        []
+    ], 
+    "1093488": [
+        "Suppression of high transverse momentum D mesons in central Pb-Pb collisions at $\\sqrt{s_{NN}}=2.76$ TeV", 
+        "ALICE", 
+        "10.1007/JHEP09(2012)112", 
+        "1428097", 
+        "1203.2160", 
+        "ins1093488", 
+        null, 
+        [
+            "CERN-PH-EP-2012-069"
+        ]
+    ], 
+    "1093519": [
+        "Measurement of the Cross Section for Electromagnetic Dissociation with Neutron Emission in Pb-Pb Collisions at $\\sqrt{s_{NN}}$ = 2.76 TeV", 
+        "ALICE", 
+        "10.1103/PhysRevLett.109.252302", 
+        "1427249", 
+        "1203.2436", 
+        "ins1093519", 
+        null, 
+        [
+            "CERN-PH-EP-2012-065"
+        ]
+    ], 
+    "1094079": [
+        "Inclusive $J/\\psi$ production in $pp$ collisions at $\\sqrt{s} = 2.76$ TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2012.10.078", 
+        "1425908", 
+        "1203.3641", 
+        "ins1094079", 
+        null, 
+        [
+            "CERN-PH-EP-2012-055"
+        ]
+    ], 
+    "1097057": [
+        "Multi-strange baryon production in $pp$ collisions at $\\sqrt{s} = 7$ TeV with ALICE", 
+        "ALICE", 
+        "10.1016/j.physletb.2012.05.011", 
+        "1430640", 
+        "1204.0282", 
+        "ins1097057", 
+        null, 
+        [
+            "CERN-PH-EP-2012-080"
+        ]
+    ], 
+    "1115186": [
+        "Transverse sphericity of primary charged particles in minimum bias proton-proton collisions at $\\sqrt{s}=0.9$, 2.76 and 7 TeV", 
+        "ALICE", 
+        "10.1140/epjc/s10052-012-2124-9", 
+        "1447810", 
+        "1205.3963", 
+        "ins1115186", 
+        null, 
+        [
+            "CERN-PH-EP-2012-136"
+        ]
+    ], 
+    "1115187": [
+        "Measurement of charm production at central rapidity in proton-proton collisions at $\\sqrt{s}=2.76$ TeV", 
+        "ALICE", 
+        "10.1007/JHEP07(2012)191", 
+        "1447152", 
+        "1205.4007", 
+        "ins1115187", 
+        null, 
+        [
+            "CERN-PH-EP-2012-133"
+        ]
+    ], 
+    "1115824": [
+        "Measurement of electrons from semileptonic heavy-flavour hadron decays in pp collisions at \\sqrt{s} = 7 TeV", 
+        "ALICE", 
+        "10.1103/PhysRevD.86.112007", 
+        "1447081", 
+        "1205.5423", 
+        "ins1115824", 
+        null, 
+        [
+            "CERN-PH-EP-2012-131"
+        ]
+    ], 
+    "1116147": [
+        "Neutral pion and $\\eta$ meson production in proton-proton collisions at $\\sqrt{s}=0.9$ TeV and $\\sqrt{s}=7$ TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2012.09.015", 
+        "1410653", 
+        "1205.5724", 
+        "ins1116147", 
+        null, 
+        [
+            "CERN-PH-EP-2012-001"
+        ]
+    ], 
+    "1116251": [
+        "Measurement of prompt $J/\\psi$ and beauty hadron production cross sections at mid-rapidity in $pp$ collisions at $\\sqrt{s} = 7$ TeV", 
+        "ALICE", 
+        "10.1007/JHEP11(2012)065", 
+        "1447114", 
+        "1205.5880", 
+        "ins1116251", 
+        null, 
+        [
+            "CERN-PH-EP-2012-132"
+        ]
+    ], 
+    "1116417": [
+        "Production of muons from heavy flavour decays at forward rapidity in pp and Pb-Pb collisions at $\\sqrt {s_{NN}}$ = 2.76 TeV", 
+        "ALICE", 
+        "10.1103/PhysRevLett.109.112301", 
+        "1450251", 
+        "1205.6443", 
+        "ins1116417", 
+        null, 
+        [
+            "CERN-PH-EP-2012-155"
+        ]
+    ], 
+    "1117885": [
+        "$K^0_s-K^0_s$ correlations in $pp$ collisions at $\\sqrt{s}=7$ TeV from the LHC ALICE experiment", 
+        "ALICE", 
+        "10.1016/j.physletb.2012.09.013", 
+        "1452640", 
+        "1206.2056", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2012-160"
+        ]
+    ], 
+    "1126963": [
+        "$D_{s}^+$ meson production at central rapidity in proton--proton collisions at $\\sqrt{s}=7$ TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2012.10.049", 
+        "1470971", 
+        "1208.1948", 
+        "ins1126963", 
+        null, 
+        [
+            "CERN-PH-EP-2012-227"
+        ]
+    ], 
+    "1126966": [
+        "Pion, Kaon, and Proton Production in Central Pb--Pb Collisions at $\\sqrt{s_{NN}} = 2.76$ TeV", 
+        "ALICE", 
+        "10.1103/PhysRevLett.109.252301", 
+        "1471385", 
+        "1208.1974", 
+        "ins1126966", 
+        null, 
+        [
+            "CERN-PH-EP-2012-230"
+        ]
+    ], 
+    "1182213": [
+        "Production of $K^*(892)^0$ and $\\phi(1020)$ in $pp$ collisions at $\\sqrt{s}=7$ TeV", 
+        "ALICE", 
+        "10.1140/epjc/s10052-012-2183-y", 
+        "1463889", 
+        "1208.5717", 
+        "ins1182213", 
+        null, 
+        [
+            "CERN-PH-EP-2012-221"
+        ]
+    ]
+}

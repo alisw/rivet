@@ -24,25 +24,25 @@ LogY=0
 # END PLOT
 # BEGIN PLOT /ATLAS_2012_CONF_2012_105/eTmiss_ee
 Title=Missing Transverse Energy for $ee$ events
-XLabel=$E^{\rm miss}_{\mathrm{T}}$ [GeV]
-YLabel=$\mathrm{Events}/50$\,GeV
+XLabel=$E^\mathrm{miss}_{\mathrm{T}}$ [GeV]
+YLabel=$\mathrm{Events}/50$$\,$GeV
 LogY=1
 # END PLOT
 # BEGIN PLOT /ATLAS_2012_CONF_2012_105/eTmiss_emu
 Title=Missing Transverse Energy for $e\mu$ events
-XLabel=$E^{\rm miss}_{\mathrm{T}}$ [GeV]
-YLabel=$\mathrm{Events}/50$\,GeV
+XLabel=$E^\mathrm{miss}_{\mathrm{T}}$ [GeV]
+YLabel=$\mathrm{Events}/50$$\,$GeV
 LogY=1
 # END PLOT
 # BEGIN PLOT /ATLAS_2012_CONF_2012_105/eTmiss_mumu
 Title=Missing Transverse Energy for $\mu\mu$ events
-XLabel=$E^{\rm miss}_{\mathrm{T}}$ [GeV]
-YLabel=$\mathrm{Events}/50$\,GeV
+XLabel=$E^\mathrm{miss}_{\mathrm{T}}$ [GeV]
+YLabel=$\mathrm{Events}/50$$\,$GeV
 LogY=1
 # END PLOT
 # BEGIN PLOT /ATLAS_2012_CONF_2012_105/eTmiss_ll
 Title=Missing Transverse Energy for $\ell\ell$ events
-XLabel=$E^{\rm miss}_{\mathrm{T}}$ [GeV]
-YLabel=$\mathrm{Events}/50$\,GeV
+XLabel=$E^\mathrm{miss}_{\mathrm{T}}$ [GeV]
+YLabel=$\mathrm{Events}/50$$\,$GeV
 LogY=1
 # END PLOT

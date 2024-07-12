@@ -1,18 +1,26 @@
 #ifndef RIVET_MATH_VECTOR4
 #define RIVET_MATH_VECTOR4
 
-#include "Rivet/Math/MathHeader.hh"
+#include "Rivet/Tools/TypeTraits.hh"
+#include "Rivet/Math/MathConstants.hh"
 #include "Rivet/Math/MathUtils.hh"
 #include "Rivet/Math/VectorN.hh"
 #include "Rivet/Math/Vector3.hh"
+
+// Forward declaration
+namespace fastjet { class PseudoJet; }
 
 namespace Rivet {
 
 
   class FourVector;
-  class FourMomentum;
-  class LorentzTransform;
   typedef FourVector Vector4;
+  typedef FourVector V4;
+
+  class FourMomentum;
+  typedef FourMomentum P4;
+
+  class LorentzTransform;
   FourVector transform(const LorentzTransform& lt, const FourVector& v4);
 
 
@@ -29,8 +37,8 @@ namespace Rivet {
 
     FourVector() : Vector<4>() { }
 
-    template<typename V4>
-    FourVector(const V4& other) {
+    template<typename V4TYPE, typename std::enable_if<HasXYZT<V4TYPE>::value, int>::type DUMMY=0>
+    FourVector(const V4TYPE& other) {
       this->setT(other.t());
       this->setX(other.x());
       this->setY(other.y());
@@ -48,6 +56,13 @@ namespace Rivet {
     }
 
     virtual ~FourVector() { }
+
+    /// @brief Cast operator to FastJet PseudoJet
+    ///
+    /// Needed, since otherwise the PseudoJet template constructor assumes
+    /// the indices [0-3] mean px,py,pz,E... but Rivet uses E,px,py,pz ordering.
+    operator fastjet::PseudoJet () const;
+
 
   public:
 
@@ -181,36 +196,36 @@ namespace Rivet {
     }
 
     /// Contract two 4-vectors, with metric signature (+ - - -).
-    double operator*(const FourVector& v) const {
+    double operator * (const FourVector& v) const {
       return contract(v);
     }
 
     /// Multiply by a scalar.
-    FourVector& operator*=(double a) {
+    FourVector& operator *= (double a) {
       _vec = multiply(a, *this)._vec;
       return *this;
     }
 
     /// Divide by a scalar.
-    FourVector& operator/=(double a) {
+    FourVector& operator /= (double a) {
       _vec = multiply(1.0/a, *this)._vec;
       return *this;
     }
 
     /// Add to this 4-vector.
-    FourVector& operator+=(const FourVector& v) {
+    FourVector& operator += (const FourVector& v) {
       _vec = add(*this, v)._vec;
       return *this;
     }
 
     /// Subtract from this 4-vector. NB time as well as space components are subtracted.
-    FourVector& operator-=(const FourVector& v) {
+    FourVector& operator -= (const FourVector& v) {
       _vec = add(*this, -v)._vec;
       return *this;
     }
 
     /// Multiply all components (space and time) by -1.
-    FourVector operator-() const {
+    FourVector operator - () const {
       FourVector result;
       result._vec = -_vec;
       return result;
@@ -246,15 +261,15 @@ namespace Rivet {
     return multiply(a, v);
   }
 
-  inline FourVector operator*(const double a, const FourVector& v) {
+  inline FourVector operator * (const double a, const FourVector& v) {
     return multiply(a, v);
   }
 
-  inline FourVector operator*(const FourVector& v, const double a) {
+  inline FourVector operator * (const FourVector& v, const double a) {
     return multiply(a, v);
   }
 
-  inline FourVector operator/(const FourVector& v, const double a) {
+  inline FourVector operator / (const FourVector& v, const double a) {
     return multiply(1.0/a, v);
   }
 
@@ -307,8 +322,8 @@ namespace Rivet {
   public:
     FourMomentum() { }
 
-    template<typename V4>
-    FourMomentum(const V4& other) {
+   template<typename V4TYPE, typename std::enable_if<HasXYZT<V4TYPE>::value, int>::type DUMMY=0>
+    FourMomentum(const V4TYPE& other) {
       this->setE(other.t());
       this->setPx(other.x());
       this->setPy(other.y());
@@ -673,20 +688,16 @@ namespace Rivet {
       return p3()/E();
     }
 
-    /// @brief Deprecated alias for betaVec
-    /// @deprecated This will be removed; use betaVec() instead
-    Vector3 boostVector() const { return betaVec(); }
-
     //@}
 
 
     ////////////////////////////////////////
 
 
-    /// @name Sorting helpers
-    //@{
+    /// @cond HIDDEN
 
     /// Struct for sorting by increasing energy
+    /// @deprecated Use cmpMomByEAsc
     struct byEAscending {
       bool operator()(const FourMomentum& left, const FourMomentum& right) const{
         const double pt2left = left.E();
@@ -701,6 +712,7 @@ namespace Rivet {
 
 
     /// Struct for sorting by decreasing energy
+    /// @deprecated Use cmpMomByE
     struct byEDescending {
       bool operator()(const FourMomentum& left, const FourMomentum& right) const{
         return byEAscending()(right, left);
@@ -711,7 +723,7 @@ namespace Rivet {
       }
     };
 
-    //@}
+    /// @endcond HIDDEN
 
 
     ////////////////////////////////////////
@@ -816,7 +828,6 @@ namespace Rivet {
 
 
   };
-
 
 
   inline FourMomentum multiply(const double a, const FourMomentum& v) {
@@ -1249,63 +1260,63 @@ namespace Rivet {
   //@{
 
   /// Calculate the difference in pseudorapidity between two vectors.
-  inline double deltaEta(const FourMomentum& a, const FourMomentum& b) {
-    return deltaEta(a.vector3(), b.vector3());
+  inline double deltaEta(const FourMomentum& a, const FourMomentum& b, bool sign=false) {
+    return deltaEta(a.vector3(), b.vector3(), sign);
   }
 
   /// Calculate the difference in pseudorapidity between two vectors.
-  inline double deltaEta(const FourMomentum& v, double eta2) {
-    return deltaEta(v.vector3(), eta2);
+  inline double deltaEta(const FourMomentum& v, double eta2, bool sign=false) {
+    return deltaEta(v.vector3(), eta2, sign);
   }
 
   /// Calculate the difference in pseudorapidity between two vectors.
-  inline double deltaEta(double eta1, const FourMomentum& v) {
-    return deltaEta(eta1, v.vector3());
+  inline double deltaEta(double eta1, const FourMomentum& v, bool sign=false) {
+    return deltaEta(eta1, v.vector3(), sign);
   }
 
   /// Calculate the difference in pseudorapidity between two vectors.
-  inline double deltaEta(const FourVector& a, const FourVector& b) {
-    return deltaEta(a.vector3(), b.vector3());
+  inline double deltaEta(const FourVector& a, const FourVector& b, bool sign=false) {
+    return deltaEta(a.vector3(), b.vector3(), sign);
   }
 
   /// Calculate the difference in pseudorapidity between two vectors.
-  inline double deltaEta(const FourVector& v, double eta2) {
-    return deltaEta(v.vector3(), eta2);
+  inline double deltaEta(const FourVector& v, double eta2, bool sign=false) {
+    return deltaEta(v.vector3(), eta2, sign);
   }
 
   /// Calculate the difference in pseudorapidity between two vectors.
-  inline double deltaEta(double eta1, const FourVector& v) {
-    return deltaEta(eta1, v.vector3());
+  inline double deltaEta(double eta1, const FourVector& v, bool sign=false) {
+    return deltaEta(eta1, v.vector3(), sign);
   }
 
   /// Calculate the difference in pseudorapidity between two vectors.
-  inline double deltaEta(const FourVector& a, const FourMomentum& b) {
-    return deltaEta(a.vector3(), b.vector3());
+  inline double deltaEta(const FourVector& a, const FourMomentum& b, bool sign=false) {
+    return deltaEta(a.vector3(), b.vector3(), sign);
   }
 
   /// Calculate the difference in pseudorapidity between two vectors.
-  inline double deltaEta(const FourMomentum& a, const FourVector& b) {
-    return deltaEta(a.vector3(), b.vector3());
+  inline double deltaEta(const FourMomentum& a, const FourVector& b, bool sign=false) {
+    return deltaEta(a.vector3(), b.vector3(), sign);
   }
 
   /// Calculate the difference in pseudorapidity between two vectors.
-  inline double deltaEta(const FourVector& a, const Vector3& b) {
-    return deltaEta(a.vector3(), b);
+  inline double deltaEta(const FourVector& a, const Vector3& b, bool sign=false) {
+    return deltaEta(a.vector3(), b, sign);
   }
 
   /// Calculate the difference in pseudorapidity between two vectors.
-  inline double deltaEta(const Vector3& a, const FourVector& b) {
-    return deltaEta(a, b.vector3());
+  inline double deltaEta(const Vector3& a, const FourVector& b, bool sign=false) {
+    return deltaEta(a, b.vector3(), sign);
   }
 
   /// Calculate the difference in pseudorapidity between two vectors.
-  inline double deltaEta(const FourMomentum& a, const Vector3& b) {
-    return deltaEta(a.vector3(), b);
+  inline double deltaEta(const FourMomentum& a, const Vector3& b, bool sign=false) {
+    return deltaEta(a.vector3(), b, sign);
   }
 
   /// Calculate the difference in pseudorapidity between two vectors.
-  inline double deltaEta(const Vector3& a, const FourMomentum& b) {
-    return deltaEta(a, b.vector3());
+  inline double deltaEta(const Vector3& a, const FourMomentum& b, bool sign=false) {
+    return deltaEta(a, b.vector3(), sign);
   }
 
   //@}
@@ -1315,18 +1326,18 @@ namespace Rivet {
   //@{
 
   /// Calculate the difference in rapidity between two 4-momentum vectors.
-  inline double deltaRap(const FourMomentum& a, const FourMomentum& b) {
-    return deltaRap(a.rapidity(), b.rapidity());
+  inline double deltaRap(const FourMomentum& a, const FourMomentum& b, bool sign=false) {
+    return deltaRap(a.rapidity(), b.rapidity(), sign);
   }
 
   /// Calculate the difference in rapidity between two 4-momentum vectors.
-  inline double deltaRap(const FourMomentum& v, double y2) {
-    return deltaRap(v.rapidity(), y2);
+  inline double deltaRap(const FourMomentum& v, double y2, bool sign=false) {
+    return deltaRap(v.rapidity(), y2, sign);
   }
 
   /// Calculate the difference in rapidity between two 4-momentum vectors.
-  inline double deltaRap(double y1, const FourMomentum& v) {
-    return deltaRap(y1, v.rapidity());
+  inline double deltaRap(double y1, const FourMomentum& v, bool sign=false) {
+    return deltaRap(y1, v.rapidity(), sign);
   }
 
   //@}
@@ -1335,8 +1346,11 @@ namespace Rivet {
   //////////////////////////////////////////////////////
 
 
-  /// @name 4-vector comparison functions (for sorting)
-  //@{
+  /// @defgroup momutils Functions for 4-momenta
+  /// @{
+
+  /// @defgroup momutils_cmp 4-vector comparison functions (for sorting)
+  /// @{
 
   /// Comparison to give a sorting by decreasing pT
   inline bool cmpMomByPt(const FourMomentum& a, const FourMomentum& b) {
@@ -1428,7 +1442,7 @@ namespace Rivet {
 
   /// Sort a container of momenta by cmp and return by reference for non-const inputs
   template<typename MOMS, typename CMP>
-  inline MOMS& sortBy(MOMS& pbs, const CMP& cmp) {
+  inline MOMS& isortBy(MOMS& pbs, const CMP& cmp) {
     std::sort(pbs.begin(), pbs.end(), cmp);
     return pbs;
   }
@@ -1442,8 +1456,8 @@ namespace Rivet {
 
   /// Sort a container of momenta by pT (decreasing) and return by reference for non-const inputs
   template<typename MOMS>
-  inline MOMS& sortByPt(MOMS& pbs) {
-    return sortBy(pbs, cmpMomByPt);
+  inline MOMS& isortByPt(MOMS& pbs) {
+    return isortBy(pbs, cmpMomByPt);
   }
   /// Sort a container of momenta by pT (decreasing) and return by value for const inputs
   template<typename MOMS>
@@ -1453,8 +1467,8 @@ namespace Rivet {
 
   /// Sort a container of momenta by E (decreasing) and return by reference for non-const inputs
   template<typename MOMS>
-  inline MOMS& sortByE(MOMS& pbs) {
-    return sortBy(pbs, cmpMomByE);
+  inline MOMS& isortByE(MOMS& pbs) {
+    return isortBy(pbs, cmpMomByE);
   }
   /// Sort a container of momenta by E (decreasing) and return by value for const inputs
   template<typename MOMS>
@@ -1464,8 +1478,8 @@ namespace Rivet {
 
   /// Sort a container of momenta by Et (decreasing) and return by reference for non-const inputs
   template<typename MOMS>
-  inline MOMS& sortByEt(MOMS& pbs) {
-    return sortBy(pbs, cmpMomByEt);
+  inline MOMS& isortByEt(MOMS& pbs) {
+    return isortBy(pbs, cmpMomByEt);
   }
   /// Sort a container of momenta by Et (decreasing) and return by value for const inputs
   template<typename MOMS>
@@ -1473,17 +1487,11 @@ namespace Rivet {
     return sortBy(pbs, cmpMomByEt);
   }
 
-  //@}
+  /// @}
 
 
-  /// @name MT calculation
-  //@{
-
-  /// Calculate transverse mass of a visible and an invisible 3-vector
-  inline double mT(const Vector3& vis, const Vector3& invis) {
-    // return sqrt(2*vis.perp()*invis.perp() * (1 - cos(deltaPhi(vis, invis))) );
-    return mT(vis.perp(), invis.perp(), deltaPhi(vis, invis));
-  }
+  /// @defgroup momutils_mt MT calculation
+  /// @{
 
   /// Calculate transverse mass of a visible and an invisible 4-vector
   inline double mT(const FourMomentum& vis, const FourMomentum& invis) {
@@ -1500,18 +1508,18 @@ namespace Rivet {
     return mT(vis, invis.p3());
   }
 
-  //@}
+  /// @}
 
 
   //////////////////////////////////////////////////////
 
 
-  /// @name 4-vector string representations
-  //@{
+  /// @defgroup momutils_str 4-vector string representations
+  /// @{
 
   /// Render a 4-vector as a string.
   inline std::string toString(const FourVector& lv) {
-    ostringstream out;
+    std::ostringstream out;
     out << "("  << (fabs(lv.t()) < 1E-30 ? 0.0 : lv.t())
         << "; " << (fabs(lv.x()) < 1E-30 ? 0.0 : lv.x())
         << ", " << (fabs(lv.y()) < 1E-30 ? 0.0 : lv.y())
@@ -1526,24 +1534,15 @@ namespace Rivet {
     return out;
   }
 
-  //@}
+  /// @}
 
-
-  /// @name Typedefs of vector types to short names
-  /// @todo Switch canonical and alias names
-  //@{
-  //typedef FourVector V4; //< generic
-  typedef FourVector X4; //< spatial
-  typedef FourMomentum P4; //< momentum
-  //@}
-
-  /// @name Typedefs for lists of vector types
-  //@{
+  /// Typedefs for lists of vector types
+  /// @{
   typedef std::vector<FourVector> FourVectors;
   typedef std::vector<FourMomentum> FourMomenta;
-  typedef std::vector<X4> X4s;
-  typedef std::vector<P4> P4a;
-  //@}
+  /// @}
+
+  /// @}
 
 
 }

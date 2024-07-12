@@ -1,0 +1,42 @@
+Name: H1_1996_I422230
+Year: 1996
+Summary: Charged particle multiplicities in deep inelastic scattering at HERA
+Experiment: H1
+Collider: HERA
+InspireID: 422230
+Status: VALIDATED
+Reentrant: True
+Authors:
+ - Ariadna Leon <ariadna.leon@estudiante.uam.es>
+ - Hannes Jung <hannes.jung@desy.de>
+References:
+ - Z.Phys.C 72 (1996) 573-592
+ - doi:10.1007/s002880050280,10.1007/BF02909189
+ - arXiv:hep-ex/9608011
+ - DESY-96-160
+RunInfo: 'validation with 3000001 events generated RAPGAP33, 26.7x820 GeV, Q2>2, 0.01 < y <0.95, IPRO=12, pt2cut=9, mixing with O(alphas) process, Nf_QCDC=4, NFLA=5'
+Beams: [[e+, p+],[p+, e+]]
+Energies: [[27.5,820],[820,27.5]]
+Description:
+  'Using the H1 detector at HERA, charged particle multiplicity distributions in deep inelastic ep scattering have been measured over a large kinematical region. The evolution with W and Q2 of the multiplicity distribution and of the multiplicity moments in pseudorapidity domains of varying size is studied in the current fragmentation region of the hadronic centre-of-mass frame.
+Data on multiplicity as well as the various moments of the distribution are given in a variety of psuedorapidity regions. The moments are the generalised dispersions (D),  the factorial moments (R), the Muller moments (K) and the C factors (C).'
+ValidationInfo:
+  'For the validation process the histograms od the multiplicity distrributions were compared to the ones generatad by the RivetHZTool. However, some of the moments of the distribution in the different pseudorapidity regions were compared to the plots provided in the paper.  '
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: H1:1996ovs
+BibTeX: '@article{H1:1996ovs,
+    author = "Aid, S. and others",
+    collaboration = "H1",
+    title = "{Charged particle multiplicities in deep inelastic scattering at HERA}",
+    eprint = "hep-ex/9608011",
+    archivePrefix = "arXiv",
+    reportNumber = "DESY-96-160",
+    doi = "10.1007/s002880050280",
+    journal = "Z. Phys. C",
+    volume = "72",
+    pages = "573",
+    year = "1996"
+}
+'

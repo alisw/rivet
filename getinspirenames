@@ -1,0 +1,16 @@
+#! /usr/bin/env bash
+
+IN=src/Analyses
+OUT=spires2inspire.txt
+
+> $OUT
+for acc in $IN/*_S*.cc; do
+    aold=$(basename $acc .cc)
+    echo "Translating $aold"
+    sid=$(echo $aold | sed -e 's/.*_S\([0-9]\+\).*/\1/')
+    iid=$(wget --quiet http://inspirehep.net/search?p=find+key+7075677 -O - | grep /record/ | \
+                 sed -e "s:.*/record/\([0-9]\+\).*:\1:" | sort | uniq)
+    anew=$(echo $aold | sed -e "s/S$sid\+/I$iid/")
+    echo "$aold $anew" >> $OUT
+    #break
+done

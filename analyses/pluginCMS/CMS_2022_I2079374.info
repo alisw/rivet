@@ -1,0 +1,48 @@
+Name: CMS_2022_I2079374
+Year: 2022
+Summary: Measurement of the mass dependence of the transverse momentum of lepton pairs in Drell--Yan production in proton-proton collisions at 13 TeV
+Experiment: CMS
+Collider: LHC
+InspireID: 2079374
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - cms-pag-conveners-smp@cern.ch
+ - Louis Moureaux <louis.moureaux@cern.ch>
+ - Buğra Bilin <Bugra.Bilin@cern.ch>
+ - Itana Bubanja <itana.bubanja@cern.ch>
+ - Philippe Gras <philippe.gras@cern.ch>
+References:
+ - CMS-SMP-20-003
+ - arXiv:2205.04897
+ - Submitted to Eur. Phys. J. C
+RunInfo:
+  'Run MC generators with Z decaying leptonically into both electrons and muons at 13 TeV CoM energy. If only one of the two decay channels is included, set LMODE accordingly.'
+Beams: [p+, p+]
+Energies: [[6500,6500]]
+Options:
+ - LMODE=EL,MU,EMU
+Luminosity_fb: 36.3
+Description:
+  'The double differential cross sections of the Drell-Yan lepton pair ($\ell^+\ell^-$, dielectron or dimuon) production are measured, as functions of the invariant mass $m_{\ell\ell}$, transverse momentum $p_T^{\ell\ell}$, and $\varphi^*_\eta$. The $\varphi^*_\eta$ observable, derived from angular measurements of the leptons and highly correlated with $p_T^{\ell\ell}$, is used to probe the low-$p_T^{\ell\ell}$ region in a complementary way. Dilepton masses up to 1 TeV are investigated. Additionally, a measurement is performed requiring at least one jet in the final state. To benefit from partial cancellation of the systematic uncertainty, the ratios of the differential cross sections for various $m_{\ell\ell}$ ranges to those in the Z mass peak interval are presented. The collected data correspond to an integrated luminosity of 36.3 fb$^{-1}$ of proton-proton collisions recorded with the CMS detector at the LHC at a centre-of-mass energy of 13 TeV. Measurements are compared with predictions based on perturbative quantum chromodynamics, including soft-gluon resummation.'
+ValidationInfo:
+  'Event-by-event validation using the main sample used in the analysis. Routine
+  used to produce some of the predictions used in the paper.'
+Cuts: 'First two leading electrons or muons with $p_T > 25, 20$ GeV and $|\eta| < 2.4$
+     Dilepton invariant mass in the [50,1000] GeV range
+     Jets $p_T > 30$ GeV and $|y| < 2.4$
+     $\Delta{R}($lepton,jet$) > 0.4$'
+BibKey: 'CMS:2022ubq'
+BibTeX: '@article{CMS:2022ubq,
+    collaboration = "CMS",
+    title = "{Measurement of the mass dependence of the transverse momentum of lepton pairs in Drell-Yan production in proton-proton collisions at $\sqrt{s}$ = 13 TeV}",
+    eprint = "2205.04897",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CMS-SMP-20-003, CERN-EP-2022-053",
+    month = "5",
+    year = "2022"
+}'
+ReleaseTests:
+ - $A LHC-13-Z-e :LMODE=EL
+ - $A-2 LHC-13-Z-mu :LMODE=MU

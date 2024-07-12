@@ -1,0 +1,388 @@
+{
+    "686580": [
+        "Observation of a new charmonium state in double charmonium production in e+ e- annihilation at s**(1/2) ~ 10.6-GeV", 
+        "Belle", 
+        "10.1103/PhysRevLett.98.082001", 
+        null, 
+        "hep-ex/0507019", 
+        null, 
+        null, 
+        [
+            "BELLE-CONF-0517", 
+            "LP2005-152", 
+            "EPS05-489"
+        ]
+    ], 
+    "714316": [
+        "Measurements of branching fractions and q**2 distributions for B ---> pi l nu and B ---> rho l nu decays with B ---> D(*) l nu decay tagging", 
+        "Belle", 
+        "10.1016/j.physletb.2007.02.067", 
+        null, 
+        "hep-ex/0604024", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2006-10", 
+            "KEK-PREPRINT-2006-4"
+        ]
+    ], 
+    "723333": [
+        "Measurement of the near-threshold e+ e- ---> D(*)+- D(*)-+ cross section using initial-state radiation", 
+        "Belle", 
+        "10.1103/PhysRevLett.98.092001", 
+        null, 
+        "hep-ex/0608018", 
+        "ins723333", 
+        null, 
+        []
+    ], 
+    "723570": [
+        "Improved measurements of branching fractions and CP asymmetries in B ---> eta h decays", 
+        "Belle", 
+        "10.1103/PhysRevD.75.071104", 
+        null, 
+        "hep-ex/0608033", 
+        null, 
+        null, 
+        [
+            "BELLE-CONF-0631"
+        ]
+    ], 
+    "723640": [
+        "Observation of Direct CP-Violation in B0 ---> pi+ pi- Decays and Model-Independent Constraints on phi(2)", 
+        "Belle", 
+        "10.1103/PhysRevLett.98.211801", 
+        null, 
+        "hep-ex/0608035", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2006-50", 
+            "BELLE-PREPRINT-2006-33", 
+            "BELLE-CONF-0649"
+        ]
+    ], 
+    "724051": [
+        "Observation of B decays to two kaons", 
+        "Belle", 
+        "10.1103/PhysRevLett.98.181804", 
+        null, 
+        "hep-ex/0608049", 
+        null, 
+        null, 
+        [
+            "BELLE-CONF-0633"
+        ]
+    ], 
+    "725480": [
+        "Measurements of time-dependent CP violation in B0 ---> omega K0(S), f0(980) K0(S), K0(S) pi0 and K+ K- K0(S) decays", 
+        "Belle", 
+        "10.1103/PhysRevD.76.091103", 
+        null, 
+        "hep-ex/0609006", 
+        null, 
+        null, 
+        [
+            "BELLE-CONF-0648"
+        ]
+    ], 
+    "725651": [
+        "Measurements of Branching Fractions for B ---> K pi and B ---> pi pi Decays with 449 million B anti-B Pairs", 
+        "Belle", 
+        "10.1103/PhysRevLett.99.121601", 
+        null, 
+        "hep-ex/0609015", 
+        null, 
+        null, 
+        [
+            "BELLE-CONF-0632"
+        ]
+    ], 
+    "728187": [
+        "Moments of the electron energy spectrum and partial branching fraction of B ---> X(c) e nu decays at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.75.032001", 
+        null, 
+        "hep-ex/0610012", 
+        null, 
+        null, 
+        [
+            "BELLE-2006-26", 
+            "KEK-2006-37", 
+            "BELLE-CONF-0667"
+        ]
+    ], 
+    "730116": [
+        "Dalitz Analysis of Three-body Charmless B0 ---> K0 pi+ pi- Decay", 
+        "Belle", 
+        "10.1103/PhysRevD.75.012006", 
+        null, 
+        "hep-ex/0610081", 
+        null, 
+        null, 
+        [
+            "BELLE-2006-30"
+        ]
+    ], 
+    "730256": [
+        "Search for B+ ---> J/psi eta' K+ and B0 ---> J/psi eta' K0(s) Decays", 
+        "Belle", 
+        "10.1103/PhysRevD.75.017101", 
+        null, 
+        "hep-ex/0610084", 
+        null, 
+        null, 
+        [
+            "BELLE-2006-29", 
+            "KEK-PREPRINT-2006-41"
+        ]
+    ], 
+    "731753": [
+        "Observation of the decay Upsilon(4S) ---> Upsilon(1S) pi+ pi-", 
+        "Belle", 
+        "10.1103/PhysRevD.75.071103", 
+        null, 
+        "hep-ex/0611026", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2006-51"
+        ]
+    ], 
+    "732592": [
+        "Search for invisible decay of the Upsilon(1S)", 
+        "Belle", 
+        "10.1103/PhysRevLett.98.132001", 
+        null, 
+        "hep-ex/0611041", 
+        null, 
+        null, 
+        []
+    ], 
+    "732595": [
+        "Moments of the Hadronic Invariant Mass Spectrum in $B \\to X_c \\ell \\nu$ Decays at {BELLE}", 
+        "Belle", 
+        "10.1103/PhysRevD.75.032005", 
+        null, 
+        "hep-ex/0611044", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2006-37", 
+            "KEK-PREPRINT-2006-54", 
+            "BELLE-CONF-0668"
+        ]
+    ], 
+    "732726": [
+        "A Search for the rare leptonic decays B+ ---> mu+ nu(mu) and B+ ---> e+ nu(nu)", 
+        "Belle", 
+        "10.1016/j.physletb.2007.01.068", 
+        null, 
+        "hep-ex/0611045", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2006-36", 
+            "KEK-PREPRINT-2006-53"
+        ]
+    ], 
+    "733011": [
+        "Study of anti-B0 ---> D0 pi+ pi- decays", 
+        "Belle", 
+        "10.1103/PhysRevD.76.012006", 
+        null, 
+        "hep-ex/0611054", 
+        null, 
+        null, 
+        [
+            "BELLE-2006-38", 
+            "KEK-2006-55"
+        ]
+    ], 
+    "742119": [
+        "Measurement of CP Asymmetry in a Time-Dependent Dalitz Analysis of B0 ---> (rho pi)0 and a Constraint on the CKM Angle phi(2)", 
+        "Belle", 
+        "10.1103/PhysRevLett.98.221602", 
+        null, 
+        "hep-ex/0701015", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2007-4", 
+            "KEK-PREPRINT-2006-65"
+        ]
+    ], 
+    "743234": [
+        "Search for B decays into eta-prime rho, eta-prime K*, eta-prime phi, eta-prime omega and eta-prime eta-(prime) at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.75.092002", 
+        null, 
+        "hep-ex/0701046", 
+        null, 
+        null, 
+        [
+            "KEK-2006-70", 
+            "BELLE-2007-7"
+        ]
+    ], 
+    "744899": [
+        "Evidence for CP violation in B0 ---> D+D- decays", 
+        "Belle", 
+        "10.1103/PhysRevLett.98.221802", 
+        null, 
+        "hep-ex/0702031", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2007-11", 
+            "KEK-PREPRINT-2006-75"
+        ]
+    ], 
+    "745605": [
+        "Measurement of EPR-type flavour entanglement in Upsilon(4S) ---> B0 anti-B0 decays", 
+        "Belle", 
+        "10.1103/PhysRevLett.99.131802", 
+        null, 
+        "quant-ph/0702267", 
+        null, 
+        null, 
+        [
+            "BELLE-2006-40", 
+            "KEK-2006-61"
+        ]
+    ], 
+    "745737": [
+        "Search for lepton flavor violating tau- decays into l- eta, l- eta-prime and l- pi0", 
+        "Belle", 
+        "10.1016/j.physletb.2007.03.027", 
+        null, 
+        "hep-ex/0703009", 
+        null, 
+        null, 
+        [
+            "BELLE-PRERPINT-2007-13", 
+            "KEK-PRERPINT-2006-78"
+        ]
+    ], 
+    "747654": [
+        "Search for B0 ---> p anti-p, Lambda anti-Lambda and B+ ---> p anti-Lambda at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.75.111101", 
+        null, 
+        "hep-ex/0703048", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2007-16", 
+            "KEK-PREPRINT-2007-1"
+        ]
+    ], 
+    "748966": [
+        "Observation of the decay anti-B0 ---> D(s)+ Lambda anti-p", 
+        "Belle", 
+        "10.1103/PhysRevD.76.051102", 
+        null, 
+        "0704.2652", 
+        null, 
+        null, 
+        []
+    ], 
+    "748975": [
+        "Study of B+ ---> p anti-Lambda gamma, p anti-Lambda pi0 and B0 ---> p anti-Lambda pi-", 
+        "Belle", 
+        "10.1103/PhysRevD.76.052004", 
+        null, 
+        "0704.2672", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2007-19", 
+            "KEK-PREPRINT-2007-6"
+        ]
+    ], 
+    "749358": [
+        "High statistics measurement of the cross-sections of gamma gamma ---> pi+ pi- production", 
+        "Belle", 
+        "10.1143/JPSJ.76.074102", 
+        null, 
+        "0704.3538", 
+        "ins749358", 
+        null, 
+        []
+    ], 
+    "753101": [
+        "Measurement of Branching Fraction and Time-Dependent CP Asymmetry Parameters in B0 ---> D*+ D*- K0(s) Decays", 
+        "Belle", 
+        "10.1103/PhysRevD.76.072004", 
+        null, 
+        "0706.2045", 
+        null, 
+        null, 
+        [
+            "BELLE-2007-25", 
+            "KEK-2007-14"
+        ]
+    ], 
+    "753243": [
+        "Study of tau- ---> K(S) pi- nu(tau) decay at Belle", 
+        "Belle", 
+        "10.1016/j.physletb.2007.08.045", 
+        null, 
+        "0706.2231", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2007-28", 
+            "KEK-PREPRINT-2007-17"
+        ]
+    ], 
+    "754336": [
+        "Observation of B0 ---> D*- tau+ nu(tau) decay at Belle", 
+        "Belle", 
+        "10.1103/PhysRevLett.99.191807", 
+        null, 
+        "0706.4429", 
+        null, 
+        null, 
+        []
+    ], 
+    "754596": [
+        "Search for $B \\to h^{(*)} \\nu \\bar\\nu$ decays at Belle", 
+        "Belle", 
+        "10.1103/PhysRevLett.99.221802", 
+        null, 
+        "0707.0138", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2007-30", 
+            "KEK-PREPRINT-2007-22"
+        ]
+    ], 
+    "756012": [
+        "Measurement of e+ e- ---> pi+ pi- J/psi cross-section via initial state radiation at Belle", 
+        "Belle", 
+        "10.1103/PhysRevLett.99.182004", 
+        null, 
+        "0707.2541", 
+        "ins756012", 
+        null, 
+        [
+            "BELLE-PREPRINT-2007-31", 
+            "KEK-PREPRINT-2007-23"
+        ]
+    ], 
+    "756643": [
+        "Observation of Two Resonant Structures in e+e- to pi+ pi- psi(2S) via Initial State Radiation at Belle", 
+        "Belle", 
+        "10.1103/PhysRevLett.99.142002", 
+        null, 
+        "0707.3699", 
+        "ins756643", 
+        null, 
+        [
+            "BELLE-2007-33", 
+            "KEK-2007-27"
+        ]
+    ]
+}

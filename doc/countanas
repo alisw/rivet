@@ -1,0 +1,7 @@
+#! /usr/bin/env bash
+
+for t in $(git tag | sort -r); do
+    epoch=$(git show -s --format=%at $t)
+    nanas=$(git ls-tree --full-tree -r --name-only $t src/Analyses/ src/Analysis/ analyses | grep '\.cc' | wc -w)
+    echo "$t $epoch $nanas"
+done

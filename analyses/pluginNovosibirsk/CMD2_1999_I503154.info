@@ -1,0 +1,32 @@
+Name: CMD2_1999_I503154
+Year: 1999
+Summary:  Cross section for $e^+e^-\to\eta\gamma$ for energies near the $\phi$ mass
+Collider: VEPP-2M
+InspireID: 503154
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B460 (1999) 242-247, 1999 
+RunInfo: e+ e- to hadrons below 0.6 and 1.38 GeV
+NeedCrossSection: yes
+Beams: [e+, e-]
+Description:
+  'Cross section for $e^+e^-\to\eta\gamma$ for energies  near the $\phi$ mass.'
+Keywords:
+BibKey: Akhmetshin:1999zv
+BibTeX: '@article{Akhmetshin:1999zv,
+      author         = "Akhmetshin, R. R. and others",
+      title          = "{Study of the radiative decay phi ---&gt; eta gamma with
+                        CMD-2 detector}",
+      collaboration  = "CMD-2",
+      journal        = "Phys. Lett.",
+      volume         = "B460",
+      year           = "1999",
+      pages          = "242-247",
+      doi            = "10.1016/S0370-2693(99)00748-0",
+      eprint         = "hep-ex/9907003",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = HEP-EX/9907003;%%"
+}'

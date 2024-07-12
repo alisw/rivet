@@ -8,12 +8,13 @@
 
 namespace Rivet {
 
-  ///@brief: ttbar + gamma at 8 TeV
+
+  /// @brief ttbar + gamma at 8 TeV
   class ATLAS_2017_I1604029 : public Analysis {
   public:
 
     // Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2017_I1604029);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2017_I1604029);
 
     // Book histograms and initialise projections before the run
     void init() {
@@ -24,7 +25,7 @@ namespace Rivet {
       PromptFinalState prompt_ph(Cuts::abspid == PID::PHOTON && Cuts::pT > 15*GeV && Cuts::abseta < 2.37);
       declare(prompt_ph, "photons");
 
-      // bare leptons 
+      // bare leptons
       Cut base_cuts = (Cuts::abseta < 2.7) && (Cuts::pT > 10*GeV);
       IdentifiedFinalState bare_leps(base_cuts);
       bare_leps.acceptIdPair(PID::MUON);
@@ -47,22 +48,22 @@ namespace Rivet {
       declare(UnstableParticles(), "ufs");
 
       // jets
-      FastJets jets(fs, FastJets::ANTIKT, 0.4, JetAlg::NO_MUONS, JetAlg::NO_INVISIBLES);
+      FastJets jets(fs, FastJets::ANTIKT, 0.4, JetAlg::Muons::NONE, JetAlg::Invisibles::NONE);
       declare(jets, "jets");
 
+
       // BOOK HISTOGRAMS
-      _h["pt"] = bookHisto1D(2,1,1);
-      _h["eta"] = bookHisto1D(3,1,1);
+      book(_h["pt"],  2,1,1);
+      book(_h["eta"], 3,1,1);
 
     }
 
+
     // Perform the per-event analysis
     void analyze(const Event& event) {
-      
-      const double weight = event.weight();
 
       // analysis extrapolated to 1-lepton-plus-jets channel, where "lepton" cannot be a tau
-      // (i.e. contribution from dileptonic ttbar where one of the leptons is outside 
+      // (i.e. contribution from dileptonic ttbar where one of the leptons is outside
       // the detector acceptance has been subtracted as a background)
       if (applyProjection<PromptFinalState>(event, "prompt_leps").particles().size() != 1)  vetoEvent;
       for (const auto& p : apply<UnstableParticles>(event, "ufs").particles()) {
@@ -101,9 +102,9 @@ namespace Rivet {
 
       // muon jet overlap removal
       vector<DressedLepton> muons;
-      foreach (DressedLepton mu, all_muons) {
+      for (const DressedLepton& mu : all_muons) {
         bool overlaps = false;
-        foreach (Jet jet, jets) {
+        for (const Jet& jet : jets) {
           if (deltaR(mu, jet) < 0.4) {
             overlaps = true;
             break;
@@ -113,7 +114,7 @@ namespace Rivet {
         muons.push_back(mu);
       }
 
-      // one electron XOR one muon 
+      // one electron XOR one muon
       bool isEl = elecs.size() == 1 && muons.size() == 0;
       bool isMu = muons.size() == 1 && elecs.size() == 0;
       if (!isEl && !isMu)  vetoEvent;
@@ -124,14 +125,15 @@ namespace Rivet {
 
       // b-tagging
       Jets bjets;
-      foreach (Jet jet, jets) {
-        if (jet.bTagged(Cuts::pT > 5*GeV))  bjets +=jet;
+      for (const Jet& jet : jets) {
+        if (jet.bTagged(Cuts::pT > 5*GeV)) bjets +=jet;
       }
       if (bjets.empty())  vetoEvent;
 
-      _h["pt"]->fill(photon.pT()/GeV, weight);
-      _h["eta"]->fill(photon.abseta(), weight);
+      _h["pt"]->fill(photon.pT()/GeV);
+      _h["eta"]->fill(photon.abseta());
     }
+
 
     // Normalise histograms etc., after the run
     void finalize() {
@@ -139,11 +141,13 @@ namespace Rivet {
       for (auto &hist : _h) {  scale(hist.second, normto);  }
     }
 
+
   private:
 
     map<string, Histo1DPtr> _h;
+
   };
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2017_I1604029);
+  RIVET_DECLARE_PLUGIN(ATLAS_2017_I1604029);
 }

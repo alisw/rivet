@@ -1,0 +1,27 @@
+BEGIN YODA_SCATTER2D_V2 /REF/NA48_2010_I868871/d01-x01-y01
+IsRef: 1
+Path: /REF/NA48_2010_I868871/d01-x01-y01
+Title: ~
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+5.00000e-01	5.000000e-01	5.000000e-01	-0.276	0.035	0.035
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/NA48_2010_I868871/d02-x01-y01
+IsRef: 1
+Path: /REF/NA48_2010_I868871/d02-x01-y01
+Title: ~
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+5.00000e-01	5.000000e-01	5.000000e-01	-0.452	0.04	0.04
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/NA48_2010_I868871/d03-x01-y01
+IsRef: 1
+Path: /REF/NA48_2010_I868871/d03-x01-y01
+Title: ~
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+
+5.00000e-01	5.000000e-01	5.000000e-01	-0.468	0.05	0.05
+END YODA_SCATTER2D_V2

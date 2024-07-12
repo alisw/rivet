@@ -10,27 +10,17 @@ namespace Rivet {
   class CDF_2000_S4266730 : public Analysis {
   public:
 
-    /// @name Constructors etc.
-    //@{
+    RIVET_DEFAULT_ANALYSIS_CTOR(CDF_2000_S4266730);
 
-    /// Constructor
-    CDF_2000_S4266730()
-      : Analysis("CDF_2000_S4266730")
-    {    }
-
-    //@}
-
-
-  public:
 
     /// @name Analysis methods
     //@{
 
     /// Book histograms and initialise projections before the run
     void init() {
-      FinalState fs(-4.2, 4.2);
+      FinalState fs((Cuts::etaIn(-4.2, 4.2)));
       declare(FastJets(fs, FastJets::CDFJETCLU, 0.7), "Jets");
-      _h_mjj = bookHisto1D(1, 1, 1);
+      book(_h_mjj ,1, 1, 1);
     }
 
 
@@ -46,7 +36,7 @@ namespace Rivet {
       if (fabs(tanh((eta1-eta2)/2)) > 2.0/3.0) vetoEvent;
       double mjj = FourMomentum(jet1+jet2).mass()/GeV;
       if (mjj < 180) vetoEvent;
-      _h_mjj->fill(mjj, event.weight());
+      _h_mjj->fill(mjj);
     }
 
 
@@ -67,8 +57,6 @@ namespace Rivet {
 
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CDF_2000_S4266730);
-
+  RIVET_DECLARE_ALIASED_PLUGIN(CDF_2000_S4266730, CDF_2000_I511377);
 
 }

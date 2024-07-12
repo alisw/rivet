@@ -5,10 +5,11 @@ Experiment: ATLAS
 Collider: LHC
 SpiresID:
 Status: OBSOLETE
+Reentrant: true
 Authors:
  - Angela Chen <aqchen@fas.harvard.edu>
 References:
- - arXiv:nnnn.nnnn
+ - ATLAS_2011_CONF_2011_098
 RunInfo:
   BSM signal events at 7000 GeV.
 NumEvents: 25000 for BSM signals

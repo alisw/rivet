@@ -1,18 +1,21 @@
 // -*- C++ -*-
 #include "Rivet/Analysis.hh"
+#include "Rivet/Projections/Beam.hh"
 #include "Rivet/Projections/ChargedFinalState.hh"
+#include "Rivet/Projections/SingleValueProjection.hh"
 #include "Rivet/Tools/AliceCommon.hh"
 #include "Rivet/Projections/AliceCommon.hh"
 
 namespace Rivet {
 
-  /// @brief ALICE PbPb at 2.76 TeV azimuthal di-hadron correlations
-  class ALICE_2012_I930312 : public Analysis {
 
+  /// ALICE PbPb at 2.76 TeV azimuthal di-hadron correlations
+  class ALICE_2012_I930312 : public Analysis {
   public:
 
     // Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(ALICE_2012_I930312);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ALICE_2012_I930312);
+
 
     /// @name Analysis methods
     //@{
@@ -21,8 +24,7 @@ namespace Rivet {
     void init() {
 
       // Declare centrality projection
-      declareCentrality(ALICE::V0MMultiplicity(),
-        "ALICE_2015_PBPBCentrality", "V0M", "V0M");
+      declareCentrality(ALICE::V0MMultiplicity(), "ALICE_2015_PBPBCentrality", "V0M", "V0M");
 
       // Projection for trigger particles: charged, primary particles
       // with |eta| < 1.0 and 8 < pT < 15 GeV/c
@@ -46,14 +48,51 @@ namespace Rivet {
       // Initialize trigger counters and yield histograms
       string title = "Per trigger particle yield";
       string xtitle = "$\\Delta\\eta$ (rad)";
-      string ytitle =
-        "$1 / N_{trig} {\\rm d}N_{assoc} / {\\rm d}\\Delta\\eta$ (rad$^-1$)";
+      string ytitle = "$1 / N_{trig} {\\rm d}N_{assoc} / {\\rm d}\\Delta\\eta$ (rad$^-1$)";
+      string hYieldName[EVENT_TYPES][PT_BINS];
       for (int itype = 0; itype < EVENT_TYPES; ++itype) {
-        _counterTrigger[itype] = bookCounter("counter." + toString(itype));
+        book(_counterTrigger[itype], "counter." + toString(itype));
         for (int ipt = 0; ipt < PT_BINS; ++ipt) {
-          string name = "yield." + evString[itype] + ".pt" + toString(ipt);
-          _histYield[itype][ipt] = bookHisto1D(name, 36,
-            -0.5*M_PI, 1.5*M_PI, title, xtitle, ytitle);
+          hYieldName[itype][ipt]= "yield." + evString[itype] + ".pt" + toString(ipt);
+          book(_histYield[itype][ipt], hYieldName[itype][ipt], 36, -0.5*M_PI, 1.5*M_PI);
+        }
+      }
+
+      // Find out the beam type, also specified from option.
+      string beamOpt = getOption<string>("beam","NONE");
+      if (beamOpt != "NONE") {
+        MSG_WARNING("You are using a specified beam type, instead of using what"
+                    "is provided by the generator. "
+                    "Only do this if you are completely sure what you are doing.");
+        if (beamOpt=="PP") isHI = false;
+        else if (beamOpt=="HI") isHI = true;
+        else {
+          MSG_ERROR("Beam option error. You have specified an unsupported beam.");
+          return;
+      	}
+      }
+      else {
+        const ParticlePair& beam = beams();
+        if (beam.first.pid() == PID::PROTON && beam.second.pid() == PID::PROTON) isHI = false;
+        else if (beam.first.pid() == PID::LEAD && beam.second.pid() == PID::LEAD)
+          isHI = true;
+        else {
+          MSG_WARNING("Beam unspecified. Assuming you are running rivet-merge.");
+        }
+      }
+
+      // Initialize IAA and ICP histograms
+      book(_histIAA[0], 1, 1, 1);
+      book(_histIAA[1], 2, 1, 1);
+      book(_histIAA[2], 5, 1, 1);
+      book(_histIAA[3], 3, 1, 1);
+      book(_histIAA[4], 4, 1, 1);
+      book(_histIAA[5], 6, 1, 1);
+
+      // Initialize background-subtracted yield histograms
+      for (int itype = 0; itype < EVENT_TYPES; ++itype) {
+        for (int ipt = 0; ipt < PT_BINS; ++ipt) {
+          book(_histYieldNoBkg[itype][ipt], hYieldName[itype][ipt] + ".nobkg", 36, -0.5*M_PI, 1.5*M_PI);
         }
       }
 
@@ -62,8 +101,6 @@ namespace Rivet {
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-
-      const double weight = event.weight();
 
       // Trigger particles
       Particles trigParticles =
@@ -83,8 +120,7 @@ namespace Rivet {
       // is equal to 0 and assign 'false' in that case, which is usually wrong.
       // This might be changed in the future
       int ev_type = 0; // pp
-      const HepMC::HeavyIon* hi = event.genEvent()->heavy_ion();
-      if (hi && hi->is_valid()) {
+      if ( isHI ) {
         // Prepare centrality projection and value
         const CentralityProjection& centrProj =
           apply<CentralityProjection>(event, "V0M");
@@ -99,7 +135,7 @@ namespace Rivet {
       }
 
       // Fill trigger histogram for a proper event type
-      _counterTrigger[ev_type]->fill(trigParticles.size()*weight);
+      _counterTrigger[ev_type]->fill(trigParticles.size());
 
       // Loop over trigger particles
       for (const Particle& trigParticle : trigParticles) {
@@ -115,7 +151,7 @@ namespace Rivet {
                 double dPhi = deltaPhi(trigParticle, assocParticle, true);
                 if (dPhi < -0.5 * M_PI) dPhi += 2 * M_PI;
                 // Fill yield histogram for calculated delta phi
-                _histYield[ev_type][ipt]->fill(dPhi, weight);
+                _histYield[ev_type][ipt]->fill(dPhi);
               }
             }
           }
@@ -138,27 +174,6 @@ namespace Rivet {
       // Skip postprocessing if pp or PbPb histograms are not available
       if (!(pp_available && PbPb_available))
         return;
-
-      // Initialize IAA and ICP histograms
-      _histIAA[0] = bookScatter2D(1, 1, 1);
-      _histIAA[1] = bookScatter2D(2, 1, 1);
-      _histIAA[2] = bookScatter2D(5, 1, 1);
-      _histIAA[3] = bookScatter2D(3, 1, 1);
-      _histIAA[4] = bookScatter2D(4, 1, 1);
-      _histIAA[5] = bookScatter2D(6, 1, 1);
-
-      // Initialize background-subtracted yield histograms
-      for (int itype = 0; itype < EVENT_TYPES; ++itype) {
-        for (int ipt = 0; ipt < PT_BINS; ++ipt) {
-          string newname = _histYield[itype][ipt]->name() + ".nobkg";
-          string newtitle = _histYield[itype][ipt]->title() +
-            ", background subtracted";
-          _histYieldNoBkg[itype][ipt] =
-            bookHisto1D(newname, 36, -0.5*M_PI, 1.5*M_PI, newtitle,
-            _histYield[itype][ipt]->annotation("XLabel"),
-            _histYield[itype][ipt]->annotation("YLabel"));
-        }
-      }
 
       // Variable for near and away side peak integral calculation
       double integral[EVENT_TYPES][PT_BINS][2] = { { {0.0} } };
@@ -299,6 +314,7 @@ namespace Rivet {
 
   private:
 
+    bool isHI;
     static const int PT_BINS = 4;
     static const int EVENT_TYPES = 3;
     static const int NEAR = 0;
@@ -315,6 +331,6 @@ namespace Rivet {
   };
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ALICE_2012_I930312);
+  RIVET_DECLARE_PLUGIN(ALICE_2012_I930312);
 
 }

@@ -1,6 +1,5 @@
 // -*- C++ -*-
 #include "Rivet/Analysis.hh"
-#include "Rivet/Tools/BinnedHistogram.hh"
 #include "Rivet/Projections/FinalState.hh"
 #include "Rivet/Projections/ChargedFinalState.hh"
 #include "Rivet/Projections/VisibleFinalState.hh"
@@ -48,21 +47,21 @@ namespace Rivet {
       declare(VisibleFinalState(Cuts::abseta < 4.9),"vfs");
 
       // Book histograms
-      _count_e  = bookHisto1D("count_e" , 1, 0., 1.);
-      _count_mu = bookHisto1D("count_mu", 1, 0., 1.);
+      book(_count_e  ,"count_e" , 1, 0., 1.);
+      book(_count_mu ,"count_mu", 1, 0., 1.);
 
-      _hist_eTmiss_e  = bookHisto1D("hist_eTmiss_e"  , 25, 0., 1000.);
-      _hist_eTmiss_mu = bookHisto1D("hist_eTmiss_mu" , 25, 0., 1000.);
+      book(_hist_eTmiss_e  ,"hist_eTmiss_e"  , 25, 0., 1000.);
+      book(_hist_eTmiss_mu ,"hist_eTmiss_mu" , 25, 0., 1000.);
 
     }
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-      const double weight = event.weight();
+      const double weight = 1.0;
 
       // get the candiate jets
       Jets cand_jets;
-      foreach ( const Jet& jet,
+      for ( const Jet& jet :
                 apply<FastJets>(event, "AntiKtJets04").jetsByPt(20.0*GeV) ) {
         if ( fabs( jet.eta() ) < 2.8 ) {
           cand_jets.push_back(jet);
@@ -71,11 +70,11 @@ namespace Rivet {
 
       // get the candidate "medium" leptons without isolation
       Particles cand_e;
-      foreach( const Particle & e,
+      for( const Particle & e :
                apply<IdentifiedFinalState>(event, "elecs").particlesByPt()) {
         // remove any leptons within 0.4 of any candidate jets
         bool e_near_jet = false;
-        foreach ( const Jet& jet, cand_jets ) {
+        for ( const Jet& jet : cand_jets ) {
           double dR = deltaR(e.momentum(),jet.momentum());
           if ( dR < 0.4 && dR > 0.2 ) {
             e_near_jet = true;
@@ -85,11 +84,11 @@ namespace Rivet {
         if ( ! e_near_jet ) cand_e.push_back(e);
       }
       Particles cand_mu;
-      foreach( const Particle & mu,
+      for( const Particle & mu :
                apply<IdentifiedFinalState>(event, "muons").particlesByPt()) {
         // remove any leptons within 0.4 of any candidate jets
         bool mu_near_jet = false;
-        foreach ( const Jet& jet, cand_jets ) {
+        for ( const Jet& jet : cand_jets ) {
           if ( deltaR(mu.momentum(),jet.momentum()) < 0.4 ) {
             mu_near_jet = true;
             break;
@@ -102,10 +101,10 @@ namespace Rivet {
         apply<ChargedFinalState>(event, "cfs").particles();
       // pTcone around muon track (hard)
       Particles recon_mu;
-      foreach ( const Particle & mu, cand_mu ) {
+      for ( const Particle & mu : cand_mu ) {
         double pTinCone = -mu.pT();
         if(-pTinCone<25.) continue;
-        foreach ( const Particle & track, chg_tracks ) {
+        for ( const Particle & track : chg_tracks ) {
           if ( deltaR(mu.momentum(),track.momentum()) < 0.2 )
             pTinCone += track.pT();
         }
@@ -113,10 +112,10 @@ namespace Rivet {
       }
       // pTcone around electron track (hard)
       Particles recon_e;
-      foreach ( const Particle & e, cand_e ) {
+      for ( const Particle & e : cand_e ) {
         double pTinCone = -e.pT();
         if(-pTinCone<25.) continue;
-        foreach ( const Particle & track, chg_tracks ) {
+        for ( const Particle & track : chg_tracks ) {
           if ( deltaR(e.momentum(),track.momentum()) < 0.2 )
             pTinCone += track.pT();
         }
@@ -125,11 +124,11 @@ namespace Rivet {
 
       // discard jets that overlap with electrons
       Jets recon_jets;
-      foreach ( const Jet& jet, cand_jets ) {
+      for ( const Jet& jet : cand_jets ) {
         if(jet.abseta()>2.5||
            jet.perp()<25.) continue;
         bool away_from_e = true;
-        foreach ( const Particle & e, cand_e ) {
+        for ( const Particle & e : cand_e ) {
           if ( deltaR(e.momentum(),jet.momentum()) < 0.2 ) {
             away_from_e = false;
             break;
@@ -140,7 +139,7 @@ namespace Rivet {
 
       // pTmiss
       FourMomentum pTmiss;
-      foreach ( const Particle & p,
+      for ( const Particle & p :
                 apply<VisibleFinalState>(event, "vfs").particles() ) {
         pTmiss -= p.momentum();
       }
@@ -157,7 +156,7 @@ namespace Rivet {
 
       // start of meff calculation
       double HT=0.;
-      foreach( const Jet & jet, recon_jets) {
+      for( const Jet & jet : recon_jets) {
         double pT = jet.perp();
         if(pT>40.) HT += pT;
       }
@@ -220,6 +219,6 @@ namespace Rivet {
   };
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2012_CONF_2012_104);
+  RIVET_DECLARE_PLUGIN(ATLAS_2012_CONF_2012_104);
 
 }

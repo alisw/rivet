@@ -72,7 +72,7 @@ namespace Rivet {
     void project(const Event& e);
 
     /// Compare with other projections
-    int compare(const Projection& p) const;
+    CmpState compare(const Projection& p) const;
 
 
   public:
@@ -145,7 +145,7 @@ namespace Rivet {
     //@}
 
 
-  private:
+  protected:
 
     /// Eigenvalues.
     vector<double> _lambdas;

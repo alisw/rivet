@@ -1,10 +1,12 @@
 noinst_LTLIBRARIES = libRivetProjections.la
+
 libRivetProjections_la_SOURCES = \
   Beam.cc \
   BeamThrust.cc \
   ChargedFinalState.cc \
   ChargedLeptons.cc \
   CentralEtHCM.cc \
+  DecayedParticles.cc \
   DISDiffHadron.cc \
   DISFinalState.cc \
   DISKinematics.cc \
@@ -16,13 +18,18 @@ libRivetProjections_la_SOURCES = \
   FinalPartons.cc \
   FinalState.cc \
   FParameter.cc \
+  GammaGammaFinalState.cc \
+  GammaGammaKinematics.cc \
+  GammaGammaLeptons.cc \
   HadronicFinalState.cc \
   HeavyHadrons.cc \
   Hemispheres.cc \
+  HepMCHeavyIon.cc \
   IdentifiedFinalState.cc \
   InitialQuarks.cc \
+  InvisibleFinalState.cc \
   InvMassFinalState.cc \
-  JetAlg.cc \
+  JetFinder.cc \
   JetShape.cc \
   LeadingParticlesFinalState.cc \
   MergedFinalState.cc \
@@ -42,9 +49,12 @@ libRivetProjections_la_SOURCES = \
   TriggerCDFRun0Run1.cc \
   TriggerCDFRun2.cc \
   TriggerUA5.cc \
-  UnstableFinalState.cc \
+  UnstableParticles.cc \
   UndressBeamLeptons.cc \
   VetoedFinalState.cc \
   VisibleFinalState.cc \
   WFinder.cc \
   ZFinder.cc
+
+# libRivetProjections_la_CPPFLAGS = $(AM_CPPFLAGS) -I$(HEPTOPTAGGERINCPATH)
+# libRivetProjections_la_SOURCES += HTT.cc

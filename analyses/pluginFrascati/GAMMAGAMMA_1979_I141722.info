@@ -1,0 +1,33 @@
+Name: GAMMAGAMMA_1979_I141722
+Year: 1979
+Summary: Measurement of $R$ and the hadron multiplicity between 1.42 and 3.09 GeV
+Experiment: GAMMAGAMMA
+Collider: ADONE
+InspireID: 141722
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B86 (1979) 234-238, 1979 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: no
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$ in $e^+e^-$ collisions by Gamma-Gamma-2 for energies between 1.42 and 3.09 GeV.
+   The average charged and neutral particle multiplicity is also measured.
+   The individual hadronic and muonic cross sections are also outputted to the yoda file
+   so that ratio $R$ can be recalcuated if runs are combined.'
+BibKey: Bacci:1979ab
+BibTeX: '@article{Bacci:1979ab,
+      author         = "Bacci, C. and others",
+      title          = "{Total Cross-Section for Hadronic Production by e+ e-
+                        Annihilation in the Total Center-Of-Mass Energy Range
+                        1.42-GeV - 3.09-GeV}",
+      journal        = "Phys. Lett.",
+      volume         = "86B",
+      year           = "1979",
+      pages          = "234-238",
+      doi            = "10.1016/0370-2693(79)90828-1",
+      reportNumber   = "LNF-79/34-P",
+      SLACcitation   = "%%CITATION = PHLTA,86B,234;%%"
+}'

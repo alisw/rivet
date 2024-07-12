@@ -1,0 +1,38 @@
+Name: CLEOII_2005_I668268
+Year: 2005
+Summary: Decay asymmetry in $\Lambda^+_c\to\Lambda^0 e^+ \nu_e$ 
+Experiment: CLEOII
+Collider: CESR
+InspireID: 668268
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett.B 323 (1994) 219-226
+RunInfo: Any process producing Lambda_c+, original e+e-
+Description:
+  'Measurement of the decay asymmetry in $\Lambda^+_c\to\Lambda^0 e^+ \nu_e$ by CLEOII.
+  The product of assymetries $\alpha_{\Lambda_c^+}\alpha_\Lambda$ is extracted as that is what is measured not $\alpha_{\Lambda_c^+}$
+  and there has been a significant change in $\alpha_\Lambda$ since this paper was published'
+ValidationInfo:
+  'Herwig7 particle gun'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Hinson:2004pj
+BibTeX: '@article{Hinson:2004pj,
+      author         = "Hinson, J. W. and others",
+      title          = "{Improved measurement of the form-factors in the decay
+                        Lambda+(c) ---&gt; Lambda e+ nu(e)}",
+      collaboration  = "CLEO",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "94",
+      year           = "2005",
+      pages          = "191801",
+      doi            = "10.1103/PhysRevLett.94.191801",
+      eprint         = "hep-ex/0501002",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CLNS-04-1901, CLEO-04-19",
+      SLACcitation   = "%%CITATION = HEP-EX/0501002;%%"
+}'

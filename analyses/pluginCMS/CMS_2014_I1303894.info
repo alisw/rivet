@@ -5,9 +5,10 @@ Experiment: CMS
 Collider: LHC
 InspireID: 1303894
 Status: VALIDATED
+Reentrant: true
 Authors:
- - Darin Baumgartel (darinb@cern.ch)
- - Emanuela Barberis (barberis@fnal.gov)
+ - Darin Baumgartel <darinb@cern.ch>
+ - Emanuela Barberis <barberis@fnal.gov>
 References:
  - Phys. Lett. B741 (2014) 12-37
  - https://inspirehep.net/record/1303894
@@ -18,6 +19,7 @@ RunInfo:
     be achieved with 85M events.
 Beams: [p+, p+]
 Energies: [7000]
+Luminosity_fb: 5.0
 PtCuts:
   Leading muon $pT > 25 GeV$ and leading muon $|eta| < 2.1$
   Jet $pT > 30 GeV$ and $|eta| < 2.4$
@@ -45,3 +47,7 @@ BibTeX: '@article{Khachatryan:2014uva,
       reportNumber   = "CMS-SMP-12-023, CERN-PH-EP-2014-134",
       SLACcitation   = "%%CITATION = ARXIV:1406.7533;%%",
 }'
+
+ReleaseTests:
+ - $A LHC-W-mu
+

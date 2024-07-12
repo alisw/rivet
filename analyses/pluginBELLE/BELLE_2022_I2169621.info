@@ -1,0 +1,33 @@
+Name: BELLE_2022_I2169621
+Year: 2022
+Summary: Exclusive semileptonic $B$ to $D$ decays.
+Experiment: BELLE
+Collider: KEKB
+InspireID: 2169621
+Status: VALIDATED NOHEPDATA
+Reentrant: false
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - arXiv:2210.13143 [hep-ex]
+RunInfo: Any process
+Description:
+  'Measurement of the differential partial width with respect to $w$ for $B$ to $D$ semi-leptonic decays.'
+ValidationInfo:
+  'Herwig 7 events using EvtGen for decays.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle-II:2022ffa
+BibTeX: '@article{Belle-II:2022ffa,
+    author = "Abudinen, F. and others",
+    collaboration = "Belle-II",
+    title = "{Determination of $|V_{cb}|$ from $B\to D\ell\nu$ decays using 2019-2021 Belle II data}",
+    eprint = "2210.13143",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BELLE2-CONF-PH-2022-010",
+    month = "10",
+    year = "2022"
+}
+'

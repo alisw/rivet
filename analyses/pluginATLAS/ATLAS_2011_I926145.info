@@ -3,12 +3,14 @@ Year: 2011
 Summary: Measurement of electron and muon differential cross-section from heavy-flavour decays
 Experiment: ATLAS
 Collider: LHC
-InspireID: 9185208
+InspireID: 926145
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Paul Bell <paul.bell@cern.ch>
  - Holger Schulz <holger.schulz@physik.hu-berlin.de>
 References:
+ - ATLAS-STDM-2011-07
  - CERN-PH-EP-2011-108
  - arXiv:1109.0525 [hep-ex]
 RunInfo:
@@ -36,3 +38,13 @@ BibTeX: '@article{Aad:2011rr,
       reportNumber   = "CERN-PH-EP-2011-108",
       SLACcitation   = "%%CITATION = ARXIV:1109.0525;%%",
 }'
+
+ReleaseTests:
+ - $A LHC-7-Bottom-0
+ - $A-2 LHC-7-Bottom-1
+ - $A-3 LHC-7-Bottom-2
+ - $A-4 LHC-7-Bottom-3
+ - $A-5 LHC-7-Charm-1
+ - $A-6 LHC-7-Charm-2
+ - $A-7 LHC-7-Charm-3
+

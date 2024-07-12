@@ -1,0 +1,32 @@
+Name: OLYA_1984_I208231
+Year: 1984
+Summary:  Cross section for $e^+e^-\to \pi^+\pi^-$ for energies between 640 and 1400 MeV 
+Experiment: OLYA
+Collider: VEPP-2M
+InspireID: 208231
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Sov.J.Nucl.Phys. 40 (1984) 286-295, 1984 
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Description:
+  'Measurement of the cross section for $e^+e^-\to \pi^+\pi^-$ at energies between 640 and 1400 MeV.'
+Keywords: []
+BibKey: Kurdadze:1984dz
+BibTeX: '@article{Kurdadze:1984dz,
+      author         = "Kurdadze, L. M. and Lelchuk, M. {\relax Yu}. and
+                        Pakhtusova, E. V. and Sidorov, V. A. and Skrinsky, A. N.
+                        and Chilingarov, A. G. and Shatunov, {\relax Yu}. M. and
+                        Shvarts, B. A. and Eidelman, S. I.",
+      title          = "{STUDY OF THE REACTION E+ E- ---&gt; PI+ PI- IN THE ENERGY
+                        RANGE FROM 640-MEV - 1400-MEV}",
+      journal        = "Sov. J. Nucl. Phys.",
+      volume         = "40",
+      year           = "1984",
+      pages          = "286-295",
+      note           = "[Yad. Fiz.40,451(1984)]",
+      SLACcitation   = "%%CITATION = SJNCA,40,286;%%"
+}'

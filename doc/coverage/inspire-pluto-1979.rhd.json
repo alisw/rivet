@@ -1,0 +1,86 @@
+{
+    "132578": [
+        "An Experimental Upper Limit for the $\\tau$ Lifetime", 
+        "PLUTO", 
+        "10.1016/0370-2693(79)90721-4", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-78-70"
+        ]
+    ], 
+    "132703": [
+        "Jet Analysis of the $\\Upsilon$ (9.46) Decay Into Charged Hadrons", 
+        "PLUTO", 
+        "10.1016/0370-2693(79)90265-X", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-78-71"
+        ]
+    ], 
+    "140294": [
+        "Cross-Sections and Event Topologies in e+ e- Annihilation at 13-GeV and 17-GeV Observed with the PLUTO Detector", 
+        "PLUTO", 
+        "10.1016/0370-2693(79)90365-4", 
+        null, 
+        null, 
+        "ins140294", 
+        null, 
+        [
+            "DESY-79-11"
+        ]
+    ], 
+    "140818": [
+        "Measurement of Leptonic Branching Ratios of the $\\Upsilon$ (9.46)", 
+        "PLUTO", 
+        "10.1007/BF01546972", 
+        null, 
+        null, 
+        "ins140818", 
+        null, 
+        [
+            "DESY-79-19"
+        ]
+    ], 
+    "142517": [
+        "Search for a 'Top' Threshold in Hadronic $e^+ e^-$ Annihilation at Energies Between 22-{GeV} and 31.6-{GeV}", 
+        "PLUTO", 
+        "10.1016/0370-2693(79)90868-2", 
+        null, 
+        null, 
+        "ins142517", 
+        null, 
+        [
+            "DESY-79-56"
+        ]
+    ], 
+    "142632": [
+        "Evidence for Gluon Bremsstrahlung in e+ e- Annihilations at High-Energies", 
+        "PLUTO", 
+        "10.1016/0370-2693(79)90869-4", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-79-57"
+        ]
+    ], 
+    "142875": [
+        "Hadron Production From Photon - Photon Interactions in the Center-of-mass Energy Range From 1-{GeV} to 5-{GeV}", 
+        "PLUTO", 
+        "10.1016/0370-2693(79)90088-1", 
+        null, 
+        null, 
+        "ins142875", 
+        null, 
+        [
+            "DESY-79-65"
+        ]
+    ]
+}

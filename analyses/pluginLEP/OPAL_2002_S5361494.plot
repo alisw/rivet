@@ -5,6 +5,9 @@ YLabel=$\langle n\rangle_{b\bar b}$
 LegendXPos=0.20
 LegendYPos=0.85
 FullRange=1
+ConnectGaps=1
+XMin=128
+XMax=210
 LogY=0
 # END PLOT
 # BEGIN PLOT /OPAL_2002_S5361494/d01-x01-y02
@@ -15,6 +18,9 @@ LegendXPos=0.20
 LegendYPos=0.85
 FullRange=1
 LogY=0
+ConnectGaps=1
+XMin=128
+XMax=210
 # END PLOT
 # BEGIN PLOT /OPAL_2002_S5361494/d01-x01-y03
 Title=Charged multiplicity as a function of energy in $uds$ events
@@ -24,6 +30,9 @@ LegendXPos=0.20
 LegendYPos=0.85
 FullRange=1
 LogY=0
+ConnectGaps=1
+XMin=128
+XMax=210
 # END PLOT
 # BEGIN PLOT /OPAL_2002_S5361494/d01-x01-y04
 Title=Difference in Charged multiplicity as a function of energy between $b$ and $uds$ events
@@ -33,4 +42,7 @@ LegendXPos=0.20
 LegendYPos=0.85
 FullRange=1
 LogY=0
+ConnectGaps=1
+XMin=128
+XMax=210
 # END PLOT

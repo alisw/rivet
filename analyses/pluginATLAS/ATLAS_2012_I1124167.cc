@@ -20,61 +20,59 @@ namespace Rivet {
     /// Initialization, called once before running
     void init() {
       // Projections
-      ChargedFinalState cfs(-2.5, 2.5, 0.5*GeV);
+      ChargedFinalState cfs(Cuts::abseta < 2.5 && Cuts::pT > 0.5*GeV);
       declare(cfs, "CFS");
-      declare(Sphericity(cfs), "Sphericity");
 
       // Book histograms
-      _hist_T_05_25 = bookHisto1D(1,1,1);
-      _hist_T_05    = bookHisto1D(2,1,1);
-      _hist_T_25_50 = bookHisto1D(1,1,2);
-      _hist_T_25    = bookHisto1D(2,1,2);
-      _hist_T_50_75 = bookHisto1D(1,1,3);
-      _hist_T_50    = bookHisto1D(2,1,3);
-      _hist_T_75_100= bookHisto1D(1,1,4);
-      _hist_T_75    = bookHisto1D(2,1,4);
-      _hist_T_100   = bookHisto1D(2,1,5);
+      book(_hist_T_05_25 ,1,1,1);
+      book(_hist_T_05    ,2,1,1);
+      book(_hist_T_25_50 ,1,1,2);
+      book(_hist_T_25    ,2,1,2);
+      book(_hist_T_50_75 ,1,1,3);
+      book(_hist_T_50    ,2,1,3);
+      book(_hist_T_75_100,1,1,4);
+      book(_hist_T_75    ,2,1,4);
+      book(_hist_T_100   ,2,1,5);
 
-      _hist_TM_05_25 = bookHisto1D(3,1,1);
-      _hist_TM_05    = bookHisto1D(4,1,1);
-      _hist_TM_25_50 = bookHisto1D(3,1,2);
-      _hist_TM_25    = bookHisto1D(4,1,2);
-      _hist_TM_50_75 = bookHisto1D(3,1,3);
-      _hist_TM_50    = bookHisto1D(4,1,3);
-      _hist_TM_75_100= bookHisto1D(3,1,4);
-      _hist_TM_75    = bookHisto1D(4,1,4);
-      _hist_TM_100   = bookHisto1D(4,1,5);
+      book(_hist_TM_05_25 ,3,1,1);
+      book(_hist_TM_05    ,4,1,1);
+      book(_hist_TM_25_50 ,3,1,2);
+      book(_hist_TM_25    ,4,1,2);
+      book(_hist_TM_50_75 ,3,1,3);
+      book(_hist_TM_50    ,4,1,3);
+      book(_hist_TM_75_100,3,1,4);
+      book(_hist_TM_75    ,4,1,4);
+      book(_hist_TM_100   ,4,1,5);
 
-      _hist_S_05_25 = bookHisto1D(5,1,1);
-      _hist_S_05    = bookHisto1D(6,1,1);
-      _hist_S_25_50 = bookHisto1D(5,1,2);
-      _hist_S_25    = bookHisto1D(6,1,2);
-      _hist_S_50_75 = bookHisto1D(5,1,3);
-      _hist_S_50    = bookHisto1D(6,1,3);
-      _hist_S_75_100= bookHisto1D(5,1,4);
-      _hist_S_75    = bookHisto1D(6,1,4);
-      _hist_S_100   = bookHisto1D(6,1,5);
+      book(_hist_S_05_25 ,5,1,1);
+      book(_hist_S_05    ,6,1,1);
+      book(_hist_S_25_50 ,5,1,2);
+      book(_hist_S_25    ,6,1,2);
+      book(_hist_S_50_75 ,5,1,3);
+      book(_hist_S_50    ,6,1,3);
+      book(_hist_S_75_100,5,1,4);
+      book(_hist_S_75    ,6,1,4);
+      book(_hist_S_100   ,6,1,5);
 
 
-      _hist_T_N  = bookProfile1D(7,1,1);
-      _hist_TM_N = bookProfile1D(7,1,2);
-      _hist_S_N  = bookProfile1D(7,1,3);
+      book(_hist_T_N  ,7,1,1);
+      book(_hist_TM_N ,7,1,2);
+      book(_hist_S_N  ,7,1,3);
 
-      _hist_T_S  = bookProfile1D(8,1,1);
-      _hist_TM_S = bookProfile1D(8,1,2);
-      _hist_S_S  = bookProfile1D(8,1,3);
+      book(_hist_T_S  ,8,1,1);
+      book(_hist_TM_S ,8,1,2);
+      book(_hist_S_S  ,8,1,3);
     }
 
 
     void analyze(const Event& event) {
-      const double weight = event.weight();
+      const double weight = 1.0;
 
       // CFS projection and particles
-      const ChargedFinalState& cfs500 = apply<ChargedFinalState>(event, "CFS");
-      ParticleVector particles500 = cfs500.particlesByPt();
+      const Particles& particles500 = apply<ChargedFinalState>(event, "CFS").particlesByPt();
 
       // Require at least 6 charged particles
-      if (cfs500.size() < 6) vetoEvent;
+      if (particles500.size() < 6) vetoEvent;
 
       // Preparation for Thrust calculation
       vector<Vector3> momenta;
@@ -86,7 +84,7 @@ namespace Rivet {
       double pTlead = particles500[0].pT()/GeV;
 
       // Loop over particles
-      foreach (const Particle& p, particles500) {
+      for (const Particle& p : particles500) {
         num500 += 1;
         ptSum500 += p.pT()/GeV;
 
@@ -111,7 +109,8 @@ namespace Rivet {
       Sphericity sphericity;
       sphericity.calc(momenta);
 
-      const double S = sphericity.transSphericity();
+      double S = sphericity.transSphericity();
+      if ( std::isnan(S) )  S = -1.0; // put this in the underflow bin
 
       // Fill histos, most inclusive first
 
@@ -234,6 +233,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2012_I1124167);
+  RIVET_DECLARE_PLUGIN(ATLAS_2012_I1124167);
 
 }

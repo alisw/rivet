@@ -159,69 +159,69 @@ namespace Rivet {
     void init() {
 
       /// Projections:
-      FinalState fs(-4.5, 4.5, 0.*GeV);
+      FinalState fs((Cuts::etaIn(-4.5, 4.5) && Cuts::pT >=  0.*GeV));
       declare(fs, "FS");
       declare(FastJets(fs, FastJets::ANTIKT, 1.0), "AKT");
       declare(FastJets(fs, FastJets::CAM, 1.2)   , "CA" );
 
       /// Histograms:
-      _h_camass.addHistogram(200, 300, bookHisto1D(1, 1, 1));
-      _h_camass.addHistogram(300, 400, bookHisto1D(2, 1, 1));
-      _h_camass.addHistogram(400, 500, bookHisto1D(3, 1, 1));
-      _h_camass.addHistogram(500, 600, bookHisto1D(4, 1, 1));
+      {Histo1DPtr tmp; _h_camass.add(200, 300, book(tmp, 1, 1, 1));}
+      {Histo1DPtr tmp; _h_camass.add(300, 400, book(tmp, 2, 1, 1));}
+      {Histo1DPtr tmp; _h_camass.add(400, 500, book(tmp, 3, 1, 1));}
+      {Histo1DPtr tmp; _h_camass.add(500, 600, book(tmp, 4, 1, 1));}
 
-      _h_filtmass.addHistogram(200, 300, bookHisto1D(5, 1, 1));
-      _h_filtmass.addHistogram(300, 400, bookHisto1D(6, 1, 1));
-      _h_filtmass.addHistogram(400, 500, bookHisto1D(7, 1, 1));
-      _h_filtmass.addHistogram(500, 600, bookHisto1D(8, 1, 1));
+      {Histo1DPtr tmp; _h_filtmass.add(200, 300, book(tmp, 5, 1, 1));}
+      {Histo1DPtr tmp; _h_filtmass.add(300, 400, book(tmp, 6, 1, 1));}
+      {Histo1DPtr tmp; _h_filtmass.add(400, 500, book(tmp, 7, 1, 1));}
+      {Histo1DPtr tmp; _h_filtmass.add(500, 600, book(tmp, 8, 1, 1));}
 
-      _h_ktmass.addHistogram(200, 300, bookHisto1D( 9, 1, 1));
-      _h_ktmass.addHistogram(300, 400, bookHisto1D(10, 1, 1));
-      _h_ktmass.addHistogram(400, 500, bookHisto1D(11, 1, 1));
-      _h_ktmass.addHistogram(500, 600, bookHisto1D(12, 1, 1));
+      {Histo1DPtr tmp; _h_ktmass.add(200, 300, book(tmp,  9, 1, 1));}
+      {Histo1DPtr tmp; _h_ktmass.add(300, 400, book(tmp, 10, 1, 1));}
+      {Histo1DPtr tmp; _h_ktmass.add(400, 500, book(tmp, 11, 1, 1));}
+      {Histo1DPtr tmp; _h_ktmass.add(500, 600, book(tmp, 12, 1, 1));}
 
-      _h_ktd12.addHistogram(200, 300, bookHisto1D(13, 1, 1));
-      _h_ktd12.addHistogram(300, 400, bookHisto1D(14, 1, 1));
-      _h_ktd12.addHistogram(400, 500, bookHisto1D(15, 1, 1));
-      _h_ktd12.addHistogram(500, 600, bookHisto1D(16, 1, 1));
+      {Histo1DPtr tmp; _h_ktd12.add(200, 300, book(tmp, 13, 1, 1));}
+      {Histo1DPtr tmp; _h_ktd12.add(300, 400, book(tmp, 14, 1, 1));}
+      {Histo1DPtr tmp; _h_ktd12.add(400, 500, book(tmp, 15, 1, 1));}
+      {Histo1DPtr tmp; _h_ktd12.add(500, 600, book(tmp, 16, 1, 1));}
 
-      _h_ktd23.addHistogram(200, 300, bookHisto1D(17, 1 ,1));
-      _h_ktd23.addHistogram(300, 400, bookHisto1D(18, 1 ,1));
-      _h_ktd23.addHistogram(400, 500, bookHisto1D(19, 1 ,1));
-      _h_ktd23.addHistogram(500, 600, bookHisto1D(20, 1 ,1));
+      {Histo1DPtr tmp; _h_ktd23.add(200, 300, book(tmp, 17, 1 ,1));}
+      {Histo1DPtr tmp; _h_ktd23.add(300, 400, book(tmp, 18, 1 ,1));}
+      {Histo1DPtr tmp; _h_ktd23.add(400, 500, book(tmp, 19, 1 ,1));}
+      {Histo1DPtr tmp; _h_ktd23.add(500, 600, book(tmp, 20, 1 ,1));}
 
-      _h_cat21.addHistogram(200, 300, bookHisto1D(21, 1, 1));
-      _h_cat21.addHistogram(300, 400, bookHisto1D(22, 1, 1));
-      _h_cat21.addHistogram(400, 500, bookHisto1D(23, 1, 1));
-      _h_cat21.addHistogram(500, 600, bookHisto1D(24, 1, 1));
+      {Histo1DPtr tmp; _h_cat21.add(200, 300, book(tmp, 21, 1, 1));}
+      {Histo1DPtr tmp; _h_cat21.add(300, 400, book(tmp, 22, 1, 1));}
+      {Histo1DPtr tmp; _h_cat21.add(400, 500, book(tmp, 23, 1, 1));}
+      {Histo1DPtr tmp; _h_cat21.add(500, 600, book(tmp, 24, 1, 1));}
 
-      _h_cat32.addHistogram(200, 300, bookHisto1D(25, 1, 1));
-      _h_cat32.addHistogram(300, 400, bookHisto1D(26, 1, 1));
-      _h_cat32.addHistogram(400, 500, bookHisto1D(27, 1, 1));
-      _h_cat32.addHistogram(500, 600, bookHisto1D(28, 1, 1));
+      {Histo1DPtr tmp; _h_cat32.add(200, 300, book(tmp, 25, 1, 1));}
+      {Histo1DPtr tmp; _h_cat32.add(300, 400, book(tmp, 26, 1, 1));}
+      {Histo1DPtr tmp; _h_cat32.add(400, 500, book(tmp, 27, 1, 1));}
+      {Histo1DPtr tmp; _h_cat32.add(500, 600, book(tmp, 28, 1, 1));}
 
-      _h_ktt21.addHistogram(200, 300, bookHisto1D(29, 1, 1));
-      _h_ktt21.addHistogram(300, 400, bookHisto1D(30, 1, 1));
-      _h_ktt21.addHistogram(400, 500, bookHisto1D(31, 1, 1));
-      _h_ktt21.addHistogram(500, 600, bookHisto1D(32, 1, 1));
+      {Histo1DPtr tmp; _h_ktt21.add(200, 300, book(tmp, 29, 1, 1));}
+      {Histo1DPtr tmp; _h_ktt21.add(300, 400, book(tmp, 30, 1, 1));}
+      {Histo1DPtr tmp; _h_ktt21.add(400, 500, book(tmp, 31, 1, 1));}
+      {Histo1DPtr tmp; _h_ktt21.add(500, 600, book(tmp, 32, 1, 1));}
 
-      _h_ktt32.addHistogram(200, 300, bookHisto1D(33, 1, 1));
-      _h_ktt32.addHistogram(300, 400, bookHisto1D(34, 1, 1));
-      _h_ktt32.addHistogram(400, 500, bookHisto1D(35, 1, 1));
-      _h_ktt32.addHistogram(500, 600, bookHisto1D(36, 1, 1));
+      {Histo1DPtr tmp; _h_ktt32.add(200, 300, book(tmp, 33, 1, 1));}
+      {Histo1DPtr tmp; _h_ktt32.add(300, 400, book(tmp, 34, 1, 1));}
+      {Histo1DPtr tmp; _h_ktt32.add(400, 500, book(tmp, 35, 1, 1));}
+      {Histo1DPtr tmp; _h_ktt32.add(500, 600, book(tmp, 36, 1, 1));}
     }
 
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-      const double weight = event.weight();
+      const double weight = 1.0;
 
       using namespace fastjet;
 
       // Get anti-kt jets with p_T > 200 GeV, check abs(y) < 2, and fill mass histograms
       const FastJets& ktfj = apply<FastJets>(event, "AKT");
       PseudoJets ktjets = ktfj.pseudoJetsByPt(200*GeV);
-      foreach (const PseudoJet ajet, ktjets) {
+      for (const PseudoJet & ajet : ktjets) {
         if (abs(ajet.rap()) < 2) {
           _h_ktmass.fill(ajet.perp(), ajet.m(), weight);
         }
@@ -230,7 +230,7 @@ namespace Rivet {
       // Same as above but C/A jets
       const FastJets& cafj = apply<FastJets>(event, "CA");
       PseudoJets cajets = cafj.pseudoJetsByPt(200*GeV);
-      foreach (const PseudoJet ajet, cajets) {
+      for (const PseudoJet & ajet : cajets) {
         if (abs(ajet.rap()) < 2) {
           _h_camass.fill(ajet.perp(), ajet.m(), weight);
         }
@@ -238,7 +238,7 @@ namespace Rivet {
 
       // Split and filter.
       // Only do this to C/A jets in this analysis.
-      foreach (const PseudoJet pjet, cajets) {
+      for (const PseudoJet & pjet : cajets) {
         if ( pjet.perp() > 600 || abs(pjet.rap()) > 2) continue;
         double dR = 0;
         bool unclustered = false;
@@ -250,7 +250,7 @@ namespace Rivet {
 
       // Use the two last stages of clustering to get sqrt(d_12) and sqrt(d_23).
       // Only use anti-kt jets in this analysis.
-      foreach (const PseudoJet pjet, ktjets) {
+      for (const PseudoJet & pjet : ktjets) {
         if (pjet.perp() > 600 || abs(pjet.rap()) > 2) continue;
         ClusterSequence subjet_cseq(ktfj.clusterSeq()->constituents(pjet), JetDefinition(kt_algorithm, M_PI/2.));
         double d_12 = subjet_cseq.exclusive_dmerge(1) * M_PI*M_PI/4.;
@@ -266,7 +266,7 @@ namespace Rivet {
       //Rcut is used for particles that are very far from the closest axis. At 10
       //is has no impact on the outcome of the calculation
       double Rcut = 10.;
-      foreach (const PseudoJet pjet, cajets) {
+      for (const PseudoJet & pjet : cajets) {
         if (pjet.perp() > 600*GeV || fabs(pjet.rap()) > 2) continue;
 
         const PseudoJets constituents = cafj.clusterSeq()->constituents(pjet);
@@ -286,7 +286,7 @@ namespace Rivet {
         _h_cat32.fill(pjet.perp(), tau3/tau2, weight);
       }
 
-      foreach (const PseudoJet pjet, ktjets) {
+      for (const PseudoJet & pjet : ktjets) {
         if (pjet.perp() > 600*GeV || fabs(pjet.rap()) > 2) continue;
 
         const PseudoJets constituents = ktfj.clusterSeq()->constituents(pjet);
@@ -310,33 +310,33 @@ namespace Rivet {
 
     /// Normalise histograms etc., after the run
     void finalize() {
-      foreach (Histo1DPtr h, _h_camass.getHistograms()) normalize(h);
-      foreach (Histo1DPtr h, _h_filtmass.getHistograms()) normalize(h);
-      foreach (Histo1DPtr h, _h_ktmass.getHistograms()) normalize(h);
-      foreach (Histo1DPtr h, _h_ktd12.getHistograms()) normalize(h);
-      foreach (Histo1DPtr h, _h_ktd23.getHistograms()) normalize(h);
-      foreach (Histo1DPtr h, _h_cat21.getHistograms()) normalize(h);
-      foreach (Histo1DPtr h, _h_cat32.getHistograms()) normalize(h);
-      foreach (Histo1DPtr h, _h_ktt21.getHistograms()) normalize(h);
-      foreach (Histo1DPtr h, _h_ktt32.getHistograms()) normalize(h);
+      for (Histo1DPtr h : _h_camass.histos()) normalize(h);
+      for (Histo1DPtr h : _h_filtmass.histos()) normalize(h);
+      for (Histo1DPtr h : _h_ktmass.histos()) normalize(h);
+      for (Histo1DPtr h : _h_ktd12.histos()) normalize(h);
+      for (Histo1DPtr h : _h_ktd23.histos()) normalize(h);
+      for (Histo1DPtr h : _h_cat21.histos()) normalize(h);
+      for (Histo1DPtr h : _h_cat32.histos()) normalize(h);
+      for (Histo1DPtr h : _h_ktt21.histos()) normalize(h);
+      for (Histo1DPtr h : _h_ktt32.histos()) normalize(h);
     }
 
   private:
 
-    BinnedHistogram<double> _h_camass;
-    BinnedHistogram<double> _h_filtmass;
-    BinnedHistogram<double> _h_ktmass;
-    BinnedHistogram<double> _h_ktd12;
-    BinnedHistogram<double> _h_ktd23;
-    BinnedHistogram<double> _h_cat21;
-    BinnedHistogram<double> _h_cat32;
-    BinnedHistogram<double> _h_ktt21;
-    BinnedHistogram<double> _h_ktt32;
+    BinnedHistogram _h_camass;
+    BinnedHistogram _h_filtmass;
+    BinnedHistogram _h_ktmass;
+    BinnedHistogram _h_ktd12;
+    BinnedHistogram _h_ktd23;
+    BinnedHistogram _h_cat21;
+    BinnedHistogram _h_cat32;
+    BinnedHistogram _h_ktt21;
+    BinnedHistogram _h_ktt32;
 
   };
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2012_I1094564);
+  RIVET_DECLARE_PLUGIN(ATLAS_2012_I1094564);
 
 }

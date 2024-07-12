@@ -1,0 +1,34 @@
+Name: JADE_1984_I221004
+Year: 1984
+Summary: Spectrum for $D^{*0}$ production in $e^+e^-$ collisions at $E_{\text{CMS}}=34.4$
+Experiment: JADE
+Collider: Petra
+InspireID: 221004
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett.B 161 (1985) 197
+RunInfo: e+ e- to hadrons
+Beams: [e+, e-]
+Energies: [34.4]
+Description:
+  'Measurement of the spectrum for  $D^{*0}$ production in $e^+e^-$ collisions at $E_{\text{CMS}}=34.4$ by the JADE experiment. The data were taken from the HEPDAta identifed particle spectra review, with the branching ratio renormalised the PDG 2020 value.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: JADE:1985kkn
+BibTeX: '@article{JADE:1985kkn,
+    author = "Bartel, W. and others",
+    collaboration = "JADE",
+    title = "{Inclusive Neutral $D^*$ Production and Limits on F* Production in $e^+ e^-$ Annihilation at {PETRA}}",
+    reportNumber = "DESY-85-069",
+    doi = "10.1016/0370-2693(85)90635-5",
+    journal = "Phys. Lett. B",
+    volume = "161",
+    pages = "197",
+    year = "1985"
+}
+'

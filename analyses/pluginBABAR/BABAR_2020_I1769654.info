@@ -1,0 +1,41 @@
+Name: BABAR_2020_I1769654
+Year: 2020
+Summary: Cross section for $e^+e^-\to K_S^0K_L^0$ between 1.98 and 2.26 GeV
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 1769654
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D101 (2020) no.1, 012011
+RunInfo: e+e- to hadrons
+#Beams: [e+, e-]
+Description:
+  'Measurement of the cross section for  $e^+e^-\to$ $K_S^0K_L^0$ via radiative return,
+   including for energies between 1.98 and 2.26 GeV, N.B. the result is consistent with zero cross section'
+ValidationInfo:
+  'Herwig7 events generated using a non-perturbative current.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BABAR:2019oes
+BibTeX: '%%% contains utf-8, see: http://inspirehep.net/info/faq/general#utf8
+%%% add \usepackage[utf8]{inputenc} to your latex preamble
+
+@article{BABAR:2019oes,
+      author         = "Lees, J. P. and others",
+      title          = "{Resonances in $e^+e^-$ annihilation near 2.2 GeV}",
+      collaboration  = "BaBar",
+      journal        = "Phys. Rev.",
+      volume         = "D101",
+      year           = "2020",
+      number         = "1",
+      pages          = "012011",
+      doi            = "10.1103/PhysRevD.101.012011",
+      eprint         = "1912.04512",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "BABAR-PUB-19/003, SLAC-PUB-19212",
+      SLACcitation   = "%%CITATION = ARXIV:1912.04512;%%"
+}'

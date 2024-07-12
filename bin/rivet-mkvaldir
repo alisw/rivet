@@ -1,0 +1,351 @@
+#! /usr/bin/env python
+
+"""
+Build a directory with a Makefile for running an analysis validation suite
+
+"""
+
+import os, sys, shutil
+try:
+    from subprocess import getoutput, getstatusoutput
+except:
+    from commands import getoutput, getstatusoutput
+
+
+## Load the rivet module
+try:
+    import rivet
+except:
+    ## If rivet loading failed, try to bootstrap the Python path!
+    try:
+        # TODO: Is this a good idea? Maybe just notify the user that
+        # their PYTHONPATH is wrong?
+        modname = sys.modules[__name__].__file__
+        binpath = os.path.dirname(modname)
+        rivetconfigpath = os.path.join(binpath, "rivet-config")
+        rivetpypath = getoutput(rivetconfigpath + " --pythonpath")
+        sys.path.append(rivetpypath)
+        import rivet
+    except:
+        sys.stderr.write("The rivet Python module could not be loaded: " + \
+                         "is your PYTHONPATH set correctly?\n")
+        sys.exit(5)
+
+rivet.util.check_python_version()
+rivet.util.set_process_name("rivet-merge")
+
+import time, datetime, logging, signal
+
+## Parse command line options
+import argparse
+parser = argparse.ArgumentParser(description=__doc__)
+
+extragroup = parser.add_argument_group("Run settings")
+extragroup.add_argument("VALDIR", nargs=1, help="directory where the " + \
+                        "Makefile for running the validation will be written")
+extragroup.add_argument("--hepmc-dir", dest="HEPMCDIR",
+                        default="", help="specify the directory where the HepMC files used for " + \
+                        "the validation should be downloaded")
+extragroup.add_argument("--ref-dir", dest="REFDIR",
+                        default="",
+                        help="specify the directory where the reference " + \
+                        "YODA files are located.")
+
+args = parser.parse_args()
+
+
+####################################################
+## create and configure validation directory
+
+valdir = str(args.VALDIR[0])
+hepmcdir = valdir + "/HEPMC"
+
+if not os.path.exists(valdir) and not os.path.realpath(valdir)==os.getcwd():
+    try:
+        os.makedirs(valdir)
+    except:
+        print("Error: failed to make new directory '%s'" % valdir)
+        sys.exit(1)
+
+if not args.HEPMCDIR :
+    if not os.path.exists(hepmcdir):
+        try:
+            os.makedirs(hepmcdir)
+        except:
+            print("Error: failed to make new directory '%s'" % hepmcdir)
+            sys.exit(1)
+else:
+    if os.path.exists(hepmcdir) and os.path.islink(hepmcdir):
+        out = getstatusoutput("rm -f " + hepmcdir)
+    if os.path.exists(hepmcdir):
+        print("Error: please remove directory '" + hepmcdir + \
+              "' before specifying a new location for HepMC files")
+        sys.exit(1)
+    if not os.path.exists(args.HEPMCDIR):
+        try:
+            os.makedirs(args.HEPMCDIR)
+        except:
+            print("Error: failed to make new directory '%s'" % args.HEPMCDIR)
+        sys.exit(1)
+
+    out = getstatusoutput("ln -sf " +
+                                   os.path.relpath(args.HEPMCDIR, valdir) +
+                                   " " + hepmcdir)
+
+if  os.path.exists(valdir + "/tmp"):
+    shutil.rmtree(valdir + "/tmp")
+try:
+    os.makedirs(valdir + "/tmp")
+except:
+    print("Error: failed to make temp directory '%s'" % valdir + "/tmp")
+    sys.exit(1)
+
+refdir = args.REFDIR
+if not refdir :
+    rivetdatapath = getoutput("rivet-config --datadir")
+    refdir = rivetdatapath + "/refyodas"
+out = getstatusoutput("rm -f " + valdir + "/refyodas")
+out = getstatusoutput("ln -s " + os.path.relpath(refdir, valdir) +
+                               " " + valdir + "/refyodas")
+
+
+#######################################
+## Collect information from .info files
+
+valtargets = dict()
+hepmctargets = dict()
+reentranttargets = set()
+
+## Get all analysis names
+all_analyses = rivet.AnalysisLoader.analysisNames()
+for ananame in all_analyses:
+    ana = rivet.AnalysisLoader.getAnalysis(ananame)
+    for line in ana.validation():
+        line = line.replace("$A", ananame)
+        sublines = line.split(";");
+        targets = sublines[0].split(" ")
+        targetname = targets.pop(0)
+        if ana.reentrant():
+            reentranttargets.add(targetname)
+        hepmcname = targets.pop(0)
+        options = "";
+        if len(targets) > 0 :
+            options = targets[0].strip()
+        if len(options) > 0 and options[0] == ":":
+            targets.pop(0)
+        else:
+            options = ""
+        if len(sublines) == 1:
+            valtargets[targetname] = "tmp/" + hepmcname + ".yoda.gz " + \
+                " ".join(targets) + "\n\t$(V)echo extracting " + \
+                targetname + ".yoda.gz\n\t$(V)echo " + hepmcname + " > tmp/" + \
+                targetname + ".log\n\t$(V)yoda2yoda -m '/_XSEC|/_EVTCOUNT|/" +\
+                ananame + options + \
+                "/' tmp/" + hepmcname + ".yoda.gz " + targetname + ".yoda.gz >> tmp/" + \
+                targetname + ".log 2>&1\n"
+            if hepmcname not in hepmctargets:
+                hepmctargets[hepmcname] = ananame + options
+            else:
+                hepmctargets[hepmcname] += " " + ananame + options
+        else:
+            valtargets[targetname] = "HEPMC/" + hepmcname + ".hepmc.gz " +\
+                " ".join(targets)
+            if len(sublines) > 1:
+                valtargets[targetname] += "\n\t$(V)echo running " + \
+                    targetname + ".yoda.gz\n\t$(V)echo " + hepmcname + " > tmp/" + \
+                    targetname + ".log\n\t$(V)" + sublines[1].strip() +\
+                    " >> tmp/" + targetname + ".log 2>&1\n"
+            for subline in sublines[2:]:
+                valtargets[targetname] += "\t" + subline.strip() + \
+                    " >> tmp/" + targetname + ".log 2>&1\n"
+            if len(sublines) > 1:
+                valtargets[targetname] += "\t$(V)echo done " + \
+                    targetname + ".yoda.gz\n"
+
+
+#############################
+## Write the Makefile
+
+mf = open(valdir + "/Makefile", 'w')
+
+## Header and default and help targets.
+mf.write("""#
+# This Makefile administers the validation for Rivet.
+#
+# Usage: make check
+#
+# For more information use: make help
+#
+# This Makefile was produced by rivet-mkvaldir which scanned all
+# analysis .info files and parsed the "Validation:" section for
+# determining how to use the existing HepMC validation files to obtain
+# a set of reference YODA files that should be reproduced. The
+# directory where these reference files are stored is linked to
+# ./refyodas . The HepMC files are stored in ./HEPMC and will be
+# automatically downloaded if missing. In the end of running 'make
+# check', the newly produced YODA files will be compared with the
+# reference ones. If differences are found in any histogram, the
+# corresponding plot will be produced by rivet-mkhtml and can be
+# accessed from the index.html file.
+#
+# The syntax for specifying a reference YODA in the .info file looks
+# as follows:
+#
+#  - YODA-name HEPMC-name [:option=val] [dependencies] [[; commandline] ...]
+#
+# the YODA-name should be given without the .yoda suffix and typically
+# is constructed from the analysis name with some number appended if
+# there are more than one reference YODA for an analysis. Note that
+# the string "$A" can be used anywhere and will be expanded to the
+# analysis name. HEPMC-name should given without the ".hepmc.gz"
+# suffix. "dependencies" can eg. include the reference YODA from
+# another analysis that are referenced in any of the
+# "commandline"s. If no commandline is given the analysis will be run
+# together with a bunch of other analyses and the YODA-name.yoda will
+# be extracted form the resulting yoda. In this case the analysis will
+# be run using the "options" if present. The command lines will be used
+# as "make" recipes where the output YODA file can be given by $@ and the
+# HepMC file by $< possible options must then be included explicitly.
+#
+# When submitting a new analysis to Rivet, the "ReleaseTests:" section
+# of the .info file must be present and all the corresponding YODA
+# reference file should be be included in the submission. If a
+# non-standard HepMC file is needed to reproduce the reference YODA,
+# this must be included as well.
+#
+
+V=@
+
+all:
+	$(V)head -7 $(firstword $(MAKEFILE_LIST))
+
+help:
+	$(V)head -44 $(firstword $(MAKEFILE_LIST)) | grep -v "# For more information"
+
+""")
+
+## target for comparing the generated yodas with the reference ones
+mf.write("""
+%.diff: %.yoda.gz
+	$(V)rm -rf $@ $@dir
+	$(V)if [ -e refyodas/$< ]; then \\
+	  if ! yodadiff $< refyodas/$< -t 1e-2 -q; then \\
+            yodadiff $< refyodas/$< -t 1e-2 > $@; \\
+	    echo $< differs from reference yoda; \\
+	    only=""; \\
+	    for plot in `yodadiff $< refyodas/$< -t 1e-2 -l`; do \\
+		only="$$only -m $$plot"; \\
+	    done; \\
+	    rivet-mkhtml $$only -o $@dir $< refyodas/$<:Title=ref > /dev/null 2>&1; \\
+	  else \\
+	    echo $< is the same as the reference; \\
+	    touch $@; \\
+	  fi \\
+	else \\
+	  echo $< has no reference yoda file; \\
+	  echo "$< has no reference yoda file." > $@; \\
+	fi
+
+%.reent: %.yoda.gz
+	$(V)rm -rf $@
+	$(V)logfile=$<; logfile="tmp/$${logfile%.yoda.gz}.log"; \\
+	if rivet-merge $< -o $<.yoda.gz >> $$logfile  2>&1; then\\
+	  if yodadiff -q $< $<.yoda.gz ; then \\
+	    echo $< is reentrant; \\
+	    touch $@; \\
+	  else \\
+	    echo $< is NOT reentrant; \\
+	    echo "$< was declared reentrant but is not." > $@; \\
+	  fi \\
+	fi
+	$(V)rm -rf $<.yoda.gz
+
+""")
+
+## the main check target
+mf.write("VALYODAS =")
+for ana in valtargets:
+    mf.write(" " + ana + ".yoda.gz")
+mf.write("\n\nVALDIFFS =")
+for ana in valtargets:
+    mf.write(" " + ana + ".diff")
+mf.write("\n\nREENTRANTS =")
+for ana in reentranttargets:
+    mf.write(" " + ana + ".reent")
+mf.write("\n\nHEPMCYODAS =")
+for hepmc in hepmctargets:
+    mf.write(" tmp/" + hepmc + ".yoda.gz")
+mf.write("""\n
+
+.PRECIOUS: $(VALYODAS) $(HEPMCYODAS)
+
+check: $(VALDIFFS) $(REENTRANTS)
+	$(V)echo "<html>" > index.html
+	$(V)echo "  <head>" >> index.html
+	$(V)echo "    <title>Rivet release validation plots</title>" >> index.html
+	$(V)echo "    <style>" >> index.html
+	$(V)echo "      html { font-family: sans-serif; }" >> index.html
+	$(V)echo "      img { border: 0; }" >> index.html
+	$(V)echo "      a { text-decoration: none; font-weight: bold; }" >> index.html
+	$(V)echo "    </style>" >> index.html
+	$(V)echo "  </head>" >> index.html
+	$(V)echo "  <body>" >> index.html
+	$(V)echo "    <h2>Problematic analyses in Rivet validation</h2>" >> index.html
+	$(V)echo "    <ul>" >> index.html
+	$(V)for diff in $^; do \\
+	  if [ -d $${diff}dir ]; then \\
+	    for subdir in `ls $${diff}dir`; do \\
+	      if [ -f $${diff}dir/$$subdir/index.html ]; then\\
+		echo -n "<li><a href=\"$${diff}dir/$$subdir/index.html\">$${diff%.diff}</a> (" >> index.html; \\
+	        echo -n `head -1 tmp/$${diff/.diff/.log}`  >> index.html; \\
+		echo -n ") [<a href=\"$$diff\">yodadiff</a>]" >> index.html; \\
+	        echo "</li>"  >> index.html; \\
+	      fi; \\
+	    done; \\
+	  elif [ -s $$diff ]; then \\
+	    echo "      <li>`cat $$diff`</li>" >> index.html; \\
+	  fi; \\
+	done
+	$(V)echo "    </ul>" >> index.html
+	$(V)echo "  </body>" >> index.html
+	$(V)echo "</html>" >> index.html
+	$(V)echo ""
+	$(V)if test -n "`find . -name '*.diff' -and -type f -and ! -size 0`"; then \\
+	  echo "Differences found, open index.html to inspect plots."; \\
+	else \\
+	  echo "No differences found!"; \\
+	fi
+
+clean:
+	rm -f $(VALYODAS) $(REENTRANTS)
+	rm -rf tmp
+	mkdir tmp
+	rm -rf $(VALDIFFS) *.diffdir
+	rm -f index.html
+
+
+%.recheck: %.yoda.gz
+	rm -f $<
+	hepmc=tmp/$<; rm -f tmp/`head -1 $${hepmc%.yoda.gz}.log`".yoda.gz"
+	$(MAKE) check
+
+""")
+
+## targets for hepmc files with several analyses
+for hepmc in hepmctargets:
+    mf.write("tmp/" + hepmc + ".yoda.gz: HEPMC/" + hepmc + ".hepmc.gz\n")
+    mf.write("\t$(V)echo running " + hepmc + "\n")
+    cmd = "\t$(V)rivet HEPMC/" + hepmc + ".hepmc.gz -o tmp/" + hepmc + ".yoda.gz"
+    for ana in hepmctargets[hepmc].split(" "):
+        cmd += " -a " + ana
+    mf.write(cmd + " > tmp/" + hepmc + ".log 2>&1\n")
+    mf.write("\t$(V)echo done " + hepmc + "\n\n")
+
+## targets for the .yoda files to be compared to the reference ones
+for ana in valtargets:
+    mf.write(ana + ".yoda.gz: " + valtargets[ana] + "\n")
+mf.write("\n")
+
+## target for fetching the standard HepMC files from cernbox
+mf.write("HEPMC/%.hepmc.gz:\n")
+mf.write("\twget 'http://rivetval.web.cern.ch/rivetval/HEPMC/$(@F)' -q -O $@\n\n")

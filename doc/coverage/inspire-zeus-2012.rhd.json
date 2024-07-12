@@ -1,0 +1,110 @@
+{
+    "793931": [
+        "Angular correlations in three-jet events in ep collisions at HERA", 
+        "ZEUS", 
+        "10.1103/PhysRevD.85.052008", 
+        null, 
+        "0808.3783", 
+        "ins793931", 
+        null, 
+        [
+            "DESY-08-100"
+        ]
+    ], 
+    "945298": [
+        "Measurement of the t dependence in exclusive photoproduction of $\\Upsilon$(1S) mesons at HERA", 
+        "ZEUS", 
+        "10.1016/j.physletb.2012.01.009", 
+        "1397677", 
+        "1111.2133", 
+        null, 
+        null, 
+        [
+            "DESY-11-186"
+        ]
+    ], 
+    "945935": [
+        "Scaled momentum distributions for $K^0_S$ and $\\Lambda/\\bar{\\Lambda}$ in DIS at HERA", 
+        "ZEUS", 
+        "10.1007/JHEP03(2012)020", 
+        "1399372", 
+        "1111.3526", 
+        "ins945935", 
+        null, 
+        [
+            "DESY-11-205"
+        ]
+    ], 
+    "946107": [
+        "Search for single-top production in $ep$ collisions at HERA", 
+        "ZEUS", 
+        "10.1016/j.physletb.2012.01.025", 
+        "1400141", 
+        "1111.3901", 
+        null, 
+        null, 
+        [
+            "DESY-11-204"
+        ]
+    ], 
+    "946807": [
+        "Exclusive electroproduction of two pions at HERA", 
+        "ZEUS", 
+        "10.1140/epjc/s10052-012-1869-5", 
+        "1401094", 
+        "1111.4905", 
+        null, 
+        null, 
+        [
+            "DESY-11-220"
+        ]
+    ], 
+    "1115725": [
+        "Search for first-generation leptoquarks at HERA", 
+        "ZEUS", 
+        "10.1103/PhysRevD.86.012005", 
+        "1451447", 
+        "1205.5179", 
+        null, 
+        null, 
+        [
+            "DESY-12-077"
+        ]
+    ], 
+    "1116258": [
+        "Inclusive-jet photoproduction at HERA and determination of alphas", 
+        "ZEUS", 
+        "10.1016/j.nuclphysb.2012.06.006", 
+        "1452549", 
+        "1205.6153", 
+        "ins1116258", 
+        null, 
+        [
+            "DESY-12-045"
+        ]
+    ], 
+    "1117891": [
+        "Measurement of isolated photons accompanied by jets in deep inelastic $ep$ scattering", 
+        "ZEUS", 
+        "10.1016/j.physletb.2012.07.031", 
+        null, 
+        "1206.2270", 
+        "ins1117891", 
+        null, 
+        [
+            "DESY-12-089"
+        ]
+    ], 
+    "1123363": [
+        "Combined inclusive diffractive cross sections measured with forward proton spectrometers in deep inelastic $ep$ scattering at HERA", 
+        "H1", 
+        "10.1140/epjc/s10052-012-2175-y", 
+        "1463427", 
+        "1207.4864", 
+        null, 
+        null, 
+        [
+            "DESY-12-100"
+        ]
+    ]
+}

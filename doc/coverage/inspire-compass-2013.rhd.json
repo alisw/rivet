@@ -1,0 +1,62 @@
+{
+    "1089665": [
+        "Leading order determination of the gluon polarisation from DIS events with high-$p_T$ hadron pairs", 
+        "COMPASS", 
+        "10.1016/j.physletb.2012.11.056", 
+        "1417853", 
+        "1202.4064", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2012-010"
+        ]
+    ], 
+    "1121705": [
+        "Measurement of the cross section for high-pT hadron production in the scattering of 160-GeV/c muons off nucleons", 
+        "COMPASS", 
+        "10.1103/PhysRevD.88.091101", 
+        "1458567", 
+        "1207.2022", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2012-189"
+        ]
+    ], 
+    "1204782": [
+        "Leading and Next-to-Leading Order Gluon Polarization in the Nucleon and Longitudinal Double Spin Asymmetries from Open Charm Muoproduction", 
+        "COMPASS", 
+        "10.1103/PhysRevD.87.052018", 
+        "1495359", 
+        "1211.6849", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2012-350"
+        ]
+    ], 
+    "1226812": [
+        "Study of $\\Sigma(1385)$ and $\\Xi(1321)$ hyperon and antihyperon production in deep inelastic muon scattering", 
+        "COMPASS", 
+        "10.1140/epjc/s10052-013-2581-9", 
+        "1532099", 
+        "1304.0952", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2013-052"
+        ]
+    ], 
+    "1236358": [
+        "Hadron Transverse Momentum Distributions in Muon Deep Inelastic Scattering at 160 GeV/$c$", 
+        "COMPASS", 
+        "10.1140/epjc/s10052-013-2531-6", 
+        "1552503", 
+        "1305.7317", 
+        "ins1236358", 
+        null, 
+        [
+            "CERN-PH-EP-2013-091"
+        ]
+    ]
+}

@@ -6,9 +6,11 @@ Collider: LHC 900GeV
 SpiresID: 8591806
 InspireID: 849050
 Status: VALIDATED
+Reentrant: false
 Authors:
  - Frank Siegert <frank.siegert@cern.ch>
 References:
+ - ATLAS-STDM-2010-01
  - arXiv:1003.3124
 RunInfo:
   pp QCD interactions at 900 GeV including diffractive events.

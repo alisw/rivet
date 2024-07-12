@@ -1,0 +1,37 @@
+Name: BABAR_2012_I1185407
+Year: 2012
+Summary: Mass distributions in $\tau^-\to2\pi^-\pi^+3\pi^0\nu_\tau$, $3\pi^-2\pi^+\nu_\tau$ and $3\pi^-2\pi^+\pi^0\nu_\tau$
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 1185407
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 86 (2012) 092010
+RunInfo: Any process producing tau leptons, originally e+e-
+Description:
+  'Measurement of mass distributions in $\tau^-\to2\pi^-\pi^+3\pi^0\nu_\tau$, $3\pi^-2\pi^+\nu_\tau$ and $3\pi^-2\pi^+\pi^0\nu_\tau$.
+ The data were read from the plots in the paper and are not corrected, although the backgrounds given in the paper have been subtracted. The plots should therefore only be used for qualitative comparisons however the data is useful as there are not corrected distributions for this decay mode.'
+ValidationInfo:
+  'Herwig7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BaBar:2012zfq
+BibTeX: '@article{BaBar:2012zfq,
+    author = "Lees, J. P. and others",
+    collaboration = "BaBar",
+    title = "{Study of high-multiplicity 3-prong and 5-prong tau decays at BABAR}",
+    eprint = "1209.2734",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "SLAC-PUB-15047, BABAR-BAD-NOTE-2416, BABAR-PUB-12-008",
+    doi = "10.1103/PhysRevD.86.092010",
+    journal = "Phys. Rev. D",
+    volume = "86",
+    pages = "092010",
+    year = "2012"
+}
+'

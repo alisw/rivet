@@ -1,0 +1,32 @@
+Name: BELLE_2019_I1724068
+Year: 2019
+Summary: Measurement of $D^{*-}$ polarization in the decay $B^0\to D^{*-}\tau^+\nu_\tau$
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1724068
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - arXiv:1903.03102
+RunInfo: Any process producing B0 mesons, original e+e- at the Upsilon(4S)
+Description:
+  'Measurement of $D^{*-}$ polarization in the decay $B^0\to D^{*-}\tau^+\nu_\tau$ by the BELLE collaboration'
+ValidationInfo:
+  'Herwig7 events using EvtGen for B decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Abdesselam:2019wbt
+BibTeX: '@inproceedings{Abdesselam:2019wbt,
+    author = "Abdesselam, A. and others",
+    collaboration = "Belle",
+    title = "{Measurement of the $D^{\ast-}$ polarization in the decay $B^0 \to D^{\ast -}\tau^+\nu_{\tau}$}",
+    booktitle = "{10th International Workshop on the CKM Unitarity Triangle}",
+    eprint = "1903.03102",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BELLE-CONF-1805",
+    month = "3",
+    year = "2019"
+}'

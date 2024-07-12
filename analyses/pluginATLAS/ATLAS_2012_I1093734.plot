@@ -4,7 +4,7 @@ LogY=0
 
 
 # BEGIN PLOT /ATLAS_2012_I1093734/d0[123456]-x01-y01
-YLabel=$N^T_\text{SUB}$ [$\pi$/50]
+YLabel=$N^T_\mathrm{SUB}$ [$\pi$/50]
 XLabel=$\Delta \phi$
 # END PLOT
 
@@ -34,7 +34,7 @@ Title=$\sqrt{s} = 7$ TeV, $p_T > 500 $ MeV, $|\eta|<2.5$
 
 
 # BEGIN PLOT /ATLAS_2012_I1093734/d(07|08|09|10|11|12)-x01-y01
-YLabel=$N^T_\text{S0}$ [$\pi$/50]
+YLabel=$N^T_\mathrm{S0}$ [$\pi$/50]
 XLabel=$\Delta \phi$
 # END PLOT
 

@@ -10,7 +10,7 @@ Authors:
  - Ilkka Helenius <ilkka.m.helenius@jyu.fi>
 References:
 - JHEP 05 (2015) 056
-- arXiv:1502.01683[hep-ex]
+- arXiv:1502.01683 [hep-ex]
 RunInfo:
   920 GeV protons colliding with 27.5 GeV positrons;
   Diffractive photoproduction of dijets;
@@ -47,3 +47,7 @@ BibTeX: '@Article{Andreev:2015cwa,
       reportNumber   = "DESY-14-242",
       SLACcitation   = "%%CITATION = ARXIV:1502.01683;%%"
 }'
+
+ReleaseTests:
+ - $A HERA-II-GammaP-Gap
+

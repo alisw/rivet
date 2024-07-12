@@ -7,12 +7,13 @@ namespace Rivet {
 
 
   /// Generic analysis looking at various distributions of final state particles
+  ///
   /// @deprecated Replaced by the better-named MC_FSPARTICLES
   class MC_GENERIC : public Analysis {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(MC_GENERIC);
+    RIVET_DEFAULT_ANALYSIS_CTOR(MC_GENERIC);
 
 
     /// @name Analysis methods
@@ -28,76 +29,75 @@ namespace Rivet {
 
       // Histograms
       /// @todo Choose E/pT ranged based on input energies... can't do anything about kin. cuts, though
-      _histMult   = bookHisto1D("Mult", 100, -0.5, 199.5);
-      _histMultCh = bookHisto1D("MultCh", 100, -0.5, 199.5);
+      book(_histMult   ,"Mult", 100, -0.5, 199.5);
+      book(_histMultCh ,"MultCh", 100, -0.5, 199.5);
 
-      _histPt   = bookHisto1D("Pt", 300, 0, 30);
-      _histPtCh = bookHisto1D("PtCh", 300, 0, 30);
+      book(_histPt   ,"Pt", 300, 0, 30);
+      book(_histPtCh ,"PtCh", 300, 0, 30);
 
-      _histE   = bookHisto1D("E", 100, 0, 200);
-      _histECh = bookHisto1D("ECh", 100, 0, 200);
+      book(_histE   ,"E", 100, 0, 200);
+      book(_histECh ,"ECh", 100, 0, 200);
 
-      _histEtaSumEt = bookProfile1D("EtaSumEt", 25, 0, 5);
+      book(_histEtaSumEt ,"EtaSumEt", 25, 0, 5);
 
-      _histEta    = bookHisto1D("Eta", 50, -5, 5);
-      _histEtaCh  = bookHisto1D("EtaCh", 50, -5, 5);
+      book(_histEta    ,"Eta", 50, -5, 5);
+      book(_histEtaCh  ,"EtaCh", 50, -5, 5);
       _tmphistEtaPlus = Histo1D(25, 0, 5);
       _tmphistEtaMinus = Histo1D(25, 0, 5);
       _tmphistEtaChPlus = Histo1D(25, 0, 5);
       _tmphistEtaChMinus = Histo1D(25, 0, 5);
 
-      _histRapidity    = bookHisto1D("Rapidity", 50, -5, 5);
-      _histRapidityCh  = bookHisto1D("RapidityCh", 50, -5, 5);
+      book(_histRapidity    ,"Rapidity", 50, -5, 5);
+      book(_histRapidityCh  ,"RapidityCh", 50, -5, 5);
       _tmphistRapPlus = Histo1D(25, 0, 5);
       _tmphistRapMinus = Histo1D(25, 0, 5);
       _tmphistRapChPlus = Histo1D(25, 0, 5);
       _tmphistRapChMinus = Histo1D(25, 0, 5);
 
-      _histPhi    = bookHisto1D("Phi", 50, 0, TWOPI);
-      _histPhiCh  = bookHisto1D("PhiCh", 50, 0, TWOPI);
+      book(_histPhi    ,"Phi", 50, 0, TWOPI);
+      book(_histPhiCh  ,"PhiCh", 50, 0, TWOPI);
 
-      _histEtaPMRatio = bookScatter2D("EtaPMRatio");
-      _histEtaChPMRatio = bookScatter2D("EtaChPMRatio");
-      _histRapidityPMRatio = bookScatter2D("RapidityPMRatio");
-      _histRapidityChPMRatio = bookScatter2D("RapidityChPMRatio");
+      book(_histEtaPMRatio, "EtaPMRatio");
+      book(_histEtaChPMRatio, "EtaChPMRatio");
+      book(_histRapidityPMRatio, "RapidityPMRatio");
+      book(_histRapidityChPMRatio, "RapidityChPMRatio");
     }
 
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-      const double weight = event.weight();
 
       // Charged + neutral final state
       const FinalState& fs = apply<FinalState>(event, "FS");
       MSG_DEBUG("Total multiplicity = " << fs.size());
-      _histMult->fill(fs.size(), weight);
+      _histMult->fill(fs.size());
       for (const Particle& p : fs.particles()) {
-        _histEta->fill(p.eta(), weight);
-        _histEtaSumEt->fill(p.abseta(), p.Et(), weight);
-        (p.eta() > 0 ? _tmphistEtaPlus : _tmphistEtaMinus).fill(p.abseta(), weight);
+        _histEta->fill(p.eta());
+        _histEtaSumEt->fill(p.abseta(), p.Et());
+        (p.eta() > 0 ? _tmphistEtaPlus : _tmphistEtaMinus).fill(p.abseta());
         //
-        _histRapidity->fill(p.rap(), weight);
-        (p.rap() > 0 ? _tmphistRapPlus : _tmphistRapMinus).fill(p.absrap(), weight);
+        _histRapidity->fill(p.rap());
+        (p.rap() > 0 ? _tmphistRapPlus : _tmphistRapMinus).fill(p.absrap());
         //
-        _histPt->fill(p.pT()/GeV, weight);
-        _histE->fill(p.E()/GeV, weight);
-        _histPhi->fill(p.phi(), weight);
+        _histPt->fill(p.pT()/GeV);
+        _histE->fill(p.E()/GeV);
+        _histPhi->fill(p.phi());
       }
 
       // Same for the charged FS particles only
       const FinalState& cfs = apply<FinalState>(event, "CFS");
       MSG_DEBUG("Total charged multiplicity = " << cfs.size());
-      _histMultCh->fill(cfs.size(), weight);
+      _histMultCh->fill(cfs.size());
       for (const Particle& p : cfs.particles()) {
-        _histEtaCh->fill(p.eta(), weight);
-        (p.eta() > 0 ? _tmphistEtaChPlus : _tmphistEtaChMinus).fill(p.abseta(), weight);
+        _histEtaCh->fill(p.eta());
+        (p.eta() > 0 ? _tmphistEtaChPlus : _tmphistEtaChMinus).fill(p.abseta());
         //
-        _histRapidityCh->fill(p.rap(), weight);
-        (p.rap() > 0 ? _tmphistRapChPlus : _tmphistRapChMinus).fill(p.absrap(), weight);
+        _histRapidityCh->fill(p.rap());
+        (p.rap() > 0 ? _tmphistRapChPlus : _tmphistRapChMinus).fill(p.absrap());
         //
-        _histPtCh->fill(p.pT()/GeV, weight);
-        _histECh->fill(p.E()/GeV, weight);
-        _histPhiCh->fill(p.phi(), weight);
+        _histPtCh->fill(p.pT()/GeV);
+        _histECh->fill(p.E()/GeV);
+        _histPhiCh->fill(p.phi());
       }
 
     }
@@ -105,8 +105,10 @@ namespace Rivet {
 
     /// Finalize
     void finalize() {
-      normalize({_histMult, _histEta, _histRapidity, _histPt, _histE, _histPhi});
-      normalize({_histMultCh, _histEtaCh, _histRapidityCh, _histPtCh, _histECh, _histPhiCh});
+      normalize(_histMult); normalize(_histEta); normalize(_histRapidity); 
+      normalize(_histPt); normalize(_histE); normalize(_histPhi);
+      normalize(_histMultCh); normalize(_histEtaCh); normalize(_histRapidityCh); 
+      normalize(_histPtCh); normalize(_histECh); normalize(_histPhiCh);
       divide(_tmphistEtaPlus, _tmphistEtaMinus, _histEtaPMRatio);
       divide(_tmphistEtaChPlus, _tmphistEtaChMinus, _histEtaChPMRatio);
       divide(_tmphistRapPlus, _tmphistRapMinus, _histRapidityPMRatio);
@@ -136,6 +138,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(MC_GENERIC);
+  RIVET_DECLARE_PLUGIN(MC_GENERIC);
 
 }

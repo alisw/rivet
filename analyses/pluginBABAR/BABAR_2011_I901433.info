@@ -1,0 +1,37 @@
+Name: BABAR_2011_I901433
+Year: 2011
+Summary: Angular distributions in $B\to\phi\phi K$ decays
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 901433
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 84 (2011) 012001
+RunInfo: Any process producing B+ and B0 mesons, originally Upsilon(4S) decays
+Description:
+  'Measurement of angular distributions in $B\to\phi\phi K$ decays for $m_{\phi\phi}$ both in the region of the $\eta_c$ resonance and
+   below this region.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BaBar:2011vod
+BibTeX: '@article{BaBar:2011vod,
+    author = "Lees, J. P. and others",
+    collaboration = "BaBar",
+    title = "{Measurements of branching fractions and CP asymmetries and studies of angular distributions for B ---\ensuremath{>} phi phi K decays}",
+    eprint = "1105.5159",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BABAR-PUB-11-003, SLAC-PUB-14473",
+    doi = "10.1103/PhysRevD.84.012001",
+    journal = "Phys. Rev. D",
+    volume = "84",
+    pages = "012001",
+    year = "2011"
+}
+'

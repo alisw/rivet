@@ -7,20 +7,12 @@
 namespace Rivet {
 
 
-  namespace {
-    /// @brief Helper function to fill correlation points into scatter plot
-    Point2D correlation_helper(double x, double xerr, const vector<int> & nf, const vector<int> & nb, double sumWPassed) {
-      return Point2D(x, correlation(nf, nb), xerr, correlation_err(nf, nb)/sqrt(sumWPassed));
-    }
-  }
-
-
   /// @brief UA5 charged particle correlations at 200, 546 and 900 GeV
   class UA5_1988_S1867512 : public Analysis {
   public:
 
     UA5_1988_S1867512()
-      : Analysis("UA5_1988_S1867512"), _sumWPassed(0)
+      : Analysis("UA5_1988_S1867512")
     {    }
 
 
@@ -32,39 +24,41 @@ namespace Rivet {
       declare(TriggerUA5(), "Trigger");
 
       // Symmetric eta interval
-      declare(ChargedFinalState(-0.5, 0.5), "CFS05");
+      declare(ChargedFinalState((Cuts::etaIn(-0.5, 0.5))), "CFS05");
 
       // Asymmetric intervals first
       // Forward eta intervals
-      declare(ChargedFinalState(0.0, 1.0), "CFS10F");
-      declare(ChargedFinalState(0.5, 1.5), "CFS15F");
-      declare(ChargedFinalState(1.0, 2.0), "CFS20F");
-      declare(ChargedFinalState(1.5, 2.5), "CFS25F");
-      declare(ChargedFinalState(2.0, 3.0), "CFS30F");
-      declare(ChargedFinalState(2.5, 3.5), "CFS35F");
-      declare(ChargedFinalState(3.0, 4.0), "CFS40F");
+      declare(ChargedFinalState((Cuts::etaIn(0.0, 1.0))), "CFS10F");
+      declare(ChargedFinalState((Cuts::etaIn(0.5, 1.5))), "CFS15F");
+      declare(ChargedFinalState((Cuts::etaIn(1.0, 2.0))), "CFS20F");
+      declare(ChargedFinalState((Cuts::etaIn(1.5, 2.5))), "CFS25F");
+      declare(ChargedFinalState((Cuts::etaIn(2.0, 3.0))), "CFS30F");
+      declare(ChargedFinalState((Cuts::etaIn(2.5, 3.5))), "CFS35F");
+      declare(ChargedFinalState((Cuts::etaIn(3.0, 4.0))), "CFS40F");
 
       // Backward eta intervals
-      declare(ChargedFinalState(-1.0,  0.0), "CFS10B");
-      declare(ChargedFinalState(-1.5, -0.5), "CFS15B");
-      declare(ChargedFinalState(-2.0, -1.0), "CFS20B");
-      declare(ChargedFinalState(-2.5, -1.5), "CFS25B");
-      declare(ChargedFinalState(-3.0, -2.0), "CFS30B");
-      declare(ChargedFinalState(-3.5, -2.5), "CFS35B");
-      declare(ChargedFinalState(-4.0, -3.0), "CFS40B");
+      declare(ChargedFinalState((Cuts::etaIn(-1.0,  0.0))), "CFS10B");
+      declare(ChargedFinalState((Cuts::etaIn(-1.5, -0.5))), "CFS15B");
+      declare(ChargedFinalState((Cuts::etaIn(-2.0, -1.0))), "CFS20B");
+      declare(ChargedFinalState((Cuts::etaIn(-2.5, -1.5))), "CFS25B");
+      declare(ChargedFinalState((Cuts::etaIn(-3.0, -2.0))), "CFS30B");
+      declare(ChargedFinalState((Cuts::etaIn(-3.5, -2.5))), "CFS35B");
+      declare(ChargedFinalState((Cuts::etaIn(-4.0, -3.0))), "CFS40B");
 
       // Histogram booking, we have sqrt(s) = 200, 546 and 900 GeV
       // TODO use Scatter2D to be able to output errors
-      if (fuzzyEquals(sqrtS()/GeV, 200.0, 1E-4)) {
-        _hist_correl = bookScatter2D(2, 1, 1);
-        _hist_correl_asym = bookScatter2D(3, 1, 1);
-      } else if (fuzzyEquals(sqrtS()/GeV, 546.0, 1E-4)) {
-        _hist_correl = bookScatter2D(2, 1, 2);
-        _hist_correl_asym = bookScatter2D(3, 1, 2);
-      } else if (fuzzyEquals(sqrtS()/GeV, 900.0, 1E-4)) {
-        _hist_correl = bookScatter2D(2, 1, 3);
-        _hist_correl_asym = bookScatter2D(3, 1, 3);
+      if (isCompatibleWithSqrtS(200.0)) {
+        book(_hist_correl, 2, 1, 1);
+        book(_hist_correl_asym, 3, 1, 1);
+      } else if (isCompatibleWithSqrtS(546.0)) {
+        book(_hist_correl, 2, 1, 2);
+        book(_hist_correl_asym, 3, 1, 2);
+      } else if (isCompatibleWithSqrtS(900.0)) {
+        book(_hist_correl, 2, 1, 3);
+        book(_hist_correl_asym, 3, 1, 3);
       }
+
+      book(_sumWPassed, "sumW");
     }
 
 
@@ -72,7 +66,7 @@ namespace Rivet {
       // Trigger
       const bool trigger = apply<TriggerUA5>(event, "Trigger").nsdDecision();
       if (!trigger) vetoEvent;
-      _sumWPassed += event.weight();
+      _sumWPassed->fill();
 
       // Count forward/backward particles
       n_10f.push_back(apply<ChargedFinalState>(event, "CFS10F").size());
@@ -146,48 +140,35 @@ namespace Rivet {
 
   private:
 
-    /// @name Counters
-    //@{
-    double _sumWPassed;
-    //@}
+    /// Helper function to fill correlation points into scatter plot
+    Point2D correlation_helper(double x, double xerr, const vector<int>& nf, const vector<int>& nb, CounterPtr sumWPassed) {
+      return Point2D(x, correlation(nf, nb), xerr, correlation_err(nf, nb)/sqrt(sumWPassed->val()));
+    }
+
+    /// Counter
+    CounterPtr _sumWPassed;
 
 
     /// @name Vectors for storing the number of particles in the different eta intervals per event.
-    /// @todo Is there a better way?
-    //@{
-    std::vector<int> n_10f;
-    std::vector<int> n_15f;
-    std::vector<int> n_20f;
-    std::vector<int> n_25f;
-    std::vector<int> n_30f;
-    std::vector<int> n_35f;
-    std::vector<int> n_40f;
-    //
-    std::vector<int> n_10b;
-    std::vector<int> n_15b;
-    std::vector<int> n_20b;
-    std::vector<int> n_25b;
-    std::vector<int> n_30b;
-    std::vector<int> n_35b;
-    std::vector<int> n_40b;
-    //
-    std::vector<int> n_05;
-    //@}
+    /// @todo A better way is needed to make this re-entrant
+    /// @{
+    vector<int> n_10f, n_15f, n_20f, n_25f, n_30f, n_35f, n_40f;
+    vector<int> n_10b, n_15b, n_20b, n_25b, n_30b, n_35b, n_40b;
+    vector<int> n_05;
+    /// @}
 
 
     /// @name Histograms
-    //@{
+    /// @{
     // Symmetric eta intervals
     Scatter2DPtr _hist_correl;
     // For asymmetric eta intervals
     Scatter2DPtr _hist_correl_asym;
-    //@}
+    /// @}
 
   };
 
 
-
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(UA5_1988_S1867512);
+  RIVET_DECLARE_ALIASED_PLUGIN(UA5_1988_S1867512, UA5_1988_I263399);
 
 }

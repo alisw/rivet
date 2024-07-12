@@ -6,11 +6,11 @@
 
 namespace Rivet {
 
-  // CMS azimuthal decorrelations
+  /// CMS azimuthal decorrelations
   class CMS_2011_S8950903 : public Analysis {
   public:
 
-    CMS_2011_S8950903() : Analysis("CMS_2011_S8950903") {}
+    RIVET_DEFAULT_ANALYSIS_CTOR(CMS_2011_S8950903);
 
 
     void init() {
@@ -18,16 +18,16 @@ namespace Rivet {
       FastJets akt(fs, FastJets::ANTIKT, 0.5);
       declare(akt, "antikT");
 
-      _h_deltaPhi.addHistogram( 80.,  110., bookHisto1D(1, 1, 1));
-      _h_deltaPhi.addHistogram(110.,  140., bookHisto1D(2, 1, 1));
-      _h_deltaPhi.addHistogram(140.,  200., bookHisto1D(3, 1, 1));
-      _h_deltaPhi.addHistogram(200.,  300., bookHisto1D(4, 1, 1));
-      _h_deltaPhi.addHistogram(300., 7000., bookHisto1D(5, 1, 1));
+      {Histo1DPtr tmp; _h_deltaPhi.add( 80.,  110., book(tmp, 1, 1, 1));}
+      {Histo1DPtr tmp; _h_deltaPhi.add(110.,  140., book(tmp, 2, 1, 1));}
+      {Histo1DPtr tmp; _h_deltaPhi.add(140.,  200., book(tmp, 3, 1, 1));}
+      {Histo1DPtr tmp; _h_deltaPhi.add(200.,  300., book(tmp, 4, 1, 1));}
+      {Histo1DPtr tmp; _h_deltaPhi.add(300., 7000., book(tmp, 5, 1, 1));}
     }
 
 
     void analyze(const Event & event) {
-      const double weight = event.weight();
+      const double weight = 1.0;
 
       const Jets& jets = apply<JetAlg>(event, "antikT").jetsByPt();
       if (jets.size() < 2) vetoEvent;
@@ -42,19 +42,18 @@ namespace Rivet {
 
 
     void finalize() {
-      foreach (Histo1DPtr histo, _h_deltaPhi.getHistograms()) {
-        normalize(histo, 1.);
-      }
+      normalize(_h_deltaPhi.histos(), 1.);
     }
+
 
   private:
 
-    BinnedHistogram<double> _h_deltaPhi;
+    BinnedHistogram _h_deltaPhi;
 
   };
 
-  // This global object acts as a hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CMS_2011_S8950903);
+
+
+  RIVET_DECLARE_ALIASED_PLUGIN(CMS_2011_S8950903, CMS_2011_I885663);
 
 }
-

@@ -1,0 +1,34 @@
+Name: LHCB_2022_I2138845
+Year: 2022
+Summary: Mass distributions in $B_c^+$ decays to charmonia + multihadron final states
+Experiment: LHCB
+Collider: LHC
+InspireID: 2138845
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - arXiv:2208.08660 [hep-ex]
+RunInfo: Any process producing B_c+, originally pp
+Description:
+'Mass distributions in $B_c^+$ decays to charmonia + multihadron final states.
+The data were read from the plots in the paper and may not be corrected for efficiency and acceptance.'
+ValidationInfo:
+  'Herwig7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: LHCb:2022ioi
+BibTeX: '@article{LHCb:2022ioi,
+    collaboration = "LHCb",
+    title = "{Study of $B_c^+$ meson decays to charmonia plus multihadron final states}",
+    eprint = "2208.08660",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CERN-EP-2022-162, LHCb-PAPER-2022-025",
+    month = "8",
+    year = "2022"
+}
+'
+

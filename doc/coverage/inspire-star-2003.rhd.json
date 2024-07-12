@@ -1,0 +1,124 @@
+{
+    "555818": [
+        "Midrapidity anti-proton to proton ratio from Au + Au collisions at s(NN)**(1/2) = 130-GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.86.4778", 
+        null, 
+        "nucl-ex/0104022", 
+        "ins555818", 
+        null, 
+        []
+    ], 
+    "588226": [
+        "Azimuthal anisotropy and correlations in the hard scattering regime at RHIC", 
+        "STAR", 
+        "10.1103/PhysRevLett.90.032301", 
+        null, 
+        "nucl-ex/0206006", 
+        "ins588226", 
+        null, 
+        [
+            "LBNL-50518"
+        ]
+    ], 
+    "600652": [
+        "Disappearance of back-to-back high $p_{T}$ hadron correlations in central Au+Au collisions at $\\sqrt{s_{NN}}$ = 200-GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.90.082302", 
+        null, 
+        "nucl-ex/0210033", 
+        "ins600652", 
+        null, 
+        []
+    ], 
+    "602867": [
+        "Strange anti-particle to particle ratios at mid-rapidity in s(NN)**(1/2) = 130-GeV Au+Au collisions", 
+        "STAR", 
+        "10.1016/j.physletb.2003.06.039", 
+        null, 
+        "nucl-ex/0211024", 
+        "ins602867", 
+        null, 
+        []
+    ], 
+    "608096": [
+        "The STAR barrel electromagnetic calorimeter", 
+        "STAR", 
+        "10.1016/S0168-9002(02)01970-8", 
+        null, 
+        null, 
+        null, 
+        null, 
+        []
+    ], 
+    "608101": [
+        "STAR detector overview", 
+        "STAR", 
+        "10.1016/S0168-9002(02)01960-5", 
+        null, 
+        null, 
+        null, 
+        null, 
+        []
+    ], 
+    "612248": [
+        "Narrowing of the balance function with centrality in au + au collisions at (S(NN))**1/2 = 130-GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.90.172301", 
+        null, 
+        "nucl-ex/0301014", 
+        "ins612248", 
+        null, 
+        []
+    ], 
+    "619063": [
+        "Transverse momentum and collision energy dependence of high p(T) hadron suppression in Au+Au collisions at ultrarelativistic energies", 
+        "STAR", 
+        "10.1103/PhysRevLett.91.172302", 
+        null, 
+        "nucl-ex/0305015", 
+        "ins619063", 
+        null, 
+        []
+    ], 
+    "621394": [
+        "Evidence from d + Au measurements for final state suppression of high p(T) hadrons in Au+Au collisions at RHIC", 
+        "STAR", 
+        "10.1103/PhysRevLett.91.072304", 
+        null, 
+        "nucl-ex/0306024", 
+        "ins621394", 
+        null, 
+        []
+    ], 
+    "621641": [
+        "Three pion HBT correlations in relativistic heavy ion collisions from the STAR experiment", 
+        "STAR", 
+        "10.1103/PhysRevLett.91.262301", 
+        null, 
+        "nucl-ex/0306028", 
+        "ins621641", 
+        null, 
+        []
+    ], 
+    "623047": [
+        "Multiplicity fluctuations in Au+Au collisions at s(NN)**(1/2) = 130-GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.68.044905", 
+        null, 
+        "nucl-ex/0307007", 
+        "ins623047", 
+        null, 
+        []
+    ], 
+    "624731": [
+        "Pion kaon correlations in Au+Au collisions at s(NN)**1/2 = 130-GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.91.262302", 
+        null, 
+        "nucl-ex/0307025", 
+        null, 
+        null, 
+        []
+    ]
+}

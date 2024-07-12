@@ -1,0 +1,33 @@
+Name: DM2_1988_I262690
+Year: 1988
+Summary: Cross section for $e^+e^-\to K^+K^-$ between 1.35 and 2.4 GeV
+Experiment: DM2
+Collider: DCI
+InspireID: 262690
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+- Z.Phys. C39 (1988) 13
+RunInfo: e+ e- to hadrons
+NeedCrossSection: yes
+Beams: [e+, e-]
+Description:
+  'Measurement of the cross section for $e^+e^-\to K^+K^-$ at energies between 1.35 and 2.4 GeV'
+Keywords:
+BibKey: Bisello:1988ez
+BibTeX: '@article{Bisello:1988ez,
+      author         = "Bisello, D. and others",
+      title          = "{Study of the Reaction $e^+ e^- \to K^+ K^-$ in the
+                        Energy Range 1350 $\le \sqrt{s} \le$ 2400-{MeV}}",
+      booktitle      = "{Z. PHYS. C39 (1988) 13-19 AND ORSAY LAB. ACCEL. LIN. -
+                        L.A.L. 88-01 (88,REC.JUL.) 16p}",
+      collaboration  = "DM2",
+      journal        = "Z. Phys.",
+      volume         = "C39",
+      year           = "1988",
+      pages          = "13",
+      doi            = "10.1007/BF01560386",
+      reportNumber   = "LAL-88-01",
+      SLACcitation   = "%%CITATION = ZEPYA,C39,13;%%"
+}'

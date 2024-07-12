@@ -14,7 +14,7 @@ namespace Rivet {
   public:
     
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(CMS_2017_I1499471);
+    RIVET_DEFAULT_ANALYSIS_CTOR(CMS_2017_I1499471);
     
     /// Book histograms and initialise projections before the run
     void init() {
@@ -28,49 +28,49 @@ namespace Rivet {
       VisibleFinalState visfs(fs);
 
       ZFinder zeeFinder(fs, Cuts::abseta < 2.4 && Cuts::pT > 20*GeV, PID::ELECTRON, 71.0*GeV, 111.0*GeV, 0.1 );
-      addProjection(zeeFinder, "ZeeFinder");
+      declare(zeeFinder, "ZeeFinder");
 
       ZFinder zmumuFinder(fs, Cuts::abseta < 2.4 && Cuts::pT > 20*GeV, PID::MUON, 71.0*GeV, 111.0*GeV, 0.1 );
-      addProjection(zmumuFinder, "ZmumuFinder");
+      declare(zmumuFinder, "ZmumuFinder");
 
       VetoedFinalState jetConstits(visfs);
       jetConstits.addVetoOnThisFinalState(zeeFinder);
       jetConstits.addVetoOnThisFinalState(zmumuFinder);
 
       FastJets akt05Jets(jetConstits, FastJets::ANTIKT, 0.5);
-      addProjection(akt05Jets, "AntiKt05Jets");
+      declare(akt05Jets, "AntiKt05Jets");
       
       //Histograms booking
       
-      _h_first_bjet_pt_b = bookHisto1D(1,1,1);
-      _h_first_bjet_abseta_b = bookHisto1D(3,1,1);
-      _h_Z_pt_b = bookHisto1D(5,1,1);
-      _h_HT_b = bookHisto1D(7,1,1);
-      _h_Dphi_Zb_b = bookHisto1D(9,1,1);
+      book(_h_first_bjet_pt_b ,1,1,1);
+      book(_h_first_bjet_abseta_b ,3,1,1);
+      book(_h_Z_pt_b ,5,1,1);
+      book(_h_HT_b ,7,1,1);
+      book(_h_Dphi_Zb_b ,9,1,1);
       
-      _h_first_jet_pt_ratio = bookScatter2D(2,1,1);
-      _h_first_jet_abseta_ratio = bookScatter2D(4,1,1);
-      _h_Z_pt_ratio = bookScatter2D(6,1,1);
-      _h_HT_ratio = bookScatter2D(8,1,1);
-      _h_Dphi_Zj_ratio = bookScatter2D(10,1,1);
+      book(_h_first_jet_pt_ratio ,2,1,1);
+      book(_h_first_jet_abseta_ratio ,4,1,1);
+      book(_h_Z_pt_ratio ,6,1,1);
+      book(_h_HT_ratio ,8,1,1);
+      book(_h_Dphi_Zj_ratio ,10,1,1);
       
-      _h_first_jet_pt = std::make_shared<YODA::Histo1D>(*_h_first_bjet_pt_b);
-      _h_first_jet_abseta = std::make_shared<YODA::Histo1D>(*_h_first_bjet_abseta_b);
-      _h_Z_pt = std::make_shared<YODA::Histo1D>(*_h_Z_pt_b);
-      _h_HT = std::make_shared<YODA::Histo1D>(*_h_HT_b);
-      _h_Dphi_Zj = std::make_shared<YODA::Histo1D>(*_h_Dphi_Zb_b);
+      book(_h_first_jet_pt, "first_jet_pt", refData(1,1,1) ); // (*_h_first_bjet_pt_b);
+      book(_h_first_jet_abseta, "first_jet_abseta", refData(3,1,1) ); // (*_h_first_bjet_abseta_b);
+      book(_h_Z_pt, "Z_pt", refData(5,1,1) ); // (*_h_Z_pt_b);
+      book(_h_HT, "HT", refData(7,1,1) ); // (*_h_HT_b);
+      book(_h_Dphi_Zj, "Dphi_Zj", refData(9,1,1) ); // (*_h_Dphi_Zb_b);
 
-      _h_first_bjet_pt_bb = bookHisto1D(11,1,1);
-      _h_second_bjet_pt_bb = bookHisto1D(12,1,1);
-      _h_Z_pt_bb = bookHisto1D(13,1,1);
-      _h_bb_mass_bb = bookHisto1D(14,1,1);
-      _h_Zbb_mass_bb = bookHisto1D(15,1,1);
-      _h_Dphi_bb = bookHisto1D(16,1,1);
-      _h_DR_bb = bookHisto1D(17,1,1);
-      _h_DR_Zbmin_bb = bookHisto1D(18,1,1);
-      _h_A_DR_Zb_bb = bookHisto1D(19,1,1);
+      book(_h_first_bjet_pt_bb ,11,1,1);
+      book(_h_second_bjet_pt_bb ,12,1,1);
+      book(_h_Z_pt_bb ,13,1,1);
+      book(_h_bb_mass_bb ,14,1,1);
+      book(_h_Zbb_mass_bb ,15,1,1);
+      book(_h_Dphi_bb ,16,1,1);
+      book(_h_DR_bb ,17,1,1);
+      book(_h_DR_Zbmin_bb ,18,1,1);
+      book(_h_A_DR_Zb_bb ,19,1,1);
 
-      _h_bjet_multiplicity = bookHisto1D(20,1,1);
+      book(_h_bjet_multiplicity ,20,1,1);
 
     }
                 
@@ -106,11 +106,11 @@ namespace Rivet {
       // Perform lepton-jet overlap and HT calculation
       double Ht = 0;
       Jets goodjets;
-      foreach (const Jet& j, jets) {
+      for (const Jet& j : jets) {
         // Decide if this jet is "good", i.e. isolated from the leptons
         /// @todo Nice use-case for any() and a C++11 lambda
         bool overlap = false;
-        foreach (const Particle& l, theLeptons) {
+        for (const Particle& l : theLeptons) {
           if (Rivet::deltaR(j, l) < 0.5) {
             overlap = true;
             break;
@@ -133,12 +133,12 @@ namespace Rivet {
             
       //identification of bjets
             
-      foreach (const Jet& j, goodjets) {
+      for (const Jet& j : goodjets) {
         if ( j.bTagged() ) { jb_final.push_back(j); }
       }
             
       //Event weight
-      const double w = 0.5*event.weight();
+      const double w = 0.5;
             
       //histogram filling
 
@@ -188,7 +188,9 @@ namespace Rivet {
             _h_Zbb_mass_bb->fill(Zbb.mass(),w);
 
             _h_Dphi_bb->fill(deltaPhi(b1,b2),w);
-            _h_DR_bb->fill(deltaR(b1,b2),w);
+            if (deltaR(b1,b2)>0.5) {
+              _h_DR_bb->fill(deltaR(b1,b2),w);
+            }
 
             double DR_Z_b1(0.), DR_Z_b2(0.);
             if ( ee_event ) {
@@ -290,6 +292,6 @@ namespace Rivet {
   
   
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CMS_2017_I1499471);
+  RIVET_DECLARE_PLUGIN(CMS_2017_I1499471);
   
 }

@@ -1,0 +1,37 @@
+Name: LHCB_2022_I1960979
+Year: 2022
+Summary: Mass distributions in  $B_c^+\to J/\psi+$ $\pi^+\pi^+\pi^-$, $K^+K^-\pi^+$ and $K^+\pi^+\pi^-$
+Experiment: LHCB
+Collider: LHC
+InspireID: 1960979
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - JHEP 01 (2022) 065
+RunInfo: Any process producing B_c+, originally pp
+Description:
+'Mass distributions in $B_c^+\to J/\psi+$ $\pi^+\pi^+\pi^-$, $K^+K^-\pi^+$ and $K^+\pi^+\pi^-$.
+The data were read from the plots in the paper and may not be corrected for efficiency and acceptance.'
+ValidationInfo:
+  'Herwig7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: LHCb:2021tdf
+BibTeX: '@article{LHCb:2021tdf,
+    author = "Aaij, Roel and others",
+    collaboration = "LHCb",
+    title = "{Study of $ {\mathrm{B}}_{\mathrm{c}}^{+} $ decays to charmonia and three light hadrons}",
+    eprint = "2111.03001",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "LHCb-PAPER-2021-034, CERN-EP-2021-216",
+    doi = "10.1007/JHEP01(2022)065",
+    journal = "JHEP",
+    volume = "01",
+    pages = "065",
+    year = "2022"
+}
+'

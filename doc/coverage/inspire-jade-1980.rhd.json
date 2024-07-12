@@ -1,0 +1,50 @@
+{
+    "143985": [
+        "Observation of Planar Three Jet Events in e+ e- Annihilation and Evidence for Gluon Bremsstrahlung", 
+        "JADE", 
+        "10.1016/0370-2693(80)90680-2", 
+        null, 
+        null, 
+        "ins143985", 
+        null, 
+        [
+            "DESY-79-80"
+        ]
+    ], 
+    "152290": [
+        "Search for Narrow Resonances in $e^+ e^-$ Annihilation at c.m. Energies Between 29.90-{GeV} and 31.46-{GeV}", 
+        "JADE", 
+        "10.1016/0370-2693(80)90682-6", 
+        null, 
+        null, 
+        "ins152290", 
+        null, 
+        [
+            "DESY-80-04"
+        ]
+    ], 
+    "152604": [
+        "Test of Quantum Electrodynamics at {PETRA}", 
+        "JADE", 
+        "10.1016/0370-2693(80)90338-X", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-80-14"
+        ]
+    ], 
+    "154289": [
+        "Search for Fractional Charge and Heavy Stable Particles at {PETRA}", 
+        "JADE", 
+        "10.1007/BF01474803", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-80-71"
+        ]
+    ]
+}

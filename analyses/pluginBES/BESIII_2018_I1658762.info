@@ -1,0 +1,36 @@
+Name: BESIII_2018_I1658762
+Year: 2018
+Summary: Analysis of $\psi(2S)$ decays to $p\bar{p}$ and $n\bar{n}$
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1658762
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D98 (2018) no.3, 032006
+RunInfo:  e+ e- > Psi(2S)
+NeedCrossSection: no
+Beams: [e-, e+]
+Energies: [3.686]
+Description:
+  'Analysis of the angular distribution of the baryons produced in $e^+e^-\to\psi(2S) \to p\bar{p}$ and $n\bar{n}$.
+   Gives information about the decay and is useful for testing correlations in hadron decays.'
+Keywords: []
+BibKey: Ablikim:2018ttl
+BibTeX: '@article{Ablikim:2018ttl,
+      author         = "Ablikim, M. and others",
+      title          = "{Observation of $\psi(3686) \to n\bar{n}$ and improved
+                        measurement of $\psi(3686) \to p \bar{p}$}",
+      collaboration  = "BESIII",
+      journal        = "Phys. Rev.",
+      volume         = "D98",
+      year           = "2018",
+      number         = "3",
+      pages          = "032006",
+      doi            = "10.1103/PhysRevD.98.032006",
+      eprint         = "1803.02039",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1803.02039;%%"
+}'

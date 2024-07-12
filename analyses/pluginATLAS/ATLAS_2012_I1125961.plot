@@ -17,7 +17,7 @@ YLabel=Number of Events
 LogY=0
 # END PLOT
 # BEGIN PLOT /ATLAS_2012_I1125961/count_Ap_medium
-Title=Number of events in the medium ${\rm A}'$ signal region
+Title=Number of events in the medium $\mathrm{A}'$ signal region
 XLabel=
 YLabel=Number of Events
 LogY=0
@@ -78,7 +78,7 @@ YLabel=$\mathrm{Events}/100 \mathrm{GeV}$
 LogY=1
 # END PLOT
 # BEGIN PLOT /ATLAS_2012_I1125961/hist_m_eff_Ap
-Title=Effective Mass in the ${\rm A}'$ Signal Region
+Title=Effective Mass in the $\mathrm{A}'$ Signal Region
 XLabel=$M_{\mathrm{eff}}$ [GeV]
 YLabel=$\mathrm{Events}/100 \mathrm{GeV}$
 LogY=1

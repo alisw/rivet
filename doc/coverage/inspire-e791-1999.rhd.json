@@ -1,0 +1,90 @@
+{
+    "476919": [
+        "Correlations between D and anti-D mesons produced in 500-GeV/c pi- nucleon interactions",
+        "E791",
+        "10.1007/s101059900c0004",
+        null,
+        "hep-ex/9809029",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-98-297-E",
+            "FERMILAB-REPORT-P-PUB-98-297-E"
+        ]
+    ],
+    "479065": [
+        "Measurement of the D(s) lifetime",
+        "E791",
+        "10.1016/S0370-2693(98)01476-2",
+        null,
+        "hep-ex/9811016",
+        null,
+        null,
+        [
+            "USCHEP-9801",
+            "FERMILAB-PUB-98-320-E"
+        ]
+    ],
+    "480733": [
+        "Measurement of the form-factor ratios for D+(s) ---> phi lepton+ neutrino(lepton)",
+        "E791",
+        "10.1016/S0370-2693(99)00141-0",
+        null,
+        "hep-ex/9812013",
+        "ins480733",
+        null,
+        [
+            "KSU-HEP-98-002",
+            "FERMILAB-PUB-98-330-E"
+        ]
+    ],
+    "494391": [
+        "Search for the pentaquark via the P0 (anti-c s) --> K*0 K- p decay",
+        "E791",
+        "10.1016/S0370-2693(99)00058-1",
+        null,
+        null,
+        null,
+        null,
+        [
+            "FERMILAB-PUB-98-326-E"
+        ]
+    ],
+    "496510": [
+        "Measurements of lifetimes and a limit on the lifetime difference in the neutral D meson system",
+        "E791",
+        "10.1103/PhysRevLett.83.32",
+        null,
+        "hep-ex/9903012",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-99-036-E"
+        ]
+    ],
+    "502166": [
+        "Total forward and differential cross-sections of neutral D mesons produced in 500-GeV/c pi- nucleon interactions",
+        "E791",
+        "10.1016/S0370-2693(99)00900-4",
+        null,
+        "hep-ex/9906034",
+        "ins502166",
+        null,
+        [
+            "FERMILAB-PUB-99-185-E"
+        ]
+    ],
+    "502776": [
+        "Search for rare and forbidden dilepton decays of the D+, D+(s), and D0 charmed mesons",
+        "E791",
+        "10.1016/S0370-2693(99)00902-8",
+        null,
+        "hep-ex/9906045",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-99-183-E",
+            "UMS-HEP-99-020"
+        ]
+    ]
+}

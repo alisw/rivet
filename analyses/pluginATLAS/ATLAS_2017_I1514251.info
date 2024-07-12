@@ -5,11 +5,13 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1514251
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Gavin Hesketh <gavin.hesketh@cern.ch>
 References:
+ - ATLAS-STDM-2016-01
  - arXiv:1702.05725 [hep-ex]
- - submitted to EPJC
+ - Eur. Phys. J. C77 (2017) 361
 Keywords:
  - zboson
  - jets
@@ -22,7 +24,7 @@ PtCuts: [25, 25]
 Options:
  - LMODE=EL,MU,EMU
 Description:
-  'Measurements of the production cross section of a $Z$ boson in association with jets in proton-proton collisions at i
+  'Measurements of the production cross section of a $Z$ boson in association with jets in proton-proton collisions at 
   $\sqrt{s}=13$ TeV are presented, using data corresponding to an integrated luminosity of 3.16 fb${}^{-1}$ collected by
   the ATLAS experiment at the CERN Large Hadron Collider in 2015. Inclusive and differential cross sections are measured
   for events containing a $Z$ boson decaying to electrons or muons and produced in association with up to seven jets with

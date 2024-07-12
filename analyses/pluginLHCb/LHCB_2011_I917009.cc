@@ -8,9 +8,6 @@ namespace Rivet {
   class LHCB_2011_I917009 : public Analysis {
   public:
 
-    /// @name Constructors etc.
-    //@{
-
     /// Constructor
     LHCB_2011_I917009()
       : Analysis("LHCB_2011_I917009"),
@@ -20,11 +17,6 @@ namespace Rivet {
         rap_max(0.0), dsShift(0)
     {   }
 
-    //@}
-
-
-  public:
-
     /// @name Analysis methods
     //@{
 
@@ -32,11 +24,11 @@ namespace Rivet {
     void init() {
       int y_nbins = 4;
       fillMap(partLftMap);
-      if (fuzzyEquals(sqrtS(), 0.9*TeV)) {
+      if (isCompatibleWithSqrtS(900)) {
         rap_beam = 6.87;
         rap_max = 4.;
         pt_min = 0.25;
-      } else if (fuzzyEquals(sqrtS(), 7*TeV)) {
+      } else if (isCompatibleWithSqrtS(7000.)) {
         rap_beam = 8.92;
         rap_max = 4.5;
         pt_min = 0.15;
@@ -47,9 +39,22 @@ namespace Rivet {
       }
 
       // Create the sets of temporary histograms that will be used to make the ratios in the finalize()
-      for (size_t i = 0; i < 12; ++i) _tmphistos[i] = YODA::Histo1D(y_nbins, rap_min, rap_max);
-      for (size_t i = 12; i < 15; ++i) _tmphistos[i] = YODA::Histo1D(refData(dsShift+5, 1, 1));
-      for (size_t i = 15; i < 18; ++i) _tmphistos[i] = YODA::Histo1D(y_nbins, rap_beam - rap_max, rap_beam - rap_min);
+      for (size_t i = 0; i < 12; ++i)  book(_tmphistos[i], "TMP/"+to_str(i), y_nbins, rap_min, rap_max);
+      for (size_t i = 12; i < 15; ++i) book(_tmphistos[i], "TMP/"+to_str(i), refData(dsShift+5, 1, 1));
+      for (size_t i = 15; i < 18; ++i) book(_tmphistos[i], "TMP/"+to_str(i), y_nbins, rap_beam - rap_max, rap_beam - rap_min);
+
+      int dsId = dsShift + 1;
+      for (size_t j = 0; j < 3; ++j) {
+        book(s1[j], dsId, 1, j+1);
+        book(s2[j], dsId+1, 1, j+1);
+      }
+      dsId += 2;
+      for (size_t j = 3; j < 6; ++j) {
+        book(s3[j-3], dsId, 1, 1);
+        dsId += 1;
+        book(s4[j-3], dsId, 1, 1);
+        dsId += 1;
+      }
 
       declare(UnstableParticles(), "UFS");
     }
@@ -57,13 +62,12 @@ namespace Rivet {
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-      const double weight = event.weight();
-      const UnstableParticles& ufs = apply<UnstableFinalState>(event, "UFS");
+      const UnstableParticles& ufs = apply<UnstableParticles>(event, "UFS");
       double ancestor_lftsum = 0.0;
       double y, pT;
       int id;
       int partIdx = -1;
-      foreach (const Particle& p, ufs.particles()) {
+      for (const Particle& p : ufs.particles()) {
         id = p.pid();
         // continue if particle not a K0s nor (anti-)Lambda
         if ( (id == 310) || (id == -310) )  {
@@ -88,45 +92,35 @@ namespace Rivet {
         pT = sqrt((qmom.px() * qmom.px()) + (qmom.py() * qmom.py()));
         if (!inRange(pT, pt_min, pt3_edge)) continue;
         // Filling corresponding temporary histograms for pT intervals
-        if (inRange(pT, pt_min, pt1_edge)) _tmphistos[partIdx*3].fill(y, weight);
-        if (inRange(pT, pt1_edge, pt2_edge)) _tmphistos[partIdx*3+1].fill(y, weight);
-        if (inRange(pT, pt2_edge, pt3_edge)) _tmphistos[partIdx*3+2].fill(y, weight);
+        if (inRange(pT, pt_min, pt1_edge)) _tmphistos[partIdx*3]->fill(y);
+        if (inRange(pT, pt1_edge, pt2_edge)) _tmphistos[partIdx*3+1]->fill(y);
+        if (inRange(pT, pt2_edge, pt3_edge)) _tmphistos[partIdx*3+2]->fill(y);
         // Fill histo in rapidity for whole pT interval
-        _tmphistos[partIdx+9].fill(y, weight);
+        _tmphistos[partIdx+9]->fill(y);
         // Fill histo in pT for whole rapidity interval
-        _tmphistos[partIdx+12].fill(pT, weight);
+        _tmphistos[partIdx+12]->fill(pT);
         // Fill histo in rapidity loss for whole pT interval
-        _tmphistos[partIdx+15].fill(rap_beam - y, weight);
+        _tmphistos[partIdx+15]->fill(rap_beam - y);
       }
     }
 
 
     // Generate the ratio histograms
     void finalize() {
-      int dsId = dsShift + 1;
       for (size_t j = 0; j < 3; ++j) {
-        /// @todo Compactify to two one-liners
-        Scatter2DPtr s1 = bookScatter2D(dsId, 1, j+1);
-        divide(_tmphistos[j], _tmphistos[3+j], s1);
-        Scatter2DPtr s2 = bookScatter2D(dsId+1, 1, j+1);
-        divide(_tmphistos[j], _tmphistos[6+j], s2);
+        divide(_tmphistos[j], _tmphistos[3+j], s1[j]);
+        divide(_tmphistos[j], _tmphistos[6+j], s2[j]);
       }
-      dsId += 2;
       for (size_t j = 3; j < 6; ++j) {
-        /// @todo Compactify to two one-liners
-        Scatter2DPtr s1 = bookScatter2D(dsId, 1, 1);
-        divide(_tmphistos[3*j], _tmphistos[3*j+1], s1);
-        dsId += 1;
-        Scatter2DPtr s2 = bookScatter2D(dsId, 1, 1);
-        divide(_tmphistos[3*j], _tmphistos[3*j+2], s2);
-        dsId += 1;
+        divide(_tmphistos[3*j], _tmphistos[3*j+1], s3[j-3]);
+        divide(_tmphistos[3*j], _tmphistos[3*j+2], s4[j-3]);
       }
     }
 
     //@}
 
-  private:
 
+  private:
 
     // Get particle lifetime from hardcoded data
     double getLifeTime(int pid) {
@@ -153,16 +147,18 @@ namespace Rivet {
     }
 
     // Data members like post-cuts event weight counters go here
-    const double getMotherLifeTimeSum(const Particle& p) {
-      if (p.genParticle() == NULL) return -1.;
+    double getMotherLifeTimeSum(const Particle& p) {
+      if (p.genParticle() == nullptr) return -1.;
       double lftSum = 0.;
       double plft = 0.;
-      const GenParticle* part = p.genParticle();
-      const GenVertex* ivtx = part->production_vertex();
+      ConstGenParticlePtr part = p.genParticle();
+      ConstGenVertexPtr ivtx = part->production_vertex();
       while (ivtx) {
-          if (ivtx->particles_in_size() < 1) { lftSum = -1.; break; };
-          const GenVertex::particles_in_const_iterator iPart_invtx = ivtx->particles_in_const_begin();
-          part = (*iPart_invtx);
+
+          vector<ConstGenParticlePtr> part_in = HepMCUtils::particles(ivtx, Relatives::PARENTS);
+
+          if (part_in.size() < 1) { lftSum = -1.; break; };
+          ConstGenParticlePtr part = part_in.at(0);//(*iPart_invtx);
           if ( !(part) ) { lftSum = -1.; break; };
           ivtx = part->production_vertex();
           if ( (part->pdg_id() == 2212) || !(ivtx) ) break; //reached beam
@@ -204,7 +200,8 @@ namespace Rivet {
     /// Next 3 histograms contain the particles in y bins for the whole pT interval (3 histos)
     /// Next 3 histograms contain the particles in y_loss bins for the whole pT interval (3 histos)
     /// Last 3 histograms contain the particles in pT bins for the whole rapidity (y) interval (3 histos)
-    YODA::Histo1D _tmphistos[18];
+    Histo1DPtr _tmphistos[18];
+    array<Scatter2DPtr,3> s1,s2,s3,s4;
     //@}
 
     // Fill the PDG Id to Lifetime[seconds] map
@@ -318,6 +315,6 @@ namespace Rivet {
 
 
   // Hook for the plugin system
-  DECLARE_RIVET_PLUGIN(LHCB_2011_I917009);
+  RIVET_DECLARE_PLUGIN(LHCB_2011_I917009);
 
 }

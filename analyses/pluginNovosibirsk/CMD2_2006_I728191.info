@@ -1,0 +1,34 @@
+Name: CMD2_2006_I728191
+Year: 2006
+Summary:  Cross section for $e^+e^-\to \pi^+\pi^-$ between 370 and 520 MeV
+Experiment: CMD2
+Collider: VEPP-2M
+InspireID: 728191
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+- JETP Lett. 84 (2006) 413-417, 2006 
+RunInfo: e+ e- to hadrons below 0.6 and 0.9 GeV
+NeedCrossSection: yes
+Beams: [e+, e-]
+Description:
+  'Measurement of the cross section for $e^+e^-\to \pi^+\pi^-$ at energies between 370 and 520 MeV. Useful for comparing models of the pion form factor.'
+Keywords:
+BibKey: Akhmetshin:2006wh
+BibTeX: '@article{Akhmetshin:2006wh,
+      author         = "Akhmetshin, R. R. and others",
+      title          = "{Measurement of the e+ e- ---&gt; pi+ pi- cross section with
+                        the CMD2 detector in the 370 - 520-MeV c.m. energy
+                        range}",
+      journal        = "JETP Lett.",
+      volume         = "84",
+      year           = "2006",
+      pages          = "413-417",
+      doi            = "10.1134/S0021364006200021",
+      note           = "[Pisma Zh. Eksp. Teor. Fiz.84,491(2006)]",
+      eprint         = "hep-ex/0610016",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = HEP-EX/0610016;%%"
+}'

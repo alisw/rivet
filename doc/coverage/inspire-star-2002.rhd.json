@@ -1,0 +1,72 @@
+{
+    "584141": [
+        "Midrapidity Lambda and anti-Lambda production in Au + Au collisions at s(NN)**(1/2) = 130-GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.89.092301", 
+        null, 
+        "nucl-ex/0203016", 
+        "ins584141", 
+        null, 
+        []
+    ], 
+    "584631": [
+        "Midrapidity phi production in Au + Au collisions at s N N = 130-GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.65.041901", 
+        null, 
+        null, 
+        "ins584631", 
+        null, 
+        []
+    ], 
+    "587154": [
+        "Azimuthal anisotropy of K0(S) and Lambda + anti-Lambda production at mid-rapidity from Au + Au collisions at S(NN)**(1/2) = 130-GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.89.132301", 
+        null, 
+        "hep-ex/0205072", 
+        null, 
+        null, 
+        []
+    ], 
+    "587235": [
+        "K*(892)0 production in relativistic heavy ion collisions at S(NN)**(1/2) = 130-GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.66.061901", 
+        null, 
+        "nucl-ex/0205015", 
+        "ins587235", 
+        null, 
+        []
+    ], 
+    "587825": [
+        "Elliptic flow from two and four particle correlations in Au+Au collisions at s(NN)**(1/2) = 130-GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.66.034904", 
+        null, 
+        "nucl-ex/0206001", 
+        "ins587825", 
+        null, 
+        []
+    ], 
+    "588142": [
+        "Coherent rho0 production in ultraperipheral heavy ion collisions", 
+        "STAR", 
+        "10.1103/PhysRevLett.89.272302", 
+        null, 
+        "nucl-ex/0206004", 
+        "ins588142", 
+        null, 
+        []
+    ], 
+    "588808": [
+        "Centrality dependence of high $p_{T}$ hadron suppression in Au+Au collisions at $\\sqrt{s}_{NN}$ = 130-GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.89.202301", 
+        null, 
+        "nucl-ex/0206011", 
+        "ins588808", 
+        null, 
+        []
+    ]
+}

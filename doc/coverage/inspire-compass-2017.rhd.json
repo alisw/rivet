@@ -1,0 +1,111 @@
+{
+    "1391643": [
+        "Resonance Production and $\\pi\\pi$ S-wave in $\\pi^- + p \\rightarrow \\pi^- \\pi^- \\pi^+ + p_{recoil}$ at 190 GeV$/c$", 
+        "COMPASS", 
+        "10.1103/PhysRevD.95.032004", 
+        "2047484", 
+        "1509.00992", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-233"
+        ]
+    ], 
+    "1409917": [
+        "Leading-order determination of the gluon polarisation from semi-inclusive deep inelastic scattering data", 
+        "COMPASS", 
+        "10.1140/epjc/s10052-017-4716-x", 
+        "2115610", 
+        "1512.05053", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-328"
+        ]
+    ], 
+    "1444985": [
+        "Multiplicities of charged pions and charged hadrons from deep-inelastic scattering of muons off an isoscalar target", 
+        "COMPASS", 
+        "10.1016/j.physletb.2016.09.042", 
+        "2145658", 
+        "1604.02695", 
+        "ins1444985", 
+        null, 
+        [
+            "CERN-EP-2016-095"
+        ]
+    ], 
+    "1469063": [
+        "Exclusive $\\omega$ meson muoproduction on transversely polarised protons", 
+        "COMPASS", 
+        "10.1016/j.nuclphysb.2016.12.015", 
+        "2160545", 
+        "1606.03725", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2016-157"
+        ]
+    ], 
+    "1483098": [
+        "Multiplicities of charged kaons from deep-inelastic muon scattering off an isoscalar target", 
+        "COMPASS", 
+        "10.1016/j.physletb.2017.01.053", 
+        "2210278", 
+        "1608.06760", 
+        "ins1483098", 
+        null, 
+        [
+            "CERN-EP-2016-206"
+        ]
+    ], 
+    "1487909": [
+        "Sivers asymmetry extracted in SIDIS at the hard scales of the Drell\u2013Yan process at COMPASS", 
+        "COMPASS", 
+        "10.1016/j.physletb.2017.04.042", 
+        "2218151", 
+        "1609.07374", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2016-250", 
+            "CERN-EP-2016--250"
+        ]
+    ], 
+    "1501480": [
+        "Final COMPASS results on the deuteron spin-dependent structure function $g_1^{\\rm d}$ and the Bjorken sum rule", 
+        "COMPASS", 
+        "10.1016/j.physletb.2017.03.018", 
+        "2238302", 
+        "1612.00620", 
+        "ins1501480", 
+        null, 
+        [
+            "CERN-EP-2016-299"
+        ]
+    ], 
+    "1508480": [
+        "First measurement of the Sivers asymmetry for gluons using SIDIS data", 
+        "COMPASS", 
+        "10.1016/j.physletb.2017.07.018", 
+        "2240191", 
+        "1701.02453", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2017-003"
+        ]
+    ], 
+    "1589290": [
+        "First measurement of transverse-spin-dependent azimuthal asymmetries in the Drell-Yan process", 
+        "COMPASS", 
+        "10.1103/PhysRevLett.119.112002", 
+        "2257741", 
+        "1704.00488", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2017-059"
+        ]
+    ]
+}

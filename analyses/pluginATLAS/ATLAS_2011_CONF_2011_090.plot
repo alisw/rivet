@@ -13,13 +13,13 @@ LogY=0
 
 # BEGIN PLOT /ATLAS_2011_CONF_2011_090/Et_miss_e
 Title=Missing transverse Energy in the electron channel
-XLabel=$E_{\mathrm{T}}^{\rm miss}$ [GeV]
+XLabel=$E_{\mathrm{T}}^\mathrm{miss}$ [GeV]
 YLabel=$\mathrm{Events}/10 \mathrm{GeV}$
 LogY=1
 # END PLOT
 # BEGIN PLOT /ATLAS_2011_CONF_2011_090/Et_miss_mu
 Title=Missing transverse Energy in the muon channel
-XLabel=$E_{\mathrm{T}}^{\rm miss}$ [GeV]
+XLabel=$E_{\mathrm{T}}^\mathrm{miss}$ [GeV]
 YLabel=$\mathrm{Events}/10 \mathrm{GeV}$
 LogY=1
 # END PLOT

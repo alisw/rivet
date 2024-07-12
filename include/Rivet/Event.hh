@@ -9,7 +9,7 @@
 namespace Rivet {
 
 
-  /// Rivet wrapper for HepMC event and Projection references.
+  /// @brief Representation of a HepMC event, and enabler of Projection caching
   ///
   /// Event is a concrete class representing an generated event in Rivet. It is
   /// constructed given a HepMC::GenEvent, a pointer to which is kept by the
@@ -26,20 +26,27 @@ namespace Rivet {
     //@{
 
     /// Constructor from a HepMC GenEvent pointer
-    Event(const GenEvent* ge)
-      : _genevent_original(ge), _genevent(*ge)
-    { assert(ge); _init(*ge); }
+    Event(const GenEvent* ge, const vector<size_t>& indices = {}, bool strip = false)
+      : _weightIndices(indices), _genevent_original(ge) {
+      assert(ge);
+      _genevent = *ge;
+      if ( strip ) _strip(_genevent);
+      _init(*ge);
+    }
 
     /// Constructor from a HepMC GenEvent reference
     /// @deprecated HepMC uses pointers, so we should talk to HepMC via pointers
-    Event(const GenEvent& ge)
-      : _genevent_original(&ge), _genevent(ge)
-    { _init(ge); }
+    Event(const GenEvent& ge, const vector<size_t>& indices = {}, bool strip = false)
+      : _weightIndices(indices), _genevent_original(&ge), _genevent(ge) {
+      if ( strip ) _strip(_genevent);
+      _init(ge);
+    }
 
     /// Copy constructor
     Event(const Event& e)
-      : _genevent_original(e._genevent_original), _genevent(e._genevent)
-    {  }
+      : _weightIndices(e._weightIndices),
+        _genevent_original(e._genevent_original),
+        _genevent(e._genevent) { }
 
     //@}
 
@@ -50,11 +57,8 @@ namespace Rivet {
     /// The generated event obtained from an external event generator
     const GenEvent* genEvent() const { return &_genevent; }
 
-    /// @brief The generation weight associated with the event
-    ///
-    /// @todo This needs to be revisited when we finally add the mechanism to
-    /// support NLO counter-events and weight vectors.
-    double weight() const;
+    /// The generated event obtained from an external event generator
+    const GenEvent* originalGenEvent() const { return _genevent_original; }
 
     /// Get the beam particles
     ParticlePair beams() const;
@@ -64,15 +68,6 @@ namespace Rivet {
 
     /// Get the beam centre-of-mass energy per nucleon
     double asqrtS() const;
-
-    /// Get the generator centrality (impact-parameter quantile in [0,1]; or -1 if undefined (usual for non-HI generators))
-    double centrality() const;
-
-    // /// Get the boost to the beam centre-of-mass
-    // Vector3 beamCMSBoost() const;
-
-    // /// Get the boost to the beam centre-of-mass
-    // LorentzTransform beamCMSTransform();
 
     //@}
 
@@ -98,8 +93,16 @@ namespace Rivet {
       return filter_select(allParticles(), f);
     }
 
-    //@}
+    /// @brief The generation weights associated with the event
+    std::valarray<double> weights() const;
 
+    /// @brief The generation cross-sections associated with the event
+    std::vector<std::pair<double, double>> crossSections() const;
+
+    /// @brief Obsolete weight method. Always returns 1 now.
+    DEPRECATED("Event weight does not need to be included anymore. For compatibility, it's always == 1 now.")
+    double weight() const { return 1.0; }
+    //@}
 
     /// @name Projection running
     //@{
@@ -111,23 +114,33 @@ namespace Rivet {
     /// to the previous equivalent projection is returned. If no previous
     /// Projection was found, the Projection::project(const Event&) of @a p is
     /// called and a reference to @a p is returned.
+    ///
+    /// @todo Can make this non-templated, since only cares about ptr to Projection base class
+    ///
+    /// @note Comparisons here are by direct pointer comparison, because
+    /// equivalence is guaranteed if pointers are equal, and inequivalence
+    /// guaranteed if they aren't, thanks to the ProjectionHandler registry
     template <typename PROJ>
     const PROJ& applyProjection(PROJ& p) const {
-      Log& log = Log::getLog("Rivet.Event");
       static bool docaching = getEnvParam("RIVET_CACHE_PROJECTIONS", true);
       if (docaching) {
-        log << Log::TRACE << "Applying projection " << &p << " (" << p.name() << ") -> comparing to projections " << _projections << endl;
+        MSG_TRACE("Applying projection " << &p << " (" << p.name() << ") -> comparing to projections " << _projections);
         // First search for this projection *or an equivalent* in the already-executed list
         const Projection* cpp(&p);
-        std::set<const Projection*>::const_iterator old = _projections.find(cpp);
+        /// @note Currently using reint cast to integer type to bypass operator==(Proj*, Proj*)
+        // std::set<const Projection*>::const_iterator old = _projections.find(cpp);
+        std::set<const Projection*>::const_iterator old = std::begin(_projections);
+        std::uintptr_t recpp = reinterpret_cast<std::uintptr_t>(cpp);
+        for (; old != _projections.end(); ++old)
+          if (reinterpret_cast<std::uintptr_t>(*old) == recpp) break;
         if (old != _projections.end()) {
-          log << Log::TRACE << "Equivalent projection found -> returning already-run projection " << *old << endl;
+          MSG_TRACE("Equivalent projection found -> returning already-run projection " << *old);
           const Projection& pRef = **old;
           return pcast<PROJ>(pRef);
         }
-        log << Log::TRACE << "No equivalent projection in the already-run list -> projecting now" << endl;
+        MSG_TRACE("No equivalent projection in the already-run list -> projecting now");
       } else {
-        log << Log::TRACE << "Applying projection " << &p << " (" << p.name() << ") WITHOUT projection caching & comparison" << endl;
+        MSG_TRACE("Applying projection " << &p << " (" << p.name() << ") WITHOUT projection caching & comparison");
       }
       // If this one hasn't been run yet on this event, run it and add to the list
       Projection* pp = const_cast<Projection*>(&p);
@@ -150,8 +163,15 @@ namespace Rivet {
 
   private:
 
+    /// Get a Log object for Event
+    Log& getLog() const;
+
     /// @brief Actual (shared) implementation of the constructors from GenEvents
     void _init(const GenEvent& ge);
+
+    /// @brief Remove uninteresting or unphysical particles in the
+    /// GenEvent to speed up searches.
+    void _strip(GenEvent & ge);
 
     // /// @brief Convert the GenEvent to use conventional alignment
     // ///
@@ -159,6 +179,12 @@ namespace Rivet {
     // /// hadron-lepton orientation and has to be corrected for DIS analysis
     // /// portability.
     // void _geNormAlignment();
+
+    /// @brief The indices of the selected weights, as instructed to the AnalysisHandler.
+    ///
+    /// The user can (de-)select weights and the AnalysisHandler knows about the subset
+    /// that match the specifications.
+    const std::vector<size_t> _weightIndices;
 
     /// @brief The generated event, as obtained from an external generator.
     ///
@@ -186,6 +212,11 @@ namespace Rivet {
     /// The set of Projection objects applied so far
     mutable std::set<ConstProjectionPtr> _projections;
 
+    /// A cached set of event weights (a single unit weight if the original weight vector was empty)
+    mutable std::valarray<double> _weights;
+
+    /// A cached set of event cross-section & errors (a pair of zeros if the original weight vector was empty)
+    mutable std::vector<std::pair<double,double>> _xsecs;
   };
 
 

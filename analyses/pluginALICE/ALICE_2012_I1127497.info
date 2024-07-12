@@ -3,9 +3,9 @@ Year: 2012
 Summary: Centrality dependence of charged particle production at large transverse momentum in Pb-Pb collisions at $\sqrt{s_{\rm{NN}}} = 2.76$ TeV
 Experiment: ALICE
 Collider: LHC
-SpireID: 
 InspireID: 1127497
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Przemyslaw Karczmarczyk <przemyslaw.karczmarczyk@cern.ch>
  - Jan Fiete Grosse-Oetringhaus <Jan.Fiete.Grosse-Oetringhaus@cern.ch>
@@ -15,8 +15,9 @@ References:
 RunInfo:
 NumEvents:
 Options:
- - cent=REF,GEN,IMP,USR 
-Beams: [[p, p], [1000822080, 1000822080]]
+ - cent=REF,GEN,IMP,USR,RAW
+ - beam=HI,PP
+Beams: [[p, p], [Pb, Pb]]
 # This is _total_ energy of beams, so this becomes 208*2760=574080
 Energies: [2760, 574080]
 Description:
@@ -39,4 +40,3 @@ BibTeX: '@article{Abelev:2012hxa,
       reportNumber   = "CERN-PH-EP-2012-233",
       SLACcitation   = "%%CITATION = ARXIV:1208.2711;%%"
 }'
-Reentrant: True

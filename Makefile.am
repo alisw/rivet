@@ -1,6 +1,8 @@
 ACLOCAL_AMFLAGS = -I m4
 SUBDIRS = src pyext data include bin analyses test doc
 
+AUTOMAKE_OPTIONS = foreign
+
 EXTRA_DIST = GUIDELINES
 
 DISTCHECK_CONFIGURE_FLAGS = --enable-debug --with-yoda=$(YODAPATH) --with-hepmc=$(HEPMCPATH) --with-fastjet=$(FASTJETPATH)
@@ -16,24 +18,14 @@ doc:
 clean-local:
 	@rm -rf a.out
 
-
-## Doxygen
-if WITH_DOXYGEN
-dox:
-	@echo "Running Doxygen..."
-	@$(DOXYGEN) $(top_builddir)/Doxyfile || true
-install-dox:
-	$(install_sh_DATA) doxy/html/* $(DESTDIR)$(pkgdatadir)/doc/html
-mostlyclean-local:
-	@rm -rf $(top_builddir)/doxy
-uninstall-local:
-	@rm -rf $(DESTDIR)$(pkgdatadir)/doc; \
-	test ! -d $(DESTDIR)$(pkgdatadir) || rmdir $(DESTDIR)$(pkgdatadir) || true
-endif
+install-data-local:
+	cd doc && $(MAKE) dat json
+	$(mkdir_p) $(DESTDIR)$(pkgdatadir)
+	$(install_sh_DATA) doc/analists/analyses.dat $(DESTDIR)$(pkgdatadir)/ || true
+	$(install_sh_DATA) doc/analists/analyses.json $(DESTDIR)$(pkgdatadir)/ || true
 
 
-## Upload to HepForge
-RSH = rsync
+## Upload tarballs to HepForge
 DEST = login.hepforge.org:rivet/downloads/
 upload: dist
 	$(RSH) $(DIST_ARCHIVES) $(DEST)

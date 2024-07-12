@@ -3,16 +3,17 @@
 #define RIVET_USERCENTESTIMATE_HH
 
 #include "Rivet/Projections/SingleValueProjection.hh"
+#include "Rivet/Projections/HepMCHeavyIon.hh"
 
 
 namespace Rivet {
 
 class UserCentEstimate: public SingleValueProjection {
-
 public:
-  
+
   UserCentEstimate() {
     setName("UserCentEstimate");
+    declare(HepMCHeavyIon(), "HepMC");
   }
 
   /// Clone on the heap.
@@ -22,20 +23,15 @@ protected:
 
   void project(const Event& e) {
     clear();
-#if HEPMC_VERSION_CODE >= 3000000
-    const HepMC::HeavyIon * hi = e.genEvent()->heavy_ion();
-    if ( hi && hi->user_cent_estimate >= 0.0 )
-      set(hi->centrality*100.0);
-#endif
+    set(apply<HepMCHeavyIon>(e, "HepMC").user_cent_estimate());
    }
-  
-  int compare(const Projection& p) const {
-    return 0;
+
+  CmpState compare(const Projection& p) const {
+    return CmpState::EQ;
   }
-  
+
 };
 
 }
 
 #endif
-

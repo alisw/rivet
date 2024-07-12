@@ -8,6 +8,7 @@ namespace Rivet {
 
 
   /// @brief CDF Run II min-bias cross-section
+  ///
   /// @author Hendrik Hoeth
   ///
   /// Measurement of \f$ \langle p_T \rangle \f$ vs. \f$ n_\text{ch} \f$,
@@ -23,11 +24,7 @@ namespace Rivet {
   class CDF_2009_S8233977 : public Analysis {
   public:
 
-    /// Constructor
-    CDF_2009_S8233977()
-      : Analysis("CDF_2009_S8233977"),
-        _sumWeightSelected(0.0)
-    {    }
+    RIVET_DEFAULT_ANALYSIS_CTOR(CDF_2009_S8233977);
 
 
     /// @name Analysis methods
@@ -36,14 +33,15 @@ namespace Rivet {
     /// Book histograms and projections
     void init() {
       declare(TriggerCDFRun2(), "Trigger");
-      declare(FinalState(-1.0, 1.0, 0.0*GeV), "EtFS");
-      declare(ChargedFinalState(-1.0, 1.0, 0.4*GeV), "CFS");
+      declare(FinalState((Cuts::etaIn(-1.0, 1.0))), "EtFS");
+      declare(ChargedFinalState((Cuts::etaIn(-1.0, 1.0) && Cuts::pT >=  0.4*GeV)), "CFS");
 
-      _hist_pt = bookHisto1D(1, 1, 1);
-      _hist_pt_vs_multiplicity = bookProfile1D(2, 1, 1);
-      _hist_sumEt = bookHisto1D(3, 1, 1);
+      book(_hist_pt ,1, 1, 1);
+      book(_hist_pt_vs_multiplicity ,2, 1, 1);
+      book(_hist_sumEt ,3, 1, 1);
+
+      book(_sumWeightSelected,"_sumWeightSelected");
     }
-
 
 
     /// Do the analysis
@@ -52,17 +50,14 @@ namespace Rivet {
       const bool trigger = apply<TriggerCDFRun2>(evt, "Trigger").minBiasDecision();
       if (!trigger) vetoEvent;
 
-      // Get the event weight
-      const double weight = evt.weight();
-
       /// @todo The pT and sum(ET) distributions look slightly different from
       ///       Niccolo's Monte Carlo plots. Still waiting for his answer.
 
       const ChargedFinalState& trackfs = apply<ChargedFinalState>(evt, "CFS");
       const size_t numParticles = trackfs.size();
-      foreach (const Particle& p, trackfs.particles()) {
+      for (const Particle& p : trackfs.particles()) {
         const double pT = p.pT() / GeV;
-        _hist_pt_vs_multiplicity->fill(numParticles, pT, weight);
+        _hist_pt_vs_multiplicity->fill(numParticles, pT);
 
         // The weight for entries in the pT distribution should be weight/(pT*dPhi*dy).
         //
@@ -81,27 +76,26 @@ namespace Rivet {
         const double root = sqrt(mPi*mPi + (1+sinh1)*pT*pT);
         const double dy = std::log((root+apT)/(root-apT));
         const double dphi = TWOPI;
-        _hist_pt->fill(pT, weight/(pT*dphi*dy));
+        _hist_pt->fill(pT, 1.0/(pT*dphi*dy));
       }
 
       // Calc sum(Et) from calo particles
       const FinalState& etfs = apply<FinalState>(evt, "EtFS");
       double sumEt = 0.0;
-      foreach (const Particle& p, etfs.particles()) {
+      for (const Particle& p : etfs.particles()) {
         sumEt += p.Et();
       }
-      _hist_sumEt->fill(sumEt, weight);
-      _sumWeightSelected += evt.weight();
+      _hist_sumEt->fill(sumEt);
+      _sumWeightSelected->fill();
     }
-
 
 
     /// Normalize histos
     void finalize() {
-      scale(_hist_sumEt, crossSection()/millibarn/(4*M_PI*_sumWeightSelected));
-      scale(_hist_pt, crossSection()/millibarn/_sumWeightSelected);
+      scale(_hist_sumEt, crossSection()/millibarn/(4*M_PI*dbl(*_sumWeightSelected)));
+      scale(_hist_pt, crossSection()/millibarn/dbl(*_sumWeightSelected));
       MSG_DEBUG("sumOfWeights()     = " << sumOfWeights());
-      MSG_DEBUG("_sumWeightSelected = " << _sumWeightSelected);
+      MSG_DEBUG("_sumWeightSelected = " << dbl(*_sumWeightSelected));
     }
 
     //@}
@@ -109,7 +103,7 @@ namespace Rivet {
 
   private:
 
-    double _sumWeightSelected;
+    CounterPtr _sumWeightSelected;
     Profile1DPtr _hist_pt_vs_multiplicity;
     Histo1DPtr _hist_pt;
     Histo1DPtr _hist_sumEt;
@@ -118,7 +112,6 @@ namespace Rivet {
 
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CDF_2009_S8233977);
+  RIVET_DECLARE_ALIASED_PLUGIN(CDF_2009_S8233977, CDF_2009_I817466);
 
 }

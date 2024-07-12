@@ -1,0 +1,33 @@
+Name: BESIII_2022_I2016785
+Year: 2022
+Summary: Radiative $J/\psi\to\gamma \eta^\prime\eta^\prime$
+Experiment: BESIII
+Collider: BEPC
+InspireID: 2016785
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 105 (2022) 7, 072002
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Description:
+  'Measurement of the mass distributions in the decay $J/\psi\to\gamma \eta^\prime\eta^\prime$. The data were read from the plots in the paper. It is also not clear that any resolution effects have been unfolded.'
+Keywords: []
+BibKey: BESIII:2022zel
+BibTeX: '@article{BESIII:2022zel,
+    author = "Ablikim, M. and others",
+    collaboration = "BESIII",
+    title = "{Partial wave analysis of $J/\psi \rightarrow \gamma \eta^\prime \eta^\prime$}",
+    eprint = "2201.09710",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevD.105.072002",
+    journal = "Phys. Rev. D",
+    volume = "105",
+    number = "7",
+    pages = "072002",
+    year = "2022"
+}
+'

@@ -1,0 +1,154 @@
+{
+    "422595": [
+        "Search for lepton flavor violation in $e p$ collisions at 300-GeV center-of-mass energy", 
+        "ZEUS", 
+        "10.1007/s002880050352", 
+        null, 
+        "hep-ex/9704018", 
+        null, 
+        null, 
+        [
+            "DESY-96-161", 
+            "ANL-HEP-PR-98-61"
+        ]
+    ], 
+    "423078": [
+        "Study of elastic $\\rho^0$ photoproduction at HERA using the ZEUS leading proton spectrometer", 
+        "ZEUS", 
+        "10.1007/s002880050314", 
+        null, 
+        "hep-ex/9609003", 
+        "ins423078", 
+        null, 
+        [
+            "DESY-96-183", 
+            "ANL-HEP-PR-98-64"
+        ]
+    ], 
+    "440536": [
+        "Comparison of ZEUS data with standard model predictions for $e^{+} p \\to e^{+} X$ scattering at high x and $Q^{2}$", 
+        "ZEUS", 
+        "10.1007/s002880050384", 
+        null, 
+        "hep-ex/9702015", 
+        null, 
+        null, 
+        [
+            "DESY-97-025", 
+            "DESY-97-25", 
+            "ANL-HEP-PR-98-57"
+        ]
+    ], 
+    "441088": [
+        "Differential cross-sections of D*+- photoproduction in e p collisions at HERA", 
+        "ZEUS", 
+        "10.1016/S0370-2693(97)00422-X", 
+        null, 
+        "hep-ex/9704011", 
+        "ins441088", 
+        null, 
+        [
+            "DESY-97-026", 
+            "ANL-HEP-PR-98-56"
+        ]
+    ], 
+    "442287": [
+        "Study of photon dissociation in diffractive photoproduction at HERA", 
+        "ZEUS", 
+        "10.1007/s002880050485", 
+        null, 
+        "hep-ex/9704008", 
+        "ins442287", 
+        null, 
+        [
+            "DESY-97-061", 
+            "ANL-HEP-PR-98-62"
+        ]
+    ], 
+    "442537": [
+        "Measurement of elastic $J/\\psi$ photoproduction at HERA", 
+        "ZEUS", 
+        "10.1007/s002880050464", 
+        null, 
+        "hep-ex/9704013", 
+        "ins442537", 
+        null, 
+        [
+            "DESY-97-060"
+        ]
+    ], 
+    "443964": [
+        "D* production in deep inelastic scattering at HERA", 
+        "ZEUS", 
+        "10.1016/S0370-2693(97)00847-2", 
+        null, 
+        "hep-ex/9706009", 
+        "ins443964", 
+        null, 
+        [
+            "DESY-97-089", 
+            "ANL-HEP-PR-98-59"
+        ]
+    ], 
+    "445305": [
+        "A Search for excited fermions in $e^{+} p$ collisions at HERA", 
+        "ZEUS", 
+        "10.1007/s002880050585", 
+        null, 
+        "hep-ex/9708007", 
+        null, 
+        null, 
+        [
+            "DESY-97-112", 
+            "ANL-HEP-PR-98-58"
+        ]
+    ], 
+    "445553": [
+        "Measurement of the proton structure function F2 and sigma-tot (gamma* p) at low q**2 and very low x at HERA", 
+        "ZEUS", 
+        "10.1016/S0370-2693(97)00905-2", 
+        null, 
+        "hep-ex/9707025", 
+        "ins445553", 
+        null, 
+        [
+            "DESY-97-135"
+        ]
+    ], 
+    "446830": [
+        "Measurement of inelastic $J/\\psi$ photoproduction at HERA", 
+        "ZEUS", 
+        "10.1007/s002880050583", 
+        null, 
+        "hep-ex/9708010", 
+        "ins446830", 
+        null, 
+        [
+            "DESY-97-147"
+        ]
+    ], 
+    "447204": [
+        "Observation of isolated high E($t$) photons in photoproduction at HERA", 
+        "ZEUS", 
+        "10.1016/S0370-2693(97)01164-7", 
+        null, 
+        "hep-ex/9708038", 
+        null, 
+        null, 
+        [
+            "DESY-97-146"
+        ]
+    ], 
+    "449531": [
+        "Observation of scaling violations in scaled momentum distributions at HERA", 
+        "ZEUS", 
+        "10.1016/S0370-2693(97)01194-5", 
+        null, 
+        "hep-ex/9710011", 
+        "ins449531", 
+        null, 
+        [
+            "DESY-97-183"
+        ]
+    ]
+}

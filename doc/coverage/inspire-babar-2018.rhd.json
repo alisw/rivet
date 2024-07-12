@@ -1,0 +1,97 @@
+{
+    "1647139": [
+        "Study of the process $e^+e^- \\to \\pi^+\\pi^-\\eta $ using initial state radiation", 
+        "BaBar", 
+        "10.1103/PhysRevD.97.052007", 
+        null, 
+        "1801.02960", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-17-003", 
+            "SLAC-PUB-17204"
+        ]
+    ], 
+    "1664542": [
+        "Search for the decay mode $B^0\\rightarrow p p \\bar{p} \\bar{p}$", 
+        "BaBar", 
+        "10.1103/PhysRevD.98.071102", 
+        null, 
+        "1803.10378", 
+        null, 
+        null, 
+        []
+    ], 
+    "1667191": [
+        "Study of $\\Upsilon(1S)$ radiative decays to $\\gamma \\pi^+ \\pi^-$ and $\\gamma K^+ K^-$", 
+        "BaBar", 
+        "10.1103/PhysRevD.97.112006", 
+        null, 
+        "1804.04044", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-18-003", 
+            "SLAC-PUB-17246"
+        ]
+    ], 
+    "1668122": [
+        "First Evidence for cos2\u03b2>0 and Resolution of the Cabibbo-Kobayashi-Maskawa Quark-Mixing Unitarity Triangle Ambiguity", 
+        "BaBar", 
+        "10.1103/PhysRevLett.121.261801", 
+        null, 
+        "1804.06152", 
+        null, 
+        null, 
+        []
+    ], 
+    "1668123": [
+        "Measurement of $\\cos{2\\beta}$ in $B^{0} \\to D^{(*)} h^{0}$ with $D \\to K_{S}^{0} \\pi^{+} \\pi^{-}$ decays by a combined time-dependent Dalitz plot analysis of BaBar and Belle data", 
+        "BaBar", 
+        "10.1103/PhysRevD.98.112012", 
+        null, 
+        "1804.06153", 
+        null, 
+        null, 
+        []
+    ], 
+    "1679886": [
+        "Measurement of the spectral function for the $\\tau^-\\to K^-K_S\\nu_{\\tau}$ decay", 
+        "BaBar", 
+        "10.1103/PhysRevD.98.032010", 
+        null, 
+        "1806.10280", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-18/005", 
+            "SLAC-PUB-17286", 
+            "BABAR-PUB-18-005"
+        ]
+    ], 
+    "1691222": [
+        "Measurement of the $\\gamma^{\\star}\\gamma^{\\star} \\to \\eta'$ transition form factor", 
+        "BaBar", 
+        "10.1103/PhysRevD.98.112002", 
+        null, 
+        "1808.08038", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-18/006", 
+            "SLAC-PUB-17318"
+        ]
+    ], 
+    "1700745": [
+        "Study of the reactions $e^+e^-\\to\\pi^+\\pi^-\\pi^0\\pi^0\\pi^0\\gamma$ and $\\pi^+\\pi^-\\pi^0\\pi^0\\eta\\gamma$ at center-of-mass energies from threshold to 4.35 GeV using initial-state radiation", 
+        "BaBar", 
+        "10.1103/PhysRevD.98.112015", 
+        null, 
+        "1810.11962", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-17344"
+        ]
+    ]
+}

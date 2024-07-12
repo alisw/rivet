@@ -56,9 +56,26 @@ namespace Rivet {
     UserError(const std::string& what) : Error(what) {}
   };
 
-  /// @brief Error relating to looking up analyis objects in the register
+
+  /// @brief Error relating to looking up analysis objects in the register
   struct LookupError : public Error {
     LookupError(const std::string& what) : Error(what) {}
+  };
+
+
+  /// @brief Error for I/O failures.
+  struct IOError : public Error {
+    IOError(const std::string& what) : Error(what) {}
+  };
+
+  /// @brief Error for read failures.
+  struct ReadError : public IOError {
+    ReadError(const std::string& what) : IOError(what) {}
+  };
+
+  /// @brief Error for write failures.
+  struct WriteError : public IOError {
+    WriteError(const std::string& what) : IOError(what) {}
   };
 
 

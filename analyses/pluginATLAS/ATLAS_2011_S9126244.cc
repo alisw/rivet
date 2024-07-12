@@ -2,7 +2,6 @@
 #include "Rivet/Analysis.hh"
 #include "Rivet/Projections/FinalState.hh"
 #include "Rivet/Projections/FastJets.hh"
-
 #include "Rivet/Tools/BinnedHistogram.hh"
 
 namespace Rivet {
@@ -16,14 +15,16 @@ namespace Rivet {
     // Gap fraction vs DeltaY plot setup
     int _gapFractionDeltaYHistIndex;
     vector<double> _gapFractionDeltaYSlices;
-    BinnedHistogram<double> _h_gapVsDeltaYVeto;
-    BinnedHistogram<double> _h_gapVsDeltaYInc;
+    BinnedHistogram _h_gapVsDeltaYVeto;
+    BinnedHistogram _h_gapVsDeltaYInc;
+    vector<Scatter2DPtr> _ratio_DeltaY;
 
     // Gap fraction vs ptBar plot setup
     int _gapFractionPtBarHistIndex;
     vector<double> _gapFractionPtBarSlices;
-    BinnedHistogram<double> _h_gapVsPtBarVeto;
-    BinnedHistogram<double> _h_gapVsPtBarInc;
+    BinnedHistogram _h_gapVsPtBarVeto;
+    BinnedHistogram _h_gapVsPtBarInc;
+    vector<Scatter2DPtr> _ratio_PtBar;
 
     // Gap fraction vs Q0 plot setup
     int _gapFractionQ0HistIndex;
@@ -47,17 +48,14 @@ namespace Rivet {
 
 
   /// ATLAS dijet production with central jet veto
+  ///
   /// @todo Make sure that temp histos are removed
   class ATLAS_2011_S9126244 : public Analysis {
   public:
 
     /// Constructor
-    ATLAS_2011_S9126244()
-      : Analysis("ATLAS_2011_S9126244")
-    {    }
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2011_S9126244);
 
-
-  public:
 
     /// Book histograms and initialise projections before the run
     void init() {
@@ -113,17 +111,21 @@ namespace Rivet {
         for (size_t x = 0; x < plots._gapFractionDeltaYSlices.size()-1; x++) {
           const string vetoHistName = "TMP/gapDeltaYVeto_" + plots.intermediateHistName + "_" + to_str(x);
           const string inclusiveHistName = "TMP/gapDeltaYInclusive_" + plots.intermediateHistName + "_" + to_str(x);
-          plots._h_gapVsDeltaYVeto.addHistogram(plots._gapFractionDeltaYSlices[x], plots._gapFractionDeltaYSlices[x+1],
-                                                bookHisto1D(vetoHistName,refData(plots._gapFractionDeltaYHistIndex+x, 1,plots.selectionType)));
-          plots._h_gapVsDeltaYInc.addHistogram(plots._gapFractionDeltaYSlices[x], plots._gapFractionDeltaYSlices[x+1],
-                                               bookHisto1D(inclusiveHistName,refData(plots._gapFractionDeltaYHistIndex+x, 1, plots.selectionType)));
+          Histo1DPtr tmp1, tmp2;
+          plots._h_gapVsDeltaYVeto.add(plots._gapFractionDeltaYSlices[x], plots._gapFractionDeltaYSlices[x+1],
+                                                book(tmp1,vetoHistName,refData(plots._gapFractionDeltaYHistIndex+x, 1,plots.selectionType)));
+          plots._h_gapVsDeltaYInc.add(plots._gapFractionDeltaYSlices[x], plots._gapFractionDeltaYSlices[x+1],
+                                               book(tmp2,inclusiveHistName,refData(plots._gapFractionDeltaYHistIndex+x, 1, plots.selectionType)));
+          plots._ratio_DeltaY.push_back(Scatter2DPtr());
+          book(plots._ratio_DeltaY[x], plots._gapFractionDeltaYHistIndex+x, 1, plots.selectionType);
         }
       }
 
       // Average njet vs DeltaY
       if (!plots._avgNJetDeltaYSlices.empty()) {
         for (size_t x = 0; x < plots._avgNJetDeltaYSlices.size()-1; x++) {
-          plots._p_avgJetVsDeltaY += bookProfile1D(plots._avgNJetDeltaYHistIndex+x, 1, plots.selectionType);
+          Profile1DPtr tmp;
+          plots._p_avgJetVsDeltaY += book(tmp, plots._avgNJetDeltaYHistIndex+x, 1, plots.selectionType);
         }
       }
 
@@ -132,17 +134,21 @@ namespace Rivet {
         for (size_t x = 0; x < plots._gapFractionPtBarSlices.size()-1; x++) {
           const string vetoHistName = "TMP/gapPtBarVeto_" + plots.intermediateHistName + "_" + to_str(x);
           const string inclusiveHistName = "TMP/gapPtBarInclusive_" + plots.intermediateHistName + "_" + to_str(x);
-          plots._h_gapVsPtBarVeto.addHistogram(plots._gapFractionPtBarSlices[x], plots._gapFractionPtBarSlices[x+1],
-                                               bookHisto1D(vetoHistName,refData(plots._gapFractionPtBarHistIndex+x, 1, plots.selectionType)));
-          plots._h_gapVsPtBarInc.addHistogram(plots._gapFractionPtBarSlices[x], plots._gapFractionPtBarSlices[x+1],
-                                              bookHisto1D(inclusiveHistName,refData(plots._gapFractionPtBarHistIndex+x, 1, plots.selectionType)));
+          Histo1DPtr tmp1, tmp2;
+          plots._h_gapVsPtBarVeto.add(plots._gapFractionPtBarSlices[x], plots._gapFractionPtBarSlices[x+1],
+                                               book(tmp1,vetoHistName,refData(plots._gapFractionPtBarHistIndex+x, 1, plots.selectionType)));
+          plots._h_gapVsPtBarInc.add(plots._gapFractionPtBarSlices[x], plots._gapFractionPtBarSlices[x+1],
+                                              book(tmp2,inclusiveHistName,refData(plots._gapFractionPtBarHistIndex+x, 1, plots.selectionType)));
+          plots._ratio_PtBar.push_back(Scatter2DPtr());
+          book(plots._ratio_PtBar[x], plots._gapFractionPtBarHistIndex+x, 1, plots.selectionType);
         }
       }
 
       // Average njet vs PtBar
       if (!plots._avgNJetPtBarSlices.empty()) {
         for (size_t x=0; x<plots._avgNJetPtBarSlices.size()-1; x++) {
-          plots._p_avgJetVsPtBar += bookProfile1D(plots._avgNJetPtBarHistIndex+x, 1, plots.selectionType);
+          Profile1DPtr tmp;
+          plots._p_avgJetVsPtBar += book(tmp, plots._avgNJetPtBarHistIndex+x, 1, plots.selectionType);
         }
       }
 
@@ -151,8 +157,10 @@ namespace Rivet {
       for (size_t x = 0; x < plots._gapFractionQ0SlicesPtBar.size()/2; x++) {
         for (size_t y = 0; y < plots._gapFractionQ0SlicesDeltaY.size()/2; y++) {
           const string vetoPtHistName = "TMP/vetoPt_" + plots.intermediateHistName + "_" + to_str(q0PlotCount);
-          plots._h_vetoPt += bookHisto1D(vetoPtHistName, refData(plots._gapFractionQ0HistIndex + q0PlotCount, 1, plots.selectionType));
-          plots._d_vetoPtGapFraction += bookScatter2D(plots._gapFractionQ0HistIndex + q0PlotCount, 1, plots.selectionType);
+          Histo1DPtr tmp1;
+          plots._h_vetoPt += book(tmp1,vetoPtHistName, refData(plots._gapFractionQ0HistIndex + q0PlotCount, 1, plots.selectionType));
+          Scatter2DPtr tmp2;
+          plots._d_vetoPtGapFraction += book(tmp2,plots._gapFractionQ0HistIndex + q0PlotCount, 1, plots.selectionType);
           plots._vetoPtTotalSum += 0.0; ///< @todo Can this just be replaced with _h_vetoPt.integral()?
           q0PlotCount += 1;
         }
@@ -162,13 +170,12 @@ namespace Rivet {
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-      const double weight = event.weight();
 
       // Get minimal list of jets needed to be considered
       double minimumJetPtBar = 50.0*GeV; // of interval defining jets
 
       vector<FourMomentum> acceptJets;
-      foreach (const Jet& jet, apply<FastJets>(event, "AntiKtJets06").jetsByPt(20.0*GeV)) {
+      for (const Jet& jet : apply<FastJets>(event, "AntiKtJets06").jetsByPt(20.0*GeV)) {
         if (jet.absrap() < 4.4) {
           acceptJets.push_back(jet.momentum());
         }
@@ -179,7 +186,7 @@ namespace Rivet {
 
       // Analyze leading jet case
       if (acceptJets[0].pT() + acceptJets[1].pT() > 2*minimumJetPtBar) {
-        analyzeJets(acceptJets, _selectionPlots[0], weight, 20.0*GeV);
+        analyzeJets(acceptJets, _selectionPlots[0], 1.0, 20.0*GeV);
       }
 
       // Find the most forward-backward jets
@@ -200,9 +207,9 @@ namespace Rivet {
 
       if (fwdBkwdJets[0].pT() + fwdBkwdJets[1].pT() > 2*minimumJetPtBar) {
         // Use most forward/backward jets in rapidity to define the interval
-        analyzeJets(fwdBkwdJets, _selectionPlots[1], weight, 20.0*GeV);
+        analyzeJets(fwdBkwdJets, _selectionPlots[1], 1.0, 20.0*GeV);
         // As before but now using PtBar of interval to define veto threshold
-        analyzeJets(fwdBkwdJets, _selectionPlots[2], weight, (fwdBkwdJets[0].pT()+fwdBkwdJets[1].pT())/2.0);
+        analyzeJets(fwdBkwdJets, _selectionPlots[2], 1.0, (fwdBkwdJets[0].pT()+fwdBkwdJets[1].pT())/2.0);
       }
     }
 
@@ -289,17 +296,18 @@ namespace Rivet {
 
     /// Derive final distributions for each selection
     void finalize() {
-      foreach (const ATLAS_2011_S9126244_Plots& plots, _selectionPlots) {
+      for (const ATLAS_2011_S9126244_Plots & plots : _selectionPlots) {
 
         /// @todo Clean up temp histos -- requires restructuring the temp histo struct
 
-        for (size_t x = 0; x < plots._h_gapVsDeltaYVeto.getHistograms().size(); x++) {
-          divide(plots._h_gapVsDeltaYVeto.getHistograms()[x], plots._h_gapVsDeltaYInc.getHistograms()[x],
-                 bookScatter2D(plots._gapFractionDeltaYHistIndex+x, 1, plots.selectionType));
+        for (size_t x = 0; x < plots._h_gapVsDeltaYVeto.histos().size(); x++) {
+          divide(plots._h_gapVsDeltaYVeto.histos()[x], plots._h_gapVsDeltaYInc.histos()[x],
+                 plots._ratio_DeltaY[x]);
         }
-        for (size_t x = 0; x < plots._h_gapVsPtBarVeto.getHistograms().size(); x++) {
-          divide(plots._h_gapVsPtBarVeto.getHistograms()[x], plots._h_gapVsPtBarInc.getHistograms()[x],
-                 bookScatter2D(plots._gapFractionPtBarHistIndex+x, 1, plots.selectionType));
+
+        for (size_t x = 0; x < plots._h_gapVsPtBarVeto.histos().size(); x++) {
+          divide(plots._h_gapVsPtBarVeto.histos()[x], plots._h_gapVsPtBarInc.histos()[x],
+                 plots._ratio_PtBar[x]);
         }
 
         for (size_t h = 0; h < plots._d_vetoPtGapFraction.size(); h++) {
@@ -333,7 +341,6 @@ namespace Rivet {
   };
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2011_S9126244);
+  RIVET_DECLARE_ALIASED_PLUGIN(ATLAS_2011_S9126244, ATLAS_2011_I917526);
 
 }

@@ -1,0 +1,37 @@
+Name: BABAR_2012_I1127599
+Year: 2012
+Summary: Mass distributions in $B^-\to\Sigma_c^{++}\bar{p}\pi^-\pi^-$
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 1127599
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 86 (2012) 091102
+RunInfo: Any process producing B+-, originally e+e- at Upsilon(4S)
+Description:
+'Measurements of mass distributions in $B^-\to\Sigma_c^{++}\bar{p}\pi^-\pi^-$. The data were read from the plots in the paper
+ but are background subtracted and efficiency corrected.'
+ValidationInfo:
+  'Herwig 7 event using EvtGen for decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BaBar:2012ekl
+BibTeX: '@article{BaBar:2012ekl,
+    author = "Lees, J. P. and others",
+    collaboration = "BaBar",
+    title = "{Study of the baryonic $B$ decay $B^- \to \Sigma_c^{++} \bar{p} \pi^- \pi^-$}",
+    eprint = "1208.3086",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BABAR-PUB-12-006, SLAC-PUB-15087",
+    doi = "10.1103/PhysRevD.86.091102",
+    journal = "Phys. Rev. D",
+    volume = "86",
+    pages = "091102",
+    year = "2012"
+}
+'

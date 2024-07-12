@@ -1,7 +1,6 @@
 // -*- C++ -*-
 #include "Rivet/Analysis.hh"
 #include "Rivet/Projections/FinalState.hh"
-#include "Rivet/Projections/IdentifiedFinalState.hh"
 #include "Rivet/Projections/VetoedFinalState.hh"
 #include "Rivet/Projections/FastJets.hh"
 #include "Rivet/Projections/DressedLeptons.hh"
@@ -28,6 +27,12 @@ namespace Rivet {
     Histo1DPtr h_ptbaleff_dy_veto;
     Histo1DPtr h_ptbaleff_dy_inc;
 
+    Scatter2DPtr s_jetveto_mjj;
+    Scatter2DPtr s_jetveto_dy;
+
+    Scatter2DPtr s_ptbaleff_mjj;
+    Scatter2DPtr s_ptbaleff_dy;
+
     Profile1DPtr p_avgnjets_dy;
     Profile1DPtr p_avgnjets_mjj;
   };
@@ -35,9 +40,9 @@ namespace Rivet {
 
   struct Variables {
 
-    Variables(const vector<const Jet*>& jets, const Particle* lep1, const Particle* lep2) {
-      FourMomentum j1 = jets.at(0)->momentum();
-      FourMomentum j2 = jets.at(1)->momentum();
+    Variables(const Jets& jets, const Particle* lep1, const Particle* lep2) {
+      FourMomentum j1 = jets[0].momentum();
+      FourMomentum j2 = jets[1].momentum();
       jet1pt = j1.pT();
       jet2pt = j2.pT();
       assert(jet1pt > jet2pt);
@@ -83,10 +88,10 @@ namespace Rivet {
 
   private:
 
-    bool _isBetween(const Jet* probe, const Jet* boundary1, const Jet* boundary2) {
-      double y_p = probe->rapidity();
-      double y_b1 = boundary1->rapidity();
-      double y_b2 = boundary2->rapidity();
+    bool _isBetween(const Jet& probe, const Jet& boundary1, const Jet& boundary2) {
+      double y_p = probe.rap();
+      double y_b1 = boundary1.rap();
+      double y_b2 = boundary2.rap();
 
       double y_min = std::min(y_b1, y_b2);
       double y_max = std::max(y_b1, y_b2);
@@ -95,19 +100,14 @@ namespace Rivet {
       else return false;
     }
 
-    int _getNumGapJets(const vector<const Jet*>& jets, FourMomentum& thirdJet) {
+    int _getNumGapJets(const Jets& jets, FourMomentum& thirdJet) {
       if (jets.size() < 2) return 0;
-      // The vector of jets is already sorted by pT. So the boundary jets will be the first two.
-      const Jet* bj1 = jets.at(0);
-      const Jet* bj2 = jets.at(1);
-
       int n_between = 0;
       // Start loop at the 3rd hardest pT jet
       for (size_t i = 2; i < jets.size(); ++i) {
-        const Jet* j = jets.at(i);
         // If this jet is between the boundary jets and is hard enough, increment counter
-        if (_isBetween(j, bj1, bj2)) {
-          if (n_between == 0) thirdJet = j->momentum();
+        if (_isBetween(jets[i], jets[0], jets[1])) {
+          if (n_between == 0) thirdJet = jets[i].momentum();
           ++n_between;
         }
       }
@@ -122,24 +122,19 @@ namespace Rivet {
   public:
 
     /// Constructor
-    ATLAS_2014_I1279489()
-      : Analysis("ATLAS_2014_I1279489")
-    {    }
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2014_I1279489);
 
 
     /// Book histograms and initialise projections before the run
     void init() {
 
-      FinalState fs(-5.0, 5.0);
+      FinalState fs(Cuts::abseta < 5.);
 
-      IdentifiedFinalState photon_fs(fs);
-      photon_fs.acceptIdPair(PID::PHOTON);
+      FinalState photon_fs(fs, Cuts::abspid == PID::PHOTON);
 
-      IdentifiedFinalState electron_fs(fs);
-      electron_fs.acceptIdPair(PID::ELECTRON);
+      FinalState electron_fs(fs, Cuts::abspid == PID::ELECTRON);
 
-      IdentifiedFinalState muon_fs(fs);
-      muon_fs.acceptIdPair(PID::MUON);
+      FinalState muon_fs(fs, Cuts::abspid == PID::MUON);
 
       DressedLeptons dressed_electrons(photon_fs, electron_fs, 0.1, Cuts::abseta < 2.47 && Cuts::pT > 25*GeV);
       declare(dressed_electrons, "DressedElectrons");
@@ -151,66 +146,96 @@ namespace Rivet {
       declare(jets, "Jets");
 
       initialisePlots(baseline_plots, "baseline");
-      initialisePlots(highpt_plots, "highpt");
-      initialisePlots(search_plots, "search");
-      initialisePlots(control_plots, "control");
+      initialisePlots(highpt_plots,   "highpt");
+      initialisePlots(search_plots,   "search");
+      initialisePlots(control_plots,  "control");
       initialisePlots(highmass_plots, "highmass");
     }
 
 
     void initialisePlots(Plots& plots, const string& phase_space){
+      /****************************************
+       * Plot labeling:                       *
+       * format = d0_-x0_-y0_                 *
+       * d01 = baseline fiducial region       *
+       * d02 = high-pt fiducial region        *
+       * d03 = search fiducial region         *
+       * d04 = control fiducial region        *
+       * d05 = high-mass fiducial region      *
+       *                                      *
+       * x01 = mjj on x-axis                  *
+       * x02 = delta-y on x-axis              *
+       * x03 = njets on x-axis                *
+       * x04 = dphijj on x-axis               *
+       * x05 = ptbalance on x-axis            *
+       *                                      *
+       * y01 = differential cross-section     *
+       * y02 = jet veto efficiency            *
+       * y03 = ptbalance efficiency           *
+       * y04 = average njets                  *
+       ****************************************/
       plots.label = phase_space;
 
       if (phase_space=="baseline") {
-        plots.h_mjj = bookHisto1D(1, 1, 1);
-        plots.h_dy = bookHisto1D(3, 1, 1);
+        book(plots.h_mjj ,1, 1, 1);
+        book(plots.h_dy ,3, 1, 1);
 
-        plots.h_jetveto_mjj_veto = bookHisto1D("jetveto_mjj_baseline_veto", refData(8,1,1));
-        plots.h_jetveto_mjj_inc = bookHisto1D("jetveto_mjj_baseline_inc", refData(8,1,1));
-        plots.h_jetveto_dy_veto = bookHisto1D("jetveto_dy_baseline_veto", refData(9,1,1));
-        plots.h_jetveto_dy_inc = bookHisto1D("jetveto_dy_baseline_inc", refData(9,1,1));
+        book(plots.h_jetveto_mjj_veto,"_jetveto_mjj_baseline_veto", refData(8,1,1));
+        book(plots.h_jetveto_mjj_inc, "_jetveto_mjj_baseline_inc",  refData(8,1,1));
+        book(plots.h_jetveto_dy_veto, "_jetveto_dy_baseline_veto",  refData(9,1,1));
+        book(plots.h_jetveto_dy_inc,  "_jetveto_dy_baseline_inc",   refData(9,1,1));
 
-        plots.h_ptbaleff_mjj_veto = bookHisto1D("ptbaleff_mjj_baseline_veto", refData(12,1,1));
-        plots.h_ptbaleff_mjj_inc = bookHisto1D("ptbaleff_mjj_baseline_inc", refData(12,1,1));
-        plots.h_ptbaleff_dy_veto = bookHisto1D("ptbaleff_dy_baseline_veto", refData(13,1,1));
-        plots.h_ptbaleff_dy_inc = bookHisto1D("ptbaleff_dy_baseline_inc", refData(13,1,1));
+        book(plots.h_ptbaleff_mjj_veto, "_ptbaleff_mjj_baseline_veto", refData(12,1,1));
+        book(plots.h_ptbaleff_mjj_inc,  "_ptbaleff_mjj_baseline_inc",  refData(12,1,1));
+        book(plots.h_ptbaleff_dy_veto,  "_ptbaleff_dy_baseline_veto",  refData(13,1,1));
+        book(plots.h_ptbaleff_dy_inc,   "_ptbaleff_dy_baseline_inc",   refData(13,1,1));
 
-        plots.p_avgnjets_mjj = bookProfile1D(10,1,1);
-        plots.p_avgnjets_dy = bookProfile1D(11,1,1);
+        book(plots.s_jetveto_mjj,   8, 1, 1);
+        book(plots.s_jetveto_dy,    9, 1, 1);
+        book(plots.s_ptbaleff_mjj, 12, 1, 1);
+        book(plots.s_ptbaleff_dy,  13, 1, 1);
+
+        book(plots.p_avgnjets_mjj ,10,1,1);
+        book(plots.p_avgnjets_dy ,11,1,1);
       }
 
       if (phase_space=="highpt") {
-        plots.h_mjj = bookHisto1D(14, 1, 1);
-        plots.h_dy = bookHisto1D(16, 1, 1);
+        book(plots.h_mjj , 14, 1, 1);
+        book(plots.h_dy , 16, 1, 1);
 
-        plots.h_jetveto_mjj_veto = bookHisto1D("jetveto_mjj_highpt_veto", refData(18,1,1));
-        plots.h_jetveto_mjj_inc = bookHisto1D("jetveto_mjj_highpt_inc", refData(18,1,1));
-        plots.h_jetveto_dy_veto = bookHisto1D("jetveto_dy_highpt_veto", refData(19,1,1));
-        plots.h_jetveto_dy_inc = bookHisto1D("jetveto_dy_highpt_inc", refData(19,1,1));
+        book(plots.h_jetveto_mjj_veto, "_jetveto_mjj_highpt_veto", refData(18,1,1));
+        book(plots.h_jetveto_mjj_inc,  "_jetveto_mjj_highpt_inc",  refData(18,1,1));
+        book(plots.h_jetveto_dy_veto,  "_jetveto_dy_highpt_veto",  refData(19,1,1));
+        book(plots.h_jetveto_dy_inc,   "_jetveto_dy_highpt_inc",   refData(19,1,1));
 
-        plots.h_ptbaleff_mjj_veto = bookHisto1D("ptbaleff_mjj_highpt_veto", refData(22,1,1));
-        plots.h_ptbaleff_mjj_inc = bookHisto1D("ptbaleff_mjj_highpt_inc", refData(22,1,1));
-        plots.h_ptbaleff_dy_veto = bookHisto1D("ptbaleff_dy_highpt_veto", refData(23,1,1));
-        plots.h_ptbaleff_dy_inc = bookHisto1D("ptbaleff_dy_highpt_inc", refData(23,1,1));
+        book(plots.h_ptbaleff_mjj_veto, "_ptbaleff_mjj_highpt_veto", refData(22,1,1));
+        book(plots.h_ptbaleff_mjj_inc,  "_ptbaleff_mjj_highpt_inc",  refData(22,1,1));
+        book(plots.h_ptbaleff_dy_veto,  "_ptbaleff_dy_highpt_veto",  refData(23,1,1));
+        book(plots.h_ptbaleff_dy_inc,   "_ptbaleff_dy_highpt_inc",   refData(23,1,1));
 
-        plots.p_avgnjets_mjj = bookProfile1D(20,1,1);
-        plots.p_avgnjets_dy = bookProfile1D(21,1,1);
+        book(plots.s_jetveto_mjj,  18, 1, 1);
+        book(plots.s_jetveto_dy,   19, 1, 1);
+        book(plots.s_ptbaleff_mjj, 22, 1, 1);
+        book(plots.s_ptbaleff_dy,  23, 1, 1);
+
+        book(plots.p_avgnjets_mjj , 20,1,1);
+        book(plots.p_avgnjets_dy , 21,1,1);
       }
 
       if (phase_space=="search") {
-        plots.h_mjj = bookHisto1D(2,1,1);
-        plots.h_dy = bookHisto1D(4,1,1);
+        book(plots.h_mjj , 2,1,1);
+        book(plots.h_dy , 4,1,1);
       }
 
       if (phase_space=="control") {
-        plots.h_mjj = bookHisto1D(15,1,1);
-        plots.h_dy = bookHisto1D(17,1,1);
+        book(plots.h_mjj , 15,1,1);
+        book(plots.h_dy , 17,1,1);
       }
 
       if (phase_space=="highmass") {
-        plots.h_njets = bookHisto1D(5, 1, 1);
-        plots.h_dphijj = bookHisto1D(7, 1, 1);
-        plots.h_ptbal = bookHisto1D(6, 1, 1);
+        book(plots.h_njets , 5,1,1);
+        book(plots.h_dphijj , 7,1,1);
+        book(plots.h_ptbal , 6,1,1);
       }
     }
 
@@ -220,12 +245,12 @@ namespace Rivet {
     void analyze(const Event& event) {
 
       // Make sure that we have a Z-candidate:
-      const Particle *lep1 = NULL, *lep2 = NULL;
+      const Particle *lep1 = nullptr, *lep2 = nullptr;
       //
       const vector<DressedLepton>& muons = apply<DressedLeptons>(event, "DressedMuons").dressedLeptons();
       if (muons.size() == 2) {
         const FourMomentum dimuon = muons[0].mom() + muons[1].mom();
-        if ( inRange(dimuon.mass()/GeV, 81.0, 101.0) && muons[0].threeCharge() != muons[1].threeCharge() ) {
+        if ( inRange(dimuon.mass()/GeV, 81.0, 101.0) && PID::charge3(muons[0].pid()) != PID::charge3(muons[1].pid()) ) {
           lep1 = &muons[0];
           lep2 = &muons[1];
         }
@@ -234,7 +259,7 @@ namespace Rivet {
       const vector<DressedLepton>& electrons = apply<DressedLeptons>(event, "DressedElectrons").dressedLeptons();
       if (electrons.size() == 2) {
         const FourMomentum dielectron = electrons[0].mom() + electrons[1].mom();
-        if ( inRange(dielectron.mass()/GeV, 81.0, 101.0) && electrons[0].threeCharge() != electrons[1].threeCharge() ) {
+        if ( inRange(dielectron.mass()/GeV, 81.0, 101.0) && PID::charge3(electrons[0].pid()) != PID::charge3(electrons[1].pid()) ) {
           if (lep1 && lep2) {
             MSG_INFO("Found Z candidates using both electrons and muons! Continuing with the muon-channel candidate");
           } else {
@@ -248,67 +273,59 @@ namespace Rivet {
 
 
       // Do lepton-jet overlap removal:
-      vector<const Jet*> good_jets;
-      const Jets& jets = apply<FastJets>(event, "Jets").jetsByPt(Cuts::pT > 25*GeV && Cuts::absrap < 4.4);
-      foreach(const Jet& j, jets) {
-        bool nearby_lepton = false;
-        foreach (const Particle& m, muons)
-          if (deltaR(j, m) < 0.3) nearby_lepton = true;
-        foreach (const Particle& e, electrons)
-          if (deltaR(j, e) < 0.3) nearby_lepton = true;
-        if (!nearby_lepton)
-          good_jets.push_back(&j);
-      }
+      Jets jets = apply<FastJets>(event, "Jets").jetsByPt(Cuts::pT > 25*GeV && Cuts::absrap < 4.4);
+      idiscardIfAnyDeltaRLess(jets, muons, 0.3);
+      idiscardIfAnyDeltaRLess(jets, electrons, 0.3);
+
       // If we don't have at least 2 good jets, we won't use this event.
-      if (good_jets.size() < 2) vetoEvent;
+      if (jets.size() < 2) vetoEvent;
 
 
       // Plotting, using variables and histo classes calculated by the Variables object constructor
-      Variables vars(good_jets, lep1, lep2);
-      bool pass_baseline = (vars.jet1pt > 55.0*GeV && vars.jet2pt > 45.0*GeV);
-      bool pass_highpt = (vars.jet1pt > 85.0*GeV && vars.jet2pt > 75.0*GeV);
-      bool pass_highmass = (pass_baseline && vars.mjj > 1000.0*GeV);
-      bool pass_search = (pass_baseline && vars.zpt > 20.0*GeV && vars.ngapjets == 0 && vars.ptbalance2 < 0.15 && vars.mjj > 250.0*GeV);
-      bool pass_control = (pass_baseline && vars.zpt > 20.0*GeV && vars.ngapjets > 0 && vars.ptbalance3 < 0.15 && vars.mjj > 250.0*GeV);
+      Variables vars(jets, lep1, lep2);
+      bool pass_baseline = (vars.jet1pt > 55*GeV && vars.jet2pt > 45*GeV);
+      bool pass_highpt   = (vars.jet1pt > 85*GeV && vars.jet2pt > 75*GeV);
+      bool pass_highmass = (pass_baseline && vars.mjj > 1000*GeV);
+      bool pass_search   = (pass_baseline && vars.zpt > 20*GeV && vars.ngapjets == 0 && vars.ptbalance2 < 0.15 && vars.mjj > 250*GeV);
+      bool pass_control  = (pass_baseline && vars.zpt > 20*GeV && vars.ngapjets  > 0 && vars.ptbalance3 < 0.15 && vars.mjj > 250*GeV);
       //
-      const double weight = event.weight();
-      if (pass_baseline) fillPlots(vars, baseline_plots, "baseline", weight);
-      if (pass_highpt) fillPlots(vars, highpt_plots, "highpt", weight);
-      if (pass_highmass) fillPlots(vars, highmass_plots, "highmass", weight);
-      if (pass_search) fillPlots(vars, search_plots, "search", weight);
-      if (pass_control) fillPlots(vars, control_plots, "control", weight);
+      if (pass_baseline) fillPlots(vars, baseline_plots, "baseline");
+      if (pass_highpt)   fillPlots(vars, highpt_plots,   "highpt");
+      if (pass_highmass) fillPlots(vars, highmass_plots, "highmass");
+      if (pass_search)   fillPlots(vars, search_plots,   "search");
+      if (pass_control)  fillPlots(vars, control_plots,  "control");
     }
 
 
-    void fillPlots(const Variables& vars, Plots& plots, string phase_space, double weight) {
+    void fillPlots(const Variables& vars, Plots& plots, string phase_space) {
       if (phase_space == "baseline" || phase_space == "highpt" || phase_space == "search" || phase_space == "control") {
-        plots.h_dy->fill(vars.deltay, weight);
-        plots.h_mjj->fill(vars.mjj, weight);
+        plots.h_dy->fill(vars.deltay);
+        plots.h_mjj->fill(vars.mjj);
       }
 
       if (phase_space == "baseline" || phase_space == "highpt") {
         if (vars.pass_jetveto) {
-          plots.h_jetveto_dy_veto->fill(vars.deltay, weight);
-          plots.h_jetveto_mjj_veto->fill(vars.mjj, weight);
+          plots.h_jetveto_dy_veto->fill(vars.deltay);
+          plots.h_jetveto_mjj_veto->fill(vars.mjj);
         }
-        plots.h_jetveto_dy_inc->fill(vars.deltay, weight);
-        plots.h_jetveto_mjj_inc->fill(vars.mjj, weight);
+        plots.h_jetveto_dy_inc->fill(vars.deltay);
+        plots.h_jetveto_mjj_inc->fill(vars.mjj);
 
         if (vars.pass_ptbaleff) {
-          plots.h_ptbaleff_mjj_veto->fill(vars.mjj, weight);
-          plots.h_ptbaleff_dy_veto->fill(vars.deltay, weight);
+          plots.h_ptbaleff_mjj_veto->fill(vars.mjj);
+          plots.h_ptbaleff_dy_veto->fill(vars.deltay);
         }
-        plots.h_ptbaleff_mjj_inc->fill(vars.mjj, weight);
-        plots.h_ptbaleff_dy_inc->fill(vars.deltay, weight);
+        plots.h_ptbaleff_mjj_inc->fill(vars.mjj);
+        plots.h_ptbaleff_dy_inc->fill(vars.deltay);
 
-        plots.p_avgnjets_dy->fill(vars.deltay, vars.ngapjets, weight);
-        plots.p_avgnjets_mjj->fill(vars.mjj, vars.ngapjets, weight);
+        plots.p_avgnjets_dy->fill(vars.deltay, vars.ngapjets);
+        plots.p_avgnjets_mjj->fill(vars.mjj, vars.ngapjets);
       }
 
       if (phase_space == "highmass") {
-        plots.h_njets->fill(vars.ngapjets, weight);
-        plots.h_dphijj->fill(vars.deltaphijj, weight);
-        plots.h_ptbal->fill(vars.ptbalance2, weight);
+        plots.h_njets->fill(vars.ngapjets);
+        plots.h_dphijj->fill(vars.deltaphijj);
+        plots.h_ptbal->fill(vars.ptbalance2);
       }
     }
 
@@ -325,32 +342,34 @@ namespace Rivet {
     }
 
     void finalizePlots(Plots& plots) {
-      if (plots.h_dy) normalize(plots.h_dy);
-      if (plots.h_mjj) normalize(plots.h_mjj);
+      if (plots.h_dy)     normalize(plots.h_dy);
+      if (plots.h_mjj)    normalize(plots.h_mjj);
       if (plots.h_dphijj) normalize(plots.h_dphijj);
-      if (plots.h_njets) normalize(plots.h_njets);
-      if (plots.h_ptbal) normalize(plots.h_ptbal);
+      if (plots.h_njets)  normalize(plots.h_njets);
+      if (plots.h_ptbal)  normalize(plots.h_ptbal);
     }
 
     void finalizeEfficiencies(Plots& plots) {
+
       if (plots.label != "baseline" && plots.label != "highpt")  return;
-      size_t offset = plots.label == "baseline"? 0 : 10;
+      //size_t offset = plots.label == "baseline"? 0 : 10;
 
-      if (plots.h_jetveto_mjj_veto && plots.h_jetveto_mjj_inc) divide(plots.h_jetveto_mjj_veto, plots.h_jetveto_mjj_inc, bookScatter2D(8 + offset, 1, 1));
-      getScatter2D(8 + offset, 1, 1)->addAnnotation("InclusiveSumWeights", plots.h_jetveto_mjj_inc->integral());
-      removeAnalysisObject(plots.h_jetveto_mjj_veto); removeAnalysisObject(plots.h_jetveto_mjj_inc);
+      if (plots.h_jetveto_mjj_veto && plots.h_jetveto_mjj_inc) {
+        divide(plots.h_jetveto_mjj_veto, plots.h_jetveto_mjj_inc, plots.s_jetveto_mjj);
+      }
+      //getScatter2D(8+offset, 1, 1)->addAnnotation("InclusiveSumWeights", plots.h_jetveto_mjj_inc->integral());
 
-      if (plots.h_jetveto_dy_veto && plots.h_jetveto_dy_inc) divide(plots.h_jetveto_dy_veto, plots.h_jetveto_dy_inc, bookScatter2D(9 + offset, 1, 1));
-      getScatter2D(9 + offset, 1, 1)->addAnnotation("InclusiveSumWeights", plots.h_jetveto_dy_inc->integral());
-      removeAnalysisObject(plots.h_jetveto_dy_veto); removeAnalysisObject(plots.h_jetveto_dy_inc);
+      if (plots.h_jetveto_dy_veto && plots.h_jetveto_dy_inc) {
+        divide(plots.h_jetveto_dy_veto, plots.h_jetveto_dy_inc, plots.s_jetveto_dy);
+      }
 
-      if (plots.h_ptbaleff_mjj_veto && plots.h_ptbaleff_mjj_inc) divide(plots.h_ptbaleff_mjj_veto, plots.h_ptbaleff_mjj_inc, bookScatter2D(12 + offset, 1, 1));
-      getScatter2D(12 + offset, 1, 1)->addAnnotation("InclusiveSumWeights", plots.h_ptbaleff_mjj_inc->integral());
-      removeAnalysisObject(plots.h_ptbaleff_mjj_veto); removeAnalysisObject(plots.h_ptbaleff_mjj_inc);
+      if (plots.h_ptbaleff_mjj_veto && plots.h_ptbaleff_mjj_inc) {
+        divide(plots.h_ptbaleff_mjj_veto, plots.h_ptbaleff_mjj_inc, plots.s_ptbaleff_mjj);
+      }
 
-      if (plots.h_ptbaleff_dy_veto && plots.h_ptbaleff_dy_inc) divide(plots.h_ptbaleff_dy_veto, plots.h_ptbaleff_dy_inc, bookScatter2D(13 + offset, 1, 1));
-      getScatter2D(13 + offset, 1, 1)->addAnnotation("InclusiveSumWeights", plots.h_ptbaleff_dy_inc->integral());
-      removeAnalysisObject(plots.h_ptbaleff_dy_veto); removeAnalysisObject(plots.h_ptbaleff_dy_inc);
+      if (plots.h_ptbaleff_dy_veto && plots.h_ptbaleff_dy_inc) {
+        divide(plots.h_ptbaleff_dy_veto, plots.h_ptbaleff_dy_inc, plots.s_ptbaleff_dy);
+      }
     }
 
     //@}
@@ -369,6 +388,6 @@ namespace Rivet {
   };
 
 
-  DECLARE_RIVET_PLUGIN(ATLAS_2014_I1279489);
+  RIVET_DECLARE_PLUGIN(ATLAS_2014_I1279489);
 
 }

@@ -5,10 +5,12 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1626105
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Judith Katzy <judith.katzy@cern.ch>
  - Christian Gutschow <chris.g@cern.ch>
 References:
+ - ATLAS-TOPQ-2015-02
  - Eur.Phys.J. C77 (2017) no.11, 804
  - doi:10.1140/epjc/s10052-017-5349-9
  - arXiv:1709.09407 [hep-ex]

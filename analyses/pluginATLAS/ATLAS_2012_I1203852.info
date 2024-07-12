@@ -5,17 +5,22 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1203852
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Oldrich Kepka <oldrich.kepka@cern.ch>
  - Katerina Moudra <katerina.moudra@cern.ch>
 References:
+ - ATLAS-STDM-2012-02
  - arXiv:1211.6096 [hep-ex]
 RunInfo:
   Run with inclusive $Z$ events, with $Z$ decays to 4 leptons or 2 leptons + MET.
 NumEvents: 100k
 Beams: [p+, p+]
 Energies: [7000]
+Luminosity_fb: 4.6
 PtCuts: [20]
+Options:
+ - LMODE=LL,LNU,BOTH
 NeedsCrossSection: yes
 Description:
   'Measurement of the fiducial cross section for $ZZ(*)$ production in proton proton collisions
@@ -45,3 +50,7 @@ BibTeX: '@article{Aad:2012awa,
       reportNumber   = "CERN-PH-EP-2012-318",
       SLACcitation   = "%%CITATION = ARXIV:1211.6096;%%",
 }'
+
+ReleaseTests:
+ - $A LHC-ZZ-lv
+

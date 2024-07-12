@@ -1,7 +1,6 @@
 // -*- C++ -*-
 #include "Rivet/Analysis.hh"
 #include "Rivet/Projections/FastJets.hh"
-#include "Rivet/Tools/BinnedHistogram.hh"
 #include "Rivet/Projections/ChargedFinalState.hh"
 #include "Rivet/Particle.hh"
 
@@ -25,9 +24,9 @@ namespace Rivet {
 
       string histotitle[7]={"BBfraction","BCfraction","CCfraction","BUfraction","CUfraction","UUfraction","Total"};
       for (int i = 0 ; i < 7 ; i++){
-        _h_temp[i] = bookHisto1D("TMP/"+histotitle[i],refData(1,1,1));
+        book(_h_temp[i] ,"TMP/"+histotitle[i],refData(1,1,1));
         if (i < 6) {
-          _h_results[i] = bookScatter2D(i+1, 1, 1);
+          book(_h_results[i], i+1, 1, 1);
         }
       }
     }
@@ -35,8 +34,8 @@ namespace Rivet {
 
     void analyze(const Event& event) {
 
-      double weight    = event.weight();
-      double weight100 = event.weight() * 100.;  //to get results in %
+      double weight    = 1.0;
+      double weight100 = 1.0 * 100.;  //to get results in %
 
       //keeps jets with pt>20 geV and ordered in decreasing pt
       Jets jetAr = apply<FastJets>(event, "AntiKT04").jetsByPt(20*GeV);
@@ -45,10 +44,10 @@ namespace Rivet {
       vector<FourMomentum> leadjets;
 
       //get b/c-hadrons
-      vector<GenParticle const *> B_hadrons, C_hadrons;
-      vector<GenParticle const *> allParticles = particles(event.genEvent());
+      vector<ConstGenParticlePtr> B_hadrons, C_hadrons;
+      vector<ConstGenParticlePtr> allParticles = HepMCUtils::particles(event.genEvent());
       for (size_t i = 0; i < allParticles.size(); i++) {
-        const GenParticle* p = allParticles.at(i);
+        ConstGenParticlePtr p = allParticles.at(i);
         if(p->momentum().perp()*GeV < 5) continue;
         if ( (Rivet::PID::isHadron ( p->pdg_id() ) &&
               Rivet::PID::hasBottom( p->pdg_id() )    ) ) {
@@ -61,7 +60,7 @@ namespace Rivet {
       }
 
       //select dijet
-      foreach (const Jet& jet, jetAr) {
+      for (const Jet& jet : jetAr) {
 
         const double pT   = jet.pT();
         const double absy = jet.absrap();
@@ -140,7 +139,7 @@ namespace Rivet {
   };
 
 
-  DECLARE_RIVET_PLUGIN(ATLAS_2012_I1188891);
+  RIVET_DECLARE_PLUGIN(ATLAS_2012_I1188891);
 
 
 }

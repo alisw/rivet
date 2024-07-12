@@ -5,9 +5,11 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1234228
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Christian Gutschow <chris.g@cern.ch>
 References:
+ - ATLAS-STDM-2012-10
  - Phys.Lett. B725 (2013) 223-242
  - doi:10.1016/j.physletb.2013.07.049
  - arXiv:1305.4192 [hep-ex]
@@ -15,7 +17,7 @@ Keywords:
  - drellyan
  - vjets
 RunInfo:
-  Drell-Yan production in pp collisons at 7 TeV
+  Drell-Yan production in pp collisions at 7 TeV
 Luminosity_fb: 4.9
 Beams: [p+, p+]
 Energies: [7000]

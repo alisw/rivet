@@ -5,10 +5,12 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1468167
 Status: VALIDATED
+Reentrant: True
 Authors:
  - Zachary Marshall <zach.marshall@cern.ch>
  - Christian Gutschow <chris.g@cern.ch>
 References:
+ - ATLAS-STDM-2015-05
  - 'arXiv:1606.02625 [hep-ex]'
 Keywords:
  - minbias

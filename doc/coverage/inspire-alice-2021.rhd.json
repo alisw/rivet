@@ -1,0 +1,228 @@
+{
+    "1797443": [
+        "Production of light-flavor hadrons in pp collisions at $\\sqrt{s}~=~7\\text { and }\\sqrt{s} = 13 \\, \\text { TeV} $", 
+        "ALICE", 
+        "10.1140/epjc/s10052-020-08690-5", 
+        "2715072", 
+        "2005.11120", 
+        "ins1797443", 
+        null, 
+        [
+            "CERN-EP-2020-059"
+        ]
+    ], 
+    "1797450": [
+        "Elliptic Flow of Electrons from Beauty-Hadron Decays in Pb-Pb Collisions at $\\sqrt {s_{NN}}$ = 5.02  TeV", 
+        "ALICE", 
+        "10.1103/PhysRevLett.126.162001", 
+        "2718162", 
+        "2005.11130", 
+        "ins1797450", 
+        null, 
+        [
+            "CERN-EP-2020-085"
+        ]
+    ], 
+    "1797451": [
+        "$\\Lambda\\rm{K}$ femtoscopy in Pb-Pb collisions at $\\sqrt{s_{\\rm{NN}}}$ = 2.76 TeV", 
+        "ALICE", 
+        "10.1103/PhysRevC.103.055201", 
+        "2717991", 
+        "2005.11124", 
+        "ins1797451", 
+        null, 
+        [
+            "CERN-EP-2020-080"
+        ]
+    ], 
+    "1797463": [
+        "Transverse-momentum and event-shape dependence of D-meson flow harmonics in Pb\u2013Pb collisions at $\\sqrt {s_{NN}}$ = 5.02 TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2020.136054", 
+        "2718040", 
+        "2005.11131", 
+        "ins1797463", 
+        null, 
+        [
+            "CERN-EP-2020-082"
+        ]
+    ], 
+    "1797469": [
+        "First measurement of quarkonium polarization in nuclear collisions at the LHC", 
+        "ALICE", 
+        "10.1016/j.physletb.2021.136146", 
+        "2718646", 
+        "2005.11128", 
+        "ins1797469", 
+        null, 
+        [
+            "CERN-EP-2020-092"
+        ]
+    ], 
+    "1797617": [
+        "Unveiling the strong interaction among hadrons at the LHC", 
+        "ALICE", 
+        "10.1038/s41586-020-3001-6", 
+        "2718594", 
+        "2005.11495", 
+        "ins1797617", 
+        null, 
+        [
+            "CERN-EP-2020-091"
+        ]
+    ], 
+    "1798514": [
+        "Soft-Dielectron Excess in Proton-Proton Collisions at $\\sqrt{s}$ = 13 TeV", 
+        "ALICE", 
+        "10.1103/PhysRevLett.127.042302", 
+        "2718695", 
+        "2005.14522", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2020-095"
+        ]
+    ], 
+    "1807511": [
+        "Pion-kaon femtoscopy and the lifetime of the hadronic phase in Pb$-$Pb collisions at $\\sqrt{s_{\\rm{NN}}}$ = 2.76 TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2020.136030", 
+        "2723226", 
+        "2007.08315", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2020-126"
+        ]
+    ], 
+    "1811102": [
+        "Centrality dependence of J/$\\psi$ and $\\psi$(2S) production and nuclear modification in p-Pb collisions at $\\sqrt{s_{\\rm NN}} =$ 8.16 TeV", 
+        "ALICE", 
+        "10.1007/JHEP02(2021)002", 
+        "2723714", 
+        "2008.04806", 
+        "ins1811102", 
+        null, 
+        [
+            "CERN-EP-2020-133"
+        ]
+    ], 
+    "1818157": [
+        "Pseudorapidity distributions of charged particles as a function of mid- and forward rapidity multiplicities in pp collisions at $\\sqrt{s}$\u00a0=\u00a05.02, 7 and 13 TeV", 
+        "ALICE", 
+        "10.1140/epjc/s10052-021-09349-5", 
+        "2729803", 
+        "2009.09434", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2020-170"
+        ]
+    ], 
+    "1829410": [
+        "Jet-associated deuteron production in pp collisions at s=13 TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2021.136440", 
+        "2743455", 
+        "2011.05898", 
+        "ins1829410", 
+        null, 
+        [
+            "CERN-EP-2020-210"
+        ]
+    ], 
+    "1830186": [
+        "Inclusive heavy-flavour production at central and forward rapidity in Xe-Xe collisions at $\\sqrt{s_{\\rm NN}}=5.44$ TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2021.136437", 
+        "2742458", 
+        "2011.06970", 
+        "ins1830186", 
+        null, 
+        [
+            "CERN-EP-2020-208"
+        ]
+    ], 
+    "1837171": [
+        "The upgrade of the ALICE TPC with GEMs and continuous readout", 
+        "ALICE TPC", 
+        "10.1088/1748-0221/16/03/P03022", 
+        "2758225", 
+        "2012.09518", 
+        null, 
+        null, 
+        []
+    ], 
+    "1839719": [
+        "First measurement of coherent \u03c10 photoproduction in ultra-peripheral Xe\u2013Xe collisions at sNN=5.44 TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2021.136481", 
+        "2748335", 
+        "2101.02581", 
+        "ins1839719", 
+        null, 
+        [
+            "CERN-EP-2020-252"
+        ]
+    ], 
+    "1840098": [
+        "Long- and short-range correlations and their event-scale dependence in high-multiplicity pp collisions at $\\boldsymbol{\\sqrt{{\\textit s}}}=13$ TeV", 
+        "ALICE", 
+        "10.1007/JHEP05(2021)290", 
+        "2748705", 
+        "2101.03110", 
+        "ins1840098", 
+        null, 
+        [
+            "CERN-EP-2021-006"
+        ]
+    ], 
+    "1840099": [
+        "Production of pions, kaons, (anti-)protons and $\\phi $ mesons in Xe\u2013Xe collisions at $\\sqrt{s_{\\mathrm{NN}}}$\u00a0=\u00a05.44 TeV", 
+        "ALICE", 
+        "10.1140/epjc/s10052-021-09304-4", 
+        "2748271", 
+        "2101.03100", 
+        "ins1840099", 
+        null, 
+        [
+            "CERN-EP-2020-249"
+        ]
+    ], 
+    "1840600": [
+        "First measurement of the |$t$|-dependence of coherent $J/\\psi$ photonuclear production", 
+        "ALICE", 
+        "10.1016/j.physletb.2021.136280", 
+        "2748586", 
+        "2101.04623", 
+        "ins1840600", 
+        null, 
+        [
+            "CERN-EP-2021-003"
+        ]
+    ], 
+    "1848215": [
+        "Measurements of mixed harmonic cumulants in Pb\u2013Pb collisions at $\\sqrt {s_{NN}}$ = 5.02 TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2021.136354", 
+        "2752473", 
+        "2102.12180", 
+        "ins1848215", 
+        null, 
+        [
+            "CERN-EP-2021-031"
+        ]
+    ], 
+    "1848990": [
+        "Measurement of beauty and charm production in pp collisions at $ \\sqrt{s} $ = 5.02 TeV via non-prompt and prompt D mesons", 
+        "ALICE", 
+        "10.1007/JHEP05(2021)220", 
+        "2752663", 
+        "2102.13601", 
+        "ins1848990", 
+        null, 
+        [
+            "CERN-EP-2021-034"
+        ]
+    ]
+}

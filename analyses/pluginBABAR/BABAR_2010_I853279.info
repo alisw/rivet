@@ -1,0 +1,37 @@
+Name: BABAR_2010_I853279
+Year: 2010
+Summary: Dalitz plot analysis of $D^0\to K^0_S\pi^+\pi^-$ and  $D^0\to K^0_SK^+K^-$
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 853279
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 105 (2010) 081803
+RunInfo: Any process producing D0
+Description:
+  'Measurement of Kinematic distributions  in the decays $D^0\to K^0_S\pi^+\pi^-$ and $D^0\to K^0_SK^+K^-$ by BaBar. The data were read from the plots in the paper.
+   Resolution/acceptance effects have been not unfolded. Given the agreement with the model in the paper this analysis should only be used for qualitative studies.'
+ValidationInfo:
+  'Compared Herwig events using the same model for the decay as in the paper.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BaBar:2010nhz
+BibTeX: '@article{BaBar:2010nhz,
+    author = "del Amo Sanchez, P. and others",
+    collaboration = "BaBar",
+    title = "{Measurement of D0-antiD0 mixing parameters using D0 ---\ensuremath{>} K(S)0 pi+ pi- and D0 ---\ensuremath{>} K(S)0 K+ K- decays}",
+    eprint = "1004.5053",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BABAR-PUB-10-004, SLAC-PUB-14087",
+    doi = "10.1103/PhysRevLett.105.081803",
+    journal = "Phys. Rev. Lett.",
+    volume = "105",
+    pages = "081803",
+    year = "2010"
+}
+'

@@ -5,9 +5,11 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1282447
 Status: VALIDATED
+Reentrant: false
 Authors:
  - Kristin Lohwasser <kristin.lohwasser@cern.ch>
 References:
+ - ATLAS-STDM-2012-14
  - JHEP 1405 (2014) 068
  - doi:10.1007/JHEP05(2014)068
  - arXiv:1402.6263 [hep-ex]
@@ -16,6 +18,7 @@ RunInfo:
 NumEvents: 1000000
 Beams: [p+, p+]
 Energies: [7000]
+Luminosity_fb: 4.6
 PtCuts: [20,25,5]
 NeedCrossSection: True
 Description:
@@ -53,4 +56,9 @@ BibTeX: '@article{Aad:2014xca,
       reportNumber   = "CERN-PH-EP-2014-007",
       SLACcitation   = "%%CITATION = ARXIV:1402.6263;%%",
 }'
+
+
+ReleaseTests:
+ - $A LHC-W-e
+ - $A-2 LHC-W-mu
 

@@ -12,7 +12,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(CMS_2016_I1459051);
+    RIVET_DEFAULT_ANALYSIS_CTOR(CMS_2016_I1459051);
 
 
     /// Book histograms and initialize projections:
@@ -25,21 +25,21 @@ namespace Rivet {
 
       // Book sets of histograms, binned in absolute rapidity
       // AK7
-      _hist_sigmaAK7.addHistogram(0.0, 0.5, bookHisto1D(1, 1, 1));
-      _hist_sigmaAK7.addHistogram(0.5, 1.0, bookHisto1D(2, 1, 1));
-      _hist_sigmaAK7.addHistogram(1.0, 1.5, bookHisto1D(3, 1, 1));
-      _hist_sigmaAK7.addHistogram(1.5, 2.0, bookHisto1D(4, 1, 1));
-      _hist_sigmaAK7.addHistogram(2.0, 2.5, bookHisto1D(5, 1, 1));
-      _hist_sigmaAK7.addHistogram(2.5, 3.0, bookHisto1D(6, 1, 1));
-      _hist_sigmaAK7Forward = bookHisto1D(7, 1, 1);
+      {Histo1DPtr tmp; _hist_sigmaAK7.add(0.0, 0.5, book(tmp, 1, 1, 1));}
+      {Histo1DPtr tmp; _hist_sigmaAK7.add(0.5, 1.0, book(tmp, 2, 1, 1));}
+      {Histo1DPtr tmp; _hist_sigmaAK7.add(1.0, 1.5, book(tmp, 3, 1, 1));}
+      {Histo1DPtr tmp; _hist_sigmaAK7.add(1.5, 2.0, book(tmp, 4, 1, 1));}
+      {Histo1DPtr tmp; _hist_sigmaAK7.add(2.0, 2.5, book(tmp, 5, 1, 1));}
+      {Histo1DPtr tmp; _hist_sigmaAK7.add(2.5, 3.0, book(tmp, 6, 1, 1));}
+      book(_hist_sigmaAK7Forward, 7, 1, 1);
       // AK4
-      _hist_sigmaAK4.addHistogram(0.0, 0.5, bookHisto1D(8, 1, 1));
-      _hist_sigmaAK4.addHistogram(0.5, 1.0, bookHisto1D(9, 1, 1));
-      _hist_sigmaAK4.addHistogram(1.0, 1.5, bookHisto1D(10, 1, 1));
-      _hist_sigmaAK4.addHistogram(1.5, 2.0, bookHisto1D(11, 1, 1));
-      _hist_sigmaAK4.addHistogram(2.0, 2.5, bookHisto1D(12, 1, 1));
-      _hist_sigmaAK4.addHistogram(2.5, 3.0, bookHisto1D(13, 1, 1));
-      _hist_sigmaAK4Forward = bookHisto1D(14, 1, 1);
+      {Histo1DPtr tmp; _hist_sigmaAK4.add(0.0, 0.5, book(tmp, 8, 1, 1));}
+      {Histo1DPtr tmp; _hist_sigmaAK4.add(0.5, 1.0, book(tmp, 9, 1, 1));}
+      {Histo1DPtr tmp; _hist_sigmaAK4.add(1.0, 1.5, book(tmp, 10, 1, 1));}
+      {Histo1DPtr tmp; _hist_sigmaAK4.add(1.5, 2.0, book(tmp, 11, 1, 1));}
+      {Histo1DPtr tmp; _hist_sigmaAK4.add(2.0, 2.5, book(tmp, 12, 1, 1));}
+      {Histo1DPtr tmp; _hist_sigmaAK4.add(2.5, 3.0, book(tmp, 13, 1, 1));}
+      book(_hist_sigmaAK4Forward, 14, 1, 1);
 
     }
 
@@ -47,7 +47,7 @@ namespace Rivet {
     /// Per-event analysis
     void analyze(const Event &event) {
 
-      const double weight = event.weight();
+      const double weight = 1.0;
 
       // AK4 jets
       const FastJets& fjAK4 = applyProjection<FastJets>(event, "JetsAK4");
@@ -80,8 +80,8 @@ namespace Rivet {
 
     /// @name Histograms
     //@{
-    BinnedHistogram<double> _hist_sigmaAK4;
-    BinnedHistogram<double> _hist_sigmaAK7;
+    BinnedHistogram _hist_sigmaAK4;
+    BinnedHistogram _hist_sigmaAK7;
     Histo1DPtr _hist_sigmaAK4Forward;
     Histo1DPtr _hist_sigmaAK7Forward;
     //@}
@@ -90,6 +90,6 @@ namespace Rivet {
 
 
   // This global object acts as a hook for the plugin system.
-  DECLARE_RIVET_PLUGIN(CMS_2016_I1459051);
+  RIVET_DECLARE_PLUGIN(CMS_2016_I1459051);
 
 }

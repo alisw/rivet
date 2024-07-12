@@ -1,0 +1,38 @@
+Name: BESIII_2012_I1084539
+Year: 2012
+Summary: Angular distributions in $J/\psi\to\gamma\eta(1405)(\to f_0(980)\pi^0$
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1084539
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 108 (2012) 182001
+RunInfo: e+e- > J/psi
+NeedCrossSection: no
+Beams: [e-, e+]
+Energies: [3.1]
+Description:
+  'Measurement of angular distributions in $J/\psi\to\gamma\eta(1405)(\to f_0(980)\pi^0$ by BESIII.'
+ValidationInfo:
+  'Herwig7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2012aa
+BibTeX: '@article{BESIII:2012aa,
+    author = "Ablikim, M. and others",
+    collaboration = "BESIII",
+    title = "{First observation of $\eta(1405)$ decays into $f_{0}(980)\pi^0$}",
+    eprint = "1201.2737",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevLett.108.182001",
+    journal = "Phys. Rev. Lett.",
+    volume = "108",
+    pages = "182001",
+    year = "2012"
+}
+'

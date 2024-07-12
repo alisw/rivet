@@ -1,0 +1,158 @@
+{
+    "560352": [
+        "Properties of hadronic final states in diffractive deep inelastic ep scattering at HERA", 
+        "ZEUS", 
+        "10.1103/PhysRevD.65.052001", 
+        null, 
+        "hep-ex/0107052", 
+        "ins560352", 
+        null, 
+        [
+            "DESY-01-097"
+        ]
+    ], 
+    "562837": [
+        "Searches for excited fermions in $e p$ collisions at HERA", 
+        "ZEUS", 
+        "10.1016/S0370-2693(02)02863-0", 
+        null, 
+        "hep-ex/0109018", 
+        null, 
+        null, 
+        [
+            "DESY-01-132"
+        ]
+    ], 
+    "563003": [
+        "Dijet production in neutral current deep inelastic scattering at HERA", 
+        "ZEUS", 
+        "10.1007/s100520100845", 
+        null, 
+        "hep-ex/0109029", 
+        "ins563003", 
+        null, 
+        [
+            "DESY-01-127"
+        ]
+    ], 
+    "568665": [
+        "Dijet photoproduction at HERA and the structure of the photon", 
+        "ZEUS", 
+        "10.1007/s100520200936", 
+        null, 
+        "hep-ex/0112029", 
+        "ins568665", 
+        null, 
+        [
+            "DESY-01-220"
+        ]
+    ], 
+    "568806": [
+        "High mass dijet cross-sections in photoproduction at HERA", 
+        "ZEUS", 
+        "10.1016/S0370-2693(02)01327-8", 
+        null, 
+        "hep-ex/0112030", 
+        null, 
+        null, 
+        [
+            "DESY-01-219"
+        ]
+    ], 
+    "569270": [
+        "Measurement of the photon proton total cross-section at a center-of-mass energy of 209-GeV at HERA", 
+        "ZEUS", 
+        "10.1016/S0550-3213(02)00068-8", 
+        null, 
+        "hep-ex/0202034", 
+        "ins569270", 
+        null, 
+        [
+            "DESY-01-216"
+        ]
+    ], 
+    "581378": [
+        "Search for lepton flavor violation in $e^{+} p$ collisions at HERA", 
+        "ZEUS", 
+        "10.1103/PhysRevD.65.092004", 
+        null, 
+        "hep-ex/0201003", 
+        null, 
+        null, 
+        [
+            "DESY-01-222"
+        ]
+    ], 
+    "582237": [
+        "Exclusive photoproduction of J / psi mesons at HERA", 
+        "ZEUS", 
+        "10.1007/s10052-002-0953-7", 
+        null, 
+        "hep-ex/0201043", 
+        "ins582237", 
+        null, 
+        [
+            "DESY-02-008"
+        ]
+    ], 
+    "584714": [
+        "Measurement of the Q**2 and energy dependence of diffractive interactions at HERA", 
+        "ZEUS", 
+        "10.1007/s10052-002-1003-1", 
+        null, 
+        "hep-ex/0203039", 
+        "ins584714", 
+        null, 
+        [
+            "DESY-02-029"
+        ]
+    ], 
+    "587158": [
+        "Leading neutron production in e+ p collisions at HERA", 
+        "ZEUS", 
+        "10.1016/S0550-3213(02)00439-X", 
+        null, 
+        "hep-ex/0205076", 
+        "ins587158", 
+        null, 
+        [
+            "DESY-02-039"
+        ]
+    ], 
+    "587371": [
+        "Measurement of high Q$^2$ charged current cross-sections in e$^-$p deep inelastic scattering at HERA", 
+        "ZEUS", 
+        "10.1016/S0370-2693(02)02093-2", 
+        null, 
+        "hep-ex/0205091", 
+        "ins587371", 
+        null, 
+        [
+            "DESY-02-064"
+        ]
+    ], 
+    "588104": [
+        "Measurement of diffractive production of D*+-(2010) mesons in deep inelastic scattering at HERA", 
+        "ZEUS", 
+        "10.1016/S0370-2693(02)02595-9", 
+        null, 
+        "hep-ex/0206020", 
+        "ins588104", 
+        null, 
+        [
+            "DESY-02-082"
+        ]
+    ], 
+    "593409": [
+        "Inclusive jet cross-sections in the Breit frame in neutral current deep inelastic scattering at HERA and determination of alpha(s)", 
+        "ZEUS", 
+        "10.1016/S0370-2693(02)02763-6", 
+        null, 
+        "hep-ex/0208037", 
+        "ins593409", 
+        null, 
+        [
+            "DESY-02-112"
+        ]
+    ]
+}

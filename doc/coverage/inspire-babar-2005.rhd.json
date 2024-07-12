@@ -1,0 +1,666 @@
+{
+    "650308": [
+        "A measurement of the total width, the electronic width, and the mass of the $\\Upsilon(10580)$ resonance", 
+        "BaBar", 
+        "10.1103/PhysRevD.72.032005", 
+        null, 
+        "hep-ex/0405025", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-10439", 
+            "BABAR-PUB-04-06"
+        ]
+    ], 
+    "651834": [
+        "Study of the $B \\to J/\\psi K^- \\pi^+ \\pi^-$ decay and measurement of the $B \\to X(3872) K^-$ branching fraction", 
+        "BaBar", 
+        "10.1103/PhysRevD.71.071103", 
+        null, 
+        "hep-ex/0406022", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-10475", 
+            "BABAR-PUB-04-011"
+        ]
+    ], 
+    "652473": [
+        "Measurements of the branching fraction and CP-violation asymmetries in $B^0 \\to f0(980) K^0_S$", 
+        "BaBar", 
+        "10.1103/PhysRevLett.94.041802", 
+        null, 
+        "hep-ex/0406040", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-10498", 
+            "BABAR-PUB-04-017"
+        ]
+    ], 
+    "653880": [
+        "The DIRC particle identification system for the BaBar experiment", 
+        "BaBar DIRC", 
+        "10.1016/j.nima.2004.08.129", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-10516"
+        ]
+    ], 
+    "654913": [
+        "Search for the rare leptonic decay $B^- \\to \\tau^- \\bar{\\nu}_\\tau$", 
+        "BaBar", 
+        "10.1103/PhysRevLett.95.041804", 
+        null, 
+        "hep-ex/0407038", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-10568"
+        ]
+    ], 
+    "656972": [
+        "Search for decays of $B^0$ mesons into pairs of charged leptons: $B0 \\to e^+ e^-$, $B^0 \\to \\mu^+ \\mu^-$, $B^0 \\to e^\\pm \\mu^\\mp$", 
+        "BaBar", 
+        "10.1103/PhysRevLett.94.221803", 
+        null, 
+        "hep-ex/0408096", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-10662", 
+            "BABAR-PUB-04-032"
+        ]
+    ], 
+    "657364": [
+        "Improved measurement of CP asymmetries in $B^0 \\to (c \\bar{c}) K^{(*)0}$ decays", 
+        "BaBar", 
+        "10.1103/PhysRevLett.94.161803", 
+        null, 
+        "hep-ex/0408127", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-10652", 
+            "BABAR-PUB-04-38"
+        ]
+    ], 
+    "663432": [
+        "Ambiguity-free measurement of $\\cos(2\\beta)$: Time-integrated and time-dependent angular analyses of $B \\to J/\\psi K \\pi$", 
+        "BaBar", 
+        "10.1103/PhysRevD.71.032005", 
+        null, 
+        "hep-ex/0411016", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-10808", 
+            "BABAR-PUB-04-030"
+        ]
+    ], 
+    "664717": [
+        "Measurements of $B$ meson decays to $\\omega K^*$ and $\\omega \\rho$", 
+        "BaBar", 
+        "10.1103/PhysRevD.71.031103", 
+        null, 
+        "hep-ex/0411054", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-10861", 
+            "BABAR-PUB-04-039"
+        ]
+    ], 
+    "664809": [
+        "A search for the decay $B^+ \\to K^+ \\nu \\bar{\\nu}$", 
+        "BaBar", 
+        "10.1103/PhysRevLett.94.101801", 
+        null, 
+        "hep-ex/0411061", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-10860", 
+            "BABAR-PUB-04-036"
+        ]
+    ], 
+    "665623": [
+        "Measurement of the ratio $B(B^- \\to D^{*0} K^-)/B(B^- \\to D^{*0} \\pi^-)$ and of the CP asymmetry of $B^- \\to D^{*0}_{CP+} K^-$ decays", 
+        "BaBar", 
+        "10.1103/PhysRevD.71.031102", 
+        null, 
+        "hep-ex/0411091", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-10873", 
+            "BABAR-PUB-04-26"
+        ]
+    ], 
+    "667014": [
+        "Branching fractions and CP asymmetries in $B^0 \\to \\pi^0 \\pi^0$, $B^+ \\to \\pi^+ \\pi^0$ and $B^+ \\to K^+ \\pi^0$ decays and isospin analysis of the $B \\to \\pi \\pi$ system", 
+        "BaBar", 
+        "10.1103/PhysRevLett.94.181802", 
+        null, 
+        "hep-ex/0412037", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-10902", 
+            "BABAR-PUB-04-02"
+        ]
+    ], 
+    "667017": [
+        "Measurement of branching fraction and Dalitz distribution for $B^0 \\to D^{(*)\\pm} K^0 \\pi^\\mp$ decays", 
+        "BaBar", 
+        "10.1103/PhysRevLett.95.171802", 
+        null, 
+        "hep-ex/0412040", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-10893"
+        ]
+    ], 
+    "667544": [
+        "Search for a charged partner of the X(3872) in the $B$ meson decay $B \\to X^- K$, $X^- \\to J/\\psi \\pi^- \\pi^0$", 
+        "BaBar", 
+        "10.1103/PhysRevD.71.031501", 
+        null, 
+        "hep-ex/0412051", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-10903", 
+            "BABAR-PUB-04-043"
+        ]
+    ], 
+    "667864": [
+        "Measurement of branching fractions and charge asymmetries for exclusive $B$ decays to charmonium", 
+        "BaBar", 
+        "10.1103/PhysRevLett.94.141801", 
+        null, 
+        "hep-ex/0412062", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-10926", 
+            "BABAR-PUB-04-044"
+        ]
+    ], 
+    "667960": [
+        "Limit on the $B^0 \\to \\rho^0 \\rho^0$ branching fraction and implications for the CKM angle alpha", 
+        "BaBar", 
+        "10.1103/PhysRevLett.94.131801", 
+        null, 
+        "hep-ex/0412067", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-10909", 
+            "BABAR-PUB-04-048"
+        ]
+    ], 
+    "675003": [
+        "Search for the radiative decay $B \\to \\phi \\gamma$", 
+        "BaBar", 
+        "10.1103/PhysRevD.72.091103", 
+        null, 
+        "hep-ex/0501038", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-10938"
+        ]
+    ], 
+    "675373": [
+        "Search for factorization-suppressed $B \\to \\chi_c K^{(*)}$ decays", 
+        "BaBar", 
+        "10.1103/PhysRevLett.94.171801", 
+        null, 
+        "hep-ex/0501061", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-10989", 
+            "BABAR-PUB-04-46"
+        ]
+    ], 
+    "675757": [
+        "Improved measurements of CP-violating asymmetry amplitudes in $B^0 \\to \\pi+ \\pi^-$ decays", 
+        "BaBar", 
+        "10.1103/PhysRevLett.95.151803", 
+        null, 
+        "hep-ex/0501071", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-11005"
+        ]
+    ], 
+    "675839": [
+        "A search for CP violation and a measurement of the relative branching fraction in $D^+ \\to K^- K^+ \\pi^+$ decays", 
+        "BaBar", 
+        "10.1103/PhysRevD.71.091101", 
+        null, 
+        "hep-ex/0501075", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-11009", 
+            "BABAR-PUB-04-041"
+        ]
+    ], 
+    "676002": [
+        "Search for strange-pentaquark production in $e^+e^-$ annihilation at $\\sqrt{s}=10.58$ GeV", 
+        "BaBar", 
+        "10.1103/PhysRevLett.95.042002", 
+        null, 
+        "hep-ex/0502004", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-10992", 
+            "BABAR-PUB-04-047"
+        ]
+    ], 
+    "676246": [
+        "Branching fraction and CP asymmetries of $B^0 \\to K^0_S K^0_S K^0_S$", 
+        "BaBar", 
+        "10.1103/PhysRevLett.95.011801", 
+        null, 
+        "hep-ex/0502013", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-11047"
+        ]
+    ], 
+    "676335": [
+        "Measurements of branching fractions and time-dependent CP-violating asymmetries in $B \\to \\eta^\\prime K$ decays", 
+        "BaBar", 
+        "10.1103/PhysRevLett.94.191802", 
+        null, 
+        "hep-ex/0502017", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-10906", 
+            "BABAR-PUB-04-050"
+        ]
+    ], 
+    "676337": [
+        "Measurement of CP asymmetries in $B^0 \\to \\phi K^0$ and $B0 \\to K^+ K^- K^0_S$ decays", 
+        "BaBar", 
+        "10.1103/PhysRevD.71.091102", 
+        null, 
+        "hep-ex/0502019", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-11022", 
+            "BABAR-PUB-04-051"
+        ]
+    ], 
+    "676691": [
+        "The $e^+e^- \\to \\pi^+ \\pi^- \\pi^+ \\pi^-$, $K^+ K^- \\pi^+ \\pi^-$, and $K^+ K^- K^+ K^-$ cross sections at center-of-mass energies 0.5-GeV - 4.5-GeV measured with initial-state radiation", 
+        "BaBar", 
+        "10.1103/PhysRevD.71.052001", 
+        null, 
+        "hep-ex/0502025", 
+        "ins676691", 
+        null, 
+        [
+            "SLAC-PUB-11026"
+        ]
+    ], 
+    "676879": [
+        "Search for lepton flavor violation in the decay $\\tau \\to \\mu \\gamma$", 
+        "BaBar", 
+        "10.1103/PhysRevLett.95.041802", 
+        null, 
+        "hep-ex/0502032", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-11028", 
+            "BABAR-PUB-04-049"
+        ]
+    ], 
+    "677326": [
+        "Measurement of the $B^0 \\to D^{*-} D_s^{*+}$ and $D_s^+ \\to \\phi \\pi^+$ branching fractions", 
+        "BaBar", 
+        "10.1103/PhysRevD.71.091104", 
+        null, 
+        "hep-ex/0502041", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-11037", 
+            "BABAR-PUB-05-02"
+        ]
+    ], 
+    "677871": [
+        "Measurement of the branching fraction and the CP-violating asymmetry for the decay $B^0 \\to K^0_S \\pi^0$", 
+        "BaBar", 
+        "10.1103/PhysRevD.71.111102", 
+        null, 
+        "hep-ex/0503011", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-11048", 
+            "BABAR-PUB-05-01"
+        ]
+    ], 
+    "678136": [
+        "Search for $B \\to J/\\psi D$ decays", 
+        "BaBar", 
+        "10.1103/PhysRevD.71.091103", 
+        null, 
+        "hep-ex/0503021", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-11054", 
+            "BABAR-PUB-05-005"
+        ]
+    ], 
+    "678873": [
+        "Measurement of branching fractions and charge asymmetries in $B^+$ decays to $ \\eta \\pi^+, \\eta K^+, \\eta \\rho^+$ and $\\eta^\\prime \\pi^+$, and search for $B^0$ decays to $\\eta K^0$ and $\\eta \\omega$", 
+        "BaBar", 
+        "10.1103/PhysRevLett.95.131803", 
+        null, 
+        "hep-ex/0503035", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-11079", 
+            "BABAR-PUB-05-003"
+        ]
+    ], 
+    "679254": [
+        "Improved measurement of the {CKM} angle alpha using $B^0 \\to \\rho^+ \\rho^-$ decays", 
+        "BaBar", 
+        "10.1103/PhysRevLett.95.041805", 
+        null, 
+        "hep-ex/0503049", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-11081", 
+            "BABAR-PUB-05-007"
+        ]
+    ], 
+    "679504": [
+        "Measurement of the branching fraction of $\\Upsilon(4S) \\to B^0 \\overline{B}^0$", 
+        "BaBar", 
+        "10.1103/PhysRevLett.95.042001", 
+        null, 
+        "hep-ex/0504001", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-11085", 
+            "BABAR-PUB-05-004"
+        ]
+    ], 
+    "679956": [
+        "Evidence for the decay $B^\\pm \\to K^{*\\pm} \\pi^0$", 
+        "BaBar", 
+        "10.1103/PhysRevD.71.111101", 
+        null, 
+        "hep-ex/0504009", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-11057", 
+            "BABAR-PUB-05-006"
+        ]
+    ], 
+    "679961": [
+        "Production and decay of $\\Xi_c^0$ at BABAR", 
+        "BaBar", 
+        "10.1103/PhysRevLett.95.142003", 
+        null, 
+        "hep-ex/0504014", 
+        "ins679961", 
+        null, 
+        [
+            "SLAC-PUB-11100", 
+            "BABAR-PUB-05-008"
+        ]
+    ], 
+    "680847": [
+        "Measurement of time-dependent CP-violating asymmetries and constraints on $\\sin(2\\beta+\\gamma)$ with partial reconstruction of $B \\to D^{*\\mp} \\pi^\\pm$ decays", 
+        "BaBar", 
+        "10.1103/PhysRevD.71.112003", 
+        null, 
+        "hep-ex/0504035", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-11136"
+        ]
+    ], 
+    "680989": [
+        "Measurement of $\\gamma$ in $B^\\mp \\to D^{(*)} K^\\mp$ decays with a Dalitz analysis of $D \\to K^0_S \\pi^- \\pi^+$", 
+        "BaBar", 
+        "10.1103/PhysRevLett.95.121802", 
+        null, 
+        "hep-ex/0504039", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-11127"
+        ]
+    ], 
+    "681319": [
+        "Search for $b \\to u$ transitions in $B^- \\to D^0 K^-$ and $B^- \\to D^{*0} K^-$", 
+        "BaBar", 
+        "10.1103/PhysRevD.72.032004", 
+        null, 
+        "hep-ex/0504047", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-11137", 
+            "BABAR-PUB-05-12"
+        ]
+    ], 
+    "681883": [
+        "Study of the $\\tau^- \\to 3h^- 2h^+ \\nu_\\tau$ decay", 
+        "BaBar", 
+        "10.1103/PhysRevD.72.072001", 
+        null, 
+        "hep-ex/0505004", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-11155"
+        ]
+    ], 
+    "683498": [
+        "Measurement of the branching fraction and decay rate asymmetry of $B^- \\to D (\\pi^+ \\pi^- \\pi^0) K^-$", 
+        "BaBar", 
+        "10.1103/PhysRevD.72.071102", 
+        null, 
+        "hep-ex/0505084", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-11245", 
+            "BABAR-PUB-05-016"
+        ]
+    ], 
+    "683506": [
+        "Measurement of time-dependent CP asymmetries in $B^0 \\to D^{(*)\\pm} D^\\mp$ decays", 
+        "BaBar", 
+        "10.1103/PhysRevLett.95.131802", 
+        null, 
+        "hep-ex/0505092", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-11247", 
+            "BABAR-PUB-05-017"
+        ]
+    ], 
+    "683671": [
+        "Search for the rare decays $B^+ \\to D^{(*)+} K^0_S$", 
+        "BaBar", 
+        "10.1103/PhysRevD.72.011102", 
+        null, 
+        "hep-ex/0505099", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-11255", 
+            "BABAR-PUB-05-014"
+        ]
+    ], 
+    "684106": [
+        "Search for the decay $\\tau^- \\to 4\\pi^- 3\\pi^+ (\\pi^0) \\nu_\\tau$", 
+        "BaBar", 
+        "10.1103/PhysRevD.72.012003", 
+        null, 
+        "hep-ex/0506007", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-11229", 
+            "BABAR-PUB-05-015"
+        ]
+    ], 
+    "686012": [
+        "Search for lepton-flavor and lepton-number violation in the decay $\\tau^- \\to \\ell^\\mp h^\\pm h^{\\prime -}$", 
+        "BaBar", 
+        "10.1103/PhysRevLett.95.191801", 
+        null, 
+        "hep-ex/0506066", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-11300"
+        ]
+    ], 
+    "686118": [
+        "Search for the rare decay $\\overline{B}^0 \\to D^{*0} \\gamma$", 
+        "BaBar", 
+        "10.1103/PhysRevD.72.051106", 
+        null, 
+        "hep-ex/0506070", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-11292"
+        ]
+    ], 
+    "686354": [
+        "Observation of a broad structure in the $\\pi^+ \\pi^- J/\\psi$ mass spectrum around 4.26-GeV/c$^2$", 
+        "BaBar", 
+        "10.1103/PhysRevLett.95.142001", 
+        null, 
+        "hep-ex/0506081", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-05-29", 
+            "SLAC-PUB-11320"
+        ]
+    ], 
+    "686355": [
+        "Measurement of time-dependent CP asymmetries and the CP-odd fraction in the decay $B^0 \\to D^{*+} D^{*-}$", 
+        "BaBar", 
+        "10.1103/PhysRevLett.95.151804", 
+        null, 
+        "hep-ex/0506082", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-05-24", 
+            "SLAC-PUB-11321"
+        ]
+    ], 
+    "686462": [
+        "Study of $B \\to \\pi \\ell \\nu$ and $B \\to \\rho \\ell \\nu$ decays and determination of $|V_{ub}|$", 
+        "BaBar", 
+        "10.1103/PhysRevD.72.051102", 
+        null, 
+        "hep-ex/0507003", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-11053", 
+            "BABAR-PUB-05-025"
+        ]
+    ], 
+    "686573": [
+        "Measurement of the $B^+ \\to p \\bar{p} K^+$ branching fraction and study of the decay dynamics", 
+        "BaBar", 
+        "10.1103/PhysRevD.72.051101", 
+        null, 
+        "hep-ex/0507012", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-05-20", 
+            "SLAC-PUB-11296"
+        ]
+    ], 
+    "686795": [
+        "Evidence for $B^+ \\to \\bar{K}^0 K^+$ and $B^0 \\to K^0 \\bar{K}^0$, and measurement of the branching fraction and search for direct CP violation in $B^+ \\to K^0 \\pi^+$", 
+        "BaBar", 
+        "10.1103/PhysRevLett.95.221801", 
+        null, 
+        "hep-ex/0507023", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-05-035", 
+            "SLAC-PUB-11334"
+        ]
+    ], 
+    "686798": [
+        "Dalitz plot analysis of $D^0 \\to \\bar{K}^0 K^+ K^-$", 
+        "BaBar", 
+        "10.1103/PhysRevD.72.052008", 
+        null, 
+        "hep-ex/0507026", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-05-023", 
+            "SLAC-PUB-11333"
+        ]
+    ], 
+    "686997": [
+        "Measurement of the time-dependent CP-violating asymmetry in $B^0 \\to K^0_S \\pi^0 \\gamma$ decays", 
+        "BaBar", 
+        "10.1103/PhysRevD.72.051103", 
+        null, 
+        "hep-ex/0507038", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-11345", 
+            "BABAR-PUB-05-030"
+        ]
+    ], 
+    "690273": [
+        "Measurement of the branching ratios $\\Gamma(D_s^{*+} \\to D_s^+ \\pi^0)/\\Gamma(D_s^{*+} \\to D_s^+ \\gamma)$ and $\\Gamma(D^{*0} \\to D^0 \\pi^0)/\\Gamma(D^{*0} \\to D^0 \\gamma)$", 
+        "BaBar", 
+        "10.1103/PhysRevD.72.091101", 
+        null, 
+        "hep-ex/0508039", 
+        null, 
+        null, 
+        [
+            "BABAR-CONF-05-42", 
+            "SLAC-PUB-11431"
+        ]
+    ]
+}

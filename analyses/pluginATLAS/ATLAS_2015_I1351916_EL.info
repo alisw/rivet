@@ -5,6 +5,7 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1351916
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Christian Gutschow <chris.g@cern.ch>
 References:
@@ -43,3 +44,7 @@ BibTeX: '@article{Aad:2015uau,
       reportNumber   = "CERN-PH-EP-2014-259",
       SLACcitation   = "%%CITATION = ARXIV:1503.03709;%%"
 }'
+
+ReleaseTests:
+ - $A LHC-Z-e
+

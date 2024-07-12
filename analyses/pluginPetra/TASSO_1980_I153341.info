@@ -1,0 +1,32 @@
+Name: TASSO_1980_I153341
+Year: 1980
+Summary: $K^0,\bar{K}^0$ spectrum at 30 GeV
+Experiment: TASSO
+Collider: Petra
+InspireID: 153341
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B94 (1980) 91-95, 1980 
+RunInfo: e+ e- to hadrons
+NeedCrossSection: yes
+Beams: [e+, e-]
+Energies: [30]
+Description:
+  'Measurement of the  $K^0,\bar{K}^0$ spectrum in $e^+e^-$ collisions for a centre-of-mass energy of 30 GeV by the TASSO experiment at Petra.'
+Keywords: []
+BibKey: Brandelik:1980pp
+BibTeX: '@article{Brandelik:1980pp,
+      author         = "Brandelik, R. and others",
+      title          = "{$K^0$ Production in $e^+ e^-$ Annihilations at 30-{GeV}
+                        Center-of-mass Energy}",
+      collaboration  = "TASSO",
+      journal        = "Phys. Lett.",
+      volume         = "94B",
+      year           = "1980",
+      pages          = "91-95",
+      doi            = "10.1016/0370-2693(80)90833-3",
+      reportNumber   = "DESY-80-39",
+      SLACcitation   = "%%CITATION = PHLTA,94B,91;%%"
+}'

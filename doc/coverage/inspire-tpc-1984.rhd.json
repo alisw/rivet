@@ -1,0 +1,126 @@
+{
+    "15366": [
+        "Leptonic Structure Functions of the Photon", 
+        "TPC/Two Gamma", 
+        "10.1016/0370-2693(84)90626-9", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "UCD-840630"
+        ]
+    ], 
+    "194785": [
+        "Search for charge $(4/3)e$ particles produced in $e^+e^-$ annihilations", 
+        "TPC/Two Gamma", 
+        "10.1103/PhysRevLett.52.168", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "LBL-16860", 
+            "TPC-LBL-83-57"
+        ]
+    ], 
+    "195994": [
+        "Charged hadron production in $e^+e^-$ annihilation at 29-GeV", 
+        "TPC/Two Gamma", 
+        "10.1103/PhysRevLett.52.577", 
+        null, 
+        null, 
+        "ins195994", 
+        null, 
+        [
+            "LBL-17142", 
+            "TPC-LBL-83-31"
+        ]
+    ], 
+    "200105": [
+        "Phi meson production in $e^+e^-$ annihilations at 29-GeV", 
+        "TPC/Two Gamma", 
+        "10.1103/PhysRevLett.52.2201", 
+        null, 
+        null, 
+        "ins200105", 
+        null, 
+        [
+            "LBL-17616", 
+            "UT-HE-84/05"
+        ]
+    ], 
+    "200106": [
+        "Search for $q = 2/3 e$ and $q = 1/3 e$ particles produced in $e^+e^-$ annihilations", 
+        "TPC/Two Gamma", 
+        "10.1103/PhysRevLett.52.2332", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "LBL-17551"
+        ]
+    ], 
+    "201475": [
+        "Characteristics of proton production in jets from $e^+e^-$ annihilation at 29-GeV", 
+        "TPC/Two Gamma", 
+        "10.1103/PhysRevLett.53.130", 
+        null, 
+        null, 
+        "ins201475", 
+        null, 
+        [
+            "LBL-17705"
+        ]
+    ], 
+    "202639": [
+        "tau LEPTON BRANCHING FRACTIONS", 
+        "TPC/Two Gamma", 
+        "10.1103/PhysRevD.30.2436", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "LBL-18014"
+        ]
+    ], 
+    "203890": [
+        "Evidence for the $F^*$ meson", 
+        "TPC/Two Gamma", 
+        "10.1103/PhysRevLett.53.2465", 
+        null, 
+        null, 
+        "ins203890", 
+        null, 
+        [
+            "UT-HE-84/12"
+        ]
+    ], 
+    "204547": [
+        "Observation of strangeness correlations in $e^+e^-$ annihilation at $\\sqrt{s} = 29$ GeV", 
+        "TPC/Two Gamma", 
+        "10.1103/PhysRevLett.53.2199", 
+        null, 
+        null, 
+        "ins204547", 
+        null, 
+        [
+            "LBL-18125"
+        ]
+    ], 
+    "205869": [
+        "$K^{*0}$ and $K^0_s$ meson production in $e^+e^-$ annihilations at 29-GeV", 
+        "TPC/Two Gamma", 
+        "10.1103/PhysRevLett.53.2378", 
+        null, 
+        null, 
+        "ins205869", 
+        null, 
+        [
+            "LBL-18325", 
+            "TPC-UT-84-13"
+        ]
+    ]
+}

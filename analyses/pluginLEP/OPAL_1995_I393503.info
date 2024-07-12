@@ -1,0 +1,33 @@
+Name: OPAL_1995_I393503
+Year: 1995
+Summary:  $K^0$ Production in Hadronic $Z^0$ Decays
+Experiment: OPAL
+Collider: LEP
+InspireID: 393503
+Status: VALIDATED
+Authors:
+ - Peter Richardson <Peter.Richardson@durham.ac.uk>
+References:
+ - Z.Phys. C67 (1995) 389-402, 1995 
+RunInfo:
+  Hadronic Z decay events generated on the Z pole ($\sqrt{s} = 91.2$ GeV)
+NumEvents: 1000000
+Beams: [e+, e-]
+Energies: [91.2]
+Description: The production of $K^0$ mesons measured using 1.3 million $Z^0$ events
+   by the OPAL experiment at LEP. Only the fragmentation function is implemented.
+Keywords: []
+BibKey: Akers:1995ay
+BibTeX: '@article{Akers:1995ay,
+      author         = "Akers, R. and others",
+      title          = "{The Production of neutral kaons in Z0 decays and their
+                        Bose-Einstein correlations}",
+      collaboration  = "OPAL",
+      journal        = "Z. Phys.",
+      volume         = "C67",
+      year           = "1995",
+      pages          = "389-402",
+      doi            = "10.1007/BF01624582",
+      reportNumber   = "CERN-PPE-95-024, CERN-PPE-95-24",
+      SLACcitation   = "%%CITATION = ZEPYA,C67,389;%%"
+}'

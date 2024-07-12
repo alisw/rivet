@@ -1,0 +1,213 @@
+{
+    "322483": [
+        "Electroweak parameters of the $Z^0$ resonance and the Standard Model: the LEP Collaborations", 
+        "LEP", 
+        "10.1016/0370-2693(92)90572-L", 
+        "229120", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-91-232"
+        ]
+    ], 
+    "324176": [
+        "A Direct determination of the number of light neutrino families from e+ e- ---> neutrino anti-neutrino gamma at LEP", 
+        "L3", 
+        "10.1016/0370-2693(92)90877-7", 
+        "388680", 
+        null, 
+        "ins324176", 
+        null, 
+        [
+            "L3-035"
+        ]
+    ], 
+    "334951": [
+        "Determination of alpha-s from hadronic event shapes measured on the Z0 resonance", 
+        "L3", 
+        "10.1016/0370-2693(92)90463-E", 
+        "236418", 
+        null, 
+        "ins334951", 
+        null, 
+        [
+            "CERN-PPE-92-058", 
+            "CERN-PPE-92-58"
+        ]
+    ], 
+    "334952": [
+        "Search for the neutral Higgs boson at LEP", 
+        "L3", 
+        "10.1016/0370-2693(92)90047-8", 
+        "234868", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-92-040", 
+            "CERN-PPE-92-40"
+        ]
+    ], 
+    "334954": [
+        "Studies of hadronic event structure and comparisons with QCD models at the Z0 resonance", 
+        "L3", 
+        "10.1007/BF01558288", 
+        "235951", 
+        null, 
+        "ins334954", 
+        null, 
+        [
+            "CERN-PPE-92-050", 
+            "CERN-PPE-92-50"
+        ]
+    ], 
+    "336178": [
+        "An Improved measurement of $B^0$ - $\\bar{B}^0$ mixing in $Z^0$ decays", 
+        "L3", 
+        "10.1016/0370-2693(92)91119-T", 
+        "238075", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-92-084", 
+            "CERN-PPE-92-84"
+        ]
+    ], 
+    "336180": [
+        "Measurement of inclusive eta production in hadronic decays of the Z0", 
+        "L3", 
+        "10.1016/0370-2693(92)91795-B", 
+        "237420", 
+        null, 
+        "ins336180", 
+        null, 
+        [
+            "CERN-PPE-92-083", 
+            "CERN-PPE-92-83"
+        ]
+    ], 
+    "336900": [
+        "A Test of quantum electrodynamics in the reaction e+ e- ---> gamma gamma (gamma)", 
+        "L3", 
+        "10.1016/0370-2693(92)91120-X", 
+        "238405", 
+        null, 
+        "ins336900", 
+        null, 
+        [
+            "CERN-PPE-92-087", 
+            "CERN-PPE-92-87"
+        ]
+    ], 
+    "336901": [
+        "Inclusive J production in Z0 decays", 
+        "L3", 
+        "10.1016/0370-2693(92)91121-O", 
+        "238074", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-92-099", 
+            "CERN-PPE-92-99"
+        ]
+    ], 
+    "339089": [
+        "Measurement of the e+ e- --> b anti-b and e+ e- --> c anti-c forward backward asymmetries at the Z0 resonance", 
+        "L3", 
+        "10.1016/0370-2693(92)91203-L", 
+        "239533", 
+        null, 
+        "ins339089", 
+        null, 
+        [
+            "CERN-PPE-92-121"
+        ]
+    ], 
+    "339090": [
+        "Determination of the number of light neutrino species", 
+        "L3", 
+        "10.1016/0370-2693(92)91204-M", 
+        "240089", 
+        null, 
+        "ins339090", 
+        null, 
+        [
+            "CERN-PPE-92-128"
+        ]
+    ], 
+    "339091": [
+        "Isolated hard photon emission in hadronic Z0 decays", 
+        "L3", 
+        "10.1016/0370-2693(92)91205-N", 
+        "240244", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-92-131"
+        ]
+    ], 
+    "339092": [
+        "A Measurement of tau polarization in Z0 decays", 
+        "L3", 
+        "10.1016/0370-2693(92)91549-O", 
+        "240243", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-92-132"
+        ]
+    ], 
+    "340878": [
+        "Searches for nonminimal Higgs bosons in Z0 decays", 
+        "L3", 
+        "10.1016/0370-2693(92)91548-N", 
+        "240433", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-92-140"
+        ]
+    ], 
+    "340879": [
+        "Search for isosinglet neutral heavy leptons in Z0 decays", 
+        "L3", 
+        "10.1016/0370-2693(92)91579-X", 
+        "241880", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-92-164"
+        ]
+    ], 
+    "340880": [
+        "High mass photon pairs in lepton+ lepton- gamma gamma events at LEP", 
+        "L3", 
+        "10.1016/0370-2693(92)91576-U", 
+        "241409", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-92-152"
+        ]
+    ], 
+    "344328": [
+        "Search for anomalous production of single photon events in e+ e- annihilations at the Z resonance", 
+        "L3", 
+        "10.1016/0370-2693(92)91286-I", 
+        "243304", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-92-185"
+        ]
+    ]
+}

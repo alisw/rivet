@@ -13,16 +13,16 @@ namespace Rivet {
     /// Constructor
     ATLAS_2011_I944826()
       : Analysis("ATLAS_2011_I944826")
-    {
-      _sum_w_ks     = 0.0;
-      _sum_w_lambda = 0.0;
-      _sum_w_passed = 0.0;
-    }
+    {}
 
 
     /// Book histograms and initialise projections before the run
     void init() {
 
+      book(_sum_w_ks    , "ks");
+      book(_sum_w_lambda, "lambda");
+      book(_sum_w_passed, "passed");
+    
       UnstableParticles ufs(Cuts::pT > 100*MeV);
       declare(ufs, "UFS");
 
@@ -37,47 +37,48 @@ namespace Rivet {
         .acceptIdPair(PID::PROTON);
       declare(nstable, "nstable");
 
-      if (fuzzyEquals(sqrtS()/GeV, 7000, 1e-3)) {
-        _hist_Ks_pT      = bookHisto1D(1, 1, 1);
-        _hist_Ks_y       = bookHisto1D(2, 1, 1);
-        _hist_Ks_mult    = bookHisto1D(3, 1, 1);
-        _hist_L_pT       = bookHisto1D(7, 1, 1);
-        _hist_L_y        = bookHisto1D(8, 1, 1);
-        _hist_L_mult     = bookHisto1D(9, 1, 1);
-        _hist_Ratio_v_y  = bookScatter2D(13, 1, 1);
-        _hist_Ratio_v_pT = bookScatter2D(14, 1, 1);
+      
+      if (isCompatibleWithSqrtS(7000)) {
+        book(_hist_Ks_pT      ,1, 1, 1);
+        book(_hist_Ks_y       ,2, 1, 1);
+        book(_hist_Ks_mult    ,3, 1, 1);
+        book(_hist_L_pT       ,7, 1, 1);
+        book(_hist_L_y        ,8, 1, 1);
+        book(_hist_L_mult     ,9, 1, 1);
+        book(_hist_Ratio_v_y ,13, 1, 1);
+        book(_hist_Ratio_v_pT,14, 1, 1);
         //
-        _temp_lambda_v_y = Histo1D(10, 0.0, 2.5);
-        _temp_lambdabar_v_y = Histo1D(10, 0.0, 2.5);
-        _temp_lambda_v_pT = Histo1D(18, 0.5, 4.1);
-        _temp_lambdabar_v_pT = Histo1D(18, 0.5, 4.1);
+        book(_temp_lambda_v_y, "TMP/lambda_v_y", 10, 0.0, 2.5);
+        book(_temp_lambdabar_v_y, "TMP/lambdabar_v_y", 10, 0.0, 2.5);
+        book(_temp_lambda_v_pT, "TMP/lambda_v_pT", 18, 0.5, 4.1);
+        book(_temp_lambdabar_v_pT, "TMP/lambdabar_v_pT", 18, 0.5, 4.1);
       }
-      else if (fuzzyEquals(sqrtS()/GeV, 900, 1E-3)) {
-        _hist_Ks_pT   = bookHisto1D(4, 1, 1);
-        _hist_Ks_y    = bookHisto1D(5, 1, 1);
-        _hist_Ks_mult = bookHisto1D(6, 1, 1);
-        _hist_L_pT    = bookHisto1D(10, 1, 1);
-        _hist_L_y     = bookHisto1D(11, 1, 1);
-        _hist_L_mult  = bookHisto1D(12, 1, 1);
-        _hist_Ratio_v_y      = bookScatter2D(15, 1, 1);
-        _hist_Ratio_v_pT     = bookScatter2D(16, 1, 1);
+      else if (isCompatibleWithSqrtS(900)) {
+        book(_hist_Ks_pT   ,4, 1, 1);
+        book(_hist_Ks_y    ,5, 1, 1);
+        book(_hist_Ks_mult ,6, 1, 1);
+        book(_hist_L_pT    ,10, 1, 1);
+        book(_hist_L_y     ,11, 1, 1);
+        book(_hist_L_mult  ,12, 1, 1);
+        book(_hist_Ratio_v_y ,15, 1, 1);
+        book(_hist_Ratio_v_pT,16, 1, 1);
         //
-        _temp_lambda_v_y = Histo1D(5, 0.0, 2.5);
-        _temp_lambdabar_v_y = Histo1D(5, 0.0, 2.5);
-        _temp_lambda_v_pT = Histo1D(8, 0.5, 3.7);
-        _temp_lambdabar_v_pT = Histo1D(8, 0.5, 3.7);
+        book(_temp_lambda_v_y, "TMP/lambda_v_y", 5, 0.0, 2.5);
+        book(_temp_lambdabar_v_y, "TMP/lambdabar_v_y", 5, 0.0, 2.5);
+        book(_temp_lambda_v_pT, "TMP/lambda_v_pT", 8, 0.5, 3.7);
+        book(_temp_lambdabar_v_pT, "TMP/lambdabar_v_pT", 8, 0.5, 3.7);
       }
     }
 
 
     // This function is required to impose the flight time cuts on Kaons and Lambdas
     double getPerpFlightDistance(const Rivet::Particle& p) {
-      const HepMC::GenParticle* genp = p.genParticle();
-      const HepMC::GenVertex* prodV = genp->production_vertex();
-      const HepMC::GenVertex* decV  = genp->end_vertex();
-      const HepMC::ThreeVector prodPos = prodV->point3d();
+      ConstGenParticlePtr genp = p.genParticle();
+      ConstGenVertexPtr prodV = genp->production_vertex();
+      ConstGenVertexPtr decV  = genp->end_vertex();
+      RivetHepMC::FourVector prodPos = prodV->position();
       if (decV) {
-        const HepMC::ThreeVector decPos = decV->point3d();
+        const RivetHepMC::FourVector decPos = decV->position();
         double dy = prodPos.y() - decPos.y();
         double dx = prodPos.x() - decPos.x();
         return add_quad(dx, dy);
@@ -89,19 +90,19 @@ namespace Rivet {
     bool daughtersSurviveCuts(const Rivet::Particle& p) {
       // We require the Kshort or Lambda to decay into two charged
       // particles with at least pT = 100 MeV inside acceptance region
-      const HepMC::GenParticle* genp = p.genParticle();
-      const HepMC::GenVertex* decV  = genp->end_vertex();
+      ConstGenParticlePtr genp = p.genParticle();
+      ConstGenVertexPtr decV  = genp->end_vertex();
       bool decision = true;
 
       if (!decV) return false;
-      if (decV->particles_out_size() == 2) {
+      if (HepMCUtils::particles(decV, Relatives::CHILDREN).size() == 2) {
         std::vector<double> pTs;
         std::vector<int> charges;
         std::vector<double> etas;
-        foreach (const HepMC::GenParticle* gp, particles(decV, HepMC::children)) {
+        for(ConstGenParticlePtr gp: HepMCUtils::particles(decV, Relatives::CHILDREN)) {
           pTs.push_back(gp->momentum().perp());
           etas.push_back(fabs(gp->momentum().eta()));
-          charges.push_back( Rivet::PID::threeCharge(gp->pdg_id()) );
+          charges.push_back( Rivet::PID::charge3(gp->pdg_id()) );
           // gp->print();
         }
         if ( (pTs[0]/Rivet::GeV < 0.1) || (pTs[1]/Rivet::GeV < 0.1) ) {
@@ -119,7 +120,7 @@ namespace Rivet {
       }
       else {
         decision = false;
-        MSG_DEBUG("Failed nDaughters cut: " << decV->particles_out_size());
+        MSG_DEBUG("Failed nDaughters cut: " << HepMCUtils::particles(decV, Relatives::CHILDREN).size());
       }
 
       return decision;
@@ -127,7 +128,6 @@ namespace Rivet {
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-      const double weight = event.weight();
 
       // ATLAS MBTS trigger requirement of at least one hit in either hemisphere
       if (apply<FinalState>(event, "MBTS").size() < 1) {
@@ -140,17 +140,17 @@ namespace Rivet {
         MSG_DEBUG("Failed stable particle cut");
         vetoEvent;
       }
-      _sum_w_passed += weight;
+      _sum_w_passed->fill();
 
       // This ufs holds all the Kaons and Lambdas
-      const UnstableParticles& ufs = apply<UnstableFinalState>(event, "UFS");
+      const UnstableParticles& ufs = apply<UnstableParticles>(event, "UFS");
 
       // Some conters
       int n_KS0 = 0;
       int n_LAMBDA = 0;
 
       // Particle loop
-      foreach (const Particle& p, ufs.particles()) {
+      for (const Particle& p : ufs.particles()) {
 
         // General particle quantities
         const double pT = p.pT();
@@ -169,9 +169,9 @@ namespace Rivet {
             break;
           }
           if (daughtersSurviveCuts(p) ) {
-            _hist_Ks_y ->fill(y, weight);
-            _hist_Ks_pT->fill(pT/GeV, weight);
-            _sum_w_ks += weight;
+            _hist_Ks_y ->fill(y);
+            _hist_Ks_pT->fill(pT/GeV);
+            _sum_w_ks->fill();
             n_KS0++;
           }
           break;
@@ -188,15 +188,15 @@ namespace Rivet {
           }
           if ( daughtersSurviveCuts(p) ) {
             if (p.pid() == PID::LAMBDA) {
-              _temp_lambda_v_y.fill(fabs(y), weight);
-              _temp_lambda_v_pT.fill(pT/GeV, weight);
-              _hist_L_y->fill(y, weight);
-              _hist_L_pT->fill(pT/GeV, weight);
-              _sum_w_lambda += weight;
+              _temp_lambda_v_y->fill(fabs(y));
+              _temp_lambda_v_pT->fill(pT/GeV);
+              _hist_L_y->fill(y);
+              _hist_L_pT->fill(pT/GeV);
+              _sum_w_lambda->fill();
               n_LAMBDA++;
             } else if (p.pid() == -PID::LAMBDA) {
-             _temp_lambdabar_v_y.fill(fabs(y), weight);
-              _temp_lambdabar_v_pT.fill(pT/GeV, weight);
+             _temp_lambdabar_v_y->fill(fabs(y));
+              _temp_lambdabar_v_pT->fill(pT/GeV);
             }
           }
           break;
@@ -205,27 +205,27 @@ namespace Rivet {
       }
 
       // Fill multiplicity histos
-      _hist_Ks_mult->fill(n_KS0, weight);
-      _hist_L_mult->fill(n_LAMBDA, weight);
+      _hist_Ks_mult->fill(n_KS0);
+      _hist_L_mult->fill(n_LAMBDA);
     }
 
 
 
     /// Normalise histograms etc., after the run
     void finalize() {
-      MSG_DEBUG("# Events that pass the trigger: " << _sum_w_passed);
-      MSG_DEBUG("# Kshort events: " << _sum_w_ks);
-      MSG_DEBUG("# Lambda events: " << _sum_w_lambda);
+      MSG_DEBUG("# Events that pass the trigger: " << dbl(*_sum_w_passed));
+      MSG_DEBUG("# Kshort events: " << dbl(*_sum_w_ks));
+      MSG_DEBUG("# Lambda events: " << dbl(*_sum_w_lambda));
 
       /// @todo Replace with normalize()?
-      scale(_hist_Ks_pT,   1.0/_sum_w_ks);
-      scale(_hist_Ks_y,    1.0/_sum_w_ks);
-      scale(_hist_Ks_mult, 1.0/_sum_w_passed);
+      scale(_hist_Ks_pT,   1.0 / *_sum_w_ks);
+      scale(_hist_Ks_y,    1.0 / *_sum_w_ks);
+      scale(_hist_Ks_mult, 1.0 / *_sum_w_passed);
 
       /// @todo Replace with normalize()?
-      scale(_hist_L_pT,   1.0/_sum_w_lambda);
-      scale(_hist_L_y,    1.0/_sum_w_lambda);
-      scale(_hist_L_mult, 1.0/_sum_w_passed);
+      scale(_hist_L_pT,   1.0 / *_sum_w_lambda);
+      scale(_hist_L_y,    1.0 / *_sum_w_lambda);
+      scale(_hist_L_mult, 1.0 / *_sum_w_passed);
 
       // Division of histograms to obtain lambda_bar/lambda ratios
       divide(_temp_lambdabar_v_y, _temp_lambda_v_y, _hist_Ratio_v_y);
@@ -236,7 +236,7 @@ namespace Rivet {
   private:
 
     /// Counters
-    double _sum_w_ks, _sum_w_lambda, _sum_w_passed;
+    CounterPtr _sum_w_ks, _sum_w_lambda, _sum_w_passed;
 
     /// @name Persistent histograms
     //@{
@@ -247,14 +247,14 @@ namespace Rivet {
 
     /// @name Temporary histograms
     //@{
-    Histo1D _temp_lambda_v_y, _temp_lambdabar_v_y;
-    Histo1D _temp_lambda_v_pT, _temp_lambdabar_v_pT;
+    Histo1DPtr _temp_lambda_v_y, _temp_lambdabar_v_y;
+    Histo1DPtr _temp_lambda_v_pT, _temp_lambdabar_v_pT;
     //@}
 
   };
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2011_I944826);
+  RIVET_DECLARE_PLUGIN(ATLAS_2011_I944826);
 
 }

@@ -1,0 +1,41 @@
+{
+    "1868810": [
+        "Search for Darkonium in $e^+e^-$ Collisions",
+        "BABAR",
+        "10.1103/PhysRevLett.128.021802",
+        "2799556",
+        "2106.08529",
+        null,
+        null,
+        [
+            "BABAR-PUB-21/002",
+            "SLAC-PUB-17608"
+        ]
+    ],
+    "1918563": [
+        "Search for Lepton Flavor Violation in\u00a0$\\Upsilon (3S)\\rightarrow e^{\\pm}\\mu^{\\mp}$",
+        "BaBar",
+        "10.1103/PhysRevLett.128.091804",
+        "2803103",
+        "2109.03364",
+        null,
+        null,
+        [
+            "BABAR-PUB-21/003",
+            "SLAC-PUB-17617"
+        ]
+    ],
+    "1959507": [
+        "Search for an Axionlike Particle in $B$ Meson Decays",
+        "BaBar",
+        "10.1103/PhysRevLett.128.131802",
+        null,
+        "2111.01800",
+        null,
+        null,
+        [
+            "BABAR-PUB-21/006",
+            "SLAC-PUB-17631"
+        ]
+    ]
+}

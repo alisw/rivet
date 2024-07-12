@@ -17,7 +17,7 @@ namespace Rivet {
             ATLAS_2014_I1326641()
                 : Analysis("ATLAS_2014_I1326641")
             {
-                setNeedsCrossSection(true);
+
             }
 
             //@}
@@ -30,7 +30,7 @@ namespace Rivet {
 
             /// Book histograms and initialise projections before the run
             void init() {
-                //std::cout << " HELLO ANALYSIS : init " << std::endl;
+                //std::cout << " HELLO ANALYSIS : init " << std::'\n';
                 const FinalState fs;
 
                 FastJets fj04(fs, FastJets::ANTIKT, 0.4);
@@ -46,7 +46,8 @@ namespace Rivet {
                 size_t massDsOffset(0);
                 for (size_t alg = 0; alg < 2; ++alg) {
                     for (size_t i = 0; i < 5; ++i) {
-                        h_trijet_Mass[alg].addHistogram(ystarBins[i], ystarBins[i+1], bookHisto1D(1 + massDsOffset, 1, 1));
+                        Histo1DPtr tmp;
+                        h_trijet_Mass[alg].add(ystarBins[i], ystarBins[i+1], book(tmp, 1 + massDsOffset, 1, 1));
                         massDsOffset += 1;
                     }
                 }
@@ -66,7 +67,7 @@ namespace Rivet {
                 for (size_t alg = 0; alg < 2; ++alg) {
                     // Identify 3jets
                     vector<FourMomentum> leadJets;
-                    foreach (const Jet& jet, jetAr[alg]) {
+                    for (const Jet& jet : jetAr[alg]) {
                         if (jet.absrap() < 3.0 && leadJets.size() < nJets){
                             int filledJets = leadJets.size();
                             if (jet.pT() < ptCut[filledJets])  continue;
@@ -85,7 +86,7 @@ namespace Rivet {
 
                     const double yStar = fabs(y1-y2) + fabs(y2-y3) + fabs(y1-y3);
                     const double m = (leadJets[0] + leadJets[1] + leadJets[2]).mass();
-                    h_trijet_Mass[alg].fill(yStar, m, event.weight());
+                    h_trijet_Mass[alg].fill(yStar, m, 1.0);
                 }
             }
 
@@ -111,9 +112,9 @@ namespace Rivet {
         private:
 
             // The 3 jets mass spectrum for anti-kt 4 and anti-kt 6 jets (array index is jet type from enum above)
-            BinnedHistogram<double>  h_trijet_Mass[2];
+            BinnedHistogram  h_trijet_Mass[2];
     };
 
     // The hook for the plugin system
-    DECLARE_RIVET_PLUGIN(ATLAS_2014_I1326641);
+    RIVET_DECLARE_PLUGIN(ATLAS_2014_I1326641);
 }

@@ -25,7 +25,7 @@ namespace Rivet {
     void init() {
       Cut cut = Cuts::abseta < 3.5 && Cuts::pT > 25*GeV;
       /// @todo Urk, abuse! Need explicit HiggsFinder and TauFinder
-      ZFinder hfinder(FinalState(), cut, PID::TAU, 115*GeV, 135*GeV, 0.0, ZFinder::NOCLUSTER, ZFinder::NOTRACK, 125*GeV);
+      ZFinder hfinder(FinalState(), cut, PID::TAU, 115*GeV, 135*GeV, 0.0, ZFinder::ClusterPhotons::NONE, ZFinder::AddPhotons::NO, 125*GeV);
       declare(hfinder, "Hfinder");
       FastJets jetpro(hfinder.remainingFinalState(), FastJets::KT, 0.6);
       declare(jetpro, "Jets");
@@ -55,6 +55,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(MC_HKTSPLITTINGS);
+  RIVET_DECLARE_PLUGIN(MC_HKTSPLITTINGS);
 
 }

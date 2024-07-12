@@ -1,0 +1,26 @@
+{
+    "1912842": [
+        "Measurement of Lepton-Jet Correlation in Deep-Inelastic Scattering with the H1 Detector Using Machine Learning for Unfolding",
+        "H1",
+        "10.1103/PhysRevLett.128.132002",
+        "2779624",
+        "2108.12376",
+        null,
+        null,
+        [
+            "DESY 21-130"
+        ]
+    ],
+    "1983005": [
+        "Impact of jet-production data on the next-to-next-to-leading-order determination of HERAPDF2.0 parton distributions",
+        "H1",
+        "10.1140/epjc/s10052-022-10083-9",
+        "2805007",
+        "2112.01120",
+        null,
+        null,
+        [
+            "DESY-21-206"
+        ]
+    ]
+}

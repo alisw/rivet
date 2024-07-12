@@ -1,0 +1,31 @@
+Name: BESIII_2022_I2088218
+Year: 2022
+Summary: Mass distributions in the decay $D^+_s\to K^+\pi^+\pi^-\pi^0$
+Experiment: BESIII
+Collider: BEPC
+InspireID: 2088218
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - arXiv:2205.13759 [hep-ex]
+Description:
+  'Measurement of the mass distributions in the decay $D^+_s\to K^+\pi^+\pi^-\pi^0$ by BES. The data were read from the plots in the paper and therefore for some points the error bars are the size of the point. It is also not clear that any resolution effects have been unfolded.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2022bvv
+BibTeX: '@article{BESIII:2022bvv,
+    author = "Ablikim, Medina and others",
+    collaboration = "BESIII",
+    title = "{Amplitude analysis and branching fraction measurement of the decay \textbackslash{}boldmath $D_{s}^{+} \to K^+\pi^{+}\pi^{-}\pi^{0}$}",
+    eprint = "2205.13759",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    month = "5",
+    year = "2022"
+}
+'

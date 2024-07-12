@@ -1,0 +1,46 @@
+Name: CMS_2017_I1497519
+Year: 2017
+Summary: Measurements of differential production cross sections for a Z boson in association with jets in pp collisions at 8 TeV
+Experiment: CMS
+Collider: LHC
+InspireID: 1497519
+Status: VALIDATED
+Authors:
+ - cms-pag-conveners-smp@cern.ch
+ - Philippe Gras <philippe.gras@cern.ch>
+References:
+ - CMS-SMP-14-013
+ - JHEP 04 (2017) 022
+ - DOI:10.1007/JHEP04(2017)022
+ - arXiv:1611.03844
+RunInfo:
+  'Run MC generators with Z decaying leptonically into both electrons and muons at 8 TeV CoM energy. If only one of the two decay channels is included, multiply the provided cross-section value by two for a proper normalisation.'
+NeedCrossSection: yes
+Beams: [p+, p+]
+Energies: [8000]
+Options:
+ - LMODE=EL,MU,EMU
+Description:
+'Cross sections for the production of a Z boson in association with jets in proton-proton collisions at a centre-of-mass energy of $\sqrt{s} = 8\,$TeV are measured using a data sample collected by the CMS experiment at the LHC corresponding to 19.6 fb$^{-1}$. Differential cross sections are presented as functions of up to three observables that describe the jet kinematics and the jet activity. Correlations between the azimuthal directions and the rapidities of the jets and the Z boson are studied in detail. The predictions of a number of multileg generators with leading or next-to-leading order accuracy are compared with the measurements. The comparison shows the importance of including multi-parton contributions in the matrix elements and the improvement in the predictions when next-to-leading order terms are included.'
+Cuts: 'First two leading electrons or muons with $p_T > 20$ GeV and $|\eta| < 2.4$
+     Dilepton invariant mass in the [71,111] GeV range
+     Jets $p_T > 30$ GeV and $|\eta| < 2.4$
+     $\Delta{R}($lepton,jet$) > 0.5$'
+BibKey: Khachatryan:2016crw,
+BibTeX: '@article{Khachatryan:2016crw,
+      author         = "Khachatryan, Vardan and others",
+      title          = "{Measurements of differential production cross sections for a Z boson in association with jets in pp collisions at $\sqrt{s}=8\,$TeV}",
+      collaboration  = "CMS",
+      journal        = "JHEP",
+      volume         = "04",
+      year           = "2017",
+      pages          = "022",
+      doi            = "10.1007/JHEP04(2017)022",
+      eprint         = "1611.03844",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CMS-SMP-14-013, CERN-EP-2016-256",
+      SLACcitation   = "%%CITATION = ARXIV:1611.03844;%%"
+}'
+ReleaseTests:
+ - $A pp-8000-Zee-jets :LMODE=EL

@@ -44,3 +44,7 @@ BibTeX: '@article{Aktas:2007hn,
       reportNumber   = "DESY-07-018",
       SLACcitation   = "%%CITATION = HEP-EX/0703022;%%"
 }'
+
+ReleaseTests:
+ - $A HERA-I-GammaP-Gap
+

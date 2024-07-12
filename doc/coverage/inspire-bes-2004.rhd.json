@@ -1,0 +1,274 @@
+{
+    "622224": [
+        "Measurement of inclusive momentum spectra and multiplicity distributions of charged particles at S**1/2 sim 2-5 GeV", 
+        "BES", 
+        "10.1103/PhysRevD.69.072002", 
+        null, 
+        "hep-ex/0306055", 
+        "ins622224", 
+        null, 
+        [
+            "SLAC-PUB-10095"
+        ]
+    ], 
+    "626877": [
+        "Measurement of branching ratios for eta(c) hadronic decays", 
+        "BES", 
+        "10.1016/j.physletb.2003.10.042", 
+        null, 
+        "hep-ex/0308073", 
+        null, 
+        null, 
+        []
+    ], 
+    "630406": [
+        "Improved measurement of the branching ratio of J / psi ---> K0(S) K0(L)", 
+        "BES", 
+        "10.1103/PhysRevD.69.012003", 
+        null, 
+        "hep-ex/0310023", 
+        null, 
+        null, 
+        []
+    ], 
+    "630407": [
+        "First observation of psi(2S) ---> K0(S) K0(L)", 
+        "BES", 
+        "10.1103/PhysRevLett.92.052001", 
+        null, 
+        "hep-ex/0310024", 
+        null, 
+        null, 
+        []
+    ], 
+    "634644": [
+        "Measurements of psi(2S) decays into vector tensor final states", 
+        "BES", 
+        "10.1103/PhysRevD.69.072001", 
+        null, 
+        "hep-ex/0312016", 
+        null, 
+        null, 
+        []
+    ], 
+    "636427": [
+        "Search for K0(S) K0(S) in J / psi and psi(2S) decays", 
+        "BES", 
+        "10.1016/j.physletb.2004.03.047", 
+        null, 
+        "hep-ex/0312059", 
+        null, 
+        null, 
+        []
+    ], 
+    "642524": [
+        "Determination of B(chi(cJ) ---> p anti-p) in psi(2S) decays", 
+        "BES", 
+        "10.1103/PhysRevD.69.092001", 
+        null, 
+        "hep-ex/0401011", 
+        null, 
+        null, 
+        []
+    ], 
+    "643978": [
+        "Search for the pentaquark state in psi(2S) and J / psi decays to K0(S)pK- anti-n and K0(S) anti-p K+ n", 
+        "BES", 
+        "10.1103/PhysRevD.70.012004", 
+        null, 
+        "hep-ex/0402012", 
+        null, 
+        null, 
+        []
+    ], 
+    "644048": [
+        "Measurement of the branching fraction of J / psi ---> pi+ pi- pi0", 
+        "BES", 
+        "10.1103/PhysRevD.70.012005", 
+        null, 
+        "hep-ex/0402013", 
+        null, 
+        null, 
+        []
+    ], 
+    "645125": [
+        "The Measurements of J / psi ---> p anti-p", 
+        "BES", 
+        "10.1016/j.physletb.2004.04.022", 
+        null, 
+        "hep-ex/0402034", 
+        null, 
+        null, 
+        []
+    ], 
+    "645697": [
+        "A Study of J / psi ---> gamma gamma V(rho,phi) decays with the BESII detector", 
+        "BES", 
+        "10.1016/j.physletb.2004.04.085", 
+        null, 
+        "hep-ex/0403008", 
+        null, 
+        null, 
+        []
+    ], 
+    "646331": [
+        "psi(2S) decays into J / psi plus two photons", 
+        "BES", 
+        "10.1103/PhysRevD.70.012006", 
+        null, 
+        "hep-ex/0403023", 
+        null, 
+        null, 
+        []
+    ], 
+    "647968": [
+        "Evidence of sigma particle in J / psi ---> omega pi pi", 
+        "BES", 
+        null, 
+        null, 
+        "hep-ex/0404016", 
+        null, 
+        null, 
+        []
+    ], 
+    "648208": [
+        "Study of psi(2S) decays to X J / psi", 
+        "BES", 
+        "10.1103/PhysRevD.70.012003", 
+        null, 
+        "hep-ex/0404020", 
+        null, 
+        null, 
+        []
+    ], 
+    "650570": [
+        "Observation of a threshold enhancement in the p anti-Lambda invariant mass spectrum", 
+        "BES", 
+        "10.1103/PhysRevLett.93.112002", 
+        null, 
+        "hep-ex/0405050", 
+        null, 
+        null, 
+        []
+    ], 
+    "651831": [
+        "Search for the lepton flavor violation processes J / psi ---> mu tau and e tau", 
+        "BES", 
+        "10.1016/j.physletb.2004.08.005", 
+        null, 
+        "hep-ex/0406018", 
+        null, 
+        null, 
+        []
+    ], 
+    "652163": [
+        "Direct measurements of the branching fractions for D0 ---> K- e+ nu(e) and D0 ---> pi- e+ nu(e) and determinations of the form-factors f**K(+)(0) and f**pi(+)(0)", 
+        "BES", 
+        "10.1016/j.physletb.2004.07.004", 
+        null, 
+        "hep-ex/0406028", 
+        null, 
+        null, 
+        []
+    ], 
+    "652399": [
+        "The sigma pole in J / psi ---> omega pi+ pi-", 
+        "BES", 
+        "10.1016/j.physletb.2004.07.052", 
+        null, 
+        "hep-ex/0406038", 
+        null, 
+        null, 
+        []
+    ], 
+    "653354": [
+        "Evidence for f0(980) f0(980) production in chi(c0) decays", 
+        "BES", 
+        "10.1103/PhysRevD.70.092002", 
+        null, 
+        "hep-ex/0406079", 
+        null, 
+        null, 
+        []
+    ], 
+    "656014": [
+        "Observation of K* (892)0 anti-K* (892)0 in chi(cJ) decays", 
+        "BES", 
+        "10.1103/PhysRevD.70.092003", 
+        null, 
+        "hep-ex/0408012", 
+        null, 
+        null, 
+        []
+    ], 
+    "656200": [
+        "First measurement of the branching ratio of J/psi ---> gamma f(2)(1270) f(2)(1270)", 
+        "BES", 
+        "10.1103/PhysRevD.70.112008", 
+        null, 
+        "hep-ex/0408026", 
+        null, 
+        null, 
+        []
+    ], 
+    "656869": [
+        "Search for K0(S) K0(L) in psi prime-prime decays", 
+        "BES", 
+        "10.1103/PhysRevD.70.077101", 
+        null, 
+        "hep-ex/0408046", 
+        null, 
+        null, 
+        []
+    ], 
+    "657201": [
+        "Measurements of psi(2S) decays into phi pi0, phi eta, phi eta-prime omega eta, and omega eta-prime", 
+        "BES", 
+        "10.1103/PhysRevD.70.112003", 
+        null, 
+        "hep-ex/0408118", 
+        null, 
+        null, 
+        []
+    ], 
+    "658084": [
+        "Study of J/psi ---> omega K+ K-", 
+        "BES", 
+        "10.1016/j.physletb.2004.10.030", 
+        null, 
+        "hep-ex/0409007", 
+        null, 
+        null, 
+        []
+    ], 
+    "659022": [
+        "Measurement of the chi(c2) polarization in psi(2S) ---> gamma chi(c2)", 
+        "BES", 
+        "10.1103/PhysRevD.70.092004", 
+        null, 
+        "hep-ex/0409034", 
+        null, 
+        null, 
+        []
+    ], 
+    "661567": [
+        "Measurement of the final states omega pi0, rho eta, and rho eta prime from psi (2S) electromagnetic decays and e+e- annihilations", 
+        "BES", 
+        "10.1103/PhysRevD.70.112007", 
+        null, 
+        "hep-ex/0410031", 
+        null, 
+        null, 
+        []
+    ], 
+    "663429": [
+        "Measurement of cross sections for D0 anti-D0 and D+ D- production in e+ e- annihilation at s**(1/2) = 3.773-GeV", 
+        "BES", 
+        "10.1016/j.physletb.2004.10.029", 
+        null, 
+        "hep-ex/0411013", 
+        null, 
+        null, 
+        []
+    ]
+}

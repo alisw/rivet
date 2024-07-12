@@ -13,7 +13,10 @@
 namespace Rivet {
 
 
-  /// @name Particle classifier functions
+  /// @defgroup particleutils Functions for Particles
+  /// @{
+
+  /// @defgroup particleutils_class Particle classifier functions
   //@{
 
   /// Unbound function access to PID code
@@ -250,11 +253,6 @@ namespace Rivet {
   /// Return 3 times the abs charge (3 x quark charge is an int)
   PARTICLE_TO_PID_INTFN(abscharge3)
 
-  /// Alias for charge3
-  /// @deprecated Use charge3
-  PARTICLE_TO_PID_INTFN(threeCharge)
-
-
   /// Get the atomic number (number of protons) in a nucleus/ion
   PARTICLE_TO_PID_INTFN(nuclZ)
 
@@ -264,12 +262,13 @@ namespace Rivet {
   /// If this is a nucleus (ion), get nLambda
   PARTICLE_TO_PID_INTFN(nuclNlambda)
 
-  //@}
+  /// @}
 
 
-  /// @name Particle pair classifiers
+  /// @defgroup particleutils_pairclass Particle pair classifiers
+  /// @brief
   /// @todo Make versions that work on ParticlePair?
-  //@{
+  /// @{
 
   inline bool isSameSign(const Particle& a, const Particle& b) { return PID::isSameSign(a.pid(), b.pid()); }
   inline bool isOppSign(const Particle& a, const Particle& b) { return PID::isOppSign(a.pid(), b.pid()); }
@@ -281,11 +280,11 @@ namespace Rivet {
   inline bool isOSOF(const Particle& a, const Particle& b) { return PID::isOSOF(a.pid(), b.pid()); }
   inline bool isSSOF(const Particle& a, const Particle& b) { return PID::isSSOF(a.pid(), b.pid()); }
 
-  //@}
+  /// @}
 
 
-  /// @name Particle charge/sign comparison functions
-  //@{
+  /// @defgroup particleutils_charge Particle charge/sign comparison functions
+  /// @{
 
   /// @brief Return true if Particles @a a and @a b have the opposite charge sign
   /// @note Two neutrals returns false
@@ -316,7 +315,7 @@ namespace Rivet {
     return a.charge3() != b.charge3();
   }
 
-  //@}
+  /// @}
 
 
 
@@ -324,8 +323,8 @@ namespace Rivet {
 
 
 
-  /// @name Non-PID particle properties, via unbound functions
-  //@{
+  /// @defgroup particleutils_nonpid Non-PID particle properties, via unbound functions
+  /// @{
 
   /// @brief Determine whether a particle is the first in a decay chain to meet the function requirement
   inline bool isFirstWith(const Particle& p, const ParticleSelector& f) {
@@ -469,17 +468,17 @@ namespace Rivet {
   /// @brief Determine whether the particle is from a prompt tau decay
   inline bool fromPromptTau(const Particle& p) { return p.fromPromptTau(); }
 
-  /// @brief Determine whether the particle is from a hadron or tau decay
-  /// @deprecated Too vague: use fromHadron or fromHadronicTau
-  inline bool fromDecay(const Particle& p) { return p.fromDecay(); }
+  // /// @brief Determine whether the particle is from a hadron or tau decay
+  // DEPRECATED("Too vague: use fromHadron or fromHadronicTau")
+  // inline bool fromDecay(const Particle& p) { return p.fromDecay(); }
 
-  //@}
+  /// @}
 
 
-  /// @name Particle classifier -> bool functors
+  /// @defgroup particleutils_p2bool Particle classifier -> bool functors
   ///
   /// To be passed to any() or all() e.g. any(p.children(), HasPID(PID::MUON))
-  //@{
+  /// @{
 
   /// Base type for Particle -> bool functors
   struct BoolParticleFunctor {
@@ -671,17 +670,19 @@ namespace Rivet {
   };
   using hasParticleDescendantWithout = HasParticleDescendantWithout;
 
-  //@}
+  /// @}
 
 
-  /// @name Unbound functions for filtering particles
-  //@{
+  /// @defgroup particleutils_filt Unbound functions for filtering particles
+  /// @{
 
   /// Filter a particle collection in-place to the subset that passes the supplied Cut
   Particles& ifilter_select(Particles& particles, const Cut& c);
   /// Alias for ifilter_select
   /// @deprecated Use ifilter_select
   inline Particles& ifilterBy(Particles& particles, const Cut& c) { return ifilter_select(particles, c); }
+  /// New alias for ifilter_select
+  inline Particles& iselect(Particles& particles, const Cut& c) { return ifilter_select(particles, c); }
 
   /// Filter a particle collection in-place to the subset that passes the supplied Cut
   inline Particles filter_select(const Particles& particles, const Cut& c) {
@@ -691,6 +692,8 @@ namespace Rivet {
   /// Alias for ifilter_select
   /// @deprecated Use filter_select
   inline Particles filterBy(const Particles& particles, const Cut& c) { return filter_select(particles, c); }
+  /// New alias for ifilter_select
+  inline Particles select(const Particles& particles, const Cut& c) { return filter_select(particles, c); }
 
   /// Filter a particle collection in-place to the subset that passes the supplied Cut
   inline Particles filter_select(const Particles& particles, const Cut& c, Particles& out) {
@@ -700,22 +703,30 @@ namespace Rivet {
   /// Alias for ifilter_select
   /// @deprecated Use filter_select
   inline Particles filterBy(const Particles& particles, const Cut& c, Particles& out) { return filter_select(particles, c, out); }
+  /// New alias for ifilter_select
+  inline Particles select(const Particles& particles, const Cut& c, Particles& out) { return filter_select(particles, c, out); }
 
 
   /// Filter a particle collection in-place to the subset that fails the supplied Cut
   Particles& ifilter_discard(Particles& particles, const Cut& c);
+  /// New alias for ifilter_discard
+  inline Particles& idiscard(Particles& particles, const Cut& c) { return ifilter_discard(particles, c); }
 
   /// Filter a particle collection in-place to the subset that fails the supplied Cut
   inline Particles filter_discard(const Particles& particles, const Cut& c) {
     Particles rtn = particles;
     return ifilter_discard(rtn, c);
   }
+  /// New alias for filter_discard
+  inline Particles discard(const Particles& particles, const Cut& c) { return filter_discard(particles, c); }
 
   /// Filter a particle collection in-place to the subset that fails the supplied Cut
   inline Particles filter_discard(const Particles& particles, const Cut& c, Particles& out) {
     out = filter_discard(particles, c);
     return out;
   }
+  /// New alias for filter_discard
+  inline Particles discard(const Particles& particles, const Cut& c, Particles& out) { return filter_discard(particles, c, out); }
 
 
   // inline void ifilterIsolateDeltaR(Particles& particles, const FourMomenta& vecs) {
@@ -726,12 +737,12 @@ namespace Rivet {
   // inline Particles filterIsolateDeltaR(const Particles& particles, const FourMomenta& vecs) {
   // }
 
-  //@}
+  /// @}
 
 
 
-  /// @name Particle pair functions
-  //@{
+  /// @defgroup particleutils_pair Particle pair functions
+  /// @{
 
   /// Get the PDG ID codes of a ParticlePair
   /// @todo Make ParticlePair a custom class instead?
@@ -739,13 +750,14 @@ namespace Rivet {
     return make_pair(pp.first.pid(), pp.second.pid());
   }
 
-  //@}
+  /// @}
 
 
 
-  /// @name Operations on collections of Particle
+  /// @defgroup particleutils_kin Operations on collections of Particle
+  ///
   /// @note This can't be done on generic collections of ParticleBase -- thanks, C++ :-/
-  //@{
+  ///@{
   namespace Kin {
 
     inline double sumPt(const Particles& ps) {
@@ -764,7 +776,7 @@ namespace Rivet {
     /// @todo Isolation routines?
 
   }
-  //@}
+  /// @}
 
 
   // Import Kin namespace into Rivet
@@ -775,6 +787,41 @@ namespace Rivet {
   inline bool isSame(const Particle& a, const Particle& b) {
     return a.isSame(b);
   }
+
+  /// @}
+
+
+  /// @brief Check for pid membership in a list of particles
+  /// @note if abs is true, then only abs pids are checked.
+  inline bool containsPID(const Particles& parts, int id, bool abs=false) {
+    if (abs) return any(parts, HasAbsPID(id));
+    return any(parts, HasPID(id));
+  }
+
+  /// @}
+
+
+  /// @brief Check whether a particle is radiative.
+  /// @note A particle is considered radiative if (1) it has only one mother particle and (2) one of its siblings has the same pid as the mother particle.
+  inline bool isRadiative(const Particle& part) {
+    const Particles& parents = part.parents();
+    if (parents.size() != 1)
+      return false;
+
+    const Particle& mother = parents[0];
+    return ( part.pid() != mother.pid() ) && ( containsPID(mother.children(), mother.pid()) );
+  }
+
+
+  /// @brief Check whether a set of particles' decay chains can contain the requested list of pids.
+  /// @note if absolute is true, then only the absolute values of pids are compared.
+  /// @note if ignorephoton is true, then photons are ignored when searching for the set of particles.
+  bool cascadeContains
+    ( const Particles& parts
+    , const vector<int>& pids
+    , bool absolute
+    , bool ignorephoton
+    );
 
 
 }

@@ -15,7 +15,7 @@ namespace Rivet {
     ATLAS_2011_I954993()
       : Analysis("ATLAS_2011_I954993")
     {
-      setNeedsCrossSection(true);
+
     }
 
 
@@ -27,23 +27,23 @@ namespace Rivet {
       FinalState fs;
       Cut cuts = Cuts::abseta < 2.5 && Cuts::pT > 15*GeV;
 
-      ZFinder zfinder_e(fs, cuts, PID::ELECTRON, 81.1876*GeV, 101.1876*GeV, 0.1, ZFinder::CLUSTERNODECAY);
+      ZFinder zfinder_e(fs, cuts, PID::ELECTRON, 81.1876*GeV, 101.1876*GeV, 0.1, ZFinder::ClusterPhotons::NODECAY);
       declare(zfinder_e, "ZFinder_e");
-      ZFinder zfinder_mu(fs, cuts, PID::MUON, 81.1876*GeV, 101.1876*GeV, 0.1, ZFinder::CLUSTERNODECAY);
+      ZFinder zfinder_mu(fs, cuts, PID::MUON, 81.1876*GeV, 101.1876*GeV, 0.1, ZFinder::ClusterPhotons::NODECAY);
       declare(zfinder_mu, "ZFinder_mu");
 
       VetoedFinalState weinput;
       weinput.addVetoOnThisFinalState(zfinder_e);
-      WFinder wfinder_e(weinput, cuts, PID::ELECTRON, 0*GeV, 1000*GeV, 25*GeV, 0.1, WFinder::CLUSTERNODECAY);
+      WFinder wfinder_e(weinput, cuts, PID::ELECTRON, 0*GeV, 1000*GeV, 25*GeV, 0.1, WFinder::ChargedLeptons::PROMPT, WFinder::ClusterPhotons::NODECAY);
       declare(wfinder_e, "WFinder_e");
 
       VetoedFinalState wminput;
       wminput.addVetoOnThisFinalState(zfinder_mu);
-      WFinder wfinder_mu(wminput,cuts, PID::MUON, 0*GeV, 1000*GeV, 25*GeV, 0.1, WFinder::CLUSTERNODECAY);
+      WFinder wfinder_mu(wminput,cuts, PID::MUON, 0*GeV, 1000*GeV, 25*GeV, 0.1, WFinder::ChargedLeptons::PROMPT, WFinder::ClusterPhotons::NODECAY);
       declare(wfinder_mu, "WFinder_mu");
 
       // Histograms
-      _h_fiducial = bookHisto1D(1,1,1);
+      book(_h_fiducial ,1,1,1);
     }
 
 
@@ -89,7 +89,7 @@ namespace Rivet {
       }
 
       // Update the fiducial cross-section histogram
-      _h_fiducial->fill(7000, e.weight());
+      _h_fiducial->fill(7000);
     }
 
 
@@ -112,6 +112,6 @@ namespace Rivet {
 
 
   //// The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2011_I954993);
+  RIVET_DECLARE_PLUGIN(ATLAS_2011_I954993);
 
 }

@@ -1,0 +1,112 @@
+{
+    "1373909": [
+        "Search for mixing-induced CP violation using partial reconstruction of $\\bar B^0 \\to D^{*+} X\\ell^- \\bar \\nu_{\\ell}$ and kaon tagging", 
+        "BaBar", 
+        "10.1103/PhysRevD.93.032001", 
+        null, 
+        "1506.00234", 
+        null, 
+        null, 
+        []
+    ], 
+    "1385752": [
+        "Observation of $\\overline{B} \\to D^{(*)} \\pi^+\\pi^- \\ell^-\\overline{\\nu}$ decays in $e^+e^-$ collisions at the $\\Upsilon(4S)$ resonance", 
+        "BaBar", 
+        "10.1103/PhysRevLett.116.041801", 
+        null, 
+        "1507.08303", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-15-007", 
+            "SLAC-PUB-16337"
+        ]
+    ], 
+    "1391152": [
+        "Measurement of angular asymmetries in the decays $B \\to K^*\u2113^+\u2113^-$", 
+        "BaBar", 
+        "10.1103/PhysRevD.93.052015", 
+        null, 
+        "1508.07960", 
+        "ins1391152", 
+        null, 
+        [
+            "BABAR-PUB-15-002", 
+            "SLAC-PUB-16384"
+        ]
+    ], 
+    "1403544": [
+        "Measurement of the I=1/2 $K \\pi$ $\\mathcal{S}$-wave amplitude from Dalitz plot analyses of $\\eta_c \\to K \\bar K \\pi$ in two-photon interactions", 
+        "BaBar", 
+        "10.1103/PhysRevD.93.012005", 
+        null, 
+        "1511.02310", 
+        "ins1403544", 
+        null, 
+        [
+            "BABAR-PUB-15-008", 
+            "SLAC-PUB-16422"
+        ]
+    ], 
+    "1409292": [
+        "Time-dependent analysis of $B^0 \\to {{K^0_{S}}} \\pi^- \\pi^+ \\gamma$ decays and studies of the $K^+\\pi^-\\pi^+$ system in $B^+ \\to K^+ \\pi^- \\pi^+ \\gamma$ decays", 
+        "BaBar", 
+        "10.1103/PhysRevD.93.052013", 
+        null, 
+        "1512.03579", 
+        null, 
+        null, 
+        []
+    ], 
+    "1441203": [
+        "Measurement of the neutral $D$ meson mixing parameters in a time-dependent amplitude analysis of the $D^0\\to\\pi^+\\pi^-\\pi^0$ decay", 
+        "BaBar", 
+        "10.1103/PhysRevD.93.112014", 
+        null, 
+        "1604.00857", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-15-009", 
+            "SLAC-PUB-16505"
+        ]
+    ], 
+    "1459053": [
+        "Tests of CPT symmetry in $B^0-\\overline{B}^0$ mixing and in $B^0 \\to c\\overline{c}K^0$ decays", 
+        "BaBar", 
+        "10.1103/PhysRevD.94.011101", 
+        null, 
+        "1605.04545", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-16525"
+        ]
+    ], 
+    "1469061": [
+        "Search for a muonic dark force at BABAR", 
+        "BaBar", 
+        "10.1103/PhysRevD.94.011102", 
+        null, 
+        "1606.03501", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-16-003", 
+            "SLAC-PUB-16549"
+        ]
+    ], 
+    "1487722": [
+        "Measurement of the $B^0 -> D^*- \\pi^+ \\pi^- \\pi^+$ branching fraction", 
+        "BaBar", 
+        "10.1103/PhysRevD.94.091101", 
+        null, 
+        "1609.06802", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-16-015", 
+            "SLAC-PUB-16822"
+        ]
+    ]
+}

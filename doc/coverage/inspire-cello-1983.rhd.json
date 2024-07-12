@@ -1,0 +1,101 @@
+{
+    "176885": [
+        "Determination of the Radiative Widths of the $\\eta^\\prime$ and A2 From Two Photon Exchange Production", 
+        "CELLO", 
+        "10.1016/0370-2693(82)90366-5", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-82-008"
+        ]
+    ], 
+    "179447": [
+        "The Influence of Fragmentation Models on the Determination of the Strong Coupling Constant in $e^+ e^-$ Annihilation Into Hadrons", 
+        "CELLO", 
+        "10.1016/0550-3213(83)90364-4", 
+        null, 
+        null, 
+        "ins179447", 
+        null, 
+        [
+            "SACLAY-DPHPE-82-08", 
+            "DESY-82-061"
+        ]
+    ], 
+    "180048": [
+        "Measurement of the $\\tau$ Lifetime", 
+        "CELLO", 
+        "10.1016/0550-3213(83)90105-0", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-82-056"
+        ]
+    ], 
+    "180756": [
+        "Coupling Strengths of Weak Neutral Currents From Leptonic Final States at 22-{GeV} and 34-{GeV}", 
+        "CELLO", 
+        "10.1007/BF01577097", 
+        null, 
+        null, 
+        "ins180756", 
+        null, 
+        [
+            "DESY-82-063"
+        ]
+    ], 
+    "182585": [
+        "Investigation of Two Photon Final States in $e^+ e^-$ Annihilation at $\\sqrt{s}=34$.2-{GeV}", 
+        "CELLO", 
+        "10.1016/0370-2693(83)90972-3", 
+        null, 
+        null, 
+        "ins182585", 
+        null, 
+        [
+            "DESY-82-080"
+        ]
+    ], 
+    "189546": [
+        "Lepton Pair Production in Deep Inelastic $e \\gamma$ Scattering", 
+        "CELLO", 
+        "10.1016/0370-2693(83)90186-7", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-83-017", 
+            "LAL/83-2"
+        ]
+    ], 
+    "191415": [
+        "Inclusive $\\gamma$ and $\\pi^0$ Production in $e^+ e^-$ Annihilation at 14-{GeV}, 22-{GeV}, and 34-{GeV} Center-of-mass Energy", 
+        "CELLO", 
+        "10.1007/BF01574852", 
+        null, 
+        null, 
+        "ins191415", 
+        null, 
+        [
+            "DESY-83-066"
+        ]
+    ], 
+    "198110": [
+        "Experimental Study of the Hadronic Photon Structure Function", 
+        "CELLO", 
+        "10.1016/0370-2693(83)90187-9", 
+        null, 
+        null, 
+        "ins198110", 
+        null, 
+        [
+            "DESY-83-018", 
+            "LAL 83-3"
+        ]
+    ]
+}

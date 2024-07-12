@@ -1,12 +1,12 @@
 # BEGIN PLOT /CDF_2010_S8591881_QCD/d
-XLabel=$p_T(\text{leading jet})$ / GeV
+XLabel=$p_T(\mathrm{leading~jet})$ / GeV
 LogY=0
 # END PLOT
 
 
 
 # BEGIN PLOT /CDF_2010_S8591881_QCD/d1[01]
-YLabel=$\langle N_\text{ch} \rangle / \text{d}\eta\,\text{d}\phi$
+YLabel=$\langle N_\mathrm{ch} \rangle / \mathrm{d}\eta\,\mathrm{d}\phi$
 LegendYPos=0.5
 # END PLOT
 
@@ -37,7 +37,7 @@ Title=TransDIF region charged particle density
 
 
 # BEGIN PLOT /CDF_2010_S8591881_QCD/d1[23]
-YLabel=$\langle \sum p_T^\text{track} \rangle / \text{d}\eta\,\text{d}\phi$ / GeV
+YLabel=$\langle \sum p_T^\mathrm{track} \rangle / \mathrm{d}\eta\,\mathrm{d}\phi$ / GeV
 LegendXPos=0.10
 # END PLOT
 
@@ -70,7 +70,7 @@ Title=TransDIF region charged $\sum p_\perp$ density
 # BEGIN PLOT /CDF_2010_S8591881_QCD/d1[45]
 LegendXPos=0.10
 ShowZero=0
-YLabel=$\langle p_T^\text{track} \rangle$ / GeV
+YLabel=$\langle p_T^\mathrm{track} \rangle$ / GeV
 # END PLOT
 
 # BEGIN PLOT /CDF_2010_S8591881_QCD/d14-x01-y01

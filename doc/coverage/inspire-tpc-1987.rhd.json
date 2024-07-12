@@ -1,0 +1,84 @@
+{
+    "233595": [
+        "Observation of scaling of the photon structure function $F_2^\\gamma$ at low $Q^2$", 
+        "TPC/Two Gamma", 
+        "10.1103/PhysRevLett.58.97", 
+        null, 
+        null, 
+        "ins233595", 
+        null, 
+        [
+            "UCD-86-26"
+        ]
+    ], 
+    "235694": [
+        "Pion and kaon multiplicities in heavy quark jets from $e^+e^-$ annihilation at 29-GeV", 
+        "TPC/Two Gamma", 
+        "10.1016/0370-2693(87)90586-7", 
+        null, 
+        null, 
+        "ins235694", 
+        null, 
+        [
+            "JHU-HEP-86-105"
+        ]
+    ], 
+    "235695": [
+        "Measurement of $\\tau$ branching ratios", 
+        "TPC/Two Gamma", 
+        "10.1103/PhysRevD.35.1553", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "JHU-HEP-86-104"
+        ]
+    ], 
+    "236029": [
+        "Comparison of $\\pi^\\pm$, $K^\\pm$ and $p\\bar{p}$ production in the central rapidity region in hadron hadron collisions and in $e^+e^-$ annihilation", 
+        "TPC/Two Gamma", 
+        "10.1016/0370-2693(87)90499-0", 
+        null, 
+        null, 
+        "ins236029", 
+        null, 
+        [
+            "LBL-21544"
+        ]
+    ], 
+    "242454": [
+        "A study of $\\eta^\\prime$ formation in photon-photon collisions", 
+        "TPC/Two Gamma", 
+        "10.1103/PhysRevD.35.2650", 
+        null, 
+        null, 
+        null, 
+        null, 
+        []
+    ], 
+    "246451": [
+        "Experimental limit on the decay $\\tau^- \\to \\tau^-\\nu K^- K^0$", 
+        "TPC/Two Gamma", 
+        "10.1103/PhysRevLett.59.751", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "LBL-23176"
+        ]
+    ], 
+    "246557": [
+        "Exclusive production of $p\\bar{p}$ pairs in two photon collisions at PEP", 
+        "TPC/Two Gamma", 
+        "10.1103/PhysRevD.36.3506", 
+        null, 
+        null, 
+        "ins246557", 
+        null, 
+        [
+            "UCD-87-10"
+        ]
+    ]
+}

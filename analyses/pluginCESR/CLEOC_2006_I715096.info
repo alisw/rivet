@@ -1,0 +1,37 @@
+Name: CLEOC_2006_I715096
+Year: 2006
+Summary: Electron spectrum inclusive semi-leptonic in D decays
+Experiment: CLEOC
+Collider: CESR
+InspireID: 715096
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 97 (2006) 251801
+RunInfo: charm mesons produced at the psi(3770)
+Description:
+  'Measurement of the electron spectrum inclusive semi-leptonic in $D$ decays.
+  N.B. The spectum is obtained in the rest frame of the decaying $\psi(3770)$ which produces the decaying $D$ mesons'
+ValidationInfo:
+  'Herwig 7 events at the psi(3770), using EvtGen for the D decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Adam:2006nu
+BibTeX: '@article{Adam:2006nu,
+      author         = "Adam, N. E. and others",
+      title          = "{Absolute Branching Fraction Measurements for D+ and D0
+                        Inclusive Semileptonic Decays}",
+      collaboration  = "CLEO",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "97",
+      year           = "2006",
+      pages          = "251801",
+      doi            = "10.1103/PhysRevLett.97.251801",
+      eprint         = "hep-ex/0604044",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CLNS-06-1957, CLEO-06-6",
+      SLACcitation   = "%%CITATION = HEP-EX/0604044;%%"
+}'

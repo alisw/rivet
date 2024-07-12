@@ -6,6 +6,7 @@ Collider: Tevatron Run 1
 SpiresID: 3324664
 InspireID: 416886
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Frank Siegert <frank.siegert@cern.ch>
 References:
@@ -13,7 +14,7 @@ References:
  - doi:10.1103/PhysRevLett.77.595
  - arXiv:hep-ex/9603010
 RunInfo:
-  $p \bar{p} \to \,\text{jets}$ at 1800\;\GeV
+  $p \bar{p} \to \,\text{jets}$ at 1800~\GeV
 NumEvents: 10000000
 Beams: [p-, p+]
 Energies: [1800]
@@ -21,7 +22,7 @@ PtCuts: [10]
 Description:
   First measurement of the azimuthal decorrelation between jets with
   pseudorapidity separation up to five units. The data were accumulated using
-  the D0 detector during Tevatron Run 1 at $\sqrt{s} = 1.8\;\TeV$.
+  the D0 detector during Tevatron Run 1 at $\sqrt{s} = 1.8~\TeV$.
   Requires di-jet events with at least one jet above 50 GeV and two jets
   above 20 GeV.
 BibKey: Abachi:1996et
@@ -40,3 +41,7 @@ BibTeX: '@Article{Abachi:1996et,
 }'
 ToDo:
  - So far, this analysis is using the wrong jet algorithm.
+
+ReleaseTests:
+ - $A TVT-Run-I-Jets-2
+

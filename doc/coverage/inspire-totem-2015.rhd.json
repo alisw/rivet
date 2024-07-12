@@ -1,0 +1,26 @@
+{
+    "1328627": [
+        "Measurement of the forward charged particle pseudorapidity density in pp collisions at $\\sqrt{s} = 8$  TeV using a displaced interaction point", 
+        "TOTEM", 
+        "10.1140/epjc/s10052-015-3343-7", 
+        "1954699", 
+        "1411.4963", 
+        "ins1328627", 
+        null, 
+        [
+            "CERN-PH-EP-2014-260"
+        ]
+    ], 
+    "1356731": [
+        "Evidence for non-exponential elastic proton\u2013proton differential cross-section at low |t| and $\\sqrt{s}$=8 TeV by TOTEM", 
+        "TOTEM", 
+        "10.1016/j.nuclphysb.2015.08.010", 
+        "2002559", 
+        "1503.08111", 
+        "ins1356731", 
+        null, 
+        [
+            "CERN-PH-EP-2015-083"
+        ]
+    ]
+}

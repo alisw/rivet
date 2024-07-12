@@ -1,0 +1,351 @@
+{
+    "649345": [
+        "Helicity of the $W$ boson in lepton + jets $t\\bar{t}$ events", 
+        "D0", 
+        "10.1016/j.physletb.2005.04.069", 
+        null, 
+        "hep-ex/0404040", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-04-057-E"
+        ]
+    ], 
+    "657922": [
+        "Search for supersymmetry with gauge-mediated breaking in diphoton events at D0", 
+        "D0", 
+        "10.1103/PhysRevLett.94.041801", 
+        null, 
+        "hep-ex/0408146", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-04-198-E"
+        ]
+    ], 
+    "659398": [
+        "Measurement of dijet azimuthal decorrelations at central rapidities in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.96$ TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.94.221801", 
+        null, 
+        "hep-ex/0409040", 
+        "ins659398", 
+        null, 
+        [
+            "FERMILAB-PUB-04-217-E", 
+            "DAPNIA-04-300"
+        ]
+    ], 
+    "659810": [
+        "Measurement of the $B_s^0$ lifetime in the exclusive decay channel $B_s^0 \\to J/\\psi \\phi$", 
+        "D0", 
+        "10.1103/PhysRevLett.94.042001", 
+        null, 
+        "hep-ex/0409043", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-04-225-E"
+        ]
+    ], 
+    "661926": [
+        "A search for the flavor-changing neutral current decay $B_s^0 \\to \\mu^+ \\mu^-$ in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.96$ TeV with the D\\O\\ detector", 
+        "D0", 
+        "10.1103/PhysRevLett.94.071802", 
+        null, 
+        "hep-ex/0410039", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-04-215-E"
+        ]
+    ], 
+    "662225": [
+        "Measurement of the ratio of $B^+$ and $B^0$ meson lifetimes", 
+        "D0", 
+        "10.1103/PhysRevLett.94.182001", 
+        null, 
+        "hep-ex/0410052", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-04-284-E"
+        ]
+    ], 
+    "662356": [
+        "Measurement of the $\\Lambda_b^0$ lifetime in the decay $\\Lambda_b^0 \\to J/\\psi \\Lambda^0$ with the D\\O\\ detector", 
+        "D0", 
+        "10.1103/PhysRevLett.94.102001", 
+        null, 
+        "hep-ex/0410054", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-04-286-E"
+        ]
+    ], 
+    "662557": [
+        "A Search for $W b\\bar{b}$ and $W H$ Production in $p\\bar{p}$ Collisions at $\\sqrt{s} = 1.96$ TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.94.091802", 
+        null, 
+        "hep-ex/0410062", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-04-288-E"
+        ]
+    ], 
+    "662831": [
+        "A measurement of the ratio of inclusive cross sections $\\sigma(p p \\to Z + b-{\\rm jet})/\\sigma(p p \\to Z + jet)$ at $\\sqrt{s} = 1.96$ TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.94.161801", 
+        null, 
+        "hep-ex/0410078", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-04-297-E"
+        ]
+    ], 
+    "663096": [
+        "Measurement of the top quark mass in all-jet events", 
+        "D0", 
+        "10.1016/j.physletb.2004.11.071", 
+        null, 
+        "hep-ex/0410086", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-04-305-E"
+        ]
+    ], 
+    "665484": [
+        "A Search for anomalous heavy-flavor quark production in association with $W$ bosons", 
+        "D0", 
+        "10.1103/PhysRevLett.94.152002", 
+        null, 
+        "hep-ex/0411084", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-04-359-E"
+        ]
+    ], 
+    "666357": [
+        "First measurement of $\\sigma$ ($p \\bar{p} \\to Z^{)}$ . Br ($Z \\to \\tau \\tau^{)}$ at $\\sqrt{s}$ = 1.96- TeV", 
+        "D0", 
+        "10.1103/PhysRevD.71.072004", 
+        null, 
+        "hep-ex/0412020", 
+        "ins666357", 
+        null, 
+        [
+            "FERMILAB-PUB-04-381-E"
+        ]
+    ], 
+    "666726": [
+        "Search for first-generation scalar leptoquarks in $p \\bar{p}$ collisions at $\\sqrt{s}$ = 1.96-TeV", 
+        "D0", 
+        "10.1103/PhysRevD.71.071104", 
+        null, 
+        "hep-ex/0412029", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-04-389-E"
+        ]
+    ], 
+    "676877": [
+        "Measurement of inclusive differential cross sections for $\\upsilon_{1S}$ production in $p \\bar{p}$ collisions at $\\sqrt{s}$ = 1.96-TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.94.232001", 
+        null, 
+        "hep-ex/0502030", 
+        "ins676877", 
+        null, 
+        [
+            "FERMILAB-PUB-05-020-E"
+        ]
+    ], 
+    "676992": [
+        "Study of $Z \\gamma$ events and limits on anomalous $Z Z \\gamma$ and $Z \\gamma \\gamma$ couplings in $p \\bar{p}$ collisions at $\\sqrt{s}$ = 1.96-TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.95.051802", 
+        null, 
+        "hep-ex/0502036", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-05-023-E"
+        ]
+    ], 
+    "679253": [
+        "Measurement of the $p$ - $\\bar{p} \\to W \\gamma$ + $X$ cross section at $\\sqrt{s}$ = 1.96-TeV and $W W \\gamma$ anomalous coupling limits", 
+        "D0", 
+        "10.1103/PhysRevD.71.091108", 
+        null, 
+        "hep-ex/0503048", 
+        "ins679253", 
+        null, 
+        [
+            "FERMILAB-PUB-05-046-E"
+        ]
+    ], 
+    "680281": [
+        "Search for neutral supersymmetric Higgs bosons in multijet events at $\\sqrt{s}$ = 1.96-TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.95.151801", 
+        null, 
+        "hep-ex/0504018", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-05-058-E"
+        ]
+    ], 
+    "680282": [
+        "Production of WZ events in $p \\bar{p}$ collisions at $\\sqrt{s}$ = 1.96-TeV and limits on anomalous WWZ couplings", 
+        "D0", 
+        "10.1103/PhysRevLett.95.141802", 
+        null, 
+        "hep-ex/0504019", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-05-061-E"
+        ]
+    ], 
+    "680705": [
+        "Search for supersymmetry via associated production of charginos and neutralinos in final states with three leptons", 
+        "D0", 
+        "10.1103/PhysRevLett.95.151805", 
+        null, 
+        "hep-ex/0504032", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-05-075-E"
+        ]
+    ], 
+    "681233": [
+        "Measurement of the $t \\bar{t}$ production cross section in $p \\bar{p}$ collisions at $\\sqrt{s}$ = 1.96 = TeV using kinematic characteristics of lepton + jets events", 
+        "D0", 
+        "10.1016/j.physletb.2005.08.104", 
+        null, 
+        "hep-ex/0504043", 
+        "ins681233", 
+        null, 
+        [
+            "FERMILAB-PUB-05-079-E"
+        ]
+    ], 
+    "681605": [
+        "Measurement of the $t \\bar{t}$ production cross section in $p \\bar{p}$ collisions at $\\sqrt{s}$ = 1.96-TeV using lepton + jets events with lifetime $b^-$ tagging", 
+        "D0", 
+        "10.1016/j.physletb.2005.08.103", 
+        null, 
+        "hep-ex/0504058", 
+        "ins681605", 
+        null, 
+        [
+            "FERMILAB-PUB-05-087-E"
+        ]
+    ], 
+    "682270": [
+        "Search for Randall-Sundrum gravitons in dilepton and diphoton final states", 
+        "D0", 
+        "10.1103/PhysRevLett.95.091801", 
+        null, 
+        "hep-ex/0505018", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-05-126-E-T"
+        ]
+    ], 
+    "682575": [
+        "Search for right-handed $W$ bosons in top quark decay", 
+        "D0", 
+        "10.1103/PhysRevD.72.011104", 
+        null, 
+        "hep-ex/0505031", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-05-187-E"
+        ]
+    ], 
+    "682994": [
+        "Search for single top quark production in $p \\bar{p}$ collisions at $\\sqrt{s}$ = 1.96-TeV", 
+        "D0", 
+        "10.1016/j.physletb.2005.07.027", 
+        null, 
+        "hep-ex/0505063", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-05-207-E"
+        ]
+    ], 
+    "683416": [
+        "Measurement of the $t \\bar{t}$ production cross section in $p \\bar{p}$ collisions at $\\sqrt{s}$ = 1.96-TeV in dilepton final states", 
+        "D0", 
+        "10.1016/j.physletb.2005.08.105", 
+        null, 
+        "hep-ex/0505082", 
+        "ins683416", 
+        null, 
+        [
+            "FERMILAB-PUB-05-217-E"
+        ]
+    ], 
+    "686009": [
+        "Search for large extra spatial dimensions in dimuon production at D0", 
+        "D0", 
+        "10.1103/PhysRevLett.95.161602", 
+        null, 
+        "hep-ex/0506063", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-05-250-E"
+        ]
+    ], 
+    "687099": [
+        "Measurement of semileptonic branching fractions of $B$ mesons to narrow $D^{**}$ states", 
+        "D0", 
+        "10.1103/PhysRevLett.95.171803", 
+        null, 
+        "hep-ex/0507046", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-05-313-E"
+        ]
+    ], 
+    "687783": [
+        "Measurement of the Lifetime Difference in the $B^0_s$ system", 
+        "D0", 
+        "10.1103/PhysRevLett.95.171801", 
+        null, 
+        "hep-ex/0507084", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-05-324-E"
+        ]
+    ], 
+    "1650063": [
+        "Measurement of the $W W$ production cross section in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.96$ TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.100.139901", 
+        null, 
+        "hep-ex/0410066", 
+        "ins1650063", 
+        null, 
+        [
+            "FERMILAB-PUB-04-293-E"
+        ]
+    ]
+}

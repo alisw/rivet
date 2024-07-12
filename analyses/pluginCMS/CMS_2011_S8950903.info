@@ -6,13 +6,14 @@ Collider: LHC
 SpiresID: 8950903
 InspireID: 885663
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Tomo Umer <tomo.umer@cern.ch>
 References:
  - Phys. Rev. Lett. 106 (2011) 122003
  - arXiv:1101.5029 [hep-ex]
 RunInfo:
-   Inclusive QCD at $\sqrt{s} = 7\;\TeV$, $\hat{\pT} (or equivalent) greater than 20 GeV
+   Inclusive QCD at $\sqrt{s} = 7~\TeV$, $\hat{\pT} (or equivalent) greater than 20 GeV
 NumEvents: 100k
 Beams: [p+, p+]
 Energies: [7000]
@@ -35,4 +36,11 @@ BibTeX: '@article{Khachatryan:2011zj,
       eprint         = "1101.5029",
       archivePrefix  = "arXiv",
       primaryClass   = "hep-ex",}'
+
+
+ReleaseTests:
+ - $A LHC-7-Jets-3
+ - $A-2 LHC-7-Jets-4
+ - $A-3 LHC-7-Jets-5
+ - $A-4 LHC-7-Jets-6
 

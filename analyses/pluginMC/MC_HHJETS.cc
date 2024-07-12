@@ -30,20 +30,20 @@ namespace Rivet {
       vfs.addVetoPairId(25);
       declare(FastJets(vfs, FastJets::ANTIKT, 0.4), "Jets");
 
-      _h_HH_mass = bookHisto1D("HH_mass", 250, 240, 4000.0);
-      _h_HH_dR = bookHisto1D("HH_dR", 25, 0.5, 10.0);
-      _h_HH_dPhi = bookHisto1D("HH_dPhi", 64, 0, 3.2);
-      _h_HH_deta= bookHisto1D("HH_deta", 50, -5, 5);
-      _h_H_pT = bookHisto1D("H_pT", 50, 0, 2000.0);
-      _h_HH_pT = bookHisto1D("HH_pT", 200, 0, 2000.0);
-      _h_H_pT1 = bookHisto1D("H_pT1", 200, 0, 2000.0);
-      _h_H_pT2 = bookHisto1D("H_pT2", 200, 0, 2000.0);
-      _h_H_eta = bookHisto1D("H_eta", 50, -5.0, 5.0);
-      _h_H_eta1 = bookHisto1D("H_eta1", 50, -5.0, 5.0);
-      _h_H_eta2 = bookHisto1D("H_eta2", 50, -5.0, 5.0);
-      _h_H_phi = bookHisto1D("H_phi", 25, 0.0, TWOPI);
-      _h_H_jet1_deta = bookHisto1D("H_jet1_deta", 50, -5.0, 5.0);
-      _h_H_jet1_dR = bookHisto1D("H_jet1_dR", 25, 0.5, 7.0);
+      book(_h_HH_mass ,"HH_mass", 250, 240, 4000.0);
+      book(_h_HH_dR ,"HH_dR", 25, 0.5, 10.0);
+      book(_h_HH_dPhi ,"HH_dPhi", 64, 0, 3.2);
+      book(_h_HH_deta,"HH_deta", 50, -5, 5);
+      book(_h_H_pT ,"H_pT", 50, 0, 2000.0);
+      book(_h_HH_pT ,"HH_pT", 200, 0, 2000.0);
+      book(_h_H_pT1 ,"H_pT1", 200, 0, 2000.0);
+      book(_h_H_pT2 ,"H_pT2", 200, 0, 2000.0);
+      book(_h_H_eta ,"H_eta", 50, -5.0, 5.0);
+      book(_h_H_eta1 ,"H_eta1", 50, -5.0, 5.0);
+      book(_h_H_eta2 ,"H_eta2", 50, -5.0, 5.0);
+      book(_h_H_phi ,"H_phi", 25, 0.0, TWOPI);
+      book(_h_H_jet1_deta ,"H_jet1_deta", 50, -5.0, 5.0);
+      book(_h_H_jet1_dR ,"H_jet1_dR", 25, 0.5, 7.0);
 
       MC_JetAnalysis::init();
     }
@@ -57,7 +57,7 @@ namespace Rivet {
       Particles allp = ifs.particlesByPt();
       if (allp.empty()) vetoEvent;
 
-      const double weight = e.weight();
+      const double weight = 1.0;
 
       FourMomentum hmom = allp[0].momentum();
       if (allp.size() > 1) {
@@ -132,6 +132,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(MC_HHJETS);
+  RIVET_DECLARE_PLUGIN(MC_HHJETS);
 
 }

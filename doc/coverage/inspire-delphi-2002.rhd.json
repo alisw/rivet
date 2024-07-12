@@ -1,0 +1,50 @@
+{
+    "526164": [
+        "Charged and identified particles in the hadronic decay of W bosons and in e+ e- ---> q anti-q from 130-GeV to 200-GeV", 
+        "DELPHI", 
+        "10.1007/s100520000528", 
+        "427168", 
+        "hep-ex/0103031", 
+        "ins526164", 
+        null, 
+        [
+            "CERN-EP-2000-023"
+        ]
+    ], 
+    "564487": [
+        "Search for charged Higgs bosons in e+ e- collisions at s**(1/2) = 189-GeV - 202-GeV", 
+        "DELPHI", 
+        "10.1016/S0370-2693(01)01282-5", 
+        "518858", 
+        "hep-ex/0201023", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2001-062"
+        ]
+    ], 
+    "568553": [
+        "Searches for neutral Higgs bosons in e+ e- collisions from s**(1/2) = 191.6-GeV to 201.7-GeV", 
+        "DELPHI", 
+        "10.1007/s100520200895", 
+        "529551", 
+        "hep-ex/0201022", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2001-087"
+        ]
+    ], 
+    "586130": [
+        "Rapidity alignment and p(T) compensation of particle pairs in hadronic Z0 decays", 
+        "DELPHI", 
+        "10.1016/S0370-2693(02)01658-1", 
+        "548867", 
+        "hep-ex/0204038", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2002-023"
+        ]
+    ]
+}

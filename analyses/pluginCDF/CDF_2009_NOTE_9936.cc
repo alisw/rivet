@@ -13,9 +13,7 @@ namespace Rivet {
     //@{
 
     /// Constructor
-    CDF_2009_NOTE_9936()
-      : Analysis("CDF_2009_NOTE_9936")
-    {    }
+    RIVET_DEFAULT_ANALYSIS_CTOR(CDF_2009_NOTE_9936);
 
     //@}
 
@@ -30,9 +28,9 @@ namespace Rivet {
 
       declare(TriggerCDFRun2(), "Trigger");
 
-      declare(ChargedFinalState(-1.0, 1.0, 0.4*GeV), "CFS");
+      declare(ChargedFinalState((Cuts::etaIn(-1.0, 1.0) && Cuts::pT >=  0.4*GeV)), "CFS");
 
-      _hist_nch = bookHisto1D(1, 1, 1);
+      book(_hist_nch ,1, 1, 1);
     }
 
 
@@ -41,12 +39,10 @@ namespace Rivet {
       // MinBias Trigger
       const bool trigger = apply<TriggerCDFRun2>(event, "Trigger").minBiasDecision();
       if (!trigger) vetoEvent;
-      //_sumWPassed += event.weight();
-      const double weight = event.weight();
 
       // Get events charged multiplicity and fill histogram
       const ChargedFinalState& cfs = apply<ChargedFinalState>(event, "CFS");
-      _hist_nch->fill(cfs.size(), weight);
+      _hist_nch->fill(cfs.size());
 
     }
 
@@ -67,6 +63,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CDF_2009_NOTE_9936);
+  RIVET_DECLARE_PLUGIN(CDF_2009_NOTE_9936);
 
 }

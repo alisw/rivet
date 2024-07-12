@@ -1,0 +1,34 @@
+Name: KLOE_2008_I791841
+Year: 2008
+Summary: Cross section for $\pi^+\pi^-2\pi^0$ and $2\pi^0\gamma$ near the $\phi$ mass
+Experiment: KLOE
+Collider: DAPHNE
+InspireID: 791841
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B669 (2008) 223-228, 2008
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+  'Measurement of the cross section for $\pi^+\pi^-2\pi^0$ and $2\pi^0\gamma$ near the $\phi$ mass'
+Keywords: []
+BibKey: Ambrosino:2008gb
+BibTeX: '@article{Ambrosino:2008gb,
+      author         = "Ambrosino, F. and others",
+      title          = "{Study of the process $e^+ e^- \to \omega \pi^0$ in the
+                        $\phi$-meson mass region with the KLOE detector}",
+      collaboration  = "KLOE",
+      journal        = "Phys. Lett.",
+      volume         = "B669",
+      year           = "2008",
+      pages          = "223-228",
+      doi            = "10.1016/j.physletb.2008.09.056",
+      eprint         = "0807.4909",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:0807.4909;%%"
+}'

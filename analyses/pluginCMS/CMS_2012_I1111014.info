@@ -5,13 +5,13 @@ Experiment: CMS
 Collider: LHC
 InspireID: 1111014
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Andreas Hinzmann <andreas.hinzmann@cern.ch>
 References:
- - hep-ex arXiv:1204.3170
+ - arXiv:1204.3170 [hep-ex]
  - inspirehep 1111014
  - http://cms-results.web.cern.ch/cms-results/public-results/publications/QCD-10-029/
-
 RunInfo:
   pp QCD interactions at $\sqrt{s} = 7$ TeV. Data collected by CMS during the year 2010.
 Beams: [p+, p+]

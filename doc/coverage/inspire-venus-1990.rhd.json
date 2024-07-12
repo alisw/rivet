@@ -1,0 +1,77 @@
+{
+    "283773": [
+        "Search for {SUSY} Partners of Charged Leptons in $e^+ e^-$ Collisions With $\\sqrt{s}$ Up to 60.8-{GeV}", 
+        "VENUS", 
+        "10.1016/0370-2693(90)92029-I", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-89-123", 
+            "HUPD-8913", 
+            "OULNS-89-08", 
+            "KOBE-HEP-89-08", 
+            "KUNS-986", 
+            "TMUP-HEL-89-30"
+        ]
+    ], 
+    "283774": [
+        "Measurement of R and Search for New Quark Flavors Decaying Into Multi - Jet Final States in $e^+ e^-$ Collisions Between 54-{GeV} and 61.4-{GeV} c.m. Energies", 
+        "VENUS", 
+        "10.1016/0370-2693(90)91946-9", 
+        null, 
+        null, 
+        "ins283774", 
+        null, 
+        [
+            "KEK-PREPRINT-89-135", 
+            "HUPD-8916", 
+            "KOBE-HEP-89-09", 
+            "KUNS-990", 
+            "OULNS-89-10", 
+            "TMUP-HEL-89-31"
+        ]
+    ], 
+    "294672": [
+        "Measurement of the Reactions $e^+ e^- \\to \\mu^+ \\mu^-$ and $e^+ e^- \\to \\tau^+ \\tau^-$ Between $\\sqrt{s}=50$-{GeV} and 60.8-{GeV}", 
+        "VENUS", 
+        "10.1007/BF01565601", 
+        null, 
+        null, 
+        "ins294672", 
+        null, 
+        [
+            "KEK-Preprint-89-192"
+        ]
+    ], 
+    "296392": [
+        "Experimental limits on extra $Z$ bosons from $e^{+} e^{-}$ annihilation data with the VENUS detector at $\\sqrt{s}$ = 50-GeV to approximately 64-GeV", 
+        "VENUS", 
+        "10.1016/0370-2693(90)91348-F", 
+        null, 
+        null, 
+        "ins296392", 
+        null, 
+        [
+            "KEK-PREPRINT-90-34"
+        ]
+    ], 
+    "296684": [
+        "Determination of the QCD scale parameter Lambda (ms) with QCD cascade on the basis of the next-to-leading logarithmic approximation", 
+        "VENUS", 
+        "10.1016/0370-2693(90)90440-H", 
+        null, 
+        null, 
+        "ins296684", 
+        null, 
+        [
+            "KEK-PREPRINT-90-4", 
+            "HUPD-9004", 
+            "KOBE-HEP-90-01", 
+            "KUNS-1005", 
+            "OULNS-89-13", 
+            "TMUP-HEP-90-10"
+        ]
+    ]
+}

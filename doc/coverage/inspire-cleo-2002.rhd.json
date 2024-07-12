@@ -1,0 +1,327 @@
+{
+    "552245": [
+        "A Search for charmless B ---> V V decays", 
+        "CLEO", 
+        "10.1103/PhysRevLett.88.021802", 
+        null, 
+        "hep-ex/0101029", 
+        null, 
+        null, 
+        [
+            "CLNS-00-1705", 
+            "CLEO-00-26"
+        ]
+    ], 
+    "554458": [
+        "Search for $B^0 \\to \\pi^0 \\pi^0$ decay", 
+        "CLEO", 
+        "10.1103/PhysRevD.65.031103", 
+        null, 
+        "hep-ex/0103040", 
+        null, 
+        null, 
+        [
+            "CLNS-01-1718", 
+            "CLEO-01-02"
+        ]
+    ], 
+    "557084": [
+        "First observation of anti-B0 ---> D*0 pi+ pi+ pi- pi- decays", 
+        "CLEO", 
+        "10.1103/PhysRevD.65.012002", 
+        null, 
+        "hep-ex/0105071", 
+        null, 
+        null, 
+        [
+            "CLNS-01-1735", 
+            "CLEO-01-09"
+        ]
+    ], 
+    "561965": [
+        "First measurement of Gamma(D*+) and precision measurement of m(D*+) - m(D0)", 
+        "CLEO", 
+        "10.1103/PhysRevD.65.032003", 
+        null, 
+        "hep-ex/0108043", 
+        null, 
+        null, 
+        [
+            "CLNS-01-1741", 
+            "CLEO-01-13"
+        ]
+    ], 
+    "564819": [
+        "Observation of anti-B0 ---> D0 pi0 and anti-B0 ---> D*0 pi0", 
+        "CLEO", 
+        "10.1103/PhysRevLett.88.062001", 
+        null, 
+        "hep-ex/0110055", 
+        null, 
+        null, 
+        [
+            "CLNS-01-1755", 
+            "CLEO-01-18"
+        ]
+    ], 
+    "564821": [
+        "Measurement of the Xi+(c) lifetime", 
+        "CLEO", 
+        "10.1103/PhysRevD.65.031102", 
+        null, 
+        "hep-ex/0110058", 
+        null, 
+        null, 
+        [
+            "CLNS-01-1761", 
+            "CLEO-01-20"
+        ]
+    ], 
+    "565147": [
+        "Measurement of the masses and widths of the Sigma++(c) and Sigma0(c) charmed baryons", 
+        "CLEO", 
+        "10.1103/PhysRevD.65.071101", 
+        null, 
+        "hep-ex/0110071", 
+        null, 
+        null, 
+        [
+            "CLNS-01-1759", 
+            "CLEO-01-19"
+        ]
+    ], 
+    "565839": [
+        "Lifetime differences, direct CP violation and partial widths in D0 meson decays to K+ K- and pi+ pi-", 
+        "CLEO", 
+        "10.1103/PhysRevD.65.092001", 
+        null, 
+        "hep-ex/0111024", 
+        null, 
+        null, 
+        [
+            "CLNS-01-1763", 
+            "CLEO-01-21"
+        ]
+    ], 
+    "567473": [
+        "Search for CP violation in tau ---> K pi tau-neutrino decays", 
+        "CLEO", 
+        "10.1103/PhysRevLett.88.111803", 
+        null, 
+        "hep-ex/0111095", 
+        null, 
+        null, 
+        [
+            "CLNS-01-1766", 
+            "CLEO-01-22"
+        ]
+    ], 
+    "568809": [
+        "Observation of exclusive anti-B ---> D(*) K*- decays", 
+        "CLEO", 
+        "10.1103/PhysRevLett.88.101803", 
+        null, 
+        "hep-ex/0112033", 
+        null, 
+        null, 
+        [
+            "CLNS-01-1772", 
+            "CLEO-01-25"
+        ]
+    ], 
+    "581380": [
+        "Further experimental studies of two-body radiative Upsilon decays", 
+        "CLEO", 
+        "10.1103/PhysRevD.65.072002", 
+        null, 
+        "hep-ex/0201005", 
+        null, 
+        null, 
+        [
+            "CLNS-01-1769", 
+            "CLEO-01-24"
+        ]
+    ], 
+    "582690": [
+        "Improved measurement of |V(ub)| with inclusive semileptonic B decays", 
+        "CLEO", 
+        "10.1103/PhysRevLett.88.231803", 
+        null, 
+        "hep-ex/0202019", 
+        null, 
+        null, 
+        [
+            "CLNS-01-1767", 
+            "CLEO-01-23"
+        ]
+    ], 
+    "582991": [
+        "Measurement of the ratio of branching fractions of the Upsilon(4S) to charged and neutral B mesons", 
+        "CLEO", 
+        "10.1103/PhysRevD.66.052003", 
+        null, 
+        "hep-ex/0202033", 
+        null, 
+        null, 
+        [
+            "CLNS-02-1775", 
+            "CLEO-02-01"
+        ]
+    ], 
+    "584267": [
+        "Measurement of the D+ ---> anti-K*0 l+ letpon-neutrino branching fraction", 
+        "CLEO", 
+        "10.1103/PhysRevLett.89.222001", 
+        null, 
+        "hep-ex/0203030", 
+        null, 
+        null, 
+        [
+            "CLNS-02-1776", 
+            "CLEO-02-02"
+        ]
+    ], 
+    "584269": [
+        "Improved measurement of |V(cb)| using anti-B ---> D* l nu decays", 
+        "CLEO", 
+        "10.1103/PhysRevLett.89.081803", 
+        null, 
+        "hep-ex/0203032", 
+        null, 
+        null, 
+        [
+            "CLNS-01-1773", 
+            "CLEO-01-26"
+        ]
+    ], 
+    "585321": [
+        "Search for lepton flavor violating decays of $B$ mesons", 
+        "CLEO", 
+        "10.1103/PhysRevD.65.111102", 
+        null, 
+        "hep-ex/0204017", 
+        null, 
+        null, 
+        [
+            "CLNS-02-1781", 
+            "CLEO-02-4"
+        ]
+    ], 
+    "585370": [
+        "Anti-search for the glueball candidate f(J)(2220) in two -photon interactions", 
+        "CLEO", 
+        "10.1103/PhysRevD.66.077101", 
+        null, 
+        "hep-ex/0204019", 
+        null, 
+        null, 
+        [
+            "CLNS-02-1780", 
+            "CLEO-02-03"
+        ]
+    ], 
+    "587300": [
+        "Correlated inclusive Lambda anti-Lambda production in e+ e- annihilations at s**(1/2) approximately 10.5-GeV", 
+        "CLEO", 
+        "10.1103/PhysRevD.66.052002", 
+        null, 
+        "hep-ex/0205085", 
+        null, 
+        null, 
+        [
+            "CLNS-02-1787", 
+            "CLEO-02-07"
+        ]
+    ], 
+    "588107": [
+        "Observation of B --> K0(S) pi+ pi- and evidence for B --> K*+- pi-+", 
+        "CLEO", 
+        "10.1103/PhysRevLett.89.251801", 
+        null, 
+        "hep-ex/0206024", 
+        null, 
+        null, 
+        [
+            "CLNS-02-1789", 
+            "CLEO-02-9"
+        ]
+    ], 
+    "588319": [
+        "Measurement of B(B- ---> D0 pi-) and B(anti-B0 ---> D+ pi-) and isospin analysis of B ---> D pi decays", 
+        "CLEO", 
+        "10.1103/PhysRevD.66.031101", 
+        null, 
+        "hep-ex/0206030", 
+        null, 
+        null, 
+        [
+            "CLNS-02-1788", 
+            "CLEO-02-8"
+        ]
+    ], 
+    "591237": [
+        "Dalitz analysis of D0 ---> K0(S) pi+ pi-", 
+        "CLEO", 
+        "10.1103/PhysRevLett.89.251802", 
+        null, 
+        "hep-ex/0207067", 
+        null, 
+        null, 
+        [
+            "CLNS-02-1792", 
+            "CLEO-02-10"
+        ]
+    ], 
+    "591320": [
+        "Observation of the decay Omega0(c) ---> Omega- e+ nu(e)", 
+        "CLEO", 
+        "10.1103/PhysRevLett.89.171803", 
+        null, 
+        "hep-ex/0207078", 
+        null, 
+        null, 
+        [
+            "CLNS-02-1782", 
+            "CLEO-02-05"
+        ]
+    ], 
+    "592036": [
+        "Measurement of exclusive B decays to final states containing a charmed baryon", 
+        "CLEO", 
+        "10.1103/PhysRevD.66.091101", 
+        null, 
+        "hep-ex/0208006", 
+        null, 
+        null, 
+        [
+            "CLNS-02-1793", 
+            "CLEO-02-11"
+        ]
+    ], 
+    "592717": [
+        "Search for neutrinoless tau decays involving the K0(S) meson", 
+        "CLEO", 
+        "10.1103/PhysRevD.66.071101", 
+        null, 
+        "hep-ex/0208019", 
+        null, 
+        null, 
+        [
+            "CLNS-02-1795", 
+            "CLEO-02-12"
+        ]
+    ], 
+    "606309": [
+        "Measurements of inclusive $B \\to \\psi$ production", 
+        "CLEO", 
+        "10.1103/PhysRevLett.89.282001", 
+        null, 
+        "hep-ex/0207059", 
+        null, 
+        null, 
+        [
+            "CLNS-02-1785", 
+            "CLEO-02-06"
+        ]
+    ]
+}

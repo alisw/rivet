@@ -1,0 +1,35 @@
+Name: OPAL_2001_I536266
+Year: 2001
+Summary: Charged particle multiplicities for u, d, s events at the Z pole
+Experiment: OPAL
+Collider: LEP
+InspireID: 536266
+Status: VALIDATED
+Authors:
+ - Peter Richardson <Peter.Richardson@durham.ac.uk>
+References:
+ - Eur.Phys.J. C19 (2001) 257-268
+RunInfo:
+  Hadronic Z decay events at the Z pole
+NumEvents: 1000000
+Beams: [e+, e-]
+Energies: [91.2]
+Description: Measurements of the mean charged multiplicities separately for $d\bar d$,
+  $u\bar u$ and $s\bar s$ initiated events in $e^+e^-$ interactions at the $Z^0$ mass.
+BibKey: Abbiendi:2000ka
+BibTeX: '@article{Abbiendi:2000ka,
+      author         = "Abbiendi, G. and others",
+      title          = "{Charged multiplicities in Z decays into u, d, and s
+                        quarks}",
+      collaboration  = "OPAL",
+      journal        = "Eur. Phys. J.",
+      volume         = "C19",
+      year           = "2001",
+      pages          = "257-268",
+      doi            = "10.1007/s100520100611",
+      eprint         = "hep-ex/0011022",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-EP-2000-128",
+      SLACcitation   = "%%CITATION = HEP-EX/0011022;%%"
+}'

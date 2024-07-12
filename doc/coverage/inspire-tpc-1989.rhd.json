@@ -1,0 +1,26 @@
+{
+    "277625": [
+        "Evidence of soft and collinear gluon emission in $e^+e^-$ hadronic events", 
+        "TPC/Two Gamma", 
+        "10.1007/BF01415549", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "UT-HE-89-02"
+        ]
+    ], 
+    "279349": [
+        "Exclusive production of $p\\bar{p}\\pi^+\\pi^-$ in photon-photon collisions", 
+        "TPC/Two Gamma", 
+        "10.1103/PhysRevD.40.2772", 
+        null, 
+        null, 
+        "ins279349", 
+        null, 
+        [
+            "NIKHEF-H-89-9"
+        ]
+    ]
+}

@@ -4,6 +4,7 @@ Summary: Measurement of the inelastic proton-proton cross section at 13 TeV
 Experiment: CMS
 Collider: LHC
 InspireID: 1653948
+Reentrant: true
 Status: VALIDATED
 Authors:
  - cms-pag-conveners-smp@cern.ch

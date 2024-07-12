@@ -9,38 +9,34 @@ namespace Rivet {
 
 
   /// @brief OPAL strange baryon paper
+  ///
   /// @author Peter Richardson
   class OPAL_1997_S3396100 : public Analysis {
   public:
 
-    /// Constructor
-    OPAL_1997_S3396100()
-      : Analysis("OPAL_1997_S3396100"),
-        _weightedTotalNumLambda(0.)     ,_weightedTotalNumXiMinus(0.),
-        _weightedTotalNumSigma1385Plus(0.),_weightedTotalNumSigma1385Minus(0.),
-        _weightedTotalNumXi1530(0.)   ,_weightedTotalNumLambda1520(0.)
-    {}
+    RIVET_DEFAULT_ANALYSIS_CTOR(OPAL_1997_S3396100);
 
 
     /// @name Analysis methods
-    //@{
+    /// @{
 
     void init() {
       declare(Beam(), "Beams");
       declare(ChargedFinalState(), "FS");
       declare(UnstableParticles(), "UFS");
-      _histXpLambda         = bookHisto1D( 1, 1, 1);
-      _histXiLambda         = bookHisto1D( 2, 1, 1);
-      _histXpXiMinus        = bookHisto1D( 3, 1, 1);
-      _histXiXiMinus        = bookHisto1D( 4, 1, 1);
-      _histXpSigma1385Plus  = bookHisto1D( 5, 1, 1);
-      _histXiSigma1385Plus  = bookHisto1D( 6, 1, 1);
-      _histXpSigma1385Minus = bookHisto1D( 7, 1, 1);
-      _histXiSigma1385Minus = bookHisto1D( 8, 1, 1);
-      _histXpXi1530         = bookHisto1D( 9, 1, 1);
-      _histXiXi1530         = bookHisto1D(10, 1, 1);
-      _histXpLambda1520     = bookHisto1D(11, 1, 1);
-      _histXiLambda1520     = bookHisto1D(12, 1, 1);
+
+      book(_histXpLambda         , 1, 1, 1);
+      book(_histXiLambda         , 2, 1, 1);
+      book(_histXpXiMinus        , 3, 1, 1);
+      book(_histXiXiMinus        , 4, 1, 1);
+      book(_histXpSigma1385Plus  , 5, 1, 1);
+      book(_histXiSigma1385Plus  , 6, 1, 1);
+      book(_histXpSigma1385Minus , 7, 1, 1);
+      book(_histXiSigma1385Minus , 8, 1, 1);
+      book(_histXpXi1530         , 9, 1, 1);
+      book(_histXiXi1530         ,10, 1, 1);
+      book(_histXpLambda1520     ,11, 1, 1);
+      book(_histXiLambda1520     ,12, 1, 1);
     }
 
 
@@ -56,9 +52,6 @@ namespace Rivet {
       }
       MSG_DEBUG("Passed leptonic event cut");
 
-      // Get event weight for histo filling
-      const double weight = e.weight();
-
       // Get beams and average beam momentum
       const ParticlePair& beams = apply<Beam>(e, "Beams").beams();
       const double meanBeamMom = ( beams.first.p3().mod() +
@@ -66,42 +59,40 @@ namespace Rivet {
       MSG_DEBUG("Avg beam momentum = " << meanBeamMom);
 
       // Final state of unstable particles to get particle spectra
-      const UnstableParticles& ufs = apply<UnstableFinalState>(e, "UFS");
+      const UnstableParticles& ufs = apply<UnstableParticles>(e, "UFS");
 
-      foreach (const Particle& p, ufs.particles()) {
+      for (const Particle& p : ufs.particles()) {
         const int id = p.abspid();
-        double xp = p.p3().mod()/meanBeamMom;
-        double xi = -log(xp);
+        if (!inRange(id, 3000, 3999)) continue;
+
+        const double xE = p.E()/meanBeamMom;
+        const double xp = p.p3().mod()/(2*meanBeamMom);
+        const double xi = -log(xp);
+
         switch (id) {
         case 3312:
-          _histXpXiMinus->fill(xp, weight);
-          _histXiXiMinus->fill(xi, weight);
-          _weightedTotalNumXiMinus += weight;
+          _histXpXiMinus->fill(xE);
+          _histXiXiMinus->fill(xi);
           break;
         case 3224:
-          _histXpSigma1385Plus->fill(xp, weight);
-          _histXiSigma1385Plus->fill(xi, weight);
-          _weightedTotalNumSigma1385Plus += weight;
+          _histXpSigma1385Plus->fill(xE);
+          _histXiSigma1385Plus->fill(xi);
           break;
         case 3114:
-          _histXpSigma1385Minus->fill(xp, weight);
-          _histXiSigma1385Minus->fill(xi, weight);
-          _weightedTotalNumSigma1385Minus += weight;
+          _histXpSigma1385Minus->fill(xE);
+          _histXiSigma1385Minus->fill(xi);
           break;
         case 3122:
-          _histXpLambda->fill(xp, weight);
-          _histXiLambda->fill(xi, weight);
-          _weightedTotalNumLambda += weight;
+          _histXpLambda->fill(xE);
+          _histXiLambda->fill(xi);
           break;
         case 3324:
-          _histXpXi1530->fill(xp, weight);
-          _histXiXi1530->fill(xi, weight);
-          _weightedTotalNumXi1530 += weight;
+          _histXpXi1530->fill(xE);
+          _histXiXi1530->fill(xi);
           break;
         case 3124:
-          _histXpLambda1520->fill(xp, weight);
-          _histXiLambda1520->fill(xi, weight);
-          _weightedTotalNumLambda1520 += weight;
+          _histXpLambda1520->fill(xE);
+          _histXiLambda1520->fill(xi);
           break;
         }
       }
@@ -110,54 +101,46 @@ namespace Rivet {
 
     /// Finalize
     void finalize() {
-      normalize(_histXpLambda        , _weightedTotalNumLambda       /sumOfWeights());
-      normalize(_histXiLambda        , _weightedTotalNumLambda       /sumOfWeights());
-      normalize(_histXpXiMinus       , _weightedTotalNumXiMinus      /sumOfWeights());
-      normalize(_histXiXiMinus       , _weightedTotalNumXiMinus      /sumOfWeights());
-      normalize(_histXpSigma1385Plus , _weightedTotalNumSigma1385Plus/sumOfWeights());
-      normalize(_histXiSigma1385Plus , _weightedTotalNumSigma1385Plus/sumOfWeights());
-      normalize(_histXpSigma1385Minus, _weightedTotalNumSigma1385Plus/sumOfWeights());
-      normalize(_histXiSigma1385Minus, _weightedTotalNumSigma1385Plus/sumOfWeights());
-      normalize(_histXpXi1530        , _weightedTotalNumXi1530       /sumOfWeights());
-      normalize(_histXiXi1530        , _weightedTotalNumXi1530       /sumOfWeights());
-      normalize(_histXpLambda1520    , _weightedTotalNumLambda1520   /sumOfWeights());
-      normalize(_histXiLambda1520    , _weightedTotalNumLambda1520   /sumOfWeights());
+      double fact=1./sumOfWeights();
+      scale(_histXpLambda        , fact);
+      scale(_histXiLambda        , fact);
+      scale(_histXpXiMinus       , fact);
+      scale(_histXiXiMinus       , fact);
+      scale(_histXpSigma1385Plus , fact);
+      scale(_histXiSigma1385Plus , fact);
+      scale(_histXpSigma1385Minus, fact);
+      scale(_histXiSigma1385Minus, fact);
+      scale(_histXpXi1530        , fact);
+      scale(_histXiXi1530        , fact);
+      scale(_histXpLambda1520    , fact);
+      scale(_histXiLambda1520    , fact);
     }
 
-    //@}
+    /// @}
 
 
   private:
 
-    /// Store the weighted sums of numbers of charged / charged+neutral
-    /// particles - used to calculate average number of particles for the
-    /// inclusive single particle distributions' normalisations.
-    double _weightedTotalNumLambda;
-    double _weightedTotalNumXiMinus;
-    double _weightedTotalNumSigma1385Plus;
-    double _weightedTotalNumSigma1385Minus;
-    double _weightedTotalNumXi1530;
-    double _weightedTotalNumLambda1520;
-
-    Histo1DPtr _histXpLambda        ;
-    Histo1DPtr _histXiLambda        ;
-    Histo1DPtr _histXpXiMinus       ;
-    Histo1DPtr _histXiXiMinus       ;
-    Histo1DPtr _histXpSigma1385Plus ;
-    Histo1DPtr _histXiSigma1385Plus ;
+    /// @name Histograms
+    /// @{
+    Histo1DPtr _histXpLambda;
+    Histo1DPtr _histXiLambda;
+    Histo1DPtr _histXpXiMinus;
+    Histo1DPtr _histXiXiMinus;
+    Histo1DPtr _histXpSigma1385Plus;
+    Histo1DPtr _histXiSigma1385Plus;
     Histo1DPtr _histXpSigma1385Minus;
     Histo1DPtr _histXiSigma1385Minus;
-    Histo1DPtr _histXpXi1530        ;
-    Histo1DPtr _histXiXi1530        ;
-    Histo1DPtr _histXpLambda1520    ;
-    Histo1DPtr _histXiLambda1520    ;
-    //@}
+    Histo1DPtr _histXpXi1530;
+    Histo1DPtr _histXiXi1530;
+    Histo1DPtr _histXpLambda1520;
+    Histo1DPtr _histXiLambda1520;
+    /// @}
 
   };
 
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(OPAL_1997_S3396100);
+  RIVET_DECLARE_ALIASED_PLUGIN(OPAL_1997_S3396100, OPAL_1997_I421978);
 
 }

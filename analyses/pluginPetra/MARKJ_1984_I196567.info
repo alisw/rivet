@@ -1,0 +1,32 @@
+Name: MARKJ_1984_I196567
+Year: 1984
+Summary: Measurement of $R$ between 12 and 42.63 GeV
+Experiment: MARKJ
+Collider: PETRA
+InspireID: 196567
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rept. 109 (1984) 131, 1984 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: yes
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$ in $e^+e^-$ collisions by MARKJ between 42.63 GeV.
+   The individual hadronic and muonic cross sections are also outputted to the yoda file
+   so that ratio $R$ can be recalculated if runs are combined.'
+BibKey: Adeva:1983iu
+BibTeX: '@article{Adeva:1983iu,
+      author         = "Adeva, B. and others",
+      title          = "{A Summary of Recent Experimental Results From Mark-$J$:
+                        High-energy $e^+ e^-$ Collisions at {PETRA}}",
+      collaboration  = "Mark-J",
+      journal        = "Phys. Rept.",
+      volume         = "109",
+      year           = "1984",
+      pages          = "131",
+      doi            = "10.1016/0370-1573(84)90124-8",
+      reportNumber   = "MIT-LNS-131",
+      SLACcitation   = "%%CITATION = PRPLC,109,131;%%"
+}'

@@ -10,7 +10,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2015_I1386475);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2015_I1386475);
  /// Book histograms and initialise projections before the run
   void init() {
 
@@ -28,14 +28,13 @@ namespace Rivet {
     // The centrality bins' upper edges.
     centralityBins = {90., 60., 40., 30., 20., 10., 5., 1.};
     for (int i = 0; i < 8; ++i) {
-      histEta[centralityBins[i]] = bookHisto1D(2, 1, i + 1);
-      sow[centralityBins[i]] = 0.;
+      book(histEta[centralityBins[i]], 2, 1, i + 1);
+      book(sow[centralityBins[i]], "_sow"+to_string(i) + "Counter");
     }
   }
 
   /// Perform the per-event analysis
   void analyze(const Event& event) {
-    const double weight = event.weight();
     
     // Apply event triggers.
     if ( !apply<ATLAS::MinBiasTrigger>(event, "Trigger")() ) vetoEvent;
@@ -50,9 +49,9 @@ namespace Rivet {
     // Find the correct sow.
     auto sItr = sow.upper_bound(c);
     if (sItr == sow.end()) return;
-    sItr->second += weight;
+    sItr->second->fill();
     for ( const auto &p : apply<ChargedFinalState>(event,"CFS").particles() )
-      hItr->second->fill(p.eta(), weight);
+      hItr->second->fill(p.eta());
   }
     
   /// Finalize
@@ -61,7 +60,7 @@ namespace Rivet {
     // Scale by the inverse sum of event weights in each centrality
     // bin.
     for (int i = 0; i < 8; ++i)
-      histEta[centralityBins[i]]->scaleW(1./sow[centralityBins[i]]);
+      histEta[centralityBins[i]]->scaleW(1./sow[centralityBins[i]]->sumW());
 
   }
 
@@ -70,7 +69,7 @@ private:
   /// The histograms binned in centrality.
   vector<double> centralityBins;
   map<double,Histo1DPtr> histEta;
-  map<double, double> sow;
+  map<double, CounterPtr> sow;
 
 
 
@@ -80,7 +79,7 @@ private:
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2015_I1386475);
+  RIVET_DECLARE_PLUGIN(ATLAS_2015_I1386475);
 
 
 }

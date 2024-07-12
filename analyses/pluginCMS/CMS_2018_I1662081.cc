@@ -49,28 +49,27 @@ namespace Rivet {
       declare(MissingMomentum(fs), "MET");
 
       // Booking of histograms
-      _hist_norm_met = bookHisto1D(4, 1, 1);
-      _hist_norm_ht  = bookHisto1D(2, 1, 1);
-      _hist_norm_st  = bookHisto1D(3, 1, 1);
-      _hist_norm_wpt = bookHisto1D(5, 1, 1);
-      _hist_norm_njets = bookHisto1D(1, 1, 1);
-      _hist_norm_lpt = bookHisto1D(6, 1, 1);
-      _hist_norm_labseta = bookHisto1D(7, 1, 1);
+      book(_hist_norm_met , 4, 1, 1);
+      book(_hist_norm_ht  , 2, 1, 1);
+      book(_hist_norm_st  , 3, 1, 1);
+      book(_hist_norm_wpt , 5, 1, 1);
+      book(_hist_norm_njets , 1, 1, 1);
+      book(_hist_norm_lpt , 6, 1, 1);
+      book(_hist_norm_labseta , 7, 1, 1);
 
-      _hist_abs_met = bookHisto1D(11, 1, 1);
-      _hist_abs_ht  = bookHisto1D(9, 1, 1);
-      _hist_abs_st  = bookHisto1D(10, 1, 1);
-      _hist_abs_wpt = bookHisto1D(12, 1, 1);
-      _hist_abs_njets = bookHisto1D(8, 1, 1);
-      _hist_abs_lpt = bookHisto1D(13, 1, 1);
-      _hist_abs_labseta = bookHisto1D(14, 1, 1);
+      book(_hist_abs_met , 11, 1, 1);
+      book(_hist_abs_ht  , 9, 1, 1);
+      book(_hist_abs_st  , 10, 1, 1);
+      book(_hist_abs_wpt , 12, 1, 1);
+      book(_hist_abs_njets , 8, 1, 1);
+      book(_hist_abs_lpt , 13, 1, 1);
+      book(_hist_abs_labseta , 14, 1, 1);
 
     }
 
 
     // per event analysis
     void analyze(const Event& event) {
-      const double weight = event.weight();
 
       // Lepton veto selection
       const DressedLeptons& dressed_leptons = applyProjection<DressedLeptons>(event, "DressedLeptons");
@@ -107,34 +106,34 @@ namespace Rivet {
 
       // MET
       const MissingMomentum& met = applyProjection<MissingMomentum>(event, "MET");
-      _hist_norm_met->fill(met.visibleMomentum().pT()/GeV, weight);
-      _hist_abs_met->fill(met.visibleMomentum().pT()/GeV, weight);
+      _hist_norm_met->fill(met.visibleMomentum().pT()/GeV);
+      _hist_abs_met->fill(met.visibleMomentum().pT()/GeV);
 
       // HT and ST
       double ht = 0.0;
       for (const Jet& j : cleanedJets) ht += j.pT();
 
       double st = ht + lepton.pT() + met.visibleMomentum().pT();
-      _hist_norm_ht->fill(ht/GeV, weight);
-      _hist_norm_st->fill(st/GeV, weight);
-      _hist_abs_ht->fill(ht/GeV, weight);
-      _hist_abs_st->fill(st/GeV, weight);
+      _hist_norm_ht->fill(ht/GeV);
+      _hist_norm_st->fill(st/GeV);
+      _hist_abs_ht->fill(ht/GeV);
+      _hist_abs_st->fill(st/GeV);
 
       // WPT
       FourMomentum w = lepton - met.visibleMomentum();
-      _hist_norm_wpt->fill(w.pT()/GeV, weight);
-      _hist_abs_wpt->fill(w.pT()/GeV, weight);
+      _hist_norm_wpt->fill(w.pT()/GeV);
+      _hist_abs_wpt->fill(w.pT()/GeV);
 
       // Lepton pt and eta
-      _hist_norm_lpt->fill( leptonPt/GeV, weight);
-      _hist_norm_labseta->fill( leptonAbsEta/GeV, weight);
+      _hist_norm_lpt->fill( leptonPt/GeV);
+      _hist_norm_labseta->fill( leptonAbsEta/GeV);
 
-      _hist_abs_lpt->fill( leptonPt/GeV, weight);
-      _hist_abs_labseta->fill( leptonAbsEta/GeV, weight);
+      _hist_abs_lpt->fill( leptonPt/GeV);
+      _hist_abs_labseta->fill( leptonAbsEta/GeV);
 
       // NJets
-      _hist_norm_njets->fill( cleanedJets.size(), weight );
-      _hist_abs_njets->fill( cleanedJets.size(), weight );
+      _hist_norm_njets->fill( cleanedJets.size());
+      _hist_abs_njets->fill( cleanedJets.size());
 
     }
 
@@ -166,6 +165,6 @@ namespace Rivet {
   };
 
 
-  DECLARE_RIVET_PLUGIN(CMS_2018_I1662081);
+  RIVET_DECLARE_PLUGIN(CMS_2018_I1662081);
 
 }

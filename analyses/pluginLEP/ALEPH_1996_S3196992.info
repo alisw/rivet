@@ -39,3 +39,7 @@ BibTeX: '@Article{Buskulic:1995au,
      doi       = "10.1007/s002880050037",
      SLACcitation  = "%%CITATION = ZEPYA,C69,365;%%"
 }'
+
+ReleaseTests:
+ - $A LEP-91-nopi
+

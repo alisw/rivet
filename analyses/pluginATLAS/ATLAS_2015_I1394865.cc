@@ -1,16 +1,9 @@
 // -*- C++ -*-
 #include "Rivet/Analysis.hh"
-#include "Rivet/Projections/FastJets.hh"
 #include "Rivet/Projections/FinalState.hh"
 #include "Rivet/Projections/IdentifiedFinalState.hh"
-#include "Rivet/Projections/WFinder.hh"
-#include "Rivet/Projections/LeadingParticlesFinalState.hh"
-#include "Rivet/Projections/UnstableParticles.hh"
-#include "Rivet/Projections/VetoedFinalState.hh"
+#include "Rivet/Projections/PromptFinalState.hh"
 #include "Rivet/Projections/DressedLeptons.hh"
-#include "Rivet/Projections/MergedFinalState.hh"
-#include "Rivet/Projections/MissingMomentum.hh"
-#include "Rivet/Projections/InvMassFinalState.hh"
 
 namespace Rivet {
 
@@ -20,15 +13,16 @@ namespace Rivet {
   public:
 
     /// Default constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2015_I1394865);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2015_I1394865);
 
 
     void init() {
       FinalState fs(Cuts::abseta < 5.0);
+      PromptFinalState pfs(Cuts::abseta < 5.0);
 
       IdentifiedFinalState photon(fs, PID::PHOTON);
-      IdentifiedFinalState bare_EL(fs, {PID::ELECTRON, -PID::ELECTRON});
-      IdentifiedFinalState bare_MU(fs, {PID::MUON, -PID::MUON});
+      IdentifiedFinalState bare_EL(pfs, {PID::ELECTRON, -PID::ELECTRON});
+      IdentifiedFinalState bare_MU(pfs, {PID::MUON, -PID::MUON});
 
       // Selection 1: ZZ-> llll selection
       Cut etaranges_el = Cuts::abseta < 2.5 && Cuts::pT > 7*GeV;
@@ -41,15 +35,13 @@ namespace Rivet {
 
 
       // Both ZZ on-shell histos
-      _h_ZZ_mZZ  = bookHisto1D(1, 1, 1);
-      _h_ZZ_pTZZ = bookHisto1D(2, 1, 1);
+      book(_h_ZZ_mZZ , 1, 1, 1);
+      book(_h_ZZ_pTZZ, 2, 1, 1);
     }
 
 
     /// Do the analysis
     void analyze(const Event& e) {
-      const double weight = e.weight();
-
       ////////////////////////////////////////////////////////////////////
       // Preselection of leptons for ZZ-> llll final state
       ////////////////////////////////////////////////////////////////////
@@ -131,14 +123,14 @@ namespace Rivet {
       if (!pass) vetoEvent;
 
       // Fill histograms
-      _h_ZZ_mZZ->fill(mZZ, weight);
-      _h_ZZ_pTZZ->fill(pTZZ, weight);
+      _h_ZZ_mZZ->fill(mZZ);
+      _h_ZZ_pTZZ->fill(pTZZ);
     }
 
 
     /// Finalize
     void finalize() {
-      const double norm = crossSection()/sumOfWeights()/femtobarn/TeV;
+      const double norm = crossSection()/sumOfWeights()/femtobarn*TeV;
       scale(_h_ZZ_mZZ,  norm);
       scale(_h_ZZ_pTZZ, norm);
     }
@@ -265,6 +257,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2015_I1394865);
+  RIVET_DECLARE_PLUGIN(ATLAS_2015_I1394865);
 
 }

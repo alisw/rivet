@@ -1,0 +1,66 @@
+{
+    "422245": [
+        "Observation of D - pi production correlations in 500-GeV pi- - N interactions",
+        "E791",
+        "10.1016/S0370-2693(97)00492-9",
+        null,
+        "hep-ex/0001004",
+        "ins422245",
+        null,
+        [
+            "FERMILAB-PUB-96-206-E",
+            "UMS-HEP-96-001"
+        ]
+    ],
+    "425444": [
+        "Measurement of the branching ratio B (D+ ---> rho0 lepton+ lepton-neutrino) / B (D+ ---> anti-K*0 lepton+ lepton-neutrino",
+        "E791",
+        "10.1016/S0370-2693(97)00194-9",
+        null,
+        "hep-ex/9611002",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-96-399-E",
+            "KSU-HEP-96-02"
+        ]
+    ],
+    "427089": [
+        "Search for CP violation in charged D meson decays",
+        "E791",
+        "10.1016/S0370-2693(97)00565-0",
+        null,
+        "hep-ex/9612005",
+        null,
+        null,
+        [
+            "USCHEP-9602",
+            "FERMILAB-PUB-96-442-E"
+        ]
+    ],
+    "441694": [
+        "The doubly Cabibbo suppressed decay $D^+ \\to K^+ \\pi^- \\pi^+$",
+        "E791",
+        "10.1016/S0370-2693(97)00609-6",
+        null,
+        "hep-ex/9706025",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-97-053-E",
+            "CBPF-NF-013-97"
+        ]
+    ],
+    "447720": [
+        "Asymmetries between the production of $D_s^-$ and $D_s^+$ mesons from 500-Gev/c $\\pi^{-}$ nucleon interactions as functions of x(F) and $p-transverse^{2}$",
+        "E791",
+        "10.1016/S0370-2693(97)00952-0",
+        null,
+        "hep-ex/9708040",
+        "ins447720",
+        null,
+        [
+            "FERMILAB-PUB-97-105-E"
+        ]
+    ]
+}

@@ -1,0 +1,242 @@
+{
+    "714503": [
+        "Event shapes in deep inelastic scattering at HERA", 
+        "ZEUS", 
+        "10.1016/j.nuclphysb.2006.05.016", 
+        null, 
+        "hep-ex/0604032", 
+        "ins714503", 
+        null, 
+        [
+            "DESY-06-042"
+        ]
+    ], 
+    "723329": [
+        "Measurement of neutral current cross sections at high Bjorken-x with the ZEUS detector at HERA", 
+        "ZEUS", 
+        "10.1140/epjc/s10052-006-0164-8", 
+        null, 
+        "hep-ex/0608014", 
+        "ins723329", 
+        null, 
+        [
+            "DESY-06-116"
+        ]
+    ], 
+    "723507": [
+        "Measurement of prompt photons with associated jets in photoproduction at HERA", 
+        "ZEUS", 
+        "10.1140/epjc/s10052-006-0134-1", 
+        null, 
+        "hep-ex/0608028", 
+        null, 
+        null, 
+        [
+            "DESY-06-125"
+        ]
+    ], 
+    "724050": [
+        "Inclusive-jet and dijet cross-sections in deep inelastic scattering at HERA", 
+        "ZEUS", 
+        "10.1016/j.nuclphysb.2006.09.018", 
+        null, 
+        "hep-ex/0608048", 
+        "ins724050", 
+        null, 
+        [
+            "DESY-06-128"
+        ]
+    ], 
+    "724240": [
+        "Measurement of azimuthal asymmetries in neutral current deep inelastic scattering at HERA", 
+        "ZEUS", 
+        "10.1140/epjc/s10052-007-0310-y", 
+        null, 
+        "hep-ex/0608053", 
+        null, 
+        null, 
+        [
+            "DESY-06-129"
+        ]
+    ], 
+    "727065": [
+        "Measurement of open beauty production at HERA in the $D^{*}$ muon final state", 
+        "ZEUS", 
+        "10.1140/epjc/s10052-007-0257-z", 
+        null, 
+        "hep-ex/0609050", 
+        null, 
+        null, 
+        [
+            "DESY-06-166"
+        ]
+    ], 
+    "731188": [
+        "Search for stop production in R-parity-violating supersymmetry at HERA", 
+        "ZEUS", 
+        "10.1140/epjc/s10052-007-0240-8", 
+        null, 
+        "hep-ex/0611018", 
+        null, 
+        null, 
+        [
+            "DESY-06-144"
+        ]
+    ], 
+    "733480": [
+        "Photoproduction of events with rapidity gaps between jets at HERA", 
+        "ZEUS", 
+        "10.1140/epjc/s10052-007-0241-7", 
+        null, 
+        "hep-ex/0612008", 
+        null, 
+        null, 
+        [
+            "DESY-06-215"
+        ]
+    ], 
+    "734144": [
+        "Measurement of $K^0_{S}$, $\\Lambda$, $\\bar{\\Lambda}$ production at HERA", 
+        "ZEUS", 
+        "10.1140/epjc/s10052-007-0299-2", 
+        null, 
+        "hep-ex/0612023", 
+        "ins734144", 
+        null, 
+        [
+            "DESY-06-226"
+        ]
+    ], 
+    "736199": [
+        "Jet-radius dependence of inclusive-jet cross-sections in deep inelastic scattering at HERA", 
+        "ZEUS", 
+        "10.1016/j.physletb.2007.03.039", 
+        null, 
+        "hep-ex/0701039", 
+        "ins736199", 
+        null, 
+        [
+            "DESY-06-241"
+        ]
+    ], 
+    "744787": [
+        "Leading neutron energy and pT distributions in deep inelastic scattering and photoproduction at HERA", 
+        "ZEUS", 
+        "10.1016/j.nuclphysb.2007.03.045", 
+        null, 
+        "hep-ex/0702028", 
+        "ins744787", 
+        null, 
+        [
+            "DESY-07-011"
+        ]
+    ], 
+    "745058": [
+        "Measurement of D*+- meson production in e+- p scattering at low Q**2", 
+        "ZEUS", 
+        "10.1016/j.physletb.2007.04.003", 
+        null, 
+        "hep-ex/0702034", 
+        "ins745058", 
+        null, 
+        [
+            "DESY-07-012"
+        ]
+    ], 
+    "747652": [
+        "Diffractive photoproduction of D*+-(2010) at HERA", 
+        "ZEUS", 
+        "10.1140/epjc/s10052-007-0326-3", 
+        null, 
+        "hep-ex/0703046", 
+        "ins747652", 
+        null, 
+        [
+            "DESY-07-039"
+        ]
+    ], 
+    "749371": [
+        "Measurement of D mesons production in deep inelastic scattering at HERA", 
+        "ZEUS", 
+        "10.1088/1126-6708/2007/07/074", 
+        null, 
+        "0704.3562", 
+        "ins749371", 
+        null, 
+        [
+            "DESY-07-052"
+        ]
+    ], 
+    "750515": [
+        "Multijet production at low x(Bj) in deep inelastic scattering at HERA", 
+        "ZEUS", 
+        "10.1016/j.nuclphysb.2007.05.027", 
+        null, 
+        "0705.1931", 
+        "ins750515", 
+        null, 
+        [
+            "DESY-07-062"
+        ]
+    ], 
+    "751504": [
+        "Measurement of (anti)deuteron and (anti)proton production in DIS at HERA", 
+        "ZEUS", 
+        "10.1016/j.nuclphysb.2007.06.022", 
+        null, 
+        "0705.3770", 
+        "ins751504", 
+        null, 
+        [
+            "DESY-07-070"
+        ]
+    ], 
+    "753376": [
+        "Bose-Einstein Correlations of Charged and Neutral Kaons in Deep Inelastic Scattering at HERA", 
+        "ZEUS", 
+        "10.1016/j.physletb.2007.06.052", 
+        null, 
+        "0706.2538", 
+        null, 
+        null, 
+        [
+            "DESY-07-069"
+        ]
+    ], 
+    "753991": [
+        "High-E(T) dijet photoproduction at HERA", 
+        "ZEUS", 
+        "10.1103/PhysRevD.76.072011", 
+        null, 
+        "0706.3809", 
+        "ins753991", 
+        null, 
+        [
+            "DESY-07-092"
+        ]
+    ], 
+    "756364": [
+        "Forward-jet production in deep inelastic ep scattering at HERA", 
+        "ZEUS", 
+        "10.1140/epjc/s10052-007-0418-0", 
+        null, 
+        "0707.3093", 
+        "ins756364", 
+        null, 
+        [
+            "DESY-07-100"
+        ]
+    ], 
+    "757991": [
+        "Exclusive rho0 production in deep inelastic scattering at HERA", 
+        "ZEUS", 
+        "10.1186/1754-0410-1-6", 
+        null, 
+        "0708.1478", 
+        "ins757991", 
+        null, 
+        [
+            "DESY-07-118"
+        ]
+    ]
+}

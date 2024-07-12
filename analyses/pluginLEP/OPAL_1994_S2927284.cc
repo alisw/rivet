@@ -7,18 +7,16 @@ namespace Rivet {
 
 
   /// @brief OPAL charged particle fragmentation functions
+  ///
   /// @author Peter Richardson
   class OPAL_1994_S2927284 : public Analysis {
   public:
 
-    /// Constructor
-    OPAL_1994_S2927284()
-      : Analysis("OPAL_1994_S2927284")
-    {   }
+    RIVET_DEFAULT_ANALYSIS_CTOR(OPAL_1994_S2927284);
 
 
     /// @name Analysis methods
-    //@{
+    /// @{
 
     void analyze(const Event& e) {
 
@@ -30,24 +28,21 @@ namespace Rivet {
       }
       MSG_DEBUG("Passed ncharged cut");
 
-      // Get event weight for histo filling
-      const double weight = e.weight();
-
       // Get beams and average beam momentum
       const ParticlePair& beams = apply<Beam>(e, "Beams").beams();
       const double meanBeamMom = ( beams.first.p3().mod() +
                                    beams.second.p3().mod() ) / 2.0;
       MSG_DEBUG("Avg beam momentum = " << meanBeamMom);
 
-      foreach (const Particle& p, fs.particles()) {
+      for (const Particle& p : fs.particles()) {
         int id = p.abspid();
         // charged pions
         if (id == PID::PIPLUS) {
-          _histXpPiPlus->fill(p.p3().mod(), weight);
+          _histXpPiPlus->fill(p.p3().mod());
         } else if(id == PID::KPLUS) {
-          _histXpKPlus->fill(p.p3().mod(), weight);
+          _histXpKPlus->fill(p.p3().mod());
         } else if(id == PID::PROTON) {
-          _histXpProton->fill(p.p3().mod(), weight);
+          _histXpProton->fill(p.p3().mod());
         }
       }
     }
@@ -58,9 +53,9 @@ namespace Rivet {
       declare(Beam(), "Beams");
       declare(ChargedFinalState(), "FS");
 
-      _histXpPiPlus = bookHisto1D( 1, 1, 1);
-      _histXpKPlus  = bookHisto1D( 2, 1, 1);
-      _histXpProton = bookHisto1D( 3, 1, 1);
+      book(_histXpPiPlus , 1, 1, 1);
+      book(_histXpKPlus  , 2, 1, 1);
+      book(_histXpProton , 3, 1, 1);
     }
 
 
@@ -71,18 +66,19 @@ namespace Rivet {
       scale(_histXpProton,1./sumOfWeights());
     }
 
-    //@}
+    /// @}
+
 
   private:
 
     Histo1DPtr _histXpPiPlus;
     Histo1DPtr _histXpKPlus;
     Histo1DPtr _histXpProton;
-    //@}
 
   };
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(OPAL_1994_S2927284);
+
+
+  RIVET_DECLARE_ALIASED_PLUGIN(OPAL_1994_S2927284, OPAL_1994_I372772);
 
 }

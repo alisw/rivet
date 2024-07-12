@@ -1,0 +1,184 @@
+{
+    "627327": [
+        "Measurement of the decay rate of Xi0(c) ---> pK- K- pi+ relative to Xi0(c) ---> Xi- pi+", 
+        "CLEO", 
+        "10.1103/PhysRevD.69.052004", 
+        null, 
+        "hep-ex/0309020", 
+        null, 
+        null, 
+        [
+            "CLNS-03-1834", 
+            "CLEO-03-11"
+        ]
+    ], 
+    "628757": [
+        "Cabibbo suppressed decays of D+ ---> pi+ pi0, K+ anti-K0, K+ pi0", 
+        "CLEO", 
+        "10.1103/PhysRevD.69.071102", 
+        null, 
+        "hep-ex/0309065", 
+        null, 
+        null, 
+        [
+            "CLNS-03-1832", 
+            "CLEO-03-10"
+        ]
+    ], 
+    "633196": [
+        "Search for CP violation in D0 ---> K0(S) pi+ pi-", 
+        "CLEO", 
+        "10.1103/PhysRevD.70.091101", 
+        null, 
+        "hep-ex/0311033", 
+        null, 
+        null, 
+        [
+            "CLNS-03-1848", 
+            "CLEO-03-13"
+        ]
+    ], 
+    "636329": [
+        "Observation of eta-prime(c) production in gamma gamma fusion at CLEO", 
+        "CLEO", 
+        "10.1103/PhysRevLett.92.142001", 
+        null, 
+        "hep-ex/0312058", 
+        null, 
+        null, 
+        [
+            "CLNS-03-1853", 
+            "CLEO-03-14"
+        ]
+    ], 
+    "642354": [
+        "Wess-Zumino current and the structure of the decay tau- ---> K- K+ pi- nu(tau)", 
+        "CLEO", 
+        "10.1103/PhysRevLett.92.232001", 
+        null, 
+        "hep-ex/0401005", 
+        null, 
+        null, 
+        [
+            "CLNS-03-1857", 
+            "CLEO-03-17"
+        ]
+    ], 
+    "645209": [
+        "Charm meson spectra in $e^{+} e^{-}$ annihilation at 10.5-GeV c.m.e.", 
+        "CLEO", 
+        "10.1103/PhysRevD.70.112001", 
+        null, 
+        "hep-ex/0402040", 
+        "ins645209", 
+        null, 
+        [
+            "CLNS-04-1861", 
+            "CLEO-04-3"
+        ]
+    ], 
+    "647287": [
+        "Moments of the B meson inclusive semileptonic decay rate using neutrino reconstruction", 
+        "CLEO", 
+        "10.1103/PhysRevD.70.032002", 
+        null, 
+        "hep-ex/0403052", 
+        null, 
+        null, 
+        [
+            "CLNS-04-1859", 
+            "CLEO-04-1"
+        ]
+    ], 
+    "647288": [
+        "Measurement of the B-meson inclusive semileptonic branching fraction and electron energy moments", 
+        "CLEO", 
+        "10.1103/PhysRevD.70.032003", 
+        null, 
+        "hep-ex/0403053", 
+        null, 
+        null, 
+        [
+            "CLNS-04-1860", 
+            "CLEO-04-02"
+        ]
+    ], 
+    "648444": [
+        "First observation of a Upsilon(1D) state", 
+        "CLEO", 
+        "10.1103/PhysRevD.70.032001", 
+        null, 
+        "hep-ex/0404021", 
+        null, 
+        null, 
+        [
+            "CLNS-04-1866", 
+            "CLEO-04-4"
+        ]
+    ], 
+    "649917": [
+        "First observation and Dalitz analysis of the D0 ---> K0(S) eta pi0 decay", 
+        "CLEO", 
+        "10.1103/PhysRevLett.93.111801", 
+        null, 
+        "hep-ex/0405011", 
+        null, 
+        null, 
+        [
+            "CLNS-04-1871", 
+            "CLEO-04-5"
+        ]
+    ], 
+    "654639": [
+        "New measurements of $\\upsilon_{1S}$ decays to charmonium final states", 
+        "CLEO", 
+        "10.1103/PhysRevD.70.072001", 
+        null, 
+        "hep-ex/0407030", 
+        null, 
+        null, 
+        [
+            "CLNS-04-1883", 
+            "CLEO-04-08"
+        ]
+    ], 
+    "655971": [
+        "Search for the lepton-flavor-violating leptonic B decays B0 --> mu+- tau -+ and B0 --> e+- tau-+", 
+        "CLEO", 
+        "10.1103/PhysRevLett.93.241802", 
+        null, 
+        "hep-ex/0408011", 
+        null, 
+        null, 
+        [
+            "CLNS-04-1882", 
+            "CLEO-04-7"
+        ]
+    ], 
+    "657450": [
+        "Photon transitions in psi(2S) decays to chi(cJ) (1P) and eta(c)(1S)", 
+        "CLEO", 
+        "10.1103/PhysRevD.70.112002", 
+        null, 
+        "hep-ex/0408133", 
+        null, 
+        null, 
+        [
+            "CLNS-04-1886", 
+            "CLEO-04-10"
+        ]
+    ], 
+    "664502": [
+        "Measuring B(D+ ---> mu+ nu) and the pseudoscalar decay constant f(D+)", 
+        "CLEO", 
+        "10.1103/PhysRevD.70.112004", 
+        null, 
+        "hep-ex/0411050", 
+        null, 
+        null, 
+        [
+            "CLNS-04-1896", 
+            "CLEO-04-15"
+        ]
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "471502": [
+        "Beam induced nuclear depolarization in a gaseous polarized hydrogen target", 
+        "HERMES", 
+        "10.1103/PhysRevLett.82.1164", 
+        null, 
+        "hep-ex/9806006", 
+        null, 
+        null, 
+        [
+            "DESY-98-058"
+        ]
+    ], 
+    "478947": [
+        "Observation of a coherence length effect in exclusive rho0 electroproduction", 
+        "HERMES", 
+        "10.1103/PhysRevLett.82.3025", 
+        null, 
+        "hep-ex/9811011", 
+        null, 
+        null, 
+        [
+            "DESY-98-178"
+        ]
+    ], 
+    "502312": [
+        "Flavor decomposition of the polarized quark distributions in the nucleon from inclusive and semiinclusive deep inelastic scattering", 
+        "HERMES", 
+        "10.1016/S0370-2693(99)00964-8", 
+        null, 
+        "hep-ex/9906035", 
+        null, 
+        null, 
+        [
+            "DESY-99-048"
+        ]
+    ]
+}

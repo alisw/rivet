@@ -7,14 +7,11 @@
 namespace Rivet {
 
 
-  /// @brief D0 direct photon pair production
+  /// D0 direct photon pair production
   class D0_2010_S8570965 : public Analysis {
   public:
 
-
-    D0_2010_S8570965()
-      : Analysis("D0_2010_S8570965")
-    {    }
+    RIVET_DEFAULT_ANALYSIS_CTOR(D0_2010_S8570965);
 
 
     void init() {
@@ -25,26 +22,27 @@ namespace Rivet {
       ifs.acceptId(PID::PHOTON);
       declare(ifs, "IFS");
 
-      _h_M = bookHisto1D(1, 1, 1);
-      _h_pT = bookHisto1D(2, 1, 1);
-      _h_dPhi = bookHisto1D(3, 1, 1);
-      _h_costheta = bookHisto1D(4, 1, 1);
+      book(_h_M ,1, 1, 1);
+      book(_h_pT ,2, 1, 1);
+      book(_h_dPhi ,3, 1, 1);
+      book(_h_costheta ,4, 1, 1);
 
       std::pair<double, double> M_ranges[] = { std::make_pair(30.0, 50.0),
                                                std::make_pair(50.0, 80.0),
                                                std::make_pair(80.0, 350.0) };
 
       for (size_t i = 0; i < 3; ++i) {
-        _h_pT_M.addHistogram(M_ranges[i].first, M_ranges[i].second, bookHisto1D(5+3*i, 1, 1));
-        _h_dPhi_M.addHistogram(M_ranges[i].first, M_ranges[i].second, bookHisto1D(6+3*i, 1, 1));
-        _h_costheta_M.addHistogram(M_ranges[i].first, M_ranges[i].second, bookHisto1D(7+3*i, 1, 1));
+        Histo1DPtr a,b,c;
+        _h_pT_M.add(M_ranges[i].first, M_ranges[i].second, book(a, 5+3*i, 1, 1));
+        _h_dPhi_M.add(M_ranges[i].first, M_ranges[i].second, book(b, 6+3*i, 1, 1));
+        _h_costheta_M.add(M_ranges[i].first, M_ranges[i].second, book(c, 7+3*i, 1, 1));
       }
     }
 
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-      const double weight = event.weight();
+      const double weight = 1.0;
 
       Particles photons = apply<IdentifiedFinalState>(event, "IFS").particlesByPt();
       if (photons.size() < 2 ||
@@ -55,12 +53,12 @@ namespace Rivet {
       // Isolate photons with ET_sum in cone
       Particles isolated_photons;
       Particles fs = apply<FinalState>(event, "FS").particles();
-      foreach (const Particle& photon, photons) {
+      for (const Particle& photon : photons) {
         double eta_P = photon.eta();
         double phi_P = photon.phi();
         double Etsum=0.0;
-        foreach (const Particle& p, fs) {
-          if (p.genParticle()->barcode() != photon.genParticle()->barcode() &&
+        for (const Particle& p : fs) {
+          if (HepMCUtils::uniqueId(p.genParticle()) != HepMCUtils::uniqueId(photon.genParticle()) &&
               deltaR(eta_P, phi_P, p.eta(), p.phi()) < 0.4) {
             Etsum += p.Et();
           }
@@ -130,15 +128,14 @@ namespace Rivet {
     Histo1DPtr _h_pT;
     Histo1DPtr _h_dPhi;
     Histo1DPtr _h_costheta;
-    BinnedHistogram<double> _h_pT_M;
-    BinnedHistogram<double> _h_dPhi_M;
-    BinnedHistogram<double> _h_costheta_M;
+    BinnedHistogram _h_pT_M;
+    BinnedHistogram _h_dPhi_M;
+    BinnedHistogram _h_costheta_M;
 
   };
 
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(D0_2010_S8570965);
+  RIVET_DECLARE_ALIASED_PLUGIN(D0_2010_S8570965, D0_2010_I846997);
 
 }

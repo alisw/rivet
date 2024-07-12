@@ -1,0 +1,62 @@
+{
+    "717721": [
+        "The Beam-charge azimuthal asymmetry and deeply virtual compton scattering", 
+        "HERMES", 
+        "10.1103/PhysRevD.75.011103", 
+        null, 
+        "hep-ex/0605108", 
+        null, 
+        null, 
+        [
+            "DESY-06-078"
+        ]
+    ], 
+    "726689": [
+        "Precise determination of the spin structure function g(1) of the proton, deuteron and neutron", 
+        "HERMES", 
+        "10.1103/PhysRevD.75.012007", 
+        null, 
+        "hep-ex/0609039", 
+        "ins726689", 
+        null, 
+        [
+            "DESY-06-142"
+        ]
+    ], 
+    "735612": [
+        "Beam-Spin Asymmetries in the Azimuthal Distribution of Pion Electroproduction", 
+        "HERMES", 
+        "10.1016/j.physletb.2007.03.015", 
+        null, 
+        "hep-ex/0612059", 
+        "ins735612", 
+        null, 
+        [
+            "DESY-06-227"
+        ]
+    ], 
+    "749182": [
+        "Transverse Polarization of Lambda and anti-Lambda Hyperons in Quasireal Photoproduction", 
+        "HERMES", 
+        "10.1103/PhysRevD.76.092008", 
+        null, 
+        "0704.3133", 
+        null, 
+        null, 
+        [
+            "DESY-07-036"
+        ]
+    ], 
+    "749249": [
+        "Hadronization in semi-inclusive deep-inelastic scattering on nuclei", 
+        "HERMES", 
+        "10.1016/j.nuclphysb.2007.06.004", 
+        null, 
+        "0704.3270", 
+        "ins749249", 
+        null, 
+        [
+            "DESY-07-050"
+        ]
+    ]
+}

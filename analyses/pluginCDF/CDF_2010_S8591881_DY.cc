@@ -5,10 +5,9 @@
 
 namespace Rivet {
 
-  
-
 
   /// @brief CDF Run II underlying event in Drell-Yan
+  ///
   /// @author Hendrik Hoeth
   ///
   /// Measurement of the underlying event in Drell-Yan
@@ -27,10 +26,7 @@ namespace Rivet {
   class CDF_2010_S8591881_DY : public Analysis {
   public:
 
-    /// Constructor
-    CDF_2010_S8591881_DY() : Analysis("CDF_2010_S8591881_DY")
-    {
-    }
+    RIVET_DEFAULT_ANALYSIS_CTOR(CDF_2010_S8591881_DY);
 
 
     /// @name Analysis methods
@@ -38,31 +34,31 @@ namespace Rivet {
 
     void init() {
       // Set up projections
-      const ChargedFinalState cfs(-1.0, 1.0, 0.5*GeV);
-      const ChargedFinalState clfs(-1.0, 1.0, 20*GeV);
+      const ChargedFinalState cfs(Cuts::abseta < 1.0 && Cuts::pT >= 0.5*GeV);
+      const ChargedFinalState clfs(Cuts::abseta < 1.0 && Cuts::pT >= 20*GeV);
       declare(cfs, "FS");
       declare(ChargedLeptons(clfs), "CL");
 
       // Book histograms
-      _hist_tnchg      = bookProfile1D( 1, 1, 1);
-      _hist_pnchg      = bookProfile1D( 1, 1, 2);
-      _hist_anchg      = bookProfile1D( 1, 1, 3);
-      _hist_pmaxnchg   = bookProfile1D( 2, 1, 1);
-      _hist_pminnchg   = bookProfile1D( 2, 1, 2);
-      _hist_pdifnchg   = bookProfile1D( 2, 1, 3);
-      _hist_tcptsum    = bookProfile1D( 3, 1, 1);
-      _hist_pcptsum    = bookProfile1D( 3, 1, 2);
-      _hist_acptsum    = bookProfile1D( 3, 1, 3);
-      _hist_pmaxcptsum = bookProfile1D( 4, 1, 1);
-      _hist_pmincptsum = bookProfile1D( 4, 1, 2);
-      _hist_pdifcptsum = bookProfile1D( 4, 1, 3);
-      _hist_tcptave    = bookProfile1D( 5, 1, 1);
-      _hist_pcptave    = bookProfile1D( 5, 1, 2);
-      _hist_tcptmax    = bookProfile1D( 6, 1, 1);
-      _hist_pcptmax    = bookProfile1D( 6, 1, 2);
-      _hist_zptvsnchg  = bookProfile1D( 7, 1, 1);
-      _hist_cptavevsnchg = bookProfile1D( 8, 1, 1);
-      _hist_cptavevsnchgsmallzpt = bookProfile1D( 9, 1, 1);
+      book(_hist_tnchg      , 1, 1, 1);
+      book(_hist_pnchg      , 1, 1, 2);
+      book(_hist_anchg      , 1, 1, 3);
+      book(_hist_pmaxnchg   , 2, 1, 1);
+      book(_hist_pminnchg   , 2, 1, 2);
+      book(_hist_pdifnchg   , 2, 1, 3);
+      book(_hist_tcptsum    , 3, 1, 1);
+      book(_hist_pcptsum    , 3, 1, 2);
+      book(_hist_acptsum    , 3, 1, 3);
+      book(_hist_pmaxcptsum , 4, 1, 1);
+      book(_hist_pmincptsum , 4, 1, 2);
+      book(_hist_pdifcptsum , 4, 1, 3);
+      book(_hist_tcptave    , 5, 1, 1);
+      book(_hist_pcptave    , 5, 1, 2);
+      book(_hist_tcptmax    , 6, 1, 1);
+      book(_hist_pcptmax    , 6, 1, 2);
+      book(_hist_zptvsnchg  , 7, 1, 1);
+      book(_hist_cptavevsnchg , 8, 1, 1);
+      book(_hist_cptavevsnchgsmallzpt , 9, 1, 1);
     }
 
 
@@ -77,9 +73,6 @@ namespace Rivet {
         MSG_DEBUG("Failed multiplicity cut");
         vetoEvent;
       }
-
-      // Get the event weight
-      const double weight = e.weight();
 
       // Get the leptons
       const Particles& leptons = apply<ChargedLeptons>(e, "CL").chargedLeptons();
@@ -104,7 +97,7 @@ namespace Rivet {
       double ptMaxToward(0.0), ptMaxTrans1(0.0), ptMaxTrans2(0.0), ptMaxAway(0.0);
       const double phiZ = dilepton.azimuthalAngle();
       const double pTZ  = dilepton.pT();
-      /// @todo Replace with foreach
+      /// @todo Replace with for
       for (Particles::const_iterator p = fs.particles().begin(); p != fs.particles().end(); ++p) {
         // Don't use the leptons
         /// @todo Replace with PID::isLepton
@@ -140,42 +133,41 @@ namespace Rivet {
             ptMaxAway = pT;
         }
         // We need to subtract the two leptons from the number of particles to get the correct multiplicity
-        _hist_cptavevsnchg->fill(numParticles-2, pT, weight);
+        _hist_cptavevsnchg->fill(numParticles-2, pT);
         if (pTZ < 10)
-          _hist_cptavevsnchgsmallzpt->fill(numParticles-2, pT, weight);
+          _hist_cptavevsnchgsmallzpt->fill(numParticles-2, pT);
       }
 
       // Fill the histograms
-      _hist_tnchg->fill(pTZ, numToward/(4*PI/3), weight);
-      _hist_pnchg->fill(pTZ, (numTrans1+numTrans2)/(4*PI/3), weight);
-      _hist_pmaxnchg->fill(pTZ, (numTrans1>numTrans2 ? numTrans1 : numTrans2)/(2*PI/3), weight);
-      _hist_pminnchg->fill(pTZ, (numTrans1<numTrans2 ? numTrans1 : numTrans2)/(2*PI/3), weight);
-      _hist_pdifnchg->fill(pTZ, abs(numTrans1-numTrans2)/(2*PI/3), weight);
-      _hist_anchg->fill(pTZ, numAway/(4*PI/3), weight);
+      _hist_tnchg->fill(pTZ, numToward/(4*PI/3));
+      _hist_pnchg->fill(pTZ, (numTrans1+numTrans2)/(4*PI/3));
+      _hist_pmaxnchg->fill(pTZ, (numTrans1>numTrans2 ? numTrans1 : numTrans2)/(2*PI/3));
+      _hist_pminnchg->fill(pTZ, (numTrans1<numTrans2 ? numTrans1 : numTrans2)/(2*PI/3));
+      _hist_pdifnchg->fill(pTZ, abs(numTrans1-numTrans2)/(2*PI/3));
+      _hist_anchg->fill(pTZ, numAway/(4*PI/3));
 
-      _hist_tcptsum->fill(pTZ, ptSumToward/(4*PI/3), weight);
-      _hist_pcptsum->fill(pTZ, (ptSumTrans1+ptSumTrans2)/(4*PI/3), weight);
-      _hist_pmaxcptsum->fill(pTZ, (ptSumTrans1>ptSumTrans2 ? ptSumTrans1 : ptSumTrans2)/(2*PI/3), weight);
-      _hist_pmincptsum->fill(pTZ, (ptSumTrans1<ptSumTrans2 ? ptSumTrans1 : ptSumTrans2)/(2*PI/3), weight);
-      _hist_pdifcptsum->fill(pTZ, fabs(ptSumTrans1-ptSumTrans2)/(2*PI/3), weight);
-      _hist_acptsum->fill(pTZ, ptSumAway/(4*PI/3), weight);
+      _hist_tcptsum->fill(pTZ, ptSumToward/(4*PI/3));
+      _hist_pcptsum->fill(pTZ, (ptSumTrans1+ptSumTrans2)/(4*PI/3));
+      _hist_pmaxcptsum->fill(pTZ, (ptSumTrans1>ptSumTrans2 ? ptSumTrans1 : ptSumTrans2)/(2*PI/3));
+      _hist_pmincptsum->fill(pTZ, (ptSumTrans1<ptSumTrans2 ? ptSumTrans1 : ptSumTrans2)/(2*PI/3));
+      _hist_pdifcptsum->fill(pTZ, fabs(ptSumTrans1-ptSumTrans2)/(2*PI/3));
+      _hist_acptsum->fill(pTZ, ptSumAway/(4*PI/3));
 
       if (numToward > 0) {
-        _hist_tcptave->fill(pTZ, ptSumToward/numToward, weight);
-        _hist_tcptmax->fill(pTZ, ptMaxToward, weight);
+        _hist_tcptave->fill(pTZ, ptSumToward/numToward);
+        _hist_tcptmax->fill(pTZ, ptMaxToward);
       }
       if ((numTrans1+numTrans2) > 0) {
-        _hist_pcptave->fill(pTZ, (ptSumTrans1+ptSumTrans2)/(numTrans1+numTrans2), weight);
-        _hist_pcptmax->fill(pTZ, (ptMaxTrans1 > ptMaxTrans2 ? ptMaxTrans1 : ptMaxTrans2), weight);
+        _hist_pcptave->fill(pTZ, (ptSumTrans1+ptSumTrans2)/(numTrans1+numTrans2));
+        _hist_pcptmax->fill(pTZ, (ptMaxTrans1 > ptMaxTrans2 ? ptMaxTrans1 : ptMaxTrans2));
       }
 
       // We need to subtract the two leptons from the number of particles to get the correct multiplicity
-      _hist_zptvsnchg->fill(numParticles-2, pTZ, weight);
+      _hist_zptvsnchg->fill(numParticles-2, pTZ);
     }
 
 
-    void finalize() {
-    }
+    // void finalize() {    }
 
     //@}
 
@@ -206,7 +198,6 @@ namespace Rivet {
 
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CDF_2010_S8591881_DY);
+  RIVET_DECLARE_ALIASED_PLUGIN(CDF_2010_S8591881_DY, CDF_2010_I849042_DY);
 
 }

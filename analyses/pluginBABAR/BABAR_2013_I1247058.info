@@ -1,0 +1,43 @@
+Name: BABAR_2013_I1247058
+Year: 2013
+Summary: Cross section for $e^+e^-\to$ proton and antiproton between 3.0 and 6.5 GeV
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 1247058
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D88 (2013) no.7, 072009
+RunInfo: e+ e- to hadrons
+NeedCrossSection: yes
+Beams: [e+, e-]
+Description:
+  'Measurement of the cross section for $e^+e^-\to p\bar{p}$ using radiative
+   return for energies between 3.0 and 6.5 GeV.'
+ValidationInfo:
+  'Herwig events based on it to low energy cross section'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Lees:2013uta
+BibTeX: '%%% contains utf-8, see: http://inspirehep.net/info/faq/general#utf8
+%%% add \usepackage[utf8]{inputenc} to your latex preamble
+
+@article{Lees:2013uta,
+      author         = "Lees, J. P. and others",
+      title          = "{Measurement of the $e^+e^- \to p\bar{p}$ cross section
+                        in the energy range from 3.0 to 6.5 GeV}",
+      collaboration  = "BaBar",
+      journal        = "Phys. Rev.",
+      volume         = "D88",
+      year           = "2013",
+      number         = "7",
+      pages          = "072009",
+      doi            = "10.1103/PhysRevD.88.072009",
+      eprint         = "1308.1795",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "BABAR-PUB-13-010, SLAC-PUB-15707, SLAC-PUB-15705",
+      SLACcitation   = "%%CITATION = ARXIV:1308.1795;%%"
+}'

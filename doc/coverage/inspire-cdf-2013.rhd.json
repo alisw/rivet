@@ -1,0 +1,398 @@
+{
+    "1113312": [
+        "$W$ boson polarization measurement in the $t\\bar{t}$ dilepton channel using the CDF II Detector", 
+        "CDF", 
+        "10.1016/j.physletb.2013.03.032", 
+        "1445722", 
+        "1205.0354", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-12-114-E"
+        ]
+    ], 
+    "1184011": [
+        "Search for the Higgs boson in the all-hadronic final state using the full CDF data set", 
+        "CDF", 
+        "10.1007/JHEP02(2013)004", 
+        null, 
+        "1208.6445", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-12-493-E"
+        ]
+    ], 
+    "1184945": [
+        "Observation of the Production of a W Boson in Association with a Single Charm Quark", 
+        "CDF", 
+        "10.1103/PhysRevLett.110.071801", 
+        "1477016", 
+        "1209.1921", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-12-514-E"
+        ]
+    ], 
+    "1189821": [
+        "Measurement of the $B_c^{-}$ meson lifetime in the decay $B_{c}^{-} \\rightarrow J/\\psi~\\pi^{-}$", 
+        "CDF", 
+        "10.1103/PhysRevD.87.011101", 
+        "1483866", 
+        "1210.2366", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-12-565-E"
+        ]
+    ], 
+    "1192918": [
+        "Measurement of the mass difference between top and antitop quarks", 
+        "CDF", 
+        "10.1103/PhysRevD.87.052013", 
+        "1489808", 
+        "1210.6131", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-12-577-E"
+        ]
+    ], 
+    "1198155": [
+        "Measurement of the top quark forward-backward production asymmetry and its dependence on event kinematic properties", 
+        "CDF", 
+        "10.1103/PhysRevD.87.092002", 
+        "1491857", 
+        "1211.1003", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-12-591-E"
+        ]
+    ], 
+    "1203135": [
+        "Measurement of $W$-Boson Polarization in Top-quark Decay using the Full CDF Run II Data Set", 
+        "CDF", 
+        "10.1103/PhysRevD.87.031104", 
+        "1494857", 
+        "1211.4523", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-12-609"
+        ]
+    ], 
+    "1203684": [
+        "Search for Resonant Top-Antitop Production in the Lepton Plus Jets Decay Mode Using the Full CDF Data Set", 
+        "CDF", 
+        "10.1103/PhysRevLett.110.121802", 
+        "1495934", 
+        "1211.5363", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-12-611-E"
+        ]
+    ], 
+    "1207581": [
+        "Search for a Two-Higgs-Boson Doublet Using a Simplified Model in $p\\bar{p}$ Collisions at $\\sqrt{s}=1.96$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.110.121801", 
+        "1501387", 
+        "1212.3837", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-12-656-E"
+        ]
+    ], 
+    "1207879": [
+        "Measurement of the Cross Section for Prompt Isolated Diphoton Production Using the Full CDF Run II Data Sample", 
+        "CDF", 
+        "10.1103/PhysRevLett.110.101801", 
+        "1501407", 
+        "1212.4204", 
+        "ins1207879", 
+        null, 
+        [
+            "FERMILAB-PUB-12-655-E"
+        ]
+    ], 
+    "1215088": [
+        "Updated search for the standard model Higgs boson in events with jets and missing transverse energy using the full CDF data set", 
+        "CDF", 
+        "10.1103/PhysRevD.87.052008", 
+        "1507491", 
+        "1301.4440", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-13-018-E"
+        ]
+    ], 
+    "1216522": [
+        "Combination fo Searches for the Higgs Boson Using the Full CDF Data Set", 
+        "CDF", 
+        "10.1103/PhysRevD.88.052013", 
+        "1510326", 
+        "1301.6668", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-13-031-E"
+        ]
+    ], 
+    "1216676": [
+        "Search for $B_s^0 \\rightarrow \\mu^{+}\\mu^{-}$ and $B^0 \\rightarrow \\mu^{+}\\mu^{-}$ decays with the full CDF Run II data set", 
+        "CDF", 
+        "10.1103/PhysRevD.87.072003", 
+        "1510944", 
+        "1301.7048", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-13-034"
+        ]
+    ], 
+    "1220242": [
+        "Search for Supersymmetry with Like-Sign Lepton-Tau Events at CDF", 
+        "CDF", 
+        "10.1103/PhysRevLett.110.201802", 
+        "1517718", 
+        "1302.4491", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-13-047-E"
+        ]
+    ], 
+    "1223515": [
+        "Search for Pair Production of Strongly Interacting Particles Decaying to Pairs of Jets in $p \\bar{p}$ Collisions at $\\sqrt{s} =$ 1.96  TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.111.031802", 
+        "1527348", 
+        "1303.2699", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-13-079-PPD"
+        ]
+    ], 
+    "1225278": [
+        "Measurement of the cross section for direct-photon production in association with a heavy quark in $p\\bar{p}$ collisions at $\\sqrt{s}$ = 1.96 TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.111.042003", 
+        "1532825", 
+        "1303.6136", 
+        "ins1225278", 
+        null, 
+        [
+            "FERMILAB-PUB-13-082-E"
+        ]
+    ], 
+    "1225279": [
+        "Measurement of $R = \\mathcal{B}(t \\rightarrow Wb)/\\mathcal{B}(t \\rightarrow Wq)$ in Top--quark--pair Decays using Lepton+jets Events and the Full CDF Run II Data set", 
+        "CDF", 
+        "10.1103/PhysRevD.87.111101", 
+        "1532826", 
+        "1303.6142", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-13-083-E"
+        ]
+    ], 
+    "1225520": [
+        "Higgs Boson Studies at the Tevatron", 
+        "CDF", 
+        "10.1103/PhysRevD.88.052014", 
+        "1532831", 
+        "1303.6346", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-13-081-E"
+        ]
+    ], 
+    "1228345": [
+        "Exclusion of exotic top-like quarks with -4/3 electric charge using jet-charge tagging in single-lepton ttbar events at CDF", 
+        "CDF", 
+        "10.1103/PhysRevD.88.032003", 
+        "1542132", 
+        "1304.4141", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-13-098-E"
+        ]
+    ], 
+    "1231483": [
+        "Measurement of the top-quark pair production cross-section in events with two leptons and bottom-quark jets using the full CDF data set", 
+        "CDF", 
+        "10.1103/PhysRevD.88.091103", 
+        "1545112", 
+        "1304.7961", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-13-122-E"
+        ]
+    ], 
+    "1233518": [
+        "Top-Quark Mass Measurement in Events with Jets and Missing Transverse Energy Using the Full CDF Data Set", 
+        "CDF", 
+        "10.1103/PhysRevD.88.011101", 
+        "1547423", 
+        "1305.3339", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-13-163-E"
+        ]
+    ], 
+    "1236620": [
+        "Searches for the Higgs boson decaying to $W^{+} W^{-} \\to \\ell^{+}\\nu \\ell^{-}\\bar{\\nu}$ with the CDF II detector", 
+        "CDF", 
+        "10.1103/PhysRevD.88.052012", 
+        "1553056", 
+        "1306.0023", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-13-029-E"
+        ]
+    ], 
+    "1238100": [
+        "Measurement of the Differential Cross Section $d{\\sigma}/d(\\cos {\\theta}t)$ for Top-Quark Pair Production in $p-\\bar{p}$ Collisions at $\\sqrt{s} = 1.96$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.111.182002", 
+        "1554688", 
+        "1306.2357", 
+        "ins1238100", 
+        null, 
+        [
+            "FERMILAB-PUB-13-194-E"
+        ]
+    ], 
+    "1240679": [
+        "Signature-Based Search for Delayed Photons in Exclusive Photon Plus Missing Transverse Energy Events from $p \\bar p$ Collisions with $\\sqrt{s}$=1.96  TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.88.031103", 
+        "1559070", 
+        "1307.0474", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-13-249-E"
+        ]
+    ], 
+    "1241413": [
+        "Indirect Measurement of $\\sin^2\\theta_W$ $(M_W)$ Using $e^+e^-$ Pairs in the Z-Boson Region with $p\\bar{p}$ Collisions at a Center-of-Momentum Energy of 1.96 TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.88.072002", 
+        "1559549", 
+        "1307.0770", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-13-277-E"
+        ]
+    ], 
+    "1245028": [
+        "Combination of CDF and D0 $W$-Boson Mass Measurements", 
+        "CDF", 
+        "10.1103/PhysRevD.88.052018", 
+        "1565316", 
+        "1307.7627", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-13-289-E"
+        ]
+    ], 
+    "1246779": [
+        "Measurement of the Leptonic Asymmetry in $t \\bar t$ Events Produced in $p \\bar p$ Collisions at $\\sqrt s=$ 1.96  TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.88.072003", 
+        "1566946", 
+        "1308.1120", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-13-309-E"
+        ]
+    ], 
+    "1247057": [
+        "Evidence for a Bottom Baryon Resonance $\\Lambda_{b}^{*0}$ in CDF Data", 
+        "CDF", 
+        "10.1103/PhysRevD.88.071101", 
+        "1569215", 
+        "1308.1760", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-13-313-E"
+        ]
+    ], 
+    "1247975": [
+        "Production of $K_S^0, K^{*\\pm}(892)$ and $\\phi^0(1020)$ in Minimum Bias Events and $K_S^0$ and $\\Lambda^0$ in Jets in $p\\bar p$ Collisions at $\\sqrt s=1.96  TeV$", 
+        "CDF", 
+        "10.1103/PhysRevD.88.092005", 
+        "1581374", 
+        "1308.3371", 
+        "ins1247975", 
+        null, 
+        [
+            "FERMILAB-PUB-13-322-E-PPD"
+        ]
+    ], 
+    "1249596": [
+        "Direct Measurement of the Total Decay Width of the Top Quark", 
+        "CDF", 
+        "10.1103/PhysRevLett.111.202001", 
+        "1587457", 
+        "1308.4050", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-13-324-E"
+        ]
+    ], 
+    "1254229": [
+        "Observation of $D^0-\\overline{D}^0$ Mixing Using the CDF II Detector", 
+        "CDF", 
+        "10.1103/PhysRevLett.111.231802", 
+        "1600927", 
+        "1309.4078", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-13-379-E"
+        ]
+    ], 
+    "1256320": [
+        "Search for the Production of $ZW$ and $ZZ$ Boson Pairs Decaying into Charged Leptons and Jets in $p \\bar{p}$ Collisions at $\\sqrt{s}$=1.96  TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.88.092002", 
+        "1604967", 
+        "1310.0086", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-13-437-E"
+        ]
+    ], 
+    "1262318": [
+        "Search for a Dijet Resonance in Events with Jets and Missing Transverse Energy in $p\\bar{p}$ Collisions at $\\sqrt{s} = 1.96$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.88.092004", 
+        "1621770", 
+        "1310.7267", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-13-488"
+        ]
+    ]
+}

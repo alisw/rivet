@@ -1,0 +1,36 @@
+Name: BESIII_2015_I1386254
+Year: 2015
+Summary: Kinematic distributions in $D^+\to\omega e^+\nu_e$
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1386254
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 92 (2015) 7, 071101
+RunInfo: Any process producing D+
+Description:
+  'Measurement of the kinematic distributions in $D^+\to\omega e^+\nu_e$ by BES-III. N.B. the plots where read from the paper and may not have been corrected for acceptance.'
+ValidationInfo:
+  'Herwig 7 events using EvtGen for the decays.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2015kin
+BibTeX: '@article{BESIII:2015kin,
+    author = "Ablikim, M. and others",
+    collaboration = "BESIII",
+    title = "{Measurement of the form factors in the decay $D^+ \to \omega e^+ \nu_{e}$ and search for the decay $D^+ \to \phi e^+ \nu_{e}$}",
+    eprint = "1508.00151",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevD.92.071101",
+    journal = "Phys. Rev. D",
+    volume = "92",
+    number = "7",
+    pages = "071101",
+    year = "2015"
+}
+'

@@ -6,6 +6,7 @@ Collider: Tevatron Run 1
 SpiresID: 2742446
 InspireID: 354237
 Status: UNVALIDATED
+Reentrant: true
 Authors:
  - Frank Siegert <frank.siegert@cern.ch>
 References:

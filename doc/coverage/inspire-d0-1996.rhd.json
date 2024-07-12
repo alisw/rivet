@@ -1,0 +1,138 @@
+{
+    "399364": [
+        "Studies of Topological Distributions of the Three- and Four-Jet Events in $\\bar{p}p$ Collisions at $\\sqrt{s}=1800$ GeV with the D0 Detector", 
+        "D0", 
+        "10.1103/PhysRevD.53.6000", 
+        null, 
+        "hep-ex/9509005", 
+        "ins399364", 
+        null, 
+        [
+            "FERMILAB-PUB-95-296-E", 
+            "D0-2735", 
+            "D0-PUB-95-11"
+        ]
+    ], 
+    "400107": [
+        "Jet Production via Strongly-Interacting Color-Singlet Exchange in $p\\bar{p}$ Collisions", 
+        "D0", 
+        "10.1103/PhysRevLett.76.734", 
+        null, 
+        "hep-ex/9509013", 
+        "ins400107", 
+        null, 
+        [
+            "FERMILAB-PUB-95-302-E"
+        ]
+    ], 
+    "403196": [
+        "Search for $\\widetilde{W}_1\\widetilde{Z}_2$ Production via Trilepton Final States in $p\\bar{p}$ collisions at $\\sqrt{s}=1.8$\\ TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.76.2228", 
+        null, 
+        "hep-ex/9512004", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-95-385-E"
+        ]
+    ], 
+    "403917": [
+        "Search for Right-Handed $W$ Bosons and Heavy $W^\\prime$ in $p\\bar p$ Collisions at $\\sqrt{s} =$1.8 TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.76.3271", 
+        null, 
+        "hep-ex/9512007", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-95-412-E"
+        ]
+    ], 
+    "404510": [
+        "Search for light top squarks in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.76.2222", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-95-380-E"
+        ]
+    ], 
+    "415417": [
+        "$J/\\psi$ production in $p \\bar{p}$ collisions at $\\sqrt{s}$ = 1.8-TeV", 
+        "D0", 
+        "10.1016/0370-2693(96)00067-6", 
+        null, 
+        null, 
+        "ins415417", 
+        null, 
+        [
+            "FERMILAB-PUB-96-003-E"
+        ]
+    ], 
+    "416886": [
+        "The Azimuthal decorrelation of jets widely separated in rapidity", 
+        "D0", 
+        "10.1103/PhysRevLett.77.595", 
+        null, 
+        "hep-ex/9603010", 
+        "ins416886", 
+        null, 
+        [
+            "FERMILAB-PUB-96-038-E"
+        ]
+    ], 
+    "417044": [
+        "Isolated photon cross-section in the central and forward rapidity regions in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.77.5011", 
+        null, 
+        "hep-ex/9603006", 
+        "ins417044", 
+        null, 
+        [
+            "FERMILAB-PUB-96-072-E"
+        ]
+    ], 
+    "419962": [
+        "Search for anomalous $W W$ and $W Z$ production in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.77.3303", 
+        null, 
+        "hep-ex/9606013", 
+        "ins419962", 
+        null, 
+        [
+            "FERMILAB-PUB-96-115-E", 
+            "D0-NOTE-2960"
+        ]
+    ], 
+    "420770": [
+        "Measurement of the $W$ boson mass", 
+        "D0", 
+        "10.1103/PhysRevLett.77.3309", 
+        null, 
+        "hep-ex/9607011", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-96-177-E"
+        ]
+    ], 
+    "421554": [
+        "Search for additional neutral gauge bosons", 
+        "D0", 
+        "10.1016/0370-2693(96)00932-X", 
+        null, 
+        null, 
+        "ins421554", 
+        null, 
+        [
+            "FERMILAB-PUB-96-187-E", 
+            "FSU-SCRI-97-62"
+        ]
+    ]
+}

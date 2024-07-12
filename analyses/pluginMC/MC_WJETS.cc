@@ -14,10 +14,7 @@ namespace Rivet {
     /// Default constructor
     MC_WJETS(string name="MC_WJETS")
       : MC_JetAnalysis(name, 4, "Jets")
-    {
-		 _dR=0.2;
-		 _lepton=PID::ELECTRON;
-   }
+    {  }
 
 
     /// @name Analysis methods
@@ -25,14 +22,19 @@ namespace Rivet {
 
     /// Book histograms
     void init() {
+		  _dR=0.2;
+      if (getOption("SCHEME") == "BARE")  _dR = 0.0;
+		  _lepton=PID::ELECTRON;
+      if (getOption("LMODE") == "MU")  _lepton = PID::MUON;
+
       FinalState fs;
       WFinder wfinder(fs, Cuts::abseta < 3.5 && Cuts::pT > 25*GeV, _lepton, 60.0*GeV, 100.0*GeV, 25.0*GeV, _dR);
       declare(wfinder, "WFinder");
       FastJets jetpro(wfinder.remainingFinalState(), FastJets::ANTIKT, 0.4);
       declare(jetpro, "Jets");
 
-      _h_W_jet1_deta = bookHisto1D("W_jet1_deta", 50, -5.0, 5.0);
-      _h_W_jet1_dR = bookHisto1D("W_jet1_dR", 25, 0.5, 7.0);
+      book(_h_W_jet1_deta ,"W_jet1_deta", 50, -5.0, 5.0);
+      book(_h_W_jet1_dR ,"W_jet1_dR", 25, 0.5, 7.0);
 
       MC_JetAnalysis::init();
     }
@@ -41,7 +43,6 @@ namespace Rivet {
 
     /// Do the analysis
     void analyze(const Event & e) {
-      const double weight = e.weight();
 
       const WFinder& wfinder = apply<WFinder>(e, "WFinder");
       if (wfinder.bosons().size() != 1) {
@@ -51,8 +52,8 @@ namespace Rivet {
 
       const Jets& jets = apply<FastJets>(e, "Jets").jetsByPt(_jetptcut);
       if (jets.size() > 0) {
-        _h_W_jet1_deta->fill(wmom.eta()-jets[0].eta(), weight);
-        _h_W_jet1_dR->fill(deltaR(wmom, jets[0].momentum()), weight);
+        _h_W_jet1_deta->fill(wmom.eta()-jets[0].eta());
+        _h_W_jet1_dR->fill(deltaR(wmom, jets[0].momentum()));
       }
 
       MC_JetAnalysis::analyze(e);
@@ -88,43 +89,6 @@ namespace Rivet {
 
   };
 
-
-
-  struct MC_WJETS_EL : public MC_WJETS {
-    MC_WJETS_EL() : MC_WJETS("MC_WJETS_EL") {
-      _dR = 0.2;
-      _lepton = PID::ELECTRON;
-    }
-  };
-
-  struct MC_WJETS_EL_BARE : public MC_WJETS {
-    MC_WJETS_EL_BARE() : MC_WJETS("MC_WJETS_EL_BARE") {
-      _dR = 0;
-      _lepton = PID::ELECTRON;
-    }
-  };
-
-  struct MC_WJETS_MU : public MC_WJETS {
-    MC_WJETS_MU() : MC_WJETS("MC_WJETS_MU") {
-      _dR = 0.2;
-      _lepton = PID::MUON;
-    }
-  };
-
-  struct MC_WJETS_MU_BARE : public MC_WJETS {
-    MC_WJETS_MU_BARE() : MC_WJETS("MC_WJETS_MU_BARE") {
-      _dR = 0;
-      _lepton = PID::MUON;
-    }
-  };
-
-
-
   // The hooks for the plugin system
-  DECLARE_RIVET_PLUGIN(MC_WJETS);
-  DECLARE_RIVET_PLUGIN(MC_WJETS_EL);
-  DECLARE_RIVET_PLUGIN(MC_WJETS_EL_BARE);
-  DECLARE_RIVET_PLUGIN(MC_WJETS_MU);
-  DECLARE_RIVET_PLUGIN(MC_WJETS_MU_BARE);
-
+  RIVET_DECLARE_PLUGIN(MC_WJETS);
 }

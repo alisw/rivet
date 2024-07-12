@@ -6,11 +6,75 @@
 namespace Rivet {
 
 
-  namespace {
+  /// Four-jet angles using Durham algorithm
+  class OPAL_2001_S4553896 : public Analysis {
+  public:
+
+    RIVET_DEFAULT_ANALYSIS_CTOR(OPAL_2001_S4553896);
+
+
+    /// @name Analysis methods
+    /// @{
+
+    /// Book histograms and initialise projections before the run
+    void init() {
+
+      // Initialise and register projections
+      const FinalState fs;
+      declare(fs, "FS");
+      declare(FastJets(fs, FastJets::DURHAM, 0.7), "Jets");
+
+      // Book histograms here
+      book(_h_BZ      ,3, 1, 1);
+      book(_h_KSW     ,4, 1, 1);
+      book(_h_NR      ,5, 1, 1);
+      book(_h_ALPHA34 ,6, 1, 1);
+    }
+
+
+    /// Perform the per-event analysis
+    void analyze(const Event& event) {
+
+      // Even if we only generate hadronic events, we still need a cut on numCharged >= 2.
+      if (apply<FinalState>(event, "FS").particles().size() < 2) {
+        vetoEvent;
+      }
+
+      const FastJets& fastjets = apply<FastJets>(event, "Jets");
+      if (fastjets.clusterSeq()) {
+        vector<fastjet::PseudoJet> jets;
+        for (const fastjet::PseudoJet& jet :
+                 fastjet::sorted_by_E(fastjets.clusterSeq()->exclusive_jets_ycut(0.008))) {
+          if (jet.E()>3.0*GeV) jets.push_back(jet);
+        }
+        if (jets.size() == 4) {
+          // Prevent nan-fill due to division by zero in calc_BZ
+          double bz = fabs(calc_BZ(jets));
+          if (!std::isnan(bz)) _h_BZ->fill(bz);
+          _h_KSW->fill(calc_KSW(jets));
+          _h_NR->fill(fabs(calc_NR(jets)));
+          _h_ALPHA34->fill(calc_ALPHA34(jets));
+        }
+      }
+
+    }
+
+
+    /// Normalise histograms etc., after the run
+    void finalize() {
+      normalize(_h_BZ);
+      normalize(_h_KSW);
+      normalize(_h_NR);
+      normalize(_h_ALPHA34);
+    }
+
+    /// @}
+
+
+  private:
 
     /// @name Jet angle calculator functions
-    //@{
-    /// @todo Move to utils? (taken from DELPHI_2003)
+    /// @{
 
     /// @todo Use Jet or FourMomentum interface rather than PseudoJet
     /// @todo Move to utils?
@@ -53,107 +117,22 @@ namespace Rivet {
       return dot(p3,p4) / (p3.mod()*p4.mod());
     }
 
-    //@}
+    /// @}
 
-  }
-
-
-  class OPAL_2001_S4553896 : public Analysis {
-  public:
-
-    /// @name Constructors etc.
-    //@{
-
-    /// Constructor
-    OPAL_2001_S4553896()
-      : Analysis("OPAL_2001_S4553896")
-    {    }
-
-    //@}
-
-
-  public:
-
-    /// @name Analysis methods
-    //@{
-
-    /// Book histograms and initialise projections before the run
-    void init() {
-
-      /// Initialise and register projections here
-      const FinalState fs;
-      declare(fs, "FS");
-      declare(FastJets(fs, FastJets::DURHAM, 0.7), "Jets");
-
-
-      /// @todo Book histograms here, e.g.:
-      _h_BZ      = bookHisto1D(3, 1, 1);
-      _h_KSW     = bookHisto1D(4, 1, 1);
-      _h_NR      = bookHisto1D(5, 1, 1);
-      _h_ALPHA34 = bookHisto1D(6, 1, 1);
-    }
-
-
-    /// Perform the per-event analysis
-    void analyze(const Event& event) {
-      const double weight = event.weight();
-
-      // Even if we only generate hadronic events, we still need a cut on numCharged >= 2.
-      if (apply<FinalState>(event, "FS").particles().size() < 2) {
-        vetoEvent;
-      }
-
-      const FastJets& fastjets = apply<FastJets>(event, "Jets");
-      if (fastjets.clusterSeq()) {
-        vector<fastjet::PseudoJet> jets;
-        foreach (const fastjet::PseudoJet& jet,
-                 fastjet::sorted_by_E(fastjets.clusterSeq()->exclusive_jets_ycut(0.008))) {
-          if (jet.E()>3.0*GeV) jets.push_back(jet);
-        }
-        if (jets.size() == 4) {
-          // Prevent nan-fill due to division by zero in calc_BZ
-          double bz = fabs(calc_BZ(jets));
-          if (!std::isnan(bz)) _h_BZ->fill(bz, weight);
-          _h_KSW->fill(calc_KSW(jets), weight);
-          _h_NR->fill(fabs(calc_NR(jets)), weight);
-          _h_ALPHA34->fill(calc_ALPHA34(jets), weight);
-        }
-      }
-
-
-    }
-
-
-    /// Normalise histograms etc., after the run
-    void finalize() {
-
-      /// Normalise, scale and otherwise manipulate histograms here
-      normalize(_h_BZ);
-      normalize(_h_KSW);
-      normalize(_h_NR);
-      normalize(_h_ALPHA34);
-
-    }
-
-    //@}
-
-
-  private:
 
     /// @name Histograms
-    //@{
-
+    /// @{
     Histo1DPtr _h_BZ;
     Histo1DPtr _h_KSW;
     Histo1DPtr _h_NR;
     Histo1DPtr _h_ALPHA34;
-    //@}
+    /// @}
 
   };
 
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(OPAL_2001_S4553896);
+  RIVET_DECLARE_ALIASED_PLUGIN(OPAL_2001_S4553896, OPAL_2001_I552446);
 
 }

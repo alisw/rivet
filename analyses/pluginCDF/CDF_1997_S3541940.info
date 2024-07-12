@@ -6,6 +6,7 @@ Collider: Tevatron Run 1
 SpiresID: 3541940
 InspireID: 442265
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Frank Siegert <frank.siegert@cern.ch>
 References:
@@ -34,3 +35,7 @@ BibTeX: '@Article{Abe:1997yb,
      doi       = "10.1103/PhysRevD.56.2532",
      SLACcitation  = "%%CITATION = PHRVA,D56,2532;%%"
 }'
+
+ReleaseTests:
+ - $A TVT-Run-I-Jets-5
+

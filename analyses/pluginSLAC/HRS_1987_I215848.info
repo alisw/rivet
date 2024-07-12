@@ -1,0 +1,34 @@
+Name: HRS_1987_I215848
+Year: 1987
+Summary: Hadron Spectra in $e^+e^-$ collisions at 29 GeV
+Experiment: HRS
+Collider: PEP
+InspireID: 215848
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 35 (1987) 2639
+RunInfo: 
+  Hadronic e+e- events at $\sqrt{s} = 29.$ GeV
+Beams: [e+, e-]
+Energies: [29.]
+Description:
+  '$K^0$, $K^+$, $p$, $\pi^+$ and $\Lambda^0$ spectra at $\sqrt{s} = 29.$ GeV using the HRS detector at PEP.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Derrick:1985wd
+BibTeX: '@article{Derrick:1985wd,
+    author = "Derrick, M. and others",
+    title = "{Hadron Production in $e^+ e^-$ Annihilation at $\sqrt{s}=29$-{GeV}}",
+    reportNumber = "ANL-HEP-CP-85-69, PU-85-537, IUHEE-69, UM-HE-85-16",
+    doi = "10.1103/PhysRevD.35.2639",
+    journal = "Phys. Rev. D",
+    volume = "35",
+    pages = "2639",
+    year = "1987"
+}
+'

@@ -1,0 +1,31 @@
+Name: PLUTO_1979_I140818
+Year: 1979
+Summary: Hadronic cross section in $e^+e^-$ collisions for energies between 9.4 to 9.48
+Experiment: PLUTO
+Collider:  PETRA
+InspireID: 140818
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Z.Phys. C1 (1979) 343, 1979 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: yes
+Beams: [e-, e+]
+Description:
+  'Measurement of the hadronic cross section in $e^+e^-$ collisions for energies between 9.4 to 9.48 GeV.'
+Keywords: []
+BibKey: Berger:1979uv
+BibTeX: '@article{Berger:1979uv,
+      author         = "Berger, Christoph and others",
+      title          = "{Measurement of Leptonic Branching Ratios of the
+                        $\Upsilon$ (9.46)}",
+      collaboration  = "PLUTO",
+      journal        = "Z. Phys.",
+      volume         = "C1",
+      year           = "1979",
+      pages          = "343",
+      doi            = "10.1007/BF01546972",
+      reportNumber   = "DESY-79-19",
+      SLACcitation   = "%%CITATION = ZEPYA,C1,343;%%"
+}'

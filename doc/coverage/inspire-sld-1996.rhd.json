@@ -1,0 +1,64 @@
+{
+    "382002": [
+        "A Test of the flavor independence of strong interactions", 
+        "SLD", 
+        "10.1103/PhysRevD.53.R2271", 
+        null, 
+        "hep-ex/9501005", 
+        "ins382002", 
+        null, 
+        [
+            "SLAC-PUB-6687"
+        ]
+    ], 
+    "394980": [
+        "Measurements of R(b) with impact parameters and displaced vertices", 
+        "SLD", 
+        "10.1103/PhysRevD.53.1023", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-6569", 
+            "SLAC-PUB-95-6569"
+        ]
+    ], 
+    "405739": [
+        "First study of rapidity gaps in e+ e- annihilation", 
+        "SLD", 
+        "10.1103/PhysRevLett.76.4886", 
+        null, 
+        "hep-ex/9607008", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-7076"
+        ]
+    ], 
+    "415576": [
+        "Factorial and cumulant moments in e+ e- ---> hadrons at the Z0 resonance", 
+        "SLD", 
+        "10.1016/0370-2693(96)00046-9", 
+        null, 
+        "hep-ex/9601010", 
+        "ins415576", 
+        null, 
+        [
+            "SLAC-PUB-7027", 
+            "SLAC-PUB-95-7027"
+        ]
+    ], 
+    "422172": [
+        "Measurement of the charged multiplicities in b, c and light quark events from Z0 decays", 
+        "SLD", 
+        "10.1016/0370-2693(96)01025-8", 
+        null, 
+        "hep-ex/9608008", 
+        "ins422172", 
+        null, 
+        [
+            "SLAC-PUB-7172"
+        ]
+    ]
+}

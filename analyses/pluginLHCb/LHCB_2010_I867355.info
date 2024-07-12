@@ -28,7 +28,7 @@ Description:
 BibKey: Aaij:2010gn
 BibTeX: '@article{Aaij:2010gn,
       author         = "Aaij, R. and others",
-      title          = "{Measurement of $\sigma(pp \to b \bar{b} X)$ at $\sqrt{s} = 7\;\TeV}$ in the forward region}",
+      title          = "{Measurement of $\sigma(pp \to b \bar{b} X)$ at $\sqrt{s} = 7~\TeV}$ in the forward region}",
       collaboration  = "LHCb Collaboration",
       journal        = "Phys.Lett.",
       volume         = "B694",
@@ -41,3 +41,7 @@ BibTeX: '@article{Aaij:2010gn,
       reportNumber   = "CERN-PH-EP-2010-029",
       SLACcitation   = "%%CITATION = ARXIV:1009.2731;%%"
 }'
+
+ReleaseTests:
+ - $A LHC-7-Bottom-0
+

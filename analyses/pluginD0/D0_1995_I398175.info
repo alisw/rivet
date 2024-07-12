@@ -5,6 +5,7 @@ Experiment: D0
 Collider: Tevatron
 InspireID: 398175
 Status: VALIDATED
+Reentrant: false
 Authors:
  - Simone Amoroso <amoroso@cern.ch>
 References:

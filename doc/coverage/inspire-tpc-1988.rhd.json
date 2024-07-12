@@ -1,0 +1,60 @@
+{
+    "252222": [
+        "Charmonium Production in Photon-photon Collisions", 
+        "TPC/Two Gamma", 
+        "10.1103/PhysRevLett.60.2355", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "NIKHEF-H-87-23"
+        ]
+    ], 
+    "260840": [
+        "Formation of Spin One Mesons by Photon-photon Fusion", 
+        "TPC/Two Gamma", 
+        "10.1103/PhysRevD.38.1", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "UCSB-HEP-88-1"
+        ]
+    ], 
+    "261630": [
+        "Production of Four Prong Final States in Photon-photon Collisions", 
+        "TPC/Two Gamma", 
+        "10.1103/PhysRevD.37.28", 
+        null, 
+        null, 
+        "ins261630", 
+        null, 
+        [
+            "UCR-TPC-87-01"
+        ]
+    ], 
+    "262143": [
+        "Charged hadron inclusive cross-sections and fractions in $e^+e^-$ annihiliation $\\sqrt{s}=29$ GeV", 
+        "TPC/Two Gamma", 
+        "10.1103/PhysRevLett.61.1263", 
+        null, 
+        null, 
+        "ins262143", 
+        null, 
+        [
+            "LBL-24896"
+        ]
+    ], 
+    "268749": [
+        "$f1(1285)$ formation in photon photon fusion reactions", 
+        "TPC-TWO-GAMMA", 
+        "10.1016/0370-2693(88)91840-0", 
+        null, 
+        null, 
+        null, 
+        null, 
+        []
+    ]
+}

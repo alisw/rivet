@@ -1,0 +1,33 @@
+Name: HRS_1988_I23360
+Year: 1988
+Summary: Charm meson spectra in $e^+e^-$ collisions at 29 GeV
+Experiment: HRS
+Collider: PEP
+InspireID: 23360
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+- Phys.Lett. B206 (1988) 551-556, 1988 
+RunInfo: 
+  Hadronic e+e- events at $\sqrt{s} = 29.$ GeV
+NumEvents: 1000000
+Beams: [e+, e-]
+Energies: [29.]
+PtCuts: [0]
+Description:
+  $D^{*\pm}$, $D^0,\bar{D}^0$ and $D^\pm$ meson momentum spectrum measured at $\sqrt{s} = 29.$ GeV using the HRS detector at PEP. Only the spectra are implemented, not the electroweak asymmetries.
+BibKey: Baringer:1988ue
+BibTeX: '@article{Baringer:1988ue,
+      author         = "Baringer, Philip S. and others",
+      title          = "{Production Cross-section and Electroweak Asymmetry of
+                        $D^*$ and $D$ Mesons Produced in $e^+ e^-$ Annihilations
+                        at 29-{GeV}}",
+      journal        = "Phys. Lett.",
+      volume         = "B206",
+      year           = "1988",
+      pages          = "551-556",
+      doi            = "10.1016/0370-2693(88)91628-0",
+      reportNumber   = "ANL-HEP-PR-88-03, PU-88-613, IUHEE-88-2, UM-HE-88-2",
+      SLACcitation   = "%%CITATION = PHLTA,B206,551;%%"
+}'

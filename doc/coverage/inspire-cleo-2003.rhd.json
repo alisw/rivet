@@ -1,0 +1,201 @@
+{
+    "591237": [
+        "Dalitz analysis of D0 ---> K0(S) pi+ pi-", 
+        "CLEO", 
+        "10.1103/PhysRevLett.89.251802", 
+        null, 
+        "hep-ex/0207067", 
+        null, 
+        null, 
+        [
+            "CLNS-02-1792", 
+            "CLEO-02-10"
+        ]
+    ], 
+    "599918": [
+        "Determination of the anti-B ---> D* l anti-nu decay width and |V(cb)|", 
+        "CLEO", 
+        "10.1103/PhysRevD.67.032001", 
+        null, 
+        "hep-ex/0210040", 
+        null, 
+        null, 
+        [
+            "CLNS-01-1774", 
+            "CLEO-01-27"
+        ]
+    ], 
+    "600099": [
+        "First observation of the exclusive decays Lambda+(c) ---> Lambda pi+ pi+ pi- pi0 and Lambda+(c) ---> Lambda omega pi+", 
+        "CLEO", 
+        "10.1103/PhysRevD.67.012001", 
+        null, 
+        "hep-ex/0210048", 
+        null, 
+        null, 
+        [
+            "CLNS-02-1800", 
+            "CLEO-02-13"
+        ]
+    ], 
+    "601701": [
+        "Inclusive eta-prime production from the Upsilon(1S)", 
+        "CLEO", 
+        "10.1103/PhysRevD.67.052003", 
+        null, 
+        "hep-ex/0211029", 
+        null, 
+        null, 
+        [
+            "CLNS-02-1805", 
+            "CLEO-02-14"
+        ]
+    ], 
+    "604800": [
+        "First search for the flavor changing neutral current decay D0 ---> gamma gamma", 
+        "CLEO", 
+        "10.1103/PhysRevLett.90.101801", 
+        null, 
+        "hep-ex/0212045", 
+        null, 
+        null, 
+        [
+            "CLNS-02-1806", 
+            "CLEO-02-15"
+        ]
+    ], 
+    "605177": [
+        "Measurement of lepton momentum moments in the decay anti-B ---> X l anti-nu and determination of heavy quark expansion parameters and |V(cb)|", 
+        "CLEO", 
+        "10.1103/PhysRevD.67.072001", 
+        null, 
+        "hep-ex/0212051", 
+        null, 
+        null, 
+        [
+            "CLNS-02-1810", 
+            "CLEO-02-16"
+        ]
+    ], 
+    "611745": [
+        "Measurements of the branching fractions and helicity amplitudes in $B \\to D^{*} \\rho$ decays", 
+        "CLEO", 
+        "10.1103/PhysRevD.67.112002", 
+        null, 
+        "hep-ex/0301028", 
+        null, 
+        null, 
+        [
+            "CLNS-03-1813", 
+            "CLEO-03-01"
+        ]
+    ], 
+    "613626": [
+        "Measurements of charmless hadronic two body B meson decays and the ratio B(B ---> D K) / B(B ---> D pi)", 
+        "CLEO", 
+        "10.1103/PhysRevD.75.119907", 
+        null, 
+        "hep-ex/0302026", 
+        null, 
+        null, 
+        [
+            "CLNS-03-1816", 
+            "CLEO-03-03", 
+            "CLNS03-1816", 
+            "CLEO-03-3"
+        ]
+    ], 
+    "613712": [
+        "Branching fractions of tau leptons decays to three charged hadrons", 
+        "CLEO", 
+        "10.1103/PhysRevLett.90.181802", 
+        null, 
+        "hep-ex/0302028", 
+        null, 
+        null, 
+        [
+            "CLNS-03-1818", 
+            "CLEO-03-04", 
+            "PHYS.REV.LETT."
+        ]
+    ], 
+    "614784": [
+        "Study of the charmless inclusive B ---> eta-prime X decay", 
+        "CLEO", 
+        "10.1103/PhysRevD.68.011101", 
+        null, 
+        "hep-ex/0303009", 
+        null, 
+        null, 
+        [
+            "CLNS-03-1815", 
+            "CLEO-03-02"
+        ]
+    ], 
+    "616620": [
+        "Search for B ---> anti-p e- anti-nu(e) X decay using a partial reconstruction method", 
+        "CLEO", 
+        "10.1103/PhysRevD.68.012004", 
+        null, 
+        "hep-ex/0304015", 
+        null, 
+        null, 
+        [
+            "CLNS-03-1820", 
+            "CLEO-03-06"
+        ]
+    ], 
+    "616827": [
+        "Study of the q**2 dependence of B ---> pi l nu and B ---> rho (omega) l nu decay and extraction of |V(u b)|", 
+        "CLEO", 
+        "10.1103/PhysRevD.68.072003", 
+        null, 
+        "hep-ex/0304019", 
+        null, 
+        null, 
+        [
+            "CLNS-03-1819", 
+            "CLEO-03-05"
+        ]
+    ], 
+    "617548": [
+        "Measurement of the charge asymmetry in B ---> K*(892)+- pi+-", 
+        "CLEO", 
+        "10.1103/PhysRevD.68.017101", 
+        null, 
+        "hep-ex/0304036", 
+        null, 
+        null, 
+        [
+            "CLNS03-1823", 
+            "CLEO-03-07"
+        ]
+    ], 
+    "618097": [
+        "Search for baryons in the radiative penguin decay b ---> s gamma", 
+        "CLEO", 
+        "10.1103/PhysRevD.68.011102", 
+        null, 
+        "hep-ex/0305005", 
+        null, 
+        null, 
+        [
+            "CLNS-03-1824", 
+            "CLEO-03-08"
+        ]
+    ], 
+    "619835": [
+        "Observation of a narrow resonance of mass 2.46-GeV/c**2 decaying to D*+(s) pi0 and confirmation of the D*(sJ)(2317) state", 
+        "CLEO", 
+        "10.1103/PhysRevD.68.032002", 
+        null, 
+        "hep-ex/0305100", 
+        null, 
+        null, 
+        [
+            "CLNS-03-1826", 
+            "CLEO-03-09", 
+            "CLNS03-1826"
+        ]
+    ]
+}

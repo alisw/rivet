@@ -1,0 +1,39 @@
+Name: BESIII_2016_I1419650
+Year: 2016
+Summary: Mass and angular distributions in $J/\psi\to\gamma\phi\phi$ decays
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1419650
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 93 (2016) 11, 112011
+RunInfo: e+e- > J/psi
+NeedCrossSection: no
+Beams: [e-, e+]
+Energies: [3.1]
+Description:
+  'Measurement of mass and angular distributions in $J/\psi\to\gamma\phi\phi$ decays'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2016qzq
+BibTeX: '@article{BESIII:2016qzq,
+    author = "Ablikim, Medina and others",
+    collaboration = "BESIII",
+    title = "{Observation of pseudoscalar and tensor resonances in $J/\psi\to \gamma \phi \phi$}",
+    eprint = "1602.01523",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevD.93.112011",
+    journal = "Phys. Rev. D",
+    volume = "93",
+    number = "11",
+    pages = "112011",
+    year = "2016"
+}
+'

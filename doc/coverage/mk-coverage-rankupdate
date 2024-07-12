@@ -1,0 +1,5 @@
+#! /usr/bin/env bash
+
+RANKFILES=$(echo *.rank)
+test -n "$V" && VERB="-v"
+./mk-coverage-html inspire-*.rhd.json -r "$RANKFILES" -R --update-ranking $VERB

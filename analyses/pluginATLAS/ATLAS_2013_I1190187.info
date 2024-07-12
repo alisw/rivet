@@ -5,6 +5,7 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1190187
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Oldrich Kepka <oldrich.kepka@cern.ch>
  - Katerina Moudra <katerina.moudra@cern.ch>
@@ -16,6 +17,7 @@ RunInfo:
 NumEvents: 100k
 Beams: [p+, p+]
 Energies: [7000]
+Luminosity_fb: 4.6
 PtCuts: [20]
 NeedsCrossSection: yes
 Description:
@@ -47,3 +49,7 @@ BibTeX: '@article{ATLAS:2012mec,
       reportNumber   = "CERN-PH-EP-2012-242",
       SLACcitation   = "%%CITATION = ARXIV:1210.2979;%%",
 }'
+
+ReleaseTests:
+ - $A LHC-WW-ll
+

@@ -5,10 +5,12 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1304688
 Status: VALIDATED
+Reentrant: true
 Authors:
  - W. H. Bell <W.Bell@cern.ch>
  - A. Grohsjean <alexander.grohsjean@cern.ch>
 References:
+ - ATLAS-TOPQ-2012-03
  - CERN-PH-EP-2014-114
  - arXiv:1407.0891[hep-ex]
 RunInfo:
@@ -41,3 +43,7 @@ BibTeX: '@article{Aad:2014iaa,
       reportNumber   = "CERN-PH-EP-2014-114",
       SLACcitation   = "%%CITATION = ARXIV:1407.0891;%%",
 }'
+
+ReleaseTests:
+ - $A LHC-7-Top-All
+

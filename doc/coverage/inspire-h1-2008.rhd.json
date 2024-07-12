@@ -1,0 +1,86 @@
+{
+    "761990": [
+        "Measurement of deeply virtual Compton scattering and its t-dependence at HERA", 
+        "H1", 
+        "10.1016/j.physletb.2007.11.093", 
+        "1059148", 
+        "0709.4114", 
+        "ins761990", 
+        null, 
+        [
+            "DESY-07-142"
+        ]
+    ], 
+    "767896": [
+        "Three- and Four-jet Production at Low x at HERA", 
+        "H1", 
+        "10.1140/epjc/s10052-008-0544-3", 
+        "1069802", 
+        "0711.2606", 
+        "ins767896", 
+        null, 
+        [
+            "DESY-07-200"
+        ]
+    ], 
+    "768933": [
+        "Measurement of isolated photon production in deep-inelastic scattering at HERA", 
+        "H1", 
+        "10.1140/epjc/s10052-008-0541-6", 
+        "1072130", 
+        "0711.4578", 
+        "ins768933", 
+        null, 
+        [
+            "DESY-07-147"
+        ]
+    ], 
+    "779349": [
+        "A Search for Excited Neutrinos in e- p Collisions at HERA", 
+        "H1", 
+        "10.1016/j.physletb.2008.04.020", 
+        "1088938", 
+        "0802.1858", 
+        null, 
+        null, 
+        [
+            "DESY-08-009"
+        ]
+    ], 
+    "786161": [
+        "Measurement of the Proton Structure Function F(L)(x, Q**2) at Low x", 
+        "H1", 
+        "10.1016/j.physletb.2008.05.070", 
+        null, 
+        "0805.2809", 
+        "ins786161", 
+        null, 
+        [
+            "DESY-08-053"
+        ]
+    ], 
+    "786884": [
+        "Search for Excited Electrons in ep Collisions at HERA", 
+        "H1", 
+        "10.1016/j.physletb.2008.07.014", 
+        "1106958", 
+        "0805.4530", 
+        null, 
+        null, 
+        [
+            "DESY-08-052"
+        ]
+    ], 
+    "789056": [
+        "Multi-Lepton Production at High Transverse Momenta in ep Collisions at HERA", 
+        "H1", 
+        "10.1016/j.physletb.2008.08.057", 
+        "1111667", 
+        "0806.3987", 
+        null, 
+        null, 
+        [
+            "DESY-08-065"
+        ]
+    ]
+}

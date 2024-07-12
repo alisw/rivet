@@ -1,0 +1,266 @@
+{
+    "1243599": [
+        "Muon Reconstruction and Identification with the Run II D0 Detector", 
+        "D0", 
+        "10.1016/j.nima.2013.11.050", 
+        null, 
+        "1307.5202", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-13-272-E"
+        ]
+    ], 
+    "1249879": [
+        "Measurement of Associated Production of Z Bosons with Charm Quark Jets in $p\\bar{p}$ Collisions at $\\sqrt{s}=1.96$ TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.112.042001", 
+        null, 
+        "1308.4384", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-13-329-E"
+        ]
+    ], 
+    "1255433": [
+        "Search for the $X$(4140) state in $B^+ \\to $J$_{\\psi,\\phi}K^+$ decays with the D0 Detector", 
+        "D0", 
+        "10.1103/PhysRevD.89.012004", 
+        null, 
+        "1309.6580", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-13-405-E"
+        ]
+    ], 
+    "1256082": [
+        "Combination of Measurements of the Top-Quark Pair Production Cross Section from the Tevatron Collider", 
+        "CDF", 
+        "10.1103/PhysRevD.89.072001", 
+        "1604612", 
+        "1309.7570", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-13-432-E"
+        ]
+    ], 
+    "1256340": [
+        "Study of <math display=\"inline\"><mi>C</mi><mi>P</mi></math> -violating charge asymmetries of single muons and like-sign dimuons in <math display=\"inline\"><mi>p</mi><mover accent=\"true\"><mi>p</mi><mo stretchy=\"false\">\u00af</mo></mover></math> collisions", 
+        "D0", 
+        "10.1103/PhysRevD.89.012002", 
+        null, 
+        "1310.0447", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-13-445-E"
+        ]
+    ], 
+    "1262803": [
+        "Measurement of the $W$ boson mass with the D0 detector", 
+        "D0", 
+        "10.1103/PhysRevD.89.012005", 
+        null, 
+        "1310.8628", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-13-489-E"
+        ]
+    ], 
+    "1267210": [
+        "Measurement of the Direct CP-Violating Charge Asymmetry in ${D_s^\\pm \\rightarrow \\phi \\pi^{\\pm}}$ Decays", 
+        "D0", 
+        "10.1103/PhysRevLett.112.111804", 
+        null, 
+        "1312.0741", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-13-550-E"
+        ]
+    ], 
+    "1268647": [
+        "Measurement of the W Boson Production Charge Asymmetry in $p\\bar{p}\\rightarrow W+X \\rightarrow e\\nu +X$ Events at $\\sqrt{s}=1.96$ TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.112.151803", 
+        null, 
+        "1312.2895", 
+        "ins1268647", 
+        null, 
+        [
+            "FERMILAB-PUB-13-567-E"
+        ]
+    ], 
+    "1273669": [
+        "Jet Energy Scale Determination in the D0 Experiment", 
+        "D0", 
+        "10.1016/j.nima.2014.05.044", 
+        null, 
+        "1312.6873", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-13-577-E"
+        ]
+    ], 
+    "1275618": [
+        "Improved $b$ Quark Jet Identification at the D0 Experiment", 
+        "D0", 
+        "10.1016/j.nima.2014.04.087", 
+        null, 
+        "1312.7623", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-13-579-E"
+        ]
+    ], 
+    "1275813": [
+        "Electron and Photon Identification in the D0 Experiment", 
+        "D0", 
+        "10.1016/j.nima.2014.03.013", 
+        null, 
+        "1401.0029", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-13-582-E"
+        ]
+    ], 
+    "1278493": [
+        "Measurement of differential $t\\bar{t}$ production cross sections in $p\\bar{p}$ collisions", 
+        "D0", 
+        "10.1103/PhysRevD.90.092006", 
+        null, 
+        "1401.5785", 
+        "ins1278493", 
+        null, 
+        [
+            "FERMILAB-PUB-14-012-E"
+        ]
+    ], 
+    "1280531": [
+        "Double Parton Interactions in $\\gamma+3$ Jet and $\\gamma+b/cjet+2$ Jet Events in $p \\bar p$ Collisions at $\\sqrt s=1.96$  TeV", 
+        "D0", 
+        "10.1103/PhysRevD.89.072006", 
+        null, 
+        "1402.1550", 
+        "ins1280531", 
+        null, 
+        [
+            "FERMILAB-PUB-14-018-E"
+        ]
+    ], 
+    "1282028": [
+        "Observation of s-channel production of single top quarks at the Tevatron", 
+        "CDF", 
+        "10.1103/PhysRevLett.112.231803", 
+        "1662835", 
+        "1402.5126", 
+        "ins1282028", 
+        null, 
+        [
+            "FERMILAB-PUB-14-031-E"
+        ]
+    ], 
+    "1283842": [
+        "Measurement of the forward-backward asymmetry in the distribution of leptons in $t\\bar{t}$ events in the lepton$+$jets channel", 
+        "D0", 
+        "10.1103/PhysRevD.90.072001", 
+        null, 
+        "1403.1294", 
+        "ins1283842", 
+        null, 
+        [
+            "FERMILAB-PUB-14-041-E"
+        ]
+    ], 
+    "1293918": [
+        "Measurement of the Forward-Backward Asymmetry in Top Quark-Antiquark Production in $p\\bar{p}$ Collisions using the Lepton+Jets Channel", 
+        "D0", 
+        "10.1103/PhysRevD.90.072011", 
+        null, 
+        "1405.0421", 
+        "ins1293918", 
+        null, 
+        [
+            "FERMILAB-PUB-14-116-E"
+        ]
+    ], 
+    "1294933": [
+        "Precision Measurement of the Top-Quark Mass in Lepton+Jets Final States", 
+        "D0", 
+        "10.1103/PhysRevLett.113.032002", 
+        null, 
+        "1405.1756", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-14-123-E"
+        ]
+    ], 
+    "1296263": [
+        "Measurement of the Differential $\\gamma+2~b$-Jet Cross Section and the Ratio $\\sigma$($\\gamma+2~b$-jets)/$\\sigma$($\\gamma+b$-jet) in $p\\bar{p}$ Collisions at $\\sqrt{s}$ = 1.96 TeV", 
+        "D0", 
+        "10.1016/j.physletb.2014.09.007", 
+        null, 
+        "1405.3964", 
+        "ins1296263", 
+        null, 
+        [
+            "FERMILAB-PUB-14-135-E"
+        ]
+    ], 
+    "1299990": [
+        "Observation and Studies of Double $J/\\psi$ Production at the Tevatron", 
+        "D0", 
+        "10.1103/PhysRevD.90.111101", 
+        null, 
+        "1406.2380", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-14-176-E"
+        ]
+    ], 
+    "1306901": [
+        "Measurement of the Electric Charge of the Top Quark in $\\boldsymbol{t\\bar{t}}$ Events", 
+        "D0", 
+        "10.1103/PhysRevD.90.051101", 
+        null, 
+        "1407.4837", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-14-237-E"
+        ]
+    ], 
+    "1307751": [
+        "Constraints on Models for the Higgs Boson with Exotic Spin and Parity in $\\boldsymbol{VH\\rightarrow Vb\\bar{b}}$ Final States", 
+        "D0", 
+        "10.1103/PhysRevLett.113.161802", 
+        null, 
+        "1407.6369", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-14-242-E"
+        ]
+    ], 
+    "1312970": [
+        "Measurement of the Direct $CP$-Violating Parameter $A_{CP}$ in the Decay $D^+ \\to K^-\\pi^+\\pi^+$", 
+        "D0", 
+        "10.1103/PhysRevD.90.111102", 
+        "1752693", 
+        "1408.6848", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-14-309-E"
+        ]
+    ]
+}

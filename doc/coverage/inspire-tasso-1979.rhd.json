@@ -1,0 +1,38 @@
+{
+    "140303": [
+        "Properties of Hadron Final States in e+ e- Annihilation at 13-GeV and 17-GeV Center-Of-Mass Energies", 
+        "TASSO", 
+        "10.1016/0370-2693(79)90699-3", 
+        null, 
+        null, 
+        "ins140303", 
+        null, 
+        [
+            "DESY-79-14"
+        ]
+    ], 
+    "142123": [
+        "Evidence for Planar Events in e+ e- Annihilation at High-Energies", 
+        "TASSO", 
+        "10.1016/0370-2693(79)90830-X", 
+        null, 
+        null, 
+        "ins142123", 
+        null, 
+        [
+            "DESY-79-53"
+        ]
+    ], 
+    "143198": [
+        "Energy Scan for Narrow States in $e^+ e^-$ Annihilation at Center-of-mass Energies Between 29.90-{GeV} and 31.46-{GeV}", 
+        "TASSO", 
+        "10.1016/0370-2693(79)90145-X", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-79-75"
+        ]
+    ]
+}

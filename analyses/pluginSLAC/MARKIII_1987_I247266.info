@@ -1,0 +1,36 @@
+Name: MARKIII_1987_I247266
+Year: 1987
+Summary:  Dalitz plot analysis of $D\to K\pi\pi$ decays
+Experiment: MARKIII
+Collider: PEP
+InspireID: 247266
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett.B 196 (1987) 107-112
+RunInfo: Any process producing D0 and D+ mesons
+Description:
+  'Measurement of the mass distributions in the decays $D^0\to K^-\pi^+\pi^0$, $D^0\to K^0_S\pi^+\pi^-$, $D^+\to K^0_S\pi^+\pi^0$ and
+   $D^+\to K^-\pi^+\pi^+$.
+   The data were read from the plots in the paper.
+   Resolution/acceptance effects have been not unfolded and given the agreement with the model in the paper this analysis should only be used for qualitative studies.'
+ValidationInfo:
+  'Herwig7 events using model from the paper'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: MARK-III:1987qok
+BibTeX: '@article{MARK-III:1987qok,
+    author = "Adler, J. and others",
+    collaboration = "MARK-III",
+    title = "{Resonant Substructure in K pi pi Decays of Charmed d Mesons}",
+    reportNumber = "SLAC-PUB-4346",
+    doi = "10.1016/0370-2693(87)91685-6",
+    journal = "Phys. Lett. B",
+    volume = "196",
+    pages = "107--112",
+    year = "1987"
+}
+'

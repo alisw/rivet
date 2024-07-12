@@ -1,0 +1,158 @@
+{
+    "661924": [
+        "Measurements of the $q^{2}$ dependence of the $D^0 \\to K^{-} \\mu^{+} \\nu$ and $D^0 \\to \\pi^{-} \\mu^{+} \\nu$ form factors",
+        "FOCUS",
+        "10.1016/j.physletb.2004.12.036",
+        null,
+        "hep-ex/0410037",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-04-277"
+        ]
+    ],
+    "662720": [
+        "Analysis of the semileptonic decay D0 ---> anti-K0 pi- mu+ nu",
+        "FOCUS",
+        "10.1016/j.physletb.2004.12.037",
+        null,
+        "hep-ex/0410067",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-04-294-E"
+        ]
+    ],
+    "662721": [
+        "Measurement of the branching ratio of the decay D0 ---> pi- mu+ nu relative to D0 ---> K- mu+ nu",
+        "FOCUS",
+        "10.1016/j.physletb.2004.12.062",
+        null,
+        "hep-ex/0410068",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-04-295-E"
+        ]
+    ],
+    "662830": [
+        "A Study of D0 ---> K0(S) K0(S) X decay channels",
+        "FOCUS",
+        "10.1016/j.physletb.2004.12.063",
+        null,
+        "hep-ex/0410077",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-04-301-E"
+        ]
+    ],
+    "663820": [
+        "Study of the D0 ---> K+ K- pi+ pi-",
+        "FOCUS",
+        "10.1016/j.physletb.2005.02.005",
+        null,
+        "hep-ex/0411031",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-04-326-E"
+        ]
+    ],
+    "666893": [
+        "Measurement of the doubly Cabibbo suppressed decay D0 ---> K+ pi- and a search for charm mixing",
+        "FOCUS",
+        "10.1016/j.physletb.2005.05.020",
+        null,
+        "hep-ex/0412034",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-04-398-E"
+        ]
+    ],
+    "677626": [
+        "Application of genetic programming to high energy physics event selection",
+        "FOCUS",
+        "10.1016/j.nima.2005.05.069",
+        null,
+        "hep-ex/0503007",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-05-030-E"
+        ]
+    ],
+    "678946": [
+        "Hadronic mass spectrum analysis of D+ ---> K- pi+ mu+ nu decay and measurement of the K*(892)0 mass and width",
+        "FOCUS",
+        "10.1016/j.physletb.2005.06.062",
+        null,
+        "hep-ex/0503043",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-05-044-E"
+        ]
+    ],
+    "681603": [
+        "A Measurement of the D+(s) lifetime",
+        "FOCUS",
+        "10.1103/PhysRevLett.95.052003",
+        null,
+        "hep-ex/0504056",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-05-085-E"
+        ]
+    ],
+    "683342": [
+        "Study of Lambda+(c) Cabibbo favored decays containing a Lambda baryon in the final state",
+        "FOCUS",
+        "10.1016/j.physletb.2005.08.014",
+        null,
+        "hep-ex/0505077",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-05-214-E"
+        ]
+    ],
+    "684211": [
+        "Search for T violation in charm meson decays",
+        "FOCUS",
+        "10.1016/j.physletb.2005.07.024",
+        null,
+        "hep-ex/0506012",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-05-222-E"
+        ]
+    ],
+    "684212": [
+        "Search for a strongly decaying neutral charmed pentaquark",
+        "FOCUS",
+        "10.1016/j.physletb.2005.07.023",
+        null,
+        "hep-ex/0506013",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-05-223-E"
+        ]
+    ],
+    "688341": [
+        "Search for Lambda+(c) ---> p K+ pi- and D+(s) ---> K+ K+ pi- using genetic programming event selection",
+        "FOCUS",
+        "10.1016/j.physletb.2005.08.032",
+        null,
+        "hep-ex/0507103",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-05-343-E"
+        ]
+    ]
+}

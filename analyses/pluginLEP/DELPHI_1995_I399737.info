@@ -1,0 +1,31 @@
+Name: DELPHI_1995_I399737
+Year: 1995
+Summary: Spectrum for $\Delta^{++}$ production in hadronic $Z^0$ decays
+Experiment: DELPHI
+Collider: LEP
+InspireID: 399737
+Status: VALIDATED
+Authors:
+ - Peter Richardson <Peter.Richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B361 (1995) 207-220
+RunInfo:
+  Hadronic Z decay events generated on the Z pole ($\sqrt{s} = 91.2$ GeV)
+NumEvents: 1000000
+Beams: [e+, e-]
+Energies: [91.2]
+Description: DELPHI results for the spectrum for $\Delta^{++}$ production in hadronic $Z^0$ decays
+BibKey: Abreu:1995we
+BibTeX: '@article{Abreu:1995we,
+      author         = "Abreu, P. and others",
+      title          = "{Measurement of Delta++ (1232) production in hadronic Z
+                        decays}",
+      collaboration  = "DELPHI",
+      journal        = "Phys. Lett.",
+      volume         = "B361",
+      year           = "1995",
+      pages          = "207-220",
+      doi            = "10.1016/0370-2693(95)01176-Q",
+      reportNumber   = "CERN-PPE-95-130",
+      SLACcitation   = "%%CITATION = PHLTA,B361,207;%%"
+}'

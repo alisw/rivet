@@ -12,18 +12,12 @@
 namespace Rivet {
 
 
-  /// @brief ALEPH jet rates and event shapes at LEP 1 and 2
+  /// ALEPH jet rates and event shapes at LEP 1 and 2
   class ALEPH_2004_S5765862 : public Analysis {
   public:
 
-    ALEPH_2004_S5765862()
-      : Analysis("ALEPH_2004_S5765862") , _initialisedJets(false),
-        _initialisedSpectra(false), _weightedTotalChargedPartNum(0)
-    {
-    }
+    RIVET_DEFAULT_ANALYSIS_CTOR(ALEPH_2004_S5765862);
 
-
-  public:
 
     void init() {
       _initialisedJets    = true;
@@ -33,8 +27,7 @@ namespace Rivet {
       //       uncertainties and overly complicated to program, so we ignore it.
       const FinalState fs;
       declare(fs, "FS");
-      FastJets durhamjets(fs, FastJets::DURHAM, 0.7);
-      durhamjets.useInvisibles(true);
+      FastJets durhamjets(fs, FastJets::DURHAM, 0.7, JetAlg::Muons::ALL, JetAlg::Invisibles::ALL);
       declare(durhamjets, "DurhamJets");
 
       const Thrust thrust(fs);
@@ -64,108 +57,111 @@ namespace Rivet {
       }
       // event shapes
       if(_initialisedJets) {
-        _h_thrust = bookHisto1D(offset+54, 1, 1);
-        _h_heavyjetmass = bookHisto1D(offset+62, 1, 1);
-        _h_totaljetbroadening = bookHisto1D(offset+70, 1, 1);
-        _h_widejetbroadening = bookHisto1D(offset+78, 1, 1);
-        _h_cparameter = bookHisto1D(offset+86, 1, 1);
-        _h_thrustmajor = bookHisto1D(offset+94, 1, 1);
-        _h_thrustminor = bookHisto1D(offset+102, 1, 1);
-        _h_jetmassdifference = bookHisto1D(offset+110, 1, 1);
-        _h_aplanarity = bookHisto1D(offset+118, 1, 1);
-        _h_planarity  = offset==0 ? Histo1DPtr() : bookHisto1D(offset+125, 1, 1);
-        _h_oblateness = bookHisto1D(offset+133, 1, 1);
-        _h_sphericity = bookHisto1D(offset+141, 1, 1);
+        book(_h_thrust ,offset+54, 1, 1);
+        book(_h_heavyjetmass ,offset+62, 1, 1);
+        book(_h_totaljetbroadening ,offset+70, 1, 1);
+        book(_h_widejetbroadening ,offset+78, 1, 1);
+        book(_h_cparameter ,offset+86, 1, 1);
+        book(_h_thrustmajor ,offset+94, 1, 1);
+        book(_h_thrustminor ,offset+102, 1, 1);
+        book(_h_jetmassdifference ,offset+110, 1, 1);
+        book(_h_aplanarity ,offset+118, 1, 1);
+        if ( offset != 0 )
+          book(_h_planarity, offset+125, 1, 1);
+        book(_h_oblateness ,offset+133, 1, 1);
+        book(_h_sphericity ,offset+141, 1, 1);
 
         // Durham n->m jet resolutions
-        _h_y_Durham[0] = bookHisto1D(offset+149, 1, 1);   // y12 d149 ... d156
-        _h_y_Durham[1] = bookHisto1D(offset+157, 1, 1);   // y23 d157 ... d164
-        if (offset<6) { // there is no y34, y45 and y56 for 200 gev
-          _h_y_Durham[2] = bookHisto1D(offset+165, 1, 1); // y34 d165 ... d172, but not 171
-          _h_y_Durham[3] = bookHisto1D(offset+173, 1, 1); // y45 d173 ... d179
-          _h_y_Durham[4] = bookHisto1D(offset+180, 1, 1); // y56 d180 ... d186
+        book(_h_y_Durham[0] ,offset+149, 1, 1);   // y12 d149 ... d156
+        book(_h_y_Durham[1] ,offset+157, 1, 1);   // y23 d157 ... d164
+        if (offset < 6) { // there is no y34, y45 and y56 for 200 gev
+          book(_h_y_Durham[2] ,offset+165, 1, 1); // y34 d165 ... d172, but not 171
+          book(_h_y_Durham[3] ,offset+173, 1, 1); // y45 d173 ... d179
+          book(_h_y_Durham[4] ,offset+180, 1, 1); // y56 d180 ... d186
         }
-        else if (offset==6) {
-          _h_y_Durham[2].reset();
-          _h_y_Durham[3].reset();
-          _h_y_Durham[4].reset();
+        else if (offset == 6) {
+          _h_y_Durham[2] = Histo1DPtr();
+          _h_y_Durham[3] = Histo1DPtr();
+          _h_y_Durham[4] = Histo1DPtr();
         }
-        else if (offset==7) {
-          _h_y_Durham[2] = bookHisto1D(172, 1, 1);
-          _h_y_Durham[3] = bookHisto1D(179, 1, 1);
-          _h_y_Durham[4] = bookHisto1D(186, 1, 1);
+        else if (offset == 7) {
+          book(_h_y_Durham[2] ,172, 1, 1);
+          book(_h_y_Durham[3] ,179, 1, 1);
+          book(_h_y_Durham[4] ,186, 1, 1);
         }
 
         // Durham n-jet fractions
-        _h_R_Durham[0] = bookHisto1D(offset+187, 1, 1); // R1 d187 ... d194
-        _h_R_Durham[1] = bookHisto1D(offset+195, 1, 1); // R2 d195 ... d202
-        _h_R_Durham[2] = bookHisto1D(offset+203, 1, 1); // R3 d203 ... d210
-        _h_R_Durham[3] = bookHisto1D(offset+211, 1, 1); // R4 d211 ... d218
-        _h_R_Durham[4] = bookHisto1D(offset+219, 1, 1); // R5 d219 ... d226
-        _h_R_Durham[5] = bookHisto1D(offset+227, 1, 1); // R>=6 d227 ... d234
+        book(_h_R_Durham[0] ,offset+187, 1, 1); // R1 d187 ... d194
+        book(_h_R_Durham[1] ,offset+195, 1, 1); // R2 d195 ... d202
+        book(_h_R_Durham[2] ,offset+203, 1, 1); // R3 d203 ... d210
+        book(_h_R_Durham[3] ,offset+211, 1, 1); // R4 d211 ... d218
+        book(_h_R_Durham[4] ,offset+219, 1, 1); // R5 d219 ... d226
+        book(_h_R_Durham[5] ,offset+227, 1, 1); // R>=6 d227 ... d234
       }
       // offset for the charged particle distributions
       offset = 0;
-      switch (int(sqrtS()/GeV + 0.5)) {
+      switch (int(sqrtS() + 0.5)) {
         case 133: offset = 0; break;
         case 161: offset = 1; break;
         case 172: offset = 2; break;
         case 183: offset = 3; break;
         case 189: offset = 4; break;
-        case 196: offset = 5; break;
+        case 197: offset = 5; break;
         case 200: offset = 6; break;
         case 206: offset = 7; break;
         default:
-          _initialisedSpectra=false;
+          _initialisedSpectra = false;
       }
       if (_initialisedSpectra) {
-        _h_xp = bookHisto1D( 2+offset, 1, 1);
-        _h_xi = bookHisto1D(11+offset, 1, 1);
-        _h_xe = bookHisto1D(19+offset, 1, 1);
-        _h_pTin  = bookHisto1D(27+offset, 1, 1);
-        _h_pTout = offset!=7 ? Histo1DPtr() : bookHisto1D(35, 1, 1);
-        _h_rapidityT = bookHisto1D(36+offset, 1, 1);
-        _h_rapidityS = bookHisto1D(44+offset, 1, 1);
+        book(_h_xp , 2+offset, 1, 1);
+        book(_h_xi ,11+offset, 1, 1);
+        book(_h_xe ,19+offset, 1, 1);
+        book(_h_pTin  ,27+offset, 1, 1);
+        if (offset == 7)
+          book(_h_pTout, 35, 1, 1);
+        book(_h_rapidityT ,36+offset, 1, 1);
+        book(_h_rapidityS ,44+offset, 1, 1);
       }
-
+      book(_weightedTotalChargedPartNum, "_weightedTotalChargedPartNum");
       if (!_initialisedSpectra && !_initialisedJets) {
         MSG_WARNING("CoM energy of events sqrt(s) = " << sqrtS()/GeV
                     << " doesn't match any available analysis energy .");
       }
+
+      book(mult, 1, 1, 1);
     }
 
 
     void analyze(const Event& e) {
-      const double weight = e.weight();
 
       const Thrust& thrust = apply<Thrust>(e, "Thrust");
       const Sphericity& sphericity = apply<Sphericity>(e, "Sphericity");
 
       if(_initialisedJets) {
-        bool LEP1 = fuzzyEquals(sqrtS(),91.2*GeV,0.01);
+        bool LEP1 = isCompatibleWithSqrtS(91.2*GeV,0.01);
         // event shapes
         double thr = LEP1 ? thrust.thrust() : 1.0 - thrust.thrust();
-        _h_thrust->fill(thr,weight);
-        _h_thrustmajor->fill(thrust.thrustMajor(),weight);
+        _h_thrust->fill(thr);
+        _h_thrustmajor->fill(thrust.thrustMajor());
         if(LEP1)
-          _h_thrustminor->fill(log(thrust.thrustMinor()),weight);
+          _h_thrustminor->fill(log(thrust.thrustMinor()));
         else
-          _h_thrustminor->fill(thrust.thrustMinor(),weight);
-        _h_oblateness->fill(thrust.oblateness(),weight);
+          _h_thrustminor->fill(thrust.thrustMinor());
+        _h_oblateness->fill(thrust.oblateness());
 
         const Hemispheres& hemi = apply<Hemispheres>(e, "Hemispheres");
-        _h_heavyjetmass->fill(hemi.scaledM2high(),weight);
-        _h_jetmassdifference->fill(hemi.scaledM2diff(),weight);
-        _h_totaljetbroadening->fill(hemi.Bsum(),weight);
-        _h_widejetbroadening->fill(hemi.Bmax(),weight);
+        _h_heavyjetmass->fill(hemi.scaledM2high());
+        _h_jetmassdifference->fill(hemi.scaledM2diff());
+        _h_totaljetbroadening->fill(hemi.Bsum());
+        _h_widejetbroadening->fill(hemi.Bmax());
 
         const ParisiTensor& parisi = apply<ParisiTensor>(e, "Parisi");
-        _h_cparameter->fill(parisi.C(),weight);
+        _h_cparameter->fill(parisi.C());
 
-        _h_aplanarity->fill(sphericity.aplanarity(),weight);
+        _h_aplanarity->fill(sphericity.aplanarity());
         if(_h_planarity)
-          _h_planarity->fill(sphericity.planarity(),weight);
-        _h_sphericity->fill(sphericity.sphericity(),weight);
+          _h_planarity->fill(sphericity.planarity());
+        _h_sphericity->fill(sphericity.sphericity());
 
         // Jet rates
         const FastJets& durjet = apply<FastJets>(e, "DurhamJets");
@@ -178,7 +174,7 @@ namespace Rivet {
             if (yn<=0.0) continue;
             logyn = -log(yn);
             if (_h_y_Durham[i]) {
-              _h_y_Durham[i]->fill(logyn, weight);
+              _h_y_Durham[i]->fill(logyn);
             }
             if(!LEP1) logyn *= log10e;
             for (size_t j = 0; j < _h_R_Durham[i]->numBins(); ++j) {
@@ -186,7 +182,7 @@ namespace Rivet {
               double width = _h_R_Durham[i]->bin(j).xWidth();
               if(-val<=logynm1) break;
               if(-val<logyn) {
-                _h_R_Durham[i]->fill(val+0.5*width, weight*width);
+                _h_R_Durham[i]->fill(val+0.5*width, width);
               }
             }
             logynm1 = logyn;
@@ -195,13 +191,13 @@ namespace Rivet {
             double val   = _h_R_Durham[5]->bin(j).xMin();
             double width = _h_R_Durham[5]->bin(j).xWidth();
             if(-val<=logynm1) break;
-            _h_R_Durham[5]->fill(val+0.5*width, weight*width);
+            _h_R_Durham[5]->fill(val+0.5*width, width);
           }
         }
         if( !_initialisedSpectra) {
           const ChargedFinalState& cfs = apply<ChargedFinalState>(e, "CFS");
           const size_t numParticles = cfs.particles().size();
-          _weightedTotalChargedPartNum += numParticles * weight;
+          _weightedTotalChargedPartNum->fill(numParticles);
         }
       }
 
@@ -209,29 +205,29 @@ namespace Rivet {
       if(_initialisedSpectra) {
         const ChargedFinalState& cfs = apply<ChargedFinalState>(e, "CFS");
         const size_t numParticles = cfs.particles().size();
-        _weightedTotalChargedPartNum += numParticles * weight;
+        _weightedTotalChargedPartNum->fill(numParticles);
         const ParticlePair& beams = apply<Beam>(e, "Beams").beams();
         const double meanBeamMom = ( beams.first.p3().mod() +
                                      beams.second.p3().mod() ) / 2.0;
-        foreach (const Particle& p, cfs.particles()) {
+        for (const Particle& p : cfs.particles()) {
           const double xp = p.p3().mod()/meanBeamMom;
-          _h_xp->fill(xp   , weight);
+          _h_xp->fill(xp   );
           const double logxp = -std::log(xp);
-          _h_xi->fill(logxp, weight);
+          _h_xi->fill(logxp);
           const double xe = p.E()/meanBeamMom;
-          _h_xe->fill(xe   , weight);
+          _h_xe->fill(xe   );
           const double pTinT  = dot(p.p3(), thrust.thrustMajorAxis());
           const double pToutT = dot(p.p3(), thrust.thrustMinorAxis());
-          _h_pTin->fill(fabs(pTinT/GeV), weight);
-          if(_h_pTout) _h_pTout->fill(fabs(pToutT/GeV), weight);
+          _h_pTin->fill(fabs(pTinT/GeV));
+          if(_h_pTout) _h_pTout->fill(fabs(pToutT/GeV));
           const double momT = dot(thrust.thrustAxis()        ,p.p3());
           const double rapidityT = 0.5 * std::log((p.E() + momT) /
                                                   (p.E() - momT));
-          _h_rapidityT->fill(fabs(rapidityT), weight);
+          _h_rapidityT->fill(fabs(rapidityT));
           const double momS = dot(sphericity.sphericityAxis(),p.p3());
           const double rapidityS = 0.5 * std::log((p.E() + momS) /
                                                   (p.E() - momS));
-          _h_rapidityS->fill(fabs(rapidityS), weight);
+          _h_rapidityS->fill(fabs(rapidityS));
         }
       }
     }
@@ -265,8 +261,9 @@ namespace Rivet {
       }
 
       Histo1D temphisto(refData(1, 1, 1));
-      const double avgNumParts = _weightedTotalChargedPartNum / sumOfWeights();
-      Scatter2DPtr  mult = bookScatter2D(1, 1, 1);
+      const double avgNumParts = dbl(*_weightedTotalChargedPartNum) / sumOfWeights();
+
+
       for (size_t b = 0; b < temphisto.numBins(); b++) {
         const double x  = temphisto.bin(b).xMid();
         const double ex = temphisto.bin(b).xWidth()/2.;
@@ -286,11 +283,13 @@ namespace Rivet {
       }
     }
 
+
   private:
 
-    bool _initialisedJets;
-    bool _initialisedSpectra;
+    bool _initialisedJets = false;
+    bool _initialisedSpectra = false;
 
+    Scatter2DPtr mult;
     Histo1DPtr _h_xp;
     Histo1DPtr _h_xi;
     Histo1DPtr _h_xe;
@@ -314,13 +313,12 @@ namespace Rivet {
     Histo1DPtr _h_R_Durham[6];
     Histo1DPtr _h_y_Durham[5];
 
-    double _weightedTotalChargedPartNum;
+    CounterPtr _weightedTotalChargedPartNum;
 
   };
 
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ALEPH_2004_S5765862);
+  RIVET_DECLARE_ALIASED_PLUGIN(ALEPH_2004_S5765862, ALEPH_2004_I636645);
 
 }

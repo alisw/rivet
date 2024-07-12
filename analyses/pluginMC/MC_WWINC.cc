@@ -32,42 +32,41 @@ namespace Rivet {
 
       // properties of the pair momentum
       double sqrts = sqrtS()>0. ? sqrtS() : 14000.;
-      _h_WW_pT = bookHisto1D("WW_pT", logspace(100, 1.0, 0.5*sqrts));
-      _h_WW_pT_peak = bookHisto1D("WW_pT_peak", 25, 0.0, 25.0);
-      _h_WW_eta = bookHisto1D("WW_eta", 40, -7.0, 7.0);
-      _h_WW_phi = bookHisto1D("WW_phi", 25, 0.0, TWOPI);
-      _h_WW_m = bookHisto1D("WW_m", logspace(100, 150.0, 180.0+0.25*sqrts));
+      book(_h_WW_pT ,"WW_pT", logspace(100, 1.0, max(1.1,0.5*sqrts)));
+      book(_h_WW_pT_peak ,"WW_pT_peak", 25, 0.0, 25.0);
+      book(_h_WW_eta ,"WW_eta", 40, -7.0, 7.0);
+      book(_h_WW_phi ,"WW_phi", 25, 0.0, TWOPI);
+      book(_h_WW_m ,"WW_m", logspace(100, 150.0, 180.0+0.25*sqrts));
 
       // correlations between the WW
-      _h_WW_dphi = bookHisto1D("WW_dphi", 25, 0.0, PI);  /// @todo non-linear?
-      _h_WW_deta = bookHisto1D("WW_deta", 25, -7.0, 7.0);
-      _h_WW_dR = bookHisto1D("WW_dR", 25, 0.5, 7.0);
-      _h_WW_dpT = bookHisto1D("WW_dpT", logspace(100, 1.0, 0.5*sqrts));
-      _h_WW_costheta_planes = bookHisto1D("WW_costheta_planes", 25, -1.0, 1.0);
+      book(_h_WW_dphi ,"WW_dphi", 25, 0.0, PI);  /// @todo non-linear?
+      book(_h_WW_deta ,"WW_deta", 25, -7.0, 7.0);
+      book(_h_WW_dR ,"WW_dR", 25, 0.5, 7.0);
+      book(_h_WW_dpT ,"WW_dpT", logspace(100, 1.0, max(1.1,0.5*sqrts)));
+      book(_h_WW_costheta_planes ,"WW_costheta_planes", 25, -1.0, 1.0);
 
       /// @todo fuer WW: missing ET
 
       // properties of the W bosons
-      _h_W_pT = bookHisto1D("W_pT", logspace(100, 10.0, 0.25*sqrts));
-      _h_W_eta = bookHisto1D("W_eta", 70, -7.0, 7.0);
+      book(_h_W_pT ,"W_pT", logspace(100, 10.0, max(11.,0.25*sqrts)));
+      book(_h_W_eta ,"W_eta", 70, -7.0, 7.0);
 
       // properties of the leptons
-      _h_Wl_pT = bookHisto1D("Wl_pT", logspace(100, 30.0, 0.1
-                                                      *sqrts));
-      _h_Wl_eta = bookHisto1D("Wl_eta", 40, -3.5, 3.5);
+      book(_h_Wl_pT ,"Wl_pT", logspace(100, 30.0, max(31., 0.1*sqrts)));
+      book(_h_Wl_eta ,"Wl_eta", 40, -3.5, 3.5);
 
       // correlations between the opposite charge leptons
-      _h_WeWm_dphi = bookHisto1D("WeWm_dphi", 25, 0.0, PI);
-      _h_WeWm_deta = bookHisto1D("WeWm_deta", 25, -5.0, 5.0);
-      _h_WeWm_dR = bookHisto1D("WeWm_dR", 25, 0.5, 5.0);
-      _h_WeWm_m = bookHisto1D("WeWm_m", 100, 0.0, 300.0);
+      book(_h_WeWm_dphi ,"WeWm_dphi", 25, 0.0, PI);
+      book(_h_WeWm_deta ,"WeWm_deta", 25, -5.0, 5.0);
+      book(_h_WeWm_dR ,"WeWm_dR", 25, 0.5, 5.0);
+      book(_h_WeWm_m ,"WeWm_m", 100, 0.0, 300.0);
     }
 
 
 
     /// Do the analysis
     void analyze(const Event & e) {
-      const double weight = e.weight();
+      const double weight = 1.0;
 
       const WFinder& wenufinder = apply<WFinder>(e, "WenuFinder");
       if (wenufinder.bosons().size()!=1) {
@@ -179,6 +178,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(MC_WWINC);
+  RIVET_DECLARE_PLUGIN(MC_WWINC);
 
 }

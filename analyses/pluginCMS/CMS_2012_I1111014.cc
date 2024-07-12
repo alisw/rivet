@@ -24,7 +24,7 @@ namespace Rivet {
 
     void init() {
       // Set up projections
-      const FinalState fs(-5.0, 5.0);
+      const FinalState fs((Cuts::etaIn(-5.0, 5.0)));
       declare(fs, "FS");
       FastJets fj5(fs, FastJets::ANTIKT, 0.5);
       declare(fj5, "Jets5");
@@ -48,17 +48,17 @@ namespace Rivet {
           declare(jsp, _jsnames_pT[i][j]);
 
           // Book profile histograms for each (pT,y) bin
-          _profhistRho_pT[i][j] = bookProfile1D(histo_counter, 1, 1);
+          book(_profhistRho_pT[i][j], histo_counter, 1, 1);
           histo_counter+=1;
         }
       }
-      _profhistNch[0] = bookProfile1D(126, 1, 1);
-      _profhistNch[1] = bookProfile1D(126, 1, 2);
-      _profhistDr[0] = bookProfile1D(127, 1, 1);
-      _profhistDr[1] = bookProfile1D(127, 1, 2);
-      _profhistDeta = make_shared<Profile1D>(_profhistDr[0]->clone());
-      _profhistDphi = make_shared<Profile1D>(_profhistDr[0]->clone());
-      _profhistAsym = bookScatter2D("d128-x01-y01", true);
+      book(_profhistNch[0], 126, 1, 1);
+      book(_profhistNch[1], 126, 1, 2);
+      book(_profhistDr[0], 127, 1, 1);
+      book(_profhistDr[1], 127, 1, 2);
+      book(_profhistDeta, "TMP/Deta", refData(127,1,1));
+      book(_profhistDphi, "TMP/Dphi", refData(127,1,1));
+      book(_profhistAsym, "d128-x01-y01", true);
 
     }
 
@@ -77,8 +77,6 @@ namespace Rivet {
         vetoEvent;
       }
       // Calculate and histogram jet shapes
-      const double weight = evt.weight();
-
       for (size_t jy = 0; jy < 6; ++jy) {
         for (size_t ipt = 0; ipt < 22; ++ipt) {
           if (ipt > 20 && jy == 3) continue;
@@ -88,7 +86,7 @@ namespace Rivet {
           for (size_t ijet = 0; ijet < jsipt.numJets(); ++ijet) {
             for (size_t rbin = 0; rbin < jsipt.numBins(); ++rbin) {
               const double r_rho = jsipt.rBinMid(rbin);
-              _profhistRho_pT[ipt][jy]->fill(r_rho, (1./0.1)*jsipt.diffJetShape(ijet, rbin), weight);
+              _profhistRho_pT[ipt][jy]->fill(r_rho, (1./0.1)*jsipt.diffJetShape(ijet, rbin));
             }
           }
         }
@@ -98,30 +96,30 @@ namespace Rivet {
       Jets jets5 = apply<FastJets>(evt, "Jets5")
         .jetsByPt(Cuts::ptIn(50*GeV, 1000*GeV) && Cuts::absrap < 2.0);
       // Calculate and histogram charged jet shapes
-      foreach (const Jet& jet, jets5) {
+      for (const Jet& jet : jets5) {
         double ncharge = 0;
         double eta=0;
         double phi=0;
         double sumpt=0;
-        foreach (const Particle& p, jet.particles()) {
-          if ((p.pT() < 0.5) || (p.threeCharge()==0) || (abs(p.pdgId())==11) || (abs(p.pdgId())==13)) continue;
+        for (const Particle& p : jet.particles()) {
+          if ((p.pT() < 0.5) || (p.charge3()==0) || (abs(p.pid())==11) || (abs(p.pid())==13)) continue;
           ncharge++;
           sumpt+=p.pT();
           eta+=p.pT()*p.eta();
           phi+=p.pT()*mapAngleMPiToPi(p.phi()-jet.phi());
         }
         if (jet.absrap()<1.0) {
-          _profhistNch[0]->fill(jet.pT(), ncharge , weight);
+          _profhistNch[0]->fill(jet.pT(), ncharge );
         } else if (jet.absrap()<2.0) {
-          _profhistNch[1]->fill(jet.pT(), ncharge , weight);
+          _profhistNch[1]->fill(jet.pT(), ncharge );
         }
         if (sumpt==0) continue;
         eta/=sumpt;
         phi/=sumpt;
         double deta=0;
         double dphi=0;
-        foreach (const Particle& p, jet.particles()) {
-          if ((p.pT() < 0.5) || (p.threeCharge()==0) || (abs(p.pdgId())==11) || (abs(p.pdgId())==13)) continue;
+        for (const Particle& p : jet.particles()) {
+          if ((p.pT() < 0.5) || (p.charge3()==0) || (abs(p.pid())==11) || (abs(p.pid())==13)) continue;
           deta+=p.pT()*pow(p.eta()-eta,2);
           dphi+=p.pT()*pow(mapAngleMPiToPi(p.phi()-phi-jet.phi()),2);
         }
@@ -129,11 +127,11 @@ namespace Rivet {
         dphi/=sumpt;
         if ((dphi==0)||(deta==0)) continue;
         if (jet.absrap()<1.0) {
-          _profhistDr[0]->fill(jet.pT(), deta+dphi , weight);
-          _profhistDeta->fill(jet.pT(), deta , weight);
-          _profhistDphi->fill(jet.pT(), dphi , weight);
+          _profhistDr[0]->fill(jet.pT(), deta+dphi );
+          _profhistDeta->fill(jet.pT(), deta );
+          _profhistDphi->fill(jet.pT(), dphi );
         } else if (jet.absrap()<2.0) {
-          _profhistDr[1]->fill(jet.pT(), deta+dphi , weight);
+          _profhistDr[1]->fill(jet.pT(), deta+dphi );
         }
       }
     }
@@ -142,7 +140,7 @@ namespace Rivet {
     // Finalize
     void finalize() {
       for (unsigned int i = 0; i < _profhistAsym->numPoints(); ++i) {
-        if((_profhistDeta->bin(i).numEntries()<2)||(_profhistDphi->bin(i).numEntries()<2)) continue;
+        if((_profhistDeta->bin(i).effNumEntries()<2)||(_profhistDphi->bin(i).effNumEntries()<2)) continue;
         if((_profhistDeta->bin(i).mean()==0)||(_profhistDphi->bin(i).mean()==0)) continue;
         double mean_ratio=_profhistDeta->bin(i).mean() / _profhistDphi->bin(i).mean();
         double mean_error=mean_ratio*sqrt(pow(_profhistDeta->bin(i).stdErr()/_profhistDeta->bin(i).mean(),2)+pow(_profhistDphi->bin(i).stdErr()/_profhistDphi->bin(i).mean(),2));
@@ -182,6 +180,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CMS_2012_I1111014);
+  RIVET_DECLARE_PLUGIN(CMS_2012_I1111014);
 
 }

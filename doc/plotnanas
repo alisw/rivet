@@ -1,0 +1,34 @@
+#! /usr/bin/env python
+
+import argparse
+ap = argparse.ArgumentParser()
+ap.add_argument("DATFILE", metavar="file", default="nanas.dat", help="release/count data file to read")
+ap.add_argument("OUTFILES", nargs="?", metavar="file", default=None, help="image file(s) to write, comma separated")
+args = ap.parse_args()
+
+if not args.OUTFILES:
+    import os
+    args.OUTFILES = "{base}.pdf,{base}.png".format(base=os.path.splitext(os.path.basename(args.DATFILE))[0])
+
+import datetime
+import numpy as np
+import matplotlib.pyplot as plt
+# import matplotlib.dates as mdates
+# import matplotlib.cbook as cbook
+
+tags, dates, nanas = [], [], []
+with open(args.DATFILE) as f:
+    for line in f:
+        items = line.split()
+        tags.append(items[0])
+        ts = float(items[1].replace("-3600", "").replace("-7200", ""))
+        dates.append(datetime.date.fromtimestamp(ts))
+        nanas.append(int(items[2]))
+
+plt.plot(dates, nanas)
+plt.xlabel("Year")
+plt.ylabel("# analyses")
+
+for out in args.OUTFILES.split(","):
+    plt.savefig(out, dpi=120)
+# plt.show()

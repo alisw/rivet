@@ -1,0 +1,122 @@
+{
+    "142873": [
+        "Spin Parity Analysis of the Decay $\\tau \\to$ Neutrino $\\rho \\pi$", 
+        "PLUTO", 
+        "10.1007/BF01577418", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-79-66"
+        ]
+    ], 
+    "144112": [
+        "Two Particle Correlations in $e^+ e^-$ Annihilation", 
+        "PLUTO", 
+        "10.1016/0370-2693(80)90750-9", 
+        null, 
+        null, 
+        "ins144112", 
+        null, 
+        [
+            "DESY-79-83"
+        ]
+    ], 
+    "152289": [
+        "Test of {QED} in the Reactions $e^+ e^- \\to e^+ e^-$ and $e^+ e^- \\to \\mu^+ \\mu^-$ at {CMS} Energies From 9.4-{GeV} to 31.6-{GeV}", 
+        "PLUTO", 
+        null, 
+        null, 
+        null, 
+        "ins152289", 
+        null, 
+        [
+            "DESY-80-01"
+        ]
+    ], 
+    "152291": [
+        "Search for Narrow Resonances in $e^+ e^-$ Annihilation at {PETRA}", 
+        "PLUTO", 
+        "10.1016/0370-2693(80)90681-4", 
+        null, 
+        null, 
+        "ins152291", 
+        null, 
+        [
+            "DESY-80-02"
+        ]
+    ], 
+    "152602": [
+        "Determination of the Electronic Branching Ratio of the $\\Upsilon$ (9.46) and an Upper Limit for Its Total Width", 
+        "PLUTO", 
+        "10.1016/0370-2693(80)90374-3", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-80-15"
+        ]
+    ], 
+    "153119": [
+        "Lepton and Hadron Pair Production in Two Photon Reactions", 
+        "PLUTO", 
+        "10.1016/0370-2693(80)90871-0", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-80-34"
+        ]
+    ], 
+    "153120": [
+        "Measurement of the Reaction $e^+ e^- \\to \\gamma \\gamma$ at {CMS} Energies From 9.4-{GeV} to 31.6-{GeV}", 
+        "PLUTO", 
+        "10.1016/0370-2693(80)90832-1", 
+        null, 
+        null, 
+        "ins153120", 
+        null, 
+        [
+            "DESY-80-35"
+        ]
+    ], 
+    "153812": [
+        "INCLUSIVE MUON PRODUCTION AT PETRA ENERGIES", 
+        "Pluto", 
+        "10.1103/PhysRevLett.45.1533", 
+        null, 
+        null, 
+        "ins153812", 
+        null, 
+        [
+            "DESY-80-47"
+        ]
+    ], 
+    "154270": [
+        "Multiplicity Distributions in e+ e- Annihilations at PETRA Energies", 
+        "PLUTO", 
+        "10.1016/0370-2693(80)90494-3", 
+        null, 
+        null, 
+        "ins154270", 
+        null, 
+        [
+            "DESY-80-69"
+        ]
+    ], 
+    "155318": [
+        "A Study of Multi-Jet Events in e+ e- Annihilation", 
+        "PLUTO", 
+        "10.1016/0370-2693(80)90640-1", 
+        null, 
+        null, 
+        "ins155318", 
+        null, 
+        [
+            "DESY-80-93"
+        ]
+    ]
+}

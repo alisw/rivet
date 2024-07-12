@@ -9,39 +9,38 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(ALICE_2012_I1116147);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ALICE_2012_I1116147);
 
 
     /// Initialise projections and histograms
     void init() {
 
       const UnstableParticles ufs(Cuts::absrap < RAPMAX);
-      addProjection(ufs, "UFS");
+      declare(ufs, "UFS");
 
       // Check if cm energy is 7 TeV or 0.9 TeV
-      if (fuzzyEquals(sqrtS()/GeV, 900, 1E-3))       _cm_energy_case = 1;
-      else if (fuzzyEquals(sqrtS()/GeV, 7000, 1E-3)) _cm_energy_case = 2;
+      if (isCompatibleWithSqrtS(900))       _cm_energy_case = 1;
+      else if (isCompatibleWithSqrtS(7000)) _cm_energy_case = 2;
       if (_cm_energy_case == 0)
         throw UserError("Center of mass energy of the given input is neither 900 nor 7000 GeV.");
 
       // Book histos
       if (_cm_energy_case == 1) {
-        _h_pi0 = bookHisto1D(2,1,1);
+        book(_h_pi0,       2,1,1);
       } else {
-        _h_pi0 = bookHisto1D(1,1,1);
-        _h_eta = bookHisto1D(3,1,1);
-        _h_etaToPion = bookScatter2D(4,1,1);
+        book(_h_pi0,       1,1,1);
+        book(_h_eta,       3,1,1);
+        book(_h_etaToPion, 4,1,1);
       }
 
       // Temporary plots with the binning of _h_etaToPion to construct the eta/pi0 ratio
-      _temp_h_pion = bookHisto1D("TMP/h_pion", refData(4,1,1));
-      _temp_h_eta = bookHisto1D("TMP/h_eta", refData(4,1,1));
+      book(_temp_h_pion, "TMP/h_pion", refData(4,1,1));
+      book(_temp_h_eta , "TMP/h_eta",  refData(4,1,1));
     }
 
 
     /// Per-event analysis
     void analyze(const Event& event) {
-      const double weight = event.weight();
 
       const FinalState& ufs = apply<UnstableParticles>(event, "UFS");
       for (const Particle& p : ufs.particles()) {
@@ -49,12 +48,12 @@ namespace Rivet {
         if (p.pid() == 111) {
           // Neutral pion; ALICE corrects for pi0 feed-down from K_0_s and Lambda
           if (p.hasAncestor(310) || p.hasAncestor(3122) || p.hasAncestor(-3122)) continue; //< K_0_s, Lambda, Anti-Lambda
-          _h_pi0->fill(p.pT()/GeV, weight/normfactor);
-          _temp_h_pion->fill(p.pT()/GeV, weight);
+          _h_pi0->fill(p.pT()/GeV, 1.0/normfactor);
+          _temp_h_pion->fill(p.pT()/GeV);
         } else if (p.pid() == 221 && _cm_energy_case == 2) {
           // eta meson (only for 7 TeV)
-          _h_eta->fill(p.pT()/GeV, weight/normfactor);
-          _temp_h_eta->fill(p.pT()/GeV, weight);
+          _h_eta->fill(p.pT()/GeV, 1.0/normfactor);
+          _temp_h_eta->fill(p.pT()/GeV);
         }
       }
     }
@@ -82,6 +81,6 @@ namespace Rivet {
   };
 
 
-  DECLARE_RIVET_PLUGIN(ALICE_2012_I1116147);
+  RIVET_DECLARE_PLUGIN(ALICE_2012_I1116147);
 
 }

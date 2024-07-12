@@ -111,7 +111,7 @@ namespace Rivet {
       // Calculate the missing ET, using the prompt neutrinos only (really?)
       /// @todo Why not use MissingMomentum?
       FourMomentum pmet;
-      foreach (const Particle& p, _neutrinos) pmet += p.momentum();
+      for (const Particle& p : _neutrinos) pmet += p.momentum();
       _met_et = pmet.pT();
       _met_phi = pmet.phi();
 
@@ -122,11 +122,11 @@ namespace Rivet {
       for (i = 0; i < _jets.size(); i++) {
         const Jet& jet = _jets[i];
         // If dR(el,jet) < 0.4 skip the event
-        foreach (const DressedLepton& el, _dressedelectrons) {
+        for (const DressedLepton& el : _dressedelectrons) {
           if (deltaR(jet, el) < 0.4) _overlap = true;
         }
         // If dR(mu,jet) < 0.4 skip the event
-        foreach (const DressedLepton& mu, _dressedmuons) {
+        for (const DressedLepton& mu : _dressedmuons) {
           if (deltaR(jet, mu) < 0.4) _overlap = true;
         }
         // If dR(jet,jet) < 0.5 skip the event
@@ -159,19 +159,18 @@ namespace Rivet {
       }
 
       // Fill histograms
-      const double weight = event.weight();
       for (unsigned int ihist = 0; ihist < 6; ihist++) {
         if (ihist > 0 && !pass_jetPt) continue; // additional pT threshold cuts for pT plots
         unsigned int threshLimit = _thresholdLimit(ihist);
         for (ithres = 0; ithres < threshLimit; ithres++) {
           if (jet_n[ithres] < 3) continue; // 3 or more jets for ljets
           // Fill
-          if (ihist == 0) _histogram(ihist, ithres)->fill(jet_n[ithres] - 2, weight); // njets
-          else if (ihist == 1) _histogram(ihist, ithres)->fill(_jets[0].pT(), weight); // leading jet pT
-          else if (ihist == 2) _histogram(ihist, ithres)->fill(_jets[1].pT(), weight); // 2nd jet pT
-          else if (ihist == 3 && jet_n[ithres] >= 3) _histogram(ihist, ithres)->fill(_jets[2].pT(), weight); // 3rd jet pT
-          else if (ihist == 4 && jet_n[ithres] >= 4) _histogram(ihist, ithres)->fill(_jets[3].pT(), weight); // 4th jet pT
-          else if (ihist == 5 && jet_n[ithres] >= 5) _histogram(ihist, ithres)->fill(_jets[4].pT(), weight); // 5th jet pT
+          if (ihist == 0) _histogram(ihist, ithres)->fill(jet_n[ithres]-2); // njets
+          else if (ihist == 1) _histogram(ihist, ithres)->fill(_jets[0].pT()); // leading jet pT
+          else if (ihist == 2) _histogram(ihist, ithres)->fill(_jets[1].pT()); // 2nd jet pT
+          else if (ihist == 3 && jet_n[ithres] >= 3) _histogram(ihist, ithres)->fill(_jets[2].pT()); // 3rd jet pT
+          else if (ihist == 4 && jet_n[ithres] >= 4) _histogram(ihist, ithres)->fill(_jets[3].pT()); // 4th jet pT
+          else if (ihist == 5 && jet_n[ithres] >= 5) _histogram(ihist, ithres)->fill(_jets[4].pT()); // 5th jet pT
         }
       }
     }
@@ -181,7 +180,7 @@ namespace Rivet {
       // Normalize to cross-section
       const double norm = crossSection()/sumOfWeights();
       typedef map<unsigned int, Histo1DPtr>::value_type IDtoHisto1DPtr; ///< @todo Remove when C++11 allowed
-      foreach (IDtoHisto1DPtr ihpair, _hMap) scale(ihpair.second, norm); ///< @todo Use normalize(ihpair.second, crossSection())
+      for (IDtoHisto1DPtr ihpair : _hMap) scale(ihpair.second, norm); ///< @todo Use normalize(ihpair.second, crossSection())
       // Calc averages
       for (unsigned int ihist = 0; ihist < _histLimit ; ihist++) {
         unsigned int threshLimit = _thresholdLimit(ihist);
@@ -264,8 +263,9 @@ namespace Rivet {
       const unsigned int hInd = (histId == 0) ? thresholdId : (_thresholdLimit(0) + (histId-1) + thresholdId);
       if (_hMap.find(hInd) != _hMap.end()) return _hMap[hInd];
 
-      if (histId == 0) _hMap.insert(make_pair(hInd,bookHisto1D(thresholdId+1,1,1)));
-      else _hMap.insert(make_pair(hInd,bookHisto1D(4+histId,1,1)));
+      _hMap.insert( { hInd, Histo1DPtr() } );
+      if (histId == 0) book(_hMap[hInd], thresholdId+1, 1, 1);
+      else             book(_hMap[hInd], 4+histId,      1, 1);
       return _hMap[hInd];
     }
 
@@ -319,6 +319,6 @@ namespace Rivet {
 
 
   // Declare the class as a hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2014_I1304688);
+  RIVET_DECLARE_PLUGIN(ATLAS_2014_I1304688);
 
 }

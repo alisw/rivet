@@ -1,0 +1,33 @@
+Name: BESIII_2020_I1799437
+Year: 2020
+Summary: Dalitz plot analysis of $D^0\to K^0_SK^+K^-$
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1799437
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - arXiv:2006.02800 [hep-ex]
+RunInfo: Any process producing D0
+Description:
+  'Measurement of Kinematic distributions  in the decay $D^0\to K^0_SK^+K^-$ by BES.  The data were read from the plots in the paper.
+   Resolution/acceptance effects have been not unfolded. Given the agreement with the model in the paper this analysis should only be used for qualitative studies.'
+ValidationInfo:
+  'Compared Herwig events using the same model for the decay as in the paper.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2020hfw
+BibTeX: '@article{BESIII:2020hfw,
+    author = "Ablikim, Medina and others",
+    collaboration = "BESIII",
+    title = "{Analysis of the decay $D^0\rightarrow K_{S}^{0} K^{+} K^{-}$}",
+    eprint = "2006.02800",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    month = "6",
+    year = "2020"
+}
+'

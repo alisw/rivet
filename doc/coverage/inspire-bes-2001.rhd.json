@@ -1,0 +1,36 @@
+{
+    "531943": [
+        "Measurement of psi(2S) decays to baryon pairs", 
+        "BES", 
+        "10.1103/PhysRevD.63.032002", 
+        null, 
+        "hep-ex/0008031", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-2000-055"
+        ]
+    ], 
+    "556330": [
+        "Study of N* production from J / Psi ---> p anti-p eta", 
+        "BES", 
+        "10.1016/S0370-2693(01)00605-0", 
+        null, 
+        "hep-ex/0105011", 
+        null, 
+        null, 
+        []
+    ], 
+    "558218": [
+        "The BES upgrade", 
+        "BES", 
+        "10.1016/S0168-9002(00)00934-7", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-2001-005"
+        ]
+    ]
+}

@@ -8,12 +8,14 @@
 
 namespace Rivet {
 
+  
+
 
   class MC_TTBAR : public Analysis {
   public:
 
     /// Minimal constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(MC_TTBAR);
+    RIVET_DEFAULT_ANALYSIS_CTOR(MC_TTBAR);
 
 
     /// @name Analysis methods
@@ -43,57 +45,57 @@ namespace Rivet {
       declare(MissingMomentum(fs), "MissingET");
 
       // Booking of histograms
-      _h["njets"] = bookHisto1D(pre + "jet_mult", 11, -0.5, 10.5);
+      book(_h["njets"], pre + "jet_mult", 11, -0.5, 10.5);
       //
-      _h["jet_1_pT"] = bookHisto1D(pre + "jet_1_pT", logspace(50, 20.0, 500.0));
-      _h["jet_2_pT"] = bookHisto1D(pre + "jet_2_pT", logspace(50, 20.0, 400.0));
-      _h["jet_3_pT"] = bookHisto1D(pre + "jet_3_pT", logspace(50, 20.0, 300.0));
-      _h["jet_4_pT"] = bookHisto1D(pre + "jet_4_pT", logspace(50, 20.0, 200.0));
-      _h["jet_HT"]   = bookHisto1D(pre + "jet_HT", logspace(50, 100.0, 2000.0));
+      book(_h["jet_1_pT"], pre + "jet_1_pT", logspace(50, 20.0, 500.0));
+      book(_h["jet_2_pT"], pre + "jet_2_pT", logspace(50, 20.0, 400.0));
+      book(_h["jet_3_pT"], pre + "jet_3_pT", logspace(50, 20.0, 300.0));
+      book(_h["jet_4_pT"], pre + "jet_4_pT", logspace(50, 20.0, 200.0));
+      book(_h["jet_HT"],   pre + "jet_HT", logspace(50, 100.0, 2000.0));
       //
-      _h["bjet_1_pT"] = bookHisto1D(pre + "jetb_1_pT", logspace(50, 20.0, 400.0));
-      _h["bjet_2_pT"] = bookHisto1D(pre + "jetb_2_pT", logspace(50, 20.0, 300.0));
+      book(_h["bjet_1_pT"], pre + "jetb_1_pT", logspace(50, 20.0, 400.0));
+      book(_h["bjet_2_pT"], pre + "jetb_2_pT", logspace(50, 20.0, 300.0));
       //
-      _h["ljet_1_pT"] = bookHisto1D(pre + "jetl_1_pT", logspace(50, 20.0, 400.0));
-      _h["ljet_2_pT"] = bookHisto1D(pre + "jetl_2_pT", logspace(50, 20.0, 300.0));
+      book(_h["ljet_1_pT"], pre + "jetl_1_pT", logspace(50, 20.0, 400.0));
+      book(_h["ljet_2_pT"], pre + "jetl_2_pT", logspace(50, 20.0, 300.0));
       //
-      if (_mode != 2)  _h["tt_mass"]   = bookHisto1D(pre + "tt_mass", 200, 300.0, 700.0);
+      if (_mode != 2)  book(_h["tt_mass"], pre + "tt_mass", 200, 300.0, 700.0);
       //
       if (_mode < 2) { // these rely on a hadronic W being part of the ttbar decay
-        _h["W_mass"]        = bookHisto1D(pre + "W_mass", 75, 30, 180);
-        _h["t_mass"]        = bookHisto1D(pre + "t_mass", 150, 130, 430);
-        _h["t_mass_W_cut"]  = bookHisto1D(pre + "t_mass_W_cut", 150, 130, 430);
-        _h["jetb_1_W_dR"]   = bookHisto1D(pre + "jetb_1_W_dR", 20, 0.0, 7.0);
-        _h["jetb_1_W_deta"] = bookHisto1D(pre + "jetb_1_W_deta", 20, 0.0, 7.0);
-        _h["jetb_1_W_dphi"] = bookHisto1D(pre + "jetb_1_W_dphi", 20, 0.0, M_PI);
+        book(_h["W_mass"], pre + "W_mass", 75, 30, 180);
+        book(_h["t_mass"], pre + "t_mass", 150, 130, 430);
+        book(_h["t_mass_W_cut"], pre + "t_mass_W_cut", 150, 130, 430);
+        book(_h["jetb_1_W_dR"],  pre + "jetb_1_W_dR", 20, 0.0, 7.0);
+        book(_h["jetb_1_W_deta"], pre + "jetb_1_W_deta", 20, 0.0, 7.0);
+        book(_h["jetb_1_W_dphi"], pre + "jetb_1_W_dphi", 20, 0.0, M_PI);
       }
       //
-      _h["jetb_1_jetb_2_dR"]   = bookHisto1D(pre + "jetb_1_jetb_2_dR", 20, 0.0, 7.0);
-      _h["jetb_1_jetb_2_deta"] = bookHisto1D(pre + "jetb_1_jetb_2_deta", 20, 0.0, 7.0);
-      _h["jetb_1_jetb_2_dphi"] = bookHisto1D(pre + "jetb_1_jetb_2_dphi", 20, 0.0, M_PI);
-      _h["jetb_1_jetl_1_dR"]   = bookHisto1D(pre + "jetb_1_jetl_1_dR", 20, 0.0, 7.0);
-      _h["jetb_1_jetl_1_deta"] = bookHisto1D(pre + "jetb_1_jetl_1_deta", 20, 0.0, 7.0);
-      _h["jetb_1_jetl_1_dphi"] = bookHisto1D(pre + "jetb_1_jetl_1_dphi", 20, 0.0, M_PI);
-      _h["jetl_1_jetl_2_dR"]   = bookHisto1D(pre + "jetl_1_jetl_2_dR", 20, 0.0, 7.0);
-      _h["jetl_1_jetl_2_deta"] = bookHisto1D(pre + "jetl_1_jetl_2_deta", 20, 0.0, 7.0);
-      _h["jetl_1_jetl_2_dphi"] = bookHisto1D(pre + "jetl_1_jetl_2_dphi", 20, 0.0, M_PI);
+      book(_h["jetb_1_jetb_2_dR"],   pre + "jetb_1_jetb_2_dR", 20, 0.0, 7.0);
+      book(_h["jetb_1_jetb_2_deta"], pre + "jetb_1_jetb_2_deta", 20, 0.0, 7.0);
+      book(_h["jetb_1_jetb_2_dphi"], pre + "jetb_1_jetb_2_dphi", 20, 0.0, M_PI);
+      book(_h["jetb_1_jetl_1_dR"],   pre + "jetb_1_jetl_1_dR", 20, 0.0, 7.0);
+      book(_h["jetb_1_jetl_1_deta"], pre + "jetb_1_jetl_1_deta", 20, 0.0, 7.0);
+      book(_h["jetb_1_jetl_1_dphi"], pre + "jetb_1_jetl_1_dphi", 20, 0.0, M_PI);
+      book(_h["jetl_1_jetl_2_dR"],   pre + "jetl_1_jetl_2_dR", 20, 0.0, 7.0);
+      book(_h["jetl_1_jetl_2_deta"], pre + "jetl_1_jetl_2_deta", 20, 0.0, 7.0);
+      book(_h["jetl_1_jetl_2_dphi"], pre + "jetl_1_jetl_2_dphi", 20, 0.0, M_PI);
       if (_mode > 0) { // these rely on at least one leptonic decay mode
-        _h["jetb_1_l_dR"]        = bookHisto1D(pre + "jetb_1_l_dR", 20, 0.0, 7.0);
-        _h["jetb_1_l_deta"]      = bookHisto1D(pre + "jetb_1_l_deta", 20, 0.0, 7.0);
-        _h["jetb_1_l_dphi"]      = bookHisto1D(pre + "jetb_1_l_dphi", 20, 0.0, M_PI);
-        _h["jetb_1_l_mass"]      = bookHisto1D(pre + "jetb_1_l_mass", 40, 0.0, 500.0);
+        book(_h["jetb_1_l_dR"],   pre + "jetb_1_l_dR", 20, 0.0, 7.0);
+        book(_h["jetb_1_l_deta"], pre + "jetb_1_l_deta", 20, 0.0, 7.0);
+        book(_h["jetb_1_l_dphi"], pre + "jetb_1_l_dphi", 20, 0.0, M_PI);
+        book(_h["jetb_1_l_mass"], pre + "jetb_1_l_mass", 40, 0.0, 500.0);
         if (_mode > 1) {
-          _h["jetb_1_l2_dR"]       = bookHisto1D(pre + "jetb_1_l2_dR", 20, 0.0, 7.0);
-          _h["jetb_1_l2_deta"]     = bookHisto1D(pre + "jetb_1_l2_deta", 20, 0.0, 7.0);
-          _h["jetb_1_l2_dphi"]     = bookHisto1D(pre + "jetb_1_l2_dphi", 20, 0.0, M_PI);
-          _h["jetb_1_l2_mass"]     = bookHisto1D(pre + "jetb_1_l2_mass", 40, 0.0, 500.0);
+          book(_h["jetb_1_l2_dR"],   pre + "jetb_1_l2_dR", 20, 0.0, 7.0);
+          book(_h["jetb_1_l2_deta"], pre + "jetb_1_l2_deta", 20, 0.0, 7.0);
+          book(_h["jetb_1_l2_dphi"], pre + "jetb_1_l2_dphi", 20, 0.0, M_PI);
+          book(_h["jetb_1_l2_mass"], pre + "jetb_1_l2_mass", 40, 0.0, 500.0);
         }
       }
     }
 
 
     void analyze(const Event& event) {
-      const double weight = event.weight();
+      const double weight = 1.0;
 
       // Use the "LFS" projection to require at least one hard charged
       // lepton. This is an experimental signature for the leptonically decaying
@@ -307,5 +309,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(MC_TTBAR);
+  RIVET_DECLARE_PLUGIN(MC_TTBAR);
+
 }

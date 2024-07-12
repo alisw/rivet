@@ -9,7 +9,7 @@ namespace Rivet {
     : _regparam(rparam)
   {
     setName("Sphericity");
-    addProjection(fsp, "FS");
+    declare(fsp, "FS");
     clear();
   }
 
@@ -20,11 +20,11 @@ namespace Rivet {
   }
 
 
-  int Sphericity::compare(const Projection& p) const {
+  CmpState Sphericity::compare(const Projection& p) const {
     PCmp fscmp = mkNamedPCmp(p, "FS");
-    if (fscmp != EQUIVALENT) return fscmp;
+    if (fscmp != CmpState::EQ) return fscmp;
     const Sphericity& other = dynamic_cast<const Sphericity&>(p);
-    if (fuzzyEquals(_regparam, other._regparam)) return 0;
+    if (fuzzyEquals(_regparam, other._regparam)) return CmpState::EQ;
     return cmp(_regparam, other._regparam);
   }
 
@@ -67,8 +67,10 @@ namespace Rivet {
     const double e = A.get(1,2);
     const double f = A.get(2,2);
 
-    double x = e*(b*f -c*e - b*lambda)/(b*e -c*d + c*lambda)/c + (lambda -f)/c;
-    double y = (c*e -b*f +b*lambda)/(b*e -c*d + c*lambda);
+    const double denom = b*e -c*d + c*lambda;
+
+    double x = e*(b*f -c*e - b*lambda)/denom/c + (lambda -f)/c;
+    double y = (c*e -b*f +b*lambda)/denom;
 
     Vector3 E(x,y,1);
     return E.unit();
@@ -79,7 +81,7 @@ namespace Rivet {
 
     // Return (with "safe nonsense" sphericity params) if there are no final state particles
     if (momenta.empty()) {
-      MSG_DEBUG("No momenta given...");
+      MSG_DEBUG("Not enough momenta given...");
       clear();
       return;
     }
@@ -89,6 +91,7 @@ namespace Rivet {
     double totalMomentum = 0.0;
     MSG_DEBUG("Number of particles = " << momenta.size());
     for (const Vector3& p3 : momenta) {
+      if ( p3.mod() <= 0.0 ) continue;
       // Build the (regulated) normalising factor.
       totalMomentum += pow(p3.mod(), _regparam);
 
@@ -107,6 +110,12 @@ namespace Rivet {
       mMom += regfactor * mMomPart;
     }
 
+    // if (mMom.get(2,0) == 0 && mMom.get(2,1) == 0 && mMom.get(2,2) == 0) {
+    //   MSG_DEBUG("No longitudinal momenta given...");
+    //   clear();
+    //   return;
+    // }
+
     // Normalise to total (regulated) momentum.
     mMom /= totalMomentum;
     MSG_DEBUG("Momentum tensor = " << "\n" << mMom);
@@ -122,49 +131,37 @@ namespace Rivet {
     // If not symmetric, something's wrong (we made sure the error msg appeared first).
     assert(isSymm);
 
-    // Eigenvalues (z!=0)
-    double l1,l2,l3;
-    if(mMom.get(2,2)!=0.) {
-      const double q = mMom.trace()/3.;
-      const double p1 = mMom.get(0,1)*mMom.get(0,1) + mMom.get(0,2)*mMom.get(0,2) + mMom.get(1,2)*mMom.get(1,2);
-      const double p2 = (mMom.get(0,0) - q)*(mMom.get(0,0) - q)
+    // Eigenvalues
+    const double q = mMom.trace()/3.;
+    const double p1 = mMom.get(0,1)*mMom.get(0,1) + mMom.get(0,2)*mMom.get(0,2) + mMom.get(1,2)*mMom.get(1,2);
+    const double p2 = (mMom.get(0,0) - q)*(mMom.get(0,0) - q)
         + (mMom.get(1,1) - q)*(mMom.get(1,1) - q) +  (mMom.get(2,2) - q)*(mMom.get(2,2) - q) + 2.*p1;
-      const double p = sqrt(p2/6.);
+    const double p = sqrt(p2/6.);
 
-      Matrix3 I3 = Matrix3::mkIdentity();
-      const double r = ( 1./p * (mMom - q*I3)).det()/2.;
+    Matrix3 I3 = Matrix3::mkIdentity();
+    const double r = ( 1./p * (mMom - q*I3)).det()/2.;
 
-      double phi(0);
-      if (r <= -1) phi = M_PI / 3.;
-      else if (r >= 1) phi = 0;
-      else phi = acos(r) / 3.;
+    double phi(0);
+    if (r <= -1) phi = M_PI / 3.;
+    else if (r >= 1) phi = 0;
+    else phi = acos(r) / 3.;
 
-      l1 = q + 2 * p * cos(phi);
-      l3 = q + 2 * p * cos(phi + (2*M_PI/3.));
-      l2 = 3 * q - l1 - l3;
+    const double l1 = q + 2 * p * cos(phi);
+    const double l3 = q + 2 * p * cos(phi + (2*M_PI/3.));
+    const double l2 = 3 * q - l1 - l3;
 
-      _sphAxes.clear();
-      _sphAxes.push_back(mkEigenVector(mMom, l1));
-      _sphAxes.push_back(mkEigenVector(mMom, l2));
-      _sphAxes.push_back(mkEigenVector(mMom, l3));
+    // Check that not all eigenvalues are null
+    if (l1 == 0 && l2 == 0 && l3 == 0) {
+    	MSG_WARNING("All eigenvalues are zero");
+    	clear();
+        return;
     }
-    else {
-      const double a = mMom.get(0,0);
-      const double d = mMom.get(1,1);
-      const double b = mMom.get(0,1);
-      const double disc = sqrt(sqr(a-d)+4.*sqr(b));
-      l1 = 0.5*(a+d+disc);
-      l2 = 0.5*(a+d-disc);
-      l3 = 0.;
-      Vector3 E1(l1-d,b,0.);
-      Vector3 E2(l2-d,b,0.);
 
-      _sphAxes.clear();
-      _sphAxes.push_back(E1.unit());
-      _sphAxes.push_back(E2.unit());
-      _sphAxes.push_back(Vector3(0.,0.,1.));
-    }
     _lambdas.clear();
+    _sphAxes.clear();
+    _sphAxes.push_back(mkEigenVector(mMom, l1));
+    _sphAxes.push_back(mkEigenVector(mMom, l2));
+    _sphAxes.push_back(mkEigenVector(mMom, l3));
     _lambdas.push_back(l1);
     _lambdas.push_back(l2);
     _lambdas.push_back(l3);

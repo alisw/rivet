@@ -5,12 +5,13 @@ Experiment: D0
 Collider: Tevatron
 InspireID: 503361
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Simone Amoroso <amoroso@cern.ch>
 References:
  - Phys.Rev. D61 (2000) 032004
  - doi:10.1103/PhysRevD.61.032004
- - arXiv:hep-ex/9907009v1
+ - arXiv:hep-ex/9907009
 RunInfo: $Z\to ee$ event
 NumEvents: 1000000
 NeedCrossSection: no
@@ -39,4 +40,8 @@ ToDo:
  - Implement the analysis, test it, remove this ToDo, and mark as VALIDATED :-)
  
 
+
+
+ReleaseTests:
+ - $A TVT-Run-I-Z
 

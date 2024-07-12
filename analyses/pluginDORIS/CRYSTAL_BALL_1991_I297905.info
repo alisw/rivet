@@ -1,0 +1,38 @@
+Name: CRYSTAL_BALL_1991_I297905
+Year: 1991
+Summary: $\pi^0$ and $\eta$ spectra for $e^+e^-$ collisions in the continuum and at $\Upsilon(1S)$
+Experiment: CRYSTAL_BALL
+Collider: DORIS
+InspireID: 297905
+Authors:
+ - Peter Richardson <Peter.Richardson@durham.ac.uk>
+References:
+ - Z.Phys.C 49 (1991) 225-234
+RunInfo:
+  $e^+ e^-$ analysis near the $\Upsilon$ resonances
+NeedCrossSection: yes
+Beams: [e-, e+]
+Energies: [9.46]
+Description:
+  'Measurement of the inclusive production of the $\pi^0$ and $\eta$ 
+             mesons in $e^+e^-$ annihilation in the Upsilon region.
+             Data are taken on the $\Upsilon(1S)$
+	     and in the nearby continuum.'
+ValidationInfo:
+  'Herwig7 evenrts'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: CrystalBall:1990gpx
+BibTeX: '@article{CrystalBall:1990gpx,
+    author = "Bieler, Ch. and others",
+    collaboration = "Crystal Ball",
+    title = "{Measurement of pi0 and eta meson production in e+ e- annihilation at s**(1/2) near 10-GeV}",
+    reportNumber = "SLAC-PUB-5301, DESY-90-086",
+    doi = "10.1007/BF01555494",
+    journal = "Z. Phys. C",
+    volume = "49",
+    pages = "225--234",
+    year = "1991"
+}
+'

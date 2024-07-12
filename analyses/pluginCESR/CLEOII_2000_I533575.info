@@ -1,0 +1,35 @@
+Name: CLEOII_2000_I533575
+Year: 2000
+Summary: Measurement of the asymmetry in $\Xi^-\to\Lambda^0\pi^-$
+Experiment: CLEOII
+Collider: CESR
+InspireID: 533575
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - hep-ex/0009037
+RunInfo: Any process producing Xi- baryons
+NeedCrossSection: no
+Description:
+  'The CLEOII experiment measured the asymmetry parameter in the decay $\Xi^-\to\Lambda^0\pi^-$
+   and the charge conjugate mode, in practice
+   this is a fit to a normalised distribution $\frac12(1+\alpha\cos\theta)$.
+   This analysis is useful for testing spin correlations in hadron decays.'
+ValidationInfo:
+  'Herwig 7 particle gun'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Jaffe:2000an
+BibTeX: '@article{Jaffe:2000an,
+      author         = "Jaffe, D. E. and others",
+      title          = "{Search for direct CP violation in cascade hyperon
+                        decay}",
+      collaboration  = "CLEO",
+      year           = "2000",
+      eprint         = "hep-ex/0009037",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "SLAC-REPRINT-2000-092, CLNS-98-1587, CLEO-98-16",
+      SLACcitation   = "%%CITATION = HEP-EX/0009037;%%"
+}'

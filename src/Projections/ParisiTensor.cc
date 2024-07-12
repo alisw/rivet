@@ -4,7 +4,7 @@
 namespace Rivet {
 
 
-  int ParisiTensor::compare(const Projection& p) const {
+  CmpState ParisiTensor::compare(const Projection& p) const {
     return mkNamedPCmp(p, "Sphericity");
   }
 

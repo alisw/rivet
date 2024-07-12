@@ -1,0 +1,633 @@
+{
+    "884451": [
+        "Production of $\\Lambda$, $\\bar{\\Lambda}^0$ $\\Xi^{\\pm}$ and $\\Omega^{\\pm}$ Hyperons in $p \\bar{p}$ Collisions at $\\sqrt{s} = 1.96$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.86.012002", 
+        null, 
+        "1101.2996", 
+        "ins884451", 
+        null, 
+        [
+            "FERMILAB-PUB-11-155-E-PPD"
+        ]
+    ], 
+    "895588": [
+        "Search for the Rare Radiative Decay: $W\\rightarrow\\pi\\gamma$ in $p\\bar{p}$ Collisions at $\\sqrt{s} = 1.96$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.85.032001", 
+        "1343639", 
+        "1104.1585", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-11-171-E"
+        ]
+    ], 
+    "914949": [
+        "Search for Higgs Bosons Produced in Association with $b$-quarks", 
+        "CDF", 
+        "10.1103/PhysRevD.85.032005", 
+        "1361593", 
+        "1106.4782", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-11-294-E-PPD"
+        ]
+    ], 
+    "916220": [
+        "Study of Substructure of High Transverse Momentum Jets Produced in Proton-Antiproton Collisions at $\\sqrt{s}=1.96$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.85.091101", 
+        "1362884", 
+        "1106.5952", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-11-297-E-PPD"
+        ]
+    ], 
+    "921985": [
+        "Measurements of the Angular Distributions in the Decays $B \\to K^{(*)} \\mu^+ \\mu^-$ at CDF", 
+        "CDF", 
+        "10.1103/PhysRevLett.108.081807", 
+        "1372959", 
+        "1108.0695", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-11-364-PPD"
+        ]
+    ], 
+    "922825": [
+        "Search for $WZ+ZZ$ production with MET + jets with $b$ enhancement at $\\sqrt{s} = 1.96$~TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.85.012002", 
+        "1374468", 
+        "1108.2060", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-11-375-E-PPD", 
+            "CDF-PHYS-ELECTROWEAK-PUBLIC-10311"
+        ]
+    ], 
+    "927387": [
+        "Search for heavy metastable particles decaying to jet pairs in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.96$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.85.012007", 
+        "1382691", 
+        "1109.3136", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-11-451-E-PPD", 
+            "PUB-11-451-E-PPD"
+        ]
+    ], 
+    "928048": [
+        "Search for a Higgs Boson in the Diphoton Final State in $p\\bar{p}$ Collisions at $\\sqrt{s} = 1.96$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.108.011801", 
+        "1384181", 
+        "1109.4427", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-11-482-E-PPD"
+        ]
+    ], 
+    "944150": [
+        "Evidence for the charmless annihilation decay mode $B^0_s \\to \\pi^+\\pi^-$", 
+        "CDF", 
+        "10.1103/PhysRevLett.108.211803", 
+        "1395740", 
+        "1111.0485", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-11-585-E"
+        ]
+    ], 
+    "945934": [
+        "Search for high-mass resonances decaying into $ZZ$ in p$\\bar{p}$ collisions at $\\sqrt{s}=1.96$\\,TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.85.012008", 
+        "1399295", 
+        "1111.3432", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-11-613-E", 
+            "CDF-PUB-EXOTICS-PUBLIC-10603"
+        ]
+    ], 
+    "946986": [
+        "An additional study of multi-muon events produced in $p\\bar{p}$ collisions at $\\sqrt{s}=1.96$ TeV", 
+        "CDF", 
+        "10.1016/j.physletb.2012.02.081", 
+        "1401453", 
+        "1111.5242", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-11-241-E"
+        ]
+    ], 
+    "947066": [
+        "Measurement of CP--violating asymmetries in $D^0\\to\\pi^+\\pi^-$ and $D^0\\to K^+K^-$ decays at CDF", 
+        "CDF", 
+        "10.1103/PhysRevD.85.012009", 
+        "1401272", 
+        "1111.5023", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-11-624-PPD"
+        ]
+    ], 
+    "1079917": [
+        "Observation of Exclusive Gamma Gamma Production in $p \\bar{p}$ Collisions at $\\sqrt{s}=1.96$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.108.081801", 
+        "1404778", 
+        "1112.0858", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-11-643-PPD"
+        ]
+    ], 
+    "1080381": [
+        "Search for new phenomena in events with two $Z$ bosons and missing transverse momentum in $p\\bar{p}$ collisions at $\\sqrt{s}=1.96$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.85.011104", 
+        "1405604", 
+        "1112.1577", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-11-645-E"
+        ]
+    ], 
+    "1080383": [
+        "Measurements of Angular Distributions of Muons From $\\Upsilon$ Meson Decays in $p\\bar{p}$ Collisions at $\\sqrt{s}=1.96$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.108.151802", 
+        "1405618", 
+        "1112.1591", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-11-644-E"
+        ]
+    ], 
+    "1080489": [
+        "Measurement of the CP-Violating Phase $\\beta_s^{J/\\psi\\phi}$ in $B^0_s \\to J/\\psi \\phi$ Decays with the CDF II Detector", 
+        "CDF", 
+        "10.1103/PhysRevD.85.072002", 
+        "1405762", 
+        "1112.1726", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-11-646-E"
+        ]
+    ], 
+    "1080494": [
+        "Search for Standard Model Higgs Boson Production in Association with a $W$ Boson at CDF", 
+        "CDF", 
+        "10.1103/PhysRevD.85.052002", 
+        "1405929", 
+        "1112.1930", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-12-046-E"
+        ]
+    ], 
+    "1081122": [
+        "Measurement of $ZZ$ production in leptonic final states at $\\surd{s}$ of 1.96 TeV at CDF", 
+        "CDF", 
+        "10.1103/PhysRevLett.108.101801", 
+        "1407103", 
+        "1112.2978", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-11-656-E"
+        ]
+    ], 
+    "1081195": [
+        "Measurement of the masses and widths of the bottom baryons $\\Sigma_b^{+-}$ and $\\Sigma_b^{*+-}$", 
+        "CDF", 
+        "10.1103/PhysRevD.85.092011", 
+        "1406957", 
+        "1112.2808", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-11-653-E"
+        ]
+    ], 
+    "1081279": [
+        "Measurement of the branching fraction ${\\mathcal{B}}(\\Lambda^0_b\\rightarrow \\Lambda^+_c\\pi^-\\pi^+\\pi^-)$ at CDF", 
+        "CDF", 
+        "10.1103/PhysRevD.85.032003", 
+        "1407492", 
+        "1112.3334", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-11-658-E"
+        ]
+    ], 
+    "1082043": [
+        "Search for Standard Model Higgs Boson Production in Association with a $W$ Boson Using a Matrix Element Technique at CDF in $p\\bar{p}$ Collisions at $\\sqrt{s} = 1.96$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.85.072001", 
+        "1408582", 
+        "1112.4358", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-11-664-E"
+        ]
+    ], 
+    "1082447": [
+        "Measurement of the Top Quark Mass in the All-Hadronic Mode at CDF", 
+        "CDF", 
+        "10.1016/j.physletb.2012.06.007", 
+        "1409227", 
+        "1112.4891", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-11-668-E"
+        ]
+    ], 
+    "1085631": [
+        "Search for a low mass Standard Model Higgs boson in the $\\tau-\\tau$ decay channel in $p\\bar{p}$ collisions at $\\sqrt{s}$ = 1.96 TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.108.181804", 
+        "1418964", 
+        "1201.4880", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-12-017-E", 
+            "PUB-12-017-E"
+        ]
+    ], 
+    "1087913": [
+        "Search for anomalous production of multiple leptons in association with $W$ and $Z$ bosons at CDF", 
+        "CDF", 
+        "10.1103/PhysRevD.85.092001", 
+        "1422364", 
+        "1202.1260", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-12-030-E"
+        ]
+    ], 
+    "1090176": [
+        "Combination of CDF and D0 measurements of the $W$ boson helicity in top quark decays", 
+        "CDF", 
+        "10.1103/PhysRevD.85.071106", 
+        "1426938", 
+        "1202.5272", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-14955", 
+            "FERMILAB-PUB-12-043-E"
+        ]
+    ], 
+    "1090723": [
+        "Search for a dark matter candidate produced in association with a single top quark in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.96$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.108.201802", 
+        "1427358", 
+        "1202.5653", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-12-053-E"
+        ]
+    ], 
+    "1091079": [
+        "Measurement of the $WZ$ Cross Section and Triple Gauge Couplings in $p \\bar p$ Collisions at $\\sqrt{s} = 1.96$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.86.031104", 
+        "1428384", 
+        "1202.6629", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-12-054-E"
+        ]
+    ], 
+    "1091235": [
+        "Precise measurement of the $W$-boson mass with the CDF II detector", 
+        "CDF", 
+        "10.1103/PhysRevLett.108.151803", 
+        "1428798", 
+        "1203.0275", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-12-061-E"
+        ]
+    ], 
+    "1092730": [
+        "A Search for dark matter in events with one jet and missing transverse energy in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.96$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.108.211804", 
+        "1429341", 
+        "1203.0742", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-15067", 
+            "FERMILAB-PUB-12-060-E"
+        ]
+    ], 
+    "1094161": [
+        "Search for a heavy particle decaying to a top quark and a light quark in $p\\bar{p}$ collisions at $\\sqrt{s}=1.96$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.108.211805", 
+        "1433066", 
+        "1203.3894", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-12-083-E"
+        ]
+    ], 
+    "1094174": [
+        "Search for Scalar Top Quark Production in $p\\bar{p}$ Collisions at $\\sqrt{s}=1.96$ TeV", 
+        "CDF", 
+        "10.1007/JHEP10(2012)158", 
+        "1433306", 
+        "1203.4171", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-12-075-E"
+        ]
+    ], 
+    "1095098": [
+        "Search for the standard model Higgs boson produced in association with a $Z$ Boson in 7.9 fb(-1) of p anti-p collisions at $\\sqrt{s} = 1.96$ TeV using the CDF II detector", 
+        "CDF", 
+        "10.1016/j.physletb.2012.07.045", 
+        "1435260", 
+        "1203.5815", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-12-081-E"
+        ]
+    ], 
+    "1102896": [
+        "Measurement of $B_s^0 \\to D_s^{(*)+} D_s^{(*)-}$ Branching Ratios", 
+        "CDF", 
+        "10.1103/PhysRevLett.108.201801", 
+        "1437049", 
+        "1204.0536", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-12-091-E"
+        ]
+    ], 
+    "1118580": [
+        "Diffractive Dijet Production in $\\bar{p}p$ Collisions at $\\sqrt{s}=1.96$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.86.032009", 
+        "1456702", 
+        "1206.3955", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-12-283-E"
+        ]
+    ], 
+    "1119396": [
+        "Search for the standard model Higgs boson produced in association with a $W^{\\pm}$ boson with 7.5 fb$^{-1}$ integrated luminosity at CDF", 
+        "CDF", 
+        "10.1103/PhysRevD.86.032011", 
+        "1457714", 
+        "1206.5063", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-12-299-E"
+        ]
+    ], 
+    "1121117": [
+        "Measurement of CP-violation asymmetries in $D^0 \\to K_S \\pi^+ \\pi^-$", 
+        "CDF", 
+        "10.1103/PhysRevD.86.032007", 
+        "1460008", 
+        "1207.0825", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-12-339-E", 
+            "CDF-10816"
+        ]
+    ], 
+    "1121128": [
+        "Combination of the top-quark mass measurements from the Tevatron collider", 
+        "CDF", 
+        "10.1103/PhysRevD.86.092003", 
+        "1460019", 
+        "1207.1069", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-12-336-E-TD"
+        ]
+    ], 
+    "1121552": [
+        "Search for the standard model Higgs boson decaying to a bb pair in events with one charged lepton and large missing transverse energy using the full CDF data set", 
+        "CDF", 
+        "10.1103/PhysRevLett.109.111804", 
+        "1460762", 
+        "1207.1703", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-12-366-E"
+        ]
+    ], 
+    "1121553": [
+        "Search for the standard model Higgs boson decaying to a bb pair in events with two oppositely-charged leptons using the full CDF data set", 
+        "CDF", 
+        "10.1103/PhysRevLett.109.111803", 
+        "1460763", 
+        "1207.1704", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-12-364-E"
+        ]
+    ], 
+    "1121554": [
+        "Combined search for the standard model Higgs boson decaying to a bb pair using the full CDF data set", 
+        "CDF", 
+        "10.1103/PhysRevLett.109.111802", 
+        "1460764", 
+        "1207.1707", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-12-361-E"
+        ]
+    ], 
+    "1121555": [
+        "Search for the standard model Higgs boson decaying to a $b\\bar{b}$ pair in events with no charged leptons and large missing transverse energy using the full CDF data set", 
+        "CDF", 
+        "10.1103/PhysRevLett.109.111805", 
+        "1460765", 
+        "1207.1711", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-12-367-E"
+        ]
+    ], 
+    "1121873": [
+        "Measurement of the difference of CP--violating asymmetries in $D^0 \\to K^+K^-$ and $D^0 \\to \\pi^+\\pi^-$ decays at CDF", 
+        "CDF", 
+        "10.1103/PhysRevLett.109.111801", 
+        "1461451", 
+        "1207.2158", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-12-392-PPD"
+        ]
+    ], 
+    "1122039": [
+        "Search for Neutral Higgs Bosons in Events with Multiple Bottom Quarks at the Tevatron", 
+        "CDF", 
+        "10.1103/PhysRevD.86.091101", 
+        "1461670", 
+        "1207.2757", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-12-385-E"
+        ]
+    ], 
+    "1123369": [
+        "Novel inclusive search for the Higgs boson in the four-lepton final state at CDF", 
+        "CDF", 
+        "10.1103/PhysRevD.86.072012", 
+        "1463433", 
+        "1207.5016", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-12-399-E"
+        ]
+    ], 
+    "1123913": [
+        "Search for a Higgs boson in the diphoton final state using the full CDF data set from $p\\bar{p}$ collisions at $\\sqrt{s} =$ 1.96 TeV", 
+        "CDF", 
+        "10.1016/j.physletb.2012.08.051", 
+        "1470440", 
+        "1207.6386", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-12-413-PPD"
+        ]
+    ], 
+    "1124036": [
+        "Evidence for a particle produced in association with weak bosons and decaying to a bottom-antibottom quark pair in Higgs boson searches at the Tevatron", 
+        "CDF", 
+        "10.1103/PhysRevLett.109.071804", 
+        "1470751", 
+        "1207.6436", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-12-412-E"
+        ]
+    ], 
+    "1124160": [
+        "Precision Top-Quark Mass Measurements at CDF", 
+        "CDF", 
+        "10.1103/PhysRevLett.109.152003", 
+        "1470764", 
+        "1207.6758", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-12-416-E"
+        ]
+    ], 
+    "1124333": [
+        "Transverse momentum cross section of $e^+e^-$ pairs in the $Z$-boson region from $p\\bar{p}$ collisions at $\\sqrt{s}=1.96$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.86.052010", 
+        "1471089", 
+        "1207.7138", 
+        "ins1124333", 
+        null, 
+        [
+            "FERMILAB-PUB-12-421-E"
+        ]
+    ], 
+    "1127334": [
+        "Search for the standard model Higgs boson produced in association with top quarks using the full CDF data set", 
+        "CDF", 
+        "10.1103/PhysRevLett.109.181802", 
+        "1472817", 
+        "1208.2662", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-12-470-E"
+        ]
+    ], 
+    "1127596": [
+        "Measurement of the Bottom-Strange Meson Mixing Phase in the Full CDF Data Set", 
+        "CDF", 
+        "10.1103/PhysRevLett.109.171802", 
+        null, 
+        "1208.2967", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-12-471-PPD"
+        ]
+    ], 
+    "1182214": [
+        "Measurements of the Top-quark Mass and the $t\\bar{t}$ Cross Section in the Hadronic $\\tau +$ Jets Decay Channel at $\\sqrt{s} = 1.96$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.109.192001", 
+        "1474980", 
+        "1208.5720", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-12-486-E"
+        ]
+    ], 
+    "1192036": [
+        "Search for a Heavy Vector Boson Decaying to Two Gluons in $p\\bar{p}$ Collisions at $\\sqrt{s}=1.96$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.86.112002", 
+        "1489355", 
+        "1210.5686", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-12-593-E"
+        ]
+    ]
+}

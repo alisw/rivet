@@ -1,0 +1,37 @@
+Name: BELLE_2013_I1247059
+Year: 2013
+Summary: $B^0\to\phi K^*$ decays
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1247059
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 88 (2013) 7, 072004
+RunInfo: Any process producing B0, originally Upsilon(4S) decay
+Description:
+  'Measurment of mass and angular distributions in  $B^0\to\phi K^*$ decays. The
+   data were read from the figures in the paper and may not be corrected.'
+ValidationInfo:
+  'Herwig7 events using EvtGen for decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle:2013vat
+BibTeX: '@article{Belle:2013vat,
+    author = "Prim, M. and others",
+    collaboration = "Belle",
+    title = "{Angular analysis of $B^0 \to \phi K^{*}$ decays and search for $CP$ violation at Belle}",
+    eprint = "1308.1830",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevD.88.072004",
+    journal = "Phys. Rev. D",
+    volume = "88",
+    number = "7",
+    pages = "072004",
+    year = "2013"
+}
+'

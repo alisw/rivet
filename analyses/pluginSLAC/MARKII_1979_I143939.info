@@ -1,0 +1,30 @@
+Name: MARKII_1979_I143939
+Year: 1979
+Summary: Measurement of $R$ and $D\bar{D}$ cross section between 3.67 and 3.872 GeV
+Experiment: MARKII
+Collider: SPEAR
+InspireID: 143939
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Schindler, R.H. PhD Thesis, 1979 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: no
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$ and the $D\bar{D}$ cross section in $e^+e^-$ collisions  between 3.67 and 3.872 GeV
+   The individual hadronic and muonic cross sections are also outputted to the yoda file
+   so that ratio $R$ can be recalcuated if runs are combined.'
+Keywords: []
+BibKey: Schindler:1979rj
+BibTeX: '@phdthesis{Schindler:1979rj,
+      author         = "Schindler, R. H.",
+      title          = "{CHARMED MESON PRODUCTION AND DECAY PROPERTIES AT THE
+                        psi-prime-prime (3770)}",
+      school         = "SLAC",
+      url            = "http://inspirebeta.net/record/143939/files/slac-r-219.pdf",
+      year           = "1979",
+      reportNumber   = "SLAC-R-0219, SLAC-R-219, SLAC-0219, SLAC-219",
+      SLACcitation   = "%%CITATION = SLAC-R-0219;%%"
+}'

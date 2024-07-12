@@ -1,0 +1,32 @@
+Name: BES_2001_I556330
+Year: 2001
+Summary:  $J/\psi\to p \bar{p}\eta$
+Experiment: BES
+Collider: BEPC
+InspireID: 556330
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett.B 510 (2001) 75-82
+RunInfo: Any process producing J/psi originally e+e-
+Description:
+  'Measurement of the mass distributions in the decay $J/\psi\to p \bar{p}\eta$. The data were read from the plots in the paper and may not be corrected for detector efficiency or backgrounds.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BES:2001gvq
+BibTeX: '@article{BES:2001gvq,
+    author = "Bai, J. Z. and others",
+    collaboration = "BES",
+    title = "{Study of N* production from J / Psi ---\ensuremath{>} p anti-p eta}",
+    eprint = "hep-ex/0105011",
+    archivePrefix = "arXiv",
+    doi = "10.1016/S0370-2693(01)00605-0",
+    journal = "Phys. Lett. B",
+    volume = "510",
+    pages = "75--82",
+    year = "2001"
+}
+'

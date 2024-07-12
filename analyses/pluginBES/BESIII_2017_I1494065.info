@@ -1,0 +1,37 @@
+Name: BESIII_2017_I1494065
+Year: 2017
+Summary: Cross Section for $e^+e^-\to\pi^+\pi^-h_c$ for energies between 3.89 and 4.6 GeV
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1494065
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 118 (2017) no.9, 092002
+RunInfo: e+ e- to hadrons
+Beams: [e+, e-]
+Description:
+  'Cross section for  $e^+e^-\to\pi^+\pi^-h_c$ for energies between 3.89 and 4.6 GeV measured by the BESIII collaboration.'
+ValidationInfo:
+  ''
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2016adj
+BibTeX: '@article{BESIII:2016adj,
+      author         = "Ablikim, Medina and others",
+      title          = "{Evidence of Two Resonant Structures in $e^+ e^- \to
+                        \pi^+ \pi^- h_c$}",
+      collaboration  = "BESIII",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "118",
+      year           = "2017",
+      number         = "9",
+      pages          = "092002",
+      doi            = "10.1103/PhysRevLett.118.092002",
+      eprint         = "1610.07044",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1610.07044;%%"
+}'

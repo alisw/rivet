@@ -5,11 +5,13 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1711114
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Ben Nachman <benjamin.philip.nachman@cern.ch>
  - Zihao Jiang <zihao.jiang@cern.ch>
  - Christian Gutschow <chris.g@cern.ch>
 References:
+ - ATLAS-STDM-2017-17
  - Phys.Rev. D99 (2019) no.5, 052004
  - doi:10.1103/PhysRevD.99.052004
  - arXiv:1812.09283 [hep-ex]
@@ -40,7 +42,7 @@ Description:
   and parton shower Monte Carlo predictions, providing input to improve these predictions of the main source of background
   events in analyses involving boosted Higgs bosons decaying into $b$-quarks.'
 BibKey: Aaboud:2018uiu
-BibTex: '@article{Aaboud:2018uiu,
+BibTeX: '@article{Aaboud:2018uiu,
       author         = "Aaboud, Morad and others",
       title          = "{Properties of $g\rightarrow b\bar{b}$ at small opening
                         angles in $pp$ collisions with the ATLAS detector at

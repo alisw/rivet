@@ -1,0 +1,36 @@
+Name: E691_1992_I342947
+Year: 1992
+Summary: Dalitz plot analysis of $D\to K\pi\pi$ decays
+Experiment: E691
+Collider: Fermilab
+InspireID: 342947
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 48 (1993) 56-62
+RunInfo: Any process producing D0 and D+ mesons
+Description:
+  'Measurement of the mass distributions in the decays $D^0\to K^-\pi^+\pi^0$, $D^0\to K^0_S\pi^+\pi^-$ and
+   $D^+\to K^-\pi^+\pi^+$.
+   The data were read from the plots in the paper.
+   Resolution/acceptance effects have been not unfolded and no background subtracted therefore given the agreement with the model in the paper this analysis should only be used for qualitative studies.'
+ValidationInfo:
+  'Herwig7 events using model from paper'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: E691:1992rwf 
+BibTeX: '@article{E691:1992rwf,
+    author = "Anjos, J. C. and others",
+    collaboration = "E691",
+    title = "{A Dalitz plot analysis of D ---\ensuremath{>} K pi pi decays}",
+    reportNumber = "FERMILAB-PUB-92-284-E",
+    doi = "10.1103/PhysRevD.48.56",
+    journal = "Phys. Rev. D",
+    volume = "48",
+    pages = "56--62",
+    year = "1993"
+}
+'

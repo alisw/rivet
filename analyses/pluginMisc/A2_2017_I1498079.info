@@ -1,0 +1,36 @@
+Name: A2_2017_I1498079
+Year: 2017
+Summary: Form factor for the decay $\pi^0\to\gamma e^+e^-$
+Experiment: A2
+Collider: MAMI
+InspireID: 1498079
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.C 95 (2017) 2, 025202
+RunInfo: pi0 production with both the dalitz decay and radiative decay for normalization
+Description:
+  'Measurement of the form factor $\left|F_{\pi^0}(q^2)\right|$ for the decay $\pi^0\to\gamma e^+e^-$ by the A2 experiment at MAMI.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: A2:2016sjm
+BibTeX: '@article{A2:2016sjm,
+    author = "Adlarson, P. and others",
+    collaboration = "A2",
+    title = "{Measurement of the $\pi^{0}\to e^{+}e^{-}\gamma$ Dalitz decay at the Mainz Microtron}",
+    eprint = "1611.04739",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevC.95.025202",
+    journal = "Phys. Rev. C",
+    volume = "95",
+    number = "2",
+    pages = "025202",
+    year = "2017"
+}
+'

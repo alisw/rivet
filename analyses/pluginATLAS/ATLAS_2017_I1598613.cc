@@ -13,12 +13,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    ATLAS_2017_I1598613(const string name="ATLAS_2017_I1598613", size_t mode = 0,
-                        const string ref_data="ATLAS_2017_I1598613") : Analysis(name) {
-      _mode = mode; //default to the 3-muon mode
-      setRefDataName(ref_data);
-    }
-
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2017_I1598613);
 
     struct HistoHandler {
       Histo1DPtr histo;
@@ -27,14 +22,18 @@ namespace Rivet {
 
       HistoHandler() {}
 
-      void fill(double value, double weight) {
-        histo->fill(value, weight);
+      void fill(double value) {
+        histo->fill(value);
       }
     };
 
 
     /// Book histograms and initialise projections before the run
     void init() {
+
+        // default to widest cut, electrons and muons.
+        _mode = 0;      
+        if ( getOption("BMODE") == "BB" )  _mode = 1;
 
       // Get the particles needed for each running mode:
       if (_mode == 0) {
@@ -49,35 +48,32 @@ namespace Rivet {
       }
 
       //Book the histograms:
-      _h["dR"]        = bookHandler( 1);
-      _h["highpT_dR"] = bookHandler( 4);
-      _h["lowpT_dR"]  = bookHandler( 7);
-      _h["dPhi"]      = bookHandler(10);
-      _h["dy"]        = bookHandler(13);
-      _h["MopT"]      = bookHandler(16);
-      _h["pToM"]      = bookHandler(19);
-      _h["pT"]        = bookHandler(22);
-      _h["M"]         = bookHandler(25);
-      _h["yboost"]    = bookHandler(29);
+      bookHandler(_h["dR"],         1);
+      bookHandler(_h["highpT_dR"],  4);
+      bookHandler(_h["lowpT_dR"],   7);
+      bookHandler(_h["dPhi"],      10);
+      bookHandler(_h["dy"],        13);
+      bookHandler(_h["MopT"],      16);
+      bookHandler(_h["pToM"],      19);
+      bookHandler(_h["pT"],        22);
+      bookHandler(_h["M"],         25);
+      bookHandler(_h["yboost"],    29);
     }
 
 
-    HistoHandler bookHandler(unsigned int id_xsec) {
-      HistoHandler dummy;
-      dummy.histo = bookHisto1D(id_xsec, 1, 1);
+    void bookHandler(HistoHandler& handler, unsigned int id_xsec) {
       if (_mode) {
-        dummy.scatter = bookScatter2D(id_xsec, 1, 1, true);
-        dummy.d = id_xsec + 1; // transfer function
-        dummy.x = 1; dummy.y = 1;
+        book(handler.histo, "_aux_hist" + toString(id_xsec), refData(id_xsec, 1, 1));
+        book(handler.scatter, id_xsec, 1, 1, true);
+        handler.d = id_xsec + 1; // transfer function
+        handler.x = 1; handler.y = 1;
       }
-      return dummy;
+      else  book(handler.histo, id_xsec, 1, 1);
     }
 
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-
-      const double weight = event.weight();
 
       if (_mode == 1) { // make the 2-b-hadron-level plots
         const Particles& bHadrons = apply<HeavyHadrons>(event, "BHadrons").bHadrons();
@@ -95,17 +91,17 @@ namespace Rivet {
           float MBB = systemBB.mass()/1.75;
           float pTBB = systemBB.pT()/1.75;
 
-          _h["dPhi"].fill(dphiBB, weight);
-          _h["dy"].fill(dyBB, weight);
-          _h["yboost"].fill(yboostBB, weight);
-          _h["dR"].fill(dRBB, weight);
-          _h["M"].fill(MBB/GeV, weight);
-          _h["pT"].fill(pTBB/GeV, weight);
-          _h["MopT"].fill(MBB/pTBB, weight);
-          _h["pToM"].fill(pTBB/MBB, weight);
+          _h["dPhi"].fill(dphiBB);
+          _h["dy"].fill(dyBB);
+          _h["yboost"].fill(yboostBB);
+          _h["dR"].fill(dRBB);
+          _h["M"].fill(MBB/GeV);
+          _h["pT"].fill(pTBB/GeV);
+          _h["MopT"].fill(MBB/pTBB);
+          _h["pToM"].fill(pTBB/MBB);
 
-          if (pTBB >= 20*GeV)  _h["highpT_dR"].fill(dRBB, weight);
-          else                 _h["lowpT_dR"].fill(dRBB,  weight);
+          if (pTBB >= 20*GeV)  _h["highpT_dR"].fill(dRBB);
+          else                 _h["lowpT_dR"].fill(dRBB);
         }
       }
 
@@ -176,17 +172,17 @@ namespace Rivet {
         float M = system.mass();
         float pT = system.pT();
 
-        _h["dPhi"].fill(dphi, weight);
-        _h["dy"].fill(dy, weight);
-        _h["yboost"].fill(yboost, weight);
-        _h["dR"].fill(dR, weight);
-        if (pT >= 20*GeV)  _h["highpT_dR"].fill(dR, weight);
-        else  _h["lowpT_dR"].fill(dR, weight);
+        _h["dPhi"].fill(dphi);
+        _h["dy"].fill(dy);
+        _h["yboost"].fill(yboost);
+        _h["dR"].fill(dR);
+        if (pT >= 20*GeV)  _h["highpT_dR"].fill(dR);
+        else  _h["lowpT_dR"].fill(dR);
 
-        _h["M"].fill(M, weight);
-        _h["pT"].fill(pT, weight);
-        _h["MopT"].fill(M/pT, weight);
-        _h["pToM"].fill(pT/M, weight);
+        _h["M"].fill(M);
+        _h["pT"].fill(pT);
+        _h["MopT"].fill(M/pT);
+        _h["pToM"].fill(pT/M);
 
       } //< end of muon analysis.
     }
@@ -196,15 +192,12 @@ namespace Rivet {
     void finalize() {
       for (map<string, HistoHandler>::iterator hit = _h.begin(); hit != _h.end(); ++hit) {
         normalize(hit->second.histo);
-        if (_mode == 1) {
-          applyTransferFnAndNorm(hit->second);
-          removeAnalysisObject(hit->second.histo);
-        }
+        if (_mode == 1)  applyTransferFnAndNorm(hit->second);
       }
     }
 
 
-    void applyTransferFnAndNorm(HistoHandler handler) { ///< @todo Pass as const reference?
+    void applyTransferFnAndNorm(HistoHandler &handler) { ///< @todo Pass as const reference?
       // Load transfer function from reference data file
       const YODA::Scatter2D& myTransferFn = refData(handler.d, handler.x, handler.y);
       double area = 0.0;
@@ -253,16 +246,7 @@ namespace Rivet {
   };
 
 
-
-  /// Specialised subclass for the BB analysis
-  struct ATLAS_2017_I1598613_BB : public ATLAS_2017_I1598613 {
-    ATLAS_2017_I1598613_BB() : ATLAS_2017_I1598613("ATLAS_2017_I1598613_BB", 1) { }
-  };
-
-
   // Hooks for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2017_I1598613);
-  DECLARE_RIVET_PLUGIN(ATLAS_2017_I1598613_BB);
-
+  RIVET_DECLARE_PLUGIN(ATLAS_2017_I1598613);
 
 }

@@ -1,0 +1,33 @@
+Name: MARKII_1982_I177606
+Year: 1982
+Summary: $D^{*\pm}$ production at 29 GeV
+Experiment: MARKII
+Collider: PEP
+InspireID: 177606
+Status: VALIDATED
+Authors:
+ - Peter Richardson <Peter.Richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 61 (1988) 1057
+RunInfo: e+ e- to hadrons at 29 GeV
+Beams: [e+, e-]
+Energies: [29]
+Description:
+  'Rate and spectrum for $D^{*\pm}$ meson production at 29 GeV measured by the MARKII collaboration.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Yelton:1982ix
+BibTeX: '@article{Yelton:1982ix,
+    author = "Yelton, J. M. and others",
+    title = "{D*+ Production in e+ e- Annihilation at 29-GeV}",
+    reportNumber = "SLAC-PUB-2926, LBL-14488",
+    doi = "10.1103/PhysRevLett.49.430",
+    journal = "Phys. Rev. Lett.",
+    volume = "49",
+    pages = "430",
+    year = "1982"
+}
+'

@@ -1,0 +1,37 @@
+Name: CLEOII_1995_I397770
+Year: 1995
+Summary: Spectrum for $\Xi_c^{*0}$ production at 10.58 GeV
+Experiment: CLEOII
+Collider: CESR
+InspireID: 397770
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 75 (1995) 4364-4368
+RunInfo: e+e- to hadrons 
+Beams: [e+, e-]
+Energies: [10.58]
+Description:
+  'Spectrum for $\Xi_c^{*0}$ production at 10.58 GeV measured by CLEOII.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Avery:1995ps
+BibTeX: '@article{Avery:1995ps,
+      author         = "Avery, P. and others",
+      title          = "{Observation of a narrow state decaying into Xi(c)+ pi-}",
+      collaboration  = "CLEO",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "75",
+      year           = "1995",
+      pages          = "4364-4368",
+      doi            = "10.1103/PhysRevLett.75.4364",
+      eprint         = "hep-ex/9508010",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CLNS-95-1352, CLEO-95-14",
+      SLACcitation   = "%%CITATION = HEP-EX/9508010;%%"
+}'

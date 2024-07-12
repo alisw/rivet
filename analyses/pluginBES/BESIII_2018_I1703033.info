@@ -1,0 +1,36 @@
+Name: BESIII_2018_I1703033
+Year: 2018
+Summary: Dalitz plot analysis of $\omega\to\pi^+\pi^-\pi^0$
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1703033
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ -     Phys.Rev.D 98 (2018) 11, 112007
+RunInfo: Any process producing omega -> pi+pi-pi0
+Description:
+  'Measurement of kinematic distributions in the decay $\omega\to\pi^+\pi^-\pi^0$ by BESIII. The data were read from the plots in the paper and therefore for most points the error bars are the size of the point. It is also not clear that any resolution/acceptance effects have been unfolded.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2018yvu
+BibTeX: '@article{BESIII:2018yvu,
+    author = "Ablikim, M. and others",
+    collaboration = "BESIII",
+    title = "{Dalitz Plot Analysis of the Decay $\omega \rightarrow \pi^{+}\pi^{-}\pi^{0}$}",
+    eprint = "1811.03817",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevD.98.112007",
+    journal = "Phys. Rev. D",
+    volume = "98",
+    number = "11",
+    pages = "112007",
+    year = "2018"
+}
+'

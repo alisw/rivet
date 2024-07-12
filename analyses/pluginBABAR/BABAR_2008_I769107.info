@@ -1,0 +1,36 @@
+Name: BABAR_2008_I769107
+Year: 2008
+Summary: Measurement of the energy spectrum for $\bar{B}\to X_s \gamma$
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 769107
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 77 (2008) 051103
+RunInfo: any process making $B^-$ and $\bar{B}^0$ mesons, eg. particle gun or $\Upslion(4S)$ decay. 
+Description:
+  'Photon energy spectrum in $B\to s\gamma$ decays measured by BELLE. Useful for testing the implementation of these decays'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BaBar:2007yhb
+BibTeX: '@article{BaBar:2007yhb,
+    author = "Aubert, Bernard and others",
+    collaboration = "BaBar",
+    title = "{Measurement of the $B \to X_s \gamma$ branching fraction and photon energy spectrum using the recoil method}",
+    eprint = "0711.4889",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "SLAC-PUB-13021, BABAR-PUB-07-067",
+    doi = "10.1103/PhysRevD.77.051103",
+    journal = "Phys. Rev. D",
+    volume = "77",
+    pages = "051103",
+    year = "2008"
+}
+'

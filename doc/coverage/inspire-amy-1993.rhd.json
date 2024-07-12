@@ -1,0 +1,27 @@
+{
+    "352887": [
+        "Search for anomalous gamma gamma production at TRISTAN", 
+        "AMY", 
+        "10.1016/0370-2693(93)91449-W", 
+        null, 
+        "hep-ph/9302251", 
+        null, 
+        null, 
+        [
+            "VPI-IHEP-93-2"
+        ]
+    ], 
+    "356468": [
+        "Measurement of alpha-s from the moment of particle momenta within jets from e+ e- annihilation", 
+        "AMY", 
+        "10.1016/0370-2693(93)90021-9", 
+        null, 
+        null, 
+        "ins356468", 
+        null, 
+        [
+            "KEK-PREPRINT-93-62", 
+            "AMY-93-1"
+        ]
+    ]
+}

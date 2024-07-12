@@ -9,23 +9,23 @@ namespace Rivet {
   class CMS_2015_I1327224 : public Analysis {
   public:
 
-    DEFAULT_RIVET_ANALYSIS_CTOR(CMS_2015_I1327224);
+    RIVET_DEFAULT_ANALYSIS_CTOR(CMS_2015_I1327224);
 
 
     void init() {
       FinalState fs;
       FastJets antikt(fs, FastJets::ANTIKT, 0.5);
       declare(antikt, "ANTIKT");
-      _h_chi_dijet.addHistogram(4200., 8000., bookHisto1D(1, 1, 1));
-      _h_chi_dijet.addHistogram(3600., 4200., bookHisto1D(2, 1, 1));
-      _h_chi_dijet.addHistogram(3000., 3600., bookHisto1D(3, 1, 1));
-      _h_chi_dijet.addHistogram(2400., 3000., bookHisto1D(4, 1, 1));
-      _h_chi_dijet.addHistogram(1900., 2400., bookHisto1D(5, 1, 1));
+      {Histo1DPtr tmp; _h_chi_dijet.add(4200., 8000., book(tmp, 1, 1, 1));}
+      {Histo1DPtr tmp; _h_chi_dijet.add(3600., 4200., book(tmp, 2, 1, 1));}
+      {Histo1DPtr tmp; _h_chi_dijet.add(3000., 3600., book(tmp, 3, 1, 1));}
+      {Histo1DPtr tmp; _h_chi_dijet.add(2400., 3000., book(tmp, 4, 1, 1));}
+      {Histo1DPtr tmp; _h_chi_dijet.add(1900., 2400., book(tmp, 5, 1, 1));}
     }
 
 
     void analyze(const Event& event) {
-      const double weight = event.weight();
+      const double weight = 1.0;
       const Jets& jets = apply<JetAlg>(event, "ANTIKT").jetsByPt();
       if (jets.size() < 2) vetoEvent;
 
@@ -46,15 +46,15 @@ namespace Rivet {
     }
 
     void finalize() {
-      foreach (Histo1DPtr hist, _h_chi_dijet.getHistograms()) {
+      for (Histo1DPtr hist : _h_chi_dijet.histos()) {
         normalize(hist);
       }
     }
 
   private:
-    BinnedHistogram<double> _h_chi_dijet;
+    BinnedHistogram _h_chi_dijet;
   };
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CMS_2015_I1327224);
+  RIVET_DECLARE_PLUGIN(CMS_2015_I1327224);
 }

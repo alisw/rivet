@@ -1,0 +1,33 @@
+Name: DM2_1991_I318558
+Year: 1991
+Summary: Cross section for  $e^+e^-\to$ $K^+K^-\pi^0$ and $K^0_SK^\pm\pi^\mp$ for energies from 1.3 to 2.2 GeV
+Experiment: DM2
+Collider: DCI
+InspireID: 318558
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Z.Phys. C52 (1991) 227-230, 1991 
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+  'Measurement of the cross section for  $e^+e^-\to$ $K^+K^-\pi^0$ and $K^0_SK^\pm\pi^\mp$
+    for energies from 1.3 to 2.2 GeV.'
+Keywords:
+BibKey: Bisello:1991kd
+BibTeX: '@article{Bisello:1991kd,
+      author         = "Bisello, D. and others",
+      title          = "{Observation of an isoscalar vector meson at
+                        approximately = 1650-MeV/c**2 in the e+ e- ---&gt; K anti-K
+                        pi reaction}",
+      journal        = "Z. Phys.",
+      volume         = "C52",
+      year           = "1991",
+      pages          = "227-230",
+      doi            = "10.1007/BF01560440",
+      reportNumber   = "LAL-91-24",
+      SLACcitation   = "%%CITATION = ZEPYA,C52,227;%%"
+}'

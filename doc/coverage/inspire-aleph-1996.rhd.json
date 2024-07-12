@@ -1,0 +1,393 @@
+{
+    "393413": [
+        "Improved tau polarization measurement", 
+        "ALEPH", 
+        "10.1007/BF02907399", 
+        "278489", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-95-023", 
+            "CERN-PPE-95-23"
+        ]
+    ], 
+    "398193": [
+        "First measurement of the quark to photon fragmentation function", 
+        "ALEPH", 
+        "10.1007/BF02907417", 
+        "285017", 
+        null, 
+        "ins398193", 
+        null, 
+        [
+            "CERN-PPE-95-089", 
+            "CERN-PPE-95-89"
+        ]
+    ], 
+    "398194": [
+        "Measurement of D(s)+ meson production in Z decays and of the anti-B(s)0 lifetime", 
+        "ALEPH", 
+        "10.1007/BF02907442", 
+        "285015", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-95-092", 
+            "CERN-PPE-95-92"
+        ]
+    ], 
+    "398317": [
+        "Inclusive production of neutral vector mesons in hadronic Z decays", 
+        "ALEPH", 
+        "10.1007/BF02907418", 
+        "285908", 
+        null, 
+        "ins398317", 
+        null, 
+        [
+            "CERN-PPE-95-100"
+        ]
+    ], 
+    "398426": [
+        "Production of excited beauty states in Z decays", 
+        "ALEPH", 
+        "10.1007/BF02907419", 
+        "287964", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-95-108"
+        ]
+    ], 
+    "400823": [
+        "Measurement of the tau lepton lifetime", 
+        "ALEPH", 
+        "10.1007/s002880050132", 
+        "289630", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-95-128"
+        ]
+    ], 
+    "401102": [
+        "Tau leptonic branching ratios", 
+        "ALEPH", 
+        "10.1007/s002880050133", 
+        "289631", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-95-127"
+        ]
+    ], 
+    "401554": [
+        "A Precise measurement of the average $b$ hadron lifetime", 
+        "ALEPH", 
+        "10.1016/0370-2693(95)01586-8", 
+        "288882", 
+        null, 
+        "ins401554", 
+        null, 
+        [
+            "CERN-PPE-95-121"
+        ]
+    ], 
+    "401603": [
+        "Tau hadronic branching ratios", 
+        "ALEPH", 
+        "10.1007/s002880050134", 
+        "290479", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-95-140"
+        ]
+    ], 
+    "402895": [
+        "Measurement of Lambda(b) polarization in Z decays", 
+        "ALEPH", 
+        "10.1016/0370-2693(95)01433-0", 
+        "291081", 
+        null, 
+        "ins402895", 
+        null, 
+        [
+            "CERN-PPE-95-156"
+        ]
+    ], 
+    "404562": [
+        "Quark and gluon jet properties in symmetric three jet events", 
+        "ALEPH", 
+        "10.1016/0370-2693(96)00849-0", 
+        "294578", 
+        null, 
+        "ins404562", 
+        null, 
+        [
+            "CERN-PPE-95-184"
+        ]
+    ], 
+    "415745": [
+        "Measurement of Lambda polarization from Z decays", 
+        "ALEPH", 
+        "10.1016/0370-2693(96)00300-0", 
+        "295269", 
+        null, 
+        "ins415745", 
+        null, 
+        [
+            "CERN-PPE-96-004", 
+            "CERN-PPE-96-4", 
+            "CERN-PPE-96-04"
+        ]
+    ], 
+    "416100": [
+        "Improved measurement of the $\\bar{B}^0$ and $B^{-}$ meson lifetimes", 
+        "ALEPH", 
+        "10.1007/BF02906958", 
+        "295911", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-014", 
+            "CERN-PPE-96-14"
+        ]
+    ], 
+    "416101": [
+        "Search for supersymmetric particles in e+ e- collisions of center-of-mass energies of 130-GeV and 136-GeV", 
+        "ALEPH", 
+        "10.1016/0370-2693(96)00182-7", 
+        "295912", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-010", 
+            "CERN-PPE-96-10"
+        ]
+    ], 
+    "416137": [
+        "Determination of sin**2 theta(w)(eff) using jet charge measurements in hadronic Z decays", 
+        "ALEPH", 
+        "10.1007/s002880050183", 
+        "296722", 
+        null, 
+        "ins416137", 
+        null, 
+        [
+            "CERN-PPE-96-009", 
+            "CERN-PPE-96-09", 
+            "CERN-PPE-96-9"
+        ]
+    ], 
+    "417261": [
+        "Study of the B(s)0 anti-B(s)0 oscillation frequency using D(s)- lepton+ combinations in Z decays", 
+        "ALEPH", 
+        "10.1016/0370-2693(96)00451-0", 
+        "299241", 
+        null, 
+        "ins417261", 
+        null, 
+        [
+            "CERN-PPE-96-030", 
+            "CERN-PPE-96-30"
+        ]
+    ], 
+    "417266": [
+        "Measurement of the mass of the Lambda(b) baryon", 
+        "ALEPH", 
+        "10.1016/0370-2693(96)00659-4", 
+        "298929", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-028", 
+            "CERN-PPE-96-28"
+        ]
+    ], 
+    "418420": [
+        "A Study of single and multi - photon production in e+ e- collisions at center-of-mass energies of 130-GeV and 136-GeV", 
+        "ALEPH", 
+        "10.1016/0370-2693(96)00930-6", 
+        "302014", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-053", 
+            "CERN-PPE-96-53"
+        ]
+    ], 
+    "418421": [
+        "Four jet final state production in e+ e- collisions at center-of-mass energies of 130-GeV and 136-GeV", 
+        "ALEPH", 
+        "10.1007/s002880050163", 
+        "302015", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-052", 
+            "CERN-PPE-96-52"
+        ]
+    ], 
+    "419905": [
+        "Measurement of the b forward - backward asymmetry and mixing using high p(T) leptons", 
+        "ALEPH", 
+        "10.1016/0370-2693(96)00926-4", 
+        "305517", 
+        null, 
+        "ins419905", 
+        null, 
+        [
+            "CERN-PPE-96-072", 
+            "CERN-PPE-96-72"
+        ]
+    ], 
+    "420342": [
+        "Mass limit for the standard model Higgs boson with the full LEP-1 ALEPH data sample", 
+        "ALEPH", 
+        "10.1016/0370-2693(96)00800-3", 
+        "306347", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-079", 
+            "CERN-PPE-96-79"
+        ]
+    ], 
+    "420348": [
+        "Search for CP violation in the decay Z --> b anti-b g", 
+        "ALEPH", 
+        "10.1016/0370-2693(96)00927-6", 
+        "306046", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-071", 
+            "CERN-PPE-96-71"
+        ]
+    ], 
+    "420527": [
+        "Strange b baryon production and lifetime in Z decays", 
+        "ALEPH", 
+        "10.1016/0370-2693(96)00925-2", 
+        "306603", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-081", 
+            "CERN-PPE-96-81"
+        ]
+    ], 
+    "420645": [
+        "Mass limit for the lightest neutralino", 
+        "ALEPH", 
+        "10.1007/s002880050278", 
+        "306990", 
+        "hep-ex/9607009", 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-83"
+        ]
+    ], 
+    "420673": [
+        "Search for heavy lepton pair production in e+ e- collisions at center-of-mass energies of 130-GeV and 136-GeV", 
+        "ALEPH", 
+        "10.1016/0370-2693(96)00928-8", 
+        "306604", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-080", 
+            "CERN-PPE-96-80"
+        ]
+    ], 
+    "421549": [
+        "Search for excited leptons at 130-GeV - 140-GeV", 
+        "ALEPH", 
+        "10.1016/0370-2693(96)00961-6", 
+        "307583", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-087"
+        ]
+    ], 
+    "421550": [
+        "Four fermion production in e+ e- collisions at center-of-mass energies of 130-GeV and 136-GeV", 
+        "ALEPH", 
+        "10.1016/S0370-2693(96)01226-9", 
+        "307584", 
+        null, 
+        "ins421550", 
+        null, 
+        [
+            "CERN-PPE-96-088"
+        ]
+    ], 
+    "421552": [
+        "Measurement of hadron and lepton pair production from $e^{+} e^{-}$ annihilation at center-of-mass energies of 130-GeV and 136-GeV", 
+        "ALEPH", 
+        "10.1016/0370-2693(96)00504-7", 
+        "300419", 
+        null, 
+        "ins421552", 
+        null, 
+        [
+            "CERN-PPE-96-045", 
+            "CERN-PPE-96-45"
+        ]
+    ], 
+    "421560": [
+        "Search for charginos and neutralinos with R-parity violation at s**(1/2) = 130-GeV and 136-GeV", 
+        "ALEPH", 
+        "10.1016/0370-2693(96)00915-X", 
+        "307375", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-086"
+        ]
+    ], 
+    "423034": [
+        "Observation of charmless hadronic b decays", 
+        "ALEPH", 
+        "10.1016/0370-2693(96)00929-X", 
+        "308013", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-104"
+        ]
+    ], 
+    "423696": [
+        "Charm counting in b decays", 
+        "ALEPH", 
+        "10.1016/S0370-2693(96)01318-4", 
+        "309557", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-117"
+        ]
+    ]
+}

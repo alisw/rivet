@@ -1,0 +1,40 @@
+Name: H1_2005_I676166
+Year: 2005
+Summary: Measurement of beauty production at HERA using events with muons and jets (H1)
+Experiment: H1
+Collider: HERA
+InspireID: 676166
+Status: VALIDATED
+Reentrant: True
+Authors:
+ - Danielle Wislon <daniellewilson1305@gmail.com>
+ - Hannes Jung < hannes.jung@desy.de>
+References:
+ - 'Eur.Phys.J.C 41 (2005) 453'
+ - 'DOI:10.1140/epjc/s2005-02267-0'
+ - 'arXiv:hep-ex/0502010'
+ - 'DESY-05-004'
+RunInfo: 'validation with 3000001 events generated RAPGAP33, 26.7x820 GeV, Q2>2, 0.01 < y <0.95, IPRO=12, pt2cut=9, mixing with O(alphas) process, Nf_QCDC=4, NFLA=5' 
+Beams: [[e+,p+],[p+,e+]]
+Energies: [[27.6,920],[920,27.6]]
+Description: 'A measurement of the beauty production cross section in $ep$ collisions at a centre-of-mass energy of 319 GeV is presented. The data were collected with the H1 detector at the HERA collider in the years 1999-2000. Events are selected by requiring the presence of jets and muons in the final state. Both the long lifetime and the large mass of b-flavoured hadrons are exploited to identify events containing beauty quarks. Differential cross sections are measured in photoproduction, with photon virtualities $Q^2 < 1$ GeV$^2$, and in deep inelastic scattering, where $2 < Q^2 < 100$ GeV$^2$.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: H1:2005jeo
+BibTeX: '@article{H1:2005jeo,
+    author = "Aktas, A. and others",
+    collaboration = "H1",
+    title = "{Measurement of beauty production at HERA using events with muons and jets}",
+    eprint = "hep-ex/0502010",
+    archivePrefix = "arXiv",
+    reportNumber = "DESY-05-004",
+    doi = "10.1140/epjc/s2005-02267-0",
+    journal = "Eur. Phys. J. C",
+    volume = "41",
+    pages = "453",
+    year = "2005"
+}
+
+'
+

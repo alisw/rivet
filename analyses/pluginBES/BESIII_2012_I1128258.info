@@ -1,0 +1,34 @@
+Name: BESIII_2012_I1128258
+Year: 2012
+Summary: Mass distributions in $\chi_{cJ}\to p\bar{n}\pi^-$ and $p\bar{n}\pi^-\pi^0$
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1128258
+Status: VALIDATED NOHEPDATA
+Reentrant: false
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 86 (2012) 052011
+RunInfo : Any process producing chi_c0,1,2
+Description:
+  'Measurement of the mass distributions in the decays $\chi_{cJ}\to p\bar{n}\pi^-$ and $p\bar{n}\pi^-\pi^0$.
+   The data were read from the plots in the paper and may not be corrected for backgrounds and efficiency.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2012imn
+BibTeX: '@article{BESIII:2012imn,
+    author = "Ablikim, M. and others",
+    collaboration = "BESIII",
+    title = "{Measurement of $\chi_{cJ}$ decaying into $p\bar{n}\pi^{-}$ and $p\bar{n}\pi^{-}\pi^{0}$}",
+    eprint = "1208.3721",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevD.86.052011",
+    journal = "Phys. Rev. D",
+    volume = "86",
+    pages = "052011",
+    year = "2012"
+}
+'

@@ -1,0 +1,34 @@
+Name: BESIII_2021_I1909391
+Year: 2021
+Summary: Dalitz plot analysis of $D_s^+\to \pi^+\pi^+\pi^-$
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1909391
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - arXiv:2108.10050 [hep-ex]
+RunInfo: Any process producing D_s+ -> pi+ pi+ pi-
+Description:
+  'Measurement of the mass distributions in the decay $D_s^+\to \pi^+\pi^+\pi^-$.
+   The data were read from the plots in the paper and in many case the size of the point was greater than the errors.
+   Resolution/acceptance effects have been not unfolded, although the efficiency function given in the paper is applied. Given the agreement with the model in the paper this analysis should only be used for qualitative studies.'
+ValidationInfo:
+  'Herwig 7 events using model from paper'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2021jnf
+BibTeX: '@article{BESIII:2021jnf,
+    author = "Ablikim, M. and others",
+    collaboration = "BESIII",
+    title = "{Amplitude analysis of the $D_s^{+} \rightarrow \pi^{+} \pi^{-} \pi^{+}$ decay}",
+    eprint = "2108.10050",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    month = "8",
+    year = "2021"
+}
+'

@@ -5,15 +5,17 @@ Experiment: ATLAS
 Collider: LHC 7TeV
 InspireID: 1119557
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Lily Asquith <lasquith@hep.anl.gov>
  - Roman Lysak <lysak@fzu.cz>
 References:
+ - ATLAS-STDM-2011-38
  - Phys.Rev. D86 (2012) 072006
  - doi:10.1103/PhysRevD.86.072006
  - arXiv:1206.5369 [hep-ex]
 RunInfo:
-  QCD events at 7 TeV, leading-pT jets with $\pT > 300\;GeV$.
+  QCD events at 7 TeV, leading-pT jets with $\pT > 300~GeV$.
 NumEvents: 1000000
 NeedCrossSection: no
 Beams: [p+, p+]
@@ -22,10 +24,10 @@ PtCuts: [300]
 Description:
   'Measurements are presented of the properties of high transverse
    momentum jets, produced in proton-proton collisions at a
-   center-of-mass energy of $\sqrt{s} = 7$\;TeV. Jet mass, width,
+   center-of-mass energy of $\sqrt{s} = 7$~TeV. Jet mass, width,
    eccentricity, planar flow and angularity are measured for jets
    reconstructed using the anti-$k_t$ algorithm with distance parameters
-   $R = 0.6$ and 1.0, with transverse momentum $pT > 300$\;GeV and
+   $R = 0.6$ and 1.0, with transverse momentum $pT > 300$~GeV and
    pseudorapidity $|\eta| < 2$.'
 BibKey: Aad:2012meb
 BibTeX: '@article{Aad:2012meb,
@@ -46,3 +48,7 @@ BibTeX: '@article{Aad:2012meb,
 }'
 ToDo:
  - Validate the eccentricity plot (commented out for now)
+
+ReleaseTests:
+ - $A LHC-7-Jets-6
+

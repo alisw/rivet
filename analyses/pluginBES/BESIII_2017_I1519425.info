@@ -1,0 +1,35 @@
+Name: BESIII_2017_I1519425
+Year: 2017
+Summary: Differential Decay rates for $D^+\to \{\bar{K}^0,\pi^0\} e^+\nu_e$ from BES
+Experiment: BESIII
+Collider: BEPC II
+InspireID: 1519425
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D96 (2017) no.1, 012002
+RunInfo:
+  Events with D-decays, either particle guns or collisions.
+NumEvents: 10000
+NeedCrossSection: no
+Description:
+  'Differential decay rates for semileptonic $D^+\to \bar{K}^0,\pi^0e^+\nu_e$ decays'
+Keywords: []
+BibKey: Ablikim:2017lks
+BibTeX: '@article{Ablikim:2017lks,
+      author         = "Ablikim, M. and others",
+      title          = "{Analysis of $D^+\to\bar K^0e^+\nu_e$ and
+                        $D^+\to\pi^0e^+\nu_e$ semileptonic decays}",
+      collaboration  = "BESIII",
+      journal        = "Phys. Rev.",
+      volume         = "D96",
+      year           = "2017",
+      number         = "1",
+      pages          = "012002",
+      doi            = "10.1103/PhysRevD.96.012002",
+      eprint         = "1703.09084",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1703.09084;%%"
+}'

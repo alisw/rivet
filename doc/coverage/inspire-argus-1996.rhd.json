@@ -1,0 +1,62 @@
+{
+    "397794": [
+        "Measurement of the decay D(s2)*+ ---> D0 K+", 
+        "ARGUS", 
+        "10.1007/s002880050040", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-95-129"
+        ]
+    ], 
+    "401115": [
+        "Measurement of the semileptonic branching fractions of the D0 meson", 
+        "ARGUS", 
+        "10.1016/0370-2693(96)00205-5", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-95-187"
+        ]
+    ], 
+    "403080": [
+        "Two measurements of B0 anti-B0 mixing using kaon tagging", 
+        "ARGUS", 
+        "10.1016/0370-2693(96)00206-7", 
+        null, 
+        null, 
+        "ins403080", 
+        null, 
+        [
+            "DESY-95-223"
+        ]
+    ], 
+    "403304": [
+        "Two photon production of omega pairs", 
+        "ARGUS", 
+        "10.1016/0370-2693(96)00174-8", 
+        null, 
+        null, 
+        "ins403304", 
+        null, 
+        [
+            "DESY-95-227"
+        ]
+    ], 
+    "415889": [
+        "Physics with ARGUS", 
+        "ARGUS", 
+        "10.1016/S0370-1573(96)00008-7", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-96-015"
+        ]
+    ]
+}

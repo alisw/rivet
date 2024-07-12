@@ -1,6 +1,7 @@
 Name: MC_LEADJETUE
 Summary: Underlying event in leading jet events, extended to LHC
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Andy Buckley <andy.buckley@cern.ch>
 RunInfo:

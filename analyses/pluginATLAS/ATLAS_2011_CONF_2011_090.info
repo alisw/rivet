@@ -5,6 +5,7 @@ Experiment: ATLAS
 Collider: LHC
 SpiresID:
 Status: OBSOLETE
+Reentrant: true
 Authors:
  - Angela Chen <aqchen@fas.harvard.edu>
 References:

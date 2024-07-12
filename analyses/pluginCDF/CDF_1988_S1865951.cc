@@ -10,12 +10,7 @@ namespace Rivet {
   class CDF_1988_S1865951 : public Analysis {
   public:
 
-    /// Constructor
-    CDF_1988_S1865951()
-      : Analysis("CDF_1988_S1865951")
-    {
-      _sumWTrig = 0;
-    }
+    RIVET_DEFAULT_ANALYSIS_CTOR(CDF_1988_S1865951);
 
 
     /// @name Analysis methods
@@ -25,15 +20,18 @@ namespace Rivet {
     void init() {
       // Set up projections
       declare(TriggerCDFRun0Run1(), "Trigger");
-      const ChargedFinalState cfs(-1.0, 1.0, 0.4*GeV);
+      const ChargedFinalState cfs((Cuts::etaIn(-1.0, 1.0) && Cuts::pT >=  0.4*GeV));
       declare(cfs, "CFS");
 
       // Book histo
-      if (fuzzyEquals(sqrtS()/GeV, 1800, 1E-3)) {
-        _hist_pt = bookHisto1D(1, 1, 1);
-      } else if (fuzzyEquals(sqrtS()/GeV, 630, 1E-3)) {
-        _hist_pt = bookHisto1D(2, 1, 1);
+      if (isCompatibleWithSqrtS(1800)) {
+        book(_hist_pt ,1, 1, 1);
+      } else if (isCompatibleWithSqrtS(630)) {
+        book(_hist_pt ,2, 1, 1);
       }
+
+      book(_sumWTrig, "sumWTrig");
+
     }
 
 
@@ -42,14 +40,13 @@ namespace Rivet {
       // Trigger
       const bool trigger = apply<TriggerCDFRun0Run1>(event, "Trigger").minBiasDecision();
       if (!trigger) vetoEvent;
-      const double weight = event.weight();
-      _sumWTrig += weight;
+      _sumWTrig->fill();
 
       const FinalState& trackfs = apply<ChargedFinalState>(event, "CFS");
-      foreach (Particle p, trackfs.particles()) {
+      for (Particle p : trackfs.particles()) {
         const double pt = p.pT()/GeV;
         // Effective weight for d3sig/dp3 = weight / ( Delta eta * 2pi * pt ), with Delta(eta) = 2
-        const double eff_weight = weight/(2*2*TWOPI*pt);
+        const double eff_weight = 1.0/(2*2*TWOPI*pt);
         _hist_pt->fill(pt, eff_weight);
       }
     }
@@ -65,21 +62,16 @@ namespace Rivet {
 
   private:
 
-    /// @name Counters
-    //@{
-    double _sumWTrig;
-    //@}
+    /// Counter
+    CounterPtr _sumWTrig;
 
-    /// @name Histos
-    //@{
+    /// Histo
     Histo1DPtr _hist_pt;
-    //@}
 
   };
 
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CDF_1988_S1865951);
+  RIVET_DECLARE_ALIASED_PLUGIN(CDF_1988_S1865951, CDF_1988_I263320);
 
 }

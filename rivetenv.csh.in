@@ -2,6 +2,7 @@
 set prefix=@prefix@
 set exec_prefix=@exec_prefix@
 set datarootdir=@datarootdir@
+set texdatadir=`echo "@datadir@" | sed -e 's:/\+:/:g'`
 
 ## Try to automatically work out the YODA Python path
 set YODA_PYTHONPATH="@YODA_PYTHONPATH@"
@@ -11,9 +12,9 @@ test -n "$YODA_PYTHONPATH" || echo "yoda-config could not be found: you may need
 setenv PATH "$exec_prefix/bin:@YODABINPATH@:$PATH"
 
 if ($?@LIBPATHVARNAME@) then
-setenv @LIBPATHVARNAME@ "@libdir@:@YODALIBPATH@:@HEPMCLIBPATH@:@FASTJETLIBPATH@:@GSLLIBPATH@:$@LIBPATHVARNAME@"
+setenv @LIBPATHVARNAME@ "@libdir@:@YODALIBPATH@:@HEPMCLIBPATH@:@FASTJETLIBPATH@:@FJCONTRIBLIBPATH@:$@LIBPATHVARNAME@"
 else
-setenv @LIBPATHVARNAME@ "@libdir@:@YODALIBPATH@:@HEPMCLIBPATH@:@FASTJETLIBPATH@:@GSLLIBPATH@"
+setenv @LIBPATHVARNAME@ "@libdir@:@YODALIBPATH@:@HEPMCLIBPATH@:@FASTJETLIBPATH@:@FJCONTRIBLIBPATH@"
 endif
 
 if ($?PYTHONPATH) then
@@ -23,33 +24,33 @@ setenv PYTHONPATH "@RIVET_PYTHONPATH@:$YODA_PYTHONPATH"
 endif
 
 if ($?TEXMFHOME) then
-setenv TEXMFHOME "@datadir@/Rivet/texmf:$TEXMFHOME"
+setenv TEXMFHOME "$texdatadir/Rivet/texmf:$TEXMFHOME"
 else
-setenv TEXMFHOME "@datadir@/Rivet/texmf"
+setenv TEXMFHOME "$texdatadir/Rivet/texmf"
 endif
 
 if ($?HOMETEXMF) then
-setenv HOMETEXMF "@datadir@/Rivet/texmf:$HOMETEXMF"
+setenv HOMETEXMF "$texdatadir/Rivet/texmf:$HOMETEXMF"
 else
-setenv HOMETEXMF "@datadir@/Rivet/texmf"
+setenv HOMETEXMF "$texdatadir/Rivet/texmf"
 endif
 
 if ($?TEXMFCNF) then
-setenv TEXMFCNF "@datadir@/Rivet/texmf/cnf:$TEXMFCNF"
+setenv TEXMFCNF "$texdatadir/Rivet/texmf/cnf:$TEXMFCNF"
 else
-setenv TEXMFCNF "@datadir@/Rivet/texmf/cnf:"
+setenv TEXMFCNF "$texdatadir/Rivet/texmf/cnf:"
 endif
 
 if ($?TEXINPUTS) then
-setenv TEXINPUTS "@datadir@/Rivet/texmf/tex//:$TEXINPUTS"
+setenv TEXINPUTS "$texdatadir/Rivet/texmf/tex//:$TEXINPUTS"
 else
-setenv TEXINPUTS "@datadir@/Rivet/texmf/tex//:"
+setenv TEXINPUTS "$texdatadir/Rivet/texmf/tex//:"
 endif
 
 if ($?LATEXINPUTS) then
-setenv LATEXINPUTS "@datadir@/Rivet/texmf/tex//:$LATEXINPUTS"
+setenv LATEXINPUTS "$texdatadir/Rivet/texmf/tex//:$LATEXINPUTS"
 else
-setenv LATEXINPUTS "@datadir@/Rivet/texmf/tex//:"
+setenv LATEXINPUTS "$texdatadir/Rivet/texmf/tex//:"
 endif
 
 unset YODA_PYTHONPATH

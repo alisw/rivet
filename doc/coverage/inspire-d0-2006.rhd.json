@@ -1,0 +1,316 @@
+{
+    "688461": [
+        "The Upgraded D0 detector", 
+        "D0", 
+        "10.1016/j.nima.2006.05.248", 
+        null, 
+        "physics/0507191", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-05-341-E"
+        ]
+    ], 
+    "690938": [
+        "Search for the Higgs boson in $H \\to WW^{(*)}$ decays in $p\\bar{p}$ collisions at $\\sqrt{s}$ = 1.96-TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.96.011801", 
+        null, 
+        "hep-ex/0508054", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-05-377-E"
+        ]
+    ], 
+    "698784": [
+        "Measurement of the isolated photon cross section in $p \\bar{p}$ collisions at $\\sqrt{s}$ = 1.96-TeV", 
+        "D0", 
+        "10.1016/j.physletb.2006.04.048", 
+        null, 
+        "hep-ex/0511054", 
+        "ins698784", 
+        null, 
+        [
+            "FERMILAB-PUB-05-523-E"
+        ]
+    ], 
+    "709544": [
+        "Search for pair production of second generation scalar leptoquarks in p anti-p collisions at $\\sqrt{s}=$ 1.96-TeV.", 
+        "D0", 
+        "10.1016/j.physletb.2006.03.056", 
+        null, 
+        "hep-ex/0601047", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-06-017-E"
+        ]
+    ], 
+    "711493": [
+        "Measurement of B($t \\to$ Wb) /B($t \\to$ Wq) at $\\sqrt{s}$ = 1.96-TeV", 
+        "D0", 
+        "10.1016/j.physletb.2006.07.019", 
+        null, 
+        "hep-ex/0603002", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-06-037-E", 
+            "FERMILAB-PUB-04-06-037-E"
+        ]
+    ], 
+    "712495": [
+        "First direct two-sided bound on the $B^0_{s}$ oscillation frequency", 
+        "D0", 
+        "10.1103/PhysRevLett.97.021802", 
+        null, 
+        "hep-ex/0603029", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-06-055-E"
+        ]
+    ], 
+    "714057": [
+        "Search for the rare decay $B^0_{s} \\to \\phi \\mu^{+} \\mu^{-}$ with the D0 detector", 
+        "D0", 
+        "10.1103/PhysRevD.74.031107", 
+        null, 
+        "hep-ex/0604015", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-06-073-E"
+        ]
+    ], 
+    "714446": [
+        "Search for Squarks and Gluinos in Events with Jets and Missing Transverse Energy in $p \\bar{p}$ Collisions at $\\sqrt{s}$ = 1.96-TeV", 
+        "D0", 
+        "10.1016/j.physletb.2006.05.030", 
+        null, 
+        "hep-ex/0604029", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-06-077-E"
+        ]
+    ], 
+    "714743": [
+        "Search for excited muons in $p \\bar{p}$ collisions at $\\sqrt{s}$ = 1.96- TeV", 
+        "D0", 
+        "10.1103/PhysRevD.73.111102", 
+        null, 
+        "hep-ex/0604040", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-06-081-E"
+        ]
+    ], 
+    "715176": [
+        "A Precise measurement of the $B^0_{s}$ lifetime", 
+        "D0", 
+        "10.1103/PhysRevLett.97.241801", 
+        null, 
+        "hep-ex/0604046", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-06-085-E"
+        ]
+    ], 
+    "715625": [
+        "Search for R-parity violating supersymmetry via the LL anti-E couplings $\\lambda_{121}$, $\\lambda_{122}$ or $\\lambda_{133}$ in $p \\bar{p}$ collisions at $\\sqrt{s}$ = 1.96-TeV", 
+        "D0", 
+        "10.1016/j.physletb.2006.05.077", 
+        null, 
+        "hep-ex/0605005", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-06-089-E"
+        ]
+    ], 
+    "715905": [
+        "Search for neutral Higgs bosons decaying to $\\tau$ pairs in $p \\bar{p}$ collisions at $\\sqrt{s}$ = 1.96-TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.97.121802", 
+        null, 
+        "hep-ex/0605009", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-06-092-E"
+        ]
+    ], 
+    "715906": [
+        "Search for resonant second generation slepton production at the Tevatron", 
+        "D0", 
+        "10.1103/PhysRevLett.97.111801", 
+        null, 
+        "hep-ex/0605010", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-06-094-E"
+        ]
+    ], 
+    "717023": [
+        "Search for particles decaying into a $Z$ boson and a photon in $p\\bar{p}$ collisions at $\\sqrt{s}$ = 1.96 TeV", 
+        "D0", 
+        "10.1016/j.physletb.2006.08.079", 
+        null, 
+        "hep-ex/0605064", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-06-109-E"
+        ]
+    ], 
+    "718809": [
+        "Search for a heavy resonance decaying into a $Z +$ jet final state in $p \\bar{p}$ collisions at $\\sqrt{s}$ = 1.96-TeV using the D0 detector", 
+        "D0", 
+        "10.1103/PhysRevD.74.011104", 
+        null, 
+        "hep-ex/0606018", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-06-167-E"
+        ]
+    ], 
+    "721136": [
+        "Search for scalar leptoquarks in the acoplanar jet topology in $p \\bar{p}$ collisions at $\\sqrt{s}$ = 1.96-TeV", 
+        "D0", 
+        "10.1016/j.physletb.2006.08.020", 
+        null, 
+        "hep-ex/0607009", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-06-233-E"
+        ]
+    ], 
+    "721597": [
+        "Search for the Standard Model Higgs Boson in the $p \\bar{p} \\to$ ZH $\\to \\nu \\bar{\\nu} b \\bar{b}$ channel", 
+        "D0", 
+        "10.1103/PhysRevLett.97.161803", 
+        null, 
+        "hep-ex/0607022", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-06-238-E"
+        ]
+    ], 
+    "721819": [
+        "Search for neutral, long-lived particles decaying into two muons in $p \\bar{p}$ collisions at $\\sqrt{s}$ = 1.96-TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.97.161802", 
+        null, 
+        "hep-ex/0607028", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-06-245-E"
+        ]
+    ], 
+    "721951": [
+        "Search for associated Higgs boson production WH $\\to$ WWW* $\\to \\ell^\\pm \\nu \\ell^\\prime$+- $\\nu^\\prime$ + $X$ in $p \\bar{p}$ collisions at $\\sqrt{s}$ = 1.96-TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.97.151804", 
+        null, 
+        "hep-ex/0607032", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-06-246-E"
+        ]
+    ], 
+    "722703": [
+        "Search for $W^\\prime$ boson production in the top quark decay channel", 
+        "D0", 
+        "10.1016/j.physletb.2006.09.021", 
+        null, 
+        "hep-ex/0607102", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-06-257-E", 
+            "HEPEX-0607102"
+        ]
+    ], 
+    "723153": [
+        "Limits on anomalous trilinear gauge couplings from $W W \\to e^{+} e^{-}$, $W W \\to e^\\pm \\mu^\\mp$, and $W W \\to \\mu^{+} \\mu^{-}$ events from $p\\bar{p}$ collisions at $\\sqrt{s}$ = 1.96-TeV", 
+        "D0", 
+        "10.1103/PhysRevD.74.057101", 
+        null, 
+        "hep-ex/0608011", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-06-268-E"
+        ]
+    ], 
+    "723328": [
+        "Search for pair production of scalar bottom quarks in $p \\bar{p}$ collisions at $\\sqrt{s}$ = 1.96-TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.97.171806", 
+        null, 
+        "hep-ex/0608013", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-06-269-E"
+        ]
+    ], 
+    "725650": [
+        "Measurement of the CP-violation parameter of B0 mixing and decay with p anti-p ---> mu mu X data", 
+        "D0", 
+        "10.1103/PhysRevD.74.092001", 
+        null, 
+        "hep-ex/0609014", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-06-327-E"
+        ]
+    ], 
+    "726597": [
+        "Measurement of $B_d$ mixing using opposite-side flavor tagging", 
+        "D0", 
+        "10.1103/PhysRevD.74.112002", 
+        null, 
+        "hep-ex/0609034", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-06-341-E"
+        ]
+    ], 
+    "727261": [
+        "Measurement of the top quark mass in the lepton+jets final state with the matrix element method", 
+        "D0", 
+        "10.1103/PhysRevD.74.092005", 
+        null, 
+        "hep-ex/0609053", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-06-353-E"
+        ]
+    ], 
+    "730610": [
+        "Measurement of the t anti-t production cross section in p anti-p collisions at s**(1/2) = 1.96-TeV using secondary vertex b tagging", 
+        "D0", 
+        "10.1103/PhysRevD.74.112004", 
+        null, 
+        "hep-ex/0611002", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-06-386-E"
+        ]
+    ]
+}

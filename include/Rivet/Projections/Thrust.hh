@@ -49,7 +49,7 @@ namespace Rivet {
 
     Thrust(const FinalState& fsp) {
       setName("Thrust");
-      addProjection(fsp, "FS");
+      declare(fsp, "FS");
     }
 
     /// Clone on the heap.
@@ -65,7 +65,7 @@ namespace Rivet {
     }
 
     /// Compare projections
-    int compare(const Projection& p) const {
+    CmpState compare(const Projection& p) const {
       return mkNamedPCmp(p, "FS");
     }
 
@@ -120,7 +120,7 @@ namespace Rivet {
     //@}
 
 
-  private:
+  protected:
 
     /// The thrust scalars.
     vector<double> _thrusts;
@@ -128,7 +128,8 @@ namespace Rivet {
     /// The thrust axes.
     vector<Vector3> _thrustAxes;
 
-  private:
+
+  protected:
 
     /// Explicitly calculate the thrust values.
     void _calcThrust(const vector<Vector3>& fsmomenta);

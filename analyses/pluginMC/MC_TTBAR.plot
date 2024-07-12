@@ -10,8 +10,8 @@ LogX=1
 
 # BEGIN PLOT /MC_TTBAR/.*jet_mult
 Title=Jet multiplicity
-XLabel=$N_\text{jets}$
-YLabel=$\mathrm{d}\sigma/\mathrm{d}N_\text{jets}$ [pb]
+XLabel=$N_\mathrm{jets}$
+YLabel=$\mathrm{d}\sigma/\mathrm{d}N_\mathrm{jets}$ [pb]
 LogY=0
 # END PLOT
 
@@ -32,8 +32,8 @@ Title=Transverse momentum distribution for jet 4
 # END PLOT
 
 # BEGIN PLOT /MC_TTBAR/.*jet_HT
-Title=$H_\text{T}$ distribution for all jets
-XLabel=$H_\text{T}$ [GeV]
+Title=$H_\mathrm{T}$ distribution for all jets
+XLabel=$H_\mathrm{T}$ [GeV]
 YLabel=$\mathrm{d}\sigma/\mathrm{d}H_T$ [pb GeV$^{-1}$]
 LogX=1
 # END PLOT
@@ -41,7 +41,7 @@ LogX=1
 # BEGIN PLOT /MC_TTBAR/.*jets_mjj
 Title=Dijet invariant mass spectrum
 XLabel=$m_{jj}$ [GeV]
-YLabel=$\text{d}\sigma/\text{d}m_{jj}$ [pb GeV$^{-1}$]
+YLabel=$\mathrm{d}\sigma/\mathrm{d}m_{jj}$ [pb GeV$^{-1}$]
 LegendAlign=r
 # END PLOT
 
@@ -63,8 +63,8 @@ Title=Transverse momentum distribution for light jet 2
 
 # BEGIN PLOT /MC_TTBAR/.*W_mass
 Title=Mass distribution for $W$ bosons
-XLabel=$W$-candiate $m_\text{inv}$ [GeV]
-YLabel=$\mathrm{d}\sigma/\mathrm{d}m_\text{inv}$ [pb GeV$^{-1}$]
+XLabel=$W$-candiate $m_\mathrm{inv}$ [GeV]
+YLabel=$\mathrm{d}\sigma/\mathrm{d}m_\mathrm{inv}$ [pb GeV$^{-1}$]
 LogY=0
 # END PLOT
 

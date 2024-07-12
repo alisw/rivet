@@ -5,8 +5,9 @@ Experiment: CMS
 Collider: LHC
 InspireID: 1499471
 Status: VALIDATED
+Reentrant: true
 Authors:
- - Fabio Cossutti (fabio.cossutti@ts.infn.it)
+ - Fabio Cossutti <fabio.cossutti@ts.infn.it>
 References:
  - DOI:10.1140/epjc/s10052-017-5140-y
  - arXiv:1611.06507
@@ -20,6 +21,7 @@ NumEvents: 20000000
 NeedCrossSection: yes
 Beams: [p+, p+]
 Energies: [8000]
+Luminosity_fb: 19.8
 Description:
 'Measurements of the associated production of a Z boson with at least
 one jet originating from a b quark in proton-proton collisions

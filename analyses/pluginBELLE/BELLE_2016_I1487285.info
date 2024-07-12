@@ -1,0 +1,36 @@
+Name: BELLE_2016_I1487285
+Year: 2016
+Summary: $\eta\to\pi^+\pi^-\gamma$ decays
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1487285
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 94 (2016) 9, 092006
+RunInfo:
+  Events with eta decays, either particle guns or collisions.
+NumEvents: 10000
+NeedCrossSection: no
+Description:
+  'Differential decay rates for $\eta\to \pi^+\pi^-\gamma$ decays. Data read from plots and may not be corrected.'
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle:2016uaq
+BibTeX: '@article{Belle:2016uaq,
+    author = "Won, E. and others",
+    collaboration = "Belle",
+    title = "{Search for a dark vector gauge boson decaying to $\pi^+ \pi^-$ using $\eta \rightarrow \pi^+\pi^- \gamma$ decays}",
+    eprint = "1609.05599",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevD.94.092006",
+    journal = "Phys. Rev. D",
+    volume = "94",
+    number = "9",
+    pages = "092006",
+    year = "2016"
+}
+'

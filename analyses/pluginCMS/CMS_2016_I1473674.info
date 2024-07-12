@@ -5,6 +5,7 @@ Experiment: CMS
 Collider: LHC
 InspireID: 1473674
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Markus Seidel <markus.seidel@cern.ch>
  - Lukas Kreczko <kreczko@cern.ch>
@@ -35,3 +36,7 @@ BibTeX: '@article{Khachatryan:2016oou,
       reportNumber   = "CMS-TOP-12-042, CERN-EP-2016-139",
       SLACcitation   = "%%CITATION = ARXIV:1607.00837;%%"
 }'
+
+ReleaseTests:
+ - $A LHC-8-Top-All
+

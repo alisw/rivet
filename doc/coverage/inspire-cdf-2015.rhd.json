@@ -1,0 +1,146 @@
+{
+    "1306290": [
+        "Studies of High-Transverse Momentum Jet Substructure and Top Quarks Produced in 1.96 TeV Proton-Antiproton Collisions", 
+        "CDF", 
+        "10.1103/PhysRevD.91.032006", 
+        "1743329", 
+        "1407.3484", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-14-228-E"
+        ]
+    ], 
+    "1316505": [
+        "Measurement of Differential Production Cross Section for $Z/\\gamma^*$ Bosons in Association with Jets in $p\\bar{p}$ Collisions at $\\sqrt{s}=1.96$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.91.012002", 
+        "1756024", 
+        "1409.4359", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-14-337-E"
+        ]
+    ], 
+    "1334519": [
+        "Search for production of an $\\Upsilon$(1S) meson in association with a W or Z boson using the full 1.96 TeV $p\\bar{p}$ collision data set at CDF", 
+        "CDF", 
+        "10.1103/PhysRevD.91.052011", 
+        "1977635", 
+        "1412.4827", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-14-540-PPD"
+        ]
+    ], 
+    "1340319": [
+        "Constraints on Models of the Higgs Boson with Exotic Spin and Parity using Decays to Bottom-Antibottom Quarks in the Full CDF Data Set", 
+        "CDF", 
+        "10.1103/PhysRevLett.114.141802", 
+        "1982361", 
+        "1501.04875", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-15-012-E"
+        ]
+    ], 
+    "1342808": [
+        "Tevatron Constraints on Models of the Higgs Boson with Exotic Spin and Parity Using Decays to Bottom-Antibottom Quark Pairs", 
+        "CDF", 
+        "10.1103/PhysRevLett.114.151802", 
+        "1984692", 
+        "1502.00967", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-15-029-E"
+        ]
+    ], 
+    "1343102": [
+        "Measurement of central exclusive $\\pi^+ \\pi^-$ production in $p\\bar{p}$ collisions at $\\sqrt{s} = 0.9$ and 1.96 TeV at CDF", 
+        "CDF", 
+        "10.1103/PhysRevD.91.091101", 
+        "1987197", 
+        "1502.01391", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-15-033-PPD"
+        ]
+    ], 
+    "1353120": [
+        "Tevatron Combination of Single-Top-Quark Cross Sections and Determination of the Magnitude of the Cabibbo-Kobayashi-Maskawa Matrix Element $\\bf V_{tb}$", 
+        "CDF", 
+        "10.1103/PhysRevLett.115.152003", 
+        "2003756", 
+        "1503.05027", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-15-088-E"
+        ]
+    ], 
+    "1358211": [
+        "Search for Resonances Decaying to Top and Bottom Quarks with the CDF Experiment", 
+        "CDF", 
+        "10.1103/PhysRevLett.115.061801", 
+        "2007373", 
+        "1504.01536", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-15-123-PPD"
+        ]
+    ], 
+    "1364882": [
+        "First measurement of the forward-backward asymmetry in bottom-quark pair production at high mass", 
+        "CDF", 
+        "10.1103/PhysRevD.92.032006", 
+        "2012458", 
+        "1504.06888", 
+        "ins1364882", 
+        null, 
+        [
+            "FERMILAB-PUB-15-153-E"
+        ]
+    ], 
+    "1366021": [
+        "Measurement of the top-quark mass in the ${t\\bar{t}}$ dilepton channel using the full CDF Run II data set", 
+        "CDF", 
+        "10.1103/PhysRevD.92.032003", 
+        "2013876", 
+        "1505.00500", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-15-190-E"
+        ]
+    ], 
+    "1366177": [
+        "Measurement of the Production and Differential Cross Sections of $W^{+}W^{-}$ Bosons in Association with Jets in $p\\bar{p}$ Collisions at $\\sqrt{s}=1.96$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.91.111101", 
+        "2014428", 
+        "1505.00801", 
+        "ins1366177", 
+        null, 
+        [
+            "FERMILAB-PUB-15-191-PPD"
+        ]
+    ], 
+    "1388868": [
+        "Study of the energy dependence of the underlying event in proton-antiproton collisions", 
+        "CDF", 
+        "10.1103/PhysRevD.92.092009", 
+        "2046576", 
+        "1508.05340", 
+        "ins1388868", 
+        null, 
+        [
+            "FERMILAB-PUB-15-361-E"
+        ]
+    ]
+}

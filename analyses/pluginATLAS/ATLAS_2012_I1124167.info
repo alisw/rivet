@@ -5,9 +5,11 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1124167
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Deepak Kar <deepak.kar@cern.ch>
 References:
+ - ATLAS-STDM-2011-32
  - arXiv:1207.6915
  - Phys.Rev. D88 (2013) 032004
  - 10.1103/PhysRevD.88.032004
@@ -23,6 +25,8 @@ Description:
    Events with at least six charged particles are selected by a minimum-bias trigger.
    In addition to the differential distributions, the evolution of each event shape variable as a function of
    the leading charged-particle transverse momentum, charged-particle multiplicity, and summed transverse momentum is presented.'
+ReleaseTests:
+ - $A LHC-7-MinBias
 BibKey: Aad:2012fza
 BibTeX: '@article{Aad:2012fza,
       author         = "Aad, Georges and others",

@@ -12,7 +12,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2019_I1720442);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2019_I1720442);
 
     void init() {
 
@@ -31,21 +31,21 @@ namespace Rivet {
       declare(dressed_muons, "muons");
 
       // Book histos
-      _h["m4l_inclusive"] = bookHisto1D(1,1,1);
+      book(_h["m4l_inclusive"], 1,1,1);
 
-      _h["m4l_ptslice1"] = bookHisto1D(2,1,1);
-      _h["m4l_ptslice2"] = bookHisto1D(3,1,1);
-      _h["m4l_ptslice3"] = bookHisto1D(4,1,1);
-      _h["m4l_ptslice4"] = bookHisto1D(5,1,1);
+      book(_h["m4l_ptslice1"], 2,1,1);
+      book(_h["m4l_ptslice2"], 3,1,1);
+      book(_h["m4l_ptslice3"], 4,1,1);
+      book(_h["m4l_ptslice4"], 5,1,1);
 
-      _h["m4l_rapidityslice1"] = bookHisto1D(6,1,1);
-      _h["m4l_rapidityslice2"] = bookHisto1D(7,1,1);
-      _h["m4l_rapidityslice3"] = bookHisto1D(8,1,1);
-      _h["m4l_rapidityslice4"] = bookHisto1D(9,1,1);
+      book(_h["m4l_rapidityslice1"], 6,1,1);
+      book(_h["m4l_rapidityslice2"], 7,1,1);
+      book(_h["m4l_rapidityslice3"], 8,1,1);
+      book(_h["m4l_rapidityslice4"], 9,1,1);
 
-      _h["m4l_4mu"]   = bookHisto1D(12,1,1);
-      _h["m4l_4e"]    = bookHisto1D(13,1,1);
-      _h["m4l_2e2mu"] = bookHisto1D(14,1,1);
+      book(_h["m4l_4mu"], 12,1,1);
+      book(_h["m4l_4e"], 13,1,1);
+      book(_h["m4l_2e2mu"], 14,1,1);
     }
 
 
@@ -184,8 +184,6 @@ namespace Rivet {
     // Do the analysis
     void analyze(const Event& event) {
 
-      const double weight = event.weight();
-
       //preselection of leptons for ZZ-> llll final state
       Particles dressed_leptons;
       for (auto lep : apply<DressedLeptons>(event, "muons").dressedLeptons()) { dressed_leptons.push_back(lep); }
@@ -201,21 +199,21 @@ namespace Rivet {
         double pt4l = foundDressed[0].mom().pT()/GeV;
         double y4l = foundDressed[0].mom().absrap();
         Quadruplet::FlavCombi flavour = foundDressed[0].type();
-        _h["m4l_inclusive"]->fill(m4l, weight);
-        if (     pt4l <  20.)  _h["m4l_ptslice1"]->fill(m4l,weight);
-        else if (pt4l <  50.)  _h["m4l_ptslice2"]->fill(m4l,weight);
-        else if (pt4l < 100.)  _h["m4l_ptslice3"]->fill(m4l,weight);
-        else if (pt4l < 600.)  _h["m4l_ptslice4"]->fill(m4l,weight);
+        _h["m4l_inclusive"]->fill(m4l);
+        if (     pt4l <  20.)  _h["m4l_ptslice1"]->fill(m4l);
+        else if (pt4l <  50.)  _h["m4l_ptslice2"]->fill(m4l);
+        else if (pt4l < 100.)  _h["m4l_ptslice3"]->fill(m4l);
+        else if (pt4l < 600.)  _h["m4l_ptslice4"]->fill(m4l);
 
-        if (     y4l < 0.4)  _h["m4l_rapidityslice1"]->fill(m4l,weight);
-        else if (y4l < 0.8)  _h["m4l_rapidityslice2"]->fill(m4l,weight);
-        else if (y4l < 1.2)  _h["m4l_rapidityslice3"]->fill(m4l,weight);
-        else if (y4l < 2.5)  _h["m4l_rapidityslice4"]->fill(m4l,weight);
+        if (     y4l < 0.4)  _h["m4l_rapidityslice1"]->fill(m4l);
+        else if (y4l < 0.8)  _h["m4l_rapidityslice2"]->fill(m4l);
+        else if (y4l < 1.2)  _h["m4l_rapidityslice3"]->fill(m4l);
+        else if (y4l < 2.5)  _h["m4l_rapidityslice4"]->fill(m4l);
 
-        if (     flavour == Quadruplet::FlavCombi::mm) _h["m4l_4mu"]->fill(m4l,weight);
-        else if (flavour == Quadruplet::FlavCombi::ee) _h["m4l_4e"]->fill(m4l,weight);
+        if (     flavour == Quadruplet::FlavCombi::mm) _h["m4l_4mu"]->fill(m4l);
+        else if (flavour == Quadruplet::FlavCombi::ee) _h["m4l_4e"]->fill(m4l);
         else if (flavour == Quadruplet::FlavCombi::me || flavour == Quadruplet::FlavCombi::em) {
-          _h["m4l_2e2mu"]->fill(m4l,weight);
+          _h["m4l_2e2mu"]->fill(m4l);
         }
       }
 
@@ -225,7 +223,7 @@ namespace Rivet {
     /// Finalize
     void finalize() {
       const double sf = crossSection() / femtobarn / sumOfWeights();
-      for (auto hist : _h) { scale(hist.second, sf); }
+      scale(_h, sf);
     }
 
 
@@ -237,6 +235,6 @@ namespace Rivet {
   };
 
 
-  DECLARE_RIVET_PLUGIN(ATLAS_2019_I1720442);
+  RIVET_DECLARE_PLUGIN(ATLAS_2019_I1720442);
 
 }

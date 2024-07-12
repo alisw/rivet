@@ -31,13 +31,13 @@ LogY=1
 # END PLOT
 # BEGIN PLOT /ATLAS_2011_CONF_2011_098/eTmiss_1bjet
 Title=Missing transverse Energy for events with 1 b-taggged jet
-XLabel=$E_{\mathrm{T}}^{\rm miss}$ [GeV]
+XLabel=$E_{\mathrm{T}}^\mathrm{miss}$ [GeV]
 YLabel=$\mathrm{Events}/100 \mathrm{GeV}$
 LogY=1
 # END PLOT
 # BEGIN PLOT /ATLAS_2011_CONF_2011_098/pTjet_1bjet
 Title=$p_{\mathrm{T}}$ of the leading jet for events with 1 b-taggged jet
-XLabel=$p_{\mathrm{T}}^{\rm miss}$ [GeV]
+XLabel=$p_{\mathrm{T}}^\mathrm{miss}$ [GeV]
 YLabel=$\mathrm{Events}/40 \mathrm{GeV}$
 LogY=1
 # END PLOT
@@ -50,13 +50,13 @@ LogY=1
 # END PLOT
 # BEGIN PLOT /ATLAS_2011_CONF_2011_098/eTmiss_2bjet
 Title=Missing transverse Energy for events with 2 b-taggged jets
-XLabel=$E_{\mathrm{T}}^{\rm miss}$ [GeV]
+XLabel=$E_{\mathrm{T}}^\mathrm{miss}$ [GeV]
 YLabel=$\mathrm{Events}/100 \mathrm{GeV}$
 LogY=1
 # END PLOT
 # BEGIN PLOT /ATLAS_2011_CONF_2011_098/pTjet_2bjet
 Title=$p_{\mathrm{T}}$ of the leading jet for events with 2 b-taggged jets
-XLabel=$p_{\mathrm{T}}^{\rm miss}$ [GeV]
+XLabel=$p_{\mathrm{T}}^\mathrm{miss}$ [GeV]
 YLabel=$\mathrm{Events}/40 \mathrm{GeV}$
 LogY=1
 # END PLOT

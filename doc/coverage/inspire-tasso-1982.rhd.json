@@ -1,0 +1,110 @@
+{
+    "167679": [
+        "Exclusive Proton - Anti-proton Production in Two Photon Collisions", 
+        "TASSO", 
+        "10.1016/0370-2693(82)91144-3", 
+        null, 
+        null, 
+        "ins167679", 
+        null, 
+        [
+            "DESY-81-058"
+        ]
+    ], 
+    "168232": [
+        "$\\pi^0$ Production by $e^+ e^-$ Annihilation at 14-{GeV} and 34-{GeV} Center-of-mass Energy", 
+        "TASSO", 
+        "10.1016/0370-2693(82)91145-5", 
+        null, 
+        null, 
+        "ins168232", 
+        null, 
+        [
+            "DESY-81-069"
+        ]
+    ], 
+    "176719": [
+        "Charge Asymmetry and Weak Interaction Effects in $e^+ e^- \\to \\mu^+ \\mu^-$ and $e^+ e^- \\to \\tau^+ \\tau^-$", 
+        "TASSO", 
+        "10.1016/0370-2693(82)91029-2", 
+        null, 
+        null, 
+        "ins176719", 
+        null, 
+        [
+            "DESY-82-002"
+        ]
+    ], 
+    "176886": [
+        "Charged Pion Production in $e^+ e^-$ Annihilation at 14-{GeV}, 22-{GeV} and 34-{GeV} Center-of-mass Energy", 
+        "TASSO", 
+        "10.1016/0370-2693(82)90117-4", 
+        null, 
+        null, 
+        "ins176886", 
+        null, 
+        [
+            "DESY-82-009"
+        ]
+    ], 
+    "176887": [
+        "A Measurement of Sigma(tot) (e+ e- ---> Hadrons) for CM Energies Between 12.0-GeV and 36.7-GeV", 
+        "TASSO", 
+        "10.1016/0370-2693(82)90794-8", 
+        null, 
+        null, 
+        "ins176887", 
+        null, 
+        [
+            "DESY-82-010"
+        ]
+    ], 
+    "177174": [
+        "Scale Breaking in Inclusive Charged Particle Production by $e^+ e^-$ Annihilation", 
+        "TASSO", 
+        "10.1016/0370-2693(82)90017-X", 
+        null, 
+        null, 
+        "ins177174", 
+        null, 
+        [
+            "DESY-82-013"
+        ]
+    ], 
+    "178495": [
+        "Electroweak Coupling Constants in the Leptonic Reactions e+ e- ---> e+ e- and e+ e- ---> mu+ mu- and Search for Scalar Leptons", 
+        "TASSO", 
+        "10.1016/0370-2693(82)90737-7", 
+        null, 
+        null, 
+        "ins178495", 
+        null, 
+        [
+            "DESY-82-032"
+        ]
+    ], 
+    "179022": [
+        "Inclusive $\\rho^0$ Production in $e^+ e^-$ Annihilation at High-energy", 
+        "TASSO", 
+        "10.1016/0370-2693(82)90890-5", 
+        null, 
+        null, 
+        "ins179022", 
+        null, 
+        [
+            "DESY-82-046"
+        ]
+    ], 
+    "180755": [
+        "Angular Correlations in gamma Gamma ---> rho0 rho0 Near Threshold", 
+        "TASSO", 
+        "10.1007/BF01573742", 
+        null, 
+        null, 
+        "ins180755", 
+        null, 
+        [
+            "DESY-82-062"
+        ]
+    ]
+}

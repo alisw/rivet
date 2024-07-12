@@ -1,0 +1,32 @@
+Name: BESIII_2022_I2070086
+Year: 2022
+Summary: Dalitz decay of $D^+_s\to K^0_SK^+\pi^0$
+Experiment: BESIII
+Collider: 
+InspireID: 2070086
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - arXiv:2204.09614 [hep-ex]
+RunInfo: Any process producing D_s+ mesons
+Description:
+  'Measurement of the mass distributions in the decay $D^+_s\to K^0_SK^+\pi^0$ by BES. The data were read from the plots in the paper and therefore for some points the error bars are the size of the point. It is also not clear that any resolution effects have been unfolded.'
+ValidationInfo:
+  'Herwig 7 events using model in the paper'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2022wkv
+BibTeX: '@article{BESIII:2022wkv,
+    author = "Ablikim, M. and others",
+    collaboration = "BESIII",
+    title = "{Observation of $a_0(1710)^+ \to K_S^0K^+$ in study of the $D_s^+\to K_S^0K^+\pi^0$ decay}",
+    eprint = "2204.09614",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    month = "4",
+    year = "2022"
+}
+'

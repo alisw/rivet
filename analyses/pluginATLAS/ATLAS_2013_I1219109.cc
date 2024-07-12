@@ -14,7 +14,7 @@ namespace Rivet {
   public:
 
     ///@brief: Electroweak Wjj production at 8 TeV
-    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2013_I1219109);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2013_I1219109);
     //@}
 
     void init() {
@@ -29,10 +29,10 @@ namespace Rivet {
       Cut cuts = Cuts::abseta < 2.5 && Cuts::pT >= 25*GeV;
 
       // W finder for electrons and muons
-      WFinder wf_mu(fs, cuts, PID::MUON, 0.0*GeV, MAXDOUBLE, 0.0, 0.1,
-                 WFinder::CLUSTERNODECAY, WFinder::NOTRACK, WFinder::TRANSMASS);
-      WFinder wf_el(fs, cuts, PID::ELECTRON, 0.0*GeV, MAXDOUBLE, 0.0, 0.1,
-                 WFinder::CLUSTERNODECAY, WFinder::NOTRACK, WFinder::TRANSMASS);
+      WFinder wf_mu(fs, cuts, PID::MUON, 0.0*GeV, DBL_MAX, 0.0, 0.1,
+                 WFinder::ChargedLeptons::PROMPT, WFinder::ClusterPhotons::NODECAY, WFinder::AddPhotons::NO, WFinder::MassWindow::MT);
+      WFinder wf_el(fs, cuts, PID::ELECTRON, 0.0*GeV, DBL_MAX, 0.0, 0.1,
+                 WFinder::ChargedLeptons::PROMPT, WFinder::ClusterPhotons::NODECAY, WFinder::AddPhotons::NO, WFinder::MassWindow::MT);
       declare(wf_mu, "WFmu");
       declare(wf_el, "WFel");
 
@@ -47,16 +47,14 @@ namespace Rivet {
 
 
       // book histograms
-      _njet     = bookHisto1D(1, 1, 1); // dSigma / dNjet
-      _jet1_bPt = bookHisto1D(3, 1, 1); // dSigma / dBjetPt for Njet = 1
-      _jet2_bPt = bookHisto1D(8, 1, 1); // dSigma / dBjetPt for Njet = 2
+      book(_njet     ,1, 1, 1); // dSigma / dNjet
+      book(_jet1_bPt ,3, 1, 1); // dSigma / dBjetPt for Njet = 1
+      book(_jet2_bPt ,8, 1, 1); // dSigma / dBjetPt for Njet = 2
 
     }
 
 
     void analyze(const Event& event) {
-
-      const double weight = event.weight();
 
       //  retrieve W boson candidate
       const WFinder& wf_mu = apply<WFinder>(event, "WFmu");
@@ -87,7 +85,7 @@ namespace Rivet {
       const Jets& jets = apply<JetAlg>(event, "Jets").jetsByPt(25*GeV);
       int goodjets = 0, bjets = 0;
       double bPt = 0.;
-      foreach(const Jet& j, jets) {
+      for(const Jet& j : jets) {
         if( (j.abseta() < 2.1) && (deltaR(lepton, j) > 0.5) ) {
           // this jet passes the selection!
           ++goodjets;
@@ -95,7 +93,7 @@ namespace Rivet {
           // more elegant, but not what has been used in
           // this analysis originally, will match B had-
           // rons in eta-phi space instead
-          foreach(const Particle& b, bHadrons) {
+          for(const Particle& b : bHadrons) {
             if( deltaR(j, b) < 0.3 ) {
               // jet matched to B hadron!
               if(!bPt)  bPt = j.pT() * GeV; // leading b-jet pT
@@ -110,16 +108,15 @@ namespace Rivet {
 
       double njets = double(goodjets);
       double ncomb = 3.0;
-      _njet->fill(njets, weight);
-      _njet->fill(ncomb, weight);
+      _njet->fill(njets);
+      _njet->fill(ncomb);
 
-      if(     goodjets == 1)  _jet1_bPt->fill(bPt, weight);
-      else if(goodjets == 2)  _jet2_bPt->fill(bPt, weight);
+      if(     goodjets == 1)  _jet1_bPt->fill(bPt);
+      else if(goodjets == 2)  _jet2_bPt->fill(bPt);
     }
 
 
     void finalize() {
-
       const double sf = _mode? 1.0 : 0.5;
       const double xs_pb = sf * crossSection() / picobarn  / sumOfWeights();
       const double xs_fb = sf * crossSection() / femtobarn / sumOfWeights();
@@ -142,7 +139,8 @@ namespace Rivet {
 
   };
 
+
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2013_I1219109);
+  RIVET_DECLARE_PLUGIN(ATLAS_2013_I1219109);
 
 }

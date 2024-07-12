@@ -6,6 +6,7 @@ Collider: LEP 1
 SpiresID: 2927284
 InspireID: 372772
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Peter Richardson <Peter.Richardson@durham.ac.uk>
 References:
@@ -15,6 +16,7 @@ RunInfo:
 NumEvents: 1000000
 Beams: [e+, e-]
 Energies: [91.2]
+Luminosity_fb: 0.0249
 PtCuts: [0]
 Description: The inclusive production rates of $\pi^\pm$, $K^\pm$ and $p\bar{p}$ in $Z^0$ decays
   measured using the OPAL detector at LEP. Only the differential cross sections are currently
@@ -33,3 +35,7 @@ BibTeX: '@Article{Akers:1994ez,
      SLACcitation  = "%%CITATION = ZEPYA,C63,181;%%"
 }
 '
+
+ReleaseTests:
+ - $A LEP-91
+

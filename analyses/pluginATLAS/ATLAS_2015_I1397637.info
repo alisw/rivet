@@ -5,10 +5,12 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1397637
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Lorenzo Massa <lorenzo.massa@cern.ch>
  - Christian Gutschow <chris.g@cern.ch>
 References:
+ - ATLAS-TOPQ-2014-15
  - Phys.Rev. D93 (2016) no.3, 032009
  - doi:10.1103/PhysRevD.93.032009
  - arXiv:1510.03818 [hep-ex]
@@ -16,6 +18,7 @@ RunInfo:
   Top-antitop production
 Beams: [p+, p+]
 Energies: [8000]
+Luminosity_fb: 20.3
 PtCuts: [25,25]
 NeedCrossSection: True
 Description:
@@ -45,3 +48,7 @@ BibTeX: '@article{Aad:2015hna,
       reportNumber   = "CERN-PH-EP-2015-237",
       SLACcitation   = "%%CITATION = ARXIV:1510.03818;%%"
 }'
+
+ReleaseTests:
+ - $A LHC-8-Top-All
+

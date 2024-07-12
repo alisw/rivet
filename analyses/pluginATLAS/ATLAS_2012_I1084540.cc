@@ -34,10 +34,10 @@ namespace Rivet {
     /// Book histograms and initialise projections before the run
     void init() {
       //All final states. Rapidity range = ATLAS calorimetry. Lowest pT cut = 200 MeV.
-      const FinalState cnfs2(-_etaMax, _etaMax, 0.2 * GeV);
-      const FinalState cnfs4(-_etaMax, _etaMax, 0.4 * GeV);
-      const FinalState cnfs6(-_etaMax, _etaMax, 0.6 * GeV);
-      const FinalState cnfs8(-_etaMax, _etaMax, 0.8 * GeV);
+      const FinalState cnfs2((Cuts::etaIn(-_etaMax, _etaMax) && Cuts::pT >=  0.2 * GeV));
+      const FinalState cnfs4((Cuts::etaIn(-_etaMax, _etaMax) && Cuts::pT >=  0.4 * GeV));
+      const FinalState cnfs6((Cuts::etaIn(-_etaMax, _etaMax) && Cuts::pT >=  0.6 * GeV));
+      const FinalState cnfs8((Cuts::etaIn(-_etaMax, _etaMax) && Cuts::pT >=  0.8 * GeV));
       declare(cnfs2, "CNFS2");
       declare(cnfs4, "CNFS4");
       declare(cnfs6, "CNFS6");
@@ -46,17 +46,17 @@ namespace Rivet {
       _etaBinSize = (2. * _etaMax)/(double)_etaBins;
 
       //Book histogram
-      _h_DeltaEtaF_200 = bookHisto1D(1, 1, 1);
-      _h_DeltaEtaF_400 = bookHisto1D(2, 1, 1);
-      _h_DeltaEtaF_600 = bookHisto1D(3, 1, 1);
-      _h_DeltaEtaF_800 = bookHisto1D(4, 1, 1);
+      book(_h_DeltaEtaF_200 ,1, 1, 1);
+      book(_h_DeltaEtaF_400 ,2, 1, 1);
+      book(_h_DeltaEtaF_600 ,3, 1, 1);
+      book(_h_DeltaEtaF_800 ,4, 1, 1);
     }
 
   private:
     void fillMap(const FinalState& fs, bool* energyMap, double pTcut) {
       // Fill true/false array by iterating over particles and compare their
       // pT with pTcut
-      foreach (const Particle& p, fs.particles(cmpMomByEta)) {
+      for (const Particle& p : fs.particles(cmpMomByEta)) {
         int checkBin = -1;
         double checkEta = -_etaMax;
         while (1) {
@@ -75,7 +75,6 @@ namespace Rivet {
     void analyze(const Event& event) {
       static unsigned int event_count = 0;
       ++event_count;
-      const double weight = event.weight();
       const FinalState& fs2 = apply<FinalState>(event, "CNFS2");
       const FinalState& fs4 = apply<FinalState>(event, "CNFS4");
       const FinalState& fs6 = apply<FinalState>(event, "CNFS6");
@@ -155,10 +154,10 @@ namespace Rivet {
 
         // Fill bin centre
         switch (E) {
-          case 200: _h_DeltaEtaF_200->fill(largestEdgeGap + _etaBinSize/2., weight); break;
-          case 400: _h_DeltaEtaF_400->fill(largestEdgeGap + _etaBinSize/2., weight); break;
-          case 600: _h_DeltaEtaF_600->fill(largestEdgeGap + _etaBinSize/2., weight); break;
-          case 800: _h_DeltaEtaF_800->fill(largestEdgeGap + _etaBinSize/2., weight); break;
+          case 200: _h_DeltaEtaF_200->fill(largestEdgeGap + _etaBinSize/2.); break;
+          case 400: _h_DeltaEtaF_400->fill(largestEdgeGap + _etaBinSize/2.); break;
+          case 600: _h_DeltaEtaF_600->fill(largestEdgeGap + _etaBinSize/2.); break;
+          case 800: _h_DeltaEtaF_800->fill(largestEdgeGap + _etaBinSize/2.); break;
         }
 
         if (E == 200) largestEdgeGap_200 = largestEdgeGap;
@@ -226,6 +225,6 @@ namespace Rivet {
   };
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2012_I1084540);
+  RIVET_DECLARE_PLUGIN(ATLAS_2012_I1084540);
 
 }

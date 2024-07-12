@@ -6,6 +6,7 @@ Collider: LEP 1
 SpiresID: 4418603
 InspireID: 529898
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Peter Richardson <Peter.Richardson@durham.ac.uk>
 References:
@@ -38,3 +39,7 @@ BibTeX: '@article{Abbiendi:2000cv,
       reportNumber   = "CERN-EP-2000-070",
       SLACcitation   = "%%CITATION = HEP-EX/0007017;%%",
 }'
+
+ReleaseTests:
+ - $A LEP-91
+

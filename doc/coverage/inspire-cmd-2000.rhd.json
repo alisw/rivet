@@ -1,0 +1,64 @@
+{
+    "510678": [
+        "New measurement of the rare decay phi ---> eta-prime gamma with CMD-2", 
+        "CMD-2", 
+        "10.1016/S0370-2693(99)01475-6", 
+        null, 
+        "hep-ex/9911036", 
+        null, 
+        null, 
+        [
+            "BUDKER-INP-1999-11"
+        ]
+    ], 
+    "511375": [
+        "Cross-section of the reaction e+ e- ---> pi+ pi- pi+ pi- below 1-GeV at CMD-2", 
+        "CMD-2", 
+        "10.1016/S0370-2693(00)00043-5", 
+        null, 
+        "hep-ex/9912020", 
+        "ins511375", 
+        null, 
+        []
+    ], 
+    "523691": [
+        "Measurement of omega meson parameters in pi+ pi- pi0 decay mode with CMD-2", 
+        "CMD-2", 
+        "10.1016/S0370-2693(00)00123-4", 
+        null, 
+        "hep-ex/0002017", 
+        "ins523691", 
+        null, 
+        []
+    ], 
+    "531667": [
+        "Observation of the phi ---> pi+ pi- pi+ pi- decay", 
+        "CMD-2", 
+        "10.1016/S0370-2693(00)01001-7", 
+        null, 
+        "hep-ex/0008019", 
+        "ins531667", 
+        null, 
+        []
+    ], 
+    "532970": [
+        "Study of the process e+ e- ---> pi+ pi- pi+ pi- pi0 with CMD-2 detector", 
+        "CMD-2", 
+        "10.1016/S0370-2693(00)00937-0", 
+        null, 
+        "hep-ex/0009013", 
+        "ins532970", 
+        null, 
+        []
+    ], 
+    "534738": [
+        "Observation of the phi ---> eta-prime gamma decay with four charged particles and photons in the final state", 
+        "CMD-2", 
+        "10.1016/S0370-2693(00)01188-6", 
+        null, 
+        "hep-ex/0010018", 
+        null, 
+        null, 
+        []
+    ]
+}

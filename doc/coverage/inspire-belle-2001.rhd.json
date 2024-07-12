@@ -1,0 +1,132 @@
+{
+    "537509": [
+        "Measurement of $B^0_{d} - \\bar{B}^0_d$ mixing rate from the time evolution of dilepton events at the $\\upsilon_{4S}$", 
+        "Belle", 
+        "10.1103/PhysRevLett.86.3228", 
+        null, 
+        "hep-ex/0011090", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2000-123", 
+            "BELLE-PREPRINT-2000-4"
+        ]
+    ], 
+    "552936": [
+        "Measurement of the CP violation parameter $\\sin 2 \\phi_{1}$ in $B^0_{d}$ meson decays", 
+        "Belle", 
+        "10.1103/PhysRevLett.86.2509", 
+        null, 
+        "hep-ex/0102018", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2000-142", 
+            "BELLE-PREPRINT-2001-1"
+        ]
+    ], 
+    "554520": [
+        "Measurement of inclusive production of neutral pions from Upsilon(4S) decays", 
+        "Belle", 
+        "10.1103/PhysRevD.64.072001", 
+        null, 
+        "hep-ex/0103041", 
+        "ins554520", 
+        null, 
+        [
+            "KEK-PREPRINT-2001-2", 
+            "BELLE-PREPRINT-2001-3"
+        ]
+    ], 
+    "554521": [
+        "A Measurement of the branching fraction for the inclusive B ---> X(s) gamma decays with BELLE", 
+        "Belle", 
+        "10.1016/S0370-2693(01)00626-8", 
+        null, 
+        "hep-ex/0103042", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2001-3", 
+            "BELLE-PREPRINT-2001-2"
+        ]
+    ], 
+    "555527": [
+        "Measurement of branching fractions for B ---> pi pi, K pi and K K decays", 
+        "Belle", 
+        "10.1103/PhysRevLett.87.101801", 
+        null, 
+        "hep-ex/0104030", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2001-11", 
+            "BELLE-PREPRINT-2001-5"
+        ]
+    ], 
+    "555979": [
+        "Observation of Cabibbo suppressed B ---> D(*)K- decays at BELLE", 
+        "Belle", 
+        "10.1103/PhysRevLett.87.111801", 
+        null, 
+        "hep-ex/0104051", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2001-19", 
+            "BELLE-PREPRINT-2001-4"
+        ]
+    ], 
+    "556367": [
+        "Observation of B ---> J / psi K(1)(1270)", 
+        "Belle", 
+        "10.1103/PhysRevLett.87.161601", 
+        null, 
+        "hep-ex/0105014", 
+        null, 
+        null, 
+        [
+            "BELLE-2001-007", 
+            "KEK-PREPRINT-2001-21"
+        ]
+    ], 
+    "559129": [
+        "Search for direct CP violation in B ---> K pi decays", 
+        "Belle", 
+        "10.1103/PhysRevD.64.071101", 
+        null, 
+        "hep-ex/0106095", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2001-34", 
+            "BELLE-PREPRINT-2001-9"
+        ]
+    ], 
+    "560439": [
+        "Observation of large CP violation in the neutral $B$ meson system", 
+        "Belle", 
+        "10.1103/PhysRevLett.87.091802", 
+        null, 
+        "hep-ex/0107061", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2001-50", 
+            "BELLE-PREPRINT-2001-10"
+        ]
+    ], 
+    "561134": [
+        "Measurement of the branching fraction for B ---> eta-prime K and search for B ---> eta-prime pi+", 
+        "Belle", 
+        "10.1016/S0370-2693(01)01025-5", 
+        null, 
+        "hep-ex/0108010", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2001-63", 
+            "BELLE-PREPRINT-2001-11"
+        ]
+    ]
+}

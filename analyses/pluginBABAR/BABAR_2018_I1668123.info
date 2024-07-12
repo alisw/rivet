@@ -1,0 +1,37 @@
+Name: BABAR_2018_I1668123
+Year: 2018
+Summary: Dalitz plot analysis of $D^0\to K^0_S\pi^+\pi^-$
+Experiment: BABAR and BELLE
+Collider: PEP-II and KEKB
+InspireID: 1668123
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 98 (2018) 11, 112012
+RunInfo: Any process producing D0 mesons
+Description:
+  'Measurement of Kinematic distributions in the decay $D^0\to K^0_S\pi^+\pi^-$ by BABAR and BELLE. The data were read from the plots in the paper.
+   Resolution/acceptance effects have not been unfolded.'
+ValidationInfo:
+  'Compared Herwig events using the same model for the decay as in the paper.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BaBar:2018cka
+BibTeX: '@article{BaBar:2018cka,
+    author = "Adachi, I. and others",
+    collaboration = "BaBar, Belle",
+    title = "{Measurement of $\cos{2\beta}$ in $B^{0} \to D^{(*)} h^{0}$ with $D \to K_{S}^{0} \pi^{+} \pi^{-}$ decays by a combined time-dependent Dalitz plot analysis of BaBar and Belle data}",
+    eprint = "1804.06153",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevD.98.112012",
+    journal = "Phys. Rev. D",
+    volume = "98",
+    number = "11",
+    pages = "112012",
+    year = "2018"
+}
+'

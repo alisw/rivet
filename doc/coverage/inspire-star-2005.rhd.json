@@ -1,0 +1,132 @@
+{
+    "626905": [
+        "Event by event < p(t) > fluctuations in Au - Au collisions at s(NN)**(1/2) = 130-GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.71.064906", 
+        null, 
+        "nucl-ex/0308033", 
+        "ins626905", 
+        null, 
+        []
+    ], 
+    "628232": [
+        "Pion, kaon, proton and anti-proton transverse momentum distributions from $p + p$ and $d +$ Au collisions at $\\sqrt{s_{NN}} = 200$GeV", 
+        "STAR", 
+        "10.1016/j.physletb.2005.04.041", 
+        null, 
+        "nucl-ex/0309012", 
+        "ins628232", 
+        null, 
+        []
+    ], 
+    "651461": [
+        "phi meson production in Au + Au and p+p collisions at s(NN)**(1/2) = 200-GeV", 
+        "STAR", 
+        "10.1016/j.physletb.2004.12.082", 
+        null, 
+        "nucl-ex/0406003", 
+        "ins651461", 
+        null, 
+        []
+    ], 
+    "653628": [
+        "Transverse-momentum dependent modification of dynamic texture in central Au+Au collisions at s(NN)**(1/2) = 200-GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.71.031901", 
+        null, 
+        "nucl-ex/0407001", 
+        "ins653628", 
+        null, 
+        []
+    ], 
+    "653868": [
+        "Open charm yields in d + Au collisions at s(NN)**(1/2) = 200-GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.94.062301", 
+        null, 
+        "nucl-ex/0407006", 
+        "ins653868", 
+        null, 
+        []
+    ], 
+    "660793": [
+        "Azimuthal anisotropy in Au+Au collisions at s(NN)**(1/2) = 200-GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.72.014904", 
+        "972208", 
+        "nucl-ex/0409033", 
+        "ins660793", 
+        null, 
+        []
+    ], 
+    "664843": [
+        "Pion interferometry in Au+Au collisions at S(NN)**(1/2) = 200-GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.71.044906", 
+        null, 
+        "nucl-ex/0411036", 
+        "ins664843", 
+        null, 
+        []
+    ], 
+    "666578": [
+        "K(892)* resonance production in Au+Au and p+p collisions at s(NN)**(1/2) = 200-GeV at STAR", 
+        "STAR", 
+        "10.1103/PhysRevC.71.064902", 
+        null, 
+        "nucl-ex/0412019", 
+        "ins666578", 
+        null, 
+        []
+    ], 
+    "674863": [
+        "Experimental and theoretical challenges in the search for the quark gluon plasma: The STAR Collaboration's critical assessment of the evidence from RHIC collisions", 
+        "STAR", 
+        "10.1016/j.nuclphysa.2005.03.085", 
+        null, 
+        "nucl-ex/0501009", 
+        null, 
+        null, 
+        []
+    ], 
+    "675307": [
+        "Distributions of charged hadrons associated with high transverse momentum particles in pp and Au + Au collisions at s(NN)**(1/2) = 200-GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.95.152301", 
+        null, 
+        "nucl-ex/0501016", 
+        "ins675307", 
+        null, 
+        []
+    ], 
+    "676188": [
+        "Multiplicity and pseudorapidity distributions of photons in Au + Au collisions at s(NN)**(1/2) = 62.4-GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.95.062301", 
+        null, 
+        "nucl-ex/0502008", 
+        "ins676188", 
+        null, 
+        []
+    ], 
+    "681161": [
+        "Multi-strange baryon elliptic flow in Au + Au collisions at s(NN)**(1/2) = 200-GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.95.122301", 
+        null, 
+        "nucl-ex/0504022", 
+        "ins681161", 
+        null, 
+        []
+    ], 
+    "681688": [
+        "Incident energy dependence of pt correlations at RHIC", 
+        "STAR", 
+        "10.1103/PhysRevC.72.044902", 
+        "845419", 
+        "nucl-ex/0504031", 
+        "ins681688", 
+        null, 
+        []
+    ]
+}

@@ -1,0 +1,490 @@
+{
+    "749920": [
+        "New Search for tau -> mu gamma and tau -> e gamma Decays at Belle", 
+        "Belle", 
+        "10.1016/j.physletb.2008.06.056", 
+        null, 
+        "0705.0650", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2007-6", 
+            "KEK-PREPRINT-2006-69"
+        ]
+    ], 
+    "754089": [
+        "Study of charmonia in four-meson final states produced in two-photon collisions", 
+        "Belle", 
+        "10.1140/epjc/s10052-007-0451-z", 
+        null, 
+        "0706.3955", 
+        null, 
+        null, 
+        [
+            "BELLE-2007-29", 
+            "KEK-2007-26"
+        ]
+    ], 
+    "754259": [
+        "Study of B+ ---> p anti-p K+ and B+ ---> p anti-p pi+", 
+        "Belle", 
+        "10.1016/j.physletb.2007.11.063", 
+        null, 
+        "0706.4167", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2007-26", 
+            "KEK-PREPRINT-2007-15"
+        ]
+    ], 
+    "756554": [
+        "Observation of a new D(sJ) meson in B+ ---> anti-D0 D0 K+ decays", 
+        "Belle", 
+        "10.1103/PhysRevLett.100.092001", 
+        null, 
+        "0707.3491", 
+        null, 
+        null, 
+        []
+    ], 
+    "757320": [
+        "Improved measurement of time-dependent CP violation in B0 ---> J/Psi pi0 decays", 
+        "Belle", 
+        "10.1103/PhysRevD.77.071101", 
+        null, 
+        "0708.0304", 
+        null, 
+        null, 
+        []
+    ], 
+    "758616": [
+        "Measurements of time-dependent $CP$ violation in $B^0 \\rightarrow \\psi (2S) K_S^0$ decays", 
+        "Belle", 
+        "10.1103/PhysRevD.77.091103", 
+        null, 
+        "0708.2604", 
+        null, 
+        null, 
+        []
+    ], 
+    "759073": [
+        "Observation of psi (4415) ---> D anti-D*(2)(2460) decay using initial-state radiation", 
+        "Belle", 
+        "10.1103/PhysRevLett.100.062001", 
+        null, 
+        "0708.3313", 
+        "ins759073", 
+        null, 
+        []
+    ], 
+    "759262": [
+        "Production of New Charmoniumlike States in e+ e- --> J/psi D(*) anti-D(*) at s**(1/2) ~ 10. GeV", 
+        "Belle", 
+        "10.1103/PhysRevLett.100.202001", 
+        null, 
+        "0708.3812", 
+        null, 
+        null, 
+        []
+    ], 
+    "760354": [
+        "Measurement of B(D(s)+ ---> mu(nu))", 
+        "Belle", 
+        "10.1103/PhysRevLett.100.241801", 
+        null, 
+        "0709.1340", 
+        null, 
+        null, 
+        [
+            "BELLE-CONF-0709"
+        ]
+    ], 
+    "760980": [
+        "Observation of e+e- ---> K+ K- J/psi via initial state radiation at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.77.011105", 
+        null, 
+        "0709.2565", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2007-38", 
+            "KEK-PREPRINT-2007-38"
+        ]
+    ], 
+    "761150": [
+        "Time-dependent CP-violating asymmetry in B0 ---> rho0 gamma decays", 
+        "Belle", 
+        "10.1103/PhysRevLett.100.021602", 
+        null, 
+        "0709.2769", 
+        null, 
+        null, 
+        []
+    ], 
+    "762013": [
+        "Observation of D(s1)(2536)+ ---> D+ pi- K+ and angular decomposition of D(s1)(2536)+ ---> D*+ K(S)0", 
+        "Belle", 
+        "10.1103/PhysRevD.77.032001", 
+        null, 
+        "0709.4184", 
+        null, 
+        null, 
+        []
+    ], 
+    "764099": [
+        "Observation of anomalous Upsilon(1S) pi+ pi- and Upsilon(2S) pi+ pi- production near the Upsilon(5S) resonance", 
+        "Belle", 
+        "10.1103/PhysRevLett.100.112001", 
+        null, 
+        "0710.2577", 
+        "ins764099", 
+        null, 
+        [
+            "BELLE-CONF-0774"
+        ]
+    ], 
+    "765522": [
+        "Measurement of CP asymmetries and branching fractions in a time-dependent Dalitz analysis of B0 ---> (rho pi)0 and a constraint on the quark mixing angle phi(2)", 
+        "Belle", 
+        "10.1103/PhysRevD.77.072001", 
+        null, 
+        "0710.4974", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2007-43", 
+            "KEK-PREPRINT-2007-47"
+        ]
+    ], 
+    "767603": [
+        "Search for Lepton Flavor Violating tau Decays into Three Leptons", 
+        "Belle", 
+        "10.1016/j.physletb.2007.12.046", 
+        null, 
+        "0711.2189", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2007-45", 
+            "KEK-PREPRINT-2007-57"
+        ]
+    ], 
+    "768236": [
+        "Study of B --> D**lnu with full reconstruction tagging", 
+        "Belle", 
+        "10.1103/PhysRevD.77.091503", 
+        null, 
+        "0711.3252", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2007-46", 
+            "KEK-PREPRINT-2007-55"
+        ]
+    ], 
+    "770645": [
+        "Observation of $B^0_{s} \\to \\phi \\gamma$ and Search for $B^0_{s} \\to \\gamma \\gamma$ Decays at Belle", 
+        "Belle", 
+        "10.1103/PhysRevLett.100.121801", 
+        null, 
+        "0712.2659", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2007-48", 
+            "KEK-PREPRINT-2007-63"
+        ]
+    ], 
+    "771522": [
+        "Measurement of Time-Dependent CP-Violating Parameters in B0 ---> K0(S) K0(S) decays", 
+        "Belle", 
+        "10.1103/PhysRevLett.100.121601", 
+        null, 
+        "0712.4234", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2007-51", 
+            "KEK-PREPRINT-2007-69"
+        ]
+    ], 
+    "777540": [
+        "Measurement of the ratio $B(D^0 \\to \\pi^{+} \\pi^{-} \\pi^0)$ / $B(D^0 \\to K^{-} \\pi^{+} \\pi^0)$ and the time-integrated CP asymmetry in $D^0 \\to \\pi^{+} \\pi^{-} \\pi^0$", 
+        "Belle", 
+        "10.1016/j.physletb.2008.02.054", 
+        null, 
+        "0801.2439", 
+        null, 
+        null, 
+        [
+            "BELLE-2007-49", 
+            "KEK-2007-67"
+        ]
+    ], 
+    "777554": [
+        "Search for lepton-flavor-violating tau ---> l V0 decays at Belle", 
+        "Belle", 
+        "10.1016/j.physletb.2008.05.012", 
+        null, 
+        "0801.2475", 
+        null, 
+        null, 
+        [
+            "BELLE-2008-2", 
+            "KEK-2007-71"
+        ]
+    ], 
+    "778726": [
+        "Observation of B0 ---> p anti-p K*0 with a large K*0 polarization", 
+        "Belle", 
+        "10.1103/PhysRevLett.100.251801", 
+        null, 
+        "0802.0336", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2008-5", 
+            "KEK-PREPRINT-2007-77"
+        ]
+    ], 
+    "779820": [
+        "Improved search for D0 - anti-D0 mixing using semileptonic decays at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.77.112003", 
+        null, 
+        "0802.2952", 
+        null, 
+        null, 
+        []
+    ], 
+    "779843": [
+        "Measurement of the branching fraction and charge asymmetry of the decay B+ -> D+ D0bar and search for B0 -> D0 D0bar", 
+        "Belle", 
+        "10.1103/PhysRevD.77.091101", 
+        null, 
+        "0802.2988", 
+        null, 
+        null, 
+        []
+    ], 
+    "780114": [
+        "Measurement of masses of the Xi(c)(2645) and Xi(c)(2815) baryons and observation of Xi(c)(2980) ---> Xi(c)(2645)pi", 
+        "Belle", 
+        "10.1016/j.physletb.2008.05.055", 
+        null, 
+        "0802.3968", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2007-79", 
+            "BELLE-PREPRINT-2008-7"
+        ]
+    ], 
+    "781387": [
+        "Measurement of the Moments of the Photon Energy Spectrum in B ---> X(s) gamma Decays and Determination of |V(cb)| and m(b) at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.78.032016", 
+        null, 
+        "0803.2158", 
+        null, 
+        null, 
+        []
+    ], 
+    "781803": [
+        "Difference in direct charge-parity violation between charged and neutral $B$ meson decays", 
+        "Belle", 
+        "10.1038/nature06827", 
+        null, 
+        null, 
+        null, 
+        null, 
+        []
+    ], 
+    "782876": [
+        "Search for B+ ---> D*+ pi0 decay", 
+        "Belle", 
+        "10.1103/PhysRevLett.101.041601", 
+        null, 
+        "0804.0831", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2008-9", 
+            "KEK-PREPRINT-2008-2"
+        ]
+    ], 
+    "783316": [
+        "Study of the Suppressed B meson Decay B- ---> D K-, D ---> K+ pi-", 
+        "Belle", 
+        "10.1103/PhysRevD.78.071901", 
+        null, 
+        "0804.2063", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2008-6", 
+            "KEK-PREPRINT-2007-78"
+        ]
+    ], 
+    "784045": [
+        "Search for B ---> pi l+ l- Decays at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.78.011101", 
+        null, 
+        "0804.3656", 
+        null, 
+        null, 
+        [
+            "BELLE-2008-10", 
+            "KEK-2008-4"
+        ]
+    ], 
+    "784676": [
+        "Measurement of branching fractions, isospin and CP-violating asymmetries for exclusive b --> d gamma modes", 
+        "Belle", 
+        "10.1103/PhysRevLett.101.111801", 
+        null, 
+        "0804.4770", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2008-13", 
+            "KEK-PREPRINT-2008-07"
+        ]
+    ], 
+    "786236": [
+        "Measurement of Azimuthal Asymmetries in Inclusive Production of Hadron Pairs in e+e- Annihilation at s**(1/2) = 10.58-GeV", 
+        "Belle", 
+        "10.1103/PhysRevD.78.032011", 
+        null, 
+        "0805.2975", 
+        null, 
+        null, 
+        [
+            "BELLE-2008-14", 
+            "KEK-2008-8"
+        ]
+    ], 
+    "786339": [
+        "Search for B-0 --> J/psi phi decays", 
+        "Belle", 
+        "10.1103/PhysRevD.78.011106", 
+        null, 
+        "0805.3225", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2008-15", 
+            "KEK-PREPRINT-2008-9"
+        ]
+    ], 
+    "786406": [
+        "High-statistics measurement of neutral pion-pair production in two-photon collisions", 
+        "Belle", 
+        "10.1103/PhysRevD.78.052004", 
+        null, 
+        "0805.3387", 
+        "ins786406", 
+        null, 
+        [
+            "BELLE-PREPRINT-2008-12", 
+            "KEK-PREPRINT-2008-6"
+        ]
+    ], 
+    "786560": [
+        "High-Statistics Study of the tau- ---> pi- pi0 nu(tau) Decay", 
+        "Belle", 
+        "10.1103/PhysRevD.78.072006", 
+        null, 
+        "0805.3773", 
+        null, 
+        null, 
+        [
+            "BELLE-2008-16", 
+            "KEK-2008-10"
+        ]
+    ], 
+    "788021": [
+        "Time-dependent CP Asymmetries in $B^0 \\to  K^0_S rho^0 \\gamma$ Decays", 
+        "Belle", 
+        "10.1103/PhysRevLett.101.251601", 
+        null, 
+        "0806.1980", 
+        null, 
+        null, 
+        [
+            "BELLE-2008-17", 
+            "KEK-2008-12"
+        ]
+    ], 
+    "789593": [
+        "Measurement of CP asymmetry in Cabibbo suppressed $D^0$ decays", 
+        "Belle", 
+        "10.1016/j.physletb.2008.10.052", 
+        null, 
+        "0807.0148", 
+        null, 
+        null, 
+        []
+    ], 
+    "790683": [
+        "Observation of B+- ---> psi(2S) pi+- and search for direct CP-violation", 
+        "Belle", 
+        "10.1103/PhysRevD.78.051104", 
+        null, 
+        "0807.2170", 
+        null, 
+        null, 
+        [
+            "BELLE-2008-20", 
+            "KEK-2008-18"
+        ]
+    ], 
+    "791599": [
+        "Evidence for Neutral B Meson Decays to omega K*0", 
+        "Belle", 
+        "10.1103/PhysRevLett.101.231801", 
+        null, 
+        "0807.4271", 
+        null, 
+        null, 
+        [
+            "UCHEP-08-04"
+        ]
+    ], 
+    "793389": [
+        "Measurement of B0 ---> pi+ pi- pi+ pi- Decays and Search for B0 ---> rho0 rho0", 
+        "Belle", 
+        "10.1103/PhysRevD.78.111102", 
+        null, 
+        "0808.2576", 
+        null, 
+        null, 
+        []
+    ], 
+    "793871": [
+        "Study of intermediate two-body decays in $\\bar{B}^0\\to \\Sigma_c(2455)^{0}\\bar{p}\\pi^{+}$", 
+        "Belle", 
+        "10.1016/j.physletb.2008.09.059", 
+        null, 
+        "0808.3650", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2008-23", 
+            "KEK-PREPRINT-2008-23"
+        ]
+    ], 
+    "796220": [
+        "Evidence for B0 ---> chi(c1) pi0 at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.78.091104", 
+        null, 
+        "0809.1778", 
+        null, 
+        null, 
+        []
+    ]
+}

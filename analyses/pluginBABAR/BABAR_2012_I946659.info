@@ -1,0 +1,37 @@
+Name: BABAR_2012_I946659
+Year: 2012
+Summary: Mass distributions in $B\to D^{(*)}p\bar{p}$ + pions
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 946659
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 85 (2012) 092017
+RunInfo: Any process producing B mesons, original e+e- at Upsilon(4S)
+Description:
+'Measurements of mass distributions in Mass distributions in $B\to D^{(*)}p\bar{p}$ + pions. The data were read from the plots in the paper
+ but are background subtracted and efficiency corrected.'
+ValidationInfo:
+  'Herwig 7 event using EvtGen for decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BaBar:2011zka
+BibTeX: '@article{BaBar:2011zka,
+    author = "del Amo Sanchez, P. and others",
+    collaboration = "BaBar",
+    title = "{Observation and study of the baryonic B-meson decays B to D(*) p pbar (pi) (pi)}",
+    eprint = "1111.4387",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "SLAC-PUB-14763, BABAR-PUB-10-019",
+    doi = "10.1103/PhysRevD.85.092017",
+    journal = "Phys. Rev. D",
+    volume = "85",
+    pages = "092017",
+    year = "2012"
+}
+'

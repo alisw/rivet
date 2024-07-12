@@ -1,0 +1,396 @@
+{
+    "1752507": [
+        "Global polarization of $\\Lambda \\bar \\Lambda$ hyperons in Pb-Pb collisions at $\\sqrt {s_{NN}}$ = 2.76 and 5.02 TeV",
+        "ALICE",
+        "10.1103/PhysRevC.101.044611",
+        "2685249",
+        "1909.01281",
+        "ins1752507",
+        null,
+        [
+            "CERN-EP-2019-173"
+        ]
+    ],
+    "1856529": [
+        "Nuclear modification factor of light neutral-meson spectra up to high transverse momentum in p\u2013Pb collisions at sNN=8.16 TeV",
+        "ALICE",
+        "10.1016/j.physletb.2022.136943",
+        "2759761",
+        "2104.03116",
+        "ins1856529",
+        null,
+        [
+            "CERN-EP-2021-053"
+        ]
+    ],
+    "1857549": [
+        "Exploring the N\u039b\u2013N\u03a3 coupled system with high precision correlation techniques at the LHC",
+        "ALICE",
+        "10.1016/j.physletb.2022.137272",
+        "2759417",
+        "2104.04427",
+        "ins1857549",
+        null,
+        [
+            "CERN-EP-2021-051"
+        ]
+    ],
+    "1862795": [
+        "Investigating the role of strangeness in baryon\u2013antibaryon annihilation at the LHC",
+        "ALICE",
+        "10.1016/j.physletb.2022.137060",
+        "2766098",
+        "2105.05190",
+        "ins1862795",
+        null,
+        [
+            "CERN-EP-2021-083"
+        ]
+    ],
+    "1863048": [
+        "Measurement of K$^{*}$(892)$^{\\mathrm{\\pm}}$ production in inelastic pp collisions at the LHC",
+        "ALICE",
+        "10.1016/j.physletb.2022.137013",
+        "2766197",
+        "2105.05760",
+        "ins1863048",
+        null,
+        [
+            "CERN-EP-2021-086"
+        ]
+    ],
+    "1863128": [
+        "Charm-quark fragmentation fractions and production cross section at midrapidity in pp collisions at the LHC",
+        "ALICE",
+        "10.1103/PhysRevD.105.L011103",
+        "2766213",
+        "2105.06335",
+        "ins1863128",
+        null,
+        [
+            "CERN-EP-2021-088"
+        ]
+    ],
+    "1865831": [
+        "First demonstration of in-beam performance of bent Monolithic Active Pixel Sensors",
+        "ALICE ITS project",
+        "10.1016/j.nima.2021.166280",
+        "2770531",
+        "2105.13000",
+        null,
+        null,
+        []
+    ],
+    "1867966": [
+        "Direct observation of the dead-cone effect in quantum chromodynamics",
+        "ALICE",
+        "10.1038/s41586-022-04572-w",
+        "2771612",
+        "2106.05713",
+        "ins1867966",
+        null,
+        [
+            "CERN-EP-2021-107"
+        ]
+    ],
+    "1868463": [
+        "Measurement of Prompt D$^{0}$, $\\Lambda_{c}^{+}$, and $\\Sigma_{c}^{0,++}$(2455) Production in Proton\u2013Proton Collisions at $\\sqrt s$ = 13\u2009\u2009TeV",
+        "ALICE",
+        "10.1103/PhysRevLett.128.012001",
+        "2766124",
+        "2106.08278",
+        "ins1868463",
+        null,
+        [
+            "CERN-EP-2021-103"
+        ]
+    ],
+    "1870141": [
+        "Production of K$^{*}(892)^{0}$ and $\\phi(1020)$ in pp and Pb-Pb collisions at $\\sqrt{s_{\\rm NN}} = 5.02$ TeV",
+        "ALICE",
+        "10.1103/PhysRevC.106.034907",
+        "2770614",
+        "2106.13113",
+        null,
+        null,
+        [
+            "CERN-EP-2021-101"
+        ]
+    ],
+    "1889905": [
+        "Hypertriton Production in p-Pb Collisions at $\\sqrt {s_{NN}}$=5.02\u2009\u2009TeV",
+        "A Large Ion Collider Experiment",
+        "10.1103/PhysRevLett.128.252003",
+        "2775763",
+        "2107.10627",
+        "ins1889905",
+        null,
+        [
+            "CERN-EP-2021-139"
+        ]
+    ],
+    "1890061": [
+        "Study of very forward energy and its correlation with particle production at midrapidity in pp and p-Pb collisions at the LHC",
+        "ALICE",
+        "10.1007/JHEP08(2022)086",
+        "2776001",
+        "2107.10757",
+        "ins1890061",
+        null,
+        [
+            "CERN-EP-2021-144"
+        ]
+    ],
+    "1891385": [
+        "Measurements of the groomed and ungroomed jet angularities in pp collisions at $ \\sqrt{s} $ = 5.02 TeV",
+        "ALICE",
+        "10.1007/JHEP05(2022)061",
+        "2776005",
+        "2107.11303",
+        "ins1891385",
+        null,
+        [
+            "CERN-EP-2021-145"
+        ]
+    ],
+    "1891389": [
+        "Polarization of $\\Lambda$ and $\\bar \\Lambda$ Hyperons along the Beam Direction in Pb-Pb Collisions at $\\sqrt {s_{NN}}$=5.02\u2009\u2009TeV",
+        "ALICE",
+        "10.1103/PhysRevLett.128.172005",
+        "2776403",
+        "2107.11183",
+        "ins1891389",
+        null,
+        [
+            "CERN-EP-2021-148"
+        ]
+    ],
+    "1893479": [
+        "Measurement of the groomed jet radius and momentum splitting fraction in pp and Pb$-$Pb collisions at $\\sqrt{s_{NN}} = 5.02$ TeV",
+        "A Large Ion Collider Experiment",
+        "10.1103/PhysRevLett.128.102001",
+        "2776655",
+        "2107.12984",
+        "ins1893479",
+        null,
+        [
+            "CERN-EP-2021-151"
+        ]
+    ],
+    "1899703": [
+        "Prompt and non-prompt J/\u03c8 production cross sections at midrapidity in proton-proton collisions at $ \\sqrt{\\mathrm{s}} $ = 5.02 and 13 TeV",
+        "ALICE",
+        "10.1007/JHEP03(2022)190",
+        "2776833",
+        "2108.02523",
+        "ins1899703",
+        null,
+        [
+            "CERN-EP-2021-152"
+        ]
+    ],
+    "1928822": [
+        "Production of light (anti)nuclei in pp collisions at $ \\sqrt{s} $ = 13 TeV",
+        "ALICE",
+        "10.1007/JHEP01(2022)106",
+        "2781709",
+        "2109.13026",
+        "ins1928822",
+        null,
+        [
+            "CERN-EP-2021-194"
+        ]
+    ],
+    "1942023": [
+        "Measurement of inclusive charged-particle b-jet production in pp and p-Pb collisions at $ \\sqrt{s_{\\mathrm{NN}}} $ = 5.02 TeV",
+        "ALICE",
+        "10.1007/JHEP01(2022)178",
+        "2783306",
+        "2110.06104",
+        "ins1942023",
+        null,
+        [
+            "CERN-EP-2021-205"
+        ]
+    ],
+    "1943964": [
+        "General balance functions of identified charged hadron pairs of (\u03c0,K,p) in Pb\u2013Pb collisions at <math altimg=\"si1.svg\"><msub><mrow><msqrt><mrow><mi>s</mi></mrow></msqrt></mrow><mrow><msub><mrow/><mrow><mi mathvariant=\"normal\">NN</mi></mrow></msub></mrow></msub><mo linebreak=\"goodbreak\" linebreakstyle=\"after\">=</mo></math> 2.76 TeV",
+        "ALICE",
+        "10.1016/j.physletb.2022.137338",
+        "2782590",
+        "2110.06566",
+        "ins1943964",
+        null,
+        [
+            "CERN-EP-2021-199"
+        ]
+    ],
+    "1946131": [
+        "Prompt D$^{0}$, D$^{+}$, and D$^{*+}$ production in Pb\u2013Pb collisions at $ \\sqrt{s_{\\mathrm{NN}}} $ = 5.02 TeV",
+        "ALICE",
+        "10.1007/JHEP01(2022)174",
+        "2783960",
+        "2110.09420",
+        "ins1946131",
+        null,
+        [
+            "CERN-EP-2021-213"
+        ]
+    ],
+    "1946828": [
+        "Investigating charm production and fragmentation via azimuthal correlations of prompt D mesons with charged particles in pp collisions at $\\mathbf {\\sqrt{ s} = 13}$ TeV",
+        "ALICE",
+        "10.1140/epjc/s10052-022-10267-3",
+        "2780659",
+        "2110.10043",
+        "ins1946828",
+        null,
+        [
+            "CERN-EP-2021-184"
+        ]
+    ],
+    "1946931": [
+        "Measurement of prompt $D_s^+$-meson production and azimuthal anisotropy in Pb\u2013Pb collisions at $\\sqrt {s_{NN}}$=5.02TeV",
+        "ALICE",
+        "10.1016/j.physletb.2022.136986",
+        "2780804",
+        "2110.10006",
+        "ins1946931",
+        null,
+        [
+            "CERN-EP-2021-187"
+        ]
+    ],
+    "1966120": [
+        "Characterizing the initial conditions of heavy-ion collisions at the LHC with mean transverse momentum and anisotropic flow correlations",
+        "ALICE",
+        "10.1016/j.physletb.2022.137393",
+        "2790425",
+        "2111.06106",
+        "ins1966120",
+        null,
+        [
+            "CERN-EP-2021-232"
+        ]
+    ],
+    "1967109": [
+        "K<math altimg=\"si1.svg\"><msubsup><mrow/><mrow><mi mathvariant=\"normal\">S</mi></mrow><mrow><mn>0</mn></mrow></msubsup></math>K<math altimg=\"si1.svg\"><msubsup><mrow/><mrow><mi mathvariant=\"normal\">S</mi></mrow><mrow><mn>0</mn></mrow></msubsup></math> and K<math altimg=\"si1.svg\"><msubsup><mrow/><mrow><mi mathvariant=\"normal\">S</mi></mrow><mrow><mn>0</mn></mrow></msubsup></math>K\u00b1 femtoscopy in pp collisions at <math altimg=\"si2.svg\"><msqrt><mrow><mi>s</mi></mrow></msqrt><mo linebreak=\"goodbreak\" linebreakstyle=\"after\">=</mo><mn>5.02</mn></math> and 13 TeV",
+        "ALICE",
+        "10.1016/j.physletb.2022.137335",
+        "2789848",
+        "2111.06611",
+        null,
+        null,
+        [
+            "CERN-EP-2021-233"
+        ]
+    ],
+    "1973854": [
+        "Observation of a multiplicity dependence in the $p_{\\rm T}$-differential charm baryon-to-meson ratios in proton-proton collisions at $\\sqrt{s} = 13$ TeV",
+        "ALICE",
+        "10.1016/j.physletb.2022.137065",
+        "2791311",
+        "2111.11948",
+        "ins1973854",
+        null,
+        [
+            "CERN-EP-2021-245"
+        ]
+    ],
+    "1981685": [
+        "Production of light (anti)nuclei in pp collisions at $\\sqrt{s} = 5.02$\u00a0TeV",
+        "ALICE",
+        "10.1140/epjc/s10052-022-10241-z",
+        "2791964",
+        "2112.00610",
+        "ins1981685",
+        null,
+        [
+            "CERN-EP-2021-250"
+        ]
+    ],
+    "1992719": [
+        "Forward rapidity J/\u03c8 production as a function of charged-particle multiplicity in pp collisions at $ \\sqrt{s} $ = 5.02 and 13 TeV",
+        "ALICE",
+        "10.1007/JHEP06(2022)015",
+        "2798260",
+        "2112.09433",
+        "ins1992719",
+        null,
+        [
+            "CERN-EP-2021-268"
+        ]
+    ],
+    "1993200": [
+        "Neutral to charged kaon yield fluctuations in Pb \u2013 Pb collisions at <math altimg=\"si1.svg\"><msqrt><mrow><msub><mrow><mi>s</mi></mrow><mrow><mi mathvariant=\"normal\">NN</mi></mrow></msub></mrow></msqrt><mo linebreak=\"goodbreak\" linebreakstyle=\"after\">=</mo><mn>2.76</mn></math> TeV",
+        "ALICE",
+        "10.1016/j.physletb.2022.137242",
+        "2792522",
+        "2112.09482",
+        "ins1993200",
+        null,
+        [
+            "CERN-EP-2021-261"
+        ]
+    ],
+    "2011222": [
+        "First study of the two-body scattering involving charm hadrons",
+        "ALICE",
+        "10.1103/PhysRevD.106.052010",
+        "2799306",
+        "2201.05352",
+        "ins2011222",
+        null,
+        [
+            "CERN-EP-2022-006"
+        ]
+    ],
+    "2025044": [
+        "Measurement of beauty production via non-prompt D$^{0}$ mesons in Pb-Pb collisions at $ \\sqrt{{\\textrm{s}}_{\\textrm{NN}}} $= 5.02 TeV",
+        "ALICE",
+        "10.1007/JHEP12(2022)126",
+        "2800601",
+        "2202.00815",
+        "ins2025044",
+        null,
+        [
+            "CERN-EP-2022-015"
+        ]
+    ],
+    "2026264": [
+        "Measurement of anti-$^3$He nuclei absorption in matter and impact on their propagation in the Galaxy.",
+        "ALICE",
+        "10.1038/s41567-022-01804-8",
+        "2801009",
+        "2202.01549",
+        "ins2026264",
+        null,
+        [
+            "CERN-EP-2022-023"
+        ]
+    ],
+    "2026265": [
+        "Multiplicity dependence of charged-particle jet production in pp collisions at $\\mathbf {\\sqrt{s}}=\\mathbf {13~TeV}$",
+        "ALICE",
+        "10.1140/epjc/s10052-022-10405-x",
+        "2801004",
+        "2202.01548",
+        "ins2026265",
+        null,
+        [
+            "CERN-EP-2022-011"
+        ]
+    ],
+    "2048607": [
+        "Production of $\\Lambda$ and $K^0_s$ in jets in p\u2013Pb collisions at $\\sqrt {s_{NN}}$=5.02 TeV and pp collisions at $\\sqrt {s}$=7 TeV",
+        "ALICE",
+        "10.1016/j.physletb.2022.136984",
+        "2758648",
+        "2105.04890",
+        "ins2048607",
+        null,
+        [
+            "CERN-EP-2021-048"
+        ]
+    ]
+}

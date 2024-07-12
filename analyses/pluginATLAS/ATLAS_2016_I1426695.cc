@@ -5,7 +5,7 @@
 namespace Rivet {
 
 
-  /// @brief Add a short analysis description here
+  /// @brief Track-based minimum bias at 8 TeV
   class ATLAS_2016_I1426695 : public Analysis {
   public:
 
@@ -18,10 +18,10 @@ namespace Rivet {
       k_pt500_nch50,
       kNregions
     };
-    
-    
+
+
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2016_I1426695);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2016_I1426695);
 
     /// @name Analysis methods
     //@{
@@ -30,7 +30,7 @@ namespace Rivet {
     void init() {
 
       for (int iR=0; iR < kNregions; ++iR)  {
-        _sumW[iR]  = 0.;
+        book(_sumW[iR], "_sumW" + to_str(iR))       ;
       }
 
       // Initialise and register projections
@@ -40,38 +40,37 @@ namespace Rivet {
       // Book histograms
       for (int iR=0; iR < kNregions; ++iR)  {
         if (iR == k_pt100_nch2 || iR == k_pt500_nch1) {
-          _hist_nch  [iR] = bookHisto1D  ( 2 + iR, 1, 1);
-          _hist_ptnch[iR] = bookProfile1D(14 + iR, 1, 1);
+          book(_hist_nch  [iR],  2 + iR, 1, 1);
+          book(_hist_ptnch[iR], 14 + iR, 1, 1);
         }
-        _hist_pt [iR] = bookHisto1D(4 + iR, 1, 1);
-        _hist_eta[iR] = bookHisto1D(9 + iR, 1, 1);
+        book(_hist_pt [iR], 4 + iR, 1, 1);
+        book(_hist_eta[iR], 9 + iR, 1, 1);
       }
     }
 
-    void fillPtEtaNch(const Particles particles, int nMin, int iRegion, double weight) {
+    void fillPtEtaNch(const Particles particles, int nMin, int iRegion) {
 
       //skip if event fails multiplicity cut
       int nch =particles.size();
       if (nch < nMin)  return;
 
-      //fill event weight info
-      _sumW[iRegion] += weight;
+      _sumW[iRegion]->fill();
 
       // Fill nch
       if (iRegion == k_pt100_nch2 || iRegion == k_pt500_nch1) {
-        _hist_nch[iRegion]->fill(nch, weight);
+        _hist_nch[iRegion]->fill(nch);
       }
-     
-      for (const Particle&p : particles) { 
+
+      for (const Particle &p : particles) {
       // Loop over particles, fill pT, eta and ptnch
         const double pt  = p.pT()/GeV;
         const double eta = p.eta();
 
-        _hist_pt [iRegion]->fill(pt , weight/pt);
-        _hist_eta[iRegion]->fill(eta, weight);
+        _hist_pt [iRegion]->fill(pt , 1.0/pt);
+        _hist_eta[iRegion]->fill(eta);
 
         if (iRegion == k_pt100_nch2 || iRegion == k_pt500_nch1) {
-          _hist_ptnch[iRegion]->fill(nch, pt, weight);
+          _hist_ptnch[iRegion]->fill(nch, pt);
         }
       } //end loop over particles
     }
@@ -86,24 +85,24 @@ namespace Rivet {
       const Particles& p_100 = apply<ChargedFinalState>(event, "CFS_100").particles(pcut);
       const Particles& p_500 = apply<ChargedFinalState>(event, "CFS_500").particles(pcut);
 
-      fillPtEtaNch(p_100,  2, 0, event.weight());
-      fillPtEtaNch(p_500,  1, 1, event.weight());
-      fillPtEtaNch(p_500,  6, 2, event.weight());
-      fillPtEtaNch(p_500, 20, 3, event.weight());
-      fillPtEtaNch(p_500, 50, 4, event.weight());
+      fillPtEtaNch(p_100,  2, 0);
+      fillPtEtaNch(p_500,  1, 1);
+      fillPtEtaNch(p_500,  6, 2);
+      fillPtEtaNch(p_500, 20, 3);
+      fillPtEtaNch(p_500, 50, 4);
     }
 
 
     void finalize() {
 
       for (int iR = 0; iR < kNregions; ++iR)  {
-        if (_sumW[iR] > 0) {
+        if (_sumW[iR]->val() > 0) {
           if (iR == k_pt100_nch2 || iR == k_pt500_nch1) {
-            scale(_hist_nch[iR], 1.0/_sumW[iR]);
+            scale(_hist_nch[iR], 1.0/ *_sumW[iR]);
           }
-          scale(_hist_pt [iR], 1.0/_sumW[iR]/TWOPI/5.);
-          scale(_hist_eta[iR], 1.0/_sumW[iR]);
-        } 
+          scale(_hist_pt [iR], 1.0/ dbl(*_sumW[iR])/TWOPI/5.);
+          scale(_hist_eta[iR], 1.0/ *_sumW[iR]);
+        }
       }
     }
 
@@ -112,7 +111,7 @@ namespace Rivet {
 
   private:
 
-    double _sumW[kNregions];
+    CounterPtr _sumW[kNregions];
 
     /// @name Histograms
     Histo1DPtr   _hist_nch    [kNregions];
@@ -123,8 +122,6 @@ namespace Rivet {
   };
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2016_I1426695);
-
+  RIVET_DECLARE_PLUGIN(ATLAS_2016_I1426695);
 
 }

@@ -1,0 +1,110 @@
+{
+    "723915": [
+        "Inclusive D*+- Meson Cross Sections and D*+- Jet Correlations in Photoproduction at HERA", 
+        "H1", 
+        "10.1140/epjc/s10052-007-0220-z", 
+        "978633", 
+        "hep-ex/0608042", 
+        "ins723915", 
+        null, 
+        [
+            "DESY-06-110"
+        ]
+    ], 
+    "729910": [
+        "Diffractive open charm production in deep-inelastic scattering and photoproduction at HERA", 
+        "H1", 
+        "10.1140/epjc/s10052-006-0206-2", 
+        "992527", 
+        "hep-ex/0610076", 
+        "ins729910", 
+        null, 
+        [
+            "DESY-06-164"
+        ]
+    ], 
+    "736052": [
+        "Production of D*+- Mesons with Dijets in Deep-Inelastic Scattering at HERA", 
+        "H1", 
+        "10.1140/epjc/s10052-007-0296-5", 
+        "1009947", 
+        "hep-ex/0701023", 
+        "ins736052", 
+        null, 
+        [
+            "DESY-06-240"
+        ]
+    ], 
+    "745732": [
+        "Search for lepton flavour violation in ep collisions at HERA", 
+        "H1", 
+        "10.1140/epjc/s10052-007-0440-2", 
+        "1022330", 
+        "hep-ex/0703004", 
+        null, 
+        null, 
+        [
+            "DESY-07-009"
+        ]
+    ], 
+    "746380": [
+        "Tests of QCD factorisation in the diffractive production of dijets in deep-inelastic scattering and photoproduction at HERA", 
+        "H1", 
+        "10.1140/epjc/s10052-007-0325-4", 
+        "1023604", 
+        "hep-ex/0703022", 
+        "ins746380", 
+        null, 
+        [
+            "DESY-07-018"
+        ]
+    ], 
+    "749391": [
+        "Search for baryonic resonances decaying to Xi pi in deep-inelastic scattering at HERA", 
+        "H1", 
+        "10.1140/epjc/s10052-007-0407-3", 
+        "1031963", 
+        "0704.3594", 
+        null, 
+        null, 
+        [
+            "DESY-07-045"
+        ]
+    ], 
+    "753349": [
+        "Charged Particle Production in High Q**2 Deep-Inelastic Scattering at HERA", 
+        "H1", 
+        "10.1016/j.physletb.2007.07.073", 
+        "1042081", 
+        "0706.2456", 
+        "ins753349", 
+        null, 
+        [
+            "DESY-07-065"
+        ]
+    ], 
+    "753951": [
+        "Measurement of inclusive jet production in deep-inelastic scattering at high Q**2 and determination of the strong coupling", 
+        "H1", 
+        "10.1016/j.physletb.2007.07.050", 
+        "1043298", 
+        "0706.3722", 
+        "ins753951", 
+        null, 
+        [
+            "DESY-07-073"
+        ]
+    ], 
+    "759012": [
+        "Dijet Cross Sections and Parton Densities in Diffractive DIS at HERA", 
+        "H1", 
+        "10.1088/1126-6708/2007/10/042", 
+        "1052901", 
+        "0708.3217", 
+        "ins759012", 
+        null, 
+        [
+            "DESY-07-115"
+        ]
+    ]
+}

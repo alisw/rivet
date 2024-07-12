@@ -1,0 +1,206 @@
+{
+    "563334": [
+        "Bose-Einstein correlations of neutral and charged pions in hadronic $Z$ decays", 
+        "L3", 
+        "10.1016/S0370-2693(01)01270-9", 
+        "518860", 
+        "hep-ex/0109036", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2001-063"
+        ]
+    ], 
+    "563335": [
+        "Inclusive $\\pi^0$ and $K^0_{S}$ production in two photon collisions at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(01)01269-2", 
+        "518859", 
+        "hep-ex/0109037", 
+        "ins563335", 
+        null, 
+        [
+            "CERN-EP-2001-065"
+        ]
+    ], 
+    "564820": [
+        "Search for R parity violating decays of supersymmetric particles in $e^{+} e^{-}$ collisions at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(01)01367-3", 
+        "522900", 
+        "hep-ex/0110057", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2001-068"
+        ]
+    ], 
+    "565149": [
+        "f(1)(1285) formation in two photon collisions at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(01)01477-0", 
+        "524432", 
+        "hep-ex/0110073", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2001-073"
+        ]
+    ], 
+    "565440": [
+        "Double tag events in two photon collisions at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(02)01340-0", 
+        "525245", 
+        "hep-ex/0111012", 
+        "ins565440", 
+        null, 
+        [
+            "CERN-EP-2001-075"
+        ]
+    ], 
+    "565988": [
+        "Study of the $W^{+} W^{-} \\gamma$ process and limits on anomalous quartic gauge boson couplings at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(02)01167-X", 
+        "525935", 
+        "hep-ex/0111029", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2001-080"
+        ]
+    ], 
+    "570700": [
+        "Study of multiphoton final states and tests of QED in $e^{+} e^{-}$ collisions at $\\sqrt{S}$ up to 209-GeV", 
+        "L3", 
+        "10.1016/S0370-2693(02)01339-4", 
+        "537960", 
+        "hep-ex/0202025", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2001-096"
+        ]
+    ], 
+    "583971": [
+        "Search for a Higgs boson decaying into two photons at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(02)01572-1", 
+        "542193", 
+        "hep-ex/0203016", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2002-010"
+        ]
+    ], 
+    "585621": [
+        "$\\Lambda$ and $\\Sigma^0$ pair production in two photon collisions at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(02)01781-1", 
+        "542195", 
+        "hep-ex/0204025", 
+        "ins585621", 
+        null, 
+        [
+            "CERN-EP-2002-013"
+        ]
+    ], 
+    "585623": [
+        "Inclusive $D^{*+-}$ production in two photon collisions at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(02)01769-0", 
+        "542194", 
+        "hep-ex/0204027", 
+        "ins585623", 
+        null, 
+        [
+            "CERN-EP-2002-012"
+        ]
+    ], 
+    "586115": [
+        "Determination of $alpha_s$ from hadronic event shapes in $e^{+} e^{-}$ annihilation at 192-GeV <= $\\sqrt{s}$ <= 208-GeV", 
+        "L3", 
+        "10.1016/S0370-2693(02)01814-2", 
+        "542196", 
+        "hep-ex/0206052", 
+        "ins586115", 
+        null, 
+        [
+            "CERN-EP-2002-015"
+        ]
+    ], 
+    "588873": [
+        "The $e^{+} e^{-} \\to Z \\gamma \\gamma \\to q \\bar{q} \\gamma \\gamma$ reaction at LEP and constraints on anomalous quartic gauge boson couplings", 
+        "L3", 
+        "10.1016/S0370-2693(02)02127-5", 
+        "561994", 
+        "hep-ex/0206050", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2002-034"
+        ]
+    ], 
+    "588874": [
+        "Measurement of genuine three particle Bose-Einstein correlations in hadronic $Z$ decay", 
+        "L3", 
+        "10.1016/S0370-2693(02)02142-1", 
+        "561184", 
+        "hep-ex/0206051", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2002-035"
+        ]
+    ], 
+    "593545": [
+        "Search for neutral Higgs bosons of the minimal supersymmetric standard model in $e^{+} e^{-}$ interactions at $\\sqrt{s}$ = 209-GeV", 
+        "L3", 
+        "10.1016/S0370-2693(02)02577-7", 
+        "574945", 
+        "hep-ex/0208042", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2002-066"
+        ]
+    ], 
+    "594588": [
+        "Production of single $W$ bosons at LEP and measurement of $W W \\gamma$ gauge coupling parameters", 
+        "L3", 
+        "10.1016/S0370-2693(02)02768-5", 
+        "574944", 
+        "hep-ex/0209015", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2002-064"
+        ]
+    ], 
+    "594589": [
+        "Measurement of Bose-Einstein correlations in $e^{+} e^{-} \\to W^{+} W^{-}$ events at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(02)02767-3", 
+        "574943", 
+        "hep-ex/0209016", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2002-062"
+        ]
+    ], 
+    "599183": [
+        "Search for single top production at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(02)02933-7", 
+        "574946", 
+        "hep-ex/0210041", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2002-065"
+        ]
+    ]
+}

@@ -1,0 +1,37 @@
+Name: BABAR_2019_I1691954
+Year: 2019
+Summary: Mass distributions in the decay $D^0\to K^-\pi^+e^+e^-$
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 1691954
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 122 (2019) 8, 081802
+RunInfo: Any process producing D0
+Description:
+  'Kinematic distributions  in the decay $D^0\to K^-\pi^+e^+e^-$. Resolution/acceptance effects have been not unfolded.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BaBar:2018bwm
+BibTeX: '@article{BaBar:2018bwm,
+    author = "Lees, J. P. and others",
+    collaboration = "BaBar",
+    title = "{Observation of the Decay $D^0\rightarrow K^-\pi^+e^+e^-$}",
+    eprint = "1808.09680",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BABAR-PUB-18/007, SLAC-PUB-17332",
+    doi = "10.1103/PhysRevLett.122.081802",
+    journal = "Phys. Rev. Lett.",
+    volume = "122",
+    number = "8",
+    pages = "081802",
+    year = "2019"
+}
+'

@@ -41,15 +41,15 @@ namespace Rivet {
       declare(zfinder_bare_mu,	"ZFinder_bare_mu");
       
       // Book histograms
-      _hist_zpt_el_dressed = bookHisto1D(1, 1, 1);  // electron "dressed"
-      _hist_zpt_mu_dressed = bookHisto1D(1, 1, 2);  // muon "dressed"
-      _hist_zpt_el_bare    = bookHisto1D(1, 2, 1);  // electron "bare"
-      _hist_zpt_mu_bare    = bookHisto1D(1, 2, 2);  // muon "bare"	 
+      book(_hist_zpt_el_dressed ,1, 1, 1);  // electron "dressed"
+      book(_hist_zpt_mu_dressed ,1, 1, 2);  // muon "dressed"
+      book(_hist_zpt_el_bare    ,1, 2, 1);  // electron "bare"
+      book(_hist_zpt_mu_bare    ,1, 2, 2);  // muon "bare"	 
 
       //double-differential plots
-      _h_zpt_el_mu_dressed.addHistogram(0.0, 1.0, bookHisto1D(3, 1, 2));
-      _h_zpt_el_mu_dressed.addHistogram(1.0, 2.0, bookHisto1D(3, 1, 4));
-      _h_zpt_el_mu_dressed.addHistogram(2.0, 2.4, bookHisto1D(3, 1, 6));
+      {Histo1DPtr tmp; _h_zpt_el_mu_dressed.add(0.0, 1.0, book(tmp, 3, 1, 2));}
+      {Histo1DPtr tmp; _h_zpt_el_mu_dressed.add(1.0, 2.0, book(tmp, 3, 1, 4));}
+      {Histo1DPtr tmp; _h_zpt_el_mu_dressed.add(2.0, 2.4, book(tmp, 3, 1, 6));}
  
     }
 
@@ -57,37 +57,35 @@ namespace Rivet {
     /// Perform the per-event analysis
     void analyze(const Event& event) {
 
-      const double weight = event.weight();
-      
       const ZFinder& zfinder_dressed_el = apply<ZFinder>(event, "ZFinder_dressed_el");
       const ZFinder& zfinder_bare_el    = apply<ZFinder>(event, "ZFinder_bare_el");
       const ZFinder& zfinder_dressed_mu = apply<ZFinder>(event, "ZFinder_dressed_mu");
       const ZFinder& zfinder_bare_mu    = apply<ZFinder>(event, "ZFinder_bare_mu");	
       
-      FillPlots1d(zfinder_dressed_el, _hist_zpt_el_dressed, weight);
+      FillPlots1d(zfinder_dressed_el, _hist_zpt_el_dressed);
 
-      FillPlots1d(zfinder_bare_el,    _hist_zpt_el_bare,    weight);
+      FillPlots1d(zfinder_bare_el,    _hist_zpt_el_bare);
           
-      FillPlots1d(zfinder_dressed_mu, _hist_zpt_mu_dressed, weight);
+      FillPlots1d(zfinder_dressed_mu, _hist_zpt_mu_dressed);
           
-      FillPlots1d(zfinder_bare_mu,    _hist_zpt_mu_bare,    weight);  
+      FillPlots1d(zfinder_bare_mu,    _hist_zpt_mu_bare);  
       
-      FillPlots3d(zfinder_dressed_el, _h_zpt_el_mu_dressed, weight);      
-      FillPlots3d(zfinder_dressed_mu, _h_zpt_el_mu_dressed, weight);    
+      FillPlots3d(zfinder_dressed_el, _h_zpt_el_mu_dressed);      
+      FillPlots3d(zfinder_dressed_mu, _h_zpt_el_mu_dressed);    
 
     }
 
-    void FillPlots1d(const ZFinder& zfinder, Histo1DPtr hist, double weight) {
+    void FillPlots1d(const ZFinder& zfinder, Histo1DPtr hist) {
       if(zfinder.bosons().size() != 1) return;
       const FourMomentum pZ = zfinder.bosons()[0].momentum();
-      hist->fill(pZ.pT()/GeV, weight);
+      hist->fill(pZ.pT()/GeV);
       return; 
     } 
     
-    void FillPlots3d(const ZFinder& zfinder, BinnedHistogram<double>& binnedHist, double weight) {
+    void FillPlots3d(const ZFinder& zfinder, BinnedHistogram& binnedHist) {
       if(zfinder.bosons().size() != 1) return;
       const FourMomentum pZ = zfinder.bosons()[0].momentum();
-      binnedHist.fill(pZ.rapidity(), pZ.pT()/GeV, weight);   
+      binnedHist.fill(pZ.rapidity(), pZ.pT()/GeV);   
       return; 
     }  
 
@@ -100,7 +98,7 @@ namespace Rivet {
       normalize(_hist_zpt_mu_dressed);  
       normalize(_hist_zpt_mu_bare); 
 
-      foreach (Histo1DPtr hist, _h_zpt_el_mu_dressed.getHistograms()) { normalize(hist); }
+      for (Histo1DPtr hist : _h_zpt_el_mu_dressed.histos()) { normalize(hist); }
 
     }
 
@@ -116,7 +114,7 @@ namespace Rivet {
 
     /// @name Histograms
     //@{
-    BinnedHistogram<double> _h_zpt_el_mu_dressed;
+    BinnedHistogram _h_zpt_el_mu_dressed;
   
  
     Histo1DPtr _hist_zpt_el_dressed;
@@ -130,5 +128,5 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2014_I1300647);
+  RIVET_DECLARE_PLUGIN(ATLAS_2014_I1300647);
 }

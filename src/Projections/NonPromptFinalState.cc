@@ -8,7 +8,7 @@ namespace Rivet {
     : _acceptMuDecays(acceptmudecays), _acceptTauDecays(accepttaudecays)
   {
     setName("NonPromptFinalState");
-    addProjection(fsp, "FS");
+    declare(fsp, "FS");
   }
 
 
@@ -16,13 +16,13 @@ namespace Rivet {
     : _acceptMuDecays(acceptmudecays), _acceptTauDecays(accepttaudecays)
   {
     setName("NonPromptFinalState");
-    addProjection(FinalState(c), "FS");
+    declare(FinalState(c), "FS");
   }
 
 
-  int NonPromptFinalState::compare(const Projection& p) const {
+  CmpState NonPromptFinalState::compare(const Projection& p) const {
     const PCmp fscmp = mkNamedPCmp(p, "FS");
-    if (fscmp != EQUIVALENT) return fscmp;
+    if (fscmp != CmpState::EQ) return fscmp;
     const NonPromptFinalState& other = dynamic_cast<const NonPromptFinalState&>(p);
     return cmp(_acceptMuDecays, other._acceptMuDecays) || cmp(_acceptTauDecays, other._acceptTauDecays);
   }

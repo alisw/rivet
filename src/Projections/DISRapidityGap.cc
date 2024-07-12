@@ -4,7 +4,7 @@
 namespace Rivet {
 
 
-  int DISRapidityGap::compare(const Projection& p) const {
+  CmpState DISRapidityGap::compare(const Projection& p) const {
     return mkNamedPCmp(p, "DISKIN") || mkNamedPCmp(p, "DISFS");
   }
 
@@ -56,7 +56,7 @@ namespace Rivet {
 
     // Define the two systems X and Y.
     Particles tmp_pX, tmp_pY;
-    foreach (const Particle& ip, particles) {
+    for (const Particle& ip : particles) {
       if (dir * ip.eta() > _gapLow) tmp_pX.push_back(ip);
       else tmp_pY.push_back(ip);
     }

@@ -1,0 +1,38 @@
+Name: BELLE_2002_I563840
+Year: 2002
+Summary: Prompt Charmonium production at 10.6 GeV
+Experiment: BELLE
+Collider: KEKB
+InspireID: 563840
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 88 (2002) 052001
+RunInfo: e+e- to hadrons, only the continuuum contributes not Upslion(4S) decays
+Beams: [e+, e-]
+Energies: [10.6]
+Description:
+  'Measurement of the spectra for prompt $J/\psi$ and $\psi(2S)$ production at 10.6 GeV by BELLE.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Abe:2001za
+BibTeX: '@article{Abe:2001za,
+      author         = "Abe, Kazuo and others",
+      title          = "{Production of prompt charmonia in e+ e- annihilation at
+                        s**(1/2) is approximately 10.6-GeV}",
+      collaboration  = "Belle",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "88",
+      year           = "2002",
+      pages          = "052001",
+      doi            = "10.1103/PhysRevLett.88.052001",
+      eprint         = "hep-ex/0110012",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "KEK-PREPRINT-2001-131, BELLE-PREPRINT-2001-15",
+      SLACcitation   = "%%CITATION = HEP-EX/0110012;%%"
+}'

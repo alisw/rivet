@@ -1,0 +1,80 @@
+{
+    "1732987": [
+        "Search for Rare or Forbidden Decays of the $D^{0}$ Meson", 
+        "BaBar", 
+        "10.1103/PhysRevLett.124.071802", 
+        null, 
+        "1905.00608", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-19/002", 
+            "SLAC-PUB-17424"
+        ]
+    ], 
+    "1767137": [
+        "Measurements of the Absolute Branching Fractions of $B^\\pm \\to K^\\pm X_{c\\bar c}$", 
+        "BaBar", 
+        "10.1103/PhysRevLett.124.152001", 
+        null, 
+        "1911.11740", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-18/04", 
+            "SLAC_PUB-17489"
+        ]
+    ], 
+    "1769654": [
+        "Resonances in $e^+e^-$ annihilation near 2.2 GeV", 
+        "BaBar", 
+        "10.1103/PhysRevD.101.012011", 
+        null, 
+        "1912.04512", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-19/003", 
+            "SLAC-PUB-19212"
+        ]
+    ], 
+    "1791813": [
+        "Search for lepton-flavor-violating decays $D^{0}\\rightarrow X^{0}e^{\\pm}\\mu^{\\mp}$", 
+        "BaBar", 
+        "10.1103/PhysRevD.101.112003", 
+        null, 
+        "2004.09457", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-20/001", 
+            "SLAC-PUB-17524"
+        ]
+    ], 
+    "1794149": [
+        "Precision measurement of the ${\\cal B}(\\Upsilon(3S)\\to\\tau^+\\tau^-)/{\\cal B}(\\Upsilon(3S)\\to\\mu^+\\mu^-)$ ratio", 
+        "BaBar", 
+        "10.1103/PhysRevLett.125.241801", 
+        null, 
+        "2005.01230", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-20/002", 
+            "SLAC-PUB-17527"
+        ]
+    ], 
+    "1794329": [
+        "Search for a Dark Leptophilic Scalar in $e^+e^-$ Collisions", 
+        "BaBar", 
+        "10.1103/PhysRevLett.125.181801", 
+        null, 
+        "2005.01885", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-20/003", 
+            "SLAC-PUB-17526"
+        ]
+    ]
+}

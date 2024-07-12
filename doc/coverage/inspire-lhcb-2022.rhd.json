@@ -1,0 +1,454 @@
+{
+    "1852846": [
+        "Test of lepton universality in beauty-quark decays",
+        "LHCb",
+        "10.1038/s41567-021-01478-8",
+        "2758740",
+        "2103.11769",
+        "ins1852846",
+        null,
+        [
+            "LHCb-PAPER-2021-004",
+            "CERN-EP-2021-042"
+        ]
+    ],
+    "1857623": [
+        "Precise determination of the $B_{\\mathrm{s}}^0$\u2013$\\overline B_{\\mathrm{s}}^0$ oscillation frequency",
+        "LHCb",
+        "10.1038/s41567-021-01394-x",
+        "2764338",
+        "2104.04421",
+        "ins1857623",
+        null,
+        [
+            "LHCb-PAPER-2021-005",
+            "CERN-EP-2021-047"
+        ]
+    ],
+    "1862723": [
+        "A Comparison of CPU and GPU Implementations for the LHCb Experiment Run 3 Trigger",
+        "LHCb",
+        "10.1007/s41781-021-00070-2",
+        "2766501",
+        "2105.04031",
+        null,
+        null,
+        [
+            "LHCb-DP-2021-003"
+        ]
+    ],
+    "1877981": [
+        "Study of coherent $J/\\psi$ production in lead-lead collisions at $ \\sqrt{{\\mathrm{s}}_{\\mathrm{NN}}} $ = 5 TeV",
+        "LHCb",
+        "10.1007/JHEP07(2022)117",
+        "2775281",
+        "2107.03223",
+        null,
+        null,
+        [
+            "CERN-CERN-EP-2021-108",
+            "LHCb-PAPER-2021-013"
+        ]
+    ],
+    "1889335": [
+        "Measurement of prompt charged-particle production in pp collisions at $ \\sqrt{\\mathrm{s}} $ = 13 TeV",
+        "LHCb",
+        "10.1007/JHEP01(2022)166",
+        "2777220",
+        "2107.10090",
+        null,
+        null,
+        [
+            "LHCb-PAPER-2021-010",
+            "CERN-EP-2021-110"
+        ]
+    ],
+    "1899799": [
+        "$J/\\psi$ photoproduction in Pb-Pb peripheral collisions at $\\sqrt {s_{NN}}$= 5 TeV",
+        "LHCb",
+        "10.1103/PhysRevC.105.L032201",
+        "2778055",
+        "2108.02681",
+        null,
+        null,
+        [
+            "LHCb-PAPER-2020-043",
+            "CERN-EP-2021-122"
+        ]
+    ],
+    "1903743": [
+        "Evidence for a new structure in the $J/\\psi p$ and $J/\\psi \\bar{p}$ systems in $B_s^0 \\to J/\\psi p \\bar{p}$ decays",
+        "LHCb",
+        "10.1103/PhysRevLett.128.062001",
+        "2778329",
+        "2108.04720",
+        null,
+        null,
+        [
+            "LHCb-PAPER-2021-018",
+            "CERN-EP-2021-150"
+        ]
+    ],
+    "1906173": [
+        "Search for the radiative $\\Xi_b^-\\to\\Xi^-\\gamma$ decay",
+        "LHCb",
+        "10.1007/JHEP01(2022)069",
+        "2778904",
+        "2108.07678",
+        null,
+        null,
+        [
+            "LHCb-PAPER-2021-017",
+            "CERN-EP-2021-128"
+        ]
+    ],
+    "1908214": [
+        "Analysis of Neutral B-Meson Decays into Two Muons",
+        "LHCb",
+        "10.1103/PhysRevLett.128.041801",
+        "2779007",
+        "2108.09284",
+        null,
+        null,
+        [
+            "CERN-CERN-EP-2021-132",
+            "LHCb-PAPER-2021-007"
+        ]
+    ],
+    "1908217": [
+        "Measurement of the $B^0_s\\to\\mu^+\\mu^-$ decay properties and search for the $B^0\\to\\mu^+\\mu^-$ and $B^0_s\\to\\mu^+\\mu^-\\gamma$ decays",
+        "LHCb",
+        "10.1103/PhysRevD.105.012010",
+        "2779083",
+        "2108.09283",
+        null,
+        null,
+        [
+            "CERN-EP-2021-133",
+            "LHCb-PAPER-2021-008"
+        ]
+    ],
+    "1913240": [
+        "Measurement of the Nuclear Modification Factor and Prompt Charged Particle Production in $p-Pb$ and $pp$ Collisions at $\\sqrt {s_{NN}}$=5\u2009\u2009TeV",
+        "LHCb",
+        "10.1103/PhysRevLett.128.142004",
+        "2779667",
+        "2108.13115",
+        null,
+        null,
+        [
+            "LHCb-PAPER-2021-015",
+            "CERN-EP-2021-130"
+        ]
+    ],
+    "1915358": [
+        "Study of the doubly charmed tetraquark $T_{cc}^{+}$",
+        "LHCb",
+        "10.1038/s41467-022-30206-w",
+        "2780005",
+        "2109.01056",
+        "ins1915358",
+        null,
+        [
+            "CERN-EP-2021-169",
+            "LHCb-PAPER-2021-032"
+        ]
+    ],
+    "1915457": [
+        "Observation of an exotic narrow doubly charmed tetraquark",
+        "LHCb",
+        "10.1038/s41567-022-01614-y",
+        "2780075",
+        "2109.01038",
+        "ins1915457",
+        null,
+        [
+            "CERN-EP-2021-165",
+            "LHCb-PAPER-2021-031"
+        ]
+    ],
+    "1915806": [
+        "Measurement of the W boson mass",
+        "LHCb",
+        "10.1007/JHEP01(2022)036",
+        "2780004",
+        "2109.01113",
+        null,
+        null,
+        [
+            "LHCb-PAPER-2021-024",
+            "CERN-EP-2021-170"
+        ]
+    ],
+    "1916140": [
+        "Measurement of the lifetimes of promptly produced $\\Omega^{0}_{c}$ and $\\Xi^{0}_{c}$ baryons",
+        "LHCb",
+        "10.1016/j.scib.2021.11.022",
+        "2779994",
+        "2109.01334",
+        null,
+        null,
+        [
+            "LHCb-PAPER-2021-021",
+            "CERN-EP-2021-167"
+        ]
+    ],
+    "1922217": [
+        "Measurement of \u03c7$_{c1}$(3872) production in proton-proton collisions at $ \\sqrt{s} $ = 8 and 13 TeV",
+        "LHCb",
+        "10.1007/JHEP01(2022)131",
+        "2781231",
+        "2109.07360",
+        null,
+        null,
+        [
+            "LHCb-PAPER-2021-026",
+            "CERN-EP-2021-182"
+        ]
+    ],
+    "1922693": [
+        "Study of Z Bosons Produced in Association with Charm in the Forward Region",
+        "LHCb",
+        "10.1103/PhysRevLett.128.082001",
+        "2781347",
+        "2109.08084",
+        null,
+        null,
+        [
+            "LHCb-PAPER-2021-029",
+            "CERN-EP-2021-176"
+        ]
+    ],
+    "1940940": [
+        "Observation of Two New Excited $\\Xi_b^0$ States Decaying to $\\Lambda^0_b K^- \\pi^+$",
+        "LHCb",
+        "10.1103/PhysRevLett.128.162001",
+        "2783843",
+        "2110.04497",
+        null,
+        null,
+        [
+            "LHCb-PAPER-2021-025",
+            "CERN-EP-2021-188"
+        ]
+    ],
+    "1945087": [
+        "Search for massive long-lived particles decaying semileptonically at $\\sqrt {s}$ = 13 TeV",
+        "LHCb",
+        "10.1140/epjc/s10052-022-10186-3",
+        "2784342",
+        "2110.07293",
+        null,
+        null,
+        [
+            "LHCb-PAPER-2021-028",
+            "CERN-EP-2021-186"
+        ]
+    ],
+    "1946134": [
+        "Tests of lepton universality using $B^0\\to K^0_S \\ell^+ \\ell^-$ and $B^+\\to K^{*+} \\ell^+ \\ell^-$ decays",
+        "LHCb",
+        "10.1103/PhysRevLett.128.191802",
+        "2784954",
+        "2110.09501",
+        null,
+        null,
+        [
+            "LHCb-PAPER-2021-038",
+            "CERN-EP-2021-208"
+        ]
+    ],
+    "1958536": [
+        "Centrality determination in heavy-ion collisions with the LHCb detector",
+        "LHCb",
+        "10.1088/1748-0221/17/05/P05009",
+        "2789548",
+        "2111.01607",
+        null,
+        null,
+        [
+            "CERN-LHCb-DP-2021-002"
+        ]
+    ],
+    "1960979": [
+        "Study of $ {\\mathrm{B}}_{\\mathrm{c}}^{+} $ decays to charmonia and three light hadrons",
+        "LHCb",
+        "10.1007/JHEP01(2022)065",
+        "2789843",
+        "2111.03001",
+        null,
+        null,
+        [
+            "LHCb-PAPER-2021-034",
+            "CERN-EP-2021-216"
+        ]
+    ],
+    "1961265": [
+        "Angular Analysis of $D^0 \\to \\pi^+\\pi^-\\mu^+\\mu^-$ and $D^0 \\to K^+K^-\\mu^+\\mu^-$ Decays and Search for $CP$ Violation",
+        "LHCb",
+        "10.1103/PhysRevLett.128.221801",
+        "2789889",
+        "2111.03327",
+        null,
+        null,
+        [
+            "LHCb-PAPER-2021-035",
+            "CERN-EP-2021-212"
+        ]
+    ],
+    "1971920": [
+        "Measurement of the photon polarization in $\\Lambda_{b}^{0}$ $\\to$ $\\Lambda$ $\\gamma$ decays",
+        "LHCb",
+        "10.1103/PhysRevD.105.L051104",
+        "2791068",
+        "2111.10194",
+        null,
+        null,
+        [
+            "LHCb-PAPER-2021-030",
+            "CERN-EP-2021-230"
+        ]
+    ],
+    "1973021": [
+        "Searches for rare $ {B}_s^0 $ and B$^{0}$ decays into four muons",
+        "LHCb",
+        "10.1007/JHEP03(2022)109",
+        "2791229",
+        "2111.11339",
+        null,
+        null,
+        [
+            "LHCb-PAPER-2021-039",
+            "CERN-EP-2021-236"
+        ]
+    ],
+    "1983604": [
+        "Observation of $\\Lambda_b^0\\rightarrow D^+ p \\pi^-\\pi^-$ and $\\Lambda_b^0\\rightarrow D^{*+} p \\pi^-\\pi^-$ decays",
+        "LHCb",
+        "10.1007/JHEP03(2022)153",
+        "2792212",
+        "2112.02013",
+        null,
+        null,
+        [
+            "LHCb-PAPER-2021-040",
+            "CERN-EP-2021-237"
+        ]
+    ],
+    "1990313": [
+        "Precision measurement of forward $Z$ boson production in proton-proton collisions at $\\sqrt{s} = 13$ TeV",
+        "LHCb",
+        "10.1007/JHEP07(2022)026",
+        "2798114",
+        "2112.07458",
+        "ins1990313",
+        null,
+        [
+            "LHCb-PAPER-2021-037",
+            "CERN-EP-2021-246"
+        ]
+    ],
+    "1992238": [
+        "Identification of charm jets at LHCb",
+        "LHCb",
+        "10.1088/1748-0221/17/02/P02028",
+        "2798400",
+        "2112.08435",
+        null,
+        null,
+        [
+            "LHCb-DP-2021-006"
+        ]
+    ],
+    "1993949": [
+        "Constraints on the CKM angle $\\gamma$ from $B^\\pm\\rightarrow Dh^\\pm$ decays using $D\\rightarrow h^\\pm h^{\\prime\\mp}\\pi^0$ final states",
+        "LHCb",
+        "10.1007/JHEP07(2022)099",
+        "2798672",
+        "2112.10617",
+        null,
+        null,
+        [
+            "LHCb-PAPER-2021-036",
+            "CERN-EP-2021-255"
+        ]
+    ],
+    "1994799": [
+        "Observation of the $B^0\\rightarrow\\overline{D}^{*0}K^{+}\\pi^{-}$ and $B_s^0\\rightarrow\\overline{D}^{*0}K^{-}\\pi^{+}$ decays",
+        "LHCb",
+        "10.1103/PhysRevD.105.072005",
+        "2799052",
+        "2112.11428",
+        null,
+        null,
+        [
+            "LHCb-PAPER-2021-043",
+            "CERN-EP-2021-262"
+        ]
+    ],
+    "2006977": [
+        "Observation of the decay $ \\Lambda_b^0\\rightarrow \\Lambda_c^+\\tau^-\\overline{\\nu}_{\\tau}$",
+        "LHCb",
+        "10.1103/PhysRevLett.128.191803",
+        "2799201",
+        "2201.03497",
+        null,
+        null,
+        [
+            "LHCb-PAPER-2021-044",
+            "CERN-EP-2021-265"
+        ]
+    ],
+    "2017252": [
+        "Search for the decay $B^0\\to\\phi\\mu^+\\mu^-$",
+        "LHCb",
+        "10.1007/JHEP05(2022)067",
+        "2800508",
+        "2201.10167",
+        null,
+        null,
+        [
+            "LHCb-PAPER-2021-042",
+            "CERN-EP-2021-267"
+        ]
+    ],
+    "2031673": [
+        "Observation of the doubly charmed baryon decay $ {\\Xi}_{cc}^{++}\\to {\\Xi}_c^{\\prime +}{\\pi}^{+} $",
+        "LHCb",
+        "10.1007/JHEP05(2022)038",
+        "2801662",
+        "2202.05648",
+        null,
+        null,
+        [
+            "LHCb-PAPER-2021-052",
+            "CERN-EP-2022-016"
+        ]
+    ],
+    "2035063": [
+        "Measurement of the charm mixing parameter\u00a0$y_{CP} - y_{CP}^{K\\pi}$ using two-body $D^0$ meson decays",
+        "LHCb",
+        "10.1103/PhysRevD.105.092013",
+        "2802010",
+        "2202.09106",
+        null,
+        null,
+        [
+            "LHCb-PAPER-2021-041",
+            "CERN-EP-2022-022"
+        ]
+    ],
+    "2045484": [
+        "First Measurement of the <math display=\"inline\"><mrow><mi>Z</mi><mo stretchy=\"false\">\u2192</mo><msup><mrow><mi>\u03bc</mi></mrow><mrow><mo>+</mo></mrow></msup><msup><mrow><mi>\u03bc</mi></mrow><mrow><mo>-</mo></mrow></msup></mrow></math> Angular Coefficients in the Forward Region of <math display=\"inline\"><mi>p</mi><mi>p</mi></math> Collisions at <math display=\"inline\"><mrow><msqrt><mrow><mi>s</mi></mrow></msqrt><mo>=</mo><mn>13</mn><mtext>\u2009</mtext><mtext>\u2009</mtext><mi>TeV</mi></mrow></math>",
+        "LHCb",
+        "10.1103/PhysRevLett.129.091801",
+        "2803104",
+        "2203.01602",
+        null,
+        null,
+        [
+            "LHCb-PAPER-2021-048",
+            "CERN-EP-2022-030"
+        ]
+    ]
+}

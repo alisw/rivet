@@ -1,0 +1,75 @@
+{
+    "27985": [
+        "Rho0 production in the reaction gamma gamma ---> 3 pi+ 3 pi- and search for gamma gamma ---> rho0 rho0 (1700)", 
+        "CELLO", 
+        "10.1007/BF01570795", 
+        null, 
+        null, 
+        "ins27985", 
+        null, 
+        [
+            "TAUP-1801-90", 
+            "DESY-90-066"
+        ]
+    ], 
+    "299282": [
+        "A Measurement of the pi0, eta and eta-prime electromagnetic form-factors", 
+        "CELLO", 
+        "10.1007/BF01549692", 
+        null, 
+        null, 
+        "ins299282", 
+        null, 
+        [
+            "DESY-90-110"
+        ]
+    ], 
+    "300102": [
+        "Fractal dimensions from a three-dimensional intermittency analysis in e+ e- annihilation", 
+        "CELLO", 
+        "10.1016/0370-2693(91)90225-F", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-90-114"
+        ]
+    ], 
+    "301065": [
+        "Cross-section measurement and spin parity analysis of the reaction gamma gamma ---> omega rho", 
+        "CELLO", 
+        "10.1016/0370-2693(91)91928-O", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-90-137"
+        ]
+    ], 
+    "301727": [
+        "A Search for substructure of leptons and quarks with the CELLO detector", 
+        "CELLO", 
+        "10.1007/BF01475784", 
+        null, 
+        null, 
+        "ins301727", 
+        null, 
+        [
+            "DESY-90-149"
+        ]
+    ], 
+    "314256": [
+        "Studies of multi - hadronic final states in photon-photon interactions", 
+        "CELLO", 
+        "10.1007/BF01548558", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-91-006"
+        ]
+    ]
+}

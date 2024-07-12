@@ -1,0 +1,53 @@
+{
+    "18545": [
+        "A Search for Single Photons at {PETRA}", 
+        "CELLO", 
+        "10.1016/0370-2693(86)90958-5", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "LAL-86/11", 
+            "DESY-86-050"
+        ]
+    ], 
+    "221066": [
+        "EXCITED LEPTON SEARCH", 
+        "CELLO", 
+        "10.1016/0370-2693(86)91656-4", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "LAL/85-50", 
+            "DESY-86-012"
+        ]
+    ], 
+    "231405": [
+        "Search for Light Leptoquark Bosons", 
+        "CELLO", 
+        "10.1016/0370-2693(86)91410-3", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "SACLAY-DPHPE-86-16", 
+            "DESY-86-063"
+        ]
+    ], 
+    "233537": [
+        "Search for Excited Quarks in $e^+ e^-$ Interactions With the Cello Detector", 
+        "CELLO", 
+        "10.1016/0370-2693(86)91279-7", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-86-100"
+        ]
+    ]
+}

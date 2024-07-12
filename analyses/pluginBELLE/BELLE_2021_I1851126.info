@@ -1,0 +1,34 @@
+Name: BELLE_2021_I1851126
+Year: 2021
+Summary: Decay asymmetries in $\Xi^0_c\to\Xi^-\pi^+$
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1851126
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - arXiv:2103.06496 
+RunInfo: Any process producing Xi_c0
+Description:
+  'Measurement of the decay asymmetries in $\Xi^0_c\to\Xi^-\pi^+$ by the  BELLE experiment.
+ The asymmetry parameter is extracted by fitting to normalised angular distribution. This analysis is useful for testing spin correlations
+ in hadron decays.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Li:2021uhk
+BibTeX: '@article{Li:2021uhk,
+    author = "Li, Y. B. and others",
+    collaboration = "Belle",
+    title = "{Measurements of the branching fractions of semileptonic decays $\Xi_{c}^{0} \to \Xi^{-} \ell^{+} \nu_{\ell}$ and asymmetry parameter of $\Xi_{c}^{0} \to \Xi^{-} \pi^{+}$ decay}",
+    eprint = "2103.06496",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "Belle Preprint 2021-03; KEK Preprint 2020-44",
+    month = "3",
+    year = "2021"
+}'

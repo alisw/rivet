@@ -1,0 +1,46 @@
+{
+    "314203": [
+        "Charge asymmetry of hadronic events in $e^{+} e^{-}$ annihilation at $\\sqrt{s}$ = 57.9-GeV", 
+        "TOPAZ", 
+        "10.1016/0370-2693(91)90277-W", 
+        null, 
+        null, 
+        "ins314203", 
+        null, 
+        [
+            "DPNU-91-08", 
+            "KEK-PREPRINT-90-185", 
+            "INS-865", 
+            "KOBE-HEP-91-01", 
+            "NWU-HEP-91-01", 
+            "PU-91-653", 
+            "OCU-HEP-91-1", 
+            "TU-HEP-91-01", 
+            "TIT-HPE-91-01", 
+            "TUAT-HEP-91-01A", 
+            "UT-HE-91-03"
+        ]
+    ], 
+    "319034": [
+        "Measurements of b quark forward - backward charge asymmetry and axial vector coupling using inclusive muons in e+ e- annihilation at s**(1/2) = 52-GeV - 61.4-Gev", 
+        "TOPAZ", 
+        "10.1016/0370-2693(91)91608-X", 
+        null, 
+        null, 
+        "ins319034", 
+        null, 
+        [
+            "KEK-PREPRINT-91-109", 
+            "PU-91-657", 
+            "OCU-HEP-91-04", 
+            "NWU-HEP-91-02", 
+            "UT-HE-91-06", 
+            "INS-894", 
+            "KOBE-HEP-91-02", 
+            "TU-HEP-91-04", 
+            "DPNU-91-41", 
+            "TUAT-HEP-91-01", 
+            "TIT-HPE-91-04"
+        ]
+    ]
+}

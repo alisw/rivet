@@ -1,0 +1,45 @@
+Name: H1_1999_I481112
+Year: 1999
+Summary: Measurement of D* meson cross-sections at HERA and determination of the gluon density in the proton using NLO QCD
+Experiment: H1
+Collider: HERA
+InspireID: 481112
+Status: VALIDATED
+Reentrant: True
+Authors:
+ - Luca Marsili <luca.marsili@studio.unibo.it>
+ - Hannes Jung <hannes.jung@desy.de>
+References:
+ - 'Nucl.Phys.B 545 (1999) 21'
+ - 'doi:10.1016/S0550-3213(99)00119-4'
+ - 'arXiv:hep-ex/9812023'
+ - 'DESY-98-204'
+Beams: [[e+, p+],[p+,e+]]
+Energies: [[27.5,820],[820,27.5]]
+Description:
+  'With the H1 detector at the $ep$ collider HERA, $D^*$ meson production cross sections have been measured in deep inelastic scattering with four-momentum transfers $Q^2>2$ GeV$^2$ and in photoproduction at energies around $W_{\gamma p} \sim 88$ GeV and 194 GeV. Next-to-Leading Order QCD calculations are found to describe the differential cross sections within theoretical and experimental uncertainties. Using these calculations, the NLO gluon momentum distribution in the proton, $x_g g(x_g)$, has been extracted in the momentum fraction range $7.5 \times 10^{-4}< x_g <4 \times 10^{-2}$ at average scales $mu^2 =25$ to 50 GeV$^2$. The gluon momentum fraction $x_g$ has been obtained from the measured kinematics of the scattered electron and the $D^*$ meson in the final state.'
+ValidationInfo:
+  '$D^*$ meson production cross sections have
+been measured in deep inelastic scattering with four-momentum transfers Q2 > 2 GeV2
+and in photoproduction at energies around $W_{\gamma p} = 88 GeV$ and $W_{\gamma p}  = 194 GeV $ . Next-to-Leading
+Order QCD calculations are found to describe the differential cross sections within theoretical and experimental uncertainties; since the Rivet analysis takes account only of LO events there is a difference of approximately a factor of 2 between the data and the predictions.
+ The MC simulation has been done using RAPGAP, both for DIS and photoproduction has been used as a leading order subprocess $\gamma g -> c \bar{c}$. The parton density function used are CTEQ 6L and HERAPDF15.'
+
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: H1:1998csb
+BibTeX: '@article{H1:1998csb,
+    author = "Adloff, C. and others",
+    collaboration = "H1",
+    title = "{Measurement of D* meson cross-sections at HERA and determination of the gluon density in the proton using NLO QCD}",
+    eprint = "hep-ex/9812023",
+    archivePrefix = "arXiv",
+    reportNumber = "DESY-98-204",
+    doi = "10.1016/S0550-3213(99)00119-4",
+    journal = "Nucl. Phys. B",
+    volume = "545",
+    pages = "21--44",
+    year = "1999"
+}'
+

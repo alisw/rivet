@@ -1,0 +1,37 @@
+Name: BELLE_2018_I1641071
+Year: 2018
+Summary: Mass distributions in $\Omega_c^0$ decays
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1641071
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 97 (2018) 3, 032001
+RunInfo: Any process producing Omega_c
+Description:
+  'Measurement of the mass distributions in the decays $\Omega_c^0\to\Omega^-\pi^+\pi^0$, $\Xi^-K^+\pi^+\pi^+$ and $\Xi^0K^-\pi^+$ . The data were read from the plots in the paper and are not corrected.'
+ValidationInfo:
+  'Herwig7 events using EvtGen for decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle:2017szm
+BibTeX: '@article{Belle:2017szm,
+    author = "Yelton, J. and others",
+    collaboration = "Belle",
+    title = "{Measurement of branching fractions of hadronic decays of the $\Omega_c^0$  baryon}",
+    eprint = "1712.01333",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BELLE-PREPRINT-2017-23, KEK-PREPRINT-2017-33",
+    doi = "10.1103/PhysRevD.97.032001",
+    journal = "Phys. Rev. D",
+    volume = "97",
+    number = "3",
+    pages = "032001",
+    year = "2018"
+}
+'

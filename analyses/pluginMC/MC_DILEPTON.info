@@ -1,6 +1,7 @@
 Name: MC_DILEPTON
 Summary: Charged dilepton kinematic distributions sensitive to boson polarisation
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Andy Buckley <andy.buckley@cern.ch>
 RunInfo: Any event type that produces prompt charged lepton pairs.

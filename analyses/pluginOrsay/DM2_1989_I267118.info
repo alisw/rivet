@@ -1,0 +1,31 @@
+Name: DM2_1989_I267118
+Year: 1989
+Summary: Cross section for $e^+e^-\to \pi^+\pi^-$ between 1.35 and 2.4 GeV
+Experiment: DM2
+Collider: DCI
+InspireID: 267118
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+- Phys.Lett. B220 (1989) 321-327, 1989
+RunInfo: e+ e- to hadrons
+NeedCrossSection: yes
+Beams: [e+, e-]
+Description:
+  'Measurement of the cross section for $e^+e^-\to \pi^+\pi^-$ at energies between 1.35 and 2.4 GeV. Useful for comparing models of the pion form factor.'
+Keywords:
+BibKey: Bisello:1988hq
+BibTeX: '@article{Bisello:1988hq,
+      author         = "Bisello, D. and others",
+      title          = "{The Pion Electromagnetic Form-factor in the Timelike
+                        Energy Range 1.35-{GeV} $\le \sqrt{s} \le$ 2.4-{GeV}}",
+      collaboration  = "DM2",
+      journal        = "Phys. Lett.",
+      volume         = "B220",
+      year           = "1989",
+      pages          = "321-327",
+      doi            = "10.1016/0370-2693(89)90060-9",
+      reportNumber   = "LAL-88-47",
+      SLACcitation   = "%%CITATION = PHLTA,B220,321;%%"
+}'

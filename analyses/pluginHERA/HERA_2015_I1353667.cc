@@ -12,7 +12,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(HERA_2015_I1353667);
+    RIVET_DEFAULT_ANALYSIS_CTOR(HERA_2015_I1353667);
 
 
     /// @name Analysis methods
@@ -29,12 +29,12 @@ namespace Rivet {
       //Cuts::abspid == PID::DSTARPLUS
 
       // Book histograms
-      _h_pTD = bookHisto1D(1, 1, 1);
-      _h_etaD = bookHisto1D(2, 1, 1);
-      _h_zD = bookHisto1D(3, 1, 1);
-      _h_Q2 = bookHisto1D(4, 1, 1);
-      _h_y = bookHisto1D(5, 1, 1);
-      // _h_Q2y = bookHisto2D(6, 1, 1);
+      book(_h_pTD, 1, 1, 1);
+      book(_h_etaD, 2, 1, 1);
+      book(_h_zD, 3, 1, 1);
+      book(_h_Q2, 4, 1, 1);
+      book(_h_y, 5, 1, 1);
+ book(_h_Q2y, 6, 1, 1);
     }
 
 
@@ -43,7 +43,7 @@ namespace Rivet {
 
       // Determine kinematics, including event orientation
       const DISKinematics& kin = apply<DISKinematics>(event, "Kinematics");
-      //const int orientation = kin.orientation();
+      const int orientation = kin.orientation();
 
       // Q2 and inelasticity cuts
       if (!inRange(kin.Q2(), 1.5*GeV2, 1000*GeV2)) vetoEvent;
@@ -57,26 +57,31 @@ namespace Rivet {
       if (dstars.empty()) vetoEvent;
       MSG_DEBUG("#D* = " << dstars.size());
       const Particle& dstar = dstars.front();
-      const double zD = (dstar.E() - dstar.pz()) / (2*kin.beamLepton().E()*kin.y());
+      const double zD = (dstar.E() - orientation*dstar.pz()) / (2*kin.beamLepton().E()*kin.y());
 
       // Single-differential histograms with higher low-Q2 cut
       if (kin.Q2() > 5*GeV2) {
-        _h_pTD->fill(dstar.pT()/GeV, event.weight());
-        _h_etaD->fill(dstar.eta(), event.weight());
-        _h_zD->fill(zD/GeV, event.weight());
-        _h_Q2->fill(kin.Q2()/GeV2, event.weight());
-        _h_y->fill(kin.y(), event.weight());
+        _h_pTD->fill(dstar.pT()/GeV);
+        _h_etaD->fill(orientation*dstar.eta());
+        _h_zD->fill(zD/GeV);
+        _h_Q2->fill(kin.Q2()/GeV2);
+        _h_y->fill(kin.y());
       }
 
       // // Double-differential (y,Q2) histograms
-      // _h_Q2y->fill(kin.Q2()/GeV2, kin.y(), event.weight());
+      // _h_Q2y->fill(kin.Q2()/GeV2, kin.y());
 
     }
 
 
     /// Normalise histograms etc., after the run
-    void finalize() {
-      scale({_h_pTD, _h_etaD, _h_zD, _h_Q2, _h_y}, crossSection()/nanobarn/sumOfWeights());
+    void finalize() { 
+      const double sf = crossSection()/nanobarn/sumOfWeights();
+      scale(_h_pTD, sf);
+      scale(_h_etaD, sf);
+      scale(_h_zD, sf);
+      scale(_h_Q2, sf);
+      scale(_h_y, sf);
     }
 
     //@}
@@ -93,7 +98,7 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(HERA_2015_I1353667);
+  RIVET_DECLARE_PLUGIN(HERA_2015_I1353667);
 
 
 }

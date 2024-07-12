@@ -1,0 +1,39 @@
+Name: BESIII_2022_I1864775
+Year: 2022
+Summary: Analysis of $J/\psi$ decays to $\Xi^-\bar{\Xi}^+$
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1864775
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Nature 606 (2022) 7912, 64-69
+RunInfo: e+e- > J/psi 
+NeedCrossSection: no
+Beams: [e-, e+]
+Energies: [3.1]
+Description:
+  'Analysis of the angular distribution of the baryons, and decay products, produced in
+   $e^+e^-\to J/\psi \to \Xi^-\bar{\Xi}^+$.
+   Gives information about the decay and is useful for testing correlations in hadron decays. N.B. the data is not corrected and should only be used qualatively.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2021ypr
+BibTeX: '@article{BESIII:2021ypr,
+    author = "Ablikim, Medina and others",
+    collaboration = "BESIII",
+    title = "{Probing CP symmetry and weak phases with entangled double-strange baryons}",
+    eprint = "2105.11155",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1038/s41586-022-04624-1",
+    journal = "Nature",
+    volume = "606",
+    number = "7912",
+    pages = "64--69",
+    year = "2022"
+}
+'

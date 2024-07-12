@@ -12,9 +12,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    D0_2000_I499943()
-      : Analysis("D0_2000_I499943")
-    {    }
+    RIVET_DEFAULT_ANALYSIS_CTOR(D0_2000_I499943);
 
 
     /// @name Analysis methods
@@ -32,8 +30,8 @@ namespace Rivet {
       declare(jetproj, "Jets");
 
       // Book histograms
-      _h_pt_leading_mu = bookHisto1D(1, 1, 1);
-      _h_dphi_mumu = bookHisto1D(3, 1, 1);
+      book(_h_pt_leading_mu ,1, 1, 1);
+      book(_h_dphi_mumu ,3, 1, 1);
     }
 
 
@@ -47,13 +45,13 @@ namespace Rivet {
 
       // Muon selection: require the muons to be *close* to jets, not the usual overlap vetoing!
       Particles cand_mu;
-      foreach (const Particle& mu, muons) {
+      for (const Particle& mu : muons) {
         // Ignore muons in "bad" region 80 < phi < 110 degrees
         /// @todo Is this really not corrected for?!
         if (inRange(mu.phi(), 1.4, 1.92)) continue;
 
         // A muon is a good candidate if within R = 0.8 of a jet
-        foreach (const Jet& jet, jets) {
+        for (const Jet& jet : jets) {
           if (deltaR(mu, jet) < 0.8) {
             cand_mu.push_back(mu);
             break;
@@ -77,8 +75,8 @@ namespace Rivet {
       double dphi_mumu = deltaPhi(cand_mu[0], cand_mu[1]) * 180/M_PI;
 
       // Fill histos
-      _h_pt_leading_mu->fill(cand_mu[0].pt()/GeV, event.weight());
-      _h_dphi_mumu->fill(dphi_mumu, event.weight());
+      _h_pt_leading_mu->fill(cand_mu[0].pt()/GeV);
+      _h_dphi_mumu->fill(dphi_mumu);
     }
 
 
@@ -102,6 +100,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(D0_2000_I499943);
+  RIVET_DECLARE_PLUGIN(D0_2000_I499943);
 
 }

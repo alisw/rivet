@@ -1,14 +1,16 @@
-bin_SCRIPTS = rivet-config rivet-buildplugin
-dist_bin_SCRIPTS = make-plots make-pgfplots
+bin_SCRIPTS = rivet-config rivet-build
+dist_bin_SCRIPTS = make-plots \
+                   rivet-buildplugin  #< @todo: remove in 3.2.0
+dist_noinst_SCRIPTS = make-plots-fast make-pgfplots
+
 EXTRA_DIST =
 
 RIVETPROGS = \
     rivet \
     rivet-mkanalysis \
-	  rivet-findid rivet-which \
-    rivet-diffhepdata \
-    rivet-diffhepdata-all \
-    rivet-cmphistos rivet-mkhtml rivet-merge
+    rivet-findid rivet-which \
+    rivet-diffhepdata rivet-diffhepdata-all \
+    rivet-cmphistos rivet-mkhtml rivet-mkhtml-mpl rivet-merge rivet-mkvaldir
 if ENABLE_PYEXT
 dist_bin_SCRIPTS += $(RIVETPROGS)
 else
@@ -18,10 +20,10 @@ endif
 ## bash completion
 if ENABLE_PYEXT
 dist_pkgdata_DATA = rivet-completion
-bashcomp_dir = $(DESTDIR)$(prefix)/etc/bash_completion.d
+bashcomp_dir = $(DESTDIR)$(sysconfdir)/bash_completion.d
 install-data-local:
-	if [[ -d "$(bashcomp_dir)" && -w "$(bashcomp_dir)" ]]; then \
-      $(install_sh_DATA) rivet-completion $(bashcomp_dir)/; fi
+	$(mkdir_p) $(bashcomp_dir)
+	$(install_sh_DATA) $(srcdir)/rivet-completion $(bashcomp_dir)/
 uninstall-local:
 	rm -f $(bashcomp_dir)/rivet-completion
 else
@@ -31,6 +33,12 @@ endif
 ## No-Python Rivet program
 noinst_PROGRAMS = rivet-nopy
 rivet_nopy_SOURCES = rivet-nopy.cc
-rivet_nopy_CPPFLAGS = -I$(top_srcdir)/include $(AM_CPPFLAGS)
+rivet_nopy_CPPFLAGS = -I$(top_srcdir)/include $(AM_CPPFLAGS) $(CPPFLAGS)
+rivet_nopy_LDADD = $(top_builddir)/src/libRivet.la
+if ENABLE_HEPMC_3
+rivet_nopy_LDFLAGS = -L$(HEPMC3LIBPATH)
+rivet_nopy_LDADD += $(top_builddir)/src/libRivet.la -lHepMC3 -lHepMC3search
+else
 rivet_nopy_LDFLAGS = -L$(HEPMCLIBPATH)
-rivet_nopy_LDADD = $(top_builddir)/src/libRivet.la -lHepMC
+rivet_nopy_LDADD += -lHepMC
+endif

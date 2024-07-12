@@ -35,7 +35,7 @@ namespace Rivet {
       declare(fj, "KtJetsD05");
 
       // Leading photon
-      LeadingParticlesFinalState photonfs(FinalState(-1.37, 1.37, 25.0*GeV));
+      LeadingParticlesFinalState photonfs(FinalState((Cuts::etaIn(-1.37, 1.37) && Cuts::pT >=  25.0*GeV)));
       photonfs.addParticleId(PID::PHOTON);
       declare(photonfs, "LeadingPhoton");
 
@@ -49,13 +49,13 @@ namespace Rivet {
       jetpro.useInvisibles();
       declare(jetpro, "Jets");
 
-      _h_phbarrel_jetcentral_SS = bookHisto1D(1, 1, 1);
-      _h_phbarrel_jetmedium_SS  = bookHisto1D(2, 1, 1);
-      _h_phbarrel_jetforward_SS = bookHisto1D(3, 1, 1);
+      book(_h_phbarrel_jetcentral_SS ,1, 1, 1);
+      book(_h_phbarrel_jetmedium_SS  ,2, 1, 1);
+      book(_h_phbarrel_jetforward_SS ,3, 1, 1);
 
-      _h_phbarrel_jetcentral_OS = bookHisto1D(4, 1, 1);
-      _h_phbarrel_jetmedium_OS  = bookHisto1D(5, 1, 1);
-      _h_phbarrel_jetforward_OS = bookHisto1D(6, 1, 1);
+      book(_h_phbarrel_jetcentral_OS ,4, 1, 1);
+      book(_h_phbarrel_jetmedium_OS  ,5, 1, 1);
+      book(_h_phbarrel_jetforward_OS ,6, 1, 1);
     }
 
 
@@ -144,25 +144,24 @@ namespace Rivet {
       const double abs_jet_rapidity = fabs(leadingJet.rapidity());
       const double photon_pt = photon.pT()/GeV;
       const double abs_photon_eta = fabs(photon.eta());
-      const double weight = event.weight();
       if (abs_photon_eta < 1.37) {
         if (abs_jet_rapidity < 1.2) {
           if (photon_jet_sign >= 1) {
-            _h_phbarrel_jetcentral_SS->fill(photon_pt, weight);
+            _h_phbarrel_jetcentral_SS->fill(photon_pt);
           } else {
-            _h_phbarrel_jetcentral_OS->fill(photon_pt, weight);
+            _h_phbarrel_jetcentral_OS->fill(photon_pt);
           }
         } else if (abs_jet_rapidity < 2.8) {
           if (photon_jet_sign >= 1) {
-            _h_phbarrel_jetmedium_SS->fill(photon_pt, weight);
+            _h_phbarrel_jetmedium_SS->fill(photon_pt);
           } else {
-            _h_phbarrel_jetmedium_OS->fill(photon_pt, weight);
+            _h_phbarrel_jetmedium_OS->fill(photon_pt);
           }
         } else if (abs_jet_rapidity < 4.4) {
           if (photon_jet_sign >= 1) {
-            _h_phbarrel_jetforward_SS->fill(photon_pt, weight);
+            _h_phbarrel_jetforward_SS->fill(photon_pt);
           } else {
-            _h_phbarrel_jetforward_OS->fill(photon_pt, weight);
+            _h_phbarrel_jetforward_OS->fill(photon_pt);
           }
         }
       }
@@ -194,7 +193,7 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2012_I1093738);
+  RIVET_DECLARE_PLUGIN(ATLAS_2012_I1093738);
 
 
 }

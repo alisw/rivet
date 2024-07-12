@@ -1,0 +1,33 @@
+Name: CLEO_1990_I281039
+Year: 1990
+Summary: $D_1(2420)^0$ and $D_2^*(2460)^0$ decay angle distributions
+Experiment: CLEO
+Collider: CESR
+InspireID: 281039
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D41 (1990) 774
+RunInfo: 
+NeedCrossSection: no
+Beams: [e-, e+]
+Energies: [10.5]
+Description:
+  'Measurement of the $D_1(2420)^0$ and  $D^*_2(2460)^0$ mesons at 10.5 GeV. The decay angle of the
+  $D^{+*}$ with respect to the $D_1(2420)^0$ or $D^*_2(2460)^0$ direction in the rest frame of the parent hadron,
+  is measured. This gives information on the spin of the parent.'
+Keywords: []
+BibKey: Avery:1989ui
+BibTeX: '@article{Avery:1989ui,
+      author         = "Avery, P. and others",
+      title          = "{$P$ Wave Charmed Mesons in $e^+ e^-$ Annihilation}",
+      collaboration  = "CLEO",
+      journal        = "Phys. Rev.",
+      volume         = "D41",
+      year           = "1990",
+      pages          = "774",
+      doi            = "10.1103/PhysRevD.41.774",
+      reportNumber   = "CLNS-89/939, CLEO-89-11",
+      SLACcitation   = "%%CITATION = PHRVA,D41,774;%%"
+}'

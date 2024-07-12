@@ -1,0 +1,31 @@
+Name: SND_2003_I612867
+Year: 2003
+Summary: Cross section for $e^+e^-\to\pi\gamma$ for energies between 600 MeV and 970 MeV 
+Experiment: SND
+Collider: VEPP-2M
+InspireID: 612867
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys. Lett. B559, 171 (2003) 
+RunInfo: e+ e- to hadrons below 0.6 and 1.38 GeV
+NeedCrossSection: yes
+Beams: [e+, e-]
+Description:
+  'Cross section for $e^+e^-\to\pi\gamma$ for energies between 600 MeV and 970 MeV'
+BibKey: Achasov:2003ed
+BibTeX: '@article{Achasov:2003ed,
+      author         = "Achasov, M. N. and others",
+      title          = "{Experimental study of the e+ e- ---&gt; pi0 gamma process
+                        in the energy region s**1/2 = 0.60-GeV - 0.97-GeV}",
+      journal        = "Phys. Lett.",
+      volume         = "B559",
+      year           = "2003",
+      pages          = "171-178",
+      doi            = "10.1016/S0370-2693(03)00336-8",
+      eprint         = "hep-ex/0302004",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = HEP-EX/0302004;%%"
+}'

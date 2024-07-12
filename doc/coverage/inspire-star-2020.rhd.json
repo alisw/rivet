@@ -1,0 +1,162 @@
+{
+    "1731117": [
+        "Measurement of the mass difference and the binding energy of the hypertriton and antihypertriton", 
+        "STAR", 
+        "10.1038/s41567-020-0799-7", 
+        null, 
+        "1904.10520", 
+        null, 
+        null, 
+        []
+    ], 
+    "1738953": [
+        "Strange hadron production in Au+Au collisions at $\\sqrt{s_{NN}}=$7.7 , 11.5, 19.6, 27, and 39 GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.102.034909", 
+        null, 
+        "1906.03732", 
+        "ins1738953", 
+        null, 
+        []
+    ], 
+    "1740846": [
+        "Beam-energy dependence of identified two-particle angular correlations in $\\sqrt {s_{NN}}$ = 7.7\u2013200 GeV Au+Au collisions", 
+        "STAR", 
+        "10.1103/PhysRevC.101.014916", 
+        null, 
+        "1906.09204", 
+        null, 
+        null, 
+        []
+    ], 
+    "1740989": [
+        "Measurement of away-side broadening with self-subtraction of flow in Au+Au collisions at $\\sqrt{s_{_\\mathrm{NN}}}=200$ GeV", 
+        "STAR", 
+        "10.1088/1674-1137/ab97a9", 
+        null, 
+        "1906.09363", 
+        "ins1740989", 
+        null, 
+        []
+    ], 
+    "1748776": [
+        "Bulk properties of the system formed in $Au+Au$ collisions at $\\sqrt{s_{\\mathrm{NN}}}$ =14.5 GeV at the BNL STAR detector", 
+        "STAR", 
+        "10.1103/PhysRevC.101.024905", 
+        null, 
+        "1908.03585", 
+        null, 
+        null, 
+        []
+    ], 
+    "1762441": [
+        "First measurement of $\\Lambda_c$ baryon production in Au+Au collisions at $\\sqrt{s_{\\rm NN}}$ = 200 GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.124.172301", 
+        null, 
+        "1910.14628", 
+        "ins1762441", 
+        null, 
+        []
+    ], 
+    "1767419": [
+        "Measurement of D$^0$-meson + hadron two-dimensional angular correlations in Au+Au collisions at $\\sqrt{s_{\\rm NN}}$ = 200 GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.102.014905", 
+        null, 
+        "1911.12168", 
+        "ins1767419", 
+        null, 
+        []
+    ], 
+    "1771348": [
+        "Underlying event measurements in $p+p$ collisions at $\\sqrt s=$ 200  GeV at RHIC", 
+        "STAR", 
+        "10.1103/PhysRevD.101.052004", 
+        null, 
+        "1912.08187", 
+        "ins1771348", 
+        null, 
+        []
+    ], 
+    "1776194": [
+        "Beam energy dependence of net- \u039b fluctuations measured by the STAR experiment at the BNL Relativistic Heavy Ion Collider", 
+        "STAR", 
+        "10.1103/PhysRevC.102.024903", 
+        null, 
+        "2001.06419", 
+        null, 
+        null, 
+        []
+    ], 
+    "1783875": [
+        "Measurement of groomed jet substructure observables in p+p collisions at $\\sqrt {s}$ =200 GeV with STAR", 
+        "STAR", 
+        "10.1016/j.physletb.2020.135846", 
+        null, 
+        "2003.02114", 
+        "ins1783875", 
+        null, 
+        []
+    ], 
+    "1791591": [
+        "Results on total and elastic cross sections in proton\u2013proton collisions at $\\sqrt{s}$ = 200 GeV", 
+        "STAR", 
+        "10.1016/j.physletb.2020.135663", 
+        null, 
+        "2003.12136", 
+        "ins1791591", 
+        null, 
+        []
+    ], 
+    "1792394": [
+        "Measurement of the central exclusive production of charged particle pairs in proton-proton collisions at $\\sqrt{s} = 200$ GeV with the STAR detector at RHIC", 
+        "STAR", 
+        "10.1007/JHEP07(2020)178", 
+        null, 
+        "2004.11078", 
+        "ins1792394", 
+        null, 
+        []
+    ], 
+    "1798665": [
+        "Measurement of inclusive charged-particle jet production in Au + Au collisions at $\\sqrt{s_{NN}}=$200 GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.102.054913", 
+        null, 
+        "2006.00582", 
+        null, 
+        null, 
+        []
+    ], 
+    "1802752": [
+        "Investigation of the linear and mode-coupled flow harmonics in Au+Au collisions at $\\sqrt {S_{NN}}$ = 200 GeV", 
+        "STAR", 
+        "10.1016/j.physletb.2020.135728", 
+        null, 
+        "2006.13537", 
+        "ins1802752", 
+        null, 
+        []
+    ], 
+    "1806120": [
+        "Measurement of inclusive J/$\\psi$ polarization in $p+p$ collisions at $\\sqrt {s}$ =200  GeV by the STAR experiment", 
+        "STAR", 
+        "10.1103/PhysRevD.102.092009", 
+        null, 
+        "2007.04732", 
+        "ins1806120", 
+        null, 
+        []
+    ], 
+    "1806121": [
+        "Beam-energy dependence of the directed flow of deuterons in Au+Au collisions", 
+        "STAR", 
+        "10.1103/PhysRevC.102.044906", 
+        null, 
+        "2007.04609", 
+        "ins1806121", 
+        null, 
+        []
+    ]
+}

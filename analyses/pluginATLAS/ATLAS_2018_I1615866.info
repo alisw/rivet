@@ -1,0 +1,40 @@
+Name: ATLAS_2018_I1615866
+Year: 2018
+Summary: Exclusive photon-photon production of muon pairs in proton-proton collisions at $\sqrt{s} = 13$ TeV
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1615866
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett.B 777 (2018) 303-323
+RunInfo: gamma gamma -> mu+ mu- process.
+Beams: [p+, p+]
+Energies: [13000]
+Description:
+  'The production of exclusive $\gamma\gamma\to\mu^+\mu^-$ events in proton-proton collisions at
+   a centre-of-mass energy of 13 TeV is measured with the ATLAS detector at the LHC, using data corresponding to an integrated luminosity of
+   $3.2 \text{fb}^{-1}$. The measurement is performed for a dimuon invariant mass of between 12 GeV and 70 GeV, including the differential cross section as a function of the mass.'
+ValidationInfo:
+  'Herwig 7 events'
+ReleaseTests:
+ - $A pp-13000-yy2mumu
+Keywords: []
+BibKey: ATLAS:2017sfe
+BibTeX: '@article{ATLAS:2017sfe,
+    author = "Aaboud, Morad and others",
+    collaboration = "ATLAS",
+    title = "{Measurement of the exclusive $\gamma \gamma \rightarrow \mu^+ \mu^-$ process in proton-proton collisions at $\sqrt{s}=13$ TeV with the ATLAS detector}",
+    eprint = "1708.04053",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CERN-EP-2017-151",
+    doi = "10.1016/j.physletb.2017.12.043",
+    journal = "Phys. Lett. B",
+    volume = "777",
+    pages = "303--323",
+    year = "2018"
+}
+'

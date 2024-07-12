@@ -1,0 +1,35 @@
+Name: BELLE_2012_I1123656
+Year: 2012
+Summary: Helicity angles in $B^0\to D^{*+}D^{*-}$
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1123656
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 86 (2012) 071103
+RunInfo: Any process producing B0, original Upsilon(4S) decay
+Description:
+  'Helicity angle distributions in $B^0\to D^{*+}D^{*-}$ decays'
+ValidationInfo:
+  'Herwig 7 events using EvtGen for decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle:2012xkw
+BibTeX: '@article{Belle:2012xkw,
+    author = "Kronenbitter, B. and others",
+    collaboration = "Belle",
+    title = "{First observation of CP violation and improved measurement of the branching fraction and polarization of B0 -\ensuremath{>} D*+ D*- decays}",
+    eprint = "1207.5611",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevD.86.071103",
+    journal = "Phys. Rev. D",
+    volume = "86",
+    pages = "071103",
+    year = "2012"
+}
+'

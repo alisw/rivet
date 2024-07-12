@@ -131,7 +131,7 @@ Title=Charged jet multiplicity (anti-$k_t$, R = 0.4, $y$ 1.5-1.9, $p_\perp$ 24.0
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x03-.*
 XLabel=Charged particle $z$
-YLabel=$1/N_\text{jet} \, \mathrm{d}N/\mathrm{d}z$
+YLabel=$1/N_\mathrm{jet} \, \mathrm{d}N/\mathrm{d}z$
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x03-y01
@@ -236,108 +236,108 @@ Title=Charged jet $z$ (anti-$k_t$, R = 0.4, $y$ 1.5-1.9, $p_\perp$ 24.0-40.0)
 
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x04-.*
-XLabel=Charged particle $p_\perp^\text{rel}$ [GeV]
-YLabel=$1/N_\text{jet} \, \mathrm{d}N/\mathrm{d}p_\perp^\text{rel}$ [GeV$^{-1}$]
+XLabel=Charged particle $p_\perp^\mathrm{rel}$ [GeV]
+YLabel=$1/N_\mathrm{jet} \, \mathrm{d}N/\mathrm{d}p_\perp^\mathrm{rel}$ [GeV$^{-1}$]
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x04-y01
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.4, $y$ 0.0-1.9, $p_\perp$ 4.0-6.0)
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.4, $y$ 0.0-1.9, $p_\perp$ 4.0-6.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x04-y02
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.4, $y$ 0.0-1.9, $p_\perp$ 6.0-10.0)
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.4, $y$ 0.0-1.9, $p_\perp$ 6.0-10.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x04-y03
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.4, $y$ 0.0-1.9, $p_\perp$ 10.0-15.0)
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.4, $y$ 0.0-1.9, $p_\perp$ 10.0-15.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x04-y04
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.4, $y$ 0.0-1.9, $p_\perp$ 15.0-24.0)
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.4, $y$ 0.0-1.9, $p_\perp$ 15.0-24.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x04-y05
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.4, $y$ 0.0-1.9, $p_\perp$ 24.0-40.0)
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.4, $y$ 0.0-1.9, $p_\perp$ 24.0-40.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x04-y06
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.4, $y$ 0.0-0.5, $p_\perp$ 4.0-6.0)
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.4, $y$ 0.0-0.5, $p_\perp$ 4.0-6.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x04-y07
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.4, $y$ 0.0-0.5, $p_\perp$ 6.0-10.0)
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.4, $y$ 0.0-0.5, $p_\perp$ 6.0-10.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x04-y08
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.4, $y$ 0.0-0.5, $p_\perp$ 10.0-15.0)
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.4, $y$ 0.0-0.5, $p_\perp$ 10.0-15.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x04-y09
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.4, $y$ 0.0-0.5, $p_\perp$ 15.0-24.0)
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.4, $y$ 0.0-0.5, $p_\perp$ 15.0-24.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x04-y10
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.4, $y$ 0.0-0.5, $p_\perp$ 24.0-40.0)
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.4, $y$ 0.0-0.5, $p_\perp$ 24.0-40.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x04-y11
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.4, $y$ 0.5-1.0, $p_\perp$ 4.0-6.0)
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.4, $y$ 0.5-1.0, $p_\perp$ 4.0-6.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x04-y12
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.4, $y$ 0.5-1.0, $p_\perp$ 6.0-10.0)
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.4, $y$ 0.5-1.0, $p_\perp$ 6.0-10.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x04-y13
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.4, $y$ 0.5-1.0, $p_\perp$ 10.0-15.0)
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.4, $y$ 0.5-1.0, $p_\perp$ 10.0-15.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x04-y14
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.4, $y$ 0.5-1.0, $p_\perp$ 15.0-24.0)
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.4, $y$ 0.5-1.0, $p_\perp$ 15.0-24.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x04-y15
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.4, $y$ 0.5-1.0, $p_\perp$ 24.0-40.0)
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.4, $y$ 0.5-1.0, $p_\perp$ 24.0-40.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x04-y16
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.4, $y$ 1.0-1.5, $p_\perp$ 4.0-6.0)
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.4, $y$ 1.0-1.5, $p_\perp$ 4.0-6.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x04-y17
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.4, $y$ 1.0-1.5, $p_\perp$ 6.0-10.0)
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.4, $y$ 1.0-1.5, $p_\perp$ 6.0-10.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x04-y18
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.4, $y$ 1.0-1.5, $p_\perp$ 10.0-15.0)
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.4, $y$ 1.0-1.5, $p_\perp$ 10.0-15.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x04-y19
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.4, $y$ 1.0-1.5, $p_\perp$ 15.0-24.0)
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.4, $y$ 1.0-1.5, $p_\perp$ 15.0-24.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x04-y20
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.4, $y$ 1.0-1.5, $p_\perp$ 24.0-40.0)
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.4, $y$ 1.0-1.5, $p_\perp$ 24.0-40.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x04-y21
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.4, $y$ 1.5-1.9, $p_\perp$ 4.0-6.0)
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.4, $y$ 1.5-1.9, $p_\perp$ 4.0-6.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x04-y22
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.4, $y$ 1.5-1.9, $p_\perp$ 6.0-10.0)
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.4, $y$ 1.5-1.9, $p_\perp$ 6.0-10.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x04-y23
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.4, $y$ 1.5-1.9, $p_\perp$ 10.0-15.0)
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.4, $y$ 1.5-1.9, $p_\perp$ 10.0-15.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x04-y24
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.4, $y$ 1.5-1.9, $p_\perp$ 15.0-24.0)
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.4, $y$ 1.5-1.9, $p_\perp$ 15.0-24.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x04-y25
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.4, $y$ 1.5-1.9, $p_\perp$ 24.0-40.0)
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.4, $y$ 1.5-1.9, $p_\perp$ 24.0-40.0)
 # END PLOT
 
 
@@ -346,126 +346,126 @@ XLabel=Charged particle $r$
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x05-y01
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 0.0-1.9, $p_\perp$ 4.0-6.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 0.0-1.9, $p_\perp$ 4.0-6.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x05-y02
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 0.0-1.9, $p_\perp$ 6.0-10.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 0.0-1.9, $p_\perp$ 6.0-10.0)
 XLabel=Charged Particle r
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x05-y03
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 0.0-1.9, $p_\perp$ 10.0-15.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 0.0-1.9, $p_\perp$ 10.0-15.0)
 XLabel=Charged Particle r
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x05-y04
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 0.0-1.9, $p_\perp$ 15.0-24.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 0.0-1.9, $p_\perp$ 15.0-24.0)
 XLabel=Charged Particle r
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x05-y05
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 0.0-1.9, $p_\perp$ 24.0-40.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 0.0-1.9, $p_\perp$ 24.0-40.0)
 XLabel=Charged Particle r
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x05-y06
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 0.0-0.5, $p_\perp$ 4.0-6.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 0.0-0.5, $p_\perp$ 4.0-6.0)
 XLabel=Charged Particle r
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x05-y07
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 0.0-0.5, $p_\perp$ 6.0-10.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 0.0-0.5, $p_\perp$ 6.0-10.0)
 XLabel=Charged Particle r
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x05-y08
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 0.0-0.5, $p_\perp$ 10.0-15.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 0.0-0.5, $p_\perp$ 10.0-15.0)
 XLabel=Charged Particle r
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x05-y09
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 0.0-0.5, $p_\perp$ 15.0-24.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 0.0-0.5, $p_\perp$ 15.0-24.0)
 XLabel=Charged Particle r
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x05-y10
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 0.0-0.5, $p_\perp$ 24.0-40.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 0.0-0.5, $p_\perp$ 24.0-40.0)
 XLabel=Charged Particle r
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x05-y11
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 0.5-1.0, $p_\perp$ 4.0-6.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 0.5-1.0, $p_\perp$ 4.0-6.0)
 XLabel=Charged Particle r
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x05-y12
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 0.5-1.0, $p_\perp$ 6.0-10.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 0.5-1.0, $p_\perp$ 6.0-10.0)
 XLabel=Charged Particle r
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x05-y13
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 0.5-1.0, $p_\perp$ 10.0-15.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 0.5-1.0, $p_\perp$ 10.0-15.0)
 XLabel=Charged Particle r
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x05-y14
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 0.5-1.0, $p_\perp$ 15.0-24.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 0.5-1.0, $p_\perp$ 15.0-24.0)
 XLabel=Charged Particle r
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x05-y15
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 0.5-1.0, $p_\perp$ 24.0-40.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 0.5-1.0, $p_\perp$ 24.0-40.0)
 XLabel=Charged Particle r
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x05-y16
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 1.0-1.5, $p_\perp$ 4.0-6.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 1.0-1.5, $p_\perp$ 4.0-6.0)
 XLabel=Charged Particle r
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x05-y17
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 1.0-1.5, $p_\perp$ 6.0-10.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 1.0-1.5, $p_\perp$ 6.0-10.0)
 XLabel=Charged Particle r
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x05-y18
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 1.0-1.5, $p_\perp$ 10.0-15.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 1.0-1.5, $p_\perp$ 10.0-15.0)
 XLabel=Charged Particle r
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x05-y19
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 1.0-1.5, $p_\perp$ 15.0-24.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 1.0-1.5, $p_\perp$ 15.0-24.0)
 XLabel=Charged Particle r
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x05-y20
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 1.0-1.5, $p_\perp$ 24.0-40.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 1.0-1.5, $p_\perp$ 24.0-40.0)
 XLabel=Charged Particle r
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x05-y21
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 1.5-1.9, $p_\perp$ 4.0-6.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 1.5-1.9, $p_\perp$ 4.0-6.0)
 XLabel=Charged Particle r
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x05-y22
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 1.5-1.9, $p_\perp$ 6.0-10.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 1.5-1.9, $p_\perp$ 6.0-10.0)
 XLabel=Charged Particle r
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x05-y23
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 1.5-1.9, $p_\perp$ 10.0-15.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 1.5-1.9, $p_\perp$ 10.0-15.0)
 XLabel=Charged Particle r
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x05-y24
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 1.5-1.9, $p_\perp$ 15.0-24.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 1.5-1.9, $p_\perp$ 15.0-24.0)
 XLabel=Charged Particle r
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d01-x05-y25
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 1.5-1.9, $p_\perp$ 24.0-40.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.4, $y$ 1.5-1.9, $p_\perp$ 24.0-40.0)
 XLabel=Charged Particle r
 # END PLOT
 
@@ -785,153 +785,153 @@ YLabel=(1/Njet)dN/d$z$
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x04-y01
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.6, $y$ 0.0-1.9, $p_\perp$ 4.0-6.0)
-XLabel=Charged Particle $p_\perp^\text{rel}$ [GeV]
-YLabel=(1/Njet)dN/d$p_\perp^\text{rel}$ [$\mathrm{GeV}^{-1}$]
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.6, $y$ 0.0-1.9, $p_\perp$ 4.0-6.0)
+XLabel=Charged Particle $p_\perp^\mathrm{rel}$ [GeV]
+YLabel=(1/Njet)dN/d$p_\perp^\mathrm{rel}$ [$\mathrm{GeV}^{-1}$]
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x04-y02
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.6, $y$ 0.0-1.9, $p_\perp$ 6.0-10.0)
-XLabel=Charged Particle $p_\perp^\text{rel}$ [GeV]
-YLabel=(1/Njet)dN/d$p_\perp^\text{rel}$ [$\mathrm{GeV}^{-1}$]
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.6, $y$ 0.0-1.9, $p_\perp$ 6.0-10.0)
+XLabel=Charged Particle $p_\perp^\mathrm{rel}$ [GeV]
+YLabel=(1/Njet)dN/d$p_\perp^\mathrm{rel}$ [$\mathrm{GeV}^{-1}$]
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x04-y03
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.6, $y$ 0.0-1.9, $p_\perp$ 10.0-15.0)
-XLabel=Charged Particle $p_\perp^\text{rel}$ [GeV]
-YLabel=(1/Njet)dN/d$p_\perp^\text{rel}$ [$\mathrm{GeV}^{-1}$]
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.6, $y$ 0.0-1.9, $p_\perp$ 10.0-15.0)
+XLabel=Charged Particle $p_\perp^\mathrm{rel}$ [GeV]
+YLabel=(1/Njet)dN/d$p_\perp^\mathrm{rel}$ [$\mathrm{GeV}^{-1}$]
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x04-y04
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.6, $y$ 0.0-1.9, $p_\perp$ 15.0-24.0)
-XLabel=Charged Particle $p_\perp^\text{rel}$ [GeV]
-YLabel=(1/Njet)dN/d$p_\perp^\text{rel}$ [$\mathrm{GeV}^{-1}$]
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.6, $y$ 0.0-1.9, $p_\perp$ 15.0-24.0)
+XLabel=Charged Particle $p_\perp^\mathrm{rel}$ [GeV]
+YLabel=(1/Njet)dN/d$p_\perp^\mathrm{rel}$ [$\mathrm{GeV}^{-1}$]
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x04-y05
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.6, $y$ 0.0-1.9, $p_\perp$ 24.0-40.0)
-XLabel=Charged Particle $p_\perp^\text{rel}$ [GeV]
-YLabel=(1/Njet)dN/d$p_\perp^\text{rel}$ [$\mathrm{GeV}^{-1}$]
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.6, $y$ 0.0-1.9, $p_\perp$ 24.0-40.0)
+XLabel=Charged Particle $p_\perp^\mathrm{rel}$ [GeV]
+YLabel=(1/Njet)dN/d$p_\perp^\mathrm{rel}$ [$\mathrm{GeV}^{-1}$]
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x04-y06
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.6, $y$ 0.0-0.5, $p_\perp$ 4.0-6.0)
-XLabel=Charged Particle $p_\perp^\text{rel}$ [GeV]
-YLabel=(1/Njet)dN/d$p_\perp^\text{rel}$ [$\mathrm{GeV}^{-1}$]
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.6, $y$ 0.0-0.5, $p_\perp$ 4.0-6.0)
+XLabel=Charged Particle $p_\perp^\mathrm{rel}$ [GeV]
+YLabel=(1/Njet)dN/d$p_\perp^\mathrm{rel}$ [$\mathrm{GeV}^{-1}$]
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x04-y07
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.6, $y$ 0.0-0.5, $p_\perp$ 6.0-10.0)
-XLabel=Charged Particle $p_\perp^\text{rel}$ [GeV]
-YLabel=(1/Njet)dN/d$p_\perp^\text{rel}$ [$\mathrm{GeV}^{-1}$]
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.6, $y$ 0.0-0.5, $p_\perp$ 6.0-10.0)
+XLabel=Charged Particle $p_\perp^\mathrm{rel}$ [GeV]
+YLabel=(1/Njet)dN/d$p_\perp^\mathrm{rel}$ [$\mathrm{GeV}^{-1}$]
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x04-y08
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.6, $y$ 0.0-0.5, $p_\perp$ 10.0-15.0)
-XLabel=Charged Particle $p_\perp^\text{rel}$ [GeV]
-YLabel=(1/Njet)dN/d$p_\perp^\text{rel}$ [$\mathrm{GeV}^{-1}$]
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.6, $y$ 0.0-0.5, $p_\perp$ 10.0-15.0)
+XLabel=Charged Particle $p_\perp^\mathrm{rel}$ [GeV]
+YLabel=(1/Njet)dN/d$p_\perp^\mathrm{rel}$ [$\mathrm{GeV}^{-1}$]
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x04-y09
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.6, $y$ 0.0-0.5, $p_\perp$ 15.0-24.0)
-XLabel=Charged Particle $p_\perp^\text{rel}$ [GeV]
-YLabel=(1/Njet)dN/d$p_\perp^\text{rel}$ [$\mathrm{GeV}^{-1}$]
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.6, $y$ 0.0-0.5, $p_\perp$ 15.0-24.0)
+XLabel=Charged Particle $p_\perp^\mathrm{rel}$ [GeV]
+YLabel=(1/Njet)dN/d$p_\perp^\mathrm{rel}$ [$\mathrm{GeV}^{-1}$]
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x04-y10
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.6, $y$ 0.0-0.5, $p_\perp$ 24.0-40.0)
-XLabel=Charged Particle $p_\perp^\text{rel}$ [GeV]
-YLabel=(1/Njet)dN/d$p_\perp^\text{rel}$ [$\mathrm{GeV}^{-1}$]
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.6, $y$ 0.0-0.5, $p_\perp$ 24.0-40.0)
+XLabel=Charged Particle $p_\perp^\mathrm{rel}$ [GeV]
+YLabel=(1/Njet)dN/d$p_\perp^\mathrm{rel}$ [$\mathrm{GeV}^{-1}$]
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x04-y11
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.6, $y$ 0.5-1.0, $p_\perp$ 4.0-6.0)
-XLabel=Charged Particle $p_\perp^\text{rel}$ [GeV]
-YLabel=(1/Njet)dN/d$p_\perp^\text{rel}$ [$\mathrm{GeV}^{-1}$]
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.6, $y$ 0.5-1.0, $p_\perp$ 4.0-6.0)
+XLabel=Charged Particle $p_\perp^\mathrm{rel}$ [GeV]
+YLabel=(1/Njet)dN/d$p_\perp^\mathrm{rel}$ [$\mathrm{GeV}^{-1}$]
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x04-y12
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.6, $y$ 0.5-1.0, $p_\perp$ 6.0-10.0)
-XLabel=Charged Particle $p_\perp^\text{rel}$ [GeV]
-YLabel=(1/Njet)dN/d$p_\perp^\text{rel}$ [$\mathrm{GeV}^{-1}$]
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.6, $y$ 0.5-1.0, $p_\perp$ 6.0-10.0)
+XLabel=Charged Particle $p_\perp^\mathrm{rel}$ [GeV]
+YLabel=(1/Njet)dN/d$p_\perp^\mathrm{rel}$ [$\mathrm{GeV}^{-1}$]
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x04-y13
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.6, $y$ 0.5-1.0, $p_\perp$ 10.0-15.0)
-XLabel=Charged Particle $p_\perp^\text{rel}$ [GeV]
-YLabel=(1/Njet)dN/d$p_\perp^\text{rel}$ [$\mathrm{GeV}^{-1}$]
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.6, $y$ 0.5-1.0, $p_\perp$ 10.0-15.0)
+XLabel=Charged Particle $p_\perp^\mathrm{rel}$ [GeV]
+YLabel=(1/Njet)dN/d$p_\perp^\mathrm{rel}$ [$\mathrm{GeV}^{-1}$]
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x04-y14
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.6, $y$ 0.5-1.0, $p_\perp$ 15.0-24.0)
-XLabel=Charged Particle $p_\perp^\text{rel}$ [GeV]
-YLabel=(1/Njet)dN/d$p_\perp^\text{rel}$ [$\mathrm{GeV}^{-1}$]
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.6, $y$ 0.5-1.0, $p_\perp$ 15.0-24.0)
+XLabel=Charged Particle $p_\perp^\mathrm{rel}$ [GeV]
+YLabel=(1/Njet)dN/d$p_\perp^\mathrm{rel}$ [$\mathrm{GeV}^{-1}$]
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x04-y15
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.6, $y$ 0.5-1.0, $p_\perp$ 24.0-40.0)
-XLabel=Charged Particle $p_\perp^\text{rel}$ [GeV]
-YLabel=(1/Njet)dN/d$p_\perp^\text{rel}$ [$\mathrm{GeV}^{-1}$]
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.6, $y$ 0.5-1.0, $p_\perp$ 24.0-40.0)
+XLabel=Charged Particle $p_\perp^\mathrm{rel}$ [GeV]
+YLabel=(1/Njet)dN/d$p_\perp^\mathrm{rel}$ [$\mathrm{GeV}^{-1}$]
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x04-y16
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.6, $y$ 1.0-1.5, $p_\perp$ 4.0-6.0)
-XLabel=Charged Particle $p_\perp^\text{rel}$ [GeV]
-YLabel=(1/Njet)dN/d$p_\perp^\text{rel}$ [$\mathrm{GeV}^{-1}$]
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.6, $y$ 1.0-1.5, $p_\perp$ 4.0-6.0)
+XLabel=Charged Particle $p_\perp^\mathrm{rel}$ [GeV]
+YLabel=(1/Njet)dN/d$p_\perp^\mathrm{rel}$ [$\mathrm{GeV}^{-1}$]
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x04-y17
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.6, $y$ 1.0-1.5, $p_\perp$ 6.0-10.0)
-XLabel=Charged Particle $p_\perp^\text{rel}$ [GeV]
-YLabel=(1/Njet)dN/d$p_\perp^\text{rel}$ [$\mathrm{GeV}^{-1}$]
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.6, $y$ 1.0-1.5, $p_\perp$ 6.0-10.0)
+XLabel=Charged Particle $p_\perp^\mathrm{rel}$ [GeV]
+YLabel=(1/Njet)dN/d$p_\perp^\mathrm{rel}$ [$\mathrm{GeV}^{-1}$]
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x04-y18
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.6, $y$ 1.0-1.5, $p_\perp$ 10.0-15.0)
-XLabel=Charged Particle $p_\perp^\text{rel}$ [GeV]
-YLabel=(1/Njet)dN/d$p_\perp^\text{rel}$ [$\mathrm{GeV}^{-1}$]
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.6, $y$ 1.0-1.5, $p_\perp$ 10.0-15.0)
+XLabel=Charged Particle $p_\perp^\mathrm{rel}$ [GeV]
+YLabel=(1/Njet)dN/d$p_\perp^\mathrm{rel}$ [$\mathrm{GeV}^{-1}$]
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x04-y19
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.6, $y$ 1.0-1.5, $p_\perp$ 15.0-24.0)
-XLabel=Charged Particle $p_\perp^\text{rel}$ [GeV]
-YLabel=(1/Njet)dN/d$p_\perp^\text{rel}$ [$\mathrm{GeV}^{-1}$]
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.6, $y$ 1.0-1.5, $p_\perp$ 15.0-24.0)
+XLabel=Charged Particle $p_\perp^\mathrm{rel}$ [GeV]
+YLabel=(1/Njet)dN/d$p_\perp^\mathrm{rel}$ [$\mathrm{GeV}^{-1}$]
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x04-y20
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.6, $y$ 1.0-1.5, $p_\perp$ 24.0-40.0)
-XLabel=Charged Particle $p_\perp^\text{rel}$ [GeV]
-YLabel=(1/Njet)dN/d$p_\perp^\text{rel}$ [$\mathrm{GeV}^{-1}$]
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.6, $y$ 1.0-1.5, $p_\perp$ 24.0-40.0)
+XLabel=Charged Particle $p_\perp^\mathrm{rel}$ [GeV]
+YLabel=(1/Njet)dN/d$p_\perp^\mathrm{rel}$ [$\mathrm{GeV}^{-1}$]
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x04-y21
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.6, $y$ 1.5-1.9, $p_\perp$ 4.0-6.0)
-XLabel=Charged Particle $p_\perp^\text{rel}$ [GeV]
-YLabel=(1/Njet)dN/d$p_\perp^\text{rel}$ [$\mathrm{GeV}^{-1}$]
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.6, $y$ 1.5-1.9, $p_\perp$ 4.0-6.0)
+XLabel=Charged Particle $p_\perp^\mathrm{rel}$ [GeV]
+YLabel=(1/Njet)dN/d$p_\perp^\mathrm{rel}$ [$\mathrm{GeV}^{-1}$]
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x04-y22
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.6, $y$ 1.5-1.9, $p_\perp$ 6.0-10.0)
-XLabel=Charged Particle $p_\perp^\text{rel}$ [GeV]
-YLabel=(1/Njet)dN/d$p_\perp^\text{rel}$ [$\mathrm{GeV}^{-1}$]
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.6, $y$ 1.5-1.9, $p_\perp$ 6.0-10.0)
+XLabel=Charged Particle $p_\perp^\mathrm{rel}$ [GeV]
+YLabel=(1/Njet)dN/d$p_\perp^\mathrm{rel}$ [$\mathrm{GeV}^{-1}$]
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x04-y23
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.6, $y$ 1.5-1.9, $p_\perp$ 10.0-15.0)
-XLabel=Charged Particle $p_\perp^\text{rel}$ [GeV]
-YLabel=(1/Njet)dN/d$p_\perp^\text{rel}$ [$\mathrm{GeV}^{-1}$]
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.6, $y$ 1.5-1.9, $p_\perp$ 10.0-15.0)
+XLabel=Charged Particle $p_\perp^\mathrm{rel}$ [GeV]
+YLabel=(1/Njet)dN/d$p_\perp^\mathrm{rel}$ [$\mathrm{GeV}^{-1}$]
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x04-y24
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.6, $y$ 1.5-1.9, $p_\perp$ 15.0-24.0)
-XLabel=Charged Particle $p_\perp^\text{rel}$ [GeV]
-YLabel=(1/Njet)dN/d$p_\perp^\text{rel}$ [$\mathrm{GeV}^{-1}$]
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.6, $y$ 1.5-1.9, $p_\perp$ 15.0-24.0)
+XLabel=Charged Particle $p_\perp^\mathrm{rel}$ [GeV]
+YLabel=(1/Njet)dN/d$p_\perp^\mathrm{rel}$ [$\mathrm{GeV}^{-1}$]
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x04-y25
-Title=Charged jet $p_\perp^\text{rel}$ (anti-$k_t$, R = 0.6, $y$ 1.5-1.9, $p_\perp$ 24.0-40.0)
-XLabel=Charged Particle $p_\perp^\text{rel}$ [GeV]
-YLabel=(1/Njet)dN/d$p_\perp^\text{rel}$ [$\mathrm{GeV}^{-1}$]
+Title=Charged jet $p_\perp^\mathrm{rel}$ (anti-$k_t$, R = 0.6, $y$ 1.5-1.9, $p_\perp$ 24.0-40.0)
+XLabel=Charged Particle $p_\perp^\mathrm{rel}$ [GeV]
+YLabel=(1/Njet)dN/d$p_\perp^\mathrm{rel}$ [$\mathrm{GeV}^{-1}$]
 # END PLOT
 
 
@@ -940,101 +940,101 @@ XLabel=Charged Particle r
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x05-y01
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 0.0-1.9, $p_\perp$ 4.0-6.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 0.0-1.9, $p_\perp$ 4.0-6.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x05-y02
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 0.0-1.9, $p_\perp$ 6.0-10.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 0.0-1.9, $p_\perp$ 6.0-10.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x05-y03
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 0.0-1.9, $p_\perp$ 10.0-15.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 0.0-1.9, $p_\perp$ 10.0-15.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x05-y04
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 0.0-1.9, $p_\perp$ 15.0-24.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 0.0-1.9, $p_\perp$ 15.0-24.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x05-y05
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 0.0-1.9, $p_\perp$ 24.0-40.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 0.0-1.9, $p_\perp$ 24.0-40.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x05-y06
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 0.0-0.5, $p_\perp$ 4.0-6.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 0.0-0.5, $p_\perp$ 4.0-6.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x05-y07
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 0.0-0.5, $p_\perp$ 6.0-10.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 0.0-0.5, $p_\perp$ 6.0-10.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x05-y08
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 0.0-0.5, $p_\perp$ 10.0-15.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 0.0-0.5, $p_\perp$ 10.0-15.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x05-y09
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 0.0-0.5, $p_\perp$ 15.0-24.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 0.0-0.5, $p_\perp$ 15.0-24.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x05-y10
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 0.0-0.5, $p_\perp$ 24.0-40.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 0.0-0.5, $p_\perp$ 24.0-40.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x05-y11
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 0.5-1.0, $p_\perp$ 4.0-6.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 0.5-1.0, $p_\perp$ 4.0-6.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x05-y12
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 0.5-1.0, $p_\perp$ 6.0-10.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 0.5-1.0, $p_\perp$ 6.0-10.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x05-y13
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 0.5-1.0, $p_\perp$ 10.0-15.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 0.5-1.0, $p_\perp$ 10.0-15.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x05-y14
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 0.5-1.0, $p_\perp$ 15.0-24.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 0.5-1.0, $p_\perp$ 15.0-24.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x05-y15
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 0.5-1.0, $p_\perp$ 24.0-40.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 0.5-1.0, $p_\perp$ 24.0-40.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x05-y16
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 1.0-1.5, $p_\perp$ 4.0-6.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 1.0-1.5, $p_\perp$ 4.0-6.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x05-y17
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 1.0-1.5, $p_\perp$ 6.0-10.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 1.0-1.5, $p_\perp$ 6.0-10.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x05-y18
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 1.0-1.5, $p_\perp$ 10.0-15.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 1.0-1.5, $p_\perp$ 10.0-15.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x05-y19
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 1.0-1.5, $p_\perp$ 15.0-24.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 1.0-1.5, $p_\perp$ 15.0-24.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x05-y20
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 1.0-1.5, $p_\perp$ 24.0-40.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 1.0-1.5, $p_\perp$ 24.0-40.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x05-y21
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 1.5-1.9, $p_\perp$ 4.0-6.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 1.5-1.9, $p_\perp$ 4.0-6.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x05-y22
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 1.5-1.9, $p_\perp$ 6.0-10.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 1.5-1.9, $p_\perp$ 6.0-10.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x05-y23
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 1.5-1.9, $p_\perp$ 10.0-15.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 1.5-1.9, $p_\perp$ 10.0-15.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x05-y24
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 1.5-1.9, $p_\perp$ 15.0-24.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 1.5-1.9, $p_\perp$ 15.0-24.0)
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I919017/d02-x05-y25
-Title=Charged jet $\rho_\text{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 1.5-1.9, $p_\perp$ 24.0-40.0)
+Title=Charged jet $\rho_\mathrm{ch}(r)$ (anti-$k_t$, R = 0.6, $y$ 1.5-1.9, $p_\perp$ 24.0-40.0)
 # END PLOT

@@ -1,6 +1,7 @@
 Name: MC_ZZINC
 Summary: Monte Carlo validation observables for $Z[e^+ \, e^-]Z[\mu^+ \, \mu^-]$ production
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Frank Siegert <frank.siegert@cern.ch>
 References:

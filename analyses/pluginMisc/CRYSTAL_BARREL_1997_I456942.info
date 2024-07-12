@@ -1,0 +1,33 @@
+Name: CRYSTAL_BARREL_1997_I456942
+Year: 1997
+Summary:  $\eta^\prime\to \pi^+\pi^-\gamma$ decays
+Experiment: CRYSTAL_BARREL
+Collider: LEAR
+InspireID: 456942
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ -     Phys.Lett.B 402 (1997) 195-206
+RunInfo:
+  Events with eta prime decays, either particle guns or collisions.
+NumEvents: 10000
+NeedCrossSection: no
+Description:
+  'Differential decay rates for $\eta^\prime\to \pi^+\pi^-\gamma$ decays. Data read from table in paper and normalised to unity'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: CrystalBarrel:1997kku
+BibTeX: '@article{CrystalBarrel:1997kku,
+    author = "Abele, A. and others",
+    collaboration = "Crystal Barrel",
+    title = "{Measurement of the decay distribution of eta-prime --\ensuremath{>} pi+ pi- pi- gamma and evidence for the box anomaly}",
+    doi = "10.1016/S0370-2693(97)00479-6",
+    journal = "Phys. Lett. B",
+    volume = "402",
+    pages = "195--206",
+    year = "1997"
+}
+'

@@ -6,6 +6,7 @@ Collider: LEP 1
 SpiresID: 3430090
 InspireID: 424112
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Andy Buckley <andy.buckley@cern.ch>
  - Hendrik Hoeth <hendrik.hoeth@cern.ch>
@@ -39,3 +40,7 @@ BibTeX: '@Article{Abreu:1996na,
      doi       = "10.1007/s002880050295",
      SLACcitation  = "%%CITATION = ZEPYA,C73,11;%%"
 }'
+
+ReleaseTests:
+ - $A LEP-91
+

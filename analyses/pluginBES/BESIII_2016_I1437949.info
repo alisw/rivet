@@ -1,0 +1,36 @@
+Name: BESIII_2016_I1437949
+Year: 2016
+Summary: Mass distributions in $J/\psi\to\gamma\eta^\prime\pi^+\pi^-$
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1437949
+Status: VALIDATED NOHEPDATA
+Reentrant:  true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 117 (2016) 4, 042002
+RunInfo: Any process producing J/psi, originally e+e-
+Description:
+  'Mass distributions in $J/\psi\to\gamma\eta^\prime\pi^+\pi^-$'
+ValidationInfo:
+  'Herwig7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2016fbr
+BibTeX: '@article{BESIII:2016fbr,
+    author = "Ablikim, Medina and others",
+    collaboration = "BESIII",
+    title = "{Observation of an anomalous line shape of the $\eta^{\prime}\pi^{+}\pi^{-}$ mass spectrum near the $p\bar{p}$ mass threshold in $J/\psi\rightarrow\gamma\eta^{\prime}\pi^{+}\pi^{-}$}",
+    eprint = "1603.09653",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevLett.117.042002",
+    journal = "Phys. Rev. Lett.",
+    volume = "117",
+    number = "4",
+    pages = "042002",
+    year = "2016"
+}
+'

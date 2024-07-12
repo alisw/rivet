@@ -1,0 +1,37 @@
+Name: BELLE_2019_I1728173
+Year: 2019
+Summary: $B\to K^*\ell^+\ell^-$ decays
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1728173
+Status: VALIDATED NOHEPDATA SINGLEWEIGHT
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 126 (2021) 16, 161801
+RunInfo: Any process producing B0 and B+, originally Upsilon(4S) decays
+Description:
+  'Measurement of the flavour separated differential branching ratio in $B\to K^*\ell^+\ell^-$ decays.'
+ValidationInfo:
+  'Herwig 7 events using EvtGen for decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle:2019oag
+BibTeX: '@article{Belle:2019oag,
+    author = "Abdesselam, A. and others",
+    collaboration = "Belle",
+    title = "{Test of Lepton-Flavor Universality in ${B\to K^\ast\ell^+\ell^-}$ Decays at Belle}",
+    eprint = "1904.02440",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BELLE-CONF-1901, Belle Preprint 2020-14, KEK Preprint 2020-16",
+    doi = "10.1103/PhysRevLett.126.161801",
+    journal = "Phys. Rev. Lett.",
+    volume = "126",
+    number = "16",
+    pages = "161801",
+    year = "2021"
+}
+'

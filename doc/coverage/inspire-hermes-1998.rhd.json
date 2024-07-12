@@ -1,0 +1,50 @@
+{
+    "471582": [
+        "The HERMES spectrometer", 
+        "HERMES", 
+        "10.1016/S0168-9002(98)00769-4", 
+        null, 
+        "hep-ex/9806008", 
+        null, 
+        null, 
+        [
+            "DESY-98-057"
+        ]
+    ], 
+    "473345": [
+        "The Flavor asymmetry of the light quark sea from semiinclusive deep inelastic scattering", 
+        "HERMES", 
+        "10.1103/PhysRevLett.81.5519", 
+        null, 
+        "hep-ex/9807013", 
+        "ins473345", 
+        null, 
+        [
+            "DESY-98-078"
+        ]
+    ], 
+    "473421": [
+        "Measurement of the proton spin structure function g1(p) with a pure hydrogen target", 
+        "HERMES", 
+        "10.1016/S0370-2693(98)01341-0", 
+        null, 
+        "hep-ex/9807015", 
+        "ins473421", 
+        null, 
+        [
+            "DESY-98-072"
+        ]
+    ], 
+    "476388": [
+        "Determination of the deep inelastic contribution to the generalized Gerasimov-Drell-Hearn integral for the proton and neutron", 
+        "HERMES", 
+        "10.1016/S0370-2693(98)01396-3", 
+        null, 
+        "hep-ex/9809015", 
+        "ins476388", 
+        null, 
+        [
+            "DESY-98-122"
+        ]
+    ]
+}

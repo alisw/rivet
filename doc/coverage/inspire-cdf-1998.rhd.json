@@ -1,0 +1,357 @@
+{
+    "442518": [
+        "Properties of photon plus two-jet events in $\\bar{p}p$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.57.67", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-97-106-E"
+        ]
+    ], 
+    "447619": [
+        "Dijet production by color - singlet exchange at the Fermilab Tevatron", 
+        "CDF", 
+        "10.1103/PhysRevLett.80.1156", 
+        null, 
+        null, 
+        "ins447619", 
+        null, 
+        [
+            "FERMILAB-PUB-97-283-E", 
+            "ANL-HEP-PR-98-106"
+        ]
+    ], 
+    "448075": [
+        "Measurement of the differential cross section for events with large total transverse energy in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.80.3461", 
+        null, 
+        null, 
+        "ins448075", 
+        null, 
+        [
+            "FERMILAB-PUB-97-290-E", 
+            "ANL-HEP-PR-98-114"
+        ]
+    ], 
+    "448308": [
+        "Search for flavor-changing neutral current decays of the top quark in $p \\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.80.2525", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-97-270-E"
+        ]
+    ], 
+    "448499": [
+        "Measurement of the $B^0 \\overline{B}^0$ oscillation frequency using $\\pi B$ meson charge-flavor correlations in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.80.2057", 
+        null, 
+        "hep-ex/9712004", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-97-312-E", 
+            "ANL-HEP-PR-98-107"
+        ]
+    ], 
+    "449604": [
+        "Measurement of the $t\\bar{t}$ production cross section in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.80.2773", 
+        null, 
+        "hep-ex/9710008", 
+        "ins449604", 
+        null, 
+        [
+            "FERMILAB-PUB-97-286-E", 
+            "ANL-HEP-PR-98-112"
+        ]
+    ], 
+    "449635": [
+        "Measurement of the top quark mass", 
+        "CDF", 
+        "10.1103/PhysRevLett.80.2767", 
+        null, 
+        "hep-ex/9801014", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-97-284-E"
+        ]
+    ], 
+    "449926": [
+        "Measurement of the top quark mass and $t\\bar{t}$ production cross section from dilepton events at the Collider Detector at Fermilab", 
+        "CDF", 
+        "10.1103/PhysRevLett.80.2779", 
+        null, 
+        "hep-ex/9802017", 
+        "ins449926", 
+        null, 
+        [
+            "FERMILAB-PUB-97-304-E", 
+            "ANL-HEP-PR-98-113"
+        ]
+    ], 
+    "450282": [
+        "Measurement of $B$ hadron lifetimes using $J/\\psi$ final states at CDF", 
+        "CDF", 
+        "10.1103/PhysRevD.57.5382", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-97-352-E", 
+            "ANL-HEP-PR-98-105"
+        ]
+    ], 
+    "450870": [
+        "Observation of hadronic W decays in $t\\bar{t}$ events with the Collider Detector at Fermilab", 
+        "CDF", 
+        "10.1103/PhysRevLett.80.5720", 
+        null, 
+        "hep-ex/9711004", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-97-285-E"
+        ]
+    ], 
+    "453369": [
+        "Jet pseudorapidity distribution in direct photon events in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.57.1359", 
+        null, 
+        null, 
+        "ins453369", 
+        null, 
+        [
+            "FERMILAB-PUB-98-009-E", 
+            "ANL-HEP-PR-98-103"
+        ]
+    ], 
+    "465988": [
+        "Search for the decays $B_d^0 \\to \\mu^+ \\mu^-$ and $B_s^0 \\to \\mu^+ \\mu^-$ in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.57.R3811", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-97-397-E", 
+            "ANL-HEP-PR-98-104"
+        ]
+    ], 
+    "466408": [
+        "Searches for new physics in diphoton events in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.81.1791", 
+        null, 
+        "hep-ex/9801019", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-98-024-E"
+        ]
+    ], 
+    "468025": [
+        "Search for chargino - neutralino associated production at the Fermilab Tevatron collider", 
+        "CDF", 
+        "10.1103/PhysRevLett.80.5275", 
+        null, 
+        "hep-ex/9803015", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-98-084-E"
+        ]
+    ], 
+    "468197": [
+        "Observation of $B^+ \\to \\psi(2S) K^+$ and $B^0 \\to \\psi(2S) K^{*0}(892)$ decays and measurements of $B$ meson branching fractions into $J/\\psi$ and $\\psi(2S)$ final states", 
+        "CDF", 
+        "10.1103/PhysRevD.58.072001", 
+        null, 
+        "hep-ex/9803013", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-98-091-E", 
+            "CDF-PUB-BOTTOM-PUBLIC-4425"
+        ]
+    ], 
+    "468516": [
+        "Search for the rare decay $W^\\pm \\to \\pi^\\pm + \\gamma$ in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.58.031101", 
+        null, 
+        null, 
+        "ins468516", 
+        null, 
+        [
+            "FERMILAB-PUB-98-092-E", 
+            "CDF-DOC-ELECTROWEAK-PUB-4278"
+        ]
+    ], 
+    "469360": [
+        "Search for the rare decay $W^\\pm \\to D_s^{+-} \\gamma$ in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.58.091101", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-98-110-E"
+        ]
+    ], 
+    "469524": [
+        "Observation of $B_c$ mesons in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.58.112004", 
+        null, 
+        "hep-ex/9804014", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-98-121-E", 
+            "CDF-PUB-BOTTOM-CDFR-4438"
+        ]
+    ], 
+    "469969": [
+        "Measurement of the $\\sigma(W + \\ge 1 {\\rm jet})/\\sigma(W)$ cross section ratio from $\\bar{p}p$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.81.1367", 
+        null, 
+        null, 
+        "ins469969", 
+        null, 
+        [
+            "FERMILAB-PUB-98-133-E", 
+            "CDF-PUB-JET-CDFR-4514"
+        ]
+    ], 
+    "470500": [
+        "Search for long-lived parents of $Z^0$ bosons in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.58.051102", 
+        null, 
+        "hep-ex/9805017", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-98-145-E", 
+            "CDF-PUB-EXOTIC-PUBLIC-4460"
+        ]
+    ], 
+    "471066": [
+        "Observation of the $B_c$ meson in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.81.2432", 
+        null, 
+        "hep-ex/9805034", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-98-157-E", 
+            "CDF-PUB-BOTTOM-CDFR-4496", 
+            "LS-6941"
+        ]
+    ], 
+    "471999": [
+        "Improved measurement of the $B^-$ and $\\overline{B}^0$ meson lifetimes using semileptonic decays", 
+        "CDF", 
+        "10.1103/PhysRevD.58.092002", 
+        null, 
+        "hep-ex/9806018", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-98-167-E", 
+            "CDF-PUB-BOTTOM-PUBLIC-4534"
+        ]
+    ], 
+    "472253": [
+        "Measurement of the CP-violation parameter $\\sin(2\\beta)$ in $B_d^0 / \\overline{B}_d^0 \\to J/\\psi K^0_S$ decays", 
+        "CDF", 
+        "10.1103/PhysRevLett.81.5513", 
+        null, 
+        "hep-ex/9806025", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-98-189-E", 
+            "CDF-PUB-BOTTOM-CDFR-4574"
+        ]
+    ], 
+    "473168": [
+        "Search for second generation leptoquarks in the dimuon plus dijet channel of $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.81.4806", 
+        null, 
+        "hep-ex/9810024", 
+        "ins473168", 
+        null, 
+        [
+            "FERMILAB-PUB-98-219-E", 
+            "ANL-HEP-PR-99-22"
+        ]
+    ], 
+    "475077": [
+        "Search for Higgs bosons produced in association with a vector boson in $p \\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.81.5748", 
+        null, 
+        null, 
+        "ins475077", 
+        null, 
+        [
+            "FERMILAB-PUB-98-252-E", 
+            "CDF-ANAL-EXOTIC-CDFR-4488"
+        ]
+    ], 
+    "475641": [
+        "Measurement of the Lepton Charge Asymmetry in $W$ Boson Decays Produced in $p \\bar{p}$ Collisions", 
+        "CDF", 
+        "10.1103/PhysRevLett.81.5754", 
+        null, 
+        "hep-ex/9809001", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-98-256-E"
+        ]
+    ], 
+    "476200": [
+        "Search for the decays $B_s^0,\\, B_d^0 \\to e^\\pm \\mu^\\pm$ and Pati-Salam leptoquarks", 
+        "CDF", 
+        "10.1103/PhysRevLett.81.5742", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-98-263-E"
+        ]
+    ], 
+    "479616": [
+        "Events with a rapidity gap between jets in $\\bar{p}p$ collisions at $\\sqrt{s} = 630$ GeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.81.5278", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-98-334-E"
+        ]
+    ]
+}

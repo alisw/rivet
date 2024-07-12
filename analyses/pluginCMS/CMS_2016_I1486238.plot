@@ -1,7 +1,7 @@
 # BEGIN PLOT /CMS_2016_I1486238/d10-x01-y01
 Title=CMS, $\sqrt{s}$ = 7 TeV, Leading b jet $\eta$ in pp$\rightarrow$ 2b+2j+X 
 XLabel=$\eta$
-YLabel=$d\sigma/d\eta\; [\text{pb}/rad]$
+YLabel=$d\sigma/d\eta\; [\mathrm{pb}/rad]$
 FullRange=1
 LegendXPos=0.2
 LegendYPos=0.4
@@ -13,7 +13,7 @@ RatioPlotYMax=2.5
 # BEGIN PLOT /CMS_2016_I1486238/d11-x01-y01
 Title=CMS, $\sqrt{s}$ = 7 TeV, Leading b jet $p_{T}$ in pp$\rightarrow$ 2b+2j+X 
 XLabel=$p_{T}$ [GeV]
-YLabel=$d\sigma/dp_{T}\; [\text{pb}/GeV]$
+YLabel=$d\sigma/dp_{T}\; [\mathrm{pb}/GeV]$
 FullRange=1
 LogY=1
 RatioPlotYMin=0.1
@@ -56,7 +56,7 @@ LogY=1
 # BEGIN PLOT /CMS_2016_I1486238/d12-x01-y01
 Title=CMS, $\sqrt{s}$ = 7 TeV, Leading other jet $\eta$ in pp$\rightarrow$ 2b+2j+X 
 XLabel=$\eta$
-YLabel=$d\sigma/d\eta\; [\text{pb}/rad]$
+YLabel=$d\sigma/d\eta\; [\mathrm{pb}/rad]$
 FullRange=1
 LegendXPos=0.2
 LegendYPos=0.4
@@ -68,7 +68,7 @@ LogY=1
 # BEGIN PLOT /CMS_2016_I1486238/d13-x01-y01
 Title=CMS, $\sqrt{s}$ = 7 TeV, Leading other jet $p_{T}$ in pp$\rightarrow$ 2b+2j+X 
 XLabel=$p_{T}$ [GeV]
-YLabel=$d\sigma/dp_{T}\; [\text{pb}/GeV]$
+YLabel=$d\sigma/dp_{T}\; [\mathrm{pb}/GeV]$
 FullRange=1
 LogY=1
 RatioPlotYMin=0.1
@@ -78,7 +78,7 @@ RatioPlotYMax=2.5
 # BEGIN PLOT /CMS_2016_I1486238/d16-x01-y01
 Title=CMS, $\sqrt{s}$ = 7 TeV, Subleading other jet $\eta$ in pp$\rightarrow$ 2b+2j+X 
 XLabel=$\eta$
-YLabel=$d\sigma/d\eta\; [\text{pb}/rad]$
+YLabel=$d\sigma/d\eta\; [\mathrm{pb}/rad]$
 FullRange=1
 LegendXPos=0.2
 LegendYPos=0.4
@@ -90,7 +90,7 @@ LogY=1
 # BEGIN PLOT /CMS_2016_I1486238/d17-x01-y01
 Title=CMS, $\sqrt{s}$ = 7 TeV, Subleading other jet $p_{T}$ in pp$\rightarrow$ 2b+2j+X 
 XLabel=$p_{T}$ [GeV]
-YLabel=$d\sigma/dp_{T}\; [\text{pb}/GeV]$
+YLabel=$d\sigma/dp_{T}\; [\mathrm{pb}/GeV]$
 FullRange=1
 LogY=1
 RatioPlotYMin=0.1
@@ -100,7 +100,7 @@ RatioPlotYMax=2.5
 # BEGIN PLOT /CMS_2016_I1486238/d14-x01-y01
 Title=CMS, $\sqrt{s}$ = 7 TeV, Subleading b jet $\eta$ in pp$\rightarrow$ 2b+2j+X 
 XLabel=$\eta$
-YLabel=$d\sigma/d\eta\; [\text{pb}/rad]$
+YLabel=$d\sigma/d\eta\; [\mathrm{pb}/rad]$
 FullRange=1
 LegendXPos=0.2
 LegendYPos=0.4
@@ -112,7 +112,7 @@ LogY=1
 # BEGIN PLOT /CMS_2016_I1486238/d15-x01-y01
 Title=CMS, $\sqrt{s}$ = 7 TeV, Subleading b jet $p_{T}$ in pp$\rightarrow$ 2b+2j+X 
 XLabel=$p_{T}$ [GeV] 
-YLabel=$d\sigma/dp_{T}\; [\text{pb}/GeV]$
+YLabel=$d\sigma/dp_{T}\; [\mathrm{pb}/GeV]$
 FullRange=1
 LogY=1
 RatioPlotYMin=0.1

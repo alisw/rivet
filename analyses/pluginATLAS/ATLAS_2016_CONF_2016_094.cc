@@ -17,7 +17,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2016_CONF_2016_094);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2016_CONF_2016_094);
 
 
     /// @name Analysis methods
@@ -41,7 +41,7 @@ namespace Rivet {
 
       FinalState es(Cuts::abspid == PID::ELECTRON && Cuts::abseta < 2.47 && !Cuts::absetaIn(1.37, 1.52) && Cuts::pT > 10*GeV);
       declare(es, "TruthElectrons");
-      declare(SmearedParticles(es, ELECTRON_EFF_ATLAS_RUN2, ELECTRON_SMEAR_ATLAS_RUN2), "Electrons");
+      declare(SmearedParticles(es, ELECTRON_RECOEFF_ATLAS_RUN2, ELECTRON_SMEAR_ATLAS_RUN2), "Electrons");
 
       FinalState mus(Cuts::abspid == PID::MUON && Cuts::abseta < 2.4 && Cuts::pT > 10*GeV);
       declare(mus, "TruthMuons");
@@ -49,18 +49,18 @@ namespace Rivet {
 
 
       // Book histograms/counters
-      _h_08j40_0b = bookCounter("08j40_0b");
-      _h_09j40_0b = bookCounter("09j40_0b");
-      _h_10j40_0b = bookCounter("10j40_0b");
-      _h_08j40_3b = bookCounter("08j40_3b");
-      _h_09j40_3b = bookCounter("09j40_3b");
-      _h_10j40_3b = bookCounter("10j40_3b");
-      _h_08j60_0b = bookCounter("08j60_0b");
-      _h_09j60_0b = bookCounter("09j60_0b");
-      _h_10j60_0b = bookCounter("10j60_0b");
-      _h_08j60_3b = bookCounter("08j60_3b");
-      _h_09j60_3b = bookCounter("09j60_3b");
-      _h_10j60_3b = bookCounter("10j60_3b");
+      book(_h_08j40_0b,"08j40_0b");
+      book(_h_09j40_0b,"09j40_0b");
+      book(_h_10j40_0b,"10j40_0b");
+      book(_h_08j40_3b,"08j40_3b");
+      book(_h_09j40_3b,"09j40_3b");
+      book(_h_10j40_3b,"10j40_3b");
+      book(_h_08j60_0b,"08j60_0b");
+      book(_h_09j60_0b,"09j60_0b");
+      book(_h_10j60_0b,"10j60_0b");
+      book(_h_08j60_3b,"08j60_3b");
+      book(_h_09j60_3b,"09j60_3b");
+      book(_h_10j60_3b,"10j60_3b");
 
     }
 
@@ -83,7 +83,7 @@ namespace Rivet {
       // Remove any untagged low-multiplicity/muon-dominated jet within dR = 0.4 of a muon
       for (const Particle& m : muons)
         ifilter_discard(jets, [&](const Jet& j) {
-            if (!j.bTagged(Cuts::pT > 5*GeV)) return false; /// @note A different b-tag working point, 85%, was actually used here *sigh*
+            if (j.bTagged(Cuts::pT > 5*GeV)) return false; /// @note A different b-tag working point, 85%, was actually used here *sigh*
             if (deltaR(m, j, RAPIDITY) > 0.4) return false;
             if (j.particles(Cuts::abscharge != 0).size() < 3) return true;
             return m.pT()/j.pT() > 0.5;
@@ -101,7 +101,7 @@ namespace Rivet {
       const Jets sigbjets60 = filter_select(sigjets60, [](const Jet& j) { return j.bTagged(Cuts::pT > 5*GeV); });
       const Particles sigmuons = filter_select(muons, Cuts::pT > 35*GeV);
       Particles sigelecs = filter_select(elecs, Cuts::pT > 35*GeV);
-      ifilter_select(sigelecs, ParticleEffFilter(ELECTRON_IDEFF_ATLAS_RUN2_TIGHT));
+      ifilter_select(sigelecs, ParticleEffFilter(ELECTRON_EFF_ATLAS_RUN2_TIGHT));
 
 
       //////////////////
@@ -116,20 +116,19 @@ namespace Rivet {
       /// We just implement the latter for now.
 
       // Fill counters
-      const double w = event.weight();
-      if (sigjets40.size() >= 8  && sigbjets40.empty()) _h_08j40_0b->fill(w);
-      if (sigjets40.size() >= 9  && sigbjets40.empty()) _h_09j40_0b->fill(w);
-      if (sigjets40.size() >= 10 && sigbjets40.empty()) _h_10j40_0b->fill(w);
-      if (sigjets40.size() >= 8  && sigbjets40.size() >= 3) _h_08j40_3b->fill(w);
-      if (sigjets40.size() >= 9  && sigbjets40.size() >= 3) _h_09j40_3b->fill(w);
-      if (sigjets40.size() >= 10 && sigbjets40.size() >= 3) _h_10j40_3b->fill(w);
+      if (sigjets40.size() >= 8  && sigbjets40.empty()) _h_08j40_0b->fill();
+      if (sigjets40.size() >= 9  && sigbjets40.empty()) _h_09j40_0b->fill();
+      if (sigjets40.size() >= 10 && sigbjets40.empty()) _h_10j40_0b->fill();
+      if (sigjets40.size() >= 8  && sigbjets40.size() >= 3) _h_08j40_3b->fill();
+      if (sigjets40.size() >= 9  && sigbjets40.size() >= 3) _h_09j40_3b->fill();
+      if (sigjets40.size() >= 10 && sigbjets40.size() >= 3) _h_10j40_3b->fill();
 
-      if (sigjets60.size() >= 8  && sigbjets60.empty()) _h_08j60_0b->fill(w);
-      if (sigjets60.size() >= 9  && sigbjets60.empty()) _h_09j60_0b->fill(w);
-      if (sigjets60.size() >= 10 && sigbjets60.empty()) _h_10j60_0b->fill(w);
-      if (sigjets60.size() >= 8  && sigbjets60.size() >= 3) _h_08j60_3b->fill(w);
-      if (sigjets60.size() >= 9  && sigbjets60.size() >= 3) _h_09j60_3b->fill(w);
-      if (sigjets60.size() >= 10 && sigbjets60.size() >= 3) _h_10j60_3b->fill(w);
+      if (sigjets60.size() >= 8  && sigbjets60.empty()) _h_08j60_0b->fill();
+      if (sigjets60.size() >= 9  && sigbjets60.empty()) _h_09j60_0b->fill();
+      if (sigjets60.size() >= 10 && sigbjets60.empty()) _h_10j60_0b->fill();
+      if (sigjets60.size() >= 8  && sigbjets60.size() >= 3) _h_08j60_3b->fill();
+      if (sigjets60.size() >= 9  && sigbjets60.size() >= 3) _h_09j60_3b->fill();
+      if (sigjets60.size() >= 10 && sigbjets60.size() >= 3) _h_10j60_3b->fill();
 
     }
 
@@ -138,8 +137,10 @@ namespace Rivet {
     void finalize() {
 
       const double sf = 14.8*crossSection()/femtobarn/sumOfWeights();
-      scale({_h_08j40_0b, _h_09j40_0b, _h_10j40_0b, _h_08j40_3b, _h_09j40_3b, _h_10j40_3b}, sf);
-      scale({_h_08j60_0b, _h_09j60_0b, _h_10j60_0b, _h_08j60_3b, _h_09j60_3b, _h_10j60_3b}, sf);
+      scale(_h_08j40_0b, sf); scale(_h_09j40_0b, sf); scale(_h_10j40_0b, sf);
+      scale(_h_08j40_3b, sf); scale(_h_09j40_3b, sf); scale(_h_10j40_3b, sf);
+      scale(_h_08j60_0b, sf); scale(_h_09j60_0b, sf); scale(_h_10j60_0b, sf);
+      scale(_h_08j60_3b, sf); scale(_h_09j60_3b, sf); scale(_h_10j60_3b, sf);
 
     }
 
@@ -160,7 +161,7 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2016_CONF_2016_094);
+  RIVET_DECLARE_PLUGIN(ATLAS_2016_CONF_2016_094);
 
 
 }

@@ -1,0 +1,37 @@
+Name: TASSO_1985_I205119
+Year: 1985
+Summary: $K^0,\bar{K}^0$ and $\Lambda^0,\bar{\Lambda}^0$ spectra at 14, 22 and 34 GeV
+Experiment: TASSO
+Collider: Petra
+InspireID: 205119
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Z.Phys. C27 (1985) 27, 1985
+RunInfo: e+ e- to hadrons. Beam energy must be specified as analysis option "ENERGY" when rivet-margin samples.
+NeedCrossSection: yes
+Beams: [e+, e-]
+Energies: [14,22,34]
+Options:
+ - ENERGY=14,22,34
+Description:
+  Measurement of the $K^0,\bar{K}^0$ and $\Lambda^0,\bar{\Lambda}^0$ spectra in $e^+e^-$ collisions for centre-of-mass energies of 14, 22 and 34 GeV by the TASSO experiment at Petra.
+  Beam energy must be specified as analysis option "ENERGY" when rivet-merging samples. 
+Keywords: []
+BibKey: Althoff:1984iz
+BibTeX: '@article{Althoff:1984iz,
+      author         = "Althoff, M. and others",
+      title          = "{A Detailed Study of Strange Particle Production in $e^+
+                        e^-$ Annihilation at High-energy}",
+      collaboration  = "TASSO",
+      journal        = "Z. Phys.",
+      volume         = "C27",
+      year           = "1985",
+      pages          = "27",
+      doi            = "10.1007/BF01642477",
+      reportNumber   = "DESY-84-093",
+      SLACcitation   = "%%CITATION = ZEPYA,C27,27;%%"
+}
+'

@@ -1,0 +1,77 @@
+{
+    "530319": [
+        "Study of the D+(s) ---> pi- pi+ pi+ decay and measurement of f(0) masses and widths",
+        "E791",
+        "10.1103/PhysRevLett.86.765",
+        null,
+        "hep-ex/0007027",
+        null,
+        null,
+        [
+            "CBPF-NF-055-00",
+            "FERMILAB-PUB-99-323-E"
+        ]
+    ],
+    "530320": [
+        "Experimental evidence for a light and broad scalar resonance in $D^+ \\to \\pi^- \\pi^+ \\pi^+$ decay",
+        "E791",
+        "10.1103/PhysRevLett.86.770",
+        null,
+        "hep-ex/0007028",
+        null,
+        null,
+        [
+            "CBPF-NF-056-00",
+            "FERMILAB-PUB-99-322-E"
+        ]
+    ],
+    "535232": [
+        "Direct measurement of the pion valence quark momentum distribution, the pion light cone wave function squared",
+        "E791",
+        "10.1103/PhysRevLett.86.4768",
+        null,
+        "hep-ex/0010043",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-00-221-E"
+        ]
+    ],
+    "535233": [
+        "Observation of color transparency in diffractive dissociation of pions",
+        "E791",
+        "10.1103/PhysRevLett.86.4773",
+        null,
+        "hep-ex/0010044",
+        "ins535233",
+        null,
+        [
+            "FERMILAB-PUB-00-220-E"
+        ]
+    ],
+    "537240": [
+        "Search for rare and forbidden charm meson decays D0 ---> V lepton+ lepton- and h h lepton-lepton",
+        "E791",
+        "10.1103/PhysRevLett.86.3969",
+        null,
+        "hep-ex/0011077",
+        null,
+        null,
+        [
+            "UMS-HEP-00-026",
+            "FERMILAB-PUB-00-280-E"
+        ]
+    ],
+    "557133": [
+        "Study of the Decay $D^0 \\to K^- K^- K^+ \\pi^+$",
+        "E791",
+        "10.1103/PhysRevD.64.112003",
+        null,
+        "hep-ex/0105075",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-01-070-E"
+        ]
+    ]
+}

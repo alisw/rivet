@@ -11,7 +11,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2018_I1711114);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2018_I1711114);
 
 
     /// Book cuts and projections
@@ -20,29 +20,27 @@ namespace Rivet {
       FinalState fs(Cuts::abseta<5.0);
 
       ChargedFinalState cfs(Cuts::pT > 0.5*GeV && Cuts::abseta < 2.5);
-      FastJets smallR_jets(cfs, FastJets::ANTIKT, 0.2, JetAlg::NO_MUONS, JetAlg::NO_INVISIBLES);
+      FastJets smallR_jets(cfs, FastJets::ANTIKT, 0.2, JetAlg::Muons::NONE, JetAlg::Invisibles::NONE);
       declare(smallR_jets, "track_jets");
 
-      FastJets largeR_jets(fs, FastJets::ANTIKT, 1.0, JetAlg::NO_MUONS, JetAlg::NO_INVISIBLES);
+      FastJets largeR_jets(fs, FastJets::ANTIKT, 1.0, JetAlg::Muons::NONE, JetAlg::Invisibles::NONE);
       declare(largeR_jets, "largeR_jets");
 
-      _h_R   = bookHisto1D(1,1,1);
-      _h_phi = bookHisto1D(2,1,1);
-      _h_z   = bookHisto1D(3,1,1);
-      _h_rho = bookHisto1D(4,1,1);
+      book(_h_R, 1,1,1);
+      book(_h_phi, 2,1,1);
+      book(_h_z, 3,1,1);
+      book(_h_rho, 4,1,1);
     }
 
 
     void analyze(const Event& event) {
-
-      const double weight = event.weight();
 
       const PseudoJets& myJets = apply<FastJets>(event, "largeR_jets").pseudoJetsByPt(450*GeV);
       if (myJets.empty()) vetoEvent;
 
       fastjet::Filter trimmer(fastjet::JetDefinition(fastjet::kt_algorithm, 0.2), fastjet::SelectorPtFractionMin(0.05));
       Jets myTrimmedJets;
-      for (const Jet& jet : myJets)  myTrimmedJets += Jet(trimmer(jet));
+      for (const Jet jet : myJets)  myTrimmedJets += Jet(trimmer(jet));
       std::sort(myTrimmedJets.begin(), myTrimmedJets.end(), cmpMomByPt);
       if (myTrimmedJets[0].pT() < 450*GeV) vetoEvent;
 
@@ -88,19 +86,19 @@ namespace Rivet {
       const double fTrho = log(dijet.mass() / dijet.pT());
       const double fTphi = (plane1).angle(plane2)/M_PI;
 
-      _h_R->fill(  fTR,   weight);
-      _h_phi->fill(fTphi, weight);
-      _h_z->fill(  fTz,   weight);
-      _h_rho->fill(fTrho, weight);
+      _h_R->fill(  fTR);
+      _h_phi->fill(fTphi);
+      _h_z->fill(  fTz);
+      _h_rho->fill(fTrho);
     }
 
 
     /// Scale histos
     void finalize() {
-      _h_R->normalize(  1.0, false);
-      _h_phi->normalize(1.0, false);
-      _h_z->normalize(  1.0, false);
-      _h_rho->normalize(1.0, false);
+      normalize(_h_R  ,  1.0, false);
+      normalize(_h_phi,  1.0, false);
+      normalize(_h_z  ,  1.0, false);
+      normalize(_h_rho,  1.0, false);
     }
 
 
@@ -112,6 +110,6 @@ namespace Rivet {
   };
 
 
-  DECLARE_RIVET_PLUGIN(ATLAS_2018_I1711114);
+  RIVET_DECLARE_PLUGIN(ATLAS_2018_I1711114);
 
 }

@@ -7,6 +7,7 @@ Collider: LHC
 NeedCrossSection: no
 InspireID: 1102908
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Grzegorz Brona
  - Vladimir Gavrilov

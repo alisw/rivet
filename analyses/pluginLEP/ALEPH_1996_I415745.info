@@ -1,0 +1,31 @@
+Name: ALEPH_1996_I415745
+Year: 1996
+Summary: Polarization of $\Lambda^0$ baryons at LEP 1
+Experiment: ALEPH
+Collider: LEP
+InspireID: 415745
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B374 (1996) 319-330, 1996 
+RunInfo: e+e- -> hadrons at 91.2 GeV
+NeedCrossSection: no
+Beams: [e-, e+]
+Energies: 91.2
+Description:
+  'Measurement of the polarization of $\Lambda^0$ baryons at LEP 1. The $\cos\theta$ and $\cos\phi$ distributions are extracted and then the polarization obtained by fitting the resulting distributions.'
+Keywords: []
+BibKey: Buskulic:1996vb
+BibTeX: '@article{Buskulic:1996vb,
+      author         = "Buskulic, D. and others",
+      title          = "{Measurement of Lambda polarization from Z decays}",
+      collaboration  = "ALEPH",
+      journal        = "Phys. Lett.",
+      volume         = "B374",
+      year           = "1996",
+      pages          = "319-330",
+      doi            = "10.1016/0370-2693(96)00300-0",
+      reportNumber   = "CERN-PPE-96-004, CERN-PPE-96-4, CERN-PPE-96-04",
+      SLACcitation   = "%%CITATION = PHLTA,B374,319;%%"
+}'

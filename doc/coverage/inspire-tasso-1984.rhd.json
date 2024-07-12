@@ -1,0 +1,208 @@
+{
+    "193787": [
+        "An Improved Measurement of Electroweak Couplings From $e^+ e^- \\to e^+ e^-$ and $e^+ e^- \\to \\mu^+ \\mu^-$", 
+        "TASSO", 
+        "10.1007/BF01577559", 
+        null, 
+        null, 
+        "ins193787", 
+        null, 
+        [
+            "DESY-83-089"
+        ]
+    ], 
+    "194050": [
+        "Properties of Charm Jets Produced in $e^+ e^-$ Annihilation Near 34-{GeV}", 
+        "TASSO", 
+        "10.1016/0370-2693(84)90490-8", 
+        null, 
+        null, 
+        "ins194050", 
+        null, 
+        [
+            "DESY-83-114"
+        ]
+    ], 
+    "194773": [
+        "Observation of Hard Processes in Collisions of Two Quasireal Photons", 
+        "TASSO", 
+        "10.1016/0370-2693(84)91904-X", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-83-115"
+        ]
+    ], 
+    "194774": [
+        "Observation of F Meson Production in High-energy $e^+ e^-$ Annihilation", 
+        "TASSO", 
+        "10.1016/0370-2693(84)92070-7", 
+        null, 
+        null, 
+        "ins194774", 
+        null, 
+        [
+            "DESY-83-119"
+        ]
+    ], 
+    "194775": [
+        "Production and Muonic Decay of Heavy Quarks in e+ e- Annihilation at 34.5-GeV", 
+        "TASSO", 
+        "10.1007/BF01575783", 
+        null, 
+        null, 
+        "ins194775", 
+        null, 
+        [
+            "DESY-83-121", 
+            "OUNP-81-83"
+        ]
+    ], 
+    "195333": [
+        "Jet Production and Fragmentation in e+ e- Annihilation at 12-GeV to 43-GeV", 
+        "TASSO", 
+        "10.1007/BF01547419", 
+        null, 
+        null, 
+        "ins195333", 
+        null, 
+        [
+            "DESY-83-130"
+        ]
+    ], 
+    "199468": [
+        "Measurement of r and Search for the Top Quark in e+ e- Annihilation Between 39.8-GeV and 45.2-GeV", 
+        "TASSO", 
+        "10.1016/0370-2693(84)91936-1", 
+        null, 
+        null, 
+        "ins199468", 
+        null, 
+        [
+            "DESY-84-001"
+        ]
+    ], 
+    "199469": [
+        "Evidence for Local Compensation of Baryon Number in $e^+ e^-$ Annihilation", 
+        "TASSO", 
+        "10.1016/0370-2693(84)90047-9", 
+        null, 
+        null, 
+        "ins199469", 
+        null, 
+        [
+            "DESY-84-004"
+        ]
+    ], 
+    "199470": [
+        "Experimental Test of the Flavor Independence of the Quark - Gluon Coupling Constant", 
+        "TASSO", 
+        "10.1016/0370-2693(84)91668-X", 
+        null, 
+        null, 
+        "ins199470", 
+        null, 
+        [
+            "DESY-84-005"
+        ]
+    ], 
+    "199847": [
+        "Determination of the $\\tau$ Lifetime in High-energy $e^+ e^-$ Annihilation", 
+        "TASSO", 
+        "10.1016/0370-2693(84)90214-4", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-84-017"
+        ]
+    ], 
+    "199848": [
+        "Observation of the Reaction $\\gamma \\gamma \\to p \\bar{p} \\pi^+ \\pi^-$", 
+        "TASSO", 
+        "10.1016/0370-2693(84)91149-3", 
+        null, 
+        null, 
+        "ins199848", 
+        null, 
+        [
+            "DESY-84-015"
+        ]
+    ], 
+    "202782": [
+        "Inclusive Electron Production From Heavy Quarks in $e^+ e^-$ Annihilation at 34.6-{GeV} Center-of-mass Energy", 
+        "TASSO", 
+        "10.1016/0370-2693(84)90157-6", 
+        null, 
+        null, 
+        "ins202782", 
+        null, 
+        [
+            "DESY-84-061"
+        ]
+    ], 
+    "203142": [
+        "Upper Limits on the Production Rate of the Decuplet Baryons $\\Delta$ and $\\Sigma^*$ in $e^+ e^-$ Annihilation at 34.4-{GeV}", 
+        "TASSO", 
+        null, 
+        null, 
+        null, 
+        "ins203142", 
+        null, 
+        [
+            "DESY-84-065", 
+            "OUNP 55/84"
+        ]
+    ], 
+    "203143": [
+        "Determination of $\\alpha_s$ in First and Second Order {QCD} From $e^+ e^-$ Annihilation Into Hadrons", 
+        "TASSO", 
+        null, 
+        null, 
+        null, 
+        "ins203143", 
+        null, 
+        [
+            "DESY-84-057"
+        ]
+    ], 
+    "203795": [
+        "Measurement of the Radiative Width of the $\\eta^\\prime$ (958) in Two Photon Interactions", 
+        "TASSO", 
+        "10.1016/0370-2693(84)91409-6", 
+        null, 
+        null, 
+        "ins203795", 
+        null, 
+        [
+            "DESY-84-069"
+        ]
+    ], 
+    "204486": [
+        "Photon Pair Production by $e^+ e^-$ Annihilation and Search for Supersymmetric Photinos at Energies > 40-{GeV}", 
+        "TASSO", 
+        null, 
+        null, 
+        null, 
+        "ins204486", 
+        null, 
+        [
+            "DESY-84-072"
+        ]
+    ], 
+    "205124": [
+        "Determination of the Average Lifetime of Bottom Hadrons", 
+        "TASSO", 
+        "10.1016/0370-2693(84)90380-0", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-84-094"
+        ]
+    ]
+}

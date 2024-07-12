@@ -1,6 +1,6 @@
 # BEGIN PLOT /LHCF_2012_I1115479/d0
 XLabel=$p_\perp$ [GeV]
-YLabel=$1/\sigma_\text{inel}$ $E \mathrm{d}^3\sigma/\mathrm{d}p^3$ [GeV$^{-2}$]
+YLabel=$1/\sigma_\mathrm{inel}$ $E \mathrm{d}^3\sigma/\mathrm{d}p^3$ [GeV$^{-2}$]
 # END PLOT
 
 # BEGIN PLOT /LHCF_2012_I1115479/d01-x01-y01 

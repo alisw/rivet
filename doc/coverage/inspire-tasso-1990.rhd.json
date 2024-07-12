@@ -1,0 +1,65 @@
+{
+    "282845": [
+        "Experimental Study of the Orientation of Three Jet Events in $e^+ e^-$ Annihilation at {PETRA}", 
+        "TASSO", 
+        "10.1007/BF01552338", 
+        null, 
+        null, 
+        "ins282845", 
+        null, 
+        [
+            "DESY-89-132", 
+            "FTUAM-EP-89-06"
+        ]
+    ], 
+    "284251": [
+        "Strange Meson Production in $e^+ e^-$ Annihilation", 
+        "TASSO", 
+        "10.1007/BF01552337", 
+        null, 
+        null, 
+        "ins284251", 
+        null, 
+        [
+            "DESY-89-156", 
+            "FTUAM-EP-89-04"
+        ]
+    ], 
+    "294597": [
+        "Production of Charmed Mesons in $\\gamma \\gamma$ Interactions", 
+        "TASSO", 
+        "10.1007/BF01552314", 
+        null, 
+        null, 
+        "ins294597", 
+        null, 
+        [
+            "DESY-90-012", 
+            "WIS-90/7-PH"
+        ]
+    ], 
+    "294755": [
+        "Global Jet Properties at 14-{GeV} to 44-{GeV} Center-of-mass Energy in $e^+ e^-$ Annihilation", 
+        "TASSO", 
+        "10.1007/BF01552339", 
+        null, 
+        null, 
+        "ins294755", 
+        null, 
+        [
+            "DESY-90-013"
+        ]
+    ], 
+    "296191": [
+        "Measurement of the Asymmetry of b Quark Production in e$^{+} $e$^{-}$ Annihilation of $\\Sqrt{$s$}=35$-{GeV}", 
+        "TASSO", 
+        "10.1007/BF01572023", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-90-047"
+        ]
+    ]
+}

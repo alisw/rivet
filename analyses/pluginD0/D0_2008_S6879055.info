@@ -6,6 +6,7 @@ Collider: Tevatron Run 2
 SpiresID: 6879055
 InspireID: 724239
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Giulio Lenzi
  - Frank Siegert <frank.siegert@cern.ch>
@@ -39,3 +40,7 @@ BibTeX: '@Article{Abazov:2006gs,
      doi       = "10.1016/j.physletb.2007.10.046",
      SLACcitation  = "%%CITATION = HEP-EX/0608052;%%"
 }'
+
+ReleaseTests:
+ - $A TVT-Run-II-Z-e
+

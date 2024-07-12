@@ -1,0 +1,194 @@
+{
+    "539640": [
+        "Measurement of the Z Z cross-section in e+ e- interactions at 183-GeV - 189-GeV", 
+        "DELPHI", 
+        "10.1016/S0370-2693(00)01346-0", 
+        "480864", 
+        "hep-ex/0103004", 
+        "ins539640", 
+        null, 
+        [
+            "CERN-EP-2000-089"
+        ]
+    ], 
+    "539641": [
+        "Search for neutralino pair production at s**(1/2) = 189-GeV", 
+        "DELPHI", 
+        "10.1007/s100520100615", 
+        "481060", 
+        "hep-ex/0102034", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-133"
+        ]
+    ], 
+    "539642": [
+        "Study of dimuon production in photon-photon collisions and measurement of QED photon structure functions at LEP", 
+        "DELPHI", 
+        "10.1007/s100520100592", 
+        "481061", 
+        "hep-ex/0105084", 
+        "ins539642", 
+        null, 
+        [
+            "CERN-EP-2000-150"
+        ]
+    ], 
+    "540015": [
+        "Search for spontaneous R-parity violation at s**(1/2) = 183-GeV and 189-GeV", 
+        "DELPHI", 
+        "10.1016/S0370-2693(01)00143-5", 
+        "480865", 
+        "hep-ex/0102045", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-124"
+        ]
+    ], 
+    "540208": [
+        "Search for sleptons in e+ e- collisions at s**(1/2) = 183-GeV to 189-GeV", 
+        "DELPHI", 
+        "10.1007/s100520100595", 
+        "484709", 
+        "hep-ex/0104007", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-134"
+        ]
+    ], 
+    "540344": [
+        "Search for the standard model Higgs boson at LEP in the year 2000", 
+        "DELPHI", 
+        "10.1016/S0370-2693(01)00069-7", 
+        "487332", 
+        "hep-ex/0102036", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2001-004"
+        ]
+    ], 
+    "540730": [
+        "Search for R-parity violation with a anti-U anti-D anti-D coupling at x**(1/2) = 189-GeV", 
+        "DELPHI", 
+        "10.1016/S0370-2693(01)00017-X", 
+        "480866", 
+        "hep-ex/0103015", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-127"
+        ]
+    ], 
+    "553305": [
+        "Update of the search for supersymmetric particles in scenarios with gravitino LSP and sleptons NLSP", 
+        "DELPHI", 
+        "10.1016/S0370-2693(01)00207-6", 
+        "487334", 
+        "hep-ex/0102038", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2001-011"
+        ]
+    ], 
+    "553351": [
+        "Measurement of trilinear gauge boson couplings $WWV, (V \\equiv Z, \\gamma)$ in $e^+ e^-$ collisions at 189-GeV", 
+        "DELPHI", 
+        "10.1016/S0370-2693(01)00135-6", 
+        "487333", 
+        "hep-ex/0102041", 
+        "ins553351", 
+        null, 
+        [
+            "CERN-EP-2001-006"
+        ]
+    ], 
+    "555429": [
+        "Search for a fermiophobic Higgs at LEP-2", 
+        "DELPHI", 
+        "10.1016/S0370-2693(01)00449-X", 
+        "496121", 
+        "hep-ex/0104025", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2001-013"
+        ]
+    ], 
+    "555430": [
+        "Measurement of V(cb) from the decay process anti-B0 ---> D*+ lepton- anti-neutrino", 
+        "DELPHI", 
+        "10.1016/S0370-2693(01)00569-X", 
+        "496122", 
+        "hep-ex/0104026", 
+        "ins555430", 
+        null, 
+        [
+            "CERN-EP-2001-002"
+        ]
+    ], 
+    "555901": [
+        "Measurement of the mass and width of the $W$ boson in $e^{+} e^{-}$ collisions at $\\sqrt{s}$ = 189-GeV", 
+        "DELPHI", 
+        "10.1016/S0370-2693(01)00453-1", 
+        "497499", 
+        "hep-ex/0104047", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2001-029"
+        ]
+    ], 
+    "556817": [
+        "A Measurement of the tau topological branching ratios", 
+        "DELPHI", 
+        "10.1007/PL00011152", 
+        "500753", 
+        "hep-ex/0105047", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2001-030"
+        ]
+    ], 
+    "557178": [
+        "Measurement of the semileptonic b branching fractions and average b mixing parameter in Z decays", 
+        "DELPHI", 
+        "10.1007/s100520100690", 
+        "509610", 
+        "hep-ex/0105080", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-157"
+        ]
+    ], 
+    "560550": [
+        "Single intermediate vector boson production in e+ e- collisions at s**(1/2) = 183-GeV and 189-GeV", 
+        "DELPHI", 
+        "10.1016/S0370-2693(01)00807-3", 
+        "509458", 
+        "hep-ex/0107067", 
+        "ins560550", 
+        null, 
+        [
+            "CERN-EP-2001-033"
+        ]
+    ], 
+    "564486": [
+        "Search for technicolor with DELPHI", 
+        "DELPHI", 
+        "10.1007/s100520100782", 
+        "518857", 
+        "hep-ex/0110056", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2001-059"
+        ]
+    ]
+}

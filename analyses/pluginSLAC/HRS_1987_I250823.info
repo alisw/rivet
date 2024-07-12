@@ -1,0 +1,33 @@
+Name: HRS_1987_I250823
+Year: 1987
+Summary: $D^{*\pm}$ polarization at 29 GeV
+Experiment: HRS
+Collider: PEP
+InspireID: 250823
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B199 (1987) 585-590
+RunInfo: e+e- to hadrons
+NeedCrossSection: no
+Beams: [e-, e+]
+Energies: 29
+Description:
+  'The polarization of $D^{*\pm}$ mesons produced in $e^+e^-$ collisions is measured for
+   a centre-of-mass energy of 29 GeV.'
+Keywords: []
+BibKey: Abachi:1987qc
+BibTeX: '@article{Abachi:1987qc,
+      author         = "Abachi, S. and others",
+      title          = "{Measurement of the Spin Density Matrix of $D^*$ Mesons
+                        Produced in $e^+ e^-$ Annihilations}",
+      collaboration  = "HRS",
+      journal        = "Phys. Lett.",
+      volume         = "B199",
+      year           = "1987",
+      pages          = "585-590",
+      doi            = "10.1016/0370-2693(87)91632-7",
+      reportNumber   = "ANL-HEP-PR-87-86, UM-HE-87-22, PU-87-607",
+      SLACcitation   = "%%CITATION = PHLTA,B199,585;%%"
+}'

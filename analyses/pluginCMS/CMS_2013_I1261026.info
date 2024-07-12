@@ -5,6 +5,7 @@ Experiment: CMS
 Collider: LHC
 InspireID: 1261026
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Maxim Azarkin <Maksim.Azarkin@cern.ch>
 References:
@@ -45,3 +46,7 @@ BibTeX: '@article{Chatrchyan:2013ala,
       primaryClass   = "hep-ex",
       reportNumber   = "CMS-FSQ-12-022, CERN-PH-EP-2013-195",
       SLACcitation   = "%%CITATION = ARXIV:1310.4554;%%",}'
+
+ReleaseTests:
+ - $A LHC-7-Jets-0
+

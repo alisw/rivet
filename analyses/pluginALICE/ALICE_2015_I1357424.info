@@ -6,7 +6,7 @@ Collider: LHC
 InspireID: 1357424
 Status: VALIDATED
 Authors:
- - Andreas Morsch andreas.morsch@cern.ch
+ - Andreas Morsch <andreas.morsch@cern.ch>
 #References:
 # - <Example: Phys.Lett.B639:151-158,2006, Erratum-ibid.B658:285-289,2008>
 # - <Example: doi:10.1016/j.physletb.2006.04.048>

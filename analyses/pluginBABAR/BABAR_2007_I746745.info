@@ -1,0 +1,38 @@
+Name: BABAR_2007_I746745
+Year: 2007
+Summary: Spectrum for $\Omega_c^0$ production at the $\Upsilon(4S)$
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 746745
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 99 (2007) 062001
+RunInfo: e+e- > hadrons at Upsilon(4S) including both resonant and non-resonance
+Beams: [e+, e-]
+Energies: [10.58]
+Description:
+'Spectrum for $\Omega_c^0$ production at the $\Upsilon(4S)$ measured by BaBar.
+ The spectrum includes a contribution from both the $\Upsilon(4S)$ and continuum $c\bar{c}$ events.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Aubert:2007bt
+BibTeX: '@article{Aubert:2007bt,
+      author         = "Aubert, Bernard and others",
+      title          = "{Production and decay of Omega0(c)}",
+      collaboration  = "BaBar",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "99",
+      year           = "2007",
+      pages          = "062001",
+      doi            = "10.1103/PhysRevLett.99.062001",
+      eprint         = "hep-ex/0703030",
+      archivePrefix  = "arXiv",
+      primaryClass   = "HEP-EX",
+      reportNumber   = "SLAC-PUB-12398, BABAR-PUB-07-010",
+      SLACcitation   = "%%CITATION = HEP-EX/0703030;%%"
+}'

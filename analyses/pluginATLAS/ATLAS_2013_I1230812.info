@@ -5,10 +5,12 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1230812
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Katharina Bierwagen <katharina.bierwagen@cern.ch>
  - Frank Siegert <frank.siegert@cern.ch>
 References:
+ - ATLAS-STDM-2012-04
  - arXiv:1304.7098 [hep-ex]
  - J. High Energy Phys. 07 (2013) 032
 RunInfo:
@@ -16,6 +18,7 @@ RunInfo:
 NumEvents: 1000000
 Beams: [p+, p+]
 Energies: [7000]
+Luminosity_fb: 4.6
 NeedCrossSection: True
 Options:
  - LMODE=EL,MU
@@ -50,3 +53,7 @@ BibTeX: '@article{Aad:2013ysa,
       reportNumber   = "CERN-PH-EP-2013-023",
       SLACcitation   = "%%CITATION = ARXIV:1304.7098;%%",
       }'
+
+ReleaseTests:
+ - $A LHC-Z-e
+

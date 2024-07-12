@@ -1,0 +1,276 @@
+{
+    "1283743": [
+        "Amplitude analysis of $e^+e^- \\to \\Upsilon(nS) \\pi^+\\pi^-$ at $\\sqrt{s}=10.865$~GeV", 
+        "Belle", 
+        "10.1103/PhysRevD.91.072003", 
+        null, 
+        "1403.0992", 
+        "ins1283743", 
+        null, 
+        [
+            "BELLE-PREPRINT-2014-4", 
+            "KEK-PREPRINT-2013-63"
+        ]
+    ], 
+    "1302818": [
+        "Search for $B^+ \\to e^+ \\nu$ and $B^+ \\to \\mu^+ \\nu$ decays using hadronic tagging", 
+        "Belle", 
+        "10.1103/PhysRevD.91.052016", 
+        null, 
+        "1406.6356", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2014-8", 
+            "KEK-PREPRINT-2014-2"
+        ]
+    ], 
+    "1324785": [
+        "Measurement of $e^+e^- \\to \\pi^+\\pi^-\\psi(2S)$ via Initial State Radiation at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.91.112007", 
+        null, 
+        "1410.7641", 
+        "ins1324785", 
+        null, 
+        []
+    ], 
+    "1326905": [
+        "Measurement of $B^0 \\to D_s^- K^0_S\\pi^+$ and $B^+ \\to D_s^- K^+K^+$ branching fractions", 
+        "Belle", 
+        "10.1103/PhysRevD.91.032008", 
+        null, 
+        "1411.2035", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2014-16", 
+            "KEK-PREPRINT-2014-27"
+        ]
+    ], 
+    "1330289": [
+        "Measurement of the $\\bar{B} \\rightarrow X_s \\gamma$ Branching Fraction with a Sum of Exclusive Decays", 
+        "Belle", 
+        "10.1103/PhysRevD.91.052004", 
+        null, 
+        "1411.7198", 
+        "ins1330289", 
+        null, 
+        [
+            "BELLE-PREPRINT-2014-15", 
+            "KEK-PREPRINT-2014-26"
+        ]
+    ], 
+    "1331399": [
+        "Search for $B_{s}^{0}\\rightarrow\\gamma\\gamma$ and a measurement of the branching fraction for $B_{s}^{0}\\rightarrow\\phi\\gamma$", 
+        "Belle", 
+        "10.1103/PhysRevD.91.011101", 
+        null, 
+        "1411.7771", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2014-18", 
+            "KEK-PREPRINT-2014-32"
+        ]
+    ], 
+    "1337783": [
+        "Measurement of the direct $CP$ asymmetry in $\\bar{B}\\rightarrow X_{s+d}\\gamma$ decays with a lepton tag", 
+        "Belle", 
+        "10.1103/PhysRevLett.114.151601", 
+        null, 
+        "1501.01702", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2014-37", 
+            "KEK Preprint 2014-37"
+        ]
+    ], 
+    "1341041": [
+        "Search for B decays to final states with the \u03b7$_{c}$ meson", 
+        "Belle", 
+        "10.1007/JHEP06(2015)132", 
+        null, 
+        "1501.06351", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2015-1", 
+            "KEK-PREPRINT-2014-42"
+        ]
+    ], 
+    "1341290": [
+        "Observation of X(3872) in B\u2192X(3872)K\u03c0 decays", 
+        "Belle", 
+        "10.1103/PhysRevD.91.051101", 
+        null, 
+        "1501.06867", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2014-22", 
+            "KEK-PREPRINT-2014-41"
+        ]
+    ], 
+    "1342448": [
+        "Search for the decay $B^+\\rightarrow\\overline{K}{}^{*0}K^{*+}$ at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.91.071101", 
+        null, 
+        "1502.00381", 
+        null, 
+        null, 
+        []
+    ], 
+    "1353536": [
+        "Measurement of the branching fraction of $B^+ \\to \\tau^+ \\nu_\\tau$ decays with the semileptonic tagging method", 
+        "Belle", 
+        "10.1103/PhysRevD.92.051102", 
+        null, 
+        "1503.05613", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2014-47"
+        ]
+    ], 
+    "1357984": [
+        "Evidence for the decay $B^{0} \\to \\eta \\pi^0$", 
+        "Belle", 
+        "10.1103/PhysRevD.92.011101", 
+        null, 
+        "1504.00957", 
+        null, 
+        null, 
+        [
+            "Belle-Preprint-2015-2", 
+            "UNIVERSITY-OF-CINCINNATI-PREPRINT-UCHEP-15-02", 
+            "KEK-Preprint-2014-45", 
+            "UCHEP-Preprint-2015-2", 
+            "KEK-PREPRINT-2014-45"
+        ]
+    ], 
+    "1358399": [
+        "Semi-inclusive studies of semileptonic $B_s$ decays at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.92.072013", 
+        null, 
+        "1504.02004", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2015-4", 
+            "KEK-PREPRINT-2015-1"
+        ]
+    ], 
+    "1358936": [
+        "Measurements of $B\\rightarrow \\bar{D} D_{s0} ^{*+}(2317)$ decay rates and a search for isospin partners of the $D_{s0}^{*+} (2317)$", 
+        "Belle", 
+        "10.1103/PhysRevD.91.092011", 
+        null, 
+        "1504.02637", 
+        null, 
+        null, 
+        []
+    ], 
+    "1364360": [
+        "Search for $B^+ \u2192 \u2113^+\u03bd_\u2113\u03b3$ decays with hadronic tagging using the full Belle data sample", 
+        "Belle", 
+        "10.1103/PhysRevD.91.112009", 
+        null, 
+        "1504.05831", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2015-6", 
+            "KEK-PREPRINT-2015-3"
+        ]
+    ], 
+    "1369998": [
+        "Study of $D^{**}$ production and light hadronic states in the $\\bar{B}^0 \\to D^{*+} \\omega \\pi^-$ decay", 
+        "Belle", 
+        "10.1103/PhysRevD.92.012013", 
+        null, 
+        "1505.03362", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2015-8", 
+            "KEK-PREPRINT-2015-5"
+        ]
+    ], 
+    "1370440": [
+        "First Observation of CP Violation in $\\overline{B}^0 \\to D^{(*)}_{\\rm CP} h^0$ Decays by a Combined Time-Dependent Analysis of BABAR and Belle Data", 
+        "BaBar", 
+        "10.1103/PhysRevLett.115.121604", 
+        null, 
+        "1505.04147", 
+        null, 
+        null, 
+        []
+    ], 
+    "1376480": [
+        "Measurement of $e^+e^- \\to \\gamma\\chi_{cJ}$ via initial state radiation at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.92.012011", 
+        null, 
+        "1506.05229", 
+        "ins1376480", 
+        null, 
+        []
+    ], 
+    "1380446": [
+        "First observation of the hadronic transition $ \\Upsilon(4S) \\to \\eta h_{b}(1P)$ and new measurement of the $h_b(1P)$ and $\\eta_b(1S)$ parameters", 
+        "Belle", 
+        "10.1103/PhysRevLett.115.142001", 
+        null, 
+        "1506.08914", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2015-9", 
+            "KEK-PREPRINT-2015-6"
+        ]
+    ], 
+    "1382593": [
+        "Measurement of the branching ratio of $\\bar{B} \\to D^{(\\ast)} \\tau^- \\bar{\\nu}_\\tau$ relative to $\\bar{B} \\to D^{(\\ast)} \\ell^- \\bar{\\nu}_\\ell$ decays with hadronic tagging at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.92.072014", 
+        null, 
+        "1507.03233", 
+        null, 
+        null, 
+        [
+            "KEK-REPORT-2015-18"
+        ]
+    ], 
+    "1391505": [
+        "Inclusive cross sections for pairs of identified light charged hadrons and for single protons in $e^+e^-$ at $\\sqrt{s}=$ 10.58 GeV", 
+        "Belle", 
+        "10.1103/PhysRevD.92.092007", 
+        null, 
+        "1509.00563", 
+        null, 
+        null, 
+        [
+            "BELLE-DRAFT-2015-12", 
+            "BELLE-PREPRINT-2015-12", 
+            "KEK-PREPRINT-2015-21", 
+            "KEK-DRAFT-2015-21"
+        ]
+    ], 
+    "1392799": [
+        "Observation of $B^{0} \\rightarrow p\\bar{\\Lambda} D^{(*)-}$", 
+        "Belle", 
+        "10.1103/PhysRevLett.115.221803", 
+        null, 
+        "1509.03034", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2015-13", 
+            "KEK-PREPRINT-2015-22"
+        ]
+    ]
+}

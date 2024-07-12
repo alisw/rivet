@@ -11,8 +11,7 @@ namespace Rivet {
   class CDF_1996_S3349578 : public Analysis {
   public:
 
-    /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(CDF_1996_S3349578);
+    RIVET_DEFAULT_ANALYSIS_CTOR(CDF_1996_S3349578);
 
 
     /// @name Analysis methods
@@ -31,54 +30,53 @@ namespace Rivet {
       declare(sj_E, "SmearedJets");
 
       /// Book histograms here, e.g.:
-      _h_3_mNJ = bookHisto1D(1, 1, 1);
-      _h_3_X3 = bookHisto1D(2, 1, 1);
-      _h_3_X4 = bookHisto1D(3, 1, 1);
-      _h_3_costheta3 = bookHisto1D(8, 1, 1);
-      _h_3_psi3 = bookHisto1D(9, 1, 1);
-      _h_3_f3 = bookHisto1D(14, 1, 1);
-      _h_3_f4 = bookHisto1D(14, 1, 2);
-      _h_3_f5 = bookHisto1D(14, 1, 3);
+      book(_h_3_mNJ ,1, 1, 1);
+      book(_h_3_X3 ,2, 1, 1);
+      book(_h_3_X4 ,3, 1, 1);
+      book(_h_3_costheta3 ,8, 1, 1);
+      book(_h_3_psi3 ,9, 1, 1);
+      book(_h_3_f3 ,14, 1, 1);
+      book(_h_3_f4 ,14, 1, 2);
+      book(_h_3_f5 ,14, 1, 3);
 
-      _h_4_mNJ = bookHisto1D(1, 1, 2);
-      _h_4_X3 = bookHisto1D(4, 1, 1);
-      _h_4_X4 = bookHisto1D(5, 1, 1);
-      _h_4_costheta3 = bookHisto1D(10, 1, 1);
-      _h_4_psi3 = bookHisto1D(11, 1, 1);
-      _h_4_f3 = bookHisto1D(15, 1, 1);
-      _h_4_f4 = bookHisto1D(15, 1, 2);
-      _h_4_f5 = bookHisto1D(15, 1, 3);
-      _h_4_XA = bookHisto1D(17, 1, 1);
-      _h_4_psiAB = bookHisto1D(19, 1, 1);
-      _h_4_fA = bookHisto1D(21, 1, 1);
-      _h_4_fB = bookHisto1D(21, 1, 2);
+      book(_h_4_mNJ ,1, 1, 2);
+      book(_h_4_X3 ,4, 1, 1);
+      book(_h_4_X4 ,5, 1, 1);
+      book(_h_4_costheta3 ,10, 1, 1);
+      book(_h_4_psi3 ,11, 1, 1);
+      book(_h_4_f3 ,15, 1, 1);
+      book(_h_4_f4 ,15, 1, 2);
+      book(_h_4_f5 ,15, 1, 3);
+      book(_h_4_XA ,17, 1, 1);
+      book(_h_4_psiAB ,19, 1, 1);
+      book(_h_4_fA ,21, 1, 1);
+      book(_h_4_fB ,21, 1, 2);
 
-      _h_5_mNJ = bookHisto1D(1, 1, 3);
-      _h_5_X3 = bookHisto1D(6, 1, 1);
-      _h_5_X4 = bookHisto1D(7, 1, 1);
-      _h_5_costheta3 = bookHisto1D(12, 1, 1);
-      _h_5_psi3 = bookHisto1D(13, 1, 1);
-      _h_5_f3 = bookHisto1D(16, 1, 1);
-      _h_5_f4 = bookHisto1D(16, 1, 2);
-      _h_5_f5 = bookHisto1D(16, 1, 3);
-      _h_5_XA = bookHisto1D(18, 1, 1);
-      _h_5_XC = bookHisto1D(18, 1, 2);
-      _h_5_psiAB = bookHisto1D(20, 1, 1);
-      _h_5_psiCD = bookHisto1D(20, 1, 2);
-      _h_5_fA = bookHisto1D(22, 1, 1);
-      _h_5_fB = bookHisto1D(23, 1, 1);
-      _h_5_fC = bookHisto1D(24, 1, 1);
-      _h_5_fD = bookHisto1D(25, 1, 1);
-
+      book(_h_5_mNJ ,1, 1, 3);
+      book(_h_5_X3 ,6, 1, 1);
+      book(_h_5_X4 ,7, 1, 1);
+      book(_h_5_costheta3 ,12, 1, 1);
+      book(_h_5_psi3 ,13, 1, 1);
+      book(_h_5_f3 ,16, 1, 1);
+      book(_h_5_f4 ,16, 1, 2);
+      book(_h_5_f5 ,16, 1, 3);
+      book(_h_5_XA ,18, 1, 1);
+      book(_h_5_XC ,18, 1, 2);
+      book(_h_5_psiAB ,20, 1, 1);
+      book(_h_5_psiCD ,20, 1, 2);
+      book(_h_5_fA ,22, 1, 1);
+      book(_h_5_fB ,23, 1, 1);
+      book(_h_5_fC ,24, 1, 1);
+      book(_h_5_fD ,25, 1, 1);
     }
 
 
     void analyze(const Event& event) {
       Jets jets;
       FourMomentum jetsystem(0.0, 0.0, 0.0, 0.0);
-      foreach (const Jet& jet, apply<JetAlg>(event, "SmearedJets").jets(Cuts::Et > 20.0*GeV, cmpMomByEt)) {
+      for (const Jet& jet : apply<JetAlg>(event, "SmearedJets").jets(Cuts::Et > 20.0*GeV, cmpMomByEt)) {
         bool separated = true;
-        foreach (const Jet& ref, jets) {
+        for (const Jet& ref : jets) {
           if (deltaR(jet, ref) < 0.9) {
             separated = false;
             break;
@@ -90,27 +88,26 @@ namespace Rivet {
         if (jets.size() >= 5) break;
       }
 
-      const double weight = event.weight();
       if (jets.size() > 4) {
-        _fiveJetAnalysis(jets, weight);
+        _fiveJetAnalysis(jets);
         jets.resize(4);
       }
       if (jets.size() > 3) {
-        _fourJetAnalysis(jets, weight);
+        _fourJetAnalysis(jets);
         jets.resize(3);
       }
       if (jets.size() > 2) {
-        _threeJetAnalysis(jets, weight);
+        _threeJetAnalysis(jets);
       }
     }
 
 
-    void _threeJetAnalysis(const Jets& jets, const double& weight) {
+    void _threeJetAnalysis(const Jets& jets) {
       MSG_DEBUG("3 jet analysis");
 
       double sumEt = 0.0;
       FourMomentum jetsystem(0.0, 0.0, 0.0, 0.0);
-      foreach (const Jet& jet, jets) {
+      for (const Jet& jet : jets) {
         sumEt += jet.Et();
         jetsystem += jet.momentum();
       }
@@ -121,7 +118,7 @@ namespace Rivet {
 
       const LorentzTransform cms_boost = LorentzTransform::mkFrameTransformFromBeta(jetsystem.betaVec());
       vector<FourMomentum> jets3;
-      foreach (Jet jet, jets) {
+      for (Jet jet : jets) {
         jets3.push_back(cms_boost.transform(jet.momentum()));
       }
       std::sort(jets3.begin(), jets3.end(), FourMomentum::byEDescending());
@@ -140,26 +137,24 @@ namespace Rivet {
       const double f4 = _safeMass(p4)/m3J;
       const double f5 = _safeMass(p5)/m3J;
 
-      _h_3_mNJ->fill(m3J, weight);
-      _h_3_X3->fill(X3, weight);
-      _h_3_X4->fill(X4, weight);
-      _h_3_costheta3->fill(costheta3, weight);
-      _h_3_psi3->fill(psi3, weight);
-      _h_3_f3->fill(f3, weight);
-      _h_3_f4->fill(f4, weight);
-      _h_3_f5->fill(f5, weight);
+      _h_3_mNJ->fill(m3J);
+      _h_3_X3->fill(X3);
+      _h_3_X4->fill(X4);
+      _h_3_costheta3->fill(costheta3);
+      _h_3_psi3->fill(psi3);
+      _h_3_f3->fill(f3);
+      _h_3_f4->fill(f4);
+      _h_3_f5->fill(f5);
 
     }
 
 
-
-
-    void _fourJetAnalysis(const Jets& jets, const double& weight) {
+    void _fourJetAnalysis(const Jets& jets) {
       MSG_DEBUG("4 jet analysis");
 
       double sumEt=0.0;
       FourMomentum jetsystem(0.0, 0.0, 0.0, 0.0);
-      foreach (const Jet& jet, jets) {
+      for (const Jet& jet : jets) {
         sumEt+=jet.Et();
         jetsystem+=jet.momentum();
       }
@@ -170,7 +165,7 @@ namespace Rivet {
 
       const LorentzTransform cms_boost = LorentzTransform::mkFrameTransformFromBeta(jetsystem.betaVec());
       vector<FourMomentum> jets4;
-      foreach (Jet jet, jets) {
+      for (Jet jet : jets) {
         jets4.push_back(cms_boost.transform(jet.momentum()));
       }
       std::sort(jets4.begin(), jets4.end(), FourMomentum::byEDescending());
@@ -204,29 +199,27 @@ namespace Rivet {
       const double XA = pA.E()/(pA.E()+pB.E());
       const double psiAB = _psi(pA, pB, pA+pB, pAV);
 
-      _h_4_mNJ->fill(m4J, weight);
-      _h_4_X3->fill(X3, weight);
-      _h_4_X4->fill(X4, weight);
-      _h_4_costheta3->fill(costheta3, weight);
-      _h_4_psi3->fill(psi3, weight);
-      _h_4_f3->fill(f3, weight);
-      _h_4_f4->fill(f4, weight);
-      _h_4_f5->fill(f5, weight);
-      _h_4_XA->fill(XA, weight);
-      _h_4_psiAB->fill(psiAB, weight);
-      _h_4_fA->fill(fA, weight);
-      _h_4_fB->fill(fB, weight);
+      _h_4_mNJ->fill(m4J);
+      _h_4_X3->fill(X3);
+      _h_4_X4->fill(X4);
+      _h_4_costheta3->fill(costheta3);
+      _h_4_psi3->fill(psi3);
+      _h_4_f3->fill(f3);
+      _h_4_f4->fill(f4);
+      _h_4_f5->fill(f5);
+      _h_4_XA->fill(XA);
+      _h_4_psiAB->fill(psiAB);
+      _h_4_fA->fill(fA);
+      _h_4_fB->fill(fB);
     }
 
 
-
-
-    void _fiveJetAnalysis(const Jets& jets, const double& weight) {
+    void _fiveJetAnalysis(const Jets& jets) {
       MSG_DEBUG("5 jet analysis");
 
       double sumEt=0.0;
       FourMomentum jetsystem(0.0, 0.0, 0.0, 0.0);
-      foreach (const Jet& jet, jets) {
+      for (const Jet& jet : jets) {
         sumEt+=jet.Et();
         jetsystem+=jet.momentum();
       }
@@ -237,7 +230,7 @@ namespace Rivet {
 
       const LorentzTransform cms_boost = LorentzTransform::mkFrameTransformFromBeta(jetsystem.betaVec());
       vector<FourMomentum> jets5;
-      foreach (Jet jet, jets) {
+      for (Jet jet : jets) {
         jets5.push_back(cms_boost.transform(jet.momentum()));
       }
       std::sort(jets5.begin(), jets5.end(), FourMomentum::byEDescending());
@@ -271,22 +264,22 @@ namespace Rivet {
       const double XC = pC.E()/(pC.E()+pD.E());
       const double psiCD = _psi(pC, pD, pC+pD, pAV);
 
-      _h_5_mNJ->fill(m5J, weight);
-      _h_5_X3->fill(X3, weight);
-      _h_5_X4->fill(X4, weight);
-      _h_5_costheta3->fill(costheta3, weight);
-      _h_5_psi3->fill(psi3, weight);
-      _h_5_f3->fill(f3, weight);
-      _h_5_f4->fill(f4, weight);
-      _h_5_f5->fill(f5, weight);
-      _h_5_XA->fill(XA, weight);
-      _h_5_psiAB->fill(psiAB, weight);
-      _h_5_fA->fill(fA, weight);
-      _h_5_fB->fill(fB, weight);
-      _h_5_XC->fill(XC, weight);
-      _h_5_psiCD->fill(psiCD, weight);
-      _h_5_fC->fill(fC, weight);
-      _h_5_fD->fill(fD, weight);
+      _h_5_mNJ->fill(m5J);
+      _h_5_X3->fill(X3);
+      _h_5_X4->fill(X4);
+      _h_5_costheta3->fill(costheta3);
+      _h_5_psi3->fill(psi3);
+      _h_5_f3->fill(f3);
+      _h_5_f4->fill(f4);
+      _h_5_f5->fill(f5);
+      _h_5_XA->fill(XA);
+      _h_5_psiAB->fill(psiAB);
+      _h_5_fA->fill(fA);
+      _h_5_fB->fill(fB);
+      _h_5_XC->fill(XC);
+      _h_5_psiCD->fill(psiCD);
+      _h_5_fC->fill(fC);
+      _h_5_fD->fill(fD);
     }
 
 
@@ -339,9 +332,8 @@ namespace Rivet {
 
 
   private:
-    vector<FourMomentum> _reduce(const vector<FourMomentum>& jets,
-                                 FourMomentum& combined1,
-                                 FourMomentum& combined2) {
+
+    vector<FourMomentum> _reduce(const vector<FourMomentum>& jets, FourMomentum& combined1, FourMomentum& combined2) {
       double minMass2 = 1e9;
       size_t idx1(jets.size()), idx2(jets.size());
       for (size_t i=0; i<jets.size(); ++i) {
@@ -363,6 +355,7 @@ namespace Rivet {
       return newjets;
     }
 
+
     FourMomentum _avg_beam_in_lab(const double& m, const double& y) {
       const double mt = m/2.0;
       FourMomentum beam1(mt, 0, 0, mt);
@@ -376,12 +369,14 @@ namespace Rivet {
       return (beam1.E() > beam2.E()) ? beam1-beam2 : beam2-beam1;
     }
 
+
     double _psi(const FourMomentum& p1, const FourMomentum& p2,
                 const FourMomentum& p3, const FourMomentum& p4) {
       Vector3 p1xp2 = p1.p3().cross(p2.p3());
       Vector3 p3xp4 = p3.p3().cross(p4.p3());
       return mapAngle0ToPi(acos(p1xp2.unit().dot(p3xp4.unit())));
     }
+
 
     double _safeMass(const FourMomentum& p) {
       double mass2=p.mass2();
@@ -442,7 +437,6 @@ namespace Rivet {
 
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CDF_1996_S3349578);
+  RIVET_DECLARE_ALIASED_PLUGIN(CDF_1996_S3349578, CDF_1996_I418504);
 
 }

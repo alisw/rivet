@@ -1,0 +1,34 @@
+Name: NA22_1986_I18431
+Year: 1986
+Summary: Multiplicity distributions in $pp$, $K^+ p$ and $\pi^+ p$ at $p_{\mathrm{lab}} = 250$ GeV/c
+Experiment: NA22
+Collider: SPS
+InspireID: 18431
+Status: VALIDATED
+Authors:
+ - Christian Bierlich <christian.bierlich@thep.lu.se>
+References:
+- 'Z.Phys. C32 (1986) 475'
+RunInfo: Fixed target events with $p$, $K^+$ and $\pi^+$ hitting a proton target.
+Beams: [[p+, p+], [321, p+], [211, p+]]
+Energies: [[250, 0], [250, 0], [250, 0]]
+Description:
+  'Charged multiplicity distributions of $pp$, $K^+ p$ and $\pi^+ p$ fixed target collisions,
+   $p_{\mathrm{lab}} = 250$ GeV/c or equivalently $\sqrt{s} = 21.7$ GeV/c (pp).'
+BibKey: Adamus:1986vn
+BibTeX: '@article{Adamus:1986vn,
+      author         = "Adamus, M. and others",
+      title          = "{Cross-Sections and Charged Multiplicity Distributions
+                        for pi+ p, K+ p and p p Interactions at 250-GeV/c}",
+      booktitle      = "{Proceedings, 23RD International Conference on High
+                        Energy Physics, JULY 16-23, 1986, Berkeley, CA}",
+      collaboration  = "NA22",
+      journal        = "Z. Phys.",
+      volume         = "C32",
+      year           = "1986",
+      pages          = "475",
+      doi            = "10.1007/BF01550769",
+      reportNumber   = "HEN-262",
+      SLACcitation   = "%%CITATION = ZEPYA,C32,475;%%"
+}'
+

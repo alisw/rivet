@@ -1,0 +1,35 @@
+Name: BESIII_2014_I1280710
+Year: 2014
+Summary: $\chi_{c(1,2)}\to \eta^\prime K^+K^-$
+Experiment: BESIII
+Collider: 
+InspireID: 1280710
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+RunInfo : Any process producing chi_c1 or chi_c2
+Description:
+  'Measurement of the mass distributions in the decays $\chi_{c(1,2)}\to \eta^\prime K^+K^-$.
+   The data were read from the plots in the paper and may not be corrected for efficiency.'
+References:
+ - Phys.Rev.D 89 (2014) 7, 074030
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2014dlb
+BibTeX: '@article{BESIII:2014dlb,
+    author = "Ablikim, M. and others",
+    collaboration = "BESIII",
+    title = "{Measurement of $\chi_{cJ}$ decaying into $\eta^{\prime}K^+K^-$}",
+    eprint = "1402.2023",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevD.89.074030",
+    journal = "Phys. Rev. D",
+    volume = "89",
+    number = "7",
+    pages = "074030",
+    year = "2014"
+}
+'

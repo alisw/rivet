@@ -11,7 +11,7 @@ namespace Rivet {
   class CDF_1997_S3541940 : public Analysis {
   public:
 
-    DEFAULT_RIVET_ANALYSIS_CTOR(CDF_1997_S3541940);
+    RIVET_DEFAULT_ANALYSIS_CTOR(CDF_1997_S3541940);
 
 
     void init() {
@@ -24,26 +24,26 @@ namespace Rivet {
       SmearedJets sj_E(fj, [](const Jet& jet){ return P4_SMEAR_MASS_GAUSS(P4_SMEAR_E_GAUSS(jet, 0.1*jet.E()), 0.1*jet.mass()); });
       declare(sj_E, "Jets");
 
-      _h_m6J = bookHisto1D(1, 1, 1);
-      _h_X3ppp = bookHisto1D(2, 1, 1);
-      _h_X4ppp = bookHisto1D(3, 1, 1);
-      _h_costheta3ppp = bookHisto1D(4, 1, 1);
-      _h_psi3ppp = bookHisto1D(5, 1, 1);
-      _h_f3ppp = bookHisto1D(6, 1, 1);
-      _h_f4ppp = bookHisto1D(6, 1, 2);
-      _h_f5ppp = bookHisto1D(6, 1, 3);
-      _h_XApp = bookHisto1D(7, 1, 1);
-      _h_XCp = bookHisto1D(8, 1, 1);
-      _h_XE = bookHisto1D(9, 1, 1);
-      _h_psiAppBpp = bookHisto1D(10, 1, 1);
-      _h_psiCpDp = bookHisto1D(11, 1, 1);
-      _h_psiEF = bookHisto1D(12, 1, 1);
-      _h_fApp = bookHisto1D(13, 1, 1);
-      _h_fBpp = bookHisto1D(14, 1, 1);
-      _h_fCp = bookHisto1D(15, 1, 1);
-      _h_fDp = bookHisto1D(16, 1, 1);
-      _h_fE = bookHisto1D(17, 1, 1);
-      _h_fF = bookHisto1D(18, 1, 1);
+      book(_h_m6J ,1, 1, 1);
+      book(_h_X3ppp ,2, 1, 1);
+      book(_h_X4ppp ,3, 1, 1);
+      book(_h_costheta3ppp ,4, 1, 1);
+      book(_h_psi3ppp ,5, 1, 1);
+      book(_h_f3ppp ,6, 1, 1);
+      book(_h_f4ppp ,6, 1, 2);
+      book(_h_f5ppp ,6, 1, 3);
+      book(_h_XApp ,7, 1, 1);
+      book(_h_XCp ,8, 1, 1);
+      book(_h_XE ,9, 1, 1);
+      book(_h_psiAppBpp ,10, 1, 1);
+      book(_h_psiCpDp ,11, 1, 1);
+      book(_h_psiEF ,12, 1, 1);
+      book(_h_fApp ,13, 1, 1);
+      book(_h_fBpp ,14, 1, 1);
+      book(_h_fCp ,15, 1, 1);
+      book(_h_fDp ,16, 1, 1);
+      book(_h_fE ,17, 1, 1);
+      book(_h_fF ,18, 1, 1);
     }
 
 
@@ -112,39 +112,37 @@ namespace Rivet {
       double costheta3ppp = pAV.p3().unit().dot(p3ppp.p3().unit());
       if (fabs(costheta3ppp) > 0.9) vetoEvent;
 
-      const double weight = event.weight();
-
       // 3-jet-system variables
-      _h_m6J->fill(m6J, weight);
-      _h_X3ppp->fill(X3ppp, weight);
-      _h_X4ppp->fill(2.0*p4ppp.E()/m6J, weight);
-      _h_costheta3ppp->fill(costheta3ppp, weight);
+      _h_m6J->fill(m6J);
+      _h_X3ppp->fill(X3ppp);
+      _h_X4ppp->fill(2.0*p4ppp.E()/m6J);
+      _h_costheta3ppp->fill(costheta3ppp);
       double psi3ppp = _psi(p3ppp, pAV, p4ppp, p5ppp);
-      _h_psi3ppp->fill(psi3ppp, weight);
-      _h_f3ppp->fill(_safeMass(p3ppp)/m6J, weight);
-      _h_f4ppp->fill(_safeMass(p4ppp)/m6J, weight);
-      _h_f5ppp->fill(_safeMass(p5ppp)/m6J, weight);
+      _h_psi3ppp->fill(psi3ppp);
+      _h_f3ppp->fill(_safeMass(p3ppp)/m6J);
+      _h_f4ppp->fill(_safeMass(p4ppp)/m6J);
+      _h_f5ppp->fill(_safeMass(p5ppp)/m6J);
 
       // 4 -> 3 jet variables
-      _h_fApp->fill(_safeMass(pApp)/m6J, weight);
-      _h_fBpp->fill(_safeMass(pApp)/m6J, weight);
-      _h_XApp->fill(pApp.E()/(pApp.E()+pBpp.E()), weight);
+      _h_fApp->fill(_safeMass(pApp)/m6J);
+      _h_fBpp->fill(_safeMass(pApp)/m6J);
+      _h_XApp->fill(pApp.E()/(pApp.E()+pBpp.E()));
       double psiAppBpp = _psi(pApp, pBpp, pApp+pBpp, pAV);
-      _h_psiAppBpp->fill(psiAppBpp, weight);
+      _h_psiAppBpp->fill(psiAppBpp);
 
       // 5 -> 4 jet variables
-      _h_fCp->fill(_safeMass(pCp)/m6J, weight);
-      _h_fDp->fill(_safeMass(pDp)/m6J, weight);
-      _h_XCp->fill(pCp.E()/(pCp.E()+pDp.E()), weight);
+      _h_fCp->fill(_safeMass(pCp)/m6J);
+      _h_fDp->fill(_safeMass(pDp)/m6J);
+      _h_XCp->fill(pCp.E()/(pCp.E()+pDp.E()));
       double psiCpDp = _psi(pCp, pDp, pCp+pDp, pAV);
-      _h_psiCpDp->fill(psiCpDp, weight);
+      _h_psiCpDp->fill(psiCpDp);
 
       // 6 -> 5 jet variables
-      _h_fE->fill(_safeMass(pE)/m6J, weight);
-      _h_fF->fill(_safeMass(pF)/m6J, weight);
-      _h_XE->fill(pE.E()/(pE.E()+pF.E()), weight);
+      _h_fE->fill(_safeMass(pE)/m6J);
+      _h_fF->fill(_safeMass(pF)/m6J);
+      _h_XE->fill(pE.E()/(pE.E()+pF.E()));
       double psiEF = _psi(pE, pF, pE+pF, pAV);
-      _h_psiEF->fill(psiEF, weight);
+      _h_psiEF->fill(psiEF);
     }
 
 
@@ -244,7 +242,6 @@ namespace Rivet {
 
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CDF_1997_S3541940);
+  RIVET_DECLARE_ALIASED_PLUGIN(CDF_1997_S3541940, CDF_1997_I442265);
 
 }

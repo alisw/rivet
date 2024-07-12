@@ -1,0 +1,72 @@
+{
+    "381777": [
+        "Measurement of the total hadronic cross-section and determination of gamma - Z interference in e+ e- annihilation", 
+        "TOPAZ", 
+        "10.1016/0370-2693(95)00038-M", 
+        null, 
+        null, 
+        "ins381777", 
+        null, 
+        [
+            "DPNU-94-47", 
+            "NWU-HEP-94-06", 
+            "KEK-PREPRINT-94-152", 
+            "TUAT-HEP-94-05", 
+            "TIT-HPE-94-11", 
+            "OCU-HEP-94-09", 
+            "PU-94-688", 
+            "INS-1074", 
+            "KOBE-HEP-94-08"
+        ]
+    ], 
+    "381900": [
+        "Measurement of inclusive particle spectra and test of MLLA prediction in e+ e- annihilation at s**(1/2) = 58-GeV", 
+        "TOPAZ", 
+        "10.1016/0370-2693(94)01685-6", 
+        null, 
+        "hep-ex/9412015", 
+        "ins381900", 
+        null, 
+        [
+            "KEK-PREPRINT-94-162", 
+            "NWU-HEP-94-07", 
+            "DPNU-94-59", 
+            "TIT-HPE-94-013", 
+            "TUAT-HEP-94-07", 
+            "OCU-HEP-94-07", 
+            "PU-94-692", 
+            "INS-1077", 
+            "KOBE-HEP-94-06"
+        ]
+    ], 
+    "392056": [
+        "Observation of excess lambda (anti-lambda) production in two photon processes at TRISTAN", 
+        "TOPAZ", 
+        "10.1016/0370-2693(95)00142-8", 
+        null, 
+        "hep-ex/9501002", 
+        "ins392056", 
+        null, 
+        [
+            "KEK-PREPRINT-94-177", 
+            "DPNU-94-58", 
+            "NWU-HEP-94-08", 
+            "TIT-HPE-94-13", 
+            "TUAT-HEP-94-08", 
+            "OCU-HEP-94-10", 
+            "PU-94-691", 
+            "INS-1076", 
+            "KOBE-HEP-94-09"
+        ]
+    ], 
+    "406593": [
+        "A Study of single photon production in e+ e- collisions at s**(1/2) = 58-GeV with the TOPAZ detector at TRISTAN", 
+        "TOPAZ", 
+        "10.1016/0370-2693(95)01177-R", 
+        null, 
+        null, 
+        "ins406593", 
+        null, 
+        []
+    ]
+}

@@ -1,0 +1,35 @@
+Name: FOCUS_2007_I741543
+Year: 2007
+Summary: Mass distributions in the decay $D^0\to \pi^+\pi^-\pi^+\pi^-$
+Experiment: FOCUS
+Collider: Fermilab
+InspireID: 741543
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 75 (2007) 052003
+RunInfo: Any process producing D0 mesons
+Description:
+  'Measurement of the mass distributions in the decay $D^0\to \pi^+\pi^-\pi^+\pi^-$ and $D^0\to K^+K^-\pi^+\pi^-$ by the FOCUS collaboration. The data were read from the plots in the paper and therefore for some points the error bars are the size of the point. It is also not clear that any resolution effects have been unfolded.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: FOCUS:2007ern
+BibTeX: '@article{FOCUS:2007ern,
+    author = "Link, J. M. and others",
+    collaboration = "FOCUS",
+    title = "{Study of the $D^0 \to \pi^{-} \pi^{+} \pi^{-} \pi^{+}$ decay}",
+    eprint = "hep-ex/0701001",
+    archivePrefix = "arXiv",
+    reportNumber = "FERMILAB-PUB-06-491-E",
+    doi = "10.1103/PhysRevD.75.052003",
+    journal = "Phys. Rev. D",
+    volume = "75",
+    pages = "052003",
+    year = "2007"
+}
+'

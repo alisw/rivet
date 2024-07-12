@@ -1,0 +1,62 @@
+{
+    "866047": [
+        "Measurement of azimuthal asymmetries associated with deeply virtual Compton scattering on a longitudinally polarized deuterium target", 
+        "HERMES", 
+        "10.1016/j.nuclphysb.2010.09.010", 
+        null, 
+        "1008.3996", 
+        null, 
+        null, 
+        [
+            "DESY-10-136"
+        ]
+    ], 
+    "881636": [
+        "Ratios of Helicity Amplitudes for Exclusive rho-0 Electroproduction", 
+        "HERMES", 
+        "10.1140/epjc/s10052-011-1609-2", 
+        null, 
+        "1012.3676", 
+        null, 
+        null, 
+        [
+            "DESY-10-229"
+        ]
+    ], 
+    "894309": [
+        "Inclusive Measurements of Inelastic Electron and Positron Scattering from Unpolarized Hydrogen and Deuterium Targets", 
+        "HERMES", 
+        "10.1007/JHEP05(2011)126", 
+        null, 
+        "1103.5704", 
+        "ins894309", 
+        null, 
+        [
+            "DESY-11-048"
+        ]
+    ], 
+    "913712": [
+        "Measurement of double-spin asymmetries associated with deeply virtual Compton scattering on a transversely polarized hydrogen target", 
+        "HERMES", 
+        "10.1016/j.physletb.2011.08.067", 
+        null, 
+        "1106.2990", 
+        null, 
+        null, 
+        [
+            "DESY-11-100"
+        ]
+    ], 
+    "918944": [
+        "Multidimensional Study of Hadronization in Nuclei", 
+        "HERMES", 
+        "10.1140/epja/i2011-11113-5", 
+        null, 
+        "1107.3496", 
+        null, 
+        null, 
+        [
+            "DESY-11-120"
+        ]
+    ]
+}

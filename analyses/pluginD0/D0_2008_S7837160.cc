@@ -9,19 +9,17 @@ namespace Rivet {
 
 
   /// @brief D0 Run II measurement of W charge asymmetry
+  ///
   /// @author Andy Buckley
   /// @author Gavin Hesketh
   class D0_2008_S7837160 : public Analysis {
   public:
 
-    /// Default constructor.
-    D0_2008_S7837160()
-      : Analysis("D0_2008_S7837160")
-    {    }
+    RIVET_DEFAULT_ANALYSIS_CTOR(D0_2008_S7837160);
 
 
     /// @name Analysis methods
-    //@{
+    /// @{
 
     // Book histograms and set up projections
     void init() {
@@ -34,13 +32,13 @@ namespace Rivet {
       // Histograms (temporary +- charge histos and scatters to store the calculated asymmetries)
       for (size_t pmindex = 0; pmindex < 2; ++pmindex) {
         const string suffix = (pmindex == 0) ? "plus" : "minus";
-        _hs_dsigpm_deta_25_35[pmindex] = bookHisto1D("TMP/dsigpm_deta_25_35_" + suffix, refData(1, 1, 1));
-        _hs_dsigpm_deta_35[pmindex] = bookHisto1D("TMP/dsigpm_deta_35_" + suffix, refData(1, 1, 2));
-        _hs_dsigpm_deta_25[pmindex] = bookHisto1D("TMP/dsigpm_deta_25_" + suffix, refData(1, 1, 3));
+        book(_hs_dsigpm_deta_25_35[pmindex] ,"TMP/dsigpm_deta_25_35_" + suffix, refData(1, 1, 1));
+        book(_hs_dsigpm_deta_35[pmindex] ,"TMP/dsigpm_deta_35_" + suffix, refData(1, 1, 2));
+        book(_hs_dsigpm_deta_25[pmindex] ,"TMP/dsigpm_deta_25_" + suffix, refData(1, 1, 3));
       }
-      _h_asym1 = bookScatter2D(1, 1, 1);
-      _h_asym2 = bookScatter2D(1, 1, 2);
-      _h_asym3 = bookScatter2D(1, 1, 3);
+      book(_h_asym1, 1, 1, 1);
+      book(_h_asym2, 1, 1, 2);
+      book(_h_asym3, 1, 1, 3);
     }
 
 
@@ -60,23 +58,11 @@ namespace Rivet {
       MSG_TRACE("Charged lepton sign = " << chg_e);
 
       // Fill histos with appropriate +- indexing
-      const double weight = event.weight();
       const size_t pmindex = (chg_e > 0) ? 0 : 1;
-      if (p_e.Et() < 35*GeV) _hs_dsigpm_deta_25_35[pmindex]->fill(fabs(p_e.eta()), weight);
-      else _hs_dsigpm_deta_35[pmindex]->fill(fabs(p_e.eta()), weight);
-      _hs_dsigpm_deta_25[pmindex]->fill(fabs(p_e.eta()), weight);
+      if (p_e.Et() < 35*GeV) _hs_dsigpm_deta_25_35[pmindex]->fill(fabs(p_e.eta()));
+      else _hs_dsigpm_deta_35[pmindex]->fill(fabs(p_e.eta()));
+      _hs_dsigpm_deta_25[pmindex]->fill(fabs(p_e.eta()));
     }
-
-
-    /// @name Helper functions for constructing asymmetry histograms in finalize()
-    //@{
-    void calc_asymm(const Histo1DPtr plus, const Histo1DPtr minus, Scatter2DPtr target) {
-      divide(*plus - *minus, *plus + *minus, target);
-    }
-    void calc_asymm(const Histo1DPtr histos[2], Scatter2DPtr target) {
-      calc_asymm(histos[0], histos[1], target);
-    }
-    //@}
 
 
     /// @brief Finalize
@@ -86,27 +72,38 @@ namespace Rivet {
       calc_asymm(_hs_dsigpm_deta_25_35, _h_asym1);
       calc_asymm(_hs_dsigpm_deta_35, _h_asym2);
       calc_asymm(_hs_dsigpm_deta_25, _h_asym3);
-      _h_asym1->scale(1.,100.);
-      _h_asym2->scale(1.,100.);
-      _h_asym3->scale(1.,100.);
+      _h_asym1->scaleY(100.);
+      _h_asym2->scaleY(100.);
+      _h_asym3->scaleY(100.);
     }
 
-    //@}
+    /// @}
 
 
   private:
 
+    /// @name Helper functions for constructing asymmetry histograms in finalize()
+    /// @{
+    void calc_asymm(const Histo1DPtr plus, const Histo1DPtr minus, Scatter2DPtr target) {
+      divide(*plus - *minus, *plus + *minus, target);
+    }
+    void calc_asymm(const Histo1DPtr histos[2], Scatter2DPtr target) {
+      calc_asymm(histos[0], histos[1], target);
+    }
+    /// @}
+
+
     /// @name Histograms
-    //@{
+    /// @{
     Histo1DPtr _hs_dsigpm_deta_25_35[2], _hs_dsigpm_deta_35[2], _hs_dsigpm_deta_25[2];
     Scatter2DPtr _h_asym1, _h_asym2, _h_asym3;
-    //@}
+    /// @}
 
   };
 
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(D0_2008_S7837160);
+
+  RIVET_DECLARE_ALIASED_PLUGIN(D0_2008_S7837160, D0_2008_I791230);
 
 }

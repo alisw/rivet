@@ -16,6 +16,17 @@ namespace Rivet {
   }
 
 
+  inline string _findFile(const vector<string>& filenames, const vector<string>& paths) {
+    for (const string& dir : paths) {
+      for (const string& filename : filenames) {
+        const string path = dir + "/" + filename;
+        if (fileexists(path)) return path;
+      }
+    }
+    return "";
+  }
+
+
   string getLibPath() {
     BrInitError error;
     br_init_lib(&error);
@@ -58,7 +69,7 @@ namespace Rivet {
     if (env) dirs += pathsplit(env);
     // ... otherwise fall back to the Rivet library install path unless the path ends in ::
     if (!env || strlen(env) < 2 || string(env).substr(strlen(env)-2) != "::")
-      dirs += getLibPath();
+      dirs += getLibPath() + "/Rivet";
     return dirs;
   }
 
@@ -97,7 +108,10 @@ namespace Rivet {
   string findAnalysisDataFile(const string& filename,
                               const vector<string>& pathprepend, const vector<string>& pathappend) {
     const vector<string> paths = pathprepend + getAnalysisDataPaths() + pathappend;
-    return _findFile(filename, paths);
+    vector<string> filenames = { filename, "" };
+    if (filename.find(".yoda.gz") == string::npos)  filenames[1] = filename + ".gz";
+    else   filenames[1] = filename.substr(0, filename.size()-3); // chop off ".gz"
+    return _findFile(filenames, paths);
   }
 
 
@@ -115,7 +129,10 @@ namespace Rivet {
   string findAnalysisRefFile(const string& filename,
                              const vector<string>& pathprepend, const vector<string>& pathappend) {
     const vector<string> paths = pathprepend + getAnalysisRefPaths() + pathappend;
-    return _findFile(filename, paths);
+    vector<string> filenames = { filename, "" };
+    if (filename.find(".yoda.gz") == string::npos)  filenames[1] = filename + ".gz";
+    else   filenames[1] = filename.substr(0, filename.size()-3); // chop off ".gz"
+    return _findFile(filenames, paths);
   }
 
 

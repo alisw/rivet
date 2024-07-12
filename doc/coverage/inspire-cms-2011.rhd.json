@@ -1,0 +1,940 @@
+{
+    "874738": [
+        "First Measurement of the Cross Section for Top-Quark Pair Production in Proton-Proton Collisions at $\\sqrt{s}=7$ TeV", 
+        "CMS", 
+        "10.1016/j.physletb.2010.11.058", 
+        "1303021", 
+        "1010.5994", 
+        "ins874738", 
+        null, 
+        [
+            "CMS-TOP-10-001", 
+            "CERN-PH-EP-2010-039"
+        ]
+    ], 
+    "878118": [
+        "Prompt and Non-Prompt $J/\\psi$ Production in $pp$ Collisions at $\\sqrt{s}=7$ TeV", 
+        "CMS", 
+        "10.1140/epjc/s10052-011-1575-8", 
+        "1308135", 
+        "1011.4193", 
+        "ins878118", 
+        null, 
+        [
+            "CERN-PH-EP-2010-046", 
+            "CMS-BPH-10-002"
+        ]
+    ], 
+    "879277": [
+        "Search for Stopped Gluinos in $pp$ collisions at $\\sqrt{s}=7$ TeV", 
+        "CMS", 
+        "10.1103/PhysRevLett.106.011801", 
+        "1309910", 
+        "1011.5861", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2010-049", 
+            "CMS-EXO-10-003"
+        ]
+    ], 
+    "879315": [
+        "Charged Particle Multiplicities in $pp$ Interactions at $\\sqrt{s}=0.9$, 2.36, and 7 TeV", 
+        "CMS", 
+        "10.1007/JHEP01(2011)079", 
+        "1309522", 
+        "1011.5531", 
+        "ins879315", 
+        null, 
+        [
+            "CERN-PH-EP-2010-048", 
+            "CMS-QCD-10-004"
+        ]
+    ], 
+    "879403": [
+        "Measurement of the Isolated Prompt Photon Production Cross Section in $pp$ Collisions at $\\sqrt{s} = 7$~TeV", 
+        "CMS", 
+        "10.1103/PhysRevLett.106.082001", 
+        "1311554", 
+        "1012.0799", 
+        "ins879403", 
+        null, 
+        [
+            "CERN-PH-EP-2010-053", 
+            "CMS-QCD-10-019"
+        ]
+    ], 
+    "881087": [
+        "Measurements of Inclusive $W$ and $Z$ Cross Sections in $pp$ Collisions at $\\sqrt{s}=7$ TeV", 
+        "CMS", 
+        "10.1007/JHEP01(2011)080", 
+        "1313495", 
+        "1012.2466", 
+        "ins881087", 
+        null, 
+        [
+            "CERN-PH-EP-2010-050", 
+            "CMS-EWK-10-002"
+        ]
+    ], 
+    "881434": [
+        "Search for Microscopic Black Hole Signatures at the Large Hadron Collider", 
+        "CMS", 
+        "10.1016/j.physletb.2011.02.032", 
+        "1314757", 
+        "1012.3375", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2010-073", 
+            "CMS-EXO-10-017"
+        ]
+    ], 
+    "881885": [
+        "Search for Pair Production of Second-Generation Scalar Leptoquarks in $pp$ Collisions at $\\sqrt{s}=7$ TeV", 
+        "CMS", 
+        "10.1103/PhysRevLett.106.201803", 
+        "1316193", 
+        "1012.4033", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2010-054", 
+            "CMS-EXO-10-007"
+        ]
+    ], 
+    "881886": [
+        "Search for Pair Production of First-Generation Scalar Leptoquarks in $pp$ Collisions at $\\sqrt{s}=7$ TeV", 
+        "CMS", 
+        "10.1103/PhysRevLett.106.201802", 
+        "1316192", 
+        "1012.4031", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2010-052", 
+            "CMS-EXO-10-005"
+        ]
+    ], 
+    "882871": [
+        "Upsilon Production Cross-Section in pp Collisions at $\\sqrt{s}$=7 TeV", 
+        "CMS", 
+        "10.1103/PhysRevD.83.112004", 
+        "1317914", 
+        "1012.5545", 
+        "ins882871", 
+        null, 
+        [
+            "CERN-PH-EP-2010-055", 
+            "CMS-BPH-10-003"
+        ]
+    ], 
+    "882963": [
+        "Search for a Heavy Gauge Boson $W$ ' in the Final State with an Electron and Large Missing Transverse Energy in $pp$ Collisions at $\\sqrt{s}=7$ TeV", 
+        "CMS", 
+        "10.1016/j.physletb.2011.02.048", 
+        "1317930", 
+        "1012.5945", 
+        null, 
+        null, 
+        [
+            "CMS-EXO-10-014", 
+            "CERN-PH-EP-2010-074"
+        ]
+    ], 
+    "883318": [
+        "Measurement of the $B^+$ Production Cross Section in pp Collisions at $\\sqrt{s} = 7$~TeV", 
+        "CMS", 
+        "10.1103/PhysRevLett.106.112001", 
+        "1318453", 
+        "1101.0131", 
+        "ins883318", 
+        null, 
+        [
+            "CERN-PH-EP-2010-087", 
+            "CMS-BPH-10-004"
+        ]
+    ], 
+    "883765": [
+        "Search for Heavy Stable Charged Particles in $pp$ collisions at $\\sqrt{s}=7$ TeV", 
+        "CMS", 
+        "10.1007/JHEP03(2011)024", 
+        "1320944", 
+        "1101.1645", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2010-067", 
+            "CMS-EXO-10-011"
+        ]
+    ], 
+    "883771": [
+        "Search for Supersymmetry in pp Collisions at 7 TeV in Events with Jets and Missing Transverse Energy", 
+        "CMS", 
+        "10.1016/j.physletb.2011.03.021", 
+        "1320934", 
+        "1101.1628", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2010-084", 
+            "CMS-SUS-10-003"
+        ]
+    ], 
+    "884808": [
+        "Measurement of Bose-Einstein Correlations in $pp$ Collisions at $\\sqrt{s}=0.9$ and 7 TeV", 
+        "CMS", 
+        "10.1007/JHEP05(2011)029", 
+        "1323062", 
+        "1101.3518", 
+        "ins884808", 
+        null, 
+        [
+            "CERN-PH-EP-2010-091", 
+            "CMS-QCD-10-023"
+        ]
+    ], 
+    "884811": [
+        "Inclusive b-Hadron Production Cross Section with Muons in $pp$ Collisions at $\\sqrt{s} = 7$ TeV", 
+        "CMS", 
+        "10.1007/JHEP03(2011)090", 
+        "1323060", 
+        "1101.3512", 
+        "ins884811", 
+        null, 
+        [
+            "CERN-PH-EP-2010-088", 
+            "CMS-BPH-10-007"
+        ]
+    ], 
+    "885663": [
+        "Dijet Azimuthal Decorrelations in $pp$ Collisions at $\\sqrt{s} = 7$~TeV", 
+        "CMS", 
+        "10.1103/PhysRevLett.106.122003", 
+        "1324819", 
+        "1101.5029", 
+        "ins885663", 
+        null, 
+        [
+            "CERN-PH-EP-2010-086", 
+            "CMS-QCD-10-026"
+        ]
+    ], 
+    "886332": [
+        "First Measurement of Hadronic Event Shapes in $pp$ Collisions at $\\sqrt {s}=7$ TeV", 
+        "CMS", 
+        "10.1016/j.physletb.2011.03.060", 
+        "1325624", 
+        "1102.0068", 
+        "ins886332", 
+        null, 
+        [
+            "CERN-PH-EP-2010-072", 
+            "CMS-QCD-10-013"
+        ]
+    ], 
+    "889010": [
+        "Observation and studies of jet quenching in PbPb collisions at nucleon-nucleon center-of-mass energy = 2.76 TeV", 
+        "CMS", 
+        "10.1103/PhysRevC.84.024906", 
+        "1327643", 
+        "1102.1957", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-001", 
+            "CMS-HIN-10-004"
+        ]
+    ], 
+    "889175": [
+        "Measurement of Dijet Angular Distributions and Search for Quark Compositeness in pp Collisions at $sqrt{s} = 7$ TeV", 
+        "CMS", 
+        "10.1103/PhysRevLett.106.201804", 
+        "1327689", 
+        "1102.2020", 
+        "ins889175", 
+        null, 
+        [
+            "CERN-PH-EP-2010-092", 
+            "CMS-QCD-10-016", 
+            "CERN-EP-PH-2010-092"
+        ]
+    ], 
+    "889807": [
+        "Measurement of $B\\bar{B}$ Angular Correlations based on Secondary Vertex Reconstruction at $\\sqrt{s}=7$ TeV", 
+        "CMS", 
+        "10.1007/JHEP03(2011)136", 
+        "1329400", 
+        "1102.3194", 
+        "ins889807", 
+        null, 
+        [
+            "CERN-PH-EP-10-093", 
+            "CMS-BPH-10-010"
+        ]
+    ], 
+    "890166": [
+        "Strange Particle Production in $pp$ Collisions at $\\sqrt{s}=0.9$ and 7 TeV", 
+        "CMS", 
+        "10.1007/JHEP05(2011)064", 
+        "1330706", 
+        "1102.4282", 
+        "ins890166", 
+        null, 
+        [
+            "CERN-PH-EP-2010-094", 
+            "CMS-QCD-10-007"
+        ]
+    ], 
+    "890505": [
+        "Search for a Heavy Bottom-like Quark in $pp$ Collisions at $\\sqrt{s} = 7$ TeV", 
+        "CMS", 
+        "10.1016/j.physletb.2011.05.074", 
+        "1331575", 
+        "1102.4746", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-009", 
+            "CMS-EXO-10-018"
+        ]
+    ], 
+    "890909": [
+        "Study of Z boson production in PbPb collisions at $\\sqrt{s_{NN}}$ = 2.76 TeV", 
+        "CMS", 
+        "10.1103/PhysRevLett.106.212301", 
+        "1332232", 
+        "1102.5435", 
+        "ins890909", 
+        null, 
+        [
+            "CERN-PH-EP-2011-003", 
+            "CMS-HIN-10-003"
+        ]
+    ], 
+    "890910": [
+        "Measurement of $W^+ W^-$ production and search for the Higgs boson in pp collisions at $\\sqrt s=7$ TeV", 
+        "CMS", 
+        "10.1016/j.physletb.2011.03.056", 
+        "1332217", 
+        "1102.5429", 
+        "ins890910", 
+        null, 
+        [
+            "CERN-PH-EP-2011-015", 
+            "CMS-EWK-10-009"
+        ]
+    ], 
+    "891040": [
+        "Search for a $W^\\prime$ boson decaying to a muon and a neutrino in $pp$ collisions at $\\sqrt{s} = 7$ TeV", 
+        "CMS", 
+        "10.1016/j.physletb.2011.05.048", 
+        "1332588", 
+        "1103.0030", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-012", 
+            "CMS-EXO-10-015"
+        ]
+    ], 
+    "891470": [
+        "Search for Resonances in the Dilepton Mass Distribution in $pp$ Collisions at $\\sqrt{s} = 7$ TeV", 
+        "CMS", 
+        "10.1007/JHEP05(2011)093", 
+        "1333970", 
+        "1103.0981", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-002", 
+            "CMS-EXO-10-013"
+        ]
+    ], 
+    "891482": [
+        "Search for Supersymmetry in $pp$ Collisions at $\\sqrt{s} = 7$ TeV in Events with Two Photons and Missing Transverse Energy", 
+        "CMS", 
+        "10.1103/PhysRevLett.106.211802", 
+        "1333965", 
+        "1103.0953", 
+        "ins891482", 
+        null, 
+        [
+            "CERN-PH-EP-2011-007", 
+            "CMS-SUS-10-002"
+        ]
+    ], 
+    "891814": [
+        "Search for Physics Beyond the Standard Model in Opposite-Sign Dilepton Events at $\\sqrt{s} = 7$ TeV", 
+        "CMS", 
+        "10.1007/JHEP06(2011)026", 
+        "1333985", 
+        "1103.1348", 
+        null, 
+        null, 
+        [
+            "CMS-SUS-10-007", 
+            "CERN-PH-EP-2011-016"
+        ]
+    ], 
+    "892975": [
+        "Measurement of the lepton charge asymmetry in inclusive $W$ production in pp collisions at $\\sqrt{s} = 7$ TeV", 
+        "CMS", 
+        "10.1007/JHEP04(2011)050", 
+        "1336774", 
+        "1103.3470", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-024", 
+            "CMS-EWK-10-006"
+        ]
+    ], 
+    "893512": [
+        "Search for Large Extra Dimensions in the Diphoton Final State at the Large Hadron Collider", 
+        "CMS", 
+        "10.1007/JHEP05(2011)085", 
+        "1337288", 
+        "1103.4279", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-020", 
+            "CMS-EXO-10-026"
+        ]
+    ], 
+    "895579": [
+        "Search for Neutral MSSM Higgs Bosons Decaying to Tau Pairs in $pp$ Collisions at $\\sqrt{s}=7$ TeV", 
+        "CMS", 
+        "10.1103/PhysRevLett.106.231801", 
+        "1343466", 
+        "1104.1619", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-027", 
+            "CMS-HIG-10-002", 
+            "CERN-EP-PH-2011-027"
+        ]
+    ], 
+    "895581": [
+        "Measurement of the Inclusive Z Cross Section via Decays to Tau Pairs in $pp$ Collisions at $\\sqrt{s}=7$ TeV", 
+        "CMS", 
+        "10.1007/JHEP08(2011)117", 
+        "1343465", 
+        "1104.1617", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-035", 
+            "CMS-EWK-10-013"
+        ]
+    ], 
+    "895742": [
+        "Measurement of the differential dijet production cross section in proton-proton collisions at $\\sqrt{s}=7$ TeV", 
+        "CMS", 
+        "10.1016/j.physletb.2011.05.027", 
+        "1343467", 
+        "1104.1693", 
+        "ins895742", 
+        null, 
+        [
+            "CERN-PH-EP-2011-042", 
+            "CMS-QCD-10-025"
+        ]
+    ], 
+    "896211": [
+        "Measurement of the $B^0$ production cross section in $pp$ Collisions at $\\sqrt{s}=7$ TeV", 
+        "CMS", 
+        "10.1103/PhysRevLett.106.252001", 
+        "1344785", 
+        "1104.2892", 
+        "ins896211", 
+        null, 
+        [
+            "CERN-PH-EP-2011-034", 
+            "CMS-BPH-10-005"
+        ]
+    ], 
+    "896527": [
+        "Search for new physics with same-sign isolated dilepton events with jets and missing transverse energy at the LHC", 
+        "CMS", 
+        "10.1007/JHEP06(2011)077", 
+        "1345080", 
+        "1104.3168", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-033", 
+            "CMS-SUS-10-004"
+        ]
+    ], 
+    "896585": [
+        "Measurement of the Polarization of W Bosons with Large Transverse Momenta in W+Jets Events at the LHC", 
+        "CMS", 
+        "10.1103/PhysRevLett.107.021802", 
+        "1345777", 
+        "1104.3829", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-043", 
+            "CMS-EWK-10-014"
+        ]
+    ], 
+    "896764": [
+        "Charged particle transverse momentum spectra in $pp$ collisions at $\\sqrt{s} = 0.9$ and 7 TeV", 
+        "CMS", 
+        "10.1007/JHEP08(2011)086", 
+        "1345345", 
+        "1104.3547", 
+        "ins896764", 
+        null, 
+        [
+            "CERN-PH-EP-2011-049", 
+            "CMS-QCD-10-008"
+        ]
+    ], 
+    "899324": [
+        "Long-range and short-range dihadron angular correlations in central PbPb collisions at a nucleon-nucleon center of mass energy of 2.76 TeV", 
+        "CMS", 
+        "10.1007/JHEP07(2011)076", 
+        "1350485", 
+        "1105.2438", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-056", 
+            "CMS-HIN-11-001"
+        ]
+    ], 
+    "899577": [
+        "Measurement of $W\\gamma$ and $Z\\gamma$ production in $pp$ collisions at $\\sqrt{s} = 7$ TeV", 
+        "CMS", 
+        "10.1016/j.physletb.2011.06.034", 
+        "1350795", 
+        "1105.2758", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-045", 
+            "CMS-EWK-10-008"
+        ]
+    ], 
+    "900114": [
+        "Search for supersymmetry in events with a lepton, a photon, and large missing transverse energy in $pp$ collisions at $\\sqrt{s}=7$ TeV", 
+        "CMS", 
+        "10.1007/JHEP06(2011)093", 
+        "1349283", 
+        "1105.3152", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-058", 
+            "CMS-SUS-11-002"
+        ]
+    ], 
+    "901277": [
+        "Indications of suppression of excited $\\Upsilon$ states in PbPb collisions at $\\sqrt{S_{NN}}$ = 2.76 TeV", 
+        "CMS", 
+        "10.1103/PhysRevLett.107.052302", 
+        "1353521", 
+        "1105.4894", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-074", 
+            "CMS-HIN-11-007"
+        ]
+    ], 
+    "901401": [
+        "Search for First Generation Scalar Leptoquarks in the e$\\nu$jj channel in $pp$ collisions at $\\sqrt{s}=$ 7 TeV", 
+        "CMS", 
+        "10.1016/j.physletb.2011.07.089", 
+        "1353559", 
+        "1105.5237", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-062", 
+            "CMS-EXO-10-006"
+        ]
+    ], 
+    "901829": [
+        "Measurement of the $t\\bar{t}$ production cross section and the top quark mass in the dilepton channel in $pp$ collisions at $\\sqrt{s}=7$ TeV", 
+        "CMS", 
+        "10.1007/JHEP07(2011)049", 
+        "1354223", 
+        "1105.5661", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-055", 
+            "CMS-TOP-11-002"
+        ]
+    ], 
+    "902309": [
+        "Measurement of the Inclusive Jet Cross Section in $pp$ Collisions at $\\sqrt{s}=7$ TeV", 
+        "CMS", 
+        "10.1103/PhysRevLett.107.132001", 
+        "1355680", 
+        "1106.0208", 
+        "ins902309", 
+        null, 
+        [
+            "CERN-PH-EP-2011-053", 
+            "CMS-QCD-10-011"
+        ]
+    ], 
+    "912560": [
+        "Measurement of the ratio of the 3-jet to 2-jet cross sections in $pp$ collisions at $\\sqrt{s} = 7$ TeV", 
+        "CMS", 
+        "10.1016/j.physletb.2011.07.067", 
+        "1356152", 
+        "1106.0647", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-044", 
+            "CMS-QCD-10-012"
+        ]
+    ], 
+    "912697": [
+        "Search for physics beyond the standard model using multilepton signatures in $pp$ collisions at $\\sqrt{s}=$ 7 TeV", 
+        "CMS", 
+        "10.1016/j.physletb.2011.09.047", 
+        "1356211", 
+        "1106.0933", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-046", 
+            "CMS-SUS-10-008"
+        ]
+    ], 
+    "912706": [
+        "Measurement of the Top-antitop Production Cross Section in $pp$ Collisions at $\\sqrt{s}=7$ TeV using the Kinematic Properties of Events with Leptons and Jets", 
+        "CMS", 
+        "10.1140/epjc/s10052-011-1721-3", 
+        "1356210", 
+        "1106.0902", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-060", 
+            "CMS-TOP-10-002"
+        ]
+    ], 
+    "913321": [
+        "Search for Same-Sign Top-Quark Pair Production at $\\sqrt{s}=7$ TeV and Limits on Flavour Changing Neutral Currents in the Top Sector", 
+        "CMS", 
+        "10.1007/JHEP08(2011)005", 
+        "1357897", 
+        "1106.2142", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-087", 
+            "CMS-EXO-11-065"
+        ]
+    ], 
+    "913455": [
+        "Search for Light Resonances Decaying into Pairs of Muons as a Signal of New Physics", 
+        "CMS", 
+        "10.1007/JHEP07(2011)098", 
+        "1357916", 
+        "1106.2375", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-064", 
+            "CMS-EXO-11-013"
+        ]
+    ], 
+    "913689": [
+        "Measurement of the $t$-channel single top quark production cross section in $pp$ collisions at $\\sqrt{s}=7$ TeV", 
+        "CMS", 
+        "10.1103/PhysRevLett.107.091802", 
+        "1359133", 
+        "1106.3052", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-066", 
+            "CMS-TOP-10-008"
+        ]
+    ], 
+    "913831": [
+        "Search for Supersymmetry in Events with b Jets and Missing Transverse Momentum at the LHC", 
+        "CMS", 
+        "10.1007/JHEP07(2011)113", 
+        "1359615", 
+        "1106.3272", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-067", 
+            "CMS-SUS-10-011"
+        ]
+    ], 
+    "914325": [
+        "Measurement of the Strange $B$ Meson Production Cross Section with J/Psi $\\phi$ Decays in $pp$ Collisions at $\\sqrt{s}=7$ TeV", 
+        "CMS", 
+        "10.1103/PhysRevD.84.052008", 
+        "1360175", 
+        "1106.4048", 
+        "ins914325", 
+        null, 
+        [
+            "CERN-PH-EP-2011-063", 
+            "CMS-BPH-10-013"
+        ]
+    ], 
+    "914487": [
+        "Search for New Physics with Jets and Missing Transverse Momentum in $pp$ collisions at $\\sqrt{s}=7$ TeV", 
+        "CMS", 
+        "10.1007/JHEP08(2011)155", 
+        "1360985", 
+        "1106.4503", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-065", 
+            "CMS-SUS-10-005"
+        ]
+    ], 
+    "914953": [
+        "Search for New Physics with a Mono-Jet and Missing Transverse Energy in $pp$ Collisions at $\\sqrt{s} = 7$ TeV", 
+        "CMS", 
+        "10.1103/PhysRevLett.107.201804", 
+        "1361284", 
+        "1106.4775", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-070", 
+            "CMS-EXO-11-003"
+        ]
+    ], 
+    "915810": [
+        "Missing transverse energy performance of the CMS detector", 
+        "CMS", 
+        "10.1088/1748-0221/6/09/P09001", 
+        "1361632", 
+        "1106.5048", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-051", 
+            "CMS-JME-10-009"
+        ]
+    ], 
+    "916908": [
+        "Measurement of the Underlying Event Activity at the LHC with $\\sqrt{s}= 7$ TeV and Comparison with $\\sqrt{s} = 0.9$ TeV", 
+        "CMS", 
+        "10.1007/JHEP09(2011)109", 
+        "1363299", 
+        "1107.0330", 
+        "ins916908", 
+        null, 
+        [
+            "CERN-PH-EP-2011-059", 
+            "CMS-QCD-10-010"
+        ]
+    ], 
+    "917583": [
+        "A search for excited leptons in $pp$ Collisions at $\\sqrt{s}=$ 7 TeV", 
+        "CMS", 
+        "10.1016/j.physletb.2011.09.021", 
+        "1366354", 
+        "1107.1773", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-081", 
+            "CMS-EXO-10-016"
+        ]
+    ], 
+    "917588": [
+        "Search for supersymmetry in $pp$ collisions at $\\sqrt{s}=7$ TeV in events with a single lepton, jets, and missing transverse momentum", 
+        "CMS", 
+        "10.1007/JHEP08(2011)156", 
+        "1366381", 
+        "1107.1870", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-084", 
+            "CMS-SUS-10-006"
+        ]
+    ], 
+    "918745": [
+        "Search for Three-Jet Resonances in $pp$ Collisions at $\\sqrt{s}=7$ TeV", 
+        "CMS", 
+        "10.1103/PhysRevLett.107.101801", 
+        "1367878", 
+        "1107.3084", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-089", 
+            "CMS-EXO-11-001"
+        ]
+    ], 
+    "919443": [
+        "Determination of Jet Energy Calibration and Transverse Momentum Resolution in CMS", 
+        "CMS", 
+        "10.1088/1748-0221/6/11/P11002", 
+        "1369486", 
+        "1107.4277", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-102", 
+            "CMS-JME-10-011"
+        ]
+    ], 
+    "919733": [
+        "Dependence on pseudorapidity and centrality of charged hadron production in PbPb collisions at a nucleon-nucleon centre-of-mass energy of 2.76 TeV", 
+        "CMS", 
+        "10.1007/JHEP08(2011)141", 
+        "1370087", 
+        "1107.4800", 
+        "ins919733", 
+        null, 
+        [
+            "CERN-PH-EP-2011-092", 
+            "CMS-HIN-10-001"
+        ]
+    ], 
+    "919737": [
+        "Measurement of the Inclusive $W$ and $Z$ Production Cross Sections in $pp$ Collisions at $\\sqrt{s}=7$ TeV", 
+        "CMS", 
+        "10.1007/JHEP10(2011)132", 
+        "1370079", 
+        "1107.4789", 
+        "ins919737", 
+        null, 
+        [
+            "CERN-PH-EP-2011-107", 
+            "CMS-EWK-10-005"
+        ]
+    ], 
+    "919742": [
+        "Search for Resonances in the Dijet Mass Spectrum from 7 TeV pp Collisions at CMS", 
+        "CMS", 
+        "10.1016/j.physletb.2011.09.015", 
+        "1370086", 
+        "1107.4771", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-119", 
+            "CMS-EXO-11-015"
+        ]
+    ], 
+    "921468": [
+        "Search for B(s) and B to dimuon decays in pp collisions at 7 TeV", 
+        "CMS", 
+        "10.1103/PhysRevLett.107.191802", 
+        "1371756", 
+        "1107.5834", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-120", 
+            "CMS-BPH-11-002"
+        ]
+    ], 
+    "921788": [
+        "Measurement of the Drell-Yan Cross Section in $pp$ Collisions at $\\sqrt{s}=7$ TeV", 
+        "CMS", 
+        "10.1007/JHEP10(2011)007", 
+        "1372196", 
+        "1108.0566", 
+        "ins921788", 
+        null, 
+        [
+            "CERN-PH-EP-2011-093", 
+            "CMS-EWK-10-007"
+        ]
+    ], 
+    "922830": [
+        "Measurement of the Differential Cross Section for Isolated Prompt Photon Production in pp Collisions at 7 TeV", 
+        "CMS", 
+        "10.1103/PhysRevD.84.052011", 
+        "1374176", 
+        "1108.2044", 
+        "ins922830", 
+        null, 
+        [
+            "CERN-PH-EP-2011-128", 
+            "CMS-QCD-10-037"
+        ]
+    ], 
+    "924377": [
+        "Measurement of the $t \\bar{t}$ Production Cross Section in $pp$ Collisions at 7 TeV in Lepton + Jets Events Using $b$-quark Jet Identification", 
+        "CMS", 
+        "10.1103/PhysRevD.84.092004", 
+        "1376068", 
+        "1108.3773", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-085", 
+            "CMS-TOP-10-003"
+        ]
+    ], 
+    "927049": [
+        "Search for Supersymmetry at the LHC in Events with Jets and Missing Transverse Energy", 
+        "CMS", 
+        "10.1103/PhysRevLett.107.221804", 
+        "1381201", 
+        "1109.2352", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-138", 
+            "CMS-SUS-11-003"
+        ]
+    ], 
+    "928282": [
+        "Search for a Vector-like Quark with Charge 2/3 in $t$ + $Z$ Events from $pp$ Collisions at $\\sqrt{s}=7$ TeV", 
+        "CMS", 
+        "10.1103/PhysRevLett.107.271802", 
+        "1384467", 
+        "1109.4985", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-139", 
+            "CMS-EXO-11-005"
+        ]
+    ], 
+    "930319": [
+        "Measurement of energy flow at large pseudorapidities in $pp$ collisions at $\\sqrt{s} = 0.9$ and 7 TeV", 
+        "CMS", 
+        "10.1007/JHEP11(2011)148", 
+        "1386739", 
+        "1110.0211", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-086", 
+            "CMS-FWD-10-011"
+        ]
+    ], 
+    "939559": [
+        "Measurement of the weak mixing angle with the Drell-Yan process in proton-proton collisions at the LHC", 
+        "CMS", 
+        "10.1103/PhysRevD.84.112002", 
+        "1389520", 
+        "1110.2682", 
+        null, 
+        null, 
+        [
+            "CMS-EWK-11-003", 
+            "CERN-PH-EP-2011-159"
+        ]
+    ]
+}

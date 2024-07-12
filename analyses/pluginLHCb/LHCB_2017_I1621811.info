@@ -1,0 +1,36 @@
+Name: LHCB_2017_I1621811
+Year: 2017
+Summary:  Differential Decay rates for $\Lambda_b^0\to \Lambda_c^+ \mu^-\bar{\nu}_\mu$
+Experiment: LHCB
+Collider: LHC
+InspireID: 1621811
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardsomn <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 96 (2017) 11, 112005
+RunInfo: Any process producing Lambda_b0 baryons, originally pp
+Description:
+  'Differential decay rates for semileptonic $\Lambda_b^0\to \Lambda_c^+ \mu^-\bar{\nu}_\mu$ decays'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: LHCb:2017vhq
+BibTeX: '@article{LHCb:2017vhq,
+    author = "Aaij, Roel and others",
+    collaboration = "LHCb",
+    title = "{Measurement of the shape of the $\Lambda_b^0\to\Lambda_c^+ \mu^- \overline{\nu}_{\mu}$ differential decay rate}",
+    eprint = "1709.01920",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CERN-EP-2017-164, LHCB-PAPER-2017-016, CERN-PH-EP-2017-164",
+    doi = "10.1103/PhysRevD.96.112005",
+    journal = "Phys. Rev. D",
+    volume = "96",
+    number = "11",
+    pages = "112005",
+    year = "2017"
+}'

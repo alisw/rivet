@@ -1,4 +1,4 @@
-SUBDIRS = yamlcpp
+SUBDIRS = yamlcpp .
 
 EXTRA_DIST = zstr
 

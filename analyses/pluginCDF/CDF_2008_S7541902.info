@@ -6,6 +6,7 @@ Collider: Tevatron Run 2
 SpiresID: 7541902
 InspireID: 768579
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Ben Cooper <b.d.cooper@qmul.ac.uk>
  - Emily Nurse <nurse@hep.ucl.ac.uk>
@@ -58,3 +59,7 @@ BibTeX: '@Article{Aaltonen:2007ip,
      doi       = "10.1103/PhysRevD.77.011108",
      SLACcitation  = "%%CITATION = 0711.4044;%%"
 }'
+
+ReleaseTests:
+ - $A TVT-Run-II-W
+

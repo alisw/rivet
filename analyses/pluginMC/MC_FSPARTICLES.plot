@@ -50,8 +50,8 @@ LegendYPos=0.5
 
 # BEGIN PLOT /MC_FSPARTICLES/MultCh
 Title=Charged multiplicity of events
-XLabel=$N_\text{ch}$
-YLabel=$1/\sigma \; \mathrm{d}\sigma/\mathrm{d}N_\text{ch}$
+XLabel=$N_\mathrm{ch}$
+YLabel=$1/\sigma \; \mathrm{d}\sigma/\mathrm{d}N_\mathrm{ch}$
 LogY=0
 # END PLOT
 

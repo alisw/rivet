@@ -1,0 +1,106 @@
+{
+    "265797": [
+        "Measurements of cross-sections and charge asymmetries for $e^+e^- \\to \\tau^+ \\tau^-$ and $e^+e^- \\to \\mu^+ \\mu^-$ for $\\sqrt{s}$ from 52 GeV to 57-GeV", 
+        "AMY", 
+        "10.1016/0370-2693(89)90485-1", 
+        null, 
+        null, 
+        "ins265797", 
+        null, 
+        [
+            "KEK-PREPRINT-88-81", 
+            "AMY-88-15"
+        ]
+    ], 
+    "276619": [
+        "Experimental Evidence for the Nonabelian Nature of {QCD}", 
+        "AMY", 
+        "10.1103/PhysRevLett.62.1713", 
+        null, 
+        null, 
+        "ins276619", 
+        null, 
+        [
+            "KEK-PREPRINT-88-113", 
+            "AMY-88-17"
+        ]
+    ], 
+    "276653": [
+        "Measurements of the $e^+e^-$ total hadronic cross-section and a determination of $m_Z$ and $\\Lambda_{MS}$", 
+        "AMY", 
+        "10.1016/0370-2693(89)91455-X", 
+        null, 
+        null, 
+        "ins276653", 
+        null, 
+        [
+            "KEK-Preprint-88-109", 
+            "AMY-88-16"
+        ]
+    ], 
+    "277060": [
+        "Search for the Substructure of Leptons in High-energy {QED} Processes at Tristan", 
+        "AMY", 
+        "10.1016/0370-2693(89)91636-5", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-88-125", 
+            "AMY-88-18"
+        ]
+    ], 
+    "279824": [
+        "A measurement of $e^+e^- \\to b\\bar{b}$ forward - backward charge asymmetry between $\\sqrt{s} = 52$ GeV and 57-GeV", 
+        "AMY", 
+        "10.1103/PhysRevLett.63.2341", 
+        null, 
+        null, 
+        "ins279824", 
+        null, 
+        [
+            "KEK-Preprint-89-38", 
+            "AMY-89-04"
+        ]
+    ], 
+    "279827": [
+        "A search for unstable heavy neutral leptons in $e^+e^-$ annihilations at $\\sqrt{s}$ from 50 GeV to 60.8 GeV", 
+        "AMY", 
+        "10.1103/PhysRevLett.63.1342", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "KEK-Preprint-89-41", 
+            "AMY-89-05"
+        ]
+    ], 
+    "279829": [
+        "A comparison of quark and gluon jets produced in high-energy $e^+e^-$ annihilations", 
+        "AMY", 
+        "10.1103/PhysRevLett.63.1772", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "KEK-Preprint-89-44", 
+            "AMY-89-07"
+        ]
+    ], 
+    "279900": [
+        "Search for nonminimal higgs production in $e^+e^-$ annihilations at $\\sqrt{s}$ approximately = 56 GeV", 
+        "AMY", 
+        "10.1016/0370-2693(89)90991-X", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-89-47", 
+            "AMY-89-09"
+        ]
+    ]
+}

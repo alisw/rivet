@@ -1,0 +1,26 @@
+{
+    "694773": [
+        "Double hadron leptoproduction in the nuclear medium", 
+        "HERMES", 
+        "10.1103/PhysRevLett.96.162301", 
+        null, 
+        "hep-ex/0510030", 
+        null, 
+        null, 
+        [
+            "DESY-05-205"
+        ]
+    ], 
+    "720775": [
+        "Longitudinal Spin Transfer to the Lambda Hyperon in Semi-Inclusive Deep-Inelastic Scattering", 
+        "HERMES", 
+        "10.1103/PhysRevD.74.072004", 
+        null, 
+        "hep-ex/0607004", 
+        null, 
+        null, 
+        [
+            "DESY-06-100"
+        ]
+    ]
+}

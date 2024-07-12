@@ -7,7 +7,7 @@ YTwosidedTicks=1
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2016_I1469071/d01
-YLabel=$\sigma_{W^{\pm}Z}^{\text{fid.}}$ [fb]
+YLabel=$\sigma_{W^{\pm}Z}^{\mathrm{fid.}}$ [fb]
 XLabel=$\sqrt{s}$ [TeV]
 XCustomMajorTicks=13000	13000
 # END PLOT #
@@ -36,7 +36,7 @@ Title=Combined fiducial cross section in a single $W^{\pm}Z\rightarrow \ell\nu\e
 # END PLOT #
 
 # BEGIN PLOT /ATLAS_2016_I1469071/d02
-YLabel=$\sigma_{W^{+}Z}^{\text{fid.}}$ [fb]
+YLabel=$\sigma_{W^{+}Z}^{\mathrm{fid.}}$ [fb]
 XLabel=$\sqrt{s}$ [TeV]
 XCustomMajorTicks=13000	13000
 # END PLOT #
@@ -61,7 +61,7 @@ Title=Fiducial cross section in $W^{+}Z\rightarrow \mu\nu \mu\mu$ channel
 Title=Combined fiducial cross section in a single $W^{+}Z\rightarrow \ell\nu\ell\ell$ channel
 
 # BEGIN PLOT /ATLAS_2016_I1469071/d03
-YLabel=$\sigma_{W^{-}Z}^{\text{fid.}}$ [fb]
+YLabel=$\sigma_{W^{-}Z}^{\mathrm{fid.}}$ [fb]
 XLabel=$\sqrt{s}$ [TeV]
 XCustomMajorTicks=13000	13000
 # END PLOT #
@@ -88,15 +88,15 @@ Title=Combined fiducial cross section in a single $W^{-}Z\rightarrow \ell\nu\ell
 
 # BEGIN PLOT /ATLAS_2016_I1469071/d06-x01-y01
 Title=$W^{\pm}Z$ cross section extrapolated to total phase space 
-YLabel=$\sigma_{W^{\pm}Z}^{\text{tot.}}$ [pb]
+YLabel=$\sigma_{W^{\pm}Z}^{\mathrm{tot.}}$ [pb]
 XLabel=$\sqrt{s}$ [TeV]
 XCustomMajorTicks=13000	13000
 # END PLOT #
 
 # BEGIN PLOT /ATLAS_2016_I1469071/d08-x01-y01
 Title=$W^{\pm}Z\rightarrow \ell\nu\ell\ell$ fid. cross section as a function of the jet multiplicity
-YLabel=$\sigma^{\text{fid.}}$ [fb]
-XLabel=$\text{N}_{\text{jets}}$
+YLabel=$\sigma^{\mathrm{fid.}}$ [fb]
+XLabel=$\mathrm{N}_{\mathrm{jets}}$
 LogY=1
 RatioPlotYMin=0.0
 RatioPlotYMax=1.7

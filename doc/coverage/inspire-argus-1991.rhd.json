@@ -1,0 +1,122 @@
+{
+    "280942": [
+        "Search for $b \\to s$ Gluon in $B$ Meson Decays", 
+        "ARGUS", 
+        "10.1016/0370-2693(91)90436-T", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-89-096"
+        ]
+    ], 
+    "284274": [
+        "Search for $b \\to s$ X+ X- in Exclusive Decays of $B$ Mesons", 
+        "ARGUS", 
+        "10.1016/0370-2693(91)90658-D", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-89-166"
+        ]
+    ], 
+    "295621": [
+        "STUDY OF p p AND LAMBDA LAMBDA PRODUCTION IN e+ e- ANNIHILATION AT 10-GeV CENTER-OF-MASS ENERGY", 
+        "ARGUS", 
+        "10.1007/BF01549686", 
+        null, 
+        null, 
+        "ins295621", 
+        null, 
+        [
+            "DESY-90-033"
+        ]
+    ], 
+    "296187": [
+        "Observation of Spin Parity 2+ Dominance in the Reaction $\\gamma \\gamma \\to \\rho^0 \\rho^0$ Near Threshold", 
+        "ARGUS", 
+        "10.1007/BF01558550", 
+        null, 
+        null, 
+        "ins296187", 
+        null, 
+        [
+            "DESY-90-034"
+        ]
+    ], 
+    "300636": [
+        "Reconstruction of semileptonic b ---> u decays", 
+        "ARGUS", 
+        "10.1016/0370-2693(91)90251-K", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-90-121"
+        ]
+    ], 
+    "301064": [
+        "Observation of the decays D(s)- ---> phi e- anti-neutrino and D- ---> K*0 e- anti-neutrino", 
+        "ARGUS", 
+        "10.1016/0370-2693(91)90279-Y", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-90-138"
+        ]
+    ], 
+    "303082": [
+        "Observation of the decay tau ---> rho pi pi tau-neutrino", 
+        "ARGUS", 
+        "10.1016/0370-2693(91)91000-L", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-90-155"
+        ]
+    ], 
+    "315058": [
+        "A Spin parity analysis of gamma gamma ---> rho+ rho-", 
+        "ARGUS", 
+        "10.1016/0370-2693(91)90907-8", 
+        null, 
+        null, 
+        "ins315058", 
+        null, 
+        [
+            "DESY-91-019"
+        ]
+    ], 
+    "315059": [
+        "Inclusive production of D0, D+ and D*+ (2010) mesons in B decays and nonresonant e+ e- annihilation at 10.6-GeV", 
+        "ARGUS", 
+        "10.1007/BF01559430", 
+        null, 
+        null, 
+        "ins315059", 
+        null, 
+        [
+            "DESY-91-023"
+        ]
+    ], 
+    "316473": [
+        "Observations of Lambda(charm)+ semileptonic decay", 
+        "ARGUS", 
+        "10.1016/0370-2693(91)91480-J", 
+        null, 
+        null, 
+        "ins316473", 
+        null, 
+        [
+            "DESY-91-055"
+        ]
+    ]
+}

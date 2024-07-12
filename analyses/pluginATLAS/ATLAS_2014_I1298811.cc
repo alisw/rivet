@@ -16,7 +16,7 @@ namespace Rivet {
 
     void init() {
       // Configure projections
-      const FinalState fs(-4.8, 4.8, 0*MeV);
+      const FinalState fs((Cuts::etaIn(-4.8, 4.8)));
       declare(fs, "FS");
       const FastJets jets(fs, FastJets::ANTIKT, 0.4);
       declare(jets, "Jets");
@@ -25,23 +25,23 @@ namespace Rivet {
       for (size_t itopo = 0; itopo < 2; ++itopo) {
         // Profiles
         for (size_t iregion = 0; iregion < 3; ++iregion) {
-          _p_ptsumch_vs_ptlead[itopo][iregion] = bookProfile1D(1+iregion, 1, itopo+1);
-          _p_nch_vs_ptlead[itopo][iregion] = bookProfile1D(4+iregion, 1, itopo+1);
+          book(_p_ptsumch_vs_ptlead[itopo][iregion] ,1+iregion, 1, itopo+1);
+          book(_p_nch_vs_ptlead[itopo][iregion] ,4+iregion, 1, itopo+1);
         }
-        _p_etsum25_vs_ptlead_trans[itopo] = bookProfile1D(7, 1, itopo+1);
-        _p_etsum48_vs_ptlead_trans[itopo] = bookProfile1D(8, 1, itopo+1);
-        _p_chratio_vs_ptlead_trans[itopo] = bookProfile1D(9, 1, itopo+1);
-        _p_ptmeanch_vs_ptlead_trans[itopo] = bookProfile1D(10, 1, itopo+1);
+        book(_p_etsum25_vs_ptlead_trans[itopo] ,7, 1, itopo+1);
+        book(_p_etsum48_vs_ptlead_trans[itopo] ,8, 1, itopo+1);
+        book(_p_chratio_vs_ptlead_trans[itopo] ,9, 1, itopo+1);
+        book(_p_ptmeanch_vs_ptlead_trans[itopo] ,10, 1, itopo+1);
         // 1D histos
         for (size_t iregion = 0; iregion < 3; ++iregion) {
           for (size_t ipt = 0; ipt < 4; ++ipt) {
-            _h_ptsumch[ipt][itopo][iregion] = bookHisto1D(13+3*ipt+iregion, 1, itopo+1);
-            _h_nch[ipt][itopo][iregion] = bookHisto1D(25+3*ipt+iregion, 1, itopo+1);
+            book(_h_ptsumch[ipt][itopo][iregion] ,13+3*ipt+iregion, 1, itopo+1);
+            book(_h_nch[ipt][itopo][iregion] ,25+3*ipt+iregion, 1, itopo+1);
           }
         }
       }
-      _p_ptmeanch_vs_nch_trans[0] = bookProfile1D(11, 1, 1);
-      _p_ptmeanch_vs_nch_trans[1] = bookProfile1D(12, 1, 1);
+      book(_p_ptmeanch_vs_nch_trans[0], 11, 1, 1);
+      book(_p_ptmeanch_vs_nch_trans[1], 12, 1, 1);
 
     }
 
@@ -52,13 +52,10 @@ namespace Rivet {
       /// @todo Use Cuts instead rather than an eta cut in the proj and a y cut after
       const Jets alljets = apply<FastJets>(event, "Jets").jetsByPt(20*GeV);
       Jets jets;
-      foreach (const Jet& j, alljets)
+      for (const Jet& j : alljets)
         if (j.absrap() < 2.8) jets.push_back(j);
       // Require at least one jet in the event
       if (jets.empty()) vetoEvent;
-
-      // Get the event weight since we will be filling some histos
-      const double weight = event.weight();
 
       // Identify the leading jet and its phi and pT
       const FourMomentum plead = jets[0].momentum();
@@ -73,14 +70,14 @@ namespace Rivet {
       double tmpetsum48[2] = {0,0};
       double tmpetsum25[2] = {0,0};
       const Particles particles = apply<FinalState>(event, "FS").particles();
-      foreach (const Particle& p, particles) {
+      for (const Particle& p : particles) {
         // Only consider the transverse region(s), not toward or away
         if (!inRange(deltaPhi(p.phi(), philead), PI/3.0, TWOPI/3.0)) continue;
         // Work out which transverse side this particle is on
         const size_t iside = (mapAngleMPiToPi(p.phi() - philead) > 0) ? 0 : 1;
         MSG_TRACE(p.phi() << " vs. " << philead << ": " << iside);
         // Charged or neutral particle?
-        const bool charged = PID::threeCharge(p.pdgId()) != 0;
+        const bool charged = p.charge3() != 0;
         // Track observables
         if (charged && fabs(p.eta()) < 2.5 && p.pT() > 500*MeV) {
           tmpnch[iside] += 1;
@@ -131,27 +128,27 @@ namespace Rivet {
         }
 
         // Plot profiles and distributions which have no max/min region definition
-        _p_etsum25_vs_ptlead_trans[itopo]->fill(ptlead/GeV, etsum25[0]/5.0/dphi[0]/GeV, weight);
-        _p_etsum48_vs_ptlead_trans[itopo]->fill(ptlead/GeV, etsum48[0]/9.6/dphi[0]/GeV, weight);
+        _p_etsum25_vs_ptlead_trans[itopo]->fill(ptlead/GeV, etsum25[0]/5.0/dphi[0]/GeV);
+        _p_etsum48_vs_ptlead_trans[itopo]->fill(ptlead/GeV, etsum48[0]/9.6/dphi[0]/GeV);
         if (etsum25[0] > 0) {
-          _p_chratio_vs_ptlead_trans[itopo]->fill(ptlead/GeV, ptsum[0]/etsum25[0], weight);
+          _p_chratio_vs_ptlead_trans[itopo]->fill(ptlead/GeV, ptsum[0]/etsum25[0]);
         }
         const double ptmean = safediv(ptsum[0], nch[0], -1); ///< Return -1 if div by zero
         if (ptmean >= 0) {
-          _p_ptmeanch_vs_ptlead_trans[itopo]->fill(ptlead/GeV, ptmean/GeV, weight);
-          _p_ptmeanch_vs_nch_trans[itopo]->fill(nch[0], ptmean/GeV, weight);
+          _p_ptmeanch_vs_ptlead_trans[itopo]->fill(ptlead/GeV, ptmean/GeV);
+          _p_ptmeanch_vs_nch_trans[itopo]->fill(nch[0], ptmean/GeV);
         }
 
         // Plot remaining profile and 1D observables, which are defined in all 3 tot/max/min regions
         for (size_t iregion = 0; iregion < 3; ++iregion) {
-          _p_ptsumch_vs_ptlead[itopo][iregion]->fill(ptlead/GeV, ptsum[iregion]/5.0/dphi[iregion]/GeV, weight);
-          _p_nch_vs_ptlead[itopo][iregion]->fill(ptlead/GeV, nch[iregion]/5.0/dphi[iregion], weight);
+          _p_ptsumch_vs_ptlead[itopo][iregion]->fill(ptlead/GeV, ptsum[iregion]/5.0/dphi[iregion]/GeV);
+          _p_nch_vs_ptlead[itopo][iregion]->fill(ptlead/GeV, nch[iregion]/5.0/dphi[iregion]);
           for (size_t ipt = 0; ipt < 4; ++ipt) {
             if (ipt == 1 && !inRange(ptlead/GeV, 20, 60)) continue;
             if (ipt == 2 && !inRange(ptlead/GeV, 60, 210)) continue;
             if (ipt == 3 && ptlead/GeV < 210) continue;
-            _h_ptsumch[ipt][itopo][iregion]->fill(ptsum[iregion]/5.0/dphi[iregion]/GeV, weight);
-            _h_nch[ipt][itopo][iregion]->fill(nch[iregion]/5.0/dphi[iregion], weight);
+            _h_ptsumch[ipt][itopo][iregion]->fill(ptsum[iregion]/5.0/dphi[iregion]/GeV);
+            _h_nch[ipt][itopo][iregion]->fill(nch[iregion]/5.0/dphi[iregion]);
           }
         }
       }
@@ -194,6 +191,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2014_I1298811);
+  RIVET_DECLARE_PLUGIN(ATLAS_2014_I1298811);
 
 }

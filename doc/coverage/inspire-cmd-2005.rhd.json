@@ -1,0 +1,36 @@
+{
+    "658856": [
+        "Study of the processes e+ e- ---> eta gamma, pi0 gamma ---> 3 gamma in the c.m. energy range 600-MeV to 1380-MeV at CMD-2", 
+        "CMD-2", 
+        "10.1016/j.physletb.2004.11.020", 
+        null, 
+        "hep-ex/0409030", 
+        "ins658856", 
+        null, 
+        [
+            "BUDKER-INP-2004-51"
+        ]
+    ], 
+    "676548": [
+        "Study of the rho and omega meson decays into pseudoscalar meson and e+ e- pair with the CMD-2 detector", 
+        "CMD-2", 
+        "10.1016/j.physletb.2005.03.019", 
+        null, 
+        "hep-ex/0502024", 
+        null, 
+        null, 
+        [
+            "BUDKER-INP-2004-72"
+        ]
+    ], 
+    "712216": [
+        "Measurement of the pion form-factor in the range 1.04-GeV to 1.38-GeV with the CMD-2 detector", 
+        "CMD-2", 
+        "10.1134/1.2175241", 
+        null, 
+        "hep-ex/0603021", 
+        "ins712216", 
+        null, 
+        []
+    ]
+}

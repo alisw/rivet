@@ -10,7 +10,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(TASSO_1989_I277658);
+    RIVET_DEFAULT_ANALYSIS_CTOR(TASSO_1989_I277658);
 
 
     /// @name Analysis methods
@@ -22,24 +22,24 @@ namespace Rivet {
       declare(cfs, "CFS");
 
       int offset = 0;
-      if(fuzzyEquals(sqrtS()/GeV,14.0)) {
+      if(isCompatibleWithSqrtS(14.0)) {
 	offset = 1;
       }
-      else if(fuzzyEquals(sqrtS()/GeV,22.0)) {
+      else if(isCompatibleWithSqrtS(22.0)) {
 	offset = 2;
       }
-      else if(fuzzyEquals(sqrtS()/GeV,34.8)) {
+      else if(isCompatibleWithSqrtS(34.8)) {
 	offset = 3;
       }
-      else if(fuzzyEquals(sqrtS()/GeV,43.6)) {
+      else if(isCompatibleWithSqrtS(43.6)) {
 	offset = 4;
       }
       else {
         MSG_WARNING("CoM energy of events sqrt(s) = " << sqrtS()/GeV
                     << " doesn't match any available analysis energy .");
       }
-      _histCh = bookHisto1D(5, 1, offset); 
-      _histTotal = bookProfile1D(2, 1, 1);
+      book(_histCh, 5, 1, offset); 
+      book(_histTotal, 2, 1, 1);
     }
 
 
@@ -47,8 +47,8 @@ namespace Rivet {
     void analyze(const Event& event) {
       const FinalState& cfs = apply<FinalState>(event, "CFS");
       MSG_DEBUG("Total charged multiplicity = " << cfs.size());
-      _histCh->fill(cfs.size(), event.weight());
-      _histTotal->fill(sqrtS(),cfs.size(),event.weight());
+      _histCh->fill(cfs.size());
+      _histTotal->fill(sqrtS(),cfs.size());
     }
 
 
@@ -71,7 +71,7 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(TASSO_1989_I277658);
+  RIVET_DECLARE_PLUGIN(TASSO_1989_I277658);
 
 
 }

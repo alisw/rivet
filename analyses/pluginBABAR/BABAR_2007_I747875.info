@@ -1,0 +1,36 @@
+Name: BABAR_2007_I747875
+Year: 2007
+Summary: $e^+e^- \to$  $K^+K^-\pi^+\pi^-$, $K^+K^-\pi^0\pi^0$ and $K^+K^-K^+K^-$ cross-sections between 1.4 and 4 GeV
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 747875
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+- Phys.Rev. D76 (2007) 012008, 2007 
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+  'Measurement of the cross section for  $e^+e^- \to$  $K^+K^-\pi^+\pi^-$, $K^+K^-\pi^0\pi^0$ and $K^+K^-K^+K^-$ via radiative return,
+   including the identification of $K^{*0}$, $\phi$ and $f_0(980)$ mesons for energies between 1.4 and 4. GeV'
+Keywords: 
+BibKey: Aubert:2007ur
+BibTeX: '@article{Aubert:2007ur,
+      author         = "Aubert, Bernard and others",
+      title          = "{The e+ e- ---&gt; K+ K- pi+ pi-, K+ K- pi0 pi0 and K+ K- K+
+                        K- cross-sections measured with initial-state radiation}",
+      collaboration  = "BaBar",
+      journal        = "Phys. Rev.",
+      volume         = "D76",
+      year           = "2007",
+      pages          = "012008",
+      doi            = "10.1103/PhysRevD.76.012008",
+      eprint         = "0704.0630",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "SLAC-PUB-12435, BABAR-PUB-07-021",
+      SLACcitation   = "%%CITATION = ARXIV:0704.0630;%%"
+}'

@@ -1,0 +1,37 @@
+Name: BABAR_2009_I819092
+Year: 2009
+Summary: Mass distributions and $\bar{\Lambda}^0$ polarization in $B^0\to \bar{\Lambda}^0 p\pi^-$
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 819092
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 79 (2009) 112009
+RunInfo: Any process producing B0 mesons, originally Upsilon(4S) decays
+Description:
+'Measurement of the $\bar\Lambda^0 p$ mass spectrum and $\bar\Lambda^0$ energy in the decay $B^0\to\bar{\Lambda}^0 p \pi^-$. The polarization of the $\bar\Lambda^0$ is also measured. The data were read from the plots/tables in the paper but are efficiency corrected and background subtracted. In additon the values of
+the polarization were adjusted to use the PDG 2022 value of $\alpha_\Lambda$ as there has been a significant change due to due measuremnts.'
+ValidationInfo:
+  'Herwig7 events using EvtGen for decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BaBar:2009ess
+BibTeX: '@article{BaBar:2009ess,
+    author = "Aubert, Bernard and others",
+    collaboration = "BaBar",
+    title = "{Measurement of the Branching Fraction and anti-Lambda Polarization in B0 ---\ensuremath{>} anti-Lambda p pi-}",
+    eprint = "0904.4724",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "SLAC-PUB-13592, BABAR-PUB-09-003",
+    doi = "10.1103/PhysRevD.79.112009",
+    journal = "Phys. Rev. D",
+    volume = "79",
+    pages = "112009",
+    year = "2009"
+}
+'

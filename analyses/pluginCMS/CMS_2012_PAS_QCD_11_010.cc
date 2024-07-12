@@ -20,15 +20,15 @@ namespace Rivet {
       const UnstableParticles ufs(Cuts::abseta < 2 && Cuts::pT > 0.6*GeV);
       declare(ufs, "UFS");
 
-      _h_nTrans_Lambda     = bookProfile1D(1, 1, 1);
-      _h_nTrans_Kaon       = bookProfile1D(2, 1, 1);
-      _h_ptsumTrans_Lambda = bookProfile1D(3, 1, 1);
-      _h_ptsumTrans_Kaon   = bookProfile1D(4, 1, 1);
+      book(_h_nTrans_Lambda     ,1, 1, 1);
+      book(_h_nTrans_Kaon       ,2, 1, 1);
+      book(_h_ptsumTrans_Lambda ,3, 1, 1);
+      book(_h_ptsumTrans_Kaon   ,4, 1, 1);
     }
 
 
     void analyze(const Event& event) {
-      const double weight = event.weight();
+      const double weight = 1.0;
 
       Jets jets = apply<FastJets>(event, "Jets").jetsByPt(1.0*GeV);
       if (jets.size() < 1) vetoEvent;
@@ -40,14 +40,14 @@ namespace Rivet {
       FourMomentum p_lead = jets[0].momentum();
       const double pTlead  = p_lead.pT();
 
-      const UnstableParticles& ufs = apply<UnstableFinalState>(event, "UFS");
+      const UnstableParticles& ufs = apply<UnstableParticles>(event, "UFS");
 
       int numTrans_Kaon = 0;
       int numTrans_Lambda = 0;
       double ptSumTrans_Kaon = 0.;
       double ptSumTrans_Lambda = 0.;
 
-      foreach (const Particle& p, ufs.particles()) {
+      for (const Particle& p : ufs.particles()) {
         double dphi = deltaPhi(p, p_lead);
         double pT = p.pT();
         const PdgId id = p.abspid();
@@ -84,6 +84,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CMS_2012_PAS_QCD_11_010);
+  RIVET_DECLARE_PLUGIN(CMS_2012_PAS_QCD_11_010);
 
 }

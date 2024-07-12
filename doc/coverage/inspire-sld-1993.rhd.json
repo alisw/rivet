@@ -1,0 +1,38 @@
+{
+    "352667": [
+        "First measurement of the left-right cross-section asymmetry in Z boson production by e+ e- collisions", 
+        "SLD", 
+        "10.1103/PhysRevLett.70.2515", 
+        null, 
+        null, 
+        "ins352667", 
+        null, 
+        [
+            "SLAC-PUB-6030"
+        ]
+    ], 
+    "356288": [
+        "First measurement of the left-right asymmetry in Z boson production", 
+        "SLD", 
+        "10.1142/S0217732393003536", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-6169"
+        ]
+    ], 
+    "356912": [
+        "A Measurement of alpha-s from jet rates at the Z0 resonance", 
+        "SLD", 
+        "10.1103/PhysRevLett.71.2528", 
+        null, 
+        null, 
+        "ins356912", 
+        null, 
+        [
+            "SLAC-PUB-6133"
+        ]
+    ]
+}

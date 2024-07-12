@@ -1,11 +1,12 @@
 Name: CMS_2011_S8957746
 Year: 2011
-Summary: Event shapes
+Summary: Event shapes at 7 TeV
 Experiment: CMS
 Collider: LHC
 SpiresID: 8957746
 InspireID: 886332
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Hendrik Hoeth <hendrik.hoeth@cern.ch>
 References:
@@ -38,3 +39,8 @@ BibTeX: '@Article{Khachatryan:2011dx,
      doi       = "10.1016/j.physletb.2011.03.060",
      SLACcitation  = "%%CITATION = 1102.0068;%%"
 }'
+
+ReleaseTests:
+ - $A LHC-7-Jets-3
+ - $A-2 LHC-7-Jets-4
+ - $A-3 LHC-7-Jets-5

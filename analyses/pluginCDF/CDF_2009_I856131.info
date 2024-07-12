@@ -5,6 +5,7 @@ Experiment: CDF
 Collider: Tevatron Run 2
 InspireID: 856131
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Frank Siegert <frank.siegert@cern.ch>
 References:
@@ -35,3 +36,7 @@ BibTeX: '@Article{Aaltonen:2009pc,
      primaryClass  =  "hep-ex",
      SLACcitation  = "%%CITATION = 0908.3914;%%"
 }'
+
+ReleaseTests:
+ - $A TVT-Run-II-Z-e
+

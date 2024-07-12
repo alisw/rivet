@@ -6,6 +6,7 @@ Collider: Tevatron Run 2
 SpiresID: 8591881
 InspireID: 849042
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Hendrik Hoeth <hendrik.hoeth@cern.ch>
 References:
@@ -29,3 +30,7 @@ Description:
   the $Z$ has been reconstructed. Thus the region most sensitive to the
   underlying event is the toward region (the recoil jet is boosted into
   the away region).
+
+ReleaseTests:
+ - $A TVT-Run-II-Z-mu
+

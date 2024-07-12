@@ -23,12 +23,12 @@ namespace Rivet {
     /// Book histograms
     void init() {
       Cut cut = Cuts::abseta < 3.5 && Cuts::pT > 25*GeV;
-      ZFinder zeefinder(FinalState(), cut, PID::ELECTRON, 65*GeV, 115*GeV, 0.2, ZFinder::CLUSTERNODECAY, ZFinder::TRACK);
+      ZFinder zeefinder(FinalState(), cut, PID::ELECTRON, 65*GeV, 115*GeV, 0.2, ZFinder::ClusterPhotons::NODECAY, ZFinder::AddPhotons::YES);
       declare(zeefinder, "ZeeFinder");
 
       VetoedFinalState zmminput;
       zmminput.addVetoOnThisFinalState(zeefinder);
-      ZFinder zmmfinder(zmminput, cut, PID::MUON, 65*GeV, 115*GeV, 0.2, ZFinder::CLUSTERNODECAY, ZFinder::TRACK);
+      ZFinder zmmfinder(zmminput, cut, PID::MUON, 65*GeV, 115*GeV, 0.2, ZFinder::ClusterPhotons::NODECAY, ZFinder::AddPhotons::YES);
       declare(zmmfinder, "ZmmFinder");
 
       VetoedFinalState jetinput;
@@ -39,12 +39,12 @@ namespace Rivet {
       declare(jetpro, "Jets");
 
       // Correlations with jets
-      _h_ZZ_jet1_deta = bookHisto1D("ZZ_jet1_deta", 70, -7.0, 7.0);
-      _h_ZZ_jet1_dR = bookHisto1D("ZZ_jet1_dR", 25, 1.5, 7.0);
-      _h_Ze_jet1_dR = bookHisto1D("Ze_jet1_dR", 25, 0.0, 7.0);
+      book(_h_ZZ_jet1_deta ,"ZZ_jet1_deta", 70, -7.0, 7.0);
+      book(_h_ZZ_jet1_dR ,"ZZ_jet1_dR", 25, 1.5, 7.0);
+      book(_h_Ze_jet1_dR ,"Ze_jet1_dR", 25, 0.0, 7.0);
 
       // Global stuff
-      _h_HT = bookHisto1D("HT", logspace(100, 100.0, 0.5*(sqrtS()>0.?sqrtS():14000.)/GeV));
+      book(_h_HT ,"HT", logspace(100, 100.0, 0.5*(sqrtS()>0.?sqrtS():14000.)/GeV));
 
       MC_JetAnalysis::init();
     }
@@ -53,7 +53,7 @@ namespace Rivet {
 
     /// Do the analysis
     void analyze(const Event& e) {
-      const double weight = e.weight();
+      const double weight = 1.0;
 
       const ZFinder& zeefinder = apply<ZFinder>(e, "ZeeFinder");
       if (zeefinder.bosons().size() != 1) vetoEvent;
@@ -80,7 +80,7 @@ namespace Rivet {
       }
 
       double HT = ep.pT() + em.pT() + mp.pT() + mm.pT();
-      foreach (const Jet& jet, jets) HT += jet.pT();
+      for (const Jet& jet : jets) HT += jet.pT();
       if (HT > 0.0) _h_HT->fill(HT/GeV, weight);
 
       MC_JetAnalysis::analyze(e);
@@ -115,6 +115,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(MC_ZZJETS);
+  RIVET_DECLARE_PLUGIN(MC_ZZJETS);
 
 }

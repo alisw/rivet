@@ -6,9 +6,11 @@ Collider: LHC
 SpiresID: 8919674
 InspireID: 882534
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Frank Siegert <frank.siegert@cern.ch>
 References:
+ - ATLAS-STDM-2010-07
  - arXiv:1012.5382 [hep-ex]
 RunInfo:
   W+jets events ideally with matrix element corrections to describe the
@@ -41,3 +43,8 @@ BibTeX: '@Article{Aad:2010pg,
 ToDo:
  - Implement jet multiplicity ratio plots.
  - Export original data file from HepForge.
+
+ReleaseTests:
+ - $A LHC-W-e
+ - $A-2 LHC-W-mu
+

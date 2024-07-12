@@ -38,42 +38,42 @@ Title=$Z \rightarrow \mu^+\mu^-$, $R=1.0$, charged and neutral particles
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2017_I1589844/d01
-YLabel=$\frac{\text{d}\sigma}{\text{d}\sqrt{d_0}}$ [$\text{pb}\,\text{GeV}^{-1}$]
+YLabel=$\frac{\mathrm{d}\sigma}{\mathrm{d}\sqrt{d_0}}$ [$\mathrm{pb}\,\mathrm{GeV}^{-1}$]
 XLabel=$\sqrt{d_0}$ [GeV]
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2017_I1589844/d02
-YLabel=$\frac{\text{d}\sigma}{\text{d}\sqrt{d_1}}$ [$\text{pb}\,\text{GeV}^{-1}$]
+YLabel=$\frac{\mathrm{d}\sigma}{\mathrm{d}\sqrt{d_1}}$ [$\mathrm{pb}\,\mathrm{GeV}^{-1}$]
 XLabel=$\sqrt{d_1}$ [GeV]
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2017_I1589844/d03
-YLabel=$\frac{\text{d}\sigma}{\text{d}\sqrt{d_2}}$ [$\text{pb}\,\text{GeV}^{-1}$]
+YLabel=$\frac{\mathrm{d}\sigma}{\mathrm{d}\sqrt{d_2}}$ [$\mathrm{pb}\,\mathrm{GeV}^{-1}$]
 XLabel=$\sqrt{d_2}$ [GeV]
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2017_I1589844/d04
-YLabel=$\frac{\text{d}\sigma}{\text{d}\sqrt{d_3}}$ [$\text{pb}\,\text{GeV}^{-1}$]
+YLabel=$\frac{\mathrm{d}\sigma}{\mathrm{d}\sqrt{d_3}}$ [$\mathrm{pb}\,\mathrm{GeV}^{-1}$]
 XLabel=$\sqrt{d_3}$ [GeV]
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2017_I1589844/d05
-YLabel=$\frac{\text{d}\sigma}{\text{d}\sqrt{d_4}}$ [$\text{pb}\,\text{GeV}^{-1}$]
+YLabel=$\frac{\mathrm{d}\sigma}{\mathrm{d}\sqrt{d_4}}$ [$\mathrm{pb}\,\mathrm{GeV}^{-1}$]
 XLabel=$\sqrt{d_4}$ [GeV]
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2017_I1589844/d06
-YLabel=$\frac{\text{d}\sigma}{\text{d}\sqrt{d_5}}$ [$\text{pb}\,\text{GeV}^{-1}$]
+YLabel=$\frac{\mathrm{d}\sigma}{\mathrm{d}\sqrt{d_5}}$ [$\mathrm{pb}\,\mathrm{GeV}^{-1}$]
 XLabel=$\sqrt{d_5}$ [GeV]
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2017_I1589844/d07
-YLabel=$\frac{\text{d}\sigma}{\text{d}\sqrt{d_6}}$ [$\text{pb}\,\text{GeV}^{-1}$]
+YLabel=$\frac{\mathrm{d}\sigma}{\mathrm{d}\sqrt{d_6}}$ [$\mathrm{pb}\,\mathrm{GeV}^{-1}$]
 XLabel=$\sqrt{d_6}$ [GeV]
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2017_I1589844/d08
-YLabel=$\frac{\text{d}\sigma}{\text{d}\sqrt{d_7}}$ [$\text{pb}\,\text{GeV}^{-1}$]
+YLabel=$\frac{\mathrm{d}\sigma}{\mathrm{d}\sqrt{d_7}}$ [$\mathrm{pb}\,\mathrm{GeV}^{-1}$]
 XLabel=$\sqrt{d_7}$ [GeV]
 # END PLOT
 

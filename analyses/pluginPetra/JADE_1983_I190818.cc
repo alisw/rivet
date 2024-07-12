@@ -5,12 +5,12 @@
 namespace Rivet {
 
 
-  /// @brief Add a short analysis description here
+  /// @brief Average multiplcity at a range of energies
   class JADE_1983_I190818 : public Analysis {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(JADE_1983_I190818);
+    RIVET_DEFAULT_ANALYSIS_CTOR(JADE_1983_I190818);
 
 
     /// @name Analysis methods
@@ -20,13 +20,14 @@ namespace Rivet {
     void init() {
       const ChargedFinalState cfs;
       declare(cfs, "CFS");
-      if( !(fuzzyEquals(sqrtS()/GeV,12.0) ||
-	    fuzzyEquals(sqrtS()/GeV,30.0) ||
-	    fuzzyEquals(sqrtS()/GeV,35.0) )) {
+      if( !(isCompatibleWithSqrtS(12.0) ||
+	    isCompatibleWithSqrtS(30.0) ||
+	    isCompatibleWithSqrtS(35.0) )) {
         MSG_WARNING("CoM energy of events sqrt(s) = " << sqrtS()/GeV
                     << " doesn't match any available analysis energy .");
       }
-      _hist = bookProfile1D(1, 1, 1);
+      book(_counter, "/TMP/MULT");
+      book(_mult, 1, 1, 1);
     }
 
 
@@ -34,22 +35,44 @@ namespace Rivet {
     void analyze(const Event& event) {
       const FinalState& cfs = apply<FinalState>(event, "CFS");
       MSG_DEBUG("Total charged multiplicity = " << cfs.size());
-      _hist->fill(sqrtS(),cfs.size(),event.weight());
+      _counter->fill(cfs.size());
     }
 
 
     /// Normalise histograms etc., after the run
-    void finalize() {}
+    void finalize() {
+      scale(_counter,1./sumOfWeights());
+
+      double val = _counter->val();
+      double err = _counter->err();
+      
+      Scatter2D tempScat(refData(1, 1, 1));
+      
+      for (size_t b = 0; b < tempScat.numPoints(); b++) {
+        const double x  = tempScat.point(b).x();
+        pair<double,double> ex = tempScat.point(b).xErrs();
+        pair<double,double> ex2 = ex;
+        if(ex2.first ==0.) ex2. first=0.0001;
+        if(ex2.second==0.) ex2.second=0.0001;
+        if (inRange(sqrtS()/GeV, x-ex2.first, x+ex2.second)) {
+          _mult->addPoint(x, val, ex, make_pair(err,err));
+        }
+        else {
+          _mult->addPoint(x, 0., ex, make_pair(0.,.0));
+        }
+      }
+    }
     //@}
 
   private:
 
     // Histogram
-    Profile1DPtr _hist;
+    CounterPtr _counter;
+    Scatter2DPtr _mult;
 
   };
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(JADE_1983_I190818);
+  RIVET_DECLARE_PLUGIN(JADE_1983_I190818);
 
 }

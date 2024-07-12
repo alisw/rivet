@@ -8,15 +8,6 @@
 namespace Rivet {
 
 
-  // A local scope function for division, handling the div-by-zero case
-  /// @todo Why isn't the math divide() function being found?
-  namespace {
-    inline double _safediv(double a, double b, double result_if_err) {
-      return (b != 0) ? a/b : result_if_err;
-    }
-  }
-
-
   /// @brief Measurement of isolated gamma + jet + X differential cross-sections
   ///
   /// Inclusive isolated gamma + jet cross-sections, differential in pT(gamma), for
@@ -27,19 +18,11 @@ namespace Rivet {
   class D0_2008_S7719523 : public Analysis {
   public:
 
-    /// @name Constructors etc.
-    //@{
-
-    /// Constructor
-    D0_2008_S7719523()
-      : Analysis("D0_2008_S7719523")
-    {    }
-
-    //@}
+    RIVET_DEFAULT_ANALYSIS_CTOR(D0_2008_S7719523);
 
 
     /// @name Analysis methods
-    //@{
+    /// @{
 
     /// Set up projections and book histograms
     void init() {
@@ -48,7 +31,7 @@ namespace Rivet {
       declare(fs, "FS");
 
       // Get leading photon
-      LeadingParticlesFinalState photonfs(FinalState(-1.0, 1.0, 30.0*GeV));
+      LeadingParticlesFinalState photonfs(FinalState((Cuts::etaIn(-1.0, 1.0) && Cuts::pT >=  30.0*GeV)));
       photonfs.addParticleId(PID::PHOTON);
       declare(photonfs, "LeadingPhoton");
 
@@ -62,27 +45,25 @@ namespace Rivet {
       declare(jetpro, "Jets");
 
       // Histograms
-      _h_central_same_cross_section = bookHisto1D(1, 1, 1);
-      _h_central_opp_cross_section  = bookHisto1D(2, 1, 1);
-      _h_forward_same_cross_section = bookHisto1D(3, 1, 1);
-      _h_forward_opp_cross_section  = bookHisto1D(4, 1, 1);
+      book(_h_central_same_cross_section ,1, 1, 1);
+      book(_h_central_opp_cross_section  ,2, 1, 1);
+      book(_h_forward_same_cross_section ,3, 1, 1);
+      book(_h_forward_opp_cross_section  ,4, 1, 1);
 
       // Ratio histos to be filled by divide()
-      _h_cen_opp_same = bookScatter2D(5, 1, 1);
-      _h_fwd_opp_same = bookScatter2D(8, 1, 1);
+      book(_h_cen_opp_same, 5, 1, 1);
+      book(_h_fwd_opp_same, 8, 1, 1);
       // Ratio histos to be filled manually, since the num/denom inputs don't match
-      _h_cen_same_fwd_same = bookScatter2D(6, 1, 1, true);
-      _h_cen_opp_fwd_same = bookScatter2D(7, 1, 1, true);
-      _h_cen_same_fwd_opp = bookScatter2D(9, 1, 1, true);
-      _h_cen_opp_fwd_opp = bookScatter2D(10, 1, 1, true);
+      book(_h_cen_same_fwd_same, 6, 1, 1, true);
+      book(_h_cen_opp_fwd_same, 7, 1, 1, true);
+      book(_h_cen_same_fwd_opp, 9, 1, 1, true);
+      book(_h_cen_opp_fwd_opp, 10, 1, 1, true);
     }
 
 
 
     /// Do the analysis
     void analyze(const Event& event) {
-      const double weight = event.weight();
-
       // Get the photon
       const FinalState& photonfs = apply<FinalState>(event, "LeadingPhoton");
       if (photonfs.particles().size() != 1) {
@@ -95,7 +76,7 @@ namespace Rivet {
       double eta_P = photon.eta();
       double phi_P = photon.phi();
       double econe = 0.0;
-      foreach (const Particle& p, apply<FinalState>(event, "JetFS").particles()) {
+      for (const Particle& p : apply<FinalState>(event, "JetFS").particles()) {
         if (deltaR(eta_P, phi_P, p.eta(), p.phi()) < 0.4) {
           econe += p.E();
           // Veto as soon as E_cone gets larger
@@ -126,10 +107,10 @@ namespace Rivet {
       // Fill histos
       if (fabs(leadingJet.rapidity()) < 0.8) {
         Histo1DPtr h = (photon_jet_sign >= 1) ? _h_central_same_cross_section : _h_central_opp_cross_section;
-        h->fill(photon.pT(), weight);
+        h->fill(photon.pT());
       } else if (inRange( fabs(leadingJet.rapidity()), 1.5, 2.5)) {
         Histo1DPtr h = (photon_jet_sign >= 1) ? _h_forward_same_cross_section : _h_forward_opp_cross_section;
-        h->fill(photon.pT(), weight);
+        h->fill(photon.pT());
       }
 
     }
@@ -173,12 +154,19 @@ namespace Rivet {
       scale(_h_forward_opp_cross_section, 2.0/lumi_gen * 1.0/dy_photon * 1.0/dy_jet_forward);
     }
 
-    //@}
+    /// @}
+
 
   private:
 
+    // A local scope function for division, handling the div-by-zero case
+    /// @todo Why isn't the math divide() function being found?
+    double _safediv(double a, double b, double result_if_err) {
+      return (b != 0) ? a/b : result_if_err;
+    }
+
     /// @name Histograms
-    //@{
+    /// @{
     Histo1DPtr _h_central_same_cross_section;
     Histo1DPtr _h_central_opp_cross_section;
     Histo1DPtr _h_forward_same_cross_section;
@@ -190,13 +178,12 @@ namespace Rivet {
     Scatter2DPtr _h_cen_opp_fwd_same;
     Scatter2DPtr _h_cen_same_fwd_opp;
     Scatter2DPtr _h_cen_opp_fwd_opp;
-    //@}
+    /// @}
 
   };
 
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(D0_2008_S7719523);
+  RIVET_DECLARE_ALIASED_PLUGIN(D0_2008_S7719523, D0_2008_I782968);
 
 }

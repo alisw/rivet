@@ -5,15 +5,18 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1408516
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Christian Gutschow <chris.g@cern.ch>
 References:
+ - ATLAS-STDM-2014-12
  - arXiv:1512.02192 [hep-ex]
  - submitted to EPJC
 RunInfo:
   inclusive Z production in the electron channel
 Beams: [p+, p+]
 Energies: [8000]
+Luminosity_fb: 20.3
 PtCuts: [12,20]
 NeedCrossSection: True
 Options:
@@ -22,7 +25,7 @@ Description:
   'Distributions of transverse momentum $p_\text{T}^{\ell\ell}$ and the angular variable $\phi^\ast_\eta$ of Drell-Yan lepton pairs
   are measured in $20.3\,\text{fb}^{-1}$ of proton-proton collisions at $\sqrt{s}=8$\,TeV with the ATLAS detector at the LHC.
   Measurements in electron-pair and muon-pair final states are corrected for detector effects. Compared to previous measurements
-  in proto--proton collisions at i$\sqrt{s}=7$\,TeV, these new measurements benefit from a larger data sample and improved control
+  in proton--proton collisions at $\sqrt{s}=7$ TeV, these new measurements benefit from a larger data sample and improved control
   of systematic uncertainties. Measurements are performed in bins of lepton-pair mass above, around and below the $Z$-boson mass peak.
   Specify the lepton channel (default is Z->ee) by using the LMODE variable. Only individual channels are available as particle-level
   measurements.'
@@ -41,3 +44,14 @@ BibTeX: '@article{Aad:2015auj,
       reportNumber   = "CERN-PH-EP-2015-275",
       SLACcitation   = "%%CITATION = ARXIV:1512.02192;%%"
 }'
+
+ReleaseTests:
+ - $A LHC-8-Z-Mass1-e
+ - $A-2 LHC-8-Z-Mass1-mu
+ - $A-3 LHC-8-Z-Mass2-e
+ - $A-4 LHC-8-Z-Mass2-mu
+ - $A-5 LHC-8-Z-Mass3-e
+ - $A-6 LHC-8-Z-Mass3-mu
+ - $A-7 LHC-8-Z-Mass4-e
+ - $A-8 LHC-8-Z-Mass4-mu
+

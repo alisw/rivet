@@ -1,37 +1,37 @@
 #BEGIN PLOT /ALICE_2012_I1126966/d01-x01-y01
 Title=$\pi^+$ pT in Pb-Pb collisions at $\sqrt{s} =  2.76$~TeV in $|y| < 0.5$.
-XLabel=$p_{\rm T}$ (GeV/$c$)
-YLabel=$\frac{1}{N_{\rm inel}2\pi p_{\rm T}}\frac{{\rm d}^2N}{{\rm d}p_{\rm T}{\rm d}y}$ ($c$/GeV)
+XLabel=$p_\mathrm{T}$ (GeV/$c$)
+YLabel=$\frac{1}{N_\mathrm{inel}2\pi p_\mathrm{T}}\frac{\mathrm{d}^2N}{\mathrm{d}p_\mathrm{T}\mathrm{d}y}$ ($c$/GeV)
 #END PLOT
 
 #BEGIN PLOT /ALICE_2012_I1126966/d01-x01-y02
 Title=$\pi^-$ pT in Pb-Pb collisions at $\sqrt{s} =  2.76$~TeV in $|y| < 0.5$.
-XLabel=$p_{\rm T}$ (GeV/$c$)
-YLabel=$\frac{1}{N_{\rm inel}2\pi p_{\rm T}}\frac{{\rm d}^2N}{{\rm d}p_{\rm T}{\rm d}y}$ ($c$/GeV)
+XLabel=$p_\mathrm{T}$ (GeV/$c$)
+YLabel=$\frac{1}{N_\mathrm{inel}2\pi p_\mathrm{T}}\frac{\mathrm{d}^2N}{\mathrm{d}p_\mathrm{T}\mathrm{d}y}$ ($c$/GeV)
 #END PLOT
 
 #BEGIN PLOT /ALICE_2012_I1126966/d02-x01-y01
 Title=$K^+$ pT in Pb-Pb collisions at $\sqrt{s} =  2.76$~TeV in $|y| < 0.5$.
-XLabel=$p_{\rm T}$ (GeV/$c$)
-YLabel=$\frac{1}{N_{\rm inel}2\pi p_{\rm T}}\frac{{\rm d}^2N}{{\rm d}p_{\rm T}{\rm d}y}$ ($c$/GeV)
+XLabel=$p_\mathrm{T}$ (GeV/$c$)
+YLabel=$\frac{1}{N_\mathrm{inel}2\pi p_\mathrm{T}}\frac{\mathrm{d}^2N}{\mathrm{d}p_\mathrm{T}\mathrm{d}y}$ ($c$/GeV)
 #END PLOT
 
 #BEGIN PLOT /ALICE_2012_I1126966/d02-x01-y02
 Title=$K^-$ pT in Pb-Pb collisions at $\sqrt{s} =  2.76$~TeV in $|y| < 0.5$.
-XLabel=$p_{\rm T}$ (GeV/$c$)
-YLabel=$\frac{1}{N_{\rm inel}2\pi p_{\rm T}}\frac{{\rm d}^2N}{{\rm d}p_{\rm T}{\rm d}y}$ ($c$/GeV)
+XLabel=$p_\mathrm{T}$ (GeV/$c$)
+YLabel=$\frac{1}{N_\mathrm{inel}2\pi p_\mathrm{T}}\frac{\mathrm{d}^2N}{\mathrm{d}p_\mathrm{T}\mathrm{d}y}$ ($c$/GeV)
 #END PLOT
 
 #BEGIN PLOT /ALICE_2012_I1126966/d03-x01-y01
 Title=$p$ pT in Pb-Pb collisions at $\sqrt{s} =  2.76$~TeV in $|y| < 0.5$.
-XLabel=$p_{\rm T}$ (GeV/$c$)
-YLabel=$\frac{1}{N_{\rm inel}2\pi p_{\rm T}}\frac{{\rm d}^2N}{{\rm d}p_{\rm T}{\rm d}y}$ ($c$/GeV)
+XLabel=$p_\mathrm{T}$ (GeV/$c$)
+YLabel=$\frac{1}{N_\mathrm{inel}2\pi p_\mathrm{T}}\frac{\mathrm{d}^2N}{\mathrm{d}p_\mathrm{T}\mathrm{d}y}$ ($c$/GeV)
 #END PLOT
 
 #BEGIN PLOT /ALICE_2012_I1126966/d03-x01-y02
 Title=$\bar{p}$ pT in Pb-Pb collisions at $\sqrt{s} =  2.76$~TeV in $|y| < 0.5$.
-XLabel=$p_{\rm T}$ (GeV/$c$)
-YLabel=$\frac{1}{N_{\rm inel}2\pi p_{\rm T}}\frac{{\rm d}^2N}{{\rm d}p_{\rm T}{\rm d}y}$ ($c$/GeV)
+XLabel=$p_\mathrm{T}$ (GeV/$c$)
+YLabel=$\frac{1}{N_\mathrm{inel}2\pi p_\mathrm{T}}\frac{\mathrm{d}^2N}{\mathrm{d}p_\mathrm{T}\mathrm{d}y}$ ($c$/GeV)
 #END PLOT
 
 #BEGIN PLOT /ALICE_2012_I1126966/d04-x01-y01

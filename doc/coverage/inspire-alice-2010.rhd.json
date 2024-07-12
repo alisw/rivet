@@ -1,0 +1,106 @@
+{
+    "838352": [
+        "First proton-proton collisions at the LHC as observed with the ALICE detector: Measurement of the charged particle pseudorapidity density at s**(1/2) = 900-GeV", 
+        "ALICE", 
+        "10.1140/epjc/s10052-009-1227-4", 
+        "1225995", 
+        "0911.5430", 
+        "ins838352", 
+        null, 
+        []
+    ], 
+    "839506": [
+        "Performance of prototypes for the ALICE electromagnetic calorimeter", 
+        "ALICE EMCal", 
+        "10.1016/j.nima.2009.12.061", 
+        "1228212", 
+        "0912.2005", 
+        null, 
+        null, 
+        []
+    ], 
+    "841752": [
+        "Alignment of the ALICE Inner Tracking System with cosmic-ray tracks", 
+        "ALICE", 
+        "10.1088/1748-0221/5/03/P03003", 
+        "1231809", 
+        "1001.0502", 
+        null, 
+        null, 
+        []
+    ], 
+    "852264": [
+        "Charged-particle multiplicity measurement in proton-proton collisions at $\\sqrt{s}=7$ TeV with ALICE at LHC", 
+        "ALICE", 
+        "10.1140/epjc/s10052-010-1350-2", 
+        "1260702", 
+        "1004.3514", 
+        "ins852264", 
+        null, 
+        []
+    ], 
+    "852450": [
+        "Charged-particle multiplicity measurement in proton-proton collisions at $\\sqrt{s}=0.9$ and 2.36 TeV with ALICE at LHC", 
+        "ALICE", 
+        "10.1140/epjc/s10052-010-1339-x", 
+        "1260253", 
+        "1004.3034", 
+        "ins852450", 
+        null, 
+        []
+    ], 
+    "859610": [
+        "Midrapidity antiproton-to-proton ratio in pp collisions at $\\sqrt{s} = 0.9$ and $7$~TeV measured by the ALICE experiment", 
+        "ALICE", 
+        "10.1103/PhysRevLett.105.072002", 
+        "1274828", 
+        "1006.5432", 
+        "ins859610", 
+        null, 
+        []
+    ], 
+    "860416": [
+        "Transverse momentum spectra of charged particles in proton-proton collisions at $\\sqrt{s} = 900$~GeV with ALICE at the LHC", 
+        "ALICE", 
+        "10.1016/j.physletb.2010.08.026", 
+        "1276256", 
+        "1007.0719", 
+        "ins860416", 
+        null, 
+        []
+    ], 
+    "860477": [
+        "Two-pion Bose-Einstein correlations in $pp$ collisions at $\\sqrt{s}=900$ GeV", 
+        "ALICE", 
+        "10.1103/PhysRevD.82.052001", 
+        "1276079", 
+        "1007.0516", 
+        "ins860477", 
+        null, 
+        []
+    ], 
+    "877821": [
+        "Charged-particle multiplicity density at mid-rapidity in central Pb-Pb collisions at $\\sqrt{s_{NN}} = 2.76$ TeV", 
+        "ALICE", 
+        "10.1103/PhysRevLett.105.252301", 
+        "1308007", 
+        "1011.3916", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2010-060"
+        ]
+    ], 
+    "877822": [
+        "Elliptic flow of charged particles in Pb-Pb collisions at 2.76 TeV", 
+        "ALICE", 
+        "10.1103/PhysRevLett.105.252302", 
+        "1308005", 
+        "1011.3914", 
+        "ins877822", 
+        null, 
+        [
+            "CERN-PH-EP-2010-059"
+        ]
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "891455": [
+        "Monte Carlo study of forward pi0 production spectra to be measured by the LHCf experiment for the purpose of benchmarking hadron interaction models at 10(17)-eV", 
+        "LHCf", 
+        "10.1016/j.astropartphys.2010.11.002", 
+        "1347234", 
+        null, 
+        null, 
+        null, 
+        []
+    ], 
+    "897417": [
+        "Measurement of zero degree single photon energy spectra for $\\sqrt{s} =$ 7 TeV proton-proton collisions at LHC", 
+        "LHCf", 
+        "10.1016/j.physletb.2011.07.077", 
+        "1344790", 
+        "1104.5294", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-061"
+        ]
+    ]
+}

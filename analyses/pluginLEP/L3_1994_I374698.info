@@ -1,0 +1,33 @@
+Name: L3_1994_I374698
+Year: 1994
+Summary: $\pi^0$ and $\eta$ spectra at 91 GeV
+Experiment: L3
+Collider: 
+InspireID: 374698
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett.B 328 (1994) 223-233
+RunInfo: e+e- -> hadrons
+Beams: [e+, e-]
+Energies: [91.2]
+Description:
+  'Measurement of the momentum distribution of the $\pi^0$ and $\eta$ mesons at 91.2 GeV in $e^+e^-$ collisions by the L3 collaboration.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Acciarri:1994gza
+BibTeX: '@article{Acciarri:1994gza,
+    author = "Acciarri, M. and others",
+    collaboration = "L3",
+    title = "{Measurement of inclusive production of neutral hadrons from Z decays}",
+    reportNumber = "CERN-PPE-94-53, CERN-PPE-94-053",
+    doi = "10.1016/0370-2693(94)90453-7",
+    journal = "Phys. Lett. B",
+    volume = "328",
+    pages = "223--233",
+    year = "1994"
+}'

@@ -33,10 +33,10 @@ namespace Rivet {
 
       // Set number of events per signal region to 0
       for (size_t i = 0; i < _signal_regions.size(); i++)
-        _eventCountsPerSR[_signal_regions[i]] = 0.0;
+        book(_eventCountsPerSR[_signal_regions[i]], "_eventCountsPerSR_" + _signal_regions[i]);
 
       // Final state including all charged and neutral particles
-      const FinalState fs(-5.0, 5.0, 1*GeV);
+      const FinalState fs((Cuts::etaIn(-5.0, 5.0) && Cuts::pT >=  1*GeV));
       declare(fs, "FS");
 
       // Final state including all charged particles
@@ -64,23 +64,23 @@ namespace Rivet {
       declare(muons, "muons");
 
       // Book histograms
-      _h_HTlep_all  = bookHisto1D("HTlep_all" , 30, 0, 1500);
-      _h_HTjets_all = bookHisto1D("HTjets_all", 30, 0, 1500);
-      _h_MET_all    = bookHisto1D("MET_all"   , 20, 0, 1000);
-      _h_Meff_all   = bookHisto1D("Meff_all"  , 30, 0, 3000);
+      book(_h_HTlep_all  ,"HTlep_all" , 30, 0, 1500);
+      book(_h_HTjets_all ,"HTjets_all", 30, 0, 1500);
+      book(_h_MET_all    ,"MET_all"   , 20, 0, 1000);
+      book(_h_Meff_all   ,"Meff_all"  , 30, 0, 3000);
 
-      _h_e_n        = bookHisto1D("e_n"  , 10, -0.5, 9.5);
-      _h_mu_n       = bookHisto1D("mu_n" , 10, -0.5, 9.5);
-      _h_tau_n      = bookHisto1D("tau_n", 10, -0.5, 9.5);
+      book(_h_e_n        ,"e_n"  , 10, -0.5, 9.5);
+      book(_h_mu_n       ,"mu_n" , 10, -0.5, 9.5);
+      book(_h_tau_n      ,"tau_n", 10, -0.5, 9.5);
 
-      _h_pt_1_3l    = bookHisto1D("pt_1_3l", 100, 0, 2000);
-      _h_pt_2_3l    = bookHisto1D("pt_2_3l", 100, 0, 2000);
-      _h_pt_3_3l    = bookHisto1D("pt_3_3l", 100, 0, 2000);
-      _h_pt_1_2ltau = bookHisto1D("pt_1_2ltau", 100, 0, 2000);
-      _h_pt_2_2ltau = bookHisto1D("pt_2_2ltau", 100, 0, 2000);
-      _h_pt_3_2ltau = bookHisto1D("pt_3_2ltau", 100, 0, 2000);
+      book(_h_pt_1_3l    ,"pt_1_3l", 100, 0, 2000);
+      book(_h_pt_2_3l    ,"pt_2_3l", 100, 0, 2000);
+      book(_h_pt_3_3l    ,"pt_3_3l", 100, 0, 2000);
+      book(_h_pt_1_2ltau ,"pt_1_2ltau", 100, 0, 2000);
+      book(_h_pt_2_2ltau ,"pt_2_2ltau", 100, 0, 2000);
+      book(_h_pt_3_2ltau ,"pt_3_2ltau", 100, 0, 2000);
 
-      _h_excluded   = bookHisto1D("excluded", 2, -0.5, 1.5);
+      book(_h_excluded   ,"excluded", 2, -0.5, 1.5);
     }
 
 
@@ -91,17 +91,17 @@ namespace Rivet {
       Particles muon_candidates;
       const Particles charged_tracks    = apply<ChargedFinalState>(event, "CFS").particles();
       const Particles visible_particles = apply<VisibleFinalState>(event, "VFS").particles();
-      foreach (const Particle& mu, apply<IdentifiedFinalState>(event, "muons").particlesByPt()) {
+      for (const Particle& mu : apply<IdentifiedFinalState>(event, "muons").particlesByPt()) {
         // Calculate pTCone30 variable (pT of all tracks within dR<0.3 - pT of muon itself)
         double pTinCone = -mu.pT();
-        foreach (const Particle& track, charged_tracks) {
+        for (const Particle& track : charged_tracks) {
           if (deltaR(mu.momentum(), track.momentum()) < 0.3)
             pTinCone += track.pT();
         }
 
         // Calculate eTCone30 variable (pT of all visible particles within dR<0.3)
         double eTinCone = 0.;
-        foreach (const Particle& visible_particle, visible_particles) {
+        for (const Particle& visible_particle : visible_particles) {
           if (visible_particle.abspid() != PID::MUON && inRange(deltaR(mu.momentum(), visible_particle.momentum()), 0.1, 0.3))
             eTinCone += visible_particle.pT();
         }
@@ -120,19 +120,19 @@ namespace Rivet {
 
       // Electrons
       Particles electron_candidates;
-      foreach (const Particle& e, apply<IdentifiedFinalState>(event, "elecs").particlesByPt()) {
+      for (const Particle& e : apply<IdentifiedFinalState>(event, "elecs").particlesByPt()) {
         // Neglect electrons in crack regions
         if (inRange(e.abseta(), 1.37, 1.52)) continue;
 
         // Calculate pTCone30 variable (pT of all tracks within dR<0.3 - pT of electron itself)
         double pTinCone = -e.pT();
-        foreach (const Particle& track, charged_tracks) {
+        for (const Particle& track : charged_tracks) {
           if (deltaR(e.momentum(), track.momentum()) < 0.3) pTinCone += track.pT();
         }
 
         // Calculate eTCone30 variable (pT of all visible particles (except muons) within dR<0.3)
         double eTinCone = 0.;
-        foreach (const Particle& visible_particle, visible_particles) {
+        for (const Particle& visible_particle : visible_particles) {
           if (visible_particle.abspid() != PID::MUON && inRange(deltaR(e.momentum(), visible_particle.momentum()), 0.1, 0.3))
             eTinCone += visible_particle.pT();
         }
@@ -152,7 +152,7 @@ namespace Rivet {
       // Taus
       /// @todo This could benefit from a tau finder projection
       Particles tau_candidates;
-      foreach (const Particle& tau, apply<UnstableParticles>(event, "UFS").particlesByPt()) {
+      for (const Particle& tau : apply<UnstableParticles>(event, "UFS").particlesByPt()) {
         // Only pick taus out of all unstable particles
         if (tau.abspid() != PID::TAU) continue;
 
@@ -188,7 +188,7 @@ namespace Rivet {
 
       // Jets (all anti-kt R=0.4 jets with pT > 25 GeV and eta < 4.9)
       Jets jet_candidates;
-      foreach (const Jet& jet, apply<FastJets>(event, "AntiKtJets04").jetsByPt(25*GeV)) {
+      for (const Jet& jet : apply<FastJets>(event, "AntiKtJets04").jetsByPt(25*GeV)) {
         if (jet.abseta() < 4.9) jet_candidates.push_back(jet);
       }
 
@@ -196,7 +196,7 @@ namespace Rivet {
       // ETmiss
       Particles vfs_particles = apply<VisibleFinalState>(event, "VFS").particles();
       FourMomentum pTmiss;
-      foreach (const Particle& p, vfs_particles) pTmiss -= p.momentum();
+      for (const Particle& p : vfs_particles) pTmiss -= p.momentum();
       double eTmiss = pTmiss.pT()/GeV;
 
 
@@ -221,10 +221,10 @@ namespace Rivet {
       }
       // jet - electron
       Jets recon_jets;
-      foreach (const Jet& jet, jet_candidates) {
+      for (const Jet& jet : jet_candidates) {
         bool away = true;
         // if jet within dR < 0.2 of electron: remove jet
-        foreach (const Particle& e, electron_candidates_2) {
+        for (const Particle& e : electron_candidates_2) {
           if (deltaR(e.momentum(), jet.momentum()) < 0.2) {
             away = false;
             break;
@@ -233,7 +233,7 @@ namespace Rivet {
         // jet - tau
         if (away)  {
           // If jet within dR < 0.2 of tau: remove jet
-          foreach (const Particle& tau, tau_candidates) {
+          for (const Particle& tau : tau_candidates) {
             if (deltaR(tau.momentum(), jet.momentum()) < 0.2) {
               away = false;
               break;
@@ -252,7 +252,7 @@ namespace Rivet {
         const Particle& e = electron_candidates_2[ie];
         // If electron within 0.2 < dR < 0.4 from any jets: remove electron
         bool away = true;
-        foreach (const Jet& jet, recon_jets) {
+        for (const Jet& jet : recon_jets) {
           if (deltaR(e.momentum(), jet.momentum()) < 0.4) {
             away = false;
             break;
@@ -261,7 +261,7 @@ namespace Rivet {
         // electron - muon
         // if electron within dR < 0.1 of a muon: remove electron
         if (away) {
-          foreach (const Particle& mu, muon_candidates) {
+          for (const Particle& mu : muon_candidates) {
             if (deltaR(mu.momentum(), e.momentum()) < 0.1) {
               away = false;
               break;
@@ -278,10 +278,10 @@ namespace Rivet {
 
       // tau - electron
       Particles recon_tau;
-      foreach ( const Particle& tau, tau_candidates ) {
+      for ( const Particle& tau : tau_candidates ) {
         bool away = true;
         // If tau within dR < 0.2 of an electron: remove tau
-        foreach ( const Particle& e, recon_e ) {
+        for ( const Particle& e : recon_e ) {
           if (deltaR( tau.momentum(), e.momentum()) < 0.2) {
             away = false;
             break;
@@ -290,7 +290,7 @@ namespace Rivet {
         // tau - muon
         // If tau within dR < 0.2 of a muon: remove tau
         if (away)  {
-          foreach (const Particle& mu, muon_candidates) {
+          for (const Particle& mu : muon_candidates) {
             if (deltaR(tau.momentum(), mu.momentum()) < 0.2) {
               away = false;
               break;
@@ -304,9 +304,9 @@ namespace Rivet {
       // Muon - jet isolation
       Particles recon_mu, trigger_mu;
       // If muon within dR < 0.4 of a jet, remove muon
-      foreach (const Particle& mu, muon_candidates) {
+      for (const Particle& mu : muon_candidates) {
         bool away = true;
-        foreach (const Jet& jet, recon_jets) {
+        for (const Jet& jet : recon_jets) {
           if ( deltaR( mu.momentum(), jet.momentum()) < 0.4 ) {
             away = false;
             break;
@@ -325,7 +325,7 @@ namespace Rivet {
 
       // Jet cleaning
       if (rand()/static_cast<double>(RAND_MAX) <= 0.42) {
-        foreach (const Jet& jet, recon_jets) {
+        for (const Jet& jet : recon_jets) {
           const double eta = jet.rapidity();
           const double phi = jet.azimuthalAngle(MINUSPI_PLUSPI);
           if (jet.pT() > 25*GeV && inRange(eta, -0.1, 1.5) && inRange(phi, -0.9, -0.5)) vetoEvent;
@@ -347,9 +347,6 @@ namespace Rivet {
       // And only accept events with at least 2 electrons and muons and at least 3 leptons in total
       if (recon_mu.size() + recon_e.size() + recon_tau.size() < 3 || recon_leptons.size() < 2) vetoEvent;
 
-      // Now it's worth getting the event weight
-      const double weight = event.weight();
-
       // Sort leptons by decreasing pT
       sortByPt(recon_leptons);
       sortByPt(recon_tau);
@@ -358,18 +355,18 @@ namespace Rivet {
       double HTlep = 0.;
       Particles chosen_leptons;
       if ( recon_leptons.size() > 2 ) {
-        _h_pt_1_3l->fill(recon_leptons[0].perp()/GeV, weight);
-        _h_pt_2_3l->fill(recon_leptons[1].perp()/GeV, weight);
-        _h_pt_3_3l->fill(recon_leptons[2].perp()/GeV, weight);
+        _h_pt_1_3l->fill(recon_leptons[0].perp()/GeV);
+        _h_pt_2_3l->fill(recon_leptons[1].perp()/GeV);
+        _h_pt_3_3l->fill(recon_leptons[2].perp()/GeV);
         HTlep = (recon_leptons[0].pT() + recon_leptons[1].pT() + recon_leptons[2].pT())/GeV;
         chosen_leptons.push_back( recon_leptons[0] );
         chosen_leptons.push_back( recon_leptons[1] );
         chosen_leptons.push_back( recon_leptons[2] );
       }
       else {
-        _h_pt_1_2ltau->fill(recon_leptons[0].perp()/GeV, weight);
-        _h_pt_2_2ltau->fill(recon_leptons[1].perp()/GeV, weight);
-        _h_pt_3_2ltau->fill(recon_tau[0].perp()/GeV,     weight);
+        _h_pt_1_2ltau->fill(recon_leptons[0].perp()/GeV);
+        _h_pt_2_2ltau->fill(recon_leptons[1].perp()/GeV);
+        _h_pt_3_2ltau->fill(recon_tau[0].perp()/GeV);
         HTlep = (recon_leptons[0].pT() + recon_leptons[1].pT() + recon_tau[0].pT())/GeV ;
         chosen_leptons.push_back( recon_leptons[0] );
         chosen_leptons.push_back( recon_leptons[1] );
@@ -377,36 +374,36 @@ namespace Rivet {
       }
 
       // Number of prompt e/mu and had taus
-      _h_e_n  ->fill(recon_e.size()  , weight);
-      _h_mu_n ->fill(recon_mu.size() , weight);
-      _h_tau_n->fill(recon_tau.size(), weight);
+      _h_e_n  ->fill(recon_e.size());
+      _h_mu_n ->fill(recon_mu.size());
+      _h_tau_n->fill(recon_tau.size());
 
       // Calculate HTjets
       double HTjets = 0.;
-      foreach ( const Jet & jet, recon_jets )
+      for ( const Jet & jet : recon_jets )
         HTjets += jet.perp()/GeV;
 
       // Calculate meff
       double meff = eTmiss + HTjets;
       Particles all_leptons;
-      foreach ( const Particle & e , recon_e  )  {
+      for ( const Particle & e  : recon_e  )  {
         meff += e.perp()/GeV;
         all_leptons.push_back( e );
       }
-      foreach ( const Particle & mu, recon_mu )  {
+      for ( const Particle & mu : recon_mu )  {
         meff += mu.perp()/GeV;
         all_leptons.push_back( mu );
       }
-      foreach ( const Particle & tau, recon_tau )  {
+      for ( const Particle & tau : recon_tau )  {
         meff += tau.perp()/GeV;
         all_leptons.push_back( tau );
       }
 
       // Fill histogram of kinematic variables
-      _h_HTlep_all ->fill(HTlep , weight);
-      _h_HTjets_all->fill(HTjets, weight);
-      _h_MET_all   ->fill(eTmiss, weight);
-      _h_Meff_all  ->fill(meff  , weight);
+      _h_HTlep_all ->fill(HTlep);
+      _h_HTjets_all->fill(HTjets);
+      _h_MET_all   ->fill(eTmiss);
+      _h_Meff_all  ->fill(meff);
 
       // Determine signal region (3l/2ltau, onZ/offZ)
       string basic_signal_region;
@@ -419,7 +416,7 @@ namespace Rivet {
       if      (onZ == 1)   basic_signal_region += "onZ";
       else if (onZ == 0)   basic_signal_region += "offZ";
       // Check in which signal regions this event falls and adjust event counters
-      fillEventCountsPerSR(basic_signal_region, onZ, HTlep, eTmiss, HTjets, meff, weight);
+      fillEventCountsPerSR(basic_signal_region, onZ, HTlep, eTmiss, HTjets, meff);
     }
 
 
@@ -433,7 +430,7 @@ namespace Rivet {
 
       // Loop over all signal regions and find signal region with best sensitivity (ratio signal events/visible cross-section)
       for (size_t i = 0; i < _signal_regions.size(); i++)  {
-        double signal_events = _eventCountsPerSR[_signal_regions[i]] * norm;
+        double signal_events = _eventCountsPerSR[_signal_regions[i]]->val() * norm;
         // Use expected upper limits to find best signal region
         double UL95  = getUpperLimit(_signal_regions[i], false);
         double ratio = signal_events / UL95;
@@ -443,7 +440,7 @@ namespace Rivet {
         }
       }
 
-      double signal_events_best_SR = _eventCountsPerSR[best_signal_region] * norm;
+      double signal_events_best_SR = _eventCountsPerSR[best_signal_region]->val() * norm;
       double exp_UL_best_SR = getUpperLimit(best_signal_region, false);
       double obs_UL_best_SR = getUpperLimit(best_signal_region, true);
 
@@ -451,7 +448,7 @@ namespace Rivet {
       cout << "----------------------------------------------------------------------------------------" << endl;
       cout << "Best signal region: " << best_signal_region << endl;
       cout << "Normalized number of signal events in this best signal region (per fb-1): " << signal_events_best_SR << endl;
-      cout << "Efficiency*Acceptance: " <<  _eventCountsPerSR[best_signal_region]/sumOfWeights() << endl;
+      cout << "Efficiency*Acceptance: " <<  _eventCountsPerSR[best_signal_region]->val()/sumOfWeights() << endl;
       cout << "Cross-section [fb]: " << crossSection()/femtobarn << endl;
       cout << "Expected visible cross-section (per fb-1): " << exp_UL_best_SR << endl;
       cout << "Ratio (signal events / expected visible cross-section): " << ratio_best_SR << endl;
@@ -580,42 +577,41 @@ namespace Rivet {
     /// and looking if the event falls into this signal region
     void fillEventCountsPerSR(const string& basic_signal_region, int onZ,
                               double HTlep, double eTmiss,
-                              double HTjets, double meff,
-                              double weight)  {
+                              double HTjets, double meff)  {
 
       // Get cut values for HTlep, loop over them and add event if cut is passed
       vector<int> cut_values = getCutsPerSignalRegion("HTlep", onZ);
       for (size_t i = 0; i < cut_values.size(); i++)  {
         if (HTlep > cut_values[i])
-          _eventCountsPerSR[("HTlep_" + basic_signal_region + "_cut_" + toString(cut_values[i]))] += weight;
+          _eventCountsPerSR[("HTlep_" + basic_signal_region + "_cut_" + toString(cut_values[i]))]->fill();
       }
 
       // Get cut values for METStrong, loop over them and add event if cut is passed
       cut_values = getCutsPerSignalRegion("METStrong", onZ);
       for (size_t i = 0; i < cut_values.size(); i++)  {
         if (eTmiss > cut_values[i] && HTjets > 100.)
-          _eventCountsPerSR[("METStrong_" + basic_signal_region + "_cut_" + toString(cut_values[i]))] += weight;
+          _eventCountsPerSR[("METStrong_" + basic_signal_region + "_cut_" + toString(cut_values[i]))]->fill();
       }
 
       // Get cut values for METWeak, loop over them and add event if cut is passed
       cut_values = getCutsPerSignalRegion("METWeak", onZ);
       for (size_t i = 0; i < cut_values.size(); i++)  {
         if (eTmiss > cut_values[i] && HTjets <= 100.)
-          _eventCountsPerSR[("METWeak_" + basic_signal_region + "_cut_" + toString(cut_values[i]))] += weight;
+          _eventCountsPerSR[("METWeak_" + basic_signal_region + "_cut_" + toString(cut_values[i]))]->fill();
       }
 
       // Get cut values for Meff, loop over them and add event if cut is passed
       cut_values = getCutsPerSignalRegion("Meff", onZ);
       for (size_t i = 0; i < cut_values.size(); i++)  {
         if (meff > cut_values[i])
-          _eventCountsPerSR[("Meff_" + basic_signal_region + "_cut_" + toString(cut_values[i]))] += weight;
+          _eventCountsPerSR[("Meff_" + basic_signal_region + "_cut_" + toString(cut_values[i]))]->fill();
       }
 
       // Get cut values for MeffStrong, loop over them and add event if cut is passed
       cut_values = getCutsPerSignalRegion("MeffStrong", onZ);
       for (size_t i = 0; i < cut_values.size(); i++)  {
         if (meff > cut_values[i] && eTmiss > 75.)
-          _eventCountsPerSR[("MeffStrong_" + basic_signal_region + "_cut_" + toString(cut_values[i]))] += weight;
+          _eventCountsPerSR[("MeffStrong_" + basic_signal_region + "_cut_" + toString(cut_values[i]))]->fill();
       }
     }
 
@@ -624,10 +620,10 @@ namespace Rivet {
     /// @todo Move to TauFinder and make less HepMC-ish
     FourMomentum get_tau_neutrino_mom(const Particle& p)  {
       assert(p.abspid() == PID::TAU);
-      const GenVertex* dv = p.genParticle()->end_vertex();
-      assert(dv != NULL);
-      for (GenVertex::particles_out_const_iterator pp = dv->particles_out_const_begin(); pp != dv->particles_out_const_end(); ++pp) {
-        if (abs((*pp)->pdg_id()) == PID::NU_TAU) return FourMomentum((*pp)->momentum());
+      ConstGenVertexPtr dv = p.genParticle()->end_vertex();
+      assert(dv != nullptr);
+      for(ConstGenParticlePtr pp: HepMCUtils::particles(dv, Relatives::CHILDREN)){
+        if (abs(pp->pdg_id()) == PID::NU_TAU) return FourMomentum(pp->momentum());
       }
       return FourMomentum();
     }
@@ -635,23 +631,23 @@ namespace Rivet {
 
     /// Function calculating the prong number of taus
     /// @todo Move to TauFinder and make less HepMC-ish
-    void get_prong_number(const GenParticle* p, unsigned int& nprong, bool& lep_decaying_tau) {
-      assert(p != NULL);
+    void get_prong_number(ConstGenParticlePtr p, unsigned int& nprong, bool& lep_decaying_tau) {
+      assert(p != nullptr);
       //const int tau_barcode = p->barcode();
-      const GenVertex* dv = p->end_vertex();
-      assert(dv != NULL);
-      for (GenVertex::particles_out_const_iterator pp = dv->particles_out_const_begin(); pp != dv->particles_out_const_end(); ++pp) {
+      ConstGenVertexPtr dv = p->end_vertex();
+      assert(dv != nullptr);
+      for(ConstGenParticlePtr pp: HepMCUtils::particles(dv, Relatives::CHILDREN)){
         // If they have status 1 and are charged they will produce a track and the prong number is +1
-        if ((*pp)->status() == 1 )  {
-          const int id = (*pp)->pdg_id();
+        if (pp->status() == 1 )  {
+          const int id = pp->pdg_id();
           if (Rivet::PID::charge(id) != 0 ) ++nprong;
           // Check if tau decays leptonically
           // @todo Can a tau decay include a tau in its decay daughters?!
           if ((abs(id) == PID::ELECTRON || abs(id) == PID::MUON || abs(id) == PID::TAU) && abs(p->pdg_id()) == PID::TAU) lep_decaying_tau = true;
         }
         // If the status of the daughter particle is 2 it is unstable and the further decays are checked
-        else if ((*pp)->status() == 2 )  {
-          get_prong_number(*pp, nprong, lep_decaying_tau);
+        else if (pp->status() == 2 )  {
+          get_prong_number(pp, nprong, lep_decaying_tau);
         }
       }
     }
@@ -1001,8 +997,8 @@ namespace Rivet {
       double best_mass_3 = 999.;
 
       // Loop over all 2 particle combinations to find invariant mass of OSSF pair closest to Z mass
-      foreach ( const Particle& p1, particles  )  {
-        foreach ( const Particle& p2, particles  )  {
+      for ( const Particle& p1 : particles  )  {
+        for ( const Particle& p2 : particles  )  {
           double mass_difference_2_old = fabs(91.0 - best_mass_2);
           double mass_difference_2_new = fabs(91.0 - (p1.momentum() + p2.momentum()).mass()/GeV);
 
@@ -1014,7 +1010,7 @@ namespace Rivet {
               best_mass_2 = (p1.momentum() + p2.momentum()).mass()/GeV;
 
             // In case there is an OSSF pair take also 3rd lepton into account (e.g. from FSR and photon to electron conversion)
-            foreach ( const Particle & p3 , particles  )  {
+            for ( const Particle & p3 : particles  )  {
               double mass_difference_3_old = fabs(91.0 - best_mass_3);
               double mass_difference_3_new = fabs(91.0 - (p1.momentum() + p2.momentum() + p3.momentum()).mass()/GeV);
               if (mass_difference_3_new < mass_difference_3_old)
@@ -1049,12 +1045,13 @@ namespace Rivet {
 
     /// List of signal regions and event counts per signal region
     vector<string> _signal_regions;
-    map<string, double> _eventCountsPerSR;
+
+    map<string, CounterPtr> _eventCountsPerSR;
 
   };
 
 
 
-  DECLARE_RIVET_PLUGIN(ATLAS_2012_I1204447);
+  RIVET_DECLARE_PLUGIN(ATLAS_2012_I1204447);
 
 }

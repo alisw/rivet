@@ -16,6 +16,8 @@ Description:
    Analysis can be run for all energies to provide generator calibration
    curves, but only holds data for 2.76 TeV/nn.
    Note that this has not been unfolded for detector effects.'
+ReleaseTests:
+  - $A LHC-2760-PbPb
 
 BibKey: ATLAS:2001ah
 BibTeX: '@article{ATLAS:2011ah,

@@ -1,0 +1,24 @@
+{
+    "792291": [
+        "Study of the solar anisotropy for cosmic ray primaries of about 200- GeV energy with the L3 + C muon detector", 
+        "L3", 
+        "10.1051/0004-6361:200809634", 
+        "1115074", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2008-009"
+        ]
+    ], 
+    "825820": [
+        "Study of hadronic event shape in flavour tagged events in $e^+ e^-$ annihilation at < s**(1/2) > = 197-GeV", 
+        "L3", 
+        "10.1186/1754-0410-2-6", 
+        "1170206", 
+        "0907.2658", 
+        null, 
+        null, 
+        []
+    ]
+}

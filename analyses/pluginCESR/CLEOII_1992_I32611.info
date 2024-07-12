@@ -1,0 +1,33 @@
+Name: CLEOII_1992_I32611
+Year: 1992
+Summary: Charged Particle Multiplicity and 2nd Fox-Wolfram Moment in $\chi^\prime_{b0,1,2}$ Decays
+Experiment: CLEOII
+Collider: CUSB
+InspireID: 32611
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D46 (1992) 4822-4827
+RunInfo: Any process producing chi_b(2P), original e+e-> Upsilon(3S) 
+Description:
+'Measurement of the average charged particle multiplicity, and the charged multiplicity distribution in
+ $\chi^\prime_{b0,1,2}$ Decays. In addition the average 2nd Fox-Wolfram moment, and its distribution is also measured.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Alam:1992ir
+BibTeX: '@article{Alam:1992ir,
+      author         = "Alam, M. S. and others",
+      title          = "{Shape studies of quark jets versus gluon jets at
+                        s**(1.2) = 10-GeV}",
+      collaboration  = "CLEO",
+      journal        = "Phys. Rev.",
+      volume         = "D46",
+      year           = "1992",
+      pages          = "4822-4827",
+      doi            = "10.1103/PhysRevD.46.4822",
+      reportNumber   = "CLNS-92-1145, CLEO-92-1",
+      SLACcitation   = "%%CITATION = PHRVA,D46,4822;%%"
+}'

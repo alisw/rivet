@@ -1,0 +1,250 @@
+{
+    "372349": [
+        "Production and decay of D$_1$(2420)$^0$ and D$_2^*$(2460)$^0$", 
+        "CLEO", 
+        "10.1016/0370-2693(94)90968-7", 
+        null, 
+        "hep-ph/9403359", 
+        null, 
+        null, 
+        [
+            "CLNS-94-1280", 
+            "CLEO-94-10", 
+            "CLNS94-1280"
+        ]
+    ], 
+    "374340": [
+        "Semileptonic branching fractions of charged and neutral B mesons", 
+        "CLEO", 
+        "10.1103/PhysRevLett.73.3503", 
+        null, 
+        "hep-ex/9406004", 
+        null, 
+        null, 
+        [
+            "CLNS-94-1286", 
+            "CLEO-94-16"
+        ]
+    ], 
+    "374394": [
+        "Measurement of the anti-B ---> D* lepton anti-neutrino branching fractions and |V(cb)|", 
+        "CLEO", 
+        "10.1103/PhysRevD.51.1014", 
+        null, 
+        "hep-ex/9406005", 
+        null, 
+        null, 
+        [
+            "CLNS-94-1285", 
+            "CLEO-94-27"
+        ]
+    ], 
+    "376525": [
+        "Upsilon (1s) ---> gamma + noninteracting particles", 
+        "CLEO", 
+        "10.1103/PhysRevD.51.2053", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-94-1292", 
+            "CLEO-94-19"
+        ]
+    ], 
+    "377120": [
+        "First observation of Xi(c)+ ---> Xi0 e+ electron-neutrino and a measurement of the Xi(c)+ / Xi(c)0 lifetime ratio", 
+        "CLEO", 
+        "10.1103/PhysRevLett.74.3113", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-94-1288", 
+            "CLEO-94-14"
+        ]
+    ], 
+    "381696": [
+        "Observation of excited baryon states decaying to Lambda(c)+ pi+ pi-", 
+        "CLEO", 
+        "10.1103/PhysRevLett.74.3331", 
+        null, 
+        null, 
+        "ins381696", 
+        null, 
+        [
+            "CLNS-94-1304", 
+            "CLEO-94-22"
+        ]
+    ], 
+    "381699": [
+        "First measurement of the rate for the inclusive radiative penguin decay $b \\to  s \\gamma$", 
+        "CLEO", 
+        "10.1103/PhysRevLett.74.2885", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-94-1314", 
+            "CLEO-94-25"
+        ]
+    ], 
+    "382221": [
+        "Inclusive decays of $B$ mesons to charmonium", 
+        "CLEO", 
+        "10.1103/PhysRevD.52.2661", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-94-1315", 
+            "CLEO-94-26"
+        ]
+    ], 
+    "392228": [
+        "New decay modes of the Lambda(c)+ charm baryon", 
+        "CLEO", 
+        "10.1103/PhysRevLett.74.3534", 
+        null, 
+        null, 
+        "ins392228", 
+        null, 
+        [
+            "CLNS-94-1305", 
+            "CLEO-94-23"
+        ]
+    ], 
+    "392342": [
+        "Form-factor ratio measurement in Lambda(c)+ ---> Lambda e+ electron-neutrino", 
+        "CLEO", 
+        "10.1103/PhysRevLett.75.624", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-94-1306", 
+            "CLEO-94-24"
+        ]
+    ], 
+    "392704": [
+        "Measurement of the decay asymmetry parameters in Lambda(c)+ ---> Lambda pi+ and Lambda(c)+ ---> Sigma+ pi0", 
+        "CLEO", 
+        "10.1016/0370-2693(95)00280-X", 
+        null, 
+        "hep-ex/9502004", 
+        null, 
+        null, 
+        [
+            "CLNS-95-1319", 
+            "CLEO-95-1"
+        ]
+    ], 
+    "393522": [
+        "Measurement of the ratio of branching fractions B (D0 ---> pi- e+ electron-neutrino) / B (D0 ---> K- e+ electron-neutrino)", 
+        "CLEO", 
+        "10.1103/PhysRevD.52.2656", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-95-1324", 
+            "CLEO-95-3"
+        ]
+    ], 
+    "394246": [
+        "A Search for B ---> lepton anti-lepton-neutrino", 
+        "CLEO", 
+        "10.1103/PhysRevLett.75.785", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-95-1331", 
+            "CLEO-95-5"
+        ]
+    ], 
+    "395432": [
+        "Search for CP violation in D0 decay", 
+        "CLEO", 
+        "10.1103/PhysRevD.52.4860", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-95-1333", 
+            "CLEO-95-7"
+        ]
+    ], 
+    "396711": [
+        "Measurement of alpha-s from tau decays", 
+        "CLEO", 
+        "10.1016/0370-2693(95)00824-5", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-95-1332", 
+            "CLEO-95-6"
+        ]
+    ], 
+    "397770": [
+        "Observation of a narrow state decaying into Xi(c)+ pi-", 
+        "CLEO", 
+        "10.1103/PhysRevLett.75.4364", 
+        null, 
+        "hep-ex/9508010", 
+        "ins397770", 
+        null, 
+        [
+            "CLNS-95-1352", 
+            "CLEO-95-14"
+        ]
+    ], 
+    "397788": [
+        "Observation of the isospin violating decay D(s)*+ ---> D(s)+ pi0", 
+        "CLEO", 
+        "10.1103/PhysRevLett.75.3232", 
+        null, 
+        "hep-ex/9508001", 
+        null, 
+        null, 
+        [
+            "CLNS-95-1346", 
+            "CLEO-95-10"
+        ]
+    ], 
+    "397789": [
+        "Measurements of the ratios B (D(s)+ ---> eta lepton+ neutrino) / B (D(s)+ ---> phi lepton+ neutrino) and B (D(s)+ ---> eta-prime lepton+ neutrino) / B (D(s)+ ---> phi lepton+ neutrino)", 
+        "CLEO", 
+        "10.1103/PhysRevLett.75.3804", 
+        null, 
+        "hep-ex/9508009", 
+        null, 
+        null, 
+        [
+            "CLNS-95-1351", 
+            "CLEO-95-13"
+        ]
+    ], 
+    "400623": [
+        "Measurements of the decays tau- ---> h- h+ h- tau-neutrino and tau- ---> h- h+ h- pi0 tau-neutrino", 
+        "CLEO", 
+        "10.1103/PhysRevLett.75.3809", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-95-1347", 
+            "CLEO-95-11"
+        ]
+    ]
+}

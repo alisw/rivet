@@ -1,14 +1,16 @@
 Name: ATLAS_2011_S9019561
 Year: 2011
-Summary: Two lepton supersymmetry search
+Summary: Two-lepton supersymmetry search
 Experiment: ATLAS
 Collider: LHC
 SpiresID: 9019561
 InspireID: 894578
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Angela Chen <aqchen@fas.harvard.edu>
 References:
+ - ATLAS-SUSY-2011-05
  - arXiv:1103.6214
 RunInfo:
   BSM signal events at 7000 GeV.

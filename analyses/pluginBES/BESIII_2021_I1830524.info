@@ -1,0 +1,37 @@
+Name: BESIII_2021_I1830524
+Year: 2021
+Summary: Dalitz plot analysis of $D^+_s\to K^+K^-\pi^+$
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1830524
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 104 (2021) 1, 012016
+RunInfo: Any process producing D_s+->K+K-pi+
+Description:
+  'Measurement of the mass distributions in the decay $D^+_s\to K^+K^-\pi^+$ by BES. The data were read from the plots in the paper and therefore for some points the error bars are the size of the point. It is also not clear that any resolution effects have been unfolded.'
+ValidationInfo:
+  'Herwig 7 events using model from paper'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2020ctr
+BibTeX: '@article{BESIII:2020ctr,
+    author = "Ablikim, Medina and others",
+    collaboration = "BESIII",
+    title = "{Amplitude analysis and branching fraction measurement of $D_{s}^{+} \rightarrow K^{+}K^{-}\pi^{+}$}",
+    eprint = "2011.08041",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevD.104.012016",
+    journal = "Phys. Rev. D",
+    volume = "104",
+    number = "1",
+    pages = "012016",
+    year = "2021"
+}
+'
+

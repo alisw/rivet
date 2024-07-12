@@ -1,0 +1,202 @@
+{
+    "355927": [
+        "Measurement of Drell-Yan electron and muon pair differential cross-sections in $\\bar{p}p$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.49.R1", 
+        null, 
+        null, 
+        "ins355927", 
+        null, 
+        [
+            "FERMILAB-PUB-93-133-E", 
+            "CDF-PUB-ELECTROWEAK-PUBLIC-1760", 
+            "ANL-HEP-PR-94-88"
+        ]
+    ], 
+    "359393": [
+        "Measurement of $\\bar{p}p$ single diffraction dissociation at $\\sqrt{s} = 546$ GeV and 1800 GeV", 
+        "CDF", 
+        "10.1103/PhysRevD.50.5535", 
+        null, 
+        null, 
+        "ins359393", 
+        null, 
+        [
+            "FERMILAB-PUB-93-233-E", 
+            "CDF-PUB-MIN-BIAS-PUBLIC-2050"
+        ]
+    ], 
+    "359411": [
+        "Measurement of small angle $\\bar{p}p$ elastic scattering at $\\sqrt{s} = 546$ GeV and 1800 GeV", 
+        "CDF", 
+        "10.1103/PhysRevD.50.5518", 
+        null, 
+        null, 
+        "ins359411", 
+        null, 
+        [
+            "FERMILAB-PUB-93-232-E", 
+            "CDF-PUB-MIN-BIAS-PUBLIC-2049", 
+            "ANL-HEP-PR-95-13"
+        ]
+    ], 
+    "359412": [
+        "Measurement of the $\\bar{p}p$ Total Cross-Section at $\\sqrt{s} = 546$ GeV and 1800 GeV", 
+        "CDF", 
+        "10.1103/PhysRevD.50.5550", 
+        null, 
+        null, 
+        "ins359412", 
+        null, 
+        [
+            "FERMILAB-PUB-93-234-E"
+        ]
+    ], 
+    "360332": [
+        "Search for excited quarks in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.72.3004", 
+        null, 
+        null, 
+        "ins360332", 
+        null, 
+        [
+            "FERMILAB-PUB-93-341-E", 
+            "CDF-PUB-EXOTIC-PUBLIC-2258"
+        ]
+    ], 
+    "361346": [
+        "Search for the top quark decaying to charged Higgs in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.72.1977", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-93-338-E", 
+            "CDF-PUB-EXOTIC-PUBLIC-2283", 
+            "ANL-HEP-PR-94-35"
+        ]
+    ], 
+    "371875": [
+        "Measurement of the $B^+$ and $B^0$ meson lifetimes", 
+        "CDF", 
+        "10.1103/PhysRevLett.72.3456", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-94-034-E", 
+            "CDF-PUB-BOTTOM-PUBLIC-2381", 
+            "ANL-HEP-PR-94-50"
+        ]
+    ], 
+    "372952": [
+        "Evidence for top quark production in $\\bar{p}p$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.50.2966", 
+        null, 
+        null, 
+        "ins372952", 
+        null, 
+        [
+            "FERMILAB-PUB-94-097-E", 
+            "CDF-PUB-TOP-PUBLIC-2561"
+        ]
+    ], 
+    "373362": [
+        "Evidence for top quark production in $\\bar{p}p$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.73.225", 
+        null, 
+        "hep-ex/9405005", 
+        "ins373362", 
+        null, 
+        [
+            "FERMILAB-PUB-94-116-E", 
+            "ANL-HEP-PR-94-61", 
+            "CDF-PUB-TOP-PUBLIC-2595"
+        ]
+    ], 
+    "373743": [
+        "Measurement of the ratio $\\sigma B (W \\to e \\nu) / \\sigma B (Z^0 \\to e^+ e^-)$ in $\\bar{p}p$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.73.220", 
+        null, 
+        null, 
+        "ins373743", 
+        null, 
+        [
+            "FERMILAB-PUB-94-051-E", 
+            "CDF-PUB-ELECTROWEAK-PUBLIC-2182"
+        ]
+    ], 
+    "374152": [
+        "$W$ boson + jet angular distribution in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.73.2296", 
+        null, 
+        null, 
+        "ins374152", 
+        null, 
+        [
+            "FERMILAB-PUB-94-126-E", 
+            "CDF-PUB-ELECTROWEAK-PUBLIC-2537"
+        ]
+    ], 
+    "374155": [
+        "Evidence for color coherence in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.50.5562", 
+        null, 
+        null, 
+        "ins374155", 
+        null, 
+        [
+            "FERMILAB-PUB-94-072-E", 
+            "CDF-ANAL-JET-PUBLIC-2413"
+        ]
+    ], 
+    "375582": [
+        "A Precision measurement of the prompt photon cross-section in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.73.2662", 
+        null, 
+        null, 
+        "ins375582", 
+        null, 
+        [
+            "FERMILAB-PUB-94-208-E", 
+            "CDF-PUB-JET-PUBLIC-2656", 
+            "ANL-HEP-PR-95-16"
+        ]
+    ], 
+    "382305": [
+        "Measurement of the $B$ meson and $b$ quark cross-sections at $\\sqrt{s} = 1.8$ TeV using the exclusive decay $B^0 \\to J/\\psi K^{*0}(892)$", 
+        "CDF", 
+        "10.1103/PhysRevD.50.4252", 
+        null, 
+        null, 
+        "ins382305", 
+        null, 
+        [
+            "ANL-HEP-PR-94-89", 
+            "FERMILAB-PUB-93-131-E"
+        ]
+    ], 
+    "383998": [
+        "Search for the top quark decaying to a charged Higgs boson in $\\bar{p}p$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.73.2667", 
+        null, 
+        null, 
+        "ins383998", 
+        null, 
+        [
+            "FERMILAB-PUB-94-157-E", 
+            "ANL-HEP-PR-95-15"
+        ]
+    ]
+}

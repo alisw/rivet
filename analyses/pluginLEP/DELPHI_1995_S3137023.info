@@ -33,3 +33,7 @@ BibTeX: '@Article{Abreu:1995qx,
      doi       = "10.1007/BF01553980",
      SLACcitation  = "%%CITATION = ZEPYA,C67,543;%%"
 }'
+
+ReleaseTests:
+ - $A LEP-91
+

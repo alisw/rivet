@@ -13,7 +13,7 @@ LogY=1
 # END PLOT
 # BEGIN PLOT /ATLAS_2012_I946427/hist_met
 Title=Missing Transverse Energy
-XLabel=$E^{\rm miss}_{\mathrm{T}}$ [GeV]
-YLabel=$\mathrm{Events}/5$\,GeV
+XLabel=$E^\mathrm{miss}_{\mathrm{T}}$ [GeV]
+YLabel=$\mathrm{Events}/5$$\,$GeV
 LogY=1
 # END PLOT

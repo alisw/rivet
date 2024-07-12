@@ -1,0 +1,34 @@
+Name: BESII_2006_I716589
+Year: 2006
+Summary: $\psi(2S)\to p \bar{n}\pi^-$ and $n\bar{p}\pi^+$
+Experiment: BESII
+Collider: BEPC
+InspireID: 716589
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 74 (2006) 012004
+RunInfo: Any process producing psi(2S) originally e+e-
+Description:
+  'Measurement of the mass distributions in the decays
+   $\psi(2S)\to p \bar{n}\pi^-$ and $n\bar{p}\pi^+$.
+   The data were read from the plots in the paper and may not be corrected for efficiency or background.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BES:2006ktb
+BibTeX: '@article{BES:2006ktb,
+    author = "Ablikim, M. and others",
+    collaboration = "BES",
+    title = "{First observation of psi(2S) ---\ensuremath{>} p anti-n pi- + c.c.}",
+    eprint = "hep-ex/0605031",
+    archivePrefix = "arXiv",
+    doi = "10.1103/PhysRevD.74.012004",
+    journal = "Phys. Rev. D",
+    volume = "74",
+    pages = "012004",
+    year = "2006"
+}
+'

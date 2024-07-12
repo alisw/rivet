@@ -1,0 +1,26 @@
+{
+    "420421": [
+        "A Partial wave analysis of the reaction gamma gamma ---> pi+ pi- pi0", 
+        "ARGUS", 
+        null, 
+        null, 
+        null, 
+        "ins420421", 
+        null, 
+        [
+            "DESY-96-112"
+        ]
+    ], 
+    "440304": [
+        "Evidence for Lambda(c)+ (2593) production", 
+        "ARGUS", 
+        "10.1016/S0370-2693(97)00503-0", 
+        null, 
+        null, 
+        "ins440304", 
+        null, 
+        [
+            "DESY-97-008"
+        ]
+    ]
+}

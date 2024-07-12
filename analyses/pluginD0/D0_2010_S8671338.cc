@@ -5,18 +5,14 @@
 
 namespace Rivet {
 
-  
-
 
   /// @brief Measurement of Z(->muon muon) pT differential cross-section
+  ///
   /// @author Flavia Dias
   class D0_2010_S8671338 : public Analysis {
   public:
 
-    /// Constructor
-    D0_2010_S8671338()
-      : Analysis("D0_2010_S8671338")
-    {    }
+    RIVET_DEFAULT_ANALYSIS_CTOR(D0_2010_S8671338);
 
 
     ///@name Analysis methods
@@ -25,22 +21,21 @@ namespace Rivet {
     /// Add projections and book histograms
     void init() {
       Cut cut = Cuts::abseta < 1.7 && Cuts::pT > 15*GeV;
-      ZFinder zfinder(FinalState(), cut, PID::MUON, 65*GeV, 115*GeV, 0.2, ZFinder::NOCLUSTER, ZFinder::TRACK);
+      ZFinder zfinder(FinalState(), cut, PID::MUON, 65*GeV, 115*GeV, 0.2, ZFinder::ClusterPhotons::NONE, ZFinder::AddPhotons::YES);
       declare(zfinder, "ZFinder");
 
-      _h_Z_pT_normalised = bookHisto1D(1, 1, 1);
-      _h_Z_pT_xs = bookHisto1D(2, 1, 1);
+      book(_h_Z_pT_normalised ,1, 1, 1);
+      book(_h_Z_pT_xs ,2, 1, 1);
     }
 
 
     // Do the analysis
     void analyze(const Event& e) {
-      const double weight = e.weight();
       const ZFinder& zfinder = apply<ZFinder>(e, "ZFinder");
       if (zfinder.bosons().size()==1) {
         double ZpT = zfinder.bosons()[0].pT()/GeV;
-        _h_Z_pT_normalised->fill(ZpT, weight);
-        _h_Z_pT_xs->fill(ZpT, weight);
+        _h_Z_pT_normalised->fill(ZpT);
+        _h_Z_pT_xs->fill(ZpT);
       }
     }
 
@@ -64,7 +59,6 @@ namespace Rivet {
 
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(D0_2010_S8671338);
+  RIVET_DECLARE_ALIASED_PLUGIN(D0_2010_S8671338, D0_2010_I856972);
 
 }

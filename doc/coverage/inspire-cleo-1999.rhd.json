@@ -1,0 +1,170 @@
+{
+    "468097": [
+        "Measurement of the mass splittings between the b anti-b Chi(b,j)(1P) states", 
+        "CLEO", 
+        "10.1103/PhysRevD.59.032003", 
+        null, 
+        "hep-ex/9803010", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1998-089", 
+            "CLNS-98-1545", 
+            "CLEO-98-5"
+        ]
+    ], 
+    "474025": [
+        "First observation of upsilon(1S) ---> gamma pi pi", 
+        "CLEO", 
+        "10.1103/PhysRevLett.82.286", 
+        null, 
+        "hep-ex/9807031", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1998-096", 
+            "CLNS-98-1572", 
+            "CLEO-98-9"
+        ]
+    ], 
+    "474676": [
+        "Upsilon dipion transitions at energies near the upsilon(4S)", 
+        "CLEO", 
+        "10.1103/PhysRevD.59.052003", 
+        null, 
+        "hep-ex/9808008", 
+        "ins474676", 
+        null, 
+        [
+            "SLAC-REPRINT-1998-097", 
+            "CLNS-98-1576", 
+            "CLEO-98-12"
+        ]
+    ], 
+    "476321": [
+        "First observation of the decay tau- ---> K*- eta tau-neutrino", 
+        "CLEO", 
+        "10.1103/PhysRevLett.82.281", 
+        null, 
+        "hep-ex/9809012", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1998-098", 
+            "CLNS-98-1574", 
+            "CLEO-98-11"
+        ]
+    ], 
+    "477680": [
+        "Study of three prong hadronic tau decays with charged kaons", 
+        "CLEO", 
+        "10.1103/PhysRevD.60.112002", 
+        null, 
+        "hep-ex/9810026", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1998-099", 
+            "CLNS-98-1573", 
+            "CLEO-98-10"
+        ]
+    ], 
+    "478217": [
+        "Observation of two narrow states decaying into xi+(c) gamma and xi0(c) gamma", 
+        "CLEO", 
+        "10.1103/PhysRevLett.82.492", 
+        null, 
+        "hep-ex/9810036", 
+        "ins478217", 
+        null, 
+        [
+            "SLAC-REPRINT-1998-100", 
+            "CLNS-98-1581", 
+            "CLEO-98-13"
+        ]
+    ], 
+    "478475": [
+        "Search for exclusive rare baryonic decays of B mesons", 
+        "CLEO", 
+        "10.1103/PhysRevD.59.111101", 
+        null, 
+        "hep-ex/9810043", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1998-101", 
+            "CLNS-98-1583", 
+            "CLEO-98-14"
+        ]
+    ], 
+    "479334": [
+        "First observation of the decay B0 ---> D*+ D*-", 
+        "CLEO", 
+        "10.1103/PhysRevLett.82.3020", 
+        null, 
+        "hep-ex/9811027", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1998-102", 
+            "CLNS-98-1589", 
+            "CLEO-98-17"
+        ]
+    ], 
+    "479888": [
+        "Measurement of the B ---> D lepton neutrino branching fractions and form-factor", 
+        "CLEO", 
+        "10.1103/PhysRevLett.82.3746", 
+        null, 
+        "hep-ex/9811042", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1998-103", 
+            "CLNS-98-1594", 
+            "CLEO-98-18"
+        ]
+    ], 
+    "494867": [
+        "Search for baryon and lepton number violating decays of the tau lepton", 
+        "CLEO", 
+        "10.1103/PhysRevD.59.091303", 
+        null, 
+        "hep-ex/9902005", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1999-095", 
+            "CLNS-98-1595", 
+            "CLEO-98-19"
+        ]
+    ], 
+    "495087": [
+        "Measurement of charm meson lifetimes", 
+        "CLEO", 
+        "10.1103/PhysRevLett.82.4586", 
+        null, 
+        "hep-ex/9902011", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1999-096", 
+            "CLNS-99-1603", 
+            "CLEO-99-2"
+        ]
+    ], 
+    "501417": [
+        "Evidence of new states decaying into Xi(c)* pi", 
+        "CLEO", 
+        "10.1103/PhysRevLett.83.3390", 
+        null, 
+        "hep-ex/9906013", 
+        "ins501417", 
+        null, 
+        [
+            "SLAC-REPRINT-1999-099", 
+            "CLNS-99-1620", 
+            "CLEO-99-4"
+        ]
+    ]
+}

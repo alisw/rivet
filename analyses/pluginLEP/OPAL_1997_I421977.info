@@ -1,0 +1,34 @@
+Name: OPAL_1997_I421977
+Year: 1997
+Summary: $\Sigma^{\pm}$ baryon production in $Z$ hadronic decays at OPAL
+Experiment: OPAL
+Collider: LEP
+InspireID: 421977
+Status: VALIDATED
+Authors:
+ - Peter Richardson <Peter.Richardson@durham.ac.uk>
+References:
+ - Z.Phys. C73 (1997) 587-600, 1997 
+RunInfo: 
+  Hadronic Z decay events generated on the Z pole ($\sqrt{s} = 91.2$ GeV)
+NeedCrossSection: no
+NumEvents: 1000000
+Beams: [e+, e-]
+Energies: [91.2]
+Description:
+  'Spectra for the production of the $\Sigma^\pm$ baryons at LEP I measured by OPAL.'
+Keywords: []
+BibKey: Alexander:1996qi
+BibTeX: '@article{Alexander:1996qi,
+      author         = "Alexander, G. and others",
+      title          = "{Sigma+, Sigma0 and Sigma- hyperon production in hadronic
+                        Z0 decays}",
+      collaboration  = "OPAL",
+      journal        = "Z. Phys.",
+      volume         = "C73",
+      year           = "1997",
+      pages          = "587-600",
+      doi            = "10.1007/s002880050350",
+      reportNumber   = "CERN-PPE-96-100",
+      SLACcitation   = "%%CITATION = ZEPYA,C73,587;%%"
+}'

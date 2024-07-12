@@ -1,0 +1,220 @@
+{
+    "789895": [
+        "Search for events with an isolated lepton and missing transverse momentum and a measurement of W production at HERA", 
+        "ZEUS", 
+        "10.1016/j.physletb.2009.01.014", 
+        null, 
+        "0807.0589", 
+        null, 
+        null, 
+        [
+            "DESY-08-089", 
+            "ZEUS-PUB-08-005"
+        ]
+    ], 
+    "790200": [
+        "Production of excited charm and charm-strange mesons at HERA", 
+        "ZEUS", 
+        "10.1140/epjc/s10052-009-0881-x", 
+        null, 
+        "0807.1290", 
+        null, 
+        null, 
+        [
+            "DESY-08-093", 
+            "ZEUS-PUB-08-006"
+        ]
+    ], 
+    "800763": [
+        "Measurement of beauty production from dimuon events at HERA", 
+        "ZEUS", 
+        "10.1088/1126-6708/2009/02/032", 
+        null, 
+        "0811.0894", 
+        null, 
+        null, 
+        [
+            "DESY-08-129"
+        ]
+    ], 
+    "804915": [
+        "Deep inelastic scattering with leading protons or large rapidity gaps at HERA", 
+        "ZEUS", 
+        "10.1016/j.nuclphysb.2009.03.003", 
+        null, 
+        "0812.2003", 
+        "ins804915", 
+        null, 
+        [
+            "DESY-08-175"
+        ]
+    ], 
+    "805171": [
+        "Leading proton production in deep inelastic scattering at HERA", 
+        "ZEUS", 
+        "10.1088/1126-6708/2009/06/074", 
+        null, 
+        "0812.2416", 
+        "ins805171", 
+        null, 
+        [
+            "DESY-08-176"
+        ]
+    ], 
+    "805219": [
+        "A Measurement of the Q**2, W and t dependences of deeply virtual Compton scattering at HERA", 
+        "ZEUS", 
+        "10.1088/1126-6708/2009/05/108", 
+        null, 
+        "0812.2517", 
+        "ins805219", 
+        null, 
+        [
+            "DESY-08-132"
+        ]
+    ], 
+    "806692": [
+        "Measurement of the charm fragmentation function in D* photoproduction at HERA", 
+        "ZEUS", 
+        "10.1088/1126-6708/2009/04/082", 
+        null, 
+        "0901.1210", 
+        null, 
+        null, 
+        [
+            "DESY-08-209"
+        ]
+    ], 
+    "806809": [
+        "Measurement of beauty photoproduction using decays into muons in dijet events at HERA", 
+        "ZEUS", 
+        "10.1088/1126-6708/2009/04/133", 
+        null, 
+        "0901.2226", 
+        null, 
+        null, 
+        [
+            "DESY-08-210"
+        ]
+    ], 
+    "810103": [
+        "Subjet distributions in deep inelastic scattering at HERA", 
+        "ZEUS", 
+        "10.1140/epjc/s10052-009-1090-3", 
+        null, 
+        "0812.2864", 
+        null, 
+        null, 
+        [
+            "DESY-08-178"
+        ]
+    ], 
+    "810112": [
+        "Measurement of D+- and D0 production in deep inelastic scattering using a lifetime tag at HERA", 
+        "ZEUS", 
+        "10.1140/epjc/s10052-009-1088-x", 
+        null, 
+        "0812.3775", 
+        "ins810112", 
+        null, 
+        [
+            "DESY-08-201"
+        ]
+    ], 
+    "810120": [
+        "Measurement of charged current deep inelastic scattering cross sections with a longitudinally polarised electron beam at HERA", 
+        "ZEUS", 
+        "10.1140/epjc/s10052-009-1015-1", 
+        null, 
+        "0812.4620", 
+        "ins810120", 
+        null, 
+        [
+            "DESY-08-177"
+        ]
+    ], 
+    "811152": [
+        "Measurement of high-Q**2 neutral current deep inelastic e- p scattering cross sections with a longitudinally polarised electron beam at HERA", 
+        "ZEUS", 
+        "10.1140/epjc/s10052-009-1055-6", 
+        null, 
+        "0901.2385", 
+        null, 
+        null, 
+        [
+            "DESY-08-202"
+        ]
+    ], 
+    "817462": [
+        "Measurement of the Longitudinal Proton Structure Function at HERA", 
+        "ZEUS", 
+        "10.1016/j.physletb.2009.10.050", 
+        null, 
+        "0904.1092", 
+        "ins817462", 
+        null, 
+        [
+            "DESY-09-046"
+        ]
+    ], 
+    "818528": [
+        "Scaled momentum distributions of charged particles in dijet photoproduction at HERA", 
+        "ZEUS", 
+        "10.1088/1126-6708/2009/08/077", 
+        null, 
+        "0904.3466", 
+        "ins818528", 
+        null, 
+        [
+            "DESY-09-059"
+        ]
+    ], 
+    "822460": [
+        "Measurement of J/psi helicity distributions in inelastic photoproduction at HERA", 
+        "ZEUS", 
+        "10.1088/1126-6708/2009/12/007", 
+        null, 
+        "0906.1424", 
+        null, 
+        null, 
+        [
+            "DESY-09-077"
+        ]
+    ], 
+    "822488": [
+        "Multi-lepton production at high transverse momentum at HERA", 
+        "ZEUS", 
+        "10.1016/j.physletb.2009.08.026", 
+        null, 
+        "0906.1504", 
+        null, 
+        null, 
+        [
+            "DESY-09-072"
+        ]
+    ], 
+    "826305": [
+        "Multi-Leptons with High Transverse Momentum at HERA", 
+        "H1", 
+        "10.1088/1126-6708/2009/10/013", 
+        "1192066", 
+        "0907.3627", 
+        null, 
+        null, 
+        [
+            "DESY-09-108"
+        ]
+    ], 
+    "835983": [
+        "Exclusive photoproduction of upsilon mesons at HERA", 
+        "ZEUS", 
+        "10.1016/j.physletb.2009.07.066", 
+        null, 
+        "0903.4205", 
+        null, 
+        null, 
+        [
+            "DESY-09-036"
+        ]
+    ]
+}

@@ -1,0 +1,36 @@
+Name: BABAR_2006_I714448
+Year: 2006
+Summary: Pion Mass Spectrum in $\Upsilon(4S)\to\Upsilon(1,2S)\pi^+\pi^-$
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 714448
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 96 (2006) 232001
+RunInfo: Any process producing Upsilon(4S), original e+e-
+Description:
+  'Measurement of the $\pi^+\pi^-$ mass Spectrum in $\Upsilon(4S)\to\Upsilon(1,2S)\pi^+\pi^-$ decays.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Aubert:2006bm
+BibTeX: '@article{Aubert:2006bm,
+      author         = "Aubert, Bernard and others",
+      title          = "{Observation of Upsilon(4S) decays to pi+ pi- Upsilon(1S)
+                        and pi+ pi- Upsilon(2S)}",
+      collaboration  = "BaBar",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "96",
+      year           = "2006",
+      pages          = "232001",
+      doi            = "10.1103/PhysRevLett.96.232001",
+      eprint         = "hep-ex/0604031",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "SLAC-PUB-11817, BABAR-PUB-06-027",
+      SLACcitation   = "%%CITATION = HEP-EX/0604031;%%"
+}'

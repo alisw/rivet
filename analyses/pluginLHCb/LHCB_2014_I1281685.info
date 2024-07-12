@@ -21,7 +21,7 @@ Beams: [p+, p+]
 Energies: [7000]
 PtCuts: [0.2, 100]
 Description:
-  'Measurement of prompt charged particle production in proton-proton collsions at a
+  'Measurement of prompt charged particle production in proton-proton collisions at a
    centre-of-mass energy of 7 TeV at the LHC. The measurement is performed in
    the kinematic range $p > 2$ GeV/$c$, $p_\perp > 0.2$ GeV/$c$ and $2.0 < \eta < 4.8$.
    At least one prompt charged particle per event is required. A prompt particle is

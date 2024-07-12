@@ -8,24 +8,27 @@ YLabelSep=6.0
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2013_I1244522/d01-x01-y01
-XLabel=$E_\text{T}^\gamma$ [GeV]
-YLabel=$\text{d}\sigma / \text{d}E_\text{T}^\gamma$ [pb/GeV]
+XLabel=$E_\mathrm{T}^\gamma$ [GeV]
+YLabel=$\mathrm{d}\sigma / \mathrm{d}E_\mathrm{T}^\gamma$ [pb/GeV]
+LogY=1
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2013_I1244522/d02-x01-y01
-XLabel=$p_\text{T}^\text{jet}$ [GeV]
-YLabel=$\text{d}\sigma / \text{d}p_\text{T}^\text{jet}$ [pb/GeV]
+XLabel=$p_\mathrm{T}^\mathrm{jet}$ [GeV]
+YLabel=$\mathrm{d}\sigma / \mathrm{d}p_\mathrm{T}^\mathrm{jet}$ [pb/GeV]
+LogY=1
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2013_I1244522/d03-x01-y01
 LogY=0
-XLabel=$|y^\text{jet}|$
-YLabel=$\text{d}\sigma / \text{d}|y^\text{jet}|$ [pb]
+XLabel=$|y^\mathrm{jet}|$
+YLabel=$\mathrm{d}\sigma / \mathrm{d}|y^\mathrm{jet}|$ [pb]
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2013_I1244522/d04-x01-y01
 XLabel=$\Delta\phi^{\gamma j}$ [rad]
-YLabel=$\text{d}\sigma / \text{d}\Delta\phi^{\gamma j}$ [pb]
+YLabel=$\mathrm{d}\sigma / \mathrm{d}\Delta\phi^{\gamma j}$ [pb]
+LogY=1
 LegendYPos=0.9
 LegendXPos=0.1
 # END PLOT
@@ -33,17 +36,18 @@ LegendXPos=0.1
 # BEGIN PLOT /ATLAS_2013_I1244522/d05-x01-y01
 LogY=0
 Title=without additional cuts
-XLabel=$|\text{cos}~\theta^{\gamma j}| $
-YLabel=$\text{d}\sigma / \text{d}|\text{cos}~\theta^{\gamma j}|$ [pb]
+XLabel=$|\mathrm{cos}~\theta^{\gamma j}| $
+YLabel=$\mathrm{d}\sigma / \mathrm{d}|\mathrm{cos}~\theta^{\gamma j}|$ [pb]
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2013_I1244522/d06-x01-y01
 XLabel=$m^{\gamma j}$ [GeV]
-YLabel=$\text{d}\sigma / \text{d}m^{\gamma j}$ [pb/GeV]
+YLabel=$\mathrm{d}\sigma / \mathrm{d}m^{\gamma j}$ [pb/GeV]
+LogY=1
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2013_I1244522/d07-x01-y01
-XLabel=$|\text{cos}~\theta^{\gamma j}|$
-YLabel=$\text{d} \sigma / \text{d}|\text{cos}~\theta^{\gamma j}|$ [pb]
+XLabel=$|\mathrm{cos}~\theta^{\gamma j}|$
+YLabel=$\mathrm{d} \sigma / \mathrm{d}|\mathrm{cos}~\theta^{\gamma j}|$ [pb]
 # END PLOT
 

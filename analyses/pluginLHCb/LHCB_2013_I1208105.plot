@@ -8,7 +8,7 @@ LegendYPos=0.97
 
 
 # BEGIN PLOT /LHCB_2013_I1208105/d0[1234]-x01-y01
-YLabel=Charged $1/N_\text{int}$ \, $\mathrm{d}E/\mathrm{d}\eta$ [GeV]
+YLabel=Charged $1/N_\mathrm{int}$ $\,$ $\mathrm{d}E/\mathrm{d}\eta$ [GeV]
 # END PLOT
 
 # BEGIN PLOT /LHCB_2013_I1208105/d01-x01-y01
@@ -29,7 +29,7 @@ Title=Charged EF -- non-diffractive enriched events, $\sqrt{s}=7$ TeV
 
 
 # BEGIN PLOT /LHCB_2013_I1208105/d0[5678]-x01-y01
-YLabel=Total $1/N_\text{int}$ \, $\mathrm{d}E/\mathrm{d}\eta$ [GeV]
+YLabel=Total $1/N_\mathrm{int}$ $\,$ $\mathrm{d}E/\mathrm{d}\eta$ [GeV]
 # END PLOT
 
 # BEGIN PLOT /LHCB_2013_I1208105/d05-x01-y01

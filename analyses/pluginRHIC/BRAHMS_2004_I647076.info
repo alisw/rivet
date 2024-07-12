@@ -10,12 +10,12 @@ Authors:
 References:
 - 'Phys.Rev.Lett. 94 (2005) 162301'
 - '10.1103/PhysRevLett.94.162301'
-- 'arXiv:043050'
+- 'arXiv:nucl-ex/043050'
 RunInfo: Au Au minimum bias events, only 5% most central events used in analysis.
 NeedCrossSection: no
 Options:
- - cent=REF,GEN,IMP,USR
-Beams: [1000791970, 1000791970]
+ - cent=REF,GEN,IMP,USR,RAW
+Beams: [Au, Au]
 # This is _total_ energy of beams, so this becomes 197*200=39400
 Energies: [39400]
 Description:

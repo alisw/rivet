@@ -1,0 +1,36 @@
+Name: NA60_2016_I1452485
+Year: 2016
+Summary:  Form factors for the decays $\omega\to\pi^0\mu^+\mu^-$ and $\eta\to\gamma \mu^+\mu^-$
+Experiment: NA60
+Collider: SPS
+InspireID: 1452485
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett.B 757 (2016) 437-444
+RunInfo: omega and eta production with both the dalitz decay and radiative decay for normalization
+NeedCrossSection: no
+Description:
+  'Measurement of the form factors $\left|F_{\omega\pi^0}(q^2)\right|$ for the decay $\phi\to\pi^0\mu^+\mu^-$ and $\left|F_{\eta}(q^2)\right|$ for the decay $\eta\to\gamma \mu^+\mu^-$ by the NA60 experiment at CERN.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: 
+BibTeX: '@article{NA60:2016nad,
+    author = "Arnaldi, R. and others",
+    collaboration = "NA60",
+    title = "{Precision study of the $\eta\to\mu^+\mu^-\gamma$ and $\omega\to\mu^+\mu^-\pi^0$ electromagnetic transition form-factors and of the $\rho\to\mu^+\mu^-$ line shape in NA60}",
+    eprint = "1608.07898",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1016/j.physletb.2016.04.013",
+    journal = "Phys. Lett. B",
+    volume = "757",
+    pages = "437--444",
+    year = "2016"
+}
+'

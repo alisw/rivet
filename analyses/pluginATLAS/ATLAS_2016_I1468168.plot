@@ -6,6 +6,6 @@ LegendYPos=0.3
 LegendAlign=r
 LogY=0
 XLabel=
-XCustomMajorTicks=0.5 $\sigma_{t\bar{t}}^\text{fid}$
+XCustomMajorTicks=13000. $\sigma_{t\bar{t}}^\text{fid}$
 YLabel=Cross section [pb]
 # END PLOT

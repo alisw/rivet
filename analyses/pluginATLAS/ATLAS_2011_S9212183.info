@@ -6,10 +6,12 @@ Collider: LHC
 SpiresID: 9212183
 InspireID: 930002
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Chris Wymant <c.m.wymant@durham.ac.uk>
  - David Grellscheid <david.grellscheid@durham.ac.uk>
 References:
+ - ATLAS-SUSY-2011-07
  - arXiv:1109.6572
 RunInfo:
   BSM signal events at 7000 GeV.

@@ -4,7 +4,7 @@
 namespace Rivet {
 
 
-  int ChargedLeptons::compare(const Projection& other) const {
+  CmpState ChargedLeptons::compare(const Projection& other) const {
     return mkNamedPCmp(other, "ChFS");
   }
 

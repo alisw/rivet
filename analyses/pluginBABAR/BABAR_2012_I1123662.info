@@ -1,0 +1,36 @@
+Name: BABAR_2012_I1123662
+Year: 2012
+Summary: Measurement of the energy spectrum for $\bar{B}\to X_s \gamma$
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 1123662
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 86 (2012) 112008
+RunInfo: any process making $B^-$ and $\bar{B}^0$ mesons, eg. particle gun or $\Upslion(4S)$ decay. 
+Description:
+  'Photon energy spectrum in $B\to s\gamma$ decays measured by BELLE. Useful for testing the implementation of these decays'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BaBar:2012idb
+BibTeX: '@article{BaBar:2012idb,
+    author = "Lees, J. P. and others",
+    collaboration = "BaBar",
+    title = "{Measurement of B($B\to X_s \gamma$), the $B\to X_s \gamma$ photon energy spectrum, and the direct CP asymmetry in $B\to X_{s+d} \gamma$ decays}",
+    eprint = "1207.5772",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BABAR-PUB-12-018, SLAC-PUB-15181",
+    doi = "10.1103/PhysRevD.86.112008",
+    journal = "Phys. Rev. D",
+    volume = "86",
+    pages = "112008",
+    year = "2012"
+}
+'

@@ -1,0 +1,35 @@
+Name: BELLE_2009_I809630
+Year: 2009
+Summary: Cross Section for $e^+e^-\to\phi\pi^+\pi^-$ between 1.488 and 2.987 GeV
+Experiment: BELLE
+Collider: KEKB
+InspireID: 809630
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D80 (2009) 031101, 2009 
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+  'Measurement of the cross section for  $e^+e^-\to\phi\pi^+\pi^-$ between 1.488 and 2.987 GeV'
+Keywords: []
+BibKey: Shen:2009zze
+BibTeX: '@article{Shen:2009zze,
+      author         = "Shen, C. P. and others",
+      title          = "{Observation of the phi(1680) and the Y(2175) in e+e-
+                        ---&gt; phi pi+ pi-}",
+      collaboration  = "Belle",
+      journal        = "Phys. Rev.",
+      volume         = "D80",
+      year           = "2009",
+      pages          = "031101",
+      doi            = "10.1103/PhysRevD.80.031101",
+      eprint         = "0808.0006",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "BELLE-CONF-0865",
+      SLACcitation   = "%%CITATION = ARXIV:0808.0006;%%"
+}'

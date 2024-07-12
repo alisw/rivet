@@ -19,7 +19,7 @@ namespace Rivet {
     /// Constructor
     ChargedLeptons(const FinalState& fsp=FinalState()) {
       setName("ChargedLeptons");
-      addProjection(ChargedFinalState(fsp), "ChFS");
+      declare(ChargedFinalState(fsp), "ChFS");
     }
 
     /// Constructor via Cut
@@ -38,7 +38,7 @@ namespace Rivet {
     void project(const Event& evt);
 
     /// Compare projections.
-    int compare(const Projection& other) const;
+    CmpState compare(const Projection& other) const;
 
   public:
 

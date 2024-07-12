@@ -1,0 +1,102 @@
+{
+    "768530": [
+        "Cold Nuclear Matter Effects on J/Psi as Constrained by Deuteron-Gold Measurements at s(NN)**(1/2) = 200-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.77.024912", 
+        "1071317", 
+        "0903.4845", 
+        "ins768530", 
+        null, 
+        []
+    ], 
+    "778611": [
+        "Dilepton mass spectra in p+p collisions at s**(1/2) = 200-GeV and the contribution from open charm", 
+        "PHENIX", 
+        "10.1016/j.physletb.2008.10.064", 
+        null, 
+        "0802.0050", 
+        "ins778611", 
+        null, 
+        []
+    ], 
+    "798465": [
+        "The Polarized gluon contribution to the proton spin from the double helicity asymmetry in inclusive pi0 production in polarized p + p collisions at s**(1/2) = 200-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.103.012003", 
+        null, 
+        "0810.0694", 
+        null, 
+        null, 
+        []
+    ], 
+    "798469": [
+        "Inclusive cross section and double helicity asymmetry for pi^0 production in $p^+ p$ collisions at $\\sqrt{s}=62.4$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevD.79.012003", 
+        null, 
+        "0810.0701", 
+        null, 
+        null, 
+        []
+    ], 
+    "815217": [
+        "Photoproduction of J/psi and of high mass e+e- in ultra-peripheral Au+Au collisions at s**(1/2) = 200-GeV", 
+        "PHENIX", 
+        "10.1016/j.physletb.2009.07.061", 
+        null, 
+        "0903.2041", 
+        "ins815217", 
+        null, 
+        []
+    ], 
+    "815824": [
+        "Photon-Hadron Jet Correlations in p+p and Au+Au Collisions at s**(1/2) = 200-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.80.024908", 
+        null, 
+        "0903.3399", 
+        "ins815824", 
+        null, 
+        []
+    ], 
+    "816469": [
+        "Measurement of Bottom versus Charm as a Function of Transverse Momentum with Electron-Hadron Correlations in $p^+ p$ Collisions at $\\sqrt{s}=200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.103.082002", 
+        null, 
+        "0903.4851", 
+        "ins816469", 
+        null, 
+        []
+    ], 
+    "816475": [
+        "Kaon interferometric probes of space-time evolution in Au+Au collisions at s(NN)**(1/2) = 200-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.103.142301", 
+        null, 
+        "0903.4863", 
+        null, 
+        null, 
+        []
+    ], 
+    "816486": [
+        "High-pT pi0 Production with Respect to the Reaction Plane in Au + Au Collisions at s(NN)**(1/2) = 200-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.80.054907", 
+        null, 
+        "0903.4886", 
+        "ins816486", 
+        null, 
+        []
+    ], 
+    "819672": [
+        "Systematic Studies of Elliptic Flow Measurements in Au+Au Collisions at s**(1/2) = 200-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.80.024909", 
+        null, 
+        "0905.1070", 
+        null, 
+        null, 
+        []
+    ]
+}

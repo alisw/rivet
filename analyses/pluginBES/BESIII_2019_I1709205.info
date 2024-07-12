@@ -1,0 +1,34 @@
+Name: BESIII_2019_I1709205
+Year: 2019
+Summary: $J/\psi$ and $\psi(2S)\to p \bar{p}\eta^\prime$
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1709205
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 99 (2019) 3, 032006
+RunInfo: Any process producing J/psi or psi(2S) originally e+e-
+Description:
+  'Measurement of the mass distributions in the decay $J/\psi$ or $\psi(2S)\to p \bar{p}\eta^\prime$. The data were read from the plots in the paper. It is also not clear that any resolution effects have been unfolded.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2018gmc
+BibTeX: '@article{BESIII:2018gmc,
+    author = "Ablikim, M. and others",
+    collaboration = "BESIII",
+    title = "{Observation of $\psi(3686) \to p \bar{p} \eta^{\prime}$ and improved measurement of $J/\psi \to p \bar{p} \eta^{\prime}$}",
+    eprint = "1812.05800",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevD.99.032006",
+    journal = "Phys. Rev. D",
+    volume = "99",
+    number = "3",
+    pages = "032006",
+    year = "2019"
+}
+'

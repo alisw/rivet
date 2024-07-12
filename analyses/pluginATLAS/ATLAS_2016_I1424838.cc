@@ -1,4 +1,5 @@
 #include "Rivet/Analysis.hh"
+#include "Rivet/Projections/Beam.hh"
 #include "Rivet/Projections/Thrust.hh"
 #include "Rivet/Projections/ZFinder.hh"
 #include "Rivet/Projections/FParameter.hh"
@@ -14,7 +15,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2016_I1424838);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2016_I1424838);
 
 
     /// Book histograms and initialise projections before the run
@@ -25,9 +26,9 @@ namespace Rivet {
       declare(cfs, "CFS");
 
       // ZFinders
-      ZFinder zfinder(cfs, Cuts::abseta<2.4 && Cuts::pT>20.0*GeV, PID::ELECTRON, 66*GeV, 116*GeV, 0.1, ZFinder::CLUSTERNODECAY);
+      ZFinder zfinder(cfs, Cuts::abseta<2.4 && Cuts::pT>20.0*GeV, PID::ELECTRON, 66*GeV, 116*GeV, 0.1, ZFinder::ClusterPhotons::NODECAY);
       declare(zfinder, "ZFinder");
-      ZFinder zfinder_mu(cfs, Cuts::abseta<2.4 && Cuts::pT>20.0*GeV, PID::MUON, 66*GeV, 116*GeV, 0.1, ZFinder::CLUSTERNODECAY);
+      ZFinder zfinder_mu(cfs, Cuts::abseta<2.4 && Cuts::pT>20.0*GeV, PID::MUON, 66*GeV, 116*GeV, 0.1, ZFinder::ClusterPhotons::NODECAY);
       declare(zfinder_mu, "ZFinderMu");
 
       // This CFS only contains charged particles inside the acceptance excluding the leptons
@@ -47,27 +48,24 @@ namespace Rivet {
       for (size_t alg = 0; alg < 5; ++alg) {
         // Book the inclusive histograms
         size_t offset = alg * 6;
-        _h_Elec_Ntrk[alg]         = bookHisto1D(offset + 1, 1, 1);
-        _h_Elec_SumPt[alg]        = bookHisto1D(offset + 2, 1, 1);
-        _h_Elec_Beamthrust[alg]   = bookHisto1D(offset + 3, 1, 1);
-        _h_Elec_Thrust[alg]       = bookHisto1D(offset + 4, 1, 1);
-        _h_Elec_Spherocity[alg]   = bookHisto1D(offset + 5, 1, 1);
-        _h_Elec_FParam[alg]       = bookHisto1D(offset + 6, 1, 1);
-        _h_Muon_Ntrk[alg]         = bookHisto1D(30 + offset + 1, 1, 1);
-        _h_Muon_SumPt[alg]        = bookHisto1D(30 + offset + 2, 1, 1);
-        _h_Muon_Beamthrust[alg]   = bookHisto1D(30 + offset + 3, 1, 1);
-        _h_Muon_Thrust[alg]       = bookHisto1D(30 + offset + 4, 1, 1);
-        _h_Muon_Spherocity[alg]   = bookHisto1D(30 + offset + 5, 1, 1);
-        _h_Muon_FParam[alg]       = bookHisto1D(30 + offset + 6, 1, 1);
+        book(_h_Elec_Ntrk[alg]         , offset+1,  1, 1);
+        book(_h_Elec_SumPt[alg]        , offset+2,  1, 1);
+        book(_h_Elec_Beamthrust[alg]   , offset+3,  1, 1);
+        book(_h_Elec_Thrust[alg]       , offset+4,  1, 1);
+        book(_h_Elec_FParam[alg]       , offset+5,  1, 1);
+        book(_h_Elec_Spherocity[alg]   , offset+6,  1, 1);
+        book(_h_Muon_Ntrk[alg]         , offset+31, 1, 1);
+        book(_h_Muon_SumPt[alg]        , offset+32, 1, 1);
+        book(_h_Muon_Beamthrust[alg]   , offset+33, 1, 1);
+        book(_h_Muon_Thrust[alg]       , offset+34, 1, 1);
+        book(_h_Muon_FParam[alg]       , offset+35, 1, 1);
+        book(_h_Muon_Spherocity[alg]   , offset+36, 1, 1);
       }
     }
 
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-
-      // Get generator weight
-      const double weight = event.weight();
 
       // Check for Z boson in event
       const ZFinder& zfinder    = apply<ZFinder>(event, "ZFinder");
@@ -110,16 +108,16 @@ namespace Rivet {
 
       // Fill inclusive histos
       if (isElec) {
-        _h_Elec_Ntrk[alg]       ->fill(remfs.size(),        weight);
-        _h_Elec_Ntrk[0]         ->fill(remfs.size(),        weight);
-        _h_Elec_SumPt[alg]      ->fill(sumPt,               weight);
-        _h_Elec_SumPt[0]        ->fill(sumPt,               weight);
+        _h_Elec_Ntrk[alg]       ->fill(remfs.size());
+        _h_Elec_Ntrk[0]         ->fill(remfs.size());
+        _h_Elec_SumPt[alg]      ->fill(sumPt);
+        _h_Elec_SumPt[0]        ->fill(sumPt);
       }
       if (isMuon) {
-        _h_Muon_Ntrk[alg]       ->fill(remfs.size(),        weight);
-        _h_Muon_Ntrk[0]         ->fill(remfs.size(),        weight);
-        _h_Muon_SumPt[alg]      ->fill(sumPt,               weight);
-        _h_Muon_SumPt[0]        ->fill(sumPt,               weight);
+        _h_Muon_Ntrk[alg]       ->fill(remfs.size());
+        _h_Muon_Ntrk[0]         ->fill(remfs.size());
+        _h_Muon_SumPt[alg]      ->fill(sumPt);
+        _h_Muon_SumPt[0]        ->fill(sumPt);
       }
 
       // Skip event shape calculation if we don't match the minimum Nch criterion
@@ -147,24 +145,24 @@ namespace Rivet {
 
         // Fill inclusive histos
         if (isElec) {
-          _h_Elec_Thrust[alg]     ->fill(thrust,              weight);
-          _h_Elec_Thrust[0]       ->fill(thrust,              weight);
-          _h_Elec_FParam[alg]     ->fill(fparam.F(),          weight);
-          _h_Elec_FParam[0]       ->fill(fparam.F(),          weight);
-          _h_Elec_Spherocity[alg] ->fill(sphero.spherocity(), weight);
-          _h_Elec_Spherocity[0]   ->fill(sphero.spherocity(), weight);
-          _h_Elec_Beamthrust[alg] ->fill(beamThrust/GeV,      weight);
-          _h_Elec_Beamthrust[0]   ->fill(beamThrust/GeV,      weight);
+          _h_Elec_Thrust[alg]     ->fill(thrust);
+          _h_Elec_Thrust[0]       ->fill(thrust);
+          _h_Elec_FParam[alg]     ->fill(fparam.F());
+          _h_Elec_FParam[0]       ->fill(fparam.F());
+          _h_Elec_Spherocity[alg] ->fill(sphero.spherocity());
+          _h_Elec_Spherocity[0]   ->fill(sphero.spherocity());
+          _h_Elec_Beamthrust[alg] ->fill(beamThrust/GeV);
+          _h_Elec_Beamthrust[0]   ->fill(beamThrust/GeV);
         }
         if (isMuon) {
-          _h_Muon_Thrust[alg]     ->fill(thrust,              weight);
-          _h_Muon_Thrust[0]       ->fill(thrust,              weight);
-          _h_Muon_FParam[alg]     ->fill(fparam.F(),          weight);
-          _h_Muon_FParam[0]       ->fill(fparam.F(),          weight);
-          _h_Muon_Spherocity[alg] ->fill(sphero.spherocity(), weight);
-          _h_Muon_Spherocity[0]   ->fill(sphero.spherocity(), weight);
-          _h_Muon_Beamthrust[alg] ->fill(beamThrust/GeV,      weight);
-          _h_Muon_Beamthrust[0]   ->fill(beamThrust/GeV,      weight);
+          _h_Muon_Thrust[alg]     ->fill(thrust);
+          _h_Muon_Thrust[0]       ->fill(thrust);
+          _h_Muon_FParam[alg]     ->fill(fparam.F());
+          _h_Muon_FParam[0]       ->fill(fparam.F());
+          _h_Muon_Spherocity[alg] ->fill(sphero.spherocity());
+          _h_Muon_Spherocity[0]   ->fill(sphero.spherocity());
+          _h_Muon_Beamthrust[alg] ->fill(beamThrust/GeV);
+          _h_Muon_Beamthrust[0]   ->fill(beamThrust/GeV);
         }
       }
     }
@@ -173,15 +171,15 @@ namespace Rivet {
     /// Normalise histograms etc., after the run
     void finalize() {
       for (size_t alg = 0; alg < 5; ++alg) {
-        normalize(_h_Elec_Ntrk[alg]);
-        normalize(_h_Elec_SumPt[alg]);
-        normalize(_h_Elec_Beamthrust[alg]);
+        normalize(_h_Elec_Ntrk[alg],100.);
+        normalize(_h_Elec_SumPt[alg],100.);
+        normalize(_h_Elec_Beamthrust[alg],100.);
         normalize(_h_Elec_Thrust[alg]);
         normalize(_h_Elec_FParam[alg]);
         normalize(_h_Elec_Spherocity[alg]);
-        normalize(_h_Muon_Ntrk[alg]);
-        normalize(_h_Muon_SumPt[alg]);
-        normalize(_h_Muon_Beamthrust[alg]);
+        normalize(_h_Muon_Ntrk[alg],100.);
+        normalize(_h_Muon_SumPt[alg],100.);
+        normalize(_h_Muon_Beamthrust[alg],100.);
         normalize(_h_Muon_Thrust[alg]);
         normalize(_h_Muon_FParam[alg]);
         normalize(_h_Muon_Spherocity[alg]);
@@ -190,11 +188,6 @@ namespace Rivet {
 
 
   private:
-
-    // Convenience method for histogram booking
-    string _mkHistoName(int idDS, int channel, int i) {
-      return "d0" + toString(idDS) + "-x0" + toString(channel) + "-y0" + toString(i+1);
-    }
 
     Histo1DPtr _h_Elec_Ntrk[5];
     Histo1DPtr _h_Elec_SumPt[5];
@@ -213,7 +206,7 @@ namespace Rivet {
   };
 
 
-  DECLARE_RIVET_PLUGIN(ATLAS_2016_I1424838);
+  RIVET_DECLARE_PLUGIN(ATLAS_2016_I1424838);
 
 
 }

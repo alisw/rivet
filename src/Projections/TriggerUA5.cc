@@ -11,8 +11,8 @@ namespace Rivet {
   TriggerUA5::TriggerUA5() {
     setName("TriggerUA5");
 
-    addProjection(Beam(), "Beam");
-    addProjection(ChargedFinalState(-5.6, 5.6), "CFS");
+    declare(Beam(), "Beam");
+    declare(ChargedFinalState(Cuts::etaIn(-5.6, 5.6)), "CFS");
   }
 
 

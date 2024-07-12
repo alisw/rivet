@@ -1,0 +1,38 @@
+{
+    "1478044": [
+        "Measurement of top quark polarization in $t \\overline{t}$ lepton+jets final states", 
+        "D0", 
+        "10.1103/PhysRevD.95.011101", 
+        "2201893", 
+        "1607.07627", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-16-284-E"
+        ]
+    ], 
+    "1478980": [
+        "Measurement of the direct CP violating charge asymmetry in $B^\\pm \\rightarrow \\mu^\\pm \\nu_\\mu D^{0}$ decays", 
+        "D0", 
+        "10.1103/PhysRevD.95.031101", 
+        "2203732", 
+        "1608.00863", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-16-300-E"
+        ]
+    ], 
+    "1518612": [
+        "Combination of D0 measurements of the top quark mass", 
+        "D0", 
+        "10.1103/PhysRevD.95.112004", 
+        "2256463", 
+        "1703.06994", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-17-079-E"
+        ]
+    ]
+}

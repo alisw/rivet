@@ -1,0 +1,41 @@
+{
+    "1643831": [
+        "First measurement of elastic, inelastic and total cross-section at $\\sqrt{s}=13$ TeV by TOTEM and overview of cross-section data at LHC energies", 
+        "TOTEM", 
+        "10.1140/epjc/s10052-019-6567-0", 
+        "2296409", 
+        "1712.06153", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2017-321", 
+            "CERN-EP-2017-321-V2"
+        ]
+    ], 
+    "1654549": [
+        "First determination of the ${\\rho }$ parameter at ${\\sqrt{s} = 13}$ TeV: probing the existence of a colourless C-odd three-gluon compound state", 
+        "TOTEM", 
+        "10.1140/epjc/s10052-019-7223-4", 
+        "2298154", 
+        "1812.04732", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2017-335", 
+            "CERN-EP-2017-335-v3"
+        ]
+    ], 
+    "1710340": [
+        "Elastic differential cross-section measurement at $\\sqrt{s}=13$  TeV by TOTEM", 
+        "TOTEM", 
+        "10.1140/epjc/s10052-019-7346-7", 
+        "2651186", 
+        "1812.08283", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2018-338", 
+            "TOTEM-2018-003"
+        ]
+    ]
+}

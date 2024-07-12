@@ -5,9 +5,11 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1327229
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Joern Mahlstedt <joern.mahlstedt@cern.ch>
 References:
+ - ATLAS-EXOT-2012-20
  - arXiv:1411.2921 [hep-ex]
 RunInfo:
   Any process producing at least 3 leptons (e.g. pair production of doubly-charged Higgs or excited leptons)
@@ -18,7 +20,7 @@ NeedCrossSection: True
 Description:
   A generic search for anomalous production of events with at least three charged leptons is presented. The data sample consists of
   $pp$ collisions at $\sqrt{s} = 8$\,TeV collected in 2012 by the ATLAS experiment at the CERN Large Hadron Collider, and corresponds
-  to an integratedi luminosity of 20.3\,$\text{fb}^{−1}$. Events are required to have at least three selected lepton candidates, at
+  to an integrated luminosity of 20.3\,$\text{fb}^{-1}$. Events are required to have at least three selected lepton candidates, at
   least two of which must be electrons or muons, while the third may be a hadronically decaying tau. Selected events are categorized
   based on their lepton flavour content and signal regions are constructed using several kinematic variables of interest. No significant
   deviations from Standard Model predictions are observed. Model-independent upper limits on contributions from beyond the Standard Model

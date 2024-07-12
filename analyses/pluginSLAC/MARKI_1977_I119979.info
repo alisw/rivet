@@ -1,0 +1,33 @@
+Name: MARKI_1977_I119979
+Year: 1977
+Summary: Measurement of $R$ for energies between 3.598 and 3.886 GeV
+Experiment: MARKI
+Collider: Spear
+InspireID: 119979
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 39 (1977) 526, 1977 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: no
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$  and the hadronic cross section for energies between 3.598 and 3.886 GeV.
+   The hadronic and muonic cross sections are also outputted to the yoda file
+   so that ratio $R$ can be recalcuated if runs are combined.'
+Keywords: []
+BibKey: Rapidis:1977cv
+BibTeX: '@article{Rapidis:1977cv,
+      author         = "Rapidis, Petros A. and others",
+      title          = "{Observation of a Resonance in e+ e- Annihilation Just
+                        Above Charm Threshold}",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "39",
+      year           = "1977",
+      pages          = "526",
+      doi            = "10.1103/PhysRevLett.39.526, 10.1103/PhysRevLett.39.974",
+      note           = "[Erratum: Phys. Rev. Lett.39,974(1977)]",
+      reportNumber   = "SLAC-PUB-1959, LBL-6484",
+      SLACcitation   = "%%CITATION = PRLTA,39,526;%%"
+}'

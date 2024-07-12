@@ -4,7 +4,7 @@
 namespace Rivet {
 
 
-  int NeutralFinalState::compare(const Projection& p) const {
+  CmpState NeutralFinalState::compare(const Projection& p) const {
     const NeutralFinalState& other = dynamic_cast<const NeutralFinalState&>(p);
     return mkNamedPCmp(other, "FS") || cmp(_Etmin, other._Etmin);
   }

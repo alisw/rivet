@@ -5,6 +5,7 @@ Experiment: D0
 Collider: Tevatron Run 2
 InspireID: 895662
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Hendrik Hoeth <hendrik.hoeth@cern.ch>
 References:
@@ -38,3 +39,7 @@ BibTeX: '@article{Abazov:2011ub,
       reportNumber   = "FERMILAB-PUB-11-173-E",
       SLACcitation   = "%%CITATION = ARXIV:1104.1986;%%",
 }'
+
+ReleaseTests:
+ - $A TVT-Run-II-Jets-5
+

@@ -1,0 +1,32 @@
+Name: TASSO_1989_I278856
+Year: 1989
+Summary:  Spectrum for $D^{*+}$ production in $e^+e^-$ collisions at $E_{\text{CMS}}=36.2$
+Experiment: TASSO
+Collider: Petra
+InspireID: 278856
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Z.Phys. C44 (1989) 365, 1989 
+RunInfo: e+ e- to hadrons
+NeedCrossSection: yes
+Beams: [e+, e-]
+Energies: [34.4]
+Description:
+  'Measurement of the $D^{*+}$ momentum spectrum in $e^+e^-$ collisions for a mean centre-of-mass energy of 36.2 GeV by the TASSO experiment at Petra. Only the spectra are implemented.'
+Keywords: []
+BibKey: Braunschweig:1989kq
+BibTeX: '@article{Braunschweig:1989kq,
+      author         = "Braunschweig, W. and others",
+      title          = "{Production and Decay of Charmed Mesons in $e^+ e^-$
+                        Annihilation at $\sqrt{s}$ &gt; 28-{GeV}}",
+      collaboration  = "TASSO",
+      journal        = "Z. Phys.",
+      volume         = "C44",
+      year           = "1989",
+      pages          = "365",
+      doi            = "10.1007/BF01415550",
+      reportNumber   = "DESY-89-053",
+      SLACcitation   = "%%CITATION = ZEPYA,C44,365;%%"
+}'

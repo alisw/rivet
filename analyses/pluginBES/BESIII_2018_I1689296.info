@@ -1,0 +1,41 @@
+Name: BESIII_2018_I1689296
+Year: 2018
+Summary: Radiative $J/\psi$ decays to $K^0_SK^0_S$
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1689296
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 98 (2018) 7, 072003
+RunInfo: e+e- > J/psi
+NeedCrossSection: no
+Beams: [e-, e+]
+Energies: [3.1]
+Description:
+'Measurement of mass and angular distributions in the decay $J/\psi\to\gamma K^0_SK^0S$.
+ Plots were read from the paper and are not corrected for efficiency/acceptance,
+ although the paper states the backgrounds are small.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2018ubj
+BibTeX: '@article{BESIII:2018ubj,
+    author = "Ablikim, M. and others",
+    collaboration = "BESIII",
+    title = "{Amplitude analysis of the $K_{S}K_{S}$ system produced in radiative $J/\psi$ decays}",
+    eprint = "1808.06946",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevD.98.072003",
+    journal = "Phys. Rev. D",
+    volume = "98",
+    number = "7",
+    pages = "072003",
+    year = "2018"
+}
+'

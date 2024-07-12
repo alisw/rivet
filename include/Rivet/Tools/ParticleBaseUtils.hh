@@ -6,12 +6,14 @@
 namespace Rivet {
 
 
+  /// @defgroup particlebaseutils Functions for Particles and Jets
+  /// @{
 
-  /// @name ParticleBase classifier -> bool functors
+  /// @defgroup particlebasetutils_pb2bool ParticleBase classifier -> bool functors
   /// @todo Move to FourMomentum functions
   ///
   /// To be passed to any() or all() e.g. any(jets, DeltaRLess(electron, 0.4))
-  //@{
+  /// @{
 
   /// std::function instantiation for functors taking a ParticleBase and returning a bool
   using ParticleBaseSelector = function<bool(const ParticleBase&)>;
@@ -385,14 +387,14 @@ namespace Rivet {
   };
   using deltaRapInRange = DeltaRapInRange;
 
-  //@}
+  /// @}
 
 
-  /// @name ParticleBase comparison -> double functors
+  /// @defgroup particlebaseutils_pb2dbl ParticleBase comparison -> double functors
   /// @todo Move to FourMomentum functions
   ///
   /// To be passed to transform()any(jets, DeltaRLess(electron, 0.4))
-  //@{
+  /// @{
 
   /// Base type for Particle -> double functors
   struct DoubleParticleBaseFunctor {
@@ -469,66 +471,171 @@ namespace Rivet {
   };
   using absDeltaRapWRT = AbsDeltaRapWRT;
 
-  //@}
+  /// @}
 
 
-  /// @name Next-level filtering
-  //@{
+  /// @defgroup particlebaseutils_uberfilt Next-level filtering
+  /// @{
 
   template<typename PBCONTAINER1, typename PBCONTAINER2>
-  void idiscardIfAny(PBCONTAINER1& tofilter, const PBCONTAINER2& tocompare,
-                     typename std::function<bool(const typename PBCONTAINER1::value_type&, const typename PBCONTAINER2::value_type&)> fn) {
-    for (const auto& pbcmp : tocompare)
+  inline void idiscardIfAny(PBCONTAINER1& tofilter, const PBCONTAINER2& tocompare,
+                            typename std::function<bool(const typename PBCONTAINER1::value_type&,
+                                                        const typename PBCONTAINER2::value_type&)> fn) {
+    for (const auto& pbcmp : tocompare) {
       ifilter_discard(tofilter, [&](const typename PBCONTAINER1::value_type& pbfilt){ return fn(pbfilt, pbcmp); });
+    }
   }
 
   template<typename PBCONTAINER1, typename PBCONTAINER2>
-  PBCONTAINER1 discardIfAny(const PBCONTAINER1& tofilter, const PBCONTAINER2& tocompare,
-                            typename std::function<bool(const typename PBCONTAINER1::value_type&, const typename PBCONTAINER2::value_type&)> fn) {
+  inline PBCONTAINER1 discardIfAny(const PBCONTAINER1& tofilter, const PBCONTAINER2& tocompare,
+                                   typename std::function<bool(const typename PBCONTAINER1::value_type&,
+                                                               const typename PBCONTAINER2::value_type&)> fn) {
     PBCONTAINER1 tmp{tofilter};
     idiscardIfAny(tmp, tocompare, fn);
     return tmp;
   }
 
-  //@}
-
-
-  /// @name Isolation helper routines
-  //@{
 
   template<typename PBCONTAINER1, typename PBCONTAINER2>
-  void idiscardIfAnyDeltaRLess(PBCONTAINER1& tofilter, const PBCONTAINER2& tocompare, double dR) {
-    for (const ParticleBase& pb : tocompare)
-      ifilter_discard(tofilter, deltaRLess(pb, dR));
+  inline PBCONTAINER1 selectIfAny(const PBCONTAINER1& tofilter, const PBCONTAINER2& tocompare,
+                                  typename std::function<bool(const typename PBCONTAINER1::value_type&,
+                                                              const typename PBCONTAINER2::value_type&)> fn) {
+    PBCONTAINER1 selected;
+    for (const auto& pbfilt : tofilter) {
+      if (any(tocompare, [&](const typename PBCONTAINER2::value_type& pbcmp){ return fn(pbfilt, pbcmp); })) {
+        selected += pbfilt;
+      }
+    }
+    return selected;
   }
 
   template<typename PBCONTAINER1, typename PBCONTAINER2>
-  PBCONTAINER1 discardIfAnyDeltaRLess(const PBCONTAINER1& tofilter, const PBCONTAINER2& tocompare, double dR) {
+  inline void iselectIfAny(PBCONTAINER1& tofilter, const PBCONTAINER2& tocompare,
+                           typename std::function<bool(const typename PBCONTAINER1::value_type&,
+                                                       const typename PBCONTAINER2::value_type&)> fn) {
+    tofilter = selectIfAny(tofilter, tocompare, fn);
+  }
+
+
+
+  template<typename PBCONTAINER1, typename PBCONTAINER2>
+  inline PBCONTAINER1 discardIfAll(const PBCONTAINER1& tofilter, const PBCONTAINER2& tocompare,
+                                   typename std::function<bool(const typename PBCONTAINER1::value_type&,
+                                                               const typename PBCONTAINER2::value_type&)> fn) {
+    PBCONTAINER1 selected;
+    for (const auto& pbfilt : tofilter) {
+      if (!all(tocompare, [&](const typename PBCONTAINER2::value_type& pbcmp){ return fn(pbfilt, pbcmp); })) {
+        selected += pbfilt;
+      }
+    }
+    return selected;
+  }
+
+  template<typename PBCONTAINER1, typename PBCONTAINER2>
+  inline void idiscardIfAll(PBCONTAINER1& tofilter, const PBCONTAINER2& tocompare,
+                            typename std::function<bool(const typename PBCONTAINER1::value_type&,
+                                                        const typename PBCONTAINER2::value_type&)> fn) {
+    tofilter = discardIfAll(tofilter, tocompare, fn);
+  }
+
+
+  template<typename PBCONTAINER1, typename PBCONTAINER2>
+  inline PBCONTAINER1 selectIfAll(const PBCONTAINER1& tofilter, const PBCONTAINER2& tocompare,
+                                  typename std::function<bool(const typename PBCONTAINER1::value_type&,
+                                                              const typename PBCONTAINER2::value_type&)> fn) {
+    PBCONTAINER1 selected;
+    for (const auto& pbfilt : tofilter) {
+      if (all(tocompare, [&](const typename PBCONTAINER2::value_type& pbcmp){ return fn(pbfilt, pbcmp); })) {
+        selected += pbfilt;
+      }
+    }
+    return selected;
+  }
+
+  template<typename PBCONTAINER1, typename PBCONTAINER2>
+  inline void iselectIfAll(PBCONTAINER1& tofilter, const PBCONTAINER2& tocompare,
+                           typename std::function<bool(const typename PBCONTAINER1::value_type&,
+                                                       const typename PBCONTAINER2::value_type&)> fn) {
+    tofilter = selectIfAll(tofilter, tocompare, fn);
+  }
+
+  //@}
+
+
+  /// @defgroup particlebaseutils_iso Isolation helpers
+  /// @{
+
+  template<typename PBCONTAINER1, typename PBCONTAINER2>
+  inline void idiscardIfAnyDeltaRLess(PBCONTAINER1& tofilter, const PBCONTAINER2& tocompare, double dR) {
+    for (const typename PBCONTAINER2::value_type& pb : tocompare) {
+      ifilter_discard(tofilter, deltaRLess(pb, dR));
+    }
+  }
+
+  template<typename PBCONTAINER1, typename PBCONTAINER2>
+  inline PBCONTAINER1 discardIfAnyDeltaRLess(const PBCONTAINER1& tofilter, const PBCONTAINER2& tocompare, double dR) {
     PBCONTAINER1 tmp{tofilter};
     idiscardIfAnyDeltaRLess(tmp, tocompare, dR);
     return tmp;
   }
 
   template<typename PBCONTAINER1, typename PBCONTAINER2>
-  void idiscardIfAnyDeltaPhiLess(PBCONTAINER1& tofilter, const PBCONTAINER2& tocompare, double dphi) {
-    for (const ParticleBase& pb : tocompare)
+  inline void idiscardIfAnyDeltaPhiLess(PBCONTAINER1& tofilter, const PBCONTAINER2& tocompare, double dphi) {
+    for (const typename PBCONTAINER2::value_type& pb : tocompare) {
       ifilter_discard(tofilter, deltaPhiLess(pb, dphi));
+    }
   }
 
   template<typename PBCONTAINER1, typename PBCONTAINER2>
-  PBCONTAINER1 discardIfAnyDeltaPhiLess(const PBCONTAINER1& tofilter, const PBCONTAINER2& tocompare, double dphi) {
+  inline PBCONTAINER1 discardIfAnyDeltaPhiLess(const PBCONTAINER1& tofilter, const PBCONTAINER2& tocompare, double dphi) {
     PBCONTAINER1 tmp{tofilter};
     idiscardIfAnyDeltaPhiLess(tmp, tocompare, dphi);
     return tmp;
   }
 
-  //@}
 
 
-  /// @name Non-PID particle properties, via unbound functions
+  template<typename PBCONTAINER1, typename PBCONTAINER2>
+  inline PBCONTAINER1 selectIfAnyDeltaRLess(const PBCONTAINER1& tofilter, const PBCONTAINER2& tocompare, double dR) {
+    PBCONTAINER1 selected;
+    for (const typename PBCONTAINER1::value_type& f : tofilter) {
+      if (any(tocompare, deltaRLess(f, dR))) selected.push_back(f);
+    }
+    return selected;
+  }
+
+  template<typename PBCONTAINER1, typename PBCONTAINER2>
+  inline void iselectIfAnyDeltaRLess(PBCONTAINER1& tofilter, const PBCONTAINER2& tocompare, double dR) {
+    tofilter = selectIfAnyDeltaRLess(tofilter, tocompare, dR);
+  }
+
+
+  template<typename PBCONTAINER1, typename PBCONTAINER2>
+  inline PBCONTAINER1 selectIfAnyDeltaPhiLess(const PBCONTAINER1& tofilter, const PBCONTAINER2& tocompare, double dphi) {
+    PBCONTAINER1 selected;
+    for (const typename PBCONTAINER1::value_type& f : tofilter) {
+      if (any(tocompare, deltaPhiLess(f, dphi))) selected.push_back(f);
+    }
+    return selected;
+  }
+
+  template<typename PBCONTAINER1, typename PBCONTAINER2>
+  inline void iselectIfAnyDeltaPhiLess(PBCONTAINER1& tofilter, const PBCONTAINER2& tocompare, double dphi) {
+    tofilter = selectIfAnyDeltaPhiLess(tofilter, tocompare, dphi);
+  }
+
+
+  /// @todo Add 'all' variants
+
+  /// @}
+
+
+
+  /// @defgroup particlebaseutils_kin Unbound functions for kinematic properties
+  ///
   /// @todo Mostly move to functions on FourMomentum
   /// @note In a sub-namespace (imported by default) for protection
-  //@{
+  ///@{
   namespace Kin {
 
     /// Unbound function access to momentum
@@ -574,12 +681,14 @@ namespace Rivet {
     inline double pairMass(const ParticleBase& p1, const ParticleBase& p2) { return (p1.mom() + p2.mom()).mass(); }
 
   }
-  //@}
-
 
   // Import Kin namespace into Rivet
   using namespace Kin;
 
+  /// @}
+
+
+  /// @}
 
 }
 

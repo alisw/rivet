@@ -1,0 +1,6 @@
+BEGIN PLOT /LHCB_2017_I1621811/d01-x01-y01
+Title=$\Lambda_b^0\to \Lambda_c^+  \mu^- \bar{\nu}_\mu$
+XLabel=$q^2$  [$\text{GeV}^2$]
+YLabel=$1/\Gamma\mathrm{d}\Gamma/\mathrm{d}q^2$ [$\mathrm{GeV}^{-1}$]
+LogY=0
+END PLOT

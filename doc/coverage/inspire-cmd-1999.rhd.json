@@ -1,0 +1,64 @@
+{
+    "483994": [
+        "a(1)(1260) pi dominance in the process e+ e- ---> 4 pi at energies 1.05-GeV - 1.38-GeV", 
+        "CMD-2", 
+        "10.1016/S0370-2693(99)01080-1", 
+        null, 
+        "hep-ex/9904024", 
+        "ins483994", 
+        null, 
+        [
+            "BUDKER-INP-1998-83"
+        ]
+    ], 
+    "499941": [
+        "Observation of K0(S) semileptonic decays with CMD-2 detector", 
+        "CMD-2", 
+        "10.1016/S0370-2693(99)00443-8", 
+        null, 
+        "hep-ex/9905022", 
+        null, 
+        null, 
+        []
+    ], 
+    "502164": [
+        "Measurement of $\\phi$ meson parameters in K$^0_L$ K$^0_S$ decay mode with CMD-2", 
+        "CMD-2", 
+        "10.1016/S0370-2693(99)00973-9", 
+        null, 
+        "hep-ex/9906032", 
+        "ins502164", 
+        null, 
+        []
+    ], 
+    "503154": [
+        "Study of the radiative decay phi ---> eta gamma with CMD-2 detector", 
+        "CMD-2", 
+        "10.1016/S0370-2693(99)00748-0", 
+        null, 
+        "hep-ex/9907003", 
+        "ins503154", 
+        null, 
+        []
+    ], 
+    "503231": [
+        "First observation of the phi ---> pi+ pi- gamma decay", 
+        "CMD-2", 
+        "10.1016/S0370-2693(99)00919-3", 
+        null, 
+        "hep-ex/9907005", 
+        null, 
+        null, 
+        []
+    ], 
+    "503232": [
+        "Study of the phi decays into pi0 pi0 gamma and eta pi0 gamma final states", 
+        "CMD-2", 
+        "10.1016/S0370-2693(99)00920-X", 
+        null, 
+        "hep-ex/9907006", 
+        "ins503232", 
+        null, 
+        []
+    ]
+}

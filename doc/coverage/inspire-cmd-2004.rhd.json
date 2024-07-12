@@ -1,0 +1,32 @@
+{
+    "624947": [
+        "Reanalysis of hadronic cross-section measurements at CMD-2", 
+        "CMD-2", 
+        "10.1016/j.physletb.2003.10.108", 
+        null, 
+        "hep-ex/0308008", 
+        null, 
+        null, 
+        []
+    ], 
+    "630009": [
+        "Study of the process e+ e- ---> pi0 pi0 gamma in c.m. energy range 600-MeV to 970-MeV at CMD2", 
+        "CMD-2", 
+        "10.1016/j.physletb.2003.11.046", 
+        null, 
+        "hep-ex/0310012", 
+        "ins630009", 
+        null, 
+        []
+    ], 
+    "648023": [
+        "Total cross section of the process e+ e- ---> pi+ pi- pi+ pi- in the C.M. energy range 980-MeV to 1380-MeV", 
+        "CMD-2", 
+        "10.1016/j.physletb.2004.05.056", 
+        null, 
+        "hep-ex/0404019", 
+        "ins648023", 
+        null, 
+        []
+    ]
+}

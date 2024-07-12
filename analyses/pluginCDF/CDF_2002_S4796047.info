@@ -6,6 +6,7 @@ Collider: Tevatron Run 1
 SpiresID: 4796047
 InspireID: 567774
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Hendrik Hoeth <hendrik.hoeth@cern.ch>
 References:
@@ -13,9 +14,12 @@ References:
  - doi:10.1103/PhysRevD.65.072005
 RunInfo:
   QCD events at $\sqrt{s} = 630$ and 1800 GeV.
+  Beam energy must be specified as analysis option "ENERGY" when rivet-merge'ing samples.
 NumEvents: 1000000
 Beams: [p-, p+]
 Energies: [630, 1800]
+Options:
+ - ENERGY=630,1800
 PtCuts: [0]
 Description:
   A study of $p\bar{p}$ collisions at $\sqrt{s} = 1800$ and 630 GeV collected
@@ -34,6 +38,7 @@ Description:
   this data and the rest. Accordingly, this data was excluded from the fits.
   Whether this reflects a problem with this dataset or with the PYTHIA MPI
   model is a judgement for users to make!
+  Beam energy must be specified (in GeV) as analysis option "ENERGY" when rivet-merging samples.
 BibKey: Acosta:2001rm
 BibTeX: '@Article{Acosta:2001rm,
      author    = "Acosta, Darin E. and others",
@@ -46,3 +51,8 @@ BibTeX: '@Article{Acosta:2001rm,
      doi       = "10.1103/PhysRevD.65.072005",
      SLACcitation  = "%%CITATION = PHRVA,D65,072005;%%"
 }'
+
+ReleaseTests:
+ - $A TVT-630-UE :ENERGY=630
+ - $A-2 TVT-Run-I-UE :ENERGY=1800
+

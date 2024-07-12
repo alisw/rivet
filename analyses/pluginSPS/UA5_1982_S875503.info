@@ -1,12 +1,11 @@
 Name: UA5_1982_S875503
-SpiresID: 875503
 InspireID: 176647
 Summary: UA5 multiplicity and pseudorapidity distributions for $pp$ and $p\bar{p}$.
 Status: VALIDATED
 Experiment: UA5
 Collider: SPS
 Year: 1982
-RunInfo: Min bias QCD events at $\sqrt{s} = 53$\;GeV. Run with both $pp$ and $p\bar{p}$ beams.
+RunInfo: Min bias QCD events at $\sqrt{s} = 53$~GeV. Run with both $pp$ and $p\bar{p}$ beams.
 Beams: [[p-, p+], [p+, p+]]
 Energies: [53]
 PtCuts: [0]

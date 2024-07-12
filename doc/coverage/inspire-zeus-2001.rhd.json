@@ -1,0 +1,98 @@
+{
+    "534265": [
+        "Search for resonance decays to an anti-neutrino plus jet in e+ p scattering at DESY HERA", 
+        "ZEUS", 
+        "10.1103/PhysRevD.63.052002", 
+        null, 
+        "hep-ex/0009059", 
+        null, 
+        null, 
+        [
+            "DESY-00-133"
+        ]
+    ], 
+    "534829": [
+        "Measurement of dijet cross-sections for events with a leading neutron in photoproduction at HERA", 
+        "ZEUS", 
+        "10.1016/S0550-3213(00)00612-X", 
+        null, 
+        "hep-ex/0010019", 
+        "ins534829", 
+        null, 
+        [
+            "DESY-00-142"
+        ]
+    ], 
+    "537299": [
+        "Measurement of open beauty production in photoproduction at HERA", 
+        "ZEUS", 
+        "10.1007/s100520100571", 
+        null, 
+        "hep-ex/0011081", 
+        "ins537299", 
+        null, 
+        [
+            "DESY-00-166"
+        ]
+    ], 
+    "553352": [
+        "Measurement of dijet production in neutral current deep inelastic scattering at high Q**2 and determination of alpha(s)", 
+        "ZEUS", 
+        "10.1016/S0370-2693(01)00421-X", 
+        null, 
+        "hep-ex/0102042", 
+        "ins553352", 
+        null, 
+        [
+            "DESY-01-018"
+        ]
+    ], 
+    "554878": [
+        "Study of the effective transverse momentum of partons in the proton using prompt photons in photoproduction at HERA", 
+        "ZEUS", 
+        "10.1016/S0370-2693(01)00615-3", 
+        null, 
+        "hep-ex/0104001", 
+        null, 
+        null, 
+        [
+            "DESY-01-043"
+        ]
+    ], 
+    "555612": [
+        "Multiplicity moments in deep inelastic scattering at HERA", 
+        "ZEUS", 
+        "10.1016/S0370-2693(01)00583-4", 
+        null, 
+        "hep-ex/0104036", 
+        null, 
+        null, 
+        [
+            "DESY-01-053"
+        ]
+    ], 
+    "557597": [
+        "Measurement of the neutral current cross-section and F(2) structure function for deep inelastic e + p scattering at HERA", 
+        "ZEUS", 
+        "10.1007/s100520100749", 
+        null, 
+        "hep-ex/0105090", 
+        "ins557597", 
+        null, 
+        [
+            "DESY-01-064"
+        ]
+    ], 
+    "559415": [
+        "Three jet production in diffractive deep inelastic scattering at HERA", 
+        "ZEUS", 
+        "10.1016/S0370-2693(01)00928-5", 
+        null, 
+        "hep-ex/0107004", 
+        null, 
+        null, 
+        [
+            "DESY-01-092"
+        ]
+    ]
+}

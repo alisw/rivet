@@ -1,0 +1,37 @@
+Name: BELLE_2021_I1895149
+Year: 2021
+Summary: Differential Branching Fractions of Inclusive $B\to X_u\ell^+\nu_\ell$ decays
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1895149
+Status: VALIDATED SINGLEWEIGHT
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 127 (2021) 26, 261801
+RunInfo: Bottom mesons produced at the Upsilon(4S)
+Description:
+  'Measurement of the $E^B_\ell$, $q^2$, $M_X$, $M^2_X$, $P_+$ and $P_-$ distributions in  $B\to X_u\ell^+\nu_\ell$ decays by BELLLE.'
+ValidationInfo:
+  'Herwig 7 events at the Upsilon(4S), using EvtGen for the B decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle:2021ymg
+BibTeX: '@article{Belle:2021ymg,
+    author = "Cao, L. and others",
+    collaboration = "Belle",
+    title = "{Measurement of Differential Branching Fractions of Inclusive ${B \to X_u \, \ell^+\, \nu_{\ell}}$ Decays}",
+    eprint = "2107.13855",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "Belle Preprint 2021-15, KEK Preprint 2021-13",
+    doi = "10.1103/PhysRevLett.127.261801",
+    journal = "Phys. Rev. Lett.",
+    volume = "127",
+    number = "26",
+    pages = "261801",
+    year = "2021"
+}
+'

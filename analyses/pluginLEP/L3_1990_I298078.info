@@ -1,0 +1,33 @@
+Name: L3_1990_I298078
+Year: 1990
+Summary: Jets Rates using the Jade Algorithm at 91 GeV
+Experiment: L3
+Collider: LEP
+InspireID: 298078
+Status: VALIDATED
+Authors:
+ - Peter Richardson
+References:
+ - Phys.Lett.B 248 (1990) 464-472, 1990. 
+RunInfo: e+e- to hadrons
+Beams: [e+, e-]
+Energies: [91.2]
+Description:
+  'Measurement of the integrated jet rates using the Jade algorithm by the L3 experiment at LEP1.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Adeva:1990nu
+BibTeX: '@article{Adeva:1990nu,
+    author = "Adeva, B. and others",
+    collaboration = "L3",
+    title = "{Determination of alpha-s from jet multiplicities measured on the Z0 resonance}",
+    reportNumber = "L3-011",
+    doi = "10.1016/0370-2693(90)90323-X",
+    journal = "Phys. Lett. B",
+    volume = "248",
+    pages = "464--472",
+    year = "1990"
+}'

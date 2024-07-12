@@ -12,17 +12,9 @@ namespace Rivet {
   class ATLAS_2014_I1298023 : public Analysis {
   public:
 
-    /// @name Constructors etc.
-    //@{
-    ATLAS_2014_I1298023()
-      : Analysis("ATLAS_2014_I1298023")
-    {
-      setNeedsCrossSection(true);
-    }
-    //@}
+    /// Constructor
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2014_I1298023);
 
-
-  public:
 
     /// @name Analysis methods
     //@{
@@ -49,18 +41,16 @@ namespace Rivet {
       declare(FastJets(vfs, FastJets::ANTIKT, 0.4), "jets");
 
       // book histogram
-      _hist = bookHisto1D(1, 1, 1);
+      book(_hist ,1, 1, 1);
     }
 
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-      const double weight = event.weight();
-
       const vector<DressedLepton>& leptons = apply<DressedLeptons>(event, "leptons").dressedLeptons();
       if ( leptons.size() < 2 )  vetoEvent;
 
-      double minDR_ll = MAXDOUBLE, mll = -1.0;
+      double minDR_ll = DBL_MAX, mll = -1.0;
       for (unsigned int i = 0; i < leptons.size(); ++i) {
         DressedLepton lep1 = leptons[i];
         for (unsigned int j = i + 1; j < leptons.size(); ++j) {
@@ -80,10 +70,10 @@ namespace Rivet {
 
       const Jets& all_jets = apply<FastJets>(event, "jets").jetsByPt( (Cuts::abseta < 4.5) && (Cuts::pT > 30*GeV) );
       Jets jets;
-      double minDR_overall = MAXDOUBLE;
-      foreach (const Jet& jet, all_jets) {
-        double minDR_jet = MAXDOUBLE, minDR_electrons = MAXDOUBLE;
-        foreach( DressedLepton lep, leptons ) {
+      double minDR_overall = DBL_MAX;
+      for (const Jet& jet : all_jets) {
+        double minDR_jet = DBL_MAX, minDR_electrons = DBL_MAX;
+        for( DressedLepton lep : leptons ) {
           double dr = deltaR(jet, lep);
           if ( dr < minDR_jet )  minDR_jet = dr;
           if ( lep.abspid() == 11 && dr < minDR_electrons )  minDR_electrons = dr;
@@ -98,10 +88,10 @@ namespace Rivet {
       if ( dijet.mass() <= 500*GeV )  vetoEvent;
 
       // inclusive region
-      _hist->fill(1.0, weight);
+      _hist->fill(1);
 
       // VBS region
-      if ( deltaRap(jets[0], jets[1]) > 2.4 )  _hist->fill(2.0, weight);
+      if ( deltaRap(jets[0], jets[1]) > 2.4 )  _hist->fill(2);
     }
 
     /// Normalise histograms etc., after the run
@@ -122,7 +112,7 @@ namespace Rivet {
 
   };
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2014_I1298023);
+
+  RIVET_DECLARE_PLUGIN(ATLAS_2014_I1298023);
 
 }

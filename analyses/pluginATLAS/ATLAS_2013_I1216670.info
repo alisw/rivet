@@ -5,9 +5,11 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1216670
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Tim Martin <tim.martin@cern.ch>
 References:
+ - ATLAS-STDM-2011-29
  - New J.Phys. 15 (2013) 033038
  - doi:10.1088/1367-2630/15/3/033038
  - arXiv:1301.6872 [hep-ex]
@@ -40,3 +42,8 @@ BibTeX: '@article{Aad:2013bjm,
       reportNumber   = "CERN-PH-EP-2012-355",
       SLACcitation   = "%%CITATION = ARXIV:1301.6872;%%",
 }'
+
+ReleaseTests:
+ - $A LHC-W-e
+ - $A-2 LHC-W-mu
+

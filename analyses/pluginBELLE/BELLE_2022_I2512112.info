@@ -1,0 +1,32 @@
+Name: BELLE_2022_I2512112
+Year: 2022
+Summary: Hadronic mass distributions in $B\to D^{(*)}\pi(\pi)\ell\nu$ decays
+Experiment: BELLE
+Collider: KEKB
+InspireID: 2512112
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - arXiv:2211.09833 [hep-ex]
+RunInfo: Any process produding b0 and B+, originally Upsilon(4S) decay
+Description:
+  'Measurement of the mass of the hadronic system in $B\to D^{(*)}\pi(\pi)\ell\nu$ decays'
+ValidationInfo:
+  'Herwig7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle:2022yzd
+BibTeX: '@article{Belle:2022yzd,
+    author = "Meier, F. and others",
+    collaboration = "Belle",
+    title = "{First observation of $B\!\to \bar{D}_1(\to\bar{D}\pi^+\pi^-)\ell^+\nu_\ell$ and measurement of the $B\!\to \bar{D}^{(*)}\pi\ell^+\nu_\ell$ and $B\!\to \bar{D}^{(*)}\pi^+\pi^-\ell^+\nu_\ell$ branching fractions with hadronic tagging at Belle}",
+    eprint = "2211.09833",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    month = "11",
+    year = "2022"
+}
+'

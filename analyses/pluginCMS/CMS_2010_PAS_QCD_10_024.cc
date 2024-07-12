@@ -19,23 +19,23 @@ namespace Rivet {
 
 
     void init() {
-      declare(ChargedFinalState(-0.8, 0.8, 0.5*GeV), "CFS_08_05");
-      declare(ChargedFinalState(-0.8, 0.8, 1.0*GeV), "CFS_08_10");
-      declare(ChargedFinalState(-2.4, 2.4, 0.5*GeV), "CFS_24_05");
-      declare(ChargedFinalState(-2.4, 2.4, 1.0*GeV), "CFS_24_10");
+      declare(ChargedFinalState((Cuts::etaIn(-0.8, 0.8) && Cuts::pT >=  0.5*GeV)), "CFS_08_05");
+      declare(ChargedFinalState((Cuts::etaIn(-0.8, 0.8) && Cuts::pT >=  1.0*GeV)), "CFS_08_10");
+      declare(ChargedFinalState((Cuts::etaIn(-2.4, 2.4) && Cuts::pT >=  0.5*GeV)), "CFS_24_05");
+      declare(ChargedFinalState((Cuts::etaIn(-2.4, 2.4) && Cuts::pT >=  1.0*GeV)), "CFS_24_10");
 
       size_t offset = 0;
-      if (fuzzyEquals(sqrtS()/GeV, 7000, 1E-3)) offset = 0;
-      if (fuzzyEquals(sqrtS()/GeV, 900, 1E-3)) offset = 4;
-      _hist_dNch_deta_pt05_eta08 = bookHisto1D(1+offset, 1, 1);
-      _hist_dNch_deta_pt10_eta08 = bookHisto1D(2+offset, 1, 1);
-      _hist_dNch_deta_pt05_eta24 = bookHisto1D(3+offset, 1, 1);
-      _hist_dNch_deta_pt10_eta24 = bookHisto1D(4+offset, 1, 1);
+      if (isCompatibleWithSqrtS(7000)) offset = 0;
+      if (isCompatibleWithSqrtS( 900)) offset = 4;
+      book(_hist_dNch_deta_pt05_eta08 ,1+offset, 1, 1);
+      book(_hist_dNch_deta_pt10_eta08 ,2+offset, 1, 1);
+      book(_hist_dNch_deta_pt05_eta24 ,3+offset, 1, 1);
+      book(_hist_dNch_deta_pt10_eta24 ,4+offset, 1, 1);
     }
 
 
     void analyze(const Event& event) {
-      const double weight = event.weight();
+      const double weight = 1.0;
       const ChargedFinalState& cfs_08_05 = apply<ChargedFinalState>(event, "CFS_08_05");
       const ChargedFinalState& cfs_08_10 = apply<ChargedFinalState>(event, "CFS_08_10");
       const ChargedFinalState& cfs_24_05 = apply<ChargedFinalState>(event, "CFS_24_05");
@@ -44,14 +44,14 @@ namespace Rivet {
       // Plot distributions
       if(!cfs_08_05.particles().empty()) _weight_pt05_eta08 += weight;
       if(!cfs_24_05.particles().empty()) _weight_pt05_eta24 += weight;
-      foreach (const Particle& p, cfs_24_05.particles()) {
+      for (const Particle& p : cfs_24_05.particles()) {
         _hist_dNch_deta_pt05_eta24->fill(p.eta(), weight);
         if(!cfs_08_05.particles().empty())
 	  _hist_dNch_deta_pt05_eta08->fill(p.eta(), weight);
       }
       if(!cfs_08_10.particles().empty()) _weight_pt10_eta08 += weight;
       if(!cfs_24_10.particles().empty()) _weight_pt10_eta24 += weight;
-      foreach (const Particle& p, cfs_24_10.particles()) {
+      for (const Particle& p : cfs_24_10.particles()) {
         _hist_dNch_deta_pt10_eta24->fill(p.eta(), weight);
 	if(!cfs_08_10.particles().empty())
 	  _hist_dNch_deta_pt10_eta08->fill(p.eta(), weight);
@@ -79,6 +79,6 @@ namespace Rivet {
 
 
   // Hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CMS_2010_PAS_QCD_10_024);
+  RIVET_DECLARE_PLUGIN(CMS_2010_PAS_QCD_10_024);
 
 }

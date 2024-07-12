@@ -14,7 +14,7 @@ Examples:
 """
 
 from __future__ import print_function
-import os, imp, glob, requests, argparse
+import os, importlib, glob, requests, argparse
 
 from rivet import hepdatautils
 

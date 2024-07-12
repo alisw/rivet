@@ -38,25 +38,25 @@ namespace Rivet {
       photons.acceptId(PID::PHOTON);
       declare(photons, "gammaFS");
 
-      _h_Ptgamma = bookHisto1D("Ptgamma", logspace(50, 0.01, 30));
-      _h_Egamma = bookHisto1D("Egamma", logspace(50, 0.01, 200));
-      _h_sumPtgamma = bookHisto1D("sumPtgamma", 50, 0, 100);
-      _h_sumEgamma = bookHisto1D("sumEgamma", 50, 0, (sqrtS()>0.?sqrtS():14000.)/GeV/5.0);
-      _h_DelR = bookHisto1D("DeltaR", 50, 0, 2);
-      _h_DelR_weighted = bookHisto1D("DeltaR_ptweighted", 50, 0, 2);
-      _h_DelR_R = bookHisto1D("DeltaR_R", 50, 0, 2);
-      _h_DelR_R_weighted = bookHisto1D("DeltaR_R_ptweighted", 50, 0, 2);
-      _p_DelR_vs_pTl = bookProfile1D("DeltaR_vs_pTlep", 50, 10, 120);
-      _p_DelR_weighted_vs_pTl = bookProfile1D("DeltaR_ptweighted_vs_pTlep", 50, 10, 120);
-      _p_DelR_R_vs_pTl = bookProfile1D("DeltaR_R_vs_pTlep", 50, 10, 120);
-      _p_DelR_R_weighted_vs_pTl = bookProfile1D("DeltaR_R_ptweighted_vs_pTlep", 50, 10, 120);
-      _p_sumPtgamma_vs_pTl = bookProfile1D("sumPtGamma_vs_pTlep", 50, 10, 120);
+      book(_h_Ptgamma ,"Ptgamma", logspace(50, 0.01, 30));
+      book(_h_Egamma ,"Egamma", logspace(50, 0.01, 200));
+      book(_h_sumPtgamma ,"sumPtgamma", 50, 0, 100);
+      book(_h_sumEgamma ,"sumEgamma", 50, 0, (sqrtS()>0.?sqrtS():14000.)/GeV/5.0);
+      book(_h_DelR ,"DeltaR", 50, 0, 2);
+      book(_h_DelR_weighted ,"DeltaR_ptweighted", 50, 0, 2);
+      book(_h_DelR_R ,"DeltaR_R", 50, 0, 2);
+      book(_h_DelR_R_weighted ,"DeltaR_R_ptweighted", 50, 0, 2);
+      book(_p_DelR_vs_pTl ,"DeltaR_vs_pTlep", 50, 10, 120);
+      book(_p_DelR_weighted_vs_pTl ,"DeltaR_ptweighted_vs_pTlep", 50, 10, 120);
+      book(_p_DelR_R_vs_pTl ,"DeltaR_R_vs_pTlep", 50, 10, 120);
+      book(_p_DelR_R_weighted_vs_pTl ,"DeltaR_R_ptweighted_vs_pTlep", 50, 10, 120);
+      book(_p_sumPtgamma_vs_pTl ,"sumPtGamma_vs_pTlep", 50, 10, 120);
     }
 
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-      const double weight = event.weight();
+      const double weight = 1.0;
 
       /// Get photons and leptons
       const Particles& photons = apply<FinalState>(event, "gammaFS").particles();
@@ -70,7 +70,7 @@ namespace Rivet {
 
       // Calculate photon energies and transverse momenta
       double sumPtgamma(0), sumEgamma(0);
-      foreach (const Particle& p, photons) {
+      for (const Particle& p : photons) {
         // Individual and summed pTs and energies
         double pTgamma = p.pT()/GeV;
         double Egamma = p.E()/GeV;
@@ -146,7 +146,7 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(MC_PHOTONS);
+  RIVET_DECLARE_PLUGIN(MC_PHOTONS);
 
 
 }

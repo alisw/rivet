@@ -1,0 +1,262 @@
+{
+    "1208997": [
+        "Measurement of the inclusive semileptonic branching fraction $\\mathcal{B}(B_s^0 \\to X^- \\ell^+ \\nu_{\\ell})$ at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.87.072008", 
+        null, 
+        "1212.6400", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2012-29", 
+            "KEK-PREPRINT-2012-34"
+        ]
+    ], 
+    "1238601": [
+        "Evidence for semileptonic $B^- \\to p\\bar{p}l^-\\bar{\\nu}_l$ decays", 
+        "Belle", 
+        "10.1103/PhysRevD.89.011101", 
+        null, 
+        "1306.3353", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2013-10", 
+            "KEK-PREPRINT-2013-10"
+        ]
+    ], 
+    "1257984": [
+        "Measurement of branching fractions for B \\to J/\\psi \\eta K decays and search for a narrow resonance in the J/\\psi \\eta final state", 
+        "Belle", 
+        "10.1093/ptep/ptu043", 
+        null, 
+        "1310.2704", 
+        null, 
+        null, 
+        []
+    ], 
+    "1262797": [
+        "Measurement of the $\\tau$-lepton lifetime at Belle", 
+        "Belle", 
+        "10.1103/PhysRevLett.112.031801", 
+        null, 
+        "1310.8503", 
+        null, 
+        null, 
+        []
+    ], 
+    "1266057": [
+        "Search for the process $e^+e^-\\to J/\\psi X(1835)$ at $\\sqrt{s}\\approx10.6$ GeV", 
+        "Belle", 
+        "10.1103/PhysRevD.89.032003", 
+        null, 
+        "1311.6337", 
+        null, 
+        null, 
+        []
+    ], 
+    "1266253": [
+        "Measurement of branching fractions and CP violation parameters in $B\\to\\omega K$ decays with first evidence of CP violation in $B^0 \\to \\omega K^0_S$", 
+        "Belle", 
+        "10.1103/PhysRevD.90.012002", 
+        null, 
+        "1311.6666", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2013-11", 
+            "KEK-PREPRINT-2013-21", 
+            "BELLE-PREPRINT-2013-28", 
+            "KEK-PREPRINT-2013-56"
+        ]
+    ], 
+    "1267506": [
+        "Search for doubly charmed baryons and study of charmed strange baryons at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.89.052003", 
+        null, 
+        "1312.1026", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2013-29", 
+            "KEK-PREPRINT-2013-57"
+        ]
+    ], 
+    "1269455": [
+        "Search for $B^0 \\to p \\overline {\\Lambda} \\pi^- \\gamma$ at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.89.051103", 
+        null, 
+        "1312.4228", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2013-22", 
+            "KEK-PREPRINT-2013-33"
+        ]
+    ], 
+    "1275621": [
+        "Measurement of the Branching Fraction $\\mathcal B(\\Lambda_c^+ \\to p K^- \\pi^+)$", 
+        "Belle", 
+        "10.1103/PhysRevLett.113.042002", 
+        null, 
+        "1312.7826", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2013-30", 
+            "KEK-PREPRINT-2013-58"
+        ]
+    ], 
+    "1277238": [
+        "Observation of $D^0-\\bar{D}^0$ Mixing in $e^+e^-$ Collisions", 
+        "Belle", 
+        "10.1103/PhysRevLett.112.111801", 
+        null, 
+        "1401.3402", 
+        null, 
+        null, 
+        []
+    ], 
+    "1282136": [
+        "Measurements of Branching Fractions of $\\tau$ Lepton Decays with one or more $K^{0}_{S}$", 
+        "Belle", 
+        "10.1103/PhysRevD.89.072009", 
+        null, 
+        "1402.5213", 
+        null, 
+        null, 
+        []
+    ], 
+    "1282602": [
+        "Updated cross section measurement of $e^+ e^- \\to K^+ K^- J/\\psi$ and $K_S^0K_S^0J/\\psi$ via initial state radiation at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.89.072015", 
+        null, 
+        "1402.6578", 
+        "ins1282602", 
+        null, 
+        [
+            "BELLE-PREPRINT-2014-2", 
+            "KEK-PREPRINT-2013-61"
+        ]
+    ], 
+    "1288708": [
+        "Search for {CP} violation in $D^0 \\to \\pi^0 \\pi^0$ decays", 
+        "Belle", 
+        "10.1103/PhysRevLett.112.211601", 
+        null, 
+        "1404.1266", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2014-1", 
+            "BELLE-PREPRINT-2014-7"
+        ]
+    ], 
+    "1289224": [
+        "Measurement of $D^0-\\bar{D}^0$ mixing and search for indirect CP violation using $D^0\\to K_S^0\\pi^+\\pi^-$ decays", 
+        "Belle", 
+        "10.1103/PhysRevD.89.091103", 
+        null, 
+        "1404.2412", 
+        null, 
+        null, 
+        []
+    ], 
+    "1291549": [
+        "Measurements of the masses and widths of the $\\Sigma_{c}(2455)^{0/++}$ and $\\Sigma_{c}(2520)^{0/++}$ baryons", 
+        "Belle", 
+        "10.1103/PhysRevD.89.091102", 
+        null, 
+        "1404.5389", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2014-6", 
+            "KEK-PREPRINT-2013-67"
+        ]
+    ], 
+    "1302816": [
+        "The Physics of the B Factories", 
+        "BaBar", 
+        "10.1140/epjc/s10052-014-3026-9", 
+        null, 
+        "1406.6311", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-15968", 
+            "KEK-PREPRINT-2014-3", 
+            "FERMILAB-PUB-14-262-T"
+        ]
+    ], 
+    "1309588": [
+        "Observation of $e^+e^- \\to \\pi^+ \\pi^- \\pi^0 \\chi_{bJ}$ and Search for $X_b \\to \\omega \\Upsilon(1S)$ at $\\sqrt{s}=10.867$  GeV", 
+        "Belle", 
+        "10.1103/PhysRevLett.113.142001", 
+        null, 
+        "1408.0504", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2014-11", 
+            "KEK-PREPRINT-2014-18", 
+            "BELLE-PREPRINT-#-2014-11", 
+            "KEK-PREPRINT-#-2014-18"
+        ]
+    ], 
+    "1312368": [
+        "Measurement of Time-Dependent $CP$ Violation in $B^0\\to \\eta'K^0$ Decays", 
+        "Belle", 
+        "10.1007/JHEP10(2014)165", 
+        null, 
+        "1408.5991", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2014-10", 
+            "KEK-PREPRINT-2014-17"
+        ]
+    ], 
+    "1312621": [
+        "Observation of the decay $B^0 \\to \\eta' K^*(892)^0$", 
+        "Belle", 
+        "10.1103/PhysRevD.90.072009", 
+        null, 
+        "1408.6343", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2014-13", 
+            "KEK-PREPRINT-2014-22"
+        ]
+    ], 
+    "1312626": [
+        "Observation of a new charged charmoniumlike state in $\\bar{B}^0 \u2192 J/\u03c8K^-\u03c0^+$ decays", 
+        "Belle", 
+        "10.1103/PhysRevD.90.112009", 
+        null, 
+        "1408.6457", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2014-12", 
+            "KEK-PREPRINT-2014-19"
+        ]
+    ], 
+    "1319178": [
+        "Evidence of $\u03d2(1S) \u2192 J/\u03c8 + \u03c7_{c1}$ and search for double-charmonium production in \u03d2(1S) and \u03d2(2S) decays", 
+        "Belle", 
+        "10.1103/PhysRevD.90.112008", 
+        null, 
+        "1409.7644", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-#-2014-14", 
+            "KEK-PREPRINT-#:-2014-24"
+        ]
+    ]
+}

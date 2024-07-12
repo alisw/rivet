@@ -1,0 +1,382 @@
+{
+    "426231": [
+        "Experimental test of lepton universality in tau decay", 
+        "CLEO", 
+        "10.1103/PhysRevD.55.2559", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-96-1431", 
+            "CLEO-96-16", 
+            "SLAC-PUB-9839"
+        ]
+    ], 
+    "444744": [
+        "A New measurement of b ---> D* pi branching fractions", 
+        "CLEO", 
+        "10.1103/PhysRevLett.80.2762", 
+        null, 
+        "hep-ex/9706019", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9763", 
+            "CLNS-97-1485", 
+            "CLEO-97-11"
+        ]
+    ], 
+    "445351": [
+        "A Measurement of the total cross-section for e+ e- ---> hadrons at s**(1/2) = 10.52-GeV", 
+        "CLEO", 
+        "10.1103/PhysRevD.57.1350", 
+        null, 
+        "hep-ex/9707018", 
+        "ins445351", 
+        null, 
+        [
+            "SLAC-PUB-9765", 
+            "CLNS-97-1493", 
+            "CLEO-97-14"
+        ]
+    ], 
+    "446031": [
+        "Measurements of the meson - photon transition form-factors of light pseudoscalar mesons at large momentum transfer", 
+        "CLEO", 
+        "10.1103/PhysRevD.57.33", 
+        null, 
+        "hep-ex/9707031", 
+        "ins446031", 
+        null, 
+        [
+            "SLAC-PUB-9838", 
+            "CLNS-97-1477", 
+            "CLEO-97-7"
+        ]
+    ], 
+    "447559": [
+        "Search for color suppressed B hadronic decay processes with CLEO", 
+        "CLEO", 
+        "10.1103/PhysRevD.57.5363", 
+        null, 
+        "hep-ex/9708033", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9837", 
+            "CLNS-97-1503", 
+            "CLEO-97-19", 
+            "CLEO-CONF-97-12", 
+            "EPS-ABSTRACT-338"
+        ]
+    ], 
+    "447626": [
+        "Investigation of semileptonic B meson decay to P wave charm mesons", 
+        "CLEO", 
+        "10.1103/PhysRevLett.80.4127", 
+        null, 
+        "hep-ex/9708035", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9836", 
+            "CLNS-97-1501", 
+            "CLEO-97-17"
+        ]
+    ], 
+    "449346": [
+        "Search for inclusive $b \\to s \\ell^+$ lepton-", 
+        "CLEO", 
+        "10.1103/PhysRevLett.80.2289", 
+        null, 
+        "hep-ex/9710003", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9835", 
+            "CLNS-97-1514", 
+            "CLEO-97-21"
+        ]
+    ], 
+    "450214": [
+        "Flavor - specific inclusive B decays to charm", 
+        "CLEO", 
+        "10.1103/PhysRevLett.80.1150", 
+        null, 
+        "hep-ex/9710028", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9832", 
+            "CLNS-97-1516", 
+            "CLEO-97-23"
+        ]
+    ], 
+    "451207": [
+        "Observation of exclusive two-body B decays to kaons and pions", 
+        "CLEO", 
+        "10.1103/PhysRevLett.80.3456", 
+        null, 
+        "hep-ex/9711010", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9759", 
+            "CLNS-97-1522", 
+            "CLEO-97-27"
+        ]
+    ], 
+    "451265": [
+        "Observation of the radiative decay D*+ ---> D+ gamma", 
+        "CLEO", 
+        "10.1103/PhysRevLett.80.3919", 
+        null, 
+        "hep-ex/9711011", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9758", 
+            "CLNS-97-1518", 
+            "CLEO-97-25"
+        ]
+    ], 
+    "451957": [
+        "Study of semileptonic decays of B mesons to charmed baryons", 
+        "CLEO", 
+        "10.1103/PhysRevD.57.6604", 
+        null, 
+        "hep-ex/9712008", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9757", 
+            "CLNS-97-1519", 
+            "CLEO-97-26"
+        ]
+    ], 
+    "452028": [
+        "New limits for neutrinoless tau decays", 
+        "CLEO", 
+        "10.1103/PhysRevD.57.5903", 
+        null, 
+        "hep-ex/9712010", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9756", 
+            "CLNS-97-1530", 
+            "CLEO-97-29"
+        ]
+    ], 
+    "452243": [
+        "Improved measurement of the pseudoscalar decay constant f(D(s))", 
+        "CLEO", 
+        "10.1103/PhysRevD.58.032002", 
+        null, 
+        "hep-ex/9712014", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9755", 
+            "CLNS-97-1526", 
+            "CLEO-97-28"
+        ]
+    ], 
+    "452511": [
+        "Measurement of Branching ratio (D0 ---> K- pi+) using partial reconstruction of anti-B ---> D*+ X lepton- anti-neutrino", 
+        "CLEO", 
+        "10.1103/PhysRevLett.80.3193", 
+        null, 
+        "hep-ex/9712023", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9754", 
+            "CLNS-97-1517", 
+            "CLEO-97-24"
+        ]
+    ], 
+    "465947": [
+        "Measurement of the branching fractions of lambda(c)+ ---> p anti-K n (pion)", 
+        "CLEO", 
+        "10.1103/PhysRevD.57.4467", 
+        null, 
+        "hep-ex/9709012", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9740", 
+            "CLNS-97-1502", 
+            "CLEO-97-18"
+        ]
+    ], 
+    "465971": [
+        "Search for the decay b ---> D(2536)+ X", 
+        "CLEO", 
+        "10.1103/PhysRevD.57.3847", 
+        null, 
+        "hep-ex/9710023", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9739", 
+            "CLNS-97-1513", 
+            "CLEO-97-20"
+        ]
+    ], 
+    "466173": [
+        "Measurement of the branching ratios for the decays of D+(s) to eta pi+, eta-prime pi+, eta rho+, and eta-prime rho+", 
+        "CLEO", 
+        "10.1103/PhysRevD.58.052002", 
+        null, 
+        "hep-ex/9801010", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1998-084", 
+            "CLNS-97-1515", 
+            "CLEO-97-22"
+        ]
+    ], 
+    "466208": [
+        "Two-body B meson decays to eta and eta-prime Observation of B ---> eta-prime K", 
+        "CLEO", 
+        "10.1103/PhysRevLett.80.3710", 
+        null, 
+        "hep-ex/9801012", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1998-085", 
+            "CLNS-97-1536", 
+            "CLEO-97-31"
+        ]
+    ], 
+    "467595": [
+        "Continuum charged D* spin alignment at S**(1/2) = 10.5-GeV", 
+        "CLEO", 
+        "10.1103/PhysRevD.58.052003", 
+        null, 
+        "hep-ex/9802022", 
+        "ins467595", 
+        null, 
+        [
+            "SLAC-REPRINT-1998-086", 
+            "CLNS-98-1542", 
+            "CLEO-98-3"
+        ]
+    ], 
+    "467596": [
+        "First observation of the Cabibbo suppressed decay B+ ---> anti-D0 K+", 
+        "CLEO", 
+        "10.1103/PhysRevLett.80.5493", 
+        null, 
+        "hep-ex/9802023", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1998-087", 
+            "CLNS-98-1541", 
+            "CLEO-98-2"
+        ]
+    ], 
+    "467642": [
+        "The Hadronic transitions Upsilon(2S) ---> Upsilon(1S)", 
+        "CLEO", 
+        "10.1103/PhysRevD.58.052004", 
+        null, 
+        "hep-ex/9802024", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1998-088", 
+            "CLNS-98-1540", 
+            "CLEO-98-1"
+        ]
+    ], 
+    "468378": [
+        "Observation of B+ ---> omega K+ and search for related B decay modes", 
+        "CLEO", 
+        "10.1103/PhysRevLett.81.272", 
+        null, 
+        "hep-ex/9803018", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1998-090", 
+            "CLNS-97-1537", 
+            "CLEO-97-32"
+        ]
+    ], 
+    "468444": [
+        "Radiative decay modes of the D0 meson", 
+        "CLEO", 
+        "10.1103/PhysRevD.58.092001", 
+        null, 
+        "hep-ex/9803022", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1998-091", 
+            "CLNS-97-1531", 
+            "CLEO-97-30"
+        ]
+    ], 
+    "468747": [
+        "A Limit on the mass of the neutrino(tau)", 
+        "CLEO", 
+        "10.1016/S0370-2693(98)00539-5", 
+        null, 
+        "hep-ex/9803031", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1998-092", 
+            "CLNS-98-1551", 
+            "CLEO-98-6"
+        ]
+    ], 
+    "469887": [
+        "Observation of high momentum eta-prime production in B decay", 
+        "CLEO", 
+        "10.1103/PhysRevLett.81.1786", 
+        null, 
+        "hep-ex/9804018", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1998-093", 
+            "CLNS-98-1544", 
+            "CLEO-98-4"
+        ]
+    ], 
+    "470842": [
+        "First search for CP violation in tau lepton decay", 
+        "CLEO", 
+        "10.1103/PhysRevLett.81.3823", 
+        null, 
+        "hep-ex/9805027", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1998-094", 
+            "CLNS-98-1557", 
+            "CLEO-98-7"
+        ]
+    ], 
+    "471065": [
+        "Further search for the two photon production of the glueball candidate f(J)(2220)", 
+        "CLEO", 
+        "10.1103/PhysRevLett.81.3328", 
+        null, 
+        "hep-ex/9805033", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1998-095", 
+            "CLNS-98-1560", 
+            "CLEO-98-08"
+        ]
+    ]
+}

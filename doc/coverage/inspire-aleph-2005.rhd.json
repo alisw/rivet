@@ -1,0 +1,60 @@
+{
+    "656811": [
+        "Single vector boson production in e+ e- collisions at centre-of-mass energies from 183-GeV to 209-GeV", 
+        "ALEPH", 
+        "10.1016/j.physletb.2004.10.057", 
+        "785584", 
+        null, 
+        "ins656811", 
+        null, 
+        [
+            "CERN-PH-EP-2004-034"
+        ]
+    ], 
+    "660087": [
+        "Two-particle correlations in p p, anti-p anti-p and K0(S) K0(S) pairs from hadronic Z decays", 
+        "ALEPH", 
+        "10.1016/j.physletb.2004.11.048", 
+        "788529", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2004-033"
+        ]
+    ], 
+    "664766": [
+        "Bose-Einstein correlations in W-pair decays with an event-mixing technique", 
+        "ALEPH", 
+        "10.1016/j.physletb.2004.12.018", 
+        "800414", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2004-053"
+        ]
+    ], 
+    "669198": [
+        "Improved measurement of the triple gauge-boson couplings gamma W W and Z W W in e+ e- collisions", 
+        "ALEPH", 
+        "10.1016/j.physletb.2005.03.058", 
+        "814341", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2004-065"
+        ]
+    ], 
+    "686120": [
+        "Branching ratios and spectral functions of tau decays: Final ALEPH measurements and physics implications", 
+        "ALEPH", 
+        "10.1016/j.physrep.2005.06.007", 
+        "897209", 
+        "hep-ex/0506072", 
+        null, 
+        null, 
+        []
+    ]
+}

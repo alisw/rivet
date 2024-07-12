@@ -5,20 +5,23 @@ Experiment: JADE
 Collider: PETRA
 InspireID: 190818
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Peter Richardson <peter.richardson@durham.ac.uk>
 References:
 - Z.Phys. C20 (1983) 187
 RunInfo: 
-  Hadronic e+ e- events generated below the Z pole
+  Hadronic e+ e- events generated below the Z pole. Beam energy must be specified as analysis option "ENERGY" when rivet-merging samples.
 NumEvents: 1000000
 Beams: [e+, e-]
 Energies: [12.,30.,35.]
+Options:
+ - ENERGY=12,30,35
 PtCuts: [0]
 Description:
   The charged particle multiplicity distribution of hadronic $e^+e^-$ events
   as measured between 12 and 35 GeV using the JADE detector at
-  PETRA.
+  PETRA. Beam energy must be specified as analysis option "ENERGY" when rivet-merging samples.
 BibKey: Bartel:1983qp
 BibTeX: '@article{Bartel:1983qp,
       author         = "Bartel, W. and others",
@@ -32,3 +35,9 @@ BibTeX: '@article{Bartel:1983qp,
       reportNumber   = "DESY-83-042",
       SLACcitation   = "%%CITATION = ZEPYA,C20,187;%%"
 }'
+
+ReleaseTests:
+ - $A LEP-12 :ENERGY=12
+ - $A-2 LEP-30 :ENERGY=30
+ - $A-3 LEP-35 :ENERGY=35
+

@@ -1,0 +1,275 @@
+{
+    "589754": [
+        "Studies of the decay B+- ---> D(CP)K+-", 
+        "Belle", 
+        "10.1103/PhysRevLett.90.131803", 
+        null, 
+        "hep-ex/0207012", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2002-19", 
+            "KEK-PREPRINT-2002-61", 
+            "DPNU-02-20"
+        ]
+    ], 
+    "593189": [
+        "Measurement of the electroweak penguin process B ---> X(s) l+ l-", 
+        "Belle", 
+        "10.1103/PhysRevLett.90.021801", 
+        null, 
+        "hep-ex/0208029", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2002-28", 
+            "KEK-PREPRINT-83", 
+            "TIT-HPE-02-01"
+        ]
+    ], 
+    "593909": [
+        "Measurement of branching fractions for B ---> eta(c) K(*) decays", 
+        "Belle", 
+        "10.1103/PhysRevLett.90.071801", 
+        null, 
+        "hep-ex/0208047", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2002-88", 
+            "BELLE-PREPRINT-2002-31"
+        ]
+    ], 
+    "600986": [
+        "Search for the electric dipole moment of the tau lepton", 
+        "Belle", 
+        "10.1016/S0370-2693(02)02984-2", 
+        null, 
+        "hep-ex/0210066", 
+        null, 
+        null, 
+        [
+            "BELLE-2002-35"
+        ]
+    ], 
+    "601602": [
+        "Study of anti-B0 ---> D0(*) pi+ pi- decays", 
+        "Belle", 
+        "10.1016/S0370-2693(02)03198-2", 
+        null, 
+        "hep-ex/0211022", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2002-109", 
+            "BELLE-PREPRINT-2002-34", 
+            "UCTP-106-02"
+        ]
+    ], 
+    "602456": [
+        "Measurement of branching fractions and charge asymmetries for two-body B meson decays with charmonium", 
+        "Belle", 
+        "10.1103/PhysRevD.67.032003", 
+        null, 
+        "hep-ex/0211047", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2002-96", 
+            "BELLE-PREPRINT-2002-32"
+        ]
+    ], 
+    "603171": [
+        "Measurement of the B0 - anti-B0 mixing rate with B0 (anti-B0) ---> D*-+ pi+- partial reconstruction", 
+        "Belle", 
+        "10.1103/PhysRevD.67.092004", 
+        null, 
+        "hep-ex/0211065", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2002-37", 
+            "KEK-PREPRINT-2002-117"
+        ]
+    ], 
+    "604565": [
+        "Studies of B0 - anti-B0 mixing properties with inclusive dilepton events", 
+        "Belle", 
+        "10.1103/PhysRevD.67.052004", 
+        null, 
+        "hep-ex/0212033", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2002-123", 
+            "BELLE-PREPRINT-2002-38"
+        ]
+    ], 
+    "605338": [
+        "Observation of anti-B0 ---> Lambda+(c) anti-p decay", 
+        "Belle", 
+        "10.1103/PhysRevLett.90.121802", 
+        null, 
+        "hep-ex/0212052", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2002-39"
+        ]
+    ], 
+    "605543": [
+        "Study of time dependent CP violating asymmetries in b ---> s anti-q q decays", 
+        "Belle", 
+        "10.1103/PhysRevD.67.031102", 
+        null, 
+        "hep-ex/0212062", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2002-128", 
+            "BELLE-PREPRINT-2002-40"
+        ]
+    ], 
+    "605636": [
+        "Observation of anti-B0 ---> D0 anti-K0 and anti-B0 ---> D0 anti-K*0 decays", 
+        "Belle", 
+        "10.1103/PhysRevLett.90.141802", 
+        null, 
+        "hep-ex/0212066", 
+        null, 
+        null, 
+        []
+    ], 
+    "612221": [
+        "Evidence for CP violating asymmetries B0 ---> pi+ pi- decays and constraints on the CKM angle phi(2)", 
+        "Belle", 
+        "10.1103/PhysRevD.68.012001", 
+        null, 
+        "hep-ex/0301032", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2002-131", 
+            "BELLE-PREPRINT-2003-1"
+        ]
+    ], 
+    "613543": [
+        "Observation of B0 ---> p anti-Lambda pi-", 
+        "Belle", 
+        "10.1103/PhysRevLett.90.201802", 
+        null, 
+        "hep-ex/0302024", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2003-2"
+        ]
+    ], 
+    "617544": [
+        "Measurement of branching fraction ratios and CP asymmetries in B+- ---> D(CP) K+-", 
+        "Belle", 
+        "10.1103/PhysRevD.68.051101", 
+        null, 
+        "hep-ex/0304032", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2003-8", 
+            "BELLE-PREPRINT-2003-3"
+        ]
+    ], 
+    "617547": [
+        "Improved measurement of the partial rate CP asymmetry in B+ ---> K0 pi+ and B- ---> anti-K0 pi- decays", 
+        "Belle", 
+        "10.1103/PhysRevD.68.011103", 
+        null, 
+        "hep-ex/0304035", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2003-7", 
+            "BELLE-PREPRINT-2003-4"
+        ]
+    ], 
+    "619381": [
+        "Evidence for B ---> Phi Phi K", 
+        "Belle", 
+        "10.1103/PhysRevLett.91.241802", 
+        null, 
+        "hep-ex/0305068", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2003-5"
+        ]
+    ], 
+    "620180": [
+        "Observation of B+ ---> rho+ rho0", 
+        "Belle", 
+        "10.1103/PhysRevLett.91.221801", 
+        null, 
+        "hep-ex/0306007", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2003-6", 
+            "KEK-PREPRINT-2003-19"
+        ]
+    ], 
+    "622879": [
+        "Measurement of branching fractions and polarization in B ---> phi K(*) decays", 
+        "Belle", 
+        "10.1103/PhysRevLett.91.201801", 
+        null, 
+        "hep-ex/0307014", 
+        null, 
+        null, 
+        []
+    ], 
+    "625444": [
+        "Observation of the D(sJ)(2317) and D(sJ)(2457) in B decays", 
+        "Belle", 
+        "10.1103/PhysRevLett.91.262002", 
+        null, 
+        "hep-ex/0308019", 
+        null, 
+        null, 
+        []
+    ], 
+    "627760": [
+        "Observation of a narrow charmonium - like state in exclusive B+- ---> K+- pi+ pi- J / psi decays", 
+        "Belle", 
+        "10.1103/PhysRevLett.91.262001", 
+        null, 
+        "hep-ex/0309032", 
+        null, 
+        null, 
+        []
+    ], 
+    "628942": [
+        "Search for $B^0 \\to \\ell^{+} \\ell^{-}$ at BELLE", 
+        "Belle", 
+        "10.1103/PhysRevD.68.111101", 
+        null, 
+        "hep-ex/0309069", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2003-12", 
+            "KEK-PREPRINT-2003-44"
+        ]
+    ], 
+    "629334": [
+        "Measurement of K+ K- production in two photon collisions in the resonant mass region", 
+        "Belle", 
+        "10.1140/epjc/s2003-01468-9", 
+        null, 
+        "hep-ex/0309077", 
+        "ins629334", 
+        null, 
+        [
+            "KEK-PREPRINT-2003-61", 
+            "BELLE-PREPRINT-2003-19"
+        ]
+    ]
+}

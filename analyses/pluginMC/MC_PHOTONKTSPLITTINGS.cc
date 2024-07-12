@@ -25,11 +25,11 @@ namespace Rivet {
     /// Book histograms
     void init() {
       // General FS
-      FinalState fs(-5.0, 5.0);
+      FinalState fs((Cuts::etaIn(-5.0, 5.0)));
       declare(fs, "FS");
 
       // Get leading photon
-      LeadingParticlesFinalState photonfs(FinalState(-1.0, 1.0, 30.0*GeV));
+      LeadingParticlesFinalState photonfs(FinalState(Cuts::abseta < 2.5 && Cuts::pT >= 30*GeV));
       photonfs.addParticleId(PID::PHOTON);
       declare(photonfs, "LeadingPhoton");
 
@@ -62,7 +62,7 @@ namespace Rivet {
       // Isolate photon by ensuring that a 0.4 cone around it contains less than 7% of the photon's energy
       const double egamma = photon.E();
       double econe = 0.0;
-      foreach (const Particle& p, fs.particles()) {
+      for (const Particle& p : fs.particles()) {
         if (deltaR(photon, p.momentum()) < 0.4) {
           econe += p.E();
           // Veto as soon as E_cone gets larger
@@ -88,6 +88,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(MC_PHOTONKTSPLITTINGS);
+  RIVET_DECLARE_PLUGIN(MC_PHOTONKTSPLITTINGS);
 
 }

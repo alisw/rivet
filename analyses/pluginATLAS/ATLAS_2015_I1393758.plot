@@ -2,7 +2,7 @@
 LogY=0
 XTwosidedTicks=1
 YTwosidedTicks=1
-XLabel=Jet $p_\text{T}$ [GeV]
+XLabel=Jet $p_\mathrm{T}$ [GeV]
 LegendAlign=r
 LegendYPos=0.30
 LegendXPos=0.95

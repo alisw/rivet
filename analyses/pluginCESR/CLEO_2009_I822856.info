@@ -1,0 +1,38 @@
+Name: CLEO_2009_I822856
+Year: 2009
+Summary: Pion mass distribution in $D^+_s\to \omega\pi^+\pi^0$
+Experiment: CLEO
+Collider: CESR 
+InspireID: 822856
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 80 (2009) 051102
+RunInfo: Any process producing D_s+
+Description:
+'Measurement of the pion mass distribution in $D^+_s\to \omega\pi^+\pi^0$.
+   The data were read from the plots in the paper.
+   Resolution/acceptance effects have been not unfolded. Given the agreement with the model in the paper this analysis should only be used for qualitative studies.'
+ValidationInfo:
+  'Compared Herwig events using the same model for the decay as in the paper.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: CLEO:2009nsf
+BibTeX: '@article{CLEO:2009nsf,
+    author = "Ge, J. Y. and others",
+    collaboration = "CLEO",
+    title = "{D+(s) Exclusive Hadronic Decays Involving omega}",
+    eprint = "0906.2138",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CLNS-09-2055, CLEO-09-08",
+    doi = "10.1103/PhysRevD.80.051102",
+    journal = "Phys. Rev. D",
+    volume = "80",
+    pages = "051102",
+    year = "2009"
+}
+'

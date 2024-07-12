@@ -1,0 +1,31 @@
+Name: TASSO_1983_I192072
+Year: 1983
+Summary: $\Xi^-,\bar{\Xi}^+$ spectrum at 34.4 GeV
+Experiment: TASSO
+Collider: Petra
+InspireID: 192072
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B130 (1983) 340-344, 1983 
+RunInfo: e+ e- to hadrons
+NeedCrossSection: yes
+Beams: [e+, e-]
+Energies: [34.4]
+Description:
+  'Measurement of the $\Xi^-,\bar{\Xi}^+$ spectrum in $e^+e^-$ collisions for a centre-of-mass energy of 34.4 GeV by the TASSO experiment at Petra.'
+BibKey: Althoff:1983uj
+BibTeX: '@article{Althoff:1983uj,
+      author         = "Althoff, M. and others",
+      title          = "{Observation of Xi-, Anti-xi- Production in $e^+ e^-$
+                        Annihilation}",
+      collaboration  = "TASSO",
+      journal        = "Phys. Lett.",
+      volume         = "130B",
+      year           = "1983",
+      pages          = "340-344",
+      doi            = "10.1016/0370-2693(83)91154-1",
+      reportNumber   = "DESY-83-071",
+      SLACcitation   = "%%CITATION = PHLTA,130B,340;%%"
+}'

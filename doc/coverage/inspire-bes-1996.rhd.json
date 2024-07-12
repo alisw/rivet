@@ -1,0 +1,49 @@
+{
+    "397667": [
+        "Measurement of the mass of the tau lepton", 
+        "BES", 
+        "10.1103/PhysRevD.53.20", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-6930", 
+            "SLAC-PUB-95-6930", 
+            "BIHEP-EP1-95-004"
+        ]
+    ], 
+    "418560": [
+        "Search for a vector glueball by a scan of the J / psi resonance", 
+        "BES", 
+        "10.1103/PhysRevD.57.3187", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1996-068", 
+            "PRINT-96-127 (BEIJING)"
+        ]
+    ], 
+    "429510": [
+        "Structure analysis of the f(J) (1710) in the radiative decay J / psi ---> gamma K+ K-", 
+        "BES", 
+        "10.1103/PhysRevLett.77.3959", 
+        null, 
+        null, 
+        null, 
+        null, 
+        []
+    ], 
+    "429637": [
+        "Studies of xi (2230) in J / psi radiative decays", 
+        "BES", 
+        "10.1103/PhysRevLett.76.3502", 
+        null, 
+        null, 
+        null, 
+        null, 
+        []
+    ]
+}

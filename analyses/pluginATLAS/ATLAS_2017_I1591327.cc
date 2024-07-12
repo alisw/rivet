@@ -12,9 +12,7 @@ namespace Rivet {
   public:
 
     // Constructor
-    ATLAS_2017_I1591327() : Analysis("ATLAS_2017_I1591327") {
-      setNeedsCrossSection(true);
-    }
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2017_I1591327);
 
 
     // Book histograms and initialise projections before the run
@@ -33,12 +31,12 @@ namespace Rivet {
       declare(photonfs, "Photon");
 
       // Histograms
-      _h_M       = bookHisto1D(2, 1, 1);
-      _h_pT      = bookHisto1D(3, 1, 1);
-      _h_at      = bookHisto1D(4, 1, 1);
-      _h_phistar = bookHisto1D(5, 1, 1);
-      _h_costh   = bookHisto1D(6, 1, 1);
-      _h_dPhi    = bookHisto1D(7, 1, 1);
+      book(_h_M      , 2, 1, 1);
+      book(_h_pT     , 3, 1, 1);
+      book(_h_at     , 4, 1, 1);
+      book(_h_phistar, 5, 1, 1);
+      book(_h_costh  , 6, 1, 1);
+      book(_h_dPhi   , 7, 1, 1);
     }
 
 
@@ -88,7 +86,7 @@ namespace Rivet {
       Particles isolated_photons;
       for (const Particle& photon : photons) {
         // Check if it's a prompt photon (needed for SHERPA 2->5 sample, otherwise I also get photons from hadron decays in jets)
-        if (photon.fromDecay()) continue;
+        if (!photon.isPrompt()) continue;
 
         // Remove photons in ECAL crack region
         if (inRange(photon.abseta(), 1.37, 1.56))  continue;
@@ -152,20 +150,20 @@ namespace Rivet {
       const double at = At.cross(t_hatx).mod();
 
       // Fill histograms
-      const double weight = event.weight();
-      _h_M->fill(Myy, weight);
-      _h_pT->fill(pTyy, weight);
-      _h_dPhi->fill(dPhiyy, weight);
-      _h_costh->fill(costhetastar_, weight);
-      _h_phistar->fill(phistar, weight);
-      _h_at->fill(at, weight);
+      _h_M->fill(Myy);
+      _h_pT->fill(pTyy);
+      _h_dPhi->fill(dPhiyy);
+      _h_costh->fill(costhetastar_);
+      _h_phistar->fill(phistar);
+      _h_at->fill(at);
     }
 
 
     // Normalise histograms etc., after the run
     void finalize() {
-      const double sf = crossSection() / (femtobarn * sumOfWeights());
-      scale({_h_M, _h_pT, _h_dPhi, _h_costh, _h_phistar, _h_at}, sf);
+      const double sf = crossSection()/femtobarn / sumOfWeights();
+      scale(_h_M, sf); scale(_h_pT, sf); scale(_h_dPhi, sf);
+      scale(_h_costh, sf); scale(_h_phistar, sf); scale(_h_at, sf);
     }
 
 
@@ -181,7 +179,6 @@ namespace Rivet {
   };
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2017_I1591327);
+  RIVET_DECLARE_PLUGIN(ATLAS_2017_I1591327);
 
 }

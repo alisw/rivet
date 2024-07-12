@@ -1,0 +1,9 @@
+Name: EXAMPLE_HTT
+Year: 2022
+Summary: Example program for HEPTopTagger interface
+Status: EXAMPLE
+Authors:
+ - Jack Y. Araz <jack.araz@durham.ac.uk>
+Description:
+  'Example on boosted top tagging. Requires boosted FatJets to be tagged.'
+

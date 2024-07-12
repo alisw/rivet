@@ -1,0 +1,37 @@
+Name: BABAR_2016_I1391152
+Year: 2016
+Summary: Measurement of angular asymmetries in the decays $B\to K^*\ell^+\ell^-$
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 1391152
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 93 (2016) 5, 052015
+RunInfo: Any process producing B+ and B0, originally Upsilon(4S) decay
+Description:
+  'Measurement of angular asymmetries in the decays $B\to K^*\ell^+\ell^-$'
+ValidationInfo:
+  'Herwig7 events using EvtGen for decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BaBar:2015wkg
+BibTeX: '@article{BaBar:2015wkg,
+    author = "Lees, J. P. and others",
+    collaboration = "BaBar",
+    title = "{Measurement of angular asymmetries in the decays $B \to K^*ℓ^+ℓ^-$}",
+    eprint = "1508.07960",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BABAR-PUB-15-002, SLAC-PUB-16384",
+    doi = "10.1103/PhysRevD.93.052015",
+    journal = "Phys. Rev. D",
+    volume = "93",
+    number = "5",
+    pages = "052015",
+    year = "2016"
+}
+'

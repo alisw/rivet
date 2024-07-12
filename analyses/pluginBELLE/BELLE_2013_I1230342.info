@@ -1,0 +1,36 @@
+Name: BELLE_2013_I1230342
+Year: 2013
+Summary: $\bar{B}^0_s\to\Lambda_c^+\bar\Lambda^0\pi^-$ Differential branching ratios
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1230342
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett.B 726 (2013) 206-210
+RunInfo: Any process producing BS0, originially e+e- at Upsilon(5S)
+Description:
+  'Differential branching ratios for $\bar{B}^0_s\to\Lambda_c^+\bar\Lambda^0\pi^-$ with respect to the invariant masses of pairs of the decay products.'
+ValidationInfo:
+  'Herwig 7 event'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle:2013sjb
+BibTeX: '@article{Belle:2013sjb,
+    author = "Solovieva, E. and others",
+    collaboration = "Belle",
+    title = "{Evidence for $\bar{B}_s^0 \to \Lambda_c^+ \bar{\Lambda} \pi^-$}",
+    eprint = "1304.6931",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BELLE-PREPRINT-2013-4, KEK-PREPRINT-2012-48",
+    doi = "10.1016/j.physletb.2013.08.057",
+    journal = "Phys. Lett. B",
+    volume = "726",
+    pages = "206--210",
+    year = "2013"
+}
+'

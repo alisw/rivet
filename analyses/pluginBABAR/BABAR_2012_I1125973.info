@@ -1,0 +1,34 @@
+Name: BABAR_2012_I1125973
+Year: 2012
+Summary: Semi-leptonic $B$ to $\pi$, $\omega$ and $\eta$ decays
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 1125973
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 86 (2012) 092004
+RunInfo: Any process producing B+ or B0, original e+e->Upsilon(4S)
+Description:
+  'Implementation of Lorentz invariant $q^2$ distributions ("form factor") for semileptonic $B^0$ and $B^+$ decays. Includes $\pi$, $\omega$ and $\eta$ decays.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BaBar:2012thb
+BibTeX: '@article{BaBar:2012thb,
+    author = "Lees, J. P. and others",
+    collaboration = "BaBar",
+    title = "{Branching fraction and form-factor shape measurements of exclusive charmless semileptonic B decays, and determination of $|V_{ub}|$}",
+    eprint = "1208.1253",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BABAR-PUB12-015, SLAC-PUB-15208",
+    doi = "10.1103/PhysRevD.86.092004",
+    journal = "Phys. Rev. D",
+    volume = "86",
+    pages = "092004",
+    year = "2012"
+}
+'

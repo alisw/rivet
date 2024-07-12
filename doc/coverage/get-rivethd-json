@@ -1,0 +1,106 @@
+#! /usr/bin/env python3
+
+"""\
+%(prog)s <file.ins.json> [<file.ins.json> ...]
+
+"""
+
+from __future__ import print_function
+
+import argparse
+ap = argparse.ArgumentParser(usage=__doc__)
+ap.add_argument("INSFILES", metavar='file', nargs="+", help="Inspire-exported JSON files to read")
+ap.add_argument("-f", "--force", dest="FORCE", action="store_true", default=False, help="overwrite existing output file")
+ap.add_argument("--no-hdtest", dest="HDTEST", action="store_false", default=True, help="don't try to access HepData to double-check missing ref")
+args = ap.parse_args()
+if not args.INSFILES:
+    exit(1)
+
+
+## Get a dict of Rivet analyses by Inspire ID(s)
+import rivet
+anas = {}
+for aname in rivet.AnalysisLoader.analysisNames():
+    ana = rivet.AnalysisLoader.getAnalysis(aname)
+    # TODO: all anas *should* have an Inspire ID...
+    anas.setdefault(ana.inspireId(), []).append(ana.name())
+del anas[""]
+# print(anas.keys())
+
+
+import json
+for ifile, insfile in enumerate(args.INSFILES):
+    import re, os
+    try:
+        import urllib.request as urlreq
+    except ImportError:
+        import urllib2 as urlreq
+
+
+    if ifile > 0:
+        print("\n")
+    print("Processing {}...".format(insfile))
+    jsonfile = insfile.replace(".ins.", ".rhd.")
+    print (jsonfile)
+    if os.path.exists(jsonfile) and not args.FORCE:
+        print("{} exists, skipping {} testing".format(jsonfile, insfile))
+        continue
+
+    OUT = {}
+
+    with open(insfile) as insfileobj:
+        tree = json.load(insfileobj)
+        #print(json.dumps(tree, sort_keys=True, indent=4))
+
+        for rec in tree["hits"]["hits"]:
+            meta = rec["metadata"]
+
+            print()
+
+            #ins = rec.get("id")
+            ins = meta.get("control_number")
+            print("Inspire", ins)
+
+            summ = meta.get("titles", [{}])[0].get("title")
+            print("Title:", summ)
+
+            expt = meta.get("collaborations", [{}])[0].get("value")
+            print("Expt:", expt)
+
+            doi = meta.get("dois", [{}])[0].get("value")
+            print("DOI:", doi)
+
+            arx = meta.get("arxiv_eprints", [{}])[0].get("value")
+            print("arXiv:", arx)
+
+            cds = None
+            for ext in meta.get("external_system_identifiers", []):
+                if ext.get("schema", "") == "CDS":
+                    cds = ext.get("value")
+            print("CDS:", cds)
+
+            hd = None
+            for ext in meta.get("external_system_identifiers", []):
+                if ext.get("schema", "") == "HEPDATA":
+                    hd = ext.get("value")
+            if not hd and args.HDTEST:
+                try:
+                    hdurl = "https://hepdata.net/record/ins{}".format(ins)
+                    u = urlreq.urlopen(hdurl)
+                    hd = "ins{}".format(ins)
+                except urlreq.URLError:
+                    pass
+            print("HepData:", hd)
+
+            reportnums = [rpt.get("value") for rpt in meta.get("report_numbers", []) if "arXiv" not in rpt.get("value")]
+            print("Nums:", reportnums)
+
+            rivetanas = anas.get(ins)
+
+            OUT[ins] = [summ, expt, doi, cds, arx, hd, rivetanas, reportnums]
+            print(json.dumps(OUT[ins]))
+
+
+    ## Write out as JSON
+    with open(jsonfile, "w") as jf:
+        json.dump(OUT, jf, sort_keys=True, indent=4)

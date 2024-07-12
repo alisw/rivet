@@ -1,0 +1,351 @@
+{
+    "1377363": [
+        "Centrality dependence of high-p$_{T}$ D meson suppression in Pb-Pb collisions at $ \\sqrt{s_{\\mathrm{N}\\mathrm{N}}}=2.76 $ TeV", 
+        "ALICE", 
+        "10.1007/JHEP11(2015)205", 
+        "2025647", 
+        "1506.06604", 
+        "ins1377363", 
+        null, 
+        [
+            "CERN-PH-EP-2015-151"
+        ]
+    ], 
+    "1380453": [
+        "$\\phi$-meson production at forward rapidity in p-Pb collisions at $\\sqrt{s_{\\rm NN}}$ = 5.02 TeV and in pp collisions at $\\sqrt{s}$ = 2.76 TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2017.01.074", 
+        "2030418", 
+        "1506.09206", 
+        "ins1380453", 
+        null, 
+        [
+            "CERN-PH-EP-2015-161", 
+            "ALICE-PUBLIC-2016-004"
+        ]
+    ], 
+    "1394854": [
+        "Charged-particle multiplicities in proton\u2013proton collisions at $\\sqrt{s} = 0.9$ to 8 TeV", 
+        "ALICE", 
+        "10.1140/epjc/s10052-016-4571-1", 
+        "2052556", 
+        "1509.07541", 
+        "ins1394854", 
+        null, 
+        [
+            "CERN-PH-EP-2015-259"
+        ]
+    ], 
+    "1464839": [
+        "Measurement of azimuthal correlations of D mesons and charged particles in pp collisions at $\\sqrt{s}=7$ TeV and p-Pb collisions at $\\sqrt{s_{\\rm NN}}=5.02$ TeV", 
+        "ALICE", 
+        "10.1140/epjc/s10052-017-4779-8", 
+        "2153590", 
+        "1605.06963", 
+        "ins1464839", 
+        null, 
+        [
+            "CERN-EP-2016-129"
+        ]
+    ], 
+    "1471838": [
+        "Enhanced production of multi-strange hadrons in high-multiplicity proton-proton collisions", 
+        "ALICE", 
+        "10.1038/nphys4111", 
+        "2189682", 
+        "1606.07424", 
+        "ins1471838", 
+        null, 
+        [
+            "CERN-EP-2016-153"
+        ]
+    ], 
+    "1472319": [
+        "J/$\\psi$ suppression at forward rapidity in Pb-Pb collisions at $\\mathbf{\\sqrt{s_{{\\rm NN}}} = 5.02}$ TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2016.12.064", 
+        "2162399", 
+        "1606.08197", 
+        "ins1472319", 
+        null, 
+        [
+            "CERN-EP-2016-162"
+        ]
+    ], 
+    "1486391": [
+        "Measurement of electrons from beauty-hadron decays in p-Pb collisions at $ \\sqrt{s_{\\mathrm{NN}}}=5.02 $ TeV and Pb-Pb collisions at $ \\sqrt{s_{\\mathrm{NN}}}=2.76 $ TeV", 
+        "ALICE", 
+        "10.1007/JHEP07(2017)052", 
+        "2213564", 
+        "1609.03898", 
+        "ins1486391", 
+        null, 
+        [
+            "CERN-EP-2016-222"
+        ]
+    ], 
+    "1487545": [
+        "Anomalous evolution of the near-side jet peak shape in Pb-Pb collisions at $\\sqrt{s_{\\rm NN}}$ = 2.76 TeV", 
+        "ALICE", 
+        "10.1103/PhysRevLett.119.102301", 
+        "2214587", 
+        "1609.06643", 
+        "ins1487545", 
+        null, 
+        [
+            "CERN-EP-2016-229"
+        ]
+    ], 
+    "1487546": [
+        "Evolution of the longitudinal and azimuthal structure of the near-side jet peak in Pb-Pb collisions at $\\sqrt{s_{\\rm NN}} = 2.76$ TeV", 
+        "ALICE", 
+        "10.1103/PhysRevC.96.034904", 
+        "2214586", 
+        "1609.06667", 
+        "ins1487546", 
+        null, 
+        [
+            "CERN-EP-2016-228"
+        ]
+    ], 
+    "1487727": [
+        "Measurement of the production of high-$p_{\\rm T}$ electrons from heavy-flavour hadron decays in Pb-Pb collisions at $\\mathbf{\\sqrt{\\it s_{\\rm{NN}}}}$ = 2.76 TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2017.05.060", 
+        "2215398", 
+        "1609.07104", 
+        "ins1487727", 
+        null, 
+        [
+            "CERN-EP-2016-235"
+        ]
+    ], 
+    "1491202": [
+        "Determination of the event collision time with the ALICE detector at the LHC", 
+        "ALICE", 
+        "10.1140/epjp/i2017-11279-1", 
+        "2224138", 
+        "1610.03055", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2016-253"
+        ]
+    ], 
+    "1496634": [
+        "W and Z boson production in p-Pb collisions at $\\sqrt{s_{\\rm NN}}$ = 5.02 TeV", 
+        "ALICE", 
+        "10.1007/JHEP02(2017)077", 
+        "2228649", 
+        "1611.03002", 
+        "ins1496634", 
+        null, 
+        [
+            "CERN-EP-2016-278"
+        ]
+    ], 
+    "1507090": [
+        "Centrality dependence of the pseudorapidity density distribution for charged particles in Pb-Pb collisions at $\\sqrt{s_{\\rm NN}}=5.02$ TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2017.07.017", 
+        "2239845", 
+        "1612.08966", 
+        "ins1507090", 
+        null, 
+        [
+            "CERN-EP-2016-327"
+        ]
+    ], 
+    "1507157": [
+        "Insight into particle production mechanisms via angular correlations of identified particles in pp collisions at $\\sqrt{\\mathrm{s}}=7$  TeV", 
+        "ALICE", 
+        "10.1140/epjc/s10052-017-5129-6", 
+        "2239958", 
+        "1612.08975", 
+        "ins1507157", 
+        null, 
+        [
+            "CERN-EP-2016-322"
+        ]
+    ], 
+    "1510878": [
+        "Production of $\\Sigma(1385)^{\\pm}$ and $\\Xi(1530)^{0}$ in p-Pb collisions at $\\sqrt{s_{\\rm NN}}=5.02$ TeV", 
+        "ALICE", 
+        "10.1140/epjc/s10052-017-4943-1", 
+        "2243043", 
+        "1701.07797", 
+        "ins1510878", 
+        null, 
+        [
+            "CERN-EP-2017-017"
+        ]
+    ], 
+    "1511864": [
+        "K$^{*}(892)^{0}$ and $\\phi(1020)$ meson production at high transverse momentum in pp and Pb-Pb collisions at $\\sqrt{s_\\mathrm{NN}}$ = 2.76 TeV", 
+        "ALICE", 
+        "10.1103/PhysRevC.95.064606", 
+        "2244366", 
+        "1702.00555", 
+        "ins1511864", 
+        null, 
+        [
+            "CERN-EP-2017-010"
+        ]
+    ], 
+    "1511865": [
+        "Energy dependence of forward-rapidity $\\mathrm {J}/\\psi $ and $\\psi \\mathrm {(2S)}$ production in pp collisions at the LHC", 
+        "ALICE", 
+        "10.1140/epjc/s10052-017-4940-4", 
+        "2242607", 
+        "1702.00557", 
+        "ins1511865", 
+        null, 
+        [
+            "CERN-EP-2017-015"
+        ]
+    ], 
+    "1511870": [
+        "Measurement of D-meson production at mid-rapidity in pp collisions at ${\\sqrt{s}=7}$  TeV", 
+        "ALICE", 
+        "10.1140/epjc/s10052-017-5090-4", 
+        "2243279", 
+        "1702.00766", 
+        "ins1511870", 
+        null, 
+        [
+            "CERN-EP-2017-020"
+        ]
+    ], 
+    "1512110": [
+        "Production of ${\\pi ^0}$ and $\\eta $ mesons up to high transverse momentum in pp collisions at 2.76 TeV", 
+        "ALICE", 
+        "10.1140/epjc/s10052-017-4890-x", 
+        "2244883", 
+        "1702.00917", 
+        "ins1512110", 
+        null, 
+        [
+            "CERN-EP-2017-019"
+        ]
+    ], 
+    "1512297": [
+        "Production of muons from heavy-flavour hadron decays in p-Pb collisions at $\\mathbf{\\sqrt{{\\textit s}_{NN}} = 5.02}$ TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2017.03.049", 
+        "2243326", 
+        "1702.01479", 
+        "ins1512297", 
+        null, 
+        [
+            "CERN-EP-2017-022"
+        ]
+    ], 
+    "1512303": [
+        "Azimuthally differential pion femtoscopy in Pb-Pb collisions at $\\sqrt{s_{\\rm NN}}=2.76$ TeV", 
+        "ALICE", 
+        "10.1103/PhysRevLett.118.222301", 
+        "2244885", 
+        "1702.01612", 
+        "ins1512303", 
+        null, 
+        [
+            "CERN-EP-2017-013"
+        ]
+    ], 
+    "1512772": [
+        "Flow dominance and factorization of transverse momentum correlations in Pb-Pb collisions at the LHC", 
+        "ALICE", 
+        "10.1103/PhysRevLett.118.162302", 
+        "2245547", 
+        "1702.02665", 
+        "ins1512772", 
+        null, 
+        [
+            "CERN-EP-2017-021"
+        ]
+    ], 
+    "1599396": [
+        "Linear and non-linear flow modes in Pb-Pb collisions at $\\sqrt{s_{\\rm NN}} =$ 2.76 TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2017.07.060", 
+        "2262600", 
+        "1705.04377", 
+        "ins1599396", 
+        null, 
+        [
+            "CERN-EP-2017-103"
+        ]
+    ], 
+    "1599554": [
+        "Measuring K$^0_{\\rm S}$K$^{\\rm \\pm}$ interactions using Pb-Pb collisions at ${\\sqrt{s_{\\rm NN}}=2.76}$ TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2017.09.009", 
+        "2258402", 
+        "1705.04929", 
+        "ins1599554", 
+        null, 
+        [
+            "CERN-EP-2017-063"
+        ]
+    ], 
+    "1610453": [
+        "Searches for transverse momentum dependent flow vector fluctuations in Pb-Pb and p-Pb collisions at the LHC", 
+        "ALICE", 
+        "10.1007/JHEP09(2017)032", 
+        "2271135", 
+        "1707.05690", 
+        "ins1610453", 
+        null, 
+        [
+            "CERN-EP-2017-149"
+        ]
+    ], 
+    "1611301": [
+        "Measurement of deuteron spectra and elliptic flow in Pb\u2013Pb collisions at $\\sqrt{s_{\\mathrm {NN}}}$ = 2.76 TeV at the LHC", 
+        "ALICE", 
+        "10.1140/epjc/s10052-017-5222-x", 
+        "2274147", 
+        "1707.07304", 
+        "ins1611301", 
+        null, 
+        [
+            "CERN-EP-2017-176"
+        ]
+    ], 
+    "1614477": [
+        "Charged-particle multiplicity distributions over a wide pseudorapidity range in proton-proton collisions at $\\sqrt{s}=$ 0.9, 7, and 8 TeV", 
+        "ALICE", 
+        "10.1140/epjc/s10052-017-5412-6", 
+        "2275974", 
+        "1708.01435", 
+        "ins1614477", 
+        null, 
+        [
+            "CERN-EP-2017-192"
+        ]
+    ], 
+    "1621809": [
+        "Kaon femtoscopy in Pb-Pb collisions at $\\sqrt{s_{\\rm{NN}}}$ = 2.76 TeV", 
+        "ALICE", 
+        "10.1103/PhysRevC.96.064613", 
+        "2275327", 
+        "1709.01731", 
+        "ins1621809", 
+        null, 
+        [
+            "CERN-EP-2017-185"
+        ]
+    ], 
+    "1623907": [
+        "J/$\\psi$ elliptic flow in Pb-Pb collisions at $\\sqrt{s_\\mathrm{NN}}=5.02$ TeV", 
+        "ALICE", 
+        "10.1103/PhysRevLett.119.242301", 
+        "2282544", 
+        "1709.05260", 
+        "ins1623907", 
+        null, 
+        [
+            "CERN-EP-2017-237"
+        ]
+    ]
+}

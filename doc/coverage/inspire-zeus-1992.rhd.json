@@ -1,0 +1,28 @@
+{
+    "339275": [
+        "A Measurement of sigma(tot) (gamma p) at s**(1/2) = 210-GeV", 
+        "ZEUS", 
+        "10.1016/0370-2693(92)90914-P", 
+        null, 
+        null, 
+        "ins339275", 
+        null, 
+        [
+            "DESY-92-127", 
+            "ANL-HEP-PR-92-96"
+        ]
+    ], 
+    "339388": [
+        "Observation of hard scattering in photoproduction at HERA", 
+        "ZEUS", 
+        "10.1016/0370-2693(92)91280-M", 
+        null, 
+        null, 
+        "ins339388", 
+        null, 
+        [
+            "DESY-92-138", 
+            "ANL-HEP-PR-92-99"
+        ]
+    ]
+}

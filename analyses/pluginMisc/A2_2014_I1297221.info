@@ -1,0 +1,36 @@
+Name: A2_2014_I1297221
+Year: 2014
+Summary: Kinematic distributions in the decay $\eta\to\pi^0\gamma\gamma$
+Experiment: A2
+Collider: MAMI
+InspireID: 1297221
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.C 90 (2014) 025206, 2014.
+RunInfo: Any process producing eta mesons
+Description:
+  'Measurement of kinematic distributions in the decay $\eta\to\pi^0\gamma\gamma$.'
+ValidationInfo:
+  'Herwig7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: A2atMAMI:2014zdf
+BibTeX: '@article{A2atMAMI:2014zdf,
+    author = "Nefkens, B. M. K. and others",
+    collaboration = "A2 at MAMI",
+    title = "{New measurement of the rare decay $\eta \to \pi^0\gamma\gamma$ with the Crystal Ball/TAPS detectors at the Mainz Microtron}",
+    eprint = "1405.4904",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevC.90.025206",
+    journal = "Phys. Rev. C",
+    volume = "90",
+    number = "2",
+    pages = "025206",
+    year = "2014"
+}
+'

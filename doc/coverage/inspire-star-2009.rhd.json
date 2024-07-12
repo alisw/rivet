@@ -1,0 +1,164 @@
+{
+    "785050": [
+        "Indications of Conical Emission of Charged Hadrons at RHIC", 
+        "STAR", 
+        "10.1103/PhysRevLett.102.052302", 
+        null, 
+        "0805.0622", 
+        null, 
+        null, 
+        []
+    ], 
+    "791177": [
+        "Beam-Energy and System-Size Dependence of Dynamical Net Charge Fluctuations", 
+        "STAR", 
+        "10.1103/PhysRevC.79.024906", 
+        null, 
+        "0807.3269", 
+        "ins791177", 
+        null, 
+        [
+            "2008-07-21-WAYNE-STATE-PHYSICS"
+        ]
+    ], 
+    "793126": [
+        "Systematic Measurements of Identified Particle Spectra in $p p, d^+$ Au and Au+Au Collisions from STAR", 
+        "STAR", 
+        "10.1103/PhysRevC.79.034909", 
+        null, 
+        "0808.2041", 
+        null, 
+        null, 
+        []
+    ], 
+    "797805": [
+        "Measurements of phi meson production in relativistic heavy-ion collisions at RHIC", 
+        "STAR", 
+        "10.1103/PhysRevC.79.064903", 
+        null, 
+        "0809.4737", 
+        "ins797805", 
+        null, 
+        []
+    ], 
+    "800796": [
+        "Energy and system size dependence of phi meson production in Cu+Cu and Au+Au collisions", 
+        "STAR", 
+        "10.1016/j.physletb.2009.02.037", 
+        null, 
+        "0810.4979", 
+        "ins800796", 
+        null, 
+        []
+    ], 
+    "804391": [
+        "Observation of Two-source Interference in the Photoproduction Reaction Au Au ---> Au Au rho0", 
+        "STAR", 
+        "10.1103/PhysRevLett.102.112301", 
+        null, 
+        "0812.1063", 
+        "ins804391", 
+        null, 
+        []
+    ], 
+    "810426": [
+        "Measurement of D* Mesons in Jets from p+p Collisions at s**(1/2) = 200-GeV", 
+        "STAR", 
+        "10.1103/PhysRevD.79.112006", 
+        null, 
+        "0901.0740", 
+        "ins810426", 
+        null, 
+        []
+    ], 
+    "810902": [
+        "K/pi Fluctuations at Relativistic Energies", 
+        "STAR", 
+        "10.1103/PhysRevLett.103.092301", 
+        null, 
+        "0901.1795", 
+        "ins810902", 
+        null, 
+        []
+    ], 
+    "814937": [
+        "Pion Interferometry in Au+Au and Cu+Cu Collisions at RHIC", 
+        "STAR", 
+        "10.1103/PhysRevC.80.024905", 
+        null, 
+        "0903.1296", 
+        "ins814937", 
+        null, 
+        []
+    ], 
+    "817120": [
+        "J/psi production at high transverse momentum in p+p and Cu+Cu collisions at s(NN)**1/2 = 200GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.80.041902", 
+        null, 
+        "0904.0439", 
+        "ins817120", 
+        null, 
+        []
+    ], 
+    "819318": [
+        "Growth of Long Range Forward-Backward Multiplicity Correlations with Centrality in Au+Au Collisions at s(NN)**(1/2) = 200-GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.103.172301", 
+        null, 
+        "0905.0237", 
+        null, 
+        null, 
+        []
+    ], 
+    "825863": [
+        "Neutral Pion Production in Au+Au Collisions at s(NN)**(1/2) = 200-GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.80.044905", 
+        null, 
+        "0907.2721", 
+        "ins825863", 
+        null, 
+        []
+    ], 
+    "830070": [
+        "Long range rapidity correlations and jet production in high energy nuclear collisions", 
+        "STAR", 
+        "10.1103/PhysRevC.80.064912", 
+        null, 
+        "0909.0191", 
+        "ins830070", 
+        null, 
+        []
+    ], 
+    "830686": [
+        "Azimuthal Charged-Particle Correlations and Possible Local Strong Parity Violation", 
+        "STAR", 
+        "10.1103/PhysRevLett.103.251601", 
+        null, 
+        "0909.1739", 
+        "ins830686", 
+        null, 
+        []
+    ], 
+    "833423": [
+        "Longitudinal Spin Transfer to Lambda and anti-Lambda Hyperons in Polarized Proton-Proton Collisions at s**(1/2) = 200-GeV", 
+        "STAR", 
+        "10.1103/PhysRevD.80.111102", 
+        null, 
+        "0910.1428", 
+        "ins833423", 
+        null, 
+        []
+    ], 
+    "836952": [
+        "Longitudinal double-spin asymmetry and cross section for inclusive neutral pion production at midrapidity in polarized proton collisions at $\\sqrt{s}=200$ GeV", 
+        "STAR", 
+        "10.1103/PhysRevD.80.111108", 
+        null, 
+        "0911.2773", 
+        "ins836952", 
+        null, 
+        []
+    ]
+}

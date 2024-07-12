@@ -1,0 +1,156 @@
+\pdfoutput=1
+\documentclass[preprint,12pt]{elsarticle}
+
+\input{preamble}
+\usepackage{hyperref}
+
+\begin{document}
+
+\begin{frontmatter}
+  
+  \title{Rivet user manual}
+
+  \author[a]{Andy Buckley}
+  \author[b]{Jonathan Butterworth}
+  \author[c]{David Grellscheid}
+  \author[c]{Hendrik Hoeth}
+  \author[d]{Leif L\"onnblad}
+  \author[b]{James Monk}
+  \author[e]{Holger Schulz}
+  \author[f]{Frank Siegert\corref{author}}
+
+  \address[a]{PPE Group, School of Physics, University of Edinburgh, UK.}
+  \address[b]{HEP Group, Dept. of Physics and Astronomy, UCL, London, UK.}
+  \address[c]{IPPP, Durham University, UK.}
+  \address[d]{Department of Astronomy and Theoretical Physics, Lund University, Sweden.}
+  \address[e]{Institut f\"ur Physik, Berlin Humboldt University, Germany.}
+  \address[f]{Physikalisches Institut, Freiburg University, Germany.}
+
+  \cortext[author]{Corresponding author.\\\textit{E-mail address:} frank.siegert@cern.ch}
+
+  \begin{abstract}
+    This is the manual and user guide for the Rivet system for the
+    validation and tuning of Monte Carlo event generators. As well as the core
+    Rivet library, this manual describes the usage of the \kbd{rivet} program and
+    the AGILe generator interface library. The depth and level of description is
+    chosen for users of the system, starting with the basics of using validation
+    code written by others, and then covering sufficient details to write new
+    Rivet analyses and calculational components.
+  \end{abstract}
+
+  \begin{keyword}
+    Event generator; simulation; validation; tuning; QCD
+  \end{keyword}
+
+\end{frontmatter}
+
+
+{\bf PROGRAM SUMMARY}
+
+\begin{small}
+  \noindent
+  {\em Manuscript Title: Rivet user manual}\\
+  {\em Authors: Andy Buckley, Jonathan Butterworth, David Grellscheid,
+  Hendrik Hoeth, Leif L\"onnblad, James Monk, Holger Schulz, Frank Siegert}\\
+  {\em Program Title: Rivet}\\
+  {\em Journal Reference:}                                      \\
+  % Leave blank, supplied by Elsevier.
+  {\em Catalogue identifier:}                                   \\
+  % Leave blank, supplied by Elsevier.
+  {\em Licensing provisions:}                                   \\
+  % enter "none" if CPC non-profit use license is sufficient.
+  {\em Programming language: C++, Python}\\
+  {\em Computer: PC running Linux, Mac}\\
+  % Computer(s) for which program has been designed.
+  {\em Operating system: Linux, Mac OS}\\
+  % Operating system(s) for which program has been designed.
+  {\em RAM: 20M} bytes\\
+  % RAM in bytes required to execute program with typical data.
+  {\em Number of processors used: 1}                              \\
+  % If more than one processor.
+  {\em Supplementary material:}                                 \\
+  % Fill in if necessary, otherwise leave out.
+  {\em Keywords:} Event generator, simulation, validation, tuning, QCD  \\
+  % Please give some freely chosen keywords that we can use in a
+  % cumulative keyword index.
+  {\em Classification: 11.9 Event Reconstruction and Data Analysis}\\
+  % Classify using CPC Program Library Subject Index, see (
+  % http://cpc.cs.qub.ac.uk/subjectIndex/SUBJECT_index.html)
+  % e.g. 4.4 Feynman diagrams, 5 Computer Algebra.
+  {\em External routines/libraries: HepMC, GSL, FastJet, Python, Swig, Boost, YAML}\\
+  % Fill in if necessary, otherwise leave out.
+  {\em Nature of problem:}\\
+  Experimental measurements from high-energy particle colliders should be
+  defined and stored in a general framework such that it is simple to compare
+  theory predictions to them. Rivet is such a framework, and contains at the
+  same time a large collection of existing measurements.
+  \\
+  {\em Solution method:}\\
+  Rivet is based on HepMC events, a standardised output format provided by many
+  theory simulation tools. Events are processed by Rivet to generate histograms
+  for the requested list of analyses, incorporating all experimental phase
+  space cuts and histogram definitions.
+  \\
+  {\em Restrictions:}\\
+  Can not calculate statistical errors for correlated events as they appear
+  in NLO calculations.
+  \\
+  {\em Unusual features:}\\
+  It is possible for the user to implement and use their own custom analysis
+  as a module without having to modify the main Rivet code/installation.
+  \\
+  {\em Additional comments:}\\
+  % Provide any additional comments here.
+  \\
+  {\em Running time:}\\
+  Depends on the number and complexity of analyses being applied, but typically
+  a few hundred events per second.
+  \\
+
+\end{small}
+
+
+\section{Introduction}
+\label{sec:intro}
+\input{intro}
+
+\cleardoublepage
+
+\part{Getting started with Rivet}
+\label{part:gettingstarted}
+\input{gettingstarted}
+
+\cleardoublepage
+
+\part{How Rivet works}
+\label{part:writinganalyses}
+\input{writinganalyses}
+
+\section{Conclusions}
+\label{sec:conclusions}
+\input{conclusions}
+
+\cleardoublepage
+
+\part{Appendices}
+\appendix
+
+\section{Selection of analyses available in the Rivet framework}
+\label{sec:selectedanalyses}
+\input{selectedanalyses}
+
+\section{Typical \kbd{agile-runmc} commands}
+\label{app:agilerunmc}
+\input{agilerunmc}
+
+\section{Acknowledgements}
+\label{app:acknowledgements}
+\input{acknowledgements}
+
+
+\cleardoublepage
+
+\bibliographystyle{elsarticle-num}
+\bibliography{refs,selectedanalyses}
+
+\end{document}

@@ -14,9 +14,7 @@ namespace Rivet {
     //@{
 
     /// Constructor
-    CDF_2009_I856131()
-      : Analysis("CDF_2009_I856131")
-    {    }
+    RIVET_DEFAULT_ANALYSIS_CTOR(CDF_2009_I856131);
 
     //@}
 
@@ -33,13 +31,13 @@ namespace Rivet {
       // this seems to have been corrected completely for all selection cuts,
       // i.e. eta cuts and pT cuts on leptons.
       ZFinder zfinder(FinalState(), Cuts::open(), PID::ELECTRON,
-                      66*GeV, 116*GeV, 0.2, ZFinder::CLUSTERNODECAY, ZFinder::TRACK);
+                      66*GeV, 116*GeV, 0.2, ZFinder::ClusterPhotons::NODECAY, ZFinder::AddPhotons::YES);
       declare(zfinder, "ZFinder");
 
 
       /// Book histograms here
-      _h_xs = bookHisto1D(1, 1, 1);
-      _h_yZ = bookHisto1D(2, 1, 1);
+      book(_h_xs ,1, 1, 1);
+      book(_h_yZ ,2, 1, 1);
 
     }
 
@@ -48,9 +46,8 @@ namespace Rivet {
     void analyze(const Event& event) {
       const ZFinder& zfinder = apply<ZFinder>(event, "ZFinder");
       if (zfinder.bosons().size() == 1) {
-        const double weight = event.weight();
-        _h_yZ->fill(fabs(zfinder.bosons()[0].rapidity()), weight);
-        _h_xs->fill(1960, weight);
+        _h_yZ->fill(fabs(zfinder.bosons()[0].rapidity()));
+        _h_xs->fill(1960);
       } else {
         MSG_DEBUG("no unique lepton pair found.");
       }
@@ -82,6 +79,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CDF_2009_I856131);
+  RIVET_DECLARE_PLUGIN(CDF_2009_I856131);
 
 }

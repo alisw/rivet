@@ -1,0 +1,419 @@
+{
+    "541364": [
+        "The Belle Detector", 
+        "Belle", 
+        "10.1016/S0168-9002(01)02013-7", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "KEK-PROGRESS-REPORT-2000-4"
+        ]
+    ], 
+    "562879": [
+        "Observation of color suppressed anti-B0 ---> D0 pi0, D*0 pi0, D0 eta and D0 omega decays", 
+        "Belle", 
+        "10.1103/PhysRevLett.88.052002", 
+        null, 
+        "hep-ex/0109021", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2001-117", 
+            "BELLE-PREPRINT-2001-14"
+        ]
+    ], 
+    "562944": [
+        "Observation of the decay $B \\to K \\ell^{+} \\ell^{-}$", 
+        "Belle", 
+        "10.1103/PhysRevLett.88.021801", 
+        null, 
+        "hep-ex/0109026", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2001-118", 
+            "BELLE-PREPRINT-2001-13", 
+            "DPNU-01-30"
+        ]
+    ], 
+    "563840": [
+        "Production of prompt charmonia in e+ e- annihilation at s**(1/2) is approximately 10.6-GeV", 
+        "Belle", 
+        "10.1103/PhysRevLett.88.052001", 
+        null, 
+        "hep-ex/0110012", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2001-131", 
+            "BELLE-PREPRINT-2001-15"
+        ]
+    ], 
+    "565985": [
+        "A Measurement of lifetime difference in D0 meson decays", 
+        "Belle", 
+        "10.1103/PhysRevLett.88.162001", 
+        null, 
+        "hep-ex/0111026", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2001-143", 
+            "BELLE-PREPRINT-2001-18"
+        ]
+    ], 
+    "566127": [
+        "Observation of Cabibbo suppressed and W exchange Lambda+(c) baryon decays", 
+        "Belle", 
+        "10.1016/S0370-2693(01)01373-9", 
+        null, 
+        "hep-ex/0111032", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2001-17", 
+            "KEK-PREPRINT-2001-137"
+        ]
+    ], 
+    "566838": [
+        "Determination of |V(cb)| using the semileptonic decay anti-B0 ---> D*+ e- anti-nu", 
+        "Belle", 
+        "10.1016/S0370-2693(01)01476-9", 
+        null, 
+        "hep-ex/0111060", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2001-149", 
+            "BELLE-PREPRINT-2001-19"
+        ]
+    ], 
+    "567030": [
+        "Observation of B+ ---> chi(c0) K+", 
+        "Belle", 
+        "10.1103/PhysRevLett.88.031802", 
+        null, 
+        "hep-ex/0111069", 
+        null, 
+        null, 
+        []
+    ], 
+    "567187": [
+        "Measurement of B(anti-B0 ---> D+ l- anti-nu) and determination of |V(cb)|", 
+        "Belle", 
+        "10.1016/S0370-2693(01)01483-6", 
+        null, 
+        "hep-ex/0111082", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2001-150", 
+            "BELLE-PREPRINT-2001-20"
+        ]
+    ], 
+    "581410": [
+        "Study of three-body charmless B decays", 
+        "Belle", 
+        "10.1103/PhysRevD.65.092005", 
+        null, 
+        "hep-ex/0201007", 
+        null, 
+        null, 
+        []
+    ], 
+    "582526": [
+        "Precise measurement of B meson lifetimes with hadronic decay final states", 
+        "Belle", 
+        "10.1103/PhysRevLett.88.171801", 
+        null, 
+        "hep-ex/0202009", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2001-165", 
+            "BELLE-PREPRINT-2002-2"
+        ]
+    ], 
+    "582688": [
+        "Observation of B+- ---> p anti-p K+-", 
+        "Belle", 
+        "10.1103/PhysRevLett.88.181803", 
+        null, 
+        "hep-ex/0202017", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2001-170", 
+            "BELLE-PREPRINT-2002-4"
+        ]
+    ], 
+    "582908": [
+        "Observation of mixing induced CP violation in the neutral $B$ meson system", 
+        "Belle", 
+        "10.1103/PhysRevD.66.032007", 
+        null, 
+        "hep-ex/0202027", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2001-172", 
+            "BELLE-PREPRINT-2002-6"
+        ]
+    ], 
+    "582909": [
+        "Observation of chi(c2) production in B meson decay", 
+        "Belle", 
+        "10.1103/PhysRevLett.89.011803", 
+        null, 
+        "hep-ex/0202028", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2001-171", 
+            "BELLE-PREPRINT-2002-5"
+        ]
+    ], 
+    "584264": [
+        "Search for charmless two-body baryonic decays of B mesons", 
+        "Belle", 
+        "10.1103/PhysRevD.65.091103", 
+        null, 
+        "hep-ex/0203027", 
+        null, 
+        null, 
+        []
+    ], 
+    "584940": [
+        "Study of CP violating asymmetries in B0 ---> pi+ pi- decays", 
+        "Belle", 
+        "10.1103/PhysRevLett.89.071801", 
+        null, 
+        "hep-ex/0204002", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2002-6", 
+            "BELLE-PREPRINT-2002-08"
+        ]
+    ], 
+    "586611": [
+        "Measurements of branching fractions and decay amplitudes in $B \\to J/\\psi K^{*}$ decays", 
+        "Belle", 
+        "10.1016/S0370-2693(02)01969-X", 
+        null, 
+        "hep-ex/0205021", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2002-17", 
+            "BELLE-PREPRINT-2002-11"
+        ]
+    ], 
+    "586691": [
+        "Radiative B meson decays into K pi gamma and K pi pi gamma final states", 
+        "Belle", 
+        "10.1103/PhysRevLett.89.231801", 
+        null, 
+        "hep-ex/0205025", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2002-10", 
+            "KEK-PREPRINT-2002-15", 
+            "KUNS-1785"
+        ]
+    ], 
+    "587254": [
+        "Observation of anti-B0 ---> D0(*) p anti-p", 
+        "Belle", 
+        "10.1103/PhysRevLett.89.151802", 
+        null, 
+        "hep-ex/0205083", 
+        null, 
+        null, 
+        []
+    ], 
+    "587687": [
+        "Measurement of chi(c2) production in two photon collisions", 
+        "Belle", 
+        "10.1016/S0370-2693(02)02104-4", 
+        null, 
+        "hep-ex/0205100", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2002-31", 
+            "BELLE-PREPRINT-2002-15"
+        ]
+    ], 
+    "587751": [
+        "Observation of double c anti-c production in e+ e- annihilation at s**(1/2) approximately 10.6-GeV", 
+        "Belle", 
+        "10.1103/PhysRevLett.89.142001", 
+        null, 
+        "hep-ex/0205104", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2002-13", 
+            "KEK-PREPRINT-2002-27"
+        ]
+    ], 
+    "587784": [
+        "Observation of the eta(c)(2S) in exclusive B ---> K K(S) K- pi+ decays", 
+        "Belle", 
+        "10.1103/PhysRevLett.89.102001", 
+        null, 
+        "hep-ex/0206002", 
+        null, 
+        null, 
+        []
+    ], 
+    "587986": [
+        "Observation of the decay B0 ---> D+- D*-+", 
+        "Belle", 
+        "10.1103/PhysRevLett.89.122001", 
+        null, 
+        "hep-ex/0206014", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2002-42", 
+            "BELLE-PREPRINT-2002-16"
+        ]
+    ], 
+    "589587": [
+        "Study of B ---> rho pi decays at BELLE", 
+        "Belle", 
+        "10.1016/S0370-2693(02)02374-2", 
+        null, 
+        "hep-ex/0207007", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2002-18", 
+            "KEK-PREPRINT-2002-59"
+        ]
+    ], 
+    "589927": [
+        "Observation of B+- ---> omega K+- decay", 
+        "Belle", 
+        "10.1103/PhysRevLett.89.191801", 
+        null, 
+        "hep-ex/0207019", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2002-21", 
+            "KEK-PREPRINT-2002-64", 
+            "NTU-HEP-02-07"
+        ]
+    ], 
+    "589930": [
+        "Measurement of the oscillation frequency for B0 - anti-B0 mixing using hadronic B0 decays", 
+        "Belle", 
+        "10.1016/S0370-2693(02)02350-X", 
+        null, 
+        "hep-ex/0207022", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2002-63", 
+            "BELLE-PREPRINT-2002-20"
+        ]
+    ], 
+    "590532": [
+        "Measurement of CP violating parameters in B ---> eta-prime K decays", 
+        "Belle", 
+        "10.1016/S0370-2693(02)02389-4", 
+        null, 
+        "hep-ex/0207033", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2002-66", 
+            "BELLE-PREPRINT-2002-22", 
+            "NTU-HEP-02-08"
+        ]
+    ], 
+    "590700": [
+        "Observation of B ---> D(*) K- K0(*) decays", 
+        "Belle", 
+        "10.1016/S0370-2693(02)02373-0", 
+        null, 
+        "hep-ex/0207041", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2002-25", 
+            "KEK-PREPRINT-2002-72"
+        ]
+    ], 
+    "590782": [
+        "Measurement of the B0 - anti-B0 mixing parameter Delta m(d) using semileptonic B0 decays", 
+        "Belle", 
+        "10.1103/PhysRevLett.89.251803", 
+        null, 
+        "hep-ex/0207045", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2002-69", 
+            "BELLE-PREPRINT-2002-23"
+        ]
+    ], 
+    "591514": [
+        "Charmless hadronic two-body B meson decays", 
+        "Belle", 
+        "10.1103/PhysRevD.66.092002", 
+        null, 
+        "hep-ex/0207090", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2002-70", 
+            "BELLE-PREPRINT-2002-24"
+        ]
+    ], 
+    "593050": [
+        "An Improved measurement of mixing induced CP violation in the neutral B meson system", 
+        "Belle", 
+        "10.1103/PhysRevD.66.071102", 
+        null, 
+        "hep-ex/0208025", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2002-86", 
+            "BELLE-PREPRINT-2002-30"
+        ]
+    ], 
+    "593261": [
+        "Measurement of the inclusive semileptonic branching fraction of B mesons and |V(cb)|", 
+        "Belle", 
+        "10.1016/S0370-2693(02)02770-3", 
+        null, 
+        "hep-ex/0208033", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2002-81", 
+            "BELLE-PREPRINT-2002-26"
+        ]
+    ], 
+    "593544": [
+        "Study of exclusive B decays to charmed baryons at BELLE", 
+        "Belle", 
+        "10.1103/PhysRevD.66.091102", 
+        null, 
+        "hep-ex/0208041", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2002-29", 
+            "KEK-PREPRINT-2002-84"
+        ]
+    ]
+}

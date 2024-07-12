@@ -1,6 +1,7 @@
 Name: MC_IDENTIFIED
 Summary: MC testing analysis for identified particle distributions
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Andy Buckley <andy.buckley@cern.ch>
 NumEvents: 50000

@@ -9,41 +9,38 @@ namespace Rivet {
 
 
   /// @brief CDF Run I color coherence analysis
+  ///
   /// @author Andy Buckley
   /// @author Lars Sonnenschein
   class CDF_1994_S2952106 : public Analysis {
   public:
 
-    /// Constructor
-    CDF_1994_S2952106() : Analysis("CDF_1994_S2952106")
-    {
-    }
+    RIVET_DEFAULT_ANALYSIS_CTOR(CDF_1994_S2952106);
 
 
     /// @name Analysis methods
     //@{
 
     void init() {
-      const FinalState fs(-4.2, 4.2);
+      const FinalState fs(Cuts::abseta < 4.2);
       declare(fs, "FS");
       declare(FastJets(fs, FastJets::CDFJETCLU, 0.7), "Jets");
 
       // Zero passed-cuts event weight counters
-      _sumw = 0;
+      book(_sumw, "sumW");
 
       // Output histograms
-      _histJet1Et  = bookHisto1D(1,1,1);
-      _histJet2Et  = bookHisto1D(2,1,1);
-      _histJet3eta = bookScatter2D(3,1,1);
-      _histR23     = bookScatter2D(4,1,1);
-      _histAlpha   = bookScatter2D(5,1,1);
+      book(_histJet1Et  ,1,1,1);
+      book(_histJet2Et  ,2,1,1);
+      book(_histJet3eta, 3,1,1);
+      book(_histR23    , 4,1,1);
+      book(_histAlpha  , 5,1,1);
 
       // Temporary histos: these are the ones we actually fill for the plots which require correction
-      _tmphistJet3eta.reset(new Histo1D(refData(3,1,1)));
-      _tmphistR23.reset(    new Histo1D(refData(4,1,1)));
-      _tmphistAlpha.reset(  new Histo1D(refData(5,1,1)));
+      book(_tmphistJet3eta, "TMP/Jet3eta", refData(3,1,1));
+      book(_tmphistR23, "TMP/R23",     refData(4,1,1));
+      book(_tmphistAlpha, "TMP/Alpha",   refData(5,1,1));
     }
-
 
 
     // Do the analysis
@@ -78,20 +75,19 @@ namespace Rivet {
       if ((PI - deltaPhi(pj1.phi(), pj2.phi())) > (20/180.0)*PI) vetoEvent;
       MSG_DEBUG("Jet 1 & 2 phi requirement fulfilled");
 
-      const double weight = event.weight();
-      _sumw += weight;
+      _sumw->fill();
 
       // Fill histos
-      _histJet1Et->fill(pj1.pT(), weight);
-      _histJet2Et->fill(pj2.pT(), weight);
-      _tmphistJet3eta->fill(pj3.eta(), weight);
-      _tmphistR23->fill(deltaR(pj2, pj3), weight);
+      _histJet1Et->fill(pj1.pT());
+      _histJet2Et->fill(pj2.pT());
+      _tmphistJet3eta->fill(pj3.eta());
+      _tmphistR23->fill(deltaR(pj2, pj3));
 
       // Calc and plot alpha
       const double dPhi = deltaPhi(pj3.phi(), pj2.phi());
       const double dH = sign(pj2.eta()) * (pj3.eta() - pj2.eta());
       const double alpha = atan(dH/dPhi);
-      _tmphistAlpha->fill(alpha*180./PI, weight);
+      _tmphistAlpha->fill(alpha*180./PI);
     }
 
 
@@ -121,8 +117,8 @@ namespace Rivet {
       for (size_t i = 0;  i < 40; ++i) {
         const double yval = _tmphistJet3eta->bin(i).area() * (eta3_CDF_sim[i]/eta3_Ideal_sim[i]);
         const double yerr = _tmphistJet3eta->bin(i).areaErr() * (eta3_CDF_sim_err[i]/eta3_Ideal_sim[i]);
-        _histJet3eta->addPoint(_tmphistJet3eta->bin(i).xMid(), yval/_sumw,
-                               _tmphistJet3eta->bin(i).xWidth()/2.0, yerr/_sumw);
+        _histJet3eta->addPoint(_tmphistJet3eta->bin(i).xMid(), yval/dbl(*_sumw),
+                               _tmphistJet3eta->bin(i).xWidth()/2.0, yerr/dbl(*_sumw));
       }
 
       // R23 correction
@@ -144,8 +140,8 @@ namespace Rivet {
       for (size_t i = 0;  i < 35; ++i) {
         const double yval = _tmphistR23->bin(i).area() * (R23_CDF_sim[i]/R23_Ideal_sim[i]);
         const double yerr = _tmphistR23->bin(i).areaErr() * (R23_CDF_sim_err[i]/R23_Ideal_sim[i]);
-        _histR23->addPoint(_tmphistR23->bin(i).xMid(), yval/_sumw,
-                           _tmphistR23->bin(i).xWidth()/2.0, yerr/_sumw);
+        _histR23->addPoint(_tmphistR23->bin(i).xMid(), yval/dbl(*_sumw),
+                           _tmphistR23->bin(i).xWidth()/2.0, yerr/dbl(*_sumw));
       }
 
       // alpha correction
@@ -167,8 +163,8 @@ namespace Rivet {
       for (size_t i = 0;  i < 40; ++i) {
         const double yval = _tmphistAlpha->bin(i).area() * (alpha_CDF_sim[i]/alpha_Ideal_sim[i]);
         const double yerr = _tmphistAlpha->bin(i).areaErr() * (alpha_CDF_sim_err[i]/alpha_Ideal_sim[i]);
-        _histAlpha->addPoint(_tmphistAlpha->bin(i).xMid(), yval/_sumw,
-                             _tmphistAlpha->bin(i).xWidth()/2.0, yerr/_sumw);
+        _histAlpha->addPoint(_tmphistAlpha->bin(i).xMid(), yval/dbl(*_sumw),
+                             _tmphistAlpha->bin(i).xWidth()/2.0, yerr/dbl(*_sumw));
       }
     }
 
@@ -177,13 +173,8 @@ namespace Rivet {
 
   private:
 
-    /// @name Event weight counters
-    //@{
-
-    double _sumw;
-
-    //@}
-
+    /// Event weight counter
+    CounterPtr _sumw;
 
     /// @name Histograms
     //@{
@@ -194,7 +185,7 @@ namespace Rivet {
     /// Output histos which need to have correction factors applied
     Scatter2DPtr _histR23, _histJet3eta, _histAlpha;
 
-    /// Temporary histos, to be converted to DPSes
+    /// Temporary histos, to be converted to scatters
     Histo1DPtr _tmphistR23, _tmphistJet3eta, _tmphistAlpha;
 
     //@}
@@ -203,7 +194,6 @@ namespace Rivet {
 
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CDF_1994_S2952106);
+  RIVET_DECLARE_ALIASED_PLUGIN(CDF_1994_S2952106, CDF_1994_I374155);
 
 }

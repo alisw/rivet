@@ -16,7 +16,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2016_I1448301);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2016_I1448301);
 
 
     /// @name Analysis methods
@@ -71,37 +71,35 @@ namespace Rivet {
 
       // MET
       if (_mode == 0 || _mode == 1){
-	_h["vvg"]     = bookHisto1D( 2, 1, 1);
-	_h["vvgg"]    = bookHisto1D( 4, 1, 1);
-	_h["pT"]      = bookHisto1D( 7, 1, 1);
-	_h["pT_0jet"] = bookHisto1D( 8, 1, 1);
+        book(_h["vvg"],     2, 1, 1);
+        book(_h["vvgg"],    4, 1, 1);
+        book(_h["pT"],      7, 1, 1);
+        book(_h["pT_0jet"], 8, 1, 1);
       }
 	
       // always book e and mu in charged lepton modes; there are sometimes 4 leptons.
       if (_mode != 1){
 	// electron
-	_h["eeg"]       = bookHisto1D( 1, 1, 1);
-	_h["eegg"]      = bookHisto1D( 3, 1, 1);
-	// muon
-	_h["mmg"]       = bookHisto1D( 1, 1, 2);
-	_h["mmgg"]      = bookHisto1D( 3, 1, 2);
+        book(_h["eeg"],  1, 1, 1);
+        book(_h["eegg"], 3, 1, 1);
+        // muon
+	book(_h["mmg"],  1, 1, 2);
+	book(_h["mmgg"], 3, 1, 2);
 
-	// combined
-	_h["llgg"] = bookHisto1D( 3, 1, 3);
-	_h["llg"]  = bookHisto1D( 1, 1, 3);
-	_h["pT"]       = bookHisto1D( 5, 1, 1);
-	_h["pT_0jet"]  = bookHisto1D( 6, 1, 1);
-	_h["M"]        = bookHisto1D( 9, 1, 1);
-	_h["M_0jet"]   = bookHisto1D(10, 1, 1);
-	_h["Njets"]    = bookHisto1D(11, 1, 1);
+        // combined
+        book(_h["llgg"], 3, 1, 3);
+        book(_h["llg"], 1, 1, 3);
+        book(_h["pT"], 5, 1, 1);
+        book(_h["pT_0jet"], 6, 1, 1);
+        book(_h["M"], 9, 1, 1);
+        book(_h["M_0jet"], 10, 1, 1);
+        book(_h["Njets"], 11, 1, 1);
       }
     }
 
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-
-      const double weight = event.weight();
 
       // Get objects
       vector<DressedLepton> electrons = apply<DressedLeptons>(event, "Electrons").dressedLeptons();
@@ -150,14 +148,14 @@ namespace Rivet {
 	  yy_veto |= photon1iso/photons[1].pT() > 0.5;
 	  
 	  if (!yy_veto) {
-	    _h["vvgg"]->fill(0.5, weight);
-	    if (!njets)  _h["vvgg"]->fill(1.5, weight);
+	    _h["vvgg"]->fill(0.5);
+	    if (!njets)  _h["vvgg"]->fill(1.5);
 	  }
 	} // end of nu nu y y section
       
       
 	if ((photons[0].pT() >= 130*GeV)  &&
-	    (fabs(fabs(deltaPhi(photons[0], met_vec)) - 3.14) >= 1.57)) {
+	    (fabs(fabs(deltaPhi(photons[0], met_vec)) - 3.14) <= 1.57)) {
       
 	  // Photon isolation calculated by jets, count jets
 	  Jet ph_jet;
@@ -177,11 +175,11 @@ namespace Rivet {
 	  if (photoniso/photons[0].pT() > 0.5)  vetoEvent;
 	  
 	  const double pTgamma = photons[0].pT()/GeV;
-	  _h["pT"]->fill(pTgamma, weight);
-	  _h["vvg"]->fill(0.5, weight);
+	  _h["pT"]->fill(pTgamma);
+	  _h["vvg"]->fill(0.5);
 	  if (!njets) {
-	    _h["vvg"]->fill(1.5, weight);
-	    _h["pT_0jet"]->fill(pTgamma, weight);
+	    _h["vvg"]->fill(1.5);
+	    _h["pT_0jet"]->fill(pTgamma);
 	  }
 	  	  
 	}
@@ -198,13 +196,13 @@ namespace Rivet {
 	// Sort the dressed leptons by pt
 	if (electrons.size() >= 2) {
 	  el = true;
-	  std::sort(electrons.begin(), electrons.end(), cmpMomByPt);
+	  sortByPt(electrons);
 	  for (const DressedLepton& lep : electrons) {
 	    if (lep.charge() > 0.)  lep_p.push_back(lep);
 	    if (lep.charge() < 0.)  lep_m.push_back(lep);
 	  }	
 	} else {
-	  std::sort(muons.begin(), muons.end(), cmpMomByPt);
+	  sortByPt(muons);
 	  for (const DressedLepton& lep : muons) {
 	    if (lep.charge() > 0.)  lep_p.push_back(lep);
 	    if (lep.charge() < 0.)  lep_m.push_back(lep);
@@ -255,19 +253,19 @@ namespace Rivet {
 	    // Fill plots
 	    // ee and mm need doing.
 	    if (!veto) {
-	      _h["llgg"]->fill(0.5, weight);
+	      _h["llgg"]->fill(0.5);
 	      if (el) {
-		_h["eegg"]->fill(0.5, weight);
+		_h["eegg"]->fill(0.5);
 	      } else {
-		_h["mmgg"]->fill(0.5, weight);
+		_h["mmgg"]->fill(0.5);
 	      }
 
 	      if (!njets) {
-		_h["llgg"]->fill(1.5, weight);
+		_h["llgg"]->fill(1.5);
 		if (el) {
-		  _h["eegg"]->fill(1.5, weight);
+		  _h["eegg"]->fill(1.5);
 		} else {
-		  _h["mmgg"]->fill(1.5, weight);
+		  _h["mmgg"]->fill(1.5);
 		}
 	      }
 	    }
@@ -299,25 +297,25 @@ namespace Rivet {
 	  const double pTgamma = photons[0].pT()/GeV;
 	  const double mllgamma = (lep_p[0].momentum() + lep_m[0].momentum() + photons[0].momentum()).mass()/GeV;
 	  
-	  _h["pT"]->fill(pTgamma,  weight);
-	  _h["M"]->fill(mllgamma, weight);
-	  _h["Njets"]->fill(njets < 3? njets : 3, weight);
+	  _h["pT"]->fill(pTgamma);
+	  _h["M"]->fill(mllgamma);
+	  _h["Njets"]->fill(njets < 3? njets : 3);
 	  
-	  _h["llg"]->fill(0.5, weight);
+	  _h["llg"]->fill(0.5);
 	  if (el) {
-	    _h["eeg"]->fill(0.5, weight);
+	    _h["eeg"]->fill(0.5);
 	  } else {
-	    _h["eeg"]->fill(0.5, weight);
+	    _h["eeg"]->fill(0.5);
 	  }
 
 	  if (!njets) {
-	    _h["pT_0jet"]->fill(pTgamma, weight);
-	    _h["M_0jet"]->fill(mllgamma, weight);
-	    _h["llg"]->fill(1.5, weight);
+	    _h["pT_0jet"]->fill(pTgamma);
+	    _h["M_0jet"]->fill(mllgamma);
+	    _h["llg"]->fill(1.5);
 	    if (el) {
-	      _h["eeg"]->fill(1.5, weight);
+	      _h["eeg"]->fill(1.5);
 	    } else {
-	      _h["mmg"]->fill(1.5, weight);
+	      _h["mmg"]->fill(1.5);
 	    }
 	  }
 	}
@@ -332,13 +330,13 @@ namespace Rivet {
       // if we are running both e and mu, the combined lepton histos
       // need to be divided by two to get the average
       if (_mode == 0 || _mode == 4){
-	scale(_h["llgg"], 0.5);
-	scale(_h["llg"], 0.5);
-	scale(_h["pT"], 0.5);
-	scale(_h["pT_0jet"], 0.5);
-	scale(_h["M"], 0.5);
-	scale(_h["M_0jet"], 0.5);
-	scale(_h["Njets"], 0.5);
+        scale(_h["llgg"], 0.5);
+        scale(_h["llg"], 0.5);
+        scale(_h["pT"], 0.5);
+        scale(_h["pT_0jet"], 0.5);
+        scale(_h["M"], 0.5);
+        scale(_h["M_0jet"], 0.5);
+        scale(_h["Njets"], 0.5);
       }
     }
 
@@ -359,6 +357,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2016_I1448301);
+  RIVET_DECLARE_PLUGIN(ATLAS_2016_I1448301);
 
 }

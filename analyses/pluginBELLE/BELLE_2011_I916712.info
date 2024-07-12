@@ -1,0 +1,40 @@
+Name: BELLE_2011_I916712
+Year: 2011
+Summary: $X(3872)$ mass and angular distributions using $B\to KX(3872)$
+Experiment: BELLE
+Collider: KEKB
+InspireID: 916712
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 84 (2011) 052004
+RunInfo: Any process producting B+ and V0 mesons, origniallyu Upsilon(4S) decay
+Options:
+ - PID=*
+Description:
+'Measurement of mass and angular distribution for the production of $X(3872)$ in the decay $B\to KX(3872)$.
+There is no consensus as to the nature of the $X(3872)$ $c\bar{c}$ state and therefore we taken its PDG code
+to be 9030443, i.e. the first unused code for an undetermined
+spin one $c\bar{c}$ state. This can be changed using the PID option if a different code is used by the event generator performing the simulation.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle:2011vlx
+BibTeX: '@article{Belle:2011vlx,
+    author = "Choi, S. -K. and others",
+    collaboration = "Belle",
+    title = "{Bounds on the width, mass difference and other properties of $X(3872) \to \pi^+ \pi^- J/\psi$ decays}",
+    eprint = "1107.0163",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevD.84.052004",
+    journal = "Phys. Rev. D",
+    volume = "84",
+    pages = "052004",
+    year = "2011"
+}
+'

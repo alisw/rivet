@@ -5,34 +5,36 @@
 namespace Rivet {
 
 
+  /// Charged-particle pT and pseudorapidity spectra from pp collisions at 7000 GeV
   class CMS_2010_S8656010 : public Analysis {
   public:
 
-    CMS_2010_S8656010() : Analysis("CMS_2010_S8656010") {}
+    RIVET_DEFAULT_ANALYSIS_CTOR(CMS_2010_S8656010);
 
 
     void init() {
-      ChargedFinalState cfs(-2.5, 2.5, 0.0*GeV);
+      ChargedFinalState cfs((Cuts::etaIn(-2.5, 2.5)));
       declare(cfs, "CFS");
 
       for (int d=1; d<=3; d++) {
         for (int y=1; y<=4; y++) {
-          _h_dNch_dpT.push_back(bookHisto1D(d, 1, y));
+          _h_dNch_dpT.push_back(Histo1DPtr());
+          book(_h_dNch_dpT.back(), d, 1, y);
         }
       }
 
-      _h_dNch_dpT_all = bookHisto1D(4, 1, 1);
-      _h_dNch_dEta = bookHisto1D(5, 1, 1);
+      book(_h_dNch_dpT_all ,4, 1, 1);
+      book(_h_dNch_dEta ,5, 1, 1);
     }
 
 
     void analyze(const Event& event) {
-      const double weight = event.weight();
+      const double weight = 1.0;
 
       //charged particles
       const ChargedFinalState& charged = apply<ChargedFinalState>(event, "CFS");
 
-      foreach (const Particle& p, charged.particles()) {
+      for (const Particle& p : charged.particles()) {
         //selecting only charged hadrons
         if (! PID::isHadron(p.pid())) continue;
 
@@ -74,15 +76,16 @@ namespace Rivet {
 
   private:
 
+    /// @{
     std::vector<Histo1DPtr> _h_dNch_dpT;
     Histo1DPtr _h_dNch_dpT_all;
     Histo1DPtr _h_dNch_dEta;
+    /// @}
 
   };
 
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CMS_2010_S8656010);
+  RIVET_DECLARE_ALIASED_PLUGIN(CMS_2010_S8656010, CMS_2010_I855299);
 
 }

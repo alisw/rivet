@@ -6,6 +6,7 @@ Collider: Tevatron Run 2
 SpiresID: 7782535
 InspireID: 787780
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Alison Lister <alister@fnal.gov>
  - Emily Nurse <nurse@hep.ucl.ac.uk>
@@ -14,7 +15,7 @@ References:
  - arXiv:0806.1699
  - Phys.Rev.D78:072005,2008
 RunInfo:
-  Requires $2 \rightarrow 2$ QCD scattering processes. The minimum jet $E_\perp$ is 52\;GeV,
+  Requires $2 \rightarrow 2$ QCD scattering processes. The minimum jet $E_\perp$ is 52~GeV,
   so kinematic cuts on pTmin may be required for statistical validity.
 NumEvents: 1000000
 Beams: [p-, p+]
@@ -30,7 +31,7 @@ Description:
   transverse momenta of all objects inside a sub-cone of radius $r$ around
   the jet axis. The integrated shapes are by definition normalized such
   that  $\Psi(r/R =1) = 1$.   The measurement is done in bins of jet pT
-  in the range 52 to 300\;GeV/$c$. The jets have $|\eta| < 0.7$. The $b$-jets
+  in the range 52 to 300~GeV/$c$. The jets have $|\eta| < 0.7$. The $b$-jets
   are expected to be broader than inclusive jets. Moreover, $b$-jets
   containing a single $b$-quark are expected to be narrower than those
   containing a $b \bar{b}$ pair from gluon splitting.

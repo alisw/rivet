@@ -9,14 +9,11 @@ namespace Rivet {
   class D0_2000_S4480767 : public Analysis {
   public:
 
-    /// Constructor
-    D0_2000_S4480767()
-      : Analysis("D0_2000_S4480767")
-    {    }
+    RIVET_DEFAULT_ANALYSIS_CTOR(D0_2000_S4480767);
 
 
     /// @name Analysis methods
-    //@{
+    /// @{
 
     /// Book histograms and initialise projections before the run
     void init() {
@@ -24,18 +21,16 @@ namespace Rivet {
       WFinder wf(fs, Cuts::abseta < 5, PID::ELECTRON, 0.0*GeV, 200.0*GeV, 0.0*GeV, 0.2);
       declare(wf, "WFinder");
 
-      _h_W_pT = bookHisto1D(1, 1, 1);
+      book(_h_W_pT ,1, 1, 1);
     }
 
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-      const double weight = event.weight();
-
       const WFinder& wf = apply<WFinder>(event, "WFinder");
       if (wf.bosons().size() == 0) vetoEvent;
 
-      _h_W_pT->fill(wf.bosons()[0].pT()/GeV, weight);
+      _h_W_pT->fill(wf.bosons()[0].pT()/GeV);
     }
 
 
@@ -44,23 +39,18 @@ namespace Rivet {
       scale(_h_W_pT, crossSection()/sumOfWeights());
     }
 
-    //@}
+    /// @}
 
 
   private:
 
-    /// @name Histograms
-    //@{
-
+    /// Histogram
     Histo1DPtr _h_W_pT;
-    //@}
-
 
   };
 
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(D0_2000_S4480767);
+  RIVET_DECLARE_ALIASED_PLUGIN(D0_2000_S4480767, D0_2000_I535017);
 
 }

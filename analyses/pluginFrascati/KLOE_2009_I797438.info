@@ -1,0 +1,35 @@
+Name: KLOE_2009_I797438
+Year: 2009
+Summary: Cross section for $e^+e^-\to\pi^+\pi^-$ below 0.93 GeV
+Experiment: KLOE
+Collider: DAPHNE
+InspireID: 797438
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B670 (2009) 285-291, 2009
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+  'Measurement of the cross section for $e^+e^-\to\pi^+\pi^-$ below 0.93 GeV'
+Keywords: []
+BibKey: Ambrosino:2008aa
+BibTeX: '@article{Ambrosino:2008aa,
+      author         = "Ambrosino, F. and others",
+      title          = "{Measurement of $\sigma(e^+ e^- \to \pi^+ \pi^-
+                        \gamma(\gamma)$ and the dipion contribution to the muon
+                        anomaly with the KLOE detector}",
+      collaboration  = "KLOE",
+      journal        = "Phys. Lett.",
+      volume         = "B670",
+      year           = "2009",
+      pages          = "285-291",
+      doi            = "10.1016/j.physletb.2008.10.060",
+      eprint         = "0809.3950",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:0809.3950;%%"
+}'

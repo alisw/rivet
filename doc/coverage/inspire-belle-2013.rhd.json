@@ -1,0 +1,360 @@
+{
+    "1119563": [
+        "Search for Lepton-Flavor-Violating and Lepton-Number-Violating $\\tau \\to \\ell h h^\\prime$ Decay Modes", 
+        "Belle", 
+        "10.1016/j.physletb.2013.01.032", 
+        null, 
+        "1206.5595", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2011-31", 
+            "BELLE-PREPRINT-2012-8"
+        ]
+    ], 
+    "1124584": [
+        "Precise measurement of the branching fractions for $B_s\\to D_s^{(*)+} D_s^{(*)-}$ and first measurement of the $D_s^{*+} D_s^{*-}$ polarization using $e^+e^-$ collisions", 
+        "Belle", 
+        "10.1103/PhysRevD.87.031101", 
+        null, 
+        "1208.0323", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2012-20", 
+            "UCHEP-12-11", 
+            "UNIVERSITY-OF-CINCINNATI-PREPRINT-UCHEP-12-11"
+        ]
+    ], 
+    "1180196": [
+        "Evidence for $B^- \\to \\tau^- \\bar{\\nu}_\\tau$  with a Hadronic Tagging Method Using the Full Data Sample of Belle", 
+        "Belle", 
+        "10.1103/PhysRevLett.110.131801", 
+        null, 
+        "1208.4678", 
+        null, 
+        null, 
+        [
+            "BELLE-CONF-1201", 
+            "KEK-PREPRINT-2012-28", 
+            "BELLE-PREPRINT-2012-26"
+        ]
+    ], 
+    "1189434": [
+        "Measurements of branching fractions and direct CP asymmetries for B\u2192K\u03c0, B\u2192\u03c0\u03c0 and B\u2192KK decays", 
+        "Belle", 
+        "10.1103/PhysRevD.87.031103", 
+        null, 
+        "1210.1348", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2012-22", 
+            "KEK-PREPRINT-2012-19"
+        ]
+    ], 
+    "1193349": [
+        "Study of the hadronic transitions \u03a5(2S)\u2192(\u03b7,\u03c0$^0$)\u03a5(1S) at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.87.011104", 
+        null, 
+        "1210.6914", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2012-24", 
+            "KEK-PREPRINT-2012-23"
+        ]
+    ], 
+    "1208699": [
+        "Search for CP Violation in the Decay $D^+\\rightarrow K^0_S K^+$", 
+        "Belle", 
+        "10.1007/JHEP02(2013)098", 
+        null, 
+        "1212.6112", 
+        null, 
+        null, 
+        []
+    ], 
+    "1208997": [
+        "Measurement of the inclusive semileptonic branching fraction $\\mathcal{B}(B_s^0 \\to X^- \\ell^+ \\nu_{\\ell})$ at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.87.072008", 
+        null, 
+        "1212.6400", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2012-29", 
+            "KEK-PREPRINT-2012-34"
+        ]
+    ], 
+    "1209562": [
+        "Search for heavy neutrinos at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.87.071102", 
+        null, 
+        "1301.1105", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2012-28", 
+            "KEK-PREPRINT-2012-32"
+        ]
+    ], 
+    "1216515": [
+        "Precision Measurement of Charged Pion and Kaon Differential Cross Sections in e+e- Annihilation at s=10.52  GeV", 
+        "Belle", 
+        "10.1103/PhysRevLett.111.062002", 
+        null, 
+        "1301.6183", 
+        "ins1216515", 
+        null, 
+        [
+            "BELLE-PREPRINT-2013-2", 
+            "KEK-PREPRINT-2012-38"
+        ]
+    ], 
+    "1219953": [
+        "Search for an $H$-dibaryon with mass \nnear $2m_\\Lambda$ in $\\Upsilon(1S)$ and $\\Upsilon(2S)$ decays", 
+        "Belle", 
+        "10.1103/PhysRevLett.110.222002", 
+        null, 
+        "1302.4028", 
+        null, 
+        null, 
+        []
+    ], 
+    "1223991": [
+        "Search for $B \\to h^{(*)} \\nu \\bar{\\nu}$ with the full Belle $\\Upsilon(4S)$ data sample", 
+        "Belle", 
+        "10.1103/PhysRevD.87.111103", 
+        null, 
+        "1303.3719", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2013-1", 
+            "KEK-PREPRINT-2012-37"
+        ]
+    ], 
+    "1225975": [
+        "Study of $e^+e^- \u2192 \u03c0^+ \u03c0^- J/\u03c8$ and Observation of a Charged Charmoniumlike State at Belle", 
+        "Belle", 
+        "10.1103/PhysRevLett.110.252002", 
+        null, 
+        "1304.0121", 
+        "ins1225975", 
+        null, 
+        [
+            "BELLE-PREPRINT-2013-6", 
+            "KEK-PREPRINT-2013-2"
+        ]
+    ], 
+    "1228343": [
+        "Evidence of a new narrow resonance decaying to $\\chi_{c1}\\gamma$ in $B \\to \\chi_{c1} \\gamma K$", 
+        "Belle", 
+        "10.1103/PhysRevLett.111.032001", 
+        null, 
+        "1304.3975", 
+        null, 
+        null, 
+        [
+            "BP2013-7"
+        ]
+    ], 
+    "1229032": [
+        "Evidence for the decay $B^0 \\to K^+K^-\\pi^0$", 
+        "Belle", 
+        "10.1103/PhysRevD.87.091101", 
+        null, 
+        "1304.5312", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2013-5", 
+            "KEK-PREPRINT-2013-1"
+        ]
+    ], 
+    "1230342": [
+        "Evidence for $\\bar{B}_s^0 \\to \\Lambda_c^+ \\bar{\\Lambda} \\pi^-$", 
+        "Belle", 
+        "10.1016/j.physletb.2013.08.057", 
+        null, 
+        "1304.6931", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2013-4", 
+            "KEK-PREPRINT-2012-48"
+        ]
+    ], 
+    "1235533": [
+        "Measurement of exclusive $\\Upsilon(1S)$ and $\\Upsilon(2S)$ decays into Vector-Pseudoscalar final states", 
+        "Belle", 
+        "10.1103/PhysRevD.88.011102", 
+        null, 
+        "1305.5887", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2013-8", 
+            "KEK-PREPRINT-2013-6"
+        ]
+    ], 
+    "1238273": [
+        "Study of Exclusive $B \\to X_u \\ell \\nu$ Decays and Extraction of $\\|V_{ub}\\|$ using Full Reconstruction Tagging at the Belle Experiment", 
+        "Belle", 
+        "10.1103/PhysRevD.88.032005", 
+        null, 
+        "1306.2781", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2013-9", 
+            "KEK-PREPRINT-2013-8"
+        ]
+    ], 
+    "1239347": [
+        "Experimental constraints on the spin and parity of the $Z$(4430)$^+$", 
+        "Belle", 
+        "10.1103/PhysRevD.88.074026", 
+        null, 
+        "1306.4894", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2013-12", 
+            "KEK-PREPRINT-2013-22"
+        ]
+    ], 
+    "1239834": [
+        "First observation of Cabibbo-suppressed $\\Xi_c^0$ decays", 
+        "Belle", 
+        "10.1103/PhysRevD.88.071103", 
+        null, 
+        "1306.5947", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2013-23", 
+            "BELLE-PREPRINT-2013-13"
+        ]
+    ], 
+    "1239960": [
+        "Search for Bottomonium States in Exclusive Radiative $\\Upsilon(2S)$ Decays", 
+        "Belle", 
+        "10.1103/PhysRevLett.111.112001", 
+        null, 
+        "1306.6212", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2013-24", 
+            "BELLE-PREPRINT-2013-14"
+        ]
+    ], 
+    "1244125": [
+        "Measurement of the wrong-sign decay $D^0 \\to K^+ \\pi^-\\pi^+ \\pi^-$", 
+        "Belle", 
+        "10.1103/PhysRevD.88.051101", 
+        null, 
+        "1307.5935", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2013-27", 
+            "UCHEP-13-02", 
+            "UNIVERSITY-OF-CINCINNATI-PREPRINT-UCHEP-13-02"
+        ]
+    ], 
+    "1244311": [
+        "Measurements of branching fractions of leptonic and hadronic $D_{s}^{+}$ meson decays and extraction of the $D_{s}^{+}$ meson decay constant", 
+        "Belle", 
+        "10.1007/JHEP09(2013)139", 
+        null, 
+        "1307.6240", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2013-15", 
+            "KEK-PREPRINT-2013-25"
+        ]
+    ], 
+    "1245023": [
+        "High-statistics study of $K^0_S$ pair production in two-photon collisions", 
+        "Belle", 
+        "10.1093/ptep/ptt097", 
+        null, 
+        "1307.7457", 
+        "ins1245023", 
+        null, 
+        [
+            "BELLE-PREPRINT-2013-18", 
+            "KEK-PREPRINT-2013-28"
+        ]
+    ], 
+    "1247059": [
+        "Angular analysis of $B^0 \\to \\phi K^{*}$ decays and search for $CP$ violation at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.88.072004", 
+        null, 
+        "1308.1830", 
+        null, 
+        null, 
+        []
+    ], 
+    "1247463": [
+        "First observation of the $Z \\frac{0}{b}$(10610) in a Dalitz analysis of $\\Upsilon$(10860) $\\to \\Upsilon$(nS)$\\pi^0 \\pi^0$", 
+        "Belle", 
+        "10.1103/PhysRevD.88.052016", 
+        null, 
+        "1308.2646", 
+        null, 
+        null, 
+        []
+    ], 
+    "1252555": [
+        "Measurement of $e^+ e^- \\to \\omega \\pi^0$, $K^{\\ast}(892)\\bar{K}$ and $K_2^{\\ast}(1430)\\bar{K}$ at $\\sqrt{s}$ near 10.6 GeV", 
+        "Belle", 
+        "10.1103/PhysRevD.88.052019", 
+        null, 
+        "1309.0575", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2013-19", 
+            "KEK-PREPRINT-2013-30"
+        ]
+    ], 
+    "1252560": [
+        "Measurement of the decays $B^0_s \u2192 J/\u03c8\u03d5(1020), B^0_s \u2192 J/\u03c8f_2\u2032(1525)$ and $B^0_s \u2192 J/\u03c8K^+K^-$ at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.88.114006", 
+        null, 
+        "1309.0704", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-\\#-2013-21", 
+            "KEK-PREPRINT-\\#-2013-32", 
+            "BELLE-PREPRINT-2013-21", 
+            "KEK-PREPRINT-2013-32"
+        ]
+    ], 
+    "1257389": [
+        "Evidence for the suppressed decay $B^-$\u2192$DK^-$, D\u2192$K^+\u03c0^-\u03c0^0$", 
+        "Belle", 
+        "10.1103/PhysRevD.88.091104", 
+        null, 
+        "1310.1741", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2013-24", 
+            "KEK-PREPRINT-2013-37", 
+            "Belle Preprint 2013-24", 
+            "KEK Preprint 2013-37"
+        ]
+    ]
+}

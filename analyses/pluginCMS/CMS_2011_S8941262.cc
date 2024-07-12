@@ -6,18 +6,18 @@
 namespace Rivet {
 
 
+  /// Production cross-sections of muons from $b$ hadron decays in $pp$ collisions
   class CMS_2011_S8941262 : public Analysis {
   public:
 
-    /// Constructor
-    CMS_2011_S8941262() : Analysis("CMS_2011_S8941262") {  }
+    RIVET_DEFAULT_ANALYSIS_CTOR(CMS_2011_S8941262);
 
 
     /// Book histograms and initialise projections before the run
     void init() {
-      _h_total = bookHisto1D(1, 1, 1);
-      _h_mupt  = bookHisto1D(2, 1, 1);
-      _h_mueta = bookHisto1D(3, 1, 1);
+      book(_h_total ,1, 1, 1);
+      book(_h_mupt  ,2, 1, 1);
+      book(_h_mueta ,3, 1, 1);
       nbtot=0.;   nbmutot=0.;
 
       IdentifiedFinalState ifs(Cuts::abseta < 2.1 && Cuts::pT > 6*GeV);
@@ -28,12 +28,12 @@ namespace Rivet {
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-      const double weight = event.weight();
+      const double weight = 1.0;
 
       // a b-quark must have been produced
       /// @todo Ouch. Use hadron tagging...
       int nb = 0;
-      foreach (const GenParticle* p, particles(event.genEvent())) {
+      for(ConstGenParticlePtr p: HepMCUtils::particles(event.genEvent())) {
         if (abs(p->pdg_id()) == PID::BQUARK) nb += 1;
       }
       if (nb == 0) vetoEvent;
@@ -61,16 +61,19 @@ namespace Rivet {
 
   private:
 
+    /// @todo Convert to counters?
     double nbtot, nbmutot;
 
+    /// @{
     Histo1DPtr _h_total;
     Histo1DPtr _h_mupt;
     Histo1DPtr _h_mueta;
+    /// @}
 
   };
 
 
-  // Hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CMS_2011_S8941262);
+
+  RIVET_DECLARE_ALIASED_PLUGIN(CMS_2011_S8941262, CMS_2011_I884811);
 
 }

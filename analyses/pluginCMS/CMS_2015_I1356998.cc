@@ -17,24 +17,24 @@ namespace Rivet {
 
       declare(FinalState(),"FS");
 
-      _h_noCASTORtag = bookHisto1D(1, 1, 1);
-      _h_CASTORtag   = bookHisto1D(2, 1, 1);
-      _h_centralGap  = bookHisto1D(3, 1, 1);
-      _h_sigmaVis    = bookHisto1D(4, 1, 1);
-      _h_maxFwdGap   = bookHisto1D(5, 1, 1);
+      book(_h_noCASTORtag ,1, 1, 1);
+      book(_h_CASTORtag   ,2, 1, 1);
+      book(_h_centralGap  ,3, 1, 1);
+      book(_h_sigmaVis    ,4, 1, 1);
+      book(_h_maxFwdGap   ,5, 1, 1);
 
     }
 
 
     void analyze(const Event& event) {
 
-      const double weight = event.weight();
+      const double weight = 1.0;
       const FinalState& fs = apply<FinalState>(event, "FS");
 
       // A vector containing a lot of eta values
       vector<double> detparticles;
       detparticles.push_back(-edge);
-      foreach (const Particle& p, fs.particles(Cuts::pT > 0.2*GeV && Cuts::abseta<edge, cmpMomByEta) ) {
+      for (const Particle& p : fs.particles(Cuts::pT > 0.2*GeV && Cuts::abseta<edge, cmpMomByEta) ) {
         detparticles.push_back(p.momentum().eta());
       }
       detparticles.push_back(edge);
@@ -59,7 +59,7 @@ namespace Rivet {
       if (fs.size() < 2) vetoEvent;
 
       // Gap center calculations
-      const ParticleVector particlesByRapidity = fs.particles(cmpMomByRap); //ByRapidity();
+      const Particles particlesByRapidity = fs.particles(cmpMomByRap); //ByRapidity();
 
       vector<double> gaps;
       vector<double> midpoints;
@@ -79,7 +79,7 @@ namespace Rivet {
       FourMomentum MxFourVector(0.,0.,0.,0.);
       FourMomentum MyFourVector(0.,0.,0.,0.);
 
-      foreach(const Particle& p, fs.particles(cmpMomByEta)) {
+      for(const Particle& p : fs.particles(cmpMomByEta)) {
         if (p.momentum().rapidity() > gapcenter) {
           MxFourVector += p.momentum();
         }
@@ -138,6 +138,6 @@ namespace Rivet {
   };
 
 
-  DECLARE_RIVET_PLUGIN(CMS_2015_I1356998);
+  RIVET_DECLARE_PLUGIN(CMS_2015_I1356998);
 
 }

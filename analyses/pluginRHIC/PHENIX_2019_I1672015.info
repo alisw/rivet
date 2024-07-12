@@ -1,0 +1,44 @@
+Name: PHENIX_2019_I1672015
+Year: 2019
+Summary: Drell Yan production at low masses $4.8 < m_{\mu^+\mu^-} < 8.2 $ GeV at $\sqrt{s} = 200$ GeV
+Experiment: PHENIX
+Collider: RHIC
+InspireID: 1672015
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Hannes Jung hannes.jung@desy.de
+References:
+ - "Phys. Rev., D99(2019), 072003"
+ - "DOI:https://doi.org/10.1103/PhysRevD.99.072003"
+ - "arXiv:1805.02448"
+NeedCrossSection: yes
+Beams: [p+, p+]
+Energies: [200]
+Description:
+  PHENIX reports differential cross sections of $\mu^+\mu^-$ pairs
+  from semileptonic heavy-flavor decays and the Drell-Yan production mechanism
+  measured in p+p collisions at $\sqrt{s} = 200$ GeV at forward and backward rapidity
+  (1.2 < |y| < 2.2). The $\mu^+\mu^-$ pairs from $c\bar{c}$, $b\bar{b}$, and
+  Drell-Yan are separated using a template fit to unlike- and like-sign muon
+  pair spectra in mass and $p_T$.
+Keywords: []
+BibKey: Aidala:2018ajl
+BibTeX: '@article{Aidala:2018ajl,
+      author         = "Aidala, C. and others",
+      title          = "{Measurements of $\mu\mu$ pairs from open heavy flavor
+                        and Drell-Yan in $p+p$ collisions at $\sqrt{s}=200$ GeV}",
+      collaboration  = "PHENIX",
+      journal        = "Phys. Rev.",
+      volume         = "D99",
+      year           = "2019",
+      number         = "7",
+      pages          = "072003",
+      doi            = "10.1103/PhysRevD.99.072003",
+      eprint         = "1805.02448",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1805.02448;%%"
+}'
+ReleaseTests:
+ - $A pp-200-Zmm

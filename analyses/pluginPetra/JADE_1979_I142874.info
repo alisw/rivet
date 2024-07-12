@@ -1,0 +1,32 @@
+Name: JADE_1979_I142874
+Year: 1979
+Summary: Charged hadron multiplicity
+Experiment: JADE
+Collider: PETRA
+InspireID: 142874
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B88 (1979) 171-176, 1979 
+RunInfo: e+e- to hadrons
+NeedCrossSection: no
+Beams: [e-, e+]
+Energies: [22,27.7,30,31.6]
+Description:
+  'Charged hadron multiplicity at a range of energies, use with care as its not clear if $K_S^0$ decays are included of not, within the systematic error of 1.5'
+Keywords: []
+BibKey: Bartel:1979zn
+BibTeX: '@article{Bartel:1979zn,
+      author         = "Bartel, W. and others",
+      title          = "{Total Cross-Section for Hadron Production by e+ e-
+                        Annihilation at PETRA Energies}",
+      collaboration  = "JADE",
+      journal        = "Phys. Lett.",
+      volume         = "88B",
+      year           = "1979",
+      pages          = "171-176",
+      doi            = "10.1016/0370-2693(79)90139-4",
+      reportNumber   = "DESY-79-64",
+      SLACcitation   = "%%CITATION = PHLTA,88B,171;%%"
+}'

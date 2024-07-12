@@ -37,3 +37,9 @@ BibTeX: '@Article{Abelev:2006uq,
      doi       = "10.1103/PhysRevLett.97.252001",
      SLACcitation  = "%%CITATION = HEP-EX/0608030;%%"
 }'
+
+ReleaseTests:
+ - $A Star-Jets-1
+ - $A-2 Star-Jets-3
+ - $A-3 Star-UE
+

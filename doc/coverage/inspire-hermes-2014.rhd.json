@@ -1,0 +1,50 @@
+{
+    "1261274": [
+        "Transverse target single-spin asymmetry in inclusive electroproduction of charged pions and kaons", 
+        "HERMES", 
+        "10.1016/j.physletb.2013.11.021", 
+        null, 
+        "1310.5070", 
+        null, 
+        null, 
+        [
+            "DESY-13-187"
+        ]
+    ], 
+    "1261275": [
+        "Beam-helicity asymmetry in associated electroproduction of real photons $ep \\to e\\gamma\\pi N$ in the $\\Delta$-resonance region", 
+        "HERMES", 
+        "10.1007/JHEP01(2014)077", 
+        null, 
+        "1310.5081", 
+        null, 
+        null, 
+        [
+            "DESY-13-188"
+        ]
+    ], 
+    "1275332": [
+        "Reevaluation of the parton distribution of strange quarks in the nucleon", 
+        "HERMES", 
+        "10.1103/PhysRevD.89.097101", 
+        null, 
+        "1312.7028", 
+        null, 
+        null, 
+        [
+            "DESY-13-246"
+        ]
+    ], 
+    "1300355": [
+        "Transverse polarization of $\\Lambda$ hyperons from quasireal photoproduction on nuclei", 
+        "HERMES", 
+        "10.1103/PhysRevD.90.072007", 
+        null, 
+        "1406.3236", 
+        null, 
+        null, 
+        [
+            "DESY-14-097"
+        ]
+    ]
+}

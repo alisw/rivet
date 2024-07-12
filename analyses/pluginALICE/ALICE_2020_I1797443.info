@@ -1,0 +1,38 @@
+Name: ALICE_2020_I1797443
+Year: 2020
+Summary: Production of light-flavor hadrons in pp collisions at 13 TeV
+Experiment: ALICE
+Collider: LHC
+InspireID: 1797443
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Markus Seidel <markus.seidel@cern.ch>
+References:
+ - 'Eur. Phys. J. C 81 (2021) 256'
+ - 'CERN-EP-2020-059'
+ - 'arXiv:2005.11120'
+RunInfo: Minimum bias events
+Beams: [p+, p+]
+Energies: [[6500,6500]]
+Description:
+  'The production of light and strange hadrons was measured in inelastic proton-proton (pp) collisions at a center-of-mass energy of 13 TeV at midrapidity (|y|<0.5) as a function of transverse momentum (pT) using the ALICE detector at the CERN LHC.'
+ReleaseTests:
+ - $A LHC-13-Minbias
+Keywords: []
+BibKey: ALICE:2020jsh
+BibTeX: '@article{ALICE:2020jsh,
+    author = "Acharya, Shreyasi and others",
+    collaboration = "ALICE",
+    title = "{Production of light-flavor hadrons in pp collisions at $\sqrt{s}~=~7\text { and }\sqrt{s} = 13 \, \text { TeV} $}",
+    eprint = "2005.11120",
+    archivePrefix = "arXiv",
+    primaryClass = "nucl-ex",
+    reportNumber = "CERN-EP-2020-059",
+    doi = "10.1140/epjc/s10052-020-08690-5",
+    journal = "Eur. Phys. J. C",
+    volume = "81",
+    number = "3",
+    pages = "256",
+    year = "2021"
+}'

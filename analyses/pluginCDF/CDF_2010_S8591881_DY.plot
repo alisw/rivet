@@ -6,7 +6,7 @@ LogY=0
 
 
 # BEGIN PLOT /CDF_2010_S8591881_DY/d0[12]
-YLabel=$\langle N_\text{ch} \rangle / \text{d}\eta\,\text{d}\phi$
+YLabel=$\langle N_\mathrm{ch} \rangle / \mathrm{d}\eta\,\mathrm{d}\phi$
 # END PLOT
 
 # BEGIN PLOT /CDF_2010_S8591881_DY/d01-x01-y01
@@ -45,38 +45,38 @@ LegendXPos=0.10
 
 
 # BEGIN PLOT /CDF_2010_S8591881_DY/d0[34]
-YLabel=$\langle \sum p_T^\text{track} \rangle / \text{d}\eta\,\text{d}\phi$ / GeV
+YLabel=$\langle \sum p_T^\mathrm{track} \rangle / \mathrm{d}\eta\,\mathrm{d}\phi$ / GeV
 LegendXPos=0.10
 # END PLOT
 
 # BEGIN PLOT /CDF_2010_S8591881_DY/d03-x01-y01
-Title=Toward region charged $p_\perp^\text{sum}$ density
+Title=Toward region charged $p_\perp^\mathrm{sum}$ density
 # END PLOT
 
 # BEGIN PLOT /CDF_2010_S8591881_DY/d03-x01-y02
-Title=Transverse region charged $p_\perp^\text{sum}$ density
+Title=Transverse region charged $p_\perp^\mathrm{sum}$ density
 # END PLOT
 
 # BEGIN PLOT /CDF_2010_S8591881_DY/d03-x01-y03
-Title=Away region charged $p_\perp^\text{sum}$ density
+Title=Away region charged $p_\perp^\mathrm{sum}$ density
 # END PLOT
 
 # BEGIN PLOT /CDF_2010_S8591881_DY/d04-x01-y01
-Title=TransMAX region charged $p_\perp^\text{sum}$ density
+Title=TransMAX region charged $p_\perp^\mathrm{sum}$ density
 # END PLOT
 
 # BEGIN PLOT /CDF_2010_S8591881_DY/d04-x01-y02
-Title=TransMIN region charged $p_\perp^\text{sum}$ density
+Title=TransMIN region charged $p_\perp^\mathrm{sum}$ density
 # END PLOT
 
 # BEGIN PLOT /CDF_2010_S8591881_DY/d04-x01-y03
-Title=TransDIF region charged $p_\perp^\text{sum}$ density
+Title=TransDIF region charged $p_\perp^\mathrm{sum}$ density
 # END PLOT
 
 
 
 # BEGIN PLOT /CDF_2010_S8591881_DY/d05
-YLabel=$\langle p_T^\text{track} \rangle$ / GeV
+YLabel=$\langle p_T^\mathrm{track} \rangle$ / GeV
 LegendYPos=0.5
 # END PLOT
 
@@ -91,7 +91,7 @@ Title=Transverse region charged $p_\perp$ average
 
 
 # BEGIN PLOT /CDF_2010_S8591881_DY/d06
-YLabel=max $p_T^\text{track}$ / GeV
+YLabel=max $p_T^\mathrm{track}$ / GeV
 LegendXPos=0.10
 # END PLOT
 
@@ -106,7 +106,7 @@ Title=Transverse region charged $p_\perp$ maximum
 
 
 # BEGIN PLOT /CDF_2010_S8591881_DY/d0[789]
-XLabel=$N_\text{ch}$
+XLabel=$N_\mathrm{ch}$
 LegendXPos=0.10
 ShowZero=0
 YLabel=$\langle p_T \rangle$ / GeV
@@ -122,5 +122,5 @@ Title=Average charged $p_\perp$ vs charged multiplicity
 # END PLOT
 
 # BEGIN PLOT /CDF_2010_S8591881_DY/d09-x01-y01
-Title=Average charged $p_\perp$ vs charged multiplicity, $p_\perp(Z) < 10\,\text{GeV}$
+Title=Average charged $p_\perp$ vs charged multiplicity, $p_\perp(Z) < 10\,\mathrm{GeV}$
 # END PLOT

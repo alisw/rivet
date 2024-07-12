@@ -1,0 +1,48 @@
+{
+    "1082840": [
+        "Measurement of the virtual-photon asymmetry $A_2$ and the spin-structure function $g_2$ of the proton", 
+        "HERMES", 
+        "10.1140/epjc/s10052-012-1921-5", 
+        null, 
+        "1112.5584", 
+        "ins1082840", 
+        null, 
+        [
+            "DESY-11-249"
+        ]
+    ], 
+    "1093827": [
+        "The Herschel Multi-tiered Extragalactic Survey: HerMES", 
+        "HERMES", 
+        "10.1111/j.1365-2966.2012.20912.x", 
+        null, 
+        "1203.2562", 
+        null, 
+        null, 
+        []
+    ], 
+    "1095241": [
+        "Beam-helicity and beam-charge asymmetries associated with deeply virtual Compton scattering on the unpolarised proton", 
+        "HERMES", 
+        "10.1007/JHEP07(2012)032", 
+        null, 
+        "1203.6287", 
+        null, 
+        null, 
+        [
+            "DESY-12-040"
+        ]
+    ], 
+    "1119568": [
+        "Beam-helicity asymmetry arising from deeply virtual Compton scattering measured with kinematically complete event reconstruction", 
+        "HERMES", 
+        "10.1007/JHEP10(2012)042", 
+        null, 
+        "1206.5683", 
+        null, 
+        null, 
+        [
+            "DESY-12-095"
+        ]
+    ]
+}

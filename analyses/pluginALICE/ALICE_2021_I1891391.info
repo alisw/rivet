@@ -1,0 +1,41 @@
+Name: ALICE_2021_I1891391
+Year: 2021
+Summary: $K_{S}^{0}$ - and (anti-)$\Lambda$-hadron correlations in pp collisions at $\sqrt{s} = 13$ TeV
+Experiment: ALICE
+Collider: LHC
+InspireID: 1891391
+Status: VALIDATED
+Authors:
+ - Lucia Anna Tarasovicova <lucia.anna.husova@cern.ch>
+ - Daniel Gunther <daniel.guenther@posteo.de>
+References:
+ - Eur.Phys.J.C 81 (2021) 10, 945
+ - arXiv:2107.11209 [nucl-ex]
+Beams: [p+, p+]
+Energies: [[6500,6500]]
+NumEvents: 16000000
+Reentrant: true
+Luminosity_fb: 27e-6
+Description:
+  '$\delta\varphi$ projections of two-particle correlation functions, triggered with charged hadrons, $K_S^0$, and $\Lambda$($\overline{\Lambda}$), per-trigger jet-like yields spectra extracted from these correlation functions on the nera-side and away-side as a function of multiplicity class, $p_{\mathrm{T}}$ of the trigger particle, and $p_{\mathrm{T}}$ of the associated particle in pp collisions at $\sqrt{s} = 13$ TeV. The ratios of these yields to the yields from minimum bias collisions as well as the ratios of yields triggered with different particles are also included.'
+ValidationInfo:
+  'A description of the process used to validate the Rivet code against
+  the original experimental analysis. Cut-flow tables and similar information
+  are welcome'
+BibKey: ALICE:2021nvv
+BibTeX: '@article{ALICE:2021nvv,
+    author = "Acharya, Shreyasi and others",
+    collaboration = "ALICE",
+    title = "{$\mathrm {K_S}^{0}$- and (anti-)$\Lambda $-hadron correlations in pp collisions at~${\sqrt{s}} = 13$~TeV}",
+    eprint = "2107.11209",
+    archivePrefix = "arXiv",
+    primaryClass = "nucl-ex",
+    reportNumber = "CERN-EP-2021-146",
+    doi = "10.1140/epjc/s10052-021-09678-5",
+    journal = "Eur. Phys. J. C",
+    volume = "81",
+    number = "10",
+    pages = "945",
+    year = "2021"
+}'
+

@@ -4,40 +4,42 @@
 #include <limits>
 #include <cmath>
 #include <iostream>
+#include <fstream>
 
 using namespace std;
 
 
-class Test : public Rivet::Analysis {
+class NanTest : public Rivet::Analysis {
 public:
-  Test() : Analysis("Test") {}
+
+  DEFAULT_RIVET_ANALYSIS_CTOR(NanTest);
 
   void init() {
-    _h_test = bookHisto1D("test", 50, 66.0, 116.0);
+    book(_h_test, "test", 50, 66.0, 116.0);
   }
 
   void analyze(const Rivet::Event & e) {
     cout << "Normal fill" << endl;
-    _h_test->fill(90., 1.);
+    _h_test->fill(90.);
 
     cout << "Underflow fill" << endl;
-    _h_test->fill(30.,1.);
+    _h_test->fill(30.);
 
     cout << "Overflow fill" << endl;
-    _h_test->fill(130.,1.);
+    _h_test->fill(130.);
 
      cout << "Inf fill" << endl;
     try {
-      _h_test->fill(numeric_limits<double>::infinity(), 1.);
-    } catch (YODA::RangeError e) {
+      _h_test->fill(numeric_limits<double>::infinity());
+    } catch (YODA::RangeError & e) {
       cerr << e.what() << '\n';
       if ( string(e.what()) != string("X is Inf") ) throw;
     }
 
     cout << "NaN fill" << endl;
     try {
-      _h_test->fill(numeric_limits<double>::quiet_NaN(), 1.);
-    } catch (YODA::RangeError e) {
+      _h_test->fill(numeric_limits<double>::quiet_NaN());
+    } catch (YODA::RangeError & e) {
       cerr << e.what() << '\n';
       if ( string(e.what()) != string("X is NaN") ) throw;
     }
@@ -47,30 +49,29 @@ private:
   Rivet::Histo1DPtr _h_test;
 };
 
-DECLARE_RIVET_PLUGIN(Test);
+DECLARE_RIVET_PLUGIN(NanTest);
 
-int main() {
+int main(int argc, char* argv[]) {
+  assert(argc > 1);
+
   Rivet::AnalysisHandler rivet;
-  rivet.addAnalysis("Test");
+  rivet.addAnalysis("NanTest");
 
-  std::ifstream file("testApi.hepmc");
-  HepMC::IO_GenEvent hepmcio(file);
-  HepMC::GenEvent* evt = hepmcio.read_next_event();
+  std::shared_ptr<std::istream> file;
+  shared_ptr<Rivet::HepMC_IO_type> reader = Rivet::HepMCUtils::makeReader("testApi.hepmc", file);
+  std::shared_ptr<Rivet::GenEvent> evt = make_shared<Rivet::GenEvent>();
   double sum_of_weights = 0.0;
-  while (evt) {
+
+  while ( Rivet::HepMCUtils::readEvent(reader, evt) ) {
     // Analyse current event
     rivet.analyze(*evt);
     sum_of_weights += evt->weights()[0];
-
-    // Clean up and get next event
-    delete evt; evt = 0;
-    hepmcio >> evt;
   }
-  file.close();
+  (void)sum_of_weights; // suppress unused variable warning
 
-  rivet.setCrossSection(1.0);
+  rivet.setCrossSection(make_pair(1.0, 0.1));
   rivet.finalize();
-  rivet.writeData("NaN.aida");
+  rivet.writeData("NaN.yoda");
 
   return 0;
 }

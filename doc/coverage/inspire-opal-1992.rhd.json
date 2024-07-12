@@ -1,0 +1,232 @@
+{
+    "321190": [
+        "A Study of charged particle multiplicities in hadronic decays of the Z0", 
+        "OPAL", 
+        "10.1007/BF01559731", 
+        "539303", 
+        null, 
+        "ins321190", 
+        null, 
+        [
+            "CERN-PPE-91-176"
+        ]
+    ], 
+    "321191": [
+        "Measurement of the average B hadron lifetime in Z0 decays", 
+        "OPAL", 
+        "10.1016/0370-2693(92)92025-C", 
+        "227330", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-91-201"
+        ]
+    ], 
+    "321656": [
+        "Measurement of B0 - anti-B0 mixing in hadronic Z0 decays", 
+        "OPAL", 
+        "10.1016/0370-2693(92)90335-2", 
+        "228056", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-91-212"
+        ]
+    ], 
+    "321657": [
+        "An Improved measurement of alpha-s (M (Z0)) using energy correlations with the OPAL detector at LEP", 
+        "OPAL", 
+        "10.1016/0370-2693(92)91681-X", 
+        "228165", 
+        null, 
+        "ins321657", 
+        null, 
+        [
+            "CERN-PPE-91-214"
+        ]
+    ], 
+    "322027": [
+        "Properties of multi - hadronic events with a final state photon at s**(1/2) = M (Z0)", 
+        "OPAL", 
+        "10.1007/BF01566648", 
+        "227124", 
+        null, 
+        "ins322027", 
+        null, 
+        [
+            "CERN-PPE-91-189"
+        ]
+    ], 
+    "322380": [
+        "Search for free gluons in hadronic Z0 decays", 
+        "OPAL", 
+        "10.1016/0370-2693(92)90590-Z", 
+        "228574", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-91-230"
+        ]
+    ], 
+    "322483": [
+        "Electroweak parameters of the $Z^0$ resonance and the Standard Model: the LEP Collaborations", 
+        "LEP", 
+        "10.1016/0370-2693(92)90572-L", 
+        "229120", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-91-232"
+        ]
+    ], 
+    "332851": [
+        "Test of CP invariance in e+ e- ---> Z0 ---> tau+ tau- and a limit on the weak dipole moment of the tau lepton", 
+        "OPAL", 
+        "10.1016/0370-2693(92)91161-2", 
+        "232666", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-92-14"
+        ]
+    ], 
+    "333079": [
+        "A Global determination of $\\alpha^- s$ (M(z0) ) at LEP", 
+        "OPAL", 
+        "10.1007/BF01558285", 
+        "232691", 
+        null, 
+        "ins333079", 
+        null, 
+        [
+            "CERN-PPE-92-18"
+        ]
+    ], 
+    "333300": [
+        "Evidence for b flavored baryon production in Z0 decays at LEP", 
+        "OPAL", 
+        "10.1016/0370-2693(92)91160-B", 
+        "234241", 
+        null, 
+        "ins333300", 
+        null, 
+        [
+            "CERN-PPE-92-034"
+        ]
+    ], 
+    "333330": [
+        "A measurement of electron production in hadronic Z0 decays and a determination of GAMMA (Z0 --> b anti-b)", 
+        "OPAL", 
+        "10.1007/BF01482582", 
+        "234645", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-92-038"
+        ]
+    ], 
+    "334186": [
+        "A Test of higher order electroweak theory in Z0 decays to two leptons with an associated pair of charged particles", 
+        "OPAL", 
+        "10.1016/0370-2693(92)91001-P", 
+        "236027", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-92-057"
+        ]
+    ], 
+    "334473": [
+        "Measurement of the tau topological branching ratios at LEP", 
+        "OPAL", 
+        "10.1016/0370-2693(92)91117-R", 
+        "236707", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-92-066", 
+            "CERN-PPE-92-66"
+        ]
+    ], 
+    "335147": [
+        "A Study of two particle momentum correlations in hadronic Z0 decays", 
+        "OPAL", 
+        "10.1016/0370-2693(92)91002-Q", 
+        "237608", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-92-089", 
+            "CERN-PPE-92-89"
+        ]
+    ], 
+    "336771": [
+        "A Measurement of strange baryon production in hadronic Z0 decays", 
+        "OPAL", 
+        "10.1016/0370-2693(92)91411-2", 
+        "239234", 
+        null, 
+        "ins336771", 
+        null, 
+        [
+            "CERN-PPE-92-118"
+        ]
+    ], 
+    "336772": [
+        "Inclusive neutral vector meson production in hadronic Z0 decays", 
+        "OPAL", 
+        "10.1007/BF01474724", 
+        "238948", 
+        null, 
+        "ins336772", 
+        null, 
+        [
+            "CERN-PPE-92-116"
+        ]
+    ], 
+    "336774": [
+        "A Measurement of the forward - backward charge asymmetry in hadronic decays of the Z0", 
+        "OPAL", 
+        "10.1016/0370-2693(92)91546-L", 
+        "239233", 
+        null, 
+        "ins336774", 
+        null, 
+        [
+            "CERN-PPE-92-119"
+        ]
+    ], 
+    "339093": [
+        "A Search for doubly charged Higgs production in Z0 decays", 
+        "OPAL", 
+        "10.1016/0370-2693(92)91577-V", 
+        "240422", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-92-139"
+        ]
+    ], 
+    "339094": [
+        "Evidence for the existence of the strange $b$ flavored meson $B_s^0$ in $Z^0$ decays", 
+        "OPAL", 
+        "10.1016/0370-2693(92)91578-W", 
+        "240993", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-92-144"
+        ]
+    ]
+}

@@ -1,7 +1,7 @@
 # BEGIN PLOT /ATLAS_2014_I1300647/d..-x..-y..
 LeftMargin=1.5
-XLabel=$Z$ $p_{\text{T}}$ [GeV]
-YLabel=$\frac{1}{\sigma^{\text{fid}}}\frac{\text{d}\sigma^{\text{fid}}}{\text{d}p_{\text{T}}}$ $[GeV^{-1}]$
+XLabel=$Z$ $p_{\mathrm{T}}$ [GeV]
+YLabel=$\frac{1}{\sigma^{\mathrm{fid}}}\frac{\mathrm{d}\sigma^{\mathrm{fid}}}{\mathrm{d}p_{\mathrm{T}}}$ $[GeV^{-1}]$
 YMin=0.0000001
 XMin=1
 LogX=1

@@ -1,0 +1,35 @@
+Name: BESIII_2016_I1457597
+Year: 2016
+Summary: Cross section for $e^+e^-\to J/\psi \eta^\prime$ at energies between 4.189 and 4.6 GeV
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1457597
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D94 (2016) 032009, 2016
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+  'Measurement of the cross section for $e^+e^-\to J/\psi \eta^\prime$ at energies between 4.189 and 4.6 GeV'
+Keywords: []
+BibKey: Ablikim:2016ymr
+BibTeX: '@article{Ablikim:2016ymr,
+      author         = "Ablikim, Medina and others",
+      title          = "{Observation of $e^{+}e^{-} \to \eta^{\prime} J/\psi$ at
+                        center-of-mass energies between 4.189 and 4.600 GeV}",
+      collaboration  = "BESIII",
+      journal        = "Phys. Rev.",
+      volume         = "D94",
+      year           = "2016",
+      number         = "3",
+      pages          = "032009",
+      doi            = "10.1103/PhysRevD.94.032009",
+      eprint         = "1605.03256",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1605.03256;%%"
+}'

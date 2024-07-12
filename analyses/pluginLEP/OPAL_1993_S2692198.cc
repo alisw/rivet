@@ -10,29 +10,24 @@ namespace Rivet {
 
 
   /// @brief OPAL photon production
+  ///
   /// @author Peter Richardson
   class OPAL_1993_S2692198 : public Analysis {
   public:
 
-    /// Constructor
-    OPAL_1993_S2692198()
-      : Analysis("OPAL_1993_S2692198")
-    {    }
+    RIVET_DEFAULT_ANALYSIS_CTOR(OPAL_1993_S2692198);
 
 
     /// @name Analysis methods
-    //@{
+    /// @{
 
     void analyze(const Event& e) {
-      // Get event weight for histo filling
-      const double weight = e.weight();
-
       // Extract the photons
       Particles photons;
       Particles nonPhotons;
       FourMomentum ptotal;
       const FinalState& fs = apply<FinalState>(e, "FS");
-      foreach (const Particle& p, fs.particles()) {
+      for (const Particle& p : fs.particles()) {
         ptotal+= p.momentum();
         if (p.pid() == PID::PHOTON) {
           photons.push_back(p);
@@ -51,7 +46,7 @@ namespace Rivet {
       double evis = ptotal.mass();
       vector<fastjet::PseudoJet> input_particles;
       // Pseudo-jets from the non photons
-      foreach (const Particle& p,  nonPhotons) {
+      for (const Particle& p :  nonPhotons) {
         const FourMomentum p4 = p.momentum();
         input_particles.push_back(fastjet::PseudoJet(p4.px(), p4.py(), p4.pz(), p4.E()));
       }
@@ -81,10 +76,10 @@ namespace Rivet {
             }
           }
           if (!accept) continue;
-          _nPhotonDurham->fill(ycut, weight*_nPhotonDurham->bin(j).xWidth());
+          _nPhotonDurham->fill(ycut, _nPhotonDurham->bin(j).xWidth());
           size_t njet = min(size_t(4), exclusive_jets.size()) - 1;
           if (j < _nPhotonJetDurham[njet]->numBins()) {
-            _nPhotonJetDurham[njet]->fillBin(j, weight*_nPhotonJetDurham[njet]->bin(j).xWidth());
+            _nPhotonJetDurham[njet]->fillBin(j, _nPhotonJetDurham[njet]->bin(j).xWidth());
           }
         }
         // Run the jet clustering JADE
@@ -105,10 +100,10 @@ namespace Rivet {
           }
           if (!accept) continue;
           /// @todo Really want to use a "bar graph" here (i.e. ignore bin width)
-          _nPhotonJade->fill(ycut, weight*_nPhotonJade->bin(j).xWidth());
+          _nPhotonJade->fill(ycut, _nPhotonJade->bin(j).xWidth());
           size_t njet = min(size_t(4), exclusive_jets.size()) - 1;
           if (j < _nPhotonJetJade[njet]->numBins()) {
-            _nPhotonJetJade[njet]->fillBin(j, weight*_nPhotonJetJade[njet]->bin(j).xWidth());
+            _nPhotonJetJade[njet]->fillBin(j, _nPhotonJetJade[njet]->bin(j).xWidth());
           }
         }
         // Add this photon back in for the next iteration of the loop
@@ -124,11 +119,11 @@ namespace Rivet {
       declare(FinalState(), "FS");
 
       // Book datasets
-      _nPhotonJade   = bookHisto1D(1, 1, 1);
-      _nPhotonDurham = bookHisto1D(2, 1, 1);
+      book(_nPhotonJade   ,1, 1, 1);
+      book(_nPhotonDurham ,2, 1, 1);
       for (size_t ix = 0; ix < 4; ++ix) {
-        _nPhotonJetJade  [ix] = bookHisto1D(3 , 1, 1+ix);
-        _nPhotonJetDurham[ix] = bookHisto1D(4 , 1, 1+ix);
+        book(_nPhotonJetJade  [ix] ,3 , 1, 1+ix);
+        book(_nPhotonJetDurham[ix] ,4 , 1, 1+ix);
       }
     }
 
@@ -144,7 +139,8 @@ namespace Rivet {
       }
     }
 
-    //@}
+    /// @}
+
 
   private:
 
@@ -157,7 +153,6 @@ namespace Rivet {
 
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(OPAL_1993_S2692198);
+  RIVET_DECLARE_ALIASED_PLUGIN(OPAL_1993_S2692198, OPAL_1993_I343181);
 
 }

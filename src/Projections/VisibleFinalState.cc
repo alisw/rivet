@@ -4,7 +4,7 @@
 namespace Rivet {
 
 
-  int VisibleFinalState::compare(const Projection& p) const {
+  CmpState VisibleFinalState::compare(const Projection& p) const {
     return mkNamedPCmp(p, "FS");
   }
 

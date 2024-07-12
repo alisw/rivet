@@ -1,0 +1,36 @@
+Name: E288_1981_I153009
+Year: 1981
+Summary: Measurement of the continuum of dimuons produced in high-energy proton-nucleus collisions
+Experiment: E288
+Collider: Fermilab p-N
+InspireID: 153009
+Status: VALIDATED 
+Reentrant: true
+Authors:
+  Hannes Jung <hannes.jung@desy.de>
+References:
+  - "Phys. Rev., D23(1981), 604-633"
+  - "DOI: 10.1103/PhysRevD.23.604"
+NeedCrossSection: yes
+Beams: [p+, p+]
+Energies: [27.4]
+Description:
+  'We report final results of a series of measurements of continuum
+  dimuon production in proton-nucleus collisions at Fermilab. New results with 6
+  times more statistics are included. '
+Keywords: []
+BibKey: Ito:1980ev
+BibTeX: '@article{Ito:1980ev,
+      author         = "Ito, A. S. and others",
+      title          = "{Measurement of the Continuum of Dimuons Produced in
+                        High-Energy Proton - Nucleus Collisions}",
+      journal        = "Phys. Rev.",
+      volume         = "D23",
+      year           = "1981",
+      pages          = "604-633",
+      doi            = "10.1103/PhysRevD.23.604",
+      reportNumber   = "FERMILAB-PUB-80-19-EXP, FERMILAB-PUB-80-019-E",
+      SLACcitation   = "%%CITATION = PHRVA,D23,604;%%"
+}'
+ReleaseTests:
+ - $A pp-27-Zmm

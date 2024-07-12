@@ -1,0 +1,122 @@
+{
+    "686510": [
+        "Dense-Medium Modifications to Jet-Induced Hadron Pair Distributions in Au+Au Collisions at s(NN)**(1/2) = 200-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.97.052301", 
+        null, 
+        "nucl-ex/0507004", 
+        null, 
+        null, 
+        []
+    ], 
+    "688457": [
+        "J/psi production and nuclear effects for d+Au and p+p collisions at s(NN)**(1/2) = 200-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.96.012304", 
+        null, 
+        "nucl-ex/0507032", 
+        "ins688457", 
+        null, 
+        []
+    ], 
+    "689883": [
+        "Single electrons from heavy flavor decays in p+p collisions at s**(1/2) = 200-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.96.032001", 
+        null, 
+        "hep-ex/0508034", 
+        null, 
+        null, 
+        []
+    ], 
+    "690050": [
+        "Measurement of identified pi0 and inclusive photon v(2) and implication to the direct photon production in s(NN)**1/2 = 200-GeV Au+Au collisions", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.96.032302", 
+        null, 
+        "nucl-ex/0508019", 
+        null, 
+        null, 
+        []
+    ], 
+    "694429": [
+        "Jet structure from dihadron correlations in d+Au collisions at s(NN)**(1/2) = 200-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.73.054903", 
+        null, 
+        "nucl-ex/0510021", 
+        null, 
+        null, 
+        []
+    ], 
+    "695305": [
+        "Nuclear modification of electron spectra and implications for heavy quark energy loss in Au+Au collisions at s(NN)**(1/2) - 200-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.96.032301", 
+        null, 
+        "nucl-ex/0510047", 
+        "ins695305", 
+        null, 
+        []
+    ], 
+    "709321": [
+        "Common suppression pattern of eta and pi0 mesons at high transverse momentum in Au+Au collisions at S(NN)**(1/2) = 200-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.96.202301", 
+        null, 
+        "nucl-ex/0601037", 
+        null, 
+        null, 
+        []
+    ], 
+    "709644": [
+        "Improved measurement of double helicity asymmetry in inclusive midrapidity pi0 production for polarized p+p collisions at s**(1/2) = 200-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevD.73.091102", 
+        null, 
+        "hep-ex/0602004", 
+        null, 
+        null, 
+        []
+    ], 
+    "711951": [
+        "Nuclear effects on hadron production in d = Au and p + p collisions at s(NN)**(1/2) = 200-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.74.024904", 
+        null, 
+        "nucl-ex/0603010", 
+        null, 
+        null, 
+        []
+    ], 
+    "712584": [
+        "Azimuthal angle correlations for rapidity separated hadron pairs in d + Au Collisions at s(NN)**(1/2) = 200-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.96.222301", 
+        null, 
+        "nucl-ex/0603017", 
+        null, 
+        null, 
+        []
+    ], 
+    "716897": [
+        "Jet properties from dihadron correlations in $p^+ p$ collisions at $\\sqrt{s}$ = 200-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevD.74.072002", 
+        null, 
+        "hep-ex/0605039", 
+        null, 
+        null, 
+        []
+    ], 
+    "725484": [
+        "Measurement of high-$p_T$ single electrons from heavy-flavor decays in $p+p$ collisions at $\\sqrt{s}=$ 200 GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.97.252002", 
+        null, 
+        "hep-ex/0609010", 
+        "ins725484", 
+        null, 
+        []
+    ]
+}

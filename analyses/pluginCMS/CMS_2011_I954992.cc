@@ -11,7 +11,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(CMS_2011_I954992);
+    RIVET_DEFAULT_ANALYSIS_CTOR(CMS_2011_I954992);
 
 
     void init() {
@@ -23,12 +23,12 @@ namespace Rivet {
       muon_fs.acceptIdPair(PID::MUON);
       declare(muon_fs, "MUON_FS");
 
-      _h_sigma = bookHisto1D(1,1,1);
+      book(_h_sigma ,1,1,1);
     }
 
 
     void analyze(const Event& event) {
-      const double weight = event.weight();
+      const double weight = 1.0;
 
       const ChargedFinalState& cfs = apply<ChargedFinalState>(event, "CFS");
       if (cfs.size() != 2) vetoEvent; // no other charged particles in 2.4
@@ -65,6 +65,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CMS_2011_I954992);
+  RIVET_DECLARE_PLUGIN(CMS_2011_I954992);
 
 }

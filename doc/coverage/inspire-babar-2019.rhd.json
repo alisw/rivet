@@ -1,0 +1,54 @@
+{
+    "1691954": [
+        "Observation of the Decay $D^0\\rightarrow K^-\\pi^+e^+e^-$", 
+        "BaBar", 
+        "10.1103/PhysRevLett.122.081802", 
+        null, 
+        "1808.09680", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-18/007", 
+            "SLAC-PUB-17332"
+        ]
+    ], 
+    "1698003": [
+        "Search for a Stable Six-Quark State at BABAR", 
+        "BaBar", 
+        "10.1103/PhysRevLett.122.072002", 
+        null, 
+        "1810.04724", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-18/009", 
+            "SLAC-PUB-17335"
+        ]
+    ], 
+    "1726474": [
+        "Extraction of form Factors from a Four-Dimensional Angular Analysis of $\\overline{B} \\rightarrow D^\\ast \\ell^- \\overline{\\nu}_\\ell$", 
+        "BaBar", 
+        "10.1103/PhysRevLett.123.091801", 
+        null, 
+        "1903.10002", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-19-001", 
+            "SLAC-PUB-17420"
+        ]
+    ], 
+    "1750321": [
+        "Search for $B^- \\to \\Lambda \\bar p \\nu \\bar\\nu$ with the BaBar experiment", 
+        "BaBar", 
+        "10.1103/PhysRevD.100.111101", 
+        null, 
+        "1908.07425", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-18/010", 
+            "SLAC-PUB-17455"
+        ]
+    ]
+}

@@ -1,0 +1,139 @@
+{
+    "818707": [
+        "Jet Production in ep Collisions at High Q**2 and Determination of alpha(s)", 
+        "H1", 
+        "10.1140/epjc/s10052-009-1208-7", 
+        "1174195", 
+        "0904.3870", 
+        "ins818707", 
+        null, 
+        [
+            "DESY-09-032", 
+            "DESY09-032"
+        ]
+    ], 
+    "825811": [
+        "Measurement of the Charm and Beauty Structure Functions using the H1 Vertex Detector at HERA", 
+        "H1", 
+        "10.1140/epjc/s10052-009-1190-0", 
+        "1190675", 
+        "0907.2643", 
+        null, 
+        null, 
+        [
+            "DESY-09-096", 
+            "DESY09-096"
+        ]
+    ], 
+    "835534": [
+        "Prompt Photons in Photoproduction at HERA", 
+        "H1", 
+        "10.1140/epjc/s10052-010-1240-7", 
+        "1216040", 
+        "0910.5631", 
+        "ins835534", 
+        null, 
+        [
+            "DESY-09-135"
+        ]
+    ], 
+    "835609": [
+        "Diffractive Electroproduction of rho and phi Mesons at HERA", 
+        "H1", 
+        "10.1007/JHEP05(2010)032", 
+        "1216277", 
+        "0910.5831", 
+        "ins835609", 
+        null, 
+        [
+            "DESY-09-093"
+        ]
+    ], 
+    "836096": [
+        "Events with an Isolated Lepton and Missing Transverse Momentum and Measurement of W Production at HERA", 
+        "H1", 
+        "10.1007/JHEP03(2010)035", 
+        "1217321", 
+        "0911.0858", 
+        null, 
+        null, 
+        [
+            "DESY-09-140"
+        ]
+    ], 
+    "836107": [
+        "Combined Measurement and QCD Analysis of the Inclusive e+- p Scattering Cross Sections at HERA", 
+        "H1", 
+        "10.1007/JHEP01(2010)109", 
+        "1217344", 
+        "0911.0884", 
+        "ins836107", 
+        null, 
+        [
+            "DESY-09-158"
+        ]
+    ], 
+    "837434": [
+        "Measurement of the D*+- Meson Production Cross Section and F(2)**(c c-bar), at High Q**2, in ep Scattering at HERA", 
+        "H1", 
+        "10.1016/j.physletb.2010.02.024", 
+        "1359364", 
+        "0911.3989", 
+        "ins837434", 
+        null, 
+        [
+            "DESY-09-165", 
+            "DESY09-165"
+        ]
+    ], 
+    "838435": [
+        "Jet Production in ep Collisions at Low Q**2 and Determination of alpha(s)", 
+        "H1", 
+        "10.1140/epjc/s10052-010-1282-x", 
+        "1226186", 
+        "0911.5678", 
+        "ins838435", 
+        null, 
+        [
+            "DESY-09-162"
+        ]
+    ], 
+    "841764": [
+        "Measurement of Leading Neutron Production in Deep-Inelastic Scattering at HERA", 
+        "H1", 
+        "10.1140/epjc/s10052-010-1369-4", 
+        "1231833", 
+        "1001.0532", 
+        "ins841764", 
+        null, 
+        [
+            "DESY-09-185"
+        ]
+    ], 
+    "844299": [
+        "Inelastic Production of J/psi Mesons in Photoproduction and Deep Inelastic Scattering at HERA", 
+        "H1", 
+        "10.1140/epjc/s10052-010-1376-5", 
+        "1237328", 
+        "1002.0234", 
+        "ins844299", 
+        null, 
+        [
+            "DESY-09-225", 
+            "DESY09-225"
+        ]
+    ], 
+    "857109": [
+        "Diffractive Dijet Photoproduction in ep Collisions at HERA", 
+        "H1", 
+        "10.1140/epjc/s10052-010-1448-6", 
+        "1270128", 
+        "1006.0946", 
+        "ins857109", 
+        null, 
+        [
+            "DESY-10-043", 
+            "DESY10-043"
+        ]
+    ]
+}

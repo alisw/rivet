@@ -6,6 +6,7 @@ Collider: Tevatron Run 2
 SpiresID: 8233977
 InspireID: 817466
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Hendrik Hoeth <hendrik.hoeth@cern.ch>
  - Niccolo' Moggi <niccolo.moggi@bo.infn.it>

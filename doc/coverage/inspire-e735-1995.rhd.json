@@ -1,0 +1,24 @@
+{
+    "405368": [
+        "phi meson production from p anti-p collisions at s**(1/2) = 1.8-TeV", 
+        "E735", 
+        "10.1007/BF01624584", 
+        null, 
+        null, 
+        "ins405368", 
+        null, 
+        []
+    ], 
+    "406596": [
+        "Charged particle multiplicity correlations in $p\\bar{p}$ collisions at $\\sqrt{s}$ = 0.3-TeV to 1.8-TeV", 
+        "E735", 
+        "10.1016/0370-2693(95)00554-X", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-95-136-E"
+        ]
+    ]
+}

@@ -1,0 +1,50 @@
+{
+    "586609": [
+        "$t \\bar{t}$ production cross-section in $p \\bar{p}$ collisions at $\\sqrt{s}$ = 1.8-TeV", 
+        "D0", 
+        "10.1103/PhysRevD.67.012004", 
+        null, 
+        "hep-ex/0205019", 
+        "ins586609", 
+        null, 
+        [
+            "FERMILAB-PUB-03-346-E"
+        ]
+    ], 
+    "590783": [
+        "Multiple Jet Production at Low Transverse Energies in $p\\bar{p}$ Collisions at $\\sqrt{s}$ = 1.8 TeV", 
+        "D0", 
+        "10.1103/PhysRevD.67.052001", 
+        null, 
+        "hep-ex/0207046", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-02-153-E"
+        ]
+    ], 
+    "613229": [
+        "Search for large extra dimensions in the monojet + missing $E_T$ channel at D\\O", 
+        "D0", 
+        "10.1103/PhysRevLett.90.251802", 
+        null, 
+        "hep-ex/0302014", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-03-303-E"
+        ]
+    ], 
+    "625862": [
+        "Observation of diffractively produced $W$ and $Z$ bosons in $\\bar{p}p$ collisions at $\\sqrt{s} = 1800$ GeV", 
+        "D0", 
+        "10.1016/j.physletb.2003.09.001", 
+        null, 
+        "hep-ex/0308032", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-03-233-E"
+        ]
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "440447": [
+        "Measurement of the electromagnetic coupling at large momentum transfer", 
+        "TOPAZ", 
+        "10.1103/PhysRevLett.78.424", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "PRINT-97-056 (PURDUE)"
+        ]
+    ], 
+    "454183": [
+        "Charged particle multiplicities of quark and gluon jets in e+ e- annihilation at TRISTAN", 
+        "TOPAZ", 
+        "10.1016/S0370-2693(97)01191-X", 
+        null, 
+        null, 
+        "ins454183", 
+        null, 
+        [
+            "DPNU-97-44", 
+            "KEK-PREPRINT-97-140", 
+            "NWU-HEP-97-01", 
+            "TIT-HPE-97-07", 
+            "TUAT-HEP-97-01", 
+            "OCU-HEP-97-01", 
+            "PU-97-705"
+        ]
+    ]
+}

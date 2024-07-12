@@ -21,7 +21,7 @@ namespace Rivet {
       /// pseudorapidity \f$ \eta \f$ and the min \f$ p_T \f$ (in GeV).
       PseudoTop(double lepR = 0.1, double lepMinPt = 20, double lepMaxEta = 2.4,
                 double jetR = 0.4, double jetMinPt = 30, double jetMaxEta = 4.7)
-        : FinalState(-MAXDOUBLE, MAXDOUBLE, 0*GeV),
+        : FinalState(),
           _lepR(lepR), _lepMinPt(lepMinPt), _lepMaxEta(lepMaxEta),
           _jetR(jetR), _jetMinPt(jetMinPt), _jetMaxEta(jetMaxEta)
       {
@@ -37,31 +37,30 @@ namespace Rivet {
         else if ( _mode1 != CH_HADRON && _mode2 != CH_HADRON) return CH_FULLLEPTON;
         else return CH_SEMILEPTON;
       }
-      DecayMode mode1() const {return _mode1;}
-      DecayMode mode2() const {return _mode2;}
+      virtual const DecayMode& mode1() const {return _mode1;}
+      virtual const DecayMode& mode2() const {return _mode2;}
 
       /// Clone on the heap.
-      virtual unique_ptr<Projection> clone() const {
-        return unique_ptr<Projection>(new PseudoTop(*this));
-      }
+      DEFAULT_RIVET_PROJ_CLONE(PseudoTop);
 
       //@}
 
     public:
-      Particle t1() const {return _t1;}
-      Particle t2() const {return _t2;}
-      Particle b1() const {return _b1;}
-      Particle b2() const {return _b2;}
-      ParticleVector wDecays1() const {return _wDecays1;}
-      ParticleVector wDecays2() const {return _wDecays2;}
-      Jets jets() const {return _jets;}
-      Jets bjets() const {return _bjets;}
-      Jets ljets() const {return _ljets;}
+      virtual const Particle& t1() const {return _t1;}
+      virtual const Particle& t2() const {return _t2;}
+      virtual const Particle& b1() const {return _b1;}
+      virtual const Particle& b2() const {return _b2;}
+      virtual const Particles& wDecays1() const {return _wDecays1;}
+      virtual const Particles& wDecays2() const {return _wDecays2;}
+      virtual const Jets& jets() const {return _jets;}
+      virtual const Jets& bjets() const {return _bjets;}
+      virtual const Jets& ljets() const {return _ljets;}
 
-    protected:
       // Apply the projection to the event
       void project(const Event& e); // override; ///< @todo Re-enable when C++11 allowed
       void cleanup(std::map<double, std::pair<size_t, size_t> >& v, const bool doCrossCleanup=false) const;
+      CmpState compare(const Projection& p) const;
+
 
     private:
       const double _lepR, _lepMinPt, _lepMaxEta;
@@ -78,7 +77,7 @@ namespace Rivet {
 
       Particle _t1, _t2;
       Particle _b1, _b2;
-      ParticleVector _wDecays1, _wDecays2;
+      Particles _wDecays1, _wDecays2;
       Jets _jets, _bjets, _ljets;
 
     };
@@ -104,26 +103,26 @@ namespace Rivet {
       declare(PseudoTop(0.1, 20, 2.4, 0.5, 30, 2.4), "ttbar");
 
       // Lepton + Jet channel
-      _hSL_topPt         = bookHisto1D("d15-x01-y01"); // 1/sigma dsigma/dpt(top)
-      _hSL_topPtTtbarSys = bookHisto1D("d16-x01-y01"); // 1/sigma dsigma/dpt*(top)
-      _hSL_topY          = bookHisto1D("d17-x01-y01"); // 1/sigma dsigma/dy(top)
-      _hSL_ttbarDelPhi   = bookHisto1D("d18-x01-y01"); // 1/sigma dsigma/ddeltaphi(t,tbar)
-      _hSL_topPtLead     = bookHisto1D("d19-x01-y01"); // 1/sigma dsigma/dpt(t1)
-      _hSL_topPtSubLead  = bookHisto1D("d20-x01-y01"); // 1/sigma dsigma/dpt(t2)
-      _hSL_ttbarPt       = bookHisto1D("d21-x01-y01"); // 1/sigma dsigma/dpt(ttbar)
-      _hSL_ttbarY        = bookHisto1D("d22-x01-y01"); // 1/sigma dsigma/dy(ttbar)
-      _hSL_ttbarMass     = bookHisto1D("d23-x01-y01"); // 1/sigma dsigma/dm(ttbar)
+      book(_hSL_topPt         ,"d15-x01-y01"); // 1/sigma dsigma/dpt(top)
+      book(_hSL_topPtTtbarSys ,"d16-x01-y01"); // 1/sigma dsigma/dpt*(top)
+      book(_hSL_topY          ,"d17-x01-y01"); // 1/sigma dsigma/dy(top)
+      book(_hSL_ttbarDelPhi   ,"d18-x01-y01"); // 1/sigma dsigma/ddeltaphi(t,tbar)
+      book(_hSL_topPtLead     ,"d19-x01-y01"); // 1/sigma dsigma/dpt(t1)
+      book(_hSL_topPtSubLead  ,"d20-x01-y01"); // 1/sigma dsigma/dpt(t2)
+      book(_hSL_ttbarPt       ,"d21-x01-y01"); // 1/sigma dsigma/dpt(ttbar)
+      book(_hSL_ttbarY        ,"d22-x01-y01"); // 1/sigma dsigma/dy(ttbar)
+      book(_hSL_ttbarMass     ,"d23-x01-y01"); // 1/sigma dsigma/dm(ttbar)
 
       // Dilepton channel
-      _hDL_topPt         = bookHisto1D("d24-x01-y01"); // 1/sigma dsigma/dpt(top)
-      _hDL_topPtTtbarSys = bookHisto1D("d25-x01-y01"); // 1/sigma dsigma/dpt*(top)
-      _hDL_topY          = bookHisto1D("d26-x01-y01"); // 1/sigma dsigma/dy(top)
-      _hDL_ttbarDelPhi   = bookHisto1D("d27-x01-y01"); // 1/sigma dsigma/ddeltaphi(t,tbar)
-      _hDL_topPtLead     = bookHisto1D("d28-x01-y01"); // 1/sigma dsigma/dpt(t1)
-      _hDL_topPtSubLead  = bookHisto1D("d29-x01-y01"); // 1/sigma dsigma/dpt(t2)
-      _hDL_ttbarPt       = bookHisto1D("d30-x01-y01"); // 1/sigma dsigma/dpt(ttbar)
-      _hDL_ttbarY        = bookHisto1D("d31-x01-y01"); // 1/sigma dsigma/dy(ttbar)
-      _hDL_ttbarMass     = bookHisto1D("d32-x01-y01"); // 1/sigma dsigma/dm(ttbar)
+      book(_hDL_topPt         ,"d24-x01-y01"); // 1/sigma dsigma/dpt(top)
+      book(_hDL_topPtTtbarSys ,"d25-x01-y01"); // 1/sigma dsigma/dpt*(top)
+      book(_hDL_topY          ,"d26-x01-y01"); // 1/sigma dsigma/dy(top)
+      book(_hDL_ttbarDelPhi   ,"d27-x01-y01"); // 1/sigma dsigma/ddeltaphi(t,tbar)
+      book(_hDL_topPtLead     ,"d28-x01-y01"); // 1/sigma dsigma/dpt(t1)
+      book(_hDL_topPtSubLead  ,"d29-x01-y01"); // 1/sigma dsigma/dpt(t2)
+      book(_hDL_ttbarPt       ,"d30-x01-y01"); // 1/sigma dsigma/dpt(ttbar)
+      book(_hDL_ttbarY        ,"d31-x01-y01"); // 1/sigma dsigma/dy(ttbar)
+      book(_hDL_ttbarMass     ,"d32-x01-y01"); // 1/sigma dsigma/dm(ttbar)
 
     }
 
@@ -142,7 +141,7 @@ namespace Rivet {
       const FourMomentum ttP4 = t1P4 + t2P4;
       const FourMomentum t1P4AtCM = LorentzTransform::mkFrameTransformFromBeta(ttP4.betaVec()).transform(t1P4);
 
-      const double weight = event.weight();
+      const double weight = 1.0;
 
       if ( ttbar.mode() == PseudoTop::CH_SEMILEPTON ) {
         const Particle lCand1 = ttbar.wDecays1()[0]; // w1 dau0 is the lepton in the PseudoTop
@@ -292,7 +291,7 @@ namespace Rivet {
 
 
 
-  DECLARE_RIVET_PLUGIN(CMS_2015_I1370682);
+  RIVET_DECLARE_PLUGIN(CMS_2015_I1370682);
 
 
   ///////////////
@@ -304,6 +303,29 @@ namespace Rivet {
     double PseudoTop::_tMass = 172.5*GeV;
     double PseudoTop::_wMass = 80.4*GeV;
 
+    CmpState PseudoTop::compare(const Projection& p) const {
+      const PCmp fscmp = mkNamedPCmp(p, "FS");
+      if (fscmp != CmpState::EQ) return fscmp;
+ 
+      const PseudoTop& other = dynamic_cast<const PseudoTop&>(p);
+      CmpState cs_lepR = cmp(_lepR, other._lepR);
+      if (cs_lepR != CmpState::EQ) return cs_lepR;
+
+      CmpState cs_jetR = cmp(_jetR, other._jetR);
+      if (cs_jetR != CmpState::EQ) return cs_jetR;
+
+      CmpState cs_lepMinPt = cmp(_lepMinPt, other._lepMinPt);
+      if (cs_lepMinPt != CmpState::EQ) return cs_lepMinPt;
+
+      CmpState cs_jetMinPt = cmp(_jetMinPt, other._jetMinPt);
+      if (cs_jetMinPt != CmpState::EQ) return cs_jetMinPt;
+
+      CmpState cs_lepMaxEta = cmp(_lepMaxEta, other._lepMaxEta);
+      if (cs_lepMaxEta != CmpState::EQ) return cs_lepMaxEta;
+
+      CmpState cs_jetMaxEta = cmp(_jetMaxEta, other._jetMaxEta);
+      return cs_jetMaxEta;
+    }
 
     void PseudoTop::cleanup(map<double, pair<size_t, size_t> >& v, const bool doCrossCleanup) const {
       vector<map<double, pair<size_t, size_t> >::iterator> toErase;
@@ -357,7 +379,6 @@ namespace Rivet {
       // t candidate : select Wb pairs which minimise |mtop1-172.5|+|mtop2-172.5|
 
       _isValid = false;
-      _theParticles.clear();
       _wDecays1.clear();
       _wDecays2.clear();
       _jets.clear();
@@ -369,17 +390,17 @@ namespace Rivet {
       Particles pForLep, pForJet;
       Particles neutrinos; // Prompt neutrinos
       /// @todo Avoid this unsafe jump into HepMC -- all this can be done properly via VisibleFS and HeavyHadrons projections
-      for (const GenParticle* p : Rivet::particles(e.genEvent())) {
+      for (ConstGenParticlePtr p : HepMCUtils::particles(e.genEvent())) {//
         const int status = p->status();
-        const int pdgId = p->pdg_id();
+        const int pid = p->pdg_id();
         if (status == 1) {
           Particle rp = *p;
-          if (!PID::isHadron(pdgId) && !rp.fromHadron()) {
+          if (!PID::isHadron(pid) && !rp.fromHadron()) {
             // Collect particles not from hadron decay
             if (rp.isNeutrino()) {
               // Prompt neutrinos are kept in separate collection
               neutrinos.push_back(rp);
-            } else if (pdgId == 22 || rp.isLepton()) {
+            } else if (pid == PID::PHOTON || rp.isLepton()) {
               // Leptons and photons for the dressing
               pForLep.push_back(rp);
             }
@@ -387,14 +408,14 @@ namespace Rivet {
             // Use all particles from hadron decay
             pForJet.push_back(rp);
           }
-        } else if (PID::isHadron(pdgId) && PID::hasBottom(pdgId)) {
+        } else if (PID::isHadron(pid) && PID::hasBottom(pid)) {
           // NOTE: Consider B hadrons with pT > 5GeV - not in CMS proposal
           //if ( p->momentum().perp() < 5 ) continue;
 
           // Do unstable particles, to be used in the ghost B clustering
           // Use last B hadrons only
           bool isLast = true;
-          for (const GenParticlePtr pp : Rivet::particles(p->end_vertex(), HepMC::children)) {
+          for (ConstGenParticlePtr pp : HepMCUtils::particles(p->end_vertex(), Relatives::CHILDREN)) {
             if (PID::hasBottom(pp->pdg_id())) {
               isLast = false;
               break;
@@ -403,7 +424,10 @@ namespace Rivet {
           if (!isLast) continue;
 
           // Rescale momentum by 10^-20
-          Particle ghost(pdgId, FourMomentum(p->momentum())*1e-20/p->momentum().rho());
+          /// @todo Why the factor of 1/rho() as well?
+          //Particle ghost(pdgId, FourMomentum(p->momentum())*1e-20/p->momentum().rho());
+          Particle ghost(pid, FourMomentum(p->momentum()));
+          ghost.setMomentum(ghost.momentum()*1.e-20 / ghost.momentum().rho());
           pForJet.push_back(ghost);
         }
       }
@@ -424,7 +448,7 @@ namespace Rivet {
         int leptonId = 0;
         for (const Particle& p : lep.particles()) {
           /// @warning Barcodes aren't future-proof in HepMC
-          dressedIdxs.insert(p.genParticle()->barcode());
+          dressedIdxs.insert(HepMCUtils::uniqueId(p.genParticle()));
           if (p.isLepton() && p.pT() > leadingPt) {
             leadingPt = p.pT();
             leptonId = p.pid();
@@ -437,8 +461,7 @@ namespace Rivet {
 
       // Re-use particles not used in lepton dressing
       for (const Particle& rp : pForLep) {
-        /// @warning Barcodes aren't future-proof in HepMC
-        const int barcode = rp.genParticle()->barcode();
+        const int barcode = HepMCUtils::uniqueId(rp.genParticle());
         // Skip if the particle is used in dressing
         if (dressedIdxs.find(barcode) != dressedIdxs.end()) continue;
         // Put back to be used in jet clustering
@@ -454,7 +477,7 @@ namespace Rivet {
         _jets.push_back(jet);
         bool isBJet = false;
         for (const Particle& rp : jet.particles()) {
-          if (PID::hasBottom(rp.pdgId())) {
+          if (PID::hasBottom(rp.pid())) {
             isBJet = true;
             break;
           }

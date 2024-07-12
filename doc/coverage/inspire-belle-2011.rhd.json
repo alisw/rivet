@@ -1,0 +1,226 @@
+{
+    "871475": [
+        "Study of the $K^+ \\pi^+ \\pi^-$ Final State in $B^+ \\to J/\\psi K^+ \\pi^+ \\pi^-$ and $B^+ \\to \\psi-prime K^+ \\pi^+ \\pi^-$", 
+        "Belle", 
+        "10.1103/PhysRevD.83.032005", 
+        null, 
+        "1009.5256", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2010-20", 
+            "KEK-PREPRINT-2010-32"
+        ]
+    ], 
+    "878228": [
+        "Measurement of $e^+e^-\\to D_s^{(*)+} D_s^{(*)-}$ cross sections near threshold using initial-state radiation", 
+        "Belle", 
+        "10.1103/PhysRevD.83.011101", 
+        null, 
+        "1011.4397", 
+        null, 
+        null, 
+        []
+    ], 
+    "878990": [
+        "Measurement of the decay $B^0\\to\\pi^-\\ell^+\\nu$ and determination of $|V_{ub}|$", 
+        "Belle", 
+        "10.1103/PhysRevD.83.071101", 
+        null, 
+        "1012.0090", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2010-22", 
+            "KEK-PREPRINT-2010-37"
+        ]
+    ], 
+    "883084": [
+        "Search for Lepton-Flavor-Violating tau Decays into a Lepton and a Vector Meson", 
+        "Belle", 
+        "10.1016/j.physletb.2011.04.011", 
+        null, 
+        "1101.0755", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2010-42", 
+            "BELLE-PREPRINT-2010-24", 
+            "NTLP-PREPRINT-2010-05", 
+            "NTLP-PREPRINT-2010-06"
+        ]
+    ], 
+    "883260": [
+        "Search for CP violation in $\\tau \\to K^0_S \\pi \\nu_\\tau$ decays at Belle", 
+        "Belle", 
+        "10.1103/PhysRevLett.107.131801", 
+        null, 
+        "1101.0349", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2010-27"
+        ]
+    ], 
+    "884579": [
+        "Search for CP Violation in the Decays $D^0\\rightarrow K^0_S P^0$", 
+        "Belle", 
+        "10.1103/PhysRevLett.106.211801", 
+        null, 
+        "1101.3365", 
+        null, 
+        null, 
+        []
+    ], 
+    "886797": [
+        "Study of the decays $B -> D_{s1}(2536)^+ \\bar{D}^{(*)}$", 
+        "Belle", 
+        "10.1103/PhysRevD.83.051102", 
+        null, 
+        "1102.0935", 
+        null, 
+        null, 
+        []
+    ], 
+    "886818": [
+        "Measurements of time-dependent CP asymmetries in $B \\to D^{*\\mp} \\pi^{\\pm}$ decays using a partial reconstruction technique", 
+        "Belle", 
+        "10.1103/PhysRevD.84.021101", 
+        null, 
+        "1102.0888", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2011-1", 
+            "KEK-PREPRINT-2010-49"
+        ]
+    ], 
+    "889524": [
+        "Observation of $B_s^0\\to J/\\psi f_0(980)$ and Evidence for $B_s^0\\to J/\\psi f_0(1370)$", 
+        "Belle", 
+        "10.1103/PhysRevLett.106.121802", 
+        null, 
+        "1102.2759", 
+        null, 
+        null, 
+        []
+    ], 
+    "894464": [
+        "Evidence for the Suppressed Decay B- -> DK-, D -> K+pi-", 
+        "Belle", 
+        "10.1103/PhysRevLett.106.231803", 
+        null, 
+        "1103.5951", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2011-4", 
+            "KEK-PREPRINT-2010-52"
+        ]
+    ], 
+    "895958": [
+        "Observation of transverse polarization asymmetries of charged pion pairs in $e^+e^-$ annihilation near $\\sqrt{s}=10.58$ GeV", 
+        "Belle", 
+        "10.1103/PhysRevLett.107.072004", 
+        null, 
+        "1104.2425", 
+        null, 
+        null, 
+        [
+            "BELLE-DRAFT-2011-5", 
+            "KEK-PREPRINT-2010-53"
+        ]
+    ], 
+    "897683": [
+        "First Observation of Radiative $B^0 \\to \\phi K^0 \\gamma$ Decays and Measurements of Their Time-Dependent $CP$ Violation", 
+        "Belle", 
+        "10.1103/PhysRevD.84.071101", 
+        null, 
+        "1104.5590", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2011-6", 
+            "KEK-PREPRINT-2011-1"
+        ]
+    ], 
+    "897836": [
+        "Observation of $X(3872)\\to J/\\psi \\gamma$ and search for $X(3872)\\to\\psi'\\gamma$ in B decays", 
+        "Belle", 
+        "10.1103/PhysRevLett.107.091803", 
+        null, 
+        "1105.0177", 
+        null, 
+        null, 
+        []
+    ], 
+    "898660": [
+        "Study of $B^{\\pm}\\to K^{\\pm}(K_{S}K\\pi)^0$ decay and determination of $\\eta_c$ and $\\eta_{c}(2S)$ parameters", 
+        "Belle", 
+        "10.1016/j.physletb.2011.11.014", 
+        null, 
+        "1105.0978", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2011-2", 
+            "KEK-PREPRINT-2010-50"
+        ]
+    ], 
+    "916712": [
+        "Bounds on the width, mass difference and other properties of $X(3872) \\to \\pi^+ \\pi^- J/\\psi$ decays", 
+        "Belle", 
+        "10.1103/PhysRevD.84.052004", 
+        null, 
+        "1107.0163", 
+        null, 
+        null, 
+        []
+    ], 
+    "916807": [
+        "Search for Lepton-number-violating $B^+ \\to D^- l^+ l^{\\prime +}$ Decays", 
+        "BELLE", 
+        "10.1103/PhysRevD.84.071106", 
+        null, 
+        "1107.0642", 
+        null, 
+        null, 
+        []
+    ], 
+    "916845": [
+        "Observation of $D^+ \\rightarrow K^{+} \\eta^{(\\prime)}$ and Search for CP Violation in $D^+ \\rightarrow \\pi^+ \\eta^{(\\prime)}$ Decays", 
+        "Belle", 
+        "10.1103/PhysRevLett.107.221801", 
+        null, 
+        "1107.0553", 
+        null, 
+        null, 
+        []
+    ], 
+    "924618": [
+        "Observation of $B^- \\to \\bar{p} \\Lambda D^0$ at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.84.071501", 
+        null, 
+        "1108.4271", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2011-9", 
+            "KEK-PREPRINT-2011-7"
+        ]
+    ], 
+    "924711": [
+        "Search for charmonium and charmonium-like states in $\\Upsilon(2S)$ radiative decays", 
+        "Belle", 
+        "10.1103/PhysRevD.84.071107", 
+        null, 
+        "1108.4514", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2011-12", 
+            "KEK-PREPRINT-2011-10"
+        ]
+    ]
+}

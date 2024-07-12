@@ -1,7 +1,7 @@
 # BEGIN PLOT /ALEPH_2004_S5765862/d01-x01-y01
 Title=Charged multiplicity at a function of energy
 XLabel=$E_\mathrm{CMS}/GeV$
-YLabel=$N_\text{ch}$
+YLabel=$N_\mathrm{ch}$
 LegendXPos=0.20
 LegendYPos=0.85
 LogY=0
@@ -11,63 +11,63 @@ YMin=18
 # BEGIN PLOT /ALEPH_2004_S5765862/d02-x01-y01
 Title=Charged particle spectrum ($E_\mathrm{CMS}=133$ GeV)
 XLabel=$x_p$
-YLabel=$1/\sigma \, \text{d}{\sigma}/\text{d}{x_p}$
+YLabel=$1/\sigma \, \mathrm{d}{\sigma}/\mathrm{d}{x_p}$
 FullRange=1
 # END PLOT
 
 # BEGIN PLOT /ALEPH_2004_S5765862/d03-x01-y01
 Title=Charged particle spectrum ($E_\mathrm{CMS}=161$ GeV)
 XLabel=$x_p$
-YLabel=$1/\sigma \, \text{d}{\sigma}/\text{d}{x_p}$
+YLabel=$1/\sigma \, \mathrm{d}{\sigma}/\mathrm{d}{x_p}$
 FullRange=1
 # END PLOT
 
 # BEGIN PLOT /ALEPH_2004_S5765862/d04-x01-y01
 Title=Charged particle spectrum ($E_\mathrm{CMS}=172$ GeV)
 XLabel=$x_p$
-YLabel=$1/\sigma \, \text{d}{\sigma}/\text{d}{x_p}$
+YLabel=$1/\sigma \, \mathrm{d}{\sigma}/\mathrm{d}{x_p}$
 FullRange=1
 # END PLOT
 
 # BEGIN PLOT /ALEPH_2004_S5765862/d05-x01-y01
 Title=Charged particle spectrum ($E_\mathrm{CMS}=183$ GeV)
 XLabel=$x_p$
-YLabel=$1/\sigma \, \text{d}{\sigma}/\text{d}{x_p}$
+YLabel=$1/\sigma \, \mathrm{d}{\sigma}/\mathrm{d}{x_p}$
 FullRange=1
 # END PLOT
 
 # BEGIN PLOT /ALEPH_2004_S5765862/d06-x01-y01
 Title=Charged particle spectrum ($E_\mathrm{CMS}=189$ GeV)
 XLabel=$x_p$
-YLabel=$1/\sigma \, \text{d}{\sigma}/\text{d}{x_p}$
+YLabel=$1/\sigma \, \mathrm{d}{\sigma}/\mathrm{d}{x_p}$
 FullRange=1
 # END PLOT
 
 # BEGIN PLOT /ALEPH_2004_S5765862/d07-x01-y01
 Title=Charged particle spectrum ($E_\mathrm{CMS}=196$ GeV)
 XLabel=$x_p$
-YLabel=$1/\sigma \, \text{d}{\sigma}/\text{d}{x_p}$
+YLabel=$1/\sigma \, \mathrm{d}{\sigma}/\mathrm{d}{x_p}$
 FullRange=1
 # END PLOT
 
 # BEGIN PLOT /ALEPH_2004_S5765862/d08-x01-y01
 Title=Charged particle spectrum ($E_\mathrm{CMS}=200$ GeV)
 XLabel=$x_p$
-YLabel=$1/\sigma \, \text{d}{\sigma}/\text{d}{x_p}$
+YLabel=$1/\sigma \, \mathrm{d}{\sigma}/\mathrm{d}{x_p}$
 FullRange=1
 # END PLOT
 
 # BEGIN PLOT /ALEPH_2004_S5765862/d09-x01-y01
 Title=Charged particle spectrum ($E_\mathrm{CMS}=206$ GeV)
 XLabel=$x_p$
-YLabel=$1/\sigma \, \text{d}{\sigma}/\text{d}{x_p}$
+YLabel=$1/\sigma \, \mathrm{d}{\sigma}/\mathrm{d}{x_p}$
 FullRange=1
 # END PLOT
 
 # BEGIN PLOT /ALEPH_2004_S5765862/d11-x01-y01
 Title=Charged particle spectrum ($E_\mathrm{CMS}=133$ GeV)
 XLabel=$\xi_p$
-YLabel=$1/\sigma \, \text{d}\sigma/\text{d}\xi_p$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\xi_p$
 FullRange=1
 LegendYPos=0.65
 # END PLOT
@@ -75,7 +75,7 @@ LegendYPos=0.65
 # BEGIN PLOT /ALEPH_2004_S5765862/d12-x01-y01
 Title=Charged particle spectrum ($E_\mathrm{CMS}=161$ GeV)
 XLabel=$\xi_p$
-YLabel=$1/\sigma \, \text{d}\sigma/\text{d}\xi_p$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\xi_p$
 FullRange=1
 LegendYPos=0.65
 # END PLOT
@@ -83,7 +83,7 @@ LegendYPos=0.65
 # BEGIN PLOT /ALEPH_2004_S5765862/d13-x01-y01
 Title=Charged particle spectrum ($E_\mathrm{CMS}=172$ GeV)
 XLabel=$\xi_p$
-YLabel=$1/\sigma \, \text{d}\sigma/\text{d}\xi_p$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\xi_p$
 FullRange=1
 LegendYPos=0.65
 # END PLOT
@@ -91,7 +91,7 @@ LegendYPos=0.65
 # BEGIN PLOT /ALEPH_2004_S5765862/d14-x01-y01
 Title=Charged particle spectrum ($E_\mathrm{CMS}=183$ GeV)
 XLabel=$\xi_p$
-YLabel=$1/\sigma \, \text{d}\sigma/\text{d}\xi_p$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\xi_p$
 FullRange=1
 LegendYPos=0.65
 # END PLOT
@@ -99,7 +99,7 @@ LegendYPos=0.65
 # BEGIN PLOT /ALEPH_2004_S5765862/d15-x01-y01
 Title=Charged particle spectrum ($E_\mathrm{CMS}=189$ GeV)
 XLabel=$\xi_p$
-YLabel=$1/\sigma \, \text{d}\sigma/\text{d}\xi_p$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\xi_p$
 FullRange=1
 LegendYPos=0.65
 # END PLOT
@@ -107,7 +107,7 @@ LegendYPos=0.65
 # BEGIN PLOT /ALEPH_2004_S5765862/d16-x01-y01
 Title=Charged particle spectrum ($E_\mathrm{CMS}=196$ GeV)
 XLabel=$\xi_p$
-YLabel=$1/\sigma \, \text{d}\sigma/\text{d}\xi_p$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\xi_p$
 FullRange=1
 LegendYPos=0.65
 # END PLOT
@@ -115,7 +115,7 @@ LegendYPos=0.65
 # BEGIN PLOT /ALEPH_2004_S5765862/d17-x01-y01
 Title=Charged particle spectrum ($E_\mathrm{CMS}=200$ GeV)
 XLabel=$\xi_p$
-YLabel=$1/\sigma \, \text{d}\sigma/\text{d}\xi_p$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\xi_p$
 FullRange=1
 LegendYPos=0.65
 # END PLOT
@@ -123,7 +123,7 @@ LegendYPos=0.65
 # BEGIN PLOT /ALEPH_2004_S5765862/d18-x01-y01
 Title=Charged particle spectrum ($E_\mathrm{CMS}=206$ GeV)
 XLabel=$\xi_p$
-YLabel=$1/\sigma \, \text{d}\sigma/\text{d}\xi_p$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\xi_p$
 FullRange=1
 LegendYPos=0.65
 # END PLOT
@@ -131,126 +131,126 @@ LegendYPos=0.65
 # BEGIN PLOT /ALEPH_2004_S5765862/d19-x01-y01
 Title=Charged particle spectrum ($E_\mathrm{CMS}=133$ GeV)
 XLabel=$x_E$
-YLabel=$1/\sigma \, \text{d}{\sigma}/\text{d}{x_E}$
+YLabel=$1/\sigma \, \mathrm{d}{\sigma}/\mathrm{d}{x_E}$
 FullRange=1
 # END PLOT
 
 # BEGIN PLOT /ALEPH_2004_S5765862/d20-x01-y01
 Title=Charged particle spectrum ($E_\mathrm{CMS}=161$ GeV)
 XLabel=$x_E$
-YLabel=$1/\sigma \, \text{d}{\sigma}/\text{d}{x_E}$
+YLabel=$1/\sigma \, \mathrm{d}{\sigma}/\mathrm{d}{x_E}$
 FullRange=1
 # END PLOT
 
 # BEGIN PLOT /ALEPH_2004_S5765862/d21-x01-y01
 Title=Charged particle spectrum ($E_\mathrm{CMS}=172$ GeV)
 XLabel=$x_E$
-YLabel=$1/\sigma \, \text{d}{\sigma}/\text{d}{x_E}$
+YLabel=$1/\sigma \, \mathrm{d}{\sigma}/\mathrm{d}{x_E}$
 FullRange=1
 # END PLOT
 
 # BEGIN PLOT /ALEPH_2004_S5765862/d22-x01-y01
 Title=Charged particle spectrum ($E_\mathrm{CMS}=183$ GeV)
 XLabel=$x_E$
-YLabel=$1/\sigma \, \text{d}{\sigma}/\text{d}{x_E}$
+YLabel=$1/\sigma \, \mathrm{d}{\sigma}/\mathrm{d}{x_E}$
 FullRange=1
 # END PLOT
 
 # BEGIN PLOT /ALEPH_2004_S5765862/d23-x01-y01
 Title=Charged particle spectrum ($E_\mathrm{CMS}=189$ GeV)
 XLabel=$x_E$
-YLabel=$1/\sigma \, \text{d}{\sigma}/\text{d}{x_E}$
+YLabel=$1/\sigma \, \mathrm{d}{\sigma}/\mathrm{d}{x_E}$
 FullRange=1
 # END PLOT
 
 # BEGIN PLOT /ALEPH_2004_S5765862/d24-x01-y01
 Title=Charged particle spectrum ($E_\mathrm{CMS}=196$ GeV)
 XLabel=$x_E$
-YLabel=$1/\sigma \, \text{d}{\sigma}/\text{d}{x_E}$
+YLabel=$1/\sigma \, \mathrm{d}{\sigma}/\mathrm{d}{x_E}$
 FullRange=1
 # END PLOT
 
 # BEGIN PLOT /ALEPH_2004_S5765862/d25-x01-y01
 Title=Charged particle spectrum ($E_\mathrm{CMS}=200$ GeV)
 XLabel=$x_E$
-YLabel=$1/\sigma \, \text{d}{\sigma}/\text{d}{x_E}$
+YLabel=$1/\sigma \, \mathrm{d}{\sigma}/\mathrm{d}{x_E}$
 FullRange=1
 # END PLOT
 
 # BEGIN PLOT /ALEPH_2004_S5765862/d26-x01-y01
 Title=Charged particle spectrum ($E_\mathrm{CMS}=206$ GeV)
 XLabel=$x_E$
-YLabel=$1/\sigma \, \text{d}{\sigma}/\text{d}{x_E}$
+YLabel=$1/\sigma \, \mathrm{d}{\sigma}/\mathrm{d}{x_E}$
 FullRange=1
 # END PLOT
 
 # BEGIN PLOT /ALEPH_2004_S5765862/d27-x01-y01
 Title=In-plane $p_\perp$ in GeV w.r.t. thrust axes ($E_\mathrm{CMS}=133$ GeV)
-XLabel=$p_\perp^\text{in}$ / GeV
-YLabel=$N \, \text{d}{\sigma}/\text{d}{p_\perp^\text{in}}$
+XLabel=$p_\perp^\mathrm{in}$ / GeV
+YLabel=$N \, \mathrm{d}{\sigma}/\mathrm{d}{p_\perp^\mathrm{in}}$
 FullRange=1
 # END PLOT
 
 # BEGIN PLOT /ALEPH_2004_S5765862/d28-x01-y01
 Title=In-plane $p_\perp$ in GeV w.r.t. thrust axes ($E_\mathrm{CMS}=161$ GeV)
-XLabel=$p_\perp^\text{in}$ / GeV
-YLabel=$N \, \text{d}{\sigma}/\text{d}{p_\perp^\text{in}}$
+XLabel=$p_\perp^\mathrm{in}$ / GeV
+YLabel=$N \, \mathrm{d}{\sigma}/\mathrm{d}{p_\perp^\mathrm{in}}$
 FullRange=1
 # END PLOT
 
 # BEGIN PLOT /ALEPH_2004_S5765862/d29-x01-y01
 Title=In-plane $p_\perp$ in GeV w.r.t. thrust axes ($E_\mathrm{CMS}=172$ GeV)
-XLabel=$p_\perp^\text{in}$ / GeV
-YLabel=$N \, \text{d}{\sigma}/\text{d}{p_\perp^\text{in}}$
+XLabel=$p_\perp^\mathrm{in}$ / GeV
+YLabel=$N \, \mathrm{d}{\sigma}/\mathrm{d}{p_\perp^\mathrm{in}}$
 FullRange=1
 # END PLOT
 
 # BEGIN PLOT /ALEPH_2004_S5765862/d30-x01-y01
 Title=In-plane $p_\perp$ in GeV w.r.t. thrust axes ($E_\mathrm{CMS}=183$ GeV)
-XLabel=$p_\perp^\text{in}$ / GeV
-YLabel=$N \, \text{d}{\sigma}/\text{d}{p_\perp^\text{in}}$
+XLabel=$p_\perp^\mathrm{in}$ / GeV
+YLabel=$N \, \mathrm{d}{\sigma}/\mathrm{d}{p_\perp^\mathrm{in}}$
 FullRange=1
 # END PLOT
 
 # BEGIN PLOT /ALEPH_2004_S5765862/d31-x01-y01
 Title=In-plane $p_\perp$ in GeV w.r.t. thrust axes ($E_\mathrm{CMS}=189$ GeV)
-XLabel=$p_\perp^\text{in}$ / GeV
-YLabel=$N \, \text{d}{\sigma}/\text{d}{p_\perp^\text{in}}$
+XLabel=$p_\perp^\mathrm{in}$ / GeV
+YLabel=$N \, \mathrm{d}{\sigma}/\mathrm{d}{p_\perp^\mathrm{in}}$
 FullRange=1
 # END PLOT
 
 # BEGIN PLOT /ALEPH_2004_S5765862/d32-x01-y01
 Title=In-plane $p_\perp$ in GeV w.r.t. thrust axes ($E_\mathrm{CMS}=196$ GeV)
-XLabel=$p_\perp^\text{in}$ / GeV
-YLabel=$N \, \text{d}{\sigma}/\text{d}{p_\perp^\text{in}}$
+XLabel=$p_\perp^\mathrm{in}$ / GeV
+YLabel=$N \, \mathrm{d}{\sigma}/\mathrm{d}{p_\perp^\mathrm{in}}$
 FullRange=1
 # END PLOT
 
 # BEGIN PLOT /ALEPH_2004_S5765862/d33-x01-y01
 Title=In-plane $p_\perp$ in GeV w.r.t. thrust axes ($E_\mathrm{CMS}=200$ GeV)
-XLabel=$p_\perp^\text{in}$ / GeV
-YLabel=$N \, \text{d}{\sigma}/\text{d}{p_\perp^\text{in}}$
+XLabel=$p_\perp^\mathrm{in}$ / GeV
+YLabel=$N \, \mathrm{d}{\sigma}/\mathrm{d}{p_\perp^\mathrm{in}}$
 FullRange=1
 # END PLOT
 
 # BEGIN PLOT /ALEPH_2004_S5765862/d34-x01-y01
 Title=In-plane $p_\perp$ in GeV w.r.t. thrust axes ($E_\mathrm{CMS}=206$ GeV)
-XLabel=$p_\perp^\text{in}$ / GeV
-YLabel=$N \, \text{d}{\sigma}/\text{d}{p_\perp^\text{in}}$
+XLabel=$p_\perp^\mathrm{in}$ / GeV
+YLabel=$N \, \mathrm{d}{\sigma}/\mathrm{d}{p_\perp^\mathrm{in}}$
 FullRange=1
 # END PLOT
 
 # BEGIN PLOT /ALEPH_2004_S5765862/d35-x01-y01
 Title=Out-of-plane $p_\perp$ in GeV w.r.t. thrust axes ($E_\mathrm{CMS}=206$ GeV)
-XLabel=$p_\perp^\text{out}$ / GeV
-YLabel=$N \, \text{d}{\sigma}/\text{d}{p_\perp^\text{out}}$
+XLabel=$p_\perp^\mathrm{out}$ / GeV
+YLabel=$N \, \mathrm{d}{\sigma}/\mathrm{d}{p_\perp^\mathrm{out}}$
 FullRange=1
 # END PLOT
 
 # BEGIN PLOT /ALEPH_2004_S5765862/d36-x01-y01
 Title=Rapidity w.r.t. thrust axes, $y_T$ ($E_\mathrm{CMS}=133$ GeV)
 XLabel=$y_T$
-YLabel=$N \, \text{d}{\sigma}/\text{d}{y_T}$
+YLabel=$N \, \mathrm{d}{\sigma}/\mathrm{d}{y_T}$
 FullRange=1
 LegendXPos=0.05
 LegendYPos=0.2
@@ -259,7 +259,7 @@ LegendYPos=0.2
 # BEGIN PLOT /ALEPH_2004_S5765862/d37-x01-y01
 Title=Rapidity w.r.t. thrust axes, $y_T$ ($E_\mathrm{CMS}=161$ GeV)
 XLabel=$y_T$
-YLabel=$N \, \text{d}{\sigma}/\text{d}{y_T}$
+YLabel=$N \, \mathrm{d}{\sigma}/\mathrm{d}{y_T}$
 FullRange=1
 LegendXPos=0.05
 LegendYPos=0.2
@@ -268,7 +268,7 @@ LegendYPos=0.2
 # BEGIN PLOT /ALEPH_2004_S5765862/d38-x01-y01
 Title=Rapidity w.r.t. thrust axes, $y_T$ ($E_\mathrm{CMS}=172$ GeV)
 XLabel=$y_T$
-YLabel=$N \, \text{d}{\sigma}/\text{d}{y_T}$
+YLabel=$N \, \mathrm{d}{\sigma}/\mathrm{d}{y_T}$
 FullRange=1
 LegendXPos=0.05
 LegendYPos=0.2
@@ -277,7 +277,7 @@ LegendYPos=0.2
 # BEGIN PLOT /ALEPH_2004_S5765862/d39-x01-y01
 Title=Rapidity w.r.t. thrust axes, $y_T$ ($E_\mathrm{CMS}=183$ GeV)
 XLabel=$y_T$
-YLabel=$N \, \text{d}{\sigma}/\text{d}{y_T}$
+YLabel=$N \, \mathrm{d}{\sigma}/\mathrm{d}{y_T}$
 FullRange=1
 LegendXPos=0.05
 LegendYPos=0.2
@@ -286,7 +286,7 @@ LegendYPos=0.2
 # BEGIN PLOT /ALEPH_2004_S5765862/d40-x01-y01
 Title=Rapidity w.r.t. thrust axes, $y_T$ ($E_\mathrm{CMS}=189$ GeV)
 XLabel=$y_T$
-YLabel=$N \, \text{d}{\sigma}/\text{d}{y_T}$
+YLabel=$N \, \mathrm{d}{\sigma}/\mathrm{d}{y_T}$
 FullRange=1
 LegendXPos=0.05
 LegendYPos=0.2
@@ -295,7 +295,7 @@ LegendYPos=0.2
 # BEGIN PLOT /ALEPH_2004_S5765862/d41-x01-y01
 Title=Rapidity w.r.t. thrust axes, $y_T$ ($E_\mathrm{CMS}=196$ GeV)
 XLabel=$y_T$
-YLabel=$N \, \text{d}{\sigma}/\text{d}{y_T}$
+YLabel=$N \, \mathrm{d}{\sigma}/\mathrm{d}{y_T}$
 FullRange=1
 LegendXPos=0.05
 LegendYPos=0.2
@@ -304,7 +304,7 @@ LegendYPos=0.2
 # BEGIN PLOT /ALEPH_2004_S5765862/d42-x01-y01
 Title=Rapidity w.r.t. thrust axes, $y_T$ ($E_\mathrm{CMS}=200$ GeV)
 XLabel=$y_T$
-YLabel=$N \, \text{d}{\sigma}/\text{d}{y_T}$
+YLabel=$N \, \mathrm{d}{\sigma}/\mathrm{d}{y_T}$
 FullRange=1
 LegendXPos=0.05
 LegendYPos=0.2
@@ -313,7 +313,7 @@ LegendYPos=0.2
 # BEGIN PLOT /ALEPH_2004_S5765862/d43-x01-y01
 Title=Rapidity w.r.t. thrust axes, $y_T$ ($E_\mathrm{CMS}=206$ GeV)
 XLabel=$y_T$
-YLabel=$N \, \text{d}{\sigma}/\text{d}{y_T}$
+YLabel=$N \, \mathrm{d}{\sigma}/\mathrm{d}{y_T}$
 FullRange=1
 LegendXPos=0.05
 LegendYPos=0.2
@@ -322,7 +322,7 @@ LegendYPos=0.2
 # BEGIN PLOT /ALEPH_2004_S5765862/d44-x01-y01
 Title=Rapidity w.r.t. sphericity axes, $y_S$ ($E_\mathrm{CMS}=133$ GeV)
 XLabel=$y_S$
-YLabel=$N \, \text{d}{\sigma}/\text{d}{y_S}$
+YLabel=$N \, \mathrm{d}{\sigma}/\mathrm{d}{y_S}$
 FullRange=1
 LegendXPos=0.05
 LegendYPos=0.2
@@ -331,7 +331,7 @@ LegendYPos=0.2
 # BEGIN PLOT /ALEPH_2004_S5765862/d45-x01-y01
 Title=Rapidity w.r.t. sphericity axes, $y_S$ ($E_\mathrm{CMS}=161$ GeV)
 XLabel=$y_S$
-YLabel=$N \, \text{d}{\sigma}/\text{d}{y_S}$
+YLabel=$N \, \mathrm{d}{\sigma}/\mathrm{d}{y_S}$
 FullRange=1
 LegendXPos=0.05
 LegendYPos=0.2
@@ -340,7 +340,7 @@ LegendYPos=0.2
 # BEGIN PLOT /ALEPH_2004_S5765862/d46-x01-y01
 Title=Rapidity w.r.t. sphericity axes, $y_S$ ($E_\mathrm{CMS}=172$ GeV)
 XLabel=$y_S$
-YLabel=$N \, \text{d}{\sigma}/\text{d}{y_S}$
+YLabel=$N \, \mathrm{d}{\sigma}/\mathrm{d}{y_S}$
 FullRange=1
 LegendXPos=0.05
 LegendYPos=0.2
@@ -349,7 +349,7 @@ LegendYPos=0.2
 # BEGIN PLOT /ALEPH_2004_S5765862/d47-x01-y01
 Title=Rapidity w.r.t. sphericity axes, $y_S$ ($E_\mathrm{CMS}=183$ GeV)
 XLabel=$y_S$
-YLabel=$N \, \text{d}{\sigma}/\text{d}{y_S}$
+YLabel=$N \, \mathrm{d}{\sigma}/\mathrm{d}{y_S}$
 FullRange=1
 LegendXPos=0.05
 LegendYPos=0.2
@@ -358,7 +358,7 @@ LegendYPos=0.2
 # BEGIN PLOT /ALEPH_2004_S5765862/d48-x01-y01
 Title=Rapidity w.r.t. sphericity axes, $y_S$ ($E_\mathrm{CMS}=189$ GeV)
 XLabel=$y_S$
-YLabel=$N \, \text{d}{\sigma}/\text{d}{y_S}$
+YLabel=$N \, \mathrm{d}{\sigma}/\mathrm{d}{y_S}$
 FullRange=1
 LegendXPos=0.05
 LegendYPos=0.2
@@ -367,7 +367,7 @@ LegendYPos=0.2
 # BEGIN PLOT /ALEPH_2004_S5765862/d49-x01-y01
 Title=Rapidity w.r.t. sphericity axes, $y_S$ ($E_\mathrm{CMS}=196$ GeV)
 XLabel=$y_S$
-YLabel=$N \, \text{d}{\sigma}/\text{d}{y_S}$
+YLabel=$N \, \mathrm{d}{\sigma}/\mathrm{d}{y_S}$
 FullRange=1
 LegendXPos=0.05
 LegendYPos=0.2
@@ -376,7 +376,7 @@ LegendYPos=0.2
 # BEGIN PLOT /ALEPH_2004_S5765862/d50-x01-y01
 Title=Rapidity w.r.t. sphericity axes, $y_S$ ($E_\mathrm{CMS}=200$ GeV)
 XLabel=$y_S$
-YLabel=$N \, \text{d}{\sigma}/\text{d}{y_S}$
+YLabel=$N \, \mathrm{d}{\sigma}/\mathrm{d}{y_S}$
 FullRange=1
 LegendXPos=0.05
 LegendYPos=0.2
@@ -385,7 +385,7 @@ LegendYPos=0.2
 # BEGIN PLOT /ALEPH_2004_S5765862/d51-x01-y01
 Title=Rapidity w.r.t. sphericity axes, $y_S$ ($E_\mathrm{CMS}=206$ GeV)
 XLabel=$y_S$
-YLabel=$N \, \text{d}{\sigma}/\text{d}{y_S}$
+YLabel=$N \, \mathrm{d}{\sigma}/\mathrm{d}{y_S}$
 FullRange=1
 LegendXPos=0.05
 LegendYPos=0.2
@@ -1404,14 +1404,14 @@ LegendYPos=0.4
 # BEGIN PLOT /ALEPH_2004_S5765862/d187-x01-y01
 Title=1-jet fraction ($E_\mathrm{CMS}=91.2$ GeV)
 XLabel=$\ln(y_\mathrm{cut})$
-YLabel=$\sigma(\text{1 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\mathrm{1~jet})/\sigma(\mathrm{inclusive})$
 LegendYPos=0.5
 # END PLOT
 
 # BEGIN PLOT /ALEPH_2004_S5765862/d188-x01-y01
 Title=1-jet fraction ($E_\mathrm{CMS}=133$ GeV)
 XLabel=$\log(y_\mathrm{cut})$
-YLabel=$\sigma(\text{1 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\mathrm{1~jet})/\sigma(\mathrm{inclusive})$
 LegendYPos=0.8
 LegendXPos=0.05
 # END PLOT
@@ -1419,7 +1419,7 @@ LegendXPos=0.05
 # BEGIN PLOT /ALEPH_2004_S5765862/d189-x01-y01
 Title=1-jet fraction ($E_\mathrm{CMS}=161$ GeV)
 XLabel=$\log(y_\mathrm{cut})$
-YLabel=$\sigma(\text{1 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\mathrm{1~jet})/\sigma(\mathrm{inclusive})$
 LegendYPos=0.8
 LegendXPos=0.05
 # END PLOT
@@ -1427,7 +1427,7 @@ LegendXPos=0.05
 # BEGIN PLOT /ALEPH_2004_S5765862/d190-x01-y01
 Title=1-jet fraction ($E_\mathrm{CMS}=172$ GeV)
 XLabel=$\log(y_\mathrm{cut})$
-YLabel=$\sigma(\text{1 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\mathrm{1~jet})/\sigma(\mathrm{inclusive})$
 LegendYPos=0.8
 LegendXPos=0.05
 # END PLOT
@@ -1435,7 +1435,7 @@ LegendXPos=0.05
 # BEGIN PLOT /ALEPH_2004_S5765862/d191-x01-y01
 Title=1-jet fraction ($E_\mathrm{CMS}=183$ GeV)
 XLabel=$\log(y_\mathrm{cut})$
-YLabel=$\sigma(\text{1 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\mathrm{1~jet})/\sigma(\mathrm{inclusive})$
 LegendYPos=0.8
 LegendXPos=0.05
 # END PLOT
@@ -1443,7 +1443,7 @@ LegendXPos=0.05
 # BEGIN PLOT /ALEPH_2004_S5765862/d192-x01-y01
 Title=1-jet fraction ($E_\mathrm{CMS}=189$ GeV)
 XLabel=$\log(y_\mathrm{cut})$
-YLabel=$\sigma(\text{1 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\mathrm{1~jet})/\sigma(\mathrm{inclusive})$
 LegendYPos=0.8
 LegendXPos=0.05
 # END PLOT
@@ -1451,7 +1451,7 @@ LegendXPos=0.05
 # BEGIN PLOT /ALEPH_2004_S5765862/d193-x01-y01
 Title=1-jet fraction ($E_\mathrm{CMS}=200$ GeV)
 XLabel=$\log(y_\mathrm{cut})$
-YLabel=$\sigma(\text{1 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\mathrm{1~jet})/\sigma(\mathrm{inclusive})$
 LegendYPos=0.8
 LegendXPos=0.05
 # END PLOT
@@ -1459,7 +1459,7 @@ LegendXPos=0.05
 # BEGIN PLOT /ALEPH_2004_S5765862/d194-x01-y01
 Title=1-jet fraction ($E_\mathrm{CMS}=206$ GeV)
 XLabel=$\log(y_\mathrm{cut})$
-YLabel=$\sigma(\text{1 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\mathrm{1~jet})/\sigma(\mathrm{inclusive})$
 LegendYPos=0.8
 LegendXPos=0.05
 # END PLOT
@@ -1467,63 +1467,63 @@ LegendXPos=0.05
 # BEGIN PLOT /ALEPH_2004_S5765862/d195-x01-y01
 Title=2-jet fraction ($E_\mathrm{CMS}=91.2$ GeV)
 XLabel=$\ln(y_\mathrm{cut})$
-YLabel=$\sigma(\text{2 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\mathrm{2~jet})/\sigma(\mathrm{inclusive})$
 LegendYPos=0.6
 # END PLOT
 
 # BEGIN PLOT /ALEPH_2004_S5765862/d196-x01-y01
 Title=2-jet fraction ($E_\mathrm{CMS}=133$ GeV)
 XLabel=$\log(y_\mathrm{cut})$
-YLabel=$\sigma(\text{2 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\mathrm{2~jet})/\sigma(\mathrm{inclusive})$
 LegendYPos=0.6
 # END PLOT
 
 # BEGIN PLOT /ALEPH_2004_S5765862/d197-x01-y01
 Title=2-jet fraction ($E_\mathrm{CMS}=161$ GeV)
 XLabel=$\log(y_\mathrm{cut})$
-YLabel=$\sigma(\text{2 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\mathrm{2~jet})/\sigma(\mathrm{inclusive})$
 LegendYPos=0.6
 # END PLOT
 
 # BEGIN PLOT /ALEPH_2004_S5765862/d198-x01-y01
 Title=2-jet fraction ($E_\mathrm{CMS}=172$ GeV)
 XLabel=$\log(y_\mathrm{cut})$
-YLabel=$\sigma(\text{2 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\mathrm{2~jet})/\sigma(\mathrm{inclusive})$
 LegendYPos=0.6
 # END PLOT
 
 # BEGIN PLOT /ALEPH_2004_S5765862/d199-x01-y01
 Title=2-jet fraction ($E_\mathrm{CMS}=183$ GeV)
 XLabel=$\log(y_\mathrm{cut})$
-YLabel=$\sigma(\text{2 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\mathrm{2~jet})/\sigma(\mathrm{inclusive})$
 LegendYPos=0.6
 # END PLOT
 
 # BEGIN PLOT /ALEPH_2004_S5765862/d200-x01-y01
 Title=2-jet fraction ($E_\mathrm{CMS}=189$ GeV)
 XLabel=$\log(y_\mathrm{cut})$
-YLabel=$\sigma(\text{2 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\mathrm{2~jet})/\sigma(\mathrm{inclusive})$
 LegendYPos=0.6
 # END PLOT
 
 # BEGIN PLOT /ALEPH_2004_S5765862/d201-x01-y01
 Title=2-jet fraction ($E_\mathrm{CMS}=200$ GeV)
 XLabel=$\log(y_\mathrm{cut})$
-YLabel=$\sigma(\text{2 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\mathrm{2~jet})/\sigma(\mathrm{inclusive})$
 LegendYPos=0.6
 # END PLOT
 
 # BEGIN PLOT /ALEPH_2004_S5765862/d202-x01-y01
 Title=2-jet fraction ($E_\mathrm{CMS}=206$ GeV)
 XLabel=$\log(y_\mathrm{cut})$
-YLabel=$\sigma(\text{2 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\mathrm{2~jet})/\sigma(\mathrm{inclusive})$
 LegendYPos=0.6
 # END PLOT
 
 # BEGIN PLOT /ALEPH_2004_S5765862/d203-x01-y01
 Title=3-jet fraction ($E_\mathrm{CMS}=91.2$ GeV)
 XLabel=$\ln(y_\mathrm{cut})$
-YLabel=$\sigma(\text{3 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\mathrm{3~jet})/\sigma(\mathrm{inclusive})$
 LegendXPos=0.25
 LegendYPos=0.6
 # END PLOT
@@ -1531,7 +1531,7 @@ LegendYPos=0.6
 # BEGIN PLOT /ALEPH_2004_S5765862/d204-x01-y01
 Title=3-jet fraction ($E_\mathrm{CMS}=133$ GeV)
 XLabel=$\log(y_\mathrm{cut})$
-YLabel=$\sigma(\text{3 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\mathrm{3~jet})/\sigma(\mathrm{inclusive})$
 LegendXPos=0.25
 LegendYPos=0.6
 # END PLOT
@@ -1539,7 +1539,7 @@ LegendYPos=0.6
 # BEGIN PLOT /ALEPH_2004_S5765862/d205-x01-y01
 Title=3-jet fraction ($E_\mathrm{CMS}=161$ GeV)
 XLabel=$\log(y_\mathrm{cut})$
-YLabel=$\sigma(\text{3 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\mathrm{3~jet})/\sigma(\mathrm{inclusive})$
 LegendXPos=0.25
 LegendYPos=0.6
 # END PLOT
@@ -1547,7 +1547,7 @@ LegendYPos=0.6
 # BEGIN PLOT /ALEPH_2004_S5765862/d206-x01-y01
 Title=3-jet fraction ($E_\mathrm{CMS}=172$ GeV)
 XLabel=$\log(y_\mathrm{cut})$
-YLabel=$\sigma(\text{3 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\mathrm{3~jet})/\sigma(\mathrm{inclusive})$
 LegendXPos=0.25
 LegendYPos=0.6
 # END PLOT
@@ -1555,7 +1555,7 @@ LegendYPos=0.6
 # BEGIN PLOT /ALEPH_2004_S5765862/d207-x01-y01
 Title=3-jet fraction ($E_\mathrm{CMS}=183$ GeV)
 XLabel=$\log(y_\mathrm{cut})$
-YLabel=$\sigma(\text{3 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\mathrm{3~jet})/\sigma(\mathrm{inclusive})$
 LegendXPos=0.25
 LegendYPos=0.6
 # END PLOT
@@ -1563,7 +1563,7 @@ LegendYPos=0.6
 # BEGIN PLOT /ALEPH_2004_S5765862/d208-x01-y01
 Title=3-jet fraction ($E_\mathrm{CMS}=189$ GeV)
 XLabel=$\log(y_\mathrm{cut})$
-YLabel=$\sigma(\text{3 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\mathrm{3~jet})/\sigma(\mathrm{inclusive})$
 LegendXPos=0.25
 LegendYPos=0.6
 # END PLOT
@@ -1571,7 +1571,7 @@ LegendYPos=0.6
 # BEGIN PLOT /ALEPH_2004_S5765862/d209-x01-y01
 Title=3-jet fraction ($E_\mathrm{CMS}=200$ GeV)
 XLabel=$\log(y_\mathrm{cut})$
-YLabel=$\sigma(\text{3 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\mathrm{3~jet})/\sigma(\mathrm{inclusive})$
 LegendXPos=0.25
 LegendYPos=0.6
 # END PLOT
@@ -1579,7 +1579,7 @@ LegendYPos=0.6
 # BEGIN PLOT /ALEPH_2004_S5765862/d210-x01-y01
 Title=3-jet fraction ($E_\mathrm{CMS}=206$ GeV)
 XLabel=$\log(y_\mathrm{cut})$
-YLabel=$\sigma(\text{3 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\mathrm{3~jet})/\sigma(\mathrm{inclusive})$
 LegendXPos=0.25
 LegendYPos=0.6
 # END PLOT
@@ -1587,7 +1587,7 @@ LegendYPos=0.6
 # BEGIN PLOT /ALEPH_2004_S5765862/d211-x01-y01
 Title=4-jet fraction ($E_\mathrm{CMS}=91.2$ GeV)
 XLabel=$\ln(y_\mathrm{cut})$
-YLabel=$\sigma(\text{4 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\mathrm{4~jet})/\sigma(\mathrm{inclusive})$
 LegendXPos=0.15
 LegendYPos=0.6
 # END PLOT
@@ -1595,7 +1595,7 @@ LegendYPos=0.6
 # BEGIN PLOT /ALEPH_2004_S5765862/d212-x01-y01
 Title=4-jet fraction ($E_\mathrm{CMS}=133$ GeV)
 XLabel=$\log(y_\mathrm{cut})$
-YLabel=$\sigma(\text{4 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\mathrm{4~jet})/\sigma(\mathrm{inclusive})$
 LegendXPos=0.35
 LegendYPos=0.6
 # END PLOT
@@ -1603,7 +1603,7 @@ LegendYPos=0.6
 # BEGIN PLOT /ALEPH_2004_S5765862/d213-x01-y01
 Title=4-jet fraction ($E_\mathrm{CMS}=161$ GeV)
 XLabel=$\log(y_\mathrm{cut})$
-YLabel=$\sigma(\text{4 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\mathrm{4~jet})/\sigma(\mathrm{inclusive})$
 LegendXPos=0.35
 LegendYPos=0.6
 # END PLOT
@@ -1611,7 +1611,7 @@ LegendYPos=0.6
 # BEGIN PLOT /ALEPH_2004_S5765862/d214-x01-y01
 Title=4-jet fraction ($E_\mathrm{CMS}=172$ GeV)
 XLabel=$\log(y_\mathrm{cut})$
-YLabel=$\sigma(\text{4 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\mathrm{4~jet})/\sigma(\mathrm{inclusive})$
 LegendXPos=0.35
 LegendYPos=0.6
 # END PLOT
@@ -1619,7 +1619,7 @@ LegendYPos=0.6
 # BEGIN PLOT /ALEPH_2004_S5765862/d215-x01-y01
 Title=4-jet fraction ($E_\mathrm{CMS}=183$ GeV)
 XLabel=$\log(y_\mathrm{cut})$
-YLabel=$\sigma(\text{4 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\mathrm{4~jet})/\sigma(\mathrm{inclusive})$
 LegendXPos=0.35
 LegendYPos=0.6
 # END PLOT
@@ -1627,7 +1627,7 @@ LegendYPos=0.6
 # BEGIN PLOT /ALEPH_2004_S5765862/d216-x01-y01
 Title=4-jet fraction ($E_\mathrm{CMS}=189$ GeV)
 XLabel=$\log(y_\mathrm{cut})$
-YLabel=$\sigma(\text{4 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\mathrm{4~jet})/\sigma(\mathrm{inclusive})$
 LegendXPos=0.35
 LegendYPos=0.6
 # END PLOT
@@ -1635,7 +1635,7 @@ LegendYPos=0.6
 # BEGIN PLOT /ALEPH_2004_S5765862/d217-x01-y01
 Title=4-jet fraction ($E_\mathrm{CMS}=200$ GeV)
 XLabel=$\log(y_\mathrm{cut})$
-YLabel=$\sigma(\text{4 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\mathrm{4~jet})/\sigma(\mathrm{inclusive})$
 LegendXPos=0.35
 LegendYPos=0.6
 # END PLOT
@@ -1643,7 +1643,7 @@ LegendYPos=0.6
 # BEGIN PLOT /ALEPH_2004_S5765862/d218-x01-y01
 Title=4-jet fraction ($E_\mathrm{CMS}=206$ GeV)
 XLabel=$\log(y_\mathrm{cut})$
-YLabel=$\sigma(\text{4 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\mathrm{4~jet})/\sigma(\mathrm{inclusive})$
 LegendXPos=0.35
 LegendYPos=0.6
 # END PLOT
@@ -1651,7 +1651,7 @@ LegendYPos=0.6
 # BEGIN PLOT /ALEPH_2004_S5765862/d219-x01-y01
 Title=5-jet fraction ($E_\mathrm{CMS}=91.2$ GeV)
 XLabel=$\ln(y_\mathrm{cut})$
-YLabel=$\sigma(\text{5 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\mathrm{5~jet})/\sigma(\mathrm{inclusive})$
 LegendXPos=0.15
 LegendYPos=0.6
 # END PLOT
@@ -1659,7 +1659,7 @@ LegendYPos=0.6
 # BEGIN PLOT /ALEPH_2004_S5765862/d220-x01-y01
 Title=5-jet fraction ($E_\mathrm{CMS}=133$ GeV)
 XLabel=$\log(y_\mathrm{cut})$
-YLabel=$\sigma(\text{5 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\mathrm{5~jet})/\sigma(\mathrm{inclusive})$
 LegendXPos=0.35
 LegendYPos=0.6
 # END PLOT
@@ -1667,7 +1667,7 @@ LegendYPos=0.6
 # BEGIN PLOT /ALEPH_2004_S5765862/d221-x01-y01
 Title=5-jet fraction ($E_\mathrm{CMS}=161$ GeV)
 XLabel=$\log(y_\mathrm{cut})$
-YLabel=$\sigma(\text{5 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\mathrm{5~jet})/\sigma(\mathrm{inclusive})$
 LegendXPos=0.35
 LegendYPos=0.6
 # END PLOT
@@ -1675,7 +1675,7 @@ LegendYPos=0.6
 # BEGIN PLOT /ALEPH_2004_S5765862/d222-x01-y01
 Title=5-jet fraction ($E_\mathrm{CMS}=172$ GeV)
 XLabel=$\log(y_\mathrm{cut})$
-YLabel=$\sigma(\text{5 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\mathrm{5~jet})/\sigma(\mathrm{inclusive})$
 LegendXPos=0.35
 LegendYPos=0.6
 # END PLOT
@@ -1683,7 +1683,7 @@ LegendYPos=0.6
 # BEGIN PLOT /ALEPH_2004_S5765862/d223-x01-y01
 Title=5-jet fraction ($E_\mathrm{CMS}=183$ GeV)
 XLabel=$\log(y_\mathrm{cut})$
-YLabel=$\sigma(\text{5 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\mathrm{5~jet})/\sigma(\mathrm{inclusive})$
 LegendXPos=0.35
 LegendYPos=0.6
 # END PLOT
@@ -1691,7 +1691,7 @@ LegendYPos=0.6
 # BEGIN PLOT /ALEPH_2004_S5765862/d224-x01-y01
 Title=5-jet fraction ($E_\mathrm{CMS}=189$ GeV)
 XLabel=$\log(y_\mathrm{cut})$
-YLabel=$\sigma(\text{5 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\mathrm{5~jet})/\sigma(\mathrm{inclusive})$
 LegendXPos=0.35
 LegendYPos=0.6
 # END PLOT
@@ -1699,7 +1699,7 @@ LegendYPos=0.6
 # BEGIN PLOT /ALEPH_2004_S5765862/d225-x01-y01
 Title=5-jet fraction ($E_\mathrm{CMS}=200$ GeV)
 XLabel=$\log(y_\mathrm{cut})$
-YLabel=$\sigma(\text{5 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\mathrm{5~jet})/\sigma(\mathrm{inclusive})$
 LegendXPos=0.35
 LegendYPos=0.6
 # END PLOT
@@ -1707,7 +1707,7 @@ LegendYPos=0.6
 # BEGIN PLOT /ALEPH_2004_S5765862/d226-x01-y01
 Title=5-jet fraction ($E_\mathrm{CMS}=206$ GeV)
 XLabel=$\log(y_\mathrm{cut})$
-YLabel=$\sigma(\text{5 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\mathrm{5~jet})/\sigma(\mathrm{inclusive})$
 LegendXPos=0.35
 LegendYPos=0.6
 # END PLOT
@@ -1715,7 +1715,7 @@ LegendYPos=0.6
 # BEGIN PLOT /ALEPH_2004_S5765862/d227-x01-y01
 Title=$\geq$6-jet fraction ($E_\mathrm{CMS}=91.2$ GeV)
 XLabel=$\ln(y_\mathrm{cut})$
-YLabel=$\sigma($\geq$\text{6 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\geq\mathrm{6~jet})/\sigma(\mathrm{inclusive})$
 LegendXPos=0.05
 LegendYPos=0.6
 # END PLOT
@@ -1723,7 +1723,7 @@ LegendYPos=0.6
 # BEGIN PLOT /ALEPH_2004_S5765862/d228-x01-y01
 Title=$\geq$6-jet fraction ($E_\mathrm{CMS}=133$ GeV)
 XLabel=$\log(y_\mathrm{cut})$
-YLabel=$\sigma($\geq$\text{6 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\geq\mathrm{6~jet})/\sigma(\mathrm{inclusive})$
 LegendXPos=0.05
 LegendYPos=0.6
 # END PLOT
@@ -1731,7 +1731,7 @@ LegendYPos=0.6
 # BEGIN PLOT /ALEPH_2004_S5765862/d229-x01-y01
 Title=$\geq$6-jet fraction ($E_\mathrm{CMS}=161$ GeV)
 XLabel=$\log(y_\mathrm{cut})$
-YLabel=$\sigma($\geq$\text{6 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\geq\mathrm{6~jet})/\sigma(\mathrm{inclusive})$
 LegendXPos=0.05
 LegendYPos=0.6
 # END PLOT
@@ -1739,7 +1739,7 @@ LegendYPos=0.6
 # BEGIN PLOT /ALEPH_2004_S5765862/d230-x01-y01
 Title=$\geq$6-jet fraction ($E_\mathrm{CMS}=172$ GeV)
 XLabel=$\log(y_\mathrm{cut})$
-YLabel=$\sigma($\geq$\text{6 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\geq\mathrm{6~jet})/\sigma(\mathrm{inclusive})$
 LegendXPos=0.05
 LegendYPos=0.6
 # END PLOT
@@ -1747,7 +1747,7 @@ LegendYPos=0.6
 # BEGIN PLOT /ALEPH_2004_S5765862/d231-x01-y01
 Title=$\geq$6-jet fraction ($E_\mathrm{CMS}=183$ GeV)
 XLabel=$\log(y_\mathrm{cut})$
-YLabel=$\sigma($\geq$\text{6 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\geq\mathrm{6~jet})/\sigma(\mathrm{inclusive})$
 LegendXPos=0.05
 LegendYPos=0.6
 # END PLOT
@@ -1755,7 +1755,7 @@ LegendYPos=0.6
 # BEGIN PLOT /ALEPH_2004_S5765862/d232-x01-y01
 Title=$\geq$6-jet fraction ($E_\mathrm{CMS}=189$ GeV)
 XLabel=$\log(y_\mathrm{cut})$
-YLabel=$\sigma($\geq$\text{6 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\geq\mathrm{6~jet})/\sigma(\mathrm{inclusive})$
 LegendXPos=0.05
 LegendYPos=0.6
 # END PLOT
@@ -1763,7 +1763,7 @@ LegendYPos=0.6
 # BEGIN PLOT /ALEPH_2004_S5765862/d233-x01-y01
 Title=$\geq$6-jet fraction ($E_\mathrm{CMS}=200$ GeV)
 XLabel=$\log(y_\mathrm{cut})$
-YLabel=$\sigma($\geq$\text{6 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\geq\mathrm{6~jet})/\sigma(\mathrm{inclusive})$
 LegendXPos=0.05
 LegendYPos=0.6
 # END PLOT
@@ -1771,7 +1771,7 @@ LegendYPos=0.6
 # BEGIN PLOT /ALEPH_2004_S5765862/d234-x01-y01
 Title=$\geq$6-jet fraction ($E_\mathrm{CMS}=206$ GeV)
 XLabel=$\log(y_\mathrm{cut})$
-YLabel=$\sigma($\geq$\text{6 jet})/\sigma(\text{inclusive})$
+YLabel=$\sigma(\geq\mathrm{6~jet})/\sigma(\mathrm{inclusive})$
 LegendXPos=0.05
 LegendYPos=0.6
 # END PLOT

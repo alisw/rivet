@@ -1,0 +1,204 @@
+{
+    "236982": [
+        "Observation of Octet and Decuplet Hyperons in $e^+ e^-$ Annihilation at 10-{GeV} Center-of-mass Energy", 
+        "ARGUS", 
+        "10.1016/0370-2693(87)90988-9", 
+        null, 
+        null, 
+        "ins236982", 
+        null, 
+        [
+            "DESY-86-130"
+        ]
+    ], 
+    "237550": [
+        "Search for Lepton Number and Lepton Flavor Violation in Tau Decays", 
+        "ARGUS", 
+        "10.1016/0370-2693(87)91560-7", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-86-137"
+        ]
+    ], 
+    "237930": [
+        "Evidence for the Decay tau- ---> tau-neutrino omega pi-", 
+        "ARGUS", 
+        "10.1016/0370-2693(87)91559-0", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-86-142"
+        ]
+    ], 
+    "238071": [
+        "The Hadronic Transitions From $\\Upsilon$ (2s) to $\\Upsilon$ (1s)", 
+        "ARGUS", 
+        "10.1007/BF01570762", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-86-169"
+        ]
+    ], 
+    "238822": [
+        "Reconstruction of B Mesons", 
+        "ARGUS", 
+        "10.1016/0370-2693(87)91558-9", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-86-166"
+        ]
+    ], 
+    "245349": [
+        "Observation of Inclusive $D(s$) Production in $B$ Meson Decay", 
+        "ARGUS", 
+        "10.1016/0370-2693(87)91123-3", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-87-001"
+        ]
+    ], 
+    "247005": [
+        "The Decay D0 $\\to \\bar{K}0 \\phi$.", 
+        "ARGUS", 
+        "10.1007/BF01552541", 
+        null, 
+        null, 
+        null, 
+        null, 
+        []
+    ], 
+    "247365": [
+        "Search for the Decay $D$(s) $\\to \\rho^0 \\pi$ as Evidence for Quark Annihilation", 
+        "ARGUS", 
+        "10.1016/0370-2693(87)90893-8", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-87-045"
+        ]
+    ], 
+    "247474": [
+        "Measurement of $\\eta^\\prime \\to \\pi^+ \\pi^- \\gamma$ in $\\gamma \\gamma$ Collisions", 
+        "ARGUS", 
+        "10.1016/0370-2693(87)90953-1", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-87-063"
+        ]
+    ], 
+    "247566": [
+        "First Observation of $\\gamma \\gamma \\to \\omega \\omega$", 
+        "ARGUS", 
+        "10.1016/0370-2693(87)90921-X", 
+        null, 
+        null, 
+        "ins247566", 
+        null, 
+        [
+            "DESY-87-052"
+        ]
+    ], 
+    "248648": [
+        "Search for the Decay $\\tau^- \\to \\nu_\\tau \\eta \\pi^-$", 
+        "ARGUS", 
+        "10.1016/0370-2693(87)91214-7", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-87-055"
+        ]
+    ], 
+    "248655": [
+        "Determination of $\\alpha^- s$ From a Measurement of the Direct Photon Spectrum in $\\Upsilon$ (1s) Decays", 
+        "ARGUS", 
+        "10.1016/0370-2693(87)91377-3", 
+        null, 
+        null, 
+        "ins248655", 
+        null, 
+        [
+            "DESY-87-087"
+        ]
+    ], 
+    "248680": [
+        "First Observation of $\\gamma \\gamma \\to K^*0 \\bar{K}^*$0", 
+        "ARGUS", 
+        "10.1016/0370-2693(87)91508-5", 
+        null, 
+        null, 
+        "ins248680", 
+        null, 
+        [
+            "DESY-87-095"
+        ]
+    ], 
+    "249372": [
+        "AN UPPER LIMIT ON D0 - anti-D0 MIXING", 
+        "ARGUS", 
+        "10.1016/0370-2693(87)90951-8", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-87-085"
+        ]
+    ], 
+    "249373": [
+        "Measurement of the Decay B0 ---> D*- Lepton+ Neutrino", 
+        "ARGUS", 
+        "10.1016/0370-2693(87)90419-9", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-87/079"
+        ]
+    ], 
+    "250275": [
+        "A Measurement of the Tau Lifetime", 
+        "ARGUS", 
+        "10.1016/0370-2693(87)91631-5", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-87-128"
+        ]
+    ], 
+    "251258": [
+        "B Meson Decays Into Charmonium States", 
+        "ARGUS", 
+        "10.1016/0370-2693(87)90952-X", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-87-111"
+        ]
+    ]
+}

@@ -1,0 +1,37 @@
+Name: BESIII_2021_I1868813
+Year: 2021
+Summary: Cross section for $K^0_S$ production for energies between 3.645 and 3.7 GeV 
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1868813
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett.B 820 (2021) 136576
+RunInfo: 
+  e+ e- to hadrons
+Beams: [e-, e+]
+Description:
+  'Cross section for the production of $K^0_S$ for energies between 3.645 and 3.7, i.e near the $\psi(2S)$ resonace measured by BESIII.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2021kwf
+BibTeX: '@article{BESIII:2021kwf,
+    author = "Ablikim, Medina and others",
+    collaboration = "BESIII",
+    title = "{Measurement of the inclusive branching fraction for $\psi(3686)\rightarrow K_{S}^{0} + \text{anything}$}",
+    eprint = "2106.08766",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1016/j.physletb.2021.136576",
+    journal = "Phys. Lett. B",
+    volume = "820",
+    pages = "136576",
+    year = "2021"
+}
+'

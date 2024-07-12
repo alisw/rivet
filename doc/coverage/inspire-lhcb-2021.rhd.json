@@ -1,0 +1,328 @@
+{
+    "1817021": [
+        "Observation of Multiplicity Dependent Prompt $\\chi_{c1}(3872)$ and $\\psi(2S)$ Production in $pp$ Collisions", 
+        "LHCb", 
+        "10.1103/PhysRevLett.126.092001", 
+        "2730453", 
+        "2009.06619", 
+        null, 
+        null, 
+        [
+            "LHCb-PAPER-2020-023", 
+            "CERN-EP-2020-161"
+        ]
+    ], 
+    "1823424": [
+        "Measurement of the CKM angle $\\gamma$ in $B^\\pm\\to D K^\\pm$ and $B^\\pm \\to D \\pi^\\pm$ decays with $D \\to K_\\mathrm S^0 h^+ h^-$", 
+        "LHCb", 
+        "10.1007/JHEP02(2021)169", 
+        "2742273", 
+        "2010.08483", 
+        null, 
+        null, 
+        [
+            "LHCb-PAPER-2020-019", 
+            "CERN-EP-2020-175"
+        ]
+    ], 
+    "1823739": [
+        "Measurement of differential $ b\\overline{b} $- and $ c\\overline{c} $-dijet cross-sections in the forward region of $pp$ collisions at $ \\sqrt{s} $ = 13 TeV", 
+        "LHCb", 
+        "10.1007/JHEP02(2021)023", 
+        "2742421", 
+        "2010.09437", 
+        null, 
+        null, 
+        [
+            "LHCb-PAPER-2020-018", 
+            "CERN-EP-2020-174"
+        ]
+    ], 
+    "1825957": [
+        "Measurement of the branching fraction of the ${{B} ^0} {\\rightarrow }{{D} ^+_{s}} {{\\pi } ^-} $ decay", 
+        "LHCb", 
+        "10.1140/epjc/s10052-020-08790-2", 
+        "2742603", 
+        "2010.11986", 
+        null, 
+        null, 
+        [
+            "LHCb-PAPER-2020-021", 
+            "CERN-EP-2020-183"
+        ]
+    ], 
+    "1826502": [
+        "Observation of a new $\\Xi_b^0$ state", 
+        "LHCb", 
+        "10.1103/PhysRevD.103.012004", 
+        "2742940", 
+        "2010.14485", 
+        null, 
+        null, 
+        [
+            "LHCb-PAPER-2020-032", 
+            "CERN-EP-2020-190"
+        ]
+    ], 
+    "1827313": [
+        "Observation of new excited ${B} ^0_{s} $ states", 
+        "LHCb", 
+        "10.1140/epjc/s10052-021-09305-3", 
+        "2743367", 
+        "2010.15931", 
+        null, 
+        null, 
+        [
+            "LHCb-PAPER-2020-026", 
+            "CERN-EP-2020-185"
+        ]
+    ], 
+    "1827570": [
+        "Searches for 25 rare and forbidden decays of $D^{+}$ and $ {D}_s^{+} $ mesons", 
+        "LHCb", 
+        "10.1007/JHEP06(2021)044", 
+        "2743479", 
+        "2011.00217", 
+        null, 
+        null, 
+        [
+            "LHCb-PAPER-2020-007", 
+            "CERN-EP-2020-140"
+        ]
+    ], 
+    "1827842": [
+        "Study of $B^0_s \\to J\\psi \\pi^+\\pi^-K^+K^-$ decays", 
+        "LHCb", 
+        "10.1007/JHEP02(2021)024", 
+        "2743614", 
+        "2011.01867", 
+        null, 
+        null, 
+        [
+            "LHCb-PAPER-2020-35", 
+            "CERN-EP-2020-192"
+        ]
+    ], 
+    "1829334": [
+        "Search for heavy neutral leptons in $W^+\\to\\mu^{+}\\mu^{\\pm}\\text{jet}$ decays", 
+        "LHCb", 
+        "10.1140/epjc/s10052-021-08973-5", 
+        "2744120", 
+        "2011.05263", 
+        null, 
+        null, 
+        [
+            "LHCb-PAPER-2020-022", 
+            "CERN-EP-2020-194"
+        ]
+    ], 
+    "1830226": [
+        "Search for the rare decay $B^0 \\rightarrow J/\\psi \\phi$", 
+        "LHCb", 
+        "10.1088/1674-1137/abdf40", 
+        "2744680", 
+        "2011.06847", 
+        null, 
+        null, 
+        [
+            "LHCb-PAPER-2020-033", 
+            "CERN-EP-2020-204"
+        ]
+    ], 
+    "1831034": [
+        "Observation of a New Excited $D^+_s$ Meson in $B^0 \\rightarrow D^- D^+ K^+ \\pi^-$ Decays", 
+        "LHCb", 
+        "10.1103/PhysRevLett.126.122002", 
+        "2745015", 
+        "2011.09112", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2020-203", 
+            "LHCb-PAPER-2020-034"
+        ]
+    ], 
+    "1832625": [
+        "Measurement of the CKM angle $\\gamma$ and $B^0_s$-$\\bar{B}^0_s$ mixing frequency with $B^0_s \\rightarrow D_s^\\mp h^\\pm \\pi^\\pm \\pi^\\mp$ decays", 
+        "LHCb", 
+        "10.1007/JHEP03(2021)137", 
+        "2745794", 
+        "2011.12041", 
+        null, 
+        null, 
+        [
+            "LHCb-PAPER-2020-030", 
+            "CERN-EP-2020-214"
+        ]
+    ], 
+    "1833705": [
+        "Observation of the $\\Lambda^0_b \\to \\Lambda^+_c K^+ K^- \\pi^-$ decay", 
+        "LHCb", 
+        "10.1016/j.physletb.2021.136172", 
+        "2746110", 
+        "2011.13738", 
+        null, 
+        null, 
+        [
+            "LHCb-PAPER-2020-028", 
+            "CERN-EP-2020-209", 
+            "LHCB-PAPER-2020-028"
+        ]
+    ], 
+    "1835149": [
+        "Search for long-lived particles decaying to $e^\\pm \\mu^\\mp \\nu$", 
+        "LHCb", 
+        "10.1140/epjc/s10052-021-08994-0", 
+        "2746781", 
+        "2012.02696", 
+        null, 
+        null, 
+        [
+            "LHCb-PAPER-2020-027", 
+            "CERN-EP-2020-212"
+        ]
+    ], 
+    "1835347": [
+        "First observation of the decay $B_s^0 \\to K^-\\mu^+\\nu_\\mu$ and Measurement of $|V_{ub}|/|V_{cb}|$", 
+        "LHCb", 
+        "10.1103/PhysRevLett.126.081804", 
+        "2747086", 
+        "2012.05143", 
+        null, 
+        null, 
+        [
+            "LHCb-PAPER-2020-038", 
+            "CERN-EP-2020-224"
+        ]
+    ], 
+    "1835888": [
+        "Observation of $CP$ violation in two-body $ {B}_{(s)}^0 $-meson decays to charged pions and kaons", 
+        "LHCb", 
+        "10.1007/JHEP03(2021)075", 
+        "2747103", 
+        "2012.05319", 
+        null, 
+        null, 
+        [
+            "LHCb-PAPER-2020-029", 
+            "CERN-EP-2020-215"
+        ]
+    ], 
+    "1837607": [
+        "Observation of the $B_s^0 \\rightarrow D^{\\ast \\pm} D^{\\mp}$ decay", 
+        "LHCb", 
+        "10.1007/JHEP03(2021)099", 
+        "2748568", 
+        "2012.11341", 
+        null, 
+        null, 
+        [
+            "LHCb-PAPER-2020-037", 
+            "CERN-EP-2020-230"
+        ]
+    ], 
+    "1838001": [
+        "Measurement of CP observables  in $B^\\pm \\to D^{(*)} K^\\pm$ and $B^\\pm \\to D^{(*)} \\pi^\\pm$ decays using two-body $D$ final states", 
+        "LHCb", 
+        "10.1007/JHEP04(2021)081", 
+        "2748074", 
+        "2012.09903", 
+        null, 
+        null, 
+        [
+            "LHCb-PAPER-2020-036", 
+            "CERN-EP-2020-225"
+        ]
+    ], 
+    "1838062": [
+        "Measurement of CP Violation in the Decay $B^{+} \\rightarrow K^{+} \\pi^{0}$", 
+        "LHCb", 
+        "10.1103/PhysRevLett.126.091802", 
+        "2748448", 
+        "2012.12789", 
+        null, 
+        null, 
+        [
+            "LHCb-PAPER-2020-040", 
+            "CERN-EP-2020-242"
+        ]
+    ], 
+    "1838196": [
+        "Angular Analysis of the  $B^{+}\\rightarrow K^{\\ast+}\\mu^{+}\\mu^{-}$ Decay", 
+        "LHCb", 
+        "10.1103/PhysRevLett.126.161802", 
+        "2748571", 
+        "2012.13241", 
+        "ins1838196", 
+        null, 
+        [
+            "LHCb-PAPER-2020-041", 
+            "CERN-EP-2020-239"
+        ]
+    ], 
+    "1850626": [
+        "Observation of the decay $\\Lambda_b^0\\rightarrow\\chi_{c1}p\\pi^-$", 
+        "LHCb", 
+        "10.1007/JHEP05(2021)095", 
+        "2754043", 
+        "2103.04949", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2021-037", 
+            "LHCb-PAPER-2021-003"
+        ]
+    ], 
+    "1851454": [
+        "Measurement of prompt-production cross-section ratio $\\sigma(\\chi_{c2})/\\sigma(\\chi_{c1})$ in $p$Pb collisions at $\\sqrt{s_{NN}}$ = 8.16 TeV", 
+        "LHCb", 
+        "10.1103/PhysRevC.103.064905", 
+        "2755993", 
+        "2103.07349", 
+        null, 
+        null, 
+        [
+            "LHCb-PAPER-2020-048", 
+            "CERN-EP-2021-024F"
+        ]
+    ], 
+    "1852815": [
+        "Search for $CP$ violation in $D_{(s)}^{+}\\rightarrow h^{+}\\pi^{0}$ and $D_{(s)}^{+}\\rightarrow h^{+}\\eta$ decays", 
+        "LHCb", 
+        "10.1007/JHEP06(2021)019", 
+        "2758622", 
+        "2103.11058", 
+        null, 
+        null, 
+        [
+            "LHCb-PAPER-2021-001", 
+            "CERN-EP-2021-036"
+        ]
+    ], 
+    "1862311": [
+        "Angular analysis of $ {B}^0\\to {D}^{\\ast -}{D}_s^{\\ast +} $ with $ {D}_s^{\\ast +}\\to {D}_s^{+}\\gamma $ decays", 
+        "LHCb", 
+        "10.1007/JHEP06(2021)177", 
+        "2766014", 
+        "2105.02596", 
+        null, 
+        null, 
+        [
+            "LHCb-PAPER-2021-006", 
+            "CERN-EP-2021-056"
+        ]
+    ], 
+    "1872884": [
+        "Evidence of a $J/\\psi\\Lambda$ structure and observation of excited $\\Xi^-$ states in the $\\Xi^-_b \\to J/\\psi\\Lambda K^-$ decay", 
+        "LHCb", 
+        "10.1016/j.scib.2021.02.030", 
+        "2748444", 
+        "2012.10380", 
+        null, 
+        null, 
+        [
+            "LHCb-PAPER-2020-039", 
+            "CERN-EP-2020-233"
+        ]
+    ]
+}

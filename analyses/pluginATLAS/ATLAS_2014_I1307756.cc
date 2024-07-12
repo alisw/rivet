@@ -35,7 +35,7 @@ namespace Rivet {
       declare(photonfs, "photons");
 
       // Initialize event count here:
-      _fidWeights = 0.;
+      book(_fidWeights, "_fidWeights");
     }
 
 
@@ -113,27 +113,11 @@ namespace Rivet {
       if (Myy >= 110*GeV && (y1.Et()/Myy < 0.4 || y2.Et()/Myy < 0.3) ) vetoEvent;
 
       // Add to cross-section
-      _fidWeights += event.weight();
+      _fidWeights->fill();
     }
 
-
-    /// @todo Add to the YODA output rather than print to log
     void finalize() {
-
-      // Compute selection efficiency & statistical error
-      const double eff = _fidWeights/sumOfWeights();
-      const double err = sqrt(eff*(1-eff)/numEvents());
-
-      // Compute fiducial cross-section in fb
-      const double fidCrossSection = eff * crossSection()/femtobarn;
-
-      // Print out result
-      MSG_INFO("==================================================");
-      MSG_INFO("==== Total cross-section: " << crossSection()/femtobarn<< " fb");
-      MSG_INFO("==== Fiducial cross-section: " << fidCrossSection << " fb");
-      MSG_INFO("==================================================");
-      MSG_INFO("==== Selection efficiency: " << eff << " +/- " << err << " (statistical error)");
-      MSG_INFO("==================================================");
+      scale(_fidWeights, crossSectionPerEvent()/femtobarn);
     }
 
     //@}
@@ -142,13 +126,13 @@ namespace Rivet {
   private:
 
     const vector<double> _eta_bins_areaoffset = {0.0, 1.5, 3.0};
-    double _fidWeights;
+    CounterPtr _fidWeights;
 
   };
 
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2014_I1307756);
+  RIVET_DECLARE_PLUGIN(ATLAS_2014_I1307756);
 
 }

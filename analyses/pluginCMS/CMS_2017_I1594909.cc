@@ -19,7 +19,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(CMS_2017_I1594909);
+    RIVET_DEFAULT_ANALYSIS_CTOR(CMS_2017_I1594909);
 
 
     /// @name Analysis methods
@@ -59,7 +59,7 @@ namespace Rivet {
           for (int k = 1; k <= 10; ++k) {
             if (j > 3 && (k == 1 || k == 4)) continue;
             stringstream s; s << "count_" << (i+1); // << "_" << j << b << k;
-            _counts[make_tuple(j,b,k)] = bookCounter(s.str());
+            book(_counts[std::make_tuple(j,b,k)], s.str());
             i += 1;
           }
         }
@@ -67,7 +67,7 @@ namespace Rivet {
       MSG_DEBUG("Booked " << i << " signal regions (should be 174)");
       // Aggregate SR counters
       for (size_t i = 0; i < 12; ++i)
-        _counts_agg[i] = bookCounter("count_agg_" + toString(i+1));
+        book(_counts_agg[i], "count_agg_" + toString(i+1));
 
 
       // Book cut-flow
@@ -108,7 +108,8 @@ namespace Rivet {
 
       // Find and isolate jets
       const Jets jets = apply<JetAlg>(event, "Jets").jetsByPt(Cuts::pT > 30*GeV);
-      const Jets isojets = filter_select(jets, Cuts::abseta < 2.4); //< @todo Isolation from leptons?!?
+      const Jets cjets = filter_select(jets, Cuts::abseta < 2.4);
+      const Jets isojets = cjets; //discardIfAnyDeltaRLess(cjets, elecs+mus, 0.4);
       const int njets = isojets.size();
       const Jets isobjets = filter_select(isojets, hasBTag());
       const int nbjets = isobjets.size();
@@ -187,7 +188,7 @@ namespace Rivet {
       /////////////////////////////////////
       // Find SR index and fill counter
 
-      const double w = event.weight();
+      const double w = 1.0;
 
       const int idx_j = binIndex(njets, vector<int>{2,3,5,7,9}, true);
       const int idx_b = binIndex(nbjets, vector<int>{0,1,2,3}, true);
@@ -204,7 +205,7 @@ namespace Rivet {
 
       // Fill via 3-tuple index
       if (idx_j >= 0 && idx_b >= 0 && idx_k >= 0) {
-        const auto idx = make_tuple(idx_j+1,idx_b+1,idx_k);
+        const auto idx = std::make_tuple(idx_j+1,idx_b+1,idx_k);
         if (has_key(_counts, idx)) _counts[idx]->fill(w);
       }
 
@@ -259,7 +260,7 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CMS_2017_I1594909);
+  RIVET_DECLARE_PLUGIN(CMS_2017_I1594909);
 
 
 }

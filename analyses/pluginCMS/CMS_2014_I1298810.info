@@ -3,8 +3,9 @@ Year: 2014
 Summary: Ratios of jet pT spectra, which relate to the ratios of inclusive, differential jet cross sections
 Experiment: CMS
 Collider: LHC
-InspireID: 1260838
+InspireID: 1298810
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Markus Radziej <radziej@physik.rwth-aachen.de>
 References:
@@ -20,6 +21,7 @@ NumEvents: 500000
 NeedCrossSection: yes
 Beams: [p+, p+]
 Energies: [7000]
+Luminosity_fb: 5.0
 PtCuts: [56]
 Description:
   'Ratios of jet transverse momentum spectra. The jets objects are defined
@@ -40,3 +42,14 @@ BibTeX: '@article{Chatrchyan:2014gia,
       reportNumber   = "CMS-SMP-13-002, CERN-PH-EP-2014-068",
       SLACcitation   = "%%CITATION = ARXIV:1406.0324;%%",
 }'
+
+ReleaseTests:
+ - $A LHC-7-Jets-10
+ - $A-2 LHC-7-Jets-2
+ - $A-3 LHC-7-Jets-3
+ - $A-4 LHC-7-Jets-4
+ - $A-5 LHC-7-Jets-5
+ - $A-6 LHC-7-Jets-6
+ - $A-7 LHC-7-Jets-7
+ - $A-8 LHC-7-Jets-8
+ - $A-9 LHC-7-Jets-9

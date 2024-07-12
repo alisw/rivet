@@ -1,0 +1,37 @@
+Name: LHCB_2017_I1596893
+Year: 2017
+Summary: Mass distributions in $B^0\to p\bar\Lambda\pi^-$ and $B^0_s\to p\bar\Lambda K^-$
+Experiment: LHCB
+Collider: LHC
+InspireID: 1596893
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 119 (2017) 4, 041802
+RunInfo: Any process producing B0 and B_s0 mesons, original pp
+Description:
+  'Mass distributions in $B^0\to p\bar\Lambda\pi^-$ and $B^0_s\to p\bar\Lambda K^-$. Data read from plots in paper but background subtracted and corrected for efficiency.'
+ValidationInfo:
+  'Herwig 7 event using EvtGen for decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: LHCb:2017mfl
+BibTeX: '@article{LHCb:2017mfl,
+    author = "Aaij, R. and others",
+    collaboration = "LHCb",
+    title = "{First observation of a baryonic $B_s^0$ decay}",
+    eprint = "1704.07908",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "LHCB-PAPER-2017-012, CERN-EP-2017-067",
+    doi = "10.1103/PhysRevLett.119.041802",
+    journal = "Phys. Rev. Lett.",
+    volume = "119",
+    number = "4",
+    pages = "041802",
+    year = "2017"
+}
+'

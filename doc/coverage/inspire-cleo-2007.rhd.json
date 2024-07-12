@@ -1,0 +1,396 @@
+{
+    "613626": [
+        "Measurements of charmless hadronic two body B meson decays and the ratio B(B ---> D K) / B(B ---> D pi)", 
+        "CLEO", 
+        "10.1103/PhysRevD.75.119907", 
+        null, 
+        "hep-ex/0302026", 
+        null, 
+        null, 
+        [
+            "CLNS-03-1816", 
+            "CLEO-03-03", 
+            "CLNS03-1816", 
+            "CLEO-03-3"
+        ]
+    ], 
+    "619835": [
+        "Observation of a narrow resonance of mass 2.46-GeV/c**2 decaying to D*+(s) pi0 and confirmation of the D*(sJ)(2317) state", 
+        "CLEO", 
+        "10.1103/PhysRevD.68.032002", 
+        null, 
+        "hep-ex/0305100", 
+        null, 
+        null, 
+        [
+            "CLNS-03-1826", 
+            "CLEO-03-09", 
+            "CLNS03-1826"
+        ]
+    ], 
+    "665223": [
+        "Search for e+ e- ---> Lambda0(b) anti-Lambda0(b) near threshold", 
+        "CLEO", 
+        "10.1103/PhysRevD.71.012004", 
+        null, 
+        "hep-ex/0411078", 
+        null, 
+        null, 
+        [
+            "CLNS-04-1895", 
+            "CLEO-04-14"
+        ]
+    ], 
+    "679349": [
+        "Searches for CP violation and pi pi S-wave in the Dalitz-Plot of D0 ---> pi+ pi- pi0", 
+        "CLEO", 
+        "10.1103/PhysRevD.75.119904", 
+        null, 
+        "hep-ex/0503052", 
+        null, 
+        null, 
+        [
+            "CLNS-05-1916", 
+            "CLEO-05-8", 
+            "CLEO-5-8"
+        ]
+    ], 
+    "699296": [
+        "Radiative decays of the Upsilon(1S) to gamma pi0 pi0, gamma eta eta and gamma pi0 eta", 
+        "CLEO", 
+        "10.1103/PhysRevD.75.072001", 
+        null, 
+        "hep-ex/0512003", 
+        null, 
+        null, 
+        [
+            "CLNS-05-1940", 
+            "CLEO-05-28"
+        ]
+    ], 
+    "712308": [
+        "Search for the non-D anti-D decay psi(3770) ---> K0(S) K0(L)", 
+        "CLEO", 
+        "10.1103/PhysRevD.75.119903", 
+        null, 
+        "hep-ex/0603026", 
+        null, 
+        null, 
+        [
+            "CLNS-05-1946", 
+            "CLEO-05-32"
+        ]
+    ], 
+    "721447": [
+        "First Observation of Upsilon(3S) ---> tau+ tau- and Tests of Lepton Universality in Upsilon Decays", 
+        "CLEO", 
+        "10.1103/PhysRevLett.98.052002", 
+        null, 
+        "hep-ex/0607019", 
+        null, 
+        null, 
+        [
+            "CLNS-06-1961", 
+            "CLEO-06-10"
+        ]
+    ], 
+    "728679": [
+        "Improved Measurement of the Branching Fraction and Energy Spectrum of eta-prime from Upsilon(1S) Decays", 
+        "CLEO", 
+        "10.1103/PhysRevD.75.119902", 
+        null, 
+        "hep-ex/0610032", 
+        null, 
+        null, 
+        [
+            "CLNS-06-1970", 
+            "CLEO-06-15"
+        ]
+    ], 
+    "728872": [
+        "Measurement of B(Upsilon(5S) ---> B(*)(s) anti-B(*)(s)) Using phi Mesons", 
+        "CLEO", 
+        "10.1103/PhysRevD.75.012002", 
+        null, 
+        "hep-ex/0610035", 
+        null, 
+        null, 
+        [
+            "CLNS-06-1973", 
+            "CLEO-06-16"
+        ]
+    ], 
+    "732065": [
+        "$\\chi_{cJ}$ Decays to $h^+h^-h^0$", 
+        "CLEO", 
+        "10.1103/PhysRevD.75.032002", 
+        null, 
+        "hep-ex/0611032", 
+        null, 
+        null, 
+        [
+            "CLNS-06-1980", 
+            "CLEO-06-20"
+        ]
+    ], 
+    "733995": [
+        "Anti-deuteron production in Upsilon(nS) decays and the nearby continuum", 
+        "CLEO", 
+        "10.1103/PhysRevD.75.012009", 
+        null, 
+        "hep-ex/0612019", 
+        null, 
+        null, 
+        [
+            "CLNS-06-1953", 
+            "CLEO-06-3"
+        ]
+    ], 
+    "735405": [
+        "Search for Invisible Decays of the Upsilon(1S) Resonance", 
+        "CLEO", 
+        "10.1103/PhysRevD.75.031104", 
+        null, 
+        "hep-ex/0612051", 
+        null, 
+        null, 
+        [
+            "CLNS-06-1985", 
+            "CLEO-06-25"
+        ]
+    ], 
+    "742120": [
+        "A Precision Determination of the D0 Mass", 
+        "CLEO", 
+        "10.1103/PhysRevLett.98.092002", 
+        null, 
+        "hep-ex/0701016", 
+        null, 
+        null, 
+        [
+            "CLNS-06-1986", 
+            "CLEO-06-26"
+        ]
+    ], 
+    "742598": [
+        "Search for psi(2S) ---> eta(c) pi+ pi- pi0", 
+        "CLEO", 
+        "10.1103/PhysRevD.75.011102", 
+        null, 
+        "hep-ex/0611027", 
+        null, 
+        null, 
+        [
+            "CLNS-06-1965", 
+            "CLEO-06-11"
+        ]
+    ], 
+    "747272": [
+        "A Study of Exclusive Charmless Semileptonic B Decay and |V(ub)|", 
+        "CLEO", 
+        "10.1103/PhysRevLett.99.041802", 
+        null, 
+        "hep-ex/0703041", 
+        null, 
+        null, 
+        [
+            "CLNS-06-1982", 
+            "CLEO-06-22"
+        ]
+    ], 
+    "747273": [
+        "A Study of Exclusive Charmless Semileptonic B Decays and Extraction of $|V_{ub}|$ at CLEO", 
+        "CLEO", 
+        "10.1103/PhysRevD.76.012007", 
+        null, 
+        "hep-ex/0703042", 
+        null, 
+        null, 
+        [
+            "CLNS-06-1983", 
+            "CLEO-06-23"
+        ]
+    ], 
+    "748511": [
+        "Measurement of $B(D_S^+) \\to \\ell^{+} \\nu$ and the decay constant $f(D_S^+)$", 
+        "CLEO", 
+        "10.1103/PhysRevD.76.072002", 
+        null, 
+        "0704.0437", 
+        null, 
+        null, 
+        [
+            "CLNS-07-1990", 
+            "CLEO-07-02"
+        ]
+    ], 
+    "748517": [
+        "Measurement of the decay constant $f(D^+_S)$ using $D^+_{S} \\to \\ell^{+} \\nu$", 
+        "CLEO", 
+        "10.1103/PhysRevLett.99.071802", 
+        null, 
+        "0704.0629", 
+        null, 
+        null, 
+        [
+            "CLNS-07-1989", 
+            "CLEO-07-1"
+        ]
+    ], 
+    "749012": [
+        "Comparison of particle production in quark and gluon fragmentation at s**(1/2) ~ 10-GeV", 
+        "CLEO", 
+        "10.1103/PhysRevD.76.012005", 
+        null, 
+        "0704.2766", 
+        null, 
+        null, 
+        [
+            "CLNS-06-1984", 
+            "CLEO-06-24"
+        ]
+    ], 
+    "749015": [
+        "Measurement of upper limits for Upsilon ---> gamma + R decays", 
+        "CLEO", 
+        "10.1103/PhysRevD.76.117102", 
+        null, 
+        "0704.2773", 
+        null, 
+        null, 
+        [
+            "CLNS-06-1981", 
+            "CLEO-06-21"
+        ]
+    ], 
+    "749128": [
+        "Search for radiative decays of Upsilon(1S) into eta and eta-prime", 
+        "CLEO", 
+        "10.1103/PhysRevD.76.072003", 
+        null, 
+        "0704.3063", 
+        null, 
+        null, 
+        [
+            "CLNS-07-1995", 
+            "CLEO-07-5"
+        ]
+    ], 
+    "749602": [
+        "Dalitz plot analysis of the D+ ---> pi- pi+ pi+ decay", 
+        "CLEO", 
+        "10.1103/PhysRevD.76.012001", 
+        null, 
+        "0704.3954", 
+        null, 
+        null, 
+        [
+            "CLNS-07-1993", 
+            "CLEO-07-3"
+        ]
+    ], 
+    "751692": [
+        "Evidence for the decay D0 --> K- pi+ pi- e+ nu(e)", 
+        "CLEO", 
+        "10.1103/PhysRevLett.99.191801", 
+        null, 
+        "0705.4276", 
+        null, 
+        null, 
+        [
+            "CLNS-07-1994", 
+            "CLEO-07-4"
+        ]
+    ], 
+    "753271": [
+        "Study of di-pion transitions among Upsilon(3S), Upsilon(2S), and Upsilon(1S) states", 
+        "CLEO", 
+        "10.1103/PhysRevD.76.072001", 
+        null, 
+        "0706.2317", 
+        null, 
+        null, 
+        [
+            "CLNS-07-1997", 
+            "CLEO-07-6"
+        ]
+    ], 
+    "753556": [
+        "Measurement of the Total Hadronic Cross Section in e+e- Annihilations below 10.56-GeV", 
+        "CLEO", 
+        "10.1103/PhysRevD.76.072008", 
+        null, 
+        "0706.2813", 
+        "ins753556", 
+        null, 
+        [
+            "CLNS-07-1998", 
+            "CLEO-07-7"
+        ]
+    ], 
+    "755533": [
+        "Measurement of Prominent eta Decay Branching Fractions", 
+        "CLEO", 
+        "10.1103/PhysRevLett.99.122001", 
+        null, 
+        "0707.1601", 
+        null, 
+        null, 
+        [
+            "CLNS-07-2002", 
+            "CLEO-07-10"
+        ]
+    ], 
+    "755631": [
+        "Measurement of the eta-Meson Mass using psi(2S) ---> eta J/psi", 
+        "CLEO", 
+        "10.1103/PhysRevLett.99.122002", 
+        null, 
+        "0707.1810", 
+        null, 
+        null, 
+        [
+            "CLNS-07-2003", 
+            "CLEO-07-9"
+        ]
+    ], 
+    "757240": [
+        "Suppressed Decays of D(s)+ Mesons to Two Pseudoscalar Mesons", 
+        "CLEO", 
+        "10.1103/PhysRevLett.99.191805", 
+        null, 
+        "0708.0139", 
+        null, 
+        null, 
+        [
+            "CLNS-07-2004", 
+            "CLEO-07-8"
+        ]
+    ], 
+    "761696": [
+        "Measurement of absolute hadronic branching fractions of D mesons and e+ e- ---> D anti-D cross-sections at the psi(3770)", 
+        "CLEO", 
+        "10.1103/PhysRevD.76.112001", 
+        null, 
+        "0709.3783", 
+        null, 
+        null, 
+        [
+            "CLNS-07-2005", 
+            "CLEO-07-11"
+        ]
+    ], 
+    "776512": [
+        "chi(c0) and chi(c2) Decays into eta eta, eta eta-prime, and eta-prime eta-prime Final States", 
+        "CLEO", 
+        "10.1103/PhysRevD.75.071101", 
+        null, 
+        "hep-ex/0611013", 
+        null, 
+        null, 
+        [
+            "CLNS-06-1976", 
+            "CLEO-06-18"
+        ]
+    ]
+}

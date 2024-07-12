@@ -5,9 +5,11 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1419652
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Roman Lysak <roman.lysak@cern.ch>
 References:
+ - ATLAS-STDM-2015-02
  - arXiv:1602.01633
  - doi:10.1016/j.physletb.2016.04.050
  - Physics Letters B (2016), Vol. 758, pp. 67-88
@@ -16,6 +18,7 @@ RunInfo:
   be included. Multiple kinematic cuts should not be required.
 Beams: [p+, p+]
 Energies: [13000]
+Luminosity_fb: 1.7E-7
 PtCuts: [0.5]
 Description:
   Measurements from proton-proton collisions at centre-of-mass energy
@@ -40,3 +43,8 @@ BibTeX: '@article{Aad:2016mok,
       reportNumber   = "CERN-EP-2016-014",
       SLACcitation   = "%%CITATION = ARXIV:1602.01633;%%"
 }'
+
+ReleaseTests:
+ - $A LHC-13-UE-Long
+ - $A-2 LHC-13-UE
+

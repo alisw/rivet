@@ -1,0 +1,32 @@
+Name: GAMMAGAMMA_1979_I133588
+Year: 1979
+Summary: Measurement of $R$ and the hadronic cross section for energies between 1.92 and 3.09 GeV
+Experiment: GAMMAGAMMA
+Collider:  ADONE
+InspireID: 133588
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Lett.Nuovo Cim. 24 (1979) 324, 1979 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: yes
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$ and the hadronic cross section in $e^+e^-$ collisions by the GAMMA-GAMMA group for energies between 1.92 and 3.09 GeV.
+   The muonic cross section is also outputted to the yoda file
+   so that ratio $R$ can be recalcuated if runs are combined.'
+BibKey: Bacci:1978mq
+BibTeX: '@article{Bacci:1978mq,
+      author         = "Bacci, C. and others",
+      title          = "{Total Hadronic Cross-section From $e^+ e^-$ Annihilation
+                        in the Total Center-of-mass Energy Range 1920-{MeV} -
+                        3090-{MeV}}",
+      journal        = "Lett. Nuovo Cim.",
+      volume         = "24",
+      year           = "1979",
+      pages          = "324",
+      doi            = "10.1007/BF02724851",
+      reportNumber   = "LNF-78/56-P",
+      SLACcitation   = "%%CITATION = NCLTA,24,324;%%"
+}'

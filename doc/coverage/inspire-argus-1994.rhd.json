@@ -1,0 +1,134 @@
+{
+    "354224": [
+        "Kaons in flavor tagged B decays", 
+        "ARGUS", 
+        "10.1007/BF01555897", 
+        null, 
+        null, 
+        "ins354224", 
+        null, 
+        [
+            "DESY-93-052"
+        ]
+    ], 
+    "356616": [
+        "Inclusive production of $K^*(892)$, $\\rho^{0}(770)$, and $\\omega(783)$ mesons in the $\\Upsilon$ energy region", 
+        "ARGUS", 
+        "10.1007/BF01641882", 
+        null, 
+        null, 
+        "ins356616", 
+        null, 
+        [
+            "DESY-93-084"
+        ]
+    ], 
+    "360177": [
+        "A Study of anti-B0 ---> D*+ lepton- anti-neutrino and B0 anti-B0 mixing using partial D*+ reconstruction", 
+        "ARGUS", 
+        "10.1016/0370-2693(94)90415-4", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-93-149"
+        ]
+    ], 
+    "371613": [
+        "Observation of polarization effects in Lambda(c)+ semileptonic decay", 
+        "ARGUS", 
+        "10.1016/0370-2693(94)91330-7", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-94-004"
+        ]
+    ], 
+    "372451": [
+        "Observation of gamma gamma ---> phi rho0 and gamma gamma ---> phi omega", 
+        "ARGUS", 
+        "10.1016/0370-2693(94)91280-7", 
+        null, 
+        null, 
+        "ins372451", 
+        null, 
+        [
+            "DESY-94-029"
+        ]
+    ], 
+    "373280": [
+        "Reconstruction of the decay B- ---> D1(0) (2414) pi-", 
+        "ARGUS", 
+        "10.1016/0370-2693(94)90389-1", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-94-069"
+        ]
+    ], 
+    "374016": [
+        "Study of D0 and D+ decays into final states with two or three kaons", 
+        "ARGUS", 
+        "10.1007/BF01560097", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-94-052"
+        ]
+    ], 
+    "374148": [
+        "Measurement of the absolute branching fractions for D0 decays into K- pi+, K- pi+ pi+ pi-, anti-K0 pi+ pi-", 
+        "ARGUS", 
+        "10.1016/0370-2693(94)91308-0", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-94-094"
+        ]
+    ], 
+    "374908": [
+        "Determination of the radiative decay width of the eta(c) meson", 
+        "ARGUS", 
+        "10.1016/0370-2693(94)91395-1", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-94-110"
+        ]
+    ], 
+    "375417": [
+        "Determination of the structure of tau decays in the reaction e+ e- ---> tau+ tau- ---> rho+ anti-tau-neutrino rho- tau-neutrino and a precision measurement of the tau-neutrino helicity", 
+        "ARGUS", 
+        "10.1016/0370-2693(94)90992-X", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-94-120"
+        ]
+    ], 
+    "376001": [
+        "Measurement of the polarization in the decay B ---> J / psi K*", 
+        "ARGUS", 
+        "10.1016/0370-2693(94)01302-0", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-94-139"
+        ]
+    ]
+}

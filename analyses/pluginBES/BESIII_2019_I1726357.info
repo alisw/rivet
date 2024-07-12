@@ -1,0 +1,38 @@
+Name: BESIII_2019_I1726357
+Year: 2019
+Summary: Measurement of $e^+e^-\to\Lambda^0\bar{\Lambda}^0$ at 2.396 GeV
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1726357
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 123 (2019) no.12, 122003
+RunInfo: e+e- to hadrons
+Beams: [e+, e-]
+Energies: [2.396]
+Description:
+  'Measurement of the cross section, angular distribution and polarization for $e^+e^-\to\Lambda^0\bar{\Lambda}^0$ at 2.396 GeV by BESIII.'
+ValidationInfo:
+  'Herwig7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Ablikim:2019vaj
+BibTeX: '@article{Ablikim:2019vaj,
+      author         = "Ablikim, M. and others",
+      title          = "{Complete Measurement of the $\Lambda$ Electromagnetic
+                        Form Factors}",
+      collaboration  = "BESIII",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "123",
+      year           = "2019",
+      number         = "12",
+      pages          = "122003",
+      doi            = "10.1103/PhysRevLett.123.122003",
+      eprint         = "1903.09421",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1903.09421;%%"
+}'

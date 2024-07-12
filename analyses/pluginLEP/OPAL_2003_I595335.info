@@ -1,0 +1,36 @@
+Name: OPAL_2003_I595335
+Year: 2003
+Summary: Charged particle momentum spectra in $e^+e^-$ annihilation at $\sqrt{s}= 192 $ GeV to $209$ GeV
+Experiment: OPAL
+Collider: LEP2
+InspireID: 595335
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Eur.Phys.J. C27 (2003) 467-481
+RunInfo:
+  Hadronic $e^+ e^-$ events at 202 GeV.
+NumEvents: 200000
+Beams: [e+, e-]
+Energies: [202]
+Description:
+  'Measurement of charged particle distributions  in $e^+e^-$ annihilation at $\sqrt{s}= 192 $ GeV to $209$ GeV.'
+Keywords: []
+BibKey: Abbiendi:2002mj
+BibTeX: '@article{Abbiendi:2002mj,
+      author         = "Abbiendi, G. and others",
+      title          = "{Charged particle momentum spectra in e+ e- annihilation
+                        at s**(1/2) = 192-GeV to 209-GeV}",
+      collaboration  = "OPAL",
+      journal        = "Eur. Phys. J.",
+      volume         = "C27",
+      year           = "2003",
+      pages          = "467-481",
+      doi            = "10.1140/epjc/s2002-01121-3",
+      eprint         = "hep-ex/0209048",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-EP-2002-057",
+      SLACcitation   = "%%CITATION = HEP-EX/0209048;%%"
+}'

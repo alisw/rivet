@@ -6,10 +6,12 @@ Collider: LHC
 SpiresID: 9002537
 InspireID: 892704
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Frank Krauss <frank.krauss@durham.ac.uk>
  - Hendrik Hoeth <hendrik.hoeth@cern.ch>
 References:
+ - ATLAS-STDM-2010-16
  - arXiv:1103.2929
 RunInfo:
   $W \to \mu\nu$ events at 7 TeV
@@ -22,3 +24,7 @@ Description:
   The asymmetry is measured in the $W \to \mu$ decay mode as a function
   of the muon pseudorapidity using a data sample corresponding to a total
   integrated luminosity of 31 pb$^{-1}$.
+
+ReleaseTests:
+ - $A LHC-W-mu
+

@@ -1,0 +1,37 @@
+Name: BABAR_2010_I879997
+Year: 2010
+Summary: Kinematic distributions in $D^+\to K^-\pi^+ e^+\nu_e$
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 879997
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 83 (2011) 072001
+RunInfo: Any process producing D+
+Description:
+'Measurement of the kinematic distributions in $D^+\to K^-\pi^+ e^+\nu_e$ by BABAR.
+The data were read from the paper and may not have been corrected for acceptance. In many cases the error bar is the size of the point'
+ValidationInfo:
+  'Herwig 7 events using EvtGen for the decays.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BaBar:2010vmf
+BibTeX: '@article{BaBar:2010vmf,
+    author = "del Amo Sanchez, P. and others",
+    collaboration = "BaBar",
+    title = "{Analysis of the $D^+ \to K^- \pi^+ e^+ \nu_e$ decay channel}",
+    eprint = "1012.1810",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BABAR-PUB-10-021, SLAC-PUB-14329",
+    doi = "10.1103/PhysRevD.83.072001",
+    journal = "Phys. Rev. D",
+    volume = "83",
+    pages = "072001",
+    year = "2011"
+}
+'

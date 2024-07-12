@@ -1,0 +1,158 @@
+{
+    "565148": [
+        "Measurement of charged-particle multiplicity distributions and their $H_{q}$ moments in hadronic $Z$ decays at LEP", 
+        "L3", 
+        "10.1016/j.physletb.2003.10.028", 
+        "524431", 
+        "hep-ex/0110072", 
+        "ins565148", 
+        null, 
+        [
+            "CERN-EP-2001-072"
+        ]
+    ], 
+    "605973": [
+        "Inclusive charged hadron production in two photon collisions at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(03)00015-7", 
+        "594306", 
+        "hep-ex/0301025", 
+        "ins605973", 
+        null, 
+        [
+            "CERN-EP-2002-081"
+        ]
+    ], 
+    "606066": [
+        "Measurement of W polarisation at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(03)00172-2", 
+        "600830", 
+        "hep-ex/0301027", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2002-092"
+        ]
+    ], 
+    "606391": [
+        "Study of the $e^{+} e^{-} \\to Z e^{+} e^{-}$ process at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(03)00406-4", 
+        "602713", 
+        "hep-ex/0303041", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2002-103"
+        ]
+    ], 
+    "615977": [
+        "Search for color reconnection effects in $e^{+} e^{-} \\to W^{+} W^{-} \\to$ hadrons through particle flow studies at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(03)00490-8", 
+        "610391", 
+        "hep-ex/0303042", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-012"
+        ]
+    ], 
+    "619171": [
+        "Search for the standard model Higgs boson at LEP", 
+        "LEP Working Group for Higgs boson searches", 
+        "10.1016/S0370-2693(03)00614-2", 
+        "610122", 
+        "hep-ex/0306033", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-011"
+        ]
+    ], 
+    "619620": [
+        "Measurement of exclusive $\\rho^0 \\rho^0$ production in two photon collisions at high $Q^{2}$ at LEP", 
+        "L3", 
+        "10.1016/j.physletb.2003.05.003", 
+        "618388", 
+        "hep-ex/0305082", 
+        "ins619620", 
+        null, 
+        [
+            "CERN-EP-2003-020"
+        ]
+    ], 
+    "620387": [
+        "Search for excited leptons at LEP", 
+        "L3", 
+        "10.1016/j.physletb.2003.05.004", 
+        "613024", 
+        "hep-ex/0306016", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-013"
+        ]
+    ], 
+    "620433": [
+        "$p\\bar{p}$ pair production in two photon collisions at LEP", 
+        "L3", 
+        "10.1016/j.physletb.2003.05.005", 
+        "612811", 
+        "hep-ex/0306017", 
+        "ins620433", 
+        null, 
+        [
+            "CERN-EP-2003-014"
+        ]
+    ], 
+    "622876": [
+        "Search for a Higgs boson decaying to weak boson pairs at LEP", 
+        "L3", 
+        "10.1016/j.physletb.2003.06.057", 
+        "627291", 
+        "hep-ex/0307010", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2002-080"
+        ]
+    ], 
+    "625095": [
+        "$Z$ boson pair production at LEP", 
+        "L3", 
+        "10.1016/j.physletb.2003.08.023", 
+        "634035", 
+        "hep-ex/0308013", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-034"
+        ]
+    ], 
+    "628565": [
+        "Search for charged Higgs bosons at LEP", 
+        "L3", 
+        "10.1016/j.physletb.2003.09.057", 
+        "643438", 
+        "hep-ex/0309056", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-054"
+        ]
+    ], 
+    "629157": [
+        "Search for doubly charged Higgs bosons at LEP", 
+        "L3", 
+        "10.1016/j.physletb.2003.09.082", 
+        "645213", 
+        "hep-ex/0309076", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-060"
+        ]
+    ]
+}

@@ -24,8 +24,8 @@ namespace Rivet {
       ZFinder zeefinder(FinalState(), Cuts::etaIn(2.0, 4.5) && Cuts::pT > 20*GeV, PID::ELECTRON, 60*GeV, 120*GeV);
       declare(zeefinder, "ZeeFinder");
 
-      _h_sigma_vs_y = bookHisto1D(2, 1, 1);
-      _h_sigma_vs_phi = bookHisto1D(3, 1, 1);
+      book(_h_sigma_vs_y ,2, 1, 1);
+      book(_h_sigma_vs_phi ,3, 1, 1);
     }
 
 
@@ -38,6 +38,9 @@ namespace Rivet {
 
       // Z momenta
       const FourMomentum zee = zeefinder.bosons()[0].momentum();
+
+      if (zeefinder.constituents().size() < 2) vetoEvent;
+
       const Particle pozitron = zeefinder.constituents()[0];
       const Particle electron = zeefinder.constituents()[1];
 
@@ -48,8 +51,8 @@ namespace Rivet {
       const double angular = tan(accphi/2) / cosh(diffpsd/2);
 
       // Fill histograms
-      _h_sigma_vs_y->fill(zee.rapidity(), e.weight());
-      _h_sigma_vs_phi->fill(angular, e.weight());
+      _h_sigma_vs_y->fill(zee.rapidity());
+      _h_sigma_vs_phi->fill(angular);
     }
 
 
@@ -74,6 +77,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(LHCB_2012_I1208102);
+  RIVET_DECLARE_PLUGIN(LHCB_2012_I1208102);
 
 }

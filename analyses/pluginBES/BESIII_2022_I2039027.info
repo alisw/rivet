@@ -1,0 +1,24 @@
+Name: BESIII_2022_I2039027
+Year: 2022
+Summary: Cross section for $e^+e^-\to\pi^+\pi^-\eta$ between 3.872 and 4.7 GeV
+Experiment: BESIII
+Collider: BEPC
+InspireID: 2039027
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - arXiv:2202.12748
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams:  [e+,e-]
+Description:
+  'Measurement of the cross section for $e^+e^-\to\pi^+\pi^-\eta$  between 3.872 and 4.7 GeV by the BESIII collaboration.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: 
+BibTeX: ''

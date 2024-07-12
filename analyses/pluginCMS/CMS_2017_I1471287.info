@@ -5,6 +5,7 @@ Experiment: CMS
 Collider: LHC
 InspireID: 1471287
 Status: UNVALIDATED
+Reentrant: false
 Authors:
  - Christian Bierlich <christian.bierlich@thep.lu.se>
 References:

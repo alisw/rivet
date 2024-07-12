@@ -1,0 +1,328 @@
+{
+    "356732": [
+        "A Measurement of D meson production in Z0 hadronic decays", 
+        "DELPHI", 
+        "10.1007/BF01562545", 
+        "249026", 
+        null, 
+        "ins356732", 
+        null, 
+        [
+            "CERN-PPE-93-70"
+        ]
+    ], 
+    "375963": [
+        "A Study of radiative muon pair events at $Z^0$ energies and limits on an additional $Z^\\prime$ gauge boson", 
+        "DELPHI", 
+        "10.1007/BF01578669", 
+        "267165", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-121"
+        ]
+    ], 
+    "377487": [
+        "Production characteristics of K0 and light meson resonances in hadronic decays of the Z0", 
+        "DELPHI", 
+        "10.1007/BF01578668", 
+        "268541", 
+        null, 
+        "ins377487", 
+        null, 
+        [
+            "CERN-PPE-94-130"
+        ]
+    ], 
+    "377489": [
+        "Measurement of the Gamma (b anti-b) / Gamma (hadron) branching ratio of the Z by double hemisphere tagging", 
+        "DELPHI", 
+        "10.1007/BF01578666", 
+        "268542", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-131"
+        ]
+    ], 
+    "382035": [
+        "Measurement of the forward - backward asymmetry of e+ e- ---> Z ---> b anti-b using prompt leptons and a lifetime tag", 
+        "DELPHI", 
+        "10.1007/BF01578667", 
+        "271024", 
+        null, 
+        "ins382035", 
+        null, 
+        [
+            "CERN-PPE-94-161"
+        ]
+    ], 
+    "382036": [
+        "First evidence of hard scattering processes in single tagged gamma gamma collisions", 
+        "DELPHI", 
+        "10.1016/0370-2693(94)01522-E", 
+        "271034", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-163"
+        ]
+    ], 
+    "382181": [
+        "Measurement of the forward - backward asymmetry of charm and bottom quarks at the Z pole using D*+- mesons", 
+        "DELPHI", 
+        "10.1007/BF01556359", 
+        "273858", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-193"
+        ]
+    ], 
+    "382208": [
+        "Observation of orbitally excited B mesons", 
+        "DELPHI", 
+        "10.1016/0370-2693(94)01696-A", 
+        "274704", 
+        null, 
+        "ins382208", 
+        null, 
+        [
+            "CERN-PPE-94-210"
+        ]
+    ], 
+    "382284": [
+        "Search for heavy neutral Higgs bosons in two doublet models", 
+        "DELPHI", 
+        "10.1007/BF01564822", 
+        "275225", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-218"
+        ]
+    ], 
+    "382285": [
+        "First measurement of the strange quark asymmetry at the Z0 peak", 
+        "DELPHI", 
+        null, 
+        "275227", 
+        null, 
+        "ins382285", 
+        null, 
+        [
+            "CERN-PPE-94-219"
+        ]
+    ], 
+    "392257": [
+        "Production of charged particles, K0(s), K+-, p and Lambda in Z --> b anti-b events and in the decay of b hadrons", 
+        "DELPHI", 
+        "10.1016/0370-2693(95)00190-V", 
+        "275234", 
+        null, 
+        "ins392257", 
+        null, 
+        [
+            "CERN-PPE-95-01", 
+            "CERN-PPE-95-1", 
+            "CERN-PPE-95-001"
+        ]
+    ], 
+    "392530": [
+        "Measurement of Gamma ($b \\bar{b}$) / Gamma (hadrons) using impact parameter measurements and lepton identification", 
+        "DELPHI", 
+        "10.1007/BF01556358", 
+        "276037", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-95-08", 
+            "CERN-PPE-95-8", 
+            "CERN-PPE-95-008"
+        ]
+    ], 
+    "393792": [
+        "Production of strange B baryons decaying into Xi-+ - lepton-+ pairs at LEP", 
+        "DELPHI", 
+        null, 
+        "279198", 
+        null, 
+        "ins393792", 
+        null, 
+        [
+            "CERN-PPE-95-029", 
+            "CERN-PPE-95-29"
+        ]
+    ], 
+    "393793": [
+        "Measurements of the tau polarization in Z0 decays", 
+        "DELPHI", 
+        "10.1007/BF01571280", 
+        "279202", 
+        null, 
+        "ins393793", 
+        null, 
+        [
+            "CERN-PPE-95-030", 
+            "CERN-PPE-95-30"
+        ]
+    ], 
+    "394052": [
+        "Inclusive measurements of the K+- and p / anti-p production in hadronic Z0 decays", 
+        "DELPHI", 
+        "10.1016/0550-3213(95)00190-4", 
+        "281106", 
+        null, 
+        "ins394052", 
+        null, 
+        [
+            "CERN-PPE-95-28", 
+            "CERN-PPE-95-028"
+        ]
+    ], 
+    "394716": [
+        "Strange baryon production in Z hadronic decays", 
+        "DELPHI", 
+        "10.1007/BF01553980", 
+        "281032", 
+        null, 
+        "ins394716", 
+        null, 
+        [
+            "CERN-PPE-95-039", 
+            "CERN-PPE-95-39"
+        ]
+    ], 
+    "395026": [
+        "B* production in Z decays", 
+        "DELPHI", 
+        null, 
+        "281617", 
+        null, 
+        "ins395026", 
+        null, 
+        [
+            "CERN-PPE-95-53", 
+            "CERN-PPE-95-053"
+        ]
+    ], 
+    "395029": [
+        "Lifetimes of charged and neutral B hadrons using event topology", 
+        "DELPHI", 
+        "10.1007/BF01620712", 
+        "281670", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-95-059", 
+            "CERN-PPE-95-59"
+        ]
+    ], 
+    "395030": [
+        "A Measurement of $B^{+}$ and $B^0$ lifetimes using $\\bar{D} \\ell^+$ events", 
+        "DELPHI", 
+        null, 
+        "281671", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-95-060", 
+            "CERN-PPE-95-60"
+        ]
+    ], 
+    "395032": [
+        "Lifetime and production rate of beauty baryons from Z decays", 
+        "DELPHI", 
+        null, 
+        "281602", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-95-054", 
+            "CERN-PPE-95-54"
+        ]
+    ], 
+    "395842": [
+        "Observation of short range three particle correlations in e+ e- annihilations at LEP energies", 
+        "DELPHI", 
+        "10.1016/0370-2693(95)00711-S", 
+        "282848", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-95-077", 
+            "CERN-PPE-95-77"
+        ]
+    ], 
+    "397145": [
+        "Search for exclusive charmless B meson decays with the DELPHI detector at LEP", 
+        "DELPHI", 
+        "10.1016/0370-2693(95)00877-N", 
+        "284373", 
+        null, 
+        "ins397145", 
+        null, 
+        [
+            "CERN-PPE-95-091", 
+            "CERN-PPE-95-91"
+        ]
+    ], 
+    "397391": [
+        "Study of prompt photon production in hadronic Z0 decays", 
+        "DELPHI", 
+        "10.1007/s002880050001", 
+        "284907", 
+        null, 
+        "ins397391", 
+        null, 
+        [
+            "CERN-PPE-95-101"
+        ]
+    ], 
+    "398321": [
+        "A Measurement of the tau leptonic branching fractions", 
+        "DELPHI", 
+        "10.1016/0370-2693(95)00987-V", 
+        "285970", 
+        null, 
+        "ins398321", 
+        null, 
+        [
+            "CERN-PPE-95-114"
+        ]
+    ], 
+    "398322": [
+        "Upper limits on the branching ratios tau --> mu gamma and tau --> e gamma", 
+        "DELPHI", 
+        "10.1016/0370-2693(95)01045-R", 
+        "285971", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-95-115"
+        ]
+    ], 
+    "399737": [
+        "Measurement of Delta++ (1232) production in hadronic Z decays", 
+        "DELPHI", 
+        "10.1016/0370-2693(95)01176-Q", 
+        "287962", 
+        null, 
+        "ins399737", 
+        null, 
+        [
+            "CERN-PPE-95-130"
+        ]
+    ]
+}

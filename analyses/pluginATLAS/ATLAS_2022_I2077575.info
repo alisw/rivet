@@ -1,0 +1,49 @@
+Name: ATLAS_2022_I2077575
+Year: 2022
+Summary: All-hadronic boosted ttbar at 13 TeV
+Experiment: ATLAS
+Collider: LHC
+InspireID: 2077575
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Ovidiu Miu <ovidiu.miu@cern.ch>
+References:
+ - arXiv:2205.02817 [hep-ex]
+ - ATLAS-TOPQ-2018-11
+Keywords:
+ - TTBAR
+ - ALLHADRONIC
+ - BOOSTED
+RunInfo:
+  p + p -> ttbar (all-hadronic, boosted)
+Luminosity_fb: 139.9
+Beams: [p+, p+]
+Energies: [13000]
+PtCuts: [500,350]
+Options:
+ - TMODE=PARTICLE,BOTH
+Description:
+  'Measurements of single-, double-, and triple-differential cross-sections are presented for boosted top-quark pair-production in 13 TeV 
+  proton--proton collisions recorded by the ATLAS detector at the LHC. The top quarks are observed through their hadronic decay and 
+  reconstructed as large-radius jets with the leading jet having transverse momentum ($p_{\rm T}$) greater than 500 GeV. The observed data 
+  are unfolded to remove detector effects. The particle-level cross-section, multiplied by the $t\bar{t}\rightarrow WWb\bar{b}$ branching 
+  fraction and measured in a fiducial phase space defined by requiring the leading and second-leading jets to have $p_{\rm T}$ > 500 GeV 
+  and $p_{\rm T}$ > 350 GeV, respectively, is $331 \pm 3 \rm{(stat.)} \pm 39 \rm{(syst.)}$ fb. This is approximately 20% lower than the 
+  prediction of $398^{+48}_{-49}$ fb by POWHEG+PYTHIA8 with next-to-leading-order (NLO) accuracy but consistent within the theoretical 
+  uncertainties. Results are also presented at the parton level, where the effects of top-quark decay, parton showering, and hadronization 
+  are removed  such that they can be compared with fixed-order next-to-next-to-leading-order (NNLO) calculations. The parton-level 
+  cross-section, measured in a fiducial phase space similar to that at particle level, is $1.94 \pm 0.02 \rm{(stat.)} \pm 0.25 \rm{(syst.)}$   pb. This agrees with the NNLO prediction of $1.96^{+0.02}_{-0.17}$ pb. Reasonable agreement with the differential cross-sections is found    for most NLO models, while the NNLO calculations are generally in better agreement with the data. The differential cross-sections are 
+  interpreted using a Standard Model effective field-theory formalism and limits are set on Wilson coefficients of several four-fermion 
+  operators.'
+BibKey: ATLAS:2022mlu
+BibTeX: '@article{ATLAS:2022mlu,
+     collaboration = "ATLAS",
+     title         = "{Differential $t\bar{t}$ cross-section measurements using boosted top quarks in the all-hadronic final state with 139                         fb$^{-1}$ of ATLAS data}",
+     eprint        = "2205.02817",
+     archivePrefix = "arXiv",
+     primaryClass  = "hep-ex",
+     reportNumber  = "CERN-EP-2022-026",
+     month         = "5",
+     year          = "2022"
+}'

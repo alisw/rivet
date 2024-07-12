@@ -1,0 +1,31 @@
+Name: BBAR_1980_I152630
+Year: 1980
+Summary: Measurement of $R$ between 1.427 and 1.946
+Experiment: BBAR
+Collider: ADONE
+InspireID: 152630
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B91 (1980) 155-160, 1980 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: no
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$ in $e^+e^-$ collisions by the baryon-antibaryon experiment between 1.427 and 1.946 GeV.
+   The individual hadronic and muonic cross sections are also outputted to the yoda file
+   so that ratio $R$ can be recalcuated if runs are combined.'
+BibKey: Ambrosio:1980mf
+BibTeX: '@article{Ambrosio:1980mf,
+      author         = "Ambrosio, M. and others",
+      title          = "{Total Cross-section for Hadron Production by Electron -
+                        Positron Annihilation at Adone}",
+      journal        = "Phys. Lett.",
+      volume         = "91B",
+      year           = "1980",
+      pages          = "155-160",
+      doi            = "10.1016/0370-2693(80)90683-8",
+      reportNumber   = "LNF-80-4-P",
+      SLACcitation   = "%%CITATION = PHLTA,91B,155;%%"
+}'

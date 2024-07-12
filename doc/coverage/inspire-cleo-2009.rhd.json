@@ -1,0 +1,171 @@
+{
+    "777917": [
+        "Measurement of Charm Production Cross Sections in e+e- Annihilation at Energies between 3.97 and 4.26-GeV", 
+        "CLEO", 
+        "10.1103/PhysRevD.80.072001", 
+        null, 
+        "0801.3418", 
+        "ins777917", 
+        null, 
+        [
+            "CLNS07-2015", 
+            "CLEO-07-19"
+        ]
+    ], 
+    "780368": [
+        "Observation of D+ ---> eta e+ nu(e)", 
+        "CLEO", 
+        "10.1103/PhysRevLett.102.081801", 
+        null, 
+        "0802.4222", 
+        null, 
+        null, 
+        [
+            "CLNS-07-2010", 
+            "CLEO-07-14"
+        ]
+    ], 
+    "784900": [
+        "J/psi and psi(2S) Radiative Decays to eta(c)", 
+        "CLEO", 
+        "10.1103/PhysRevLett.102.011801", 
+        null, 
+        "0805.0252", 
+        null, 
+        null, 
+        [
+            "CLNS-08-2021", 
+            "CLEO-08-05"
+        ]
+    ], 
+    "795757": [
+        "Improved Measurement of Branching Fractions for pi pi Transitions among Upsilon(nS) States", 
+        "CLEO", 
+        "10.1103/PhysRevD.79.011103", 
+        null, 
+        "0809.1110", 
+        null, 
+        null, 
+        [
+            "CLNS-08-2032", 
+            "CLEO-08-15"
+        ]
+    ], 
+    "796677": [
+        "Observation of eta-prime decays to pi+ pi- pi0 and pi+ pi- e+ e-", 
+        "CLEO", 
+        "10.1103/PhysRevLett.102.061801", 
+        null, 
+        "0809.2587", 
+        null, 
+        null, 
+        [
+            "CLNS-08-2040", 
+            "CLEO-08-22"
+        ]
+    ], 
+    "800237": [
+        "Study of D0 ---> pi- e+ nu(e), D+ ---> pi0 e+ nu(e) , D0 --> K- e+ nu(e), and D+ ---> anti-K0 e+ nu(e) in Tagged Decays of the psi(3770) Resonance", 
+        "CLEO", 
+        "10.1103/PhysRevD.79.052010", 
+        null, 
+        "0810.3878", 
+        null, 
+        null, 
+        [
+            "CLNS-08-2039", 
+            "CLEO-08-21"
+        ]
+    ], 
+    "801599": [
+        "New Measurement of Exclusive Decays of the chi(c0) and CHI(C2) to Two-Meson Final States", 
+        "CLEO", 
+        "10.1103/PhysRevD.79.072007", 
+        null, 
+        "0811.0586", 
+        null, 
+        null, 
+        [
+            "CLNS-08-2041", 
+            "CLEO-08-23"
+        ]
+    ], 
+    "810624": [
+        "Improved Measurement of Absolute Branching Fraction of D(s)+ ---> tau+ nu(tau)", 
+        "CLEO", 
+        "10.1103/PhysRevD.79.052002", 
+        null, 
+        "0901.1147", 
+        null, 
+        null, 
+        [
+            "CLNS-08-2043", 
+            "CLEO-08-25"
+        ]
+    ], 
+    "810661": [
+        "Measurement of $B{D_s^+ \\to \\ell^+ \\nu}$ and the Decay Constant $fD_s^+$ From 600 $/pb^{-1}$ of $e^\\pm$ Annihilation Data Near 4170 MeV", 
+        "CLEO", 
+        "10.1103/PhysRevD.79.052001", 
+        null, 
+        "0901.1216", 
+        null, 
+        null, 
+        [
+            "CLNS-08-2044", 
+            "CLEO-08-26"
+        ]
+    ], 
+    "814650": [
+        "Absolute Branching Fraction Measurements for Exclusive D(s) Semileptonic Decays", 
+        "CLEO", 
+        "10.1103/PhysRevD.80.052007", 
+        null, 
+        "0903.0601", 
+        null, 
+        null, 
+        [
+            "CLNS-08-2045", 
+            "CLEO-08-27"
+        ]
+    ], 
+    "815075": [
+        "First model-independent determination of the relative strong phase between D0 and anti-D0 ---> K0(S) pi+ pi- and its impact on the CKM Angle gamma/phi(3) measurement", 
+        "CLEO", 
+        "10.1103/PhysRevD.80.032002", 
+        null, 
+        "0903.1681", 
+        null, 
+        null, 
+        [
+            "CLNS-08-2042", 
+            "CLEO-08-24"
+        ]
+    ], 
+    "816470": [
+        "Determination of the D0 ---> K- pi+ pi0 and D0 ---> K-pi+pi+pi- Coherence Factors and Average Strong-Phase Differences Using Quantum-Correlated Measurements", 
+        "CLEO", 
+        "10.1103/PhysRevD.80.031105", 
+        null, 
+        "0903.4853", 
+        null, 
+        null, 
+        [
+            "CLNS-08-2047", 
+            "CLEO-08-29"
+        ]
+    ], 
+    "823313": [
+        "Improved measurements of D meson semileptonic decays to pi and K mesons", 
+        "CLEO", 
+        "10.1103/PhysRevD.80.032005", 
+        null, 
+        "0906.2983", 
+        null, 
+        null, 
+        [
+            "CLNS-09-2049", 
+            "CLEO-09-02"
+        ]
+    ]
+}

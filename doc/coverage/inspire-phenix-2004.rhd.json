@@ -1,0 +1,82 @@
+{
+    "619646": [
+        "J / psi production in Au Au collisions at s(NN)**(1/2) = 200-GeV at the Relativistic Heavy Ion Collider", 
+        "PHENIX", 
+        "10.1103/PhysRevC.69.014901", 
+        null, 
+        "nucl-ex/0305030", 
+        "ins619646", 
+        null, 
+        []
+    ], 
+    "623000": [
+        "$J/\\psi$ production from proton proton collisions at $\\sqrt{s}$ = 200-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.92.051802", 
+        null, 
+        "hep-ex/0307019", 
+        "ins623000", 
+        null, 
+        []
+    ], 
+    "623413": [
+        "Single identified hadron spectra from s(NN)**(1/2) = 130-GeV Au+Au collisions", 
+        "PHENIX", 
+        "10.1103/PhysRevC.69.024904", 
+        null, 
+        "nucl-ex/0307010", 
+        null, 
+        null, 
+        []
+    ], 
+    "624474": [
+        "Identified charged particle spectra and yields in Au+Au collisions at S(NN)**1/2 = 200-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.69.034909", 
+        null, 
+        "nucl-ex/0307022", 
+        null, 
+        null, 
+        []
+    ], 
+    "625472": [
+        "High $p_{T}$ charged hadron suppression in Au + Au collisions at $\\sqrt{s}_{NN} = 200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.69.034910", 
+        null, 
+        "nucl-ex/0308006", 
+        null, 
+        null, 
+        []
+    ], 
+    "630161": [
+        "Measurement of nonrandom event by event fluctuations of average transverse momentum in s(NN)**(1/2) = 200-GeV Au+Au and p+p collisions", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.93.092301", 
+        null, 
+        "nucl-ex/0310005", 
+        null, 
+        null, 
+        []
+    ], 
+    "642225": [
+        "Bose-Einstein correlations of charged pion pairs in Au + Au collisions at s(NN)**(1/2) = 200-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.93.152302", 
+        null, 
+        "nucl-ex/0401003", 
+        null, 
+        null, 
+        []
+    ], 
+    "648739": [
+        "Double helicity asymmetry in inclusive mid-rapidity pi0 production for polarized p + p collisions at s**(1/2) = 200-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.93.202002", 
+        null, 
+        "hep-ex/0404027", 
+        null, 
+        null, 
+        []
+    ]
+}

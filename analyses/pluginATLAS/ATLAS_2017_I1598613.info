@@ -5,12 +5,14 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1598613
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Gavin Hesketh <gavin.hesketh.cern.ch>
  - Christian Gutschow <chris.g@cern.ch>
 References:
-  - arXiv:1705.03374 [hep-ex]
-  - submitted to JHEP
+ - ATLAS-BPHY-2015-04
+ - arXiv:1705.03374 [hep-ex]
+ - submitted to JHEP
 Keywords:
  - heavyflavor
  - jpsi
@@ -18,6 +20,8 @@ RunInfo: p + p -> B(-> J/psi[-> mu mu] + X) B(-> mu + X)
 Luminosity_fb: 11.4
 Beams: [p+, p+]
 Energies: [8000]
+Options:
+ - BMODE=3MU,BB
 PtCuts: [6,6,6]
 Description:
   'A measurement of $b$-hadron pair production is presented, based on a dataset corresponding to an integrated luminosity of

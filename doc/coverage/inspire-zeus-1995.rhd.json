@@ -1,0 +1,232 @@
+{
+    "375999": [
+        "Measurement of the proton structure function F2 from the 1993 HERA data", 
+        "ZEUS", 
+        "10.1007/BF01556128", 
+        null, 
+        null, 
+        "ins375999", 
+        null, 
+        [
+            "DESY-94-143"
+        ]
+    ], 
+    "378836": [
+        "A Search for excited fermions in electron - proton collisions at HERA", 
+        "ZEUS", 
+        "10.1007/BF01578671", 
+        null, 
+        null, 
+        "ins378836", 
+        null, 
+        [
+            "DESY-94-175"
+        ]
+    ], 
+    "378838": [
+        "Inclusive jet differential cross-sections in photoproduction at HERA", 
+        "ZEUS", 
+        "10.1016/0370-2693(94)01510-J", 
+        null, 
+        null, 
+        "ins378838", 
+        null, 
+        [
+            "DESY-94-176"
+        ]
+    ], 
+    "379633": [
+        "Extraction of the gluon density of the proton at small x", 
+        "ZEUS", 
+        "10.1016/0370-2693(95)00021-C", 
+        null, 
+        null, 
+        "ins379633", 
+        null, 
+        [
+            "DESY-94-192"
+        ]
+    ], 
+    "380248": [
+        "Observation of hard scattering in photoproduction events with a large rapidity gap at HERA", 
+        "ZEUS", 
+        "10.1016/0370-2693(95)00022-D", 
+        null, 
+        "hep-ex/9501011", 
+        null, 
+        null, 
+        [
+            "DESY-94-210"
+        ]
+    ], 
+    "392037": [
+        "Inclusive transverse momentum distributions of charged particles in diffractive and nondiffractive photoproduction at HERA", 
+        "ZEUS", 
+        "10.1007/BF01571283", 
+        null, 
+        "hep-ex/9503014", 
+        "ins392037", 
+        null, 
+        [
+            "DESY-95-050"
+        ]
+    ], 
+    "392038": [
+        "Study of the photon remnant in resolved photoproduction at HERA", 
+        "ZEUS", 
+        "10.1016/0370-2693(95)00650-A", 
+        null, 
+        "hep-ex/9505001", 
+        "ins392038", 
+        null, 
+        [
+            "DESY-95-083"
+        ]
+    ], 
+    "392386": [
+        "Measurement of multiplicity and momentum spectra in the current fragmentation region of the Breit frame at HERA", 
+        "ZEUS", 
+        "10.1007/BF01564824", 
+        null, 
+        "hep-ex/9501012", 
+        "ins392386", 
+        null, 
+        [
+            "DESY-95-007"
+        ]
+    ], 
+    "392566": [
+        "Study of D*+- (2010) production in e p collisions at HERA", 
+        "ZEUS", 
+        "10.1016/0370-2693(95)00253-H", 
+        null, 
+        "hep-ex/9502002", 
+        "ins392566", 
+        null, 
+        [
+            "DESY-95-013", 
+            "ANL-HEP-PR-95-09"
+        ]
+    ], 
+    "392678": [
+        "Jet production in high Q**2 deep inelastic e p scattering at HERA", 
+        "ZEUS", 
+        "10.1007/BF01564823", 
+        null, 
+        "hep-ex/9502003", 
+        null, 
+        null, 
+        [
+            "DESY-95-016"
+        ]
+    ], 
+    "392980": [
+        "Dijet cross-sections in photoproduction at HERA", 
+        "ZEUS", 
+        "10.1016/0370-2693(95)00275-P", 
+        null, 
+        "hep-ex/9502008", 
+        "ins392980", 
+        null, 
+        [
+            "DESY-95-033"
+        ]
+    ], 
+    "393907": [
+        "Measurement of the cross-section for the reaction $\\gamma p \\to J/\\psi p$ with the ZEUS detector at HERA", 
+        "ZEUS", 
+        "10.1016/0370-2693(95)00403-8", 
+        null, 
+        "hep-ex/9503015", 
+        "ins393907", 
+        null, 
+        [
+            "DESY-95-052", 
+            "ANL-HEP-PR-95-52"
+        ]
+    ], 
+    "393918": [
+        "Measurement of charged and neutral current e- p deep inelastic scattering cross-sections at high Q**2", 
+        "ZEUS", 
+        "10.1103/PhysRevLett.75.1006", 
+        null, 
+        "hep-ex/9503016", 
+        "ins393918", 
+        null, 
+        [
+            "DESY-95-053"
+        ]
+    ], 
+    "395196": [
+        "Neutral strange particle production in deep inelastic scattering at HERA", 
+        "ZEUS", 
+        "10.1007/BF01579802", 
+        null, 
+        "hep-ex/9505011", 
+        "ins395196", 
+        null, 
+        [
+            "DESY-95-084"
+        ]
+    ], 
+    "395199": [
+        "Measurement of the diffractive structure function in deep elastic scattering at HERA", 
+        "ZEUS", 
+        "10.1007/BF01565257", 
+        null, 
+        "hep-ex/9505010", 
+        "ins395199", 
+        null, 
+        [
+            "DESY-95-093"
+        ]
+    ], 
+    "396314": [
+        "Diffractive hard photoproduction at HERA and evidence for the gluon content of the pomeron", 
+        "ZEUS", 
+        "10.1016/0370-2693(95)00803-S", 
+        null, 
+        "hep-ex/9506009", 
+        "ins396314", 
+        null, 
+        [
+            "DESY-95-115"
+        ]
+    ], 
+    "396893": [
+        "Exclusive $\\rho^0$ production in deep inelastic electron - proton scattering at HERA", 
+        "ZEUS", 
+        "10.1016/0370-2693(95)00879-P", 
+        null, 
+        "hep-ex/9507001", 
+        "ins396893", 
+        null, 
+        [
+            "DESY-95-133"
+        ]
+    ], 
+    "397423": [
+        "Measurement of elastic $\\rho^0$ photoproduction at HERA", 
+        "ZEUS", 
+        "10.1007/s002880050004", 
+        null, 
+        "hep-ex/9507011", 
+        "ins397423", 
+        null, 
+        [
+            "DESY-95-143"
+        ]
+    ], 
+    "400436": [
+        "Measurement of alpha-s from jet rates in deep inelastic scattering at HERA", 
+        "ZEUS", 
+        "10.1016/0370-2693(95)01284-W", 
+        null, 
+        "hep-ex/9510001", 
+        "ins400436", 
+        null, 
+        [
+            "DESY-95-182"
+        ]
+    ]
+}

@@ -1,0 +1,50 @@
+{
+    "875888": [
+        "Measurement of the energy dependence of the total photon-proton cross section at HERA", 
+        "ZEUS", 
+        "10.1016/j.physletb.2011.01.051", 
+        null, 
+        "1011.1652", 
+        "ins875888", 
+        null, 
+        [
+            "DESY-10-178"
+        ]
+    ], 
+    "883710": [
+        "Study of tau-pair production at HERA", 
+        "ZEUS", 
+        "10.1007/JHEP02(2011)117", 
+        null, 
+        "1101.1390", 
+        null, 
+        null, 
+        [
+            "DESY-10-250"
+        ]
+    ], 
+    "884735": [
+        "Measurement of beauty production in deep inelastic scattering at HERA using decays into electrons", 
+        "ZEUS", 
+        "10.1140/epjc/s10052-011-1573-x", 
+        null, 
+        "1101.3692", 
+        null, 
+        null, 
+        [
+            "DESY-11-005"
+        ]
+    ], 
+    "897420": [
+        "Measurement of heavy-quark jet photoproduction at HERA", 
+        "ZEUS", 
+        "10.1140/epjc/s10052-011-1659-5", 
+        null, 
+        "1104.5444", 
+        null, 
+        null, 
+        [
+            "DESY-11-067"
+        ]
+    ]
+}

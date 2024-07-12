@@ -55,8 +55,20 @@ namespace Rivet {
   // //
   // template <typename T>
   // struct Iterable<T, SFINAE::void_t< decltype(*std::declval<T>())> > : std::true_type {};
+  // template <typename T>
+  // using ConstIterable = pretty_print::is_container<T>;
+
+
+  template <typename T, typename=void>
+  struct HasXYZ : std::false_type {};
   template <typename T>
-  using ConstIterable = pretty_print::is_container<T>
+  struct HasXYZ<T, SFINAE::void_t< decltype(std::declval<T>().x() + std::declval<T>().y() + std::declval<T>().z())> > : std::true_type {};
+
+
+  template <typename T, typename=void>
+  struct HasXYZT : std::false_type {};
+  template <typename T>
+  struct HasXYZT<T, SFINAE::void_t< decltype(std::declval<T>().x() + std::declval<T>().y() + std::declval<T>().z() + std::declval<T>().t())> > : std::true_type {};
 
 
   /// @endcond

@@ -1,0 +1,36 @@
+Name: BABAR_2007_I747154
+Year: 2007
+Summary: Dalitz plot analysis of $D^0\to \pi^+\pi^-\pi^0$
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 747154
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 99 (2007) 251801
+RunInfo: Any process producing D0 -> pi+pi-pi0, original e+e->Upsilon(4S)
+Description:
+  'Measurement of the mass distributions in the decay $D^0\to \pi^+\pi^-\pi^0$. The data were read from the plots in the paper.
+   Resolution/acceptance effects have been not unfolded and given the agreement with the model in the paper this analysis should only be used for qualitative studies.'
+ValidationInfo:
+  'Herwig 7 events using model from paper'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BaBar:2007dro
+BibTeX: '@article{BaBar:2007dro,
+    author = "Aubert, Bernard and others",
+    collaboration = "BaBar",
+    title = "{Measurement of CP Violation Parameters with a Dalitz Plot Analysis of $B^\pm \to$ D(pi+ $\pi^{-} \pi^0$ ) $K^\pm$}",
+    eprint = "hep-ex/0703037",
+    archivePrefix = "arXiv",
+    reportNumber = "SLAC-PUB-12410, BABAR-PUB-06-073",
+    doi = "10.1103/PhysRevLett.99.251801",
+    journal = "Phys. Rev. Lett.",
+    volume = "99",
+    pages = "251801",
+    year = "2007"
+}
+'

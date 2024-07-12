@@ -16,7 +16,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(CMS_2017_I1518399);
+    RIVET_DEFAULT_ANALYSIS_CTOR(CMS_2017_I1518399);
 
 
     /// @name Analysis methods
@@ -39,12 +39,12 @@ namespace Rivet {
       declare(FastJets(fs_jets, FastJets::CAM, 1.2), "JetsCA12");
 
       // Partonic top for decay channel definition
-      declare(PartonicTops(PartonicTops::E_MU, false), "LeptonicTops");
-      declare(PartonicTops(PartonicTops::HADRONIC), "HadronicTops");
+      declare(PartonicTops(PartonicTops::DecayMode::E_MU, false), "LeptonicTops");
+      declare(PartonicTops(PartonicTops::DecayMode::HADRONIC), "HadronicTops");
 
       // Main histograms
-      _hist_mass        = bookHisto1D("d01-x01-y01");
-      _hist_mass_norm   = bookHisto1D("d02-x01-y01");
+      book(_hist_mass     , "d01-x01-y01");
+      book(_hist_mass_norm, "d02-x01-y01");
 
     }
 
@@ -96,7 +96,7 @@ namespace Rivet {
       if (cleanedJets.at(0).mass() < secondJetLepton.mass()) vetoEvent;
 
       // Fill histograms
-      const double weight = event.weight();
+      const double weight = 1.0;
       _hist_mass->fill(cleanedJets.at(0).mass(), weight);
       _hist_mass_norm->fill(cleanedJets.at(0).mass(), weight);
     }
@@ -121,7 +121,7 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CMS_2017_I1518399);
+  RIVET_DECLARE_PLUGIN(CMS_2017_I1518399);
 
 
 }

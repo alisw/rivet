@@ -1,0 +1,28 @@
+{
+    "1294140": [
+        "Measurement of pseudorapidity distributions of charged particles in proton-proton collisions at $\\sqrt{s}$ = 8 TeV by the CMS and TOTEM experiments", 
+        "CMS", 
+        "10.1140/epjc/s10052-014-3053-6", 
+        "1699728", 
+        "1405.0722", 
+        "ins1294140", 
+        null, 
+        [
+            "CMS-FSQ-12-026", 
+            "CERN-PH-EP-TOTEM-2014-002", 
+            "CERN-PH-EP-2014-063"
+        ]
+    ], 
+    "1298981": [
+        "LHC Optics Measurement with Proton Tracks Detected by the Roman Pots of the TOTEM Experiment", 
+        "TOTEM", 
+        "10.1088/1367-2630/16/10/103041", 
+        "1693528", 
+        "1406.0546", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2014-066"
+        ]
+    ]
+}

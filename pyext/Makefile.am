@@ -2,32 +2,18 @@ SUBDIRS = rivet
 
 if ENABLE_PYEXT
 
-PYEXT_ENV = CC="$(CXX)" CXX="$(CXX)" CXXFLAGS="$(PYEXT_CXXFLAGS)" ARCHFLAGS=""
+PYEXT_ENV = CC="$(CXX)" CXX="$(CXX)" CXXFLAGS="$(PYEXT_CXXFLAGS)" ARCHFLAGS="" PYTHONPATH="$(DESTDIR):$(PYTHONPATH)"
 
-## Always force setup.py, it's not good at guessing what needs to rebuild
 all-local:
 	cd $(srcdir); \
-	$(PYEXT_ENV) RIVET_LOCAL=1 $(PYTHON) \
-	  $(abs_builddir)/setup.py build \
-	  --build-base $(abs_builddir)/build \
-	  --verbose \
-	  --force
+	$(PYEXT_ENV) RIVET_LOCAL=1 $(PYTHON) $(abs_builddir)/build.py
 
 install-exec-local:
-	$(PYEXT_ENV) $(PYTHON) \
-	  $(abs_builddir)/setup.py install \
-	  --prefix $(DESTDIR)$(prefix) \
-	  --verbose \
-	  --skip-build \
-	  --force
+	$(MKDIR_P) $(DESTDIR)$(RIVET_PYTHONPATH); \
+	cp -r $(abs_builddir)/build/rivet $(DESTDIR)$(RIVET_PYTHONPATH)/
 
 uninstall-local:
-	dir1=$(DESTDIR)$(pythondir); \
-	dir2=$${dir1/lib/lib64}; \
-	for i in $$dir1 $$dir2; do \
-	 rm -rf $$i/rivet; \
-	 rm -rf $$i/rivet*.egg-info; \
-	done
+	rm -rf $(DESTDIR)$(RIVET_PYTHONPATH)/rivet
 
 clean-local:
 	rm -rf $(builddir)/build

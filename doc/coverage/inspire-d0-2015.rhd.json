@@ -1,0 +1,182 @@
+{
+    "1268647": [
+        "Measurement of the W Boson Production Charge Asymmetry in $p\\bar{p}\\rightarrow W+X \\rightarrow e\\nu +X$ Events at $\\sqrt{s}=1.96$ TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.112.151803", 
+        null, 
+        "1312.2895", 
+        "ins1268647", 
+        null, 
+        [
+            "FERMILAB-PUB-13-567-E"
+        ]
+    ], 
+    "1311833": [
+        "Measurement of the Effective Weak Mixing Angle in $p\\bar{p}\\rightarrow Z/\\gamma^{*}\\rightarrow e^{+}e^{-}$ Events", 
+        "D0", 
+        "10.1103/PhysRevLett.115.041801", 
+        "1751204", 
+        "1408.5016", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-14-288-E"
+        ]
+    ], 
+    "1320765": [
+        "Measurement of the $B_s^0$ Lifetime in the Flavor-Specific Decay Channel $B_s^0 \\to D_s^- \\mu^+\\nu X$", 
+        "D0", 
+        "10.1103/PhysRevLett.114.062001", 
+        "1953875", 
+        "1410.1568", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-14-388-E"
+        ]
+    ], 
+    "1324946": [
+        "Measurement of the $\\phi^*_\\eta$ distribution of muon pairs with masses between 30 and 500 GeV in 10.4 fb$^{-1}$ of $p\\bar{p}$ collisions", 
+        "D0", 
+        "10.1103/PhysRevD.91.072002", 
+        "1965855", 
+        "1410.8052", 
+        "ins1324946", 
+        null, 
+        [
+            "FERMILAB-PUB-14-430-E"
+        ]
+    ], 
+    "1327480": [
+        "Measurement of the Forward-Backward Asymmetry in the Production of $B^{\\pm}$ Mesons in $p\\bar{p}$ Collisions at $\\sqrt{s}$ = 1.96 TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.114.051803", 
+        "1969196", 
+        "1411.3021", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-14-472-E"
+        ]
+    ], 
+    "1333394": [
+        "Measurement of the electron charge asymmetry in $\\boldsymbol{p\\bar{p}\\rightarrow W+X \\rightarrow e\\nu +X}$ decays in $\\boldsymbol{p\\bar{p}}$ collisions at $\\boldsymbol{\\sqrt{s}=1.96}$ TeV", 
+        "D0", 
+        "10.1103/PhysRevD.91.032007", 
+        "1975711", 
+        "1412.2862", 
+        "ins1333394", 
+        null, 
+        [
+            "FERMILAB-PUB-14-514-E"
+        ]
+    ], 
+    "1334689": [
+        "Measurement of the $W+b$-jet and $W+c$-jet differential production cross sections in $p\\bar{p}$ collisions at $\\sqrt{s}=1.96$ TeV", 
+        "D0", 
+        "10.1016/j.physletb.2015.02.012", 
+        "1977645", 
+        "1412.5315", 
+        "ins1334689", 
+        null, 
+        [
+            "FERMILAB-PUB-14-525-E"
+        ]
+    ], 
+    "1340690": [
+        "Measurement of the ratio of inclusive cross sections $\\sigma (p\\bar{p} \\rightarrow Z+2~b \\text{jets}) / \\sigma (p\\bar{p} \\rightarrow Z+ \\text{2 jets})$ in $p\\bar{p}$ collisions at $\\sqrt s=1.96$ TeV", 
+        "D0", 
+        "10.1103/PhysRevD.91.052010", 
+        "1982734", 
+        "1501.05325", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-15-013-E"
+        ]
+    ], 
+    "1342268": [
+        "Precision measurement of the top-quark mass in lepton$+$jets final states", 
+        "D0", 
+        "10.1103/PhysRevD.91.112003", 
+        "1984245", 
+        "1501.07912", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-15-021-E"
+        ]
+    ], 
+    "1342808": [
+        "Tevatron Constraints on Models of the Higgs Boson with Exotic Spin and Parity Using Decays to Bottom-Antibottom Quark Pairs", 
+        "CDF", 
+        "10.1103/PhysRevLett.114.151802", 
+        "1984692", 
+        "1502.00967", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-15-029-E"
+        ]
+    ], 
+    "1352125": [
+        "Measurement of the Forward-Backward Asymmetry in $\u039b_b^0$ and $\\bar{\u039b}_b^0$ Baryon Production in $p\\bar{p}$ Collisions at $\\sqrt{s}$=1.96 TeV", 
+        "D0", 
+        "10.1103/PhysRevD.91.072008", 
+        "2001753", 
+        "1503.03917", 
+        "ins1352125", 
+        null, 
+        [
+            "FERMILAB-PUB-15-080-E"
+        ]
+    ], 
+    "1353120": [
+        "Tevatron Combination of Single-Top-Quark Cross Sections and Determination of the Magnitude of the Cabibbo-Kobayashi-Maskawa Matrix Element $\\bf V_{tb}$", 
+        "CDF", 
+        "10.1103/PhysRevLett.115.152003", 
+        "2003756", 
+        "1503.05027", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-15-088-E"
+        ]
+    ], 
+    "1375998": [
+        "Search for Violation of $CPT$ and Lorentz Invariance in ${B_s^0}$ Meson Oscillations", 
+        "D0", 
+        "10.1103/PhysRevLett.115.161601", 
+        "2025335", 
+        "1506.04123", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-15-258-E"
+        ]
+    ], 
+    "1384115": [
+        "Simultaneous measurement of forward-backward asymmetry and top polarization in dilepton final states from $t\\bar t$ production at the Tevatron", 
+        "D0", 
+        "10.1103/PhysRevD.92.052007", 
+        "2036481", 
+        "1507.05666", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-15-312-E"
+        ]
+    ], 
+    "1391148": [
+        "Inclusive Production of the X(4140) State in $p \\overline p$ Collisions at D0", 
+        "D0", 
+        "10.1103/PhysRevLett.115.232001", 
+        "2048411", 
+        "1508.07846", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-15-373-E"
+        ]
+    ]
+}

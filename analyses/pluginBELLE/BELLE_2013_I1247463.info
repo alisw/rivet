@@ -1,0 +1,36 @@
+Name: BELLE_2013_I1247463
+Year: 2013
+Summary: Dalitz plot analysis of $\Upsilon(5S)\to\Upsilon(1,2,3S)\pi^0\pi^0$
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1247463
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 88 (2013) 5, 052016
+RunInfo: Any process producing Upsilon(5S), originally e+e-
+Description:
+  'Measurement of the mass distributions in the decays  $\Upsilon(5S)\to\Upsilon(1,2,3S)\pi^0\pi^0$ by BELLE.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle:2013urd
+BibTeX: '@article{Belle:2013urd,
+    author = "Krokovny, P. and others",
+    collaboration = "Belle",
+    title = "{First observation of the $Z \frac{0}{b}$(10610) in a Dalitz analysis of $\Upsilon$(10860) $\to \Upsilon$(nS)$\pi^0 \pi^0$}",
+    eprint = "1308.2646",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevD.88.052016",
+    journal = "Phys. Rev. D",
+    volume = "88",
+    number = "5",
+    pages = "052016",
+    year = "2013"
+}
+'

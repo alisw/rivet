@@ -3,7 +3,7 @@ Year: 2012
 Summary: Pion, Kaon, and Proton Production in Central Pb-Pb Collisions at 2.76 TeV
 Experiment: ALICE
 Collider: LHC
-SpiresID: 1126966
+InspireID: 1126966
 Status: UNVALIDATED
 Authors:
  - Cody B Duncan <cody.duncan@monash.edu>
@@ -15,11 +15,11 @@ References:
 RunInfo: 
   Analysis of various pT spectra in central Pb-Pb collisions at 2.76 TeV
 NeedCrossSection: no
-Beams: [1000822080,1000822080]
+Beams: [Pb, Pb]
 # This is _total_ energy of beams, so this becomes 208*2760=574080
 Energies: [574080]
 Options:
- - cent=REF,GEN,IMP,USR
+ - cent=REF,GEN,IMP,USR,RAW
 Description:
   Measurements of the transverse momentum distributions of charged pions, kaons 
   and (anti)protons in Lead-Lead collisions at a centre-of-mass energy per nucleon 

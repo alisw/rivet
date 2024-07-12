@@ -1,0 +1,29 @@
+Name: VENUS_1999_I500179
+Year: 1999
+Summary: Cross section in $e^+e^-\to$hadrons for 57.77 GeV
+Experiment: VENUS
+Collider: Tristan
+InspireID: 500179
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B198 (1987) 570, 1987 
+RunInfo: e+ e- to hadrons 
+NeedCrossSection: yes
+Beams: [e-, e+]
+Description:
+  'Measurement of the hadronic cross section in $e^+e^-$ collisions by VENUS for 57.77 GeV.'
+BibKey: Yusa:1999dx
+BibTeX: '@article{Yusa:1999dx,
+      author         = "Yusa, K. and others",
+      title          = "{Precise measurement of the total hadronic cross-section
+                        in e+ e- annihilation at s**(1/2) = 57.77-GeV}",
+      collaboration  = "VENUS",
+      journal        = "Phys. Lett.",
+      volume         = "B447",
+      year           = "1999",
+      pages          = "167-177",
+      doi            = "10.1016/S0370-2693(98)01560-3",
+      SLACcitation   = "%%CITATION = PHLTA,B447,167;%%"
+}'

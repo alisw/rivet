@@ -1,0 +1,32 @@
+Name: TPC_1984_I205869
+Year: 1984
+Summary: $K^{*0}$ and $K^0$ spectra at 29 GeV
+Experiment: TPC
+Collider: PEP
+InspireID: 205869
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 53 (1984) 2378, 1984 
+RunInfo: e+e- to hadrons at 29 GeV
+NeedCrossSection: no
+Beams: [e+, e-]
+Energies: [29]
+Description:
+  'Measurement of the  $K^{*0}$ and $K^0$ spectra at 29 GeV by the TPC experiment.'
+Keywords: []
+BibKey: Aihara:1984mk
+BibTeX: '@article{Aihara:1984mk,
+      author         = "Aihara, H. and others",
+      title          = "{$K^{*0}$ and $K^0_s$ meson production in $e^+e^-$
+                        annihilations at 29-GeV}",
+      collaboration  = "TPC/Two Gamma",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "53",
+      year           = "1984",
+      pages          = "2378",
+      doi            = "10.1103/PhysRevLett.53.2378",
+      reportNumber   = "LBL-18325, TPC-UT-84-13",
+      SLACcitation   = "%%CITATION = PRLTA,53,2378;%%"
+}'

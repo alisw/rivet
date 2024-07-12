@@ -12,7 +12,7 @@ References:
  - Phys.Lett. B550 (2002) 33-46
  - hep-ex/0211007
 RunInfo:
-  Hadronic Z decay events generated on the Z pole ($\sqrt{s} = 91.2$ GeV)
+  Hadronic Z decay events generated above the Z pole
 NumEvents: 1000000
 Beams: [e+, e-]
 Energies: [130,136,161,172,183,189,192,196,200,202,206]
@@ -38,3 +38,17 @@ BibTeX: '@article{Abbiendi:2002vn,
       reportNumber   = "CERN-EP-2002-079",
       SLACcitation   = "%%CITATION = HEP-EX/0211007;%%",
 }'
+
+ReleaseTests:
+ - $A LEP-130
+ - $A-2 LEP-136
+ - $A-3 LEP-161
+ - $A-4 LEP-172
+ - $A-5 LEP-183
+ - $A-6 LEP-189
+ - $A-7 LEP-192
+ - $A-8 LEP-196
+ - $A-9 LEP-200
+ - $A-10 LEP-202
+ - $A-11 LEP-206
+

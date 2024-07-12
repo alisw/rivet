@@ -1,0 +1,31 @@
+Name: DELPHI_1991_I324035
+Year: 1991
+Summary: Charged particle multiplicities in different rapidity intervals
+Experiment: DELPHI
+Collider: LEP
+InspireID: 324035
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Z.Phys. C52 (1991) 271-281, 1991
+RunInfo:
+  $\sqrt{s} = 91.2$ GeV, $e^+ e^- -> Z^0$ production with hadronic decays only
+NumEvents: 1000000
+Beams: [e+, e-]
+Energies: [91.2]
+Description:
+  The charged multiplicity distributions in hadron $Z^0$ decays for different rapidity regions.
+BibKey: Abreu:1991yc
+BibTeX: '@article{Abreu:1991yc,
+      author         = "Abreu, P. and others",
+      title          = "{Charged particle multiplicity distributions in
+                        restricted rapidity intervals in Z0 hadronic decays.}",
+      collaboration  = "DELPHI",
+      journal        = "Z. Phys.",
+      volume         = "C52",
+      year           = "1991",
+      pages          = "271-281",
+      doi            = "10.1007/BF01560444",
+      SLACcitation   = "%%CITATION = ZEPYA,C52,271;%%"
+}'

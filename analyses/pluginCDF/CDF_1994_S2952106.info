@@ -6,6 +6,7 @@ Collider: Tevatron Run 1
 SpiresID: 2952106
 InspireID: 374155
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Lars Sonnenschein <Lars.Sonnenschein@cern.ch>
  - Andy Buckley <andy.buckley@cern.ch>
@@ -41,3 +42,7 @@ BibTeX: '@Article{Abe:1994nj,
      doi       = "10.1103/PhysRevD.50.5562",
      SLACcitation  = "%%CITATION = PHRVA,D50,5562;%%"
 }'
+
+ReleaseTests:
+ - $A TVT-Run-I-Jets-4
+

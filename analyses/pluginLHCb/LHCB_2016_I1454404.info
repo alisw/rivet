@@ -1,0 +1,47 @@
+Name: LHCB_2016_I1454404
+Year: 2016
+Summary: Measurement of forward W and Z boson production in association with jets at LHCb
+Experiment: LHCB
+Collider: LHC
+InspireID: 1454404
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Abbie Jane Chadwick <abbie.jane.chadwick@cern.ch>
+ - Stephen Farry <stephen.farry@cern.ch>
+References:
+- 10.1007/JHEP05(2016)131
+- arXiv:hep-ex/1605.00951
+- LHCb-PAPER-2016-011, CERN-EP-2016-092
+RunInfo: p+ p+ -> W/Z + jet + X
+Beams: [p+, p+]
+Energies: [8000]
+NeedCrossSection: True
+Luminosity_fb: 1.98
+Options:
+ - MODE=WpJET,WmJET,ZJET,WJET,ALL
+Description:
+  'Measurements are made of forward W and Z production in association with jets in the forward region. 
+  Muons and jets are required to have transverse momentum in excess of 20 Gev, and to have a pseudorapidity 
+  between 2.0 and 4.5 for muons, and between 2.2 and 4.2 for jets. A single muon is required in the case of 
+  $W$ production, and two opposite sign muons with a combined invariant mass of between 60 and 120 GeV are 
+  required for $W$ production. The leptons and jets are required to be separated by a radius of 0.5 in ($\eta$, $\phi$) space.'
+Keywords: []
+BibKey: AbellanBeteta:2016ugk
+BibTeX: '@article{AbellanBeteta:2016ugk,
+      author         = "Aaij, Roel and others",
+      title          = "{Measurement of forward $W$ and $Z$ boson production in
+                        association with jets in proton-proton collisions at
+                        $\sqrt{s}=8$ TeV}",
+      collaboration  = "LHCb",
+      journal        = "JHEP",
+      volume         = "05",
+      year           = "2016",
+      pages          = "131",
+      doi            = "10.1007/JHEP05(2016)131",
+      eprint         = "1605.00951",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-EP-2016-092, LHCB-PAPER-2016-011",
+      SLACcitation   = "%%CITATION = ARXIV:1605.00951;%%"
+}'

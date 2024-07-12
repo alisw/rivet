@@ -24,13 +24,13 @@ namespace Rivet {
     void init() {
       Cut cut = Cuts::abseta < 3.5 && Cuts::pT > 25*GeV;
       ZFinder zeefinder(FinalState(), cut, PID::ELECTRON, 65*GeV, 115*GeV,
-                        0.2, ZFinder::CLUSTERNODECAY, ZFinder::TRACK);
+                        0.2, ZFinder::ClusterPhotons::NODECAY, ZFinder::AddPhotons::YES);
       declare(zeefinder, "ZeeFinder");
 
       VetoedFinalState zmminput;
       zmminput.addVetoOnThisFinalState(zeefinder);
       ZFinder zmmfinder(zmminput, cut, PID::MUON, 65*GeV, 115*GeV,
-                        0.2, ZFinder::CLUSTERNODECAY, ZFinder::TRACK);
+                        0.2, ZFinder::ClusterPhotons::NODECAY, ZFinder::AddPhotons::YES);
       declare(zmmfinder, "ZmmFinder");
 
       VetoedFinalState jetinput;
@@ -66,6 +66,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(MC_ZZKTSPLITTINGS);
+  RIVET_DECLARE_PLUGIN(MC_ZZKTSPLITTINGS);
 
 }

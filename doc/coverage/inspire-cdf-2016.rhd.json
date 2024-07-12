@@ -1,0 +1,122 @@
+{
+    "1246779": [
+        "Measurement of the Leptonic Asymmetry in $t \\bar t$ Events Produced in $p \\bar p$ Collisions at $\\sqrt s=$ 1.96  TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.88.072003", 
+        "1566946", 
+        "1308.1120", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-13-309-E"
+        ]
+    ], 
+    "1290358": [
+        "Measurement of the inclusive leptonic asymmetry in top-quark pairs that decay to two charged leptons at CDF", 
+        "CDF", 
+        "10.1103/PhysRevLett.113.042001", 
+        "1695295", 
+        "1404.3698", 
+        "ins1290358", 
+        null, 
+        [
+            "FERMILAB-PUB-14-096-E"
+        ]
+    ], 
+    "1322918": [
+        "Updated Measurement of the Single Top Quark Production Cross Section and $V{tb}$ in the Missing Transverse Energy Plus Jets Topology in $p\\bar{p}$ Collisions at $\\sqrt{s} = 1.96$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.93.032011", 
+        "1956544", 
+        "1410.4909", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-14-398-E"
+        ]
+    ], 
+    "1390116": [
+        "Measurement of vector boson plus $D^{*}(2010)^+$ meson production in $\\bar{p}p$ collisions at $\\sqrt{s}=1.96\\, {\\rm TeV}$", 
+        "CDF", 
+        "10.1103/PhysRevD.93.052012", 
+        "2047549", 
+        "1508.06980", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-15-368"
+        ]
+    ], 
+    "1412066": [
+        "Search for a Low-Mass Neutral Higgs Boson with Suppressed Couplings to Fermions Using Events with Multiphoton Final States", 
+        "CDF", 
+        "10.1103/PhysRevD.93.112010", 
+        "2119053", 
+        "1601.00401", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-15-578-E"
+        ]
+    ], 
+    "1415579": [
+        "Measurement of the $B_c^{\\pm}$ Production Cross Section in $p\\bar{p}$ Collisions at $\\sqrt{s}=1.96$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.93.052001", 
+        "2124514", 
+        "1601.03819", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-16-008-E-PPD"
+        ]
+    ], 
+    "1416824": [
+        "Measurement of the forward-backward asymmetry in low-mass bottom-quark pairs produced in proton-antiproton collisions", 
+        "CDF", 
+        "10.1103/PhysRevD.93.112003", 
+        "2126739", 
+        "1601.06526", 
+        "ins1416824", 
+        null, 
+        [
+            "FERMILAB-PUB-16-017-E"
+        ]
+    ], 
+    "1424841": [
+        "Measurement of the forward\u2013backward asymmetry of top-quark and antiquark pairs using the full CDF Run II data set", 
+        "CDF", 
+        "10.1103/PhysRevD.93.112005", 
+        "2135566", 
+        "1602.09015", 
+        "ins1424841", 
+        null, 
+        [
+            "FERMILAB-PUB-16-045-E"
+        ]
+    ], 
+    "1456804": [
+        "Measurement of $\\sin^2\\theta^{\\rm lept}_{\\rm eff}$ using $e^+e^-$ pairs from $\\gamma^*/Z$ bosons produced in $p\\bar{p}$ collisions at a center-of-momentum energy of 1.96 TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.93.112016", 
+        "2151524", 
+        "1605.02719", 
+        "ins1456804", 
+        null, 
+        [
+            "FERMILAB-PUB-16-165-E"
+        ]
+    ], 
+    "1471722": [
+        "Measurement of the $WW$ and $WZ$ production cross section using final states with a charged lepton and heavy-flavor jets in the full CDF Run II data set", 
+        "CDF", 
+        "10.1103/PhysRevD.94.032008", 
+        "2163134", 
+        "1606.06823", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-16-229-E"
+        ]
+    ]
+}

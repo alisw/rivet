@@ -1,0 +1,100 @@
+{
+    "879583": [
+        "Suppression of Charged Particle Production at Large Transverse Momentum in Central Pb-Pb Collisions at $\\sqrt{s_{NN}} =$ 2.76 TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2010.12.020", 
+        "1312348", 
+        "1012.1004", 
+        "ins879583", 
+        null, 
+        [
+            "CERN-PH-EP-ALICE-2010-004", 
+            "CERN-PH-EP-2010-066"
+        ]
+    ], 
+    "880049": [
+        "Centrality dependence of the charged-particle multiplicity density at mid-rapidity in Pb-Pb collisions at $\\sqrt{s_{NN}}=2.76$ TeV", 
+        "ALICE", 
+        "10.1103/PhysRevLett.106.032301", 
+        "1313050", 
+        "1012.1657", 
+        "ins880049", 
+        null, 
+        [
+            "CERN-PH-EP-2010-071"
+        ]
+    ], 
+    "881474": [
+        "Strange particle production in proton-proton collisions at sqrt(s) = 0.9 TeV with ALICE at the LHC", 
+        "ALICE", 
+        "10.1140/epjc/s10052-011-1594-5", 
+        "1310328", 
+        "1012.3257", 
+        "ins881474", 
+        null, 
+        [
+            "CERN-PH-EP-2010-065"
+        ]
+    ], 
+    "881884": [
+        "Two-pion Bose-Einstein correlations in central Pb-Pb collisions at $\\sqrt{{s}_{NN}} =$ 2.76 TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2010.12.053", 
+        "1316558", 
+        "1012.4035", 
+        "ins881884", 
+        null, 
+        [
+            "CERN-PH-EP-ALICE-2010-006", 
+            "CERN-PH-EP-2010-078"
+        ]
+    ], 
+    "884741": [
+        "Femtoscopy of $pp$ collisions at $\\sqrt{s}=0.9$ and 7 TeV at the LHC with two-pion Bose-Einstein correlations", 
+        "ALICE", 
+        "10.1103/PhysRevD.84.112004", 
+        "1323464", 
+        "1101.3665", 
+        "ins884741", 
+        null, 
+        [
+            "CERN-PH-EP-2010-083"
+        ]
+    ], 
+    "885104": [
+        "Production of pions, kaons and protons in $pp$ collisions at $\\sqrt{s}= 900$ GeV with ALICE at the LHC", 
+        "ALICE", 
+        "10.1140/epjc/s10052-011-1655-9", 
+        "1314539", 
+        "1101.4110", 
+        "ins885104", 
+        null, 
+        [
+            "CERN-PH-EP-2010-085"
+        ]
+    ], 
+    "897764": [
+        "Rapidity and transverse momentum dependence of inclusive J$/\\psi$ production in $pp$ collisions at $\\sqrt{s} = 7$ TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2011.09.054", 
+        "1348393", 
+        "1105.0380", 
+        "ins897764", 
+        null, 
+        [
+            "CERN-PH-EP-2011-057"
+        ]
+    ], 
+    "900651": [
+        "Higher harmonic anisotropic flow measurements of charged particles in Pb-Pb collisions at $\\sqrt{s_{NN}}$=2.76 TeV", 
+        "ALICE", 
+        "10.1103/PhysRevLett.107.032301", 
+        "1352300", 
+        "1105.3865", 
+        "ins900651", 
+        null, 
+        [
+            "CERN-PH-EP-2011-073"
+        ]
+    ]
+}

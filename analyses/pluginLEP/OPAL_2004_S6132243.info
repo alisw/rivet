@@ -6,6 +6,7 @@ Collider: LEP 1 & 2
 SpiresID: 6132243
 InspireID: 669402
 Status: VALIDATED
+Reentrant: false
 Authors:
  - Andy Buckley <andy.buckley@cern.ch>
 References:
@@ -14,16 +15,19 @@ References:
 RunInfo:
   Hadronic $e^+ e^-$ events at 4 representative energies (91, 133, 177, 197).
   Runs need to have ISR suppressed, since the analysis was done using a cut of
-  $\sqrt{s} - \sqrt{s_\text{reco}} < 1\,\text{GeV}$. Particles with a livetime
-  $> 3 \cdot 10^{-10}\,\text{s}$ are considered to be stable.
+  $\sqrt{s} - \sqrt{s_\text{reco}} < 1\,\text{GeV}$. Particles with a lifetime
+  $> 3 \cdot 10^{-10}\,\text{s}$ are considered to be stable. Beam energy must be specified as analysis option "ENERGY" when rivet-merging samples.
 NumEvents: 200000
 Beams: [e+, e-]
 Energies: [91.2, 133, 177, 197]
+Options:
+ - ENERGY=91.2,133,177,197
 PtCuts: [0]
 Description:
-  Measurement of $e^+ e^-$ event shape variable distributions and their 1st 
+  'Measurement of $e^+ e^-$ event shape variable distributions and their 1st 
   to 5th moments in LEP running from the Z pole to the highest LEP 2 energy
-  of 209 GeV.
+  of 209 GeV.Beam energy must be specified as analysis option "ENERGY" when rivet-merging samples.'
+
 BibKey: Abbiendi:2004qz
 BibTeX: '@Article{Abbiendi:2004qz,
      author    = "Abbiendi, G. and others",
@@ -40,3 +44,10 @@ BibTeX: '@Article{Abbiendi:2004qz,
      doi       = "10.1140/epjc/s2005-02120-6",
      SLACcitation  = "%%CITATION = HEP-EX/0503051;%%"
 }'
+
+ReleaseTests:
+ - $A LEP-133
+ - $A-2 LEP-177
+ - $A-3 LEP-197
+ - $A-4 LEP-91
+

@@ -9,17 +9,19 @@ test -n "$YODA_PYTHONPATH" || { (which yoda-config > /dev/null) && YODA_PYTHONPA
 test -n "$YODA_PYTHONPATH" || echo "yoda-config could not be found: you may need to manually set paths to libYODA and the yoda Python package" 1>&2
 
 export PATH="$exec_prefix/bin:@YODABINPATH@:$PATH"
-export @LIBPATHVARNAME@="@libdir@:@YODALIBPATH@:@HEPMCLIBPATH@:@FASTJETLIBPATH@:@GSLLIBPATH@:$@LIBPATHVARNAME@"
+export @LIBPATHVARNAME@="@libdir@:@YODALIBPATH@:@HEPMCLIBPATH@:@FASTJETLIBPATH@:@FJCONTRIBLIBPATH@:$@LIBPATHVARNAME@"
 export PYTHONPATH="@RIVET_PYTHONPATH@:$YODA_PYTHONPATH:$PYTHONPATH"
 
-export TEXMFHOME="@datadir@/Rivet/texmf:$TEXMFHOME"
-export HOMETEXMF="@datadir@/Rivet/texmf:$HOMETEXMF"
-export TEXMFCNF="@datadir@/Rivet/texmf/cnf:$TEXMFCNF"
-export TEXINPUTS="@datadir@/Rivet/texmf/tex//:$TEXINPUTS"
-export LATEXINPUTS="@datadir@/Rivet/texmf/tex//:$LATEXINPUTS"
+texdatadir=`echo "@datadir@" | sed -e 's:/\+:/:g'`
+export TEXMFHOME="$texdatadir/Rivet/texmf:$TEXMFHOME"
+export HOMETEXMF="$texdatadir/Rivet/texmf:$HOMETEXMF"
+export TEXMFCNF="$texdatadir/Rivet/texmf/cnf:$TEXMFCNF"
+export TEXINPUTS="$texdatadir/Rivet/texmf/tex//:$TEXINPUTS"
+export LATEXINPUTS="$texdatadir/Rivet/texmf/tex//:$LATEXINPUTS"
 
 if (complete &> /dev/null); then
-    test -e "@datadir@/Rivet/rivet-completion" && source "@datadir@/Rivet/rivet-completion"
+    comppath="@sysconfdir@/bash_completion.d/rivet-completion"
+    test -e $comppath && source $comppath
 fi
 
 unset YODA_PYTHONPATH

@@ -1,0 +1,35 @@
+Name: ALEPH_2001_I555653
+Year: 2001
+Summary: $\tau$ polarization at LEP1
+Experiment: ALEPH
+Collider: LEP
+InspireID: 555653
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Eur.Phys.J.C 20 (2001) 401-430
+RunInfo:  e+ e- > tau+ tau-
+Beams: [e+, e-]
+Energies: [91.2]
+Description:
+  'Measurement of the $\tau$ lepton polarization in $e^+e^-\to\tau^+\tau^-$ at the $Z^0$ pole by the ALEPH experiment at LEP1.'
+ValidationInfo:
+  'Herwig7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Heister:2001uh
+BibTeX: '@article{Heister:2001uh,
+    author = "Heister, A. and others",
+    collaboration = "ALEPH",
+    title = "{Measurement of the tau polarization at LEP}",
+    eprint = "hep-ex/0104038",
+    archivePrefix = "arXiv",
+    reportNumber = "CERN-EP-2001-027",
+    doi = "10.1007/s100520100689",
+    journal = "Eur. Phys. J. C",
+    volume = "20",
+    pages = "401--430",
+    year = "2001"
+}'

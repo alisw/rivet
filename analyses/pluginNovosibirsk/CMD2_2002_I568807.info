@@ -1,0 +1,33 @@
+Name: CMD2_2002_I568807
+Year: 2002
+Summary: Cross section for $e^+e^-\to \pi^+\pi^-$ at near the $\rho$ mass.
+Experiment: CMD2
+Collider: VEPP-2M
+InspireID: 568807
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B527 (2002) 161-172, 2002 
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Description:
+  'Measurement of the cross section for $e^+e^-\to \pi^+\pi^-$ at energies near the $\rho$ mass.'
+Keywords: []
+BibKey: Akhmetshin:2001ig
+BibTeX: '@article{Akhmetshin:2001ig,
+      author         = "Akhmetshin, R. R. and others",
+      title          = "{Measurement of e+ e- ---&gt; pi+ pi- cross-section with
+                        CMD-2 around rho meson}",
+      collaboration  = "CMD-2",
+      journal        = "Phys. Lett.",
+      volume         = "B527",
+      year           = "2002",
+      pages          = "161-172",
+      doi            = "10.1016/S0370-2693(02)01168-1",
+      eprint         = "hep-ex/0112031",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = HEP-EX/0112031;%%"
+}'

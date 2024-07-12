@@ -1,0 +1,38 @@
+{
+    "1198429": [
+        "Combination and QCD Analysis of Charm Production Cross Section Measurements in Deep-Inelastic ep Scattering at HERA", 
+        "H1", 
+        "10.1140/epjc/s10052-013-2311-3", 
+        null, 
+        "1211.1182", 
+        null, 
+        null, 
+        [
+            "DESY-12-172"
+        ]
+    ], 
+    "1217865": [
+        "Measurement of Charged Particle Spectra in Deep-Inelastic ep Scattering at HERA", 
+        "H1", 
+        "10.1140/epjc/s10052-013-2406-x", 
+        "1513855", 
+        "1302.1321", 
+        "ins1217865", 
+        null, 
+        [
+            "DESY-13-012"
+        ]
+    ], 
+    "1228913": [
+        "Elastic and Proton-Dissociative Photoproduction of J/psi Mesons at HERA", 
+        "H1", 
+        "10.1140/epjc/s10052-013-2466-y", 
+        "1543138", 
+        "1304.5162", 
+        "ins1228913", 
+        null, 
+        [
+            "DESY-13-058"
+        ]
+    ]
+}

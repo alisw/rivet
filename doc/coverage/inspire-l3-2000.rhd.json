@@ -1,0 +1,339 @@
+{
+    "507737": [
+        "Measurement of R($b$) and Br($b \\to$ lepton neutrino $X$) at LEP using double tag methods", 
+        "L3", 
+        "10.1007/s100520000296", 
+        "400682", 
+        "hep-ex/9909045", 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-121"
+        ]
+    ], 
+    "508077": [
+        "Search for charginos and neutralinos in $e^{+} e^{-}$ collisions at $\\sqrt{S}$ = 189-GeV", 
+        "L3", 
+        "10.1016/S0370-2693(99)01388-X", 
+        "401677", 
+        "hep-ex/9910007", 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-127"
+        ]
+    ], 
+    "508409": [
+        "Search for excited leptons at $\\sqrt{S}$ = 189-GeV", 
+        "L3", 
+        "10.1016/S0370-2693(99)01445-8", 
+        "403277", 
+        "hep-ex/9910021", 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-138"
+        ]
+    ], 
+    "509581": [
+        "Direct observation of longitudinally polarized $W^\\pm$ bosons", 
+        "L3", 
+        "10.1016/S0370-2693(99)01489-6", 
+        "419579", 
+        "hep-ex/0001016", 
+        "ins509581", 
+        null, 
+        [
+            "CERN-EP-99-176"
+        ]
+    ], 
+    "510061": [
+        "Measurement of the probability of gluon splitting into charmed quarks in hadronic $Z$ decays", 
+        "L3", 
+        "10.1016/S0370-2693(00)00163-5", 
+        "407917", 
+        "hep-ex/9911016", 
+        "ins510061", 
+        null, 
+        [
+            "CERN-EP-99-156"
+        ]
+    ], 
+    "513397": [
+        "Hard photon production and tests of QED at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(00)00082-4", 
+        "424718", 
+        "hep-ex/0002036", 
+        "ins513397", 
+        null, 
+        [
+            "CERN-EP-99-180"
+        ]
+    ], 
+    "513676": [
+        "Measurement of hadron and lepton pair production at 130-GeV less than $\\sqrt{S}$ less than 189-GeV at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(00)00280-X", 
+        "424433", 
+        "hep-ex/0002034", 
+        "ins513676", 
+        null, 
+        [
+            "CERN-EP-99-181"
+        ]
+    ], 
+    "523920": [
+        "Measurement of the running of the fine structure constant", 
+        "L3", 
+        "10.1016/S0370-2693(00)00122-2", 
+        "424719", 
+        "hep-ex/0002035", 
+        "ins523920", 
+        null, 
+        [
+            "CERN-EP-2000-005"
+        ]
+    ], 
+    "523921": [
+        "Measurement of the $e^{+} e^{-} \\to Z \\gamma \\gamma$ cross-section and determination of quartic gauge boson couplings at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(00)00279-3", 
+        "424720", 
+        "hep-ex/0002037", 
+        "ins523921", 
+        null, 
+        [
+            "CERN-EP-2000-006"
+        ]
+    ], 
+    "523976": [
+        "Search for charginos with a small mass difference with the lightest supersymmetric particle at $\\sqrt{S}$ = 189-GeV", 
+        "L3", 
+        "10.1016/S0370-2693(00)00488-3", 
+        "426599", 
+        "hep-ex/0002043", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-018"
+        ]
+    ], 
+    "524027": [
+        "Measurements of cross-sections and forward backward asymmetries at the $Z$ resonance and determination of electroweak parameters", 
+        "L3", 
+        "10.1007/s100520050001", 
+        "426600", 
+        "hep-ex/0002046", 
+        "ins524027", 
+        null, 
+        [
+            "CERN-EP-2000-022"
+        ]
+    ], 
+    "524450": [
+        "Inclusive $\\Sigma^{+}$ and $\\Sigma^0$ production in hadronic $Z$ decays", 
+        "L3", 
+        "10.1016/S0370-2693(00)00369-5", 
+        "427619", 
+        "hep-ex/0002066", 
+        "ins524450", 
+        null, 
+        [
+            "CERN-EP-2000-028"
+        ]
+    ], 
+    "525025": [
+        "Measurement of the lifetime of the $\\tau$ lepton", 
+        "L3", 
+        "10.1016/S0370-2693(00)00347-6", 
+        "431217", 
+        "hep-ex/0003023", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-040"
+        ]
+    ], 
+    "525764": [
+        "Measurement of the photon structure function at high $Q^{2}$ at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(00)00587-6", 
+        "432589", 
+        "hep-ex/0004005", 
+        "ins525764", 
+        null, 
+        [
+            "CERN-EP-2000-044"
+        ]
+    ], 
+    "525809": [
+        "Search for an invisibly decaying Higgs boson in $e^{+} e^{-}$ collisions at $\\sqrt{S}$ = 183-GeV - 189-GeV", 
+        "L3", 
+        "10.1016/S0370-2693(00)00641-9", 
+        "432865", 
+        "hep-ex/0004006", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-047"
+        ]
+    ], 
+    "527337": [
+        "Measurements of the $b \\bar{b}$ production cross-section and forward backward asymmetry at center-of-mass energies above the $Z$ pole at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(00)00676-6", 
+        "435659", 
+        "hep-ex/0005023", 
+        "ins527337", 
+        null, 
+        [
+            "CERN-EP-2000-054"
+        ]
+    ], 
+    "527338": [
+        "Search for anomalous $Z Z \\gamma$ and $Z \\gamma \\gamma$ couplings in the process $e^{+} e^{-} \\to Z \\gamma$ at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(00)00886-8", 
+        "436253", 
+        "hep-ex/0005024", 
+        "ins527338", 
+        null, 
+        [
+            "CERN-EP-2000-057"
+        ]
+    ], 
+    "527692": [
+        "Search for manifestations of new physics in fermion pair production at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(00)00887-X", 
+        "439328", 
+        "hep-ex/0005028", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-061"
+        ]
+    ], 
+    "527988": [
+        "QCD studies in $e^{+} e^{-}$ annihilation from 30-GeV to 189-GeV", 
+        "L3", 
+        "10.1016/S0370-2693(00)00891-1", 
+        "439175", 
+        "hep-ex/0005045", 
+        "ins527988", 
+        null, 
+        [
+            "CERN-EP-2000-064"
+        ]
+    ], 
+    "529575": [
+        "Production of single $W$ bosons at $\\sqrt{S}$ = 189-GeV and measurement of $W W \\gamma$ gauge couplings", 
+        "L3", 
+        "10.1016/S0370-2693(00)00824-8", 
+        "441177", 
+        "hep-ex/0007005", 
+        "ins529575", 
+        null, 
+        [
+            "CERN-EP-2000-066"
+        ]
+    ], 
+    "529576": [
+        "Determination of $\\gamma / Z$ interference in $e^{+} e^{-}$ annihilation at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(00)00889-3", 
+        "445527", 
+        "hep-ex/0007006", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-084", 
+            "CERN-EP-2000-84"
+        ]
+    ], 
+    "531457": [
+        "Search for a Higgs boson decaying into two photons in $e^{+} e^{-}$ interactions at $\\sqrt{S}$ = 189-GeV", 
+        "L3", 
+        "10.1016/S0370-2693(00)00955-2", 
+        "449261", 
+        "hep-ex/0008025", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-103"
+        ]
+    ], 
+    "531570": [
+        "Measurement of the $W^{+} W^{-} \\gamma$ cross-section and direct limits on anomalous quartic gauge boson couplings at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(00)00993-X", 
+        "449259", 
+        "hep-ex/0008022", 
+        "ins531570", 
+        null, 
+        [
+            "CERN-EP-2000-097"
+        ]
+    ], 
+    "531571": [
+        "Search for anomalous couplings in the Higgs sector at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(00)00890-X", 
+        "449260", 
+        "hep-ex/0008023", 
+        "ins531571", 
+        null, 
+        [
+            "CERN-EP-2000-098"
+        ]
+    ], 
+    "531668": [
+        "Measurement of Bose-Einstein correlations in $e^{+} e^{-} \\to W^{+} W^{-}$ at $\\sqrt{S}$ approximately = 189-GeV", 
+        "L3", 
+        "10.1016/S0370-2693(00)01109-6", 
+        "452074", 
+        "hep-ex/0008020", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-107"
+        ]
+    ], 
+    "531766": [
+        "Measurement of the $W$ pair production cross-section and $W$ decay branching fractions in $e^{+} e^{-}$ interactions at $\\sqrt{S}$ = 189-GeV", 
+        "L3", 
+        "10.1016/S0370-2693(00)01273-9", 
+        "449262", 
+        "hep-ex/0008026", 
+        "ins531766", 
+        null, 
+        [
+            "CERN-EP-2000-104"
+        ]
+    ], 
+    "532903": [
+        "Search for charged Higgs bosons in $e^{+} e^{-}$ collisions at center center-of-mass energies up to 202-GeV", 
+        "L3", 
+        "10.1016/S0370-2693(00)01272-7", 
+        "457083", 
+        "hep-ex/0009010", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-118"
+        ]
+    ], 
+    "536816": [
+        "Higgs candidates in $e^{+} e^{-}$ interactions at $\\sqrt{s}$ = 206.6-GeV", 
+        "L3", 
+        "10.1016/S0370-2693(00)01281-8", 
+        "477226", 
+        "hep-ex/0011043", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-140"
+        ]
+    ]
+}

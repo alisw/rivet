@@ -1,0 +1,41 @@
+Name: BELLE_2007_I723916
+Year: 2007
+Summary: Decay angles for $\Lambda_c(2880)^+\to\Sigma_c^{0,++}\pi^{+,-}$
+Experiment: BELLE
+Collider: KEKB
+InspireID: 723916
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 98 (2007) 262001
+RunInfo: e+e- to hadrons 
+Beams: [e+, e-]
+Energies: [10.58]
+Options:
+ - PID=*
+Description: 'Measurement of the helicity and decay angles for the decay $\Lambda_c(2880)^+\to\Sigma_c^{0,++}\pi^{+,-}$.
+The PDG code for this particle is not specified and which multiplet it belongs to is unclear. The default
+is to use, 4126, i.e the first spin $\frac{5}{2}$ state'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle:2006xni
+BibTeX: '@article{Belle:2006xni,
+    author = "Abe, Kazuo and others",
+    editor = "Sissakian, Alexey and Kozlov, Gennady and Kolganova, Elena",
+    collaboration = "Belle",
+    title = "{Experimental constraints on the possible J**P quantum numbers of the Lambda(c)(2880)+}",
+    eprint = "hep-ex/0608043",
+    archivePrefix = "arXiv",
+    reportNumber = "BELLE-CONF-0602",
+    doi = "10.1103/PhysRevLett.98.262001",
+    journal = "Phys. Rev. Lett.",
+    volume = "98",
+    pages = "262001",
+    year = "2007"
+}
+'

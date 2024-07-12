@@ -5,6 +5,7 @@ Experiment: CMS
 Collider: LHC
 InspireID: 1491950
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Regina Demina <R.Demina@cern.ch>
  - Yi-Ting Duh <kaliduh@gmail.com>
@@ -21,7 +22,7 @@ RunInfo:
   pp QCD interactions at $\sqrt{s} = 13$ TeV. Data collected by CMS during the year 2015. Selection of lepton+jets top pair candidate events at particle level.
 NumEvents: 1000000
 NeedCrossSection: no
-Luminosity: 2.3 /fb
+Luminosity_fb: 2.3
 Beams: [p+, p+]
 Energies: [13000]
 Description:
@@ -37,3 +38,25 @@ a jet is reconstructed with the anti-$k_t$ algorithm with a radius of 0.4, after
 
 A W boson is reconstructed from a lepton and the sum of the neutrino energies, while another W boson is reconstructed from a light jet pair. The two top quarks are reconstructed by combining b jets to these W boson. A check based on the W boson and top quark masses is performed to choose the proper combinations.
 '
+BibKey:  Khachatryan:2016mnb
+BibTeX: 
+  '@article{Khachatryan:2016mnb,
+      author         = "Khachatryan, Vardan and others",
+      title          = "{Measurement of differential cross sections for top quark
+                        pair production using the lepton+jets final state in
+                        proton-proton collisions at 13 TeV}",
+      collaboration  = "CMS",
+      journal        = "Phys. Rev.",
+      volume         = "D95",
+      year           = "2017",
+      number         = "9",
+      pages          = "092001",
+      doi            = "10.1103/PhysRevD.95.092001",
+      eprint         = "1610.04191",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CMS-TOP-16-008, CERN-EP-2016-227",
+      SLACcitation   = "%%CITATION = ARXIV:1610.04191;%%"
+}'
+ReleaseTests:
+ - $A LHC-13-Top-All

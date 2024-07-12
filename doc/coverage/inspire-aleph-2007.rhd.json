@@ -1,0 +1,36 @@
+{
+    "717202": [
+        "Search for Higgs bosons decaying to WW in e+ e- collisions at LEP", 
+        "ALEPH", 
+        "10.1140/epjc/s10052-006-0158-6", 
+        "951979", 
+        "hep-ex/0605079", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2006-011"
+        ]
+    ], 
+    "727171": [
+        "Fermion pair production in $e^{+} e^{-}$ collisions at 189-209-GeV and constraints on physics beyond the standard model", 
+        "ALEPH", 
+        "10.1140/epjc/s10052-006-0156-8", 
+        "986243", 
+        "hep-ex/0609051", 
+        null, 
+        null, 
+        []
+    ], 
+    "753710": [
+        "Measurement of the Cross Section for open b-Quark Production in Two-Photon Interactions at LEP", 
+        "ALEPH", 
+        "10.1088/1126-6708/2007/09/102", 
+        "1043442", 
+        "0706.3150", 
+        "ins753710", 
+        null, 
+        [
+            "CERN-PH-EP-2007-020"
+        ]
+    ]
+}

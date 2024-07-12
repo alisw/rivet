@@ -1,0 +1,27 @@
+{
+    "593729": [
+        "Improved direct measurement of the parity violation parameter A(b) using a mass tag and momentum weighted track charge", 
+        "SLD", 
+        "10.1103/PhysRevLett.90.141804", 
+        null, 
+        "hep-ex/0208044", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9188", 
+            "SCIPP-02-18"
+        ]
+    ], 
+    "594091": [
+        "Search for time dependent B0(s) - anti-B0(s) oscillations using a vertex charge dipole technique", 
+        "SLD", 
+        "10.1103/PhysRevD.67.012006", 
+        null, 
+        "hep-ex/0209002", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9285"
+        ]
+    ]
+}

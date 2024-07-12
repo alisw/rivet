@@ -1,0 +1,74 @@
+{
+    "510115": [
+        "Measurement of longitudinal spin transfer to Lambda hyperons in deep inelastic lepton scattering", 
+        "HERMES", 
+        "10.1103/PhysRevD.64.112005", 
+        null, 
+        "hep-ex/9911017", 
+        null, 
+        null, 
+        [
+            "DESY-99-151"
+        ]
+    ], 
+    "539006": [
+        "Hadron formation in deep inelastic positron scattering in a nuclear environment", 
+        "HERMES", 
+        "10.1007/s100520100697", 
+        null, 
+        "hep-ex/0012049", 
+        null, 
+        null, 
+        [
+            "DESY-00-191"
+        ]
+    ], 
+    "553236": [
+        "Double spin asymmetry in the cross-section for exclusive rho0 production in lepton - proton scattering", 
+        "HERMES", 
+        "10.1016/S0370-2693(01)00639-6", 
+        null, 
+        "hep-ex/0102037", 
+        "ins553236", 
+        null, 
+        [
+            "DESY-00-189"
+        ]
+    ], 
+    "554660": [
+        "Multiplicity of charged and neutral pions in deep inelastic scattering of 27.5-GeV positrons on hydrogen", 
+        "HERMES", 
+        "10.1007/s100520100765", 
+        null, 
+        "hep-ex/0104004", 
+        "ins554660", 
+        null, 
+        [
+            "DESY-01-037"
+        ]
+    ], 
+    "554953": [
+        "Single spin azimuthal asymmetries in electroproduction of neutral pions in semiinclusive deep inelastic scattering", 
+        "HERMES", 
+        "10.1103/PhysRevD.64.097101", 
+        null, 
+        "hep-ex/0104005", 
+        null, 
+        null, 
+        [
+            "DESY-01-047"
+        ]
+    ], 
+    "558570": [
+        "Measurement of the beam spin azimuthal asymmetry associated with deeply virtual Compton scattering", 
+        "HERMES", 
+        "10.1103/PhysRevLett.87.182001", 
+        null, 
+        "hep-ex/0106068", 
+        null, 
+        null, 
+        [
+            "DESY-01-091"
+        ]
+    ]
+}

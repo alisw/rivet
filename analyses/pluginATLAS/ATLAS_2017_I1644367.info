@@ -5,10 +5,12 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1644367
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Josu Cantero Garcia <josu.cantero.garcia@cern.ch>
  - Christian Gutschow <chris.g@cern.ch>
 References:
+ - ATLAS-STDM-2016-06
  - Phys.Lett. B781 (2018) 55-76
  - doi:10.1016/j.physletb.2018.03.057
  - arXiv:1712.07291 [hep-ex]

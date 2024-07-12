@@ -10,10 +10,8 @@
 namespace Rivet {
 
 
-  /// @brief Get the incoming and outgoing hadron in a diffractive ep
-  /// event.
+  /// @brief Get the incoming and outgoing hadron in a diffractive ep event
   class DISRapidityGap : public Projection {
-
   public:
 
     /// Type of DIS boost to apply
@@ -21,8 +19,8 @@ namespace Rivet {
 
     DISRapidityGap() {
       setName("DISRapidityGap");
-      addProjection(DISKinematics(), "DISKIN");
-      addProjection(DISFinalState(DISFinalState::HCM), "DISFS");
+      declare(DISKinematics(), "DISKIN");
+      declare(DISFinalState(DISFinalState::BoostFrame::HCM), "DISFS");
     }
 
     DEFAULT_RIVET_PROJ_CLONE(DISRapidityGap);
@@ -64,9 +62,10 @@ namespace Rivet {
       else return _pY_HCM;
     }
 
+
   protected:
 
-    virtual int compare(const Projection& p) const;
+    virtual CmpState compare(const Projection& p) const;
 
     virtual void project(const Event& e);
 
@@ -74,7 +73,8 @@ namespace Rivet {
 
     void findgap(const Particles& particles, const DISKinematics& diskin);
 
-  private:
+
+  protected:
 
     double _M2X, _M2Y, _t;
     double _gap, _gapUpp, _gapLow;

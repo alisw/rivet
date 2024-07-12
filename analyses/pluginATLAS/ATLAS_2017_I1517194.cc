@@ -7,6 +7,7 @@
 namespace Rivet {
 
 
+  ///@brief: Electroweak Wjj production at 8 TeV
   class ATLAS_2017_I1517194 : public Analysis {
   public:
 
@@ -14,8 +15,7 @@ namespace Rivet {
     //@{
 
     /// Constructor
-    ///@brief: Electroweak Wjj production at 8 TeV
-    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2017_I1517194);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2017_I1517194);
     //@}
 
     /// @name Analysis methods
@@ -33,13 +33,11 @@ namespace Rivet {
       WFinder wfinder(fs, Cuts::rap < 2.5 && Cuts::pT >= 25*GeV, _mode? PID::MUON : PID::ELECTRON, 0*GeV, 13*TeV, 0*GeV, 0.1);
       declare(wfinder, "WFinder");
 
-      FastJets jets( wfinder.remainingFinalState(), FastJets::ANTIKT, 0.4);
-      jets.useMuons(JetAlg::DECAY_MUONS);
-      jets.useInvisibles(JetAlg::ALL_INVISIBLES);
+      FastJets jets( wfinder.remainingFinalState(), FastJets::ANTIKT, 0.4, JetAlg::Muons::DECAY, JetAlg::Invisibles::ALL);
       declare(jets, "Jets_w");
 
       MissingMomentum missmom(FinalState(Cuts::eta < 5.0));
-      addProjection(missmom, "mm");
+      declare(missmom, "mm");
 
       const vector<string> phase_spaces = { "highmass15", "antiLC", "signal10",
                                             "highmass10", "inclusive", "highmass20",
@@ -75,8 +73,8 @@ namespace Rivet {
             //string pre = group > 1? "ew_" : "";
             //std::cout << "rivet -- " << pre << label << suff << " " << hepdataid << std::endl;
             string suff = group % 2? "" : "_norm";
-            if (group > 1)  _hists["ew_" + label + suff] = bookHisto1D(hepdataid, 1, 1);
-            else            _hists[label + suff] = bookHisto1D(hepdataid, 1, 1);
+            if (group > 1)  book(_hists["ew_" + label + suff], hepdataid, 1, 1);
+            else            book(_hists[label + suff], hepdataid, 1, 1);
           }
         }
       }
@@ -85,7 +83,6 @@ namespace Rivet {
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-      const double weight = event.weight();
 
       FourMomentum boson, lepton, neutrino;
       const WFinder& wfinder = apply<WFinder>(event, "WFinder");
@@ -167,16 +164,16 @@ namespace Rivet {
 
       for (const auto& ps : phaseSpaces) {
         if (!ps.second)  continue;
-        fillHisto("dijetmass_"+ps.first, dijet_mass, weight);
-        fillHisto("dijetpt_"+ps.first, DijetPt, weight);
-        fillHisto("dy12_"+ps.first, fabs(jet_1_rap-jet_2_rap), weight);
-        fillHisto("dphi12_"+ps.first, DeltaPhi, weight);
-        fillHisto("j1pt_"+ps.first, jets[0].pT(), weight);
+        fillHisto("dijetmass_"+ps.first, dijet_mass);
+        fillHisto("dijetpt_"+ps.first, DijetPt);
+        fillHisto("dy12_"+ps.first, fabs(jet_1_rap-jet_2_rap));
+        fillHisto("dphi12_"+ps.first, DeltaPhi);
+        fillHisto("j1pt_"+ps.first, jets[0].pT());
         if (ps.first == "inclusive" || ps.first.find("highmass") != string::npos) {
-          fillHisto("LC_"+ps.first, lep_cent, weight);
-          fillHisto("ngapjets_"+ps.first, njetsingap, weight);
+          fillHisto("LC_"+ps.first, lep_cent);
+          fillHisto("ngapjets_"+ps.first, njetsingap);
           for (auto& jc : JCvals) {
-            fillHisto("JC_"+ps.first, jc, weight);
+            fillHisto("JC_"+ps.first, jc);
           }
         }
       }
@@ -196,18 +193,18 @@ namespace Rivet {
     //@}
 
 
-    void fillHisto(const string& label, const double value, const double weight) {
+    void fillHisto(const string& label, const double value) {
       if (_hists.find(label) != _hists.end()) { // QCD+EW, absolute
-        _hists[label]->fill(value, weight);
+        _hists[label]->fill(value);
       }
       if (_hists.find(label + "_norm") != _hists.end()) { // QCD+EW, normalised
-        _hists[label + "_norm"]->fill(value, weight);
+        _hists[label + "_norm"]->fill(value);
       }
       if (_hists.find("ew_" + label) != _hists.end()) { // EW-only, absolute
-        _hists["ew_" + label]->fill(value, weight);
+        _hists["ew_" + label]->fill(value);
       }
       if (_hists.find("ew_" + label + "_norm") != _hists.end()) { // EW-only, normalised
-        _hists["ew_" + label + "_norm"]->fill(value, weight);
+        _hists["ew_" + label + "_norm"]->fill(value);
       }
     }
 
@@ -224,7 +221,7 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2017_I1517194);
+  RIVET_DECLARE_PLUGIN(ATLAS_2017_I1517194);
 
 
 }

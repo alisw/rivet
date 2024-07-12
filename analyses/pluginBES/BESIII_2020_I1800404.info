@@ -1,0 +1,30 @@
+Name: BESIII_2020_I1800404
+Year: 2020
+Summary: Charged particle multiplicity distributions in $J/\psi$ and $\chi_{c0,1,2}$ decays
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1800404
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - arXiv:2006.05588
+RunInfo: Any process producing J/Psi, and chi_{0,1,2}c, originally e+e-
+Description:
+  'Measurement of the charged particle multiplicity distributions in $J/\psi$ and $\chi_{c0,1,2}$ decays by the BES collaboration.'
+ValidationInfo:
+  'Herwig 7 events using EvtGen for the decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Ablikim:2020aly
+BibTeX: '@article{Ablikim:2020aly,
+    author = "Ablikim, M. and others",
+    collaboration = "BESIII",
+    title = "{Inclusive $\chi_{cJ}$ and $J/\psi$ decay distributions}",
+    eprint = "2006.05588",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    month = "6",
+    year = "2020"
+}'

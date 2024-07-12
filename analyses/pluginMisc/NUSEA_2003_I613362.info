@@ -1,0 +1,40 @@
+Name: NUSEA_2003_I613362
+Year: 2003
+Summary: Drell-Yan dimuon absolute cross-sections in 800 GeV pp and pd collisions
+Experiment: NUSEA
+Collider: Fermilab
+InspireID: 613362
+Status: VALIDATED
+Reentrant: true
+Authors: Hannes Jung <hannes.jung@desy.de>
+References:
+ - "FERMILAB-PUB-03-302-E"
+ - "arXiv:hep-ex/0302019"
+ - "J. C. Webb (PhD thesis) hep-ex/0301031"
+RunInfo: Run in pp mode (center-of-mass frame)
+NeedCrossSection: yes
+Beams: [p+, p+]
+Energies: [38.8]
+Description:
+  'The Fermilab E866/NuSea Collaboration has measured the Drell-Yan
+  dimuon cross sections in 800 GeV/c pp and pd collisions. This represents the
+  first measurement of the Drell-Yan cross section in pp collisions over a broad
+  kinematic region and the most extensive study to date of the Drell-Yan cross
+  section in pd collisions.
+  Coded 2003 by Mike Whalley and 2016 by Arathi Ramesh (DESY) using the data
+  tables in hep-ex/0301031.'
+Keywords: []
+BibKey: Antreasyan:1981eg
+BibTeX: '@article{Antreasyan:1981eg,
+      author         = "Antreasyan, D. and others",
+      title          = "{Dimuon Scaling Comparison at 44-{GeV} and 62-{GeV}}",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "48",
+      year           = "1982",
+      pages          = "302",
+      doi            = "10.1103/PhysRevLett.48.302",
+      reportNumber   = "MIT-LNS-119",
+      SLACcitation   = "%%CITATION = PRLTA,48,302;%%"
+}'
+ReleaseTests:
+ - $A pp-39-Zmm

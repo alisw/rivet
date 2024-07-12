@@ -33,28 +33,29 @@ namespace Rivet {
       fillMap(_partLftMap);
 
       // Projections
-      declare(ChargedFinalState(_eta_min, _eta_max, _pt_min*GeV), "CFS");
+      declare(ChargedFinalState(Cuts::etaIn(_eta_min, _eta_max) && Cuts::pT >= _pt_min*GeV),
+              "CFS");
 
       // Book histograms
-      _h_mult_total  = bookHisto1D("d03-x01-y01", 50, 0.5, 50.5);
+      book(_h_mult_total  ,"d03-x01-y01", 50, 0.5, 50.5);
 
-      _h_mult_eta[0] = bookHisto1D("d04-x01-y01", 21, -0.5, 20.5); //eta=[2.0,2.5]
-      _h_mult_eta[1] = bookHisto1D("d04-x01-y02", 21, -0.5, 20.5); //eta=[2.5,3.0]
-      _h_mult_eta[2] = bookHisto1D("d04-x01-y03", 21, -0.5, 20.5); //eta=[3.0,3.5]
-      _h_mult_eta[3] = bookHisto1D("d04-x01-y04", 21, -0.5, 20.5); //eta=[3.5,4.0]
-      _h_mult_eta[4] = bookHisto1D("d04-x01-y05", 21, -0.5, 20.5); //eta=[4.0,4.5]
+      book(_h_mult_eta[0] ,"d04-x01-y01", 21, -0.5, 20.5); //eta=[2.0,2.5]
+      book(_h_mult_eta[1] ,"d04-x01-y02", 21, -0.5, 20.5); //eta=[2.5,3.0]
+      book(_h_mult_eta[2] ,"d04-x01-y03", 21, -0.5, 20.5); //eta=[3.0,3.5]
+      book(_h_mult_eta[3] ,"d04-x01-y04", 21, -0.5, 20.5); //eta=[3.5,4.0]
+      book(_h_mult_eta[4] ,"d04-x01-y05", 21, -0.5, 20.5); //eta=[4.0,4.5]
 
-      _h_mult_pt[0]  = bookHisto1D("d05-x01-y01", 21, -0.5, 20.5); //pT=[0.2,0.3]GeV
-      _h_mult_pt[1]  = bookHisto1D("d05-x01-y02", 21, -0.5, 20.5); //pT=[0.3,0.4]GeV
-      _h_mult_pt[2]  = bookHisto1D("d05-x01-y03", 21, -0.5, 20.5); //pT=[0.4,0.6]GeV
-      _h_mult_pt[3]  = bookHisto1D("d05-x01-y04", 21, -0.5, 20.5); //pT=[0.6,1.0]GeV
-      _h_mult_pt[4]  = bookHisto1D("d05-x01-y05", 21, -0.5, 20.5); //pT=[1.0,2.0]GeV
+      book(_h_mult_pt[0]  ,"d05-x01-y01", 21, -0.5, 20.5); //pT=[0.2,0.3]GeV
+      book(_h_mult_pt[1]  ,"d05-x01-y02", 21, -0.5, 20.5); //pT=[0.3,0.4]GeV
+      book(_h_mult_pt[2]  ,"d05-x01-y03", 21, -0.5, 20.5); //pT=[0.4,0.6]GeV
+      book(_h_mult_pt[3]  ,"d05-x01-y04", 21, -0.5, 20.5); //pT=[0.6,1.0]GeV
+      book(_h_mult_pt[4]  ,"d05-x01-y05", 21, -0.5, 20.5); //pT=[1.0,2.0]GeV
 
-      _h_dndeta      = bookHisto1D("d01-x01-y01", 14, 2.0, 4.8); //eta=[2,4.8]
-      _h_dndpt       = bookHisto1D("d02-x01-y01", 18, 0.2, 2.0); //pT =[0,2]GeV
+      book(_h_dndeta      ,"d01-x01-y01", 14, 2.0, 4.8); //eta=[2,4.8]
+      book(_h_dndpt       ,"d02-x01-y01", 18, 0.2, 2.0); //pT =[0,2]GeV
 
       // Counters
-      _sumW = 0;
+      book(_sumW, "TMP/sumW");
     }
 
 
@@ -71,8 +72,8 @@ namespace Rivet {
       val_dNdPt.clear();
 
       const ChargedFinalState& cfs = apply<ChargedFinalState>(event, "CFS");
-      foreach (const Particle& p, cfs.particles()) {
-        int id = p.pdgId();
+      for (const Particle& p : cfs.particles()) {
+        int id = p.pid();
         // continue if particle is not a pion, kaon, proton, muon or electron
         if ( !( (abs(id) == 211) || (abs(id) == 321) || (abs(id) == 2212) || (abs(id) == 13) || (abs(id) == 11)) ) {
           continue;
@@ -114,34 +115,33 @@ namespace Rivet {
         //particle densities -> need proper normalization (finalize)
         val_dNdPt.push_back( pT );
         val_dNdEta.push_back( eta );
-      }//end foreach
+      }//end for
 
 
       // Fill histograms only, if at least 1 particle pre event was within the
       // kinematic range of the analysis!
       if (LHCbcountAll) {
-        const double weight = event.weight();
-        _sumW += weight;
+        _sumW->fill();
 
-        _h_mult_total->fill(LHCbcountAll, weight);
+        _h_mult_total->fill(LHCbcountAll);
 
-        _h_mult_eta[0]->fill(LHCbcountEta[0], weight);
-        _h_mult_eta[1]->fill(LHCbcountEta[1], weight);
-        _h_mult_eta[2]->fill(LHCbcountEta[2], weight);
-        _h_mult_eta[3]->fill(LHCbcountEta[3], weight);
-        _h_mult_eta[4]->fill(LHCbcountEta[4], weight);
+        _h_mult_eta[0]->fill(LHCbcountEta[0]);
+        _h_mult_eta[1]->fill(LHCbcountEta[1]);
+        _h_mult_eta[2]->fill(LHCbcountEta[2]);
+        _h_mult_eta[3]->fill(LHCbcountEta[3]);
+        _h_mult_eta[4]->fill(LHCbcountEta[4]);
 
-        _h_mult_pt[0]->fill(LHCbcountPt[0], weight);
-        _h_mult_pt[1]->fill(LHCbcountPt[1], weight);
-        _h_mult_pt[2]->fill(LHCbcountPt[2], weight);
-        _h_mult_pt[3]->fill(LHCbcountPt[3], weight);
-        _h_mult_pt[4]->fill(LHCbcountPt[4], weight);
+        _h_mult_pt[0]->fill(LHCbcountPt[0]);
+        _h_mult_pt[1]->fill(LHCbcountPt[1]);
+        _h_mult_pt[2]->fill(LHCbcountPt[2]);
+        _h_mult_pt[3]->fill(LHCbcountPt[3]);
+        _h_mult_pt[4]->fill(LHCbcountPt[4]);
 
         for (size_t part = 0; part < val_dNdEta.size(); part++)
-          _h_dndeta->fill(val_dNdEta[part], weight);
+          _h_dndeta->fill(val_dNdEta[part]);
 
         for (size_t part = 0; part < val_dNdPt.size(); part++)
-          _h_dndpt->fill(val_dNdPt[part], weight);
+          _h_dndpt->fill(val_dNdPt[part]);
 
       }
     }
@@ -149,7 +149,7 @@ namespace Rivet {
 
     /// Normalise histograms etc., after the run
     void finalize() {
-      const double scalefactor = 1.0/_sumW; // normalize multiplicity histograms by nEvents
+      const double scalefactor = 1.0/_sumW->val(); // normalize multiplicity histograms by nEvents
       const double scale1k = 1000.; // to match '10^3' scale in reference histograms
 
       scale( _h_dndeta, scalefactor );
@@ -191,16 +191,16 @@ namespace Rivet {
 
 
     // Get sum of all ancestor particles
-    const double getAncestorSumLifetime(const Particle& p) {
+    double getAncestorSumLifetime(const Particle& p) {
       double lftSum = 0.;
       double plft = 0.;
-      const GenParticle* part = p.genParticle();
+      ConstGenParticlePtr part = p.genParticle();
       if ( 0 == part ) return -1;
-      const GenVertex* ivtx = part->production_vertex();
+      ConstGenVertexPtr ivtx = part->production_vertex();
       while(ivtx) {
-        if (ivtx->particles_in_size() < 1) { lftSum = -1.; break; };
-        const GenVertex::particles_in_const_iterator iPart_invtx = ivtx->particles_in_const_begin();
-        part = (*iPart_invtx);
+        vector<ConstGenParticlePtr> part_in = HepMCUtils::particles(ivtx, Relatives::PARENTS);
+        if (part_in.size() < 1) { lftSum = -1.; break; };
+        part = part_in.at(0);
         if ( !(part) ) { lftSum = -1.; break; };
         ivtx = part->production_vertex();
         if ( (part->pdg_id() == 2212) || !(ivtx) ) break; // reached beam
@@ -1165,7 +1165,7 @@ namespace Rivet {
     double _maxlft;
 
     /// Count selected events
-    double _sumW;
+    CounterPtr _sumW;
 
     map<int, double> _partLftMap; // Map <PDGID, PDGLIFETIME>
 
@@ -1173,6 +1173,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(LHCB_2014_I1281685);
+  RIVET_DECLARE_PLUGIN(LHCB_2014_I1281685);
 
 }

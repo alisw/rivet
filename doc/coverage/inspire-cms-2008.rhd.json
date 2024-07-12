@@ -1,0 +1,50 @@
+{
+    "790370": [
+        "Design, performance, and calibration of CMS hadron-barrel calorimeter wedges", 
+        "CMS HCAL", 
+        "10.1140/epjc/s10052-008-0573-y", 
+        "1049915", 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-08-246-CMS", 
+            "CERN-CMS-NOTE-2006-138", 
+            "CMS-NOTE-2006-138"
+        ]
+    ], 
+    "796887": [
+        "The CMS Experiment at the CERN LHC", 
+        "CMS", 
+        "10.1088/1748-0221/3/08/S08004", 
+        "1129810", 
+        null, 
+        null, 
+        null, 
+        []
+    ], 
+    "802051": [
+        "Design, performance, and calibration of the CMS Hadron-outer calorimeter", 
+        "CMS HCAL", 
+        "10.1140/epjc/s10052-008-0756-6", 
+        "1127569", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-CMS-NOTE-2008-020"
+        ]
+    ], 
+    "802057": [
+        "Intercalibration of the barrel electromagnetic calorimeter of the CMS experiment at start-up", 
+        "CMS Electromagnetic Calorimeter Group", 
+        "10.1088/1748-0221/3/10/P10007", 
+        "1127300", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-CMS-NOTE-2008-018"
+        ]
+    ]
+}

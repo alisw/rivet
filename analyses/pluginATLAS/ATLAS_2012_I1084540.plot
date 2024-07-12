@@ -1,7 +1,7 @@
 # BEGIN PLOT /ATLAS_2012_I1084540/d0
 Title=Rapidity gap size in $\eta$ starting from $\eta = \pm 4.9$, $p_T > 200$ MeV
-XLabel=$\Delta\eta^\text{F}$
-YLabel=$\mathrm{d}\sigma / \mathrm{d}\Delta\eta^\text{F}$ [mb]
+XLabel=$\Delta\eta^\mathrm{F}$
+YLabel=$\mathrm{d}\sigma / \mathrm{d}\Delta\eta^\mathrm{F}$ [mb]
 LogY=1
 YMin=0.1
 YMax=200

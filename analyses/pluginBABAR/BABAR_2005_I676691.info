@@ -1,0 +1,37 @@
+Name: BABAR_2005_I676691
+Year: 2005
+Summary:  $e^+e^- \to$  $2\pi^+2\pi^-$, $K^+K^-\pi^+\pi^-$  and $2K^+2K^-$ cross-sections between the threshold to 4.5 GeV
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 676691
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+- Phys.Rev. D71 (2005) 052001, 2005 
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+  ' $e^+e^- \to$  $2\pi^+2\pi^-$, $K^+K^-\pi^+\pi^-$  and $2K^+2K^-$ cross-sections measured by BaBar using radiative return from threshold to 4.5 GeV.'
+Keywords: []
+BibKey: Aubert:2005eg
+BibTeX: '@article{Aubert:2005eg,
+      author         = "Aubert, Bernard and others",
+      title          = "{The $e^+e^- \to \pi^+ \pi^- \pi^+ \pi^-$, $K^+ K^- \pi^+
+                        \pi^-$, and $K^+ K^- K^+ K^-$ cross sections at
+                        center-of-mass energies 0.5-GeV - 4.5-GeV measured with
+                        initial-state radiation}",
+      collaboration  = "BaBar",
+      journal        = "Phys. Rev.",
+      volume         = "D71",
+      year           = "2005",
+      pages          = "052001",
+      doi            = "10.1103/PhysRevD.71.052001",
+      eprint         = "hep-ex/0502025",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "SLAC-PUB-11026",
+      SLACcitation   = "%%CITATION = HEP-EX/0502025;%%"
+}'

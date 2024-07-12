@@ -5,15 +5,18 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1306294
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Gavin Hesketh <gavin.hesketh@ucl.ac.uk>
 References:
+ - ATLAS-STDM-2012-15
  - arXiv:1407.3643 [hep-ex]
  - JHEP 1410 (2014) 141
 RunInfo: Z+b(b) production in $pp$ collisions at $\sqrt{s} = 7$ TeV, electronic Z-decays
 NumEvents: 1000000
 Beams: [p+, p+]
 Energies: [7000]
+Luminosity_fb: 4.6
 PtCuts: pT(jets) > 20 GeV, pT(leptons) > 20 GeV
 NeedsCrossSection: True
 Options:
@@ -52,3 +55,7 @@ BibTeX: '@article{Aad:2014dvb,
       reportNumber   = "CERN-PH-EP-2014-118",
       SLACcitation   = "%%CITATION = ARXIV:1407.3643;%%",
 }'
+
+ReleaseTests:
+ - $A LHC-Z-e
+

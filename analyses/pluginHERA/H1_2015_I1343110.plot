@@ -1,6 +1,6 @@
 # BEGIN PLOT /H1_2015_I1343110/d01-x01-y01
 Title= Photoproduction
-YLabel=$\sigma_{\gamma\mathm{p}}$
+YLabel=$\sigma_{\gamma\mathrm{p}}$
 XLabel=$\sqrt{s}$
 LogY=0
 LegendXPos=0.1
@@ -11,7 +11,7 @@ RatioPlotYMax=2.2
 
 # BEGIN PLOT /H1_2015_I1343110/d02-x01-y01
 Title= DIS
-YLabel=$\sigma_{\mathm{DIS}}$
+YLabel=$\sigma_{\mathrm{DIS}}$
 XLabel=$\sqrt{s}$
 LogY=0
 LegendXPos=0.1

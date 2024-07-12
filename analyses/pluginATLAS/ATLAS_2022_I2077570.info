@@ -1,0 +1,35 @@
+Name: ATLAS_2022_I2077570
+Year: 2022 
+Summary: Z + high transverse momentum jets at ATLAS 
+Experiment: ATLAS 
+Collider: LHC 
+InspireID: 2077570
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Alexandre Laurier <alexandre.laurier@cern.ch> 
+References:
+ - arXiv:2205.02597 [hep-ex]
+ - submitted to JHEP
+RunInfo: 
+   pp -> Z + jets at 13 TeV with pT(jet) > 100 GeV
+Beams: [p+, p+]
+Energies: [13000]
+Options:
+ - LMODE=ELEL,MUMU
+Luminosity_fb: 139.0
+Description:
+  'Cross-section measurements for a $Z$ boson produced in association with high-transverse-momentum jets ($p_\text{T}\geq 100$ GeV) and decaying
+  into a charged-lepton pair ($e^+e^-$, $\mu^+\mu^-$) are presented. The measurements are performed using proton-proton collisions 
+  at $\sqrt{s} = 13$ TeV corresponding to an integrated luminosity of 139 fb${}^{-1}$ collected by the ATLAS experiment at the LHC. 
+  Measurements of angular correlations between the $Z$ boson and the closest jet are performed in events with at least one jet with 
+  $p_\text{T}\geq 500$ GeV. Event topologies of particular interest are the collinear emission of a $Z$ boson in dijet events and a 
+  boosted $Z$ boson recoiling against a jet. Fiducial cross sections are compared with state-of-the-art theoretical predictions. 
+  The data are found to agree with next-to-next-to-leading-order predictions by NNLOjet and with the next-to-leading-order 
+  multi-leg generators MadGraph5_aMC@NLO and Sherpa.'
+ValidationInfo:
+  MadGraph FxFx predictions in paper obtained with rivet routine.
+  Validation of routine done by comparing results from rivet to analysis level truth selections with multiple generators
+ReleaseTests:
+ - $A LHC-13-Z-el-jets :LMODE=ELEL
+ - $A-2 LHC-13-Z-mu-jets :LMODE=MUMU

@@ -1,0 +1,37 @@
+Name: BELLE_2016_I1454405
+Year: 2016
+Summary: $J/\psi$ and $\psi(2S)$ spectrum in $\Upsilon(1S)$ decays
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1454405
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 93 (2016) 11, 112013
+RunInfo: Any process producing Upsilon(1S) originally e+e-
+Description:
+  'Measurement of the scaled momentum of $J/\psi$ and $\psi(2S)$ in $\Upsilon(1S)$ decays'
+ValidationInfo:
+  'Herwig7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle:2016bew
+BibTeX: '@article{Belle:2016bew,
+    author = "Shen, C. P. and others",
+    collaboration = "Belle",
+    title = "{Search for $XYZ$ states in $\Upsilon(1S)$ inclusive decays}",
+    eprint = "1605.00990",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BELLE-PREPRINT-2016-04, KEK-PREPRINT-2016-3, BELLE-2016-04, KEK-2016-3",
+    doi = "10.1103/PhysRevD.93.112013",
+    journal = "Phys. Rev. D",
+    volume = "93",
+    number = "11",
+    pages = "112013",
+    year = "2016"
+}
+'

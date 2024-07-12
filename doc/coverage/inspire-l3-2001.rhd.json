@@ -1,0 +1,195 @@
+{
+    "534435": [
+        "Study of $Z$ boson pair production in $e^{+} e^{-}$ interactions at $\\sqrt{s}$ = 192-GeV - 202-GeV", 
+        "L3", 
+        "10.1016/S0370-2693(00)01295-8", 
+        "461124", 
+        "hep-ex/0010004", 
+        "ins534435", 
+        null, 
+        [
+            "CERN-EP-2000-120"
+        ]
+    ], 
+    "536690": [
+        "Light resonances in $K^0_{S} K^\\pm \\pi^\\mp$ and $\\eta \\pi^{+} \\pi^{-}$ final states in $\\gamma \\gamma$ collisions at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(01)00102-2", 
+        "471338", 
+        "hep-ex/0011035", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-129"
+        ]
+    ], 
+    "536692": [
+        "$K^0_{S} K^0_{S}$ final state in two photon collisions and implications for glueballs", 
+        "L3", 
+        "10.1016/S0370-2693(01)00116-2", 
+        "475635", 
+        "hep-ex/0011037", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-135"
+        ]
+    ], 
+    "536864": [
+        "Search for R-parity violating decays of supersymmetric particles in $e^{+} e^{-}$ collisions at $\\sqrt{s}$ = 189-GeV", 
+        "L3", 
+        "10.1007/s100520100608", 
+        "471339", 
+        "hep-ex/0011087", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-130"
+        ]
+    ], 
+    "537232": [
+        "Search for excited leptons in $e^{+} e^{-}$ interactions at $\\sqrt{s}$ = 192-GeV to 202-GeV", 
+        "L3", 
+        "10.1016/S0370-2693(01)00133-2", 
+        "477402", 
+        "hep-ex/0011068", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-143", 
+            "CERN-EP-2000.143"
+        ]
+    ], 
+    "537234": [
+        "Measurements of the cross-sections for open charm and beauty production in $\\gamma \\gamma$ collisions at $\\sqrt{s}$ = 189-GeV to 202-GeV", 
+        "L3", 
+        "10.1016/S0370-2693(01)00134-4", 
+        "478040", 
+        "hep-ex/0011070", 
+        "ins537234", 
+        null, 
+        [
+            "CERN-EP-2000-144"
+        ]
+    ], 
+    "538107": [
+        "Search for neutral Higgs bosons of the minimal supersymmetric standard model in $e^{+} e^{-}$ interactions at $\\sqrt{s}$ = 192-GeV - 202-GeV", 
+        "L3", 
+        "10.1016/S0370-2693(01)00192-7", 
+        "479155", 
+        "hep-ex/0012017", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-145"
+        ]
+    ], 
+    "538109": [
+        "Search for the standard model Higgs boson in $e^{+} e^{-}$ collisions at $\\sqrt{s}$ up to 202-GeV", 
+        "L3", 
+        "10.1016/S0370-2693(01)00326-4", 
+        "479156", 
+        "hep-ex/0012019", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-146"
+        ]
+    ], 
+    "539946": [
+        "Measurement of the charm production cross-section in $\\gamma \\gamma$ collisions at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(01)00374-4", 
+        "484017", 
+        "hep-ex/0101025", 
+        "ins539946", 
+        null, 
+        [
+            "CERN-EP-2000-155"
+        ]
+    ], 
+    "552995": [
+        "Measurement of the $\\tau$ branching fractions into leptons", 
+        "L3", 
+        "10.1016/S0370-2693(01)00294-5", 
+        "486894", 
+        "hep-ex/0102023", 
+        "ins552995", 
+        null, 
+        [
+            "CERN-EP-2001-007"
+        ]
+    ], 
+    "552996": [
+        "Study of the $e^{+} e^{-} \\to Z \\gamma \\gamma \\to q \\bar{q} \\gamma \\gamma$ process at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(01)00308-2", 
+        "485617", 
+        "hep-ex/0102024", 
+        "ins552996", 
+        null, 
+        [
+            "CERN-EP-2001-008"
+        ]
+    ], 
+    "552997": [
+        "Total cross-section in $\\gamma \\gamma$ collisions at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(01)01072-3", 
+        "486895", 
+        "hep-ex/0102025", 
+        "ins552997", 
+        null, 
+        [
+            "CERN-EP-2001-012"
+        ]
+    ], 
+    "559673": [
+        "Search for heavy isosinglet neutrino in $e^{+} e^{-}$ annihilation at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(01)00993-5", 
+        "507267", 
+        "hep-ex/0107014", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2001-045"
+        ]
+    ], 
+    "559674": [
+        "Search for heavy neutral and charged leptons in $e^{+} e^{-}$ annihilation at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(01)01005-X", 
+        "507268", 
+        "hep-ex/0107015", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2001-046"
+        ]
+    ], 
+    "560354": [
+        "Standard model Higgs boson with the L3 experiment at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(01)01010-3", 
+        "508905", 
+        "hep-ex/0107054", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2001-049"
+        ]
+    ], 
+    "560355": [
+        "Measurement of the topological branching fractions of the $\\tau$ lepton at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(01)01099-1", 
+        "511822", 
+        "hep-ex/0107055", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2001-054"
+        ]
+    ]
+}

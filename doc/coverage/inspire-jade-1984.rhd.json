@@ -1,0 +1,98 @@
+{
+    "192312": [
+        "Test of Fragmentation Models by Comparison with Three Jet Events Produced in e+ e- ---> Hadrons", 
+        "JADE", 
+        "10.1016/0370-2693(84)90687-7", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-83-079"
+        ]
+    ], 
+    "199849": [
+        "A Search for Massive Photinos at {PETRA}", 
+        "JADE", 
+        "10.1016/0370-2693(84)91090-6", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-84-016"
+        ]
+    ], 
+    "202546": [
+        "A Search for the Supersymmetric Partner of the $\\Z^0$ in $e^+ e^-$ Annihilation at {PETRA}", 
+        "JADE", 
+        "10.1016/0370-2693(84)90657-9", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-84-038"
+        ]
+    ], 
+    "202642": [
+        "Observation of Radiative $e^+ e^-$ Annihilation Into $\\mu \\mu \\gamma$ and $\\mu \\mu \\gamma \\gamma$", 
+        "JADE", 
+        null, 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-84-033"
+        ]
+    ], 
+    "202784": [
+        "Measurements of Energy Correlations in $e^+ e^- \\to$ Hadrons", 
+        "JADE", 
+        "10.1007/BF01547922", 
+        null, 
+        null, 
+        "ins202784", 
+        null, 
+        [
+            "DESY-84-050"
+        ]
+    ], 
+    "202785": [
+        "Charged $D^*$ Production in $e^+ e^-$ Annihilation", 
+        "JADE", 
+        "10.1016/0370-2693(84)90656-7", 
+        null, 
+        null, 
+        "ins202785", 
+        null, 
+        [
+            "DESY-84-059"
+        ]
+    ], 
+    "203144": [
+        "A Measurement of the Electroweak Induced Charge Asymmetry in e+ e- ---> B anti-B", 
+        "JADE", 
+        "10.1016/0370-2693(84)90156-4", 
+        null, 
+        null, 
+        "ins203144", 
+        null, 
+        [
+            "DESY-84-068"
+        ]
+    ], 
+    "203145": [
+        "Inclusive Production of Vector Mesons $\\rho^0$ and $K^{*\\pm}$ in $e^+ e^-$ Annihilation at $\\left<\\sqrt{s}\\right> = 35$-{GeV}", 
+        "JADE", 
+        "10.1016/0370-2693(84)90077-7", 
+        null, 
+        null, 
+        "ins203145", 
+        null, 
+        [
+            "DESY-84-058"
+        ]
+    ]
+}

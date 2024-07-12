@@ -5,9 +5,11 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1449082
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Roman Lysak <roman.lysak@cern.ch>
 References:
+ - ATLAS-TOPQ-2015-08
  - Phys.Rev. D94 (2016) no.3, 032006
  - doi:10.1103/PhysRevD.94.032006
  -  arXiv:1604.05538 [hep-ex]
@@ -22,7 +24,7 @@ Energies: [8000]
 PtCuts: [25]
 Description:
   'Measurements of the top-antitop quark pair production charge asymmetry in the dilepton channel are presented using data
-  corresponding to an integrated luminosity of $20.3\;\text{fb}^{-1}$ from $pp$ collisions at a center-of-mass energy of
+  corresponding to an integrated luminosity of $20.3~\text{fb}^{-1}$ from $pp$ collisions at a center-of-mass energy of
   $\sqrt{s} = 8$ TeV collected with the ATLAS detector at the Large Hadron Collider at CERN. Inclusive and differential
   measurements as a function of the invariant mass, transverse momentum, and longitudinal boost of the $t\bar{t}$ system are
   performed both in the full phase space and in a fiducial phase space closely matching the detector acceptance (at least

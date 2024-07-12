@@ -4,8 +4,8 @@
 
 #include "Rivet/Tools/RivetSTL.hh"
 #include "Rivet/Tools/PrettyPrint.hh"
+#include "Rivet/Tools/Exceptions.hh"
 #include <ostream>
-#include <iostream>
 #include <cctype>
 #include <cerrno>
 #include <stdexcept>
@@ -14,18 +14,10 @@
 #include <climits>
 #include <cfloat>
 #include <cmath>
+#include <sstream>
+#include <functional>
 
-
-// // Macro to help with overzealous compiler warnings
-// /// @note It's easier and better to just not give an arg name to args which won't be used, when possible.
-// #ifdef UNUSED
-// #elif defined(__GNUC__)
-// # define UNUSED(x) UNUSED_ ## x __attribute__((unused))
-// #elif defined(__LCLINT__)
-// # define UNUSED(x) /*@unused@*/ x
-// #else
-// # define UNUSED(x) x
-// #endif
+/// @defgroup utils Other utilities
 
 
 /// Macro to help mark code as deprecated to produce compiler warnings
@@ -54,9 +46,10 @@ namespace Rivet {
   static constexpr double DBL_NAN = std::numeric_limits<double>::quiet_NaN();
 
 
-  /// @name String utils
-  //@{
+  /// @defgroup strutils String utils
+  /// @{
 
+  /// @brief Exception class for throwing from lexical_cast when a parse goes wrong
   struct bad_lexical_cast : public std::runtime_error {
     bad_lexical_cast(const std::string& what) : std::runtime_error(what) {}
   };
@@ -88,7 +81,7 @@ namespace Rivet {
   /// An alias for to_str() with a more "Rivety" mixedCase name.
   template <typename T>
   inline string toString(const T& x) {
-    return to_str(x);
+    return lexical_cast<string>(x);
   }
 
   /// Replace the first instance of patt with repl
@@ -170,6 +163,17 @@ namespace Rivet {
   }
 
 
+  // Terminating version of strjoin, for empty fargs list
+  inline string strcat() { return ""; }
+  /// Make a string containing the concatenated string representations of each item in the variadic list
+  template<typename T, typename... Ts>
+  inline string strcat(T value, Ts... fargs) {
+    const string strthis = lexical_cast<string>(value);
+    const string strnext = strcat(fargs...);
+    return strnext.empty() ? strthis : strthis + strnext;
+  }
+
+
   /// Make a string containing the string representations of each item in v, separated by sep
   template <typename T>
   inline string join(const vector<T>& v, const string& sep=" ") {
@@ -181,6 +185,17 @@ namespace Rivet {
     return rtn;
   }
 
+  /// Make a string containing the string representations of each item in v, separated by sep
+  template <>
+  inline string join(const vector<string>& v, const string& sep) {
+    string rtn;
+    for (size_t i = 0; i < v.size(); ++i) {
+      if (i != 0) rtn += sep;
+      rtn += v[i];
+    }
+    return rtn;
+  }
+
   /// Make a string containing the string representations of each item in s, separated by sep
   template <typename T>
   inline string join(const set<T>& s, const string& sep=" ") {
@@ -188,6 +203,17 @@ namespace Rivet {
     for (const T& x : s) {
       if (rtn.size() > 0) rtn += sep;
       rtn += to_str(x);
+    }
+    return rtn;
+  }
+
+  /// Make a string containing the string representations of each item in s, separated by sep
+  template <>
+  inline string join(const set<string>& s, const string& sep) {
+    string rtn;
+    for (const string & x : s) {
+      if (rtn.size() > 0) rtn += sep;
+      rtn += x;
     }
     return rtn;
   }
@@ -207,11 +233,24 @@ namespace Rivet {
     return dirs;
   }
 
-  //@}
+  /// Left-pad the given string @a s to width @a width
+  inline string lpad(const string& s, size_t width, const string& padchar=" ") {
+    if (s.size() >= width) return s;
+    return string(width - s.size(), padchar[0]) + s;
+  }
+
+  /// Right-pad the given string @a s to width @a width
+  inline string rpad(const string& s, size_t width, const string& padchar=" ") {
+    if (s.size() >= width) return s;
+    return s + string(width - s.size(), padchar[0]);
+  }
+
+  /// @}
 
 
-  /// @name Path utils
-  //@{
+
+  /// @defgroup pathutils Path utils
+  /// @{
 
   /// @brief Split a path string with colon delimiters
   ///
@@ -219,7 +258,6 @@ namespace Rivet {
   inline vector<string> pathsplit(const string& path) {
     return split(path, ":");
   }
-
 
   /// @brief Join several filesystem paths together with the standard ':' delimiter
   ///
@@ -261,11 +299,12 @@ namespace Rivet {
     return f.substr(f.rfind(".")+1);
   }
 
-  //@}
+  /// @}
 
 
-  /// @name Container utils
-  //@{
+
+  /// @defgroup contutils Container utils
+  /// @{
 
   /// Return number of true elements in the container @a c .
   template <typename CONTAINER>
@@ -276,15 +315,21 @@ namespace Rivet {
     return rtn;
   }
 
+  // /// Return number of elements in the container @a c for which @c f(x) is true.
+  // template <typename CONTAINER>
+  // inline unsigned int count(const CONTAINER& c, const std::function<bool(typename CONTAINER::value_type)>& f) {
+  //   return std::count_if(std::begin(c), std::end(c), f);
+  // }
+
   /// Return number of elements in the container @a c for which @c f(x) is true.
-  /// @todo Use std::function<bool(typename CONTAINER::value_type)>
   template <typename CONTAINER, typename FN>
   inline unsigned int count(const CONTAINER& c, const FN& f) {
     return std::count_if(std::begin(c), std::end(c), f);
   }
 
+
+
   /// Return true if x is true for any x in container c, otherwise false.
-  /// @todo Use std::function<bool(typename CONTAINER::value_type)>
   template <typename CONTAINER>
   inline bool any(const CONTAINER& c) {
     // return std::any_of(std::begin(c), std::end(c), [](const auto& x){return bool(x);});
@@ -292,15 +337,21 @@ namespace Rivet {
     return false;
   }
 
+  // /// Return true if f(x) is true for any x in container c, otherwise false.
+  // template <typename CONTAINER>
+  // inline bool any(const CONTAINER& c, const std::function<bool(typename CONTAINER::value_type)>& f) {
+  //   return std::any_of(std::begin(c), std::end(c), f);
+  // }
+
   /// Return true if f(x) is true for any x in container c, otherwise false.
-  /// @todo Use std::function<bool(typename CONTAINER::value_type)>
   template <typename CONTAINER, typename FN>
   inline bool any(const CONTAINER& c, const FN& f) {
     return std::any_of(std::begin(c), std::end(c), f);
   }
 
+
+
   /// Return true if @a x is true for all @c x in container @a c, otherwise false.
-  /// @todo Use std::function<bool(typename CONTAINER::value_type)>
   template <typename CONTAINER>
   inline bool all(const CONTAINER& c) {
     // return std::all_of(std::begin(c), std::end(c), [](const auto& x){return bool(x);});
@@ -308,15 +359,21 @@ namespace Rivet {
     return true;
   }
 
+  // /// Return true if @a f(x) is true for all @c x in container @a c, otherwise false.
+  // template <typename CONTAINER>
+  // inline bool all(const CONTAINER& c, const std::function<bool(typename CONTAINER::value_type)>& f) {
+  //   return std::all_of(std::begin(c), std::end(c), f);
+  // }
+
   /// Return true if @a f(x) is true for all @c x in container @a c, otherwise false.
-  /// @todo Use std::function<bool(typename CONTAINER::value_type)>
   template <typename CONTAINER, typename FN>
   inline bool all(const CONTAINER& c, const FN& f) {
     return std::all_of(std::begin(c), std::end(c), f);
   }
 
+
+
   /// Return true if @a x is false for all @c x in container @a c, otherwise false.
-  /// @todo Use std::function<bool(typename CONTAINER::value_type)>
   template <typename CONTAINER>
   inline bool none(const CONTAINER& c) {
     // return std::none_of(std::begin(c), std::end(c), [](){});
@@ -324,42 +381,84 @@ namespace Rivet {
     return true;
   }
 
+  // /// Return true if @a f(x) is false for all @c x in container @a c, otherwise false.
+  // template <typename C>
+  // inline bool none(const C& c, const std::function<bool(typename C::value_type)>& f) {
+  //   return std::none_of(std::begin(c), std::end(c), f);
+  // }
+
   /// Return true if @a f(x) is false for all @c x in container @a c, otherwise false.
-  /// @todo Use std::function<bool(typename CONTAINER::value_type)>
   template <typename CONTAINER, typename FN>
   inline bool none(const CONTAINER& c, const FN& f) {
     return std::none_of(std::begin(c), std::end(c), f);
   }
 
 
+  // /// A single-container-arg version of std::transform, aka @c map
+  // template <typename CONTAINER1, typename CONTAINER2>
+  // inline const CONTAINER2& transform(const CONTAINER1& in, CONTAINER2& out,
+  //                            const std::function<typename CONTAINER2::value_type(typename CONTAINER1::value_type)>& f) {
+  //   out.clear(); out.resize(in.size());
+  //   std::transform(in.begin(), in.end(), out.begin(), f);
+  //   return out;
+  // }
+
   /// A single-container-arg version of std::transform, aka @c map
-  /// @todo Use std::function<typename C2::value_type(typename C1::value_type)>
-  template <typename C1, typename C2, typename FN>
-  inline const C2& transform(const C1& in, C2& out, const FN& f) {
+  template <typename CONTAINER1, typename CONTAINER2, typename FN>
+  inline const CONTAINER2& transform(const CONTAINER1& in, CONTAINER2& out, const FN& f) {
     out.clear(); out.resize(in.size());
     std::transform(in.begin(), in.end(), out.begin(), f);
     return out;
   }
 
+  /// A single-container-arg, return-value version of std::transform, aka @c map
+  /// @todo Make the function template polymorphic... or specific to ParticleBase
+  template <typename CONTAINER1, typename T2>
+  inline std::vector<T2> transform(const CONTAINER1& in, const std::function<T2(typename CONTAINER1::value_type)>& f) {
+    std::vector<T2> out(in.size());
+    transform(in, out, f);
+    return out;
+  }
+
+
+
+  // /// A single-container-arg version of std::accumulate, aka @c reduce
+  // template <typename CONTAINER1, typename T>
+  // inline T accumulate(const CONTAINER1& in, const T& init, const std::function<T(typename CONTAINER1::value_type)>& f) {
+  //   const T rtn = std::accumulate(in.begin(), in.end(), init, f);
+  //   return rtn;
+  // }
+
   /// A single-container-arg version of std::accumulate, aka @c reduce
-  /// @todo Use std::function<T(typename C1::value_type)>
-  template <typename C1, typename T, typename FN>
-  inline T accumulate(const C1& in, const T& init, const FN& f) {
+  template <typename CONTAINER1, typename T, typename FN>
+  inline T accumulate(const CONTAINER1& in, const T& init, const FN& f) {
     const T rtn = std::accumulate(in.begin(), in.end(), init, f);
     return rtn;
   }
 
+
+
+  /// @brief Generic sum function, adding @c x for all @c x in container @a c
+  ///
+  /// @note Default-constructs the return type -- not always possible! Supply an explicit start value if necessary.
+  template <typename CONTAINER>
+  inline typename CONTAINER::value_type sum(const CONTAINER& c) {
+    typename CONTAINER::value_type rtn; //< default construct return type
+    for (const auto& x : c) rtn += x;
+    return rtn;
+  }
+
   /// Generic sum function, adding @c x for all @c x in container @a c, starting with @a start
-  /// @todo Use CONTAINER::value_type? Or more flexible not to?
+  ///
+  /// @note It's more more flexible here to not use CONTAINER::value_type, allowing implicit casting to T.
   template <typename CONTAINER, typename T>
-  inline T sum(const CONTAINER& c, const T& start=T()) {
+  inline T sum(const CONTAINER& c, const T& start) {
     T rtn = start;
     for (const auto& x : c) rtn += x;
     return rtn;
   }
 
   /// Generic sum function, adding @a fn(@c x) for all @c x in container @a c, starting with @a start
-  /// @todo Use std::function<T(typename CONTAINER::value_type)>
   template <typename CONTAINER, typename FN, typename T>
   inline T sum(const CONTAINER& c, const FN& f, const T& start=T()) {
     T rtn = start;
@@ -367,8 +466,11 @@ namespace Rivet {
     return rtn;
   }
 
+
+
   /// In-place generic sum function, adding @c x on to container @a out for all @c x in container @a c
-  /// @todo Use CONTAINER::value_type? Or more flexible not to?
+  ///
+  /// @note It's more more flexible here to not use CONTAINER::value_type, allowing implicit casting to T.
   template <typename CONTAINER, typename T>
   inline T& isum(const CONTAINER& c, T& out) {
     for (const auto& x : c) out += x;
@@ -376,7 +478,8 @@ namespace Rivet {
   }
 
   /// In-place generic sum function, adding @a fn(@c x) on to container @a out for all @c x in container @a c
-  /// @todo Use std::function<T(typename CONTAINER::value_type)>
+  ///
+  /// @note It's more more flexible here to not use CONTAINER::value_type, allowing implicit casting to T.
   template <typename CONTAINER, typename FN, typename T>
   inline T& isum(const CONTAINER& c, const FN& f, T& out) {
     for (const auto& x : c) out += f(x);
@@ -384,63 +487,243 @@ namespace Rivet {
   }
 
 
+
   /// Filter a collection in-place, removing the subset that passes the supplied function
-  /// @todo Use std::function<bool(typename CONTAINER::value_type)>
+  ///
+  /// @todo Use const std::function<bool(typename CONTAINER::value_type)>... but need polymorphism for ParticleBase
+  ///
+  /// @deprecated Use idiscard()
   template <typename CONTAINER, typename FN>
   inline CONTAINER& ifilter_discard(CONTAINER& c, const FN& f) {
     const auto newend = std::remove_if(std::begin(c), std::end(c), f);
     c.erase(newend, c.end());
     return c;
   }
+  /// Alias
+  template <typename CONTAINER, typename FN>
+  inline CONTAINER& idiscard(CONTAINER& c, const FN& f) {
+    return ifilter_discard(c, f);
+  }
+
+  /// Version with element-equality comparison in place of a function
+  ///
+  /// @deprecated Use idiscard()
+  template <typename CONTAINER>
+  inline CONTAINER& ifilter_discard(CONTAINER& c, const typename CONTAINER::value_type& y) {
+    return ifilter_discard(c, [&](typename CONTAINER::value_type& x){ return x == y; });
+  }
+  /// Version with element-equality comparison in place of a function
+  template <typename CONTAINER>
+  inline CONTAINER& idiscard(CONTAINER& c, const typename CONTAINER::value_type& y) {
+    return idiscard(c, [&](typename CONTAINER::value_type& x){ return x == y; });
+  }
+
+  /// Version with several element-equality comparisons in place of a function
+  ///
+  /// @deprecated Use idiscard()
+  template <typename CONTAINER>
+  inline CONTAINER& ifilter_discard_if_any(CONTAINER& c, const CONTAINER& ys) {
+    return ifilter_discard(c, [&](typename CONTAINER::value_type& x){ return contains(ys, x); });
+  }
+  /// Version with element-equality comparisons in place of a function
+  template <typename CONTAINER>
+  inline CONTAINER& idiscard_if_any(CONTAINER& c, const CONTAINER& ys) {
+    return idiscard(c, [&](typename CONTAINER::value_type& x){ return contains(ys, x); });
+  }
+
 
   /// Filter a collection by copy, removing the subset that passes the supplied function
-  /// @todo Use std::function<bool(typename CONTAINER::value_type)>
+  ///
+  /// @todo Use const std::function<bool(typename CONTAINER::value_type)>... but need polymorphism for ParticleBase
+  ///
+  /// @deprecated Use discard()
   template <typename CONTAINER, typename FN>
   inline CONTAINER filter_discard(const CONTAINER& c, const FN& f) {
     CONTAINER rtn = c;
     return ifilter_discard(rtn, f); ///< @todo More efficient would be copy_if with back_inserter...
   }
+  /// Alias
+  template <typename CONTAINER, typename FN>
+  inline CONTAINER discard(const CONTAINER& c, const FN& f) {
+    return filter_discard(c, f);
+  }
+
+  /// Version with element-equality comparison in place of a function
+  ///
+  /// @deprecated Use discard()
+  template <typename CONTAINER>
+  inline CONTAINER filter_discard(const CONTAINER& c, const typename CONTAINER::value_type& y) {
+    return filter_discard(c, [&](typename CONTAINER::value_type& x){ return x == y; });
+  }
+  /// Version with element-equality comparison in place of a function
+  template <typename CONTAINER>
+  inline CONTAINER discard(const CONTAINER& c, const typename CONTAINER::value_type& y) {
+    return discard(c, [&](typename CONTAINER::value_type& x){ return x == y; });
+  }
+
+  /// Version with several element-equality comparisons in place of a function
+  ///
+  /// @deprecated Use idiscard_if_any()
+  template <typename CONTAINER>
+  inline CONTAINER filter_discard_if_any(const CONTAINER& c, const CONTAINER& ys) {
+    return filter_discard(c, [&](typename CONTAINER::value_type& x){ return contains(ys, x); });
+  }
+  /// Version with element-equality comparisons in place of a function
+  template <typename CONTAINER>
+  inline CONTAINER discard_if_any(const CONTAINER& c, const CONTAINER& ys) {
+    return discard(c, [&](typename CONTAINER::value_type& x){ return contains(ys, x); });
+  }
+
 
   /// Filter a collection by copy into a supplied container, removing the subset that passes the supplied function
+  ///
   /// @note New container will be replaced, not appended to
-  /// @todo Use std::function<bool(typename CONTAINER::value_type)>
+  ///
+  /// @todo Use const std::function<bool(typename CONTAINER::value_type)>... but need polymorphism for ParticleBase
+  ///
+  /// @deprecated Use discard()
   template <typename CONTAINER, typename FN>
   inline CONTAINER& filter_discard(const CONTAINER& c, const FN& f, CONTAINER& out) {
     out = filter_discard(c, f);
     return out;
   }
+  /// Alias
+  template <typename CONTAINER, typename FN>
+  inline CONTAINER& discard(const CONTAINER& c, const FN& f, CONTAINER& out) {
+    return filter_discard(c, f, out);
+  }
+
+  /// Version with element-equality comparison in place of a function
+  ///
+  /// @deprecated Use discard()
+  template <typename CONTAINER>
+  inline CONTAINER& filter_discard(const CONTAINER& c, const typename CONTAINER::value_type& y, CONTAINER& out) {
+    return filter_discard(c, [&](typename CONTAINER::value_type& x){ return x == y; }, out);
+  }
+  /// Version with element-equality comparison in place of a function
+  template <typename CONTAINER>
+  inline CONTAINER& discard(const CONTAINER& c, const typename CONTAINER::value_type& y, CONTAINER& out) {
+    return discard(c, [&](typename CONTAINER::value_type& x){ return x == y; }, out);
+  }
+
+  /// Version with several element-equality comparisons in place of a function
+  ///
+  /// @deprecated Use idiscard_if_any()
+  template <typename CONTAINER>
+  inline CONTAINER& filter_discard_if_any(const CONTAINER& c, const CONTAINER& ys, CONTAINER& out) {
+    return filter_discard(c, [&](typename CONTAINER::value_type& x){ return contains(ys, x); }, out);
+  }
+  /// Version with element-equality comparisons in place of a function
+  template <typename CONTAINER>
+  inline CONTAINER& discard_if_any(const CONTAINER& c, const CONTAINER& ys, CONTAINER& out) {
+    return discard(c, [&](typename CONTAINER::value_type& x){ return contains(ys, x); }, out);
+  }
+
 
 
   /// Filter a collection in-place, keeping the subset that passes the supplied function
-  /// @todo Use std::function<bool(typename CONTAINER::value_type)>
+  ///
+  /// @todo Use const std::function<bool(typename CONTAINER::value_type)>... but need polymorphism for ParticleBase
+  ///
+  /// @deprecated Use iselect()
   template <typename CONTAINER, typename FN>
   inline CONTAINER& ifilter_select(CONTAINER& c, const FN& f) {
     //using value_type = typename std::remove_reference<decltype(*std::begin(std::declval<typename std::add_lvalue_reference<CONTAINER>::type>()))>::type;
     auto invf = [&](const typename CONTAINER::value_type& x){ return !f(x); };
-    return ifilter_discard(c, invf);
+    return ifilter_discard(c, invf); //< yes, intentional!
+  }
+  /// Alias
+  template <typename CONTAINER, typename FN>
+  inline CONTAINER& iselect(CONTAINER& c, const FN& f) {
+    return ifilter_select(c, f);
   }
 
+  // No single equality-comparison version for select, since that would be silly!
+
+  /// Version with several element-equality comparisons in place of a function
+  ///
+  /// @deprecated Use iselect_if_any()
+  template <typename CONTAINER>
+  inline CONTAINER& ifilter_select_if_any(CONTAINER& c, const CONTAINER& ys) {
+    return ifilter_select(c, [&](typename CONTAINER::value_type& x){ return contains(ys, x); });
+  }
+  /// Version with element-equality comparisons in place of a function
+  template <typename CONTAINER>
+  inline CONTAINER& iselect_if_any(CONTAINER& c, const CONTAINER& ys) {
+    return iselect(c, [&](typename CONTAINER::value_type& x){ return contains(ys, x); });
+  }
+
+
   /// Filter a collection by copy, keeping the subset that passes the supplied function
-  /// @todo Use std::function<bool(typename CONTAINER::value_type)>
+  ///
+  /// @todo Use const std::function<bool(typename CONTAINER::value_type)>... but need polymorphism for ParticleBase
+  ///
+  /// @deprecated Use select()
   template <typename CONTAINER, typename FN>
   inline CONTAINER filter_select(const CONTAINER& c, const FN& f) {
     CONTAINER rtn = c;
     return ifilter_select(rtn, f); ///< @todo More efficient would be copy_if with back_inserter ... but is that equally container agnostic?
   }
+  /// Alias
+  template <typename CONTAINER, typename FN>
+  inline CONTAINER select(const CONTAINER& c, const FN& f) {
+    return filter_select(c, f);
+  }
+
+  // No single equality-comparison version for select, since that would be silly!
+
+  /// Version with several element-equality comparisons in place of a function
+  ///
+  /// @deprecated Use select_if_any()
+  template <typename CONTAINER>
+  inline CONTAINER filter_select_if_any(const CONTAINER& c, const CONTAINER& ys) {
+    return filter_select(c, [&](typename CONTAINER::value_type& x){ return contains(ys, x); });
+  }
+  /// Version with element-equality comparisons in place of a function
+  template <typename CONTAINER>
+  inline CONTAINER select_if_any(const CONTAINER& c, const CONTAINER& ys) {
+    return select(c, [&](typename CONTAINER::value_type& x){ return contains(ys, x); });
+  }
+
 
   /// Filter a collection by copy into a supplied container, keeping the subset that passes the supplied function
+  ///
   /// @note New container will be replaced, not appended to
-  /// @todo Use std::function<bool(typename CONTAINER::value_type)>
+  ///
+  /// @todo Use const std::function<bool(typename CONTAINER::value_type)>... but need polymorphism for ParticleBase
+  ///
+  /// @deprecated Use select()
   template <typename CONTAINER, typename FN>
   inline CONTAINER& filter_select(const CONTAINER& c, const FN& f, CONTAINER& out) {
     out = filter_select(c, f);
     return out;
   }
+  /// Alias
+  template <typename CONTAINER, typename FN>
+  inline CONTAINER& select(const CONTAINER& c, const FN& f, CONTAINER& out) {
+    return filter_select(c, f, out);
+  }
+
+  // No single equality-comparison version for select, since that would be silly!
+
+  /// Version with several element-equality comparisons in place of a function
+  ///
+  /// @deprecated Use iselect_if_any()
+  template <typename CONTAINER>
+  inline CONTAINER& filter_select_if_any(const CONTAINER& c, const CONTAINER& ys, CONTAINER& out) {
+    return filter_select(c, [&](typename CONTAINER::value_type& x){ return contains(ys, x); }, out);
+  }
+  /// Version with element-equality comparisons in place of a function
+  template <typename CONTAINER>
+  inline CONTAINER& select_if_any(const CONTAINER& c, const CONTAINER& ys, CONTAINER& out) {
+    return select(c, [&](typename CONTAINER::value_type& x){ return contains(ys, x); }, out);
+  }
+
 
 
   /// @brief Slice of the container elements cf. Python's [i:j] syntax
   ///
-  /// The element at the @j index is not included in the returned container.
+  /// The element at the @a j index is not included in the returned container.
   /// @a i and @a j can be negative, treated as backward offsets from the end of the container.
   template <typename CONTAINER>
   inline CONTAINER slice(const CONTAINER& c, int i, int j) {
@@ -464,7 +747,7 @@ namespace Rivet {
 
   /// @brief Head slice of the @a n first container elements
   ///
-  /// Negative @a n means to take the head excluding the @a{n}-element tail
+  /// Negative @a n means to take the head excluding the @a n -element tail
   template <typename CONTAINER>
   inline CONTAINER head(const CONTAINER& c, int n) {
     // if (n > c.size()) throw RangeError("Requested head longer than container");
@@ -475,7 +758,7 @@ namespace Rivet {
 
   /// @brief Tail slice of the @a n last container elements
   ///
-  /// Negative @a n means to take the tail from after the @a{n}th element
+  /// Negative @a n means to take the tail from after the @a n th element
   template <typename CONTAINER>
   inline CONTAINER tail(const CONTAINER& c, int n) {
     // if (n > c.size()) throw RangeError("Requested tail longer than container");
@@ -529,16 +812,39 @@ namespace Rivet {
     return std::make_pair(rtnmin, rtnmax);
   }
 
-  //@}
+  /// @}
 
 
   /// @brief Get a parameter from a named environment variable, with automatic type conversion
+  ///
   /// @note Return @a fallback if the variable is not defined, otherwise convert its string to the template type
   /// @todo Should the param name have to be specific to an analysis? Can specialise as an Analysis member fn.
+  /// @ingroup utils
   template <typename T>
   T getEnvParam(const std::string name, const T& fallback) {
     char* env = getenv(name.c_str());
     return env ? lexical_cast<T>(env) : fallback;
+  }
+
+
+
+  /// @brief Get the contents of a vector between two indices
+  ///
+  /// @ingroup utils
+  template<class T>
+  vector<T> slice(const vector<T>& v, int startidx, int endidx) {
+
+    if (startidx < 0 || endidx <= startidx || endidx >= v.size())
+      throw RangeError("Requested start or end indices incompatible with given vector");
+
+    auto start = v.begin() + startidx;
+    auto end = v.begin() + endidx;
+
+    vector<T> output(endidx - startidx);
+
+    copy(start, end, output.begin());
+
+    return output;
   }
 
 

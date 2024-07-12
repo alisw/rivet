@@ -1,0 +1,37 @@
+Name: BELLE_2019_I1729723
+Year: 2019
+Summary:  $\bar{B}^0\to K^0_SK^\mp\pi^\pm$
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1729723
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ -  Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 100 (2019) 1, 011101
+RunInfo: Any process producing B0 originally e+e- at Upsilon(4S)
+Description:
+  'Measurement of the mass distributions in the decays $\bar{B}^0\to K^0_SK^\mp\pi^\pm$. The data were read from the plots in the paper, but is corrected for detector efficiency.'
+ValidationInfo:
+  'Herwig7 events using EvtGen for decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle:2019rup
+BibTeX: '@article{Belle:2019rup,
+    author = "Lai, Y. T. and others",
+    collaboration = "Belle",
+    title = "{Measurement of branching fraction and final-state asymmetry for the $\bar{B}^{0}\to K^{0}_{S}K^{\mp}\pi^{\pm}$ decay}",
+    eprint = "1904.06835",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "Belle Preprint 2019-06, KEK Preprint 2019-4",
+    doi = "10.1103/PhysRevD.100.011101",
+    journal = "Phys. Rev. D",
+    volume = "100",
+    number = "1",
+    pages = "011101",
+    year = "2019"
+}
+'

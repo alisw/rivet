@@ -1,0 +1,496 @@
+{
+    "680371": [
+        "Measurement of the azimuthal angle distribution of leptons from $W$ boson decays as a function of the $W$ transverse momentum in $p \\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.73.052002", 
+        null, 
+        "hep-ex/0504020", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-05-063-E"
+        ]
+    ], 
+    "683341": [
+        "Evidence for the exclusive decay $B_c^\\pm \\to J/\\psi \\pi^\\pm$ and measurement of the mass of the $B_c$ meson", 
+        "CDF", 
+        "10.1103/PhysRevLett.96.082002", 
+        null, 
+        "hep-ex/0505076", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-05-216-E"
+        ]
+    ], 
+    "687190": [
+        "Search for W and Z bosons in the reaction $\\bar{p} p \\to 2 {\\rm jets} + \\gamma$ at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.73.012001", 
+        null, 
+        "hep-ex/0507051", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-05-339-E"
+        ]
+    ], 
+    "689331": [
+        "Measurement of the ratios of branching fractions $B(B_s^0 \\to D_s^- \\pi^+)/B(B^0 \\to D^- \\pi^+)$ and $B(B^+ \\to \\overline{D}^0 \\pi^+)/B(B^0 \\to D^- \\pi^+)$", 
+        "CDF", 
+        "10.1103/PhysRevLett.96.191801", 
+        null, 
+        "hep-ex/0508014", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-05-415-E"
+        ]
+    ], 
+    "689415": [
+        "Measurement of $b$ hadron masses in exclusive $J/\\psi$ decays with the CDF detector", 
+        "CDF", 
+        "10.1103/PhysRevLett.96.202001", 
+        null, 
+        "hep-ex/0508022", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-05-316-E"
+        ]
+    ], 
+    "690785": [
+        "Search for neutral MSSM Higgs bosons decaying to tau pairs in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.96$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.96.011802", 
+        null, 
+        "hep-ex/0508051", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-05-374-E"
+        ]
+    ], 
+    "692042": [
+        "Direct search for Dirac magnetic monopoles in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.96$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.96.201801", 
+        null, 
+        "hep-ex/0509015", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-05-444-E"
+        ]
+    ], 
+    "695365": [
+        "Top quark mass measurement using the template method in the lepton + jets channel at CDF II", 
+        "CDF", 
+        "10.1103/PhysRevD.73.032003", 
+        null, 
+        "hep-ex/0510048", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-05-472-E"
+        ]
+    ], 
+    "695366": [
+        "Precision top quark mass measurement in the lepton + jets topology in p anti-p collisions at $\\sqrt{s}=$ 1.96-TeV.", 
+        "CDF", 
+        "10.1103/PhysRevLett.96.022004", 
+        null, 
+        "hep-ex/0510049", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-05-474-E"
+        ]
+    ], 
+    "695959": [
+        "A search for $t \\to tau \\nu q$ in $t\\bar{t}$ production.", 
+        "CDF", 
+        "10.1016/j.physletb.2006.06.030", 
+        null, 
+        "hep-ex/0510063", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-05-484-E"
+        ]
+    ], 
+    "696060": [
+        "Search for charged Higgs bosons from top quark decays in $p\\bar{p}$ collisions at $\\sqrt{s} =$ 1.96-TeV.", 
+        "CDF", 
+        "10.1103/PhysRevLett.96.042003", 
+        null, 
+        "hep-ex/0510065", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-05-485-E"
+        ]
+    ], 
+    "697216": [
+        "Measurement of the helicity of $W$ bosons in top-quark decays", 
+        "CDF", 
+        "10.1103/PhysRevD.73.111103", 
+        null, 
+        "hep-ex/0511023", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-05-504-E"
+        ]
+    ], 
+    "699723": [
+        "Measurement of the top quark mass with the dynamical likelihood method using lepton plus jets events with b-tags in $p\\bar{p}$ collisions at $\\sqrt{s} =$ 1.96-TeV.", 
+        "CDF", 
+        "10.1103/PhysRevD.73.092002", 
+        null, 
+        "hep-ex/0512009", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-05-533-E"
+        ]
+    ], 
+    "699933": [
+        "Measurement of the inclusive jet cross section in $p\\bar{p}$ interactions at $\\sqrt{s} =$ 1.96-TeV using a cone-based jet algorithm.", 
+        "CDF", 
+        "10.1103/PhysRevD.74.071103", 
+        null, 
+        "hep-ex/0512020", 
+        "ins699933", 
+        null, 
+        [
+            "FERMILAB-PUB-05-559-E"
+        ]
+    ], 
+    "700376": [
+        "Search for second-generation scalar leptoquarks in $p\\bar{p}$ collisions at $\\sqrt{s} =$ 1.96-TeV.", 
+        "CDF", 
+        "10.1103/PhysRevD.73.051102", 
+        null, 
+        "hep-ex/0512055", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-05-546-E"
+        ]
+    ], 
+    "701095": [
+        "Search for H to b anti-b produced in association with W bosons in $p\\bar{p}$ collisions at $\\sqrt{s} =$ 1.96-TeV.", 
+        "CDF", 
+        "10.1103/PhysRevLett.96.081803", 
+        null, 
+        "hep-ex/0512051", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-05-549-E"
+        ]
+    ], 
+    "701218": [
+        "Measurement of the inclusive jet cross section using the k(t) algorithm in p anti-p collisions at $\\sqrt{s}=$ 1.96-TeV.", 
+        "CDF", 
+        "10.1103/PhysRevLett.96.122001", 
+        null, 
+        "hep-ex/0512062", 
+        "ins701218", 
+        null, 
+        [
+            "FERMILAB-PUB-05-555-E"
+        ]
+    ], 
+    "701318": [
+        "Search for anomalous semileptonic decay of heavy flavor hadrons produced in association with a W boson at CDF II", 
+        "CDF", 
+        "10.1103/PhysRevD.73.051101", 
+        null, 
+        "hep-ex/0512065", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-05-560-E"
+        ]
+    ], 
+    "701363": [
+        "Measurement of mass and width of the excited charmed meson states D0(1) and D*0(2) at CDF", 
+        "CDF", 
+        "10.1103/PhysRevD.73.051104", 
+        null, 
+        "hep-ex/0512069", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-05-552-E"
+        ]
+    ], 
+    "701425": [
+        "Top quark mass measurement from dilepton events at CDF II", 
+        "CDF", 
+        "10.1103/PhysRevLett.96.152002", 
+        null, 
+        "hep-ex/0512070", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-05-551-E"
+        ]
+    ], 
+    "701427": [
+        "A search for scalar bottom quarks from gluino decays in $\\bar{p}p$ collisions at $\\sqrt{s} =$ 1.96-TeV.", 
+        "CDF", 
+        "10.1103/PhysRevLett.96.171802", 
+        null, 
+        "hep-ex/0512072", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-05-553-E"
+        ]
+    ], 
+    "701523": [
+        "Measurement of the dipion mass spectrum in $X(3872) \\to J/\\psi \\pi^+ \\pi^-$ decays.", 
+        "CDF", 
+        "10.1103/PhysRevLett.96.102002", 
+        null, 
+        "hep-ex/0512074", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-05-535-E"
+        ]
+    ], 
+    "709729": [
+        "Observation of $B_s^0 \\to \\psi(2S) \\phi$ and measurement of ratio of branching fractions $B(B_s^0 \\to \\psi(2S) \\phi)/B(B_s^0 \\to J/\\psi \\phi)$", 
+        "CDF", 
+        "10.1103/PhysRevLett.96.231801", 
+        null, 
+        "hep-ex/0602005", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-06-021-E"
+        ]
+    ], 
+    "709732": [
+        "Measurement of the top quark mass using template methods on dilepton events in proton antiproton collisions at $\\sqrt{s} =$ 1.96-TeV.", 
+        "CDF", 
+        "10.1103/PhysRevD.73.112006", 
+        null, 
+        "hep-ex/0602008", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-06-019-E"
+        ]
+    ], 
+    "711200": [
+        "Search for $Z^\\prime \\to e^+ e^-$ using dielectron mass and angular distribution.", 
+        "CDF", 
+        "10.1103/PhysRevLett.96.211801", 
+        null, 
+        "hep-ex/0602045", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-06-038-E"
+        ]
+    ], 
+    "711679": [
+        "Search for high-mass resonances decaying to e mu in $p\\bar{p}$ collisions at $\\sqrt{s} =$ 1.96-TeV.", 
+        "CDF", 
+        "10.1103/PhysRevLett.96.211802", 
+        null, 
+        "hep-ex/0603006", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-06-043-E"
+        ]
+    ], 
+    "712415": [
+        "Measurement of the B(c)+ meson lifetime using B(c)+ ---> J/psi e+ nu(e)", 
+        "CDF", 
+        "10.1103/PhysRevLett.97.012002", 
+        null, 
+        "hep-ex/0603027", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-06-056-E"
+        ]
+    ], 
+    "712913": [
+        "Measurement of the $t\\bar{t}$ production cross section in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.96$-TeV using missing $E_T$ + jets events with secondary vertex $b$-tagging", 
+        "CDF", 
+        "10.1103/PhysRevLett.96.202002", 
+        null, 
+        "hep-ex/0603043", 
+        "ins712913", 
+        null, 
+        [
+            "FERMILAB-PUB-06-058-E"
+        ]
+    ], 
+    "715041": [
+        "Search for Large Extra Dimensions in the Production of Jets and Missing Transverse Energy in p anti-p Collisions at s**(1/2) = 1.96 TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.97.171802", 
+        null, 
+        "hep-ex/0605101", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-06-079-E"
+        ]
+    ], 
+    "716414": [
+        "Measurement of the ratio of branching fractions B(D0 $\\to K^{+} \\pi^{-)}$ / B(D0 $\\to K^{-} \\pi^{+)}$ using the CDF II Detector", 
+        "CDF", 
+        "10.1103/PhysRevD.74.031109", 
+        null, 
+        "hep-ex/0605027", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-06-104-E"
+        ]
+    ], 
+    "717570": [
+        "Search for new physics in lepton + photon + $X$ events with 305 $pb^{-1}$ of $p \\bar{p}$ collisions at $\\sqrt{s}$ = 1.96-TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.97.031801", 
+        null, 
+        "hep-ex/0605097", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-06-127-E"
+        ]
+    ], 
+    "717572": [
+        "Measurement of the $b$ jet cross-section in events with a $Z$ boson in $p \\bar{p}$ collisions at $\\sqrt{s}$ = 1.96-TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.74.032008", 
+        null, 
+        "hep-ex/0605099", 
+        "ins717572", 
+        null, 
+        [
+            "FERMILAB-PUB-06-128-E"
+        ]
+    ], 
+    "717956": [
+        "Top quark mass measurement from dilepton events at CDF II with the matrix-element method", 
+        "CDF", 
+        "10.1103/PhysRevD.74.032009", 
+        null, 
+        "hep-ex/0605118", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-06-174-E"
+        ]
+    ], 
+    "718051": [
+        "Search for a neutral Higgs boson decaying to a $W$ boson pair in $p$ antip collisions at $\\sqrt{s}$ = 1.96-TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.97.081802", 
+        null, 
+        "hep-ex/0605124", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-06-154-E"
+        ]
+    ], 
+    "718721": [
+        "Measurement of the $t \\bar{t}$ Production Cross Section in $p \\bar{p}$ Collisions at $\\sqrt{s} = 1.96$\\,TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.97.082004", 
+        null, 
+        "hep-ex/0606017", 
+        "ins718721", 
+        null, 
+        [
+            "FERMILAB-PUB-06-164-E", 
+            "PUB-06-164-E"
+        ]
+    ], 
+    "719112": [
+        "Measurement of the $B^0_{s}-\\bar{B}^0_s$ Oscillation Frequency", 
+        "CDF", 
+        "10.1103/PhysRevLett.97.062003", 
+        null, 
+        "hep-ex/0606027", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-06-175-E"
+        ]
+    ], 
+    "719681": [
+        "Search for excited and exotic muons in the $\\mu \\gamma$ decay channel in $p \\bar{p}$ collisions at $\\sqrt{s}$ = 1.96-TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.97.191802", 
+        null, 
+        "hep-ex/0606043", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-06-186-E"
+        ]
+    ], 
+    "721596": [
+        "Observation of $B^0$ ($s$) $\\to K^{+} K^{-}$ and Measurements of Branching Fractions of Charmless Two-body Decays of $B^0$ and $B^0_{s}$ Mesons in $\\bar{p} p$ Collisions at $\\sqrt{s}$ = 1.96-TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.97.211802", 
+        null, 
+        "hep-ex/0607021", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-06-240-E"
+        ]
+    ], 
+    "722026": [
+        "Measurement of the $t \\bar{t}$ Production Cross Section in $p \\bar{p}$ collisions at $\\sqrt{s}$ = 1.96-TeV using Lepton + Jets Events with Jet Probability $b^-$ tagging", 
+        "CDF", 
+        "10.1103/PhysRevD.74.072006", 
+        null, 
+        "hep-ex/0607035", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-06-247-E"
+        ]
+    ], 
+    "722631": [
+        "Measurement of the $t \\bar{t}$ Production Cross Section in $p \\bar{p}$ collisions at $\\sqrt{s}$ = 1.96-TeV in the All Hadronic Decay Mode", 
+        "CDF", 
+        "10.1103/PhysRevD.74.072005", 
+        null, 
+        "hep-ex/0607095", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-06-255-E"
+        ]
+    ], 
+    "726758": [
+        "Observation of $B^0_s - \\bar{B}^0_s$ Oscillations", 
+        "CDF", 
+        "10.1103/PhysRevLett.97.242003", 
+        null, 
+        "hep-ex/0609040", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-06-344-E", 
+            "CDF-8522"
+        ]
+    ]
+}

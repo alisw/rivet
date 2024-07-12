@@ -43,3 +43,8 @@ BibTeX: '@Article{Acosta:2004sn,
      doi       = "10.1103/PhysRevLett.95.022003",
      SLACcitation  = "%%CITATION = HEP-EX/0412050;%%"
 }'
+
+ReleaseTests:
+ - $A TVT-Run-II-DiPhoton-GammaGamma
+ - $A-2 TVT-Run-II-DiPhoton-GammaJet
+

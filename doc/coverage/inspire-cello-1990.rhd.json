@@ -1,0 +1,75 @@
+{
+    "276764": [
+        "Measurement of Inclusive $\\gamma$, $\\pi^0$ and $\\eta$ Production in $e^+ e^-$ Annihilation at $s^1$/2 = 35-{GeV}", 
+        "CELLO", 
+        "10.1007/BF01551905", 
+        null, 
+        null, 
+        "ins276764", 
+        null, 
+        [
+            "DESY-89-008"
+        ]
+    ], 
+    "282536": [
+        "Heavy Quark Charge Asymmetries With the Cello Detector", 
+        "CELLO", 
+        "10.1007/BF01565856", 
+        null, 
+        null, 
+        "ins282536", 
+        null, 
+        [
+            "DESY-89-125"
+        ]
+    ], 
+    "282846": [
+        "Exclusive $\\tau$ Decays With the Cello Detector at {PETRA}", 
+        "CELLO", 
+        "10.1007/BF01560254", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-89-126"
+        ]
+    ], 
+    "283026": [
+        "Inclusive Strange Particle Production in $e^+ e^-$ Annihilation", 
+        "CELLO", 
+        "10.1007/BF01621027", 
+        null, 
+        null, 
+        "ins283026", 
+        null, 
+        [
+            "DESY-89-140"
+        ]
+    ], 
+    "284559": [
+        "A2 (1320) and Pi2 (1670) Formation in the Reaction $\\gamma \\gamma \\to \\pi^+ \\pi^- \\pi^0$", 
+        "CELLO", 
+        "10.1007/BF01560259", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-89-177"
+        ]
+    ], 
+    "296189": [
+        "Global Properties of Pion Production in the Reaction $\\gamma \\gamma \\to 3 \\pi^+ 3 \\pi^-$", 
+        "CELLO", 
+        "10.1016/0370-2693(90)90149-Z", 
+        null, 
+        null, 
+        "ins296189", 
+        null, 
+        [
+            "DESY-90-039", 
+            "TAUP-1797-90"
+        ]
+    ]
+}

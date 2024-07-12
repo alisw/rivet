@@ -5,9 +5,11 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1625109
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Stefan Richter <stefan.richter@cern.ch>
 References:
+ - ATLAS-STDM-2016-15
  - Phys.Rev. D97 (2018) no.3, 032005
  - doi:10.1103/PhysRevD.97.032005
  - arXiv:1709.07703 [hep-ex]
@@ -53,3 +55,7 @@ BibTeX: '@article{Aaboud:2017rwm,
       reportNumber   = "CERN-EP-2017-163",
       SLACcitation   = "%%CITATION = ARXIV:1709.07703;%%"
 }'
+
+ReleaseTests:
+ - $A pp-13000-llll
+

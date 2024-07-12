@@ -1,5 +1,5 @@
 # BEGIN PLOT /CDF_2012_NOTE10874/d
-XLabel=$p_\perp^\text{max}$ [GeV/c]
+XLabel=$p_\perp^\mathrm{max}$ [GeV/c]
 LogY=0
 LegendYPos=0.4
 # END PLOT

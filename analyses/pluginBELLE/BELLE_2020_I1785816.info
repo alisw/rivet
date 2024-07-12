@@ -1,0 +1,37 @@
+Name: BELLE_2020_I1785816
+Year: 2020
+Summary: Dalitz decay of $D^0\to K^-\pi^+\eta$
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1785816
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 102 (2020) 1, 012002
+RunInfo: Any process producing D0 mesons
+Description:
+  'Measurement of the mass distributions in the decay $D^0\to K^-\pi^+\eta$ by BELLE. The data were read from the plots in the paper, and for many points the error bars are the size of the point. It is also not clear that any resolution effects have been unfolded.'
+ValidationInfo:
+  'Herwig 7 events using model in the paper'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle:2020fbd
+BibTeX: '@article{Belle:2020fbd,
+    author = "Chen, Y. Q. and others",
+    collaboration = "Belle",
+    title = "{Dalitz analysis of $D^{0}\to K^{-}\pi^{+}\eta$ decays at Belle}",
+    eprint = "2003.07759",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "KEK Preprint 2019-60, Belle Preprint 2020-04, KEK Preprint 2020-04, UCHEP-20-01",
+    doi = "10.1103/PhysRevD.102.012002",
+    journal = "Phys. Rev. D",
+    volume = "102",
+    number = "1",
+    pages = "012002",
+    year = "2020"
+}
+'

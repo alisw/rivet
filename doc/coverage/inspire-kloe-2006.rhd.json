@@ -1,0 +1,92 @@
+{
+    "689643": [
+        "Measurements of the absolute branching ratios for the dominant K(L) decays, the K(L) lifetime, and V(us) with the KLOE detector", 
+        "KLOE", 
+        "10.1016/j.physletb.2005.10.018", 
+        null, 
+        "hep-ex/0508027", 
+        null, 
+        null, 
+        []
+    ], 
+    "693642": [
+        "Measurement of the absolute branching ratio for the $K^+ \\to \\mu^+ \\nu(\\gamma)$ decay with the KLOE detector", 
+        "KLOE", 
+        "10.1016/j.physletb.2005.11.008", 
+        null, 
+        "hep-ex/0509045", 
+        null, 
+        null, 
+        []
+    ], 
+    "697749": [
+        "Study of the decay $\\phi \\to f(0)(980) \\gamma \\to \\pi^+ \\pi^- \\gamma$ with the KLOE detector", 
+        "KLOE", 
+        "10.1016/j.physletb.2006.01.016", 
+        null, 
+        "hep-ex/0511031", 
+        null, 
+        null, 
+        []
+    ], 
+    "708554": [
+        "Precise measurement of $\\Gamma(K(s) \\to \\pi^+ \\pi^- (\\gamma)) / \\Gamma(K(s) \\to \\pi^0 \\pi^0$) with the KLOE detector at DAFNE", 
+        "KLOE", 
+        "10.1140/epjc/s10052-006-0021-9", 
+        null, 
+        "hep-ex/0601025", 
+        null, 
+        null, 
+        []
+    ], 
+    "708555": [
+        "Study of the branching ratio and charge asymmetry for the decay $K(s) \\to \\pi e \\nu$ with the KLOE detector", 
+        "KLOE", 
+        "10.1016/j.physletb.2006.03.047", 
+        null, 
+        "hep-ex/0601026", 
+        null, 
+        null, 
+        []
+    ], 
+    "709052": [
+        "Measurement of the form-factor slopes for the decay $K(L) \\to \\pi^\\pm e^\\mp \\nu$ with the KLOE detector", 
+        "KLOE", 
+        "10.1016/j.physletb.2006.03.036", 
+        null, 
+        "hep-ex/0601038", 
+        null, 
+        null, 
+        []
+    ], 
+    "712824": [
+        "Measurement of the branching ratio of the $K(L) \\to \\pi^+ \\pi^-$ decay with the KLOE detector", 
+        "KLOE", 
+        "10.1016/j.physletb.2006.05.039", 
+        null, 
+        "hep-ex/0603041", 
+        null, 
+        null, 
+        []
+    ], 
+    "715346": [
+        "Measurement of the DAFNE luminosity with the KLOE detector using large angle Bhabha scattering", 
+        "KLOE", 
+        "10.1140/epjc/s2006-02617-4", 
+        null, 
+        "hep-ex/0604048", 
+        null, 
+        null, 
+        []
+    ], 
+    "721706": [
+        "First observation of quantum interference in the process $\\phi \\to K(S) K(L) \\to \\pi^+ \\pi^- \\pi^+ \\pi^-$: A Test of quantum mechanics and CPT symmetry", 
+        "KLOE", 
+        "10.1016/j.physletb.2006.09.046", 
+        null, 
+        "hep-ex/0607027", 
+        null, 
+        null, 
+        []
+    ]
+}

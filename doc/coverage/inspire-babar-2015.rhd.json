@@ -1,0 +1,163 @@
+{
+    "866025": [
+        "Measurement of the Absolute Branching Fractions for $D^-_s\\!\\rightarrow\\!\\ell^-\\bar{\\nu}_{\\ell}$ and Extraction of the Decay Constant $f_{D_s}$", 
+        "BaBar", 
+        "10.1103/PhysRevD.82.091103", 
+        null, 
+        "1008.4080", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-14229", 
+            "BABAR-CONF-10-024"
+        ]
+    ], 
+    "1308513": [
+        "Study of $B^{\\pm,0} \\to J/\\psi K^+ K^- K^{\\pm,0}$ and search for $B^0 \\to J/\\psi\\phi$ at BABAR", 
+        "BaBar", 
+        "10.1103/PhysRevD.91.012003", 
+        null, 
+        "1407.7244", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-13-019", 
+            "SLAC-PUB-16048"
+        ]
+    ], 
+    "1322094": [
+        "Observation of the baryonic decay $\\bar{B}^0 \\to \\Lambda^+_c \\bar{p} K^- K^+$", 
+        "BaBar", 
+        "10.1103/PhysRevD.91.031102", 
+        null, 
+        "1410.3644", 
+        null, 
+        null, 
+        []
+    ], 
+    "1326640": [
+        "Study of $CP$ Asymmetry in $B^0-\\bar B^0$ Mixing with Inclusive Dilepton Events", 
+        "BaBar", 
+        "10.1103/PhysRevLett.114.081801", 
+        null, 
+        "1411.1842", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-14-006", 
+            "SLAC-PUB-15983"
+        ]
+    ], 
+    "1334693": [
+        "Measurement of the $D^0 \\to \\pi^- e^+ \\nu_e$ differential decay branching fraction as a function of $q^2$ and study of form factor parameterizations", 
+        "BaBar", 
+        "10.1103/PhysRevD.91.052022", 
+        null, 
+        "1412.5502", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-14-014", 
+            "SLAC-PUB-16172"
+        ]
+    ], 
+    "1335269": [
+        "Dalitz plot analyses of $B^0 \u2192 D^\u2212D^0K^+$ and $B^+ \u2192 \\overline{D}^0D^0K^+$ decays", 
+        "BaBar", 
+        "10.1103/PhysRevD.91.052002", 
+        null, 
+        "1412.6751", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-14-009", 
+            "SLAC-PUB-16180"
+        ]
+    ], 
+    "1343322": [
+        "Measurement of the branching fractions of the radiative leptonic $\\tau$ decays $\\tau \\to e\\gamma\\nu\\bar{\\nu}$ and $\\tau \\to \\mu\\gamma\\nu\\bar{\\nu}$ at $B{\\small A}B{\\small AR}$", 
+        "BaBar", 
+        "10.1103/PhysRevD.91.051103", 
+        null, 
+        "1502.01784", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-14-013", 
+            "SLAC-PUB-16212"
+        ]
+    ], 
+    "1343511": [
+        "Search for Long-Lived Particles in $e^+e^-$ Collisions", 
+        "BaBar", 
+        "10.1103/PhysRevLett.114.171801", 
+        null, 
+        "1502.02580", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-14-010", 
+            "SLAC-PUB-16226"
+        ]
+    ], 
+    "1345821": [
+        "Search for a light Higgs resonance in radiative decays of the Y(1S) with a charm tag", 
+        "BaBar", 
+        "10.1103/PhysRevD.91.071102", 
+        null, 
+        "1502.06019", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-14-012", 
+            "SLAC-PUB-16230"
+        ]
+    ], 
+    "1370440": [
+        "First Observation of CP Violation in $\\overline{B}^0 \\to D^{(*)}_{\\rm CP} h^0$ Decays by a Combined Time-Dependent Analysis of BABAR and Belle Data", 
+        "BaBar", 
+        "10.1103/PhysRevLett.115.121604", 
+        null, 
+        "1505.04147", 
+        null, 
+        null, 
+        []
+    ], 
+    "1377201": [
+        "Collins asymmetries in inclusive charged $KK$ and $K\\pi$ pairs produced in $e^+e^-$ annihilation", 
+        "BaBar", 
+        "10.1103/PhysRevD.92.111101", 
+        null, 
+        "1506.05864", 
+        "ins1377201", 
+        null, 
+        [
+            "SLAC-PUB-16311"
+        ]
+    ], 
+    "1383130": [
+        "Study of the $e^+e^-\\to K^+K^-$ reaction in the energy range from 2.6 to 8.0 GeV", 
+        "BaBar", 
+        "10.1103/PhysRevD.92.072008", 
+        null, 
+        "1507.04638", 
+        "ins1383130", 
+        null, 
+        [
+            "BABAR-PUB-15-004", 
+            "SLAC-PUB-16333"
+        ]
+    ], 
+    "1388182": [
+        "Measurement of initial-state\u2013final-state radiation interference in the processes $e^+e^- \u2192 \u03bc^+\u03bc^-\u03b3$ and $e^+e^- \u2192 \u03c0^+\u03c0^-\u03b3$", 
+        "BaBar", 
+        "10.1103/PhysRevD.92.072015", 
+        null, 
+        "1508.04008", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-16361"
+        ]
+    ]
+}

@@ -5,10 +5,12 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 919017
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Seth Zenz <seth.zenz@cern.ch>
  - Andy Buckley <andy.buckley@cern.ch>
 References:
+ - ATLAS-STDM-2010-14
  - Phys.Rev.D 84 (2011) 054001
  - doi:10.1103/PhysRevD.84.054001
  - arXiv:1107.3311
@@ -30,7 +32,7 @@ BibKey: Aad:2011gn
 BibTeX: '@article{Aad:2011gn,
       author         = "Aad, Georges and others",
       title          = "{Properties of jets measured from tracks in proton--proton
-                        collisions at center-of-mass energy $\sqrt{s} = 7$\;TeV with
+                        collisions at center-of-mass energy $\sqrt{s} = 7$~TeV with
                         the ATLAS detector}",
       collaboration  = "ATLAS",
       year           = "2011",
@@ -38,3 +40,17 @@ BibTeX: '@article{Aad:2011gn,
       archivePrefix  = "arXiv",
       primaryClass   = "hep-ex",
 }'
+
+ReleaseTests:
+ - $A LHC-7-Jets-0
+ - $A-2 LHC-7-Jets-1
+ - $A-3 LHC-7-Jets-10
+ - $A-4 LHC-7-Jets-2
+ - $A-5 LHC-7-Jets-3
+ - $A-6 LHC-7-Jets-4
+ - $A-7 LHC-7-Jets-5
+ - $A-8 LHC-7-Jets-6
+ - $A-9 LHC-7-Jets-7
+ - $A-10 LHC-7-Jets-8
+ - $A-11 LHC-7-Jets-9
+

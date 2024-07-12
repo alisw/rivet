@@ -1,0 +1,405 @@
+{
+    "651511": [
+        "Measurement of branching fraction and CP asymmetry in B+ --->rho+ pi0", 
+        "Belle", 
+        "10.1103/PhysRevLett.94.031801", 
+        null, 
+        "hep-ex/0406006", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2004-15", 
+            "KEK-PREPRINT-2004-19"
+        ]
+    ], 
+    "654442": [
+        "Improved measurements of partial rate asymmetry in B -- h h decays", 
+        "Belle", 
+        "10.1103/PhysRevD.71.031502", 
+        null, 
+        "hep-ex/0407025", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2004-20", 
+            "KEK-PREPRINT-2004-28"
+        ]
+    ], 
+    "655588": [
+        "Study of B0 ---> rho+- pi-+ time-dependent CP violation at Belle", 
+        "Belle", 
+        "10.1103/PhysRevLett.94.121801", 
+        null, 
+        "hep-ex/0408003", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2004-21", 
+            "KEK-PREPRINT-2004-34"
+        ]
+    ], 
+    "657091": [
+        "Observation of $B^0 \\to \\pi^0 \\pi^0$", 
+        "Belle", 
+        "10.1103/PhysRevLett.94.181803", 
+        null, 
+        "hep-ex/0408101", 
+        null, 
+        null, 
+        []
+    ], 
+    "658669": [
+        "Observation of anti-B0 ---> D*(sJ)(2317)+ K- decay", 
+        "Belle", 
+        "10.1103/PhysRevLett.94.061802", 
+        null, 
+        "hep-ex/0409026", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2004-30", 
+            "KEK-PREPRINT-2004-59"
+        ]
+    ], 
+    "660759": [
+        "Measurement of masses and branching ratios of Xi+(c) and Xi0(c) baryons", 
+        "Belle", 
+        "10.1016/j.physletb.2005.05.014", 
+        null, 
+        "hep-ex/0409065", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2004-54", 
+            "BELLE-PREPRINT-2004-2"
+        ]
+    ], 
+    "663194": [
+        "Observation of the D(1)(2420) ---> D pi+ pi- decays", 
+        "Belle", 
+        "10.1103/PhysRevLett.94.221805", 
+        null, 
+        "hep-ex/0410091", 
+        null, 
+        null, 
+        []
+    ], 
+    "665010": [
+        "Observation of B+ ---> K+ eta gamma", 
+        "Belle", 
+        "10.1016/j.physletb.2005.01.097", 
+        null, 
+        "hep-ex/0411065", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2004-34", 
+            "KEK-PREPRINT-2004-69"
+        ]
+    ], 
+    "665011": [
+        "Spectra of prompt electrons from decays of B+ and B0 mesons and ratio of inclusive semielectronic branching fractions", 
+        "Belle", 
+        "10.1016/j.physletb.2005.03.060", 
+        null, 
+        "hep-ex/0411066", 
+        null, 
+        null, 
+        [
+            "BELLE-2004-32", 
+            "KEK-PREPRINT-2004-65"
+        ]
+    ], 
+    "666545": [
+        "Study of the suppressed decays B- ---> [K+ pi-](D) K- and B- ---> [K+ pi-](D) pi-", 
+        "Belle", 
+        "10.1103/PhysRevLett.94.091601", 
+        null, 
+        "hep-ex/0412025", 
+        null, 
+        null, 
+        []
+    ], 
+    "667016": [
+        "Observation of B+ ---> K(1)(1270)+ gamma", 
+        "Belle", 
+        "10.1103/PhysRevLett.94.111802", 
+        null, 
+        "hep-ex/0412039", 
+        null, 
+        null, 
+        [
+            "BELLE-2004-37", 
+            "KEK-2004-75"
+        ]
+    ], 
+    "667139": [
+        "Measurements of branching fractions and CP asymmetries in B ---> eta h decays", 
+        "Belle", 
+        "10.1103/PhysRevD.71.091106", 
+        null, 
+        "hep-ex/0412043", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2004-38", 
+            "KEK-PREPRINT-2004-79"
+        ]
+    ], 
+    "667712": [
+        "Measurement of the gamma gamma ---> pi+ pi- and gamma gamma ---> K+ K- processes at energies of 2.4-Gev to 4.1-GeV", 
+        "Belle", 
+        "10.1016/j.physletb.2005.03.067", 
+        null, 
+        "hep-ex/0412058", 
+        "ins667712", 
+        null, 
+        [
+            "BELLE-PREPRINT-2004-39", 
+            "KEK-PREPRINT-2004-80"
+        ]
+    ], 
+    "667959": [
+        "Dalitz analysis of the three-body charmless decays B+ ---> K+ pi+ pi- and B+ ---> K+ K+ K-", 
+        "Belle", 
+        "10.1103/PhysRevD.71.092003", 
+        null, 
+        "hep-ex/0412066", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2004-40", 
+            "KEK-PREPRINT-2004-81"
+        ]
+    ], 
+    "668024": [
+        "Observation of an isotriplet of excited charmed baryons decaying to Lambda+(c) pi", 
+        "Belle", 
+        "10.1103/PhysRevLett.94.122002", 
+        null, 
+        "hep-ex/0412069", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2004-36", 
+            "KEK-PREPRINT-2004-74"
+        ]
+    ], 
+    "674490": [
+        "Observation of anti-B0 ---> D0 eta-prime and anti-B0 ---> D*0 eta-prime", 
+        "Belle", 
+        "10.1103/PhysRevD.72.011103", 
+        null, 
+        "hep-ex/0501013", 
+        null, 
+        null, 
+        []
+    ], 
+    "675002": [
+        "Branching fraction, polarization and CP-violating asymmetries in B0 ---> D*+ D*- decays", 
+        "Belle", 
+        "10.1016/j.physletb.2005.05.052", 
+        null, 
+        "hep-ex/0501037", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2004-41", 
+            "KEK-PREPRINT-2004-82"
+        ]
+    ], 
+    "675689": [
+        "Search for tau ---> e gamma decay at BELLE", 
+        "Belle", 
+        "10.1016/j.physletb.2005.03.028", 
+        null, 
+        "hep-ex/0501068", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2005-2", 
+            "KEK-PREPRINT-2004-93"
+        ]
+    ], 
+    "677084": [
+        "Evidence for B0 ---> D+ D- and observation of B- ---> D0 D- and B- ---> D0 D*- decays", 
+        "Belle", 
+        "10.1103/PhysRevLett.95.041803", 
+        null, 
+        "hep-ex/0502038", 
+        null, 
+        null, 
+        [
+            "KE-PREPRINT-2004-99", 
+            "BELLE-PREPRINT-2005-3"
+        ]
+    ], 
+    "677625": [
+        "Measurement of gamma gamma ---> p anti-p production at Belle", 
+        "Belle", 
+        "10.1016/j.physletb.2005.06.036", 
+        null, 
+        "hep-ex/0503006", 
+        "ins677625", 
+        null, 
+        [
+            "BELLE-PREPRINT-2005-5", 
+            "KEK-PREPRINT-2004-101"
+        ]
+    ], 
+    "677697": [
+        "New measurement of time-dependent CP-violating asymmetry in B0 ---> K0(s) pi0 gamma decay", 
+        "Belle", 
+        "10.1103/PhysRevLett.94.231601", 
+        null, 
+        "hep-ex/0503008", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2005-4", 
+            "KE-PREPRINT-2004-100"
+        ]
+    ], 
+    "677873": [
+        "Measurement of polarization and triple-product correlations in B ---> phi K* decays", 
+        "Belle", 
+        "10.1103/PhysRevLett.94.221804", 
+        null, 
+        "hep-ex/0503013", 
+        null, 
+        null, 
+        [
+            "BELLE-PRERPINT-2005-7"
+        ]
+    ], 
+    "678289": [
+        "Measurement of time-dependent CP-violating asymmetries in B0 ---> K0(S) K0(S) KO(S) decay", 
+        "Belle", 
+        "10.1103/PhysRevLett.95.061801", 
+        null, 
+        "hep-ex/0503023", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2005-9", 
+            "KEK-PREPRINT-2004-105"
+        ]
+    ], 
+    "678875": [
+        "Search for B0 ---> J/psi anti-D0 and B+ ---> J/psi anti-D0 pi+ decays", 
+        "Belle", 
+        "10.1103/PhysRevD.71.091107", 
+        null, 
+        "hep-ex/0503037", 
+        null, 
+        null, 
+        [
+            "KEK-2005-1", 
+            "BELLE-2005-11"
+        ]
+    ], 
+    "678944": [
+        "Search for lepton flavor violating decays $\\tau^{-} \\to \\ell^{-} \\pi^0$, $\\ell^{-} \\eta$, $\\ell^{-} \\eta^\\prime$", 
+        "Belle", 
+        "10.1016/j.physletb.2005.07.021", 
+        null, 
+        "hep-ex/0503041", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2005-10", 
+            "KEK-PREPRINT-2004-107"
+        ]
+    ], 
+    "679052": [
+        "Improved measurement of the electroweak penguin process $B \\to X_s l^+ l^-$", 
+        "Belle", 
+        "10.1103/PhysRevD.72.092005", 
+        null, 
+        "hep-ex/0503044", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2005-5", 
+            "BELLE-PREPRINT-2005-14"
+        ]
+    ], 
+    "679164": [
+        "Observation of B+ ---> p anti-Lambda gamma", 
+        "Belle", 
+        "10.1103/PhysRevLett.95.061802", 
+        null, 
+        "hep-ex/0503046", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2005-12", 
+            "KEK-PREPRINT-2005-3"
+        ]
+    ], 
+    "679165": [
+        "Study of the baryon-antibaryon low-mass enhancements in charmless three-body baryonic B decays", 
+        "Belle", 
+        "10.1016/j.physletb.2005.05.008", 
+        null, 
+        "hep-ex/0503047", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2005-13", 
+            "KEK-PREPRINT-2005-4"
+        ]
+    ], 
+    "680373": [
+        "Time-dependent CP-violating asymmetries in b ---> s anti-q q transitions", 
+        "Belle", 
+        "10.1103/PhysRevD.72.012004", 
+        null, 
+        "hep-ex/0504023", 
+        null, 
+        null, 
+        [
+            "BELLE-PRERPINT-2005-17", 
+            "KEK-PREPRINT-2005-10"
+        ]
+    ], 
+    "680703": [
+        "Studies of CP violation in B ---> J/psi K* decays", 
+        "Belle", 
+        "10.1103/PhysRevLett.95.091601", 
+        null, 
+        "hep-ex/0504030", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2005-15", 
+            "KEK-PREPRINT-2005-7"
+        ]
+    ], 
+    "681318": [
+        "Measurement of inclusive charmless semileptonic B-meson decays at the endpoint of the electron momentum spectrum", 
+        "Belle", 
+        "10.1016/j.physletb.2005.06.011", 
+        null, 
+        "hep-ex/0504046", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2005-18", 
+            "KEK-PREPRINT-2005-15"
+        ]
+    ], 
+    "683502": [
+        "Determination of |V(ub)| from measurements of the inclusive charmless semileptonic partial rates of B mesons using full reconstruction tags", 
+        "Belle", 
+        "10.1103/PhysRevLett.95.241801", 
+        null, 
+        "hep-ex/0505088", 
+        null, 
+        null, 
+        [
+            "KEK-2005-19", 
+            "BELLE-2005-20"
+        ]
+    ]
+}

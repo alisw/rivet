@@ -1,7 +1,7 @@
 #ifndef RIVET_MATH_MATRIX3
 #define RIVET_MATH_MATRIX3
 
-#include "Rivet/Math/MathHeader.hh"
+#include "Rivet/Math/MathConstants.hh"
 #include "Rivet/Math/MathUtils.hh"
 #include "Rivet/Math/MatrixN.hh"
 #include "Rivet/Math/Vector3.hh"
@@ -12,13 +12,13 @@ namespace Rivet {
   /// @brief Specialisation of MatrixN to aid 3 dimensional rotations.
   class Matrix3 : public Matrix<3> {
   public:
-    Matrix3() { }
+    Matrix3() = default;
 
     Matrix3(const Matrix<3>& m3) :  Matrix<3>::Matrix(m3) { }
 
     Matrix3(const Vector3& axis, const double angle) {
       const Vector3 normaxis = axis.unit();
-      _matrix.loadRotation3(angle, normaxis._vec);
+      _matrix = RivetEigen::AngleAxis<double>(angle, normaxis._vec);
     }
 
     Matrix3(const Vector3& from, const Vector3& to) {
@@ -40,10 +40,10 @@ namespace Rivet {
     Matrix3& setAsRotation(const Vector3& from, const Vector3& to) {
       const double theta = angle(from, to);
       if (Rivet::isZero(theta)) {
-        _matrix.loadIdentity();
+        _matrix = EMatrix::Identity();
       } else {
         const Vector3 normaxis = cross(from, to).unit();
-        _matrix.loadRotation3(theta, normaxis._vec);
+        _matrix = RivetEigen::AngleAxis<double>(theta, normaxis._vec);
       }
       return *this;
     }

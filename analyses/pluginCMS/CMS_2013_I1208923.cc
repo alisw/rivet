@@ -13,7 +13,7 @@ namespace Rivet {
     // Constructor
     CMS_2013_I1208923()
       : Analysis("CMS_2013_I1208923") {
-      //setNeedsCrossSection(true);
+
     }
 
     // Book histograms and initialize projections:
@@ -25,27 +25,27 @@ namespace Rivet {
       declare(FastJets(fs, FastJets::ANTIKT, 0.7), "Jets");
 
       // Book histograms
-      _h_sigma.addHistogram(0.0, 0.5, bookHisto1D(1, 1, 1));
-      _h_sigma.addHistogram(0.5, 1.0, bookHisto1D(1, 1, 2));
-      _h_sigma.addHistogram(1.0, 1.5, bookHisto1D(1, 1, 3));
-      _h_sigma.addHistogram(1.5, 2.0, bookHisto1D(1, 1, 4));
-      _h_sigma.addHistogram(2.0, 2.5, bookHisto1D(1, 1, 5));
+      {Histo1DPtr tmp; _h_sigma.add(0.0, 0.5,   book(tmp, 1, 1, 1));}
+      {Histo1DPtr tmp; _h_sigma.add(0.5, 1.0,   book(tmp, 1, 1, 2));}
+      {Histo1DPtr tmp; _h_sigma.add(1.0, 1.5,   book(tmp, 1, 1, 3));}
+      {Histo1DPtr tmp; _h_sigma.add(1.5, 2.0,   book(tmp, 1, 1, 4));}
+      {Histo1DPtr tmp; _h_sigma.add(2.0, 2.5,   book(tmp, 1, 1, 5));}
       
-      _h_invMass.addHistogram(0.0, 0.5, bookHisto1D(2, 1, 1));
-      _h_invMass.addHistogram(0.5, 1.0, bookHisto1D(2, 1, 2));
-      _h_invMass.addHistogram(1.0, 1.5, bookHisto1D(2, 1, 3));
-      _h_invMass.addHistogram(1.5, 2.0, bookHisto1D(2, 1, 4));
-      _h_invMass.addHistogram(2.0, 2.5, bookHisto1D(2, 1, 5));
+      {Histo1DPtr tmp; _h_invMass.add(0.0, 0.5, book(tmp, 2, 1, 1));}
+      {Histo1DPtr tmp; _h_invMass.add(0.5, 1.0, book(tmp, 2, 1, 2));}
+      {Histo1DPtr tmp; _h_invMass.add(1.0, 1.5, book(tmp, 2, 1, 3));}
+      {Histo1DPtr tmp; _h_invMass.add(1.5, 2.0, book(tmp, 2, 1, 4));}
+      {Histo1DPtr tmp; _h_invMass.add(2.0, 2.5, book(tmp, 2, 1, 5));}
     }
 
     // Analysis
     void analyze(const Event &event) {
-      const double weight = event.weight();
+      const double weight = 1.0;
       const FastJets &fJets = apply<FastJets>(event, "Jets");
       
       // Fill the jet pT spectra
       const Jets& jets = fJets.jetsByPt(Cuts::pt>100.*GeV && Cuts::absrap <2.5);
-      foreach (const Jet &j, jets) {
+      for (const Jet &j : jets) {
         _h_sigma.fill(fabs(j.momentum().rapidity()), j.momentum().pT() / GeV, weight);
       }
 
@@ -70,10 +70,10 @@ namespace Rivet {
     }
 
   private:
-    BinnedHistogram<double> _h_sigma;
-    BinnedHistogram<double> _h_invMass;
+    BinnedHistogram _h_sigma;
+    BinnedHistogram _h_invMass;
   };
 
   // This global object acts as a hook for the plugin system.
-  DECLARE_RIVET_PLUGIN(CMS_2013_I1208923);
+  RIVET_DECLARE_PLUGIN(CMS_2013_I1208923);
 }

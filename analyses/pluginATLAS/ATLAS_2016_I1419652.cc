@@ -27,32 +27,27 @@ namespace Rivet {
 
 
     /// Default constructor
-    ATLAS_2016_I1419652() : Analysis("ATLAS_2016_I1419652") {
-      for (int iT = 0; iT < kNPartTypes; ++iT)  {
-        for (int iR = 0; iR < kNregions; ++iR)  {
-          _sumW[iT][iR]  = 0.;
-        }
-      }
-    }
+    ATLAS_2016_I1419652() : Analysis("ATLAS_2016_I1419652") {}
 
 
     /// Initialization, called once before running
     void init() {
 
       // Projections
-      const ChargedFinalState cfs500_25(-2.5, 2.5, 500.0*MeV);
+      const ChargedFinalState cfs500_25((Cuts::etaIn(-2.5, 2.5) && Cuts::pT >=  500.0*MeV));
       declare(cfs500_25, "CFS500_25");
 
-      const ChargedFinalState cfs500_08(-0.8, 0.8, 500.0*MeV);
+      const ChargedFinalState cfs500_08((Cuts::etaIn(-0.8, 0.8) && Cuts::pT >=  500.0*MeV));
       declare(cfs500_08, "CFS500_08");
 
       for (int iT = 0; iT < kNPartTypes; ++iT)  {
         for (int iR = 0; iR < kNregions; ++iR)  {
           size_t offset = 8 * iR + 4 * iT;
-          _hist_eta  [iT][iR] = bookHisto1D  (offset + 3, 1, 1);
-          _hist_pt   [iT][iR] = bookHisto1D  (offset + 4, 1, 1);
-          _hist_nch  [iT][iR] = bookHisto1D  (offset + 5, 1, 1);
-          _hist_ptnch[iT][iR] = bookProfile1D(offset + 6, 1, 1);
+          book(_sumW[iT][iR], "_sumW" + to_str(iT) + to_str(iR));
+          book(_hist_eta  [iT][iR], offset + 3, 1, 1);
+          book(_hist_pt   [iT][iR], offset + 4, 1, 1);
+          book(_hist_nch  [iT][iR], offset + 5, 1, 1);
+          book(_hist_ptnch[iT][iR], offset + 6, 1, 1);
         }
       }
     }
@@ -69,7 +64,7 @@ namespace Rivet {
         const ChargedFinalState& cfs = apply<ChargedFinalState>(event, fsName);
 
         /// What's the benefit in separating this code which is only called from one place?!
-        fillPtEtaNch(cfs, iR, event.weight());
+        fillPtEtaNch(cfs, iR);
       }
     }
 
@@ -87,10 +82,10 @@ namespace Rivet {
             default: etaRangeSize = -999.0; break; //intentionally crazy
           }
 
-          if (_sumW[iT][iR] > 0) {
-            scale(_hist_nch[iT][iR], 1.0/_sumW[iT][iR]);
-            scale(_hist_pt [iT][iR], 1.0/_sumW[iT][iR]/TWOPI/etaRangeSize);
-            scale(_hist_eta[iT][iR], 1.0/_sumW[iT][iR]);
+          if (_sumW[iT][iR]->val() > 0) {
+            scale(_hist_nch[iT][iR], 1.0/ *_sumW[iT][iR]);
+            scale(_hist_pt [iT][iR], 1.0/ dbl(*_sumW[iT][iR])/TWOPI/etaRangeSize);
+            scale(_hist_eta[iT][iR], 1.0/ *_sumW[iT][iR]);
           } else {
             MSG_WARNING("Sum of weights is zero (!) in type/region: " << iT << " " << iR);
           }
@@ -100,12 +95,12 @@ namespace Rivet {
 
 
     /// Helper for collectively filling Nch, pT, eta, and pT vs. Nch histograms
-    void fillPtEtaNch(const ChargedFinalState& cfs, int iRegion, double weight) {
+    void fillPtEtaNch(const ChargedFinalState& cfs, int iRegion) {
 
       // Get number of particles
       int nch[kNPartTypes];
       int nch_noStrange = 0;
-      foreach (const Particle& p, cfs.particles()) {
+      for (const Particle& p : cfs.particles()) {
         PdgId pdg = p.abspid ();
         if ( pdg == 3112 || // Sigma-
              pdg == 3222 || // Sigma+
@@ -121,24 +116,24 @@ namespace Rivet {
       if (nch[k_AllCharged] < nchCut[iRegion]) return;
 
       // Fill event weight info
-      _sumW[k_AllCharged][iRegion] += weight;
+      _sumW[k_AllCharged][iRegion]->fill();
       if (nch[k_NoStrange ] >= nchCut[iRegion])	{
-        _sumW[k_NoStrange][iRegion] += weight;
+        _sumW[k_NoStrange][iRegion]->fill();
       }
 
       // Fill nch
-      _hist_nch[k_AllCharged][iRegion]->fill(nch[k_AllCharged], weight);
+      _hist_nch[k_AllCharged][iRegion]->fill(nch[k_AllCharged]);
       if (nch[k_NoStrange ] >= nchCut[iRegion])	{
-        _hist_nch [k_NoStrange][iRegion]->fill(nch[k_NoStrange ], weight);
+        _hist_nch [k_NoStrange][iRegion]->fill(nch[k_NoStrange ]);
       }
 
       // Loop over particles, fill pT, eta and ptnch
-      foreach (const Particle& p, cfs.particles())  {
+      for (const Particle& p : cfs.particles())  {
         const double pt  = p.pT()/GeV;
         const double eta = p.eta();
-        _hist_pt     [k_AllCharged][iRegion]->fill(pt , weight/pt);
-        _hist_eta    [k_AllCharged][iRegion]->fill(eta, weight);
-        _hist_ptnch  [k_AllCharged][iRegion]->fill(nch[k_AllCharged], pt, weight);
+        _hist_pt     [k_AllCharged][iRegion]->fill(pt , 1.0/pt);
+        _hist_eta    [k_AllCharged][iRegion]->fill(eta);
+        _hist_ptnch  [k_AllCharged][iRegion]->fill(nch[k_AllCharged], pt);
 
         // Make sure nch cut is passed for nonStrange particles!
         if (nch[k_NoStrange ] >= nchCut[iRegion])  {
@@ -149,9 +144,9 @@ namespace Rivet {
                pdg == 3334 )  // Omega-
 	          continue;
           // Here we don't have strange particles anymore
-          _hist_pt   [k_NoStrange][iRegion]->fill(pt , weight/pt);
-          _hist_eta  [k_NoStrange][iRegion]->fill(eta, weight);
-          _hist_ptnch[k_NoStrange][iRegion]->fill(nch[k_NoStrange], pt, weight);
+          _hist_pt   [k_NoStrange][iRegion]->fill(pt , 1.0/pt);
+          _hist_eta  [k_NoStrange][iRegion]->fill(eta);
+          _hist_ptnch[k_NoStrange][iRegion]->fill(nch[k_NoStrange], pt);
         }
       }
     }
@@ -159,7 +154,7 @@ namespace Rivet {
 
   private:
 
-    double _sumW[kNPartTypes][kNregions];
+    CounterPtr _sumW[kNPartTypes][kNregions];
 
     Histo1DPtr   _hist_nch  [kNPartTypes][kNregions];
     Histo1DPtr   _hist_pt   [kNPartTypes][kNregions];
@@ -173,7 +168,6 @@ namespace Rivet {
   const int ATLAS_2016_I1419652::nchCut[] = {1, 1};
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2016_I1419652);
+  RIVET_DECLARE_PLUGIN(ATLAS_2016_I1419652);
 
 }

@@ -24,40 +24,40 @@ namespace Rivet {
 
       /// @note Using a bare muon Z (but with a clustering radius!?)
       Cut cut = Cuts::abseta < 2.4 && Cuts::pT > 20*GeV;
-      ZFinder zfinder(FinalState(), cut, PID::MUON, 4*GeV, 140*GeV, 0.2, ZFinder::NOCLUSTER);
+      ZFinder zfinder(FinalState(), cut, PID::MUON, 4*GeV, 140*GeV, 0.2, ZFinder::ClusterPhotons::NONE);
       declare(zfinder, "ZFinder");
 
-      ChargedFinalState cfs(-2, 2, 500*MeV);
+      ChargedFinalState cfs((Cuts::etaIn(-2, 2) && Cuts::pT >=  500*MeV));
       VetoedFinalState nonmuons(cfs);
       nonmuons.addVetoPairId(PID::MUON);
       declare(nonmuons, "nonmuons");
 
-      _h_Nchg_towards_pTmumu                 = bookProfile1D(1, 1, 1);
-      _h_Nchg_transverse_pTmumu              = bookProfile1D(2, 1, 1);
-      _h_Nchg_away_pTmumu                    = bookProfile1D(3, 1, 1);
-      _h_pTsum_towards_pTmumu                = bookProfile1D(4, 1, 1);
-      _h_pTsum_transverse_pTmumu             = bookProfile1D(5, 1, 1);
-      _h_pTsum_away_pTmumu                   = bookProfile1D(6, 1, 1);
-      _h_avgpT_towards_pTmumu                = bookProfile1D(7, 1, 1);
-      _h_avgpT_transverse_pTmumu             = bookProfile1D(8, 1, 1);
-      _h_avgpT_away_pTmumu                   = bookProfile1D(9, 1, 1);
-      _h_Nchg_towards_plus_transverse_Mmumu  = bookProfile1D(10, 1, 1);
-      _h_pTsum_towards_plus_transverse_Mmumu = bookProfile1D(11, 1, 1);
-      _h_avgpT_towards_plus_transverse_Mmumu = bookProfile1D(12, 1, 1);
-      _h_Nchg_towards_zmass_81_101           = bookHisto1D(13, 1, 1);
-      _h_Nchg_transverse_zmass_81_101        = bookHisto1D(14, 1, 1);
-      _h_Nchg_away_zmass_81_101              = bookHisto1D(15, 1, 1);
-      _h_pT_towards_zmass_81_101             = bookHisto1D(16, 1, 1);
-      _h_pT_transverse_zmass_81_101          = bookHisto1D(17, 1, 1);
-      _h_pT_away_zmass_81_101                = bookHisto1D(18, 1, 1);
-      _h_Nchg_transverse_zpt_5               = bookHisto1D(19, 1, 1);
-      _h_pT_transverse_zpt_5                 = bookHisto1D(20, 1, 1);
+      book(_h_Nchg_towards_pTmumu                 ,1, 1, 1);
+      book(_h_Nchg_transverse_pTmumu              ,2, 1, 1);
+      book(_h_Nchg_away_pTmumu                    ,3, 1, 1);
+      book(_h_pTsum_towards_pTmumu                ,4, 1, 1);
+      book(_h_pTsum_transverse_pTmumu             ,5, 1, 1);
+      book(_h_pTsum_away_pTmumu                   ,6, 1, 1);
+      book(_h_avgpT_towards_pTmumu                ,7, 1, 1);
+      book(_h_avgpT_transverse_pTmumu             ,8, 1, 1);
+      book(_h_avgpT_away_pTmumu                   ,9, 1, 1);
+      book(_h_Nchg_towards_plus_transverse_Mmumu  ,10, 1, 1);
+      book(_h_pTsum_towards_plus_transverse_Mmumu ,11, 1, 1);
+      book(_h_avgpT_towards_plus_transverse_Mmumu ,12, 1, 1);
+      book(_h_Nchg_towards_zmass_81_101           ,13, 1, 1);
+      book(_h_Nchg_transverse_zmass_81_101        ,14, 1, 1);
+      book(_h_Nchg_away_zmass_81_101              ,15, 1, 1);
+      book(_h_pT_towards_zmass_81_101             ,16, 1, 1);
+      book(_h_pT_transverse_zmass_81_101          ,17, 1, 1);
+      book(_h_pT_away_zmass_81_101                ,18, 1, 1);
+      book(_h_Nchg_transverse_zpt_5               ,19, 1, 1);
+      book(_h_pT_transverse_zpt_5                 ,20, 1, 1);
     }
 
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-      const double weight = event.weight();
+      const double weight = 1.0;
       const ZFinder& zfinder = apply<ZFinder>(event, "ZFinder");
 
       if (zfinder.bosons().size() != 1) vetoEvent;
@@ -167,6 +167,6 @@ namespace Rivet {
 
 
   // Hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CMS_2012_I1107658);
+  RIVET_DECLARE_PLUGIN(CMS_2012_I1107658);
 
 }

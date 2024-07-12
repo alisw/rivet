@@ -1,0 +1,102 @@
+{
+    "249557": [
+        "A Study of Bhabha Scattering at {PETRA} Energies", 
+        "TASSO", 
+        "10.1007/BF01579904", 
+        null, 
+        null, 
+        "ins249557", 
+        null, 
+        [
+            "DESY-87-115", 
+            "PITHA-87-18", 
+            "FTUAM-EP-87-07"
+        ]
+    ], 
+    "250570": [
+        "Measurement of the Two Photon Reaction $\\gamma \\gamma \\to \\pi^+ \\pi^- \\pi^+ \\pi^-$ at Large Values of $Q^2$", 
+        "TASSO", 
+        "10.1007/BF01585619", 
+        null, 
+        null, 
+        "ins250570", 
+        null, 
+        []
+    ], 
+    "260635": [
+        "A Search for Particles With Magnetic Charge Produced in $e^+ e^-$ Annihilations at $\\sqrt{s}=35$-{GeV}", 
+        "TASSO", 
+        "10.1007/BF01624358", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-88-005"
+        ]
+    ], 
+    "261049": [
+        "A Measurement of the $\\tau$ Lifetime", 
+        "TASSO", 
+        null, 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-88-034"
+        ]
+    ], 
+    "261486": [
+        "Analysis of Multi - Jet Final States in $e^+ e^-$ Annihilation", 
+        "TASSO", 
+        "10.1016/0370-2693(88)91484-0", 
+        null, 
+        null, 
+        "ins261486", 
+        null, 
+        [
+            "DESY-88-046", 
+            "OUNP-29-88", 
+            "OXFORD-NP-29-88"
+        ]
+    ], 
+    "261668": [
+        "A Measurement of Muon Pair Production in $e^+ e^-$ Annihilation at Center-of-mass Energies 35-{GeV} $\\le \\sqrt{s} \\le$ 46.8-{GeV}", 
+        "TASSO", 
+        "10.1007/BF01555879", 
+        null, 
+        null, 
+        "ins261668", 
+        null, 
+        [
+            "DESY-88-059", 
+            "OXFORD-NP-33-88"
+        ]
+    ], 
+    "263187": [
+        "Evidence for Direct Photons From Quarks in Electron - Positron Annihilation", 
+        "TASSO", 
+        "10.1007/BF01585622", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-88-100"
+        ]
+    ], 
+    "263859": [
+        "Jet Fragmentation and {QCD} Models in $e^+ e^-$ Annihilation at $c$.m. Energies Between 12-{GeV} and 41.5-{GeV}", 
+        "TASSO", 
+        "10.1007/BF01585620", 
+        null, 
+        null, 
+        "ins263859", 
+        null, 
+        [
+            "DESY-88-107", 
+            "OUNP-42-88"
+        ]
+    ]
+}

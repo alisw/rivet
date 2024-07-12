@@ -14,7 +14,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2015_I1397635);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2015_I1397635);
 
 
     void init() {
@@ -67,7 +67,7 @@ namespace Rivet {
       jets.useInvisibles();
       declare(jets, "jets");
 
-      _histo = bookHisto1D(1,1,1);
+      book(_histo ,1,1,1);
     }
 
 
@@ -87,13 +87,13 @@ namespace Rivet {
       // and selection cuts for b-tagging
       Jets bjets;
       // Check overlap of jets/leptons.
-      foreach (Jet jet, jets) {
+      for (Jet jet : jets) {
         // if dR(el,jet) < 0.4 skip the event
-        foreach (DressedLepton el, electrons) {
+        for (DressedLepton el : electrons) {
           if (deltaR(jet, el) < 0.4)  vetoEvent;
         }
         // if dR(mu,jet) < 0.4 skip the event
-        foreach (DressedLepton mu, muons) {
+        for (DressedLepton mu : muons) {
           if (deltaR(jet, mu) < 0.4)  vetoEvent;
         }
         // Count the number of b-tags
@@ -108,11 +108,11 @@ namespace Rivet {
       // Get the neutrinos from the event record (they have pT > 0.0 and |eta| < 4.5 at this stage
       const Particles& neutrinos = apply<PromptFinalState>(event, "neutrinos").particlesByPt();
       FourMomentum met;
-      foreach (const Particle& nu, neutrinos)  met += nu.momentum();
+      for (const Particle& nu : neutrinos)  met += nu.momentum();
       if (met.pT() <= 20*GeV)  vetoEvent;
 
       // Make the plot
-      _histo->fill(1, event.weight());
+      _histo->fill(1);
     }
 
 
@@ -130,6 +130,6 @@ namespace Rivet {
 
 
   // Hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2015_I1397635);
+  RIVET_DECLARE_PLUGIN(ATLAS_2015_I1397635);
 
 }

@@ -1,0 +1,27 @@
+{
+    "246181": [
+        "Precise Measurement of the Lifetime of the Tau Lepton", 
+        "MAC", 
+        "10.1103/PhysRevLett.59.415", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-4294", 
+            "COLO-HEP-147"
+        ]
+    ], 
+    "252439": [
+        "Measurements of Tau Decays to Three Pions", 
+        "MAC", 
+        "10.1016/0370-2693(87)91514-0", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-4333"
+        ]
+    ]
+}

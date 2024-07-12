@@ -5,6 +5,7 @@ Experiment: CMS
 Collider: LHC
 InspireID: 1346843
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Andrew Kubik  <Andrew.Michael.Kubik@cern.ch>
  - Michael Schmitt  <schmittm@lotus.phys.northwestern.edu>
@@ -23,6 +24,7 @@ NumEvents: 1000000
 NeedCrossSection: true
 Beams: [p+, p+]
 Energies: [7000]
+Luminosity_fb: 4.7
 Description:
   'The differential cross sections for the production of photons in Z to mu+ mu-
   gamma decays are presented as a function of the transverse energy of the
@@ -50,3 +52,8 @@ BibTeX: '@article{Khachatryan:2015rja,
 }'
 ToDo:
  - Implement the analysis, test it, remove this ToDo, and mark as VALIDATED :-)
+
+ReleaseTests:
+ - $A LHC-Z-mu-SOPHTY
+ - $A-2 LHC-Z-mu
+

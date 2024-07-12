@@ -5,10 +5,12 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1646686
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Kyle Cormier <kyle.cormier@cern.ch>
  - Christian Gutschow <chris.g@cern.ch>
 References:
+ - ATLAS-TOPQ-2016-09
  - doi:10.17182/hepdata.81709.v1
  - arXiv:1801.02052 [hep-ex]
 Keywords:

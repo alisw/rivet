@@ -1,0 +1,31 @@
+Name: SND_2001_I558279
+Year: 2001
+Summary: Mass distributions in the decay $\phi\to\pi^+\pi^-\pi^0$
+Experiment: SND
+Collider: VEPP-2M
+InspireID: 558279
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D65 (2002) 032002
+RunInfo: Any process producing the decay
+NeedCrossSection: no
+Description:
+  'Measurement of the $\pi+\pi^-$ and $\pi^\pm\pi^0$ mass distributions in the decay $\phi\to\pi^+\pi^-\pi^0$ by the SND experiment.'
+Keywords: []
+BibKey: Achasov:2001hb
+BibTeX: '@article{Achasov:2001hb,
+      author         = "Achasov, M. N. and others",
+      title          = "{Study of the pi pi mass spectra in the process e+ e-
+                        ---&gt; pi+ pi- pi0 at s**(1/2) = 1020-MeV}",
+      journal        = "Phys. Rev.",
+      volume         = "D65",
+      year           = "2002",
+      pages          = "032002",
+      doi            = "10.1103/PhysRevD.65.032002",
+      eprint         = "hep-ex/0106048",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = HEP-EX/0106048;%%"
+}'

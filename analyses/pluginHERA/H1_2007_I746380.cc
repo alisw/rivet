@@ -8,277 +8,277 @@
 
 namespace Rivet {
 
-namespace H1_2007_I746380_PROJECTIONS {
-  
-  /// Projection to find the largest gaps and the masses of the two
-  /// systems separated by the gap. Based on the HZTools gap-finding
-  /// method (hzhadgap.F). Note that gaps are found in the HCM frame.
-  ///
-  /// @author Christine O. Rasmussen.
-  class RapidityGap : public Projection {
+  namespace H1_2007_I746380_PROJECTIONS {
 
-  public:
+    /// Projection to find the largest gaps and the masses of the two
+    /// systems separated by the gap. Based on the HZTools gap-finding
+    /// method (hzhadgap.F). Note that gaps are found in the HCM frame.
+    ///
+    /// @author Christine O. Rasmussen.
+    class RapidityGap : public Projection {
 
-    /// Type of DIS boost to apply
-    enum Frame { HCM, LAB, XCM };
+    public:
 
-    RapidityGap() {
-      setName("RapidityGap");
-      addProjection(DISKinematics(), "DISKIN");
-      addProjection(DISFinalState(DISFinalState::HCM), "DISFS");
-    }
+      /// Type of DIS boost to apply
+      enum Frame { HCM, LAB, XCM };
 
-    DEFAULT_RIVET_PROJ_CLONE(RapidityGap);
+      RapidityGap() {
+        setName("RapidityGap");
+        declare(DISKinematics(), "DISKIN");
+        declare(DISFinalState(DISFinalState::BoostFrame::HCM), "DISFS");
+      }
 
-    const double M2X()               const {return _M2X;}
-    const double M2Y()               const {return _M2Y;}
-    const double t()                 const {return _t;}
-    const double gap()               const {return _gap;}
-    const double gapUpp()            const {return _gapUpp;}
-    const double gapLow()            const {return _gapLow;}
-    const double EpPzX(Frame f) const {
-      if (f == LAB) return _ePpzX_LAB;
-      else if (f == XCM) return _ePpzX_XCM;
-      else return _ePpzX_HCM;
-    }
-    const double EmPzX(Frame f) const {
-      if (f == LAB) return _eMpzX_LAB;
-      else if (f == XCM) return _eMpzX_XCM;
-      else return _eMpzX_HCM;
-    }
-    const FourMomentum pX(Frame f) const {
-      if (f == LAB) return _momX_LAB;
-      else if (f == XCM) return _momX_XCM;
-      else return _momX_HCM;
-    }
-    const FourMomentum pY(Frame f) const {
-      if (f == LAB) return _momY_LAB;
-      else if (f == XCM) return _momY_XCM;
-      else return _momY_HCM;
-    }
-    const Particles& systemX(Frame f) const {
-      if (f == LAB) return _pX_LAB;
-      else if (f == XCM) return _pX_XCM;
-      else return _pX_HCM;
-    }
-    const Particles& systemY(Frame f) const {
-      if (f == LAB) return _pY_LAB;
-      else if (f == XCM) return _pY_XCM;
-      else return _pY_HCM;
-    }
+      DEFAULT_RIVET_PROJ_CLONE(RapidityGap);
 
-  protected:
+      double M2X() const { return _M2X; }
+      double M2Y() const { return _M2Y; }
+      double t() const { return _t; }
+      double gap() const { return _gap; }
+      double gapUpp() const { return _gapUpp; }
+      double gapLow() const { return _gapLow; }
+      double EpPzX(Frame f) const {
+        if (f == LAB) return _ePpzX_LAB;
+        else if (f == XCM) return _ePpzX_XCM;
+        else return _ePpzX_HCM;
+      }
+      double EmPzX(Frame f) const {
+        if (f == LAB) return _eMpzX_LAB;
+        else if (f == XCM) return _eMpzX_XCM;
+        else return _eMpzX_HCM;
+      }
+      FourMomentum pX(Frame f) const {
+        if (f == LAB) return _momX_LAB;
+        else if (f == XCM) return _momX_XCM;
+        else return _momX_HCM;
+      }
+      FourMomentum pY(Frame f) const {
+        if (f == LAB) return _momY_LAB;
+        else if (f == XCM) return _momY_XCM;
+        else return _momY_HCM;
+      }
+      const Particles& systemX(Frame f) const {
+        if (f == LAB) return _pX_LAB;
+        else if (f == XCM) return _pX_XCM;
+        else return _pX_HCM;
+      }
+      const Particles& systemY(Frame f) const {
+        if (f == LAB) return _pY_LAB;
+        else if (f == XCM) return _pY_XCM;
+        else return _pY_HCM;
+      }
 
-    virtual int compare(const Projection& p) const {
-      const RapidityGap& other = pcast<RapidityGap>(p);
-      return mkNamedPCmp(other, "DISKIN") || mkNamedPCmp(other, "DISFS");
-    }
+    protected:
 
-    virtual void project(const Event& e){
-      const DISKinematics& dk = apply<DISKinematics>(e, "DISKIN");
-      const Particles& p      = apply<DISFinalState>(e, "DISFS").particles(cmpMomByEta);
-      findgap(p, dk);
-    }
+      virtual CmpState compare(const Projection& p) const {
+        const RapidityGap& other = pcast<RapidityGap>(p);
+        return mkNamedPCmp(other, "DISKIN") || mkNamedPCmp(other, "DISFS");
+      }
 
-    void clearAll(){
-      _M2X = _M2Y = _t = _gap = 0.;
-      _gapUpp = _gapLow = -8.;
-      _ePpzX_HCM = _eMpzX_HCM =_ePpzX_LAB = _eMpzX_LAB = _ePpzX_XCM = _eMpzX_XCM = 0.;
-      _momX_HCM.setPE(0., 0., 0., 0.);
-      _momY_HCM.setPE(0., 0., 0., 0.);
-      _momX_XCM.setPE(0., 0., 0., 0.);
-      _momY_XCM.setPE(0., 0., 0., 0.);
-      _momX_LAB.setPE(0., 0., 0., 0.);
-      _momY_LAB.setPE(0., 0., 0., 0.);
-      _pX_HCM.clear();
-      _pY_HCM.clear();
-      _pX_XCM.clear();
-      _pY_XCM.clear();
-      _pX_LAB.clear();
-      _pY_LAB.clear();
-    }
+      virtual void project(const Event& e){
+        const DISKinematics& dk = apply<DISKinematics>(e, "DISKIN");
+        const Particles& p      = apply<DISFinalState>(e, "DISFS").particles(cmpMomByEta);
+        findgap(p, dk);
+      }
 
-    void findgap(const Particles& particles, const DISKinematics& diskin){
+      void clearAll(){
+        _M2X = _M2Y = _t = _gap = 0.;
+        _gapUpp = _gapLow = -8.;
+        _ePpzX_HCM = _eMpzX_HCM =_ePpzX_LAB = _eMpzX_LAB = _ePpzX_XCM = _eMpzX_XCM = 0.;
+        _momX_HCM.setPE(0., 0., 0., 0.);
+        _momY_HCM.setPE(0., 0., 0., 0.);
+        _momX_XCM.setPE(0., 0., 0., 0.);
+        _momY_XCM.setPE(0., 0., 0., 0.);
+        _momX_LAB.setPE(0., 0., 0., 0.);
+        _momY_LAB.setPE(0., 0., 0., 0.);
+        _pX_HCM.clear();
+        _pY_HCM.clear();
+        _pX_XCM.clear();
+        _pY_XCM.clear();
+        _pX_LAB.clear();
+        _pY_LAB.clear();
+      }
 
-      clearAll();
+      void findgap(const Particles& particles, const DISKinematics& diskin){
 
-      // Begin by finding largest gap and gapedges between all final
-      // state particles in HCM frame.
-      int nP  = particles.size();
-      int dir = diskin.orientation();
-      for (int i = 0; i < nP-1; ++i){
-        double tmpGap = abs(particles[i+1].eta() - particles[i].eta());
-        if (tmpGap > _gap) {
-          _gap    = tmpGap;
-          _gapLow = (dir > 0) ? particles[i].eta() : dir * particles[i+1].eta();
-          _gapUpp = (dir > 0) ? particles[i+1].eta() : dir * particles[i].eta();
+        clearAll();
+
+        // Begin by finding largest gap and gapedges between all final
+        // state particles in HCM frame.
+        int nP  = particles.size();
+        int dir = diskin.orientation();
+        for (int i = 0; i < nP-1; ++i){
+          double tmpGap = abs(particles[i+1].eta() - particles[i].eta());
+          if (tmpGap > _gap) {
+            _gap    = tmpGap;
+            _gapLow = (dir > 0) ? particles[i].eta() : dir * particles[i+1].eta();
+            _gapUpp = (dir > 0) ? particles[i+1].eta() : dir * particles[i].eta();
+          }
         }
-      }
 
-      // Define the two systems X and Y.
-      Particles tmp_pX, tmp_pY;
-      foreach (const Particle& ip, particles) {
-        if (dir * ip.eta() > _gapLow) tmp_pX.push_back(ip);
-        else tmp_pY.push_back(ip);
-      }
+        // Define the two systems X and Y.
+        Particles tmp_pX, tmp_pY;
+        for (const Particle& ip : particles) {
+          if (dir * ip.eta() > _gapLow) tmp_pX.push_back(ip);
+          else tmp_pY.push_back(ip);
+        }
 
-      Particles pX, pY;
-      pX = (dir < 0) ? tmp_pY : tmp_pX;
-      pY = (dir < 0) ? tmp_pX : tmp_pY;
+        Particles pX, pY;
+        pX = (dir < 0) ? tmp_pY : tmp_pX;
+        pY = (dir < 0) ? tmp_pX : tmp_pY;
 
-      // Find variables related to HCM frame.
-      // Note that HCM has photon along +z, as opposed to
-      // H1 where proton is along +z. This results in a sign change
-      // as compared to H1 papers!
+        // Find variables related to HCM frame.
+        // Note that HCM has photon along +z, as opposed to
+        // H1 where proton is along +z. This results in a sign change
+        // as compared to H1 papers!
 
-      // X - side
-      FourMomentum momX;
-      foreach (const Particle& jp, pX) {
-        momX  += jp.momentum();
-        _ePpzX_HCM += jp.E() - jp.pz(); // Sign + => -
-        _eMpzX_HCM += jp.E() + jp.pz(); // Sign - => +
-      }
-      _momX_HCM = momX;
-      _pX_HCM   = pX;
-      _M2X      = _momX_HCM.mass2();
+        // X - side
+        FourMomentum momX;
+        for (const Particle& jp : pX) {
+          momX  += jp.momentum();
+          _ePpzX_HCM += jp.E() - jp.pz(); // Sign + => -
+          _eMpzX_HCM += jp.E() + jp.pz(); // Sign - => +
+        }
+        _momX_HCM = momX;
+        _pX_HCM   = pX;
+        _M2X      = _momX_HCM.mass2();
 
-      // Y - side
-      FourMomentum momY;
-      foreach (const Particle& kp, pY) momY += kp.momentum();
-      _momY_HCM = momY;
-      _pY_HCM   = pY;
-      _M2Y      = _momY_HCM.mass2();
+        // Y - side
+        FourMomentum momY;
+        for (const Particle& kp : pY) momY += kp.momentum();
+        _momY_HCM = momY;
+        _pY_HCM   = pY;
+        _M2Y      = _momY_HCM.mass2();
 
-      // Find variables related to LAB frame
-      const LorentzTransform hcmboost   = diskin.boostHCM();
-      const LorentzTransform hcminverse = hcmboost.inverse();
-      _momX_LAB = hcminverse.transform(_momX_HCM);
-      _momY_LAB = hcminverse.transform(_momY_HCM);
+        // Find variables related to LAB frame
+        const LorentzTransform hcmboost   = diskin.boostHCM();
+        const LorentzTransform hcminverse = hcmboost.inverse();
+        _momX_LAB = hcminverse.transform(_momX_HCM);
+        _momY_LAB = hcminverse.transform(_momY_HCM);
 
-      // Find momenta in XCM frame. Note that it is HCM frame that is
-      // boosted, resulting in a sign change later!
-      const bool doXCM = (momX.betaVec().mod2() < 1.);
-      if (doXCM) {
-        const LorentzTransform xcmboost =
-          LorentzTransform::mkFrameTransformFromBeta(momX.betaVec());
-        _momX_XCM = xcmboost.transform(momX);
-        _momY_XCM = xcmboost.transform(momY);
-      }
-
-      foreach (const Particle& jp, pX) {
-        // Boost from HCM to LAB.
-        FourMomentum lab = hcminverse.transform(jp.momentum());
-        _ePpzX_LAB += lab.E() + dir * lab.pz();
-        _eMpzX_LAB += lab.E() - dir * lab.pz();
-        Particle plab = jp;
-        plab.setMomentum(lab);
-        _pX_LAB.push_back(plab);
-        // Set XCM. Note that since HCM frame is boosted to XCM frame,
-        // we have a sign change
+        // Find momenta in XCM frame. Note that it is HCM frame that is
+        // boosted, resulting in a sign change later!
+        const bool doXCM = (momX.betaVec().mod2() < 1.);
         if (doXCM) {
           const LorentzTransform xcmboost =
-            LorentzTransform::mkFrameTransformFromBeta(_momX_HCM.betaVec());
-          FourMomentum xcm = xcmboost.transform(jp.momentum());
-          _ePpzX_XCM += xcm.E() - xcm.pz(); // Sign + => -
-          _eMpzX_XCM += xcm.E() + xcm.pz(); // Sign - => +
-          Particle pxcm = jp;
-          pxcm.setMomentum(xcm);
-          _pX_XCM.push_back(pxcm);
+            LorentzTransform::mkFrameTransformFromBeta(momX.betaVec());
+          _momX_XCM = xcmboost.transform(momX);
+          _momY_XCM = xcmboost.transform(momY);
         }
-      }
 
-      foreach (const Particle& jp, pY) {
-        // Boost from HCM to LAB
-        FourMomentum lab = hcminverse.transform(jp.momentum());
-        Particle plab = jp;
-        plab.setMomentum(lab);
-        _pY_LAB.push_back(plab);
-        // Boost from HCM to XCM
-        if (doXCM) {
-          const LorentzTransform xcmboost =
-            LorentzTransform::mkFrameTransformFromBeta(_momX_HCM.betaVec());
-          FourMomentum xcm = xcmboost.transform(jp.momentum());
-          Particle pxcm = jp;
-          pxcm.setMomentum(xcm);
-          _pY_XCM.push_back(pxcm);
+        for (const Particle& jp : pX) {
+          // Boost from HCM to LAB.
+          FourMomentum lab = hcminverse.transform(jp.momentum());
+          _ePpzX_LAB += lab.E() + dir * lab.pz();
+          _eMpzX_LAB += lab.E() - dir * lab.pz();
+          Particle plab = jp;
+          plab.setMomentum(lab);
+          _pX_LAB.push_back(plab);
+          // Set XCM. Note that since HCM frame is boosted to XCM frame,
+          // we have a sign change
+          if (doXCM) {
+            const LorentzTransform xcmboost =
+              LorentzTransform::mkFrameTransformFromBeta(_momX_HCM.betaVec());
+            FourMomentum xcm = xcmboost.transform(jp.momentum());
+            _ePpzX_XCM += xcm.E() - xcm.pz(); // Sign + => -
+            _eMpzX_XCM += xcm.E() + xcm.pz(); // Sign - => +
+            Particle pxcm = jp;
+            pxcm.setMomentum(xcm);
+            _pX_XCM.push_back(pxcm);
+          }
         }
+
+        for (const Particle& jp : pY) {
+          // Boost from HCM to LAB
+          FourMomentum lab = hcminverse.transform(jp.momentum());
+          Particle plab = jp;
+          plab.setMomentum(lab);
+          _pY_LAB.push_back(plab);
+          // Boost from HCM to XCM
+          if (doXCM) {
+            const LorentzTransform xcmboost =
+              LorentzTransform::mkFrameTransformFromBeta(_momX_HCM.betaVec());
+            FourMomentum xcm = xcmboost.transform(jp.momentum());
+            Particle pxcm = jp;
+            pxcm.setMomentum(xcm);
+            _pY_XCM.push_back(pxcm);
+          }
+        }
+
+        // Find t: Currently can only handle gap on proton side.
+        // @TODO: Expand to also handle gap on photon side
+        // Boost p from LAB to HCM frame to find t.
+        const FourMomentum proton = hcmboost.transform(diskin.beamHadron().momentum());
+        FourMomentum pPom         = proton - _momY_HCM;
+        _t                        = pPom * pPom;
+
       }
 
-      // Find t: Currently can only handle gap on proton side.
-      // @TODO: Expand to also handle gap on photon side
-      // Boost p from LAB to HCM frame to find t.
-      const FourMomentum proton = hcmboost.transform(diskin.beamHadron().momentum());
-      FourMomentum pPom         = proton - _momY_HCM;
-      _t                        = pPom * pPom;
+    private:
 
-    }
+      double _M2X, _M2Y, _t;
+      double _gap, _gapUpp, _gapLow;
+      double _ePpzX_LAB, _eMpzX_LAB, _ePpzX_HCM, _eMpzX_HCM, _ePpzX_XCM, _eMpzX_XCM;
+      FourMomentum _momX_HCM, _momY_HCM,_momX_LAB, _momY_LAB, _momX_XCM, _momY_XCM;
+      Particles _pX_HCM, _pY_HCM, _pX_LAB, _pY_LAB, _pX_XCM, _pY_XCM;
 
-  private:
+    };
 
-    double _M2X, _M2Y, _t;
-    double _gap, _gapUpp, _gapLow;
-    double _ePpzX_LAB, _eMpzX_LAB, _ePpzX_HCM, _eMpzX_HCM, _ePpzX_XCM, _eMpzX_XCM;
-    FourMomentum _momX_HCM, _momY_HCM,_momX_LAB, _momY_LAB, _momX_XCM, _momY_XCM;
-    Particles _pX_HCM, _pY_HCM, _pX_LAB, _pY_LAB, _pX_XCM, _pY_XCM;
+    /// Projection to boost system X (photon+Pomeron) particles into its rest frame.
+    ///
+    /// @author Ilkka Helenius
+    class BoostedXSystem : public FinalState {
+    public:
 
-  };
-
-  /// Projection to boost system X (photon+Pomeron) particles into its rest frame.
-  ///
-  /// @author Ilkka Helenius
-  class BoostedXSystem : public FinalState {
-  public:
-
-    BoostedXSystem(const FinalState& fs) {
-      setName("BoostedXSystem");
-      declare(fs,"FS");
-      addProjection(RapidityGap(), "RAPGAP");
-    }
-
-    // Return the boost to XCM frame.
-    const LorentzTransform& boost() const { return _boost; }
-
-    DEFAULT_RIVET_PROJ_CLONE(BoostedXSystem);
-
-  protected:
-
-    // Apply the projection on the supplied event.
-    void project(const Event& e){
-
-      const RapidityGap& rg = apply<RapidityGap>(e, "RAPGAP");
-
-      // Total momentum of the system X.
-      const FourMomentum pX = rg.pX(RapidityGap::HCM);
-
-      // Reset the boost. Is there a separate method for this?
-      _boost = combine(_boost, _boost.inverse());
-
-      // Define boost only when numerically safe, otherwise negligible.
-      if (pX.betaVec().mod2() < 1.)
-        _boost = LorentzTransform::mkFrameTransformFromBeta(pX.betaVec());
-
-      // Boost the particles from system X.
-      _theParticles.clear();
-      _theParticles.reserve(rg.systemX(RapidityGap::HCM).size());
-      for (const Particle& p : rg.systemX(RapidityGap::HCM)) {
-        Particle temp = p;
-        temp.setMomentum(_boost.transform(temp.momentum()));
-        _theParticles.push_back(temp);
+      BoostedXSystem(const FinalState& fs) {
+        setName("BoostedXSystem");
+        declare(fs,"FS");
+        declare(RapidityGap(), "RAPGAP");
       }
 
-    }
+      // Return the boost to XCM frame.
+      const LorentzTransform& boost() const { return _boost; }
 
-    // Compare projections.
-    int compare(const Projection& p) const {
-      const BoostedXSystem& other = pcast<BoostedXSystem>(p);
-      return mkNamedPCmp(other, "RAPGAP") || mkNamedPCmp(other, "FS");
-    }
+      DEFAULT_RIVET_PROJ_CLONE(BoostedXSystem);
 
-  private:
+    protected:
 
-    LorentzTransform _boost;
+      // Apply the projection on the supplied event.
+      void project(const Event& e){
 
-  };
+        const RapidityGap& rg = apply<RapidityGap>(e, "RAPGAP");
+
+        // Total momentum of the system X.
+        const FourMomentum pX = rg.pX(RapidityGap::HCM);
+
+        // Reset the boost. Is there a separate method for this?
+        _boost = combine(_boost, _boost.inverse());
+
+        // Define boost only when numerically safe, otherwise negligible.
+        if (pX.betaVec().mod2() < 1.)
+          _boost = LorentzTransform::mkFrameTransformFromBeta(pX.betaVec());
+
+        // Boost the particles from system X.
+        _theParticles.clear();
+        _theParticles.reserve(rg.systemX(RapidityGap::HCM).size());
+        for (const Particle& p : rg.systemX(RapidityGap::HCM)) {
+          Particle temp = p;
+          temp.setMomentum(_boost.transform(temp.momentum()));
+          _theParticles.push_back(temp);
+        }
+
+      }
+
+      // Compare projections.
+      CmpState compare(const Projection& p) const {
+        const BoostedXSystem& other = pcast<BoostedXSystem>(p);
+        return mkNamedPCmp(other, "RAPGAP") || mkNamedPCmp(other, "FS");
+      }
+
+    private:
+
+      LorentzTransform _boost;
+
+    };
 
   }
 
@@ -297,7 +297,7 @@ namespace H1_2007_I746380_PROJECTIONS {
     typedef H1_2007_I746380_PROJECTIONS::BoostedXSystem BoostedXSystem;
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(H1_2007_I746380);
+    RIVET_DEFAULT_ANALYSIS_CTOR(H1_2007_I746380);
 
     /// @name Analysis methods
     //@{
@@ -306,29 +306,29 @@ namespace H1_2007_I746380_PROJECTIONS {
     void init() {
 
       declare(DISKinematics(), "Kinematics");
-      const DISFinalState& disfs = declare(DISFinalState(DISFinalState::HCM), "DISFS");
+      const DISFinalState& disfs = declare(DISFinalState(DISFinalState::BoostFrame::HCM), "DISFS");
       const BoostedXSystem& disfsXcm = declare( BoostedXSystem(disfs), "BoostedXFS");
       declare(FastJets(disfsXcm, fastjet::JetAlgorithm::kt_algorithm, fastjet::RecombinationScheme::pt_scheme, 1.0,
-        JetAlg::ALL_MUONS, JetAlg::NO_INVISIBLES, nullptr), "DISFSJets");
+                       JetAlg::Muons::ALL, JetAlg::Invisibles::NONE, nullptr), "DISFSJets");
       declare(RapidityGap(), "RapidityGap");
 
       // Book histograms from REF data
-      _h_DIS_dsigdzPom     = bookHisto1D(1, 1, 1);
-      _h_DIS_dsigdlogXpom  = bookHisto1D(2, 1, 1);
-      _h_DIS_dsigdW        = bookHisto1D(3, 1, 1);
-      _h_DIS_dsigdQ2       = bookHisto1D(4, 1, 1);
-      _h_DIS_dsigdEtJet1   = bookHisto1D(5, 1, 1);
-      _h_DIS_dsigdAvgEta   = bookHisto1D(6, 1, 1);
-      _h_DIS_dsigdDeltaEta = bookHisto1D(7, 1, 1);
+      book(_h_DIS_dsigdzPom, 1, 1, 1);
+      book(_h_DIS_dsigdlogXpom, 2, 1, 1);
+      book(_h_DIS_dsigdW, 3, 1, 1);
+      book(_h_DIS_dsigdQ2, 4, 1, 1);
+      book(_h_DIS_dsigdEtJet1, 5, 1, 1);
+      book(_h_DIS_dsigdAvgEta, 6, 1, 1);
+      book(_h_DIS_dsigdDeltaEta, 7, 1, 1);
 
-      _h_PHO_dsigdzPom     = bookHisto1D(8, 1, 1);
-      _h_PHO_dsigdxGam     = bookHisto1D(9, 1, 1);
-      _h_PHO_dsigdlogXpom  = bookHisto1D(10, 1, 1);
-      _h_PHO_dsigdW        = bookHisto1D(11, 1, 1);
-      _h_PHO_dsigdEtJet1   = bookHisto1D(12, 1, 1);
-      _h_PHO_dsigdAvgEta   = bookHisto1D(13, 1, 1);
-      _h_PHO_dsigdDeltaEta = bookHisto1D(14, 1, 1);
-      _h_PHO_dsigdMjets    = bookHisto1D(15, 1, 1);
+      book(_h_PHO_dsigdzPom, 8, 1, 1);
+      book(_h_PHO_dsigdxGam, 9, 1, 1);
+      book(_h_PHO_dsigdlogXpom, 10, 1, 1);
+      book(_h_PHO_dsigdW, 11, 1, 1);
+      book(_h_PHO_dsigdEtJet1, 12, 1, 1);
+      book(_h_PHO_dsigdAvgEta, 13, 1, 1);
+      book(_h_PHO_dsigdDeltaEta, 14, 1, 1);
+      book(_h_PHO_dsigdMjets, 15, 1, 1);
 
       isDIS  = false;
       nVeto0 = 0;
@@ -345,7 +345,6 @@ namespace H1_2007_I746380_PROJECTIONS {
     void analyze(const Event& event) {
 
       // Event weight
-      const double weight = event.weight();
       isDIS  = false;
 
       // Projections - special handling of events where no proton found:
@@ -378,7 +377,7 @@ namespace H1_2007_I746380_PROJECTIONS {
       const double M2X  = rg.M2X();
       const double abst = abs(rg.t());
       const double xPom = (isDIS) ? (Q2 + M2X) / (Q2 + W2) :
-                          rg.EpPzX(RapidityGap::LAB) / (2. * kin.beamHadron().E());
+        rg.EpPzX(RapidityGap::LAB) / (2. * kin.beamHadron().E());
 
       // Veto if outside allowed region
       if (sqrt(M2Y) > 1.6*GeV)    vetoEvent;
@@ -453,22 +452,22 @@ namespace H1_2007_I746380_PROJECTIONS {
 
       // Now fill histograms
       if (isDIS){
-        _h_DIS_dsigdzPom     ->fill(zPomJets,     weight);
-        _h_DIS_dsigdlogXpom  ->fill(log10(xPom),  weight);
-        _h_DIS_dsigdW        ->fill(W,            weight);
-        _h_DIS_dsigdQ2       ->fill(Q2,           weight);
-        _h_DIS_dsigdEtJet1   ->fill(EtJet1,       weight);
-        _h_DIS_dsigdAvgEta   ->fill(avgEtaJets,   weight);
-        _h_DIS_dsigdDeltaEta ->fill(deltaEtaJets, weight);
+        _h_DIS_dsigdzPom     ->fill(zPomJets);
+        _h_DIS_dsigdlogXpom  ->fill(log10(xPom));
+        _h_DIS_dsigdW        ->fill(W);
+        _h_DIS_dsigdQ2       ->fill(Q2);
+        _h_DIS_dsigdEtJet1   ->fill(EtJet1);
+        _h_DIS_dsigdAvgEta   ->fill(avgEtaJets);
+        _h_DIS_dsigdDeltaEta ->fill(deltaEtaJets);
       } else {
-        _h_PHO_dsigdzPom     ->fill(zPomJets,     weight);
-        _h_PHO_dsigdxGam     ->fill(xGamJets,     weight);
-        _h_PHO_dsigdlogXpom  ->fill(log10(xPom),  weight);
-        _h_PHO_dsigdW        ->fill(W,            weight);
-        _h_PHO_dsigdEtJet1   ->fill(EtJet1,       weight);
-        _h_PHO_dsigdAvgEta   ->fill(avgEtaJets,   weight);
-        _h_PHO_dsigdDeltaEta ->fill(deltaEtaJets, weight);
-        _h_PHO_dsigdMjets    ->fill(sqrt(M2jets), weight);
+        _h_PHO_dsigdzPom     ->fill(zPomJets);
+        _h_PHO_dsigdxGam     ->fill(xGamJets);
+        _h_PHO_dsigdlogXpom  ->fill(log10(xPom));
+        _h_PHO_dsigdW        ->fill(W);
+        _h_PHO_dsigdEtJet1   ->fill(EtJet1);
+        _h_PHO_dsigdAvgEta   ->fill(avgEtaJets);
+        _h_PHO_dsigdDeltaEta ->fill(deltaEtaJets);
+        _h_PHO_dsigdMjets    ->fill(sqrt(M2jets));
       }
 
     }
@@ -540,6 +539,6 @@ namespace H1_2007_I746380_PROJECTIONS {
     int nPHO, nDIS;
   };
 
-  DECLARE_RIVET_PLUGIN(H1_2007_I746380);
+  RIVET_DECLARE_PLUGIN(H1_2007_I746380);
 
 }

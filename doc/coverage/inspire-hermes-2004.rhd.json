@@ -1,0 +1,51 @@
+{
+    "624063": [
+        "Flavor decomposition of the sea quark helicity distributions in the nucleon from semiinclusive deep inelastic scattering", 
+        "HERMES", 
+        "10.1103/PhysRevLett.92.012005", 
+        null, 
+        "hep-ex/0307064", 
+        null, 
+        null, 
+        [
+            "DESY-03-067"
+        ]
+    ], 
+    "632293": [
+        "Nuclear polarization of molecular hydrogen recombined on a non-metallic surface", 
+        "HERMES", 
+        "10.1140/epjd/e2004-00023-5", 
+        null, 
+        "physics/0408138", 
+        null, 
+        null, 
+        [
+            "DESY-03-168"
+        ]
+    ], 
+    "635665": [
+        "Evidence for a narrow |S| = 1 baryon state at a mass of 1528-MeV in quasireal photoproduction", 
+        "HERMES", 
+        "10.1016/j.physletb.2004.01.079", 
+        null, 
+        "hep-ex/0312044", 
+        null, 
+        null, 
+        [
+            "DESY-03-213", 
+            "HERMES-DC-56"
+        ]
+    ], 
+    "652686": [
+        "Hard exclusive electroproduction of pi+ pi- pairs", 
+        "HERMES", 
+        "10.1016/j.physletb.2004.08.059", 
+        null, 
+        "hep-ex/0406052", 
+        null, 
+        null, 
+        [
+            "DESY-04-097"
+        ]
+    ]
+}

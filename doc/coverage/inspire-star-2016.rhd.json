@@ -1,0 +1,112 @@
+{
+    "1378002": [
+        "Probing parton dynamics of QCD matter with $\\Omega$ and $\\phi$ production", 
+        "STAR", 
+        "10.1103/PhysRevC.93.021903", 
+        null, 
+        "1506.07605", 
+        "ins1378002", 
+        null, 
+        []
+    ], 
+    "1382600": [
+        "Beam-energy dependence of charge balance functions from Au + Au collisions at energies available at the BNL Relativistic Heavy Ion Collider", 
+        "STAR", 
+        "10.1103/PhysRevC.94.024909", 
+        null, 
+        "1507.03539", 
+        "ins1382600", 
+        null, 
+        []
+    ], 
+    "1383879": [
+        "Centrality and transverse momentum dependence of elliptic flow of multistrange hadrons and $\\phi$ meson in Au+Au collisions at $\\sqrt{s_{NN}}$ = 200 GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.116.062301", 
+        null, 
+        "1507.05247", 
+        "ins1383879", 
+        null, 
+        []
+    ], 
+    "1395151": [
+        "Centrality dependence of identified particle elliptic flow in relativistic heavy ion collisions at $\\sqrt{s_{NN}}$=7.7\u201362.4 GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.93.014907", 
+        null, 
+        "1509.08397", 
+        "ins1395151", 
+        null, 
+        []
+    ], 
+    "1405433": [
+        "Measurement of the transverse single-spin asymmetry in $p^\\uparrow+p \\to W^{\\pm}/Z^0$ at RHIC", 
+        "STAR", 
+        "10.1103/PhysRevLett.116.132301", 
+        null, 
+        "1511.06003", 
+        "ins1405433", 
+        null, 
+        []
+    ], 
+    "1414638": [
+        "Beam Energy Dependence of the Third Harmonic of Azimuthal Correlations in Au+Au Collisions at RHIC", 
+        "STAR", 
+        "10.1103/PhysRevLett.116.112302", 
+        null, 
+        "1601.01999", 
+        "ins1414638", 
+        null, 
+        []
+    ], 
+    "1416992": [
+        "Measurement of elliptic flow of light nuclei at $\\sqrt{s_{NN}}=$ 200, 62.4, 39, 27, 19.6, 11.5, and 7.7 GeV at the BNL Relativistic Heavy Ion Collider", 
+        "STAR", 
+        "10.1103/PhysRevC.94.034908", 
+        null, 
+        "1601.07052", 
+        null, 
+        null, 
+        []
+    ], 
+    "1420183": [
+        "$\\rm{J}/\\psi$ production at low transverse momentum in p+p and d+Au collisions at $\\sqrt{s_{NN}}$ = 200 GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.93.064904", 
+        null, 
+        "1602.02212", 
+        "ins1420183", 
+        null, 
+        []
+    ], 
+    "1429700": [
+        "Near-side azimuthal and pseudorapidity correlations using neutral strange baryons and mesons in d+Au, Cu+Cu and Au+Au collisions at $\\sqrt{s_{NN}}$ = 200 GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.94.014910", 
+        null, 
+        "1603.05477", 
+        "ins1429700", 
+        null, 
+        []
+    ], 
+    "1442357": [
+        "Jet-like Correlations with Direct-Photon and Neutral-Pion Triggers at $\\sqrt{s_{_{NN}}} = 200$ GeV", 
+        "STAR", 
+        "10.1016/j.physletb.2016.07.046", 
+        null, 
+        "1604.01117", 
+        "ins1442357", 
+        null, 
+        []
+    ], 
+    "1482939": [
+        "$\\Upsilon$ production in U + U collisions at $\\sqrt{{s}_{NN}}=$ 193 GeV measured with the STAR experiment", 
+        "STAR", 
+        "10.1103/PhysRevC.94.064904", 
+        "2209872", 
+        "1608.06487", 
+        "ins1482939", 
+        null, 
+        []
+    ]
+}

@@ -1,0 +1,96 @@
+{
+    "217416": [
+        "Charged $D^*$ meson production in $e^+e^-$ annihilation at $\\sqrt{s}=29$ GeV", 
+        "TPC/Two Gamma", 
+        "10.1103/PhysRevD.34.1945", 
+        null, 
+        null, 
+        "ins217416", 
+        null, 
+        [
+            "IS-J-1848"
+        ]
+    ], 
+    "217503": [
+        "A study of $\\eta$ formation in photon-photon collisions at PEP", 
+        "TPC/Two Gamma", 
+        "10.1103/PhysRevD.33.844", 
+        null, 
+        null, 
+        "ins217503", 
+        null, 
+        [
+            "UCLA-85-013"
+        ]
+    ], 
+    "227275": [
+        "An experimental limit on $\\iota\\to \\gamma\\gamma$ and the interpretation of the $\\iota$ as a glueball", 
+        "TPC/Two Gamma", 
+        "10.1103/PhysRevLett.57.51", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "UCSB-HEP-86-2"
+        ]
+    ], 
+    "228072": [
+        "Pion and Kaon Pair Production in Photon-Photon Collisions", 
+        "TPC/Two Gamma", 
+        "10.1103/PhysRevLett.57.404", 
+        null, 
+        null, 
+        "ins228072", 
+        null, 
+        [
+            "UCR-TPC-86-01"
+        ]
+    ], 
+    "231101": [
+        "Evidence for a Spin One Particle Produced by Two Photons", 
+        "TPC/Two Gamma", 
+        "10.1103/PhysRevLett.57.2500", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "UCSB-HEP-86-6"
+        ]
+    ], 
+    "233422": [
+        "Measurement of the inclusive branching fraction $\\tau^- \\to \\nu_\\tau \\pi^-\\pi^0$ neutral meson(s)", 
+        "TPC/Two Gamma", 
+        "10.1103/PhysRevLett.57.1836", 
+        null, 
+        null, 
+        "ins233422", 
+        null, 
+        [
+            "LBL-21766"
+        ]
+    ], 
+    "236028": [
+        "Study of baryon correlations in $e^+e^-$ annihilation at 29-GeV", 
+        "TPC/Two Gamma", 
+        "10.1103/PhysRevLett.57.3140", 
+        null, 
+        null, 
+        "ins236028", 
+        null, 
+        [
+            "LBL-22037"
+        ]
+    ], 
+    "239032": [
+        "SEARCH FOR HIGH MASS NARROW RESONANCES IN VIRTUAL PHOTON PHOTON INTERACTIONS", 
+        "TPC / TWO GAMMA", 
+        "10.1103/PhysRevLett.57.3245", 
+        null, 
+        null, 
+        "ins239032", 
+        null, 
+        []
+    ]
+}

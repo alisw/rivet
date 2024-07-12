@@ -16,7 +16,7 @@ RunInfo:
 NumEvents: 1000000
 Beams: [e-, e+]
 Energies: [22, 35,44]
-PtCuts: Use an inv. mass cut close to sqrt{s} to avoid photon cotribution (e.g. CKIN(1))
+PtCuts: Use an inv. mass cut close to sqrt{s} to avoid photon contribution (e.g. CKIN(1))
 Description:
   Thrust, Jet Mass and Broadenings, Y23 for 35 and 44 GeV and only Y23 at 22 GeV.
 BibKey: MovillaFernandez:1997fr
@@ -38,3 +38,9 @@ BibTeX: '@Article{MovillaFernandez:1997fr,
 }'
 ToDo:
  - Trigger conditions?
+
+ReleaseTests:
+ - $A LEP-22
+ - $A-2 LEP-35
+ - $A-3 LEP-44
+

@@ -1,0 +1,76 @@
+{
+    "231405": [
+        "Search for Light Leptoquark Bosons", 
+        "CELLO", 
+        "10.1016/0370-2693(86)91410-3", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "SACLAY-DPHPE-86-16", 
+            "DESY-86-063"
+        ]
+    ], 
+    "236981": [
+        "Determination of alpha-s and sin**2theta(w) from Measurements of the Total Hadronic Cross-Section in e+ e- Annihilation", 
+        "CELLO", 
+        "10.1016/0370-2693(87)90986-5", 
+        null, 
+        null, 
+        "ins236981", 
+        null, 
+        [
+            "DESY-86-133"
+        ]
+    ], 
+    "244835": [
+        "A Measurement of the Muon Pair Production in $e^+ e^-$ Annihilation at 38.3-{GeV} $\\le \\sqrt{s} \\le$ 46.8-{GeV}", 
+        "CELLO", 
+        "10.1016/0370-2693(87)91349-9", 
+        null, 
+        null, 
+        "ins244835", 
+        null, 
+        [
+            "SACLAY-DPhPE-87-02", 
+            "DESY-87-005"
+        ]
+    ], 
+    "245241": [
+        "Searches for Supersymmetric Particles With the Cello Detector at {PETRA}", 
+        "CELLO", 
+        "10.1007/BF01408447", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-87-013"
+        ]
+    ], 
+    "245732": [
+        "A Search for Hadronic Events With Low Thrust and an Isolated Lepton", 
+        "CELLO", 
+        "10.1016/0370-2693(87)90475-8", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-87-016"
+        ]
+    ], 
+    "246542": [
+        "Search for Production of Charged Higgs Particles", 
+        "CELLO", 
+        "10.1016/0370-2693(87)91255-X", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-87-030"
+        ]
+    ]
+}

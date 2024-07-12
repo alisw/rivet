@@ -1,0 +1,26 @@
+Name: NA49_2009_I818217
+Year: 2009
+Summary: Inclusive production of protons, anti-protons and neutrons in p+p collisions at 158 GeV/c beam momentum
+Experiment: NA49
+Collider: SPS
+InspireID: 818217
+Status: UNVALIDATED
+Authors:
+ - Viktar Kireyeu <vkireyeu@jinr.ru>
+References:
+ - https://link.springer.com/article/10.1140/epjc/s10052-009-1172-2
+RunInfo:
+  $pp$ collisions at 17.3~GeV. Minimum bias events.
+NumEvents: 4800000
+Beams: [p+, p+]
+Energies: [17.3]
+Description:
+   'Production of $p$, $\bar{p}$ and neutrons in fixed target, $p_{\mathrm{lab}} = $158 GeV/c.
+   The elastic trigger is implemented by looking for elastic final states with only 2 particles, 
+   instead of attempting to reproduce the experimental trigger, which cannot be directly unfolded.'   
+BibKey: 10052-009-1172-2
+BibTeX: '@article{10052-009-1172-2,
+      title        = "Inclusive production of protons, anti-protons and neutrons in p+p collisions at 158 GeV/c beam momentum",
+      year         = "2009",
+}'
+

@@ -5,10 +5,12 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1624693
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Sharka Todorova-Nova <sarka.todorova@cern.ch>
  - Christian Gutschow <chris.g@cern.ch>
 References:
+ - ATLAS-STDM-2014-08
  - Phys.Rev. D96 (2017) no.9, 092008
  - doi:10.1103/PhysRevD.96.092008
  - arXiv:1709.07384 [hep-ex]

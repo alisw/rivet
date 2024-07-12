@@ -87,6 +87,7 @@ namespace Rivet {
     static const PdgId RHOMINUS = -RHOPLUS;
     static const PdgId K0L = 130;
     static const PdgId K0S = 310;
+    static const PdgId K0 = 311;
     static const PdgId KPLUS = 321;
     static const PdgId KMINUS = -KPLUS;
     static const PdgId ETA = 221;
@@ -140,14 +141,23 @@ namespace Rivet {
     static const PdgId SIGMA0 = 3212;
     static const PdgId SIGMAPLUS = 3222;
     static const PdgId SIGMAMINUS = 3112;
+    static const PdgId SIGMAB = 5212;
+    static const PdgId SIGMABPLUS = 5222;
+    static const PdgId SIGMABMINUS = 5112;
     static const PdgId LAMBDACPLUS = 4122;
     static const PdgId LAMBDACMINUS = 4122;
     static const PdgId LAMBDAB = 5122;
     static const PdgId XI0 = 3322;
     static const PdgId XIMINUS = 3312;
     static const PdgId XIPLUS = -XIMINUS;
+    static const PdgId XI0B = 5232;
+    static const PdgId XIBMINUS = 5132;
+    static const PdgId XI0C = 4132;
+    static const PdgId XICPLUS = 4232;
     static const PdgId OMEGAMINUS = 3334;
     static const PdgId OMEGAPLUS = -OMEGAMINUS;
+    static const PdgId OMEGABMINUS = 5332;
+    static const PdgId OMEGA0C = 4332;
     //@}
 
     /// @name Exotic/weird stuff
@@ -159,7 +169,26 @@ namespace Rivet {
     static const PdgId NEUTRALINO1 = 1000022;
     static const PdgId GRAVITINO = 1000039;
     static const PdgId GLUINO = 1000021;
+    static const int BPRIME = 7;
+    static const int TPRIME = 8;
+    static const int LPRIME = 17;
+    static const int NUPRIME = 18;
+    // static const int DARKMATTERSCALAR = 1000051;
+    // static const int DARKMATTERFERMION = 1000052;
+    // static const int DARKMATTERVECTOR = 1000053;
     /// @todo Add axion, black hole remnant, etc. on demand
+    //@}
+
+    /// @name Nuclei
+    //@{
+    static const PdgId DEUTERON = 1000010020;
+    static const PdgId ALUMINIUM = 1000130270;
+    static const PdgId COPPER = 1000290630;
+    static const PdgId XENON = 1000541290;
+    static const PdgId GOLD = 1000791970;
+    static const PdgId LEAD = 1000822080;
+    static const PdgId URANIUM = 1000922380;
+    /// @todo Add other nuclei on demand
     //@}
 
 
@@ -170,19 +199,17 @@ namespace Rivet {
     class ParticleNames {
     public:
 
-      static const std::string& particleName(PdgId pid) {
-        /// @todo Isn't there a nicer, pointerless way to do singletons?
+      static std::string particleName(PdgId pid) {
         if (!_instance) _instance = unique_ptr<ParticleNames>(new ParticleNames);
         return _instance->_particleName(pid);
       }
 
       static PdgId particleId(const std::string& pname) {
-        /// @todo Isn't there a nicer, pointerless way to do singletons?
         if (!_instance) _instance = unique_ptr<ParticleNames>(new ParticleNames);
         return _instance->_particleId(pname);
       }
 
-      const std::string& _particleName(PdgId pid);
+      std::string _particleName(PdgId pid);
 
       PdgId _particleId(const std::string& pname);
 
@@ -213,6 +240,13 @@ namespace Rivet {
         _add_pid_name(ZBOSON, "ZBOSON");
         _add_pid_name(HIGGS, "HIGGS");
         _add_pid_name(ANTITAU, "ANTITAU");
+        _add_pid_name(DEUTERON, "DEUTERON");
+        _add_pid_name(ALUMINIUM, "ALUMINIUM");
+        _add_pid_name(COPPER, "COPPER");
+        _add_pid_name(XENON, "XENON");
+        _add_pid_name(GOLD, "GOLD");
+        _add_pid_name(LEAD, "LEAD");
+        _add_pid_name(URANIUM, "URANIUM");
         _add_pid_name(ANY, "*");
       }
 
@@ -231,7 +265,7 @@ namespace Rivet {
 
 
     /// Print a PdgId as a named string.
-    inline const std::string& toParticleName(PdgId p) {
+    inline std::string toParticleName(PdgId p) {
       return ParticleNames::particleName(p);
     }
 

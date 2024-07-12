@@ -1,0 +1,31 @@
+Name: MARKJ_1983_I182337
+Year: 1983
+Summary:  Measurement of $R$ between 29.9 and 38.54 GeV
+Experiment: MARKJ
+Collider: PETRA
+InspireID: 182337
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 50 (1983) 799, 1983 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: yes
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$ in $e^+e^-$ collisions by MARKJ between 29.9 and 38.54 GeV.
+   The individual hadronic and muonic cross sections are also outputted to the yoda file
+   so that ratio $R$ can be recalculated if runs are combined.'
+BibKey: Adeva:1982bs
+BibTeX: '@article{Adeva:1982bs,
+      author         = "Adeva, B. and others",
+      title          = "{Search for Top Quark and a Test of Models Without Top
+                        Quark at the Highest {PETRA} Energies}",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "50",
+      year           = "1983",
+      pages          = "799",
+      doi            = "10.1103/PhysRevLett.50.799",
+      reportNumber   = "MIT-LNS-128",
+      SLACcitation   = "%%CITATION = PRLTA,50,799;%%"
+}'

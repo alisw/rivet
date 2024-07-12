@@ -1,0 +1,36 @@
+Name: BELLE_2009_I817326
+Year: 2009
+Summary: Differential branching ratio, polarization and asymmetries in $B\to K^{(*)}\ell^+\ell^-$
+Experiment: BELLE
+Collider: KEKB
+InspireID: 817326
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 103 (2009) 171801
+RunInfo: Any process production B0 and B+ mesons, oeiginally Upsilon(4S) decay
+Description:
+  'Measurement of the differential branching ratio, polarization and asymmetries in $B\to K^{(*)}\ell^+\ell^-$ as a function of $q^2$.'
+ValidationInfo:
+  'Herwig7 events using EvtGen for decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle:2009zue
+BibTeX: '@article{Belle:2009zue,
+    author = "Wei, J. -T. and others",
+    collaboration = "Belle",
+    title = "{Measurement of the Differential Branching Fraction and Forward-Backward Asymmetry for $B \to K^{(*)}\ell^+\ell^-$}",
+    eprint = "0904.0770",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BELLE-PREPRINT-2009-7, KEK-PREPRINT-2008-56",
+    doi = "10.1103/PhysRevLett.103.171801",
+    journal = "Phys. Rev. Lett.",
+    volume = "103",
+    pages = "171801",
+    year = "2009"
+}
+'

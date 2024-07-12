@@ -1,0 +1,37 @@
+Name: FOCUS_2003_I635446
+Year: 2003
+Summary: Dalitz plot analysis of $D_s^+$ and $D^+\to \pi^+\pi^+\pi^-$
+Experiment: FOCUS
+Collider: Fermilab
+InspireID: 635446
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett.B 585 (2004) 200-212
+RunInfo: Any process producing D_s+/D+ -> pi+ pi+ pi-
+Description:
+  'Measurement of the mass distributions in the decays $D_s^+$ and $D^+\to \pi^+\pi^+\pi^-$.
+   The data were read from the plots in the paper and the backgrounds subtracted.
+   Resolution/acceptance effects have been not unfolded and given the agreement with the model in the paper this analysis should only be used for qualitative studies.'
+ValidationInfo:
+  'Herwig 7 events using model from paper'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: FOCUS:2003tdy
+BibTeX: '@article{FOCUS:2003tdy,
+    author = "Link, J. M. and others",
+    collaboration = "FOCUS",
+    title = "{Dalitz plot analysis of D(s)+ and D+ decay to pi+ pi- pi+ using the K matrix formalism}",
+    eprint = "hep-ex/0312040",
+    archivePrefix = "arXiv",
+    reportNumber = "FERMILAB-PUB-03-367-E",
+    doi = "10.1016/j.physletb.2004.01.065",
+    journal = "Phys. Lett. B",
+    volume = "585",
+    pages = "200--212",
+    year = "2004"
+}
+'

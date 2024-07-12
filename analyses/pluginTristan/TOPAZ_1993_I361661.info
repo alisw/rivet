@@ -1,0 +1,33 @@
+Name: TOPAZ_1993_I361661
+Year: 1993
+Summary: Measurement of event shapes at $E_{\text{CMS}}=58$ GeV
+Experiment: TOPAZ
+Collider: Tristan
+InspireID: 361661
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B304 (1993) 373-380, 1993 
+RunInfo: e+ e- to hadrons
+NeedCrossSection: no
+Beams: [e-, e+]
+Energies: [58.0]
+Description:
+  'Measurement of the hadronic event shapes in $e^+e^-$ collisions by TOPAZ at 58 GeV.'
+BibKey: Ohnishi:1993iv
+BibTeX: '@article{Ohnishi:1993iv,
+      author         = "Ohnishi, Y. and others",
+      title          = "{Measurements of alpha-s in e+ e- annihilation at
+                        TRISTAN}",
+      collaboration  = "TOPAZ",
+      journal        = "Phys. Lett.",
+      volume         = "B313",
+      year           = "1993",
+      pages          = "475-482",
+      doi            = "10.1016/0370-2693(93)90022-A",
+      reportNumber   = "DPNU-93-27, KEK-PREPRINT-93-73, TUAT-HEP-93-03, INS-999,
+                        TIT-HEP-93-06, NWU-HEP-93-04, TU-HEP-93-02, OCU-HEP-93-05,
+                        PU-93-672",
+      SLACcitation   = "%%CITATION = PHLTA,B313,475;%%"
+}'

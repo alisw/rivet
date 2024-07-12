@@ -5,6 +5,7 @@ Experiment: STAR
 Collider: RHIC
 InspireID: 1414638
 Status: UNVALIDATED
+Reentrant: true
 Authors:
  - Maria Stefaniak <maria.stefaniak@subatech.in2p3.fr>
  - Christian Bierlich <christian.bierlich@thep.lu.se>
@@ -12,18 +13,20 @@ References:
 - 'Phys.Rev.Lett. 116 (2016) no.11, 112302'
 - 'DOI: 10.1103/PhysRevLett.116.112302'
 - 'arXiv:1601.01999 '
-RunInfo: Minimum bias AuAu events at various collision energies.
+RunInfo: Minimum bias AuAu events at various collision energies. Beam energy must be specified as analysis option "ENERGY" when rivet-merging samples.
 NeedCrossSection: no
-Beams: [1000791970, 1000791970]
-Options:
- - cent=REF,GEN,IMP,USR
+Beams: [Au, Au]
 # This is _total_ energy of beams, so this becomes 197*200=39400 etc.
 Energies: [1516.9, 2265.5, 2856.5, 3861.2, 5319, 7683, 12292.8, 39400]
+Options:
+ - ENERGY=1516.9, 2265.5, 2856.5, 3861.2, 5319, 7683, 12292.8, 39400
+ - cent=REF,GEN,IMP,USR,RAW
 Description:
   'Results of harmonic decomposition of two-particle azimuthal correlations
    in AuAu collisions, in energies recorded in the beam energy scan. For MC
    purposes, note that the lowest energies might be too low for standard
-   generators to even initialize.'
+   generators to even initialise. Beam energy must be specified as analysis 
+   option "ENERGY" when rivet-merging samples.'
 BibKey: Adamczyk:2016exq
 BibTeX: '@article{Adamczyk:2016exq,
       author         = "Adamczyk, L. and others",

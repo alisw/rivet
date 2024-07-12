@@ -1,0 +1,110 @@
+{
+    "865032": [
+        "Measurement of Charm and Beauty Jets in Deep Inelastic Scattering at HERA", 
+        "H1", 
+        "10.1140/epjc/s10052-010-1509-x", 
+        "1284470", 
+        "1008.1731", 
+        null, 
+        null, 
+        [
+            "DESY-10-083"
+        ]
+    ], 
+    "878656": [
+        "Search for Squarks in R-parity Violating Supersymmetry in ep Collisions at HERA", 
+        "H1", 
+        "10.1140/epjc/s10052-011-1572-y", 
+        "1310765", 
+        "1011.6359", 
+        null, 
+        null, 
+        [
+            "DESY-10-181"
+        ]
+    ], 
+    "882470": [
+        "Measurement of the Inclusive e{\\pm}p Scattering Cross Section at High Inelasticity y and of the Structure Function $F_L$", 
+        "H1", 
+        "10.1140/epjc/s10052-011-1579-4", 
+        "1316820", 
+        "1012.4355", 
+        null, 
+        null, 
+        [
+            "DESY-10-228"
+        ]
+    ], 
+    "894023": [
+        "Search for Lepton Flavour Violation at HERA", 
+        "H1", 
+        "10.1016/j.physletb.2011.05.023", 
+        "1340416", 
+        "1103.4938", 
+        null, 
+        null, 
+        [
+            "DESY-11-044"
+        ]
+    ], 
+    "912665": [
+        "Measurement of $D^{*\\pm}$ Meson Production and Determination of $F_2^{c\\barc}$ at low $Q^2$ in Deep-Inelastic Scattering at HERA", 
+        "H1", 
+        "10.1140/epjc/s10052-011-1769-0", 
+        "1356887", 
+        "1106.1028", 
+        null, 
+        null, 
+        [
+            "DESY-11-066"
+        ]
+    ], 
+    "916222": [
+        "Measurement of Photon Production in the Very Forward Direction in Deep-Inelastic Scattering at HERA", 
+        "H1", 
+        "10.1140/epjc/s10052-011-1771-6", 
+        "1362879", 
+        "1106.5944", 
+        null, 
+        null, 
+        [
+            "DESY-11-093"
+        ]
+    ], 
+    "918292": [
+        "Search for Contact Interactions in $e^{\\pm}p$ Collisions at HERA", 
+        "H1", 
+        "10.1016/j.physletb.2011.09.109", 
+        "1367597", 
+        "1107.2478", 
+        null, 
+        null, 
+        [
+            "DESY-11-114"
+        ]
+    ], 
+    "918972": [
+        "Measurement of the Diffractive Longitudinal Structure Function $F_L^D$ at HERA", 
+        "H1", 
+        "10.1140/epjc/s10052-011-1836-6", 
+        "1368757", 
+        "1107.3420", 
+        null, 
+        null, 
+        [
+            "DESY-11-084"
+        ]
+    ], 
+    "919140": [
+        "Search for first generation leptoquarks in  $ep$ collisions at HERA", 
+        "H1", 
+        "10.1016/j.physletb.2011.09.017", 
+        "1369073", 
+        "1107.3716", 
+        null, 
+        null, 
+        [
+            "DESY-11-123"
+        ]
+    ]
+}

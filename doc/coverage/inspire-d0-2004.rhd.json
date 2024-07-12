@@ -1,0 +1,98 @@
+{
+    "624446": [
+        "Search for narrow $t\\bar{t}$ resonances in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.92.221801", 
+        null, 
+        "hep-ex/0307079", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-03-225-E"
+        ]
+    ], 
+    "625863": [
+        "Search for new particles in the two jet decay channel with the D0 detector", 
+        "D0", 
+        "10.1103/PhysRevD.69.111101", 
+        null, 
+        "hep-ex/0308033", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-03-459-E"
+        ]
+    ], 
+    "630140": [
+        "Search for 3- and 4-body decays of the scalar top quark in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1016/j.physletb.2003.12.001", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-03-306-E"
+        ]
+    ], 
+    "633601": [
+        "Combination of CDF and D0 Results on $W$ Boson Mass and Width", 
+        "CDF", 
+        "10.1103/PhysRevD.70.092008", 
+        null, 
+        "hep-ex/0311039", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-03-490-E"
+        ]
+    ], 
+    "645081": [
+        "Search for pair production of light scalar top quarks in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.93.011801", 
+        null, 
+        "hep-ex/0404028", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-04-016-E"
+        ]
+    ], 
+    "647967": [
+        "Search for doubly-charged Higgs boson pair production in the decay to $\\mu^+ \\mu^+ \\mu^- \\mu^-$ in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.96$ TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.93.141801", 
+        null, 
+        "hep-ex/0404015", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-04-045-E"
+        ]
+    ], 
+    "649614": [
+        "Observation and properties of the $X(3872)$ decaying to $J/\\psi \\pi^+ \\pi^-$ in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.96$ TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.93.162002", 
+        null, 
+        "hep-ex/0405004", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-04-061-E"
+        ]
+    ], 
+    "652124": [
+        "A precision measurement of the mass of the top quark", 
+        "D0", 
+        "10.1038/nature02589", 
+        null, 
+        "hep-ex/0406031", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-04-083-E"
+        ]
+    ]
+}

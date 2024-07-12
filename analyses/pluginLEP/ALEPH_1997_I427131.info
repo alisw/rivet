@@ -1,0 +1,32 @@
+Name: ALEPH_1997_I427131
+Year: 1997
+Summary: $\pi^0$ spectrum at LEP1
+Experiment: ALEPH
+Collider: LEP
+InspireID: 427131
+Status: VALIDATED
+Authors:
+ - Peter Richardson
+References:
+ - Z.Phys. C74 (1997) 451-461
+RunInfo: e+e- -> hadrons at Z pole
+NeedCrossSection: no
+Beams: [e-, e+]
+Energies: 91.2
+Description:
+  'Measurement of the $\pi^0$ spectrum, and distribution of $p_T^{\text{in}}$ and $p_T^{\text{out}}$ with respect to the sphericity axis by the ALEPH experiment at LEP1.'
+Keywords: []
+BibKey: Barate:1996uh
+BibTeX: '@article{Barate:1996uh,
+      author         = "Barate, R. and others",
+      title          = "{Inclusive production of neutral pions in hadronic Z
+                        decays}",
+      collaboration  = "ALEPH",
+      journal        = "Z. Phys.",
+      volume         = "C74",
+      year           = "1997",
+      pages          = "451-461",
+      doi            = "10.1007/s002880050407",
+      reportNumber   = "CERN-PPE-96-168, FSU-SCRI-97-74",
+      SLACcitation   = "%%CITATION = ZEPYA,C74,451;%%"
+}'

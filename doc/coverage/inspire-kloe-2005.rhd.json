@@ -1,0 +1,72 @@
+{
+    "615077": [
+        "Study of the decay $\\phi \\to \\pi^+ \\pi^- \\pi^0$ with the KLOE detector", 
+        "KLOE", 
+        "10.1016/j.physletb.2005.01.092", 
+        null, 
+        "hep-ex/0303016", 
+        null, 
+        null, 
+        []
+    ], 
+    "655225": [
+        "Measurement of $\\sigma(e^+e^- \\to \\pi^+ \\pi^- \\gamma$) and extraction of $\\sigma(e^+e^- \\to \\pi^+ \\pi^-$) below 1-GeV with the KLOE detector", 
+        "KLOE", 
+        "10.1016/j.physletb.2004.11.068", 
+        null, 
+        "hep-ex/0407048", 
+        "ins655225", 
+        null, 
+        []
+    ], 
+    "663819": [
+        "Upper limit on the $\\eta \\to \\pi^+ \\pi^-$ branching ratio with the KLOE detector", 
+        "KLOE", 
+        "10.1016/j.physletb.2004.12.025", 
+        null, 
+        "hep-ex/0411030", 
+        null, 
+        null, 
+        []
+    ], 
+    "665338": [
+        "Measurement of the leptonic decay widths of the phi-meson with the KLOE detector", 
+        "KLOE", 
+        "10.1016/j.physletb.2005.01.010", 
+        null, 
+        "hep-ex/0411082", 
+        null, 
+        null, 
+        []
+    ], 
+    "682178": [
+        "A Direct search for the CP-violating decay $K(S) \\to 3\\pi^0$ with the KLOE detector at DAFNE", 
+        "KLOE", 
+        "10.1016/j.physletb.2005.05.063", 
+        null, 
+        "hep-ex/0505012", 
+        null, 
+        null, 
+        []
+    ], 
+    "687874": [
+        "Measurement of the K(L) meson lifetime with the KLOE detector", 
+        "KLOE", 
+        "10.1016/j.physletb.2005.08.022", 
+        null, 
+        "hep-ex/0507088", 
+        null, 
+        null, 
+        []
+    ], 
+    "1849123": [
+        "Recent results from KLOE at DA$\\Phi$NE", 
+        "KLOE", 
+        null, 
+        null, 
+        null, 
+        null, 
+        null, 
+        []
+    ]
+}

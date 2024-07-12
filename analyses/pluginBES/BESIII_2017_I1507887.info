@@ -1,0 +1,40 @@
+Name: BESIII_2017_I1507887
+Year: 2017
+Summary: Analysis of $\psi(2S)\to\gamma\chi_{c(1,2)}$ decays using $\chi_{c(1,2)}\to J/\psi\gamma$
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1507887
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ -  Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 95 (2017) 7, 072004
+RunInfo: e+e- > psi(2S) 
+Beams: [e-, e+]
+Energies: [3.686]
+Description:
+  'Analysis of the angular distribution of the photons and leptons produced in
+   $e^+e^-\to \psi(2S) \to \gamma\chi_{c(1,2)}$ followed by $\chi_{c(1,2)}\to\gamma J/\psi$
+   and $J/\psi\to\ell^+\ell^-$
+   Gives information about the decay and is useful for testing correlations in charmonium decays.
+   N.B. the data was read from the figures in the paper and is not corrected and should only be used qualatively.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2017tsq
+BibTeX: '@article{BESIII:2017tsq,
+    author = "Ablikim, M. and others",
+    collaboration = "BESIII",
+    title = "{Measurement of higher-order multipole amplitudes in $\psi(3686)\rightarrow\gamma\chi_{c1,2}$ with $\chi_{c1,2}\to\gamma J/\psi$ and search for the transition $\eta_{c}(2S)\to\gamma J/\psi$}",
+    eprint = "1701.01197",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevD.95.072004",
+    journal = "Phys. Rev. D",
+    volume = "95",
+    number = "7",
+    pages = "072004",
+    year = "2017"
+}
+'

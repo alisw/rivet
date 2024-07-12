@@ -1,0 +1,112 @@
+{
+    "728301": [
+        "Direct measurement of the absolute branching fraction for D+ ---> anti-K0 mu+ nu(mu) and determination of Gamma (D0 ---> K- mu+ nu(mu))/ Gamma (D+ ---> anti-K0 mu+ nu(mu))", 
+        "BES", 
+        "10.1016/j.physletb.2006.11.026", 
+        null, 
+        "hep-ex/0610020", 
+        null, 
+        null, 
+        []
+    ], 
+    "728304": [
+        "Production of sigma in psi(2S) ---> pi+ pi- J/psi", 
+        "BES", 
+        "10.1016/j.physletb.2006.11.056", 
+        null, 
+        "hep-ex/0610023", 
+        null, 
+        null, 
+        []
+    ], 
+    "730011": [
+        "Measurements of psi(2S) decays to octet baryon-antibaryon pairs", 
+        "BES", 
+        "10.1016/j.physletb.2007.02.029", 
+        null, 
+        "hep-ex/0610079", 
+        null, 
+        null, 
+        []
+    ], 
+    "733992": [
+        "Measurement of psi(2S) radiative decays", 
+        "BES", 
+        "10.1103/PhysRevLett.99.011802", 
+        null, 
+        "hep-ex/0612016", 
+        null, 
+        null, 
+        []
+    ], 
+    "735498": [
+        "Precison Measurements of the Mass, the Widths of psi(3770) Resonance and the Cross Section sigma[e+e- ---> psi(3770)] at E(cm) = 3.7724-GeV", 
+        "BES", 
+        "10.1016/j.physletb.2007.06.074", 
+        null, 
+        "hep-ex/0612056", 
+        null, 
+        null, 
+        []
+    ], 
+    "750713": [
+        "Measurements of the observed cross-sections for e+ e- ---> light hadrons at s**(1/2) = 3.773-GeV and 3.650-GeV", 
+        "BES", 
+        "10.1016/j.physletb.2007.05.011", 
+        null, 
+        "0705.2276", 
+        "ins750713", 
+        null, 
+        []
+    ], 
+    "755271": [
+        "Measurements of J /psi and psi(2S)decays into Lambda anti-Lambdand Lambda anti-Lambda eta", 
+        "BES", 
+        "10.1103/PhysRevD.76.092003", 
+        null, 
+        "0707.1127", 
+        null, 
+        null, 
+        []
+    ], 
+    "761508": [
+        "Search for the C-parity violating process J/psi ---> gamma gamma via psi(2S) ---> pi+ pi- J/psi", 
+        "BES", 
+        "10.1103/PhysRevD.76.117101", 
+        null, 
+        "0709.3371", 
+        null, 
+        null, 
+        []
+    ], 
+    "762901": [
+        "Measurements of the observed cross-sections for exclusive light hadron production in e+ e- annihilation at s**(1/2) = 3.773-GeV and 3.650- GeV", 
+        "BES", 
+        "10.1016/j.physletb.2007.10.001", 
+        null, 
+        "0710.0786", 
+        "ins762901", 
+        null, 
+        []
+    ], 
+    "763880": [
+        "Experimental studies of the $\\pi^+\\pi^-\\pi^+\\pi^-\\pi^0$, $K^+K^-\\pi^+\\pi^-\\pi^0$ and $p\\bar p\\pi^+\\pi^-\\pi^0$ final states produced in $e^+e^-$ annihilation at $\\sqrt{s}=$ 3.773 and 3.650 GeV", 
+        "BES", 
+        "10.1140/epjc/s10052-007-0438-9", 
+        null, 
+        "0710.2176", 
+        "ins763880", 
+        null, 
+        []
+    ], 
+    "770160": [
+        "Direct Measurements of the Branching Fractions for Inclusive $K^\\pm$ and Inclusive Semileptonic Decays of $D^+$ and $D^0$ Mesons", 
+        "BES", 
+        "10.1016/j.physletb.2007.10.052", 
+        null, 
+        "0712.1664", 
+        null, 
+        null, 
+        []
+    ]
+}

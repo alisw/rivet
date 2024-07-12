@@ -6,10 +6,12 @@ Collider: LHC
 SpireID: 9021310
 InspireID: 894867
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Anton Karneyeu <Anton.Karneyeu@cern.ch>
  - Sercan Sen <Sercan.Sen@cern.ch>
 References:
+ - ATLAS-STDM-2010-11
  - arXiv:1104.0326 [hep-ex]
 RunInfo:
    Inelastic events (non-diffractive and inelastic diffractive).

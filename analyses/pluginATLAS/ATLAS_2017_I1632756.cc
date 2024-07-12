@@ -16,7 +16,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2017_I1632756);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2017_I1632756);
 
 
     /// Book histograms and initialise projections before the run
@@ -25,7 +25,7 @@ namespace Rivet {
       declare(VisibleFinalState(Cuts::abspid != PID::MUON), "caloParticles");
 
       // Voronoi eta-phi tessellation with KT jets, for ambient energy density calculation
-      FastJets fj(FinalState(), FastJets::KT, 0.5, JetAlg::NO_MUONS, JetAlg::NO_INVISIBLES);
+      FastJets fj(FinalState(), FastJets::KT, 0.5, JetAlg::Muons::NONE, JetAlg::Invisibles::NONE);
       fj.useJetArea(new fastjet::AreaDefinition(fastjet::VoronoiAreaSpec()));
       declare(fj, "KtJetsD05");
 
@@ -35,7 +35,7 @@ namespace Rivet {
       declare(photonfs, "LeadingPhoton");
 
       // Jets
-      FastJets jetpro(FinalState(), FastJets::ANTIKT, 0.4, JetAlg::DECAY_MUONS, JetAlg::DECAY_INVISIBLES);
+      FastJets jetpro(FinalState(), FastJets::ANTIKT, 0.4, JetAlg::Muons::DECAY, JetAlg::Invisibles::DECAY);
       declare(jetpro, "Jets");
 
       // Heavy hadrons
@@ -46,8 +46,8 @@ namespace Rivet {
       for (size_t i = 0; i < _eta_bins.size() - 1; ++i) {
         if (fuzzyEquals(_eta_bins[i], 1.37)) continue; // This region is not used
         int offset = i > 1? 1 : 2;
-        _h_Et_photonb[i] = bookHisto1D(i + offset, 1, 1);
-        _h_Et_photonc[i] = bookHisto1D(i + offset + 2, 1, 1);
+        book(_h_Et_photonb[i], i + offset, 1, 1);
+        book(_h_Et_photonc[i], i + offset + 2, 1, 1);
       }
 
     }
@@ -147,8 +147,8 @@ namespace Rivet {
 
       // Fill histograms
       const size_t eta_bin = _getEtaBin(leadingPhoton.abseta(), false);
-      if (bTagged) _h_Et_photonb[eta_bin]->fill(leadingPhoton.Et()/GeV, event.weight());
-      if (cTagged) _h_Et_photonc[eta_bin]->fill(leadingPhoton.Et()/GeV, event.weight());
+      if (bTagged) _h_Et_photonb[eta_bin]->fill(leadingPhoton.Et()/GeV);
+      if (cTagged) _h_Et_photonc[eta_bin]->fill(leadingPhoton.Et()/GeV);
 
     }
 
@@ -176,7 +176,7 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2017_I1632756);
+  RIVET_DECLARE_PLUGIN(ATLAS_2017_I1632756);
 
 
 }

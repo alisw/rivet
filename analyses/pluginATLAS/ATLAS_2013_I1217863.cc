@@ -10,14 +10,12 @@
 namespace Rivet {
 
 
+  /// Electroweak Wjj production at 8 TeV
   class ATLAS_2013_I1217863 : public Analysis {
   public:
 
-
     /// Constructor
-    ///@brief: Electroweak Wjj production at 8 TeV
-    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2013_I1217863);
-    //@}
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2013_I1217863);
 
     /// @name Analysis methods
     //@{
@@ -32,20 +30,20 @@ namespace Rivet {
       if ( getOption("LMODE") == "EL" ) { _mode = 2;}
       if ( getOption("LMODE") == "MU" ) _mode = 3;
       if ( getOption("LMODE") == "ZEL" ) {
-	_mode = 2;
-	_doW  = false;
+        _mode = 2;
+        _doW  = false;
       }
       if ( getOption("LMODE") == "ZMU" ) {
-	_mode = 3;
-	_doW  = false;
+        _mode = 3;
+        _doW  = false;
       }
       if ( getOption("LMODE") == "WEL" ) {
-	_mode = 2;
-	_doZ  = false;
+        _mode = 2;
+        _doZ  = false;
       }
       if ( getOption("LMODE") == "WMU" ) {
-	_mode = 3;
-	_doZ  = false;
+        _mode = 3;
+        _doZ  = false;
       }
 
       FinalState fs;
@@ -55,15 +53,16 @@ namespace Rivet {
 
       // Z finder
       if (_doZ) {
-	ZFinder zf(fs, cuts, _mode==3? PID::MUON : PID::ELECTRON, 40.0*GeV, 1000.0*GeV, 0.1, ZFinder::CLUSTERNODECAY, ZFinder::NOTRACK);
-	declare(zf, "ZF");
+        ZFinder zf(fs, cuts, _mode==3? PID::MUON : PID::ELECTRON, 40.0*GeV, 1000.0*GeV, 0.1, 
+                   ZFinder::ChargedLeptons::PROMPT, ZFinder::ClusterPhotons::NODECAY, ZFinder::AddPhotons::NO);
+        declare(zf, "ZF");
       }
 
       if (_doW) {
-	// W finder for electrons and muons
-	WFinder wf(fs, cuts, _mode==3? PID::MUON : PID::ELECTRON, 0.0*GeV, 1000.0*GeV, 35.0*GeV, 0.1,
-                                     WFinder::CLUSTERNODECAY, WFinder::NOTRACK, WFinder::TRANSMASS);
-	declare(wf, "WF");
+        // W finder for electrons and muons
+        WFinder wf(fs, cuts, _mode==3? PID::MUON : PID::ELECTRON, 0.0*GeV, 1000.0*GeV, 35.0*GeV, 0.1,
+                   WFinder::ChargedLeptons::PROMPT, WFinder::ClusterPhotons::NODECAY, WFinder::AddPhotons::NO, WFinder::MassWindow::MT);
+        declare(wf, "WF");
       }
 
       // leading photon
@@ -76,8 +75,7 @@ namespace Rivet {
       if (_doZ) { jet_fs.addVetoOnThisFinalState(getProjection<ZFinder>("ZF")); }
       if (_doW) { jet_fs.addVetoOnThisFinalState(getProjection<WFinder>("WF")); }
       jet_fs.addVetoOnThisFinalState(getProjection<LeadingParticlesFinalState>("LeadingPhoton"));
-      FastJets jets(jet_fs, FastJets::ANTIKT, 0.4);
-      jets.useInvisibles(true);
+      FastJets jets(jet_fs, FastJets::ANTIKT, 0.4, JetAlg::Muons::ALL, JetAlg::Invisibles::NONE);
       declare(jets, "Jets");
 
       // FS excluding the leading photon
@@ -88,20 +86,18 @@ namespace Rivet {
 
       // Book histograms
       if (_doZ) {
-	_hist_EgammaT_inclZ   = bookHisto1D(11, 1, _mode); // dSigma / dE^gamma_T for Njet >= 0
-	_hist_EgammaT_exclZ   = bookHisto1D(12, 1, _mode); // dSigma / dE^gamma_T for Njet = 0
-	_hist_Njet_EgammaT15Z = bookHisto1D(17, 1, _mode); // dSigma / dNjet for E^gamma_T >= 15
-	_hist_Njet_EgammaT60Z = bookHisto1D(18, 1, _mode); // dSigma / dNjet for E^gamma_T >= 60
-	_hist_mZgamma        = bookHisto1D(20, 1, _mode); // dSigma / dm^{Zgamma}
+        book(_hist_EgammaT_inclZ   ,11, 1, _mode); // dSigma / dE^gamma_T for Njet >= 0
+        book(_hist_EgammaT_exclZ   ,12, 1, _mode); // dSigma / dE^gamma_T for Njet = 0
+        book(_hist_Njet_EgammaT15Z ,17, 1, _mode); // dSigma / dNjet for E^gamma_T >= 15
+        book(_hist_Njet_EgammaT60Z ,18, 1, _mode); // dSigma / dNjet for E^gamma_T >= 60
+        book(_hist_mZgamma         ,20, 1, _mode); // dSigma / dm^{Zgamma}
       }
-
       if (_doW){
-	// Book histograms
-	_hist_EgammaT_inclW   = bookHisto1D( 7, 1, _mode); // dSigma / dE^gamma_T for Njet >= 0
-	_hist_EgammaT_exclW   = bookHisto1D( 8, 1, _mode); // dSigma / dE^gamma_T for Njet = 0
-	_hist_Njet_EgammaT15W = bookHisto1D(15, 1, _mode); // dSigma / dNjet for E^gamma_T > 15
-	_hist_Njet_EgammaT60W = bookHisto1D(16, 1, _mode); // dSigma / dNjet for E^gamma_T > 60
-	_hist_mWgammaT        = bookHisto1D(19, 1, _mode); // dSigma / dm^{Wgamma}_T
+        book(_hist_EgammaT_inclW   , 7, 1, _mode); // dSigma / dE^gamma_T for Njet >= 0
+        book(_hist_EgammaT_exclW   , 8, 1, _mode); // dSigma / dE^gamma_T for Njet = 0
+        book(_hist_Njet_EgammaT15W ,15, 1, _mode); // dSigma / dNjet for E^gamma_T >= 15
+        book(_hist_Njet_EgammaT60W ,16, 1, _mode); // dSigma / dNjet for E^gamma_T >= 60
+        book(_hist_mWgammaT        ,19, 1, _mode); // dSigma / dm^{Zgamma}
       }
 
     }
@@ -109,8 +105,6 @@ namespace Rivet {
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-
-      const double weight = event.weight();
 
       // retrieve leading photon
       Particles photons = apply<LeadingParticlesFinalState>(event, "LeadingPhoton").particles();
@@ -162,15 +156,15 @@ namespace Rivet {
 		double term2 = (lep_gamma + neutrino.momentum()).pT2();
 		double mWgammaT = sqrt(term1 * term1 - term2) * GeV;
 		
-		_hist_EgammaT_inclW->fill(photonEt, weight);
+		_hist_EgammaT_inclW->fill(photonEt);
 		
-		_hist_Njet_EgammaT15W->fill(Njets, weight);
+		_hist_Njet_EgammaT15W->fill(Njets);
 		
-		if ( !goodJets )  _hist_EgammaT_exclW->fill(photonEt, weight);
+		if ( !goodJets )  _hist_EgammaT_exclW->fill(photonEt);
 		
 		if (photonEt > 40.0*GeV) {
-		  _hist_mWgammaT->fill(mWgammaT, weight);
-		  if (photonEt > 60.0*GeV)  _hist_Njet_EgammaT60W->fill(Njets, weight);
+		  _hist_mWgammaT->fill(mWgammaT);
+		  if (photonEt > 60.0*GeV)  _hist_Njet_EgammaT60W->fill(Njets);
 		}
 	      }
 	    }
@@ -187,7 +181,7 @@ namespace Rivet {
 	  if ( (Zboson.mass() > 40.0*GeV) ) {
 	    
 	    // check charge of constituent leptons
-	    const ParticleVector& leptons = zf.constituents();
+	    const Particles& leptons = zf.constituents();
 	    if (leptons.size() == 2 && leptons[0].charge() * leptons[1].charge() < 0.) {
 	      
 	      bool lpass = true;
@@ -201,7 +195,7 @@ namespace Rivet {
 		const FastJets& jetfs = apply<FastJets>(event, "Jets");
 		Jets jets = jetfs.jets(cmpMomByEt);
 		int goodJets = 0;
-		foreach (const Jet& j, jets) {
+		for (const Jet& j : jets) {
 		  if ( !(j.Et() > 30.0*GeV) )  break;
 		  if ( (j.abseta() < 4.4) &&		    \
 		       (deltaR(leadingPhoton, j) > 0.3) &&  \
@@ -213,22 +207,24 @@ namespace Rivet {
 		double photonEt = leadingPhoton.Et()*GeV;
 		double mZgamma = (Zboson.momentum() + leadingPhoton.momentum()).mass() * GeV;
 		
-		_hist_EgammaT_inclZ->fill(photonEt, weight);
+		_hist_EgammaT_inclZ->fill(photonEt);
 		
-		_hist_Njet_EgammaT15Z->fill(Njets, weight);
+		_hist_Njet_EgammaT15Z->fill(Njets);
 		
-		if ( !goodJets )   _hist_EgammaT_exclZ->fill(photonEt, weight);
+		if ( !goodJets )   _hist_EgammaT_exclZ->fill(photonEt);
 		
 		if (photonEt >= 40.0*GeV) {
-		  _hist_mZgamma->fill(mZgamma, weight);
-		  if (photonEt >= 60.0*GeV)  _hist_Njet_EgammaT60Z->fill(Njets, weight);
+		  _hist_mZgamma->fill(mZgamma);
+		  if (photonEt >= 60.0*GeV)  _hist_Njet_EgammaT60Z->fill(Njets);
 		}
 	      }
 	    }
 	  }
 	}
       }
+
     }
+
 
     /// Normalise histograms etc., after the run
     void finalize() {
@@ -284,8 +280,7 @@ namespace Rivet {
 
   };
 
-  DECLARE_RIVET_PLUGIN(ATLAS_2013_I1217863);
+  RIVET_DECLARE_PLUGIN(ATLAS_2013_I1217863);
 
 }
-
 

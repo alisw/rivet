@@ -1,0 +1,1524 @@
+{
+    "1301856": [
+        "Measurement of the $t\\bar{t}$ production cross-section using $e\\mu $ events with b-tagged jets in pp collisions at $\\sqrt{s}$ = 7 and 8  $\\,\\mathrm{TeV}$ with the ATLAS detector", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-016-4501-2", 
+        "1710934", 
+        "1406.5375", 
+        "ins1301856", 
+        null, 
+        [
+            "CERN-PH-EP-2014-124", 
+            "CERN-EP-2014-124"
+        ]
+    ], 
+    "1345355": [
+        "Search for massive supersymmetric particles decaying to many jets using the ATLAS detector in $pp$ collisions at $\\sqrt{s} = 8$ TeV", 
+        "ATLAS", 
+        "10.1103/PhysRevD.91.112016", 
+        "1993236", 
+        "1502.05686", 
+        "ins1345355", 
+        null, 
+        [
+            "CERN-PH-EP-2015-020"
+        ]
+    ], 
+    "1376946": [
+        "Study of the spin and parity of the Higgs boson in diboson decays with the ATLAS detector", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-015-3685-1", 
+        "2026126", 
+        "1506.05669", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-114"
+        ]
+    ], 
+    "1380180": [
+        "Centrality, rapidity and transverse momentum dependence of isolated prompt photon production in lead-lead collisions at $\\sqrt{s_{\\mathrm{NN}}} = 2.76$ TeV measured with the ATLAS detector", 
+        "ATLAS", 
+        "10.1103/PhysRevC.93.034914", 
+        "2029385", 
+        "1506.08552", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-142"
+        ]
+    ], 
+    "1380183": [
+        "ATLAS Run 1 searches for direct pair production of third-generation squarks at the Large Hadron Collider", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-015-3726-9", 
+        "2029476", 
+        "1506.08616", 
+        "ins1380183", 
+        null, 
+        [
+            "CERN-PH-EP-2015-138"
+        ]
+    ], 
+    "1383128": [
+        "Measurements of the Higgs boson production and decay rates and coupling strengths using pp collision data at $\\sqrt{s}=7$ and 8 TeV in the ATLAS experiment", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-015-3769-y", 
+        "2034254", 
+        "1507.04548", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-125"
+        ]
+    ], 
+    "1384120": [
+        "Search for an additional, heavy Higgs boson in the $H\\rightarrow ZZ$ decay channel at $\\sqrt{s} = 8\\;\\text{ TeV }$ in $pp$ collision data with the ATLAS detector", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-015-3820-z", 
+        "2036291", 
+        "1507.05930", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-154"
+        ]
+    ], 
+    "1385102": [
+        "Study of the $B_c^+ \\rightarrow J/\\psi D_s^+$ and $B_c^+ \\rightarrow J/\\psi D_s^{*+}$ decays with the ATLAS detector", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-015-3743-8", 
+        "2037674", 
+        "1507.07099", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-163"
+        ]
+    ], 
+    "1386475": [
+        "Measurement of the centrality dependence of the charged-particle pseudorapidity distribution in proton\u2013lead collisions at $\\sqrt{s_{_\\text {NN}}} = 5.02$  TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-016-4002-3", 
+        "2040198", 
+        "1508.00848", 
+        "ins1386475", 
+        null, 
+        [
+            "CERN-PH-EP-2015-160"
+        ]
+    ], 
+    "1387509": [
+        "Constraints on non-Standard Model Higgs boson interactions in an effective Lagrangian using differential cross sections measured in the $H \\rightarrow \\gamma\\gamma$ decay channel at $\\sqrt{s} = 8$TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1016/j.physletb.2015.11.071", 
+        "2042102", 
+        "1508.02507", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-182"
+        ]
+    ], 
+    "1388506": [
+        "Searches for scalar leptoquarks in pp collisions at $\\sqrt{s}$ = 8 TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-015-3823-9", 
+        "2045641", 
+        "1508.04735", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-179"
+        ]
+    ], 
+    "1389174": [
+        "Search for flavour-changing neutral current top-quark decays to $qZ$ in $pp$ collision data collected with the ATLAS detector at $\\sqrt s =8$  TeV", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-015-3851-5", 
+        "2046583", 
+        "1508.05796", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-183"
+        ]
+    ], 
+    "1390114": [
+        "Measurements of fiducial cross-sections for $t\\bar{t}$ production with one or two additional b-jets in pp collisions at $\\sqrt{s}$ =8 TeV using the ATLAS detector", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-015-3852-4", 
+        "2047454", 
+        "1508.06868", 
+        "ins1390114", 
+        null, 
+        [
+            "CERN-PH-EP-2015-200"
+        ]
+    ], 
+    "1391149": [
+        "Search for invisible decays of a Higgs boson using vector-boson fusion in $pp$ collisions at $\\sqrt{s}=8$ TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1007/JHEP01(2016)172", 
+        "2048106", 
+        "1508.07869", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-186"
+        ]
+    ], 
+    "1391318": [
+        "Search for single top-quark production via flavour-changing neutral currents at 8 TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-016-3876-4", 
+        "2048122", 
+        "1509.00294", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-172"
+        ]
+    ], 
+    "1391323": [
+        "Search for a high-mass Higgs boson decaying to a $W$ boson pair in $pp$ collisions at $\\sqrt{s} = 8$ TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1007/JHEP01(2016)032", 
+        "2048180", 
+        "1509.00389", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-185"
+        ]
+    ], 
+    "1392455": [
+        "Measurement of the charge asymmetry in top-quark pair production in the lepton-plus-jets final state in pp collision data at $\\sqrt{s}=8\\,\\mathrm TeV{}$ with the ATLAS detector", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-016-3910-6", 
+        "2049547", 
+        "1509.02358", 
+        "ins1392455", 
+        null, 
+        [
+            "CERN-PH-EP-2015-217"
+        ]
+    ], 
+    "1393658": [
+        "Observation of Long-Range Elliptic Azimuthal Anisotropies in $\\sqrt{s}=$13 and 2.76 TeV $pp$ Collisions with the ATLAS Detector", 
+        "ATLAS", 
+        "10.1103/PhysRevLett.116.172301", 
+        "2053111", 
+        "1509.04776", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-251"
+        ]
+    ], 
+    "1393661": [
+        "A new method to distinguish hadronically decaying boosted $Z$ bosons from $W$ bosons using the ATLAS detector", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-016-4065-1", 
+        "2053189", 
+        "1509.04939", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-194"
+        ]
+    ], 
+    "1393662": [
+        "Search for direct top squark pair production in final states with two tau leptons in pp collisions at $\\sqrt{s}=8$  TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-016-3897-z", 
+        "2053201", 
+        "1509.04976", 
+        "ins1393662", 
+        null, 
+        [
+            "CERN-PH-EP-2015-188"
+        ]
+    ], 
+    "1393757": [
+        "Search for new phenomena in events with at least three photons collected in $pp$ collisions at $\\sqrt{s}$ = 8 TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-016-4034-8", 
+        "2053208", 
+        "1509.05051", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-187"
+        ]
+    ], 
+    "1393758": [
+        "Measurement of jet charge in dijet events from $\\sqrt{s}$=8  TeV pp collisions with the ATLAS detector", 
+        "ATLAS", 
+        "10.1103/PhysRevD.93.052003", 
+        "2053221", 
+        "1509.05190", 
+        "ins1393758", 
+        null, 
+        [
+            "CERN-PH-EP-2015-207"
+        ]
+    ], 
+    "1394670": [
+        "Search for the electroweak production of supersymmetric particles in $\\sqrt{s}$=8 TeV $pp$ collisions with the ATLAS detector", 
+        "ATLAS", 
+        "10.1103/PhysRevD.93.052002", 
+        "2054504", 
+        "1509.07152", 
+        "ins1394670", 
+        null, 
+        [
+            "CERN-PH-EP-2015-218"
+        ]
+    ], 
+    "1394865": [
+        "Measurements of four-lepton production in $pp$ collisions at $\\sqrt{s}=$ 8 TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1016/j.physletb.2015.12.048", 
+        "2055247", 
+        "1509.07844", 
+        "ins1394865", 
+        null, 
+        [
+            "CERN-PH-EP-2015-220"
+        ]
+    ], 
+    "1395092": [
+        "Search for magnetic monopoles and stable particles with high electric charges in 8 TeV $pp$ collisions with the ATLAS detector", 
+        "ATLAS", 
+        "10.1103/PhysRevD.93.052009", 
+        "2055267", 
+        "1509.08059", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-174"
+        ]
+    ], 
+    "1397001": [
+        "Search for the production of single vector-like and excited quarks in the $Wt$ final state in $pp$ collisions at $\\sqrt{s}$ = 8 TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1007/JHEP02(2016)110", 
+        "2058159", 
+        "1510.02664", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-235"
+        ]
+    ], 
+    "1397635": [
+        "Measurement of the production cross-section of a single top quark in association with a $W$ boson at 8 TeV with the ATLAS experiment", 
+        "ATLAS", 
+        "10.1007/JHEP01(2016)064", 
+        "2059559", 
+        "1510.03752", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-230"
+        ]
+    ], 
+    "1397636": [
+        "Search for anomalous couplings in the $Wtb$ vertex from the measurement of double differential angular decay rates of single top quarks produced in the $t$-channel with the ATLAS detector", 
+        "ATLAS", 
+        "10.1007/JHEP04(2016)023", 
+        "2058820", 
+        "1510.03764", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-236"
+        ]
+    ], 
+    "1397637": [
+        "Measurement of the differential cross-section of highly boosted top quarks as a function of their transverse momentum in $\\sqrt{s}$ = 8 TeV proton-proton collisions using the ATLAS detector", 
+        "ATLAS", 
+        "10.1103/PhysRevD.93.032009", 
+        "2058825", 
+        "1510.03818", 
+        "ins1397637", 
+        null, 
+        [
+            "CERN-PH-EP-2015-237"
+        ]
+    ], 
+    "1397638": [
+        "Performance of pile-up mitigation techniques for jets in $pp$ collisions at $\\sqrt{s}=8$  TeV using the ATLAS detector", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-016-4395-z", 
+        "2058295", 
+        "1510.03823", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-206"
+        ]
+    ], 
+    "1399051": [
+        "Identification of boosted, hadronically decaying W bosons and comparisons with ATLAS data taken at $\\sqrt{s} = 8$ TeV", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-016-3978-z", 
+        "2060731", 
+        "1510.05821", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-204"
+        ]
+    ], 
+    "1399193": [
+        "Search for dark matter produced in association with a Higgs boson decaying to two bottom quarks in $pp$ collisions at $\\sqrt{s} = 8$ TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1103/PhysRevD.93.072007", 
+        "2061422", 
+        "1510.06218", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-247"
+        ]
+    ], 
+    "1400803": [
+        "Measurement of the correlations between the polar angles of leptons from top quark decays in the helicity basis at $\\sqrt{s}=7$TeV using the ATLAS detector", 
+        "ATLAS", 
+        "10.1103/PhysRevD.93.012002", 
+        "2061416", 
+        "1510.07478", 
+        "ins1400803", 
+        null, 
+        [
+            "CERN-PH-EP-2015-241"
+        ]
+    ], 
+    "1402356": [
+        "Dijet production in $\\sqrt{s}=$ 7 TeV $pp$ collisions with large rapidity gaps at the ATLAS experiment", 
+        "ATLAS", 
+        "10.1016/j.physletb.2016.01.028", 
+        "2063966", 
+        "1511.00502", 
+        "ins1402356", 
+        null, 
+        [
+            "CERN-PH-EP-2015-227"
+        ]
+    ], 
+    "1404878": [
+        "Measurements of top-quark pair differential cross-sections in the lepton+jets channel in $pp$ collisions at $\\sqrt{s}=8$ TeV using the ATLAS detector", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-016-4366-4", 
+        "2102146", 
+        "1511.04716", 
+        "ins1404878", 
+        null, 
+        [
+            "CERN-PH-EP-2015-239"
+        ]
+    ], 
+    "1405096": [
+        "A search for prompt lepton-jets in $pp$ collisions at $\\sqrt{s}=$ 8 TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1007/JHEP02(2016)062", 
+        "2103375", 
+        "1511.05542", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-242"
+        ]
+    ], 
+    "1405430": [
+        "Evidence for single top-quark production in the $s$-channel in proton-proton collisions at $\\sqrt{s}=$8 TeV with the ATLAS detector using the Matrix Element Method", 
+        "ATLAS", 
+        "10.1016/j.physletb.2016.03.017", 
+        "2102936", 
+        "1511.05980", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-286"
+        ]
+    ], 
+    "1406935": [
+        "Search for the Standard Model Higgs boson produced in association with a vector boson and decaying into a tau pair in $pp$ collisions at $\\sqrt{s} = 8$ TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1103/PhysRevD.93.092005", 
+        "2109123", 
+        "1511.08352", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-226"
+        ]
+    ], 
+    "1407478": [
+        "Measurement of the dependence of transverse energy production at large pseudorapidity on the hard-scattering kinematics of proton-proton collisions at $\\sqrt{s} = 2.76$ TeV with ATLAS", 
+        "ATLAS", 
+        "10.1016/j.physletb.2016.02.056", 
+        "2109716", 
+        "1512.00197", 
+        "ins1407478", 
+        null, 
+        [
+            "CERN-PH-EP-2015-293"
+        ]
+    ], 
+    "1407952": [
+        "Performance of $b$-Jet Identification in the ATLAS Experiment", 
+        "ATLAS", 
+        "10.1088/1748-0221/11/04/P04008", 
+        "2110203", 
+        "1512.01094", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-216"
+        ]
+    ], 
+    "1408292": [
+        "Search for new phenomena in dijet mass and angular distributions from $pp$ collisions at $\\sqrt{s}=$ 13 TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1016/j.physletb.2016.01.032", 
+        "2110747", 
+        "1512.01530", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-311"
+        ]
+    ], 
+    "1408516": [
+        "Measurement of the transverse momentum and $\\phi ^*_{\\eta }$ distributions of Drell\u2013Yan lepton pairs in proton\u2013proton collisions at $\\sqrt{s}=8$  TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-016-4070-4", 
+        "2111356", 
+        "1512.02192", 
+        "ins1408516", 
+        null, 
+        [
+            "CERN-PH-EP-2015-275"
+        ]
+    ], 
+    "1408744": [
+        "Search for strong gravity in multijet final states produced in pp collisions at $\\sqrt{s} =$ 13 TeV using the ATLAS detector at the LHC", 
+        "ATLAS", 
+        "10.1007/JHEP03(2016)026", 
+        "2111372", 
+        "1512.02586", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-312"
+        ]
+    ], 
+    "1408878": [
+        "Measurement of $D^{*\\pm}$, $D^\\pm$ and $D_s^\\pm$ meson production cross sections in $pp$ collisions at $\\sqrt{s}=7$ TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1016/j.nuclphysb.2016.04.032", 
+        "2111578", 
+        "1512.02913", 
+        "ins1408878", 
+        null, 
+        [
+            "CERN-PH-EP-2015-288"
+        ]
+    ], 
+    "1409298": [
+        "Measurement of the differential cross-sections of prompt and non-prompt production of $J/\\psi $ and $\\psi (2\\mathrm {S})$ in $pp$ collisions at $\\sqrt{s} = 7$ and 8 TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-016-4050-8", 
+        "2112269", 
+        "1512.03657", 
+        "ins1409298", 
+        null, 
+        [
+            "CERN-PH-EP-2015-292"
+        ]
+    ], 
+    "1409300": [
+        "Search for charged Higgs bosons in the $H^{\\pm} \\rightarrow tb$ decay channel in $pp$ collisions at $\\sqrt{s}=8 $ TeV using the ATLAS detector", 
+        "ATLAS", 
+        "10.1007/JHEP03(2016)127", 
+        "2113171", 
+        "1512.03704", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-290"
+        ]
+    ], 
+    "1409918": [
+        "Combination of searches for $WW$, $WZ$, and $ZZ$ resonances in $pp$ collisions at $\\sqrt{s} = 8$ TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1016/j.physletb.2016.02.015", 
+        "2115337", 
+        "1512.05099", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-269"
+        ]
+    ], 
+    "1409923": [
+        "Measurement of the $ZZ$ Production Cross Section in $pp$ Collisions at $\\sqrt{s}$ = 13 TeV with the ATLAS Detector", 
+        "ATLAS", 
+        "10.1103/PhysRevLett.116.101801", 
+        "2115496", 
+        "1512.05314", 
+        "ins1409923", 
+        null, 
+        [
+            "CERN-PH-EP-2015-318"
+        ]
+    ], 
+    "1410580": [
+        "Search for new phenomena with photon+jet events in proton-proton collisions at $ \\sqrt{s}=13 $ TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1007/JHEP03(2016)041", 
+        "2116415", 
+        "1512.05910", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-320"
+        ]
+    ], 
+    "1410581": [
+        "Reconstruction of hadronic decay products of tau leptons with the ATLAS experiment", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-016-4110-0", 
+        "2116436", 
+        "1512.05955", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-294"
+        ]
+    ], 
+    "1410588": [
+        "Measurement of the charge asymmetry in highly boosted top-quark pair production in $\\sqrt{s} =$ 8 TeV $pp$ collision data collected by the ATLAS experiment", 
+        "ATLAS", 
+        "10.1016/j.physletb.2016.02.055", 
+        "2116823", 
+        "1512.06092", 
+        "ins1410588", 
+        null, 
+        [
+            "CERN-PH-EP-2015-303"
+        ]
+    ], 
+    "1415119": [
+        "Measurement of the CP-violating phase $\\phi_s$ and the $B^0_s$ meson decay width difference with $B^0_s \\to J/\\psi\\phi$ decays in ATLAS", 
+        "ATLAS", 
+        "10.1007/JHEP08(2016)147", 
+        "2120788", 
+        "1601.03297", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-166"
+        ]
+    ], 
+    "1415270": [
+        "Probing lepton flavour violation via neutrinoless $\\tau\\longrightarrow 3\\mu$  decays with the ATLAS detector", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-016-4041-9", 
+        "2120855", 
+        "1601.03567", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-315"
+        ]
+    ], 
+    "1416473": [
+        "A search for an excited muon decaying to a muon and two jets in $pp$ collisions at $\\sqrt{s}$ = 8 TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1088/1367-2630/18/7/073021", 
+        "2125289", 
+        "1601.05627", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-298"
+        ]
+    ], 
+    "1417099": [
+        "A search for top squarks with R-parity-violating decays to all-hadronic final states with the ATLAS detector in $\\sqrt{s}$ = 8 TeV proton-proton collisions", 
+        "ATLAS", 
+        "10.1007/JHEP06(2016)067", 
+        "2127038", 
+        "1601.07453", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-296"
+        ]
+    ], 
+    "1419070": [
+        "Measurement of the charged-particle multiplicity inside jets from $\\sqrt{s}=8$ TeV $pp$ collisions with the ATLAS detector", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-016-4126-5", 
+        "2128767", 
+        "1602.00988", 
+        "ins1419070", 
+        null, 
+        [
+            "CERN-EP-2016-001"
+        ]
+    ], 
+    "1419652": [
+        "Charged-particle distributions in $\\sqrt{s}$ = 13 TeV pp interactions measured with the ATLAS detector at the LHC", 
+        "ATLAS", 
+        "10.1016/j.physletb.2016.04.050", 
+        "2128621", 
+        "1602.01633", 
+        "ins1419652", 
+        null, 
+        [
+            "CERN-EP-2016-014"
+        ]
+    ], 
+    "1421648": [
+        "Test of CP Invariance in vector-boson fusion production of the Higgs boson using the Optimal Observable method in the ditau decay channel with the ATLAS detector", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-016-4499-5", 
+        "2131638", 
+        "1602.04516", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2016-002"
+        ]
+    ], 
+    "1422202": [
+        "Search for single production of vector-like quarks decaying into Wb in pp collisions at $\\sqrt{s} = 8$  TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-016-4281-8", 
+        "2132306", 
+        "1602.05606", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-319"
+        ]
+    ], 
+    "1422612": [
+        "Search for single production of a vector-like quark via a heavy gluon in the $4b$ final state with the ATLAS detector in $pp$ collisions at $\\sqrt{s} = 8$ TeV", 
+        "ATLAS", 
+        "10.1016/j.physletb.2016.04.061", 
+        "2132839", 
+        "1602.06034", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2015-321"
+        ]
+    ], 
+    "1422615": [
+        "Search for new phenomena in final states with large jet multiplicities and missing transverse momentum with ATLAS using $\\sqrt{s} =$ 13 TeV proton-proton collisions", 
+        "ATLAS", 
+        "10.1016/j.physletb.2016.04.005", 
+        "2133568", 
+        "1602.06194", 
+        "ins1422615", 
+        null, 
+        [
+            "CERN-EP-2016-026"
+        ]
+    ], 
+    "1424838": [
+        "Measurement of event-shape observables in $Z \\rightarrow \\ell ^{+} \\ell ^{-}$ events in $pp$ collisions at $\\sqrt{s}=$ 7 TeV with the ATLAS detector at the LHC", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-016-4176-8", 
+        "2134966", 
+        "1602.08980", 
+        "ins1424838", 
+        null, 
+        [
+            "CERN-EP-2016-015"
+        ]
+    ], 
+    "1424844": [
+        "Search for supersymmetry at $\\sqrt{s}=13$  TeV in final states with jets and two same-sign leptons or three leptons with the ATLAS detector", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-016-4095-8", 
+        "2135204", 
+        "1602.09058", 
+        "ins1424844", 
+        null, 
+        [
+            "CERN-EP-2016-027"
+        ]
+    ], 
+    "1426515": [
+        "Measurement of total and differential $W^+W^-$ production cross sections in proton-proton collisions at $\\sqrt{s}=$ 8 TeV with the ATLAS detector and limits on anomalous triple-gauge-boson couplings", 
+        "ATLAS", 
+        "10.1007/JHEP09(2016)029", 
+        "2136855", 
+        "1603.01702", 
+        "ins1426515", 
+        null, 
+        [
+            "CERN-PH-EP-2015-323"
+        ]
+    ], 
+    "1426523": [
+        "Measurements of $W^\\pm Z$ production cross sections in $pp$ collisions at $\\sqrt{s} = 8$ TeV with the ATLAS detector and limits on anomalous gauge boson self-couplings", 
+        "ATLAS", 
+        "10.1103/PhysRevD.93.092004", 
+        "2137188", 
+        "1603.02151", 
+        "ins1426523", 
+        null, 
+        [
+            "CERN-EP-2016-017"
+        ]
+    ], 
+    "1426695": [
+        "Charged-particle distributions in $pp$ interactions at $\\sqrt{s}=$ 8 TeV measured with the ATLAS detector", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-016-4203-9", 
+        "2137226", 
+        "1603.02439", 
+        "ins1426695", 
+        null, 
+        [
+            "CERN-EP-2016-020"
+        ]
+    ], 
+    "1427022": [
+        "Identification of high transverse momentum top quarks in $pp$ collisions at $\\sqrt{s}$ = 8 TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1007/JHEP06(2016)093", 
+        "2137212", 
+        "1603.03127", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2016-010"
+        ]
+    ], 
+    "1429662": [
+        "Muon reconstruction performance of the ATLAS detector in proton\u2013proton collision data at $\\sqrt{s}$ =13 TeV", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-016-4120-y", 
+        "2139897", 
+        "1603.05598", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2016-033"
+        ]
+    ], 
+    "1436362": [
+        "Search for resonances in the mass distribution of jet pairs with one or two jets identified as $b$-jets in proton--proton collisions at $\\sqrt{s}=13$ TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1016/j.physletb.2016.05.064", 
+        "2142575", 
+        "1603.08791", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2016-066", 
+            "CERN-EP-2016-66"
+        ]
+    ], 
+    "1436495": [
+        "Beam-induced and cosmic-ray backgrounds observed in the ATLAS detector during the LHC 2012 proton-proton running period", 
+        "ATLAS", 
+        "10.1088/1748-0221/11/05/P05013", 
+        "2141086", 
+        "1603.09202", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2016-029"
+        ]
+    ], 
+    "1436496": [
+        "Search for charged Higgs bosons produced in association with a top quark and decaying via $H^{\\pm} \\rightarrow \\tau\\nu$ using $pp$ collision data recorded at $\\sqrt{s} = 13$ TeV by the ATLAS detector", 
+        "ATLAS", 
+        "10.1016/j.physletb.2016.06.017", 
+        "2142493", 
+        "1603.09203", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2016-056"
+        ]
+    ], 
+    "1436497": [
+        "Measurement of $W^{\\pm}$ and $Z$-boson production cross sections in $pp$ collisions at $\\sqrt{s}=13$ TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1016/j.physletb.2016.06.023", 
+        "2142492", 
+        "1603.09222", 
+        "ins1436497", 
+        null, 
+        [
+            "CERN-EP-2016-069"
+        ]
+    ], 
+    "1442359": [
+        "Search for new phenomena in events with a photon and missing transverse momentum in $pp$ collisions at $\\sqrt{s}=13$ TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1007/JHEP06(2016)059", 
+        "2143781", 
+        "1604.01306", 
+        "ins1442359", 
+        null, 
+        [
+            "CERN-EP-2016-060"
+        ]
+    ], 
+    "1444991": [
+        "Measurement of fiducial differential cross sections of gluon-fusion production of Higgs bosons decaying to WW$^{\u2217}$\u2192e\u03bd\u03bc\u03bd with the ATLAS detector at $ \\sqrt{s}=8 $ TeV", 
+        "ATLAS", 
+        "10.1007/JHEP08(2016)104", 
+        "2145362", 
+        "1604.02997", 
+        "ins1444991", 
+        null, 
+        [
+            "CERN-EP-2016-019"
+        ]
+    ], 
+    "1446750": [
+        "Search for the Standard Model Higgs boson decaying into $ b\\overline{b} $ produced in association with top quarks decaying hadronically in pp collisions at $ \\sqrt{s}=8 $ TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1007/JHEP05(2016)160", 
+        "2145933", 
+        "1604.03812", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2016-058"
+        ]
+    ], 
+    "1446983": [
+        "Study of the rare decays of $B^0_s$ and $B^0$ into muon pairs from data collected during the LHC Run 1 with the ATLAS detector", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-016-4338-8", 
+        "2146067", 
+        "1604.04263", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2016-064"
+        ]
+    ], 
+    "1448101": [
+        "Search for metastable heavy charged particles with large ionization energy loss in pp collisions at $\\sqrt{s} = 13$ TeV using the ATLAS experiment", 
+        "ATLAS", 
+        "10.1103/PhysRevD.93.112015", 
+        "2146105", 
+        "1604.04520", 
+        "ins1448101", 
+        null, 
+        [
+            "CERN-EP-2016-063"
+        ]
+    ], 
+    "1448301": [
+        "Measurements of $Z\\gamma$ and $Z\\gamma\\gamma$ production in $pp$ collisions at $\\sqrt{s}=$ 8 TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1103/PhysRevD.93.112002", 
+        "2147109", 
+        "1604.05232", 
+        "ins1448301", 
+        null, 
+        [
+            "CERN-EP-2016-049"
+        ]
+    ], 
+    "1449082": [
+        "Measurements of the charge asymmetry in top-quark pair production in the dilepton final state at $\\sqrt{s}=8$  TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1103/PhysRevD.94.032006", 
+        "2147356", 
+        "1604.05538", 
+        "ins1449082", 
+        null, 
+        [
+            "CERN-EP-2016-051"
+        ]
+    ], 
+    "1452559": [
+        "Search for new phenomena in final states with an energetic jet and large missing transverse momentum in $pp$ collisions at $\\sqrt{s}=13$  TeV using the ATLAS detector", 
+        "ATLAS", 
+        "10.1103/PhysRevD.94.032005", 
+        "2148641", 
+        "1604.07773", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2016-075"
+        ]
+    ], 
+    "1455739": [
+        "Gas gain stabilisation in the ATLAS TRT detector", 
+        "ATLAS TRT", 
+        "10.1088/1748-0221/11/04/P04027", 
+        "2255805", 
+        null, 
+        null, 
+        null, 
+        []
+    ], 
+    "1457605": [
+        "Measurement of the inclusive isolated prompt photon cross section in pp collisions at $ \\sqrt{s}=8 $ TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1007/JHEP08(2016)005", 
+        "2151982", 
+        "1605.03495", 
+        "ins1457605", 
+        null, 
+        [
+            "CERN-EP-2016-035"
+        ]
+    ], 
+    "1458270": [
+        "Search for squarks and gluinos in final states with jets and missing transverse momentum at $\\sqrt{s} =$ 13 TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-016-4184-8", 
+        "2152376", 
+        "1605.03814", 
+        "ins1458270", 
+        null, 
+        [
+            "CERN-EP-2016-080"
+        ]
+    ], 
+    "1458952": [
+        "Search for gluinos in events with an isolated lepton, jets and missing transverse momentum at $\\sqrt{s}$ = 13 TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-016-4397-x", 
+        "2152735", 
+        "1605.04285", 
+        "ins1458952", 
+        null, 
+        [
+            "CERN-EP-2016-037"
+        ]
+    ], 
+    "1462258": [
+        "Search for scalar leptoquarks in pp collisions at $\\sqrt{s}$ = 13 TeV with the ATLAS experiment", 
+        "ATLAS", 
+        "10.1088/1367-2630/18/9/093016", 
+        "2153753", 
+        "1605.06035", 
+        "ins1462258", 
+        null, 
+        [
+            "CERN-EP-2016-074"
+        ]
+    ], 
+    "1463284": [
+        "Transverse momentum, rapidity, and centrality dependence of inclusive charged-particle production in $\\sqrt{s_{NN}}=5.02$ TeV $p$ + Pb collisions measured by the ATLAS experiment", 
+        "ATLAS", 
+        "10.1016/j.physletb.2016.10.053", 
+        "2154442", 
+        "1605.06436", 
+        "ins1463284", 
+        null, 
+        [
+            "CERN-EP-2016-077"
+        ]
+    ], 
+    "1465511": [
+        "Measurement of the relative width difference of the $B^0$-$\\bar B^0$ system with the ATLAS detector", 
+        "ATLAS", 
+        "10.1007/JHEP06(2016)081", 
+        "2155306", 
+        "1605.07485", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2016-085"
+        ]
+    ], 
+    "1466302": [
+        "Search for pair production of gluinos decaying via stop and sbottom in events with $b$-jets and large missing transverse momentum in $pp$ collisions at $\\sqrt{s} = 13$ TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1103/PhysRevD.94.032003", 
+        "2156666", 
+        "1605.09318", 
+        "ins1466302", 
+        null, 
+        [
+            "CERN-EP-2016-061"
+        ]
+    ], 
+    "1466778": [
+        "Measurement of the angular coefficients in $Z$-boson events using electron and muon pairs from data taken at $\\sqrt{s}=8$ TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1007/JHEP08(2016)159", 
+        "2157235", 
+        "1606.00689", 
+        "ins1466778", 
+        null, 
+        [
+            "CERN-EP-2016-087"
+        ]
+    ], 
+    "1467230": [
+        "Charged-particle distributions at low transverse momentum in $\\sqrt{s} = 13$  TeV $pp$ interactions measured with the ATLAS detector at the LHC", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-016-4335-y", 
+        "2157893", 
+        "1606.01133", 
+        "ins1467230", 
+        null, 
+        [
+            "CERN-EP-2016-099"
+        ]
+    ], 
+    "1467454": [
+        "Measurement of the double-differential high-mass Drell-Yan cross section in pp collisions at $ \\sqrt{s}=8 $ TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1007/JHEP08(2016)009", 
+        "2158116", 
+        "1606.01736", 
+        "ins1467454", 
+        null, 
+        [
+            "CERN-EP-2016-079"
+        ]
+    ], 
+    "1467455": [
+        "Measurement of the photon identification efficiencies with the ATLAS detector using LHC Run-1 data", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-016-4507-9", 
+        "2158117", 
+        "1606.01813", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2016-110"
+        ]
+    ], 
+    "1468064": [
+        "Measurement of the top quark mass in the $t\\bar{t}\\to$ dilepton channel from $\\sqrt{s}=8$ TeV ATLAS data", 
+        "ATLAS", 
+        "10.1016/j.physletb.2016.08.042", 
+        "2158842", 
+        "1606.02179", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2016-114"
+        ]
+    ], 
+    "1468065": [
+        "Search for the Standard Model Higgs boson produced by vector-boson fusion and decaying to bottom quarks in $ \\sqrt{s}=8 $ TeV pp collisions with the ATLAS detector", 
+        "ATLAS", 
+        "10.1007/JHEP11(2016)112", 
+        "2158833", 
+        "1606.02181", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2016-076"
+        ]
+    ], 
+    "1468067": [
+        "Search for TeV-scale gravity signatures in high-mass final states with leptons and jets with the ATLAS detector at $\\sqrt{s}=13$ TeV", 
+        "ATLAS", 
+        "10.1016/j.physletb.2016.07.030", 
+        "2158821", 
+        "1606.02265", 
+        "ins1468067", 
+        null, 
+        [
+            "CERN-EP-2016-109"
+        ]
+    ], 
+    "1468068": [
+        "Measurements of the Higgs boson production and decay rates and constraints on its couplings from a combined ATLAS and CMS analysis of the LHC pp collision data at $ \\sqrt{s}=7 $ and 8 TeV", 
+        "ATLAS", 
+        "10.1007/JHEP08(2016)045", 
+        "2158863", 
+        "1606.02266", 
+        "ins1468068", 
+        null, 
+        [
+            "CERN-EP-2016-100", 
+            "ATLAS-HIGG-2015-07", 
+            "CMS-HIG-15-002"
+        ]
+    ], 
+    "1468167": [
+        "Measurement of the Inelastic Proton-Proton Cross Section at $\\sqrt{s} = 13$  TeV with the ATLAS Detector at the LHC", 
+        "ATLAS", 
+        "10.1103/PhysRevLett.117.182002", 
+        "2159578", 
+        "1606.02625", 
+        "ins1468167", 
+        null, 
+        [
+            "CERN-EP-2016-140"
+        ]
+    ], 
+    "1468168": [
+        "Measurement of the $t\\bar{t}$ production cross-section using $e\\mu$ events with b-tagged jets in pp collisions at $\\sqrt{s}$=13 TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1016/j.physletb.2016.08.019", 
+        "2159581", 
+        "1606.02699", 
+        "ins1468168", 
+        null, 
+        [
+            "CERN-EP-2016-088"
+        ]
+    ], 
+    "1469066": [
+        "Search for resonances in diphoton events at $\\sqrt{s}$=13 TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1007/JHEP09(2016)001", 
+        "2160228", 
+        "1606.03833", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2016-120"
+        ]
+    ], 
+    "1469069": [
+        "Search for top squarks in final states with one isolated lepton, jets, and missing transverse momentum in $\\sqrt{s}=13$ TeV $pp$ collisions with the ATLAS detector", 
+        "ATLAS", 
+        "10.1103/PhysRevD.94.052009", 
+        "2160253", 
+        "1606.03903", 
+        "ins1469069", 
+        null, 
+        [
+            "CERN-EP-2016-113"
+        ]
+    ], 
+    "1469070": [
+        "Search for new resonances in events with one lepton and missing transverse momentum in $pp$ collisions at $\\sqrt{s} = 13$ TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1016/j.physletb.2016.09.040", 
+        "2160550", 
+        "1606.03977", 
+        "ins1469070", 
+        null, 
+        [
+            "CERN-EP-2016-143"
+        ]
+    ], 
+    "1469071": [
+        "Measurement of the $W^{\\pm}Z$ boson pair-production cross section in $pp$ collisions at $\\sqrt{s}=13$ TeV with the ATLAS Detector", 
+        "ATLAS", 
+        "10.1016/j.physletb.2016.08.052", 
+        "2160353", 
+        "1606.04017", 
+        "ins1469071", 
+        null, 
+        [
+            "CERN-EP-2016-108"
+        ]
+    ], 
+    "1469452": [
+        "Search for pair production of Higgs bosons in the $b\\bar{b}b\\bar{b}$ final state using proton--proton collisions at $\\sqrt{s} = 13$ TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1103/PhysRevD.94.052002", 
+        "2161043", 
+        "1606.04782", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2016-142"
+        ]
+    ], 
+    "1469453": [
+        "Searches for heavy diboson resonances in $pp$ collisions at $\\sqrt{s}=13$ TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1007/JHEP09(2016)173", 
+        "2161140", 
+        "1606.04833", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2016-106"
+        ]
+    ], 
+    "1470936": [
+        "Search for heavy long-lived charged $R$-hadrons with the ATLAS detector in 3.2 fb$^{-1}$ of proton--proton collision data at $\\sqrt{s} = 13$ TeV", 
+        "ATLAS", 
+        "10.1016/j.physletb.2016.07.042", 
+        "2161142", 
+        "1606.05129", 
+        "ins1470936", 
+        null, 
+        [
+            "CERN-EP-2016-131"
+        ]
+    ], 
+    "1471458": [
+        "The ATLAS Data Acquisition and High Level Trigger system", 
+        "ATLAS TDAQ", 
+        "10.1088/1748-0221/11/06/P06008", 
+        "2255808", 
+        null, 
+        null, 
+        null, 
+        []
+    ], 
+    "1472089": [
+        "The performance of the jet trigger for the ATLAS detector during 2011 data taking", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-016-4325-0", 
+        "2194256", 
+        "1606.07759", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2016-031"
+        ]
+    ], 
+    "1472323": [
+        "Search for the Higgs boson produced in association with a $W$ boson and decaying to four $b$-quarks via two spin-zero particles in $pp$ collisions at 13 TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-016-4418-9", 
+        "2194717", 
+        "1606.08391", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2016-135"
+        ]
+    ], 
+    "1472822": [
+        "Search for bottom squark pair production in proton\u2013proton collisions at $\\sqrt{s}=13$  TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-016-4382-4", 
+        "2195073", 
+        "1606.08772", 
+        "ins1472822", 
+        null, 
+        [
+            "CERN-EP-2016-138"
+        ]
+    ], 
+    "1473191": [
+        "Measurement of jet activity in top quark events using the $e\\mu$ final state with two $b$-tagged jets in $pp$ collisions at $\\sqrt{s}=8$ TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1007/JHEP09(2016)074", 
+        "2195357", 
+        "1606.09490", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2016-122"
+        ]
+    ], 
+    "1473744": [
+        "Search for supersymmetry in a final state containing two photons and missing transverse momentum in $\\sqrt{s}$ = 13 TeV $pp$ collisions at the LHC using the ATLAS detector", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-016-4344-x", 
+        "2194987", 
+        "1606.09150", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2016-146"
+        ]
+    ], 
+    "1475286": [
+        "Search for Higgs and $Z$ Boson Decays to $\\phi\\,\\gamma$ with the ATLAS Detector", 
+        "ATLAS", 
+        "10.1103/PhysRevLett.117.111802", 
+        "2198619", 
+        "1607.03400", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2016-130"
+        ]
+    ], 
+    "1475476": [
+        "Search for high-mass new phenomena in the dilepton final state using proton-proton collisions at $\\sqrt{s}=13$ TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1016/j.physletb.2016.08.055", 
+        "2198982", 
+        "1607.03669", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2016-116"
+        ]
+    ], 
+    "1475477": [
+        "Measurement of exclusive $\\gamma\\gamma\\rightarrow W^+W^-$ production and search for exclusive Higgs boson production in $pp$ collisions at $\\sqrt{s} = 8$ TeV using the ATLAS detector", 
+        "ATLAS", 
+        "10.1103/PhysRevD.94.032011", 
+        "2198983", 
+        "1607.03745", 
+        "ins1475477", 
+        null, 
+        [
+            "CERN-EP-2016-123"
+        ]
+    ], 
+    "1477209": [
+        "Search for squarks and gluinos in events with hadronically decaying tau leptons, jets and missing transverse momentum in proton\u2013proton collisions at $\\sqrt{s}=13$  TeV recorded with the ATLAS detector", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-016-4481-2", 
+        "2200242", 
+        "1607.05979", 
+        "ins1477209", 
+        null, 
+        [
+            "CERN-EP-2016-145"
+        ]
+    ], 
+    "1477585": [
+        "Measurement of the total cross section from elastic scattering in $pp$ collisions at $\\sqrt{s}=8$ TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1016/j.physletb.2016.08.020", 
+        "2201004", 
+        "1607.06605", 
+        "ins1477585", 
+        null, 
+        [
+            "CERN-EP-2016-158"
+        ]
+    ], 
+    "1477814": [
+        "Measurement of top quark pair differential cross-sections in the dilepton channel in $pp$ collisions at $\\sqrt{s}$ = 7 and 8 TeV with ATLAS", 
+        "ATLAS", 
+        "10.1103/PhysRevD.94.092003", 
+        "2200174", 
+        "1607.07281", 
+        "ins1477814", 
+        null, 
+        [
+            "CERN-EP-2016-144"
+        ]
+    ], 
+    "1478190": [
+        "Search for new phenomena in different-flavour high-mass dilepton final states in pp collisions at $\\sqrt{s}=13$  Tev with the ATLAS detector", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-016-4385-1", 
+        "2202137", 
+        "1607.08079", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2016-168"
+        ]
+    ], 
+    "1478355": [
+        "Measurement of the $b\\overline{b}$ dijet cross section in pp collisions at $\\sqrt{s} = 7$  TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-016-4521-y", 
+        "2202397", 
+        "1607.08430", 
+        "ins1478355", 
+        null, 
+        [
+            "CERN-EP-2016-091"
+        ]
+    ], 
+    "1478981": [
+        "Dark matter interpretations of ATLAS searches for the electroweak production of supersymmetric particles in $ \\sqrt{s}=8 $ TeV proton-proton collisions", 
+        "ATLAS", 
+        "10.1007/JHEP09(2016)175", 
+        "2203733", 
+        "1608.00872", 
+        "ins1478981", 
+        null, 
+        [
+            "CERN-EP-2016-165"
+        ]
+    ], 
+    "1478983": [
+        "Search for Minimal Supersymmetric Standard Model Higgs bosons $H/A$ and for a $Z^{\\prime}$ boson in the $\\tau \\tau$ final state produced in $pp$ collisions at $\\sqrt{s}=13$ TeV with the ATLAS Detector", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-016-4400-6", 
+        "2203593", 
+        "1608.00890", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2016-164"
+        ]
+    ], 
+    "1479760": [
+        "Study of hard double-parton scattering in four-jet events in pp collisions at $ \\sqrt{s}=7 $ TeV with the ATLAS experiment", 
+        "ATLAS", 
+        "10.1007/JHEP11(2016)110", 
+        "2205694", 
+        "1608.01857", 
+        "ins1479760", 
+        null, 
+        [
+            "CERN-EP-2016-183"
+        ]
+    ], 
+    "1479947": [
+        "Search for dark matter produced in association with a hadronically decaying vector boson in $pp$ collisions at $\\sqrt{s} =$ 13 TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1016/j.physletb.2016.10.042", 
+        "2206052", 
+        "1608.02372", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2016-180"
+        ]
+    ], 
+    "1480190": [
+        "The Laser calibration of the Atlas Tile Calorimeter during the LHC run 1", 
+        "ATLAS Tile Calorimeter system", 
+        "10.1088/1748-0221/11/10/T10005", 
+        "2206626", 
+        "1608.02791", 
+        null, 
+        null, 
+        []
+    ], 
+    "1480365": [
+        "Measurement of $W^+W^-$ production in association with one jet in proton--proton collisions at $\\sqrt{s} =8$ TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1016/j.physletb.2016.10.014", 
+        "2206433", 
+        "1608.03086", 
+        "ins1480365", 
+        null, 
+        [
+            "CERN-EP-2016-186"
+        ]
+    ], 
+    "1481187": [
+        "Luminosity determination in pp collisions at $\\sqrt{s}$ = 8 TeV using the ATLAS detector at the LHC", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-016-4466-1", 
+        "2208146", 
+        "1608.03953", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2016-117"
+        ]
+    ], 
+    "1486521": [
+        "A measurement of material in the ATLAS tracker using secondary hadronic interactions in 7 TeV pp collisions", 
+        "ATLAS", 
+        "10.1088/1748-0221/11/11/P11020", 
+        "2215485", 
+        "1609.04305", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2016-137"
+        ]
+    ]
+}

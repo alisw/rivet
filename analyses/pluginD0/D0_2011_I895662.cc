@@ -9,29 +9,25 @@ namespace Rivet {
   class D0_2011_I895662 : public Analysis {
   public:
 
-    D0_2011_I895662()
-      : Analysis("D0_2011_I895662")
-    {    }
+    RIVET_DEFAULT_ANALYSIS_CTOR(D0_2011_I895662);
 
 
   public:
 
     void init() {
-      FastJets jets(FinalState(-3.6, 3.6, 0.*GeV), FastJets::D0ILCONE, 0.7);
+      FastJets jets(FinalState((Cuts::etaIn(-3.6, 3.6))), FastJets::D0ILCONE, 0.7);
       jets.useInvisibles();
       declare(jets, "Jets");
 
-      _h_m3j_08_40  = bookHisto1D(1, 1, 1);
-      _h_m3j_16_40  = bookHisto1D(2, 1, 1);
-      _h_m3j_24_40  = bookHisto1D(3, 1, 1);
-      _h_m3j_24_70  = bookHisto1D(4, 1, 1);
-      _h_m3j_24_100 = bookHisto1D(5, 1, 1);
+      book(_h_m3j_08_40  ,1, 1, 1);
+      book(_h_m3j_16_40  ,2, 1, 1);
+      book(_h_m3j_24_40  ,3, 1, 1);
+      book(_h_m3j_24_70  ,4, 1, 1);
+      book(_h_m3j_24_100 ,5, 1, 1);
     }
 
 
     void analyze(const Event& event) {
-      const double weight = event.weight();
-
       Jets jets = apply<FastJets>(event, "Jets").jetsByPt(40.*GeV);
 
       // Need three jets, leading jet above 150 GeV
@@ -57,12 +53,12 @@ namespace Rivet {
 
       double m3jet = (p[0]+p[1]+p[2]).mass()/GeV;
 
-      if (ymax < 0.8) _h_m3j_08_40->fill(m3jet, weight);
-      if (ymax < 1.6) _h_m3j_16_40->fill(m3jet, weight);
+      if (ymax < 0.8) _h_m3j_08_40->fill(m3jet);
+      if (ymax < 1.6) _h_m3j_16_40->fill(m3jet);
       if (ymax < 2.4) {
-        _h_m3j_24_40->fill(m3jet, weight);
-        if (p[2].pT() > 70.*GeV)  _h_m3j_24_70->fill(m3jet, weight);
-        if (p[2].pT() > 100.*GeV) _h_m3j_24_100->fill(m3jet, weight);
+        _h_m3j_24_40->fill(m3jet);
+        if (p[2].pT() > 70.*GeV)  _h_m3j_24_70->fill(m3jet);
+        if (p[2].pT() > 100.*GeV) _h_m3j_24_100->fill(m3jet);
       }
 
     }
@@ -90,6 +86,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(D0_2011_I895662);
+  RIVET_DECLARE_PLUGIN(D0_2011_I895662);
 
 }

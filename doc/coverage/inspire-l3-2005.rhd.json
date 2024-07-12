@@ -1,0 +1,120 @@
+{
+    "639484": [
+        "Study of spin and decay-plane correlations of $W$ bosons in the $e^{+} e^{-} \\to W^{+} W^{-}$ process at LEP", 
+        "L3", 
+        "10.1140/epjc/s2005-02137-9", 
+        "815537", 
+        "hep-ex/0501036", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-072"
+        ]
+    ], 
+    "668596": [
+        "Search for an invisibly-decaying Higgs boson at LEP", 
+        "L3", 
+        "10.1016/j.physletb.2005.01.030", 
+        "815347", 
+        "hep-ex/0501033", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2004-055"
+        ]
+    ], 
+    "678858": [
+        "Measurement of the shadowing of high-energy cosmic rays by the Moon: A Search for TeV-energy antiprotons", 
+        "L3", 
+        "10.1016/j.astropartphys.2005.02.002", 
+        "828280", 
+        "astro-ph/0503472", 
+        null, 
+        null, 
+        []
+    ], 
+    "679959": [
+        "Compton scattering of quasi-real virtual photons at LEP", 
+        "L3", 
+        "10.1016/j.physletb.2005.04.054", 
+        "831709", 
+        "hep-ex/0504012", 
+        "ins679959", 
+        null, 
+        [
+            "CERN-PH-EP-2005-011"
+        ]
+    ], 
+    "680119": [
+        "Z-boson production with two unobserved, back-to-back, hard photons at LEP", 
+        "L3", 
+        "10.1016/j.physletb.2005.03.039", 
+        "831923", 
+        "hep-ex/0504015", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2005-006"
+        ]
+    ], 
+    "680120": [
+        "Measurement of exclusive rho+ rho- production in mid-virtuality two-photon interactions and study of the gamma gamma* ---> rho rho process at LEP", 
+        "L3", 
+        "10.1016/j.physletb.2005.04.011", 
+        "831924", 
+        "hep-ex/0504016", 
+        "ins680120", 
+        null, 
+        [
+            "CERN-PH-EP-2005-012"
+        ]
+    ], 
+    "681526": [
+        "Neutral-current four-fermion production in e+ e- interactions at LEP", 
+        "L3", 
+        "10.1016/j.physletb.2005.04.062", 
+        "834193", 
+        "hep-ex/0504054", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2005-013"
+        ]
+    ], 
+    "687094": [
+        "Measurement of the cross section for open-beauty production in photon-photon collisions at LEP", 
+        "L3", 
+        "10.1016/j.physletb.2005.05.072", 
+        "853038", 
+        "hep-ex/0507041", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2005-007"
+        ]
+    ], 
+    "687095": [
+        "Measurement of the photon structure function F(2)**gamma with the L3 detector at LEP", 
+        "L3", 
+        "10.1016/j.physletb.2005.07.028", 
+        "853039", 
+        "hep-ex/0507042", 
+        "ins687095", 
+        null, 
+        [
+            "CERN-PH-EP-2005-004"
+        ]
+    ], 
+    "687622": [
+        "Measurement of the running of the electromagnetic coupling at large momentum-transfer at LEP", 
+        "L3", 
+        "10.1016/j.physletb.2005.07.052", 
+        "855514", 
+        "hep-ex/0507078", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2005-021"
+        ]
+    ]
+}

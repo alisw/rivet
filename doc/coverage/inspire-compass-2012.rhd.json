@@ -1,0 +1,74 @@
+{
+    "955170": [
+        "First Measurement of Chiral Dynamics in $\\pi^- \\gamma \\rightarrow \\pi^- \\pi^- \\pi^+$", 
+        "COMPASS", 
+        "10.1103/PhysRevLett.108.192001", 
+        "1390456", 
+        "1111.5954", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-176"
+        ]
+    ], 
+    "1090927": [
+        "Transverse spin effects in hadron-pair production from semi-inclusive deep inelastic scattering", 
+        "COMPASS", 
+        "10.1016/j.physletb.2012.05.015", 
+        "1425094", 
+        "1202.6150", 
+        "ins1090927", 
+        null, 
+        [
+            "CERN-PH-EP-2012-053"
+        ]
+    ], 
+    "1115720": [
+        "Experimental investigation of transverse spin asymmetries in muon-p SIDIS processes: Collins asymmetries", 
+        "COMPASS", 
+        "10.1016/j.physletb.2012.09.055", 
+        "1449459", 
+        "1205.5121", 
+        "ins1115720", 
+        null, 
+        [
+            "CERN-PH-EP-2012-146"
+        ]
+    ], 
+    "1115721": [
+        "II \u2013 Experimental investigation of transverse spin asymmetries in \u03bc -p SIDIS processes: Sivers asymmetries", 
+        "COMPASS", 
+        "10.1016/j.physletb.2012.09.056", 
+        "1449460", 
+        "1205.5122", 
+        "ins1115721", 
+        null, 
+        [
+            "CERN-PH-EP-2012-147"
+        ]
+    ], 
+    "1122967": [
+        "Exclusive  $rho^0$ muoproduction on transversely polarised protons and deuterons", 
+        "COMPASS", 
+        "10.1016/j.nuclphysb.2012.07.025", 
+        "1462053", 
+        "1207.4301", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2012-208"
+        ]
+    ], 
+    "1199003": [
+        "D* and D Meson Production in Muon Nucleon Interactions at 160 GeV/c", 
+        "COMPASS", 
+        "10.1140/epjc/s10052-012-2253-1", 
+        "1492033", 
+        "1211.1575", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2012-339"
+        ]
+    ]
+}

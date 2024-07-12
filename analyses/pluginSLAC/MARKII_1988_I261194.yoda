@@ -1,0 +1,65 @@
+BEGIN YODA_SCATTER2D_V2 /REF/MARKII_1988_I261194/d01-x01-y01
+ErrorBreakdown: {0: {error: {dn: -0.15, up: 0.15}}, 1: {error: {dn: -0.08, up: 0.08}}, 2: {error: {dn: -0.08, up: 0.08}}, 3: {error: {dn: -0.054, up: 0.054}}, 4: {error: {dn: -0.03, up: 0.03}}, 5: {error: {dn: -0.015, up: 0.015}}, 6: {error: {dn: -0.005, up: 0.005}}}
+IsRef: 1
+Path: /REF/MARKII_1988_I261194/d01-x01-y01
+Title: doi:10.17182/hepdata.20080.v1/t1
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+2.500000e-01	5.000000e-02	5.000000e-02	3.320000e-01	1.500000e-01	1.500000e-01
+3.250000e-01	2.500000e-02	2.500000e-02	1.690000e-01	8.000000e-02	8.000000e-02
+3.750000e-01	2.500000e-02	2.500000e-02	2.430000e-01	8.000000e-02	8.000000e-02
+4.250000e-01	2.500000e-02	2.500000e-02	1.410000e-01	5.400000e-02	5.400000e-02
+4.750000e-01	2.500000e-02	5.000000e-02	6.000000e-02	3.000000e-02	3.000000e-02
+5.750000e-01	5.000000e-02	5.000000e-02	2.300000e-02	1.500000e-02	1.500000e-02
+6.750000e-01	5.000000e-02	5.000000e-02	1.200000e-02	5.000000e-03	5.000000e-03
+END YODA_SCATTER2D_V2
+
+BEGIN YODA_SCATTER2D_V2 /REF/MARKII_1988_I261194/d02-x01-y01
+ErrorBreakdown: {0: {stat: {dn: -0.17, up: 0.17}, sys: {dn: -0.15, up: 0.15}}, 1: {stat: {dn: -0.07, up: 0.07}, sys: {dn: -0.05, up: 0.05}}, 2: {stat: {dn: -0.03, up: 0.03}, sys: {dn: -0.02, up: 0.02}}, 3: {stat: {dn: -0.02, up: 0.02}, sys: {dn: -0.02, up: 0.02}}}
+IsRef: 1
+Path: /REF/MARKII_1988_I261194/d02-x01-y01
+Title: doi:10.17182/hepdata.20080.v1/t2
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.000000e+00	5.000000e-01	5.000000e-01	6.200000e-01	2.267157e-01	2.267157e-01
+2.000000e+00	5.000000e-01	5.000000e-01	3.000000e-01	8.602325e-02	8.602325e-02
+3.000000e+00	5.000000e-01	5.000000e-01	1.200000e-01	3.605551e-02	3.605551e-02
+4.000000e+00	5.000000e-01	5.000000e-01	9.000000e-02	2.828427e-02	2.828427e-02
+END YODA_SCATTER2D_V2
+
+BEGIN YODA_SCATTER2D_V2 /REF/MARKII_1988_I261194/d03-x01-y01
+ErrorBreakdown: {0: {stat: {dn: -0.09, up: 0.09}, sys: {dn: -0.05, up: 0.05}}, 1: {stat: {dn: -0.03, up: 0.03}, sys: {dn: -0.02, up: 0.02}}}
+IsRef: 1
+Path: /REF/MARKII_1988_I261194/d03-x01-y01
+Title: doi:10.17182/hepdata.20080.v1/t3
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.000000e+00	5.000000e-01	5.000000e-01	2.600000e-01	1.029563e-01	1.029563e-01
+2.000000e+00	5.000000e-01	5.000000e-01	9.000000e-02	3.605551e-02	3.605551e-02
+END YODA_SCATTER2D_V2
+
+BEGIN YODA_SCATTER2D_V2 /REF/MARKII_1988_I261194/d04-x01-y01
+ErrorBreakdown: {0: {error: {dn: -2.2, up: 2.2}}}
+IsRef: 1
+Path: /REF/MARKII_1988_I261194/d04-x01-y01
+Title: doi:10.17182/hepdata.20080.v1/t4
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+2.900000e+01	0.000000e+00	0.000000e+00	5.200000e+00	2.200000e+00	2.200000e+00
+END YODA_SCATTER2D_V2
+
+BEGIN YODA_SCATTER2D_V2 /REF/MARKII_1988_I261194/d04-x01-y02
+ErrorBreakdown: {0: {error: {dn: -3.7, up: 3.7}}}
+IsRef: 1
+Path: /REF/MARKII_1988_I261194/d04-x01-y02
+Title: doi:10.17182/hepdata.20080.v1/t4
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+2.900000e+01	0.000000e+00	0.000000e+00	8.400000e+00	3.700000e+00	3.700000e+00
+END YODA_SCATTER2D_V2
+

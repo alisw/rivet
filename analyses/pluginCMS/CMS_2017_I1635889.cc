@@ -27,24 +27,23 @@ namespace Rivet {
 
       /// @note Using a bare muon Z (but with a clustering radius!?)
       Cut cut = Cuts::abseta < 2.4 && Cuts::pT > 10*GeV;
-      ZFinder zfinder(FinalState(), cut, PID::MUON, 81*GeV, 101*GeV, 0.2, ZFinder::NOCLUSTER);
-      addProjection(zfinder, "ZFinder");
+      ZFinder zfinder(FinalState(), cut, PID::MUON, 81*GeV, 101*GeV, 0.2, ZFinder::ClusterPhotons::NONE);
+      declare(zfinder, "ZFinder");
 
       ChargedFinalState cfs(zfinder.remainingFinalState());
-      addProjection(cfs, "cfs");
+      declare(cfs, "cfs");
 
-      _h_Nchg_towards_pTmumu                 = bookProfile1D(1, 1, 1);
-      _h_Nchg_transverse_pTmumu              = bookProfile1D(2, 1, 1);
-      _h_Nchg_away_pTmumu                    = bookProfile1D(3, 1, 1);
-      _h_pTsum_towards_pTmumu                = bookProfile1D(4, 1, 1);
-      _h_pTsum_transverse_pTmumu             = bookProfile1D(5, 1, 1);
-      _h_pTsum_away_pTmumu                   = bookProfile1D(6, 1, 1);
+      book(_h_Nchg_towards_pTmumu     , 1, 1, 1);
+      book(_h_Nchg_transverse_pTmumu  , 2, 1, 1);
+      book(_h_Nchg_away_pTmumu        , 3, 1, 1);
+      book(_h_pTsum_towards_pTmumu    , 4, 1, 1);
+      book(_h_pTsum_transverse_pTmumu , 5, 1, 1);
+      book(_h_pTsum_away_pTmumu       , 6, 1, 1);
     }
 
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-      const double weight = event.weight();
       const ZFinder& zfinder = applyProjection<ZFinder>(event, "ZFinder");
 
       if (zfinder.bosons().size() != 1) vetoEvent;
@@ -63,7 +62,7 @@ namespace Rivet {
       double ptSumTransverse = 0;
       double ptSumAway = 0;
 
-      foreach (const Particle& p, particles) {
+      for (const Particle& p : particles) {
         double dphi = fabs(deltaPhi(Zphi, p.phi()));
         double pT = p.pT();
 
@@ -82,12 +81,12 @@ namespace Rivet {
 
 
       const double area = 8./3.*M_PI;
-        _h_Nchg_towards_pTmumu->         fill(Zpt, 1./area * nTowards, weight);
-        _h_Nchg_transverse_pTmumu->      fill(Zpt, 1./area * nTransverse, weight);
-        _h_Nchg_away_pTmumu->            fill(Zpt, 1./area * nAway, weight);
-        _h_pTsum_towards_pTmumu->        fill(Zpt, 1./area * ptSumTowards, weight);
-        _h_pTsum_transverse_pTmumu->     fill(Zpt, 1./area * ptSumTransverse, weight);
-        _h_pTsum_away_pTmumu->           fill(Zpt, 1./area * ptSumAway, weight);
+        _h_Nchg_towards_pTmumu->         fill(Zpt, 1./area * nTowards);
+        _h_Nchg_transverse_pTmumu->      fill(Zpt, 1./area * nTransverse);
+        _h_Nchg_away_pTmumu->            fill(Zpt, 1./area * nAway);
+        _h_pTsum_towards_pTmumu->        fill(Zpt, 1./area * ptSumTowards);
+        _h_pTsum_transverse_pTmumu->     fill(Zpt, 1./area * ptSumTransverse);
+        _h_pTsum_away_pTmumu->           fill(Zpt, 1./area * ptSumAway);
 
 
     }
@@ -115,6 +114,6 @@ namespace Rivet {
 
 
   // Hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CMS_2017_I1635889);
+  RIVET_DECLARE_PLUGIN(CMS_2017_I1635889);
 
 }

@@ -5,6 +5,7 @@ Experiment: CMS
 Collider: LHC
 InspireID: 1258128
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Steve Linn <linn@cern.ch>,
  - Shin-Shan Eiko Yu <syu@cern.ch>,
@@ -63,3 +64,11 @@ BibTeX: '@article{Chatrchyan:2013oda,
       SLACcitation   = "%%CITATION = ARXIV:1310.3082;%%",}'
 ToDo:
  - Update reference when paper published
+
+ReleaseTests:
+ - $A LHC-7-PromptPhoton-1
+ - $A-2 LHC-7-PromptPhoton-2
+ - $A-3 LHC-7-PromptPhoton-3
+ - $A-4 LHC-7-PromptPhoton-4
+ - $A-5 LHC-Z-mu
+

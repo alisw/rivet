@@ -1,5 +1,5 @@
 // -*- C++ -*-
-#ifndef RIVET_IdnirectFinalState_HH
+#ifndef RIVET_IndirectFinalState_HH
 #define RIVET_IndirectFinalState_HH
 
 #include "Rivet/Projections/NonPromptFinalState.hh"

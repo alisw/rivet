@@ -1,0 +1,29 @@
+Name: MC_HFDECAYS
+Summary: Monte Carlo validation observables for heavy-flavour decays
+Reentrant: true
+Status: VALIDATED
+Authors:
+ - Francesco Curcio <francesco.curcio@cern.ch>
+ - Christian Gutschow <chris.g@cern.ch>
+RunInfo: 
+  Anything with heavy-flavour jets
+Description:
+  'Jets with $p_\perp>25$ GeV are constructed with an anti-$k_\perp$ jet finder with
+  $R=0.4$ and projected onto many different observables sensitive to the decays of 
+  $b$- and $c$-hadrons in the heavy-flavour-tagged jet.'
+ReleaseTests:
+ - $A LHC-7-Bottom-0
+ - $A-2 LHC-7-Bottom-1
+ - $A-3 LHC-7-Bottom-2
+ - $A-4 LHC-7-Bottom-3
+ - $A-5 LHC-7-Bottom-4
+ - $A-6 LHC-7-Bottom-5
+ - $A-7 LHC-7-Bottom-6
+ - $A-8 LHC-7-Bottom-7
+ - $A-9 LHC-7-Bottom-8
+ - $A-10 LHC-7-Charm-1
+ - $A-11 LHC-7-Charm-2
+ - $A-12 LHC-7-Charm-3
+ - $A-13 LHC-7-Charm-4
+ - $A-14 LHC-7-Charm-5
+

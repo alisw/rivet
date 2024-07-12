@@ -1,0 +1,43 @@
+Name: CMS_2021_I1866118
+Year: 2021
+Summary: Study of Z boson plus jets events using variables sensitive to double-parton scattering in pp collisions at 13 TeV
+Experiment: CMS
+Collider: LHC
+InspireID: 1866118
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - cms-pag-conveners-smp@cern.ch
+ - Rajat Gupta <rajat.gupta@cern.ch>
+ - Meena 
+ - Sunil Bansal
+ - J.B. Singh
+References:
+  - CMS-SMP-20-009
+  - arXiv:2105.14511 
+  - JHEP 10 (2021) 176
+
+RunInfo: Drell-Yan events with $Z/\gamma^* \to \mu\mu$.
+Beams: [p+, p+]
+Energies: [13000]
+Luminosity_fb: 35.8
+Description:
+	'Double parton scattering is investigated using events with a Z boson and jets. The measurements are performed with proton-proton collision data recorded by the CMS experiment at the LHC at $\sqrt{s} = 13$ TeV, corresponding to an integrated luminosity of $35.8~\mathrm{fb}^{-1}$  collected in the year 2016. Differential cross sections of Z$+ \geq$ 1 jet and Z$+ \geq$ 2 jets are measured with transverse momentum of the jets above 20 GeV and pseudorapidity $|\eta| <$ 2.4. Several distributions with sensitivity to double parton scattering effects are measured as functions of the angle and the transverse momentum imbalance between the Z boson and the jets. The measured distributions are compared with predictions from several event generators with different hadronization models and different parameter settings for multiparton interactions. The measured distributions show a dependence on the hadronization and multiparton interaction simulation parameters, and are important input for future improvements of the simulations.'
+BibKey: CMS:2021wfx
+BibTeX: '@article{CMS:2021wfx,
+    author = "Tumasyan, Armen and others",
+    collaboration = "CMS",
+    title = "{Study of Z boson plus jets events using variables sensitive to double-parton scattering in pp collisions at 13 TeV}",
+    eprint = "2105.14511",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CMS-SMP-20-009, CERN-EP-2021-091",
+    doi = "10.1007/JHEP10(2021)176",
+    journal = "JHEP",
+    volume = "10",
+    pages = "176",
+    year = "2021"
+}'
+ReleaseTests:
+ - $A LHC-13-Z-mu-jets
+

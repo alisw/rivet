@@ -1,0 +1,38 @@
+Name: BESIII_2021_I1908066
+Year: 2021
+Summary:  Cross section for $J/\psi$ production for energies between 3.645 and 3.8 GeV 
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1908066
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett.B 820 (2021) 136576
+RunInfo: 
+  e+ e- to hadrons
+Beams: [e-, e+]
+Description:
+  'Cross section for the production of $J/\psi$ for energies between 3.645 and 3.8, i.e near the $\psi(2S)$ resonace measured by BESIII.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2020xfc
+BibTeX: '@article{BESIII:2020xfc,
+    author = "Ablikim, M. and others",
+    collaboration = "BESIII",
+    title = "{Direct Measurement of the Branching Fractions $\mathcal B (\psi (3686)\to J/\psi X)$, and $\mathcal B (\psi (3770) \to J/\psi X)$ Observation of the State $\mathcal R(3760)$ in $e^+e^- \to J/\psi X$}",
+    eprint = "2012.04186",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevLett.127.082002",
+    journal = "Phys. Rev. Lett.",
+    volume = "127",
+    number = "8",
+    pages = "082002",
+    year = "2021"
+}
+'

@@ -1,0 +1,37 @@
+Name: BESIII_2015_I1352828
+Year: 2015
+Summary: Mass distributions in $\chi_c\to\phi K K \pi$ decays
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1352828
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 91 (2015) 11, 112008
+RunInfo: Any process producing chi_cJ, originally e+e-
+Description:
+  'Measurements of mass distributions in $\chi_c\to\phi K K \pi$ decays. 
+   The data were read from the plots in the paper and may not be corrected for efficiency'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2015vfb
+BibTeX: '@article{BESIII:2015vfb,
+    author = "Ablikim, M. and others",
+    collaboration = "BESIII",
+    title = "{Study of $\chi_{cJ}$ decaying into $\phi$ $K^*(892)$ $\bar{K}$}",
+    eprint = "1503.04699",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevD.91.112008",
+    journal = "Phys. Rev. D",
+    volume = "91",
+    number = "11",
+    pages = "112008",
+    year = "2015"
+}
+'

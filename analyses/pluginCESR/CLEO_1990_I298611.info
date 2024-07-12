@@ -1,0 +1,35 @@
+Name: CLEO_1990_I298611
+Year: 1990
+Summary: Measurement of the $\Lambda_c^+$ spectrum at 10.55 GeV
+Experiment: CLEO
+Collider: CESR
+InspireID: 298611
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D43 (1991) 3599-3610, 1991 
+RunInfo: e+e- to hadrons
+Beams: [e+, e-]
+Energies: [10.55]
+Description:
+  'Measurement for the scaled momentum spectrum for $\Lambda_c^+$ baryons in the continuum by CLEO.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Avery:1990bc
+BibTeX: '@article{Avery:1990bc,
+      author         = "Avery, P. and others",
+      title          = "{Inclusive production of the charmed baryon Lambda(c)
+                        from e+ e- annihilations at s**(1/2) = 10.55-GeV}",
+      collaboration  = "CLEO",
+      journal        = "Phys. Rev.",
+      volume         = "D43",
+      year           = "1991",
+      pages          = "3599-3610",
+      doi            = "10.1103/PhysRevD.43.3599",
+      reportNumber   = "CLNS-90-992, CLEO-90-5",
+      SLACcitation   = "%%CITATION = PHRVA,D43,3599;%%"
+}'

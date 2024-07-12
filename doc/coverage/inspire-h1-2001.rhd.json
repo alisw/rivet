@@ -1,0 +1,158 @@
+{
+    "507230": [
+        "Measurement of open beauty production at HERA", 
+        "H1", 
+        "10.1016/S0370-2693(99)01099-0", 
+        null, 
+        "hep-ex/9909029", 
+        "ins507230", 
+        null, 
+        [
+            "DESY-99-126"
+        ]
+    ], 
+    "534736": [
+        "Dijet production in charged and neutral current e+ p interactions at high Q**2", 
+        "H1", 
+        "10.1007/s100520100622", 
+        "467944", 
+        "hep-ex/0010016", 
+        "ins534736", 
+        null, 
+        [
+            "DESY-00-143"
+        ]
+    ], 
+    "535481": [
+        "Measurement and QCD analysis of jet cross-sections in deep inelastic positron - proton collisions at s**(1/2) of 300-GeV", 
+        "H1", 
+        "10.1007/s100520100621", 
+        "471360", 
+        "hep-ex/0010054", 
+        "ins535481", 
+        null, 
+        [
+            "DESY-00-145"
+        ]
+    ], 
+    "539087": [
+        "Diffractive jet production in deep inelastic $e^{+} p$ collisions at HERA", 
+        "H1", 
+        "10.1007/s100520100634", 
+        "482042", 
+        "hep-ex/0012051", 
+        "ins539087", 
+        null, 
+        [
+            "DESY-00-174"
+        ]
+    ], 
+    "539088": [
+        "Measurement of neutral and charged current cross-sections in electron - proton collisions at high $Q^{2}$", 
+        "H1", 
+        "10.1007/s100520100607", 
+        "482043", 
+        "hep-ex/0012052", 
+        "ins539088", 
+        null, 
+        [
+            "DESY-00-187"
+        ]
+    ], 
+    "539089": [
+        "Deep inelastic inclusive e p scattering at low x and a determination of alpha(s)", 
+        "H1", 
+        "10.1007/s100520100720", 
+        "482044", 
+        "hep-ex/0012053", 
+        "ins539089", 
+        null, 
+        [
+            "DESY-00-181"
+        ]
+    ], 
+    "553604": [
+        "Searches at HERA for squarks in R-parity violating supersymmetry", 
+        "H1", 
+        "10.1007/s100520100716", 
+        "489403", 
+        "hep-ex/0102050", 
+        null, 
+        null, 
+        [
+            "DESY-01-021"
+        ]
+    ], 
+    "558634": [
+        "Photoproduction with a leading proton at HERA", 
+        "H1", 
+        "10.1016/S0550-3213(01)00544-2", 
+        "505246", 
+        "hep-ex/0106070", 
+        null, 
+        null, 
+        [
+            "DESY-01-062"
+        ]
+    ], 
+    "558699": [
+        "Three Jet production in deep inelastic scattering at HERA", 
+        "H1", 
+        "10.1016/S0370-2693(01)00805-X", 
+        "505489", 
+        "hep-ex/0106078", 
+        "ins558699", 
+        null, 
+        [
+            "DESY-01-073"
+        ]
+    ], 
+    "559416": [
+        "Measurement of deeply virtual Compton scattering at HERA", 
+        "H1", 
+        "10.1016/S0370-2693(01)00939-X", 
+        "517796", 
+        "hep-ex/0107005", 
+        null, 
+        null, 
+        [
+            "DESY-01-093"
+        ]
+    ], 
+    "559915": [
+        "A Search for leptoquark bosons in e- p collisions at HERA", 
+        "H1", 
+        "10.1016/S0370-2693(01)01262-X", 
+        "517801", 
+        "hep-ex/0107038", 
+        null, 
+        null, 
+        [
+            "DESY-01-094"
+        ]
+    ], 
+    "561805": [
+        "On the rise of the proton structure function F(2) towards low x", 
+        "H1", 
+        "10.1016/S0370-2693(01)01074-7", 
+        "514789", 
+        "hep-ex/0108035", 
+        "ins561805", 
+        null, 
+        [
+            "DESY-01-104"
+        ]
+    ], 
+    "562188": [
+        "D*+- meson production in deep inelastic diffractive interactions at HERA", 
+        "H1", 
+        "10.1016/S0370-2693(01)01155-8", 
+        "515629", 
+        "hep-ex/0108047", 
+        "ins562188", 
+        null, 
+        [
+            "DESY-01-105"
+        ]
+    ]
+}

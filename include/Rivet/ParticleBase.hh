@@ -105,7 +105,7 @@ namespace Rivet {
     double phi(const PhiMapping mapping=ZERO_2PI) const { return momentum().phi(mapping); }
 
     /// Get the 3-momentum directly.
-    Vector3 p3() const { return momentum().vector3(); }
+    ThreeMomentum p3() const { return momentum().vector3(); }
     /// Get the 3-momentum magnitude directly.
     double p() const { return momentum().p(); }
     /// Get the 3-momentum magnitude-squared directly.
@@ -141,6 +141,11 @@ namespace Rivet {
     double angle(const FourVector& v) const { return momentum().angle(v); }
     /// Angle between this vector and another (3-vector)
     double angle(const Vector3& v3) const { return momentum().angle(v3); }
+
+    /// Lorentz dot product between this 4-vector and another
+    double dot(const ParticleBase& v) const { return momentum().dot(v.momentum()); }
+    /// Angle between this 4-vector and another
+    double dot(const FourVector& v) const { return momentum().dot(v); }
 
     //@}
 

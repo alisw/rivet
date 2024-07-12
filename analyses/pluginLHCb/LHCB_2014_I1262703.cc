@@ -12,7 +12,7 @@ namespace Rivet {
   public:
 
     /// Default constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(LHCB_2014_I1262703);
+    RIVET_DEFAULT_ANALYSIS_CTOR(LHCB_2014_I1262703);
 
 
     /// Initialise histograms and projections
@@ -20,23 +20,23 @@ namespace Rivet {
 
       // Projections
       const Cut mycut = Cuts::eta >= 2.0 && Cuts::eta <= 4.5 && Cuts::pT > 20*GeV;
-      ZFinder zfinder(FinalState(), mycut, PID::MUON, 60*GeV, 120*GeV, 0., ZFinder::NOCLUSTER);
+      ZFinder zfinder(FinalState(), mycut, PID::MUON, 60*GeV, 120*GeV, 0., ZFinder::ClusterPhotons::NONE);
       declare(zfinder, "ZFinder");
       FastJets jetpro(zfinder.remainingFinalState(), FastJets::ANTIKT, 0.5);
       declare(jetpro, "Jets");
 
       // Histograms
-      _h_jet_pT    = bookHisto1D(3, 1, 1);
-      _h_jet_eta20 = bookHisto1D(4, 1, 1);
-      _h_jet_eta10 = bookHisto1D(4, 1, 2);
-      _h_Z_y20     = bookHisto1D(5, 1, 1);
-      _h_Z_y10     = bookHisto1D(5, 1, 2);
-      _h_Z_pT20    = bookHisto1D(6, 1, 1);
-      _h_Z_pT10    = bookHisto1D(6, 1, 2);
-      _h_dphi20    = bookHisto1D(7, 1, 1);
-      _h_dphi10    = bookHisto1D(7, 1, 2);
-      _h_dy20      = bookHisto1D(8, 1, 1);
-      _h_dy10      = bookHisto1D(8, 1, 2);
+      book(_h_jet_pT   , 3, 1, 1);
+      book(_h_jet_eta20, 4, 1, 1);
+      book(_h_jet_eta10, 4, 1, 2);
+      book(_h_Z_y20    , 5, 1, 1);
+      book(_h_Z_y10    , 5, 1, 2);
+      book(_h_Z_pT20   , 6, 1, 1);
+      book(_h_Z_pT10   , 6, 1, 2);
+      book(_h_dphi20   , 7, 1, 1);
+      book(_h_dphi10   , 7, 1, 2);
+      book(_h_dy20     , 8, 1, 1);
+      book(_h_dy10     , 8, 1, 2);
     }
 
 
@@ -45,7 +45,7 @@ namespace Rivet {
 
       const ZFinder& zfinder = apply<ZFinder>(e, "ZFinder");
       if (zfinder.bosons().size() != 1) vetoEvent;
-      const ParticleVector leptons = zfinder.constituents();
+      const Particles leptons = zfinder.constituents();
 
       const Cut jetSelector = Cuts::eta >= 2.0 && Cuts::eta <= 4.5 && Cuts::pT > 10*GeV;
       const Jets jets = apply<FastJets>(e, "Jets").jetsByPt(jetSelector);
@@ -73,19 +73,18 @@ namespace Rivet {
       const double drap = zfinder.boson().rap() - cleanedJets[0].rap();
 
       // Fill histograms
-      const double weight = e.weight();
-      _h_jet_pT->fill(cleanedJets[0].pT()/GeV, weight);
-      _h_jet_eta10->fill(cleanedJets[0].eta(), weight);
-      _h_Z_y10->fill(zfinder.boson().rap(), weight);
-      _h_Z_pT10->fill(zfinder.boson().pT()/GeV, weight);
-      _h_dphi10->fill(dphi, weight);
-      _h_dy10->fill(drap, weight);
+      _h_jet_pT->fill(cleanedJets[0].pT()/GeV);
+      _h_jet_eta10->fill(cleanedJets[0].eta());
+      _h_Z_y10->fill(zfinder.boson().rap());
+      _h_Z_pT10->fill(zfinder.boson().pT()/GeV);
+      _h_dphi10->fill(dphi);
+      _h_dy10->fill(drap);
       if (above20) {
-        _h_jet_eta20->fill(cleanedJets[0].eta(), weight);
-        _h_Z_y20->fill(zfinder.boson().rap(), weight);
-        _h_Z_pT20->fill(zfinder.boson().pT()/GeV, weight);
-        _h_dphi20->fill(dphi, weight);
-        _h_dy20->fill(drap, weight);
+        _h_jet_eta20->fill(cleanedJets[0].eta());
+        _h_Z_y20->fill(zfinder.boson().rap());
+        _h_Z_pT20->fill(zfinder.boson().pT()/GeV);
+        _h_dphi20->fill(dphi);
+        _h_dy20->fill(drap);
       }
 
     }
@@ -93,7 +92,10 @@ namespace Rivet {
 
     /// Finalize
     void finalize() {
-      normalize({_h_jet_pT, _h_jet_eta20, _h_jet_eta10, _h_Z_y20, _h_Z_y10, _h_Z_pT20, _h_Z_pT10, _h_dphi20, _h_dphi10, _h_dy20, _h_dy10});
+      normalize(_h_jet_pT); normalize(_h_jet_eta20); normalize(_h_jet_eta10); 
+      normalize(_h_Z_y20);  normalize(_h_Z_y10);     normalize(_h_Z_pT20); 
+      normalize(_h_Z_pT10); normalize(_h_dphi20);    normalize(_h_dphi10); 
+      normalize(_h_dy20);   normalize(_h_dy10);
     }
 
 
@@ -103,6 +105,6 @@ namespace Rivet {
   };
 
 
-  DECLARE_RIVET_PLUGIN(LHCB_2014_I1262703);
+  RIVET_DECLARE_PLUGIN(LHCB_2014_I1262703);
 
 }

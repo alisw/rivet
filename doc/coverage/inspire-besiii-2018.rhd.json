@@ -1,0 +1,376 @@
+{
+    "1478790": [
+        "Measurement of Singly Cabibbo Suppressed Decays $\\Lambda_c^{+}\\to p\\pi^{+}\\pi^{-}$ and $\\Lambda_c^{+}\\to pK^{+}K^{-}$", 
+        "BESIII", 
+        "10.1103/PhysRevLett.117.232002", 
+        null, 
+        "1608.00407", 
+        null, 
+        null, 
+        []
+    ], 
+    "1623019": [
+        "Determination of the number of $\\psi(3686)$ events at BESIII", 
+        "BESIII", 
+        "10.1088/1674-1137/42/2/023001", 
+        null, 
+        "1709.03653", 
+        null, 
+        null, 
+        []
+    ], 
+    "1623020": [
+        "Measurements of the branching fractions for the semi-leptonic decays $D^+_s\\to\\phi e^{+}\\nu_{e}$, $\\phi \\mu^{+}\\nu_{\\mu}$, $\\eta \\mu^{+}\\nu_{\\mu}$ and $\\eta'\\mu^{+}\\nu_{\\mu}$", 
+        "BESIII", 
+        "10.1103/PhysRevD.97.012006", 
+        null, 
+        "1709.03680", 
+        null, 
+        null, 
+        []
+    ], 
+    "1623555": [
+        "Measurement of the matrix elements for the decays $\\eta^{\\prime}\\rightarrow\\eta\\pi^+\\pi^-$ and $\\eta^{\\prime}\\rightarrow\\eta\\pi^0\\pi^0$", 
+        "BESIII", 
+        "10.1103/PhysRevD.97.012003", 
+        "2288316", 
+        "1709.04627", 
+        null, 
+        null, 
+        [
+            "JLAB-PHY-17-2582"
+        ]
+    ], 
+    "1627871": [
+        "Observation of a cross-section enhancement near mass threshold in $e^{+}e^{-}\\rightarrow\\Lambda\\bar{\\Lambda}$", 
+        "BESIII", 
+        "10.1103/PhysRevD.97.032013", 
+        null, 
+        "1709.10236", 
+        null, 
+        null, 
+        []
+    ], 
+    "1628093": [
+        "Precision measurement of the $e^{+}e^{-}~\\rightarrow~\\Lambda_{c}^{+} \\bar{\\Lambda}_{c}^{-}$ cross section near threshold", 
+        "BESIII", 
+        "10.1103/PhysRevLett.120.132001", 
+        null, 
+        "1710.00150", 
+        null, 
+        null, 
+        []
+    ], 
+    "1631983": [
+        "Improved measurements of $\\chi_{cJ} \\rightarrow \\Sigma^+ \\bar{\\Sigma}^-$ and $\\Sigma^0 \\bar{\\Sigma}^0$ decays", 
+        "BESIII", 
+        "10.1103/PhysRevD.97.052011", 
+        null, 
+        "1710.07922", 
+        null, 
+        null, 
+        []
+    ], 
+    "1633425": [
+        "Measurement of $e^{+}e^{-} \\to \\pi^{0}\\pi^{0}\\psi(3686)$ at $\\sqrt{s}$ from 4.009 to 4.600 GeV and observation of a neutral charmoniumlike structure", 
+        "BESIII", 
+        "10.1103/PhysRevD.97.052001", 
+        null, 
+        "1710.10740", 
+        null, 
+        null, 
+        []
+    ], 
+    "1637586": [
+        "Measurement of the absolute branching fraction of $D_{s0}^{*\\pm}(2317)\\to \\pi^0 D_{s}^{\\pm}$", 
+        "BESIII", 
+        "10.1103/PhysRevD.97.051103", 
+        null, 
+        "1711.08293", 
+        null, 
+        null, 
+        []
+    ], 
+    "1641075": [
+        "Precision Study of $\\eta^\\prime\\rightarrow\\gamma\\pi^+\\pi^-$ Decay Dynamics", 
+        "BESIII", 
+        "10.1103/PhysRevLett.120.242003", 
+        null, 
+        "1712.01525", 
+        "ins1641075", 
+        null, 
+        []
+    ], 
+    "1644905": [
+        "Observation of $e^{+}e^{-} \\to \\phi\\chi_{c1}$ and $\\phi\\chi_{c2}$ at $\\sqrt{s}$=4.600 GeV", 
+        "BESIII", 
+        "10.1103/PhysRevD.97.032008", 
+        null, 
+        "1712.09240", 
+        null, 
+        null, 
+        []
+    ], 
+    "1646687": [
+        "Study of $\\eta(1475)$ and $X(1835)$ in radiative $J/\\psi$ decays to $\\gamma \\phi$", 
+        "BESIII", 
+        "10.1103/PhysRevD.97.051101", 
+        null, 
+        "1801.02127", 
+        null, 
+        null, 
+        []
+    ], 
+    "1647384": [
+        "Search for $h_{c}\\rightarrow\\pi^+\\pi^-J/\\psi$ via $\\psi(3686)\\rightarrow \\pi^0\\pi^+\\pi^-J/\\psi$", 
+        "BESIII", 
+        "10.1103/PhysRevD.97.052008", 
+        null, 
+        "1801.03485", 
+        null, 
+        null, 
+        []
+    ], 
+    "1648775": [
+        "Measurements of the branching fractions of the singly Cabibbo-suppressed decays $D^0\\to\\omega\\eta$, $\\eta^{(\\prime)}\\pi^0$ and $\\eta^{(\\prime)}\\eta$", 
+        "BESIII", 
+        "10.1103/PhysRevD.97.052005", 
+        null, 
+        "1801.05988", 
+        null, 
+        null, 
+        []
+    ], 
+    "1652828": [
+        "Observation of $a^{0}_{0}(980)$-$f_{0}(980)$ Mixing", 
+        "BESIII", 
+        "10.1103/PhysRevLett.121.022001", 
+        null, 
+        "1802.00583", 
+        null, 
+        null, 
+        []
+    ], 
+    "1653121": [
+        "Observation of $e^{+}e^{-} \\rightarrow K\\bar{K}J/\\psi$ at center-of-mass energies from 4.189 to 4.600 GeV", 
+        "BESIII", 
+        "10.1103/PhysRevD.97.071101", 
+        null, 
+        "1802.01216", 
+        null, 
+        null, 
+        []
+    ], 
+    "1654353": [
+        "Measurements of absolute branching fractions for $D$ mesons decays into two pseudoscalar mesons", 
+        "BESIII", 
+        "10.1103/PhysRevD.97.072004", 
+        null, 
+        "1802.03119", 
+        null, 
+        null, 
+        []
+    ], 
+    "1654574": [
+        "Search for the rare decay of $\\psi(3686) \\rightarrow \\Lambda_c^+ \\overline{p} e^+ e^- + c.c.$ at BESIII", 
+        "BESIII", 
+        "10.1103/PhysRevD.97.091102", 
+        null, 
+        "1802.04057", 
+        null, 
+        null, 
+        []
+    ], 
+    "1655158": [
+        "Measurement of the branching fraction for the semi-leptonic decay $D^{0(+)}\\to \\pi^{-(0)}\\mu^+\\nu_\\mu$ and test of lepton universality", 
+        "BESIII", 
+        "10.1103/PhysRevLett.121.171803", 
+        null, 
+        "1802.05492", 
+        null, 
+        null, 
+        []
+    ], 
+    "1657760": [
+        "Search for the rare decays $D\\to h(h')e^+e^-$", 
+        "BESIII", 
+        "10.1103/PhysRevD.97.072015", 
+        null, 
+        "1802.09752", 
+        null, 
+        null, 
+        []
+    ], 
+    "1657763": [
+        "Study of two-photon decays of pseudoscalar mesons via $J/\\psi$ radiative decays", 
+        "BESIII", 
+        "10.1103/PhysRevD.97.072014", 
+        null, 
+        "1802.09854", 
+        null, 
+        null, 
+        []
+    ], 
+    "1658762": [
+        "Observation of $\\psi(3686) \\to n\\bar{n}$ and improved measurement of $\\psi(3686) \\to p \\bar{p}$", 
+        "BESIII", 
+        "10.1103/PhysRevD.98.032006", 
+        null, 
+        "1803.02039", 
+        null, 
+        null, 
+        []
+    ], 
+    "1658763": [
+        "Observation of the Semileptonic Decay $D^0 \\to a_0(980)^- e^+ \\nu_e$ and Evidence for $D^+ \\to a_0(980)^0 e^+ \\nu_e$", 
+        "BESIII", 
+        "10.1103/PhysRevLett.121.081802", 
+        null, 
+        "1803.02166", 
+        null, 
+        null, 
+        []
+    ], 
+    "1662077": [
+        "Measurement of the integrated Luminosities of cross-section scan data samples around the$\\psi(3770)$ mass region", 
+        "BESIII", 
+        "10.1088/1674-1137/42/6/063001", 
+        null, 
+        "1803.03802", 
+        null, 
+        null, 
+        []
+    ], 
+    "1662082": [
+        "Measurements of absolute branching fractions for $\\Lambda^+_c\\to\\Xi^0K^+$ and $\\Xi(1530)^0K^+$", 
+        "BESIII", 
+        "10.1016/j.physletb.2018.06.046", 
+        null, 
+        "1803.04299", 
+        null, 
+        null, 
+        []
+    ], 
+    "1662660": [
+        "Study of the decays $D^+\\rightarrow\\eta^{(\\prime)} e^+\\nu_{e}$", 
+        "BESIII", 
+        "10.1103/PhysRevD.97.092009", 
+        null, 
+        "1803.05570", 
+        null, 
+        null, 
+        []
+    ], 
+    "1662664": [
+        "Measurement of absolute branching fraction of the inclusive decay $\\Lambda_{c}^{+} \\to \\Lambda + X$", 
+        "BESIII", 
+        "10.1103/PhysRevLett.121.062003", 
+        null, 
+        "1803.05706", 
+        null, 
+        null, 
+        []
+    ], 
+    "1662665": [
+        "Measurement of singly Cabibbo-suppressed decays $D^{0}\\to\\pi^{0}\\pi^{0}\\pi^{0}$, $\\pi^{0}\\pi^{0}\\eta$, $\\pi^{0}\\eta\\eta$ and $\\eta\\eta\\eta$", 
+        "BESIII", 
+        "10.1016/j.physletb.2018.04.017", 
+        null, 
+        "1803.05769", 
+        null, 
+        null, 
+        []
+    ], 
+    "1662924": [
+        "Measurement of $e^+ e^\u2212 \\to D\\bar D$ cross sections at the $\\psi$(3770) resonance", 
+        "BESIII", 
+        "10.1088/1674-1137/42/8/083001", 
+        null, 
+        "1803.06293", 
+        null, 
+        null, 
+        []
+    ], 
+    "1664315": [
+        "Observation of $\\psi(3686) \\to \\eta' e^+ e^- $", 
+        "BESIII", 
+        "10.1016/j.physletb.2018.05.038", 
+        null, 
+        "1803.09714", 
+        null, 
+        null, 
+        []
+    ], 
+    "1667861": [
+        "Observation of $h_1(1380)$ in the $J/\\psi \\to \\eta^{\\prime} K\\bar K \\pi$ decay", 
+        "BESIII", 
+        "10.1103/PhysRevD.98.072005", 
+        null, 
+        "1804.05536", 
+        null, 
+        null, 
+        []
+    ], 
+    "1673178": [
+        "Search for invisible decays of $\\omega$ and $\\phi$ with $J/\\psi$ data at BESIII", 
+        "BESIII", 
+        "10.1103/PhysRevD.98.032001", 
+        null, 
+        "1805.05613", 
+        null, 
+        null, 
+        [
+            "BAM-0303"
+        ]
+    ], 
+    "1674528": [
+        "Measurement of the absolute branching fraction of the inclusive semileptonic $\\Lambda_c^+$ decay", 
+        "BESIII", 
+        "10.1103/PhysRevLett.121.251801", 
+        null, 
+        "1805.09060", 
+        null, 
+        null, 
+        []
+    ], 
+    "1681638": [
+        "First measurement of $e^+ e^- \\to pK^{0}_{S}\\bar{n}K^{-} + c.c.$ above open charm threshold", 
+        "BESIII", 
+        "10.1103/PhysRevD.98.032014", 
+        null, 
+        "1807.03468", 
+        null, 
+        null, 
+        []
+    ], 
+    "1689296": [
+        "Amplitude analysis of the $K_{S}K_{S}$ system produced in radiative $J/\\psi$ decays", 
+        "BESIII", 
+        "10.1103/PhysRevD.98.072003", 
+        "2637260", 
+        "1808.06946", 
+        null, 
+        null, 
+        []
+    ], 
+    "1693610": [
+        "Observation of $D^{0(+)}\\to K^0_S\\pi^{0(+)}\\eta^\\prime$ and improved measurement of $D^0\\to K^-\\pi^+\\eta^\\prime$", 
+        "BESIII", 
+        "10.1103/PhysRevD.98.092009", 
+        null, 
+        "1809.03750", 
+        null, 
+        null, 
+        []
+    ], 
+    "1703033": [
+        "Dalitz Plot Analysis of the Decay $\\omega \\rightarrow \\pi^{+}\\pi^{-}\\pi^{0}$", 
+        "BESIII", 
+        "10.1103/PhysRevD.98.112007", 
+        null, 
+        "1811.03817", 
+        null, 
+        null, 
+        []
+    ]
+}

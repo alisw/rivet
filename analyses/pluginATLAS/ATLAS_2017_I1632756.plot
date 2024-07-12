@@ -1,9 +1,10 @@
 # BEGIN PLOT /ATLAS_2017_I1632756/d..
 XTwosidedTicks=1
 YTwosidedTicks=1
-XLabel=$E_\text{T}^\gamma$ [GeV]
-YLabel=$\text{d}\sigma / \text{d}E_\text{T}^\gamma$ [pb GeV${}^{-1}$]
+XLabel=$E_\mathrm{T}^\gamma$ [GeV]
+YLabel=$\mathrm{d}\sigma / \mathrm{d}E_\mathrm{T}^\gamma$ [pb GeV${}^{-1}$]
 LogX=1
+LogY=1
 YMax=5.5E02
 YMin=3.0E-06
 LegendYPos=0.30

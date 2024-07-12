@@ -1,0 +1,33 @@
+Name: MAC_1985_I206052
+Year: 1985
+Summary: Measurement of $R$ at 29 GeV
+Experiment: MAC
+Collider: PEP
+InspireID: 206052
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D31 (1985) 1537, 1985 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: yes
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$ in $e^+e^-$ collisions by MAC at 29 GeV.
+   The individual hadronic and muonic cross sections are also outputted to the yoda file
+   so that ratio $R$ can be recalcuated if runs are combined.'
+Keywords: []
+BibKey: Fernandez:1984yw
+BibTeX: '@article{Fernandez:1984yw,
+      author         = "Fernandez, E. and others",
+      title          = "{Precision Measurement of the Total Cross-section for
+                        $e^+ e^- \to$ Hadrons at a Center-of-mass Energy of
+                        29-{GeV}}",
+      journal        = "Phys. Rev.",
+      volume         = "D31",
+      year           = "1985",
+      pages          = "1537",
+      doi            = "10.1103/PhysRevD.31.1537",
+      reportNumber   = "SLAC-PUB-3479",
+      SLACcitation   = "%%CITATION = PHRVA,D31,1537;%%"
+}'

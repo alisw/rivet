@@ -1,0 +1,12 @@
+BEGIN YODA_SCATTER2D_V2 /REF/BABAR_2001_I558091/d01-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.21, up: 0.21}, sys: {dn: -0.21, up: 0.21}}}
+
+IsRef: 1
+Path: /REF/BABAR_2001_I558091/d01-x01-y01
+Title: doi:10.17182/hepdata.19450.v1/t1
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.057000e+01	0.500000e+00	0.500000e+00	2.520000e+00	2.969848e-01	2.969848e-01
+END YODA_SCATTER2D_V2

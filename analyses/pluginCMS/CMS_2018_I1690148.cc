@@ -9,8 +9,9 @@
 #include "Rivet/Projections/InvMassFinalState.hh"
 #include "Rivet/Projections/MissingMomentum.hh"
 #include "Rivet/Math/MatrixN.hh"
-#include "Rivet/Tools/fjcontrib/Nsubjettiness.hh"
-#include "Rivet/Tools/fjcontrib/EnergyCorrelator.hh"
+
+#include "fastjet/contrib/Nsubjettiness.hh"
+#include "fastjet/contrib/EnergyCorrelator.hh"
 
 namespace Rivet {
 
@@ -20,12 +21,19 @@ namespace Rivet {
   public:
 
     enum Reconstruction { CHARGED=0, ALL=1 };
-    enum Observable { MULT=0, PTDS=1, GA_LHA=2, GA_WIDTH=3, GA_THRUST=4, ECC=5, ZG=6, ZGDR=7, NSD=8, TAU21=9, TAU32=10, TAU43=11, C1_00=12, C1_02=13, C1_05=14, C1_10=15, C1_20=16, C2_00=17, C2_02=18, C2_05=19, C2_10=20, C2_20=21, C3_00=22, C3_02=23, C3_05=24, C3_10=25, C3_20=26, M2_B1=27, N2_B1=28, N3_B1=29, M2_B2=30, N2_B2=31, N3_B2=32 };
+    enum Observable { MULT=0, PTDS=1, GA_LHA=2, GA_WIDTH=3, 
+                      GA_THRUST=4, ECC=5, ZG=6, ZGDR=7, NSD=8, 
+                      TAU21=9, TAU32=10, TAU43=11, C1_00=12, 
+                      C1_02=13, C1_05=14, C1_10=15, C1_20=16, 
+                      C2_00=17, C2_02=18, C2_05=19, C2_10=20, 
+                      C2_20=21, C3_00=22, C3_02=23, C3_05=24, 
+                      C3_10=25, C3_20=26, M2_B1=27, N2_B1=28, 
+                      N3_B1=29, M2_B2=30, N2_B2=31, N3_B2=32 };
     enum Flavor { INCL=0, BOTTOM=1, QUARK=2, GLUON=3 };
 
 
     /// Minimal constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(CMS_2018_I1690148);
+    RIVET_DEFAULT_ANALYSIS_CTOR(CMS_2018_I1690148);
 
 
     /// @name Analysis methods
@@ -58,13 +66,13 @@ namespace Rivet {
 
       // NB. useDecayPhotons=true allows for photons with tau ancestor; photons from hadrons are vetoed by the PromptFinalState;
       DressedLeptons dressed_leptons(prompt_photons, prompt_leptons, 0.1, lepton_cut, true);
-      addProjection(dressed_leptons, "DressedLeptons");
+      declare(dressed_leptons, "DressedLeptons");
 
       // Projection for jets
       VetoedFinalState fsForJets(fs);
       fsForJets.addVetoOnThisFinalState(dressed_leptons);
-      addProjection(FastJets(fsForJets, FastJets::ANTIKT, 0.4,
-                             JetAlg::ALL_MUONS, JetAlg::NO_INVISIBLES), "Jets");
+      declare(FastJets(fsForJets, FastJets::ANTIKT, 0.4,
+                       JetAlg::Muons::ALL, JetAlg::Invisibles::NONE), "Jets");
 
       // Booking of histograms
       int d = 0;
@@ -72,9 +80,7 @@ namespace Rivet {
         for (int o = 0; o < 33; ++o) { // observable
           d += 1;
           for (int f = 0; f < 4; ++f) { // flavor
-            char buffer [20];
-            sprintf(buffer, "d%02d-x01-y%02d", d, f+1);
-            _h[r][o][f] = bookHisto1D(buffer);
+            book(_h[r][o][f], d, 1, f+1);
           }
         }
       }
@@ -82,7 +88,6 @@ namespace Rivet {
 
 
     void analyze(const Event& event) {
-      const double weight = event.weight();
 
       // select ttbar -> lepton+jets
       const vector<DressedLepton>& leptons = applyProjection<DressedLeptons>(event, "DressedLeptons").dressedLeptons();
@@ -168,57 +173,57 @@ namespace Rivet {
           for (int r = 0; r < 2; ++r) {
             int mult = akwta_jet[r].constituents().size();
             // generalized angularities
-            _h[r][MULT][INCL]->fill(mult, weight);
-            _h[r][MULT][f]->fill(mult, weight);
+            _h[r][MULT][INCL]->fill(mult);
+            _h[r][MULT][f]->fill(mult);
             if (mult > 1) {
               double ptds = getPtDs(akwta_jet[r]);
               double ga_lha = calcGA(0.5, 1., akwta_jet[r]);
               double ga_width = calcGA(1., 1., akwta_jet[r]);
               double ga_thrust = calcGA(2., 1., akwta_jet[r]);
-              _h[r][PTDS][INCL]->fill(ptds, weight);
-              _h[r][PTDS][f]->fill(ptds, weight);
-              _h[r][GA_LHA][INCL]->fill(ga_lha, weight);
-              _h[r][GA_LHA][f]->fill(ga_lha, weight);
-              _h[r][GA_WIDTH][INCL]->fill(ga_width, weight);
-              _h[r][GA_WIDTH][f]->fill(ga_width, weight);
-              _h[r][GA_THRUST][INCL]->fill(ga_thrust, weight);
-              _h[r][GA_THRUST][f]->fill(ga_thrust, weight);
+              _h[r][PTDS][INCL]->fill(ptds);
+              _h[r][PTDS][f]->fill(ptds);
+              _h[r][GA_LHA][INCL]->fill(ga_lha);
+              _h[r][GA_LHA][f]->fill(ga_lha);
+              _h[r][GA_WIDTH][INCL]->fill(ga_width);
+              _h[r][GA_WIDTH][f]->fill(ga_width);
+              _h[r][GA_THRUST][INCL]->fill(ga_thrust);
+              _h[r][GA_THRUST][f]->fill(ga_thrust);
             }
             // eccentricity
             if (mult > 3) {
               double ecc = getEcc(akwta_jet[r]);
-              _h[r][ECC][INCL]->fill(ecc, weight);
-              _h[r][ECC][f]->fill(ecc, weight);
+              _h[r][ECC][INCL]->fill(ecc);
+              _h[r][ECC][f]->fill(ecc);
             }
             // N-subjettiness
             if (mult > 2) {
               double tau21 = getTau(2, 1, ca_jet[r]);
-              _h[r][TAU21][INCL]->fill(tau21, weight);
-              _h[r][TAU21][f]->fill(tau21, weight);
+              _h[r][TAU21][INCL]->fill(tau21);
+              _h[r][TAU21][f]->fill(tau21);
             }
             if (mult > 3) {
               double tau32 = getTau(3, 2, ca_jet[r]);
-              _h[r][TAU32][INCL]->fill(tau32, weight);
-              _h[r][TAU32][f]->fill(tau32, weight);
+              _h[r][TAU32][INCL]->fill(tau32);
+              _h[r][TAU32][f]->fill(tau32);
             }
             if (mult > 4) {
               double tau43 = getTau(4, 3, ca_jet[r]);
-              _h[r][TAU43][INCL]->fill(tau43, weight);
-              _h[r][TAU43][f]->fill(tau43, weight);
+              _h[r][TAU43][INCL]->fill(tau43);
+              _h[r][TAU43][f]->fill(tau43);
             }
             // soft drop
             if (mult > 1) {
               vector<double> sd_results = getZg(ca_jet[r]);
               if (sd_results[0] > 0.) {
-                _h[r][ZG][INCL]->fill(sd_results[0], weight);
-                _h[r][ZG][f]->fill(sd_results[0], weight);
-                _h[r][ZGDR][INCL]->fill(sd_results[1], weight);
-                _h[r][ZGDR][f]->fill(sd_results[1], weight);
+                _h[r][ZG][INCL]->fill(sd_results[0]);
+                _h[r][ZG][f]->fill(sd_results[0]);
+                _h[r][ZGDR][INCL]->fill(sd_results[1]);
+                _h[r][ZGDR][f]->fill(sd_results[1]);
               }
             }
             int nsd = getNSD(0.007, -1., ca_jet[r]);
-            _h[r][NSD][INCL]->fill(nsd, weight);
-            _h[r][NSD][f]->fill(nsd, weight);
+            _h[r][NSD][INCL]->fill(nsd);
+            _h[r][NSD][f]->fill(nsd);
             // C-series energy correlation ratios
             if (mult > 1) {
               double cn_00 = getC(1, 0.0, ca_jet[r]);
@@ -226,16 +231,16 @@ namespace Rivet {
               double cn_05 = getC(1, 0.5, ca_jet[r]);
               double cn_10 = getC(1, 1.0, ca_jet[r]);
               double cn_20 = getC(1, 2.0, ca_jet[r]);
-              _h[r][C1_00][INCL]->fill(cn_00, weight);
-              _h[r][C1_02][INCL]->fill(cn_02, weight);
-              _h[r][C1_05][INCL]->fill(cn_05, weight);
-              _h[r][C1_10][INCL]->fill(cn_10, weight);
-              _h[r][C1_20][INCL]->fill(cn_20, weight);
-              _h[r][C1_00][f]->fill(cn_00, weight);
-              _h[r][C1_02][f]->fill(cn_02, weight);
-              _h[r][C1_05][f]->fill(cn_05, weight);
-              _h[r][C1_10][f]->fill(cn_10, weight);
-              _h[r][C1_20][f]->fill(cn_20, weight);
+              _h[r][C1_00][INCL]->fill(cn_00);
+              _h[r][C1_02][INCL]->fill(cn_02);
+              _h[r][C1_05][INCL]->fill(cn_05);
+              _h[r][C1_10][INCL]->fill(cn_10);
+              _h[r][C1_20][INCL]->fill(cn_20);
+              _h[r][C1_00][f]->fill(cn_00);
+              _h[r][C1_02][f]->fill(cn_02);
+              _h[r][C1_05][f]->fill(cn_05);
+              _h[r][C1_10][f]->fill(cn_10);
+              _h[r][C1_20][f]->fill(cn_20);
             }
             if (mult > 2) {
               double cn_00 = getC(2, 0.0, ca_jet[r]);
@@ -243,16 +248,16 @@ namespace Rivet {
               double cn_05 = getC(2, 0.5, ca_jet[r]);
               double cn_10 = getC(2, 1.0, ca_jet[r]);
               double cn_20 = getC(2, 2.0, ca_jet[r]);
-              _h[r][C2_00][INCL]->fill(cn_00, weight);
-              _h[r][C2_02][INCL]->fill(cn_02, weight);
-              _h[r][C2_05][INCL]->fill(cn_05, weight);
-              _h[r][C2_10][INCL]->fill(cn_10, weight);
-              _h[r][C2_20][INCL]->fill(cn_20, weight);
-              _h[r][C2_00][f]->fill(cn_00, weight);
-              _h[r][C2_02][f]->fill(cn_02, weight);
-              _h[r][C2_05][f]->fill(cn_05, weight);
-              _h[r][C2_10][f]->fill(cn_10, weight);
-              _h[r][C2_20][f]->fill(cn_20, weight);
+              _h[r][C2_00][INCL]->fill(cn_00);
+              _h[r][C2_02][INCL]->fill(cn_02);
+              _h[r][C2_05][INCL]->fill(cn_05);
+              _h[r][C2_10][INCL]->fill(cn_10);
+              _h[r][C2_20][INCL]->fill(cn_20);
+              _h[r][C2_00][f]->fill(cn_00);
+              _h[r][C2_02][f]->fill(cn_02);
+              _h[r][C2_05][f]->fill(cn_05);
+              _h[r][C2_10][f]->fill(cn_10);
+              _h[r][C2_20][f]->fill(cn_20);
             }
             if (mult > 3) {
               double cn_00 = getC(3, 0.0, ca_jet[r]);
@@ -260,16 +265,16 @@ namespace Rivet {
               double cn_05 = getC(3, 0.5, ca_jet[r]);
               double cn_10 = getC(3, 1.0, ca_jet[r]);
               double cn_20 = getC(3, 2.0, ca_jet[r]);
-              _h[r][C3_00][INCL]->fill(cn_00, weight);
-              _h[r][C3_02][INCL]->fill(cn_02, weight);
-              _h[r][C3_05][INCL]->fill(cn_05, weight);
-              _h[r][C3_10][INCL]->fill(cn_10, weight);
-              _h[r][C3_20][INCL]->fill(cn_20, weight);
-              _h[r][C3_00][f]->fill(cn_00, weight);
-              _h[r][C3_02][f]->fill(cn_02, weight);
-              _h[r][C3_05][f]->fill(cn_05, weight);
-              _h[r][C3_10][f]->fill(cn_10, weight);
-              _h[r][C3_20][f]->fill(cn_20, weight);
+              _h[r][C3_00][INCL]->fill(cn_00);
+              _h[r][C3_02][INCL]->fill(cn_02);
+              _h[r][C3_05][INCL]->fill(cn_05);
+              _h[r][C3_10][INCL]->fill(cn_10);
+              _h[r][C3_20][INCL]->fill(cn_20);
+              _h[r][C3_00][f]->fill(cn_00);
+              _h[r][C3_02][f]->fill(cn_02);
+              _h[r][C3_05][f]->fill(cn_05);
+              _h[r][C3_10][f]->fill(cn_10);
+              _h[r][C3_20][f]->fill(cn_20);
             }
             // M/N-series energy correlation ratios
             if (mult > 2) {
@@ -277,22 +282,22 @@ namespace Rivet {
               double m2_b2 = getM(2, 2., ca_jet[r]);
               double n2_b1 = getN(2, 1., ca_jet[r]);
               double n2_b2 = getN(2, 2., ca_jet[r]);
-              _h[r][M2_B1][INCL]->fill(m2_b1, weight);
-              _h[r][M2_B2][INCL]->fill(m2_b2, weight);
-              _h[r][N2_B1][INCL]->fill(n2_b1, weight);
-              _h[r][N2_B2][INCL]->fill(n2_b2, weight);
-              _h[r][M2_B1][f]->fill(m2_b1, weight);
-              _h[r][M2_B2][f]->fill(m2_b2, weight);
-              _h[r][N2_B1][f]->fill(n2_b1, weight);
-              _h[r][N2_B2][f]->fill(n2_b2, weight);
+              _h[r][M2_B1][INCL]->fill(m2_b1);
+              _h[r][M2_B2][INCL]->fill(m2_b2);
+              _h[r][N2_B1][INCL]->fill(n2_b1);
+              _h[r][N2_B2][INCL]->fill(n2_b2);
+              _h[r][M2_B1][f]->fill(m2_b1);
+              _h[r][M2_B2][f]->fill(m2_b2);
+              _h[r][N2_B1][f]->fill(n2_b1);
+              _h[r][N2_B2][f]->fill(n2_b2);
             }
             if (mult > 3) {
               double n3_b1 = getN(3, 1., ca_jet[r]);
               double n3_b2 = getN(3, 2., ca_jet[r]);
-              _h[r][N3_B1][INCL]->fill(n3_b1, weight);
-              _h[r][N3_B2][INCL]->fill(n3_b2, weight);
-              _h[r][N3_B1][f]->fill(n3_b1, weight);
-              _h[r][N3_B2][f]->fill(n3_b2, weight);
+              _h[r][N3_B1][INCL]->fill(n3_b1);
+              _h[r][N3_B2][INCL]->fill(n3_b2);
+              _h[r][N3_B1][f]->fill(n3_b1);
+              _h[r][N3_B2][f]->fill(n3_b2);
             }
           }
         }
@@ -381,8 +386,8 @@ namespace Rivet {
 
 
     double getTau(int N, int M, PseudoJet jet) {
-      fjcontrib::Nsubjettiness::NsubjettinessRatio tau_ratio(N, M, fjcontrib::Nsubjettiness::OnePass_WTA_KT_Axes(),
-                                                             fjcontrib::Nsubjettiness::NormalizedMeasure(1.0, 0.4));
+      fjcontrib::NsubjettinessRatio tau_ratio(N, M, fjcontrib::OnePass_WTA_KT_Axes(),
+                                              fjcontrib::NormalizedMeasure(1.0, 0.4));
       return tau_ratio(jet);
     }
 
@@ -448,6 +453,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CMS_2018_I1690148);
+  RIVET_DECLARE_PLUGIN(CMS_2018_I1690148);
 
 }

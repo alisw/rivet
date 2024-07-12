@@ -1,0 +1,37 @@
+Name: CLEOC_2008_I784516
+Year: 2008
+Summary: Pion mass distribution in $\psi(2S)\to\pi\pi J/\psi$
+Experiment: CLEOC
+Collider: CESR
+InspireID: 784516
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richrdson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 78 (2008) 011102
+RunInfo: Any process producing psi(2S)
+Description:
+'Measurement of the mass distribution in $\psi(2S)\to\pi^+\pi^-J/\psi$ and $\pi^0\pi^0J/\psi$
+decays by CLEO. THe data were read from the plots in the paper and may not be corrected for efficiency/acceptance.'
+ValidationInfo:
+  'Herwig7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: CLEO:2008kwj
+BibTeX: '@article{CLEO:2008kwj,
+    author = "Mendez, H. and others",
+    collaboration = "CLEO",
+    title = "{Branching Fractions for Transitions of psi(2S) to J/psi}",
+    eprint = "0804.4432",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CLNS-08-2025, CLEO-08-08",
+    doi = "10.1103/PhysRevD.78.011102",
+    journal = "Phys. Rev. D",
+    volume = "78",
+    pages = "011102",
+    year = "2008"
+}
+'

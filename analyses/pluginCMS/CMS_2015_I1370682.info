@@ -5,6 +5,7 @@ Experiment: CMS
 Collider: LHC
 InspireID: 1370682
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Javier Fernandez <Javier.Fernandez@cern.ch>
  - Jungwan John Goh <Junghwan.Goh@cern.ch>
@@ -50,3 +51,7 @@ BibTeX: '@article{Khachatryan:2015oqa,
       reportNumber   = "CMS-TOP-12-028, CERN-PH-EP-2015-117",
       SLACcitation   = "%%CITATION = ARXIV:1505.04480;%%"
 }'
+
+ReleaseTests:
+ - $A LHC-8-Top-All
+

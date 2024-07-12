@@ -1,0 +1,254 @@
+{
+    "584195": [
+        "Measurement of the mass of the W boson in e+ e- collisions using the fully leptonic channel", 
+        "OPAL", 
+        "10.1140/epjc/s2002-01070-9", 
+        "542674", 
+        "hep-ex/0203026", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2002-022"
+        ]
+    ], 
+    "588105": [
+        "Decay mode independent searches for new scalar bosons with the OPAL detector at LEP", 
+        "OPAL", 
+        "10.1140/epjc/s2002-01115-1", 
+        "555566", 
+        "hep-ex/0206022", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2002-032"
+        ]
+    ], 
+    "595335": [
+        "Charged particle momentum spectra in e+ e- annihilation at s**(1/2) = 192-GeV to 209-GeV", 
+        "OPAL", 
+        "10.1140/epjc/s2002-01121-3", 
+        "581487", 
+        "hep-ex/0209048", 
+        "ins595335", 
+        null, 
+        [
+            "CERN-EP-2002-057"
+        ]
+    ], 
+    "595836": [
+        "Measurement of the cross-section for the process gamma gamma ---> p anti-p at s(e e)**(1/2) = 183-GeV to 189-GeV at LEP", 
+        "OPAL", 
+        "10.1140/epjc/s2003-01171-y", 
+        "582221", 
+        "hep-ex/0209052", 
+        "ins595836", 
+        null, 
+        [
+            "CERN-EP-2002-056"
+        ]
+    ], 
+    "596553": [
+        "Search for a low mass CP odd Higgs boson in e+ e- collisions with the OPAL detector at LEP-2", 
+        "OPAL", 
+        "10.1140/epjc/s2003-01139-y", 
+        "582621", 
+        "hep-ex/0209068", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2002-058"
+        ]
+    ], 
+    "598373": [
+        "Search for the standard model Higgs boson with the OPAL detector at LEP", 
+        "OPAL", 
+        "10.1140/epjc/s2002-01092-3", 
+        "582983", 
+        "hep-ex/0209078", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2002-059"
+        ]
+    ], 
+    "598951": [
+        "Multiphoton production in e+ e- collisions at s**(1/2) = 181-GeV to 209-GeV", 
+        "OPAL", 
+        "10.1140/epjc/s2002-01074-5", 
+        "584948", 
+        "hep-ex/0210016", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2002-060"
+        ]
+    ], 
+    "599181": [
+        "Inclusive analysis of the b quark fragmentation function in Z decays at LEP", 
+        "OPAL", 
+        "10.1140/epjc/s2003-01229-x", 
+        "571879", 
+        "hep-ex/0210031", 
+        "ins599181", 
+        null, 
+        [
+            "CERN-EP-2002-051"
+        ]
+    ], 
+    "600094": [
+        "Search for nearly mass degenerate charginos and neutralinos at LEP", 
+        "OPAL", 
+        "10.1140/epjc/s2003-01237-x", 
+        "582984", 
+        "hep-ex/0210043", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2002-063"
+        ]
+    ], 
+    "603172": [
+        "A Measurement of the tau- ---> mu- anti-nu(mu) nu(tau) branching ratios", 
+        "OPAL", 
+        "10.1016/S0370-2693(02)03020-4", 
+        "593504", 
+        "hep-ex/0211066", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2002-085"
+        ]
+    ], 
+    "605865": [
+        "A Measurement of semileptonic B decays to narrow orbitally excited charm mesons", 
+        "OPAL", 
+        "10.1140/epjc/s2003-01322-2", 
+        "599996", 
+        "hep-ex/0301018", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2002-094"
+        ]
+    ], 
+    "611415": [
+        "Dijet production in photon-photon collisions at s(ee)**(1/2) from 189-GeV to 209-GeV", 
+        "OPAL", 
+        "10.1140/epjc/s2003-01360-8", 
+        "599729", 
+        "hep-ex/0301013", 
+        "ins611415", 
+        null, 
+        [
+            "CERN-EP-2002-093"
+        ]
+    ], 
+    "613711": [
+        "Bose-Einstein correlations of pi0 pairs from hadronic Z0 decays", 
+        "OPAL", 
+        "10.1016/S0370-2693(03)00337-X", 
+        "606019", 
+        "hep-ex/0302027", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-005"
+        ]
+    ], 
+    "615637": [
+        "Test of noncommutative QED in the process e+ e- ---> gamma gamma at LEP", 
+        "OPAL", 
+        "10.1016/j.physletb.2003.05.008", 
+        "609953", 
+        "hep-ex/0303035", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-010"
+        ]
+    ], 
+    "618779": [
+        "Search for stable and longlived massive charged particles in e+ e- collisions at s**(1/2) = 130-GeV to 209-GeV", 
+        "OPAL", 
+        "10.1016/S0370-2693(03)00639-7", 
+        "614070", 
+        "hep-ex/0305031", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-016"
+        ]
+    ], 
+    "619015": [
+        "Search for pair produced leptoquarks in $e^{+} e^{-}$ interactions at $\\sqrt{s}$ approximately = 189-GeV to 209-GeV", 
+        "OPAL", 
+        "10.1140/epjc/s2003-01325-y", 
+        "617096", 
+        "hep-ex/0305053", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-021"
+        ]
+    ], 
+    "619171": [
+        "Search for the standard model Higgs boson at LEP", 
+        "LEP Working Group for Higgs boson searches", 
+        "10.1016/S0370-2693(03)00614-2", 
+        "610122", 
+        "hep-ex/0306033", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-011"
+        ]
+    ], 
+    "619533": [
+        "Measurement of isolated prompt photon production in photon photon collisions at s(ee)**(1/2) = 183 GeV - 209-GeV", 
+        "OPAL", 
+        "10.1140/epjc/s2003-01359-1", 
+        "618033", 
+        "hep-ex/0305075", 
+        "ins619533", 
+        null, 
+        [
+            "CERN-EP-2003-023"
+        ]
+    ], 
+    "626317": [
+        "Measurement of heavy quark forward backward asymmetries and average B mixing using leptons in hadronic Z decays", 
+        "OPAL", 
+        "10.1016/j.physletb.2003.10.022", 
+        "638574", 
+        "hep-ex/0308051", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-039"
+        ]
+    ], 
+    "626318": [
+        "Search for the single production of doubly charged Higgs bosons and constraints on their couplings from Bhabha scattering", 
+        "OPAL", 
+        "10.1016/j.physletb.2003.10.034", 
+        "638962", 
+        "hep-ex/0308052", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-041"
+        ]
+    ], 
+    "630099": [
+        "Study of Z pair production and anomalous couplings in e+ e- collisions at s**(1/2) between 190-GeV and 209-GeV", 
+        "OPAL", 
+        "10.1140/epjc/s2003-01467-x", 
+        "820397", 
+        "hep-ex/0310013", 
+        "ins630099", 
+        null, 
+        [
+            "CERN-EP-2003-049"
+        ]
+    ]
+}

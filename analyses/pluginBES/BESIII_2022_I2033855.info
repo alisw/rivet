@@ -1,0 +1,36 @@
+Name: BESIII_2022_I2033855
+Year: 2022
+Summary: Analysis of $\psi(2S)\to\gamma\chi_{c(0,2)}$ decays with $\chi_{c(0,2)}\to \Xi^-\bar{\Xi}^+/\Xi^0\bar{\Xi}^0$
+Experiment: BESIII
+Collider: BEPC
+InspireID: 2033855
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - JHEP06(2022)074
+RunInfo: e+e- > psi(2S) 
+Beams: [e-, e+]
+Energies: [3.686]
+Description:
+  'Analysis of the angular distribution of the photons and baryons produced in
+   $\psi(2S)\to\gamma\chi_{c(0,2)}$ decays with $\chi_{c(0,2)}\to \Xi^-\bar{\Xi}^+/\Xi^0\bar{\Xi}^0$
+   Gives information about the decay and is useful for testing correlations in charmonium decays.
+   N.B. the distributions were read from the figures in the paper and are not corrected and should only be used qualatively, however the $\alpha$ results are fully corrected.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2022mfx
+BibTeX: '@article{BESIII:2022mfx,
+    author = "Ablikim, Medina and others",
+    collaboration = "BESIII",
+    title = "{Study of the processes $\chi_{cJ} \to \Xi^- \bar{\Xi}^+$ and $\Xi^0 \bar{\Xi}^0$}",
+    eprint = "2202.08058",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1007/JHEP06(2022)074",
+    month = "2",
+    year = "2022"
+}
+'

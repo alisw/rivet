@@ -1,0 +1,42 @@
+Name: LHCB_2018_I1662483
+Year: 2018
+Summary: Measurement of the forward top pair production cross-section in the dilepton channel
+Experiment: LHCB
+Collider: LHC
+InspireID: 1662483
+Status: VALIDATED
+Authors:
+ - Stephen Farry <stephen.farry@cern.ch>
+References:
+- JHEP 08 (2018) 174
+- arXiv:hep-ex/1803.05188
+- LHCB-PAPER-2017-050, CERN-EP-2018-022
+RunInfo: Proton-proton collisions at c.o.m. energy of 13 TeV producing hard QCD events containing a top--anti-top quark pair decaying into dilepton channel accompanied by a b-jet in the final state.
+NumEvents: 100000
+Beams: [p+, p+]
+Energies: [13000]
+NeedCrossSection: True
+Luminosity_fb: 1.93
+Description:
+  'Measurement of the top pair cross-section in the dilepton channel, where a muon, electron and one $b$-jet are required to be present in the event. A fiducial cross-section is measuremed where the leptons and jets are required to be within the pseudorapidity acceptance of the LHCb acceptance ($2<\eta<4.5$), and to have a transverse momentum greater than 20 GeV.
+  Additionally leptons are required to be separated from each other by a radial distance ($\Delta R$) of 0.1, and from the $b$-jet by a distance of 0.5.'
+Keywords: [Forward, Top, LHCb]
+BibKey: Aaij:2018imy
+BibTeX: '@article{Aaij:2018imy,
+      author         = "Aaij, Roel and others",
+      title          = "{Measurement of forward top pair production in the dilepton channel in $pp$ collisions at $\sqrt{s}=13$ TeV}",
+      collaboration  = "LHCb",
+      journal        = "JHEP",
+      volume         = "08",
+      year           = "2018",
+      pages          = "174",
+      doi            = "10.1007/JHEP08(2018)174",
+      eprint         = "1803.05188",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "LHCb-PAPER-2017-050, CERN-EP-2018-022,
+                        LHCB-PAPER-2017-050",
+      SLACcitation   = "%%CITATION = ARXIV:1803.05188;%%"
+}'
+ReleaseTests:
+ - $A LHC-13-Top-All

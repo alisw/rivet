@@ -1,0 +1,35 @@
+Name: BESIII_2022_I2166668
+Year: 2022
+Summary: $\chi_{cJ}\to \Lambda\bar\Lambda^0\eta$ decays
+Experiment: BESIII
+Collider: BEPC 
+InspireID: 2166668
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 106 (2022) 7, 072004
+RunInfo: Any process producing chi_cJ, originally e+e-
+Description:
+  'Measurements of mass distributions in $\chi_{cJ}\to \Lambda\bar\Lambda^0\eta$ decays.
+The data were read from the plots in the paper and may not be corrected for efficiency but the
+background given in the paper has been subtracted.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2022rsg
+BibTeX: '@article{BESIII:2022rsg,
+    author = "Ablikim, M. and others",
+    collaboration = "BESIII",
+    title = "{Observation of \ensuremath{\chi}cJ\textrightarrow{}\ensuremath{\Lambda}\ensuremath{\Lambda}\textasciimacron{}\ensuremath{\eta}}",
+    doi = "10.1103/PhysRevD.106.072004",
+    journal = "Phys. Rev. D",
+    volume = "106",
+    number = "7",
+    pages = "072004",
+    year = "2022"
+}
+'

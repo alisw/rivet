@@ -1,0 +1,36 @@
+Name: BELLE_2009_I810744
+Year: 2009
+Summary: Pion Mass Spectrum in $\Upsilon(4S)\to\Upsilon(1S)\pi^+\pi^-$
+Experiment: BELLE
+Collider: KEKB
+InspireID: 810744
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D79 (2009) 051103
+RunInfo: Any process producing Upsilon(4S), original e+e-
+Description:
+  'Measurement of the $\pi^+\pi^-$ mass Spectrum in $\Upsilon(4S)\to\Upsilon(1S)\pi^+\pi^-$ decays.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Sokolov:2009zy
+BibTeX: '@article{Sokolov:2009zy,
+      author         = "Sokolov, A. and others",
+      title          = "{Measurement of the branching fraction for the decay
+                        Upsilon(4S) ---&gt; Upsilon(1S) pi+ pi-}",
+      collaboration  = "Belle",
+      journal        = "Phys. Rev.",
+      volume         = "D79",
+      year           = "2009",
+      pages          = "051103",
+      doi            = "10.1103/PhysRevD.79.051103",
+      eprint         = "0901.1431",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "BELLE-NOTE-1096",
+      SLACcitation   = "%%CITATION = ARXIV:0901.1431;%%"
+}'

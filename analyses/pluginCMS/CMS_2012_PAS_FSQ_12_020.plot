@@ -8,9 +8,9 @@ RatioPlotErrorBandColor=grey!40!yellow!60
 # BEGIN PLOT /CMS_2012_PAS_FSQ_12_020/d05-x01-y01
 XTwosidedTicks=1
 YTwosidedTicks=1
-Title=\large{TransMAX charged-particle density $\sqrt{s}=7\,\text{TeV}$}
-XLabel=\large{$p_\text{T}^{\text{max}}$[GeV]}
-YLabel=\large{$(1/N_\text{events})\; dN_\text{ch}\,/d\eta\, d\phi$}
+Title={TransMAX charged-particle density $\sqrt{s}=7\,\mathrm{TeV}$}
+XLabel={$p_\mathrm{T}^{\mathrm{max}}$[GeV]}
+YLabel={$(1/N_\mathrm{events})\; dN_\mathrm{ch}\,/d\eta\, d\phi$}
 LogY=0
 LegendXPos=0.40
 LegendYPos=0.50
@@ -19,9 +19,9 @@ LegendYPos=0.50
 # BEGIN PLOT /CMS_2012_PAS_FSQ_12_020/d06-x01-y01
 XTwosidedTicks=1
 YTwosidedTicks=1
-Title=\large{TransMIN charged-particle density $\sqrt{s}=7\,\text{TeV}$}
-XLabel=\large{$p_\text{T}^{\text{max}}$[GeV]}
-YLabel=\large{$(1/N_\text{events})\; dN_\text{ch}\,/d\eta\, d\phi$}
+Title={TransMIN charged-particle density $\sqrt{s}=7\,\mathrm{TeV}$}
+XLabel={$p_\mathrm{T}^{\mathrm{max}}$[GeV]}
+YLabel={$(1/N_\mathrm{events})\; dN_\mathrm{ch}\,/d\eta\, d\phi$}
 LogY=0
 LegendXPos=0.40
 LegendYPos=0.50
@@ -30,9 +30,9 @@ LegendYPos=0.50
 # BEGIN PLOT /CMS_2012_PAS_FSQ_12_020/d07-x01-y01
 XTwosidedTicks=1
 YTwosidedTicks=1
-Title=\large{TransDIF charged-particle density $\sqrt{s}=7\,\text{TeV}$}
-XLabel=\large{$p_\text{T}^{\text{max}}$[GeV]}
-YLabel=\large{$(1/N_\text{events})\; dN_\text{ch}\,/d\eta\, d\phi$}
+Title={TransDIF charged-particle density $\sqrt{s}=7\,\mathrm{TeV}$}
+XLabel={$p_\mathrm{T}^{\mathrm{max}}$[GeV]}
+YLabel={$(1/N_\mathrm{events})\; dN_\mathrm{ch}\,/d\eta\, d\phi$}
 LogY=0
 LegendXPos=0.40
 LegendYPos=0.50
@@ -41,9 +41,9 @@ LegendYPos=0.50
 # BEGIN PLOT /CMS_2012_PAS_FSQ_12_020/d08-x01-y01
 XTwosidedTicks=1
 YTwosidedTicks=1
-Title=\large{TransMAX charged $p^{\text{sum}}_{\text{T}}$ density $\sqrt{s}=7\,\text{TeV}$}
-XLabel=\large{$p_\text{T}^{\text{max}}$[GeV]}
-YLabel=\large{$(1/N_\text{events})\; dp_\text{T}^{\text{sum}}\,/d\eta\, d\phi$ [GeV]}
+Title={TransMAX charged $p^{\mathrm{sum}}_{\mathrm{T}}$ density $\sqrt{s}=7\,\mathrm{TeV}$}
+XLabel={$p_\mathrm{T}^{\mathrm{max}}$[GeV]}
+YLabel={$(1/N_\mathrm{events})\; dp_\mathrm{T}^{\mathrm{sum}}\,/d\eta\, d\phi$ [GeV]}
 LegendXPos=0.40
 LegendYPos=0.50
 LogY=0
@@ -52,9 +52,9 @@ LogY=0
 # BEGIN PLOT /CMS_2012_PAS_FSQ_12_020/d09-x01-y01
 XTwosidedTicks=1
 YTwosidedTicks=1
-Title=\large{TransMIN charged $p^{\text{sum}}_{\text{T}}$ density $\sqrt{s}=7\,\text{TeV}$}
-XLabel=\large{$p_\text{T}^{\text{max}}$[GeV]}
-YLabel=\large{$(1/N_\text{events})\; dp_\text{T}^{\text{sum}}\,/d\eta\, d\phi$ [GeV]}
+Title={TransMIN charged $p^{\mathrm{sum}}_{\mathrm{T}}$ density $\sqrt{s}=7\,\mathrm{TeV}$}
+XLabel={$p_\mathrm{T}^{\mathrm{max}}$[GeV]}
+YLabel={$(1/N_\mathrm{events})\; dp_\mathrm{T}^{\mathrm{sum}}\,/d\eta\, d\phi$ [GeV]}
 LegendXPos=0.40
 LegendYPos=0.50
 LogY=0
@@ -63,9 +63,9 @@ LogY=0
 # BEGIN PLOT /CMS_2012_PAS_FSQ_12_020/d10-x01-y01
 XTwosidedTicks=1
 YTwosidedTicks=1
-Title=\large{TransDIF charged $p^{\text{sum}}_{\text{T}}$ density $\sqrt{s}=7\,\text{TeV}$}
-XLabel=\large{$p_\text{T}^{\text{max}}$[GeV]}
-YLabel=\large{$(1/N_\text{events})\; dp_\text{T}^{\text{sum}}\,/d\eta\, d\phi$ [GeV]}
+Title={TransDIF charged $p^{\mathrm{sum}}_{\mathrm{T}}$ density $\sqrt{s}=7\,\mathrm{TeV}$}
+XLabel={$p_\mathrm{T}^{\mathrm{max}}$[GeV]}
+YLabel={$(1/N_\mathrm{events})\; dp_\mathrm{T}^{\mathrm{sum}}\,/d\eta\, d\phi$ [GeV]}
 LegendXPos=0.40
 LegendYPos=0.50
 LogY=0

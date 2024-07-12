@@ -10,20 +10,26 @@ namespace Rivet {
   class Cmp;
 
 
-  /// Enumerate the possible states of a Cmp object.
-  enum CmpState {
-    UNDEFINED = -2,   ///< Undefined state.
-    ASC = -1,         ///< The two objects are ordered (in ascending order).
-    ORDERED = -1,     ///< The two objects are ordered (in ascending order).
-    EQUAL = 0,        ///< The two objects are equivalent.
-    EQUIVALENT = 0,   ///< The two objects are equivalent.
-    DESC = 1,         ///< The two objects are anti-ordered (in descending order).
-    ANTIORDERED = 1,  ///< The two objects are anti-ordered (in descending order).
-    UNORDERED = 1,    ///< The two objects are anti-ordered (in descending order). // DEPRECATED!
-    UNEQUAL = 2,      ///< The two objects are unequal, without ordering implications.
-    INEQUIVALENT = 2, ///< The two objects are unequal, without ordering implications.
+  /// Enumeration of possible value-comparison states
+  enum class CmpState {
+    UNDEF, EQ, NEQ
   };
 
+  /// Representation of a CmpState as a string
+  inline std::string toString(const CmpState& cmpst) {
+    switch (cmpst) {
+      case CmpState::UNDEF: return "Cmp: ??";
+      case CmpState::EQ:    return "Cmp: ==";
+      case CmpState::NEQ:   return "Cmp: !=";
+    }
+    throw Error("CmpState value not in enum list");
+  }
+
+  /// Stream a CmpState via its toString representation
+  inline std::ostream& operator << (std::ostream& os, const CmpState& obj) {
+    os << toString(obj);
+    return os;
+  }
 
 }
 

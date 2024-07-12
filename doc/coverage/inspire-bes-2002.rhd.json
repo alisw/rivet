@@ -1,0 +1,38 @@
+{
+    "535802": [
+        "First measurement of the branching fraction of the decay psi(2S) ---> tau+ tau-", 
+        "BES", 
+        "10.1103/PhysRevD.65.052004", 
+        null, 
+        "hep-ex/0010072", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9163"
+        ]
+    ], 
+    "552757": [
+        "Measurements of the cross-section for e+ e ---> hadrons at center-of-mass energies from 2-GeV to 5-GeV", 
+        "BES", 
+        "10.1103/PhysRevLett.88.101802", 
+        null, 
+        "hep-ex/0102003", 
+        "ins552757", 
+        null, 
+        [
+            "SLAC-PUB-8938"
+        ]
+    ], 
+    "598398": [
+        "A Measurement of psi(2S) resonance parameters", 
+        "BES", 
+        "10.1016/S0370-2693(02)02909-X", 
+        null, 
+        "hep-ph/0209354", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9570"
+        ]
+    ]
+}

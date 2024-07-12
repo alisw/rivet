@@ -1,0 +1,90 @@
+{
+    "363188": [
+        "A Study of four fermion processes at LEP", 
+        "L3", 
+        "10.1016/0370-2693(94)90478-2", 
+        "256567", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-207"
+        ]
+    ], 
+    "374696": [
+        "Measurement of cross-sections and leptonic forward - backward asymmetries at the z pole and determination of electroweak parameters", 
+        "L3", 
+        "10.1007/BF01574160", 
+        "261072", 
+        null, 
+        "ins374696", 
+        null, 
+        [
+            "CERN-PPE-94-45", 
+            "CERN-PPE-94-045"
+        ]
+    ], 
+    "374698": [
+        "Measurement of inclusive production of neutral hadrons from Z decays", 
+        "L3", 
+        "10.1016/0370-2693(94)90453-7", 
+        "261272", 
+        null, 
+        "ins374698", 
+        null, 
+        [
+            "CERN-PPE-94-53", 
+            "CERN-PPE-94-053"
+        ]
+    ], 
+    "374700": [
+        "Measurement of the inclusive B ---> tau-neutrino X branching ratio", 
+        "L3", 
+        "10.1016/0370-2693(94)90880-X", 
+        "262973", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-68", 
+            "CERN-PPE-94-068"
+        ]
+    ], 
+    "377106": [
+        "Measurement of the B0 - anti-B0 mixing parameter and the Z ---> b anti-b forward - backward asymmetry", 
+        "L3", 
+        "10.1016/0370-2693(94)90391-3", 
+        "265435", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-089", 
+            "CERN-PPE-94-89"
+        ]
+    ], 
+    "378295": [
+        "The L3 silicon microvertex detector", 
+        "L3 SMD", 
+        "10.1016/0168-9002(94)91357-9", 
+        "267525", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-122"
+        ]
+    ], 
+    "381044": [
+        "A Measurement of tau polarization at LEP", 
+        "L3", 
+        "10.1016/0370-2693(94)90316-6", 
+        "269804", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-145"
+        ]
+    ]
+}

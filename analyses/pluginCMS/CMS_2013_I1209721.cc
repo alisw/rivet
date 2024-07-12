@@ -1,5 +1,4 @@
 #include "Rivet/Analysis.hh"
-#include "Rivet/Tools/BinnedHistogram.hh"
 #include "Rivet/Projections/FinalState.hh"
 #include "Rivet/Projections/FastJets.hh"
 #include "Rivet/Projections/ZFinder.hh"
@@ -22,7 +21,7 @@ namespace Rivet {
     /// Book projections and histograms
     void init() {
       // Full final state
-      const FinalState fs(-5.0,5.0);
+      const FinalState fs((Cuts::etaIn(-5.0,5.0)));
       declare(fs, "FS");
       // Z finders for electrons and muons
       Cut cuts = Cuts::abseta < 2.4 && Cuts::pT > 20*GeV;
@@ -36,21 +35,21 @@ namespace Rivet {
 
       // Book histograms from data
       for (size_t i = 0; i < 2; ++i) {
-        _histDeltaPhiZJ1_1[i]  = bookHisto1D(1+i*9, 1, 1);
-        _histDeltaPhiZJ1_2[i]  = bookHisto1D(2+i*9, 1, 1);
-        _histDeltaPhiZJ1_3[i]  = bookHisto1D(4+i*9, 1, 1);
-        _histDeltaPhiZJ2_3[i]  = bookHisto1D(5+i*9, 1, 1);
-        _histDeltaPhiZJ3_3[i]  = bookHisto1D(3+i*9, 1, 1);
-        _histDeltaPhiJ1J2_3[i] = bookHisto1D(6+i*9, 1, 1);
-        _histDeltaPhiJ1J3_3[i] = bookHisto1D(7+i*9, 1, 1);
-        _histDeltaPhiJ2J3_3[i] = bookHisto1D(8+i*9, 1, 1);
-        _histTransvThrust[i]   = bookHisto1D(9+i*9, 1, 1);
+        book(_histDeltaPhiZJ1_1[i]  ,1+i*9, 1, 1);
+        book(_histDeltaPhiZJ1_2[i]  ,2+i*9, 1, 1);
+        book(_histDeltaPhiZJ1_3[i]  ,4+i*9, 1, 1);
+        book(_histDeltaPhiZJ2_3[i]  ,5+i*9, 1, 1);
+        book(_histDeltaPhiZJ3_3[i]  ,3+i*9, 1, 1);
+        book(_histDeltaPhiJ1J2_3[i] ,6+i*9, 1, 1);
+        book(_histDeltaPhiJ1J3_3[i] ,7+i*9, 1, 1);
+        book(_histDeltaPhiJ2J3_3[i] ,8+i*9, 1, 1);
+        book(_histTransvThrust[i]   ,9+i*9, 1, 1);
       }
     }
 
 
     void analyze(const Event& event) {
-      const double weight = event.weight();
+      const double weight = 1.0;
 
       // Apply the Z finders
       const ZFinder& zfe = apply<ZFinder>(event, "ZFE");
@@ -58,8 +57,8 @@ namespace Rivet {
 
       // Choose the Z candidate (there must be one)
       if (zfe.empty() && zfm.empty()) vetoEvent;
-      const ParticleVector& z = !zfm.empty() ? zfm.bosons() : zfe.bosons();
-      const ParticleVector& leptons = !zfm.empty() ? zfm.constituents() : zfe.constituents();
+      const Particles& z = !zfm.empty() ? zfm.bosons() : zfe.bosons();
+      const Particles& leptons = !zfm.empty() ? zfm.constituents() : zfe.constituents();
 
       // Determine whether we are in the boosted regime
       const bool is_boosted = (z[0].pT() > 150*GeV);
@@ -169,6 +168,6 @@ namespace Rivet {
   };
 
 
-  DECLARE_RIVET_PLUGIN(CMS_2013_I1209721);
+  RIVET_DECLARE_PLUGIN(CMS_2013_I1209721);
 
 }

@@ -1,6 +1,7 @@
 from __future__ import print_function
 import os, re
 from .util import texpand
+import sys
 
 class PlotParser(object):
     """
@@ -8,6 +9,7 @@ class PlotParser(object):
     """
 
     pat_begin_block = re.compile(r'^(#*\s*)?BEGIN (\w+) ?(\S+)?')
+    pat_begin_name_block = re.compile(r'^(#*\s*)?BEGIN (\w+) ?(\S+)? ?(\w+)?')
     pat_end_block =   re.compile(r'^(#*\s*)?END (\w+)')
     pat_comment = re.compile(r'^\s*#|^\s*$')
     pat_property = re.compile(r'^(\w+?)\s*=\s*(.*)$')
@@ -62,7 +64,7 @@ class PlotParser(object):
         from rivet.aopaths import AOPath
         try:
             aop = AOPath(hpath)
-        except:
+        except ValueError:
             print("Found analysis object with non-standard path structure:", hpath, "... skipping")
             return None
 
@@ -83,6 +85,47 @@ class PlotParser(object):
         return ret[section]
 
 
+    def getSections(self, sections, hpath):
+        """Get all sections for a histogram from a .plot file.
+
+        Parameters
+        ----------
+        section : ('SPECIAL')
+            The section that should be extracted. Only Specials allowed to occur multiple times.
+        hpath : str
+            The histogram path, i.e. /AnalysisID/HistogramID .
+
+        TODO:
+         * Caching! The result of the lookup is not cached so every call requires a file to be searched for and opened.
+        """
+        if sections not in ['SPECIAL']:
+            raise ValueError("Can't parse section \'%s\'" % section)
+
+        ## Decompose the histo path and remove the /REF prefix if necessary
+        from rivet.aopaths import AOPath
+        try:
+            aop = AOPath(hpath)
+        except ValueError:
+            print("Found analysis object with non-standard path structure:", hpath, "... skipping")
+            return None
+
+        ## Assemble the list of headers from any matching plotinfo paths and additional style files
+        plotfile = aop.basepathparts()[0] + ".plot"
+        ret = {'SPECIAL': {}}
+        for pidir in self.plotpaths:
+            plotpath = os.path.join(pidir, plotfile)
+            self._readNamedHeadersFromFile(plotpath, ret, sections, aop.basepath())
+            ## Only read from the first file we find, otherwise erroneous attributes
+            ## in dodgy plotinfo files can't be overridden by user
+            if ret[sections]: #< neatly excludes both empty dicts and None, used as null defaults above
+                break
+
+        ## Also look for further attributes in any user-specified files
+        for extrafile in self.addfiles:
+            self._readNamedHeadersFromFile(extrafile, ret, sections, hpath)
+        return ret[sections]
+
+
     def _readHeadersFromFile(self, plotfile, ret, section, hpath):
         """Get a section for a histogram from a .plot file."""
         if not os.access(plotfile, os.R_OK):
@@ -96,7 +139,11 @@ class PlotParser(object):
                 tag, pathpat = m.group(2,3)
                 # pathpat could be a regex
                 if pathpat not in self.pat_paths:
-                    self.pat_paths[pathpat] = re.compile(pathpat)
+                    try:
+                        self.pat_paths[pathpat] = re.compile(pathpat)
+                    except TypeError:
+                        print("Error reading plot file for {}. Skipping.".format(plotfile))
+                        return
                 if tag == section:
                     m2 = self.pat_paths[pathpat].match(hpath)
                     if m2:
@@ -140,6 +187,40 @@ class PlotParser(object):
         f.close()
 
 
+    def _readNamedHeadersFromFile(self, plotfile, ret, section, hpath):
+        """Get a section for a histogram from a .plot file."""
+        if not os.access(plotfile, os.R_OK):
+            return
+        startreading = False
+        name = ''
+        f = open(plotfile)
+        for line in f:
+            m = self.pat_begin_name_block.match(line)
+            if m:
+                tag, pathpat, name = m.group(2,3,4)
+                if name == None:
+                    continue
+                # pathpat could be a regex
+                if pathpat not in self.pat_paths:
+                    self.pat_paths[pathpat] = re.compile(pathpat)
+                if tag == section:
+                    if self.pat_paths[pathpat].match(hpath):
+                        startreading = True
+                        if section in ['SPECIAL']:
+                            ret[section][name] = ''
+                        continue
+            if not startreading:
+                continue
+            if self.isEndMarker(line, section):
+                startreading = False
+                continue
+            elif self.isComment(line):
+                continue
+            if section in ['SPECIAL']:
+                ret[section][name] += line
+        f.close()
+
+
     def getHeaders(self, hpath):
         """Get the plot headers for histogram hpath.
 
@@ -180,6 +261,22 @@ class PlotParser(object):
         :meth:`getSection`
         """
         return self.getSection('SPECIAL', hpath)
+
+    def getSpecials(self, hpath):
+        """Get all SPECIAL sections for histogram hpath.
+
+        The SPECIAL section is only available in a few analyses.
+
+        Parameters
+        ----------
+        hpath : str
+            Histogram path. Must have the form /AnalysisID/HistogramID .
+
+        See also
+        --------
+        :meth:`getSections`
+        """
+        return self.getSections('SPECIAL', hpath)
 
 
     def getHistogramOptions(self, hpath):

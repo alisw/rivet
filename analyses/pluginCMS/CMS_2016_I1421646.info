@@ -5,14 +5,18 @@ Experiment: CMS
 Collider: LHC
 InspireID: 1421646
 Status: VALIDATED
+Reentrant: true
 Authors:
- - Giannis Flouris, Panos Kokkas, Evangelos Paradas
- - Klaus Rabbertz, Georg Sieber
+ - Giannis Flouris
+ - Panos Kokkas
+ - Evangelos Paradas
+ - Klaus Rabbertz
+ - Georg Sieber
 References:
  - arXiv:1602.04384  [hep-ex]
  - CERN-PH-EP-2016-013
 RunInfo:
-   QCD at $\sqrt{s} = 8\;\TeV$
+   QCD at $\sqrt{s} = 8~\TeV$
 Beams: [p+, p+]
 Energies: [8000]
 PtCuts: [100]

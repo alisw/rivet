@@ -1,0 +1,255 @@
+{
+    "283470": [
+        "Measurement of $g$(a) and $g(V$), the Neutral Current Coupling Constants to Leptons", 
+        "L3", 
+        "10.1016/0370-2693(90)90603-4", 
+        "202904", 
+        null, 
+        "ins283470", 
+        null, 
+        [
+            "L3-003"
+        ]
+    ], 
+    "286423": [
+        "Measurement of $\\Z^0$ Decays to Hadrons and a Precise Determination of the Number of Neutrino Species", 
+        "L3", 
+        "10.1016/0370-2693(90)90476-M", 
+        "206734", 
+        null, 
+        "ins286423", 
+        null, 
+        [
+            "L3-004", 
+            "CALT-68-1615"
+        ]
+    ], 
+    "289140": [
+        "The Construction of the L3 Experiment", 
+        "L3", 
+        "10.1016/0168-9002(90)90250-A", 
+        "211760", 
+        null, 
+        null, 
+        null, 
+        [
+            "L3-000"
+        ]
+    ], 
+    "295040": [
+        "Measurement of $\\Z^0 \\to b \\bar{b}$ Decay Properties", 
+        "L3", 
+        "10.1016/0370-2693(90)91666-Y", 
+        "205478", 
+        null, 
+        "ins295040", 
+        null, 
+        [
+            "L3-006"
+        ]
+    ], 
+    "297170": [
+        "Search for the neutral higgs boson in $Z^0$ decay", 
+        "L3", 
+        "10.1016/0370-2693(90)90040-D", 
+        "209423", 
+        null, 
+        null, 
+        null, 
+        [
+            "L3-010"
+        ]
+    ], 
+    "297171": [
+        "Mass limits for excited electrons and muons from Z0 decay", 
+        "L3", 
+        "10.1016/0370-2693(90)91066-K", 
+        "209813", 
+        null, 
+        null, 
+        null, 
+        [
+            "L3-007"
+        ]
+    ], 
+    "297172": [
+        "A Determination of electroweak parameters from Z0 ---> mu+ mu- (gamma)", 
+        "L3", 
+        "10.1016/0370-2693(90)90926-W", 
+        "209454", 
+        null, 
+        "ins297172", 
+        null, 
+        [
+            "L3-008"
+        ]
+    ], 
+    "298078": [
+        "Determination of alpha-s from jet multiplicities measured on the Z0 resonance", 
+        "L3", 
+        "10.1016/0370-2693(90)90323-X", 
+        "209987", 
+        null, 
+        "ins298078", 
+        null, 
+        [
+            "L3-011"
+        ]
+    ], 
+    "298079": [
+        "A Precision measurement of the number of neutrino species", 
+        "L3", 
+        "10.1016/0370-2693(90)91267-F", 
+        "210328", 
+        null, 
+        "ins298079", 
+        null, 
+        [
+            "L3-009"
+        ]
+    ], 
+    "298080": [
+        "A Test of QCD based on four jet events from Z0 decays", 
+        "L3", 
+        "10.1016/0370-2693(90)90043-6", 
+        "209989", 
+        null, 
+        null, 
+        null, 
+        [
+            "L3-012"
+        ]
+    ], 
+    "298843": [
+        "Test of QED in e+ e- ---> gamma gamma at LEP", 
+        "L3", 
+        "10.1016/0370-2693(90)91177-D", 
+        "211117", 
+        null, 
+        "ins298843", 
+        null, 
+        [
+            "L3-013"
+        ]
+    ], 
+    "298845": [
+        "Search for excited taus from Z0 decay", 
+        "L3", 
+        "10.1016/0370-2693(90)91178-E", 
+        "211119", 
+        null, 
+        null, 
+        null, 
+        [
+            "L3-014"
+        ]
+    ], 
+    "299248": [
+        "Search for the neutral Higgs bosons of the minimal supersymmetric standard model from Z0 decays", 
+        "L3", 
+        "10.1016/0370-2693(90)90942-Y", 
+        "211680", 
+        null, 
+        null, 
+        null, 
+        [
+            "L3-015"
+        ]
+    ], 
+    "299250": [
+        "A Search for heavy charged and neutral leptons from Z0 decays", 
+        "L3", 
+        "10.1016/0370-2693(90)90943-Z", 
+        "211681", 
+        null, 
+        null, 
+        null, 
+        [
+            "L3-016"
+        ]
+    ], 
+    "299253": [
+        "A Determination of electroweak parameters from Z0 decays into charged leptons", 
+        "L3", 
+        "10.1016/0370-2693(90)91175-B", 
+        "211678", 
+        null, 
+        "ins299253", 
+        null, 
+        [
+            "L3-017"
+        ]
+    ], 
+    "299781": [
+        "A Measurement of the $\\Z^0$ Leptonic Partial Widths and the Vector and Axial Vector Coupling Constants.", 
+        "L3", 
+        "10.1016/0370-2693(90)92111-U", 
+        "205476", 
+        null, 
+        null, 
+        null, 
+        []
+    ], 
+    "300437": [
+        "Search for the charged Higgs boson in Z0 decay", 
+        "L3", 
+        "10.1016/0370-2693(90)90580-Y", 
+        "212187", 
+        null, 
+        null, 
+        null, 
+        [
+            "L3-018"
+        ]
+    ], 
+    "300438": [
+        "Search for a low mass neutral Higgs boson in Z0 decay", 
+        "L3", 
+        "10.1016/0370-2693(90)90581-P", 
+        "212426", 
+        null, 
+        null, 
+        null, 
+        [
+            "L3-019"
+        ]
+    ], 
+    "300439": [
+        "Search for excited neutrinos from Z0 decays", 
+        "L3", 
+        "10.1016/0370-2693(90)90582-Q", 
+        "212678", 
+        null, 
+        null, 
+        null, 
+        [
+            "L3-021"
+        ]
+    ], 
+    "301901": [
+        "A Measurement of the Z0 ---> b anti-b forward - backward asymmetry", 
+        "L3", 
+        "10.1016/0370-2693(90)90510-D", 
+        "213893", 
+        null, 
+        "ins301901", 
+        null, 
+        [
+            "L3-022", 
+            "L3-22"
+        ]
+    ], 
+    "301905": [
+        "A Measurement of B0 - anti-B0 mixing in Z0 decays", 
+        "L3", 
+        "10.1016/0370-2693(90)90509-5", 
+        "213847", 
+        null, 
+        null, 
+        null, 
+        [
+            "L3-020", 
+            "L3-20"
+        ]
+    ]
+}

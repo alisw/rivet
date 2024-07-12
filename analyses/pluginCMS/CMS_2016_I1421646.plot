@@ -9,23 +9,23 @@ RatioPlotYMin=0.39
 RatioPlotYMax=2.51
 # END PLOT
 # BEGIN PLOT /CMS_2016_I1421646/d01-x01-y01
-Title=CMS, 8 TeV, Di-jet azimuthal decorrel., $200<p_{T}^\text{leading}<300$~GeV
+Title=CMS, 8 TeV, Di-jet azimuthal decorrel., $200<p_{T}^\mathrm{leading}<300$~GeV
 # END PLOT
 # BEGIN PLOT /CMS_2016_I1421646/d02-x01-y01
-Title=CMS, 8 TeV, Di-jet azimuthal decorrel., $300<p_{T}^\text{leading}<400$~GeV
+Title=CMS, 8 TeV, Di-jet azimuthal decorrel., $300<p_{T}^\mathrm{leading}<400$~GeV
 # END PLOT
 # BEGIN PLOT /CMS_2016_I1421646/d03-x01-y01
-Title=CMS, 8 TeV, Di-jet azimuthal decorrel., $400<p_{T}^\text{leading}<500$~GeV
+Title=CMS, 8 TeV, Di-jet azimuthal decorrel., $400<p_{T}^\mathrm{leading}<500$~GeV
 # END PLOT
 # BEGIN PLOT /CMS_2016_I1421646/d04-x01-y01
-Title=CMS, 8 TeV, Di-jet azimuthal decorrel.,$ 500<p_{T}^\text{leading}<700$~GeV
+Title=CMS, 8 TeV, Di-jet azimuthal decorrel.,$ 500<p_{T}^\mathrm{leading}<700$~GeV
 # END PLOT
 # BEGIN PLOT /CMS_2016_I1421646/d05-x01-y01
-Title=CMS, 8 TeV, Di-jet azimuthal decorrel.,$ 700<p_{T}^\text{leading}<900$~GeV
+Title=CMS, 8 TeV, Di-jet azimuthal decorrel.,$ 700<p_{T}^\mathrm{leading}<900$~GeV
 # END PLOT
 # BEGIN PLOT /CMS_2016_I1421646/d06-x01-y01
-Title=CMS, 8 TeV, Di-jet azimuthal decorrelation,$ 900<p_{T}^\text{leading}<1100$~GeV
+Title=CMS, 8 TeV, Di-jet azimuthal decorrelation,$ 900<p_{T}^\mathrm{leading}<1100$~GeV
 # END PLOT
 # BEGIN PLOT /CMS_2016_I1421646/d07-x01-y01
-Title=CMS, 8 TeV, Di-jet azimuthal decorrel., $p_{T}^\text{leading}>1100$~GeV
+Title=CMS, 8 TeV, Di-jet azimuthal decorrel., $p_{T}^\mathrm{leading}>1100$~GeV
 # END PLOT

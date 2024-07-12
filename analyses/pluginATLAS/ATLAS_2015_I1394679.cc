@@ -11,7 +11,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2015_I1394679);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2015_I1394679);
 
 
     /// @name Analysis methods
@@ -23,27 +23,27 @@ namespace Rivet {
       // Initialise and register projections here
       const FinalState fs;
       declare(fs, "FinalState");
-      FastJets fj04(fs, FastJets::ANTIKT, 0.4, JetAlg::ALL_MUONS, JetAlg::DECAY_INVISIBLES);
+      FastJets fj04(fs, FastJets::ANTIKT, 0.4, JetAlg::Muons::ALL, JetAlg::Invisibles::DECAY);
       declare(fj04, "AntiKt4jets");
 
       // Histograms
-      _h["pt1"] = bookHisto1D(1, 1, 1);
-      _h["pt2"] = bookHisto1D(2, 1, 1);
-      _h["pt3"] = bookHisto1D(3, 1, 1);
-      _h["pt4"] = bookHisto1D(4, 1, 1);
-      _h["HT"]  = bookHisto1D(5, 1, 1);
-      _h["M4j"] = bookHisto1D(6, 1, 1);
+      book(_h["pt1"] ,1, 1, 1);
+      book(_h["pt2"] ,2, 1, 1);
+      book(_h["pt3"] ,3, 1, 1);
+      book(_h["pt4"] ,4, 1, 1);
+      book(_h["HT"]  ,5, 1, 1);
+      book(_h["M4j"] ,6, 1, 1);
 
       // Histograms with different pt/m4j cuts
       for (size_t i_hist = 0; i_hist < 4; ++i_hist) {
-        _h["M2jratio_"+to_str(i_hist)] = bookHisto1D( 7 + i_hist, 1, 1);
-        _h["dPhiMin2j_"+to_str(i_hist)] = bookHisto1D(11 + i_hist, 1, 1);
-        _h["dPhiMin3j_"+to_str(i_hist)] = bookHisto1D(15 + i_hist, 1, 1);
-        _h["dYMin2j_"+to_str(i_hist)] = bookHisto1D(19 + i_hist, 1, 1);
-        _h["dYMin3j_"+to_str(i_hist)] = bookHisto1D(23 + i_hist, 1, 1);
-        _h["dYMax2j_"+to_str(i_hist)] = bookHisto1D(27 + i_hist, 1, 1);
+        book(_h["M2jratio_"+to_str(i_hist)] , 7 + i_hist, 1, 1);
+        book(_h["dPhiMin2j_"+to_str(i_hist)] ,11 + i_hist, 1, 1);
+        book(_h["dPhiMin3j_"+to_str(i_hist)] ,15 + i_hist, 1, 1);
+        book(_h["dYMin2j_"+to_str(i_hist)] ,19 + i_hist, 1, 1);
+        book(_h["dYMin3j_"+to_str(i_hist)] ,23 + i_hist, 1, 1);
+        book(_h["dYMax2j_"+to_str(i_hist)] ,27 + i_hist, 1, 1);
         for (size_t ygap = 0; ygap < 4; ++ygap) {
-          _h["sumPtCent_"+to_str(ygap)+to_str(i_hist)] = bookHisto1D(31 + i_hist + ygap * 4, 1, 1);
+          book(_h["sumPtCent_"+to_str(ygap)+to_str(i_hist)] ,31 + i_hist + ygap * 4, 1, 1);
         }
       }
 
@@ -138,33 +138,32 @@ namespace Rivet {
       const double pt1cutA[4]   = {100,  400,  700, 1000};
       const double pt1cutB[4]   = {100,  250,  400,  550};
       const double rapGapCut[4] = {1, 2, 3, 4};
-      const double weight = event.weight();
 
-      _h["pt1"]->fill(jet1.pt(), weight);
-      _h["pt2"]->fill(jet2.pt(), weight);
-      _h["pt3"]->fill(jet3.pt(), weight);
-      _h["pt4"]->fill(jet4.pt(), weight);
-      _h["HT"] ->fill(HT,        weight);
-      _h["M4j"]->fill(Mjjjj,     weight);
+      _h["pt1"]->fill(jet1.pt());
+      _h["pt2"]->fill(jet2.pt());
+      _h["pt3"]->fill(jet3.pt());
+      _h["pt4"]->fill(jet4.pt());
+      _h["HT"] ->fill(HT);
+      _h["M4j"]->fill(Mjjjj);
 
       for (size_t i_cut = 0; i_cut < 4; ++i_cut) {
         const string icutstr = to_str(i_cut);
 
         if (Mjjjj > m4jcuts[i_cut])
-          _h["M2jratio_"+icutstr]->fill( Mjj/Mjjjj , weight);
+          _h["M2jratio_"+icutstr]->fill( Mjj/Mjjjj );
 
         if (jet1.pT() > pt1cutA[i_cut]) {
-          _h["dPhiMin2j_"+icutstr]->fill(minDphi_ij , weight);
-          _h["dPhiMin3j_"+icutstr]->fill(minDphi_ijk, weight);
-          _h["dYMin2j_"+icutstr]->fill(minDrap_ij , weight);
-          _h["dYMin3j_"+icutstr]->fill(minDrap_ijk, weight);
+          _h["dPhiMin2j_"+icutstr]->fill(minDphi_ij );
+          _h["dPhiMin3j_"+icutstr]->fill(minDphi_ijk);
+          _h["dYMin2j_"+icutstr]->fill(minDrap_ij );
+          _h["dYMin3j_"+icutstr]->fill(minDrap_ijk);
         }
 
         if (jet1.pt() > pt1cutB[i_cut]) {
-          _h["dYMax2j_"+icutstr]->fill( maxDrap_ij , weight);
+          _h["dYMax2j_"+icutstr]->fill( maxDrap_ij );
           for (size_t yy = 0; yy < 4; ++yy) {
             if (maxDrap_ij > rapGapCut[yy])
-              _h["sumPtCent_"+to_str(yy)+icutstr]->fill(sumpt_twojets_cent, weight);
+              _h["sumPtCent_"+to_str(yy)+icutstr]->fill(sumpt_twojets_cent);
           }
         }
 
@@ -176,11 +175,7 @@ namespace Rivet {
 
     /// Normalise histograms etc., after the run
     void finalize() {
-      const double sf = (crossSection()/femtobarn) / sumOfWeights();
-      /// @todo Migrate to C++11 range-for loop
-      for (map<string, Histo1DPtr>::iterator hit = _h.begin(); hit != _h.end(); ++hit) {
-        scale(hit->second, sf);
-      }
+      scale(_h, crossSection()/femtobarn / sumOfWeights());
     }
 
     //@
@@ -198,6 +193,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2015_I1394679);
+  RIVET_DECLARE_PLUGIN(ATLAS_2015_I1394679);
 
 }

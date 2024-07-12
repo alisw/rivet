@@ -1,0 +1,32 @@
+Name: DELPHI_1995_I382285
+Year: 1995
+Summary: Forward-Backward Asymmetry for $K^\pm$ and $\Lambda^0$,$\bar\Lambda^0$ at LEP1
+Experiment: DELPHI
+Collider: LEP
+InspireID: 382285
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Z.Phys. C67 (1995) 1-14, 1995
+RunInfo: e+e-> hadrons
+NeedCrossSection: no
+Beams: [e+,e-]
+Energies: 91.2
+Description:
+'Forward-Backward Asymmetry for $K^\pm$ and $\Lambda^0$,$\bar\Lambda^0$ at LEP1, the paper goes on to extract the
+strange quark asymmetry but this involves a lot of corrections and therefore only the  $K^\pm$ and $\Lambda^0$,$\bar\Lambda^0$ are included'
+Keywords: []
+BibKey: Abreu:1994pj
+BibTeX: '@article{Abreu:1994pj,
+      author         = "Abreu, P. and others",
+      title          = "{First measurement of the strange quark asymmetry at the
+                        Z0 peak}",
+      collaboration  = "DELPHI",
+      journal        = "Z. Phys.",
+      volume         = "C67",
+      year           = "1995",
+      pages          = "1-14",
+      reportNumber   = "CERN-PPE-94-219",
+      SLACcitation   = "%%CITATION = ZEPYA,C67,1;%%"
+}'

@@ -1,0 +1,46 @@
+{
+    "502164": [
+        "Measurement of $\\phi$ meson parameters in K$^0_L$ K$^0_S$ decay mode with CMD-2", 
+        "CMD-2", 
+        "10.1016/S0370-2693(99)00973-9", 
+        null, 
+        "hep-ex/9906032", 
+        "ins502164", 
+        null, 
+        []
+    ], 
+    "536497": [
+        "Observation of the conversion decay $\\phi\\to\\pi^0e^+e^-$ at CMD-2", 
+        "CMD-2", 
+        "10.1016/S0370-2693(00)01357-5", 
+        null, 
+        "hep-ex/0011026", 
+        null, 
+        null, 
+        [
+            "BUDKER-INP-1999-97"
+        ]
+    ], 
+    "538836": [
+        "Study of conversion decays phi ---> eta e+ e-, eta ---> e+ e- gamma and eta ---> pi+ pi- e+ e- at CMD-2", 
+        "CMD-2", 
+        "10.1016/S0370-2693(01)00123-X", 
+        null, 
+        "hep-ex/0012039", 
+        null, 
+        null, 
+        [
+            "BUDKER-INP-2000-85"
+        ]
+    ], 
+    "554522": [
+        "Study of the process e+ e- ---> eta gamma in center-of-mass energy range 600-MeV to 1380-MeV at CMD-2", 
+        "CMD-2", 
+        "10.1016/S0370-2693(01)00567-6", 
+        null, 
+        "hep-ex/0103043", 
+        "ins554522", 
+        null, 
+        []
+    ]
+}

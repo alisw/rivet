@@ -1,0 +1,124 @@
+{
+    "750410": [
+        "Global polarization measurement in Au+Au collisions", 
+        "STAR", 
+        "10.1103/PhysRevC.76.024915", 
+        null, 
+        "0705.1691", 
+        "ins750410", 
+        null, 
+        [
+            "STAR-05-11-2007"
+        ]
+    ], 
+    "1298024": [
+        "Elliptic flow of electrons from heavy-flavor hadron decays in Au + Au collisions at $\\sqrt{s_{\\rm NN}} = $ 200, 62.4, and 39 GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.95.034907", 
+        null, 
+        "1405.6348", 
+        "ins1298024", 
+        null, 
+        []
+    ], 
+    "1474129": [
+        "Direct virtual photon production in Au+Au collisions at $\\sqrt{s_{NN}}$ = 200 GeV", 
+        "STAR", 
+        "10.1016/j.physletb.2017.04.050", 
+        null, 
+        "1607.01447", 
+        "ins1474129", 
+        null, 
+        []
+    ], 
+    "1478040": [
+        "Energy dependence of $J/\\psi$ production in Au+Au collisions at $\\sqrt{s_{NN}} =$ 39, 62.4 and 200 GeV", 
+        "STAR", 
+        "10.1016/j.physletb.2017.04.078", 
+        null, 
+        "1607.07517", 
+        null, 
+        null, 
+        []
+    ], 
+    "1481225": [
+        "Charge-dependent directed flow in Cu+Au collisions at $\\sqrt{s_{_{NN}}}$ = 200 GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.118.012301", 
+        null, 
+        "1608.04100", 
+        "ins1481225", 
+        null, 
+        []
+    ], 
+    "1486427": [
+        "Dijet imbalance measurements in $Au+Au$ and $pp$ collisions at $\\sqrt{s_{NN}} = 200$  GeV at STAR", 
+        "STAR", 
+        "10.1103/PhysRevLett.119.062301", 
+        null, 
+        "1609.03878", 
+        "ins1486427", 
+        null, 
+        []
+    ], 
+    "1493842": [
+        "Measurement of the cross section and longitudinal double-spin asymmetry for di-jet production in polarized $pp$ collisions at $\\sqrt{s}$ = 200 GeV", 
+        "STAR", 
+        "10.1103/PhysRevD.95.071103", 
+        null, 
+        "1610.06616", 
+        "ins1493842", 
+        null, 
+        []
+    ], 
+    "1510298": [
+        "Measurement of $D^0$ Azimuthal Anisotropy at Midrapidity in Au+Au Collisions at $\\sqrt{s_{NN}}$=200  GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.118.212301", 
+        null, 
+        "1701.06060", 
+        "ins1510298", 
+        null, 
+        []
+    ], 
+    "1510474": [
+        "Global $\\Lambda$ hyperon polarization in nuclear collisions: evidence for the most vortical fluid", 
+        "STAR", 
+        "10.1038/nature23004", 
+        null, 
+        "1701.06657", 
+        "ins1510474", 
+        null, 
+        []
+    ], 
+    "1510593": [
+        "Bulk Properties of the Medium Produced in Relativistic Heavy-Ion Collisions from the Beam Energy Scan Program", 
+        "STAR", 
+        "10.1103/PhysRevC.96.044904", 
+        null, 
+        "1701.07065", 
+        "ins1510593", 
+        null, 
+        []
+    ], 
+    "1512115": [
+        "Measurements of jet quenching with semi-inclusive hadron+jet distributions in Au+Au collisions at $\\sqrt{s_{NN}}$ = 200 GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.96.024905", 
+        null, 
+        "1702.01108", 
+        "ins1512115", 
+        null, 
+        []
+    ], 
+    "1515028": [
+        "Coherent diffractive photoproduction of \u03c10 mesons on gold nuclei at 200 GeV/nucleon-pair at the Relativistic Heavy Ion Collider", 
+        "STAR", 
+        "10.1103/PhysRevC.96.054904", 
+        null, 
+        "1702.07705", 
+        null, 
+        null, 
+        []
+    ]
+}

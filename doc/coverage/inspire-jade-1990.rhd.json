@@ -1,0 +1,74 @@
+{
+    "282535": [
+        "A Measurement of the Weak Axial Couplings of the $b$ and $c$ Quark", 
+        "JADE", 
+        "10.1007/BF01621022", 
+        null, 
+        null, 
+        "ins282535", 
+        null, 
+        [
+            "DESY-89-127"
+        ]
+    ], 
+    "282847": [
+        "A Study of Photon Production in Hadronic Events from e+ e- Annihilation", 
+        "JADE", 
+        "10.1007/BF02440827", 
+        null, 
+        null, 
+        "ins282847", 
+        null, 
+        [
+            "DESY-89-129"
+        ]
+    ], 
+    "284560": [
+        "Final Results on $\\mu$ and Tau Pair Production by the Jade Collaboration at {PETRA}", 
+        "JADE", 
+        "10.1007/BF01560255", 
+        null, 
+        null, 
+        "ins284560", 
+        null, 
+        [
+            "DESY-89-178"
+        ]
+    ], 
+    "295180": [
+        "Measurement of Resonance Productions in the Reactions $\\gamma \\gamma \\to \\pi^0 \\pi^0$ and $\\gamma \\gamma \\to \\pi^0 \\eta$", 
+        "JADE", 
+        "10.1007/BF01565857", 
+        null, 
+        null, 
+        "ins295180", 
+        null, 
+        [
+            "DESY-90-025"
+        ]
+    ], 
+    "297909": [
+        "Measurement of two photon production of rho0 omega", 
+        "JADE", 
+        "10.1007/BF01572020", 
+        null, 
+        null, 
+        "ins297909", 
+        null, 
+        [
+            "DESY-90-069"
+        ]
+    ], 
+    "297914": [
+        "A Measurement of the average lifetime of B hadrons produced by e+ e- collisions at s**(1/2) = 36.3-GeV", 
+        "JADE", 
+        "10.1007/BF01572021", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-90-087"
+        ]
+    ]
+}

@@ -1,0 +1,74 @@
+{
+    "635850": [
+        "Absolute mass lower limit for the lightest neutralino of the MSSM from e+ e- data at s**(1/2) up to 209-GeV", 
+        "ALEPH", 
+        "10.1016/j.physletb.2003.12.066", 
+        "688526", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-077"
+        ]
+    ], 
+    "636644": [
+        "Two-dimensional analysis of Bose-Einstein correlations in hadronic Z decays at LEP", 
+        "ALEPH", 
+        "10.1140/epjc/s2004-01884-3", 
+        "689944", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-079"
+        ]
+    ], 
+    "636645": [
+        "Studies of QCD at e+ e- centre-of-mass energies between 91-GeV and 209-GeV", 
+        "ALEPH", 
+        "10.1140/epjc/s2004-01891-4", 
+        "690637", 
+        null, 
+        "ins636645", 
+        null, 
+        [
+            "CERN-EP-2003-084"
+        ]
+    ], 
+    "644313": [
+        "Constraints on anomalous QGC's in e+ e- interactions from 183-GeV to 209-GeV", 
+        "ALEPH", 
+        "10.1016/j.physletb.2004.09.041", 
+        "705799", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2004-001"
+        ]
+    ], 
+    "653296": [
+        "Measurement of W-pair production in e+ e- collisions at centre-of-mass energies from 183-GeV to 209-GeV", 
+        "ALEPH", 
+        "10.1140/epjc/s2004-02048-3", 
+        "730540", 
+        null, 
+        "ins653296", 
+        null, 
+        [
+            "CERN-PH-EP-2004-012"
+        ]
+    ], 
+    "657983": [
+        "Search for pentaquark states in Z decays", 
+        "ALEPH", 
+        "10.1016/j.physletb.2004.08.021", 
+        "789636", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2004-038"
+        ]
+    ]
+}

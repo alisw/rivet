@@ -1,0 +1,194 @@
+{
+    "535061": [
+        "Investigation of the decay of orbitally excited B mesons and first measurement of the branching ratio BR(B*(J) ---> B*pi(X))", 
+        "OPAL", 
+        "10.1007/s100520200892", 
+        "468617", 
+        "hep-ex/0010031", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-125"
+        ]
+    ], 
+    "557820": [
+        "Search for single leptoquark and squark production in electron photon scattering at $\\sqrt{s_{ee}}$ = 189-GeV at LEP", 
+        "OPAL", 
+        "10.1007/s100520100859", 
+        "503507", 
+        "hep-ex/0106031", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2001-040"
+        ]
+    ], 
+    "560307": [
+        "Measurement of Z / gamma* production in Compton scattering of quasi-real photons", 
+        "OPAL", 
+        "10.1007/s100520100875", 
+        "517805", 
+        "hep-ex/0107047", 
+        "ins560307", 
+        null, 
+        [
+            "CERN-EP-2001-053"
+        ]
+    ], 
+    "563730": [
+        "Measurement of the hadronic cross-section for the scattering of two virtual photons at LEP", 
+        "OPAL", 
+        "10.1007/s100520200940", 
+        "521188", 
+        "hep-ex/0110006", 
+        "ins563730", 
+        null, 
+        [
+            "CERN-EP-2001-064"
+        ]
+    ], 
+    "565438": [
+        "Search for Yukawa production of a light neutral Higgs boson at LEP", 
+        "OPAL", 
+        "10.1007/s100520200896", 
+        "525108", 
+        "hep-ex/0111010", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2001-077"
+        ]
+    ], 
+    "565517": [
+        "Particle multiplicity of unbiased gluon jets from $e^{+} e^{-}$ three jet events", 
+        "OPAL", 
+        "10.1007/s100520200926", 
+        "525244", 
+        "hep-ex/0111013", 
+        "ins565517", 
+        null, 
+        [
+            "CERN-EP-2001-076"
+        ]
+    ], 
+    "566837": [
+        "Search for doubly charged Higgs bosons with the OPAL detector at LEP", 
+        "OPAL", 
+        "10.1016/S0370-2693(01)01474-5", 
+        "526965", 
+        "hep-ex/0111059", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2001-082"
+        ]
+    ], 
+    "568505": [
+        "Search for leptoquarks in electron photon scattering at s($e e) ^{(1/2)}$ up to 209-GeV at LEP", 
+        "OPAL", 
+        "10.1016/S0370-2693(01)01485-X", 
+        "531229", 
+        "hep-ex/0112024", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2001-093"
+        ]
+    ], 
+    "583115": [
+        "Measurement of the hadronic photon structure function F**gamma(2) at LEP-2", 
+        "OPAL", 
+        "10.1016/S0370-2693(02)01560-5", 
+        "538895", 
+        "hep-ex/0202035", 
+        "ins583115", 
+        null, 
+        [
+            "CERN-EP-2002-014"
+        ]
+    ], 
+    "587909": [
+        "Measurement of the charm structure function F2(c)(gamma) of the photon at LEP", 
+        "OPAL", 
+        "10.1016/S0370-2693(02)01999-8", 
+        "551899", 
+        "hep-ex/0206021", 
+        "ins587909", 
+        null, 
+        [
+            "CERN-EP-2002-031"
+        ]
+    ], 
+    "589045": [
+        "Search for charged excited leptons in e+ e- collisions at s**(1/2) = 183-GeV to 209-GeV", 
+        "OPAL", 
+        "10.1016/S0370-2693(02)02343-2", 
+        "560959", 
+        "hep-ex/0206061", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2002-043"
+        ]
+    ], 
+    "590095": [
+        "Search for associated production of massive states decaying into two photons in $e^{+} e^{-}$ annihilations at $\\sqrt{s}$ = 88-GeV to 209-GeV", 
+        "OPAL", 
+        "10.1016/S0370-2693(02)02472-3", 
+        "566883", 
+        "hep-ex/0207027", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2002-045"
+        ]
+    ], 
+    "594920": [
+        "Search for scalar top and scalar bottom quarks at LEP", 
+        "OPAL", 
+        "10.1016/S0370-2693(02)02593-5", 
+        "580737", 
+        "hep-ex/0209026", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2002-050"
+        ]
+    ], 
+    "598112": [
+        "Measurement of the b quark forward backward asymmetry around the Z0 peak using an inclusive tag", 
+        "OPAL", 
+        "10.1016/S0370-2693(02)02594-7", 
+        "583157", 
+        "hep-ex/0209076", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2002-053"
+        ]
+    ], 
+    "599182": [
+        "Measurement of neutral current four fermion production at LEP-2", 
+        "OPAL", 
+        "10.1016/S0370-2693(02)02468-1", 
+        "571869", 
+        "hep-ex/0210026", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2002-052"
+        ]
+    ], 
+    "601225": [
+        "Charged particle multiplicities in heavy and light quark initiated events above the Z0 peak", 
+        "OPAL", 
+        "10.1016/S0370-2693(02)02935-0", 
+        "589721", 
+        "hep-ex/0211007", 
+        "ins601225", 
+        null, 
+        [
+            "CERN-EP-2002-079"
+        ]
+    ]
+}

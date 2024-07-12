@@ -1,0 +1,172 @@
+{
+    "817691": [
+        "System size dependence of associated yields in hadron-triggered jets", 
+        "STAR", 
+        "10.1016/j.physletb.2009.12.020", 
+        null, 
+        "0904.1722", 
+        null, 
+        null, 
+        []
+    ], 
+    "822997": [
+        "Center of mass energy and system-size dependence of photon production at forward rapidity at RHIC", 
+        "STAR", 
+        "10.1016/j.nuclphysa.2009.11.011", 
+        null, 
+        "0906.2260", 
+        "ins822997", 
+        null, 
+        []
+    ], 
+    "830676": [
+        "Observation of charge-dependent azimuthal correlations and possible local strong parity violation in heavy ion collisions", 
+        "STAR", 
+        "10.1103/PhysRevC.81.054908", 
+        null, 
+        "0909.1717", 
+        "ins830676", 
+        null, 
+        []
+    ], 
+    "831944": [
+        "Identified particle production, azimuthal anisotropy, and interferometry measurements in Au+Au collisions at s(NN)**(1/2) = 9.2- GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.81.024911", 
+        null, 
+        "0909.4131", 
+        "ins831944", 
+        null, 
+        []
+    ], 
+    "837075": [
+        "Spectra of identified high-$p_{T}$ $\\pi^\\pm$ and $p(\\bar{p})$ in Cu$+$Cu collisions at $\\sqrt{s_{NN}}=200$ GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.81.054907", 
+        null, 
+        "0911.3130", 
+        "ins837075", 
+        null, 
+        []
+    ], 
+    "838875": [
+        "Observation of pi+ pi- pi+ pi- Photoproduction in Ultra-Peripheral Heavy Ion Collisions at STAR", 
+        "STAR", 
+        "10.1103/PhysRevC.81.044901", 
+        null, 
+        "0912.0604", 
+        "ins838875", 
+        null, 
+        []
+    ], 
+    "839470": [
+        "Studying Parton Energy Loss in Heavy-Ion Collisions via Direct-Photon and Charged-Particle Azimuthal Correlations", 
+        "STAR", 
+        "10.1103/PhysRevC.82.034909", 
+        null, 
+        "0912.1871", 
+        "ins839470", 
+        null, 
+        []
+    ], 
+    "840766": [
+        "Inclusive $\\pi^0$, $\\eta$, and direct photon production at high transverse momentum in $p+p$ and $d+$Au collisions at $\\sqrt{s_{NN}}=200$ GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.81.064904", 
+        null, 
+        "0912.3838", 
+        "ins840766", 
+        null, 
+        []
+    ], 
+    "840812": [
+        "Three-particle coincidence of the long range pseudorapidity correlation in high energy nucleus-nucleus collisions", 
+        "STAR", 
+        "10.1103/PhysRevLett.105.022301", 
+        null, 
+        "0912.3977", 
+        null, 
+        null, 
+        []
+    ], 
+    "842959": [
+        "$\\Upsilon$ cross section in $p+p$ collisions at $\\sqrt{s} = 200$ GeV", 
+        "STAR", 
+        "10.1103/PhysRevD.82.012004", 
+        null, 
+        "1001.2745", 
+        "ins842959", 
+        null, 
+        []
+    ], 
+    "843985": [
+        "Charged and strange hadron elliptic flow in Cu+Cu collisions at $\\sqrt{s_{NN}}$ = 62.4 and 200 GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.81.044902", 
+        null, 
+        "1001.5052", 
+        "ins843985", 
+        null, 
+        []
+    ], 
+    "844983": [
+        "Longitudinal scaling property of the charge balance function in Au + Au collisions at 200 GeV", 
+        "STAR", 
+        "10.1016/j.physletb.2010.05.028", 
+        null, 
+        "1002.1641", 
+        "ins844983", 
+        null, 
+        []
+    ], 
+    "848409": [
+        "Observation of an Antimatter Hypernucleus", 
+        "STAR", 
+        "10.1126/science.1183980", 
+        null, 
+        "1003.2030", 
+        null, 
+        null, 
+        []
+    ], 
+    "851937": [
+        "Azimuthal di-hadron correlations in d+Au and Au+Au collisions at $\\sqrt{s_{NN}}=200$ GeV from STAR", 
+        "STAR", 
+        "10.1103/PhysRevC.82.024912", 
+        null, 
+        "1004.2377", 
+        "ins851937", 
+        null, 
+        []
+    ], 
+    "853304": [
+        "Higher Moments of Net-proton Multiplicity Distributions at RHIC", 
+        "STAR", 
+        "10.1103/PhysRevLett.105.022302", 
+        null, 
+        "1004.4959", 
+        "ins853304", 
+        null, 
+        []
+    ], 
+    "855746": [
+        "Balance Functions from Au$+$Au, $d+$Au, and $p+p$ Collisions at $\\sqrt{s_{NN}}$ = 200 GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.82.024905", 
+        null, 
+        "1005.2307", 
+        "ins855746", 
+        null, 
+        []
+    ], 
+    "860571": [
+        "Measurement of the Bottom contribution to non-photonic electron production in $p+p$ collisions at $\\sqrt{s} $=200 GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.105.202301", 
+        null, 
+        "1007.1200", 
+        "ins860571", 
+        null, 
+        []
+    ]
+}

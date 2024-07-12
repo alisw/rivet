@@ -1,0 +1,36 @@
+Name: BESIII_2020_I1818254
+Year: 2020
+Summary: $\chi_{c(0,1,2)}\to \Sigma^0 \bar{p} K^+$ + c.c
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1818254
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 102 (2020) 9, 092006
+RunInfo: Any process producing chi_c originally e+e-
+Description:
+  'Measurement of the mass distributions in the decays
+  $\chi_{c(0,1,2)}\to \Sigma^0 \bar{p} K^+$ + c.c.
+   The data were read from the plots in the paper and may not be corrected for efficiency or background.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2020ish
+BibTeX: '@article{BESIII:2020ish,
+    author = "Ablikim, Medina and others",
+    collaboration = "BESIII",
+    title = "{Observation of the decays $\chi_{cJ}\to\Sigma^{0}\bar{p}K^{+}+{\rm c.c.}~(J=0, 1, 2)$}",
+    eprint = "2009.09265",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevD.102.092006",
+    journal = "Phys. Rev. D",
+    volume = "102",
+    number = "9",
+    pages = "092006",
+    year = "2020"
+}
+'

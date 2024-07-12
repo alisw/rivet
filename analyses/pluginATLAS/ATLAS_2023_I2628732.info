@@ -1,0 +1,50 @@
+Name: ATLAS_2023_I2628732
+Year: 2023
+Summary: W+D production in pp at 13 TeV
+Experiment: ATLAS
+Collider: LHC
+InspireID: 2628732
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Miha Muskinja <miha.muskinja@cern.ch>
+References:
+ - arXiv:2302.00336 [hep-ex]
+ - ATLAS-STDM-2019-22
+Keywords:
+  - WBOSON
+  - CHARM
+  - HEAVY FLAVOUR
+RunInfo: W+charm production
+Beams: [p+, p+]
+Energies: [13000]
+Luminosity_fb: 140.0
+Description:
+  'The production of a $W$ boson in association with a single charm quark is studied using 140 ifb$^{-1}$ of i$\sqrt{s} = 13$TeV
+  protoin-proton collision data collected with the ATLAS detector at the Large Hadron Collider. The charm quark is tagged by a
+  charmed hadron, reconstructed with a secondary-vertex fit. The $W$ boson is reconstructed from an electron/muon decay and the
+  missing transverse momentum. The mesons reconstructed are $D^\pm\to K^\mp\pi^\pm\pi^\pm$ and
+  $D^{\ast\pm} \to D^0\pi^\pm \to (K^\mp\pi^\pm)\pi^\pm$, where $p_\text{T}(e,\mu)>30$GeV, $|\eta(e,\mu)|<2.5$,
+  $p_\text{T}(D)>8$GeV, and $|\eta(D)|<2.2$. The integrated and normalized differential cross-sections as a function of the pseudorapidity
+  of the lepton from the $W$ boson decay, and of the transverse momentum of the meson, are extracted from the data using a profile
+  likelihood fit. The measured fiducial cross-sections are
+  $\sigma_\text{fid}^{OS-SS}(W^- + D^+) = 50.2\pm 0.2$ (stat.) $^{+2.4}_{-2.3}$ (syst.) pb,
+  $\sigma_\text{fid}^{OS-SS}(W^+ + D^-) = 48.2\pm 0.2$ (stat.) $^{+2.3}_{-2.2}$ (syst.) pb,
+  $\sigma_\text{fid}^{OS-SS}(W^- + D^{\ast+}) = 51.1\pm 0.4$ (stat.) $^{+1.9}_{-1.8}$ (syst.) pb, and
+  $\sigma_\text{fid}^{OS-SS}(W^+ + D^{\ast-}) = 50.0\pm 0.4$ (stat.) $^{+1.9}_{-1.8}$ (syst.) pb.
+  Results are compared with the predictions of next-to-leading-order quantum chromodynamics calculations performed using
+  state-of-the-art parton distribution functions. The ratio of charm to anti-charm production cross-sections is studied
+  to probe the $s-\bar{s}$ quark asymmetry and is found to be $R^\pm_c = 0.971 \pm 0.006$ (stat.) $\pm0.011$ (syst.).'
+BibKey: ATLAS:2023ibp
+BibTeX: '@article{ATLAS:2023ibp,
+    collaboration = "ATLAS",
+    title = "{Measurement of the production of a $W$ boson in association with a charmed hadron in $pp$ collisions at $\sqrt{s} = 13\,\mathrm{TeV}$ with the ATLAS detector}",
+    eprint = "2302.00336",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CERN-EP-2022-291",
+    month = "2",
+    year = "2023"
+}'
+ReleaseTests:
+ - $A LHC-13-Top-All

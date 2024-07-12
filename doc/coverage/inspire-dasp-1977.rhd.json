@@ -1,0 +1,86 @@
+{
+    "118725": [
+        "Radiative Decays of the J/psi and Evidence for a New Heavy Resonance", 
+        "DASP", 
+        "10.1016/0370-2693(77)90114-9", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-77-02"
+        ]
+    ], 
+    "118726": [
+        "The Three Photon Final State Produced in e+ e- Collision at 3.6-GeV and at the psi-prime", 
+        "DASP", 
+        "10.1016/0370-2693(77)90115-0", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-77-03"
+        ]
+    ], 
+    "118820": [
+        "Inclusive Hadron Production by e+ e- Annihilation for s Between 13-GeV**2 and 25-GeV**2", 
+        "DASP", 
+        "10.1016/0370-2693(77)90393-8", 
+        null, 
+        null, 
+        "ins118820", 
+        null, 
+        [
+            "DESY-77-11"
+        ]
+    ], 
+    "118821": [
+        "Production of Charged Kaons by e+ e- Collisions Between s**(1/2) = 3.6-GeV and 5-GeV", 
+        "DASP", 
+        "10.1016/0370-2693(77)90394-X", 
+        null, 
+        null, 
+        "ins118821", 
+        null, 
+        [
+            "DESY-77-12"
+        ]
+    ], 
+    "119986": [
+        "On the Origin of Inclusive electron Events in e+ e- Annihilation Between 3.6-GeV and 5.2-GeV", 
+        "DASP", 
+        "10.1016/0370-2693(77)90360-4", 
+        null, 
+        null, 
+        "ins119986", 
+        null, 
+        [
+            "DESY-77-36"
+        ]
+    ], 
+    "120380": [
+        "Evidence for the F Meson", 
+        "DASP", 
+        "10.1016/0370-2693(77)90361-6", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-77-44"
+        ]
+    ], 
+    "120427": [
+        "On the Semileptonic Decay of Charmed Hadrons", 
+        "DASP", 
+        "10.1016/0370-2693(77)90684-0", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-77-41"
+        ]
+    ]
+}

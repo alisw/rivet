@@ -1,0 +1,35 @@
+Name: CLEO_1999_I508944
+Year: 1999
+Summary: Measurement of Semi-Leptonic Tau Decays into $\pi^\pm\pi^0$
+Experiment: CLEO
+Collider: CESR
+InspireID: 508944
+Status: VALIDATED
+Authors:
+ - Peter Richardson <Peter.Richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D61 (2000) 112002
+ - hep-ex/9910046 
+RunInfo: 
+  Tau production, can be any process but original data was in
+  $e^+ e^-$ at the $\Upsilon(4S)$ resonance
+Description:
+  'Measurement of the invariant mass spectrum of the $\pi^-\pi^0$ system in $\tau\to\pi^-\pi^0\nu_\tau$ measured by CLEO at CESR.'
+Keywords: []
+BibKey: Anderson:1999ui
+BibTeX: '@article{Anderson:1999ui,
+      author         = "Anderson, S. and others",
+      title          = "{Hadronic structure in the decay tau- ---&gt; pi- pi0
+                        neutrino(tau)}",
+      collaboration  = "CLEO",
+      journal        = "Phys. Rev.",
+      volume         = "D61",
+      year           = "2000",
+      pages          = "112002",
+      doi            = "10.1103/PhysRevD.61.112002",
+      eprint         = "hep-ex/9910046",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "SLAC-REPRINT-1999-116, CLNS-99-1635, CLEO-99-13",
+      SLACcitation   = "%%CITATION = HEP-EX/9910046;%%"
+}'

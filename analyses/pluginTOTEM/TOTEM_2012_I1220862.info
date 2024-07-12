@@ -1,6 +1,6 @@
 Name: TOTEM_2012_I1220862
 Year: 2012
-Summary: Measurement of proton-proton elastic scattering and total cross section at $\sqrt{s} = 7\;\TeV$
+Summary: Measurement of proton-proton elastic scattering and total cross section at $\sqrt{s} = 7~\TeV$
 Experiment: TOTEM
 Collider: LHC
 InspireID: 1220862
@@ -18,8 +18,8 @@ Beams: [p+, p+]
 Energies: [7000]
 PtCuts: [0]
 Description:
-   'Measurement of the elastic differential cross-section in proton-proton interactions at a centre-of-mass energy $\sqrt{s} = 7\;\TeV$ at the LHC.
-    The data, which cover the $|t|$ range $0.005-0.2\;\GeV^2$, were collected using Roman Pot detectors very close to the outgoing beam
+   'Measurement of the elastic differential cross-section in proton-proton interactions at a centre-of-mass energy $\sqrt{s} = 7~\TeV$ at the LHC.
+    The data, which cover the $|t|$ range $0.005-0.2~\GeV^2$, were collected using Roman Pot detectors very close to the outgoing beam
     in October 2011, allowing the precise extrapolation down to the optical point, $t = 0$, and hence the derivation of the elastic as well as
     the total cross-section via the optical theorem.'
 BibKey: Antchev:1472948

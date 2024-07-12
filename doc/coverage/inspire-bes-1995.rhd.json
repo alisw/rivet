@@ -1,0 +1,52 @@
+{
+    "39870": [
+        "A Measurement of J / psi decay widths", 
+        "BES", 
+        "10.1016/0370-2693(95)00712-T", 
+        null, 
+        null, 
+        "ins39870", 
+        null, 
+        [
+            "BIHEP-EP1-95-03"
+        ]
+    ], 
+    "382314": [
+        "A Direct measurement of the pseudoscalar decay constant, f(D(s))", 
+        "BES", 
+        "10.1103/PhysRevLett.74.4599", 
+        null, 
+        null, 
+        "ins382314", 
+        null, 
+        [
+            "SLAC-PUB-6746", 
+            "SLAC-PUB-95-6746", 
+            "BEPC-EP1-95-01"
+        ]
+    ], 
+    "382421": [
+        "A Direct measurement of the D(s) branching fraction to phi pi", 
+        "BES", 
+        "10.1103/PhysRevD.52.3781", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-6747", 
+            "SLAC-PUB-95-6747", 
+            "BEPC-EP1-95-02"
+        ]
+    ], 
+    "408816": [
+        "Experimental study of f0(975) in J / psi decays", 
+        "BES", 
+        null, 
+        null, 
+        null, 
+        null, 
+        null, 
+        []
+    ]
+}

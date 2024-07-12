@@ -7,30 +7,28 @@ namespace Rivet {
 
 
   /// @brief D0 Run II Z \f$ p_\perp \f$ differential cross-section shape
+  ///
   /// @author Andy Buckley
   /// @author Gavin Hesketh
   /// @author Frank Siegert
   class D0_2008_S7554427 : public Analysis {
   public:
 
-    /// Default constructor.
-    D0_2008_S7554427()
-      : Analysis("D0_2008_S7554427")
-    {    }
+    RIVET_DEFAULT_ANALYSIS_CTOR(D0_2008_S7554427);
 
 
     /// @name Analysis methods
-    //@{
+    /// @{
 
     /// Book histograms
     void init() {
       FinalState fs;
       ZFinder zfinder(fs, Cuts::open(), PID::ELECTRON,
-                      40*GeV, 200*GeV, 0.2, ZFinder::CLUSTERNODECAY, ZFinder::TRACK);
+                      40*GeV, 200*GeV, 0.2, ZFinder::ClusterPhotons::NODECAY, ZFinder::AddPhotons::YES);
       declare(zfinder, "ZFinder");
 
-      _h_ZpT         = bookHisto1D(1, 1, 1);
-      _h_forward_ZpT = bookHisto1D(3, 1, 1);
+      book(_h_ZpT         ,1, 1, 1);
+      book(_h_forward_ZpT ,3, 1, 1);
     }
 
 
@@ -43,8 +41,8 @@ namespace Rivet {
       }
       const double yZ = fabs(zfinder.bosons()[0].rapidity());
       const double pTZ = zfinder.bosons()[0].pT();
-      _h_ZpT->fill(pTZ, e.weight());
-      if (yZ > 2) _h_forward_ZpT->fill(pTZ, e.weight());
+      _h_ZpT->fill(pTZ);
+      if (yZ > 2) _h_forward_ZpT->fill(pTZ);
     }
 
 
@@ -54,20 +52,20 @@ namespace Rivet {
       normalize(_h_forward_ZpT);
     }
 
-    //@}
+    /// @}
 
 
   private:
 
     /// @name Histograms
-    //@{
+    /// @{
     Histo1DPtr _h_ZpT, _h_forward_ZpT;
-    //@}
+    /// @}
 
   };
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(D0_2008_S7554427);
+
+  RIVET_DECLARE_ALIASED_PLUGIN(D0_2008_S7554427, D0_2008_I769689);
 
 }

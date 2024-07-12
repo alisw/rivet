@@ -6,6 +6,7 @@
 namespace Rivet {
 
 
+  /// @brief Logging system for controlled & formatted writing to stdout
   class Log {
   public:
 
@@ -174,20 +175,33 @@ namespace Rivet {
 }
 
 
-// Neat CPU-conserving logging macros. Use by preference!
-// NB. Only usable in classes where a getLog() method is provided
+/// @defgroup logmacros Logging macros
+/// @{
+
+/// @def MSG_LVL
+/// @brief Neat CPU-conserving logging macros. Use by preference!
+/// @note Only usable in classes where a getLog() method is provided
 #define MSG_LVL(lvl, x) \
   do { \
     if (getLog().isActive(lvl)) { \
-      getLog() << lvl << x << endl;   \
+      getLog() << lvl << x << '\n';   \
     } \
   } while (0)
 
+/// @def MSG_TRACE
+/// @brief Lowest-level, most verbose messaging, using MSG_LVL
 #define MSG_TRACE(x)   MSG_LVL(Log::TRACE, x)
+/// @brief Debug messaging, not enabled by default, using MSG_LVL
 #define MSG_DEBUG(x)   MSG_LVL(Log::DEBUG, x)
+/// @brief Key-information messging, enabled by default, using MSG_LVL
+/// @note Silence is golden: don't emit default-visible messages unless you *need* the user to see them
 #define MSG_INFO(x)    MSG_LVL(Log::INFO, x)
+/// @brief Warning messages for non-fatal bad things, using MSG_LVL
 #define MSG_WARNING(x) MSG_LVL(Log::WARNING, x)
+/// @brief Highest level messaging for serious problems, using MSG_LVL
 #define MSG_ERROR(x)   MSG_LVL(Log::ERROR, x)
+
+/// @}
 
 
 #endif

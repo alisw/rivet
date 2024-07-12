@@ -1,0 +1,45 @@
+Name: ATLAS_2016_I1494075
+Year: 2016
+Summary: ZZ -> 4 leptons / 2 leptons and 2 neutrinos measurment at 8TeV
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1494075
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Luzhan Yue <luzhan.yue.19@ucl.ac.uk>
+ - Peng Wang <peng.w@cern.ch>
+ - Jon Butterworth <j.butterworth@ucl.ac.uk>
+ - Chris Gutschow <c.gutschow@ucl.ac.uk>
+References:
+ - ATLAS-STDM-2014-16
+ - JHEP 01 (2017) 099
+ - 10.1007/JHEP01(2017)099
+ - arXiv:1610.07585
+RunInfo: pp -> ZZ -> 4L or 2L2nu measurement at 8TeV.
+Beams: [p+, p+]
+Energies: [[4000,4000]]
+Luminosity_fb: 20.3
+Options:
+ - LMODE=4L,2L2NU
+Description:
+  'A measurement of the ZZ production cross section in the llll and llnunu (l = e , mu) in the proton-proton collisions at 8 TeV centre-of-mass energy
+  at the LHC at CERN. Using data corresponding to an integrated luminosity of 20.3/fb collected by the ATLAS experiment in 2012.'
+BibKey: ATLAS:2016bxw 
+BibTeX: '@article{ATLAS:2016bxw,
+    author = "Aaboud, Morad and others",
+    collaboration = "ATLAS",
+    title = "{Measurement of the $ZZ$ production cross section in proton-proton collisions at $\sqrt s =$ 8 TeV using the $ZZ\to\ell^{-}\ell^{+}\ell^{\prime -}\ell^{\prime +}$ and $ZZ\to\ell^{-}\ell^{+}\nu\bar{\nu}$ channels with the ATLAS detector}",
+    eprint = "1610.07585",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CERN-EP-2016-194",
+    doi = "10.1007/JHEP01(2017)099",
+    journal = "JHEP",
+    volume = "01",
+    pages = "099",
+    year = "2017"
+}'
+ReleaseTests:
+ - $A LHC-8-ZZ-lv
+

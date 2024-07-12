@@ -1,0 +1,36 @@
+Name: BESIII_2020_I1814783
+Year: 2020
+Summary: $e^+e^-\to\Sigma^+\bar{\Sigma}^-$ and $\Sigma^-\bar{\Sigma}^+$ cross sections for centre-of-mass energies between 2.3864 and 3 GeV
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1814783
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - arxiv:2009.01404
+RunInfo: e+ e- to hadrons. Beam energy must be specified as analysis option "ENERGY" when rivet-merging samples.
+Beams: [e-, e+]
+Options:
+ - ENERGY=*
+Description:
+  '$e^+e^-\to\Sigma^+\bar{\Sigma}^-$ and $\Sigma^-\bar{\Sigma}^+$ cross sections for centre-of-mass energies between 2.3864 and 3 GeV.
+   The angular distribution for $\sqrt{s}=2.396$\,GeV is also measured.
+  Beam energy must be specified as analysis option "ENERGY" when rivet-merging samples.'
+ValidationInfo:
+  'Herwig7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Ablikim:2020kqp
+BibTeX: '@article{Ablikim:2020kqp,
+    author = "Ablikim, M. and others",
+    collaboration = "BESIII",
+    title = "{Measurements of Sigma+ and Sigma- Time-like Electromagnetic Form Factors for center-of-mass energies from 2.3864 to 3.0200 GeV}",
+    eprint = "2009.01404",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    month = "9",
+    year = "2020"
+}'

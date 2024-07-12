@@ -1,6 +1,7 @@
 Name: MC_GENERIC
-Summary: Generic MC testing analysis
+Summary: Generic MC testing analysis -- DEPRECATED, use MC_FSPARTICLES
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Ian Bruce <ibruce@cern.ch>
  - Andy Buckley <andy.buckley@cern.ch>

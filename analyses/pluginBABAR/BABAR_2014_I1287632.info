@@ -1,0 +1,37 @@
+Name: BABAR_2014_I1287632
+Year: 2014
+Summary: Dalitz plot analysis of $\eta_c\to K^+K^-\eta$ and $\eta_c\to K^+K^-\pi^0$
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 1287632
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 89 (2014) 11, 112004
+RunInfo: Any process producing eta_c (originally gamma gamma -> eta_c)
+Description:
+  'Measurement of the mass distributions in the decays $\eta_c\to K^+K^-\eta$ and $\eta_c\to K^+K^-\pi^0$ by BaBar. The data were read from the plots in the paper and therefore for some points the error bars are the size of the point. Also the sideband background from the plots has been subtracted. It is also not clear that any resolution effects have been unfolded.'
+ValidationInfo:
+  'Herwig 7 events using model from paper'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BaBar:2014asx
+BibTeX: '@article{BaBar:2014asx,
+    author = "Lees, J. P. and others",
+    collaboration = "BaBar",
+    title = "{Dalitz plot analysis of $\eta_c \to K^+ K^- \eta$ and $\eta_c \to K^+ K^- \pi^0$ in two-photon interactions}",
+    eprint = "1403.7051",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BABAR-PUB-13-021, SLAC-PUB-15928",
+    doi = "10.1103/PhysRevD.89.112004",
+    journal = "Phys. Rev. D",
+    volume = "89",
+    number = "11",
+    pages = "112004",
+    year = "2014"
+}
+'

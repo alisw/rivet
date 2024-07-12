@@ -1,0 +1,36 @@
+Name: BELLE_2011_I924618
+Year: 2011
+Summary: $B^-\to\bar{p}\Lambda^0D^0$ Differential branching ratio
+Experiment: BELLE
+Collider: KEKB
+InspireID: 924618
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 84 (2011) 071501
+RunInfo: Any process producing B+/-, originally e+e- at Upsilon(4S)
+Description:
+  'Differential branching ratio for $B^-\to\bar{p}\Lambda^0D^0$ as a function of the $\bar{p}\Lambda^0$ mass measured by BELLE.'
+ValidationInfo:
+  'Herwig 7 events using EvtGen for B decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle:2011cxw
+BibTeX: '@article{Belle:2011cxw,
+    author = "Chen, P. and others",
+    collaboration = "Belle",
+    title = "{Observation of $B^- \to \bar{p} \Lambda D^0$ at Belle}",
+    eprint = "1108.4271",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BELLE-PREPRINT-2011-9, KEK-PREPRINT-2011-7",
+    doi = "10.1103/PhysRevD.84.071501",
+    journal = "Phys. Rev. D",
+    volume = "84",
+    pages = "071501",
+    year = "2011"
+}
+'

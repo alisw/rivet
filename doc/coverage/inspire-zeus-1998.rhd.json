@@ -1,0 +1,150 @@
+{
+    "448663": [
+        "Measurement of the diffractive structure function F2(D(4)) at HERA", 
+        "ZEUS", 
+        "10.1007/s100520050063", 
+        null, 
+        "hep-ex/9709021", 
+        "ins448663", 
+        null, 
+        [
+            "DESY-97-184"
+        ]
+    ], 
+    "449345": [
+        "Measurement of jet shapes in photoproduction at HERA", 
+        "ZEUS", 
+        "10.1007/s100520050124", 
+        null, 
+        "hep-ex/9710002", 
+        "ins449345", 
+        null, 
+        [
+            "DESY-97-191"
+        ]
+    ], 
+    "450085": [
+        "Dijet cross-sections in photoproduction at HERA", 
+        "ZEUS", 
+        "10.1007/s100520050065", 
+        null, 
+        "hep-ex/9710018", 
+        "ins450085", 
+        null, 
+        [
+            "DESY-97-196"
+        ]
+    ], 
+    "450130": [
+        "Event shape analysis of deep inelastic scattering events with a large rapidity gap at HERA", 
+        "ZEUS", 
+        "10.1016/S0370-2693(97)01539-6", 
+        null, 
+        "hep-ex/9710027", 
+        "ins450130", 
+        null, 
+        [
+            "DESY-97-202"
+        ]
+    ], 
+    "451528": [
+        "Charged particles and neutral kaons in photoproduced jets at HERA", 
+        "ZEUS", 
+        "10.1007/s100520050125", 
+        null, 
+        "hep-ex/9711018", 
+        "ins451528", 
+        null, 
+        [
+            "DESY-97-229"
+        ]
+    ], 
+    "452353": [
+        "Elastic and proton dissociative $\\rho^0$ photoproduction at HERA", 
+        "ZEUS", 
+        "10.1007/s100520050136", 
+        null, 
+        "hep-ex/9712020", 
+        "ins452353", 
+        null, 
+        [
+            "DESY-97-237"
+        ]
+    ], 
+    "452355": [
+        "Measurement of the t distribution in diffractive photoproduction at HERA", 
+        "ZEUS", 
+        "10.1007/s100520050135", 
+        null, 
+        "hep-ex/9712019", 
+        "ins452355", 
+        null, 
+        [
+            "DESY-97-238"
+        ]
+    ], 
+    "467101": [
+        "High E($T$) inclusive jet cross-sections in photoproduction at HERA", 
+        "ZEUS", 
+        "10.1007/s100520050230", 
+        null, 
+        "hep-ex/9802012", 
+        "ins467101", 
+        null, 
+        [
+            "DESY-98-018", 
+            "ANL-HEP-PR-98-25"
+        ]
+    ], 
+    "469534": [
+        "Diffractive dijet cross-sections in photoproduction at HERA", 
+        "ZEUS", 
+        "10.1007/s100520050246", 
+        null, 
+        "hep-ex/9804013", 
+        "ins469534", 
+        null, 
+        [
+            "DESY-98-045", 
+            "ANL-HEP-PR-98-40"
+        ]
+    ], 
+    "472079": [
+        "Search for selectron and squark production in $e^{+} p$ collisions at HERA", 
+        "ZEUS", 
+        "10.1016/S0370-2693(98)00817-X", 
+        null, 
+        "hep-ex/9806019", 
+        "ins472079", 
+        null, 
+        [
+            "DESY-98-069", 
+            "ANL-HEP-PR-98-88"
+        ]
+    ], 
+    "473522": [
+        "Measurement of elastic Upsilon photoproduction at HERA", 
+        "ZEUS", 
+        "10.1016/S0370-2693(98)01081-8", 
+        null, 
+        "hep-ex/9807020", 
+        "ins473522", 
+        null, 
+        [
+            "DESY-98-089", 
+            "ANL-HEP-PR-98-96"
+        ]
+    ], 
+    "478182": [
+        "Measurement of three jet distributions in photoproduction at HERA", 
+        "ZEUS", 
+        "10.1016/S0370-2693(98)01360-4", 
+        null, 
+        "hep-ex/9810046", 
+        "ins478182", 
+        null, 
+        [
+            "DESY-98-162"
+        ]
+    ]
+}

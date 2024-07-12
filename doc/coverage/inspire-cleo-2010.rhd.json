@@ -1,0 +1,28 @@
+{
+    "833375": [
+        "Search for psi(2S) ---> gamma eta(c) (2S) via fully reconstructed eta(c)(2S) decays", 
+        "CLEO", 
+        "10.1103/PhysRevD.81.052002", 
+        null, 
+        "0910.1324", 
+        null, 
+        null, 
+        [
+            "CLNS-09-2051", 
+            "CLEO-09-04"
+        ]
+    ], 
+    "1650066": [
+        "Measurement of $\\sigma(e^+e^- \\to \\psi(3770) \\to hadrons)$ at $E_{c.m.}$ = 3773 MeV", 
+        "CLEO", 
+        "10.1103/PhysRevLett.96.092002", 
+        null, 
+        "1004.1358", 
+        "ins1650066", 
+        null, 
+        [
+            "CLNS-05-1939", 
+            "CLEO-05-27"
+        ]
+    ]
+}

@@ -1,0 +1,38 @@
+Name: BABAR_2007_I722622
+Year: 2007
+Summary: Spectrum for $\Xi_c^{\prime0,+}$ production at the $\Upsilon(4S)$
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 722622
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - hep-ex/0607086
+RunInfo: e+e- > hadrons at Upsilon(4S) including both resonant and non-resonance
+Beams: [e+, e-]
+Energies: [10.58]
+Description:
+'Spectrum for $\Xi_c^{\prime0,+}$ production at the $\Upsilon(4S)$ measured by BaBar.
+ The spectrum includes a contribution from both the $\Upsilon(4S)$ and continuum $c\bar{c}$ events.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Aubert:2006rv
+BibTeX: '@inproceedings{Aubert:2006rv,
+      author         = "Aubert, Bernard and others",
+      title          = "{Xi(c)-prime production at BABAR}",
+      booktitle      = "{Proceedings of the 33rd International Conference on High
+                        Energy Physics (ICHEP 06): Moscow, Russia, July 26-August
+                        2, 2006}",
+      collaboration  = "BaBar",
+      url            = "https://oraweb.slac.stanford.edu/pls/slacquery/BABAR_DOCUMENTS.Search?P_SLAC_PUB=SLAC-PUB-12024",
+      year           = "2006",
+      eprint         = "hep-ex/0607086",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "SLAC-PUB-12024, BABAR-CONF-06-008",
+      SLACcitation   = "%%CITATION = HEP-EX/0607086;%%"
+}'

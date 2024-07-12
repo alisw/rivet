@@ -8,15 +8,16 @@
 namespace Rivet {
 
 
+  /// Forward energy flow in MB and dijet events at 0.9 and 7 TeV
   class CMS_2011_S9215166 : public Analysis {
   public:
 
     /// Constructor
-    CMS_2011_S9215166() : Analysis("CMS_2011_S9215166"), _weightMB(0.), _weightDiJet(0.) {  }
+    RIVET_DEFAULT_ANALYSIS_CTOR(CMS_2011_S9215166);
 
 
     void init() {
-      const FinalState fs(-6.0, 6.0, 0.0*GeV);
+      const FinalState fs((Cuts::etaIn(-6.0, 6.0)));
       declare(fs, "FS");
       declare(FastJets(fs, FastJets::ANTIKT, 0.5), "Jets");
 
@@ -26,25 +27,26 @@ namespace Rivet {
       declare(fsv, "fsv");
 
       // For the MB ND selection
-      const ChargedFinalState fschrgd(-6.0,6.0,0.0*GeV);
+      const ChargedFinalState fschrgd(Cuts::abseta < 6.0);
       declare(fschrgd, "fschrgd");
       VetoedFinalState fschrgdv(fschrgd);
       fschrgdv.vetoNeutrinos();
       declare(fschrgdv, "fschrgdv");
 
-      if (fuzzyEquals(sqrtS()/GeV, 900, 1E-3)) {
-        _hist_mb      = bookHisto1D(1, 1, 1); // energy flow in MB, 0.9 TeV
-        _hist_dijet = bookHisto1D(2, 1, 1); // energy flow in dijet events, 0.9 TeV
-      } else if (fuzzyEquals(sqrtS()/GeV, 7000, 1E-3)) {
-        _hist_mb      = bookHisto1D(3, 1, 1); // energy flow in MB, 7 TeV
-        _hist_dijet = bookHisto1D(4, 1, 1); // energy flow in dijet events, 7 TeV
+      if (isCompatibleWithSqrtS(900)) {
+        book(_hist_mb      ,1, 1, 1); // energy flow in MB, 0.9 TeV
+        book(_hist_dijet ,2, 1, 1); // energy flow in dijet events, 0.9 TeV
+      } else if (isCompatibleWithSqrtS(7000)) {
+        book(_hist_mb      ,3, 1, 1); // energy flow in MB, 7 TeV
+        book(_hist_dijet ,4, 1, 1); // energy flow in dijet events, 7 TeV
       }
+
+      book(_weightMB, "/tmp/weightMB");
+      book(_weightDiJet, "/tmp/weightDijet");
     }
 
 
     void analyze(const Event& event) {
-      const double weight = event.weight();
-
       // Skip if the event is empty
       const FinalState& fsv = apply<FinalState>(event, "fsv");
       if (fsv.empty()) vetoEvent;
@@ -53,7 +55,7 @@ namespace Rivet {
       double count_chrg_forward = 0;
       double count_chrg_backward = 0;
       const FinalState& fschrgdv = apply<FinalState>(event, "fschrgdv");
-      foreach (const Particle& p, fschrgdv.particles()) {
+      for (const Particle& p : fschrgdv.particles()) {
         if (3.9 < p.eta() && p.eta() < 4.4) count_chrg_forward++;
         if (-4.4 < p.eta() && p.eta() < -3.9) count_chrg_backward++;
       }
@@ -62,16 +64,16 @@ namespace Rivet {
 
 
       // MINIMUM BIAS EVENTS
-      _weightMB += weight;
-      foreach (const Particle& p, fsv.particles()) {
-        _hist_mb->fill(p.abseta(), weight*p.E()/GeV);
+      _weightMB->fill();
+      for (const Particle& p: fsv.particles()) {
+        _hist_mb->fill(p.abseta(), p.E()/GeV);
       }
 
 
       // DIJET EVENTS
       double PTCUT = -1.0;
-      if (fuzzyEquals(sqrtS()/GeV, 900, 1E-3)) PTCUT = 8.0*GeV;
-      else if (fuzzyEquals(sqrtS()/GeV, 7000, 1E-3)) PTCUT = 20.0*GeV;
+      if (isCompatibleWithSqrtS(900)) PTCUT = 8.0*GeV;
+      else if (isCompatibleWithSqrtS(7000)) PTCUT = 20.0*GeV;
       const FastJets& jetpro = apply<FastJets>(event, "Jets");
       const Jets jets = jetpro.jetsByPt(PTCUT);
       if (jets.size() >= 2) {
@@ -80,9 +82,9 @@ namespace Rivet {
           // Back to back condition of the jets
           const double diffphi = deltaPhi(jets[1].phi(), jets[0].phi());
           if (diffphi-PI < 1.0) {
-	    _weightDiJet += weight;
-            foreach (const Particle& p, fsv.particles()) {
-              _hist_dijet->fill(p.abseta(), weight*p.E()/GeV);
+            _weightDiJet->fill();
+            for (const Particle& p: fsv.particles()) {
+              _hist_dijet->fill(p.abseta(), p.E()/GeV);
             }
           }
         }
@@ -92,20 +94,22 @@ namespace Rivet {
 
 
     void finalize() {
-      scale(_hist_mb   , 0.5/_weightMB   );
-      scale(_hist_dijet, 0.5/_weightDiJet);
+      scale(_hist_mb   , 0.5/_weightMB->sumW());
+      scale(_hist_dijet, 0.5/_weightDiJet->sumW());
     }
 
 
   private:
 
+    /// @{
     Histo1DPtr _hist_mb, _hist_dijet;
-    double _weightMB,_weightDiJet;
+    CounterPtr _weightMB, _weightDiJet;
+    /// @}
 
   };
 
 
-  // Hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CMS_2011_S9215166);
+
+  RIVET_DECLARE_ALIASED_PLUGIN(CMS_2011_S9215166, CMS_2011_I930319);
 
 }

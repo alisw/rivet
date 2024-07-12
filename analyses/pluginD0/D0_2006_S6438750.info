@@ -6,6 +6,7 @@ Collider: Tevatron Run 2
 SpiresID: 6438750
 InspireID: 698784
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Andy Buckley <andy.buckley@cern.ch>
  - Gavin Hesketh <gavin.hesketh@cern.ch>
@@ -47,3 +48,7 @@ BibTeX: '@Article{Abazov:2005wc,
      doi       = "10.1016/j.physletb.2006.04.048",
      SLACcitation  = "%%CITATION = HEP-EX/0511054;%%"
 }'
+
+ReleaseTests:
+ - $A TVT-Run-II-PromptPhoton
+

@@ -1,0 +1,50 @@
+{
+    "807486": [
+        "A Study of b anti-b Production in e+e- Collisions at s**(1/2) = 130-GeV - 207-GeV", 
+        "DELPHI", 
+        "10.1140/epjc/s10052-009-0917-2", 
+        "1158087", 
+        "0901.4461", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2008-018"
+        ]
+    ], 
+    "807487": [
+        "Search for one large extra dimension with the DELPHI detector at LEP", 
+        "DELPHI", 
+        "10.1140/epjc/s10052-009-0874-9", 
+        "1158110", 
+        "0901.4486", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2008-013"
+        ]
+    ], 
+    "824322": [
+        "Inclusive single-particle production in two-photon collisions at LEP II with the DELPHI detector", 
+        "DELPHI", 
+        "10.1016/j.physletb.2009.06.058", 
+        "1186968", 
+        "0906.5302", 
+        "ins824322", 
+        null, 
+        [
+            "CERN-PH-EP-2008-017"
+        ]
+    ], 
+    "828084": [
+        "Correlations between Polarisation States of W Particles in the Reaction e- e+ ---> W- W+ at LEP2 Energies 189-GeV - 209-GeV", 
+        "DELPHI", 
+        "10.1140/epjc/s10052-009-1123-y", 
+        "1198764", 
+        "0908.1023", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2009-003"
+        ]
+    ]
+}

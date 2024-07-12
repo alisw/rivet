@@ -1,0 +1,84 @@
+{
+    "353845": [
+        "Search for a narrow resonance in e+ e- collisions between E(cm) = 58-GeV and 60-GeV", 
+        "TOPAZ", 
+        "10.1016/0370-2693(93)90311-5", 
+        null, 
+        null, 
+        "ins353845", 
+        null, 
+        [
+            "KEK-PREPRINT-92-205", 
+            "TUAT-HEP-93-01", 
+            "NWU-HEP-9302", 
+            "DPNU-93-08", 
+            "OCU-HEP-93-1", 
+            "PU-93-666", 
+            "INS-966", 
+            "KOBE-HEP-93-04", 
+            "TIT-HPE-93-03"
+        ]
+    ], 
+    "355918": [
+        "Measurement of the inclusive cross-section of jets in $\\gamma \\gamma$ interactions at TRISTAN", 
+        "TOPAZ", 
+        "10.1016/0370-2693(93)91335-K", 
+        null, 
+        null, 
+        "ins355918", 
+        null, 
+        [
+            "KEK-PREPRINT-93-47", 
+            "NWU-HEP-93-03", 
+            "TUAT-HEP-93-02", 
+            "DPNU-93-24", 
+            "TIT-HPE-93-04", 
+            "OCU-HEP-93-02", 
+            "PU-93-670", 
+            "INS-990", 
+            "KOBE-HEP-93-06", 
+            "TU-HEP-92-01"
+        ]
+    ], 
+    "361661": [
+        "Measurements of alpha-s in e+ e- annihilation at TRISTAN", 
+        "TOPAZ", 
+        "10.1016/0370-2693(93)90022-A", 
+        null, 
+        null, 
+        "ins361661", 
+        null, 
+        [
+            "DPNU-93-27", 
+            "KEK-PREPRINT-93-73", 
+            "TUAT-HEP-93-03", 
+            "INS-999", 
+            "TIT-HEP-93-06", 
+            "NWU-HEP-93-04", 
+            "TU-HEP-93-02", 
+            "OCU-HEP-93-05", 
+            "PU-93-672"
+        ]
+    ], 
+    "361662": [
+        "Measurement of the forward - backward asymmetry of e+ e- ---> c anti-c at s**(1/2) = 57.95-GeV", 
+        "TOPAZ", 
+        "10.1016/0370-2693(93)91266-P", 
+        null, 
+        null, 
+        "ins361662", 
+        null, 
+        [
+            "DPNU-93-28", 
+            "KEK-PREPRINT-93-74", 
+            "TUAT-HEP-93-04", 
+            "TIT-HEP-93-07", 
+            "NWU-HEP-93-05", 
+            "OCU-HEP-93-06", 
+            "KOBE-HEP-93-08", 
+            "PU-93-671", 
+            "INS-998", 
+            "TU-HEP-93-03"
+        ]
+    ]
+}

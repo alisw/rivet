@@ -1,0 +1,39 @@
+{
+    "526693": [
+        "A Measurement of lifetime differences in the neutral D meson system",
+        "FOCUS",
+        "10.1016/S0370-2693(00)00694-8",
+        null,
+        "hep-ex/0004034",
+        null,
+        null,
+        [
+            "UIP-00-4-09",
+            "FERMILAB-PUB-00-091-E"
+        ]
+    ],
+    "526926": [
+        "Measurements of the Sigma(c)0 and Sigma++(c) mass splittings",
+        "FOCUS",
+        "10.1016/S0370-2693(00)00867-4",
+        null,
+        "hep-ex/0005011",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-00-096-E"
+        ]
+    ],
+    "527840": [
+        "Search for violation in D$^0$ and D$^+$ decays",
+        "FOCUS",
+        "10.1016/S0370-2693(00)01039-X",
+        null,
+        "hep-ex/0005037",
+        "ins527840",
+        null,
+        [
+            "FERMILAB-PUB-00-112-E"
+        ]
+    ]
+}

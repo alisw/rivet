@@ -1,0 +1,32 @@
+Name: DELPHI_1996_I401100
+Year: 1996
+Summary: Spectrum for $\pi^0$ production  in hadronic $Z^0$ decays
+Experiment: DELPHI
+Collider: LEP
+InspireID: 401100
+Status: VALIDATED
+Authors:
+ - Peter Richardson <Peter.Richardson@durham.ac.uk>
+References:
+ - Z.Phys. C69 (1996) 561-574, 1996 
+RunInfo:
+  Hadronic Z decay events generated on the Z pole ($\sqrt{s} = 91.2$ GeV)
+NumEvents: 1000000
+Beams: [e+, e-]
+Energies: [91.2]
+PtCuts: [0]
+Description: DELPHI results for the spectra of $\pi6)$ production in hadronic $Z^0$ decays, including $b\bar{b}$ initiated events.
+BibKey: Adam:1995rf
+BibTeX: '@article{Adam:1995rf,
+      author         = "Adam, W. and others",
+      title          = "{Measurement of inclusive pi0 production in hadronic Z0
+                        decays}",
+      collaboration  = "DELPHI",
+      journal        = "Z. Phys.",
+      volume         = "C69",
+      year           = "1996",
+      pages          = "561-574",
+      doi            = "10.1007/s002880050060",
+      reportNumber   = "CERN-PPE-95-144",
+      SLACcitation   = "%%CITATION = ZEPYA,C69,561;%%"
+}'

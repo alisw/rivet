@@ -1,0 +1,62 @@
+{
+    "797438": [
+        "Measurement of $\\sigma(e^+ e^- \\to \\pi^+ \\pi^- \\gamma(\\gamma)$ and the dipion contribution to the muon anomaly with the KLOE detector", 
+        "KLOE", 
+        "10.1016/j.physletb.2008.10.060", 
+        null, 
+        "0809.3950", 
+        "ins797438", 
+        null, 
+        []
+    ], 
+    "801789": [
+        "Search for the $K(S) \\to e^+ e^-$ decay with the KLOE detector", 
+        "KLOE", 
+        "10.1016/j.physletb.2009.01.037", 
+        null, 
+        "0811.1007", 
+        null, 
+        null, 
+        []
+    ], 
+    "806383": [
+        "Measurement of the branching ratio and search for a CP violating asymmetry in the $\\eta \\to \\pi^+ \\pi^- e^+ e^-(\\gamma)$ decay at KLOE", 
+        "KLOE", 
+        "10.1016/j.physletb.2009.04.013", 
+        null, 
+        "0812.4830", 
+        null, 
+        null, 
+        []
+    ], 
+    "816145": [
+        "Search for the decay $\\phi \\to K^0 \\bar{K^0} \\gamma$ with the KLOE experiment", 
+        "KLOE", 
+        "10.1016/j.physletb.2009.07.013", 
+        null, 
+        "0903.4115", 
+        null, 
+        null, 
+        []
+    ], 
+    "818106": [
+        "Study of the a(0)(980) meson via the radiative decay $\\phi \\to \\eta \\pi_0 \\gamma$ with the KLOE detector", 
+        "KLOE", 
+        "10.1016/j.physletb.2009.09.022", 
+        null, 
+        "0904.2539", 
+        null, 
+        null, 
+        []
+    ], 
+    "826290": [
+        "Precise measurement of $\\Gamma(K \\to e \\nu(\\gamma)) / \\Gamma(K \\to \\mu \\nu(\\gamma))$ and study of $K \\to e \\nu \\gamma$", 
+        "KLOE", 
+        "10.1140/epjc/s10052-009-1217-6", 
+        null, 
+        "0907.3594", 
+        null, 
+        null, 
+        []
+    ]
+}

@@ -11,15 +11,15 @@ LegendAlign=r
 # BEGIN PLOT /ATLAS_2016_I1449082/d01-x01-y01
 Title=$\Delta |\eta|  = |\eta|_{\ell^+} - |\eta|_{\ell^-} $
 XLabel=$\Delta |\eta|$ 
-YLabel=$1/\sigma  \text{d}\sigma / \text{d}\Delta |\eta|$
+YLabel=$1/\sigma  \mathrm{d}\sigma / \mathrm{d}\Delta |\eta|$
 RatioPlotYMax=1.15
 RatioPlotYMin=0.9
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2016_I1449082/d02-x01-y01
-Title=$\Delta |y| = |y|_{\rm top} - |y|_{\rm antitop}$
+Title=$\Delta |y| = |y|_\mathrm{top} - |y|_\mathrm{antitop}$
 XLabel=$\Delta |y|$
-YLabel=$1/\sigma  \text{d}\sigma / \text{d}\Delta |y|$
+YLabel=$1/\sigma  \mathrm{d}\sigma / \mathrm{d}\Delta |y|$
 RatioPlotYMax=1.15
 RatioPlotYMin=0.9
 # END PLOT
@@ -40,7 +40,7 @@ YLabel=$A_C^{\ell\ell}$
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2016_I1449082/d06-x01-y01
-XLabel=$p_\text{T}^{t\bar{t}}$ [GeV] 
+XLabel=$p_\mathrm{T}^{t\bar{t}}$ [GeV] 
 YLabel=$A_C^{\ell\ell}$
 # END PLOT
 
@@ -61,7 +61,7 @@ YLabel=$A_C^{t\bar{t}}$
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2016_I1449082/d10-x01-y01
-XLabel=$p_\text{T}^{t\bar{t}}$ [GeV] 
+XLabel=$p_\mathrm{T}^{t\bar{t}}$ [GeV] 
 YLabel=$A_C^{t\bar{t}}$
 # END PLOT
 

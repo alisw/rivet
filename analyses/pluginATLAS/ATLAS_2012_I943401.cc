@@ -1,6 +1,5 @@
 // -*- C++ -*-
 #include "Rivet/Analysis.hh"
-#include "Rivet/Tools/BinnedHistogram.hh"
 #include "Rivet/Projections/FinalState.hh"
 #include "Rivet/Projections/ChargedFinalState.hh"
 #include "Rivet/Projections/VisibleFinalState.hh"
@@ -58,51 +57,51 @@ namespace Rivet {
       // book histograms
 
       // counts in signal regions
-      _count_OS_SR1 = bookHisto1D("count_OS_SR1", 1, 0., 1.);
-      _count_OS_SR2 = bookHisto1D("count_OS_SR2", 1, 0., 1.);
-      _count_OS_SR3 = bookHisto1D("count_OS_SR3", 1, 0., 1.);
-      _count_SS_SR1 = bookHisto1D("count_SS_SR1", 1, 0., 1.);
-      _count_SS_SR2 = bookHisto1D("count_SS_SR2", 1, 0., 1.);
-      _count_FS_SR1 = bookHisto1D("count_FS_SR1", 1, 0., 1.);
-      _count_FS_SR2 = bookHisto1D("count_FS_SR2", 1, 0., 1.);
-      _count_FS_SR3 = bookHisto1D("count_FS_SR3", 1, 0., 1.);
+      book(_count_OS_SR1 ,"count_OS_SR1", 1, 0., 1.);
+      book(_count_OS_SR2 ,"count_OS_SR2", 1, 0., 1.);
+      book(_count_OS_SR3 ,"count_OS_SR3", 1, 0., 1.);
+      book(_count_SS_SR1 ,"count_SS_SR1", 1, 0., 1.);
+      book(_count_SS_SR2 ,"count_SS_SR2", 1, 0., 1.);
+      book(_count_FS_SR1 ,"count_FS_SR1", 1, 0., 1.);
+      book(_count_FS_SR2 ,"count_FS_SR2", 1, 0., 1.);
+      book(_count_FS_SR3 ,"count_FS_SR3", 1, 0., 1.);
 
       // histograms from paper
 
-      _hist_mll_SS_D         = bookHisto1D( 1,1,1);
-      _hist_mll_SS_B         = bookHisto1D( 1,1,2);
-      _hist_eTmiss_SS_D      = bookHisto1D( 2,1,1);
-      _hist_eTmiss_SS_B      = bookHisto1D( 2,1,2);
-      _hist_mll_SS_2Jet_D    = bookHisto1D( 3,1,1);
-      _hist_mll_SS_2Jet_B    = bookHisto1D( 3,1,2);
-      _hist_njet_SS_D        = bookHisto1D( 5,1,1);
-      _hist_njet_SS_B        = bookHisto1D( 5,1,2);
-      _hist_pT_j1_SS_D       = bookHisto1D( 6,1,1);
-      _hist_pT_j1_SS_B       = bookHisto1D( 6,1,2);
-      _hist_pT_j2_SS_D       = bookHisto1D( 7,1,1);
-      _hist_pT_j2_SS_B       = bookHisto1D( 7,1,2);
-      _hist_pT_l1_SS_D       = bookHisto1D( 8,1,1);
-      _hist_pT_l1_SS_B       = bookHisto1D( 8,1,2);
-      _hist_pT_l2_SS_D       = bookHisto1D( 9,1,1);
-      _hist_pT_l2_SS_B       = bookHisto1D( 9,1,2);
-      _hist_mll_OS_D         = bookHisto1D(10,1,1);
-      _hist_mll_OS_B         = bookHisto1D(10,1,2);
-      _hist_eTmiss_OS_D      = bookHisto1D(11,1,1);
-      _hist_eTmiss_OS_B      = bookHisto1D(11,1,2);
-      _hist_eTmiss_3Jet_OS_D = bookHisto1D(12,1,1);
-      _hist_eTmiss_3Jet_OS_B = bookHisto1D(12,1,2);
-      _hist_eTmiss_4Jet_OS_D = bookHisto1D(13,1,1);
-      _hist_eTmiss_4Jet_OS_B = bookHisto1D(13,1,2);
-      _hist_njet_OS_D        = bookHisto1D(14,1,1);
-      _hist_njet_OS_B        = bookHisto1D(14,1,2);
-      _hist_pT_j1_OS_D       = bookHisto1D(15,1,1);
-      _hist_pT_j1_OS_B       = bookHisto1D(15,1,2);
-      _hist_pT_j2_OS_D       = bookHisto1D(16,1,1);
-      _hist_pT_j2_OS_B       = bookHisto1D(16,1,2);
-      _hist_pT_l1_OS_D       = bookHisto1D(17,1,1);
-      _hist_pT_l1_OS_B       = bookHisto1D(17,1,2);
-      _hist_pT_l2_OS_D       = bookHisto1D(18,1,1);
-      _hist_pT_l2_OS_B       = bookHisto1D(18,1,2);
+      book(_hist_mll_SS_D         , 1,1,1);
+      book(_hist_mll_SS_B         , 1,1,2);
+      book(_hist_eTmiss_SS_D      , 2,1,1);
+      book(_hist_eTmiss_SS_B      , 2,1,2);
+      book(_hist_mll_SS_2Jet_D    , 3,1,1);
+      book(_hist_mll_SS_2Jet_B    , 3,1,2);
+      book(_hist_njet_SS_D        , 5,1,1);
+      book(_hist_njet_SS_B        , 5,1,2);
+      book(_hist_pT_j1_SS_D       , 6,1,1);
+      book(_hist_pT_j1_SS_B       , 6,1,2);
+      book(_hist_pT_j2_SS_D       , 7,1,1);
+      book(_hist_pT_j2_SS_B       , 7,1,2);
+      book(_hist_pT_l1_SS_D       , 8,1,1);
+      book(_hist_pT_l1_SS_B       , 8,1,2);
+      book(_hist_pT_l2_SS_D       , 9,1,1);
+      book(_hist_pT_l2_SS_B       , 9,1,2);
+      book(_hist_mll_OS_D         ,10,1,1);
+      book(_hist_mll_OS_B         ,10,1,2);
+      book(_hist_eTmiss_OS_D      ,11,1,1);
+      book(_hist_eTmiss_OS_B      ,11,1,2);
+      book(_hist_eTmiss_3Jet_OS_D ,12,1,1);
+      book(_hist_eTmiss_3Jet_OS_B ,12,1,2);
+      book(_hist_eTmiss_4Jet_OS_D ,13,1,1);
+      book(_hist_eTmiss_4Jet_OS_B ,13,1,2);
+      book(_hist_njet_OS_D        ,14,1,1);
+      book(_hist_njet_OS_B        ,14,1,2);
+      book(_hist_pT_j1_OS_D       ,15,1,1);
+      book(_hist_pT_j1_OS_B       ,15,1,2);
+      book(_hist_pT_j2_OS_D       ,16,1,1);
+      book(_hist_pT_j2_OS_B       ,16,1,2);
+      book(_hist_pT_l1_OS_D       ,17,1,1);
+      book(_hist_pT_l1_OS_B       ,17,1,2);
+      book(_hist_pT_l2_OS_D       ,18,1,1);
+      book(_hist_pT_l2_OS_B       ,18,1,2);
       //????
       //   <dataPointSet name="d04-x01-y01" dimension="2" path="/REF/ATLAS_2011_I943401" title="EVENTS/10 GEV" >
       //   <dataPointSet name="d04-x01-y02" dimension="2" path="/REF/ATLAS_2011_I943401" title="EVENTS/10 GEV" >
@@ -110,12 +109,9 @@ namespace Rivet {
 
     /// Perform the event analysis
     void analyze(const Event& event) {
-      // event weight
-      const double weight = event.weight();
-
       // get the jet candidates
       Jets cand_jets;
-      foreach (const Jet& jet,
+      for (const Jet& jet :
         apply<FastJets>(event, "AntiKtJets04").jetsByPt(20.0*GeV) ) {
         if ( fabs( jet.eta() ) < 2.8 ) {
           cand_jets.push_back(jet);
@@ -128,9 +124,9 @@ namespace Rivet {
 
       // Discard jets that overlap with electrons
       Jets recon_jets;
-      foreach ( const Jet& jet, cand_jets ) {
+      for ( const Jet& jet : cand_jets ) {
         bool away_from_e = true;
-          foreach ( const Particle& e, cand_e ) {
+          for ( const Particle& e : cand_e ) {
             if ( deltaR(e.momentum(),jet.momentum()) <= 0.2 ) {
               away_from_e = false;
               break;
@@ -144,10 +140,10 @@ namespace Rivet {
 
       // Reconstructed electrons
       Particles recon_e;
-      foreach ( const Particle& e, cand_e ) {
+      for ( const Particle& e : cand_e ) {
         // check not near a jet
         bool e_near_jet = false;
-        foreach ( const Jet& jet, recon_jets ) {
+        for ( const Jet& jet : recon_jets ) {
           if ( deltaR(e.momentum(),jet.momentum()) < 0.4 ) {
             e_near_jet = true;
             break;
@@ -156,7 +152,7 @@ namespace Rivet {
         if ( e_near_jet ) continue;
         // check the isolation
         double pTinCone = -e.pT();
-        foreach ( const Particle& track, chg_tracks ) {
+        for ( const Particle& track : chg_tracks ) {
           if ( deltaR(e.momentum(),track.momentum()) < 0.2 )
             pTinCone += track.pT();
         }
@@ -168,10 +164,10 @@ namespace Rivet {
       Particles recon_mu;
       Particles cand_mu =
         apply<IdentifiedFinalState>(event,"muons").particlesByPt();
-      foreach ( const Particle& mu, cand_mu ) {
+      for ( const Particle& mu : cand_mu ) {
         // check not near a jet
         bool mu_near_jet = false;
-        foreach ( const Jet& jet, recon_jets ) {
+        for ( const Jet& jet : recon_jets ) {
           if ( deltaR(mu.momentum(),jet.momentum()) < 0.4 ) {
             mu_near_jet = true;
             break;
@@ -180,7 +176,7 @@ namespace Rivet {
         if ( mu_near_jet ) continue;
         // isolation
         double pTinCone = -mu.pT();
-        foreach ( const Particle& track, chg_tracks ) {
+        for ( const Particle& track : chg_tracks ) {
           if ( deltaR(mu.momentum(),track.momentum()) < 0.2 )
             pTinCone += track.pT();
         }
@@ -192,19 +188,19 @@ namespace Rivet {
       Particles vfs_particles
         = apply<VisibleFinalState>(event, "vfs").particles();
       FourMomentum pTmiss;
-      foreach ( const Particle& p, vfs_particles ) {
+      for ( const Particle& p : vfs_particles ) {
         pTmiss -= p.momentum();
       }
       double eTmiss = pTmiss.pT();
 
       // ATLAS calo problem
       if(rand()/static_cast<double>(RAND_MAX)<=0.42) {
-        foreach ( const Particle& e, recon_e ) {
+        for ( const Particle& e : recon_e ) {
           double eta = e.eta();
           double phi = e.azimuthalAngle(MINUSPI_PLUSPI);
           if (inRange(eta, -0.1, 1.5) && inRange(phi, -0.9, -0.5)) vetoEvent;
         }
-        foreach ( const Jet& jet, recon_jets ) {
+        for ( const Jet& jet : recon_jets ) {
           double eta = jet.rapidity();
           double phi = jet.azimuthalAngle(MINUSPI_PLUSPI);
           if (jet.pT() > 40*GeV && inRange(eta, -0.1, 1.5) && inRange(phi, -0.9, -0.5)) vetoEvent;
@@ -243,88 +239,88 @@ namespace Rivet {
 
       // same sign leptons
       if(sign>0) {
-        _hist_mll_SS_D   ->fill(mll   ,weight);
-        _hist_mll_SS_B   ->fill(mll   ,weight);
-        _hist_eTmiss_SS_D->fill(eTmiss,weight);
-        _hist_eTmiss_SS_B->fill(eTmiss,weight);
+        _hist_mll_SS_D   ->fill(mll   );
+        _hist_mll_SS_B   ->fill(mll   );
+        _hist_eTmiss_SS_D->fill(eTmiss);
+        _hist_eTmiss_SS_B->fill(eTmiss);
         if(recon_jets.size()>=2) {
-          _hist_mll_SS_2Jet_D   ->fill(mll   ,weight);
-          _hist_mll_SS_2Jet_B   ->fill(mll   ,weight);
+          _hist_mll_SS_2Jet_D   ->fill(mll   );
+          _hist_mll_SS_2Jet_B   ->fill(mll   );
         }
-        _hist_njet_SS_D ->fill(recon_jets.size(),weight);
-        _hist_njet_SS_B ->fill(recon_jets.size(),weight);
+        _hist_njet_SS_D ->fill(recon_jets.size());
+        _hist_njet_SS_B ->fill(recon_jets.size());
         if(!recon_jets.empty()) {
-          _hist_pT_j1_SS_D->fill(recon_jets[0].perp(),weight);
-          _hist_pT_j1_SS_B->fill(recon_jets[0].perp(),weight);
+          _hist_pT_j1_SS_D->fill(recon_jets[0].perp());
+          _hist_pT_j1_SS_B->fill(recon_jets[0].perp());
         }
         if(recon_jets.size()>2) {
-          _hist_pT_j2_SS_D->fill(recon_jets[1].perp(),weight);
-          _hist_pT_j2_SS_B->fill(recon_jets[1].perp(),weight);
+          _hist_pT_j2_SS_D->fill(recon_jets[1].perp());
+          _hist_pT_j2_SS_B->fill(recon_jets[1].perp());
         }
-        _hist_pT_l1_SS_D->fill(recon_leptons[0].perp(),weight);
-        _hist_pT_l1_SS_B->fill(recon_leptons[0].perp(),weight);
-        _hist_pT_l2_SS_D->fill(recon_leptons[1].perp(),weight);
-        _hist_pT_l2_SS_B->fill(recon_leptons[1].perp(),weight);
+        _hist_pT_l1_SS_D->fill(recon_leptons[0].perp());
+        _hist_pT_l1_SS_B->fill(recon_leptons[0].perp());
+        _hist_pT_l2_SS_D->fill(recon_leptons[1].perp());
+        _hist_pT_l2_SS_B->fill(recon_leptons[1].perp());
         // SS-SR1
         if(eTmiss>100.) {
-          _count_SS_SR1->fill(0.5,weight);
+          _count_SS_SR1->fill(0.5);
         }
         // SS-SR2
         if(eTmiss>80. && recon_jets.size()>=2 &&
            recon_jets[1].perp()>50.) {
-          _count_SS_SR2->fill(0.5,weight);
+          _count_SS_SR2->fill(0.5);
         }
       }
       // opposite sign
       else {
-        _hist_mll_OS_D->fill(mll   ,weight);
-        _hist_mll_OS_B->fill(mll   ,weight);
-        _hist_eTmiss_OS_D->fill(eTmiss,weight);
-        _hist_eTmiss_OS_B->fill(eTmiss,weight);
+        _hist_mll_OS_D->fill(mll   );
+        _hist_mll_OS_B->fill(mll   );
+        _hist_eTmiss_OS_D->fill(eTmiss);
+        _hist_eTmiss_OS_B->fill(eTmiss);
         if(recon_jets.size()>=3){
-          _hist_eTmiss_3Jet_OS_D->fill(eTmiss,weight);
-          _hist_eTmiss_3Jet_OS_B->fill(eTmiss,weight);
+          _hist_eTmiss_3Jet_OS_D->fill(eTmiss);
+          _hist_eTmiss_3Jet_OS_B->fill(eTmiss);
         }
         if(recon_jets.size()>=4){
-          _hist_eTmiss_4Jet_OS_D->fill(eTmiss,weight);
-          _hist_eTmiss_4Jet_OS_B->fill(eTmiss,weight);
+          _hist_eTmiss_4Jet_OS_D->fill(eTmiss);
+          _hist_eTmiss_4Jet_OS_B->fill(eTmiss);
         }
-        _hist_njet_OS_D->fill(recon_jets.size(),weight);
-        _hist_njet_OS_B->fill(recon_jets.size(),weight);
+        _hist_njet_OS_D->fill(recon_jets.size());
+        _hist_njet_OS_B->fill(recon_jets.size());
         if(!recon_jets.empty()) {
-          _hist_pT_j1_OS_D->fill(recon_jets[0].perp(),weight);
-          _hist_pT_j1_OS_B->fill(recon_jets[0].perp(),weight);
+          _hist_pT_j1_OS_D->fill(recon_jets[0].perp());
+          _hist_pT_j1_OS_B->fill(recon_jets[0].perp());
         }
         if(recon_jets.size()>2) {
-          _hist_pT_j2_OS_D->fill(recon_jets[1].perp(),weight);
-          _hist_pT_j2_OS_B->fill(recon_jets[1].perp(),weight);
+          _hist_pT_j2_OS_D->fill(recon_jets[1].perp());
+          _hist_pT_j2_OS_B->fill(recon_jets[1].perp());
         }
-        _hist_pT_l1_OS_D->fill(recon_leptons[0].perp(),weight);
-        _hist_pT_l1_OS_B->fill(recon_leptons[0].perp(),weight);
-        _hist_pT_l2_OS_D->fill(recon_leptons[1].perp(),weight);
-        _hist_pT_l2_OS_B->fill(recon_leptons[1].perp(),weight);
+        _hist_pT_l1_OS_D->fill(recon_leptons[0].perp());
+        _hist_pT_l1_OS_B->fill(recon_leptons[0].perp());
+        _hist_pT_l2_OS_D->fill(recon_leptons[1].perp());
+        _hist_pT_l2_OS_B->fill(recon_leptons[1].perp());
         // different signal regions
         // OS-SR1
         if(eTmiss>250.) {
-          _count_OS_SR1->fill(0.5,weight);
+          _count_OS_SR1->fill(0.5);
         }
         // OS-SR2
         if(eTmiss>220. && recon_jets.size()>=3 &&
            recon_jets[0].perp()>80. &&
            recon_jets[2].perp()>40.) {
-          _count_OS_SR2->fill(0.5,weight);
+          _count_OS_SR2->fill(0.5);
         }
         // OS-SR3
         if(eTmiss>100. && recon_jets.size()>=4 &&
            recon_jets[0].perp()>100. &&
            recon_jets[3].perp()>70.) {
-          _count_OS_SR3->fill(0.5,weight);
+          _count_OS_SR3->fill(0.5);
         }
         // same flavour analysis
         static const double beta   = 0.75;
         static const double tau_e  = 0.96;
         static const double tau_mu = 0.816;
-        double fs_weight = weight;
+        double fs_weight = 1.0;
         if (recon_leptons[0].abspid() == PID::ELECTRON && recon_leptons[1].abspid() == PID::ELECTRON) {
           fs_weight /= beta*(1.-sqr(1.-tau_e));
         } else if (recon_leptons[0].abspid() == PID::MUON && recon_leptons[1].abspid()==PID::MUON) {
@@ -452,6 +448,6 @@ namespace Rivet {
   };
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2012_I943401);
+  RIVET_DECLARE_PLUGIN(ATLAS_2012_I943401);
 
 }

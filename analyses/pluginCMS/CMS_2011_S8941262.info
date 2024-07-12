@@ -6,12 +6,13 @@ Collider: LHC
 SpiresID: 8941262
 InspireID: 884811
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Wolfram Erdmann <wolfram.erdmann@psi.ch>
 References:
  - JHEP 1103,090
  - doi:10.1007/JHEP03(2011)090
- - arXiv:hep-ex/1101.3512
+ - arXiv:1101.3512 [hep-ex]
 RunInfo:
    Inclusive QCD at 7 TeV, with no pT cuts.
 NumEvents: 10000000
@@ -44,3 +45,10 @@ BibTeX: '@Article{Khachatryan:2011hf,
      doi       = "10.1007/JHEP03(2011)090",
      SLACcitation  = "%%CITATION = 1101.3512;%%"
 }'
+
+ReleaseTests:
+ - $A LHC-7-Bottom-0
+ - $A-2 LHC-7-Bottom-1
+ - $A-3 LHC-7-Bottom-2
+ - $A-4 LHC-7-Bottom-3
+

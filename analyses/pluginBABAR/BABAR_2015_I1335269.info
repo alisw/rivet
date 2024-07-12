@@ -1,0 +1,37 @@
+Name: BABAR_2015_I1335269
+Year: 2015
+Summary: Mass distributions in the decays $B^0\to D^-D^0K^+$ and $B^+\to\bar{D}^0D^0K^+$
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 1335269
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 91 (2015) 5, 052002
+RunInfo: Any process producing B0 and B+, originally Upsilon(4S) decays
+Description:
+  'Mass distributions in the decays $B^0\to D^-D^0K^+$ and $B^+\to\bar{D}^0D^0K^+$ the data were read from the plots in the paper and the backgrounds from the paper subtracted they may be be correct for efficiency.'
+ValidationInfo:
+  'Herwig 7 events using EvtGen for B decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BaBar:2014jjr
+BibTeX: '@article{BaBar:2014jjr,
+    author = "Lees, J. P. and others",
+    collaboration = "BaBar",
+    title = "{Dalitz plot analyses of $B^0 → D^−D^0K^+$ and $B^+ → \overline{D}^0D^0K^+$ decays}",
+    eprint = "1412.6751",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BABAR-PUB-14-009, SLAC-PUB-16180",
+    doi = "10.1103/PhysRevD.91.052002",
+    journal = "Phys. Rev. D",
+    volume = "91",
+    number = "5",
+    pages = "052002",
+    year = "2015"
+}
+'

@@ -1,0 +1,33 @@
+Name: DELPHI_1990_I297698
+Year: 1990
+Summary: Jet rates in $e^+e^-$ at 91 GeV
+Experiment: DELPHI
+Collider: LEP
+InspireID: 297698
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett.B 247 (1990) 167-176
+RunInfo: e+ e- to hadrons
+Beams: [e+, e-]
+Energies: [91.2]
+Description:
+  'Differential and integrated jet rates for the JADE jet algorithms.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Abreu:1990qv
+BibTeX: '@article{Abreu:1990qv,
+    author = "Abreu, P. and others",
+    collaboration = "DELPHI",
+    title = "{A Comparison of jet production rates on the Z0 resonance to perturbative QCD}",
+    reportNumber = "CERN-EP-90-89",
+    doi = "10.1016/0370-2693(90)91065-J",
+    journal = "Phys. Lett. B",
+    volume = "247",
+    pages = "167--176",
+    year = "1990"
+}'

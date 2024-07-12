@@ -6,6 +6,7 @@ Collider: Tevatron Run 1
 SpiresID: 4155203
 InspireID: 505738
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Hendrik Hoeth <hendrik.hoeth@cern.ch>
 References:
@@ -51,3 +52,7 @@ BibTeX: '@Article{Affolder:1999jh,
      doi       = "10.1103/PhysRevLett.84.845",
      SLACcitation  = "%%CITATION = HEP-EX/0001021;%%"
 }'
+
+ReleaseTests:
+ - $A TVT-Run-I-Z
+

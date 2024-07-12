@@ -5,10 +5,12 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1310835
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Jonathan Stahlman <stahlman@cern.ch>
  - Christian Gutschow <chris.g@cern.ch>
 References:
+ - ATLAS-HIGG-2013-22
  - Phys.Lett. B738 (2014) 234-253
  - arXiv:1408.3226 [hep-ex]
  - doi:10.1016/j.physletb.2014.09.054

@@ -1,0 +1,34 @@
+Name: ARGUS_1989_I262415
+Year: 1989
+Summary: Spectra for the production of $\Lambda^0(1520)$ in $e^+e^-$ collisions in the continuum at 10 GeV and the $\Upsilon_1$
+Experiment: ARGUS
+Collider: DORIS
+InspireID: 262415
+Status: VALIDATED
+Authors:
+ - Peter Richardson <Peter.Richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B215 (1988) 429-434, 1988 
+RunInfo:
+  $e^+ e^-$ analysis near the $\Upsilon$ resonances
+NeedCrossSection: yes
+Beams: [e-, e+]
+Energies: [9.46,10.]
+Description:
+  'Spectra for the production of $\Lambda^0(1520)$ in $e^+e^-$ collisions.
+   Data are taken on the $\Upsilon(1S)$ and in the nearby continuum.'
+Keywords: []
+BibKey: Albrecht:1988jt
+BibTeX: '@article{Albrecht:1988jt,
+      author         = "Albrecht, H. and others",
+      title          = "{Observation of the Orbitally Excited $\Lambda(1520)$
+                        Baryon in $e^+ e^-$ Annihilation}",
+      collaboration  = "ARGUS",
+      journal        = "Phys. Lett.",
+      volume         = "B215",
+      year           = "1988",
+      pages          = "429-434",
+      doi            = "10.1016/0370-2693(88)91461-X",
+      reportNumber   = "DESY-88-072",
+      SLACcitation   = "%%CITATION = PHLTA,B215,429;%%"
+}'

@@ -1,0 +1,28 @@
+{
+    "1942141": [
+        "First Search for Exclusive Diphoton Production at High Mass with Tagged Protons in Proton-Proton Collisions at $\\sqrt s$ = 13 TeV",
+        "(TOTEM Collaboration)\u2021",
+        "10.1103/PhysRevLett.129.011801",
+        "2783914",
+        "2110.05916",
+        "ins1942141",
+        null,
+        [
+            "CMS-EXO-18-014",
+            "TOTEM-2021-002",
+            "CERN-EP-2021-191"
+        ]
+    ],
+    "1974042": [
+        "Characterisation of the dip-bump structure observed in proton\u2013proton elastic scattering at $\\sqrt{s}$ = 8\u00a0TeV",
+        "TOTEM",
+        "10.1140/epjc/s10052-022-10065-x",
+        "2790879",
+        "2111.11991",
+        "ins1974042",
+        null,
+        [
+            "CERN-EP-2021-242"
+        ]
+    ]
+}

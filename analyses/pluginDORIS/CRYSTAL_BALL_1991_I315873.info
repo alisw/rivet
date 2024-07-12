@@ -1,0 +1,32 @@
+Name: CRYSTAL_BALL_1991_I315873
+Year: 1991
+Summary: Direct Photon Spectrum in $\Upsilon(1S)$ decays
+Experiment: CRYSTAL_BALL
+Collider: DORIS
+InspireID: 315873
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett.B 199 (1987) 291-296
+RunInfo: any process producing Upsilon mesons, original e+e- collisions
+Description:
+  'Measurement of the direct photon spectrum in $\Upsilon(1S)$ decays by the Crystal Ball experiment. While there is a more recent CLEO result that is not corrected for efficiency and resolution. The spectrum was read from the figures in the paper as it was not included in the original HEPDATA entry. It is normalised to unity in the observed region.'
+ValidationInfo:
+  'Herwig7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: CrystalBall:1991kqa
+BibTeX: '@article{CrystalBall:1991kqa,
+    author = "Bizzeti, A. and others",
+    collaboration = "Crystal Ball",
+    title = "{Measurement of the direct photon spectrum from Upsilon (1S) decays}",
+    reportNumber = "SLAC-PUB-5400, DESY-91-051",
+    doi = "10.1016/0370-2693(91)91262-T",
+    journal = "Phys. Lett. B",
+    volume = "267",
+    pages = "286--292",
+    year = "1991"
+}
+'

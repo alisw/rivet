@@ -1,0 +1,35 @@
+Name: FOCUS_2003_I618864
+Year: 2003
+Summary: Mass distributions in the decays $\Xi_c^+\to\Sigma^+K^-\pi^+$ and $\Xi_c^+\to\Xi^-\pi^+\pi^+$
+Experiment: FOCUS
+Collider: Fermilab
+InspireID: 618864
+Status: VALIDATED NOHEPDATA
+Reentrant:  true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett.B 571 (2003) 139-147
+RunInfo: Any process producing Xic+ mesons
+Description:
+  'Measurement of the mass distributions in the decays $\Xi_c^+\to\Sigma^+K^-\pi^+$ and $\Xi_c^+\to\Xi^-\pi^+\pi^+$ by FOCUS. The data were read from the plots in the paper.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: FOCUS:2003gpe
+BibTeX: '@article{FOCUS:2003gpe,
+    author = "Link, J. M. and others",
+    collaboration = "FOCUS",
+    title = "{Measurements of Xi(c)+ branching ratios}",
+    eprint = "hep-ex/0305038",
+    archivePrefix = "arXiv",
+    reportNumber = "FERMILAB-PUB-03-134-E",
+    doi = "10.1016/S0370-2693(03)00809-8",
+    journal = "Phys. Lett. B",
+    volume = "571",
+    pages = "139--147",
+    year = "2003"
+}
+'

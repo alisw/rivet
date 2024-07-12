@@ -1,0 +1,158 @@
+{
+    "294894": [
+        "Study of Hadronic Decays of the $\\Z^0$ Boson", 
+        "DELPHI", 
+        "10.1016/0370-2693(90)90445-C", 
+        "204918", 
+        null, 
+        "ins294894", 
+        null, 
+        [
+            "CERN-EP-90-19"
+        ]
+    ], 
+    "295500": [
+        "Study of the Leptonic Decays of the $Z^0$ Boson", 
+        "DELPHI", 
+        "10.1016/0370-2693(90)91667-Z", 
+        "206221", 
+        null, 
+        "ins295500", 
+        null, 
+        [
+            "CERN-EP-90-31"
+        ]
+    ], 
+    "295501": [
+        "A Precise Measurement of the $Z$ Resonance Parameters Through Its Hadronic Decays", 
+        "DELPHI", 
+        "10.1016/0370-2693(90)91668-2", 
+        "206220", 
+        null, 
+        "ins295501", 
+        null, 
+        [
+            "CERN-EP-90-32"
+        ]
+    ], 
+    "295503": [
+        "Search for Heavy Charged Scalars in $\\Z^0$ Decays", 
+        "DELPHI", 
+        "10.1016/0370-2693(90)91669-3", 
+        "206245", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-90-33"
+        ]
+    ], 
+    "295615": [
+        "Search for the $T$ and b$^\\prime$ Quarks in Hadronic Decays of the Z$^0$ Boson", 
+        "DELPHI", 
+        "10.1016/0370-2693(90)91808-O", 
+        "207030", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-90-46"
+        ]
+    ], 
+    "295617": [
+        "Search for Light Neutral Higgs Particles Produced in $\\Z^0$ Decays", 
+        "DELPHI", 
+        "10.1016/0550-3213(90)90569-Y", 
+        "207036", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-90-44"
+        ]
+    ], 
+    "296473": [
+        "Search for pair production of neutral Higgs bosons in Z0 decays", 
+        "DELPHI", 
+        "10.1016/0370-2693(90)90147-X", 
+        "208247", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-90-60"
+        ]
+    ], 
+    "296997": [
+        "Search for scalar quarks in $Z^0$ decays", 
+        "DELPHI", 
+        "10.1016/0370-2693(90)91063-H", 
+        "209298", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-90-79"
+        ]
+    ], 
+    "296998": [
+        "A Study of intermittency in hadronic Z0 decays", 
+        "DELPHI", 
+        "10.1016/0370-2693(90)91062-G", 
+        "209307", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-90-78"
+        ]
+    ], 
+    "297697": [
+        "A Search for sleptons and gauginos in Z0 decays", 
+        "DELPHI", 
+        "10.1016/0370-2693(90)91064-I", 
+        "209457", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-90-80"
+        ]
+    ], 
+    "297698": [
+        "A Comparison of jet production rates on the Z0 resonance to perturbative QCD", 
+        "DELPHI", 
+        "10.1016/0370-2693(90)91065-J", 
+        "209642", 
+        null, 
+        "ins297698", 
+        null, 
+        [
+            "CERN-EP-90-89"
+        ]
+    ], 
+    "300161": [
+        "Energy-energy correlations in hadronic final states from Z0 decays", 
+        "DELPHI", 
+        "10.1016/0370-2693(90)91097-U", 
+        "212027", 
+        null, 
+        "ins300161", 
+        null, 
+        [
+            "CERN-PPE-90-122"
+        ]
+    ], 
+    "300162": [
+        "Measurement of the partial width of the decay of the Z0 into charm quark pairs", 
+        "DELPHI", 
+        "10.1016/0370-2693(90)91096-T", 
+        "212151", 
+        null, 
+        "ins300162", 
+        null, 
+        [
+            "CERN-PPE-90-123"
+        ]
+    ]
+}

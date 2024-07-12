@@ -4,6 +4,7 @@ Summary: Search for supersymmetry in events with jets and missing transverse mom
 Experiment: CMS
 Collider: LHC
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Andy Buckley <andy.buckley@cern.ch>
 RunInfo: BSM physics signal events

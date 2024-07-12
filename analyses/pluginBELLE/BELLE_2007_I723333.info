@@ -1,0 +1,33 @@
+Name: BELLE_2007_I723333
+Year: 2007
+Summary: Cross section for $e^+e^-\to D^{*+}D^{*-}$ and $D^\pm D^{*\mp}$ below 5 GeV
+Experiment: BELLE
+Collider: KEKB
+InspireID: 723333
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 98 (2007) 092001
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+, e-]
+Description:
+  'Cross section for $e^+e^-\to D^{*+}D^{*-}$ and $D^\pm D^{*\mp}$ below 5 GeV'
+Keywords: []
+BibKey: Abe:2006fj
+BibTeX: '@article{Abe:2006fj,
+      author         = "Abe, Kazuo and others",
+      title          = "{Measurement of the near-threshold e+ e- ---&gt; D(*)+-
+                        D(*)-+ cross section using initial-state radiation}",
+      collaboration  = "Belle",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "98",
+      year           = "2007",
+      pages          = "092001",
+      doi            = "10.1103/PhysRevLett.98.092001",
+      eprint         = "hep-ex/0608018",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = HEP-EX/0608018;%%"
+}'

@@ -23,43 +23,43 @@ namespace Rivet {
     void init() {
       Cut cut = Cuts::abseta < 3.5 && Cuts::pT > 25*GeV;
       ZFinder zeefinder(FinalState(), cut, PID::ELECTRON, 65*GeV, 115*GeV,
-                        0.2, ZFinder::CLUSTERNODECAY, ZFinder::TRACK);
+                        0.2, ZFinder::ClusterPhotons::NODECAY, ZFinder::AddPhotons::YES);
       declare(zeefinder, "ZeeFinder");
 
       VetoedFinalState zmminput;
       zmminput.addVetoOnThisFinalState(zeefinder);
       ZFinder zmmfinder(zmminput, cut, PID::MUON, 65*GeV, 115*GeV,
-                        0.2, ZFinder::CLUSTERNODECAY, ZFinder::TRACK);
+                        0.2, ZFinder::ClusterPhotons::NODECAY, ZFinder::AddPhotons::YES);
       declare(zmmfinder, "ZmmFinder");
 
       // Properties of the pair momentum
       double sqrts = sqrtS()>0. ? sqrtS() : 14000.;
-      _h_ZZ_pT = bookHisto1D("ZZ_pT", logspace(100, 1.0, 0.5*sqrts/GeV));
-      _h_ZZ_pT_peak = bookHisto1D("ZZ_pT_peak", 25, 0.0, 25.0);
-      _h_ZZ_eta = bookHisto1D("ZZ_eta", 40, -7.0, 7.0);
-      _h_ZZ_phi = bookHisto1D("ZZ_phi", 25, 0.0, TWOPI);
-      _h_ZZ_m = bookHisto1D("ZZ_m", logspace(100, 150.0, 180.0 + 0.25*sqrts/GeV));
+      book(_h_ZZ_pT ,"ZZ_pT", logspace(100, 1.0, 0.5*sqrts/GeV));
+      book(_h_ZZ_pT_peak ,"ZZ_pT_peak", 25, 0.0, 25.0);
+      book(_h_ZZ_eta ,"ZZ_eta", 40, -7.0, 7.0);
+      book(_h_ZZ_phi ,"ZZ_phi", 25, 0.0, TWOPI);
+      book(_h_ZZ_m ,"ZZ_m", logspace(100, 150.0, 180.0 + 0.25*sqrts/GeV));
 
       // Correlations between the ZZ
-      _h_ZZ_dphi = bookHisto1D("ZZ_dphi", 25, 0.0, PI);  /// @todo non-linear?
-      _h_ZZ_deta = bookHisto1D("ZZ_deta", 25, -7.0, 7.0);
-      _h_ZZ_dR = bookHisto1D("ZZ_dR", 25, 0.5, 7.0);
-      _h_ZZ_dpT = bookHisto1D("ZZ_dpT", logspace(100, 1.0, 0.5*sqrts/GeV));
-      _h_ZZ_costheta_planes = bookHisto1D("ZZ_costheta_planes", 25, -1.0, 1.0);
+      book(_h_ZZ_dphi ,"ZZ_dphi", 25, 0.0, PI);  /// @todo non-linear?
+      book(_h_ZZ_deta ,"ZZ_deta", 25, -7.0, 7.0);
+      book(_h_ZZ_dR ,"ZZ_dR", 25, 0.5, 7.0);
+      book(_h_ZZ_dpT ,"ZZ_dpT", logspace(100, 1.0, 0.5*sqrts/GeV));
+      book(_h_ZZ_costheta_planes ,"ZZ_costheta_planes", 25, -1.0, 1.0);
 
       // Properties of the Z bosons
-      _h_Z_pT = bookHisto1D("Z_pT", logspace(100, 10.0, 0.25*sqrts/GeV));
-      _h_Z_eta = bookHisto1D("Z_eta", 70, -7.0, 7.0);
+      book(_h_Z_pT ,"Z_pT", logspace(100, 10.0, 0.25*sqrts/GeV));
+      book(_h_Z_eta ,"Z_eta", 70, -7.0, 7.0);
 
       // Properties of the leptons
-      _h_Zl_pT = bookHisto1D("Zl_pT", logspace(100, 30.0, 0.1*sqrts/GeV));
-      _h_Zl_eta = bookHisto1D("Zl_eta", 40, -3.5, 3.5);
+      book(_h_Zl_pT ,"Zl_pT", logspace(100, 30.0, 0.1*sqrts/GeV));
+      book(_h_Zl_eta ,"Zl_eta", 40, -3.5, 3.5);
 
       // Correlations between the opposite charge leptons
-      _h_ZeZm_dphi = bookHisto1D("ZeZm_dphi", 25, 0.0, PI);
-      _h_ZeZm_deta = bookHisto1D("ZeZm_deta", 25, -5.0, 5.0);
-      _h_ZeZm_dR = bookHisto1D("ZeZm_dR", 25, 0.5, 5.0);
-      _h_ZeZm_m = bookHisto1D("ZeZm_m", 100, 0.0, 300.0);
+      book(_h_ZeZm_dphi ,"ZeZm_dphi", 25, 0.0, PI);
+      book(_h_ZeZm_deta ,"ZeZm_deta", 25, -5.0, 5.0);
+      book(_h_ZeZm_dR ,"ZeZm_dR", 25, 0.5, 5.0);
+      book(_h_ZeZm_m ,"ZeZm_m", 100, 0.0, 300.0);
 
     }
 
@@ -82,7 +82,7 @@ namespace Rivet {
       const FourMomentum& mp = zmmfinder.constituents()[0].momentum();
       const FourMomentum& mm = zmmfinder.constituents()[1].momentum();
 
-      const double weight = e.weight();
+      const double weight = 1.0;
       _h_ZZ_pT->fill(zz.pT()/GeV, weight);
       _h_ZZ_pT_peak->fill(zz.pT()/GeV, weight);
       _h_ZZ_eta->fill(zz.eta(), weight);
@@ -178,6 +178,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(MC_ZZINC);
+  RIVET_DECLARE_PLUGIN(MC_ZZINC);
 
 }

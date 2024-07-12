@@ -1,0 +1,346 @@
+{
+    "476785": [
+        "Searches for scalar top and scalar bottom quarks in e+ e- interactions at 161-GeV less than equal to S**(1/2) less than equal to 183-GeV", 
+        "L3", 
+        "10.1016/S0370-2693(98)01505-6", 
+        "366005", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-135"
+        ]
+    ], 
+    "477809": [
+        "Search for charged Higgs bosons in e+ e- collisions at center-of-mass energies between 130-GeV and 183-GeV", 
+        "L3", 
+        "10.1016/S0370-2693(98)01543-3", 
+        "367961", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-149"
+        ]
+    ], 
+    "478185": [
+        "Measurement of the e+ e- --> Z ---> b anti-b forward - backward asymmetry and the B0 anti-B0 mixing parameter using prompt leptons", 
+        "L3", 
+        "10.1016/S0370-2693(98)01601-3", 
+        "368728", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-156"
+        ]
+    ], 
+    "479052": [
+        "The Q**2 evolution of the hadronic photon structure function F(2)gamma at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(98)01552-4", 
+        "369961", 
+        null, 
+        "ins479052", 
+        null, 
+        [
+            "CERN-EP-98-168"
+        ]
+    ], 
+    "481163": [
+        "Inclusive charm production in two photon collisions at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(99)00274-9", 
+        "374111", 
+        null, 
+        "ins481163", 
+        null, 
+        [
+            "CERN-EP-98-185"
+        ]
+    ], 
+    "481164": [
+        "chi(c2) formation in two photon collisions at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(99)00279-8", 
+        "395222", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-184"
+        ]
+    ], 
+    "482477": [
+        "Study of neutral current four fermion and Z Z production in e+ e- collisions at S**(1/2) = 183-GeV", 
+        "L3", 
+        "10.1016/S0370-2693(99)00103-3", 
+        "377045", 
+        null, 
+        "ins482477", 
+        null, 
+        [
+            "CERN-EP-98-206"
+        ]
+    ], 
+    "482478": [
+        "Measurement of the cross-section for the process gamma* gamma* ---> hadrons at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(99)00278-6", 
+        "395224", 
+        null, 
+        "ins482478", 
+        null, 
+        [
+            "CERN-EP-98-205"
+        ]
+    ], 
+    "482479": [
+        "Heavy quarkonium production in $Z$ decays", 
+        "L3", 
+        "10.1016/S0370-2693(99)00280-4", 
+        "377043", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-204"
+        ]
+    ], 
+    "495806": [
+        "Measurement of mass and width of the $W$ boson at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(99)00348-2", 
+        "379699", 
+        "hep-ex/9909010", 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-017", 
+            "CERN-EP-99-17"
+        ]
+    ], 
+    "496399": [
+        "Search for scalar leptons in e+ e- collisions at S**(1/2) = 183-GeV", 
+        "L3", 
+        "10.1016/S0370-2693(99)00447-5", 
+        "380926", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-024", 
+            "CERN-EP-99-24"
+        ]
+    ], 
+    "496400": [
+        "Search for R-parity violating chargino and neutralino decays in e+ e- collisions up to S**(1/2) = 183-GeV", 
+        "L3", 
+        "10.1016/S0370-2693(99)00680-2", 
+        "380925", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-023", 
+            "CERN-EP-99-23"
+        ]
+    ], 
+    "499542": [
+        "Measurement of an elongation of the pion source in $Z$ decays", 
+        "L3", 
+        "10.1016/S0370-2693(99)00662-0", 
+        "385957", 
+        "hep-ex/9909009", 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-050", 
+            "CERN-EP-99-50"
+        ]
+    ], 
+    "501369": [
+        "Formation of the $eta_c$ in two photon collisions at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(99)00784-4", 
+        "389018", 
+        "hep-ex/9909008", 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-072", 
+            "CERN-EP-99-72"
+        ]
+    ], 
+    "502747": [
+        "Search for heavy neutral and charged leptons in $e^{+} e^{-}$ annihilation at $S^{(1/2)}$ = 183-GeV and 189-GeV", 
+        "L3", 
+        "10.1016/S0370-2693(99)00922-3", 
+        "391548", 
+        "hep-ex/9909007", 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-075", 
+            "CERN-EP-99-75"
+        ]
+    ], 
+    "502749": [
+        "Search for Standard Model Higgs boson in $e^{+} e^{-}$ interactions at $S^{(1/2)}$ = 189-GeV", 
+        "L3", 
+        "10.1016/S0370-2693(99)00853-9", 
+        "391549", 
+        "hep-ex/9909004", 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-080", 
+            "CERN-EP-99-80"
+        ]
+    ], 
+    "504106": [
+        "Search for heavy isosinglet neutrinos in $e^{+} e^{-}$ annihilation at 130-GeV less than $S^{(1/2)}$ less than 189-GeV", 
+        "L3", 
+        "10.1016/S0370-2693(99)00852-7", 
+        "393167", 
+        "hep-ex/9909006", 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-083", 
+            "CERN-EP-99-83"
+        ]
+    ], 
+    "505281": [
+        "Measurement of inclusive $D^{*+-}$ production in two photon collisions at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(99)01153-3", 
+        "395866", 
+        "hep-ex/9909005", 
+        "ins505281", 
+        null, 
+        [
+            "CERN-EP-99-106"
+        ]
+    ], 
+    "506982": [
+        "Measurement of the spectroscopy of orbitally excited $B$ mesons at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(99)01067-9", 
+        "399327", 
+        "hep-ex/9909018", 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-116"
+        ]
+    ], 
+    "506983": [
+        "Search for low scale gravity effects in $e^{+} e^{-}$ collisions at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(99)01011-4", 
+        "399328", 
+        "hep-ex/9909019", 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-117"
+        ]
+    ], 
+    "507738": [
+        "Search for charged Higgs bosons in $e^{+} e^{-}$ collisions at $\\sqrt{s}$ = 189-GeV", 
+        "L3", 
+        "10.1016/S0370-2693(99)01100-4", 
+        "400681", 
+        "hep-ex/9909044", 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-120"
+        ]
+    ], 
+    "507739": [
+        "Study of $Z$ Boson Pair Production in $e^{+} e^{-}$ collisions at LEP at $S^{(1/2)}$ = 189-GeV", 
+        "L3", 
+        "10.1016/S0370-2693(99)01065-5", 
+        "400680", 
+        "hep-ex/9909043", 
+        "ins507739", 
+        null, 
+        [
+            "CERN-EP-99-119"
+        ]
+    ], 
+    "508076": [
+        "Search for scalar leptons in $e^{+} e^{-}$ collisions at $\\sqrt{S}$ = 189-GeV", 
+        "L3", 
+        "10.1016/S0370-2693(99)01314-3", 
+        "401678", 
+        "hep-ex/9910006", 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-128"
+        ]
+    ], 
+    "508078": [
+        "Measurement of triple gauge boson couplings of the $W$ boson at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(99)01195-8", 
+        "401809", 
+        "hep-ex/9910008", 
+        "ins508078", 
+        null, 
+        [
+            "CERN-EP-99-131"
+        ]
+    ], 
+    "508079": [
+        "Single and multiphoton events with missing energy in $e^{+} e^{-}$ collisions at $\\sqrt{S}$ - 189-GeV", 
+        "L3", 
+        "10.1016/S0370-2693(99)01286-1", 
+        "401679", 
+        "hep-ex/9910009", 
+        "ins508079", 
+        null, 
+        [
+            "CERN-EP-99-129"
+        ]
+    ], 
+    "508408": [
+        "Searches for scalar quarks in $e^{+} e^{-}$ interactions at $\\sqrt{S}$ = 189-GeV", 
+        "L3", 
+        "10.1016/S0370-2693(99)01363-5", 
+        "403276", 
+        "hep-ex/9910020", 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-137"
+        ]
+    ], 
+    "509037": [
+        "Search for neutral Higgs bosons of the minimal supersymmetric standard model in $e^{+} e^{-}$ interactions at $\\sqrt{S}$ = 189-GeV", 
+        "L3", 
+        "10.1016/S0370-2693(99)01315-5", 
+        "404701", 
+        "hep-ex/9910053", 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-145"
+        ]
+    ], 
+    "509099": [
+        "Search for extra dimensions in boson and fermion pair production in $e^{+} e^{-}$ interactions at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(99)01310-6", 
+        "404702", 
+        "hep-ex/9910056", 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-146"
+        ]
+    ]
+}

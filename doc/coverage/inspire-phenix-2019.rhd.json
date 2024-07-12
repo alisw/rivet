@@ -1,0 +1,82 @@
+{
+    "1658594": [
+        "Measurement of two-particle correlations with respect to second- and third-order event planes in Au$+$Au collisions at $\\sqrt{s_{_{NN}}}=200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.99.054903", 
+        null, 
+        "1803.01749", 
+        null, 
+        null, 
+        []
+    ], 
+    "1670164": [
+        "Multiparticle azimuthal correlations for extracting event-by-event elliptic and triangular flow in Au$+$Au collisions at $\\sqrt{s_{_{NN}}}=200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.99.024903", 
+        null, 
+        "1804.10024", 
+        null, 
+        null, 
+        []
+    ], 
+    "1672015": [
+        "Measurements of $\\mu\\mu$ pairs from open heavy flavor and Drell-Yan in $p+p$ collisions at $\\sqrt{s}=200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevD.99.072003", 
+        null, 
+        "1805.02448", 
+        null, 
+        null, 
+        []
+    ], 
+    "1672133": [
+        "Creation of quark\u2013gluon plasma droplets with three distinct geometries", 
+        "PHENIX", 
+        "10.1038/s41567-018-0360-0", 
+        null, 
+        "1805.02973", 
+        "ins1672133", 
+        null, 
+        []
+    ], 
+    "1672476": [
+        "Beam Energy and Centrality Dependence of Direct-Photon Emission from Ultrarelativistic Heavy-Ion Collisions", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.123.022301", 
+        null, 
+        "1805.04084", 
+        null, 
+        null, 
+        []
+    ], 
+    "1695272": [
+        "Nonperturbative transverse momentum broadening in dihadron angular correlations in $\\sqrt{s_{NN}}=200$ GeV proton-nucleus collisions", 
+        "PHENIX", 
+        "10.1103/PhysRevC.99.044912", 
+        null, 
+        "1809.09045", 
+        null, 
+        null, 
+        []
+    ], 
+    "1716636": [
+        "Measurement of charm and bottom production from semileptonic hadron decays in $p+p$ collisions at $\\sqrt{s_{NN}}=200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevD.99.092003", 
+        null, 
+        "1901.08405", 
+        null, 
+        null, 
+        []
+    ], 
+    "1725616": [
+        "Nuclear Dependence of the Transverse Single-Spin Asymmetry in the Production of Charged Hadrons at Forward Rapidity in Polarized $p+p$, $p+$Al, and $p+$Au Collisions at $\\sqrt{s_{_{NN}}}=200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.123.122001", 
+        null, 
+        "1903.07422", 
+        null, 
+        null, 
+        []
+    ]
+}

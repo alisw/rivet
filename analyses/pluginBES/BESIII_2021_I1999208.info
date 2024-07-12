@@ -1,0 +1,34 @@
+Name: BESIII_2021_I1999208
+Year: 2021
+Summary: Cross section for $e^+e^-\to\omega\pi^0\pi^0$ between 2 and 3.08 GeV
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1999208
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - arXiv:2112.15076
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams:  [e+,e-]
+Description:
+  'Measurement of the cross section for $e^+e^-\to\omega\pi^0\pi^0$ between 2 and 3.08 GeV by the BESIII collaboration.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2021uni
+BibTeX: '@article{BESIII:2021uni,
+    author = "Ablikim, M. and others",
+    collaboration = "BESIII",
+    title = "{Measurement of $e^{+}e^{-}\rightarrow\omega\pi^{0}\pi^{0}$ cross section at center-of-mass energies from 2.00 to 3.08 GeV}",
+    eprint = "2112.15076",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    month = "12",
+    year = "2021"
+}
+'

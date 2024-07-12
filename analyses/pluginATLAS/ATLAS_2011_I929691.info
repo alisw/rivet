@@ -5,9 +5,11 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 929691
 Status: VALIDATED
+Reentrant: false
 Authors:
  - Stefan von Buddenbrock <stef.von.b@cern.ch>
 References:
+ - ATLAS-STDM-2011-14
  - "Eur.Phys.J.C 71 (2011) 1795"
  - "doi:10.1140/epjc/s10052-011-1795-y"
  - "arXiv:1109.5816 [hep-ex]"
@@ -43,3 +45,16 @@ BibTeX: '@article{Aad:2011sc,
       reportNumber   = "CERN-PH-EP-2011-148",
       SLACcitation   = "%%CITATION = ARXIV:1109.5816;%%"
 }'
+
+ReleaseTests:
+ - $A LHC-7-Jets-1
+ - $A-2 LHC-7-Jets-10
+ - $A-3 LHC-7-Jets-2
+ - $A-4 LHC-7-Jets-3
+ - $A-5 LHC-7-Jets-4
+ - $A-6 LHC-7-Jets-5
+ - $A-7 LHC-7-Jets-6
+ - $A-8 LHC-7-Jets-7
+ - $A-9 LHC-7-Jets-8
+ - $A-10 LHC-7-Jets-9
+

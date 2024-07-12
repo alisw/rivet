@@ -17,7 +17,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2016_CONF_2016_054);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2016_CONF_2016_054);
 
 
     /// @name Analysis methods
@@ -41,7 +41,7 @@ namespace Rivet {
 
       FinalState es(Cuts::abseta < 2.47 && Cuts::pT > 7*GeV && Cuts::abspid == PID::ELECTRON);
       declare(es, "TruthElectrons");
-      declare(SmearedParticles(es, ELECTRON_EFF_ATLAS_RUN2, ELECTRON_SMEAR_ATLAS_RUN2), "Electrons");
+      declare(SmearedParticles(es, ELECTRON_RECOEFF_ATLAS_RUN2, ELECTRON_SMEAR_ATLAS_RUN2), "Electrons");
 
       FinalState mus(Cuts::abseta < 2.5 && Cuts::pT > 6*GeV && Cuts::abspid == PID::MUON);
       declare(mus, "TruthMuons");
@@ -49,16 +49,16 @@ namespace Rivet {
 
 
       // Book histograms/counters
-      _h_gg2j = bookCounter("GG-2j");
-      _h_gg6j0 = bookCounter("GG-6j-0bulk");
-      _h_gg6j1 = bookCounter("GG-6j-1highmass");
-      _h_gg4j0 = bookCounter("GG-4j-0lowx");
-      _h_gg4j1 = bookCounter("GG-4j-1lowxbveto");
-      _h_gg4j2 = bookCounter("GG-4j-2highx");
-      _h_ss4j0 = bookCounter("SS-4j-0x12");
-      _h_ss4j1 = bookCounter("SS-4j-1lowx");
-      _h_ss5j0 = bookCounter("SS-5j-0x12");
-      _h_ss5j1 = bookCounter("SS-5j-1highx");
+      book(_h_gg2j,"GG-2j");
+      book(_h_gg6j0,"GG-6j-0bulk");
+      book(_h_gg6j1,"GG-6j-1highmass");
+      book(_h_gg4j0,"GG-4j-0lowx");
+      book(_h_gg4j1,"GG-4j-1lowxbveto");
+      book(_h_gg4j2,"GG-4j-2highx");
+      book(_h_ss4j0,"SS-4j-0x12");
+      book(_h_ss4j1,"SS-4j-1lowx");
+      book(_h_ss5j0,"SS-5j-0x12");
+      book(_h_ss5j1,"SS-5j-1highx");
 
     }
 
@@ -118,7 +118,7 @@ namespace Rivet {
       Particles sigelecs = filter_select(elecs, grad_loose_filter);
       Particles sigmuons = filter_select(muons, grad_loose_filter);
       // Tight electron selection (NB. assuming independent eff to gradient-loose... hmm)
-      ifilter_select(sigelecs, ParticleEffFilter(ELECTRON_IDEFF_ATLAS_RUN2_TIGHT));
+      ifilter_select(sigelecs, ParticleEffFilter(ELECTRON_EFF_ATLAS_RUN2_TIGHT));
 
 
       // MET calculation (NB. done generically, with smearing, rather than via explicit physics objects)
@@ -152,35 +152,34 @@ namespace Rivet {
 
 
       // Fill counters
-      const double w = event.weight();
       // GG
       if (siglepton.pT() < 35*GeV && sigjets.size() >= 2 &&
           sigjets[0].pT() > 200*GeV && sigjets[1].pT() > 30*GeV &&
-          mT > 100*GeV && etmiss > 460*GeV && etmiss/meff > 0.35) _h_gg2j->fill(w);
+          mT > 100*GeV && etmiss > 460*GeV && etmiss/meff > 0.35) _h_gg2j->fill();
       if (siglepton.pT() > 35*GeV && sigjets.size() >= 6 &&
           sigjets[0].pT() > 125*GeV && sigjets[5].pT() > 30*GeV &&
           mT > 225*GeV && etmiss > 250*GeV && meff > 1000*GeV && etmiss/meff > 0.2 &&
-          jet_aplanarity > 0.04) _h_gg6j0->fill(w);
+          jet_aplanarity > 0.04) _h_gg6j0->fill();
       if (siglepton.pT() > 35*GeV && sigjets.size() >= 6 &&
           sigjets[0].pT() > 125*GeV && sigjets[5].pT() > 30*GeV &&
           mT > 225*GeV && etmiss > 250*GeV && meff > 2000*GeV && etmiss/meff > 0.1 &&
-          jet_aplanarity > 0.04) _h_gg6j1->fill(w);
+          jet_aplanarity > 0.04) _h_gg6j1->fill();
       if (sigjets.size() >= 4 && sigjets[3].pT() > 100*GeV &&
-          mT > 125*GeV && etmiss > 250*GeV && meff > 2000*GeV && jet_aplanarity > 0.06) _h_gg4j0->fill(w);
+          mT > 125*GeV && etmiss > 250*GeV && meff > 2000*GeV && jet_aplanarity > 0.06) _h_gg4j0->fill();
       if (sigjets.size() >= 4 && sigjets[3].pT() > 100*GeV && sigbjets.empty() &&
-          mT > 125*GeV && etmiss > 250*GeV && meff > 2000*GeV && jet_aplanarity > 0.03) _h_gg4j1->fill(w);
+          mT > 125*GeV && etmiss > 250*GeV && meff > 2000*GeV && jet_aplanarity > 0.03) _h_gg4j1->fill();
       if (siglepton.pT() > 35*GeV &&
           sigjets.size() >= 4 && sigjets[0].pT() > 400*GeV && inRange(sigjets[3].pT(), 30*GeV, 100*GeV) &&
-          mT > 475*GeV && etmiss > 250*GeV && meff > 1600*GeV && etmiss/meff > 0.3) _h_gg4j2->fill(w);
+          mT > 475*GeV && etmiss > 250*GeV && meff > 1600*GeV && etmiss/meff > 0.3) _h_gg4j2->fill();
       // SS
       if (siglepton.pT() > 35*GeV && sigjets.size() >= 4 && sigjets[3].pT() > 50*GeV &&
-          mT > 175*GeV && etmiss > 300*GeV && meff > 1200*GeV && lepton_aplanarity > 0.08) _h_ss4j0->fill(w);
+          mT > 175*GeV && etmiss > 300*GeV && meff > 1200*GeV && lepton_aplanarity > 0.08) _h_ss4j0->fill();
       if (siglepton.pT() > 35*GeV && sigjets.size() >= 5 && sigjets[4].pT() > 50*GeV && sigbjets.empty() &&
-          mT > 175*GeV && etmiss > 300*GeV && etmiss/meff > 0.2) _h_ss5j0->fill(w);
+          mT > 175*GeV && etmiss > 300*GeV && etmiss/meff > 0.2) _h_ss5j0->fill();
       if (siglepton.pT() > 35*GeV && sigjets.size() >= 4 && sigjets[0].pT() > 250*GeV && sigjets[3].pT() > 30*GeV &&
-          inRange(mT, 150*GeV, 400*GeV) && etmiss > 250*GeV && lepton_aplanarity > 0.03) _h_ss4j1->fill(w);
+          inRange(mT, 150*GeV, 400*GeV) && etmiss > 250*GeV && lepton_aplanarity > 0.03) _h_ss4j1->fill();
       if (siglepton.pT() > 35*GeV && sigjets.size() >= 5 && sigjets[4].pT() > 30*GeV &&
-          mT > 400*GeV && etmiss > 400*GeV && lepton_aplanarity > 0.03) _h_ss5j1->fill(w);
+          mT > 400*GeV && etmiss > 400*GeV && lepton_aplanarity > 0.03) _h_ss5j1->fill();
 
     }
 
@@ -189,8 +188,10 @@ namespace Rivet {
     void finalize() {
 
       const double sf = 14.8*crossSection()/femtobarn/sumOfWeights();
-      scale({_h_gg2j, _h_gg6j0, _h_gg6j1, _h_gg4j0, _h_gg4j1, _h_gg4j2}, sf);
-      scale({_h_ss4j0, _h_ss4j1, _h_ss5j0,_h_ss5j1}, sf);
+      scale(_h_gg2j, sf); scale(_h_gg6j0, sf); scale(_h_gg6j1, sf); 
+      scale(_h_gg4j0, sf); scale(_h_gg4j1, sf); scale(_h_gg4j2, sf);
+      scale(_h_ss4j0, sf); scale(_h_ss4j1, sf); scale(_h_ss5j0, sf);
+      scale(_h_ss5j1, sf);
 
     }
 
@@ -211,7 +212,7 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2016_CONF_2016_054);
+  RIVET_DECLARE_PLUGIN(ATLAS_2016_CONF_2016_054);
 
 
 }

@@ -5,9 +5,11 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1298811
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Andy Buckley <andy.buckley@cern.ch>
 References:
+ - ATLAS-STDM-2011-31
  - arXiv:1406.0392
  - Eur.Phys.J. C74 (2014) 2965
  - DOI:10.1140/epjc/s10052-014-2965-5
@@ -40,3 +42,17 @@ BibTeX: '@article{Aad:2014hia,
       reportNumber   = "CERN-PH-EP-2014-077",
       SLACcitation   = "%%CITATION = ARXIV:1406.0392;%%",
 }'
+
+ReleaseTests:
+ - $A LHC-7-Jets-0
+ - $A-2 LHC-7-Jets-1
+ - $A-3 LHC-7-Jets-10
+ - $A-4 LHC-7-Jets-2
+ - $A-5 LHC-7-Jets-3
+ - $A-6 LHC-7-Jets-4
+ - $A-7 LHC-7-Jets-5
+ - $A-8 LHC-7-Jets-6
+ - $A-9 LHC-7-Jets-7
+ - $A-10 LHC-7-Jets-8
+ - $A-11 LHC-7-Jets-9
+

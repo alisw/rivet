@@ -6,14 +6,11 @@
 namespace Rivet {
 
 
-  /// @brief CDF Inclusive jet cross-section differential in \f$ p_\perp \f$
+  /// @brief CDF inclusive-jet cross-section differential in \f$ p_\perp \f$
   class CDF_2006_S6450792 : public Analysis {
   public:
 
-    /// Constructor
-    CDF_2006_S6450792()
-      : Analysis("CDF_2006_S6450792")
-    {    }
+    RIVET_DEFAULT_ANALYSIS_CTOR(CDF_2006_S6450792);
 
 
     /// @name Analysis methods
@@ -22,15 +19,15 @@ namespace Rivet {
     void init() {
       FinalState fs;
       declare(FastJets(fs, FastJets::CDFMIDPOINT, 0.7), "ConeFinder");
-      _h_jet_pt = bookHisto1D(1, 1, 1);
+      book(_h_jet_pt ,1, 1, 1);
     }
 
 
     void analyze(const Event& event) {
       const Jets& jets = apply<JetAlg>(event, "ConeFinder").jets(Cuts::pT > 61*GeV);
-      foreach (const Jet& jet, jets) {
+      for (const Jet& jet : jets) {
         if (inRange(jet.absrap(), 0.1, 0.7))
-          _h_jet_pt->fill(jet.pT()/GeV, event.weight());
+          _h_jet_pt->fill(jet.pT()/GeV);
       }
     }
 
@@ -45,17 +42,13 @@ namespace Rivet {
 
   private:
 
-    /// @name Histograms
-    //@{
-
+    /// Histogram
     Histo1DPtr _h_jet_pt;
-    //@}
 
   };
 
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CDF_2006_S6450792);
+  RIVET_DECLARE_ALIASED_PLUGIN(CDF_2006_S6450792, CDF_2006_I699933);
 
 }

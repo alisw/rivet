@@ -8,10 +8,10 @@
 #include "Rivet/Projections/UnstableParticles.hh"
 #include "Rivet/Projections/FastJets.hh"
 
-
 namespace Rivet {
 
 
+  /// Inclusive multilepton search at 8 TeV
   class ATLAS_2014_I1327229 : public Analysis {
   public:
 
@@ -35,17 +35,17 @@ namespace Rivet {
 
       // Set number of events per signal region to 0
       for (size_t i = 0; i < _signal_regions.size(); i++)
-        _eventCountsPerSR[_signal_regions[i]] = 0.0;
+        book(_eventCountsPerSR[_signal_regions[i]], "_eventCountsPerSR_" + _signal_regions[i]);
 
       // Final state including all charged and neutral particles
-      const FinalState fs(-5.0, 5.0, 1*GeV);
+      const FinalState fs((Cuts::etaIn(-5.0, 5.0) && Cuts::pT >=  1*GeV));
       declare(fs, "FS");
 
       // Final state including all charged particles
-      declare(ChargedFinalState(-2.5, 2.5, 1*GeV), "CFS");
+      declare(ChargedFinalState((Cuts::etaIn(-2.5, 2.5) && Cuts::pT >=  1*GeV)), "CFS");
 
       // Final state including all visible particles (to calculate MET, Jets etc.)
-      declare(VisibleFinalState(-5.0,5.0),"VFS");
+      declare(VisibleFinalState((Cuts::etaIn(-5.0,5.0))),"VFS");
 
       // Final state including all AntiKt 04 Jets
       VetoedFinalState vfs;
@@ -68,25 +68,25 @@ namespace Rivet {
 
 
       /// Book histograms:
-      _h_HTlep_all = bookHisto1D("HTlep_all", 30,0,3000);
-      _h_HTjets_all = bookHisto1D("HTjets_all", 30,0,3000);
-      _h_MET_all = bookHisto1D("MET_all", 30,0,1500);
-      _h_Meff_all = bookHisto1D("Meff_all", 50,0,5000);
-      _h_min_pT_all = bookHisto1D("min_pT_all", 50, 0, 2000);
-      _h_mT_all = bookHisto1D("mT_all", 50, 0, 2000);
+      book(_h_HTlep_all ,"HTlep_all", 30,0,3000);
+      book(_h_HTjets_all ,"HTjets_all", 30,0,3000);
+      book(_h_MET_all ,"MET_all", 30,0,1500);
+      book(_h_Meff_all ,"Meff_all", 50,0,5000);
+      book(_h_min_pT_all ,"min_pT_all", 50, 0, 2000);
+      book(_h_mT_all ,"mT_all", 50, 0, 2000);
 
-      _h_e_n = bookHisto1D("e_n", 10, -0.5, 9.5);
-      _h_mu_n = bookHisto1D("mu_n", 10, -0.5, 9.5);
-      _h_tau_n = bookHisto1D("tau_n", 10, -0.5, 9.5);
+      book(_h_e_n ,"e_n", 10, -0.5, 9.5);
+      book(_h_mu_n ,"mu_n", 10, -0.5, 9.5);
+      book(_h_tau_n ,"tau_n", 10, -0.5, 9.5);
 
-      _h_pt_1_3l = bookHisto1D("pt_1_3l", 100, 0, 2000);
-      _h_pt_2_3l = bookHisto1D("pt_2_3l", 100, 0, 2000);
-      _h_pt_3_3l = bookHisto1D("pt_3_3l", 100, 0, 2000);
-      _h_pt_1_2ltau = bookHisto1D("pt_1_2ltau", 100, 0, 2000);
-      _h_pt_2_2ltau = bookHisto1D("pt_2_2ltau", 100, 0, 2000);
-      _h_pt_3_2ltau = bookHisto1D("pt_3_2ltau", 100, 0, 2000);
+      book(_h_pt_1_3l ,"pt_1_3l", 100, 0, 2000);
+      book(_h_pt_2_3l ,"pt_2_3l", 100, 0, 2000);
+      book(_h_pt_3_3l ,"pt_3_3l", 100, 0, 2000);
+      book(_h_pt_1_2ltau ,"pt_1_2ltau", 100, 0, 2000);
+      book(_h_pt_2_2ltau ,"pt_2_2ltau", 100, 0, 2000);
+      book(_h_pt_3_2ltau ,"pt_3_2ltau", 100, 0, 2000);
 
-      _h_excluded = bookHisto1D("excluded", 2, -0.5, 1.5);
+      book(_h_excluded ,"excluded", 2, -0.5, 1.5);
     }
 
 
@@ -162,7 +162,7 @@ namespace Rivet {
         if ( tau.abspid() != PID::TAU) continue;
         // Check that tau has decayed into daughter particles
         if (tau.genParticle()->end_vertex() == 0) continue;
-       // Calculate visible tau momentum using the tau neutrino momentum in the tau decay
+        // Calculate visible tau momentum using the tau neutrino momentum in the tau decay
         FourMomentum daughter_tau_neutrino_momentum = get_tau_neutrino_momentum(tau);
         Particle tau_vis = tau;
         tau_vis.setMomentum(tau.momentum()-daughter_tau_neutrino_momentum);
@@ -346,9 +346,6 @@ namespace Rivet {
       // And only accept events with at least 2 electrons and muons and at least 3 leptons in total
       if (recon_mu.size() + recon_e.size() + recon_tau.size() < 3 || recon_leptons.size() < 2) vetoEvent;
 
-      // Getting the event weight
-      const double weight = event.weight();
-
       // Sort leptons by decreasing pT
       sortByPt(recon_leptons);
       sortByPt(recon_tau);
@@ -357,18 +354,18 @@ namespace Rivet {
       double HTlep = 0.;
       Particles chosen_leptons;
       if (recon_leptons.size() > 2) {
-        _h_pt_1_3l->fill(recon_leptons[0].pT()/GeV, weight);
-        _h_pt_2_3l->fill(recon_leptons[1].pT()/GeV, weight);
-        _h_pt_3_3l->fill(recon_leptons[2].pT()/GeV, weight);
+        _h_pt_1_3l->fill(recon_leptons[0].pT()/GeV);
+        _h_pt_2_3l->fill(recon_leptons[1].pT()/GeV);
+        _h_pt_3_3l->fill(recon_leptons[2].pT()/GeV);
         HTlep = (recon_leptons[0].pT() + recon_leptons[1].pT() + recon_leptons[2].pT())/GeV;
         chosen_leptons.push_back( recon_leptons[0] );
         chosen_leptons.push_back( recon_leptons[1] );
         chosen_leptons.push_back( recon_leptons[2] );
       }
       else {
-        _h_pt_1_2ltau->fill(recon_leptons[0].pT()/GeV, weight);
-        _h_pt_2_2ltau->fill(recon_leptons[1].pT()/GeV, weight);
-        _h_pt_3_2ltau->fill(recon_tau[0].pT()/GeV, weight);
+        _h_pt_1_2ltau->fill(recon_leptons[0].pT()/GeV);
+        _h_pt_2_2ltau->fill(recon_leptons[1].pT()/GeV);
+        _h_pt_3_2ltau->fill(recon_tau[0].pT()/GeV);
         HTlep = recon_leptons[0].pT()/GeV + recon_leptons[1].pT()/GeV + recon_tau[0].pT()/GeV;
         chosen_leptons.push_back( recon_leptons[0] );
         chosen_leptons.push_back( recon_leptons[1] );
@@ -407,9 +404,9 @@ namespace Rivet {
       double min_pT = chosen_leptons[2].pT()/GeV;
 
       // Number of prompt e/mu and had taus
-      _h_e_n->fill(recon_e.size(),weight);
-      _h_mu_n->fill(recon_mu.size(),weight);
-      _h_tau_n->fill(recon_tau.size(),weight);
+      _h_e_n->fill(recon_e.size());
+      _h_mu_n->fill(recon_mu.size());
+      _h_tau_n->fill(recon_tau.size());
 
       // Calculate HTjets variable
       double HTjets = 0.;
@@ -433,12 +430,12 @@ namespace Rivet {
       }
 
       // Fill histograms of kinematic variables
-      _h_HTlep_all->fill(HTlep,weight);
-      _h_HTjets_all->fill(HTjets,weight);
-      _h_MET_all->fill(eTmiss,weight);
-      _h_Meff_all->fill(meff,weight);
-      _h_min_pT_all->fill(min_pT,weight);
-      _h_mT_all->fill(mT,weight);
+      _h_HTlep_all->fill(HTlep);
+      _h_HTjets_all->fill(HTjets);
+      _h_MET_all->fill(eTmiss);
+      _h_Meff_all->fill(meff);
+      _h_min_pT_all->fill(min_pT);
+      _h_mT_all->fill(mT);
 
       // Determine signal region (3l / 2ltau , onZ / offZ OSSF / offZ no-OSSF)
       // 3l vs. 2ltau
@@ -459,7 +456,7 @@ namespace Rivet {
 
       // Check in which signal regions this event falls and adjust event counters
       // INFO: The b-jet signal regions of the paper are not included in this Rivet implementation
-      fillEventCountsPerSR(basic_signal_region,onZ,HTlep,eTmiss,HTjets,meff,min_pT,mTW,weight);
+      fillEventCountsPerSR(basic_signal_region,onZ,HTlep,eTmiss,HTjets,meff,min_pT,mTW);
     }
 
 
@@ -474,7 +471,7 @@ namespace Rivet {
 
       // Loop over all signal regions and find signal region with best sensitivity (ratio signal events/visible cross-section)
       for (size_t i = 0; i < _signal_regions.size(); i++) {
-        double signal_events = _eventCountsPerSR[_signal_regions[i]] * norm;
+        double signal_events = _eventCountsPerSR[_signal_regions[i]]->val() * norm;
         // Use expected upper limits to find best signal region:
         double UL95 = getUpperLimit(_signal_regions[i],false);
         double ratio = signal_events / UL95;
@@ -484,47 +481,47 @@ namespace Rivet {
         }
       }
 
-      double signal_events_best_SR = _eventCountsPerSR[best_signal_region] * norm;
+      double signal_events_best_SR = _eventCountsPerSR[best_signal_region]->val() * norm;
       double exp_UL_best_SR = getUpperLimit(best_signal_region, false);
       double obs_UL_best_SR = getUpperLimit(best_signal_region, true);
 
 
       // Print out result
-      cout << "----------------------------------------------------------------------------------------" << endl;
-      cout << "Number of total events: " << sumOfWeights() << endl;
-      cout << "Best signal region: " << best_signal_region << endl;
-      cout << "Normalized number of signal events in this best signal region (per fb-1): " << signal_events_best_SR << endl;
-      cout << "Efficiency*Acceptance: " << _eventCountsPerSR[best_signal_region]/sumOfWeights() << endl;
-      cout << "Cross-section [fb]: " << crossSection()/femtobarn << endl;
-      cout << "Expected visible cross-section (per fb-1): " << exp_UL_best_SR << endl;
-      cout << "Ratio (signal events / expected visible cross-section): " << ratio_best_SR << endl;
-      cout << "Observed visible cross-section (per fb-1): " << obs_UL_best_SR << endl;
-      cout << "Ratio (signal events / observed visible cross-section): " <<  signal_events_best_SR/obs_UL_best_SR << endl;
-      cout << "----------------------------------------------------------------------------------------" << endl;
+      cout << "----------------------------------------------------------------------------------------" << '\n';
+      cout << "Number of total events: " << sumOfWeights() << '\n';
+      cout << "Best signal region: " << best_signal_region << '\n';
+      cout << "Normalized number of signal events in this best signal region (per fb-1): " << signal_events_best_SR << '\n';
+      cout << "Efficiency*Acceptance: " << _eventCountsPerSR[best_signal_region]->val()/sumOfWeights() << '\n';
+      cout << "Cross-section [fb]: " << crossSection()/femtobarn << '\n';
+      cout << "Expected visible cross-section (per fb-1): " << exp_UL_best_SR << '\n';
+      cout << "Ratio (signal events / expected visible cross-section): " << ratio_best_SR << '\n';
+      cout << "Observed visible cross-section (per fb-1): " << obs_UL_best_SR << '\n';
+      cout << "Ratio (signal events / observed visible cross-section): " <<  signal_events_best_SR/obs_UL_best_SR << '\n';
+      cout << "----------------------------------------------------------------------------------------" << '\n';
 
-      cout << "Using the EXPECTED limits (visible cross-section) of the analysis: " << endl;
+      cout << "Using the EXPECTED limits (visible cross-section) of the analysis: " << '\n';
       if (signal_events_best_SR > exp_UL_best_SR)  {
-        cout << "Since the number of signal events > the visible cross-section, this model/grid point is EXCLUDED with 95% C.L." << endl;
+        cout << "Since the number of signal events > the visible cross-section, this model/grid point is EXCLUDED with 95% C.L." << '\n';
         _h_excluded->fill(1);
       }
       else  {
-        cout << "Since the number of signal events < the visible cross-section, this model/grid point is NOT EXCLUDED." << endl;
+        cout << "Since the number of signal events < the visible cross-section, this model/grid point is NOT EXCLUDED." << '\n';
         _h_excluded->fill(0);
       }
-      cout << "----------------------------------------------------------------------------------------" << endl;
+      cout << "----------------------------------------------------------------------------------------" << '\n';
 
-      cout << "Using the OBSERVED limits (visible cross-section) of the analysis: " << endl;
+      cout << "Using the OBSERVED limits (visible cross-section) of the analysis: " << '\n';
       if (signal_events_best_SR > obs_UL_best_SR)  {
-        cout << "Since the number of signal events > the visible cross-section, this model/grid point is EXCLUDED with 95% C.L." << endl;
+        cout << "Since the number of signal events > the visible cross-section, this model/grid point is EXCLUDED with 95% C.L." << '\n';
         _h_excluded->fill(1);
       }
       else  {
-        cout << "Since the number of signal events < the visible cross-section, this model/grid point is NOT EXCLUDED." << endl;
+        cout << "Since the number of signal events < the visible cross-section, this model/grid point is NOT EXCLUDED." << '\n';
         _h_excluded->fill(0);
       }
-      cout << "----------------------------------------------------------------------------------------" << endl;
-      cout << "INFO: The b-jet signal regions of the paper are not included in this Rivet implementation." << endl;
-      cout << "----------------------------------------------------------------------------------------" << endl;
+      cout << "----------------------------------------------------------------------------------------" << '\n';
+      cout << "INFO: The b-jet signal regions of the paper are not included in this Rivet implementation." << '\n';
+      cout << "----------------------------------------------------------------------------------------" << '\n';
 
 
       /// Normalize to cross section
@@ -644,56 +641,55 @@ namespace Rivet {
     /// and looking if the event falls into this signal region
     void fillEventCountsPerSR(const string& basic_signal_region, int onZ,
                               double HTlep, double eTmiss, double HTjets,
-                              double meff, double min_pT, double mTW,
-                              double weight)  {
+                              double meff, double min_pT, double mTW)  {
 
       // Get cut values for HTlep, loop over them and add event if cut is passed
       vector<int> cut_values = getCutsPerSignalRegion("HTlep", onZ);
       for (size_t i = 0; i < cut_values.size(); i++)  {
         if (HTlep > cut_values[i])
-          _eventCountsPerSR[("HTlep_" + basic_signal_region + "_cut_" + toString(cut_values[i]))] += weight;
+          _eventCountsPerSR[("HTlep_" + basic_signal_region + "_cut_" + toString(cut_values[i]))]->fill();
       }
 
       // Get cut values for MinPt, loop over them and add event if cut is passed
       cut_values = getCutsPerSignalRegion("MinPt", onZ);
       for (size_t i = 0; i < cut_values.size(); i++)  {
         if (min_pT > cut_values[i])
-          _eventCountsPerSR[("MinPt_" + basic_signal_region + "_cut_" + toString(cut_values[i]))] += weight;
+          _eventCountsPerSR[("MinPt_" + basic_signal_region + "_cut_" + toString(cut_values[i]))]->fill();
       }
 
       // Get cut values for METStrong, loop over them and add event if cut is passed
       cut_values = getCutsPerSignalRegion("METStrong", onZ);
       for (size_t i = 0; i < cut_values.size(); i++)  {
         if (eTmiss > cut_values[i] && HTjets > 150.)
-          _eventCountsPerSR[("METStrong_" + basic_signal_region + "_cut_" + toString(cut_values[i]))] += weight;
+          _eventCountsPerSR[("METStrong_" + basic_signal_region + "_cut_" + toString(cut_values[i]))]->fill();
       }
 
       // Get cut values for METWeak, loop over them and add event if cut is passed
       cut_values = getCutsPerSignalRegion("METWeak", onZ);
       for (size_t i = 0; i < cut_values.size(); i++)  {
         if (eTmiss > cut_values[i] && HTjets <= 150.)
-          _eventCountsPerSR[("METWeak_" + basic_signal_region + "_cut_" + toString(cut_values[i]))] += weight;
+          _eventCountsPerSR[("METWeak_" + basic_signal_region + "_cut_" + toString(cut_values[i]))]->fill();
       }
 
       // Get cut values for Meff, loop over them and add event if cut is passed
       cut_values = getCutsPerSignalRegion("Meff", onZ);
       for (size_t i = 0; i < cut_values.size(); i++)  {
         if (meff > cut_values[i])
-          _eventCountsPerSR[("Meff_" + basic_signal_region + "_cut_" + toString(cut_values[i]))] += weight;
+          _eventCountsPerSR[("Meff_" + basic_signal_region + "_cut_" + toString(cut_values[i]))]->fill();
       }
 
       // Get cut values for MeffStrong, loop over them and add event if cut is passed
       cut_values = getCutsPerSignalRegion("MeffStrong", onZ);
       for (size_t i = 0; i < cut_values.size(); i++)  {
         if (meff > cut_values[i] && eTmiss > 100.)
-          _eventCountsPerSR[("MeffStrong_" + basic_signal_region + "_cut_" + toString(cut_values[i]))] += weight;
+          _eventCountsPerSR[("MeffStrong_" + basic_signal_region + "_cut_" + toString(cut_values[i]))]->fill();
       }
 
       // Get cut values for MeffMt, loop over them and add event if cut is passed
       cut_values = getCutsPerSignalRegion("MeffMt", onZ);
       for (size_t i = 0; i < cut_values.size(); i++)  {
         if (meff > cut_values[i] && mTW > 100. && onZ == 1)
-          _eventCountsPerSR[("MeffMt_" + basic_signal_region + "_cut_" + toString(cut_values[i]))] += weight;
+          _eventCountsPerSR[("MeffMt_" + basic_signal_region + "_cut_" + toString(cut_values[i]))]->fill();
       }
 
     }
@@ -701,31 +697,31 @@ namespace Rivet {
     /// Function returning 4-momentum of daughter-particle if it is a tau neutrino
     FourMomentum get_tau_neutrino_momentum(const Particle& p)  {
       assert(p.abspid() == PID::TAU);
-      const GenVertex* dv = p.genParticle()->end_vertex();
-      assert(dv != NULL);
+      ConstGenVertexPtr dv = p.genParticle()->end_vertex();
+      assert(dv != nullptr);
       // Loop over all daughter particles
-      for (GenVertex::particles_out_const_iterator pp = dv->particles_out_const_begin(); pp != dv->particles_out_const_end(); ++pp) {
-        if (abs((*pp)->pdg_id()) == PID::NU_TAU) return FourMomentum((*pp)->momentum());
+      for(ConstGenParticlePtr pp: HepMCUtils::particles(dv, Relatives::CHILDREN)){
+        if (abs(pp->pdg_id()) == PID::NU_TAU) return FourMomentum(pp->momentum());
       }
       return FourMomentum();
     }
 
     /// Function calculating the prong number of taus
-    void get_prong_number(const GenParticle* p, unsigned int& nprong, bool& lep_decaying_tau)  {
-      assert(p != NULL);
-      const GenVertex* dv = p->end_vertex();
-      assert(dv != NULL);
-      for (GenVertex::particles_out_const_iterator pp = dv->particles_out_const_begin(); pp != dv->particles_out_const_end(); ++pp) {
+    void get_prong_number(ConstGenParticlePtr p, unsigned int& nprong, bool& lep_decaying_tau)  {
+      assert(p != nullptr);
+      ConstGenVertexPtr dv = p->end_vertex();
+      assert(dv != nullptr);
+      for(ConstGenParticlePtr pp: HepMCUtils::particles(dv, Relatives::CHILDREN)){
         // If they have status 1 and are charged they will produce a track and the prong number is +1
-        if ((*pp)->status() == 1 )  {
-          const int id = (*pp)->pdg_id();
+        if (pp->status() == 1 )  {
+          const int id = pp->pdg_id();
           if (Rivet::PID::charge(id) != 0 ) ++nprong;
           // Check if tau decays leptonically
           if (( abs(id) == PID::ELECTRON || abs(id) == PID::MUON || abs(id) == PID::TAU ) && abs(p->pdg_id()) == PID::TAU) lep_decaying_tau = true;
         }
         // If the status of the daughter particle is 2 it is unstable and the further decays are checked
-        else if ((*pp)->status() == 2 )  {
-          get_prong_number((*pp),nprong,lep_decaying_tau);
+        else if (pp->status() == 2 )  {
+          get_prong_number(pp,nprong,lep_decaying_tau);
         }
       }
     }
@@ -1320,11 +1316,11 @@ namespace Rivet {
 
     /// List of signal regions and event counts per signal region
     vector<string> _signal_regions;
-    map<string, double> _eventCountsPerSR;
+    map<string, CounterPtr> _eventCountsPerSR;
 
   };
 
 
-  DECLARE_RIVET_PLUGIN(ATLAS_2014_I1327229);
+  RIVET_DECLARE_PLUGIN(ATLAS_2014_I1327229);
 
 }

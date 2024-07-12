@@ -6,6 +6,7 @@ Collider: Tevatron Run 2
 SpiresID: 7719523
 InspireID: 782968
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Andy Buckley <andy.buckley@cern.ch>
  - Gavin Hesketh <gavin.hesketh@cern.ch>
@@ -13,7 +14,7 @@ Authors:
 References:
  - Phys.Lett.B666:435-445,2008
  - doi:10.1016/j.physletb.2008.06.076
- - arXiv:0804.1107v2 [hep-ex]
+ - arXiv:0804.1107 [hep-ex]
 RunInfo:
   "Produce only gamma + jet ($q,\\bar{q},g$) hard processes (for Pythia 6, this means MSEL=10
   and MSUB indices 14, 29 & 115 enabled). The lowest bin edge is at 30 GeV, so a kinematic
@@ -24,12 +25,12 @@ Energies: [1960]
 PtCuts: [20]
 Description:
   The process $p \bar{p}$ -> photon + jet + X as studied by the D0 detector
-  at the Fermilab Tevatron collider at center-of-mass energy $\sqrt{s} = 1.96\;\TeV$.
+  at the Fermilab Tevatron collider at center-of-mass energy $\sqrt{s} = 1.96~\TeV$.
   Photons are reconstructed in the central rapidity region
-  $|y_\gamma| < 1.0$ with transverse momenta in the range 30--400\;GeV,
+  $|y_\gamma| < 1.0$ with transverse momenta in the range 30--400~GeV,
   while jets are reconstructed in either the central $|y_\text{jet}| < 0.8$ or
   forward $1.5 < |y_\text{jet}| < 2.5$ rapidity intervals with
-  $\pT^\text{jet} > 15\;\GeV$. The differential cross section
+  $\pT^\text{jet} > 15~\GeV$. The differential cross section
   $\mathrm{d}^3 \sigma / \mathrm{d}{\pT^\gamma} \mathrm{d}{y_\gamma}
   \mathrm{d}{y_\text{jet}}$ is measured as a function of $\pT^\gamma$ in four
   regions, differing by the relative orientations of the photon and the
@@ -52,3 +53,7 @@ BibTeX: '@Article{Abazov:2008er,
      doi       = "10.1016/j.physletb.2008.06.076",
      SLACcitation  = "%%CITATION = 0804.1107;%%"
 }'
+
+ReleaseTests:
+ - $A TVT-Run-II-PromptPhoton
+

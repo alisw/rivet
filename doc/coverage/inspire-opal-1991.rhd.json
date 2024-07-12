@@ -1,0 +1,290 @@
+{
+    "297561": [
+        "A Study of angular correlations in 4-jet final states of hadronic Z0 decays", 
+        "OPAL", 
+        "10.1007/BF01570796", 
+        "209887", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-90-97"
+        ]
+    ], 
+    "297895": [
+        "Searches for neutral Higgs bosons in e+ e- collisions at LEP", 
+        "OPAL", 
+        "10.1007/BF01570792", 
+        "210339", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-90-100"
+        ]
+    ], 
+    "298642": [
+        "The OPAL detector at LEP", 
+        "OPAL", 
+        "10.1016/0168-9002(91)90547-4", 
+        "211674", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-90-114"
+        ]
+    ], 
+    "299833": [
+        "A Study of the recombination scheme dependence of jet production rates and of alpha-s (m(Z0)) in hadronic Z0 decays", 
+        "OPAL", 
+        "10.1007/BF01549689", 
+        "213171", 
+        null, 
+        "ins299833", 
+        null, 
+        [
+            "CERN-PPE-90-143"
+        ]
+    ], 
+    "299835": [
+        "A Search for lepton flavor violation in Z0 decays", 
+        "OPAL", 
+        "10.1016/0370-2693(91)90437-U", 
+        "213177", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-90-148"
+        ]
+    ], 
+    "300283": [
+        "Search for the minimal standard model Higgs boson in e+ e- collisions at LEP", 
+        "OPAL", 
+        "10.1016/0370-2693(91)91761-J", 
+        "213374", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-90-150"
+        ]
+    ], 
+    "302586": [
+        "A Direct measurement of the Z0 invisible width by single photon counting", 
+        "OPAL", 
+        "10.1007/BF01551449", 
+        "215182", 
+        null, 
+        "ins302586", 
+        null, 
+        [
+            "CERN-PPE-90-187"
+        ]
+    ], 
+    "302587": [
+        "Measurement of the cross-sections of the reactions e+ e- ---> gamma gamma and e+ e- ---> gamma gamma gamma at LEP", 
+        "OPAL", 
+        "10.1016/0370-2693(91)91932-L", 
+        "215195", 
+        null, 
+        "ins302587", 
+        null, 
+        [
+            "CERN-PPE-90-189"
+        ]
+    ], 
+    "314333": [
+        "A Model independent observation of the string effect using quark tagging at LEP", 
+        "OPAL", 
+        "10.1016/0370-2693(91)90337-P", 
+        "217241", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-91-31"
+        ]
+    ], 
+    "314601": [
+        "A Study of heavy flavor production using muons in hadronic Z0 decays", 
+        "OPAL", 
+        "10.1016/0370-2693(91)90606-Q", 
+        "218087", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-91-48"
+        ]
+    ], 
+    "314631": [
+        "Intermittency in hadronic decays of the Z0", 
+        "OPAL", 
+        "10.1016/0370-2693(91)91578-J", 
+        "217624", 
+        null, 
+        "ins314631", 
+        null, 
+        [
+            "CERN-PPE-91-37"
+        ]
+    ], 
+    "315060": [
+        "A Study of D*+- production in Z0 decays", 
+        "OPAL", 
+        "10.1016/0370-2693(91)91577-I", 
+        "218736", 
+        null, 
+        "ins315060", 
+        null, 
+        [
+            "CERN-PPE-91-63"
+        ]
+    ], 
+    "315061": [
+        "A Search for scalar leptoquarks in Z0 decays", 
+        "OPAL", 
+        "10.1016/0370-2693(91)91717-A", 
+        "218661", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-91-61"
+        ]
+    ], 
+    "315269": [
+        "Measurement of the $Z^0$ line shape parameters and the electroweak couplings of charged leptons", 
+        "OPAL", 
+        null, 
+        "219190", 
+        null, 
+        "ins315269", 
+        null, 
+        [
+            "CERN-PPE-91-67"
+        ]
+    ], 
+    "316151": [
+        "A Study of K0(s) production in Z0 decays", 
+        "OPAL", 
+        "10.1016/0370-2693(91)90379-5", 
+        "220587", 
+        null, 
+        "ins316151", 
+        null, 
+        [
+            "CERN-PPE-91-86"
+        ]
+    ], 
+    "316154": [
+        "A Measurement of the electroweak couplings of up and down type quarks using final state photons in hadronic z0 decays", 
+        "OPAL", 
+        "10.1016/0370-2693(91)90731-5", 
+        "220667", 
+        null, 
+        "ins316154", 
+        null, 
+        [
+            "CERN-PPE-91-81"
+        ]
+    ], 
+    "316872": [
+        "A Direct observation of quark - gluon jet differences at LEP", 
+        "OPAL", 
+        "10.1016/0370-2693(91)90082-2", 
+        "220769", 
+        null, 
+        "ins316872", 
+        null, 
+        [
+            "CERN-PPE-91-91"
+        ]
+    ], 
+    "317142": [
+        "Measurement of three jet distributions sensitive to the gluon spin in e+ e- annihilations at S**(1/2) = 91-GeV", 
+        "OPAL", 
+        null, 
+        "221386", 
+        null, 
+        "ins317142", 
+        null, 
+        [
+            "CERN-PPE-91-97"
+        ]
+    ], 
+    "317143": [
+        "Measurement of branching ratios and tau polarization from tau ---> e neutrino anti-neutrino , tau ---> mu neutrino anti-neutrino, and tau ---> pi (K) neutrino decays at LEP", 
+        "OPAL", 
+        "10.1016/0370-2693(91)90768-L", 
+        "221675", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-91-103"
+        ]
+    ], 
+    "317166": [
+        "Observation of J / psi production in multi - hadronic Z0 decays", 
+        "OPAL", 
+        "10.1016/0370-2693(91)91074-6", 
+        "220922", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-91-92"
+        ]
+    ], 
+    "317508": [
+        "A Study of Bose-Einstein correlations in e+ e- annihilations at LEP", 
+        "OPAL", 
+        "10.1016/0370-2693(91)90540-7", 
+        "222448", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-91-110"
+        ]
+    ], 
+    "317781": [
+        "Decay mode independent search for a light Higgs boson and new scalars", 
+        "OPAL", 
+        "10.1016/0370-2693(91)90934-I", 
+        "222834", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-91-116"
+        ]
+    ], 
+    "319673": [
+        "Measurement of the tau lepton lifetime", 
+        "OPAL", 
+        "10.1016/0370-2693(91)91695-R", 
+        "226020", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-91-164"
+        ]
+    ], 
+    "319674": [
+        "A Measurement of photon radiation in lepton pair events from Z0 decays", 
+        "OPAL", 
+        "10.1016/0370-2693(91)91694-Q", 
+        "225674", 
+        null, 
+        "ins319674", 
+        null, 
+        [
+            "CERN-PPE-91-155"
+        ]
+    ]
+}

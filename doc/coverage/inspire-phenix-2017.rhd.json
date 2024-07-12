@@ -1,0 +1,92 @@
+{
+    "1486072": [
+        "Measurement of long-range angular correlations and azimuthal anisotropies in high-multiplicity $p+$Au collisions at $\\sqrt{s_{_{NN}}}=200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.95.034910", 
+        null, 
+        "1609.02894", 
+        null, 
+        null, 
+        []
+    ], 
+    "1486678": [
+        "Nonperturbative-transverse-momentum effects and evolution in dihadron and direct photon-hadron angular correlations in $p+p$ collisions at $\\sqrt{s}$=510 GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevD.95.072002", 
+        null, 
+        "1609.04769", 
+        null, 
+        null, 
+        []
+    ], 
+    "1487575": [
+        "Measurement of the relative yields of $\\psi(2S)$ to $\\psi(1S)$ mesons produced at forward and backward rapidity in $p+p$, $p+$Al, $p+$Au, and $^{3}$He$+$Au collisions at $\\sqrt{s_{_{NN}}}=200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.95.034904", 
+        null, 
+        "1609.06550", 
+        null, 
+        null, 
+        []
+    ], 
+    "1505176": [
+        "Angular decay coefficients of $J/\\psi$ mesons at forward rapidity from $p+p$ collisions at $\\sqrt{s}=510$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevD.95.092003", 
+        null, 
+        "1612.06807", 
+        null, 
+        null, 
+        []
+    ], 
+    "1507891": [
+        "Measurements of $B \\rightarrow J/\\psi$ at forward rapidity in $p$+$p$ collisions at $\\sqrt{s}=510$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevD.95.092002", 
+        null, 
+        "1701.01342", 
+        null, 
+        null, 
+        []
+    ], 
+    "1512140": [
+        "Measurements of $e^+e^-$ pairs from open heavy flavor in $p$+$p$ and $d$+$A$ collisions at $\\sqrt{s_{NN}}=200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.96.024907", 
+        null, 
+        "1702.01084", 
+        null, 
+        null, 
+        []
+    ], 
+    "1512141": [
+        "$B$-meson production at forward and backward rapidity in $p+p$ and Cu + Au collisions at $\\sqrt{s_{_{NN}}}=200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.96.064901", 
+        null, 
+        "1702.01085", 
+        null, 
+        null, 
+        []
+    ], 
+    "1519828": [
+        "Cross section and transverse single-spin asymmetry of muons from open heavy-flavor decays in polarized $p$+$p$ collisions at $\\sqrt{s}=200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevD.95.112001", 
+        "2261143", 
+        "1703.09333", 
+        null, 
+        null, 
+        []
+    ], 
+    "1618141": [
+        "Measurements of azimuthal anisotropy and charged-particle multiplicity in $d+$Au collisions at $\\sqrt{s_{_{NN}}}=$200, 62.4, 39, and 19.6 GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.96.064905", 
+        null, 
+        "1708.06983", 
+        null, 
+        null, 
+        []
+    ]
+}

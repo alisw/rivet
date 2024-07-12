@@ -1,0 +1,206 @@
+{
+    "317547": [
+        "First evidence of chi(c) production in B meson decays", 
+        "ARGUS", 
+        "10.1016/0370-2693(92)90981-9", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-91-077"
+        ]
+    ], 
+    "317548": [
+        "The Measurement of D+(s) and D+ meson decays into anti-K*+ anti-K*0", 
+        "ARGUS", 
+        "10.1007/BF01625894", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-91-066"
+        ]
+    ], 
+    "318246": [
+        "Measurement of exclusive one prong and inclusive three prong branching ratios of the tau lepton", 
+        "ARGUS", 
+        "10.1007/BF01625895", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-91-084"
+        ]
+    ], 
+    "319102": [
+        "Measurement of R and determination of the charged particle multiplicity in e+ e- annihilation at s**(1/2) around 10-GeV", 
+        "ARGUS", 
+        "10.1007/BF01881704", 
+        null, 
+        null, 
+        "ins319102", 
+        null, 
+        [
+            "DESY-91-092"
+        ]
+    ], 
+    "319105": [
+        "A Measurement of asymmetry in the decay lambda(c)+ ---> lambda pi+", 
+        "ARGUS", 
+        "10.1016/0370-2693(92)90529-D", 
+        null, 
+        null, 
+        "ins319105", 
+        null, 
+        [
+            "DESY-91-091"
+        ]
+    ], 
+    "319238": [
+        "A Measurement of the inclusive semileptonic decay fraction of charmed hadrons", 
+        "ARGUS", 
+        "10.1016/0370-2693(92)90735-M", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-91-112"
+        ]
+    ], 
+    "319757": [
+        "Measurement of the decay B- ---> D*0 l- anti-neutrino", 
+        "ARGUS", 
+        "10.1016/0370-2693(92)90875-5", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-91-122"
+        ]
+    ], 
+    "319829": [
+        "Production of D(s)+ mesons in B decays and determination of f(D(s))", 
+        "ARGUS", 
+        "10.1007/BF01881703", 
+        null, 
+        null, 
+        "ins319829", 
+        null, 
+        [
+            "DESY-91-121"
+        ]
+    ], 
+    "332479": [
+        "Search for charm production in direct decays of the Upsilon (1s) resonance", 
+        "ARGUS", 
+        null, 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-92-008"
+        ]
+    ], 
+    "332581": [
+        "Search for neutrinoless tau decays", 
+        "ARGUS", 
+        null, 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-92-013"
+        ]
+    ], 
+    "333702": [
+        "A New determination of the $B^0$ - $\\bar{B}^0$ oscillation strength", 
+        "ARGUS", 
+        null, 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-92-050"
+        ]
+    ], 
+    "334018": [
+        "Evidence for the production of the charmed, doubly strange baryon omega(c) in e+ e- annihilation", 
+        "ARGUS", 
+        "10.1016/0370-2693(92)91116-Q", 
+        null, 
+        null, 
+        "ins334018", 
+        null, 
+        [
+            "DESY-92-052"
+        ]
+    ], 
+    "334962": [
+        "Measurement of inclusive baryon production in B meson decays", 
+        "ARGUS", 
+        "10.1007/BF01589700", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-92-074"
+        ]
+    ], 
+    "335340": [
+        "New results on D0 decays", 
+        "ARGUS", 
+        "10.1007/BF01589701", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-92-077"
+        ]
+    ], 
+    "335341": [
+        "A Measurement of the tau mass", 
+        "ARGUS", 
+        "10.1016/0370-2693(92)90634-G", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-92-086"
+        ]
+    ], 
+    "335698": [
+        "Measurement of the decay tau- ---> rho- tau-neutrino", 
+        "ARGUS", 
+        "10.1007/BF01565941", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-92-082"
+        ]
+    ], 
+    "338041": [
+        "Observation of the decay D(s1) (2536) ---> D*0 K+", 
+        "ARGUS", 
+        "10.1016/0370-2693(92)91282-E", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-92-124"
+        ]
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "675838": [
+        "Measurement of the spin structure of the deuteron in the DIS region", 
+        "COMPASS", 
+        "10.1016/j.physletb.2005.03.025", 
+        "819107", 
+        "hep-ex/0501073", 
+        "ins675838", 
+        null, 
+        [
+            "CERN-PH-EP-2005-001", 
+            "DAPNIA-05-11"
+        ]
+    ], 
+    "677550": [
+        "First measurement of the transverse spin asymmetries of the deuteron in semi-inclusive deep inelastic scattering", 
+        "COMPASS", 
+        "10.1103/PhysRevLett.94.202002", 
+        "825244", 
+        "hep-ex/0503002", 
+        "ins677550", 
+        null, 
+        [
+            "CERN-PH-EP-2005-003", 
+            "DAPNIA-05-17"
+        ]
+    ], 
+    "678751": [
+        "Search for the Phi(1860) pentaquark at COMPASS", 
+        "COMPASS", 
+        "10.1140/epjc/s2005-02281-2", 
+        "828557", 
+        "hep-ex/0503033", 
+        null, 
+        null, 
+        [
+            "DAPNIA-05-29", 
+            "CERN-PH-EP-2005-009"
+        ]
+    ]
+}

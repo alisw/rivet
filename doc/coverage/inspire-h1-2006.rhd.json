@@ -1,0 +1,170 @@
+{
+    "687624": [
+        "A Determination of electroweak parameters at HERA", 
+        "H1", 
+        "10.1016/j.physletb.2005.10.035", 
+        "855516", 
+        "hep-ex/0507080", 
+        null, 
+        null, 
+        [
+            "DESY-05-093"
+        ]
+    ], 
+    "687625": [
+        "Measurement of F(2)**c anti-c and F(2)**b anti-b at low Q*2 and x using the H1 vertex detector at HERA", 
+        "H1", 
+        "10.1140/epjc/s2005-02415-6", 
+        "855517", 
+        "hep-ex/0507081", 
+        "ins687625", 
+        null, 
+        [
+            "DESY-05-110"
+        ]
+    ], 
+    "690939": [
+        "Forward jet production in deep inelastic scattering at HERA", 
+        "H1", 
+        "10.1140/epjc/s2005-02471-x", 
+        "879958", 
+        "hep-ex/0508055", 
+        "ins690939", 
+        null, 
+        [
+            "DESY-05-135"
+        ]
+    ], 
+    "694372": [
+        "Elastic J/psi production at HERA", 
+        "H1", 
+        "10.1140/epjc/s2006-02519-5", 
+        "893326", 
+        "hep-ex/0510016", 
+        "ins694372", 
+        null, 
+        [
+            "DESY-05-161"
+        ]
+    ], 
+    "699835": [
+        "Measurement of event shape variables in deep-inelastic scattering at HERA", 
+        "H1", 
+        "10.1140/epjc/s2006-02493-x", 
+        null, 
+        "hep-ex/0512014", 
+        "ins699835", 
+        null, 
+        [
+            "DESY-05-225"
+        ]
+    ], 
+    "701216": [
+        "First measurement of charged current cross sections at HERA with longitudinally polarised positrons", 
+        "H1", 
+        "10.1016/j.physletb.2006.01.054", 
+        "918607", 
+        "hep-ex/0512060", 
+        "ins701216", 
+        null, 
+        [
+            "DESY-05-249"
+        ]
+    ], 
+    "711847": [
+        "Photoproduction of dijets with high transverse momenta at HERA", 
+        "H1", 
+        "10.1016/j.physletb.2006.05.060", 
+        "933812", 
+        "hep-ex/0603014", 
+        "ins711847", 
+        null, 
+        [
+            "DESY-06-020"
+        ]
+    ], 
+    "712738": [
+        "Diffractive photoproduction of rho mesons with large momentum transfer at HERA", 
+        "H1", 
+        "10.1016/j.physletb.2006.05.042", 
+        "936420", 
+        "hep-ex/0603038", 
+        "ins712738", 
+        null, 
+        [
+            "DESY-06-023"
+        ]
+    ], 
+    "714247": [
+        "Tau lepton production in ep collisions at HERA", 
+        "H1", 
+        "10.1140/epjc/s10052-006-0028-2", 
+        "941832", 
+        "hep-ex/0604022", 
+        null, 
+        null, 
+        [
+            "DESY-06-029"
+        ]
+    ], 
+    "714319": [
+        "Search for doubly-charged Higgs boson production at HERA", 
+        "H1", 
+        "10.1016/j.physletb.2006.05.061", 
+        "942067", 
+        "hep-ex/0604027", 
+        null, 
+        null, 
+        [
+            "DESY-06-038"
+        ]
+    ], 
+    "715532": [
+        "Search for a narrow baryonic resonance decaying to K0(s)p or K0(s)anti-p in deep inelastic scattering at HERA", 
+        "H1", 
+        "10.1016/j.physletb.2006.06.055", 
+        "944660", 
+        "hep-ex/0604056", 
+        null, 
+        null, 
+        [
+            "DESY-06-044"
+        ]
+    ], 
+    "716144": [
+        "Measurement of charm and beauty dijet cross-sections in photoproduction at HERA using the H1 vertex detector", 
+        "H1", 
+        "10.1140/epjc/s2006-02616-5", 
+        "946773", 
+        "hep-ex/0605016", 
+        "ins716144", 
+        null, 
+        [
+            "DESY-06-039"
+        ]
+    ], 
+    "718189": [
+        "Diffractive deep-inelastic scattering with a leading proton at HERA", 
+        "H1", 
+        "10.1140/epjc/s10052-006-0046-0", 
+        "955380", 
+        "hep-ex/0606003", 
+        "ins718189", 
+        null, 
+        [
+            "DESY-06-048"
+        ]
+    ], 
+    "718190": [
+        "Measurement and QCD analysis of the diffractive deep-inelastic scattering cross-section at HERA", 
+        "H1", 
+        "10.1140/epjc/s10052-006-0035-3", 
+        "955381", 
+        "hep-ex/0606004", 
+        "ins718190", 
+        null, 
+        [
+            "DESY-06-049"
+        ]
+    ]
+}

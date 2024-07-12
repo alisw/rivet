@@ -1,0 +1,36 @@
+Name: BABAR_2010_I850492
+Year: 2010
+Summary: Kinematic distributions in $\Upsilon_2(1D)\to\pi^+\pi^-\Upsilon(1S)$
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 850492
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 82 (2010) 111102
+RunInfo: Any process producing Upsilon_2(1D)
+Description: 'Measurement of the kinematic distributions in $\Upsilon_2(1D)\to\pi^+\pi^-\Upsilon(1S)$ by BABAR.
+The data were read from the paper and may not have been corrected for acceptance.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BaBar:2010tqb
+BibTeX: '@article{BaBar:2010tqb,
+    author = "del Amo Sanchez, P. and others",
+    collaboration = "BaBar",
+    title = "{Observation of the $\Upsilon{1^3D_J}$ Bottomonium State through Decays to $\pi^+\pi^-\Upsilon{1S}$}",
+    eprint = "1004.0175",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "SLAC-PUB-14027, BABAR-PUB-10-002",
+    doi = "10.1103/PhysRevD.82.111102",
+    journal = "Phys. Rev. D",
+    volume = "82",
+    pages = "111102",
+    year = "2010"
+}
+'

@@ -19,25 +19,24 @@ namespace Rivet {
     void init() {
 
       const UnstableParticles ufs(Cuts::absrap < _rapmax);
-      addProjection(ufs, "UFS");
+      declare(ufs, "UFS");
 
-      _h_pi0 = bookHisto1D(1,1,1);
-      _h_eta = bookHisto1D(2,1,1);
-      _h_etaToPion = bookScatter2D(8,1,1);
+      book(_h_pi0,1,1,1);
+      book(_h_eta,2,1,1);
+      book(_h_etaToPion,8,1,1);
 
       // temporary plots with the binning of _h_etaToPion
       // to construct the eta/pi0 ratio in the end
-      _temp_h_pion = bookHisto1D("TMP/h_pion",refData(8,1,1));
-      _temp_h_eta = bookHisto1D("TMP/h_eta",refData(8,1,1));
+      book(_temp_h_pion,"TMP/h_pion",refData(8,1,1));
+      book(_temp_h_eta, "TMP/h_eta", refData(8,1,1));
     }
 
 
     void analyze(const Event& event) {
 
-      const double weight = event.weight();
-      const UnstableParticles& ufs = applyProjection<UnstableFinalState>(event, "UFS");
+      const UnstableParticles& ufs = applyProjection<UnstableParticles>(event, "UFS");
 
-      for(auto p: ufs.particles()) {
+      for(const Particle& p : ufs.particles()) {
 
         if (p.pid() == 111) {
           // neutral pion; ALICE corrects for pi0 feed-down
@@ -50,14 +49,14 @@ namespace Rivet {
                  p.hasAncestor(3322) || p.hasAncestor(-3322) || // Cascades
                  p.hasAncestor(3312) || p.hasAncestor(-3312) )) // Cascades
             {
-              _h_pi0->fill(p.pT()/GeV, weight /(TWOPI*p.pT()/GeV*2*_rapmax));
-              _temp_h_pion->fill(p.pT()/GeV, weight);
+              _h_pi0->fill(p.pT()/GeV, 1. /(TWOPI*p.pT()/GeV*2*_rapmax));
+              _temp_h_pion->fill(p.pT()/GeV);
             }
         }
         else if (p.pid() == 221) {
           // eta meson
-          _h_eta->fill(p.pT()/GeV, weight /(TWOPI*p.pT()/GeV*2*_rapmax));
-          _temp_h_eta->fill(p.pT()/GeV, weight);
+          _h_eta->fill(p.pT()/GeV, 1. /(TWOPI*p.pT()/GeV*2*_rapmax));
+          _temp_h_eta->fill(p.pT()/GeV);
 
         }
       }
@@ -85,6 +84,6 @@ namespace Rivet {
   };
 
 
-  DECLARE_RIVET_PLUGIN(ALICE_2017_I1620477);
+  RIVET_DECLARE_PLUGIN(ALICE_2017_I1620477);
 
 }

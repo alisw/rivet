@@ -1,0 +1,35 @@
+Name: BESIII_2023_I2621481
+Year: 2023
+Summary: $D^{0,+}\to\pi^+\pi^+\pi^-+X$ decays
+Experiment: BESIII
+Collider: BEPC
+InspireID: 2621481
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - arXiv::2301.03214 [hep-ex]
+Description:
+  'Measurement of mass and momentum distributions in  $D^{0,+}\to\pi^+\pi^+\pi^-+X$ decays. The mass distribution was read from table VII
+ in the paper and is corrected while the momentum distributions were extracted from the figures and are background subtracted but not corrected.'
+ValidationInfo:
+  'Herwig7 events using EvtGen for decays'
+RunInfo: Needs e+e- events at 4.773 due cuts
+Beams: [e+, e-]
+Energies: [4.773]
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2023sxm
+BibTeX: '@article{BESIII:2023sxm,
+    author = "Ablikim, Medina and others",
+    collaboration = "BESIII",
+    title = "{Measurements of the branching fractions of the inclusive decays $D^{0}(D^{+})\to \pi^+\pi^+\pi^-X$}",
+    eprint = "2301.03214",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    month = "1",
+    year = "2023"
+}
+'

@@ -57,17 +57,17 @@ YLabel=$\langle\Delta{R}_{\gamma\ell}\rangle$
 
 # BEGIN PLOT /MC_PHOTONS/DeltaR_ptweighted_vs_pTlep
 Title=$p_\perp$-weighted $\Delta{R}_{\gamma\ell}$ vs. lepton $p_\perp$
-YLabel=$\langle\text{Weighted}\quad\Delta{R}_{\gamma\ell}\rangle$
+YLabel=$\langle\mathrm{Weighted}\quad\Delta{R}_{\gamma\ell}\rangle$
 # END PLOT
 
 # BEGIN PLOT /MC_PHOTONS/DeltaR_R_ptweighted_vs_pTlep
 Title=$1/R$-weighted $\Delta{R}_{\gamma\ell}$ vs. lepton $p_\perp$
-YLabel=$\langle\text{Weighted}\quad\Delta{R}_{\gamma\ell}\rangle$
+YLabel=$\langle\mathrm{Weighted}\quad\Delta{R}_{\gamma\ell}\rangle$
 # END PLOT
 
 # BEGIN PLOT /MC_PHOTONS/DeltaR_R_ptweighted_vs_pTlep
 Title=$p_\perp/R$-weighted $\Delta{R}_{\gamma\ell}$ vs. lepton $p_\perp$
-YLabel=$\langle\text{Weighted}\quad\Delta{R}_{\gamma\ell}\rangle$
+YLabel=$\langle\mathrm{Weighted}\quad\Delta{R}_{\gamma\ell}\rangle$
 # END PLOT
 
 # BEGIN PLOT /MC_PHOTONS/sumPtGamma_vs_pTlep

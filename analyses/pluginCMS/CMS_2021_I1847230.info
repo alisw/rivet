@@ -1,0 +1,41 @@
+Name: CMS_2021_I1847230 
+Year: 2021
+Summary: Measurements of angular distance and momentum ratio distributions in three-jet and Z + two-jet final states in pp collisions at 8 and 13 TeV
+Experiment: CMS
+Collider: LHC
+InspireID: 1847230
+Status: VALIDATED
+Authors:
+ - cms-pag-conveners-smp@cern.ch
+ - Hannes Jung <hannes.jung@cern.ch>
+ - Hyunyong Kim <hyunyong.kim@cenr.ch>
+ - Olga Kodolova <Olga.Kodolova@cern.ch>
+References:
+  - arXiv:2102.08816
+  - CMS-SMP-17-008
+  - EPJC (Submitted)
+RunInfo: QCD with pt>300 or Z -> mu+ mu-
+NeedCrossSection: yes
+Beams: [p+, p+]
+Energies: [8000, 13000]
+Options:
+ - MODE=QCD13TeV,QCD8TeV,ZJet
+Description:
+'Collinear (small-angle) and large-angle, as well as soft and hard radiations are investigated in three-jet and Z + two-jet events collected in proton-proton collisions at the LHC. The normalized production cross sections are measured as a function of the ratio of transverse momenta of two jets and their angular separation. The measurements in the three-jet and Z + two-jet events are based on data collected at a center-of-mass energy of 8 TeV, corresponding to an integrated luminosity of 19.8 fb^{-1}. The Z + two-jet events are reconstructed in the dimuon decay channel of the Z boson. The three-jet measurement is extended to include \sqrt{s} = 13 TeV data corresponding to an integrated luminosity of 2.3 fb^{-1}. The results are compared to predictions from event generators that include parton showers, multiple parton interactions, and hadronization. The collinear and soft regions are in general well described by parton showers, whereas the regions of large angular separation are often best described by calculations using higher-order matrix elements.'
+BibKey: Sirunyan:2021lwi
+BibTeX: '@article{Sirunyan:2021lwi,
+    author = "Sirunyan, Albert M and others",
+    collaboration = "CMS",
+    title = "{Measurements of angular distance and momentum ratio distributions in three-jet and Z + two-jet final states in pp collisions}",
+    eprint = "2102.08816",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CMS-SMP-17-008, CERN-EP-2020-251",
+    month = "2",
+    year = "2021"
+}' 
+
+#ReleaseTests:
+# - $A LHC-13-Z-mu-jets  :MODE=ZJet
+# - $A-2 LHC-8-Jets-0  :MODE=QCD8TeV
+# - $A-3 LHC-13-Jets-0  :MODE=QCD13TeV

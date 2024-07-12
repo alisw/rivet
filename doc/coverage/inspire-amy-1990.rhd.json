@@ -1,0 +1,109 @@
+{
+    "282755": [
+        "A search for susy particles in $e^+e^-$ annihilations at $\\sqrt{s} = 50$ GeV - 60.8 GeV", 
+        "AMY", 
+        "10.1016/0370-2693(90)92053-L", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "KEK-Preprint-89-134", 
+            "AMY-89-18"
+        ]
+    ], 
+    "283337": [
+        "Multi - hadron event properties in $e^+e^-$ annihilation at $\\sqrt{s} = 52$ GeV to 57-GeV", 
+        "AMY", 
+        "10.1103/PhysRevD.41.2675", 
+        null, 
+        null, 
+        "ins283337", 
+        null, 
+        [
+            "KEK-PREPRINT-89-149", 
+            "AMY-89-19"
+        ]
+    ], 
+    "284558": [
+        "A search for leptoquark and colored lepton pair production in $e^+e^-$ annihilations at TRISTAN", 
+        "AMY", 
+        "10.1016/0370-2693(90)90442-9", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "KEK-Preprint-89-177", 
+            "AMY-89-20"
+        ]
+    ], 
+    "294525": [
+        "Measurements of $R$ for $e^+e^-$ annihilation at TRISTAN", 
+        "AMY", 
+        "10.1103/PhysRevD.42.1339", 
+        null, 
+        null, 
+        "ins294525", 
+        null, 
+        [
+            "KEK-PREPRINT-89-188", 
+            "AMY-89-21"
+        ]
+    ], 
+    "294829": [
+        "Observation of anomalous production of muon pairs in $e^+e^-$ annihilation into four lepton final states", 
+        "AMY", 
+        "10.1016/0370-2693(90)90364-C", 
+        null, 
+        null, 
+        "ins294829", 
+        null, 
+        [
+            "KEK-Preprint-89-195", 
+            "AMY-89-22", 
+            "UR-1154"
+        ]
+    ], 
+    "295160": [
+        "Charged hadron multiplicities in $e^+e^-$ annihilations at $\\sqrt{s} = 50$ GeV - 61.4 GeV", 
+        "AMY", 
+        "10.1103/PhysRevD.42.737", 
+        null, 
+        null, 
+        "ins295160", 
+        null, 
+        [
+            "KEK-Preprint-90-5", 
+            "AMY-90-2", 
+            "UR-1155", 
+            "ER-13065-616"
+        ]
+    ], 
+    "296680": [
+        "Mass limits of charged Higgs at large $\\tan(\\beta)$ from $e^+e^-$ annihilations at $\\sqrt{s} = 50$ GeV - 60.8 GeV", 
+        "AMY", 
+        "10.1103/PhysRevD.42.949", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "KEK-Preprint-90-3", 
+            "AMY-90-1"
+        ]
+    ], 
+    "299056": [
+        "A Measurement of the photon structure function $F_2$", 
+        "AMY", 
+        "10.1016/0370-2693(90)90577-S", 
+        null, 
+        null, 
+        "ins299056", 
+        null, 
+        [
+            "KEK-PREPRINT-90-95", 
+            "AMY-90-12"
+        ]
+    ]
+}

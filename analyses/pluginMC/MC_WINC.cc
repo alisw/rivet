@@ -11,45 +11,44 @@ namespace Rivet {
   public:
 
     /// Default constructor
-    MC_WINC(string name="MC_WINC")
-      : Analysis(name)
-    {
-		 _dR=0.2;
-		 _lepton=PID::ELECTRON;
-	 }
-
+    RIVET_DEFAULT_ANALYSIS_CTOR(MC_WINC);
 
     /// @name Analysis methods
     //@{
 
     /// Book histograms
     void init() {
+		  _dR=0.2;
+      if (getOption("SCHEME") == "BARE")  _dR = 0.0;
+		  _lepton=PID::ELECTRON;
+      if (getOption("LMODE") == "MU")  _lepton = PID::MUON;
+
       FinalState fs;
       WFinder wfinder(fs, Cuts::abseta < 3.5 && Cuts::pT > 25*GeV, _lepton, 60.0*GeV, 100.0*GeV, 25.0*GeV, _dR);
       declare(wfinder, "WFinder");
 
       double sqrts = sqrtS()>0. ? sqrtS() : 14000.;
-      _h_W_mass = bookHisto1D("W_mass", 50, 55.0, 105.0);
-      _h_W_pT = bookHisto1D("W_pT", logspace(100, 1.0, 0.5*sqrts));
-      _h_W_pT_peak = bookHisto1D("W_pT_peak", 25, 0.0, 125.0);
-      _h_W_y = bookHisto1D("W_y", 40, -4.0, 4.0);
-      _h_W_phi = bookHisto1D("W_phi", 25, 0.0, TWOPI);
-      _h_Wplus_pT = bookHisto1D("Wplus_pT", logspace(25, 10.0, 0.5*sqrts));
-      _h_Wminus_pT = bookHisto1D("Wminus_pT", logspace(25, 10.0, 0.5*sqrts));
-      _h_lepton_pT = bookHisto1D("lepton_pT", logspace(100, 10.0, 0.25*sqrts));
-      _h_lepton_eta = bookHisto1D("lepton_eta", 40, -4.0, 4.0);
-      _htmp_dsigminus_deta = bookHisto1D("lepton_dsigminus_deta", 20, 0.0, 4.0);
-      _htmp_dsigplus_deta  = bookHisto1D("lepton_dsigplus_deta", 20, 0.0, 4.0);
+      book(_h_W_mass ,"W_mass", 50, 55.0, 105.0);
+      book(_h_W_mT ,"W_mT", 40, 60.0, 100.0);
+      book(_h_W_pT ,"W_pT", logspace(100, 1.0, 0.5*sqrts));
+      book(_h_W_pT_peak ,"W_pT_peak", 25, 0.0, 125.0);
+      book(_h_W_y ,"W_y", 40, -4.0, 4.0);
+      book(_h_W_phi ,"W_phi", 25, 0.0, TWOPI);
+      book(_h_Wplus_pT ,"Wplus_pT", logspace(25, 10.0, 0.5*sqrts));
+      book(_h_Wminus_pT ,"Wminus_pT", logspace(25, 10.0, 0.5*sqrts));
+      book(_h_lepton_pT ,"lepton_pT", logspace(100, 10.0, 0.25*sqrts));
+      book(_h_lepton_eta ,"lepton_eta", 40, -4.0, 4.0);
+      book(_htmp_dsigminus_deta ,"lepton_dsigminus_deta", 20, 0.0, 4.0);
+      book(_htmp_dsigplus_deta  ,"lepton_dsigplus_deta", 20, 0.0, 4.0);
 
-      _h_asym = bookScatter2D("W_chargeasymm_eta");
-      _h_asym_pT = bookScatter2D("W_chargeasymm_pT");
+      book(_h_asym, "W_chargeasymm_eta");
+      book(_h_asym_pT, "W_chargeasymm_pT");
     }
 
 
 
     /// Do the analysis
     void analyze(const Event & e) {
-      const double weight = e.weight();
 
       const WFinder& wfinder = apply<WFinder>(e, "WFinder");
       if (wfinder.bosons().size() != 1) {
@@ -60,32 +59,33 @@ namespace Rivet {
       int charge3 = 0;
       FourMomentum emom;
       FourMomentum wmom(wfinder.bosons().front().momentum());
-      _h_W_mass->fill(wmom.mass(), weight);
-      _h_W_pT->fill(wmom.pT(), weight);
-      _h_W_pT_peak->fill(wmom.pT(), weight);
-      _h_W_y->fill(wmom.rapidity(), weight);
-      _h_W_phi->fill(wmom.phi(), weight);
+      _h_W_mass->fill(wmom.mass()/GeV);
+      _h_W_mT->fill(wfinder.mT()/GeV);
+      _h_W_pT->fill(wmom.pT()/GeV);
+      _h_W_pT_peak->fill(wmom.pT()/GeV);
+      _h_W_y->fill(wmom.rapidity());
+      _h_W_phi->fill(wmom.phi());
       Particle l=wfinder.constituentLeptons()[0];
-      _h_lepton_pT->fill(l.pT(), weight);
-      _h_lepton_eta->fill(l.eta(), weight);
-      if (PID::threeCharge(l.pid()) != 0) {
+      _h_lepton_pT->fill(l.pT()/GeV);
+      _h_lepton_eta->fill(l.eta());
+      if (PID::charge3(l.pid()) != 0) {
         emom = l.momentum();
-        charge3_x_eta = PID::threeCharge(l.pid()) * emom.eta();
-        charge3 = PID::threeCharge(l.pid());
+        charge3_x_eta = PID::charge3(l.pid()) * emom.eta();
+        charge3 = PID::charge3(l.pid());
       }
       assert(charge3_x_eta != 0);
       assert(charge3!=0);
       if (emom.Et() > 30/GeV) {
         if (charge3_x_eta < 0) {
-          _htmp_dsigminus_deta->fill(emom.eta(), weight);
+          _htmp_dsigminus_deta->fill(emom.eta());
         } else {
-          _htmp_dsigplus_deta->fill(emom.eta(), weight);
+          _htmp_dsigplus_deta->fill(emom.eta());
         }
       }
       if (charge3 < 0) {
-        _h_Wminus_pT->fill(wmom.pT(), weight);
+        _h_Wminus_pT->fill(wmom.pT()/GeV);
       } else {
-        _h_Wplus_pT->fill(wmom.pT(), weight);
+        _h_Wplus_pT->fill(wmom.pT()/GeV);
       }
     }
 
@@ -93,6 +93,7 @@ namespace Rivet {
     /// Finalize
     void finalize() {
       scale(_h_W_mass, crossSection()/sumOfWeights());
+      scale(_h_W_mT, crossSection()/sumOfWeights());
       scale(_h_W_pT, crossSection()/sumOfWeights());
       scale(_h_W_pT_peak, crossSection()/sumOfWeights());
       scale(_h_W_y, crossSection()/sumOfWeights());
@@ -130,6 +131,7 @@ namespace Rivet {
     /// @name Histograms
     //@{
     Histo1DPtr _h_W_mass;
+    Histo1DPtr _h_W_mT;
     Histo1DPtr _h_W_pT;
     Histo1DPtr _h_W_pT_peak;
     Histo1DPtr _h_W_y;
@@ -148,44 +150,6 @@ namespace Rivet {
 
   };
 
-
-
-  struct MC_WINC_EL : public MC_WINC {
-    MC_WINC_EL() : MC_WINC("MC_WINC_EL") {
-      _dR = 0.2;
-      _lepton = PID::ELECTRON;
-    }
-  };
-
-  struct MC_WINC_EL_BARE : public MC_WINC {
-    MC_WINC_EL_BARE() : MC_WINC("MC_WINC_EL_BARE") {
-      _dR = 0;
-      _lepton = PID::ELECTRON;
-    }
-  };
-
-  struct MC_WINC_MU : public MC_WINC {
-    MC_WINC_MU() : MC_WINC("MC_WINC_MU") {
-      _dR = 0.2;
-      _lepton = PID::MUON;
-    }
-  };
-
-  struct MC_WINC_MU_BARE : public MC_WINC {
-    MC_WINC_MU_BARE() : MC_WINC("MC_WINC_MU_BARE") {
-      _dR = 0;
-      _lepton = PID::MUON;
-    }
-  };
-
-
-
   // The hooks for the plugin system
-  DECLARE_RIVET_PLUGIN(MC_WINC);
-  DECLARE_RIVET_PLUGIN(MC_WINC_EL);
-  DECLARE_RIVET_PLUGIN(MC_WINC_EL_BARE);
-  DECLARE_RIVET_PLUGIN(MC_WINC_MU);
-  DECLARE_RIVET_PLUGIN(MC_WINC_MU_BARE);
-
-
+  RIVET_DECLARE_PLUGIN(MC_WINC);
 }

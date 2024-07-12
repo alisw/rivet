@@ -1,0 +1,36 @@
+Name: CLEOIII_2004_I627327
+Year: 2004
+Summary: Mass distributions in $\Xi_c^-\to pK^-K^-\pi^+$
+Experiment: CLEOIII
+Collider: CESR
+InspireID: 627327
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 69 (2004) 052004
+RunInfo: Any process producing Xic0 mesons
+Description:
+  'Measurement of the mass distributions in the decay $\Xi_c^-\to pK^-K^-\pi^+$ by CLEOIII.
+  The data were read from the plots in the paper.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: CLEO:2003waf
+BibTeX: '@article{CLEO:2003waf,
+    author = "Danko, I. and others",
+    collaboration = "CLEO",
+    title = "{Measurement of the decay rate of Xi0(c) ---\ensuremath{>} pK- K- pi+ relative to Xi0(c) ---\ensuremath{>} Xi- pi+}",
+    eprint = "hep-ex/0309020",
+    archivePrefix = "arXiv",
+    reportNumber = "CLNS-03-1834, CLEO-03-11",
+    doi = "10.1103/PhysRevD.69.052004",
+    journal = "Phys. Rev. D",
+    volume = "69",
+    pages = "052004",
+    year = "2004"
+}
+'

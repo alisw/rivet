@@ -1,0 +1,37 @@
+Name: BELLE_2015_I1326905
+Year: 2015
+Summary: Mass distributions in the decays $B^0\to D^-_sK^0_S\pi^+$ and $B^+\to D^-_sK^+K^+$ 
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1326905
+Status: VALIDATED NOHEPDATA
+Reentrant: false
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 91 (2015) 3, 032008
+RunInfo: Any process producing B0 and B+, originally Upsilon(4S) decays
+Description:
+  'Mass distributions in the decays $B^0\to D^-_sK^0_S\pi^+$ and $B^+\to D^-_sK^+K^+$, the data were read from the plots in the paper and although the backgrounds have been subtracted they may be be correct for efficiency.'
+ValidationInfo:
+  'Herwig 7 events using EvtGen for B decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle:2014agw
+BibTeX: '@article{Belle:2014agw,
+    author = "Wiechczynski, J. and others",
+    collaboration = "Belle",
+    title = "{Measurement of $B^0 \to D_s^- K^0_S\pi^+$ and $B^+ \to D_s^- K^+K^+$ branching fractions}",
+    eprint = "1411.2035",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BELLE-PREPRINT-2014-16, KEK-PREPRINT-2014-27",
+    doi = "10.1103/PhysRevD.91.032008",
+    journal = "Phys. Rev. D",
+    volume = "91",
+    number = "3",
+    pages = "032008",
+    year = "2015"
+}
+'

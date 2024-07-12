@@ -12,14 +12,14 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2011_I929691);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2011_I929691);
 
 
     /// Initialisation
     void init() {
       const FinalState fs(Cuts::abseta < 2.0);
 
-      FastJets antikt_06_jets(fs, FastJets::ANTIKT, 0.6, JetAlg::NO_MUONS, JetAlg::NO_INVISIBLES);
+      FastJets antikt_06_jets(fs, FastJets::ANTIKT, 0.6, JetAlg::Muons::NONE, JetAlg::Invisibles::NONE);
       declare(antikt_06_jets, "jets");
 
       ChargedFinalState tracks(Cuts::pT > 0.5*GeV && Cuts::abseta < 2.0);
@@ -27,9 +27,9 @@ namespace Rivet {
 
       // Set up the histograms (each element is a binning in jet pT)
       for (size_t i = 0; i < 10; i++) {
-        _p_F_z[i]     = bookProfile1D(i+1, 1, 1);
-        _p_rho_r[i]   = bookProfile1D(i+11, 1, 1);
-        _p_f_pTrel[i] = bookProfile1D(i+21, 1, 1);
+        book(_p_F_z[i]    , i+ 1, 1, 1);
+        book(_p_rho_r[i]  , i+11, 1, 1);
+        book(_p_f_pTrel[i], i+21, 1, 1);
       }
 
     }
@@ -61,13 +61,12 @@ namespace Rivet {
         }
 
         // Then... calculate the observable and fill the profiles
-        const double weight = event.weight();
         for (const HistoBin1D& b : h_ntracks_z.bins())
-          _p_F_z[i]->fill(b.xMid(), b.height(), weight);
+          _p_F_z[i]->fill(b.xMid(), b.height());
         for (const HistoBin1D& b : h_ntracks_r.bins())
-          _p_rho_r[i]->fill(b.xMid(), b.area()/annulus_area(b.xMin(), b.xMax()), weight);
+          _p_rho_r[i]->fill(b.xMid(), b.area()/annulus_area(b.xMin(), b.xMax()));
         for (const HistoBin1D& b : h_ntracks_pTrel.bins())
-          _p_f_pTrel[i]->fill(b.xMid(), b.height(), weight);
+          _p_f_pTrel[i]->fill(b.xMid(), b.height());
 
       }
 
@@ -97,7 +96,7 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2011_I929691);
+  RIVET_DECLARE_PLUGIN(ATLAS_2011_I929691);
 
 
 }

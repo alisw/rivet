@@ -1,0 +1,573 @@
+{
+    "784509": [
+        "Angular Distributions in the Decays B ---> K* l+ l-", 
+        "BaBar", 
+        "10.1103/PhysRevD.79.031102", 
+        null, 
+        "0804.4412", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-13133", 
+            "BABAR-PUB-08-001"
+        ]
+    ], 
+    "785439": [
+        "Branching Fractions and CP-Violating Asymmetries in Radiative $B$ Decays to $\\eta K \\gamma$", 
+        "BaBar", 
+        "10.1103/PhysRevD.79.011102", 
+        null, 
+        "0805.1317", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-08-012", 
+            "SLAC-PUB-13228"
+        ]
+    ], 
+    "785706": [
+        "Constraints on the CKM angle gamma in B0 ---> anti-D0 (D0) K*0 with a Dalitz analysis of D0 ---> K(S) pi+ pi-", 
+        "BaBar", 
+        "10.1103/PhysRevD.79.072003", 
+        null, 
+        "0805.2001", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-07-072", 
+            "SLAC-PUB-13229"
+        ]
+    ], 
+    "790104": [
+        "Observation of the bottomonium ground state in the decay $\\upsilon_{3S} \\to \\gamma eta_b$", 
+        "BaBar", 
+        "10.1103/PhysRevLett.101.071801", 
+        null, 
+        "0807.1086", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-08-029", 
+            "SLAC-PUB-13288"
+        ]
+    ], 
+    "791529": [
+        "Direct CP, Lepton Flavor and Isospin Asymmetries in the Decays $B \\to K^{(*)} \\ell^{+} \\ell^{-}$", 
+        "BaBar", 
+        "10.1103/PhysRevLett.102.091803", 
+        null, 
+        "0807.4119", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-08-022", 
+            "SLAC-PUB-13322"
+        ]
+    ], 
+    "791715": [
+        "Measurement of $D^0 - \\bar{D}^0$ mixing from a time-dependent amplitude analysis of $D^0 \\to K^{+} \\pi^{-} \\pi^0$ decays", 
+        "BaBar", 
+        "10.1103/PhysRevLett.103.211801", 
+        null, 
+        "0807.4544", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-08-026", 
+            "SLAC-PUB-13320"
+        ]
+    ], 
+    "792202": [
+        "Measurement of Semileptonic B Decays into Orbitally-Excited Charmed Mesons", 
+        "BaBar", 
+        "10.1103/PhysRevLett.103.051803", 
+        null, 
+        "0808.0333", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-08-043", 
+            "SLAC-PUB-13348"
+        ]
+    ], 
+    "793810": [
+        "Measurement of the $B^{+} \\to \\omega \\ell^{+} \\nu$ and $B^{+}$ -- $\\to \\eta \\ell^{+} \\nu$ Branching Fractions", 
+        "BaBar", 
+        "10.1103/PhysRevD.79.052011", 
+        null, 
+        "0808.3524", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-13343", 
+            "BABAR-PUB-08-038"
+        ]
+    ], 
+    "794094": [
+        "Evidence for $X(3872) \\to \\psi_{2S} \\gamma$ in $B^\\pm \\to X_{3872} K^\\pm$ decays, and a study of $B \\to c \\bar{c} \\gamma K$", 
+        "BaBar", 
+        "10.1103/PhysRevLett.102.132001", 
+        null, 
+        "0809.0042", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-13375", 
+            "BABAR-PUB-08-30"
+        ]
+    ], 
+    "795646": [
+        "Measurements of the Semileptonic Decays anti-B ---> D l anti-nu and anti-B ---> D* l anti-nu Using a Global Fit to D X l anti-nu Final States", 
+        "BaBar", 
+        "10.1103/PhysRevD.79.012002", 
+        null, 
+        "0809.0828", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-13371", 
+            "BABAR-PUB-08-027"
+        ]
+    ], 
+    "795783": [
+        "Measurement of time dependent CP asymmetry parameters in B0 meson decays to omega K0(S), eta-prime K0, and pi0 K0(S)", 
+        "BaBar", 
+        "10.1103/PhysRevD.79.052003", 
+        null, 
+        "0809.1174", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-13380", 
+            "BABAR-CONF-08-041"
+        ]
+    ], 
+    "797507": [
+        "Measurement of the $e^{+} e^{-} \\to b \\bar{b}$ cross section between $\\sqrt{s}$ = 10.54-GeV and 11.20-GeV", 
+        "BaBar", 
+        "10.1103/PhysRevLett.102.012001", 
+        null, 
+        "0809.4120", 
+        "ins797507", 
+        null, 
+        [
+            "SLAC-PUB-13397", 
+            "BABAR-PUB-08042"
+        ]
+    ], 
+    "801589": [
+        "Search for the Z(4430)- at BABAR", 
+        "BaBar", 
+        "10.1103/PhysRevD.79.112001", 
+        null, 
+        "0811.0564", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-13437", 
+            "BABAR-PUB-08-045"
+        ]
+    ], 
+    "802363": [
+        "Search for the decay B+ ---> K0(S) K0(S) pi+", 
+        "BaBar", 
+        "10.1103/PhysRevD.79.051101", 
+        null, 
+        "0811.1979", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-08-046", 
+            "SLAC-PUB-13461"
+        ]
+    ], 
+    "810113": [
+        "Search for Lepton Flavor Violating Decays tau ---> l- K0(s) with the BABAR Experiment", 
+        "BaBar", 
+        "10.1103/PhysRevD.79.012004", 
+        null, 
+        "0812.3804", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-13487", 
+            "BABAR-PUB-044-08"
+        ]
+    ], 
+    "810666": [
+        "Evidence for B+ ---> anti-K*0 K*+", 
+        "BaBar", 
+        "10.1103/PhysRevD.79.051102", 
+        null, 
+        "0901.1223", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-13490", 
+            "BABAR-PUB-08-050"
+        ]
+    ], 
+    "810694": [
+        "Dalitz Plot Analysis of B- ---> D+ pi- pi-", 
+        "BaBar", 
+        "10.1103/PhysRevD.79.112004", 
+        null, 
+        "0901.1291", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-08-048", 
+            "SLAC-PUB-13508"
+        ]
+    ], 
+    "811547": [
+        "Improved Measurement of B+ --> rho+rho0 and Determination of the Quark-Mixing Phase Angle alpha", 
+        "BaBar", 
+        "10.1103/PhysRevLett.102.141802", 
+        null, 
+        "0901.3522", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-08-053", 
+            "SLAC-PUB-13452"
+        ]
+    ], 
+    "811705": [
+        "Observation of B Meson Decays to omega K* and Improved Measurements for omega rho and omega f0", 
+        "BaBar", 
+        "10.1103/PhysRevD.79.052005", 
+        null, 
+        "0901.3703", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-08-056", 
+            "SLAC-PUB-13510"
+        ]
+    ], 
+    "812984": [
+        "Measurement of Time-Dependent CP Asymmetry in B0 ---> c anti-c K(*)0 Decays", 
+        "BaBar", 
+        "10.1103/PhysRevD.79.072009", 
+        null, 
+        "0902.1708", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-13544", 
+            "BABAR-PUB-08-055"
+        ]
+    ], 
+    "813140": [
+        "Dalitz Plot Analysis of B+- ---> pi+-pi+-pi-+ Decays", 
+        "BaBar", 
+        "10.1103/PhysRevD.79.072006", 
+        null, 
+        "0902.2051", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-13494", 
+            "BABAR-PUB-08-054"
+        ]
+    ], 
+    "813402": [
+        "Measurement of the Semileptonic Decays B ---> D tau- anti-nu(tau) and B ---> D* tau- anti-nu(tau)", 
+        "BaBar", 
+        "10.1103/PhysRevD.79.092002", 
+        null, 
+        "0902.2660", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-13532", 
+            "BABAR-PUB-08-047"
+        ]
+    ], 
+    "814858": [
+        "Evidence for the eta(b)(1S) Meson in Radiative Upsilon(2S) Decay", 
+        "BaBar", 
+        "10.1103/PhysRevLett.103.161801", 
+        null, 
+        "0903.1124", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-13486", 
+            "BABAR-PUB-08-052"
+        ]
+    ], 
+    "814893": [
+        "Search for the Rare Leptonic Decays B+ ---> l+ nu(l) (l=e,mu)", 
+        "BaBar", 
+        "10.1103/PhysRevD.79.091101", 
+        null, 
+        "0903.1220", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-13556"
+        ]
+    ], 
+    "815035": [
+        "Exclusive Initial-State-Radiation Production of the D anti-D, D* anti-D*, and D* anti-D* Systems", 
+        "BaBar", 
+        "10.1103/PhysRevD.79.092001", 
+        null, 
+        "0903.1597", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-13560", 
+            "BABAR-PUB-08-057"
+        ]
+    ], 
+    "817070": [
+        "Improved limits on lepton flavor violating tau decays to l phi, l rho, l K* and l anti-K*", 
+        "BaBar", 
+        "10.1103/PhysRevLett.103.021801", 
+        null, 
+        "0904.0339", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-13559", 
+            "BABAR-PUB-09-002"
+        ]
+    ], 
+    "819092": [
+        "Measurement of the Branching Fraction and anti-Lambda Polarization in B0 ---> anti-Lambda p pi-", 
+        "BaBar", 
+        "10.1103/PhysRevD.79.112009", 
+        null, 
+        "0904.4724", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-13592", 
+            "BABAR-PUB-09-003"
+        ]
+    ], 
+    "819577": [
+        "Search for B0 Meson Decays to pi0 K0(S) K0(S), eta K0(S) K0(S), and eta-prime K0(S) K0(S)", 
+        "BaBar", 
+        "10.1103/PhysRevD.80.011101", 
+        null, 
+        "0905.0868", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-13600", 
+            "BABAR-PUB-09-007"
+        ]
+    ], 
+    "821188": [
+        "Time-dependent amplitude analysis of B0 ---> K0(S) pi+ pi-", 
+        "BaBar", 
+        "10.1103/PhysRevD.80.112001", 
+        null, 
+        "0905.3615", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-13640", 
+            "BABAR-PUB-09-001"
+        ]
+    ], 
+    "821511": [
+        "Search for Dimuon Decays of a Light Scalar Boson in Radiative Transitions Upsilon ---> gamma A0", 
+        "BaBar", 
+        "10.1103/PhysRevLett.103.081803", 
+        null, 
+        "0905.4539", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-09-015", 
+            "SLAC-PUB-13653"
+        ]
+    ], 
+    "821653": [
+        "Measurement of the gamma gamma* ---> pi0 transition form factor", 
+        "BaBar", 
+        "10.1103/PhysRevD.80.052002", 
+        null, 
+        "0905.4778", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-13641", 
+            "BABAR-PUB-09-006"
+        ]
+    ], 
+    "822874": [
+        "Measurement of Branching Fractions and CP and Isospin Asymmetries in $B \\to  K^*(892)\\gamma$ Decays", 
+        "BaBar", 
+        "10.1103/PhysRevLett.103.211802", 
+        null, 
+        "0906.2177", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-13674", 
+            "BABAR-PUB-09-010"
+        ]
+    ], 
+    "822985": [
+        "Search for a low-mass Higgs boson in Y(3S) ---> gamma A0, A0 ---> tau+ tau- at BABAR", 
+        "BaBar", 
+        "10.1103/PhysRevLett.103.181801", 
+        null, 
+        "0906.2219", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-09-013", 
+            "SLAC-PUB-13673"
+        ]
+    ], 
+    "825368": [
+        "A Model-independent search for the decay B+ ---> l+ nu(l) gamma", 
+        "BaBar", 
+        "10.1103/PhysRevD.80.111105", 
+        null, 
+        "0907.1681", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-09-012", 
+            "SLAC-PUB-13711"
+        ]
+    ], 
+    "825388": [
+        "B meson decays to charmless meson pairs containing eta or eta' mesons", 
+        "BaBar", 
+        "10.1103/PhysRevD.80.112002", 
+        null, 
+        "0907.1743", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-08-12", 
+            "SLAC-PUB-13703"
+        ]
+    ], 
+    "825406": [
+        "Observation and Polarization Measurement of B0 ---> a(1)(1260)+ a(1)(1260)- Decay", 
+        "BaBar", 
+        "10.1103/PhysRevD.80.092007", 
+        null, 
+        "0907.1776", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-09-011", 
+            "SLAC-PUB-13709"
+        ]
+    ], 
+    "826248": [
+        "Search for B-meson decays to b(1 rho) and b(1) K*", 
+        "BaBar", 
+        "10.1103/PhysRevD.80.051101", 
+        null, 
+        "0907.3485", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-13727", 
+            "BABAR-PUB-09-021"
+        ]
+    ], 
+    "826883": [
+        "Observation of the baryonic B-decay anti-B0 ---> Lambda(c)+ anti-p K- pi+", 
+        "BaBar", 
+        "10.1103/PhysRevD.80.051105", 
+        null, 
+        "0907.4566", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-13675", 
+            "BABAR-PUB-09-014"
+        ]
+    ], 
+    "827963": [
+        "Measurement of D0 - anti-D0 Mixing using the Ratio of Lifetimes for the Decays D0 ---> K- pi+ and K+ K-", 
+        "BaBar", 
+        "10.1103/PhysRevD.80.071103", 
+        null, 
+        "0908.0761", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-13737", 
+            "BABAR-PUB-09-023"
+        ]
+    ], 
+    "827985": [
+        "Study of D(sJ) decays to D*K in inclusive e+ e- interactions", 
+        "BaBar", 
+        "10.1103/PhysRevD.80.092003", 
+        null, 
+        "0908.0806", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-13747", 
+            "BABAR-PUB-09-024"
+        ]
+    ], 
+    "829158": [
+        "A Search for Invisible Decays of the Upsilon(1S)", 
+        "BaBar", 
+        "10.1103/PhysRevLett.103.251801", 
+        null, 
+        "0908.2840", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-13757", 
+            "BABAR-CONF-09-022"
+        ]
+    ], 
+    "829441": [
+        "Precise measurement of the e+ e- ---> pi+ pi- (gamma) cross section with the Initial State Radiation method at BABAR", 
+        "BaBar", 
+        "10.1103/PhysRevLett.103.231801", 
+        null, 
+        "0908.3589", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-13754", 
+            "BABAR-PUB-09-027"
+        ]
+    ], 
+    "831690": [
+        "Measurements of the tau mass and the mass difference of the tau+ and tau- at BABAR", 
+        "BaBar", 
+        "10.1103/PhysRevD.80.092005", 
+        null, 
+        "0909.3562", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-13791", 
+            "BABAR-PUB-09116"
+        ]
+    ], 
+    "831874": [
+        "Measurement of CP violation observables and parameters for the decays B+- ---> D K*+-", 
+        "BaBar", 
+        "10.1103/PhysRevD.80.092001", 
+        null, 
+        "0909.3981", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-13793", 
+            "BABAR-PUB-09-019"
+        ]
+    ]
+}

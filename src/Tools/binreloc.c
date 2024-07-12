@@ -215,7 +215,10 @@ _br_find_exe_for_symbol (const void *symbol, BrInitError *error)
 			break;
 
 		/* Sanity check. */
-		if (strstr (line, " r-xp ") == NULL || strchr (line, '/') == NULL)
+		if (strchr (line, '/') == NULL)
+		/* With binutils > 2.30 (const void *) "" is placed in "r--p" area of memory
+         In general, for the mechanism of detection it doesn't really matter where your symbol is,
+         therefore, check for strstr (line, " r-xp ") == NULL is removed */
 			continue;
 
 		/* Parse line. */
@@ -344,8 +347,13 @@ br_init (BrInitError *error)
 int
 br_init_lib (BrInitError *error)
 {
-	exe = _br_find_exe_for_symbol ((const void *) "", error);
-	return exe != NULL;
+  exe = _br_find_exe_for_symbol ((const void *) "", error);
+  const int rtn = exe != NULL;
+  if (rtn) {
+    free(exe);
+    exe = (char *) NULL;
+  }
+  return rtn;
 }
 
 

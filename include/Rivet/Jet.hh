@@ -14,6 +14,36 @@
 namespace Rivet {
 
 
+  /// @brief Specialised vector of Jet objects.
+  ///
+  /// A specialised version of vector<Jet> which is able to implicitly and
+  /// explicitly convert to a vector of FourMomentum or PseudoJet.
+  ///
+  /// typedef std::vector<Jet> Jets;
+  class Jets : public std::vector<Jet> {
+  public:
+    using base = std::vector<Jet>; //< using-declarations don't like template syntax
+    using base::base; //< import base-class constructors
+    Jets();
+    Jets(const std::vector<Jet>& vjs);
+    FourMomenta moms() const;
+    PseudoJets pseudojets() const;
+    operator FourMomenta () const { return moms(); }
+    operator PseudoJets () const { return pseudojets(); }
+    Jets& operator += (const Jet& j);
+    Jets& operator += (const Jets& js);
+  };
+
+  Jets operator + (const Jets& a, const Jets& b);
+
+  //@}
+
+
+
+  //////////////////////
+
+
+
   /// @brief Representation of a clustered jet of particles.
   class Jet : public ParticleBase {
   public:
@@ -136,37 +166,6 @@ namespace Rivet {
     bool tauTagged(const Cut& c=Cuts::open()) const { return !tauTags(c).empty(); }
     /// Does this jet have at least one tau-tag (that passes the supplied selector function)?
     bool tauTagged(const ParticleSelector& f) const { return !tauTags(f).empty(); }
-
-
-    /// @brief Check whether this jet contains a bottom-flavoured hadron.
-    ///
-    /// @deprecated The bTags() or bTagged() function is probably what you want
-    /// for tagging. This one ignores the tags() list and draws conclusions
-    /// based directly on the jet constituents; the other gives a much better match
-    /// to typical experimental methods.
-    ///
-    /// @note The decision is made by first trying to find a bottom-flavoured particle
-    /// in the particles list. Most likely this will fail unless bottom hadrons
-    /// are set stable. If @a include_decay_products is true (the default), a
-    /// fallback is attempted, using the post-hadronization ancestor history of
-    /// all constituents.
-    DEPRECATED("Prefer the bTags() or bTagged() function")
-    bool containsBottom(bool include_decay_products=true) const;
-
-    /// @brief Check whether this jet contains a charm-flavoured hadron.
-    ///
-    /// @deprecated The cTags() or cTagged() function is probably what you want
-    /// for tagging. This one ignores the tags() list and draws conclusions
-    /// based directly on the jet constituents; the other gives a much better match
-    /// to typical experimental methods.
-    ///
-    /// @note The decision is made by first trying to find a charm-flavoured particle
-    /// in the particles list. Most likely this will fail unless charmed hadrons
-    /// are set stable. If @a include_decay_products is true (the default), a
-    /// fallback is attempted, using the post-hadronization ancestor history of
-    /// all constituents.
-    DEPRECATED("Prefer the cTags() or cTagged() function")
-    bool containsCharm(bool include_decay_products=true) const;
 
     //@}
 

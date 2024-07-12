@@ -44,23 +44,23 @@ namespace Rivet {
       declare(VisibleFinalState(Cuts::abseta < 4.9),"vfs");
 
       // Book histograms
-      _count_SR_A     = bookHisto1D("count_SR_A"    , 1, 0., 1.);
-      _count_SR_B     = bookHisto1D("count_SR_B"    , 1, 0., 1.);
+      book(_count_SR_A     ,"count_SR_A"    , 1, 0., 1.);
+      book(_count_SR_B     ,"count_SR_B"    , 1, 0., 1.);
 
-      _hist_mjjj1  = bookHisto1D("hist_mjjj1" , 30 , 0.   , 600.  );
-      _hist_mjjj2  = bookHisto1D("hist_mjjj2" , 30 , 0.   , 600.  );
-      _hist_ETmiss = bookHisto1D("hist_ETmiss", 20 , 100. , 600.  );
-      _hist_mT2    = bookHisto1D("hist_mT2"   , 200, 0.   , 1000. );
+      book(_hist_mjjj1  ,"hist_mjjj1" , 30 , 0.   , 600.  );
+      book(_hist_mjjj2  ,"hist_mjjj2" , 30 , 0.   , 600.  );
+      book(_hist_ETmiss ,"hist_ETmiss", 20 , 100. , 600.  );
+      book(_hist_mT2    ,"hist_mT2"   , 200, 0.   , 1000. );
 
     }
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-      const double weight = event.weight();
+      const double weight = 1.0;
 
       // pTmiss
       FourMomentum pTmiss;
-      foreach (const Particle& p, apply<VisibleFinalState>(event, "vfs").particles() ) {
+      for (const Particle& p : apply<VisibleFinalState>(event, "vfs").particles() ) {
         pTmiss -= p.momentum();
       }
       double ETmiss = pTmiss.pT();
@@ -70,16 +70,16 @@ namespace Rivet {
 
       // get the candiate jets
       Jets cand_jets;
-      foreach ( const Jet& jet, apply<FastJets>(event, "AntiKtJets04").jetsByPt(20.0*GeV) ) {
+      for ( const Jet& jet : apply<FastJets>(event, "AntiKtJets04").jetsByPt(20.0*GeV) ) {
         if (jet.abseta() < 4.5) cand_jets.push_back(jet);
       }
 
       // find the electrons
       Particles cand_e;
-      foreach( const Particle& e, apply<IdentifiedFinalState>(event, "elecs").particlesByPt()) {
+      for( const Particle& e : apply<IdentifiedFinalState>(event, "elecs").particlesByPt()) {
         // remove any leptons within 0.4 of any candidate jets
         bool e_near_jet = false;
-        foreach ( const Jet& jet, cand_jets ) {
+        for ( const Jet& jet : cand_jets ) {
           double dR = deltaR(e, jet);
           if (inRange(dR, 0.2, 0.4)) {
             e_near_jet = true;
@@ -92,10 +92,10 @@ namespace Rivet {
 
       // find the muons
       Particles cand_mu;
-      foreach( const Particle& mu, apply<IdentifiedFinalState>(event, "muons").particlesByPt()) {
+      for( const Particle& mu : apply<IdentifiedFinalState>(event, "muons").particlesByPt()) {
         // remove any leptons within 0.4 of any candidate jets
         bool mu_near_jet = false;
-        foreach ( const Jet& jet, cand_jets ) {
+        for ( const Jet& jet : cand_jets ) {
           if ( deltaR(mu, jet) < 0.4 ) {
             mu_near_jet = true;
             break;
@@ -111,10 +111,10 @@ namespace Rivet {
 
       // discard jets that overlap with electrons
       Jets recon_jets;
-      foreach ( const Jet& jet, cand_jets ) {
+      for ( const Jet& jet : cand_jets ) {
         if (jet.abseta() > 2.8 || jet.pT() < 30*GeV) continue;
         bool away_from_e = true;
-        foreach (const Particle& e, cand_e ) {
+        for (const Particle& e : cand_e ) {
           if ( deltaR(e, jet) < 0.2 ) {
             away_from_e = false;
             break;
@@ -125,7 +125,7 @@ namespace Rivet {
 
       // find b jets
       Jets tight_bjets,loose_bjets;
-      foreach(const Jet& jet, recon_jets) {
+      for(const Jet& jet : recon_jets) {
         /// @todo Should be abseta?
         if (!jet.bTagged() && jet.eta()>2.5) continue;
         double prob = rand()/static_cast<double>(RAND_MAX);
@@ -156,8 +156,8 @@ namespace Rivet {
           continue;
         // check the number of tracks between 1 and 4
         unsigned int ncharged=0;
-        foreach ( const Particle & particle, recon_jets[ix].particles()) {
-          if (PID::threeCharge(particle.pid())!=0) ++ncharged;
+        for ( const Particle & particle : recon_jets[ix].particles()) {
+          if (PID::charge3(particle.pid())!=0) ++ncharged;
         }
         if (ncharged==0 || ncharged>4) continue;
         // calculate transverse mass and reject if < 100
@@ -292,6 +292,6 @@ namespace Rivet {
   };
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2012_I1126136);
+  RIVET_DECLARE_PLUGIN(ATLAS_2012_I1126136);
 
 }

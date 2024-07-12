@@ -1,6 +1,5 @@
 // -*- C++ -*-
 #include "Rivet/Analysis.hh"
-#include "Rivet/Tools/BinnedHistogram.hh"
 #include "Rivet/Projections/FinalState.hh"
 #include "Rivet/Projections/FastJets.hh"
 #include <sstream>
@@ -23,18 +22,18 @@ namespace Rivet {
 
     // Histograms
     /// @todo Can we manage to only register these as they are "really" created in the finalize()?
-    _h_dijet_ratio = bookScatter2D(1, 1, 1);
-    _h_MN_dijet_ratio = bookScatter2D(2, 1, 1);
+    book(_h_dijet_ratio   , 1, 1, 1);
+    book(_h_MN_dijet_ratio, 2, 1, 1);
 
     // Temporary histograms (directly instantiated)
-    _h_DeltaY_exclusive = bookHisto1D("TMP/excl",refData(1, 1, 1));
-    _h_DeltaY_inclusive = bookHisto1D("TMP/incl",refData(1, 1, 1));
-    _h_DeltaY_MN = bookHisto1D("TMP/YMN",refData(1, 1, 1));
+    book(_h_DeltaY_exclusive ,"TMP/excl",refData(1, 1, 1));
+    book(_h_DeltaY_inclusive ,"TMP/incl",refData(1, 1, 1));
+    book(_h_DeltaY_MN ,"TMP/YMN",refData(1, 1, 1));
   }
 
 
   void analyze(const Event & event) {
-    const double weight = event.weight();
+    const double weight = 1.0;
 
     // Jets with  pT > 35.0, -4.7 < y < 4.7
     const JetAlg& jet_alg = apply<JetAlg>(event, "antikT");
@@ -82,6 +81,6 @@ namespace Rivet {
   };
 
 
-  DECLARE_RIVET_PLUGIN(CMS_2012_I1102908);
+  RIVET_DECLARE_PLUGIN(CMS_2012_I1102908);
 
 }

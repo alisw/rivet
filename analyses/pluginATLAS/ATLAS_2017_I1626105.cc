@@ -1,3 +1,4 @@
+// -*- C++ -*-
 #include "Rivet/Analysis.hh"
 #include "Rivet/Projections/VetoedFinalState.hh"
 #include "Rivet/Projections/IdentifiedFinalState.hh"
@@ -8,12 +9,12 @@
 namespace Rivet {
 
 
-  /// Lepton differential ttbar analysis at 8 TeV
+  /// @brief Lepton differential ttbar analysis at 8 TeV
   class ATLAS_2017_I1626105 : public Analysis {
   public:
 
 
-    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2017_I1626105);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2017_I1626105);
 
 
     void init() {
@@ -77,18 +78,18 @@ namespace Rivet {
       FourMomentum ll = elecs[0].momentum() + muons[0].momentum();
 
       // Fill histograms
-      const double weight = event.weight();
-      fillHistos("lep_pt",      el.pT()/GeV,             weight);
-      fillHistos("lep_pt",      mu.pT()/GeV,             weight);
-      fillHistos("lep_eta",     el.abseta(),             weight);
-      fillHistos("lep_eta",     mu.abseta(),             weight);
-      fillHistos("dilep_pt",    ll.pT()/GeV,             weight);
-      fillHistos("dilep_mass",  ll.mass()/GeV,           weight);
-      fillHistos("dilep_rap",   ll.absrap(),             weight);
-      fillHistos("dilep_dphi",  deltaPhi(el, mu),        weight);
-      fillHistos("dilep_sumpt", (el.pT() + mu.pT())/GeV, weight);
-      fillHistos("dilep_sumE",  (el.E() + mu.E())/GeV,   weight);
+      fillHistos("lep_pt",      el.pT()/GeV);
+      fillHistos("lep_pt",      mu.pT()/GeV);
+      fillHistos("lep_eta",     el.abseta());
+      fillHistos("lep_eta",     mu.abseta());
+      fillHistos("dilep_pt",    ll.pT()/GeV);
+      fillHistos("dilep_mass",  ll.mass()/GeV);
+      fillHistos("dilep_rap",   ll.absrap());
+      fillHistos("dilep_dphi",  deltaPhi(el, mu));
+      fillHistos("dilep_sumpt", (el.pT() + mu.pT())/GeV);
+      fillHistos("dilep_sumE",  (el.E() + mu.E())/GeV);
     }
+
 
     void finalize() {
       // Normalize to cross-section
@@ -105,18 +106,19 @@ namespace Rivet {
 
     }
 
+
   private:
 
     /// @name Histogram helper functions
     //@{
     void bookHistos(const std::string name, unsigned int index) {
-      _h[name] = bookHisto1D(index, 1, 1);
-      _h["norm_" + name] = bookHisto1D(index + 1, 1, 1);
+      book(_h[name], index, 1, 1);
+      book(_h["norm_" + name], index + 1, 1, 1);
     }
 
-    void fillHistos(const std::string name, double value, double weight) {
-      _h[name]->fill(value, weight);
-      _h["norm_" + name]->fill(value, weight);
+    void fillHistos(const std::string name, double value) {
+      _h[name]->fill(value);
+      _h["norm_" + name]->fill(value);
     }
 
     map<string, Histo1DPtr> _h;
@@ -124,6 +126,7 @@ namespace Rivet {
 
   };
 
-  // Declare the class as a hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2017_I1626105);
+
+  RIVET_DECLARE_PLUGIN(ATLAS_2017_I1626105);
+
 }

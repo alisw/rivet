@@ -18,7 +18,7 @@ namespace Rivet {
     TriggerCDFRun2() {
       setName("TriggerCDFRun2");
 
-      addProjection(ChargedFinalState(-4.7, 4.7), "CFS");
+      declare(ChargedFinalState(Cuts::etaIn(-4.7, 4.7)), "CFS");
     }
 
     /// Clone on the heap.
@@ -37,14 +37,14 @@ namespace Rivet {
   protected:
 
     /// Compare with other projections.
-    virtual int compare(const Projection&) const {
-      return EQUIVALENT;
+    virtual CmpState compare(const Projection&) const {
+      return CmpState::EQ;
     }
 
 
-  private:
+  protected:
 
-    /// The min bias trigger decision
+    /// The min-bias trigger decision
     bool _decision_mb;
 
   };

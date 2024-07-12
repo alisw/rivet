@@ -1,0 +1,35 @@
+Name: BESIII_2017_I1469067
+Year: 2017
+Summary:  Kinematic distributions in the decays $\eta^\prime\to\pi^+\pi^-\pi^0$ and $\pi\pi^0\pi^0$
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1469067
+Status: VALIDATED NOHEPDATA
+Reentrant: false
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 118 (2017) 1, 012001
+RunInfo: Any process producing etaprime mesons
+NeedCrossSection: no
+Description:
+  'Measurement of kinematic distributions in the decay $\eta^\prime\to\eta\pi^0\pi^0$. Data was read from the graphs and the simulated background from the plots subtracted.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2016tdb
+BibTeX: '@article{BESIII:2016tdb,
+    author = "Ablikim, Medina and others",
+    collaboration = "BESIII",
+    title = "{Amplitude Analysis of the Decays $\eta^\prime \rightarrow \pi^+\pi^-\pi^0$ and $\eta^\prime \rightarrow \pi^0\pi^0\pi^0$}",
+    eprint = "1606.03847",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevLett.118.012001",
+    journal = "Phys. Rev. Lett.",
+    volume = "118",
+    number = "1",
+    pages = "012001",
+    year = "2017"
+}
+'

@@ -1,4 +1,4 @@
-#include "Rivet/Config/RivetCommon.hh"
+#include "Rivet/Config/RivetConfig.hh"
 #include "Rivet/Tools/Utils.hh"
 
 

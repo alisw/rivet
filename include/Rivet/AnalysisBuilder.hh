@@ -23,7 +23,8 @@ namespace Rivet {
     AnalysisBuilderBase() = default;
 
     /// Constructor with alias name
-    AnalysisBuilderBase(const string& alias) : _alias(alias) {}
+    AnalysisBuilderBase(const string& alias)
+      : _alias(alias) {   }
 
     /// Destructor
     virtual ~AnalysisBuilderBase() = default;

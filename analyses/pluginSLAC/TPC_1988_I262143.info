@@ -1,0 +1,32 @@
+Name: TPC_1988_I262143
+Year: 1988
+Summary: Charged particle spectra at 29 GeV
+Experiment: TPC
+Collider: PEP
+InspireID: 262143
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 61 (1988) 1263, 1988 
+RunInfo: e+e- to hadrons at 29 GeV
+NeedCrossSection: yes
+Beams: [e+, e-]
+Energies: [29]
+Description:
+  'Momentum spectra for all charged particles, $\pi^\pm$, $K^\pm$ $p,\bar{p}$ in $e^+e^-$ collisions at 29 GeV measured by the TPC experiment.'
+Keywords: []
+BibKey: Aihara:1988su
+BibTeX: '@article{Aihara:1988su,
+      author         = "Aihara, H. and others",
+      title          = "{Charged hadron inclusive cross-sections and fractions in
+                        $e^+e^-$ annihiliation $\sqrt{s}=29$ GeV}",
+      collaboration  = "TPC/Two Gamma",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "61",
+      year           = "1988",
+      pages          = "1263",
+      doi            = "10.1103/PhysRevLett.61.1263",
+      reportNumber   = "LBL-24896",
+      SLACcitation   = "%%CITATION = PRLTA,61,1263;%%"
+}'

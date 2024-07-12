@@ -1,0 +1,16 @@
+#! /usr/bin/env python
+
+"""%prog <yfile1> [<yfile2> ...]"""
+
+import yoda, optparse
+
+op = optparse.OptionParser()
+opts, args = op.parse_args()
+
+for i, f in enumerate(args):
+    print "Processing", f, "(%d/%d)" % (i+1, len(args))
+    aos = yoda.read(f)
+    for ao in aos.values():
+        if not ao.hasAnnotation("IsRef"):
+            ao.setAnnotation("IsRef", 1)
+    yoda.write([ao for (_,ao) in sorted(aos.iteritems())], f)

@@ -1,0 +1,78 @@
+{
+    "267998": [
+        "A measurement of $W$ boson production in 1.8 TeV $\\bar{p}p$ collisions", 
+        "CDF", 
+        "10.1103/PhysRevLett.62.1005", 
+        null, 
+        null, 
+        "ins267998", 
+        null, 
+        [
+            "FERMILAB-PUB-88-207-E", 
+            "ANL-HEP-PR-89-37"
+        ]
+    ], 
+    "267999": [
+        "Measurement of the inclusive jet cross-section in $\\bar{p}p$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.62.613", 
+        null, 
+        null, 
+        "ins267999", 
+        null, 
+        [
+            "FERMILAB-PUB-88-213-E", 
+            "ANL-HEP-PR-89-38"
+        ]
+    ], 
+    "278394": [
+        "Dijet angular distributions from $\\bar{p}p$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.62.3020", 
+        null, 
+        null, 
+        "ins278394", 
+        null, 
+        [
+            "FERMILAB-PUB-89-062-E"
+        ]
+    ], 
+    "280477": [
+        "Search for Heavy Stable Particles in 1.8-TeV pp\u00af Collisions at the Fermilab Collider", 
+        "CDF", 
+        "10.1103/PhysRevLett.63.1447", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "ANL-HEP-PR-89-71", 
+            "FERMILAB-PUB-89-161-E"
+        ]
+    ], 
+    "280478": [
+        "Measurement of the Mass and Width of the $Z^0$ Boson at the Fermilab Tevatron", 
+        "CDF", 
+        "10.1103/PhysRevLett.63.720", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "ANL-HEP-PR-89-66", 
+            "FERMILAB-PUB-89-160-E"
+        ]
+    ], 
+    "287811": [
+        "$K_s^0$ production in $\\bar{p}p$ interactions at $\\sqrt{s}=$ 630 GeV and 1800 GeV", 
+        "CDF", 
+        "10.1103/PhysRevD.40.3791", 
+        null, 
+        null, 
+        "ins287811", 
+        null, 
+        [
+            "FERMILAB-PUB-89-270-E"
+        ]
+    ]
+}

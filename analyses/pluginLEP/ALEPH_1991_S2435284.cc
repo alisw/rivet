@@ -6,27 +6,24 @@ namespace Rivet {
 
 
   /// @brief ALEPH LEP1 charged multiplicity in hadronic Z decay
+  ///
   /// @author Andy Buckley
   class ALEPH_1991_S2435284 : public Analysis {
   public:
 
-    /// Constructor.
-    ALEPH_1991_S2435284()
-      : Analysis("ALEPH_1991_S2435284")
-    {
-    }
+    RIVET_DEFAULT_ANALYSIS_CTOR(ALEPH_1991_S2435284);
 
 
     /// @name Analysis methods
-    //@{
+    /// @{
 
     /// Book projections and histogram
     void init() {
       const ChargedFinalState cfs;
       declare(cfs, "CFS");
 
-      _histChTot = bookHisto1D(1, 1, 1);
-      _histAver  = bookHisto1D(2, 1, 1);
+      book(_histChTot ,1, 1, 1);
+      book(_histAver, 2, 1, 1);
     }
 
 
@@ -34,8 +31,8 @@ namespace Rivet {
     void analyze(const Event& event) {
       const FinalState& cfs = apply<FinalState>(event, "CFS");
       MSG_DEBUG("Total charged multiplicity = " << cfs.size());
-      _histChTot->fill(cfs.size(), event.weight());
-      _histAver->fill(_histAver->bin(0).xMid(),cfs.size()*event.weight());
+      _histChTot->fill(cfs.size());
+      _histAver->fill(_histAver->bin(0).xMid(),cfs.size());
     }
 
 
@@ -45,22 +42,19 @@ namespace Rivet {
       scale(_histAver , 1./sumOfWeights());
     }
 
-    //@}
+    /// @}
 
-
-  private:
 
     /// @name Histograms
-    //@{
+    /// @{
     Histo1DPtr _histChTot;
     Histo1DPtr _histAver;
-    //@}
+    /// @}
 
   };
 
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ALEPH_1991_S2435284);
+  RIVET_DECLARE_ALIASED_PLUGIN(ALEPH_1991_S2435284, ALEPH_1991_I319520);
 
 }

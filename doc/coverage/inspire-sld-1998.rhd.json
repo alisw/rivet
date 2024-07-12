@@ -1,0 +1,26 @@
+{
+    "447268": [
+        "A Measurement of R(b) using a vertex mass tag", 
+        "SLD", 
+        "10.1103/PhysRevLett.80.660", 
+        null, 
+        "hep-ex/9708015", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-7481"
+        ]
+    ], 
+    "469102": [
+        "A Direct measurement of parity violation in the coupling of Z0 bosons to b quarks using a mass tag and momentum weighted track charge", 
+        "SLD", 
+        "10.1103/PhysRevLett.81.942", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-7794"
+        ]
+    ]
+}

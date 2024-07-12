@@ -1,0 +1,30 @@
+Name: OPAL_1996_I428493
+Year: 1996
+Summary: Production of $B^*$ mesons at LEP1
+Experiment: OPAL
+Collider: LEP
+InspireID: 428493
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Production of $B^*$ mesons at LEP1
+RunInfo: e+e- to hadrons
+NeedCrossSection: no
+Beams: [e-, e+]
+Energies: 91.2
+Description:
+'The polarization and ratio of vector to pseudoscalar for $B$ meson production at LEP1.'
+BibKey: Ackerstaff:1996gz
+BibTeX: '@article{Ackerstaff:1996gz,
+      author         = "Ackerstaff, K. and others",
+      title          = "{B* production in Z0 decays}",
+      collaboration  = "OPAL",
+      journal        = "Z. Phys.",
+      volume         = "C74",
+      year           = "1997",
+      pages          = "413-422",
+      doi            = "10.1007/s002880050404",
+      reportNumber   = "CERN-PPE-96-192",
+      SLACcitation   = "%%CITATION = ZEPYA,C74,413;%%"
+}'

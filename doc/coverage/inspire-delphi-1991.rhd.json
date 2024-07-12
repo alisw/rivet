@@ -1,0 +1,109 @@
+{
+    "300179": [
+        "The DELPHI detector at LEP", 
+        "DELPHI", 
+        "10.1016/0168-9002(91)90793-P", 
+        "212026", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-90-128", 
+            "CERN-EF-90-5"
+        ]
+    ], 
+    "301657": [
+        "Charged particle multiplicity distributions in Z0 hadronic decays", 
+        "DELPHI", 
+        "10.1007/BF01474073", 
+        "214459", 
+        null, 
+        "ins301657", 
+        null, 
+        [
+            "CERN-PPE-90-173"
+        ]
+    ], 
+    "301659": [
+        "Experimental study of the triple gluon vertex", 
+        "DELPHI", 
+        "10.1016/0370-2693(91)90796-S", 
+        "214250", 
+        null, 
+        "ins301659", 
+        null, 
+        [
+            "CERN-PPE-90-174"
+        ]
+    ], 
+    "302936": [
+        "Search for low mass Higgs bosons produced in Z0 decays", 
+        "DELPHI", 
+        "10.1007/BF01579557", 
+        "215734", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-90-193"
+        ]
+    ], 
+    "314619": [
+        "A Study of the reaction e+ e- ---> mu+ mu- around the Z0 pole", 
+        "DELPHI", 
+        "10.1016/0370-2693(91)90998-6", 
+        "217835", 
+        null, 
+        "ins314619", 
+        null, 
+        [
+            "CERN-PPE-91-43"
+        ]
+    ], 
+    "317493": [
+        "Determination of $Z^0$ resonance parameters and couplings from its hadronic and leptonic decays", 
+        "DELPHI", 
+        "10.1016/0550-3213(91)90007-K", 
+        "221438", 
+        null, 
+        "ins317493", 
+        null, 
+        [
+            "CERN-PPE-91-95"
+        ]
+    ], 
+    "317825": [
+        "The reaction e+ e- ---> gamma gamma (gamma) at Z0 energies", 
+        "DELPHI", 
+        "10.1016/0370-2693(91)90819-C", 
+        "222670", 
+        null, 
+        "ins317825", 
+        null, 
+        [
+            "CERN-PPE-91-109"
+        ]
+    ], 
+    "318142": [
+        "A Measurement of the lifetime of the tau lepton", 
+        "DELPHI", 
+        "10.1016/0370-2693(91)90957-R", 
+        "223459", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-91-115"
+        ]
+    ], 
+    "324035": [
+        "Charged particle multiplicity distributions in restricted rapidity intervals in Z0 hadronic decays.", 
+        "DELPHI", 
+        "10.1007/BF01560444", 
+        "221139", 
+        null, 
+        "ins324035", 
+        null, 
+        []
+    ]
+}

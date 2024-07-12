@@ -1,0 +1,32 @@
+Name: MARKJ_1979_I141976
+Year: 1979
+Summary: Measurement of $R$ at 31.57 GeV
+Experiment: MARKJ
+Collider: PETRA
+InspireID: 141976
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B85 (1979) 463-466, 1979 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: yes
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$ in $e^+e^-$ collisions by MARKJ for 31.57 GeV.
+   The individual hadronic and muonic cross sections are also outputted to the yoda file
+   so that ratio $R$ can be recalculated if runs are combined.'
+BibKey: Barber:1979ru
+BibTeX: '@article{Barber:1979ru,
+      author         = "Barber, D. P. and others",
+      title          = "{Study of Electron - Positron Collisions at the Highest
+                        {PETRA} Energy}",
+      collaboration  = "Aachen-DESY-Annecy(LAPP)-MIT-NIKHEF-Beijing",
+      journal        = "Phys. Lett.",
+      volume         = "85B",
+      year           = "1979",
+      pages          = "463-466",
+      doi            = "10.1016/0370-2693(79)91296-6",
+      reportNumber   = "MIT-LNS-104",
+      SLACcitation   = "%%CITATION = PHLTA,85B,463;%%"
+}'

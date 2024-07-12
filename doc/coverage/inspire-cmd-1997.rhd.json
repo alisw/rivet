@@ -1,0 +1,35 @@
+{
+    "440389": [
+        "Study of K(S) K(L) coupled decays and K(L) Be interactions with the CMD-2 detector at VEPP-2M Collider", 
+        "CMD-2", 
+        "10.1016/S0370-2693(97)00265-7", 
+        null, 
+        "hep-ex/9702006", 
+        null, 
+        null, 
+        [
+            "BUDKER-INP-1996-93", 
+            "BUDKER-INP-96-93"
+        ]
+    ], 
+    "451091": [
+        "Search for rare Phi decays in pi+ pi- gamma final state", 
+        "CMD-2", 
+        "10.1016/S0370-2693(97)01365-8", 
+        null, 
+        "hep-ex/9711007", 
+        "ins451091", 
+        null, 
+        []
+    ], 
+    "457131": [
+        "First observation of the decay phi --> eta-prime(958) gamma", 
+        "CMD-2", 
+        "10.1016/S0370-2693(97)01364-6", 
+        null, 
+        null, 
+        null, 
+        null, 
+        []
+    ]
+}

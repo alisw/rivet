@@ -36,10 +36,10 @@ namespace Rivet {
       photonfs.acceptId(PID::PHOTON);
       declare(photonfs, "Photon");
 
-      _h_M            = bookHisto1D(1, 1, 1);
-      _h_pT           = bookHisto1D(2, 1, 1);
-      _h_dPhi         = bookHisto1D(3, 1, 1);
-      _h_cosThetaStar = bookHisto1D(4, 1, 1);
+      book(_h_M            ,1, 1, 1);
+      book(_h_pT           ,2, 1, 1);
+      book(_h_dPhi         ,3, 1, 1);
+      book(_h_cosThetaStar ,4, 1, 1);
     }
 
 
@@ -109,13 +109,12 @@ namespace Rivet {
       if (deltaR(y1, y2) < 0.4) vetoEvent;
 
       // Compute diphoton vector and fill histos
-      const double weight = event.weight();
       FourMomentum yy = y1 + y2;
       const double costhetayy = 2 * y1.pT() * y2.pT() * sinh(y1.eta() - y2.eta()) / yy.mass() / add_quad(yy.mass(), yy.pT());
-      _h_M->fill(yy.mass()/GeV, weight);
-      _h_pT->fill(yy.pT()/GeV, weight);
-      _h_dPhi->fill(mapAngle0ToPi(y1.phi() - y2.phi()), weight);
-      _h_cosThetaStar->fill(costhetayy, weight);
+      _h_M->fill(yy.mass()/GeV);
+      _h_pT->fill(yy.pT()/GeV);
+      _h_dPhi->fill(mapAngle0ToPi(y1.phi() - y2.phi()));
+      _h_cosThetaStar->fill(costhetayy);
     }
 
 
@@ -137,6 +136,6 @@ namespace Rivet {
   };
 
 
-  DECLARE_RIVET_PLUGIN(ATLAS_2012_I1199269);
+  RIVET_DECLARE_PLUGIN(ATLAS_2012_I1199269);
 
 }

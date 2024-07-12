@@ -1,0 +1,72 @@
+{
+    "1216676": [
+        "Search for $B_s^0 \\rightarrow \\mu^{+}\\mu^{-}$ and $B^0 \\rightarrow \\mu^{+}\\mu^{-}$ decays with the full CDF Run II data set", 
+        "CDF", 
+        "10.1103/PhysRevD.87.072003", 
+        "1510944", 
+        "1301.7048", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-13-034"
+        ]
+    ], 
+    "1623561": [
+        "Combined Forward-Backward Asymmetry Measurements in Top-Antitop Quark Production at the Tevatron", 
+        "CDF", 
+        "10.1103/PhysRevLett.120.042001", 
+        "2284571", 
+        "1709.04894", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-17-379-E"
+        ]
+    ], 
+    "1645240": [
+        "A search for the exotic meson $X(5568)$ with the Collider Detector at Fermilab", 
+        "CDF", 
+        "10.1103/PhysRevLett.120.202006", 
+        "2299150", 
+        "1712.09620", 
+        null, 
+        null, 
+        []
+    ], 
+    "1649135": [
+        "Tevatron Run II combination of the effective leptonic electroweak mixing angle", 
+        "CDF", 
+        "10.1103/PhysRevD.97.112007", 
+        "2301436", 
+        "1801.06283", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-18-015-E"
+        ]
+    ], 
+    "1680821": [
+        "Search for standard-model Z and Higgs bosons decaying into a bottom-antibottom quark pair in proton-antiproton collisions at 1.96 TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.98.072002", 
+        "2629426", 
+        "1807.01363", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-18-307-E-PPD"
+        ]
+    ], 
+    "1685416": [
+        "Measurement of the differential cross sections for W -boson production in association with jets $p\\bar{p}$ collisions at $\\sqrt{s}=1.96$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.98.112005", 
+        "2633766", 
+        "1808.02335", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-18-371-E"
+        ]
+    ]
+}

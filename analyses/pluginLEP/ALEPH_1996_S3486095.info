@@ -6,6 +6,7 @@ Collider: LEP 1
 SpiresID: 3486095
 InspireID: 428072
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Holger Schulz <holger.schulz@physik.hu-berlin.de>
 References:
@@ -32,3 +33,7 @@ BibTeX: '@Article{Barate:1996fi,
      doi       = "10.1016/S0370-1573(97)00045-8",
      SLACcitation  = "%%CITATION = PRPLC,294,1;%%"
 }'
+
+ReleaseTests:
+ - $A LEP-91
+

@@ -1,0 +1,34 @@
+Name: BABAR_2011_I855306
+Year: 2011
+Summary: Semi-leptonic $B\to\pi\ell^+\nu_\ell$ and $B\to\rho\ell^+\nu_\ell$
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 855306
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 83 (2011) 032007
+RunInfo: Any process producing B0 and B+, original e+e->Upsilon(4S)
+Description:
+  'Implementation of Lorentz invariant $q^2$ distributions for $B\to\pi\ell^+\nu_\ell$ and $B\to\rho\ell^+\nu_\ell$.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BaBar:2010efp
+BibTeX: '@article{BaBar:2010efp,
+    author = "del Amo Sanchez, P. and others",
+    collaboration = "BaBar",
+    title = "{Study of $B \to \pi \ell \nu$ and $B \to \rho \ell \nu$ Decays and Determination of $|V_{ub}|$}",
+    eprint = "1005.3288",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "SLAC-PUB-14106, BABAR-PUB-09-037",
+    doi = "10.1103/PhysRevD.83.032007",
+    journal = "Phys. Rev. D",
+    volume = "83",
+    pages = "032007",
+    year = "2011"
+}
+'

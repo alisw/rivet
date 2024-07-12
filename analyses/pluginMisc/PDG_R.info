@@ -1,0 +1,33 @@
+Name: PDG_R
+Year: 2018
+Summary: PDG Compilation of $R$ measurements
+Experiment: PDG
+Collider: Various
+InspireID: 1688995
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D98 (2018) no.3, 030001
+RunInfo: e+e- to hadrons and mu+mu- for normalization
+Beams: [e+, e-]
+Description:
+  'PDG compilation of measurements of the $R$ ratio in $e^+e^-$ collisions'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Tanabashi:2018oca
+BibTeX: '@article{Tanabashi:2018oca,
+      author         = "Tanabashi, M. and others",
+      title          = "{Review of Particle Physics}",
+      collaboration  = "Particle Data Group",
+      journal        = "Phys. Rev.",
+      volume         = "D98",
+      year           = "2018",
+      number         = "3",
+      pages          = "030001",
+      doi            = "10.1103/PhysRevD.98.030001",
+      SLACcitation   = "%%CITATION = PHRVA,D98,030001;%%"
+}'

@@ -6,18 +6,23 @@ Collider: LHC
 SpiresID: 8894728
 InspireID: 879407
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Andy Buckley <andy.buckley@cern.ch>
  - Holger Schulz <holger.schulz@physik.hu-berlin.de>
 References:
+ - ATLAS-STDM-2010-04
  - arXiv:1012.0791
 RunInfo:
   pp QCD interactions at 900 GeV and 7 TeV. Diffractive events should be
   included, but only influence the lowest bins. Multiple kinematic cuts
   should not be required.
+  Beam energy must be specified as analysis option "ENERGY" when rivet-merge'ing samples.
 NumEvents: 10000000
 Beams: [p+, p+]
 Energies: [900, 7000]
+Options:
+ - ENERGY=900,7000
 PtCuts: [0]
 Description:
   The underlying event measurements with the ATLAS detector at the LHC
@@ -32,3 +37,4 @@ Description:
   are the correlation between mean transverse momentum and charged
   particle multiplicity, and the `plateau' height as a function of the
   leading track $|\eta|$.
+  Beam energy must be specified (in GeV) as analysis option "ENERGY" when rivet-merging samples.'

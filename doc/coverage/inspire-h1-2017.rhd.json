@@ -1,0 +1,38 @@
+{
+    "1496981": [
+        "Measurement of Jet Production Cross Sections in Deep-inelastic ep Scattering at HERA", 
+        "H1", 
+        "10.1140/epjc/s10052-017-4717-9", 
+        "2232133", 
+        "1611.03421", 
+        "ins1496981", 
+        null, 
+        [
+            "DESY-16-200"
+        ]
+    ], 
+    "1519830": [
+        "Measurement of $D^{*}$ production in diffractive deep inelastic scattering at HERA", 
+        "H1", 
+        "10.1140/epjc/s10052-017-4875-9", 
+        null, 
+        "1703.09476", 
+        null, 
+        null, 
+        [
+            "DESY-17-043"
+        ]
+    ], 
+    "1624691": [
+        "Determination of the strong coupling constant $\\alpha_s(m_Z)$ in next-to-next-to-leading order QCD using H1 jet cross section measurements", 
+        "H1", 
+        "10.1140/epjc/s10052-017-5314-7", 
+        null, 
+        "1709.07251", 
+        null, 
+        null, 
+        [
+            "DESY-17-137"
+        ]
+    ]
+}

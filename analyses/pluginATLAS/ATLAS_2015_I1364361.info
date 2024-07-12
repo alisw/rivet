@@ -5,9 +5,11 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1364361
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Michaela Queitsch-Maitland <michaela.queitsch-maitland@cern.ch>
 References:
+ - ATLAS-HIGG-2014-11
  - arXiv:1504.05833
 RunInfo:
   pp Higgs production at 8 TeV, include all processes (ggH, VH, VBF, ttH), stable Higgs
@@ -19,7 +21,7 @@ Description:
   'WARNING --- this analysis requires stable higgs bosons ---
   Measurements of the total and differential cross sections of Higgs boson production are performed using 20.3 $\text{fb}^{-1}$ of pp collisions produced by the Large Hadron Collider at a center-of-mass energy of 8 TeV and recorded by the ATLAS detector. Cross sections are obtained from measured Higgs to diphoton and ZZ* event yields, which are combined accounting for detector efficiencies, fiducial acceptances and branching fractions. Differential cross sections are reported as a function of Higgs boson transverse momentum, Higgs boson rapidity, number of jets in the event, and transverse momentum of the leading jet. The total production cross section is determined to be $33.0 \pm 5.3 (\text{stat}) \pm 1.6 (\text{sys})$ pb.'
 BibKey: 'Aad:2015lha'
-BibTex: '@article{Aad:2015lha,
+BibTeX: '@article{Aad:2015lha,
       author         = "Aad, Georges and others",
       title          = "{Measurements of the Total and Differential Higgs Boson
                         Production Cross Sections Combining the $H \rightarrow
@@ -34,3 +36,10 @@ BibTex: '@article{Aad:2015lha,
       reportNumber   = "CERN-PH-EP-2015-048",
       SLACcitation   = "%%CITATION = ARXIV:1504.05833;%%",
 }'
+
+ReleaseTests:
+ - $A LHC-8-VBF
+ - $A-2 LHC-8-WH
+ - $A-3 LHC-8-ZH
+ - $A-4 LHC-8-ggH
+

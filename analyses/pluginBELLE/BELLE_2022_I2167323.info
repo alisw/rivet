@@ -1,0 +1,33 @@
+Name: BELLE_2022_I2167323
+Year: 2022
+Summary: Measurement of the energy spectrum for $\bar{B}\to X_s \gamma$
+Experiment: BELLE
+Collider: KEKB
+InspireID: 2167323
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - arXiv:2210.10220 [hep-ex]
+RunInfo: any process making $B^-$ and $\bar{B}^0$ mesons, eg. particle gun or $\Upslion(4S)$ decay. 
+Description:
+  'Photon energy spectrum in $B\to s\gamma$ decays measured by BELLE. Useful for testing the implementation of these decays'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle-II:2022hys
+BibTeX: '@article{Belle-II:2022hys,
+    author = "Abudinen, F. and others",
+    collaboration = "Belle-II",
+    title = "{Measurement of the photon-energy spectrum in inclusive $B\rightarrow X_{s}\gamma$ decays identified using hadronic decays of the recoil $B$ meson in 2019-2021 Belle II data}",
+    eprint = "2210.10220",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BELLE2-CONF-PH-2022-018",
+    month = "10",
+    year = "2022"
+}
+'

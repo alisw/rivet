@@ -1,0 +1,417 @@
+{
+    "528176": [
+        "Measurement of the relative branching fraction of upsilon(4S) to charged and neutral B meson pairs", 
+        "CLEO", 
+        "10.1103/PhysRevLett.86.2737", 
+        null, 
+        "hep-ex/0006002", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-2000-057", 
+            "CLNS-00-1670", 
+            "CLEO-00-7"
+        ]
+    ], 
+    "529857": [
+        "Study of B decays to charmonium states B ---> eta(c) K and B ---> chi(c0) K", 
+        "CLEO", 
+        "10.1103/PhysRevLett.86.30", 
+        null, 
+        "hep-ex/0007012", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-2000-058", 
+            "CLNS-00-1680", 
+            "CLEO-00-12"
+        ]
+    ], 
+    "530545": [
+        "First observation of the Sigma*+(c) baryon and a new measurement of the Sigma+(c) mass", 
+        "CLEO", 
+        "10.1103/PhysRevLett.86.1167", 
+        null, 
+        "hep-ex/0007041", 
+        "ins530545", 
+        null, 
+        [
+            "SLAC-REPRINT-2000-064", 
+            "CLNS-00-1681", 
+            "CLEO-00-13"
+        ]
+    ], 
+    "532904": [
+        "First observation of the decays B0 ---> D*- p anti-p pi+ and B0 ---> D*-p anti-n", 
+        "CLEO", 
+        "10.1103/PhysRevLett.86.2732", 
+        null, 
+        "hep-ex/0009011", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-2000-073", 
+            "CLNS-00-1682", 
+            "CLEO-00-14"
+        ]
+    ], 
+    "533916": [
+        "Study of chi(c1) and chi(c2) meson production in $B$ meson decays", 
+        "CLEO", 
+        "10.1103/PhysRevD.63.031102", 
+        null, 
+        "hep-ex/0009044", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-2000-060", 
+            "CLNS-00-1691", 
+            "CLEO-00-18"
+        ]
+    ], 
+    "535016": [
+        "Study of tau decays to six pions and neutrino", 
+        "CLEO", 
+        "10.1103/PhysRevLett.86.4467", 
+        null, 
+        "hep-ex/0010025", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-2000-074", 
+            "CLNS-00-1687", 
+            "CLEO-00-16"
+        ]
+    ], 
+    "535112": [
+        "Observation of the Omega0(c) charmed baryon at CLEO", 
+        "CLEO", 
+        "10.1103/PhysRevLett.86.3730", 
+        null, 
+        "hep-ex/0010035", 
+        "ins535112", 
+        null, 
+        [
+            "SLAC-REPRINT-2000-075", 
+            "CLNS-00-1695", 
+            "CLEO-00-19"
+        ]
+    ], 
+    "535113": [
+        "Study of $B \\to \\psi_{2S} K$ and $B \\to \\psi_{2S}$ K*(892) decays", 
+        "CLEO", 
+        "10.1103/PhysRevD.63.031103", 
+        null, 
+        "hep-ex/0010036", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-2000-076", 
+            "CLNS-00-1688", 
+            "CLEO-00-17"
+        ]
+    ], 
+    "535290": [
+        "Search for a scalar bottom quark with mass 3.5-GeV - 4.5-GeV/c**2", 
+        "CLEO", 
+        "10.1103/PhysRevD.63.051101", 
+        null, 
+        "hep-ex/0010047", 
+        "ins535290", 
+        null, 
+        [
+            "SLAC-REPRINT-2000-077", 
+            "CLNS-00-1696", 
+            "CLEO-00-20"
+        ]
+    ], 
+    "535805": [
+        "Bounds on the CP asymmetry in $b \\to s \\gamma$ decays", 
+        "CLEO", 
+        "10.1103/PhysRevLett.86.5661", 
+        null, 
+        "hep-ex/0010075", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-2000-078", 
+            "CLNS-00-1697", 
+            "CLEO-00-21"
+        ]
+    ], 
+    "535988": [
+        "Observation of new states decaying into Lambda+(c) pi- pi+", 
+        "CLEO", 
+        "10.1103/PhysRevLett.86.4479", 
+        null, 
+        "hep-ex/0010080", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-2000-059", 
+            "CLNS-00-1698", 
+            "CLEO-00-22"
+        ]
+    ], 
+    "536906": [
+        "Measurement of the Lambda+(c) lifetime", 
+        "CLEO", 
+        "10.1103/PhysRevLett.86.2232", 
+        null, 
+        "hep-ex/0011049", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-2000-093", 
+            "CLNS-00-1701", 
+            "CLEO-00-24"
+        ]
+    ], 
+    "537154": [
+        "Dalitz analysis of the decay D0 ---> K- pi+ pi0", 
+        "CLEO", 
+        "10.1103/PhysRevD.63.092001", 
+        null, 
+        "hep-ex/0011065", 
+        null, 
+        null, 
+        [
+            "CLNS-00-1700", 
+            "CLEO-00-23"
+        ]
+    ], 
+    "537236": [
+        "A Measurement of the decay asymmetry parameters in Xi0(c) ---> Xi- pi+", 
+        "CLEO", 
+        "10.1103/PhysRevD.63.111102", 
+        null, 
+        "hep-ex/0011073", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-2000-094", 
+            "CLNS-98-1586", 
+            "CLEO-98-15"
+        ]
+    ], 
+    "538110": [
+        "Evidence of new states decaying into Xi-prime(c) pi", 
+        "CLEO", 
+        "10.1103/PhysRevLett.86.4243", 
+        null, 
+        "hep-ex/0012020", 
+        null, 
+        null, 
+        [
+            "CLNS-00-1702", 
+            "CLEO-00-25"
+        ]
+    ], 
+    "539090": [
+        "Search for CP violation in $D^0 \\to K^0_{S} \\pi^0$ and $D^0 \\to \\pi^0 \\pi^0$ and $D^0 \\to K^0_{S} K^0_{S}$ decays", 
+        "CLEO", 
+        "10.1103/PhysRevD.63.071101", 
+        null, 
+        "hep-ex/0012054", 
+        null, 
+        null, 
+        [
+            "CLNS-00-1708", 
+            "CLEO-00-27"
+        ]
+    ], 
+    "551926": [
+        "Bounds on the CP asymmetry in like sign dileptons from $B^0 \\bar{B}^0$ meson decays", 
+        "CLEO", 
+        "10.1103/PhysRevLett.86.5000", 
+        null, 
+        "hep-ex/0101006", 
+        "ins551926", 
+        null, 
+        [
+            "CLNS-01-1717", 
+            "CLEO-01-01"
+        ]
+    ], 
+    "552270": [
+        "Observation of B ---> phi K and B ---> phi K*", 
+        "CLEO", 
+        "10.1103/PhysRevLett.86.3718", 
+        null, 
+        "hep-ex/0101032", 
+        null, 
+        null, 
+        [
+            "CLNS-01-1719", 
+            "CLEO-01-03"
+        ]
+    ], 
+    "552541": [
+        "Correlated Lambda+(c) anti-Lambda-(c) production in e+ e- annihilations at s**(1/2) = 10.5-GeV", 
+        "CLEO", 
+        "10.1103/PhysRevD.63.112003", 
+        null, 
+        "hep-ex/0101051", 
+        "ins552541", 
+        null, 
+        [
+            "CLNS-00-1709", 
+            "CLEO-00-28"
+        ]
+    ], 
+    "554175": [
+        "First observation of anti-B ---> D(*) rho-prime-, rho-prime- ---> omega pi-", 
+        "CLEO", 
+        "10.1103/PhysRevD.64.092001", 
+        null, 
+        "hep-ex/0103021", 
+        null, 
+        null, 
+        [
+            "CLNS-01-1724", 
+            "CLEO-01-05"
+        ]
+    ], 
+    "555068": [
+        "Search for CP violation in tau ---> pi pi0 nu(tau) decay", 
+        "CLEO", 
+        "10.1103/PhysRevD.64.092005", 
+        null, 
+        "hep-ex/0104009", 
+        null, 
+        null, 
+        [
+            "CLNS-01-1730", 
+            "CLEO-01-06"
+        ]
+    ], 
+    "555718": [
+        "Experimental investigation of the two photon widths of the chi(c0) and the chi(c2) mesons", 
+        "CLEO", 
+        "10.1103/PhysRevLett.87.061801", 
+        null, 
+        "hep-ex/0104042", 
+        null, 
+        null, 
+        [
+            "CLNS-01-1732", 
+            "CLEO-01-08"
+        ]
+    ], 
+    "556050": [
+        "Rate measurement of D0 ---> K+ pi- pi0 and constraints on D0 - anti-D0 mixing", 
+        "CLEO", 
+        "10.1103/PhysRevLett.87.071802", 
+        null, 
+        "hep-ex/0105002", 
+        null, 
+        null, 
+        [
+            "CLNS-01-1731", 
+            "CLEO-01-07"
+        ]
+    ], 
+    "557534": [
+        "Search for the decay B+ ---> D*+ K0(S)", 
+        "CLEO", 
+        "10.1103/PhysRevD.64.077501", 
+        null, 
+        "hep-ex/0105086", 
+        null, 
+        null, 
+        [
+            "CLNS-01-1720", 
+            "CLEO-01-04"
+        ]
+    ], 
+    "557934": [
+        "Search for the familon via B+- ---> pi+- X0, B+- ---> K+- X0, and B0 ---> K0(S)X0 decays", 
+        "CLEO", 
+        "10.1103/PhysRevLett.87.271801", 
+        null, 
+        "hep-ex/0106038", 
+        null, 
+        null, 
+        [
+            "CLNS-01-1736", 
+            "CLEO-01-10"
+        ]
+    ], 
+    "558407": [
+        "Improved upper limits on the FCNC decays $B \\to K \\ell^{+} \\ell^{-}$ and $B \\to$ K*(892) $\\ell^{+} \\ell^{-}$", 
+        "CLEO", 
+        "10.1103/PhysRevLett.87.181803", 
+        null, 
+        "hep-ex/0106060", 
+        null, 
+        null, 
+        [
+            "CLNS-01-1739", 
+            "CLEO-01-11"
+        ]
+    ], 
+    "559769": [
+        "Search for the decay Upsilon(1s) ---> gamma eta-prime", 
+        "CLEO", 
+        "10.1103/PhysRevLett.87.141801", 
+        null, 
+        "hep-ex/0107021", 
+        null, 
+        null, 
+        [
+            "CLNS-01-1744", 
+            "CLEO-01-14"
+        ]
+    ], 
+    "561192": [
+        "First measurement of Gamma(D*+)", 
+        "CLEO", 
+        "10.1103/PhysRevLett.87.251801", 
+        null, 
+        "hep-ex/0108013", 
+        null, 
+        null, 
+        [
+            "CLNS-01-1740"
+        ]
+    ], 
+    "561380": [
+        "Evidence for the decay D0 ---> K* pi- pi+ pi-", 
+        "CLEO", 
+        "10.1103/PhysRevD.64.111101", 
+        null, 
+        "hep-ex/0108024", 
+        null, 
+        null, 
+        [
+            "CLNS-01-1748", 
+            "CLEO-01-15"
+        ]
+    ], 
+    "561581": [
+        "Branching fraction and photon energy spectrum for $b \\to s \\gamma$", 
+        "CLEO", 
+        "10.1103/PhysRevLett.87.251807", 
+        null, 
+        "hep-ex/0108032", 
+        null, 
+        null, 
+        [
+            "CLNS-01-1751", 
+            "CLEO-01-16"
+        ]
+    ], 
+    "561582": [
+        "Hadronic mass moments in inclusive semileptonic B meson decays", 
+        "CLEO", 
+        "10.1103/PhysRevLett.87.251808", 
+        null, 
+        "hep-ex/0108033", 
+        null, 
+        null, 
+        [
+            "CLNS-01-1752", 
+            "CLEO-01-17"
+        ]
+    ]
+}

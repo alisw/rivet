@@ -1,0 +1,36 @@
+Name: BABAR_2011_I924163
+Year: 2011
+Summary: Mass distributions in $\bar{B}^0\to\Lambda^+_c\bar{\Lambda}^0K^-$
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 924163
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 84 (2011) 071102
+RunInfo: Any process producing B0, originally e+e- at Upsilon(4S)
+Description:
+  'Mass distributions in $\bar{B}^0\to\Lambda^+_c\bar{\Lambda}^0K^-$, data read from plots in papers but is background subtracted.'
+ValidationInfo:
+  'Herwig 7 events using EvtGen for B decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BaBar:2011uvm
+BibTeX: '@article{BaBar:2011uvm,
+    author = "Lees, J. P. and others",
+    collaboration = "BaBar",
+    title = "{Observation of the baryonic $B$ decay $\bar{B}^0\to \Lambda_c^+ \bar{\Lambda} K^-$}",
+    eprint = "1108.3211",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "SLAC-PUB-14465, BABAR-PUB-11-012",
+    doi = "10.1103/PhysRevD.84.071102",
+    journal = "Phys. Rev. D",
+    volume = "84",
+    pages = "071102",
+    year = "2011"
+}
+'

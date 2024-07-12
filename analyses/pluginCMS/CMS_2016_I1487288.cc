@@ -12,7 +12,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(CMS_2016_I1487288);
+    RIVET_DEFAULT_ANALYSIS_CTOR(CMS_2016_I1487288);
 
 
     /// @name Analysis methods
@@ -23,7 +23,7 @@ namespace Rivet {
 
       FinalState fs(Cuts::abseta < 4.9);
 
-      FastJets fj(fs, FastJets::ANTIKT, 0.5, JetAlg::ALL_MUONS, JetAlg::DECAY_INVISIBLES);
+      FastJets fj(fs, FastJets::ANTIKT, 0.5, JetAlg::Muons::ALL, JetAlg::Invisibles::DECAY);
       declare(fj, "Jets");
 
       ZFinder zeeFinder(fs, Cuts::abseta < 2.5 && Cuts::pT > 20*GeV, PID::ELECTRON, 71*GeV, 111*GeV);
@@ -38,9 +38,11 @@ namespace Rivet {
       WFinder wmuFinder(fs, Cuts::abseta < 2.4 && Cuts::pT > 20*GeV, PID::MUON, 60*GeV, 100*GeV, 30*GeV);
       declare(wmuFinder, "Wmu");
 
-      _h_ZpT = bookHisto1D("d03-x01-y01");
-      _h_Njet = bookHisto1D("d04-x01-y01", {-0.5, 0.5, 1.5, 2.5, 3.5}); ///< @todo Ref data has null bin widths
-      _h_JpT = bookHisto1D("d05-x01-y01");
+      book(_h_ZpT, "d03-x01-y01");
+      book(_h_Njet, "d04-x01-y01", {-0.5, 0.5, 1.5, 2.5, 3.5}); ///< @todo Ref data has null bin widths
+      book(_h_JpT, "d05-x01-y01");
+
+      MSG_WARNING("\033[91;1mLIMITED VALIDITY - check info file for details!\033[m");
     }
 
 
@@ -81,7 +83,7 @@ namespace Rivet {
       }
 
       // Fill Z pT histogram
-      _h_ZpT->fill(Z.pT()/GeV, event.weight());
+      _h_ZpT->fill(Z.pT()/GeV);
 
 
       // Isolate jets from W and Z charged leptons
@@ -90,8 +92,8 @@ namespace Rivet {
       const Jets isojets = discardIfAnyDeltaRLess(jets, wzleps, 0.5);
 
       // Fill jet histograms
-      _h_Njet->fill(isojets.size(), event.weight());
-      if (!isojets.empty()) _h_JpT->fill(isojets[0].pT()/GeV, event.weight());
+      _h_Njet->fill(isojets.size());
+      if (!isojets.empty()) _h_JpT->fill(isojets[0].pT()/GeV);
 
     }
 
@@ -116,6 +118,6 @@ namespace Rivet {
 
 
 
-  DECLARE_RIVET_PLUGIN(CMS_2016_I1487288);
+  RIVET_DECLARE_PLUGIN(CMS_2016_I1487288);
 
 }

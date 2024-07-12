@@ -12,13 +12,14 @@ Authors:
 References:
  - 'J. High Energy Phys.1401:033,2014'
  - 'doi:10.1007/jhep01(2014)033'
- - 'arXiv:hep-ex/1310.8197'
+ - 'arXiv:1310.8197 [hep-ex]'
 RunInfo:
   $pp$ $Z +$ jet events at 7 TeV with direct $\mu$ decays
 NumEvents: 100000
 NeedCrossSection: no
 Beams: [p+, p+]
 Energies: [7000]
+Luminosity_fb: 1.0
 PtCuts: [20.]
 Description:
   'A study of forward $Z +$ jet production in $pp$ collisions at $\sqrt{s}=7$ TeV is presented.
@@ -41,3 +42,7 @@ BibTeX: '@article{Aaij:2013nxa,
       reportNumber   = "LHCB-PAPER-2013-058, CERN-PH-EP-2013-198",
       SLACcitation   = "%%CITATION = ARXIV:1310.8197;%%",
 }'
+
+ReleaseTests:
+ - $A LHC-Z-mu
+

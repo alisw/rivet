@@ -1,9 +1,12 @@
 check_PROGRAMS = testMath testMatVec testCmp testApi testNaN testBeams
 
 AM_LDFLAGS = -L$(top_srcdir)/src $(YAMLCPP_LDFLAGS) -L$(YODALIBPATH)
-LIBS = -lm $(GSL_LDFLAGS) -lYODA
+if WITH_OSX
+AM_LDFLAGS += -Wl,-rpath,${HEPMC3LIBPATH}
+endif
+LIBS = -lm -lYODA
 
-TEST_LDADD = $(top_builddir)/src/libRivet.la $(HEPMCLDFLAGS) $(YODALDFLAGS) $(HEPMCLDLIBS) $(YODALDLIBS)
+TEST_LDADD = $(top_builddir)/src/libRivet.la $(HEPMCLDFLAGS) $(HEPMC3LDFLAGS) $(YODALDFLAGS) $(HEPMCLDLIBS) $(HEPMC3LDLIBS) $(YODALDLIBS) $(FASTJETLIBADD)
 
 testMath_SOURCES = testMath.cc
 testMath_LDADD = $(TEST_LDADD)
@@ -24,15 +27,15 @@ TESTS_ENVIRONMENT = \
   RIVET_INFO_PATH=$(top_builddir)/analyses/data \
   RIVET_REF_PATH=$(top_builddir)/analyses/data \
   LIBLOCATION=$(top_builddir)/src/.libs \
-  LD_LIBRARY_PATH=$$LIBLOCATION:$(LD_LIBRARY_PATH) \
-  DYLD_LIBRARY_PATH=$$LIBLOCATION:$(DYLD_LIBRARY_PATH) \
-  PYTHONPATH=$(top_builddir)/pyext/build/$(RIVET_SETUP_PY_PATH):$(PYTHONPATH) \
+  LD_LIBRARY_PATH=$(top_builddir)/src/.libs:$(HEPMCLIBPATH):$(HEPMC3LIBPATH):$(FASTJETLIBPATH):$(FJCONTRIBLIBPATH):$(YODALIBPATH) \
+  DYLD_LIBRARY_PATH=$(top_builddir)/src/.libs:$(HEPMCLIBPATH):$(HEPMC3LIBPATH):$(FASTJETLIBPATH):$(FJCONTRIBLIBPATH):$(YODALIBPATH) \
+  PYTHONPATH=$(top_builddir)/pyext/build:$(PYTHONPATH) \
   PATH=$(top_builddir)/bin:$(top_srcdir)/bin:$(PATH) \
   PYTHON=$(PYTHON) \
   RIVET_TESTS_SRC=$(srcdir)
 
 TESTS = \
-testMath testMatVec testCmp testApi testNaN testBeams \
+testMath testMatVec testCmp testApi.sh testNaN.sh testBeams \
 testImport.sh
 
 if ENABLE_ANALYSES
@@ -41,6 +44,6 @@ TESTS += testCmdLine.sh
 
 endif
 
-EXTRA_DIST = testApi.hepmc testCmdLine.sh testImport.sh
+EXTRA_DIST = testApi.hepmc testCmdLine.sh testImport.sh testApi.sh testNaN.sh
 
 CLEANFILES = log a.out fifo.hepmc file2.hepmc out.yoda NaN.aida Rivet.yoda

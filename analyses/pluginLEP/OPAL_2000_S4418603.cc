@@ -9,24 +9,22 @@ namespace Rivet {
 
 
   /// @brief OPAL K0 fragmentation function paper
+  ///
   /// @author Peter Richardson
   class OPAL_2000_S4418603 : public Analysis {
   public:
 
-    /// Constructor
-    OPAL_2000_S4418603()
-      : Analysis("OPAL_2000_S4418603")
-    {}
+    RIVET_DEFAULT_ANALYSIS_CTOR(OPAL_2000_S4418603);
 
 
     /// @name Analysis methods
-    //@{
+    /// @{
 
     void init() {
       declare(Beam(), "Beams");
       declare(ChargedFinalState(), "FS");
       declare(UnstableParticles(), "UFS");
-      _histXeK0   = bookHisto1D( 3, 1, 1);
+      book(_histXeK0   , 3, 1, 1);
     }
 
 
@@ -42,9 +40,6 @@ namespace Rivet {
       }
       MSG_DEBUG("Passed leptonic event cut");
 
-      // Get event weight for histo filling
-      const double weight = e.weight();
-
       // Get beams and average beam momentum
       const ParticlePair& beams = apply<Beam>(e, "Beams").beams();
       const double meanBeamMom = ( beams.first.p3().mod() +
@@ -52,13 +47,13 @@ namespace Rivet {
       MSG_DEBUG("Avg beam momentum = " << meanBeamMom);
 
       // Final state of unstable particles to get particle spectra
-      const UnstableParticles& ufs = apply<UnstableFinalState>(e, "UFS");
+      const UnstableParticles& ufs = apply<UnstableParticles>(e, "UFS");
 
-      foreach (const Particle& p, ufs.particles()) {
+      for (const Particle& p : ufs.particles()) {
         const int id = p.abspid();
         if (id == PID::K0S || id == PID::K0L) {
           double xE = p.E()/meanBeamMom;
-          _histXeK0->fill(xE, weight);
+          _histXeK0->fill(xE);
         }
       }
     }
@@ -69,18 +64,18 @@ namespace Rivet {
       scale(_histXeK0, 1./sumOfWeights());
     }
 
-    //@}
+    /// @}
 
 
   private:
 
-      Histo1DPtr _histXeK0;
-    //@}
+    /// Histogram
+    Histo1DPtr _histXeK0;
 
   };
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(OPAL_2000_S4418603);
+
+  RIVET_DECLARE_ALIASED_PLUGIN(OPAL_2000_S4418603, OPAL_2000_I529898);
 
 }

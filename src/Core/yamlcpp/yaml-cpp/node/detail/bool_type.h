@@ -18,9 +18,9 @@ typedef void (*unspecified_bool_type)(unspecified_bool::NOT_ALLOWED*);
 }
 
 #define YAML_CPP_OPERATOR_BOOL()                                            \
-  operator RIVET_YAML::detail::unspecified_bool_type() const {                    \
+  operator RIVET_RIVET_YAML::detail::unspecified_bool_type() const {                    \
     return this->operator!() ? 0                                            \
-                             : &RIVET_YAML::detail::unspecified_bool::true_value; \
+                             : &RIVET_RIVET_YAML::detail::unspecified_bool::true_value; \
   }
 
 #endif  // NODE_DETAIL_BOOL_TYPE_H_62B23520_7C8E_11DE_8A39_0800200C9A66

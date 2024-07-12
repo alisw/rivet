@@ -1,0 +1,96 @@
+#! /usr/bin/env python3
+
+"""
+This script downloads the ins.json paper information for any papers which are
+implemented as analyses in Rivet and aren't already downloaded. In addition
+if the experiment for the paper is not set by inspire it is set using the
+analysis name.
+
+We need this as many older papers don't have experiment info in Inspire
+"""
+
+from __future__ import print_function
+import time
+import argparse
+ap = argparse.ArgumentParser(usage=__doc__)
+args = ap.parse_args()
+
+
+# ## Add info file locations
+# import os
+# from glob import glob
+# dirpatt = os.path.join(os.getcwd(), "..", "..", "analyses", "plugin*")
+# for d in glob(dirpatt):
+#     rivet.addAnalysisDataPath(os.path.abspath(d))
+
+## Rivet analyses/InspireIDs to cross-reference
+import rivet
+anas = {}
+for aname in rivet.AnalysisLoader.analysisNames():
+    ana = rivet.AnalysisLoader.getAnalysis(aname)
+    # TODO: all anas *should* have an Inspire ID...
+    # anas.setdefault(int(ana.inspireId()), []).append(ana.name())
+    anas.setdefault(ana.inspireId(), []).append(ana.name())
+del anas[""]
+# print(anas.keys())
+
+
+## Read data from JSON files
+import json
+from glob import glob
+records = {}
+for jsonfile in glob("*.rhd.json"):
+    if "inspire-missing" in jsonfile:
+        continue
+    with open(jsonfile) as jf:
+        recs = json.load(jf)
+        records.update(recs)
+records = {int(k) : v for k, v in records.items()}
+print("Read total of {} records".format(len(records)))
+
+## Loop over all analyses, getting individual inspire records
+insrecs = []
+for ins, rec in anas.items():
+    ## Get StringIO portably
+    try:
+        from io import StringIO
+    except ImportError:
+        from StringIO import StringIO
+    ## Get urllib portably
+    try:
+        import urllib.request as urlreq
+    except ImportError:
+        import urllib2 as urlreq
+
+    ## Skip if we have the paper or from PDG
+    if int(ins) in records:
+        continue
+    if "PDG" in rec[0]:
+        continue
+    time.sleep(.5)
+    print("Trying to retrieve missing Inspire record with ID: {}".format(ins))
+
+    ## Use the Inspire API, searching only for the Inspire key
+    url = "https://inspirehep.net/api/literature?size=1"
+    url += "&q=control_number:{}".format(ins)
+    url += "&fields=titles,publication_info,dois,texkeys,keywords,arxiv_preprints,collaborations,report_numbers,external_system_identifiers,imprints,preprint_date,arxiv_eprints"
+    response = urlreq.urlopen(url, timeout=120)
+
+    ## Parse the response and save the search-hit info
+    buf = StringIO(response.read().decode('utf-8'))
+    instree = json.load(buf)
+    insrec = instree["hits"].get("hits")
+    if insrec:
+        print("  ... record found")
+        insrecs += insrec
+    else:
+        print("  ... record NOT found")
+
+    # if len(insrecs) == 5:
+    #     break
+
+## Write the output in pseudo-Inspire JSON format
+out = {"hits" : {"hits" : insrecs}}
+# with open("inspire-missing.marc.xml", "w", encoding="utf-8") as xml:
+with open("inspire-missing.ins.json", "w") as jf:
+    json.dump(out, jf, sort_keys=True)

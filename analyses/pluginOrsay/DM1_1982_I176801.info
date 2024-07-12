@@ -1,0 +1,34 @@
+Name: DM1_1982_I176801
+Year: 1982
+Summary:  Cross section for  $e^+e^-\to K^0_SK^\pm\pi^\mp$ for energies from 1.4 to 2.1 GeV
+Experiment: DM1
+Collider: DCI
+InspireID: 176801
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Z.Phys. C52 (1991) 227-230, 1991 
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+  'Measurement of the cross section for  $e^+e^-\to$ ^0_SK^\pm\pi^\mp$
+    for energies from 1.4 to 2.`x GeV.'
+Keywords:
+BibKey: Mane:1982si
+BibTeX: '@article{Mane:1982si,
+      author         = "Mane, F. and Bisello, D. and Bizot, J. C. and Buon, J.
+                        and Cordier, A. and Delcourt, B.",
+      title          = "{Study of $e^+ e^- \to K^0_S K^\pm \pi^\mp$ in the
+                        1.4-{GeV} to 2.18-{GeV} Energy Range: A New Observation of
+                        an Isoscalar Vector Meson $\phi^\prime$ (1.65-{GeV})}",
+      journal        = "Phys. Lett.",
+      volume         = "112B",
+      year           = "1982",
+      pages          = "178-182",
+      doi            = "10.1016/0370-2693(82)90324-0",
+      reportNumber   = "LAL-82/02",
+      SLACcitation   = "%%CITATION = PHLTA,112B,178;%%"
+}'

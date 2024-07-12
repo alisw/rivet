@@ -1,0 +1,35 @@
+Name: CLEOC_2011_I875526
+Year: 2011
+Summary: $q^2$ spectra in semi-leptonic $D^+\to\eta$ decays
+Experiment: CLEOC
+Collider: CESR
+InspireID: 875526
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D84 (2011) 032001
+RunInfo: any process producing  D+ mesons
+Description:
+  'Measurement of the $q^2$ spectra for semi-leptonic $D^+\to\eta$ meson decays by CLEOC.'
+ValidationInfo:
+  'Herwig 7 events at the psi(3770), using EvtGen for the D decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Yelton:2010js
+BibTeX: '@article{Yelton:2010js,
+      author         = "Yelton, J. and others",
+      title          = "{Studies of $D^+ \to \eta^\prime, \eta, \phi} e^+ nu_e$}",
+      collaboration  = "CLEO",
+      journal        = "Phys. Rev.",
+      volume         = "D84",
+      year           = "2011",
+      pages          = "032001",
+      doi            = "10.1103/PhysRevD.84.032001",
+      eprint         = "1011.1195",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CLNS-10-2067, CLEO-10-4",
+      SLACcitation   = "%%CITATION = ARXIV:1011.1195;%%"
+}'

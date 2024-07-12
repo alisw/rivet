@@ -1,0 +1,14 @@
+Name: EXAMPLE_NTUPLE_CSV
+Summary: A demo to show how to write a simple CSV ntuple from Rivet
+Status: VALIDATED
+Authors:
+ - Andy Buckley <andy.buckley@glasgow.ac.uk>
+Description:
+  "This analysis is a demonstration of how to open an output text-file
+  stream in the initialisation step, and write entries to it from the
+  analysis observables for each event. The file automatically closes itself
+  on conclusion of the run. This code is intended as a starting point for
+  users' custom-written text-ntuple analyses. The CSVFILE analysis option
+  can be used to change the output filename from Rivet.csv."
+Options:
+ - CSVFILE=*

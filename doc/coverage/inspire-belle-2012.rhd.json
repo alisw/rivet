@@ -1,0 +1,260 @@
+{
+    "786236": [
+        "Measurement of Azimuthal Asymmetries in Inclusive Production of Hadron Pairs in e+e- Annihilation at s**(1/2) = 10.58-GeV", 
+        "Belle", 
+        "10.1103/PhysRevD.78.032011", 
+        null, 
+        "0805.2975", 
+        null, 
+        null, 
+        [
+            "BELLE-2008-14", 
+            "KEK-2008-8"
+        ]
+    ], 
+    "892990": [
+        "First observation of the $P$-wave spin-singlet bottomonium states $h_b(1P)$ and $h_b(2P)$", 
+        "Belle", 
+        "10.1103/PhysRevLett.108.032001", 
+        null, 
+        "1103.3419", 
+        null, 
+        null, 
+        []
+    ], 
+    "930416": [
+        "Search for CP Violation in $D^\\pm$ Meson Decays to $\\phi \\pi^\\pm$", 
+        "Belle", 
+        "10.1103/PhysRevLett.108.071801", 
+        null, 
+        "1110.0694", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2015-12", 
+            "KEK-PREPRINT-2011-19", 
+            "BELLE-PREPRINT-#-2011-15", 
+            "KEK-PREPRINT-#-2011-19"
+        ]
+    ], 
+    "931212": [
+        "Evidence for Direct CP Violation in $B^\\pm \\to \\eta h^\\pm$ and Observation of $B^0 \\to \\eta K^0$", 
+        "Belle", 
+        "10.1103/PhysRevLett.108.031801", 
+        null, 
+        "1110.2000", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2011-14", 
+            "KEK-PREPRINT-2011-16"
+        ]
+    ], 
+    "939487": [
+        "Observation of two charged bottomonium-like resonances in Y(5S) decays", 
+        "Belle", 
+        "10.1103/PhysRevLett.108.122001", 
+        null, 
+        "1110.2251", 
+        null, 
+        null, 
+        []
+    ], 
+    "1084854": [
+        "Measurement of the CP-violation Parameter sin2$\\phi_1$ with a New Tagging Method at the $\\Upsilon(5S)$ Resonance", 
+        "Belle", 
+        "10.1103/PhysRevLett.108.171801", 
+        null, 
+        "1201.3502", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2012-1", 
+            "KEK-PREPRINT-2011-23"
+        ]
+    ], 
+    "1085529": [
+        "Precise measurement of the CP violation parameter $\\sin2\\phi_1$ in $B^0\\to(c\\bar c)K^0$ decays", 
+        "Belle", 
+        "10.1103/PhysRevLett.108.171802", 
+        null, 
+        "1201.4643", 
+        null, 
+        null, 
+        []
+    ], 
+    "1086982": [
+        "First observation of $B_s^0\\to J/\\psi\\eta$ and $B_s^0\\to J/\\psi\\eta'$", 
+        "Belle", 
+        "10.1103/PhysRevLett.108.181808", 
+        null, 
+        "1202.0103", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2012-4", 
+            "KEK-PREPRINT-2011-26"
+        ]
+    ], 
+    "1090664": [
+        "Observation of new resonant structures in $\\gamma \\gamma \\to \\omega \\phi$, $\\phi \\phi$ and $\\omega \\omega$", 
+        "Belle", 
+        "10.1103/PhysRevLett.108.232001", 
+        null, 
+        "1202.5632", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2012-5", 
+            "KEK-PREPRINT-2011-27"
+        ]
+    ], 
+    "1095371": [
+        "Evidence for CP Violation in the Decay $D^+\\rightarrow K^0_S\\pi^+$", 
+        "Belle", 
+        "10.1103/PhysRevLett.109.021601", 
+        null, 
+        "1203.6409", 
+        null, 
+        null, 
+        []
+    ], 
+    "1095407": [
+        "Measurements of Branching Fractions and Time-dependent CP Violating Asymmetries in $B^{0} \\to D^{(*)\\pm}D^{\\mp}$ Decays", 
+        "Belle", 
+        "10.1103/PhysRevD.85.091106", 
+        null, 
+        "1203.6647", 
+        null, 
+        null, 
+        []
+    ], 
+    "1112901": [
+        "First Measurement of $\\phi_3$ with a Model-independent Dalitz Plot Analysis of $B^{\\pm} \\to DK, D \\to K^o_s\\pi\\pi$ Decay", 
+        "Belle", 
+        "10.1103/PhysRevD.85.112014", 
+        null, 
+        "1204.6561", 
+        null, 
+        null, 
+        []
+    ], 
+    "1113314": [
+        "Search for the decay $B^0\\to DK^{*0}$ followed by $D\\to K^-\\pi^+$", 
+        "Belle", 
+        "10.1103/PhysRevD.86.011101", 
+        null, 
+        "1205.0422", 
+        null, 
+        null, 
+        []
+    ], 
+    "1113755": [
+        "First observation of exclusive $\\Upsilon(1S)$ and $\\Upsilon(2S)$ decays into light hadrons", 
+        "Belle", 
+        "10.1103/PhysRevD.86.031102", 
+        null, 
+        "1205.1246", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2012-14", 
+            "KEK-PREPRINT-2012-6"
+        ]
+    ], 
+    "1114749": [
+        "Measurement of $\\gamma \\gamma^* \\to \\pi^0$ transition form factor at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.86.092007", 
+        null, 
+        "1205.3249", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2012-16", 
+            "KEK-PREPRINT-2012-8"
+        ]
+    ], 
+    "1116254": [
+        "Measurement of Branching Fraction and First Evidence of CP Violation in $B^0 \\to a_1^{\\pm}(1260) \\pi^\\mp$ Decays", 
+        "Belle", 
+        "10.1103/PhysRevD.86.092012", 
+        null, 
+        "1205.5957", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2012-15", 
+            "KEK-PREPRINT-2012-7"
+        ]
+    ], 
+    "1116415": [
+        "Evidence for the $\\eta_b(2S)$ and observation of $h_b(1P) \\to \\eta_b(1S) \\gamma$ and $h_b(2P) \\to \\eta_b(1S) \\gamma$", 
+        "Belle", 
+        "10.1103/PhysRevLett.109.232002", 
+        null, 
+        "1205.6351", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2012-17", 
+            "KEK-PREPRINT-2012-12"
+        ]
+    ], 
+    "1119057": [
+        "Search for $B \\to \\phi \\pi$ decays", 
+        "Belle", 
+        "10.1103/PhysRevD.86.031101", 
+        null, 
+        "1206.4760", 
+        null, 
+        null, 
+        []
+    ], 
+    "1119397": [
+        "First study of $\\eta_c$, $\\eta(1760)$ and $X(1835)$ production via $\\eta^\\prime\\pi^+\\pi^-$ final states in two-photon collisions", 
+        "Belle", 
+        "10.1103/PhysRevD.86.052002", 
+        null, 
+        "1206.5087", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2010-17", 
+            "KEK-PREPRINT-2010-26"
+        ]
+    ], 
+    "1120010": [
+        "Search for $B^{0}$ decays to invisible final states", 
+        "Belle", 
+        "10.1103/PhysRevD.86.032002", 
+        null, 
+        "1206.5948", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2012-14", 
+            "BELLE-PREPRINT-2012-19"
+        ]
+    ], 
+    "1123656": [
+        "First observation of CP violation and improved measurement of the branching fraction and polarization of B0 -> D*+ D*- decays", 
+        "Belle", 
+        "10.1103/PhysRevD.86.071103", 
+        null, 
+        "1207.5611", 
+        null, 
+        null, 
+        []
+    ], 
+    "1123910": [
+        "Evidence for $B^-\\to D_s^+ K^- \\ell^-\\bar{\\nu}_\\ell$ and search for $B^-\\to D_s^{*+} K^- \\ell^-\\bar{\\nu}_\\ell$", 
+        "Belle", 
+        "10.1103/PhysRevD.86.072007", 
+        null, 
+        "1207.6244", 
+        null, 
+        null, 
+        []
+    ]
+}

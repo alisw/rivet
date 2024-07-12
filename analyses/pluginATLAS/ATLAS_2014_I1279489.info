@@ -5,9 +5,11 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1279489
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Kiran Joshi <kiran.joshi@cern.ch>
 References:
+ - ATLAS-STDM-2013-02
  - "JHEP 1404 (2014) 031"
  - "arXiv:1401.7610 [hep-ex]"
 RunInfo:
@@ -16,6 +18,7 @@ NumEvents: 10000000
 NeedCrossSection: no
 Beams: [p+, p+]
 Energies: [8000]
+Luminosity_fb: 20.3
 PtCuts: [55, 45]
 Description:
   'Measurements differential distributions for inclusive $Z$-boson-plus-dijet production are performed
@@ -37,7 +40,7 @@ BibTeX: '@article{Aad:2014dta,
       journal        = "JHEP",
       volume         = "1404",
       pages          = "031",
-      doi            = "10.1007/JHEP04%282014%29031, 10.1007/JHEP04(2014)031",
+      doi            = "10.1007/JHEP04(2014)031",
       year           = "2014",
       eprint         = "1401.7610",
       archivePrefix  = "arXiv",
@@ -45,3 +48,7 @@ BibTeX: '@article{Aad:2014dta,
       reportNumber   = "CERN-PH-EP-2013-227",
       SLACcitation   = "%%CITATION = ARXIV:1401.7610;%%",
 }'
+
+ReleaseTests:
+ - $A LHC-8-Z-Mass3-mu
+

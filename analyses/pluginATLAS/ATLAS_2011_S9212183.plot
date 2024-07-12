@@ -11,13 +11,13 @@ YLabel=Number of Events
 LogY=0
 # END PLOT
 # BEGIN PLOT /ATLAS_2011_S9212183/count_4j5
-Title=Number of events in the 4 jet, $m_{\rm eff}>500$\,GeV signal region
+Title=Number of events in the 4 jet, $m_\mathrm{eff}>500$$\,$GeV signal region
 XLabel=
 YLabel=Number of Events
 LogY=0
 # END PLOT
 # BEGIN PLOT /ATLAS_2011_S9212183/count_4j10
-Title=Number of events in the 4 jet, $m_{\rm eff}>1000$\,GeV signal region
+Title=Number of events in the 4 jet, $m_\mathrm{eff}>1000$$\,$GeV signal region
 XLabel=
 YLabel=Number of Events
 LogY=0
@@ -54,7 +54,7 @@ LogY=1
 # END PLOT
 # BEGIN PLOT /ATLAS_2011_S9212183/Et_miss
 Title=Missing transverse Energy
-XLabel=$E_{\mathrm{T}}^{\rm miss}$ [GeV]
+XLabel=$E_{\mathrm{T}}^\mathrm{miss}$ [GeV]
 YLabel=$\mathrm{Events} \mathrm{GeV}$
 LogY=1
 # END PLOT

@@ -1,0 +1,171 @@
+{
+    "294934": [
+        "ALEPH: A detector for electron-positron annnihilations at LEP", 
+        "ALEPH", 
+        "10.1016/0168-9002(90)91831-U", 
+        "205899", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-90-25"
+        ]
+    ], 
+    "301661": [
+        "Measurement of the strong coupling constant alpha-s from global event shape variables of hadronic Z decays", 
+        "ALEPH", 
+        "10.1016/0370-2693(91)90278-X", 
+        "214545", 
+        null, 
+        "ins301661", 
+        null, 
+        [
+            "CERN-PPE-90-176"
+        ]
+    ], 
+    "302769": [
+        "Measurement of B - anti-B mixing at the Z", 
+        "ALEPH", 
+        "10.1016/0370-2693(91)91239-R", 
+        "215180", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-90-194"
+        ]
+    ], 
+    "302770": [
+        "Measurement of the B hadron lifetime", 
+        "ALEPH", 
+        "10.1016/0370-2693(91)91927-N", 
+        "215179", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-90-195"
+        ]
+    ], 
+    "302771": [
+        "Measurement of alpha-s from the structure of particle clusters produced in hadronic Z decays", 
+        "ALEPH", 
+        "10.1016/0370-2693(91)91926-M", 
+        "215729", 
+        null, 
+        "ins302771", 
+        null, 
+        [
+            "CERN-PPE-90-196"
+        ]
+    ], 
+    "314476": [
+        "Measurement of charge asymmetry in hadronic Z decays", 
+        "ALEPH", 
+        "10.1016/0370-2693(91)90844-G", 
+        "217228", 
+        null, 
+        "ins314476", 
+        null, 
+        [
+            "CERN-PPE-91-27", 
+            "FSU-SCRI-91-45"
+        ]
+    ], 
+    "314875": [
+        "Search for a new weakly interacting particle", 
+        "ALEPH", 
+        "10.1016/0370-2693(91)90657-C", 
+        "218223", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-91-26"
+        ]
+    ], 
+    "315054": [
+        "Charged particle pair production associated with a lepton pair in Z decays: Indication of an excess in the tau channel", 
+        "ALEPH", 
+        "10.1016/0370-2693(91)91716-9", 
+        "219002", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-91-65"
+        ]
+    ], 
+    "316148": [
+        "Measurement of the forward - backward asymmetry in Z ---> b anti-b and Z ---> c anti-c", 
+        "ALEPH", 
+        "10.1016/0370-2693(91)90607-R", 
+        "219301", 
+        null, 
+        "ins316148", 
+        null, 
+        [
+            "CERN-PPE-91-71"
+        ]
+    ], 
+    "316780": [
+        "Measurement of isolated photon production in hadronic Z decays", 
+        "ALEPH", 
+        "10.1016/0370-2693(91)90380-9", 
+        "220577", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-91-89"
+        ]
+    ], 
+    "316781": [
+        "Measurement of the polarization of tau leptons produced in Z decays", 
+        "ALEPH", 
+        "10.1016/0370-2693(91)90079-6", 
+        "221611", 
+        null, 
+        "ins316781", 
+        null, 
+        [
+            "CERN-PPE-91-94"
+        ]
+    ], 
+    "317492": [
+        "Search for the neutral Higgs bosons of the MSSM and other two doublet models", 
+        "ALEPH", 
+        "10.1016/0370-2693(91)90083-3", 
+        "222509", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-91-111"
+        ]
+    ], 
+    "318149": [
+        "Production and decay of charmed mesons at the Z resonance", 
+        "ALEPH", 
+        "10.1016/0370-2693(91)90769-M", 
+        "222495", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-91-114"
+        ]
+    ], 
+    "319520": [
+        "Measurement of the charged particle multiplicity distribution in hadronic Z decays", 
+        "ALEPH", 
+        "10.1016/0370-2693(91)90575-B", 
+        "226226", 
+        null, 
+        "ins319520", 
+        null, 
+        [
+            "CERN-PPE-91-159"
+        ]
+    ]
+}

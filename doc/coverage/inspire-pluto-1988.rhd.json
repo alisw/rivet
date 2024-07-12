@@ -1,0 +1,26 @@
+{
+    "250982": [
+        "Tensor Meson Excitation in the Reaction $\\gamma \\gamma \\to K^0_S K^0_S$", 
+        "PLUTO", 
+        "10.1007/BF01578125", 
+        null, 
+        null, 
+        "ins250982", 
+        null, 
+        [
+            "DESY-87-104"
+        ]
+    ], 
+    "252632": [
+        "Measurement and Analysis of the Reaction $\\gamma \\gamma \\to \\pi^+ \\pi^- \\pi^+ \\pi^-$", 
+        "PLUTO", 
+        "10.1007/BF01624356", 
+        null, 
+        null, 
+        "ins252632", 
+        null, 
+        [
+            "DESY-87-173"
+        ]
+    ]
+}

@@ -1,0 +1,50 @@
+{
+    "271285": [
+        "The $J/\\psi \\to$ Vector + Pseudoscalar Decays and the $\\eta$, $\\eta^\\prime$ Quark Content", 
+        "DM2", 
+        "10.1103/PhysRevD.41.1389", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "LAL-88-25"
+        ]
+    ], 
+    "286432": [
+        "Radiative Decay of $J/\\psi$ Into $\\eta(1430)$ and Nearby States", 
+        "DM2", 
+        "10.1103/PhysRevD.42.10", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "LAL-89-59"
+        ]
+    ], 
+    "295505": [
+        "Study of the $J/\\psi \\to \\gamma \\phi \\phi$ Decay", 
+        "DM2", 
+        "10.1016/0370-2693(90)91881-B", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "LAL-90-12"
+        ]
+    ], 
+    "297706": [
+        "Baryon pair production in e+ e- annihilation at S**(1/2) = 2.4-GeV", 
+        "DM2", 
+        "10.1007/BF01565602", 
+        null, 
+        null, 
+        "ins297706", 
+        null, 
+        [
+            "LAL-90-13"
+        ]
+    ]
+}

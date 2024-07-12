@@ -12,7 +12,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(OPAL_2003_I599181);
+    RIVET_DEFAULT_ANALYSIS_CTOR(OPAL_2003_I599181);
 
 
     /// @name Analysis methods
@@ -26,8 +26,8 @@ namespace Rivet {
       declare(UnstableParticles(), "UFS");
 
       // Book histograms
-      _histXbweak     = bookHisto1D(1, 1, 1);
-      _histMeanXbweak = bookProfile1D(2, 1, 1);
+      book(_histXbweak     ,1, 1, 1);
+      book(_histMeanXbweak ,2, 1, 1);
 
     }
 
@@ -35,25 +35,21 @@ namespace Rivet {
     /// Perform the per-event analysis
     void analyze(const Event& event) {
 
-
-      // Get event weight for histo filling
-      const double weight = event.weight();
-
       // Get beams and average beam momentum
       const ParticlePair& beams = apply<Beam>(event, "Beams").beams();
       const double meanBeamMom = ( beams.first.p3().mod() +beams.second.p3().mod() ) / 2.0;
       MSG_DEBUG("Avg beam momentum = " << meanBeamMom);
 
-      const UnstableParticles& ufs = apply<UnstableFinalState>(event, "UFS");
+      const UnstableParticles& ufs = apply<UnstableParticles>(event, "UFS");
       // Get Bottom hadrons
       const Particles bhads = filter_select(ufs.particles(), isBottomHadron);
 
       for (const Particle& bhad : bhads) {
         // Check for weak decay, i.e. no more bottom present in children
-        if (bhad.children(lastParticleWith(hasBottom)).empty()) {
+        if (bhad.isLastWith(hasBottom)) {
           const double xp = bhad.E()/meanBeamMom;
-          _histXbweak->fill(xp, weight);
-          _histMeanXbweak->fill(_histMeanXbweak->bin(0).xMid(), xp, weight);
+          _histXbweak->fill(xp);
+          _histMeanXbweak->fill(_histMeanXbweak->bin(0).xMid(), xp);
         }
       }
     }
@@ -77,7 +73,7 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(OPAL_2003_I599181);
+  RIVET_DECLARE_PLUGIN(OPAL_2003_I599181);
 
 
 }

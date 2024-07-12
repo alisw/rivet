@@ -49,37 +49,37 @@ LogY=0
 # BEGIN PLOT /ATLAS_2012_I943401/d01-x01-y01
 Title=$m_{\ell\ell}$ for same-sign events (data)
 XLabel=$m_{\ell\ell}$ [GeV]
-YLabel=$\mathrm{Events}/20$\,GeV
+YLabel=$\mathrm{Events}/20$$\,$GeV
 LogY=1
 # END PLOT
 # BEGIN PLOT /ATLAS_2012_I943401/d01-x01-y02
 Title=$m_{\ell\ell}$ for same-sign events (back)
 XLabel=$m_{\ell\ell}$ [GeV]
-YLabel=$\mathrm{Events}/20$\,GeV
+YLabel=$\mathrm{Events}/20$$\,$GeV
 LogY=1
 # END PLOT
 # BEGIN PLOT /ATLAS_2012_I943401/d02-x01-y01
 Title=Missing Transverse Energy for same-sign events (data)
-XLabel=$E^{\rm miss}_{\mathrm{T}}$ [GeV]
-YLabel=$\mathrm{Events}/20$\,GeV
+XLabel=$E^\mathrm{miss}_{\mathrm{T}}$ [GeV]
+YLabel=$\mathrm{Events}/20$$\,$GeV
 LogY=1
 # END PLOT
 # BEGIN PLOT /ATLAS_2012_I943401/d02-x01-y02
 Title=Missing Transverse Energy for same-sign events (back)
-XLabel=$E^{\rm miss}_{\mathrm{T}}$ [GeV]
-YLabel=$\mathrm{Events}/20$\,GeV
+XLabel=$E^\mathrm{miss}_{\mathrm{T}}$ [GeV]
+YLabel=$\mathrm{Events}/20$$\,$GeV
 LogY=1
 # END PLOT
 # BEGIN PLOT /ATLAS_2012_I943401/d03-x01-y01
 Title=$m_{\ell\ell}$ for same-sign events with 2 jets (data)
 XLabel=$m_{\ell\ell}$ [GeV]
-YLabel=$\mathrm{Events}/50$\,GeV
+YLabel=$\mathrm{Events}/50$$\,$GeV
 LogY=1
 # END PLOT
 # BEGIN PLOT /ATLAS_2012_I943401/d03-x01-y02
 Title=$m_{\ell\ell}$ for same-sign events with 2 jets (back)
 XLabel=$m_{\ell\ell}$ [GeV]
-YLabel=$\mathrm{Events}/50$\,GeV
+YLabel=$\mathrm{Events}/50$$\,$GeV
 LogY=1
 # END PLOT
 # BEGIN PLOT /ATLAS_2012_I943401/d05-x01-y01
@@ -145,49 +145,49 @@ LogY=1
 # BEGIN PLOT /ATLAS_2012_I943401/d10-x01-y01
 Title=$m_{\ell\ell}$ for opposite-sign events (data)
 XLabel=$m_{\ell\ell}$ [GeV]
-YLabel=$\mathrm{Events}/10$\,GeV
+YLabel=$\mathrm{Events}/10$$\,$GeV
 LogY=1
 # END PLOT
 # BEGIN PLOT /ATLAS_2012_I943401/d10-x01-y02
 Title=$m_{\ell\ell}$ for opposite-sign events (back)
 XLabel=$m_{\ell\ell}$ [GeV]
-YLabel=$\mathrm{Events}/10$\,GeV
+YLabel=$\mathrm{Events}/10$$\,$GeV
 LogY=1
 # END PLOT
 # BEGIN PLOT /ATLAS_2012_I943401/d11-x01-y01
 Title=Missing Transverse Energy for opposite-sign events (data)
-XLabel=$E^{\rm miss}_{\mathrm{T}}$ [GeV]
-YLabel=$\mathrm{Events}/10$\,GeV
+XLabel=$E^\mathrm{miss}_{\mathrm{T}}$ [GeV]
+YLabel=$\mathrm{Events}/10$$\,$GeV
 LogY=1
 # END PLOT
 # BEGIN PLOT /ATLAS_2012_I943401/d11-x01-y02
 Title=Missing Transverse Energy for opposite-sign events (back)
-XLabel=$E^{\rm miss}_{\mathrm{T}}$ [GeV]
-YLabel=$\mathrm{Events}/10$\,GeV
+XLabel=$E^\mathrm{miss}_{\mathrm{T}}$ [GeV]
+YLabel=$\mathrm{Events}/10$$\,$GeV
 LogY=1
 # END PLOT
 # BEGIN PLOT /ATLAS_2012_I943401/d12-x01-y01
 Title=Missing Transverse Energy for opposite-sign events with 3 jets (data)
-XLabel=$E^{\rm miss}_{\mathrm{T}}$ [GeV]
-YLabel=$\mathrm{Events}/10$\,GeV
+XLabel=$E^\mathrm{miss}_{\mathrm{T}}$ [GeV]
+YLabel=$\mathrm{Events}/10$$\,$GeV
 LogY=1
 # END PLOT
 # BEGIN PLOT /ATLAS_2012_I943401/d12-x01-y02
 Title=Missing Transverse Energy for opposite-sign events  with 3 jets (back)
-XLabel=$E^{\rm miss}_{\mathrm{T}}$ [GeV]
-YLabel=$\mathrm{Events}/10$\,GeV
+XLabel=$E^\mathrm{miss}_{\mathrm{T}}$ [GeV]
+YLabel=$\mathrm{Events}/10$$\,$GeV
 LogY=1
 # END PLOT
 # BEGIN PLOT /ATLAS_2012_I943401/d13-x01-y01
 Title=Missing Transverse Energy for opposite-sign events with 4 jets (data)
-XLabel=$E^{\rm miss}_{\mathrm{T}}$ [GeV]
-YLabel=$\mathrm{Events}/10$\,GeV
+XLabel=$E^\mathrm{miss}_{\mathrm{T}}$ [GeV]
+YLabel=$\mathrm{Events}/10$$\,$GeV
 LogY=1
 # END PLOT
 # BEGIN PLOT /ATLAS_2012_I943401/d13-x01-y02
 Title=Missing Transverse Energy for opposite-sign events  with 4 jets (back)
-XLabel=$E^{\rm miss}_{\mathrm{T}}$ [GeV]
-YLabel=$\mathrm{Events}/10$\,GeV
+XLabel=$E^\mathrm{miss}_{\mathrm{T}}$ [GeV]
+YLabel=$\mathrm{Events}/10$$\,$GeV
 LogY=1
 # END PLOT
 # BEGIN PLOT /ATLAS_2012_I943401/d14-x01-y01

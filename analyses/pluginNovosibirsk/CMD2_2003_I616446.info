@@ -1,0 +1,34 @@
+Name: CMD2_2003_I616446
+Year: 2003
+Summary: Cross section for $e^+e^-\to\omega\pi^0\to\pi^0\pi^0\gamma$ between 0.92 and 1.38 GeV
+Experiment: CMD2
+Collider:  VEPP-2M
+InspireID: 616446
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B562 (2003) 173-181, 2003
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+  'Measurement of the cross section for $e^+e^-\to\omega\pi^0\to\pi^0\pi^0\gamma$ at energies 0.92 and 1.38 GeV.'
+Keywords:
+BibKey: Akhmetshin:2003ag
+BibTeX: '@article{Akhmetshin:2003ag,
+      author         = "Akhmetshin, R. R. and others",
+      title          = "{Study of the process e+ e- ---&gt; omega pi0 ---&gt; pi0 pi0
+                        gamma in c.m. energy range 920-MeV - 1380-MeV at CMD-2}",
+      collaboration  = "CMD-2",
+      journal        = "Phys. Lett.",
+      volume         = "B562",
+      year           = "2003",
+      pages          = "173-181",
+      doi            = "10.1016/S0370-2693(03)00595-1",
+      eprint         = "hep-ex/0304009",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = HEP-EX/0304009;%%"
+}'

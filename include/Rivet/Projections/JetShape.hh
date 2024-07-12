@@ -12,8 +12,7 @@
 namespace Rivet {
 
 
-  ///*
-  /// @brief Calculate the jet shape.
+  /// @brief Calculate transverse jet profiles
   ///
   /// Calculate the differential and integral jet shapes in \f$P_{\perp}\f$ for a given
   /// set of jets. This particular jet shape projection calculates jet shapes relative
@@ -46,25 +45,25 @@ namespace Rivet {
   public:
 
     /// @name Constructors etc.
-    //@{
+    /// @{
 
     /// Constructor from histo range and number of bins.
     JetShape(const JetAlg& jetalg,
              double rmin, double rmax, size_t nbins,
-             double ptmin=0, double ptmax=MAXDOUBLE,
-             double absrapmin=-MAXDOUBLE, double absrapmax=-MAXDOUBLE,
+             double ptmin=0, double ptmax=DBL_MAX,
+             double absrapmin=-DBL_MAX, double absrapmax=-DBL_MAX,
              RapScheme rapscheme=RAPIDITY);
 
     /// Constructor from vector of bin edges.
     JetShape(const JetAlg& jetalg, vector<double> binedges,
-             double ptmin=0, double ptmax=MAXDOUBLE,
-             double absrapmin=-MAXDOUBLE, double absrapmax=-MAXDOUBLE,
+             double ptmin=0, double ptmax=DBL_MAX,
+             double absrapmin=-DBL_MAX, double absrapmax=-DBL_MAX,
              RapScheme rapscheme=RAPIDITY);
 
     /// Clone on the heap.
     DEFAULT_RIVET_PROJ_CLONE(JetShape);
 
-    //@}
+    /// @}
 
 
     /// Reset projection between events.
@@ -123,7 +122,7 @@ namespace Rivet {
     /// Central \f$ r \f$ value for bin @a rbin.
     double rBinMid(size_t rbin) const {
       assert(inRange(rbin, 0u, numBins()));
-      //cout << _binedges << endl;
+      //cout << _binedges << '\n';
       return (_binedges[rbin] + _binedges[rbin+1])/2.0;
     }
 
@@ -160,13 +159,13 @@ namespace Rivet {
     void project(const Event& e);
 
     /// Compare projections.
-    int compare(const Projection& p) const;
+    CmpState compare(const Projection& p) const;
 
 
-  private:
+  protected:
 
-    /// @name Jet shape parameters
-    //@{
+    /// @name Jet-shape parameters
+    /// @{
 
     /// Vector of radius bin edges
     vector<double> _binedges;
@@ -180,16 +179,16 @@ namespace Rivet {
     /// Rapidity scheme
     RapScheme _rapscheme;
 
-    //@}
+    /// @}
 
 
     /// @name The projected jet shapes
-    //@{
+    /// @{
 
     /// Jet shape histo -- first index is jet number, second is r bin
     vector< vector<double> > _diffjetshapes;
 
-    //@}
+    /// @}
 
   };
 

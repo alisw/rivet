@@ -1,0 +1,38 @@
+{
+    "533573": [
+        "Measurement of A(c) with charmed mesons at SLD", 
+        "SLD", 
+        "10.1103/PhysRevD.63.032005", 
+        null, 
+        "hep-ex/0009035", 
+        "ins533573", 
+        null, 
+        [
+            "SLAC-PUB-8447"
+        ]
+    ], 
+    "534735": [
+        "An Improved direct measurement of leptonic coupling asymmetries with polarized Z bosons", 
+        "SLD", 
+        "10.1103/PhysRevLett.86.1162", 
+        null, 
+        "hep-ex/0010015", 
+        "ins534735", 
+        null, 
+        [
+            "SLAC-PUB-8618"
+        ]
+    ], 
+    "552756": [
+        "Improved measurement of the probability for gluon splitting into b anti-b in Z0 decays", 
+        "SLD", 
+        "10.1016/S0370-2693(01)00367-7", 
+        null, 
+        "hep-ex/0102002", 
+        "ins552756", 
+        null, 
+        [
+            "SLAC-PUB-8737"
+        ]
+    ]
+}

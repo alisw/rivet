@@ -10,7 +10,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(ALEPH_2014_I1267648);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ALEPH_2014_I1267648);
 
 
     /// @name Analysis methods
@@ -23,18 +23,18 @@ namespace Rivet {
       declare(UnstableParticles(), "UFS");
 
       // Book histograms
-      _h_pip0  = bookHisto1D(1, 1, 1);
-      _h_pi2p0 = bookHisto1D(2, 1, 1);
-      _h_pi3p0 = bookHisto1D(3, 1, 1);
-      _h_3pi   = bookHisto1D(4, 1, 1);
-      _h_3pip0 = bookHisto1D(5, 1, 1);
-
+      book(_h_pip0 , 1, 1, 1);
+      book(_h_pi2p0, 2, 1, 1);
+      book(_h_pi3p0, 3, 1, 1);
+      book(_h_3pi  , 4, 1, 1);
+      book(_h_3pip0, 5, 1, 1);
     }
+
 
     void findDecayProducts(const Particle &mother, unsigned int &nstable, unsigned int &npip,
                            unsigned int &npim, unsigned int &npi0, FourMomentum &ptot) {
       for (const Particle &p : mother.children()) {
-        int id = p.pdgId();
+        int id = p.pid();
         if (id == PID::KPLUS || id == PID::KMINUS) {
           ++nstable;
           ptot += p.momentum();
@@ -64,22 +64,21 @@ namespace Rivet {
     /// Perform the per-event analysis
     void analyze(const Event& event) {
 
-      const double weight = event.weight();
       // Loop over taus
       for (const Particle& tau : apply<UnstableParticles>(event, "UFS").particles(Cuts::abspid==PID::TAU)) {
         FourMomentum ptot;
         unsigned int nstable(0), npip(0), npim(0), npi0(0);
         findDecayProducts(tau,nstable,npip,npim,npi0,ptot);
         // tau -> pi pi0 nu_tau (both charges)
-        if (npim==1 && npi0==1 && nstable==3)  _h_pip0->fill(ptot.mass2(), weight);
+        if (npim==1 && npi0==1 && nstable==3)  _h_pip0->fill(ptot.mass2());
         // tau -> pi pi0 pi0 nu_tau (both charges)
-        else if (npim==1 && npi0==2 && nstable==4)  _h_pi2p0->fill(ptot.mass2(), weight);
+        else if (npim==1 && npi0==2 && nstable==4)  _h_pi2p0->fill(ptot.mass2());
         //    tau -> pi pi0 pi0 pi0         (3,1,1)
-        else if (npim==1 && npi0==3 && nstable==5)  _h_pi3p0->fill(ptot.mass2(), weight);
+        else if (npim==1 && npi0==3 && nstable==5)  _h_pi3p0->fill(ptot.mass2());
         //    tau -> 3 charged pions        (4,1,1)
-        else if (npim==2 && npip==1 && nstable==4)  _h_3pi->fill(ptot.mass2(), weight);
+        else if (npim==2 && npip==1 && nstable==4)  _h_3pi->fill(ptot.mass2());
         //    tau -> 3 charged pions + pi0  (5,1,1)
-        else if (npim==2 && npip==1 && npi0==1 && nstable==5)  _h_3pip0->fill(ptot.mass2(), weight);
+        else if (npim==2 && npip==1 && npi0==1 && nstable==5)  _h_3pip0->fill(ptot.mass2());
       }
     }
 
@@ -114,5 +113,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ALEPH_2014_I1267648);
+  RIVET_DECLARE_PLUGIN(ALEPH_2014_I1267648);
+
 }

@@ -1,6 +1,7 @@
 Name: MC_KTSPLITTINGS
 Summary: Monte Carlo validation observables for jet production
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Frank Siegert <frank.siegert@cern.ch>
 References:

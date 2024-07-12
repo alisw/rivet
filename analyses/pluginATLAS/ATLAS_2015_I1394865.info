@@ -4,10 +4,12 @@ Summary: Inclusive 4-lepton lineshape
 Experiment: ATLAS
 Collider: LHC
 InspireID: 1394865
-Status: VALIDATED
+Status: True
+Reentrant: false
 Authors:
  - Bing Li <bing.li@cern.ch>
 References:
+ - ATLAS-STDM-2014-15
  - Phys.Lett. B753 (2016) 552-572
  - doi:10.1016/j.physletb.2015.12.048
  - arXiv:1509.07844 [hep-ex]
@@ -29,7 +31,7 @@ Description:
    originating from $q\bar{q}$, $gg$, $qg$ initial states. A total of 476 signal candidate events are observed with a
    background expectation of 26.2$\pm$3.6 events, enabling the measurement of the integrated cross section and the
    differential cross section as a function of the invariant mass and transverse momentum of the four-lepton system.
-BibKey: Aad:2015rka,
+BibKey: Aad:2015rka
 BibTeX: '@article{Aad:2015rka,
       author         = "Aad, Georges and others",
       title          = "{Measurements of four-lepton production in $pp$

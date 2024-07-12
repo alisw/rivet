@@ -1,0 +1,34 @@
+Name: CLEO_1986_I220652
+Year: 1986
+Summary: Direct Photon Spectrum in $\Upsilon(1S)$ decays
+Experiment: CLEO
+Collider: CESR
+InspireID: 220652
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 56 (1986) 1222
+RunInfo: Any process producing Upsilon mesons, original e+e- collisions
+Description:
+  'Measurement of the direct photon spectrum in $\Upsilon(1S)$ decays by CLEO.
+   The spectrum was read from the figures in the paper as it was not included in the original HEPDATA entry and is not corrected for efficiency/resolution. The energy smearing given in the paper is applied to the photon energies'
+ValidationInfo:
+  'Herwig7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: CLEO:1985dec
+BibTeX: '@article{CLEO:1985dec,
+    author = "Csorna, S. E. and others",
+    collaboration = "CLEO",
+    title = "{A Measurement of the Direct Photon Spectrum From the $\Upsilon$ (1s)}",
+    reportNumber = "CLNS-85-713, CLEO-85-9",
+    doi = "10.1103/PhysRevLett.56.1222",
+    journal = "Phys. Rev. Lett.",
+    volume = "56",
+    pages = "1222",
+    year = "1986"
+}
+'

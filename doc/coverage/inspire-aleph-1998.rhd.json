@@ -1,0 +1,382 @@
+{
+    "428072": [
+        "Studies of quantum chromodynamics with the ALEPH detector", 
+        "ALEPH", 
+        "10.1016/S0370-1573(97)00045-8", 
+        "317674", 
+        null, 
+        "ins428072", 
+        null, 
+        [
+            "CERN-PPE-96-186"
+        ]
+    ], 
+    "444980": [
+        "Three-prong $\\tau$ decays with charged kaons", 
+        "ALEPH", 
+        "10.1007/BF01245798", 
+        "328731", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-069", 
+            "CERN-PPE-97-69", 
+            "FSU-SCRI-98-34"
+        ]
+    ], 
+    "448154": [
+        "Measurement of the $B$ baryon lifetime and branching fractions in $Z$ decays", 
+        "ALEPH", 
+        "10.1007/s100520050133", 
+        "333364", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-111", 
+            "FSU-SCRI-98-58"
+        ]
+    ], 
+    "449077": [
+        "Searches for supersymmetry in the photon(s) plus missing energy channels at s**(1/2) = 161-GeV and 172-GeV", 
+        "ALEPH", 
+        "10.1016/S0370-2693(97)01555-4", 
+        "334601", 
+        "hep-ex/9710009", 
+        "ins449077", 
+        null, 
+        [
+            "CERN-PPE-97-122", 
+            "FSU-SCRI-98-46"
+        ]
+    ], 
+    "449592": [
+        "Search for charged Higgs bosons in e+ e- collisions at center-of-mass energies from 130-GeV to 172-GeV", 
+        "ALEPH", 
+        "10.1016/S0370-2693(97)01490-1", 
+        "335699", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-129", 
+            "FSU-SCRI-98-45"
+        ]
+    ], 
+    "449730": [
+        "Searches for charginos and neutralinos in $e^{+} e^{-}$ collisions at $\\sqrt{s}$ = 161-GeV and 172-GeV", 
+        "ALEPH", 
+        "10.1007/s100520050151", 
+        "336318", 
+        "hep-ex/9710012", 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-128", 
+            "FSU-SCRI-98-67"
+        ]
+    ], 
+    "450758": [
+        "An Upper limit on the tau-neutrino mass from three-prong and five-prong tau decays", 
+        "ALEPH", 
+        "10.1007/s100520050149", 
+        "337738", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-138", 
+            "FSU-SCRI-98-66"
+        ]
+    ], 
+    "452178": [
+        "Search for supersymmetry with a dominant R-parity violating L L anti-E coupling in e+ e- collisions at center-of-mass energies of 130-GeV to 172-GeV", 
+        "ALEPH", 
+        "10.1007/s100520050218", 
+        "340750", 
+        "hep-ex/9712013", 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-151"
+        ]
+    ], 
+    "453112": [
+        "A Measurement of the semileptonic branching ratio BR(b-baryon ---> p lepton anti-neutrino X) and a study of inclusive pi+-, K+-, (p,anti-p) production in Z decays", 
+        "ALEPH", 
+        "10.1007/s100520050263", 
+        "342121", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-153"
+        ]
+    ], 
+    "453113": [
+        "Four jet final state production in e+ e- collisions at center-of-mass energies ranging from 130-GeV to 184-GeV", 
+        "ALEPH", 
+        "10.1016/S0370-2693(97)01596-7", 
+        "342234", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-156", 
+            "FSU-SCRI-98-47"
+        ]
+    ], 
+    "453114": [
+        "Study of $B^0_{s}$ oscillations and lifetime using fully reconstructed $D_s$ - decays", 
+        "ALEPH", 
+        "10.1007/s100520050215", 
+        "342545", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-157"
+        ]
+    ], 
+    "453756": [
+        "Measurement of the $W$ mass by direct reconstruction in $e^{+} e^{-}$ collisions at 172-GeV", 
+        "ALEPH", 
+        "10.1016/S0370-2693(98)00062-8", 
+        "346302", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-164", 
+            "FSU-SCRI-98-60"
+        ]
+    ], 
+    "453757": [
+        "Measurement of triple gauge boson couplings at 172-GeV", 
+        "ALEPH", 
+        "10.1016/S0370-2693(98)00061-6", 
+        "346303", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-166", 
+            "FSU-SCRI-98-59"
+        ]
+    ], 
+    "453758": [
+        "K0(S) production in tau decays", 
+        "ALEPH", 
+        "10.1007/s100529800879", 
+        "346304", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-167"
+        ]
+    ], 
+    "467093": [
+        "Measurement of the spectral functions of axial - vector hadronic tau decays and determination of alpha(S)(M**2(tau))", 
+        "ALEPH", 
+        "10.1007/s100520050217", 
+        "345764", 
+        null, 
+        "ins467093", 
+        null, 
+        [
+            "CERN-EP-98-012", 
+            "CERN-EP-98-12"
+        ]
+    ], 
+    "467226": [
+        "Resonant structure and flavor tagging in the B pi+- system using fully reconstructed B decays", 
+        "ALEPH", 
+        "10.1016/S0370-2693(98)00180-4", 
+        "345877", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-017", 
+            "CERN-EP-98-17"
+        ]
+    ], 
+    "467632": [
+        "Search for evidence of compositeness at LEP I", 
+        "ALEPH", 
+        "10.1007/s100520050229", 
+        "346643", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-022", 
+            "CERN-EP-98-22"
+        ]
+    ], 
+    "468273": [
+        "Observation of doubly charmed B decays at LEP", 
+        "ALEPH", 
+        "10.1007/s100520050216", 
+        "349036", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-037", 
+            "CERN-EP-98-37"
+        ]
+    ], 
+    "468671": [
+        "Determination of A-b(FB) using jet charge measurements in Z decays", 
+        "ALEPH", 
+        "10.1016/S0370-2693(98)00345-1", 
+        "350168", 
+        null, 
+        "ins468671", 
+        null, 
+        [
+            "CERN-EP-98-038", 
+            "CERN-EP-98-38"
+        ]
+    ], 
+    "468852": [
+        "Measurement of the fraction of hadronic Z decays into charm quark pairs", 
+        "ALEPH", 
+        "10.1007/s100520050228", 
+        "354088", 
+        null, 
+        "ins468852", 
+        null, 
+        [
+            "CERN-EP-98-035", 
+            "CERN-EP-98-35"
+        ]
+    ], 
+    "469365": [
+        "A Measurement of the inclusive b ---> s gamma branching ratio", 
+        "ALEPH", 
+        "10.1016/S0370-2693(98)00404-3", 
+        "352161", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-044", 
+            "CERN-EP-98-44"
+        ]
+    ], 
+    "470677": [
+        "Single photon and multiphoton production in $e^{+} e^{-}$ collisions at a center-of-mass energy of 183-GeV", 
+        "ALEPH", 
+        "10.1016/S0370-2693(98)00468-7", 
+        "354087", 
+        null, 
+        "ins470677", 
+        null, 
+        [
+            "CERN-EP-98-053", 
+            "CERN-EP-98-53"
+        ]
+    ], 
+    "471557": [
+        "Scalar quark searches in $e^{+} e^{-}$ collisions at $S^{(1/2)}$ = 181-GeV - 184-GeV", 
+        "ALEPH", 
+        "10.1016/S0370-2693(98)00662-5", 
+        "356331", 
+        "hep-ex/9810028", 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-076", 
+            "CERN-EP-98-76"
+        ]
+    ], 
+    "471558": [
+        "Search for sleptons in e+ e- collisions at center-of-mass energies up to 184-GeV", 
+        "ALEPH", 
+        "10.1016/S0370-2693(98)00690-X", 
+        "356332", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-077", 
+            "CERN-EP-98-77"
+        ]
+    ], 
+    "472954": [
+        "The Forward - backward asymmetry for charm quarks at the Z", 
+        "ALEPH", 
+        "10.1016/S0370-2693(98)00818-1", 
+        "359624", 
+        "hep-ex/9811015", 
+        "ins472954", 
+        null, 
+        [
+            "CERN-EP-98-101"
+        ]
+    ], 
+    "473411": [
+        "A Measurement of the gluon splitting rate into b anti-b pairs in hadronic Z decays", 
+        "ALEPH", 
+        "10.1016/S0370-2693(98)00850-8", 
+        "359635", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-103"
+        ]
+    ], 
+    "474011": [
+        "Study of D0 anti-D0 mixing and D0 doubly Cabibbo suppressed decays", 
+        "ALEPH", 
+        "10.1016/S0370-2693(98)00946-0", 
+        "361255", 
+        "hep-ex/9811021", 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-118"
+        ]
+    ], 
+    "477805": [
+        "Search for the standard model Higgs boson at the LEP-2 collider near S**(1/2) = 183-GeV", 
+        "ALEPH", 
+        "10.1016/S0370-2693(98)01239-8", 
+        "367644", 
+        "hep-ex/9811032", 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-144"
+        ]
+    ], 
+    "477806": [
+        "Searches for the neutral Higgs bosons of the MSSM in $e^+e^-$ collisions at center-of-mass energies of 181-GeV to 184-GeV", 
+        "ALEPH", 
+        "10.1016/S0370-2693(98)01240-4", 
+        "367649", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-145"
+        ]
+    ], 
+    "480439": [
+        "Measurement of triple gauge W W gamma couplings at LEP-2 using photonic events", 
+        "ALEPH", 
+        "10.1016/S0370-2693(98)01475-0", 
+        "372371", 
+        "hep-ex/9901030", 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-178"
+        ]
+    ]
+}

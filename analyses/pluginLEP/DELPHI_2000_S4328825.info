@@ -13,7 +13,7 @@ References:
  - hep-ex/0103022
  - DELPHI 2002-052 CONF 586
 RunInfo:
-  Hadronic Z decay events generated on the Z pole ($\sqrt{s} = 91.2$\;GeV)
+  Hadronic Z decay events generated on the Z pole ($\sqrt{s} = 91.2$~GeV)
 NumEvents: 1000000
 Beams: [e+, e-]
 Energies: [183,189,192,196,200,206]
@@ -37,3 +37,12 @@ BibTeX: '@Article{Abreu:2000nt,
      doi       = "10.1016/S0370-2693(00)00312-9",
      SLACcitation  = "%%CITATION = HEP-EX/0103022;%%"
 }'
+
+ReleaseTests:
+ - $A LEP-183
+ - $A-2 LEP-189
+ - $A-3 LEP-192
+ - $A-4 LEP-196
+ - $A-5 LEP-200
+ - $A-6 LEP-206
+

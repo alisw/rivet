@@ -1,0 +1,30 @@
+Name: TPC_1991_I316132
+Year: 1991
+Summary:  $D^{*+}$ polarization in $e^+e^-$ at 29  GeV
+Experiment: TPC
+Collider: PEP
+InspireID: 316132
+Authors:
+ - Peter Richardson <peter.richardson>@durham.ac.uk>
+References:
+ - Phys.Rev. D43 (1991) 29-33, 1991 
+RunInfo: continuum e+e- -> hadrons at 29 GeV
+NeedCrossSection: no
+Beams: [e+,e-]
+Energies: 29
+Description:
+  'Measurement of the polarization of $D^{*+}$ mesons in $e^+e^-$ collisions at 29 GeV by the TPC experiment'
+Keywords: []
+BibKey: Aihara:1991di
+BibTeX: '@article{Aihara:1991di,
+      author         = "Aihara, H. and others",
+      title          = "{Test of spin dependence in charm-quark fragmentation to
+                        $D^*$}",
+      collaboration  = "TPC/Two-Gamma",
+      journal        = "Phys. Rev.",
+      volume         = "D43",
+      year           = "1991",
+      pages          = "29-33",
+      doi            = "10.1103/PhysRevD.43.29",
+      SLACcitation   = "%%CITATION = PHRVA,D43,29;%%"
+}'

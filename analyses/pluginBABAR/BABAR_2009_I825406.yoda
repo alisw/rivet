@@ -1,0 +1,11 @@
+BEGIN YODA_SCATTER2D_V2 /REF/BABAR_2009_I825406/d01-x01-y01
+ErrorBreakdown: {0: {"": {up: 0.24166092276573181, dn: 0.24166092276573181}, stat: {up: 0.22, dn: 0.22}, syst: {up: 0.10000000000000001, dn: 0.10000000000000001}}}
+IsRef: 1
+Path: /REF/BABAR_2009_I825406/d01-x01-y01
+Title: 
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+5.279660e+00	5.000000e-01	5.000000e-01	3.100000e-01	2.416609e-01	2.416609e-01
+END YODA_SCATTER2D_V2
+

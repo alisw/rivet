@@ -1,0 +1,34 @@
+Name: DASP_1978_I129715
+Year: 1978
+Summary: Measurement of $R$ for energies between 3.603 and 5.195 GeV
+Experiment: DASP
+Collider: DORIS
+InspireID: 129715
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D76 (2007) 072008, 2007 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: no
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$ in $e^+e^-$ collisions by DASP for energies between 3.603 and 5.195 GeV.
+   The individual hadronic and muonic cross sections are also outputted to the yoda file
+   so that ratio $R$ can be recalculated if runs are combined.'
+Keywords: []
+BibKey: Brandelik:1978ei
+BibTeX: '@article{Brandelik:1978ei,
+      author         = "Brandelik, R. and others",
+      title          = "{Total Cross-section for Hadron Production by $e^+ e^-$
+                        Annihilation at Center-of-mass Energies Between 3.6-{GeV}
+                        and 5.2-{GeV}}",
+      collaboration  = "DASP",
+      journal        = "Phys. Lett.",
+      volume         = "76B",
+      year           = "1978",
+      pages          = "361",
+      doi            = "10.1016/0370-2693(78)90807-9",
+      reportNumber   = "DESY-78-18",
+      SLACcitation   = "%%CITATION = PHLTA,76B,361;%%"
+}'

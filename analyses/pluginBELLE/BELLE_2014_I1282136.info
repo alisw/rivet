@@ -1,0 +1,37 @@
+Name: BELLE_2014_I1282136
+Year: 2014
+Summary: Mass distributions in the decay $\tau^-\to\pi^-K^0_SK^0_S\pi^0$
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1282136
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 89 (2014) 7, 072009
+RunInfo: Any process producing tau leptons, originally e+e-
+Description:
+  'Measurements of mass distributions in $\tau^-\to\pi^-K^0_SK^0_S\pi^0$ decays.
+ The data were read from the plots in the paper and are not corrected, although the backgrounds given in the paper have been subtracted. The plots should therefore only be used for qualitative comparisons however the data is useful as there are not corrected distributions for this decay mode.'
+ValidationInfo:
+  'Herwig7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle:2014mfl
+BibTeX: '@article{Belle:2014mfl,
+    author = "Ryu, S. and others",
+    collaboration = "Belle",
+    title = "{Measurements of Branching Fractions of $\tau$ Lepton Decays with one or more $K^{0}_{S}$}",
+    eprint = "1402.5213",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevD.89.072009",
+    journal = "Phys. Rev. D",
+    volume = "89",
+    number = "7",
+    pages = "072009",
+    year = "2014"
+}
+'

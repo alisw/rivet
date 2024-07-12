@@ -1,0 +1,32 @@
+Name: MARKII_1985_I207785
+Year: 1985
+Summary: $K^0$ and $K^+$ production at 29 GeV
+Experiment: MARKII
+Collider: PEP
+InspireID: 207785
+Status: VALIDATED
+Authors:
+ - Peter Richardson <Peter.Richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 59 (1987) 2412, 1987.
+RunInfo: e+ e- to hadrons at 29 GeV
+Beams: [e+, e-]
+Energies: [29]
+Description:
+  'Rate and spectrum for  $K^0$ and $K^+$ production at 29 GeV measured by the MARKII collaboration.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Schellman:1984yz
+BibTeX: '@article{Schellman:1984yz,
+    author = "Schellman, H. and others",
+    title = "{Measurement of $K^\pm$ and $K^0$ Inclusive Rates in $e^+ e^-$ Annihilation at 29-{GeV}}",
+    reportNumber = "SLAC-PUB-3521, LBL-18761",
+    doi = "10.1103/PhysRevD.31.3013",
+    journal = "Phys. Rev. D",
+    volume = "31",
+    pages = "3013",
+    year = "1985"
+}'

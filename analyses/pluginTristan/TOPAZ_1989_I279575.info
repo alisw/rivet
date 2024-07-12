@@ -1,0 +1,37 @@
+Name: TOPAZ_1989_I279575
+Year: 1989
+Summary: Energy-Energy correlation at  $E_{\text{CMS}}=53.3$ and $59.5$ GeV
+Experiment: TOPAZ
+Collider: Tristan
+InspireID: 279575
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B227 (1989) 495-500, 1989
+RunInfo: e+ e- to hadrons.  Beam energy must be specified as analysis option "ENERGY" (900 or 7000) when rivet-merging samples.
+
+NeedCrossSection: no
+Beams: [e-, e+]
+Energies: [53.3,59.5]
+Options:
+  - ENERGY=53.3,59.5
+Description:
+  'Measurement of the energy-energy correlation, and its assymetry in $e^+e^-$ collisions by TOPAZ at 53.3 and 59.5 GeV.
+   resonance. Beam energy must be specified as analysis option "ENERGY" when rivet-merging samples.'
+Keywords: []
+BibKey: Adachi:1989ej
+BibTeX: '@article{Adachi:1989ej,
+      author         = "Adachi, I. and others",
+      title          = "{Measurements of $\alpha^- s$ in $e^+ e^-$ Annihilation
+                        at $\sqrt{s}=53$.3-{GeV} and 59.5-{GeV}}",
+      collaboration  = "TOPAZ",
+      journal        = "Phys. Lett.",
+      volume         = "B227",
+      year           = "1989",
+      pages          = "495-500",
+      doi            = "10.1016/0370-2693(89)90969-6",
+      reportNumber   = "KEK-Preprint-89-37",
+      SLACcitation   = "%%CITATION = PHLTA,B227,495;%%"
+}'

@@ -1,0 +1,222 @@
+{
+    "623300": [
+        "Evidence of psi(3770) nonD anti-D decay to J / psi pi+ pi-", 
+        "BES", 
+        "10.1016/j.physletb.2004.11.029", 
+        null, 
+        "hep-ex/0307028", 
+        null, 
+        null, 
+        []
+    ], 
+    "654912": [
+        "Observation of the decay psi(2S) ---> K*(892)anti-K + c.c.", 
+        "BES", 
+        "10.1016/j.physletb.2005.03.071", 
+        null, 
+        "hep-ex/0407037", 
+        null, 
+        null, 
+        []
+    ], 
+    "661564": [
+        "First observations of $\\psi(2S)$ and $\\chi_{cJ}$ (1P) decays to four-body final states $h^+ h^- K^0_S K^0_S$", 
+        "BES", 
+        "10.1016/j.physletb.2005.09.050", 
+        null, 
+        "hep-ex/0410028", 
+        null, 
+        null, 
+        []
+    ], 
+    "661566": [
+        "Direct measurement of the branching fraction for the decay of D+ ---> anti-K0 e+ nu(e) and determination of Gamma (D0 ---> K- e+ nu(e)) / Gamma (D+ ---> anti-K0 e+ nu(e))", 
+        "BES", 
+        "10.1016/j.physletb.2004.12.040", 
+        null, 
+        "hep-ex/0410030", 
+        null, 
+        null, 
+        []
+    ], 
+    "661567": [
+        "Measurement of the final states omega pi0, rho eta, and rho eta prime from psi (2S) electromagnetic decays and e+e- annihilations", 
+        "BES", 
+        "10.1103/PhysRevD.70.112007", 
+        null, 
+        "hep-ex/0410031", 
+        null, 
+        null, 
+        []
+    ], 
+    "662032": [
+        "Measurements of J/psi decays into phi pi0, phi eta, and phi eta-prime", 
+        "BES", 
+        "10.1103/PhysRevD.71.032003", 
+        null, 
+        "hep-ex/0410044", 
+        null, 
+        null, 
+        []
+    ], 
+    "662223": [
+        "Direct measurement of the pseudoscalar decay constant f(D+)", 
+        "BES", 
+        "10.1016/j.physletb.2005.01.098", 
+        null, 
+        "hep-ex/0410050", 
+        null, 
+        null, 
+        []
+    ], 
+    "663288": [
+        "Resonances in J / psi ---> phi pi+ pi- and phi K+ K-", 
+        "BES", 
+        "10.1016/j.physletb.2004.12.041", 
+        null, 
+        "hep-ex/0411001", 
+        null, 
+        null, 
+        []
+    ], 
+    "665218": [
+        "Measurements of J/psi decays into 2(pi+ pi-) eta and 3(pi+ pi-) eta", 
+        "BES", 
+        "10.1016/j.physletb.2005.02.004", 
+        null, 
+        "hep-ex/0411073", 
+        null, 
+        null, 
+        []
+    ], 
+    "676878": [
+        "Precise measurement of spin-averaged chi(cJ)(1P) mass using photon conversions in psi(2S) ---> gamma chi(cJ)", 
+        "BES", 
+        "10.1103/PhysRevD.71.092002", 
+        null, 
+        "hep-ex/0502031", 
+        null, 
+        null, 
+        []
+    ], 
+    "677460": [
+        "Measurements of Cabibbo suppressed hadronic decay fractions of charmed D0 and D+ mesons", 
+        "BES", 
+        "10.1016/j.physletb.2005.06.063", 
+        null, 
+        "hep-ex/0502045", 
+        null, 
+        null, 
+        []
+    ], 
+    "677656": [
+        "BESII detector simulation", 
+        "BES", 
+        "10.1016/j.nima.2005.06.079", 
+        null, 
+        "physics/0503001", 
+        null, 
+        null, 
+        []
+    ], 
+    "678672": [
+        "Observation of p anti-p pi0 and p anti-p eta in psi-prime decays", 
+        "BES", 
+        "10.1103/PhysRevD.71.072006", 
+        null, 
+        "hep-ex/0503030", 
+        null, 
+        null, 
+        []
+    ], 
+    "678943": [
+        "Measurement of the branching fractions of psi(2S) ---> 3(pi+ pi-) and J / psi ---> 2(pi+ pi-)", 
+        "BES", 
+        "10.1103/PhysRevD.72.012002", 
+        null, 
+        "hep-ex/0503040", 
+        null, 
+        null, 
+        []
+    ], 
+    "685744": [
+        "Obervation of chi(cj) ---> omega omega decays", 
+        "BES", 
+        "10.1016/j.physletb.2005.08.133", 
+        null, 
+        "hep-ex/0506045", 
+        null, 
+        null, 
+        []
+    ], 
+    "685906": [
+        "Measurement of the cross section for e+ e- ---> p anti-p at center-of-mass energies from 2.0-GeV to 3.07-GeV", 
+        "BES", 
+        "10.1016/j.physletb.2005.09.044", 
+        null, 
+        "hep-ex/0506059", 
+        "ins685906", 
+        null, 
+        []
+    ], 
+    "688338": [
+        "Experimental study of eta(c) decays into vector-vector final states", 
+        "BES", 
+        "10.1103/PhysRevD.72.072005", 
+        null, 
+        "hep-ex/0507100", 
+        null, 
+        null, 
+        []
+    ], 
+    "689499": [
+        "Observation of a resonance X(1835) in J / psi -> gamma pi+ pi- eta-prime", 
+        "BES", 
+        "10.1103/PhysRevLett.95.262001", 
+        null, 
+        "hep-ex/0508025", 
+        null, 
+        null, 
+        []
+    ], 
+    "689969": [
+        "Partial wave analysis of psi-prime ---> pi+ pi- pi0 at BESII", 
+        "BES", 
+        "10.1016/j.physletb.2005.05.038", 
+        null, 
+        null, 
+        null, 
+        null, 
+        []
+    ], 
+    "690784": [
+        "Partial wave analysis of chi(c0) ---> pi+ pi- K+ K-", 
+        "BES", 
+        "10.1103/PhysRevD.72.092002", 
+        null, 
+        "hep-ex/0508050", 
+        null, 
+        null, 
+        []
+    ], 
+    "697355": [
+        "Measurement of branching fractions for the inclusive Cabibbo-favored anti-K*0(892) and Cabibbo-suppressed K*0(892) decays of neutral and charged D mesons", 
+        "BES", 
+        "10.1016/j.physletb.2005.08.013", 
+        null, 
+        "hep-ex/0511026", 
+        null, 
+        null, 
+        []
+    ], 
+    "699101": [
+        "Direct measurement of the cross sections for D0 anti-D0, D+ D- and D anti-D production by e+ e- annihilation at the center-of-mass energy s**(1/2) = 3.773-GeV", 
+        "BES", 
+        "10.1016/j.nuclphysb.2005.08.023", 
+        null, 
+        null, 
+        null, 
+        null, 
+        []
+    ]
+}

@@ -1,0 +1,704 @@
+BEGIN YODA_SCATTER2D_V2 /REF/E605_1991_I302822/d01-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -106.0, up: 106.0}, 'sys,Normalisation error': {dn: -54.6, up: 54.6}, 'sys,Point-to-point systematic error': {dn: -18.2, up: 18.2}}, 1: {error: {dn: -45.9, up: 45.9}, 'sys,Normalisation error': {dn: -31.349999999999998, up: 31.349999999999998}, 'sys,Point-to-point systematic error': {dn: -10.45, up: 10.45}}, 2: {error: {dn: -40.3, up: 40.3}, 'sys,Normalisation error': {dn: -33.0, up: 33.0}, 'sys,Point-to-point systematic error': {dn: -11.0, up: 11.0}}, 3: {error: {dn: -45.5, up: 45.5}, 'sys,Normalisation error': {dn: -36.45, up: 36.45}, 'sys,Point-to-point systematic error': {dn: -12.15, up: 12.15}}, 4: {error: {dn: -21.5, up: 21.5}, 'sys,Normalisation error': {dn: -17.849999999999998, up: 17.849999999999998}, 'sys,Point-to-point systematic error': {dn: -5.949999999999999, up: 5.949999999999999}}, 5: {error: {dn: -31.2, up: 31.2}, 'sys,Normalisation error': {dn: -26.4, up: 26.4}, 'sys,Point-to-point systematic error': {dn: -8.8, up: 8.8}}, 6: {error: {dn: -28.5, up: 28.5}, 'sys,Normalisation error': {dn: -26.1, up: 26.1}, 'sys,Point-to-point systematic error': {dn: -8.7, up: 8.7}}, 7: {error: {dn: -19.8, up: 19.8}, 'sys,Normalisation error': {dn: -21.0, up: 21.0}, 'sys,Point-to-point systematic error': {dn: -7.0, up: 7.0}}, 8: {error: {dn: -13.4, up: 13.4}, 'sys,Normalisation error': {dn: -15.75, up: 15.75}, 'sys,Point-to-point systematic error': {dn: -5.25, up: 5.25}}, 9: {error: {dn: -13.9, up: 13.9}, 'sys,Normalisation error': {dn: -18.45, up: 18.45}, 'sys,Point-to-point systematic error': {dn: -6.15, up: 6.15}}, 10: {error: {dn: -4.32, up: 4.32}, 'sys,Normalisation error': {dn: -5.234999999999999, up: 5.234999999999999}, 'sys,Point-to-point systematic error': {dn: -1.7449999999999999, up: 1.7449999999999999}}, 11: {error: {dn: -4.31, up: 4.31}, 'sys,Normalisation error': {dn: -4.335, up: 4.335}, 'sys,Point-to-point systematic error': {dn: -1.4449999999999998, up: 1.4449999999999998}}, 12: {error: {dn: -4.33, up: 4.33}, 'sys,Normalisation error': {dn: -4.109999999999999, up: 4.109999999999999}, 'sys,Point-to-point systematic error': {dn: -1.3699999999999999, up: 1.3699999999999999}}, 13: {error: {dn: -1.62, up: 1.62}, 'sys,Normalisation error': {dn: -2.43, up: 2.43}, 'sys,Point-to-point systematic error': {dn: -0.81, up: 0.81}}, 14: {error: {dn: -1.1, up: 1.1}, 'sys,Normalisation error': {dn: -1.605, up: 1.605}, 'sys,Point-to-point systematic error': {dn: -0.535, up: 0.535}}, 15: {error: {dn: -0.566, up: 0.566}, 'sys,Normalisation error': {dn: -0.5355, up: 0.5355}, 'sys,Point-to-point systematic error': {dn: -0.1785, up: 0.1785}}, 16: {error: {dn: -0.467, up: 0.467}, 'sys,Normalisation error': {dn: -0.255, up: 0.255}, 'sys,Point-to-point systematic error': {dn: -0.085, up: 0.085}}}
+
+IsRef: 1
+Path: /REF/E605_1991_I302822/d01-x01-y01
+Title: doi:10.17182/hepdata.22831.v1/t1
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.831000e-01	0.000000e+00	0.000000e+00	3.640000e+02	1.206167e+02	1.206167e+02
+1.883000e-01	0.000000e+00	0.000000e+00	2.090000e+02	5.655824e+01	5.655824e+01
+1.935000e-01	0.000000e+00	0.000000e+00	2.200000e+02	5.323617e+01	5.323617e+01
+1.986000e-01	0.000000e+00	0.000000e+00	2.430000e+02	5.955229e+01	5.955229e+01
+2.038000e-01	0.000000e+00	0.000000e+00	1.190000e+02	2.857053e+01	2.857053e+01
+2.089000e-01	0.000000e+00	0.000000e+00	1.760000e+02	4.180718e+01	4.180718e+01
+2.141000e-01	0.000000e+00	0.000000e+00	1.740000e+02	3.961250e+01	3.961250e+01
+2.192000e-01	0.000000e+00	0.000000e+00	1.400000e+02	2.969916e+01	2.969916e+01
+2.244000e-01	0.000000e+00	0.000000e+00	1.050000e+02	2.133507e+01	2.133507e+01
+2.296000e-01	0.000000e+00	0.000000e+00	1.230000e+02	2.390471e+01	2.390471e+01
+2.708000e-01	0.000000e+00	0.000000e+00	3.490000e+01	7.008042e+00	7.008042e+00
+2.760000e-01	0.000000e+00	0.000000e+00	2.890000e+01	6.281429e+00	6.281429e+00
+2.812000e-01	0.000000e+00	0.000000e+00	2.740000e+01	6.125186e+00	6.125186e+00
+2.915000e-01	0.000000e+00	0.000000e+00	1.620000e+01	3.030742e+00	3.030742e+00
+3.121000e-01	0.000000e+00	0.000000e+00	1.070000e+01	2.017982e+00	2.017982e+00
+3.431000e-01	0.000000e+00	0.000000e+00	3.570000e+00	7.993613e-01	7.993613e-01
+3.843000e-01	0.000000e+00	0.000000e+00	1.700000e+00	5.388311e-01	5.388311e-01
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/E605_1991_I302822/d02-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -85.1, up: 85.1}, 'sys,Normalisation error': {dn: -59.85, up: 59.85}, 'sys,Point-to-point systematic error': {dn: -19.950000000000003, up: 19.950000000000003}}, 1: {error: {dn: -55.5, up: 55.5}, 'sys,Normalisation error': {dn: -47.25, up: 47.25}, 'sys,Point-to-point systematic error': {dn: -15.75, up: 15.75}}, 2: {error: {dn: -45.4, up: 45.4}, 'sys,Normalisation error': {dn: -41.55, up: 41.55}, 'sys,Point-to-point systematic error': {dn: -13.85, up: 13.85}}, 3: {error: {dn: -35.0, up: 35.0}, 'sys,Normalisation error': {dn: -36.6, up: 36.6}, 'sys,Point-to-point systematic error': {dn: -12.2, up: 12.2}}, 4: {error: {dn: -35.4, up: 35.4}, 'sys,Normalisation error': {dn: -35.550000000000004, up: 35.550000000000004}, 'sys,Point-to-point systematic error': {dn: -11.850000000000001, up: 11.850000000000001}}, 5: {error: {dn: -24.9, up: 24.9}, 'sys,Normalisation error': {dn: -28.799999999999997, up: 28.799999999999997}, 'sys,Point-to-point systematic error': {dn: -9.6, up: 9.6}}, 6: {error: {dn: -19.2, up: 19.2}, 'sys,Normalisation error': {dn: -24.9, up: 24.9}, 'sys,Point-to-point systematic error': {dn: -8.299999999999999, up: 8.299999999999999}}, 7: {error: {dn: -17.9, up: 17.9}, 'sys,Normalisation error': {dn: -24.150000000000002, up: 24.150000000000002}, 'sys,Point-to-point systematic error': {dn: -8.05, up: 8.05}}, 8: {error: {dn: -12.9, up: 12.9}, 'sys,Normalisation error': {dn: -21.75, up: 21.75}, 'sys,Point-to-point systematic error': {dn: -7.25, up: 7.25}}, 9: {error: {dn: -10.4, up: 10.4}, 'sys,Normalisation error': {dn: -19.05, up: 19.05}, 'sys,Point-to-point systematic error': {dn: -6.35, up: 6.35}}, 10: {error: {dn: -3.95, up: 3.95}, 'sys,Normalisation error': {dn: -6.84, up: 6.84}, 'sys,Point-to-point systematic error': {dn: -2.2800000000000002, up: 2.2800000000000002}}, 11: {error: {dn: -3.04, up: 3.04}, 'sys,Normalisation error': {dn: -4.335, up: 4.335}, 'sys,Point-to-point systematic error': {dn: -1.4449999999999998, up: 1.4449999999999998}}, 12: {error: {dn: -3.2, up: 3.2}, 'sys,Normalisation error': {dn: -4.635, up: 4.635}, 'sys,Point-to-point systematic error': {dn: -1.545, up: 1.545}}, 13: {error: {dn: -1.35, up: 1.35}, 'sys,Normalisation error': {dn: -2.985, up: 2.985}, 'sys,Point-to-point systematic error': {dn: -0.9949999999999999, up: 0.9949999999999999}}, 14: {error: {dn: -0.828, up: 0.828}, 'sys,Normalisation error': {dn: -1.875, up: 1.875}, 'sys,Point-to-point systematic error': {dn: -0.625, up: 0.625}}, 15: {error: {dn: -0.47, up: 0.47}, 'sys,Normalisation error': {dn: -0.8699999999999999, up: 0.8699999999999999}, 'sys,Point-to-point systematic error': {dn: -0.29, up: 0.29}}, 16: {error: {dn: -0.272, up: 0.272}, 'sys,Normalisation error': {dn: -0.26849999999999996, up: 0.26849999999999996}, 'sys,Point-to-point systematic error': {dn: -0.0895, up: 0.0895}}, 17: {error: {dn: -0.18, up: 0.18}, 'sys,Normalisation error': {dn: -0.0711, up: 0.0711}, 'sys,Point-to-point systematic error': {dn: -0.0237, up: 0.0237}}}
+
+IsRef: 1
+Path: /REF/E605_1991_I302822/d02-x01-y01
+Title: doi:10.17182/hepdata.22831.v1/t2
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.831000e-01	0.000000e+00	0.000000e+00	3.990000e+02	1.059341e+02	1.059341e+02
+1.883000e-01	0.000000e+00	0.000000e+00	3.150000e+02	7.457127e+01	7.457127e+01
+1.935000e-01	0.000000e+00	0.000000e+00	2.770000e+02	6.308237e+01	6.308237e+01
+1.986000e-01	0.000000e+00	0.000000e+00	2.440000e+02	5.209031e+01	5.209031e+01
+2.038000e-01	0.000000e+00	0.000000e+00	2.370000e+02	5.154983e+01	5.154983e+01
+2.089000e-01	0.000000e+00	0.000000e+00	1.920000e+02	3.926334e+01	3.926334e+01
+2.141000e-01	0.000000e+00	0.000000e+00	1.660000e+02	3.251984e+01	3.251984e+01
+2.192000e-01	0.000000e+00	0.000000e+00	1.610000e+02	3.111969e+01	3.111969e+01
+2.244000e-01	0.000000e+00	0.000000e+00	1.450000e+02	2.630656e+01	2.630656e+01
+2.296000e-01	0.000000e+00	0.000000e+00	1.270000e+02	2.261382e+01	2.261382e+01
+2.708000e-01	0.000000e+00	0.000000e+00	4.560000e+01	8.221101e+00	8.221101e+00
+2.760000e-01	0.000000e+00	0.000000e+00	2.890000e+01	5.488338e+00	5.488338e+00
+2.812000e-01	0.000000e+00	0.000000e+00	3.090000e+01	5.840398e+00	5.840398e+00
+2.915000e-01	0.000000e+00	0.000000e+00	1.990000e+01	3.423850e+00	3.423850e+00
+3.121000e-01	0.000000e+00	0.000000e+00	1.250000e+01	2.142857e+00	2.142857e+00
+3.431000e-01	0.000000e+00	0.000000e+00	5.800000e+00	1.030485e+00	1.030485e+00
+3.843000e-01	0.000000e+00	0.000000e+00	1.790000e+00	3.925385e-01	3.925385e-01
+4.359000e-01	0.000000e+00	0.000000e+00	4.740000e-01	1.949792e-01	1.949792e-01
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/E605_1991_I302822/d03-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -77.1, up: 77.1}, 'sys,Normalisation error': {dn: -63.6, up: 63.6}, 'sys,Point-to-point systematic error': {dn: -21.200000000000003, up: 21.200000000000003}}, 1: {error: {dn: -57.7, up: 57.7}, 'sys,Normalisation error': {dn: -52.5, up: 52.5}, 'sys,Point-to-point systematic error': {dn: -17.5, up: 17.5}}, 2: {error: {dn: -55.7, up: 55.7}, 'sys,Normalisation error': {dn: -54.449999999999996, up: 54.449999999999996}, 'sys,Point-to-point systematic error': {dn: -18.15, up: 18.15}}, 3: {error: {dn: -34.0, up: 34.0}, 'sys,Normalisation error': {dn: -37.2, up: 37.2}, 'sys,Point-to-point systematic error': {dn: -12.4, up: 12.4}}, 4: {error: {dn: -26.9, up: 26.9}, 'sys,Normalisation error': {dn: -31.200000000000003, up: 31.200000000000003}, 'sys,Point-to-point systematic error': {dn: -10.4, up: 10.4}}, 5: {error: {dn: -23.4, up: 23.4}, 'sys,Normalisation error': {dn: -31.8, up: 31.8}, 'sys,Point-to-point systematic error': {dn: -10.600000000000001, up: 10.600000000000001}}, 6: {error: {dn: -13.3, up: 13.3}, 'sys,Normalisation error': {dn: -22.2, up: 22.2}, 'sys,Point-to-point systematic error': {dn: -7.4, up: 7.4}}, 7: {error: {dn: -11.9, up: 11.9}, 'sys,Normalisation error': {dn: -21.599999999999998, up: 21.599999999999998}, 'sys,Point-to-point systematic error': {dn: -7.199999999999999, up: 7.199999999999999}}, 8: {error: {dn: -11.1, up: 11.1}, 'sys,Normalisation error': {dn: -21.45, up: 21.45}, 'sys,Point-to-point systematic error': {dn: -7.1499999999999995, up: 7.1499999999999995}}, 9: {error: {dn: -7.69, up: 7.69}, 'sys,Normalisation error': {dn: -17.099999999999998, up: 17.099999999999998}, 'sys,Point-to-point systematic error': {dn: -5.699999999999999, up: 5.699999999999999}}, 10: {error: {dn: -3.05, up: 3.05}, 'sys,Normalisation error': {dn: -5.955, up: 5.955}, 'sys,Point-to-point systematic error': {dn: -1.985, up: 1.985}}, 11: {error: {dn: -2.8, up: 2.8}, 'sys,Normalisation error': {dn: -4.965, up: 4.965}, 'sys,Point-to-point systematic error': {dn: -1.655, up: 1.655}}, 12: {error: {dn: -2.42, up: 2.42}, 'sys,Normalisation error': {dn: -4.109999999999999, up: 4.109999999999999}, 'sys,Point-to-point systematic error': {dn: -1.3699999999999999, up: 1.3699999999999999}}, 13: {error: {dn: -1.3, up: 1.3}, 'sys,Normalisation error': {dn: -3.24, up: 3.24}, 'sys,Point-to-point systematic error': {dn: -1.08, up: 1.08}}, 14: {error: {dn: -0.903, up: 0.903}, 'sys,Normalisation error': {dn: -2.265, up: 2.265}, 'sys,Point-to-point systematic error': {dn: -0.755, up: 0.755}}, 15: {error: {dn: -0.372, up: 0.372}, 'sys,Normalisation error': {dn: -0.9075, up: 0.9075}, 'sys,Point-to-point systematic error': {dn: -0.3025, up: 0.3025}}, 16: {error: {dn: -0.194, up: 0.194}, 'sys,Normalisation error': {dn: -0.279, up: 0.279}, 'sys,Point-to-point systematic error': {dn: -0.09300000000000001, up: 0.09300000000000001}}, 17: {error: {dn: -0.101, up: 0.101}, 'sys,Normalisation error': {dn: -0.0606, up: 0.0606}, 'sys,Point-to-point systematic error': {dn: -0.020200000000000003, up: 0.020200000000000003}}}
+
+IsRef: 1
+Path: /REF/E605_1991_I302822/d03-x01-y01
+Title: doi:10.17182/hepdata.22831.v1/t3
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.831000e-01	0.000000e+00	0.000000e+00	4.240000e+02	1.021705e+02	1.021705e+02
+1.883000e-01	0.000000e+00	0.000000e+00	3.500000e+02	7.994867e+01	7.994867e+01
+1.935000e-01	0.000000e+00	0.000000e+00	3.630000e+02	7.997947e+01	7.997947e+01
+1.986000e-01	0.000000e+00	0.000000e+00	2.480000e+02	5.189990e+01	5.189990e+01
+2.038000e-01	0.000000e+00	0.000000e+00	2.080000e+02	4.248776e+01	4.248776e+01
+2.089000e-01	0.000000e+00	0.000000e+00	2.120000e+02	4.087982e+01	4.087982e+01
+2.141000e-01	0.000000e+00	0.000000e+00	1.480000e+02	2.691635e+01	2.691635e+01
+2.192000e-01	0.000000e+00	0.000000e+00	1.440000e+02	2.569066e+01	2.569066e+01
+2.244000e-01	0.000000e+00	0.000000e+00	1.430000e+02	2.518799e+01	2.518799e+01
+2.296000e-01	0.000000e+00	0.000000e+00	1.140000e+02	1.959684e+01	1.959684e+01
+2.708000e-01	0.000000e+00	0.000000e+00	3.970000e+01	6.978879e+00	6.978879e+00
+2.760000e-01	0.000000e+00	0.000000e+00	3.310000e+01	5.935508e+00	5.935508e+00
+2.812000e-01	0.000000e+00	0.000000e+00	2.740000e+01	4.962399e+00	4.962399e+00
+2.915000e-01	0.000000e+00	0.000000e+00	2.160000e+01	3.654313e+00	3.654313e+00
+3.121000e-01	0.000000e+00	0.000000e+00	1.510000e+01	2.552579e+00	2.552579e+00
+3.431000e-01	0.000000e+00	0.000000e+00	6.050000e+00	1.026375e+00	1.026375e+00
+3.843000e-01	0.000000e+00	0.000000e+00	1.860000e+00	3.523152e-01	3.523152e-01
+4.359000e-01	0.000000e+00	0.000000e+00	4.040000e-01	1.195048e-01	1.195048e-01
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/E605_1991_I302822/d04-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -75.3, up: 75.3}, 'sys,Normalisation error': {dn: -64.64999999999999, up: 64.64999999999999}, 'sys,Point-to-point systematic error': {dn: -21.549999999999997, up: 21.549999999999997}}, 1: {error: {dn: -52.5, up: 52.5}, 'sys,Normalisation error': {dn: -52.050000000000004, up: 52.050000000000004}, 'sys,Point-to-point systematic error': {dn: -17.35, up: 17.35}}, 2: {error: {dn: -58.5, up: 58.5}, 'sys,Normalisation error': {dn: -57.9, up: 57.9}, 'sys,Point-to-point systematic error': {dn: -19.3, up: 19.3}}, 3: {error: {dn: -36.6, up: 36.6}, 'sys,Normalisation error': {dn: -41.1, up: 41.1}, 'sys,Point-to-point systematic error': {dn: -13.700000000000001, up: 13.700000000000001}}, 4: {error: {dn: -39.4, up: 39.4}, 'sys,Normalisation error': {dn: -44.1, up: 44.1}, 'sys,Point-to-point systematic error': {dn: -14.7, up: 14.7}}, 5: {error: {dn: -19.4, up: 19.4}, 'sys,Normalisation error': {dn: -33.45, up: 33.45}, 'sys,Point-to-point systematic error': {dn: -11.15, up: 11.15}}, 6: {error: {dn: -12.7, up: 12.7}, 'sys,Normalisation error': {dn: -25.349999999999998, up: 25.349999999999998}, 'sys,Point-to-point systematic error': {dn: -8.45, up: 8.45}}, 7: {error: {dn: -9.91, up: 9.91}, 'sys,Normalisation error': {dn: -20.55, up: 20.55}, 'sys,Point-to-point systematic error': {dn: -6.8500000000000005, up: 6.8500000000000005}}, 8: {error: {dn: -9.28, up: 9.28}, 'sys,Normalisation error': {dn: -20.55, up: 20.55}, 'sys,Point-to-point systematic error': {dn: -6.8500000000000005, up: 6.8500000000000005}}, 9: {error: {dn: -7.99, up: 7.99}, 'sys,Normalisation error': {dn: -18.9, up: 18.9}, 'sys,Point-to-point systematic error': {dn: -6.3, up: 6.3}}, 10: {error: {dn: -3.25, up: 3.25}, 'sys,Normalisation error': {dn: -6.9, up: 6.9}, 'sys,Point-to-point systematic error': {dn: -2.3000000000000003, up: 2.3000000000000003}}, 11: {error: {dn: -2.93, up: 2.93}, 'sys,Normalisation error': {dn: -5.55, up: 5.55}, 'sys,Point-to-point systematic error': {dn: -1.85, up: 1.85}}, 12: {error: {dn: -2.58, up: 2.58}, 'sys,Normalisation error': {dn: -4.53, up: 4.53}, 'sys,Point-to-point systematic error': {dn: -1.51, up: 1.51}}, 13: {error: {dn: -1.39, up: 1.39}, 'sys,Normalisation error': {dn: -3.4650000000000003, up: 3.4650000000000003}, 'sys,Point-to-point systematic error': {dn: -1.155, up: 1.155}}, 14: {error: {dn: -0.884, up: 0.884}, 'sys,Normalisation error': {dn: -2.205, up: 2.205}, 'sys,Point-to-point systematic error': {dn: -0.735, up: 0.735}}, 15: {error: {dn: -0.42, up: 0.42}, 'sys,Normalisation error': {dn: -1.05, up: 1.05}, 'sys,Point-to-point systematic error': {dn: -0.35000000000000003, up: 0.35000000000000003}}, 16: {error: {dn: -0.176, up: 0.176}, 'sys,Normalisation error': {dn: -0.3360000000000001, up: 0.3360000000000001}, 'sys,Point-to-point systematic error': {dn: -0.11200000000000002, up: 0.11200000000000002}}, 17: {error: {dn: -0.0853, up: 0.0853}, 'sys,Normalisation error': {dn: -0.07425, up: 0.07425}, 'sys,Point-to-point systematic error': {dn: -0.024749999999999998, up: 0.024749999999999998}}}
+
+IsRef: 1
+Path: /REF/E605_1991_I302822/d04-x01-y01
+Title: doi:10.17182/hepdata.22831.v1/t4
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.831000e-01	0.000000e+00	0.000000e+00	4.310000e+02	1.015584e+02	1.015584e+02
+1.883000e-01	0.000000e+00	0.000000e+00	3.470000e+02	7.593731e+01	7.593731e+01
+1.935000e-01	0.000000e+00	0.000000e+00	3.860000e+02	8.454082e+01	8.454082e+01
+1.986000e-01	0.000000e+00	0.000000e+00	2.740000e+02	5.671384e+01	5.671384e+01
+2.038000e-01	0.000000e+00	0.000000e+00	2.940000e+02	6.093652e+01	6.093652e+01
+2.089000e-01	0.000000e+00	0.000000e+00	2.230000e+02	4.024407e+01	4.024407e+01
+2.141000e-01	0.000000e+00	0.000000e+00	1.690000e+02	2.958572e+01	2.958572e+01
+2.192000e-01	0.000000e+00	0.000000e+00	1.370000e+02	2.382085e+01	2.382085e+01
+2.244000e-01	0.000000e+00	0.000000e+00	1.370000e+02	2.356573e+01	2.356573e+01
+2.296000e-01	0.000000e+00	0.000000e+00	1.260000e+02	2.146486e+01	2.146486e+01
+2.708000e-01	0.000000e+00	0.000000e+00	4.600000e+01	7.966335e+00	7.966335e+00
+2.760000e-01	0.000000e+00	0.000000e+00	3.700000e+01	6.542927e+00	6.542927e+00
+2.812000e-01	0.000000e+00	0.000000e+00	3.020000e+01	5.427467e+00	5.427467e+00
+2.915000e-01	0.000000e+00	0.000000e+00	2.310000e+01	3.907985e+00	3.907985e+00
+3.121000e-01	0.000000e+00	0.000000e+00	1.470000e+01	2.486706e+00	2.486706e+00
+3.431000e-01	0.000000e+00	0.000000e+00	7.000000e+00	1.183807e+00	1.183807e+00
+3.843000e-01	0.000000e+00	0.000000e+00	2.240000e+00	3.954946e-01	3.954946e-01
+4.359000e-01	0.000000e+00	0.000000e+00	4.950000e-01	1.157658e-01	1.157658e-01
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/E605_1991_I302822/d05-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -110.0, up: 110.0}, 'sys,Normalisation error': {dn: -84.0, up: 84.0}, 'sys,Point-to-point systematic error': {dn: -28.0, up: 28.0}}, 1: {error: {dn: -64.4, up: 64.4}, 'sys,Normalisation error': {dn: -60.75, up: 60.75}, 'sys,Point-to-point systematic error': {dn: -20.25, up: 20.25}}, 2: {error: {dn: -49.8, up: 49.8}, 'sys,Normalisation error': {dn: -47.25, up: 47.25}, 'sys,Point-to-point systematic error': {dn: -15.75, up: 15.75}}, 3: {error: {dn: -39.4, up: 39.4}, 'sys,Normalisation error': {dn: -41.1, up: 41.1}, 'sys,Point-to-point systematic error': {dn: -13.700000000000001, up: 13.700000000000001}}, 4: {error: {dn: -47.7, up: 47.7}, 'sys,Normalisation error': {dn: -47.7, up: 47.7}, 'sys,Point-to-point systematic error': {dn: -15.9, up: 15.9}}, 5: {error: {dn: -16.7, up: 16.7}, 'sys,Normalisation error': {dn: -32.1, up: 32.1}, 'sys,Point-to-point systematic error': {dn: -10.700000000000001, up: 10.700000000000001}}, 6: {error: {dn: -11.0, up: 11.0}, 'sys,Normalisation error': {dn: -24.3, up: 24.3}, 'sys,Point-to-point systematic error': {dn: -8.100000000000001, up: 8.100000000000001}}, 7: {error: {dn: -10.7, up: 10.7}, 'sys,Normalisation error': {dn: -23.85, up: 23.85}, 'sys,Point-to-point systematic error': {dn: -7.95, up: 7.95}}, 8: {error: {dn: -9.14, up: 9.14}, 'sys,Normalisation error': {dn: -20.25, up: 20.25}, 'sys,Point-to-point systematic error': {dn: -6.75, up: 6.75}}, 9: {error: {dn: -8.43, up: 8.43}, 'sys,Normalisation error': {dn: -19.950000000000003, up: 19.950000000000003}, 'sys,Point-to-point systematic error': {dn: -6.65, up: 6.65}}, 10: {error: {dn: -3.99, up: 3.99}, 'sys,Normalisation error': {dn: -8.565000000000001, up: 8.565000000000001}, 'sys,Point-to-point systematic error': {dn: -2.8550000000000004, up: 2.8550000000000004}}, 11: {error: {dn: -3.42, up: 3.42}, 'sys,Normalisation error': {dn: -6.165000000000001, up: 6.165000000000001}, 'sys,Point-to-point systematic error': {dn: -2.055, up: 2.055}}, 12: {error: {dn: -2.96, up: 2.96}, 'sys,Normalisation error': {dn: -5.175, up: 5.175}, 'sys,Point-to-point systematic error': {dn: -1.7249999999999999, up: 1.7249999999999999}}, 13: {error: {dn: -1.51, up: 1.51}, 'sys,Normalisation error': {dn: -3.765, up: 3.765}, 'sys,Point-to-point systematic error': {dn: -1.255, up: 1.255}}, 14: {error: {dn: -0.981, up: 0.981}, 'sys,Normalisation error': {dn: -2.4599999999999995, up: 2.4599999999999995}, 'sys,Point-to-point systematic error': {dn: -0.8199999999999998, up: 0.8199999999999998}}, 15: {error: {dn: -0.386, up: 0.386}, 'sys,Normalisation error': {dn: -0.9644999999999999, up: 0.9644999999999999}, 'sys,Point-to-point systematic error': {dn: -0.3215, up: 0.3215}}, 16: {error: {dn: -0.178, up: 0.178}, 'sys,Normalisation error': {dn: -0.33, up: 0.33}, 'sys,Point-to-point systematic error': {dn: -0.11000000000000001, up: 0.11000000000000001}}, 17: {error: {dn: -0.0878, up: 0.0878}, 'sys,Normalisation error': {dn: -0.08400000000000002, up: 0.08400000000000002}, 'sys,Point-to-point systematic error': {dn: -0.028000000000000004, up: 0.028000000000000004}}}
+
+IsRef: 1
+Path: /REF/E605_1991_I302822/d05-x01-y01
+Title: doi:10.17182/hepdata.22831.v1/t5
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.831000e-01	0.000000e+00	0.000000e+00	5.600000e+02	1.412091e+02	1.412091e+02
+1.883000e-01	0.000000e+00	0.000000e+00	4.050000e+02	9.081842e+01	9.081842e+01
+1.935000e-01	0.000000e+00	0.000000e+00	3.150000e+02	7.043199e+01	7.043199e+01
+1.986000e-01	0.000000e+00	0.000000e+00	2.740000e+02	5.855988e+01	5.855988e+01
+2.038000e-01	0.000000e+00	0.000000e+00	3.180000e+02	6.930649e+01	6.930649e+01
+2.089000e-01	0.000000e+00	0.000000e+00	2.140000e+02	3.773314e+01	3.773314e+01
+2.141000e-01	0.000000e+00	0.000000e+00	1.620000e+02	2.787651e+01	2.787651e+01
+2.192000e-01	0.000000e+00	0.000000e+00	1.590000e+02	2.732243e+01	2.732243e+01
+2.244000e-01	0.000000e+00	0.000000e+00	1.350000e+02	2.321992e+01	2.321992e+01
+2.296000e-01	0.000000e+00	0.000000e+00	1.330000e+02	2.265590e+01	2.265590e+01
+2.708000e-01	0.000000e+00	0.000000e+00	5.710000e+01	9.870681e+00	9.870681e+00
+2.760000e-01	0.000000e+00	0.000000e+00	4.110000e+01	7.343477e+00	7.343477e+00
+2.812000e-01	0.000000e+00	0.000000e+00	3.450000e+01	6.206275e+00	6.206275e+00
+2.915000e-01	0.000000e+00	0.000000e+00	2.510000e+01	4.246216e+00	4.246216e+00
+3.121000e-01	0.000000e+00	0.000000e+00	1.640000e+01	2.772429e+00	2.772429e+00
+3.431000e-01	0.000000e+00	0.000000e+00	6.430000e+00	1.087483e+00	1.087483e+00
+3.843000e-01	0.000000e+00	0.000000e+00	2.200000e+00	3.907480e-01	3.907480e-01
+4.359000e-01	0.000000e+00	0.000000e+00	5.600000e-01	1.246950e-01	1.246950e-01
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/E605_1991_I302822/d06-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -98.8, up: 98.8}, 'sys,Normalisation error': {dn: -62.85000000000001, up: 62.85000000000001}, 'sys,Point-to-point systematic error': {dn: -20.950000000000003, up: 20.950000000000003}}, 1: {error: {dn: -89.7, up: 89.7}, 'sys,Normalisation error': {dn: -59.4, up: 59.4}, 'sys,Point-to-point systematic error': {dn: -19.8, up: 19.8}}, 2: {error: {dn: -70.2, up: 70.2}, 'sys,Normalisation error': {dn: -49.65, up: 49.65}, 'sys,Point-to-point systematic error': {dn: -16.55, up: 16.55}}, 3: {error: {dn: -79.3, up: 79.3}, 'sys,Normalisation error': {dn: -56.55, up: 56.55}, 'sys,Point-to-point systematic error': {dn: -18.85, up: 18.85}}, 4: {error: {dn: -84.8, up: 84.8}, 'sys,Normalisation error': {dn: -60.15, up: 60.15}, 'sys,Point-to-point systematic error': {dn: -20.049999999999997, up: 20.049999999999997}}, 5: {error: {dn: -17.1, up: 17.1}, 'sys,Normalisation error': {dn: -28.95, up: 28.95}, 'sys,Point-to-point systematic error': {dn: -9.65, up: 9.65}}, 6: {error: {dn: -12.7, up: 12.7}, 'sys,Normalisation error': {dn: -22.95, up: 22.95}, 'sys,Point-to-point systematic error': {dn: -7.65, up: 7.65}}, 7: {error: {dn: -12.6, up: 12.6}, 'sys,Normalisation error': {dn: -22.65, up: 22.65}, 'sys,Point-to-point systematic error': {dn: -7.55, up: 7.55}}, 8: {error: {dn: -10.4, up: 10.4}, 'sys,Normalisation error': {dn: -20.1, up: 20.1}, 'sys,Point-to-point systematic error': {dn: -6.7, up: 6.7}}, 9: {error: {dn: -11.6, up: 11.6}, 'sys,Normalisation error': {dn: -22.35, up: 22.35}, 'sys,Point-to-point systematic error': {dn: -7.45, up: 7.45}}, 10: {error: {dn: -5.31, up: 5.31}, 'sys,Normalisation error': {dn: -8.924999999999999, up: 8.924999999999999}, 'sys,Point-to-point systematic error': {dn: -2.9749999999999996, up: 2.9749999999999996}}, 11: {error: {dn: -4.35, up: 4.35}, 'sys,Normalisation error': {dn: -6.045, up: 6.045}, 'sys,Point-to-point systematic error': {dn: -2.0149999999999997, up: 2.0149999999999997}}, 12: {error: {dn: -3.44, up: 3.44}, 'sys,Normalisation error': {dn: -4.695, up: 4.695}, 'sys,Point-to-point systematic error': {dn: -1.565, up: 1.565}}, 13: {error: {dn: -1.6, up: 1.6}, 'sys,Normalisation error': {dn: -3.4799999999999995, up: 3.4799999999999995}, 'sys,Point-to-point systematic error': {dn: -1.16, up: 1.16}}, 14: {error: {dn: -0.957, up: 0.957}, 'sys,Normalisation error': {dn: -2.3850000000000002, up: 2.3850000000000002}, 'sys,Point-to-point systematic error': {dn: -0.795, up: 0.795}}, 15: {error: {dn: -0.449, up: 0.449}, 'sys,Normalisation error': {dn: -0.9450000000000001, up: 0.9450000000000001}, 'sys,Point-to-point systematic error': {dn: -0.315, up: 0.315}}, 16: {error: {dn: -0.223, up: 0.223}, 'sys,Normalisation error': {dn: -0.357, up: 0.357}, 'sys,Point-to-point systematic error': {dn: -0.119, up: 0.119}}, 17: {error: {dn: -0.11, up: 0.11}, 'sys,Normalisation error': {dn: -0.09104999999999999, up: 0.09104999999999999}, 'sys,Point-to-point systematic error': {dn: -0.03035, up: 0.03035}}}
+
+IsRef: 1
+Path: /REF/E605_1991_I302822/d06-x01-y01
+Title: doi:10.17182/hepdata.22831.v1/t6
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.831000e-01	0.000000e+00	0.000000e+00	4.190000e+02	1.189557e+02	1.189557e+02
+1.883000e-01	0.000000e+00	0.000000e+00	3.960000e+02	1.093915e+02	1.093915e+02
+1.935000e-01	0.000000e+00	0.000000e+00	3.310000e+02	8.756178e+01	8.756178e+01
+1.986000e-01	0.000000e+00	0.000000e+00	3.770000e+02	9.920542e+01	9.920542e+01
+2.038000e-01	0.000000e+00	0.000000e+00	4.010000e+02	1.058823e+02	1.058823e+02
+2.089000e-01	0.000000e+00	0.000000e+00	1.930000e+02	3.498049e+01	3.498049e+01
+2.141000e-01	0.000000e+00	0.000000e+00	1.530000e+02	2.732243e+01	2.732243e+01
+2.192000e-01	0.000000e+00	0.000000e+00	1.510000e+02	2.699602e+01	2.699602e+01
+2.244000e-01	0.000000e+00	0.000000e+00	1.340000e+02	2.360212e+01	2.360212e+01
+2.296000e-01	0.000000e+00	0.000000e+00	1.490000e+02	2.625995e+01	2.625995e+01
+2.708000e-01	0.000000e+00	0.000000e+00	5.950000e+01	1.080289e+01	1.080289e+01
+2.760000e-01	0.000000e+00	0.000000e+00	4.030000e+01	7.715228e+00	7.715228e+00
+2.812000e-01	0.000000e+00	0.000000e+00	3.130000e+01	6.027093e+00	6.027093e+00
+2.915000e-01	0.000000e+00	0.000000e+00	2.320000e+01	4.002000e+00	4.002000e+00
+3.121000e-01	0.000000e+00	0.000000e+00	1.590000e+01	2.690000e+00	2.690000e+00
+3.431000e-01	0.000000e+00	0.000000e+00	6.300000e+00	1.092635e+00	1.092635e+00
+3.843000e-01	0.000000e+00	0.000000e+00	2.380000e+00	4.374231e-01	4.374231e-01
+4.359000e-01	0.000000e+00	0.000000e+00	6.070000e-01	1.459836e-01	1.459836e-01
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/E605_1991_I302822/d07-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -33.3, up: 33.3}, 'sys,Normalisation error': {dn: -29.7, up: 29.7}, 'sys,Point-to-point systematic error': {dn: -9.9, up: 9.9}}, 1: {error: {dn: -26.8, up: 26.8}, 'sys,Normalisation error': {dn: -25.95, up: 25.95}, 'sys,Point-to-point systematic error': {dn: -8.65, up: 8.65}}, 2: {error: {dn: -25.6, up: 25.6}, 'sys,Normalisation error': {dn: -22.35, up: 22.35}, 'sys,Point-to-point systematic error': {dn: -7.45, up: 7.45}}, 3: {error: {dn: -14.8, up: 14.8}, 'sys,Normalisation error': {dn: -14.79, up: 14.79}, 'sys,Point-to-point systematic error': {dn: -4.93, up: 4.93}}, 4: {error: {dn: -11.3, up: 11.3}, 'sys,Normalisation error': {dn: -10.665, up: 10.665}, 'sys,Point-to-point systematic error': {dn: -3.5549999999999997, up: 3.5549999999999997}}, 5: {error: {dn: -6.61, up: 6.61}, 'sys,Normalisation error': {dn: -4.305, up: 4.305}, 'sys,Point-to-point systematic error': {dn: -1.4349999999999998, up: 1.4349999999999998}}, 6: {error: {dn: -8.08, up: 8.08}, 'sys,Normalisation error': {dn: -5.52, up: 5.52}, 'sys,Point-to-point systematic error': {dn: -1.8399999999999999, up: 1.8399999999999999}}, 7: {error: {dn: -3.03, up: 3.03}, 'sys,Normalisation error': {dn: -3.705, up: 3.705}, 'sys,Point-to-point systematic error': {dn: -1.2349999999999999, up: 1.2349999999999999}}, 8: {error: {dn: -1.55, up: 1.55}, 'sys,Normalisation error': {dn: -2.19, up: 2.19}, 'sys,Point-to-point systematic error': {dn: -0.73, up: 0.73}}, 9: {error: {dn: -0.709, up: 0.709}, 'sys,Normalisation error': {dn: -0.9209999999999999, up: 0.9209999999999999}, 'sys,Point-to-point systematic error': {dn: -0.307, up: 0.307}}, 10: {error: {dn: -0.342, up: 0.342}, 'sys,Normalisation error': {dn: -0.2925, up: 0.2925}, 'sys,Point-to-point systematic error': {dn: -0.0975, up: 0.0975}}, 11: {error: {dn: -0.142, up: 0.142}, 'sys,Normalisation error': {dn: -0.06345, up: 0.06345}, 'sys,Point-to-point systematic error': {dn: -0.021150000000000002, up: 0.021150000000000002}}}
+
+IsRef: 1
+Path: /REF/E605_1991_I302822/d07-x01-y01
+Title: doi:10.17182/hepdata.22831.v1/t7
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+2.141000e-01	0.000000e+00	0.000000e+00	1.980000e+02	4.570547e+01	4.570547e+01
+2.192000e-01	0.000000e+00	0.000000e+00	1.730000e+02	3.829445e+01	3.829445e+01
+2.244000e-01	0.000000e+00	0.000000e+00	1.490000e+02	3.479059e+01	3.479059e+01
+2.296000e-01	0.000000e+00	0.000000e+00	9.860000e+01	2.149626e+01	2.149626e+01
+2.708000e-01	0.000000e+00	0.000000e+00	7.110000e+01	1.593958e+01	1.593958e+01
+2.760000e-01	0.000000e+00	0.000000e+00	2.870000e+01	8.017752e+00	8.017752e+00
+2.812000e-01	0.000000e+00	0.000000e+00	3.680000e+01	9.957028e+00	9.957028e+00
+2.915000e-01	0.000000e+00	0.000000e+00	2.470000e+01	4.942990e+00	4.942990e+00
+3.121000e-01	0.000000e+00	0.000000e+00	1.460000e+01	2.780557e+00	2.780557e+00
+3.431000e-01	0.000000e+00	0.000000e+00	6.140000e+00	1.202153e+00	1.202153e+00
+3.843000e-01	0.000000e+00	0.000000e+00	1.950000e+00	4.604634e-01	4.604634e-01
+4.359000e-01	0.000000e+00	0.000000e+00	4.230000e-01	1.569625e-01	1.569625e-01
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/E605_1991_I302822/d08-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -3.22, up: 3.22}, 'sys,Normalisation error': {dn: -1.308, up: 1.308}, 'sys,Point-to-point systematic error': {dn: -0.436, up: 0.436}}, 1: {error: {dn: -1.21, up: 1.21}, 'sys,Normalisation error': {dn: -0.7484999999999999, up: 0.7484999999999999}, 'sys,Point-to-point systematic error': {dn: -0.2495, up: 0.2495}}, 2: {error: {dn: -1.02, up: 1.02}, 'sys,Normalisation error': {dn: -0.6584999999999999, up: 0.6584999999999999}, 'sys,Point-to-point systematic error': {dn: -0.21949999999999997, up: 0.21949999999999997}}, 3: {error: {dn: -0.839, up: 0.839}, 'sys,Normalisation error': {dn: -0.5985, up: 0.5985}, 'sys,Point-to-point systematic error': {dn: -0.1995, up: 0.1995}}, 4: {error: {dn: -0.565, up: 0.565}, 'sys,Normalisation error': {dn: -0.47700000000000004, up: 0.47700000000000004}, 'sys,Point-to-point systematic error': {dn: -0.159, up: 0.159}}, 5: {error: {dn: -0.784, up: 0.784}, 'sys,Normalisation error': {dn: -0.6255000000000001, up: 0.6255000000000001}, 'sys,Point-to-point systematic error': {dn: -0.20850000000000002, up: 0.20850000000000002}}, 6: {error: {dn: -0.312, up: 0.312}, 'sys,Normalisation error': {dn: -0.345, up: 0.345}, 'sys,Point-to-point systematic error': {dn: -0.11499999999999999, up: 0.11499999999999999}}, 7: {error: {dn: -0.312, up: 0.312}, 'sys,Normalisation error': {dn: -0.42450000000000004, up: 0.42450000000000004}, 'sys,Point-to-point systematic error': {dn: -0.14150000000000001, up: 0.14150000000000001}}, 8: {error: {dn: -0.141, up: 0.141}, 'sys,Normalisation error': {dn: -0.141, up: 0.141}, 'sys,Point-to-point systematic error': {dn: -0.04699999999999999, up: 0.04699999999999999}}, 9: {error: {dn: -0.163, up: 0.163}, 'sys,Normalisation error': {dn: -0.159, up: 0.159}, 'sys,Point-to-point systematic error': {dn: -0.053, up: 0.053}}, 10: {error: {dn: -0.144, up: 0.144}, 'sys,Normalisation error': {dn: -0.1206, up: 0.1206}, 'sys,Point-to-point systematic error': {dn: -0.0402, up: 0.0402}}, 11: {error: {dn: -0.0827, up: 0.0827}, 'sys,Normalisation error': {dn: -0.0588, up: 0.0588}, 'sys,Point-to-point systematic error': {dn: -0.0196, up: 0.0196}}, 12: {error: {dn: -0.102, up: 0.102}, 'sys,Normalisation error': {dn: -0.0693, up: 0.0693}, 'sys,Point-to-point systematic error': {dn: -0.0231, up: 0.0231}}, 13: {error: {dn: -0.0587, up: 0.0587}, 'sys,Normalisation error': {dn: -0.061649999999999996, up: 0.061649999999999996}, 'sys,Point-to-point systematic error': {dn: -0.02055, up: 0.02055}}, 14: {error: {dn: -0.0446, up: 0.0446}, 'sys,Normalisation error': {dn: -0.0348, up: 0.0348}, 'sys,Point-to-point systematic error': {dn: -0.0116, up: 0.0116}}, 15: {error: {dn: -0.0485, up: 0.0485}, 'sys,Normalisation error': {dn: -0.0282, up: 0.0282}, 'sys,Point-to-point systematic error': {dn: -0.0094, up: 0.0094}}}
+
+IsRef: 1
+Path: /REF/E605_1991_I302822/d08-x01-y01
+Title: doi:10.17182/hepdata.22831.v1/t8
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.831000e-01	0.000000e+00	0.000000e+00	8.720000e+00	3.502765e+00	3.502765e+00
+1.897000e-01	0.000000e+00	0.000000e+00	4.990000e+00	1.444508e+00	1.444508e+00
+1.974000e-01	0.000000e+00	0.000000e+00	4.390000e+00	1.233776e+00	1.233776e+00
+2.038000e-01	0.000000e+00	0.000000e+00	3.990000e+00	1.049725e+00	1.049725e+00
+2.117000e-01	0.000000e+00	0.000000e+00	3.180000e+00	7.563300e-01	7.563300e-01
+2.188000e-01	0.000000e+00	0.000000e+00	4.170000e+00	1.024392e+00	1.024392e+00
+2.264000e-01	0.000000e+00	0.000000e+00	2.300000e+00	4.791597e-01	4.791597e-01
+2.338000e-01	0.000000e+00	0.000000e+00	2.830000e+00	5.454966e-01	5.454966e-01
+2.772000e-01	0.000000e+00	0.000000e+00	9.400000e-01	2.048683e-01	2.048683e-01
+2.847000e-01	0.000000e+00	0.000000e+00	1.060000e+00	2.337926e-01	2.337926e-01
+2.917000e-01	0.000000e+00	0.000000e+00	8.040000e-01	1.920844e-01	1.920844e-01
+2.994000e-01	0.000000e+00	0.000000e+00	3.920000e-01	1.033484e-01	1.033484e-01
+3.069000e-01	0.000000e+00	0.000000e+00	4.620000e-01	1.254596e-01	1.254596e-01
+3.201000e-01	0.000000e+00	0.000000e+00	4.110000e-01	8.757120e-02	8.757120e-02
+3.428000e-01	0.000000e+00	0.000000e+00	2.320000e-01	5.774738e-02	5.774738e-02
+3.741000e-01	0.000000e+00	0.000000e+00	1.880000e-01	5.688453e-02	5.688453e-02
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/E605_1991_I302822/d09-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -1.19, up: 1.19}, 'sys,Normalisation error': {dn: -0.8475, up: 0.8475}, 'sys,Point-to-point systematic error': {dn: -0.28250000000000003, up: 0.28250000000000003}}, 1: {error: {dn: -0.609, up: 0.609}, 'sys,Normalisation error': {dn: -0.5955, up: 0.5955}, 'sys,Point-to-point systematic error': {dn: -0.1985, up: 0.1985}}, 2: {error: {dn: -0.657, up: 0.657}, 'sys,Normalisation error': {dn: -0.7245, up: 0.7245}, 'sys,Point-to-point systematic error': {dn: -0.24150000000000002, up: 0.24150000000000002}}, 3: {error: {dn: -0.368, up: 0.368}, 'sys,Normalisation error': {dn: -0.4305, up: 0.4305}, 'sys,Point-to-point systematic error': {dn: -0.1435, up: 0.1435}}, 4: {error: {dn: -0.46, up: 0.46}, 'sys,Normalisation error': {dn: -0.5655, up: 0.5655}, 'sys,Point-to-point systematic error': {dn: -0.1885, up: 0.1885}}, 5: {error: {dn: -0.284, up: 0.284}, 'sys,Normalisation error': {dn: -0.4155, up: 0.4155}, 'sys,Point-to-point systematic error': {dn: -0.13849999999999998, up: 0.13849999999999998}}, 6: {error: {dn: -0.275, up: 0.275}, 'sys,Normalisation error': {dn: -0.48450000000000004, up: 0.48450000000000004}, 'sys,Point-to-point systematic error': {dn: -0.1615, up: 0.1615}}, 7: {error: {dn: -0.223, up: 0.223}, 'sys,Normalisation error': {dn: -0.459, up: 0.459}, 'sys,Point-to-point systematic error': {dn: -0.15300000000000002, up: 0.15300000000000002}}, 8: {error: {dn: -0.112, up: 0.112}, 'sys,Normalisation error': {dn: -0.1575, up: 0.1575}, 'sys,Point-to-point systematic error': {dn: -0.052500000000000005, up: 0.052500000000000005}}, 9: {error: {dn: -0.0887, up: 0.0887}, 'sys,Normalisation error': {dn: -0.12405, up: 0.12405}, 'sys,Point-to-point systematic error': {dn: -0.04135, up: 0.04135}}, 10: {error: {dn: -0.098, up: 0.098}, 'sys,Normalisation error': {dn: -0.1299, up: 0.1299}, 'sys,Point-to-point systematic error': {dn: -0.0433, up: 0.0433}}, 11: {error: {dn: -0.103, up: 0.103}, 'sys,Normalisation error': {dn: -0.1179, up: 0.1179}, 'sys,Point-to-point systematic error': {dn: -0.0393, up: 0.0393}}, 12: {error: {dn: -0.102, up: 0.102}, 'sys,Normalisation error': {dn: -0.096, up: 0.096}, 'sys,Point-to-point systematic error': {dn: -0.032, up: 0.032}}, 13: {error: {dn: -0.0455, up: 0.0455}, 'sys,Normalisation error': {dn: -0.07155, up: 0.07155}, 'sys,Point-to-point systematic error': {dn: -0.02385, up: 0.02385}}, 14: {error: {dn: -0.0396, up: 0.0396}, 'sys,Normalisation error': {dn: -0.050550000000000005, up: 0.050550000000000005}, 'sys,Point-to-point systematic error': {dn: -0.01685, up: 0.01685}}, 15: {error: {dn: -0.0292, up: 0.0292}, 'sys,Normalisation error': {dn: -0.01965, up: 0.01965}, 'sys,Point-to-point systematic error': {dn: -0.00655, up: 0.00655}}, 16: {error: {dn: -0.0268, up: 0.0268}, 'sys,Normalisation error': {dn: -0.010560000000000002, up: 0.010560000000000002}, 'sys,Point-to-point systematic error': {dn: -0.0035200000000000006, up: 0.0035200000000000006}}}
+
+IsRef: 1
+Path: /REF/E605_1991_I302822/d09-x01-y01
+Title: doi:10.17182/hepdata.22831.v1/t9
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.831000e-01	0.000000e+00	0.000000e+00	5.650000e+00	1.488006e+00	1.488006e+00
+1.897000e-01	0.000000e+00	0.000000e+00	3.970000e+00	8.745876e-01	8.745876e-01
+1.974000e-01	0.000000e+00	0.000000e+00	4.830000e+00	1.007408e+00	1.007408e+00
+2.038000e-01	0.000000e+00	0.000000e+00	2.870000e+00	5.842487e-01	5.842487e-01
+2.117000e-01	0.000000e+00	0.000000e+00	3.770000e+00	7.529426e-01	7.529426e-01
+2.188000e-01	0.000000e+00	0.000000e+00	2.770000e+00	5.219947e-01	5.219947e-01
+2.264000e-01	0.000000e+00	0.000000e+00	3.230000e+00	5.800409e-01	5.800409e-01
+2.338000e-01	0.000000e+00	0.000000e+00	3.060000e+00	5.327467e-01	5.327467e-01
+2.772000e-01	0.000000e+00	0.000000e+00	1.050000e+00	2.002661e-01	2.002661e-01
+2.847000e-01	0.000000e+00	0.000000e+00	8.270000e-01	1.580061e-01	1.580061e-01
+2.917000e-01	0.000000e+00	0.000000e+00	8.660000e-01	1.683832e-01	1.683832e-01
+2.994000e-01	0.000000e+00	0.000000e+00	7.860000e-01	1.614122e-01	1.614122e-01
+3.069000e-01	0.000000e+00	0.000000e+00	6.400000e-01	1.436802e-01	1.436802e-01
+3.201000e-01	0.000000e+00	0.000000e+00	4.770000e-01	8.808221e-02	8.808221e-02
+3.428000e-01	0.000000e+00	0.000000e+00	3.370000e-01	6.638814e-02	6.638814e-02
+3.741000e-01	0.000000e+00	0.000000e+00	1.310000e-01	3.580035e-02	3.580035e-02
+3.993000e-01	0.000000e+00	0.000000e+00	7.040000e-02	2.901972e-02	2.901972e-02
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/E605_1991_I302822/d10-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.995, up: 0.995}, 'sys,Normalisation error': {dn: -0.99, up: 0.99}, 'sys,Point-to-point systematic error': {dn: -0.33, up: 0.33}}, 1: {error: {dn: -0.922, up: 0.922}, 'sys,Normalisation error': {dn: -1.068, up: 1.068}, 'sys,Point-to-point systematic error': {dn: -0.356, up: 0.356}}, 2: {error: {dn: -0.439, up: 0.439}, 'sys,Normalisation error': {dn: -0.6194999999999999, up: 0.6194999999999999}, 'sys,Point-to-point systematic error': {dn: -0.2065, up: 0.2065}}, 3: {error: {dn: -0.482, up: 0.482}, 'sys,Normalisation error': {dn: -0.6839999999999999, up: 0.6839999999999999}, 'sys,Point-to-point systematic error': {dn: -0.22799999999999998, up: 0.22799999999999998}}, 4: {error: {dn: -0.391, up: 0.391}, 'sys,Normalisation error': {dn: -0.666, up: 0.666}, 'sys,Point-to-point systematic error': {dn: -0.222, up: 0.222}}, 5: {error: {dn: -0.309, up: 0.309}, 'sys,Normalisation error': {dn: -0.627, up: 0.627}, 'sys,Point-to-point systematic error': {dn: -0.209, up: 0.209}}, 6: {error: {dn: -0.208, up: 0.208}, 'sys,Normalisation error': {dn: -0.483, up: 0.483}, 'sys,Point-to-point systematic error': {dn: -0.161, up: 0.161}}, 7: {error: {dn: -0.197, up: 0.197}, 'sys,Normalisation error': {dn: -0.49199999999999994, up: 0.49199999999999994}, 'sys,Point-to-point systematic error': {dn: -0.16399999999999998, up: 0.16399999999999998}}, 8: {error: {dn: -0.103, up: 0.103}, 'sys,Normalisation error': {dn: -0.1905, up: 0.1905}, 'sys,Point-to-point systematic error': {dn: -0.0635, up: 0.0635}}, 9: {error: {dn: -0.101, up: 0.101}, 'sys,Normalisation error': {dn: -0.177, up: 0.177}, 'sys,Point-to-point systematic error': {dn: -0.059, up: 0.059}}, 10: {error: {dn: -0.0727, up: 0.0727}, 'sys,Normalisation error': {dn: -0.1179, up: 0.1179}, 'sys,Point-to-point systematic error': {dn: -0.0393, up: 0.0393}}, 11: {error: {dn: -0.0809, up: 0.0809}, 'sys,Normalisation error': {dn: -0.12150000000000002, up: 0.12150000000000002}, 'sys,Point-to-point systematic error': {dn: -0.04050000000000001, up: 0.04050000000000001}}, 12: {error: {dn: -0.0772, up: 0.0772}, 'sys,Normalisation error': {dn: -0.10335, up: 0.10335}, 'sys,Point-to-point systematic error': {dn: -0.034449999999999995, up: 0.034449999999999995}}, 13: {error: {dn: -0.0422, up: 0.0422}, 'sys,Normalisation error': {dn: -0.0891, up: 0.0891}, 'sys,Point-to-point systematic error': {dn: -0.0297, up: 0.0297}}, 14: {error: {dn: -0.0316, up: 0.0316}, 'sys,Normalisation error': {dn: -0.052649999999999995, up: 0.052649999999999995}, 'sys,Point-to-point systematic error': {dn: -0.01755, up: 0.01755}}, 15: {error: {dn: -0.0255, up: 0.0255}, 'sys,Normalisation error': {dn: -0.021149999999999995, up: 0.021149999999999995}, 'sys,Point-to-point systematic error': {dn: -0.007049999999999999, up: 0.007049999999999999}}, 16: {error: {dn: -0.0222, up: 0.0222}, 'sys,Normalisation error': {dn: -0.011459999999999998, up: 0.011459999999999998}, 'sys,Point-to-point systematic error': {dn: -0.0038199999999999996, up: 0.0038199999999999996}}}
+
+IsRef: 1
+Path: /REF/E605_1991_I302822/d10-x01-y01
+Title: doi:10.17182/hepdata.22831.v1/t10
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.825000e-01	0.000000e+00	0.000000e+00	6.600000e+00	1.441882e+00	1.441882e+00
+1.897000e-01	0.000000e+00	0.000000e+00	7.120000e+00	1.455144e+00	1.455144e+00
+1.969000e-01	0.000000e+00	0.000000e+00	4.130000e+00	7.868567e-01	7.868567e-01
+2.041000e-01	0.000000e+00	0.000000e+00	4.560000e+00	8.672739e-01	8.672739e-01
+2.116000e-01	0.000000e+00	0.000000e+00	4.440000e+00	8.035677e-01	8.035677e-01
+2.192000e-01	0.000000e+00	0.000000e+00	4.180000e+00	7.295828e-01	7.295828e-01
+2.264000e-01	0.000000e+00	0.000000e+00	3.220000e+00	5.499764e-01	5.499764e-01
+2.336000e-01	0.000000e+00	0.000000e+00	3.280000e+00	5.547693e-01	5.547693e-01
+2.773000e-01	0.000000e+00	0.000000e+00	1.270000e+00	2.256801e-01	2.256801e-01
+2.844000e-01	0.000000e+00	0.000000e+00	1.180000e+00	2.121580e-01	2.121580e-01
+2.917000e-01	0.000000e+00	0.000000e+00	7.860000e-01	1.439798e-01	1.439798e-01
+2.987000e-01	0.000000e+00	0.000000e+00	8.100000e-01	1.514837e-01	1.514837e-01
+3.064000e-01	0.000000e+00	0.000000e+00	6.890000e-01	1.335210e-01	1.335210e-01
+3.199000e-01	0.000000e+00	0.000000e+00	5.940000e-01	1.029648e-01	1.029648e-01
+3.430000e-01	0.000000e+00	0.000000e+00	3.510000e-01	6.386380e-02	6.386380e-02
+3.760000e-01	0.000000e+00	0.000000e+00	1.410000e-01	3.387145e-02	3.387145e-02
+4.044000e-01	0.000000e+00	0.000000e+00	7.640000e-02	2.527378e-02	2.527378e-02
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/E605_1991_I302822/d11-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.894, up: 0.894}, 'sys,Normalisation error': {dn: -1.08, up: 1.08}, 'sys,Point-to-point systematic error': {dn: -0.36000000000000004, up: 0.36000000000000004}}, 1: {error: {dn: -0.861, up: 0.861}, 'sys,Normalisation error': {dn: -1.083, up: 1.083}, 'sys,Point-to-point systematic error': {dn: -0.361, up: 0.361}}, 2: {error: {dn: -0.638, up: 0.638}, 'sys,Normalisation error': {dn: -0.8699999999999999, up: 0.8699999999999999}, 'sys,Point-to-point systematic error': {dn: -0.29, up: 0.29}}, 3: {error: {dn: -0.36, up: 0.36}, 'sys,Normalisation error': {dn: -0.6584999999999999, up: 0.6584999999999999}, 'sys,Point-to-point systematic error': {dn: -0.21949999999999997, up: 0.21949999999999997}}, 4: {error: {dn: -0.282, up: 0.282}, 'sys,Normalisation error': {dn: -0.621, up: 0.621}, 'sys,Point-to-point systematic error': {dn: -0.207, up: 0.207}}, 5: {error: {dn: -0.192, up: 0.192}, 'sys,Normalisation error': {dn: -0.4785, up: 0.4785}, 'sys,Point-to-point systematic error': {dn: -0.15949999999999998, up: 0.15949999999999998}}, 6: {error: {dn: -0.199, up: 0.199}, 'sys,Normalisation error': {dn: -0.49649999999999994, up: 0.49649999999999994}, 'sys,Point-to-point systematic error': {dn: -0.16549999999999998, up: 0.16549999999999998}}, 7: {error: {dn: -0.178, up: 0.178}, 'sys,Normalisation error': {dn: -0.4455, up: 0.4455}, 'sys,Point-to-point systematic error': {dn: -0.1485, up: 0.1485}}, 8: {error: {dn: -0.0856, up: 0.0856}, 'sys,Normalisation error': {dn: -0.18, up: 0.18}, 'sys,Point-to-point systematic error': {dn: -0.06, up: 0.06}}, 9: {error: {dn: -0.0781, up: 0.0781}, 'sys,Normalisation error': {dn: -0.14805000000000001, up: 0.14805000000000001}, 'sys,Point-to-point systematic error': {dn: -0.049350000000000005, up: 0.049350000000000005}}, 10: {error: {dn: -0.0683, up: 0.0683}, 'sys,Normalisation error': {dn: -0.1176, up: 0.1176}, 'sys,Point-to-point systematic error': {dn: -0.0392, up: 0.0392}}, 11: {error: {dn: -0.0735, up: 0.0735}, 'sys,Normalisation error': {dn: -0.12494999999999998, up: 0.12494999999999998}, 'sys,Point-to-point systematic error': {dn: -0.04164999999999999, up: 0.04164999999999999}}, 12: {error: {dn: -0.0702, up: 0.0702}, 'sys,Normalisation error': {dn: -0.11415, up: 0.11415}, 'sys,Point-to-point systematic error': {dn: -0.03805, up: 0.03805}}, 13: {error: {dn: -0.0387, up: 0.0387}, 'sys,Normalisation error': {dn: -0.0936, up: 0.0936}, 'sys,Point-to-point systematic error': {dn: -0.0312, up: 0.0312}}, 14: {error: {dn: -0.0239, up: 0.0239}, 'sys,Normalisation error': {dn: -0.0441, up: 0.0441}, 'sys,Point-to-point systematic error': {dn: -0.0147, up: 0.0147}}, 15: {error: {dn: -0.024, up: 0.024}, 'sys,Normalisation error': {dn: -0.0276, up: 0.0276}, 'sys,Point-to-point systematic error': {dn: -0.0092, up: 0.0092}}, 16: {error: {dn: -0.0192, up: 0.0192}, 'sys,Normalisation error': {dn: -0.01245, up: 0.01245}, 'sys,Point-to-point systematic error': {dn: -0.00415, up: 0.00415}}}
+
+IsRef: 1
+Path: /REF/E605_1991_I302822/d11-x01-y01
+Title: doi:10.17182/hepdata.22831.v1/t11
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.825000e-01	0.000000e+00	0.000000e+00	7.200000e+00	1.447493e+00	1.447493e+00
+1.897000e-01	0.000000e+00	0.000000e+00	7.220000e+00	1.429871e+00	1.429871e+00
+1.969000e-01	0.000000e+00	0.000000e+00	5.800000e+00	1.117159e+00	1.117159e+00
+2.041000e-01	0.000000e+00	0.000000e+00	4.390000e+00	7.819223e-01	7.819223e-01
+2.116000e-01	0.000000e+00	0.000000e+00	4.140000e+00	7.127510e-01	7.127510e-01
+2.192000e-01	0.000000e+00	0.000000e+00	3.190000e+00	5.396911e-01	5.396911e-01
+2.264000e-01	0.000000e+00	0.000000e+00	3.310000e+00	5.599138e-01	5.599138e-01
+2.336000e-01	0.000000e+00	0.000000e+00	2.970000e+00	5.022017e-01	5.022017e-01
+2.773000e-01	0.000000e+00	0.000000e+00	1.200000e+00	2.081523e-01	2.081523e-01
+2.844000e-01	0.000000e+00	0.000000e+00	9.870000e-01	1.745103e-01	1.745103e-01
+2.917000e-01	0.000000e+00	0.000000e+00	7.840000e-01	1.415319e-01	1.415319e-01
+2.987000e-01	0.000000e+00	0.000000e+00	8.330000e-01	1.508293e-01	1.508293e-01
+3.064000e-01	0.000000e+00	0.000000e+00	7.610000e-01	1.393057e-01	1.393057e-01
+3.199000e-01	0.000000e+00	0.000000e+00	6.240000e-01	1.059816e-01	1.059816e-01
+3.430000e-01	0.000000e+00	0.000000e+00	2.940000e-01	5.226959e-02	5.226959e-02
+3.760000e-01	0.000000e+00	0.000000e+00	1.840000e-01	3.771472e-02	3.771472e-02
+4.044000e-01	0.000000e+00	0.000000e+00	8.300000e-02	2.325650e-02	2.325650e-02
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/E605_1991_I302822/d12-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -1.24, up: 1.24}, 'sys,Normalisation error': {dn: -1.2794999999999999, up: 1.2794999999999999}, 'sys,Point-to-point systematic error': {dn: -0.42649999999999993, up: 0.42649999999999993}}, 1: {error: {dn: -0.891, up: 0.891}, 'sys,Normalisation error': {dn: -1.089, up: 1.089}, 'sys,Point-to-point systematic error': {dn: -0.363, up: 0.363}}, 2: {error: {dn: -0.492, up: 0.492}, 'sys,Normalisation error': {dn: -0.705, up: 0.705}, 'sys,Point-to-point systematic error': {dn: -0.235, up: 0.235}}, 3: {error: {dn: -0.419, up: 0.419}, 'sys,Normalisation error': {dn: -0.8625, up: 0.8625}, 'sys,Point-to-point systematic error': {dn: -0.28750000000000003, up: 0.28750000000000003}}, 4: {error: {dn: -0.249, up: 0.249}, 'sys,Normalisation error': {dn: -0.621, up: 0.621}, 'sys,Point-to-point systematic error': {dn: -0.207, up: 0.207}}, 5: {error: {dn: -0.226, up: 0.226}, 'sys,Normalisation error': {dn: -0.564, up: 0.564}, 'sys,Point-to-point systematic error': {dn: -0.18799999999999997, up: 0.18799999999999997}}, 6: {error: {dn: -0.201, up: 0.201}, 'sys,Normalisation error': {dn: -0.5025000000000001, up: 0.5025000000000001}, 'sys,Point-to-point systematic error': {dn: -0.1675, up: 0.1675}}, 7: {error: {dn: -0.195, up: 0.195}, 'sys,Normalisation error': {dn: -0.4860000000000001, up: 0.4860000000000001}, 'sys,Point-to-point systematic error': {dn: -0.16200000000000003, up: 0.16200000000000003}}, 8: {error: {dn: -0.1, up: 0.1}, 'sys,Normalisation error': {dn: -0.207, up: 0.207}, 'sys,Point-to-point systematic error': {dn: -0.069, up: 0.069}}, 9: {error: {dn: -0.0917, up: 0.0917}, 'sys,Normalisation error': {dn: -0.177, up: 0.177}, 'sys,Point-to-point systematic error': {dn: -0.059, up: 0.059}}, 10: {error: {dn: -0.0844, up: 0.0844}, 'sys,Normalisation error': {dn: -0.16050000000000003, up: 0.16050000000000003}, 'sys,Point-to-point systematic error': {dn: -0.053500000000000006, up: 0.053500000000000006}}, 11: {error: {dn: -0.0777, up: 0.0777}, 'sys,Normalisation error': {dn: -0.1326, up: 0.1326}, 'sys,Point-to-point systematic error': {dn: -0.0442, up: 0.0442}}, 12: {error: {dn: -0.075, up: 0.075}, 'sys,Normalisation error': {dn: -0.11685, up: 0.11685}, 'sys,Point-to-point systematic error': {dn: -0.03895, up: 0.03895}}, 13: {error: {dn: -0.0372, up: 0.0372}, 'sys,Normalisation error': {dn: -0.09, up: 0.09}, 'sys,Point-to-point systematic error': {dn: -0.03, up: 0.03}}, 14: {error: {dn: -0.0267, up: 0.0267}, 'sys,Normalisation error': {dn: -0.0582, up: 0.0582}, 'sys,Point-to-point systematic error': {dn: -0.0194, up: 0.0194}}, 15: {error: {dn: -0.0207, up: 0.0207}, 'sys,Normalisation error': {dn: -0.0285, up: 0.0285}, 'sys,Point-to-point systematic error': {dn: -0.0095, up: 0.0095}}, 16: {error: {dn: -0.018, up: 0.018}, 'sys,Normalisation error': {dn: -0.013875, up: 0.013875}, 'sys,Point-to-point systematic error': {dn: -0.004625000000000001, up: 0.004625000000000001}}, 17: {error: {dn: -0.0144, up: 0.0144}, 'sys,Normalisation error': {dn: -0.007785, up: 0.007785}, 'sys,Point-to-point systematic error': {dn: -0.002595, up: 0.002595}}}
+
+IsRef: 1
+Path: /REF/E605_1991_I302822/d12-x01-y01
+Title: doi:10.17182/hepdata.22831.v1/t12
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.824000e-01	0.000000e+00	0.000000e+00	8.530000e+00	1.832109e+00	1.832109e+00
+1.896000e-01	0.000000e+00	0.000000e+00	7.260000e+00	1.453125e+00	1.453125e+00
+1.970000e-01	0.000000e+00	0.000000e+00	4.700000e+00	8.912430e-01	8.912430e-01
+2.045000e-01	0.000000e+00	0.000000e+00	5.750000e+00	1.001061e+00	1.001061e+00
+2.116000e-01	0.000000e+00	0.000000e+00	4.140000e+00	7.003506e-01	7.003506e-01
+2.188000e-01	0.000000e+00	0.000000e+00	3.760000e+00	6.360157e-01	6.360157e-01
+2.262000e-01	0.000000e+00	0.000000e+00	3.350000e+00	5.665364e-01	5.665364e-01
+2.333000e-01	0.000000e+00	0.000000e+00	3.240000e+00	5.481469e-01	5.481469e-01
+2.770000e-01	0.000000e+00	0.000000e+00	1.380000e+00	2.400208e-01	2.400208e-01
+2.845000e-01	0.000000e+00	0.000000e+00	1.180000e+00	2.078915e-01	2.078915e-01
+2.915000e-01	0.000000e+00	0.000000e+00	1.070000e+00	1.890658e-01	1.890658e-01
+2.992000e-01	0.000000e+00	0.000000e+00	8.840000e-01	1.599178e-01	1.599178e-01
+3.064000e-01	0.000000e+00	0.000000e+00	7.790000e-01	1.442083e-01	1.442083e-01
+3.199000e-01	0.000000e+00	0.000000e+00	6.000000e-01	1.019011e-01	1.019011e-01
+3.433000e-01	0.000000e+00	0.000000e+00	3.880000e-01	6.690658e-02	6.690658e-02
+3.729000e-01	0.000000e+00	0.000000e+00	1.900000e-01	3.648274e-02	3.648274e-02
+4.010000e-01	0.000000e+00	0.000000e+00	9.250000e-02	2.319281e-02	2.319281e-02
+4.367000e-01	0.000000e+00	0.000000e+00	5.190000e-02	1.657408e-02	1.657408e-02
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/E605_1991_I302822/d13-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -1.02, up: 1.02}, 'sys,Normalisation error': {dn: -0.7575, up: 0.7575}, 'sys,Point-to-point systematic error': {dn: -0.2525, up: 0.2525}}, 1: {error: {dn: -1.61, up: 1.61}, 'sys,Normalisation error': {dn: -1.2105000000000001, up: 1.2105000000000001}, 'sys,Point-to-point systematic error': {dn: -0.4035, up: 0.4035}}, 2: {error: {dn: -1.0, up: 1.0}, 'sys,Normalisation error': {dn: -0.912, up: 0.912}, 'sys,Point-to-point systematic error': {dn: -0.304, up: 0.304}}, 3: {error: {dn: -0.383, up: 0.383}, 'sys,Normalisation error': {dn: -0.735, up: 0.735}, 'sys,Point-to-point systematic error': {dn: -0.245, up: 0.245}}, 4: {error: {dn: -0.237, up: 0.237}, 'sys,Normalisation error': {dn: -0.549, up: 0.549}, 'sys,Point-to-point systematic error': {dn: -0.183, up: 0.183}}, 5: {error: {dn: -0.216, up: 0.216}, 'sys,Normalisation error': {dn: -0.519, up: 0.519}, 'sys,Point-to-point systematic error': {dn: -0.173, up: 0.173}}, 6: {error: {dn: -0.205, up: 0.205}, 'sys,Normalisation error': {dn: -0.5115, up: 0.5115}, 'sys,Point-to-point systematic error': {dn: -0.17049999999999998, up: 0.17049999999999998}}, 7: {error: {dn: -0.194, up: 0.194}, 'sys,Normalisation error': {dn: -0.48450000000000004, up: 0.48450000000000004}, 'sys,Point-to-point systematic error': {dn: -0.1615, up: 0.1615}}, 8: {error: {dn: -0.107, up: 0.107}, 'sys,Normalisation error': {dn: -0.2085, up: 0.2085}, 'sys,Point-to-point systematic error': {dn: -0.06949999999999999, up: 0.06949999999999999}}, 9: {error: {dn: -0.0986, up: 0.0986}, 'sys,Normalisation error': {dn: -0.18, up: 0.18}, 'sys,Point-to-point systematic error': {dn: -0.06, up: 0.06}}, 10: {error: {dn: -0.0998, up: 0.0998}, 'sys,Normalisation error': {dn: -0.17099999999999999, up: 0.17099999999999999}, 'sys,Point-to-point systematic error': {dn: -0.056999999999999995, up: 0.056999999999999995}}, 11: {error: {dn: -0.0779, up: 0.0779}, 'sys,Normalisation error': {dn: -0.12090000000000002, up: 0.12090000000000002}, 'sys,Point-to-point systematic error': {dn: -0.0403, up: 0.0403}}, 12: {error: {dn: -0.0801, up: 0.0801}, 'sys,Normalisation error': {dn: -0.11985000000000001, up: 0.11985000000000001}, 'sys,Point-to-point systematic error': {dn: -0.03995, up: 0.03995}}, 13: {error: {dn: -0.0413, up: 0.0413}, 'sys,Normalisation error': {dn: -0.09584999999999999, up: 0.09584999999999999}, 'sys,Point-to-point systematic error': {dn: -0.03195, up: 0.03195}}, 14: {error: {dn: -0.026, up: 0.026}, 'sys,Normalisation error': {dn: -0.0507, up: 0.0507}, 'sys,Point-to-point systematic error': {dn: -0.016900000000000002, up: 0.016900000000000002}}, 15: {error: {dn: -0.0209, up: 0.0209}, 'sys,Normalisation error': {dn: -0.028650000000000002, up: 0.028650000000000002}, 'sys,Point-to-point systematic error': {dn: -0.00955, up: 0.00955}}, 16: {error: {dn: -0.0169, up: 0.0169}, 'sys,Normalisation error': {dn: -0.0162, up: 0.0162}, 'sys,Point-to-point systematic error': {dn: -0.0054, up: 0.0054}}, 17: {error: {dn: -0.0106, up: 0.0106}, 'sys,Normalisation error': {dn: -0.004995, up: 0.004995}, 'sys,Point-to-point systematic error': {dn: -0.001665, up: 0.001665}}}
+
+IsRef: 1
+Path: /REF/E605_1991_I302822/d13-x01-y01
+Title: doi:10.17182/hepdata.22831.v1/t13
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.824000e-01	0.000000e+00	0.000000e+00	5.050000e+00	1.295362e+00	1.295362e+00
+1.896000e-01	0.000000e+00	0.000000e+00	8.070000e+00	2.054318e+00	2.054318e+00
+1.970000e-01	0.000000e+00	0.000000e+00	6.080000e+00	1.387141e+00	1.387141e+00
+2.045000e-01	0.000000e+00	0.000000e+00	4.900000e+00	8.642563e-01	8.642563e-01
+2.116000e-01	0.000000e+00	0.000000e+00	3.660000e+00	6.253471e-01	6.253471e-01
+2.188000e-01	0.000000e+00	0.000000e+00	3.460000e+00	5.881717e-01	5.881717e-01
+2.262000e-01	0.000000e+00	0.000000e+00	3.410000e+00	5.768254e-01	5.768254e-01
+2.333000e-01	0.000000e+00	0.000000e+00	3.230000e+00	5.463136e-01	5.463136e-01
+2.770000e-01	0.000000e+00	0.000000e+00	1.390000e+00	2.444412e-01	2.444412e-01
+2.845000e-01	0.000000e+00	0.000000e+00	1.200000e+00	2.138269e-01	2.138269e-01
+2.915000e-01	0.000000e+00	0.000000e+00	1.140000e+00	2.060341e-01	2.060341e-01
+2.992000e-01	0.000000e+00	0.000000e+00	8.060000e-01	1.493630e-01	1.493630e-01
+3.064000e-01	0.000000e+00	0.000000e+00	7.990000e-01	1.495862e-01	1.495862e-01
+3.199000e-01	0.000000e+00	0.000000e+00	6.390000e-01	1.091500e-01	1.091500e-01
+3.433000e-01	0.000000e+00	0.000000e+00	3.380000e-01	5.943147e-02	5.943147e-02
+3.729000e-01	0.000000e+00	0.000000e+00	1.910000e-01	3.672649e-02	3.672649e-02
+4.010000e-01	0.000000e+00	0.000000e+00	1.080000e-01	2.402520e-02	2.402520e-02
+4.367000e-01	0.000000e+00	0.000000e+00	3.330000e-02	1.183563e-02	1.183563e-02
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/E605_1991_I302822/d14-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.873, up: 0.873}, 'sys,Normalisation error': {dn: -0.5895, up: 0.5895}, 'sys,Point-to-point systematic error': {dn: -0.1965, up: 0.1965}}, 1: {error: {dn: -0.465, up: 0.465}, 'sys,Normalisation error': {dn: -0.5085, up: 0.5085}, 'sys,Point-to-point systematic error': {dn: -0.16949999999999998, up: 0.16949999999999998}}, 2: {error: {dn: -0.419, up: 0.419}, 'sys,Normalisation error': {dn: -0.561, up: 0.561}, 'sys,Point-to-point systematic error': {dn: -0.187, up: 0.187}}, 3: {error: {dn: -0.271, up: 0.271}, 'sys,Normalisation error': {dn: -0.4035, up: 0.4035}, 'sys,Point-to-point systematic error': {dn: -0.1345, up: 0.1345}}, 4: {error: {dn: -0.261, up: 0.261}, 'sys,Normalisation error': {dn: -0.4215, up: 0.4215}, 'sys,Point-to-point systematic error': {dn: -0.1405, up: 0.1405}}, 5: {error: {dn: -0.142, up: 0.142}, 'sys,Normalisation error': {dn: -0.20550000000000002, up: 0.20550000000000002}, 'sys,Point-to-point systematic error': {dn: -0.0685, up: 0.0685}}, 6: {error: {dn: -0.12, up: 0.12}, 'sys,Normalisation error': {dn: -0.17099999999999999, up: 0.17099999999999999}, 'sys,Point-to-point systematic error': {dn: -0.056999999999999995, up: 0.056999999999999995}}, 7: {error: {dn: -0.0958, up: 0.0958}, 'sys,Normalisation error': {dn: -0.13140000000000002, up: 0.13140000000000002}, 'sys,Point-to-point systematic error': {dn: -0.043800000000000006, up: 0.043800000000000006}}, 8: {error: {dn: -0.11, up: 0.11}, 'sys,Normalisation error': {dn: -0.147, up: 0.147}, 'sys,Point-to-point systematic error': {dn: -0.049, up: 0.049}}, 9: {error: {dn: -0.0885, up: 0.0885}, 'sys,Normalisation error': {dn: -0.1128, up: 0.1128}, 'sys,Point-to-point systematic error': {dn: -0.0376, up: 0.0376}}, 10: {error: {dn: -0.0469, up: 0.0469}, 'sys,Normalisation error': {dn: -0.09630000000000001, up: 0.09630000000000001}, 'sys,Point-to-point systematic error': {dn: -0.032100000000000004, up: 0.032100000000000004}}, 11: {error: {dn: -0.0266, up: 0.0266}, 'sys,Normalisation error': {dn: -0.04425, up: 0.04425}, 'sys,Point-to-point systematic error': {dn: -0.01475, up: 0.01475}}, 12: {error: {dn: -0.0255, up: 0.0255}, 'sys,Normalisation error': {dn: -0.030749999999999996, up: 0.030749999999999996}, 'sys,Point-to-point systematic error': {dn: -0.010249999999999999, up: 0.010249999999999999}}, 13: {error: {dn: -0.0207, up: 0.0207}, 'sys,Normalisation error': {dn: -0.0171, up: 0.0171}, 'sys,Point-to-point systematic error': {dn: -0.0057, up: 0.0057}}, 14: {error: {dn: -0.0131, up: 0.0131}, 'sys,Normalisation error': {dn: -0.00729, up: 0.00729}, 'sys,Point-to-point systematic error': {dn: -0.00243, up: 0.00243}}}
+
+IsRef: 1
+Path: /REF/E605_1991_I302822/d14-x01-y01
+Title: doi:10.17182/hepdata.22831.v1/t14
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+2.045000e-01	0.000000e+00	0.000000e+00	3.930000e+00	1.071565e+00	1.071565e+00
+2.120000e-01	0.000000e+00	0.000000e+00	3.390000e+00	7.095967e-01	7.095967e-01
+2.189000e-01	0.000000e+00	0.000000e+00	3.740000e+00	7.247420e-01	7.247420e-01
+2.260000e-01	0.000000e+00	0.000000e+00	2.690000e+00	5.043248e-01	5.043248e-01
+2.334000e-01	0.000000e+00	0.000000e+00	2.810000e+00	5.152897e-01	5.152897e-01
+2.771000e-01	0.000000e+00	0.000000e+00	1.370000e+00	2.590106e-01	2.590106e-01
+2.843000e-01	0.000000e+00	0.000000e+00	1.140000e+00	2.165410e-01	2.165410e-01
+2.915000e-01	0.000000e+00	0.000000e+00	8.760000e-01	1.684103e-01	1.684103e-01
+2.988000e-01	0.000000e+00	0.000000e+00	9.800000e-01	1.900263e-01	1.900263e-01
+3.064000e-01	0.000000e+00	0.000000e+00	7.520000e-01	1.482223e-01	1.482223e-01
+3.198000e-01	0.000000e+00	0.000000e+00	6.420000e-01	1.118200e-01	1.118200e-01
+3.450000e-01	0.000000e+00	0.000000e+00	2.950000e-01	5.369530e-02	5.369530e-02
+3.737000e-01	0.000000e+00	0.000000e+00	2.050000e-01	4.124167e-02	4.124167e-02
+4.054000e-01	0.000000e+00	0.000000e+00	1.140000e-01	2.744795e-02	2.744795e-02
+4.347000e-01	0.000000e+00	0.000000e+00	4.860000e-02	1.518746e-02	1.518746e-02
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/E605_1991_I302822/d15-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -1.12, up: 1.12}, 'sys,Normalisation error': {dn: -0.46499999999999997, up: 0.46499999999999997}, 'sys,Point-to-point systematic error': {dn: -0.155, up: 0.155}}, 1: {error: {dn: -0.203, up: 0.203}, 'sys,Normalisation error': {dn: -0.1545, up: 0.1545}, 'sys,Point-to-point systematic error': {dn: -0.051500000000000004, up: 0.051500000000000004}}, 2: {error: {dn: -0.167, up: 0.167}, 'sys,Normalisation error': {dn: -0.156, up: 0.156}, 'sys,Point-to-point systematic error': {dn: -0.052, up: 0.052}}, 3: {error: {dn: -0.147, up: 0.147}, 'sys,Normalisation error': {dn: -0.1329, up: 0.1329}, 'sys,Point-to-point systematic error': {dn: -0.0443, up: 0.0443}}, 4: {error: {dn: -0.139, up: 0.139}, 'sys,Normalisation error': {dn: -0.1272, up: 0.1272}, 'sys,Point-to-point systematic error': {dn: -0.0424, up: 0.0424}}, 5: {error: {dn: -0.124, up: 0.124}, 'sys,Normalisation error': {dn: -0.11745, up: 0.11745}, 'sys,Point-to-point systematic error': {dn: -0.039150000000000004, up: 0.039150000000000004}}, 6: {error: {dn: -0.0583, up: 0.0583}, 'sys,Normalisation error': {dn: -0.08535, up: 0.08535}, 'sys,Point-to-point systematic error': {dn: -0.02845, up: 0.02845}}, 7: {error: {dn: -0.0355, up: 0.0355}, 'sys,Normalisation error': {dn: -0.053399999999999996, up: 0.053399999999999996}, 'sys,Point-to-point systematic error': {dn: -0.0178, up: 0.0178}}, 8: {error: {dn: -0.0279, up: 0.0279}, 'sys,Normalisation error': {dn: -0.03375, up: 0.03375}, 'sys,Point-to-point systematic error': {dn: -0.011250000000000001, up: 0.011250000000000001}}, 9: {error: {dn: -0.0196, up: 0.0196}, 'sys,Normalisation error': {dn: -0.013635, up: 0.013635}, 'sys,Point-to-point systematic error': {dn: -0.0045449999999999996, up: 0.0045449999999999996}}, 10: {error: {dn: -0.0128, up: 0.0128}, 'sys,Normalisation error': {dn: -0.0063750000000000005, up: 0.0063750000000000005}, 'sys,Point-to-point systematic error': {dn: -0.002125, up: 0.002125}}}
+
+IsRef: 1
+Path: /REF/E605_1991_I302822/d15-x01-y01
+Title: doi:10.17182/hepdata.22831.v1/t15
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+2.334000e-01	0.000000e+00	0.000000e+00	3.100000e+00	1.222559e+00	1.222559e+00
+2.771000e-01	0.000000e+00	0.000000e+00	1.030000e+00	2.602528e-01	2.602528e-01
+2.843000e-01	0.000000e+00	0.000000e+00	1.040000e+00	2.343694e-01	2.343694e-01
+2.915000e-01	0.000000e+00	0.000000e+00	8.860000e-01	2.030613e-01	2.030613e-01
+2.988000e-01	0.000000e+00	0.000000e+00	8.480000e-01	1.931285e-01	1.931285e-01
+3.064000e-01	0.000000e+00	0.000000e+00	7.830000e-01	1.752234e-01	1.752234e-01
+3.198000e-01	0.000000e+00	0.000000e+00	5.690000e-01	1.072050e-01	1.072050e-01
+3.450000e-01	0.000000e+00	0.000000e+00	3.560000e-01	6.654810e-02	6.654810e-02
+3.737000e-01	0.000000e+00	0.000000e+00	2.250000e-01	4.521101e-02	4.521101e-02
+4.054000e-01	0.000000e+00	0.000000e+00	9.090000e-02	2.430494e-02	2.430494e-02
+4.347000e-01	0.000000e+00	0.000000e+00	4.250000e-02	1.445670e-02	1.445670e-02
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/E605_1991_I302822/d16-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.371, up: 0.371}, 'sys,Normalisation error': {dn: -0.1419, up: 0.1419}, 'sys,Point-to-point systematic error': {dn: -0.047299999999999995, up: 0.047299999999999995}}, 1: {error: {dn: -0.175, up: 0.175}, 'sys,Normalisation error': {dn: -0.0798, up: 0.0798}, 'sys,Point-to-point systematic error': {dn: -0.0266, up: 0.0266}}, 2: {error: {dn: -0.0742, up: 0.0742}, 'sys,Normalisation error': {dn: -0.0555, up: 0.0555}, 'sys,Point-to-point systematic error': {dn: -0.018500000000000003, up: 0.018500000000000003}}, 3: {error: {dn: -0.0413, up: 0.0413}, 'sys,Normalisation error': {dn: -0.038700000000000005, up: 0.038700000000000005}, 'sys,Point-to-point systematic error': {dn: -0.012900000000000002, up: 0.012900000000000002}}, 4: {error: {dn: -0.0307, up: 0.0307}, 'sys,Normalisation error': {dn: -0.021599999999999998, up: 0.021599999999999998}, 'sys,Point-to-point systematic error': {dn: -0.0072, up: 0.0072}}, 5: {error: {dn: -0.0276, up: 0.0276}, 'sys,Normalisation error': {dn: -0.0183, up: 0.0183}, 'sys,Point-to-point systematic error': {dn: -0.0060999999999999995, up: 0.0060999999999999995}}, 6: {error: {dn: -0.0138, up: 0.0138}, 'sys,Normalisation error': {dn: -0.0054600000000000004, up: 0.0054600000000000004}, 'sys,Point-to-point systematic error': {dn: -0.00182, up: 0.00182}}}
+
+IsRef: 1
+Path: /REF/E605_1991_I302822/d16-x01-y01
+Title: doi:10.17182/hepdata.22831.v1/t16
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+2.998000e-01	0.000000e+00	0.000000e+00	9.460000e-01	4.000174e-01	4.000174e-01
+3.062000e-01	0.000000e+00	0.000000e+00	5.320000e-01	1.941664e-01	1.941664e-01
+3.205000e-01	0.000000e+00	0.000000e+00	3.700000e-01	9.448884e-02	9.448884e-02
+3.461000e-01	0.000000e+00	0.000000e+00	2.580000e-01	5.804989e-02	5.804989e-02
+3.731000e-01	0.000000e+00	0.000000e+00	1.440000e-01	3.822159e-02	3.822159e-02
+4.027000e-01	0.000000e+00	0.000000e+00	1.220000e-01	3.367284e-02	3.367284e-02
+4.318000e-01	0.000000e+00	0.000000e+00	3.640000e-02	1.495206e-02	1.495206e-02
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/E605_1991_I302822/d17-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.115, up: 0.115}, 'sys,Normalisation error': {dn: -0.11775000000000002, up: 0.11775000000000002}, 'sys,Point-to-point systematic error': {dn: -0.03925000000000001, up: 0.03925000000000001}}, 1: {error: {dn: -0.0861, up: 0.0861}, 'sys,Normalisation error': {dn: -0.14595, up: 0.14595}, 'sys,Point-to-point systematic error': {dn: -0.04865, up: 0.04865}}, 2: {error: {dn: -0.0616, up: 0.0616}, 'sys,Normalisation error': {dn: -0.12375, up: 0.12375}, 'sys,Point-to-point systematic error': {dn: -0.04125, up: 0.04125}}, 3: {error: {dn: -0.057, up: 0.057}, 'sys,Normalisation error': {dn: -0.12075, up: 0.12075}, 'sys,Point-to-point systematic error': {dn: -0.04025, up: 0.04025}}, 4: {error: {dn: -0.0422, up: 0.0422}, 'sys,Normalisation error': {dn: -0.08535, up: 0.08535}, 'sys,Point-to-point systematic error': {dn: -0.02845, up: 0.02845}}, 5: {error: {dn: -0.0447, up: 0.0447}, 'sys,Normalisation error': {dn: -0.08055000000000001, up: 0.08055000000000001}, 'sys,Point-to-point systematic error': {dn: -0.026850000000000002, up: 0.026850000000000002}}, 6: {error: {dn: -0.039, up: 0.039}, 'sys,Normalisation error': {dn: -0.0582, up: 0.0582}, 'sys,Point-to-point systematic error': {dn: -0.0194, up: 0.0194}}, 7: {error: {dn: -0.038, up: 0.038}, 'sys,Normalisation error': {dn: -0.0468, up: 0.0468}, 'sys,Point-to-point systematic error': {dn: -0.0156, up: 0.0156}}, 8: {error: {dn: -0.0373, up: 0.0373}, 'sys,Normalisation error': {dn: -0.03435, up: 0.03435}, 'sys,Point-to-point systematic error': {dn: -0.01145, up: 0.01145}}, 9: {error: {dn: -0.0307, up: 0.0307}, 'sys,Normalisation error': {dn: -0.0204, up: 0.0204}, 'sys,Point-to-point systematic error': {dn: -0.0068000000000000005, up: 0.0068000000000000005}}, 10: {error: {dn: -0.0433, up: 0.0433}, 'sys,Normalisation error': {dn: -0.020550000000000002, up: 0.020550000000000002}, 'sys,Point-to-point systematic error': {dn: -0.00685, up: 0.00685}}}
+
+IsRef: 1
+Path: /REF/E605_1991_I302822/d17-x01-y01
+Title: doi:10.17182/hepdata.22831.v1/t17
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.000000e-01	0.0990000e+00	0.100000e+00	7.850000e-01	1.692059e-01	1.692059e-01
+3.000000e-01	0.100000e+00	0.100000e+00	9.730000e-01	1.762993e-01	1.762993e-01
+5.000000e-01	0.100000e+00	0.100000e+00	8.250000e-01	1.442574e-01	1.442574e-01
+7.000000e-01	0.100000e+00	0.100000e+00	8.050000e-01	1.394619e-01	1.394619e-01
+9.000000e-01	0.100000e+00	0.100000e+00	5.690000e-01	9.937236e-02	9.937236e-02
+1.100000e+00	0.100000e+00	0.100000e+00	5.370000e-01	9.595475e-02	9.595475e-02
+1.300000e+00	0.100000e+00	0.100000e+00	3.880000e-01	7.269525e-02	7.269525e-02
+1.500000e+00	0.100000e+00	0.100000e+00	3.120000e-01	6.227038e-02	6.227038e-02
+1.700000e+00	0.100000e+00	0.100000e+00	2.290000e-01	5.198380e-02	5.198380e-02
+1.900000e+00	0.100000e+00	0.100000e+00	1.360000e-01	3.748186e-02	3.748186e-02
+2.100000e+00	0.100000e+00	0.100000e+00	1.370000e-01	4.841606e-02	4.841606e-02
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/E605_1991_I302822/d18-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.0246, up: 0.0246}, 'sys,Normalisation error': {dn: -0.04995, up: 0.04995}, 'sys,Point-to-point systematic error': {dn: -0.01665, up: 0.01665}}, 1: {error: {dn: -0.0201, up: 0.0201}, 'sys,Normalisation error': {dn: -0.06584999999999999, up: 0.06584999999999999}, 'sys,Point-to-point systematic error': {dn: -0.021949999999999997, up: 0.021949999999999997}}, 2: {error: {dn: -0.0139, up: 0.0139}, 'sys,Normalisation error': {dn: -0.0552, up: 0.0552}, 'sys,Point-to-point systematic error': {dn: -0.0184, up: 0.0184}}, 3: {error: {dn: -0.0136, up: 0.0136}, 'sys,Normalisation error': {dn: -0.0555, up: 0.0555}, 'sys,Point-to-point systematic error': {dn: -0.018500000000000003, up: 0.018500000000000003}}, 4: {error: {dn: -0.00988, up: 0.00988}, 'sys,Normalisation error': {dn: -0.03885, up: 0.03885}, 'sys,Point-to-point systematic error': {dn: -0.012950000000000001, up: 0.012950000000000001}}, 5: {error: {dn: -0.00933, up: 0.00933}, 'sys,Normalisation error': {dn: -0.033600000000000005, up: 0.033600000000000005}, 'sys,Point-to-point systematic error': {dn: -0.011200000000000002, up: 0.011200000000000002}}, 6: {error: {dn: -0.00895, up: 0.00895}, 'sys,Normalisation error': {dn: -0.027, up: 0.027}, 'sys,Point-to-point systematic error': {dn: -0.009, up: 0.009}}, 7: {error: {dn: -0.00802, up: 0.00802}, 'sys,Normalisation error': {dn: -0.01965, up: 0.01965}, 'sys,Point-to-point systematic error': {dn: -0.00655, up: 0.00655}}, 8: {error: {dn: -0.00678, up: 0.00678}, 'sys,Normalisation error': {dn: -0.013124999999999998, up: 0.013124999999999998}, 'sys,Point-to-point systematic error': {dn: -0.0043749999999999995, up: 0.0043749999999999995}}, 9: {error: {dn: -0.00703, up: 0.00703}, 'sys,Normalisation error': {dn: -0.010695, up: 0.010695}, 'sys,Point-to-point systematic error': {dn: -0.003565, up: 0.003565}}, 10: {error: {dn: -0.00633, up: 0.00633}, 'sys,Normalisation error': {dn: -0.00723, up: 0.00723}, 'sys,Point-to-point systematic error': {dn: -0.00241, up: 0.00241}}, 11: {error: {dn: -0.00542, up: 0.00542}, 'sys,Normalisation error': {dn: -0.00408, up: 0.00408}, 'sys,Point-to-point systematic error': {dn: -0.00136, up: 0.00136}}, 12: {error: {dn: -0.00515, up: 0.00515}, 'sys,Normalisation error': {dn: -0.003255, up: 0.003255}, 'sys,Point-to-point systematic error': {dn: -0.001085, up: 0.001085}}, 13: {error: {dn: -0.00571, up: 0.00571}, 'sys,Normalisation error': {dn: -0.00276, up: 0.00276}, 'sys,Point-to-point systematic error': {dn: -0.00092, up: 0.00092}}}
+
+IsRef: 1
+Path: /REF/E605_1991_I302822/d18-x01-y01
+Title: doi:10.17182/hepdata.22831.v1/t18
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.000000e-01	0.099000e+00	0.100000e+00	3.330000e-01	5.811527e-02	5.811527e-02
+3.000000e-01	0.100000e+00	0.100000e+00	4.390000e-01	7.226365e-02	7.226365e-02
+5.000000e-01	0.100000e+00	0.100000e+00	3.680000e-01	5.982316e-02	5.982316e-02
+7.000000e-01	0.100000e+00	0.100000e+00	3.700000e-01	6.006213e-02	6.006213e-02
+9.000000e-01	0.100000e+00	0.100000e+00	2.590000e-01	4.212647e-02	4.212647e-02
+1.100000e+00	0.100000e+00	0.100000e+00	2.240000e-01	3.662580e-02	3.662580e-02
+1.300000e+00	0.100000e+00	0.100000e+00	1.800000e-01	2.983459e-02	2.983459e-02
+1.500000e+00	0.100000e+00	0.100000e+00	1.310000e-01	2.221138e-02	2.221138e-02
+1.700000e+00	0.100000e+00	0.100000e+00	8.750000e-02	1.540697e-02	1.540697e-02
+1.900000e+00	0.100000e+00	0.100000e+00	7.130000e-02	1.328583e-02	1.328583e-02
+2.100000e+00	0.100000e+00	0.100000e+00	4.820000e-02	9.907063e-03	9.907063e-03
+2.300000e+00	0.100000e+00	0.100000e+00	2.720000e-02	6.918988e-03	6.918988e-03
+2.500000e+00	0.100000e+00	0.100000e+00	2.170000e-02	6.188275e-03	6.188275e-03
+2.700000e+00	0.100000e+00	0.100000e+00	1.840000e-02	6.408440e-03	6.408440e-03
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/E605_1991_I302822/d19-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.0084, up: 0.0084}, 'sys,Normalisation error': {dn: -0.010514999999999998, up: 0.010514999999999998}, 'sys,Point-to-point systematic error': {dn: -0.0035049999999999994, up: 0.0035049999999999994}}, 1: {error: {dn: -0.00554, up: 0.00554}, 'sys,Normalisation error': {dn: -0.01176, up: 0.01176}, 'sys,Point-to-point systematic error': {dn: -0.00392, up: 0.00392}}, 2: {error: {dn: -0.00412, up: 0.00412}, 'sys,Normalisation error': {dn: -0.010679999999999999, up: 0.010679999999999999}, 'sys,Point-to-point systematic error': {dn: -0.00356, up: 0.00356}}, 3: {error: {dn: -0.00331, up: 0.00331}, 'sys,Normalisation error': {dn: -0.00936, up: 0.00936}, 'sys,Point-to-point systematic error': {dn: -0.00312, up: 0.00312}}, 4: {error: {dn: -0.00265, up: 0.00265}, 'sys,Normalisation error': {dn: -0.007545, up: 0.007545}, 'sys,Point-to-point systematic error': {dn: -0.002515, up: 0.002515}}, 5: {error: {dn: -0.00207, up: 0.00207}, 'sys,Normalisation error': {dn: -0.00585, up: 0.00585}, 'sys,Point-to-point systematic error': {dn: -0.00195, up: 0.00195}}, 6: {error: {dn: -0.00176, up: 0.00176}, 'sys,Normalisation error': {dn: -0.00468, up: 0.00468}, 'sys,Point-to-point systematic error': {dn: -0.00156, up: 0.00156}}, 7: {error: {dn: -0.0015, up: 0.0015}, 'sys,Normalisation error': {dn: -0.00351, up: 0.00351}, 'sys,Point-to-point systematic error': {dn: -0.00117, up: 0.00117}}, 8: {error: {dn: -0.00103, up: 0.00103}, 'sys,Normalisation error': {dn: -0.002205, up: 0.002205}, 'sys,Point-to-point systematic error': {dn: -0.000735, up: 0.000735}}, 9: {error: {dn: -0.00106, up: 0.00106}, 'sys,Normalisation error': {dn: -0.001965, up: 0.001965}, 'sys,Point-to-point systematic error': {dn: -0.0006550000000000001, up: 0.0006550000000000001}}, 10: {error: {dn: -0.000719, up: 0.000719}, 'sys,Normalisation error': {dn: -0.0010574999999999998, up: 0.0010574999999999998}, 'sys,Point-to-point systematic error': {dn: -0.00035249999999999995, up: 0.00035249999999999995}}, 11: {error: {dn: -0.000607, up: 0.000607}, 'sys,Normalisation error': {dn: -0.00075, up: 0.00075}, 'sys,Point-to-point systematic error': {dn: -0.00025, up: 0.00025}}, 12: {error: {dn: -0.000622, up: 0.000622}, 'sys,Normalisation error': {dn: -0.0006885000000000001, up: 0.0006885000000000001}, 'sys,Point-to-point systematic error': {dn: -0.00022950000000000002, up: 0.00022950000000000002}}, 13: {error: {dn: -0.000587, up: 0.000587}, 'sys,Normalisation error': {dn: -0.000495, up: 0.000495}, 'sys,Point-to-point systematic error': {dn: -0.000165, up: 0.000165}}, 14: {error: {dn: -0.000493, up: 0.000493}, 'sys,Normalisation error': {dn: -0.00032250000000000003, up: 0.00032250000000000003}, 'sys,Point-to-point systematic error': {dn: -0.00010750000000000001, up: 0.00010750000000000001}}, 15: {error: {dn: -0.000524, up: 0.000524}, 'sys,Normalisation error': {dn: -0.0002385, up: 0.0002385}, 'sys,Point-to-point systematic error': {dn: -7.950000000000001e-05, up: 7.950000000000001e-05}}}
+
+IsRef: 1
+Path: /REF/E605_1991_I302822/d19-x01-y01
+Title: doi:10.17182/hepdata.22831.v1/t19
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.000000e-01	0.099000e+00	0.100000e+00	7.010000e-02	1.390720e-02	1.390720e-02
+3.000000e-01	0.100000e+00	0.100000e+00	7.840000e-02	1.357776e-02	1.357776e-02
+5.000000e-01	0.100000e+00	0.100000e+00	7.120000e-02	1.198793e-02	1.198793e-02
+7.000000e-01	0.100000e+00	0.100000e+00	6.240000e-02	1.040673e-02	1.040673e-02
+9.000000e-01	0.100000e+00	0.100000e+00	5.030000e-02	8.383004e-03	8.383004e-03
+1.100000e+00	0.100000e+00	0.100000e+00	3.900000e-02	6.504606e-03	6.504606e-03
+1.300000e+00	0.100000e+00	0.100000e+00	3.120000e-02	5.237709e-03	5.237709e-03
+1.500000e+00	0.100000e+00	0.100000e+00	2.340000e-02	3.992368e-03	3.992368e-03
+1.700000e+00	0.100000e+00	0.100000e+00	1.470000e-02	2.542273e-03	2.542273e-03
+1.900000e+00	0.100000e+00	0.100000e+00	1.310000e-02	2.326768e-03	2.326768e-03
+2.100000e+00	0.100000e+00	0.100000e+00	7.050000e-03	1.326470e-03	1.326470e-03
+2.300000e+00	0.100000e+00	0.100000e+00	5.000000e-03	9.967191e-04	9.967191e-04
+2.500000e+00	0.100000e+00	0.100000e+00	4.590000e-03	9.558172e-04	9.558172e-04
+2.700000e+00	0.100000e+00	0.100000e+00	3.300000e-03	7.853783e-04	7.853783e-04
+2.900000e+00	0.100000e+00	0.100000e+00	2.150000e-03	5.988418e-04	5.988418e-04
+3.100000e+00	0.100000e+00	0.100000e+00	1.590000e-03	5.811871e-04	5.811871e-04
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/E605_1991_I302822/d20-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.00642, up: 0.00642}, 'sys,Normalisation error': {dn: -0.00762, up: 0.00762}, 'sys,Point-to-point systematic error': {dn: -0.0025399999999999997, up: 0.0025399999999999997}}, 1: {error: {dn: -0.00479, up: 0.00479}, 'sys,Normalisation error': {dn: -0.010185, up: 0.010185}, 'sys,Point-to-point systematic error': {dn: -0.003395, up: 0.003395}}, 2: {error: {dn: -0.00387, up: 0.00387}, 'sys,Normalisation error': {dn: -0.00969, up: 0.00969}, 'sys,Point-to-point systematic error': {dn: -0.0032300000000000002, up: 0.0032300000000000002}}, 3: {error: {dn: -0.00263, up: 0.00263}, 'sys,Normalisation error': {dn: -0.00738, up: 0.00738}, 'sys,Point-to-point systematic error': {dn: -0.0024600000000000004, up: 0.0024600000000000004}}, 4: {error: {dn: -0.00219, up: 0.00219}, 'sys,Normalisation error': {dn: -0.006255, up: 0.006255}, 'sys,Point-to-point systematic error': {dn: -0.002085, up: 0.002085}}, 5: {error: {dn: -0.00176, up: 0.00176}, 'sys,Normalisation error': {dn: -0.004845, up: 0.004845}, 'sys,Point-to-point systematic error': {dn: -0.0016150000000000001, up: 0.0016150000000000001}}, 6: {error: {dn: -0.00146, up: 0.00146}, 'sys,Normalisation error': {dn: -0.003705, up: 0.003705}, 'sys,Point-to-point systematic error': {dn: -0.001235, up: 0.001235}}, 7: {error: {dn: -0.00119, up: 0.00119}, 'sys,Normalisation error': {dn: -0.00291, up: 0.00291}, 'sys,Point-to-point systematic error': {dn: -0.0009699999999999999, up: 0.0009699999999999999}}, 8: {error: {dn: -0.000976, up: 0.000976}, 'sys,Normalisation error': {dn: -0.002055, up: 0.002055}, 'sys,Point-to-point systematic error': {dn: -0.000685, up: 0.000685}}, 9: {error: {dn: -0.000731, up: 0.000731}, 'sys,Normalisation error': {dn: -0.0012989999999999998, up: 0.0012989999999999998}, 'sys,Point-to-point systematic error': {dn: -0.00043299999999999995, up: 0.00043299999999999995}}, 10: {error: {dn: -0.000636, up: 0.000636}, 'sys,Normalisation error': {dn: -0.0010184999999999999, up: 0.0010184999999999999}, 'sys,Point-to-point systematic error': {dn: -0.00033949999999999996, up: 0.00033949999999999996}}, 11: {error: {dn: -0.00055, up: 0.00055}, 'sys,Normalisation error': {dn: -0.0006600000000000001, up: 0.0006600000000000001}, 'sys,Point-to-point systematic error': {dn: -0.00022000000000000003, up: 0.00022000000000000003}}, 12: {error: {dn: -0.000483, up: 0.000483}, 'sys,Normalisation error': {dn: -0.0005009999999999999, up: 0.0005009999999999999}, 'sys,Point-to-point systematic error': {dn: -0.000167, up: 0.000167}}, 13: {error: {dn: -0.00042, up: 0.00042}, 'sys,Normalisation error': {dn: -0.000393, up: 0.000393}, 'sys,Point-to-point systematic error': {dn: -0.00013099999999999999, up: 0.00013099999999999999}}, 14: {error: {dn: -0.00033, up: 0.00033}, 'sys,Normalisation error': {dn: -0.0002475, up: 0.0002475}, 'sys,Point-to-point systematic error': {dn: -8.25e-05, up: 8.25e-05}}, 15: {error: {dn: -0.000284, up: 0.000284}, 'sys,Normalisation error': {dn: -0.00017999999999999998, up: 0.00017999999999999998}, 'sys,Point-to-point systematic error': {dn: -5.9999999999999995e-05, up: 5.9999999999999995e-05}}, 16: {error: {dn: -0.000298, up: 0.000298}, 'sys,Normalisation error': {dn: -0.0001665, up: 0.0001665}, 'sys,Point-to-point systematic error': {dn: -5.55e-05, up: 5.55e-05}}, 17: {error: {dn: -0.000243, up: 0.000243}, 'sys,Normalisation error': {dn: -9.809999999999999e-05, up: 9.809999999999999e-05}, 'sys,Point-to-point systematic error': {dn: -3.2699999999999995e-05, up: 3.2699999999999995e-05}}}
+
+IsRef: 1
+Path: /REF/E605_1991_I302822/d20-x01-y01
+Title: doi:10.17182/hepdata.22831.v1/t20
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.000000e-01	0.099000e+00	0.100000e+00	5.080000e-02	1.028263e-02	1.028263e-02
+3.000000e-01	0.100000e+00	0.100000e+00	6.790000e-02	1.175603e-02	1.175603e-02
+5.000000e-01	0.100000e+00	0.100000e+00	6.460000e-02	1.092272e-02	1.092272e-02
+7.000000e-01	0.100000e+00	0.100000e+00	4.920000e-02	8.211754e-03	8.211754e-03
+9.000000e-01	0.100000e+00	0.100000e+00	4.170000e-02	6.947543e-03	6.947543e-03
+1.100000e+00	0.100000e+00	0.100000e+00	3.230000e-02	5.401838e-03	5.401838e-03
+1.300000e+00	0.100000e+00	0.100000e+00	2.470000e-02	4.169394e-03	4.169394e-03
+1.500000e+00	0.100000e+00	0.100000e+00	1.940000e-02	3.290152e-03	3.290152e-03
+1.700000e+00	0.100000e+00	0.100000e+00	1.370000e-02	2.375884e-03	2.375884e-03
+1.900000e+00	0.100000e+00	0.100000e+00	8.660000e-03	1.552176e-03	1.552176e-03
+2.100000e+00	0.100000e+00	0.100000e+00	6.790000e-03	1.247838e-03	1.247838e-03
+2.300000e+00	0.100000e+00	0.100000e+00	4.400000e-03	8.868484e-04	8.868484e-04
+2.500000e+00	0.100000e+00	0.100000e+00	3.340000e-03	7.156668e-04	7.156668e-04
+2.700000e+00	0.100000e+00	0.100000e+00	2.620000e-03	5.899237e-04	5.899237e-04
+2.900000e+00	0.100000e+00	0.100000e+00	1.650000e-03	4.206691e-04	4.206691e-04
+3.100000e+00	0.100000e+00	0.100000e+00	1.200000e-03	3.415494e-04	3.415494e-04
+3.300000e+00	0.100000e+00	0.100000e+00	1.110000e-03	3.458417e-04	3.458417e-04
+3.500000e+00	0.100000e+00	0.100000e+00	6.540000e-04	2.640869e-04	2.640869e-04
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/E605_1991_I302822/d21-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.00546, up: 0.00546}, 'sys,Normalisation error': {dn: -0.0036, up: 0.0036}, 'sys,Point-to-point systematic error': {dn: -0.0012000000000000001, up: 0.0012000000000000001}}, 1: {error: {dn: -0.0029, up: 0.0029}, 'sys,Normalisation error': {dn: -0.00309, up: 0.00309}, 'sys,Point-to-point systematic error': {dn: -0.0010299999999999999, up: 0.0010299999999999999}}, 2: {error: {dn: -0.00213, up: 0.00213}, 'sys,Normalisation error': {dn: -0.0028200000000000005, up: 0.0028200000000000005}, 'sys,Point-to-point systematic error': {dn: -0.0009400000000000001, up: 0.0009400000000000001}}, 3: {error: {dn: -0.00172, up: 0.00172}, 'sys,Normalisation error': {dn: -0.002565, up: 0.002565}, 'sys,Point-to-point systematic error': {dn: -0.0008550000000000001, up: 0.0008550000000000001}}, 4: {error: {dn: -0.00116, up: 0.00116}, 'sys,Normalisation error': {dn: -0.0014595, up: 0.0014595}, 'sys,Point-to-point systematic error': {dn: -0.00048650000000000006, up: 0.00048650000000000006}}, 5: {error: {dn: -0.00109, up: 0.00109}, 'sys,Normalisation error': {dn: -0.001605, up: 0.001605}, 'sys,Point-to-point systematic error': {dn: -0.000535, up: 0.000535}}, 6: {error: {dn: -0.000879, up: 0.000879}, 'sys,Normalisation error': {dn: -0.0011865, up: 0.0011865}, 'sys,Point-to-point systematic error': {dn: -0.0003955, up: 0.0003955}}, 7: {error: {dn: -0.000697, up: 0.000697}, 'sys,Normalisation error': {dn: -0.0009075, up: 0.0009075}, 'sys,Point-to-point systematic error': {dn: -0.0003025, up: 0.0003025}}, 8: {error: {dn: -0.000509, up: 0.000509}, 'sys,Normalisation error': {dn: -0.0005250000000000001, up: 0.0005250000000000001}, 'sys,Point-to-point systematic error': {dn: -0.00017500000000000003, up: 0.00017500000000000003}}, 9: {error: {dn: -0.000359, up: 0.000359}, 'sys,Normalisation error': {dn: -0.000291, up: 0.000291}, 'sys,Point-to-point systematic error': {dn: -9.7e-05, up: 9.7e-05}}, 10: {error: {dn: -0.000366, up: 0.000366}, 'sys,Normalisation error': {dn: -0.00030000000000000003, up: 0.00030000000000000003}, 'sys,Point-to-point systematic error': {dn: -0.0001, up: 0.0001}}, 11: {error: {dn: -0.000294, up: 0.000294}, 'sys,Normalisation error': {dn: -0.000204, up: 0.000204}, 'sys,Point-to-point systematic error': {dn: -6.8e-05, up: 6.8e-05}}, 12: {error: {dn: -0.000288, up: 0.000288}, 'sys,Normalisation error': {dn: -0.000204, up: 0.000204}, 'sys,Point-to-point systematic error': {dn: -6.8e-05, up: 6.8e-05}}, 13: {error: {dn: -0.000191, up: 0.000191}, 'sys,Normalisation error': {dn: -8.999999999999999e-05, up: 8.999999999999999e-05}, 'sys,Point-to-point systematic error': {dn: -2.9999999999999997e-05, up: 2.9999999999999997e-05}}, 14: {error: {dn: -0.000166, up: 0.000166}, 'sys,Normalisation error': {dn: -6.525e-05, up: 6.525e-05}, 'sys,Point-to-point systematic error': {dn: -2.175e-05, up: 2.175e-05}}}
+
+IsRef: 1
+Path: /REF/E605_1991_I302822/d21-x01-y01
+Title: doi:10.17182/hepdata.22831.v1/t21
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.000000e-01	0.099000e+00	0.100000e+00	2.400000e-02	6.649180e-03	6.649180e-03
+3.000000e-01	0.100000e+00	0.100000e+00	2.060000e-02	4.361078e-03	4.361078e-03
+5.000000e-01	0.100000e+00	0.100000e+00	1.880000e-02	3.656898e-03	3.656898e-03
+7.000000e-01	0.100000e+00	0.100000e+00	1.710000e-02	3.204473e-03	3.204473e-03
+9.000000e-01	0.100000e+00	0.100000e+00	9.730000e-03	1.926765e-03	1.926765e-03
+1.100000e+00	0.100000e+00	0.100000e+00	1.070000e-02	2.012548e-03	2.012548e-03
+1.300000e+00	0.100000e+00	0.100000e+00	7.910000e-03	1.528674e-03	1.528674e-03
+1.500000e+00	0.100000e+00	0.100000e+00	6.050000e-03	1.183584e-03	1.183584e-03
+1.700000e+00	0.100000e+00	0.100000e+00	3.500000e-03	7.518850e-04	7.518850e-04
+1.900000e+00	0.100000e+00	0.100000e+00	1.940000e-03	4.721981e-04	4.721981e-04
+2.100000e+00	0.100000e+00	0.100000e+00	2.000000e-03	4.836900e-04	4.836900e-04
+2.300000e+00	0.100000e+00	0.100000e+00	1.360000e-03	3.642472e-04	3.642472e-04
+2.500000e+00	0.100000e+00	0.100000e+00	1.360000e-03	3.594218e-04	3.594218e-04
+2.700000e+00	0.100000e+00	0.100000e+00	6.000000e-04	2.132627e-04	2.132627e-04
+2.900000e+00	0.100000e+00	0.100000e+00	4.350000e-04	1.796848e-04	1.796848e-04
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/E605_1991_I302822/d22-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.0114, up: 0.0114}, 'sys,Normalisation error': {dn: -0.0273, up: 0.0273}, 'sys,Point-to-point systematic error': {dn: -0.0091, up: 0.0091}}, 1: {error: {dn: -0.00846, up: 0.00846}, 'sys,Normalisation error': {dn: -0.03255, up: 0.03255}, 'sys,Point-to-point systematic error': {dn: -0.01085, up: 0.01085}}, 2: {error: {dn: -0.00637, up: 0.00637}, 'sys,Normalisation error': {dn: -0.0285, up: 0.0285}, 'sys,Point-to-point systematic error': {dn: -0.0095, up: 0.0095}}, 3: {error: {dn: -0.00528, up: 0.00528}, 'sys,Normalisation error': {dn: -0.026699999999999998, up: 0.026699999999999998}, 'sys,Point-to-point systematic error': {dn: -0.0089, up: 0.0089}}, 4: {error: {dn: -0.00463, up: 0.00463}, 'sys,Normalisation error': {dn: -0.0246, up: 0.0246}, 'sys,Point-to-point systematic error': {dn: -0.008199999999999999, up: 0.008199999999999999}}, 5: {error: {dn: -0.00403, up: 0.00403}, 'sys,Normalisation error': {dn: -0.020700000000000003, up: 0.020700000000000003}, 'sys,Point-to-point systematic error': {dn: -0.006900000000000001, up: 0.006900000000000001}}, 6: {error: {dn: -0.0034, up: 0.0034}, 'sys,Normalisation error': {dn: -0.0159, up: 0.0159}, 'sys,Point-to-point systematic error': {dn: -0.0053, up: 0.0053}}, 7: {error: {dn: -0.00325, up: 0.00325}, 'sys,Normalisation error': {dn: -0.013635, up: 0.013635}, 'sys,Point-to-point systematic error': {dn: -0.0045449999999999996, up: 0.0045449999999999996}}, 8: {error: {dn: -0.0028, up: 0.0028}, 'sys,Normalisation error': {dn: -0.009915, up: 0.009915}, 'sys,Point-to-point systematic error': {dn: -0.003305, up: 0.003305}}, 9: {error: {dn: -0.00284, up: 0.00284}, 'sys,Normalisation error': {dn: -0.008865, up: 0.008865}, 'sys,Point-to-point systematic error': {dn: -0.0029549999999999997, up: 0.0029549999999999997}}, 10: {error: {dn: -0.00249, up: 0.00249}, 'sys,Normalisation error': {dn: -0.006209999999999999, up: 0.006209999999999999}, 'sys,Point-to-point systematic error': {dn: -0.00207, up: 0.00207}}, 11: {error: {dn: -0.00238, up: 0.00238}, 'sys,Normalisation error': {dn: -0.004635, up: 0.004635}, 'sys,Point-to-point systematic error': {dn: -0.0015450000000000001, up: 0.0015450000000000001}}, 12: {error: {dn: -0.00254, up: 0.00254}, 'sys,Normalisation error': {dn: -0.00393, up: 0.00393}, 'sys,Point-to-point systematic error': {dn: -0.0013100000000000002, up: 0.0013100000000000002}}, 13: {error: {dn: -0.00245, up: 0.00245}, 'sys,Normalisation error': {dn: -0.0027300000000000002, up: 0.0027300000000000002}, 'sys,Point-to-point systematic error': {dn: -0.00091, up: 0.00091}}, 14: {error: {dn: -0.0018, up: 0.0018}, 'sys,Normalisation error': {dn: -0.001314, up: 0.001314}, 'sys,Point-to-point systematic error': {dn: -0.000438, up: 0.000438}}, 15: {error: {dn: -0.0033, up: 0.0033}, 'sys,Normalisation error': {dn: -0.00201, up: 0.00201}, 'sys,Point-to-point systematic error': {dn: -0.00067, up: 0.00067}}, 16: {error: {dn: -0.00127, up: 0.00127}, 'sys,Normalisation error': {dn: -0.0006000000000000001, up: 0.0006000000000000001}, 'sys,Point-to-point systematic error': {dn: -0.0002, up: 0.0002}}, 17: {error: {dn: -0.00201, up: 0.00201}, 'sys,Normalisation error': {dn: -0.000723, up: 0.000723}, 'sys,Point-to-point systematic error': {dn: -0.000241, up: 0.000241}}, 18: {error: {dn: -0.00139, up: 0.00139}, 'sys,Normalisation error': {dn: -0.0003705, up: 0.0003705}, 'sys,Point-to-point systematic error': {dn: -0.0001235, up: 0.0001235}}}
+
+IsRef: 1
+Path: /REF/E605_1991_I302822/d22-x01-y01
+Title: doi:10.17182/hepdata.22831.v1/t22
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.000000e-01	0.099000e+00	0.100000e+00	1.820000e-01	3.095254e-02	3.095254e-02
+3.000000e-01	0.100000e+00	0.100000e+00	2.170000e-01	3.533832e-02	3.533832e-02
+5.000000e-01	0.100000e+00	0.100000e+00	1.900000e-01	3.070956e-02	3.070956e-02
+7.000000e-01	0.100000e+00	0.100000e+00	1.780000e-01	2.863526e-02	2.863526e-02
+9.000000e-01	0.100000e+00	0.100000e+00	1.640000e-01	2.634078e-02	2.634078e-02
+1.100000e+00	0.100000e+00	0.100000e+00	1.380000e-01	2.218876e-02	2.218876e-02
+1.300000e+00	0.100000e+00	0.100000e+00	1.060000e-01	1.710146e-02	1.710146e-02
+1.500000e+00	0.100000e+00	0.100000e+00	9.090000e-02	1.473543e-02	1.473543e-02
+1.700000e+00	0.100000e+00	0.100000e+00	6.610000e-02	1.081990e-02	1.081990e-02
+1.900000e+00	0.100000e+00	0.100000e+00	5.910000e-02	9.766568e-03	9.766568e-03
+2.100000e+00	0.100000e+00	0.100000e+00	4.140000e-02	7.003506e-03	7.003506e-03
+2.300000e+00	0.100000e+00	0.100000e+00	3.090000e-02	5.434579e-03	5.434579e-03
+2.500000e+00	0.100000e+00	0.100000e+00	2.620000e-02	4.859280e-03	4.859280e-03
+2.700000e+00	0.100000e+00	0.100000e+00	1.820000e-02	3.779352e-03	3.779352e-03
+2.900000e+00	0.100000e+00	0.100000e+00	8.760000e-03	2.271220e-03	2.271220e-03
+3.100000e+00	0.100000e+00	0.100000e+00	1.340000e-02	3.921607e-03	3.921607e-03
+3.300000e+00	0.100000e+00	0.100000e+00	4.000000e-03	1.418767e-03	1.418767e-03
+3.500000e+00	0.100000e+00	0.100000e+00	4.820000e-03	2.149630e-03	2.149630e-03
+3.900000e+00	0.100000e+00	0.100000e+00	2.470000e-03	1.443822e-03	1.443822e-03
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/E605_1991_I302822/d23-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.115, up: 0.115}, sys: {dn: -0.482, up: 0.482}}, 1: {stat: {dn: -0.085, up: 0.085}, sys: {dn: -0.325, up: 0.325}}, 2: {stat: {dn: -0.067, up: 0.067}, sys: {dn: -0.242, up: 0.242}}, 3: {stat: {dn: -0.064, up: 0.064}, sys: {dn: -0.239, up: 0.239}}, 4: {stat: {dn: -0.061, up: 0.061}, sys: {dn: -0.243, up: 0.243}}, 5: {stat: {dn: -0.07, up: 0.07}, sys: {dn: -0.287, up: 0.287}}, 6: {stat: {dn: -0.108, up: 0.108}, sys: {dn: -0.39, up: 0.39}}, 7: {stat: {dn: -0.292, up: 0.292}, sys: {dn: -1.242, up: 1.242}}}
+
+IsRef: 1
+Path: /REF/E605_1991_I302822/d23-x01-y01
+Title: doi:10.17182/hepdata.22831.v1/t23
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+-1.250000e-01	0.000000e+00	0.000000e+00	2.745000e+00	4.955290e-01	4.955290e-01
+-7.500000e-02	0.000000e+00	0.000000e+00	2.966000e+00	3.359315e-01	3.359315e-01
+-2.500000e-02	0.000000e+00	0.000000e+00	2.959000e+00	2.511036e-01	2.511036e-01
+2.500000e-02	0.000000e+00	0.000000e+00	3.105000e+00	2.474207e-01	2.474207e-01
+7.500000e-02	0.000000e+00	0.000000e+00	2.879000e+00	2.505394e-01	2.505394e-01
+1.250000e-01	0.000000e+00	0.000000e+00	2.892000e+00	2.954133e-01	2.954133e-01
+1.750000e-01	0.000000e+00	0.000000e+00	3.011000e+00	4.046776e-01	4.046776e-01
+2.250000e-01	0.000000e+00	0.000000e+00	2.514000e+00	1.275864e+00	1.275864e+00
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/E605_1991_I302822/d24-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.047, up: 0.047}, sys: {dn: -0.218, up: 0.218}}, 1: {stat: {dn: -0.038, up: 0.038}, sys: {dn: -0.138, up: 0.138}}, 2: {stat: {dn: -0.032, up: 0.032}, sys: {dn: -0.14, up: 0.14}}, 3: {stat: {dn: -0.03, up: 0.03}, sys: {dn: -0.144, up: 0.144}}, 4: {stat: {dn: -0.028, up: 0.028}, sys: {dn: -0.132, up: 0.132}}, 5: {stat: {dn: -0.033, up: 0.033}, sys: {dn: -0.157, up: 0.157}}, 6: {stat: {dn: -0.047, up: 0.047}, sys: {dn: -0.197, up: 0.197}}, 7: {stat: {dn: -0.094, up: 0.094}, sys: {dn: -0.433, up: 0.433}}}
+
+IsRef: 1
+Path: /REF/E605_1991_I302822/d24-x01-y01
+Title: doi:10.17182/hepdata.22831.v1/t24
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+-1.250000e-01	0.000000e+00	0.000000e+00	7.080000e-01	2.230090e-01	2.230090e-01
+-7.500000e-02	0.000000e+00	0.000000e+00	8.110000e-01	1.431363e-01	1.431363e-01
+-2.500000e-02	0.000000e+00	0.000000e+00	8.590000e-01	1.436106e-01	1.436106e-01
+2.500000e-02	0.000000e+00	0.000000e+00	8.590000e-01	1.470918e-01	1.470918e-01
+7.500000e-02	0.000000e+00	0.000000e+00	7.610000e-01	1.349370e-01	1.349370e-01
+1.250000e-01	0.000000e+00	0.000000e+00	7.950000e-01	1.604307e-01	1.604307e-01
+1.750000e-01	0.000000e+00	0.000000e+00	8.140000e-01	2.025290e-01	2.025290e-01
+2.250000e-01	0.000000e+00	0.000000e+00	6.600000e-01	4.430858e-01	4.430858e-01
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/E605_1991_I302822/d25-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.034, up: 0.034}, sys: {dn: -0.115, up: 0.115}}, 1: {stat: {dn: -0.022, up: 0.022}, sys: {dn: -0.111, up: 0.111}}, 2: {stat: {dn: -0.02, up: 0.02}, sys: {dn: -0.072, up: 0.072}}, 3: {stat: {dn: -0.021, up: 0.021}, sys: {dn: -0.096, up: 0.096}}, 4: {stat: {dn: -0.019, up: 0.019}, sys: {dn: -0.095, up: 0.095}}, 5: {stat: {dn: -0.023, up: 0.023}, sys: {dn: -0.123, up: 0.123}}, 6: {stat: {dn: -0.035, up: 0.035}, sys: {dn: -0.146, up: 0.146}}, 7: {stat: {dn: -0.045, up: 0.045}, sys: {dn: -0.225, up: 0.225}}}
+
+IsRef: 1
+Path: /REF/E605_1991_I302822/d25-x01-y01
+Title: doi:10.17182/hepdata.22831.v1/t25
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+-1.250000e-01	0.000000e+00	0.000000e+00	3.690000e-01	1.199208e-01	1.199208e-01
+-7.500000e-02	0.000000e+00	0.000000e+00	3.040000e-01	1.131592e-01	1.131592e-01
+-2.500000e-02	0.000000e+00	0.000000e+00	3.680000e-01	7.472617e-02	7.472617e-02
+2.500000e-02	0.000000e+00	0.000000e+00	4.540000e-01	9.827004e-02	9.827004e-02
+7.500000e-02	0.000000e+00	0.000000e+00	3.880000e-01	9.688137e-02	9.688137e-02
+1.250000e-01	0.000000e+00	0.000000e+00	4.050000e-01	1.251319e-01	1.251319e-01
+1.750000e-01	0.000000e+00	0.000000e+00	4.630000e-01	1.501366e-01	1.501366e-01
+2.250000e-01	0.000000e+00	0.000000e+00	2.530000e-01	2.294559e-01	2.294559e-01
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/E605_1991_I302822/d26-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.02, up: 0.02}, sys: {dn: -0.027, up: 0.027}}, 1: {stat: {dn: -0.015, up: 0.015}, sys: {dn: -0.012, up: 0.012}}, 2: {stat: {dn: -0.013, up: 0.013}, sys: {dn: -0.02, up: 0.02}}, 3: {stat: {dn: -0.011, up: 0.011}, sys: {dn: -0.023, up: 0.023}}, 4: {stat: {dn: -0.011, up: 0.011}, sys: {dn: -0.021, up: 0.021}}, 5: {stat: {dn: -0.013, up: 0.013}, sys: {dn: -0.024, up: 0.024}}, 6: {stat: {dn: -0.018, up: 0.018}, sys: {dn: -0.026, up: 0.026}}, 7: {stat: {dn: -0.048, up: 0.048}, sys: {dn: -0.029, up: 0.029}}}
+
+IsRef: 1
+Path: /REF/E605_1991_I302822/d26-x01-y01
+Title: doi:10.17182/hepdata.22831.v1/t26
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+-1.250000e-01	0.000000e+00	0.000000e+00	2.480000e-01	3.360060e-02	3.360060e-02
+-7.500000e-02	0.000000e+00	0.000000e+00	2.710000e-01	1.920937e-02	1.920937e-02
+-2.500000e-02	0.000000e+00	0.000000e+00	2.880000e-01	2.385372e-02	2.385372e-02
+2.500000e-02	0.000000e+00	0.000000e+00	2.770000e-01	2.549510e-02	2.549510e-02
+7.500000e-02	0.000000e+00	0.000000e+00	2.650000e-01	2.370654e-02	2.370654e-02
+1.250000e-01	0.000000e+00	0.000000e+00	2.750000e-01	2.729469e-02	2.729469e-02
+1.750000e-01	0.000000e+00	0.000000e+00	2.700000e-01	3.162278e-02	3.162278e-02
+2.250000e-01	0.000000e+00	0.000000e+00	2.630000e-01	5.608030e-02	5.608030e-02
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/E605_1991_I302822/d26-x01-y02
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.014, up: 0.014}, sys: {dn: -0.011, up: 0.011}}, 1: {stat: {dn: -0.008, up: 0.008}, sys: {dn: -0.023, up: 0.023}}, 2: {stat: {dn: -0.007, up: 0.007}, sys: {dn: -0.012, up: 0.012}}, 3: {stat: {dn: -0.007, up: 0.007}, sys: {dn: -0.018, up: 0.018}}, 4: {stat: {dn: -0.007, up: 0.007}, sys: {dn: -0.019, up: 0.019}}, 5: {stat: {dn: -0.009, up: 0.009}, sys: {dn: -0.026, up: 0.026}}, 6: {stat: {dn: -0.013, up: 0.013}, sys: {dn: -0.024, up: 0.024}}, 7: {stat: {dn: -0.022, up: 0.022}, sys: {dn: -0.027, up: 0.027}}}
+
+IsRef: 1
+Path: /REF/E605_1991_I302822/d26-x01-y02
+Title: doi:10.17182/hepdata.22831.v1/t26
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+-1.250000e-01	0.000000e+00	0.000000e+00	1.400000e-01	1.780449e-02	1.780449e-02
+-7.500000e-02	0.000000e+00	0.000000e+00	1.040000e-01	2.435159e-02	2.435159e-02
+-2.500000e-02	0.000000e+00	0.000000e+00	1.260000e-01	1.389244e-02	1.389244e-02
+2.500000e-02	0.000000e+00	0.000000e+00	1.460000e-01	1.931321e-02	1.931321e-02
+7.500000e-02	0.000000e+00	0.000000e+00	1.350000e-01	2.024846e-02	2.024846e-02
+1.250000e-01	0.000000e+00	0.000000e+00	1.400000e-01	2.751363e-02	2.751363e-02
+1.750000e-01	0.000000e+00	0.000000e+00	1.530000e-01	2.729469e-02	2.729469e-02
+2.250000e-01	0.000000e+00	0.000000e+00	1.010000e-01	3.482815e-02	3.482815e-02
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/E605_1991_I302822/d26-x01-y03
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.316, up: 0.316}, sys: {dn: -0.51, up: 0.51}}, 1: {stat: {dn: -0.202, up: 0.202}, sys: {dn: -0.278, up: 0.278}}, 2: {stat: {dn: -0.161, up: 0.161}, sys: {dn: -0.211, up: 0.211}}, 3: {stat: {dn: -0.168, up: 0.168}, sys: {dn: -0.227, up: 0.227}}, 4: {stat: {dn: -0.142, up: 0.142}, sys: {dn: -0.21, up: 0.21}}, 5: {stat: {dn: -0.163, up: 0.163}, sys: {dn: -0.249, up: 0.249}}, 6: {stat: {dn: -0.298, up: 0.298}, sys: {dn: -0.401, up: 0.401}}, 7: {stat: {dn: -0.424, up: 0.424}, sys: {dn: -0.753, up: 0.753}}}
+
+IsRef: 1
+Path: /REF/E605_1991_I302822/d26-x01-y03
+Title: doi:10.17182/hepdata.22831.v1/t26
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+-1.250000e-01	0.000000e+00	0.000000e+00	1.422000e+00	5.999633e-01	5.999633e-01
+-7.500000e-02	0.000000e+00	0.000000e+00	1.370000e+00	3.436393e-01	3.436393e-01
+-2.500000e-02	0.000000e+00	0.000000e+00	1.389000e+00	2.654091e-01	2.654091e-01
+2.500000e-02	0.000000e+00	0.000000e+00	1.550000e+00	2.824057e-01	2.824057e-01
+7.500000e-02	0.000000e+00	0.000000e+00	1.331000e+00	2.535035e-01	2.535035e-01
+1.250000e-01	0.000000e+00	0.000000e+00	1.338000e+00	2.976071e-01	2.976071e-01
+1.750000e-01	0.000000e+00	0.000000e+00	1.582000e+00	4.996048e-01	4.996048e-01
+2.250000e-01	0.000000e+00	0.000000e+00	9.090000e-01	8.641672e-01	8.641672e-01
+END YODA_SCATTER2D_V2

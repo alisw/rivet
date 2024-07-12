@@ -1,0 +1,170 @@
+{
+    "341573": [
+        "Search for nonminimal Higgs bosons in Z0 decays", 
+        "L3", 
+        "10.1007/BF01474331", 
+        "241878", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-92-163"
+        ]
+    ], 
+    "344329": [
+        "Determination of quark electroweak couplings from direct photon production in hadronic Z decays", 
+        "L3", 
+        "10.1016/0370-2693(93)90735-Z", 
+        "244601", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-92-209"
+        ]
+    ], 
+    "354295": [
+        "Results from the L3 experiment at LEP", 
+        "L3", 
+        "10.1016/0370-1573(93)90027-B", 
+        "246903", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-31"
+        ]
+    ], 
+    "354296": [
+        "A Search for the neutral Higgs boson at LEP", 
+        "L3", 
+        "10.1016/0370-2693(93)91450-2", 
+        "246817", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-30"
+        ]
+    ], 
+    "355488": [
+        "Search for narrow vector resonances in the $Z$ mass range", 
+        "L3", 
+        "10.1016/0370-2693(93)91229-G", 
+        "246968", 
+        null, 
+        "ins355488", 
+        null, 
+        [
+            "CERN-PPE-93-37"
+        ]
+    ], 
+    "355489": [
+        "Search for a $Z^\\prime$ at the $Z$ resonance", 
+        "L3", 
+        "10.1016/0370-2693(93)91156-H", 
+        "246969", 
+        null, 
+        "ins355489", 
+        null, 
+        [
+            "CERN-PPE-93-44"
+        ]
+    ], 
+    "355490": [
+        "Measurement of Gamma (b anti-b) / Gamma (had) from hadronic decays of the Z", 
+        "L3", 
+        "10.1016/0370-2693(93)90214-3", 
+        "248549", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-60"
+        ]
+    ], 
+    "358527": [
+        "Determination of the effective electroweak mixing angle from Z decay", 
+        "L3", 
+        "10.1016/0370-2693(93)90961-G", 
+        "249031", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-68"
+        ]
+    ], 
+    "358528": [
+        "Inclusive search for the charmless radiative decay of the b quark (b ---> s gamma)", 
+        "L3", 
+        "10.1016/0370-2693(93)91384-Y", 
+        "251854", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-126"
+        ]
+    ], 
+    "360334": [
+        "An S matrix analysis of the Z resonance", 
+        "L3", 
+        "10.1016/0370-2693(93)91646-5", 
+        "252521", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-150"
+        ]
+    ], 
+    "360335": [
+        "Search for lepton flavor violation in Z decays", 
+        "L3", 
+        "10.1016/0370-2693(93)90348-L", 
+        "253575", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-151"
+        ]
+    ], 
+    "360336": [
+        "Measurement of the average lifetime of b hadrons", 
+        "L3", 
+        "10.1016/0370-2693(93)91027-K", 
+        "253376", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-158"
+        ]
+    ], 
+    "360337": [
+        "Chi(c) production in hadronic Z decays", 
+        "L3", 
+        "10.1016/0370-2693(93)91026-J", 
+        "253574", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-166"
+        ]
+    ], 
+    "363186": [
+        "Measurement of eta(c) production in untagged two photon collisions at LEP", 
+        "L3", 
+        "10.1016/0370-2693(93)91558-5", 
+        "253807", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-173"
+        ]
+    ]
+}

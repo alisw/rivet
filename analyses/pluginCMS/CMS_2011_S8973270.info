@@ -6,6 +6,7 @@ Collider: LHC
 SpiresID: 8973270
 InspireID: 889807
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Lukas Wehrli <wehrlilu@cern.ch>
 References:
@@ -41,3 +42,9 @@ BibTeX: '@Article{Khachatryan:2011wq,
      doi       = "10.1007/JHEP03(2011)136",
      SLACcitation  = "%%CITATION = 1102.3194;%%"
 }'
+
+ReleaseTests:
+ - $A LHC-7-Bottom-3
+ - $A-2 LHC-7-Bottom-4
+ - $A-3 LHC-7-Bottom-5
+

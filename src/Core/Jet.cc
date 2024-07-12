@@ -59,9 +59,9 @@ namespace Rivet {
 
 
   bool Jet::containsParticle(const Particle& particle) const {
-    const int barcode = particle.genParticle()->barcode();
+    const int barcode = HepMCUtils::uniqueId(particle.genParticle());
     for (const Particle& p : particles()) {
-      if (p.genParticle()->barcode() == barcode) return true;
+      if (HepMCUtils::uniqueId(p.genParticle()) == barcode) return true;
     }
     return false;
   }
@@ -101,7 +101,7 @@ namespace Rivet {
     double e_neutral = 0.0;
     for (const Particle& p : particles()) {
       const PdgId pid = p.pid();
-      if (PID::threeCharge(pid) == 0) {
+      if (PID::charge3(pid) == 0) {
         e_neutral += p.E();
       }
     }
@@ -121,15 +121,15 @@ namespace Rivet {
   }
 
 
+  /*
   bool Jet::containsCharm(bool include_decay_products) const {
     for (const Particle& p : particles()) {
-      const PdgId pid = p.pid();
-      if (abs(pid) == PID::CQUARK) return true;
-      if (PID::isHadron(pid) && PID::hasCharm(pid)) return true;
+      if (p.abspid() == PID::CQUARK) return true;
+      if (isHadron(p) && hasCharm(p)) return true;
       if (include_decay_products) {
-        const HepMC::GenVertex* gv = p.genParticle()->production_vertex();
+        ConstGenVertexPtr gv = p.genParticle()->production_vertex();
         if (gv) {
-          for (const GenParticle* pi : Rivet::particles(gv, HepMC::ancestors)) {
+          for (ConstGenParticlePtr pi : HepMCUtils::particles(gv, Relatives::ANCESTORS)) {
             const PdgId pid2 = pi->pdg_id();
             if (PID::isHadron(pid2) && PID::hasCharm(pid2)) return true;
           }
@@ -142,13 +142,13 @@ namespace Rivet {
 
   bool Jet::containsBottom(bool include_decay_products) const {
     for (const Particle& p : particles()) {
-      const PdgId pid = p.pid();
-      if (abs(pid) == PID::BQUARK) return true;
-      if (PID::isHadron(pid) && PID::hasBottom(pid)) return true;
+      if (p.abspid() == PID::BQUARK) return true;
+      if (isHadron(p) && hasBottom(p)) return true;
       if (include_decay_products) {
-        const HepMC::GenVertex* gv = p.genParticle()->production_vertex();
+        ConstGenVertexPtr gv = p.genParticle()->production_vertex();
         if (gv) {
-          for (const GenParticle* pi : Rivet::particles(gv, HepMC::ancestors)) {
+          for (ConstGenParticlePtr pi :
+                 HepMCUtils::particles(gv, Relatives::ANCESTORS)) {
             const PdgId pid2 = pi->pdg_id();
             if (PID::isHadron(pid2) && PID::hasBottom(pid2)) return true;
           }
@@ -157,6 +157,7 @@ namespace Rivet {
     }
     return false;
   }
+  */
 
 
   Particles Jet::tags(const Cut& c) const {
@@ -165,17 +166,27 @@ namespace Rivet {
 
   Particles Jet::bTags(const Cut& c) const {
     Particles rtn;
+    // First try for ghost-associated b-tag particles
     for (const Particle& tp : tags()) {
       if (hasBottom(tp) && c->accept(tp)) rtn.push_back(tp);
+    }
+    // If no proper tags found, look for b quark constituents
+    if (rtn.empty()) {
+      rtn = filter_select(constituents(), hasAbsPID(PID::BQUARK));
     }
     return rtn;
   }
 
   Particles Jet::cTags(const Cut& c) const {
     Particles rtn;
+    // First try for ghost-associated c-tag particles
     for (const Particle& tp : tags()) {
       /// @todo Is making b and c tags exclusive the right thing to do?
       if (hasCharm(tp) && !hasBottom(tp) && c->accept(tp)) rtn.push_back(tp);
+    }
+    // If no proper tags found, look for b quark constituents
+    if (rtn.empty()) {
+      rtn = filter_select(constituents(), hasAbsPID(PID::CQUARK));
     }
     return rtn;
   }
@@ -189,35 +200,66 @@ namespace Rivet {
   }
 
 
-  //////////////////////
-
-
-  // DISABLED UNTIL VANILLA CC7 COMPATIBILITY NOT NEEDED
-
-  // /// Jets copy constructor from vector<Jet>
-  // Jets::Jets(const std::vector<Jet>& vjs) : base(vjs) {}
-
-  // /// Jets -> FourMomenta cast/conversion operator
-  // Jets::operator FourMomenta () const {
-  //   // FourMomenta rtn(this->begin(), this->end());
-  //   FourMomenta rtn; rtn.reserve(this->size());
-  //   for (size_t i = 0; i < this->size(); ++i) rtn.push_back((*this)[i]);
-  //   return rtn;
-  // }
-
-  // /// Jets concatenation operator
-  // Jets operator + (const Jets& a, const Jets& b) {
-  //   Jets rtn(a);
-  //   rtn += b;
-  //   return rtn;
-  // }
-
 
   //////////////////////
+
+
+
+  /// Jets default constructor
+  Jets::Jets() : base() {}
+
+  /// Jets copy constructor from vector<Jet>
+  Jets::Jets(const std::vector<Jet>& vjs) : base(vjs) {}
+
+  /// Jets -> FourMomenta cast/conversion operator
+  FourMomenta Jets::moms() const {
+    // FourMomenta rtn(this->begin(), this->end());
+    FourMomenta rtn; rtn.reserve(this->size());
+    for (size_t i = 0; i < this->size(); ++i) rtn.push_back((*this)[i].mom());
+    return rtn;
+  }
+
+  /// Jets -> PseudoJets cast/conversion operator
+  PseudoJets Jets::pseudojets() const {
+    PseudoJets rtn; rtn.reserve(this->size());
+    for (size_t i = 0; i < this->size(); ++i) {
+      PseudoJet pj = (*this)[i].pseudojet();
+      pj.set_user_index(i); //< aid identification with the original jets vector
+      rtn.push_back(pj);
+    }
+    return rtn;
+  }
+
+  /// Jet appending operator
+  Jets& Jets::operator += (const Jet& j) {
+    vector<Jet>& v(*this);
+    v += j;
+    return *this;
+  }
+
+  /// Jets in-place concatenation operator
+  Jets& Jets::operator += (const Jets& js) {
+    vector<Jet>& v(*this);
+    v += js;
+    return *this;
+  }
+
+  /// Jets concatenation operator
+  Jets operator + (const Jets& a, const Jets& b) {
+    Jets rtn(a);
+    rtn += b;
+    return rtn;
+  }
+
+
+
+  //////////////////////
+
 
 
   /// Allow a Jet to be passed to an ostream.
   std::ostream& operator << (std::ostream& os, const Jet& j) {
+    using std::boolalpha;
     os << "Jet<" << j.mom()/GeV << " GeV; Nparticles=" << j.size() << "; ";
     os << "bTag=" << boolalpha << j.bTagged() << ", ";
     os << "cTag=" << boolalpha << j.cTagged() << ", ";

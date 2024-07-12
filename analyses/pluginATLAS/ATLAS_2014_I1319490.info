@@ -5,9 +5,11 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1319490
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Matthew Mondragon <matthew.craig.mondragon@cern.ch>
 References:
+ - ATLAS-STDM-2012-24
  - Eur.Phys.J. C75 (2015) 82
  - doi:10.1140/epjc/s10052-015-3262-7
  - arXiv:1409.8639 [hep-ex]
@@ -16,6 +18,7 @@ RunInfo:
 NumEvents: 1000000
 Beams: [p+, p+]
 Energies: [7000]
+Luminosity_fb: 4.6
 PtCuts: [25,30]
 NeedCrossSection: True
 Options:
@@ -48,3 +51,7 @@ BibTeX: '@article{Aad:2014qxa,
       reportNumber   = "CERN-PH-EP-2014-199",
       SLACcitation   = "%%CITATION = ARXIV:1409.8639;%%",
 }'
+
+ReleaseTests:
+ - $A LHC-W-e
+

@@ -1,0 +1,55 @@
+{
+    "357393": [
+        "The D0 Detector", 
+        "D0", 
+        "10.1016/0168-9002(94)91312-9", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-93-179-E", 
+            "D0-Note-1808"
+        ]
+    ], 
+    "360575": [
+        "First generation leptoquark search in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.72.965", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-93-340-E", 
+            "D0-NOTE-1974", 
+            "FSU-SCRI-94-49"
+        ]
+    ], 
+    "371252": [
+        "Rapidity gaps between jets in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.72.2332", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-94-005-E", 
+            "D0-NOTE-2021"
+        ]
+    ], 
+    "371257": [
+        "Search for the top quark in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.72.2138", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-94-004-E", 
+            "D0-NOTE-1999"
+        ]
+    ]
+}

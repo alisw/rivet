@@ -1,0 +1,62 @@
+{
+    "469925": [
+        "Production of pi+, K+, K0, K*0, phi, p and Lambda0 in hadronic Z0 decays", 
+        "SLD", 
+        "10.1103/PhysRevD.59.052001", 
+        null, 
+        "hep-ex/9805029", 
+        "ins469925", 
+        null, 
+        [
+            "SLAC-PUB-7766"
+        ]
+    ], 
+    "470140": [
+        "An Improved test of the flavor independence of strong interactions", 
+        "SLD", 
+        "10.1103/PhysRevD.59.012002", 
+        null, 
+        "hep-ex/9805023", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-7660"
+        ]
+    ], 
+    "484833": [
+        "Direct measurement of A(b) in Z0 decays using charged kaon tagging", 
+        "SLD", 
+        "10.1103/PhysRevLett.83.1902", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-7959"
+        ]
+    ], 
+    "496238": [
+        "First study of the structure of e+ e- ---> b anti-b g events and limits on the anomalous chromomagnetic coupling of the b quark", 
+        "SLD", 
+        "10.1103/PhysRevD.60.092002", 
+        null, 
+        "hep-ex/9903004", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-7920"
+        ]
+    ], 
+    "502360": [
+        "Direct measurement of A(b) and A(c) at the Z0 pole using a lepton tag", 
+        "SLD", 
+        "10.1103/PhysRevLett.83.3384", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-7798"
+        ]
+    ]
+}

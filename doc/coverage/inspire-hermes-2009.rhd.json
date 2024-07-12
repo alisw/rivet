@@ -1,0 +1,50 @@
+{
+    "810392": [
+        "Spin Density Matrix Elements in Exclusive rho0 Electroproduction on H-1 and H-2 Targets at 27.5-GeV Beam Energy", 
+        "HERMES", 
+        "10.1140/epjc/s10052-009-1082-3", 
+        null, 
+        "0901.0701", 
+        null, 
+        null, 
+        [
+            "DESY-08-203"
+        ]
+    ], 
+    "823754": [
+        "Observation of the Naive-T-odd Sivers Effect in Deep-Inelastic Scattering", 
+        "HERMES", 
+        "10.1103/PhysRevLett.103.152002", 
+        null, 
+        "0906.3918", 
+        null, 
+        null, 
+        [
+            "DESY-09-089"
+        ]
+    ], 
+    "824279": [
+        "Exclusive rho0 electroproduction on transversely polarized protons", 
+        "HERMES", 
+        "10.1016/j.physletb.2009.07.023", 
+        null, 
+        "0906.5160", 
+        null, 
+        null, 
+        [
+            "DESY-09-094"
+        ]
+    ], 
+    "831699": [
+        "Separation of contributions from deeply virtual Compton scattering and its interference with the Bethe-Heitler process in measurements on a hydrogen target", 
+        "HERMES", 
+        "10.1088/1126-6708/2009/11/083", 
+        null, 
+        "0909.3587", 
+        null, 
+        null, 
+        [
+            "DESY-09-143"
+        ]
+    ]
+}

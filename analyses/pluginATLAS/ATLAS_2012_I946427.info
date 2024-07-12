@@ -5,6 +5,7 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 946427
 Status: OBSOLETE
+Reentrant: true
 Authors:
  - Peter Richardson <Peter.Richardson@durham.ac.uk>
 References:

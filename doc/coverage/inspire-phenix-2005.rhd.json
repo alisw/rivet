@@ -1,0 +1,122 @@
+{
+    "651462": [
+        "Deuteron and antideuteron production in Au + Au collisions at s(NN)**(1/2) = 200-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.94.122302", 
+        null, 
+        "nucl-ex/0406004", 
+        null, 
+        null, 
+        []
+    ], 
+    "656142": [
+        "Jet structure of baryon excess in Au + Au collisions at s(NN)**(1/2) = 200-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.71.051902", 
+        null, 
+        "nucl-ex/0408007", 
+        null, 
+        null, 
+        []
+    ], 
+    "659749": [
+        "Systematic studies of the centrality and s(NN)**(1/2) dependence of the d E(T) / d eta and d (N(ch) / d eta in heavy ion collisions at mid-rapidity", 
+        "PHENIX", 
+        "10.1103/PhysRevC.71.034908", 
+        null, 
+        "nucl-ex/0409015", 
+        null, 
+        null, 
+        []
+    ], 
+    "660611": [
+        "Centrality dependence of charm production from single electrons measurement in Au + Au collisions at s(NN)**(1/2) = 200-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.94.082301", 
+        null, 
+        "nucl-ex/0409028", 
+        "ins660611", 
+        null, 
+        []
+    ], 
+    "661031": [
+        "Formation of dense partonic matter in relativistic nucleus-nucleus collisions at RHIC: Experimental evaluation by the PHENIX collaboration", 
+        "PHENIX", 
+        "10.1016/j.nuclphysa.2005.03.086", 
+        null, 
+        "nucl-ex/0410003", 
+        null, 
+        null, 
+        []
+    ], 
+    "661505": [
+        "Production of phi mesons at mid-rapidity in s(NN)**(1/2) = 200- GeV Au+Au collisions at RHIC", 
+        "PHENIX", 
+        "10.1103/PhysRevC.72.014903", 
+        null, 
+        "nucl-ex/0410012", 
+        null, 
+        null, 
+        []
+    ], 
+    "664944": [
+        "Saturation of azimuthal anisotropy in Au + Au collisions at s(NN)**(1/2) 62-GeV to 200-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.94.232302", 
+        null, 
+        "nucl-ex/0411040", 
+        null, 
+        null, 
+        []
+    ], 
+    "665543": [
+        "Nuclear modification factors for hadrons at forward and backward rapidities in deuteron-gold collisions at s(NN)**(1/2) = 200-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.94.082302", 
+        null, 
+        "nucl-ex/0411054", 
+        null, 
+        null, 
+        []
+    ], 
+    "676004": [
+        "Mid-rapidity direct-photon production in $p^+ p$ collisions at $\\sqrt{s}$ = 200-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevD.71.071102", 
+        null, 
+        "hep-ex/0502006", 
+        null, 
+        null, 
+        []
+    ], 
+    "676189": [
+        "Measurement of single electron event anisotropy in Au+Au collisions at s(NN)**(1/2) = 200-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.72.024901", 
+        null, 
+        "nucl-ex/0502009", 
+        null, 
+        null, 
+        []
+    ], 
+    "678021": [
+        "Centrality dependence of direct photon production in s(NN)**(1/ 2) = 200-GeV Au + Au collisions", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.94.232301", 
+        null, 
+        "nucl-ex/0503003", 
+        null, 
+        null, 
+        []
+    ], 
+    "687618": [
+        "Measurement of transverse single-spin asymmetries for mid-rapidity production of neutral pions and charged hadrons in polarized p+p collisions at s**(1/2) = 200-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.95.202001", 
+        null, 
+        "hep-ex/0507073", 
+        null, 
+        null, 
+        []
+    ]
+}

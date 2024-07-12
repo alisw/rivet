@@ -1,0 +1,69 @@
+#! /usr/bin/env bash
+
+# TODO: structure better, e.g. associative groupings by YSTART:YEND pairs
+CURRENT=(alice atlas cms lhcb totem lhcf star phenix cleo h1 zeus hermes babar belle opal delphi aleph l3 sld compass snd cmd bes besiii cdf d0 kloe kedr)
+TO2010=(focus e691 e791 e756)
+TO2000=(amy jade argus venus topaz hrs mac tpc dm2 cello fenice lena cusb e735 olya)
+TO1990=(dasp desy147 dm1 jade marki markii markj mupi pluto tasso) # nmd two_gamma
+EXPTS=("${CURRENT[@]}" "${TO2010[@]}" "${TO2000[@]}" "${TO1990[@]}")
+
+# EXPTS=(atlas cms)
+
+# TODO: does the "publication_info.journal_title:* and not publication_info.cnum:*" condition remove the need to test on author numbers? A quick test suggests not quite
+SMALL=(amy jade argus snd cmd topaz pluto tasso dm1 dm2 lhcf cello mupi lena kloe fenice bbar brahms kloe cusb dasp desy147 e735 ehs two_gamma hrs mac marki markii markj md1 nd nmd olya sfm totem tpc venus fenice focus kedr e691 e791 e756)
+
+for EXPT in ${EXPTS[@]}; do
+    NAUTH=100
+    STARTYEAR=1980
+    ENDYEAR=$(date +"%Y")
+
+    # STARTYEAR=2020
+
+    # Set a smaller min number of authors for small experiments
+    for SMALLEXPT in ${SMALL[@]}; do
+	    if [[ "$SMALLEXPT" == "$EXPT" ]]; then
+	        NAUTH=15
+	        break
+	    fi
+    done
+    # Change end year for older experiments
+    for OLDEXPT in ${TO2010[@]}; do
+            if [[ "$OLDEXPT" == "$EXPT" ]]; then
+		ENDYEAR=2010
+		break
+            fi
+    done
+    for OLDEXPT in ${TO2000[@]}; do
+	    if [[ "$OLDEXPT" == "$EXPT" ]]; then
+	        ENDYEAR=2000
+	        break
+	    fi
+    done
+    for OLDEXPT in ${TO1990[@]}; do
+	    if [[ "$OLDEXPT" == "$EXPT" ]]; then
+	        STARTYEAR=1970
+	        ENDYEAR=1990
+	        break
+	    fi
+    done
+
+    for YEAR in $(seq $STARTYEAR $ENDYEAR); do
+        OUT=inspire-$EXPT-$YEAR.ins.json
+        if [[ -e $OUT ]]; then
+            echo "$OUT exists: skipping $EXPT $YEAR download"
+        else
+            echo "Downloading $EXPT $YEAR Inspire record to $OUT"
+ 	        URL="https://inspirehep.net/api/literature?size=1000&sort=mostrecent"
+            URL="$URL&q=collaborations.value:${EXPT}+and+publication_info.year:${YEAR}"
+            #URL="$URL+and+publication_info.journal_title:*"  #< TODO: reinstate, but a few too many false negatives due to missing journal info
+            URL="$URL+and+not+publication_info.cnum:*" #< some false exclusions? But very useful otherwise
+            URL="$URL+and+author_count:${NAUTH}%2B"
+            URL="$URL&fields=titles,publication_info,dois,texkeys,keywords,arxiv_preprints,collaborations,report_numbers,external_system_identifiers,imprints,preprint_date,arxiv_eprints"
+            echo "$URL"
+            sleep 0.5s &  #< Inspire throttles queries to 2/sec max
+            wget "$URL" -O $OUT &
+            wait
+        fi
+    done
+
+done

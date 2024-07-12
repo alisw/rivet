@@ -1,0 +1,37 @@
+Name: BELLE_2017_I1610301
+Year: 2017
+Summary:  $\Upsilon(2,3,4S)\to\Upsilon(1S)\pi^+\pi^-$ and $\Upsilon(4S)\to\Upsilon(2S)\pi^+\pi^-$
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1610301
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ -     Phys.Rev.D 96 (2017) 5, 052005
+RunInfo: Any process producing Upsilon(2,3,4S), original e+e-
+Description:
+   'Measurement of the $\pi^+\pi^-$ mass Spectrum and pion helicity angle in $\Upsilon(2,3,4S)\to\Upsilon(1S)\pi^+\pi^-$
+    and $\Upsilon(4S)\to\Upsilon(2S)\pi^+\pi^-$ decays by the BELLE collaboration.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle:2017vat
+BibTeX: '@article{Belle:2017vat,
+    author = "Guido, E. and others",
+    collaboration = "Belle",
+    title = "{Study of $\eta$ and dipion transitions in $\Upsilon(4S)$ decays to lower bottomonia}",
+    eprint = "1707.04973",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BELLE-PREPRINT-2017-16, KEK-PREPRINT-2017-17",
+    doi = "10.1103/PhysRevD.96.052005",
+    journal = "Phys. Rev. D",
+    volume = "96",
+    number = "5",
+    pages = "052005",
+    year = "2017"
+}'

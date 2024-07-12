@@ -8,6 +8,7 @@ namespace Rivet {
 
 
   /// @brief CDF Run II underlying event in leading jet events
+  ///
   /// @author Hendrik Hoeth
   ///
   /// Rick Field's measurement of the underlying event in "leading jet" events.
@@ -27,11 +28,7 @@ namespace Rivet {
   class CDF_2010_S8591881_QCD : public Analysis {
   public:
 
-    /// Constructor
-    CDF_2010_S8591881_QCD()
-      : Analysis("CDF_2010_S8591881_QCD")
-    {
-    }
+    RIVET_DEFAULT_ANALYSIS_CTOR(CDF_2010_S8591881_QCD);
 
 
     /// @name Analysis methods
@@ -39,29 +36,29 @@ namespace Rivet {
 
     void init() {
       // Final state for the jet finding
-      const FinalState fsj(-4.0, 4.0, 0.0*GeV);
+      const FinalState fsj(Cuts::abseta < 4.0);
       declare(fsj, "FSJ");
       declare(FastJets(fsj, FastJets::CDFMIDPOINT, 0.7), "MidpointJets");
 
       // Charged final state for the distributions
-      const ChargedFinalState cfs(-1.0, 1.0, 0.5*GeV);
+      const ChargedFinalState cfs(Cuts::abseta < 1.0 && Cuts::pT >= 0.5*GeV);
       declare(cfs, "CFS");
 
       // Book histograms
-      _hist_tnchg      = bookProfile1D(10, 1, 1);
-      _hist_pnchg      = bookProfile1D(10, 1, 2);
-      _hist_anchg      = bookProfile1D(10, 1, 3);
-      _hist_pmaxnchg   = bookProfile1D(11, 1, 1);
-      _hist_pminnchg   = bookProfile1D(11, 1, 2);
-      _hist_pdifnchg   = bookProfile1D(11, 1, 3);
-      _hist_tcptsum    = bookProfile1D(12, 1, 1);
-      _hist_pcptsum    = bookProfile1D(12, 1, 2);
-      _hist_acptsum    = bookProfile1D(12, 1, 3);
-      _hist_pmaxcptsum = bookProfile1D(13, 1, 1);
-      _hist_pmincptsum = bookProfile1D(13, 1, 2);
-      _hist_pdifcptsum = bookProfile1D(13, 1, 3);
-      _hist_pcptave    = bookProfile1D(14, 1, 1);
-      _hist_pcptmax    = bookProfile1D(15, 1, 1);
+      book(_hist_tnchg      ,10, 1, 1);
+      book(_hist_pnchg      ,10, 1, 2);
+      book(_hist_anchg      ,10, 1, 3);
+      book(_hist_pmaxnchg   ,11, 1, 1);
+      book(_hist_pminnchg   ,11, 1, 2);
+      book(_hist_pdifnchg   ,11, 1, 3);
+      book(_hist_tcptsum    ,12, 1, 1);
+      book(_hist_pcptsum    ,12, 1, 2);
+      book(_hist_acptsum    ,12, 1, 3);
+      book(_hist_pmaxcptsum ,13, 1, 1);
+      book(_hist_pmincptsum ,13, 1, 2);
+      book(_hist_pdifcptsum ,13, 1, 3);
+      book(_hist_pcptave    ,14, 1, 1);
+      book(_hist_pcptmax    ,15, 1, 1);
     }
 
 
@@ -90,26 +87,22 @@ namespace Rivet {
       MSG_DEBUG("Leading jet: pT = " << jetpT
                 << ", eta = " << jeteta << ", phi = " << jetphi);
 
-      // Get the event weight
-      const double weight = e.weight();
-
       // Get the final states to work with for filling the distributions
       const FinalState& cfs = apply<ChargedFinalState>(e, "CFS");
 
       size_t numOverall(0),     numToward(0),          numAway(0)  ;
       long int numTrans1(0),     numTrans2(0);
-      double ptSumOverall(0.0), ptSumToward(0.0), ptSumTrans1(0.0), ptSumTrans2(0.0), ptSumAway(0.0);
+      double ptSumToward(0.0), ptSumTrans1(0.0), ptSumTrans2(0.0), ptSumAway(0.0);
       double ptMaxOverall(0.0), ptMaxToward(0.0), ptMaxTrans1(0.0), ptMaxTrans2(0.0), ptMaxAway(0.0);
 
       // Calculate all the charged stuff
-      foreach (const Particle& p, cfs.particles()) {
+      for (const Particle& p : cfs.particles()) {
         const double dPhi = deltaPhi(p.phi(), jetphi);
         const double pT = p.pT();
         const double phi = p.phi();
         double rotatedphi = phi - jetphi;
         while (rotatedphi < 0) rotatedphi += 2*PI;
 
-        ptSumOverall += pT;
         ++numOverall;
         if (pT > ptMaxOverall) {
           ptMaxOverall = pT;
@@ -139,29 +132,28 @@ namespace Rivet {
       } // end charged particle loop
 
       // Fill the histograms
-      _hist_tnchg->fill(jetpT/GeV, numToward/(4*PI/3), weight);
-      _hist_pnchg->fill(jetpT/GeV, (numTrans1+numTrans2)/(4*PI/3), weight);
-      _hist_pmaxnchg->fill(jetpT/GeV, (numTrans1>numTrans2 ? numTrans1 : numTrans2)/(2*PI/3), weight);
-      _hist_pminnchg->fill(jetpT/GeV, (numTrans1<numTrans2 ? numTrans1 : numTrans2)/(2*PI/3), weight);
-      _hist_pdifnchg->fill(jetpT/GeV, abs(numTrans1-numTrans2)/(2*PI/3), weight);
-      _hist_anchg->fill(jetpT/GeV, numAway/(4*PI/3), weight);
+      _hist_tnchg->fill(jetpT/GeV, numToward/(4*PI/3));
+      _hist_pnchg->fill(jetpT/GeV, (numTrans1+numTrans2)/(4*PI/3));
+      _hist_pmaxnchg->fill(jetpT/GeV, (numTrans1>numTrans2 ? numTrans1 : numTrans2)/(2*PI/3));
+      _hist_pminnchg->fill(jetpT/GeV, (numTrans1<numTrans2 ? numTrans1 : numTrans2)/(2*PI/3));
+      _hist_pdifnchg->fill(jetpT/GeV, abs(numTrans1-numTrans2)/(2*PI/3));
+      _hist_anchg->fill(jetpT/GeV, numAway/(4*PI/3));
 
-      _hist_tcptsum->fill(jetpT/GeV, ptSumToward/GeV/(4*PI/3), weight);
-      _hist_pcptsum->fill(jetpT/GeV, (ptSumTrans1+ptSumTrans2)/GeV/(4*PI/3), weight);
-      _hist_pmaxcptsum->fill(jetpT/GeV, (ptSumTrans1>ptSumTrans2 ? ptSumTrans1 : ptSumTrans2)/GeV/(2*PI/3), weight);
-      _hist_pmincptsum->fill(jetpT/GeV, (ptSumTrans1<ptSumTrans2 ? ptSumTrans1 : ptSumTrans2)/GeV/(2*PI/3), weight);
-      _hist_pdifcptsum->fill(jetpT/GeV, fabs(ptSumTrans1-ptSumTrans2)/GeV/(2*PI/3), weight);
-      _hist_acptsum->fill(jetpT/GeV, ptSumAway/GeV/(4*PI/3), weight);
+      _hist_tcptsum->fill(jetpT/GeV, ptSumToward/GeV/(4*PI/3));
+      _hist_pcptsum->fill(jetpT/GeV, (ptSumTrans1+ptSumTrans2)/GeV/(4*PI/3));
+      _hist_pmaxcptsum->fill(jetpT/GeV, (ptSumTrans1>ptSumTrans2 ? ptSumTrans1 : ptSumTrans2)/GeV/(2*PI/3));
+      _hist_pmincptsum->fill(jetpT/GeV, (ptSumTrans1<ptSumTrans2 ? ptSumTrans1 : ptSumTrans2)/GeV/(2*PI/3));
+      _hist_pdifcptsum->fill(jetpT/GeV, fabs(ptSumTrans1-ptSumTrans2)/GeV/(2*PI/3));
+      _hist_acptsum->fill(jetpT/GeV, ptSumAway/GeV/(4*PI/3));
 
       if ((numTrans1+numTrans2) > 0) {
-        _hist_pcptave->fill(jetpT/GeV, (ptSumTrans1+ptSumTrans2)/GeV/(numTrans1+numTrans2), weight);
-        _hist_pcptmax->fill(jetpT/GeV, (ptMaxTrans1 > ptMaxTrans2 ? ptMaxTrans1 : ptMaxTrans2)/GeV, weight);
+        _hist_pcptave->fill(jetpT/GeV, (ptSumTrans1+ptSumTrans2)/GeV/(numTrans1+numTrans2));
+        _hist_pcptmax->fill(jetpT/GeV, (ptMaxTrans1 > ptMaxTrans2 ? ptMaxTrans1 : ptMaxTrans2)/GeV);
       }
     }
 
 
-    void finalize() {
-    }
+    // void finalize() {    }
 
     //@}
 
@@ -187,7 +179,6 @@ namespace Rivet {
 
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CDF_2010_S8591881_QCD);
+  RIVET_DECLARE_ALIASED_PLUGIN(CDF_2010_S8591881_QCD, CDF_2010_I849042_QCD);
 
 }

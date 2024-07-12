@@ -1,0 +1,20 @@
+Name: MC_WVBF
+Summary: Monte Carlo validation observables for VBF $W[\ell \, \nu]$ + 2 jet production
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Christian Gutschow <chris.g@cern.ch>
+References:
+RunInfo:
+  $\ell \nu$ + 2 jets analysis.
+Options:
+ - LMODE=EL,MU
+ - SCHEME=DRESSED,BARE
+PtCuts: [0]
+Description:
+  Monte Carlo validation observables for $W[\ell \, \nu]$ + 2 jets production
+  60 GeV $<m_W<$ 100 GeV cut applied.
+
+ReleaseTests:
+ - $A LHC-7-W-Jet-2-e
+

@@ -1,0 +1,132 @@
+{
+    "631713": [
+        "Erratum: Azimuthal Anisotropy at the Relativistic Heavy Ion Collider: The First and Fourth Harmonics [Phys. Rev. Lett. 92, 062301 (2004)]", 
+        "STAR", 
+        "10.1103/PhysRevLett.127.069901", 
+        null, 
+        "nucl-ex/0310029", 
+        null, 
+        null, 
+        []
+    ], 
+    "872067": [
+        "Measurements of dihadron correlations relative to the event plane in Au+Au collisions at $\\sqrt{s_{NN}}=200$ GeV", 
+        "STAR", 
+        "10.1088/1674-1137/abdf3f", 
+        null, 
+        "1010.0690", 
+        "ins872067", 
+        null, 
+        []
+    ], 
+    "1762811": [
+        "Methods for a blind analysis of isobar data collected by the STAR collaboration", 
+        "STAR", 
+        "10.1007/s41365-021-00878-y", 
+        null, 
+        "1911.00596", 
+        null, 
+        null, 
+        []
+    ], 
+    "1809043": [
+        "Flow and interferometry results from Au+Au collisions at $\\sqrt{s_{NN}} = 4.5$ GeV", 
+        "STAR", 
+        "10.1103/PhysRevC.103.034908", 
+        null, 
+        "2007.14005", 
+        null, 
+        null, 
+        []
+    ], 
+    "1829350": [
+        "Measurements of $W$ and $Z/\\gamma^*$ cross sections and their ratios in p+p collisions at RHIC", 
+        "STAR", 
+        "10.1103/PhysRevD.103.012001", 
+        null, 
+        "2011.04708", 
+        "ins1829350", 
+        null, 
+        []
+    ], 
+    "1836342": [
+        "Comparison of transverse single-spin asymmetries for forward $\\pi^{0}$ production in polarized $pp$, $p\\rm{Al}$ and $p\\rm{Au}$ collisions at nucleon pair c.m. energy $\\sqrt{s_{\\mathrm{NN}}}= 200$ GeV", 
+        "STAR", 
+        "10.1103/PhysRevD.103.072005", 
+        null, 
+        "2012.07146", 
+        "ins1836342", 
+        null, 
+        []
+    ], 
+    "1837609": [
+        "Measurement of transverse single-spin asymmetries of $\\pi^0$ and electromagnetic jets at forward rapidity in 200 and 500 GeV transversely polarized proton-proton collisions", 
+        "STAR", 
+        "10.1103/PhysRevD.103.092009", 
+        null, 
+        "2012.11428", 
+        "ins1837609", 
+        null, 
+        []
+    ], 
+    "1838481": [
+        "Global Polarization of $\\Xi$ and $\\Omega$ Hyperons in Au+Au Collisions at $\\sqrt {s_{NN}}$ = 200  GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.126.162301", 
+        null, 
+        "2012.13601", 
+        null, 
+        null, 
+        []
+    ], 
+    "1843941": [
+        "Cumulants and correlation functions of net-proton, proton, and antiproton multiplicity distributions in Au+Au collisions at energies available at the BNL Relativistic Heavy Ion Collider", 
+        "STAR", 
+        "10.1103/PhysRevC.104.024902", 
+        null, 
+        "2101.12413", 
+        null, 
+        null, 
+        []
+    ], 
+    "1850675": [
+        "Nonmonotonic Energy Dependence of Net-Proton Number Fluctuations", 
+        "STAR", 
+        "10.1103/PhysRevLett.126.092301", 
+        null, 
+        "2001.02852", 
+        null, 
+        null, 
+        []
+    ], 
+    "1850855": [
+        "Longitudinal double-spin asymmetry for inclusive jet and dijet production in polarized proton collisions at $\\sqrt{s}=200$ GeV", 
+        "STAR", 
+        "10.1103/PhysRevD.103.L091103", 
+        null, 
+        "2103.05571", 
+        "ins1850855", 
+        null, 
+        []
+    ], 
+    "1852040": [
+        "Azimuthal anisotropy measurements of strange and multistrange hadrons in $U+U$ collisions at $\\sqrt{s_{NN}}=$193 GeV at the BNL Relativistic Heavy Ion Collider", 
+        "STAR", 
+        "10.1103/PhysRevC.103.064907", 
+        null, 
+        "2103.09451", 
+        "ins1852040", 
+        null, 
+        []
+    ], 
+    "1894992": [
+        "Measurement of $e^+e^-$ Momentum and Angular Distributions from Linearly Polarized Photon Collisions", 
+        "STAR", 
+        "10.1103/PhysRevLett.127.052302", 
+        "2777357", 
+        "1910.12400", 
+        null, 
+        null, 
+        []
+    ]
+}

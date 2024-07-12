@@ -5,6 +5,7 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1093734
 Status: VALIDATED
+Reentrant: false
 Authors:
  - Camille Belanger-Champagne <camille@physics.mcgill.ca>
  - Andy Buckley <andy.buckley@cern.ch>

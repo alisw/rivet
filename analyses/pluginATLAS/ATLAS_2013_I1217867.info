@@ -5,9 +5,11 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1217867
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Frank Siegert <frank.siegert@cern.ch>
 References:
+ - ATLAS-STDM-2012-12
  - arXiv:1302.1415 [hep-ex]
 RunInfo:
   W+jet events in the electron and/or the muon decay channel.
@@ -39,3 +41,8 @@ BibTeX: '
 ToDo:
  - Get data into Hepdata
  - Add journal information once available
+
+ReleaseTests:
+ - $A LHC-W-e
+ - $A-2 LHC-W-mu
+

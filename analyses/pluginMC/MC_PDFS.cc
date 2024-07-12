@@ -22,27 +22,40 @@ namespace Rivet {
     /// Book histograms and initialise projections before the run
     void init() {
       // Projections
-      // declare(ChargedFinalState(-5.0, 5.0, 500*MeV), "CFS");
+      // declare(ChargedFinalState((Cuts::etaIn(-5.0, 5.0) && Cuts::pT >=  500*MeV)), "CFS");
 
       // Histograms
-      _histPdfX = bookHisto1D("PdfX", logspace(50, 0.000001, 1.0));
-      _histPdfXmin = bookHisto1D("PdfXmin", logspace(50, 0.000001, 1.0));
-      _histPdfXmax = bookHisto1D("PdfXmax", logspace(50, 0.000001, 1.0));
-      _histPdfQ = bookHisto1D("PdfQ", 50, 0.0, 30.0);
-      _histPdfXQ = bookHisto2D("PdfXQ", logspace(50, 0.000001, 1.0), linspace(50, 0.0, 30.0));
-      // _histPdfTrackptVsX = bookProfile1D("PdfTrackptVsX", logspace(50, 0.000001, 1.0));
-      // _histPdfTrackptVsQ = bookProfile1D("PdfTrackptVsQ", 50, 0.0, 30.0);
+      book(_histPdfX ,"PdfX", logspace(50, 0.000001, 1.0));
+      book(_histPdfXmin ,"PdfXmin", logspace(50, 0.000001, 1.0));
+      book(_histPdfXmax ,"PdfXmax", logspace(50, 0.000001, 1.0));
+      book(_histPdfQ ,"PdfQ", 50, 0.0, 30.0);
+      book(_histPdfXQ,"PdfXQ", logspace(50, 0.000001, 1.0), linspace(50, 0.0, 30.0));
+      //book( _histPdfTrackptVsX ,"PdfTrackptVsX", logspace(50, 0.000001, 1.0));
+      //book( _histPdfTrackptVsQ ,"PdfTrackptVsQ", 50, 0.0, 30.0);
     }
 
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-      const double weight = event.weight();
+      const double weight = 1.0;
 
       // This analysis needs a valid HepMC PDF info object to do anything
       if (event.genEvent()->pdf_info() == 0) vetoEvent;
-      HepMC::PdfInfo pdfi = *(event.genEvent()->pdf_info());
+      PdfInfo pdfi = *(event.genEvent()->pdf_info());
 
+#ifdef RIVET_ENABLE_HEPMC_3
+      MSG_DEBUG("PDF Q = " << pdfi.scale<< " for (id, x) = "
+                << "(" << pdfi.pdf_id[0] << ", " << pdfi.x[0] << ") "
+                << "(" << pdfi.pdf_id[1] << ", " << pdfi.x[1] << ")");
+      _histPdfX->fill(pdfi.x[0], weight);
+      _histPdfX->fill(pdfi.x[1], weight);
+      _histPdfXmin->fill(std::min(pdfi.x[0], pdfi.x[1]), weight);
+      _histPdfXmax->fill(std::max(pdfi.x[0], pdfi.x[1]), weight);
+      _histPdfQ->fill(pdfi.scale, weight); // always in GeV?
+      _histPdfXQ->fill(pdfi.x[0], pdfi.scale, weight); // always in GeV?
+      _histPdfXQ->fill(pdfi.x[1], pdfi.scale, weight); // always in GeV?
+      
+#else
       MSG_DEBUG("PDF Q = " << pdfi.scalePDF() << " for (id, x) = "
                 << "(" << pdfi.id1() << ", " << pdfi.x1() << ") "
                 << "(" << pdfi.id2() << ", " << pdfi.x2() << ")");
@@ -53,9 +66,9 @@ namespace Rivet {
       _histPdfQ->fill(pdfi.scalePDF(), weight); // always in GeV?
       _histPdfXQ->fill(pdfi.x1(), pdfi.scalePDF(), weight); // always in GeV?
       _histPdfXQ->fill(pdfi.x2(), pdfi.scalePDF(), weight); // always in GeV?
-
+#endif
       // const FinalState& cfs = apply<FinalState>(event, "CFS");
-      // foreach (const Particle& p, cfs.particles()) {
+      // for (const Particle& p : cfs.particles()) {
       //   if (fabs(eta) < 2.5 && p.pT() > 10*GeV) {
       //     _histPdfTrackptVsX->fill(pdfi.x1(), p.pT()/GeV, weight);
       //     _histPdfTrackptVsX->fill(pdfi.x2(), p.pT()/GeV, weight);
@@ -91,6 +104,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(MC_PDFS);
+  RIVET_DECLARE_PLUGIN(MC_PDFS);
 
 }

@@ -6,6 +6,7 @@ Collider: Tevatron Run 2
 SpiresID: 6450792
 InspireID: 699933
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Frank Siegert <frank.siegert@cern.ch>
 References:
@@ -41,3 +42,12 @@ BibTeX: '@Article{Abulencia:2005yg,
      doi       = "10.1103/PhysRevD.74.071103",
      SLACcitation  = "%%CITATION = HEP-EX/0512020;%%"
 }'
+
+ReleaseTests:
+ - $A TVT-Run-II-Jets-2
+ - $A-2 TVT-Run-II-Jets-3
+ - $A-3 TVT-Run-II-Jets-4
+ - $A-4 TVT-Run-II-Jets-5
+ - $A-5 TVT-Run-II-Jets-6
+ - $A-6 TVT-Run-II-Jets-7
+

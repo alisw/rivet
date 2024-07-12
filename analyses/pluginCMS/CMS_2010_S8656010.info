@@ -1,11 +1,12 @@
 Name: CMS_2010_S8656010
 Year: 2010
-Summary: Charged particle transverse momentum and pseudorapidity spectra from proton-proton collisions at 7000 GeV.
+Summary: Charged-particle transverse momentum and pseudorapidity spectra from proton-proton collisions at 7000 GeV
 Experiment: CMS
 Collider: LHC
 SpiresID: 8656010
 InspireID: 855299
 Status: VALIDATED
+Reentrant: true
 Authors:
  - A. Knutsson
 References:

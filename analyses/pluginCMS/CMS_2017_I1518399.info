@@ -5,6 +5,7 @@ Experiment: CMS
 Collider: LHC
 InspireID: 1518399
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Torben Dreyer <torben.dreyer@desy.de>
  - Roman Kogler <roman.kogler@cern.ch>
@@ -14,8 +15,8 @@ References:
  - arXiv:1703.06330
  - Submitted to Eur. Phys. J. C.
 RunInfo:
- '$t\bar{t}$ events at $\sqrt{s}=8\;\TeV$. Boosted topology requires high statistics in a single run or custom merging of the YODA files.'
-Luminosity: 19.7 /fb
+ '$t\bar{t}$ events at $\sqrt{s}=8~\TeV$. Boosted topology requires high statistics in a single run or custom merging of the YODA files.'
+Luminosity_fb: 19.7
 Beams: [p+, p+]
 Energies: [8000]
 
@@ -36,10 +37,10 @@ Description:
   Definition of the particle level phase space:
   - only ${\rm t\bar{t}}$ decays with one top quark decaying hadronically and one top quark
     decaying leptonically including an electron or muon from the W decay.
-  - lepton $\pt > 45\;\GeV$ and $|\eta| < 2.1$
-  - at least one jet with $\pt > 400\;\GeV$ and $|\eta| < 2.5$
-  - a second jet with $\pt > 150\;\GeV$ and $|\eta| < 2.5$
-  - veto on additional jets with $\pt > 150\;\GeV$ and $|\eta| < 2.5$
+  - lepton $\pt > 45~\GeV$ and $|\eta| < 2.1$
+  - at least one jet with $\pt > 400~\GeV$ and $|\eta| < 2.5$
+  - a second jet with $\pt > 150~\GeV$ and $|\eta| < 2.5$
+  - veto on additional jets with $\pt > 150~\GeV$ and $|\eta| < 2.5$
   - distance between the second jet and the lepton in the eta-phi plane $\Delta R(jet2, lepton)$ smaller 1.2
   - invariant mass of the leading jet larger than the invariant mass of the combination of the second jet and lepton
 
@@ -58,3 +59,5 @@ BibTeX: '@article{Sirunyan:2017yar,
       reportNumber   = "CMS-TOP-15-015, CERN-EP-2017-018",
       SLACcitation   = "%%CITATION = ARXIV:1703.06330;%%"
 }'
+ReleaseTests:
+ - $A pp-8000-ttbar-sl-boosted

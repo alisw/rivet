@@ -1,0 +1,26 @@
+{
+    "727262": [
+        "Study of inclusive strange-baryon production and search for pentaquarks in two-photon collisions at LEP", 
+        "L3", 
+        "10.1140/epjc/s10052-006-0140-3", 
+        "986534", 
+        "hep-ex/0609054", 
+        "ins727262", 
+        null, 
+        [
+            "CERN-PH-EP-2006-028"
+        ]
+    ], 
+    "749464": [
+        "Study of resonance formation in the mass region 1400-MeV to 1500-MeV through the reaction gamma gamma ---> K0(S) K+- pi-+", 
+        "L3", 
+        "10.1088/1126-6708/2007/03/018", 
+        "1047165", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2006-041"
+        ]
+    ]
+}

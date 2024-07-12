@@ -1,6 +1,7 @@
 Name: MC_HHJETS
 Summary: Monte Carlo validation observables for $HH$ (stable) + jets production
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Andreas Papaefstathiou <apapaefs@cern.ch>
 RunInfo:

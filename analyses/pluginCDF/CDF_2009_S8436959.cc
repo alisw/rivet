@@ -10,18 +10,8 @@ namespace Rivet {
   class CDF_2009_S8436959 : public Analysis {
   public:
 
-    /// @name Constructors etc.
-    //@{
+    RIVET_DEFAULT_ANALYSIS_CTOR(CDF_2009_S8436959);
 
-    /// Constructor
-    CDF_2009_S8436959()
-      : Analysis("CDF_2009_S8436959")
-    {    }
-
-    //@}
-
-
-  public:
 
     /// @name Analysis methods
     //@{
@@ -31,18 +21,16 @@ namespace Rivet {
       FinalState fs;
       declare(fs, "FS");
 
-      LeadingParticlesFinalState photonfs(FinalState(-1.0, 1.0, 30.0*GeV));
+      LeadingParticlesFinalState photonfs(FinalState((Cuts::etaIn(-1.0, 1.0) && Cuts::pT >=  30.0*GeV)));
       photonfs.addParticleId(PID::PHOTON);
       declare(photonfs, "LeadingPhoton");
 
-      _h_Et_photon = bookHisto1D(1, 1, 1);
+      book(_h_Et_photon ,1, 1, 1);
     }
 
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-      const double weight = event.weight();
-
       Particles fs = apply<FinalState>(event, "FS").particles();
       Particles photons = apply<LeadingParticlesFinalState>(event, "LeadingPhoton").particles();
       if (photons.size()!=1) {
@@ -52,7 +40,7 @@ namespace Rivet {
       double eta_P = leadingPhoton.eta();
       double phi_P = leadingPhoton.phi();
       FourMomentum mom_in_cone;
-      foreach (const Particle& p, fs) {
+      for (const Particle& p : fs) {
         if (deltaR(eta_P, phi_P, p.eta(), p.phi()) < 0.4) {
             mom_in_cone += p.momentum();
         }
@@ -60,7 +48,7 @@ namespace Rivet {
       if ( (mom_in_cone.Et() - leadingPhoton.Et()) > 2.0*GeV) {
         vetoEvent;
       }
-      _h_Et_photon->fill(leadingPhoton.Et(), weight);
+      _h_Et_photon->fill(leadingPhoton.Et());
     }
 
 
@@ -74,16 +62,13 @@ namespace Rivet {
 
   private:
 
-    /// @name Histograms
-    //@{
+    /// Histogram
     Histo1DPtr _h_Et_photon;
-    //@}
 
   };
 
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CDF_2009_S8436959);
+  RIVET_DECLARE_ALIASED_PLUGIN(CDF_2009_S8436959, CDF_2009_I834437);
 
 }

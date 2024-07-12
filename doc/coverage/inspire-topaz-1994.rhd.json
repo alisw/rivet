@@ -1,0 +1,101 @@
+{
+    "39496": [
+        "Measurement of the forward - backward asymmetries for charm and bottom quark pair productions at S**(1/2) = 58-GeV with electron tagging", 
+        "TOPAZ", 
+        "10.1016/0370-2693(94)91310-2", 
+        null, 
+        "hep-ex/9412012", 
+        "ins39496", 
+        null, 
+        [
+            "DPNU-94-32", 
+            "KEK-PREPRINT-94-101", 
+            "TIT-HPE-94-07", 
+            "TUAT-HEP-94-3", 
+            "INS-1062", 
+            "NWU-HEP-94-03", 
+            "OCU-HEP-94-5", 
+            "KOBE-HEP-94-04", 
+            "PU-94-684"
+        ]
+    ], 
+    "372139": [
+        "Measurement of the D*+- cross-section using a soft pion analysis in two photon processes", 
+        "TOPAZ", 
+        "10.1016/0370-2693(94)91515-6", 
+        null, 
+        "hep-ex/9412001", 
+        "ins372139", 
+        null, 
+        [
+            "KEK-PREPRINT-93-215", 
+            "TUAT-HEP-94-1", 
+            "DPNU-94-11", 
+            "TIT-HPE-94-01", 
+            "NWU-HEP-94-01", 
+            "OCU-HEP-94-1", 
+            "PU-94-681", 
+            "KOBE-HEP-94-03"
+        ]
+    ], 
+    "373856": [
+        "Measurement of the photon structure function F2(gamma) and jet production at TRISTAN", 
+        "TOPAZ", 
+        "10.1016/0370-2693(94)91284-X", 
+        null, 
+        null, 
+        "ins373856", 
+        null, 
+        [
+            "KEK-PREPRINT-94-13", 
+            "NWU-HEP-94-02", 
+            "DPNU-94-18", 
+            "INS-1031", 
+            "KOBE-HEP-94-04", 
+            "OCU-HEP-94-02", 
+            "PU-94-683", 
+            "TIT-HPE-94-03", 
+            "TUAT-HEP-94-02"
+        ]
+    ], 
+    "377805": [
+        "K0 (anti-K0) production in two photon processes at TRISTAN", 
+        "TOPAZ", 
+        "10.1016/0370-2693(94)90315-8", 
+        null, 
+        "hep-ex/9412003", 
+        "ins377805", 
+        null, 
+        [
+            "KEK-PREPRINT-94-106", 
+            "DPNU-94-38", 
+            "NWU-HEP-94-04", 
+            "TIT-HPE-94-09", 
+            "TUAT-HEP-94-04", 
+            "OCU-HEP-94-06", 
+            "PU-94-686", 
+            "INS-1051", 
+            "KOBE-HEP-94-05"
+        ]
+    ], 
+    "378075": [
+        "Measurement of inclusive electron cross-section in gamma gamma collisions at TRISTAN", 
+        "TOPAZ", 
+        "10.1016/0370-2693(94)01349-7", 
+        null, 
+        "hep-ex/9412011", 
+        "ins378075", 
+        null, 
+        [
+            "KEK-PREPRINT-94-109", 
+            "NWU-HEP-94-05", 
+            "TUAT-HEP-94-06", 
+            "DPNU-94-41", 
+            "TIT-HPE-94-08", 
+            "OCU-HEP-94-08", 
+            "PU-94-687", 
+            "INS-1063", 
+            "KOBE-HEP-94-07"
+        ]
+    ]
+}

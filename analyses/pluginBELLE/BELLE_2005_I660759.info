@@ -1,0 +1,22 @@
+Name: BELLE_2005_I660759
+Year: 2005
+Summary: Mass distributions in $\Xi^0_c\to pK^-K^-\pi^+$
+Experiment: BELLE
+Collider: KEKB
+InspireID: 660759
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett.B 605 (2005) 237-246
+RunInfo: Any process producing Xic0 mesons
+Description:
+  'Measurement of the mass distributions in the decay $\Xi^0_c\to pK^-K^-\pi^+$ by BELLE. The data were read from the plots in the paper, and for many points the error bars are the size of the point.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: 
+BibTeX: ''

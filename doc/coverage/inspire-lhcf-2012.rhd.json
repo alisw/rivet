@@ -1,0 +1,42 @@
+{
+    "1091609": [
+        "Luminosity determination in s**(1/2) = 7-TeV proton collisions using the LHCf front counter at LHC", 
+        "LHCf", 
+        "10.1088/1748-0221/7/01/T01003", 
+        "1434719", 
+        null, 
+        null, 
+        null, 
+        []
+    ], 
+    "1115479": [
+        "Measurement of forward neutral pion transverse momentum spectra for $\\sqrt{s}$ = 7TeV proton-proton collisions at LHC", 
+        "LHCf", 
+        "10.1103/PhysRevD.86.092001", 
+        "1449455", 
+        "1205.4578", 
+        "ins1115479", 
+        null, 
+        []
+    ], 
+    "1115904": [
+        "Calibration of LHCf calorimeters for photon measurement by CERN SPS test beam", 
+        "LHCf", 
+        "10.1016/j.nima.2011.12.096", 
+        "1434717", 
+        null, 
+        null, 
+        null, 
+        []
+    ], 
+    "1124336": [
+        "Measurement of zero degree inclusive photon energy spectra for $\\sqrt{s}=$ 900 GeV proton-proton collisions at LHC", 
+        "LHCf", 
+        "10.1016/j.physletb.2012.07.065", 
+        "1424353", 
+        "1207.7183", 
+        null, 
+        null, 
+        []
+    ]
+}

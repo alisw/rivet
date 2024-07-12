@@ -1,0 +1,28 @@
+{
+    "262056": [
+        "The CDF Detector: An Overview", 
+        "CDF", 
+        "10.1016/0168-9002(88)90298-7", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-88-025-E"
+        ]
+    ], 
+    "263320": [
+        "Transverse Momentum Distributions of Charged Particles Produced in $\\bar{p}p$ Interactions at $\\sqrt{s} = 630$ GeV and 1800 GeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.61.1819", 
+        null, 
+        null, 
+        "ins263320", 
+        null, 
+        [
+            "ANL-HEP-PR-88-32", 
+            "CDF-MEMO-MIN-BIAS-GROUP-576", 
+            "FERMILAB-PUB-88-224"
+        ]
+    ]
+}

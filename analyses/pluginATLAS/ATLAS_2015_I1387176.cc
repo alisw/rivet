@@ -10,7 +10,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2015_I1387176);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2015_I1387176);
 
 
     /// Initialization, called once before running
@@ -21,39 +21,38 @@ namespace Rivet {
       declare(jets, "Jets");
 
       // Book histograms
-      _hist_EEC  = bookHisto1D(1, 1, 1);
-      _hist_AEEC = bookScatter2D(2, 1, 1);
+      book(_hist_EEC  ,1, 1, 1);
+      book(_hist_AEEC ,2, 1, 1);
 
       // add dummy histogram for heterogenous merging
       string hname = "d01-x01-y01";
       const Scatter2D& ref = refData(hname);
       hname = "d01-x01-y02";
-      _hist_dummy = bookHisto1D(hname, ref);
+      book(_hist_dummy ,hname, ref);
     }
 
     void analyze(const Event& event) {
 
-      const double evtWeight = event.weight();
       const Jets& jets = apply<FastJets>(event, "Jets").jetsByPt(Cuts::pT > 50.0*GeV && Cuts::abseta < 2.5);
 
       if (jets.size() < 2)  vetoEvent;
       if (jets[0].pT() + jets[1].pT() < 500*GeV)  vetoEvent;
 
       double sumEt = 0.0;
-      foreach (Jet j, jets)  sumEt += j.E() / cosh(j.eta());
+      for (Jet j : jets)  sumEt += j.E() / cosh(j.eta());
 
-      foreach (Jet j1, jets) {
+      for (Jet j1 : jets) {
         double et1 = j1.E() / cosh(j1.eta());
 
-        foreach (Jet j2, jets) {
+        for (Jet j2 : jets) {
           double et2 = j2.E() / cosh(j2.eta());
           double etWeight = et1 * et2 / ( sumEt * sumEt );
           double dPhi = deltaPhi(j1, j2);
           double cosPhi = cos(dPhi);
           if (cosPhi == 1.0)  cosPhi = 0.9999;
 
-          _hist_EEC->fill(cosPhi, etWeight * evtWeight);
-          _hist_dummy->fill(cosPhi, etWeight * evtWeight);
+          _hist_EEC->fill(cosPhi, etWeight);
+          _hist_dummy->fill(cosPhi, etWeight);
 	      }
       }
     }
@@ -87,6 +86,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2015_I1387176);
+  RIVET_DECLARE_PLUGIN(ATLAS_2015_I1387176);
 
 }

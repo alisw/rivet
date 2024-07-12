@@ -20,9 +20,6 @@ namespace Rivet {
     /// Construction using Cuts object
     ChargedFinalState(const Cut& c=Cuts::open());
 
-    /// Single eta-range constructor.
-    ChargedFinalState(double mineta, double maxeta, double minpt=0*GeV);
-
     /// Clone on the heap.
     DEFAULT_RIVET_PROJ_CLONE(ChargedFinalState);
 
@@ -33,7 +30,7 @@ namespace Rivet {
     void project(const Event& e);
 
     /// Compare projections.
-    int compare(const Projection& p) const;
+    CmpState compare(const Projection& p) const;
 
   };
 

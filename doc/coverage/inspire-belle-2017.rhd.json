@@ -1,0 +1,234 @@
+{
+    "1209562": [
+        "Search for heavy neutrinos at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.87.071102", 
+        null, 
+        "1301.1105", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2012-28", 
+            "KEK-PREPRINT-2012-32"
+        ]
+    ], 
+    "1341041": [
+        "Search for B decays to final states with the \u03b7$_{c}$ meson", 
+        "Belle", 
+        "10.1007/JHEP06(2015)132", 
+        null, 
+        "1501.06351", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2015-1", 
+            "KEK-PREPRINT-2014-42"
+        ]
+    ], 
+    "1427025": [
+        "Observation of $D^0\\to \\rho^0\\gamma$ and search for $CP$ violation in radiative charm decays", 
+        "Belle", 
+        "10.1103/PhysRevLett.118.051801", 
+        null, 
+        "1603.03257", 
+        null, 
+        null, 
+        [
+            "BELLE-CONF-1601", 
+            "BELLE-PREPRINT-2016-11"
+        ]
+    ], 
+    "1499706": [
+        "Search for the $0^{--}$ Glueball in $\\Upsilon(1S)$ and $\\Upsilon(2S)$ decays", 
+        "Belle", 
+        "10.1103/PhysRevD.95.012001", 
+        null, 
+        "1611.07131", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2016-12", 
+            "KEK-PREPRINT-2016-50"
+        ]
+    ], 
+    "1500691": [
+        "Search for $D^{0}$ decays to invisible final states at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.95.011102", 
+        null, 
+        "1611.09455", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2013-13", 
+            "KEK-PREPRINT-2013-51", 
+            "BELLE-PREPRINT-2016-13", 
+            "KEK-PREPRINT-2016-51"
+        ]
+    ], 
+    "1501479": [
+        "Measurement of the $\\tau$ lepton polarization and $R(D^*)$ in the decay $\\bar{B} \\to D^* \\tau^- \\bar{\\nu}_\\tau$", 
+        "Belle", 
+        "10.1103/PhysRevLett.118.211801", 
+        null, 
+        "1612.00529", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2016-53", 
+            "BELLE-PREPRINT-2016-14"
+        ]
+    ], 
+    "1504055": [
+        "Lepton-Flavor-Dependent Angular Analysis of $B\\to K^\\ast \\ell^+\\ell^-$", 
+        "Belle", 
+        "10.1103/PhysRevLett.118.111801", 
+        null, 
+        "1612.05014", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2016-15", 
+            "KEK-PREPRINT-2016-54"
+        ]
+    ], 
+    "1512929": [
+        "Search for $\\boldsymbol{B\\to h\\nu\\bar{\\nu}}$ decays with semileptonic tagging at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.96.091101", 
+        null, 
+        "1702.03224", 
+        null, 
+        null, 
+        []
+    ], 
+    "1517778": [
+        "First measurement of $\\boldsymbol{T}$-odd moments in $\\boldsymbol{D^{0} \\rightarrow K_{S}^{0} \\pi^{+} \\pi^{-} \\pi^{0}}$ decays", 
+        "Belle", 
+        "10.1103/PhysRevD.95.091101", 
+        null, 
+        "1703.05721", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2017-01", 
+            "KEK-PREPRINT-2016-62"
+        ]
+    ], 
+    "1520716": [
+        "Measurement of the decays $\\boldsymbol{B\\to\\eta\\ell\\nu_\\ell}$ and $\\boldsymbol{B\\to\\eta^\\prime\\ell\\nu_\\ell}$ in fully reconstructed events at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.96.091102", 
+        null, 
+        "1703.10216", 
+        null, 
+        null, 
+        []
+    ], 
+    "1590028": [
+        "Observation of an alternative $\\chi_{c0}(2P)$ candidate in $e^+ e^- \\rightarrow J/\\psi D \\bar{D}$", 
+        "Belle", 
+        "10.1103/PhysRevD.95.112003", 
+        null, 
+        "1704.01872", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2017-07", 
+            "KEK-PREPRINT-2017-3"
+        ]
+    ], 
+    "1598261": [
+        "Measurement of the branching fraction and $CP$ asymmetry in $B^{0} \\to \\pi^{0}\\pi^{0}$ decays, and an improved constraint on $\\phi_{2}$", 
+        "Belle", 
+        "10.1103/PhysRevD.96.032007", 
+        null, 
+        "1705.02083", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2017-11", 
+            "KEK-PREPRINT-2017-7"
+        ]
+    ], 
+    "1598461": [
+        "Measurement of branching fraction and direct $CP$ asymmetry in charmless $B^+ \\to K^+K^- \\pi^+$ decays at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.96.031101", 
+        null, 
+        "1705.02640", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2017-5", 
+            "BELLE-PREPRINT-2017-09"
+        ]
+    ], 
+    "1607562": [
+        "Invariant-mass and fractional-energy dependence of inclusive production of di-hadrons in $e^+e^-$ annihilation at $\\sqrt{s}=$ 10.58 GeV", 
+        "Belle", 
+        "10.1103/PhysRevD.96.032005", 
+        null, 
+        "1706.08348", 
+        null, 
+        null, 
+        [
+            "BELLE-DRAFT-2017-13", 
+            "KEK-DRAFT-2017-09"
+        ]
+    ], 
+    "1608380": [
+        "Search for $\\Lambda_c^+\\to\\phi p \\pi^0$ and branching fraction measurement of $\\Lambda_c^+\\to K^-\\pi^+ p \\pi^0$", 
+        "Belle", 
+        "10.1103/PhysRevD.96.051102", 
+        null, 
+        "1707.00089", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2017-12", 
+            "KEK-PREPRINT-2017-08", 
+            "UCHEP-2017-06", 
+            "UNIVERSITY-OF --CINCINNATI-PREPRINT-UCHEP-2017-06"
+        ]
+    ], 
+    "1608384": [
+        "Evidence for Isospin Violation and Measurement of $CP$ Asymmetries in $B \\to K^{\\ast}(892) \\gamma$", 
+        "Belle", 
+        "10.1103/PhysRevLett.119.191802", 
+        null, 
+        "1707.00394", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2017-08", 
+            "KEK-PREPRINT-2017-4"
+        ]
+    ], 
+    "1610301": [
+        "Study of $\\eta$ and dipion transitions in $\\Upsilon(4S)$ decays to lower bottomonia", 
+        "Belle", 
+        "10.1103/PhysRevD.96.052005", 
+        null, 
+        "1707.04973", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2017-16", 
+            "KEK-PREPRINT-2017-17"
+        ]
+    ], 
+    "1634603": [
+        "Search for light tetraquark states in $\\Upsilon(1S)$ and $\\Upsilon(2S)$ decays", 
+        "Belle", 
+        "10.1103/PhysRevD.96.112002", 
+        null, 
+        "1711.01690", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2017-21", 
+            "KEK-PREPRINT-2017-30"
+        ]
+    ]
+}

@@ -17,7 +17,7 @@ namespace Rivet {
     _binedges = linspace(nbins, rmin, rmax);
     _ptcuts = make_pair(ptmin, ptmax);
     _rapcuts = make_pair(absrapmin, absrapmax);
-    addProjection(jetalg, "Jets");
+    declare(jetalg, "Jets");
   }
 
 
@@ -32,25 +32,25 @@ namespace Rivet {
     setName("JetShape");
     _ptcuts = make_pair(ptmin, ptmax);
     _rapcuts = make_pair(absrapmin, absrapmax);
-    addProjection(jetalg, "Jets");
+    declare(jetalg, "Jets");
   }
 
 
-  int JetShape::compare(const Projection& p) const {
-    const int jcmp = mkNamedPCmp(p, "Jets");
-    if (jcmp != EQUIVALENT) return jcmp;
+  CmpState JetShape::compare(const Projection& p) const {
+    const CmpState jcmp = mkNamedPCmp(p, "Jets");
+    if (jcmp != CmpState::EQ) return jcmp;
     const JetShape& other = pcast<JetShape>(p);
-    const int ptcmp = cmp(ptMin(), other.ptMin()) || cmp(ptMax(), other.ptMax());
-    if (ptcmp != EQUIVALENT) return ptcmp;
-    const int rapcmp = cmp(_rapcuts.first, other._rapcuts.first) || cmp(_rapcuts.second, other._rapcuts.second);
-    if (rapcmp != EQUIVALENT) return rapcmp;
-    int bincmp = cmp(numBins(), other.numBins());
-    if (bincmp != EQUIVALENT) return bincmp;
+    const CmpState ptcmp = cmp(ptMin(), other.ptMin()) || cmp(ptMax(), other.ptMax());
+    if (ptcmp != CmpState::EQ) return ptcmp;
+    const CmpState rapcmp = cmp(_rapcuts.first, other._rapcuts.first) || cmp(_rapcuts.second, other._rapcuts.second);
+    if (rapcmp != CmpState::EQ) return rapcmp;
+    CmpState bincmp = cmp(numBins(), other.numBins());
+    if (bincmp != CmpState::EQ) return bincmp;
     for (size_t i = 0; i < _binedges.size(); ++i) {
       bincmp = cmp(_binedges[i], other._binedges[i]);
-      if (bincmp != EQUIVALENT) return bincmp;
+      if (bincmp != CmpState::EQ) return bincmp;
     }
-    return EQUIVALENT;
+    return CmpState::EQ;
   }
 
 

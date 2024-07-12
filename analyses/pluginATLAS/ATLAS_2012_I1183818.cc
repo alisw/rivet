@@ -23,8 +23,8 @@ namespace Rivet {
 
     void init() {
 
-      const FinalState cnfs(-4.8, 4.8, 0*MeV);
-      const ChargedFinalState cfs(-2.5, 2.5, 250*MeV);
+      const FinalState cnfs((Cuts::etaIn(-4.8, 4.8)));
+      const ChargedFinalState cfs((Cuts::etaIn(-2.5, 2.5) && Cuts::pT >=  250*MeV));
       declare(cnfs, "FS");
       declare(cfs, "CFS");
 
@@ -34,29 +34,29 @@ namespace Rivet {
       // ------- MINBIAS HISTOGRAMS --------
       //
       // MB event counter
-      m_chargedEvents = 0.0;
+      book(m_chargedEvents, "m_chargedEvents_MB");
 
-      _h_ETflowEta = bookHisto1D(1, 1, 1);
-      _h_SumETbin1 = bookHisto1D(3, 1, 1);
-      _h_SumETbin2 = bookHisto1D(4, 1, 1);
-      _h_SumETbin3 = bookHisto1D(5, 1, 1);
-      _h_SumETbin4 = bookHisto1D(6, 1, 1);
-      _h_SumETbin5 = bookHisto1D(7, 1, 1);
-      _h_SumETbin6 = bookHisto1D(8, 1, 1);
+      book(_h_ETflowEta ,1, 1, 1);
+      book(_h_SumETbin1 ,3, 1, 1);
+      book(_h_SumETbin2 ,4, 1, 1);
+      book(_h_SumETbin3 ,5, 1, 1);
+      book(_h_SumETbin4 ,6, 1, 1);
+      book(_h_SumETbin5 ,7, 1, 1);
+      book(_h_SumETbin6 ,8, 1, 1);
 
       // ------- DIJET HISTOGRAMS --------
       //
       // Dijet event counter
-      m_events_dijets = 0.0;
+      book(m_events_dijets, "m_chargedEvents_dijets");
 
       // sumET
-      _h_transETflowEta = bookHisto1D( 2, 1, 1);
-      _h_transSumETbin1 = bookHisto1D( 9, 1, 1);
-      _h_transSumETbin2 = bookHisto1D(10, 1, 1);
-      _h_transSumETbin3 = bookHisto1D(11, 1, 1);
-      _h_transSumETbin4 = bookHisto1D(12, 1, 1);
-      _h_transSumETbin5 = bookHisto1D(13, 1, 1);
-      _h_transSumETbin6 = bookHisto1D(14, 1, 1);
+      book(_h_transETflowEta , 2, 1, 1);
+      book(_h_transSumETbin1 , 9, 1, 1);
+      book(_h_transSumETbin2 ,10, 1, 1);
+      book(_h_transSumETbin3 ,11, 1, 1);
+      book(_h_transSumETbin4 ,12, 1, 1);
+      book(_h_transSumETbin5 ,13, 1, 1);
+      book(_h_transSumETbin6 ,14, 1, 1);
 
 
     }
@@ -64,24 +64,22 @@ namespace Rivet {
 
     void analyze(const Event& event) {
 
-      const double weight = event.weight();
-
       const FinalState& cfs = apply<FinalState>(event, "CFS");
 
       bool isCharged = false;
       if (cfs.size() >= 2) {  // event selection: > 2 charged particles with pT > 250.MeV and |eta| < 2.5
         isCharged = true;
-        m_chargedEvents += weight;
+        m_chargedEvents->fill();
       }
 
       const FinalState& cnfs = apply<FinalState>(event, "FS");
 
       Particles particles;
-      foreach( const Particle& p, cnfs.particles() ) {
+      for( const Particle& p : cnfs.particles() ) {
         // enforce truth selection representing detected particle sensitivity
         double pp = p.p3().mod();
-        if (PID::threeCharge(p.pid()) != 0 && pp < 0.5*GeV) continue;
-        if (PID::threeCharge(p.pid()) == 0 && pp < 0.2*GeV) continue;
+        if (PID::charge3(p.pid()) != 0 && pp < 0.5*GeV) continue;
+        if (PID::charge3(p.pid()) == 0 && pp < 0.2*GeV) continue;
 
         particles.push_back(p);
       }
@@ -102,14 +100,14 @@ namespace Rivet {
       // if (passes event selection)
       if (isCharged) {
 
-        foreach( const Particle& p, particles ) {
+        for( const Particle& p : particles ) {
 
           ///calculate variables
           double ET = p.Et()/GeV;
           double eta = p.abseta();
 
           // fill histograms
-          _h_ETflowEta->fill(eta, weight*ET);
+          _h_ETflowEta->fill(eta, ET);
 
           if      (eta <  0.8) sumETbin1 += ET;
           else if (eta <  1.6) sumETbin2 += ET;
@@ -118,14 +116,14 @@ namespace Rivet {
           else if (eta <  4.0) sumETbin5 += ET;
           else if (eta <= 4.8) sumETbin6 += ET;
 
-        } // end of foreach
+        } // end of for
 
-        _h_SumETbin1->fill(sumETbin1, weight);
-        _h_SumETbin2->fill(sumETbin2, weight);
-        _h_SumETbin3->fill(sumETbin3, weight);
-        _h_SumETbin4->fill(sumETbin4, weight);
-        _h_SumETbin5->fill(sumETbin5, weight);
-        _h_SumETbin6->fill(sumETbin6, weight);
+        _h_SumETbin1->fill(sumETbin1);
+        _h_SumETbin2->fill(sumETbin2);
+        _h_SumETbin3->fill(sumETbin3);
+        _h_SumETbin4->fill(sumETbin4);
+        _h_SumETbin5->fill(sumETbin5);
+        _h_SumETbin6->fill(sumETbin6);
       }
 
       // --- do dijet analysis ---
@@ -147,10 +145,10 @@ namespace Rivet {
         double trans_sumET_bin5 = 0.;
         double trans_sumET_bin6 = 0.;
 
-        m_events_dijets += weight;
+        m_events_dijets->fill();
 
         // loop over all particles and check their relation to leading jet
-        foreach( const Particle& particle, particles ) {
+        for( const Particle& particle : particles ) {
 
           // calculate variables
           double dPhi = deltaPhi( jets[0], particle.momentum() );
@@ -159,7 +157,7 @@ namespace Rivet {
 
           // Transverse region
           if ( dPhi > 1./3.*M_PI && dPhi < 2./3.*M_PI ) {
-            _h_transETflowEta->fill( eta, weight*ET );
+            _h_transETflowEta->fill( eta, ET );
             if      (eta <  0.8) { trans_sumET_bin1 += ET; }
             else if (eta <  1.6) { trans_sumET_bin2 += ET; }
             else if (eta <  2.4) { trans_sumET_bin3 += ET; }
@@ -170,12 +168,12 @@ namespace Rivet {
 
         } // end loop over particles
 
-        _h_transSumETbin1->fill( trans_sumET_bin1, weight);
-        _h_transSumETbin2->fill( trans_sumET_bin2, weight);
-        _h_transSumETbin3->fill( trans_sumET_bin3, weight);
-        _h_transSumETbin4->fill( trans_sumET_bin4, weight);
-        _h_transSumETbin5->fill( trans_sumET_bin5, weight);
-        _h_transSumETbin6->fill( trans_sumET_bin6, weight);
+        _h_transSumETbin1->fill( trans_sumET_bin1);
+        _h_transSumETbin2->fill( trans_sumET_bin2);
+        _h_transSumETbin3->fill( trans_sumET_bin3);
+        _h_transSumETbin4->fill( trans_sumET_bin4);
+        _h_transSumETbin5->fill( trans_sumET_bin5);
+        _h_transSumETbin6->fill( trans_sumET_bin6);
       } // end of dijet selection cuts
 
     }
@@ -186,13 +184,13 @@ namespace Rivet {
       /// 1. nEvents (m_chargedEvents)
       /// 2. phase-space (2*M_PI)
       /// 3. double binning due to symmetrisation (2)
-      scale( _h_ETflowEta, 1./m_chargedEvents/(4.*M_PI) );
-      scale( _h_SumETbin1, 1./m_chargedEvents );
-      scale( _h_SumETbin2, 1./m_chargedEvents );
-      scale( _h_SumETbin3, 1./m_chargedEvents );
-      scale( _h_SumETbin4, 1./m_chargedEvents );
-      scale( _h_SumETbin5, 1./m_chargedEvents );
-      scale( _h_SumETbin6, 1./m_chargedEvents );
+      scale( _h_ETflowEta, 1./m_chargedEvents->val()/(4.*M_PI) );
+      scale( _h_SumETbin1, 1./m_chargedEvents->val() );
+      scale( _h_SumETbin2, 1./m_chargedEvents->val() );
+      scale( _h_SumETbin3, 1./m_chargedEvents->val() );
+      scale( _h_SumETbin4, 1./m_chargedEvents->val() );
+      scale( _h_SumETbin5, 1./m_chargedEvents->val() );
+      scale( _h_SumETbin6, 1./m_chargedEvents->val() );
 
       //Dijet analysis
 
@@ -200,20 +198,20 @@ namespace Rivet {
       //1. number of events passing dijet selection
       //2. phase-space: 1. / 2/3*M_PI
       //3. double binning due to symmetrisation in |eta| plots : 1/2
-      scale( _h_transETflowEta, 1./m_events_dijets * 1./(4./3.*M_PI) );
-      scale( _h_transSumETbin1, 1./m_events_dijets );
-      scale( _h_transSumETbin2, 1./m_events_dijets );
-      scale( _h_transSumETbin3, 1./m_events_dijets );
-      scale( _h_transSumETbin4, 1./m_events_dijets );
-      scale( _h_transSumETbin5, 1./m_events_dijets );
-      scale( _h_transSumETbin6, 1./m_events_dijets );
+      scale( _h_transETflowEta, 1./m_events_dijets->val() * 1./(4./3.*M_PI) );
+      scale( _h_transSumETbin1, 1./m_events_dijets->val() );
+      scale( _h_transSumETbin2, 1./m_events_dijets->val() );
+      scale( _h_transSumETbin3, 1./m_events_dijets->val() );
+      scale( _h_transSumETbin4, 1./m_events_dijets->val() );
+      scale( _h_transSumETbin5, 1./m_events_dijets->val() );
+      scale( _h_transSumETbin6, 1./m_events_dijets->val() );
     }
 
   private:
 
     // Event counts
-    double m_chargedEvents;
-    double m_events_dijets;
+    CounterPtr m_chargedEvents;
+    CounterPtr m_events_dijets;
 
     // Minbias-analysis: variable + histograms
     Histo1DPtr _h_ETflowEta;
@@ -236,6 +234,6 @@ namespace Rivet {
   };
 
 
-  DECLARE_RIVET_PLUGIN(ATLAS_2012_I1183818);
+  RIVET_DECLARE_PLUGIN(ATLAS_2012_I1183818);
 
 }

@@ -8,13 +8,16 @@
 namespace Rivet {
 
 
-  /// @name FourMomentum efficiency and smearing functions
-  //@{
+  /// @ingroup smearing
+  /// @{
 
-  /// @name Typedef for FourMomentum smearing functions/functors
+  /// @defgroup smearing_mom Generic 4-momentum filtering, efficiency and smearing utils
+  /// @{
+
+  /// Typedef for FourMomentum smearing functions/functors
   typedef std::function<FourMomentum(const FourMomentum&)> P4SmearFn;
 
-  /// @name Typedef for FourMomentum efficiency functions/functors
+  /// Typedef for FourMomentum efficiency functions/functors
   typedef std::function<double(const FourMomentum&)> P4EffFn;
 
 
@@ -62,12 +65,12 @@ namespace Rivet {
     return FourMomentum::mkEtaPhiMPt(p.eta(), p.phi(), smeared_mass, p.pT());
   }
 
-  //@}
+  /// @}
 
 
 
-  /// @name FourMomentum efficiency and smearing functions
-  //@{
+  /// @defgroup smearing_mom Generic 3-momentum filtering, efficiency and smearing utils
+  /// @{
 
   /// Take a Vector3 and return 0
   inline double P3_EFF_ZERO(const Vector3& p) { return 0; }
@@ -98,8 +101,9 @@ namespace Rivet {
     return smeared_mod * p.unit();
   }
 
-  //@}
+  /// @}
 
+  /// @}
 
 }
 

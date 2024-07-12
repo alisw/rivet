@@ -5,8 +5,9 @@ Experiment: CMS
 Collider: LHC
 InspireID: 1272853
 Status: VALIDATED
+Reentrant: true
 Authors:
- - Sunil Bansal (sunil.bansal@cern.ch)
+ - Sunil Bansal <sunil.bansal@cern.ch>
 References:
   - CMS-FSQ-12-028
   - CERN-PH-EP-2013-224
@@ -37,3 +38,7 @@ BibTeX: '@article{Chatrchyan:2013xxa,
       reportNumber   = "CMS-FSQ-12-028, CERN-PH-EP-2013-224",
       SLACcitation   = "%%CITATION = ARXIV:1312.5729;%%",
 }'
+
+ReleaseTests:
+ - $A LHC-W-mu
+

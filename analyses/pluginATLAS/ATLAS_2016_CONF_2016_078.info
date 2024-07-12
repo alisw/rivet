@@ -4,6 +4,7 @@ Summary: ATLAS ICHEP16 0-lepton SUSY search at 13~\TeV with 13.2/fb
 Experiment: ATLAS
 Collider: LHC
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Andy Buckley <andy.buckley@cern.ch>
 RunInfo: BSM signal events.

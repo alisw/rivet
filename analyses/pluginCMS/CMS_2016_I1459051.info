@@ -1,10 +1,11 @@
 Name: CMS_2016_I1459051
 Year: 2016
-Summary: Measurement of the inclusive jet cross-section in $pp$ collisions at $\sqrt{s} = 13\;\TeV$
+Summary: Measurement of the inclusive jet cross-section in $pp$ collisions at $\sqrt{s} = 13~\TeV$
 Experiment: CMS
 Collider: LHC
 InspireID: 1459051
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Paolo Gunnellini <paolo.gunnellini@desy.de>
 References:
@@ -15,6 +16,7 @@ RunInfo:
    Inclusive hard QCD at 13 TeV center-of-mass energy, and ptHat (or equivalent) greater than 90 GeV
 NumEvents: 200k
 Beams: [p+, p+]
+Luminosity_fb: 0.071
 Energies: [13000]
 PtCuts: Jet pT higher than 114 GeV
 Description:
@@ -32,7 +34,7 @@ Description:
   with next-to-leading order predictions matched to parton showering, hadronisation, and
   multiparton interactions. In the phase space accessible with the new data, this
   measurement provides a first indication that jet physics is as well understood at
-  $\sqrt(s) = 13\;\TeV$ as at smaller centre-of-mass energies.'
+  $\sqrt(s) = 13~\TeV$ as at smaller centre-of-mass energies.'
 
 NeedCrossSection: yes
 BibKey: Khachatryan:2016wdh
@@ -54,3 +56,17 @@ BibTeX: '@article{Khachatryan:2016wdh,
       reportNumber   = "CMS-SMP-15-007, CERN-EP-2016-104",
       SLACcitation   = "%%CITATION = ARXIV:1605.04436;%%"
 }'
+
+ReleaseTests:
+ - $A LHC-13-Jets-0
+ - $A-2 LHC-13-Jets-1
+ - $A-3 LHC-13-Jets-10
+ - $A-4 LHC-13-Jets-2
+ - $A-5 LHC-13-Jets-3
+ - $A-6 LHC-13-Jets-4
+ - $A-7 LHC-13-Jets-5
+ - $A-8 LHC-13-Jets-6
+ - $A-9 LHC-13-Jets-7
+ - $A-10 LHC-13-Jets-8
+ - $A-11 LHC-13-Jets-9
+

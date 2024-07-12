@@ -1,0 +1,38 @@
+{
+    "122309": [
+        "Measurements of tau Decay Modes and a Precise Determination of the Mass", 
+        "DASP", 
+        "10.1016/0370-2693(78)90183-1", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-77-81"
+        ]
+    ], 
+    "129106": [
+        "$J/\\psi$ Radiative Decays Into $\\pi \\pi \\gamma$ and $K K \\gamma$", 
+        "DASP", 
+        "10.1016/0370-2693(78)90575-0", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-78-01"
+        ]
+    ], 
+    "129715": [
+        "Total Cross-section for Hadron Production by $e^+ e^-$ Annihilation at Center-of-mass Energies Between 3.6-{GeV} and 5.2-{GeV}", 
+        "DASP", 
+        "10.1016/0370-2693(78)90807-9", 
+        null, 
+        null, 
+        "ins129715", 
+        null, 
+        [
+            "DESY-78-18"
+        ]
+    ]
+}

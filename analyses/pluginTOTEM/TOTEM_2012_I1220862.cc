@@ -16,24 +16,22 @@ namespace Rivet {
 
     void init() {
       declare(ChargedFinalState(), "CFS");
-      _hist_tlow  = bookHisto1D(1, 1, 1);
-      _hist_thigh = bookHisto1D(2, 1, 1);
-      _hist_sigma = bookHisto1D(3, 1, 1);
+      book(_hist_tlow  ,1, 1, 1);
+      book(_hist_thigh ,2, 1, 1);
+      book(_hist_sigma ,3, 1, 1);
     }
 
 
     void analyze(const Event& event) {
-      const double weight = event.weight();
-
       const ChargedFinalState& cfs = apply<ChargedFinalState>(event, "CFS");
-      if (cfs.size() > 2) MSG_WARNING("Final state includes more than two charged particles!");
-      _hist_sigma->fill(sqrtS()/GeV, weight);
+      if (cfs.size() > 2) MSG_DEBUG("Final state includes more than two charged particles!");
+      _hist_sigma->fill(sqrtS()/GeV);
 
       for (const Particle& p : cfs.particles(Cuts::eta > 0)) { // && Cuts::pid == PID::PROTON)) {
         if (p.pid() != PID::PROTON) continue;
         const double t = sqr(p.pT());
-        _hist_tlow->fill(t, weight);
-        _hist_thigh->fill(t, weight);
+        _hist_tlow->fill(t);
+        _hist_thigh->fill(t);
       }
     }
 
@@ -52,6 +50,6 @@ namespace Rivet {
   };
 
 
-  DECLARE_ALIASED_RIVET_PLUGIN(TOTEM_2012_I1220862, TOTEM_2012_002);
+  RIVET_DECLARE_ALIASED_PLUGIN(TOTEM_2012_I1220862, TOTEM_2012_002);
 
 }

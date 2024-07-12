@@ -1,0 +1,456 @@
+#! /usr/bin/env python
+
+"""\
+%(prog)s [options] <yodafile1> [<yodafile2> <yodafile3>...] [PLOT:Key1=Val1:...]
+
+Make web pages from histogram files written out by Rivet.  You can specify
+multiple Monte Carlo YODA files to be compared in the same syntax as for
+rivet-cmphistos, i.e. including plotting options.
+
+Reference data, analysis metadata, and plot style information should be found
+automatically (if not, set the RIVET_ANALYSIS_PATH or similar variables
+appropriately).
+
+Any existing output directory will be overwritten.
+
+ENVIRONMENT:
+ * RIVET_ANALYSIS_PATH: list of paths to be searched for analysis plugin libraries
+ * RIVET_DATA_PATH: list of paths to be searched for data files
+"""
+
+from __future__ import print_function
+
+import sys
+if sys.version_info[:1] < (3,):
+    print("rivet-mkhtml-mpl requires Python3 ... exiting")
+    sys.exit(1)
+
+import rivet, yoda
+import os, subprocess
+from rivet.plotting.make_plots import assemble_plotting_data
+from yoda.plotting import script_generator
+import multiprocessing
+
+rivet.util.check_python_version()
+rivet.util.set_process_name(os.path.basename(__file__))
+COMMAND = " ".join([os.path.basename(sys.argv[0])] + sys.argv[1:])
+
+import shutil
+import argparse
+try:
+    numcores = multiprocessing.cpu_count()
+except:
+    numcores = 1
+
+parser = argparse.ArgumentParser(usage=__doc__)
+parser.add_argument("YODAFILES", nargs="+", help="data files to compare")
+parser.add_argument("-o", "--outputdir", dest="OUTPUTDIR",
+                    default="./rivet-plots", help="directory for Web page output")
+parser.add_argument("-c", "--config", dest="CONFIGFILES", action="append", default=['~/.make-plots'],
+                    help="plot config file(s) to be used with rivet-cmphistos")
+parser.add_argument("-n", "--num-threads", metavar="NUMTHREADS", dest="NUMTHREADS", type=int,
+                    default=None, help="max number of threads to be used [%s]" % numcores)
+parser.add_argument("--ignore-missing", dest="IGNORE_MISSING", action="store_true",
+                    default=False, help="ignore missing YODA files")
+parser.add_argument("-i", "--ignore-unvalidated", dest="IGNORE_UNVALIDATED", action="store_true",
+                    default=False, help="ignore unvalidated analyses")
+# parser.add_argument("--ref", "--refid", dest="REF_ID",
+#                   default=None, help="ID of reference data set (file path for non-REF data)")
+parser.add_argument("--no-rivet-refs", dest="RIVETREFS", action="store_false",
+                        default=True, help="don't use Rivet reference data files")
+parser.add_argument("--dry-run", help="don't actually do any plotting or HTML building", dest="DRY_RUN",
+                    action="store_true", default=False)
+parser.add_argument("--pwd", dest="PATH_PWD", action="store_true", default=False,
+                    help="append the current directory (pwd) to the analysis/data search paths (cf. $RIVET_ANALYSIS_PATH)")
+parser.add_argument("--style", dest="STYLE", help="Choose the plotting style", default='default')
+parser.add_argument("--write-files", dest="WRITE_FILES", help="Choose to write YAML files", default=False)
+
+stygroup = parser.add_argument_group("Style options")
+stygroup.add_argument("-t", "--title", dest="TITLE",
+                      default="Plots from Rivet analyses", help="title to be displayed on the main web page")
+stygroup.add_argument("--reftitle", dest="REFTITLE",
+                      default="Data", help="legend entry for reference data")
+stygroup.add_argument("--deviation", dest="DEVIATION", action="store_true",
+                      default=False, help="rescale ratio panel to standard deviation (bin by bin)")
+#stygroup.add_argument("--no-plottitle", dest="NOPLOTTITLE", action="store_true",
+#                      default=False, help="don't show the plot title on the plot "
+#                      "(useful when the plot description should only be given in a caption)")
+stygroup.add_argument("-s", "--single", dest="SINGLE", action="store_true",
+                      default=False, help="display plots on single webpage.")
+#stygroup.add_argument("--no-ratio", dest="SHOW_RATIO", action="store_false",
+#                      default=True, help="don't draw a ratio plot under each main plot.")
+stygroup.add_argument("--no-errs", "--no-mcerrs", "--no-mc-errs", dest="MC_ERRS", action="store_false",
+                      default=True, help="plot error bars.")
+stygroup.add_argument("--canvastext", dest="CANVASTEXT", default=None,
+                      help="Additional text to draw on the canvas")
+stygroup.add_argument("--nRatioTicks", dest="NRATIOTICKS", default=1,
+                      help="Modify number of minor ticks between major ticks on ratio plot.")
+stygroup.add_argument("--offline", dest="OFFLINE", action="store_true",
+                      default=False, help="generate HTML that does not use external URLs.")
+stygroup.add_argument("-f", "--format", action="append", dest="FORMATS", default=["PDF", "PNG"],
+                    help="output format string consisting of desired output formats separated by commas [default=PDF,PNG]")
+stygroup.add_argument("--booklet", dest="BOOKLET", action="store_true",
+                      default=False, help="create booklet (currently only available for PDF with pdftk or pdfmerge).")
+stygroup.add_argument("--rmopts", "--remove-options", dest="REMOVE_OPTIONS", action="store_true", default=False,
+                      help="remove options label from legend")
+
+selgroup = parser.add_argument_group("Selective plotting")
+selgroup.add_argument("-m", "--match", action="append", dest="PATHPATTERNS", default=[],
+                      help="only write out histograms whose $path/$name string matches any of these regexes")
+selgroup.add_argument("-M", "--unmatch", action="append", dest="PATHUNPATTERNS", default=[],
+                      help="exclude histograms whose $path/$name string matches any of these regexes")
+selgroup.add_argument("--ana-match", action="append", dest="ANAPATTERNS", default=[],
+                      help="only write out histograms from analyses whose name matches any of these regexes (same as --match)")
+selgroup.add_argument("--ana-unmatch", action="append", dest="ANAUNPATTERNS", default=[],
+                      help="exclude histograms from analyses whose name matches any of these regexes (same as --unmatch)")
+selgroup.add_argument("--no-weights", "--skip-weights", help="prevent multiweights from being plotted", dest="SKIP_WEIGHTS",
+                    action="store_true", default=False)
+
+vrbgroup = parser.add_argument_group("Verbosity control")
+vrbgroup.add_argument("-v", "--verbose", help="add extra debug messages", dest="VERBOSE",
+                      action="store_true", default=False)
+
+
+def anasort(name):
+    """\
+    Sort analyses: group ascending by analysis name (could specialise grouping by collider), then
+    descending by year, and finally descending by bibliographic archive ID code (INSPIRE first).
+    """
+    rtn = (1, name)
+    if name.startswith("MC"):
+        rtn = (99999999, name)
+    else:
+        stdparts = name.split("_")
+        try:
+            year = int(stdparts[1])
+            rtn = (0, stdparts[0], -year, 0)
+            idcode = (0 if stdparts[2][0] == "I" else 1e10) - int(stdparts[2][1:])
+            rtn = (0, stdparts[0], -year, idcode)
+            if len(stdparts) > 3:
+                rtn += stdparts[3:]
+        except:
+            pass
+    return rtn
+
+
+def which(program):
+    """\
+    Find the path to an executable
+    http://stackoverflow.com/questions/377017/test-if-executable-exists-in-python
+    """
+    import os
+    def is_exe(fpath):
+        return os.path.isfile(fpath) and os.access(fpath, os.X_OK)
+
+    fpath, fname = os.path.split(program)
+    if fpath:
+        if is_exe(program):
+            return program
+    else:
+        for path in os.environ["PATH"].split(os.pathsep):
+            path = path.strip('"')
+            exe_file = os.path.join(path, program)
+            if is_exe(exe_file):
+                return exe_file
+    return None
+
+
+def executeScript(script):
+    if not os.path.isfile(script):
+        raise FileNotFoundError("Python script not found!")
+    try:
+        subprocess.check_call([script], shell=True)
+    except:
+        print('Unexpected error when executing', script)
+
+
+def generateScripts(args):
+
+    yodafiles = args.YODAFILES
+    style = args.STYLE
+    writefiles = args.WRITE_FILES
+
+    ## Add pwd to search paths
+    if args.PATH_PWD:
+        rivet.addAnalysisLibPath(os.path.abspath("."))
+        rivet.addAnalysisDataPath(os.path.abspath("."))
+
+
+    ## Check that there are some arguments!
+    if not yodafiles:
+        print("Error: You need to specify some YODA files to be plotted!")
+        sys.exit(1)
+
+
+    ## Make output directory
+    if not args.DRY_RUN:
+        if os.path.exists(args.OUTPUTDIR) and not os.path.realpath(args.OUTPUTDIR)==os.getcwd():
+            import shutil
+            shutil.rmtree(args.OUTPUTDIR)
+        try:
+            os.makedirs(args.OUTPUTDIR)
+        except:
+            print("Error: failed to make new directory '%s'" % args.OUTPUTDIR)
+            sys.exit(1)
+
+    ## Check that YODA files are accessible
+    for yodafile in yodafiles:
+        if yodafile.startswith("PLOT:"):
+            continue
+        yodafilepath = os.path.abspath(yodafile.split(":")[0])
+        if not os.access(yodafilepath, os.R_OK):
+            print("Error: cannot read from %s" % yodafilepath)
+            if args.IGNORE_MISSING:
+                continue
+            else:
+                sys.exit(2)
+
+    ## Make sure user-supplied config files are accessible
+    configfiles = [ os.path.abspath(os.path.expanduser(cf)) for cf in args.CONFIGFILES if os.access(cf, os.R_OK) ]
+
+    pat_match = list(set(args.PATHPATTERNS + args.ANAPATTERNS))
+    pat_unmatch = list(set(args.PATHUNPATTERNS + args.ANAUNPATTERNS))
+    analyses, allPlotContents = assemble_plotting_data(args.YODAFILES, args.PATH_PWD, args.REFTITLE,
+                                                       args.RIVETREFS, pat_match, pat_unmatch, [os.path.abspath("../")],
+                                                       style, configfiles, True, args.OUTPUTDIR, args.MC_ERRS,
+                                                       True, [], args.VERBOSE, writefiles=writefiles,
+                                                       nRatioTicks=args.NRATIOTICKS, skipWeights = args.SKIP_WEIGHTS,
+                                                       removeOptions = args.REMOVE_OPTIONS, deviation=args.DEVIATION, 
+                                                       canvasText=args.CANVASTEXT)
+
+    ## Write web page containing all (matched) plots
+    ## Make web pages first so that we can load it locally in
+    ## a browser to view the output before all plots are made
+
+    analyses = sorted(analyses, key=anasort)
+    if not args.DRY_RUN:
+
+        allPlotNames = allPlotContents.keys()
+
+        style = '''<style>
+          html { font-family: sans-serif; }
+          img { border: 0; }
+          a { text-decoration: none; font-weight: bold; }
+        </style>
+        '''
+
+        ## Include MathJax configuration
+        script = ''
+        if not args.OFFLINE:
+            # WAS: src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+            script = '''\
+            <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: {inlineMath: [["$","$"]]}
+            });
+            </script>
+            <script type="text/javascript" async
+              src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+            </script>
+            '''
+        ## Add local JavaScript
+        script += "\n\n" + '''\
+            <script type="text/javascript">
+                function filterPlots(ana, patt) {
+                    var regex = new RegExp(patt);
+                    var sec = document.getElementById('ana_'+ana);
+                    var plots = sec.getElementsByClassName(\'plot\');
+                    var i; for (i = 0; i < plots.length; ++i) {
+                        // var viz = (regex.test(plots[i].id)) ? 'visible' : 'hidden';
+                        // plots[i].style.visibility = viz;
+                        var dis = (regex.test(plots[i].id)) ? 'block' : 'none';
+                        plots[i].style.display = dis;
+                    }
+                    return false;
+               }
+            </script>
+            '''
+
+        ## A helper function for metadata LaTeX -> HTML conversion
+        from rivet.util import htmlify
+
+        ## Timestamp and command HTML fragments to be used on each page:
+        import datetime
+        timestamp = '<p>Generated at %s</p>' % datetime.datetime.now().strftime("%A, %d. %B %Y %I:%M%p")
+        command = '<p>Created with command: <pre>%s</pre></p>' % COMMAND
+
+        index = open(os.path.join(args.OUTPUTDIR, "index.html"), "w")
+        index.write('<html>\n<head>\n<title>%s</title>\n%s</head>\n<body>' % (args.TITLE, style + script))
+        if args.BOOKLET and "PDF" in args.FORMATS:
+            index.write('<h2><a href="booklet.pdf">%s</a></h2>\n\n' % args.TITLE)
+        else:
+            index.write('<h2>%s</h2>\n\n' % args.TITLE)
+
+        if args.SINGLE and len(analyses) > 1:
+            ## Write table of contents
+            index.write('<ul>\n')
+            for analysis in analyses:
+                summary = analysis
+                ana = rivet.AnalysisLoader.getAnalysis(analysis)
+                if ana:
+                    summary = "%s (%s)" % (ana.summary(), analysis)
+                    if args.IGNORE_UNVALIDATED and ana.status() != "VALIDATED":
+                        continue
+                index.write('<li><a href="#%s">%s</a>\n' % (analysis, htmlify(summary)) )
+            index.write('</ul>\n')
+
+        official_routines = rivet.stdAnalysisNames()
+        for analysis in analyses:
+            references = []
+            summary = htmlify(analysis)
+            description, inspireid, spiresid = None, None, None
+
+            if analysis.find("_I") > 0:
+                inspireid = analysis[analysis.rfind('_I')+2:len(analysis)]
+            elif analysis.find("_S") > 0:
+                spiresid = analysis[analysis.rfind('_S')+2:len(analysis)]
+
+            ana = rivet.AnalysisLoader.getAnalysis(analysis)
+            if ana:
+                if ana.summary():
+                    summary = htmlify("%s (%s)" % (ana.summary(), analysis))
+                references = ana.references()
+                description = htmlify(ana.description())
+                spiresid = ana.spiresId()
+
+                if args.IGNORE_UNVALIDATED and ana.status().upper() != "VALIDATED":
+                    continue
+
+            try:
+                if args.SINGLE:
+                    index.write('<section id="ana_{}">\n'.format(analysis))
+                    index.write('\n<h3 style="clear:left; padding-top:2em;"><a name="%s">%s</a></h3>\n' % (analysis, summary))
+                else:
+                    index.write('\n<h3><a href="%s/index.html" style="text-decoration:none;">%s</a></h3>\n' % (analysis, summary))
+            except UnicodeEncodeError as ue:
+                print("Unicode error in analysis description for " + analysis + ": " + str(ue))
+
+            reflist = []
+            if inspireid:
+                reflist.append('<a href="https://inspirehep.net/literature/%s">Inspire</a>' % inspireid)
+                reflist.append('<a href="http://hepdata.net/record/ins%s">HepData</a>' % inspireid)
+            elif spiresid:
+            # elif ana.spiresId():
+                reflist.append('<a href="https://inspirehep.net/literature?q=%s">Inspire</a>' % spiresid)
+                reflist.append('<a href="http://hepdata.cedar.ac.uk/view/irn%s">HepData</a>' % spiresid)
+            if analysis in official_routines:
+                reflist.append('<a href="https://rivet.hepforge.org/analyses/%s.html">Analysis reference</a>' % analysis)
+            for i, ref in enumerate(references):
+                if "arXiv" in ref:
+                    try:
+                        arxivID = ref.split(' ')[0].split(':')[-1]
+                        if arxivID:
+                            references[i] = '<a href="https://arxiv.org/abs/%s">arXiv:%s</a>' % (arxivID, arxivID)
+                    except:
+                        pass
+            reflist += references
+            index.write('<p>%s</p>\n' % " &#124; ".join(reflist))
+
+            if description:
+                try:
+                    index.write('<p style="font-size:smaller;">%s</p>\n' % description)
+                except UnicodeEncodeError as ue:
+                    print("Unicode error in analysis description for " + analysis + ": " + str(ue))
+
+            anapath = os.path.join(args.OUTPUTDIR, analysis)
+            if not args.SINGLE:
+                if not os.path.exists(anapath):
+                    os.makedirs(anapath)
+                anaindex = open(os.path.join(anapath, "index.html"), 'w')
+                anaindex.write('<html>\n<head>\n<title>%s &ndash; %s</title>\n%s</head>\n<body>\n' %
+                               (htmlify(args.TITLE), analysis, style + script))
+                anaindex.write('<section id="ana_{}">\n'.format(analysis))
+                anaindex.write('<h3>%s</h3>\n' % htmlify(analysis))
+                anaindex.write('<p><a href="../index.html">Back to index</a></p>\n')
+                if description:
+                    try:
+                        anaindex.write('<p>\n  %s\n</p>\n' % description)
+                    except UnicodeEncodeError as ue:
+                        print("Unicode error in analysis description for " + analysis + ": " + str(ue))
+            else:
+                anaindex = index
+
+            ## JS filtering
+            anaindex.write('<form onsubmit="var patt = document.getElementById(\'patt_{ana}\').value; filterPlots(\'{ana}\', patt); return false;">\n'.format(ana=analysis))
+            anaindex.write('<span>Filter plots:&nbsp;</span>')
+            anaindex.write('<input id="patt_{ana}" type="search">\n'.format(ana=analysis))
+            anaindex.write('<input type="submit" value="Filter">\n')
+            # anaindex.write('<span style="background-color:00cc00; border:2px solid #009933; padding:2px; border-radius:2px;"\n onclick="var patt = document.getElementById(\'patt_{ana}\').value; filterPlots(\'{ana}\', patt);">Filter</span>\n'.format(ana=analysis))
+            anaindex.write('</form>\n\n')
+
+            srcfiles = [ f.split('/')[-1] for f in allPlotNames if analysis in f ]
+            # anaindex.write('<div style="float:none; overflow:auto; width:100%">\n')
+            for srcfile in sorted(srcfiles):
+                obsname = os.path.basename(srcfile).replace(".py", "")
+                pngfile = obsname+".png"
+                pdffile = obsname+".pdf"
+                pyfile  = obsname+".py"
+                datfile = pyfile.replace('.py', '__data.py')
+                if args.SINGLE:
+                    pngfile = os.path.join(analysis, pngfile)
+                    pdffile = os.path.join(analysis, pdffile)
+                    pyfile  = os.path.join(analysis, pyfile)
+                    datfile = os.path.join(analysis, datfile)
+
+                anaindex.write('  <div class="plot" id="plot_{o}" style="float:left; font-size:smaller; font-weight:bold;">\n'.format(o=obsname))
+                anaindex.write('    <a href="#%s-%s">&#9875;</a><a href="%s">&#8984;</a><a href="%s">&#128202;</a> %s:<br/>\n' %
+                               (analysis, obsname, pyfile, datfile, os.path.splitext(pdffile)[0]) )
+                anaindex.write('    <a name="%s-%s"><a href="%s">\n' % (analysis, obsname, pdffile) )
+                anaindex.write('      <img src="%s">\n' % pngfile )
+                anaindex.write('    </a></a>\n')
+                anaindex.write('  </div>\n')
+            # anaindex.write('</div>\n')
+
+            if args.SINGLE:
+                index.write('</section>\n\n')
+            else:
+                anaindex.write('</section>\n\n')
+                anaindex.write('<footer style="clear:both; margin-top:3em; padding-top:3em">\n%s\n</footer>\n\n' % timestamp)
+                anaindex.write('</body>\n</html>')
+                anaindex.close()
+
+        index.write('<footer style="clear:both; margin-top:3em; padding-top:3em">\n%s\n%s\n</footer>\n\n' % (timestamp, command))
+        index.write('</body>\n</html>')
+        index.close()
+
+    num_plots = len(allPlotContents)
+    pyScripts = []
+    print("Making {} plots".format(num_plots))
+    for i, (plotName, singlePlotContent) in enumerate(allPlotContents.items()):
+
+        ## Temporary hack to ignore 1D scatter (i.e. total cross-section)
+        if rivet.isTmpPath(plotName):
+          continue
+        print("Generating", args.OUTPUTDIR+plotName+".py") # "({}/{} remaining)".format(num_plots-i, num_plots))
+
+        ## writePyScript returns path of the .py script
+        try:
+            pyScript = script_generator.process(singlePlotContent, plotName, args.OUTPUTDIR, args.FORMATS)
+            pyScripts += [os.path.abspath(pyScript)]
+        except:
+            print('Unexpected error encountered for', plotName)
+    return pyScripts
+
+
+if __name__ == '__main__':
+
+    ## Parse arguments
+    args = parser.parse_args()
+
+    ## Generate executable python scripts
+    pyScripts = generateScripts(args)
+
+    ## Execute generated Python scripts with a multiprocessing Pool
+    # TODO: re-add the progress printout from the plotting pool
+    sys.stdout.write('Plotting...')
+    p = multiprocessing.Pool(processes=args.NUMTHREADS)
+    try:
+        import tqdm
+        for _ in tqdm.tqdm(p.imap_unordered(executeScript, pyScripts), total=len(pyScripts)):
+            pass
+    except ImportError:
+        for i, _ in enumerate(p.imap_unordered(executeScript, pyScripts), 1):
+            sys.stderr.write(f'\rdone {100*i/len(pyScripts):.1f}%')
+
+    sys.stdout.write('\r')
+    sys.stdout.write('Plotting... done!\n')

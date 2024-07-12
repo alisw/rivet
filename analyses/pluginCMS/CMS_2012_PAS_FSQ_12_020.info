@@ -4,9 +4,10 @@ Summary: Studies of the underlying event at 7 TeV with leading charged particles
 Experiment: CMS
 Collider: LHC
 Status: VALIDATED
+Reentrant: false
 Authors:
- - Hannes Jung (hannes.jung@cern.ch)
- - Paolo Gunnellini (paolo.gunnellini@desy.de)
+ - Hannes Jung <hannes.jung@cern.ch>
+ - Paolo Gunnellini <paolo.gunnellini@desy.de>
 References:
  - CERN-PH-EP-2015-291
 RunInfo:

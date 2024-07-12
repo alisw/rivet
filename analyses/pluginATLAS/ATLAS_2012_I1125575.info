@@ -5,9 +5,11 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1125575
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Kiran Joshi <kiran.joshi@cern.ch>
 References:
+ - ATLAS-STDM-2011-30
  - arXiv:1208.0563 [hep-ex]
 RunInfo:
   Minimum bias events at 7 TeV.
@@ -41,3 +43,10 @@ BibTeX: '@article{:2012fs,
       reportNumber   = "CERN-PH-EP-2012-148",
       SLACcitation   = "%%CITATION = ARXIV:1208.0563;%%",
 }'
+
+ReleaseTests:
+ - $A LHC-7-Jets-0
+ - $A-2 LHC-7-Jets-1
+ - $A-3 LHC-7-Jets-2
+ - $A-4 LHC-7-Jets-3
+

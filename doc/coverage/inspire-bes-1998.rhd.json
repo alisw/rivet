@@ -1,0 +1,135 @@
+{
+    "418560": [
+        "Search for a vector glueball by a scan of the J / psi resonance", 
+        "BES", 
+        "10.1103/PhysRevD.57.3187", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1996-068", 
+            "PRINT-96-127 (BEIJING)"
+        ]
+    ], 
+    "448905": [
+        "Direct measurement of branching ratio D(s)+ ---> phi X+", 
+        "BES", 
+        "10.1103/PhysRevD.57.28", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1997-122", 
+            "PRINT-97-254"
+        ]
+    ], 
+    "468969": [
+        "Search for $\\psi_{2S}$ production in $e^{+} e^{-}$ annihilations at 4.03-GeV", 
+        "BES", 
+        "10.1103/PhysRevD.57.3854", 
+        null, 
+        null, 
+        "ins468969", 
+        null, 
+        [
+            "SLAC-REPRINT-1998-076"
+        ]
+    ], 
+    "471262": [
+        "Decays of the J/$\\psi$ to $\\Lambda \\overline{\\Lambda}, \\Lambda \\overline{\\Lambda}\\gamma$ and $\\Lambda \\overline{\\Lambda}\\pi^0$ final states", 
+        "BES", 
+        "10.1016/S0370-2693(98)00171-3", 
+        null, 
+        null, 
+        null, 
+        null, 
+        []
+    ], 
+    "471317": [
+        "Branching fractions for psi(2S) ---> gamma eta-prime and gamma eta", 
+        "BES", 
+        "10.1103/PhysRevD.58.097101", 
+        null, 
+        "hep-ex/9806002", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1998-080", 
+            "BIHEP-EP1-98-01", 
+            "UH-511-903-98"
+        ]
+    ], 
+    "471625": [
+        "Determination of J / psi leptonic branching fraction via psi(2S) ---> pi+ pi- J / psi", 
+        "BES", 
+        "10.1103/PhysRevD.58.092006", 
+        null, 
+        "hep-ex/9806012", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1998-081", 
+            "BIHEP-EP1-98-02", 
+            "UH-511-904-98"
+        ]
+    ], 
+    "472599": [
+        "Study of the P wave charmonium state chi(cJ) in psi(2S) decays", 
+        "BES", 
+        "10.1103/PhysRevLett.81.3091", 
+        null, 
+        "hep-ex/9807001", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1998-082", 
+            "BIHEP-EP1-98-03"
+        ]
+    ], 
+    "475379": [
+        "Evidence for the leptonic decay D --> mu nu(mu)", 
+        "BES", 
+        "10.1016/S0370-2693(98)00313-X", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1998-077"
+        ]
+    ], 
+    "477091": [
+        "Experimental study of J / psi radiative decay to pi0 pi0", 
+        "BES", 
+        "10.1103/PhysRevLett.81.1179", 
+        null, 
+        null, 
+        null, 
+        null, 
+        []
+    ], 
+    "482964": [
+        "Partial wave analysis of J / psi --> gamma (K+ K- pi0)", 
+        "BES", 
+        "10.1016/S0370-2693(98)01241-6", 
+        null, 
+        null, 
+        null, 
+        null, 
+        []
+    ], 
+    "482982": [
+        "psi(2S) hadronic decays to vector tensor final states", 
+        "BES", 
+        "10.1103/PhysRevLett.81.5080", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1998-078"
+        ]
+    ]
+}

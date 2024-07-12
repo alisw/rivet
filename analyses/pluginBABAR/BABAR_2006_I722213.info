@@ -1,0 +1,35 @@
+Name: BABAR_2006_I722213
+Year: 2006
+Summary: Mass distributions in $\Lambda_c^+\to \Lambda\bar{K}^0K^+$
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 722213
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - hep-ex/0607043 [hep-ex]
+RunInfo: Any process producing Lambda_c+ mesons
+Description:
+  'Measurement of the mass distributions in the decay $\Lambda_c^+\to \Lambda\bar{K}^0K^+$,
+   together with angular distributions in the $\Xi(1690)$ region.
+  The data were read from the plots in the paper but have been corrected for efficiency/acceptance but not resolution.'
+ValidationInfo:
+  'Herwig7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BaBar:2006tck
+BibTeX: '@inproceedings{BaBar:2006tck,
+    author = "Aubert, Bernard and others",
+    collaboration = "BaBar",
+    title = "{Measurement of the Mass and Width and Study of the Spin of the $\Xi(1690) $ 0 Resonance from $\Lambda^+_{c} \to \Lambda \bar{K}^0 K^{+}$ Decay at Babar}",
+    booktitle = "{33rd International Conference on High Energy Physics}",
+    eprint = "hep-ex/0607043",
+    archivePrefix = "arXiv",
+    reportNumber = "SLAC-PUB-11990, BABAR-CONF-06-021",
+    month = "7",
+    year = "2006"
+}
+'

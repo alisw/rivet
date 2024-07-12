@@ -1,0 +1,33 @@
+Name: CLEOII_1994_I356001
+Year: 1994
+Summary: Pion Mass spectra for $\Upsilon(3S)\to\Upsilon(1,2S)\pi^+\pi^-$, $\Upsilon(3S)\to\Upsilon(1,2S)\pi^0\pi^0$ and $\Upsilon(2S)\to\Upsilon(1S)\pi^+\pi^-$
+Experiment: CLEOII
+Collider: CESR
+InspireID: 356001
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D49 (1994) 40-57
+RunInfo: Any process producing Upsilon(3S) or Upsilon(2S)
+Description:
+  'Measurement of the pion mass spectra for the decays $\Upsilon(3S)\to\Upsilon(1,2S)\pi^+\pi^-$, $\Upsilon(3S)\to\Upsilon(1,2S)\pi^0\pi^0$ and $\Upsilon(2S)\to\Upsilon(1S)\pi^+\pi^-$ by the CLEO-II collaboration.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Butler:1993rq
+BibTeX: '@article{Butler:1993rq,
+      author         = "Butler, F. and others",
+      title          = "{Analysis of hadronic transitions in upsilon (3S)
+                        decays}",
+      collaboration  = "CLEO",
+      journal        = "Phys. Rev.",
+      volume         = "D49",
+      year           = "1994",
+      pages          = "40-57",
+      doi            = "10.1103/PhysRevD.49.40",
+      reportNumber   = "CLNS-93-1234, CLEO-93-12",
+      SLACcitation   = "%%CITATION = PHRVA,D49,40;%%"
+}'

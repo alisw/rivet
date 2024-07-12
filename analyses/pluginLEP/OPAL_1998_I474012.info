@@ -1,0 +1,36 @@
+Name: OPAL_1998_I474012
+Year: 1998
+Summary: Polarization of b-baryons at LEP1
+Experiment: OPAL
+Collider: LEP
+InspireID: 474012
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B444 (1998) 539-554
+RunInfo: e+e- > hadrons
+NeedCrossSection: no
+Beams: [e-, e+]
+Energies: 91.2
+Description:
+'Measurement of the polarization of b-baryons, mainly $\Lambda_b$ at LEP1. The result is obtained by measuring the ratio of
+ the neutrino (missing energy) to the charged lepton energy, rather than the more sophisticated fit used in the paper.' 
+Keywords: []
+BibKey: Abbiendi:1998uz
+BibTeX: '@article{Abbiendi:1998uz,
+      author         = "Abbiendi, G. and others",
+      title          = "{Measurement of the average polarization of b baryons in
+                        hadronic Z0 decays}",
+      collaboration  = "OPAL",
+      journal        = "Phys. Lett.",
+      volume         = "B444",
+      year           = "1998",
+      pages          = "539-554",
+      doi            = "10.1016/S0370-2693(98)01387-2",
+      eprint         = "hep-ex/9808006",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-EP-98-119",
+      SLACcitation   = "%%CITATION = HEP-EX/9808006;%%"
+}'

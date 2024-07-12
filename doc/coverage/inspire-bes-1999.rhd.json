@@ -1,0 +1,39 @@
+{
+    "480846": [
+        "Study of the hadronic decays of chi(c) states", 
+        "BES", 
+        "10.1103/PhysRevD.60.072001", 
+        null, 
+        "hep-ex/9812016", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1998-083", 
+            "BIHEP-EP1-98-05"
+        ]
+    ], 
+    "494098": [
+        "Charmonium decays to axial vector plus pseudoscalar mesons", 
+        "BES", 
+        "10.1103/PhysRevLett.83.1918", 
+        null, 
+        "hep-ex/9901022", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1999-085", 
+            "BIHEP-EP1-98-06", 
+            "UH511-923-99"
+        ]
+    ], 
+    "498114": [
+        "Partial wave analysis of J / psi --> gamma (eta pi+ pi-)", 
+        "BES", 
+        "10.1016/S0370-2693(98)01445-2", 
+        null, 
+        null, 
+        null, 
+        null, 
+        []
+    ]
+}

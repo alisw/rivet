@@ -18,18 +18,18 @@ LogY=0
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2014_I1307243/d03-x01-y01
-Title=$\langle N_\text{jets}$ in rapidity interval $\rangle$ as a function of $\Delta y$
+Title=$\langle N_\mathrm{jets}$ in rapidity interval $\rangle$ as a function of $\Delta y$
 XLabel=$\Delta y$
-YLabel=$\langle N_\text{jets}$ in rapidity interval $\rangle$
+YLabel=$\langle N_\mathrm{jets}$ in rapidity interval $\rangle$
 ShowZero=0
 LogY=0
 #RatioPlotSameStyle=1
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2014_I1307243/d04-x01-y01
-Title=$\langle N_\text{jets}$ in rapidity interval $\rangle$ as a function of $\overline{p_T}$
+Title=$\langle N_\mathrm{jets}$ in rapidity interval $\rangle$ as a function of $\overline{p_T}$
 XLabel=$\overline{p_T}$ [GeV]
-YLabel=$\langle N_\text{jets}$ in rapidity interval $\rangle$
+YLabel=$\langle N_\mathrm{jets}$ in rapidity interval $\rangle$
 ShowZero=0
 LogX=1
 LogY=0

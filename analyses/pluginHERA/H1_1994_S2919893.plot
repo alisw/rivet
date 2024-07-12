@@ -13,13 +13,13 @@ YLabel=$1/N \, \mathrm{d}{E_\perp}/\mathrm{d}{\eta}$ / GeV
 # BEGIN PLOT /H1_1994_S2919893/d02-x01-y01
 Title=Transverse energy--energy correlation for $x < 10^{-3}$
 XLabel=$\omega$
-YLabel=$\mathrm{d}{\text{EEC}_\perp}/\mathrm{d}{\omega}$
+YLabel=$\mathrm{d}{\mathrm{EEC}_\perp}/\mathrm{d}{\omega}$
 # END PLOT
 
 # BEGIN PLOT /H1_1994_S2919893/d02-x01-y02
 Title=Transverse energy--energy correlation for $x > 10^{-3}$
 XLabel=$\omega$
-YLabel=$\mathrm{d}{\text{EEC}_\perp}/\mathrm{d}{\omega}$
+YLabel=$\mathrm{d}{\mathrm{EEC}_\perp}/\mathrm{d}{\omega}$
 # END PLOT
 
 # BEGIN PLOT /H1_1994_S2919893/d03-x01-y01

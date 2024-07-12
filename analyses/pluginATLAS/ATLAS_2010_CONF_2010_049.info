@@ -5,6 +5,7 @@ Experiment: ATLAS
 Collider: LHC 7000GeV
 SpiresID: None
 Status: OBSOLETE
+Reentrant: true
 Authors:
  - Hendrik Hoeth <hendrik.hoeth@cern.ch>
 References:

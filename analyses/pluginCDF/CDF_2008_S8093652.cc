@@ -10,10 +10,7 @@ namespace Rivet {
   class CDF_2008_S8093652 : public Analysis {
   public:
 
-    /// Constructor
-    CDF_2008_S8093652()
-      : Analysis("CDF_2008_S8093652")
-    {    }
+    RIVET_DEFAULT_ANALYSIS_CTOR(CDF_2008_S8093652);
 
 
     /// @name Analysis methods
@@ -25,14 +22,12 @@ namespace Rivet {
       FastJets conefinder(fs, FastJets::CDFMIDPOINT, 0.7);
       declare(conefinder, "ConeFinder");
 
-      _h_m_dijet = bookHisto1D(1, 1, 1);
+      book(_h_m_dijet ,1, 1, 1);
     }
 
 
     /// Do the analysis
     void analyze(const Event & e) {
-      const double weight = e.weight();
-
       const JetAlg& jetpro = apply<JetAlg>(e, "ConeFinder");
       const Jets& jets = jetpro.jetsByPt();
 
@@ -45,7 +40,7 @@ namespace Rivet {
       }
 
       double mjj = FourMomentum(j0+j1).mass();
-      _h_m_dijet->fill(mjj, weight);
+      _h_m_dijet->fill(mjj);
     }
 
 
@@ -53,21 +48,19 @@ namespace Rivet {
     void finalize() {
       scale(_h_m_dijet, crossSection()/sumOfWeights());
     }
+
     //@}
 
 
   private:
 
-    /// @name Histograms
-    //@{
+    /// Histogram
     Histo1DPtr _h_m_dijet;
-    //@}
 
   };
 
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CDF_2008_S8093652);
+  RIVET_DECLARE_ALIASED_PLUGIN(CDF_2008_S8093652, CDF_2008_I805902);
 
 }

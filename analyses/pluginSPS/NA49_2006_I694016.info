@@ -1,0 +1,26 @@
+Name: NA49_2006_I694016
+Year: 2006
+Summary: Inclusive production of charged pions in p+p collisions at 158 GeV/c beam momentum
+Experiment: NA49
+Collider: SPS
+InspireID: 694016
+Status: UNVALIDATED
+Authors:
+ - Viktar Kireyeu <vkireyeu@jinr.ru>
+References:
+ - https://link.springer.com/article/10.1140/epjc/s2005-02391-9
+RunInfo:
+  $pp$ collisions at 17.3~GeV. Minimum bias events.
+NumEvents: 4800000
+Beams: [p+, p+]
+Energies: [17.3]
+Description:
+   'Charged pion production in fixed target, $p_{\mathrm{lab}} = $158 GeV/c.
+   The elastic trigger is implemented by looking for elastic final states with only 2 particles, 
+   instead of attempting to reproduce the experimental trigger, which cannot be directly unfolded.'
+BibKey: 2005-02391-9
+BibTeX: '@article{2005-02391-9,
+      title        = "Inclusive production of charged pions in p+p collisions at 158 GeV/c beam momentum",
+      year         = "2006",
+}'
+

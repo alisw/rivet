@@ -1,0 +1,190 @@
+{
+    "500419": [
+        "Search for contact interactions in deep inelastic $e^{+} p \\to e^{+} X$ scattering at HERA", 
+        "ZEUS", 
+        null, 
+        null, 
+        "hep-ex/9905039", 
+        null, 
+        null, 
+        [
+            "DESY-99-058", 
+            "ANL-HEP-PR-99-83"
+        ]
+    ], 
+    "500633": [
+        "Angular and current target correlations in deep inelastic scattering at HERA", 
+        "ZEUS", 
+        "10.1007/s100529900245", 
+        null, 
+        "hep-ex/9905050", 
+        null, 
+        null, 
+        [
+            "DESY-99-063", 
+            "ANL-HEP-PR-99-85"
+        ]
+    ], 
+    "503434": [
+        "Measurement of high Q**2 charged current e+ p deep inelastic scattering cross-sections at HERA", 
+        "ZEUS", 
+        "10.1007/s100529900280", 
+        null, 
+        "hep-ex/9907010", 
+        "ins503434", 
+        null, 
+        [
+            "DESY-99-059", 
+            "ANL-HEP-PR-99-84"
+        ]
+    ], 
+    "503787": [
+        "W production and the search for events with an isolated high-energy lepton and missing transverse momentum at HERA", 
+        "ZEUS", 
+        "10.1016/S0370-2693(99)01358-1", 
+        null, 
+        "hep-ex/9907023", 
+        "ins503787", 
+        null, 
+        [
+            "DESY-99-054"
+        ]
+    ], 
+    "505056": [
+        "Measurement of D*+- production and the charm contribution to F(2) in deep inelastic scattering at HERA", 
+        "ZEUS", 
+        "10.1007/s100529900244", 
+        null, 
+        "hep-ex/9908012", 
+        "ins505056", 
+        null, 
+        [
+            "DESY-99-101", 
+            "ANL-HEP-PR-99-94"
+        ]
+    ], 
+    "505172": [
+        "Measurement of the spin density matrix elements in exclusive electroproduction of rho0 mesons at HERA", 
+        "ZEUS", 
+        "10.1007/s100529900246", 
+        null, 
+        "hep-ex/9908026", 
+        "ins505172", 
+        null, 
+        [
+            "DESY-99-102", 
+            "ANL-HEP-PR-99-93"
+        ]
+    ], 
+    "508770": [
+        "Measurement of diffractive photoproduction of vector mesons at large momentum transfer at HERA", 
+        "ZEUS", 
+        "10.1007/s100520000374", 
+        null, 
+        "hep-ex/9910038", 
+        "ins508770", 
+        null, 
+        [
+            "DESY-99-160", 
+            "ANL-HEP-PR-99-119"
+        ]
+    ], 
+    "508906": [
+        "Measurement of the E**2(T,jet) / Q**2 dependence of forward jet production at HERA", 
+        "ZEUS", 
+        "10.1016/S0370-2693(99)01478-1", 
+        null, 
+        "hep-ex/9910043", 
+        "ins508906", 
+        null, 
+        [
+            "DESY-99-162", 
+            "ANL-HEP-PR-99-121"
+        ]
+    ], 
+    "508908": [
+        "Measurement of inclusive prompt photon photoproduction at HERA", 
+        "ZEUS", 
+        "10.1016/S0370-2693(99)01450-1", 
+        null, 
+        "hep-ex/9910045", 
+        "ins508908", 
+        null, 
+        [
+            "DESY-99-161", 
+            "ANL-HEP-PR-99-122"
+        ]
+    ], 
+    "523610": [
+        "The Q**2 dependence of dijet cross-sections in gamma p interactions at HERA", 
+        "ZEUS", 
+        "10.1016/S0370-2693(00)00311-7", 
+        null, 
+        "hep-ex/0002010", 
+        "ins523610", 
+        null, 
+        [
+            "DESY-00-017"
+        ]
+    ], 
+    "523922": [
+        "Search for resonances decaying to $e +$ jet in $e^{+} p$ interactions at HERA", 
+        "ZEUS", 
+        "10.1007/s100520050018", 
+        null, 
+        "hep-ex/0002038", 
+        null, 
+        null, 
+        [
+            "DESY-00-023"
+        ]
+    ], 
+    "524911": [
+        "Measurement of azimuthal asymmetries in deep inelastic scattering", 
+        "ZEUS", 
+        "10.1016/S0370-2693(00)00430-5", 
+        null, 
+        "hep-ex/0003017", 
+        "ins524911", 
+        null, 
+        [
+            "DESY-00-040"
+        ]
+    ], 
+    "524912": [
+        "Measurement of inclusive D+-(s) photoproduction at HERA", 
+        "ZEUS", 
+        "10.1016/S0370-2693(00)00431-7", 
+        null, 
+        "hep-ex/0003018", 
+        "ins524912", 
+        null, 
+        [
+            "DESY-00-041"
+        ]
+    ], 
+    "527095": [
+        "Measurement of the proton structure function F(2) at very low Q**2 at HERA", 
+        "ZEUS", 
+        "10.1016/S0370-2693(00)00793-0", 
+        null, 
+        "hep-ex/0005018", 
+        "ins527095", 
+        null, 
+        [
+            "DESY-00-071"
+        ]
+    ], 
+    "528588": [
+        "Measurement of exclusive omega electroproduction at HERA", 
+        "ZEUS", 
+        "10.1016/S0370-2693(00)00794-2", 
+        null, 
+        "hep-ex/0006013", 
+        "ins528588", 
+        null, 
+        [
+            "DESY-00-084"
+        ]
+    ]
+}

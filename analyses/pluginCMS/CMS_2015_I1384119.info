@@ -5,10 +5,11 @@ Experiment: CMS
 Collider: LHC
 InspireID: 1384119
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Hannes Jung <hannes.jung@desy.de>
 References:
- - arXiv:hep-ex/1507.05915
+ - arXiv:1507.05915 [hep-ex]
 RunInfo:
    '$\sqrt{s}=13$ TeV, $pp$ inelastic events, no $p_T$ cut on partons'
 NumEvents: 100000
@@ -34,3 +35,7 @@ BibTeX: '@article{Khachatryan:2015jna,
       reportNumber   = "CMS-FSQ-15-001, CERN-PH-EP-2015-180",
       SLACcitation   = "%%CITATION = ARXIV:1507.05915;%%"
 }'
+
+ReleaseTests:
+ - $A LHC-13-UE
+

@@ -73,19 +73,19 @@ namespace Rivet {
       for (size_t i = 0; i < _ndij; ++i) {
         if (_mode == 0 || _mode == 1) {
           string label = "el_d" + to_str(i) + "_kT4";
-          _h[label] = bookHisto1D(i + 1, 1, 1);
-          _h[label + "_all"] = bookHisto1D(i + 1, 1, 5);
+          book(_h[label], i + 1, 1, 1);
+          book(_h[label + "_all"], i + 1, 1, 5);
           label = "el_d" + to_str(i) + "_kT10";
-          _h[label] = bookHisto1D(i + 1, 1, 3);
-          _h[label + "_all"] = bookHisto1D(i + 1, 1, 7);
+          book(_h[label], i + 1, 1, 3);
+          book(_h[label + "_all"], i + 1, 1, 7);
         }
         if (_mode == 0 || _mode == 2) {
           string label = "mu_d" + to_str(i) + "_kT4";
-          _h[label] = bookHisto1D(i + 1, 1, 2);
-          _h[label + "_all"] = bookHisto1D(i + 1, 1, 6);
+          book(_h[label], i + 1, 1, 2);
+          book(_h[label + "_all"], i + 1, 1, 6);
           label = "mu_d" + to_str(i) + "_kT10";
-          _h[label] = bookHisto1D(i + 1, 1, 4);
-          _h[label + "_all"] = bookHisto1D(i + 1, 1, 8);
+          book(_h[label], i + 1, 1, 4);
+          book(_h[label + "_all"], i + 1, 1, 8);
         }
       }
     }
@@ -112,8 +112,6 @@ namespace Rivet {
       const double dilepton_mass = (leptons[0].momentum() + leptons[1].momentum()).mass();
       if (!inRange(dilepton_mass, 71*GeV, 111*GeV)) vetoEvent;
 
-      const double weight = e.weight();
-
       // Get kT splitting scales (charged particles only)
       const FastJets& jetpro04 = applyProjection<FastJets>(e, "Kt04Jets");
       const shared_ptr<fastjet::ClusterSequence> seq04 = jetpro04.clusterSeq();
@@ -121,7 +119,7 @@ namespace Rivet {
         const double dij = sqrt(seq04->exclusive_dmerge_max(i))/GeV;
         if (dij <= 0.0) continue;
         const string label = lep_type + "d" + to_str(i) + "_kT4";
-        _h[label]->fill(dij, weight);
+        _h[label]->fill(dij);
       }
       const FastJets& jetpro10 = applyProjection<FastJets>(e, "Kt10Jets");
       const shared_ptr<fastjet::ClusterSequence> seq10 = jetpro10.clusterSeq();
@@ -129,7 +127,7 @@ namespace Rivet {
         const double dij = sqrt(seq10->exclusive_dmerge_max(i))/GeV;
         if (dij <= 0.0) continue;
         const string label = lep_type + "d" + to_str(i) + "_kT10";
-        _h[label]->fill(dij, weight);
+        _h[label]->fill(dij);
       }
 
       // Get kT splitting scales (all particles)
@@ -139,7 +137,7 @@ namespace Rivet {
         const double dij = sqrt(seq04_all->exclusive_dmerge_max(i))/GeV;
         if (dij <= 0.0) continue;
         const string label = lep_type + "d" + to_str(i) + "_kT4_all";
-        _h[label]->fill(dij, weight);
+        _h[label]->fill(dij);
       }
       const FastJets& jetpro10_all = applyProjection<FastJets>(e, "Kt10Jets_all");
       const shared_ptr<fastjet::ClusterSequence> seq10_all = jetpro10_all.clusterSeq();
@@ -147,7 +145,7 @@ namespace Rivet {
         const double dij = sqrt(seq10_all->exclusive_dmerge_max(i))/GeV;
         if (dij <= 0.0) continue;
         const string label = lep_type + "d" + to_str(i) + "_kT10_all";
-        _h[label]->fill(dij, weight);
+        _h[label]->fill(dij);
       }
 
     }
@@ -175,6 +173,7 @@ namespace Rivet {
 
   };
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2017_I1589844);
+
+  RIVET_DECLARE_PLUGIN(ATLAS_2017_I1589844);
+
 }

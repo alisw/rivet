@@ -7,7 +7,7 @@ YLabelSep=8.0
 #RatioPlotYMin=0.4
 #RatioPlotYMax=1.6
 #Title=combined lepton channels
-XLabel=$m_{b\ell}^\text{minimax}$ [GeV]
-YLabel=$\dfrac{1}{\sigma} \dfrac{\text{d}\sigma}{\text{d} m_{b\ell}^\text{minimax}}$ [1/GeV]
+XLabel=$m_{b\ell}^\mathrm{minimax}$ [GeV]
+YLabel=$\dfrac{1}{\sigma} \dfrac{\mathrm{d}\sigma}{\mathrm{d} m_{b\ell}^\mathrm{minimax}}$ [1/GeV]
 # END PLOT
 

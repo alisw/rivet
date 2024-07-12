@@ -12,7 +12,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(D0_1995_I398175);
+    RIVET_DEFAULT_ANALYSIS_CTOR(D0_1995_I398175);
 
 
     /// @name Analysis methods
@@ -21,7 +21,7 @@ namespace Rivet {
     /// Book histograms and initialise projections before the run
     void init() {
 
-      const FinalState fs(-4.0, 4.0);
+      const FinalState fs((Cuts::etaIn(-4.0, 4.0)));
       declare(fs, "FS");
       //      FastJets jets(fs, FastJets::ANTIKT, 0.6);
       FastJets jets(fs, FastJets::D0ILCONE, 1.0);
@@ -34,18 +34,18 @@ namespace Rivet {
 
       // Book histograms
       for (size_t ptbin = 0; ptbin < 4; ++ptbin) {
-	_jsnames_pT[ptbin] = "JetShape" + to_str(ptbin) ;
-	const JetShape jsp(jets, 0.0, 1.0, 10, _ptedges[ptbin], _ptedges[ptbin+1], 0.0, 0.2, PSEUDORAPIDITY);
-	declare(jsp, _jsnames_pT[ptbin]);
-	_h_Rho_pT_central[ptbin] = bookProfile1D(ptbin+1, 1, 1);
+        _jsnames_pT[ptbin] = "JetShape" + to_str(ptbin) ;
+        const JetShape jsp(jets, 0.0, 1.0, 10, _ptedges[ptbin], _ptedges[ptbin+1], 0.0, 0.2, PSEUDORAPIDITY);
+        declare(jsp, _jsnames_pT[ptbin]);
+        book(	_h_Rho_pT_central[ptbin] ,ptbin+1, 1, 1);
       }
 
-	const JetShape jspfwd0(jets, 0.0, 1.0, 10, 45, 70, 2.5, 3.5, PSEUDORAPIDITY);
-	declare(jspfwd0, "JetShapeFwd0");
-	const JetShape jspfwd1(jets, 0.0, 1.0, 10, 70, 105, 2.5, 3.5, PSEUDORAPIDITY);
-	declare(jspfwd1, "JetShapeFwd1");
-	_h_Rho_pT_forward[0] = bookProfile1D(5, 1, 1);
-	_h_Rho_pT_forward[1] = bookProfile1D(6, 1, 1);
+      const JetShape jspfwd0(jets, 0.0, 1.0, 10, 45, 70, 2.5, 3.5, PSEUDORAPIDITY);
+      declare(jspfwd0, "JetShapeFwd0");
+      const JetShape jspfwd1(jets, 0.0, 1.0, 10, 70, 105, 2.5, 3.5, PSEUDORAPIDITY);
+      declare(jspfwd1, "JetShapeFwd1");
+      book(	_h_Rho_pT_forward[0] ,5, 1, 1);
+      book(	_h_Rho_pT_forward[1] ,6, 1, 1);
 
     }
 
@@ -61,7 +61,6 @@ namespace Rivet {
 	MSG_DEBUG("No jets found in required pT and rapidity range");
 	vetoEvent;
       }
-      const double weight = event.weight();
 
       // Calculate and histogram jet shapes
       for (size_t ipt = 0; ipt < 4; ++ipt) {
@@ -71,10 +70,10 @@ namespace Rivet {
 	    const double r_rho = jsipt.rBinMid(rbin);
 	    MSG_DEBUG(ipt << " " << rbin << " (" << r_rho << ") " << jsipt.diffJetShape(ijet, rbin));
 	    /// @note Bin width Jacobian factor of 0.7/0.1 = 7 in the differential shapes plot
-	    //	    _profhistRho_pT[ipt]->fill(r_rho/0.7, (0.7/0.1)*jsipt.diffJetShape(ijet, rbin), weight);
+	    //	    _profhistRho_pT[ipt]->fill(r_rho/0.7, (0.7/0.1)*jsipt.diffJetShape(ijet, rbin));
 	    const double r_Psi = jsipt.rBinMax(rbin);
 	    MSG_DEBUG(ipt << " " << rbin << " (" << r_rho << ") " << jsipt.intJetShape(ijet, rbin));
-	    _h_Rho_pT_central[ipt]->fill(r_Psi/1.0, jsipt.intJetShape(ijet, rbin), weight);
+	    _h_Rho_pT_central[ipt]->fill(r_Psi/1.0, jsipt.intJetShape(ijet, rbin));
 	  }
 	}
       }
@@ -84,7 +83,7 @@ namespace Rivet {
       for (size_t ijet = 0; ijet < jsiptfwd0.numJets(); ++ijet) {
 	for (size_t rbin = 0; rbin < jsiptfwd0.numBins(); ++rbin) {
 	  const double r_Psi = jsiptfwd0.rBinMax(rbin);
-	  _h_Rho_pT_forward[0]->fill(r_Psi/1.0, jsiptfwd0.intJetShape(ijet, rbin), weight);
+	  _h_Rho_pT_forward[0]->fill(r_Psi/1.0, jsiptfwd0.intJetShape(ijet, rbin));
 	}
       }
 
@@ -92,7 +91,7 @@ namespace Rivet {
       for (size_t ijet = 0; ijet < jsiptfwd1.numJets(); ++ijet) {
         for (size_t rbin = 0; rbin < jsiptfwd1.numBins(); ++rbin) {
 	  const double r_Psi = jsiptfwd1.rBinMax(rbin);
-          _h_Rho_pT_forward[1]->fill(r_Psi/1.0, jsiptfwd1.intJetShape(ijet, rbin), weight);
+          _h_Rho_pT_forward[1]->fill(r_Psi/1.0, jsiptfwd1.intJetShape(ijet, rbin));
 	}
       }
 
@@ -131,7 +130,7 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(D0_1995_I398175);
+  RIVET_DECLARE_PLUGIN(D0_1995_I398175);
 
 
 }

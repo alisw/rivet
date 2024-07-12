@@ -6,6 +6,7 @@ Collider: Tevatron Run 1
 SpiresID: 4751469
 InspireID: 564673
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Andy Buckley <andy.buckley@cern.ch>
 References:
@@ -15,7 +16,6 @@ RunInfo:
   $p\bar{p}$ QCD interactions at 1800 GeV. The leading jet is binned from
   0--49 GeV, and histos can usually can be filled with a single generator
   run without kinematic sub-samples.
-NumEvents: 1000000
 Beams: [p-, p+]
 Energies: [1800]
 PtCuts: [0]
@@ -43,3 +43,8 @@ BibTeX: '@Article{Affolder:2001xt,
      doi       = "10.1103/PhysRevD.65.092002",
      SLACcitation  = "%%CITATION = PHRVA,D65,092002;%%"
 }'
+
+ReleaseTests:
+ - $A TVT-Run-I-Jets-1
+ - $A-2 TVT-Run-I-UE
+

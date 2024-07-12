@@ -1,0 +1,36 @@
+Name: BESIII_2018_I1623555
+Year: 2018
+Summary: Kinematic distributions in the decay $\eta^\prime\to\eta\pi^0\pi^0$ and $\pi^+\pi^-\pi^0$
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1623555
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 97 (2018) 1, 012003
+RunInfo: Any process producing etaprime mesons
+NeedCrossSection: no
+Description:
+  'Measurement of kinematic distributions in the decay $\eta^\prime\to\eta\pi^0\pi^0$ and $\pi^+\pi^-\pi^0$.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2017djm
+BibTeX: '@article{BESIII:2017djm,
+    author = "Ablikim, M. and others",
+    collaboration = "BESIII",
+    title = "{Measurement of the matrix elements for the decays $\eta^{\prime}\rightarrow\eta\pi^+\pi^-$ and $\eta^{\prime}\rightarrow\eta\pi^0\pi^0$}",
+    eprint = "1709.04627",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "JLAB-PHY-17-2582",
+    doi = "10.1103/PhysRevD.97.012003",
+    journal = "Phys. Rev. D",
+    volume = "97",
+    number = "1",
+    pages = "012003",
+    year = "2018"
+}
+'

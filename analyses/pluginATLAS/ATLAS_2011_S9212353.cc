@@ -1,6 +1,5 @@
 // -*- C++ -*-
 #include "Rivet/Analysis.hh"
-#include "Rivet/Tools/BinnedHistogram.hh"
 #include "Rivet/Projections/FinalState.hh"
 #include "Rivet/Projections/ChargedFinalState.hh"
 #include "Rivet/Projections/VisibleFinalState.hh"
@@ -11,13 +10,12 @@
 namespace Rivet {
 
 
+  /// Single-lepton search for supersymmetry
   class ATLAS_2011_S9212353 : public Analysis {
   public:
 
     /// Constructor
-    ATLAS_2011_S9212353()
-      : Analysis("ATLAS_2011_S9212353")
-    {    }
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2011_S9212353);
 
 
     /// @name Analysis methods
@@ -60,36 +58,36 @@ namespace Rivet {
 
 
       /// Book histograms
-      _3jl_count_mu_channel = bookHisto1D("3jl_count_muon_channel", 1, 0., 1.);
-      _3jl_count_e_channel = bookHisto1D("3jl_count_electron_channel", 1, 0., 1.);
-      _3jt_count_mu_channel = bookHisto1D("3jt_count_muon_channel", 1, 0., 1.);
-      _3jt_count_e_channel = bookHisto1D("3jt_count_electron_channel", 1, 0., 1.);
-      _3j_hist_eTmiss_e = bookHisto1D("3j_Et_miss_e", 65, 0., 650.);
-      _3j_hist_eTmiss_mu = bookHisto1D("3j_Et_miss_mu", 65, 0., 650.);
-      _3j_hist_mT_e = bookHisto1D("3j_mT_e", 58, 0., 580.);
-      _3j_hist_mT_mu = bookHisto1D("3j_mT_mu", 58, 0., 580.);
-      _3j_hist_m_eff_e = bookHisto1D("3j_m_eff_e", 46, 0., 2300.);
-      _3j_hist_m_eff_mu = bookHisto1D("3j_m_eff_mu", 46, 0., 2300.);
-      _3jl_hist_m_eff_e_final = bookHisto1D("3jl_m_eff_e_final", 15, 0., 1500.);
-      _3jl_hist_m_eff_mu_final = bookHisto1D("3jl_m_eff_mu_final", 15, 0., 1500.);
-      _3jt_hist_m_eff_e_final = bookHisto1D("3jt_m_eff_e_final", 15, 0., 1500.);
-      _3jt_hist_m_eff_mu_final = bookHisto1D("3jt_m_eff_mu_final", 15, 0., 1500.);
+      book(_3jl_count_mu_channel ,"3jl_count_muon_channel", 1, 0., 1.);
+      book(_3jl_count_e_channel ,"3jl_count_electron_channel", 1, 0., 1.);
+      book(_3jt_count_mu_channel ,"3jt_count_muon_channel", 1, 0., 1.);
+      book(_3jt_count_e_channel ,"3jt_count_electron_channel", 1, 0., 1.);
+      book(_3j_hist_eTmiss_e ,"3j_Et_miss_e", 65, 0., 650.);
+      book(_3j_hist_eTmiss_mu ,"3j_Et_miss_mu", 65, 0., 650.);
+      book(_3j_hist_mT_e ,"3j_mT_e", 58, 0., 580.);
+      book(_3j_hist_mT_mu ,"3j_mT_mu", 58, 0., 580.);
+      book(_3j_hist_m_eff_e ,"3j_m_eff_e", 46, 0., 2300.);
+      book(_3j_hist_m_eff_mu ,"3j_m_eff_mu", 46, 0., 2300.);
+      book(_3jl_hist_m_eff_e_final ,"3jl_m_eff_e_final", 15, 0., 1500.);
+      book(_3jl_hist_m_eff_mu_final ,"3jl_m_eff_mu_final", 15, 0., 1500.);
+      book(_3jt_hist_m_eff_e_final ,"3jt_m_eff_e_final", 15, 0., 1500.);
+      book(_3jt_hist_m_eff_mu_final ,"3jt_m_eff_mu_final", 15, 0., 1500.);
 
 
-      _4jl_count_mu_channel = bookHisto1D("4jl_count_muon_channel", 1, 0., 1.);
-      _4jl_count_e_channel = bookHisto1D("4jl_count_electron_channel", 1, 0., 1.);
-      _4jt_count_mu_channel = bookHisto1D("4jt_count_muon_channel", 1, 0., 1.);
-      _4jt_count_e_channel = bookHisto1D("4jt_count_electron_channel", 1, 0., 1.);
-      _4j_hist_eTmiss_e = bookHisto1D("4j_Et_miss_e", 65, 0., 650.);
-      _4j_hist_eTmiss_mu = bookHisto1D("4j_Et_miss_mu", 65, 0., 650.);
-      _4j_hist_mT_e = bookHisto1D("4j_mT_e", 58, 0., 580.);
-      _4j_hist_mT_mu = bookHisto1D("4j_mT_mu", 58, 0., 580.);
-      _4j_hist_m_eff_e = bookHisto1D("4j_m_eff_e", 46, 0., 2300.);
-      _4j_hist_m_eff_mu = bookHisto1D("4j_m_eff_mu", 46, 0., 2300.);
-      _4jl_hist_m_eff_e_final = bookHisto1D("4jl_m_eff_e_final", 15, 0., 1500.);
-      _4jl_hist_m_eff_mu_final = bookHisto1D("4jl_m_eff_mu_final", 15, 0., 1500.);
-      _4jt_hist_m_eff_e_final = bookHisto1D("4jt_m_eff_e_final", 15, 0., 1500.);
-      _4jt_hist_m_eff_mu_final = bookHisto1D("4jt_m_eff_mu_final", 15, 0., 1500.);
+      book(_4jl_count_mu_channel ,"4jl_count_muon_channel", 1, 0., 1.);
+      book(_4jl_count_e_channel ,"4jl_count_electron_channel", 1, 0., 1.);
+      book(_4jt_count_mu_channel ,"4jt_count_muon_channel", 1, 0., 1.);
+      book(_4jt_count_e_channel ,"4jt_count_electron_channel", 1, 0., 1.);
+      book(_4j_hist_eTmiss_e ,"4j_Et_miss_e", 65, 0., 650.);
+      book(_4j_hist_eTmiss_mu ,"4j_Et_miss_mu", 65, 0., 650.);
+      book(_4j_hist_mT_e ,"4j_mT_e", 58, 0., 580.);
+      book(_4j_hist_mT_mu ,"4j_mT_mu", 58, 0., 580.);
+      book(_4j_hist_m_eff_e ,"4j_m_eff_e", 46, 0., 2300.);
+      book(_4j_hist_m_eff_mu ,"4j_m_eff_mu", 46, 0., 2300.);
+      book(_4jl_hist_m_eff_e_final ,"4jl_m_eff_e_final", 15, 0., 1500.);
+      book(_4jl_hist_m_eff_mu_final ,"4jl_m_eff_mu_final", 15, 0., 1500.);
+      book(_4jt_hist_m_eff_e_final ,"4jt_m_eff_e_final", 15, 0., 1500.);
+      book(_4jt_hist_m_eff_mu_final ,"4jt_m_eff_mu_final", 15, 0., 1500.);
 
 
     }
@@ -98,7 +96,7 @@ namespace Rivet {
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-      const double weight = event.weight();
+      const double weight = 1.0;
       Particles veto_e
         = apply<IdentifiedFinalState>(event, "veto_elecs").particles();
       if ( ! veto_e.empty() ) {
@@ -107,7 +105,7 @@ namespace Rivet {
       }
 
       Jets cand_jets;
-      foreach ( const Jet& jet,
+      for ( const Jet& jet :
           apply<FastJets>(event, "AntiKtJets04").jetsByPt(20.0*GeV) ) {
         if ( fabs( jet.eta() ) < 2.8 ) {
           cand_jets.push_back(jet);
@@ -125,9 +123,9 @@ namespace Rivet {
 
 
       // pTcone around muon track
-      foreach ( const Particle & mu, candtemp_mu ) {
+      for ( const Particle & mu : candtemp_mu ) {
         double pTinCone = -mu.pT();
-        foreach ( const Particle & track, chg_tracks ) {
+        for ( const Particle & track : chg_tracks ) {
           if ( deltaR(mu.momentum(),track.momentum()) < 0.2 )
             pTinCone += track.pT();
         }
@@ -136,9 +134,9 @@ namespace Rivet {
       }
 
       // pTcone around electron
-      foreach ( const Particle e, candtemp_e ) {
+      for ( const Particle & e : candtemp_e ) {
         double pTinCone = -e.pT();
-        foreach ( const Particle & track, chg_tracks ) {
+        for ( const Particle & track : chg_tracks ) {
           if ( deltaR(e.momentum(),track.momentum()) < 0.2 )
             pTinCone += track.pT();
         }
@@ -148,9 +146,9 @@ namespace Rivet {
 
       // discard jets that overlap with electrons
       Jets recon_jets;
-      foreach ( const Jet& jet, cand_jets ) {
+      for ( const Jet& jet : cand_jets ) {
           bool away_from_e = true;
-          foreach ( const Particle & e, cand_e ) {
+          for ( const Particle & e : cand_e ) {
             if ( deltaR(e.momentum(),jet.momentum()) < 0.2 ) {
               away_from_e = false;
               break;
@@ -162,9 +160,9 @@ namespace Rivet {
 
       // only consider leptons far from jet
       Particles recon_e, recon_mu;
-      foreach ( const Particle & e, cand_e ) {
+      for ( const Particle & e : cand_e ) {
         bool e_near_jet = false;
-        foreach ( const Jet& jet, recon_jets ) {
+        for ( const Jet& jet : recon_jets ) {
           if ( deltaR(e.momentum(),jet.momentum()) < 0.4 &&
                deltaR(e.momentum(),jet.momentum()) > 0.2 )
             e_near_jet = true;
@@ -173,9 +171,9 @@ namespace Rivet {
           recon_e.push_back( e );
       }
 
-      foreach ( const Particle & mu, cand_mu ) {
+      for ( const Particle & mu : cand_mu ) {
         bool mu_near_jet = false;
-        foreach ( const Jet& jet, recon_jets ) {
+        for ( const Jet& jet : recon_jets ) {
           if ( deltaR(mu.momentum(),jet.momentum()) < 0.4 )
             mu_near_jet = true;
         }
@@ -187,7 +185,7 @@ namespace Rivet {
       Particles vfs_particles
         = apply<VisibleFinalState>(event, "vfs").particles();
       FourMomentum pTmiss;
-      foreach ( const Particle & p, vfs_particles ) {
+      for ( const Particle & p : vfs_particles ) {
         pTmiss -= p.momentum();
       }
       double eTmiss = pTmiss.pT();
@@ -199,7 +197,7 @@ namespace Rivet {
       // Njets
       int Njets = 0;
       double pTmiss_phi = pTmiss.phi();
-      foreach ( const Jet& jet, recon_jets ) {
+      for ( const Jet& jet : recon_jets ) {
         if ( jet.abseta() < 2.8 )
           Njets+=1;
       }
@@ -214,9 +212,9 @@ namespace Rivet {
         vetoEvent;
       }
       else {
-        foreach ( const Particle & mu, recon_mu )
+        for ( const Particle & mu : recon_mu )
             lepton.push_back(mu);
-        foreach ( const Particle & e, recon_e )
+        for ( const Particle & e : recon_e )
             lepton.push_back(e);
       }
 
@@ -487,16 +485,12 @@ namespace Rivet {
     Histo1DPtr _4jl_hist_m_eff_mu_final;
     Histo1DPtr _4jt_hist_m_eff_e_final;
     Histo1DPtr _4jt_hist_m_eff_mu_final;
-
-
     //@}
-
 
   };
 
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2011_S9212353);
+  RIVET_DECLARE_ALIASED_PLUGIN(ATLAS_2011_S9212353, ATLAS_2011_I930005);
 
 }

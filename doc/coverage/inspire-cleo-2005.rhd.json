@@ -1,0 +1,340 @@
+{
+    "654529": [
+        "Observation of 1-0- final states from psi(2S) decays and e+ e- annihilation", 
+        "CLEO", 
+        "10.1103/PhysRevLett.94.012005", 
+        null, 
+        "hep-ex/0407028", 
+        null, 
+        null, 
+        [
+            "CLNS-04-1884", 
+            "CLEO-04-09"
+        ]
+    ], 
+    "654843": [
+        "Study of semileptonic charm decays D0 ---> pi- l+ nu and D0 ---> K- l+ nu", 
+        "CLEO", 
+        "10.1103/PhysRevLett.94.011802", 
+        null, 
+        "hep-ex/0407035", 
+        null, 
+        null, 
+        [
+            "CLNS-04-1876", 
+            "CLEO-04-06"
+        ]
+    ], 
+    "658670": [
+        "Measurement of the muonic branching fractions of the narrow Upsilon resonances", 
+        "CLEO", 
+        "10.1103/PhysRevLett.94.012001", 
+        null, 
+        "hep-ex/0409027", 
+        null, 
+        null, 
+        [
+            "CLNS-04-1887", 
+            "CLEO-04-11"
+        ]
+    ], 
+    "661925": [
+        "Search for X(3872) in gamma gamma fusion and ISR at CLEO", 
+        "CLEO", 
+        "10.1103/PhysRevLett.94.032004", 
+        null, 
+        "hep-ex/0410038", 
+        null, 
+        null, 
+        [
+            "CLNS-04-1892", 
+            "CLEO-04-12"
+        ]
+    ], 
+    "663098": [
+        "A New measurement of the masses and widths of the Sigma*++(c) and Sigma*0(c) charmed baryons", 
+        "CLEO", 
+        "10.1103/PhysRevD.71.051101", 
+        null, 
+        "hep-ex/0410088", 
+        null, 
+        null, 
+        [
+            "CLNS-04-1893", 
+            "CLEO-04-13"
+        ]
+    ], 
+    "665012": [
+        "Photon transitions in Upsilon(2S) and Upsilon(3S) decays", 
+        "CLEO", 
+        "10.1103/PhysRevLett.94.032001", 
+        null, 
+        "hep-ex/0411068", 
+        null, 
+        null, 
+        [
+            "CLNS-04-1897", 
+            "CLEO-04-16"
+        ]
+    ], 
+    "665223": [
+        "Search for e+ e- ---> Lambda0(b) anti-Lambda0(b) near threshold", 
+        "CLEO", 
+        "10.1103/PhysRevD.71.012004", 
+        null, 
+        "hep-ex/0411078", 
+        null, 
+        null, 
+        [
+            "CLNS-04-1895", 
+            "CLEO-04-14"
+        ]
+    ], 
+    "668268": [
+        "Improved measurement of the form-factors in the decay Lambda+(c) ---> Lambda e+ nu(e)", 
+        "CLEO", 
+        "10.1103/PhysRevLett.94.191801", 
+        null, 
+        "hep-ex/0501002", 
+        null, 
+        null, 
+        [
+            "CLNS-04-1901", 
+            "CLEO-04-19"
+        ]
+    ], 
+    "674679": [
+        "The Search for eta(1440) ---> K0(S) K+- pi-+ in two-photon fusion at CLEO", 
+        "CLEO", 
+        "10.1103/PhysRevD.71.072001", 
+        null, 
+        "hep-ex/0501026", 
+        null, 
+        null, 
+        [
+            "CLNS-04-1900", 
+            "CLEO-04-18"
+        ]
+    ], 
+    "675005": [
+        "Study of tau decays to four-hadron final states with kaons", 
+        "CLEO", 
+        "10.1103/PhysRevLett.94.241802", 
+        null, 
+        "hep-ex/0501042", 
+        null, 
+        null, 
+        [
+            "CLNS-04-1899", 
+            "CLEO-04-17"
+        ]
+    ], 
+    "676168": [
+        "Limits on neutral D mixing in semileptonic decays", 
+        "CLEO", 
+        "10.1103/PhysRevD.71.077101", 
+        null, 
+        "hep-ex/0502012", 
+        null, 
+        null, 
+        [
+            "CLNS-05-1907", 
+            "CLEO-05-2"
+        ]
+    ], 
+    "678470": [
+        "Measurement of the branching fractions for J/psi ---> l+ l-", 
+        "CLEO", 
+        "10.1103/PhysRevD.71.111103", 
+        null, 
+        "hep-ex/0503027", 
+        null, 
+        null, 
+        [
+            "CLNS-05-1910"
+        ]
+    ], 
+    "678471": [
+        "Branching fractions for psi(2S) to J/psi transitions", 
+        "CLEO", 
+        "10.1103/PhysRevLett.94.232002", 
+        null, 
+        "hep-ex/0503028", 
+        null, 
+        null, 
+        [
+            "CLNS-05-1909", 
+            "CLEO-05-4"
+        ]
+    ], 
+    "679053": [
+        "Search for D0 - anti-D0 mixing in the Dalitz plot analysis of D0 ---> K0(S) pi+ pi-", 
+        "CLEO", 
+        "10.1103/PhysRevD.72.012001", 
+        null, 
+        "hep-ex/0503045", 
+        null, 
+        null, 
+        [
+            "CLNS-05-1908", 
+            "CLEO-05-3"
+        ]
+    ], 
+    "679349": [
+        "Searches for CP violation and pi pi S-wave in the Dalitz-Plot of D0 ---> pi+ pi- pi0", 
+        "CLEO", 
+        "10.1103/PhysRevD.75.119904", 
+        null, 
+        "hep-ex/0503052", 
+        null, 
+        null, 
+        [
+            "CLNS-05-1916", 
+            "CLEO-05-8", 
+            "CLEO-5-8"
+        ]
+    ], 
+    "679506": [
+        "Measurement of absolute hadronic branching fractions of D mesons and e+ e- ---> D anti-D cross sections at E(cm) = 3773-MeV", 
+        "CLEO", 
+        "10.1103/PhysRevLett.95.121801", 
+        null, 
+        "hep-ex/0504003", 
+        null, 
+        null, 
+        [
+            "CLNS-05-1914", 
+            "CLEO-05-6"
+        ]
+    ], 
+    "682775": [
+        "Branching fraction measurements of psi(2S) decay to baryon-antibaryon final states", 
+        "CLEO", 
+        "10.1103/PhysRevD.72.051108", 
+        null, 
+        "hep-ex/0505057", 
+        null, 
+        null, 
+        [
+            "CLNS-05-1918", 
+            "CLEO-05-10"
+        ]
+    ], 
+    "683281": [
+        "Observation of h(c))(P(1)-1) state of charmonium", 
+        "CLEO", 
+        "10.1103/PhysRevLett.95.102003", 
+        null, 
+        "hep-ex/0505073", 
+        null, 
+        null, 
+        [
+            "CLNS-05-1919", 
+            "CLEO-05-11"
+        ]
+    ], 
+    "683673": [
+        "Observation of thirteen new exclusive multi-body hadronic decays of the psi(2S)", 
+        "CLEO", 
+        "10.1103/PhysRevLett.95.062001", 
+        null, 
+        "hep-ex/0505101", 
+        null, 
+        null, 
+        [
+            "CLNS-05-1917", 
+            "CLEO-05-9"
+        ]
+    ], 
+    "685818": [
+        "Absolute branching fraction measurements of exclusive D0 semileptonic decays", 
+        "CLEO", 
+        "10.1103/PhysRevLett.95.181802", 
+        null, 
+        "hep-ex/0506052", 
+        null, 
+        null, 
+        [
+            "CLNS-05-1906", 
+            "CLEO-05-01"
+        ]
+    ], 
+    "685819": [
+        "Absolute branching fraction measurements of exclusive D+ semileptonic decays", 
+        "CLEO", 
+        "10.1103/PhysRevLett.95.181801", 
+        null, 
+        "hep-ex/0506053", 
+        null, 
+        null, 
+        [
+            "CLNS-05-1915", 
+            "CLEO-05-07"
+        ]
+    ], 
+    "689727": [
+        "Search for rare and forbidden decays D+ ---> h+- e-+ e+", 
+        "CLEO", 
+        "10.1103/PhysRevLett.95.221802", 
+        null, 
+        "hep-ex/0508031", 
+        null, 
+        null, 
+        [
+            "CLNS-05-1928", 
+            "CLEO-05-16"
+        ]
+    ], 
+    "690020": [
+        "Observation of the P(1)-1 state of charmonium", 
+        "CLEO", 
+        "10.1103/PhysRevD.72.092004", 
+        null, 
+        "hep-ex/0508037", 
+        null, 
+        null, 
+        [
+            "CLNS05-1920", 
+            "CLEO-05-12"
+        ]
+    ], 
+    "691029": [
+        "Improved measurement of B (D+ ---> mu+ nu) and the pseudoscalar decay constant f(D+)", 
+        "CLEO", 
+        "10.1103/PhysRevLett.95.251801", 
+        null, 
+        "hep-ex/0508057", 
+        null, 
+        null, 
+        [
+            "CLNS-05-1932", 
+            "CLEO-05-20"
+        ]
+    ], 
+    "693873": [
+        "Precision measurements of the timelike electromagnetic form-factors of pion, kaon, and proton", 
+        "CLEO", 
+        "10.1103/PhysRevLett.95.261803", 
+        null, 
+        "hep-ex/0510005", 
+        null, 
+        null, 
+        [
+            "CLNS-05-1936", 
+            "CLEO-05-24"
+        ]
+    ], 
+    "1649168": [
+        "First Evidence and Measurement of $B_s^{(*)} barB_s^{(*)}$ Production at the $\\Upsilon(5S)$", 
+        "CLEO", 
+        "10.1103/PhysRevLett.95.261801", 
+        null, 
+        "hep-ex/0508047", 
+        null, 
+        null, 
+        [
+            "CLNS-05-1930", 
+            "CLEO-05-18"
+        ]
+    ]
+}

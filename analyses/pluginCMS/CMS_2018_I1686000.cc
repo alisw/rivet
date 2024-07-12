@@ -16,7 +16,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(CMS_2018_I1686000);
+    RIVET_DEFAULT_ANALYSIS_CTOR(CMS_2018_I1686000);
 
 
     /// @name Analysis methods
@@ -39,7 +39,7 @@ namespace Rivet {
 
 
       // Book xsec counter
-      _c_xsec_fid = bookCounter("xsec");
+      book(_c_xsec_fid, "xsec");
     }
 
 
@@ -82,7 +82,7 @@ namespace Rivet {
       if (photons.empty()) vetoEvent;
 
       // Fill counter
-      _c_xsec_fid->fill(event.weight());
+      _c_xsec_fid->fill();
     }
 
 
@@ -102,6 +102,6 @@ namespace Rivet {
   };
 
 
-  DECLARE_RIVET_PLUGIN(CMS_2018_I1686000);
+  RIVET_DECLARE_PLUGIN(CMS_2018_I1686000);
 
 }

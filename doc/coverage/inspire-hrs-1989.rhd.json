@@ -1,0 +1,47 @@
+{
+    "262674": [
+        "Measurement of the D0, $D^+$ and $D$(s)+ Meson Lifetimes", 
+        "HRS", 
+        "10.1103/PhysRevD.39.123", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "ANL-HEP-PR-88-01", 
+            "IUHEE-88-1", 
+            "UM-HE-88-1", 
+            "PU-88-611"
+        ]
+    ], 
+    "267739": [
+        "Production Cross-section and Topological Decay Branching Fractions of the $\\tau$ Lepton", 
+        "HRS", 
+        "10.1103/PhysRevD.40.902", 
+        null, 
+        null, 
+        "ins267739", 
+        null, 
+        [
+            "ANL-HEP-PR-88-90", 
+            "IUHEE-88-9", 
+            "UM-HE-88-38", 
+            "PU-88-624"
+        ]
+    ], 
+    "278678": [
+        "Measurement of the Branching Ratio for $\\tau^- \\to e^- \\bar{\\nu}_e \\nu_\\tau$", 
+        "HRS", 
+        "10.1016/0370-2693(89)91220-3", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "ANL-HEP-PR-88-89", 
+            "IUHEE-88-08", 
+            "UM-HE-88-37", 
+            "PU-88-623"
+        ]
+    ]
+}

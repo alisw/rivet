@@ -10,17 +10,12 @@ namespace Rivet {
   class ATLAS_2015_I1351916 : public Analysis {
   public:
 
-    /// @name Constructors etc.
-    //@{
-
-    /// Constructors
+    /// Constructor
     ATLAS_2015_I1351916(const string name="ATLAS_2015_I1351916", size_t mode=0,
                         const string ref_data="ATLAS_2015_I1351916") : Analysis(name) {
       _mode = mode; // pick electron channel by default
       setRefDataName(ref_data);
     }
-
-    //@}
 
 
     /// @name Analysis methods
@@ -41,15 +36,15 @@ namespace Rivet {
 
       // Book dummy histograms for heterogeneous merging
       const Scatter2D& ref = refData(_mode? 4 : 2, 1, 2);
-      _h["NCC_pos"] = bookHisto1D("_ncc_pos", ref);
-      _h["NCC_neg"] = bookHisto1D("_ncc_neg", ref);
-      _s["CC"] = bookScatter2D(_mode? 4 : 2, 1, 2, true);
+      book(_h["NCC_pos"], "_ncc_pos", ref);
+      book(_h["NCC_neg"], "_ncc_neg", ref);
+      book(_s["CC"], _mode ? 4 : 2, 1, 2, true);
 
       if (_mode == 0) { // electron-channel only
         const Scatter2D& ref_cf = refData(3, 1, 2);
-        _h["NCF_pos"] = bookHisto1D("_ncf_pos", ref_cf);
-        _h["NCF_neg"] = bookHisto1D("_ncf_neg", ref_cf);
-        _s["CF"] = bookScatter2D(3, 1, 2, true);
+        book(_h["NCF_pos"], "_ncf_pos", ref_cf);
+        book(_h["NCF_neg"], "_ncf_neg", ref_cf);
+        book(_s["CF"], 3, 1, 2, true);
       }
     }
 
@@ -60,11 +55,11 @@ namespace Rivet {
       // Get and cut on dressed leptons
       const vector<DressedLepton>& leptons = apply<DressedLeptons>(e, "leptons").dressedLeptons();
       if (leptons.size() != 2) vetoEvent; // require exactly two leptons
-      if (leptons[0].threeCharge() * leptons[1].threeCharge() > 0) vetoEvent; // require opposite charge
+      if (leptons[0].charge3() * leptons[1].charge3() > 0) vetoEvent; // require opposite charge
 
       // Identify lepton vs antilepton
-      const Particle& lpos = leptons[(leptons[0].threeCharge() > 0) ? 0 : 1];
-      const Particle& lneg = leptons[(leptons[0].threeCharge() < 0) ? 0 : 1];
+      const Particle& lpos = leptons[(leptons[0].charge3() > 0) ? 0 : 1];
+      const Particle& lneg = leptons[(leptons[0].charge3() < 0) ? 0 : 1];
 
       string label = "N";
       if (_mode == 1) {// electron channel
@@ -82,7 +77,7 @@ namespace Rivet {
       const double cosThetaStar = cosCollinsSoper(lneg, lpos);
       const double mll = (lpos.mom() + lneg.mom()).mass();
       label += cosThetaStar < 0.0?  "_neg" : "_pos";
-      _h[label]->fill(mll/GeV, e.weight());
+      _h[label]->fill(mll/GeV);
     }
 
 
@@ -135,8 +130,8 @@ namespace Rivet {
   };
 
 
-  DECLARE_RIVET_PLUGIN(ATLAS_2015_I1351916);
-  DECLARE_RIVET_PLUGIN(ATLAS_2015_I1351916_EL);
-  DECLARE_RIVET_PLUGIN(ATLAS_2015_I1351916_MU);
+  RIVET_DECLARE_PLUGIN(ATLAS_2015_I1351916);
+  RIVET_DECLARE_PLUGIN(ATLAS_2015_I1351916_EL);
+  RIVET_DECLARE_PLUGIN(ATLAS_2015_I1351916_MU);
 
 }

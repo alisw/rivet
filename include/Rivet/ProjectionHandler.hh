@@ -2,6 +2,10 @@
 #ifndef RIVET_ProjectionHandler_HH
 #define RIVET_ProjectionHandler_HH
 
+// @todo all thread/mutex code belongs to a temporary fix to allow for
+// basic threading
+#include <thread>
+#include <mutex>
 #include "Rivet/Config/RivetCommon.hh"
 #include "Rivet/Projection.fhh"
 
@@ -68,7 +72,7 @@ namespace Rivet {
     ProjHandles _projs;
 
 
-  private:
+  public:
 
     /// @name Construction. */
     //@{
@@ -87,13 +91,22 @@ namespace Rivet {
 
     //@}
 
+    // @todo the following is a temporary fix to allow for basic
+    // threading. The proper fix will involve the AnalysisHandler
+    // having it's own ProjectionHandler object.
 
+    // private:
   public:
 
     /// Singleton creation function
+    static std::mutex mtx;
     static ProjectionHandler& getInstance() {
-      static ProjectionHandler _instance;
-      return _instance;
+      // static ProjectionHandler _instance;
+      // return _instance;
+      std::unique_lock<std::mutex> lock(mtx);
+      static map<std::thread::id,ProjectionHandler> _instances;
+      return _instances[std::this_thread::get_id()];
+      
     }
 
 

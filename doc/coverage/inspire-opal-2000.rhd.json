@@ -1,0 +1,426 @@
+{
+    "474010": [
+        "A Study of parton fragmentation in hadronic Z0 decays using Lambda anti-Lambda correlations", 
+        "OPAL", 
+        "10.1007/s100520050685", 
+        "363489", 
+        "hep-ex/9808031", 
+        "ins474010", 
+        null, 
+        [
+            "CERN-EP-98-114"
+        ]
+    ], 
+    "474664": [
+        "Search for acoplanar lepton pair events in e+ e- collisions at S**(1/2) = 161-GeV, 172-GeV and 183-GeV", 
+        "OPAL", 
+        "10.1007/s100529900147", 
+        "363614", 
+        "hep-ex/9808036", 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-122"
+        ]
+    ], 
+    "482170": [
+        "Measurement of the $B^{+}$ and $B^0$ lifetimes and search for CP($T$) violation using reconstructed secondary vertices", 
+        "OPAL", 
+        null, 
+        "376476", 
+        "hep-ex/9901017", 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-195"
+        ]
+    ], 
+    "498297": [
+        "Search for R-parity violating decays of scalar fermions at LEP", 
+        "OPAL", 
+        "10.1007/s100529900226", 
+        "385123", 
+        "hep-ex/9904015", 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-043"
+        ]
+    ], 
+    "502548": [
+        "Total hadronic cross-section of photon-photon interactions at LEP", 
+        "OPAL", 
+        "10.1007/s100520000352", 
+        "391920", 
+        "hep-ex/9906039", 
+        "ins502548", 
+        null, 
+        [
+            "CERN-EP-99-076"
+        ]
+    ], 
+    "502683": [
+        "Measurements of inclusive semileptonic branching fractions of b hadrons in Z0 decays", 
+        "OPAL", 
+        "10.1007/s100520050688", 
+        "392128", 
+        "hep-ex/9906041", 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-078", 
+            "CERN-EP-99-78"
+        ]
+    ], 
+    "502750": [
+        "A Study of spin alignment of rho(770)+- and omega(782) mesons in hadronic Z0 decays", 
+        "OPAL", 
+        "10.1007/s100520050003", 
+        "392253", 
+        "hep-ex/9906043", 
+        "ins502750", 
+        null, 
+        [
+            "CERN-EP-99-082", 
+            "CERN-EP-99-82"
+        ]
+    ], 
+    "504923": [
+        "Measurement of the production rate of charm quark pairs from gluons in hadronic Z0 decays", 
+        "OPAL", 
+        null, 
+        "395498", 
+        "hep-ex/9908001", 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-089"
+        ]
+    ], 
+    "504924": [
+        "Search for neutral Higgs bosons in e+ e- collisions at S**(1/2) approximately equals 189-GeV", 
+        "OPAL", 
+        "10.1007/s100520000286", 
+        "395499", 
+        "hep-ex/9908002", 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-096"
+        ]
+    ], 
+    "504988": [
+        "Search for pair produced leptoquarks in $e^{+} e^{-}$ interactions at $S^{(1/2)}$ approximately = 183-GeV", 
+        "OPAL", 
+        null, 
+        "395612", 
+        "hep-ex/9908007", 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-091"
+        ]
+    ], 
+    "504989": [
+        "Tests of the standard model and constraints on new physics from measurements of fermion pair production at 189-GeV at LEP", 
+        "OPAL", 
+        "10.1007/s100520050718", 
+        "395613", 
+        "hep-ex/9908008", 
+        "ins504989", 
+        null, 
+        [
+            "CERN-EP-99-097"
+        ]
+    ], 
+    "505110": [
+        "A Study of three prong tau decays with charged kaons", 
+        "OPAL", 
+        "10.1007/s100520000272", 
+        "395807", 
+        "hep-ex/9908013", 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-095"
+        ]
+    ], 
+    "507874": [
+        "Search for chargino and neutralino production at S**(1/2) = 189-GeV at LEP", 
+        "OPAL", 
+        null, 
+        "401896", 
+        "hep-ex/9909051", 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-123"
+        ]
+    ], 
+    "507875": [
+        "Search for anomalous production of acoplanar di-lepton events in e+ e- collisions at S**(1/2) = 183-GeV and 189-GeV", 
+        "OPAL", 
+        "10.1007/s100520050733", 
+        "401897", 
+        "hep-ex/9909052", 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-122"
+        ]
+    ], 
+    "509391": [
+        "Precision luminosity for Z0 line shape measurements with a silicon tungsten calorimeter", 
+        "OPAL", 
+        "10.1007/s100520000353", 
+        "405984", 
+        "hep-ex/9910066", 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-136"
+        ]
+    ], 
+    "510530": [
+        "Tau decays with neutral kaons", 
+        "OPAL", 
+        "10.1007/s100520000317", 
+        "408932", 
+        "hep-ex/9911029", 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-154"
+        ]
+    ], 
+    "510531": [
+        "Inclusive production of D*+- mesons in photon-photon collisions at S**(1/2)(ee) = 183-GeV and 189-GeV and a first measurement of F**gamma(2,c)", 
+        "OPAL", 
+        "10.1007/s100520000420", 
+        "408933", 
+        "hep-ex/9911030", 
+        "ins510531", 
+        null, 
+        [
+            "CERN-EP-99-157"
+        ]
+    ], 
+    "513336": [
+        "Leading particle production in light flavor jets", 
+        "OPAL", 
+        "10.1007/s100520000406", 
+        "423984", 
+        "hep-ex/0001054", 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-164"
+        ]
+    ], 
+    "513337": [
+        "QCD analyses and determinations of alpha(s) in e+ e- annihilation at energies between 35-GeV and 189-GeV", 
+        "JADE", 
+        "10.1007/s100520000432", 
+        "423985", 
+        "hep-ex/0001055", 
+        "ins513337", 
+        null, 
+        [
+            "CERN-EP-99-175"
+        ]
+    ], 
+    "513338": [
+        "Search for unstable heavy and excited leptons at LEP 2", 
+        "OPAL", 
+        "10.1007/s100520050734", 
+        "423986", 
+        "hep-ex/0001056", 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-169"
+        ]
+    ], 
+    "513475": [
+        "Search for new physics in rare B decays", 
+        "OPAL", 
+        "10.1016/S0370-2693(00)00162-3", 
+        "425561", 
+        "hep-ex/0002008", 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-179"
+        ]
+    ], 
+    "513476": [
+        "QCD studies with e+ e- annihilation data at 172-GeV - 189-GeV", 
+        "OPAL", 
+        "10.1007/s100520050015", 
+        "425565", 
+        "hep-ex/0002012", 
+        "ins513476", 
+        null, 
+        [
+            "CERN-EP-99-178"
+        ]
+    ], 
+    "513607": [
+        "Measurements of R(b), A**b(FB), and A**c(FB) in e+ e- collisions at 130-GeV - 189-GeV", 
+        "OPAL", 
+        "10.1007/s100520050002", 
+        "426126", 
+        "hep-ex/0002024", 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-170"
+        ]
+    ], 
+    "524306": [
+        "Transverse and longitudinal Bose Einstein correlations in hadronic Z0 decays", 
+        "OPAL", 
+        "10.1007/s100520000407", 
+        "428253", 
+        "hep-ex/0002062", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-004"
+        ]
+    ], 
+    "524800": [
+        "Measurement of |V(cb)| using anti-B0 ---> D*+ lepton- anti-neutrino decays", 
+        "OPAL", 
+        "10.1016/S0370-2693(00)00457-3", 
+        "430552", 
+        "hep-ex/0003013", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-032", 
+            "OPAL-PR-305"
+        ]
+    ], 
+    "524845": [
+        "Z boson pair production in e+ e- collisions at S**(1/2) = 183-GeV and 189-GeV", 
+        "OPAL", 
+        "10.1016/S0370-2693(00)00197-0", 
+        "430689", 
+        "hep-ex/0003016", 
+        "ins524845", 
+        null, 
+        [
+            "CERN-EP-2000-017"
+        ]
+    ], 
+    "526776": [
+        "Photonic events with missing energy in e+ e- collisions at S**(1/2) = 189-GeV", 
+        "OPAL", 
+        "10.1007/s100520000522", 
+        "436490", 
+        "hep-ex/0005002", 
+        "ins526776", 
+        null, 
+        [
+            "CERN-EP-2000-050"
+        ]
+    ], 
+    "526854": [
+        "A Measurement of the tau mass and the first CPT test with tau leptons", 
+        "OPAL", 
+        "10.1016/S0370-2693(00)01022-4", 
+        "436746", 
+        "hep-ex/0005009", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-056"
+        ]
+    ], 
+    "529896": [
+        "First measurement of the inclusive branching ratio of b hadrons to phi mesons in Z0 decays", 
+        "OPAL", 
+        "10.1016/S0370-2693(00)01066-2", 
+        "446608", 
+        "hep-ex/0007015", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-065"
+        ]
+    ], 
+    "529897": [
+        "Search for trilinear neutral gauge boson couplings in $Z^-$ gamma production at $S^{(1/2)}$ = 189-GeV at LEP", 
+        "OPAL", 
+        "10.1007/s100520000490", 
+        "446609", 
+        "hep-ex/0007016", 
+        "ins529897", 
+        null, 
+        [
+            "CERN-EP-2000-067"
+        ]
+    ], 
+    "529898": [
+        "Multiplicities of pi0, eta, K0 and of charged particles in quark and gluon jets", 
+        "OPAL", 
+        "10.1007/s100520000505", 
+        "446610", 
+        "hep-ex/0007017", 
+        "ins529898", 
+        null, 
+        [
+            "CERN-EP-2000-070"
+        ]
+    ], 
+    "529899": [
+        "Measurement of the low x behavior of the photon structure function F(2)gamma", 
+        "OPAL", 
+        "10.1007/s100520000523", 
+        "446611", 
+        "hep-ex/0007018", 
+        "ins529899", 
+        null, 
+        [
+            "CERN-EP-2000-082"
+        ]
+    ], 
+    "533110": [
+        "W+ W- production cross-section and W branching fractions in e+ e- collisions at 189-GeV", 
+        "OPAL", 
+        "10.1016/S0370-2693(00)01085-6", 
+        "457402", 
+        "hep-ex/0009019", 
+        "ins533110", 
+        null, 
+        [
+            "CERN-EP-2000-101"
+        ]
+    ], 
+    "533111": [
+        "A Measurement of the rate of charm production in $W$ decays", 
+        "OPAL", 
+        "10.1016/S0370-2693(00)00971-0", 
+        "457403", 
+        "hep-ex/0009020", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-100"
+        ]
+    ], 
+    "534657": [
+        "Measurement of the $B^0$ lifetime and oscillation frequency using $\\bar{B}^0 \\to D^{*+} \\ell^{-}$ anti-neutrino decays", 
+        "OPAL", 
+        "10.1016/S0370-2693(00)01145-X", 
+        "467823", 
+        "hep-ex/0010013", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-090", 
+            "CERN-EP-2000-90"
+        ]
+    ]
+}

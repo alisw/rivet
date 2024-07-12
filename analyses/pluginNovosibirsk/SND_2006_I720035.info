@@ -1,0 +1,37 @@
+Name: SND_2006_I720035
+Year: 2006
+Summary: Measurement of the cross section for $e^+e^-\to K_S^0K_L^0$ at energies between 1.04 and 1.38 GeV
+Experiment: SND
+Collider: VEPP-2M
+InspireID: 720035
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+- J. Exp. Theor. Phys. 103, 720 (2006)
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+Description:
+  'Measurement of the cross section for $e^+e^-\to K_S^0K_L^0$ at energies between 1.04 and 1.38 GeV'
+Keywords: []
+BibKey: Achasov:2006bv
+BibTeX: '@article{Achasov:2006bv,
+      author         = "Achasov, M. N. and others",
+      title          = "{Experimental study of the reaction e+ d- ---&gt; K(S)K(L)
+                        in the energy range s**(1/2) = 1.04-GeV divided by
+                        1.38-GeV}",
+      journal        = "J. Exp. Theor. Phys.",
+      volume         = "103",
+      year           = "2006",
+      number         = "5",
+      pages          = "720-727",
+      doi            = "10.1134/S1063776106110070",
+      note           = "[Zh. Eksp. Teor. Fiz.130,no.5,831(2006)]",
+      eprint         = "hep-ex/0606057",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = HEP-EX/0606057;%%"
+}'

@@ -1,0 +1,36 @@
+Name: BABAR_2007_I749390
+Year: 2007
+Summary: Dalitz plot analysis of $D^0\to K^+K^-\pi^0$
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 749390
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 76 (2007) 011102
+RunInfo: Any process producing D0->K+K-pi0, original e+e->Upsilon(4S)
+Description:
+  'Measurement of the mass distributions in the decay $D^0\to K^+K^-\pi^0$ by BaBar. The data were read from the plots in the paper. It is also not clear that any resolution effects have been unfolded or backgrounds removed.'
+ValidationInfo:
+  'Herwig 7 events using model from paper'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BaBar:2007soq
+BibTeX: '@article{BaBar:2007soq,
+    author = "Aubert, Bernard and others",
+    collaboration = "BaBar",
+    title = "{Amplitude analysis of the decay D0 ---\ensuremath{>} K- K+ pi0}",
+    eprint = "0704.3593",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "SLAC-PUB-12416, BABAR-PUB-07-022",
+    doi = "10.1103/PhysRevD.76.011102",
+    journal = "Phys. Rev. D",
+    volume = "76",
+    pages = "011102",
+    year = "2007"
+}
+'

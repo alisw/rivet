@@ -5,7 +5,8 @@ Authors:
  - Leif Lönnblad <leif.lonnblad@thep.lu.se>
 NumEvents: 50000
 References:
- - arXiv:1508.00848 [hep-ex], Eur.Phys.J. C76 (2016) no.4, 199
+ - arXiv:1508.00848 [hep-ex]
+ - Eur.Phys.J. C76 (2016) no.4, 199
 RunInfo: Any!
 Description:
    Template analysis for using CentralityBinner for dynamically

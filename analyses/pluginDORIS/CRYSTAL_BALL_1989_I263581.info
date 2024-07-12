@@ -1,0 +1,32 @@
+Name: CRYSTAL_BALL_1989_I263581
+Year: 1989
+Summary:  Electron spectrum  in B decays
+Experiment: CRYSTAL_BALL
+Collider: DORIS
+InspireID: 263581
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Z.Phys.C 42 (1989) 33
+RunInfo: bottom mesons produced at the Upsilon(4S)
+Description:
+  'Measurement of the inclusive electron spectrum in $B$ decays. N.B. The spectum is obtained in the rest frame of the decaying $\Upsilon(4S)$ which produces the decaying $B$ mesons'
+ValidationInfo:
+  'Herwig 7 events at the Upsilon(4S), using EvtGen for the B decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: CrystalBall:1988pmg
+BibTeX: '@article{CrystalBall:1988pmg,
+    author = "Wachs, K. and others",
+    collaboration = "Crystal Ball",
+    title = "{The Electron Spectrum From $B$ Meson Decays}",
+    reportNumber = "DESY-88-111, SLAC-PUB-4691",
+    doi = "10.1007/BF01565126",
+    journal = "Z. Phys. C",
+    volume = "42",
+    pages = "33",
+    year = "1989"
+}
+'

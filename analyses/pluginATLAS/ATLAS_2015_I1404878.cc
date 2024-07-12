@@ -15,7 +15,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2015_I1404878);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2015_I1404878);
 
 
     void init() {
@@ -74,41 +74,38 @@ namespace Rivet {
       vfs.addVetoOnThisFinalState(ewdressedelectrons);
       vfs.addVetoOnThisFinalState(ewdressedmuons);
       vfs.addVetoOnThisFinalState(neutrinos);
-      FastJets jets(vfs, FastJets::ANTIKT, 0.4);
-      jets.useInvisibles(true);
+      FastJets jets(vfs, FastJets::ANTIKT, 0.4, JetAlg::Muons::ALL, JetAlg::Invisibles::DECAY);
       declare(jets, "jets");
 
 
       // Histogram booking
-      _h["massttbar"]                  = bookHisto1D( 1, 1, 1);
-      _h["massttbar_norm"]             = bookHisto1D( 2, 1, 1);
-      _h["ptttbar"]                    = bookHisto1D( 3, 1, 1);
-      _h["ptttbar_norm"]               = bookHisto1D( 4, 1, 1);
-      _h["absrapttbar"]                = bookHisto1D( 5, 1, 1);
-      _h["absrapttbar_norm"]           = bookHisto1D( 6, 1, 1);
-      _h["ptpseudotophadron"]          = bookHisto1D( 7, 1, 1);
-      _h["ptpseudotophadron_norm"]     = bookHisto1D( 8, 1, 1);
-      _h["absrappseudotophadron"]      = bookHisto1D( 9, 1, 1);
-      _h["absrappseudotophadron_norm"] = bookHisto1D(10, 1, 1);
-      _h["absPout"]                    = bookHisto1D(11, 1, 1);
-      _h["absPout_norm"]               = bookHisto1D(12, 1, 1);
-      _h["dPhittbar"]                  = bookHisto1D(13, 1, 1);
-      _h["dPhittbar_norm"]             = bookHisto1D(14, 1, 1);
-      _h["HTttbar"]                    = bookHisto1D(15, 1, 1);
-      _h["HTttbar_norm"]               = bookHisto1D(16, 1, 1);
-      _h["Yboost"]                     = bookHisto1D(17, 1, 1);
-      _h["Yboost_norm"]                = bookHisto1D(18, 1, 1);
-      _h["chittbar"]                   = bookHisto1D(19, 1, 1);
-      _h["chittbar_norm"]              = bookHisto1D(20, 1, 1);
-      _h["RWt"]                        = bookHisto1D(21, 1, 1);
-      _h["RWt_norm"]                   = bookHisto1D(22, 1, 1);
+        book(_h["massttbar"]                  , 1, 1, 1);
+        book(_h["massttbar_norm"]             , 2, 1, 1);
+        book(_h["ptttbar"]                    , 3, 1, 1);
+        book(_h["ptttbar_norm"]               , 4, 1, 1);
+        book(_h["absrapttbar"]                , 5, 1, 1);
+        book(_h["absrapttbar_norm"]           , 6, 1, 1);
+        book(_h["ptpseudotophadron"]          , 7, 1, 1);
+        book(_h["ptpseudotophadron_norm"]     , 8, 1, 1);
+        book(_h["absrappseudotophadron"]      , 9, 1, 1);
+        book(_h["absrappseudotophadron_norm"] ,10, 1, 1);
+        book(_h["absPout"]                    ,11, 1, 1);
+        book(_h["absPout_norm"]               ,12, 1, 1);
+        book(_h["dPhittbar"]                  ,13, 1, 1);
+        book(_h["dPhittbar_norm"]             ,14, 1, 1);
+        book(_h["HTttbar"]                    ,15, 1, 1);
+        book(_h["HTttbar_norm"]               ,16, 1, 1);
+        book(_h["Yboost"]                     ,17, 1, 1);
+        book(_h["Yboost_norm"]                ,18, 1, 1);
+        book(_h["chittbar"]                   ,19, 1, 1);
+        book(_h["chittbar_norm"]              ,20, 1, 1);
+        book(_h["RWt"]                        ,21, 1, 1);
+        book(_h["RWt_norm"]                   ,22, 1, 1);
 
     }
 
 
     void analyze(const Event& event) {
-
-      const double weight = event.weight();
 
       // Get the selected objects, using the projections.
       vector<DressedLepton> electrons = applyProjection<DressedLeptons>(event, "dressedelectrons").dressedLeptons();
@@ -186,29 +183,29 @@ namespace Rivet {
       double absPout = fabs(vpseudotophadron.dot((vpseudotoplepton.cross(z_versor))/(vpseudotoplepton.cross(z_versor).mod())));
 
       // absolute cross sections
-      _h["ptpseudotophadron"]->fill(    ppseudotophadron.pt(),     weight); //pT of pseudo top hadron
-      _h["ptttbar"]->fill(              pttbar.pt(),               weight); //fill pT of ttbar in combined channel
-      _h["absrappseudotophadron"]->fill(ppseudotophadron.absrap(), weight);
-      _h["absrapttbar"]->fill(          pttbar.absrap(),           weight);
-      _h["massttbar"]->fill(            pttbar.mass(),             weight);
-      _h["absPout"]->fill(              absPout,                   weight);
-      _h["chittbar"]->fill(             chi_ttbar,                 weight);
-      _h["dPhittbar"]->fill(            deltaPhi_ttbar,            weight);
-      _h["HTttbar"]->fill(              HT_ttbar,                  weight);
-      _h["Yboost"]->fill(               Yboost,                    weight);
-      _h["RWt"]->fill(                  R_Wt,                      weight);
+      _h["ptpseudotophadron"]->fill(    ppseudotophadron.pt()); //pT of pseudo top hadron
+      _h["ptttbar"]->fill(              pttbar.pt()); //fill pT of ttbar in combined channel
+      _h["absrappseudotophadron"]->fill(ppseudotophadron.absrap());
+      _h["absrapttbar"]->fill(          pttbar.absrap());
+      _h["massttbar"]->fill(            pttbar.mass());
+      _h["absPout"]->fill(              absPout);
+      _h["chittbar"]->fill(             chi_ttbar);
+      _h["dPhittbar"]->fill(            deltaPhi_ttbar);
+      _h["HTttbar"]->fill(              HT_ttbar);
+      _h["Yboost"]->fill(               Yboost);
+      _h["RWt"]->fill(                  R_Wt);
       // normalised cross sections
-      _h["ptpseudotophadron_norm"]->fill(    ppseudotophadron.pt(),     weight); //pT of pseudo top hadron
-      _h["ptttbar_norm"]->fill(              pttbar.pt(),               weight); //fill pT of ttbar in combined channel
-      _h["absrappseudotophadron_norm"]->fill(ppseudotophadron.absrap(), weight);
-      _h["absrapttbar_norm"]->fill(          pttbar.absrap(),           weight);
-      _h["massttbar_norm"]->fill(            pttbar.mass(),             weight);
-      _h["absPout_norm"]->fill(              absPout,                   weight);
-      _h["chittbar_norm"]->fill(             chi_ttbar,                 weight);
-      _h["dPhittbar_norm"]->fill(            deltaPhi_ttbar,            weight);
-      _h["HTttbar_norm"]->fill(              HT_ttbar,                  weight);
-      _h["Yboost_norm"]->fill(               Yboost,                    weight);
-      _h["RWt_norm"]->fill(                  R_Wt,                      weight);
+      _h["ptpseudotophadron_norm"]->fill(    ppseudotophadron.pt()); //pT of pseudo top hadron
+      _h["ptttbar_norm"]->fill(              pttbar.pt()); //fill pT of ttbar in combined channel
+      _h["absrappseudotophadron_norm"]->fill(ppseudotophadron.absrap());
+      _h["absrapttbar_norm"]->fill(          pttbar.absrap());
+      _h["massttbar_norm"]->fill(            pttbar.mass());
+      _h["absPout_norm"]->fill(              absPout);
+      _h["chittbar_norm"]->fill(             chi_ttbar);
+      _h["dPhittbar_norm"]->fill(            deltaPhi_ttbar);
+      _h["HTttbar_norm"]->fill(              HT_ttbar);
+      _h["Yboost_norm"]->fill(               Yboost);
+      _h["RWt_norm"]->fill(                  R_Wt);
 
     }
 
@@ -257,7 +254,7 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2015_I1404878);
+  RIVET_DECLARE_PLUGIN(ATLAS_2015_I1404878);
 
 
 }

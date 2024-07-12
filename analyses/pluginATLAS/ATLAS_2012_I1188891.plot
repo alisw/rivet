@@ -4,25 +4,25 @@ LogY=0
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2012_I1188891/d01-x01-y01
-YLabel=$bb$ fraction [\%]
+YLabel=$bb$ fraction [$\%$]
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2012_I1188891/d02-x01-y01
-YLabel=$bc$ fraction [\%]
+YLabel=$bc$ fraction [$\%$]
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2012_I1188891/d03-x01-y01
-YLabel=$cc$ fraction [\%]
+YLabel=$cc$ fraction [$\%$]
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2012_I1188891/d04-x01-y01
-YLabel=$b$-light fraction [\%]
+YLabel=$b$-light fraction [$\%$]
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2012_I1188891/d05-x01-y01
-YLabel=$c$-light fraction [\%]
+YLabel=$c$-light fraction [$\%$]
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2012_I1188891/d06-x01-y01
-YLabel=light-light fraction [\%]
+YLabel=light-light fraction [$\%$]
 # END PLOT

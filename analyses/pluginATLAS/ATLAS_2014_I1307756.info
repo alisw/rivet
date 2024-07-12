@@ -5,9 +5,11 @@ Experiment: ATLAS
 Collider: LHC 8 TeV
 InspireID: 1307756
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Jessica Leveque <leveque@lapp.in2p3.fr>
 References:
+ - ATLAS-HIGG-2014-04
  - arXiv:hep-ex/1407.6583
 RunInfo:
   Inclusive diphotons events at $\sqrt(s)$ = 8 TeV

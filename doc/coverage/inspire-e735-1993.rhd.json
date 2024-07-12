@@ -1,0 +1,26 @@
+{
+    "356583": [
+        "Inclusive photon production from $p\\bar{p}$ collisions at $\\sqrt{s}$ = 1.8-Tev", 
+        "E735", 
+        "10.1103/PhysRevLett.71.1490", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-93-406-3", 
+            "PRINT-93-0601 (FERMILAB)", 
+            "FPRINT-93-59"
+        ]
+    ], 
+    "363171": [
+        "Mass identified particle production in $p\\bar{p}$ collisions at $\\sqrt{s}$ = 300-GeV, 540-GeV, 1000-GeV, and 1800-GeV", 
+        "E735", 
+        "10.1103/PhysRevD.48.984", 
+        null, 
+        null, 
+        "ins363171", 
+        null, 
+        []
+    ]
+}

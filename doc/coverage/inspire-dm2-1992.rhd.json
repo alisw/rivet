@@ -1,0 +1,26 @@
+{
+    "300924": [
+        "Partial wave analysis of DM2 data in the eta (1430) energy range", 
+        "DM2", 
+        "10.1103/PhysRevD.46.1951", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "LAL-90-53"
+        ]
+    ], 
+    "339265": [
+        "Measurement of the e+ e- ---> pi+ pi- pi0 and e+ e- ---> omega pi+ pi- reactions in the energy interval 1350-MeV - 2400-MeV", 
+        "DM2", 
+        "10.1007/BF01589702", 
+        null, 
+        null, 
+        "ins339265", 
+        null, 
+        [
+            "LAL-92-08"
+        ]
+    ]
+}

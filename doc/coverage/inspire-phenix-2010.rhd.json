@@ -1,0 +1,102 @@
+{
+    "784417": [
+        "Enhanced production of direct photons in Au+Au collisions at $\\sqrt{s_{NN}}=200$ GeV and implications for the initial temperature", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.104.132301", 
+        null, 
+        "0804.4168", 
+        null, 
+        null, 
+        []
+    ], 
+    "833129": [
+        "Double-Helicity Dependence of Jet Properties from Dihadrons in Longitudinally Polarized $p+p$~Collisions at $\\sqrt{s}$~=~200~GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevD.81.012002", 
+        null, 
+        "0910.1029", 
+        null, 
+        null, 
+        []
+    ], 
+    "838580": [
+        "Detailed measurement of the $e^+ e^-$ pair continuum in $p+p$ and Au+Au collisions at $\\sqrt{s_{NN}} = 200$ GeV and implications for direct photon production", 
+        "PHENIX", 
+        "10.1103/PhysRevC.81.034911", 
+        null, 
+        "0912.0244", 
+        null, 
+        null, 
+        []
+    ], 
+    "839540": [
+        "Transverse momentum dependence of J/psi polarization at midrapidity in p+p collisions at s**(1/2) = 200-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevD.82.012001", 
+        null, 
+        "0912.2082", 
+        null, 
+        null, 
+        []
+    ], 
+    "845169": [
+        "Transition in Yield and Azimuthal Shape Modification in Dihadron Correlations in Relativistic Heavy Ion Collisions", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.104.252301", 
+        null, 
+        "1002.1077", 
+        null, 
+        null, 
+        []
+    ], 
+    "850211": [
+        "Elliptic and hexadecapole flow of charged hadrons in Au+Au collisions at $\\sqrt{s_{NN}}=200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.105.062301", 
+        null, 
+        "1003.5586", 
+        null, 
+        null, 
+        []
+    ], 
+    "856259": [
+        "Transverse momentum dependence of meson suppression $\\eta$ suppression in Au+Au collisions at $\\sqrt{s_{NN}}$ = 200 GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.82.011902", 
+        null, 
+        "1005.4916", 
+        null, 
+        null, 
+        []
+    ], 
+    "857187": [
+        "High $p_T$ direct photon and $\\pi^0$ triggered azimuthal jet correlations and measurement of $k_T$ for isolated direct photons in $p+p$ collisions at $sqrt{s}=200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevD.82.072001", 
+        null, 
+        "1006.1347", 
+        "ins857187", 
+        null, 
+        []
+    ], 
+    "858845": [
+        "Azimuthal anisotropy of neutral pion production in Au+Au collisions at $\\sqrt(s_NN)$ = 200 GeV: Path-length dependence of jet quenching and the role of initial geometry", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.105.142301", 
+        null, 
+        "1006.3740", 
+        null, 
+        null, 
+        []
+    ], 
+    "870935": [
+        "Measurement of Transverse Single-Spin Asymmetries for $J/\\psi$ Production in Polarized $p+p$ Collisions at $\\sqrt{s} = 200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevD.82.112008", 
+        "1294662", 
+        "1009.4864", 
+        null, 
+        null, 
+        []
+    ]
+}

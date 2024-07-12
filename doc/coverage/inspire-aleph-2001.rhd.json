@@ -1,0 +1,123 @@
+{
+    "531853": [
+        "Investigation of inclusive CP asymmetries in B0 decays", 
+        "ALEPH", 
+        "10.1007/s100520100644", 
+        "449263", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-105"
+        ]
+    ], 
+    "534887": [
+        "Measurements of BR (b ---> tau- anti-nu(tau) X) and BR (b ---> tau- anti-nu(tau) D*+- X) and upper limits on BR (B- ---> tau- anti-nu(tau)) and BR (b---> s nu anti-nu)", 
+        "ALEPH", 
+        "10.1007/s100520100612", 
+        "468150", 
+        "hep-ex/0010022", 
+        "ins534887", 
+        null, 
+        [
+            "CERN-EP-2000-126"
+        ]
+    ], 
+    "535620": [
+        "Searches for neutral Higgs bosons in e+ e- collisions at center-of-mass energies from 192-GeV to 202-GeV", 
+        "ALEPH", 
+        "10.1016/S0370-2693(00)01364-2", 
+        "471340", 
+        "hep-ex/0010062", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-131"
+        ]
+    ], 
+    "536138": [
+        "Search for R-parity violating decays of supersymmetric particles in $e^{+} e^{-}$ collisions at center-of-mass energies from 189-GeV to 202-GeV", 
+        "ALEPH", 
+        "10.1007/s100520100633", 
+        "473531", 
+        "hep-ex/0011008", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-132"
+        ]
+    ], 
+    "536904": [
+        "Search for supersymmetric particles in $e^{+} e^{-}$ collisions at $\\sqrt{s}$ up to 202-GeV and mass limit for the lightest neutralino", 
+        "ALEPH", 
+        "10.1016/S0370-2693(01)00015-6", 
+        "531873", 
+        "hep-ex/0011047", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-139"
+        ]
+    ], 
+    "555574": [
+        "Measurement of triple gauge boson couplings at LEP energies up to 189-GeV", 
+        "ALEPH", 
+        "10.1007/s100520100730", 
+        "494742", 
+        "hep-ex/0104034", 
+        "ins555574", 
+        null, 
+        [
+            "CERN-EP-2001-022", 
+            "SLAC-PUB-9520"
+        ]
+    ], 
+    "555653": [
+        "Measurement of the tau polarization at LEP", 
+        "ALEPH", 
+        "10.1007/s100520100689", 
+        "494445", 
+        "hep-ex/0104038", 
+        "ins555653", 
+        null, 
+        [
+            "CERN-EP-2001-027"
+        ]
+    ], 
+    "558327": [
+        "Study of the fragmentation of b quarks into B mesons at the Z peak", 
+        "ALEPH", 
+        "10.1016/S0370-2693(01)00690-6", 
+        "503786", 
+        "hep-ex/0106051", 
+        "ins558327", 
+        null, 
+        [
+            "CERN-EP-2001-039"
+        ]
+    ], 
+    "558372": [
+        "Measurement of the Michel parameters and the nu/tau helicity in tau lepton decays", 
+        "ALEPH", 
+        "10.1007/s100520100813", 
+        "500339", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-2001-035"
+        ]
+    ], 
+    "559836": [
+        "Measurement of A**b(FB) using inclusive b hadron decays", 
+        "ALEPH", 
+        "10.1007/s100520100812", 
+        "507784", 
+        "hep-ex/0107033", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2001-047"
+        ]
+    ]
+}

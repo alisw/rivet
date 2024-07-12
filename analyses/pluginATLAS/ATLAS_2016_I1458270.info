@@ -4,10 +4,13 @@ Summary: 0-lepton SUSY search with 3.2/fb of 13 TeV $pp$ data
 Experiment: ATLAS
 Collider: LHC
 InspireID: 1458270
-Status: VALIDATED
+Status: VALIDATED, UNOFFICIAL
+Reentrant: true
 Authors:
  - Andy Buckley <andy.buckley@cern.ch>
+ - Louie Corpe <l.corpe@cern.ch>
 References:
+ - ATLAS-SUSY-2015-06
  - 'Eur.Phys.J. C76 (2016) no.7, 392'
  - 'DOI:10.1140/epjc/s10052-016-4184-8'
  - 'arXiv:1605.03814'
@@ -23,7 +26,7 @@ NeedCrossSection: no
 Beams: [p+, p+]
 Energies: [13000]
 Description:
-  'ATLAS 0-lepton SUSY search using 3.2/fb of LHC $pp$ data at 13\;\TeV, recorded in
+  'ATLAS 0-lepton SUSY search using 3.2/fb of LHC $pp$ data at 13~TeV, recorded in
    2015. The event selection is via signal regions requiring from 2-6 high-energy jets,
    and significant missing transverse energy.
    Detailed info:
@@ -32,7 +35,7 @@ BibKey: Aaboud:2016zdn
 BibTeX: '@article{Aaboud:2016zdn,
       author         = "Aaboud, Morad and others",
       title          = "{Search for squarks and gluinos in final states with jets
-                        and missing transverse momentum at $\sqrt{s} = 13\;\TeV$ with the ATLAS detector}",
+                        and missing transverse momentum at $\sqrt{s} = 13~TeV$ with the ATLAS detector}",
       collaboration  = "ATLAS",
       journal        = "Eur. Phys. J.",
       volume         = "C76",

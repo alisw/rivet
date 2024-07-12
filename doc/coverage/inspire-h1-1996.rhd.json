@@ -1,0 +1,170 @@
+{
+    "402890": [
+        "Jets and energy flow in photon - proton collisions at HERA", 
+        "H1", 
+        "10.1007/s002880050076", 
+        null, 
+        "hep-ex/9511012", 
+        "ins402890", 
+        null, 
+        [
+            "DESY-95-219"
+        ]
+    ], 
+    "403048": [
+        "A Search for leptoquarks at HERA", 
+        "H1", 
+        "10.1016/0370-2693(95)01601-5", 
+        null, 
+        "hep-ex/9512001", 
+        null, 
+        null, 
+        [
+            "DESY-95-233"
+        ]
+    ], 
+    "415281": [
+        "Elastic photoproduction of rho0 mesons at HERA", 
+        "H1", 
+        "10.1016/0550-3213(96)00045-4", 
+        null, 
+        "hep-ex/9601004", 
+        "ins415281", 
+        null, 
+        [
+            "DESY-95-251"
+        ]
+    ], 
+    "415706": [
+        "Energy flow in the hadronic final state of diffractive and nondiffractive deep inelastic scattering at HERA", 
+        "H1", 
+        "10.1007/s002880050135", 
+        null, 
+        "hep-ex/9602001", 
+        null, 
+        null, 
+        [
+            "DESY-96-014"
+        ]
+    ], 
+    "416228": [
+        "Elastic electroproduction of $\\rho^0$ and $J/\\psi$ mesons at large Q$^2$ at HERA", 
+        "H1", 
+        "10.1016/0550-3213(96)00192-7", 
+        null, 
+        "hep-ex/9602007", 
+        "ins416228", 
+        null, 
+        [
+            "DESY-96-023"
+        ]
+    ], 
+    "416819": [
+        "A Measurement and QCD analysis of the proton structure function f2 (x, q**2) at HERA", 
+        "H1", 
+        "10.1016/0550-3213(96)00211-8", 
+        null, 
+        "hep-ex/9603004", 
+        "ins416819", 
+        null, 
+        [
+            "DESY-96-039"
+        ]
+    ], 
+    "416868": [
+        "Elastic and inelastic photoproduction of $J/\\psi$ mesons at HERA", 
+        "H1", 
+        "10.1016/0550-3213(96)00274-X", 
+        null, 
+        "hep-ex/9603005", 
+        "ins416868", 
+        null, 
+        [
+            "DESY-96-037"
+        ]
+    ], 
+    "417155": [
+        "Measurement of the q**2 dependence of the charged and neutral current cross-sections in e+- p scattering at HERA", 
+        "H1", 
+        "10.1016/0370-2693(96)00545-X", 
+        null, 
+        "hep-ex/9603009", 
+        "ins417155", 
+        null, 
+        [
+            "DESY-96-046"
+        ]
+    ], 
+    "417960": [
+        "Photoproduction of D*+- mesons in electron - proton collisions at HERA", 
+        "H1", 
+        "10.1016/0550-3213(96)00275-1", 
+        null, 
+        "hep-ex/9604005", 
+        "ins417960", 
+        null, 
+        [
+            "DESY-96-055"
+        ]
+    ], 
+    "417985": [
+        "A Search for squarks of Rp violating SUSY at HERA", 
+        "H1", 
+        "10.1007/s002880050165", 
+        null, 
+        "hep-ex/9604006", 
+        null, 
+        null, 
+        [
+            "DESY-96-056"
+        ]
+    ], 
+    "418356": [
+        "A Search for selectrons and squarks at HERA", 
+        "H1", 
+        "10.1016/0370-2693(96)00640-5", 
+        null, 
+        "hep-ex/9605002", 
+        null, 
+        null, 
+        [
+            "DESY-96-082"
+        ]
+    ], 
+    "421030": [
+        "Strangeness production in deep inelastic positron - proton scattering at HERA", 
+        "H1", 
+        "10.1016/S0550-3213(96)00503-2", 
+        null, 
+        "hep-ex/9607010", 
+        "ins421030", 
+        null, 
+        [
+            "DESY-96-122"
+        ]
+    ], 
+    "421105": [
+        "Inclusive D0 and D*+- production in deep inelastic e p scattering at HERA", 
+        "H1", 
+        "10.1007/s002880050281", 
+        null, 
+        "hep-ex/9607012", 
+        "ins421105", 
+        null, 
+        [
+            "DESY-96-138"
+        ]
+    ], 
+    "422230": [
+        "Charged particle multiplicities in deep inelastic scattering at HERA", 
+        "H1", 
+        "10.1007/s002880050280", 
+        null, 
+        "hep-ex/9608011", 
+        "ins422230", 
+        null, 
+        [
+            "DESY-96-160"
+        ]
+    ]
+}

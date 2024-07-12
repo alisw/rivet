@@ -1,0 +1,35 @@
+Name: SND_2000_I527752
+Year: 2000
+Summary: Cross section for $e^+e^-\to\omega\pi^0\to\pi^0\pi^0\gamma$ for energies below 1.4 GeV
+Experiment: SND
+Collider: VEPP-2M
+InspireID: 527752
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B486 (2000) 29-34, 2000 
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+Description:
+  'Measurement of the cross section for $e^+e^-\to\omega\pi^0\to\pi^0\pi^0\gamma$ for energies below 1.4 GeV.'
+Keywords:
+Keywords: 
+BibKey: Achasov:2000wy
+BibTeX: '@article{Achasov:2000wy,
+      author         = "Achasov, M. N. and others",
+      title          = "{The Process e+ e- ---&gt; omega pi0 ---&gt; pi0 pi0 gamma up
+                        to 1.4-GeV}",
+      journal        = "Phys. Lett.",
+      volume         = "B486",
+      year           = "2000",
+      pages          = "29-34",
+      doi            = "10.1016/S0370-2693(00)00706-1",
+      eprint         = "hep-ex/0005032",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = HEP-EX/0005032;%%"
+}'

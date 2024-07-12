@@ -1,0 +1,34 @@
+Name: BABAR_2012_I1086164
+Year: 2012
+Summary: Cross section for $e^+e^-\to 2\pi^+2\pi^-$ between 0.6 and 4.5 GeV
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 1086164
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+- Phys.Rev. D85 (2012) 112009, 2012
+RunInfo: e+ e- to hadrons
+NeedCrossSection: yes
+Beams: [e+, e-]
+Description:
+  'Measurement of the cross section for $e^+e^-\to 2\pi^+2\pi^-$ using ISR by BaBar between 0.6 and 4.5 GeV.'
+Keywords: 
+BibKey: Lees:2012cr
+BibTeX: '@article{Lees:2012cr,
+      author         = "Lees, J. P. and others",
+      title          = "{Initial-State Radiation Measurement of the $e^+e^- -&gt;
+                        \pi^+\pi^-\pi^+\pi^-$ Cross Section}",
+      collaboration  = "BaBar",
+      journal        = "Phys. Rev.",
+      volume         = "D85",
+      year           = "2012",
+      pages          = "112009",
+      doi            = "10.1103/PhysRevD.85.112009",
+      eprint         = "1201.5677",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "SLAC-PUB-14857, BABAR-PUB-11-016",
+      SLACcitation   = "%%CITATION = ARXIV:1201.5677;%%"
+}'

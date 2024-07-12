@@ -6,6 +6,7 @@ Collider: LHC
 SpireID:
 InspireID: 1193338
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Sercan Sen <ssen@cern.ch>
 References:
@@ -23,7 +24,7 @@ Description:
     $3 < |\eta| < 5$), in collisions where at least one proton loses more than
     $\xi > 5 \cdot 10^{-6}$ of its longitudinal momentum, and (ii) the central
     tracker ($|\eta| < 2.4$), in collisions containing an interaction vertex
-    with more than 1, 2, or 3 tracks with $p_\perp > 200\;\MeV/c$.'
+    with more than 1, 2, or 3 tracks with $p_\perp > 200~\MeV/c$.'
 BibKey: :2012
 BibTeX: '@article{:2012,
       author         = "Chatrchyan, Serguei and others",

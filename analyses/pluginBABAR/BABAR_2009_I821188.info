@@ -1,0 +1,39 @@
+Name: BABAR_2009_I821188
+Year: 2009
+Summary: Mass distributions in $B^0\to K^0_S\pi^+\pi^-$ decays
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 821188
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 80 (2009) 112001
+RunInfo: Any process producing B0, originally Upsilon(4S) decay
+Description:
+'Measurement of mass distributions in $B^0\to K^0_S\pi^+\pi^-$ decays. The
+data were read from the plots in the paper and may not be corrected for
+efficiency/acceptance, however the backgrounds shown in the paper have been
+subtracted.'
+ValidationInfo:
+  'Herwig7 events using EvtGen for decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BaBar:2009jov
+BibTeX: '@article{BaBar:2009jov,
+    author = "Aubert, Bernard and others",
+    collaboration = "BaBar",
+    title = "{Time-dependent amplitude analysis of B0 ---\ensuremath{>} K0(S) pi+ pi-}",
+    eprint = "0905.3615",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "SLAC-PUB-13640, BABAR-PUB-09-001",
+    doi = "10.1103/PhysRevD.80.112001",
+    journal = "Phys. Rev. D",
+    volume = "80",
+    pages = "112001",
+    year = "2009"
+}
+'

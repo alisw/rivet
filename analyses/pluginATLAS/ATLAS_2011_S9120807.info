@@ -6,9 +6,11 @@ Collider: LHC 7TeV
 SpiresID: 9120807
 InspireID: 916832
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Giovanni Marchiori <giovanni.marchiori@cern.ch>
 References:
+ - ATLAS-STDM-2011-05
  - arXiv:1107.0581 [hep-ex]
 RunInfo:
   Inclusive diphoton + $X$ events at $\sqrt{s} = 7$~TeV.
@@ -32,3 +34,8 @@ BibTeX: '@Article{Aad:2011mh,
       archivePrefix  = "arXiv",
       primaryClass   = "hep-ex",
 }'
+
+ReleaseTests:
+ - $A LHC-7-DiPhoton-GammaGamma
+ - $A-2 LHC-7-DiPhoton-GammaJet
+

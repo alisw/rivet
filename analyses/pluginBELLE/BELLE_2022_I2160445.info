@@ -1,0 +1,33 @@
+Name: BELLE_2022_I2160445
+Year: 2022
+Summary: Mass distributions in $\Lambda_c^+\to p K^0_S K^0_S$ and $\Lambda_c^+\to p K^0_S \eta$
+Experiment: BELLE
+Collider: KEKB
+InspireID: 2160445
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - arXiv:2210.01995 [hep-ex]
+Description:
+  'Measurement of the mass distributions in the decays $\Lambda_c^+\to p K^0_S K^0_S$ and $\Lambda_c^+\to p K^0_S \eta$ by BELLE. The data were read from the plots in the paper but have been corrected for efficiency/acceptance.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: AtBelle:2022kls
+BibTeX: '@article{AtBelle:2022kls,
+    author = "Belle, At",
+    collaboration = "Belle",
+    title = "{Measurement of branching fractions of $\Lambda_c^+\to{}pK_S^0K_S^0$ and $\Lambda_c^+\to{}pK_S^0\eta$ at Belle}",
+    eprint = "2210.01995",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "Belle Preprint 2022-24, KEK Preprint 2022-33, Univ. Cincinnati
+  preprint UCHEP-22-05",
+    month = "10",
+    year = "2022"
+}
+'

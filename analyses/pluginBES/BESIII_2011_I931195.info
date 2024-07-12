@@ -1,0 +1,40 @@
+Name: BESIII_2011_I931195
+Year: 2011
+Summary: Analysis of $\psi(2S)\to\gamma\chi_{c(0,2)}$ decays using $\chi_{c(0,2)}\to \pi^+\pi^-/K^+K^-$
+Experiment: BESIII
+Collider: BEPC
+InspireID: 931195
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 84 (2011) 092006
+RunInfo: e+e- > psi(2S) 
+Beams: [e-, e+]
+Energies: [3.686]
+Description:
+  'Analysis of the angular distribution of the photons and mesons  produced in
+   $e^+e^-\to \psi(2S) \to \gamma\chi_{c(0,2)}$ followed by $\chi_{c(0,2)}\to \pi^+\pi^-/K^+K^-$.
+   Gives information about the decay and is useful for testing correlations in charmonium decays.
+   N.B. the distributions were read from the figures in the paper and are not corrected and should only be used qualatively, however the $x$ and $y$ and multipole results are fully corrected.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: 
+BibTeX: '@article{BESIII:2011nst,
+    author = "Ablikim, M. and others",
+    collaboration = "BESIII",
+    title = "{Higher-order multipole amplitude measurement in $\psi(2S)\to\gamma\chi_{c2}$}",
+    eprint = "1110.1742",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevD.84.092006",
+    journal = "Phys. Rev. D",
+    volume = "84",
+    pages = "092006",
+    year = "2011"
+}
+'

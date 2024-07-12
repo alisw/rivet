@@ -1,0 +1,229 @@
+{
+    "341556": [
+        "Measurement of prompt photon production in hadronic Z decays", 
+        "ALEPH", 
+        "10.1007/BF01555735", 
+        "241432", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-92-143"
+        ]
+    ], 
+    "341723": [
+        "Measurement of the b ---> tau- anti-tau-neutrino X branching ratio", 
+        "ALEPH", 
+        "10.1016/0370-2693(93)91853-F", 
+        "243305", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-92-184"
+        ]
+    ], 
+    "343700": [
+        "Search for particles with unexpected mass and charge in Z decays", 
+        "ALEPH", 
+        "10.1016/0370-2693(93)90066-Q", 
+        "244602", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-92-210"
+        ]
+    ], 
+    "353690": [
+        "Measurement of the strong coupling constant using tau decays", 
+        "ALEPH", 
+        "10.1016/0370-2693(93)90212-Z", 
+        "247112", 
+        null, 
+        null, 
+        null, 
+        [
+            "LAL-93-01", 
+            "CERN-PPE-93-41"
+        ]
+    ], 
+    "354144": [
+        "Measurement of the anti-B0 and B- meson lifetimes", 
+        "ALEPH", 
+        "10.1016/0370-2693(93)90211-Y", 
+        "247117", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-42"
+        ]
+    ], 
+    "354146": [
+        "Measurement of the tau polarization at the Z resonance", 
+        "ALEPH", 
+        "10.1007/BF01498618", 
+        "247108", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-39", 
+            "FSU-SCRI-93-117"
+        ]
+    ], 
+    "354297": [
+        "Search for contact interactions in the reactions $e^{+} e^{-} \\to \\ell^+ \\ell^-$ and $e^{+} e^{-} \\to \\gamma \\gamma$", 
+        "ALEPH", 
+        "10.1007/BF01566686", 
+        "248135", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-52"
+        ]
+    ], 
+    "354298": [
+        "Update of electroweak parameters from $Z$ decays", 
+        "ALEPH", 
+        "10.1007/BF01650432", 
+        "247106", 
+        null, 
+        "ins354298", 
+        null, 
+        [
+            "CERN-PPE-93-40", 
+            "FSU-SCRI-93-135"
+        ]
+    ], 
+    "356730": [
+        "Search for high mass photon pairs in e+ e- ---> f anti-f gamma gamma (f = e, mu, tau, neutrino, q) at LEP", 
+        "ALEPH", 
+        "10.1016/0370-2693(93)91308-A", 
+        "249293", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-75"
+        ]
+    ], 
+    "356731": [
+        "An Experimental study of gamma gamma ---> hadrons at LEP", 
+        "ALEPH", 
+        "10.1016/0370-2693(93)90026-E", 
+        "250663", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-94", 
+            "FSU-SCRI-93-141"
+        ]
+    ], 
+    "357422": [
+        "Search for the Standard Model Higgs boson", 
+        "ALEPH", 
+        "10.1016/0370-2693(93)91227-E", 
+        "251277", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-110", 
+            "FSU-SCRI-93-120"
+        ]
+    ], 
+    "357423": [
+        "Search for a nonminimal Higgs boson produced in the reaction $e^{+} e^{-} \\to$ h $Z^{*}$", 
+        "ALEPH", 
+        "10.1016/0370-2693(93)91228-F", 
+        "251279", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-111", 
+            "FSU-SCRI-93-121"
+        ]
+    ], 
+    "357424": [
+        "Measurement of the b hadron lifetime with the dipole method", 
+        "ALEPH", 
+        "10.1016/0370-2693(93)91265-O", 
+        "251565", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-116", 
+            "FSU-SCRI-93-134"
+        ]
+    ], 
+    "357751": [
+        "Observation of the time dependence of B(d)0 - anti-B(d)0 mixing", 
+        "ALEPH", 
+        "10.1016/0370-2693(93)90025-D", 
+        "251278", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-99", 
+            "FSU-SCRI-93-122"
+        ]
+    ], 
+    "357822": [
+        "First measurement of the B(S) meson mass", 
+        "ALEPH", 
+        "10.1016/0370-2693(93)90588-9", 
+        "250666", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-97"
+        ]
+    ], 
+    "357937": [
+        "A Precise measurement of Gamma ($Z \\to b \\bar{b}$) / Gamma ($Z \\to$ hadrons)", 
+        "ALEPH", 
+        "10.1016/0370-2693(93)90028-G", 
+        "251363", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-108", 
+            "FSU-SCRI-93-124"
+        ]
+    ], 
+    "357938": [
+        "Measurement of the ratio Gamma (b anti-b) / Gamma (hadron) using event shape variables", 
+        "ALEPH", 
+        "10.1016/0370-2693(93)90029-H", 
+        "251563", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-113", 
+            "FSU-SCRI-93-125"
+        ]
+    ], 
+    "357941": [
+        "A Direct measurement of the invisible width of the Z from single photon counting", 
+        "ALEPH", 
+        "10.1016/0370-2693(93)90027-F", 
+        "251845", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-120", 
+            "FSU-SCRI-93-123"
+        ]
+    ]
+}

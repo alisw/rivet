@@ -4,7 +4,7 @@
 namespace Rivet {
 
 
-  int MissingMomentum::compare(const Projection& p) const {
+  CmpState MissingMomentum::compare(const Projection& p) const {
     return mkNamedPCmp(p, "VisibleFS");
   }
 

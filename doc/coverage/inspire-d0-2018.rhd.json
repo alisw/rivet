@@ -1,0 +1,62 @@
+{
+    "1623561": [
+        "Combined Forward-Backward Asymmetry Measurements in Top-Antitop Quark Production at the Tevatron", 
+        "CDF", 
+        "10.1103/PhysRevLett.120.042001", 
+        "2284571", 
+        "1709.04894", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-17-379-E"
+        ]
+    ], 
+    "1629966": [
+        "Measurement of the Effective Weak Mixing Angle in $p\\bar{p}\\rightarrow Z/\\gamma^* \\rightarrow \\ell^+\\ell^-$ Events", 
+        "D0", 
+        "10.1103/PhysRevLett.120.241802", 
+        "2288650", 
+        "1710.03951", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-17-434-E"
+        ]
+    ], 
+    "1645421": [
+        "Study of the ${X^\\pm(5568)}$ state with semileptonic decays of the ${B_s^0}$ meson", 
+        "D0", 
+        "10.1103/PhysRevD.97.092004", 
+        "2299211", 
+        "1712.10176", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-17-612-E"
+        ]
+    ], 
+    "1649135": [
+        "Tevatron Run II combination of the effective leptonic electroweak mixing angle", 
+        "CDF", 
+        "10.1103/PhysRevD.97.112007", 
+        "2301436", 
+        "1801.06283", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-18-015-E"
+        ]
+    ], 
+    "1680453": [
+        "Evidence for $Z_c^{\\pm}(3900)$ in semi-inclusive decays of $b$-flavored hadrons", 
+        "D0", 
+        "10.1103/PhysRevD.98.052010", 
+        "2628420", 
+        "1807.00183", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-18-303-E"
+        ]
+    ]
+}

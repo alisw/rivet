@@ -26,8 +26,8 @@ LegendYPos=0.5
 # END PLOT
 
 # BEGIN PLOT /MC_IDENTIFIED/Mults.*PIDs
-XLabel=$|\text{PID}|$
-YLabel=$\langle N_\text{PID} \rangle$
+XLabel=$|\mathrm{PID}|$
+YLabel=$\langle N_\mathrm{PID} \rangle$
 LogY=1
 # END PLOT
 
@@ -40,5 +40,5 @@ Title=Average per-event multiplicity of stable particle IDs
 # END PLOT
 
 # BEGIN PLOT /MC_IDENTIFIED/MultsAllPIDs
-Title=Average per-event multiplicity of \emph{all} (unphysical) particle IDs
+Title=Average per-event multiplicity of $\mathit{all}$ (unphysical) particle IDs
 # END PLOT

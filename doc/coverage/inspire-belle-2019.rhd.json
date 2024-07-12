@@ -1,0 +1,322 @@
+{
+    "1681811": [
+        "Measurements of isospin asymmetry and difference of direct $CP$ asymmetries in inclusive $B \\to X_s \\gamma$ decays", 
+        "Belle", 
+        "10.1103/PhysRevD.99.032012", 
+        null, 
+        "1807.04236", 
+        null, 
+        null, 
+        [
+            "BELLE-CONF-1801", 
+            "Belle Preprint 2018-13", 
+            "KEK Preprint 2018-19"
+        ]
+    ], 
+    "1684192": [
+        "Observation of $B^{+} \\rightarrow p\\bar{\\Lambda} K^+ K^-$ and $B^{+} \\rightarrow \\bar{p}\\Lambda K^+ K^+$", 
+        "Belle", 
+        "10.1103/PhysRevD.99.032003", 
+        null, 
+        "1807.10503", 
+        null, 
+        null, 
+        [
+            "Belle-preprint-2018-15", 
+            "KEK-Preprint-2018-21"
+        ]
+    ], 
+    "1687566": [
+        "Observation of Transverse $\\Lambda/\\bar{\\Lambda}$ Hyperon Polarization in $e^+e^-$ Annihilation at Belle", 
+        "Belle", 
+        "10.1103/PhysRevLett.122.042001", 
+        null, 
+        "1808.05000", 
+        null, 
+        null, 
+        [
+            "Belle Preprint 2018-17; KEK Preprint 2018-23"
+        ]
+    ], 
+    "1692393": [
+        "The Belle II Physics Book", 
+        "Belle-II", 
+        "10.1093/ptep/ptz106", 
+        "2644278", 
+        "1808.10567", 
+        null, 
+        null, 
+        [
+            "KEK Preprint 2018-27", 
+            "BELLE2-PUB-PH-2018-001", 
+            "FERMILAB-PUB-18-398-T", 
+            "JLAB-THY-18-2780", 
+            "INT-PUB-18-047", 
+            "UWThPh 2018-26"
+        ]
+    ], 
+    "1693396": [
+        "Measurement of the CKM matrix element $|V_{cb}|$ from $B^0\\to D^{*-}\\ell^ {+} \\nu_\\ell$ at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.100.052007", 
+        null, 
+        "1809.03290", 
+        null, 
+        null, 
+        []
+    ], 
+    "1694309": [
+        "Search for a light $CP$-odd Higgs boson and low-mass dark matter at the Belle experiment", 
+        "Belle", 
+        "10.1103/PhysRevLett.122.011801", 
+        null, 
+        "1809.05222", 
+        null, 
+        null, 
+        [
+            "Belle Preprint 2018-21", 
+            "KEK Preprint 2018-30"
+        ]
+    ], 
+    "1697367": [
+        "Measurement of time-dependent $CP$ violation in $B^0 \\to K^0_S \\pi^0 \\pi^0$ decays", 
+        "Belle", 
+        "10.1103/PhysRevD.99.011102", 
+        null, 
+        "1810.03336", 
+        null, 
+        null, 
+        []
+    ], 
+    "1698390": [
+        "Observation of $\\Xi(1620)^0$ and evidence for $\\Xi(1690)^0$ in $\\Xi_c^+ \\rightarrow \\Xi^-\\pi^+\\pi^+$ decays", 
+        "Belle", 
+        "10.1103/PhysRevLett.122.072501", 
+        null, 
+        "1810.06181", 
+        null, 
+        null, 
+        []
+    ], 
+    "1698419": [
+        "Search for $CP$ violation with kinematic asymmetries in the $D^0 \\to K^+ K^- \\pi^+ \\pi^-$ decay", 
+        "Belle", 
+        "10.1103/PhysRevD.99.011104", 
+        null, 
+        "1810.06457", 
+        null, 
+        null, 
+        [
+            "Belle Preprint 2018-23", 
+            "KEK Preprint 2018-66"
+        ]
+    ], 
+    "1705069": [
+        "First Measurements of Absolute Branching Fractions of the $\\Xi_c^0$ Baryon at Belle", 
+        "Belle", 
+        "10.1103/PhysRevLett.122.082001", 
+        null, 
+        "1811.09738", 
+        null, 
+        null, 
+        [
+            "Belle Preprint # 2018-25", 
+            "KEK Preprint #: 2018-76"
+        ]
+    ], 
+    "1711227": [
+        "Measurements of branching fraction and direct $CP$ asymmetry in $B^{\\pm}\\to K^{0}_{S}K^{0}_{S}K^{\\pm}$ and a search for $B^{\\pm}\\to K^{0}_{S}K^{0}_{S}\\pi^{\\pm}$", 
+        "Belle", 
+        "10.1103/PhysRevD.99.031102", 
+        null, 
+        "1812.10221", 
+        null, 
+        null, 
+        []
+    ], 
+    "1716258": [
+        "Search for the $B \\to Y(4260) K, ~Y(4260) \\to J/\\psi \\pi^+\\pi^-$ decays", 
+        "Belle", 
+        "10.1103/PhysRevD.99.071102", 
+        null, 
+        "1901.06470", 
+        null, 
+        null, 
+        [
+            "Belle Preprint # 2019-01 KEK Preprint #: 2018-85"
+        ]
+    ], 
+    "1718551": [
+        "Transverse momentum dependent production cross sections of charged pions, kaons and protons produced in inclusive $e^+e^-$ annihilation at $\\sqrt{s}=$ 10.58 GeV", 
+        "Belle", 
+        "10.1103/PhysRevD.99.112006", 
+        null, 
+        "1902.01552", 
+        null, 
+        null, 
+        [
+            "KEK preprint 18-86", 
+            "Belle preprint 19-02"
+        ]
+    ], 
+    "1725161": [
+        "Evidence for $B^+ \\rightarrow h_c K^+$ and observation of $\\eta_c(2S) \\to p \\bar{p} \\pi^+ \\pi^-$", 
+        "Belle", 
+        "10.1103/PhysRevD.100.012001", 
+        null, 
+        "1903.06414", 
+        null, 
+        null, 
+        [
+            "Belle Preprint 2019-03; KEK Preprint 2018-89"
+        ]
+    ], 
+    "1729311": [
+        "Evidence for the decay $B^0\\to p\\bar{p}\\pi^0$", 
+        "Belle", 
+        "10.1103/PhysRevD.99.091104", 
+        null, 
+        "1904.05713", 
+        null, 
+        null, 
+        [
+            "Belle Preprint 2019-04", 
+            "KEK Preprint 2018-91"
+        ]
+    ], 
+    "1729723": [
+        "Measurement of branching fraction and final-state asymmetry for the $\\bar{B}^{0}\\to K^{0}_{S}K^{\\mp}\\pi^{\\pm}$ decay", 
+        "Belle", 
+        "10.1103/PhysRevD.100.011101", 
+        null, 
+        "1904.06835", 
+        null, 
+        null, 
+        [
+            "Belle Preprint 2019-06", 
+            "KEK Preprint 2019-4"
+        ]
+    ], 
+    "1729728": [
+        "Search for $X(3872)$ and $X(3915)$ decay into $\\chi_{c1} \\pi^0$ in $B$ decays at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.99.111101", 
+        null, 
+        "1904.07015", 
+        null, 
+        null, 
+        [
+            "Belle Preprint 2019-07", 
+            "KEK Preprint 2019-05"
+        ]
+    ], 
+    "1731902": [
+        "First measurements of absolute branching fractions of the $\\Xi_c^+$ baryon at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.100.031101", 
+        null, 
+        "1904.12093", 
+        null, 
+        null, 
+        [
+            "KEK Preprint # 2019-3; Belle Preprint # 2019-05", 
+            "KEK-Preprint-2019-3", 
+            "Belle-Preprint-2019-05"
+        ]
+    ], 
+    "1737255": [
+        "Search for $B^0 \\to X(3872) \\gamma$", 
+        "Belle", 
+        "10.1103/PhysRevD.100.012002", 
+        null, 
+        "1905.11718", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT 2019-08", 
+            "KEK-PREPRINT 2019-6", 
+            "Belle Preprint 2019-08", 
+            "KEK Preprint 2019-6"
+        ]
+    ], 
+    "1737730": [
+        "Search for $\\Omega(2012)\\to K\\Xi(1530) \\to K\\pi\\Xi$ at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.100.032006", 
+        null, 
+        "1906.00194", 
+        null, 
+        null, 
+        [
+            "Belle Preprint # 2019-10", 
+            "and KEK Preprint #: 2019-8", 
+            "Belle Preprint-2019-10", 
+            "KEK Preprint-2019-8"
+        ]
+    ], 
+    "1750882": [
+        "First measurement of the CKM angle $\\phi_3$ with $B^{\\pm}\\to D(K_{\\rm S}^0\\pi^+\\pi^-\\pi^0)K^{\\pm}$ decays", 
+        "Belle", 
+        "10.1007/JHEP10(2019)178", 
+        null, 
+        "1908.09499", 
+        null, 
+        null, 
+        [
+            "Belle Preprint 2019-14", 
+            "KEK Preprint 2019-19"
+        ]
+    ], 
+    "1751071": [
+        "Observation of $ \\tau^- \\rightarrow \\pi^- \\nu_{\\tau} e^+ e^- $ and search for $\\tau^- \\rightarrow \\pi^- \\nu_{\\tau} \\mu^+ \\mu^-$", 
+        "Belle", 
+        "10.1103/PhysRevD.100.071101", 
+        null, 
+        "1908.09353", 
+        null, 
+        null, 
+        [
+            "Belle Preprint # 2019-12", 
+            "and KEK Preprint #: 2019-15"
+        ]
+    ], 
+    "1752523": [
+        "Azimuthal asymmetries of back-to-back $\\pi^\\pm-(\\pi^0,\\eta,\\pi^\\pm)$ pairs in $e^+e^-$ annihilation", 
+        "Belle", 
+        "10.1103/PhysRevD.100.092008", 
+        null, 
+        "1909.01857", 
+        null, 
+        null, 
+        [
+            "Belle Preprint # 2019-15", 
+            "KEK Preprint #: 2019-21"
+        ]
+    ], 
+    "1762826": [
+        "Observation of a vector charmoniumlike state in $e^+e^- \\to D^+_sD_{s1}(2536)^-+c.c.$", 
+        "Belle", 
+        "10.1103/PhysRevD.100.111103", 
+        null, 
+        "1911.00671", 
+        null, 
+        null, 
+        [
+            "Belle Preprint # 2019-20", 
+            "and KEK Preprint #: 2019-42"
+        ]
+    ], 
+    "1767633": [
+        "Measurements of the Branching Fractions ${\\cal B}(B^{-} \\to \\bar{\\Lambda}_{c}^{-} \\Xi_{c}^{'0})$, ${\\cal B}(B^{-} \\to \\bar{\\Lambda}_{c}^{-} \\Xi_{c}(2645)^{0})$ and ${\\cal B}(B^{-} \\to \\bar{\\Lambda}_{c}^{-} \\Xi_{c}(2790)^{0}) $", 
+        "Belle", 
+        "10.1103/PhysRevD.100.112010", 
+        null, 
+        "1911.12530", 
+        null, 
+        null, 
+        [
+            "Belle Preprint # 2019-19", 
+            "and KEK Preprint # 2019-41"
+        ]
+    ]
+}

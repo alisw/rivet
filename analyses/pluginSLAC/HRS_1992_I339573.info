@@ -1,0 +1,32 @@
+Name: HRS_1992_I339573
+Year: 1992
+Summary: Spectrum for $\Lambda$ production at 29 GeV
+Experiment: HRS
+Collider: PEP
+InspireID: 339573
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D45 (1992) 3949-3954, 1992
+RunInfo: 
+  Hadronic e+e- events at $\sqrt{s} = 29.$ GeV
+NumEvents: 1000000
+Beams: [e+, e-]
+Energies: [29.]
+Description:
+  'Spectrum for the production of $\Lambda$ baryons at 29 GeV measured by the HRS experiment.'
+Keywords: []
+BibKey: Geld:1992si
+BibTeX: '@article{Geld:1992si,
+      author         = "Geld, T. L. and others",
+      title          = "{Study of inclusive Lambda production in e+ e-
+                        annihilations at 29-GeV}",
+      collaboration  = "HRS",
+      journal        = "Phys. Rev.",
+      volume         = "D45",
+      year           = "1992",
+      pages          = "3949-3954",
+      doi            = "10.1103/PhysRevD.45.3949",
+      SLACcitation   = "%%CITATION = PHRVA,D45,3949;%%"
+}'

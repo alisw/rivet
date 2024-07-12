@@ -1,0 +1,34 @@
+{
+    "455114": [
+        "Measurement of alpha(s) using NLLA + O (alpha-s**2) in e+ e- annihilation at s**(1/2) = 58-GeV", 
+        "AMY", 
+        "10.1016/S0370-2693(97)01571-2", 
+        null, 
+        null, 
+        "ins455114", 
+        null, 
+        []
+    ], 
+    "468073": [
+        "Observation of exclusive eta(c) production in two photon interactions at TRISTAN", 
+        "AMY", 
+        "10.1016/S0370-2693(98)00203-2", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-97-256"
+        ]
+    ], 
+    "482963": [
+        "An experimental study of the process e+ e- --> e+ e- mu+ mu-", 
+        "AMY", 
+        "10.1016/S0370-2693(98)01204-0", 
+        null, 
+        null, 
+        null, 
+        null, 
+        []
+    ]
+}

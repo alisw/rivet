@@ -5,7 +5,7 @@ XTwosidedTicks=1
 YTwosidedTicks=1
 #NormalizeToIntegral=1
 LegendXPos=0.4
-Title=\Large \textbf{CMS} \hspace{10em} \large $19.7\,\text{fb}^\text{$-$1}$ (8 TeV)
+Title=\textbf{CMS} \hspace{10em} $19.7\,\mathrm{fb}^{-\mathrm{1}}$ (8 TeV)
 # END PLOT
 
 # BEGIN PLOT /CMS_2016_I1473674/d05-x01-y01

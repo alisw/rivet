@@ -1,0 +1,269 @@
+{
+    "467225": [
+        "Measurements of the structure of quark and gluon jets in hadronic Z decays", 
+        "ALEPH", 
+        "10.1007/s100520000474", 
+        "345875", 
+        null, 
+        "ins467225", 
+        null, 
+        [
+            "CERN-EP-98-016", 
+            "CERN-EP-98-16"
+        ]
+    ], 
+    "498072": [
+        "Study of fermion pair production in $e^{+} e^{-}$ collisions at 130-GeV to 183-GeV", 
+        "ALEPH", 
+        "10.1007/s100529900223", 
+        "384128", 
+        "hep-ex/9904011", 
+        "ins498072", 
+        null, 
+        [
+            "CERN-EP-99-042", 
+            "CERN-EP-99-42"
+        ]
+    ], 
+    "504716": [
+        "Search for R-parity violating decays of supersymmetric particles in $e^{+} e^{-}$ collisions at center-of-mass energies near 183-GeV", 
+        "ALEPH", 
+        "10.1007/s100520000284", 
+        "394749", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-093", 
+            "CERN-EP-99-93"
+        ]
+    ], 
+    "506060": [
+        "Measurement of the Z resonance parameters at LEP", 
+        "ALEPH", 
+        "10.1007/s100520000319", 
+        "396345", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-104"
+        ]
+    ], 
+    "507422": [
+        "Study of charm production in Z decays", 
+        "ALEPH", 
+        "10.1007/s100520000421", 
+        "399993", 
+        "hep-ex/9909032", 
+        "ins507422", 
+        null, 
+        [
+            "CERN-EP-99-094"
+        ]
+    ], 
+    "507531": [
+        "Inclusive production of pi0, eta, eta-prime (958), K0(S) and lambda in two jet and three jet events from hadronic Z decays", 
+        "ALEPH", 
+        "10.1007/s100520000443", 
+        "400299", 
+        null, 
+        "ins507531", 
+        null, 
+        [
+            "CERN-EP-99-105"
+        ]
+    ], 
+    "510272": [
+        "Search for the glueball candidates f(0)(1500) and f(J)(1710) in gamma gamma collisions", 
+        "ALEPH", 
+        "10.1016/S0370-2693(99)01390-8", 
+        "408392", 
+        "hep-ex/9911022", 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-153"
+        ]
+    ], 
+    "513270": [
+        "Bose-Einstein correlations in W pair decays", 
+        "ALEPH", 
+        "10.1016/S0370-2693(00)00234-3", 
+        "419578", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-173"
+        ]
+    ], 
+    "513272": [
+        "Search for gauge mediated SUSY breaking topologies at $S^{(1/2)}$ similar to 189-GeV", 
+        "ALEPH", 
+        "10.1007/s100520050004", 
+        "419577", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-171"
+        ]
+    ], 
+    "513319": [
+        "Fermi-Dirac Correlations in lambda pairs in hadronic Z decays", 
+        "ALEPH", 
+        "10.1016/S0370-2693(00)00080-0", 
+        "421565", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-172"
+        ]
+    ], 
+    "524682": [
+        "Search for the neutral Higgs bosons of the standard model and the MSSM in e+ e- collisions at S**(1/2) = 189-GeV", 
+        "ALEPH", 
+        "10.1007/s100520000473", 
+        "427616", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-019"
+        ]
+    ], 
+    "525384": [
+        "A Study of the decay width difference in the $B^0_{s} - \\bar{B}^0_s$ system using $\\phi \\phi$ correlations", 
+        "ALEPH", 
+        "10.1016/S0370-2693(00)00750-4", 
+        "429847", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-036"
+        ]
+    ], 
+    "526166": [
+        "Measurement of the $W$ mass and width in $e^{+} e^{-}$ collisions at 189-GeV", 
+        "ALEPH", 
+        "10.1007/s100520000485", 
+        "432864", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-045"
+        ]
+    ], 
+    "527492": [
+        "Measurement of W pair production in e+ e- collisions at 189-GeV", 
+        "ALEPH", 
+        "10.1016/S0370-2693(00)00624-9", 
+        "434702", 
+        "hep-ex/0005043", 
+        "ins527492", 
+        null, 
+        [
+            "CERN-EP-2000-052"
+        ]
+    ], 
+    "530069": [
+        "Search for gamma gamma decays of a Higgs boson produced in association with a fermion pair in e+ e- collisions at LEP", 
+        "ALEPH", 
+        "10.1016/S0370-2693(00)00821-2", 
+        "445957", 
+        "hep-ex/0008004", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-083"
+        ]
+    ], 
+    "530949": [
+        "Search for a scalar top almost degenerate with the lightest neutralino in e+ e- collisions at s**(1/2) up to 202-GeV", 
+        "ALEPH", 
+        "10.1016/S0370-2693(00)00893-5", 
+        "446401", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-085"
+        ]
+    ], 
+    "530950": [
+        "Search for charged Higgs bosons in e+ e- collisions at energies up to S**(1/2) = 189-GeV", 
+        "ALEPH", 
+        "10.1016/S0370-2693(00)00822-4", 
+        "446053", 
+        "hep-ex/0008005", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-086"
+        ]
+    ], 
+    "531468": [
+        "A Measurement of the b quark mass from hadronic Z decays", 
+        "ALEPH", 
+        "10.1007/s100520000533", 
+        "447687", 
+        "hep-ex/0008013", 
+        "ins531468", 
+        null, 
+        [
+            "CERN-EP-2000-093"
+        ]
+    ], 
+    "531507": [
+        "Measurement of the $\\bar{B}^0$ and $B^{-}$ meson lifetimes", 
+        "ALEPH", 
+        "10.1016/S0370-2693(00)01093-5", 
+        "450374", 
+        "hep-ex/0008016", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-106"
+        ]
+    ], 
+    "533360": [
+        "Search for single top production in e+ e- collisions at s**(1/2) = 189-GeV - 202-GeV", 
+        "ALEPH", 
+        "10.1016/S0370-2693(00)01189-8", 
+        "450373", 
+        null, 
+        "ins533360", 
+        null, 
+        [
+            "CERN-EP-2000-102"
+        ]
+    ], 
+    "533961": [
+        "Study of the CP asymmetry of $B^0 \\to J/\\psi K^0_{S}$ decays in ALEPH", 
+        "ALEPH", 
+        "10.1016/S0370-2693(00)01091-1", 
+        "458487", 
+        "hep-ex/0009058", 
+        "ins533961", 
+        null, 
+        [
+            "CERN-EP-2000-119"
+        ]
+    ], 
+    "536902": [
+        "Observation of an excess in the search for the standard model Higgs boson at ALEPH", 
+        "ALEPH", 
+        "10.1016/S0370-2693(00)01269-7", 
+        "476830", 
+        "hep-ex/0011045", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-138"
+        ]
+    ]
+}

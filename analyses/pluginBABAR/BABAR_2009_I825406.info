@@ -1,0 +1,36 @@
+Name: BABAR_2009_I825406
+Year: 2009
+Summary: Polarization in $B^0\to a_1^+a_1^-$
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 825406
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 80 (2009) 092007
+RunInfo: Any process producing B0, originally Upsilon94S) decays
+Description:
+  'Measurement of the polarization in n $B^0\to a_1^+a_1^-$ decays'
+ValidationInfo:
+  'Herwig7 events using EvtGen for decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BaBar:2009jxz
+BibTeX: '@article{BaBar:2009jxz,
+    author = "Aubert, Bernard and others",
+    collaboration = "BaBar",
+    title = "{Observation and Polarization Measurement of B0 ---\ensuremath{>} a(1)(1260)+ a(1)(1260)- Decay}",
+    eprint = "0907.1776",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BABAR-PUB-09-011, SLAC-PUB-13709",
+    doi = "10.1103/PhysRevD.80.092007",
+    journal = "Phys. Rev. D",
+    volume = "80",
+    pages = "092007",
+    year = "2009"
+}
+'

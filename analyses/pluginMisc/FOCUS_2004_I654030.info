@@ -1,0 +1,35 @@
+Name: FOCUS_2004_I654030
+Year: 2004
+Summary: Dalitz decay of $D^+$ and $D^+_s\to K^+\pi^+\pi^-$
+Experiment: FOCUS
+Collider: Fermilab 
+InspireID: 654030
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett.B 601 (2004) 10-19
+RunInfo: Any process producing D+ or D_s+ mesons
+Description:
+  'Measurement of the mass distributions in the decays $D^+$ and $D^+_s\to K^+\pi^+\pi^-$ by FOCUS. The data were read from the plots in the paper and therefore for some points the error bars are the size of the point. It is also not clear that any resolution effects have been unfolded.'
+ValidationInfo:
+  'Herwig 7 events using model in the paper'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: FOCUS:2004mu
+BibTeX: '@article{FOCUS:2004muk,
+    author = "Link, J. M. and others",
+    collaboration = "FOCUS",
+    title = "{Study of the doubly and singly Cabibbo suppressed decays D+ ---\ensuremath{>} K+ pi+ pi- and D+(s) ---\ensuremath{>} K+ pi+ pi-}",
+    eprint = "hep-ex/0407014",
+    archivePrefix = "arXiv",
+    reportNumber = "FERMILAB-PUB-04-115-E",
+    doi = "10.1016/j.physletb.2004.09.022",
+    journal = "Phys. Lett. B",
+    volume = "601",
+    pages = "10--19",
+    year = "2004"
+}
+'

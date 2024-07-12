@@ -20,24 +20,23 @@ namespace Rivet {
       declare(cfs, "CFS");
       //
       // plots from the paper
-      _histPtPions          = bookHisto1D("d01-x01-y01");    // pions
-      _histPtKaons          = bookHisto1D("d01-x01-y02");    // kaons
-      _histPtProtons        = bookHisto1D("d01-x01-y03");    // protons
-      _histPtKtoPi          = bookScatter2D("d02-x01-y01");  // K to pi ratio 
-      _histPtPtoPi          = bookScatter2D("d03-x01-y01");  // p to pi ratio
+      book(_histPtPions          ,"d01-x01-y01");    // pions
+      book(_histPtKaons          ,"d01-x01-y02");    // kaons
+      book(_histPtProtons        ,"d01-x01-y03");    // protons
+      book(_histPtKtoPi          ,"d02-x01-y01");  // K to pi ratio 
+      book(_histPtPtoPi          ,"d03-x01-y01");  // p to pi ratio
       //
       // temp histos for ratios
-      _histPtPionsR1        = bookHisto1D("TMP/pT_pi1", refData(2, 1, 1)); // pi histo compatible with more restricted kaon binning
-      _histPtPionsR2        = bookHisto1D("TMP/pT_pi2", refData(3, 1, 1)); // pi histo compatible with more restricted proton binning
-      _histPtKaonsR         = bookHisto1D("TMP/pT_K",   refData(2, 1, 1)); // K histo with more restricted binning
-      _histPtProtonsR       = bookHisto1D("TMP/pT_p",   refData(3, 1, 1)); // p histo with more restricted binning
+      book(_histPtPionsR1        ,"TMP/pT_pi1", refData(2, 1, 1)); // pi histo compatible with more restricted kaon binning
+      book(_histPtPionsR2        ,"TMP/pT_pi2", refData(3, 1, 1)); // pi histo compatible with more restricted proton binning
+      book(_histPtKaonsR         ,"TMP/pT_K",   refData(2, 1, 1)); // K histo with more restricted binning
+      book(_histPtProtonsR       ,"TMP/pT_p",   refData(3, 1, 1)); // p histo with more restricted binning
     }
 
 
     void analyze(const Event& event) {
-      const double weight = event.weight();
       const ChargedFinalState& cfs = apply<ChargedFinalState>(event, "CFS");
-      foreach (const Particle& p, cfs.particles()) {
+      for (const Particle& p : cfs.particles()) {
 	// protections against mc generators decaying long-lived particles
 	if ( !(p.hasAncestor(310)  || p.hasAncestor(-310)  ||     // K0s
 	       p.hasAncestor(130)  || p.hasAncestor(-130)  ||     // K0l
@@ -49,17 +48,17 @@ namespace Rivet {
         {  
 	  switch (abs(p.pid())) {
 	  case 211: // pi+
-	    _histPtPions->fill(p.pT()/GeV, weight);
-	    _histPtPionsR1->fill(p.pT()/GeV, weight);
-	    _histPtPionsR2->fill(p.pT()/GeV, weight);
+	    _histPtPions->fill(p.pT()/GeV);
+	    _histPtPionsR1->fill(p.pT()/GeV);
+	    _histPtPionsR2->fill(p.pT()/GeV);
 	    break;
 	  case 2212: // proton
-	    _histPtProtons->fill(p.pT()/GeV, weight);
-	    _histPtProtonsR->fill(p.pT()/GeV, weight);
+	    _histPtProtons->fill(p.pT()/GeV);
+	    _histPtProtonsR->fill(p.pT()/GeV);
 	    break;
 	  case 321: // K+
-	    _histPtKaons->fill(p.pT()/GeV, weight);
-	    _histPtKaonsR->fill(p.pT()/GeV, weight);
+	    _histPtKaons->fill(p.pT()/GeV);
+	    _histPtKaonsR->fill(p.pT()/GeV);
 	    break;
 	  } // particle switch
 	} // primary pi, K, p only
@@ -94,6 +93,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ALICE_2015_I1357424);
+  RIVET_DECLARE_PLUGIN(ALICE_2015_I1357424);
 
 }

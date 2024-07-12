@@ -1,0 +1,87 @@
+{
+    "1487432": [
+        "Azimuthal asymmetries of charged hadrons produced in high-energy muon scattering off longitudinally polarised deuterons", 
+        "COMPASS", 
+        "10.1140/epjc/s10052-018-6379-7", 
+        "2217387", 
+        "1609.06062", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2016-245"
+        ]
+    ], 
+    "1608884": [
+        "Search for muoproduction of $X (3872)$ at COMPASS and indication of a new state $\\widetilde{X}(3872)$", 
+        "COMPASS", 
+        "10.1016/j.physletb.2018.07.008", 
+        "2273255", 
+        "1707.01796", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2017-165"
+        ]
+    ], 
+    "1609260": [
+        "New analysis of $\\eta\\pi$ tensor resonances measured at the COMPASS experiment", 
+        "JPAC", 
+        "10.1016/j.physletb.2018.01.017", 
+        "2273608", 
+        "1707.02848", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2017-169", 
+            "JLAB-THY-17-2468"
+        ]
+    ], 
+    "1624692": [
+        "Transverse-momentum-dependent Multiplicities of Charged Hadrons in Muon-Deuteron Deep Inelastic Scattering", 
+        "COMPASS", 
+        "10.1103/PhysRevD.97.032006", 
+        "2284825", 
+        "1709.07374", 
+        "ins1624692", 
+        null, 
+        [
+            "CERN-EP-2017-253"
+        ]
+    ], 
+    "1628410": [
+        "Longitudinal double-spin asymmetry $A_1^{\\rm p}$ and spin-dependent structure function $g_1^{\\rm p}$ of the proton at small values of $x$ and $Q^2$", 
+        "COMPASS", 
+        "10.1016/j.physletb.2018.03.044", 
+        "2286138", 
+        "1710.01014", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2017-263"
+        ]
+    ], 
+    "1652831": [
+        "K$^\u2212$ over K$^+$ multiplicity ratio for kaons produced in DIS with a large fraction of the virtual-photon energy", 
+        "COMPASS", 
+        "10.1016/j.physletb.2018.09.052", 
+        "2302337", 
+        "1802.00584", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2018-012"
+        ]
+    ], 
+    "1655631": [
+        "Light isovector resonances in $\\pi^- p \\to \\pi^-\\pi^-\\pi^+ p$ at 190 GeV/${\\it c}$", 
+        "COMPASS", 
+        "10.1103/PhysRevD.98.092003", 
+        "2304555", 
+        "1802.05913", 
+        "ins1655631", 
+        null, 
+        [
+            "CERN-EP-2018-021"
+        ]
+    ]
+}

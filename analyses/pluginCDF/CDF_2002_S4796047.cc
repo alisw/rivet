@@ -8,6 +8,7 @@ namespace Rivet {
 
 
   /// @brief CDF Run I charged multiplicity measurement
+  ///
   /// @author Hendrik Hoeth
   ///
   /// This analysis measures the charged multiplicity distribution
@@ -26,12 +27,7 @@ namespace Rivet {
   class CDF_2002_S4796047 : public Analysis {
   public:
 
-    /// Constructor
-    CDF_2002_S4796047()
-      : Analysis("CDF_2002_S4796047")
-    {
-      _sumWTrig = 0;
-    }
+    RIVET_DEFAULT_ANALYSIS_CTOR(CDF_2002_S4796047);
 
 
     /// @name Analysis methods
@@ -40,17 +36,19 @@ namespace Rivet {
     /// Book projections and histograms
     void init() {
       declare(TriggerCDFRun0Run1(), "Trigger");
-      const ChargedFinalState cfs(-1.0, 1.0, 0.4*GeV);
+      const ChargedFinalState cfs(Cuts::abseta < 1.0 && Cuts::pT >= 0.4*GeV);
       declare(cfs, "FS");
 
       // Histos
-      if (fuzzyEquals(sqrtS()/GeV, 630)) {
-        _hist_multiplicity  = bookHisto1D(1, 1, 1);
-        _hist_pt_vs_multiplicity  = bookProfile1D(3, 1, 1);
-      } else if (fuzzyEquals(sqrtS()/GeV, 1800)) {
-        _hist_multiplicity = bookHisto1D(2, 1, 1);
-        _hist_pt_vs_multiplicity = bookProfile1D(4, 1, 1);
+      if (isCompatibleWithSqrtS(630)) {
+        book(_hist_multiplicity  ,1, 1, 1);
+        book(_hist_pt_vs_multiplicity  ,3, 1, 1);
+      } else if (isCompatibleWithSqrtS(1800)) {
+        book(_hist_multiplicity ,2, 1, 1);
+        book(_hist_pt_vs_multiplicity ,4, 1, 1);
       }
+      book(_sumWTrig, "sumWTrig");
+
     }
 
 
@@ -59,20 +57,19 @@ namespace Rivet {
       // Trigger
       const bool trigger = apply<TriggerCDFRun0Run1>(evt, "Trigger").minBiasDecision();
       if (!trigger) vetoEvent;
-      const double weight = evt.weight();
-      _sumWTrig += weight;
+      _sumWTrig->fill();
 
       // Get beam energy and tracks
       const ChargedFinalState& fs = apply<ChargedFinalState>(evt, "FS");
       const size_t numParticles = fs.particles().size();
 
       // Fill histos of charged multiplicity distributions
-      _hist_multiplicity->fill(numParticles, weight);
+      _hist_multiplicity->fill(numParticles);
 
       // Fill histos for <pT> vs. charged multiplicity
-      foreach (const Particle& p, fs.particles()) {
+      for (const Particle& p : fs.particles()) {
         const double pT = p.pT();
-        _hist_pt_vs_multiplicity->fill(numParticles, pT/GeV, weight);
+        _hist_pt_vs_multiplicity->fill(numParticles, pT/GeV);
       }
 
     }
@@ -89,9 +86,9 @@ namespace Rivet {
       // legend of the plot in the paper. Have a look at
       // figure 1 and everything immediately becomes clear.
       // DON'T TRY TO REPAIR THIS, YOU WILL BREAK IT.
-      if (fuzzyEquals(sqrtS()/GeV, 630)) {
+      if (isCompatibleWithSqrtS(630)) {
         normalize(_hist_multiplicity, 3.21167); // fixed norm OK
-      } else if (fuzzyEquals(sqrtS()/GeV, 1800)) {
+      } else if (isCompatibleWithSqrtS(1800)) {
         normalize(_hist_multiplicity, 4.19121); // fixed norm OK
       }
     }
@@ -101,10 +98,8 @@ namespace Rivet {
 
   private:
 
-    /// @name Counter
-    //@{
-    double _sumWTrig;
-    //@}
+    /// Counter
+    CounterPtr _sumWTrig;
 
     /// @name Histos
     //@{
@@ -116,7 +111,6 @@ namespace Rivet {
 
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CDF_2002_S4796047);
+  RIVET_DECLARE_ALIASED_PLUGIN(CDF_2002_S4796047, CDF_2002_I567774);
 
 }

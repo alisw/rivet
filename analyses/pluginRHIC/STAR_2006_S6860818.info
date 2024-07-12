@@ -37,3 +37,7 @@ BibTeX: '@Article{Abelev:2006cs,
      doi       = "10.1103/PhysRevC.75.064901",
      SLACcitation  = "%%CITATION = NUCL-EX/0607033;%%"
 }'
+
+ReleaseTests:
+ - $A Star-UE
+

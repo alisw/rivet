@@ -1,0 +1,40 @@
+Name: BELLE_2017_I1606201
+Year: 2017
+Summary: Baryon spectra in $e^+e^-$ collisions at 10.52 GeV
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1606201
+Status: VALIDATED
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D97 (2018) no.7, 072005
+RunInfo: e+ e- to hadrons and e+ e-
+NeedCrossSection: yes
+Beams: [e-, e+]
+Energies: [10.52]
+Description:
+  'Measurement of spectra for hyperon and charm baryon production in $e^+e^-$ collisions at 10.52 GeV by BELLE.
+   The spectra for $\Lambda^0$, $\Sigma^0$, $\Sigma^{*+}$, $\Lambda^0(1520)$, $\Xi^-$, $\Omega^-$
+   and $\Xi^{*0}$ hyperons are measured. The spectra for the $\Lambda_c^+$, $\Lambda_c(2595)^+$, $\Lambda_c(2625)^+$,
+              $\Sigma_c(2455)^0$, $\Sigma_c(2520)^0$, $\Omega_c^0$ and $\Xi_c^0$ charm baryons are also measured.'
+BibKey: Niiyama:2017wpp
+BibTeX: '@article{Niiyama:2017wpp,
+      author         = "Niiyama, M. and others",
+      title          = "{Production cross sections of hyperons and charmed
+                        baryons from $e^+e^-$ annihilation near $\sqrt{s} =
+                        10.52$~GeV}",
+      collaboration  = "Belle",
+      journal        = "Phys. Rev.",
+      volume         = "D97",
+      year           = "2018",
+      number         = "7",
+      pages          = "072005",
+      doi            = "10.1103/PhysRevD.97.072005",
+      eprint         = "1706.06791",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "BELLE-PREPRINT-2017-14, KEK-PREPRINT-2017-15",
+      SLACcitation   = "%%CITATION = ARXIV:1706.06791;%%"
+}'

@@ -1,0 +1,227 @@
+{
+    "357910": [
+        "Improved measurements of the neutral current from hadron and lepton production at LEP", 
+        "OPAL", 
+        "10.1007/BF01641883", 
+        "252425", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-146"
+        ]
+    ], 
+    "358862": [
+        "Measurement of Gamma (Z0 ---> b anti-b) / Gamma (Z0 ---> hadrons) using impact parameters and leptons", 
+        "OPAL", 
+        "10.1007/BF01413175", 
+        "253218", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-155"
+        ]
+    ], 
+    "358863": [
+        "Measurement of the photon structure function F2 (gamma) in the reaction e+ e- ---> e+ e- + hadrons at LEP", 
+        "OPAL", 
+        "10.1007/BF01413097", 
+        "253402", 
+        null, 
+        "ins358863", 
+        null, 
+        [
+            "CERN-PPE-93-156"
+        ]
+    ], 
+    "359401": [
+        "Studies of charged particle multiplicity in b quark events", 
+        "OPAL", 
+        "10.1007/BF01413098", 
+        "253905", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-174"
+        ]
+    ], 
+    "360342": [
+        "Multiplicity and transverse momentum correlations in multi - hadronic final states in e+ e- interactions at S**(1/2) = 91.2-GeV", 
+        "OPAL", 
+        "10.1016/0370-2693(94)90680-7", 
+        "539302", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-183"
+        ]
+    ], 
+    "372770": [
+        "Measurement of the tau- ---> h- pi0 tau-neutrino and tau- ---> h- >= 2 pi0 tau-neutrino branching ratios", 
+        "OPAL", 
+        "10.1016/0370-2693(94)90452-9", 
+        "260585", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-42", 
+            "CERN-PPE-94-042"
+        ]
+    ], 
+    "372771": [
+        "Measurement of the time dependence of B(d)0 <---> anti-B(d)0 mixing using a jet charge technique", 
+        "OPAL", 
+        "10.1016/0370-2693(94)90747-1", 
+        "260583", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-43", 
+            "CERN-PPE-94-043"
+        ]
+    ], 
+    "372772": [
+        "Measurement of the production rates of charged hadrons in e+ e- annihilation at the Z0", 
+        "OPAL", 
+        "10.1007/BF01411010", 
+        "261071", 
+        null, 
+        "ins372772", 
+        null, 
+        [
+            "CERN-PPE-94-49", 
+            "CERN-PPE-94-049"
+        ]
+    ], 
+    "372997": [
+        "A Study of mean subjet multiplicities in two and three jet hadronic Z0 decays", 
+        "OPAL", 
+        "10.1007/BF01580318", 
+        "261152", 
+        null, 
+        "ins372997", 
+        null, 
+        [
+            "CERN-PPE-94-52", 
+            "CERN-PPE-94-052"
+        ]
+    ], 
+    "372999": [
+        "Search for the minimal Standard Model Higgs boson", 
+        "OPAL", 
+        "10.1016/0370-2693(94)90746-3", 
+        "260823", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-48", 
+            "CERN-PPE-94-048"
+        ]
+    ], 
+    "373000": [
+        "QCD studies using a cone based jet finding algorithm for $e^{+} e^{-}$ collisions at LEP", 
+        "OPAL", 
+        "10.1007/BF01411011", 
+        "261153", 
+        null, 
+        "ins373000", 
+        null, 
+        [
+            "CERN-PPE-94-51", 
+            "CERN-PPE-94-051"
+        ]
+    ], 
+    "375574": [
+        "Observation of exclusive decays of $B$ mesons at LEP", 
+        "OPAL", 
+        "10.1016/0370-2693(94)91469-9", 
+        "265270", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-91", 
+            "CERN-PPE-94-091"
+        ]
+    ], 
+    "375575": [
+        "Search for a scalar top quark using the OPAL detector", 
+        "OPAL", 
+        "10.1016/0370-2693(94)91470-2", 
+        "342263", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-103"
+        ]
+    ], 
+    "375579": [
+        "Measurement of the time dependence of B(d)0 <---> anti-B(d)0 mixing using leptons and D*+- mesons", 
+        "OPAL", 
+        "10.1016/0370-2693(94)90577-0", 
+        "265268", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-90", 
+            "CERN-PPE-94-090"
+        ]
+    ], 
+    "375601": [
+        "Measurements of the inclusive branching ratios of tau leptons to K0(s) and charged K* (892)", 
+        "OPAL", 
+        "10.1016/0370-2693(94)90645-9", 
+        "266296", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-108"
+        ]
+    ], 
+    "375621": [
+        "Search for Neutral Higgs Bosons in the Minimal Supersymmetric Extension of the Standard Model", 
+        "OPAL", 
+        "10.1007/BF01557229", 
+        "349610", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-104"
+        ]
+    ], 
+    "375961": [
+        "Search for rare hadronic B decays", 
+        "OPAL", 
+        "10.1016/0370-2693(94)90993-8", 
+        "265830", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-098", 
+            "CERN-PPE-94-98"
+        ]
+    ], 
+    "377273": [
+        "Updated measurement of the tau lifetime", 
+        "OPAL", 
+        "10.1016/0370-2693(94)90805-2", 
+        "268545", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-129"
+        ]
+    ]
+}

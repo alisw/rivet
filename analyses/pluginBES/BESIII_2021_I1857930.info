@@ -1,0 +1,31 @@
+Name: BESIII_2021_I1857930
+Year: 2021
+Summary: Cross section for $e^+e^-\to\eta\phi$ for centre-of-mass energies between 2 and 3.08 GeV
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1857930
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - arXiv:2104.05549 
+RunInfo: e+ e- to hadrons
+Beams: [e+, e-]
+Description:
+  'Measurement of the vross section for $e^+e^-\to\eta\phi$ for centre-of-mass energies between 2 and 3.08 GeV by the BESIII collaboration.'
+ValidationInfo:
+  'Herwiog 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Ablikim:2021byq
+BibTeX: '@article{Ablikim:2021byq,
+    author = "Ablikim, M. and others",
+    title = "{Study of the process $e^{+}e^{-}\rightarrow\phi\eta$ at center-of-mass energies between 2.00 and 3.08 GeV}",
+    eprint = "2104.05549",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    month = "4",
+    year = "2021"
+}'

@@ -95,7 +95,7 @@ namespace Rivet {
     /// function check the member variables of the sub-class to determine
     /// whether this should be ordered before or after \a p, or if it is
     /// equivalent with \a p.
-    virtual int compare(const Projection& p) const = 0;
+    virtual CmpState compare(const Projection& p) const = 0;
 
     /// Determine whether this object should be ordered before the object
     /// \a p given as argument. If \a p is of a different class than

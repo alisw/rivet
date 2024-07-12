@@ -14,14 +14,14 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(CMS_2016_I1413748);
+    RIVET_DEFAULT_ANALYSIS_CTOR(CMS_2016_I1413748);
 
 
     /// Book histograms and initialise projections
     void init() {
 
       // Complete final state
-      FinalState fs(-MAXDOUBLE, MAXDOUBLE, 0*GeV);
+      FinalState fs;
 
       // Projection for dressed electrons and muons
       IdentifiedFinalState photons(fs);
@@ -30,71 +30,71 @@ namespace Rivet {
       IdentifiedFinalState el_id(fs);
       el_id.acceptIdPair(PID::ELECTRON);
       PromptFinalState electrons(el_id);
-      addProjection(electrons, "Electrons");
+      declare(electrons, "Electrons");
       DressedLeptons dressed_electrons(photons, electrons, 0.1);
-      addProjection(dressed_electrons, "DressedElectrons");
+      declare(dressed_electrons, "DressedElectrons");
 
       IdentifiedFinalState mu_id(fs);
       mu_id.acceptIdPair(PID::MUON);
       PromptFinalState muons(mu_id);
-      addProjection(muons, "Muons");
+      declare(muons, "Muons");
       DressedLeptons dressed_muons(photons, muons, 0.1);
-      addProjection(dressed_muons, "DressedMuons");
+      declare(dressed_muons, "DressedMuons");
 
       // Parton-level top quarks
-      declare(PartonicTops(PartonicTops::E_MU, false), "LeptonicPartonTops");
+      declare(PartonicTops(PartonicTops::DecayMode::E_MU, false), "LeptonicPartonTops");
 
 
       // Booking of histograms
 
       // This histogram is independent of the parton-level information, and is an addition to the original analysis.
       // It is compared to the same data as the parton-level delta_phi histogram d02-x01-y01.
-      _h_dphidressedleptons = bookHisto1D("d00-x01-y01", _bins_dphi);
+      book(_h_dphidressedleptons, "d00-x01-y01", _bins_dphi);
 
       // The remaining histos use parton-level information
-      _h_dphi = bookHisto1D("d02-x01-y01", _bins_dphi);
-      _h_cos_opening_angle = bookHisto1D("d05-x01-y01", _bins_cos_opening_angle);
-      _h_c1c2 = bookHisto1D("d08-x01-y01", _bins_c1c2);
-      _h_lep_costheta = bookHisto1D("d11-x01-y01", _bins_lep_costheta);
-      _h_lep_costheta_CPV = bookHisto1D("d14-x01-y01", _bins_lep_costheta_CPV);
+      book(_h_dphi, "d02-x01-y01", _bins_dphi);
+      book(_h_cos_opening_angle, "d05-x01-y01", _bins_cos_opening_angle);
+      book(_h_c1c2, "d08-x01-y01", _bins_c1c2);
+      book(_h_lep_costheta, "d11-x01-y01", _bins_lep_costheta);
+      book(_h_lep_costheta_CPV, "d14-x01-y01", _bins_lep_costheta_CPV);
 
       // 2D histos
-      _h_dphi_var[0] = bookHisto2D("d20-x01-y01", _bins_dphi, _bins_tt_mass);
-      _h_cos_opening_angle_var[0] = bookHisto2D("d26-x01-y01", _bins_cos_opening_angle, _bins_tt_mass);
-      _h_c1c2_var[0] = bookHisto2D("d32-x01-y01", _bins_c1c2, _bins_tt_mass);
-      _h_lep_costheta_var[0] = bookHisto2D("d38-x01-y01", _bins_lep_costheta, _bins_tt_mass);
-      _h_lep_costheta_CPV_var[0] = bookHisto2D("d44-x01-y01", _bins_lep_costheta_CPV, _bins_tt_mass);
+      book(_h_dphi_var[0], "d20-x01-y01", _bins_dphi, _bins_tt_mass);
+      book(_h_cos_opening_angle_var[0], "d26-x01-y01", _bins_cos_opening_angle, _bins_tt_mass);
+      book(_h_c1c2_var[0], "d32-x01-y01", _bins_c1c2, _bins_tt_mass);
+      book(_h_lep_costheta_var[0], "d38-x01-y01", _bins_lep_costheta, _bins_tt_mass);
+      book(_h_lep_costheta_CPV_var[0], "d44-x01-y01", _bins_lep_costheta_CPV, _bins_tt_mass);
 
-      _h_dphi_var[1] = bookHisto2D("d50-x01-y01", _bins_dphi, _bins_tt_pT);
-      _h_cos_opening_angle_var[1] = bookHisto2D("d56-x01-y01", _bins_cos_opening_angle, _bins_tt_pT);
-      _h_c1c2_var[1] = bookHisto2D("d62-x01-y01", _bins_c1c2, _bins_tt_pT);
-      _h_lep_costheta_var[1] = bookHisto2D("d68-x01-y01", _bins_lep_costheta, _bins_tt_pT);
-      _h_lep_costheta_CPV_var[1] = bookHisto2D("d74-x01-y01", _bins_lep_costheta_CPV, _bins_tt_pT);
+      book(_h_dphi_var[1], "d50-x01-y01", _bins_dphi, _bins_tt_pT);
+      book(_h_cos_opening_angle_var[1], "d56-x01-y01", _bins_cos_opening_angle, _bins_tt_pT);
+      book(_h_c1c2_var[1], "d62-x01-y01", _bins_c1c2, _bins_tt_pT);
+      book(_h_lep_costheta_var[1], "d68-x01-y01", _bins_lep_costheta, _bins_tt_pT);
+      book(_h_lep_costheta_CPV_var[1], "d74-x01-y01", _bins_lep_costheta_CPV, _bins_tt_pT);
 
-      _h_dphi_var[2] = bookHisto2D("d80-x01-y01", _bins_dphi, _bins_tt_absrapidity);
-      _h_cos_opening_angle_var[2] = bookHisto2D("d86-x01-y01", _bins_cos_opening_angle, _bins_tt_absrapidity);
-      _h_c1c2_var[2] = bookHisto2D("d92-x01-y01", _bins_c1c2, _bins_tt_absrapidity);
-      _h_lep_costheta_var[2] = bookHisto2D("d98-x01-y01", _bins_lep_costheta, _bins_tt_absrapidity);
-      _h_lep_costheta_CPV_var[2] = bookHisto2D("d104-x01-y01", _bins_lep_costheta_CPV, _bins_tt_absrapidity);
+      book(_h_dphi_var[2], "d80-x01-y01", _bins_dphi, _bins_tt_absrapidity);
+      book(_h_cos_opening_angle_var[2], "d86-x01-y01", _bins_cos_opening_angle, _bins_tt_absrapidity);
+      book(_h_c1c2_var[2], "d92-x01-y01", _bins_c1c2, _bins_tt_absrapidity);
+      book(_h_lep_costheta_var[2], "d98-x01-y01", _bins_lep_costheta, _bins_tt_absrapidity);
+      book(_h_lep_costheta_CPV_var[2], "d104-x01-y01", _bins_lep_costheta_CPV, _bins_tt_absrapidity);
 
       // Profile histos for asymmetries
-      _h_dphi_profile[0] = bookProfile1D("d17-x01-y01", _bins_tt_mass);
-      _h_cos_opening_angle_profile[0] = bookProfile1D("d23-x01-y01", _bins_tt_mass);
-      _h_c1c2_profile[0] = bookProfile1D("d29-x01-y01", _bins_tt_mass);
-      _h_lep_costheta_profile[0] = bookProfile1D("d35-x01-y01", _bins_tt_mass);
-      _h_lep_costheta_CPV_profile[0] = bookProfile1D("d41-x01-y01", _bins_tt_mass);
+      book(_h_dphi_profile[0], "d17-x01-y01", _bins_tt_mass);
+      book(_h_cos_opening_angle_profile[0], "d23-x01-y01", _bins_tt_mass);
+      book(_h_c1c2_profile[0], "d29-x01-y01", _bins_tt_mass);
+      book(_h_lep_costheta_profile[0], "d35-x01-y01", _bins_tt_mass);
+      book(_h_lep_costheta_CPV_profile[0], "d41-x01-y01", _bins_tt_mass);
 
-      _h_dphi_profile[1] = bookProfile1D("d47-x01-y01", _bins_tt_pT);
-      _h_cos_opening_angle_profile[1] = bookProfile1D("d53-x01-y01", _bins_tt_pT);
-      _h_c1c2_profile[1] = bookProfile1D("d59-x01-y01", _bins_tt_pT);
-      _h_lep_costheta_profile[1] = bookProfile1D("d65-x01-y01", _bins_tt_pT);
-      _h_lep_costheta_CPV_profile[1] = bookProfile1D("d71-x01-y01", _bins_tt_pT);
+      book(_h_dphi_profile[1], "d47-x01-y01", _bins_tt_pT);
+      book(_h_cos_opening_angle_profile[1], "d53-x01-y01", _bins_tt_pT);
+      book(_h_c1c2_profile[1], "d59-x01-y01", _bins_tt_pT);
+      book(_h_lep_costheta_profile[1], "d65-x01-y01", _bins_tt_pT);
+      book(_h_lep_costheta_CPV_profile[1], "d71-x01-y01", _bins_tt_pT);
 
-      _h_dphi_profile[2] = bookProfile1D("d77-x01-y01", _bins_tt_absrapidity);
-      _h_cos_opening_angle_profile[2] = bookProfile1D("d83-x01-y01", _bins_tt_absrapidity);
-      _h_c1c2_profile[2] = bookProfile1D("d89-x01-y01", _bins_tt_absrapidity);
-      _h_lep_costheta_profile[2] = bookProfile1D("d95-x01-y01", _bins_tt_absrapidity);
-      _h_lep_costheta_CPV_profile[2] = bookProfile1D("d101-x01-y01", _bins_tt_absrapidity);
+      book(_h_dphi_profile[2], "d77-x01-y01", _bins_tt_absrapidity);
+      book(_h_cos_opening_angle_profile[2], "d83-x01-y01", _bins_tt_absrapidity);
+      book(_h_c1c2_profile[2], "d89-x01-y01", _bins_tt_absrapidity);
+      book(_h_lep_costheta_profile[2], "d95-x01-y01", _bins_tt_absrapidity);
+      book(_h_lep_costheta_CPV_profile[2], "d101-x01-y01", _bins_tt_absrapidity);
 
     }
 
@@ -102,7 +102,7 @@ namespace Rivet {
     /// Perform the per-event analysis
     void analyze(const Event& event) {
 
-      const double weight = event.weight();
+      const double weight = 1.0;
 
       // Use particle-level leptons for the first histogram
       const DressedLeptons& dressed_electrons = applyProjection<DressedLeptons>(event, "DressedElectrons");
@@ -155,11 +155,11 @@ namespace Rivet {
           const Particle lepTop = leptonicpartontops[k];
           const auto isPromptChargedLepton = [](const Particle& p){return (isChargedLepton(p) && isPrompt(p, false, false));};
           Particles lepton_candidates = lepTop.allDescendants(firstParticleWith(isPromptChargedLepton), false);
-          if ( lepton_candidates.size() < 1 ) MSG_WARNING("error, PartonicTops::E_MU top quark had no daughter lepton candidate, skipping event.");
+          if ( lepton_candidates.size() < 1 ) MSG_WARNING("error, PartonicTops::DecayMode::E_MU top quark had no daughter lepton candidate, skipping event.");
 
           // In some cases there is no lepton from the W decay but only leptons from the decay of a radiated gamma.
-          // These hadronic PartonicTops are currently being mistakenly selected by PartonicTops::E_MU (as of April 2017), and need to be rejected.
-          // PartonicTops::E_MU is being fixed in Rivet, and when it is the veto below should do nothing.
+          // These hadronic PartonicTops are currently being mistakenly selected by PartonicTops::DecayMode::E_MU (as of April 2017), and need to be rejected.
+          // PartonicTops::DecayMode::E_MU is being fixed in Rivet, and when it is the veto below should do nothing.
           /// @todo Should no longer be necessary -- remove
           bool istrueleptonictop = false;
           for (size_t i = 0; i < lepton_candidates.size(); ++i) {
@@ -192,8 +192,8 @@ namespace Rivet {
         const double dphi_temp = deltaPhi(lepPlus,lepMinus);
 
         // Get the four-momenta of the positively- and negatively-charged tops
-        FourMomentum topPlus_p4 = leptonicpartontops[0].pdgId() > 0 ? leptonicpartontops[0] : leptonicpartontops[1];
-        FourMomentum topMinus_p4 = leptonicpartontops[0].pdgId() > 0 ? leptonicpartontops[1] : leptonicpartontops[0];
+        FourMomentum topPlus_p4 = leptonicpartontops[0].pid() > 0 ? leptonicpartontops[0] : leptonicpartontops[1];
+        FourMomentum topMinus_p4 = leptonicpartontops[0].pid() > 0 ? leptonicpartontops[1] : leptonicpartontops[0];
         const FourMomentum ttbar_p4 = topPlus_p4 + topMinus_p4;
 
         const double tt_mass_temp = ttbar_p4.mass();
@@ -204,7 +204,7 @@ namespace Rivet {
 
         // Transform everything to the ttbar CM frame
         LorentzTransform ttCM;
-        ttCM.setBetaVec(-ttbar_p4.boostVector());
+        ttCM.setBetaVec(-ttbar_p4.betaVec());
 
         topPlus_p4 = ttCM.transform(topPlus_p4);
         topMinus_p4 = ttCM.transform(topMinus_p4);
@@ -214,8 +214,8 @@ namespace Rivet {
 
         // Now boost the leptons to their parent top CM frames
         LorentzTransform topPlus, topMinus;
-        topPlus.setBetaVec(-topPlus_p4.boostVector());
-        topMinus.setBetaVec(-topMinus_p4.boostVector());
+        topPlus.setBetaVec(-topPlus_p4.betaVec());
+        topMinus.setBetaVec(-topMinus_p4.betaVec());
 
         lepPlus = topPlus.transform(lepPlus);
         lepMinus = topMinus.transform(lepMinus);
@@ -322,7 +322,7 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CMS_2016_I1413748);
+  RIVET_DECLARE_PLUGIN(CMS_2016_I1413748);
 
 
 }

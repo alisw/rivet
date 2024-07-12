@@ -1,0 +1,35 @@
+Name: BESIII_2015_I1364494
+Year: 2015
+Summary: $\eta^\prime\to e^+e^-\gamma$ decays
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1364494
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D92 (2015) 012001, 2015 
+RunInfo:
+  Events with eta prime decays, either particle guns or collisions.
+NumEvents: 10000
+NeedCrossSection: no
+Description:
+  'Differential decay rates for $\eta^\prime\to e^+e^-\gamma$ decays'
+Keywords: []
+BibKey: Ablikim:2015wnx
+BibTeX: '@article{Ablikim:2015wnx,
+      author         = "Ablikim, M. and others",
+      title          = "{Observation of the Dalitz Decay $\eta^\prime \to \gamma
+                        e^+e^-$}",
+      collaboration  = "BESIII",
+      journal        = "Phys. Rev.",
+      volume         = "D92",
+      year           = "2015",
+      number         = "1",
+      pages          = "012001",
+      doi            = "10.1103/PhysRevD.92.012001",
+      eprint         = "1504.06016",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1504.06016;%%"
+}'

@@ -1,0 +1,37 @@
+Name: BELLE_2017_I1598461
+Year: 2017
+Summary: Mass distributions in $B^+\to K^+K^-\pi^+$
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1598461
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 96 (2017) 3, 031101
+RunInfo: Any process producing B+ mesons, originally e+e- at Upsilon(4S)
+Description:
+  'Differential branching ratio oand CP-asymmetry in the mass of the kaon pair for the decay $B^+\to K^+K^-\pi^+$.'
+ValidationInfo:
+  'Herwig 7 events using Evtgen for decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle:2017cxf
+BibTeX: '@article{Belle:2017cxf,
+    author = "Hsu, C. -L. and others",
+    collaboration = "Belle",
+    title = "{Measurement of branching fraction and direct $CP$ asymmetry in charmless $B^+ \to K^+K^- \pi^+$ decays at Belle}",
+    eprint = "1705.02640",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "KEK-PREPRINT-2017-5, BELLE-PREPRINT-2017-09",
+    doi = "10.1103/PhysRevD.96.031101",
+    journal = "Phys. Rev. D",
+    volume = "96",
+    number = "3",
+    pages = "031101",
+    year = "2017"
+}
+'

@@ -1,0 +1,35 @@
+Name: ZEUS_1996_I420332
+Year: 1996
+Summary: Measurement of the F2 structure function in deep inelastic e+ p scattering using 1994 data from the ZEUS detector at HERA
+Experiment: ZEUS
+Collider: HERA
+InspireID: 420332
+Status: VALIDATED
+Reentrant: true
+Authors:  
+- Hannes Jung <hannes.jung@desy.de>
+References: 
+- Z.Phys.C 72 (1996) 399, DOI:10.1007/s002880050260,10.1007/BF02909169, - hep-ex/9607002 
+Beams: [[e+, p+],[p+,e+]]
+Energies: [[27.5,820],[820,27.5]]
+Description: 'We present measurements of the structure function $F_2$ in ep scattering at HERA in the range $ 3.5 < Q^2 < 5000 $ GeV$^2$. A new reconstruction method has allowed a significant improvement in the resolution of the kinematic variables and an extension of the kinematic region covered by the experiment. At $Q^2 < 35 $ GeV$^2$ the range in $x$ now spans $ 6.3 \cdot 10^{-5} < x < 0.08$ providing overlap with measurements from fixed target experiments. At values of $Q^2$ above 1000 GeV$^2$ the $x$ range extends to 0.5.'
+ValidationInfo: 
+  'Validated against F2 measurement'
+Keywords: [DIS]
+BibKey: 'Derrick:1996hn'
+BibTeX: '@article{Derrick:1996hn,
+    author = "Derrick, M. and others",
+    collaboration = "ZEUS",
+    title = "{Measurement of the F2 structure function in deep inelastic e+ p scattering using 1994 data from the ZEUS detector at HERA}",
+    eprint = "hep-ex/9607002",
+    archivePrefix = "arXiv",
+    reportNumber = "DESY-96-076",
+    doi = "10.1007/s002880050260",
+    journal = "Z. Phys. C",
+    volume = "72",
+    pages = "399-",
+    year = "1996"
+}'
+ReleaseTests:
+ - $A DIS-e+-HighQ2
+

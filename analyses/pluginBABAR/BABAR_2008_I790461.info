@@ -1,0 +1,36 @@
+Name: BABAR_2008_I790461
+Year: 2008
+Summary: Kinematic distributions in $D^+_s\to K^+K^- e^+\nu_e$
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 790461
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 78 (2008) 051101
+RunInfo: Any process producing DS
+Description:
+  'Measurement of the kinematic distributions in $D^+_s\to K^+K^- e^+\nu_e$ by BaBar. N.B. the plots where read from the paper and may not have been corrected for acceptance.'
+ValidationInfo:
+  'Herwig 7 events using EvtGen for the decays.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BaBar:2008gpr
+BibTeX: '@article{BaBar:2008gpr,
+    author = "Aubert, Bernard and others",
+    collaboration = "BaBar",
+    title = "{Study of the decay $D^+_{s} \to K^{+} K^{-} e^{+} \nu_{e}$}",
+    eprint = "0807.1599",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BABAR-PUB-08-014, SLAC-PUB-13294",
+    doi = "10.1103/PhysRevD.78.051101",
+    journal = "Phys. Rev. D",
+    volume = "78",
+    pages = "051101",
+    year = "2008"
+}
+'

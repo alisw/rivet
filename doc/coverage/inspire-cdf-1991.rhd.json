@@ -1,0 +1,131 @@
+{
+    "298737": [
+        "Top quark search in the electron + jet channel in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.43.664", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "ANL-HEP-PR-90-109", 
+            "FERMILAB-PUB-90-137-E", 
+            "CDF-PUB-HEAVYFLAVOR-PUBLIC-1188", 
+            "UPR-0193E"
+        ]
+    ], 
+    "301060": [
+        "A Measurement of the $W$ boson mass in 1.8 TeV $\\bar{p}p$ collisions", 
+        "CDF", 
+        "10.1103/PhysRevD.43.2070", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "ANL-HEP-PR-90-72", 
+            "FERMILAB-PUB-90-162-E"
+        ]
+    ], 
+    "302820": [
+        "A Measurement of $\\sigma B (W \\to e \\nu)$ and $\\sigma B (Z^0 \\to e^+ e-)$ in $\\bar{p}p$ collisions at $\\sqrt{s} = 1800$ GeV", 
+        "CDF", 
+        "10.1103/PhysRevD.44.29", 
+        null, 
+        null, 
+        "ins302820", 
+        null, 
+        [
+            "FERMILAB-PUB-90-229-E", 
+            "ANL-HEP-PR-91-64"
+        ]
+    ], 
+    "314225": [
+        "Measurement of the W P(T) distribution in $\\bar{p}p$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.66.2951", 
+        null, 
+        null, 
+        "ins314225", 
+        null, 
+        [
+            "FERMILAB-PUB-91-033-E"
+        ]
+    ], 
+    "314647": [
+        "Measurement of QCD jet broadening in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.44.601", 
+        null, 
+        null, 
+        "ins314647", 
+        null, 
+        [
+            "FERMILAB-PUB-91-023-E", 
+            "CDF-PUB-JET-PUBLIC-1209", 
+            "ANL-HEP-PR-91-73"
+        ]
+    ], 
+    "317764": [
+        "A Determination of $\\sin^2\\theta$ from the forward - backward asymmetry in $p\\bar{p} \\to Z^0 X \\to e^+e^- X$ interactions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.67.1502", 
+        null, 
+        null, 
+        "ins317764", 
+        null, 
+        [
+            "FERMILAB-PUB-91-134-E"
+        ]
+    ], 
+    "317765": [
+        "Measurement of the $e^+e^-$ invariant mass distribution in $\\bar{p}p$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.67.2418", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-91-169-E"
+        ]
+    ], 
+    "318736": [
+        "Search for $W^\\prime \\to e \\nu$ and $W^\\prime \\to \\mu \\nu$ in $\\bar{p}p$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.67.2609", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-91-208-E"
+        ]
+    ], 
+    "322634": [
+        "Measurement of the $Z$ $p_T$ distribution in $\\bar{p}p$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.67.2937", 
+        null, 
+        null, 
+        "ins322634", 
+        null, 
+        [
+            "FERMILAB-PUB-91-199-E", 
+            "CDF-PUB-ELECTROWEAK-PUBLIC-1353"
+        ]
+    ], 
+    "332810": [
+        "Measurement of $B^0 \\overline{B}^0$ mixing at the Fermilab Tevatron collider", 
+        "CDF", 
+        "10.1103/PhysRevLett.67.3351", 
+        null, 
+        null, 
+        "ins332810", 
+        null, 
+        [
+            "FERMILAB-PUB-91-201-E", 
+            "CDF-PUB-HEAVYFLAVOR-PUBLIC-1442"
+        ]
+    ]
+}

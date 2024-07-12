@@ -1,0 +1,135 @@
+{
+    "886284": [
+        "First observation of $B^0_s \\to J/\\psi f_0(980)$ decays", 
+        "LHCb", 
+        "10.1016/j.physletb.2011.03.006", 
+        "1326226", 
+        "1102.0206", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-011", 
+            "LHCb-PAPER-2011-002", 
+            "LHCB-PAPER-2011-002"
+        ]
+    ], 
+    "886536": [
+        "First observation of $\\bar{B}^0_s \\to D_{s2}^{*+} X \\mu^-\\bar{\\nu}$ decays", 
+        "LHCb", 
+        "10.1016/j.physletb.2011.02.039", 
+        "1326409", 
+        "1102.0348", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-008", 
+            "LHCb-PAPER-2011-001", 
+            "LHCB-PAPER-2011-001"
+        ]
+    ], 
+    "891233": [
+        "Measurement of $J/\\psi$ production in $pp$ collisions at $\\sqrt{s}=7~\\rm{TeV}$", 
+        "LHCb", 
+        "10.1140/epjc/s10052-011-1645-y", 
+        "1333554", 
+        "1103.0423", 
+        "ins891233", 
+        null, 
+        [
+            "LHCb-PAPER-2011-003", 
+            "CERN-PH-EP-2011-018"
+        ]
+    ], 
+    "892495": [
+        "Search for the rare decays $B^0_s \\to \\mu^+\\mu^-$ and $B^0 \\to \\mu^+\\mu^-$", 
+        "LHCb", 
+        "10.1016/j.physletb.2011.04.031", 
+        "1335686", 
+        "1103.2465", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-029", 
+            "LHCb-PAPER-2011-004", 
+            "LHCB-PAPER-2011-004"
+        ]
+    ], 
+    "914506": [
+        "Determination of $f_s/f_d$ for $7~\\rm{TeV}$ $pp$ collisions and a measurement of the branching fraction of the decay $B_d\\to D^-K^+$", 
+        "LHCb", 
+        "10.1103/PhysRevLett.107.211801", 
+        "1360689", 
+        "1106.4435", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2011-075", 
+            "LHCB-PAPER-2011-006"
+        ]
+    ], 
+    "917009": [
+        "Measurement of $V^0$ production ratios in $pp$ collisions at $\\sqrt{s} = 0.9$ and $7~\\rm{TeV}$", 
+        "LHCb", 
+        "10.1007/JHEP08(2011)034", 
+        "1365724", 
+        "1107.0882", 
+        "ins917009", 
+        null, 
+        [
+            "CERN-PH-EP-2011-082", 
+            "LHCB-PAPER-2011-005"
+        ]
+    ], 
+    "919315": [
+        "Measurement of the inclusive $\\phi$ cross-section in $pp$ collisions at $\\sqrt{s}=$ 7 TeV", 
+        "LHCb", 
+        "10.1016/j.physletb.2011.08.017", 
+        "1369245", 
+        "1107.3935", 
+        "ins919315", 
+        null, 
+        [
+            "LHCB-PAPER-2011-007", 
+            "CERN-PH-EP-2011-106"
+        ]
+    ], 
+    "930219": [
+        "Measurements of the Branching fractions for $B_{(s)} \\to D_{(s)}\\pi\\pi\\pi$ and $\\Lambda_b^0 \\to \\Lambda_c^+\\pi\\pi\\pi$", 
+        "LHCb", 
+        "10.1103/PhysRevD.84.092001", 
+        "1387034", 
+        "1109.6831", 
+        null, 
+        null, 
+        [
+            "LHCB-PAPER-2011-016", 
+            "CERN-PH-EP-2011-151"
+        ]
+    ], 
+    "940142": [
+        "First observation of the decay $\\bar{B}^0_s \\to D^0 K^{*0}$ and a measurement of the ratio of branching fractions $\\frac{{\\cal B}(\\bar{B}^0_s \\to D^0 K^{*0})}{{\\cal B}(\\bar{B}^0 \\to D^0 \\rho^0)}$", 
+        "LHCb", 
+        "10.1016/j.physletb.2011.10.073", 
+        "1390818", 
+        "1110.3676", 
+        null, 
+        null, 
+        [
+            "LHCB-PAPER-2011-008", 
+            "CERN-PH-EP-2011-150"
+        ]
+    ], 
+    "940366": [
+        "Search for CP violation in $D^{+} \\to K^{-}K^{+}\\pi^{+}$ decays", 
+        "LHCb", 
+        "10.1103/PhysRevD.84.112008", 
+        "1392074", 
+        "1110.3970", 
+        null, 
+        null, 
+        [
+            "LHCB-PAPER-2011-017", 
+            "CERN-PH-EP-2011-163"
+        ]
+    ]
+}

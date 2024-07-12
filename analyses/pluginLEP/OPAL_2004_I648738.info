@@ -6,13 +6,13 @@ Collider: LEP
 InspireID: 648738
 Status: VALIDATED
 Authors:
- - Daniel Reichelt [d.reichelt@cern.ch]
+ - Daniel Reichelt <d.reichelt@cern.ch>
 References:
  - Eur.Phys.J. C37 (2004) no.1, 25-47
  - hep-ex/0404026
 RunInfo:
   For quark fragmentation $e^+e^-\to q\bar{q}$ events are required, while for gluon fragmentation
-  the fictonal $e^+e^-\to gg$ process is required.
+  the fictional $e^+e^-\to gg$ process is required.
 NumEvents: 1000000
 NeedCrossSection: no
 Beams: [e+, e-]
@@ -46,3 +46,16 @@ BibTeX: '@article{Abbiendi:2004pr,
       reportNumber   = "CERN-PH-EP-2004-011",
       SLACcitation   = "%%CITATION = HEP-EX/0404026;%%"
 }'
+
+ReleaseTests:
+ - $A LEP-12.8-gg
+ - $A-2 LEP-12.8
+ - $A-3 LEP-197
+ - $A-4 LEP-26.8-gg
+ - $A-5 LEP-26.8
+ - $A-6 LEP-48.0-gg
+ - $A-7 LEP-48.0
+ - $A-8 LEP-91
+ - $A-9 LEP-93.0
+ - $A-10 LEP-97.0-gg
+

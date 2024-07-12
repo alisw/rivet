@@ -4,7 +4,7 @@
 namespace Rivet {
 
 
-  int NonHadronicFinalState::compare(const Projection& p) const {
+  CmpState NonHadronicFinalState::compare(const Projection& p) const {
     return FinalState::compare(p);
   }
 

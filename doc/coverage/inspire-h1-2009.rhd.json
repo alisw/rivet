@@ -1,0 +1,164 @@
+{
+    "792603": [
+        "Study of Charm Fragmentation into D*+- Mesons in Deep-Inelastic Scattering at HERA", 
+        "H1", 
+        "10.1140/epjc/s10052-008-0792-2", 
+        "1119604", 
+        "0808.1003", 
+        "ins792603", 
+        null, 
+        [
+            "DESY-08-080"
+        ]
+    ], 
+    "799783": [
+        "Measurement of Diffractive Scattering of Photons with Large Momentum Transfer at HERA", 
+        "H1", 
+        "10.1016/j.physletb.2009.01.019", 
+        "1135214", 
+        "0810.3096", 
+        "ins799783", 
+        null, 
+        [
+            "DESY-08-077"
+        ]
+    ], 
+    "806518": [
+        "A General Search for New Phenomena at HERA", 
+        "H1", 
+        "10.1016/j.physletb.2009.03.034", 
+        "1154326", 
+        "0901.0507", 
+        null, 
+        null, 
+        [
+            "DESY-08-173"
+        ]
+    ], 
+    "810046": [
+        "Strangeness Production at low Q**2 in Deep-Inelastic ep Scattering at HERA", 
+        "H1", 
+        "10.1140/epjc/s10052-009-0995-1", 
+        "1166128", 
+        "0810.4036", 
+        "ins810046", 
+        null, 
+        [
+            "DESY-08-095"
+        ]
+    ], 
+    "810285": [
+        "Inclusive Photoproduction of $\\rho^0, K^{*0}$ and $\\phi$ Mesons at HERA", 
+        "H1", 
+        "10.1016/j.physletb.2009.02.016", 
+        "1154304", 
+        "0901.0477", 
+        "ins810285", 
+        null, 
+        [
+            "DESY-08-172"
+        ]
+    ], 
+    "810292": [
+        "Events with Isolated Leptons and Missing Transverse Momentum and Measurement of $W$ Production at HERA", 
+        "H1", 
+        "10.1140/epjc/s10052-009-1160-6", 
+        "1154312", 
+        "0901.0488", 
+        "ins810292", 
+        null, 
+        [
+            "DESY-08-170"
+        ]
+    ], 
+    "817368": [
+        "Measurement of the Inclusive $ep$ Scattering Cross Section at Low $Q^2$ and $x$ at HERA", 
+        "H1", 
+        "10.1140/epjc/s10052-009-1128-6", 
+        "1171163", 
+        "0904.0929", 
+        "ins817368", 
+        null, 
+        [
+            "DESY-08-171", 
+            "DESY08-171"
+        ]
+    ], 
+    "818502": [
+        "Search for Excited Quarks in ep Collisions at HERA", 
+        "H1", 
+        "10.1016/j.physletb.2009.06.044", 
+        "1173691", 
+        "0904.3392", 
+        null, 
+        null, 
+        [
+            "DESY-09-040", 
+            "DESY09-040"
+        ]
+    ], 
+    "818546": [
+        "A Precision Measurement of the Inclusive ep Scattering Cross Section at HERA", 
+        "H1", 
+        "10.1140/epjc/s10052-009-1169-x", 
+        "1173787", 
+        "0904.3513", 
+        "ins818546", 
+        null, 
+        [
+            "DESY-09-005", 
+            "DESY09-005"
+        ]
+    ], 
+    "818710": [
+        "Search for Single Top Quark Production at HERA", 
+        "H1", 
+        "10.1016/j.physletb.2009.06.057", 
+        "1174201", 
+        "0904.3876", 
+        null, 
+        null, 
+        [
+            "DESY-09-050", 
+            "DESY09-050"
+        ]
+    ], 
+    "825825": [
+        "Observation of the Hadronic Final State Charge Asymmetry in High Q**2 Deep-Inelastic Scattering at HERA", 
+        "H1", 
+        "10.1016/j.physletb.2009.09.056", 
+        "1190695", 
+        "0907.2666", 
+        null, 
+        null, 
+        [
+            "DESY-09-084", 
+            "DESY09-084"
+        ]
+    ], 
+    "826305": [
+        "Multi-Leptons with High Transverse Momentum at HERA", 
+        "H1", 
+        "10.1088/1126-6708/2009/10/013", 
+        "1192066", 
+        "0907.3627", 
+        null, 
+        null, 
+        [
+            "DESY-09-108"
+        ]
+    ], 
+    "827347": [
+        "Deeply Virtual Compton Scattering and its Beam Charge Asymmetry in e+- Collisions at HERA", 
+        "H1", 
+        "10.1016/j.physletb.2009.10.035", 
+        "1194828", 
+        "0907.5289", 
+        "ins827347", 
+        null, 
+        [
+            "DESY-09-109", 
+            "DESY09-109"
+        ]
+    ]
+}

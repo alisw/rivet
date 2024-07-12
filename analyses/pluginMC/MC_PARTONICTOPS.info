@@ -1,6 +1,7 @@
 Name: MC_PARTONICTOPS
 Summary: Plot partonic top properties (requires tops in event record)
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Andy Buckley <andy.buckley@cern.ch>
 RunInfo: 'Any events containing partonic tops'

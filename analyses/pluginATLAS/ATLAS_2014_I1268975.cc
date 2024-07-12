@@ -39,7 +39,8 @@ namespace Rivet {
       size_t massDsOffset(0);
       for (size_t alg = 0; alg < 2; ++alg) {
         for (size_t i = 0; i < 6; ++i) {
-          _mass[alg].addHistogram(ystarbins[i], ystarbins[i+1], bookHisto1D(1 + massDsOffset, 1, i+1));
+          Histo1DPtr tmp;
+          _mass[alg].add(ystarbins[i], ystarbins[i+1], book(tmp, 1 + massDsOffset, 1, i+1));
         }
         massDsOffset += 1;
       }
@@ -57,7 +58,7 @@ namespace Rivet {
 
         // Identify dijets
         vector<FourMomentum> leadjets;
-        foreach (const Jet& jet, jetAr[alg]) {
+        for (const Jet& jet : jetAr[alg]) {
           if (jet.absrap() < 3.0 && leadjets.size() < 2) {
             if (leadjets.empty() && jet.pT() < 100*GeV) continue;
             leadjets.push_back(jet.momentum());
@@ -76,7 +77,7 @@ namespace Rivet {
         const double m     = (leadjets[0] + leadjets[1]).mass();
 
         // Fill mass histogram
-        _mass[alg].fill(ystar, m/TeV, event.weight());
+        _mass[alg].fill(ystar, m/TeV, 1.0);
       }
     }
 
@@ -97,12 +98,12 @@ namespace Rivet {
     enum Alg { AKT4=0, AKT6=1 };
 
     /// The di-jet mass spectrum binned in rapidity for akt6 and akt4 jets (array index is jet type from enum above)
-    BinnedHistogram<double> _mass[2];
+    BinnedHistogram _mass[2];
 
   };
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2014_I1268975);
+  RIVET_DECLARE_PLUGIN(ATLAS_2014_I1268975);
 
 }

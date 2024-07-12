@@ -1,0 +1,33 @@
+Name: ARGUS_1994_I371613
+Year: 1994
+Summary: Decay asymmetry in $\Lambda^+_c\to\Lambda^0 \ell^+ \nu_\ell$ 
+Experiment: ARGUS
+Collider: DORIS
+InspireID: 371613
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett.B 323 (1994) 219-226
+RunInfo: Any process producing Lambda_c+, original e+e-
+Description:
+  'Measurement of the decay asymmetry in $\Lambda^+_c\to\Lambda^0 \ell^+ \nu_\ell$ by CLEOII. The result is in ther ranegf $1.85<m_{\Lambda\ell^+}<2.2$ GeV.'
+ValidationInfo:
+  'Herwig7 particle gun'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Albrecht:1994gx
+BibTeX: '@article{Albrecht:1994gx,
+      author         = "Albrecht, H. and others",
+      title          = "{Observation of polarization effects in Lambda(c)+
+                        semileptonic decay}",
+      collaboration  = "ARGUS",
+      journal        = "Phys. Lett.",
+      volume         = "B326",
+      year           = "1994",
+      pages          = "320-328",
+      doi            = "10.1016/0370-2693(94)91330-7",
+      reportNumber   = "DESY-94-004",
+      SLACcitation   = "%%CITATION = PHLTA,B326,320;%%"
+}'

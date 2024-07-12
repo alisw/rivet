@@ -1,0 +1,75 @@
+{
+    "17849": [
+        "{Bose-Einstein} Correlations Observed in $e^+ e^-$ Annihilation at a Center-of-mass Energy of 34-{GeV}", 
+        "TASSO", 
+        "10.1007/BF01557599", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "OXFORD-NP-89-85", 
+            "DESY-85-126"
+        ]
+    ], 
+    "228250": [
+        "Vector Meson Production in the Final State $K^+ K^- \\pi^+ \\pi^-$ Photon-photon Collisions", 
+        "TASSO", 
+        "10.1007/BF01441345", 
+        null, 
+        null, 
+        "ins228250", 
+        null, 
+        [
+            "DESY-86-025"
+        ]
+    ], 
+    "228251": [
+        "Measurement of the Photon Structure Function f(2)Gamma at Q**2 from 7-GeV/c**2 to 70-GeV/c**2", 
+        "TASSO", 
+        "10.1007/BF01551073", 
+        null, 
+        null, 
+        "ins228251", 
+        null, 
+        [
+            "DESY-86-026"
+        ]
+    ], 
+    "228876": [
+        "Measurement of the Radiative Width of the A(2) (1320) in Two Photon Interactions", 
+        "TASSO", 
+        "10.1007/BF01551074", 
+        null, 
+        null, 
+        "ins228876", 
+        null, 
+        [
+            "DESY-86-028"
+        ]
+    ], 
+    "229894": [
+        "A Measurement of the D0 Lifetime", 
+        "TASSO", 
+        "10.1007/BF01551829", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-86-027"
+        ]
+    ], 
+    "230950": [
+        "Inclusive $\\pi^0$ Production by $e^+ e^-$ Annihilation at 34.6-{GeV} Center-of-mass Energy", 
+        "TASSO", 
+        "10.1007/BF01410448", 
+        null, 
+        null, 
+        "ins230950", 
+        null, 
+        [
+            "DESY-86-078"
+        ]
+    ]
+}

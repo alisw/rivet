@@ -1,0 +1,75 @@
+{
+    "267079": [
+        "Search for SUSY Particles in e+ e- Annihilation at Tristan", 
+        "Topaz", 
+        "10.1016/0370-2693(89)90484-X", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-88-101", 
+            "DPNU-88-47", 
+            "INS-725", 
+            "KOBE-HEP-88-05", 
+            "NWU-HEP-88-01", 
+            "OCU-HEP-88-01", 
+            "TUAT-HE-88-01", 
+            "UT-HE-88-06"
+        ]
+    ], 
+    "279575": [
+        "Measurements of $\\alpha^- s$ in $e^+ e^-$ Annihilation at $\\sqrt{s}=53$.3-{GeV} and 59.5-{GeV}", 
+        "TOPAZ", 
+        "10.1016/0370-2693(89)90969-6", 
+        null, 
+        null, 
+        "ins279575", 
+        null, 
+        [
+            "KEK-Preprint-89-37"
+        ]
+    ], 
+    "281231": [
+        "A Search for a Fourth Generation Charge -1/3 ($b^\\prime$) Quark Using Inclusive Muons in $e^+ e^-$ Annihilations at $\\sqrt{s}=56$.5-{GeV} to 60.8-{GeV}", 
+        "TOPAZ", 
+        "10.1016/0370-2693(89)90432-2", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "KEK-Preprint-89-75", 
+            "DPNU-89-37", 
+            "KOBE-HEP-89-02", 
+            "TU-HE-89-02", 
+            "UT-HE-89-06", 
+            "OCU-HE-89-02", 
+            "INS-766", 
+            "NWU-HE-89-02", 
+            "TUAT-HE-89-02", 
+            "PU-89-633"
+        ]
+    ], 
+    "281294": [
+        "A Search for Excited Leptons in the Energy Region $\\sqrt{s}=52$-{GeV} - 60.8-{GeV}", 
+        "TOPAZ", 
+        "10.1016/0370-2693(89)90992-1", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-89-90", 
+            "DPNU-89-45", 
+            "INS-767", 
+            "KOBE-HEP-89-07", 
+            "NWU-HEP-89-03", 
+            "OCU-HEP-89-03", 
+            "PU-89-634", 
+            "TU-HEP-89-02", 
+            "TUAT-HEP-89-02", 
+            "UT-HE-89-07"
+        ]
+    ]
+}

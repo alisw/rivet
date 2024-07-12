@@ -1,0 +1,39 @@
+Name: BABAR_2002_I582184
+Year: 2002
+Summary: Momentum spectrum for $D_s^+$ and $D_s^{*+}$ at $\Upsilon(4S)$ and nearby continuum
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 582184
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D65 (2002) 091104
+RunInfo: e+e- > hadrons at Upsilon (4S) and in nearby continuum
+Beams: [e+, e-]
+Energies: [10.58]
+Description:
+  'Momentum spectrum for $D_s^+$ and $D_s^{*+}$ at $\Upsilon(4S)$ and nearby continuum measured by BaBar.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Aubert:2002ue
+BibTeX: '@article{Aubert:2002ue,
+      author         = "Aubert, Bernard and others",
+      title          = "{Measurement of $D_s^+$ and $D_s^{*+}$ production in $B$
+                        meson decays and from continuum $e^+e^-$ annihilation at
+                        $\sqrt{s}=10.6$ GeV}",
+      collaboration  = "BaBar",
+      journal        = "Phys. Rev.",
+      volume         = "D65",
+      year           = "2002",
+      pages          = "091104",
+      doi            = "10.1103/PhysRevD.65.091104",
+      eprint         = "hep-ex/0201041",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "SLAC-PUB-9131, BABAR-PUB-01-17",
+      SLACcitation   = "%%CITATION = HEP-EX/0201041;%%"
+}'

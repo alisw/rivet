@@ -1,0 +1,32 @@
+Name: TPC_1985_I205868
+Year: 1985
+Summary: Photon and $\pi^0$ spectra at 29 GeV
+Experiment: TPC
+Collider: PEP
+InspireID: 205868
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Z.Phys. C27 (1985) 187, 1985 
+RunInfo: e+e- to hadronas at 29 GeV
+NeedCrossSection: no
+Beams: [e+, e-]
+Energies: [29]
+Description:
+  'Measurement of the photon and $\pi^0$ spectra at 29 GeV by the TPC experiment.'
+Keywords: []
+BibKey: Aihara:1984mi
+BibTeX: '@article{Aihara:1984mi,
+      author         = "Aihara, H. and others",
+      title          = "{Inclusive $\gamma$ and $\pi^0$ production cross-sections
+                        and energy fractions in $e^+e^-$ annihilation at 29-GeV}",
+      collaboration  = "TPC/Two Gamma",
+      journal        = "Z. Phys.",
+      volume         = "C27",
+      year           = "1985",
+      pages          = "187",
+      doi            = "10.1007/BF01556608",
+      reportNumber   = "LBL-18326, TPC-UT-84-14",
+      SLACcitation   = "%%CITATION = ZEPYA,C27,187;%%"
+}'

@@ -1,0 +1,32 @@
+Name: BELLE_2008_I759073
+Year: 2008
+Summary: Cross section for $e^+e^-\to D^0D^-\pi^++\text{c.c.}$ below 5 GeV
+Experiment: BELLE
+Collider: KEKB
+InspireID: 759073
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+, e-]
+Description:
+  'Cross section for $e^+e^-\to D^0D^-\pi^++\text{c.c.}$ below 5 GeV'
+Keywords: []
+BibKey: Pakhlova:2007fq
+BibTeX: '@article{Pakhlova:2007fq,
+      author         = "Pakhlova, G. and others",
+      title          = "{Observation of psi (4415) ---&gt; D anti-D*(2)(2460) decay
+                        using initial-state radiation}",
+      collaboration  = "Belle",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "100",
+      year           = "2008",
+      pages          = "062001",
+      doi            = "10.1103/PhysRevLett.100.062001",
+      eprint         = "0708.3313",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:0708.3313;%%"
+}'

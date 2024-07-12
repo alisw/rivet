@@ -1,0 +1,32 @@
+{
+    "250824": [
+        "Production of $\\eta$ Mesons in $e^+ e^-$ Annihilations at $\\sqrt{s}=29$-{GeV}", 
+        "HRS", 
+        "10.1016/0370-2693(88)90408-X", 
+        null, 
+        null, 
+        "ins250824", 
+        null, 
+        [
+            "ANL-HEP-PR-87-106", 
+            "IUHEE-87-12", 
+            "UM-HE-87-27", 
+            "PU-87-608"
+        ]
+    ], 
+    "261013": [
+        "Measurement of the D0 $\\to K^- \\pi^+$ Branching Fraction", 
+        "HRS", 
+        "10.1016/0370-2693(88)91689-9", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "ANL-HEP-PR-87-100", 
+            "IUHEE-88-3", 
+            "UM-HE-88-3", 
+            "PU-88-612"
+        ]
+    ]
+}

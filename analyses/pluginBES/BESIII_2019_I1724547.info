@@ -1,0 +1,36 @@
+Name: BESIII_2019_I1724547
+Year: 2019
+Summary: Dalitz decay of $D_s^+\to\pi^+\pi^0\eta$
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1724547
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 123 (2019) 11, 112001
+RunInfo: Any process producing D_s+ mesons
+Description:
+  'Measurement of the mass distributions in the decay $D^+_s\to \pi^+\pi^0\eta$ by BES. The data were read from the plots in the paper and therefore for some points the error bars are the size of the point. It is also not clear that any resolution effects have been unfolded.'
+ValidationInfo:
+  'Herwig 7 events using model in the paper'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2019jjr
+BibTeX: '@article{BESIII:2019jjr,
+    author = "Ablikim, M. and others",
+    collaboration = "BESIII",
+    title = "{Amplitude analysis of $D_{s}^{+} \rightarrow \pi^{+}\pi^{0}\eta$ and first observation of the pure $W$-annihilation decays $D_{s}^{+} \rightarrow a_{0}(980)^{+}\pi^{0}$ and $D_{s}^{+} \rightarrow a_{0}(980)^{0}\pi^{+}$}",
+    eprint = "1903.04118",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevLett.123.112001",
+    journal = "Phys. Rev. Lett.",
+    volume = "123",
+    number = "11",
+    pages = "112001",
+    year = "2019"
+}
+'

@@ -5,11 +5,12 @@ Experiment: CDF
 Collider: Tevatron
 InspireID: 1124333
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Simone Amoroso <amoroso@cern.ch>
 References:
  - Phys.Rev.D 86, 052010 (2012)
- - arXiv:hep-ex/arXiv:1207.7138v3
+ - arXiv:1207.7138 [hep-ex]
  - doi:10.1103/PhysRevD.86.052010   
 RunInfo: $Z\to ee$ event,  a cut on the dilepton invariant mass between 60 and 120 GeV can be added to increase statistics
 NumEvents: 1000000
@@ -38,4 +39,8 @@ BibTeX: '@article{Aaltonen:2012fi,
 }'
 ToDo:
  - Implement the analysis, test it, remove this ToDo, and mark as VALIDATED :-)
+
+
+ReleaseTests:
+ - $A TVT-Run-II-Z-e
 

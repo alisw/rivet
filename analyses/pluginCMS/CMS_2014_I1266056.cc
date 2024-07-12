@@ -23,33 +23,33 @@ namespace Rivet {
     // Book histograms and initialise projections before the run
     void init() {
       // Final state
-      FinalState fs(-3, 3);
-      addProjection(fs, "FS");
+      FinalState fs((Cuts::etaIn(-3, 3)));
+      declare(fs, "FS");
 
       // Leading photon
-      LeadingParticlesFinalState photonfs(FinalState(-2.5, 2.5, 40.0*GeV));
+      LeadingParticlesFinalState photonfs(FinalState((Cuts::etaIn(-2.5, 2.5) && Cuts::pT >=  40.0*GeV)));
       photonfs.addParticleId(PID::PHOTON);
-      addProjection(photonfs, "LeadingPhoton");
+      declare(photonfs, "LeadingPhoton");
 
       // FS excluding the leading photon
       VetoedFinalState vfs(fs);
       vfs.addVetoOnThisFinalState(photonfs);
-      addProjection(vfs, "JetFS");
+      declare(vfs, "JetFS");
 
       // Jets
       FastJets jetpro(vfs, FastJets::ANTIKT, 0.5);
       //jetpro.useInvisibles();
-      addProjection(jetpro, "Jets");
+      declare(jetpro, "Jets");
 
-      _h_phverycentral_jetcentral = bookHisto1D(1, 1, 1);
-      _h_phcentral_jetcentral     = bookHisto1D(2, 1, 1);
-      _h_phforward_jetcentral     = bookHisto1D(3, 1, 1);
-      _h_phveryforward_jetcentral = bookHisto1D(4, 1, 1);
+      book(_h_phverycentral_jetcentral, 1, 1, 1);
+      book(_h_phcentral_jetcentral    , 2, 1, 1);
+      book(_h_phforward_jetcentral    , 3, 1, 1);
+      book(_h_phveryforward_jetcentral, 4, 1, 1);
 
-      _h_phverycentral_jetforward = bookHisto1D(1, 1, 2);
-      _h_phcentral_jetforward     = bookHisto1D(2, 1, 2);
-      _h_phforward_jetforward     = bookHisto1D(3, 1, 2);
-      _h_phveryforward_jetforward = bookHisto1D(4, 1, 2);
+      book(_h_phverycentral_jetforward, 1, 1, 2);
+      book(_h_phcentral_jetforward    , 2, 1, 2);
+      book(_h_phforward_jetforward    , 3, 1, 2);
+      book(_h_phveryforward_jetforward, 4, 1, 2);
 
     }
 
@@ -83,21 +83,20 @@ namespace Rivet {
       const double abs_jet_eta = leadingJet.abseta();
       const double photon_pt = photon.pT()/GeV;
       const double abs_photon_eta = photon.abseta();
-      const double weight = event.weight();
 
       if (abs_jet_eta < 1.5) {
-        if      (abs_photon_eta < 0.9)  _h_phverycentral_jetcentral->fill(photon_pt, weight);
-        else if (abs_photon_eta < 1.44) _h_phcentral_jetcentral->fill(    photon_pt, weight);
+        if      (abs_photon_eta < 0.9)  _h_phverycentral_jetcentral->fill(photon_pt);
+        else if (abs_photon_eta < 1.44) _h_phcentral_jetcentral->fill(    photon_pt);
         else if (abs_photon_eta < 1.57) {}
-        else if (abs_photon_eta < 2.1)  _h_phforward_jetcentral->fill(    photon_pt, weight);
-        else if (abs_photon_eta < 2.5)  _h_phveryforward_jetcentral->fill(photon_pt, weight);
+        else if (abs_photon_eta < 2.1)  _h_phforward_jetcentral->fill(    photon_pt);
+        else if (abs_photon_eta < 2.5)  _h_phveryforward_jetcentral->fill(photon_pt);
       }
       else if (abs_jet_eta < 2.5) {
-        if      (abs_photon_eta < 0.9)  _h_phverycentral_jetforward->fill(photon_pt, weight);
-        else if (abs_photon_eta < 1.44) _h_phcentral_jetforward->fill(    photon_pt, weight);
+        if      (abs_photon_eta < 0.9)  _h_phverycentral_jetforward->fill(photon_pt);
+        else if (abs_photon_eta < 1.44) _h_phcentral_jetforward->fill(    photon_pt);
         else if (abs_photon_eta < 1.57) {}
-        else if (abs_photon_eta < 2.1)  _h_phforward_jetforward->fill(    photon_pt, weight);
-        else if (abs_photon_eta < 2.5)  _h_phveryforward_jetforward->fill(photon_pt, weight);
+        else if (abs_photon_eta < 2.1)  _h_phforward_jetforward->fill(    photon_pt);
+        else if (abs_photon_eta < 2.5)  _h_phveryforward_jetforward->fill(photon_pt);
       }
     }
     
@@ -136,7 +135,7 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CMS_2014_I1266056);
+  RIVET_DECLARE_PLUGIN(CMS_2014_I1266056);
 
 
 }

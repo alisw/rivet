@@ -1,0 +1,212 @@
+{
+    "650381": [
+        "Observation of two new N* peaks in J / psi ---> p pi- anti-n and anti-p pi+ n decays", 
+        "BES", 
+        "10.1103/PhysRevLett.97.062001", 
+        null, 
+        "hep-ex/0405030", 
+        null, 
+        null, 
+        []
+    ], 
+    "683593": [
+        "First measurements of eta(c) decaying into K+ K- 2(pi+ pi-) and 3(pi+ pi-)", 
+        "BES", 
+        "10.1016/j.physletb.2005.10.078", 
+        null, 
+        "hep-ex/0505093", 
+        null, 
+        null, 
+        []
+    ], 
+    "684396": [
+        "Study of J / psi decays to Lambda anti-Lambda and Sigma0 anti-Sigma0", 
+        "BES", 
+        "10.1016/j.physletb.2005.10.079", 
+        null, 
+        "hep-ex/0506020", 
+        null, 
+        null, 
+        []
+    ], 
+    "685902": [
+        "Evidence for kappa meson production in J/psi ---> anti-K* (892)0 K+ pi- process", 
+        "BES", 
+        "10.1016/j.physletb.2005.12.062", 
+        null, 
+        "hep-ex/0506055", 
+        null, 
+        null, 
+        []
+    ], 
+    "696061": [
+        "Measurement of the branching fractions for J/psi ---> gamma pi0, gamma eta and gamma eta-prime", 
+        "BES", 
+        "10.1103/PhysRevD.73.052008", 
+        null, 
+        "hep-ex/0510066", 
+        null, 
+        null, 
+        []
+    ], 
+    "697214": [
+        "Search for eta(C) decays into pi pi and K anti-K", 
+        "BES", 
+        "10.1140/epjc/s2005-02445-0", 
+        null, 
+        "hep-ex/0511021", 
+        null, 
+        null, 
+        []
+    ], 
+    "697591": [
+        "Measurements of J/psi decays into omega pi0, omega eta, and omega eta-prime", 
+        "BES", 
+        "10.1103/PhysRevD.73.052007", 
+        null, 
+        "hep-ex/0511029", 
+        null, 
+        null, 
+        []
+    ], 
+    "700195": [
+        "Experimental study of $\\psi(2S)$ decays to $K^+K^-\\pi^+\\pi^-\\pi^0$ final states", 
+        "BES", 
+        "10.1103/PhysRevD.73.052004", 
+        null, 
+        "hep-ex/0512025", 
+        null, 
+        null, 
+        []
+    ], 
+    "710707": [
+        "Observation of a near-threshold enhancement in the omega phi mass spectrum from the doubly OZI suppressed decay J / psi --> gamma omega phi", 
+        "BES", 
+        "10.1103/PhysRevLett.96.162002", 
+        null, 
+        "hep-ex/0602031", 
+        null, 
+        null, 
+        []
+    ], 
+    "713678": [
+        "Search for the rare decays J/psi ---> D-(s) e+ nu(e), J/psi ---> anti-D0 e+ e-", 
+        "BES", 
+        "10.1016/j.physletb.2006.06.045", 
+        null, 
+        "hep-ex/0604005", 
+        null, 
+        null, 
+        []
+    ], 
+    "714504": [
+        "Search for D+ ---> phi l+ nu and measurement of the branching fraction for D+ ---> phi pi+", 
+        "BES", 
+        "10.1140/epjc/s2006-02563-1", 
+        null, 
+        "hep-ex/0604033", 
+        null, 
+        null, 
+        []
+    ], 
+    "715175": [
+        "Pseudoscalar production at omega omega threshold in J/psi ---> gamma omega omega", 
+        "BES", 
+        "10.1103/PhysRevD.73.112007", 
+        null, 
+        "hep-ex/0604045", 
+        null, 
+        null, 
+        []
+    ], 
+    "716589": [
+        "First observation of psi(2S) ---> p anti-n pi- + c.c.", 
+        "BES", 
+        "10.1103/PhysRevD.74.012004", 
+        null, 
+        "hep-ex/0605031", 
+        null, 
+        null, 
+        []
+    ], 
+    "717663": [
+        "Measurements of the absolute branching fractions for D ---> anti-K pi e+ nu(e), D ---> anti-K* e+ nu(e) and determination of Gamma (D+ ---> anti-K*0 e+ nu(e)) / Gamma(D+ ---> anti-K0 e+ nu(e))", 
+        "BES", 
+        "10.1140/epjc/s2006-02558-x", 
+        null, 
+        "hep-ex/0605103", 
+        null, 
+        null, 
+        []
+    ], 
+    "717665": [
+        "Measurements of the cross-sections for e+ e- ---> hadrons at 3.650-GeV, 3.6648-GeV, 3.773-GeV and the branching fraction for psi(3770) ---> non - D anti-D", 
+        "BES", 
+        "10.1016/j.physletb.2006.08.049", 
+        null, 
+        "hep-ex/0605105", 
+        "ins717665", 
+        null, 
+        []
+    ], 
+    "717720": [
+        "Measurements of the braching fractions for psi(3770) ---> D0 anti-D0, D+ D-, D anti-D and the resonance parameters of psi(3770) and psi(2S)", 
+        "BES", 
+        "10.1103/PhysRevLett.97.121801", 
+        null, 
+        "hep-ex/0605107", 
+        null, 
+        null, 
+        []
+    ], 
+    "719685": [
+        "Observation of a broad 1-- resonant structure around 1.5-GeV/c**2 in the K+ K- mass spectrum in J/psi ---> K+ K- pi0", 
+        "BES", 
+        "10.1103/PhysRevLett.97.142002", 
+        null, 
+        "hep-ex/0606047", 
+        null, 
+        null, 
+        []
+    ], 
+    "720777": [
+        "Search for Invisible Decays of eta and eta-prime in the Processes J/psi ---> phi eta and phi eta-prime", 
+        "BES", 
+        "10.1103/PhysRevLett.97.202002", 
+        null, 
+        "hep-ex/0607006", 
+        null, 
+        null, 
+        []
+    ], 
+    "721704": [
+        "Measurement of chi(cJ) ---> K+ K- K+ K- decays", 
+        "BES", 
+        "10.1016/j.physletb.2006.09.040", 
+        null, 
+        "hep-ex/0607025", 
+        null, 
+        null, 
+        []
+    ], 
+    "725963": [
+        "Improved measurement of psi(2S) decays into tau+ tau-", 
+        "BES", 
+        "10.1103/PhysRevD.74.112003", 
+        null, 
+        "hep-ex/0609023", 
+        null, 
+        null, 
+        []
+    ], 
+    "733111": [
+        "Measurements of branching fractions for inclusive anti-K0 / K0 and K*(892)-+ decays of neutral and charged D mesons", 
+        "BES", 
+        "10.1016/j.physletb.2006.10.057", 
+        null, 
+        "hep-ex/0611056", 
+        null, 
+        null, 
+        []
+    ]
+}

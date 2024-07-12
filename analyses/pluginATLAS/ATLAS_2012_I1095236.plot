@@ -5,7 +5,7 @@ YLabel=Number of Events
 LogY=0
 # END PLOT
 # BEGIN PLOT /ATLAS_2012_I1095236/count_SR0_B1
-Title=Number of events in the SR\0-B1 signal region
+Title=Number of events in the SR0-B1 signal region
 XLabel=
 YLabel=Number of Events
 LogY=0
@@ -55,7 +55,7 @@ LogY=1
 # END PLOT
 # BEGIN PLOT /ATLAS_2012_I1095236/hist_met_SR0_A1
 Title=Missing transverse Energy for events in signal region SR0-A1
-XLabel=$E_{\mathrm{T}}^{\rm miss}$ [GeV]
+XLabel=$E_{\mathrm{T}}^\mathrm{miss}$ [GeV]
 YLabel=$\mathrm{Events}/50 \mathrm{GeV}$
 LogY=1
 # END PLOT
@@ -67,7 +67,7 @@ LogY=1
 # END PLOT
 # BEGIN PLOT /ATLAS_2012_I1095236/hist_met_SR0_A2
 Title=Missing transverse Energy for events in signal region SR0-A2
-XLabel=$E_{\mathrm{T}}^{\rm miss}$ [GeV]
+XLabel=$E_{\mathrm{T}}^\mathrm{miss}$ [GeV]
 YLabel=$\mathrm{Events}/50 \mathrm{GeV}$
 LogY=1
 # END PLOT
@@ -80,7 +80,7 @@ LogY=1
 # END PLOT
 # BEGIN PLOT /ATLAS_2012_I1095236/hist_met_SR1_D_e
 Title=Missing transverse Energy for events with an electron in the SR1-D signal region
-XLabel=$E_{\mathrm{T}}^{\rm miss}$ [GeV]
+XLabel=$E_{\mathrm{T}}^\mathrm{miss}$ [GeV]
 YLabel=$\mathrm{Events}/40 \mathrm{GeV}$
 LogY=1
 # END PLOT
@@ -92,7 +92,7 @@ LogY=1
 # END PLOT
 # BEGIN PLOT /ATLAS_2012_I1095236/hist_met_SR1_D_mu
 Title=Missing transverse Energy for events with an muon in the SR1-D signal region
-XLabel=$E_{\mathrm{T}}^{\rm miss}$ [GeV]
+XLabel=$E_{\mathrm{T}}^\mathrm{miss}$ [GeV]
 YLabel=$\mathrm{Events}/40 \mathrm{GeV}$
 LogY=1
 # END PLOT

@@ -15,7 +15,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2016_I1444991);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2016_I1444991);
 
 
   public:
@@ -52,33 +52,31 @@ namespace Rivet {
 
       // Project jets
       FastJets jets(FS, FastJets::ANTIKT, 0.4);
-      jets.useInvisibles(JetAlg::NO_INVISIBLES);
-      jets.useMuons(JetAlg::NO_MUONS);
+      jets.useInvisibles(JetAlg::Invisibles::NONE);
+      jets.useMuons(JetAlg::Muons::NONE);
       declare(jets, "jets");
 
       // Book histograms
-      _h_Njets        = bookHisto1D( 2,1,1);
-      _h_PtllMET      = bookHisto1D( 3,1,1);
-      _h_Yll          = bookHisto1D( 4,1,1);
-      _h_PtLead       = bookHisto1D( 5,1,1);
-      _h_Njets_norm   = bookHisto1D( 6,1,1);
-      _h_PtllMET_norm = bookHisto1D( 7,1,1);
-      _h_Yll_norm     = bookHisto1D( 8,1,1);
-      _h_PtLead_norm  = bookHisto1D( 9,1,1);
-      _h_JetVeto      = bookScatter2D(10, 1, 1, true);
+      book(_h_Njets        , 2,1,1);
+      book(_h_PtllMET      , 3,1,1);
+      book(_h_Yll          , 4,1,1);
+      book(_h_PtLead       , 5,1,1);
+      book(_h_Njets_norm   , 6,1,1);
+      book(_h_PtllMET_norm , 7,1,1);
+      book(_h_Yll_norm     , 8,1,1);
+      book(_h_PtLead_norm  , 9,1,1);
+      book(_h_JetVeto      , 10, 1, 1, true);
 
       //histos for jetveto
       std::vector<double> ptlead25_bins = { 0., 25., 300. };
       std::vector<double> ptlead40_bins = { 0., 40., 300. };
-      _h_pTj1_sel25 = bookHisto1D( "pTj1_sel25", ptlead25_bins, "", "", "" );
-      _h_pTj1_sel40 = bookHisto1D( "pTj1_sel40", ptlead40_bins, "", "", "" );
+      book(_h_pTj1_sel25 , "pTj1_sel25", ptlead25_bins);
+      book(_h_pTj1_sel40 , "pTj1_sel40", ptlead40_bins);
     }
 
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-
-      const double weight = event.weight();
 
       // Get final state particles
       const FinalState& ifs = applyProjection<FinalState>(event, "InvisibleFS");
@@ -108,17 +106,17 @@ namespace Rivet {
 
       //get MET
       FourMomentum met;
-      foreach (const Particle& p, ifs.particles())  met += p.momentum();
+      for (const Particle& p : ifs.particles())  met += p.momentum();
 
       // do a few cuts before looking at jets
       if (pTl1 <= 22. || DPhill >= 1.8 || met.pT() <= 20.)  vetoEvent;
       if (Mll <= 10. || Mll >= 55.)  vetoEvent;
 
       Jets jets_selected;
-      foreach (const Jet &j, jets) {
+      for (const Jet &j : jets) {
         if( j.abseta() > 2.4 && j.pT()<=30*GeV ) continue;
         bool keep = true;
-        foreach(DressedLepton el, good_el) {
+        for(DressedLepton el : good_el) {
           keep &= deltaR(j, el) >= 0.3;
         }
         if (keep)  jets_selected += j;
@@ -130,16 +128,16 @@ namespace Rivet {
       double pTj1 = jets_selected.size()? jets_selected[0].pT() : 0.1;
 
       // Fill histograms
-      _h_Njets->fill(Njets, weight);
-      _h_PtllMET->fill(PtllMET, weight);
-      _h_Yll->fill(fabs(Yll), weight);
-      _h_PtLead->fill(pTj1, weight);
-      _h_Njets_norm->fill(Njets, weight);
-      _h_PtllMET_norm->fill(PtllMET, weight);
-      _h_Yll_norm->fill(fabs(Yll), weight);
-      _h_PtLead_norm->fill(pTj1, weight);
-      _h_pTj1_sel25->fill(pTj1, weight);
-      _h_pTj1_sel40->fill(pTj1, weight);
+      _h_Njets->fill(Njets);
+      _h_PtllMET->fill(PtllMET);
+      _h_Yll->fill(fabs(Yll));
+      _h_PtLead->fill(pTj1);
+      _h_Njets_norm->fill(Njets);
+      _h_PtllMET_norm->fill(PtllMET);
+      _h_Yll_norm->fill(fabs(Yll));
+      _h_PtLead_norm->fill(pTj1);
+      _h_pTj1_sel25->fill(pTj1);
+      _h_pTj1_sel40->fill(pTj1);
     }
 
 
@@ -192,6 +190,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2016_I1444991);
+  RIVET_DECLARE_PLUGIN(ATLAS_2016_I1444991);
 
 }

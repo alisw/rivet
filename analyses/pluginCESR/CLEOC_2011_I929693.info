@@ -1,0 +1,34 @@
+Name: CLEOC_2011_I929693
+Year: 2011
+Summary:  $\chi_{c1}\to \eta^{(\prime)}\pi^+\pi^-$
+Experiment: CLEOC
+Collider: CESR
+InspireID: 929693
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 84 (2011) 112009
+Description:
+  'Measurement of the mass distributions in the decays $\chi_{c1}\to \eta^{(\prime)}\pi^+\pi^-$.
+   The data were read from the plots in the paper and may not be corrected for efficiency.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: CLEO:2011upl
+BibTeX: '@article{CLEO:2011upl,
+    author = "Adams, G. S. and others",
+    collaboration = "CLEO",
+    title = "{Amplitude analyses of the decays $\chi_c1 -> \eta \pi^+ \pi^-$ and $\chi_c1 -> \eta^\prime \pi^+ \pi^-$}",
+    eprint = "1109.5843",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CLNS-11-2080, CLEO-11-06",
+    doi = "10.1103/PhysRevD.84.112009",
+    journal = "Phys. Rev. D",
+    volume = "84",
+    pages = "112009",
+    year = "2011"
+}
+'

@@ -1,0 +1,13 @@
+BEGIN YODA_SCATTER2D_V2 /REF/CUSB_1991_I325661/d01-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.03, up: 0.03}}, 1: {error: {dn: -0.13, up: 0.13}}}
+
+IsRef: 1
+Path: /REF/CUSB_1991_I325661/d01-x01-y01
+Title: doi:10.17182/hepdata.29286.v1/t1
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.063000e+01	2.000000e-02	2.000000e-02	1.600000e-01	3.000000e-02	3.000000e-02
+1.070000e+01	0.000000e+00	0.000000e+00	3.300000e-01	1.300000e-01	1.300000e-01
+END YODA_SCATTER2D_V2

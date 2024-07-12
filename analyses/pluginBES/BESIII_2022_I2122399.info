@@ -1,0 +1,31 @@
+Name: BESIII_2022_I2122399
+Year: 2022
+Summary: $pK^-$ mass distribution in $\Lambda_c^+\to pK^-e^+\nu_e$
+Experiment: BESIII
+Collider: BEPC
+InspireID: 2122399
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - arXiv:2207.11483 [hep-ex]
+RunInfo: Any process producing Lambda_c+
+Description:
+  'Measurement of the  $pK^-$ mass distribution in $\Lambda_c^+\to pK^-e^+\nu_e$ by BES-III. N.B. The data were read from the paper and may not have been corrected for acceptance.'
+ValidationInfo:
+  'Herwig 7 events using EvtGen for the decays.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Ablikim:2022iwj
+BibTeX: '@article{Ablikim:2022iwj,
+    author = "Ablikim, M. and others",
+    title = "{First Observation of the Semileptonic Decay $\Lambda_c^+\rightarrow pK^- e^+\nu_e$}",
+    eprint = "2207.11483",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    month = "7",
+    year = "2022"
+}
+'

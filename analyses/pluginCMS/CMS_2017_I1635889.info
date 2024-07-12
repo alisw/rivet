@@ -5,8 +5,9 @@ Experiment: CMS
 Collider: LHC
 InspireID: 1635889
 Status: VALIDATED
+Reentrant: false
 Authors:
-  - Rajat Gupta (rajat.gupta@cern.ch)
+  - Rajat Gupta <rajat.gupta@cern.ch>
   - Ramandeep Kumar
   - Ankita Mehta
   - Sunil Bansal

@@ -1,0 +1,231 @@
+{
+    "503434": [
+        "Measurement of high Q**2 charged current e+ p deep inelastic scattering cross-sections at HERA", 
+        "ZEUS", 
+        "10.1007/s100529900280", 
+        null, 
+        "hep-ex/9907010", 
+        "ins503434", 
+        null, 
+        [
+            "DESY-99-059", 
+            "ANL-HEP-PR-99-84"
+        ]
+    ], 
+    "587202": [
+        "Measurement of proton dissociative diffractive photoproduction of vector mesons at large momentum transfer at HERA", 
+        "ZEUS", 
+        "10.1140/epjc/s2002-01079-0", 
+        null, 
+        "hep-ex/0205081", 
+        "ins587202", 
+        null, 
+        [
+            "DESY-02-072"
+        ]
+    ], 
+    "587371": [
+        "Measurement of high Q$^2$ charged current cross-sections in e$^-$p deep inelastic scattering at HERA", 
+        "ZEUS", 
+        "10.1016/S0370-2693(02)02093-2", 
+        null, 
+        "hep-ex/0205091", 
+        "ins587371", 
+        null, 
+        [
+            "DESY-02-064"
+        ]
+    ], 
+    "593048": [
+        "A ZEUS next-to-leading-order QCD analysis of data on deep inelastic scattering", 
+        "ZEUS", 
+        "10.1103/PhysRevD.67.012007", 
+        null, 
+        "hep-ex/0208023", 
+        null, 
+        null, 
+        [
+            "DESY-02-105"
+        ]
+    ], 
+    "593481": [
+        "Measurement of high Q**2 e- p neutral current cross-sections at HERA and the extraction of xF(3)", 
+        "ZEUS", 
+        "10.1140/epjc/s2003-01163-y", 
+        null, 
+        "hep-ex/0208040", 
+        "ins593481", 
+        null, 
+        [
+            "DESY-02-113"
+        ]
+    ], 
+    "599368": [
+        "Leading proton production in e+ p collisions at HERA", 
+        "ZEUS", 
+        "10.1016/S0550-3213(03)00152-4", 
+        null, 
+        "hep-ex/0210029", 
+        null, 
+        null, 
+        [
+            "DESY-02-142"
+        ]
+    ], 
+    "600814": [
+        "Study of the azimuthal asymmetry of jets in neutral current deep inelastic scattering at HERA", 
+        "ZEUS", 
+        "10.1016/S0370-2693(02)03072-1", 
+        null, 
+        "hep-ex/0210064", 
+        "ins600814", 
+        null, 
+        [
+            "DESY-02-171"
+        ]
+    ], 
+    "601166": [
+        "Measurements of inelastic J / psi and psi-prime photoproduction at HERA", 
+        "ZEUS", 
+        "10.1140/epjc/s2002-01130-2", 
+        null, 
+        "hep-ex/0211011", 
+        "ins601166", 
+        null, 
+        [
+            "DESY-02-163"
+        ]
+    ], 
+    "601697": [
+        "Observation of the strange sea in the proton via inclusive phi meson production in neutral current deep inelastic scattering at HERA", 
+        "ZEUS", 
+        "10.1016/S0370-2693(02)03206-9", 
+        null, 
+        "hep-ex/0211025", 
+        "ins601697", 
+        null, 
+        [
+            "DESY-02-184"
+        ]
+    ], 
+    "602252": [
+        "Measurement of event shapes in deep inelastic scattering at HERA", 
+        "ZEUS", 
+        "10.1140/epjc/s2003-01148-x", 
+        null, 
+        "hep-ex/0211040", 
+        "ins602252", 
+        null, 
+        [
+            "DESY-02-198"
+        ]
+    ], 
+    "604485": [
+        "Measurement of subjet multiplicities in neutral current deep inelastic scattering at HERA and determination of alpha(s)", 
+        "ZEUS", 
+        "10.1016/S0370-2693(03)00216-8", 
+        null, 
+        "hep-ex/0212030", 
+        null, 
+        null, 
+        [
+            "DESY-02-217"
+        ]
+    ], 
+    "605584": [
+        "Scaling violations and determination of alpha(s) from jet production in gamma p interactions at HERA", 
+        "ZEUS", 
+        "10.1016/S0370-2693(03)00380-0", 
+        null, 
+        "hep-ex/0212064", 
+        "ins605584", 
+        null, 
+        [
+            "DESY-02-228"
+        ]
+    ], 
+    "613066": [
+        "Search for single top production in ep collisions at HERA", 
+        "ZEUS", 
+        "10.1016/S0370-2693(03)00333-2", 
+        null, 
+        "hep-ex/0302010", 
+        null, 
+        null, 
+        [
+            "DESY-03-012"
+        ]
+    ], 
+    "613625": [
+        "Dijet angular distributions in photoproduction of charm at HERA", 
+        "ZEUS", 
+        "10.1016/S0370-2693(03)00752-4", 
+        null, 
+        "hep-ex/0302025", 
+        "ins613625", 
+        null, 
+        [
+            "DESY-03-015"
+        ]
+    ], 
+    "616445": [
+        "A Search for resonance decays to lepton + jet at HERA and limits on leptoquarks", 
+        "ZEUS", 
+        "10.1103/PhysRevD.68.052004", 
+        null, 
+        "hep-ex/0304008", 
+        null, 
+        null, 
+        [
+            "DESY-03-041"
+        ]
+    ], 
+    "618776": [
+        "Measurement of deeply virtual Compton scattering at HERA", 
+        "ZEUS", 
+        "10.1016/j.physletb.2003.08.048", 
+        null, 
+        "hep-ex/0305028", 
+        "ins618776", 
+        null, 
+        [
+            "DESY-03-059"
+        ]
+    ], 
+    "620434": [
+        "Jet production in charged current deep inelastic e+ p scattering at HERA", 
+        "ZEUS", 
+        "10.1140/epjc/s2003-01358-2", 
+        null, 
+        "hep-ex/0306018", 
+        "ins620434", 
+        null, 
+        [
+            "DESY-03-055"
+        ]
+    ], 
+    "623557": [
+        "Measurement of high Q**2 charged current cross-sections in e+ p deep inelastic scattering at HERA", 
+        "ZEUS", 
+        "10.1140/epjc/s2003-01363-5", 
+        null, 
+        "hep-ex/0307043", 
+        "ins623557", 
+        null, 
+        [
+            "DESY-03-093"
+        ]
+    ], 
+    "624128": [
+        "Measurement of the open charm contribution to the diffractive proton structure function", 
+        "ZEUS", 
+        "10.1016/j.nuclphysb.2003.09.001", 
+        null, 
+        "hep-ex/0307068", 
+        "ins624128", 
+        null, 
+        [
+            "DESY-03-094"
+        ]
+    ]
+}

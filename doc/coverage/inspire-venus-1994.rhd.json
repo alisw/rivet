@@ -1,0 +1,56 @@
+{
+    "359973": [
+        "Measurement of open charm production in two photon processes with detection of electron inclusive events", 
+        "VENUS", 
+        "10.1007/BF01411012", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-93-142", 
+            "HUPD-9326", 
+            "KOBE-HEP-9310", 
+            "KUNS-1225", 
+            "OUHEP-93-5", 
+            "OULNS-93-05", 
+            "TMU-HEP-93-5"
+        ]
+    ], 
+    "371498": [
+        "Search for a light scalar top in e+ e- reaction at E(cm) = 58-GeV", 
+        "VENUS", 
+        "10.1103/PhysRevLett.72.3313", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-93-189", 
+            "HUPD-9331", 
+            "KOBE-HEP-94-02", 
+            "KUNS-1243", 
+            "OUHEP-94.2", 
+            "OULNS-93-08", 
+            "TMU-HEP-94-2"
+        ]
+    ], 
+    "371909": [
+        "A Study of single photon production in e+ e- annihilation at S**(1/2) = 58-GeV", 
+        "VENUS", 
+        "10.1016/0370-2693(94)90965-2", 
+        null, 
+        null, 
+        "ins371909", 
+        null, 
+        [
+            "KEK-PREPRINT-93-194", 
+            "TMU-HEP-94-1", 
+            "HUPD-9330", 
+            "KOBE-HEP-94-01", 
+            "KUNS-1242", 
+            "OUHEP-94.1", 
+            "OULNS-93-07"
+        ]
+    ]
+}

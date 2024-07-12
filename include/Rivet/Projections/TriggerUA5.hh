@@ -54,14 +54,14 @@ namespace Rivet {
   protected:
 
     /// Compare with other projections.
-    virtual int compare(const Projection&) const {
-      return EQUIVALENT;
+    virtual CmpState compare(const Projection&) const {
+      return CmpState::EQ;
     }
 
 
-  private:
+  protected:
 
-    /// The min bias trigger decisions
+    /// The min-bias trigger decisions
     bool _decision_sd, _decision_nsd_1, _decision_nsd_2;
 
     /// Is it a pp collision?

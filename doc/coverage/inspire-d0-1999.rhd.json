@@ -1,0 +1,219 @@
+{
+    "470363": [
+        "Determination of the absolute jet energy scale in the D0 calorimeters", 
+        "D0", 
+        "10.1016/S0168-9002(98)01368-0", 
+        null, 
+        "hep-ex/9805009", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-97-330-E"
+        ]
+    ], 
+    "473420": [
+        "The dijet mass spectrum and a search for quark compositeness in $\\bar{p}p$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.82.2457", 
+        null, 
+        "hep-ex/9807014", 
+        "ins473420", 
+        null, 
+        [
+            "FERMILAB-PUB-98-220-E"
+        ]
+    ], 
+    "473457": [
+        "The inclusive jet cross section in $\\bar{p}p$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.82.2451", 
+        null, 
+        "hep-ex/9807018", 
+        "ins473457", 
+        null, 
+        [
+            "FERMILAB-PUB-98-207-E"
+        ]
+    ], 
+    "473954": [
+        "Small angle $J/\\psi$ production in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.82.35", 
+        null, 
+        "hep-ex/9807029", 
+        "ins473954", 
+        null, 
+        [
+            "FERMILAB-PUB-98-237-E"
+        ]
+    ], 
+    "474782": [
+        "Search for squarks and gluinos in single-photon events with jets and large missing transverse energy in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.82.29", 
+        null, 
+        "hep-ex/9808010", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-98-243-E"
+        ]
+    ], 
+    "475407": [
+        "Measurement of the Top Quark Mass in the Dilepton Channel", 
+        "D0", 
+        "10.1103/PhysRevD.60.052001", 
+        null, 
+        "hep-ex/9808029", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-98-261-E"
+        ]
+    ], 
+    "475565": [
+        "Measurement of the top quark pair production cross section in $p\\bar{p}$ collisions using multijet final states", 
+        "D0", 
+        "10.1103/PhysRevD.60.012001", 
+        null, 
+        "hep-ex/9808034", 
+        "ins475565", 
+        null, 
+        [
+            "FERMILAB-PUB-98-130-E"
+        ]
+    ], 
+    "479441": [
+        "Search for nonstandard Higgs bosons using high mass photon pairs in $p\\bar{p} \\to \\gamma \\gamma + 2 {\\rm jets}$ at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.82.2244", 
+        null, 
+        "hep-ex/9811029", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-98-362-E"
+        ]
+    ], 
+    "480590": [
+        "Measurement of the high mass Drell-Yan cross-section and limits on quark electron compositeness scales", 
+        "D0", 
+        "10.1103/PhysRevLett.82.4769", 
+        null, 
+        "hep-ex/9812010", 
+        "ins480590", 
+        null, 
+        [
+            "FERMILAB-PUB-98-391-E"
+        ]
+    ], 
+    "494099": [
+        "Measurement of the top quark pair production cross-section in the all jets decay channel", 
+        "D0", 
+        "10.1103/PhysRevLett.83.1908", 
+        null, 
+        "hep-ex/9901023", 
+        "ins494099", 
+        null, 
+        [
+            "FERMILAB-PUB-99-008-E"
+        ]
+    ], 
+    "494696": [
+        "Measurement of $W$ and $Z$ boson production cross sections", 
+        "D0", 
+        "10.1103/PhysRevD.60.052003", 
+        null, 
+        "hep-ex/9901040", 
+        "ins494696", 
+        null, 
+        [
+            "FERMILAB-PUB-99-015-E"
+        ]
+    ], 
+    "495143": [
+        "Search for squarks and gluinos in events containing jets and a large imbalance in transverse energy", 
+        "D0", 
+        "10.1103/PhysRevLett.83.4937", 
+        null, 
+        "hep-ex/9902013", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-98-402-E"
+        ]
+    ], 
+    "496902": [
+        "Search for bottom squarks in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1103/PhysRevD.60.031101", 
+        null, 
+        "hep-ex/9903041", 
+        "ins496902", 
+        null, 
+        [
+            "FERMILAB-PUB-99-046-E"
+        ]
+    ], 
+    "497058": [
+        "Search for charged higgs bosons in decays of top quark pairs", 
+        "D0", 
+        "10.1103/PhysRevLett.82.4975", 
+        null, 
+        "hep-ex/9902028", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-99-029-E"
+        ]
+    ], 
+    "498652": [
+        "Search for second generation leptoquark pairs decaying to $\\mu \\nu + {\\rm jets}$ in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.83.2896", 
+        null, 
+        "hep-ex/9904023", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-99-123-E"
+        ]
+    ], 
+    "499282": [
+        "Studies of $W W$ and $W Z$ production and limits on anomalous $W W \\gamma$ and $W W Z$ couplings", 
+        "D0", 
+        "10.1103/PhysRevD.60.072002", 
+        null, 
+        "hep-ex/9905005", 
+        "ins499282", 
+        null, 
+        [
+            "FERMILAB-PUB-99-139-E", 
+            "D0PUB-99-01"
+        ]
+    ], 
+    "503711": [
+        "Search for $R-$parity violating supersymmetry in the dielectron channel", 
+        "D0", 
+        "10.1103/PhysRevLett.83.4476", 
+        null, 
+        "hep-ex/9907019", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-99-200-E"
+        ]
+    ], 
+    "505114": [
+        "Evidence of color coherence effects in $W + {\\rm jets}$ events from $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1016/S0370-2693(99)01015-1", 
+        null, 
+        "hep-ex/9908017", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-99-224-E"
+        ]
+    ]
+}

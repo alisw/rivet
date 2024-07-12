@@ -3,6 +3,10 @@
 #include "Rivet/ProjectionHandler.hh"
 #include "Rivet/Tools/Cmp.hh"
 #include <algorithm>
+#include <iostream>
+
+using std::cerr;
+using std::endl;
 
 namespace {
   // Get a logger.
@@ -102,8 +106,7 @@ namespace Rivet {
 
 
   // Try to find a equivalent projection in the system
-  ProjHandle ProjectionHandler::_getEquiv(const Projection& proj) const
-  {
+  ProjHandle ProjectionHandler::_getEquiv(const Projection& proj) const {
     // Get class type using RTTI
     const std::type_info& newtype = typeid(proj);
     getLog() << Log::TRACE << "RTTI type of " << &proj << " is " << newtype.name() << endl;
@@ -112,22 +115,23 @@ namespace Rivet {
     getLog() << Log::TRACE << "Comparing " << &proj
              << " with " << _projs.size()
              << " registered projection" << (_projs.size() == 1 ? "" : "s") <<  endl;
-    for (const ProjHandle& ph : _projs) {
+    for (const ProjHandle& regph : _projs) {
       // Make sure the concrete types match, using RTTI.
-      const std::type_info& regtype = typeid(*ph);
-      getLog() << Log::TRACE << "  RTTI type comparison with " << ph << ": "
+      const Projection& regproj = *regph; //< done separately from typeid() to keep Clang happy
+      const std::type_info& regtype = typeid(regproj);
+      getLog() << Log::TRACE << "  RTTI type comparison with " << regph << ": "
                << newtype.name() << " vs. " << regtype.name() << endl;
       if (newtype != regtype) continue;
-      getLog() << Log::TRACE << "  RTTI type matches with " << ph << endl;
+      getLog() << Log::TRACE << "  RTTI type matches with " << regph << endl;
 
       // Test for semantic match
-      if (pcmp(*ph, proj) != EQUIVALENT) {
+      if (pcmp(regproj, proj) != CmpState::EQ) {
         getLog() << Log::TRACE << "  Projections at "
-                 << &proj << " and " << ph << " are not equivalent" << endl;
+                 << &proj << " and " << regph << " are not equivalent" << endl;
       } else {
         getLog() << Log::TRACE << "  MATCH! Projections at "
-                 << &proj << " and " << ph << " are equivalent" << endl;
-        return ph;
+                 << &proj << " and " << regph << " are equivalent" << endl;
+        return regph;
       }
     }
     getLog() << Log::TRACE << "  Nothing matches." << endl;
@@ -138,7 +142,7 @@ namespace Rivet {
 
 
   string ProjectionHandler::_getStatus() const {
-    ostringstream msg;
+    std::ostringstream msg;
     msg << "Current projection hierarchy:" << endl;
     for (const NamedProjsMap::value_type& nps : _namedprojs) {
       //const string parentname = nps.first->name();
@@ -237,13 +241,13 @@ namespace Rivet {
     MSG_TRACE("Searching for child projection '" << name << "' of " << &parent);
     NamedProjsMap::const_iterator nps = _namedprojs.find(&parent);
     if (nps == _namedprojs.end()) {
-      ostringstream msg;
+      std::ostringstream msg;
       msg << "No projections registered for parent " << &parent;
       throw Error(msg.str());
     }
     NamedProjs::const_iterator np = nps->second.find(name);
     if (np == nps->second.end()) {
-      ostringstream msg;
+      std::ostringstream msg;
       msg << "No projection '" << name << "' found for parent " << &parent;
       throw Error(msg.str());
     }
@@ -253,6 +257,8 @@ namespace Rivet {
     return *(np->second);
   }
 
-
+// @todo all thread/mutex code belongs to a temporary fix to allow for
+// basic threading
+std::mutex ProjectionHandler::mtx;
 
 }

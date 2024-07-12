@@ -29,18 +29,18 @@ namespace Rivet {
       ifs.acceptId(PID::PHOTON);
       declare(ifs, "IFS");
 
-      _h_m_PP = bookHisto1D("m_PP", logspace(50, 1.0, 0.25*(sqrtS()>0.?sqrtS():14000.)));
-      _h_pT_PP = bookHisto1D("pT_PP", logspace(50, 1.0, 0.25*(sqrtS()>0.?sqrtS():14000.)));
-      _h_pT_P1 = bookHisto1D("pT_P1", 50, 0.0, 70.0);
-      _h_pT_P2 = bookHisto1D("pT_P2", 50, 0.0, 70.0);
-      _h_dphi_PP = bookHisto1D("dphi_PP", 20, 0.0, M_PI);
+      book(_h_m_PP ,"m_PP", logspace(50, 1.0, 0.25*(sqrtS()>0.?sqrtS():14000.)));
+      book(_h_pT_PP ,"pT_PP", logspace(50, 1.0, 0.25*(sqrtS()>0.?sqrtS():14000.)));
+      book(_h_pT_P1 ,"pT_P1", 50, 0.0, 70.0);
+      book(_h_pT_P2 ,"pT_P2", 50, 0.0, 70.0);
+      book(_h_dphi_PP ,"dphi_PP", 20, 0.0, M_PI);
     }
 
 
     void analyze(const Event& event) {
-      const double weight = event.weight();
+      const double weight = 1.0;
 
-      Particles photons = apply<IdentifiedFinalState>(event, "IFS").particles();
+      const Particles& photons = apply<IdentifiedFinalState>(event, "IFS").particlesByPt();
 
       if (photons.size() < 2) {
         vetoEvent;
@@ -48,12 +48,12 @@ namespace Rivet {
 
       // Isolate photons with ET_sum in cone
       Particles isolated_photons;
-      Particles fs = apply<FinalState>(event, "FS").particlesByPt();
-      foreach (const Particle& photon, photons) {
+      const Particles& fs = apply<FinalState>(event, "FS").particlesByPt();
+      for (const Particle& photon : photons) {
         FourMomentum mom_in_cone;
         double eta_P = photon.eta();
         double phi_P = photon.phi();
-        foreach (const Particle& p, fs) {
+        for (const Particle& p : fs) {
           if (deltaR(eta_P, phi_P, p.eta(), p.phi()) < 0.4) {
             mom_in_cone += p.momentum();
           }
@@ -105,6 +105,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(MC_DIPHOTON);
+  RIVET_DECLARE_PLUGIN(MC_DIPHOTON);
 
 }

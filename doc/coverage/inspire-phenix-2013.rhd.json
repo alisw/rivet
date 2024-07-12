@@ -1,0 +1,112 @@
+{
+    "1102930": [
+        "Transverse-Momentum Dependence of the $J/\\psi$ Nuclear Modification in $d+$Au Collisions at $\\sqrt{s_{NN}}=200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.87.034904", 
+        null, 
+        "1204.0777", 
+        null, 
+        null, 
+        []
+    ], 
+    "1126017": [
+        "Direct photon production in $d+$Au collisions at $\\sqrt{s_{NN}}=200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.87.054907", 
+        null, 
+        "1208.1234", 
+        null, 
+        null, 
+        []
+    ], 
+    "1127262": [
+        "Neutral pion production with respect to centrality and reaction plane in Au$+$Au collisions at $\\sqrt{s_{NN}}$=200 GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.87.034911", 
+        null, 
+        "1208.2254", 
+        "ins1127262", 
+        null, 
+        []
+    ], 
+    "1185576": [
+        "Double Spin Asymmetry of Electrons from Heavy Flavor Decays in $p+p$ Collisions at $\\sqrt{s}=200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevD.87.012011", 
+        null, 
+        "1209.3278", 
+        null, 
+        null, 
+        []
+    ], 
+    "1185577": [
+        "Inclusive cross section and single transverse spin asymmetry for very forward neutron production in polarized p+p collisions at s=200  GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevD.88.032006", 
+        null, 
+        "1209.3283", 
+        null, 
+        null, 
+        []
+    ], 
+    "1203021": [
+        "$\\upsilon(1S+2S+3S)$ production in $d+$Au and $p+p$ collisions at $\\sqrt{s_{NN}}=200$ GeV and cold-nuclear matter effects", 
+        "PHENIX", 
+        "10.1103/PhysRevC.87.044909", 
+        null, 
+        "1211.4017", 
+        null, 
+        null, 
+        []
+    ], 
+    "1207323": [
+        "Medium modification of jet fragmentation in Au + Au collisions at $\\sqrt{s_{NN}}= 200$ GeV measured in direct photon-hadron correlations", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.111.032301", 
+        null, 
+        "1212.3323", 
+        "ins1207323", 
+        null, 
+        []
+    ], 
+    "1222874": [
+        "Quadrupole Anisotropy in Dihadron Azimuthal Correlations in Central $d+$Au Collisions at $\\sqrt{s_{_{NN}}}$=200 GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.111.212301", 
+        null, 
+        "1303.1794", 
+        "ins1222874", 
+        null, 
+        []
+    ], 
+    "1227971": [
+        "Spectra and ratios of identified particles in Au+Au and $d$+Au collisions at $\\sqrt{s_{NN}}=200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.88.024906", 
+        null, 
+        "1304.3410", 
+        "ins1227971", 
+        null, 
+        []
+    ], 
+    "1235307": [
+        "Nuclear Modification of $\u03c8\u2032, \u03c7_c$, and J/\u03c8 Production in d+Au Collisions at $\\sqrt{s_{NN}}$=200  GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.111.202301", 
+        null, 
+        "1305.5516", 
+        null, 
+        null, 
+        []
+    ], 
+    "1254476": [
+        "Azimuthal anisotropy of $\\pi^0$ and $\\eta$ mesons in Au + Au collisions at $\\sqrt{{s}_{NN}} =$ 200 GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.88.064910", 
+        null, 
+        "1309.4437", 
+        "ins1254476", 
+        null, 
+        []
+    ]
+}

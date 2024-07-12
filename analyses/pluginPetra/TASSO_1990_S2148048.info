@@ -1,6 +1,6 @@
 Name: TASSO_1990_S2148048
 Year: 1990
-Summary: Event shapes in $e^+ e^-$ annihilation at 14--44\;GeV
+Summary: Event shapes in $e^+ e^-$ annihilation at 14--44~GeV
 Experiment: TASSO
 Collider: PETRA
 SpiresID: 2148048
@@ -18,12 +18,12 @@ Beams: [e-, e+]
 Energies: [14.03, 21.99, 35, 43.7]
 PtCuts:
 Description:
-  'Event shapes Thrust, Sphericity, Aplanarity at four different energies'
+  'Event shapes Thrust, Sphericity, Aplanarity and charged particle spectra at four different energies'
 BibKey: Braunschweig:1990yd
 BibTeX: '@Article{Braunschweig:1990yd,
      author    = "Braunschweig, W. and others",
      collaboration = "TASSO",
-     title     = "{Global jet properties at 14\;GeV to 44\;GeV center-of-mass energy in $e^+e^-$ annihilation}",
+     title     = "{Global jet properties at 14~GeV to 44~GeV center-of-mass energy in $e^+e^-$ annihilation}",
      journal   = "Z. Phys.",
      volume    = "C47",
      year      = "1990",
@@ -34,3 +34,10 @@ BibTeX: '@Article{Braunschweig:1990yd,
 ToDo:
  - Add the missing distributions
  - Add missing Trigger conditions, move to Trigger Projection
+
+ReleaseTests:
+ - $A LEP-14
+ - $A-2 LEP-22
+ - $A-3 LEP-35
+ - $A-4 LEP-44
+

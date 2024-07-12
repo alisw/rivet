@@ -22,91 +22,91 @@ namespace Rivet {
     void init() {
 
       // Parton level top quarks
-      addProjection(PartonicTops(PartonicTops::E_MU, false), "PartonTops");
+      declare(PartonicTops(PartonicTops::DecayMode::E_MU, false), "PartonTops");
 
       // Find jets not related to the top/W decays
       VetoedFinalState vfs;
       vfs.addDecayProductsVeto(PID::WPLUSBOSON);
       vfs.addDecayProductsVeto(PID::WMINUSBOSON);
-      FastJets fj(vfs, FastJets::ANTIKT, 0.5, JetAlg::ALL_MUONS, JetAlg::ALL_INVISIBLES);
-      addProjection(fj, "Jets");
+      FastJets fj(vfs, FastJets::ANTIKT, 0.5, JetAlg::Muons::ALL, JetAlg::Invisibles::ALL);
+      declare(fj, "Jets");
 
       // Book histograms
-      _hVis_nJet30_abs       = bookHisto1D( 1, 1, 1);
-      _hVis_nJet30           = bookHisto1D( 2, 1, 1);
-      _hVis_nJet60_abs       = bookHisto1D( 3, 1, 1);
-      _hVis_nJet60           = bookHisto1D( 4, 1, 1);
-      _hVis_nJet100_abs      = bookHisto1D( 5, 1, 1);
-      _hVis_nJet100          = bookHisto1D( 6, 1, 1);
+      book(_hVis_nJet30_abs       , 1, 1, 1);
+      book(_hVis_nJet30           , 2, 1, 1);
+      book(_hVis_nJet60_abs       , 3, 1, 1);
+      book(_hVis_nJet60           , 4, 1, 1);
+      book(_hVis_nJet100_abs      , 5, 1, 1);
+      book(_hVis_nJet100          , 6, 1, 1);
 
-      _hVis_addJet1Pt_abs    = bookHisto1D( 7, 1, 1);
-      _hVis_addJet1Pt        = bookHisto1D( 8, 1, 1);
-      _hVis_addJet1Eta_abs   = bookHisto1D( 9, 1, 1);
-      _hVis_addJet1Eta       = bookHisto1D(10, 1, 1);
-      _hVis_addJet2Pt_abs    = bookHisto1D(11, 1, 1);
-      _hVis_addJet2Pt        = bookHisto1D(12, 1, 1);
-      _hVis_addJet2Eta_abs   = bookHisto1D(13, 1, 1);
-      _hVis_addJet2Eta       = bookHisto1D(14, 1, 1);
-      _hVis_addJJMass_abs    = bookHisto1D(15, 1, 1);
-      _hVis_addJJMass        = bookHisto1D(16, 1, 1);
-      _hVis_addJJDR_abs      = bookHisto1D(17, 1, 1);
-      _hVis_addJJDR          = bookHisto1D(18, 1, 1);
-      _hVis_addJJHT_abs      = bookHisto1D(19, 1, 1);
-      _hVis_addJJHT          = bookHisto1D(20, 1, 1);
+      book(_hVis_addJet1Pt_abs    , 7, 1, 1);
+      book(_hVis_addJet1Pt        , 8, 1, 1);
+      book(_hVis_addJet1Eta_abs   , 9, 1, 1);
+      book(_hVis_addJet1Eta       ,10, 1, 1);
+      book(_hVis_addJet2Pt_abs    ,11, 1, 1);
+      book(_hVis_addJet2Pt        ,12, 1, 1);
+      book(_hVis_addJet2Eta_abs   ,13, 1, 1);
+      book(_hVis_addJet2Eta       ,14, 1, 1);
+      book(_hVis_addJJMass_abs    ,15, 1, 1);
+      book(_hVis_addJJMass        ,16, 1, 1);
+      book(_hVis_addJJDR_abs      ,17, 1, 1);
+      book(_hVis_addJJDR          ,18, 1, 1);
+      book(_hVis_addJJHT_abs      ,19, 1, 1);
+      book(_hVis_addJJHT          ,20, 1, 1);
 
-      _hFull_addJet1Pt_abs   = bookHisto1D(21, 1, 1);
-      _hFull_addJet1Pt       = bookHisto1D(22, 1, 1);
-      _hFull_addJet1Eta_abs  = bookHisto1D(23, 1, 1);
-      _hFull_addJet1Eta      = bookHisto1D(24, 1, 1);
-      _hFull_addJet2Pt_abs   = bookHisto1D(25, 1, 1);
-      _hFull_addJet2Pt       = bookHisto1D(26, 1, 1);
-      _hFull_addJet2Eta_abs  = bookHisto1D(27, 1, 1);
-      _hFull_addJet2Eta      = bookHisto1D(28, 1, 1);
-      _hFull_addJJMass_abs   = bookHisto1D(29, 1, 1);
-      _hFull_addJJMass       = bookHisto1D(30, 1, 1);
-      _hFull_addJJDR_abs     = bookHisto1D(31, 1, 1);
-      _hFull_addJJDR         = bookHisto1D(32, 1, 1);
-      _hFull_addJJHT_abs     = bookHisto1D(33, 1, 1);
-      _hFull_addJJHT         = bookHisto1D(34, 1, 1);
+      book(_hFull_addJet1Pt_abs   ,21, 1, 1);
+      book(_hFull_addJet1Pt       ,22, 1, 1);
+      book(_hFull_addJet1Eta_abs  ,23, 1, 1);
+      book(_hFull_addJet1Eta      ,24, 1, 1);
+      book(_hFull_addJet2Pt_abs   ,25, 1, 1);
+      book(_hFull_addJet2Pt       ,26, 1, 1);
+      book(_hFull_addJet2Eta_abs  ,27, 1, 1);
+      book(_hFull_addJet2Eta      ,28, 1, 1);
+      book(_hFull_addJJMass_abs   ,29, 1, 1);
+      book(_hFull_addJJMass       ,30, 1, 1);
+      book(_hFull_addJJDR_abs     ,31, 1, 1);
+      book(_hFull_addJJDR         ,32, 1, 1);
+      book(_hFull_addJJHT_abs     ,33, 1, 1);
+      book(_hFull_addJJHT         ,34, 1, 1);
 
-      _hVis_addBJet1Pt_abs   = bookHisto1D(35, 1, 1);
-      _hVis_addBJet1Pt       = bookHisto1D(36, 1, 1);
-      _hVis_addBJet1Eta_abs  = bookHisto1D(37, 1, 1);
-      _hVis_addBJet1Eta      = bookHisto1D(38, 1, 1);
-      _hVis_addBJet2Pt_abs   = bookHisto1D(39, 1, 1);
-      _hVis_addBJet2Pt       = bookHisto1D(40, 1, 1);
-      _hVis_addBJet2Eta_abs  = bookHisto1D(41, 1, 1);
-      _hVis_addBJet2Eta      = bookHisto1D(42, 1, 1);
-      _hVis_addBBMass_abs    = bookHisto1D(43, 1, 1);
-      _hVis_addBBMass        = bookHisto1D(44, 1, 1);
-      _hVis_addBBDR_abs      = bookHisto1D(45, 1, 1);
-      _hVis_addBBDR          = bookHisto1D(46, 1, 1);
+      book(_hVis_addBJet1Pt_abs   ,35, 1, 1);
+      book(_hVis_addBJet1Pt       ,36, 1, 1);
+      book(_hVis_addBJet1Eta_abs  ,37, 1, 1);
+      book(_hVis_addBJet1Eta      ,38, 1, 1);
+      book(_hVis_addBJet2Pt_abs   ,39, 1, 1);
+      book(_hVis_addBJet2Pt       ,40, 1, 1);
+      book(_hVis_addBJet2Eta_abs  ,41, 1, 1);
+      book(_hVis_addBJet2Eta      ,42, 1, 1);
+      book(_hVis_addBBMass_abs    ,43, 1, 1);
+      book(_hVis_addBBMass        ,44, 1, 1);
+      book(_hVis_addBBDR_abs      ,45, 1, 1);
+      book(_hVis_addBBDR          ,46, 1, 1);
 
-      _hFull_addBJet1Pt_abs  = bookHisto1D(47, 1, 1);
-      _hFull_addBJet1Pt      = bookHisto1D(48, 1, 1);
-      _hFull_addBJet1Eta_abs = bookHisto1D(49, 1, 1);
-      _hFull_addBJet1Eta     = bookHisto1D(50, 1, 1);
-      _hFull_addBJet2Pt_abs  = bookHisto1D(51, 1, 1);
-      _hFull_addBJet2Pt      = bookHisto1D(52, 1, 1);
-      _hFull_addBJet2Eta_abs = bookHisto1D(53, 1, 1);
-      _hFull_addBJet2Eta     = bookHisto1D(54, 1, 1);
-      _hFull_addBBMass_abs   = bookHisto1D(55, 1, 1);
-      _hFull_addBBMass       = bookHisto1D(56, 1, 1);
-      _hFull_addBBDR_abs     = bookHisto1D(57, 1, 1);
-      _hFull_addBBDR         = bookHisto1D(58, 1, 1);
+      book(_hFull_addBJet1Pt_abs  ,47, 1, 1);
+      book(_hFull_addBJet1Pt      ,48, 1, 1);
+      book(_hFull_addBJet1Eta_abs ,49, 1, 1);
+      book(_hFull_addBJet1Eta     ,50, 1, 1);
+      book(_hFull_addBJet2Pt_abs  ,51, 1, 1);
+      book(_hFull_addBJet2Pt      ,52, 1, 1);
+      book(_hFull_addBJet2Eta_abs ,53, 1, 1);
+      book(_hFull_addBJet2Eta     ,54, 1, 1);
+      book(_hFull_addBBMass_abs   ,55, 1, 1);
+      book(_hFull_addBBMass       ,56, 1, 1);
+      book(_hFull_addBBDR_abs     ,57, 1, 1);
+      book(_hFull_addBBDR         ,58, 1, 1);
 
-      _h_gap_addJet1Pt       = bookProfile1D(59, 1, 1);
-      _h_gap_addJet1Pt_eta0  = bookProfile1D(60, 1, 1);
-      _h_gap_addJet1Pt_eta1  = bookProfile1D(61, 1, 1);
-      _h_gap_addJet1Pt_eta2  = bookProfile1D(62, 1, 1);
-      _h_gap_addJet2Pt       = bookProfile1D(63, 1, 1);
-      _h_gap_addJet2Pt_eta0  = bookProfile1D(64, 1, 1);
-      _h_gap_addJet2Pt_eta1  = bookProfile1D(65, 1, 1);
-      _h_gap_addJet2Pt_eta2  = bookProfile1D(66, 1, 1);
-      _h_gap_addJetHT        = bookProfile1D(67, 1, 1);
-      _h_gap_addJetHT_eta0   = bookProfile1D(68, 1, 1);
-      _h_gap_addJetHT_eta1   = bookProfile1D(69, 1, 1);
-      _h_gap_addJetHT_eta2   = bookProfile1D(70, 1, 1);
+      book(_h_gap_addJet1Pt       ,59, 1, 1);
+      book(_h_gap_addJet1Pt_eta0  ,60, 1, 1);
+      book(_h_gap_addJet1Pt_eta1  ,61, 1, 1);
+      book(_h_gap_addJet1Pt_eta2  ,62, 1, 1);
+      book(_h_gap_addJet2Pt       ,63, 1, 1);
+      book(_h_gap_addJet2Pt_eta0  ,64, 1, 1);
+      book(_h_gap_addJet2Pt_eta1  ,65, 1, 1);
+      book(_h_gap_addJet2Pt_eta2  ,66, 1, 1);
+      book(_h_gap_addJetHT        ,67, 1, 1);
+      book(_h_gap_addJetHT_eta0   ,68, 1, 1);
+      book(_h_gap_addJetHT_eta1   ,69, 1, 1);
+      book(_h_gap_addJetHT_eta2   ,70, 1, 1);
     }
 
 
@@ -139,7 +139,7 @@ namespace Rivet {
       const Particle& t2 = partontops[1];
 
       // Apply acceptance cuts on top-decay leptons (existence should be guaranteed)
-      const auto isPromptChLepton = [](const Particle& p){return isChargedLepton(p) && !fromDecay(p);};
+      const auto isPromptChLepton = [](const Particle& p){return p.isPrompt() && isChargedLepton(p);};
       const Particle lep1 = t1.allDescendants(lastParticleWith(isPromptChLepton)).front();
       const Particle lep2 = t2.allDescendants(lastParticleWith(isPromptChLepton)).front();
       if (lep1.pT() < 1e-9*GeV || lep2.pT() < 1e-9*GeV) vetoEvent; // sanity check?
@@ -173,7 +173,7 @@ namespace Rivet {
                 << "; l1 = " << lep1.pT() << ", " << lep1.abseta()
                 << "; l2 = " << lep2.pT() << ", " << lep2.abseta());
 
-      const double weight = event.weight();
+      const double weight = 1.0;
 
 
       if (isVisiblePS) {
@@ -293,28 +293,35 @@ namespace Rivet {
       if (std::isnan(crossSectionPerEvent()))
         MSG_INFO("No valid cross-section given, using NNLO (arXiv:1303.6254; sqrt(s)=8 TeV, m_t=172.5 GeV): " << ttbarXS/picobarn << " pb");
 
-      normalize({_hVis_nJet30,_hVis_nJet60, _hVis_nJet100,
-            _hVis_addJet1Pt, _hVis_addJet1Eta, _hVis_addJet2Pt, _hVis_addJet2Eta,
-            _hVis_addJJMass, _hVis_addJJDR, _hVis_addJJHT,
-            _hFull_addJet1Pt, _hFull_addJet1Eta, _hFull_addJet2Pt, _hFull_addJet2Eta,
-            _hFull_addJJMass, _hFull_addJJDR, _hFull_addJJHT,
-            _hVis_addBJet1Pt, _hVis_addBJet1Eta, _hVis_addBJet2Pt, _hVis_addBJet2Eta,
-            _hVis_addBBMass, _hVis_addBBDR,
-            _hFull_addBJet1Pt, _hFull_addBJet1Eta, _hFull_addBJet2Pt, _hFull_addBJet2Eta,
-            _hFull_addBBMass, _hFull_addBBDR});
+        normalize(_hVis_nJet30); normalize(_hVis_nJet60); normalize(_hVis_nJet100);
+        normalize(_hVis_addJet1Pt); normalize(_hVis_addJet1Eta); normalize(_hVis_addJet2Pt); 
+        normalize(_hVis_addJet2Eta); normalize(_hVis_addJJMass); normalize(_hVis_addJJDR); 
+        normalize(_hVis_addJJHT); normalize(_hFull_addJet1Pt); normalize(_hFull_addJet1Eta); 
+        normalize(_hFull_addJet2Pt); normalize(_hFull_addJet2Eta); normalize(_hFull_addJJMass); 
+        normalize(_hFull_addJJDR); normalize(_hFull_addJJHT); normalize(_hVis_addBJet1Pt); 
+        normalize(_hVis_addBJet1Eta); normalize(_hVis_addBJet2Pt); normalize(_hVis_addBJet2Eta);
+        normalize(_hVis_addBBMass); normalize(_hVis_addBBDR); normalize(_hFull_addBJet1Pt); 
+        normalize(_hFull_addBJet1Eta); normalize(_hFull_addBJet2Pt); normalize(_hFull_addBJet2Eta);
+        normalize(_hFull_addBBMass); normalize(_hFull_addBBDR);
 
-      const double xsPerWeight = ttbarXS/picobarn / sumOfWeights();
-      scale({_hVis_nJet30_abs, _hVis_nJet60_abs, _hVis_nJet100_abs,
-            _hVis_addJet1Pt_abs, _hVis_addJet1Eta_abs, _hVis_addJet2Pt_abs, _hVis_addJet2Eta_abs,
-            _hVis_addJJMass_abs, _hVis_addJJDR_abs, _hVis_addJJHT_abs,
-            _hVis_addBJet1Pt_abs, _hVis_addBJet1Eta_abs, _hVis_addBJet2Pt_abs, _hVis_addBJet2Eta_abs,
-            _hVis_addBBMass_abs, _hVis_addBBDR_abs}, xsPerWeight);
+        const double xsPerWeight = ttbarXS/picobarn / sumOfWeights();
+        scale(_hVis_nJet30_abs,     xsPerWeight); scale(_hVis_nJet60_abs,      xsPerWeight); 
+        scale(_hVis_nJet100_abs,    xsPerWeight); scale(_hVis_addJet1Pt_abs,   xsPerWeight);
+        scale(_hVis_addJet1Eta_abs, xsPerWeight); scale(_hVis_addJet2Pt_abs,   xsPerWeight);
+        scale(_hVis_addJet2Eta_abs, xsPerWeight); scale(_hVis_addJJMass_abs,   xsPerWeight);
+        scale(_hVis_addJJDR_abs,    xsPerWeight); scale(_hVis_addJJHT_abs,     xsPerWeight);
+        scale(_hVis_addBJet1Pt_abs, xsPerWeight); scale(_hVis_addBJet1Eta_abs, xsPerWeight); 
+        scale(_hVis_addBJet2Pt_abs, xsPerWeight); scale(_hVis_addBJet2Eta_abs, xsPerWeight);
+        scale(_hVis_addBBMass_abs,  xsPerWeight); scale(_hVis_addBBDR_abs,     xsPerWeight);
 
-      const double sfull = xsPerWeight / 0.0454; //< correct for dilepton branching fraction
-      scale({_hFull_addJet1Pt_abs, _hFull_addJet1Eta_abs, _hFull_addJet2Pt_abs, _hFull_addJet2Eta_abs,
-            _hFull_addJJMass_abs, _hFull_addJJDR_abs, _hFull_addJJHT_abs,
-            _hFull_addBJet1Pt_abs, _hFull_addBJet1Eta_abs, _hFull_addBJet2Pt_abs, _hFull_addBJet2Eta_abs,
-            _hFull_addBBMass_abs, _hFull_addBBDR_abs}, sfull);
+        const double sfull = xsPerWeight / 0.0454; //< correct for dilepton branching fraction
+        scale(_hFull_addJet1Pt_abs, sfull); scale(_hFull_addJet1Eta_abs, sfull); 
+        scale(_hFull_addJet2Pt_abs, sfull); scale(_hFull_addJet2Eta_abs, sfull);
+        scale(_hFull_addJJMass_abs, sfull); scale(_hFull_addJJDR_abs, sfull); 
+        scale(_hFull_addJJHT_abs, sfull); scale(_hFull_addBJet1Pt_abs, sfull); 
+        scale(_hFull_addBJet1Eta_abs, sfull); scale(_hFull_addBJet2Pt_abs, sfull); 
+        scale(_hFull_addBJet2Eta_abs, sfull); scale(_hFull_addBBMass_abs, sfull); 
+        scale(_hFull_addBBDR_abs, sfull);
     }
 
     //@}
@@ -380,7 +387,7 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CMS_2015_I1397174);
+  RIVET_DECLARE_PLUGIN(CMS_2015_I1397174);
 
 
 }

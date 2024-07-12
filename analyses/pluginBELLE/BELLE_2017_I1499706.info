@@ -1,0 +1,37 @@
+Name: BELLE_2017_I1499706
+Year: 2017
+Summary: $\chi_{c1}$ spectrum in $\Upsilon(1,2S)$ decays
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1499706
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 95 (2017) 1, 012001
+RunInfo: Any process producing Upsilon(1S) or Upsilon(2S) originally e+e-
+Description:
+  'Measurement of the scaled momentum of $\chi_{c1}$ in $\Upsilon(1S)$ and $\Upsilon(2S)$ decays'
+ValidationInfo:
+  'Herwig7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle:2016yfw
+BibTeX: '@article{Belle:2016yfw,
+    author = "Jia, S. and others",
+    collaboration = "Belle",
+    title = "{Search for the $0^{--}$ Glueball in $\Upsilon(1S)$ and $\Upsilon(2S)$ decays}",
+    eprint = "1611.07131",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BELLE-PREPRINT-2016-12, KEK-PREPRINT-2016-50",
+    doi = "10.1103/PhysRevD.95.012001",
+    journal = "Phys. Rev. D",
+    volume = "95",
+    number = "1",
+    pages = "012001",
+    year = "2017"
+}
+'

@@ -1,0 +1,123 @@
+{
+    "661781": [
+        "Search for radions at LEP2", 
+        "OPAL", 
+        "10.1016/j.physletb.2006.04.045", 
+        "798028", 
+        "hep-ex/0410035", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2004-041"
+        ]
+    ], 
+    "683280": [
+        "Measurement of the running of the QED coupling in small-angle Bhabha scattering at LEP", 
+        "OPAL", 
+        "10.1140/epjc/s2005-02389-3", 
+        "836614", 
+        "hep-ex/0505072", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2005-014"
+        ]
+    ], 
+    "687100": [
+        "Determination of alpha(s) using jet rates at LEP with the OPAL detector", 
+        "OPAL", 
+        "10.1140/epjc/s2005-02417-4", 
+        "850476", 
+        "hep-ex/0507047", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2005-024"
+        ]
+    ], 
+    "687101": [
+        "Searches for gauge-mediated supersymmetry breaking topologies in e+ e- collisions at LEP2", 
+        "OPAL", 
+        "10.1140/epjc/s2006-02524-8", 
+        "852370", 
+        "hep-ex/0507048", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2005-025"
+        ]
+    ], 
+    "691119": [
+        "Measurement of the mass and width of the $W$ boson", 
+        "OPAL", 
+        "10.1140/epjc/s2005-02440-5", 
+        "879890", 
+        "hep-ex/0508060", 
+        null, 
+        null, 
+        [
+            "OPAL-PR-410", 
+            "CERN-PH-EP-2005-038"
+        ]
+    ], 
+    "691121": [
+        "Colour reconnection in e+ e- ---> W+ W- at s**(1/2) = 189-GeV - 209-GeV", 
+        "OPAL", 
+        "10.1140/epjc/s2005-02439-x", 
+        "880374", 
+        "hep-ex/0508062", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2005-035"
+        ]
+    ], 
+    "691576": [
+        "Precision electroweak measurements on the $Z$ resonance", 
+        "ALEPH", 
+        "10.1016/j.physrep.2005.12.006", 
+        "892831", 
+        "hep-ex/0509008", 
+        null, 
+        null, 
+        [
+            "SLAC-R-774"
+        ]
+    ], 
+    "702458": [
+        "Measurement of the Strong Coupling alpha(s) from four-jet observables in e+ e- annihilation", 
+        "OPAL", 
+        "10.1140/epjc/s2006-02581-y", 
+        "926038", 
+        "hep-ex/0601048", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2005-057"
+        ]
+    ], 
+    "711130": [
+        "Search for neutral MSSM Higgs bosons at LEP", 
+        "ALEPH", 
+        "10.1140/epjc/s2006-02569-7", 
+        "930093", 
+        "hep-ex/0602042", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2006-001"
+        ]
+    ], 
+    "713676": [
+        "QCD coherence and correlations of particles with restricted momenta in hadronic Z decays", 
+        "OPAL", 
+        "10.1016/j.physletb.2006.05.016", 
+        "939550", 
+        "hep-ex/0604003", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2006-003"
+        ]
+    ]
+}

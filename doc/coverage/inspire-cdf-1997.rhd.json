@@ -1,0 +1,301 @@
+{
+    "422180": [
+        "Measurement of $b\\bar{b}$ production correlations, $B^0 \\overline{B}^0$ mixing, and a limit on epsilon(B) in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.55.2546", 
+        null, 
+        null, 
+        "ins422180", 
+        null, 
+        [
+            "FERMILAB-PUB-96-216-E", 
+            "FERMILAB-PUB-98-173-EX"
+        ]
+    ], 
+    "423031": [
+        "Observation of $\\Lambda_b^0 \\to J/\\psi \\Lambda$ at the Fermilab proton antiproton collider", 
+        "CDF", 
+        "10.1103/PhysRevD.55.1142", 
+        null, 
+        null, 
+        "ins423031", 
+        null, 
+        [
+            "FERMILAB-PUB-96-270-E", 
+            "CDF-PUB-BOTTOM-PUBLIC-3724", 
+            "FERMILAB-PUB-98-173-EW"
+        ]
+    ], 
+    "423258": [
+        "Observation of $W^+ W^-$ production in $\\bar{p}p$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.78.4536", 
+        null, 
+        null, 
+        "ins423258", 
+        null, 
+        [
+            "FERMILAB-PUB-96-311-E", 
+            "CDF-PUB-ELECTROWEAK-PUBLIC-3725", 
+            "FERMILAB-PUB-98-173-EH"
+        ]
+    ], 
+    "423414": [
+        "Measurement of dijet angular distributions at CDF", 
+        "CDF", 
+        "10.1103/PhysRevLett.77.5336", 
+        null, 
+        "hep-ex/9609011", 
+        "ins423414", 
+        null, 
+        [
+            "FERMILAB-PUB-96-317-E", 
+            "CDF-PUB-JET-PUBLIC-3773", 
+            "FERMILAB-PUB-98-173-ED", 
+            "FERMILAB-PUB-98-173-EG"
+        ]
+    ], 
+    "427318": [
+        "Search for third generation leptoquarks in $\\bar{p}p$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.78.2906", 
+        null, 
+        null, 
+        "ins427318", 
+        null, 
+        [
+            "FERMILAB-PUB-96-450-E", 
+            "FERMILAB-PUB-98-173-EF"
+        ]
+    ], 
+    "440058": [
+        "Search for new particles decaying to dijets at CDF", 
+        "CDF", 
+        "10.1103/PhysRevD.55.R5263", 
+        null, 
+        "hep-ex/9702004", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-97-023-E", 
+            "FERMILAB-PUB-98-173-EY"
+        ]
+    ], 
+    "440095": [
+        "Observation of diffractive $W$ boson production at the Tevatron", 
+        "CDF", 
+        "10.1103/PhysRevLett.78.2698", 
+        null, 
+        "hep-ex/9703010", 
+        "ins440095", 
+        null, 
+        [
+            "FERMILAB-PUB-97-025-E", 
+            "CDF-ANAL-JET-CDFR-3799", 
+            "FERMILAB-PUB-98-173-EE"
+        ]
+    ], 
+    "440101": [
+        "$J/\\psi$ and $\\psi(2S)$ production in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.79.572", 
+        null, 
+        null, 
+        "ins440101", 
+        null, 
+        [
+            "FERMILAB-PUB-97-024-E", 
+            "CDF-PUB-BOTTOM-PUBLIC-3792", 
+            "FERMILAB-PUB-98-173-EJ"
+        ]
+    ], 
+    "440445": [
+        "Search for gluinos and squarks at the Fermilab Tevatron Collider", 
+        "CDF", 
+        "10.1103/PhysRevD.56.R1357", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-97-031-E", 
+            "FERMILAB-PUB-98-173-EZ"
+        ]
+    ], 
+    "440446": [
+        "Production of $J/\\psi$ mesons from $\\chi_c$ meson decays in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.79.578", 
+        null, 
+        null, 
+        "ins440446", 
+        null, 
+        [
+            "FERMILAB-PUB-97-026-E", 
+            "CDF-PUB-BOTTOM-PUBLIC-3685", 
+            "FERMILAB-PUB-98-173-EK"
+        ]
+    ], 
+    "441461": [
+        "Measurement of diffractive dijet production at the Tevatron", 
+        "CDF", 
+        "10.1103/PhysRevLett.79.2636", 
+        null, 
+        null, 
+        "ins441461", 
+        null, 
+        [
+            "FERMILAB-PUB-97-076-E", 
+            "FERMILAB-PUB-98-173-EP"
+        ]
+    ], 
+    "441462": [
+        "First observation of the all hadronic decay of $t\\bar{t}$ pairs", 
+        "CDF", 
+        "10.1103/PhysRevLett.79.1992", 
+        null, 
+        null, 
+        "ins441462", 
+        null, 
+        [
+            "FERMILAB-PUB-97-075-E", 
+            "CDF-ANAL-TOP-CDFR-4025", 
+            "FERMILAB-PUB-98-173-EM"
+        ]
+    ], 
+    "441836": [
+        "Search for charged Higgs decays of the top quark using hadronic decays of the tau lepton", 
+        "CDF", 
+        "10.1103/PhysRevLett.79.357", 
+        null, 
+        "hep-ex/9704003", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-97-058-E", 
+            "FERMILAB-PUB-98-173-EI"
+        ]
+    ], 
+    "442025": [
+        "Measurement of double parton scattering in $\\bar{p}p$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.79.584", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-97-083-E", 
+            "FERMILAB-PUB-98-173-EL"
+        ]
+    ], 
+    "442202": [
+        "The mu tau and e tau decays of top quark pairs produced in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.79.3585", 
+        null, 
+        "hep-ex/9704007", 
+        "ins442202", 
+        null, 
+        [
+            "FERMILAB-PUB-97-096-E", 
+            "CDF-ANAL-TOP-PUBLIC-4011", 
+            "FERMILAB-PUB-98-173-EQ"
+        ]
+    ], 
+    "442259": [
+        "Double parton scattering in $\\bar{p}p$ collisions at $\\sqrt{s} = 1.8 $TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.56.3811", 
+        null, 
+        null, 
+        "ins442259", 
+        null, 
+        [
+            "FERMILAB-PUB-97-094-E", 
+            "FERMILAB-PUB-98-173-EZB"
+        ]
+    ], 
+    "442265": [
+        "Properties of six-jet events with large six-jet mass at the Fermilab $p\\bar{p}$ collider", 
+        "CDF", 
+        "10.1103/PhysRevD.56.2532", 
+        null, 
+        null, 
+        "ins442265", 
+        null, 
+        [
+            "FERMILAB-PUB-97-093-E", 
+            "ANL-HEP-PR-98-83", 
+            "FERMILAB-PUB-98-173-EZA"
+        ]
+    ], 
+    "442760": [
+        "Search for new gauge bosons decaying into dileptons in $\\bar{p}p$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.79.2192", 
+        null, 
+        null, 
+        "ins442760", 
+        null, 
+        [
+            "FERMILAB-PUB-97-122-E", 
+            "ANL-HEP-PR-98-81", 
+            "FERMILAB-PUB-98-173-EN"
+        ]
+    ], 
+    "443871": [
+        "Limits on quark-lepton compositeness scales from dileptons produced in 1.8 TeV $p\\bar{p}$ collisions", 
+        "CDF", 
+        "10.1103/PhysRevLett.79.2198", 
+        null, 
+        null, 
+        "ins443871", 
+        null, 
+        [
+            "FERMILAB-PUB-97-171-E", 
+            "FERMILAB-PUB-98-173-EO"
+        ]
+    ], 
+    "445676": [
+        "Search for new particles decaying into $b\\bar{b}$ and produced in association with $W$ bosons decaying into $e \\nu$ or $\\mu \\nu$ at the Tevatron", 
+        "CDF", 
+        "10.1103/PhysRevLett.79.3819", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-97-247-E", 
+            "CDF-ANAL-EXOTIC-CDFR-4157", 
+            "FERMILAB-PUB-98-173-ER"
+        ]
+    ], 
+    "447250": [
+        "Search for first generation leptoquark pair production in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.79.4327", 
+        null, 
+        "hep-ex/9708017", 
+        "ins447250", 
+        null, 
+        [
+            "FERMILAB-PUB-97-280-E", 
+            "FERMILAB-PUB-98-173-ES"
+        ]
+    ], 
+    "448076": [
+        "Properties of jets in $W$ boson events from 1.8 TeV $\\bar{p}p$ collisions", 
+        "CDF", 
+        "10.1103/PhysRevLett.79.4760", 
+        null, 
+        "hep-ex/9709016", 
+        "ins448076", 
+        null, 
+        [
+            "FERMILAB-PUB-97-301-E", 
+            "ANL-HEP-PR-98-82", 
+            "FERMILAB-PUB-98-173-ET"
+        ]
+    ]
+}

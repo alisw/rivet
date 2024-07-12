@@ -1,0 +1,35 @@
+Name: CLEOII_1998_I467642
+Year: 1998
+Summary: $\Upsilon(2S)\to\Upsilon(1S)\pi^+\pi^-$
+Experiment: CLEOII
+Collider: CUSB
+InspireID: 467642
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D58 (1998) 052004
+RunInfo: In princple any process producing Upsilon(2S), but e+e- -> Upsilon(2S) needs for some dists
+Description:
+  'Measurement of the $\pi^+\pi^-$ mass Spectrum and other distributions in $\Upsilon(2S)\to\Upsilon(1S)\pi^+\pi^-$ decays.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Alexander:1998dq
+BibTeX: '@article{Alexander:1998dq,
+      author         = "Alexander, J. P. and others",
+      title          = "{The Hadronic transitions Upsilon(2S) ---&gt; Upsilon(1S)}",
+      collaboration  = "CLEO",
+      journal        = "Phys. Rev.",
+      volume         = "D58",
+      year           = "1998",
+      pages          = "052004",
+      doi            = "10.1103/PhysRevD.58.052004",
+      eprint         = "hep-ex/9802024",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "SLAC-REPRINT-1998-088, CLNS-98-1540, CLEO-98-1",
+      SLACcitation   = "%%CITATION = HEP-EX/9802024;%%"
+}'

@@ -37,3 +37,7 @@ BibTeX: '@Article{Adams:2006nd,
      doi       = "10.1016/j.physletb.2006.04.032",
      SLACcitation  = "%%CITATION = NUCL-EX/0601033;%%"
 }'
+
+ReleaseTests:
+ - $A Star-UE
+

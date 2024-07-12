@@ -1,0 +1,182 @@
+{
+    "341560": [
+        "A Measurement of B meson production and lifetime using D lepton- events in Z0 decays", 
+        "DELPHI", 
+        "10.1007/BF01565048", 
+        "242421", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-92-174"
+        ]
+    ], 
+    "342800": [
+        "Measurement of inclusive production of light meson resonances in hadronic decays of the Z0", 
+        "DELPHI", 
+        "10.1016/0370-2693(93)91736-7", 
+        "243306", 
+        null, 
+        "ins342800", 
+        null, 
+        [
+            "CERN-PPE-92-183"
+        ]
+    ], 
+    "342801": [
+        "A Search for lepton flavor violation in Z0 decays", 
+        "DELPHI", 
+        "10.1016/0370-2693(93)91737-8", 
+        "243593", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-92-190"
+        ]
+    ], 
+    "343083": [
+        "A Study of $B^0$ - $\\bar{B}^0$ mixing using semileptonic decays of $B$ hadrons produced from $Z^0$", 
+        "DELPHI", 
+        "10.1016/0370-2693(93)90736-2", 
+        "244383", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-92-203"
+        ]
+    ], 
+    "353999": [
+        "A Measurement of the tau lifetime", 
+        "DELPHI", 
+        "10.1016/0370-2693(93)90409-B", 
+        "245796", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-12"
+        ]
+    ], 
+    "354482": [
+        "Measurement of the triple gluon vertex from four - jet events at LEP", 
+        "DELPHI", 
+        "10.1007/BF01498617", 
+        "246874", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-29"
+        ]
+    ], 
+    "354483": [
+        "Measurement of lambda(b) production and lifetime in Z0 hadronic decays", 
+        "DELPHI", 
+        "10.1016/0370-2693(93)90585-6", 
+        "246875", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-32"
+        ]
+    ], 
+    "354909": [
+        "Determination of alpha-s using the next-to-leading log approximation of QCD", 
+        "DELPHI", 
+        "10.1007/BF01555835", 
+        "248557", 
+        null, 
+        "ins354909", 
+        null, 
+        [
+            "CERN-PPE-93-43"
+        ]
+    ], 
+    "355935": [
+        "Determination of alpha-s for b quarks at the Z0 resonance", 
+        "DELPHI", 
+        "10.1016/0370-2693(93)90213-2", 
+        "248380", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-59"
+        ]
+    ], 
+    "355937": [
+        "Determination of alpha-s from the scaling violation in the fragmentation functions in e+ e- annihilation", 
+        "DELPHI", 
+        "10.1016/0370-2693(93)90587-8", 
+        "249024", 
+        null, 
+        "ins355937", 
+        null, 
+        [
+            "CERN-PPE-93-69"
+        ]
+    ], 
+    "356732": [
+        "A Measurement of D meson production in Z0 hadronic decays", 
+        "DELPHI", 
+        "10.1007/BF01562545", 
+        "249026", 
+        null, 
+        "ins356732", 
+        null, 
+        [
+            "CERN-PPE-93-70"
+        ]
+    ], 
+    "356733": [
+        "A Measurement of the mean lifetimes of charged and neutral B hadrons", 
+        "DELPHI", 
+        "10.1016/0370-2693(93)90520-R", 
+        "249650", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-80"
+        ]
+    ], 
+    "356734": [
+        "Search for Z0 decays to two leptons and a charged particle - anti-particle pair", 
+        "DELPHI", 
+        "10.1016/0550-3213(93)90027-M", 
+        "249649", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-77"
+        ]
+    ], 
+    "359459": [
+        "Limits on the production of scalar leptoquarks from Z0 decays at LEP", 
+        "DELPHI", 
+        "10.1016/0370-2693(93)91053-P", 
+        "253373", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-161"
+        ]
+    ], 
+    "360638": [
+        "Production of Lambda and Lambda anti-Lambda correlations in the hadronic decays of the Z0", 
+        "DELPHI", 
+        "10.1016/0370-2693(93)91815-5", 
+        "253770", 
+        null, 
+        "ins360638", 
+        null, 
+        [
+            "CERN-PPE-93-171"
+        ]
+    ]
+}

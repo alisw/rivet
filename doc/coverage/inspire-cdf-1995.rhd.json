@@ -1,0 +1,325 @@
+{
+    "375554": [
+        "Search for new gauge bosons decaying into dielectrons in $\\bar{p}p$ collisions at $\\sqrt{s}=1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.51.R949", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-94-198-E", 
+            "CDF-PUB-ELECTROWEAK-PUBLIC-2651", 
+            "ANL-HEP-PR-95-22"
+        ]
+    ], 
+    "375582": [
+        "A Precision measurement of the prompt photon cross-section in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.73.2662", 
+        null, 
+        null, 
+        "ins375582", 
+        null, 
+        [
+            "FERMILAB-PUB-94-208-E", 
+            "CDF-PUB-JET-PUBLIC-2656", 
+            "ANL-HEP-PR-95-16"
+        ]
+    ], 
+    "375748": [
+        "Observation of rapidity gaps in $\\bar{p}p$ collisions at 1.8 TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.74.855", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-94-194-E", 
+            "RU-94-52", 
+            "ANL-HEP-PR-95-30", 
+            "CDF-PUB-JET-CDFR-2639"
+        ]
+    ], 
+    "375754": [
+        "Search for radiative decays of neutralinos in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.75.613", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-94-202-E", 
+            "CDF-PUB-EXOTIC-PUBLIC-1491"
+        ]
+    ], 
+    "377331": [
+        "Measurement of $W - \\gamma$ couplings with {CDF} in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.74.1936", 
+        null, 
+        null, 
+        "ins377331", 
+        null, 
+        [
+            "FERMILAB-PUB-94-236-E", 
+            "CDF-PUB-ELECTROWEAK-PUBLIC-2647", 
+            "ANL-HEP-PR-95-43"
+        ]
+    ], 
+    "377469": [
+        "A Direct measurement of the $W$ boson width", 
+        "CDF", 
+        "10.1103/PhysRevLett.74.341", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-94-301-E", 
+            "CDF-ANAL-ELECTROWEAK-CDFR-2642", 
+            "ANL-HEP-PR-95-23"
+        ]
+    ], 
+    "379592": [
+        "The Charge asymmetry in $W$ boson decays produced in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.74.850", 
+        null, 
+        "hep-ex/9501008", 
+        "ins379592", 
+        null, 
+        [
+            "FERMILAB-PUB-94-313-E", 
+            "CDF-PUB-ELECTROWEAK-PUBLIC-2673", 
+            "ANL-HEP-PRJ-95-42"
+        ]
+    ], 
+    "379761": [
+        "Limits on $Z-$photon couplings from $p\\bar{p}$ interactions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.74.1941", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-94-304-E", 
+            "CDF-PUB-ELECTROWEAK-CDFR-2659", 
+            "ANL-HEP-PR-95-40"
+        ]
+    ], 
+    "381311": [
+        "Kinematic evidence for top quark pair production in $W$ + multi - jet events in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.51.4623", 
+        null, 
+        "hep-ex/9412009", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-94-411-E", 
+            "CDF-PUB-TOP-PUBLIC-2365", 
+            "ANL-HEP-PR-95-41"
+        ]
+    ], 
+    "381667": [
+        "Search for charged bosons heavier than the $W$ in $p\\bar{p}$ collisions at $\\sqrt{s} = 1800$ GeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.74.2900", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-94-268-E", 
+            "CDF-PUB-EXOTIC-PUBLIC-2640", 
+            "ANL-HEP-PR-95-47"
+        ]
+    ], 
+    "392053": [
+        "Search for new particles decaying to dijets in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.74.3538", 
+        null, 
+        "hep-ex/9501001", 
+        "ins392053", 
+        null, 
+        [
+            "FERMILAB-PUB-94-405-E"
+        ]
+    ], 
+    "392054": [
+        "Measurement of the $B_s$ meson lifetime", 
+        "CDF", 
+        "10.1103/PhysRevLett.74.4988", 
+        null, 
+        "hep-ex/9412017", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-94-420-E"
+        ]
+    ], 
+    "393084": [
+        "Observation of top quark production in $\\bar{p}p$ collisions", 
+        "CDF", 
+        "10.1103/PhysRevLett.74.2626", 
+        null, 
+        "hep-ex/9503002", 
+        "ins393084", 
+        null, 
+        [
+            "FERMILAB-PUB-95-022-E", 
+            "CDF-PUB-TOP-PUBLIC-3040", 
+            "ANL-HEP-PR-95-44"
+        ]
+    ], 
+    "393230": [
+        "Limits on $W W Z$ and $W W \\gamma$ couplings from $W W$ and $W Z$ production in $p \\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.75.1017", 
+        null, 
+        "hep-ex/9503009", 
+        null, 
+        null, 
+        [
+            "CDF-ANAL-ELECTROWEAK-CDFR-2951", 
+            "FERMILAB-PUB-95-036-E", 
+            "ANL-HEP-PR-96-17"
+        ]
+    ], 
+    "393281": [
+        "Measurement of the $W$ boson mass", 
+        "CDF", 
+        "10.1103/PhysRevD.52.4784", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-95-033-E"
+        ]
+    ], 
+    "393283": [
+        "Measurement of the $W$ boson mass", 
+        "CDF", 
+        "10.1103/PhysRevLett.75.11", 
+        null, 
+        "hep-ex/9503007", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-95-035-E", 
+            "ANL-HEP-PR-96-21"
+        ]
+    ], 
+    "393345": [
+        "Properties of high mass multi - jet events at the Fermilab $p\\bar{p}$ collider", 
+        "CDF", 
+        "10.1103/PhysRevLett.75.608", 
+        null, 
+        null, 
+        "ins393345", 
+        null, 
+        [
+            "FERMILAB-PUB-95-038-E", 
+            "CDF-PUB-JET-PUBLIC-2957"
+        ]
+    ], 
+    "393552": [
+        "Measurement of the $B$ meson differential cross-section, $d \\sigma / d p_T$, in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.75.1451", 
+        null, 
+        "hep-ex/9503013", 
+        "ins393552", 
+        null, 
+        [
+            "FERMILAB-PUB-95-048-E", 
+            "ANL-HEP-PR-96-19"
+        ]
+    ], 
+    "394340": [
+        "A Search for second generation leptoquarks in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.75.1012", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-95-050-E", 
+            "ANL-HEP-PR-96-18", 
+            "CDF-PUB-EXOTIC-PUBLIC-2895"
+        ]
+    ], 
+    "395312": [
+        "Identification of top quarks at CDF using kinematic variables", 
+        "CDF", 
+        "10.1103/PhysRevD.52.R2605", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-95-083-E"
+        ]
+    ], 
+    "395439": [
+        "A Measurement of the ratio $\\sigma \\times B(p\\bar{p} \\to W \\to e \\nu) / \\sigma \\times B(p\\bar{p} \\to Z^0 \\to e e)$ in $p\\bar{p}$ collisions at $\\sqrt{s} = 1800$ GeV", 
+        "CDF", 
+        "10.1103/PhysRevD.52.2624", 
+        null, 
+        null, 
+        "ins395439", 
+        null, 
+        [
+            "FERMILAB-PUB-95-025-E", 
+            "CDF-PUB-ELECTROWEAK-PUBLIC-2812"
+        ]
+    ], 
+    "396003": [
+        "Study of $t\\bar{t}$ production $p\\bar{p}$ collisions using total transverse energy", 
+        "CDF", 
+        "10.1103/PhysRevLett.75.3997", 
+        null, 
+        "hep-ex/9506006", 
+        "ins396003", 
+        null, 
+        [
+            "FERMILAB-PUB-95-088-E", 
+            "FERMILAB-PUB-95-149-E", 
+            "CDF-PUB-TOP-CDFR-3110"
+        ]
+    ], 
+    "397947": [
+        "Measurement of the polarization in the decays $B_d \\to J/\\psi K^{*0}$ and $B_s \\to J/\\psi \\phi$", 
+        "CDF", 
+        "10.1103/PhysRevLett.75.3068", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-95-270-E", 
+            "ANL-HEP-CP-96-20", 
+            "CDF-PUB-BOTTOM-PUBLIC-3231"
+        ]
+    ], 
+    "398187": [
+        "$\\Upsilon$ production in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.75.4358", 
+        null, 
+        null, 
+        "ins398187", 
+        null, 
+        [
+            "FERMILAB-PUB-95-271-E", 
+            "CDF-PUB-BOTTOM-PUBLIC-3215"
+        ]
+    ]
+}

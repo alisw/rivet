@@ -1,0 +1,32 @@
+Name: MAC_1987_I245571
+Year: 1987
+Summary:  $\tau$ polarization at 29 GeV
+Experiment: MAC
+Collider: PEP
+InspireID: 245571
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 36 (1987) 1971
+RunInfo:  e+ e- > tau+ tau-
+Beams: [e+, e-]
+Energies: [29.]
+Description:
+  'Measurement of the $\tau$ lepton polarization in $e^+e^-\to\tau^+\tau^-$ at 29 GeV by the MAC experiment at PEP.'
+ValidationInfo:
+  'Herwig7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Ford:1987ha
+BibTeX: '@article{Ford:1987ha,
+    author = "Ford, William T. and others",
+    title = "{Measurement of the Polarization of $\tau$ Leptons Produced in $e^+ e^-$ Annihilation at $\sqrt{s}=29$-\{GeV\}}",
+    reportNumber = "SLAC-PUB-4066, COLO-HEP-132",
+    doi = "10.1103/PhysRevD.36.1971",
+    journal = "Phys. Rev. D",
+    volume = "36",
+    pages = "1971",
+    year = "1987"
+}'

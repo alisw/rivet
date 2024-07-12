@@ -1,0 +1,34 @@
+Name: TASSO_1980_I153656
+Year: 1980
+Summary: $\pi^\pm$, $K^\pm$ and $p,\bar{p}$ spectra in $e^+e^-$ at 12 and 30 GeV
+Experiment: TASSO
+Collider: Petra
+InspireID: 153656
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B94 (1980) 444-449, 1980 
+RunInfo: e+ e- to hadrons. Beam energy must be specified as analysis option "ENERGY" when rivet-merging samples.
+NeedCrossSection: yes
+Beams: [e+, e-]
+Energies: [12,30]
+Options:
+ - ENERGY=12,30
+Description:
+  'Measurement of the $\pi^\pm$, $K^\pm$ and $p,\bar{p}$ spectra in $e^+e^-$ collisions for centre-of-mass energies of 12 and 30 GeV by the TASSO experiment at Petra. Beam energy must be specified as analysis option "ENERGY" when rivet-merging samples.'
+BibKey: Brandelik:1980iy
+BibTeX: '@article{Brandelik:1980iy,
+      author         = "Brandelik, R. and others",
+      title          = "{Charged Pion, Kaon, Proton and anti-Proton Production in
+                        High-Energy e+ e- Annihilation}",
+      collaboration  = "TASSO",
+      journal        = "Phys. Lett.",
+      volume         = "94B",
+      year           = "1980",
+      pages          = "444-449",
+      doi            = "10.1016/0370-2693(80)90915-6",
+      reportNumber   = "DESY-80-49",
+      SLACcitation   = "%%CITATION = PHLTA,94B,444;%%"
+}'

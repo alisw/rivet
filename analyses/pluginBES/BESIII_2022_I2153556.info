@@ -1,0 +1,31 @@
+Name: BESIII_2022_I2153556
+Year: 2022
+Summary: Mass distributions in $\Lambda_c^+\to \Lambda\pi^+\pi^0$
+Experiment: BESIII
+Collider: BEPC
+InspireID: 2153556
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - arXiv:2209.08464 [hep-ex]
+Description:
+  'Measurement of the mass distributions in the decay $\Lambda_c^+\to\Lambda\pi^+\pi^0$ by BESIII. The data were read from the plots in the paper and may not have been corrected for efficiency/acceptance.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2022udq
+BibTeX: '@article{BESIII:2022udq,
+    author = "Ablikim, Medina and others",
+    collaboration = "BESIII",
+    title = "{Partial wave analysis of the charmed baryon hadronic decay $\Lambda_c^+\to\Lambda\pi^+\pi^0$}",
+    eprint = "2209.08464",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    month = "9",
+    year = "2022"
+}
+'

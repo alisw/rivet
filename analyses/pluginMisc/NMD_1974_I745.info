@@ -1,0 +1,35 @@
+Name: NMD_1974_I745
+Year: 1974
+Summary: Measurement of $R$ and the hadronic cross section for 4 GeV
+Experiment: NMD
+Collider: CEA
+InspireID: 745
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 32 (1974) 432-435, 1974
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: no
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$ and the hadronic cross seection in $e^+e^-$ collisions by
+   the Non-Magnetic Detector at 4 GeV.
+   The muonic cross section is also outputted to the yoda file
+   so that ratio $R$ can be recalcuated if runs are combined.'
+Keywords: []
+BibKey: Tarnopolsky:1974xb
+BibTeX: '@article{Tarnopolsky:1974xb,
+      author         = "Tarnopolsky, G. and Eshelman, J. and Law, M. E. and
+                        Leong, J. and Newman, H. and Little, R. and Strauch, K.
+                        and Wilson, R.",
+      title          = "{Hadron Production by electron-Positron Annihilation at
+                        5-GeV Center-Of-Mass Energy}",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "32",
+      year           = "1974",
+      pages          = "432-435",
+      doi            = "10.1103/PhysRevLett.32.432",
+      reportNumber   = "PRINT-74-0434 (CEA)",
+      SLACcitation   = "%%CITATION = PRLTA,32,432;%%"
+}'

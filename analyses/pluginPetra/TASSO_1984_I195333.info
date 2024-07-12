@@ -1,0 +1,40 @@
+Name: TASSO_1984_I195333
+Year: 1984
+Summary: Measurements of charged particle multiplicities, $R$ and event shapes between 12 and 43 GeV.
+Experiment: TASSO
+Collider: PETRA
+InspireID: 195333
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Z.Phys. C22 (1984) 307-340, 1984 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization). Beam energy must be specified as analysis option "ENERGY" when rivet-merging samples.
+NeedCrossSection: yes
+Beams: [e-, e+]
+Energies: [12, 14, 22, 25, 27.5, 30.1, 30.5, 31.1, 33.2, 34, 34.5, 34.7, 36.1, 41.5, 43]
+Options:
+ - ENERGY=12,14,22,25,27.5,30.1,30.5,31.1,33.2,34,34.5,34.7,36.1,41.5,43
+Description:
+  'Measurement of $R$, charged particle multiplicites and event shapes in $e^+e^-$ collisions for energies between 12 and 43 GeV.
+   The average charged particle multiplicity, thrust and sphericity are measured for a range of energies. The distributions
+   are available for 12, 22 and 34 GeV.
+   The individual hadronic and muonic cross sections are also outputted to the yoda file
+   so that ratio $R$ can be recalculated if runs are combined.
+   Beam energy must be specified as analysis option "ENERGY" when rivet-merging samples.'
+Keywords: []
+BibKey: Althoff:1983ew
+BibTeX: '@article{Althoff:1983ew,
+      author         = "Althoff, M. and others",
+      title          = "{Jet Production and Fragmentation in e+ e- Annihilation
+                        at 12-GeV to 43-GeV}",
+      collaboration  = "TASSO",
+      journal        = "Z. Phys.",
+      volume         = "C22",
+      year           = "1984",
+      pages          = "307-340",
+      doi            = "10.1007/BF01547419",
+      reportNumber   = "DESY-83-130",
+      SLACcitation   = "%%CITATION = ZEPYA,C22,307;%%"
+}'

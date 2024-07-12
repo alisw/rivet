@@ -5,6 +5,7 @@ Experiment: ATLAS
 Collider: LHC 7TeV
 InspireID: 1183818
 Status: VALIDATED
+Reentrant: false
 Authors:
  - Robindra Prabhu <prabhu@cern.ch>
  - Peter Wijeratne <paw@hep.ucl.ac.uk>
@@ -20,7 +21,7 @@ Energies: [7000]
 Description:
   'The measurement of the sum of the transverse energy of particles as a
    function of particle pseudorapidity, eta, in proton-proton collisions
-   at a centre-of-mass energy, $\sqrt{s} = 7\;\TeV$ using the ATLAS detector
+   at a centre-of-mass energy, $\sqrt{s} = 7~\TeV$ using the ATLAS detector
    at the Large Hadron Collider. The measurements are performed in the
    region $|\eta| < 4.8$ for two event classes: those requiring the presence
    of particles with a low transverse momentum and those requiring

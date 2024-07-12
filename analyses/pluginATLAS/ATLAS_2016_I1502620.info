@@ -5,10 +5,12 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1502620
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Jan Kretzschmar <jan.kretzschmar@cern.ch>
  - Christian Gutschow <chris.g@cern.ch>
 References:
+ - ATLAS-STDM-2012-20
  - Eur. Phys. J. C77 (2017) no.6, 367
  - doi:10.1140/epjc/s10052-017-4911-9
  - arXiv:1612.03016 [hep-ex]
@@ -16,7 +18,7 @@ Keywords:
  - zboson
 RunInfo:
   p + p -> Z + X ( Z -> e e )
-Luminosity_fb: 4.9
+Luminosity_fb: 4.6
 Beams: [p+, p+]
 Energies: [7000]
 PtCuts: [20]
@@ -38,7 +40,7 @@ Description:
   the sensitivity range of the data. A new measurement of the CKM matrix element $|V_{cs}|$ is also provided.
   N.B.: Use :LMODE to choose specify the signature decay channel directly. 
         Default, run everything, assuming all decay modes are generated 
-        Contains Z (W): fill only Z (W) signature histgrams
+        Contains Z (W): fill only Z (W) signature histograms
         Contains EL (MU): assume only electron (muon) decay modes are being generated.'
 BibKey: Aaboud:2016btc
 BibTeX: '@article{Aaboud:2016btc,

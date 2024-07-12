@@ -5,9 +5,11 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1315949
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Deepak Kar <deepak.kar@cern.ch>
 References:
+ - ATLAS-STDM-2011-42
  - Eur.Phys.J. C74 (2014) 3195
  - doi:10.1140/epjc/s10052-014-3195-6
  - arXiv:1409.3433 [hep-ex]
@@ -44,4 +46,8 @@ BibTeX: '@article{Aad:2014jgf,
       reportNumber   = "CERN-PH-EP-2014-162",
       SLACcitation   = "%%CITATION = ARXIV:1409.3433;%%",
 }'
+
+
+ReleaseTests:
+ - $A LHC-Z-mu
 

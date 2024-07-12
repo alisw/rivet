@@ -8,7 +8,7 @@ InspireID: 860416
 Status: VALIDATED
 Authors:
  - Holger Schulz <holger.schulz@physik.hu-berlin.de>
- - Jan Fiete Grosse-Oetringhaus@cern.ch <Jan.Fiete.Grosse-Oetringhaus@cern.ch>
+ - Jan Fiete Grosse-Oetringhaus <Jan.Fiete.Grosse-Oetringhaus@cern.ch>
 References:
  - Phys.Lett.B693:53-68,2010
  - arXiv:1007.0719 [hep-ex]
@@ -21,7 +21,7 @@ PtCuts:
 Description:
   'ALICE measurement of $\langle p_\perp \rangle$ vs. $N_\text{ch}$ and
   invariant particle yield (as function of $p_\perp$) in proton-proton
-  collisions at $\sqrt{s} = 900\;\GeV$.'
+  collisions at $\sqrt{s} = 900~\GeV$.'
 BibKey: Aamodt:2010my
 BibTeX: '@Article{Aamodt:2010my,
      author    = "Aamodt, K and others",

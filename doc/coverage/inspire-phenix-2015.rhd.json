@@ -1,0 +1,112 @@
+{
+    "1289084": [
+        "Measurement of $\\Upsilon(1S+2S+3S)$ production in $p+p$ and Au$+$Au collisions at $\\sqrt{s_{_{NN}}}=200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.91.024913", 
+        null, 
+        "1404.2246", 
+        null, 
+        null, 
+        []
+    ], 
+    "1293053": [
+        "Measurement of long-range angular correlation and quadrupole anisotropy of pions and (anti)protons in central $d+$Au collisions at $\\sqrt{s_{_{NN}}}$=200 GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.114.192301", 
+        null, 
+        "1404.7461", 
+        null, 
+        null, 
+        []
+    ], 
+    "1296108": [
+        "Heavy-quark production and elliptic flow in Au$+$Au collisions at $\\sqrt{s_{_{NN}}}=62.4$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.91.044907", 
+        null, 
+        "1405.3301", 
+        null, 
+        null, 
+        []
+    ], 
+    "1296308": [
+        "Centrality dependence of low-momentum direct-photon production in Au$+$Au collisions at $\\sqrt{s_{_{NN}}}=200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.91.064904", 
+        null, 
+        "1405.3940", 
+        null, 
+        null, 
+        []
+    ], 
+    "1296859": [
+        "Cross section for $b\\bar{b}$ production via dielectrons in d$+$Au collisions at $\\sqrt{s_{_{NN}}}=200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.91.014907", 
+        null, 
+        "1405.4004", 
+        null, 
+        null, 
+        []
+    ], 
+    "1313628": [
+        "Search for dark photons from neutral meson decays in $p + p$ and $d$ + Au collisions at $\\sqrt{s_{NN}} =$ 200 GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.91.031901", 
+        null, 
+        "1409.0851", 
+        null, 
+        null, 
+        []
+    ], 
+    "1315330": [
+        "Charged-pion cross sections and double-helicity asymmetries in polarized p+p collisions at $\\sqrt{s}$=200  GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevD.91.032001", 
+        null, 
+        "1409.1907", 
+        "ins1315330", 
+        null, 
+        []
+    ], 
+    "1332240": [
+        "Systematic Study of Azimuthal Anisotropy in Cu$+$Cu and Au$+$Au Collisions at $\\sqrt{s_{_{NN}}} = 62.4$ and 200 GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.92.034913", 
+        null, 
+        "1412.1043", 
+        null, 
+        null, 
+        []
+    ], 
+    "1362210": [
+        "Systematic study of charged-pion and kaon femtoscopy in Au + Au collisions at $\\sqrt{s_{_{NN}}}$=200 GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.92.034914", 
+        null, 
+        "1504.05168", 
+        null, 
+        null, 
+        []
+    ], 
+    "1379995": [
+        "$\\phi$ meson production in $d+$Au collisions at $\\sqrt{s_{_{NN}}}=200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.92.044909", 
+        null, 
+        "1506.08181", 
+        null, 
+        null, 
+        []
+    ], 
+    "1384274": [
+        "Measurements of elliptic and triangular flow in high-multiplicity $^{3}$He$+$Au collisions at $\\sqrt{s_{_{NN}}}=200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.115.142301", 
+        null, 
+        "1507.06273", 
+        null, 
+        null, 
+        []
+    ]
+}

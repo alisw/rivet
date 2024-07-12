@@ -1,0 +1,36 @@
+Name: BELLE_2010_I862241
+Year: 2010
+Summary: Mass distributions in $B^0\to K^+K^-K^0_S$
+Experiment: BELLE
+Collider: KEKB
+InspireID: 862241
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 82 (2010) 073011
+RunInfo: Any process producing B0 mesons, originally Upsilon(4S) decays
+Description:
+'Measurement of Mass distributions in $B^0\to K^+K^-K^0_S$ decays. The data were read from the plots in the paper and
+may not be corrected for efficiency/acceptable, however the backgrounds given in the paper have been subtracted.'
+ValidationInfo:
+  'Herwig7 events using EvtGen for decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle:2010wis
+BibTeX: '@article{Belle:2010wis,
+    author = "Nakahama, Y. and others",
+    collaboration = "Belle",
+    title = "{Measurement of CP violating asymmetries in $B^0 -> K^+K^- K^0_S$ decays with a time-dependent Dalitz approach}",
+    eprint = "1007.3848",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevD.82.073011",
+    journal = "Phys. Rev. D",
+    volume = "82",
+    pages = "073011",
+    year = "2010"
+}
+'

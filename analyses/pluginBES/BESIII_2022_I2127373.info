@@ -1,0 +1,32 @@
+Name: BESIII_2022_I2127373
+Year: 2022
+Summary: Kinematic distributions in $\Lambda_c^+\to \Lambda^0 e^+\nu_e$
+Experiment: BESIII
+Collider: BEPC
+InspireID: 2127373
+Status: VALIDATED NOHEPDATA
+Reentrant: 
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - arXiv:2207.14149 [hep-ex]
+RunInfo: Any process producing Lambda_c+
+Description:
+  'Measurement of the kinematic distributions in $\Lambda_c^+\to \Lambda^0 e^+\nu_e$ by BES-III.  N.B.
+  The data were read from the paper and may not have been corrected for acceptance.'
+ValidationInfo:
+  'Herwig 7 events using EvtGen for the decays.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Ablikim:2022odf
+BibTeX: '@article{Ablikim:2022odf,
+    author = "Ablikim, M. and others",
+    title = "{Study of the Semileptonic Decay $\Lambda_c^+\rightarrow \Lambda e^+\nu_e$}",
+    eprint = "2207.14149",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    month = "7",
+    year = "2022"
+}
+'

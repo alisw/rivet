@@ -10,7 +10,7 @@ namespace Rivet {
   public:
 
     // Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2017_I1509919);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2017_I1509919);
 
 
     // Pre-run histogram and projection booking
@@ -19,55 +19,55 @@ namespace Rivet {
       declare(ChargedFinalState(Cuts::abseta < 2.5 && Cuts::pT > 500*MeV), "CFS500");
 
       // Nch profiles vs. pT_lead
-      _hist_nch[0] = bookProfile1D(22, 1, 1);
-      _hist_nch[1] = bookProfile1D(23, 1, 1);
-      _hist_nch[2] = bookProfile1D(21, 1, 1);
-      _hist_nch[3] = bookProfile1D( 3, 1, 1);
-      _hist_nch[4] = bookProfile1D( 2, 1, 1);
-      _hist_nch[5] = bookProfile1D( 4, 1, 1);
+      book(_hist_nch[0], 22, 1, 1);
+      book(_hist_nch[1], 23, 1, 1);
+      book(_hist_nch[2], 21, 1, 1);
+      book(_hist_nch[3],  3, 1, 1);
+      book(_hist_nch[4],  2, 1, 1);
+      book(_hist_nch[5],  4, 1, 1);
 
       // pTsum profiles vs. pT_lead
-      _hist_ptsum[0] = bookProfile1D(25, 1, 1);
-      _hist_ptsum[1] = bookProfile1D(26, 1, 1);
-      _hist_ptsum[2] = bookProfile1D(24, 1, 1);
-      _hist_ptsum[3] = bookProfile1D( 6, 1, 1);
-      _hist_ptsum[4] = bookProfile1D( 5, 1, 1);
-      _hist_ptsum[5] = bookProfile1D( 7, 1, 1);
+      book(_hist_ptsum[0], 25, 1, 1);
+      book(_hist_ptsum[1], 26, 1, 1);
+      book(_hist_ptsum[2], 24, 1, 1);
+      book(_hist_ptsum[3],  6, 1, 1);
+      book(_hist_ptsum[4],  5, 1, 1);
+      book(_hist_ptsum[5],  7, 1, 1);
 
       // <pT> profiles vs pT_lead (not measured for trans diff)
-      _hist_ptavg[0] = bookProfile1D(29, 1, 1);
-      _hist_ptavg[1] = bookProfile1D(30, 1, 1);
-      _hist_ptavg[2] = bookProfile1D(11, 1, 1);
-      _hist_ptavg[3] = bookProfile1D(13, 1, 1);
-      _hist_ptavg[4] = bookProfile1D(12, 1, 1);
+      book(_hist_ptavg[0], 29, 1, 1);
+      book(_hist_ptavg[1], 30, 1, 1);
+      book(_hist_ptavg[2], 11, 1, 1);
+      book(_hist_ptavg[3], 13, 1, 1);
+      book(_hist_ptavg[4], 12, 1, 1);
 
       // <pT> profiles vs. Nch (not measured for trans diff)
-      _hist_dn_dpt[0] = bookProfile1D(27, 1, 1);
-      _hist_dn_dpt[1] = bookProfile1D(28, 1, 1);
-      _hist_dn_dpt[2] = bookProfile1D( 8, 1, 1);
-      _hist_dn_dpt[3] = bookProfile1D(10, 1, 1);
-      _hist_dn_dpt[4] = bookProfile1D( 9, 1, 1);
+      book(_hist_dn_dpt[0], 27, 1, 1);
+      book(_hist_dn_dpt[1], 28, 1, 1);
+      book(_hist_dn_dpt[2],  8, 1, 1);
+      book(_hist_dn_dpt[3], 10, 1, 1);
+      book(_hist_dn_dpt[4],  9, 1, 1);
 
       // Only measured for trans max/min
-      _hist_dn_dpt2[3] = bookProfile1D(32, 1, 1);
-      _hist_dn_dpt2[4] = bookProfile1D(31, 1, 1);
+      book(_hist_dn_dpt2[3], 32, 1, 1);
+      book(_hist_dn_dpt2[4], 31, 1, 1);
 
       // Nch vs. Delta(phi) profiles
-      _hist_N_vs_dPhi[0] = bookProfile1D(15, 1, 1);
-      _hist_N_vs_dPhi[1] = bookProfile1D(16, 1, 1);
-      _hist_N_vs_dPhi[2] = bookProfile1D(17, 1, 1);
+      book(_hist_N_vs_dPhi[0], 15, 1, 1);
+      book(_hist_N_vs_dPhi[1], 16, 1, 1);
+      book(_hist_N_vs_dPhi[2], 17, 1, 1);
 
       // pT vs. Delta(phi) profiles
-      _hist_pT_vs_dPhi[0] = bookProfile1D(18, 1, 1);
-      _hist_pT_vs_dPhi[1] = bookProfile1D(19, 1, 1);
-      _hist_pT_vs_dPhi[2] = bookProfile1D(20, 1, 1);
+      book(_hist_pT_vs_dPhi[0], 18, 1, 1);
+      book(_hist_pT_vs_dPhi[1], 19, 1, 1);
+      book(_hist_pT_vs_dPhi[2], 20, 1, 1);
 
       //ptLead histos only for 1 and 5 GeV cuts
-      _hist_ptLead[0] = bookHisto1D( 1, 1, 1);
-      _hist_ptLead[1] = bookHisto1D(14, 1, 1);
+      book(_hist_ptLead[0],  1, 1, 1);
+      book(_hist_ptLead[1], 14, 1, 1);
 
       for (size_t iC = 0; iC < NCUTS; ++iC) {
-        _counters[iC] = bookCounter("Ctr_cut_" + toString(iC));
+        book(_counters[iC], "Ctr_cut_" + toString(iC));
       }
 
     }
@@ -87,11 +87,10 @@ namespace Rivet {
 
       // Require at least one track in the event for pTlead histograms
       if (particles.empty()) vetoEvent;
-      const double weight = event.weight();
       for (size_t iC = 0; iC < 2; ++iC) {
         if (particles[0].pT() < PTCUTS[iC]*GeV) continue;
-        _counters[iC]->fill(weight);
-        _hist_ptLead[iC]->fill( particles[0].pT()/GeV, weight);
+        _counters[iC]->fill();
+        _hist_ptLead[iC]->fill( particles[0].pT()/GeV);
       }
 
       // Require at least one track in the event with pT >= 1 GeV for the rest
@@ -108,8 +107,8 @@ namespace Rivet {
       vector<double> num(NREGIONS, 0), ptSum(NREGIONS, 0.0), avgpt(NREGIONS, 0.0);
 
       // Temporary histos that bin Nch and pT in dPhi.
-      Histo1D hist_num_dphi(*_hist_N_vs_dPhi[0].get(), "/hist_num_dphi");
-      Histo1D hist_pt_dphi(*_hist_pT_vs_dPhi[0].get(), "/hist_pt_dphi");
+      Histo1D hist_num_dphi(*_hist_N_vs_dPhi[0], "/hist_num_dphi");
+      Histo1D hist_pt_dphi(*_hist_pT_vs_dPhi[0], "/hist_pt_dphi");
       hist_num_dphi.reset();
       hist_pt_dphi .reset();
 
@@ -133,7 +132,7 @@ namespace Rivet {
 
         // Fill temp histos to bin Nch and pT in dPhi
         if (p.genParticle() != p_lead.genParticle()) { // We don't want to fill all those zeros from the leading track...
-          hist_num_dphi.fill(dPhi/M_PI*180, 1);
+          hist_num_dphi.fill(dPhi/M_PI*180);
           hist_pt_dphi .fill(dPhi/M_PI*180, pT/GeV);
         }
       }
@@ -165,21 +164,21 @@ namespace Rivet {
                                           2*2.5 *   PI/3.0, 2*2.5 *   PI/3.0, 2*2.5 *   PI/3.0 };
       for (size_t iR = 0; iR < NREGIONS; ++iR) {
 
-        _hist_nch  [iR]->fill(pTlead/GeV, num[iR]   /dEtadPhi[iR]     , weight);
-        _hist_ptsum[iR]->fill(pTlead/GeV, ptSum[iR] /GeV/dEtadPhi[iR] , weight);
+        _hist_nch  [iR]->fill(pTlead/GeV, num[iR]   /dEtadPhi[iR]     );
+        _hist_ptsum[iR]->fill(pTlead/GeV, ptSum[iR] /GeV/dEtadPhi[iR] );
 
         // <pT> profiles vs. pT_lead (first 3 are the same!)
         switch (iR) {
         case kToward    :
         case kAway      :
         case kTrans     :
-          if (num[iR] > 0) _hist_ptavg[iR]->fill(pTlead/GeV, avgpt[iR]/GeV, weight);
+          if (num[iR] > 0) _hist_ptavg[iR]->fill(pTlead/GeV, avgpt[iR]/GeV);
           break;
         case kTransMax  :
-          if (tmpnch[sumptMaxRegID] > 0) _hist_ptavg[iR]->fill(pTlead/GeV, avgpt[iR]/GeV, weight);
+          if (tmpnch[sumptMaxRegID] > 0) _hist_ptavg[iR]->fill(pTlead/GeV, avgpt[iR]/GeV);
           break;
         case kTransMin  :
-          if (tmpnch[sumptMinRegID] > 0) _hist_ptavg[iR]->fill(pTlead/GeV, avgpt[iR]/GeV, weight);
+          if (tmpnch[sumptMinRegID] > 0) _hist_ptavg[iR]->fill(pTlead/GeV, avgpt[iR]/GeV);
           break;
         case kTransDiff :
           break;
@@ -192,18 +191,18 @@ namespace Rivet {
         case kToward    :
         case kAway      :
         case kTrans     :
-          if (num[iR] > 0) _hist_dn_dpt[iR]->fill(num[iR] , avgpt[iR]/GeV, weight);
+          if (num[iR] > 0) _hist_dn_dpt[iR]->fill(num[iR] , avgpt[iR]/GeV);
           break;
         case kTransMax  :
           if (tmpnch[sumptMaxRegID] > 0) {
-            _hist_dn_dpt [iR]->fill(num[kTrans]          , avgpt[iR]/GeV, weight);
-            _hist_dn_dpt2[iR]->fill(tmpnch[sumptMaxRegID], avgpt[iR]/GeV, weight);
+            _hist_dn_dpt [iR]->fill(num[kTrans]          , avgpt[iR]/GeV);
+            _hist_dn_dpt2[iR]->fill(tmpnch[sumptMaxRegID], avgpt[iR]/GeV);
           }
           break;
         case kTransMin  :
           if (tmpnch[sumptMinRegID] > 0) {
-            _hist_dn_dpt [iR]->fill(num[kTrans]          , avgpt[iR]/GeV, weight);
-            _hist_dn_dpt2[iR]->fill(tmpnch[sumptMinRegID], avgpt[iR]/GeV, weight);
+            _hist_dn_dpt [iR]->fill(num[kTrans]          , avgpt[iR]/GeV);
+            _hist_dn_dpt2[iR]->fill(tmpnch[sumptMinRegID], avgpt[iR]/GeV);
           }
           break;
         case kTransDiff :
@@ -228,7 +227,7 @@ namespace Rivet {
           value = hist_num_dphi.bin(i).area()/hist_num_dphi.bin(i).xWidth()/dEtadPhi2;
         }
         for (size_t iC = 0; iC < NCUTS; ++iC) {
-          if (pTlead >= PTCUTS[iC]*GeV) _hist_N_vs_dPhi[iC] ->fill(mean, value, weight);
+          if (pTlead >= PTCUTS[iC]*GeV) _hist_N_vs_dPhi[iC] ->fill(mean, value);
         }
 
         // Then pT
@@ -239,7 +238,7 @@ namespace Rivet {
           value = hist_pt_dphi.bin(i).area()/hist_pt_dphi.bin(i).xWidth()/dEtadPhi2;
         }
         for (size_t iC = 0; iC < NCUTS; ++iC) {
-          if (pTlead >= PTCUTS[iC]*GeV) _hist_pT_vs_dPhi[iC] ->fill(mean, value, weight);
+          if (pTlead >= PTCUTS[iC]*GeV) _hist_pT_vs_dPhi[iC] ->fill(mean, value);
         }
       }
 
@@ -298,7 +297,6 @@ namespace Rivet {
   };
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2017_I1509919);
+  RIVET_DECLARE_PLUGIN(ATLAS_2017_I1509919);
 
 }

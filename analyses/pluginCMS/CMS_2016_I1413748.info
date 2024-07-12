@@ -5,6 +5,7 @@ Experiment: CMS
 Collider: LHC
 InspireID: 1413748
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Jacob Linacre <jacob.linacre@cern.ch>
 References:
@@ -12,7 +13,7 @@ References:
  - DOI:10.1103/PhysRevD.93.052007
  - arXiv:1601.01107
  - https://hepdata.net/record/ins1413748
-RunInfo: 'Dilepton ttbar events at $\sqrt{s}=8\;\TeV$, where the leptons are prompt elecrons or muons (not from tau). No other cuts. All but one of the variables require top quarks in the event record.'
+RunInfo: 'Dilepton ttbar events at $\sqrt{s}=8~\TeV$, where the leptons are prompt elecrons or muons (not from tau). No other cuts. All but one of the variables require top quarks in the event record.'
 NeedCrossSection: no
 Luminosity: 19.5/fb
 Beams: [p+, p+]
@@ -51,3 +52,5 @@ BibTeX: '@article{Khachatryan:2016xws,
       reportNumber   = "CMS-TOP-14-023, CERN-PH-EP-2015-333",
       SLACcitation   = "%%CITATION = ARXIV:1601.01107;%%"
 }'
+ReleaseTests:
+ - $A LHC-8-Top-All

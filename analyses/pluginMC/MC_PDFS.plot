@@ -1,7 +1,7 @@
 # BEGIN PLOT /MC_PDFS/PdfX
 Title=PDF sampling $x$ value distribution
 XLabel=$x$
-YLabel=$1/N_\text{evt} \  \mathrm{d}N_\text{evt}/\mathrm{d}x$
+YLabel=$1/N_\mathrm{evt} \  \mathrm{d}N_\mathrm{evt}/\mathrm{d}x$
 LogX=1
 LogY=1
 FullRange=1
@@ -10,13 +10,13 @@ LegendYPos=0.5
 # END PLOT
 
 # BEGIN PLOT /MC_PDFS/PdfXmin
-Title=PDF sampling $x_\text{min}$ value distribution
-XLabel=$x_\text{min}$
+Title=PDF sampling $x_\mathrm{min}$ value distribution
+XLabel=$x_\mathrm{min}$
 # END PLOT
 
 # BEGIN PLOT /MC_PDFS/PdfXmax
-Title=PDF sampling $x_\text{max}$ value distribution
-XLabel=$x_\text{max}$
+Title=PDF sampling $x_\mathrm{max}$ value distribution
+XLabel=$x_\mathrm{max}$
 LegendXPos=0.3
 XMin=0.00005
 # END PLOT
@@ -24,7 +24,7 @@ XMin=0.00005
 # BEGIN PLOT /MC_PDFS/PdfQ
 Title=PDF sampling $Q$ value distribution
 XLabel=$Q$
-YLabel=$1/N_\text{evt} \  \mathrm{d}N_\text{evt}/\mathrm{d}Q$
+YLabel=$1/N_\mathrm{evt} \  \mathrm{d}N_\mathrm{evt}/\mathrm{d}Q$
 LogX=0
 LogY=1
 FullRange=1

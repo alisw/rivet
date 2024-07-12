@@ -1,0 +1,40 @@
+{
+    "510975": [
+        "Multidimensional resonance analysis of Lambda+(c) ---> p K- pi+",
+        "E791",
+        "10.1016/S0370-2693(99)01397-0",
+        null,
+        "hep-ex/9912003",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-99-349-E"
+        ]
+    ],
+    "531814": [
+        "Asymmetries in the production of Lambda(c)+ and Lambda(c)- baryons in 500-GeV/c pi- nucleon interactions",
+        "E791",
+        "10.1016/S0370-2693(00)01239-9",
+        null,
+        "hep-ex/0008029",
+        "ins531814",
+        null,
+        [
+            "FERMILAB-PUB-00-025-E",
+            "CBPF-NF-062-00"
+        ]
+    ],
+    "532973": [
+        "Asymmetries in the production of Lambda0, Xi-, and Omega- hyperons in 500-GeV/c pi minus: Nucleon interactions",
+        "E791",
+        "10.1016/S0370-2693(00)01278-8",
+        null,
+        "hep-ex/0009016",
+        "ins532973",
+        null,
+        [
+            "FERMILAB-PUB-00-024-E",
+            "CBPF-NF-065-00"
+        ]
+    ]
+}

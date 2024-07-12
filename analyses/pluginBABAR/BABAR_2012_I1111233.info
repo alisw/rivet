@@ -1,0 +1,38 @@
+Name: BABAR_2012_I1111233
+Year: 2012
+Summary: Differential Branching ratio and asymmetries in $B\to K^{(*)}\ell^+\ell^-$
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 1111233
+Status: VALIDATED NOHEPDATA SINGLEWEIGHT
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 86 (2012) 032012
+RunInfo: Any proces producing B0 and B+, originally Upsilon(4S) decays
+Description:
+  'Measurement of the differential Branching ratio and asymmetries in $B\to K^{(*)}\ell^+\ell^-$. As
+  well as the differential branching ratio as a function of $q^2$ the ratio of $e^+e^-$ and $\mu^+\mu^-$ and
+  isospin and CP asymmetries are measured.'
+ValidationInfo:
+  'Herwig7 events using EvtGen for decays.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BaBar:2012mrf
+BibTeX: '@article{BaBar:2012mrf,
+    author = "Lees, J. P. and others",
+    collaboration = "BaBar",
+    title = "{Measurement of Branching Fractions and Rate Asymmetries in the Rare Decays $B \to K^{(*)} l^+ l^-$}",
+    eprint = "1204.3933",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "SLAC-PUB-14957, BABAR-PUB-12-002",
+    doi = "10.1103/PhysRevD.86.032012",
+    journal = "Phys. Rev. D",
+    volume = "86",
+    pages = "032012",
+    year = "2012"
+}
+'

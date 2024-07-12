@@ -1,0 +1,50 @@
+{
+    "153813": [
+        "Total Width and Leptonic Branching Ratio of the $\\Upsilon$ (9.46)", 
+        "LENA", 
+        "10.1103/PhysRevLett.46.92", 
+        null, 
+        null, 
+        "ins153813", 
+        null, 
+        [
+            "DESY-80-53"
+        ]
+    ], 
+    "155275": [
+        "UPSILON-prime (10.01) RESONANCE PARAMETERS", 
+        "LENA", 
+        "10.1016/0370-2693(81)90973-4", 
+        null, 
+        null, 
+        "ins155275", 
+        null, 
+        [
+            "DESY-80-81"
+        ]
+    ], 
+    "156810": [
+        "Measurement of the Decay $\\Upsilon^\\prime \\to \\Upsilon \\pi^+ \\pi^-$", 
+        "LENA", 
+        "10.1016/0370-2693(81)90295-1", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-80-125"
+        ]
+    ], 
+    "164397": [
+        "Charged Hadron Production in $e^+ e^-$ Annihilation in the $\\Upsilon$ and $\\Upsilon^\\prime$ Region", 
+        "LENA", 
+        "10.1007/BF01554103", 
+        null, 
+        null, 
+        "ins164397", 
+        null, 
+        [
+            "DESY-81-008"
+        ]
+    ]
+}

@@ -1,0 +1,49 @@
+{
+    "452097": [
+        "Precise measurement of the e+ e- ---> mu+ mu- reaction at s**(1/2) = 57.77-GeV", 
+        "VENUS", 
+        "10.1103/PhysRevD.57.5345", 
+        null, 
+        null, 
+        "ins452097", 
+        null, 
+        [
+            "KEK-PREPRINT-97-210", 
+            "KOBE-HEP-97-03", 
+            "NGTHEP-97-3", 
+            "OULNS-97-02"
+        ]
+    ], 
+    "453613": [
+        "Measurement of the charged multiplicity of bottom and light quark events in e+ e- annihilation at s**(1/2) = 58-GeV", 
+        "VENUS", 
+        "10.1016/S0370-2693(98)00073-2", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-97-240", 
+            "KOBE-HEP-97-04", 
+            "KUDP-97-01", 
+            "NGTHEP-97-4", 
+            "OUHEP-97-3", 
+            "OULNS-97-03", 
+            "TMU-HEP-97-22"
+        ]
+    ], 
+    "475701": [
+        "Measurement of the running of effective QED coupling at large momentum transfer in the space - like region", 
+        "VENUS", 
+        "10.1103/PhysRevLett.81.2428", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-98-47", 
+            "NGTHEP-98-2", 
+            "KOBE-HEP-98-01"
+        ]
+    ]
+}

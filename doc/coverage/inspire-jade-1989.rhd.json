@@ -1,0 +1,50 @@
+{
+    "266409": [
+        "A Measurement of the $\\tau$ Lepton Lifetime", 
+        "JADE", 
+        "10.1007/BF01565124", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-88-155"
+        ]
+    ], 
+    "267207": [
+        "Observation of Spin 1 Resonance Formation in the Final State $K K \\pi$ Produced in Tagged Two Photon Collisions", 
+        "JADE", 
+        "10.1007/BF01548440", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-88-166"
+        ]
+    ], 
+    "267332": [
+        "A Measurement of the Charge Asymmetry of Hadronic Events in Electron Positron Annihilation", 
+        "JADE", 
+        "10.1007/BF01565123", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-88-154"
+        ]
+    ], 
+    "278937": [
+        "A Measurement of the Charmed Quark Asymmetry in $e^+ e^-$ Annihilation", 
+        "JADE", 
+        "10.1007/BF01549079", 
+        null, 
+        null, 
+        "ins278937", 
+        null, 
+        [
+            "DESY-89-063"
+        ]
+    ]
+}

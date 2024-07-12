@@ -1,0 +1,36 @@
+Name: BESIII_2013_I1126137
+Year: 2013
+Summary: Photon Spectrum in $J/\psi\to3\gamma$ decays
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1126137
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 87 (2013) 3, 032003
+RunInfo: Any process producing J/psi mesons, originally e+e- collisions
+Description:
+  'Measurement of the photon pectrum in $J/\psi\to3\gamma$ decays by BES. The data was read from the figure in the paper but is corrected.'
+ValidationInfo:
+  'Herwig7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2012lxx
+BibTeX: '@article{BESIII:2012lxx,
+    author = "Ablikim, M. and others",
+    collaboration = "BESIII",
+    title = "{Evidence for $\eta_{c} \rightarrow \gamma\gamma$~and measurement of $J/\psi\rightarrow 3\gamma$}",
+    eprint = "1208.1461",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevD.87.032003",
+    journal = "Phys. Rev. D",
+    volume = "87",
+    number = "3",
+    pages = "032003",
+    year = "2013"
+}
+'

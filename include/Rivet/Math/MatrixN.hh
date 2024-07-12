@@ -1,11 +1,11 @@
 #ifndef RIVET_MATH_MATRIXN
 #define RIVET_MATH_MATRIXN
 
-#include "Rivet/Math/MathHeader.hh"
+#include "Rivet/Math/MathConstants.hh"
 #include "Rivet/Math/MathUtils.hh"
 #include "Rivet/Math/Vectors.hh"
 
-#include "Rivet/Math/eigen/matrix.h"
+#include "Rivet/Math/eigen3/Dense"
 
 namespace Rivet {
 
@@ -64,13 +64,9 @@ namespace Rivet {
 
   public:
 
-    Matrix() {
-      _matrix.loadZero();
-    }
+    Matrix() : _matrix(EMatrix::Zero()) {}
 
-    Matrix(const Matrix<N>& other) {
-      _matrix = other._matrix;
-    }
+    Matrix(const Matrix<N>& other) : _matrix(other._matrix) {}
 
     Matrix& set(const size_t i, const size_t j, const double value) {
       if (i < N && j < N) {
@@ -120,8 +116,8 @@ namespace Rivet {
     }
 
     Matrix<N> transpose() const {
-      Matrix<N> tmp = *this;
-      tmp._matrix.replaceWithAdjoint();
+      Matrix<N> tmp;
+      tmp._matrix = _matrix.transpose();
       return tmp;
     }
 
@@ -160,7 +156,7 @@ namespace Rivet {
     }
 
     /// Get dimensionality
-    size_t size() const {
+    constexpr size_t size() const {
       return N;
     }
 
@@ -208,24 +204,24 @@ namespace Rivet {
       return _matrix != a._matrix;
     }
 
-    bool operator < (const Matrix<N>& a) const {
-      return _matrix < a._matrix;
-    }
+    // bool operator < (const Matrix<N>& a) const {
+    //   return _matrix < a._matrix;
+    // }
 
-    bool operator <= (const Matrix<N>& a) const {
-      return _matrix <= a._matrix;
-    }
+    // bool operator <= (const Matrix<N>& a) const {
+    //   return _matrix <= a._matrix;
+    // }
 
-    bool operator > (const Matrix<N>& a) const {
-      return _matrix > a._matrix;
-    }
+    // bool operator > (const Matrix<N>& a) const {
+    //   return _matrix > a._matrix;
+    // }
 
-    bool operator >= (const Matrix<N>& a) const {
-      return _matrix >= a._matrix;
-    }
+    // bool operator >= (const Matrix<N>& a) const {
+    //   return _matrix >= a._matrix;
+    // }
 
     Matrix<N>& operator *= (const Matrix<N>& m) {
-      _matrix = _matrix * m._matrix;
+      _matrix *= m._matrix;
       return *this;
     }
 
@@ -251,7 +247,7 @@ namespace Rivet {
 
   protected:
 
-    typedef Eigen::Matrix<double,N> EMatrix;
+    using EMatrix = RivetEigen::Matrix<double,N,N>;
     EMatrix _matrix;
 
   };
@@ -368,7 +364,7 @@ namespace Rivet {
   /// Make string representation
   template <size_t N>
   inline string toString(const Matrix<N>& m) {
-    ostringstream ss;
+    std::ostringstream ss;
     ss << "[ ";
     for (size_t i = 0; i < m.size(); ++i) {
       ss << "( ";
@@ -385,7 +381,7 @@ namespace Rivet {
 
   /// Stream out string representation
   template <size_t N>
-  inline ostream& operator << (std::ostream& out, const Matrix<N>& m) {
+  inline std::ostream& operator << (std::ostream& out, const Matrix<N>& m) {
     out << toString(m);
     return out;
   }

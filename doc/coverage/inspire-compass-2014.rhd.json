@@ -1,0 +1,62 @@
+{
+    "1257385": [
+        "Transverse target spin asymmetries in exclusive $\\rho^0$ muoproduction", 
+        "COMPASS", 
+        "10.1016/j.physletb.2014.02.005", 
+        "1604430", 
+        "1310.1454", 
+        "ins1257385", 
+        null, 
+        [
+            "CERN-PH-EP-2013-191"
+        ]
+    ], 
+    "1278730": [
+        "Measurement of azimuthal hadron asymmetries in semi-inclusive deep inelastic scattering off unpolarised nucleons", 
+        "COMPASS", 
+        "10.1016/j.nuclphysb.2014.07.019", 
+        "1641948", 
+        "1401.6284", 
+        "ins1278730", 
+        null, 
+        [
+            "CERN-PH-EP-2014-009"
+        ]
+    ], 
+    "1279598": [
+        "A high-statistics measurement of transverse spin effects in dihadron production from muon\u2013proton semi-inclusive deep-inelastic scattering", 
+        "COMPASS", 
+        "10.1016/j.physletb.2014.06.080", 
+        "1644777", 
+        "1401.7873", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2014-013"
+        ]
+    ], 
+    "1285361": [
+        "Measurement of radiative widths of $a_2(1320)$ and $\\pi_2(1670)$", 
+        "COMPASS", 
+        "10.1140/epja/i2014-14079-8", 
+        "1666128", 
+        "1403.2644", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2014-041"
+        ]
+    ], 
+    "1298025": [
+        "Spin alignment and violation of the OZI rule in exclusive $\\omega$ and $\\phi$ production in pp collisions", 
+        "COMPASS", 
+        "10.1016/j.nuclphysb.2014.07.020", 
+        "1700255", 
+        "1405.6376", 
+        "ins1298025", 
+        null, 
+        [
+            "CERN-PH-EP-2014-096"
+        ]
+    ]
+}

@@ -1,0 +1,310 @@
+{
+    "538041": [
+        "Measurement of the two-jet differential cross section in $p\\bar{p}$ collisions at $\\sqrt{s} = 1800$ GeV", 
+        "CDF", 
+        "10.1103/PhysRevD.64.012001", 
+        null, 
+        "hep-ex/0012013", 
+        "ins538041", 
+        null, 
+        [
+            "FERMILAB-PUB-00-311-E"
+        ]
+    ], 
+    "552797": [
+        "Measurement of the Inclusive Jet Cross Section in $\\bar{p}p$ Collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.64.032001", 
+        null, 
+        "hep-ph/0102074", 
+        "ins552797", 
+        null, 
+        [
+            "FERMILAB-PUB-01-008-E", 
+            "FNAL-PUB-01-008-E"
+        ]
+    ], 
+    "557644": [
+        "Search for Gluinos and Scalar Quarks in $p\\bar{p}$ Collisions at $\\sqrt{s} = 1.8$ TeV using the Missing Energy Plus Multijets Signature", 
+        "CDF", 
+        "10.1103/PhysRevLett.88.041801", 
+        null, 
+        "hep-ex/0106001", 
+        null, 
+        null, 
+        [
+            "EFI-01-22", 
+            "FERMILAB-PUB-01-084-E"
+        ]
+    ], 
+    "557647": [
+        "Cross Section and Heavy Quark Composition of $\\gamma + \\mu$ Events Produced in $p \\bar{p}$ Collisions", 
+        "CDF", 
+        "10.1103/PhysRevD.65.012003", 
+        null, 
+        "hep-ex/0106004", 
+        "ins557647", 
+        null, 
+        [
+            "FERMILAB-PUB-01-087-E"
+        ]
+    ], 
+    "558984": [
+        "Searches for New Physics in Events with a Photon and b-Quark Jet at CDF", 
+        "CDF", 
+        "10.1103/PhysRevD.65.052006", 
+        null, 
+        "hep-ex/0106012", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-01-097-E"
+        ]
+    ], 
+    "560924": [
+        "Search for New Heavy Particles in the $W Z^0$ Final State in $p\\bar{p}$ Collisions at $\\sqrt{s}$ = 1.8 TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.88.071806", 
+        null, 
+        "hep-ex/0108004", 
+        "ins560924", 
+        null, 
+        [
+            "FERMILAB-PUB-01-219-E"
+        ]
+    ], 
+    "561343": [
+        "A study of $B^0 \\to J/\\psi K^{(*)0} \\pi^+ \\pi^-$ Decays with the Collider Detector at Fermilab", 
+        "CDF", 
+        "10.1103/PhysRevLett.88.071801", 
+        null, 
+        "hep-ex/0108022", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-01-232-E"
+        ]
+    ], 
+    "561629": [
+        "Measurement of the Strong Coupling Constant from Inclusive Jet Production at the Tevatron $\\bar{p}p$ Collider", 
+        "CDF", 
+        "10.1103/PhysRevLett.88.042001", 
+        null, 
+        "hep-ex/0108034", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-01-246-E"
+        ]
+    ], 
+    "562544": [
+        "Study of the Heavy Flavor Content of Jets Produced in Association with W Bosons in $p\\bar{p}$ Collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.65.052007", 
+        null, 
+        "hep-ex/0109012", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-01-253-E"
+        ]
+    ], 
+    "562883": [
+        "Diffractive Dijet Production at $\\sqrt{s} = 630$ GeV and 1800 GeV at the Fermilab Tevatron", 
+        "CDF", 
+        "10.1103/PhysRevLett.88.151802", 
+        null, 
+        "hep-ex/0109025", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-01-299-E"
+        ]
+    ], 
+    "564038": [
+        "Search for New Physics in Photon Lepton Events in $p\\bar{p}$ Collisions at $\\sqrt{s}$ = 1.8-TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.66.012004", 
+        null, 
+        "hep-ex/0110015", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-01-298-E", 
+            "EFI-2001-45"
+        ]
+    ], 
+    "564673": [
+        "Charged Jet Evolution and the Underlying Event in $p\\bar{p}$ Collisions at 1.8 TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.65.092002", 
+        null, 
+        null, 
+        "ins564673", 
+        null, 
+        [
+            "FERMILAB-PUB-01-211-E"
+        ]
+    ], 
+    "564880": [
+        "Search for the Decay $B_s \\to \\mu^+ \\mu^- \\phi$ in $p\\bar{p}$ Collisions at $\\sqrt{s}$ = 1.8-TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.65.111101", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-01-293-E"
+        ]
+    ], 
+    "565143": [
+        "Search for Single Top Quark Production in $p\\bar{p}$ Collisions at $\\sqrt{s}=$ 1.8-TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.65.091102", 
+        null, 
+        "hep-ex/0110067", 
+        null, 
+        null, 
+        [
+            "CDF-PUB-TOP-PUBLIC-5595", 
+            "FERMILAB-PUB-01-318-E"
+        ]
+    ], 
+    "567345": [
+        "Measurement of the $B^+$ Total Cross Section and $B^+$ Differential Cross Section $d\\sigma/dp_T$ in $p\\bar{p}$ Collisions at $\\sqrt{s}=$ 1.8-TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.65.052005", 
+        null, 
+        "hep-ph/0111359", 
+        "ins567345", 
+        null, 
+        [
+            "FERMILAB-PUB-01-347-E"
+        ]
+    ], 
+    "567774": [
+        "Soft and Hard Interactions in $p\\bar{p}$ Collisions at $\\sqrt{s}=$ 1800-GeV and 630-GeV", 
+        "CDF", 
+        "10.1103/PhysRevD.65.072005", 
+        null, 
+        null, 
+        "ins567774", 
+        null, 
+        [
+            "FERMILAB-PUB-01-345-E"
+        ]
+    ], 
+    "569269": [
+        "$\\Upsilon$ Production and Polarization in $p\\bar{p}$ Collisions at $\\sqrt{s}=$ 1.8-TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.88.161802", 
+        null, 
+        null, 
+        "ins569269", 
+        null, 
+        [
+            "FERMILAB-PUB-01-355-E"
+        ]
+    ], 
+    "581379": [
+        "Comparison of the isolated direct photon cross sections in $p\\bar{p}$ collisions at $\\sqrt{s}=$ 1.8-TeV and $\\sqrt{s}=$ 0.63-TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.65.112003", 
+        null, 
+        "hep-ex/0201004", 
+        "ins581379", 
+        null, 
+        [
+            "FERMILAB-PUB-01-390-E", 
+            "CDF-ANAL-JET-CDFR-5636"
+        ]
+    ], 
+    "583374": [
+        "Search for New Physics in Photon Lepton Events in $p\\bar{p}$ Collisions at $\\sqrt{s}=$ 1.8-TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.89.041802", 
+        null, 
+        "hep-ex/0202044", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-02-031-E", 
+            "EFI-02-66"
+        ]
+    ], 
+    "585358": [
+        "Measurement of $B$ meson lifetimes using fully reconstructed $B$ decays produced in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.65.092009", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-02-052-E"
+        ]
+    ], 
+    "586970": [
+        "Limits on Extra Dimensions and New Particle Production in the Exclusive Photon and Missing Energy Signature in $p\\bar{p}$ Collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.89.281801", 
+        null, 
+        "hep-ex/0205057", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-02-119-E", 
+            "CDF-PUB-EXOTIC-CDFR-5765", 
+            "EFI-01-53"
+        ]
+    ], 
+    "588090": [
+        "Branching Ratio Measurements of Exclusive $B^{+}$ Decays to Charmonium with the Collider Detector at Fermilab", 
+        "CDF", 
+        "10.1103/PhysRevD.66.052005", 
+        null, 
+        null, 
+        "ins588090", 
+        null, 
+        [
+            "FERMILAB-PUB-02-097-E"
+        ]
+    ], 
+    "588103": [
+        "Measurement of the Ratio of $b$ Quark Production Cross Sections in $\\bar{p}p$ Collisions at $\\sqrt{s} = 630$ GeV and $\\sqrt{s} = 1800$ GeV", 
+        "CDF", 
+        "10.1103/PhysRevD.66.032002", 
+        null, 
+        "hep-ex/0206019", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-02-116-E"
+        ]
+    ], 
+    "593339": [
+        "Search for Radiative B-Hadron Decays in $p\\bar{p}$ Collisions at $\\sqrt{s}$ = 1.8 TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.66.112002", 
+        null, 
+        "hep-ex/0208035", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-02-146-E"
+        ]
+    ], 
+    "603674": [
+        "Cross Section for Forward $J/\\psi$ Production in $p\\bar{p}$ Collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.66.092001", 
+        null, 
+        null, 
+        "ins603674", 
+        null, 
+        [
+            "FERMILAB-PUB-02-188-E"
+        ]
+    ]
+}

@@ -64,12 +64,12 @@ LogZ=0
 # BEGIN PLOT /OPAL_2004_I631361/d05-x01-y01
 Title=Charged particle fragmentation function, $E^*_g=14.24~\mathrm{GeV}$   
 XLabel=$x^*_\mathrm{E}$                                         
-YLabel=$\frac{1}{N}\frac{\mathop{dn^\mathrm{ch.}_\mathrm{gluon}}}{\mathop{dx^*_\mathrm{E}}}$                                      
+YLabel=$\frac{1}{N}\frac{dn^\mathrm{ch.}_\mathrm{gluon}}{dx^*_\mathrm{E}}$                                      
 # END PLOT
 
 # BEGIN PLOT /OPAL_2004_I631361/d05-x01-y02
 Title=Charged particle fragmentation function, $E^*_g=17.72~\mathrm{GeV}$   
 XLabel=$x^*_\mathrm{E}$                                         
-YLabel=$\frac{1}{N}\frac{\mathop{dn^\mathrm{ch.}_\mathrm{gluon}}}{\mathop{dx^*_\mathrm{E}}}$                                      
+YLabel=$\frac{1}{N}\frac{dn^\mathrm{ch.}_\mathrm{gluon}}{dx^*_\mathrm{E}}$                                      
 # END PLOT
 

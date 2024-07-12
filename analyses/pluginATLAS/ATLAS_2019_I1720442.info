@@ -5,11 +5,13 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1720442
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Max Goblirsch <goblirsc@cern.ch>
  - Jon Butterworth <j.butterworth@ucl.ac.uk>
  - Christian Gutschow <chris.g@cern.ch>
 References:
+ - ATLAS-STDM-2017-09
  - Submitted to JHEP
  - arXiv:1902.05892 [hep-ex]
 Keywords:
@@ -48,3 +50,8 @@ BibTeX: '@article{Aaboud:2019lxo,
       reportNumber   = "CERN-EP-2018-318",
       SLACcitation   = "%%CITATION = ARXIV:1902.05892;%%"
 }'
+
+
+ReleaseTests:
+ - $A pp-13000-llll
+

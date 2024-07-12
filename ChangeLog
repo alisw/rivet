@@ -1,3 +1,2774 @@
+2023-04-27  Christian Gutschow  <chris.g@cern.ch>
+
+	* Release 3.1.8
+
+2023-04-27  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Append extra newlines to plugin sources in batched rivet-build.
+
+2023-04-21  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add ability to control the specific plugin library paths for
+	analyses to be loaded from, via new programmatic set and get
+	methods on AnalysisLoader and a new RIVET_ANALYSIS_PLUGINS
+	environment variable. Mainly intended for use on big HPC MPI
+	systems where duplicated filesystem walking is a really bad idea.
+
+2023-03-24  Andrii Verbytskyi  <andrii.verbytskyi@mpp.mpg.de>
+
+	* Remove support for custom ASCII event-file formats.
+
+	* Use an immediate call to HepMC3::deduce_reader() in the file and
+	stream opening; drop local attempts to deduce the file format.
+
+	* Require HepMC3 >= 3.2.0
+
+2023-03-13  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add variations on the discard/select utility functions to
+	(particularly) discard single elements by equality rather than
+	needing to provide a function.
+
+2023-03-10 Christian Gutschow  <chris.g@cern.ch>
+
+	* Fixes in MC_TAU_Decay plot file, courtesy of George Marsden
+
+2023-02-24  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Provide an implicit cast for FourVector and derived classes to
+	PseudoJet, to avoid the incorrect conversion by PJ's template
+	constructor.
+
+2023-02-20 Christian Gutschow  <chris.g@cern.ch>
+
+	* Fix unit for Zjj inclusive runs in ATLAS_2017_I1627873
+
+2023-02-20  Andy Buckley  <andy.buckley@cern.ch>
+
+	* ATLAS_2019_I1746286: fix generator ctau description in the info
+	file. Thanks to Natalia Korneeva for the report.
+
+2023-02-10 Christian Gutschow  <chris.g@cern.ch>
+
+	* Fix memory leaks in binreloc.c and the merging-related method
+	in AnalysisHandler.
+
+2023-02-09 Christian Gutschow  <chris.g@cern.ch>
+
+	* Fix CMS_2015_I1346843 to allow FSR photons from muon decays
+
+2023-02-03 Tomek Procter <t.procter.1@research.gla.ac.uk>
+
+	* Add Support for using ONNX neural nets in Tools/RivetONNXrt.hh
+
+	* Add example analysis demonstrating use of an ONNX neural net.
+
+2023-02-02  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Change/correct DressedLeptons behaviour to accept photons from
+	prompt muons and taus. (Return to 2.x behaviour, accidentally
+	reverted.)
+
+	* Update ParticleIdUtils content to match latest MCUtils. Includes
+	a serious speed-up (6x!) in PID digit decoding!
+
+2023-01-11 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2023_I2621481 D0,D+ -> pi+ pi+ pi- X
+
+2023-01-02 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add MD1_1994_I362599 Lambda spectrum in Upslion(1S) decay
+	* Add A2_2014_I1297221 eta -> pi0 gamma gamma
+
+2022-12-27 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add CLEO_1986_I220652 Upsilon photon spectrum
+	* Add BESIII_2013_I1126137 J/psi -> 3 gamma
+	* Add BESIII_2022_I2618227 D_s -> pi+ pi+ pi- X
+
+2022-12-23 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2022_I2615968 D0 -> K0 pi+ pi-
+
+2022-12-15  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Allow linspace() and aspace() to make reversed edge-sets with start > end.
+
+	* Add powspace() and powdbnspace() uniform-spacing functions for
+	power laws, and a generic _fnspace() function for any
+	transform/inverse function-pair.
+
+2022-12-15 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BELLE_2009_I803343 B -> Lambdo Lambdabar K(*)
+	* Add BABAR_2009_I821188 B0 -> KS0 pi+ pi-
+	* Add BABAR_2009_I827787 B -> X_c ell nu
+
+2022-12-14 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BELLE_2009_I817326 B -> K(*) l+ l-
+	* Add CLEOC_2008_I784516 psi(2S) -> Jpsi pi pi
+	* Add BELLE_2009_I825222 B -> Xs gamma
+
+2022-12-13 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BELLE_2009_I816632 B+ -> D_s(*) K pi
+
+2022-12-09 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BABAR_2009_I813140 B+ -> pi+ pi+ pi-
+
+2022-12-08 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2022_I2611489 Lambda_c semileptonic
+	* Add BELLE_2009_I820737 B -> K pi pis(2S)
+
+2022-12-07 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BABAR_2009_I825406 B0 -> a1+ a1-
+
+2022-12-06 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BABAR_2009_I810694 B- -> D+ pi-pi-
+
+2022-12-06 Christian Gutschow  <chris.g@cern.ch>
+
+	* Fix couting of raw vs tmp histos when checking self-consistency
+	of output file.
+
+	* Replace regex_match with reg_search to pick up substring
+	matches, too.
+
+2022-12-05 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BABAR_2009_I819092 B0 -> Lambdabar p+ pi-
+
+2022-12-01 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BELLE_2010_I871475 B+ -> J/psi or psi(2S) K+ pi+pi-
+	* Add BELLE_2010_I862241 b0 > K+ K- KS0
+
+2022-11-29 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BABAR_2012_I1111233 B -> K(*) l+ l-
+	* Add BELLE_2016_I1504055 B -> K* l+ -l
+	* Add BABAR_2013_I1272843 B -> Xs l+ l-
+
+2022-11-28 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add KEDR_2022_I2593308 J/psi -> rho pi
+
+2022-11-25 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BABAR_2016_I1391152 B -> X l+l-
+
+2022-11-24 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BELLE_2016_I1283183 B -> X l+l-
+	* Add BABAR_2015_I1337783 B -> X gamma
+
+2022-11-23 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BABAR_2012_I1079912 B -> Xu ell nu
+	* Add BABAR_2011_I901433 B -> phi phi K
+	* Add BESIII_2012_I1097066 psi(2S) -> gamma gamma J/psi
+
+2022-11-22 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BELLE_2022_I2512112 B -> D pi ell nu
+
+2022-11-21 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BABAR_2012_I1185407 tau -> 5 and 6 pions
+
+2022-11-18 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BELLE_2013_I1239347 B0 -> psi(2S) K+ pi-
+	* Add BELLE_2013_I1247059 B0 -> phi K+ pi-
+
+2022-11-12 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BABAR_2012_I1125567 tau -> pi- KS0 KS0 nu
+	* Add BELLE_2014_I1282136 tau -> pi- KS0 KS0 pi0 nu
+
+2022-11-11 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2015_I1376282 J/psi -> gamma eta KS0 KS0
+	* Add BESIII_2012_I1079921 J/psi -> gamma p pbar
+	* Add BELLE_2013_I1247463 Upsilon(5S) -> Upsilon(nS) pi0 pi0
+
+2022-11-10 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add KLOE_2013_I1186739 eta -> pi+ pi- gamma
+	* Add BESIII_2013_I1203841 J/psi -> gamma omega phi
+
+2022-11-08 Christian Gutschow  <chris.g@cern.ch>
+
+	* Fix bug in DELPHI_2011_I890503 and OPAL_2003_I599181, where the
+	wrong decay chain was checked for weak decays (thanks to Max
+	Knobbe for spotting).
+
+2022-11-08 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2012_I1084539 J/psi -> gamma eta(1405)
+	* Add BESIII_2013_I1209121 J/psi -> gamma eta eta
+	* Add BABAR_2015_I1308513 B -> J/psi phi K
+
+2022-11-07 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2022_I2135117 J/psi -> gamma eta eta'
+	* Add BESIII_2016_I1419650 J/psi -> gamma phi phi
+	* Add BELLE_2016_I1454405 J/psi psi(2S) in Upsilon(1S) decays
+	* Add BELLE_2017_I1499706 chi_c1 in  Upsilon(1,2S) decays
+	* Add BABAR_2018_I1667191 Upsilon(1S) -> pi+pi- gamma
+	* Add BESIII_2016_I1437949 J/psi -> eta' pi+ pi-
+
+2022-11-04 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2018_I1674528 e+ spectrum in Lambda_c+ decay
+	* Add BELLE_2017_I1598461 B -> K+ K- pi+
+	* Add BESIII_2018_I1646687 J/Psi -> gamma gamma phi
+
+2022-11-02  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Change configure script to use the --rpath=no option to
+	fastjet-config, removing fragile path-hacking.
+
+	* Add CXXFLAGS and LDFLAGS propagation to the Python-extension
+	build script (thanks to Alexander Puck Neuwirth for the
+	suggestion).
+
+2022-11-02 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BELLE_2011_I916712 B -> K X(3872)
+
+2022-10-31 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BELLE_2014_I1312626 Bbar0 -> J/psi K- pi+
+	* Add BELLE_2021_I1748231 B -> K l+l-
+	* Add BELLE_2019_I1728173 B -> K* l+l-
+
+2022-10-29 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2018_I1689296 J/psi -> gamma KS0 KS0
+	* Add BESIII_2015_I1373915 J/psi -> gamma pi0 pi0
+
+2022-10-28 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BELLE_2011_I889524 B_s0 -> pi+ pi- J/psi
+
+2022-10-27 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2015_I135282 chi_c -> phi K K pi
+	* Add BELLE_2018_I1663447 B+ -> K+ eta gamma
+	* Add ATLAS_2018_I1615866 gamma gamma -> mu+ mu-
+	* Add ATLAS_2015_I1377585 gamma gamma -> l+ l-
+	* Add BABAR_2018_I1668123 D0 -> KS0 pi+ pi-
+
+2022-10-27 Christian Gutschow  <chris.g@cern.ch>
+
+	* Add reentrant marker to MC_DILEPTON.info (thanks to Jens Roggel
+	for spotting)
+
+2022-10-26 Tomek Procter <t.procter.1@research.gla.ac.uk>
+
+	* Make logger thread safe(r) by making ColorMap and LevelMap
+	thread_local.
+
+2022-10-26 Tomek Procter <t.procter.1@research.gla.ac.uk>
+
+	* Extend RivetLWTNN.hh to allow use of lwt::LightweightGraph
+
+2022-10-26 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BABAR_2017_I1336340 B+ -> KS0 pi+ pi0
+
+2022-10-25 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BELLE_2022_I2169621 B ->D semi-leptonic
+	* Add BELLE_2012_I1123656 B0 -> D*+ D*-
+	* Add BABAR_2012_I1086537 B -> 3K
+	* Add BABAR_2012_I1081760 B0-> pi+pi- K*0
+
+2022-10-24 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BELLE_2015_I1369998 B -> D* omega pi
+	* Add BELLE_2015_I1392799 B -> p Lambda D(*)
+	* Add BABAR_2015_I1335269 B -> D D K
+	* Add BELLE_2015_I1326905 B0 -> Ds K0 pi and B+ Ds K K
+	* Add BELLE_2013_I1124584 Bs0 -> Ds* Ds*
+
+2022-10-20 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BABAR_2012_I1122031 B -> Xs gamma
+	* Add BELLE_2022_I2167323 B -> Xs gamma
+	* Add BABAR_2016_I1409292 B+ -> K+ pi+ pi- gamma
+	* Add BABAR_2011_I920989 B0 -> D*0 omega
+
+2022-10-19 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2022_I2166759 J/psi, psi(2S) -> Sigma+ Sigmabar- eta
+	* Add BESIII_2022_I2166668 chi_cJ -> Lambda Lambdabar eta
+	* Add BESIII_2016_I1484158 J/psi -> gamma eta pi0
+
+2022-10-13  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Enable Cython autoconversion from C++ strings to the appropriate
+	str type for Python v2 and v3, eliminating many noisy and fragile
+	explicit encode()/decode() calls.
+
+2022-10-08 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BABAR_2013_I1217425 Bbar0 -> Lambda_c+ pbar pi+ pi-
+	* Add BELLE_2016_I1408873 B -> chi_c1 and chi_c2
+
+2022-10-06 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BELLE_2022_I2160445 Lambda-c+ -> p 2KS0 and p KS0 eta
+	* Add BELLE_2014_I1289224 D0 -> KS0 pi+ pi-
+
+2022-10-03 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BABAR_2012_I946659 B-> D(*) p pbar + pions
+	* Add BESIII_2011_I894356 chi_c1 -> gamma + phi,rho,omega
+
+2022-09-30 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2022_I2158325 psi(2S) -> Sigma- Sigmabar+
+	* Add BESIII_2013_I1203840 psi(2S) -> pbar K+ Sigma0 and chi_c -> pbar K+ Lambda0
+	* Add BESIII_2013_I1261765 psi(2S) -> Lambda 0 Sigmabar+- pi-+ +cc
+	* Add BABAR_2012_I1127599 B- -> Sigma_c++ pbar pi- pi-
+
+2022-09-29 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BELLE_2013_I1230342 B_s0 -> Lambda_c+ Lambdabar0 pi-
+
+2022-09-28  Christian Gutschow  <chris.g@cern.ch>
+
+	* Release 3.1.7
+
+2022-09-28 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BELLE_2018_I1642436 B- -> Lambda_c+ Lambdabar_c- K-
+	* Add BELLE_2018_I1679584 Bbar0 -> Lambda_c+ Lambdabar_c- Kbar0
+	* Add BABAR_2011_I924163 Bbar0 -> Lambda_c+ Lambdabar0 K-
+	* Add BELLE_2011_I924618 B- -> pbar Lambda0 D0
+	* Add LHCB_2017_I1596893 B0 -> p Lambdabar0 pi- and BS0 -> p Lambdabar0 K-
+
+2022-09-26 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2017_I1509920 psi(2S) -> chi_c e+ e- and chi_c -> J/psi e+e-
+
+2022-09-25 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2018_I1664315 psi(2S) -> eta' e+ e-
+	* Add BESIII_2019_I1692688 J/psi -> eta' e+ e-
+	* Add BESIII_2014_I1287631 J/psi -> eta, eta', pi0 e+ e-
+
+2022-09-24 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2022_I2141748 psi(2S) -> eta_c e+ e-
+
+2022-09-21 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BELLE_2016_I1487285 eta -> pi+ pi- gamma
+	* Add BELLE_2004_I658085 B -> D* + pions
+	* Add BESIII_2012_I1128258 chi -> p nbar pi- (pi0)
+	* Add BABAR_2010_I850492 Upslion_2(1D) -> pi+ pi- Upsilon
+	* Add BESIII_2010_I878544 chi_c -> 4pi0
+	* Add BABAR_2016_I14877225 B0 -> D*- 3pi
+
+2022-09-20 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2022_I2153556 Lambda_c+ -> Lambda pi+ pi0
+	* Add BELLE_2007_I723916 Lambda_c(2880)+ decay
+	* Add LHCB_2015_I1401225 D0 -> K+ pi- mu+ mu-
+	* Add BABAR_2019_I1691954 D0 -> K+ pi- e+ e-
+
+2022-09-19 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BELLE_2021_I1809180 Xi(2790)+ decay
+
+2022-09-14  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add EXAMPLE_NTUPLE_ROOT example analysis showing how to open and
+	write to a ROOT ntuple file.
+
+2022-09-10  Markus Seidel  <markus.seidel@cern.ch>
+
+	* Add CMS_2021_I1866118: Z boson plus jets (DPS) at 13 TeV
+
+2022-09-09  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add EXAMPLE_NTUPLE_CSV example analysis showing how to open and
+	write to a CSV ntuple file.
+
+2022-09-08 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BABAR_2006_I722213 Lambda_c+ -> Lambda K+ K0S
+
+2022-09-02 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add LHCB_2014_I1309880 B_c -> J/psi p pbar pi+
+	* Add BABAR_2011_I855306 B -> rho, pi semi-leptonic
+
+2022-09-01 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BABAR_2013_I1206605 D+ -> K+ K- pi+
+
+2022-09-01  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add Analysis::analysisDataPath() and the RivetLWTNN.hh include
+	with convenience functions for loading of LWTNN DNNs.
+
+2022-09-01  Tomek Procter  <t.procter.1@research.gla.ac.uk>
+
+	* Add EXAMPLE_LWTNN example analysis, demonstrating use of a
+	preserved LWTNN neural network in Rivet.
+
+2022-09-01  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Install more generically named files from the analysis
+	plugin/data dirs rather than limiting to the .plot, .info, .yoda*
+	set (it's ok, and maybe useful, to install the .cc files)
+
+	* Move EXAMPLE_* analyses, which demonstrate functionality to
+	analysis writers rather than being directly useful in compiled
+	form, into an uncompiled analyses/examples/ directory.
+
+2022-08-31 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BELLE_2020_I1813380 Lambda_c+ -> eta Lambda pi+
+	* Add BELLE_2021_I1895149 B -> Xu l nu
+
+2022-08-30 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add LHCB_2022_I2138845 B_c+ -> chamonium + hadrons
+	* Add CLEOII_1996_I397787 Xi_c+ -> Sigma+ K- pi+
+	* Add FOCUS_2003_I618864 Xi_c+ -> Sigma+ K- pi+ and Xi- pi+ pi+
+	* Add CLEOIII_2004_I627327 Xi_c0 -> p K- K- pi+
+	* Add BESIII_2021_I1837968 Lambda_c -> p KS0 eta
+
+2022-08-26 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add LHCB_2022_I1960979  B_c+ -> J/psi pi + 3 hadrons
+
+2022-08-25 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BELLE_2018_I1641071 Omega_c0 decays
+	* Add BELLE_2022_I2140379 Lambda_c -> Sigma+ pi0,eta,eta'
+	* Add BELLE_2022_I2138841 Lambda_c ->Lambda0,Sigma0 + pi+,K+
+	* Add LHCB_2012_I1097092 B_c+ -> J/psi pi and 3pi
+
+2022-08-18  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Hide the bundled eigen3 in a mangled RivetEigen namespace, to avoid clashes.
+
+2022-08-17 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add CLEO_2008_I787608 chi_c pi+pi-2pi0 and K+pi-K0pi0
+	* Add BESII_2005_I690784 chi_c0 -> pi+pi- K+K-
+
+2022-08-14 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2022_I2033855 chi_c -> Xi Xibar
+
+2022-08-13 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2014_I1280710 chi_c(1,2) -> eta' K+K-
+	* Add BESIII_2022_I2018236 Jpsi -> gamma pi+pi-eta'
+	* Add BESIII_2022_I2016785 Jpsi -> gamma eta' eta'
+
+2022-08-12 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BABAR_2010_I879997 D+ -> K- pi+ e+ nu_e
+
+2022-08-11 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2011_I931195 psi(2S)-> chi_c correlations
+	* Add BESIII_2012_I1127328 psi(2S) -> K+ K- pi0
+
+2022-08-09 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2019_I1712729 J/psi -> phi eta eta'
+	* Add BESIII_2019_I1722111 psi(2S) -> p pbar phi
+	* Add BESIII_2019_I1716256 chi_c -> J/psi mu+mu-
+	* Add CLEOC_2011_I929693 chi_c1 -> eta pi+pi-
+	* Add BESIII_2017_I1490896 chi_c1 -> eta pi+pi-
+
+2022-08-08 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BELLE_2019_I1729311 B0 -> p pbar pi0
+	* Add BELLE_2019_I1729723 B0 -> KS0 pi K
+
+2022-08-06 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2020_I1818254 chi_c -> phi phi eta
+	* Add BESIII_2019_I1716627 chi_c -> 4KS0
+
+2022-08-05 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BELLE_2021_I1841899 B+ -> phi phi K+
+
+2022-08-04 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2020_I1818254 chi_c -> Sigma0 pbar K+
+	* Add BESIII_2017_I1511280 D0 -> K- pi+ pi+ pi-
+
+2022-08-04  Markus Seidel  <markus.seidel@cern.ch>
+
+	* Submission of CMS_2022_I2079374: Z pT over a wide mass range at 13 TeV
+
+2022-08-03 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2017_I1469067 eta' -> pions
+	* Add BESIII_2015_I1376484 eta -> pions/ eta'->3pi0
+	* Add BESIII_2018_I1623555 eta' -> eta pi pi
+	* Add BESIII_2022_I2038523 D_s+ -> f0 e+ nu_e
+
+2022-08-02 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2022_I2105430 eta' -> eta pi0 pi0
+	* Add BABAR_2006_I722905 D0 -> K-+ pi+- pi0
+	* Add CLEO_2007_I732065 chi_c1 -> pi+pi- eta KKpi
+	* Add BESIII_2022_I1997940 J/psi -> e+e- pi+ pi- eta'
+
+2022-08-01 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2022_I2128095 psi(2S) -> Lambda Lambdabar eta
+	* Add BESIII_2022_I2102455 D+/D0 -> pions
+	* Add BESIII_2022_I2088337 D+ -> KS0 pi+ pi0 pi0
+
+2022-07-31 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BELLE_2019_I1693396 B0 -> D*- semi-leptonic
+
+2022-07-30 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2021_I1974025 e+e- -> Lambda Lambdabar at 3.773 GeV
+
+2022-07-29 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2022_I2127373 Lambda_c+ -> Lambda0 e+ nu_e
+	* Add BESIII_2021_I1921775 psi(2S) -> Xi*0 Xibar*0
+	* Add BESIII_2021_I1870388 chi_c -> n KS0 Lambdabar
+
+2022-07-28 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESII_2006_I716589 psi(2S) -> p nbar pi- +cc
+	* Add BESIII_2016_I1411448 J/psi -> p pbar phi
+
+2022-07-27 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2019_I1711896 Lambda_c+ _> eta pi+ Lambda
+	* Add BESII_2006_I650381 J/psi -> p nbar pi- +cc
+	* Add BELLE_2005_I660759 Xi_c0 -> p K- K- pi+
+	* Add BESIII_2013_I1227512 psi(2S)-> p pbar eta
+
+2022-07-27  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Upgrade eigen3 and yaml-cpp bundling to remove compiler warnings.
+
+2022-07-27  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Require FastJet version 3.4.0 -- update list of plugin libs to
+	use the single libfastjetplugins.so library.
+
+2022-07-26 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2022_I2122392 psi(2S) -> Lambda Lambdabar omega
+	* Add BESIII_2022_I2122399 Lambda_c+ -> p K- e+ nu_e
+	* Add BELLE_2021_I1835729 Xi_c0 -> K+ K- Xi0
+	* Add BESII_2009_I819937 J/psi -> p pbar pi0
+	* Add BES_2001_I556330 J/psi -> p pbar eta
+
+2022-07-25 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2019_I1709205 J/psi psi(2S) -> p pbar eta'
+	* Add BESIII_2012_I1187787 eta_c -> KKpi dalitz
+	* Add BESIII_2013_I1120737 psi(2S) -> p pbar pi0
+	* Add BESIII_2013_I1223625 J/psi -> p pbar omega
+
+2022-07-24 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2021_I1921801 psi(2S) -> omega KS0 KS0
+	* Add BES_2005_I689969 psi(2S) -> pi+ pi- pi0
+	* Add BESIII_2020_I1771616 psi(2S) -> K+ K- eta
+
+2022-07-23 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add CLEO_2004_I654843 D0 -> pi-, K- e+ nu_e
+	* Add BESIII_2017_I1624548 psi(2S) -> gamma chi_c
+
+2022-07-22 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2017_I1507887 psi(2S) -> gamma chi_c
+	* Add CLEO_2009_I832707 psi(2S) -> gamma chi_c
+	* Add CLEO_2013_I1081165 D -> rho e nu
+
+2022-07-21  Christian Gutschow  <chris.g@cern.ch>
+
+	* rivet-merge -a now supports analysis specific (ANA:OPT=VAL)
+	as well as global (:OPT=VAL) analysis options
+
+2022-07-21 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2015_I1386254 D+ -> omega ell nu
+	* Add BESIII_2016_I1411645 D+ -> K- pi+ e nu
+
+2022-07-20 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BABAR_2013_I1247460 B+ -> omega ell nu
+	* Add BESIII_2019_I1694530 D -> pipi ell nu
+	* Add BABAR_2012_I1125973 B -> pi,omega, eta ell nu
+	* Add BABAR_2008_I790461 D_s+ -> K+K- e+ nu_e
+
+2022-07-19 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2018_I1705754 D0 -> Kbar0 pi- e+ nu_e
+
+2022-07-18 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2021_I1940222 D -> K pi omega decays
+	* Add FOCUS_2007_I741543 D0 -> 2pi+ 2pi-
+	* Add LHCB_2018_I1704426 D0 -> K+K-pi+pi-
+	* Add BESIII_2018_I1693610 D -> K pi eta' decays
+
+2022-07-17 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add CLEO_2017_I1519168 D0 -> K+K-pi+pi- and 2pi+ 2pi-
+
+2022-07-14 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add CLEO_2009_I822856 D_s+ -> pi+ pi0 omega
+	* Add FOCUS_2004_I663820 D0 -> K+K-pi+pi-
+	* Add BESIII_2022_I1900094 D0 -> omega phi
+
+2022-07-12 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add CLEO_2012_I1086166 D0 -> K+K-pi+pi-
+
+2022-07-11 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add FOCUS_2003_I626320 D0 -> K-K-K+pi+
+	* Add new DecayedParticles projection to try and speed up code
+
+2022-07-11  Christian Gutschow  <chris.g@cern.ch>
+
+	* Submission of ATLAS_2022_I2077570
+
+2022-07-10  Dmitry Kalinkin  <dmitry.kalinkin+hepcedar@gmail.com>
+
+	* Fixed RatioPlotDrawReferenceFirst and ErrorTubeLineDash options in
+	make-plots.
+
+2022-07-10 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2019_I1714778 D+ -> KS0 pi+pi+pi-
+	* Add BESIII_2018_I1662665 D0 -> pi0 eta eta
+	* Add BESIII_2019_I1725265 D0 -> K- pi+ pi0 pi0
+	* Add BESIII_2022_I1864775 J/Psi -> Xi- Xibar+
+	* Add BESIII_2022_I2099144 psi(2S) -> Xi- Xibar+
+	* Add BESIII_2022_I2071715 J/Psi -> Lambda Lambdabar
+
+2022-07-09 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2021_I1849747 D_s+ -> K+K-pi+pi+pi-
+	* Add BESIII_2022_I2099126 Lambda -> n gamma asymmetry
+
+2022-07-08 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2021_I1849747 D_s+ -> K+K-pi+pi0
+	* Add BESIII_2021_I1870322 D_s+ -> pi+ pi+ pi- eta
+	* Add BESIII_2019_I1712742 D_s+ -> eta, eta' semi-leptonic
+	* Add BESIII_2022_I2088218 D_s+ -> K+ pi+ pi- pi0
+	* Add BESIII_2021_I1845444 D_s+ -> KS0 K- pi+ pi+
+
+2022-07-07 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2017_I1621266 J/psi psi2s -> pi+pi-eta'
+
+2022-07-06 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2020_I1830421 eta' -> e+e- pi+pi-
+
+2022-07-05 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2018_I1703033 omega -> pi+pi-pi0
+
+2022-07-04 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2019_I1731057 J/psi -> K+K-pi0
+
+2022-07-02 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add MC_EtaC_Dalitz eta_c dalitz decays
+
+2022-07-01 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BELLE_2020_I1785816 D0 -> K- pi+ eta
+	* Add CLEO_2005_I679349 D0 -> pi+ pi- pi0
+	* Add CLEO_2012_I1094160 D0 -> KS0 K+- pi-+
+	* Add LHCB_2016_I1394391 D0 -> KS0 K+- pi-+
+
+2022-06-30 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2022_I2030993 D_s+ -> pi+ pi0 eta'
+	* Add CLEO_2004_I649917 D0 -> KS0 pi0 eta
+
+2022-06-29 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BABAR_2007_I749390 D0 -> K+K+pi0 dalitz
+
+2022-06-25 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2020_I1799437 D0 -> KS0 K+K- dalitz
+
+2022-06-24 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add CLEO_2008_I791716 D+ -> K+ K- pi+
+	* Add LHCB_2019_I1720423 D+ -> K+ K+ K-
+
+2022-06-23 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2022_I2070086 D_s+ -> KS0 K+ pi0
+	* Add BESIII_2022_I2084294 D_s+ -> K+ pi+ pi-
+	* Add FOCUS_2004_I654030 D+/D_s+ -> K+ pi+ pi-
+
+2022-06-22 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2019_I1724547 D_s+ -> pi+ pi0 eta
+	* Add BESIII_2021_I1854317 D_s+ -> pi+ pi0 KS0
+	* Add BESIII_2022_I1945692 D_s+ -> KS0 KS0 pi+
+
+2022-06-21  Jack Araz  <andy.buckley@cern.ch>
+
+	* Add HEPTopTagger interface (since made optional, with no-build
+	example analysis)
+
+2022-06-21 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2021_I1830524 Ds+ -> K+K-pi+
+
+2022-06-19 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add CLEO_2003_I633196 D0 -> Kbar0 pi+ pi-
+	* Add BABAR_2010_I853279 D0 -> Kbar0 pi+ pi-/K+K-
+
+2022-06-18 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BABAR_2021_I1867843 eta_c -> pipi eta(') KK eta' dalitz
+	* Add BABAR_2015_I1403544 eta_c -> KKpi dalitz
+	* Add BABAR_2017_I1512302 J/psi dalitz plots
+	* Add BESIII_2012_I1088606 J/psi psi(2S) -> pi+pi-pi0
+
+2022-06-16 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add E691_1992_I342947 D -> K pipi Dalitz decays
+	* Add MARKIII_1987_I247266  D -> K pipi Dalitz decays
+	* Add CLEOII_2001_I537154 D0 -> K- pi+ pi0 dalitz
+	* Add CLEOC_2007_I749602 D+ -> pi+pi+pi- dalitz
+	* Add BABAR_2014_I1287632 eta_c dalitz decays
+
+2022-06-15 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add FOCUS_2007_I750701 D_s+, D+ -> pi+pi+pi-
+	* Add BESIII_2021_I1909391  D_s+ -> pi+pi+pi-
+	* Add BABAR_2008_I792597  D_s+ -> pi+pi+pi-
+
+2022-06-12 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2021_I1929365 D_s+ -> pi+ pi0 pi0 pi0 dalitz
+	* Add BESIII_2021_I1859124 D+ -> K+ KS0 pi0 dalitz
+
+2022-06-10 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add FOCUS_2007_I750701 D+ -> K- pi+ pi+ dalitz
+
+2022-06-09 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add CLEOC_2008_I780363 D+ -> K- pi+ pi+ dalitz
+
+2022-06-07 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add E791_2002_I585322 D+ -> K- pi+ pi+ dalitz
+
+2022-06-06 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2014_I1277070 D+ -> KS0 pi+ pi0 dalitz
+
+2022-05-30 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add CLEOC_2011_I913909 D0 -> K_S0 pi0 pi0
+	* Add E791_2001_I530319 D_s+ -> pi+ pi+ pi-
+	* Add E791_2001_I530320 D+ -> pi+ pi+ pi-
+
+2022-05-29  Christian Gutschow  <chris.g@cern.ch>
+
+	* Fix various labelling issues in ATLAS_2019_I1736531, ATLAS_2019_I1740909,
+	ATLAS_2019_I1750330 and ATLAS_2019_I1772062 as reported by Natalia Korneeva
+
+2022-05-27 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BABAR_2016_I1441203 D0->pi+pi-pi0
+
+2022-05-26 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BABAR_2007_I747154 D0->pi+pi-pi0
+
+2022-05-21 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BABAR_2010_I878120 D_s+->K+K-pi+
+
+2022-05-18  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Suppress spurious 'unused argument' warning from clang as called from rivet-build.
+
+2022-05-17  Markus Seidel  <markus.seidel@cern.ch>
+
+	* Submission of CMS_2021_I1963239: Measurement of inclusive and Mueller-Navelet dijet cross sections and their ratios at 2.76 TeV
+
+2022-05-16 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BABAR_2008_I781294 and BABAR_2012_I1123662 b-> s gamma
+
+2022-05-13  Christian Gutschow  <chris.g@cern.ch>
+
+	* Release 3.1.6
+
+2022-05-05  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Allow the rivet script's -p option to be given multiple times,
+	or to contain a comma-separated list of files to load cf. the -a
+	argument. readData() is called for each specified preload file, in
+	order.
+
+2022-05-05 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2016_I1504943 eta' -> pi0 gamma gamma decays
+
+2022-04-21 Peter Richardson <peter.richardson@durham.ac.uk>
+
+        * Add CRYSTAL_BALL_1991_I297905 pi0/eta Upslion and continuum
+        * Add CRYSTAL_BALL_1989_I263581 electron spectrum in B decays
+	* Add ARGUS_1987_I248655        photon spectrum in Upsilon(1S) decays
+	* Add CRYSTAL_BALL_1991_I315873 photon spectrum in Upsilon(1S) decays
+	* Add CRYSTAL_BARREL_1997_I456942 eta'-> pi+ pi- gamma decays
+
+2022-04-20  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add a pseudojets() method and automatic conversion operator to
+	Particles.  It sets the user index so the constituents will match
+	the indices of the particle or jet vector used as input.
+
+	* Move the Jets and Particles definitions into the .hh headers.
+
+2022-04-06  Markus Seidel  <markus.seidel@cern.ch>
+
+	* Submission of CMS_2017_I1497519: Z boson in association with jets at 8 TeV
+
+2022-03-29  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Replace the distutils extension build & install with a handmade one.
+
+2022-03-25  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Fall back to old calculation of y in DISKinematics if Q2 is zero. Thanks to Peter Meinzinger.
+
+2022-03-18  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add MissingMom typedef for MissingMomentum.
+
+	* Add vectorEt/PtMiss() and scalarEt/PtMiss() methods to MissingMomentum.
+
+	* Use ThreeMomentum in MissingMomentum for the vectorPt() etc.
+
+	* Add ThreeMomentum/P3 type with momentum-oriented method names, cf. FourVector->FourMomentum.
+
+	* Add a pseudojets() method to the Jets container type.
+
+2022-03-12 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2022_I2047667 e+e- > eta omega and omega pi0
+
+2022-03-02  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add finalize-scaling protection in ATLAS_2020_1790256.
+
+2022-03-02 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add LHCB_2017_I1621811 lambda_b semileptonic decay
+	* Add LHCB_2020_I1787090 B_s semileptonic decay
+
+2022-02-28 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2022_I2039027 e+e- > pi+pi-eta
+	* Add LHCB_2012_I1114753 Lambda_b(5920) decays
+
+2022-02-17 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2022_I2033007 e+e-> K+K-pi0
+
+2022-02-11  Markus Seidel  <markus.seidel@cern.ch>
+
+	* Submission of CMS_2020_I1776758: Production of a Z boson with at least one charm or bottom quark jet at 13 TeV
+
+	* Submission of CMS_2021_I1972986: Double-differential inclusive jet cross sections at 13 TeV
+
+	* Submission of CMS_2021_I1978840: W+gamma differential cross sections at 13 TeV
+
+2022-02-07  Markus Seidel  <markus.seidel@cern.ch>
+
+	* Fix for CMS_2018_I1680318 (thanks to Armando Bermudez Martinez)
+
+2022-02-02  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add a warning about event numbers if the subevent staging list
+	gets very long (report by Michal Kreps, suggestion by Andrii
+	Verbytskyi).
+
+2022-01-11 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BABAR_2009_I827985 D_s** helicity angles
+	* Add plots to helicity D, D_s helicity angle analyses
+
+2022-01-10  Christian Gutschow  <chris.g@cern.ch>
+
+	* Add support for explicit generator variation cross-sections
+
+	* Implement MCnet weight conventions
+
+2022-01-06  Christian Gutschow  <chris.g@cern.ch>
+
+	* Adding more histograms to MC_MET and improving the binning (many
+	thanks to Jan Kretzschmar).
+
+2022-01-04 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2021_I1929314 e+e- -> 4 charged particles(pi0)
+
+2022-01-03 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2021_I1999208 e+e- -> omega pi0pi0
+
+2021-12-29  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2021_I1996394 R measurement
+
+2021-12-28  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add A2_2017_I1498079 pi0 dalitz
+	* Add NA60_2016_I1452485 eta and omega mu+mu- dalitz
+	* Add BESIII_2021_I1997451 e+e- -> phi pi+pi-
+
+2021-12-15  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Fix the 'polarity' of the optional argument to AnalysisHandler::checkBeams().
+
+2021-12-14  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add strcat() variadic template function to Rivet utils.
+
+2021-12-13  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2019_I1736235 e+e- > n nbar
+
+2021-12-05  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2021_I1933191 e+e- > pi+pi- psi(2S)
+	* Add BELLE_2017_I1610301 upslion-> upsilon pi+pi-
+
+2021-12-03  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2021_I1900124 e+e- > Lambda Lambdabar
+	* Add BESIII_2021_I1845443 e+e- > p pbar eta/omega
+
+2021-12-02  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Allow manual use of analysis-plugin make-targets after
+	configuring with --disable-analyses.
+
+2021-11-09  Markus Seidel  <markus.seidel@cern.ch>
+
+	* Submission of CMS_2012_I1089835 (b-jet production at 7 TeV),
+	CMS_2019_I1753720 (ttbb production at 13 TeV), CMS_2021_I1847230
+	(angular distance and momentum ratios in 3-jet and Z+2-jet events
+	at 8 and 13 TeV), CMS_2021_I1920187_DIJET/ZJET (quark and gluon
+	jet substructure at 13 TeV), CMS_2021_I1932460 (double-parton
+	scattering in 4-jet events at 13 TeV)
+
+2021-11-06  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Release 3.1.5
+
+2021-11-05  Johannes Jahan <jahan.johannes@gmail.com>
+
+	* Changed the first labelling in ATLAS_2016_I1467230 from "/*" to "/d01-*"
+
+2021-10-28  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Use the new Ref(Un)match regex info to filter unwanted objects
+	from ref files during HepData sync.
+
+	* Add support for Warning, RefMatch, and RefUnmatch keys in
+	analysis info files, mapped to the Analysis and AnalysisInfo APIs.
+
+2021-10-27  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add testing, warning messages, and unit tests for negative-virtuality FS particles.
+
+	* Fix the analysis-plugin uninstall target.
+
+2021-10-17  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add SND_2021_I1942539 e+e- > eta eta gamma
+
+2021-10-12  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2021_I1940960 e+e- > Sigma- Sigmabar0
+
+2021-10-08  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2021_I1859248 e+e- > phi Lambda Lambdabar
+
+2021-10-06  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BABAR_2021_I1938254 e+e- > pi+pi 4pi0 and  pi+pi 3pi0 eta
+	* Add BESIII_2021_I1867196  e+e- > D_s* D_sJ
+	* Add BESIII_2021_I1868813 K0S production in charmonium region
+	* Add BESIII_2021_I1908066 J/Psi production in charmonium region
+
+2021-10-04  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BABAR_2021_I1937349 e+e- > pi+pi-pi0
+
+2021-10-01  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Remove many const return-by-value signatures, and other sloppy
+	or meaningless C++ antipatterns flagged by the icpc build.
+
+	* Add SFINAE x/y/z/t() method detection to Vector4 constructors,
+	and explicit .pseudojet() calls to Particles and Jets passed to
+	PseudoJet constructors (since those live in external code and we
+	can't SFINAE-protect them). These were breaking the build on Intel
+	compilers -- thanks to Chris Chang for the report.
+
+2021-09-28  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add LHCB_2016_I1414195.cc excited D_s decays
+	* Add BABAR_2010_I845914 e+e- -> e+e- eta_c via gamma gamma
+
+2021-09-23  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add SLD_1995_I378545 events shapes at MZ
+
+2021-09-22  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add MARKII_1982_I178416 charged particle spectra at 5.2, 6.5 and 29 GeV
+
+2021-09-21  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add L3_1992_I334954 event shapes at MZ
+	* Add MARKII_1988_I250899 EEC at 29 GeV
+	* Add DELPHI_2000_I522656 event shapes vs thrust
+
+2021-09-20  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add HRS_1989_I276948 rho, K*0 and K*+ spectra at 29 GeV
+	* Add TASSO_1984_I194774 D_s spectrum at 34.7 GeV
+	* Add DELPHI_1993_I356732 charm spectra
+	* Add JADE_1984_I221004 D*0 spectra
+
+2021-09-19  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add DELPHI_2001_I526164 spectra in WW
+	* Add HRS_1986_I17781 Lambda spectrum in e+e- at 29 GeV
+	* Add HRS_1985_I213242 D_s and phi spectrum in e+e- at 29 GeV
+	* Add HRS_1986_I18688  f_2, f_0 and K_2 spectrum in e+e- at 29 GeV
+
+2021-09-16  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add HRS_1987_I215848 hadron spectrum in e+e- at 29 GeV
+	* Add MARKII_1988_I246184 event shape in e+e- at 29 GeV
+
+2021-09-15  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add MARKII_1987_I234976 Xi- spectrum in e+e- at 29 GeV
+	* Add MARKII_1988_I261194 eta spectrum in e+e- at 29 GeV
+	* Add MARKII_1982_I177606 D*+ spectrum in e+e- at 29 GeV
+	* Add MARKII_1985_I207785 K0/K+ spectrum in e+e- at 29 GeV
+	* Add MARKII_1985_I209198 Lambda spectrum in e+e- at 29 GeV
+
+2021-09-14  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add MARKII_1987_I247900 Omega spectrum in e+e- at 29 GeV
+
+2021-09-07  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add PLUTO_1984_I204487 gamma gamma -> pi+pi-
+	* Add MARKII_1984_I195739, MARKII_1986_I220003 gamma gamma -> pi+pi-/K+K-
+
+2021-09-06  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add TPC_1986_I228072, ALEPH_2003_I626022, CLEO_1994_I372230 gamma gamma -> pi+pi-/K+K-
+
+2021-09-05  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BELLE_2003_I629334, BELLE_2005_I667712 gamma gamma -> K+K-
+
+2021-09-02  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BELLE_2007_I749358, MARKII_1990_I304882, VENUS_1995_I392360 gamma gamma -> pi+pi-
+
+2021-09-01  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2021_I1866233 e+e-> Xi0 Xibar0
+
+2021-08-30  Christian Gutschow  <chris.g@cern.ch>
+
+	* submission of ATLAS_2019_I1768911 (Z pT and phi* and at 13 TeV)
+
+2021-08-13  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Provide more options to specify the Cython command to be
+	used. Thanks to Christian Holm Christensen.
+
+	* Separate the DESTDIR from prefix in the Python module
+	installation, to clean up FreeBSD packaging. Thanks to Dmitry
+	Kalinkin.
+
+2021-07-19  Christian Gutschow  <chris.g@cern.ch>
+
+	* introduce isCompatibleWithSqrtS function for sqrtS dependent hist booking,
+	falls back to ENERGY option to make routines reentrant safe
+
+	* fix back for CounterPtr filling: no fill should mean no fill, not fill using weight 0
+
+2021-07-12  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add ability for mkhtml to use pdfunite in place of pdftk and
+	pdfmerge for making a booklet.
+
+
+2021-06-26  Christian Gutschow  <chris.g@cern.ch>
+
+	* fix indentation in MC_MUONS.info
+
+	* add per-file print out to rivet-merge
+
+	* support keyboard interruption in rivet-merge
+
+2021-06-22  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Correction to use xE rather than xP in OPAL_1997_S3396100, by Adil Jueid.
+
+2021-06-21  Andy Buckley  <andy.buckley@cern.ch>
+
+	* New CMS analyses: CMS_2020_I1794169 (WZ and same-sign WW boson
+	pairs), CMS_2020_I1814328 (W+W- boson pair production), and
+	CMS_2020_I1837084 (Z-boson differential production cross section
+	using its invisible decay mode; NB: runs on Z->mumu sample)
+
+	* Improve option handling for booleans, and exception emission
+	with incompatible casts.
+
+2021-06-04  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add a default-value argument to the string version of getOption().
+
+	* Change the DressedLepton single-FS name from barefs to allfs, to reduce confusion.
+
+	* Add DIRECT and DRESSED options to MC_ELECTRONS and MC_MUONS.
+
+2021-06-01  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Fix dressed-lepton origin position for the standard, non-jet-clustering mode.
+
+	* Remove raw int baryon counter from STAR_2006_S6860818.
+
+2021-05-31  Christian Gutschow  <chris.g@cern.ch>
+
+	* catch low-stats crash in LHCB_2013_I1208105 reported by Jan Kretzschmar
+
+2021-05-31  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2021_I1866051 e+e-> K0K0
+
+2021-05-30  Christian Gutschow  <chris.g@cern.ch>
+
+	* Improve error message for when the calibration file has been forgotten
+
+2021-05-16  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Remove numerical epsilon cutoff for pseudorapidity calculation:
+	inf is a perfectly good value for beamline momenta. Regression
+	test updated.
+
+2021-05-14  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Fix normalisation in OPAL_2004_I631361.cc
+
+2021-05-13  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add convenience V2, V3, V4, and P4 alias names for the vector types.
+
+	* Add tests for eta and rapidity values calculated in particular for +-z vectors.
+
+2021-05-06  Christian Gutschow  <chris.g@cern.ch>
+
+	* Allowing file.yoda:x1.23 and file.yoda:=1.23 as rivet-merge arguments
+	to multiply or overwrite the cross-section respectively
+
+2021-05-05  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add LHCB_2010_S8758301 -> LHCB_2010_I865584 alias, requested by LHCb.
+
+2021-04-28  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* BABAR_2009_I821653 gamma gamma -> pi0
+	* BABAR_2011_I883525 gamma gamma -> eta eta'
+	* BABAR_2018_I1691222 gamma gamma -> eta'
+
+2021-04-27  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* BELLE_2012_I1114749 gamma gamma -> pi0
+
+2021-04-24  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* BESIII_2021_I1847766 e+e- > p pbar
+	* BELLE_2021_I1859137 e+e- > B(*)B(*)
+
+2021-04-23  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* BELLE_2021_I1851126 Xi_c0 decay assymetries
+
+2021-04-22  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* BELLE_2021_I1859571 Xi_c0 decay assymetries
+
+2021-04-13  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* BESIII_2021_I1857930 e+e- > phi eta
+
+2021-04-13  Christian Gutschow  <chris.g@cern.ch>
+
+	* Adding zero-division protection in AH::setCrossSection (spotted
+	by P. Ilten, thanks!)
+
+2021-04-12  Christian Gutschow  <chris.g@cern.ch>
+
+	* Submission of MC_HFDECAYS (MC-only validation routine for
+	heavy-flavour hadron decays)
+
+2021-04-09  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add Analysis::barchart() functions for converting histos to
+	inert 'bar charts' without bin-width scaling. Sometimes necessary,
+	e.g. for reporting infinite-width bin contents.
+
+2021-04-06  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Update bundled yaml-cpp to version 0.6.3
+
+2021-04-05  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Release 3.1.4
+
+2021-03-27  Christian Gutschow  <chris.g@cern.ch>
+
+	* Implement pair-wise version of rivet-merge
+
+2021-03-26  Johannes Jahan  <johannes.jahan@subatech.in2p3.fr>
+
+	* Fixes to histogram double-booking in STAR_2017_I1510593.
+	Some residual inconsistencies with HepData uncertainties.
+
+2021-03-25  Christian Gutschow  <chris.g@cern.ch>
+
+	* Submission of ATLAS_2021_I1852328 (WW production at 13 TeV)
+	and ATLAS_2020_I1808726 (multijet event shapes at 13 TeV)
+
+2021-03-25  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Fix a finalize crash if there are no analyses, due to lack of
+	active weight stream for the global event counter.
+
+2021-03-24  Christian Holm Christensen  <cholm@cern.ch>
+
+	* Add a preload option to rivet-merge.
+
+2021-03-24 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* BESIII_2021_I1853007 e+e- > n nbar
+	* BESIII_2020_I1837725 e+e- > 2p 2 pbar
+
+2021-03-23  Christian Gutschow  <chris.g@cern.ch>
+
+	* Tweak AnalysisHandler to allow rivet-merge with
+	user-supplied cross-sections per file
+
+2021-03-23  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add a --font=euler option to the make-plots scripts.
+
+	* Remove use of the mathastext package in make-plots Helvetica
+	plotting mode, using sansmath's eulergreek option instead.
+
+2021-03-22  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Fix the Run GZip-testing byte magic to use 2 rather than 4
+	bytes. Thanks again to Christian Holm Christensen.
+
+	* Fix the analysis-keyword matching logic: thanks to Christian
+	Holm Christensen and Dmitri Kalinkin.
+
+2021-03-18  Christian Gutschow  <chris.g@cern.ch>
+
+	* Add some more debug info to AnalysisHandler.
+
+	* Do not add empty Scatter1DPtr for cross-section unless equiv is true.
+
+	* Thanks to Christian Holm Christensen.
+
+2021-03-15  Christian Gutschow  <chris.g@cern.ch>
+
+	* Submission of ATLAS_2020_I1788444 (Z + b(b) at 13 TeV)
+
+2021-03-09  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add protection against accidental double-slashes in built paths
+	passed to TeX's kpathsea library. Thanks to Martin Habedank for
+	the report.
+
+2021-03-01  Markus Seidel  <markus.seidel@cern.ch>
+
+	* Submission of CMS_2017_I1608166 (Identified particles in MB @ 13 TeV).
+	NOTE: ratio output disabled until ratio plots are in HepData.
+
+	* Submission of CMS_2017_I1471281 (W and Z pt @ 8 TeV)
+
+2021-02-20 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* BABAR_2021_I1844422 e+e- -> 2pi+2pi-2pi0(pi0,eta)
+
+2021-02-09  Christian Gutschow  <chris.g@cern.ch>
+
+	* Submission of ATLAS_2019_I1736531 (UE in Z @ 13 TeV)
+
+2021-02-02  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Fix osdir build behaviour on Macs (thanks to Ilkka Helenius for the report and patch).
+
+2021-01-31  Christian Gutschow  <chris.g@cern.ch>
+
+	* v2 HepData sync for ATLAS_2018_I1635273
+
+2020-12-21  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add a stream-based AH::writeData variant, and map it to Python.
+
+	* Add missing list-analyses flag initialisation to Run.
+
+2020-12-15 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add  BESIII_2020_I1836509 e+e- > pi+pi- eta'
+
+2020-12-11  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Make rivet-merge work for analyses with sqrt(s)-dependent
+	binnings, by allowing the first preloaded-AO hookup to overwrite
+	the registered AO if there's a binning mismatch.
+
+2020-12-03  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add behaviour overrides for rivet-build to force no
+	concatenation, or maximal concatenation, of analysis source files,
+	and use them in specific and full CI validation runs so both modes
+	are tested before release. Fix analyses with missing includes,
+	flagged by the no-cat build.
+
+2020-11-30  Christian Gutschow  <chris.g@cern.ch>
+
+	* Support whitespace in weight names
+
+2020-11-26  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Release 3.1.3
+
+2020-11-25  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add consistently 'RIVET_'-prefixed versions of the CTOR and
+	PLUGIN macros, to be the preferred future form from 3.2.0 onwards.
+
+	* Add LHCB_2016_I1454404 (W/Z at 8 TeV), and LHCB_2015_I1396331 &
+	LHCB_2016_I1490663 (open charm). Thanks to Alex Grecu and others in LHCb.
+
+2020-11-24  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add an explicit configure test and override variable for the cython executable.
+
+2020-11-23  Jon Butterworth <J.Butterworth@cern.ch>
+
+	* Use more numerically robust x and y definitions in DISKinematics
+
+2020-11-20  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Relax some restrictions on Sphericity calculation.
+
+	* Backport master-branch tolerance of no-beam events and no-xsec runs to 3.1.x.
+
+2020-11-19  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add a --no-downloads flag to rivet-mkanalysis.
+
+2020-11-11  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add a GROOM option to MC_JETS.
+
+2020-11-10  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add LHCB_2018_I1662483 (forward dilepton top-pair production
+	cross-section). Thanks to Alex Grecu!
+
+	* Add mixed-arithmetic-type min(n1,n2) and max(n1,n2) functions,
+	using std::common_type.
+
+	* Adding CMS_2018_I1620050 (dileptonic ttbar at 13 TeV) and
+	CMS_2019_I1744604 (t-channel single top at 13 TeV). Thanks to
+	Markus Seidel and Matthias Komm.
+
+2020-11-06  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Move the experiment-specific smearing functions into
+	ExptSmearingFunctions.hh, with SmearingFunctions.hh retained for
+	UI simplicity and backward compatibility.
+
+	* Improve the ATLAS Run 2 MET smearing function to incorporate the
+	Run 2 linearity and resolution dependences.
+
+	* Refine the ATLAS and CMS MET functions to avoid a peak at MET=0
+	from negative Gaussian smearing.
+
+2020-11-03  Christian Gutschow  <chris.g@cern.ch>
+
+	* Add mT plot to MC_WINC
+
+	* Use options for MC_VINC, MC_VJETS, MC_VKTSPLITTINGS
+
+2020-11-02  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add a list of fastjet::Transformer to FastJets, to be applied in
+	order. Transformers don't currently have a comparison operator, so
+	if this list is non-empty, we have to report the projection as
+	non-equivalent and recompute duplicates -- for now -- but it
+	works, and we can feed back that improvement (again).
+
+2020-10-29  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Tidy jet distance measure enums, introducing convenience AKT, CA, and CAMBRIDGE aliases.
+
+	* Add missing 'inline' declarations to all high-level filter functions.
+
+	* Add missing (i)discard/selectIfAll high-level filtering functions.
+
+	* Correct logical bugs in (i)selectIfAnyDeltaR/Phi function logic:
+	it's not just the equivalent of the discard versions.
+
+2020-10-24  Christian Gutschow  <chris.g@cern.ch>
+
+	* Submission of ATLAS_2019_I1750330
+
+2020-10-19 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2020_I1823448 e+ e- > Xi- Xibar+
+
+2020-10-08  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add bare-lepton origin position to DressedLepton constructors.
+
+2020-10-06  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add aspace() and l/rpad() utility functions.
+
+	* Rename the little-used in-place sortBy() functions to isortBy()
+	cf. ifilter() and friends, since the behaviour should not change
+	wildly just based on the constness status of an argument.
+
+2020-10-03 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add DELPHI_1990_I297698 JADE jet rates
+
+2020-10-01 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add JADE_1985_I213948 gamma, pi0 and eta spectra at 14, 22.5 and 34.4 GeV
+	* Update rivet-diffhepdata-all to check local directory for analysis.json
+
+2020-09-30 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add L3_1990_I298078 jet rates at MZ
+	* Add L3_1991_I314407 pi0 and charged particle spectra
+	* Add L3_1994_I374698 pi0 and eta spectra
+
+2020-09-29 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add missing jet rates to L3_2004_I652683
+
+2020-09-28 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add DELPHI_2000_I531568 p pbar correlations
+	* Add L3_2008_I825820 event shapes at 197 GeV
+
+2020-09-26 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add ALEPH_2001_I555653  tau polarization at LEP I
+	* Add DELPHI_2008_I763352 tau polarization at LEP II
+	* Add MAC_1987_I245571    tau polarization at 29 GeV
+	* Add AMY_1990_I298238    tau polarization at 57 GeV
+
+2020-09-25 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add VENUS_1997_I440852  tau polarization at 58 GeV
+	* Add DELPHI_2000_I511443 tau polarization at LEP I
+	* Add OPAL_2001_I554583   tau polarization at LEP I
+	* Add L3_1998_I467929     tau polarization at LEP I
+
+2020-09-24  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add client-side plot display filtering and and -m/-M pattern (un)matching fags to rivet-mkhtml.
+
+2020-09-24 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BELLE_2018_I1621272 B->D*- tau+ nu_tau
+	* Add BESIII_2019_I1702549 D_S+ -> K0 e+ nu_e
+
+2020-09-23 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BELLE_2019_I1724068 B0->D*- tau+ nu_tau
+
+2020-09-21  Christian Gutschow  <chris.g@cern.ch>
+
+	* Fix Clang 12.0 compiler warnings
+
+2020-09-20 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BABAR_2008_I781294 Lambda_c+ -> Xi- pi+ K+
+
+2020-09-18 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2020_I1817739 e+e- > omega pi0, omega eta
+
+2020-09-16 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2020_I1791570 J/Psi, psi(2S) -> Sigma+, Sigmabar-
+	* Add plot to BESIII_2019_I1691850
+
+2020-09-11 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add SND_2020_I1809286 e+e-> pi+pi-pi0
+	* Add BELLE_2020_I1796822 B+- > pi+pi- ell nu
+
+2020-09-05 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2020_I1814783 e+e- -> Sigma+-Sigmabar-+
+
+2020-08-31 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add CLEOII_1997_I446031 e+e- > e+e- pi0/eta/eta'
+
+2020-08-31  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Create bash completion dir in $prefix/etc if it doesn't exist.
+
+2020-08-27  Christian Gutschow  <chris.g@cern.ch>
+
+	* Fix bug where path wasn't set for booking of scatters
+
+2020-08-26  Christian Gutschow  <chris.g@cern.ch>
+
+	* Submission of ATLAS_2019_I1762584, ATLAS_2019_I1772062 and ATLAS_2019_I1759875
+
+2020-08-06 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BELLE_2020_I1789775 e+e- > D_s D_s2
+	* Add BELLE_2019_I1762826 e+e- > D_s D_s1(2536)
+
+2020-08-06  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add warnings and physicality checks to PartonicTops
+
+2020-07-30  Christian Gutschow  <chris.g@cern.ch>
+
+	* Submission of ATLAS_2020_I1803608
+
+2020-07-28  Christian Gutschow  <chris.g@cern.ch>
+
+	* Fix bug related to (de)selection of weight subsets
+	* Make Event class aware of selected weight subsets
+
+2020-07-22  Christian Gutschow  <chris.g@cern.ch>
+
+	* Added self-guided Rivet "truth analysis" tutorial
+
+2020-07-16  Jon Butterworth <j.butterworth@ucl.ac.uk>
+
+	* Allow user to specify nominal weight. Also do not write out weight name it skip weights is selected
+
+2020-07-13 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add SND_2020_I1806118 e+e- > K+K-pi0
+
+2020-07-02  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Release 3.1.2
+
+2020-06-29  Christian Gutschow  <chris.g@cern.ch>
+
+	* Submission of ATLAS_2019_I1744201, ATLAS_2019_I1764342
+
+2020-06-25  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add a very horrible preprocessor hack to allow use of a private
+	method on the HepMC2 WeightContainer, for robust and correctly
+	ordered weight name acquisition before HepMC 2.06.11.
+
+2020-06-23  Leif Lönnblad  <Leif.Lonnblad@thep.lu.se>
+
+	* Allow several AnalysisHandler objects to run in different
+	threads. This is a temporary fix. A permanent fix involves
+	changing the Analysis handler to own its own
+	projections. Currently each AnalysisHandler need sto be created
+	and run completely within the same separate thread.
+
+2020-06-19 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BABAR_2015_I1377201 azimuthal asymmetries
+
+2020-06-16 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BELLE_2019_I1718551 double differential in z and pT
+	* Add BELLE_2020_I1777678 scaled momentum dists
+
+2020-06-15 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2020_I1800404 charged particle mult in J/psi, chi_c decays
+
+2020-06-12 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add SND_2020_I1800477 e+e- > eta pi0 gamma
+
+2020-06-11  Christian Gutschow  <chris.g@cern.ch>
+
+	* Allow + and - in AO paths
+
+2020-06-10  Christian Gutschow  <chris.g@cern.ch>
+
+	* Always skip weights that have "AUX" or "DEBUG" in the name.
+
+2020-06-06  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add computation of Python versions and passing them to Cython as command-line flags.
+
+2020-05-25  Christian Gutschow  <chris.g@cern.ch>
+
+	* Fix small bug in rivet-cmphistos
+
+2020-05-21  Christian Gutschow  <chris.g@cern.ch>
+
+	* Add ATLAS_2018_I163527 (W+jets at 8 TeV)
+	* Add InvisibleFinalState projection
+
+2020-05-21 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add CELLO_1992_I345437 gamma gamma > pi+ pi-
+
+2020-05-18  Andy Buckley  <andy.buckley@cern.ch>
+
+	* HTML sectioning and float/overflow/scrollbar improvements in
+	rivet-mkhtml output.
+
+2020-05-13 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2020_I1795949 e+e- > Ds(*) Ds1
+
+2020-05-08  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Release 3.1.1.
+
+	* Force single-threaded build of Cython, to avoid race conditions.
+
+2020-05-06  Christian Gutschow  <chris.g@cern.ch>
+
+	* Add ATLAS_2020_I1790256 (Lund Jet Plane measurement at 13 TeV)
+
+2020-04-29  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add R209_1982_I168182 (Drell Yan measurements $pp \to \mu^+\mu^-
+	+X $ at $\sqrt{s} = 44$ and $62$ GeV at CERN ISR),
+	PHENIX_2019_I1672015 (Drell Yan production at low masses at
+	$\sqrt{s} = 200$ GeV), NUSEA_2003_I613362 (Drell-Yan dimuon
+	absolute cross-sections in 800 GeV pp and pd collisions),
+	E605_1991_I302822 (dimuon production in proton-copper collisions
+	at 38.8 GeV), and E288_1981_I153009 (dimuon continuum in 27 GeV
+	pN). Thanks to Hannes Jung for all the above!
+
+	* Add an integer RIVET_VERSION_CODE #define to the config header,
+	for easier compile-time triggering in user code.
+
+	* Specialize Analysis::getOption(name, default) for literal string
+	default, to avoid an invalid internal use of stringstream.
+
+2020-04-28  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add ALICE_2017_I1645239 (Lambda_C production in pp + pPb).
+
+	* Use old.inspirehep.net for now in rivet-findid, and update other
+	references to Inspire to use the new URL scheme. Coverage scripts
+	and findid will need a proper migration to the new Inspire in the
+	longer term.
+
+2020-04-26  Christian Gutschow  <chris.g@cern.ch>
+
+	* Allow user to specify default weight to be used by plotting scripts,
+	different defaults possible for different yoda files
+	* Allow users to recycle the same yoda file by giving it a "Name" on the command line,
+	which makes it possible to compare two variations in the same file
+
+2020-02-24  Jon Butterworth <j.butterworth@ucl.ac.uk>
+
+	* fix ATLAS_2012_I1203852, ATLAS_2015_I1394865 (7 & 8TeV 4L) to use prompt final state
+
+	* fix ATLAS_2016_I1492320 (WWW analysis) to implement the like-sign requirement
+	properly (from M.Habedank)
+
+2020-04-22  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Force HepMC event units to GEV, MM in HepMC helper functions.
+
+2020-04-21  Christian Gutschow  <chris.g@cern.ch>
+
+	* Improve identification of nominal weight (fewer loops)
+
+	* Add --match-weights flag to select subset of weights (with regex support)
+
+	* Add --unmatch-weights flag to deselect subset of weights (with regex support)
+
+	* Clean up code in AnalysisHandler
+
+2020-04-14  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Explicitly delete the comma operator between Cut objects, to stop anyone from trying!
+
+2020-04-11  Christian Gutschow  <chris.g@cern.ch>
+
+	* Add link to Analysis reference and arXiv preprint to html output
+
+2020-04-10  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add stdAnalysisNames() functions to AnalysisHandler and
+	AnalysisLoader (static in the second case), and expose them
+	through the Python interface, with a rivet.stdAnalysisNames()
+	module-level alias for convenience, cf. rivet.analysisNames().
+
+2020-04-10  Christian Gutschow  <chris.g@cern.ch>
+
+	* Make rebinning by an integer more permissive if the number of bins
+	is not divisible by the rebinning factor.
+
+2020-04-09  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add a METFinder base class, common to MissingMomentum and
+	SmearedMET to make them interchangeable.
+
+2020-04-07  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Update the MC_HFJETS routine to use the 'new' ghost-tagging
+	rather than an ad-hoc dR scheme.
+
+2020-04-03  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Adding IOError, ReadError, and WriteError exception classes, to avoid use of generic Error.
+
+2020-04-06  Christian Gutschow  <chris.g@cern.ch>
+
+	* Fix compiler issue in BES_1999_I508349
+
+	* Throw Warning rather than Error if no nominal weight can be identified
+
+	* Teach plotting scripts how to treat a specific variation as though it was the nominal
+
+2020-04-02  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add missing rates to various analyses
+
+2020-04-02  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add PDG_R, compilation of measurements of R
+	* Add SND_2020_I1789269 e+e- > pi+pi-
+
+2020-04-01  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add a public AnalysisHandler::getYodaAOs() function and use it to implement writeData().
+
+2020-04-01  Christian Gutschow  <chris.g@cern.ch>
+
+	* Fix band combination in rivet-cmphistos
+
+2020-04-01  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BELLE_2017_I1607562, hadron spectra
+	* Add BELLE_2018_I1698390 Xi_c+->Xi-pi+pi+
+
+2020-03-31  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BELLE_2005_I686014 charm hadrons
+	* Add BESIII_2020_I1788734 eta' phi
+	* Add BELLE_2006_I725750 tau -> phi K
+
+2020-03-30  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BABAR_2006_I724557 Omega_c* production
+
+2020-03-29  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add distributions to BESIII_2020_I1775344
+
+2020-03-27  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add CLEOC_2008_I779705 D0 -> eta pi+pi-
+
+2020-03-26  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add rates to BELLE_2017_I1606201
+	* Add rates to CLEO analyses
+	* Add BELLE_2004_I668024, Sigma_c(2800)
+
+2020-03-25  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BABAR_2014_I1286317 antideutron production
+
+2020-03-23  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BABAR_2020_I1769654 e+e- > KS0 KL0
+	* Add BESIII_2020_I1775344 e+e- > K+K- 2pi0
+
+2020-03-22  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add CLEOC_2006_I1728043 eta, eta', phi in D decays
+
+2020-03-18  Christian Gutschow  <chris.g@cern.ch>
+
+	* Allow "Nominal" as a potential default weight name
+
+2020-03-16  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add ARGUS_1990_I283027 anti-deuteron spectrum in Upsilon(1S) decays
+	* Add ARGUS_1989_I278932 Delta++ spectrum in Upsilon(1S) decays
+
+2020-03-12  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2018_I1697371 D0 -> K semi-leptonic
+	* Add CLEOC_2009_I823313 D -> pi, K q2
+	* Add CLEOC_2006_I715096 electron spectrum in D decays
+	* Add CLEOC_2008_I769777 D -> pi, K q2
+	* Add CLEOC_2011_I875526 D -> eta q2
+	* Add CLEOII_1996_I415409 tau -> K eta
+	* Add CLEOII_1994_I373188 tau -> 3pi-2pi+pi0
+
+2020-03-11  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BABAR_2004_I632399 phi spectra in B decays
+	* Add BESIII_2018_I1662660 D^+ -> eta semi-leptonic
+	* Add CLEOII_1994_I361356 Sigma_c 0,++ in B decays
+
+2020-03-10  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BABAR_2006_I714447 excited D_s spectra
+
+2020-03-09  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add CLEOII_1992_I32611 chi_b(2P) decays
+	* Add CLEO_1985_I205668 identified particle spectra
+
+2020-03-07  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BELLE_2010_I835104 B-> eta Xs
+	* Add BABAR_2002_I582184 D_s spectra
+
+2020-03-06  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Make AnalysisObject pointer wrapper objects throw an exception
+	(and helpful error message) if being dereferenced to a null
+	pointer.
+
+2020-03-06  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2019_I1726357 e+e- -> Lambda Lambdabar
+	* Add CLEOII_2002_I606309 B->Psi
+	* Add BABAR_2004_I642355 B-> eta' Xs
+
+2020-03-05  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Improve the 'couldn't import rivet module' error message.
+
+2020-03-05  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BABAR_2007_I722622 Xi_c' spectra
+	* Add bin width to BABAR_2001_I558091, BABAR_2006_I731865, BELLE_2009_I823878
+	* Improvements to ARGUS analyses, mainly adding missing histos
+
+2020-03-04  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add ARGUS_1990_I296522 Xi_c+ spectrum
+	* Add BELLE_2008_I762013 D_s1(2536) decay angles
+	* Add BABAR_2007_I746745 Omega_c spectrum
+
+2020-03-03  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add CLEO_1990_I298611 Lambda_c spectra
+	* Add BES_1999_I508349 charm cross section
+
+2020-03-03  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BABAR_2006_I714448 Upsilon(4S) -> pipi Upsilon(1,2S)
+	* Add CLEOII_1995_I404590 Xi_c+ spectra
+	* Add CLEOII_1999_I501417 Xi_c1 spectra
+	* Add CLEOII_1997_I424575 Sigma_c* spectra
+	* Add BABAR_2011_I892421 D_s1(2536) decay angles
+
+2020-03-02  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add CLEOII_1994_I378319 charged D_1,D_2 spectrum
+	* Add CLEO_1992_I315181 baryon spectra in B decays
+	* Add CLEOII_1994_I372349 neutral D_1,D_2 spectrum
+	* Add ARGUS_1995_I397794 D_s2 spectrum
+	* Add ARGUS_1989_I282570 D_s1(2536) spectrum
+	* Add BES_1999_I507637 psi(2S)->J/psi pi+pi-
+
+2020-03-01  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add CLEOII_1999_I478217 Xi_c' spectrum
+	* Add CLEOII_1994_I356001 Upsilon(3S) -> pipi Upsilon
+	* Add CLEOII_1993_I352823 D_s1(2536) spectrum
+	* Add CLEOII_1994_I381696 Lambda_c* spectrum
+	* Add CLEOII_1995_I397770 Xi_c*0 spectrum
+	* Add CLEOII_1996_I416471 Xi_c*+ spectrum
+	* Add ARGUS_1997_I440304 Lambda_c* spectrum
+	* Add ARGUS_1993_I357132 Lambda_c* spectrum
+	* Add BABAR_2007_I1091435 D0->K- semileptonic
+	* Add BESIII_2018_I1655158 D0->pi- and D+->pi0 semileptonic
+
+2020-02-28  Christian Gutschow  <chris.g@cern.ch>
+
+	* Add patch to allow finding of zipped reference data
+
+2020-02-28 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add MARKII_1979_I144382 Psi(2) -> J/Psi pi+pi-
+	* Add BABAR_2007_I760730 e+e- > D* D and D*D*
+	* Add BELLE_2002_I563840 e+e- charmoinum spectrum
+
+2020-02-24 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add ARGUS_1986_I227324 event shapes at Upsilon(1S)
+
+2020-02-23 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add ARGUS_1992_I319105 Lambda_c decay correlations
+	* Add CLEOII_2000_I533575 Xi asymmetry
+
+2020-02-22  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add SFINAE type restriction to PROJ templated type deduction in
+	Analysis::apply() methods.
+
+2020-02-22 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add CLEOII_1997_I442910 Xi_c spectrum in b decays
+	* Add CLEOII_2005_I668268 lambda_c decay correlations
+
+2020-02-21  Jon Butterworth <j.butterworth@ucl.ac.uk>
+
+	* Trying to merge in hepdat sync
+
+2020-02-21  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Update PID util functions to match the latest version of
+	MCUtils/PIDCodes/PIDUtils.h
+
+2020-02-21 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BELLE_2009_I810744 Upsilon(4s) -> pipi Upsilon(1S)
+	* Add BABAR_2015_I1377201 D*+/- spectrum in Upsilon(1S) decays
+	* Add ARGUS_1994_I371613, lambda_c decay correlations
+
+2020-02-20 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BABAR_2010_I864027  D_s cross sections
+	* Add CLEOII_1994_I371611, lambda_c decay correlations
+
+2020-02-19 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2016_I1384778 for Collins assymetry
+
+2020-02-18 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add CLEO_1995_I392704 for lambda_c decay correlations and
+	improvements to the similar FOCUS_2006_I693639
+	* Add CLEOII_1999_I504672, multiplicity in 4s decays
+	* Add BELLE_2011_I878228 D_s cross sections
+
+2020-02-17 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BABAR_2017_I1498564
+	* Fixes to MC analyses as booking not allowed in
+	analyse any more
+
+2020-02-14 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2018_I1685535
+	* Add CLEOII_1998_I467642
+
+2020-02-13  Christian Gutschow  <chris.g@cern.ch>
+
+	* Overload scale and normalize for map<string,Histo1DPtr>
+
+2020-02-13 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add LENA_1981_I164397
+	* Add CUSB_1984_I199809
+	* Add BESIII_2018_I1633425
+
+2020-02-12 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2017_I1509241 e+e- > p pbar pi0
+
+2020-02-11 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add CLEOIII_2006_I728679 and CLEOII_2002_I601701,
+	eta' spectra in Upsilon(1S) decay
+	* fix double booking of hists in ARGUS_1988_I251097
+	* Add BABAR_2013_I1247058 for e+e- > p pbar
+
+2020-02-10 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2018_I1653121
+	* Add BESIII_2017_I1596897
+	* Add BESIII_2020_I1762922
+
+2020-02-08 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BESIII_2017_I1494065
+
+2020-02-07  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add AnalysisInfo::refFile() and Analysis::refFile() and
+	::refData() functions in C++, and a Pythonised version of the
+	latter to the Python interface.
+
+2020-02-06 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add BELLE_2015_I1336624
+
+2020-02-05  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Change the AnalysisHandler logger name from Analysis.Handler to
+	AnalysisHandler, since -lAnalysis=DEBUG would be expected to turn
+	on logging for debugging of an analysis, not the core machinery
+	that deploys it (which is not interesting to most users).
+
+2020-02-04 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Improvements to the analysis coverage for e+e- experiments.
+	* Add BESIII_2019_I1773081 e+e--> pi+_pi-pi0
+	* Add KEDR R analysis
+	* Fix for K+K- eta plot in BABAR_2008_I765258
+	* Fix rivet2->3 issue in JADE_1983_I190818
+	* Fix to bin widths for various analyses to improve plotting
+
+2020-02-02  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Print an error message and throw an exception if trying to
+	double-book an analysis object in the Analysis::init() method.
+
+2020-02-02  Jon Butterworth <j.butterworth@cern.ch>
+
+	* sync with HEPData for CMS_2017_I1598460 and CMS_2013_I1273574
+
+2020-02-01  Jon Butterworth <j.butterworth@cern.ch>
+
+	* Error trapping in rivet-findid for rare cases
+	when two bibtex entries are found (e.g. rivet-findid 1487288)
+
+2020-01-29  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add optional 'sign' arguments to all deltaEta and deltaRap
+	functions, for use with Vector2 and symmetry with deltaPhi.
+
+	* Add a Vector2 class.
+
+2020-01-29  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add optional 'sign' arguments to all deltaEta and deltaRap
+	functions, for use with Vector2 and symmetry with deltaPhi.
+
+	* Add a Vector2 class.
+
+2020-01-16  Christian Gutschow  <chris.g@cern.ch>
+
+	* Make sure --skip-weights picks the nominal weight and not the 0th weight
+
+2020-01-15  Jon Butterworth <j.butterworth@cern.ch>
+
+	* Add a warning to CMS WZ analysis CMS_2016_I1487288 because
+	it looks like it produces cross sections but actually they
+	are normalised to data, and do not have fiducial correction
+	applied differentially.
+
+2020-01-14  Jon Butterworth <j.butterworth@cern.ch>
+
+	* Stop the occasional population of a bin which is outside acceptance in
+	CMS_2017_I1499471 (Zbb).
+
+2020-01-09  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Fix a sign error and remove apparent efficiency double-counting
+	in the ATLAS_2019_I1725190 smeared dilepton analysis.
+
+2020-01-06  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Fix a typeid()/smart ptr compiler warning in ProjectionHandler.cc.
+
+2020-01-01  Jon Butterworth <j.butterworth@cern.ch>
+
+	* Fix a logic but in ATLAS_2016_I1448301 which was introduced when
+	it was rewritten for the "options" set up
+
+2019-12-22  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Release version 3.1.0
+
+2019-12-19  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Projections/EventMixingFinalState.hh: Replace use of
+	std::random_shuffle (deprecated in C++14, removed in C++17) with
+	std::shuffle and direct access to our thread-safe random number
+	generator.
+
+	* Significant revisions to tau jet efficiency functions.
+
+	* Add JET_EFF_ONE/ZERO aliases, cf. the Particle versions.
+
+2019-12-19  Christian Gutschow  <chris.g@cern.ch>
+
+	* Give precedence to user-supplied cross-section
+
+2019-12-18  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Switch required compiler dialect to C++14, to ensure that
+	compiler definitely (?) supports required C++11. C++14 or 17 is
+	the current standard LCG build dialect.
+
+2019-12-18  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* add decay angle to ARGUS_1989_I268577
+
+	* add polarization to OPAL_1997_S3608263
+
+	* fixes to headers and brefi descriptions in various analyses
+
+2019-12-17  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* add CMD3_2019_I1770428 K0S K0S pi+ pi- cross section
+
+	* fix histogram ids in BELLE_2009_I809630
+
+	* add TMP to histogram labels in ARGUS_1993_S2669951
+
+2019-12-16  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Formally require YODA >= 1.8.0 in configure.
+
+2019-12-16  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* add new ALEPH analyses
+
+2019-12-15  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* fixes for pointers, booking in TASSO_1990_I284251 and TASSO_1982_I177174
+
+	* added MARKI_1976_I109792, DASP_1979_I132045 particle spectra at low energies
+
+	* added DASP_1979_I132410 eta production at low energies
+
+	* added BABAR_2006_I719111 particle specta in B decays
+
+	* added OPAL_2001_I536266 flavour separate charge particle multiplicites
+
+	* added new CLEO and CUSB analyses
+
+	* added new BELLE lambda polarization and ARGUS D spectra
+
+	* fix issues with ARGUS_1992_I319102, CLEO_2000_I537236
+
+	* added new DELPHI analyses
+
+	* added L3_1995_I381046, B*/B ratio
+
+	* added new OPAL analyses
+
+	* added new BES analyses
+
+	* added new CMD3 analyses
+
+2019-12-14  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* added ARGUS_1988_I261672 for sigmac production
+
+	* added LHCB_2013_I1243156, ARGUS_1989_I280943, BABAR_2010_I867611 helicity angles for excited D meson decays
+
+	* added TPC_1991_I316132, HRS_1987_I250823 D* polarization at 29 GeV
+
+	* added VENUS_1998_I453613, TOPAZ_1997_I454183 charged particles at 58 GeV
+
+2019-12-13  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* ATLAS_2011_S9128077 ensure all bins outputted in d02, otherwise problems with yodamerge
+
+	* ATLAS_2015_I1393758 and ATLAS_2016_I1419070, CMS_2012_I1111014, change numEntries -> effNumEntries to avoid issues in NLO runs
+
+	* Change ratio plot label, was wrong way up, in ATLAS_2012_I1203852, ATLAS_2013_I1190187
+
+	* Use rivet normalize not yoda in ATLAS_2018_I1711114 to avoid issues if histos empty
+
+	* Avoid crash in ATLAS_2016_I1426523 if host not found
+
+	* Add omega hist in BABAR_2017_I1621593
+
+	* EHS_1988_I265504 fix rapidity calc so in CMS not lab
+
+	* A2_2017_I1486671 fix omega PDG number
+
+2019-12-10  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Re-enable custom Particles and Jets vectors, with moms() and other conversion functions.
+
+	* Add default ANY decay mode to TauFinder.
+
+2019-11-28  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Pass HepMC3 path info through to the rivet-config script.
+
+2019-11-27  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Refine testing and printing of UNVALIDATED status in analysis listing.
+
+	* Add INF to the list of predefined constants, and rename the internal constants header.
+
+2019-11-26  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Improve normalization guidance and fix energy specification in mkanalysis .info file template.
+
+2019-11-17  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Release version 3.0.2
+
+2019-11-17 Jon Butterworth <j.butterworth@ucl.ac.uk>
+
+	* Fix to ATLAS_2018_I1634970 to stop using prompt invisible in jets
+
+2019-11-12 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Fixes to A2_2017_I1486671 to improve decay detection
+
+2019-11-14  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Release version 3.0.2
+
+2019-11-17 Jon Butterworth <j.butterworth@ucl.ac.uk>
+
+	* Fix to ATLAS_2018_I1634970 to stop using prompt invisible in jets
+
+2019-11-12 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Fixes to A2_2017_I1486671 to improve decay detection
+
+2019-11-14  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Fix typos, HTML styling, and download URL in rivet-mkvaldir.
+
+2019-11-12  Christian Gutschow  <chris.g@cern.ch>
+
+	* Merging Peter's changes from release-2-7-x branch.
+
+2019-11-09  Leif Lönnblad  <Leif.Lonnblad@thep.lu.se>
+
+	* Fixed HepMC3 interface so that it can use the built in deduce_reader.
+	(Thanks to Andrii Verbytskyi for input)
+
+	* Fixed rivet-mkvaldir so that it downloads hepmc files from the new site.
+
+2019-11-06  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add ATLAS_2018_I1676551 analysis: 13 TeV 36/fb recursive jigsaw
+	3 and 3 lepton BSM search. Implemented without ROOT/RestFrames by
+	Derek Yeung and validated (with acceptable but imperfect
+	agreement) against published cutflow tables.
+
+	* Add ATLAS_2019_I1725190 analysis: 13 TeV full Run-2 dilepton
+	mass with analysis-specific parametrised smearing functions.
+
+	* Add CMS_2018_I1708620 analysis: 13 TeV forward energy flow,
+	converted to support re-entrant finalize.
+
+	* Add LHCB_2018_I1665223 analysis: 13 TeV inelastic pp
+	cross-section in LHCb fiducial acceptance.
+
+2019-10-31  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add an EXAMPLE_MINIMIZER analysis showing how to use the function minimizer.
+
+	* Add a catchier rivet-build script as an alias (to become canonical in future) for rivet-buildplugin.
+
+	* Change luminosity info storage and accessors to double rather
+	than string, so usable in analyses, and add an
+	Analysis::luminosity() method with the units in Rivet's standard
+	picobarns for use like luminosity()/femtobarn in analysis code.
+
+	* Change JetAlg canonical name and header to JetFinder, to match
+	ParticleFinder. JetAlg.hh defines a (pre-deprecated)
+	backward-compatibility alias for now, to be removed in v3.1.0 long
+	with other deprecated API features.
+
+	* Add probability density functions for Gaussian and Crystal Ball
+	distributions, and a Crystal Ball random sampler function; all
+	currently in Random.hh/.cc.
+
+	* Force rebuild of Cython files if a sufficient Cython
+	installation is found, by touching the .pyx file during configure.
+
+	* Add discard/idiscard and select/iselect aliases for the clunkier filter_select etc.
+
+	* Add ParticleBase forwarding of the dot() method from FourVector/FourMomentum.
+
+2019-10-27  Christian Gutschow  <chris.g@cern.ch>
+
+	* Added LHCF_2018_I1518782 and LHCF_2018_I1692008
+	submitted by Eugenio Berti
+
+2019-10-15  Christian Gutschow  <chris.g@cern.ch>
+
+	* HEPMC3 compatibility patches, thanks Andrii Verbytskyi!
+
+	* Suppress pesky warnings from InitialQuarks
+
+2019-10-15  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add MendelMin minimiser class to the Tools collection -- needs a
+	bit of tweaking, but it's a start.
+
+	* Add new EXAMPLE_CUTFLOW analysis to demonstrate use of the Cutflow system.
+
+	* Add more convenient fillnext methods to Cutflow, and refactor a bit.
+
+2019-10-03  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add better parametrisation of ATLAS Run 2 muon efficiency and smearing.
+
+2019-10-02  Christian Gutschow  <chris.g@cern.ch>
+
+	* Implement XMin and XMax for chi2 calc in make-plots
+
+2019-09-25  Christian Gutschow  <chris.g@cern.ch>
+
+	* Add FJCONTRIB lib path to rivetenv.(c)sh, thanks Aidan Kelly!
+
+2019-09-24  Christian Gutschow  <chris.g@cern.ch>
+
+	* Fixing setCrossSection bug in rivet python script
+
+2019-09-19  Christian Gutschow  <chris.g@cern.ch>
+
+	* Making plotting scripts compatible with tip of YODA-1-7 branch
+	This will break things for older YODA checkouts ...
+
+2019-09-18  Christian Gutschow  <chris.g@cern.ch>
+
+	* Move variation-band combination into rivet-cmpthistos,
+	so that the result is written out to dat file
+
+2019-09-10 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Fixes to ARGUS_1993_S2789213 ARGUS_1993_S2669951
+	* New BABAR, BES and WA46 baryon decay analyses
+
+2019-09-09  Leif Lönnblad  <Leif.Lonnblad@thep.lu.se>
+
+	* Various fixes to work properly with HepMC3.
+
+2019-09-06  Christian Gutschow  <chris.g@cern.ch>
+
+	* Introduce options for ATLAS_2014_I1312627
+
+2019-09-05 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* Add four new CELLO analyses CELLO_1982_I12010, CELLO_1983_I191415,
+	CELLO_1989_I276764, CELLO_1990_I283026 events shapes and spectra at Petra
+	* Add 18 new TASSO analyses, event shapes and spectra at Petra
+	* Add 6 new PLUTO analyses, event shapes and spectra at Petra and Doris
+	* Add 11 new SLAC e+e- analyses, event shapes and particle spectra
+	* Add 5 new JADE analyses
+	* Add 7 new ARGUS analyses, and improvements to several existing ones
+	* Add 5 new Tristan analyses
+	* Add 17 new BES analyses
+	* Add 8 new CLEO, A2, E756, FOCUS and NA48 analyses
+	* Inspire ids fixed in several ALICE, ATLAS, UA5 and BABAR analyses
+	* Improve normalization in ALEPH_1999_S4193598
+	* Add many missing dists to DELPHI_2003_I620250
+	* Add 13 more FENICE, KLOE, SND and CMD analyses
+	* Add 15 new LEP analyses
+	* Add new projections and first analyses for gamma gamma collisions
+
+2019-09-05  Christian Gutschow  <chris.g@cern.ch>
+
+	* Implement setWeightCap(double) method in AnalaysisHandler that
+	can be used to chop off large weights. USE WITH CARE!!
+
+	* Implement --weight-cap flag in main rivet script to set weight flag
+
+2019-09-05  Leif Lönnblad  <Leif.Lonnblad@thep.lu.se>
+
+	* Adding an analysis with an option that has not been declared in
+	the info file is now allowed, but an appropriate warning is
+	emitted.
+
+2019-09-04  Christian Gutschow  <chris.g@cern.ch>
+
+	* make-plots can now combine multiweights to form a band.
+	Use BandComponentEnv and/or BandComponentPDF to specify
+	envelope- or PDF-like components that should contribute
+	to the band. Spaces should be used to separate weight
+	groups (one	envelope / PDF combination per weight group),
+	while each weight group should be given by a comma-separated
+	list. Regex is supported. All band components are added in
+	quadrature with the statistical uncertainty.
+
+2019-08-29  Christian Gutschow  <chris.g@cern.ch>
+
+	* You can now specify a Variations=MUR*,PDF123456* tag (using wildcards even!)
+	in the BEGIN PLOT ... END PLOT section in order to select the weights that
+	make-plots should draw in the plot (or pass --no-weights to rivet-cmphistos/-mkhtml
+	to drop all of them).
+
+2019-08-21  Andy Buckley  <andy.buckley@cern.ch>
+
+	* If writing to a terminal, use carriage return to eat less
+	scrollback space by overwriting the 100th event outputs and only
+	using a full newline for the 1000s. Also reducing the re-entrant
+	histogramming noise from AnalysisHandler to make this neater
+	rather than splurging the same green semi-debug output every 1000
+	events. It's ridiculous how much more professional this feels...
+
+	* Combine ATLAS electron reco and ID efficiencies into EFF_LOOSE, EFF_MEDIUM, etc. functions.
+
+	* Improve ATLAS Run 2 electron reconstruction efficiency map, based on 2019 paper Fig 2.
+
+2019-08-03  Christian Gutschow  <chris.g@cern.ch>
+
+	* Skip loop over variation weights if AO hasn't been filled
+
+2019-08-02  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Some improvements to Run 2 electron medium & tight ID efficiency parametrisations.
+
+2019-08-01  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Fall back to using quark constituents for jet tagging, for fixed-order running.
+
+	* Reinstate the command-line event skipping.
+
+	* Return str(pid) or 0 in PID <-> name translations, rather than throwing PidError.
+
+2019-08-01 Christian Gutschow  <chris.g@cern.ch>
+
+	* Filling _h_N with the N events rather than weights (MC_XS)
+	* Changing Validation to ReleaseTests in all info files
+	* Re-instating MC_WEIGHTS, MC_XS
+
+2019-07-30 Christian Gutschow  <chris.g@cern.ch>
+
+	* Just discussed with Andy: Removing regression reference files
+	from installation since other developer output (e.g. for the website)
+	is also not included
+
+2019-07-26  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Fix a longstanding make-plots bug, in which the
+	XMajorTickLineColor defaulted to '0.3pt' -- TeX xcolor versions
+	started to complain about this in some Fedora >27 version.
+
+2019-07-24  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add CMS_2018_I1646260 soft-lepton SUSY search analysis (used for
+	recasting comparisons at Les Houches 2019).
+
+2019-07-22  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add ATLAS_2018_I1667046 ATLAS 36/fb RPV SUSY search.
+
+2019-07-18  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Fix logic error in HasNoTag functor.
+
+2019-07-16 Christian Gutschow  <chris.g@cern.ch>
+
+	* Release version 3.0.1
+
+2019-07-12 Christian Gutschow  <chris.g@cern.ch>
+
+	* add missing includes for DELPHI_2000_I524694 and DELPHI_2003_I620250
+
+2019-07-09  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Add a --with-fjcontrib option flag to configure.
+
+	* Add convenience aliases for vectors of standard types: strings, ints, doubles, etc.
+
+	* Improve debug reporting from SmearedParticles.
+
+	* Add SmearedParticles::truthParticles and SmearedJets::truthJets functions for access to the unsmeared inputs.
+
+	* Add convenience aliases for vectors of standard types: strings, ints, doubles, etc.
+
+2019-06-26 Christian Gutschow  <chris.g@cern.ch>
+
+	* rivet-cmphistos - AOPath for nominal should be filled with string 0, not integer 0
+
+2019-06-25  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Allow '=' signs in weight names as propagated into Rivet/YODA histo paths.
+
+2019-06-23  Andy Buckley  <andy.buckley@cern.ch>
+
+  * Add Particle::closestApproach() function -- needs testing. Useful for long-lived particles.
+
+2019-06-21 Christian Gutschow  <chris.g@cern.ch>
+
+	* Reinstating ATLAS_2016_CONF_2016_078
+
+	* Reinstating ATLAS_2014_I1312627, but needs work for HDsync
+
+	* Reinstating ATLAS_2014_I1307243
+
+	* Reinstating ATLAS_2012_I1124167
+
+	* Reinstating ATLAS_2012_I1094568
+
+	* Reinstating CMS_2013_I1122847
+
+	* Reinstating CMS_2013_I1261026
+
+2019-06-21 Christian Gutschow  <chris.g@cern.ch>
+
+	* Reinstating ATLAS_2010_S8918562
+
+	* adding valref for LHCB_2012_I1208102
+
+2019-06-20 Christian Gutschow  <chris.g@cern.ch>
+
+	* Release version 3.0.0
+
+	* Adding ATLAS_2011_I930220, ATLAS_2018_I1634970 and ATLAS_2019_I1718132
+
+2019-06-19  Przemyslaw Karczmarczyk <przemyslaw.karczmarczyk@cern.ch>
+
+	* Adding bookScatter3D method
+
+
+2019-06-19 Christian Gutschow  <chris.g@cern.ch>
+
+	* Adding valref for ATLAS_2018_I1634970 and tweaking info file
+
+	* Marking ATLAS_2016_CONF_2016_092 OBSOLETE (superseded by ATLAS_2018_I1634970)
+
+	* Reinstating ATLAS_2014_I1279489 and adding valref
+
+	* make ATLAS_2019_I1718132 less neat, because gcc4.8 doesn't like nice things
+
+2019-06-18 Christian Gutschow  <chris.g@cern.ch>
+
+	* Fixing bad_cast error in STAR_2008_S7869363
+
+	* Protecting against zero-division in STAR_2006_S6860818
+
+	* Adding analysis ATLAS_2017_I1604271 (inclusive jets at 8 TeV)
+
+2019-06-17 Christian Gutschow  <chris.g@cern.ch>
+
+	* Adding analysis ATLAS_2019_I1718132 (unfolded control regions in leptoquark search)
+
+2019-06-13  Leif Lönnblad  <Leif.Lonnblad@thep.lu.se>
+
+	* Introduced a new validation procedure: bin/rivet-mkvaldir will
+	now create a Makefile in the given directory based on the
+	"Validation:" section of all .info files. "make check" will
+	download all necessary HepMC files (if they have not already been
+	downloaded), produce the validation yodas and compare them to
+	reference ones in the {prefix}/share/Rivet/refyodas directory.  If
+	differences are found the corresponding plots will be produced
+	using rivet-mkhtml.  For more information do "make help" in the
+	created directory.
+
+2019-06-12  Leif Lönnblad  <Leif.Lonnblad@thep.lu.se>
+
+	* Extended the MultiWeightWrapper class to keep a list of both
+	"/RAW" and final analysis object. AnalysisHandler::mergeYodas
+	rewritten to use these.
+
+2019-06-11 Christian Gutschow  <chris.g@cern.ch>
+
+	* add booking method for a Scatter2DPtr from a ref Scatter2D needed by ALICE_2016_I1419244 (thanks to Frank Siegert!)
+
+2019-06-10 Christian Gutschow  <chris.g@cern.ch>
+
+	* remove instances of scale and normalize using initializer lists as gcc48 doesn't like them
+
+2019-06-09 Christian Gutschow  <chris.g@cern.ch>
+
+	* multiweight-merge27 branch fully in sync with current release2-7-x branch and passes validation
+
+2019-06-08 Christian Gutschow  <chris.g@cern.ch>
+
+	* Commenting out ununsed function in ChargedFinalState.cc
+	* removing unused member variable in Spherocity.hh
+	* Clean up logic around CmpState
+	* Implement skipWeights flag
+	* Make rivet-mkanalysis more intuitive
+	* Interface change: remove title/axis-label options from book methods
+	* fix Py2/Py3 encoding issue in bin/rivet
+	* making fjcontrib a dependency of Rivet
+	* remove regex includes and re-write in terms of stringstream
+
+2019-06-06 Christian Gutschow  <chris.g@cern.ch>
+
+	* Adding Marek's opacity fix to make-plots
+
+	* removing if statement testing if type(u'') is (not) str when
+	deciding whether to encode string in bin/rivet
+
+2019-06-06  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* fix typo in rivet-cmphistos
+	* sync yoda for many D0 analyses
+	* sync yoda for CDF_2008_S8093652 D0_2008_S7554427
+
+2019-06-05  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* L3_2004_I652683 add missing plots and sync yoda, still missing n charged as functiomn of CMS energy and jet plots
+	* PLUTO_1980_I154270 clean up to prepare for yoda sync
+	* CDF_2015_I1388868, changes to allow yoda sync, histograms renumbered and systematic error added to y values
+	* sync yoda for CDF analysis where y errors changed due better calc in HEPData
+
+2019-06-05  Przemyslaw Karczmarczyk <przemyslaw.karczmarczyk@cern.ch>
+
+	* Adding more heavy-ion beam particles: DEUTERON, ALUMINIUM,
+	COPPER, XENON, URANIUM
+
+2019-06-04  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* sync yoda for BELLE_2015_I1397632, two hists change label + final binchangeset:   7157:2482c97f5ef8
+	* update BABAR_2007_S6895344.yoda with improved error calc
+	* sync yoda for H1_1994_S2919893.yoda, only difference handling of non-existance bins, better in new version
+	* sync yoda for OPAL_2000_S4418603.yoda, changes only in histos not used by rivet
+	* sync yoda for OPAL_1997_S3608263, missing histos in rivet copy
+	* sync yoda for OPAL_1997_S3396100, trival difference some asymmetric x bins in new output but bin limits same
+	* remove null bins from yoda to allow sync with hepdata in CLEO_2004_S5809304.yoda
+	* add OPAL_1997_I421977 for sigma +/- production
+
+2019-06-03  Przemyslaw Karczmarczyk <przemyslaw.karczmarczyk@cern.ch>
+
+	* Adding new heavy-ion beam particles: GOLD, LEAD.
+	* Switching already existing heavy-ion analyses to use new beam types
+
+2019-06-03  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* sync ALEPH_1996_S3196992.yoda with HEPdata, rounding issues in old version
+	* sync ALEPH_2001_S4656318.yoda, differences in histos not used in analysis
+	* sync DELPHI_2011_I890503.yoda, fixes y errors but still a zero width bin to deal with
+	* switch to using counters in OPAL_2002_S5361494, errors now calculated, and allows yoda sync with HEPdata
+	* add DELPHI_2003_I620250 for event shapes below Z pole
+	* switch to using counters in DELPHI_2000_S4328825, errors now calculated, and allows partial yoda sync with HEPdata
+	* update PLUTO_1980_I154270.yoda for new hepdata error calc
+	* update JADE_1983_I190818 to handle zero bins widths and update the yoda from HEPData
+
+2019-06-02  Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* add DELPHI_2000_I524694 for sigma- and lambdsa(1520) production at LEP
+	* clean up code in OPAL_1997_S3396100, fixed normalisation of sigma-(1385) distributions
+
+2019-06-01 Peter Richardson <peter.richardson@durham.ac.uk>
+
+	* update yoda for ARGUS_1993_S2653028, improved y errors, still zero bin width issues
+	* update yoda for SND_2016_I1471515, ALEPH_1995_I382179, ALEPH_1999_S4193598
+	* add analysis CLEO_1991_I29927, B* production in e+e-
+
+2019-05-31 Christian Gutschow  <chris.g@cern.ch>
+
+	* Skip beam particles when trying to determine promptness (thanks to Marek Schoenherr for pointing this out)
+	* Apple's CLANG compiler really doesn't like uninitialised variables ... sorry Peter!
+
+2019-05-29  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Use integer rather than overloaded Projection comparison at the
+	apply stage. Improves Smeared* projection reproducibility and may
+	speed up the apply step. Thanks to Xiangyang Ju.
+
+2019-05-29  Peter Richardson <peter.richardson@durham.ac.uk>
+	* Move BABAR and BELLE analyses to separate plugin and add new mainly radiative
+	return analyses
+
+	* new pluginNovosibirsk with analyses from SND, CMD, etc
+
+	* new pluginOrsay with analyses from DM1 and DM2
+
+	* new PETRA analyses, mainly for R
+
+	* move existing Tristan analyses to separate plugin and add new, mainy R
+	analyses
+
+	* new pluginFrascati with analyses from ADONE and DAPHNE
+
+	* move older SLAC e+e- analyses to separate plugin and add new analyses
+
+	* move DORIS analysis to separate plugin and add new ones
+
+	* move CLEO analyses to new CESR plugin and add more analyses
+
+	* new plugin with analyses from the BES experiment
+
+	* new MC analyses for hadron/tau decays based on Herwig internal ones
+
+	* sync BABAR_2007_I729388, BABAR_2013_I1238276, BABAR_2005_S6181155 and all those
+	where no difference with yodadiff, similarly for BELLE
+
+	* fix no of tracks plots in ATLAS_2016_I1424838, normalise to 100 not 1, agreed by Chris G
+
+	* merge two versions of OPAL_2004_I631361, now using new options feature instead.
+
+2019-05-29  Leif Lönnblad  <Leif.Lonnblad@thep.lu.se>
+
+	* The GenEvents in rivet can now be stripped from (most) light
+	quarks and gluons to speed up searching.
+
+	* Status lines in info files can now contain words like
+	NOTREENTRY, NOHEPDATA, SINGLEWEIGHT, and UNPHYSICAL.
+
+	* Can now configured to use HepMC3 (3.1.1 or later).
+
+2019-05-23  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Fix Unicode and argparse bugs in bin/rivet. Thanks to Frank Siegert.
+
 2019-05-21  Andy Buckley  <andy.buckley@cern.ch>
 
 	* Release version 2.7.2
@@ -203,6 +2974,15 @@
 
 	* Reinstate Particle -> GenParticle as an explicit cast option.
 
+2019-03-15  Leif Lönnblad  <Leif.Lonnblad@thep.lu.se>
+
+	* src/Projections/Sphericity.cc: Skip zero-momentum particles.
+
+	* [Reader,Writer]CompressedAscii[cc,hh]: Introduced possibility to
+	wead and write HepMC (v3) files in a compressed and stripped
+	format. Also included a simple progra bin/rivet-hepmz to convert
+	between this new format and othe HepMC fortmats.
+
 2019-03-15  Andy Buckley  <andy.buckley@cern.ch>
 
 	* Add CMS_2018_I1686000.cc single-top plus photon analysis (with
@@ -245,6 +3025,63 @@
 
 	* Convert ATLAS_2013_I1217863 analysis variants to use the LMODE
 	analysis option (from Jon Butterworth).
+
+2019-02-20  James Monk  <jwmonk@protonmail.com>
+	* src/Tools/RivetHepMC_2.cc: implementation of HepMC helper funcs
+	for HepMC2
+
+	* Add HepMCUtils namespace for helper funcs
+
+	* Relatives class spoofs HepMC3::Relatives interface using HepMC2
+	iterator_ranges
+
+	* Replace calls to particles_in() and particles_out() by HepMCUtils::particles
+
+	* Fix pyext/setup.py.in for both HepMC2 and HepMC3
+
+	* Configures with either --with-hepmc=/blah or --with-hepmc3=/blah
+
+	* Compiles for either HepMC2 or HepMC3 (3.1 or higher)
+
+2019-02-17  James Monk  <jwmonk@protonmail.com>
+
+	* Update many build paths to cope with new HepMC3 include and lib paths :(
+
+	* Use RivetHepMC namespace in place of HepMC:: RivetHepMC.hh should take care of it
+
+	* configure.ac addes appropriate define to CPPFLAGS
+
+	* wrangle rivet-buildplugin to cope with HePMC3 paths
+
+	* HepMC::Reader is still a bit fubar :(
+
+2018-12-10  James Monk  <jwmonk@protonmail.com>
+
+	* Merge from default
+
+2018-12-06  James Monk  <jwmonk@protonmail.com>
+
+	* RivetHepMC.hh: Much simplified.  Use only Const version of
+	GenParticlePtr Only func delarations - two separate implementation
+	files for HepMC2 or 3
+
+	* configure.ac: HepMC version dependence for building RivetHepMC_2.cc or RivetHepMC_3.cc
+
+	* src/Makefile.am: HepMC version dependence
+
+	* src/Tools/RivetHepMC_3.cc: implementations of funs for HepMC v3
+
+	* bin/rivet-nopy.cc: re-implement using HepMC3 reader interface
+	(may need separate implementation for HepMC2)
+
+	* Particle.hh, Event.cc, Jet.cc: const GenParticle replaced by ConstGenParticle
+
+	* Projections Beam, DISLepton, FinalPartons, FinalState,
+	HeavyHadrons, InitialQuarks, MergedFinalState, PrimaryHadrons,
+	UnstableFinalState, VetoedFinalState: Use ConstGenParticlePtr and
+	vector<ConstGenParticlePtr> consistently
+
+	* pluginATLAS: Start to fix some uses of const GenParticlePtr
 
 2019-02-15  Leif Lönnblad  <Leif.Lonnblad@thep.lu.se>
 
@@ -960,6 +3797,18 @@
 2017-02-05  Andy Buckley  <andy.buckley@cern.ch>
 
        * Add HasBTag and HasCTag jet functors, with lower-case aliases.
+
+2017-01-31  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Start making analyses HepMC3-compatible, including major tidying in ATLAS_2013_I1243871.
+
+	* Add Cut-arg variants to HeavyHadrons particle-retrieving methods.
+
+	* Convert core to be compatible with HepMC3.
+
+2017-01-21  Andy Buckley  <andy.buckley@cern.ch>
+
+	* Removing lots of long-deprecated functions & methods.
 
 2017-01-18  Andy Buckley  <andy.buckley@cern.ch>
 

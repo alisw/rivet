@@ -1,0 +1,66 @@
+{
+    "421762": [
+        "Precise measurement of Bhabha scattering at a center-of-mass energy of 57.77-GeV", 
+        "VENUS", 
+        "10.1103/PhysRevD.55.19", 
+        null, 
+        null, 
+        "ins421762", 
+        null, 
+        [
+            "KEK-PREPRINT-96-80", 
+            "HUPD-9611", 
+            "KOBE-HEP-96-03", 
+            "KUNS-1393", 
+            "NGTHEP-96-01", 
+            "OULNS-96-01"
+        ]
+    ], 
+    "428204": [
+        "D*+- inclusive production in two photon process at s**(1/2) = 58-GeV in TRISTAN", 
+        "VENUS", 
+        "10.1007/s002880050463", 
+        null, 
+        null, 
+        "ins428204", 
+        null, 
+        [
+            "KEK-PREPRINT-96-152", 
+            "HUPD-9621", 
+            "KOBE-HEP-96-04", 
+            "KUNS-1426", 
+            "OULNS-96-04"
+        ]
+    ], 
+    "440852": [
+        "Measurement of tau polarization in e+ e- annihilation at s**(1/2) = 58-GeV", 
+        "VENUS", 
+        "10.1016/S0370-2693(97)00506-6", 
+        null, 
+        "hep-ex/9703003", 
+        "ins440852", 
+        null, 
+        [
+            "KEK-PREPRINT-96-171", 
+            "KOBE-HEP-97-01", 
+            "NGTHEP-97-01", 
+            "OULNS-96-05", 
+            "TMU-HEP-97-20"
+        ]
+    ], 
+    "443677": [
+        "Measurement of the proton - anti-proton pair production from two photon collisions at TRISTAN", 
+        "VENUS", 
+        "10.1016/S0370-2693(97)00728-4", 
+        null, 
+        null, 
+        "ins443677", 
+        null, 
+        [
+            "KEK-PREPRINT-97-9", 
+            "KOBE-HEP-97-02", 
+            "OULNS-97-01", 
+            "TMU-HEP-97-21"
+        ]
+    ]
+}

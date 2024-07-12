@@ -1,6 +1,7 @@
 Name: MC_HFJETS
 Summary: Monte Carlo validation analysis to study heavy flavour production
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Andy Buckley <andy.buckley@cern.ch>
 RunInfo:

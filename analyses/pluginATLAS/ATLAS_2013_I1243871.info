@@ -5,9 +5,11 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1243871
 Status: VALIDATED
+Reentrant: false
 Authors:
  - Javier Llorente <javier.llorente.merino@cern.ch>
 References:
+ - ATLAS-STDM-2011-48
  - arXiv:1307.5749 [hep-ex]
 RunInfo: Top quark pair production in $pp$ collisions at $\sqrt{s} = 7$ TeV
 NumEvents: 1000000
@@ -30,3 +32,8 @@ BibTeX: '@article{Aad:2013fba,
       reportNumber   = "CERN-PH-EP-2013-067",
       SLACcitation   = "%%CITATION = ARXIV:1307.5749;%%",
 }'
+
+ReleaseTests:
+ - $A LHC-7-Top-L
+ - $A-2 LHC-7-Top-SL
+

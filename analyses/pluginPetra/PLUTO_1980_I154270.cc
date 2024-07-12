@@ -11,7 +11,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(PLUTO_1980_I154270);
+    RIVET_DEFAULT_ANALYSIS_CTOR(PLUTO_1980_I154270);
 
 
     /// @name Analysis methods
@@ -21,19 +21,17 @@ namespace Rivet {
     void init() {
       const ChargedFinalState cfs;
       declare(cfs, "CFS");
-      if(fuzzyEquals(sqrtS()/GeV,30.75)) {
-	_hist=bookProfile1D(1, 2, 1);
-      }
-      else if (fuzzyEquals(sqrtS()/GeV,9.4 ) ||
-	       fuzzyEquals(sqrtS()/GeV,12.0) ||
-	       fuzzyEquals(sqrtS()/GeV,13.0) ||
-	       fuzzyEquals(sqrtS()/GeV,17.0) ||
-	       fuzzyEquals(sqrtS()/GeV,22.0) ||
-	       fuzzyEquals(sqrtS()/GeV,27.6) ||
-	       fuzzyEquals(sqrtS()/GeV,30.2) ||
-	       fuzzyEquals(sqrtS()/GeV,30.7) ||
-	       fuzzyEquals(sqrtS()/GeV,31.3)) {
-	_hist=bookProfile1D(1, 1, 1);
+      if (isCompatibleWithSqrtS(9.4 ) ||
+          isCompatibleWithSqrtS(12.0) ||
+          isCompatibleWithSqrtS(13.0) ||
+          isCompatibleWithSqrtS(17.0) ||
+          isCompatibleWithSqrtS(22.0) ||
+          isCompatibleWithSqrtS(27.6) ||
+          isCompatibleWithSqrtS(30.2) ||
+          isCompatibleWithSqrtS(30.7) ||
+          isCompatibleWithSqrtS(31.3)) {
+        book(_c_mult, "/TMP/cmult");
+        book(_mult, 1, 1, 1);
       }
       else {
         MSG_WARNING("CoM energy of events sqrt(s) = " << sqrtS()/GeV
@@ -47,15 +45,16 @@ namespace Rivet {
       const FinalState& cfs = apply<FinalState>(event, "CFS");
       MSG_DEBUG("Total charged multiplicity = " << cfs.size());
       unsigned int nPart(0);
-      foreach (const Particle& p, cfs.particles()) {
+      for (const Particle& p : cfs.particles()) {
         // check if prompt or not
-        const GenParticle* pmother = p.genParticle();
-        const GenVertex* ivertex = pmother->production_vertex();
+        ConstGenParticlePtr pmother = p.genParticle();
+        ConstGenVertexPtr ivertex = pmother->production_vertex();
         bool prompt = true;
         while (ivertex) {
-          int n_inparts = ivertex->particles_in_size();
+          vector<ConstGenParticlePtr> inparts = HepMCUtils::particles(ivertex, Relatives::PARENTS);
+          int n_inparts = inparts.size();
           if (n_inparts < 1) break;
-          pmother = particles(ivertex, HepMC::parents)[0]; // first mother particle
+          pmother = inparts[0]; // first mother particle
           int mother_pid = abs(pmother->pdg_id());
           if (mother_pid==PID::K0S || mother_pid==PID::LAMBDA) {
             prompt = false;
@@ -66,28 +65,47 @@ namespace Rivet {
           }
           ivertex = pmother->production_vertex();
         }
-	if(prompt) ++nPart;
+        if(prompt) ++nPart;
       }
-      _hist->fill(sqrtS(),nPart,event.weight());
+      _c_mult->fill(sqrtS(), nPart);
     }
 
 
     /// Normalise histograms etc., after the run
-    void finalize() { }
+    void finalize() {
+      double fact = 1./sumOfWeights();
+      double val = _c_mult->val()*fact;
+      double err = _c_mult->err()*fact;
+      Scatter2D temphisto(refData(1, 1, 1));
+      for (size_t b = 0; b < temphisto.numPoints(); b++) {
+        const double x  = temphisto.point(b).x();
+        pair<double,double> ex = temphisto.point(b).xErrs();
+        pair<double,double> ex2 = ex;
+        if(ex2.first ==0.) ex2. first=0.0001;
+        if(ex2.second==0.) ex2.second=0.0001;
+        if (inRange(sqrtS()/GeV, x-ex2.first, x+ex2.second)) {
+          _mult->addPoint(x, val, ex, make_pair(err,err));
+        }
+        else {
+          _mult->addPoint(x, 0., ex, make_pair(0.,.0));
+        }
+      }
+    }
 
     //@}
 
 
   private:
 
-    // Histogram
     Profile1DPtr _hist;
+    CounterPtr _c_mult;
+    Scatter2DPtr _mult;
 
   };
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(PLUTO_1980_I154270);
+  RIVET_DECLARE_PLUGIN(PLUTO_1980_I154270);
 
 
 }

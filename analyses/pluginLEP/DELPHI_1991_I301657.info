@@ -33,3 +33,7 @@ BibTeX: '@article{Abreu:1990cc,
       reportNumber   = "CERN-PPE-90-173",
       SLACcitation   = "%%CITATION = ZEPYA,C50,185;%%"
 }'
+
+ReleaseTests:
+ - $A LEP-91
+

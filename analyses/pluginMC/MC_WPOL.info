@@ -1,6 +1,7 @@
 Name: MC_WPOL
 Summary: Monte Carlo validation observables for $W$ polarisation
 Status: VALIDATED
+Reentrant: true
 Authors:
 - Frank Siegert <frank.siegert@cern.ch>
 References:
@@ -11,3 +12,7 @@ Description:
   'Observables sensitive to the polarisation of the W boson: A0, ... A7,
   fR, fL, f0, separately for W+ and W-.'
 NeedCrossSection: yes
+
+ReleaseTests:
+ - $A LHC-W-e
+

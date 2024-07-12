@@ -1,0 +1,38 @@
+Name: DELPHI_2001_I526164
+Year: 2001
+Summary:  Charged and Identified particle spectra in $q\bar{q}$ and $WW$ events
+Experiment: DELPHI
+Collider: LEP
+InspireID: 526164
+Status: VALIDATED
+Reentrant: false
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Eur.Phys.J.C 18 (2000) 203-228, 2000
+RunInfo: e+ e- -> q qbar amd W+W- events
+Beams: [e+, e-]
+Energies: [133,161,172,183,189,200]
+Description:
+  'Measurement of charged and identified particle production in both $q\bar{q}$ and $W^+W^-$ events at LEP. Need $q\bar{q}$ at all the energies and $W^+W^-$ at 183 and 189 GeV.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: DELPHI:2000ahn
+BibTeX: '@article{DELPHI:2000ahn,
+    author = "Abreu, P. and others",
+    collaboration = "DELPHI",
+    title = "{Charged and identified particles in the hadronic decay of W bosons and in e+ e- ---\ensuremath{>} q anti-q from 130-GeV to 200-GeV}",
+    eprint = "hep-ex/0103031",
+    archivePrefix = "arXiv",
+    reportNumber = "CERN-EP-2000-023",
+    doi = "10.1007/s100520000528",
+    journal = "Eur. Phys. J. C",
+    volume = "18",
+    pages = "203--228",
+    year = "2000",
+    note = "[Erratum: Eur.Phys.J.C 25, 493 (2002)]"
+}
+'

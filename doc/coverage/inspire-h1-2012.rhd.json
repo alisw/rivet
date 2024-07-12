@@ -1,0 +1,123 @@
+{
+    "912665": [
+        "Measurement of $D^{*\\pm}$ Meson Production and Determination of $F_2^{c\\barc}$ at low $Q^2$ in Deep-Inelastic Scattering at HERA", 
+        "H1", 
+        "10.1140/epjc/s10052-011-1769-0", 
+        "1356887", 
+        "1106.1028", 
+        null, 
+        null, 
+        [
+            "DESY-11-066"
+        ]
+    ], 
+    "944155": [
+        "Measurement of Dijet Production in Diffractive Deep-Inelastic Scattering with a Leading Proton at HERA", 
+        "H1", 
+        "10.1140/epjc/s10052-012-1970-9", 
+        "1395824", 
+        "1111.0584", 
+        null, 
+        null, 
+        [
+            "DESY-11-166"
+        ]
+    ], 
+    "946655": [
+        "Measurement of the Azimuthal Correlation between the most Forward Jet and the Scattered Positron in Deep-Inelastic Scattering at HERA", 
+        "H1", 
+        "10.1140/epjc/s10052-012-1910-8", 
+        "1400467", 
+        "1111.4227", 
+        null, 
+        null, 
+        [
+            "DESY-11-183"
+        ]
+    ], 
+    "1092976": [
+        "Measurement of Inclusive and Dijet D* Meson Cross Sections in Photoproduction at HERA", 
+        "H1", 
+        "10.1140/epjc/s10052-012-1995-0", 
+        "1429791", 
+        "1203.1170", 
+        null, 
+        null, 
+        [
+            "DESY-11-248"
+        ]
+    ], 
+    "1094384": [
+        "Inclusive Measurement of Diffractive Deep-Inelastic Scattering at HERA", 
+        "H1", 
+        "10.1140/epjc/s10052-012-2074-2", 
+        "1433645", 
+        "1203.4495", 
+        "ins1094384", 
+        null, 
+        [
+            "DESY-12-041"
+        ]
+    ], 
+    "1114313": [
+        "Determination of the Integrated Luminosity at HERA using Elastic QED Compton Events", 
+        "H1", 
+        "10.1140/epjc/s10052-012-2163-2", 
+        "1448366", 
+        "1205.2448", 
+        null, 
+        null, 
+        [
+            "DESY-12-062"
+        ]
+    ], 
+    "1114316": [
+        "Measurement of Beauty and Charm Photoproduction using Semi-muonic Decays in Dijet Events at HERA", 
+        "H1", 
+        "10.1140/epjc/s10052-012-2047-5", 
+        "1448405", 
+        "1205.2495", 
+        null, 
+        null, 
+        [
+            "DESY-12-059"
+        ]
+    ], 
+    "1118830": [
+        "Measurement of Beauty Photoproduction near Threshold using Di-electron Events with the H1 Detector at HERA", 
+        "H1", 
+        "10.1140/epjc/s10052-012-2148-1", 
+        "1457230", 
+        "1206.4346", 
+        null, 
+        null, 
+        [
+            "DESY-12-072", 
+            "FERMILAB-PUB-12-875-PPD"
+        ]
+    ], 
+    "1120512": [
+        "Inclusive Deep Inelastic Scattering at High $Q^2$ with Longitudinally Polarised Lepton Beams at HERA", 
+        "H1", 
+        "10.1007/JHEP09(2012)061", 
+        "1459023", 
+        "1206.7007", 
+        "ins1120512", 
+        null, 
+        [
+            "DESY-12-107"
+        ]
+    ], 
+    "1123363": [
+        "Combined inclusive diffractive cross sections measured with forward proton spectrometers in deep inelastic $ep$ scattering at HERA", 
+        "H1", 
+        "10.1140/epjc/s10052-012-2175-y", 
+        "1463427", 
+        "1207.4864", 
+        null, 
+        null, 
+        [
+            "DESY-12-100"
+        ]
+    ]
+}

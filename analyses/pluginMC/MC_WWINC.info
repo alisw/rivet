@@ -1,6 +1,7 @@
 Name: MC_WWINC
 Summary: Monte Carlo validation observables for $W^+[e^+ \, \nu]W^-[\mu^- \, \nu]$ production
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Frank Siegert <frank.siegert@cern.ch>
 References:

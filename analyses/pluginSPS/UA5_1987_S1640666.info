@@ -34,3 +34,7 @@ BibTeX: '@Article{Alner:1987wb,
 ToDo:
  - Include more distributions
 
+
+ReleaseTests:
+ - $A SppS-546-UE
+

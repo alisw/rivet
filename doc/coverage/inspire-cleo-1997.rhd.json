@@ -1,0 +1,395 @@
+{
+    "40577": [
+        "Study of flavor tagged baryon production in B decay", 
+        "CLEO", 
+        "10.1103/PhysRevD.55.13", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-96-1401", 
+            "CLEO-96-07", 
+            "CLEO-96-7"
+        ]
+    ], 
+    "420961": [
+        "Observation of exclusive B decays to final states containing a charmed baryon", 
+        "CLEO", 
+        "10.1103/PhysRevLett.79.3125", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-96-1397", 
+            "CLEO-96-6", 
+            "SLAC-PUB-9874"
+        ]
+    ], 
+    "424575": [
+        "Observation of two excited charmed baryons decaying into Lambda(c)+ pi+-", 
+        "CLEO", 
+        "10.1103/PhysRevLett.78.2304", 
+        null, 
+        null, 
+        "ins424575", 
+        null, 
+        [
+            "CLNS-96-1427", 
+            "CLEO-96-13", 
+            "SLAC-PUB-9851"
+        ]
+    ], 
+    "425121": [
+        "Search for phi mesons in tau lepton decay", 
+        "CLEO", 
+        "10.1103/PhysRevD.55.R1119", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-96-1434", 
+            "CLEO-96-17", 
+            "SLAC-PUB-9850"
+        ]
+    ], 
+    "425927": [
+        "Measurement of the direct photon spectrum in upsilon (1s) decays", 
+        "CLEO", 
+        "10.1103/PhysRevD.55.5273", 
+        null, 
+        "hep-ex/9611020", 
+        "ins425927", 
+        null, 
+        [
+            "CLNS-96-1435", 
+            "CLEO-96-18", 
+            "SLAC-PUB-9840"
+        ]
+    ], 
+    "426231": [
+        "Experimental test of lepton universality in tau decay", 
+        "CLEO", 
+        "10.1103/PhysRevD.55.2559", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-96-1431", 
+            "CLEO-96-16", 
+            "SLAC-PUB-9839"
+        ]
+    ], 
+    "426233": [
+        "Search for neutrinoless tau decays: tau ---> e gamma and tau ---> mu gamma", 
+        "CLEO", 
+        "10.1103/PhysRevD.55.R3919", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-96-1428", 
+            "CLEO-96-14", 
+            "SLAC-PUB-9821"
+        ]
+    ], 
+    "427323": [
+        "Search for B ---> mu anti-muon-neutrino gamma and B ---> e anti-electron-neutrino gamma", 
+        "CLEO", 
+        "10.1103/PhysRevD.56.11", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9820", 
+            "CLNS-96-1422", 
+            "CLEO-96-11"
+        ]
+    ], 
+    "428245": [
+        "A Measurement of the Michel parameters in leptonic decays of the tau", 
+        "CLEO", 
+        "10.1103/PhysRevLett.78.4686", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-96-1429", 
+            "CLEO-96-15", 
+            "SLAC-PUB-9811"
+        ]
+    ], 
+    "439530": [
+        "Study of gluon versus quark fragmentation in Upsilon --> g g gamma and e+ e- --> q anti-q gamma events at s**(1/2) = 10-GeV", 
+        "CLEO", 
+        "10.1103/PhysRevD.56.17", 
+        null, 
+        "hep-ex/9701006", 
+        "ins439530", 
+        null, 
+        [
+            "SLAC-PUB-9804", 
+            "CLNS-96-1452", 
+            "CLEO-96-22"
+        ]
+    ], 
+    "439560": [
+        "Analyses of D+ --> K(S)0 K+ and D+ ---> K(S)0 pi+", 
+        "CLEO", 
+        "10.1103/PhysRevLett.78.3261", 
+        null, 
+        "hep-ex/9701008", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9803", 
+            "CLNS-96-1449", 
+            "CLEO-96-20"
+        ]
+    ], 
+    "439745": [
+        "Lambda anti-lambda production in two photon interactions at CLEO", 
+        "CLEO", 
+        "10.1103/PhysRevD.56.R2485", 
+        null, 
+        "hep-ex/9701013", 
+        "ins439745", 
+        null, 
+        [
+            "SLAC-PUB-9800", 
+            "CLNS-96-1448", 
+            "CLEO-96-19"
+        ]
+    ], 
+    "439746": [
+        "Tau-neutrino helicity from h+- energy correlations", 
+        "CLEO", 
+        "10.1103/PhysRevD.55.7291", 
+        null, 
+        "hep-ex/9701012", 
+        null, 
+        null, 
+        [
+            "CLNS-96-1450A", 
+            "CLEO-96-21", 
+            "SLAC-PUB-9799"
+        ]
+    ], 
+    "440388": [
+        "Study of the B0 semileptonic decay spectrum at the Upsilon (4s) resonance", 
+        "CLEO", 
+        "10.1016/S0370-2693(97)00336-5", 
+        null, 
+        "hep-ex/9702007", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9797", 
+            "CLNS-97-1461", 
+            "CLEO-97-2", 
+            "STP-SLAC,-02-97"
+        ]
+    ], 
+    "440717": [
+        "Measurement of the decay amplitudes and branching fractions of $b \\to J/\\psi K^{*}$ and $b \\to J/\\psi K$ decays", 
+        "CLEO", 
+        "10.1103/PhysRevLett.79.4533", 
+        null, 
+        "hep-ex/9702013", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9796", 
+            "CLNS-96-1455", 
+            "CLEO-96-24"
+        ]
+    ], 
+    "440969": [
+        "The Inclusive decays B --> D X and B --> D* X", 
+        "CLEO", 
+        "10.1103/PhysRevD.56.3783", 
+        null, 
+        "hep-ex/9703006", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9795", 
+            "CLNS-96-1454", 
+            "CLEO-96-23"
+        ]
+    ], 
+    "441326": [
+        "Limit on the two photon production of the glueball candidate f(J) (2220) at CLEO", 
+        "CLEO", 
+        "10.1103/PhysRevLett.79.3829", 
+        null, 
+        "hep-ex/9703009", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9794", 
+            "CLNS-97-1467", 
+            "CLEO-97-3"
+        ]
+    ], 
+    "441553": [
+        "Studies of the Cabibbo suppressed decays d+ ---> pi0 lepton+ neutrino and d+ ---> eta e+ electron-neutrino", 
+        "CLEO", 
+        "10.1016/S0370-2693(97)00649-7", 
+        null, 
+        "hep-ex/9703013", 
+        "ins441553", 
+        null, 
+        [
+            "SLAC-PUB-9793", 
+            "CLNS-97-1460", 
+            "CLEO-97-1"
+        ]
+    ], 
+    "442338": [
+        "Search for neutrinoless tau decays involving pi0 or eta mesons", 
+        "CLEO", 
+        "10.1103/PhysRevLett.79.1221", 
+        null, 
+        "hep-ex/9704010", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9790", 
+            "CLNS-97-1469", 
+            "CLEO-97-4"
+        ]
+    ], 
+    "442539": [
+        "Search for the Decays B0 ---> D*+ D*-", 
+        "CLEO", 
+        "10.1103/PhysRevLett.79.799", 
+        null, 
+        "hep-ex/9704014", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9789", 
+            "CLNS-97-1474", 
+            "CLEO-97-6"
+        ]
+    ], 
+    "442909": [
+        "Observation of the decay D(s)+ ---> omega pi+", 
+        "CLEO", 
+        "10.1103/PhysRevLett.79.1436", 
+        null, 
+        "hep-ex/9705006", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9782", 
+            "CLNS-97-1479", 
+            "CLEO-97-8"
+        ]
+    ], 
+    "442910": [
+        "First observation of inclusive B decays to the charmed strange baryons Xi(c)0 and Xi(c)+", 
+        "CLEO", 
+        "10.1103/PhysRevLett.79.3599", 
+        null, 
+        "hep-ex/9705005", 
+        "ins442910", 
+        null, 
+        [
+            "SLAC-PUB-9781", 
+            "CLNS-97-1470", 
+            "CLEO-97-5"
+        ]
+    ], 
+    "443150": [
+        "Determination of the Michel parameters and the tau-neutrino helicity in tau decay", 
+        "CLEO", 
+        "10.1103/PhysRevD.56.5320", 
+        null, 
+        "hep-ex/9705009", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9780", 
+            "CLNS-97-1480", 
+            "CLEO-97-9"
+        ]
+    ], 
+    "443704": [
+        "Measurement of the anti-B ---> D lepton anti-neutrino partial width and form-factor parameters", 
+        "CLEO", 
+        "10.1103/PhysRevLett.79.2208", 
+        null, 
+        "hep-ex/9705019", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9776", 
+            "CLNS-97-1486", 
+            "CLEO-97-12"
+        ]
+    ], 
+    "443827": [
+        "A New upper limit on the decay eta --> e+ e-", 
+        "CLEO", 
+        "10.1103/PhysRevD.56.5359", 
+        null, 
+        "hep-ex/9706005", 
+        null, 
+        null, 
+        [
+            "CLNS-97-1484", 
+            "CLEO-97-10", 
+            "SLAC-PUB-7666"
+        ]
+    ], 
+    "444745": [
+        "First observation of tau ---> 3 pi eta tau-neutrino and tau ---> f1 pi tau-neutrino decays", 
+        "CLEO", 
+        "10.1103/PhysRevLett.79.2406", 
+        null, 
+        "hep-ex/9706020", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9764", 
+            "CLNS-97-1489", 
+            "CLEO-97-13"
+        ]
+    ], 
+    "445600": [
+        "Study of the decay tau- --> 2 pi- pi+ 3 pi0 tau-neutrino", 
+        "CLEO", 
+        "10.1103/PhysRevLett.79.3814", 
+        null, 
+        "hep-ex/9707027", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9766", 
+            "CLNS-97-1497", 
+            "CLEO-97-16"
+        ]
+    ], 
+    "445685": [
+        "Search for the decay tau- ---> 4 pi- 3 pi+ (pi0) tau-neutrino", 
+        "CLEO", 
+        "10.1103/PhysRevD.56.R5297", 
+        null, 
+        "hep-ex/9707029", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9768", 
+            "CLNS-97-1495", 
+            "CLEO-97-15"
+        ]
+    ]
+}

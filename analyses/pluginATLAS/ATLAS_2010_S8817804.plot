@@ -89,9 +89,9 @@ RatioPlotYMax=2.0
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2010_S8817804/d11-x01-y01
-Title=Dijet mass spectrum for $|y_\text{max}|<0.3$.  anti-KT, $R=0.4$.
+Title=Dijet mass spectrum for $|y_\mathrm{max}|<0.3$.  anti-KT, $R=0.4$.
 XLabel=$m_{12}$ [GeV]
-YLabel=$\mathrm{d}^{2}\sigma/\mathrm{d}m\,\mathrm{d}|y_\text{max}|$ [pb/GeV]
+YLabel=$\mathrm{d}^{2}\sigma/\mathrm{d}m\,\mathrm{d}|y_\mathrm{max}|$ [pb/GeV]
 LogX=1
 LogY=1
 RatioPlotYMin=0.0
@@ -99,9 +99,9 @@ RatioPlotYMax=2.0
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2010_S8817804/d12-x01-y01
-Title=Dijet mass spectrum for $0.3<|y_\text{max}|<0.8$.  anti-KT, $R=0.4$.
+Title=Dijet mass spectrum for $0.3<|y_\mathrm{max}|<0.8$.  anti-KT, $R=0.4$.
 XLabel=$m_{12}$ [GeV]
-YLabel=$\mathrm{d}^{2}\sigma/\mathrm{d}m\,\mathrm{d}|y_\text{max}|$ [pb/GeV]
+YLabel=$\mathrm{d}^{2}\sigma/\mathrm{d}m\,\mathrm{d}|y_\mathrm{max}|$ [pb/GeV]
 LogX=1
 LogY=1
 RatioPlotYMin=0.0
@@ -109,9 +109,9 @@ RatioPlotYMax=2.0
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2010_S8817804/d13-x01-y01
-Title=Dijet mass spectrum for $0.8<|y_\text{max}|<1.2$.  anti-KT, $R=0.4$.
+Title=Dijet mass spectrum for $0.8<|y_\mathrm{max}|<1.2$.  anti-KT, $R=0.4$.
 XLabel=$m_{12}$ [GeV]
-YLabel=$\mathrm{d}^{2}\sigma/\mathrm{d}m\,\mathrm{d}|y_\text{max}|$ [pb/GeV]
+YLabel=$\mathrm{d}^{2}\sigma/\mathrm{d}m\,\mathrm{d}|y_\mathrm{max}|$ [pb/GeV]
 LogX=1
 LogY=1
 RatioPlotYMin=0.0
@@ -119,9 +119,9 @@ RatioPlotYMax=2.0
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2010_S8817804/d14-x01-y01
-Title=Dijet mass spectrum for $1.2<|y_\text{max}|<2.1$.  anti-KT, $R=0.4$.
+Title=Dijet mass spectrum for $1.2<|y_\mathrm{max}|<2.1$.  anti-KT, $R=0.4$.
 XLabel=$m_{12}$ [GeV]
-YLabel=$\mathrm{d}^{2}\sigma/\mathrm{d}m\,\mathrm{d}|y_\text{max}|$ [pb/GeV]
+YLabel=$\mathrm{d}^{2}\sigma/\mathrm{d}m\,\mathrm{d}|y_\mathrm{max}|$ [pb/GeV]
 LogX=1
 LogY=1
 RatioPlotYMin=0.0
@@ -129,9 +129,9 @@ RatioPlotYMax=2.0
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2010_S8817804/d15-x01-y01
-Title=Dijet mass spectrum for $2.1<|y_\text{max}|<2.8$.  anti-KT, $R=0.4$.
+Title=Dijet mass spectrum for $2.1<|y_\mathrm{max}|<2.8$.  anti-KT, $R=0.4$.
 XLabel=$m_{12}$ [GeV]
-YLabel=$\mathrm{d}^{2}\sigma/\mathrm{d}m\,\mathrm{d}|y_\text{max}|$ [pb/GeV]
+YLabel=$\mathrm{d}^{2}\sigma/\mathrm{d}m\,\mathrm{d}|y_\mathrm{max}|$ [pb/GeV]
 LogX=1
 LogY=1
 RatioPlotYMin=0.0
@@ -139,9 +139,9 @@ RatioPlotYMax=2.0
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2010_S8817804/d16-x01-y01
-Title=Dijet mass spectrum for $|y_\text{max}|<0.3$.  anti-KT, $R=0.6$.
+Title=Dijet mass spectrum for $|y_\mathrm{max}|<0.3$.  anti-KT, $R=0.6$.
 XLabel=$m_{12}$ [GeV]
-YLabel=$\mathrm{d}^{2}\sigma/\mathrm{d}m\,\mathrm{d}|y_\text{max}|$ [pb/GeV]
+YLabel=$\mathrm{d}^{2}\sigma/\mathrm{d}m\,\mathrm{d}|y_\mathrm{max}|$ [pb/GeV]
 LogX=1
 LogY=1
 RatioPlotYMin=0.0
@@ -149,9 +149,9 @@ RatioPlotYMax=2.0
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2010_S8817804/d17-x01-y01
-Title=Dijet mass spectrum for $0.3<|y_\text{max}|<0.8$.  anti-KT, $R=0.6$.
+Title=Dijet mass spectrum for $0.3<|y_\mathrm{max}|<0.8$.  anti-KT, $R=0.6$.
 XLabel=$m_{12}$ [GeV]
-YLabel=$\mathrm{d}^{2}\sigma/\mathrm{d}m\,\mathrm{d}|y_\text{max}|$ [pb/GeV]
+YLabel=$\mathrm{d}^{2}\sigma/\mathrm{d}m\,\mathrm{d}|y_\mathrm{max}|$ [pb/GeV]
 LogX=1
 LogY=1
 RatioPlotYMin=0.0
@@ -159,9 +159,9 @@ RatioPlotYMax=2.0
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2010_S8817804/d18-x01-y01
-Title=Dijet mass spectrum for $0.8<|y_\text{max}|<1.2$.  anti-KT, $R=0.6$.
+Title=Dijet mass spectrum for $0.8<|y_\mathrm{max}|<1.2$.  anti-KT, $R=0.6$.
 XLabel=$m_{12}$ [GeV]
-YLabel=$\mathrm{d}^{2}\sigma/\mathrm{d}m\,\mathrm{d}|y_\text{max}|$ [pb/GeV]
+YLabel=$\mathrm{d}^{2}\sigma/\mathrm{d}m\,\mathrm{d}|y_\mathrm{max}|$ [pb/GeV]
 LogX=1
 LogY=1
 RatioPlotYMin=0.0
@@ -169,9 +169,9 @@ RatioPlotYMax=2.0
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2010_S8817804/d19-x01-y01
-Title=Dijet mass spectrum for $1.2<|y_\text{max}|<2.1$.  anti-KT, $R=0.6$.
+Title=Dijet mass spectrum for $1.2<|y_\mathrm{max}|<2.1$.  anti-KT, $R=0.6$.
 XLabel=$m_{12}$ [GeV]
-YLabel=$\mathrm{d}^{2}\sigma/\mathrm{d}m\,\mathrm{d}|y_\text{max}|$ [pb/GeV]
+YLabel=$\mathrm{d}^{2}\sigma/\mathrm{d}m\,\mathrm{d}|y_\mathrm{max}|$ [pb/GeV]
 LogX=1
 LogY=1
 RatioPlotYMin=0.0
@@ -179,9 +179,9 @@ RatioPlotYMax=2.0
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2010_S8817804/d20-x01-y01
-Title=Dijet mass spectrum for $2.1<|y_\text{max}|<2.8$.  anti-KT, $R=0.6$.
+Title=Dijet mass spectrum for $2.1<|y_\mathrm{max}|<2.8$.  anti-KT, $R=0.6$.
 XLabel=$m_{12}$ [GeV]
-YLabel=$\mathrm{d}^{2}\sigma/\mathrm{d}m\,\mathrm{d}|y_\text{max}|$ [pb/GeV]
+YLabel=$\mathrm{d}^{2}\sigma/\mathrm{d}m\,\mathrm{d}|y_\mathrm{max}|$ [pb/GeV]
 LogX=1
 LogY=1
 RatioPlotYMin=0.0

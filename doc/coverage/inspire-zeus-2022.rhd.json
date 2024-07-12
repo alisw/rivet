@@ -1,0 +1,26 @@
+{
+    "1269458": [
+        "Measurement of neutral current e$\\pm$p cross sections at high Bjorken x with the ZEUS detector",
+        "ZEUS",
+        "10.1103/PhysRevD.89.072007",
+        null,
+        "1312.4438",
+        "ins1269458",
+        null,
+        [
+            "DESY-13-245"
+        ]
+    ],
+    "1983005": [
+        "Impact of jet-production data on the next-to-next-to-leading-order determination of HERAPDF2.0 parton distributions",
+        "H1",
+        "10.1140/epjc/s10052-022-10083-9",
+        "2805007",
+        "2112.01120",
+        null,
+        null,
+        [
+            "DESY-21-206"
+        ]
+    ]
+}

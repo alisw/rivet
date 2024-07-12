@@ -1,0 +1,10 @@
+Name: MC_Eta_Decay
+Summary: Analysis of Kinematic distributions in $\eta$ and $\eta^\prime$ meson decays
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+RunInfo: Any type of process producing eta/eta prime mesons
+NeedCrossSection: no
+Description:
+  ' Analysis of Kinematic distributions in $\eta$ and $\eta^\prime$ meson decays. The mass distributions in the decays $\eta,\eta^\prime\to \gamma\pi^+\pi^-$, $\gamma\gamma\pi^0$, $\pi^0\pi^0\pi^0$, $\pi^+\pi^-\pi^0$ and $\eta^\prime\to\pi^+\pi^-\eta$, $\pi^0\pi^0\eta$ are produced. Based on an +old Herwig++ internal analysis.'

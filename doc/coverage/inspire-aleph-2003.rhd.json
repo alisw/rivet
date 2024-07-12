@@ -1,0 +1,135 @@
+{
+    "583655": [
+        "Improved search for B(0)S anti-B(0)S oscillations", 
+        "ALEPH", 
+        "10.1140/epjc/s2003-01230-5", 
+        "539007", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-2002-016"
+        ]
+    ], 
+    "587910": [
+        "Measurements of the strong coupling constant and the QCD color factors using four jet observables from hadronic Z decays", 
+        "ALEPH", 
+        "10.1140/epjc/s2002-01114-2", 
+        "551536", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-2002-029"
+        ]
+    ], 
+    "588301": [
+        "Single photon and multiphoton production in $e^{+} e^{-}$ collisions at $\\sqrt{s}$ up to 209-GeV", 
+        "ALEPH", 
+        "10.1140/epjc/s2002-01129-7", 
+        "552965", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-2002-033"
+        ]
+    ], 
+    "596551": [
+        "Search for anomalous weak dipole moments of the tau lepton", 
+        "ALEPH", 
+        "10.1140/epjc/s2003-01286-1", 
+        "582397", 
+        "hep-ex/0209066", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2002-068"
+        ]
+    ], 
+    "598949": [
+        "Search for supersymmetric particles with R parity violating decays in $e^{+} e^{-}$ collisions at $\\sqrt{s}$ up to 209-GeV", 
+        "ALEPH", 
+        "10.1140/epjc/s2003-01311-5", 
+        "584936", 
+        "hep-ex/0210014", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2002-071"
+        ]
+    ], 
+    "612223": [
+        "Measurement of the inclusive D*+- production in gamma gamma collisions at LEP", 
+        "ALEPH", 
+        "10.1140/epjc/s2003-01201-x", 
+        "602590", 
+        "hep-ex/0301034", 
+        "ins612223", 
+        null, 
+        [
+            "CERN-EP-2003-002", 
+            "CERN-EP-2003-02"
+        ]
+    ], 
+    "619171": [
+        "Search for the standard model Higgs boson at LEP", 
+        "LEP Working Group for Higgs boson searches", 
+        "10.1016/S0370-2693(03)00614-2", 
+        "610122", 
+        "hep-ex/0306033", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-011"
+        ]
+    ], 
+    "619462": [
+        "Search for stable hadronizing squarks and gluinos in e+ e- collisions up to s**(1/2) = 209-GeV", 
+        "ALEPH", 
+        "10.1140/epjc/s2003-01376-0", 
+        "618039", 
+        "hep-ex/0305071", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-024"
+        ]
+    ], 
+    "622724": [
+        "A measurement of the gluon splitting rate into c anti-c pairs in hadronic Z decays", 
+        "ALEPH", 
+        "10.1016/S0370-2693(03)00495-7", 
+        "603527", 
+        "hep-ex/0302003", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2003-003"
+        ]
+    ], 
+    "626022": [
+        "Exclusive production of pion and kaon meson pairs in two photon collisions at LEP", 
+        "ALEPH", 
+        "10.1016/j.physletb.2003.07.031", 
+        "621746", 
+        null, 
+        "ins626022", 
+        null, 
+        [
+            "CERN-EP-2003-030"
+        ]
+    ], 
+    "631231": [
+        "Measurement of the hadronic photon structure function F2(gamma)(x, Q**2) in two-photon collisions at LEP", 
+        "ALEPH", 
+        "10.1140/epjc/s2003-01291-4", 
+        "625860", 
+        null, 
+        "ins631231", 
+        null, 
+        [
+            "CERN-EP-2003-033"
+        ]
+    ]
+}

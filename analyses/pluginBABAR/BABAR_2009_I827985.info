@@ -1,0 +1,39 @@
+Name: BABAR_2009_I827985
+Year: 2009
+Summary:  Helicity angle distributions in excited $D_s$ meson decays
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 827985
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ -  Phys.Rev.D 80 (2009) 092003
+RunInfo:  Any process producing excited $D_s$ mesons
+Description:
+  'The decays $D_s^{**} \to D^{*+}K^0_S\to D^0\pi^+K^0_S$ are used to measure the helicity angle,
+  i.e. the angle between the pion and kaon in the rest frame of the $D^*$. The decays of $D_{s1}^*(2700)^+$ and
+  with mass 2.8 GeV were measured. It is unclear if this is the $D_{s1}^*(2860)^+$, $D_{s3}^*(2860)^+$ or a mixture of the two.
+  This histogram is therefore filled we with each state and the admixture.
+  The data were read from the plots in the papers.'
+ValidationInfo:
+  'Herwig 7 event'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BaBar:2009rro
+BibTeX: '@article{BaBar:2009rro,
+    author = "Aubert, Bernard and others",
+    collaboration = "BaBar",
+    title = "{Study of D(sJ) decays to D*K in inclusive e+ e- interactions}",
+    eprint = "0908.0806",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "SLAC-PUB-13747, BABAR-PUB-09-024",
+    doi = "10.1103/PhysRevD.80.092003",
+    journal = "Phys. Rev. D",
+    volume = "80",
+    pages = "092003",
+    year = "2009"
+}
+'

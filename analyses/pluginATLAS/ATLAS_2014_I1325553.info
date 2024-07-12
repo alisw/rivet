@@ -5,16 +5,19 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1325553
 Status: VALIDATED
+Reentrant: true
 Authors:
-  - Vojtech Pleskot <vojtech.pleskot@cern.ch>
+ - Vojtech Pleskot <vojtech.pleskot@cern.ch>
 References:
-  - arXiv:1410.8857 [hep-ex]
+ - ATLAS-STDM-2013-11
+ - arXiv:1410.8857 [hep-ex]
 RunInfo:
   p p -> jet + X. $\sqrt{s} = 7$~TeV.
 NumEvents: 1000000
 NeedCrossSection: yes
 Beams: [p+, p+]
 Energies: [7000]
+Luminosity_fb: 4.5
 PtCuts: [100]
 Description:
   Measurement of the inclusive jet cross-section in proton--proton collisions at a centre-of-mass energy
@@ -23,7 +26,7 @@ Description:
   with radius parameter values of 0.4 and 0.6. The double-differential cross-sections are presented
   as a function of the jet transverse momentum and the jet rapidity, covering jet transverse momenta
   from 100 GeV to 2 TeV.
-BibKey: Aad:2014vwa,
+BibKey: Aad:2014vwa
 BibTeX: '@article{Aad:2014vwa,
       author         = "Aad, Georges and others",
       title          = "{Measurement of the inclusive jet cross-section in
@@ -37,3 +40,14 @@ BibTeX: '@article{Aad:2014vwa,
       reportNumber   = "CERN-PH-EP-2014-155",
       SLACcitation   = "%%CITATION = ARXIV:1410.8857;%%",
 }'
+
+ReleaseTests:
+ - $A LHC-7-Jets-10
+ - $A-2 LHC-7-Jets-3
+ - $A-3 LHC-7-Jets-4
+ - $A-4 LHC-7-Jets-5
+ - $A-5 LHC-7-Jets-6
+ - $A-6 LHC-7-Jets-7
+ - $A-7 LHC-7-Jets-8
+ - $A-8 LHC-7-Jets-9
+

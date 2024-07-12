@@ -34,10 +34,10 @@ namespace Rivet {
       declare(Beam(), "Beams");
       declare(ChargedFinalState(), "FS");
 
-      _histXbprim     = bookHisto1D(1, 1, 1);
-      _histXbweak     = bookHisto1D(2, 1, 1);
-      _histMeanXbprim = bookProfile1D(4, 1, 1);
-      _histMeanXbweak = bookProfile1D(5, 1, 1);
+      book(_histXbprim     ,1, 1, 1);
+      book(_histXbweak     ,2, 1, 1);
+      book(_histMeanXbprim ,4, 1, 1);
+      book(_histMeanXbweak ,5, 1, 1);
     }
 
 
@@ -52,9 +52,6 @@ namespace Rivet {
       }
       MSG_DEBUG("Passed ncharged cut");
 
-      // Get event weight for histo filling
-      const double weight = e.weight();
-
       // Get beams and average beam momentum
       const ParticlePair& beams = apply<Beam>(e, "Beams").beams();
       const double meanBeamMom = ( beams.first.p3().mod() +
@@ -62,36 +59,35 @@ namespace Rivet {
       MSG_DEBUG("Avg beam momentum = " << meanBeamMom);
 
 
-      for (const GenParticle* p : particles(e.genEvent())) {
-        const GenVertex* pv = p->production_vertex();
-        const GenVertex* dv = p->end_vertex();
+      for (ConstGenParticlePtr p : HepMCUtils::particles(e.genEvent())) {
+        ConstGenVertexPtr pv = p->production_vertex();
+        ConstGenVertexPtr dv = p->end_vertex();
         if (PID::isBottomHadron(p->pdg_id())) {
           const double xp = p->momentum().e()/meanBeamMom;
 
           // If the B-hadron has a parton as parent, call it primary B-hadron:
           if (pv) {
             bool is_primary = false;
-            for (GenVertex::particles_in_const_iterator pp = pv->particles_in_const_begin(); pp != pv->particles_in_const_end() ; ++pp) {
-              if (isParton((*pp)->pdg_id())) is_primary = true;
+            for (ConstGenParticlePtr pp: HepMCUtils::particles(pv, Relatives::PARENTS)){
+              if (isParton(pp->pdg_id())) is_primary = true;
             }
             if (is_primary) {
-              _histXbprim->fill(xp, weight);
-              _histMeanXbprim->fill(_histMeanXbprim->bin(0).xMid(), xp, weight);
+              _histXbprim->fill(xp);
+              _histMeanXbprim->fill(_histMeanXbprim->bin(0).xMid(), xp);
             }
           }
 
           // If the B-hadron has no B-hadron as a child, it decayed weakly:
           if (dv) {
             bool is_weak = true;
-            for (GenVertex::particles_out_const_iterator pp = dv->particles_out_const_begin() ;
-                 pp != dv->particles_out_const_end() ; ++pp) {
-              if (PID::isBottomHadron((*pp)->pdg_id())) {
+            for (ConstGenParticlePtr pp: HepMCUtils::particles(dv, Relatives::CHILDREN)){
+              if (PID::isBottomHadron(pp->pdg_id())) {
                 is_weak = false;
               }
             }
             if (is_weak) {
-              _histXbweak->fill(xp, weight);
-              _histMeanXbweak->fill(_histMeanXbweak->bin(0).xMid(), xp, weight);
+              _histXbweak->fill(xp);
+              _histMeanXbweak->fill(_histMeanXbweak->bin(0).xMid(), xp);
             }
           }
 
@@ -126,6 +122,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(DELPHI_2002_069_CONF_603);
+  RIVET_DECLARE_PLUGIN(DELPHI_2002_069_CONF_603);
 
 }

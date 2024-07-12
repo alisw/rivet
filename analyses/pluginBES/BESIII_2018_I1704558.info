@@ -1,0 +1,29 @@
+Name: BESIII_2018_I1704558
+Year: 2018
+Summary: Cross section for $e^+e^-\to K^+K^-$ between 2.00 and 3.08 GeV
+Experiment: BESIII
+Collider: BEPC II
+InspireID: 1704558
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - arXiv:1811.08742
+RunInfo: e+ e- to hadrons between 2.00 and 3.08 GeV
+NeedCrossSection: yes
+Beams: [e+, e-]
+Description:
+  'Measurement of the cross section for $e^+e^-\to K^+K^-$ at energies between 2.00 and 3.08 GeV. Useful for comparing models of the kaon form factor.'
+Keywords: []
+BibKey: Ablikim:2018iyx
+BibTeX: '@article{Ablikim:2018iyx,
+      author         = "Ablikim, M. and others",
+      title          = "{Measurement of $e^{+} e^{-} \rightarrow K^{+} K^{-}$
+                        cross section at $\sqrt{s} = 2.00 - 3.08$ GeV}",
+      collaboration  = "BESIII",
+      year           = "2018",
+      eprint         = "1811.08742",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1811.08742;%%"
+}'

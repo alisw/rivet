@@ -1,9 +1,11 @@
 Name: ATLAS_2012_I1199269
 Summary: Inclusive diphoton $+ X$ events at $\sqrt{s} = 7$~TeV
+Status: VALIDATED
+Reentrant: true
 Authors:
  - Giovanni Marchiori <giovanni.marchiori@cern.ch>
-Status: VALIDATED
 References:
+ - ATLAS-STDM-2012-05
  - arXiv:1211.1913 [hep-ex]
  - JHEP 1301 (2013) 086
 RunInfo:
@@ -14,6 +16,7 @@ Collider: LHC
 InspireID: 1199269
 Beams: [p+, p+]
 Energies: [7000]
+Luminosity_fb: 4.9
 PtCuts: [25, 22]
 Description:
   'The ATLAS experiment at the LHC has measured the production cross
@@ -33,6 +36,7 @@ Description:
   results are compared to the prediction of leading-order parton-shower
   and next-to-leading-order and next-to-next-to-leading-order
   parton-level generators.'
+BibKey: Aad:2012tba
 BibTeX:
   '@article{Aad:2012tba,
         author         = "Aad, Georges and others",
@@ -50,3 +54,8 @@ BibTeX:
         reportNumber   = "CERN-PH-EP-2012-300",
         SLACcitation   = "%%CITATION = ARXIV:1211.1913;%%",
   }'
+
+ReleaseTests:
+ - $A LHC-7-DiPhoton-GammaGamma
+ - $A-2 LHC-7-DiPhoton-GammaJet
+

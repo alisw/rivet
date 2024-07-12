@@ -57,7 +57,7 @@ namespace Rivet {
     }
 
 
-  private:
+  protected:
 
     double _value;
 

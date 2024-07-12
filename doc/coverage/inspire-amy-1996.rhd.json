@@ -1,0 +1,51 @@
+{
+    "403978": [
+        "New limits on the masses of the selectron and photino", 
+        "AMY", 
+        "10.1016/0370-2693(95)01590-6", 
+        null, 
+        null, 
+        "ins403978", 
+        null, 
+        [
+            "KEK-PREPRINT-95-171"
+        ]
+    ], 
+    "416205": [
+        "Observation of the color coherence effect in subjet multiplicity of three jet and four jet events in $e^{+} e^{-}$ annihilations", 
+        "AMY", 
+        "10.1016/0370-2693(96)00328-0", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-95-206", 
+            "SAGA-HE-76"
+        ]
+    ], 
+    "418709": [
+        "Measurement of the forward - backward asymmetry in $e^{+} e^{-} \\to b \\bar{b}$ and the $b$ quark branching ratio to muons at TRISTAN using neural networks", 
+        "AMY", 
+        "10.1016/0370-2693(96)00543-6", 
+        null, 
+        null, 
+        "ins418709", 
+        null, 
+        [
+            "KEK-PREPRINT-96-9"
+        ]
+    ], 
+    "419685": [
+        "Measurement of D*+- production in two photon processes at TRISTAN", 
+        "AMY", 
+        "10.1016/0370-2693(96)00654-5", 
+        null, 
+        null, 
+        "ins419685", 
+        null, 
+        [
+            "KEK-PREPRINT-96-19"
+        ]
+    ]
+}

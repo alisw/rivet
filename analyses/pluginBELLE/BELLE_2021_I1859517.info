@@ -1,0 +1,32 @@
+Name: BELLE_2021_I1859517
+Year: 2021
+Summary: Decay asymmetries in  $\Xi^0_c\to\Lambda^0\bar{K}^{*0}$, $\Sigma^0\bar{K}^{*0}$ and  $\Sigma^+\bar{K}^{*-}$
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1859517
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - arXiv:2104.10361 
+RunInfo: Any process producing Xi_c0
+Description:
+  'Measurement of the decay asymmetries in  $\Xi^0_c\to\Lambda^0\bar{K}^{*0}$, $\Sigma^0\bar{K}^{*0}$ and  $\Sigma^+\bar{K}^{*-}$ decays by the BELLE experiment.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Jia:2021fud
+BibTeX: '@article{Jia:2021fud,
+    author = "Jia, S. and others",
+    collaboration = "Belle",
+    title = "{Measurements of branching fractions and asymmetry parameters of $\Xi^0_c\to \Lambda\bar K^{*0}$, $\Xi^0_c\to \Sigma^0\bar K^{*0}$, and $\Xi^0_c\to \Sigma^+K^{*-}$ decays at Belle}",
+    eprint = "2104.10361",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "Belle Preprint 2021-06; KEK Preprint 2021-2",
+    month = "4",
+    year = "2021"
+}'

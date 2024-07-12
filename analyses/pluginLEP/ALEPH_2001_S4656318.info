@@ -6,6 +6,7 @@ Collider: LEP 1
 SpiresID: 4656318
 InspireID: 558327
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Peter Richardson <Peter.Richardson@durham.ac.uk>
 References:
@@ -38,3 +39,7 @@ BibTeX: '@Article{Heister:2001jg,
      doi       = "10.1016/S0370-2693(01)00690-6",
      SLACcitation  = "%%CITATION = HEP-EX/0106051;%%"
 }'
+
+ReleaseTests:
+ - $A LEP-91
+

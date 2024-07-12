@@ -1,0 +1,40 @@
+Name: BELLE_2017_I1607562
+Year: 2017
+Summary: Invariant-mass and fractional-energy dependence of inclusive production of di-hadrons at $\sqrt{s}=10.58$ GeV
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1607562
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D96 (2017) no.3, 032005
+RunInfo: e+e- to hadrons
+Beams: [e+,e-]
+Energies: [10.58]
+Description:
+  'Measurement of the double differential cross secrion for the production of hadron pairs by BELLE'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Seidl:2017qhp
+BibTeX: '@article{Seidl:2017qhp,
+      author         = "Seidl, R. and others",
+      title          = "{Invariant-mass and fractional-energy dependence of
+                        inclusive production of di-hadrons in $e^+e^-$
+                        annihilation at $\sqrt{s}=$ 10.58 GeV}",
+      collaboration  = "Belle",
+      journal        = "Phys. Rev.",
+      volume         = "D96",
+      year           = "2017",
+      number         = "3",
+      pages          = "032005",
+      doi            = "10.1103/PhysRevD.96.032005",
+      eprint         = "1706.08348",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "BELLE-DRAFT-2017-13, KEK-DRAFT-2017-09",
+      SLACcitation   = "%%CITATION = ARXIV:1706.08348;%%"
+}'

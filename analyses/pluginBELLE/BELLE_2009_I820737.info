@@ -1,0 +1,37 @@
+Name: BELLE_2009_I820737
+Year: 2009
+Summary: Mass distributions in $\bar{B}^0\to K^-\pi^+\psi(2S)$ and $B^+\to K^0_S\pi^+\psi(2S)$
+Experiment: BELLE
+Collider: KEKB
+InspireID: 820737
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 80 (2009) 031104
+RunInfo: Any process producing B+ and B0 mesons, originally Upsilon(4S) decays
+Description:
+'Measurement of mass distributions in $\bar{B}^0\to K^-\pi^+\psi(2S)$ and
+ $B^+\to K^0_S\pi^+\psi(2S)$ decays, only the average of the two modes is measured. The data were read from the plots in the paper and may not be corrected for efficiency/acceptance, however the backgrounds given in the paper have been subtracted.'
+ValidationInfo:
+  'Herwig7 events using EvtGen for decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle:2009lvn
+BibTeX: '@article{Belle:2009lvn,
+    author = "Mizuk, R. and others",
+    collaboration = "Belle",
+    title = "{Dalitz analysis of B ---\ensuremath{>} K pi+ psi-prime decays and the Z(4430)+}",
+    eprint = "0905.2869",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BELLE-PREPRINT-2009-9",
+    doi = "10.1103/PhysRevD.80.031104",
+    journal = "Phys. Rev. D",
+    volume = "80",
+    pages = "031104",
+    year = "2009"
+}
+'

@@ -1,0 +1,100 @@
+{
+    "421009": [
+        "A Study of the orientation and energy partition of three jet events in hadronic Z0 decays", 
+        "SLD", 
+        "10.1103/PhysRevD.55.2533", 
+        null, 
+        "hep-ex/9608016", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-7099"
+        ]
+    ], 
+    "423941": [
+        "First measurement of the left-right charge asymmetry in hadronic Z boson decays and a new determination of sin**2 theta(W)(eff)", 
+        "SLD", 
+        "10.1103/PhysRevLett.78.17", 
+        null, 
+        "hep-ex/9609019", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-7069", 
+            "SLAC-PUB-96-7069", 
+            "COLO-HEP-367"
+        ]
+    ], 
+    "426122": [
+        "An improved measurement of the left-right $Z^0$ cross-section asymmetry", 
+        "SLD", 
+        "10.1103/PhysRevLett.78.2075", 
+        null, 
+        "hep-ex/9611011", 
+        "ins426122", 
+        null, 
+        [
+            "SLAC-PUB-7291"
+        ]
+    ], 
+    "439997": [
+        "Measurement of the tau-neutrino helicity and the Michel parameters in polarized e+ e- collisions", 
+        "SLD", 
+        "10.1103/PhysRevLett.78.4691", 
+        null, 
+        "hep-ex/9701020", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-7333"
+        ]
+    ], 
+    "440436": [
+        "Measurement of leading particle effects in decays of Z0 bosons into light flavors", 
+        "SLD", 
+        "10.1103/PhysRevLett.78.3442", 
+        null, 
+        "hep-ex/9702009", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-7395"
+        ]
+    ], 
+    "442260": [
+        "Direct measurement of leptonic coupling asymmetries with polarized Zs", 
+        "SLD", 
+        "10.1103/PhysRevLett.79.804", 
+        null, 
+        "hep-ex/9704012", 
+        "ins442260", 
+        null, 
+        [
+            "SLAC-PUB-7418"
+        ]
+    ], 
+    "445191": [
+        "Measurement of the B hadron energy distribution in Z0 decays", 
+        "SLD", 
+        "10.1103/PhysRevD.56.5310", 
+        null, 
+        "hep-ex/9707011", 
+        "ins445191", 
+        null, 
+        [
+            "SLAC-PUB-7489"
+        ]
+    ], 
+    "449704": [
+        "Measurement of the $B^{+}$ and $B^0$ lifetimes using topological reconstruction of inclusive and semileptonic decays", 
+        "SLD", 
+        "10.1103/PhysRevLett.79.590", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-7674"
+        ]
+    ]
+}

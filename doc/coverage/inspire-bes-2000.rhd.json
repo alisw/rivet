@@ -1,0 +1,97 @@
+{
+    "504584": [
+        "Direct measurement of B(D0 ---> phi X0) and B(D+ ---> phi X+)", 
+        "BES", 
+        "10.1103/PhysRevD.62.052001", 
+        null, 
+        "hep-ex/9907052", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1999-086"
+        ]
+    ], 
+    "505287": [
+        "Partial wave analysis of J / psi ---> gamma (K+ K- pi+ pi-)", 
+        "BES", 
+        "10.1016/S0370-2693(99)01399-4", 
+        null, 
+        "hep-ex/9908045", 
+        null, 
+        null, 
+        []
+    ], 
+    "505323": [
+        "Measurement of the total cross-section for hadronic production by e+ e- annihilation at energies between 2.6-GeV - 5-GeV", 
+        "BES", 
+        "10.1103/PhysRevLett.84.594", 
+        null, 
+        "hep-ex/9908046", 
+        "ins505323", 
+        null, 
+        [
+            "SLAC-REPRINT-1999-087"
+        ]
+    ], 
+    "507637": [
+        "psi(2S) ---> pi+ pi- J / psi decay distributions", 
+        "BES", 
+        "10.1103/PhysRevD.62.032002", 
+        null, 
+        "hep-ex/9909038", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1999-088", 
+            "BIHEP-EP1-99-03", 
+            "UH511-939-99"
+        ]
+    ], 
+    "507639": [
+        "Partial wave analysis of J / psi to gamma (pi+ pi- pi+ pi-)", 
+        "BES", 
+        "10.1016/S0370-2693(99)01393-3", 
+        null, 
+        "hep-ex/9909040", 
+        null, 
+        null, 
+        []
+    ], 
+    "508349": [
+        "Measurement of the inclusive charm cross-section at 4.03-GeV and 4.14-GeV", 
+        "BES", 
+        "10.1103/PhysRevD.62.012002", 
+        null, 
+        "hep-ex/9910016", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-1999-089"
+        ]
+    ], 
+    "523607": [
+        "A Measurement of the mass and full width of the eta(c) meson", 
+        "BES", 
+        "10.1103/PhysRevD.62.072001", 
+        null, 
+        "hep-ex/0002006", 
+        null, 
+        null, 
+        [
+            "SLAC-REPRINT-2000-097", 
+            "BIHEP-EP1-2000-01"
+        ]
+    ], 
+    "523608": [
+        "Partial wave analysis of J / psi ---> gamma (K+- K0(S) pi-+)", 
+        "BES", 
+        "10.1016/S0370-2693(00)00115-5", 
+        null, 
+        "hep-ex/0002007", 
+        null, 
+        null, 
+        [
+            "BIHEP-EP1-2000-02"
+        ]
+    ]
+}

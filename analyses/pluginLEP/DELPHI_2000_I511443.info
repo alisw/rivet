@@ -1,0 +1,34 @@
+Name: DELPHI_2000_I511443
+Year: 2000
+Summary: $\tau$ polarization at LEP1
+Experiment: DELPHI
+Collider: LEP
+InspireID: 511443
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Eur.Phys.J.C 14 (2000) 585-611
+RunInfo:  e+ e- > tau+ tau-
+Beams: [e+, e-]
+Energies: [91.2]
+Description:
+  'Measurement of the $\tau$ lepton polarization in $e^+e^-\to\tau^+\tau^-$ at the $Z^0$ pole by the DELPHI experiment at LEP1.'
+ValidationInfo:
+  'Herwig7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Abreu:1999wv
+BibTeX: '@article{Abreu:1999wv,
+    author = "Abreu, P. and others",
+    collaboration = "DELPHI",
+    title = "{A Precise measurement of the tau polarization at LEP-1}",
+    reportNumber = "CERN-EP-99-161",
+    doi = "10.1007/s100520000363",
+    journal = "Eur. Phys. J. C",
+    volume = "14",
+    pages = "585--611",
+    year = "2000"
+}
+'

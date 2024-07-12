@@ -1,0 +1,36 @@
+Name: BELLE_2009_I825222
+Year: 2009
+Summary: $B\to X_s\gamma$ with different photon energy cuts
+Experiment: BELLE
+Collider: KEKB
+InspireID: 825222
+Status: VALIDATED NOHEPDATA SINGLEWEIGHT
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 103 (2009) 241801
+RunInfo: Any process producing B+ and B0 mesons, originally Upsilon(4S) decay
+Description:
+  'Measurement of the branching ratios, average photon energies and photon energy dispersion for $B\to X_s\gamma$ with different photon energy cuts.'
+ValidationInfo:
+  'Herwig7 event using EvtGen for decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle:2009nth
+BibTeX: '@article{Belle:2009nth,
+    author = "Limosani, A. and others",
+    collaboration = "Belle",
+    title = "{Measurement of Inclusive Radiative B-meson Decays with a Photon Energy Threshold of 1.7-GeV}",
+    eprint = "0907.1384",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BELLE-PREPRINT-2009-16, KEK-PREPRINT-2009-14",
+    doi = "10.1103/PhysRevLett.103.241801",
+    journal = "Phys. Rev. Lett.",
+    volume = "103",
+    pages = "241801",
+    year = "2009"
+}
+'

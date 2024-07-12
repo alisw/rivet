@@ -20,19 +20,17 @@ namespace Rivet {
     //@{
 
     /// Constructor with min and max pseudorapidity \f$ \eta \f$ and min \f$ p_T \f$ (in GeV).
-    VisibleFinalState(double mineta = -MAXDOUBLE,
-                      double maxeta =  MAXDOUBLE,
-                      double minpt  =  0.0*GeV)
+    VisibleFinalState(const Cut& c=Cuts::open())
     {
       setName("VisibleFinalState");
-      addProjection(FinalState(mineta, maxeta, minpt), "FS");
+      declare(FinalState(c), "FS");
     }
 
     /// Constructor with specific FinalState.
     VisibleFinalState(const FinalState& fsp)
     {
       setName("VisibleFinalState");
-      addProjection(fsp, "FS");
+      declare(fsp, "FS");
     }
 
     /// Clone on the heap.
@@ -45,7 +43,7 @@ namespace Rivet {
     void project(const Event& e);
 
     /// Compare projections.
-    int compare(const Projection& p) const;
+    CmpState compare(const Projection& p) const;
 
   };
 

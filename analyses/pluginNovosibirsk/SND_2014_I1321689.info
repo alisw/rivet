@@ -1,0 +1,35 @@
+Name: SND_2014_I1321689
+Year: 2014
+Summary: Cross section for $e^+e^-\to n\bar{n}$ between threshold and 2 GeV
+Experiment: SND
+Collider: VEPP-2M
+InspireID: 1321689
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D90 (2014) 112007, 2014 
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+Description:
+  'Measurement of the cross section for $e^+e^-\to n\bar{n}$ at energies between threshold and 2 GeV.'
+Keywords: 
+BibKey: Achasov:2014ncd
+BibTeX: '@article{Achasov:2014ncd,
+      author         = "Achasov, M. N. and others",
+      title          = "{Study of the process $e^+e^-\to n\bar{n}$ at the
+                        VEPP-2000 $e^+e^-$ collider with the SND detector}",
+      journal        = "Phys. Rev.",
+      volume         = "D90",
+      year           = "2014",
+      number         = "11",
+      pages          = "112007",
+      doi            = "10.1103/PhysRevD.90.112007",
+      eprint         = "1410.3188",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1410.3188;%%"
+}'

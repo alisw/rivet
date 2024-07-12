@@ -1,0 +1,40 @@
+Name: BABAR_2010_I845914
+Year: 2010
+Summary:  $e^+e^-\to e^+e^-\eta_c$ via intermediate photons at 10.58 GeV
+Experiment: BABAR
+Collider: PEPII
+InspireID: 845914
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ -     Phys.Rev.D 81 (2010) 052010
+RunInfo: e+ e- > e+e- eta_c via photon photon -> eta_c
+Beams: [e+, e-]
+Energies: [10.58]
+Description:
+  'Measurement of the cross section for the production of $\eta_c$ in photon-photon
+   collisions, i.e. $e^+e^-\to \gamma\gamma e^+e^-$ followed by $\gamma\gamma\to\eta_c$,
+   by the BABAR experiment at 10.58 GeV. The results in the paper were divided by the PDG 2020 value for the branching ratio of $\eta_c\to K\bar{K}\pi=7.3\pm0.4\%$ to obtain the total cross section. This measurement is differential in the virtuality of one of the photons.'
+ValidationInfo:
+  'Herwig7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BaBar:2010siw
+BibTeX: '@article{BaBar:2010siw,
+    author = "Lees, J. P. and others",
+    collaboration = "BaBar",
+    title = "{Measurement of the $\gamma \gamma* --> \eta_c$ transition form factor}",
+    eprint = "1002.3000",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BABAR-PUB-09-034, SLAC-PUB-13953",
+    doi = "10.1103/PhysRevD.81.052010",
+    journal = "Phys. Rev. D",
+    volume = "81",
+    pages = "052010",
+    year = "2010"
+}
+'

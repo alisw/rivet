@@ -1,0 +1,43 @@
+Name: CMS_2015_PAS_FSQ_15_007
+Year: 2015
+Summary:  Underlying Event Measurements with Leading Particles and Jets in pp collisions at 13 TeV
+Experiment: CMS
+Collider: LHC
+Status: VALIDATED
+Reentrant: false
+Authors:
+ - Paolo Gunnellini <paolo.gunnellini@cern.ch>
+References:
+ - CMS-PAS-FSQ-15-007
+ - <http://cds.cern.ch/record/2104473?ln=en>
+RunInfo:
+   Minimum Bias inelastic collisions
+NumEvents: 1000000
+NeedCrossSection: no
+Beams: [p+, p+]
+Energies: [13000]
+PtCuts: Charged particles with pT > 0.5 GeV and |eta| < 2
+Description:
+      "A measurement of the underlying event (UE) activity is performed in proton-proton
+      collisions at the centre-of-mass energy of 13 TeV with the CMS experiment at the
+      LHC. The measurement is performed using leading charged-particles as well as lead-
+      ing charged-particle jets as reference objects. A leading charged-particle or charged-
+      particle jet is required to be produced in the central pseudorapidity region ( |eta| < 2)
+      jet and with transverse momentum pT greater than 0.5 (pT greater than 1) GeV for leading charged-particle
+      (charge particle jet). The UE activity is measured in terms of the average multiplicity
+      and scalar sum of pT of the charged-particles, in the azimuthal region transverse 
+      to the direction of the leading reference object."
+BibKey: CMS-PAS-FSQ-15-007
+BibTeX: '@techreport{CMS-PAS-FSQ-15-007,
+      title         = "{Underlying Event Measurements with Leading Particles and
+                       Jets in pp collisions at $\sqrt{s} = 13$ TeV}",
+      institution   = "CERN",
+      collaboration = "CMS Collaboration",
+      address       = "Geneva",
+      number        = "CMS-PAS-FSQ-15-007",
+      year          = "2015",
+      reportNumber  = "CMS-PAS-FSQ-15-007",
+      url           = "http://cds.cern.ch/record/2104473",
+}'
+ReleaseTests:
+ - $A LHC-13-Minbias

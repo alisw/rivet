@@ -1,0 +1,190 @@
+{
+    "30428": [
+        "Inclusive and exclusive decays of B mesons to final states including charm and charmonium mesons", 
+        "CLEO", 
+        "10.1103/PhysRevD.45.21", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-91-1102", 
+            "CLEO-91-8"
+        ]
+    ], 
+    "31222": [
+        "Observation of the decay xi(c)0 ---> omega- K+", 
+        "CLEO", 
+        "10.1016/0370-2693(92)91448-I", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-91-1125"
+        ]
+    ], 
+    "32611": [
+        "Shape studies of quark jets versus gluon jets at s**(1.2) = 10-GeV", 
+        "CLEO", 
+        "10.1103/PhysRevD.46.4822", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-92-1145", 
+            "CLEO-92-1"
+        ]
+    ], 
+    "32918": [
+        "Measurement of tau decays involving eta mesons", 
+        "CLEO", 
+        "10.1103/PhysRevLett.69.3278", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-92-1159", 
+            "CLEO-92-07"
+        ]
+    ], 
+    "315181": [
+        "Measurement of baryon production in B meson decay", 
+        "CLEO", 
+        "10.1103/PhysRevD.45.752", 
+        null, 
+        null, 
+        "ins315181", 
+        null, 
+        [
+            "CLNS-91-1066", 
+            "CLEO-91-3"
+        ]
+    ], 
+    "317747": [
+        "Measurements of semileptonic branching fractions of B mesons at the Upsilon (4S) resonance", 
+        "CLEO", 
+        "10.1103/PhysRevD.45.2212", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-91-1101", 
+            "CLEO-91-7"
+        ]
+    ], 
+    "319773": [
+        "Two-body D(s)+ decays to eta pi+, eta-prime pi+, eta rho+, eta-prime rho+, phi rho+", 
+        "CLEO", 
+        "10.1103/PhysRevD.45.3965", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-91-1108", 
+            "CLEO-91-9"
+        ]
+    ], 
+    "321348": [
+        "The Electronic branching ratio of the tau lepton", 
+        "CLEO", 
+        "10.1103/PhysRevD.45.3976", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-91-1123", 
+            "CLEO-91-10"
+        ]
+    ], 
+    "321997": [
+        "The CLEO-II detector", 
+        "CLEO", 
+        "10.1016/0168-9002(92)90770-5", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-91-1122", 
+            "CLEO-91-11"
+        ]
+    ], 
+    "335385": [
+        "Exclusive chi (2P) production in upsilon (3S) decay", 
+        "CLEO", 
+        "10.1016/0370-2693(92)91653-Q", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-92-1151", 
+            "CLEO-92-2"
+        ]
+    ], 
+    "336121": [
+        "D / s+ decays to eta pi+ and eta-prime' pi+.", 
+        "CLEO", 
+        "10.1103/PhysRevLett.68.1275", 
+        null, 
+        null, 
+        null, 
+        null, 
+        []
+    ], 
+    "336122": [
+        "D / s+ decays to eta rho+, eta-prime rho+, and Phi rho+.", 
+        "CLEO", 
+        "10.1103/PhysRevLett.68.1279", 
+        null, 
+        null, 
+        null, 
+        null, 
+        []
+    ], 
+    "336313": [
+        "Isospin mass splittings from precision measurements of D* - D mass differences", 
+        "CLEO", 
+        "10.1103/PhysRevLett.69.2046", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-92-1152", 
+            "CLEO-92-4"
+        ]
+    ], 
+    "336317": [
+        "Measurement of the D* (2010) branching fractions", 
+        "CLEO", 
+        "10.1103/PhysRevLett.69.2041", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-92-1143", 
+            "CLEO-92-3"
+        ]
+    ], 
+    "342625": [
+        "Measurement of the tau lepton electronic branching fraction", 
+        "CLEO", 
+        "10.1103/PhysRevLett.69.3610", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-92-1163", 
+            "CLEO-92-8"
+        ]
+    ]
+}

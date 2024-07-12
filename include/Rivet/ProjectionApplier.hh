@@ -75,43 +75,53 @@ namespace Rivet {
     //@{
 
     /// Apply the supplied projection on event @a evt.
-    template <typename PROJ>
-    /// @todo Add SFINAE to require that PROJ inherit from Projection
-    const PROJ& applyProjection(const Event& evt, const Projection& proj) const {
+    ///
+    /// @deprecated Prefer the simpler apply<> form
+    template <typename PROJ=Projection>
+    typename std::enable_if_t<std::is_base_of<Projection, PROJ>::value, const PROJ&>
+    applyProjection(const Event& evt, const Projection& proj) const {
       return pcast<PROJ>(_applyProjection(evt, proj));
     }
+
     /// Apply the supplied projection on event @a evt (user-facing alias).
-    /// @todo Add SFINAE to require that PROJ inherit from Projection
-    template <typename PROJ>
-    const PROJ& apply(const Event& evt, const Projection& proj) const { return applyProjection<PROJ>(evt, proj); }
+    template <typename PROJ=Projection>
+    typename std::enable_if_t<std::is_base_of<Projection, PROJ>::value, const PROJ&>
+    apply(const Event& evt, const Projection& proj) const { return applyProjection<PROJ>(evt, proj); }
 
 
     /// Apply the supplied projection on event @a evt.
-    template <typename PROJ>
-    /// @todo Add SFINAE to require that PROJ inherit from Projection
-    const PROJ& applyProjection(const Event& evt, const PROJ& proj) const {
+    ///
+    /// @deprecated Prefer the simpler apply<> form
+    template <typename PROJ=Projection>
+    typename std::enable_if_t<std::is_base_of<Projection, PROJ>::value, const PROJ&>
+    applyProjection(const Event& evt, const PROJ& proj) const {
       return pcast<PROJ>(_applyProjection(evt, proj));
     }
+
     /// Apply the supplied projection on event @a evt (user-facing alias).
-    /// @todo Add SFINAE to require that PROJ inherit from Projection
-    template <typename PROJ>
-    const PROJ& apply(const Event& evt, const PROJ& proj) const { return applyProjection<PROJ>(evt, proj); }
+    template <typename PROJ=Projection>
+    typename std::enable_if_t<std::is_base_of<Projection, PROJ>::value, const PROJ&>
+    apply(const Event& evt, const PROJ& proj) const { return applyProjection<PROJ>(evt, proj); }
 
 
     /// Apply the named projection on event @a evt.
-    /// @todo Add SFINAE to require that PROJ inherit from Projection
-    template <typename PROJ>
-    const PROJ& applyProjection(const Event& evt, const std::string& name) const {
+    ///
+    /// @deprecated Prefer the simpler apply<> form
+    template <typename PROJ=Projection>
+    typename std::enable_if_t<std::is_base_of<Projection, PROJ>::value, const PROJ&>
+    applyProjection(const Event& evt, const std::string& name) const {
       return pcast<PROJ>(_applyProjection(evt, name));
     }
+
     /// Apply the supplied projection on event @a evt (user-facing alias).
-    /// @todo Add SFINAE to require that PROJ inherit from Projection
-    template <typename PROJ>
-    const PROJ& apply(const Event& evt, const std::string& name) const { return applyProjection<PROJ>(evt, name); }
+    template <typename PROJ=Projection>
+    typename std::enable_if_t<std::is_base_of<Projection, PROJ>::value, const PROJ&>
+    apply(const Event& evt, const std::string& name) const { return applyProjection<PROJ>(evt, name); }
+
     /// Apply the supplied projection on event @a evt (convenience arg-reordering alias).
-    /// @todo Add SFINAE to require that PROJ inherit from Projection
-    template <typename PROJ>
-    const PROJ& apply(const std::string& name, const Event& evt) const { return applyProjection<PROJ>(evt, name); }
+    template <typename PROJ=Projection>
+    typename std::enable_if_t<std::is_base_of<Projection, PROJ>::value, const PROJ&>
+    apply(const std::string& name, const Event& evt) const { return applyProjection<PROJ>(evt, name); }
 
     //@}
 
@@ -162,12 +172,6 @@ namespace Rivet {
     /// @todo Add SFINAE to require that PROJ inherit from Projection
     template <typename PROJ>
     const PROJ& declare(const std::string& name, const PROJ& proj) { return declareProjection(proj, name); }
-
-    /// @brief Register a contained projection (user-facing version)
-    /// @deprecated Use declareProjection() or declare()
-    /// @todo Add SFINAE to require that PROJ inherit from Projection
-    template <typename PROJ>
-    const PROJ& addProjection(const PROJ& proj, const std::string& name) { return declareProjection(proj, name); }
 
 
     /// Untemplated function to do the work...

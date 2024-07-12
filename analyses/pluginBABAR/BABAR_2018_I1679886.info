@@ -1,0 +1,34 @@
+Name: BABAR_2018_I1679886
+Year: 2018
+Summary: Mass spectrum for $K^-K_S^0$ decays of the $\tau^-$ lepton
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 1679886
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D98 (2018) no.3, 032010
+RunInfo:   e+ e- > tau+ tau-, or any process producing tau leptons
+Description:
+  'Mass spectra for $K^-K_S^0$ in tau decays
+   measured by BaBar. Useful for testing models of the hadronic current in $\tau$ decays.'
+Keywords: []
+BibKey: BaBar:2018qry
+BibTeX: '@article{BaBar:2018qry,
+      author         = "Lees, J. P. and others",
+      title          = "{Measurement of the spectral function for the $\tau^-\to
+                        K^-K_S\nu_{\tau}$ decay}",
+      collaboration  = "BaBar",
+      journal        = "Phys. Rev.",
+      volume         = "D98",
+      year           = "2018",
+      number         = "3",
+      pages          = "032010",
+      doi            = "10.1103/PhysRevD.98.032010",
+      eprint         = "1806.10280",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "BABAR-PUB-18/005, SLAC-PUB-17286, BABAR-PUB-18-005",
+      SLACcitation   = "%%CITATION = ARXIV:1806.10280;%%"
+}'

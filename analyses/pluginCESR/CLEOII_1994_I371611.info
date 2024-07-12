@@ -1,0 +1,33 @@
+Name: CLEOII_1994_I371611
+Year: 1994
+Summary: Decay asymmetry in $\Lambda^+_c\to\Lambda^0 e^+ \nu_e$ 
+Experiment: CLEOII
+Collider: CESR
+InspireID: 371611
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett.B 323 (1994) 219-226
+RunInfo: Any process producing Lambda_c+, original e+e-
+Description:
+  'Measurement of the decay asymmetry in $\Lambda^+_c\to\Lambda^0 e^+ \nu_e$ by CLEOII. While this result is superseeded by later CLEO measurements it is one of the few to present the anglular distribution as well as the fitted asymmetry parameter. The product of assymetries $\alpha_{\Lambda_c^+}\alpha_\Lambda$ is extracted as that is what is measured not $\alpha_{\Lambda_c^+}$ and there has been a significant change in $\alpha_\Lambda$ since this paper was published'
+ValidationInfo:
+  'Herwig7 particle gun'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Bergfeld:1994gt
+BibTeX: '@article{Bergfeld:1994gt,
+    author = "Bergfeld, T. and others",
+    archivePrefix = "arXiv",
+    collaboration = "CLEO",
+    doi = "10.1016/0370-2693(94)90295-X",
+    eprint = "hep-ph/9403326",
+    journal = "Phys.Lett.B",
+    pages = "219--226",
+    reportNumber = "CLNS-94-1269, CLEO-94-4",
+    title = "Study of the decay lambda(c)+ ---> Lambda lepton+ lepton-neutrino",
+    volume = "323",
+    year = "1994"
+}'

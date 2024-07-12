@@ -1,0 +1,37 @@
+Name: CLEOII_1999_I501417
+Year: 1999
+Summary: Spectra for $\Xi_c(2815)^{+,0}$ at 10.58 GeV
+Experiment: CLEOII
+Collider: CESR
+InspireID: 501417
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 83 (1999) 3390-3393
+RunInfo: e+e- to hadrons 
+Beams: [e+, e-]
+Energies: [10.58]
+Description:
+  'Spectrum for the average of $\Xi_c^{0}(2815)$ and $\Xi_c^{+}(2815)$ produced at 10.58 GeV measured by CLEOII.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Alexander:1999ud
+BibTeX: '@article{Alexander:1999ud,
+      author         = "Alexander, J. P. and others",
+      title          = "{Evidence of new states decaying into Xi(c)* pi}",
+      collaboration  = "CLEO",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "83",
+      year           = "1999",
+      pages          = "3390-3393",
+      doi            = "10.1103/PhysRevLett.83.3390",
+      eprint         = "hep-ex/9906013",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "SLAC-REPRINT-1999-099, CLNS-99-1620, CLEO-99-4",
+      SLACcitation   = "%%CITATION = HEP-EX/9906013;%%"
+}'

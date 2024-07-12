@@ -1,0 +1,41 @@
+Name: CLEO_2000_I526554
+Year: 2000
+Summary: $D_s^\pm$ and $D^{*\pm}_s$ spectra in the continuum near the $\Upsilon(4S)$
+Experiment: CLEO
+Collider: CESR
+InspireID: 526554
+Status: VALIDATED 
+Authors:
+ - Peter Richardson <Peter.Richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D62 (2000) 072003, 2000 
+RunInfo:
+  $e^+ e^-$ analysis near the $\Upsilon(4S)$ resonance
+NumEvents: 1000000
+Beams: [e+, e-]
+Energies: [10.52]
+Description:
+  Analysis of charm quark fragmentation at 10.5 GeV, based on a data
+  sample of 103 fb collected by the CLEO experiment. 
+  Fragmentation into $D^\pm_s$ and $D^{*\pm}_s$ mesons is studied.
+  This analysis can be used to constrain charm fragmentation 
+  in Monte Carlo generators. The branching ratios $\text{B}_1=B(D^{*+}_s\to D_s^+\gamma)B(D_s^+\to\phi\pi^+)B(\phi\to K^+K^-)$
+  and $B_2=B(D_s^+\to\phi\pi^+)B(\phi\to K^+K^-)$, are not unfolded.
+Keywords: []
+BibKey: Briere:2000np
+BibTeX: '@article{Briere:2000np,
+      author         = "Briere, Roy A. and others",
+      title          = "{Measurements of charm fragmentation into D*+(s) and
+                        D+(s) in e+ e- annihilations at S**(1/2) = 10.5-GeV}",
+      collaboration  = "CLEO",
+      journal        = "Phys. Rev.",
+      volume         = "D62",
+      year           = "2000",
+      pages          = "072003",
+      doi            = "10.1103/PhysRevD.62.072003",
+      eprint         = "hep-ex/0004028",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "SLAC-REPRINT-2000-087, CLNS-00-1667, CLEO-00-5",
+      SLACcitation   = "%%CITATION = HEP-EX/0004028;%%"
+}'

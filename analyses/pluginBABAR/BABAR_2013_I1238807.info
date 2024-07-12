@@ -1,0 +1,39 @@
+Name: BABAR_2013_I1238807
+Year: 2013
+Summary: Cross section for $e^+e^-\to K^+K^-$ between threshold and 5 GeV
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 1238807
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D88 (2013) no.3, 032013
+RunInfo: e+ e- to hadrons
+NeedCrossSection: yes
+Beams: [e+, e-]
+Description:
+  'Measurement of the cross section for $e^+e^-\to K^+K^-$ at energies between threshold and 5 GeV using radiative return'
+Keywords: 
+BibKey: Lees:2013gzt
+BibTeX: '%%% contains utf-8, see: http://inspirehep.net/info/faq/general#utf8
+%%% add \usepackage[utf8]{inputenc} to your latex preamble
+
+@article{Lees:2013gzt,
+      author         = "Lees, J. P. and others",
+      title          = "{Precision measurement of the $e^+e^- → K^+K^-(\gamma)$
+                        cross section with the initial-state radiation method at
+                        BABAR}",
+      collaboration  = "BaBar",
+      journal        = "Phys. Rev.",
+      volume         = "D88",
+      year           = "2013",
+      number         = "3",
+      pages          = "032013",
+      doi            = "10.1103/PhysRevD.88.032013",
+      eprint         = "1306.3600",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "BABAR-PUB-13-006, SLAC-PUB-15487",
+      SLACcitation   = "%%CITATION = ARXIV:1306.3600;%%"
+}'

@@ -34,11 +34,9 @@ namespace Rivet {
     Spherocity() {}
 
     /// Constructor.
-    Spherocity(const FinalState& fsp)
-      : _calculatedSpherocity(false)
-    {
+    Spherocity(const FinalState& fsp) {
       setName("Spherocity");
-      addProjection(fsp, "FS");
+      declare(fsp, "FS");
     }
 
     /// Clone on the heap.
@@ -56,7 +54,7 @@ namespace Rivet {
 
 
     /// Compare projections
-    int compare(const Projection& p) const {
+    CmpState compare(const Projection& p) const {
       return mkNamedPCmp(p, "FS");
     }
 
@@ -110,7 +108,7 @@ namespace Rivet {
     //@}
 
 
-  private:
+  protected:
 
     /// The spherocity scalars.
     vector<double> _spherocities;
@@ -118,11 +116,8 @@ namespace Rivet {
     /// The spherocity axes.
     vector<Vector3> _spherocityAxes;
 
-    /// Caching flag to avoid costly recalculations.
-    bool _calculatedSpherocity;
 
-
-  private:
+  protected:
 
     /// Explicitly calculate the spherocity values.
     void _calcSpherocity(const vector<Vector3>& fsmomenta);

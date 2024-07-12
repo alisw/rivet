@@ -1,6 +1,7 @@
 Name: MC_MET
 Summary: Monte Carlo validation observables for missing transverse energy
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Andy Buckley <andy.buckley@cern.ch>
 RunInfo:

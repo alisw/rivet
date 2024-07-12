@@ -5,9 +5,11 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1306615
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Michaela Queitsch-Maitland <michaela.queitsch-maitland@cern.ch>
 References:
+ - ATLAS-HIGG-2013-10
  - arXiv:1407.4222
  - JHEP 09 (2014) 112
 RunInfo:
@@ -15,10 +17,11 @@ RunInfo:
 NumEvents: 1000000
 Beams: [p+, p+]
 Energies: [8000]
+Luminosity_fb: 20.3
 PtCuts: [25]
 NeedsCrossSection: yes
 Description:
-  Measurements of fiducial and differential cross sections are presented for Higgs
+  'Measurements of fiducial and differential cross sections are presented for Higgs
   boson production in proton-proton collisions at a centre-of-mass energy of 8TeV. The 
   analysis is performed in the Higgs diphoton decay channel using 20.3/fb of data 
   recorded by the ATLAS experiment at the CERN Large Hadron Collider.  The signal 
@@ -27,6 +30,9 @@ Description:
   related to the diphoton kinematics and the jet activity produced in the Higgs 
   boson events. The observed spectra are statistically limited but
   broadly in line with the theoretical expectations.
+  Note on reinterpretation: Since the background is subtracted from a fit, any BSM
+  signal would presumably also have beed subtracted. Therefore should not be used to
+  constrain BSM signals unless they comes from a genuine excess of SM Higgs->gammagamma.'
 BibKey: Aad:2014lwa
 BibTeX: '@article{Aad:2014lwa,
       author         = "Aad, Georges and others",
@@ -45,3 +51,10 @@ BibTeX: '@article{Aad:2014lwa,
       reportNumber   = "CERN-PH-EP-2014-148",
       SLACcitation   = "%%CITATION = ARXIV:1407.4222;%%",
 }'
+
+ReleaseTests:
+ - $A LHC-8-VBF-GammaGamma
+ - $A-2 LHC-8-WH-GammaGamma
+ - $A-3 LHC-8-ZH-GammaGamma
+ - $A-4 LHC-8-ggH-GammaGamma
+

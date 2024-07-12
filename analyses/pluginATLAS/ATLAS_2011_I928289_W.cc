@@ -13,7 +13,7 @@ namespace Rivet {
     ATLAS_2011_I928289_W()
       : Analysis("ATLAS_2011_I928289_W")
     {
-      setNeedsCrossSection(true);
+
     }
 
 
@@ -28,10 +28,10 @@ namespace Rivet {
 
       Cut cut = (Cuts::pT >= 20*GeV);
 
-      WFinder wfinder_el_bare(   fs, cut, PID::ELECTRON, 40.0*GeV, 7000.0*GeV, 25.0*GeV, 0.0, WFinder::CLUSTERNODECAY, WFinder::NOTRACK, WFinder::TRANSMASS);
-      WFinder wfinder_el_dressed(fs, cut, PID::ELECTRON, 40.0*GeV, 7000.0*GeV, 25.0*GeV, 0.1, WFinder::CLUSTERNODECAY, WFinder::NOTRACK, WFinder::TRANSMASS);
-      WFinder wfinder_mu_bare   (fs, cut, PID::MUON    , 40.0*GeV, 7000.0*GeV, 25.0*GeV, 0.0, WFinder::CLUSTERNODECAY, WFinder::NOTRACK, WFinder::TRANSMASS);
-      WFinder wfinder_mu_dressed(fs, cut, PID::MUON    , 40.0*GeV, 7000.0*GeV, 25.0*GeV, 0.1, WFinder::CLUSTERNODECAY, WFinder::NOTRACK, WFinder::TRANSMASS);
+      WFinder wfinder_el_bare(   fs, cut, PID::ELECTRON, 40.0*GeV, 7000.0*GeV, 25.0*GeV, 0.0, WFinder::ChargedLeptons::PROMPT, WFinder::ClusterPhotons::NODECAY, WFinder::AddPhotons::NO, WFinder::MassWindow::MT);
+      WFinder wfinder_el_dressed(fs, cut, PID::ELECTRON, 40.0*GeV, 7000.0*GeV, 25.0*GeV, 0.1, WFinder::ChargedLeptons::PROMPT, WFinder::ClusterPhotons::NODECAY, WFinder::AddPhotons::NO, WFinder::MassWindow::MT);
+      WFinder wfinder_mu_bare   (fs, cut, PID::MUON    , 40.0*GeV, 7000.0*GeV, 25.0*GeV, 0.0, WFinder::ChargedLeptons::PROMPT, WFinder::ClusterPhotons::NODECAY, WFinder::AddPhotons::NO, WFinder::MassWindow::MT);
+      WFinder wfinder_mu_dressed(fs, cut, PID::MUON    , 40.0*GeV, 7000.0*GeV, 25.0*GeV, 0.1, WFinder::ChargedLeptons::PROMPT, WFinder::ClusterPhotons::NODECAY, WFinder::AddPhotons::NO, WFinder::MassWindow::MT);
 
       declare(wfinder_el_bare   , "WFinder_el_bare");
       declare(wfinder_el_dressed, "WFinder_el_dressed");
@@ -39,18 +39,18 @@ namespace Rivet {
       declare(wfinder_mu_dressed, "WFinder_mu_dressed");
 
       /// Book histograms here
-      _h_Wminus_lepton_eta_el_bare       = bookHisto1D(3, 1, 1);
-      _h_Wminus_lepton_eta_el_dressed    = bookHisto1D(3, 1, 2);
-      _h_Wminus_lepton_eta_mu_bare       = bookHisto1D(3, 1, 3);
-      _h_Wminus_lepton_eta_mu_dressed    = bookHisto1D(3, 1, 4);
-      _h_Wplus_lepton_eta_el_bare        = bookHisto1D(5, 1, 1);
-      _h_Wplus_lepton_eta_el_dressed     = bookHisto1D(5, 1, 2);
-      _h_Wplus_lepton_eta_mu_bare        = bookHisto1D(5, 1, 3);
-      _h_Wplus_lepton_eta_mu_dressed     = bookHisto1D(5, 1, 4);
-      _h_W_asym_eta_el_bare              = bookScatter2D(7, 1, 1);
-      _h_W_asym_eta_el_dressed           = bookScatter2D(7, 1, 2);
-      _h_W_asym_eta_mu_bare              = bookScatter2D(7, 1, 3);
-      _h_W_asym_eta_mu_dressed           = bookScatter2D(7, 1, 4);
+      book(_h_Wminus_lepton_eta_el_bare       ,3, 1, 1);
+      book(_h_Wminus_lepton_eta_el_dressed    ,3, 1, 2);
+      book(_h_Wminus_lepton_eta_mu_bare       ,3, 1, 3);
+      book(_h_Wminus_lepton_eta_mu_dressed    ,3, 1, 4);
+      book(_h_Wplus_lepton_eta_el_bare        ,5, 1, 1);
+      book(_h_Wplus_lepton_eta_el_dressed     ,5, 1, 2);
+      book(_h_Wplus_lepton_eta_mu_bare        ,5, 1, 3);
+      book(_h_Wplus_lepton_eta_mu_dressed     ,5, 1, 4);
+      book(_h_W_asym_eta_el_bare              ,7, 1, 1);
+      book(_h_W_asym_eta_el_dressed           ,7, 1, 2);
+      book(_h_W_asym_eta_mu_bare              ,7, 1, 3);
+      book(_h_W_asym_eta_mu_dressed           ,7, 1, 4);
 
     }
 
@@ -63,20 +63,19 @@ namespace Rivet {
       const WFinder& wfinder_mu_bare     = apply<WFinder>(event, "WFinder_mu_bare");
       const WFinder& wfinder_mu_dressed  = apply<WFinder>(event, "WFinder_mu_dressed");
 
-      const double weight = event.weight();
-      fillPlots1D(wfinder_el_bare   , _h_Wplus_lepton_eta_el_bare   , _h_Wminus_lepton_eta_el_bare   , weight);
-      fillPlots1D(wfinder_el_dressed, _h_Wplus_lepton_eta_el_dressed, _h_Wminus_lepton_eta_el_dressed, weight);
-      fillPlots1D(wfinder_mu_bare   , _h_Wplus_lepton_eta_mu_bare   , _h_Wminus_lepton_eta_mu_bare   , weight);
-      fillPlots1D(wfinder_mu_dressed, _h_Wplus_lepton_eta_mu_dressed, _h_Wminus_lepton_eta_mu_dressed, weight);
+      fillPlots1D(wfinder_el_bare   , _h_Wplus_lepton_eta_el_bare   , _h_Wminus_lepton_eta_el_bare);
+      fillPlots1D(wfinder_el_dressed, _h_Wplus_lepton_eta_el_dressed, _h_Wminus_lepton_eta_el_dressed);
+      fillPlots1D(wfinder_mu_bare   , _h_Wplus_lepton_eta_mu_bare   , _h_Wminus_lepton_eta_mu_bare);
+      fillPlots1D(wfinder_mu_dressed, _h_Wplus_lepton_eta_mu_dressed, _h_Wminus_lepton_eta_mu_dressed);
     }
 
 
-    void fillPlots1D(const WFinder& wfinder, Histo1DPtr hist_plus, Histo1DPtr hist_minus, double weight) {
+    void fillPlots1D(const WFinder& wfinder, Histo1DPtr hist_plus, Histo1DPtr hist_minus) {
       if (wfinder.bosons().size() != 1) return;
       const Particle l = wfinder.constituentLeptons()[0];
       const FourMomentum miss = wfinder.constituentNeutrinos()[0];
       if (l.pT() > 20*GeV && miss.Et() > 25*GeV && wfinder.mT() > 40*GeV)
-        (l.charge3() > 0 ? hist_plus : hist_minus)->fill(l.abseta(), weight);
+        (l.charge3() > 0 ? hist_plus : hist_minus)->fill(l.abseta());
     }
 
 
@@ -100,9 +99,6 @@ namespace Rivet {
       // Print summary info
       const double xs_pb(crossSection() / picobarn);
       const double sumw(sumOfWeights());
-      MSG_DEBUG( "Cross-section/pb     : " << xs_pb       );
-      MSG_DEBUG( "Sum of weights       : " << sumw        );
-      MSG_DEBUG( "nEvents              : " << numEvents() );
 
       ///  Normalise, scale and otherwise manipulate histograms here
       const double sf = 0.5 * xs_pb / sumw; // 0.5 accounts for rapidity bin width
@@ -143,6 +139,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2011_I928289_W);
+  RIVET_DECLARE_PLUGIN(ATLAS_2011_I928289_W);
 
 }

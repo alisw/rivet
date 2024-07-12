@@ -6,16 +6,17 @@ Collider: Tevatron Run 2
 SpiresID: 6653332
 InspireID: 717572
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Lars Sonnenschein <Lars.Sonnenschein@cern.ch>
- - Steffen Schumann <s.schumann(at)thphys.uni-heidelberg.de>
+ - Steffen Schumann <s.schumann@thphys.uni-heidelberg.de>
 References:
  - Phys.Rev.D.74:032008,2006
  - doi:10.1103/PhysRevD.74.032008
- - arXiv:hep-ex/0605099v2
+ - arXiv:hep-ex/0605099
 RunInfo:
   Z + jets events at $\sqrt{s} = 1960$ GeV.
-  Jets min $\pT$ cut = 20~GeV, leptons min $\pT$ cut = 10\;GeV
+  Jets min $\pT$ cut = 20~GeV, leptons min $\pT$ cut = 10~GeV
 NumEvents: 1000000
 Beams: [p-, p+]
 PtCuts: [10]
@@ -42,3 +43,7 @@ BibTeX: '@Article{Abulencia:2006ce,
      doi       = "10.1103/PhysRevD.74.032008",
      SLACcitation  = "%%CITATION = HEP-EX/0605099;%%"
 }'
+
+ReleaseTests:
+ - $A TVT-Run-II-Z-mu
+

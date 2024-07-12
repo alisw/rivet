@@ -1,0 +1,62 @@
+{
+    "1301218": [
+        "Measurement of multijet production in $ep$ collisions at high $Q^2$ and determination of the strong coupling $\\alpha _s$", 
+        "H1", 
+        "10.1140/epjc/s10052-014-3223-6", 
+        null, 
+        "1406.4709", 
+        "ins1301218", 
+        null, 
+        [
+            "DESY-14-089"
+        ]
+    ], 
+    "1332186": [
+        "Measurement of Dijet Production in Diffractive Deep-Inelastic ep Scattering at HERA", 
+        "H1", 
+        "10.1007/JHEP03(2015)092", 
+        "1973865", 
+        "1412.0928", 
+        "ins1332186", 
+        null, 
+        [
+            "DESY-14-200"
+        ]
+    ], 
+    "1343110": [
+        "Diffractive Dijet Production with a Leading Proton in $ep$ Collisions at HERA", 
+        "H1", 
+        "10.1007/JHEP05(2015)056", 
+        "1987204", 
+        "1502.01683", 
+        "ins1343110", 
+        null, 
+        [
+            "DESY-14-242"
+        ]
+    ], 
+    "1353667": [
+        "Combination of differential D$^{\u2217\\pm}$ cross-section measurements in deep-inelastic ep scattering at HERA", 
+        "H1", 
+        "10.1007/JHEP09(2015)149", 
+        "2003775", 
+        "1503.06042", 
+        "ins1353667", 
+        null, 
+        [
+            "DESY-15-037"
+        ]
+    ], 
+    "1377206": [
+        "Combination of measurements of inclusive deep inelastic ${e^{\\pm }p}$ scattering cross sections and QCD analysis of HERA data", 
+        "H1", 
+        "10.1140/epjc/s10052-015-3710-4", 
+        "2028501", 
+        "1506.06042", 
+        "ins1377206", 
+        null, 
+        [
+            "DESY-15-039"
+        ]
+    ]
+}

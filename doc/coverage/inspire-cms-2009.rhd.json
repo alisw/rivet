@@ -1,0 +1,36 @@
+{
+    "811949": [
+        "Performance studies of the CMS Strip Tracker before installation", 
+        "CMS Tracker", 
+        "10.1088/1748-0221/4/06/P06009", 
+        "1158708", 
+        "0901.4316", 
+        null, 
+        null, 
+        [
+            "CMS-NOTE-2008-032"
+        ]
+    ], 
+    "813070": [
+        "Stand-alone Cosmic Muon Reconstruction Before Installation of the CMS Silicon Strip Tracker", 
+        "CMS Tracker", 
+        "10.1088/1748-0221/4/05/P05004", 
+        "1161239", 
+        "0902.1860", 
+        null, 
+        null, 
+        []
+    ], 
+    "817524": [
+        "Alignment of the CMS Silicon Strip Tracker during stand-alone Commissioning", 
+        "CMS", 
+        "10.1088/1748-0221/4/07/T07001", 
+        "1171503", 
+        "0904.1220", 
+        null, 
+        null, 
+        [
+            "CMS-NOTE-2009-002"
+        ]
+    ]
+}

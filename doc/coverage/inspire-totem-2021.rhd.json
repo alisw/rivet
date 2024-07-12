@@ -1,0 +1,29 @@
+{
+    "1782637": [
+        "Measurement of single-diffractive dijet production in proton-proton collisions at $\\sqrt{s} =$ 8 TeV with the CMS and TOTEM experiments", 
+        "CMS", 
+        "10.1140/epjc/s10052-020-08562-y", 
+        "2711611", 
+        "2002.12146", 
+        "ins1782637", 
+        null, 
+        [
+            "CMS-FSQ-12-033", 
+            "TOTEM-2020-001", 
+            "CERN-EP-2019-260"
+        ]
+    ], 
+    "1835311": [
+        "Odderon Exchange from Elastic Scattering Differences between $pp$ and $p \\bar{p}$ Data at 1.96\u00a0TeV and from pp Forward Scattering Measurements", 
+        "TOTEM", 
+        "10.1103/PhysRevLett.127.062003", 
+        "2748561", 
+        "2012.03981", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-20-568-E", 
+            "\u00a0CERN-EP-2020-236"
+        ]
+    ]
+}

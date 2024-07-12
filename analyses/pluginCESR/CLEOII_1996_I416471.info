@@ -1,0 +1,35 @@
+Name: CLEOII_1996_I416471
+Year: 1996
+Summary: Spectrum for $\Xi_c^{*+}$ production at 10.58 GeV
+Experiment: CLEOII
+Collider: CESR
+InspireID: 416471
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D74 (2006) 112005
+RunInfo: e+e- to hadrons 
+Beams: [e+, e-]
+Energies: [10.58]
+Description:
+  'Spectrum for $\Xi_c^{*+}$ production at 10.58 GeV measured by CLEOII.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Gibbons:1996yv
+BibTeX: '@article{Gibbons:1996yv,
+      author         = "Gibbons, L. and others",
+      title          = "{Observation of an excited charmed baryon decaying into
+                        Xi(c)0 pi+}",
+      collaboration  = "CLEO",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "77",
+      year           = "1996",
+      pages          = "810-813",
+      doi            = "10.1103/PhysRevLett.77.810",
+      reportNumber   = "SLAC-PUB-9933, CLNS-96-1394, CLEO-96-4",
+      SLACcitation   = "%%CITATION = PRLTA,77,810;%%"
+}'

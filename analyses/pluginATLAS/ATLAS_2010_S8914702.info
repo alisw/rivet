@@ -6,9 +6,11 @@ Collider: LHC 7TeV
 SpiresID: 8914702
 InspireID: 882463
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Mike Hance <michael.hance@cern.ch>
 References:
+ - ATLAS-STDM-2010-08
  - arXiv:1012.4389 [hep-ex]
 RunInfo:
   Inclusive photon+X events (primary gamma+jet events) at $\sqrt{s} = 7$~TeV.
@@ -32,3 +34,10 @@ BibTeX: '@Article{Collaboration:2010sp,
      primaryClass  =  "hep-ex",
      SLACcitation  = "%%CITATION = 1012.4389;%%"
 }'
+
+ReleaseTests:
+ - $A LHC-7-PromptPhoton-1
+ - $A-2 LHC-7-PromptPhoton-2
+ - $A-3 LHC-7-PromptPhoton-3
+ - $A-4 LHC-7-PromptPhoton-4
+

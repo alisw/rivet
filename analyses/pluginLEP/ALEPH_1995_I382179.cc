@@ -12,7 +12,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(ALEPH_1995_I382179);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ALEPH_1995_I382179);
 
 
     /// @name Analysis methods
@@ -26,9 +26,9 @@ namespace Rivet {
       declare(ChargedFinalState(), "FS");
 
       // Book histograms
-      _histXpPion = bookHisto1D( 1, 1, 1);
-      _histXpKaon = bookHisto1D( 2, 1, 1);
-      _histXpProton = bookHisto1D( 3, 1, 1);
+      book(_histXpPion , 1, 1, 1);
+      book(_histXpKaon , 2, 1, 1);
+      book(_histXpProton , 3, 1, 1);
 
     }
 
@@ -44,23 +44,20 @@ namespace Rivet {
       }
       MSG_DEBUG("Passed ncharged cut");
 
-      // Get event weight for histo filling
-      const double weight = event.weight();
-
       // Get beams and average beam momentum
       const ParticlePair& beams = apply<Beam>(event, "Beams").beams();
       const double meanBeamMom = ( beams.first.p3().mod() + beams.second.p3().mod() ) / 2.0;
       MSG_DEBUG("Avg beam momentum = " << meanBeamMom);
 
-      foreach (const Particle& p, fs.particles()) {
+      for (const Particle& p : fs.particles()) {
 	int id = p.abspid();
 	// charged pions
 	if (id == PID::PIPLUS || id == PID::PIMINUS) {
-	  _histXpPion->fill(p.p3().mod()/meanBeamMom, weight);
+	  _histXpPion->fill(p.p3().mod()/meanBeamMom);
 	} else if(id == PID::KPLUS || id == PID::KMINUS) {
-	  _histXpKaon->fill(p.p3().mod()/meanBeamMom, weight);
+	  _histXpKaon->fill(p.p3().mod()/meanBeamMom);
 	} else if(id == PID::PROTON || id == PID::ANTIPROTON) {
-	  _histXpProton->fill(p.p3().mod()/meanBeamMom, weight);
+	  _histXpProton->fill(p.p3().mod()/meanBeamMom);
 	}
       }
 
@@ -92,7 +89,7 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ALEPH_1995_I382179);
+  RIVET_DECLARE_PLUGIN(ALEPH_1995_I382179);
 
 
 }

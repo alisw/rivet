@@ -13,7 +13,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2016_CONF_2016_092);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2016_CONF_2016_092);
 
 
     /// Bookings
@@ -26,9 +26,10 @@ namespace Rivet {
 
       // Book histograms
       const double y_bins[] = {0.0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0};
-      for (size_t i = 0; i < 6; i++)
-        _h_pT.addHistogram(y_bins[i], y_bins[i+1], bookHisto1D(i+1, 1, 1));
-
+      for (size_t i = 0; i < 6; i++) {
+        Histo1DPtr tmp;
+        _h_pT.add(y_bins[i], y_bins[i+1], book(tmp, i+1, 1, 1));
+      }
     }
 
 
@@ -37,7 +38,7 @@ namespace Rivet {
       const Jets& jets = apply<FastJets>(event, "antiKT04Jets")
         .jetsByPt(Cuts::pT > 100*GeV && Cuts::absrap < 3.0);
       for (const Jet& j : jets)
-        _h_pT.fill(j.absrap(), j.pT()/GeV, event.weight());
+        _h_pT.fill(j.absrap(), j.pT()/GeV, 1.0);
     }
 
 
@@ -49,12 +50,12 @@ namespace Rivet {
 
 
     /// Histograms
-    BinnedHistogram<double> _h_pT;
+    BinnedHistogram _h_pT;
 
   };
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2016_CONF_2016_092);
+  RIVET_DECLARE_PLUGIN(ATLAS_2016_CONF_2016_092);
 
 }

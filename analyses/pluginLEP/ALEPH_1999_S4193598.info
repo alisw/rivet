@@ -6,6 +6,7 @@ Collider: LEP
 SpiresID: 4193598
 InspireID: 507422
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Holger Schulz <hschulz@physik.hu-berlin.de>
 References:
@@ -13,7 +14,7 @@ References:
  - hep-ex/9909032
  - CERN-EP-99-094
 RunInfo:
-  Hadronic $Z$ decays at 91.2\;GeV.
+  Hadronic $Z$ decays at 91.2~GeV.
 NumEvents: 1000000
 NeedCrossSection: no
 Beams: [e+, e-]
@@ -35,3 +36,7 @@ BibTeX: '@article{Barate:1999bg,
       archivePrefix  = "arXiv",
       primaryClass   = "hep-ex",
 }'
+
+ReleaseTests:
+ - $A LEP-91
+

@@ -33,8 +33,8 @@ LogY=0
 
 # BEGIN PLOT /CMS_2015_I1356998/d05-x01-y01
 Title=Rapidity gap size in $\eta$ starting from $\eta = \pm 4.7$, $p_T > 200$ MeV
-XLabel=$\Delta\eta^\text{F}$
-YLabel=$\mathrm{d}\sigma / \mathrm{d}\Delta\eta^\text{F}$ [mb]
+XLabel=$\Delta\eta^\mathrm{F}$
+YLabel=$\mathrm{d}\sigma / \mathrm{d}\Delta\eta^\mathrm{F}$ [mb]
 LogY=1
 YMin=0.1
 YMax=200

@@ -8,11 +8,11 @@ namespace Rivet {
   class ATLAS_2011_I894867 : public Analysis {
   public:
 
-    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2011_I894867);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2011_I894867);
 
     void init() {
       declare(FinalState(), "FS");
-      _h_sigma = bookHisto1D(1, 1, 1);
+      book(_h_sigma ,1, 1, 1);
     }
 
 
@@ -41,7 +41,7 @@ namespace Rivet {
       const double xi = m2/sqr(sqrtS()); // sqrt(s) = 7000 GeV
       if (xi < 5e-6) vetoEvent;
 
-      _h_sigma->fill(sqrtS()/GeV, event.weight());
+      _h_sigma->fill(sqrtS()/GeV);
     }
 
 
@@ -56,6 +56,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2011_I894867);
+  RIVET_DECLARE_PLUGIN(ATLAS_2011_I894867);
 
 }

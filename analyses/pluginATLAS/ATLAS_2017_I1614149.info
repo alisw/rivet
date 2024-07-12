@@ -5,12 +5,14 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1614149
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Francesco La Ruffa <francesco.la.ruffa@cern.ch>
  - Steffen Henkelmann <steffen.henkelmann@cern.ch>
  - Federica Fabbri <federica.fabbri@cern.ch>
  - Christian Gutschow <chris.g@cern.ch>
 References:
+ - ATLAS-TOPQ-2016-01
  - JHEP 1711 (2017) 191
  - doi:10.1007/JHEP11(2017)1
  - arXiv:1708.00727 [hep-ex]
@@ -24,6 +26,7 @@ NeedCrossSection: True
 Beams: [p+, p+]
 Energies: [13000]
 PtCuts: [25.]
+Luminosity_fb: 3.2
 Description:
   'Measurements of differential cross-sections of top-quark pair production in fiducial phase-spaces are presented as a function of
   top-quark and $t\bar{t}$ system kinematic observables in proton-proton collisions at a centre-of-mass energy of $\sqrt{s} = 13$ TeV.
@@ -32,8 +35,8 @@ Description:
   Two separate selections are applied that each focus on different top-quark momentum regions, referred to as resolved and boosted 
   topologies of the $t\bar{t}$ final state. The measured spectra are corrected for detector effects and are compared to several 
   Monte Carlo simulations by means of calculated $\chi^2$ and $p$-values.'
-BibKey: Aaboud:2017fha,
-BibTex: '@article{Aaboud:2017fha,
+BibKey: Aaboud:2017fha
+BibTeX: '@article{Aaboud:2017fha,
       author         = "Aaboud, M. and others",
       title          = "{Measurements of top-quark pair differential
                         cross-sections in the lepton+jets channel in $pp$

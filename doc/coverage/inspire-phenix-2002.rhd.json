@@ -1,0 +1,82 @@
+{
+    "562409": [
+        "Suppression of hadrons with large transverse momentum in central Au+Au collisions at $\\sqrt{s_{NN}}$ = 130-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.88.022301", 
+        null, 
+        "nucl-ex/0109003", 
+        null, 
+        null, 
+        []
+    ], 
+    "568437": [
+        "Centrality dependence of pi+ / pi-, K+ / K-, p and anti-p production from s(NN)**(1/2) = 13-=GeV Au+Au collisions at RHIC", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.88.242301", 
+        null, 
+        "nucl-ex/0112006", 
+        "ins568437", 
+        null, 
+        []
+    ], 
+    "581871": [
+        "Transverse mass dependence of two pion correlations in Au+Au collisions at S(NN)**(1/2) = 130-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.88.192302", 
+        null, 
+        "nucl-ex/0201008", 
+        null, 
+        null, 
+        []
+    ], 
+    "582654": [
+        "Measurement of single electrons and implications for charm production in Au+Au collisions at s**(1/2)(NN) = 130-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.88.192303", 
+        null, 
+        "nucl-ex/0202002", 
+        null, 
+        null, 
+        []
+    ], 
+    "584417": [
+        "Net charge fluctuations in Au+Au interactions at s**(1/2) = 130-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.89.082301", 
+        null, 
+        "nucl-ex/0203014", 
+        null, 
+        null, 
+        []
+    ], 
+    "584452": [
+        "Event-by-event fluctuations in mean p(T) and mean e(T) in s(NN)**(1/2) = 130-GeV Au+Au collisions", 
+        "PHENIX", 
+        "10.1103/PhysRevC.66.024901", 
+        null, 
+        "nucl-ex/0203015", 
+        null, 
+        null, 
+        []
+    ], 
+    "585347": [
+        "Flow measurements via two particle azimuthal correlations in Au+Au collisions at s(NN)**(1/2) = 130-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.89.212301", 
+        null, 
+        "nucl-ex/0204005", 
+        null, 
+        null, 
+        []
+    ], 
+    "585561": [
+        "Measurement of the Lambda and anti-Lambda particles in Au+Au collisions at s(NN)**(1/2) = 130-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.89.092302", 
+        null, 
+        "nucl-ex/0204007", 
+        null, 
+        null, 
+        []
+    ]
+}

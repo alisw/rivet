@@ -1,0 +1,152 @@
+{
+    "1510301": [
+        "Constraining the initial conditions and temperature dependent viscosity with three-particle correlations in Au+Au collisions", 
+        "STAR", 
+        "10.1016/j.physletb.2018.10.075", 
+        null, 
+        "1701.06497", 
+        "ins1510301", 
+        null, 
+        []
+    ], 
+    "1685527": [
+        "The Proton-$\\Omega$ correlation function in Au+Au collisions at $\\sqrt{s_{NN}}$=200 GeV", 
+        "STAR", 
+        "10.1016/j.physletb.2019.01.055", 
+        null, 
+        "1808.02511", 
+        "ins1685527", 
+        null, 
+        []
+    ], 
+    "1708793": [
+        "Measurement of the longitudinal spin asymmetries for weak boson production in proton-proton collisions at $\\sqrt{s}$ = 510 GeV", 
+        "STAR", 
+        "10.1103/PhysRevD.99.051102", 
+        null, 
+        "1812.04817", 
+        null, 
+        null, 
+        []
+    ], 
+    "1711377": [
+        "Centrality and transverse momentum dependence of $D^0$-meson production at mid-rapidity in Au+Au collisions at ${\\sqrt{s_{\\rm NN}} = \\rm{200\\,GeV}}$", 
+        "STAR", 
+        "10.1103/PhysRevC.99.034908", 
+        null, 
+        "1812.10224", 
+        null, 
+        null, 
+        []
+    ], 
+    "1712047": [
+        "Collision-energy dependence of $p_t$ correlations in Au + Au collisions at energies available at the BNL Relativistic Heavy Ion Collider", 
+        "STAR", 
+        "10.1103/PhysRevC.99.044918", 
+        null, 
+        "1901.00837", 
+        null, 
+        null, 
+        []
+    ], 
+    "1716552": [
+        "Azimuthal Harmonics in Small and Large Collision Systems at RHIC Top Energies", 
+        "STAR", 
+        "10.1103/PhysRevLett.122.172301", 
+        null, 
+        "1901.08155", 
+        null, 
+        null, 
+        []
+    ], 
+    "1724809": [
+        "Collision-energy dependence of second-order off-diagonal and diagonal cumulants of net-charge, net-proton, and net-kaon multiplicity distributions in Au + Au collisions", 
+        "STAR", 
+        "10.1103/PhysRevC.100.014902", 
+        null, 
+        "1903.05370", 
+        null, 
+        null, 
+        []
+    ], 
+    "1727273": [
+        "Beam energy dependence of (anti-)deuteron production in Au + Au collisions at the BNL Relativistic Heavy Ion Collider", 
+        "STAR", 
+        "10.1103/PhysRevC.99.064905", 
+        null, 
+        "1903.11778", 
+        null, 
+        null, 
+        []
+    ], 
+    "1731573": [
+        "Observation of excess J/$\\psi$ yield at very low transverse momenta in Au+Au collisions at $\\sqrt{s_{\\rm{NN}}} =$ 200 GeV and U+U collisions at $\\sqrt{s_{\\rm{NN}}} =$ 193 GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.123.132302", 
+        null, 
+        "1904.11658", 
+        null, 
+        null, 
+        []
+    ], 
+    "1733225": [
+        "First Observation of the Directed Flow of $D^{0}$ and $\\overline{D^0}$ in Au+Au Collisions at $\\sqrt{s_{\\rm NN}}$ = 200 GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.123.162301", 
+        null, 
+        "1905.02052", 
+        null, 
+        null, 
+        []
+    ], 
+    "1735184": [
+        "Measurements of the transverse-momentum-dependent cross sections of $J/\\psi$ production at mid-rapidity in proton+proton collisions at $\\sqrt{s} =$ 510 and 500 GeV with the STAR detector", 
+        "STAR", 
+        "10.1103/PhysRevD.100.052009", 
+        null, 
+        "1905.06075", 
+        null, 
+        null, 
+        []
+    ], 
+    "1737354": [
+        "Polarization of $\\Lambda$ ($\\bar{\\Lambda}$) hyperons along the beam direction in Au+Au collisions at $\\sqrt{s_{_{NN}}}$ = 200 GeV", 
+        "STAR", 
+        "10.1103/PhysRevLett.123.132301", 
+        null, 
+        "1905.11917", 
+        null, 
+        null, 
+        []
+    ], 
+    "1737650": [
+        "Measurement of inclusive $J/\\psi$ suppression in Au+Au collisions at $\\sqrt{s_{NN}}$ = 200 GeV through the dimuon channel at STAR", 
+        "STAR", 
+        "10.1016/j.physletb.2019.134917", 
+        null, 
+        "1905.13669", 
+        "ins1737650", 
+        null, 
+        []
+    ], 
+    "1738738": [
+        "Longitudinal double-spin asymmetry for inclusive jet and dijet production in pp collisions at $\\sqrt{s} = 510$  GeV", 
+        "STAR", 
+        "10.1103/PhysRevD.100.052005", 
+        null, 
+        "1906.02740", 
+        null, 
+        null, 
+        []
+    ], 
+    "1738942": [
+        "Charge-dependent pair correlations relative to a third particle in $p$ + Au and $d$+ Au collisions at RHIC", 
+        "STAR", 
+        "10.1016/j.physletb.2019.134975", 
+        null, 
+        "1906.03373", 
+        null, 
+        null, 
+        []
+    ]
+}

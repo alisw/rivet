@@ -1,0 +1,45 @@
+Name: CMS_2018_I1703993
+Year: 2018
+Summary: Measurements of ttbar differential cross sections in proton-proton collisions at 13 TeV using events containing two leptons
+Experiment: CMS
+Collider: LHC
+InspireID: 1703993
+Status: VALIDATED
+Reentrant: True
+Authors:
+ - Dace Osite <dace.osite@cern.ch>
+References:
+ - 'J. High Energ. Phys. 149 (2019)'
+ - 'DOI:10.1007/JHEP02(2019)149'
+ - 'arXiv:1811.06625v2'
+ - CMS-TOP-17-014
+RunInfo: 
+  $t\bar{t}$ events at $\sqrt{s} = 13~\TeV$, inclusive or dilepton channel
+Beams: [p+, p+]
+Energies: [[6500,6500]]
+Luminosity_fb: 35.9
+Description:
+  'Absolute and normalised differential top quark pair production cross sections are measured in the dilepton decay channels. 
+  The differential cross sections have been obtained by the CMS experiment at the CERN LHC in 2016 in proton-proton 
+  collisions at a centre-of-mass energy of 13 TeV. The measurements are performed with data corresponding to an integrated 
+  luminosity of 35.9/fb. The cross sections are measured differentially as a function of the kinematic properties of 
+  the top quarks and the tt system at the particle and parton levels, and the top quark decay products at the particle level. 
+  The results are compared to Monte Carlo simulations from POWHEG interfaced with the parton shower generators PYTHIA 8 and 
+  HERWIG 7 up to NNLO (next-to-next leading order) accuracy.'
+BibKey: CMS:2018adi
+BibTeX: '@article{CMS:2018adi,
+    author = "Sirunyan, Albert M and others",
+    collaboration = "CMS",
+    title = "{Measurements of $\mathrm{t\overline{t}}$ differential cross sections in proton-proton collisions at $\sqrt{s}=$ 13 TeV using events containing two leptons}",
+    eprint = "1811.06625",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CMS-TOP-17-014, CERN-EP-2018-252",
+    doi = "10.1007/JHEP02(2019)149",
+    journal = "JHEP",
+    volume = "02",
+    pages = "149",
+    year = "2019"
+}'
+ReleaseTests:
+ - $A LHC-13-Top-L

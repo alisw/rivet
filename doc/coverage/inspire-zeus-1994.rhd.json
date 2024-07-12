@@ -1,0 +1,52 @@
+{
+    "360338": [
+        "Observation of direct processes in photoproduction at HERA", 
+        "ZEUS", 
+        "10.1016/0370-2693(94)91121-5", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-93-151", 
+            "ANL-HEP-PR-94-14"
+        ]
+    ], 
+    "372260": [
+        "Measurement of total and partial photon proton cross-sections at 180-GeV center-of-mass energy", 
+        "ZEUS", 
+        "10.1007/BF01580320", 
+        null, 
+        null, 
+        "ins372260", 
+        null, 
+        [
+            "DESY-94-032"
+        ]
+    ], 
+    "373037": [
+        "Observation of jet production in deep inelastic scattering with a large rapidity gap at HERA", 
+        "ZEUS", 
+        "10.1016/0370-2693(94)90883-4", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-94-063", 
+            "ANL-HEP-PR-94-73"
+        ]
+    ], 
+    "375000": [
+        "Comparison of energy flows in deep inelastic scattering events with and without a large rapidity gap", 
+        "ZEUS", 
+        "10.1016/0370-2693(94)90804-4", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-94-117"
+        ]
+    ]
+}

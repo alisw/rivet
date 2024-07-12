@@ -1,0 +1,50 @@
+{
+    "754622": [
+        "Cross-sections for hard exclusive electroproduction of pi+ mesons on a hydrogen target", 
+        "HERMES", 
+        "10.1016/j.physletb.2007.11.079", 
+        null, 
+        "0707.0222", 
+        null, 
+        null, 
+        [
+            "DESY-07-098"
+        ]
+    ], 
+    "779610": [
+        "Measurement of Azimuthal Asymmetries With Respect To Both Beam Charge and Transverse Target Polarization in Exclusive Electroproduction of Real Photons", 
+        "HERMES", 
+        "10.1088/1126-6708/2008/06/066", 
+        null, 
+        "0802.2499", 
+        null, 
+        null, 
+        [
+            "DESY-07-225"
+        ]
+    ], 
+    "781479": [
+        "Evidence for a Transverse Single-Spin Asymmetry in Leptoproduction of pi+pi- Pairs", 
+        "HERMES", 
+        "10.1088/1126-6708/2008/06/017", 
+        null, 
+        "0803.2367", 
+        null, 
+        null, 
+        [
+            "DESY-08-031"
+        ]
+    ], 
+    "781770": [
+        "Measurement of Parton Distributions of Strange Quarks in the Nucleon from Charged-Kaon Production in Deep-Inelastic Scattering on the Deuteron", 
+        "HERMES", 
+        "10.1016/j.physletb.2008.07.090", 
+        null, 
+        "0803.2993", 
+        null, 
+        null, 
+        [
+            "DESY-07-223"
+        ]
+    ]
+}

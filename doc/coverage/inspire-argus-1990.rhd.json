@@ -1,0 +1,146 @@
+{
+    "278933": [
+        "Inclusive $\\pi^0$ and $\\eta$ Meson Production in Electron Positron Interactions at $\\sqrt{s}=10$-{GeV}", 
+        "ARGUS", 
+        "10.1007/BF02440829", 
+        null, 
+        null, 
+        "ins278933", 
+        null, 
+        [
+            "DESY-89-066"
+        ]
+    ], 
+    "280944": [
+        "A Study of Cabibbo Suppressed D0 Decays", 
+        "ARGUS", 
+        "10.1007/BF02440828", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-89-102"
+        ]
+    ], 
+    "283027": [
+        "Study of Anti-deuteron Production in $e^+ e^-$ Annihilation at 10-{GeV} Center-of-mass Energy", 
+        "ARGUS", 
+        "10.1016/0370-2693(90)90602-3", 
+        null, 
+        null, 
+        "ins283027", 
+        null, 
+        [
+            "DESY-89-144"
+        ]
+    ], 
+    "283772": [
+        "Observation of Semileptonic Charmless B Meson Decays", 
+        "ARGUS", 
+        "10.1016/0370-2693(90)91950-G", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-89-152"
+        ]
+    ], 
+    "284561": [
+        "Measurement of $K^+ K^-$ Production in $\\gamma \\gamma$ Collisions", 
+        "ARGUS", 
+        "10.1007/BF01554464", 
+        null, 
+        null, 
+        "ins284561", 
+        null, 
+        [
+            "DESY-89-179"
+        ]
+    ], 
+    "294600": [
+        "Search for Hadronic $b \\to u$ Decays", 
+        "ARGUS", 
+        "10.1016/0370-2693(90)91293-K", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-90-008"
+        ]
+    ], 
+    "295620": [
+        "Observation of the Decay $D(s$)+ $\\to \\eta^\\prime \\pi^+$", 
+        "ARGUS", 
+        "10.1016/0370-2693(90)90152-V", 
+        null, 
+        null, 
+        "ins295620", 
+        null, 
+        [
+            "DESY-90-032"
+        ]
+    ], 
+    "296188": [
+        "Exclusive Hadronic Decays of $B$ Mesons", 
+        "ARGUS", 
+        "10.1007/BF01614687", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-90-046"
+        ]
+    ], 
+    "296521": [
+        "Determination of the Michel parameter in tau decay", 
+        "ARGUS", 
+        "10.1016/0370-2693(90)91346-D", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-90-059"
+        ]
+    ], 
+    "296522": [
+        "Measurement of XI(c) production in e+ e- annihilation at 10.5-GeV center-of-mass energy", 
+        "ARGUS", 
+        "10.1016/0370-2693(90)91059-K", 
+        null, 
+        null, 
+        "ins296522", 
+        null, 
+        [
+            "DESY-90-063"
+        ]
+    ], 
+    "297591": [
+        "Determination of the tau-neutrino helicity", 
+        "ARGUS", 
+        "10.1016/0370-2693(90)91173-9", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-90-079"
+        ]
+    ], 
+    "298245": [
+        "Study of inclusive semileptonic B meson decays", 
+        "ARGUS", 
+        "10.1016/0370-2693(90)91269-H", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-90-088"
+        ]
+    ]
+}

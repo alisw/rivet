@@ -14,8 +14,8 @@ References:
 RunInfo: PbPb minimum bias events. The analysis holds the Primary Particle definition, so don't limit decays on generator level. 
 NeedCrossSection: no
 Options:
- - cent=REF,GEN,IMP,USR
-Beams: [1000822080, 1000822080]
+ - cent=REF,GEN,IMP,USR,RAW
+Beams: [Pb, Pb]
 # This is _total_ energy of beams, so this becomes 208*2760=574080
 Energies: [574080]
 Description:

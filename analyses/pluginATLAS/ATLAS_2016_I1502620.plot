@@ -8,7 +8,7 @@ LegendYPos=0.25
 LegendXPos=0.05
 RatioPlotYMin=0.85
 RatioPlotYMax=1.15
-YLabel=$\text{d}\sigma / \text{d}y_{\ell\ell}$ [pb]
+YLabel=$\mathrm{d}\sigma / \mathrm{d}y_{\ell\ell}$ [pb]
 XLabel=$|y_{\ell\ell}|$
 # END PLOT
 
@@ -38,7 +38,7 @@ LegendYPos=0.95
 RatioPlotYMin=0.9
 RatioPlotYMax=1.1
 XLabel=$|\eta_\ell|$
-YLabel=$\text{d}\sigma / \text{d}\eta_\ell$ [pb]
+YLabel=$\mathrm{d}\sigma / \mathrm{d}\eta_\ell$ [pb]
 Title=$W$ charge asymmetry, dressed level
 YLabel=$A_\ell$
 # END PLOT
@@ -47,7 +47,7 @@ YLabel=$A_\ell$
 RatioPlotYMin=0.9
 RatioPlotYMax=1.1
 XLabel=$|\eta_\ell|$
-YLabel=$\text{d}\sigma / \text{d}\eta_\ell$ [pb]
+YLabel=$\mathrm{d}\sigma / \mathrm{d}\eta_\ell$ [pb]
 Title=$W^+\rightarrow \ell^+\nu$, dressed level
 # END PLOT
 
@@ -55,7 +55,7 @@ Title=$W^+\rightarrow \ell^+\nu$, dressed level
 RatioPlotYMin=0.9
 RatioPlotYMax=1.1
 XLabel=$|\eta_\ell|$
-YLabel=$\text{d}\sigma / \text{d}\eta_\ell$ [pb]
+YLabel=$\mathrm{d}\sigma / \mathrm{d}\eta_\ell$ [pb]
 Title=$W^-\rightarrow \ell^-\bar{\nu}$, dressed level
 # END PLOT
 

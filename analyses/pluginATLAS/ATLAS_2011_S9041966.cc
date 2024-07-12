@@ -1,6 +1,5 @@
 // -*- C++ -*-
 #include "Rivet/Analysis.hh"
-#include "Rivet/Tools/BinnedHistogram.hh"
 #include "Rivet/Projections/FinalState.hh"
 #include "Rivet/Projections/ChargedFinalState.hh"
 #include "Rivet/Projections/VisibleFinalState.hh"
@@ -12,12 +11,8 @@ namespace Rivet {
 
 
   /// 1-lepton and 2-lepton search for first or second generation leptoquarks
-  /// @todo Clean up the debug stuff
   class ATLAS_2011_S9041966 : public Analysis {
   public:
-
-    /// @name Constructors etc.
-    //@{
 
     /// Constructor
     ATLAS_2011_S9041966()
@@ -37,13 +32,6 @@ namespace Rivet {
         enuW2CR(0), enuttCR(0)
     {    }
 
-    //@}
-
-
-  public:
-
-    /// @name Analysis methods
-    //@{
 
     /// Book histograms and initialize projections before the run
     void init() {
@@ -59,7 +47,7 @@ namespace Rivet {
       veto_elecs.acceptIdPair(PID::ELECTRON);
       declare(veto_elecs, "veto_elecs");
 
-      ///DEBUG
+      /// @todo Clean up DEBUG
       // projection to find all leptons
       IdentifiedFinalState all_mu_e;
       all_mu_e.acceptIdPair(PID::MUON);
@@ -84,22 +72,22 @@ namespace Rivet {
       declare(VisibleFinalState(Cuts::abseta < 4.9), "vfs");
 
       /// Book histograms
-      _count_mumujj = bookHisto1D("count_2muons_dijet", 1, 0., 1.);
-      _count_eejj   = bookHisto1D("count_2elecs_dijet", 1, 0., 1.);
-      _count_muvjj  = bookHisto1D("count_muon_neutrino_dijet", 1, 0., 1.);
-      _count_evjj   = bookHisto1D("count_elec_neutrino_dijet", 1, 0., 1.);
+      book(_count_mumujj ,"count_2muons_dijet", 1, 0., 1.);
+      book(_count_eejj   ,"count_2elecs_dijet", 1, 0., 1.);
+      book(_count_muvjj  ,"count_muon_neutrino_dijet", 1, 0., 1.);
+      book(_count_evjj   ,"count_elec_neutrino_dijet", 1, 0., 1.);
 
-      _hist_St_mumu = bookHisto1D("hist_mumujj_St", 10, 450., 1650.);
-      _hist_St_ee   = bookHisto1D("hist_eejj_St", 10, 450., 1650.);
-      _hist_MLQ_muv = bookHisto1D("hist_munujj_MLQ", 9, 150., 600.);
-      _hist_MLQ_ev  = bookHisto1D("hist_enujj_MLQ", 9, 150., 600.);
+      book(_hist_St_mumu ,"hist_mumujj_St", 10, 450., 1650.);
+      book(_hist_St_ee   ,"hist_eejj_St", 10, 450., 1650.);
+      book(_hist_MLQ_muv ,"hist_munujj_MLQ", 9, 150., 600.);
+      book(_hist_MLQ_ev  ,"hist_enujj_MLQ", 9, 150., 600.);
 
-      _hist_St_mumu_ZCR   = bookHisto1D("CR_Zjets_St_mumu", 40, 0., 800.);
-      _hist_St_ee_ZCR     = bookHisto1D("CR_Zjets_Stee", 40, 0., 800.);
-      _hist_MLQ_munu_W2CR = bookHisto1D("CR_W2jets_MLQ_munu", 20, 0., 400.);
-      _hist_MLQ_enu_W2CR  = bookHisto1D("CR_W2jets_MLQ_enu", 20, 0., 400.);
-      _hist_MLQ_munu_ttCR = bookHisto1D("CR_tt_MLQ_munu", 35, 0., 700.);
-      _hist_MLQ_enu_ttCR  = bookHisto1D("CR_tt_MLQ_enu", 35, 0., 700.);
+      book(_hist_St_mumu_ZCR   ,"CR_Zjets_St_mumu", 40, 0., 800.);
+      book(_hist_St_ee_ZCR     ,"CR_Zjets_Stee", 40, 0., 800.);
+      book(_hist_MLQ_munu_W2CR ,"CR_W2jets_MLQ_munu", 20, 0., 400.);
+      book(_hist_MLQ_enu_W2CR  ,"CR_W2jets_MLQ_enu", 20, 0., 400.);
+      book(_hist_MLQ_munu_ttCR ,"CR_tt_MLQ_munu", 35, 0., 700.);
+      book(_hist_MLQ_enu_ttCR  ,"CR_tt_MLQ_enu", 35, 0., 700.);
 
     }
 
@@ -108,7 +96,7 @@ namespace Rivet {
     /// Perform the per-event analysis
     void analyze(const Event& event) {
 
-      const double weight = event.weight();
+      const double weight = 1.0;
 
       ///DEBUG
       count +=1; //cerr<< "Event " << count << '\n';
@@ -131,10 +119,10 @@ namespace Rivet {
 
 
       // pTcone around muon track
-      foreach ( const Particle & mu, candtemp_mu ) {
+      for ( const Particle & mu : candtemp_mu ) {
         ++tmpmu;
         double pTinCone = -mu.pT();
-        foreach ( const Particle & track, vfs_particles ) {
+        for ( const Particle & track : vfs_particles ) {
           if ( deltaR(mu.momentum(),track.momentum()) < 0.2 )
             pTinCone += track.pT();
         }
@@ -144,10 +132,10 @@ namespace Rivet {
       }
 
       // pTcone around electron
-      foreach ( const Particle e, candtemp_e ) {
+      for ( const Particle & e : candtemp_e ) {
         ++tmpe;
         double pTinCone = -e.pT();
-        foreach ( const Particle & track, vfs_particles ) {
+        for ( const Particle & track : vfs_particles ) {
           if ( deltaR(e.momentum(),track.momentum()) < 0.2 )
             pTinCone += track.pT();
         }
@@ -164,10 +152,10 @@ namespace Rivet {
 
       //DEBUG
       // else{
-      // foreach (const Particle & mu,  cand_mu) {
+      // for (const Particle & mu,  cand_mu) {
       //   cerr << "cand mu: " << "Id " << mu.pid() << "      eta " << mu.eta() << "      pT " << mu.pT() << '\n';
       // }
-      // foreach (const Particle & lepton,  cand_e) {
+      // for (const Particle & lepton,  cand_e) {
       //   cerr << "cand e: " << "Id " << lepton.pid() << "      eta " << lepton.eta() << "      pT " << lepton.pT() << '\n';
       // }} // debug
 
@@ -175,7 +163,7 @@ namespace Rivet {
 
       // pTmiss
       FourMomentum pTmiss;
-      foreach ( const Particle & p, vfs_particles ) {
+      for ( const Particle & p : vfs_particles ) {
         pTmiss -= p.momentum();
       }
       double eTmiss = pTmiss.pT();
@@ -183,15 +171,15 @@ namespace Rivet {
 
       // discard jets that overlap with leptons
       Jets recon_jets;
-      foreach ( const Jet& jet, cand_jets ) {
+      for ( const Jet& jet : cand_jets ) {
         bool away_from_lept = true;
-        foreach ( const Particle e, cand_e ) {
+        for ( const Particle & e : cand_e ) {
           if ( deltaR(e.momentum(),jet.momentum()) <= 0.5 ) {
             away_from_lept = false;
             break;
           }
         }
-        foreach ( const Particle & mu, cand_mu ) {
+        for ( const Particle & mu : cand_mu ) {
           if ( deltaR(mu.momentum(),jet.momentum()) <= 0.5 ) {
             away_from_lept = false;
             break;
@@ -233,12 +221,12 @@ namespace Rivet {
 
       if ( cand_mu.size() == 2 && cand_e.empty() ) {
         ++candmumujj;
-        foreach ( const Particle& mu, cand_mu )
+        for ( const Particle& mu : cand_mu )
           dilept_pair.push_back(mu);
       }
       else if ( cand_e.size() == 2 && cand_mu.empty() ) {
         ++candeejj;
-        foreach ( const Particle& e, cand_e )
+        for ( const Particle& e : cand_e )
           dilept_pair.push_back(e);
       }
       else if ( cand_mu.size() == 1 && cand_e.empty() ) {
@@ -566,18 +554,16 @@ namespace Rivet {
       // << mTev << " (evjj mT cut). "
       // << '\n'<<'\n'
       // ;
-
-      // cerr << "CR - " << "mumu Z: " << mumuZCR << "  ee Z: " << eeZCR << "  munu W+2jets: " << munuW2CR << "  munu tt: " << munuttCR << "  enu W+2jets: " << enuW2CR << "  enu tt: " << enuttCR << '\n';
-
-      // cerr << "mumujj: " << mumujj << "      eejj: " << eejj << "      muvjj: " << muvjj << "      evjj: " << evjj << '\n';
-
+      // cerr << "CR - " << "mumu Z: " << mumuZCR << " ee Z: " << eeZCR << "
+      // munu W+2jets: " << munuW2CR << " munu tt: " << munuttCR << " enu
+      // W+2jets: " << enuW2CR << " enu tt: " << enuttCR << '\n';
+      // cerr << "mumujj: " << mumujj << " eejj: " << eejj << " muvjj: " <<
+      // muvjj << " evjj: " << evjj << '\n';
 
       scale( _hist_St_ee, 120. * 35. * crossSection()/sumOfWeights() );
       scale( _hist_St_mumu, 120. * 35. * crossSection()/sumOfWeights() );
       scale( _hist_MLQ_muv, 50. * 35. * crossSection()/sumOfWeights() );
       scale( _hist_MLQ_ev, 50. * 35. * crossSection()/sumOfWeights() );
-
-
 
       scale( _hist_St_mumu_ZCR, 20. * 35. * crossSection()/sumOfWeights() );
       scale( _hist_St_ee_ZCR, 20. * 35. * crossSection()/sumOfWeights() );
@@ -586,16 +572,15 @@ namespace Rivet {
       scale( _hist_MLQ_munu_ttCR, 20. * 35. * crossSection()/sumOfWeights() );
       scale( _hist_MLQ_enu_ttCR, 20. * 35. * crossSection()/sumOfWeights() );
 
-      /*
-        scale( _hist_eTmiss_mu, binwidth*luminosity* crossSection()/sumOfWeights() );
-      */
+      // scale( _hist_eTmiss_mu, binwidth*luminosity* crossSection()/sumOfWeights() );
 
     }
+
 
   private:
 
     /// @name Histograms
-    //@{
+    /// @{
     Histo1DPtr _count_mumujj;
     Histo1DPtr _count_eejj;
     Histo1DPtr _count_muvjj;
@@ -612,53 +597,21 @@ namespace Rivet {
     Histo1DPtr _hist_MLQ_enu_W2CR;
     Histo1DPtr _hist_MLQ_munu_ttCR;
     Histo1DPtr _hist_MLQ_enu_ttCR;
-
-
-
-
-    //@}
+    /// @}
 
 
     // DEBUG VARIABLES
-    int count;
-    int vetoe;
-    int Njetscut;
-    //int dilept;
-    int candmumujj;
-    int candeejj;
-    //int onelept;
-    int eTmisscut;
-    int candmvjj;
-    int candevjj;
-    int mumujj;
-    int eejj;
-    int mTonelept;
-    int MLQonelept;
-    int MtLQonelept;
-    int Stvonelept;
-    int mTev;
-    int MLQev;
-    int MtLQev;
-    int Stvev;
-    int muvjj;
-    int evjj;
-    int emuvjj;
-    int cande;
-    int candmu;
-    int tmpe;
-    int tmpmu;
-    int mumuZCR;
-    int eeZCR;
-    int munuW2CR;
-    int munuttCR;
-    int enuW2CR;
-    int enuttCR;
+    int count, vetoe, Njetscut;
+    int candmumujj, candeejj, eTmisscut, candmvjj, candevjj, mumujj, eejj;
+    int mTonelept, MLQonelept, MtLQonelept, Stvonelept;
+    int mTev, MLQev, MtLQev, Stvev;
+    int muvjj, evjj, emuvjj, cande, candmu, tmpe, tmpmu;
+    int mumuZCR, eeZCR, munuW2CR, munuttCR, enuW2CR, enuttCR;
 
   };
 
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2011_S9041966);
+  RIVET_DECLARE_ALIASED_PLUGIN(ATLAS_2011_S9041966, ATLAS_2011_I897002);
 
 }

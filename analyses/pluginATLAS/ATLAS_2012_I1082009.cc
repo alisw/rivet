@@ -18,9 +18,7 @@ namespace Rivet {
 
     /// Constructor
     ATLAS_2012_I1082009()
-      : Analysis("ATLAS_2012_I1082009"),
-        _weight25_30(0.),_weight30_40(0.),_weight40_50(0.),
-        _weight50_60(0.),_weight60_70(0.),_weight25_70(0.)
+      : Analysis("ATLAS_2012_I1082009")
     {    }
 
     //@}
@@ -43,39 +41,44 @@ namespace Rivet {
       // unstable final-state for D*
       declare(UnstableParticles(), "UFS");
 
-      _h_pt25_30 = bookHisto1D( 8,1,1);
-      _h_pt30_40 = bookHisto1D( 9,1,1);
-      _h_pt40_50 = bookHisto1D(10,1,1);
-      _h_pt50_60 = bookHisto1D(11,1,1);
-      _h_pt60_70 = bookHisto1D(12,1,1);
-      _h_pt25_70 = bookHisto1D(13,1,1);
+      book(_weight25_30, "_weight_25_30");
+      book(_weight30_40, "_weight_30_40");
+      book(_weight40_50, "_weight_40_50");
+      book(_weight50_60, "_weight_50_60");
+      book(_weight60_70, "_weight_60_70");
+      book(_weight25_70, "_weight_25_70");
+
+      book(_h_pt25_30 , 8,1,1);
+      book(_h_pt30_40 , 9,1,1);
+      book(_h_pt40_50 ,10,1,1);
+      book(_h_pt50_60 ,11,1,1);
+      book(_h_pt60_70 ,12,1,1);
+      book(_h_pt25_70 ,13,1,1);
     }
 
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-      const double weight = event.weight();
-
       // get the jets
       Jets jets;
-      foreach (const Jet& jet, apply<FastJets>(event, "jets").jetsByPt(25.0*GeV)) {
+      for (const Jet& jet : apply<FastJets>(event, "jets").jetsByPt(25.0*GeV)) {
         if ( jet.abseta() < 2.5 ) jets.push_back(jet);
       }
       // get the D* mesons
-      const UnstableParticles& ufs = apply<UnstableFinalState>(event, "UFS");
+      const UnstableParticles& ufs = apply<UnstableParticles>(event, "UFS");
       Particles Dstar;
-      foreach (const Particle& p, ufs.particles()) {
+      for (const Particle& p : ufs.particles()) {
         const int id = p.abspid();
         if(id==413) Dstar.push_back(p);
       }
 
       // loop over the jobs
-      foreach (const Jet& jet, jets ) {
+      for (const Jet& jet : jets ) {
         double perp = jet.perp();
         bool found = false;
         double z(0.);
         if(perp<25.||perp>70.) continue;
-        foreach(const Particle & p, Dstar) {
+        for(const Particle & p : Dstar) {
           if(p.perp()<7.5) continue;
           if(deltaR(p, jet.momentum())<0.6) {
             Vector3 axis = jet.p3().unit();
@@ -85,27 +88,27 @@ namespace Rivet {
             break;
           }
         }
-        _weight25_70 += weight;
-        if(found) _h_pt25_70->fill(z,weight);
+        _weight25_70->fill();
+        if(found) _h_pt25_70->fill(z);
         if(perp>=25.&&perp<30.) {
-          _weight25_30 += weight;
-          if(found) _h_pt25_30->fill(z,weight);
+          _weight25_30->fill();
+          if(found) _h_pt25_30->fill(z);
         }
         else if(perp>=30.&&perp<40.) {
-          _weight30_40 += weight;
-          if(found) _h_pt30_40->fill(z,weight);
+          _weight30_40->fill();
+          if(found) _h_pt30_40->fill(z);
         }
         else if(perp>=40.&&perp<50.) {
-          _weight40_50 += weight;
-          if(found) _h_pt40_50->fill(z,weight);
+          _weight40_50->fill();
+          if(found) _h_pt40_50->fill(z);
         }
         else if(perp>=50.&&perp<60.) {
-          _weight50_60 += weight;
-          if(found) _h_pt50_60->fill(z,weight);
+          _weight50_60->fill();
+          if(found) _h_pt50_60->fill(z);
         }
         else if(perp>=60.&&perp<70.) {
-          _weight60_70 += weight;
-          if(found) _h_pt60_70->fill(z,weight);
+          _weight60_70->fill();
+          if(found) _h_pt60_70->fill(z);
         }
       }
     }
@@ -113,12 +116,12 @@ namespace Rivet {
 
     /// Normalise histograms etc., after the run
     void finalize() {
-      scale(_h_pt25_30,1./_weight25_30);
-      scale(_h_pt30_40,1./_weight30_40);
-      scale(_h_pt40_50,1./_weight40_50);
-      scale(_h_pt50_60,1./_weight50_60);
-      scale(_h_pt60_70,1./_weight60_70);
-      scale(_h_pt25_70,1./_weight25_70);
+      scale(_h_pt25_30,1./ *_weight25_30);
+      scale(_h_pt30_40,1./ *_weight30_40);
+      scale(_h_pt40_50,1./ *_weight40_50);
+      scale(_h_pt50_60,1./ *_weight50_60);
+      scale(_h_pt60_70,1./ *_weight60_70);
+      scale(_h_pt25_70,1./ *_weight25_70);
     }
 
     //@}
@@ -128,8 +131,8 @@ namespace Rivet {
 
     /// @name Histograms
     //@{
-    double _weight25_30,_weight30_40,_weight40_50;
-    double _weight50_60,_weight60_70,_weight25_70;
+    CounterPtr _weight25_30,_weight30_40,_weight40_50;
+    CounterPtr _weight50_60,_weight60_70,_weight25_70;
 
     Histo1DPtr _h_pt25_30;
     Histo1DPtr _h_pt30_40;
@@ -142,6 +145,6 @@ namespace Rivet {
   };
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2012_I1082009);
+  RIVET_DECLARE_PLUGIN(ATLAS_2012_I1082009);
 
 }

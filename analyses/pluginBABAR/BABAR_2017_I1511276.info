@@ -1,0 +1,37 @@
+Name: BABAR_2017_I1511276
+Year: 2017
+Summary: Cross section for $e^+e^-\to K_S^0K_L^0$ with $\pi^0$, $\eta$ and $\pi^0\pi^0$ between threshold and 4 GeV
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 1511276
+Status: VALIDATED NOHEPDATA
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+- Phys.Rev. D95 (2017) no.5, 052001
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams:  [e+,e-]
+Description:
+   'Cross section for $e^+e^-\to K_S^0K_L^0$ with $\pi^0$, $\eta$ and $\pi^0\pi^0$ between threshold and 4 GeV using radiative events.'
+Keywords:
+BibKey: TheBABAR:2017vgl
+BibTeX: '@article{TheBABAR:2017vgl,
+      author         = "Lees, J. P. and others",
+      title          = "{Cross sections for the reactions $e^+ e^-\to K^0_S
+                        K^0_L\pi^0$, $K^0_S K^0_L\eta$, and $K^0_S
+                        K^0_L\pi^0\pi^0$ from events with initial-state
+                        radiation}",
+      collaboration  = "BaBar",
+      journal        = "Phys. Rev.",
+      volume         = "D95",
+      year           = "2017",
+      number         = "5",
+      pages          = "052001",
+      doi            = "10.1103/PhysRevD.95.052001",
+      eprint         = "1701.08297",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "BABAR-PUB-16-004, SLAC-PUB-16918",
+      SLACcitation   = "%%CITATION = ARXIV:1701.08297;%%"
+}'

@@ -15,7 +15,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(CMS_2017_I1467451);
+    RIVET_DEFAULT_ANALYSIS_CTOR(CMS_2017_I1467451);
 
 
     /// Book histograms and initialise projections before the run
@@ -25,11 +25,14 @@ namespace Rivet {
       const double lepMaxEta = 2.5;
       const Cut lepton_cut = (Cuts::abseta < lepMaxEta);
 
+      MSG_WARNING("\033[91;1mLIMITED VALIDITY - check info file for details!\033[m");
+
+
       // Initialise and register projections
-      FinalState fs(-2.5,2.5,0.0*GeV);
-      FinalState fsm(-5,5,0.0*GeV);
-      addProjection(fs, "FS");
-      addProjection(fsm, "FSM");
+      FinalState fs((Cuts::etaIn(-2.5,2.5)));
+      FinalState fsm((Cuts::etaIn(-5,5)));
+      declare(fs, "FS");
+      declare(fsm, "FSM");
 
       ChargedLeptons charged_leptons(fs);
       IdentifiedFinalState photons(fs);
@@ -44,21 +47,21 @@ namespace Rivet {
       prompt_photons.acceptTauDecays(false);
 
       DressedLeptons dressed_leptons = DressedLeptons(prompt_photons, prompt_leptons, lepConeSize, lepton_cut, true);
-      addProjection(dressed_leptons, "DressedLeptons");
+      declare(dressed_leptons, "DressedLeptons");
 
       MissingMomentum Met(fsm);
-      addProjection(Met, "MET");
+      declare(Met, "MET");
 
 
       // Book histograms
-      histoPtH = bookHisto1D(1,1,1);
-      histoXsec = bookHisto1D(2,1,1);
+      book(histoPtH , 1,1,1);
+      book(histoXsec, 2,1,1);
     }
 
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-      const double weight = event.weight();
+      const double weight = 1.0;
 
       Particles leptons = applyProjection<DressedLeptons>(event, "DressedLeptons").particlesByPt(10.0*GeV);
       if (leptons.size() < 2) vetoEvent;
@@ -98,6 +101,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CMS_2017_I1467451);
+  RIVET_DECLARE_PLUGIN(CMS_2017_I1467451);
 
 }

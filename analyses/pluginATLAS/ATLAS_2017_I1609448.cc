@@ -26,8 +26,8 @@ namespace Rivet {
       Scatter2DPtr scatter;
       unsigned int d, x, y;
 
-      void fill(double value, double weight) {
-        histo->fill(value, weight);
+      void fill(double value) {
+        histo->fill(value);
       }
     };
 
@@ -66,7 +66,7 @@ namespace Rivet {
       declare(MissingMomentum(met_fs), "MET");
 
       // Jet collection
-      FastJets jets(FinalState(Cuts::abseta < 4.9), FastJets::ANTIKT, 0.4, JetAlg::NO_MUONS, JetAlg::NO_INVISIBLES);
+      FastJets jets(FinalState(Cuts::abseta < 4.9), FastJets::ANTIKT, 0.4, JetAlg::Muons::NONE, JetAlg::Invisibles::NONE);
       declare(jets, "Jets");
 
       _h["met_mono"] = bookHandler(1, 1, 2);
@@ -79,14 +79,14 @@ namespace Rivet {
     HistoHandler bookHandler(unsigned int id_d, unsigned int id_x, unsigned int id_y) {
       HistoHandler dummy;
       if (_mode < 2) {  // numerator mode
-        const string histName = "_" + makeAxisCode(id_d, id_x, id_y);
-        dummy.histo = bookHisto1D(histName, refData(id_d, id_x, id_y)); // hidden auxiliary output
-        dummy.scatter = bookScatter2D(id_d, id_x, id_y - 1, true); // ratio
+        const string histName = "_" + mkAxisCode(id_d, id_x, id_y);
+        book(dummy.histo, histName, refData(id_d, id_x, id_y)); // hidden auxiliary output
+        book(dummy.scatter, id_d, id_x, id_y - 1, true); // ratio
         dummy.d = id_d;
         dummy.x = id_x;
         dummy.y = id_y;
       } else {
-        dummy.histo = bookHisto1D(id_d, id_x, 4); // denominator mode
+        book(dummy.histo, id_d, id_x, 4); // denominator mode
       }
       return dummy;
     }
@@ -120,8 +120,6 @@ namespace Rivet {
     /// Perform the per-event analysis
     void analyze(const Event& event) {
 
-      const double weight = event.weight();
-
       // Require 0 (Znunu) or 2 (Zll) dressed leptons
       bool isZll = bool(_mode);
       const vector<DressedLepton> &vetoLeptons = applyProjection<DressedLeptons>(event, "VetoLeptons").dressedLeptons();
@@ -143,7 +141,7 @@ namespace Rivet {
         // Leading lepton pT cut
         pass_Zll &= leptons[0].pT() > 80*GeV;
         // Opposite-charge requirement
-        pass_Zll &= threeCharge(leptons[0]) + threeCharge(leptons[1]) == 0;
+        pass_Zll &= charge3(leptons[0]) + charge3(leptons[1]) == 0;
         // Z-mass requirement
         const double Zmass = (leptons[0].mom() + leptons[1].mom()).mass();
         pass_Zll &= (Zmass >= 66*GeV && Zmass <= 116*GeV);
@@ -182,11 +180,11 @@ namespace Rivet {
       const bool pass_met_dphi = met > 200*GeV && !dphi_fail;
       const bool pass_vbf = pass_met_dphi && mjj > 200*GeV && jpt1 > 80*GeV && jpt2 > 50*GeV && njets >= 2 && !njets_gap;
       const bool pass_mono = pass_met_dphi && jpt1 > 120*GeV && fabs(jeta1) < 2.4;
-      if (pass_mono)  _h["met_mono"].fill(met, weight);
+      if (pass_mono)  _h["met_mono"].fill(met);
       if (pass_vbf) {
-        _h["met_vbf"].fill(met/GeV, weight);
-        _h["mjj_vbf"].fill(mjj/GeV, weight);
-        _h["dphijj_vbf"].fill(dphijj, weight);
+        _h["met_vbf"].fill(met/GeV);
+        _h["mjj_vbf"].fill(mjj/GeV);
+        _h["dphijj_vbf"].fill(dphijj);
       }
     }
 
@@ -249,6 +247,6 @@ namespace Rivet {
 
   };
 
-  // Hooks for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2017_I1609448);
+
+  RIVET_DECLARE_PLUGIN(ATLAS_2017_I1609448);
 }

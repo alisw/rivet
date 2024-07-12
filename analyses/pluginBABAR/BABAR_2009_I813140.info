@@ -1,0 +1,36 @@
+Name: BABAR_2009_I813140
+Year: 2009
+Summary: $\pi^+\pi^-$ mass distriubution in $B^+\to\pi^+\pi^+\pi^-$
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 813140
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 79 (2009) 072006
+RunInfo: Any process producing B+ mesons originally Upsilon(4S) decay
+Description:
+  'Measurement of the $\pi^+\pi^-$ mass distriubutions in $B^+\to\pi^+\pi^+\pi^-$. The data were read from the plotsi in the paper and may not be corrected for efficiency/acceptable, although the backgrounds given in the paper have been subtracted.'
+ValidationInfo:
+  'Herwig7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BaBar:2009vfr
+BibTeX: '@article{BaBar:2009vfr,
+    author = "Aubert, Bernard and others",
+    collaboration = "BaBar",
+    title = "{Dalitz Plot Analysis of B+- ---\ensuremath{>} pi+-pi+-pi-+ Decays}",
+    eprint = "0902.2051",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "SLAC-PUB-13494, BABAR-PUB-08-054",
+    doi = "10.1103/PhysRevD.79.072006",
+    journal = "Phys. Rev. D",
+    volume = "79",
+    pages = "072006",
+    year = "2009"
+}
+'

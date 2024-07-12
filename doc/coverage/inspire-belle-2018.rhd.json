@@ -1,0 +1,353 @@
+{
+    "1512929": [
+        "Search for $\\boldsymbol{B\\to h\\nu\\bar{\\nu}}$ decays with semileptonic tagging at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.96.091101", 
+        null, 
+        "1702.03224", 
+        null, 
+        null, 
+        []
+    ], 
+    "1606201": [
+        "Production cross sections of hyperons and charmed baryons from $e^+e^-$ annihilation near $\\sqrt{s} = 10.52$~GeV", 
+        "Belle", 
+        "10.1103/PhysRevD.97.072005", 
+        null, 
+        "1706.06791", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2017-14", 
+            "KEK-PREPRINT-2017-15"
+        ]
+    ], 
+    "1613517": [
+        "Angular analysis of the $e^+ e^- \\to D^{(*) \\pm} D^{* \\mp}$ process near the open charm threshold using initial-state radiation", 
+        "Belle", 
+        "10.1103/PhysRevD.97.012002", 
+        null, 
+        "1707.09167", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2017-15", 
+            "KEK-PREPRINT-2017-16"
+        ]
+    ], 
+    "1621272": [
+        "Measurement of the $\\tau$ lepton polarization and $R(D^*)$ in the decay $\\bar{B} \\rightarrow D^* \\tau^- \\bar{\\nu}_\\tau$ with one-prong hadronic $\\tau$ decays at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.97.012004", 
+        null, 
+        "1709.00129", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2017-26", 
+            "BELLE-PREPRINT-2017-18"
+        ]
+    ], 
+    "1624416": [
+        "Measurements of the absolute branching fractions of $B^{+} \\to X_{c\\bar{c}} K^{+}$ and $B^{+} \\to \\bar{D}^{(\\ast) 0} \\pi^{+} $ at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.97.012005", 
+        null, 
+        "1709.06108", 
+        null, 
+        null, 
+        []
+    ], 
+    "1625743": [
+        "Measurement of the tau Michel parameters $\\bar{\\eta}$ and $\\xi\\kappa$ in the radiative leptonic decay $\\tau^- \\rightarrow \\ell^- \\nu_{\\tau} \\bar{\\nu}_{\\ell}\\gamma$", 
+        "Belle", 
+        "10.1093/ptep/pty003", 
+        null, 
+        "1709.08833", 
+        null, 
+        null, 
+        []
+    ], 
+    "1637368": [
+        "Observation of Excited $\\Omega_c$ Charmed Baryons in $e^+e^-$ Collisions", 
+        "Belle", 
+        "10.1103/PhysRevD.97.051102", 
+        null, 
+        "1711.07927", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2017-22", 
+            "KEK-PREPRINT-2017-32"
+        ]
+    ], 
+    "1640639": [
+        "Search for $CP$ violation in the $D^{+}\\to\\pi^{+}\\pi^{0}$ decay at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.97.011101", 
+        null, 
+        "1712.00619", 
+        null, 
+        null, 
+        []
+    ], 
+    "1641071": [
+        "Measurement of branching fractions of hadronic decays of the $\\Omega_c^0$  baryon", 
+        "Belle", 
+        "10.1103/PhysRevD.97.032001", 
+        null, 
+        "1712.01333", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2017-23", 
+            "KEK-PREPRINT-2017-33"
+        ]
+    ], 
+    "1641263": [
+        "Study of $K^0_S$ pair production in single-tag two-photon collisions", 
+        "Belle", 
+        "10.1103/PhysRevD.97.052003", 
+        null, 
+        "1712.02145", 
+        null, 
+        null, 
+        []
+    ], 
+    "1642436": [
+        "Observation of $\\Xi_{c}(2930)^0$ and updated measurement of $B^{-} \\to K^{-} \\Lambda_{c}^{+} \\bar{\\Lambda}_{c}^{-}$ at Belle", 
+        "Belle", 
+        "10.1140/epjc/s10052-018-5720-5", 
+        null, 
+        "1712.03612", 
+        null, 
+        null, 
+        [
+            "Belle Preprint # 2017-24; KEK Preprint # 2017-35", 
+            "BELLE-PREPRINT-#-2017-24", 
+            "KEK-PREPRINT-#-2017-35"
+        ]
+    ], 
+    "1642727": [
+        "Search for $B^{-}\\to\\mu^{-}\\bar\\nu_\\mu$ Decays at the Belle Experiment", 
+        "Belle", 
+        "10.1103/PhysRevLett.121.031801", 
+        null, 
+        "1712.04123", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2017-17", 
+            "KEK-PREPRINT-2017-21"
+        ]
+    ], 
+    "1654571": [
+        "Measurement of the Decays $\\Lambda_c\\to \\Sigma\\pi\\pi$ at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.98.112006", 
+        null, 
+        "1802.03421", 
+        null, 
+        null, 
+        []
+    ], 
+    "1659108": [
+        "Inclusive study of bottomonium production in association with an $\\eta $ meson in $e^+e^-$ annihilations near $\\varUpsilon (5S)$", 
+        "Belle", 
+        "10.1140/epjc/s10052-018-6086-4", 
+        null, 
+        "1803.03225", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2018-01", 
+            "KEK-PREPRINT-2017-60"
+        ]
+    ], 
+    "1663226": [
+        "Measurement of the branching fraction of $B \\rightarrow D^{(*)}\\pi \\ell\\nu$ at Belle using hadronic tagging in fully reconstructed events", 
+        "Belle", 
+        "10.1103/PhysRevD.98.012005", 
+        null, 
+        "1803.06444", 
+        null, 
+        null, 
+        []
+    ], 
+    "1663447": [
+        "Measurement of time-dependent $CP$ asymmetries in $B^{0}\\to K_S^0 \\eta \\gamma$ decays", 
+        "Belle", 
+        "10.1103/PhysRevD.97.092003", 
+        null, 
+        "1803.07774", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2018-07", 
+            "KEK-PREPRINT-2018-1"
+        ]
+    ], 
+    "1664541": [
+        "Observation of $\\Upsilon(4S)\\to \\eta' \\Upsilon(1S)$", 
+        "Belle", 
+        "10.1103/PhysRevLett.121.062001", 
+        null, 
+        "1803.10303", 
+        null, 
+        null, 
+        []
+    ], 
+    "1668122": [
+        "First Evidence for cos2\u03b2>0 and Resolution of the Cabibbo-Kobayashi-Maskawa Quark-Mixing Unitarity Triangle Ambiguity", 
+        "BaBar", 
+        "10.1103/PhysRevLett.121.261801", 
+        null, 
+        "1804.06152", 
+        null, 
+        null, 
+        []
+    ], 
+    "1668123": [
+        "Measurement of $\\cos{2\\beta}$ in $B^{0} \\to D^{(*)} h^{0}$ with $D \\to K_{S}^{0} \\pi^{+} \\pi^{-}$ decays by a combined time-dependent Dalitz plot analysis of BaBar and Belle data", 
+        "BaBar", 
+        "10.1103/PhysRevD.98.112012", 
+        null, 
+        "1804.06153", 
+        null, 
+        null, 
+        []
+    ], 
+    "1672018": [
+        "Search for $\\Upsilon(1S,2S) \\to Z^{+}_{c}Z^{(\\prime) -}_{c}$ and $e^{+}e^{-} \\to Z^{+}_{c}Z^{(\\prime) -}_{c}$ at $\\sqrt{s}$ = 10.52, 10.58, and 10.867 GeV", 
+        "Belle", 
+        "10.1103/PhysRevD.97.112004", 
+        null, 
+        "1805.02308", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2018-02", 
+            "KEK-PREPRINT-2017-65", 
+            "BELLE-PREPRINT-#-2018-02", 
+            "KEK-PREPRINT-#:-2017-65"
+        ]
+    ], 
+    "1672149": [
+        "Measurement of $\\eta_c(1S), \\eta_c(2S)$ and non-resonant $\\eta' \\pi^+ pi^-$ production via two-photon collisions", 
+        "Belle", 
+        "10.1103/PhysRevD.98.072001", 
+        null, 
+        "1805.03044", 
+        null, 
+        null, 
+        []
+    ], 
+    "1674698": [
+        "Observation of an Excited $\\Omega^-$ Baryon", 
+        "Belle", 
+        "10.1103/PhysRevLett.121.052003", 
+        null, 
+        "1805.09384", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2018-09", 
+            "KEK-PREPRINT-2018-3", 
+            "Belle Preprint 2018-09", 
+            "KEK Preprint 2018-3"
+        ]
+    ], 
+    "1678261": [
+        "Observation of $e^+e^-\\to\\pi^+\\pi^-\\pi^0\\chi_{b1,2}(1P)$ and search for $e^+e^-\\to\\phi\\chi_{b1,2}(1P)$ at $\\sqrt{s}=$ 10.96\u201411.05  GeV", 
+        "Belle", 
+        "10.1103/PhysRevD.98.091102", 
+        null, 
+        "1806.06203", 
+        null, 
+        null, 
+        []
+    ], 
+    "1679584": [
+        "Evidence of a structure in $\\bar{K}^{0} \\Lambda _{c}^{+}$ consistent with a charged $\\Xi _c(2930)^{+}$ , and updated measurement of $\\bar{B}^{0} \\rightarrow \\bar{K}^{0} \\Lambda _{c}^{+} \\bar{\\Lambda }_{c}^{-}$ at Belle", 
+        "Belle", 
+        "10.1140/epjc/s10052-018-6425-5", 
+        null, 
+        "1806.09182", 
+        null, 
+        null, 
+        [
+            "Belle Preprint # 2018-10; KEK Preprint # 2018-16", 
+            "BELLE-PREPRINT-2018-10", 
+            "KEK-PREPRINT-2018-16"
+        ]
+    ], 
+    "1680647": [
+        "Observation of $\\Upsilon(2S)\\to\\gamma \\eta_{b}(1S)$ decay", 
+        "Belle", 
+        "10.1103/PhysRevLett.121.232001", 
+        null, 
+        "1807.01201", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2018-14", 
+            "KEK-PREPRINT-2018-20", 
+            "PNNL-SA-135879"
+        ]
+    ], 
+    "1681440": [
+        "Search for the lepton-flavor-violating decay $B^{0}\\to K^{\\ast 0} \\mu^{\\pm} e^{\\mp}$", 
+        "Belle", 
+        "10.1103/PhysRevD.98.071101", 
+        null, 
+        "1807.03267", 
+        null, 
+        null, 
+        [
+            "Belle Preprint 2018-11", 
+            "KEK Preprint 2018-17", 
+            "University of\n  Cincinnati preprint number UCHEP-18-03", 
+            "BELLE-PREPRINT-2018-11", 
+            "KEK-PREPRINT-2018-17", 
+            "UCHEP-18-03", 
+            "UNIVERSITY-OF --CINCINNATI-PREPRINT-NUMBER-UCHEP-18-03"
+        ]
+    ], 
+    "1696692": [
+        "Measurement of the branching fraction and time-dependent $CP$ asymmetry for $B^0\\to J/\\psi\\pi^0$ decays", 
+        "Belle", 
+        "10.1103/PhysRevD.98.112008", 
+        null, 
+        "1810.01356", 
+        null, 
+        null, 
+        [
+            "Belle Preprint 2018-20", 
+            "KEK Preprint 2018-29", 
+            "UCHEP-18-04"
+        ]
+    ], 
+    "1700174": [
+        "Observation of $e^+e^- \\to \\gamma \\chi_{c1}$ and search for $e^+e^- \\to \\gamma \\chi_{c0}, \\gamma \\chi_{c2},$ and $\\gamma\\eta_c$ at $\\sqrt{s}$ near 10.6 GeV at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.98.092015", 
+        null, 
+        "1810.10291", 
+        null, 
+        null, 
+        [
+            "Belle Preprint # 2018-22", 
+            "KEK Preprint # 2018-55"
+        ]
+    ], 
+    "1701180": [
+        "Search for the rare decay of $B^+ \\to \\ell^{\\,+} \\nu_{\\ell} \\gamma$ with improved hadronic tagging", 
+        "Belle", 
+        "10.1103/PhysRevD.98.112016", 
+        null, 
+        "1810.12976", 
+        null, 
+        null, 
+        []
+    ]
+}

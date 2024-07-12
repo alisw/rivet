@@ -12,9 +12,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    CDF_2008_S7782535() : Analysis("CDF_2008_S7782535")
-    {
-    }
+    RIVET_DEFAULT_ANALYSIS_CTOR(CDF_2008_S7782535);
 
 
     /// @name Analysis methods
@@ -22,7 +20,7 @@ namespace Rivet {
 
     void init() {
       // Set up projections
-      const FinalState fs(-3.6, 3.6);
+      const FinalState fs((Cuts::etaIn(-3.6, 3.6)));
       declare(fs, "FS");
       FastJets jetproj(fs, FastJets::CDFMIDPOINT, 0.7);
       jetproj.useInvisibles();
@@ -36,9 +34,9 @@ namespace Rivet {
         _jsnames_pT[i] = pname;
         const JetShape jsp(jetproj, 0.0, 0.7, 7, _ptedges[i], _ptedges[i+1], 0.0, 0.7, RAPIDITY);
         declare(jsp, pname);
-        _h_Psi_pT[i] = bookProfile1D(i+1, 2, 1);
+        book(_h_Psi_pT[i] ,i+1, 2, 1);
       }
-      _h_OneMinusPsi_vs_pT = bookScatter2D(5, 1, 1);
+      book(_h_OneMinusPsi_vs_pT, 5, 1, 1);
     }
 
 
@@ -53,7 +51,7 @@ namespace Rivet {
 
       // Filter to just get a vector of b-jets
       Jets bjets;
-      foreach (const Jet& j, jets) {
+      for (const Jet& j : jets) {
         if (j.bTagged()) bjets += j;
       }
       if (bjets.empty())  {
@@ -63,7 +61,7 @@ namespace Rivet {
 
       // Bin b-jets in pT
       Jets bjets_ptbinned[4];
-      foreach (const Jet& bj, bjets) {
+      for (const Jet& bj : bjets) {
         const FourMomentum pbj = bj.momentum();
         const int ipt = binIndex(pbj.pT(), _ptedges);
         if (ipt == -1) continue; ///< Out of pT range (somehow!)
@@ -71,7 +69,6 @@ namespace Rivet {
       }
 
       // Loop over jet pT bins and fill shape profiles
-      const double weight = event.weight();
       for (size_t ipt = 0; ipt < 4; ++ipt) {
         if (bjets_ptbinned[ipt].empty()) continue;
         // Don't use the cached result: copy construct and calculate for provided b-jets only
@@ -80,7 +77,7 @@ namespace Rivet {
         for (size_t ijet = 0; ijet < jsipt.numJets(); ++ijet) {
           for (size_t rbin = 0; rbin < jsipt.numBins(); ++rbin) {
             const double r_Psi = jsipt.rBinMax(rbin);
-            _h_Psi_pT[ipt]->fill(r_Psi/0.7, jsipt.intJetShape(ijet, rbin), weight);
+            _h_Psi_pT[ipt]->fill(r_Psi/0.7, jsipt.intJetShape(ijet, rbin));
           }
         }
       }
@@ -115,13 +112,10 @@ namespace Rivet {
 
     /// @name Analysis data
     //@{
-
     /// Jet \f$ p_\perp\f$ bins.
     vector<double> _ptedges; // This can't be a raw array if we want to initialise it non-painfully
-
     /// JetShape projection name for each \f$p_\perp\f$ bin.
     string _jsnames_pT[4];
-
     //@}
 
 
@@ -135,7 +129,6 @@ namespace Rivet {
 
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CDF_2008_S7782535);
+  RIVET_DECLARE_ALIASED_PLUGIN(CDF_2008_S7782535, CDF_2008_I787780);
 
 }

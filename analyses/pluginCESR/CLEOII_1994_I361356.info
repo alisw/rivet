@@ -1,0 +1,33 @@
+Name: CLEOII_1994_I361356
+Year: 1994
+Summary: Spectra of $\Sigma_c^0$ and $\Sigma_c^{++}$ produced in $\Upsilon(4S)$ decays
+Experiment: CLEOII
+Collider: CESR
+InspireID: 361356
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 73 (1994) 1472-1476
+RunInfo: Any process producing Upsilon(4S), originally e+e-
+Description:
+  'Spectra of $\Sigma_c^0$ and $\Sigma_c^{++}$ produced in $\Upsilon(4S)$ decays measured by the CLEO collaboration.'
+ValidationInfo:
+  'Herwig 7 Upsilon(4S) decay events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Procario:1993nd
+BibTeX: '@article{Procario:1993nd,
+      author         = "Procario, M. and others",
+      title          = "{Observation of inclusive B decays to the charmed baryons
+                        Sigma(c)++ and Sigma(c)0}",
+      collaboration  = "CLEO",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "73",
+      year           = "1994",
+      pages          = "1472-1476",
+      doi            = "10.1103/PhysRevLett.73.1472",
+      reportNumber   = "CLNS-93-1264, CLEO-93-24",
+      SLACcitation   = "%%CITATION = PRLTA,73,1472;%%"
+}'

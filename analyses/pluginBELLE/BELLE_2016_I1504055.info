@@ -1,0 +1,37 @@
+Name: BELLE_2016_I1504055
+Year: 2016
+Summary: Angular Analysis of $B\to K^{*}\ell^-\ell^-$
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1504055
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 118 (2017) 11, 111801
+RunInfo: Any process producing B+ and B0, originally Upsilon(4S) decay
+Description:
+  'Measurement of angular coefficients in $B\to K^{*}\ell^-\ell^-$, the code implements these by taking appropriate moments'
+ValidationInfo:
+  'Herwig7 events using evtGen for decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle:2016fev
+BibTeX: '@article{Belle:2016fev,
+    author = "Wehle, S. and others",
+    collaboration = "Belle",
+    title = "{Lepton-Flavor-Dependent Angular Analysis of $B\to K^\ast \ell^+\ell^-$}",
+    eprint = "1612.05014",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BELLE-PREPRINT-2016-15, KEK-PREPRINT-2016-54",
+    doi = "10.1103/PhysRevLett.118.111801",
+    journal = "Phys. Rev. Lett.",
+    volume = "118",
+    number = "11",
+    pages = "111801",
+    year = "2017"
+}
+'

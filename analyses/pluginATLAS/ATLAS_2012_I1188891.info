@@ -5,10 +5,12 @@ Experiment: ATLAS
 Collider: LHC 7TeV
 InspireID: 1188891
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Cecile Lapoire <clapoire@cern.ch>
  - Roman Lysak <lysak@fzu.cz>
 References:
+ - ATLAS-STDM-2011-40
  - arXiv:1210.0441
 RunInfo:
   pp di-jet events at 7 TeV
@@ -18,7 +20,7 @@ Beams: [p+, p+]
 Energies: [7000]
 Description:
   'The measurement of the flavour composition of dijet events produced
-   in pp collisions at $\sqrt{s}=7\;\TeV$ using the ATLAS detector.
+   in pp collisions at $\sqrt{s}=7~\TeV$ using the ATLAS detector.
    Six possible combinations of light, charm and bottom jets are identified
    in the dijet events, where the jet flavour is defined by the presence
    of bottom, charm or solely light flavour hadrons in the jet.
@@ -38,4 +40,16 @@ BibTeX: '@article{Aad:2012ma,
       primaryClass   = "hep-ex",
       SLACcitation   = "%%CITATION = ARXIV:1210.0441;%%",
 }'
+
+
+ReleaseTests:
+ - $A LHC-7-Jets-10
+ - $A-2 LHC-7-Jets-2
+ - $A-3 LHC-7-Jets-3
+ - $A-4 LHC-7-Jets-4
+ - $A-5 LHC-7-Jets-5
+ - $A-6 LHC-7-Jets-6
+ - $A-7 LHC-7-Jets-7
+ - $A-8 LHC-7-Jets-8
+ - $A-9 LHC-7-Jets-9
 

@@ -59,7 +59,7 @@ namespace Rivet {
     /// Constructor.
     Hemispheres(const AxesDefinition& ax) {
       setName("Hemispheres");
-      addProjection(ax, "Axes");
+      declare(ax, "Axes");
       clear();
     }
 
@@ -90,7 +90,7 @@ namespace Rivet {
     void project(const Event& e);
 
     /// Compare with other projections.
-    int compare(const Projection& p) const {
+    CmpState compare(const Projection& p) const {
       return mkNamedPCmp(p, "Axes");
     }
 
@@ -148,12 +148,17 @@ namespace Rivet {
 
 
     /// Is the hemisphere with the max mass the same as the one with the max broadening?
-    bool massMatchesBroadening() {
+    bool massMatchesBroadening() const {
       return _highMassEqMaxBroad;
     }
 
+    /// Is the hemisphere with the max mass the one in the direction of the axis
+    bool highMassDirection() const  {
+      return _highMassDirection;
+    }
 
-  private:
+
+  protected:
 
     /// Visible energy-squared, \f$ E^2_\mathrm{vis} \f$.
     double _E2vis;
@@ -167,6 +172,8 @@ namespace Rivet {
     /// Is the hemisphere with the max mass the same as the one with the max broadening?
     bool _highMassEqMaxBroad;
 
+    /// Is the hemisphere with the max mass the one in the direction of the axis;
+    bool _highMassDirection;
   };
 
 

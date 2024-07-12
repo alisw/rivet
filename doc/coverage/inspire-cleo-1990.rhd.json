@@ -1,0 +1,54 @@
+{
+    "28223": [
+        "Determination of B(D(s)+ ---> phi pi+) via observations of D(s)+ ---> phi l+ neutrino", 
+        "CLEO", 
+        "10.1103/PhysRevLett.65.1531", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-90/1003", 
+            "CLEO-90-9"
+        ]
+    ], 
+    "296722": [
+        "Study of the decays D0 ---> K anti-K, pi anti-pi", 
+        "CLEO", 
+        "10.1103/PhysRevLett.65.1184", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-90-998", 
+            "CLEO-90-8"
+        ]
+    ], 
+    "297934": [
+        "Study of K* production in tau decay", 
+        "CLEO", 
+        "10.1016/0370-2693(90)90256-6", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-90-997", 
+            "CLEO-90-7"
+        ]
+    ], 
+    "298223": [
+        "Measurement of the Lambda(c) decay asymmetry parameter", 
+        "CLEO", 
+        "10.1103/PhysRevLett.65.2842", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "CLNS-90-1013", 
+            "CLEO-90-10"
+        ]
+    ]
+}

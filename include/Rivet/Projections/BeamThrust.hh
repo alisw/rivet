@@ -9,6 +9,7 @@
 namespace Rivet {
 
 
+  /// Calculator of the beam-thrust observable
   class BeamThrust : public Projection {
   public:
 
@@ -17,7 +18,7 @@ namespace Rivet {
 
     BeamThrust(const FinalState& fsp) {
       setName("BeamThrust");
-      addProjection(fsp, "FS");
+      declare(fsp, "FS");
     }
 
     /// Clone on the heap.
@@ -34,7 +35,7 @@ namespace Rivet {
     }
 
     /// Compare projections
-    int compare(const Projection& p) const {
+    CmpState compare(const Projection& p) const {
       return mkNamedPCmp(p, "FS");
     }
 
@@ -61,12 +62,13 @@ namespace Rivet {
     //@}
 
 
-  private:
+  protected:
 
     /// The beamthrust scalar.
     double _beamthrust;
 
-  private:
+
+  protected:
 
     /// Explicitly calculate the beamthrust values.
     void _calcBeamThrust(const vector<FourMomentum>& fsmomenta);

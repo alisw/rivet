@@ -1,0 +1,170 @@
+{
+    "379632": [
+        "Search for high mass top quark production in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.74.2422", 
+        null, 
+        "hep-ex/9411001", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-94-354-E", 
+            "FSU-SCRI-95-48"
+        ]
+    ], 
+    "381422": [
+        "Inclusive $\\mu$ and $B$ quark production cross-sections in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.74.3548", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-94-409-E"
+        ]
+    ], 
+    "393099": [
+        "Observation of the top quark", 
+        "D0", 
+        "10.1103/PhysRevLett.74.2632", 
+        null, 
+        "hep-ex/9503003", 
+        "ins393099", 
+        null, 
+        [
+            "FERMILAB-PUB-95-028-E", 
+            "D0-2698", 
+            "D0-PUB-95-7"
+        ]
+    ], 
+    "393394": [
+        "Search for $W$ boson pair production in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.75.1023", 
+        null, 
+        "hep-ex/9503012", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-95-044-E"
+        ]
+    ], 
+    "394245": [
+        "Measurement of the $Z Z \\gamma$ and $Z \\gamma \\gamma$ couplings in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.75.1028", 
+        null, 
+        "hep-ex/9503010", 
+        "ins394245", 
+        null, 
+        [
+            "FERMILAB-PUB-95-042-E"
+        ]
+    ], 
+    "394610": [
+        "A Study of the strong coupling constant using $W + {\\rm jets}$ processes", 
+        "D0", 
+        "10.1103/PhysRevLett.75.3226", 
+        null, 
+        null, 
+        "ins394610", 
+        null, 
+        [
+            "FERMILAB-PUB-95-085-E", 
+            "FERMILAB-PUB-95-219-E", 
+            "FSU-SCRI-95-49", 
+            "D0-PUB-95-10"
+        ]
+    ], 
+    "395069": [
+        "Measurement of the $W W \\gamma$ gauge boson couplings in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.75.1034", 
+        null, 
+        "hep-ex/9505007", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-95-101-E", 
+            "D0-2701", 
+            "D0-PUB-95-8"
+        ]
+    ], 
+    "395311": [
+        "Search for squarks and gluinos in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.75.618", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-95-057-E"
+        ]
+    ], 
+    "395459": [
+        "$W$ and $Z$ boson production in $p \\bar{p}$ collisions at $\\sqrt{s}$ = 1.8-TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.75.1456", 
+        null, 
+        "hep-ex/9505013", 
+        "ins395459", 
+        null, 
+        [
+            "FERMILAB-PUB-95-130-E"
+        ]
+    ], 
+    "397099": [
+        "Second generation leptoquark search in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.75.3618", 
+        null, 
+        "hep-ex/9507002", 
+        "ins397099", 
+        null, 
+        [
+            "FERMILAB-PUB-95-185-E"
+        ]
+    ], 
+    "398175": [
+        "Transverse energy distributions within jets in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1016/0370-2693(95)00889-S", 
+        null, 
+        null, 
+        "ins398175", 
+        null, 
+        [
+            "FERMILAB-PUB-95-203-E"
+        ]
+    ], 
+    "398425": [
+        "Top quark search with the D0 1992 - 1993 data sample", 
+        "D0", 
+        "10.1103/PhysRevD.52.4877", 
+        null, 
+        null, 
+        "ins398425", 
+        null, 
+        [
+            "FERMILAB-PUB-95-020-E", 
+            "D0-PUB-95-9", 
+            "D0-2725"
+        ]
+    ], 
+    "400396": [
+        "Search for heavy $W$ boson in 1.8 TeV $p\\bar{p}$ collisions", 
+        "D0", 
+        "10.1016/0370-2693(95)01029-P", 
+        null, 
+        null, 
+        "ins400396", 
+        null, 
+        [
+            "FERMILAB-PUB-95-283-E", 
+            "D0PUB-95-12", 
+            "D0-2788"
+        ]
+    ]
+}

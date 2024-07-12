@@ -1,0 +1,74 @@
+{
+    "611894": [
+        "Isolated electrons and muons in events with missing transverse momentum at HERA", 
+        "H1", 
+        "10.1016/S0370-2693(03)00497-0", 
+        "601677", 
+        "hep-ex/0301030", 
+        null, 
+        null, 
+        [
+            "DESY-02-224"
+        ]
+    ], 
+    "613857": [
+        "Measurement of inclusive jet cross-sections in photoproduction at HERA", 
+        "H1", 
+        "10.1140/epjc/s2003-01262-9", 
+        "606498", 
+        "hep-ex/0302034", 
+        "ins613857", 
+        null, 
+        [
+            "DESY-02-225"
+        ]
+    ], 
+    "616311": [
+        "Measurement and QCD analysis of neutral and charged current cross-sections at HERA", 
+        "H1", 
+        "10.1140/epjc/s2003-01257-6", 
+        "611265", 
+        "hep-ex/0304003", 
+        "ins616311", 
+        null, 
+        [
+            "DESY-03-038"
+        ]
+    ], 
+    "618585": [
+        "Search for new physics in $e^\\pm q$ contact interactions at HERA", 
+        "H1", 
+        "10.1016/j.physletb.2003.06.034", 
+        "621415", 
+        "hep-ex/0305015", 
+        null, 
+        null, 
+        [
+            "DESY-03-052"
+        ]
+    ], 
+    "620283": [
+        "Diffractive photoproduction of $J/\\psi$ mesons with large momentum transfer at HERA", 
+        "H1", 
+        "10.1016/j.physletb.2003.06.056", 
+        "619893", 
+        "hep-ex/0306013", 
+        "ins620283", 
+        null, 
+        [
+            "DESY-03-061"
+        ]
+    ], 
+    "622880": [
+        "Multielectron production at high transverse momenta in ep collisions at HERA", 
+        "H1", 
+        "10.1140/epjc/s2003-01326-x", 
+        "627297", 
+        "hep-ex/0307015", 
+        null, 
+        null, 
+        [
+            "DESY-03-082"
+        ]
+    ]
+}

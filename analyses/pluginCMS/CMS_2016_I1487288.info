@@ -5,6 +5,7 @@ Experiment: CMS
 Collider: LHC
 InspireID: 1487288
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Shehu AbdusSalam <shehu.abdussalam@cern.ch>
  - Andy Buckley <andy.buckley@cern.ch>

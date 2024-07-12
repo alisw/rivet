@@ -1,0 +1,218 @@
+{
+    "499943": [
+        "The $b\\bar{b}$ production cross section and angular correlations in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1016/S0370-2693(00)00844-3", 
+        null, 
+        "hep-ex/9905024", 
+        "ins499943", 
+        null, 
+        [
+            "FERMILAB-PUB-99-144-E"
+        ]
+    ], 
+    "501703": [
+        "Extraction of the width of the $W$ boson from measurements of $\\sigma(p\\bar{p} \\to W + X) \\times B(W \\to e \\nu)$ and $\\sigma(p\\bar{p} \\to Z + X) \\times B(Z \\to e e)$ and their ratio", 
+        "D0", 
+        "10.1103/PhysRevD.61.072001", 
+        null, 
+        "hep-ex/9906025", 
+        "ins501703", 
+        null, 
+        [
+            "FERMILAB-PUB-99-171-E"
+        ]
+    ], 
+    "503361": [
+        "Measurement of the inclusive differential cross section for $Z$ bosons as a function of transverse momentum in $\\bar{p}p$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1103/PhysRevD.61.032004", 
+        null, 
+        "hep-ex/9907009", 
+        "ins503361", 
+        null, 
+        [
+            "FERMILAB-PUB-99-197-E"
+        ]
+    ], 
+    "503949": [
+        "Small angle muon and bottom quark production in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.84.5478", 
+        null, 
+        "hep-ex/9907029", 
+        "ins503949", 
+        null, 
+        [
+            "FERMILAB-PUB-99-202-E"
+        ]
+    ], 
+    "505927": [
+        "A measurement of the $W$ boson mass using large rapidity electrons", 
+        "D0", 
+        "10.1103/PhysRevD.62.092006", 
+        null, 
+        "hep-ex/9908057", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-99-237-E"
+        ]
+    ], 
+    "507054": [
+        "Differential production cross section of $Z$ bosons as a function of transverse momentum at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.84.2792", 
+        null, 
+        "hep-ex/9909020", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-99-254-E"
+        ]
+    ], 
+    "507231": [
+        "A measurement of the $W$ boson mass using electrons at large rapidities", 
+        "D0", 
+        "10.1103/PhysRevLett.84.222", 
+        null, 
+        "hep-ex/9909030", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-99-259-E"
+        ]
+    ], 
+    "508772": [
+        "Search for second generation leptoquark pairs in $\\bar{p}p$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.84.2088", 
+        null, 
+        "hep-ex/9910040", 
+        "ins508772", 
+        null, 
+        [
+            "FERMILAB-PUB-99-314-E"
+        ]
+    ], 
+    "511200": [
+        "The isolated photon cross-section in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.84.2786", 
+        null, 
+        "hep-ex/9912017", 
+        "ins511200", 
+        null, 
+        [
+            "FERMILAB-PUB-99-354-E"
+        ]
+    ], 
+    "511378": [
+        "Limits on quark compositeness from high-energy jets in $\\bar{p}p$ collisions at 1.8 TeV", 
+        "D0", 
+        "10.1103/PhysRevD.62.031101", 
+        null, 
+        "hep-ex/9912023", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-99-357-E"
+        ]
+    ], 
+    "511525": [
+        "Probing BFKL dynamics in the dijet cross section at large rapidity intervals in $p\\bar{p}$ collisions at $\\sqrt{s} = 1800$ GeV and 630-GeV", 
+        "D0", 
+        "10.1103/PhysRevLett.84.5722", 
+        null, 
+        "hep-ex/9912032", 
+        "ins511525", 
+        null, 
+        [
+            "FERMILAB-PUB-99-363-E"
+        ]
+    ], 
+    "511526": [
+        "Limits on anomalous $W W \\gamma$ and $W W Z$ couplings from $W W / W Z \\to e \\nu j j$ production", 
+        "D0", 
+        "10.1103/PhysRevD.62.052005", 
+        null, 
+        "hep-ex/9912033", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-99-364-E"
+        ]
+    ], 
+    "512498": [
+        "A measurement of the $W \\to \\tau \\nu$ production cross section in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.84.5710", 
+        null, 
+        "hep-ex/9912065", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-99-373-E"
+        ]
+    ], 
+    "524260": [
+        "Spin correlation in $t\\bar{t}$ production from $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.85.256", 
+        null, 
+        "hep-ex/0002058", 
+        "ins524260", 
+        null, 
+        [
+            "FERMILAB-PUB-00-046-E"
+        ]
+    ], 
+    "527795": [
+        "Search for $R-$parity violation in multilepton final states in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1103/PhysRevD.62.071701", 
+        null, 
+        "hep-ex/0005034", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-00-109-E"
+        ]
+    ], 
+    "528445": [
+        "Search for new physics in e\u03bcX data at D\u00d8 using SLEUTH: A quasi-model-independent search strategy for new physics", 
+        "D0", 
+        "10.1103/PhysRevD.62.092004", 
+        null, 
+        "hep-ex/0006011", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-00-126-E"
+        ]
+    ], 
+    "531669": [
+        "Cross section for b jet production in $\\bar{p}p$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.85.5068", 
+        null, 
+        "hep-ex/0008021", 
+        "ins531669", 
+        null, 
+        [
+            "FERMILAB-PUB-00-197-E"
+        ]
+    ], 
+    "531764": [
+        "Search for electroweak production of single top quarks in $p\\bar{p}$ collisions", 
+        "D0", 
+        "10.1103/PhysRevD.63.031101", 
+        null, 
+        "hep-ex/0008024", 
+        "ins531764", 
+        null, 
+        [
+            "FERMILAB-PUB-00-188-E"
+        ]
+    ]
+}

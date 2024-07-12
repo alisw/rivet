@@ -1,7 +1,7 @@
 #ifndef RIVET_MATH_MATRIXDIAG
 #define RIVET_MATH_MATRIXDIAG
 
-#include "Rivet/Math/MathHeader.hh"
+#include "Rivet/Math/MathConstants.hh"
 #include "Rivet/Math/MatrixN.hh"
 
 // #include "gsl/gsl_vector.h"

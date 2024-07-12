@@ -9,6 +9,5 @@ Description: Rivet MC analysis library
 URL: https://rivet.hepforge.org
 Version: @VERSION@
 #Requires: yoda
-Libs: -L@libdir@ -L@HEPMCLIBPATH@ -L@YODALIBPATH@ -L@FASTJETCONFIGLIBADD@ -L@GSLLIBPATH@ -lRivet
-Cflags: -I@includedir@ -I@HEPMCINCPATH@ -I@YODAINCPATH@ -I@FASTJETINCPATH@ -I@GSLINCPATH@
-#-I@BOOST_CPPFLAGS@
+Libs: -L@libdir@ -L@HEPMCLIBPATH@ -L@YODALIBPATH@ -L@FASTJETCONFIGLIBADD@ -lRivet
+Cflags: -I@includedir@ -I@HEPMCINCPATH@ -I@YODAINCPATH@ -I@FASTJETINCPATH@

@@ -1,0 +1,86 @@
+{
+    "602825": [
+        "Study of Hadronic Five-Body Decays of Charmed Mesons",
+        "FOCUS",
+        "10.1016/S0370-2693(03)00494-5",
+        null,
+        "hep-ex/0211056",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-02-309-E"
+        ]
+    ],
+    "605422": [
+        "Study of the Cabibbo Suppressed Decay Modes $D^0 \\to \\pi^- \\pi^+$ and $D^0 \\to K^- K^+$",
+        "FOCUS",
+        "10.1016/S0370-2693(03)00053-4",
+        null,
+        "hep-ex/0212058",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-02-347-E"
+        ]
+    ],
+    "613856": [
+        "Measurement of the Omega0(c) lifetime",
+        "FOCUS",
+        "10.1016/S0370-2693(03)00388-5",
+        null,
+        "hep-ex/0302033",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-03-034-E"
+        ]
+    ],
+    "618694": [
+        "Studies of correlations between D and anti-D mesons in high-energy photoproduction",
+        "FOCUS",
+        "10.1016/S0370-2693(03)00808-6",
+        null,
+        "hep-ex/0305018",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-03-120-E"
+        ]
+    ],
+    "618864": [
+        "Measurements of Xi(c)+ branching ratios",
+        "FOCUS",
+        "10.1016/S0370-2693(03)00809-8",
+        null,
+        "hep-ex/0305038",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-03-134-E"
+        ]
+    ],
+    "622056": [
+        "Search for rare and forbidden three body dimuon decays of the charmed mesons D+ and D(s)+",
+        "FOCUS",
+        "10.1016/j.physletb.2003.07.079",
+        null,
+        "hep-ex/0306049",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-03-179-E"
+        ]
+    ],
+    "626320": [
+        "Study of the decay mode D0 ---> K- K- K+ pi+",
+        "FOCUS",
+        "10.1016/j.physletb.2003.09.054",
+        null,
+        "hep-ex/0308054",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-03-237-E"
+        ]
+    ]
+}

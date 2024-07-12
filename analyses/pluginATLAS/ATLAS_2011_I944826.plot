@@ -1,21 +1,21 @@
 # BEGIN PLOT /ATLAS_2011_I944826/d01-x01-y01
 Title=$K_S^0$ transverse momentum, $\sqrt{s}=7000$~GeV
-XLabel=$p_\perp[\text{GeV/c}]$
-YLabel=$1/N_\text{KS}\; \text{d}N_\text{KS}/\text{d}p_\perp$
+XLabel=$p_\perp[\mathrm{GeV/c}]$
+YLabel=$1/N_\mathrm{KS}\; \mathrm{d}N_\mathrm{KS}/\mathrm{d}p_\perp$
 LogY=1
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I944826/d02-x01-y01
 Title=$K_S^0$ rapidity, $\sqrt{s}=7000$~GeV
 XLabel=$y$
-YLabel=$1/N_\text{KS}\; \text{d}N_\text{KS}/\text{d}y$
+YLabel=$1/N_\mathrm{KS}\; \mathrm{d}N_\mathrm{KS}/\mathrm{d}y$
 LogY=0
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I944826/d03-x01-y01
 Title=$K_S^0$ multiplicity, $\sqrt{s}=7000$~GeV
 XLabel=$K_S^0$ multiplicity
-YLabel=$1/N_\text{ev}\; \text{d}N_\text{ev}/\text{d}N_\text{KS}$
+YLabel=$1/N_\mathrm{ev}\; \mathrm{d}N_\mathrm{ev}/\mathrm{d}N_\mathrm{KS}$
 LogY=0
 YMin=-0.2
 XCustomMajorTicks=0	0	1	1	2	2	3	3
@@ -23,22 +23,22 @@ XCustomMajorTicks=0	0	1	1	2	2	3	3
 
 # BEGIN PLOT /ATLAS_2011_I944826/d04-x01-y01
 Title=$K_S^0$ transverse momentum, $\sqrt{s}=900$~GeV
-XLabel=$p_\perp[\text{GeV/c}]$
-YLabel=$1/N_\text{KS}\; \text{d}N_\text{KS}/\text{d}p_\perp$
+XLabel=$p_\perp[\mathrm{GeV/c}]$
+YLabel=$1/N_\mathrm{KS}\; \mathrm{d}N_\mathrm{KS}/\mathrm{d}p_\perp$
 LogY=1
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I944826/d05-x01-y01
 Title=$K_S^0$ rapidity, $\sqrt{s}=900$~GeV
 XLabel=$y$
-YLabel=$1/N_\text{KS}\; \text{d}N_\text{KS}/\text{d}y$
+YLabel=$1/N_\mathrm{KS}\; \mathrm{d}N_\mathrm{KS}/\mathrm{d}y$
 LogY=0
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I944826/d06-x01-y01
 Title=$K_S^0$ multiplicity, $\sqrt{s}=900$~GeV
 XLabel=$K_S^0$ multiplicity
-YLabel=$1/N_\text{ev}\; \text{d}N_\text{ev}/\text{d}N_\text{KS}$
+YLabel=$1/N_\mathrm{ev}\; \mathrm{d}N_\mathrm{ev}/\mathrm{d}N_\mathrm{KS}$
 LogY=0
 YMin=-0.2
 XCustomMajorTicks=0	0	1	1	2	2	3	3
@@ -46,22 +46,22 @@ XCustomMajorTicks=0	0	1	1	2	2	3	3
 
 # BEGIN PLOT /ATLAS_2011_I944826/d07-x01-y01
 Title=$\Lambda$ transverse momentum, $\sqrt{s}=7000$~GeV
-XLabel=$p_\perp[\text{GeV/c}]$
-YLabel=$1/N_\Lambda\; \text{d}N_\Lambda/\text{d}p_\perp$
+XLabel=$p_\perp[\mathrm{GeV/c}]$
+YLabel=$1/N_\Lambda\; \mathrm{d}N_\Lambda/\mathrm{d}p_\perp$
 LogY=1
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I944826/d08-x01-y01
 Title=$\Lambda$ rapidity, $\sqrt{s}=7000$~GeV
 XLabel=$y$
-YLabel=$1/N_\Lambda\; \text{d}N_\Lambda/\text{d}y$
+YLabel=$1/N_\Lambda\; \mathrm{d}N_\Lambda/\mathrm{d}y$
 LogY=0
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I944826/d09-x01-y01
 Title=$\Lambda$ multiplicity, $\sqrt{s}=7000$~GeV
 XLabel=$\Lambda$ multiplicity
-YLabel=$1/N_\text{ev}\; \text{d}N_\text{ev}/\text{d}N_\Lambda$
+YLabel=$1/N_\mathrm{ev}\; \mathrm{d}N_\mathrm{ev}/\mathrm{d}N_\Lambda$
 LogY=0
 YMin=-0.2
 XCustomMajorTicks=0	0	1	1	2	2	3	3
@@ -69,22 +69,22 @@ XCustomMajorTicks=0	0	1	1	2	2	3	3
 
 # BEGIN PLOT /ATLAS_2011_I944826/d10-x01-y01
 Title=$\Lambda$ transverse momentum, $\sqrt{s}=900$~GeV
-XLabel=$p_\perp[\text{GeV/c}]$
-YLabel=$1/N_\Lambda\; \text{d}N_\Lambda/\text{d}p_\perp$
+XLabel=$p_\perp[\mathrm{GeV/c}]$
+YLabel=$1/N_\Lambda\; \mathrm{d}N_\Lambda/\mathrm{d}p_\perp$
 LogY=1
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I944826/d11-x01-y01
 Title=$\Lambda$ rapidity, $\sqrt{s}=900$~GeV
 XLabel=$y$
-YLabel=$1/N_\Lambda\; \text{d}N_\Lambda/\text{d}y$
+YLabel=$1/N_\Lambda\; \mathrm{d}N_\Lambda/\mathrm{d}y$
 LogY=0
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I944826/d12-x01-y01
 Title=$\Lambda$ multiplicity, $\sqrt{s}=900$~GeV
 XLabel=$\Lambda$ multiplicity
-YLabel=$1/N_\text{ev}\; \text{d}N_\text{ev}/\text{d}N_\Lambda$
+YLabel=$1/N_\mathrm{ev}\; \mathrm{d}N_\mathrm{ev}/\mathrm{d}N_\Lambda$
 LogY=0
 YMin=-0.2
 XCustomMajorTicks=0	0	1	1	2	2	3	3

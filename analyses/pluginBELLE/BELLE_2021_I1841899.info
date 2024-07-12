@@ -1,0 +1,37 @@
+Name: BELLE_2021_I1841899
+Year: 2021
+Summary: Mass distributions in $B^+\to \phi\phi K^+$
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1841899
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 103 (2021) 5, 052013
+RunInfo: Any process producing B+, originally e+e-
+Description:
+  'Mass distributions in $B^+\to \phi\phi K^+$ measured by BELLE, the data were read from the plots in the paper.'
+ValidationInfo:
+  'Herwig7 events using EvtGen for decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle:2021jvs
+BibTeX: '@article{Belle:2021jvs,
+    author = "Mohanty, S. and others",
+    collaboration = "Belle",
+    title = "{Measurement of branching fraction and search for $CP$ violation in $B\to \phi \phi K$}",
+    eprint = "2101.07753",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "Belle Preprint 2020-20, KEK Preprint 2020-37",
+    doi = "10.1103/PhysRevD.103.052013",
+    journal = "Phys. Rev. D",
+    volume = "103",
+    number = "5",
+    pages = "052013",
+    year = "2021"
+}
+'

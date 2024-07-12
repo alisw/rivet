@@ -18,20 +18,27 @@ namespace Rivet {
       :  FinalState(), _leading_only(false)
     {
       setName("LeadingParticlesFinalState");
-      addProjection(fsp, "FS");
+      declare(fsp, "FS");
     }
 
     /// Clone on the heap.
     DEFAULT_RIVET_PROJ_CLONE(LeadingParticlesFinalState);
 
+
     /// Add a particle ID to the list of leading particles selected
-    LeadingParticlesFinalState& addParticleId(long id) {
+    LeadingParticlesFinalState& addParticleId(PdgId id) {
       _ids.insert(id);
       return *this;
     }
 
     /// Add a particle ID to the list of leading particles selected
-    LeadingParticlesFinalState& addParticleIdPair(long id) {
+    LeadingParticlesFinalState& addParticleIds(vector<PdgId> ids) {
+      for (PdgId id : ids) _ids.insert(id);
+      return *this;
+    }
+
+    /// Add a particle ID to the list of leading particles selected
+    LeadingParticlesFinalState& addParticleIdPair(PdgId id) {
       _ids.insert(id);
       _ids.insert(-id);
       return *this;
@@ -40,7 +47,7 @@ namespace Rivet {
     /// Toggle whether to keep track only of the leading particle of any ID,
     /// or the leading particle of all IDs separately
     /// Default is the latter (=false)
-    void setLeadingOnly(const bool& leadingonly) {
+    void setLeadingOnly(bool leadingonly) {
       _leading_only = leadingonly;
     }
 
@@ -55,16 +62,13 @@ namespace Rivet {
     void project(const Event& e);
 
     /// Compare projections.
-    int compare(const Projection& p) const;
+    CmpState compare(const Projection& p) const;
 
 
-  private:
-
-    /// Check if the particle's ID is in the list
-    bool inList(const Particle& particle) const;
+  protected:
 
     /// IDs of the leading particles to be selected
-    std::set<long>_ids;
+    std::set<long> _ids;
     bool _leading_only;
 
   };

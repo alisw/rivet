@@ -11,35 +11,34 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2017_I1609253);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2017_I1609253);
 
 
     /// Initialization, called once before running
     void init() {
 
       // Projections
-      const FastJets jets(FinalState(), FastJets::ANTIKT, 0.4, JetAlg::ALL_MUONS, JetAlg::ALL_INVISIBLES);
-      addProjection(jets, "Jets");
+      const FastJets jets(FinalState(), FastJets::ANTIKT, 0.4, JetAlg::Muons::ALL, JetAlg::Invisibles::ALL);
+      declare(jets, "Jets");
 
       // Book histograms
-      _hist_EEC1  = bookHisto1D(   1, 1, 1);
-      _hist_AEEC1 = bookScatter2D( 2, 1, 1);
-      _hist_EEC2  = bookHisto1D(   3, 1, 1);
-      _hist_AEEC2 = bookScatter2D( 4, 1, 1);
-      _hist_EEC3  = bookHisto1D(   5, 1, 1);
-      _hist_AEEC3 = bookScatter2D( 6, 1, 1);
-      _hist_EEC4  = bookHisto1D(   7, 1, 1);
-      _hist_AEEC4 = bookScatter2D( 8, 1, 1);
-      _hist_EEC5  = bookHisto1D(   9, 1, 1);
-      _hist_AEEC5 = bookScatter2D(10, 1, 1);
-      _hist_EEC6  = bookHisto1D(  11, 1, 1);
-      _hist_AEEC6 = bookScatter2D(12, 1, 1);
+      book(_hist_EEC1 ,  1, 1, 1);
+      book(_hist_AEEC1,  2, 1, 1);
+      book(_hist_EEC2 ,  3, 1, 1);
+      book(_hist_AEEC2,  4, 1, 1);
+      book(_hist_EEC3 ,  5, 1, 1);
+      book(_hist_AEEC3,  6, 1, 1);
+      book(_hist_EEC4 ,  7, 1, 1);
+      book(_hist_AEEC4,  8, 1, 1);
+      book(_hist_EEC5 ,  9, 1, 1);
+      book(_hist_AEEC5, 10, 1, 1);
+      book(_hist_EEC6 , 11, 1, 1);
+      book(_hist_AEEC6, 12, 1, 1);
     }
 
 
     void analyze(const Event& event) {
 
-      const double evtWeight = event.weight();
       const Jets& jets = applyProjection<FastJets>(event, "Jets").jetsByPt(Cuts::abseta < 2.5 && Cuts::pT > 100*GeV);
       if (jets.size() < 2)  vetoEvent;
 
@@ -60,12 +59,12 @@ namespace Rivet {
           double cosPhi = cos(dPhi);
           if (cos(dPhi) == 1.0)  cosPhi = 0.9999;
 
-          if (sumPt12 >  800*GeV && sumPt12 <=  850*GeV)  _hist_EEC1->fill(cosPhi, etWeight*evtWeight);
-          if (sumPt12 >  850*GeV && sumPt12 <=  900*GeV)  _hist_EEC2->fill(cosPhi, etWeight*evtWeight);
-          if (sumPt12 >  900*GeV && sumPt12 <= 1000*GeV)  _hist_EEC3->fill(cosPhi, etWeight*evtWeight);
-          if (sumPt12 > 1000*GeV && sumPt12 <= 1100*GeV)  _hist_EEC4->fill(cosPhi, etWeight*evtWeight);
-          if (sumPt12 > 1100*GeV && sumPt12 <= 1400*GeV)  _hist_EEC5->fill(cosPhi, etWeight*evtWeight);
-          if (sumPt12 > 1400*GeV)  _hist_EEC6->fill(cosPhi, etWeight*evtWeight);
+          if (sumPt12 >  800*GeV && sumPt12 <=  850*GeV)  _hist_EEC1->fill(cosPhi, etWeight);
+          if (sumPt12 >  850*GeV && sumPt12 <=  900*GeV)  _hist_EEC2->fill(cosPhi, etWeight);
+          if (sumPt12 >  900*GeV && sumPt12 <= 1000*GeV)  _hist_EEC3->fill(cosPhi, etWeight);
+          if (sumPt12 > 1000*GeV && sumPt12 <= 1100*GeV)  _hist_EEC4->fill(cosPhi, etWeight);
+          if (sumPt12 > 1100*GeV && sumPt12 <= 1400*GeV)  _hist_EEC5->fill(cosPhi, etWeight);
+          if (sumPt12 > 1400*GeV)  _hist_EEC6->fill(cosPhi, etWeight);
         }
       }
     }
@@ -128,7 +127,7 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2017_I1609253);
+  RIVET_DECLARE_PLUGIN(ATLAS_2017_I1609253);
 
 
 }

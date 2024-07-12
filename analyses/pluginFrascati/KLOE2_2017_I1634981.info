@@ -1,0 +1,35 @@
+Name: KLOE2_2017_I1634981
+Year: 2017
+Summary: Cross section for $e^+e^-\to\pi^+\pi^-$ below 1 GeV
+Experiment: KLOE2
+Collider: DAPHNE
+InspireID: 1634981
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - JHEP 1803 (2018) 173
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+  'Measurement of the cross section for $e^+e^-\to\pi^+\pi^-$ below 1 GeV'
+BibKey: Anastasi:2017eio
+BibTeX: '@article{Anastasi:2017eio,
+      author         = "Anastasi, A. and others",
+      title          = "{Combination of KLOE
+                        $\sigma\big(e^+e^-\rightarrow\pi^+\pi^-\gamma(\gamma)\big)$
+                        measurements and determination of $a_{\mu}^{\pi^+\pi^-}$
+                        in the energy range $0.10 &lt; s &lt; 0.95$ GeV$^2$}",
+      collaboration  = "KLOE-2",
+      journal        = "JHEP",
+      volume         = "03",
+      year           = "2018",
+      pages          = "173",
+      doi            = "10.1007/JHEP03(2018)173",
+      eprint         = "1711.03085",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1711.03085;%%"
+}'

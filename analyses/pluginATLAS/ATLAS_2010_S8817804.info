@@ -6,10 +6,11 @@ Collider:   LHC 7TeV
 SpiresID:   8817804
 InspireID: 871366
 Status:     VALIDATED
-Reentrant: True
+Reentrant: true
 Authors:
  - James Monk <jmonk@cern.ch>
 References:
+ - ATLAS-STDM-2010-03
  - arXiv:1009.5908
 RunInfo:
   pp QCD jet production with a minimum jet pT of 60 GeV (inclusive) or 30 GeV (di-jets) at 7 TeV.
@@ -39,3 +40,23 @@ BibTeX: '@Article{Aad:2010wv,
      primaryClass  =  "hep-ex",
      SLACcitation  = "%%CITATION = 1009.5908;%%"
 }'
+
+ReleaseTests:
+ - $A LHC-7-DiJets-1-A
+ - $A-2 LHC-7-DiJets-2-A
+ - $A-3 LHC-7-DiJets-3-A
+ - $A-4 LHC-7-DiJets-4-A
+ - $A-5 LHC-7-DiJets-5-A
+ - $A-6 LHC-7-DiJets-6-A
+ - $A-7 LHC-7-DiJets-7-A
+ - $A-8 LHC-7-Jets-1
+ - $A-9 LHC-7-Jets-10
+ - $A-10 LHC-7-Jets-2
+ - $A-11 LHC-7-Jets-3
+ - $A-12 LHC-7-Jets-4
+ - $A-13 LHC-7-Jets-5
+ - $A-14 LHC-7-Jets-6
+ - $A-15 LHC-7-Jets-7
+ - $A-16 LHC-7-Jets-8
+ - $A-17 LHC-7-Jets-9
+

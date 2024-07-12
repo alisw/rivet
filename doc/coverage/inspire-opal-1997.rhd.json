@@ -1,0 +1,427 @@
+{
+    "421976": [
+        "Searches for supersymmetric particles and anomalous four jet production at $\\sqrt{s}$ = 130-GeV and 136-GeV at LEP", 
+        "OPAL", 
+        "10.1007/s002880050310", 
+        "308447", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-096"
+        ]
+    ], 
+    "421977": [
+        "Sigma+, Sigma0 and Sigma- hyperon production in hadronic Z0 decays", 
+        "OPAL", 
+        "10.1007/s002880050350", 
+        "309925", 
+        null, 
+        "ins421977", 
+        null, 
+        [
+            "CERN-PPE-96-100"
+        ]
+    ], 
+    "421978": [
+        "Strange baryon production in hadronic Z0 decays", 
+        "OPAL", 
+        "10.1007/s002880050349", 
+        "309923", 
+        null, 
+        "ins421978", 
+        null, 
+        [
+            "CERN-PPE-96-099", 
+            "CERN-PPE-96-99"
+        ]
+    ], 
+    "421995": [
+        "A Measurement of the charm and bottom forward - backward asymmetries using D mesons at LEP", 
+        "OPAL", 
+        "10.1007/s002880050328", 
+        "308303", 
+        null, 
+        "ins421995", 
+        null, 
+        [
+            "CERN-PPE-96-101"
+        ]
+    ], 
+    "423697": [
+        "Search for neutral Higgs bosons in $Z^0$ decays using the OPAL detector at LEP", 
+        "OPAL", 
+        "10.1007/s002880050309", 
+        "310748", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-118"
+        ]
+    ], 
+    "424635": [
+        "Inclusive jet production in photon-photon collisions at $\\sqrt{s}$ = 130-GeV and 136-GeV", 
+        "OPAL", 
+        "10.1007/s002880050332", 
+        "312688", 
+        null, 
+        "ins424635", 
+        null, 
+        [
+            "CERN-PPE-96-132"
+        ]
+    ], 
+    "425065": [
+        "A Measurement of the average bottom hadron lifetime", 
+        "OPAL", 
+        "10.1007/s002880050329", 
+        "313155", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-137"
+        ]
+    ], 
+    "425066": [
+        "Search for excited leptons in e+ e- collisions at s**(1/2) = 161-GeV", 
+        "OPAL", 
+        "10.1016/S0370-2693(96)01553-5", 
+        "313157", 
+        null, 
+        "ins425066", 
+        null, 
+        [
+            "CERN-PPE-96-138"
+        ]
+    ], 
+    "425319": [
+        "Search for unstable neutral and charged heavy leptons in e+ e- collisions at S**(1/2) = 161-GeV", 
+        "OPAL", 
+        "10.1016/S0370-2693(96)01633-4", 
+        "313685", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-140"
+        ]
+    ], 
+    "426207": [
+        "Measurement of the QED longitudinal structure function of the photon using azimuthal correlations at LEP", 
+        "OPAL", 
+        "10.1007/s002880050369", 
+        "318419", 
+        null, 
+        "ins426207", 
+        null, 
+        [
+            "CERN-PPE-96-153"
+        ]
+    ], 
+    "426208": [
+        "Photonic events with large missing energy in e+ e- collisions at s**(1/2) = 161-GeV", 
+        "OPAL", 
+        "10.1016/S0370-2693(96)01554-7", 
+        "314900", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-154"
+        ]
+    ], 
+    "426209": [
+        "Analysis of hadronic final states and the photon structure function F2 (gamma) in deep inelastic electron - photon scattering at LEP", 
+        "OPAL", 
+        "10.1007/s002880050368", 
+        "314901", 
+        null, 
+        "ins426209", 
+        null, 
+        [
+            "CERN-PPE-96-155"
+        ]
+    ], 
+    "426210": [
+        "Production of fermion pair events in e+ e- collisions at 161-GeV center-of-mass energy", 
+        "OPAL", 
+        "10.1016/S0370-2693(97)81627-9", 
+        "314902", 
+        null, 
+        "ins426210", 
+        null, 
+        [
+            "CERN-PPE-96-156"
+        ]
+    ], 
+    "426799": [
+        "Search for the standard model Higgs boson in e+ e- collisions at s**(1/2) = 161-GeV", 
+        "OPAL", 
+        "10.1016/S0370-2693(96)01645-0", 
+        "315844", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-161"
+        ]
+    ], 
+    "426800": [
+        "A Measurement of |V(cb)| using anti-B0 ---> D*+ lepton- anti-lepton-neutrino decays", 
+        "OPAL", 
+        "10.1016/S0370-2693(97)00056-7", 
+        "315845", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-162"
+        ]
+    ], 
+    "427104": [
+        "An Improved measurement of R($b$) using a double tagging method", 
+        "OPAL", 
+        "10.1007/s002880050366", 
+        "316273", 
+        null, 
+        "ins427104", 
+        null, 
+        [
+            "CERN-PPE-96-167"
+        ]
+    ], 
+    "427130": [
+        "Measurement of the semileptonic branching fraction of inclusive b baryon decays to Lambda", 
+        "OPAL", 
+        "10.1007/s002880050405", 
+        "316272", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-166"
+        ]
+    ], 
+    "428274": [
+        "Search for charged scalar leptons using the OPAL detector at s**(1/2) = 161-GeV", 
+        "OPAL", 
+        "10.1016/S0370-2693(97)00073-7", 
+        "318515", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-182"
+        ]
+    ], 
+    "428492": [
+        "Search for CP violation in Z0 ---> tau+ tau- and an upper limit on the weak dipole moment of the tau lepton", 
+        "OPAL", 
+        "10.1007/s002880050403", 
+        "319340", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-184"
+        ]
+    ], 
+    "428493": [
+        "B* production in Z0 decays", 
+        "OPAL", 
+        "10.1007/s002880050404", 
+        "319343", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-192"
+        ]
+    ], 
+    "440102": [
+        "Measurement of the triple gauge boson coupling $\\alpha$ (w $\\phi^{)}$ from $W^{+} W^{-}$ production in $e^{+} e^{-}$ collisions at $\\sqrt{s}$ = 161-GeV", 
+        "OPAL", 
+        "10.1016/S0370-2693(97)00162-7", 
+        "319436", 
+        null, 
+        "ins440102", 
+        null, 
+        [
+            "CERN-PPE-97-004", 
+            "CERN-PPE-97-04", 
+            "CERN-PPE-97-4"
+        ]
+    ], 
+    "440103": [
+        "Study of phi (1020), D*+- and B* spin alignment in hadronic Z0 decays", 
+        "OPAL", 
+        "10.1007/s002880050406", 
+        "319438", 
+        null, 
+        "ins440103", 
+        null, 
+        [
+            "CERN-PPE-97-005", 
+            "CERN-PPE-97-05", 
+            "CERN-PPE-97-5"
+        ]
+    ], 
+    "440104": [
+        "Measurements of the b quark forward - backward asymmetry around the Z0 peak using jet charge and vertex charge", 
+        "OPAL", 
+        "10.1007/s002880050482", 
+        "319448", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-006", 
+            "CERN-PPE-97-06", 
+            "CERN-PPE-97-6"
+        ]
+    ], 
+    "440721": [
+        "QCD studies with e+ e- annihilation data at 161-GeV", 
+        "OPAL", 
+        "10.1007/s002880050462", 
+        "320871", 
+        null, 
+        "ins440721", 
+        null, 
+        [
+            "CERN-PPE-97-015", 
+            "CERN-PPE-97-15"
+        ]
+    ], 
+    "441040": [
+        "A Measurement of the hadronic decay current and the tau-neutrino helicity in tau- ---> pi- pi- pi+ tau-neutrino", 
+        "OPAL", 
+        "10.1007/s002880050505", 
+        "321550", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-020", 
+            "CERN-PPE-97-20"
+        ]
+    ], 
+    "442600": [
+        "Production of P wave charm and charm - strange mesons in hadronic $Z^0$ decays", 
+        "OPAL", 
+        "10.1007/s002880050566", 
+        "324856", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-035", 
+            "CERN-PPE-97-35"
+        ]
+    ], 
+    "442601": [
+        "A Study of $B$ meson oscillations using hadronic $Z^0$ decays containing leptons", 
+        "OPAL", 
+        "10.1007/s002880050564", 
+        "324857", 
+        "hep-ex/9707009", 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-036", 
+            "CERN-PPE-97-36"
+        ]
+    ], 
+    "443568": [
+        "Search for scalar top and scalar bottom quarks at $\\sqrt{s}$ = 170-GeV - 172-GeV in $e^{+} e^{-}$ collisions", 
+        "OPAL", 
+        "10.1007/s002880050484", 
+        "326177", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-046", 
+            "CERN-PPE-97-46"
+        ]
+    ], 
+    "443800": [
+        "An Upper limit on the branching ratio for tau decays into seven charged particles", 
+        "OPAL", 
+        "10.1016/S0370-2693(97)00648-5", 
+        "326869", 
+        "hep-ex/9707023", 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-049", 
+            "CERN-PPE-97-49"
+        ]
+    ], 
+    "445190": [
+        "An Updated study of B meson oscillations using dilepton events", 
+        "OPAL", 
+        "10.1007/s002880050565", 
+        "329209", 
+        "hep-ex/9707010", 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-064", 
+            "CERN-PPE-97-64"
+        ]
+    ], 
+    "445326": [
+        "Measurement of the branching fractions and forward - backward asymmetries of the Z0 into light quarks", 
+        "OPAL", 
+        "10.1007/s002880050563", 
+        "329207", 
+        "hep-ex/9707019", 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-063", 
+            "CERN-PPE-97-63"
+        ]
+    ], 
+    "446673": [
+        "Measurement of the Q**2 evolution of the photon structure function F2(gamma)", 
+        "OPAL", 
+        "10.1016/S0370-2693(97)01023-X", 
+        "331613", 
+        "hep-ex/9708019", 
+        "ins446673", 
+        null, 
+        [
+            "CERN-PPE-97-087", 
+            "CERN-PPE-97-87"
+        ]
+    ], 
+    "447146": [
+        "Spin alignment of leading K*(892)0 mesons in hadronic Z0 decays", 
+        "OPAL", 
+        "10.1016/S0370-2693(97)01077-0", 
+        "331623", 
+        "hep-ex/9708022", 
+        "ins447146", 
+        null, 
+        [
+            "CERN-PPE-97-094", 
+            "CERN-PPE-97-94"
+        ]
+    ], 
+    "447187": [
+        "Measurement of the photon structure function F(2)**gamma at low x", 
+        "OPAL", 
+        "10.1016/S0370-2693(97)01022-8", 
+        "331913", 
+        "hep-ex/9708028", 
+        "ins447187", 
+        null, 
+        [
+            "CERN-PPE-97-103"
+        ]
+    ]
+}

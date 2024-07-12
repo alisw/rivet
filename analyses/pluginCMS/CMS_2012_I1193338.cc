@@ -15,15 +15,15 @@ namespace Rivet {
 
 
     void init() {
-      declare(ChargedFinalState(-2.4, 2.4, 0.2*GeV), "CFS");
+      declare(ChargedFinalState((Cuts::etaIn(-2.4, 2.4) && Cuts::pT >=  0.2*GeV)), "CFS");
       declare(FinalState(), "FS");
 
-      _h_sigma = bookHisto1D(1, 1, 1);
+      book(_h_sigma ,1, 1, 1);
     }
 
 
     void analyze(const Event& event) {
-      const double weight = event.weight();
+      const double weight = 1.0;
 
       const ChargedFinalState& cfs = apply<ChargedFinalState>(event, "CFS");
       if (cfs.size() > 1) {_h_sigma->fill(1.5, weight);}
@@ -38,7 +38,7 @@ namespace Rivet {
       double etapre = 0.;
       bool first = true;
 
-      foreach(const Particle& p, fs.particles(cmpMomByEta)) { // sorted from minus to plus
+      for(const Particle& p : fs.particles(cmpMomByEta)) { // sorted from minus to plus
         if (first) { // First particle
           first = false;
           etapre = p.eta();
@@ -54,7 +54,7 @@ namespace Rivet {
 
 
       FourMomentum mxFourVector, myFourVector;
-      foreach(const Particle& p, fs.particles(cmpMomByEta)) {
+      for(const Particle& p : fs.particles(cmpMomByEta)) {
         ((p.eta() > gapcenter) ? mxFourVector : myFourVector) += p.momentum();
       }
       const double M2 = max(mxFourVector.mass2(), myFourVector.mass2());
@@ -77,6 +77,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CMS_2012_I1193338);
+  RIVET_DECLARE_PLUGIN(CMS_2012_I1193338);
 
 }

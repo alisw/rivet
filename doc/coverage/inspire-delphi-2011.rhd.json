@@ -1,0 +1,26 @@
+{
+    "890364": [
+        "Search for single top quark production via contact interactions at LEP2", 
+        "DELPHI", 
+        "10.1140/epjc/s10052-011-1555-z", 
+        "1308129", 
+        "1102.4455", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2010-056"
+        ]
+    ], 
+    "890503": [
+        "A study of the b-quark fragmentation function with the DELPHI detector at LEP I and an averaged distribution obtained at the Z Pole", 
+        "DELPHI", 
+        "10.1140/epjc/s10052-011-1557-x", 
+        "1308131", 
+        "1102.4748", 
+        "ins890503", 
+        null, 
+        [
+            "CERN-PH-EP-2010-057"
+        ]
+    ]
+}

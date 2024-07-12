@@ -1,7 +1,7 @@
 # BEGIN PLOT /ATLAS_2014_I1282447/d01-.*
 XLabel=$W$-boson charge [$e$]
 XCustomMajorTicks=-1	-1	1	1
-YLabel=$\sigma_\text{fid}^\text{OS-SS}$ [pb]
+YLabel=$\sigma_\mathrm{fid}^\mathrm{OS-SS}$ [pb]
 LogY=0
 # END PLOT
 
@@ -25,17 +25,17 @@ LogY=0
 
 # BEGIN PLOT /ATLAS_2014_I1282447/d02-x01-y01
 Title=$Wc$-jet
-YLabel=$\sigma_\text{fid}^\text{OS-SS} (W^+ \bar{c}\text{-jet}) / \sigma_\text{fid}^\text{OS-SS}(W^- c\text{-jet})$
+YLabel=$\sigma_\mathrm{fid}^\mathrm{OS-SS} (W^+ \bar{c}\mathrm{-jet}) / \sigma_\mathrm{fid}^\mathrm{OS-SS}(W^- c\mathrm{-jet})$
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2014_I1282447/d02-x01-y02
 Title=$WD^{(*)}$
-YLabel=$\sigma_\text{fid}^\text{OS-SS} ($W^+ D^{(*)-}) / \sigma_\text{fid}^\text{OS-SS}(W^- D^{(*)+}$
+YLabel=$\sigma_\mathrm{fid}^\mathrm{OS-SS} (W^+ D^{(*)-}) / \sigma_\mathrm{fid}^\mathrm{OS-SS}(W^- D^{(*)+}$
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2014_I1282447/d0[34]-.*
 XLabel=Lepton $|\eta|$
-YLabel=$\mathrm{d} \sigma_\text{fid}^\text{OS-SS} / \mathrm{d} |\eta|$ [pb]
+YLabel=$\mathrm{d} \sigma_\mathrm{fid}^\mathrm{OS-SS} / \mathrm{d} |\eta|$ [pb]
 LogY=0
 # END PLOT
 
@@ -68,7 +68,7 @@ Title=$W D$ over inclusive $W$
 XLabel=$W$-boson charge [$e$]
 XMinorTickMarks=0
 XCustomMajorTicks=-1	-1	1	1
-YLabel=$\sigma_\text{fid}^\text{OS-SS} (W D) / \sigma_\text{fid} (W)$ [\%]
+YLabel=$\sigma_\mathrm{fid}^\mathrm{OS-SS} (W D) / \sigma_\mathrm{fid} (W)$ [$\%$]
 LogY=0
 # END PLOT
 
@@ -77,13 +77,13 @@ Title=$W D^*$ over inclusive $W$
 XLabel=$W$-boson charge [$e$]
 XMinorTickMarks=0
 XCustomMajorTicks=-1	-1	1	1
-YLabel=$\sigma_\text{fid}^\text{OS-SS} (W D^*) / \sigma_\text{fid} (W)$ [\%]
+YLabel=$\sigma_\mathrm{fid}^\mathrm{OS-SS} (W D^*) / \sigma_\mathrm{fid} (W)$ [$\%$]
 LogY=0
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2014_I1282447/d06-x01-y0[1-2]
-XLabel=$D$-meson $p_\text{T}$ [GeV]
-YLabel=$\sigma_\text{fid}^\text{OS-SS} (W D) / \sigma_\text{fid} (W)$ [\%]
+XLabel=$D$-meson $p_\mathrm{T}$ [GeV]
+YLabel=$\sigma_\mathrm{fid}^\mathrm{OS-SS} (W D) / \sigma_\mathrm{fid} (W)$ [$\%$]
 LogY=0
 LogX=1
 # END PLOT
@@ -97,8 +97,8 @@ Title=$W^- D^+$ over inclusive $W^-$
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2014_I1282447/d06-x01-y0[3-4]
-XLabel=$D^*$-meson $p_\text{T}$ [GeV]
-YLabel=$\sigma_\text{fid}^\text{OS-SS} (W D^*) / \sigma_\text{fid} (W)$ [\%]
+XLabel=$D^*$-meson $p_\mathrm{T}$ [GeV]
+YLabel=$\sigma_\mathrm{fid}^\mathrm{OS-SS} (W D^*) / \sigma_\mathrm{fid} (W)$ [$\%$]
 LogY=0
 LogX=1
 # END PLOT
@@ -116,7 +116,7 @@ Title=$W + c$-jet
 XLabel=Jet multiplicity
 XMinorTickMarks=0
 XCustomMajorTicks=0	1~jet	1	2~jets
-YLabel=$\sigma_\text{fid}^\text{OS-SS}$ [pb]
+YLabel=$\sigma_\mathrm{fid}^\mathrm{OS-SS}$ [pb]
 LogY=0
 # END PLOT
 
@@ -125,6 +125,6 @@ Title=$R^\pm_c$
 XLabel=Jet multiplicity
 XMinorTickMarks=0
 XCustomMajorTicks=0	1~jet	1	2~jets
-YLabel=$\sigma_\text{fid}^\text{OS-SS}(W^+ \bar{c}\text{-jet}) / \sigma_\text{fid}^\text{OS-SS}(W^- c\text{-jet})$
+YLabel=$\sigma_\mathrm{fid}^\mathrm{OS-SS}(W^+ \bar{c}\mathrm{-jet}) / \sigma_\mathrm{fid}^\mathrm{OS-SS}(W^- c\mathrm{-jet})$
 LogY=0
 # END PLOT

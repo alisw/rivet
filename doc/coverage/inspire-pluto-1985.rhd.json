@@ -1,0 +1,86 @@
+{
+    "204848": [
+        "STERMAN-WEINBERG JETS AND ENERGY FLOW IN e+ e- ANNIHILATION AT center-of-mass ENERGIES BETWEEN 9.4-GeV AND 35-GeV", 
+        "PLUTO", 
+        "10.1007/BF01556606", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-84-083"
+        ]
+    ], 
+    "205634": [
+        "Tagged Two Photon Production of Muon Pairs", 
+        "PLUTO", 
+        "10.1007/BF01556614", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-84-098"
+        ]
+    ], 
+    "207950": [
+        "Tests of the Standard Model With Lepton Pair Production in $e^+ e^-$ Reactions", 
+        "PLUTO", 
+        "10.1007/BF01548637", 
+        null, 
+        null, 
+        "ins207950", 
+        null, 
+        [
+            "DESY-84-121"
+        ]
+    ], 
+    "213241": [
+        "Measurements of Tau Lepton Production and Decay", 
+        "PLUTO", 
+        "10.1007/BF01550242", 
+        null, 
+        null, 
+        "ins213241", 
+        null, 
+        [
+            "DESY-85-017"
+        ]
+    ], 
+    "215869": [
+        "A Study of Energy-energy Correlations in $e^+ e^-$ Annihilations at $\\sqrt{s}=34$.6-{GeV}", 
+        "PLUTO", 
+        "10.1007/BF01413599", 
+        null, 
+        null, 
+        "ins215869", 
+        null, 
+        [
+            "DESY-85-039"
+        ]
+    ], 
+    "220911": [
+        "Study of the Reaction $\\gamma \\gamma \\to 2 \\pi^+ 2 \\pi^- \\pi^0$ and Upper Limits on the Production of $\\gamma \\gamma \\to \\omega \\omega$ and $\\gamma \\gamma \\to \\rho^0 \\omega$", 
+        "PLUTO", 
+        "10.1007/BF01550815", 
+        null, 
+        null, 
+        "ins220911", 
+        null, 
+        [
+            "DESY-85-080"
+        ]
+    ], 
+    "221432": [
+        "Jet Production at High Transverse Momenta by Interactions of Two Quasireal Photons", 
+        "PLUTO", 
+        "10.1007/BF01560281", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-85-100"
+        ]
+    ]
+}

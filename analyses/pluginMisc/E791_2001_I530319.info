@@ -1,0 +1,37 @@
+Name: E791_2001_I530319
+Year: 2001
+Summary: Dalitz plot analysis of $D_s^+\to \pi^+\pi^+\pi^-$
+Experiment: E791
+Collider: Fermilab
+InspireID: 530319
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 86 (2001) 765-769
+RunInfo: Any process producing D_s+ -> pi+ pi+ pi-
+Description:
+  'Measurement of the mass distributions in the decay $D_s^+\to \pi^+\pi^+\pi^-$.
+   The data were read from the plots in the paper.
+   Resolution/acceptance effects have been not unfolded and given the agreement with the model in the paper this analysis should only be used for qualitative studies.'
+ValidationInfo:
+  'Herwig 7 events using model from paper'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: E791:2000lzz
+BibTeX: '@article{E791:2000lzz,
+    author = "Aitala, E. M. and others",
+    collaboration = "E791",
+    title = "{Study of the D+(s) ---\ensuremath{>} pi- pi+ pi+ decay and measurement of f(0) masses and widths}",
+    eprint = "hep-ex/0007027",
+    archivePrefix = "arXiv",
+    reportNumber = "CBPF-NF-055-00, FERMILAB-PUB-99-323-E",
+    doi = "10.1103/PhysRevLett.86.765",
+    journal = "Phys. Rev. Lett.",
+    volume = "86",
+    pages = "765--769",
+    year = "2001"
+}
+'

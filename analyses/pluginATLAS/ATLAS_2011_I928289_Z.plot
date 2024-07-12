@@ -8,7 +8,7 @@ LegendYPos=0.25
 LegendXPos=0.05
 RatioPlotYMin=0.85
 RatioPlotYMax=1.15
-YLabel=$\text{d}\sigma / \text{d}y_{\ell\ell}$ [pb]
+YLabel=$\mathrm{d}\sigma / \mathrm{d}y_{\ell\ell}$ [pb]
 XLabel=$|y_{\ell\ell}|$
 # END PLOT
 

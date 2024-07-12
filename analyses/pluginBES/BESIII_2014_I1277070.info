@@ -1,0 +1,38 @@
+Name: BESIII_2014_I1277070
+Year: 2014
+Summary: Dalitz plot analysis of $D^+\to K^0_S\pi^+\pi^0$
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1277070
+Status: VALIDATED NOHEPDATA
+Reentrant: false
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 89 (2014) 5, 052001
+RunInfo: Any process producing D+ -> K0S pi+ pi0
+Description:
+  'Measurement of the mass distributions in the decay $D^+\to K^0_S\pi^+\pi^0$.
+   The data were read from the plots in the paper.
+   Resolution/acceptance effects have been not unfolded and given the agreement with the model in the paper this analysis should only be used for qualitative studies.'
+ValidationInfo:
+  'Herwig7 events using model from the paper'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2014oag
+BibTeX: '@article{BESIII:2014oag,
+    author = "Ablikim, M. and others",
+    collaboration = "BESIII",
+    title = "{Amplitude Analysis of the $D^+ \to K^0_S \pi^+ \pi^0$ Dalitz Plot}",
+    eprint = "1401.3083",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevD.89.052001",
+    journal = "Phys. Rev. D",
+    volume = "89",
+    number = "5",
+    pages = "052001",
+    year = "2014"
+}
+'

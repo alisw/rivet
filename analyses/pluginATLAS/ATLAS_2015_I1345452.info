@@ -5,16 +5,19 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1345452
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Longen Lan <llongen@physics.usyd.edu.au>
  - Aldo Saavedra <a.saavedra@physics.usyd.edu.au>
  - Kevin Finelli <kevin.finelli@cern.ch>
 References:
+ - ATLAS-TOPQ-2013-07
  - arXiv:1502.05923 [hep-ex]
 RunInfo:
   top-antitop production, reconstructed from leptons + jets final state
 Beams: [p+, p+]
 Energies: [7000]
+Luminosity_fb: 4.6
 PtCuts: [25,25,25]
 NeedCrossSection: True
 Description:
@@ -52,3 +55,7 @@ BibTeX: '@article{Aad:2015eia,
       reportNumber   = "CERN-PH-EP-2014-295",
       SLACcitation   = "%%CITATION = ARXIV:1502.05923;%%",
 }'
+
+ReleaseTests:
+ - $A LHC-7-Top-All
+

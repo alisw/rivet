@@ -1,0 +1,78 @@
+BEGIN YODA_SCATTER2D_V2 /REF/JADE_1981_I166363/d01-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.007, up: 0.007}, sys: {dn: -0.0011, up: 0.0011}}, 1: {error: {dn: -0.007, up: 0.007}, sys: {dn: -0.0038500000000000006, up: 0.0038500000000000006}}, 2: {error: {dn: -0.007, up: 0.007}, sys: {dn: -0.00341, up: 0.00341}}, 3: {error: {dn: -0.008, up: 0.008}, sys: {dn: -0.0049499999999999995, up: 0.0049499999999999995}}, 4: {error: {dn: -0.007, up: 0.007}, sys: {dn: -0.00451, up: 0.00451}}, 5: {error: {dn: -0.007, up: 0.007}, sys: {dn: -0.003465, up: 0.003465}}}
+
+IsRef: 1
+Path: /REF/JADE_1981_I166363/d01-x01-y01
+Title: doi:10.17182/hepdata.31062.v1/t1
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+3.500000e-01	5.000000e-02	5.000000e-02	1.000000e-02	7.085901e-03	7.085901e-03
+4.500000e-01	5.000000e-02	5.000000e-02	3.500000e-02	7.988899e-03	7.988899e-03
+5.500000e-01	5.000000e-02	5.000000e-02	3.100000e-02	7.786405e-03	7.786405e-03
+6.500000e-01	5.000000e-02	5.000000e-02	4.500000e-02	9.407577e-03	9.407577e-03
+7.500000e-01	5.000000e-02	5.000000e-02	4.100000e-02	8.327070e-03	8.327070e-03
+8.500000e-01	5.000000e-02	5.000000e-02	3.150000e-02	7.810648e-03	7.810648e-03
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/JADE_1981_I166363/d02-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.005, up: 0.005}, sys: {dn: -0.0019600000000000004, up: 0.0019600000000000004}}, 1: {error: {dn: -0.005, up: 0.005}, sys: {dn: -0.0019600000000000004, up: 0.0019600000000000004}}}
+
+IsRef: 1
+Path: /REF/JADE_1981_I166363/d02-x01-y01
+Title: doi:10.17182/hepdata.31062.v1/t2
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+6.500000e-01	2.500000e-01	2.500000e-01	1.400000e-02	5.370438e-03	5.370438e-03
+1.150000e+00	2.500000e-01	2.500000e-01	1.400000e-02	5.370438e-03	5.370438e-03
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/JADE_1981_I166363/d03-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.006, up: 0.006}}}
+
+IsRef: 1
+Path: /REF/JADE_1981_I166363/d03-x01-y01
+Title: doi:10.17182/hepdata.31062.v1/t3
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+3.400000e+01	4.000000e+00	2.000000e+00	6.200000e-02	6.000000e-03	6.000000e-03
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/JADE_1981_I166363/d03-x01-y02
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.01, up: 0.01}}}
+
+IsRef: 1
+Path: /REF/JADE_1981_I166363/d03-x01-y02
+Title: doi:10.17182/hepdata.31062.v1/t3
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+3.400000e+01	4.000000e+00	2.000000e+00	3.700000e-02	1.000000e-02	1.000000e-02
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/JADE_1981_I166363/d03-x01-y03
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.03, up: 0.03}}}
+
+IsRef: 1
+Path: /REF/JADE_1981_I166363/d03-x01-y03
+Title: doi:10.17182/hepdata.31062.v1/t3
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+3.400000e+01	4.000000e+00	2.000000e+00	2.700000e-01	3.000000e-02	3.000000e-02
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/JADE_1981_I166363/d03-x01-y04
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.032, up: 0.032}}}
+
+IsRef: 1
+Path: /REF/JADE_1981_I166363/d03-x01-y04
+Title: doi:10.17182/hepdata.31062.v1/t3
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+3.400000e+01	4.000000e+00	2.000000e+00	1.170000e-01	3.200000e-02	3.200000e-02
+END YODA_SCATTER2D_V2

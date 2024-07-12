@@ -34,20 +34,19 @@ namespace Rivet {
       declare(fj10, "AntiKT10");
 
       for (size_t alg = 0; alg < 2; ++alg) {
-        _hs_mass[alg]  = bookHisto1D(1, alg+1, 1);
-        _hs_width[alg] = bookHisto1D(2, alg+1, 1);
+        book(_hs_mass[alg]  ,1, alg+1, 1);
+        book(_hs_width[alg] ,2, alg+1, 1);
         /// @todo Commented eccentricity out for now: reinstate
-        // _hs_eccentricity[alg] = bookHisto1D(3, alg+1, 1);
+        //book( _hs_eccentricity[alg] ,3, alg+1, 1);
       }
-      _h_planarFlow = bookHisto1D(4, 2, 1);
-      _h_angularity = bookHisto1D(5, 1, 1);
+      book(_h_planarFlow ,4, 2, 1);
+      book(_h_angularity ,5, 1, 1);
 
     }
 
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-      const double weight = event.weight();
       Jets jetAr[2];
       jetAr[0] = apply<FastJets>(event, "AntiKT06").jetsByPt(Cuts::pT > 300*GeV && Cuts::abseta < 2.0);
       jetAr[1] = apply<FastJets>(event, "AntiKT10").jetsByPt(Cuts::pT > 300*GeV && Cuts::abseta < 2.0);
@@ -61,14 +60,14 @@ namespace Rivet {
         const double m   = jet.mass();
         const double eta = jet.eta();
 
-        _hs_mass[alg]->fill(m/GeV, weight);
-        _hs_width[alg]->fill(getWidth(jet), weight);
+        _hs_mass[alg]->fill(m/GeV);
+        _hs_width[alg]->fill(getWidth(jet));
         /// @todo Commented eccentricity out for now: reinstate
-        // if (fabs(eta) < 0.7 && m > 100*GeV) _hs_eccentricity[alg]->fill(getEcc(jet), weight);
+        // if (fabs(eta) < 0.7 && m > 100*GeV) _hs_eccentricity[alg]->fill(getEcc(jet));
 
         if (fabs(eta) < 0.7) {
-          if (alg == 0 && inRange(m/GeV, 100., 130.)) _h_angularity->fill(getAngularity(jet), weight);
-          if (alg == 1 && inRange(m/GeV, 130., 210.)) _h_planarFlow->fill(getPFlow(jet), weight);
+          if (alg == 0 && inRange(m/GeV, 100., 130.)) _h_angularity->fill(getAngularity(jet));
+          if (alg == 1 && inRange(m/GeV, 130., 210.)) _h_planarFlow->fill(getPFlow(jet));
         }
       }
     }
@@ -98,7 +97,7 @@ namespace Rivet {
   };
 
 
-  DECLARE_RIVET_PLUGIN(ATLAS_2012_I1119557);
+  RIVET_DECLARE_PLUGIN(ATLAS_2012_I1119557);
 
 
 
@@ -127,7 +126,7 @@ namespace Rivet {
       /// @todo cout is not a valid response to a numerical error! Is the error condition reported?!? Assert added by AB for Rivet 1.8.2
       assert(mag3 > 0);
       if (mag3 <= 0) {
-        cout << "rotation axis is null" << endl;
+        cout << "rotation axis is null" << '\n';
         return;
       }
 
@@ -153,7 +152,7 @@ namespace Rivet {
       const double phi_jet = jet.phi();
       const double eta_jet = jet.eta();
       double width(0), pTsum(0);
-      foreach (const Particle& p, jet.particles()) {
+      for (const Particle& p : jet.particles()) {
         double pT = p.pT();
         double eta = p.eta();
         double phi = p.phi();
@@ -173,7 +172,7 @@ namespace Rivet {
     //   vector<double> energies;
 
     //   double etaSum(0), phiSum(0), eTot(0);
-    //   foreach (const Particle& p, jet.particles()) {
+    //   for (const Particle& p : jet.particles()) {
     //     const double E = p.E();
     //     const double eta = p.eta();
 
@@ -255,7 +254,7 @@ namespace Rivet {
       CalcRotationMatrix(nref, rotationMatrix);
 
       double iw00(0.), iw01(0.), iw11(0.), iw10(0.);
-      foreach (const Particle& p, jet.particles()) {
+      for (const Particle& p : jet.particles()) {
         double a = 1./(p.E()*jet.mass());
         FourMomentum rotclus = RotateAxes(p.momentum(), rotationMatrix);
         iw00 += a*pow(rotclus.px(), 2);
@@ -277,7 +276,7 @@ namespace Rivet {
       double sum_a = 0.;
       // a can take any value < 2 (e.g. 1,0,-0.5 etc) for infrared safety
       const double a = -2.;
-      foreach (const Particle& p, jet.particles()) {
+      for (const Particle& p : jet.particles()) {
         double e_i       = p.E();
         double theta_i   = jet.momentum().angle(p.momentum());
         double e_theta_i = e_i * pow(sin(theta_i), a) * pow(1-cos(theta_i), 1-a);

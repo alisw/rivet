@@ -18,7 +18,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(ZEUS_2008_I763404);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ZEUS_2008_I763404);
 
     /// @name Analysis methods
     //@{
@@ -35,21 +35,21 @@ namespace Rivet {
       declare(DISKinematics(), "Kinematics");
       declare(DISDiffHadron(), "Hadron");
 
-      _h_dsigma_all[0] = bookHisto1D(1, 1, 1);
-      _h_dsigma_all[1] = bookHisto1D(2, 1, 1);
-      _h_dsigma_all[2] = bookHisto1D(3, 1, 1);
-      _h_dsigma_all[3] = bookHisto1D(4, 1, 1);
-      _h_dsigma_all[4] = bookHisto1D(5, 1, 1);
-      _h_dsigma_all[5] = bookHisto1D(6, 1, 1);
-      _h_xgamma = bookHisto1D(7, 1, 1);
-      _h_dsigma_xgamma[0][0] = bookHisto1D(8, 1, 1);
-      _h_dsigma_xgamma[0][1] = bookHisto1D(9, 1, 1);
-      _h_dsigma_xgamma[0][2] = bookHisto1D(10, 1, 1);
-      _h_dsigma_xgamma[0][3] = bookHisto1D(11, 1, 1);
-      _h_dsigma_xgamma[1][0] = bookHisto1D(12, 1, 1);
-      _h_dsigma_xgamma[1][1] = bookHisto1D(13, 1, 1);
-      _h_dsigma_xgamma[1][2] = bookHisto1D(14, 1, 1);
-      _h_dsigma_xgamma[1][3] = bookHisto1D(15, 1, 1);
+      book(_h_dsigma_all[0], 1, 1, 1);
+      book(_h_dsigma_all[1], 2, 1, 1);
+      book(_h_dsigma_all[2], 3, 1, 1);
+      book(_h_dsigma_all[3], 4, 1, 1);
+      book(_h_dsigma_all[4], 5, 1, 1);
+      book(_h_dsigma_all[5], 6, 1, 1);
+      book(_h_xgamma, 7, 1, 1);
+      book(_h_dsigma_xgamma[0][0], 8, 1, 1);
+      book(_h_dsigma_xgamma[0][1], 9, 1, 1);
+      book(_h_dsigma_xgamma[0][2], 10, 1, 1);
+      book(_h_dsigma_xgamma[0][3], 11, 1, 1);
+      book(_h_dsigma_xgamma[1][0], 12, 1, 1);
+      book(_h_dsigma_xgamma[1][1], 13, 1, 1);
+      book(_h_dsigma_xgamma[1][2], 14, 1, 1);
+      book(_h_dsigma_xgamma[1][3], 15, 1, 1);
 
       nVeto0 = 0;
       nVeto1 = 0;
@@ -118,21 +118,20 @@ namespace Rivet {
       const double M_X = sqrt( (pPomeron + qphoton).mass2() );
 
       // Fill histograms
-      const double weight = event.weight();
 
-      _h_dsigma_all[0]->fill(kin.y(), weight);
-      _h_dsigma_all[1]->fill(M_X, weight);
-      _h_dsigma_all[2]->fill(xPom, weight);
-      _h_dsigma_all[3]->fill(zPobs, weight);
-      _h_dsigma_all[4]->fill(j1.Et(), weight);
-      _h_dsigma_all[5]->fill(eta1, weight);
+      _h_dsigma_all[0]->fill(kin.y());
+      _h_dsigma_all[1]->fill(M_X);
+      _h_dsigma_all[2]->fill(xPom);
+      _h_dsigma_all[3]->fill(zPobs);
+      _h_dsigma_all[4]->fill(j1.Et());
+      _h_dsigma_all[5]->fill(eta1);
 
-      _h_xgamma->fill(xyobs, weight);
+      _h_xgamma->fill(xyobs);
 
-      _h_dsigma_xgamma[i_xyobs][0]->fill(kin.y(), weight);
-      _h_dsigma_xgamma[i_xyobs][1]->fill(M_X, weight);
-      _h_dsigma_xgamma[i_xyobs][2]->fill(xPom, weight);
-      _h_dsigma_xgamma[i_xyobs][3]->fill(zPobs, weight);
+      _h_dsigma_xgamma[i_xyobs][0]->fill(kin.y());
+      _h_dsigma_xgamma[i_xyobs][1]->fill(M_X);
+      _h_dsigma_xgamma[i_xyobs][2]->fill(xPom);
+      _h_dsigma_xgamma[i_xyobs][3]->fill(zPobs);
 
     }
 
@@ -177,6 +176,6 @@ namespace Rivet {
     int nVeto0, nVeto1, nVeto2, nVeto3, nVeto4;
   };
 
-  DECLARE_RIVET_PLUGIN(ZEUS_2008_I763404);
+  RIVET_DECLARE_PLUGIN(ZEUS_2008_I763404);
 
 }

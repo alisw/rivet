@@ -5,14 +5,16 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1448301
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Hulin Wang <Hulin.Wang@cern.ch>
  - Evgeny Soldatov <Evgeny.Soldatov@cern.ch>
  - Christian Gutschow <chris.g@cern.ch>
 References:
-  - Phys.Rev. D93 (2016) no.11, 112002
-  - doi:10.1103/PhysRevD.93.112002
-  - arXiv:1604.05232 [hep-ex]
+ - ATLAS-STDM-2014-01
+ - Phys.Rev. D93 (2016) no.11, 112002
+ - doi:10.1103/PhysRevD.93.112002
+ - arXiv:1604.05232 [hep-ex]
 Keywords:
  - multiboson
  - 2boson

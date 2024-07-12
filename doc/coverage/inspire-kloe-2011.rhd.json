@@ -1,0 +1,42 @@
+{
+    "851235": [
+        "Measurement of the $\\eta\\to 3\\pi^{0}$ slope parameter $\\alpha$ with the KLOE detector", 
+        "KLOE", 
+        "10.1016/j.physletb.2010.09.022", 
+        null, 
+        "1004.1319", 
+        null, 
+        null, 
+        []
+    ], 
+    "859660": [
+        "Measurement of $\\sigma(e^+ e^- \\to \\pi^+ \\pi^-)$ from threshold to 0.85 GeV$^2$ using Initial State Radiation with the KLOE detector", 
+        "KLOE", 
+        "10.1016/j.physletb.2011.04.055", 
+        null, 
+        "1006.5313", 
+        null, 
+        null, 
+        []
+    ], 
+    "877040": [
+        "Precision Measurement of $K_S$ Meson Lifetime with the KLOE detector", 
+        "KLOE", 
+        "10.1140/epjc/s10052-011-1604-7", 
+        null, 
+        "1011.2668", 
+        null, 
+        null, 
+        []
+    ], 
+    "901845": [
+        "Observation of the rare $\\eta\\to e^+e^-e^+e^-$ decay with the KLOE experiment", 
+        "KLOE", 
+        "10.1016/j.physletb.2011.07.033", 
+        null, 
+        "1105.6067", 
+        null, 
+        null, 
+        []
+    ]
+}

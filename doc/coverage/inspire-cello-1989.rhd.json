@@ -1,0 +1,75 @@
+{
+    "266414": [
+        "$K^0(s$) $K \\pi$ Production in Tagged and Untagged $\\gamma \\gamma$ Interactions", 
+        "CELLO", 
+        "10.1007/BF01548442", 
+        null, 
+        null, 
+        "ins266414", 
+        null, 
+        [
+            "DESY-88-149"
+        ]
+    ], 
+    "267081": [
+        "Measurement of the Reaction $\\gamma \\gamma \\to \\rho^+ \\rho^-$ With the Cello Detector", 
+        "CELLO", 
+        "10.1016/0370-2693(89)91454-8", 
+        null, 
+        null, 
+        "ins267081", 
+        null, 
+        [
+            "DESY-88-185"
+        ]
+    ], 
+    "267756": [
+        "The $K^0_S K^0_S$ Final State in $\\gamma \\gamma$ Interactions", 
+        "CELLO", 
+        "10.1007/BF02430613", 
+        null, 
+        null, 
+        "ins267756", 
+        null, 
+        [
+            "DESY-88-193"
+        ]
+    ], 
+    "267757": [
+        "An Experimental Study of $e^+ e^-$ Annihilation Into Four Leptons", 
+        "CELLO", 
+        "10.1007/BF02430605", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-88-192", 
+            "LAL-88-61"
+        ]
+    ], 
+    "276859": [
+        "$\\tau$ Production and Decay With the Cello Detector at {PETRA}", 
+        "CELLO", 
+        "10.1016/0370-2693(89)90741-7", 
+        null, 
+        null, 
+        "ins276859", 
+        null, 
+        [
+            "DESY-89-016"
+        ]
+    ], 
+    "276988": [
+        "Model Independent Limits on $\\Lambda$ ({QCD}) From $e^+ e^-$ Annihilation in the Energy Range From 14-{GeV} to 46-{GeV}", 
+        "CELLO", 
+        "10.1007/BF01548583", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-89-019"
+        ]
+    ]
+}

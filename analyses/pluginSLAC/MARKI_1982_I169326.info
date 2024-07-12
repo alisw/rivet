@@ -1,0 +1,32 @@
+Name: MARKI_1982_I169326
+Year: 1982
+Summary: Charged particle multiplicity for energies between 2.6 and 7.8 GeV
+Experiment: MARKI
+Collider: SPEAR
+InspireID: 169326
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D26 (1982) 969, 1982
+RunInfo: e+e- to hadrons
+NeedCrossSection: no
+Beams: [e-, e+]
+Description:
+  'Charged particle multiplicity for energies between 2.6 and 7.8 GeV'
+Keywords: []
+BibKey: Siegrist:1981zp
+BibTeX: '@article{Siegrist:1981zp,
+      author         = "Siegrist, J. and others",
+      title          = "{Hadron Production by e+ e- Annihilation at
+                        Center-Of-Mass Energies Between 2.6-GeV and 7.8-GeV. Part
+                        1. Total Cross-Section, Multiplicities and Inclusive
+                        Momentum Distributions}",
+      journal        = "Phys. Rev.",
+      volume         = "D26",
+      year           = "1982",
+      pages          = "969",
+      doi            = "10.1103/PhysRevD.26.969",
+      reportNumber   = "SLAC-PUB-2831, LBL-13464",
+      SLACcitation   = "%%CITATION = PHRVA,D26,969;%%"
+}'

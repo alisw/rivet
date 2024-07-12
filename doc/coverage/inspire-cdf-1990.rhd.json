@@ -1,0 +1,113 @@
+{
+    "282054": [
+        "A search for the top quark in the reaction $\\bar{p} p \\to e + {\\rm jets}$ at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.64.142", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "UPR-0172E", 
+            "FERMILAB-PUB-89-212-E"
+        ]
+    ], 
+    "283351": [
+        "A measurement of $D^*$ production in jets from $\\bar{p}p$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.64.348", 
+        null, 
+        null, 
+        "ins283351", 
+        null, 
+        [
+            "FERMILAB-PUB-89-171-E"
+        ]
+    ], 
+    "283353": [
+        "Two jet differential cross-section in $\\bar{p}p$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.64.157", 
+        null, 
+        null, 
+        "ins283353", 
+        null, 
+        [
+            "FERMILAB-PUB-89-206-E"
+        ]
+    ], 
+    "285490": [
+        "Measurement of the ratio $\\sigma(W^-\\to e \\nu)/\\sigma (Z^-\\to e e)$ in $\\bar{p}p$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.64.152", 
+        null, 
+        null, 
+        "ins285490", 
+        null, 
+        [
+            "FERMILAB-PUB-89-245-E"
+        ]
+    ], 
+    "286924": [
+        "Search for a light Higgs boson at the Tevatron $p\\bar{p}$ collider", 
+        "CDF", 
+        "10.1103/PhysRevD.41.1717", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-89-250-E"
+        ]
+    ], 
+    "288745": [
+        "The Two jet invariant mass distribution at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.41.1722", 
+        null, 
+        null, 
+        "ins288745", 
+        null, 
+        [
+            "FERMILAB-PUB-89-229-E"
+        ]
+    ], 
+    "295740": [
+        "Search for New Heavy Quarks in Electron - Muon Events at the {Fermilab} Tevatron Collider", 
+        "CDF", 
+        "10.1103/PhysRevLett.64.147", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-90-276-E"
+        ]
+    ], 
+    "297585": [
+        "Jet fragmentation properties of $\\bar{p}p$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.65.968", 
+        null, 
+        null, 
+        "ins297585", 
+        null, 
+        [
+            "FERMILAB-PUB-90-071-E", 
+            "ANL-HEP-PR-90-112"
+        ]
+    ], 
+    "299674": [
+        "A Measurement of the $W$ boson mass", 
+        "CDF", 
+        "10.1103/PhysRevLett.65.2243", 
+        null, 
+        null, 
+        "ins299674", 
+        null, 
+        [
+            "ANL-HEP-PR-90-71", 
+            "FERMILAB-PUB-90-161-E"
+        ]
+    ]
+}

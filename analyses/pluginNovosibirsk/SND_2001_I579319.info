@@ -1,0 +1,27 @@
+Name: SND_2001_I579319
+Year: 2001
+Summary: Cross section for $e^+e^-2\pi^+2\pi^-$ and $\pi^+\pi^-2\pi^0$ between 1 and 1.4 GeV
+Experiment: SND
+Collider: VEPP-2M
+InspireID: 579319
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - INP-2001-34 (2001)
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Luminosity_fb: 
+Description:
+  'Measurement of the cross section for $e^+e^-\to\pi^+2\pi^-$ and $\pi^+\pi^-2\pi^0$ between 1 and 1.4 GeV'
+BibKey: Achasov:2001gp
+BibTeX: '@article{Achasov:2001gp,
+      author         = "Achasov, M. N. and others",
+      title          = "{e+ e- --&gt; 4pi processes investigation in the energy
+                        range 0.98-GeV to 1.38-GeV with SND detector}",
+      collaboration  = "SND",
+      year           = "2001",
+      reportNumber   = "BUDKER-INP-2001-34",
+      SLACcitation   = "%%CITATION = BUDKER-INP-2001-34;%%"
+}'

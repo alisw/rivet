@@ -1,0 +1,130 @@
+{
+    "283003": [
+        "Measurement of the Total Hadronic Cross-sections in e$^{+} $e$^{-}$ Annihilation and Determination of the Standard Model Parameters", 
+        "TOPAZ", 
+        "10.1016/0370-2693(90)92052-K", 
+        null, 
+        null, 
+        "ins283003", 
+        null, 
+        [
+            "KEK-PREPRINT-89-136", 
+            "DPNU-89-51", 
+            "INS-779", 
+            "KOBE-HEP-89-10", 
+            "NWU-HEP-89-04", 
+            "OCU-HEP-89-04", 
+            "PU-89-636", 
+            "TU-HEP-89-03", 
+            "TUAT-HEP-89-03", 
+            "UT-HE-89-08"
+        ]
+    ], 
+    "283084": [
+        "A Study of Pion Pair Production in Two Photon Process", 
+        "TOPAZ", 
+        "10.1016/0370-2693(90)92026-F", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "KEK-Preprint-89-156", 
+            "DPNU-89-58", 
+            "KOBE-HEP-89-12", 
+            "TU-HEP-89-04", 
+            "UT-HE-89/09", 
+            "OCU-HEP-89-05", 
+            "INS-792", 
+            "NWU-HEP-89-05", 
+            "TUAT-HEP-89-04", 
+            "PU-89-641"
+        ]
+    ], 
+    "284970": [
+        "A Search for a $b^\\prime$ Quark With Flavor Changing Neutral Current Decay Modes at Tristan", 
+        "TOPAZ", 
+        "10.1016/0370-2693(90)92028-H", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DPNU-89-39", 
+            "KEK-Preprint-89-150", 
+            "KOBE-HEP-89-01", 
+            "TU-HEP-89-05", 
+            "UT-HE-89/10", 
+            "OCU-HEP-89-01", 
+            "INS-793", 
+            "NWU-HEP-89-06", 
+            "TUAT-HEP-89-05", 
+            "PU-89-642"
+        ]
+    ], 
+    "296356": [
+        "Search for pair production of heavy stable particles at TRISTAN", 
+        "TOPAZ", 
+        "10.1016/0370-2693(90)90083-I", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-90-37", 
+            "PU-90-647", 
+            "OCU-HEP-90-2", 
+            "NWU-HEP-90-03", 
+            "UT-HE-90-05", 
+            "INS-827", 
+            "KOBE-HEP-90-04", 
+            "TU-HEP-90-02", 
+            "DPNU-90-22", 
+            "TUAT-HEP-90-02", 
+            "TIT-HPE-90-1"
+        ]
+    ], 
+    "297067": [
+        "A search for charged Higgs bosons at TRISTAN", 
+        "TOPAZ", 
+        "10.1016/0370-2693(90)91138-2", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DPNU-90-09", 
+            "INS-813", 
+            "KEK-PREPRINT-90-11", 
+            "KOBE-HEP-90-03", 
+            "NWU-HEP-90-01", 
+            "OCU-HEP-90-01", 
+            "PU-90-645", 
+            "TUAT-HEP-90-01", 
+            "TU-HEP-90-01", 
+            "UT-HE-90-03"
+        ]
+    ], 
+    "299105": [
+        "A Search for inclusive production of heavy stable particles by the TOPAZ detector at TRISTAN", 
+        "TOPAZ", 
+        "10.1016/0370-2693(90)91266-E", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-90-84", 
+            "DPNU-90-32", 
+            "INS-838", 
+            "KOBE-HEP-90-05", 
+            "NWU-HEP-90-03", 
+            "OCU-HEP-90-03", 
+            "PU-90-648", 
+            "TIT-HPE-90-04", 
+            "TU-HEP-90-03", 
+            "TUAT-HEP-90-03", 
+            "UT-HEP-90-06"
+        ]
+    ]
+}

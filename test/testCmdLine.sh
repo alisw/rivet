@@ -47,6 +47,7 @@ rivet --list-analyses > log || exit $?
 echo
 rivet --show-analysis SLD_1999_S37439 > log || exit $?
 
+
 echo
 rivet -a D0_2008_S7554427 ${RIVET_TESTS_SRC}/testApi.hepmc file2.hepmc > log || exit $?
 grep -q "20 events" log

@@ -1,0 +1,52 @@
+{
+    "397096": [
+        "Search for the Flavor-Changing Neutral-Current Decays $D^+\\to \\pi^+ \\mu^+ \\mu^-$ and $D^+\\to \\pi^+ e^+ e^-$",
+        "E791",
+        "10.1103/PhysRevLett.76.364",
+        null,
+        "hep-ex/9507003",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-95-142-E",
+            "KSU-HEP-95-01"
+        ]
+    ],
+    "415081": [
+        "Asymmetries between the production of $D^+$ and $D^-$ mesons from 500-{GeV/c} $\\pi^-$ - nucleon interactions as a function of $x_F$ and $p_t^2$",
+        "E791",
+        "10.1016/0370-2693(96)00093-7",
+        null,
+        "hep-ex/9601001",
+        "ins415081",
+        null,
+        [
+            "FERMILAB-PUB-96-001-E"
+        ]
+    ],
+    "417432": [
+        "Mass splitting and production of sigma(c)0 and sigma(c)++ measured in 500-GeV pi- n interactions",
+        "E791",
+        "10.1016/0370-2693(96)00471-6",
+        null,
+        "hep-ex/9604007",
+        "ins417432",
+        null,
+        [
+            "FERMILAB-PUB-96-076-E"
+        ]
+    ],
+    "420119": [
+        "Search for D0 - anti-D0 mixing in semileptonic decay modes",
+        "E791",
+        "10.1103/PhysRevLett.77.2384",
+        null,
+        "hep-ex/9606016",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-96-109-E",
+            "KSU-HEP-96-01"
+        ]
+    ]
+}

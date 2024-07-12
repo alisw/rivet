@@ -1,0 +1,34 @@
+Name: CMD2_2008_I782516
+Year: 2008
+Summary: Cross section for $e^+e^-\to K^+K^-$ near the $\phi$ mass
+Experiment: CMD2
+Collider: VEPP-2M
+InspireID: 782516
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+- Phys.Lett. B669 (2008) 217-222, 2008
+RunInfo: e+ e- to hadrons
+NeedCrossSection: yes
+Beams: [e+, e-]
+Description:
+  'Measurement of the cross section for $e^+e^-\to K^+K^-$ at near the $\phi$ mass.'
+Keywords:
+BibKey: Akhmetshin:2008gz
+BibTeX: '@article{Akhmetshin:2008gz,
+      author         = "Akhmetshin, R. R. and others",
+      title          = "{Measurement of $e^+e^- \to \phi \to K^+K^-$ cross
+                        section with the CMD-2 detector at VEPP-2M Collider}",
+      collaboration  = "CMD-2",
+      journal        = "Phys. Lett.",
+      volume         = "B669",
+      year           = "2008",
+      pages          = "217-222",
+      doi            = "10.1016/j.physletb.2008.09.053",
+      eprint         = "0804.0178",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "0804.0146",
+      SLACcitation   = "%%CITATION = ARXIV:0804.0178;%%"
+}'

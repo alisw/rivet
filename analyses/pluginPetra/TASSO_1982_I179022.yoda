@@ -1,0 +1,130 @@
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1982_I179022/d01-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.14, up: 0.14}, sys: {dn: -0.14, up: 0.14}, 'sys,ERROR IN BACKGROUND SUBTRACTION ESTIMATED BY USING DIFFERENT MODELS FOR BACKGROUNDRES-DEF(RES=RHO0,BACK=CORRECTED)': {dn: -0.1382, up: 0.1382}, 'sys,UNCERTAINTY IN TOTAL CROSS SECTION': {dn: -0.03455, up: 0.03455}}, 1: {stat: {dn: -0.076, up: 0.076}, sys: {dn: -0.06, up: 0.06}, 'sys,ERROR IN BACKGROUND SUBTRACTION ESTIMATED BY USING DIFFERENT MODELS FOR BACKGROUNDRES-DEF(RES=RHO0,BACK=CORRECTED)': {dn: -0.061, up: 0.061}, 'sys,UNCERTAINTY IN TOTAL CROSS SECTION': {dn: -0.01525, up: 0.01525}}, 2: {stat: {dn: -0.046, up: 0.046}, sys: {dn: -0.05, up: 0.05}, 'sys,ERROR IN BACKGROUND SUBTRACTION ESTIMATED BY USING DIFFERENT MODELS FOR BACKGROUNDRES-DEF(RES=RHO0,BACK=CORRECTED)': {dn: -0.0546, up: 0.0546}, 'sys,UNCERTAINTY IN TOTAL CROSS SECTION': {dn: -0.01365, up: 0.01365}}, 3: {stat: {dn: -0.015, up: 0.015}, sys: {dn: -0.01, up: 0.01}, 'sys,ERROR IN BACKGROUND SUBTRACTION ESTIMATED BY USING DIFFERENT MODELS FOR BACKGROUNDRES-DEF(RES=RHO0,BACK=CORRECTED)': {dn: -0.0132, up: 0.0132}, 'sys,UNCERTAINTY IN TOTAL CROSS SECTION': {dn: -0.0033, up: 0.0033}}}
+
+IsRef: 1
+Path: /REF/TASSO_1982_I179022/d01-x01-y01
+Title: doi:10.17182/hepdata.6664.v1/t1
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.500000e-01	5.000000e-02	5.000000e-02	6.910000e-01	2.439118e-01	2.439118e-01
+2.500000e-01	5.000000e-02	5.000000e-02	3.050000e-01	1.154537e-01	1.154537e-01
+3.500000e-01	5.000000e-02	5.000000e-02	2.730000e-01	8.822405e-02	8.822405e-02
+5.500000e-01	1.500000e-01	1.500000e-01	6.600000e-02	2.258606e-02	2.258606e-02
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1982_I179022/d02-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.03, up: 0.03}, sys: {dn: -0.05, up: 0.05}}}
+
+IsRef: 1
+Path: /REF/TASSO_1982_I179022/d02-x01-y01
+Title: doi:10.17182/hepdata.6664.v1/t2
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+2.500000e-01	1.500000e-01	1.500000e-01	2.400000e-01	5.830952e-02	5.830952e-02
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1982_I179022/d03-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.02, up: 0.02}, sys: {dn: -0.05, up: 0.05}}, 1: {stat: {dn: -0.04, up: 0.04}, sys: {dn: -0.08, up: 0.08}}}
+
+IsRef: 1
+Path: /REF/TASSO_1982_I179022/d03-x01-y01
+Title: doi:10.17182/hepdata.6664.v1/t3
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+4.000000e-01	3.000000e-01	3.000000e-01	4.100000e-01	8.944272e-02	8.944272e-02
+4.500000e-01	2.500000e-01	2.500000e-01	2.200000e-01	5.385165e-02	5.385165e-02
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1982_I179022/d04-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.06, up: 0.06}, sys: {dn: -0.07, up: 0.07}}, 1: {stat: {dn: -0.06, up: 0.06}, sys: {dn: -0.05, up: 0.05}}}
+
+IsRef: 1
+Path: /REF/TASSO_1982_I179022/d04-x01-y01
+Title: doi:10.17182/hepdata.6664.v1/t4
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.400000e+01	0.000000e+00	0.000000e+00	3.300000e-01	9.219544e-02	9.219544e-02
+2.200000e+01	0.000000e+00	0.000000e+00	2.200000e-01	7.810250e-02	7.810250e-02
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1982_I179022/d05-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.25, up: 0.25}}}
+
+IsRef: 1
+Path: /REF/TASSO_1982_I179022/d05-x01-y01
+Title: doi:10.17182/hepdata.6664.v1/t5
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+3.400000e+01	0.000000e+00	0.000000e+00	2.920000e+00	2.500000e-01	2.500000e-01
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1982_I179022/d06-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.14, up: 0.14}, sys: {dn: -0.14, up: 0.14}, 'sys,ERROR IN BACKGROUND SUBTRACTION ESTIMATED BY USING DIFFERENT MODELS FOR BACKGROUNDRES-DEF(RES=RHO0,BACK=CORRECTED)': {dn: -0.1382, up: 0.1382}, 'sys,UNCERTAINTY IN TOTAL CROSS SECTION': {dn: -0.03455, up: 0.03455}}, 1: {stat: {dn: -0.076, up: 0.076}, sys: {dn: -0.06, up: 0.06}, 'sys,ERROR IN BACKGROUND SUBTRACTION ESTIMATED BY USING DIFFERENT MODELS FOR BACKGROUNDRES-DEF(RES=RHO0,BACK=CORRECTED)': {dn: -0.061, up: 0.061}, 'sys,UNCERTAINTY IN TOTAL CROSS SECTION': {dn: -0.01525, up: 0.01525}}, 2: {stat: {dn: -0.046, up: 0.046}, sys: {dn: -0.05, up: 0.05}, 'sys,ERROR IN BACKGROUND SUBTRACTION ESTIMATED BY USING DIFFERENT MODELS FOR BACKGROUNDRES-DEF(RES=RHO0,BACK=CORRECTED)': {dn: -0.0546, up: 0.0546}, 'sys,UNCERTAINTY IN TOTAL CROSS SECTION': {dn: -0.01365, up: 0.01365}}, 3: {stat: {dn: -0.15, up: 0.15}, sys: {dn: -0.01, up: 0.01}, 'sys,ERROR IN BACKGROUND SUBTRACTION ESTIMATED BY USING DIFFERENT MODELS FOR BACKGROUNDRES-DEF(RES=RHO0,BACK=CORRECTED)': {dn: -0.0132, up: 0.0132}, 'sys,UNCERTAINTY IN TOTAL CROSS SECTION': {dn: -0.0033, up: 0.0033}}}
+
+IsRef: 1
+Path: /REF/TASSO_1982_I179022/d06-x01-y01
+Title: doi:10.17182/hepdata.6664.v1/t6
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.500000e-01	5.000000e-02	5.000000e-02	6.910000e-01	2.439118e-01	2.439118e-01
+2.500000e-01	5.000000e-02	5.000000e-02	3.050000e-01	1.154537e-01	1.154537e-01
+3.500000e-01	5.000000e-02	5.000000e-02	2.730000e-01	8.822405e-02	8.822405e-02
+5.500000e-01	1.500000e-01	1.500000e-01	6.600000e-02	1.509474e-01	1.509474e-01
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1982_I179022/d07-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.03, up: 0.03}, sys: {dn: -0.05, up: 0.05}}}
+
+IsRef: 1
+Path: /REF/TASSO_1982_I179022/d07-x01-y01
+Title: doi:10.17182/hepdata.6664.v1/t7
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+2.500000e-01	1.500000e-01	1.500000e-01	2.400000e-01	5.830952e-02	5.830952e-02
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1982_I179022/d08-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.02, up: 0.02}, sys: {dn: -0.05, up: 0.05}}, 1: {stat: {dn: -0.04, up: 0.04}, sys: {dn: -0.08, up: 0.08}}}
+
+IsRef: 1
+Path: /REF/TASSO_1982_I179022/d08-x01-y01
+Title: doi:10.17182/hepdata.6664.v1/t8
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+4.000000e-01	3.000000e-01	3.000000e-01	4.100000e-01	8.944272e-02	8.944272e-02
+4.500000e-01	2.500000e-01	2.500000e-01	2.200000e-01	5.385165e-02	5.385165e-02
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1982_I179022/d09-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.06, up: 0.06}, sys: {dn: -0.07, up: 0.07}}, 1: {stat: {dn: -0.06, up: 0.06}, sys: {dn: -0.05, up: 0.05}}}
+
+IsRef: 1
+Path: /REF/TASSO_1982_I179022/d09-x01-y01
+Title: doi:10.17182/hepdata.6664.v1/t9
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.400000e+01	0.000000e+00	0.000000e+00	3.300000e-01	9.219544e-02	9.219544e-02
+2.200000e+01	0.000000e+00	0.000000e+00	2.200000e-01	7.810250e-02	7.810250e-02
+END YODA_SCATTER2D_V2
+BEGIN YODA_SCATTER2D_V2 /REF/TASSO_1982_I179022/d10-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {error: {dn: -0.25, up: 0.25}}}
+
+IsRef: 1
+Path: /REF/TASSO_1982_I179022/d10-x01-y01
+Title: doi:10.17182/hepdata.6664.v1/t10
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+3.400000e+01	0.000000e+00	0.000000e+00	2.920000e+00	2.500000e-01	2.500000e-01
+END YODA_SCATTER2D_V2

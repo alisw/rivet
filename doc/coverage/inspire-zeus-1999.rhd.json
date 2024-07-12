@@ -1,0 +1,116 @@
+{
+    "468803": [
+        "Measurement of jet shapes in high $Q^{2}$ deep inelastic scattering at HERA", 
+        "ZEUS", 
+        "10.1007/s100520050471", 
+        null, 
+        "hep-ex/9804001", 
+        "ins468803", 
+        null, 
+        [
+            "DESY-98-038"
+        ]
+    ], 
+    "470499": [
+        "Forward jet production in deep inelastic scattering at HERA", 
+        "ZEUS", 
+        "10.1007/s100529801018", 
+        null, 
+        "hep-ex/9805016", 
+        "ins470499", 
+        null, 
+        [
+            "DESY-98-050", 
+            "ANL-HEP-PR-98-50"
+        ]
+    ], 
+    "472962": [
+        "Measurement of inclusive D*+- and associated dijet cross-sections in photoproduction at HERA", 
+        "ZEUS", 
+        "10.1007/s100529801017", 
+        null, 
+        "hep-ex/9807008", 
+        "ins472962", 
+        null, 
+        [
+            "DESY-98-085"
+        ]
+    ], 
+    "473108": [
+        "Measurement of the diffractive cross-section in deep inelastic scattering using ZEUS 1994 data", 
+        "ZEUS", 
+        "10.1007/PL00021606", 
+        null, 
+        "hep-ex/9807010", 
+        "ins473108", 
+        null, 
+        [
+            "DESY-98-084", 
+            "ANL-HEP-PR-98-98"
+        ]
+    ], 
+    "475083": [
+        "Exclusive electroproduction of $\\rho^0$ and $J/\\psi$ mesons at HERA", 
+        "ZEUS", 
+        "10.1007/s100529901051", 
+        null, 
+        "hep-ex/9808020", 
+        "ins475083", 
+        null, 
+        [
+            "DESY-98-107", 
+            "ANL-HEP-PR-98-95"
+        ]
+    ], 
+    "475922": [
+        "ZEUS results on the measurement and phenomenology of F(2) at low x and low Q**2", 
+        "ZEUS", 
+        "10.1007/s100529901084", 
+        null, 
+        "hep-ex/9809005", 
+        "ins475922", 
+        null, 
+        [
+            "DESY-98-121", 
+            "ANL-HEP-PR-98-120"
+        ]
+    ], 
+    "497218": [
+        "Measurement of multiplicity and momentum spectra in the current and target regions of the Breit frame in deep inelastic scattering at HERA", 
+        "ZEUS", 
+        "10.1007/s100520050630", 
+        null, 
+        "hep-ex/9903056", 
+        null, 
+        null, 
+        [
+            "DESY-99-041"
+        ]
+    ], 
+    "500267": [
+        "Measurement of high $Q^{2}$ neutral current $e^{+} p$ deep inelastic scattering cross-sections at HERA", 
+        "ZEUS", 
+        "10.1007/s100520050645", 
+        null, 
+        "hep-ex/9905032", 
+        "ins500267", 
+        null, 
+        [
+            "DESY-99-056", 
+            "ANL-HEP-PR-99-81"
+        ]
+    ], 
+    "500491": [
+        "Measurement of Dijet photoproduction at high transverse energies at HERA", 
+        "ZEUS", 
+        "10.1007/s100520050612", 
+        null, 
+        "hep-ex/9905046", 
+        "ins500491", 
+        null, 
+        [
+            "DESY-99-057", 
+            "ANL-HEP-PR-99-82"
+        ]
+    ]
+}

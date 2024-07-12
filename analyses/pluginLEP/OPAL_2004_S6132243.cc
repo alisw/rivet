@@ -14,37 +14,32 @@ namespace Rivet {
 
 
   /// @brief OPAL event shapes and moments at 91, 133, 177, and 197 GeV
+  ///
   /// @author Andy Buckley
   class OPAL_2004_S6132243 : public Analysis {
   public:
 
-    /// Constructor
-    OPAL_2004_S6132243()
-      : Analysis("OPAL_2004_S6132243"),
-        _isqrts(-1), _sumWTrack2(0.0), _sumWJet3(0.0)
-    {
-      //
-    }
+    RIVET_DEFAULT_ANALYSIS_CTOR(OPAL_2004_S6132243);
 
 
     /// @name Analysis methods
-    //@{
+    /// @{
 
     /// Energies: 91, 133, 177 (161-183), 197 (189-209) => index 0..4
-    int getHistIndex(double sqrts) {
+    int getHistIndex() {
       int ih = -1;
-      if (inRange(sqrts/GeV, 89.9, 91.5)) {
+      if (inRange(sqrtS()/GeV, 89.9, 91.5)) {
         ih = 0;
-      } else if (fuzzyEquals(sqrts/GeV, 133)) {
+      } else if (isCompatibleWithSqrtS(133.)) {
         ih = 1;
-      } else if (fuzzyEquals(sqrts/GeV, 177)) { // (161-183)
+      } else if (isCompatibleWithSqrtS(177.)) { // (161-183)
         ih = 2;
-      } else if (fuzzyEquals(sqrts/GeV, 197)) { // (189-209)
+      } else if (isCompatibleWithSqrtS(197.)) { // (189-209)
         ih = 3;
       } else {
         stringstream ss;
         ss << "Invalid energy for OPAL_2004 analysis: "
-           << sqrts/GeV << " GeV != 91, 133, 177, or 197 GeV";
+           << sqrtS() << " GeV != 91, 133, 177, or 197 GeV";
         throw Error(ss.str());
       }
       assert(ih >= 0);
@@ -65,38 +60,39 @@ namespace Rivet {
       const Thrust thrust(fs);
       declare(thrust, "Thrust");
       declare(Hemispheres(thrust), "Hemispheres");
-
-      // Get beam energy index
-      _isqrts = getHistIndex(sqrtS());
+      _isqrts = getHistIndex();
 
       // Book histograms
-      _hist1MinusT[_isqrts]    = bookHisto1D(1, 1, _isqrts+1);
-      _histHemiMassH[_isqrts]  = bookHisto1D(2, 1, _isqrts+1);
-      _histCParam[_isqrts]     = bookHisto1D(3, 1, _isqrts+1);
-      _histHemiBroadT[_isqrts] = bookHisto1D(4, 1, _isqrts+1);
-      _histHemiBroadW[_isqrts] = bookHisto1D(5, 1, _isqrts+1);
-      _histY23Durham[_isqrts]  = bookHisto1D(6, 1, _isqrts+1);
-      _histTMajor[_isqrts]     = bookHisto1D(7, 1, _isqrts+1);
-      _histTMinor[_isqrts]     = bookHisto1D(8, 1, _isqrts+1);
-      _histAplanarity[_isqrts] = bookHisto1D(9, 1, _isqrts+1);
-      _histSphericity[_isqrts] = bookHisto1D(10, 1, _isqrts+1);
-      _histOblateness[_isqrts] = bookHisto1D(11, 1, _isqrts+1);
-      _histHemiMassL[_isqrts]  = bookHisto1D(12, 1, _isqrts+1);
-      _histHemiBroadN[_isqrts] = bookHisto1D(13, 1, _isqrts+1);
-      _histDParam[_isqrts]     = bookHisto1D(14, 1, _isqrts+1);
+      book(_hist1MinusT[_isqrts]    ,1, 1, _isqrts+1);
+      book(_histHemiMassH[_isqrts]  ,2, 1, _isqrts+1);
+      book(_histCParam[_isqrts]     ,3, 1, _isqrts+1);
+      book(_histHemiBroadT[_isqrts] ,4, 1, _isqrts+1);
+      book(_histHemiBroadW[_isqrts] ,5, 1, _isqrts+1);
+      book(_histY23Durham[_isqrts]  ,6, 1, _isqrts+1);
+      book(_histTMajor[_isqrts]     ,7, 1, _isqrts+1);
+      book(_histTMinor[_isqrts]     ,8, 1, _isqrts+1);
+      book(_histAplanarity[_isqrts] ,9, 1, _isqrts+1);
+      book(_histSphericity[_isqrts] ,10, 1, _isqrts+1);
+      book(_histOblateness[_isqrts] ,11, 1, _isqrts+1);
+      book(_histHemiMassL[_isqrts]  ,12, 1, _isqrts+1);
+      book(_histHemiBroadN[_isqrts] ,13, 1, _isqrts+1);
+      book(_histDParam[_isqrts]     ,14, 1, _isqrts+1);
       //
-      _hist1MinusTMom[_isqrts]    = bookHisto1D(15, 1, _isqrts+1);
-      _histHemiMassHMom[_isqrts]  = bookHisto1D(16, 1, _isqrts+1);
-      _histCParamMom[_isqrts]     = bookHisto1D(17, 1, _isqrts+1);
-      _histHemiBroadTMom[_isqrts] = bookHisto1D(18, 1, _isqrts+1);
-      _histHemiBroadWMom[_isqrts] = bookHisto1D(19, 1, _isqrts+1);
-      _histY23DurhamMom[_isqrts]  = bookHisto1D(20, 1, _isqrts+1);
-      _histTMajorMom[_isqrts]     = bookHisto1D(21, 1, _isqrts+1);
-      _histTMinorMom[_isqrts]     = bookHisto1D(22, 1, _isqrts+1);
-      _histSphericityMom[_isqrts] = bookHisto1D(23, 1, _isqrts+1);
-      _histOblatenessMom[_isqrts] = bookHisto1D(24, 1, _isqrts+1);
-      _histHemiMassLMom[_isqrts]  = bookHisto1D(25, 1, _isqrts+1);
-      _histHemiBroadNMom[_isqrts] = bookHisto1D(26, 1, _isqrts+1);
+      book(_hist1MinusTMom[_isqrts]    ,15, 1, _isqrts+1);
+      book(_histHemiMassHMom[_isqrts]  ,16, 1, _isqrts+1);
+      book(_histCParamMom[_isqrts]     ,17, 1, _isqrts+1);
+      book(_histHemiBroadTMom[_isqrts] ,18, 1, _isqrts+1);
+      book(_histHemiBroadWMom[_isqrts] ,19, 1, _isqrts+1);
+      book(_histY23DurhamMom[_isqrts]  ,20, 1, _isqrts+1);
+      book(_histTMajorMom[_isqrts]     ,21, 1, _isqrts+1);
+      book(_histTMinorMom[_isqrts]     ,22, 1, _isqrts+1);
+      book(_histSphericityMom[_isqrts] ,23, 1, _isqrts+1);
+      book(_histOblatenessMom[_isqrts] ,24, 1, _isqrts+1);
+      book(_histHemiMassLMom[_isqrts]  ,25, 1, _isqrts+1);
+      book(_histHemiBroadNMom[_isqrts] ,26, 1, _isqrts+1);
+
+      book(_sumWTrack2, "_sumWTrack2");
+      book(_sumWJet3, "_sumWJet3");
     }
 
 
@@ -105,32 +101,30 @@ namespace Rivet {
       const FinalState& cfs = apply<FinalState>(event, "CFS");
       if (cfs.size() < 2) vetoEvent;
 
-      // Increment passed-cuts weight sum
-      const double weight = event.weight();
-      _sumWTrack2 += weight;
+      _sumWTrack2->fill();
 
       // Thrusts
       const Thrust& thrust = apply<Thrust>(event, "Thrust");
-      _hist1MinusT[_isqrts]->fill(1-thrust.thrust(), weight);
-      _histTMajor[_isqrts]->fill(thrust.thrustMajor(), weight);
-      _histTMinor[_isqrts]->fill(thrust.thrustMinor(), weight);
-      _histOblateness[_isqrts]->fill(thrust.oblateness(), weight);
+      _hist1MinusT[_isqrts]->fill(1-thrust.thrust());
+      _histTMajor[_isqrts]->fill(thrust.thrustMajor());
+      _histTMinor[_isqrts]->fill(thrust.thrustMinor());
+      _histOblateness[_isqrts]->fill(thrust.oblateness());
       for (int n = 1; n <= 5; ++n) {
-        _hist1MinusTMom[_isqrts]->fill(n, pow(1-thrust.thrust(), n)*weight);
-        _histTMajorMom[_isqrts]->fill(n, pow(thrust.thrustMajor(), n)*weight);
-        _histTMinorMom[_isqrts]->fill(n, pow(thrust.thrustMinor(), n)*weight);
-        _histOblatenessMom[_isqrts]->fill(n, pow(thrust.oblateness(), n)*weight);
+        _hist1MinusTMom[_isqrts]->fill(n, pow(1-thrust.thrust(), n));
+        _histTMajorMom[_isqrts]->fill(n, pow(thrust.thrustMajor(), n));
+        _histTMinorMom[_isqrts]->fill(n, pow(thrust.thrustMinor(), n));
+        _histOblatenessMom[_isqrts]->fill(n, pow(thrust.oblateness(), n));
       }
 
       // Jets
       const FastJets& durjet = apply<FastJets>(event, "DurhamJets");
       if (durjet.clusterSeq()) {
-        _sumWJet3 += weight;
+        _sumWJet3->fill();
         const double y23 = durjet.clusterSeq()->exclusive_ymerge_max(2);
         if (y23>0.0) {
-          _histY23Durham[_isqrts]->fill(y23, weight);
+          _histY23Durham[_isqrts]->fill(y23);
           for (int n = 1; n <= 5; ++n) {
-            _histY23DurhamMom[_isqrts]->fill(n, pow(y23, n)*weight);
+            _histY23DurhamMom[_isqrts]->fill(n, pow(y23, n));
           }
         }
       }
@@ -139,20 +133,20 @@ namespace Rivet {
       const Sphericity& sphericity = apply<Sphericity>(event, "Sphericity");
       const double sph = sphericity.sphericity();
       const double apl = sphericity.aplanarity();
-      _histSphericity[_isqrts]->fill(sph, weight);
-      _histAplanarity[_isqrts]->fill(apl, weight);
+      _histSphericity[_isqrts]->fill(sph);
+      _histAplanarity[_isqrts]->fill(apl);
       for (int n = 1; n <= 5; ++n) {
-        _histSphericityMom[_isqrts]->fill(n, pow(sph, n)*weight);
+        _histSphericityMom[_isqrts]->fill(n, pow(sph, n));
       }
 
       // C & D params
       const ParisiTensor& parisi = apply<ParisiTensor>(event, "Parisi");
       const double cparam = parisi.C();
       const double dparam = parisi.D();
-      _histCParam[_isqrts]->fill(cparam, weight);
-      _histDParam[_isqrts]->fill(dparam, weight);
+      _histCParam[_isqrts]->fill(cparam);
+      _histDParam[_isqrts]->fill(dparam);
       for (int n = 1; n <= 5; ++n) {
-        _histCParamMom[_isqrts]->fill(n, pow(cparam, n)*weight);
+        _histCParamMom[_isqrts]->fill(n, pow(cparam, n));
       }
 
       // Hemispheres
@@ -169,68 +163,68 @@ namespace Rivet {
         const double hemi_bmax = hemi.Bmax();
         const double hemi_bmin = hemi.Bmin();
         const double hemi_bsum = hemi.Bsum();
-        _histHemiMassH[_isqrts]->fill(hemi_mh, weight);
-        _histHemiMassL[_isqrts]->fill(hemi_ml, weight);
-        _histHemiBroadW[_isqrts]->fill(hemi_bmax, weight);
-        _histHemiBroadN[_isqrts]->fill(hemi_bmin, weight);
-        _histHemiBroadT[_isqrts]->fill(hemi_bsum, weight);
+        _histHemiMassH[_isqrts]->fill(hemi_mh);
+        _histHemiMassL[_isqrts]->fill(hemi_ml);
+        _histHemiBroadW[_isqrts]->fill(hemi_bmax);
+        _histHemiBroadN[_isqrts]->fill(hemi_bmin);
+        _histHemiBroadT[_isqrts]->fill(hemi_bsum);
         for (int n = 1; n <= 5; ++n) {
           // if (std::isnan(pow(hemi_ml, n))) MSG_ERROR("NaN in HemiL moment! Event = " << numEvents());
-          _histHemiMassHMom[_isqrts]->fill(n, pow(hemi_mh, n)*weight);
-          _histHemiMassLMom[_isqrts]->fill(n, pow(hemi_ml, n)*weight);
-          _histHemiBroadWMom[_isqrts]->fill(n, pow(hemi_bmax, n)*weight);
-          _histHemiBroadNMom[_isqrts]->fill(n, pow(hemi_bmin, n)*weight);
-          _histHemiBroadTMom[_isqrts]->fill(n, pow(hemi_bsum, n)*weight);
+          _histHemiMassHMom[_isqrts]->fill(n, pow(hemi_mh, n));
+          _histHemiMassLMom[_isqrts]->fill(n, pow(hemi_ml, n));
+          _histHemiBroadWMom[_isqrts]->fill(n, pow(hemi_bmax, n));
+          _histHemiBroadNMom[_isqrts]->fill(n, pow(hemi_bmin, n));
+          _histHemiBroadTMom[_isqrts]->fill(n, pow(hemi_bsum, n));
         }
       }
     }
 
 
     void finalize() {
-      scale(_hist1MinusT[_isqrts], 1.0/_sumWTrack2);
-      scale(_histTMajor[_isqrts], 1.0/_sumWTrack2);
-      scale(_histTMinor[_isqrts], 1.0/_sumWTrack2);
-      scale(_histOblateness[_isqrts], 1.0/_sumWTrack2);
-      scale(_histSphericity[_isqrts], 1.0/_sumWTrack2);
-      scale(_histAplanarity[_isqrts], 1.0/_sumWTrack2);
-      scale(_histHemiMassH[_isqrts], 1.0/_sumWTrack2);
-      scale(_histHemiMassL[_isqrts], 1.0/_sumWTrack2);
-      scale(_histHemiBroadW[_isqrts], 1.0/_sumWTrack2);
-      scale(_histHemiBroadN[_isqrts], 1.0/_sumWTrack2);
-      scale(_histHemiBroadT[_isqrts], 1.0/_sumWTrack2);
-      scale(_histCParam[_isqrts], 1.0/_sumWTrack2);
-      scale(_histDParam[_isqrts], 1.0/_sumWTrack2);
-      scale(_histY23Durham[_isqrts], 1.0/_sumWJet3);
+      scale(_hist1MinusT[_isqrts], 1.0 / *_sumWTrack2);
+      scale(_histTMajor[_isqrts], 1.0 / *_sumWTrack2);
+      scale(_histTMinor[_isqrts], 1.0 / *_sumWTrack2);
+      scale(_histOblateness[_isqrts], 1.0 / *_sumWTrack2);
+      scale(_histSphericity[_isqrts], 1.0 / *_sumWTrack2);
+      scale(_histAplanarity[_isqrts], 1.0 / *_sumWTrack2);
+      scale(_histHemiMassH[_isqrts], 1.0 / *_sumWTrack2);
+      scale(_histHemiMassL[_isqrts], 1.0 / *_sumWTrack2);
+      scale(_histHemiBroadW[_isqrts], 1.0 / *_sumWTrack2);
+      scale(_histHemiBroadN[_isqrts], 1.0 / *_sumWTrack2);
+      scale(_histHemiBroadT[_isqrts], 1.0 / *_sumWTrack2);
+      scale(_histCParam[_isqrts], 1.0 / *_sumWTrack2);
+      scale(_histDParam[_isqrts], 1.0 / *_sumWTrack2);
+      scale(_histY23Durham[_isqrts], 1.0 / *_sumWJet3);
       //
-      scale(_hist1MinusTMom[_isqrts], 1.0/_sumWTrack2);
-      scale(_histTMajorMom[_isqrts], 1.0/_sumWTrack2);
-      scale(_histTMinorMom[_isqrts], 1.0/_sumWTrack2);
-      scale(_histOblatenessMom[_isqrts], 1.0/_sumWTrack2);
-      scale(_histSphericityMom[_isqrts], 1.0/_sumWTrack2);
-      scale(_histHemiMassHMom[_isqrts], 1.0/_sumWTrack2);
-      scale(_histHemiMassLMom[_isqrts], 1.0/_sumWTrack2);
-      scale(_histHemiBroadWMom[_isqrts], 1.0/_sumWTrack2);
-      scale(_histHemiBroadNMom[_isqrts], 1.0/_sumWTrack2);
-      scale(_histHemiBroadTMom[_isqrts], 1.0/_sumWTrack2);
-      scale(_histCParamMom[_isqrts], 1.0/_sumWTrack2);
-      scale(_histY23DurhamMom[_isqrts], 1.0/_sumWJet3);
+      scale(_hist1MinusTMom[_isqrts], 1.0 / *_sumWTrack2);
+      scale(_histTMajorMom[_isqrts], 1.0 / *_sumWTrack2);
+      scale(_histTMinorMom[_isqrts], 1.0 / *_sumWTrack2);
+      scale(_histOblatenessMom[_isqrts], 1.0 / *_sumWTrack2);
+      scale(_histSphericityMom[_isqrts], 1.0 / *_sumWTrack2);
+      scale(_histHemiMassHMom[_isqrts], 1.0 / *_sumWTrack2);
+      scale(_histHemiMassLMom[_isqrts], 1.0 / *_sumWTrack2);
+      scale(_histHemiBroadWMom[_isqrts], 1.0 / *_sumWTrack2);
+      scale(_histHemiBroadNMom[_isqrts], 1.0 / *_sumWTrack2);
+      scale(_histHemiBroadTMom[_isqrts], 1.0 / *_sumWTrack2);
+      scale(_histCParamMom[_isqrts], 1.0 / *_sumWTrack2);
+      scale(_histY23DurhamMom[_isqrts], 1.0 / *_sumWJet3);
     }
 
-    //@}
+    /// @}
 
 
   private:
 
     /// Beam energy index for histograms
-    int _isqrts;
+    int _isqrts = -1;
 
-    /// @name Counters of event weights passing the cuts
-    //@{
-    double _sumWTrack2, _sumWJet3;
-    //@}
+    /// Counters of event weights passing the cuts
+    /// @{
+    CounterPtr _sumWTrack2, _sumWJet3;
+    /// @}
 
     /// @name Event shape histos at 4 energies
-    //@{
+    /// @{
     Histo1DPtr _hist1MinusT[4];
     Histo1DPtr _histHemiMassH[4];
     Histo1DPtr _histCParam[4];
@@ -245,10 +239,10 @@ namespace Rivet {
     Histo1DPtr _histHemiMassL[4];
     Histo1DPtr _histHemiBroadN[4];
     Histo1DPtr _histDParam[4];
-    //@}
+    /// @}
 
     /// @name Event shape moment histos at 4 energies
-    //@{
+    /// @{
     Histo1DPtr _hist1MinusTMom[4];
     Histo1DPtr _histHemiMassHMom[4];
     Histo1DPtr _histCParamMom[4];
@@ -261,13 +255,12 @@ namespace Rivet {
     Histo1DPtr _histOblatenessMom[4];
     Histo1DPtr _histHemiMassLMom[4];
     Histo1DPtr _histHemiBroadNMom[4];
-    //@}
+    /// @}
 
   };
 
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(OPAL_2004_S6132243);
+  RIVET_DECLARE_ALIASED_PLUGIN(OPAL_2004_S6132243, OPAL_2004_I669402);
 
 }

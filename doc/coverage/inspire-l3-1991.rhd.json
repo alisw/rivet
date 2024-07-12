@@ -1,0 +1,142 @@
+{
+    "314407": [
+        "Measurement of the inclusive production of neutral pions and charged particles on the Z0 resonance", 
+        "L3", 
+        "10.1016/0370-2693(91)90159-N", 
+        "217038", 
+        null, 
+        "ins314407", 
+        null, 
+        [
+            "L3-025"
+        ]
+    ], 
+    "314410": [
+        "Measurements of Z0 ---> b anti-b decays and the semileptonic branching ratio Br (b ---> lepton X)", 
+        "L3", 
+        "10.1016/0370-2693(91)91347-X", 
+        "217760", 
+        null, 
+        null, 
+        null, 
+        [
+            "L3-027"
+        ]
+    ], 
+    "314418": [
+        "Measurement of electroweak parameters from hadronic and leptonic decays of the $Z^0$", 
+        "L3", 
+        "10.1007/BF01475788", 
+        "217617", 
+        null, 
+        "ins314418", 
+        null, 
+        [
+            "L3-028"
+        ]
+    ], 
+    "315952": [
+        "Search for leptoquarks in Z0 decays", 
+        "L3", 
+        "10.1016/0370-2693(91)91346-W", 
+        "216991", 
+        null, 
+        null, 
+        null, 
+        [
+            "L3-026"
+        ]
+    ], 
+    "315953": [
+        "Search for narrow high mass resonances in radiative decays of the Z0", 
+        "L3", 
+        "10.1016/0370-2693(91)90659-E", 
+        "217750", 
+        null, 
+        null, 
+        null, 
+        [
+            "L3-029"
+        ]
+    ], 
+    "315954": [
+        "A Test of QCD based on three jet events from Z0 decays", 
+        "L3", 
+        "10.1016/0370-2693(91)90504-J", 
+        "219588", 
+        null, 
+        "ins315954", 
+        null, 
+        [
+            "L3-030"
+        ]
+    ], 
+    "318230": [
+        "Decay properties of tau leptons measured at the Z0 resonance", 
+        "L3", 
+        "10.1016/0370-2693(91)90081-Z", 
+        "221865", 
+        null, 
+        "ins318230", 
+        null, 
+        [
+            "L3-031"
+        ]
+    ], 
+    "318231": [
+        "Measurement of the lifetime of B hadrons and a determination of |V(cb)|", 
+        "L3", 
+        "10.1016/0370-2693(91)91547-9", 
+        "223308", 
+        null, 
+        null, 
+        null, 
+        [
+            "L3-032"
+        ]
+    ], 
+    "318981": [
+        "Measurement of the strong coupling constant alpha-s for bottom quarks at the Z0 resonance", 
+        "L3", 
+        "10.1016/0370-2693(91)90118-A", 
+        "225154", 
+        null, 
+        "ins318981", 
+        null, 
+        [
+            "L3-033"
+        ]
+    ], 
+    "318982": [
+        "Search for lepton flavor violation in Z0 decays", 
+        "L3", 
+        "10.1016/0370-2693(91)90117-9", 
+        "225155", 
+        null, 
+        null, 
+        null, 
+        [
+            "L3-034"
+        ]
+    ], 
+    "324427": [
+        "Determination of alpha-s from energy-energy correlations measured on the Z0 resonance.", 
+        "L3", 
+        "10.1016/0370-2693(91)91925-L", 
+        "215095", 
+        null, 
+        "ins324427", 
+        null, 
+        []
+    ], 
+    "324428": [
+        "Search for the neutral Higgs boson.", 
+        "L3", 
+        "10.1016/0370-2693(91)91923-J", 
+        "215165", 
+        null, 
+        null, 
+        null, 
+        []
+    ]
+}

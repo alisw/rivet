@@ -23,13 +23,13 @@ namespace Rivet {
     void init() {
       Cut cut = Cuts::abseta < 3.5 && Cuts::pT > 25*GeV;
       /// @todo Urk, abuse! Need explicit HiggsFinder (and TauFinder?)
-      ZFinder hfinder(FinalState(), cut, PID::TAU, 115*GeV, 135*GeV, 0.0, ZFinder::NOCLUSTER, ZFinder::NOTRACK, 125*GeV);
+      ZFinder hfinder(FinalState(), cut, PID::TAU, 115*GeV, 135*GeV, 0.0, ZFinder::ClusterPhotons::NONE, ZFinder::AddPhotons::NO, 125*GeV);
       declare(hfinder, "Hfinder");
       FastJets jetpro(hfinder.remainingFinalState(), FastJets::ANTIKT, 0.4);
       declare(jetpro, "Jets");
 
-      _h_H_jet1_deta = bookHisto1D("H_jet1_deta", 50, -5.0, 5.0);
-      _h_H_jet1_dR = bookHisto1D("H_jet1_dR", 25, 0.5, 7.0);
+      book(_h_H_jet1_deta ,"H_jet1_deta", 50, -5.0, 5.0);
+      book(_h_H_jet1_dR ,"H_jet1_dR", 25, 0.5, 7.0);
 
       MC_JetAnalysis::init();
     }
@@ -40,7 +40,7 @@ namespace Rivet {
     void analyze(const Event & e) {
       const ZFinder& hfinder = apply<ZFinder>(e, "Hfinder");
       if (hfinder.bosons().size() != 1) vetoEvent;
-      const double weight = e.weight();
+      const double weight = 1.0;
 
       FourMomentum hmom(hfinder.bosons()[0].momentum());
       const Jets& jets = apply<FastJets>(e, "Jets").jetsByPt(_jetptcut);
@@ -76,6 +76,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(MC_HJETS);
+  RIVET_DECLARE_PLUGIN(MC_HJETS);
 
 }

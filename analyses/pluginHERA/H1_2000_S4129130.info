@@ -6,15 +6,16 @@ Collider: HERA
 SpiresID: 4129130
 InspireID: 503947
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Peter Richardson <peter.richardson@durham.ac.uk>
 References:
  - Eur.Phys.J.C12:595-607,2000
  - doi:10.1007/s100520000287
- - arXiv:hep-ex/9907027v1
+ - arXiv:hep-ex/9907027
 RunInfo:
-  $e^+ p$ deep inelastic scattering with $p$ at 820\;GeV,
-  $e^+$ at 27.5 GeV \to $\sqrt{s} = 300\;\GeV$
+  $e^+ p$ deep inelastic scattering with $p$ at 820~GeV,
+  $e^+$ at 27.5 GeV \to $\sqrt{s} = 300~\GeV$
 NumEvents: 1000000
 Beams: [p+, e+]
 Energies: [[820, 27.5]]
@@ -47,3 +48,8 @@ BibTeX: '@Article{Adloff:1999ws,
      doi       = "10.1007/s100520000287",
      SLACcitation  = "%%CITATION = HEP-EX/9907027;%%"
 }'
+
+ReleaseTests:
+ - $A DIS-e+-HighQ2
+ - $A-2 DIS-e+-LowQ2
+

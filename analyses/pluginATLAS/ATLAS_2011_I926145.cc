@@ -17,7 +17,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2011_I926145);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2011_I926145);
 
 
     /// Book histograms and initialise projections before the run
@@ -38,11 +38,11 @@ namespace Rivet {
       const FinalState fs25(cut25);
 
       /// @todo Bare Zs ...
-      ZFinder zfinder_e(fs20, cut20, PID::ELECTRON, 66.0*GeV, 116.0*GeV, 0.1, ZFinder::NOCLUSTER);
+      ZFinder zfinder_e(fs20, cut20, PID::ELECTRON, 66.0*GeV, 116.0*GeV, 0.1, ZFinder::ClusterPhotons::NONE);
       declare(zfinder_e, "ZFinder_e");
-      ZFinder zfinder_mu(fs20, cut20, PID::MUON, 66.0*GeV, 116.0*GeV, 0.1, ZFinder::NOCLUSTER);
+      ZFinder zfinder_mu(fs20, cut20, PID::MUON, 66.0*GeV, 116.0*GeV, 0.1, ZFinder::ClusterPhotons::NONE);
       declare(zfinder_mu, "ZFinder_mu");
-      ZFinder zfinder_mufull(fs25, cut25, PID::MUON, 66.0*GeV, 116.0*GeV, 0.1, ZFinder::NOCLUSTER);
+      ZFinder zfinder_mufull(fs25, cut25, PID::MUON, 66.0*GeV, 116.0*GeV, 0.1, ZFinder::ClusterPhotons::NONE);
       declare(zfinder_mufull, "ZFinder_mufull");
 
       /// @todo ... but dressed Ws?
@@ -54,16 +54,14 @@ namespace Rivet {
       declare(wfinder_mufull, "WFinder_mufull");
 
       // Book histograms
-      _histPt_elecs      = bookHisto1D(1 ,1 ,1);
-      _histPt_muons      = bookHisto1D(2 ,1 ,1);
-      _histPt_muons_full = bookHisto1D(3 ,1 ,1);
+      book(_histPt_elecs      ,1 ,1 ,1);
+      book(_histPt_muons      ,2 ,1 ,1);
+      book(_histPt_muons_full ,3 ,1 ,1);
     }
 
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-      const double weight = event.weight();
-
       // Veto event if no lepton is present
       const FinalState& elecs      = apply<FinalState>(event, "elecs");
       const FinalState& muons      = apply<FinalState>(event, "muons");
@@ -95,21 +93,21 @@ namespace Rivet {
       // Electron histogram
       if (elecs.size() > 0) {
         for (const Particle& ele : elecs.particles()) {
-          if (ele.pT() < 26.0*GeV) _histPt_elecs->fill(ele.pT()*GeV, weight);
+          if (ele.pT() < 26.0*GeV) _histPt_elecs->fill(ele.pT()*GeV);
         }
       }
 
       // Muon histogram
       if (muons.size() > 0) {
         for (const Particle& muo : muons.particles()) {
-          if (muo.pT() < 26.0*GeV) _histPt_muons->fill(muo.pT()*GeV, weight);
+          if (muo.pT() < 26.0*GeV) _histPt_muons->fill(muo.pT()*GeV);
         }
       }
 
       // Muon full histogram
       if (muons_full.size() > 0) {
         for (const Particle& muo : muons_full.particles()) {
-          if (muo.pT() < 100.0*GeV) _histPt_muons_full->fill(muo.pT()*GeV, weight);
+          if (muo.pT() < 100.0*GeV) _histPt_muons_full->fill(muo.pT()*GeV);
         }
       }
     }
@@ -134,6 +132,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2011_I926145);
+  RIVET_DECLARE_PLUGIN(ATLAS_2011_I926145);
 
 }

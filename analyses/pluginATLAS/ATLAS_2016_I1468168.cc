@@ -7,10 +7,11 @@
 namespace Rivet {
 
 
+  /// @brief dileptonic e-mu ttbar
   class ATLAS_2016_I1468168 : public Analysis {
   public:
 
-    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2016_I1468168);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2016_I1468168);
 
     void init() {
       // Eta ranges
@@ -31,7 +32,7 @@ namespace Rivet {
       PromptFinalState electrons(el_id);
       electrons.acceptTauDecays(true);
       DressedLeptons dressedelectrons(photons, electrons, 0.1, lep_cuts, true);
-      addProjection(dressedelectrons, "DressedElectrons");
+      declare(dressedelectrons, "DressedElectrons");
 
       // Projection to find the muons
       IdentifiedFinalState mu_id(fs);
@@ -39,43 +40,47 @@ namespace Rivet {
       PromptFinalState muons(mu_id);
       muons.acceptTauDecays(true);
       DressedLeptons dressedmuons(photons, muons, 0.1, lep_cuts, true);
-      addProjection(dressedmuons, "DressedMuons");
+      declare(dressedmuons, "DressedMuons");
 
-      /// @todo Make this a counter or Scatter1D?
-      _hist = bookHisto1D("Passed_events", 1, 0, 1);
+      book(_s , 2, 1 ,1);
+      book(_c , "_counter");
     }
 
 
     void analyze(const Event& event) {
 
       // Get the selected objects, using the projections.
-      const size_t num_es = applyProjection<DressedLeptons>(event, "DressedElectrons").dressedLeptons().size();
-      const size_t num_mus = applyProjection<DressedLeptons>(event, "DressedMuons").dressedLeptons().size();
+      const size_t num_es = apply<DressedLeptons>(event, "DressedElectrons").dressedLeptons().size();
+      const size_t num_mus = apply<DressedLeptons>(event, "DressedMuons").dressedLeptons().size();
 
       // Evaluate basic event selection
       const bool pass_emu = num_es == 1 && num_mus == 1;
       if (!pass_emu) vetoEvent;
 
       // Fill histogram to measure the event acceptance
-      _hist->fill(0.5, event.weight());
+      _c->fill();
     }
 
 
     void finalize() {
       // Normalize to cross-section
-      const double sf(crossSection() / sumOfWeights());
-      scale(_hist, sf);
+      scale(_c, crossSection() / sumOfWeights());
+
+      double err = _c->err();
+      _s->addPoint(13*TeV, _c->val(), make_pair(0.5, 0.5), make_pair(err,err));
+
     }
 
 
    private:
 
-    Histo1DPtr _hist;
+    CounterPtr _c;
+    Scatter2DPtr _s;
 
   };
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2016_I1468168);
+  RIVET_DECLARE_PLUGIN(ATLAS_2016_I1468168);
 
 }

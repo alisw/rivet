@@ -1,0 +1,34 @@
+Name: BESIII_2015_I1376484
+Year: 2015
+Summary: Kinematic distributions in the decay $\eta\to\pi^+\pi^-\pi^0$ and $\eta^{(\prime)}\to\pi^0\pi^0\pi^0$
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1376484
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 92 (2015) 012014
+RunInfo: Any process producing eta/etaprime mesons
+NeedCrossSection: no
+Description:
+  'Measurement of kinematic distributions in the decays $\eta\to\pi^+\pi^-\pi^0$ and $\eta^{(\prime)}\to\pi^0\pi^0\pi^0$. The data was read from the plots in the paper and the backgrounds subtract in the $\eta^\prime$ decays.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2015fid
+BibTeX: '@article{BESIII:2015fid,
+    author = "Ablikim, M. and others",
+    collaboration = "BESIII",
+    title = "{Measurement of the Matrix Elements for the Decays $\eta \rightarrow \pi^{+}\pi^{-}\pi^0$ and $\eta/\eta^{\prime}\rightarrow\pi^0\pi^0\pi^0$}",
+    eprint = "1506.05360",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevD.92.012014",
+    journal = "Phys. Rev. D",
+    volume = "92",
+    pages = "012014",
+    year = "2015"
+}
+'

@@ -1,0 +1,207 @@
+{
+    "319237": [
+        "Inclusive jet cross-section in $\\bar{p}p$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.68.1104", 
+        null, 
+        null, 
+        "ins319237", 
+        null, 
+        [
+            "FERMILAB-PUB-91-231-E"
+        ]
+    ], 
+    "319933": [
+        "The Topology of three jet events in $\\bar{p}p$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.45.1448", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-91-181-E"
+        ]
+    ], 
+    "321515": [
+        "A Lower limit on the top quark mass from events with two leptons in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.68.447", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-91-280-E"
+        ]
+    ], 
+    "321973": [
+        "A Search for new gauge bosons in $\\bar{p}p$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.68.1463", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-91-327-E", 
+            "CDF-DOC-ELECTROWEAK-CDFR-1532"
+        ]
+    ], 
+    "322162": [
+        "Properties of events with large total transverse energy produced in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.45.2249", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-91-283-E", 
+            "CDF-PUB-JET-PUBLIC-1550"
+        ]
+    ], 
+    "323033": [
+        "Lepton asymmetry in W decays from $\\bar{p}p$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.68.1458", 
+        null, 
+        null, 
+        "ins323033", 
+        null, 
+        [
+            "FERMILAB-PUB-91-263-E", 
+            "CDF-PUB-ELECTROWEAK-PUBLIC-1424"
+        ]
+    ], 
+    "323034": [
+        "A Limit on the top quark mass from $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.45.3921", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-91-352-E"
+        ]
+    ], 
+    "324086": [
+        "Measurement of the ratio $\\sigma B (W \\to \\nu_\\tau) / \\sigma B (W \\to e \\nu)$, in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.68.3398", 
+        null, 
+        null, 
+        "ins324086", 
+        null, 
+        [
+            "FERMILAB-PUB-91-356-E", 
+            "CDF-PUB-ELECTROWEAK-CDFR-1519"
+        ]
+    ], 
+    "333080": [
+        "A Measurement of the $B$ meson and $b$ quark cross-sections at $\\sqrt{s} = 1.8$ TeV using the exclusive decay $B^\\pm \\to J/\\psi K^\\pm$", 
+        "CDF", 
+        "10.1103/PhysRevLett.68.3403", 
+        null, 
+        null, 
+        "ins333080", 
+        null, 
+        [
+            "FERMILAB-PUB-92-021-E", 
+            "CDF-PUB-HEAVYFLAVOR-CDFR-1536"
+        ]
+    ], 
+    "333081": [
+        "Measurement of the isolated prompt photon cross-sections in $\\bar{p}p$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.68.2734", 
+        null, 
+        null, 
+        "ins333081", 
+        null, 
+        [
+            "FERMILAB-PUB-92-031-E", 
+            "ANL-HEP-PR-92-69"
+        ]
+    ], 
+    "334085": [
+        "A Measurement of the production and muonic decay rate of $W$ and $Z$ bosons in $p \\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.69.28", 
+        null, 
+        null, 
+        "ins334085", 
+        null, 
+        [
+            "FERMILAB-PUB-92-069-E", 
+            "CDF-PUB-ELECTROWEAK-CDFR-1649", 
+            "ANL-HEP-92-78"
+        ]
+    ], 
+    "336403": [
+        "Limits on the production of massive stable charged particles", 
+        "CDF", 
+        "10.1103/PhysRevD.46.R1889", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-92-152-E", 
+            "CDF-PUB-EXOTIC-CDFR-1716"
+        ]
+    ], 
+    "336778": [
+        "The Dijet angular distribution in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.69.2896", 
+        null, 
+        null, 
+        "ins336778", 
+        null, 
+        [
+            "FERMILAB-PUB-92-182-E", 
+            "ANL-HEP-PR-93-17"
+        ]
+    ], 
+    "339104": [
+        "Limit on the rare decay $W^\\pm \\to \\gamma \\pi^\\pm$ in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.69.2160", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-92-157-E", 
+            "ANL-HEP-PR-93-03"
+        ]
+    ], 
+    "339106": [
+        "Search for squarks and gluinos from $\\bar{p}p$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.69.3439", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-92-221-E", 
+            "ANL-HEP-PR-93-25"
+        ]
+    ], 
+    "340126": [
+        "Inclusive $J/\\psi$, $\\psi(2S)$ and $b$ quark production in $\\bar{p}p$ collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.69.3704", 
+        null, 
+        null, 
+        "ins340126", 
+        null, 
+        [
+            "FERMILAB-PUB-92-236-E", 
+            "ANL-HEP-PR-93-26"
+        ]
+    ]
+}

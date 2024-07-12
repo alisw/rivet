@@ -1,0 +1,86 @@
+{
+    "155032": [
+        "Prompt Muons in Multiparticle Events From $e^+ e^-$ Annihilation at {PETRA}", 
+        "JADE", 
+        "10.1016/0370-2693(81)91125-4", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-80-86"
+        ]
+    ], 
+    "156813": [
+        "Experimental Limits on the Strength of Weak Neutral Currents in Lepton Pair Production at {PETRA} Energies", 
+        "JADE", 
+        "10.1016/0370-2693(81)91126-6", 
+        null, 
+        null, 
+        "ins156813", 
+        null, 
+        [
+            "DESY-80-123"
+        ]
+    ], 
+    "164319": [
+        "Search for Narrow Resonances in $e^+ e^-$ Annihilation at $c$.m. Energies Between 33.0-{GeV} and 36.72-{GeV}", 
+        "JADE", 
+        "10.1016/0370-2693(81)90105-2", 
+        null, 
+        null, 
+        "ins164319", 
+        null, 
+        [
+            "DESY-81-006"
+        ]
+    ], 
+    "164399": [
+        "Experimental Study of Jets in electron - Positron Annihilation", 
+        "JADE", 
+        "10.1016/0370-2693(81)90505-0", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-81-009"
+        ]
+    ], 
+    "165785": [
+        "Energy Carried by $\\gamma$ Rays and Neutral Particles in Multi - Hadron Final States at {PETRA}", 
+        "JADE", 
+        "10.1007/BF01548766", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-81-025"
+        ]
+    ], 
+    "166363": [
+        "Baryon Production in e+ e- Annihilation at PETRA", 
+        "JADE", 
+        "10.1016/0370-2693(81)90135-0", 
+        null, 
+        null, 
+        "ins166363", 
+        null, 
+        [
+            "DESY-81-028"
+        ]
+    ], 
+    "167419": [
+        "Observation of High $p_T$ Jets in Two Photon Interactions", 
+        "JADE", 
+        "10.1016/0370-2693(81)91173-4", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-81-048"
+        ]
+    ]
+}

@@ -1,0 +1,158 @@
+{
+    "640204": [
+        "A Measurement of the tau hadronic branching ratios", 
+        "DELPHI", 
+        "10.1140/epjc/s2006-02494-9", 
+        "936950", 
+        "hep-ex/0603044", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2004-046"
+        ]
+    ], 
+    "673252": [
+        "Search for excited leptons in e+ e- collisions at s**(1/2) = 189-GeV to 209-GeV", 
+        "DELPHI", 
+        "10.1140/epjc/s2006-02501-3", 
+        "936951", 
+        "hep-ex/0603045", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2004-067"
+        ]
+    ], 
+    "691576": [
+        "Precision electroweak measurements on the $Z$ resonance", 
+        "ALEPH", 
+        "10.1016/j.physrep.2005.12.006", 
+        "892831", 
+        "hep-ex/0509008", 
+        null, 
+        null, 
+        [
+            "SLAC-R-774"
+        ]
+    ], 
+    "694483": [
+        "Determination of heavy quark non-perturbative parameters from spectral moments in semileptonic B decays", 
+        "DELPHI", 
+        "10.1140/epjc/s2005-02406-7", 
+        "894986", 
+        "hep-ex/0510024", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2005-015"
+        ]
+    ], 
+    "699726": [
+        "Measurement and interpretation of fermion-pair production at LEP energies above the Z resonance", 
+        "DELPHI", 
+        "10.1140/epjc/s2005-02461-0", 
+        "913346", 
+        "hep-ex/0512012", 
+        "ins699726", 
+        null, 
+        [
+            "CERN-PH-EP-2005-045"
+        ]
+    ], 
+    "704268": [
+        "Study of double-tagged gamma gamma events at LEP II", 
+        "DELPHI", 
+        "10.1140/epjc/s2006-02496-7", 
+        "929099", 
+        "hep-ex/0604039", 
+        "ins704268", 
+        null, 
+        [
+            "CERN-PH-EP-2005-029"
+        ]
+    ], 
+    "704269": [
+        "Determination of the b quark mass at the M(Z) scale with the DELPHI detector at LEP", 
+        "DELPHI", 
+        "10.1140/epjc/s2006-02497-6", 
+        "936952", 
+        "hep-ex/0603046", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2005-020"
+        ]
+    ], 
+    "704823": [
+        "Evidence for an excess of soft photons in hadronic decays of Z0", 
+        "DELPHI", 
+        "10.1140/epjc/s2006-02568-8", 
+        "943015", 
+        "hep-ex/0604038", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2005-052"
+        ]
+    ], 
+    "705123": [
+        "Single intermediate vector boson production in e+e- collisions at s**(1/2) = 183-GeV to 209-GeV", 
+        "DELPHI", 
+        "10.1140/epjc/s2005-02419-2", 
+        "924044", 
+        "hep-ex/0601040", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2005-026"
+        ]
+    ], 
+    "709902": [
+        "A Determination of the centre-of-mass energy at LEP2 using radiative 2-fermion events", 
+        "DELPHI", 
+        "10.1140/epjc/s2006-02506-x", 
+        "927794", 
+        "hep-ex/0602016", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2005-050"
+        ]
+    ], 
+    "711130": [
+        "Search for neutral MSSM Higgs bosons at LEP", 
+        "ALEPH", 
+        "10.1140/epjc/s2006-02569-7", 
+        "930093", 
+        "hep-ex/0602042", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2006-001"
+        ]
+    ], 
+    "719387": [
+        "Masses, Lifetimes and Production Rates of Xi- and anti-Xi+ at LEP 1", 
+        "DELPHI", 
+        "10.1016/j.physletb.2006.06.029", 
+        "963628", 
+        "hep-ex/0606030", 
+        "ins719387", 
+        null, 
+        [
+            "CERN-PH-EP-2006-016"
+        ]
+    ], 
+    "728678": [
+        "Study of Leading Hadrons in Gluon and Quark Fragmentation", 
+        "DELPHI", 
+        "10.1016/j.physletb.2006.10.040", 
+        "988610", 
+        "hep-ex/0610031", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2006-015"
+        ]
+    ]
+}

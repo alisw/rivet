@@ -1,0 +1,32 @@
+Name: OPAL_1997_I440721
+Year: 1997
+Summary: Event Shapes at 161 GeV
+Experiment: OPAL
+Collider: LEP
+InspireID: 440721
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Z.Phys. C75 (1997) 193-207
+RunInfo: e+e- to hadrons
+NeedCrossSection: no
+Beams: [e-, e+]
+Energies: [161]
+Description:
+  'Event shapes at  161 GeV. Only the evnet shapes are implemented,
+   not the mean values, or the cone jet observables.' 
+Keywords: []
+BibKey: Ackerstaff:1997kk
+BibTeX: '@article{Ackerstaff:1997kk,
+      author         = "Ackerstaff, K. and others",
+      title          = "{QCD studies with e+ e- annihilation data at 161-GeV}",
+      collaboration  = "OPAL",
+      journal        = "Z. Phys.",
+      volume         = "C75",
+      year           = "1997",
+      pages          = "193-207",
+      doi            = "10.1007/s002880050462",
+      reportNumber   = "CERN-PPE-97-015, CERN-PPE-97-15",
+      SLACcitation   = "%%CITATION = ZEPYA,C75,193;%%"
+}'

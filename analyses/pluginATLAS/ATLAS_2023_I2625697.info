@@ -1,0 +1,53 @@
+Name: ATLAS_2023_I2625697
+Year: 2023
+Summary: Transverse energ-energy correlations in multijets at 13 TeV
+Experiment: ATLAS
+Collider: LHC
+InspireID: 2625697
+Status: VALIDATED
+Authors:
+ - Manuel Alvarez <manuel.alvarez.estevez@cern.ch>
+ - Javier Llorente <javier.llorente.merino@cern.ch>
+References:
+ - "arXiv:2301.09351 [hep-ex]"
+RunInfo:
+  pp QCD interactions at 13 TeV. Particles with c*tau>10mm are stable.
+Beams: [p+, p+]
+Energies: [13000]
+PtCuts: [60.0]
+Luminosity_fb: 139.0
+Description:
+  'Measurements of transverse energy-energy correlations and their associated azimuthal asymmetries in multijet events are presented.
+  The analysis is performed using a data sample corresponding to 139 fb$^{-1}$ of proton-proton collisions at a centre-of-mass energy
+  of $\sqrt{s}=13$ TeV, collected with the ATLAS detector at the Large Hadron Collider. The measurements are presented in bins of
+  the scalar sum of the transverse momenta of the two leading jets and unfolded to particle level. They are then compared to
+  next-to-next-to-leading-order perturbative QCD calculations for the first time, which feature a significant reduction in the
+  theoretical uncertainties estimated using variations of the renormalisation and factorisation scales. The agreement between data
+  and theory is good, thus providing a precision test of QCD at large momentum transfers $Q$. The strong coupling constant
+  $\alpha_\text{s}$ is extracted differentially as a function of $Q$, showing a good agreement with the renormalisation group
+  equation and with previous analyses. A simultaneous fit to all transverse energy-energy correlation distributions across different
+  kinematic regions yields a value of $\alpha_\text{s}(m_Z) = 0.1175 \pm 0.0006$ (exp.) $+0.0034-0.0017$ (theo.), while the global
+  fit to the asymmetry distributions yields $\alpha_\text{s}(m_Z)$=0.1185$\pm$0.0009 (exp.)+0.0025-0.0012 (theo.).'
+ReleaseTests:
+ - $A LHC-13-Jets-5
+ - $A-2 LHC-13-Jets-6
+ - $A-3 LHC-13-Jets-7
+ - $A-4 LHC-13-Jets-8
+ - $A-5 LHC-13-Jets-9
+ - $A-6 LHC-13-Jets-10
+Keywords:
+ - TEEC
+ - EEC
+ - MULTIJETS
+ - ALPHAS
+BibKey: ATLAS:2023tgo
+BibTeX: '@article{ATLAS:2023tgo,
+    collaboration = "ATLAS",
+    title = "{Determination of the strong coupling constant from transverse energy$-$energy correlations in multijet events at $\sqrt{s} = 13$ TeV with the ATLAS detector}",
+    eprint = "2301.09351",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CERN-EP-2022-282",
+    month = "1",
+    year = "2023"
+}'

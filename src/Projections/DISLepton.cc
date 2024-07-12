@@ -4,7 +4,7 @@
 namespace Rivet {
 
 
-  int DISLepton::compare(const Projection& p) const {
+  CmpState DISLepton::compare(const Projection& p) const {
     const DISLepton& other = pcast<DISLepton>(p);
     return mkNamedPCmp(other, "Beam") || mkNamedPCmp(other, "LFS") ||
       mkNamedPCmp(other, "IFS") || cmp(_sort, other._sort);
@@ -12,6 +12,8 @@ namespace Rivet {
 
 
   void DISLepton::project(const Event& e) {
+
+    clear();
 
     // Find incoming lepton beam
     const ParticlePair& inc = applyProjection<Beam>(e, "Beam").beams();
@@ -72,7 +74,13 @@ namespace Rivet {
       fail();
     }
 
+    _theParticles.push_back(_outgoing);
+
   }
 
+
+  const VetoedFinalState& DISLepton::remainingFinalState() const {
+    return getProjection<VetoedFinalState>("RFS");
+  }
 
 }

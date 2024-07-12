@@ -4,6 +4,7 @@ Summary: Search for SUSY in 13~\TeV events with 2 or 3 leptons and multiple jets
 Experiment: ATLAS
 Collider: LHC
 Status: UNVALIDATED
+Reentrant: true
 Authors:
  - Andy Buckley <andy.buckley@cern.ch>
 RunInfo: BSM signal events

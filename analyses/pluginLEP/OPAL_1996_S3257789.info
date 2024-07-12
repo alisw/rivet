@@ -33,3 +33,7 @@ BibTeX: '@article{Alexander:1995qb,
       reportNumber   = "CERN-PPE-95-153",
       SLACcitation   = "%%CITATION = ZEPYA,C70,197;%%",
 }'
+
+ReleaseTests:
+ - $A LEP-91
+

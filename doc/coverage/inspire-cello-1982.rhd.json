@@ -1,0 +1,113 @@
+{
+    "12010": [
+        "Analysis of the Energy Weighted Angular Correlations in Hadronic $e^+ e^-$ Annihilations at 22-{GeV} and 34-{GeV}", 
+        "CELLO", 
+        "10.1007/BF01495029", 
+        null, 
+        null, 
+        "ins12010", 
+        null, 
+        [
+            "Print-82-0345 (DESY)", 
+            "DESY-82-022"
+        ]
+    ], 
+    "169195": [
+        "Topology of Hadronic $e^+ e^-$ Annihilation Events at 22-{GeV} and 34-{GeV} Center-of-mass Energy", 
+        "CELLO", 
+        "10.1016/0370-2693(82)91266-7", 
+        null, 
+        null, 
+        "ins169195", 
+        null, 
+        [
+            "DESY-81-080"
+        ]
+    ], 
+    "176885": [
+        "Determination of the Radiative Widths of the $\\eta^\\prime$ and A2 From Two Photon Exchange Production", 
+        "CELLO", 
+        "10.1016/0370-2693(82)90366-5", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-82-008"
+        ]
+    ], 
+    "177212": [
+        "Measurement of Inclusive $\\gamma$ and $\\pi^0$ Spectra and a Comparison of the Neutral and Charged Components in Hadronic Events in $e^+ e^-$ Annihilation at 34-{GeV}", 
+        "CELLO", 
+        "10.1007/BF01571817", 
+        null, 
+        null, 
+        "ins177212", 
+        null, 
+        [
+            "DESY-82-018"
+        ]
+    ], 
+    "177216": [
+        "Measurement of the Reaction $e^+ e^- \\to \\mu^+ \\mu^-$ for 14-{GeV} $\\le \\sqrt{s} \\le$ 36.4-{GeV}", 
+        "CELLO", 
+        "10.1007/BF01578647", 
+        null, 
+        null, 
+        "ins177216", 
+        null, 
+        [
+            "DESY-82-019"
+        ]
+    ], 
+    "177219": [
+        "Scalar Lepton Search with the CELLO Detector at PETRA", 
+        "CELLO", 
+        "10.1016/0370-2693(82)90497-X", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-82-021"
+        ]
+    ], 
+    "177224": [
+        "Measurement of $e^+ e^- \\to \\tau^+ \\tau^-$ at High-energy and Properties of the $\\tau$ Lepton", 
+        "CELLO", 
+        "10.1016/0370-2693(82)90496-8", 
+        null, 
+        null, 
+        "ins177224", 
+        null, 
+        [
+            "DESY-82-020", 
+            "LAL 82/08"
+        ]
+    ], 
+    "177228": [
+        "An Analysis of the Charged and Neutral Energy Flow in $e^+ e^-$ Hadronic Annihilation at 34-{GeV}, and a Determination of the {QCD} Effective Coupling Constant", 
+        "CELLO", 
+        "10.1016/0370-2693(82)90778-X", 
+        null, 
+        null, 
+        "ins177228", 
+        null, 
+        [
+            "DESY-82-017", 
+            "LAL 82/06"
+        ]
+    ], 
+    "179446": [
+        "Observation of Topologically Isolated Energetic Electrons in $e^+ e^-$ Interactions", 
+        "CELLO", 
+        "10.1016/0370-2693(82)90630-X", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-82-055"
+        ]
+    ]
+}

@@ -11,7 +11,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(OPAL_1992_I321190);
+    RIVET_DEFAULT_ANALYSIS_CTOR(OPAL_1992_I321190);
 
 
     /// @name Analysis methods
@@ -22,8 +22,8 @@ namespace Rivet {
       const ChargedFinalState cfs;
       declare(cfs, "CFS");
 
-      _histChTot = bookHisto1D(1, 1, 1);
-      _histAver  = bookProfile1D(5, 1, 1);
+      book(_histChTot, 1, 1, 1);
+      book(_histAver , 5, 1, 1);
     }
 
 
@@ -31,8 +31,8 @@ namespace Rivet {
     void analyze(const Event& event) {
       const FinalState& cfs = apply<FinalState>(event, "CFS");
       MSG_DEBUG("Total charged multiplicity = " << cfs.size());
-      _histChTot->fill(cfs.size(), event.weight());
-      _histAver->fill(sqrtS(),cfs.size(),event.weight());
+      _histChTot->fill(cfs.size(), 1.0);
+      _histAver->fill(sqrtS(),cfs.size(),1.0);
     }
 
 
@@ -56,7 +56,7 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(OPAL_1992_I321190);
+  RIVET_DECLARE_PLUGIN(OPAL_1992_I321190);
 
 
 }

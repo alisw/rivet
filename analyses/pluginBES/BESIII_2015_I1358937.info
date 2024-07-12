@@ -1,0 +1,34 @@
+Name: BESIII_2015_I1358937
+Year: 2015
+Summary:  Cross section for $e^+e^-\to$ proton and antiproton between 2.2324 and 3.671 GeV
+Experiment: BESIII
+Collider: BEPC II
+InspireID: 1358937
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+- Phys.Rev. D91 (2015) 112004, 2015 
+RunInfo: e+ e- to hadrons
+NeedCrossSection: yes
+Beams: [e+, e-]
+Description:
+  'Measurement of the cross section for $e^+e^-\to p\bar{p}$ for energies between 2.2324 and 3.671 GeV'
+Keywords:
+BibKey: Ablikim:2015vga
+BibTeX: '@article{Ablikim:2015vga,
+      author         = "Ablikim, M. and others",
+      title          = "{Measurement of the proton form factor by studying $e^{+}
+                        e^{-}\rightarrow p\bar{p}$}",
+      collaboration  = "BESIII",
+      journal        = "Phys. Rev.",
+      volume         = "D91",
+      year           = "2015",
+      number         = "11",
+      pages          = "112004",
+      doi            = "10.1103/PhysRevD.91.112004",
+      eprint         = "1504.02680",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1504.02680;%%"
+}'

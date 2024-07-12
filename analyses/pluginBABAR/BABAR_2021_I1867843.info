@@ -1,0 +1,37 @@
+Name: BABAR_2021_I1867843
+Year: 2021
+Summary: Dalitz plot analysis of $\eta_c\to K^+K^-\eta^\prime$, $\pi^+\pi^-\eta$ and $\pi^+\pi^-\eta^\prime$
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 1867843
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ -     Phys.Rev.D 104 (2021) 7, 072002
+RunInfo: Any process producing eta_c (originally gamma gamma -> chi_c)
+Description:
+  'Measurement of the mass distributions in the decays $\eta_c\to K^+K^-\eta^\prime$, $\pi^+\pi^-\eta$ and $\pi^+\pi^-\eta^\prime$ by BaBar. The data were read from the plots in the paper and therefore for some points the error bars are the size of the point. Also the sideband background from the plots has been subtracted. It is also not clear that any resolution effects have been unfolded.'
+ValidationInfo:
+  'Herwig 7 events using model from paper'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BaBar:2021fkz
+BibTeX: '@article{BaBar:2021fkz,
+    author = "Lees, J. P. and others",
+    collaboration = "BaBar",
+    title = "{Light meson spectroscopy from Dalitz plot analyses of $\eta_c$ decays to $\eta^\prime K^+ K^-$, $\eta^\prime \pi^+ \pi^-$, and $\eta \pi^+ \pi^-$ produced in two-photon interactions}",
+    eprint = "2106.05157",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BaBar-PUB-21/001,SLAC-PUB-17606",
+    doi = "10.1103/PhysRevD.104.072002",
+    journal = "Phys. Rev. D",
+    volume = "104",
+    number = "7",
+    pages = "072002",
+    year = "2021"
+}
+'

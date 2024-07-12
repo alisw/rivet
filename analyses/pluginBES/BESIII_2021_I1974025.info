@@ -1,0 +1,38 @@
+Name: BESIII_2021_I1974025
+Year: 2021
+Summary: Measurement of $e^+e^-\to\Lambda^0\bar{\Lambda}^0$ at 3.773 GeV
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1974025
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 105 (2022) 1, L011101
+RunInfo: e+e- to hadrons
+Beams: [e+, e-]
+Energies: [3.773]
+Description:
+  'Measurement of the angular distribution and polarization for $e^+e^-\to\Lambda^0\bar{\Lambda}^0$ at 3.773 GeV by BESIII.'
+ValidationInfo:
+  'Herwig7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2021cvv
+BibTeX: '@article{BESIII:2021cvv,
+    author = "Ablikim, Medina and others",
+    collaboration = "BESIII",
+    title = "{Measurement of $\Lambda$ baryon polarization in $e^+e^-\rightarrow\Lambda\bar\Lambda$ at $\sqrt{s} = 3.773$ GeV}",
+    eprint = "2111.11742",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevD.105.L011101",
+    journal = "Phys. Rev. D",
+    volume = "105",
+    number = "1",
+    pages = "L011101",
+    year = "2022"
+}
+'

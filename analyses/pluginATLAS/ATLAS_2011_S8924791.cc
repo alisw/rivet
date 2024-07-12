@@ -14,17 +14,15 @@ namespace Rivet {
   public:
 
     /// Constructor
-    ATLAS_2011_S8924791()
-      : Analysis("ATLAS_2011_S8924791")
-    {    }
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2011_S8924791);
 
 
     /// @name Analysis methods
-    //@{
+    /// @{
 
     void init() {
       // Set up projections
-      const FinalState fs(-5.0, 5.0);
+      const FinalState fs((Cuts::etaIn(-5.0, 5.0)));
       declare(fs, "FS");
       FastJets fj(fs, FastJets::ANTIKT, 0.6);
       fj.useInvisibles();
@@ -49,8 +47,8 @@ namespace Rivet {
           declare(jsp, _jsnames_pT[i][j]);
 
           // Book profile histograms for each (pT,y) bin
-          _profhistRho_pT[i][j] = bookProfile1D(i+1, j+1, 1);
-          _profhistPsi_pT[i][j] = bookProfile1D(i+1, j+1, 2);
+          book(_profhistRho_pT[i][j] ,i+1, j+1, 1);
+          book(_profhistPsi_pT[i][j] ,i+1, j+1, 2);
         }
       }
     }
@@ -69,8 +67,6 @@ namespace Rivet {
         vetoEvent;
       }
       // Calculate and histogram jet shapes
-      const double weight = evt.weight();
-
       for (size_t ipt = 0; ipt < 11; ++ipt) {
         for (size_t jy = 0; jy < 6; ++jy) {
           if (ipt == 8 && jy == 4) continue;
@@ -80,27 +76,22 @@ namespace Rivet {
           for (size_t ijet = 0; ijet < jsipt.numJets(); ++ijet) {
             for (size_t rbin = 0; rbin < jsipt.numBins(); ++rbin) {
               const double r_rho = jsipt.rBinMid(rbin);
-              _profhistRho_pT[ipt][jy]->fill(r_rho, (1./0.1)*jsipt.diffJetShape(ijet, rbin), weight);
+              _profhistRho_pT[ipt][jy]->fill(r_rho, (1./0.1)*jsipt.diffJetShape(ijet, rbin));
               const double r_Psi = jsipt.rBinMid(rbin);
-              _profhistPsi_pT[ipt][jy]->fill(r_Psi, jsipt.intJetShape(ijet, rbin), weight);
+              _profhistPsi_pT[ipt][jy]->fill(r_Psi, jsipt.intJetShape(ijet, rbin));
             }
           }
         }
       }
     }
 
-
-    // Finalize
-    void finalize() {
-    }
-
-    //@}
+    /// @}
 
 
   private:
 
     /// @name Analysis data
-    //@{
+    /// @{
 
     /// Jet \f$ p_\perp\f$ bins.
     vector<double> _ptedges; // This can't be a raw array if we want to initialise it non-painfully
@@ -109,19 +100,19 @@ namespace Rivet {
     /// JetShape projection name for each \f$p_\perp\f$ bin.
     string _jsnames_pT[11][6];
 
-    //@}
+    ///@}
+
 
     /// @name Histograms
-    //@{
+    /// @{
     Profile1DPtr _profhistRho_pT[11][6];
     Profile1DPtr _profhistPsi_pT[11][6];
-    //@}
+    /// @}
 
   };
 
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2011_S8924791);
+  RIVET_DECLARE_ALIASED_PLUGIN(ATLAS_2011_S8924791, ATLAS_2011_I882984);
 
 }

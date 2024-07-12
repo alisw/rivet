@@ -11,16 +11,11 @@ namespace Rivet {
   class ATLAS_2010_S8817804: public Analysis {
   public:
 
-    ATLAS_2010_S8817804() : Analysis("ATLAS_2010_S8817804")
-    {    }
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2010_S8817804);
 
-
-  private:
-
+    /// Choice of jet algorithm
     enum Alg { AKT4=0, AKT6=1 };
 
-
-  public:
 
     void init() {
       FinalState fs;
@@ -35,17 +30,23 @@ namespace Rivet {
       size_t ptDsOffset(0), massDsOffset(10), chiDsOffset(20);
       for (size_t alg = 0; alg < 2; ++alg) {
         for (size_t i = 0; i < 5; ++i) {
-          _pThistos[alg].addHistogram(ybins[i], ybins[i+1], bookHisto1D(i + 1 + ptDsOffset, 1, 1));
+          Histo1DPtr tmp;
+          book(tmp, i + 1 + ptDsOffset, 1, 1);
+          _pThistos[alg].add(ybins[i], ybins[i+1], tmp);
         }
         ptDsOffset += 5;
 
         for (size_t i = 0; i < 5; ++i) {
-          _massVsY[alg].addHistogram(ybins[i], ybins[i+1], bookHisto1D(i + 1 + massDsOffset, 1, 1));
+          Histo1DPtr tmp;
+          book(tmp, i + 1 + massDsOffset, 1, 1);
+          _massVsY[alg].add(ybins[i], ybins[i+1], tmp);
         }
         massDsOffset += 5;
 
         for (size_t i = 0; i < 3; ++i) {
-          _chiVsMass[alg].addHistogram(massBinsForChi[i], massBinsForChi[i+1], bookHisto1D(i + 1 + chiDsOffset, 1, 1));
+          Histo1DPtr tmp;
+          book(tmp, i + 1 + chiDsOffset, 1, 1);
+          _chiVsMass[alg].add(massBinsForChi[i], massBinsForChi[i+1], tmp);
         }
         chiDsOffset += 3;
       }
@@ -60,10 +61,10 @@ namespace Rivet {
       // Identify the dijets
       for (size_t alg = 0; alg < 2; ++alg) {
         vector<FourMomentum> leadjets;
-        foreach (const Jet& jet, jetAr[alg]) {
+        for (const Jet& jet : jetAr[alg]) {
           const double pT = jet.pT();
           const double absy = jet.absrap();
-          _pThistos[alg].fill(absy, pT/GeV, evt.weight());
+          _pThistos[alg].fill(absy, pT/GeV, 1.0);
 
           if (absy < 2.8 && leadjets.size() < 2) {
             if (leadjets.empty() && pT < 60*GeV) continue;
@@ -83,9 +84,9 @@ namespace Rivet {
         const double ymax = max(fabs(rap1), fabs(rap2));
         const double chi = exp(fabs(rap1 - rap2));
         if (fabs(rap1 + rap2) < 2.2) {
-          _chiVsMass[alg].fill(mass/GeV, chi, evt.weight());
+          _chiVsMass[alg].fill(mass/GeV, chi, 1.0);
         }
-        _massVsY[alg].fill(ymax, mass/GeV, evt.weight());
+        _massVsY[alg].fill(ymax, mass/GeV, 1.0);
 
       }
     }
@@ -104,19 +105,18 @@ namespace Rivet {
   private:
 
     /// The inclusive pT spectrum for akt6 and akt4 jets (array index is jet type from enum above)
-    BinnedHistogram<double> _pThistos[2];
+    BinnedHistogram _pThistos[2];
 
     /// The di-jet mass spectrum binned in rapidity for akt6 and akt4 jets (array index is jet type from enum above)
-    BinnedHistogram<double> _massVsY[2];
+    BinnedHistogram _massVsY[2];
 
     /// The di-jet chi distribution binned in mass for akt6 and akt4 jets (array index is jet type from enum above)
-    BinnedHistogram<double> _chiVsMass[2];
+    BinnedHistogram _chiVsMass[2];
 
   };
 
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2010_S8817804);
+  RIVET_DECLARE_ALIASED_PLUGIN(ATLAS_2010_S8817804, ATLAS_2010_I871366);
 
 }

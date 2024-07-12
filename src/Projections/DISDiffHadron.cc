@@ -4,7 +4,7 @@
 namespace Rivet {
 
 
-  int DISDiffHadron::compare(const Projection& p) const {
+  CmpState DISDiffHadron::compare(const Projection& p) const {
     return mkNamedPCmp(p, "Beam") || mkNamedPCmp(p, "FS");
   }
 

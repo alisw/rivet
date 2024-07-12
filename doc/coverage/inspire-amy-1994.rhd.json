@@ -1,0 +1,48 @@
+{
+    "361660": [
+        "Measurement of the inclusive jet cross-section in photon-photon interactions at TRISTAN", 
+        "AMY", 
+        "10.1016/0370-2693(94)90099-X", 
+        null, 
+        null, 
+        "ins361660", 
+        null, 
+        [
+            "KEK-PREPRINT-93-174", 
+            "AMY-93-4"
+        ]
+    ], 
+    "373861": [
+        "Measurements of cross-section and charge asymmetry for e+ e- ---> mu+ mu- and e+ e- ---> tau+ tau- at s**(1/2) = 57.8-GeV", 
+        "AMY", 
+        "10.1016/0370-2693(94)90967-9", 
+        null, 
+        null, 
+        "ins373861", 
+        null, 
+        [
+            "KEK-PREPRINT-94-28", 
+            "AMY-94-1"
+        ]
+    ], 
+    "378569": [
+        "Forward - backward charge asymmetry of quark pairs produced at the KEK TRISTAN e+ e- collider", 
+        "AMY", 
+        "10.1103/PhysRevD.49.3098", 
+        null, 
+        null, 
+        "ins378569", 
+        null, 
+        []
+    ], 
+    "381324": [
+        "Measurements of cross-section and asymmetry for e+ e- ---> b anti-b and heavy quark fragmentation at KEK TRISTAN", 
+        "AMY", 
+        "10.1103/PhysRevD.49.4339", 
+        null, 
+        null, 
+        "ins381324", 
+        null, 
+        []
+    ]
+}

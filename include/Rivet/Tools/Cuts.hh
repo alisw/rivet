@@ -7,10 +7,12 @@
 namespace Rivet {
 
 
+  /// Base class for Cut selectors
   class CutBase {
   public:
 
     /// Main work method, checking whether the cut is passed
+    ///
     /// @internal Forwards the received object to @ref accept_, wrapped in the Cuttable converter
     template <typename ClassToCheck>
     bool accept(const ClassToCheck&) const;
@@ -29,6 +31,7 @@ namespace Rivet {
     /// Default destructor
     virtual ~CutBase() {}
 
+
   protected:
 
     /// @internal Actual accept implementation, overloadable by various cut combiners
@@ -40,14 +43,21 @@ namespace Rivet {
   /// Compare two cuts for equality, forwards to the cut-specific implementation
   inline bool operator == (const Cut& a, const Cut& b) { return *a == b; }
 
+  /// Forbid use of the comma operator between two (or a chain of) Cuts
+  ///@{
+  Cut operator , (const Cut&, const Cut&) = delete;
+  Cut& operator , (Cut&, Cut&) = delete;
+  Cut operator , (Cut, Cut) = delete;
+  ///@}
 
-  /// Namespace used for ambiguous identifiers.
+
+  /// Namespace used for ambiguous identifiers
   namespace Cuts {
 
     /// Available categories of cut objects
     enum Quantity { pT=0, pt=0, Et=1, et=1, E=2, energy=2,
                     mass, rap, absrap, eta, abseta, phi,
-                    pid, abspid, charge, abscharge, charge3, abscharge3 };
+                    pid, abspid, charge, abscharge, charge3, abscharge3, pz };
 
     /// Fully open cut singleton, accepts everything
     const Cut& open(); //< access by factory function

@@ -1,0 +1,34 @@
+Name: ALEPH_2003_I626022
+Year: 2003
+Summary:  $\gamma\gamma\to\pi^+\pi^-$ ($2<\sqrt{s}<6$ GeV) and $K^+K^-$ ($2.25<\sqrt{s}<4$ GeV)
+Experiment: ALEPH
+Collider: LEP
+InspireID: 626022
+Status: VALIDATED
+Authors:
+ - Your Name <your@email.address>
+References:
+ - Phys.Lett.B 569 (2003) 140-150
+RunInfo: gamma gamma to hadrons
+Beams: [gamma, gamma]
+Energies: []
+Description:
+  'Measurement of the differential cross section for $\gamma\gamma\to\pi^+\pi^-$ ($2<\sqrt{s}<6$ GeV) and $K^+K^-$ ($2.25<\sqrt{s}<4$ GeV).
+  The cross section as a function of the centre-of-mass energy of the photonic collision is measured, and the differential cross section with respect to the meson scattering angle are measured.'
+ValidationInfo:
+  'Herwig 7 gamma gamma to pi+ pi- and K+K- events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: ALEPH:2003vit
+BibTeX: '@article{ALEPH:2003vit,
+    author = "Heister, A. and others",
+    collaboration = "ALEPH",
+    title = "{Exclusive production of pion and kaon meson pairs in two photon collisions at LEP}",
+    reportNumber = "CERN-EP-2003-030",
+    doi = "10.1016/j.physletb.2003.07.031",
+    journal = "Phys. Lett. B",
+    volume = "569",
+    pages = "140--150",
+    year = "2003"
+}'

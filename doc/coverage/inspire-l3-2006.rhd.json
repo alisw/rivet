@@ -1,0 +1,85 @@
+{
+    "691576": [
+        "Precision electroweak measurements on the $Z$ resonance", 
+        "ALEPH", 
+        "10.1016/j.physrep.2005.12.006", 
+        "892831", 
+        "hep-ex/0509008", 
+        null, 
+        null, 
+        [
+            "SLAC-R-774"
+        ]
+    ], 
+    "698663": [
+        "Measurement of the mass and the width of the $W$ boson at LEP", 
+        "L3", 
+        "10.1140/epjc/s2005-02459-6", 
+        "910465", 
+        "hep-ex/0511049", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2005-043"
+        ]
+    ], 
+    "704275": [
+        "Measurement of hadron and lepton-pair production in e+ e- collisions at s**(1/2) = 192-GeV to 208-GeV at LEP", 
+        "L3", 
+        "10.1140/epjc/s2006-02539-1", 
+        "935218", 
+        "hep-ex/0603022", 
+        "ins704275", 
+        null, 
+        [
+            "CERN-PH-EP-2005-044", 
+            "CERN-EP-PH-2005-044"
+        ]
+    ], 
+    "705125": [
+        "Analysis of the pi+ pi- pi+ pi- and pi+ pi0 pi- pi0 final states in quasi-real two-photon collisions at LEP", 
+        "L3", 
+        "10.1016/j.physletb.2006.05.006", 
+        "1006113", 
+        "hep-ex/0605021", 
+        "ins705125", 
+        null, 
+        [
+            "CERN-PH-EP-2005-058"
+        ]
+    ], 
+    "711130": [
+        "Search for neutral MSSM Higgs bosons at LEP", 
+        "ALEPH", 
+        "10.1140/epjc/s2006-02569-7", 
+        "930093", 
+        "hep-ex/0602042", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2006-001"
+        ]
+    ], 
+    "716058": [
+        "The Solar flare of the 14th of July 2000 (L3+C detector results)", 
+        "L3+C", 
+        "10.1051/0004-6361:20065252", 
+        "1023575", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2006-043"
+        ]
+    ], 
+    "723227": [
+        "A search for flaring very-high-energy cosmic gamma-ray sources with the L3+C muon spectrometer", 
+        "L3", 
+        "10.1016/j.astropartphys.2006.03.007", 
+        "999467", 
+        null, 
+        null, 
+        null, 
+        []
+    ]
+}

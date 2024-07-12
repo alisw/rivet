@@ -35,3 +35,7 @@ BibTeX: '@Article{Ackerstaff:1998ap,
      doi       = "10.1007/s100520050286",
      SLACcitation  = "%%CITATION = HEP-EX/9805011;%%"
 }'
+
+ReleaseTests:
+ - $A LEP-91
+

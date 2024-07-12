@@ -1,0 +1,37 @@
+Name: MARKII_1982_I178416
+Year: 1982
+Summary: Charged particle momentum distributions 5.2, 6.2 and 29 GeV
+Experiment: MARKII
+Collider: PEP
+InspireID: 178416
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - 
+RunInfo: e+e- > hadrons. Beam energy must be specified as analysis option "ENERGY" when rivet-merge'ing samples.
+NeedCrossSection: yes
+Beams: [e-, e+]
+Energies: [5,2,6.5,29.0]
+Options:
+ - ENERGY=5,2,6.5,29.0
+Description:
+  'Charged particle momentum distributions for  5.2, 6.2 and 29 GeV. Beam energy must be specified as 
+  analysis option "ENERGY" when rivet-merging samples.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Patrick:1982pp
+BibTeX: '@article{Patrick:1982pp,
+    author = "Patrick, J. F. and others",
+    title = "{Measurement of $s d \sigma$ / Dx for Hadron Production by $e^+ e^-$ Annihilation at $\sqrt{s}=5$.2-{GeV}, 6.5-{GeV} and 29.0-{GeV}}",
+    reportNumber = "SLAC-PUB-2936, LBL-14619",
+    doi = "10.1103/PhysRevLett.49.1232",
+    journal = "Phys. Rev. Lett.",
+    volume = "49",
+    pages = "1232",
+    year = "1982"
+}
+'

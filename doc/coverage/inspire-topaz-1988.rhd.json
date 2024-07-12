@@ -1,0 +1,75 @@
+{
+    "251373": [
+        "Search for Sequential Heavy Leptons in $e^+ e^-$ Collisions at $\\sqrt{s}=52$-{GeV}", 
+        "TOPAZ", 
+        "10.1103/PhysRevD.37.1339", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "INS-661", 
+            "DPNU-87-54", 
+            "KEK-PREPRINT-87-109", 
+            "KOBE-HEP-87-07", 
+            "NWU-HEP-87-03", 
+            "OCU-HEP-87-03", 
+            "TUAT-HEP-87-03", 
+            "UT-HE-87-08"
+        ]
+    ], 
+    "251830": [
+        "Search for Top Quark in e+ e- Collisions at s**(1/2) = 52-GeV", 
+        "TOPAZ", 
+        "10.1103/PhysRevLett.60.97", 
+        null, 
+        null, 
+        "ins251830", 
+        null, 
+        [
+            "UT-HE-87-6", 
+            "KEK-PREPRINT-87-134", 
+            "DPNU-87-52", 
+            "KOBE-HEP-87-05", 
+            "NWU-HEP-87-01", 
+            "OCU-HEP-87-01", 
+            "TUAT-HEP-87-01"
+        ]
+    ], 
+    "251920": [
+        "Charge Asymmetry Measurement in $e^+ e^- \\to \\mu^+ \\mu^-$ and $\\tau^+ \\tau^-$ Reactions at $\\sqrt{s}=52$-{GeV}", 
+        "TOPAZ", 
+        "10.1016/0370-2693(88)90438-8", 
+        null, 
+        null, 
+        "ins251920", 
+        null, 
+        [
+            "KEK-PREPRINT-87-121", 
+            "DPNU-87-55", 
+            "KOBE-HEP-87-08", 
+            "NWU-HEP-87-04", 
+            "OCU-HEP-87-04", 
+            "TUAT-HEP-87-04", 
+            "UT-HE-87-09"
+        ]
+    ], 
+    "251921": [
+        "Measurement of the Processes $e^+ e^- \\to e^+ e^-$ and $e^+ e^- \\to \\gamma \\gamma$ at $\\sqrt{s}=52$-{GeV}", 
+        "TOPAZ", 
+        "10.1016/0370-2693(88)90793-9", 
+        null, 
+        null, 
+        "ins251921", 
+        null, 
+        [
+            "KEK-PREPRINT-87-103", 
+            "DPNU-87-53", 
+            "KOBE-HEP-87-06", 
+            "NWU-HEP-87-02", 
+            "OCU-HEP-87-02", 
+            "TUAT-HEP-87-02", 
+            "UT-HE-87-07"
+        ]
+    ]
+}

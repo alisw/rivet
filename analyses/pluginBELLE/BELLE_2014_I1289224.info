@@ -1,0 +1,37 @@
+Name: BELLE_2014_I1289224
+Year: 2014
+Summary: Dalitz plot analysis of $D^0\to K^0_S\pi^+\pi^-$
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1289224
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 89 (2014) 9, 091103
+RunInfo: Any process producing D0
+Description:
+  'Measurement of Kinematic distributions in the decay $D^0\to K^0_S\pi^+\pi^-$ by BELLE. The data were read from the plots in the paper and for many points the errors are given by the size of the point.
+   Resolution/acceptance effects have been not unfolded.'
+ValidationInfo:
+  'Compared Herwig events using the same model for the decay as in the paper.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle:2014ydf
+BibTeX: '@article{Belle:2014ydf,
+    author = "Peng, T. and others",
+    collaboration = "Belle",
+    title = "{Measurement of $D^0-\bar{D}^0$ mixing and search for indirect CP violation using $D^0\to K_S^0\pi^+\pi^-$ decays}",
+    eprint = "1404.2412",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevD.89.091103",
+    journal = "Phys. Rev. D",
+    volume = "89",
+    number = "9",
+    pages = "091103",
+    year = "2014"
+}
+'

@@ -1,0 +1,220 @@
+{
+    "283354": [
+        "Properties of Hadronic Events in e$^{+} $e$^{-}$ Annihilation at $S^{(1/2)}=91$-{GeV}", 
+        "ALEPH", 
+        "10.1016/0370-2693(90)92030-M", 
+        "202165", 
+        null, 
+        "ins283354", 
+        null, 
+        [
+            "CERN-EP-89-139"
+        ]
+    ], 
+    "283355": [
+        "Determination of the Leptonic Branching Ratios of the $Z$", 
+        "ALEPH", 
+        "10.1016/0370-2693(90)91949-C", 
+        "202681", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-89-141"
+        ]
+    ], 
+    "283729": [
+        "Search for the Neutral Higgs Boson from Z0 Decay", 
+        "ALEPH", 
+        "10.1016/0370-2693(90)90834-S", 
+        "203199", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP/89-157", 
+            "ALEPH-4"
+        ]
+    ], 
+    "283730": [
+        "Search for Supersymmetric Particles Using Acoplanar Charged Particle Pairs From $\\Z^0$ Decays", 
+        "ALEPH", 
+        "10.1016/0370-2693(90)90600-B", 
+        "203198", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-89-158", 
+            "ALEPH-5"
+        ]
+    ], 
+    "284406": [
+        "A Search for New Quarks and Leptons From $\\Z^0$ Decay", 
+        "ALEPH", 
+        "10.1016/0370-2693(90)90392-J", 
+        "203477", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP/89-165"
+        ]
+    ], 
+    "284407": [
+        "Search for Excited Leptons in $\\Z^0$ Decay", 
+        "ALEPH", 
+        "10.1016/0370-2693(90)90391-I", 
+        "203766", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP/89-167"
+        ]
+    ], 
+    "284409": [
+        "Search for Neutral Higgs Bosons From Supersymmetry in $Z$ Decays", 
+        "ALEPH", 
+        "10.1016/0370-2693(90)91447-J", 
+        "203479", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP/89-168"
+        ]
+    ], 
+    "284411": [
+        "A Precise Determination of the Number of Families With Light Neutrinos and of the $Z$ Boson Partial Widths", 
+        "ALEPH", 
+        "10.1016/0370-2693(90)91984-J", 
+        "203580", 
+        null, 
+        "ins284411", 
+        null, 
+        [
+            "CERN-EP/89-169"
+        ]
+    ], 
+    "294521": [
+        "Search for the Neutral Higgs Boson From $\\Z^0$ Decay in the Higgs Mass Range Between 11-{GeV} and 24-{GeV}", 
+        "ALEPH", 
+        "10.1016/0370-2693(90)91501-2", 
+        "204670", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP/90-16"
+        ]
+    ], 
+    "294934": [
+        "ALEPH: A detector for electron-positron annnihilations at LEP", 
+        "ALEPH", 
+        "10.1016/0168-9002(90)91831-U", 
+        "205899", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-90-25"
+        ]
+    ], 
+    "294982": [
+        "A Search for Pair Produced Charged Higgs Bosons in $\\Z^0$ Decays", 
+        "ALEPH", 
+        "10.1016/0370-2693(90)91882-C", 
+        "206246", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-90-34"
+        ]
+    ], 
+    "295102": [
+        "Search for Decays of the $\\Z^0$ Into a Photon and a Pseudoscalar Meson", 
+        "ALEPH", 
+        "10.1016/0370-2693(90)91883-D", 
+        "205625", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP/90-23"
+        ]
+    ], 
+    "296185": [
+        "Heavy Flavor Production in $Z$ Decays", 
+        "ALEPH", 
+        "10.1016/0370-2693(90)90362-A", 
+        "207539", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP/90-54"
+        ]
+    ], 
+    "296294": [
+        "Search for Neutralino Production in Z Decays", 
+        "ALEPH", 
+        "10.1016/0370-2693(90)90361-9", 
+        "208248", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP/90-63"
+        ]
+    ], 
+    "296525": [
+        "Search for a very light Higgs boson in Z decays", 
+        "ALEPH", 
+        "10.1016/0370-2693(90)90148-Y", 
+        "208696", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP/90-70"
+        ]
+    ], 
+    "297910": [
+        "Searches for the standard Higgs boson", 
+        "ALEPH", 
+        "10.1016/0370-2693(90)91349-G", 
+        "210345", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-90-101"
+        ]
+    ], 
+    "298414": [
+        "Measurement of electroweak parameters from Z decays into Fermion pairs", 
+        "ALEPH", 
+        "10.1007/BF01572019", 
+        "210832", 
+        null, 
+        "ins298414", 
+        null, 
+        [
+            "CERN-PPE-90-104"
+        ]
+    ], 
+    "298839": [
+        "Search for excited neutrinos in Z decay", 
+        "ALEPH", 
+        "10.1016/0370-2693(90)91174-A", 
+        "211398", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-90-107"
+        ]
+    ]
+}

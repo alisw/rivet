@@ -1,6 +1,5 @@
 // -*- C++ -*-
 #include "Rivet/Analysis.hh"
-#include "Rivet/Tools/BinnedHistogram.hh"
 #include "Rivet/Projections/FinalState.hh"
 #include "Rivet/Projections/ChargedFinalState.hh"
 #include "Rivet/Projections/VisibleFinalState.hh"
@@ -10,16 +9,14 @@
 namespace Rivet {
 
 
-
-
+  /// @brief 0-lepton squark and gluino search
+  ///
   /// @author Chris Wymant
   class ATLAS_2011_S9212183 : public Analysis {
   public:
 
     /// Constructor
-    ATLAS_2011_S9212183()
-      : Analysis("ATLAS_2011_S9212183")
-    {    }
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2011_S9212183);
 
 
     /// @name Analysis methods
@@ -49,28 +46,28 @@ namespace Rivet {
 
 
       // Book histograms
-      _count_2j   = bookHisto1D("count_2j",   1, 0., 1.);
-      _count_3j   = bookHisto1D("count_3j",   1, 0., 1.);
-      _count_4j5  = bookHisto1D("count_4j5",  1, 0., 1.);
-      _count_4j10 = bookHisto1D("count_4j10", 1, 0., 1.);
-      _count_HM   = bookHisto1D("count_HM",   1, 0., 1.);
+      book(_count_2j   ,"count_2j",   1, 0., 1.);
+      book(_count_3j   ,"count_3j",   1, 0., 1.);
+      book(_count_4j5  ,"count_4j5",  1, 0., 1.);
+      book(_count_4j10 ,"count_4j10", 1, 0., 1.);
+      book(_count_HM   ,"count_HM",   1, 0., 1.);
 
-      _hist_meff_2j  = bookHisto1D(1, 1, 1);
-      _hist_meff_3j  = bookHisto1D(2, 1, 1);
-      _hist_meff_4j  = bookHisto1D(3, 1, 1);
-      _hist_meff_HM  = bookHisto1D(4, 1, 1);
+      book(_hist_meff_2j  ,1, 1, 1);
+      book(_hist_meff_3j  ,2, 1, 1);
+      book(_hist_meff_4j  ,3, 1, 1);
+      book(_hist_meff_HM  ,4, 1, 1);
 
-      _hist_eTmiss  = bookHisto1D("Et_miss", 20, 0., 1000.);
+      book(_hist_eTmiss  ,"Et_miss", 20, 0., 1000.);
     }
 
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-      const double weight = event.weight();
+      const double weight = 1.0;
 
       Jets cand_jets;
       const Jets jets = apply<FastJets>(event, "AntiKtJets04").jetsByPt(20.0*GeV);
-      foreach (const Jet& jet, jets) {
+      for (const Jet& jet : jets) {
         if ( fabs( jet.eta() ) < 4.9 ) {
           cand_jets.push_back(jet);
         }
@@ -83,9 +80,9 @@ namespace Rivet {
       Particles cand_mu;
       const Particles chg_tracks = apply<ChargedFinalState>(event, "cfs").particles();
       const Particles muons = apply<IdentifiedFinalState>(event, "muons").particlesByPt();
-      foreach (const Particle& mu, muons) {
+      for (const Particle& mu : muons) {
         double pTinCone = -mu.pT();
-        foreach (const Particle& track, chg_tracks) {
+        for (const Particle& track : chg_tracks) {
           if ( deltaR(mu.momentum(),track.momentum()) <= 0.2 ) {
             pTinCone += track.pT();
           }
@@ -95,12 +92,12 @@ namespace Rivet {
 
       // Resolve jet-lepton overlap for jets with |eta| < 2.8
       Jets cand_jets_2;
-      foreach ( const Jet& jet, cand_jets ) {
+      for ( const Jet& jet : cand_jets ) {
         if ( fabs( jet.eta() ) >= 2.8 ) {
           cand_jets_2.push_back( jet );
         } else {
           bool away_from_e = true;
-          foreach ( const Particle & e, cand_e ) {
+          for ( const Particle & e : cand_e ) {
             if ( deltaR(e.momentum(),jet.momentum()) <= 0.2 ) {
               away_from_e = false;
               break;
@@ -113,9 +110,9 @@ namespace Rivet {
 
       Particles recon_e, recon_mu;
 
-      foreach ( const Particle & e, cand_e ) {
+      for ( const Particle & e : cand_e ) {
         bool away = true;
-        foreach ( const Jet& jet, cand_jets_2 ) {
+        for ( const Jet& jet : cand_jets_2 ) {
           if ( deltaR(e.momentum(),jet.momentum()) < 0.4 ) {
             away = false;
             break;
@@ -124,9 +121,9 @@ namespace Rivet {
         if ( away ) recon_e.push_back( e );
       }
 
-      foreach ( const Particle & mu, cand_mu ) {
+      for ( const Particle & mu : cand_mu ) {
         bool away = true;
-        foreach ( const Jet& jet, cand_jets_2 ) {
+        for ( const Jet& jet : cand_jets_2 ) {
           if ( deltaR(mu.momentum(),jet.momentum()) < 0.4 ) {
             away = false;
             break;
@@ -141,10 +138,10 @@ namespace Rivet {
       // i.e. everything in our projection "vfs" plus the jets with |eta| > 4.5
       Particles vfs_particles = apply<VisibleFinalState>(event, "vfs").particles();
       FourMomentum pTmiss;
-      foreach ( const Particle & p, vfs_particles ) {
+      for ( const Particle & p : vfs_particles ) {
         pTmiss -= p.momentum();
       }
-      foreach ( const Jet& jet, cand_jets_2 ) {
+      for ( const Jet& jet : cand_jets_2 ) {
         if ( fabs( jet.eta() ) > 4.5 ) pTmiss -= jet.momentum();
       }
       double eTmiss = pTmiss.pT();
@@ -152,7 +149,7 @@ namespace Rivet {
 
       // Final jet filter
       Jets recon_jets;
-      foreach ( const Jet& jet, cand_jets_2 ) {
+      for ( const Jet& jet : cand_jets_2 ) {
         if ( fabs( jet.eta() ) <= 2.8 ) recon_jets.push_back( jet );
       }
       // NB. It seems that jets with |eta| > 2.8 could have been thrown away at
@@ -161,7 +158,7 @@ namespace Rivet {
 
       // 'candidate' muons needed only 10 GeV, to cause a veto they need 20 GeV
       Particles veto_mu;
-      foreach ( const Particle & mu, cand_mu ) {
+      for ( const Particle & mu : cand_mu ) {
         if ( mu.pT() >= 20.0*GeV ) veto_mu.push_back(mu);
       }
 
@@ -185,7 +182,7 @@ namespace Rivet {
       int Njets = 0;
       double min_dPhi = 999.999;
       double pTmiss_phi = pTmiss.phi();
-      foreach ( const Jet& jet, recon_jets ) {
+      for ( const Jet& jet : recon_jets ) {
         if ( jet.pT() > 40 * GeV ) {
           if ( Njets < 3 ) {
             min_dPhi = min( min_dPhi, deltaPhi( pTmiss_phi, jet.phi() ) );
@@ -195,7 +192,7 @@ namespace Rivet {
       }
 
       int NjetsHighMass = 0;
-      foreach ( const Jet& jet, recon_jets ) {
+      for ( const Jet& jet : recon_jets ) {
         if ( jet.pT() > 80.0 * GeV ) {
           ++NjetsHighMass;
         }
@@ -216,7 +213,7 @@ namespace Rivet {
       double m_eff_3j = recon_jets.size() < 3 ? -999.0 : m_eff_2j + recon_jets[2].pT();
       double m_eff_4j = recon_jets.size() < 4 ? -999.0 : m_eff_3j + recon_jets[3].pT();
       double m_eff_HM = eTmiss;
-      foreach ( const Jet& jet, recon_jets ) {
+      for ( const Jet& jet : recon_jets ) {
         if ( jet.pT() > 40.0 * GeV ) m_eff_HM += jet.pT();
       }
 
@@ -318,7 +315,6 @@ namespace Rivet {
   };
 
 
-  // This global object acts as a hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2011_S9212183);
+  RIVET_DECLARE_ALIASED_PLUGIN(ATLAS_2011_S9212183, ATLAS_2011_I930002);
 
 }

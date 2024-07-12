@@ -1,0 +1,36 @@
+Name: BELLE_2020_I1813380
+Year: 2020
+Summary: Mass distributions in $\Lambda_c^+\to \eta\Lambda\pi^+$
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1813380
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 103 (2021) 5, 052005
+RunInfo: Any process producing Lambda_c+ mesons
+Description:
+  'Measurement of the mass distributions in the decay $\Lambda_c^+\to \eta\Lambda\pi^+$ by BELLE. The data were read from the plots in the paper and may not have been corrected for efficiency/acceptance.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle:2020xk
+BibTeX: '@article{Belle:2020xku,
+    author = "Lee, J. Y. and others",
+    collaboration = "Belle",
+    title = "{Measurement of branching fractions of  $\Lambda_{c}^{+} \rightarrow \eta\Lambda\pi^{+}$, $\eta \Sigma^{0} \pi^{+}$, $\Lambda(1670) \pi^{+}$, and $\eta \Sigma(1385)^{+}$}",
+    eprint = "2008.11575",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevD.103.052005",
+    journal = "Phys. Rev. D",
+    volume = "103",
+    number = "5",
+    pages = "052005",
+    year = "2021"
+}
+'

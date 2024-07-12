@@ -5,9 +5,11 @@ Experiment: ATLAS
 Collider: LHC 7TeV
 InspireID: 1094564
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Karl Nordstrom <1003412n@student.gla.ac.uk>
 References:
+ - ATLAS-STDM-2011-19
  - JHEP 1205 (2012) 128
  - doi:10.1007/JHEP05(2012)128 
  - arXiv:1203.4606 [hep-ex] 
@@ -48,4 +50,14 @@ BibTeX: '@article{ATLAS:2012am,
 }'
 
  
+
+
+ReleaseTests:
+ - $A LHC-7-Jets-10
+ - $A-2 LHC-7-Jets-4
+ - $A-3 LHC-7-Jets-5
+ - $A-4 LHC-7-Jets-6
+ - $A-5 LHC-7-Jets-7
+ - $A-6 LHC-7-Jets-8
+ - $A-7 LHC-7-Jets-9
 

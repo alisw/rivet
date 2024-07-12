@@ -8,6 +8,7 @@ Description:
   criteria.
 RunInfo: SUSY events at any energy. $\pT$ cutoff at 10 GeV may be advised.
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Andy Buckley <andy.buckley@cern.ch>
 PtCuts: [0]

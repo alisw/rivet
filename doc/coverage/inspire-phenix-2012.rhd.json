@@ -1,0 +1,112 @@
+{
+    "870935": [
+        "Measurement of Transverse Single-Spin Asymmetries for $J/\\psi$ Production in Polarized $p+p$ Collisions at $\\sqrt{s} = 200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevD.82.112008", 
+        "1294662", 
+        "1009.4864", 
+        null, 
+        null, 
+        []
+    ], 
+    "899065": [
+        "Ground and excited charmonium state production in $p+p$ collisions at $\\sqrt{s}=200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevD.85.092004", 
+        null, 
+        "1105.1966", 
+        null, 
+        null, 
+        []
+    ], 
+    "900818": [
+        "Observation of direct-photon collective flow in $\\sqrt{s_{NN}}=200$ GeV Au+Au collisions", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.109.122302", 
+        null, 
+        "1105.4126", 
+        null, 
+        null, 
+        []
+    ], 
+    "1089402": [
+        "Cross sections and double-helicity asymmetries of midrapidity inclusive charged hadrons in $p+p$ collisions at $\\sqrt{s}=62.4$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevD.86.092006", 
+        null, 
+        "1202.4020", 
+        null, 
+        null, 
+        []
+    ], 
+    "1093596": [
+        "Deviation from quark-number scaling of the anisotropy parameter $v_2$ of pions, kaons, and protons in Au+Au collisions at $\\sqrt{s_{NN}} = 200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.85.064914", 
+        null, 
+        "1203.2644", 
+        null, 
+        null, 
+        []
+    ], 
+    "1102910": [
+        "Nuclear-Modification Factor for Open-Heavy-Flavor Production at Forward Rapidity in Cu+Cu Collisions at $\\sqrt{s_{NN}}=200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.86.024909", 
+        null, 
+        "1204.0754", 
+        null, 
+        null, 
+        []
+    ], 
+    "1107625": [
+        "Evolution of $\\pi^0$ suppression in Au+Au collisions from $\\sqrt{s_{NN}} = 39$ to 200 GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.109.152301", 
+        null, 
+        "1204.1526", 
+        "ins1107625", 
+        null, 
+        []
+    ], 
+    "1115828": [
+        "Direct-Photon Production in $p+p$ Collisions at $\\sqrt{s}=200$ GeV at Midrapidity", 
+        "PHENIX", 
+        "10.1103/PhysRevD.86.072008", 
+        null, 
+        "1205.5533", 
+        null, 
+        null, 
+        []
+    ], 
+    "1116179": [
+        "Measurement of Direct Photons in Au+Au Collisions at $\\sqrt{s_{NN}} = 200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.109.152302", 
+        null, 
+        "1205.5759", 
+        null, 
+        null, 
+        []
+    ], 
+    "1126162": [
+        "Cold-nuclear-matter effects on heavy-quark production in $d+$Au collisions at $\\sqrt{s_{NN}}=200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.109.242301", 
+        null, 
+        "1208.1293", 
+        null, 
+        null, 
+        []
+    ], 
+    "1127261": [
+        "$J/\\psi$ suppression at forward rapidity in Au+Au collisions at $\\sqrt{s_{NN}}=39$ and 62.4 GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.86.064901", 
+        null, 
+        "1208.2251", 
+        null, 
+        null, 
+        []
+    ]
+}

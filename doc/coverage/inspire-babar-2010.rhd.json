@@ -1,0 +1,406 @@
+{
+    "818802": [
+        "Measurement of |V(cb)| and the Form-Factor Slope in anti-B ---> D l- anti-nu Decays in Events Tagged by a Fully Reconstructed B Meson", 
+        "BaBar", 
+        "10.1103/PhysRevLett.104.011802", 
+        null, 
+        "0904.4063", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-09-009", 
+            "SLAC-PUB-13580"
+        ]
+    ], 
+    "827787": [
+        "Measurement and interpretation of moments in inclusive semileptonic decays anti-B ---> X(c) l- anti-nu", 
+        "BaBar", 
+        "10.1103/PhysRevD.81.032003", 
+        null, 
+        "0908.0415", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-13735", 
+            "BABAR-PUB-09-004"
+        ]
+    ], 
+    "828777": [
+        "Searches for Lepton Flavor Violation in the Decays tau+- ---> e+- gamma and tau+- ---> mu+- gamma", 
+        "BaBar", 
+        "10.1103/PhysRevLett.104.021802", 
+        null, 
+        "0908.2381", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-13753", 
+            "BABAR-PUB-09-026"
+        ]
+    ], 
+    "830975": [
+        "Measurement of branching fractions of B decays to K(1)(1270)pi and K(1)(1400)pi and determination of the CKM angle alpha from B0 ---> a(1)(1260)+- pi-+", 
+        "BaBar", 
+        "10.1103/PhysRevD.81.052009", 
+        null, 
+        "0909.2171", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-13785", 
+            "BABAR-PUB-09-20"
+        ]
+    ], 
+    "836615": [
+        "Observation of inclusive D*+- production in the decay of Upsilon(1S)", 
+        "BaBar", 
+        "10.1103/PhysRevD.81.011102", 
+        null, 
+        "0911.2024", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-13837", 
+            "BABAR-PUB-09-030"
+        ]
+    ], 
+    "838579": [
+        "Measurements of Charged Current Lepton Universality and $|V_{us}|$ using Tau Lepton Decays to $e^- \\bar{\\nu}_e \\nu_\\tau$, $\\mu^- \\bar{\\nu}_\\mu \\nu_\\tau$, $\\pi^- \\nu_\\tau$, and $K^- \\nu_\\tau$", 
+        "BaBar", 
+        "10.1103/PhysRevLett.105.051602", 
+        null, 
+        "0912.0242", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-09-018", 
+            "SLAC-PUB-13846"
+        ]
+    ], 
+    "839959": [
+        "A Search for $B^+ \\to \\ell^+ \\nu_{\\ell}$ Recoiling Against $B^{-}\\to D^{0} \\ell^{-}\\bar{\\nu} X$", 
+        "BaBar", 
+        "10.1103/PhysRevD.81.051101", 
+        null, 
+        "0912.2453", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-13866", 
+            "BABAR-09-029", 
+            "BABAR-PUB-09-029"
+        ]
+    ], 
+    "842635": [
+        "Search for Charged Lepton Flavor Violation in Narrow Upsilon Decays", 
+        "BaBar", 
+        "10.1103/PhysRevLett.104.151802", 
+        null, 
+        "1001.1883", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-13898", 
+            "BABAR-PUB-09-032"
+        ]
+    ], 
+    "844288": [
+        "Observation of the $\\chi_{c2}(2p)$ Meson in the Reaction $\\gamma \\gamma \\to D \\bar{D}$ at {BaBar}", 
+        "BaBar", 
+        "10.1103/PhysRevD.81.092003", 
+        null, 
+        "1002.0281", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-09-031", 
+            "SLAC-PUB-13939"
+        ]
+    ], 
+    "845914": [
+        "Measurement of the $\\gamma \\gamma* --> \\eta_c$ transition form factor", 
+        "BaBar", 
+        "10.1103/PhysRevD.81.052010", 
+        null, 
+        "1002.3000", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-09-034", 
+            "SLAC-PUB-13953"
+        ]
+    ], 
+    "846307": [
+        "Test of lepton universality in Upsilon(1S) decays at BaBar", 
+        "BaBar", 
+        "10.1103/PhysRevLett.104.191801", 
+        null, 
+        "1002.4358", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-14008", 
+            "BABAR-PUB-09-038"
+        ]
+    ], 
+    "846499": [
+        "Limits on tau Lepton-Flavor Violating Decays in three charged leptons", 
+        "BaBar", 
+        "10.1103/PhysRevD.81.111101", 
+        null, 
+        "1002.4550", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-09-033", 
+            "SLAC-PUB-14009"
+        ]
+    ], 
+    "847330": [
+        "Observation of the Rare Decay B0 ---> K0(s)K+-pi-+", 
+        "BaBar", 
+        "10.1103/PhysRevD.82.031101", 
+        null, 
+        "1003.0640", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-09-036", 
+            "SLAC-PUB-14001"
+        ]
+    ], 
+    "849155": [
+        "Search for CP violation using $T$-odd correlations in $D^0 \\to K^+ K^- \\pi^+ \\pi^-$ decays", 
+        "BaBar", 
+        "10.1103/PhysRevD.81.111103", 
+        null, 
+        "1003.3397", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-09-039", 
+            "SLAC-PUB-13996"
+        ]
+    ], 
+    "850492": [
+        "Observation of the $\\Upsilon{1^3D_J}$ Bottomonium State through Decays to $\\pi^+\\pi^-\\Upsilon{1S}$", 
+        "BaBar", 
+        "10.1103/PhysRevD.82.111102", 
+        null, 
+        "1004.0175", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-14027", 
+            "BABAR-PUB-10-002"
+        ]
+    ], 
+    "850804": [
+        "B-meson decays to $\\eta^{\\prime} \\rho$, $\\eta^{\\prime} f_{0}$, and $\\eta^{\\prime} K^*$", 
+        "BaBar", 
+        "10.1103/PhysRevD.82.011502", 
+        null, 
+        "1004.0240", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-14026", 
+            "BABAR-PUB-10-003"
+        ]
+    ], 
+    "853279": [
+        "Measurement of D0-antiD0 mixing parameters using D0 ---> K(S)0 pi+ pi- and D0 ---> K(S)0 K+ K- decays", 
+        "BaBar", 
+        "10.1103/PhysRevLett.105.081803", 
+        null, 
+        "1004.5053", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-10-004", 
+            "SLAC-PUB-14087"
+        ]
+    ], 
+    "853759": [
+        "Search for B+ ---> D+K0 and B+ ---> D+K*0 decays", 
+        "BaBar", 
+        "10.1103/PhysRevD.82.092006", 
+        null, 
+        "1005.0068", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-10-001", 
+            "SLAC-PUB-14086"
+        ]
+    ], 
+    "854415": [
+        "Evidence for direct CP violation in the measurement of the Cabibbo-Kobayashi-Maskawa angle gamma with B-+ ---> D(*) K(*)-+ decays", 
+        "BaBar", 
+        "10.1103/PhysRevLett.105.121801", 
+        null, 
+        "1005.1096", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-14090", 
+            "BABAR-PUB-10-005"
+        ]
+    ], 
+    "856113": [
+        "Study of $B \\to X\\gamma$ Decays and Determination of $|V_{td}/V_{ts}|$", 
+        "BaBar", 
+        "10.1103/PhysRevD.82.051101", 
+        null, 
+        "1005.4087", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-14116", 
+            "BABAR-PUB-10-007"
+        ]
+    ], 
+    "856587": [
+        "Evidence for the decay X(3872) ---> J/ psi omega", 
+        "BaBar", 
+        "10.1103/PhysRevD.82.011101", 
+        null, 
+        "1005.5190", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-14143", 
+            "BABAR-PUB-10-009"
+        ]
+    ], 
+    "857959": [
+        "Correlated leading baryon-antibaryon production in $e^+e^- -> c\\bar{c} -> \\Lambda_c^+ \\^-Lambda_c^- X$", 
+        "BaBar", 
+        "10.1103/PhysRevD.82.091102", 
+        null, 
+        "1006.2216", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-14157", 
+            "BABAR-PUB-07-27"
+        ]
+    ], 
+    "859147": [
+        "Search for b ---> u transitions in $B^- -> DK^- and D^*K^-$ Decays", 
+        "BaBar", 
+        "10.1103/PhysRevD.82.072006", 
+        null, 
+        "1006.4241", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-14181", 
+            "BABAR-PUB-10-06"
+        ]
+    ], 
+    "860478": [
+        "Measurement of CP observables in $B^{+-} -> D_{CP} K^{+-}$ decays and constraints on the CKM angle $\\gamma$", 
+        "BaBar", 
+        "10.1103/PhysRevD.82.072004", 
+        null, 
+        "1007.0504", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-14187", 
+            "BABAR-PUB-10-008"
+        ]
+    ], 
+    "860780": [
+        "Observation of the decay $\\bar{B}^0 -> \\Lambda_c^+ \\bar{p} pi^0$", 
+        "BaBar", 
+        "10.1103/PhysRevD.82.031102", 
+        null, 
+        "1007.1370", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-14189", 
+            "BABAR-PUB-09-28"
+        ]
+    ], 
+    "861716": [
+        "Search for $B^+$ meson decay to $a_1^+(1260)K^{*0}(892)$", 
+        "BaBar", 
+        "10.1103/PhysRevD.82.091101", 
+        null, 
+        "1007.2732", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-10-013", 
+            "SLAC-PUB-14195"
+        ]
+    ], 
+    "862141": [
+        "Search for $f_J(2220)$ in radiative $J/\\psi$ decays", 
+        "BaBar", 
+        "10.1103/PhysRevLett.105.172001", 
+        null, 
+        "1007.3526", 
+        null, 
+        null, 
+        [
+            "BABAR-CONF-10-012", 
+            "SLAC-PUB-14201"
+        ]
+    ], 
+    "864027": [
+        "Exclusive Production of $D^+_s D^-_s$, $D^{*+}_s D^-_s$, and $D^{*+}_s D^{*-}_s$ via $e^+ e^-$ Annihilation with Initial-State-Radiation", 
+        "BaBar", 
+        "10.1103/PhysRevD.82.052004", 
+        null, 
+        "1008.0338", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-14209", 
+            "BABAR-PUB-10-015"
+        ]
+    ], 
+    "866025": [
+        "Measurement of the Absolute Branching Fractions for $D^-_s\\!\\rightarrow\\!\\ell^-\\bar{\\nu}_{\\ell}$ and Extraction of the Decay Constant $f_{D_s}$", 
+        "BaBar", 
+        "10.1103/PhysRevD.82.091103", 
+        null, 
+        "1008.4080", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-14229", 
+            "BABAR-CONF-10-024"
+        ]
+    ], 
+    "867611": [
+        "Observation of new resonances decaying to $D\\pi$ and $D^*\\pi$ in inclusive $e^+e^-$ collisions near $\\sqrt{s}=$10.58 GeV", 
+        "BaBar", 
+        "10.1103/PhysRevD.82.111101", 
+        null, 
+        "1009.2076", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-10-020", 
+            "SLAC-PUB-14246"
+        ]
+    ], 
+    "868017": [
+        "Search for the Rare Decay $B \\to K \\nu \\bar{\\nu}$", 
+        "BaBar", 
+        "10.1103/PhysRevD.82.112002", 
+        null, 
+        "1009.1529", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-14237", 
+            "BABAR-PUB-10-011"
+        ]
+    ]
+}

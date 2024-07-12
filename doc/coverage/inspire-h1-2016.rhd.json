@@ -1,0 +1,26 @@
+{
+    "1387751": [
+        "Exclusive $\\rho ^0$ meson photoproduction with a leading neutron at HERA", 
+        "H1", 
+        "10.1140/epjc/s10052-015-3863-1", 
+        "2044630", 
+        "1508.03176", 
+        "ins1387751", 
+        null, 
+        [
+            "DESY-15-120"
+        ]
+    ], 
+    "1429661": [
+        "Search for QCD instanton-induced processes at HERA in the high- $\\pmb {Q^2}$ domain", 
+        "H1", 
+        "10.1140/epjc/s10052-016-4194-6", 
+        "2140186", 
+        "1603.05567", 
+        null, 
+        null, 
+        [
+            "DESY-16-050"
+        ]
+    ]
+}

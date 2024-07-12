@@ -17,7 +17,7 @@ NumEvents: 1000000
 Beams: [e+, e-]
 Energies: [91.2]
 PtCuts: [0]
-Description: The production of $\eta$ and $\omega$ mesons measured using 4 millon $Z^0$ events
+Description: The production of $\eta$ and $\omega$ mesons measured using 4 million $Z^0$ events
    by the ALEPH experiment at LEP. Only the fragmentation functions are implemented.
 BibKey: Heister:2001kp
 BibTeX: '@article{Heister:2001kp,
@@ -36,3 +36,7 @@ BibTeX: '@article{Heister:2001kp,
       reportNumber   = "CERN-EP-2001-090",
       SLACcitation   = "%%CITATION = HEP-EX/0201012;%%",
 }'
+
+ReleaseTests:
+ - $A LEP-91
+

@@ -5,9 +5,11 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1094568
 Status: VALIDATED
+Reentrant: false
 Authors:
  - Kiran Joshi <kiran.joshi@cern.ch>
 References:
+ - ATLAS-TOPQ-2011-21
  - arXiv:1203.5015 [hep-ex]
  - Eur.Phys.J. C72 (2012) 2043
 RunInfo:
@@ -42,3 +44,7 @@ BibTeX: '@article{ATLAS:2012al,
       reportNumber   = "CERN-PH-EP-2012-062",
       SLACcitation   = "%%CITATION = ARXIV:1203.5015;%%",
 }'
+
+ReleaseTests:
+ - $A LHC-7-Top-L
+

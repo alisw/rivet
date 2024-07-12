@@ -1,5 +1,5 @@
 # BEGIN PLOT /STAR_2006_S6860818/d01-x01-y01
-Title=$K^0_\text{s}$ transverse momentum
+Title=$K^0_\mathrm{s}$ transverse momentum
 XLabel=$p_\perp$ [GeV]
 YLabel=$1/(2\pi) \, d^2N/(p_\perp dy dp_\perp)$ [GeV$^{-2}$]
 FullRange=1

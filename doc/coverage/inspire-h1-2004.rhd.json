@@ -1,0 +1,134 @@
+{
+    "630329": [
+        "Inclusive dijet production at low Bjorken x in deep inelastic scattering", 
+        "H1", 
+        "10.1140/epjc/s2004-01644-5", 
+        "676523", 
+        "hep-ex/0310019", 
+        "ins630329", 
+        null, 
+        [
+            "DESY-03-160"
+        ]
+    ], 
+    "630625": [
+        "Search for single top quark production in ep collisions at HERA", 
+        "H1", 
+        "10.1140/epjc/s2003-01588-2", 
+        "676916", 
+        "hep-ex/0310032", 
+        "ins630625", 
+        null, 
+        [
+            "DESY-03-132"
+        ]
+    ], 
+    "632638": [
+        "Muon pair production in ep collisions at HERA", 
+        "H1", 
+        "10.1016/j.physletb.2004.01.003", 
+        "681705", 
+        "hep-ex/0311015", 
+        "ins632638", 
+        null, 
+        [
+            "DESY-03-159"
+        ]
+    ], 
+    "642523": [
+        "Measurement of dijet production at low Q**2 at HERA", 
+        "H1", 
+        "10.1140/epjc/s2004-01989-7", 
+        "705546", 
+        "hep-ex/0401010", 
+        "ins642523", 
+        null, 
+        [
+            "DESY-03-206"
+        ]
+    ], 
+    "646141": [
+        "Evidence for a narrow anti-charmed baryon state", 
+        "H1", 
+        "10.1016/j.physletb.2004.03.012", 
+        null, 
+        "hep-ex/0403017", 
+        null, 
+        null, 
+        [
+            "DESY-04-038"
+        ]
+    ], 
+    "646447": [
+        "Search for squark production in R parity violating supersymmetry at HERA", 
+        "H1", 
+        "10.1140/epjc/s2004-01982-2", 
+        "725178", 
+        "hep-ex/0403027", 
+        null, 
+        null, 
+        [
+            "DESY-04-025"
+        ]
+    ], 
+    "647349": [
+        "Measurement of anti-deuteron photoproduction and a search for heavy stable charged particles at HERA", 
+        "H1", 
+        "10.1140/epjc/s2004-01978-x", 
+        "727709", 
+        "hep-ex/0403056", 
+        "ins647349", 
+        null, 
+        [
+            "DESY-04-032"
+        ]
+    ], 
+    "647847": [
+        "Forward $\\pi^0$ production and associated transverse energy flow in deep-inelastic scattering at HERA", 
+        "H1", 
+        "10.1140/epjc/s2004-01983-1", 
+        "729694", 
+        "hep-ex/0404009", 
+        "ins647847", 
+        null, 
+        [
+            "DESY-04-051"
+        ]
+    ], 
+    "650876": [
+        "Search for bosonic stop decays in R-parity violating supersymmetry in e+ p collisions at HERA", 
+        "H1", 
+        "10.1016/j.physletb.2004.08.032", 
+        "737185", 
+        "hep-ex/0405070", 
+        null, 
+        null, 
+        [
+            "DESY-04-084"
+        ]
+    ], 
+    "652164": [
+        "Measurement of the proton structure function F(2) at low Q**2 in QED Compton scattering at HERA", 
+        "H1", 
+        "10.1016/j.physletb.2004.08.004", 
+        "741274", 
+        "hep-ex/0406029", 
+        "ins652164", 
+        null, 
+        [
+            "DESY-04-083"
+        ]
+    ], 
+    "656427": [
+        "A General search for new phenomena in ep scattering at HERA", 
+        "H1", 
+        "10.1016/j.physletb.2004.09.057", 
+        "788353", 
+        "hep-ex/0408044", 
+        null, 
+        null, 
+        [
+            "DESY-04-140"
+        ]
+    ]
+}

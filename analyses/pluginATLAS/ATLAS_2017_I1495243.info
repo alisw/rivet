@@ -5,6 +5,7 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1495243
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Callie Bertsche <c.bertsche@cern.ch>
  - Judith Katzy <judith.katzy@desy.de>

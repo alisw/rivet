@@ -7,19 +7,13 @@ namespace Rivet {
 
 
   /// @brief Jet rates in \f$ e^+ e^- \f$ at OPAL and JADE
+  ///
   /// @author Frank Siegert
   class JADE_OPAL_2000_S4300807 : public Analysis {
   public:
 
-    /// @name Constructors etc.
-    //@{
-
     /// Constructor
-    JADE_OPAL_2000_S4300807()
-      : Analysis("JADE_OPAL_2000_S4300807")
-    {    }
-
-    //@}
+    RIVET_DEFAULT_ANALYSIS_CTOR(JADE_OPAL_2000_S4300807)
 
 
     /// @name Analysis methods
@@ -29,10 +23,8 @@ namespace Rivet {
       // Projections
       const FinalState fs;
       declare(fs, "FS");
-      FastJets jadeJets = FastJets(fs, FastJets::JADE, 0.7);
-      FastJets durhamJets = FastJets(fs, FastJets::DURHAM, 0.7);
-      jadeJets.useInvisibles(true);
-      durhamJets.useInvisibles(true);
+      FastJets jadeJets = FastJets(fs, FastJets::JADE, 0.7, JetAlg::Muons::ALL, JetAlg::Invisibles::DECAY);
+      FastJets durhamJets = FastJets(fs, FastJets::DURHAM, 0.7, JetAlg::Muons::ALL, JetAlg::Invisibles::DECAY);
       declare(jadeJets, "JadeJets");
       declare(durhamJets, "DurhamJets");
 
@@ -50,16 +42,15 @@ namespace Rivet {
       default: break;
       }
       for (size_t i = 0; i < 5; ++i) {
-        _h_R_Jade[i] = bookHisto1D(offset, 1, i+1);
-        _h_R_Durham[i] = bookHisto1D(offset+9, 1, i+1);
-        if (i < 4) _h_y_Durham[i] = bookHisto1D(offset+17, 1, i+1);
+        book(_h_R_Jade[i] ,offset, 1, i+1);
+        book(_h_R_Durham[i] ,offset+9, 1, i+1);
+        if (i < 4) book(_h_y_Durham[i] ,offset+17, 1, i+1);
       }
     }
 
 
 
     void analyze(const Event& e) {
-      const double weight = e.weight();
       MSG_DEBUG("Num particles = " << apply<FinalState>(e, "FS").particles().size());
 
       const FastJets& jadejet = apply<FastJets>(e, "JadeJets");
@@ -73,35 +64,35 @@ namespace Rivet {
           double ycut = _h_R_Jade[0]->bin(i).xMid();
           double width = _h_R_Jade[0]->bin(i).xWidth();
           if (y_23 < ycut) {
-            _h_R_Jade[0]->fillBin(i, weight*width);
+            _h_R_Jade[0]->fillBin(i, width);
           }
         }
         for (size_t i = 0; i < _h_R_Jade[1]->numBins(); ++i) {
           double ycut = _h_R_Jade[1]->bin(i).xMid();
           double width = _h_R_Jade[1]->bin(i).xWidth();
           if (y_34 < ycut && y_23 > ycut) {
-            _h_R_Jade[1]->fillBin(i, weight*width);
+            _h_R_Jade[1]->fillBin(i, width);
           }
         }
         for (size_t i = 0; i < _h_R_Jade[2]->numBins(); ++i) {
           double ycut = _h_R_Jade[2]->bin(i).xMid();
           double width = _h_R_Jade[2]->bin(i).xWidth();
           if (y_45 < ycut && y_34 > ycut) {
-            _h_R_Jade[2]->fillBin(i, weight*width);
+            _h_R_Jade[2]->fillBin(i, width);
           }
         }
         for (size_t i = 0; i < _h_R_Jade[3]->numBins(); ++i) {
           double ycut = _h_R_Jade[3]->bin(i).xMid();
           double width = _h_R_Jade[3]->bin(i).xWidth();
           if (y_56 < ycut && y_45 > ycut) {
-            _h_R_Jade[3]->fillBin(i, weight*width);
+            _h_R_Jade[3]->fillBin(i, width);
           }
         }
         for (size_t i = 0; i < _h_R_Jade[4]->numBins(); ++i) {
           double ycut = _h_R_Jade[4]->bin(i).xMid();
           double width = _h_R_Jade[4]->bin(i).xWidth();
           if (y_56 > ycut) {
-            _h_R_Jade[4]->fillBin(i, weight*width);
+            _h_R_Jade[4]->fillBin(i, width);
           }
         }
       }
@@ -113,44 +104,44 @@ namespace Rivet {
         const double y_45 = durjet.clusterSeq()->exclusive_ymerge_max(4);
         const double y_56 = durjet.clusterSeq()->exclusive_ymerge_max(5);
 
-        _h_y_Durham[0]->fill(y_23, weight);
-        _h_y_Durham[1]->fill(y_34, weight);
-        _h_y_Durham[2]->fill(y_45, weight);
-        _h_y_Durham[3]->fill(y_56, weight);
+        _h_y_Durham[0]->fill(y_23);
+        _h_y_Durham[1]->fill(y_34);
+        _h_y_Durham[2]->fill(y_45);
+        _h_y_Durham[3]->fill(y_56);
 
         for (size_t i = 0; i < _h_R_Durham[0]->numBins(); ++i) {
           double ycut = _h_R_Durham[0]->bin(i).xMid();
           double width = _h_R_Durham[0]->bin(i).xWidth();
           if (y_23 < ycut) {
-            _h_R_Durham[0]->fillBin(i, weight*width);
+            _h_R_Durham[0]->fillBin(i, width);
           }
         }
         for (size_t i = 0; i < _h_R_Durham[1]->numBins(); ++i) {
           double ycut = _h_R_Durham[1]->bin(i).xMid();
           double width = _h_R_Durham[1]->bin(i).xWidth();
           if (y_34 < ycut && y_23 > ycut) {
-            _h_R_Durham[1]->fillBin(i, weight*width);
+            _h_R_Durham[1]->fillBin(i, width);
           }
         }
         for (size_t i = 0; i < _h_R_Durham[2]->numBins(); ++i) {
           double ycut = _h_R_Durham[2]->bin(i).xMid();
           double width = _h_R_Durham[2]->bin(i).xWidth();
           if (y_45 < ycut && y_34 > ycut) {
-            _h_R_Durham[2]->fillBin(i, weight*width);
+            _h_R_Durham[2]->fillBin(i, width);
           }
         }
         for (size_t i = 0; i < _h_R_Durham[3]->numBins(); ++i) {
           double ycut = _h_R_Durham[3]->bin(i).xMid();
           double width = _h_R_Durham[3]->bin(i).xWidth();
           if (y_56 < ycut && y_45 > ycut) {
-            _h_R_Durham[3]->fillBin(i, weight*width);
+            _h_R_Durham[3]->fillBin(i, width);
           }
         }
         for (size_t i = 0; i < _h_R_Durham[4]->numBins(); ++i) {
           double ycut = _h_R_Durham[4]->bin(i).xMid();
           double width = _h_R_Durham[4]->bin(i).xWidth();
           if (y_56 > ycut) {
-            _h_R_Durham[4]->fillBin(i, weight*width);
+            _h_R_Durham[4]->fillBin(i, width);
           }
         }
       }
@@ -181,7 +172,6 @@ namespace Rivet {
 
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(JADE_OPAL_2000_S4300807);
+  RIVET_DECLARE_ALIASED_PLUGIN(JADE_OPAL_2000_S4300807, JADE_OPAL_2000_I513337);
 
 }

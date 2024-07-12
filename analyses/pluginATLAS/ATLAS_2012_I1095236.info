@@ -5,9 +5,11 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1095236
 Status: UNVALIDATED
+Reentrant: true
 Authors:
  - Peter Richardson <Peter.Richardson@durham.ac.uk>
 References:
+ - ATLAS-SUSY-2011-27
  - arXiv:1203.6193
 RunInfo:
   BSM signal events at 7000 GeV.

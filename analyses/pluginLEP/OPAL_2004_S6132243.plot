@@ -24,27 +24,27 @@ YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}(1-T)$
 
 
 # BEGIN PLOT /OPAL_2004_S6132243/d02-x01-y01
-Title=Heavy hemisphere mass, $M_\text{H}$, at 91 GeV
-XLabel=$M_\text{H}$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}(M_\text{H})$
+Title=Heavy hemisphere mass, $M_\mathrm{H}$, at 91 GeV
+XLabel=$M_\mathrm{H}$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}(M_\mathrm{H})$
 # END PLOT
 
 # BEGIN PLOT /OPAL_2004_S6132243/d02-x01-y02
-Title=Heavy hemisphere mass, $M_\text{H}$, at 133 GeV
-XLabel=$M_\text{H}$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}(M_\text{H})$
+Title=Heavy hemisphere mass, $M_\mathrm{H}$, at 133 GeV
+XLabel=$M_\mathrm{H}$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}(M_\mathrm{H})$
 # END PLOT
 
 # BEGIN PLOT /OPAL_2004_S6132243/d02-x01-y03
-Title=Heavy hemisphere mass, $M_\text{H}$, at 177 (161--183) GeV
-XLabel=$M_\text{H}$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}(M_\text{H})$
+Title=Heavy hemisphere mass, $M_\mathrm{H}$, at 177 (161--183) GeV
+XLabel=$M_\mathrm{H}$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}(M_\mathrm{H})$
 # END PLOT
 
 # BEGIN PLOT /OPAL_2004_S6132243/d02-x01-y04
-Title=Heavy hemisphere mass, $M_\text{H}$, at 197 (189--209) GeV
-XLabel=$M_\text{H}$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}(M_\text{H})$
+Title=Heavy hemisphere mass, $M_\mathrm{H}$, at 197 (189--209) GeV
+XLabel=$M_\mathrm{H}$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}(M_\mathrm{H})$
 # END PLOT
 
 
@@ -74,52 +74,52 @@ YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}C$
 
 
 # BEGIN PLOT /OPAL_2004_S6132243/d04-x01-y01
-Title=Total hemisphere broadening, $B_\text{sum}$, at 91 GeV
-XLabel=$B_\text{sum}$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}(B_\text{sum})$
+Title=Total hemisphere broadening, $B_\mathrm{sum}$, at 91 GeV
+XLabel=$B_\mathrm{sum}$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}(B_\mathrm{sum})$
 # END PLOT
 
 # BEGIN PLOT /OPAL_2004_S6132243/d04-x01-y02
-Title=Total hemisphere broadening, $B_\text{sum}$, at 133 GeV
-XLabel=$B_\text{sum}$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}(B_\text{sum})$
+Title=Total hemisphere broadening, $B_\mathrm{sum}$, at 133 GeV
+XLabel=$B_\mathrm{sum}$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}(B_\mathrm{sum})$
 # END PLOT
 
 # BEGIN PLOT /OPAL_2004_S6132243/d04-x01-y03
-Title=Total hemisphere broadening, $B_\text{sum}$, at 177 (161--183) GeV
-XLabel=$B_\text{sum}$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}(B_\text{sum})$
+Title=Total hemisphere broadening, $B_\mathrm{sum}$, at 177 (161--183) GeV
+XLabel=$B_\mathrm{sum}$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}(B_\mathrm{sum})$
 # END PLOT
 
 # BEGIN PLOT /OPAL_2004_S6132243/d04-x01-y04
-Title=Total hemisphere broadening, $B_\text{sum}$, at 197 (189--209) GeV
-XLabel=$B_\text{sum}$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}(B_\text{sum})$
+Title=Total hemisphere broadening, $B_\mathrm{sum}$, at 197 (189--209) GeV
+XLabel=$B_\mathrm{sum}$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}(B_\mathrm{sum})$
 # END PLOT
 
 
 # BEGIN PLOT /OPAL_2004_S6132243/d05-x01-y01
-Title=Wide hemisphere broadening, $B_\text{max}$, at 91 GeV
-XLabel=$B_\text{max}$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}(B_\text{max})$
+Title=Wide hemisphere broadening, $B_\mathrm{max}$, at 91 GeV
+XLabel=$B_\mathrm{max}$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}(B_\mathrm{max})$
 # END PLOT
 
 # BEGIN PLOT /OPAL_2004_S6132243/d05-x01-y02
-Title=Wide hemisphere broadening, $B_\text{max}$, at 133 GeV
-XLabel=$B_\text{max}$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}(B_\text{max})$
+Title=Wide hemisphere broadening, $B_\mathrm{max}$, at 133 GeV
+XLabel=$B_\mathrm{max}$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}(B_\mathrm{max})$
 # END PLOT
 
 # BEGIN PLOT /OPAL_2004_S6132243/d05-x01-y03
-Title=Wide hemisphere broadening, $B_\text{max}$, at 177 (161--183) GeV
-XLabel=$B_\text{max}$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}(B_\text{max})$
+Title=Wide hemisphere broadening, $B_\mathrm{max}$, at 177 (161--183) GeV
+XLabel=$B_\mathrm{max}$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}(B_\mathrm{max})$
 # END PLOT
 
 # BEGIN PLOT /OPAL_2004_S6132243/d05-x01-y04
-Title=Wide hemisphere broadening, $B_\text{max}$, at 197 (189--209) GeV
-XLabel=$B_\text{max}$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}(B_\text{max})$
+Title=Wide hemisphere broadening, $B_\mathrm{max}$, at 197 (189--209) GeV
+XLabel=$B_\mathrm{max}$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}(B_\mathrm{max})$
 # END PLOT
 
 
@@ -149,52 +149,52 @@ YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}y_{23}$
 
 
 # BEGIN PLOT /OPAL_2004_S6132243/d07-x01-y01
-Title=Thrust major, $T_\text{maj}$, at 91 GeV
-XLabel=$T_\text{maj}$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}T_\text{maj}$
+Title=Thrust major, $T_\mathrm{maj}$, at 91 GeV
+XLabel=$T_\mathrm{maj}$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}T_\mathrm{maj}$
 # END PLOT
 
 # BEGIN PLOT /OPAL_2004_S6132243/d07-x01-y02
-Title=Thrust major, $T_\text{maj}$, at 133 GeV
-XLabel=$T_\text{maj}$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}T_\text{maj}$
+Title=Thrust major, $T_\mathrm{maj}$, at 133 GeV
+XLabel=$T_\mathrm{maj}$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}T_\mathrm{maj}$
 # END PLOT
 
 # BEGIN PLOT /OPAL_2004_S6132243/d07-x01-y03
-Title=Thrust major, $T_\text{maj}$, at 177 (161--183) GeV
-XLabel=$T_\text{maj}$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}T_\text{maj}$
+Title=Thrust major, $T_\mathrm{maj}$, at 177 (161--183) GeV
+XLabel=$T_\mathrm{maj}$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}T_\mathrm{maj}$
 # END PLOT
 
 # BEGIN PLOT /OPAL_2004_S6132243/d07-x01-y04
-Title=Thrust major, $T_\text{maj}$, at 197 (189--209) GeV
-XLabel=$T_\text{maj}$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}T_\text{maj}$
+Title=Thrust major, $T_\mathrm{maj}$, at 197 (189--209) GeV
+XLabel=$T_\mathrm{maj}$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}T_\mathrm{maj}$
 # END PLOT
 
 
 # BEGIN PLOT /OPAL_2004_S6132243/d08-x01-y01
-Title=Thrust minor, $T_\text{min}$, at 91 GeV
-XLabel=$T_\text{min}$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}T_\text{min}$
+Title=Thrust minor, $T_\mathrm{min}$, at 91 GeV
+XLabel=$T_\mathrm{min}$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}T_\mathrm{min}$
 # END PLOT
 
 # BEGIN PLOT /OPAL_2004_S6132243/d08-x01-y02
-Title=Thrust minor, $T_\text{min}$, at 133 GeV
-XLabel=$T_\text{min}$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}T_\text{min}$
+Title=Thrust minor, $T_\mathrm{min}$, at 133 GeV
+XLabel=$T_\mathrm{min}$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}T_\mathrm{min}$
 # END PLOT
 
 # BEGIN PLOT /OPAL_2004_S6132243/d08-x01-y03
-Title=Thrust minor, $T_\text{min}$, at 177 (161--183) GeV
-XLabel=$T_\text{min}$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}T_\text{min}$
+Title=Thrust minor, $T_\mathrm{min}$, at 177 (161--183) GeV
+XLabel=$T_\mathrm{min}$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}T_\mathrm{min}$
 # END PLOT
 
 # BEGIN PLOT /OPAL_2004_S6132243/d08-x01-y04
-Title=Thrust minor, $T_\text{min}$, at 197 (189--209) GeV
-XLabel=$T_\text{min}$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}T_\text{min}$
+Title=Thrust minor, $T_\mathrm{min}$, at 197 (189--209) GeV
+XLabel=$T_\mathrm{min}$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}T_\mathrm{min}$
 # END PLOT
 
 
@@ -274,52 +274,52 @@ YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}O$
 
 
 # BEGIN PLOT /OPAL_2004_S6132243/d12-x01-y01
-Title=Light hemisphere mass, $M_\text{L}$, at 91 GeV
-XLabel=$M_\text{L}$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}(M_\text{L})$
+Title=Light hemisphere mass, $M_\mathrm{L}$, at 91 GeV
+XLabel=$M_\mathrm{L}$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}(M_\mathrm{L})$
 # END PLOT
 
 # BEGIN PLOT /OPAL_2004_S6132243/d12-x01-y02
-Title=Light hemisphere mass, $M_\text{L}$, at 133 GeV
-XLabel=$M_\text{L}$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}(M_\text{L})$
+Title=Light hemisphere mass, $M_\mathrm{L}$, at 133 GeV
+XLabel=$M_\mathrm{L}$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}(M_\mathrm{L})$
 # END PLOT
 
 # BEGIN PLOT /OPAL_2004_S6132243/d12-x01-y03
-Title=Light hemisphere mass, $M_\text{L}$, at 177 (161--183) GeV
-XLabel=$M_\text{L}$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}(M_\text{L})$
+Title=Light hemisphere mass, $M_\mathrm{L}$, at 177 (161--183) GeV
+XLabel=$M_\mathrm{L}$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}(M_\mathrm{L})$
 # END PLOT
 
 # BEGIN PLOT /OPAL_2004_S6132243/d12-x01-y04
-Title=Light hemisphere mass, $M_\text{L}$, at 197 (189--209) GeV
-XLabel=$M_\text{L}$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}(M_\text{L})$
+Title=Light hemisphere mass, $M_\mathrm{L}$, at 197 (189--209) GeV
+XLabel=$M_\mathrm{L}$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}(M_\mathrm{L})$
 # END PLOT
 
 
 # BEGIN PLOT /OPAL_2004_S6132243/d13-x01-y01
-Title=Narrow hemisphere broadening, $B_\text{min}$, at 91 GeV
-XLabel=$B_\text{min}$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}(B_\text{min})$
+Title=Narrow hemisphere broadening, $B_\mathrm{min}$, at 91 GeV
+XLabel=$B_\mathrm{min}$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}(B_\mathrm{min})$
 # END PLOT
 
 # BEGIN PLOT /OPAL_2004_S6132243/d13-x01-y02
-Title=Narrow hemisphere broadening, $B_\text{min}$, at 133 GeV
-XLabel=$B_\text{min}$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}(B_\text{min})$
+Title=Narrow hemisphere broadening, $B_\mathrm{min}$, at 133 GeV
+XLabel=$B_\mathrm{min}$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}(B_\mathrm{min})$
 # END PLOT
 
 # BEGIN PLOT /OPAL_2004_S6132243/d13-x01-y03
-Title=Narrow hemisphere broadening, $B_\text{min}$, at 177 (161--183) GeV
-XLabel=$B_\text{min}$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}(B_\text{min})$
+Title=Narrow hemisphere broadening, $B_\mathrm{min}$, at 177 (161--183) GeV
+XLabel=$B_\mathrm{min}$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}(B_\mathrm{min})$
 # END PLOT
 
 # BEGIN PLOT /OPAL_2004_S6132243/d13-x01-y04
-Title=Narrow hemisphere broadening, $B_\text{min}$, at 197 (189--209) GeV
-XLabel=$B_\text{min}$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}(B_\text{min})$
+Title=Narrow hemisphere broadening, $B_\mathrm{min}$, at 197 (189--209) GeV
+XLabel=$B_\mathrm{min}$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}(B_\mathrm{min})$
 # END PLOT
 
 
@@ -374,27 +374,27 @@ YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle (1-T)^n \rangle$
 
 
 # BEGIN PLOT /OPAL_2004_S6132243/d16-x01-y01
-Title=Moments of $M_\text{H}$ at 91 GeV
+Title=Moments of $M_\mathrm{H}$ at 91 GeV
 XLabel=$n$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle M_\text{H}^n \rangle$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle M_\mathrm{H}^n \rangle$
 # END PLOT
 
 # BEGIN PLOT /OPAL_2004_S6132243/d16-x01-y02
-Title=Moments of $M_\text{H}$ at 133 GeV
+Title=Moments of $M_\mathrm{H}$ at 133 GeV
 XLabel=$n$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle M_\text{H}^n \rangle$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle M_\mathrm{H}^n \rangle$
 # END PLOT
 
 # BEGIN PLOT /OPAL_2004_S6132243/d16-x01-y03
-Title=Moments of $M_\text{H}$ at 177 (161--183) GeV
+Title=Moments of $M_\mathrm{H}$ at 177 (161--183) GeV
 XLabel=$n$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle M_\text{H}^n \rangle$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle M_\mathrm{H}^n \rangle$
 # END PLOT
 
 # BEGIN PLOT /OPAL_2004_S6132243/d16-x01-y04
-Title=Moments of $M_\text{H}$ at 197 (189--209) GeV
+Title=Moments of $M_\mathrm{H}$ at 197 (189--209) GeV
 XLabel=$n$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle M_\text{H}^n \rangle$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle M_\mathrm{H}^n \rangle$
 # END PLOT
 
 
@@ -424,52 +424,52 @@ YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle C^n \rangle$
 
 
 # BEGIN PLOT /OPAL_2004_S6132243/d18-x01-y01
-Title=Moments of $B_\text{sum}$ at 91 GeV
+Title=Moments of $B_\mathrm{sum}$ at 91 GeV
 XLabel=$n$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle B_\text{sum}^n \rangle$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle B_\mathrm{sum}^n \rangle$
 # END PLOT
 
 # BEGIN PLOT /OPAL_2004_S6132243/d18-x01-y02
-Title=Moments of $B_\text{sum}$ at 133 GeV
+Title=Moments of $B_\mathrm{sum}$ at 133 GeV
 XLabel=$n$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle B_\text{sum}^n \rangle$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle B_\mathrm{sum}^n \rangle$
 # END PLOT
 
 # BEGIN PLOT /OPAL_2004_S6132243/d18-x01-y03
-Title=Moments of $B_\text{sum}$ at 177 (161--183) GeV
+Title=Moments of $B_\mathrm{sum}$ at 177 (161--183) GeV
 XLabel=$n$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle B_\text{sum}^n \rangle$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle B_\mathrm{sum}^n \rangle$
 # END PLOT
 
 # BEGIN PLOT /OPAL_2004_S6132243/d18-x01-y04
-Title=Moments of $B_\text{sum}$ at 197 (189--209) GeV
+Title=Moments of $B_\mathrm{sum}$ at 197 (189--209) GeV
 XLabel=$n$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle B_\text{sum}^n \rangle$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle B_\mathrm{sum}^n \rangle$
 # END PLOT
 
 
 # BEGIN PLOT /OPAL_2004_S6132243/d19-x01-y01
-Title=Moments of $B_\text{max}$ at 91 GeV
+Title=Moments of $B_\mathrm{max}$ at 91 GeV
 XLabel=$n$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle B_\text{max}^n \rangle$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle B_\mathrm{max}^n \rangle$
 # END PLOT
 
 # BEGIN PLOT /OPAL_2004_S6132243/d19-x01-y02
-Title=Moments of $B_\text{max}$ at 133 GeV
+Title=Moments of $B_\mathrm{max}$ at 133 GeV
 XLabel=$n$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle B_\text{max}^n \rangle$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle B_\mathrm{max}^n \rangle$
 # END PLOT
 
 # BEGIN PLOT /OPAL_2004_S6132243/d19-x01-y03
-Title=Moments of $B_\text{max}$ at 177 (161--183) GeV
+Title=Moments of $B_\mathrm{max}$ at 177 (161--183) GeV
 XLabel=$n$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle B_\text{max}^n \rangle$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle B_\mathrm{max}^n \rangle$
 # END PLOT
 
 # BEGIN PLOT /OPAL_2004_S6132243/d19-x01-y04
-Title=Moments of $B_\text{max}$ at 197 (189--209) GeV
+Title=Moments of $B_\mathrm{max}$ at 197 (189--209) GeV
 XLabel=$n$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle B_\text{max}^n \rangle$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle B_\mathrm{max}^n \rangle$
 # END PLOT
 
 
@@ -499,52 +499,52 @@ YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle y_{23}^n \rangle$
 
 
 # BEGIN PLOT /OPAL_2004_S6132243/d21-x01-y01
-Title=Moments of $T_\text{maj}$ at 91 GeV
+Title=Moments of $T_\mathrm{maj}$ at 91 GeV
 XLabel=$n$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle T_\text{maj}^n \rangle$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle T_\mathrm{maj}^n \rangle$
 # END PLOT
 
 # BEGIN PLOT /OPAL_2004_S6132243/d21-x01-y02
-Title=Moments of $T_\text{maj}$ at 133 GeV
+Title=Moments of $T_\mathrm{maj}$ at 133 GeV
 XLabel=$n$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle T_\text{maj}^n \rangle$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle T_\mathrm{maj}^n \rangle$
 # END PLOT
 
 # BEGIN PLOT /OPAL_2004_S6132243/d21-x01-y03
-Title=Moments of $T_\text{maj}$ at 177 (161--183) GeV
+Title=Moments of $T_\mathrm{maj}$ at 177 (161--183) GeV
 XLabel=$n$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle T_\text{maj}^n \rangle$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle T_\mathrm{maj}^n \rangle$
 # END PLOT
 
 # BEGIN PLOT /OPAL_2004_S6132243/d21-x01-y04
-Title=Moments of $T_\text{maj}$ at 197 (189--209) GeV
+Title=Moments of $T_\mathrm{maj}$ at 197 (189--209) GeV
 XLabel=$n$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle T_\text{maj}^n \rangle$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle T_\mathrm{maj}^n \rangle$
 # END PLOT
 
 
 # BEGIN PLOT /OPAL_2004_S6132243/d22-x01-y01
-Title=Moments of $T_\text{min}$ at 91 GeV
+Title=Moments of $T_\mathrm{min}$ at 91 GeV
 XLabel=$n$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle T_\text{min}^n \rangle$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle T_\mathrm{min}^n \rangle$
 # END PLOT
 
 # BEGIN PLOT /OPAL_2004_S6132243/d22-x01-y02
-Title=Moments of $T_\text{min}$ at 133 GeV
+Title=Moments of $T_\mathrm{min}$ at 133 GeV
 XLabel=$n$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle T_\text{min}^n \rangle$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle T_\mathrm{min}^n \rangle$
 # END PLOT
 
 # BEGIN PLOT /OPAL_2004_S6132243/d22-x01-y03
-Title=Moments of $T_\text{min}$ at 177 (161--183) GeV
+Title=Moments of $T_\mathrm{min}$ at 177 (161--183) GeV
 XLabel=$n$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle T_\text{min}^n \rangle$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle T_\mathrm{min}^n \rangle$
 # END PLOT
 
 # BEGIN PLOT /OPAL_2004_S6132243/d22-x01-y04
-Title=Moments of $T_\text{min}$ at 197 (189--209) GeV
+Title=Moments of $T_\mathrm{min}$ at 197 (189--209) GeV
 XLabel=$n$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle T_\text{min}^n \rangle$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle T_\mathrm{min}^n \rangle$
 # END PLOT
 
 
@@ -599,50 +599,50 @@ YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle O^n \rangle$
 
 
 # BEGIN PLOT /OPAL_2004_S6132243/d25-x01-y01
-Title=Moments of $M_\text{L}$ at 91 GeV
+Title=Moments of $M_\mathrm{L}$ at 91 GeV
 XLabel=$n$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle M_\text{L}^n \rangle$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle M_\mathrm{L}^n \rangle$
 # END PLOT
 
 # BEGIN PLOT /OPAL_2004_S6132243/d25-x01-y02
-Title=Moments of $M_\text{L}$ at 133 GeV
+Title=Moments of $M_\mathrm{L}$ at 133 GeV
 XLabel=$n$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle M_\text{L}^n \rangle$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle M_\mathrm{L}^n \rangle$
 # END PLOT
 
 # BEGIN PLOT /OPAL_2004_S6132243/d25-x01-y03
-Title=Moments of $M_\text{L}$ at 177 (161--183) GeV
+Title=Moments of $M_\mathrm{L}$ at 177 (161--183) GeV
 XLabel=$n$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle M_\text{L}^n \rangle$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle M_\mathrm{L}^n \rangle$
 # END PLOT
 
 # BEGIN PLOT /OPAL_2004_S6132243/d25-x01-y04
-Title=Moments of $M_\text{L}$ at 197 (189--209) GeV
+Title=Moments of $M_\mathrm{L}$ at 197 (189--209) GeV
 XLabel=$n$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle M_\text{L}^n \rangle$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle M_\mathrm{L}^n \rangle$
 # END PLOT
 
 
 # BEGIN PLOT /OPAL_2004_S6132243/d26-x01-y01
-Title=Moments of $B_\text{min}$ at 91 GeV
+Title=Moments of $B_\mathrm{min}$ at 91 GeV
 XLabel=$n$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle B_\text{min}^n \rangle$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle B_\mathrm{min}^n \rangle$
 # END PLOT
 
 # BEGIN PLOT /OPAL_2004_S6132243/d26-x01-y02
-Title=Moments of $B_\text{min}$ at 133 GeV
+Title=Moments of $B_\mathrm{min}$ at 133 GeV
 XLabel=$n$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle B_\text{min}^n \rangle$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle B_\mathrm{min}^n \rangle$
 # END PLOT
 
 # BEGIN PLOT /OPAL_2004_S6132243/d26-x01-y03
-Title=Moments of $B_\text{min}$ at 177 (161--183) GeV
+Title=Moments of $B_\mathrm{min}$ at 177 (161--183) GeV
 XLabel=$n$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle B_\text{min}^n \rangle$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle B_\mathrm{min}^n \rangle$
 # END PLOT
 
 # BEGIN PLOT /OPAL_2004_S6132243/d26-x01-y04
-Title=Moments of $B_\text{min}$ at 197 (189--209) GeV
+Title=Moments of $B_\mathrm{min}$ at 197 (189--209) GeV
 XLabel=$n$
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle B_\text{min}^n \rangle$
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}\langle B_\mathrm{min}^n \rangle$
 # END PLOT

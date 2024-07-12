@@ -1,0 +1,420 @@
+{
+    "833863": [
+        "Alignment of the CMS Silicon Tracker during Commissioning with Cosmic Rays", 
+        "CMS", 
+        "10.1088/1748-0221/5/03/T03009", 
+        "1211825", 
+        "0910.2505", 
+        null, 
+        null, 
+        [
+            "CMS-CFT-09-003"
+        ]
+    ], 
+    "834354": [
+        "Performance and Operation of the CMS Electromagnetic Calorimeter", 
+        "CMS", 
+        "10.1088/1748-0221/5/03/T03010", 
+        "1213246", 
+        "0910.3423", 
+        null, 
+        null, 
+        [
+            "CMS-CFT-09-004"
+        ]
+    ], 
+    "835485": [
+        "Precise Mapping of the Magnetic Field in the CMS Barrel Yoke using Cosmic Rays", 
+        "CMS", 
+        "10.1088/1748-0221/5/03/T03021", 
+        "1215500", 
+        "0910.5530", 
+        null, 
+        null, 
+        [
+            "CMS-CFT-09-015"
+        ]
+    ], 
+    "837447": [
+        "Alignment of the CMS Muon System with Cosmic-Ray and Beam-Halo Muons", 
+        "CMS", 
+        "10.1088/1748-0221/5/03/T03020", 
+        "1223868", 
+        "0911.4022", 
+        null, 
+        null, 
+        [
+            "CMS-CFT-09-016"
+        ]
+    ], 
+    "837451": [
+        "Time Reconstruction and Performance of the CMS Electromagnetic Calorimeter", 
+        "CMS", 
+        "10.1088/1748-0221/5/03/T03011", 
+        "1223866", 
+        "0911.4044", 
+        null, 
+        null, 
+        [
+            "CMS-CFT-09-006"
+        ]
+    ], 
+    "837452": [
+        "Performance Study of the CMS Barrel Resistive Plate Chambers with Cosmic Rays", 
+        "CMS", 
+        "10.1088/1748-0221/5/03/T03017", 
+        "1223867", 
+        "0911.4045", 
+        null, 
+        null, 
+        [
+            "CMS-CFT-09-010"
+        ]
+    ], 
+    "837837": [
+        "Aligning the CMS Muon Chambers with the Muon Alignment System during an Extended Cosmic Ray Run", 
+        "CMS", 
+        "10.1088/1748-0221/5/03/T03019", 
+        "1223872", 
+        "0911.4770", 
+        null, 
+        null, 
+        [
+            "CMS-CFT-09-017"
+        ]
+    ], 
+    "837867": [
+        "CMS Data Processing Workflows during an Extended Cosmic Ray Run", 
+        "CMS", 
+        "10.1088/1748-0221/5/03/T03006", 
+        "1223945", 
+        "0911.4842", 
+        null, 
+        null, 
+        [
+            "CMS-CFT-09-007"
+        ]
+    ], 
+    "837869": [
+        "Commissioning of the CMS Experiment and the Cosmic Run at Four Tesla", 
+        "CMS", 
+        "10.1088/1748-0221/5/03/T03001", 
+        "1223942", 
+        "0911.4845", 
+        null, 
+        null, 
+        [
+            "CMS-CFT-09-008"
+        ]
+    ], 
+    "837874": [
+        "Performance of the CMS Drift Tube Chambers with Cosmic Rays", 
+        "CMS", 
+        "10.1088/1748-0221/5/03/T03015", 
+        "1223944", 
+        "0911.4855", 
+        null, 
+        null, 
+        [
+            "CMS-CFT-09-012"
+        ]
+    ], 
+    "837888": [
+        "Performance of CMS Hadron Calorimeter Timing and Synchronization using Test Beam, Cosmic Ray, and LHC Beam Data", 
+        "CMS", 
+        "10.1088/1748-0221/5/03/T03013", 
+        "1223869", 
+        "0911.4877", 
+        null, 
+        null, 
+        [
+            "CMS-CFT-09-018"
+        ]
+    ], 
+    "837890": [
+        "Identification and Filtering of Uncharacteristic Noise in the CMS Hadron Calorimeter", 
+        "CMS", 
+        "10.1088/1748-0221/5/03/T03014", 
+        "1223941", 
+        "0911.4881", 
+        null, 
+        null, 
+        [
+            "CMS-CFT-09-019"
+        ]
+    ], 
+    "837894": [
+        "Commissioning of the CMS High-Level Trigger with Cosmic Rays", 
+        "CMS", 
+        "10.1088/1748-0221/5/03/T03005", 
+        "1223876", 
+        "0911.4889", 
+        null, 
+        null, 
+        [
+            "CMS-CFT-09-020"
+        ]
+    ], 
+    "837898": [
+        "Performance of the CMS Drift-Tube Local Trigger with Cosmic Rays", 
+        "CMS", 
+        "10.1088/1748-0221/5/03/T03003", 
+        "1223871", 
+        "0911.4893", 
+        null, 
+        null, 
+        [
+            "CMS-CFT-09-022"
+        ]
+    ], 
+    "837899": [
+        "Calibration of the CMS Drift Tube Chambers and Measurement of the Drift Velocity with Cosmic Rays", 
+        "CMS", 
+        "10.1088/1748-0221/5/03/T03016", 
+        "1223943", 
+        "0911.4895", 
+        null, 
+        null, 
+        [
+            "CMS-CFT-09-023"
+        ]
+    ], 
+    "837903": [
+        "Fine Synchronization of the CMS Muon Drift-Tube Local Trigger using Cosmic Rays", 
+        "CMS", 
+        "10.1088/1748-0221/5/03/T03004", 
+        "1223870", 
+        "0911.4904", 
+        null, 
+        null, 
+        [
+            "CMS-CFT-09-025"
+        ]
+    ], 
+    "838158": [
+        "Performance of the CMS Hadron Calorimeter with Cosmic Ray Muons and LHC Beam Data", 
+        "CMS", 
+        "10.1088/1748-0221/5/03/T03012", 
+        "1223950", 
+        "0911.4991", 
+        null, 
+        null, 
+        [
+            "CMS-CFT-09-009"
+        ]
+    ], 
+    "838159": [
+        "Performance of the CMS Cathode Strip Chambers with Cosmic Rays", 
+        "CMS", 
+        "10.1088/1748-0221/5/03/T03018", 
+        "1223951", 
+        "0911.4992", 
+        null, 
+        null, 
+        [
+            "CMS-CFT-09-011"
+        ]
+    ], 
+    "838160": [
+        "Performance of CMS Muon Reconstruction in Cosmic-Ray Events", 
+        "CMS", 
+        "10.1088/1748-0221/5/03/T03022", 
+        "1224837", 
+        "0911.4994", 
+        null, 
+        null, 
+        [
+            "CMS-CFT-09-014"
+        ]
+    ], 
+    "838162": [
+        "Commissioning and Performance of the CMS Silicon Strip Tracker with Cosmic Ray Muons", 
+        "CMS", 
+        "10.1088/1748-0221/5/03/T03008", 
+        "1224836", 
+        "0911.4996", 
+        null, 
+        null, 
+        [
+            "CMS-CFT-09-002"
+        ]
+    ], 
+    "838341": [
+        "Measurement of the Muon Stopping Power in Lead Tungstate", 
+        "CMS", 
+        "10.1088/1748-0221/5/03/P03007", 
+        "1225374", 
+        "0911.5397", 
+        null, 
+        null, 
+        [
+            "CMS-CFT-09-005"
+        ]
+    ], 
+    "838349": [
+        "Performance of the CMS Level-1 Trigger during Commissioning with Cosmic Ray Muons", 
+        "CMS", 
+        "10.1088/1748-0221/5/03/T03002", 
+        "1225373", 
+        "0911.5422", 
+        null, 
+        null, 
+        [
+            "CMS-CFT-09-013"
+        ]
+    ], 
+    "838354": [
+        "Commissioning and Performance of the CMS Pixel Tracker with Cosmic Ray Muons", 
+        "CMS", 
+        "10.1088/1748-0221/5/03/T03007", 
+        "1225466", 
+        "0911.5434", 
+        null, 
+        null, 
+        [
+            "CMS-CFT-09-001"
+        ]
+    ], 
+    "840945": [
+        "Radiation hardness qualification of PbWO(4) scintillation crystals for the CMS Electromagnetic Calorimeter", 
+        "CMS", 
+        "10.1088/1748-0221/5/03/P03010", 
+        "1230325", 
+        "0912.4300", 
+        null, 
+        null, 
+        [
+            "CMS-NOTE-2009-016"
+        ]
+    ], 
+    "845323": [
+        "Transverse Momentum and Pseudorapidity Distributions of Charged Hadrons in pp Collisions at $\\sqrt{s} = 0.9$ and 2.36 TeV", 
+        "CMS", 
+        "10.1007/JHEP02(2010)041", 
+        "1237408", 
+        "1002.0621", 
+        "ins845323", 
+        null, 
+        [
+            "CMS-QCD-09-010", 
+            "CERN-PH-EP-2010-003"
+        ]
+    ], 
+    "855299": [
+        "Transverse-momentum and pseudorapidity distributions of charged hadrons in $pp$ collisions at $\\sqrt{s}=7$ TeV", 
+        "CMS", 
+        "10.1103/PhysRevLett.105.022002", 
+        "1266262", 
+        "1005.3299", 
+        "ins855299", 
+        null, 
+        [
+            "CERN-PH-EP-2010-009", 
+            "CMS-QCD-10-006"
+        ]
+    ], 
+    "855303": [
+        "First Measurement of Bose-Einstein Correlations in Proton-Proton Collisions at $\\sqrt{s}$ =0.9 and 2.36 TeV at the LHC", 
+        "CMS", 
+        "10.1103/PhysRevLett.105.032001", 
+        "1266261", 
+        "1005.3294", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2010-010", 
+            "CMS-QCD-10-003"
+        ]
+    ], 
+    "856534": [
+        "Measurement of the Charge Ratio of Atmospheric Muons with the CMS Detector", 
+        "CMS", 
+        "10.1016/j.physletb.2010.07.033", 
+        "1268688", 
+        "1005.5332", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2010-011", 
+            "CMS-MUO-10-001"
+        ]
+    ], 
+    "857644": [
+        "First Measurement of the Underlying Event Activity at the LHC with $\\sqrt{s} = 0.9$ TeV", 
+        "CMS", 
+        "10.1140/epjc/s10052-010-1453-9", 
+        "1271104", 
+        "1006.2083", 
+        "ins857644", 
+        null, 
+        [
+            "CERN-PH-EP-2010-014", 
+            "CMS-QCD-10-001"
+        ]
+    ], 
+    "861153": [
+        "CMS Tracking Performance Results from Early LHC Operation", 
+        "CMS", 
+        "10.1140/epjc/s10052-010-1491-3", 
+        "1277738", 
+        "1007.1988", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2010-019", 
+            "CMS-TRK-10-001"
+        ]
+    ], 
+    "870473": [
+        "Observation of Long-Range Near-Side Angular Correlations in Proton-Proton Collisions at the LHC", 
+        "CMS", 
+        "10.1007/JHEP09(2010)091", 
+        "1293115", 
+        "1009.4122", 
+        null, 
+        null, 
+        [
+            "CMS-QCD-10-002", 
+            "CERN-PH-EP-2010-031"
+        ]
+    ], 
+    "871540": [
+        "Search for Dijet Resonances in 7 TeV pp Collisions at CMS", 
+        "CMS", 
+        "10.1103/PhysRevLett.105.211801", 
+        "1296251", 
+        "1010.0203", 
+        "ins871540", 
+        null, 
+        [
+            "CMS-EXO-10-010", 
+            "CERN-PH-EP-2010-035"
+        ]
+    ], 
+    "873627": [
+        "Search for Quark Compositeness with the Dijet Centrality Ratio in $pp$ Collisions at $\\sqrt{s}=7$ TeV", 
+        "CMS", 
+        "10.1103/PhysRevLett.105.262001", 
+        "1301518", 
+        "1010.4439", 
+        null, 
+        null, 
+        [
+            "CMS-EXO-10-002", 
+            "CERN-PH-EP-2010-038"
+        ]
+    ], 
+    "875975": [
+        "Study of Various Photomultiplier Tubes with Muon Beams And Cerenkov Light Produced in Electron Showers", 
+        "CMS HCAL", 
+        "10.1088/1748-0221/5/06/P06002", 
+        "1264092", 
+        null, 
+        null, 
+        null, 
+        [
+            "CMS-NOTE-2010-003", 
+            "CERN-CMS-NOTE-2010-003"
+        ]
+    ]
+}

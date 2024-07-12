@@ -1,0 +1,66 @@
+{
+    "584505": [
+        "Measurement of the branching fraction for the decay $K(S) \\to \\pi e \\nu$", 
+        "KLOE", 
+        "10.1016/S0370-2693(02)01733-1", 
+        null, 
+        "hep-ph/0203232", 
+        null, 
+        null, 
+        [
+            "LNF-02-001"
+        ]
+    ], 
+    "585182": [
+        "Study of the decay $\\phi \\to \\eta \\pi^0 \\gamma$ with the KLOE detector", 
+        "KLOE", 
+        "10.1016/S0370-2693(02)01821-X", 
+        null, 
+        "hep-ex/0204012", 
+        null, 
+        null, 
+        []
+    ], 
+    "585183": [
+        "Study of the decay $\\phi \\to \\pi^0 \\pi^0 \\gamma$ with the KLOE detector", 
+        "KLOE", 
+        "10.1016/S0370-2693(02)01838-5", 
+        null, 
+        "hep-ex/0204013", 
+        null, 
+        null, 
+        [
+            "LNF-02-003"
+        ]
+    ], 
+    "585578": [
+        "Measurement of $\\Gamma(K(S) \\to \\pi^+ \\pi^- (\\gamma)) / \\Gamma(K(S) \\to \\pi^0 \\pi^0)$", 
+        "KLOE", 
+        "10.1016/S0370-2693(02)01949-4", 
+        null, 
+        "hep-ex/0204024", 
+        null, 
+        null, 
+        []
+    ], 
+    "587922": [
+        "Measurement of $\\Gamma (\\phi \\to \\eta^\\prime \\gamma) / \\Gamma (\\phi \\to \\eta \\gamma)$ and the pseudoscalar mixing angle", 
+        "KLOE", 
+        "10.1016/S0370-2693(02)02145-7", 
+        null, 
+        "hep-ex/0206010", 
+        null, 
+        null, 
+        []
+    ], 
+    "603495": [
+        "The trigger system of the KLOE experiment", 
+        "KLOE", 
+        "10.1016/S0168-9002(02)01313-X", 
+        null, 
+        null, 
+        null, 
+        null, 
+        []
+    ]
+}

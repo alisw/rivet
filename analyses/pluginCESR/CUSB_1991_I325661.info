@@ -1,0 +1,33 @@
+Name: CUSB_1991_I325661
+Year: 1991
+Summary: Inclusive $B^*$ cross-section above the $\Upsilon(4S)$
+Experiment: CUSB
+Collider: CESR
+InspireID: 325661
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 67 (1991) 1692-1695
+RunInfo: e+e- collisions
+NeedCrossSection: yes
+Beams: [e-, e+]
+Energies: [10.63,10.7]
+Description:
+  'Measurement of the inclusive cross section for $B^*$ production at energies above the $\Upsilon(4S)$ mass.'
+Keywords: 
+BibKey: Wu:1991xn
+BibTeX: '@article{Wu:1991xn,
+      author         = "Wu, Q. W. and Franzini, P. and Kanekal, S. and Tuts, P.
+                        M. and Heintz, U. and Lee-Franzini, Juliet and Narain, M.
+                        and Schamberger, R. Dean and Willins, J. and Yanagisawa,
+                        C.",
+      title          = "{Measurement of the B* cross-section at s**(1/2) =
+                        10.61-GeV to 10.70-GeV}",
+      journal        = "Phys. Lett.",
+      volume         = "B273",
+      year           = "1991",
+      pages          = "177-180",
+      doi            = "10.1016/0370-2693(91)90574-A",
+      SLACcitation   = "%%CITATION = PHLTA,B273,177;%%"
+}'

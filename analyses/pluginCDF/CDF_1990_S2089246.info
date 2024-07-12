@@ -6,6 +6,7 @@ Collider: Tevatron Run 0
 SpiresID: 2089246
 InspireID: 283352
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Andy Buckley <andy.buckley@cern.ch>
 References:
@@ -13,10 +14,13 @@ References:
  - doi:10.1103/PhysRevD.41.2330
 RunInfo:
   QCD min bias events at $\sqrt{s} = 630$ and 1800 GeV.
-  Particles with $c \tau > 10$\;mm should be set stable.
+  Particles with $c \tau > 10$~mm should be set stable.
+  Beam energy must be specified as analysis option "ENERGY" when rivet-merge'ing samples.
 NumEvents: 1000000
 Beams: [p-, p+]
 Energies: [630, 1800]
+Options:
+ - ENERGY=630,1800
 PtCuts: [0]
 Description:
   Pseudorapidity distributions based on the CDF 630 and 1800 GeV runs
@@ -25,6 +29,7 @@ Description:
   $\ln{\sqrt{s}}$, and as such this analysis is important for
   constraining the energy evolution of minimum bias and underlying event
   characteristics in MC simulations.
+  Beam energy must be specified (in GeV) as analysis option "ENERGY" when rivet-merging samples.
 BibKey: Abe:1989td
 BibTeX: '@Article{Abe:1989td,
      author    = "Abe, F. and others",
@@ -38,3 +43,8 @@ BibTeX: '@Article{Abe:1989td,
      doi       = "10.1103/PhysRevD.41.2330",
      SLACcitation  = "%%CITATION = PHRVA,D41,2330;%%"
 }'
+
+ReleaseTests:
+ - $A TVT-630-UE :ENERGY=630
+ - $A-2 TVT-Run-I-UE :ENERGY=1800
+

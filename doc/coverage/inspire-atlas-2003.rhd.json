@@ -1,0 +1,26 @@
+{
+    "606576": [
+        "Performance of the ATLAS electromagnetic calorimeter barrel module 0", 
+        "ATLAS Electromagnetic Liquid Argon Calorimeter Group", 
+        "10.1016/S0168-9002(03)00345-0", 
+        "600177", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-2002-087"
+        ]
+    ], 
+    "607033": [
+        "Performance of the ATLAS electromagnetic calorimeter end-cap module 0", 
+        "ATLAS Electromagnetic Liquid Argon Calorimeter Group", 
+        "10.1016/S0168-9002(03)00344-9", 
+        "606885", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-2002-104"
+        ]
+    ]
+}

@@ -8,18 +8,36 @@ from libcpp.memory cimport unique_ptr
 ctypedef int PdgId
 ctypedef pair[PdgId,PdgId] PdgIdPair
 
+cdef extern from "<sstream>" namespace "std":
+    cdef cppclass ostringstream:
+        ostringstream()
+        string& str()
+    cdef cppclass istringstream:
+        istringstream()
+        string& str(string&)
+
 cdef extern from "Rivet/AnalysisHandler.hh" namespace "Rivet":
     cdef cppclass AnalysisHandler:
         void setIgnoreBeams(bool)
+        void skipMultiWeights(bool)
+        void selectMultiWeights(string)
+        void deselectMultiWeights(string)
+        void setNominalWeightName(string)
+        void setWeightCap(double)
+        void setNLOSmearing(double)
         AnalysisHandler& addAnalysis(string)
         vector[string] analysisNames() const
+        vector[string] stdAnalysisNames() const
         # Analysis* analysis(string)
-        void writeData(string&)
-        void readData(string&)
-        double crossSection()
+        void writeData_FILE "writeData" (string&) except +
+        void writeData_OSTR "writeData" (ostringstream&, string&) except +
+        void readData_FILE "readData" (string&, bool) except +
+        void readData_ISTR "readData" (istringstream&, string&, bool) except +
+        double nominalCrossSection()
         void finalize()
         void dump(string, int)
-        void mergeYodas(vector[string], vector[string], bool)
+        void mergeYodas(vector[string]&, vector[string]&, vector[string]&, vector[string]&, vector[string]&, bool)
+        void merge(AnalysisHandler&)
 
 cdef extern from "Rivet/Run.hh" namespace "Rivet":
     cdef cppclass Run:
@@ -29,9 +47,10 @@ cdef extern from "Rivet/Run.hh" namespace "Rivet":
         bool init(string, double) except + # $2=1.0
         bool openFile(string, double) except + # $2=1.0
         bool readEvent() except +
-        bool skipEvent() except +
+        #bool skipEvent() except +
         bool processEvent() except +
         bool finalize() except +
+        size_t numEvents()
 
 cdef extern from "Rivet/Analysis.hh" namespace "Rivet":
     cdef cppclass Analysis:
@@ -40,6 +59,8 @@ cdef extern from "Rivet/Analysis.hh" namespace "Rivet":
         vector[string] authors()
         vector[string] references()
         vector[string] keywords()
+        vector[string] validation()
+        bool reentrant()
         string name()
         string bibTeX()
         string bibKey()
@@ -50,9 +71,16 @@ cdef extern from "Rivet/Analysis.hh" namespace "Rivet":
         string spiresId()
         string runInfo()
         string status()
+        string warning()
         string summary()
         string year()
-        string luminosityfb()
+        double luminosity()
+        double luminosityfb()
+        string refFile()
+        string refMatch()
+        string refUnmatch()
+        string writerDoublePrecision()
+
 
 # Might need to translate the following errors, although I believe 'what' is now
 # preserved. But often, we need the exception class name.
@@ -66,7 +94,16 @@ cdef extern from "Rivet/Analysis.hh" namespace "Rivet":
 
 cdef extern from "Rivet/AnalysisLoader.hh":
     vector[string] AnalysisLoader_analysisNames "Rivet::AnalysisLoader::analysisNames" ()
+    vector[string] AnalysisLoader_allAnalysisNames "Rivet::AnalysisLoader::allAnalysisNames" ()
+    map[string,string] AnalysisLoader_analysisNameAliases "Rivet::AnalysisLoader::analysisNameAliases" ()
+    vector[string] AnalysisLoader_stdAnalysisNames "Rivet::AnalysisLoader::stdAnalysisNames" ()
     unique_ptr[Analysis] AnalysisLoader_getAnalysis "Rivet::AnalysisLoader::getAnalysis" (string)
+    #
+    vector[string] AnalysisLoader_analysisPlugins "Rivet::AnalysisLoader::analysisPlugins" ()
+    vector[string] AnalysisLoader_searchAnalysisPlugins "Rivet::AnalysisLoader::searchAnalysisPlugins" ()
+    void AnalysisLoader_setAnalysisPlugins "Rivet::AnalysisLoader::setAnalysisPlugins" (vector[string])
+    void AnalysisLoader_loadFromAnalysisPlugins "Rivet::AnalysisLoader::loadFromAnalysisPlugins" ()
+
 
 cdef extern from "Rivet/Tools/RivetPaths.hh" namespace "Rivet":
     vector[string] getAnalysisLibPaths()

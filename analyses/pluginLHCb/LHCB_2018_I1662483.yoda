@@ -1,0 +1,12 @@
+BEGIN YODA_SCATTER2D_V2 /REF/LHCB_2018_I1662483/d01-x01-y01
+ErrorBreakdown: {0: {lumi: {dn: -5.0, up: 5.0}, stat: {dn: -19.0, up: 19.0}, sys: {dn: -16.0, up: 16.0}}}
+IsRef: 1
+Path: /REF/LHCB_2018_I1662483/d01-x01-y01
+Title: doi:10.17182/hepdata.97367.v1/t1
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.300000e+04	5.000000e-01	5.000000e-01	1.260000e+02	2.533772e+01	2.533772e+01
+END YODA_SCATTER2D_V2
+
+

@@ -1,0 +1,32 @@
+Name: SND_2006_I717778
+Year: 2006
+Summary: Cross section for $e^+e^-\to\eta\gamma$ for energies between 600 MeV and 1380 MeV 
+Experiment: SND
+Collider: VEPP-2M
+InspireID: 717778
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+- Phys.Rev. D74 (2006) 014016
+RunInfo: e+ e- to hadrons below 0.6 and 1.38 GeV
+NeedCrossSection: yes
+Beams: [e+, e-]
+Description:
+  'Cross section for $e^+e^-\to\eta\gamma$ for energies between 600 MeV and 1380 MeV '
+Keywords: []
+BibKey: Achasov:2006dv
+BibTeX: '@article{Achasov:2006dv,
+      author         = "Achasov, M. N. and others",
+      title          = "{Study of the e+ e- ---&gt; eta gamma process with SND
+                        detector at the VEPP-2M e+ e- collider}",
+      journal        = "Phys. Rev.",
+      volume         = "D74",
+      year           = "2006",
+      pages          = "014016",
+      doi            = "10.1103/PhysRevD.74.014016",
+      eprint         = "hep-ex/0605109",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = HEP-EX/0605109;%%"
+}'

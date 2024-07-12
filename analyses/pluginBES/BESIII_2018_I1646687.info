@@ -1,0 +1,39 @@
+Name: BESIII_2018_I1646687
+Year: 2018
+Summary: Mass and angular distributions in $J/\psi\to\gamma\gamma\phi$
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1646687
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 97 (2018) 5, 051101
+RunInfo: e+e- > J/psi
+NeedCrossSection: no
+Beams: [e-, e+]
+Energies: [3.1]
+Description:
+  'Mass and angulr distributions in the decay $J/\psi\to\gamma\gamma\phi$'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2018dim
+BibTeX: '@article{BESIII:2018dim,
+    author = "Ablikim, M. and others",
+    collaboration = "BESIII",
+    title = "{Study of $\eta(1475)$ and $X(1835)$ in radiative $J/\psi$ decays to $\gamma \phi$}",
+    eprint = "1801.02127",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevD.97.051101",
+    journal = "Phys. Rev. D",
+    volume = "97",
+    number = "5",
+    pages = "051101",
+    year = "2018"
+}
+'

@@ -8,33 +8,33 @@ namespace Rivet {
   class CMS_2015_I1370682_PARTON : public Analysis {
   public:
 
-    DEFAULT_RIVET_ANALYSIS_CTOR(CMS_2015_I1370682_PARTON);
+    RIVET_DEFAULT_ANALYSIS_CTOR(CMS_2015_I1370682_PARTON);
 
 
     /// Book projections and histograms
     void init() {
-      declare(PartonicTops(PartonicTops::E_MU, false), "LeptonicPartonTops");
-      declare(PartonicTops(PartonicTops::HADRONIC),    "HadronicPartonTops");
+      declare(PartonicTops(PartonicTops::DecayMode::E_MU, false), "LeptonicPartonTops");
+      declare(PartonicTops(PartonicTops::DecayMode::HADRONIC),    "HadronicPartonTops");
 
-      _hSL_topPt         = bookHisto1D(15, 1, 1);
-      _hSL_topPtTtbarSys = bookHisto1D(16, 1, 1);
-      _hSL_topY          = bookHisto1D(17, 1, 1);
-      _hSL_ttbarDelPhi   = bookHisto1D(18, 1, 1);
-      _hSL_topPtLead     = bookHisto1D(19, 1, 1);
-      _hSL_topPtSubLead  = bookHisto1D(20, 1, 1);
-      _hSL_ttbarPt       = bookHisto1D(21, 1, 1);
-      _hSL_ttbarY        = bookHisto1D(22, 1, 1);
-      _hSL_ttbarMass     = bookHisto1D(23, 1, 1);
+      book(_hSL_topPt        , 15, 1, 1);
+      book(_hSL_topPtTtbarSys, 16, 1, 1);
+      book(_hSL_topY         , 17, 1, 1);
+      book(_hSL_ttbarDelPhi  , 18, 1, 1);
+      book(_hSL_topPtLead    , 19, 1, 1);
+      book(_hSL_topPtSubLead , 20, 1, 1);
+      book(_hSL_ttbarPt      , 21, 1, 1);
+      book(_hSL_ttbarY       , 22, 1, 1);
+      book(_hSL_ttbarMass    , 23, 1, 1);
 
-      _hDL_topPt           = bookHisto1D(24, 1, 1);
-      _hDL_topPtTtbarSys   = bookHisto1D(25, 1, 1);
-      _hDL_topY            = bookHisto1D(26, 1, 1);
-      _hDL_ttbarDelPhi     = bookHisto1D(27, 1, 1);
-      _hDL_topPtLead       = bookHisto1D(28, 1, 1);
-      _hDL_topPtSubLead    = bookHisto1D(29, 1, 1);
-      _hDL_ttbarPt         = bookHisto1D(30, 1, 1);
-      _hDL_ttbarY          = bookHisto1D(31, 1, 1);
-      _hDL_ttbarMass       = bookHisto1D(32, 1, 1);
+      book(_hDL_topPt        , 24, 1, 1);
+      book(_hDL_topPtTtbarSys, 25, 1, 1);
+      book(_hDL_topY         , 26, 1, 1);
+      book(_hDL_ttbarDelPhi  , 27, 1, 1);
+      book(_hDL_topPtLead    , 28, 1, 1);
+      book(_hDL_topPtSubLead , 29, 1, 1);
+      book(_hDL_ttbarPt      , 30, 1, 1);
+      book(_hDL_ttbarY       , 31, 1, 1);
+      book(_hDL_ttbarMass    , 32, 1, 1);
       }
 
 
@@ -56,7 +56,7 @@ namespace Rivet {
         const FourMomentum t1P4AtCM = LorentzTransform::mkFrameTransformFromBeta(ttbarP4.betaVec()).transform(t1P4);
         const double dPhi = deltaPhi(t1P4.phi(), t2P4.phi());
 
-        const double weight = event.weight();
+        const double weight = 1.0;
         if (isSemilepton) {
           _hSL_topPt->fill(t1Pt, weight);
           _hSL_topPt->fill(t2Pt, weight);
@@ -86,10 +86,12 @@ namespace Rivet {
 
 
       void finalize() {
-        normalize({_hSL_topPt, _hSL_topPtTtbarSys, _hSL_topY, _hSL_ttbarDelPhi, _hSL_topPtLead,
-              _hSL_topPtSubLead, _hSL_ttbarPt, _hSL_ttbarY, _hSL_ttbarMass});
-        normalize({_hDL_topPt, _hDL_topPtTtbarSys, _hDL_topY, _hDL_ttbarDelPhi, _hDL_topPtLead,
-              _hDL_topPtSubLead, _hDL_ttbarPt, _hDL_ttbarY, _hDL_ttbarMass});
+        normalize(_hSL_topPt); normalize(_hSL_topPtTtbarSys); normalize(_hSL_topY); 
+        normalize(_hSL_ttbarDelPhi); normalize(_hSL_topPtLead); normalize(_hSL_topPtSubLead); 
+        normalize(_hSL_ttbarPt); normalize(_hSL_ttbarY); normalize(_hSL_ttbarMass);
+        normalize(_hDL_topPt); normalize(_hDL_topPtTtbarSys); normalize(_hDL_topY); 
+        normalize(_hDL_ttbarDelPhi); normalize(_hDL_topPtLead); normalize(_hDL_topPtSubLead); 
+        normalize(_hDL_ttbarPt); normalize(_hDL_ttbarY); normalize(_hDL_ttbarMass);
       }
 
 
@@ -106,6 +108,6 @@ namespace Rivet {
   };
 
 
-  DECLARE_RIVET_PLUGIN(CMS_2015_I1370682_PARTON);
+  RIVET_DECLARE_PLUGIN(CMS_2015_I1370682_PARTON);
 
 }

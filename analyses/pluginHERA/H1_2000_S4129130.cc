@@ -16,9 +16,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    H1_2000_S4129130()
-      : Analysis("H1_2000_S4129130")
-    {    }
+    RIVET_DEFAULT_ANALYSIS_CTOR(H1_2000_S4129130);
 
 
     /// @name Analysis methods
@@ -31,40 +29,37 @@ namespace Rivet {
       declare(DISKinematics(), "Kinematics");
       declare(FinalState(), "FS");
 
-      // Histos
-      Histo1DPtr h;
-
       // Histograms and weight vectors for low Q^2 a
+      _histETLowQa.resize(17);
       for (size_t ix = 0; ix < 17; ++ix) {
-        h = bookHisto1D(ix+1, 1, 1);
-        _histETLowQa.push_back(h);
-        _weightETLowQa.push_back(0.);
+        book(_histETLowQa[ix], ix+1, 1, 1);
+        book(_weightETLowQa[ix], "TMP/ETLowQa" + to_string(ix));
       }
 
       // Histograms and weight vectors for high Q^2 a
+      _histETHighQa.resize(7);
       for (size_t ix = 0; ix < 7; ++ix) {
-        h = bookHisto1D(ix+18, 1, 1);
-        _histETHighQa.push_back(h);
-        _weightETHighQa.push_back(0.);
+        book(_histETHighQa[ix], ix+18, 1, 1);
+        book(_weightETHighQa[ix], "TMP/ETHighQa" + to_string(ix));
       }
 
       // Histograms and weight vectors for low Q^2 b
+      _histETLowQb.resize(5);
       for (size_t ix = 0; ix < 5; ++ix) {
-        h = bookHisto1D(ix+25, 1, 1);
-        _histETLowQb.push_back(h);
-        _weightETLowQb.push_back(0.);
+        book(_histETLowQb[ix], ix+25, 1, 1);
+        book(_weightETLowQb[ix], "TMP/ETLowQb" + to_string(ix));
       }
 
       // Histograms and weight vectors for high Q^2 b
+      _histETHighQb.resize(5);
       for (size_t ix = 0; ix < 3; ++ix) {
-        h = bookHisto1D(30+ix, 1, 1);
-        _histETHighQb.push_back(h);
-        _weightETHighQb.push_back(0.0);
+        book(_histETHighQb[ix], 30+ix, 1, 1);
+        book(_weightETHighQb[ix], "TMP/ETHighQb" + to_string(ix));
       }
 
       // Histograms for the averages
-      _histAverETCentral = bookProfile1D(33,  1, 1);
-      _histAverETFrag = bookProfile1D(34,  1, 1);
+      book(_histAverETCentral ,33,  1, 1);
+      book(_histAverETFrag ,34,  1, 1);
     }
 
 
@@ -81,7 +76,7 @@ namespace Rivet {
 
       // Kinematics of the scattered lepton
       const DISLepton& dl = apply<DISLepton>(event,"Lepton");
-      if ( dl.failed() ) return;
+      if ( dl.failed() ) vetoEvent;
       const FourMomentum leptonMom = dl.out();
       const double enel = leptonMom.E();
       const double thel = 180 - leptonMom.angle(dl.in().mom())/degree;
@@ -89,16 +84,16 @@ namespace Rivet {
       // Extract the particles other than the lepton
       const FinalState& fs = apply<FinalState>(event, "FS");
       Particles particles; particles.reserve(fs.size());
-      const GenParticle* dislepGP = dl.out().genParticle(); ///< @todo Is the GenParticle stuff necessary? (Not included in Particle::==?)
-      foreach (const Particle& p, fs.particles()) {
-        const GenParticle* loopGP = p.genParticle();
+      ConstGenParticlePtr dislepGP = dl.out().genParticle(); ///< @todo Is the GenParticle stuff necessary? (Not included in Particle::==?)
+      for(const Particle& p: fs.particles()) {
+        ConstGenParticlePtr loopGP = p.genParticle();
         if (loopGP == dislepGP) continue;
         particles.push_back(p);
       }
 
       // Cut on the forward energy
       double efwd = 0.;
-      foreach (const Particle& p, particles) {
+      for (const Particle& p : particles) {
         const double th = 180 - p.angle(dl.in())/degree;
         if (inRange(th, 4.4, 15.0)) efwd += p.E();
       }
@@ -185,11 +180,10 @@ namespace Rivet {
       if (! (evcut[0] || evcut[1] || evcut[2] || evcut[3])) vetoEvent;
 
       // Increment the count for normalisation
-      const double weight = event.weight();
-      if (evcut[0]) _weightETLowQa [bin[0]] += weight;
-      if (evcut[1]) _weightETLowQb [bin[1]] += weight;
-      if (evcut[2]) _weightETHighQa[bin[2]] += weight;
-      if (evcut[3]) _weightETHighQb[bin[3]] += weight;
+      if (evcut[0]) _weightETLowQa [bin[0]]->fill();
+      if (evcut[1]) _weightETLowQb [bin[1]]->fill();
+      if (evcut[2]) _weightETHighQa[bin[2]]->fill();
+      if (evcut[3]) _weightETHighQb[bin[3]]->fill();
 
       // Boost to hadronic CoM
       const LorentzTransform hcmboost = dk.boostHCM();
@@ -197,7 +191,7 @@ namespace Rivet {
       // Loop over the particles
       double etcent = 0;
       double etfrag = 0;
-      foreach (const Particle& p, particles) {
+      for (const Particle& p : particles) {
         // Boost momentum to CMS
         const FourMomentum hcmMom = hcmboost.transform(p.momentum());
         double et = fabs(hcmMom.Et());
@@ -206,15 +200,15 @@ namespace Rivet {
         if (fabs(eta) < .5 ) etcent += et;
         if (eta > 2 && eta <= 3.) etfrag += et;
         // Histograms of Et flow
-        if (evcut[0]) _histETLowQa [bin[0]]->fill(eta, et*weight);
-        if (evcut[1]) _histETLowQb [bin[1]]->fill(eta, et*weight);
-        if (evcut[2]) _histETHighQa[bin[2]]->fill(eta, et*weight);
-        if (evcut[3]) _histETHighQb[bin[3]]->fill(eta, et*weight);
+        if (evcut[0]) _histETLowQa [bin[0]]->fill(eta, et);
+        if (evcut[1]) _histETLowQb [bin[1]]->fill(eta, et);
+        if (evcut[2]) _histETHighQa[bin[2]]->fill(eta, et);
+        if (evcut[3]) _histETHighQb[bin[3]]->fill(eta, et);
       }
       // Fill histograms for the average quantities
       if (evcut[1] || evcut[3]) {
-        _histAverETCentral->fill(q2, etcent, weight);
-        _histAverETFrag   ->fill(q2, etfrag, weight);
+        _histAverETCentral->fill(q2, etcent);
+        _histAverETFrag   ->fill(q2, etfrag);
       }
     }
 
@@ -223,10 +217,10 @@ namespace Rivet {
     void finalize() {
       // Normalization of the Et distributions
       /// @todo Simplify by using normalize() instead? Are all these being normalized to area=1?
-      for (size_t ix = 0; ix < 17; ++ix) if (_weightETLowQa[ix]  != 0) scale(_histETLowQa[ix],  1/_weightETLowQa[ix]);
-      for (size_t ix = 0; ix <  7; ++ix) if (_weightETHighQa[ix] != 0) scale(_histETHighQa[ix], 1/_weightETHighQa[ix]);
-      for (size_t ix = 0; ix <  5; ++ix) if (_weightETLowQb[ix]  != 0) scale(_histETLowQb[ix],  1/_weightETLowQb[ix]);
-      for (size_t ix = 0; ix <  3; ++ix) if (_weightETHighQb[ix] != 0) scale(_histETHighQb[ix], 1/_weightETHighQb[ix]);
+      for (size_t ix = 0; ix < 17; ++ix) if (_weightETLowQa[ix]->val()  != 0) scale(_histETLowQa[ix],  1/ *_weightETLowQa[ix]);
+      for (size_t ix = 0; ix <  7; ++ix) if (_weightETHighQa[ix]->val() != 0) scale(_histETHighQa[ix], 1/ *_weightETHighQa[ix]);
+      for (size_t ix = 0; ix <  5; ++ix) if (_weightETLowQb[ix]->val()  != 0) scale(_histETLowQb[ix],  1/ *_weightETLowQb[ix]);
+      for (size_t ix = 0; ix <  3; ++ix) if (_weightETHighQb[ix]->val() != 0) scale(_histETHighQb[ix], 1/ *_weightETHighQb[ix]);
     }
 
     //@}
@@ -235,27 +229,27 @@ namespace Rivet {
   private:
 
     /// @name Histograms
-    //@{
+    /// @{
     vector<Histo1DPtr> _histETLowQa;
     vector<Histo1DPtr> _histETHighQa;
     vector<Histo1DPtr> _histETLowQb;
     vector<Histo1DPtr> _histETHighQb;
     Profile1DPtr _histAverETCentral;
     Profile1DPtr _histAverETFrag;
-    //@}
+    /// @}
 
-    /// @name storage of weights for normalisation
-    //@{
-    vector<double> _weightETLowQa;
-    vector<double> _weightETHighQa;
-    vector<double> _weightETLowQb;
-    vector<double> _weightETHighQb;
-    //@}
+    /// @name Storage of weights for normalisation
+    /// @{
+    array<CounterPtr,17> _weightETLowQa;
+    array<CounterPtr, 7> _weightETHighQa;
+    array<CounterPtr, 5> _weightETLowQb;
+    array<CounterPtr, 3> _weightETHighQb;
+    /// @}
 
   };
 
 
 
-  DECLARE_RIVET_PLUGIN(H1_2000_S4129130);
+  RIVET_DECLARE_ALIASED_PLUGIN(H1_2000_S4129130, H1_2000_I503947);
 
 }

@@ -12,7 +12,7 @@ XLabel=$|\eta_\ell|$
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I928289_W/d..-x..-y..
-YLabel=$\text{d}\sigma / \text{d}\eta_\ell$ [pb]
+YLabel=$\mathrm{d}\sigma / \mathrm{d}\eta_\ell$ [pb]
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2011_I928289_W/d07-x..-y..

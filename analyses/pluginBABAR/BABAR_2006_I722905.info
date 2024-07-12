@@ -1,0 +1,35 @@
+Name: BABAR_2006_I722905
+Year: 2006
+Summary: Kinematic distributions in the decays $D^0\to K^\mp\pi^\pm\pi^0$
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 722905
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 97 (2006) 221803
+RunInfo: Any process producing D0
+Description:
+  'Kinematic distributions  in the decays $D^0\to K^\mp\pi^\pm\pi^0$. Data read from plots'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BaBar:2006dln
+BibTeX: '@article{BaBar:2006dln,
+    author = "Aubert, Bernard and others",
+    collaboration = "BaBar",
+    title = "{Search for $D^0$ -anti-D0 Mixing and Branching-Ratio Measurement in the Decay $D^0 \to K^{+} \pi^{-} \pi^0$}",
+    eprint = "hep-ex/0608006",
+    archivePrefix = "arXiv",
+    reportNumber = "BABAR-PUB-06-049, SLAC-PUB-12036",
+    doi = "10.1103/PhysRevLett.97.221803",
+    journal = "Phys. Rev. Lett.",
+    volume = "97",
+    pages = "221803",
+    year = "2006"
+}
+'

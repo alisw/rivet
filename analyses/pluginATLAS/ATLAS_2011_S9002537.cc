@@ -8,12 +8,11 @@
 namespace Rivet {
 
 
+  /// Muon charge asymmetry in W events at 7 TeV in ATLAS
   class ATLAS_2011_S9002537 : public Analysis {
   public:
 
-    ATLAS_2011_S9002537()
-      : Analysis("ATLAS_2011_S9002537")
-    {  }
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2011_S9002537);
 
 
     void init() {
@@ -28,9 +27,9 @@ namespace Rivet {
       declare(missmom, "MissingMomentum");
 
       /// @todo Will need to register TMP histograms for future histogramming
-      _tmp_h_plus  = Histo1D(refData(1,1,1));
-      _tmp_h_minus = Histo1D(refData(1,1,1));
-      _h_asym = bookScatter2D(1, 1, 1);
+      book(_tmp_h_plus, "TMP/plus", refData(1,1,1));
+      book(_tmp_h_minus, "TMP/minus", refData(1,1,1));
+      book(_h_asym, 1, 1, 1);
     }
 
 
@@ -41,10 +40,10 @@ namespace Rivet {
       const ChargedFinalState& tracks = apply<ChargedFinalState>(event, "tracks");
 
       Particles selected_muons;
-      foreach (Particle muon, muons.particles()) {
+      for (Particle muon : muons.particles()) {
         FourMomentum testmom = muon.momentum();
         double ptmu(testmom.pT()), ptsum(-ptmu), ratio(0.);
-        foreach (Particle track, tracks.particles()) {
+        for (Particle track : tracks.particles()) {
           const FourMomentum& trackmom = track.momentum();
           if (deltaR(testmom, trackmom) < 0.4) {
             ptsum += trackmom.pT();
@@ -64,21 +63,21 @@ namespace Rivet {
       double MTW = sqrt( 2 * missvec.pT() * muonmom.pT() * (1 - cos( deltaPhi(missvec.phi(), muonmom.phi()) )) );
       if (MTW < 40*GeV) vetoEvent;
 
-      Histo1D& htmp = (selected_muons[0].pid() > 0) ? _tmp_h_minus : _tmp_h_plus;
-      htmp.fill(muonmom.eta(), event.weight());
+      Histo1DPtr & htmp = (selected_muons[0].pid() > 0) ? _tmp_h_minus : _tmp_h_plus;
+      htmp->fill(muonmom.eta());
     }
 
 
     /// Normalise histograms etc., after the run
     void finalize() {
-      assert(_tmp_h_plus.numBins() == _tmp_h_minus.numBins());
-      for (size_t i = 0; i < _tmp_h_plus.numBins(); ++i) {
-        const double num   = _tmp_h_plus.bin(i).sumW() - _tmp_h_minus.bin(i).sumW();
-        const double denom = _tmp_h_plus.bin(i).sumW() + _tmp_h_minus.bin(i).sumW();
-        const double relerr = _tmp_h_plus.bin(i).relErr()  + _tmp_h_minus.bin(i).relErr();
+      assert(_tmp_h_plus->numBins() == _tmp_h_minus->numBins());
+      for (size_t i = 0; i < _tmp_h_plus->numBins(); ++i) {
+        const double num   = _tmp_h_plus->bin(i).sumW() - _tmp_h_minus->bin(i).sumW();
+        const double denom = _tmp_h_plus->bin(i).sumW() + _tmp_h_minus->bin(i).sumW();
+        const double relerr = _tmp_h_plus->bin(i).relErr()  + _tmp_h_minus->bin(i).relErr();
         const double asym = (num != 0 && denom != 0) ? num / denom : 0;
         const double asym_err = (num != 0 && denom != 0) ? asym*relerr : 0;
-        _h_asym->addPoint(_tmp_h_plus.bin(i).xMid(), asym, _tmp_h_plus.bin(i).xWidth()/2.0, asym_err);
+        _h_asym->addPoint(_tmp_h_plus->bin(i).xMid(), asym, _tmp_h_plus->bin(i).xWidth()/2.0, asym_err);
       }
     }
 
@@ -87,12 +86,11 @@ namespace Rivet {
 
     Scatter2DPtr _h_asym;
     /// @todo Will need to register TMP histograms for future histogramming
-    Histo1D  _tmp_h_plus, _tmp_h_minus;
+    Histo1DPtr  _tmp_h_plus, _tmp_h_minus;
 
   };
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2011_S9002537);
+  RIVET_DECLARE_ALIASED_PLUGIN(ATLAS_2011_S9002537, ATLAS_2011_I892704);
 
 }

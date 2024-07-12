@@ -6,14 +6,12 @@
 namespace Rivet {
 
 
-  /// @brief UA5 multiplicity and \f$ \eta \f$ distributions
+  /// UA5 multiplicity and \f$ \eta \f$ distributions
   class UA5_1982_S875503 : public Analysis {
   public:
 
     /// Default constructor
-    UA5_1982_S875503() : Analysis("UA5_1982_S875503") {
-      _sumWTrig = 0;
-    }
+    RIVET_DEFAULT_ANALYSIS_CTOR(UA5_1982_S875503);
 
 
     /// @name Analysis methods
@@ -22,16 +20,18 @@ namespace Rivet {
     /// Set up projections and book histos
     void init() {
       declare(TriggerUA5(), "Trigger");
-      declare(ChargedFinalState(-3.5, 3.5), "CFS");
+      declare(ChargedFinalState((Cuts::etaIn(-3.5, 3.5))), "CFS");
 
       // Book histos based on pp or ppbar beams
       if (beamIds().first == beamIds().second) {
-        _hist_nch = bookHisto1D(2,1,1);
-        _hist_eta = bookHisto1D(3,1,1);
+        book(_hist_nch ,2,1,1);
+        book(_hist_eta ,3,1,1);
       } else {
-        _hist_nch = bookHisto1D(2,1,2);
-        _hist_eta = bookHisto1D(4,1,1);
+        book(_hist_nch ,2,1,2);
+        book(_hist_eta ,4,1,1);
       }
+      book(_sumWTrig, "sumW");
+
     }
 
 
@@ -39,19 +39,18 @@ namespace Rivet {
       // Trigger
       const TriggerUA5& trigger = apply<TriggerUA5>(event, "Trigger");
       if (!trigger.nsdDecision()) vetoEvent;
-      const double weight = event.weight();
-      _sumWTrig += weight;
+      _sumWTrig->fill();
 
       // Get tracks
       const ChargedFinalState& cfs = apply<ChargedFinalState>(event, "CFS");
 
       // Fill mean charged multiplicity histos
-      _hist_nch->fill(_hist_nch->bin(0).xMid(), cfs.size()*weight);
+      _hist_nch->fill(_hist_nch->bin(0).xMid(), cfs.size());
 
       // Iterate over all tracks and fill eta histograms
-      foreach (const Particle& p, cfs.particles()) {
+      for (const Particle& p : cfs.particles()) {
         const double eta = p.abseta();
-        _hist_eta->fill(eta, weight);
+        _hist_eta->fill(eta);
       }
 
     }
@@ -60,11 +59,11 @@ namespace Rivet {
     void finalize() {
       /// @todo Why the factor of 2 on Nch for ppbar?
       if (beamIds().first == beamIds().second) {
-        scale(_hist_nch, 1.0/_sumWTrig);
+        scale(_hist_nch, 1.0 / *_sumWTrig);
       } else {
-        scale(_hist_nch, 0.5/_sumWTrig);
+        scale(_hist_nch, 0.5 / *_sumWTrig);
       }
-      scale(_hist_eta, 0.5/_sumWTrig);
+      scale(_hist_eta, 0.5 / *_sumWTrig);
     }
 
     //@}
@@ -74,7 +73,7 @@ namespace Rivet {
 
     /// @name Counters
     //@{
-    double _sumWTrig;
+    CounterPtr _sumWTrig;
     //@}
 
     /// @name Histogram collections
@@ -88,6 +87,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(UA5_1982_S875503);
+  RIVET_DECLARE_ALIASED_PLUGIN(UA5_1982_S875503, UA5_1982_I176647);
 
 }

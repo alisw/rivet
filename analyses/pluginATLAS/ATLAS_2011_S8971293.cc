@@ -10,18 +10,9 @@ namespace Rivet {
   class ATLAS_2011_S8971293 : public Analysis {
   public:
 
-    /// @name Constructors etc.
-    //@{
-
     /// Constructor
-    ATLAS_2011_S8971293()
-      : Analysis("ATLAS_2011_S8971293")
-    {    }
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2011_S8971293);
 
-    //@}
-
-
-  public:
 
     /// @name Analysis methods
     //@{
@@ -32,24 +23,25 @@ namespace Rivet {
       declare(FastJets(FinalState(), FastJets::ANTIKT, 0.6), "AntiKtJets06");
 
       /// Book histograms
-      _h_deltaPhi.addHistogram(110., 160., bookHisto1D(1, 1, 1));
-      _h_deltaPhi.addHistogram(160., 210., bookHisto1D(1, 1, 2));
-      _h_deltaPhi.addHistogram(210., 260., bookHisto1D(1, 1, 3));
-      _h_deltaPhi.addHistogram(260., 310., bookHisto1D(1, 1, 4));
-      _h_deltaPhi.addHistogram(310., 400., bookHisto1D(1, 1, 5));
-      _h_deltaPhi.addHistogram(400., 500., bookHisto1D(1, 1, 6));
-      _h_deltaPhi.addHistogram(500., 600., bookHisto1D(1, 1, 7));
-      _h_deltaPhi.addHistogram(600., 800., bookHisto1D(1, 1, 8));
-      _h_deltaPhi.addHistogram(800., 10000., bookHisto1D(1, 1, 9));
+      /// @todo Provide a nicer way!
+      {Histo1DPtr tmp; _h_deltaPhi.add(110., 160., book(tmp, 1, 1, 1));}
+      {Histo1DPtr tmp; _h_deltaPhi.add(160., 210., book(tmp, 1, 1, 2));}
+      {Histo1DPtr tmp; _h_deltaPhi.add(210., 260., book(tmp, 1, 1, 3));}
+      {Histo1DPtr tmp; _h_deltaPhi.add(260., 310., book(tmp, 1, 1, 4));}
+      {Histo1DPtr tmp; _h_deltaPhi.add(310., 400., book(tmp, 1, 1, 5));}
+      {Histo1DPtr tmp; _h_deltaPhi.add(400., 500., book(tmp, 1, 1, 6));}
+      {Histo1DPtr tmp; _h_deltaPhi.add(500., 600., book(tmp, 1, 1, 7));}
+      {Histo1DPtr tmp; _h_deltaPhi.add(600., 800., book(tmp, 1, 1, 8));}
+      {Histo1DPtr tmp; _h_deltaPhi.add(800.,10000.,book(tmp, 1, 1, 9));}
     }
 
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-      const double weight = event.weight();
+      const double weight = 1.0;
 
       Jets jets06;
-      foreach (const Jet& jet, apply<FastJets>(event, "AntiKtJets06").jetsByPt(100.0*GeV)) {
+      for (const Jet& jet : apply<FastJets>(event, "AntiKtJets06").jetsByPt(100.0*GeV)) {
         if (jet.absrap() < 2.8) {
           jets06.push_back(jet);
         }
@@ -65,27 +57,23 @@ namespace Rivet {
 
     /// Normalise histograms etc., after the run
     void finalize() {
-      foreach (Histo1DPtr hist, _h_deltaPhi.getHistograms()) {
+      for (Histo1DPtr hist : _h_deltaPhi.histos()) {
         normalize(hist, 1/M_PI);
       }
     }
 
-    //@}
+    /// @}
 
 
   private:
 
-    /// @name Histograms
-    //@{
-    BinnedHistogram<double> _h_deltaPhi;
-    //@}
-
+    /// Histograms
+    BinnedHistogram _h_deltaPhi;
 
   };
 
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2011_S8971293);
+  RIVET_DECLARE_ALIASED_PLUGIN(ATLAS_2011_S8971293, ATLAS_2011_I889546);
 
 }

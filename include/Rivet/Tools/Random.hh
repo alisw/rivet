@@ -9,18 +9,26 @@
 
 namespace Rivet {
 
-
   /// Return a thread-safe random number generator (mainly for internal use)
-  mt19937& rng();
+  std::mt19937& rng();
 
   /// Return a uniformly sampled random number between 0 and 1
   double rand01();
 
-  /// Return a Gaussian/normal sampled random number with the given mean and width
+  /// Return a random number sampled from a Gaussian/normal distribution
   double randnorm(double loc, double scale);
 
-  /// Return a log-normal sampled random number
+  /// Return a random number sampled from a log-normal distribution
   double randlognorm(double loc, double scale);
+
+  /// Return a random number sampled from a Crystal Ball distribution
+  double randcrystalball(double alpha, double n, double mu, double sigma);
+
+
+  /// Probability density of a Gaussian/normal distribution at x
+  double pNorm(double x, double mu, double sigma);
+  /// Probability density of a Crystal Ball distribution at x
+  double pCrystalBall(double x, double alpha, double n, double mu, double sigma);
 
 
 }

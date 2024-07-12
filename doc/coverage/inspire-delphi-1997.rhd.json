@@ -1,0 +1,253 @@
+{
+    "415746": [
+        "Search for new phenomena using single photon events in the DELPHI detector at LEP", 
+        "DELPHI", 
+        "10.1007/s002880050421", 
+        "295026", 
+        null, 
+        "ins415746", 
+        null, 
+        [
+            "CERN-PPE-96-003", 
+            "CERN-PPE-96-3", 
+            "CERN-PPE-96-03"
+        ]
+    ], 
+    "424628": [
+        "Search for lepton flavor number violating Z0 decays", 
+        "DELPHI", 
+        "10.1007/s002880050313", 
+        "312201", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-129"
+        ]
+    ], 
+    "424629": [
+        "Measurement of event shape and inclusive distributions at S**(1/2) = 130-GeV and 136-GeV", 
+        "DELPHI", 
+        "10.1007/s002880050312", 
+        "312202", 
+        null, 
+        "ins424629", 
+        null, 
+        [
+            "CERN-PPE-96-130"
+        ]
+    ], 
+    "426506": [
+        "A Precise measurement of the B(d)0 meson lifetime using a new technique", 
+        "DELPHI", 
+        "10.1007/s002880050367", 
+        "314388", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-139"
+        ]
+    ], 
+    "427105": [
+        "Search for excited leptons in e+ e- collisions at s**(1/2) = 161-GeV", 
+        "DELPHI", 
+        "10.1016/S0370-2693(96)01618-8", 
+        "316275", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-169"
+        ]
+    ], 
+    "428162": [
+        "Search for the B(c) Meson", 
+        "DELPHI", 
+        "10.1016/S0370-2693(97)00254-2", 
+        "318088", 
+        null, 
+        "ins428162", 
+        null, 
+        [
+            "CERN-PPE-96-194"
+        ]
+    ], 
+    "428163": [
+        "Search for neutral heavy leptons produced in Z decays", 
+        "DELPHI", 
+        "10.1007/s002880050370", 
+        "318089", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-195"
+        ]
+    ], 
+    "428178": [
+        "A Measurement of alpha-s from the scaling violation in e+ e- annihilation", 
+        "DELPHI", 
+        "10.1016/S0370-2693(97)00256-6", 
+        "317673", 
+        null, 
+        "ins428178", 
+        null, 
+        [
+            "CERN-PPE-96-185"
+        ]
+    ], 
+    "428179": [
+        "Search for stable heavy charged particles in e+ e- collisions at s**(1/2) = 130-GeV to 136-GeV, 161-GeV and 172-GeV", 
+        "DELPHI", 
+        "10.1016/S0370-2693(97)00152-4", 
+        "318087", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-188"
+        ]
+    ], 
+    "428228": [
+        "Identified particles in quark and gluon jets", 
+        "DELPHI", 
+        "10.1016/S0370-2693(97)00405-X", 
+        "318497", 
+        null, 
+        "ins428228", 
+        null, 
+        [
+            "CERN-PPE-96-193"
+        ]
+    ], 
+    "440217": [
+        "Measurement and interpretation of the $W$ pair cross-section in $e^{+} e^{-}$ interactions at 161-GeV", 
+        "DELPHI", 
+        "10.1016/S0370-2693(97)00226-8", 
+        "319826", 
+        null, 
+        "ins440217", 
+        null, 
+        [
+            "CERN-PPE-97-009", 
+            "CERN-PPE-97-09", 
+            "CERN-PPE-97-9"
+        ]
+    ], 
+    "441608": [
+        "Measurement of correlations between pions from different Ws in e+ e ---> W+ W- events", 
+        "DELPHI", 
+        "10.1016/S0370-2693(97)00419-X", 
+        "322871", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-030", 
+            "CERN-PPE-97-30"
+        ]
+    ], 
+    "442224": [
+        "Measurement of the transverse spin correlation in Z --> tau+ tau- decays", 
+        "DELPHI", 
+        "10.1016/S0370-2693(97)00586-8", 
+        "323932", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-034", 
+            "CERN-PPE-97-34"
+        ]
+    ], 
+    "442880": [
+        "Measurement of the multiplicity of gluons splitting to bottom quark pairs in hadronic Z0 decays", 
+        "DELPHI", 
+        "10.1016/S0370-2693(97)00608-4", 
+        "325272", 
+        null, 
+        "ins442880", 
+        null, 
+        [
+            "CERN-PPE-97-039", 
+            "CERN-PPE-97-39"
+        ]
+    ], 
+    "443012": [
+        "A Study of the reaction e+ e- ---> mu+ mu- gamma (ISR) at LEP and search for new physics at annihilation energies near 80-GeV", 
+        "DELPHI", 
+        "10.1007/s002880050504", 
+        "325747", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-045", 
+            "CERN-PPE-97-45"
+        ]
+    ], 
+    "443562": [
+        "Measurement of $B_d^0$ - $\\bar{B}_d$ 0 oscillations", 
+        "DELPHI", 
+        "10.1007/s002880050582", 
+        "326599", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-051", 
+            "CERN-PPE-97-51"
+        ]
+    ], 
+    "444150": [
+        "Measurement of the spin density matrix for the rho0, K*0 (892) and phi produced in Z0 decays", 
+        "DELPHI", 
+        "10.1016/S0370-2693(97)00758-2", 
+        "327485", 
+        null, 
+        "ins444150", 
+        null, 
+        [
+            "CERN-PPE-97-055", 
+            "CERN-PPE-97-55"
+        ]
+    ], 
+    "444680": [
+        "Observation of charge ordering in particle production in hadronic Z0 decay", 
+        "DELPHI", 
+        "10.1016/S0370-2693(97)11783-X", 
+        "328251", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-062", 
+            "CERN-PPE-97-62"
+        ]
+    ], 
+    "448436": [
+        "Measurement of the triple gluon vertex from double quark tagged four jet events", 
+        "DELPHI", 
+        "10.1016/S0370-2693(97)01192-1", 
+        "333850", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-112"
+        ]
+    ], 
+    "448977": [
+        "Search for B(s)0 anti-B(s)0 oscillations", 
+        "DELPHI", 
+        "10.1016/S0370-2693(97)01188-X", 
+        "334706", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-114"
+        ]
+    ]
+}

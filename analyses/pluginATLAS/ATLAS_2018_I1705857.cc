@@ -8,11 +8,11 @@
 namespace Rivet {
 
 
+/// @brief ttbb at 13 TeV
 class ATLAS_2018_I1705857 : public Analysis {
  public:
    /// Constructor
-   /// @brief ttbb at 13 TeV
-   DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2018_I1705857);
+   RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2018_I1705857);
 
     void init() {
       // Eta ranges
@@ -52,15 +52,15 @@ class ATLAS_2018_I1705857 : public Analysis {
       vfs.addVetoOnThisFinalState(all_dressed_muons);
       vfs.addVetoOnThisFinalState(neutrinos);
 
-      FastJets jets(vfs, FastJets::ANTIKT, 0.4, JetAlg::DECAY_MUONS, JetAlg::DECAY_INVISIBLES);
+      FastJets jets(vfs, FastJets::ANTIKT, 0.4, JetAlg::Muons::DECAY, JetAlg::Invisibles::DECAY);
       declare(jets, "jets");
 
       // fiducial cross-section histogram
-      _histograms["fid_xsec"] = bookHisto1D(1, 1, 1);
-      _histograms["fid_xsec_no_ttX"] = bookHisto1D(2, 1, 1);
+      book(_histograms["fid_xsec"], 1, 1, 1);
+      book(_histograms["fid_xsec_no_ttX"], 2, 1, 1);
 
-      _histograms["nbjets_emu"] = bookHisto1D(3, 1, 1);
-      _histograms["nbjets_emu_no_ttX"] = bookHisto1D(4, 1, 1);
+      book(_histograms["nbjets_emu"], 3, 1, 1);
+      book(_histograms["nbjets_emu_no_ttX"], 4, 1, 1);
 
       // HT
       book_hist("ht_emu", 3);
@@ -100,7 +100,6 @@ class ATLAS_2018_I1705857 : public Analysis {
 
 
     void analyze(const Event& event) {
-      const double weight = event.weight();
 
       vector<DressedLepton> leptons;
       for (auto &lep : apply<DressedLeptons>(event, "muons").dressedLeptons()) { leptons.push_back(lep); }
@@ -136,14 +135,14 @@ class ATLAS_2018_I1705857 : public Analysis {
       if (!pass_emu && !pass_ljets)  vetoEvent;
 
       if (pass_emu) {
-        if (nbjets >= 2)  fill("nbjets_emu", nbjets - 1, weight);
-        if (nbjets >= 3)  fill("fid_xsec", 1, weight);
-        if (nbjets >= 4)  fill("fid_xsec", 2, weight);
+        if (nbjets >= 2)  fill("nbjets_emu", nbjets - 1);
+        if (nbjets >= 3)  fill("fid_xsec", 1);
+        if (nbjets >= 4)  fill("fid_xsec", 2);
       }
 
       if (pass_ljets) {
-        if (nbjets >= 3 && njets >= 5)  fill("fid_xsec", 3, weight);
-        if (nbjets >= 4 && njets >= 6)  fill("fid_xsec", 4, weight);
+        if (nbjets >= 3 && njets >= 5)  fill("fid_xsec", 3);
+        if (nbjets >= 4 && njets >= 6)  fill("fid_xsec", 4);
       }
 
       if (pass_emu && (nbjets < 3 || njets < 3))    vetoEvent;
@@ -155,7 +154,7 @@ class ATLAS_2018_I1705857 : public Analysis {
       FourMomentum jsum = bjets[0].momentum() + bjets[1].momentum();
       double dr_leading = deltaR(bjets[0], bjets[1]);
 
-      size_t ind1, ind2; double mindr = 999.;
+      size_t ind1 = 0, ind2 = 0; double mindr = 999.;
       for (size_t i = 0; i < bjets.size(); ++i) {
         for (size_t j = 0; j < bjets.size(); ++j) {
           if (i == j)  continue;
@@ -173,45 +172,45 @@ class ATLAS_2018_I1705857 : public Analysis {
 
       if (pass_ljets) {
         // b-jet pTs
-        fill("lead_bjet_pt_ljets", bjets[0].pT()/GeV, weight);
-        fill("sublead_bjet_pt_ljets", bjets[1].pT()/GeV, weight);
-        fill("third_bjet_pt_ljets", bjets[2].pT()/GeV, weight);
+        fill("lead_bjet_pt_ljets", bjets[0].pT()/GeV);
+        fill("sublead_bjet_pt_ljets", bjets[1].pT()/GeV);
+        fill("third_bjet_pt_ljets", bjets[2].pT()/GeV);
 
-        if (nbjets >= 4)  fill("fourth_bjet_pt_ljets", bjets[3].pT()/GeV, weight);
+        if (nbjets >= 4)  fill("fourth_bjet_pt_ljets", bjets[3].pT()/GeV);
 
         // HT
-        fill("ht_ljets", ht/GeV, weight);
-        fill("ht_had_ljets", hthad/GeV, weight);
+        fill("ht_ljets", ht/GeV);
+        fill("ht_had_ljets", hthad/GeV);
 
         // leading bb pair
-        fill("m_bb_leading_ljets", jsum.mass()/GeV, weight);
-        fill("pt_bb_leading_ljets", jsum.pT()/GeV, weight);
-        fill("dR_bb_leading_ljets", dr_leading, weight);
+        fill("m_bb_leading_ljets", jsum.mass()/GeV);
+        fill("pt_bb_leading_ljets", jsum.pT()/GeV);
+        fill("dR_bb_leading_ljets", dr_leading);
 
         // closest bb pair
-        fill("m_bb_closest_ljets", bb_closest.mass()/GeV, weight);
-        fill("pt_bb_closest_ljets", bb_closest.pT()/GeV, weight);
-        fill("dR_bb_closest_ljets", dr_closest, weight);
+        fill("m_bb_closest_ljets", bb_closest.mass()/GeV);
+        fill("pt_bb_closest_ljets", bb_closest.pT()/GeV);
+        fill("dR_bb_closest_ljets", dr_closest);
       }
       if (pass_emu) {
         // b-jet pTs
-        fill("lead_bjet_pt_emu", bjets[0].pT()/GeV, weight);
-        fill("sublead_bjet_pt_emu", bjets[1].pT()/GeV, weight);
-        fill("third_bjet_pt_emu", bjets[2].pT()/GeV, weight);
+        fill("lead_bjet_pt_emu", bjets[0].pT()/GeV);
+        fill("sublead_bjet_pt_emu", bjets[1].pT()/GeV);
+        fill("third_bjet_pt_emu", bjets[2].pT()/GeV);
 
         // HT
-        fill("ht_emu", ht/GeV, weight);
-        fill("ht_had_emu", hthad/GeV, weight);
+        fill("ht_emu", ht/GeV);
+        fill("ht_had_emu", hthad/GeV);
 
         // leading bb pair
-        fill("m_bb_leading_emu", jsum.mass()/GeV, weight);
-        fill("pt_bb_leading_emu", jsum.pT()/GeV, weight);
-        fill("dR_bb_leading_emu", dr_leading, weight);
+        fill("m_bb_leading_emu", jsum.mass()/GeV);
+        fill("pt_bb_leading_emu", jsum.pT()/GeV);
+        fill("dR_bb_leading_emu", dr_leading);
 
         // closest bb pair
-        fill("m_bb_closest_emu", bb_closest.mass()/GeV, weight);
-        fill("pt_bb_closest_emu", bb_closest.pT()/GeV, weight);
-        fill("dR_bb_closest_emu", dr_closest, weight);
+        fill("m_bb_closest_emu", bb_closest.mass()/GeV);
+        fill("pt_bb_closest_emu", bb_closest.pT()/GeV);
+        fill("dR_bb_closest_emu", dr_closest);
       }
     }
 
@@ -225,15 +224,15 @@ class ATLAS_2018_I1705857 : public Analysis {
       }
     }
 
-    void fill(const string& name, const double value, const double weight) {
-      _histograms[name]->fill(value, weight);
-      _histograms[name + "_no_ttX"]->fill(value, weight);
+    void fill(const string& name, const double value) {
+      _histograms[name]->fill(value);
+      _histograms[name + "_no_ttX"]->fill(value);
     }
 
     void book_hist(const std::string& name, unsigned int d) {
       // ttX substracted histograms are even numbers
-      _histograms[name] = bookHisto1D((d * 2) - 1, 1, 1);
-      _histograms[name + "_no_ttX"] = bookHisto1D(d * 2, 1, 1);
+      book(_histograms[name], (d * 2) - 1, 1, 1);
+      book(_histograms[name + "_no_ttX"], d * 2, 1, 1);
     }
 
     private:
@@ -242,5 +241,5 @@ class ATLAS_2018_I1705857 : public Analysis {
   };
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2018_I1705857);
+  RIVET_DECLARE_PLUGIN(ATLAS_2018_I1705857);
 }

@@ -7,20 +7,15 @@
 namespace Rivet {
 
 
-  /// @brief D0 azimuthal correlation of jets widely separated in rapidity
+  /// D0 azimuthal correlation of jets widely separated in rapidity
   class D0_1996_S3324664 : public Analysis {
   public:
 
-    /// @name Constructors etc.
-    //@{
-
-    /// Constructor
-    D0_1996_S3324664() : Analysis("D0_1996_S3324664")
-    {    }
+    RIVET_DEFAULT_ANALYSIS_CTOR(D0_1996_S3324664);
 
 
     /// @name Analysis methods
-    //@{
+    /// @{
 
     void init() {
       const FinalState fs;
@@ -28,16 +23,16 @@ namespace Rivet {
       /// @todo Use correct jet algorithm
       declare(FastJets(fs, FastJets::D0ILCONE, 0.7), "ConeJets");
 
-      _h_deta = bookHisto1D(1, 1, 1);
-      _h_dphi.addHistogram(0.0, 2.0, bookHisto1D(2, 1, 1));
-      _h_dphi.addHistogram(2.0, 4.0, bookHisto1D(2, 1, 2));
-      _h_dphi.addHistogram(4.0, 6.0, bookHisto1D(2, 1, 3));
-      _h_cosdphi_deta = bookProfile1D(3, 1, 1);
+      book(_h_deta ,1, 1, 1);
+      {Histo1DPtr tmp; _h_dphi.add(0.0, 2.0, book(tmp, 2, 1, 1));}
+      {Histo1DPtr tmp; _h_dphi.add(2.0, 4.0, book(tmp, 2, 1, 2));}
+      {Histo1DPtr tmp; _h_dphi.add(4.0, 6.0, book(tmp, 2, 1, 3));}
+      book(_h_cosdphi_deta ,3, 1, 1);
     }
 
 
     void analyze(const Event& event) {
-      const double weight = event.weight();
+      const double weight = 1.0;
       Jets jets = apply<FastJets>(event, "ConeJets").jets(Cuts::Et > 20*GeV && Cuts::abseta<3, cmpMomByEt);
 
       if (jets.size() < 2) vetoEvent;
@@ -47,7 +42,7 @@ namespace Rivet {
       double mineta = minjet.eta();
       double maxeta = maxjet.eta();
 
-      foreach (const Jet& jet, jets) {
+      for (const Jet& jet : jets) {
         double eta = jet.eta();
         if (eta < mineta) {
           minjet = jet.momentum();
@@ -74,29 +69,28 @@ namespace Rivet {
       normalize(_h_deta, 8830.); // fixed norm OK
 
       // Normalied to 1/(4pi)
-      foreach (Histo1DPtr histo, _h_dphi.getHistograms()) {
+      for (Histo1DPtr histo : _h_dphi.histos()) {
         normalize(histo, 1./(4.*M_PI));
       }
 
     }
 
-    //@}
+    /// @}
 
 
   private:
 
     /// @name Histograms
-    //@{
+    /// @{
     Histo1DPtr _h_deta;
-    BinnedHistogram<double> _h_dphi;
+    BinnedHistogram _h_dphi;
     Profile1DPtr _h_cosdphi_deta;
-    //@}
+    /// @}
 
   };
 
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(D0_1996_S3324664);
+  RIVET_DECLARE_ALIASED_PLUGIN(D0_1996_S3324664, D0_1996_I416886);
 
 }

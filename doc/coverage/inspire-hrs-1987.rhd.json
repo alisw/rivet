@@ -1,0 +1,31 @@
+{
+    "245612": [
+        "Measurement of the Tau Lepton Lifetime", 
+        "HRS", 
+        "10.1103/PhysRevLett.59.2519", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "ANL-HEP-PR-87-1", 
+            "IUHEE-87-2", 
+            "UM-HE-87-01", 
+            "PU-87-692"
+        ]
+    ], 
+    "250823": [
+        "Measurement of the Spin Density Matrix of $D^*$ Mesons Produced in $e^+ e^-$ Annihilations", 
+        "HRS", 
+        "10.1016/0370-2693(87)91632-7", 
+        null, 
+        null, 
+        "ins250823", 
+        null, 
+        [
+            "ANL-HEP-PR-87-86", 
+            "UM-HE-87-22", 
+            "PU-87-607"
+        ]
+    ]
+}

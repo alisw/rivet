@@ -24,7 +24,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(ALEPH_2016_I1492968);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ALEPH_2016_I1492968);
 
 
     /// @name Analysis methods
@@ -35,29 +35,27 @@ namespace Rivet {
 
       // Initialise and register projections
       const FinalState fs;
-      addProjection(fs, "FS");
+      declare(fs, "FS");
 
-      FastJets jets(fs, FastJets::GENKTEE, 0.5, JetAlg::NO_MUONS, JetAlg::ALL_INVISIBLES);
-      //FastJets jets(fs, FastJets::ANTIKT, 0.5, JetAlg::NO_MUONS, JetAlg::ALL_INVISIBLES);
-      addProjection(jets, "Jets");
+      FastJets jets(fs, FastJets::GENKTEE, 0.5, JetAlg::Muons::NONE, JetAlg::Invisibles::ALL);
+      //FastJets jets(fs, FastJets::ANTIKT, 0.5, JetAlg::Muons::NONE, JetAlg::Invisibles::ALL);
+      declare(jets, "Jets");
 
       IdentifiedFinalState mu_id(fs);
       mu_id.acceptIdPair(PID::MUON);
-      addProjection(mu_id, "MUONS");
+      declare(mu_id, "MUONS");
   
-      addProjection(MissingMomentum(fs), "MissingMomenta");      
+      declare(MissingMomentum(fs), "MissingMomenta");      
       // Book histograms
       //_h_costheta = bookHisto1D(2, 1, 1);
-      _h_m_OS = bookHisto1D(3, 1, 1);
-      _h_m_SS = bookHisto1D(5, 1, 1);
+      book(_h_m_OS, 3, 1, 1);
+      book(_h_m_SS, 5, 1, 1);
 
     }
 
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-
-      const double weight = event.weight();
 
       // B-jets
       const Jets jets = apply<JetAlg>(event, "Jets").jetsByPt(Cuts::pT > 5*GeV); // tODO jet eta?
@@ -85,11 +83,11 @@ namespace Rivet {
       
       // Same sign
       if (b_muons[0].charge()*b_muons[1].charge()>0) {
-        _h_m_SS->fill( dimuon.mass()/GeV, weight);
+        _h_m_SS->fill( dimuon.mass()/GeV);
       }
       // Opposite sign
       else {
-        _h_m_OS->fill( dimuon.mass()/GeV, weight);
+        _h_m_OS->fill( dimuon.mass()/GeV);
         //
         //FourMomentum muonminus;
         //if (b_muons[0].charge() < 0)  muonminus = b_muons[0].momentum();
@@ -101,7 +99,7 @@ namespace Rivet {
         //double cosmuonboosted = boostedmuon.vector3().dot(cms_boost.betaVec())
           /// (boostedmuon.vector3().mod()*cms_boost.betaVec().mod());
 
-        //_h_costheta->fill( cosmuonboosted, weight);
+        //_h_costheta->fill( cosmuonboosted);
       }
     }
 
@@ -132,7 +130,7 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ALEPH_2016_I1492968);
+  RIVET_DECLARE_PLUGIN(ALEPH_2016_I1492968);
 
 
 }

@@ -1,0 +1,42 @@
+{
+    "776511": [
+        "System test of the ATLAS muon spectrometer in the H8 beam at the CERN SPS", 
+        "ATLAS Muon", 
+        "10.1016/j.nima.2008.05.027", 
+        "1056267", 
+        null, 
+        null, 
+        null, 
+        []
+    ], 
+    "780935": [
+        "The ATLAS Transition Radiation Tracker (TRT) proportional drift tube: Design and performance", 
+        "ATLAS TRT", 
+        "10.1088/1748-0221/3/02/P02013", 
+        "1094549", 
+        null, 
+        null, 
+        null, 
+        []
+    ], 
+    "780936": [
+        "The ATLAS TRT barrel detector", 
+        "ATLAS TRT", 
+        "10.1088/1748-0221/3/02/P02014", 
+        "1094548", 
+        null, 
+        null, 
+        null, 
+        []
+    ], 
+    "796888": [
+        "The ATLAS Experiment at the CERN Large Hadron Collider", 
+        "ATLAS", 
+        "10.1088/1748-0221/3/08/S08003", 
+        "1129811", 
+        null, 
+        null, 
+        null, 
+        []
+    ]
+}

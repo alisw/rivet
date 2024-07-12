@@ -1,0 +1,158 @@
+{
+    "561885": [
+        "Measurement of D*+- meson production and F2(c) in deep inelastic scattering at HERA", 
+        "H1", 
+        "10.1016/S0370-2693(02)01195-4", 
+        "514979", 
+        "hep-ex/0108039", 
+        "ins561885", 
+        null, 
+        [
+            "DESY-01-100"
+        ]
+    ], 
+    "564569": [
+        "Search for excited neutrinos at HERA", 
+        "H1", 
+        "10.1016/S0370-2693(01)01410-1", 
+        "523499", 
+        "hep-ex/0110037", 
+        null, 
+        null, 
+        [
+            "DESY-01-145"
+        ]
+    ], 
+    "565358": [
+        "Measurement of dijet electroproduction at small jet separation", 
+        "H1", 
+        "10.1007/s100520100888", 
+        "525119", 
+        "hep-ex/0111006", 
+        null, 
+        null, 
+        [
+            "DESY-01-178"
+        ]
+    ], 
+    "581409": [
+        "Measurement of dijet cross-sections in photoproduction at HERA", 
+        "H1", 
+        "10.1007/s10052-002-1004-0", 
+        "537000", 
+        "hep-ex/0201006", 
+        "ins581409", 
+        null, 
+        [
+            "DESY-01-225"
+        ]
+    ], 
+    "583863": [
+        "Energy flow and rapidity gaps between jets in photoproduction at HERA", 
+        "H1", 
+        "10.1007/s10052-002-0988-9", 
+        "541109", 
+        "hep-ex/0203011", 
+        "ins583863", 
+        null, 
+        [
+            "DESY-02-023"
+        ]
+    ], 
+    "584099": [
+        "A Measurement of the t dependence of the helicity structure of diffractive rho meson electroproduction at HERA", 
+        "H1", 
+        "10.1016/S0370-2693(02)02035-X", 
+        null, 
+        "hep-ex/0203022", 
+        "ins584099", 
+        null, 
+        [
+            "DESY-02-027"
+        ]
+    ], 
+    "586977": [
+        "Inelastic photoproduction of $J/\\psi$ mesons at HERA", 
+        "H1", 
+        "10.1007/s10052-002-1009-8", 
+        "552246", 
+        "hep-ex/0205064", 
+        "ins586977", 
+        null, 
+        [
+            "DESY-02-059"
+        ]
+    ], 
+    "586978": [
+        "Inelastic leptoproduction of $J/\\psi$ mesons at HERA", 
+        "H1", 
+        "10.1007/s10052-002-1014-y", 
+        "552247", 
+        "hep-ex/0205065", 
+        "ins586978", 
+        null, 
+        [
+            "DESY-02-060"
+        ]
+    ], 
+    "587160": [
+        "Search for QCD instanton induced processes in deep inelastic scattering at HERA", 
+        "H1", 
+        "10.1140/epjc/s2002-01039-8", 
+        "552976", 
+        "hep-ex/0205078", 
+        null, 
+        null, 
+        [
+            "DESY-02-062"
+        ]
+    ], 
+    "587754": [
+        "Diffractive photoproduction of psi(2S) mesons at HERA", 
+        "H1", 
+        "10.1016/S0370-2693(02)02275-X", 
+        "556842", 
+        "hep-ex/0205107", 
+        null, 
+        null, 
+        [
+            "DESY-02-075"
+        ]
+    ], 
+    "588263": [
+        "Measurement of inclusive jet cross-sections in deep inelastic ep scattering at HERA", 
+        "H1", 
+        "10.1016/S0370-2693(02)02375-4", 
+        null, 
+        "hep-ex/0206029", 
+        "ins588263", 
+        null, 
+        [
+            "DESY-02-079"
+        ]
+    ], 
+    "589474": [
+        "Search for odderon induced contributions to exclusive pi0 photoproduction at HERA", 
+        "H1", 
+        "10.1016/S0370-2693(02)02479-6", 
+        "564954", 
+        "hep-ex/0206073", 
+        null, 
+        null, 
+        [
+            "DESY-02-087"
+        ]
+    ], 
+    "590618": [
+        "Search for excited electrons at HERA", 
+        "H1", 
+        "10.1016/S0370-2693(02)02764-8", 
+        "570472", 
+        "hep-ex/0207038", 
+        null, 
+        null, 
+        [
+            "DESY-02-096"
+        ]
+    ]
+}

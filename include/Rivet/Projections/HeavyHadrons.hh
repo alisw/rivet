@@ -13,7 +13,7 @@ namespace Rivet {
   /// @brief Project out the last pre-decay b and c hadrons.
   ///
   /// This currently defines a c-hadron as one which contains a @a c quark and
-  /// @a{not} a @a b quark.
+  /// @b not a @a b quark.
   ///
   /// @todo This assumes that the heavy hadrons are unstable... should we also look for stable ones in case the decays are disabled?
   class HeavyHadrons : public FinalState {
@@ -26,7 +26,7 @@ namespace Rivet {
     /// \f$ \eta \f$ and the min \f$ p_T \f$ (in GeV).
     HeavyHadrons(const Cut& c=Cuts::open()) {
       setName("HeavyHadrons");
-      addProjection(UnstableParticles(c), "UFS");
+      declare(UnstableParticles(c), "UFS");
     }
 
     /// Clone on the heap.
@@ -96,7 +96,7 @@ namespace Rivet {
     virtual void project(const Event& e);
 
     /// Compare projections (only difference is in UFS definition)
-    virtual int compare(const Projection& p) const {
+    virtual CmpState compare(const Projection& p) const {
       return mkNamedPCmp(p, "UFS");
     }
 

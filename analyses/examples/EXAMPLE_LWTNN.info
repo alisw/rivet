@@ -1,0 +1,14 @@
+Name: EXAMPLE_LWTNN
+Summary: Example of preserving an NN in Rivet using LWTNN
+Status: VALIDATED
+Reentrant: false
+Authors:
+ - Tomasz Procter <t.procter.1@research.gla.ac.uk>
+References:
+ - 'https://github.com/lwtnn/lwtnn'
+Description:
+  'An example demonstrating the preservation of a neural net in Rivet using LWTNN.
+  The network (stored in EXAMPLE_LWTNN.json in standard LWTNN format) in this case
+  takes the pT and eta of the three lead jets, and produces a totally irrelevant
+  number, just for proof of principle, which is plotted in a histogram.'
+Keywords: ['lwtnn']

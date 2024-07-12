@@ -1,0 +1,47 @@
+Name: ATLAS_2020_I1790256
+Year: 2020
+Summary: Lund jet plane with charged particles
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1790256
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Deepak Kar <deepak.kar@cern.ch>
+References:
+ - arXiv:2004.03540 [hep-ex]
+Keywords:
+ - Lund jet plane
+ - Charged particles
+ - Dijet
+RunInfo:
+  pp -> dijet production at 13 TeV, pTHatMin cut of 200 GeV suggested.
+Luminosity_fb: 139
+Beams: [p+, p+]
+Energies: [13000]
+PtCuts: [300]
+RefUnmatch: 'd35|d36|d37'
+Description:
+  'The prevalence of hadronic jets at the LHC requires that a deep understanding of jet formation and structure is achieved in 
+  order to reach the highest levels of experimental and theoretical precision. 
+  There have been many measurements of jet substructure at the LHC and previous colliders, but the targeted observables mix 
+  physical effects from various origins. Based on a recent proposal to factorize physical effects, this Letter presents a 
+  double-differential cross-section measurement of the Lund jet plane using 139 fb$^{-1}$ of $\sqrt{s}=13$ TeV 
+  proton-proton collision data collected with the ATLAS detector using jets with transverse momentum above 675 GeV. 
+  The measurement uses charged particles to achieve a fine angular resolution and is corrected for acceptance and detector effects. 
+  Several parton shower Monte Carlo models are compared with the data. 
+  No single model is found to be in agreement with the measured data across the entire plane.'
+BibKey: Aad:2020zcn
+BibTeX: '@article{Aad:2020zcn,
+    author = "Aad, Georges and others",
+    collaboration = "ATLAS",
+    title = "{Measurement of the Lund jet plane using charged particles in 13 TeV proton-proton collisions with the ATLAS detector}",
+    eprint = "2004.03540",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CERN-EP-2020-030",
+    month = "4",
+    year = "2020"
+}'
+ReleaseTests:
+ - $A LHC-13-Jets-9

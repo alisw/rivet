@@ -1,0 +1,412 @@
+{
+    "499180": [
+        "Search for supersymmetry with R-parity violating L L anti-E couplings at S**(1/2) = 183-GeV", 
+        "DELPHI", 
+        "10.1007/s100520050720", 
+        "386080", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-049", 
+            "CERN-EP-99-49"
+        ]
+    ], 
+    "501457": [
+        "Measurements of the Z partial decay width into c anti-c and multiplicity of charm quarks per b decay", 
+        "DELPHI", 
+        "10.1007/s100529900228", 
+        "393540", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-066", 
+            "CERN-EP-99-66"
+        ]
+    ], 
+    "501458": [
+        "Determination of P(c ---> D*+) and BR(c ---> lepton+) at LEP-1", 
+        "DELPHI", 
+        "10.1007/s100529900227", 
+        "393541", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-067"
+        ]
+    ], 
+    "509441": [
+        "Measurement of the strange quark forward backward asymmetry around the Z0 peak", 
+        "DELPHI", 
+        "10.1007/s100520000378", 
+        "406308", 
+        null, 
+        "ins509441", 
+        null, 
+        [
+            "CERN-EP-99-134"
+        ]
+    ], 
+    "511099": [
+        "Measurement of the gluon fragmentation function and a comparison of the scaling violation in gluon and quark jets", 
+        "DELPHI", 
+        "10.1007/s100520050719", 
+        "407771", 
+        null, 
+        "ins511099", 
+        null, 
+        [
+            "CERN-EP-99-144"
+        ]
+    ], 
+    "511443": [
+        "A Precise measurement of the tau polarization at LEP-1", 
+        "DELPHI", 
+        "10.1007/s100520000363", 
+        "410746", 
+        null, 
+        "ins511443", 
+        null, 
+        [
+            "CERN-EP-99-161"
+        ]
+    ], 
+    "511452": [
+        "Upper limit for the decay $B^{-} \\to \\tau^{-}$ anti-neutrino ($\\tau$) and measurement of the $b \\to \\tau$ anti-neutrino ($\\tau$) $X$ branching ratio", 
+        "DELPHI", 
+        "10.1016/S0370-2693(00)01274-0", 
+        "409693", 
+        null, 
+        "ins511452", 
+        null, 
+        [
+            "CERN-EP-99-162"
+        ]
+    ], 
+    "511453": [
+        "Two-dimensional analysis of the Bose-Einstein correlations in e+ e- annihilation at the Z0 peak", 
+        "DELPHI", 
+        "10.1016/S0370-2693(99)01391-X", 
+        "410046", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-160"
+        ]
+    ], 
+    "513614": [
+        "Lambda(b) polarization in Z0 decays at LEP", 
+        "DELPHI", 
+        "10.1016/S0370-2693(99)01431-8", 
+        "423181", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-155"
+        ]
+    ], 
+    "513615": [
+        "Measurement of the $\\overline{B} \\to D^{(*)}\\pi l\\overline{\\nu}_l$ Branching Fraction", 
+        "DELPHI", 
+        "10.1016/S0370-2693(00)00040-X", 
+        "439704", 
+        "hep-ex/0105052", 
+        null, 
+        null, 
+        [
+            "CERN-EP-99-174"
+        ]
+    ], 
+    "522656": [
+        "Consistent measurements of alpha(s) from precise oriented event shape distributions", 
+        "DELPHI", 
+        "10.1007/s100520000354", 
+        "426128", 
+        "hep-ex/0002026", 
+        "ins522656", 
+        null, 
+        [
+            "CERN-EP-99-133"
+        ]
+    ], 
+    "524679": [
+        "Determination of |V(ub)| / |V(cb)| with DELPHI at LEP", 
+        "DELPHI", 
+        "10.1016/S0370-2693(00)00281-1", 
+        "428867", 
+        "hep-ex/0105054", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-030"
+        ]
+    ], 
+    "524688": [
+        "Search for supersymmetric particles in scenarios with a gravitino LSP and stau NLSP", 
+        "DELPHI", 
+        "10.1007/s100520050016", 
+        "427166", 
+        "hep-ex/0103026", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-015"
+        ]
+    ], 
+    "524693": [
+        "Hadronization properties of b quarks compared to light quarks in e$^+$ e$^-$ $\\to \\overline {qq}$ from 183-GeV to 200-GeV", 
+        "DELPHI", 
+        "10.1016/S0370-2693(00)00312-9", 
+        "427015", 
+        "hep-ex/0103022", 
+        "ins524693", 
+        null, 
+        [
+            "CERN-EP-2000-010"
+        ]
+    ], 
+    "524694": [
+        "Inclusive Sigma- and Lambda(1520) production in hadronic Z decays", 
+        "DELPHI", 
+        "10.1016/S0370-2693(00)00081-2", 
+        "427014", 
+        "hep-ex/0103020", 
+        "ins524694", 
+        null, 
+        [
+            "CERN-EP-2000-009"
+        ]
+    ], 
+    "524695": [
+        "Search for charginos in e+ e- interactions at S**(1/2) = 189-GeV", 
+        "DELPHI", 
+        "10.1016/S0370-2693(00)00313-0", 
+        "427013", 
+        "hep-ex/0104027", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-008"
+        ]
+    ], 
+    "524696": [
+        "Identified charged particles in quark and gluon jets", 
+        "DELPHI", 
+        "10.1007/s100520000449", 
+        "427012", 
+        "hep-ex/0106063", 
+        "ins524696", 
+        null, 
+        [
+            "CERN-EP-2000-007"
+        ]
+    ], 
+    "526164": [
+        "Charged and identified particles in the hadronic decay of W bosons and in e+ e- ---> q anti-q from 130-GeV to 200-GeV", 
+        "DELPHI", 
+        "10.1007/s100520000528", 
+        "427168", 
+        "hep-ex/0103031", 
+        "ins526164", 
+        null, 
+        [
+            "CERN-EP-2000-023"
+        ]
+    ], 
+    "526222": [
+        "W pair production cross-section and W branching fractions in e+ e- interactions at 189-GeV", 
+        "DELPHI", 
+        "10.1016/S0370-2693(00)00314-2", 
+        "432734", 
+        "hep-ex/0103013", 
+        "ins526222", 
+        null, 
+        [
+            "CERN-EP-2000-035"
+        ]
+    ], 
+    "526223": [
+        "Searches for neutral Higgs bosons in e+ e- collisions around s**(1/2) = 189-GeV", 
+        "DELPHI", 
+        "10.1007/s100520000401", 
+        "432587", 
+        "hep-ex/0104020", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-038"
+        ]
+    ], 
+    "527605": [
+        "Cross-sections and leptonic forward backward asymmetries from the Z0 running of LEP", 
+        "DELPHI", 
+        "10.1007/s100520000392", 
+        "435984", 
+        null, 
+        "ins527605", 
+        null, 
+        [
+            "CERN-EP-2000-037"
+        ]
+    ], 
+    "529847": [
+        "Measurement and interpretation of fermion-pair production at LEP energies of 183-GeV and 189-GeV", 
+        "DELPHI", 
+        "10.1016/S0370-2693(00)00675-4", 
+        "441178", 
+        "hep-ex/0103025", 
+        "ins529847", 
+        null, 
+        [
+            "CERN-EP-2000-068"
+        ]
+    ], 
+    "529850": [
+        "Update of the search for charginos nearly mass-degenerate with the lightest neutralino", 
+        "DELPHI", 
+        "10.1016/S0370-2693(00)00693-6", 
+        "441176", 
+        "hep-ex/0103035", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-033"
+        ]
+    ], 
+    "531568": [
+        "Rapidity-rank structure of p anti-p pairs in hadronic Z0 decays", 
+        "DELPHI", 
+        "10.1016/S0370-2693(00)00868-6", 
+        "447360", 
+        "hep-ex/0105050", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-081"
+        ]
+    ], 
+    "534257": [
+        "Determination of the e+ e- --> gamma gamma (gamma) cross-section at centre-of-mass energies ranging from 189-GeV to 202-GeV", 
+        "DELPHI", 
+        "10.1016/S0370-2693(00)01013-3", 
+        "455552", 
+        "hep-ex/0103005", 
+        "ins534257", 
+        null, 
+        [
+            "CERN-EP-2000-094"
+        ]
+    ], 
+    "534258": [
+        "Limits on the masses of supersymmetric particles at s**(1/2) = 189-GeV", 
+        "DELPHI", 
+        "10.1016/S0370-2693(00)00888-1", 
+        "452814", 
+        "hep-ex/0103014", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-088"
+        ]
+    ], 
+    "535180": [
+        "Study of B0(S) anti-B0(S) oscillations and B0(S) lifetimes using hadronic decays of B0(S) mesons", 
+        "DELPHI", 
+        "10.1007/s100520000531", 
+        "467538", 
+        "hep-ex/0105077", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-087"
+        ]
+    ], 
+    "535683": [
+        "Search for the sgoldstino at s**(1/2) from 189-GeV to 202-GeV", 
+        "DELPHI", 
+        "10.1016/S0370-2693(00)01198-9", 
+        "468918", 
+        "hep-ex/0102044", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-110"
+        ]
+    ], 
+    "537913": [
+        "Photon events with missing energy at s**(1/2) = 183-GeV to 189-GeV", 
+        "DELPHI", 
+        "10.1007/s100520000434", 
+        "427167", 
+        "hep-ex/0103044", 
+        "ins537913", 
+        null, 
+        [
+            "CERN-EP-2000-021"
+        ]
+    ], 
+    "540660": [
+        "Search for SUSY with R-parity violating LL anti-E couplings at s**(1/2) = 189-GeV", 
+        "DELPHI", 
+        "10.1016/S0370-2693(00)00776-0", 
+        "445526", 
+        "hep-ex/0103006", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-059"
+        ]
+    ], 
+    "540871": [
+        "Search for supersymmetric partners of top and bottom quarks at s**(1/2) = 189-GeV", 
+        "DELPHI", 
+        "10.1016/S0370-2693(00)01275-2", 
+        "465914", 
+        "hep-ex/0103034", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-095"
+        ]
+    ], 
+    "540888": [
+        "Search for heavy stable and longlived particles in e+ e- collisions at s**(1/2) = 189-GeV", 
+        "DELPHI", 
+        "10.1016/S0370-2693(00)00265-3", 
+        "429086", 
+        "hep-ex/0103038", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-020"
+        ]
+    ], 
+    "541614": [
+        "A Study of the Lorentz structure in tau decays", 
+        "DELPHI", 
+        "10.1007/s100520050017", 
+        "432227", 
+        "hep-ex/0107076", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-027"
+        ]
+    ], 
+    "541615": [
+        "Measurement of the $B^0_{s}$ lifetime and study of $B^0_{s} - \\bar{B}^0_s$ oscillations using $D_s \\ell$ events", 
+        "DELPHI", 
+        "10.1007/s100520000415", 
+        "445525", 
+        "hep-ex/0107077", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2000-043"
+        ]
+    ]
+}

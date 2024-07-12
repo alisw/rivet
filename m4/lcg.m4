@@ -48,7 +48,7 @@ AC_DEFUN([AC_LCG_TAG], [
       fi
       if test -x "$CXX"; then
         AC_MSG_CHECKING([for gcc/g++ version])
-        gcc_version=`$CXX --version | head -1 | cut -d" " -f3`
+        gcc_version=`$CXX -dumpfullversion -dumpversion`
         gcc_major=`echo $gcc_version | cut -d. -f1`
         gcc_minor=`echo $gcc_version | cut -d. -f2`
         gcc_micro=`echo $gcc_version | cut -d. -f3`

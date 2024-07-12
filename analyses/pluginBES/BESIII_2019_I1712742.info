@@ -1,0 +1,36 @@
+Name: BESIII_2019_I1712742
+Year: 2019
+Summary: Semileptonic $D_s^+\to \eta e^+\nu_e$ and $\eta^\prime e^+\nu_e$ decays
+Experiment: BESIII
+Collider: BEPC
+InspireID: 1712742
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 122 (2019) 12, 121801
+RunInfo: Any process producing D_s mesons
+Description:
+  'Differential decay rates for semileptonic $D_s^+\to \eta e^+\nu_e$ and $\eta^\prime e^+\nu_e$ decays'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2019qci
+BibTeX: '@article{BESIII:2019qci,
+    author = "Ablikim, Medina and others",
+    collaboration = "BESIII",
+    title = "{Measurement of the Dynamics of the Decays $D_s^+ \rightarrow \eta^{(\prime)} e^+ \nu_e$}",
+    eprint = "1901.02133",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevLett.122.121801",
+    journal = "Phys. Rev. Lett.",
+    volume = "122",
+    number = "12",
+    pages = "121801",
+    year = "2019"
+}
+'

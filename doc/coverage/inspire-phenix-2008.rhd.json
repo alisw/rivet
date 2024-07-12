@@ -1,0 +1,112 @@
+{
+    "751182": [
+        "Transverse momentum and centrality dependence of dihadron correlations in Au+Au collisions at s(NN) = 200-GeV: Jet-quenching and the response of partonic matter", 
+        "PHENIX", 
+        "10.1103/PhysRevC.77.011901", 
+        null, 
+        "0705.3238", 
+        null, 
+        null, 
+        []
+    ], 
+    "758544": [
+        "Centrality dependence of charged hadron production in deuteron + gold and nucleon + gold collisions at s(NN)**(1/2) = 200-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.77.014905", 
+        null, 
+        "0708.2416", 
+        null, 
+        null, 
+        []
+    ], 
+    "768530": [
+        "Cold Nuclear Matter Effects on J/Psi as Constrained by Deuteron-Gold Measurements at s(NN)**(1/2) = 200-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.77.024912", 
+        "1071317", 
+        "0903.4845", 
+        "ins768530", 
+        null, 
+        []
+    ], 
+    "770833": [
+        "Particle-species dependent modification of jet-induced correlations in Au+Au collisions at s(NN)**(1/2) = 200-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.101.082301", 
+        null, 
+        "0712.3033", 
+        null, 
+        null, 
+        []
+    ], 
+    "771583": [
+        "Source breakup dynamics in Au+Au Collisions at s(NN)**(1/2) = 200-GeV via three-dimensional two-pion source imaging", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.100.232301", 
+        null, 
+        "0712.4372", 
+        null, 
+        null, 
+        []
+    ], 
+    "776624": [
+        "J/psi Production in s(NN)**(1/2) = 200-GeV Cu+Cu Collisions", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.101.122301", 
+        null, 
+        "0801.0220", 
+        "ins776624", 
+        null, 
+        []
+    ], 
+    "777211": [
+        "Quantitative Constraints on the Opacity of Hot Partonic Matter from Semi-Inclusive Single High Transverse Momentum Pion Suppression in Au+Au collisions at s(NN)**(1/2) = 200-GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.77.064907", 
+        null, 
+        "0801.1665", 
+        "ins777211", 
+        null, 
+        []
+    ], 
+    "778168": [
+        "Suppression pattern of neutral pions at high transverse momentum in Au$+$Au collisions at $\\sqrt{s_{NN}}=$ 200 GeV and constraints on medium transport coefficients", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.101.232301", 
+        null, 
+        "0801.4020", 
+        null, 
+        null, 
+        []
+    ], 
+    "778396": [
+        "Dihadron azimuthal correlations in Au$+$Au collisions at $\\sqrt{s_{NN}}=$ 200 GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.78.014901", 
+        null, 
+        "0801.4545", 
+        "ins778396", 
+        null, 
+        []
+    ], 
+    "778403": [
+        "Onset of $\\pi^0$ Suppression Studied in Cu$+$Cu Collisions at $\\sqrt{s_{NN}}=$22.4, 62.4, and 200 GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.101.162301", 
+        null, 
+        "0801.4555", 
+        null, 
+        null, 
+        []
+    ], 
+    "785509": [
+        "Charged hadron multiplicity fluctuations in Au+Au and Cu+Cu collisions from $\\sqrt{s_{NN}}=22.5$ to 200 GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.78.044902", 
+        null, 
+        "0805.1521", 
+        null, 
+        null, 
+        []
+    ]
+}

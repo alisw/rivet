@@ -1,0 +1,38 @@
+{
+    "754316": [
+        "Inclusive Jet Production in Photon-Photon Collisions at s(ee)**(1/2) from 189 to 209-GeV", 
+        "OPAL", 
+        "10.1016/j.physletb.2007.08.096", 
+        "1043640", 
+        "0706.4382", 
+        "ins754316", 
+        null, 
+        [
+            "CERN-PH-EP-2007-016"
+        ]
+    ], 
+    "754804": [
+        "Search for Dirac magnetic monopoles in e+e- collisions with the OPAL detector at LEP2", 
+        "OPAL", 
+        "10.1016/j.physletb.2008.03.057", 
+        "1043985", 
+        "0707.0404", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2007-019"
+        ]
+    ], 
+    "775931": [
+        "Measurement of alpha(s) with Radiative Hadronic Events", 
+        "OPAL", 
+        "10.1140/epjc/s10052-007-0470-9", 
+        "1159921", 
+        "0902.1128", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2007-032"
+        ]
+    ]
+}

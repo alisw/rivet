@@ -1,0 +1,34 @@
+Name: TPC_1986_I228072
+Year: 1986
+Summary: $\gamma\gamma\to\pi^+\pi^-$ ($0.5<\sqrt{s}<3.25$ GeV) and $K^+K^-$ ($1.25<\sqrt{s}<3.5$ GeV)
+Experiment: TPC
+Collider: PEP
+InspireID: 228072
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 57 (1986) 404, 1986
+RunInfo: gamma gamma to hadrons
+Beams: [gamma, gamma]
+Energies: []
+Description:
+  'Measurement of the differential cross section for $\gamma\gamma\to\pi^+\pi^-$ ($0.5<\sqrt{s}<3.25$ GeV) and $K^+K^-$ ($1.25<\sqrt{s}<3.5$ GeV).
+  The cross section as a function of the centre-of-mass energy of the photonic collision is measured'
+ValidationInfo:
+  'Herwig 7 gamma gamma to pi+ pi- and K+K- events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: TPCTwoGamma:1986tjf
+BibTeX: '@article{TPCTwoGamma:1986tjf,
+    author = "Aihara, H. and others",
+    collaboration = "TPC/Two Gamma",
+    title = "{Pion and Kaon Pair Production in Photon-Photon Collisions}",
+    reportNumber = "UCR-TPC-86-01",
+    doi = "10.1103/PhysRevLett.57.404",
+    journal = "Phys. Rev. Lett.",
+    volume = "57",
+    pages = "404",
+    year = "1986"
+}'

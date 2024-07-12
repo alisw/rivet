@@ -1,4 +1,5 @@
 // -*- C++ -*-
+#include "Rivet/Analysis.hh"
 #include "Rivet/Projections/CentralityProjection.hh"
 #include "Rivet/Projections/AliceCommon.hh"
 #include "Rivet/Tools/AliceCommon.hh"
@@ -12,7 +13,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(ALICE_2014_I1244523);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ALICE_2014_I1244523);
 
 
     /// @name Analysis methods
@@ -25,7 +26,7 @@ namespace Rivet {
         if (c > cBins[i] && c <= cBins[i + 1]) {
 	  index = i;
 	  break;
-	} 
+	}
       }
       // Catch low fluctuation.
       return max(0, int(cBins.size() - index - 2));
@@ -50,7 +51,7 @@ namespace Rivet {
       const Cut& cut = Cuts::rap < 0.035 && Cuts::rap > -0.465;
       //const Cut& cut = Cuts::rap > -0.035 && Cuts::rap < 0.465;
       const ALICE::PrimaryParticles fs(cut);
-      addProjection(fs,"FS");
+      declare(fs,"FS");
 
       // The event trigger.
       declare(ALICE::V0AndTrigger(), "V0-AND");
@@ -60,66 +61,65 @@ namespace Rivet {
 
       for (int i = 0; i < 4; ++i) {
        // First we book the invariant spectra.
-        _histPipT[centralityBins[i]] = bookHisto1D(1, 1, 1 + i);
-        if (i < 3) _histPipT[centralityBins[i + 4]] = bookHisto1D(2, 1, 1 + i);
-        _histKpT[centralityBins[i]] = bookHisto1D(3, 1, 1 + i);
-        if (i < 3) _histKpT[centralityBins[i + 4]] = bookHisto1D(4, 1, 1 + i);
-        _histK0SpT[centralityBins[i]] = bookHisto1D(5, 1, 1 + i);
-        if (i < 3) _histK0SpT[centralityBins[i + 4]] = bookHisto1D(6, 1, 1 + i);
-        _histProtonpT[centralityBins[i]] = bookHisto1D(7, 1, 1 + i);
-        if (i < 3) _histProtonpT[centralityBins[i + 4]] = bookHisto1D(8, 1, 1 + i);
-        _histLambdapT[centralityBins[i]] = bookHisto1D(9, 1, 1 + i);
-        if (i < 3) _histLambdapT[centralityBins[i + 4]] = bookHisto1D(10, 1, 1 + i);
-	// The associated sow counters.
-	_sow[centralityBins[i]] = bookCounter("TMP/sow" + toString(i));
-	if (i < 3) _sow[centralityBins[i + 4]] = bookCounter("TMP/sow" + toString(i + 4));
+        book(_histPipT[centralityBins[i]], 1, 1, 1 + i);
+        if (i < 3) book(_histPipT[centralityBins[i + 4]], 2, 1, 1 + i);
+        book(_histKpT[centralityBins[i]], 3, 1, 1 + i);
+        if (i < 3) book(_histKpT[centralityBins[i + 4]], 4, 1, 1 + i);
+        book(_histK0SpT[centralityBins[i]], 5, 1, 1 + i);
+        if (i < 3) book(_histK0SpT[centralityBins[i + 4]], 6, 1, 1 + i);
+        book(_histProtonpT[centralityBins[i]], 7, 1, 1 + i);
+        if (i < 3) book(_histProtonpT[centralityBins[i + 4]], 8, 1, 1 + i);
+        book(_histLambdapT[centralityBins[i]], 9, 1, 1 + i);
+        if (i < 3) book(_histLambdapT[centralityBins[i + 4]], 10, 1, 1 + i);
+        // The associated sow counters.
+        book(_sow[centralityBins[i]], "TMP/sow" + toString(i));
+        if (i < 3) book(_sow[centralityBins[i + 4]], "TMP/sow" + toString(i + 4));
       	// Then the pi spectra going into the centrality dependent pT ratios.
-	_tmpPi4KpT[centralityBins[i]] = bookHisto1D("TMP/NPi4K" + toString(i), refData(11, 1, 1 + i));
-        if (i < 3) _tmpPi4KpT[centralityBins[i + 4]] = bookHisto1D("TMP/NPi4K" + toString(i + 4), refData(12, 1, 1 + i));
-	_tmpPi4PpT[centralityBins[i]] = bookHisto1D("TMP/NPi4P" + toString(i), refData(13, 1, 1 + i));
-        if (i < 3) _tmpPi4PpT[centralityBins[i + 4]] = bookHisto1D("TMP/NPi4P" + toString(i + 4), refData(14, 1, 1 + i));
-	_tmpK4LpT[centralityBins[i]] = bookHisto1D("TMP/NK4L" + toString(i), refData(15, 1, 1 + i));
-        if (i < 3) _tmpK4LpT[centralityBins[i + 4]] = bookHisto1D("TMP/NK4L" + toString(i + 4), refData(16, 1, 1 + i));
+        book(_tmpPi4KpT[centralityBins[i]], "TMP/NPi4K" + toString(i), refData(11, 1, 1 + i));
+        if (i < 3) book(_tmpPi4KpT[centralityBins[i + 4]], "TMP/NPi4K" + toString(i + 4), refData(12, 1, 1 + i));
+        book(_tmpPi4PpT[centralityBins[i]], "TMP/NPi4P" + toString(i), refData(13, 1, 1 + i));
+        if (i < 3) book(_tmpPi4PpT[centralityBins[i + 4]], "TMP/NPi4P" + toString(i + 4), refData(14, 1, 1 + i));
+        book(_tmpK4LpT[centralityBins[i]], "TMP/NK4L" + toString(i), refData(15, 1, 1 + i));
+        if (i < 3) book(_tmpK4LpT[centralityBins[i + 4]], "TMP/NK4L" + toString(i + 4), refData(16, 1, 1 + i));
 	// Then the rest of the spectra going into the cent. dep't pT ratios.
-        _tmpKpT[centralityBins[i]] = bookHisto1D("TMP/NK" + toString(i), refData(11, 1, 1 + i));
-	if (i < 3) _tmpKpT[centralityBins[i + 4]] = bookHisto1D("TMP/NK" + toString(i + 4), refData(12, 1, 1 + i));	
-        _tmpProtonpT[centralityBins[i]] = bookHisto1D("TMP/NP" + toString(i), refData(13, 1, 1 + i));
-	if (i < 3) _tmpProtonpT[centralityBins[i + 4]] = bookHisto1D("TMP/NP" + toString(i + 4), refData(14, 1, 1 + i));	
-        _tmpLambdapT[centralityBins[i]] = bookHisto1D("TMP/NL" + toString(i), refData(15, 1, 1 + i));
-	if (i < 3) _tmpLambdapT[centralityBins[i + 4]] = bookHisto1D("TMP/NL" + toString(i + 4), refData(16, 1, 1 + i));	
-	// Then the centrality dependent pT ratios.
-        _ratioKPi[centralityBins[i]] = bookScatter2D(11, 1, 1 + i, true);
-	if (i < 3) _ratioKPi[centralityBins[i + 4]] = bookScatter2D(12, 1, 1 + i, true);	
-        _ratioPPi[centralityBins[i]] = bookScatter2D(13, 1, 1 + i, true);
-	if (i < 3) _ratioPPi[centralityBins[i + 4]] = bookScatter2D(14, 1, 1 + i, true);	
-        _ratioLK[centralityBins[i]] = bookScatter2D(15, 1, 1 + i, true);
-	if (i < 3) _ratioLK[centralityBins[i + 4]] = bookScatter2D(16, 1, 1 + i, true);	
+        book(_tmpKpT[centralityBins[i]], "TMP/NK" + toString(i), refData(11, 1, 1 + i));
+        if (i < 3) book(_tmpKpT[centralityBins[i + 4]], "TMP/NK" + toString(i + 4), refData(12, 1, 1 + i));
+        book(_tmpProtonpT[centralityBins[i]], "TMP/NP" + toString(i), refData(13, 1, 1 + i));
+        if (i < 3) book(_tmpProtonpT[centralityBins[i + 4]], "TMP/NP" + toString(i + 4), refData(14, 1, 1 + i));
+        book(_tmpLambdapT[centralityBins[i]], "TMP/NL" + toString(i), refData(15, 1, 1 + i));
+        if (i < 3) book(_tmpLambdapT[centralityBins[i + 4]], "TMP/NL" + toString(i + 4), refData(16, 1, 1 + i));
+        // Then the centrality dependent pT ratios.
+        book(_ratioKPi[centralityBins[i]], 11, 1, 1 + i, true);
+        if (i < 3) book(_ratioKPi[centralityBins[i + 4]], 12, 1, 1 + i, true);
+        book(_ratioPPi[centralityBins[i]], 13, 1, 1 + i, true);
+        if (i < 3) book(_ratioPPi[centralityBins[i + 4]], 14, 1, 1 + i, true);
+        book(_ratioLK[centralityBins[i]], 15, 1, 1 + i, true);
+        if (i < 3) book(_ratioLK[centralityBins[i + 4]], 16, 1, 1 + i, true);
       }
 
-      // Mean pT vs. multiplicity class. 
-      _histLambdaMeanpT           = bookProfile1D(17, 1, 1);
-      _histProtonMeanpT           = bookProfile1D(18, 1, 1);
-      _histK0SMeanpT              = bookProfile1D(19, 1, 1);
-      _histKMeanpT                = bookProfile1D(20, 1, 1);
-      _histPiMeanpT               = bookProfile1D(21, 1, 1);
-      
-      // Yield ratios.
-      _histKtoPiYield             = bookScatter2D(22, 1, 1, true);
-      _histProtontoPiYield        = bookScatter2D(22, 1, 2, true);
-      _histLambdatoPiYield       = bookScatter2D(22, 1, 3, true);
+      // Mean pT vs. multiplicity class.
+      book(_histLambdaMeanpT, 17, 1, 1);
+      book(_histProtonMeanpT, 18, 1, 1);
+      book(_histK0SMeanpT,    19, 1, 1);
+      book(_histKMeanpT,      20, 1, 1);
+      book(_histPiMeanpT,     21, 1, 1);
 
-      _histKYield                 = bookProfile1D("TMP/KY", refData(22,1,1));
-      _histProtonYield            = bookProfile1D("TMP/PrY",refData(22,1,2));
-      _histLambdaYield            = bookProfile1D("TMP/LY", refData(22,1,3));
-      _histPiYield                = bookProfile1D("TMP/PiY",refData(22,1,1));
-      _histPi4LYield               = bookProfile1D("TMP/PiLY",refData(22,1,3)); // HepData entry is wrong -- look in the paper.
+      // Yield ratios.
+      book(_histKtoPiYield,      22, 1, 1, true);
+      book(_histProtontoPiYield, 22, 1, 2, true);
+      book(_histLambdatoPiYield, 22, 1, 3, true);
+
+      book(_histKYield,      "TMP/KY", refData(22,1,1));
+      book(_histProtonYield, "TMP/PrY",refData(22,1,2));
+      book(_histLambdaYield, "TMP/LY", refData(22,1,3));
+      book(_histPiYield,     "TMP/PiY",refData(22,1,1));
+      book(_histPi4LYield,   "TMP/PiLY",refData(22,1,3)); // HepData entry is wrong -- look in the paper.
 
     }
 
 
     /// Perform the per-event analysis
     void analyze(const Event& event) {
-      const double weight = event.weight();
       // Event trigger.
       if (!apply<ALICE::V0AndTrigger>(event, "V0-AND")() ) vetoEvent;
       // Centrality
@@ -145,7 +145,7 @@ namespace Rivet {
       auto lrItr = _tmpLambdapT.upper_bound(c);
       // And the sow
       auto sowItr = _sow.upper_bound(c);
-      sowItr->second->fill(weight);
+      sowItr->second->fill();
 
 
       const ALICE::PrimaryParticles& fs =
@@ -155,49 +155,49 @@ namespace Rivet {
       for(auto p : fs.particles()) {
 	  const double pT = p.pT();
 	  const int pid = abs(p.pid());
-	  const double nW = weight / M_PI / pT; // Dividing and multiplying by 2 because dy.
+	  const double nW = 1 / M_PI / pT; // Dividing and multiplying by 2 because dy.
 	  if (pid == 211) { // pi+/-
 	    ++npi;
 	    pi1Itr->second->fill(pT, nW);
-	    pi2Itr->second->fill(pT, weight);
-	    pi3Itr->second->fill(pT, weight);
-	    _histPiMeanpT->fillBin(index, pT, weight);
+	    pi2Itr->second->fill(pT);
+	    pi3Itr->second->fill(pT);
+	    _histPiMeanpT->fillBin(index, pT);
 	  }
 	  else if (pid == 321) { // K +/-
 	    ++nk;
 	    kItr->second->fill(pT, nW);
-	    krItr->second->fill(pT, weight);
-	    _histKMeanpT->fillBin(index, pT, weight);
+	    krItr->second->fill(pT);
+	    _histKMeanpT->fillBin(index, pT);
 	  }
 	  else if (pid == 310) { // K0S
 	    k0Itr->second->fill(pT, nW);
-	    klItr->second->fill(pT, weight);
-	    _histK0SMeanpT->fillBin(index, pT, weight);
+	    klItr->second->fill(pT);
+	    _histK0SMeanpT->fillBin(index, pT);
 	  }
 	  else if (pid == 2212) { // p + pbar
 	    ++np;
 	    pItr->second->fill(pT, nW);
-	    prItr->second->fill(pT, weight);
-	    _histProtonMeanpT->fillBin(index, pT, weight);
+	    prItr->second->fill(pT);
+	    _histProtonMeanpT->fillBin(index, pT);
 	  }
 	  else if (pid == 3122) { // Lambda + Lambdabar
 	    ++nlam;
 	    lItr->second->fill(pT, nW);
-	    lrItr->second->fill(pT, weight);
-	    _histLambdaMeanpT->fillBin(index, pT, weight);
+	    lrItr->second->fill(pT);
+	    _histLambdaMeanpT->fillBin(index, pT);
 	  }
         }
       // Fill the yield profiles.
-      _histKYield->fillBin(index, double(nk), weight);
-      _histPi4LYield->fillBin(index, double(npi), weight);
-      _histProtonYield->fillBin(index, double(np), weight);
-      _histPiYield->fillBin(index, double(npi), weight);
-      _histLambdaYield->fillBin(index, double(nlam), weight);
+      _histKYield->fillBin(index, double(nk));
+      _histPi4LYield->fillBin(index, double(npi));
+      _histProtonYield->fillBin(index, double(np));
+      _histPiYield->fillBin(index, double(npi));
+      _histLambdaYield->fillBin(index, double(nlam));
     }
 
     /// Normalise histograms etc., after the run
     void finalize() {
-      
+
       // Loop over centrality classes.
       for (int i = 0; i < 7; i++){
 
@@ -209,11 +209,11 @@ namespace Rivet {
         _histLambdapT[centralityBins[i]]->scaleW(1./_sow[centralityBins[i]]->sumW());
 
 	// Make the pT ratios.
-        divide(_tmpKpT[centralityBins[i]], _tmpPi4KpT[centralityBins[i]], 
+        divide(_tmpKpT[centralityBins[i]], _tmpPi4KpT[centralityBins[i]],
 	  _ratioKPi[centralityBins[i]]);
-        divide(_tmpProtonpT[centralityBins[i]], _tmpPi4PpT[centralityBins[i]], 
+        divide(_tmpProtonpT[centralityBins[i]], _tmpPi4PpT[centralityBins[i]],
 	  _ratioPPi[centralityBins[i]]);
-        divide(_tmpLambdapT[centralityBins[i]], _tmpK4LpT[centralityBins[i]], 
+        divide(_tmpLambdapT[centralityBins[i]], _tmpK4LpT[centralityBins[i]],
 	  _ratioLK[centralityBins[i]]);
       }
 
@@ -233,10 +233,10 @@ private:
     map<double, Histo1DPtr> _histK0SpT;
     map<double, Histo1DPtr> _histProtonpT;
     map<double, Histo1DPtr> _histLambdapT;
-   
+
     // Associated sum of weights.
     map<double, CounterPtr> _sow;
-    
+
     // pT spectra for ratios.
     map<double, Histo1DPtr> _tmpPi4KpT;
     map<double, Histo1DPtr> _tmpPi4PpT;
@@ -256,14 +256,14 @@ private:
     Profile1DPtr       _histProtonMeanpT;
     Profile1DPtr       _histLambdaMeanpT;
     Profile1DPtr       _histPiMeanpT;
-    
-    // Total yields 
+
+    // Total yields
     Profile1DPtr        _histKYield;
     Profile1DPtr        _histProtonYield;
     Profile1DPtr        _histLambdaYield;
     Profile1DPtr        _histPiYield;
     Profile1DPtr        _histPi4LYield;
-    
+
     // Yield ratios.
     Scatter2DPtr       _histKtoPiYield;
     Scatter2DPtr       _histProtontoPiYield;
@@ -273,7 +273,7 @@ private:
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ALICE_2014_I1244523);
+  RIVET_DECLARE_PLUGIN(ALICE_2014_I1244523);
 
 
 }

@@ -23,8 +23,13 @@ namespace Rivet {
 
     /// Book histograms
     void init() {
+		  _dR=0.2;
+      if (getOption("SCHEME") == "BARE")  _dR = 0.0;
+		  _lepton=PID::ELECTRON;
+      if (getOption("LMODE") == "MU")  _lepton = PID::MUON;
+
       FinalState fs;
-      WFinder wfinder(fs, Cuts::abseta < 3.5 && Cuts::pT > 25*GeV, PID::ELECTRON, 60.0*GeV, 100.0*GeV, 25.0*GeV, 0.2);
+      WFinder wfinder(fs, Cuts::abseta < 3.5 && Cuts::pT > 25*GeV, _lepton, 60.0*GeV, 100.0*GeV, 25.0*GeV, _dR);
       declare(wfinder, "WFinder");
       FastJets jetpro(wfinder.remainingFinalState(), FastJets::KT, 0.6);
       declare(jetpro, "Jets");
@@ -52,9 +57,18 @@ namespace Rivet {
 
     //@}
 
+  protected:
+
+    /// @name Parameters for specialised e/mu and dressed/bare subclassing
+    //@{
+    double _dR;
+    PdgId _lepton;
+    //@}
+
+
   };
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(MC_WKTSPLITTINGS);
+  RIVET_DECLARE_PLUGIN(MC_WKTSPLITTINGS);
 
 }

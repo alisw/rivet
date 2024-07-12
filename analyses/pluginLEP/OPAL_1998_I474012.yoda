@@ -1,0 +1,12 @@
+BEGIN YODA_SCATTER2D_V2 /REF/OPAL_1998_I474012/d01-x01-y01
+Variations: [""]
+ErrorBreakdown: {0: {stat: {dn: -0.13, up: 0.2}, sys: {dn: -0.09, up: 0.09}}}
+
+IsRef: 1
+Path: /REF/OPAL_1998_I474012/d01-x01-y01
+Title: doi:10.17182/hepdata.49296.v1/t1
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+9.120000e+01	0.500000e+00	0.500000e+00	-5.600000e-01	1.581139e-01	2.193171e-01
+END YODA_SCATTER2D_V2

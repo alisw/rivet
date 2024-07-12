@@ -1,0 +1,252 @@
+{
+    "441189": [
+        "Rapidity correlations in Lambda baryon and proton production in hadronic Z0 decays", 
+        "DELPHI", 
+        "10.1016/S0370-2693(97)01380-4", 
+        "322317", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-027", 
+            "CERN-PPE-97-27"
+        ]
+    ], 
+    "447148": [
+        "Search for neutral and charged Higgs bosons in e+ e- collisions at s**(1/2) = 161-GeV and 172-GeV", 
+        "DELPHI", 
+        "10.1007/PL00021558", 
+        "331753", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-085", 
+            "CERN-PPE-97-85"
+        ]
+    ], 
+    "448153": [
+        "Search for charginos, neutralinos and gravitinos at LEP", 
+        "DELPHI", 
+        "10.1007/s100520050058", 
+        "333363", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-107"
+        ]
+    ], 
+    "449290": [
+        "Charged particle multiplicity in e+ e- ---> q anti-q events at 161-GeV and 172-GeV and from the decay of the W boson", 
+        "DELPHI", 
+        "10.1016/S0370-2693(97)01248-3", 
+        "335152", 
+        null, 
+        "ins449290", 
+        null, 
+        [
+            "CERN-PPE-97-113"
+        ]
+    ], 
+    "450872": [
+        "m(b) at M(Z)", 
+        "DELPHI", 
+        "10.1016/S0370-2693(97)01442-1", 
+        "338301", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-141"
+        ]
+    ], 
+    "452500": [
+        "Search for charged Higgs bosons in e+ e- collisions at S**(1/2) = 172-GeV", 
+        "DELPHI", 
+        "10.1016/S0370-2693(97)01543-8", 
+        "339978", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-145"
+        ]
+    ], 
+    "453267": [
+        "Measurement of the W pair cross-section and of the W mass in e+ e- interactions at 172-GeV", 
+        "DELPHI", 
+        "10.1007/s100520050163", 
+        "342547", 
+        null, 
+        "ins453267", 
+        null, 
+        [
+            "CERN-PPE-97-160"
+        ]
+    ], 
+    "453422": [
+        "The DELPHI Silicon Tracker at LEP-2", 
+        "DELPHI Silicon Tracker Group", 
+        "10.1016/S0168-9002(98)00344-1", 
+        "343034", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-155"
+        ]
+    ], 
+    "453423": [
+        "Measurement of Trilinear Gauge Couplings in $e^{+} e^-$ Collisions at 161-GeV and 172-GeV", 
+        "DELPHI", 
+        "10.1016/S0370-2693(98)00080-X", 
+        "343040", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-163"
+        ]
+    ], 
+    "466841": [
+        "Measurement of the inclusive charmless and double charm B branching ratios", 
+        "DELPHI", 
+        "10.1016/S0370-2693(98)00147-6", 
+        "344400", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-007", 
+            "CERN-EP-98-07", 
+            "CERN-EP-98-7"
+        ]
+    ], 
+    "467224": [
+        "A Study of the hadronic resonance structure in the decay tau ---> 3 pi neutrino(tau)", 
+        "DELPHI", 
+        "10.1016/S0370-2693(98)00347-5", 
+        "345873", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-014", 
+            "CERN-EP-98-14"
+        ]
+    ], 
+    "467927": [
+        "Investigation of the splitting of quark and gluon jets", 
+        "DELPHI", 
+        "10.1007/s100529800885", 
+        "347820", 
+        null, 
+        "ins467927", 
+        null, 
+        [
+            "CERN-EP-98-024", 
+            "CERN-EP-98-24"
+        ]
+    ], 
+    "467931": [
+        "First evidence for a charm radial excitation, D*-prime", 
+        "DELPHI", 
+        "10.1016/S0370-2693(98)00346-3", 
+        "348037", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-030", 
+            "CERN-EP-98-30"
+        ]
+    ], 
+    "468177": [
+        "Measurement of the charged particle multiplicity of weakly decaying B hadrons", 
+        "DELPHI", 
+        "10.1016/S0370-2693(98)00296-2", 
+        "348599", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-034", 
+            "CERN-EP-98-34"
+        ]
+    ], 
+    "472952": [
+        "Measurement of the e+ e- ---> gamma gamma (gamma) cross-section at the LEP energies", 
+        "DELPHI", 
+        "10.1016/S0370-2693(98)00715-1", 
+        "357021", 
+        null, 
+        "ins472952", 
+        null, 
+        [
+            "CERN-EP-98-075", 
+            "CERN-EP-98-75"
+        ]
+    ], 
+    "473409": [
+        "pi+-, K+-, p and anti-p production in Z0 ---> q anti-q, Z0 ---> b anti-b, Z0 ---> u anti-u, d anti-d, s anti-s", 
+        "DELPHI", 
+        "10.1007/s100529800989", 
+        "359505", 
+        null, 
+        "ins473409", 
+        null, 
+        [
+            "CERN-EP-98-095", 
+            "CERN-EP-98-95"
+        ]
+    ], 
+    "474662": [
+        "Measurement of |V(cs)| using W decays at LEP-2", 
+        "DELPHI", 
+        "10.1016/S0370-2693(98)01061-2", 
+        "366777", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-115"
+        ]
+    ], 
+    "477803": [
+        "Two particle angular correlations in e+ e- interactions compared with QCD predictions", 
+        "DELPHI", 
+        "10.1016/S0370-2693(98)01242-8", 
+        "366986", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-138"
+        ]
+    ], 
+    "478905": [
+        "A Search for heavy stable and longlived squarks and sleptons in e+ e- collisions at energies from 130-GeV to 183-GeV", 
+        "DELPHI", 
+        "10.1016/S0370-2693(98)01443-9", 
+        "370239", 
+        "hep-ex/9811007", 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-171"
+        ]
+    ], 
+    "1649622": [
+        "A Search for $\\eta'_c$ Production in Photon-Photon Fusion at LEP", 
+        "DELPHI", 
+        "10.1016/S0370-2693(98)01300-8", 
+        "367262", 
+        "hep-ex/9810030", 
+        null, 
+        null, 
+        [
+            "CERN-EP-98-151"
+        ]
+    ]
+}

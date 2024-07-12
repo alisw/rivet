@@ -1,0 +1,38 @@
+Name: BABAR_2008_I792597
+Year: 2008
+Summary: Dalitz plot analysis of $D_s^+\to \pi^+\pi^+\pi^-$
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 792597
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 79 (2009) 032003
+RunInfo: Any process producing D_s+ -> pi+ pi+ pi-
+Description:
+  'Measurement of the mass distributions in the decay $D_s^+\to \pi^+\pi^+\pi^-$.
+   The data were read from the plots in the paper.
+   Resolution/acceptance effects have been not unfolded. Given the agreement with the model in the paper this analysis should only be used for qualitative studies.'
+ValidationInfo:
+  'Herwig 7 events using model from paper'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BaBar:2008nlp
+BibTeX: '@article{BaBar:2008nlp,
+    author = "Aubert, Bernard and others",
+    collaboration = "BaBar",
+    title = "{Dalitz Plot Analysis of $D_s + \to \pi^{+} \pi^{-} \pi^{+}$}",
+    eprint = "0808.0971",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BABAR-CONF-08-002, SLAC-PUB-13323",
+    doi = "10.1103/PhysRevD.79.032003",
+    journal = "Phys. Rev. D",
+    volume = "79",
+    pages = "032003",
+    year = "2009"
+}
+'

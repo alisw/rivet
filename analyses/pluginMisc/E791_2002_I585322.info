@@ -1,0 +1,37 @@
+Name: E791_2002_I585322
+Year: 2002
+Summary: Dalitz plot analysis of $D^+\to K^-\pi^+\pi^+$
+Experiment: E791
+Collider: Fermilab
+InspireID: 585322
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 89 (2002) 121801
+RunInfo: Any process producing D+ -> K- pi+ pi+
+Description:
+  'Measurement of the mass distributions in the decay $D^+\to K^-\pi^+\pi^+$.
+   The data were read from the plots in the paper.
+   Resolution/acceptance effects have been not unfolded and given the agreement with the model in the paper this analysis should only be used for qualitative studies.'
+ValidationInfo:
+  'Herwig 7 events using model from paper'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: E791:2002xlc
+BibTeX: '@article{E791:2002xlc,
+    author = "Aitala, E. M. and others",
+    collaboration = "E791",
+    title = "{Dalitz Plot Analysis of the Decay $D^+ \to K^- \pi^+ \pi^+$ and the Study of the $K\pi$ Scalar Amplitudes}",
+    eprint = "hep-ex/0204018",
+    archivePrefix = "arXiv",
+    reportNumber = "FERMILAB-PUB-01-254-E",
+    doi = "10.1103/PhysRevLett.89.121801",
+    journal = "Phys. Rev. Lett.",
+    volume = "89",
+    pages = "121801",
+    year = "2002"
+}
+'

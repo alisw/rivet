@@ -36,11 +36,11 @@ namespace Rivet {
       declare(photonfs, "LeadingPhoton");
 
       // Book the dsigma/dEt (in eta bins) histograms
-      _h_Et_photon[0] = bookHisto1D(1, 1, 1);
-      _h_Et_photon[2] = bookHisto1D(2, 1, 1);
+      book(_h_Et_photon[0], 1, 1, 1);
+      book(_h_Et_photon[2], 2, 1, 1);
 
       // Book the dsigma/d|eta| histogram
-      _h_eta_photon = bookHisto1D(3,1,1);
+      book(_h_eta_photon, 3, 1, 1);
     }
 
 
@@ -83,7 +83,7 @@ namespace Rivet {
       vector< vector<double> > ptDensities(_eta_bins_areaoffset.size()-1);
       FastJets fast_jets =apply<FastJets>(event, "KtJetsD05");
       const shared_ptr<fastjet::ClusterSequenceArea> clust_seq_area = fast_jets.clusterSeqArea();
-      foreach (const Jet& jet, fast_jets.jets()) {
+      for (const Jet& jet : fast_jets.jets()) {
         const double area = clust_seq_area->area(jet);
         if (area > 1e-4 && jet.abseta() < _eta_bins_areaoffset.back())
           ptDensities.at( _getEtaBin(jet.abseta(), true) ).push_back(jet.pT()/area);
@@ -101,8 +101,8 @@ namespace Rivet {
 
       // Fill histograms
       const size_t eta_bin = _getEtaBin(leadingPhoton.abseta(), false);
-      _h_Et_photon[eta_bin]->fill(leadingPhoton.Et(), event.weight());
-      _h_eta_photon->fill(leadingPhoton.abseta(), event.weight());
+      _h_Et_photon[eta_bin]->fill(leadingPhoton.Et());
+      _h_eta_photon->fill(leadingPhoton.abseta());
     }
 
 
@@ -126,6 +126,6 @@ namespace Rivet {
   };
 
 
-  DECLARE_RIVET_PLUGIN(ATLAS_2013_I1263495);
+  RIVET_DECLARE_PLUGIN(ATLAS_2013_I1263495);
 
 }

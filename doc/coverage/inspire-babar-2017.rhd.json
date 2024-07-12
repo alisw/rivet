@@ -1,0 +1,116 @@
+{
+    "1336340": [
+        "Evidence for $CP$ violation in $B^{+} \\to K^{*}(892)^{+} \\pi^{0}$ from a Dalitz plot analysis of $B^{+} \\to K^{0}_{\\rm S} \\pi^{+} \\pi^{0}$ decays", 
+        "BaBar", 
+        "10.1103/PhysRevD.96.072001", 
+        null, 
+        "1501.00705", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-14-011", 
+            "SLAC-PUB-16186"
+        ]
+    ], 
+    "1466440": [
+        "Search for $B^{+}\\rightarrow K^{+} \\tau^{+}\\tau^{-}$ at the BaBar experiment", 
+        "BaBar", 
+        "10.1103/PhysRevLett.118.031802", 
+        null, 
+        "1605.09637", 
+        null, 
+        null, 
+        []
+    ], 
+    "1498564": [
+        "Measurement of the inclusive electron spectrum from B meson decays and determination of |Vub|", 
+        "BaBar", 
+        "10.1103/PhysRevD.95.072001", 
+        null, 
+        "1611.05624", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-16-006", 
+            "SLAC-PUB-16855"
+        ]
+    ], 
+    "1511276": [
+        "Cross sections for the reactions $e^+ e^-\\to K^0_S K^0_L\\pi^0$, $K^0_S K^0_L\\eta$, and $K^0_S K^0_L\\pi^0\\pi^0$ from events with initial-state radiation", 
+        "BaBar", 
+        "10.1103/PhysRevD.95.052001", 
+        null, 
+        "1701.08297", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-16-004", 
+            "SLAC-PUB-16918"
+        ]
+    ], 
+    "1512302": [
+        "Dalitz plot analyses of $J/\\psi \\to \\pi^+ \\pi^- \\pi^0$, $J/\\psi \\to K^+ K^- \\pi^0$, and $J/\\psi \\to K^0_S K^{\\pm} \\pi^{\\mp}$ produced via $e^+ e^-$ annihilation with initial-state radiation", 
+        "BaBar", 
+        "10.1103/PhysRevD.95.072007", 
+        null, 
+        "1702.01551", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-16-008", 
+            "SLAC-PUB-16920"
+        ]
+    ], 
+    "1513134": [
+        "Search for Invisible Decays of a Dark Photon Produced in ${e}^{+}{e}^{-}$ Collisions at BaBar", 
+        "BaBar", 
+        "10.1103/PhysRevLett.119.131804", 
+        null, 
+        "1702.03327", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-17-001", 
+            "SLAC-PUB-16923"
+        ]
+    ], 
+    "1591716": [
+        "Measurement of the $e^+e^-\\to K^0_{\\scriptscriptstyle S}K^\\pm\\pi^{\\mp}\\pi^0$ and $K^0_{\\scriptscriptstyle S}K^\\pm\\pi^\\mp\\eta$ cross sections using initial-state radiation", 
+        "BaBar", 
+        "10.1103/PhysRevD.95.092005", 
+        null, 
+        "1704.05009", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-15-005", 
+            "SLAC-PUB-16940"
+        ]
+    ], 
+    "1613519": [
+        "Measurement of the ${D}^{*}(2010{)}^{+}\\text{-}{D}^{+}$ Mass Difference", 
+        "BaBar", 
+        "10.1103/PhysRevLett.119.202003", 
+        null, 
+        "1707.09328", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-16-007", 
+            "SLAC-PUB-17118"
+        ]
+    ], 
+    "1621593": [
+        "Measurement of the ${e}^{+}{e}^{{-}}{\\rightarrow}{{\\pi}}^{+}{{\\pi}}^{{-}}{{\\pi}}^{0}{{\\pi}}^{0}$ cross section using initial-state radiation at BABAR", 
+        "BaBar", 
+        "10.1103/PhysRevD.96.092009", 
+        null, 
+        "1709.01171", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-17147", 
+            "BABAR-PUB-17-002"
+        ]
+    ]
+}

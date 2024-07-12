@@ -5,9 +5,11 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1444991
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Kathrin Becker <kathrin.becker@cern.ch>
-References: 
+References:
+ - ATLAS-HIGG-2015-04
  - JHEP 1608 (2016) 104
  - doi:10.1007/JHEP08(2016)104
  - arXiv:1604.02997 [hep-ex]
@@ -15,6 +17,7 @@ RunInfo:
   gg -> H -> W W* -> enu munu production at 8 TeV
 Beams: [p+, p+]
 Energies: [8000]
+Luminosity_fb: 20.3
 PtCuts: [25]
 NeedCrossSection: yes
 Description:

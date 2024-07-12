@@ -1,0 +1,46 @@
+Name: CMS_2019_I1753720
+Year: 2019
+Summary: Measurement of the ttbb production cross section in the all-jet final state in proton-proton collisions at centre-of-mass energy of 13 TeV with 35.9 fb^-1 of data collected in 2016.
+Experiment: CMS
+Collider: LHC
+InspireID: 1753720
+Status: VALIDATED
+Authors:
+ - cms-pag-conveners-top@cern.ch
+ - Sebastien Wertz <sebastien.wertz@cern.ch>
+References:
+ - Phys.Lett.B 803 (2020) 135285, 2020. 
+ - DOI:10.1016/j.physletb.2020.135285
+ - arXiv:1909.05306
+ - CMS-TOP-18-011
+NeedCrossSection: yes
+Beams: [p+, p+]
+Energies: [13000]
+Luminosity_fb: 35.9
+RunInfo:
+  ttbar events at sqrt(s) = 13 TeV
+Description:
+  Measurement in the fiducial phase space for $t\bar{t}b\bar{b}$ production in the all-jet final state of the top quark pair decays.
+  No explicit lepton veto or decay channel requirements are applied, so one should use inclusive top quark decays.
+  Fiducial phase space is defined as $\geq 8$ jets, of which $\geq 4$ are b jets, with jet $\pT > 20~\GeV$ and $|\eta| < 2.4$.
+  Of those jets, at least six are required to have $\pT > 30~\GeV$.
+  B jets are defined using ghost-matching of B hadrons with no requirement on hadron $\pT$.
+  No requirement is applied on the origin of of the b jets, i.e. the phase space definition is independent from simulated parton content.
+Keywords: [ttbb,fiducial,all-jet]
+BibKey: CMS:2019eih
+BibTeX: '@article{CMS:2019eih,
+  author = "Sirunyan, Albert M and others",
+  collaboration = "CMS",
+  title = "{Measurement of the $\mathrm{t\bar{t}}\mathrm{b\bar{b}}$ production cross section in the all-jet final state in pp collisions at $\sqrt{s} =$ 13 TeV}",
+  eprint = "1909.05306",
+  archivePrefix = "arXiv",
+  primaryClass = "hep-ex",
+  reportNumber = "CMS-TOP-18-011, CERN-EP-2019-183",
+  doi = "10.1016/j.physletb.2020.135285",
+  journal = "Phys. Lett. B",
+  volume = "803",
+  pages = "135285",
+  year = "2020"
+}'
+#ReleaseTests:
+# - $A LHC-13-Top-All

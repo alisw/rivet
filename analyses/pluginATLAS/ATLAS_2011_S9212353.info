@@ -1,12 +1,14 @@
 Name: ATLAS_2011_S9212353
 Year: 2011
-Summary: Single lepton search for supersymmetry
+Summary: Single-lepton search for supersymmetry
 Experiment: ATLAS
 Collider: LHC
 SpiresID: 9212353
 InspireID: 930005
 Status: OBSOLETE
+Reentrant: true
 References:
+ - ATLAS-SUSY-2011-08
  - Phys. Rev.D85:012006,2012
  - arXiv:1109.6606
 RunInfo:

@@ -5,40 +5,39 @@
 namespace Rivet {
 
 
+  /// @brief Calo-based underlying event at 900 GeV and 7 TeV in ATLAS
+  ///
   /// @author Jinlong Zhang
   class ATLAS_2011_S8994773 : public Analysis {
   public:
 
-    ATLAS_2011_S8994773()
-      : Analysis("ATLAS_2011_S8994773") {    }
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2011_S8994773);
 
 
     void init() {
-      const FinalState fs500(-2.5, 2.5, 500*MeV);
+      const FinalState fs500((Cuts::etaIn(-2.5, 2.5) && Cuts::pT >=  500*MeV));
       declare(fs500, "FS500");
-      const FinalState fslead(-2.5, 2.5, 1.0*GeV);
+      const FinalState fslead((Cuts::etaIn(-2.5, 2.5) && Cuts::pT >=  1.0*GeV));
       declare(fslead, "FSlead");
 
       // Get an index for the beam energy
       isqrts = -1;
-      if (fuzzyEquals(sqrtS(), 900*GeV)) isqrts = 0;
-      else if (fuzzyEquals(sqrtS(), 7*TeV)) isqrts = 1;
+      if (isCompatibleWithSqrtS(900)) isqrts = 0;
+      else if (isCompatibleWithSqrtS( 7000)) isqrts = 1;
       assert(isqrts >= 0);
 
       // N profiles, 500 MeV pT cut
-      _hist_N_transverse_500 = bookProfile1D(1+isqrts, 1, 1);
+      book(_hist_N_transverse_500 ,1+isqrts, 1, 1);
       // pTsum profiles, 500 MeV pT cut
-      _hist_ptsum_transverse_500 = bookProfile1D(3+isqrts, 1, 1);
+      book(_hist_ptsum_transverse_500 ,3+isqrts, 1, 1);
       // N vs. Delta(phi) profiles, 500 MeV pT cut
-      _hist_N_vs_dPhi_1_500 = bookProfile1D(13+isqrts, 1, 1);
-      _hist_N_vs_dPhi_2_500 = bookProfile1D(13+isqrts, 1, 2);
-      _hist_N_vs_dPhi_3_500 = bookProfile1D(13+isqrts, 1, 3);
+      book(_hist_N_vs_dPhi_1_500 ,13+isqrts, 1, 1);
+      book(_hist_N_vs_dPhi_2_500 ,13+isqrts, 1, 2);
+      book(_hist_N_vs_dPhi_3_500 ,13+isqrts, 1, 3);
     }
 
 
     void analyze(const Event& event) {
-      const double weight = event.weight();
-
       // Require at least one cluster in the event with pT >= 1 GeV
       const FinalState& fslead = apply<FinalState>(event, "FSlead");
       if (fslead.size() < 1) {
@@ -61,7 +60,7 @@ namespace Rivet {
       // Temporary histos that bin N in dPhi.
       // NB. Only one of each needed since binnings are the same for the energies and pT cuts
       Histo1D hist_num_dphi_500(refData(13+isqrts,1,1));
-      foreach (const Particle& p, particles500) {
+      for (const Particle& p : particles500) {
         const double pT = p.pT();
         const double dPhi = deltaPhi(philead, p.phi());
         const int ir = region_index(dPhi);
@@ -79,8 +78,8 @@ namespace Rivet {
       // The densities are calculated by dividing the UE properties by dEta*dPhi
       // -- each region has a dPhi of 2*PI/3 and dEta is two times 2.5
       const double dEtadPhi = (2*2.5 * 2*PI/3.0);
-      _hist_N_transverse_500->fill(pTlead/GeV,  num500[1]/dEtadPhi, weight);
-      _hist_ptsum_transverse_500->fill(pTlead/GeV, ptSum500[1]/GeV/dEtadPhi, weight);
+      _hist_N_transverse_500->fill(pTlead/GeV,  num500[1]/dEtadPhi);
+      _hist_ptsum_transverse_500->fill(pTlead/GeV, ptSum500[1]/GeV/dEtadPhi);
 
       // Update the "proper" dphi profile histograms
       // Note that we fill dN/dEtadPhi: dEta = 2*2.5, dPhi = 2*PI/nBins
@@ -94,15 +93,11 @@ namespace Rivet {
           mean = hist_num_dphi_500.bin(i).xMean();
           value = hist_num_dphi_500.bin(i).area()/hist_num_dphi_500.bin(i).xWidth()/10.0;
         }
-        if (pTlead/GeV >= 1.0) _hist_N_vs_dPhi_1_500->fill(mean, value, weight);
-        if (pTlead/GeV >= 2.0) _hist_N_vs_dPhi_2_500->fill(mean, value, weight);
-        if (pTlead/GeV >= 3.0) _hist_N_vs_dPhi_3_500->fill(mean, value, weight);
+        if (pTlead/GeV >= 1.0) _hist_N_vs_dPhi_1_500->fill(mean, value);
+        if (pTlead/GeV >= 2.0) _hist_N_vs_dPhi_2_500->fill(mean, value);
+        if (pTlead/GeV >= 3.0) _hist_N_vs_dPhi_3_500->fill(mean, value);
       }
 
-    }
-
-
-    void finalize() {
     }
 
 
@@ -117,7 +112,6 @@ namespace Rivet {
     }
 
 
-  private:
     int isqrts;
 
     Profile1DPtr _hist_N_transverse_500;
@@ -132,7 +126,6 @@ namespace Rivet {
 
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2011_S8994773);
+  RIVET_DECLARE_ALIASED_PLUGIN(ATLAS_2011_S8994773, ATLAS_2011_I891834);
 
 }

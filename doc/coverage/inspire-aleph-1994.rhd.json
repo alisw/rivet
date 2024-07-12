@@ -1,0 +1,174 @@
+{
+    "354144": [
+        "Measurement of the anti-B0 and B- meson lifetimes", 
+        "ALEPH", 
+        "10.1016/0370-2693(93)90211-Y", 
+        "247117", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-42"
+        ]
+    ], 
+    "360639": [
+        "Correlation measurements in Z ---> tau+ tau- and the tau-neutrino helicity", 
+        "ALEPH", 
+        "10.1016/0370-2693(94)90345-X", 
+        "255155", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-181", 
+            "FSU-SCRI-94-19"
+        ]
+    ], 
+    "363280": [
+        "Production of charmed mesons in Z decays", 
+        "ALEPH", 
+        "10.1007/BF01559519", 
+        "256307", 
+        null, 
+        "ins363280", 
+        null, 
+        [
+            "CERN-PPE-93-208", 
+            "FSU-SCRI-94-61"
+        ]
+    ], 
+    "363342": [
+        "Measurement of the $B_s^0$ lifetime", 
+        "ALEPH", 
+        "10.1016/0370-2693(94)91120-7", 
+        "257935", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-214", 
+            "RSU-SCRI-94-32"
+        ]
+    ], 
+    "363343": [
+        "An Investigation of $B_d^0$ and $B_s^0$ oscillation", 
+        "ALEPH", 
+        "10.1016/0370-2693(94)91177-0", 
+        "257924", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-221", 
+            "FSU-SCRI-94-34"
+        ]
+    ], 
+    "373119": [
+        "Heavy flavor production and decay with prompt leptons in the ALEPH detector", 
+        "ALEPH", 
+        "10.1007/BF01560237", 
+        "259110", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-017", 
+            "CERN-PPE-94-17", 
+            "FSU-SCRI-94-60"
+        ]
+    ], 
+    "373120": [
+        "Heavy quark tagging with leptons in the ALEPH detector", 
+        "ALEPH", 
+        "10.1016/0168-9002(94)90582-7", 
+        "259418", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-023", 
+            "CERN-PPE-94-23", 
+            "FSU-SCRI-94-023"
+        ]
+    ], 
+    "373121": [
+        "$Z$ production cross-sections and lepton pair forward - backward asymmetries", 
+        "ALEPH", 
+        "10.1007/BF01574159", 
+        "259632", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-030", 
+            "CERN-PPE-94-30", 
+            "FSU-SCRI-94-77"
+        ]
+    ], 
+    "373751": [
+        "One prong tau decays into charged kaons", 
+        "ALEPH", 
+        "10.1016/0370-2693(94)90881-8", 
+        "262415", 
+        null, 
+        "ins373751", 
+        null, 
+        [
+            "CERN-PPE-94-058", 
+            "CERN-PPE-94-58"
+        ]
+    ], 
+    "373752": [
+        "K0 production in one prong tau decays", 
+        "ALEPH", 
+        "10.1016/0370-2693(94)90882-6", 
+        "262416", 
+        null, 
+        "ins373752", 
+        null, 
+        [
+            "CERN-PPE-94-059", 
+            "CERN-PPE-94-59"
+        ]
+    ], 
+    "375060": [
+        "Production of K0 and Lambda in hadronic Z decays", 
+        "ALEPH", 
+        "10.1007/BF01560096", 
+        "264033", 
+        null, 
+        "ins375060", 
+        null, 
+        [
+            "CERN-PPE-94-074", 
+            "CERN-PPE-94-74", 
+            "FSU-SCRI-95-18"
+        ]
+    ], 
+    "375061": [
+        "A Measurement of A(b)(FB) in lifetime tagged heavy flavor Z decays", 
+        "ALEPH", 
+        "10.1016/0370-2693(94)91564-4", 
+        "264666", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-084", 
+            "CERN-PPE-94-84"
+        ]
+    ], 
+    "375479": [
+        "Observation of mono - jet events and tentative interpretation", 
+        "ALEPH", 
+        "10.1016/0370-2693(94)90619-X", 
+        "265669", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-093", 
+            "CERN-PPE-94-93"
+        ]
+    ]
+}

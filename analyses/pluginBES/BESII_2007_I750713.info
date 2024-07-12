@@ -1,0 +1,36 @@
+Name: BESII_2007_I750713
+Year: 2007
+Summary: Cross sections for light hadrons at 3.773, 3.650 GeV
+Experiment: BESII
+Collider: BEPC II
+InspireID: 750713
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B650 (2007) 111-118, 2007 
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+, e-]
+Description:
+  'Cross section for $e^+e^-\to 2\pi^+2\pi^-$, $K^+K^-\pi^+\pi^-$, $2K^+2K^-$, $\phi K^+K^-$,
+   $p\bar{p}\pi^+\pi^-$, $p\bar{p}K^+K^-$, $3\pi^+3\pi^-$, $2\pi^+2\pi^-\eta$, $2\pi^+2\pi^-\pi^0$,
+   $K^+K^-\pi^+\pi^-\pi^0$, $2K^+2K^-\pi^0$, $p\bar{p}\pi^0$, $p\bar{p}\pi^+\pi^-\pi^0$, $3\pi^+3\pi^-\pi^0$
+   at 3.773 and 3.650 GeV.'
+Keywords: []
+BibKey: Ablikim:2007ss
+BibTeX: '@article{Ablikim:2007ss,
+      author         = "Ablikim, M. and others",
+      title          = "{Measurements of the observed cross-sections for e+ e-
+                        ---&gt; light hadrons at s**(1/2) = 3.773-GeV and 3.650-GeV}",
+      collaboration  = "BES",
+      journal        = "Phys. Lett.",
+      volume         = "B650",
+      year           = "2007",
+      pages          = "111-118",
+      doi            = "10.1016/j.physletb.2007.05.011",
+      eprint         = "0705.2276",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:0705.2276;%%"
+}'

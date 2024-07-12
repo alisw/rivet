@@ -1,0 +1,39 @@
+Name: ATLAS_2015_I1377585
+Year: 2015
+Summary: Exclusive photon-photon production of lepton pairs in proton-proton collisions at $\sqrt{s} = 7$ TeV
+Experiment: ATLAS
+Collider: LHC
+InspireID: 1377585
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett.B 749 (2015) 242-261
+RunInfo: gamma gamma -> l+ l- process.
+Beams: [p+, p+]
+Energies: [7000]
+Description:
+  'Measurement of the exclusive $\gamma\gamma\to\ell^+\ell^-$ ($\ell=e,\mu$)
+    cross-section in proton-proton collisions at a centre-of-mass energy of 7 TeV by the ATLAS experiment at the LHC, based on an integrated luminosity of 4.6 $\text{fb}^{-1}$.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: ATLAS:2015wnx
+BibTeX: '@article{ATLAS:2015wnx,
+    author = "Aad, Georges and others",
+    collaboration = "ATLAS",
+    title = "{Measurement of exclusive $\gamma\gamma\rightarrow \ell^+\ell^-$ production in proton-proton collisions at $\sqrt{s} = 7$ TeV with the ATLAS detector}",
+    eprint = "1506.07098",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CERN-PH-EP-2015-134",
+    doi = "10.1016/j.physletb.2015.07.069",
+    journal = "Phys. Lett. B",
+    volume = "749",
+    pages = "242--261",
+    year = "2015"
+}
+'

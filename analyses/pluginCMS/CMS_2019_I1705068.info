@@ -1,0 +1,49 @@
+Name: CMS_2019_I1705068
+Year: 2019
+Summary: Measurement of associated production of a W boson and a charm quark in proton-proton collisions at 13 TeV
+Experiment: CMS
+Collider: LHC
+InspireID: 1705068
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - cms-pag-conveners-smp@cern.ch
+ - Svenja.Karen.Pflitsch@cern.ch
+ - Katerina.Lipka@cern.ch
+References:
+ - Eur.Phys.J. C79 (2019) no.3, 269
+ - DOI:10.1140/epjc/s10052-019-6752-1
+ - arXiv:1811.10021
+ - CMS-SMP-17-014
+RunInfo: 13 TeV $pp \to W+c$.
+NumEvents: 10M
+NeedCrossSection: True
+Beams: [p+, p+]
+Energies: [13000]
+Luminosity_fb: 35.7
+Description:
+  'Measurements are presented of associated production of a W boson and a charm quark (W+c) in proton-proton collisions at a center-of-mass energy of 13 TeV. The data correspond to an integrated luminosity of $35.7 fb^{-1}$ collected by the CMS experiment at the CERN LHC. The W bosons are identified by their decay into a muon and a neutrino. The charm quarks are tagged via the full reconstruction of $D*(2010)^{\pm}$ mesons that decay via $D*(2010)^{\pm} \to D^{0} + \pi^{pm} \to K^{\mp} + \pi^{pm} + \pi^{pm}$.
+  A parton-level cross section is measured in the fiducial region defined by the muon transverse momentum $\p_{T}^{\mu} > 26 GeV$, muon pseudorapidity $\abs{\eta^{\mu}} < 2.4$, and charm quark transverse momentum $p_{T}^{c} > 5\GeV$.
+  The cross section is also measured differentially as a function of the pseudorapidity of the muon from the W boson decay.
+  A particle-level cross section is measured in the fiducial region defined by the muon transverse momentum $\p_{T}^{\mu} > 26 GeV$, muon pseudorapidity $\abs{\eta^{\mu}} < 2.4$, D*(2010)^{\pm} transverse momentum $p_{T}^{D*} > 5\GeV$ and D*(2010)^{\pm} pseudorapidity $\abs{\eta^{D*}} < 2.4$. The particle-level cross section has been implemented in the Rivet plugin.'
+BibKey: Sirunyan:2018hde
+BibTeX: '@article{Sirunyan:2018hde,
+      author         = "Sirunyan, Albert M and others",
+      title          = "{Measurement of associated production of a W boson and a
+                        charm quark in proton-proton collisions at $\sqrt{s} =$ 13
+                        TeV}",
+      collaboration  = "CMS",
+      journal        = "Eur. Phys. J.",
+      volume         = "C79",
+      year           = "2019",
+      number         = "3",
+      pages          = "269",
+      doi            = "10.1140/epjc/s10052-019-6752-1",
+      eprint         = "1811.10021",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CMS-SMP-17-014, CERN-EP-2018-282",
+      SLACcitation   = "%%CITATION = ARXIV:1811.10021;%%"
+}'
+ReleaseTests:
+ - $A LHC-W-mu

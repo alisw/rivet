@@ -4,6 +4,7 @@ Summary: ATLAS 2016 1-lepton + many jets SUSY search at 13~\TeV, from 14.8/fb CO
 Experiment: ATLAS
 Collider: LHC
 Status: UNVALIDATED
+Reentrant: true
 Authors:
  - Andy Buckley <andy.buckley@cern.ch>
 RunInfo: BSM signal events

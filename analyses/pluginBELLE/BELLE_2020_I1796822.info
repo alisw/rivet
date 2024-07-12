@@ -1,0 +1,31 @@
+Name: BELLE_2020_I1796822
+Year: 2020
+Summary: $m_{\pi\pi}$ and $q^2$ distribution in $B^+\to\pi^+\pi^-\ell^+\nu_\ell$
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1796822
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - arXiv:2005.07766
+RunInfo: Any process producing the relevant decay, originally e+e- at the Upsilon(4s)
+Description:
+  'Measurement of the $m_{\pi\pi}$ and $q^2$ distributions in the $B^+\to\pi^+\pi^-\ell^+\nu_\ell$ decay by the BELLE collaboration'
+ValidationInfo:
+  'Herwig7 events using EvtGen for the B+ decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: [Beleno:2020gzt]
+BibKey: 
+BibTeX: '@article{Beleno:2020gzt,
+    author = "Bele\~no, C. and others",
+    collaboration = "Belle",
+    title = "{Measurement of the Branching Fraction of the Decay $\boldsymbol{B^{+}\to\pi^{+}\pi^{-}\ell^{+}\nu_\ell}$ in Fully Reconstructed Events at Belle}",
+    eprint = "2005.07766",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "Belle preprint 2020-06, KEK preprint 2020-04",
+    month = "5",
+    year = "2020"
+}'

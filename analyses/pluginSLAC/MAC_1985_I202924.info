@@ -1,0 +1,31 @@
+Name: MAC_1985_I202924
+Year: 1985
+Summary: Energy-Energy correlation at  $E_{\text{CMS}}=29$ GeV
+Experiment: MAC
+Collider: PEP
+InspireID: 202924
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D31 (1985) 2724, 1985 
+RunInfo: e+ e- to hadrons
+NeedCrossSection: no
+Beams: [e-, e+]
+Energies: [29.]
+Description:
+  'Measurement of the energy-energy correlation, and its assymetry in $e^+e^-$ collisions by MAC at 29 GeV.'
+Keywords: []
+BibKey: Fernandez:1984db
+BibTeX: '@article{Fernandez:1984db,
+      author         = "Fernandez, E. and others",
+      title          = "{A Measurement of Energy-energy Correlations in $e^+ e^-
+                        \to$ Hadrons at $\sqrt{s}=29$-{GeV}}",
+      journal        = "Phys. Rev.",
+      volume         = "D31",
+      year           = "1985",
+      pages          = "2724",
+      doi            = "10.1103/PhysRevD.31.2724",
+      reportNumber   = "SLAC-PUB-3385",
+      SLACcitation   = "%%CITATION = PHRVA,D31,2724;%%"
+}'

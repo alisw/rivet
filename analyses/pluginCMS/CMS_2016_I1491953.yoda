@@ -4,7 +4,7 @@ ErrorBreakdown: {0: {error: {dn: -120.5, up: 121.9}}, 1: {error: {dn: -45.37, up
 
 IsRef: 1
 Path: /REF/CMS_2016_I1491953/d01-x01-y01
-Title: doi:10.17182/hepdata.76995.v1/t1
+Title: doi:10.17182/hepdata.76995.v2/t1
 Type: Scatter2D
 ---
 # xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
@@ -23,7 +23,7 @@ ErrorBreakdown: {0: {error: {dn: -129.3, up: 133.1}}, 1: {error: {dn: -46.84, up
 
 IsRef: 1
 Path: /REF/CMS_2016_I1491953/d02-x01-y01
-Title: doi:10.17182/hepdata.76995.v1/t2
+Title: doi:10.17182/hepdata.76995.v2/t2
 Type: Scatter2D
 ---
 # xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
@@ -42,7 +42,7 @@ ErrorBreakdown: {0: {error: {dn: -2.032, up: 2.508}}, 1: {error: {dn: -0.9109, u
 
 IsRef: 1
 Path: /REF/CMS_2016_I1491953/d03-x01-y01
-Title: doi:10.17182/hepdata.76995.v1/t3
+Title: doi:10.17182/hepdata.76995.v2/t3
 Type: Scatter2D
 ---
 # xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
@@ -73,7 +73,7 @@ ErrorBreakdown: {0: {error: {dn: -0.6969, up: 0.8786}}, 1: {error: {dn: -0.2434,
 
 IsRef: 1
 Path: /REF/CMS_2016_I1491953/d04-x01-y01
-Title: doi:10.17182/hepdata.76995.v1/t4
+Title: doi:10.17182/hepdata.76995.v2/t4
 Type: Scatter2D
 ---
 # xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
@@ -103,7 +103,7 @@ ErrorBreakdown: {0: {error: {dn: -0.1899, up: 0.2413}}, 1: {error: {dn: -0.06145
 
 IsRef: 1
 Path: /REF/CMS_2016_I1491953/d05-x01-y01
-Title: doi:10.17182/hepdata.76995.v1/t5
+Title: doi:10.17182/hepdata.76995.v2/t5
 Type: Scatter2D
 ---
 # xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
@@ -123,7 +123,7 @@ ErrorBreakdown: {0: {error: {dn: -0.05227, up: 0.06639}}, 1: {error: {dn: -0.017
 
 IsRef: 1
 Path: /REF/CMS_2016_I1491953/d06-x01-y01
-Title: doi:10.17182/hepdata.76995.v1/t6
+Title: doi:10.17182/hepdata.76995.v2/t6
 Type: Scatter2D
 ---
 # xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
@@ -140,7 +140,7 @@ ErrorBreakdown: {0: {error: {dn: -1.819, up: 2.204}}, 1: {error: {dn: -0.6417, u
 
 IsRef: 1
 Path: /REF/CMS_2016_I1491953/d07-x01-y01
-Title: doi:10.17182/hepdata.76995.v1/t7
+Title: doi:10.17182/hepdata.76995.v2/t7
 Type: Scatter2D
 ---
 # xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
@@ -168,7 +168,7 @@ ErrorBreakdown: {0: {error: {dn: -0.1445, up: 0.1944}}, 1: {error: {dn: -0.14, u
 
 IsRef: 1
 Path: /REF/CMS_2016_I1491953/d08-x01-y01
-Title: doi:10.17182/hepdata.76995.v1/t8
+Title: doi:10.17182/hepdata.76995.v2/t8
 Type: Scatter2D
 ---
 # xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
@@ -192,7 +192,7 @@ ErrorBreakdown: {0: {error: {dn: -0.006456, up: 0.01173}}, 1: {error: {dn: -0.01
 
 IsRef: 1
 Path: /REF/CMS_2016_I1491953/d09-x01-y01
-Title: doi:10.17182/hepdata.76995.v1/t9
+Title: doi:10.17182/hepdata.76995.v2/t9
 Type: Scatter2D
 ---
 # xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
@@ -214,7 +214,7 @@ ErrorBreakdown: {0: {error: {dn: -0.0003923, up: 0.0009627}}, 1: {error: {dn: -0
 
 IsRef: 1
 Path: /REF/CMS_2016_I1491953/d10-x01-y01
-Title: doi:10.17182/hepdata.76995.v1/t10
+Title: doi:10.17182/hepdata.76995.v2/t10
 Type: Scatter2D
 ---
 # xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
@@ -234,7 +234,7 @@ ErrorBreakdown: {0: {error: {dn: -0.1399, up: 0.1557}}, 1: {error: {dn: -0.1515,
 
 IsRef: 1
 Path: /REF/CMS_2016_I1491953/d11-x01-y01
-Title: doi:10.17182/hepdata.76995.v1/t11
+Title: doi:10.17182/hepdata.76995.v2/t11
 Type: Scatter2D
 ---
 # xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
@@ -266,7 +266,7 @@ ErrorBreakdown: {0: {error: {dn: -0.04286, up: 0.04786}}, 1: {error: {dn: -0.026
 
 IsRef: 1
 Path: /REF/CMS_2016_I1491953/d12-x01-y01
-Title: doi:10.17182/hepdata.76995.v1/t12
+Title: doi:10.17182/hepdata.76995.v2/t12
 Type: Scatter2D
 ---
 # xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
@@ -288,7 +288,7 @@ ErrorBreakdown: {0: {error: {dn: -0.006828, up: 0.008197}}, 1: {error: {dn: -0.0
 
 IsRef: 1
 Path: /REF/CMS_2016_I1491953/d13-x01-y01
-Title: doi:10.17182/hepdata.76995.v1/t13
+Title: doi:10.17182/hepdata.76995.v2/t13
 Type: Scatter2D
 ---
 # xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
@@ -307,7 +307,7 @@ ErrorBreakdown: {0: {error: {dn: -0.001688, up: 0.001728}}, 1: {error: {dn: -0.0
 
 IsRef: 1
 Path: /REF/CMS_2016_I1491953/d14-x01-y01
-Title: doi:10.17182/hepdata.76995.v1/t14
+Title: doi:10.17182/hepdata.76995.v2/t14
 Type: Scatter2D
 ---
 # xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
@@ -335,7 +335,7 @@ ErrorBreakdown: {0: {error: {dn: -0.0002113, up: 0.0002957}}, 1: {error: {dn: -0
 
 IsRef: 1
 Path: /REF/CMS_2016_I1491953/d15-x01-y01
-Title: doi:10.17182/hepdata.76995.v1/t15
+Title: doi:10.17182/hepdata.76995.v2/t15
 Type: Scatter2D
 ---
 # xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
@@ -361,7 +361,7 @@ ErrorBreakdown: {0: {error: {dn: -2.637e-05, up: 4.723e-05}}, 1: {error: {dn: -0
 
 IsRef: 1
 Path: /REF/CMS_2016_I1491953/d16-x01-y01
-Title: doi:10.17182/hepdata.76995.v1/t16
+Title: doi:10.17182/hepdata.76995.v2/t16
 Type: Scatter2D
 ---
 # xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
@@ -386,7 +386,7 @@ ErrorBreakdown: {0: {error: {dn: -21.36, up: 22.77}}, 1: {error: {dn: -20.98, up
 
 IsRef: 1
 Path: /REF/CMS_2016_I1491953/d17-x01-y01
-Title: doi:10.17182/hepdata.76995.v1/t17
+Title: doi:10.17182/hepdata.76995.v2/t17
 Type: Scatter2D
 ---
 # xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
@@ -429,7 +429,7 @@ ErrorBreakdown: {0: {error: {dn: -5.971, up: 6.664}}, 1: {error: {dn: -5.888, up
 
 IsRef: 1
 Path: /REF/CMS_2016_I1491953/d18-x01-y01
-Title: doi:10.17182/hepdata.76995.v1/t18
+Title: doi:10.17182/hepdata.76995.v2/t18
 Type: Scatter2D
 ---
 # xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
@@ -472,7 +472,7 @@ ErrorBreakdown: {0: {error: {dn: -1.475, up: 1.63}}, 1: {error: {dn: -1.451, up:
 
 IsRef: 1
 Path: /REF/CMS_2016_I1491953/d19-x01-y01
-Title: doi:10.17182/hepdata.76995.v1/t19
+Title: doi:10.17182/hepdata.76995.v2/t19
 Type: Scatter2D
 ---
 # xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
@@ -495,7 +495,7 @@ ErrorBreakdown: {0: {error: {dn: -0.383, up: 0.432}}, 1: {error: {dn: -0.3751, u
 
 IsRef: 1
 Path: /REF/CMS_2016_I1491953/d20-x01-y01
-Title: doi:10.17182/hepdata.76995.v1/t20
+Title: doi:10.17182/hepdata.76995.v2/t20
 Type: Scatter2D
 ---
 # xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
@@ -518,7 +518,7 @@ ErrorBreakdown: {0: {error: {dn: -5.603, up: 6.419}}, 1: {error: {dn: -5.642, up
 
 IsRef: 1
 Path: /REF/CMS_2016_I1491953/d21-x01-y01
-Title: doi:10.17182/hepdata.76995.v1/t21
+Title: doi:10.17182/hepdata.76995.v2/t21
 Type: Scatter2D
 ---
 # xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
@@ -549,7 +549,7 @@ ErrorBreakdown: {0: {error: {dn: -1.429, up: 1.69}}, 1: {error: {dn: -1.392, up:
 
 IsRef: 1
 Path: /REF/CMS_2016_I1491953/d22-x01-y01
-Title: doi:10.17182/hepdata.76995.v1/t22
+Title: doi:10.17182/hepdata.76995.v2/t22
 Type: Scatter2D
 ---
 # xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
@@ -580,7 +580,7 @@ ErrorBreakdown: {0: {error: {dn: -0.3929, up: 0.4861}}, 1: {error: {dn: -0.4065,
 
 IsRef: 1
 Path: /REF/CMS_2016_I1491953/d23-x01-y01
-Title: doi:10.17182/hepdata.76995.v1/t23
+Title: doi:10.17182/hepdata.76995.v2/t23
 Type: Scatter2D
 ---
 # xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
@@ -607,7 +607,7 @@ ErrorBreakdown: {0: {error: {dn: -1.406, up: 1.578}}, 1: {error: {dn: -1.427, up
 
 IsRef: 1
 Path: /REF/CMS_2016_I1491953/d24-x01-y01
-Title: doi:10.17182/hepdata.76995.v1/t24
+Title: doi:10.17182/hepdata.76995.v2/t24
 Type: Scatter2D
 ---
 # xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
@@ -638,7 +638,7 @@ ErrorBreakdown: {0: {error: {dn: -1.286, up: 1.541}}, 1: {error: {dn: -1.393, up
 
 IsRef: 1
 Path: /REF/CMS_2016_I1491953/d25-x01-y01
-Title: doi:10.17182/hepdata.76995.v1/t25
+Title: doi:10.17182/hepdata.76995.v2/t25
 Type: Scatter2D
 ---
 # xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
@@ -669,7 +669,7 @@ ErrorBreakdown: {0: {error: {dn: -4.269, up: 4.783}}, 1: {error: {dn: -4.506, up
 
 IsRef: 1
 Path: /REF/CMS_2016_I1491953/d26-x01-y01
-Title: doi:10.17182/hepdata.76995.v1/t26
+Title: doi:10.17182/hepdata.76995.v2/t26
 Type: Scatter2D
 ---
 # xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
@@ -700,7 +700,7 @@ ErrorBreakdown: {0: {error: {dn: -0.1044, up: 0.08828}}, 1: {error: {dn: -0.2756
 
 IsRef: 1
 Path: /REF/CMS_2016_I1491953/d27-x01-y01
-Title: doi:10.17182/hepdata.76995.v1/t27
+Title: doi:10.17182/hepdata.76995.v2/t27
 Type: Scatter2D
 ---
 # xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
@@ -731,7 +731,7 @@ ErrorBreakdown: {0: {error: {dn: -0.006871, up: 0.006982}}, 1: {error: {dn: -0.0
 
 IsRef: 1
 Path: /REF/CMS_2016_I1491953/d28-x01-y01
-Title: doi:10.17182/hepdata.76995.v1/t28
+Title: doi:10.17182/hepdata.76995.v2/t28
 Type: Scatter2D
 ---
 # xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
@@ -758,7 +758,7 @@ ErrorBreakdown: {0: {error: {dn: -2.085, up: 2.567}}, 1: {error: {dn: -2.106, up
 
 IsRef: 1
 Path: /REF/CMS_2016_I1491953/d29-x01-y01
-Title: doi:10.17182/hepdata.76995.v1/t29
+Title: doi:10.17182/hepdata.76995.v2/t29
 Type: Scatter2D
 ---
 # xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
@@ -789,7 +789,7 @@ ErrorBreakdown: {0: {error: {dn: -2.425, up: 2.936}}, 1: {error: {dn: -2.407, up
 
 IsRef: 1
 Path: /REF/CMS_2016_I1491953/d30-x01-y01
-Title: doi:10.17182/hepdata.76995.v1/t30
+Title: doi:10.17182/hepdata.76995.v2/t30
 Type: Scatter2D
 ---
 # xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
@@ -816,16 +816,14 @@ Type: Scatter2D
 END YODA_SCATTER2D_V2
 BEGIN YODA_SCATTER2D_V2 /REF/CMS_2016_I1491953/d31-x01-y01
 Variations: [""]
-ErrorBreakdown: {0: {error: {dn: 0, up: 0}}, 1: {error: {dn: 0, up: 0}}, 2: {error: {dn: -0.9342, up: 0.9736}}, 3: {error: {dn: -2.086, up: 2.51}}, 4: {error: {dn: -2.227, up: 2.697}}, 5: {error: {dn: -2.003, up: 2.368}}, 6: {error: {dn: -2.15, up: 2.532}}, 7: {error: {dn: -2.328, up: 2.843}}, 8: {error: {dn: -2.642, up: 3.108}}, 9: {error: {dn: -2.945, up: 3.606}}, 10: {error: {dn: -3.451, up: 4.079}}, 11: {error: {dn: -3.989, up: 4.639}}, 12: {error: {dn: -4.692, up: 5.612}}, 13: {error: {dn: -5.714, up: 6.318}}, 14: {error: {dn: -6.543, up: 7.24}}, 15: {error: {dn: -7.099, up: 8.08}}, 16: {error: {dn: -4.61, up: 5.199}}, 17: {error: {dn: -3.444, up: 4.138}}, 18: {error: {dn: -2.531, up: 2.991}}, 19: {error: {dn: -2.037, up: 2.568}}, 20: {error: {dn: -1.526, up: 1.759}}, 21: {error: {dn: -1.155, up: 1.411}}, 22: {error: {dn: -0.8042, up: 1.001}}, 23: {error: {dn: -0.6783, up: 0.7222}}, 24: {error: {dn: -0.3371, up: 0.3852}}, 25: {error: {dn: -0.2776, up: 0.2839}}, 26: {error: {dn: -0.1039, up: 0.121}}, 27: {error: {dn: -0.04139, up: 0.05062}}, 28: {error: {dn: -0.001157, up: 0.001165}}, 29: {error: {dn: 0, up: 0}}}
+ErrorBreakdown: {0: {error: {dn: -0.9342, up: 0.9736}}, 1: {error: {dn: -2.086, up: 2.51}}, 2: {error: {dn: -2.227, up: 2.697}}, 3: {error: {dn: -2.003, up: 2.368}}, 4: {error: {dn: -2.15, up: 2.532}}, 5: {error: {dn: -2.328, up: 2.843}}, 6: {error: {dn: -2.642, up: 3.108}}, 7: {error: {dn: -2.945, up: 3.606}}, 8: {error: {dn: -3.451, up: 4.079}}, 9: {error: {dn: -3.989, up: 4.639}}, 10: {error: {dn: -4.692, up: 5.612}}, 11: {error: {dn: -5.714, up: 6.318}}, 12: {error: {dn: -6.543, up: 7.24}}, 13: {error: {dn: -7.099, up: 8.08}}, 14: {error: {dn: -4.61, up: 5.199}}, 15: {error: {dn: -3.444, up: 4.138}}, 16: {error: {dn: -2.531, up: 2.991}}, 17: {error: {dn: -2.037, up: 2.568}}, 18: {error: {dn: -1.526, up: 1.759}}, 19: {error: {dn: -1.155, up: 1.411}}, 20: {error: {dn: -0.8042, up: 1.001}}, 21: {error: {dn: -0.6783, up: 0.7222}}, 22: {error: {dn: -0.3371, up: 0.3852}}, 23: {error: {dn: -0.2776, up: 0.2839}}, 24: {error: {dn: -0.1039, up: 0.121}}, 25: {error: {dn: -0.04139, up: 0.05062}}, 26: {error: {dn: -0.001157, up: 0.001165}}, 27: {error: {dn: 0, up: 0}}}
 
 IsRef: 1
 Path: /REF/CMS_2016_I1491953/d31-x01-y01
-Title: doi:10.17182/hepdata.76995.v1/t31
+Title: doi:10.17182/hepdata.76995.v2/t31
 Type: Scatter2D
 ---
 # xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
-1.000000e-01	1.000000e-01	1.000000e-01	0.000000e+00	0.000000e+00	0.000000e+00
-3.000000e-01	1.000000e-01	1.000000e-01	0.000000e+00	0.000000e+00	0.000000e+00
 5.000000e-01	1.000000e-01	1.000000e-01	6.085000e+00	9.342000e-01	9.736000e-01
 7.000000e-01	1.000000e-01	1.000000e-01	1.676000e+01	2.086000e+00	2.510000e+00
 9.000000e-01	1.000000e-01	1.000000e-01	1.704000e+01	2.227000e+00	2.697000e+00
@@ -853,7 +851,6 @@ Type: Scatter2D
 5.300000e+00	1.000000e-01	1.000000e-01	4.872000e-01	1.039000e-01	1.210000e-01
 5.500000e+00	1.000000e-01	1.000000e-01	1.321000e-01	4.139000e-02	5.062000e-02
 5.700000e+00	1.000000e-01	1.000000e-01	3.105000e-03	1.157000e-03	1.165000e-03
-5.900000e+00	1.000000e-01	1.000000e-01	0.000000e+00	0.000000e+00	0.000000e+00
 END YODA_SCATTER2D_V2
 BEGIN YODA_SCATTER2D_V2 /REF/CMS_2016_I1491953/d32-x01-y01
 Variations: [""]
@@ -861,7 +858,7 @@ ErrorBreakdown: {0: {error: {dn: -6.475, up: 7.95}}, 1: {error: {dn: -6.761, up:
 
 IsRef: 1
 Path: /REF/CMS_2016_I1491953/d32-x01-y01
-Title: doi:10.17182/hepdata.76995.v1/t32
+Title: doi:10.17182/hepdata.76995.v2/t32
 Type: Scatter2D
 ---
 # xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
@@ -892,7 +889,7 @@ ErrorBreakdown: {0: {error: {dn: -3.004, up: 3.556}}, 1: {error: {dn: -3.039, up
 
 IsRef: 1
 Path: /REF/CMS_2016_I1491953/d33-x01-y01
-Title: doi:10.17182/hepdata.76995.v1/t33
+Title: doi:10.17182/hepdata.76995.v2/t33
 Type: Scatter2D
 ---
 # xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
@@ -923,7 +920,7 @@ ErrorBreakdown: {0: {error: {dn: -0.6869, up: 0.8541}}, 1: {error: {dn: -0.6807,
 
 IsRef: 1
 Path: /REF/CMS_2016_I1491953/d34-x01-y01
-Title: doi:10.17182/hepdata.76995.v1/t34
+Title: doi:10.17182/hepdata.76995.v2/t34
 Type: Scatter2D
 ---
 # xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
@@ -950,7 +947,7 @@ ErrorBreakdown: {0: {error: {dn: -0.2169, up: 0.2683}}, 1: {error: {dn: -0.1932,
 
 IsRef: 1
 Path: /REF/CMS_2016_I1491953/d35-x01-y01
-Title: doi:10.17182/hepdata.76995.v1/t35
+Title: doi:10.17182/hepdata.76995.v2/t35
 Type: Scatter2D
 ---
 # xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
@@ -977,7 +974,7 @@ ErrorBreakdown: {0: {error: {dn: -0.026, up: 0.026}}, 1: {error: {dn: -0.026, up
 
 IsRef: 1
 Path: /REF/CMS_2016_I1491953/d36-x01-y01
-Title: doi:10.17182/hepdata.76995.v1/t36
+Title: doi:10.17182/hepdata.76995.v2/t36
 Type: Scatter2D
 ---
 # xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
@@ -1005,7 +1002,7 @@ ErrorBreakdown: {0: {error: {dn: -0.052, up: 0.052}}, 1: {error: {dn: -0.05204, 
 
 IsRef: 1
 Path: /REF/CMS_2016_I1491953/d37-x01-y01
-Title: doi:10.17182/hepdata.76995.v1/t37
+Title: doi:10.17182/hepdata.76995.v2/t37
 Type: Scatter2D
 ---
 # xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
@@ -1029,7 +1026,7 @@ ErrorBreakdown: {0: {error: {dn: -0.06034, up: 0.0609}}, 1: {error: {dn: -0.0601
 
 IsRef: 1
 Path: /REF/CMS_2016_I1491953/d38-x01-y01
-Title: doi:10.17182/hepdata.76995.v1/t38
+Title: doi:10.17182/hepdata.76995.v2/t38
 Type: Scatter2D
 ---
 # xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
@@ -1060,7 +1057,7 @@ ErrorBreakdown: {0: {error: {dn: -0.05242, up: 0.05241}}, 1: {error: {dn: -0.053
 
 IsRef: 1
 Path: /REF/CMS_2016_I1491953/d39-x01-y01
-Title: doi:10.17182/hepdata.76995.v1/t39
+Title: doi:10.17182/hepdata.76995.v2/t39
 Type: Scatter2D
 ---
 # xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	

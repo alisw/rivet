@@ -1,0 +1,327 @@
+{
+    "1116150": [
+        "Anisotropic flow of charged hadrons, pions and (anti-)protons measured at high transverse momentum in Pb-Pb collisions at $\\sqrt{s_{NN}}$=2.76 TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2012.12.066", 
+        "1448208", 
+        "1205.5761", 
+        "ins1116150", 
+        null, 
+        [
+            "CERN-PH-EP-2012-142", 
+            "ALICE-PUBLIC-2015-003"
+        ]
+    ], 
+    "1121161": [
+        "Charge separation relative to the reaction plane in Pb-Pb collisions at $\\sqrt{s_{NN}}= 2.76$ TeV", 
+        "ALICE", 
+        "10.1103/PhysRevLett.110.012301", 
+        "1457823", 
+        "1207.0900", 
+        "ins1121161", 
+        null, 
+        [
+            "CERN-PH-EP-2012-183"
+        ]
+    ], 
+    "1123802": [
+        "Net-Charge Fluctuations in Pb-Pb collisions at $\\sqrt{s}_{NN} = 2.76$ TeV", 
+        "ALICE", 
+        "10.1103/PhysRevLett.110.152301", 
+        "1460877", 
+        "1207.6068", 
+        "ins1123802", 
+        null, 
+        [
+            "CERN-PH-EP-2012-212"
+        ]
+    ], 
+    "1126962": [
+        "Measurement of electrons from beauty hadron decays in $pp$ collisions at $\\sqrt{s}=7$ TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2013.01.069", 
+        "1472421", 
+        "1208.1902", 
+        "ins1126962", 
+        null, 
+        [
+            "CERN-PH-EP-2012-229"
+        ]
+    ], 
+    "1127497": [
+        "Centrality Dependence of Charged Particle Production at Large Transverse Momentum in Pb--Pb Collisions at $\\sqrt{s_{\\rm{NN}}} = 2.76$ TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2013.01.051", 
+        "1471653", 
+        "1208.2711", 
+        "ins1127497", 
+        null, 
+        [
+            "CERN-PH-EP-2012-233"
+        ]
+    ], 
+    "1181770": [
+        "Measurement of inelastic, single- and double-diffraction cross sections in proton--proton collisions at the LHC with ALICE", 
+        "ALICE", 
+        "10.1140/epjc/s10052-013-2456-0", 
+        "1472714", 
+        "1208.4968", 
+        "ins1181770", 
+        null, 
+        [
+            "CERN-PH-EP-2012-238"
+        ]
+    ], 
+    "1185785": [
+        "Coherent $J/\\psi$ photoproduction in ultra-peripheral Pb-Pb collisions at $\\sqrt{s_{NN}} = 2.76$ TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2012.11.059", 
+        "1476722", 
+        "1209.3715", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2012-270"
+        ]
+    ], 
+    "1190545": [
+        "Pseudorapidity density of charged particles in $p$ + Pb collisions at $\\sqrt{s_{NN}}=5.02$ TeV", 
+        "ALICE", 
+        "10.1103/PhysRevLett.110.032301", 
+        "1483543", 
+        "1210.3615", 
+        "ins1190545", 
+        null, 
+        [
+            "CERN-PH-EP-2012-307"
+        ]
+    ], 
+    "1190895": [
+        "Transverse momentum distribution and nuclear modification factor of charged particles in $p$-Pb collisions at $\\sqrt{s_{NN}}=5.02$ TeV", 
+        "ALICE", 
+        "10.1103/PhysRevLett.110.082302", 
+        "1483517", 
+        "1210.4520", 
+        "ins1190895", 
+        null, 
+        [
+            "CERN-PH-EP-2012-306"
+        ]
+    ], 
+    "1206610": [
+        "Long-range angular correlations on the near and away side in $p$-Pb collisions at $\\sqrt{s_{NN}}=5.02$ TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2013.01.012", 
+        "1497210", 
+        "1212.2001", 
+        "ins1206610", 
+        null, 
+        [
+            "CERN-PH-EP-2012-359"
+        ]
+    ], 
+    "1208696": [
+        "Charged kaon femtoscopic correlations in $pp$ collisions at $\\sqrt{s}=7$ TeV", 
+        "ALICE", 
+        "10.1103/PhysRevD.87.052016", 
+        "1491241", 
+        "1212.5958", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2012-337"
+        ]
+    ], 
+    "1210881": [
+        "Measurement of the inclusive differential jet cross section in $pp$ collisions at $\\sqrt{s} = 2.76$ TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2013.04.026", 
+        "1482981", 
+        "1301.3475", 
+        "ins1210881", 
+        null, 
+        [
+            "CERN-PH-EP-2012-301"
+        ]
+    ], 
+    "1211186": [
+        "Charge correlations using the balance function in Pb-Pb collisions at $\\sqrt{s_{NN}}$ = 2.76 TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2013.05.039", 
+        "1501710", 
+        "1301.3756", 
+        "ins1211186", 
+        null, 
+        [
+            "CERN-PH-EP-2012-371"
+        ]
+    ], 
+    "1215085": [
+        "Centrality determination of Pb-Pb collisions at $\\sqrt{s_{NN}}$ = 2.76 TeV with ALICE", 
+        "ALICE", 
+        "10.1103/PhysRevC.88.044909", 
+        "1500579", 
+        "1301.4361", 
+        "ins1215085", 
+        null, 
+        [
+            "CERN-PH-EP-2012-368"
+        ]
+    ], 
+    "1222333": [
+        "Centrality dependence of $\\pi$, K, p production in Pb-Pb collisions at $\\sqrt{s_{NN}}$ = 2.76 TeV", 
+        "ALICE", 
+        "10.1103/PhysRevC.88.044910", 
+        "1514201", 
+        "1303.0737", 
+        "ins1222333", 
+        null, 
+        [
+            "CERN-PH-EP-2013-019"
+        ]
+    ], 
+    "1225273": [
+        "J/Psi Elliptic Flow in Pb-Pb Collisions at $\\sqrt{s_{\\rm NN}}$ = 2.76 TeV", 
+        "ALICE", 
+        "10.1103/PhysRevLett.111.162301", 
+        "1528237", 
+        "1303.5880", 
+        "ins1225273", 
+        null, 
+        [
+            "CERN-PH-EP-2013-042"
+        ]
+    ], 
+    "1225979": [
+        "Centrality dependence of the pseudorapidity density distribution for charged particles in Pb-Pb collisions at $\\sqrt{s_{\\rm NN}}$ = 2.76 TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2013.09.022", 
+        "1528555", 
+        "1304.0347", 
+        "ins1225979", 
+        null, 
+        [
+            "CERN-PH-EP-2013-045"
+        ]
+    ], 
+    "1232206": [
+        "Charmonium and $e^+e^-$ pair photoproduction at mid-rapidity in ultra-peripheral Pb-Pb collisions at $\\sqrt{s_{\\rm NN}}$=2.76 TeV", 
+        "ALICE", 
+        "10.1140/epjc/s10052-013-2617-1", 
+        "1546021", 
+        "1305.1467", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2013-066"
+        ]
+    ], 
+    "1232209": [
+        "Mid-rapidity anti-baryon to baryon ratios in pp collisions at $\\sqrt{s}$ = 0.9, 2.76 and 7 TeV measured by ALICE", 
+        "ALICE", 
+        "10.1140/epjc/s10052-013-2496-5", 
+        "1544100", 
+        "1305.1562", 
+        "ins1232209", 
+        null, 
+        [
+            "CERN-PH-EP-2013-080"
+        ]
+    ], 
+    "1233087": [
+        "D meson elliptic flow in non-central Pb-Pb collisions at $\\sqrt{s_{\\rm NN}}$ = 2.76TeV", 
+        "ALICE", 
+        "10.1103/PhysRevLett.111.102301", 
+        "1545407", 
+        "1305.2707", 
+        "ins1233087", 
+        null, 
+        [
+            "CERN-PH-EP-2013-085"
+        ]
+    ], 
+    "1238451": [
+        "Performance of the ALICE VZERO system", 
+        "ALICE", 
+        "10.1088/1748-0221/8/10/P10016", 
+        "1544889", 
+        "1306.3130", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2013-082"
+        ]
+    ], 
+    "1238980": [
+        "Directed Flow of Charged Particles at Midrapidity Relative to the Spectator Plane in Pb-Pb Collisions at $\\sqrt{s_{NN}}$=2.76 TeV", 
+        "ALICE", 
+        "10.1103/PhysRevLett.111.232302", 
+        "1554526", 
+        "1306.4145", 
+        "ins1238980", 
+        null, 
+        [
+            "CERN-PH-EP-2013-100"
+        ]
+    ], 
+    "1241422": [
+        "Energy Dependence of the Transverse Momentum Distributions of Charged Particles in pp Collisions Measured by ALICE", 
+        "ALICE", 
+        "10.1140/epjc/s10052-013-2662-9", 
+        "1559558", 
+        "1307.1093", 
+        "ins1241422", 
+        null, 
+        [
+            "CERN-PH-EP-2013-109"
+        ]
+    ], 
+    "1241423": [
+        "Multiplicity dependence of the average transverse momentum in pp, p-Pb, and Pb-Pb collisions at the LHC", 
+        "ALICE", 
+        "10.1016/j.physletb.2013.10.054", 
+        "1559559", 
+        "1307.1094", 
+        "ins1241423", 
+        null, 
+        [
+            "CERN-PH-EP-2013-111"
+        ]
+    ], 
+    "1241570": [
+        "Multiplicity dependence of two-particle azimuthal correlations in pp collisions at the LHC", 
+        "ALICE", 
+        "10.1007/JHEP09(2013)049", 
+        "1559920", 
+        "1307.1249", 
+        "ins1241570", 
+        null, 
+        [
+            "CERN-PH-EP-2013-107"
+        ]
+    ], 
+    "1242302": [
+        "Long-range angular correlations of $\\rm \\pi$, K and p in p-Pb collisions at $\\sqrt{s_{\\rm NN}}$ = 5.02 TeV", 
+        "ALICE", 
+        "10.1016/j.physletb.2013.08.024", 
+        "1558429", 
+        "1307.3237", 
+        "ins1242302", 
+        null, 
+        [
+            "CERN-PH-EP-2013-115"
+        ]
+    ], 
+    "1243863": [
+        "$K^0_S$ and $\\Lambda$ production in Pb-Pb collisions at $\\sqrt{s_{NN}}$ = 2.76 TeV", 
+        "ALICE", 
+        "10.1103/PhysRevLett.111.222301", 
+        "1563670", 
+        "1307.5530", 
+        "ins1243863", 
+        null, 
+        [
+            "CERN-PH-EP-2013-132"
+        ]
+    ]
+}

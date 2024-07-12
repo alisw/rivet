@@ -15,7 +15,7 @@ namespace Rivet {
   class ATLAS_2016_I1452559 : public Analysis {
   public:
 
-    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2016_I1452559);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2016_I1452559);
 
     void init() {
 
@@ -24,7 +24,7 @@ namespace Rivet {
       declare(recojets, "Jets");
 
       FinalState electrons(Cuts::abspid == PID::ELECTRON && Cuts::abseta < 2.47 && Cuts::pT > 20*GeV);
-      SmearedParticles recoelectrons(electrons, ELECTRON_EFF_ATLAS_RUN1);
+      SmearedParticles recoelectrons(electrons, ELECTRON_EFF_ATLAS_RUN1_MEDIUM);
       declare(recoelectrons, "Electrons");
 
       FinalState muons(Cuts::abspid == PID::MUON && Cuts::abseta < 2.50 && Cuts::pT > 10*GeV);
@@ -39,9 +39,9 @@ namespace Rivet {
 
       /// Book histograms
       for (size_t i = 0; i < 7; ++i)
-        _count_IM[i] = bookCounter("count_IM" + toString(i+1));
+        book(_count_IM[i], "count_IM" + toString(i+1));
       for (size_t i = 0; i < 6; ++i)
-        _count_EM[i] = bookCounter("count_EM" + toString(i+1));
+        book(_count_EM[i], "count_EM" + toString(i+1));
 
     }
 
@@ -98,15 +98,13 @@ namespace Rivet {
       ////////////////////
 
 
-      const double weight = event.weight();
-
       // Get ETmiss bin number and fill counters
       const int i_etmiss = binIndex(etmiss/GeV, ETMISS_CUTS);
       // Inclusive ETmiss bins
       for (int ibin = 0; ibin < 7; ++ibin)
-        if (i_etmiss >= ibin) _count_IM[ibin]->fill(weight);
+        if (i_etmiss >= ibin) _count_IM[ibin]->fill();
       // Exclusive ETmiss bins
-      if (inRange(i_etmiss, 0, 6)) _count_EM[i_etmiss]->fill(weight);
+      if (inRange(i_etmiss, 0, 6)) _count_EM[i_etmiss]->fill();
 
     }
 
@@ -127,6 +125,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2016_I1452559);
+  RIVET_DECLARE_PLUGIN(ATLAS_2016_I1452559);
 
 }

@@ -1,0 +1,46 @@
+{
+    "395458": [
+        "A Measurement of Bose-Einstein correlations in e+ e- annihilation at TRISTAN", 
+        "AMY", 
+        "10.1016/0370-2693(95)00691-D", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-95-27"
+        ]
+    ], 
+    "401053": [
+        "Measurement of charm production in two photon processes using inclusive lepton events at TRISTAN", 
+        "AMY", 
+        "10.1016/0370-2693(95)01175-0", 
+        null, 
+        null, 
+        "ins401053", 
+        null, 
+        [
+            "KEK-PREPRINT-95-119"
+        ]
+    ], 
+    "406129": [
+        "A Determination of alpha-s in e+ e- annihilation at s**(1/2) = 57.3-GeV", 
+        "AMY", 
+        "10.1016/0370-2693(95)00689-I", 
+        null, 
+        null, 
+        "ins406129", 
+        null, 
+        []
+    ], 
+    "407273": [
+        "Study of two particle azimuthal correlations in e+ e- annihilation at s**(1/2) = 58-GeV", 
+        "AMY", 
+        "10.1103/PhysRevD.52.4872", 
+        null, 
+        null, 
+        null, 
+        null, 
+        []
+    ]
+}

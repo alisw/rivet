@@ -27,11 +27,13 @@ namespace Rivet {
 
     void init() {
       // Charged final state, |eta|<1, pT>0.2GeV
-      const ChargedFinalState cfs(-1.0, 1.0, 0.2*GeV);
+      const Cut c = Cuts::etaIn(-1.0, 1.0) && Cuts::pT >= 0.2*GeV;
+
+      const ChargedFinalState cfs(c);
       declare(cfs, "CFS");
 
       // Neutral final state, |eta|<1, ET>0.2GeV (needed for the jets)
-      const NeutralFinalState nfs(-1.0, 1.0, 0.2*GeV);
+      const NeutralFinalState nfs(c);
       declare(nfs, "NFS");
 
       // STAR can't see neutrons and K^0_L
@@ -50,9 +52,9 @@ namespace Rivet {
       declare(FastJets(jfs, FastJets::SISCONE, 0.7), "AllJets");
 
       // Book histograms
-      _hist_pmaxnchg   = bookProfile1D( 1, 1, 1);
-      _hist_pminnchg   = bookProfile1D( 2, 1, 1);
-      _hist_anchg      = bookProfile1D( 3, 1, 1);
+      book(_hist_pmaxnchg   , 1, 1, 1);
+      book(_hist_pminnchg   , 2, 1, 1);
+      book(_hist_anchg      , 3, 1, 1);
     }
 
 
@@ -70,7 +72,7 @@ namespace Rivet {
       // The jet acceptance region is |eta|<(1-R)=0.3  (with R = jet radius)
       // Jets also must have a neutral energy fraction of < 0.7
       Jets jets;
-      foreach (const Jet jet, alljets) {
+      for (const Jet & jet : alljets) {
         if (jet.neutralEnergy()/jet.totalEnergy() < 0.7 &&
 	    jet.abseta() < 0.3)
           jets.push_back(jet);
@@ -99,13 +101,10 @@ namespace Rivet {
       const double jetphi = jets[0].phi();
       const double jetpT  = jets[0].pT();
 
-      // Get the event weight
-      const double weight = e.weight();
-
       size_t numTrans1(0), numTrans2(0), numAway(0);
 
       // Calculate all the charged stuff
-      foreach (const Particle& p, cfs.particles()) {
+      for (const Particle& p : cfs.particles()) {
         const double dPhi = deltaPhi(p.phi(), jetphi);
         const double pT = p.pT();
         const double phi = p.phi();
@@ -138,9 +137,9 @@ namespace Rivet {
       } // end charged particle loop
 
       // Fill the histograms
-      _hist_pmaxnchg->fill(jetpT, (numTrans1>numTrans2 ? numTrans1 : numTrans2)/(2*PI/3), weight);
-      _hist_pminnchg->fill(jetpT, (numTrans1<numTrans2 ? numTrans1 : numTrans2)/(2*PI/3), weight);
-      _hist_anchg->fill(jetpT, numAway/(PI*0.7*0.7), weight); // jet area = pi*R^2
+      _hist_pmaxnchg->fill(jetpT, (numTrans1>numTrans2 ? numTrans1 : numTrans2)/(2*PI/3));
+      _hist_pminnchg->fill(jetpT, (numTrans1<numTrans2 ? numTrans1 : numTrans2)/(2*PI/3));
+      _hist_anchg->fill(jetpT, numAway/(PI*0.7*0.7)); // jet area = pi*R^2
 
     }
 
@@ -163,6 +162,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(STAR_2009_UE_HELEN);
+  RIVET_DECLARE_PLUGIN(STAR_2009_UE_HELEN);
 
 }

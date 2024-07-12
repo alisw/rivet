@@ -1,0 +1,36 @@
+Name: BELLE_2010_I871475
+Year: 2010
+Summary: Mass distributions in $B^+\to J/\psi, \psi(2S) +K^+\pi^+\pi^-$
+Experiment: BELLE
+Collider: KEKB
+InspireID: 871475
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 83 (2011) 032005
+RunInfo: Any process producing B+ mesons, originally Upsilon(4S) decays
+Description:
+  'Measurement of mass distributions in the decays $B^+\to J/\psi, \psi(2S) +K^+\pi^+\pi^-$. The data were read from the plots in the paper and may not have been corrected for efficiency and resolution, although ther backgrounds given in the paper have been subtracted.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle:2010wrf
+BibTeX: '@article{Belle:2010wrf,
+    author = "Guler, H. and others",
+    collaboration = "Belle",
+    title = "{Study of the $K^+ \pi^+ \pi^-$ Final State in $B^+ \to J/\psi K^+ \pi^+ \pi^-$ and $B^+ \to \psi-prime K^+ \pi^+ \pi^-$}",
+    eprint = "1009.5256",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BELLE-PREPRINT-2010-20, KEK-PREPRINT-2010-32",
+    doi = "10.1103/PhysRevD.83.032005",
+    journal = "Phys. Rev. D",
+    volume = "83",
+    pages = "032005",
+    year = "2011"
+}
+'

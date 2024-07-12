@@ -1,0 +1,37 @@
+Name: BELLE_2018_I1663447
+Year: 2018
+Summary: Mass and angular distributions in $B^+\to K^+\eta\gamma$ decays
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1663447
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 97 (2018) 9, 092003
+RunInfo: Any process producing B+, originally Upsilno(4S) decay
+Description:
+  'Mass and angular distributions in $B^+\to K^+\eta\gamma$ decays. Data were read from the plots in the paper, but are background subtracted and efficiency corrected.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle:2018xst
+BibTeX: '@article{Belle:2018xst,
+    author = "Nakano, H. and others",
+    collaboration = "Belle",
+    title = "{Measurement of time-dependent $CP$ asymmetries in $B^{0}\to K_S^0 \eta \gamma$ decays}",
+    eprint = "1803.07774",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BELLE-PREPRINT-2018-07, KEK-PREPRINT-2018-1",
+    doi = "10.1103/PhysRevD.97.092003",
+    journal = "Phys. Rev. D",
+    volume = "97",
+    number = "9",
+    pages = "092003",
+    year = "2018"
+}
+'

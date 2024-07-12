@@ -1,0 +1,61 @@
+{
+    "297258": [
+        "Experimental study on color degree of freedom of gluons in e+ e- annihilation at s**(1/2) around 60-GeV", 
+        "VENUS", 
+        "10.1103/PhysRevLett.66.280", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-90-62", 
+            "HUPD-9005", 
+            "KOBE-HEP-90-02", 
+            "KUNS-1007", 
+            "OULNS-90-6", 
+            "TMUP-HEL-90-11"
+        ]
+    ], 
+    "317966": [
+        "Search for charged scalars in e+ e- annihilation up to 64-GeV center-of-mass energy", 
+        "VENUS", 
+        "10.1016/0370-2693(91)91265-W", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-91-63", 
+            "HUPD-9110", 
+            "KUNS-1078", 
+            "OULNS-91-04", 
+            "TMUP-HEP-91-12"
+        ]
+    ], 
+    "317990": [
+        "Search for Chi(c2) production in two photon processes", 
+        "VENUS", 
+        "10.1016/0370-2693(91)90766-J", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-91-56", 
+            "HUPD-9109", 
+            "KUNS-1073", 
+            "OULNS-91-02", 
+            "TMUP-HEP-91-11"
+        ]
+    ], 
+    "1389624": [
+        "Study of the $e^+ e^-\\to\\mu^+ \\mu^- \\gamma$ reaction at center-of-mass energies between 54 and 64 GeV", 
+        "VENUS", 
+        "10.1016/0370-2693(91)90730-E", 
+        null, 
+        null, 
+        "ins1389624", 
+        null, 
+        []
+    ]
+}

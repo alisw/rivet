@@ -7,25 +7,15 @@
 namespace Rivet {
 
 
-  /// @brief D0 dijet invariant mass measurement
+  /// D0 dijet invariant mass measurement
   class D0_2010_S8566488 : public Analysis {
   public:
 
-    /// @name Constructors etc.
-    //@{
+    RIVET_DEFAULT_ANALYSIS_CTOR(D0_2010_S8566488);
 
-    /// Constructor
-    D0_2010_S8566488()
-      : Analysis("D0_2010_S8566488")
-    {    }
-
-    //@}
-
-
-  public:
 
     /// @name Analysis methods
-    //@{
+    /// @{
 
     /// Book histograms and initialise projections before the run
     void init() {
@@ -34,19 +24,17 @@ namespace Rivet {
       FastJets conefinder(fs, FastJets::D0ILCONE, 0.7);
       declare(conefinder, "ConeFinder");
 
-      _h_m_dijet.addHistogram(0.0, 0.4, bookHisto1D(1, 1, 1));
-      _h_m_dijet.addHistogram(0.4, 0.8, bookHisto1D(2, 1, 1));
-      _h_m_dijet.addHistogram(0.8, 1.2, bookHisto1D(3, 1, 1));
-      _h_m_dijet.addHistogram(1.2, 1.6, bookHisto1D(4, 1, 1));
-      _h_m_dijet.addHistogram(1.6, 2.0, bookHisto1D(5, 1, 1));
-      _h_m_dijet.addHistogram(2.0, 2.4, bookHisto1D(6, 1, 1));
+      {Histo1DPtr tmp; _h_m_dijet.add(0.0, 0.4, book(tmp, 1, 1, 1));}
+      {Histo1DPtr tmp; _h_m_dijet.add(0.4, 0.8, book(tmp, 2, 1, 1));}
+      {Histo1DPtr tmp; _h_m_dijet.add(0.8, 1.2, book(tmp, 3, 1, 1));}
+      {Histo1DPtr tmp; _h_m_dijet.add(1.2, 1.6, book(tmp, 4, 1, 1));}
+      {Histo1DPtr tmp; _h_m_dijet.add(1.6, 2.0, book(tmp, 5, 1, 1));}
+      {Histo1DPtr tmp; _h_m_dijet.add(2.0, 2.4, book(tmp, 6, 1, 1));}
     }
 
 
     /// Perform the per-event analysis
     void analyze(const Event& e) {
-      const double weight = e.weight();
-
       const Jets& jets = apply<JetAlg>(e, "ConeFinder").jetsByPt(40.0*GeV);
       if (jets.size() < 2) vetoEvent;
 
@@ -55,7 +43,7 @@ namespace Rivet {
       double ymax = std::max(j0.absrap(), j1.absrap());
       double mjj = FourMomentum(j0+j1).mass();
 
-      _h_m_dijet.fill(ymax, mjj/TeV, weight);
+      _h_m_dijet.fill(ymax, mjj/TeV);
     }
 
 
@@ -64,26 +52,20 @@ namespace Rivet {
       _h_m_dijet.scale(crossSection()/sumOfWeights(), this);
     }
 
-    //@}
-
-
-  private:
-
-    // Data members like post-cuts event weight counters go here
+    /// @}
 
 
   private:
 
     /// @name Histograms
-    //@{
-    BinnedHistogram<double> _h_m_dijet;
-    //@}
+    /// @{
+    BinnedHistogram _h_m_dijet;
+    /// @}
 
   };
 
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(D0_2010_S8566488);
+  RIVET_DECLARE_ALIASED_PLUGIN(D0_2010_S8566488, D0_2010_I846483);
 
 }

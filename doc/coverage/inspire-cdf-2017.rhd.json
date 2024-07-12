@@ -1,0 +1,50 @@
+{
+    "886408": [
+        "Observation of the $Y(4140)$ Structure in the $J/\\psi\\phi$ Mass Spectrum in $B^\\pm\\to J/\\psi\\phi K^\\pm$ Decays", 
+        "CDF", 
+        "10.1142/S0217732317501395", 
+        null, 
+        "1101.6058", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-11-019-E"
+        ]
+    ], 
+    "1456804": [
+        "Measurement of $\\sin^2\\theta^{\\rm lept}_{\\rm eff}$ using $e^+e^-$ pairs from $\\gamma^*/Z$ bosons produced in $p\\bar{p}$ collisions at a center-of-momentum energy of 1.96 TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.93.112016", 
+        "2151524", 
+        "1605.02719", 
+        "ins1456804", 
+        null, 
+        [
+            "FERMILAB-PUB-16-165-E"
+        ]
+    ], 
+    "1495024": [
+        "Measurement of the $D^+$- Meson Production Cross Section at Low Transverse Momentum in $p\\bar{p}$ Collisions at $\\sqrt{s}=1.96$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.95.092006", 
+        "2228419", 
+        "1610.08989", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-16-473-PPD"
+        ]
+    ], 
+    "1515694": [
+        "Measurement of the inclusive-isolated prompt-photon cross section in $p\\bar{p}$ collisions using the full CDF data set", 
+        "CDF", 
+        "10.1103/PhysRevD.96.092003", 
+        "2255205", 
+        "1703.00599", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-17-053-PPD"
+        ]
+    ]
+}

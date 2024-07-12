@@ -1,0 +1,35 @@
+Name: BELLE_2018_I1621272
+Year: 2018
+Summary:  Measurement of $\tau$ polarization in the decay $B\to D^{*}\tau^+\nu_\tau$
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1621272
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 97 (2018) 1, 012004
+RunInfo: Any process producing B mesons, original e+e- at the Upsilon(4S)
+Description:
+  'Measurement of $\tau$ polarization in the decay $B\to D^{*}\tau^+\nu_\tau$ decays by the BELLE collaboration.'
+ValidationInfo:
+  'Herwig7 events using EvtGen for B decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Hirose:2017dxl
+BibTeX: '@article{Hirose:2017dxl,
+    author = "Hirose, S. and others",
+    collaboration = "Belle",
+    title = "{Measurement of the $\tau$ lepton polarization and $R(D^*)$ in the decay $\bar{B} \rightarrow D^* \tau^- \bar{\nu}_\tau$ with one-prong hadronic $\tau$ decays at Belle}",
+    eprint = "1709.00129",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "KEK-PREPRINT-2017-26, BELLE-PREPRINT-2017-18",
+    doi = "10.1103/PhysRevD.97.012004",
+    journal = "Phys. Rev. D",
+    volume = "97",
+    number = "1",
+    pages = "012004",
+    year = "2018"
+}'

@@ -1,0 +1,36 @@
+Name: BESIII_2019_I1694530
+Year: 2019
+Summary:  Kinematic distributions in $D^0\to \pi^-\pi^0 e^+\nu_e$ and $D^+\to \pi^+\pi^- e^+\nu_e$ 
+Experiment: BESIII
+Collider:  BEPC
+InspireID: 1694530
+Status: VALIDATED NOHEPDATA
+Reentrant:  true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 122 (2019) 6, 062001
+RunInfo: Any process producing D0 or D+
+Description:
+  'Measurement of the kinematic distributions in $D^0\to \pi^-\pi^0 e^+\nu_e$ and $D^+\to \pi^+\pi^- e^+\nu_e$ by BES-III. N.B. the plots where read from the paper and may not have been corrected for acceptance.'
+ValidationInfo:
+  'Herwig 7 events using EvtGen for the decays.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2018qmf
+BibTeX: '@article{BESIII:2018qmf,
+    author = "Ablikim, Medina and others",
+    collaboration = "BESIII",
+    title = "{Observation of $D^+ \to f_0(500) e^+\nu_e$ and Improved Measurements of $D \to\rho e^+\nu_e$}",
+    eprint = "1809.06496",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevLett.122.062001",
+    journal = "Phys. Rev. Lett.",
+    volume = "122",
+    number = "6",
+    pages = "062001",
+    year = "2019"
+}
+'

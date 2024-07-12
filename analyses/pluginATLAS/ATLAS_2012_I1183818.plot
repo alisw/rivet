@@ -17,7 +17,7 @@ Title=$E_{\perp}$ density  for the dijet selection in the transverse region
 
 # BEGIN PLOT /ATLAS_2012_I1183818/d((0[3-9])|1)
 XLabel=$\sum E_{\perp}$~[GeV]
-YLabel=$\frac{1}{N_\text{evt}} \frac{\mathrm{d} N_\text{evt}}{\mathrm{d}\sum E_{\perp}}~[GeV$^{-1}$]
+YLabel=$\frac{1}{N_\mathrm{evt}} \frac{\mathrm{d} N_\mathrm{evt}}{\mathrm{d}\sum E_{\perp}}$~[GeV$^{-1}$]
 # END PLOT
 
 # BEGIN PLOT /ATLAS_2012_I1183818/d03-x01-y01

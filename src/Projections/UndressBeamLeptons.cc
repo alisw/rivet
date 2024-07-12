@@ -4,7 +4,7 @@
 namespace Rivet {
 
 
-  int UndressBeamLeptons::compare(const Projection & p) const {
+  CmpState UndressBeamLeptons::compare(const Projection & p) const {
     const UndressBeamLeptons & o =
       dynamic_cast<const UndressBeamLeptons &>(p);
     return cmp(_thetamax, o._thetamax) || mkNamedPCmp(o, "FS");

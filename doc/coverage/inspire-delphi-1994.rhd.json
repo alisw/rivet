@@ -1,0 +1,213 @@
+{
+    "360637": [
+        "Production rate and decay lifetime measurements of B(s)0 mesons at LEP using D(s) and phi mesons", 
+        "DELPHI", 
+        "10.1007/BF01413179", 
+        "254308", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-176"
+        ]
+    ], 
+    "363727": [
+        "Measurement of the B0 - anti-B0 mixing using the average electric charge of hadron jets in Z0 decays", 
+        "DELPHI", 
+        "10.1016/0370-2693(94)91178-9", 
+        "257310", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-93-220"
+        ]
+    ], 
+    "372141": [
+        "Invariant mass dependence of particle correlations in hadronic final states from the decay of the Z0", 
+        "DELPHI", 
+        "10.1007/BF01577540", 
+        "257937", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-02", 
+            "CERN-PPE-94-002", 
+            "CERN-PPE-94-2"
+        ]
+    ], 
+    "372142": [
+        "Interference of neutral kaons in the hadronic decays of the Z0", 
+        "DELPHI", 
+        "10.1016/0370-2693(94)90298-4", 
+        "257501", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-03", 
+            "CERN-PPE-94-003", 
+            "CERN-PPE-94-3"
+        ]
+    ], 
+    "372143": [
+        "Study of hard scattering processes in multi - hadron production from gamma gamma collisions at LEP", 
+        "DELPHI", 
+        "10.1007/BF01555895", 
+        "257503", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-04", 
+            "CERN-PPE-94-004", 
+            "CERN-PPE-94-4"
+        ]
+    ], 
+    "372144": [
+        "Measurements of the line shape of the $Z^0$ and determination of electroweak parameters from its hadronic and leptonic decays", 
+        "DELPHI", 
+        "10.1016/0550-3213(94)90537-1", 
+        "258291", 
+        null, 
+        "ins372144", 
+        null, 
+        [
+            "CERN-PPE-94-08", 
+            "CERN-PPE-94-008", 
+            "CERN-PPE-94-8"
+        ]
+    ], 
+    "373112": [
+        "A Measurement of the $B_s^0$ meson mass", 
+        "DELPHI", 
+        "10.1016/0370-2693(94)90230-5", 
+        "259183", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-022", 
+            "CERN-PPE-94-22"
+        ]
+    ], 
+    "373113": [
+        "A Precision measurement of the average lifetime of B hadrons", 
+        "DELPHI", 
+        "10.1007/BF01577539", 
+        "259111", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-024", 
+            "CERN-PPE-94-24"
+        ]
+    ], 
+    "373114": [
+        "Improved measurements of cross-sections and asymmetries at the Z0 resonance", 
+        "DELPHI", 
+        "10.1016/0550-3213(94)90524-X", 
+        "259634", 
+        null, 
+        "ins373114", 
+        null, 
+        [
+            "CERN-PPE-94-031", 
+            "CERN-PPE-94-31"
+        ]
+    ], 
+    "373116": [
+        "Measurement of the e+ e- ---> gamma gamma (gamma) cross-section at LEP energies", 
+        "DELPHI", 
+        "10.1016/0370-2693(94)90745-5", 
+        "259926", 
+        null, 
+        "ins373116", 
+        null, 
+        [
+            "CERN-PPE-94-036", 
+            "CERN-PPE-94-36"
+        ]
+    ], 
+    "374451": [
+        "Search for the standard model Higgs boson in Z0 decays", 
+        "DELPHI", 
+        "10.1016/0550-3213(94)90222-4", 
+        "262579", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-46-REV", 
+            "CERN-PPE-94-046-REV", 
+            "CERN-PPE-94-46", 
+            "CERN-PPE-94-046"
+        ]
+    ], 
+    "374452": [
+        "Measurement of the $B^0$ - $\\bar{B}^0$ mixing parameter in DELPHI", 
+        "DELPHI", 
+        "10.1016/0370-2693(94)91285-8", 
+        "262794", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-67", 
+            "CERN-PPE-94-067"
+        ]
+    ], 
+    "375789": [
+        "Search for pair produced heavy scalars in Z0 decays", 
+        "DELPHI", 
+        "10.1007/BF01557390", 
+        "264655", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-83", 
+            "CERN-PPE-94-083"
+        ]
+    ], 
+    "375790": [
+        "Charged kaon production in tau decays at LEP", 
+        "DELPHI", 
+        "10.1016/0370-2693(94)90711-0", 
+        "265116", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-088", 
+            "CERN-PPE-94-88"
+        ]
+    ], 
+    "375965": [
+        "J / psi production in the hadronic decays of the Z", 
+        "DELPHI", 
+        "10.1016/0370-2693(94)01385-3", 
+        "265954", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-099", 
+            "CERN-PPE-94-99"
+        ]
+    ], 
+    "377490": [
+        "Measurement of time dependent B(d)0 - anti-B(d)0 mixing", 
+        "DELPHI", 
+        "10.1016/0370-2693(94)91398-6", 
+        "268543", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-132"
+        ]
+    ]
+}

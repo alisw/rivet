@@ -5,6 +5,7 @@ Experiment: CMS
 Collider: LHC
 InspireID: 1385107
 Status: VALIDATED
+Reentrant: false
 Authors:
  - Wei Yang Wang <wei.yang.wang@cern.ch>
  - Xavier Janssen <xavier.janssen@cern.ch>
@@ -41,3 +42,7 @@ BibTeX: '@article{Khachatryan:2015jza,
       reportNumber   = "CMS-FSQ-12-025, CERN-PH-EP-2015-176",
       SLACcitation   = "%%CITATION = ARXIV:1507.07229;%%"
 }'
+
+ReleaseTests:
+ - $A LHC-2760-UE
+

@@ -5,9 +5,11 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 930220
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Stephen Paul Bieniek <stephen.paul.bieniek@cern.ch>
 References:
+ - ATLAS-STDM-2010-15
  - Eur.Phys.J. C71 (2011) 1846
  - arXiv:1109.6833 [hep-ex]
 RunInfo:
@@ -29,7 +31,7 @@ Description:
    jets. The inclusive $b$-jet cross-section is measured as a function of
    transverse momentum in the range $20 < pT < 400$ GeV and rapidity in the
    range $|y| < 2.1$. The $b\bar{b}$-dijet cross-section is measured as a
-   function of the dijet invariant mass in the range $110 < $m_{jj}$ < 760$\;GeV,
+   function of the dijet invariant mass in the range $110 < $m_{jj}$ < 760$~GeV,
    the azimuthal angle difference between the two jets and the
    angular variable $\chi$ in two dijet mass regions. The results are
    compared with next-to-leading-order QCD predictions. Good agreement is
@@ -56,3 +58,15 @@ BibTeX: '@article{ATLAS:2011ac,
       reportNumber   = "CERN-PH-EP-2011-146",
       SLACcitation   = "%%CITATION = ARXIV:1109.6833;%%",
 }'
+
+ReleaseTests:
+ - $A LHC-7-Bottom-0
+ - $A-2 LHC-7-Bottom-1
+ - $A-3 LHC-7-Bottom-2
+ - $A-4 LHC-7-Bottom-3
+ - $A-5 LHC-7-Bottom-4
+ - $A-6 LHC-7-Bottom-5
+ - $A-7 LHC-7-Bottom-6
+ - $A-8 LHC-7-Bottom-7
+ - $A-9 LHC-7-Bottom-8
+

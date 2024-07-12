@@ -6,6 +6,7 @@ Collider: LHC
 SpireID: 9762035
 InspireID: 1184941
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Sercan Sen <ssen@cern.ch>
  - Alexander Proskuryakov <aproskur@mail.cern.ch>

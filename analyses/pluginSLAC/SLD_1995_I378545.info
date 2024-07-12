@@ -1,0 +1,36 @@
+Name: SLD_1995_I378545
+Year: 1995
+Summary: Event Shapes at 91.2 GeV
+Experiment: SLD
+Collider: SLC
+InspireID: 378545
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 51 (1995) 962-984, 1995
+RunInfo: e+e- to hadrons
+Beams: [e+, e-]
+Energies: [91.2]
+Description:
+  'Measurement of event shapes by the SLD experiment. Jet rates not implemented.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: SLD:1994idb
+BibTeX: '@article{SLD:1994idb,
+    author = "Abe, K. and others",
+    collaboration = "SLD",
+    title = "{Measurement of alpha-s (M(Z)**2) from hadronic event observables at the Z0 resonance}",
+    eprint = "hep-ex/9501003",
+    archivePrefix = "arXiv",
+    reportNumber = "SLAC-PUB-6641",
+    doi = "10.1103/PhysRevD.51.962",
+    journal = "Phys. Rev. D",
+    volume = "51",
+    pages = "962--984",
+    year = "1995"
+}
+'

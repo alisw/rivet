@@ -1,0 +1,34 @@
+Name: MD1_1994_I362599
+Year: 1994
+Summary: $\Lambda^0$ production at $\Upsilon(1S)$ and nearby $e^+e^-$ continuum 
+Experiment: MD1
+Collider: VEPP-4
+InspireID: 362599
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Z.Phys.C 62 (1994) 367-370
+RunInfo: e+e- > hadrons at Upslion(1S) and 10.49 GeV
+Beams: [e+, e-]
+Description:
+'Spectra for $\Lambda^0$ and rates for $\Lambda^0$ and $\Xi^-$ production in $\Upsilon(1S)$ decay and
+  $\Lambda^0$ production rate in the nearby continuum.'
+ValidationInfo:
+  'Herwig7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Blinov:1993hy
+BibTeX: '@article{Blinov:1993hy,
+    author = "Blinov, A. E. and others",
+    title = "{Measurement of inclusive Lambda production in electron - positron interactions at the upsilon energies}",
+    reportNumber = "BUDKER-INP-1993-53",
+    doi = "10.1007/BF01555896",
+    journal = "Z. Phys. C",
+    volume = "62",
+    pages = "367--370",
+    year = "1994"
+}
+'

@@ -1,0 +1,347 @@
+{
+    "425867": [
+        "Search for exclusive $B$ decays to $J/\\psi$ and $\\eta$ or $\\pi^0$ with the L3 detector", 
+        "L3", 
+        "10.1016/S0370-2693(96)01584-5", 
+        "314391", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-152"
+        ]
+    ], 
+    "425868": [
+        "Search for neutral $B$ meson decays to two charged leptons", 
+        "L3", 
+        "10.1016/S0370-2693(96)01583-3", 
+        "314390", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-151"
+        ]
+    ], 
+    "427106": [
+        "Study of the weak charged hadronic current in b decays", 
+        "L3", 
+        "10.1016/S0370-2693(96)01689-9", 
+        "316703", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-170"
+        ]
+    ], 
+    "427107": [
+        "Measurement of inclusive omega and eta-prime production in hadronic Z decays", 
+        "L3", 
+        "10.1016/S0370-2693(96)01683-8", 
+        "316704", 
+        null, 
+        "ins427107", 
+        null, 
+        [
+            "CERN-PPE-96-171"
+        ]
+    ], 
+    "428470": [
+        "Measurement of D(s)- ---> tau- anti-tau-neutrino and a new limit for B- ---> tau- anti-tau-neutrino", 
+        "L3", 
+        "10.1016/S0370-2693(97)00138-X", 
+        "319068", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-198"
+        ]
+    ], 
+    "440407": [
+        "Search for excited leptons in e+ e- annihilation at s**(1/2) = 161-GeV", 
+        "L3", 
+        "10.1016/S0370-2693(97)00404-8", 
+        "320334", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-012", 
+            "CERN-PPE-97-12"
+        ]
+    ], 
+    "440408": [
+        "Pair production of $W$ bosons in $e^{+} e^{-}$ interactions at $\\sqrt{s}$ = 161-GeV", 
+        "L3", 
+        "10.1016/S0370-2693(97)00253-0", 
+        "320335", 
+        null, 
+        "ins440408", 
+        null, 
+        [
+            "CERN-PPE-97-014", 
+            "CERN-PPE-97-14"
+        ]
+    ], 
+    "441927": [
+        "Production of Single $W$ Bosons at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(97)00527-3", 
+        "323501", 
+        null, 
+        "ins441927", 
+        null, 
+        [
+            "CERN-PPE-97-028", 
+            "CERN-PPE-97-28"
+        ]
+    ], 
+    "443563": [
+        "QCD studies and determination of alpha-s in e+ e- collisions at s**(1/2) = 161-GeV and 172-GeV", 
+        "L3", 
+        "10.1016/S0370-2693(97)00647-3", 
+        "326441", 
+        null, 
+        "ins443563", 
+        null, 
+        [
+            "CERN-PPE-97-042", 
+            "CERN-PPE-97-42"
+        ]
+    ], 
+    "443564": [
+        "Production of e, mu and tau pairs in untagged two photon collisions at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(97)00731-4", 
+        "326442", 
+        null, 
+        "ins443564", 
+        null, 
+        [
+            "CERN-PPE-97-043", 
+            "CERN-PPE-97-43"
+        ]
+    ], 
+    "443565": [
+        "Inclusive $J/\\psi$, $\\psi^\\prime$ and chi($c$) production in hadronic $Z$ decays", 
+        "L3", 
+        "10.1016/S0370-2693(97)00790-9", 
+        "326443", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-044", 
+            "CERN-PPE-97-44"
+        ]
+    ], 
+    "443566": [
+        "Cross-section of hadron production in gamma gamma collisions at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(97)00933-7", 
+        "326444", 
+        null, 
+        "ins443566", 
+        null, 
+        [
+            "CERN-PPE-97-048", 
+            "CERN-PPE-97-48"
+        ]
+    ], 
+    "443801": [
+        "K(s)0 and Lambda production in quark and gluon jets at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(97)00864-2", 
+        "327014", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-050", 
+            "CERN-PPE-97-50"
+        ]
+    ], 
+    "443802": [
+        "Measurement of hadron and lepton pair production at 161-GeV < s**(1/2) < 172-GeV at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(97)00863-0", 
+        "327015", 
+        null, 
+        "ins443802", 
+        null, 
+        [
+            "CERN-PPE-97-052", 
+            "CERN-PPE-97-52"
+        ]
+    ], 
+    "444151": [
+        "Search for anomalous four jet events in e+ e- annihilation at s**(1/2) = 130-GeV to 172-GeV", 
+        "L3", 
+        "10.1016/S0370-2693(97)01001-0", 
+        "327486", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-057", 
+            "CERN-PPE-97-57"
+        ]
+    ], 
+    "445324": [
+        "Measurement of $W$ pair cross-sections in $e^{+} e^{-}$ interactions at $\\sqrt{s}$ = 172-GeV and $W$ decay branching fractions", 
+        "L3", 
+        "10.1016/S0370-2693(97)00802-2", 
+        "328986", 
+        null, 
+        "ins445324", 
+        null, 
+        [
+            "CERN-PPE-97-067", 
+            "CERN-PPE-97-67"
+        ]
+    ], 
+    "445325": [
+        "Resonance formation in the pi+ pi- pi0 final state in two photon collisions", 
+        "L3", 
+        "10.1016/S0370-2693(97)01091-5", 
+        "328987", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-068", 
+            "CERN-PPE-97-68"
+        ]
+    ], 
+    "445998": [
+        "Study of hadronic events and measurements of alpha-s between 30-GeV and 91-GeV", 
+        "L3", 
+        "10.1016/S0370-2693(97)01000-9", 
+        "329816", 
+        null, 
+        "ins445998", 
+        null, 
+        [
+            "CERN-PPE-97-074", 
+            "CERN-PPE-97-74"
+        ]
+    ], 
+    "445999": [
+        "Search for heavy neutral and charged leptons in e+ e- annihilation at s**(1/2) = 161-GeV and s**(1/2) = 172-GeV", 
+        "L3", 
+        "10.1016/S0370-2693(97)01074-5", 
+        "329817", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-075", 
+            "CERN-PPE-97-75"
+        ]
+    ], 
+    "446000": [
+        "Single and multiphoton events with missing energy in e+ e- collisions at 161-GeV < s**(1/2) < 172-GeV", 
+        "L3", 
+        "10.1016/S0370-2693(97)01296-3", 
+        "329818", 
+        null, 
+        "ins446000", 
+        null, 
+        [
+            "CERN-PPE-97-076", 
+            "CERN-PPE-97-76"
+        ]
+    ], 
+    "446001": [
+        "Hard photon production at s**(1/2) = 161-GeV and 172-GeV at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(97)01081-2", 
+        "329819", 
+        null, 
+        "ins446001", 
+        null, 
+        [
+            "CERN-PPE-97-077", 
+            "CERN-PPE-97-77"
+        ]
+    ], 
+    "446002": [
+        "$\\upsilon$ production in $Z$ decays", 
+        "L3", 
+        "10.1016/S0370-2693(97)01002-2", 
+        "329820", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-078", 
+            "CERN-PPE-97-78"
+        ]
+    ], 
+    "446590": [
+        "Search for new physics in energetic single photon production in $e^{+} e^{-}$ annihilation at the $Z$ resonance", 
+        "L3", 
+        "10.1016/S0370-2693(97)01003-4", 
+        "330854", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-082", 
+            "CERN-PPE-97-82"
+        ]
+    ], 
+    "446670": [
+        "Search for the standard model Higgs boson in e+ e- interactions at 161-GeV <= s**(1/2) <= 172-GeV", 
+        "L3", 
+        "10.1016/S0370-2693(97)01033-2", 
+        "330620", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-081", 
+            "CERN-PPE-97-81"
+        ]
+    ], 
+    "447214": [
+        "Measurements of mass, width and gauge couplings of the $W$ boson at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(97)01082-4", 
+        "332097", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-098", 
+            "CERN-PPE-97-98"
+        ]
+    ], 
+    "447353": [
+        "Search for R-parity breaking sneutrino exchange at LEP", 
+        "L3", 
+        "10.1016/S0370-2693(97)01200-8", 
+        "332098", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-099", 
+            "CERN-PPE-97-99"
+        ]
+    ], 
+    "447944": [
+        "Neutral current four fermion production in e+ e- interactions at 130-GeV <= s**(1/2) <= 172-GeV", 
+        "L3", 
+        "10.1016/S0370-2693(97)01092-7", 
+        "332921", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-97-106"
+        ]
+    ]
+}

@@ -5,8 +5,9 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1082936
 Status: VALIDATED
+Reentrant: false
 Authors:
- - Holger Schulz hschulz@physik.hu-berlin.de
+ - Holger Schulz <hschulz@physik.hu-berlin.de>
 References:
  - arXiv:1112.6297v2 [hep-ex]
  - CERN-PH-EP-2011-192
@@ -32,3 +33,23 @@ BibTeX: '@article{Aad:2011fc,
       reportNumber   = "CERN-PH-EP-2011-192",
       SLACcitation   = "%%CITATION = ARXIV:1112.6297;%%",
 }'
+
+ReleaseTests:
+ - $A LHC-7-DiJets-1-C
+ - $A-2 LHC-7-DiJets-2-C
+ - $A-3 LHC-7-DiJets-3-C
+ - $A-4 LHC-7-DiJets-4-C
+ - $A-5 LHC-7-DiJets-5-C
+ - $A-6 LHC-7-DiJets-6-C
+ - $A-7 LHC-7-DiJets-7-C
+ - $A-8 LHC-7-Jets-1
+ - $A-9 LHC-7-Jets-10
+ - $A-10 LHC-7-Jets-2
+ - $A-11 LHC-7-Jets-3
+ - $A-12 LHC-7-Jets-4
+ - $A-13 LHC-7-Jets-5
+ - $A-14 LHC-7-Jets-6
+ - $A-15 LHC-7-Jets-7
+ - $A-16 LHC-7-Jets-8
+ - $A-17 LHC-7-Jets-9
+

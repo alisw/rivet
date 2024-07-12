@@ -13,7 +13,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(MC_DIS_Check);
+    RIVET_DEFAULT_ANALYSIS_CTOR(MC_DIS_Check);
 
 
     /// @name Analysis methods
@@ -31,9 +31,9 @@ namespace Rivet {
 
       // Book histograms
 	
-      _hist_Q2  = bookHisto1D("Q2",logspace(100,0.1, 1000.0));
-      _hist_y   = bookHisto1D("y",100,0.,1.);
-      _hist_x   = bookHisto1D("xBj",logspace(100,0.00001, 1.0));
+      book(_hist_Q2, "Q2",logspace(100,0.1, 1000.0));
+      book(_hist_y, "y",100,0.,1.);
+      book(_hist_x, "xBj",logspace(100,0.00001, 1.0));
 
     }
 
@@ -47,10 +47,9 @@ namespace Rivet {
       double y  = dk.y();
       double Q2 = dk.Q2();
       // Weight of the event
-      const double weight = event.weight();
-      _hist_Q2->fill(Q2,weight);
-      _hist_y->fill(y,weight);
-      _hist_x->fill(x,weight);
+      _hist_Q2->fill(Q2);
+      _hist_y->fill(y);
+      _hist_x->fill(x);
 
       /// @todo Do the event by event analysis here
 
@@ -76,7 +75,7 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(MC_DIS_Check);
+  RIVET_DECLARE_PLUGIN(MC_DIS_Check);
 
 
 }

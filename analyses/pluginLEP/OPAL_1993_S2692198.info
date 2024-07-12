@@ -16,6 +16,7 @@ RunInfo:
 NumEvents: 1000000
 Beams: [e+, e-]
 Energies: [91.2]
+Luminosity_fb: 0.021
 PtCuts: [0]
 Description:
   Measurement of the production of photons in $e^+ e^-\to q \bar q$ events at LEP 1.
@@ -34,3 +35,7 @@ BibTeX: '@Article{Acton:1992jk,
 }'
 ToDo:
  - Fix this! It looks nothing like the data, at least in the H++ benchmark tests.
+
+ReleaseTests:
+ - $A LEP-91-nopi
+

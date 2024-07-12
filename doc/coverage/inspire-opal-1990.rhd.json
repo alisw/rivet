@@ -1,0 +1,230 @@
+{
+    "283146": [
+        "Measurement of the Decay of the $\\Z^0$ Into Lepton Pairs", 
+        "OPAL", 
+        "10.1016/0370-2693(90)91982-H", 
+        "202682", 
+        null, 
+        "ins283146", 
+        null, 
+        [
+            "CERN-EP-89-147"
+        ]
+    ], 
+    "283783": [
+        "A Study of Jet Production Rates and a Test of QCD on the Z0 Resonance", 
+        "OPAL", 
+        "10.1016/0370-2693(90)91983-I", 
+        "202934", 
+        null, 
+        "ins283783", 
+        null, 
+        [
+            "CERN-EP-89-153"
+        ]
+    ], 
+    "283784": [
+        "A Search for the Top and $b^\\prime$ Quarks in Hadronic $\\Z^0$ Decays", 
+        "OPAL", 
+        "10.1016/0370-2693(90)90999-M", 
+        "202870", 
+        null, 
+        "ins283784", 
+        null, 
+        [
+            "CERN-EP-89-154"
+        ]
+    ], 
+    "285181": [
+        "Mass Limits for a Standard Model Higgs Boson in $e^+ e^-$ Collisions at {LEP}", 
+        "OPAL", 
+        "10.1016/0370-2693(90)90833-R", 
+        "203769", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-89-174"
+        ]
+    ], 
+    "285183": [
+        "A Search for Acoplanar Pairs of Leptons or Jets in $\\Z^0$ Decays: Mass Limits on Supersymmetric Particles", 
+        "OPAL", 
+        "10.1016/0370-2693(90)90444-B", 
+        "204062", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-89-176"
+        ]
+    ], 
+    "294474": [
+        "A Direct Search for New Charged Heavy Leptons at {LEP}", 
+        "OPAL", 
+        "10.1016/0370-2693(90)90443-A", 
+        "204395", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-90-09"
+        ]
+    ], 
+    "294808": [
+        "A Combined Analysis of the Hadronic and Leptonic Decays of the $\\Z^0$", 
+        "OPAL", 
+        "10.1016/0370-2693(90)91137-Z", 
+        "205582", 
+        null, 
+        "ins294808", 
+        null, 
+        [
+            "CERN-EP-90-27"
+        ]
+    ], 
+    "294809": [
+        "A Study of the Reaction $e^+ e^- \\to \\gamma \\gamma$ at {LEP}", 
+        "OPAL", 
+        "10.1016/0370-2693(90)91500-B", 
+        "205626", 
+        null, 
+        "ins294809", 
+        null, 
+        [
+            "CERN-EP-90-29"
+        ]
+    ], 
+    "295407": [
+        "A Search for Technipions and Charged Higgs Bosons at {LEP}", 
+        "OPAL", 
+        "10.1016/0370-2693(90)91474-P", 
+        "206762", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-90-38"
+        ]
+    ], 
+    "295613": [
+        "A Measurement of Global Event Shape Distributions in the Hadronic Decays of the $\\Z^0$", 
+        "OPAL", 
+        "10.1007/BF01552315", 
+        "207265", 
+        null, 
+        "ins295613", 
+        null, 
+        [
+            "CERN-EP-90-48"
+        ]
+    ], 
+    "295622": [
+        "Search for Excited Leptons at {LEP}", 
+        "OPAL", 
+        "10.1016/0370-2693(90)90283-C", 
+        "207302", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-90-49"
+        ]
+    ], 
+    "296041": [
+        "Evidence for Final State Photons in Multi - Hadronic Decays of the $\\Z^0$", 
+        "OPAL", 
+        "10.1016/0370-2693(90)91347-E", 
+        "207769", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-90-55"
+        ]
+    ], 
+    "296526": [
+        "Limits on neutral heavy lepton production from Z0 decay", 
+        "OPAL", 
+        "10.1016/0370-2693(90)90924-U", 
+        "208691", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-EP-90-72"
+        ]
+    ], 
+    "297139": [
+        "Analysis of Z0 couplings to charged leptons", 
+        "OPAL", 
+        "10.1016/0370-2693(90)90925-V", 
+        "209485", 
+        null, 
+        "ins297139", 
+        null, 
+        [
+            "CERN-EP-90-81"
+        ]
+    ], 
+    "297562": [
+        "A Direct search for neutralino production at LEP", 
+        "OPAL", 
+        "10.1016/0370-2693(90)90041-4", 
+        "209873", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-90-95"
+        ]
+    ], 
+    "297564": [
+        "A Study of coherence of soft gluons in hadron jets", 
+        "OPAL", 
+        "10.1016/0370-2693(90)91911-T", 
+        "209874", 
+        null, 
+        "ins297564", 
+        null, 
+        [
+            "CERN-EP-90-94"
+        ]
+    ], 
+    "298682": [
+        "Limits on a light Higgs boson in e+ e- collisions at LEP", 
+        "OPAL", 
+        "10.1016/0370-2693(90)90255-5", 
+        "211399", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-90-116"
+        ]
+    ], 
+    "298707": [
+        "A Measurement of energy correlations and a determination of alpha-s (M2 (Z0)) in e+ e- annihilations at s**(1/2) = 91-GeV", 
+        "OPAL", 
+        "10.1016/0370-2693(90)91098-V", 
+        "211675", 
+        null, 
+        "ins298707", 
+        null, 
+        [
+            "CERN-PPE-90-121"
+        ]
+    ], 
+    "299393": [
+        "Search for pair produced stable singly charged heavy particles in Z0 decays", 
+        "OPAL", 
+        "10.1016/0370-2693(90)90875-7", 
+        "212540", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-90-132"
+        ]
+    ]
+}

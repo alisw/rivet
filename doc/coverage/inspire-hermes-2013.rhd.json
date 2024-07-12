@@ -1,0 +1,26 @@
+{
+    "1111237": [
+        "Azimuthal distributions of charged hadrons, pions, and kaons produced in deep-inelastic scattering off unpolarized protons and deuterons", 
+        "HERMES", 
+        "10.1103/PhysRevD.87.012010", 
+        null, 
+        "1204.4161", 
+        null, 
+        null, 
+        [
+            "DESY-12-060"
+        ]
+    ], 
+    "1208547": [
+        "Multiplicities of charged pions and kaons from semi-inclusive deep-inelastic scattering by the proton and the deuteron", 
+        "HERMES", 
+        "10.1103/PhysRevD.87.074029", 
+        null, 
+        "1212.5407", 
+        "ins1208547", 
+        null, 
+        [
+            "DESY-12-157"
+        ]
+    ]
+}

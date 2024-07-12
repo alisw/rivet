@@ -1,0 +1,29 @@
+Name: FENICE_1998_I471263
+Year: 1998
+Summary: Cross section for $e^+e^-\to n\bar{n}$ between 1.9 and 2.44 GeV
+Experiment: FENICE
+Collider: ADONE
+InspireID: 471263
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Nucl.Phys. B517 (1998) 3-35, 1998 
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Description:
+  'Measurement of the cross section for $e^+e^-\to n\bar{n}$ between 1.9 and 2.44 GeV.'
+Keywords:
+BibKey: Antonelli:1998fv
+BibTeX: '@article{Antonelli:1998fv,
+      author         = "Antonelli, A. and others",
+      title          = "{The first measurement of the neutron electromagnetic
+                        form-factors in the timelike region}",
+      journal        = "Nucl. Phys.",
+      volume         = "B517",
+      year           = "1998",
+      pages          = "3-35",
+      doi            = "10.1016/S0550-3213(98)00083-2",
+      SLACcitation   = "%%CITATION = NUPHA,B517,3;%%"
+}'

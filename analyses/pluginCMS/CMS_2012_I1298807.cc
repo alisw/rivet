@@ -14,7 +14,7 @@ namespace Rivet {
   public:
 
     // Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(CMS_2012_I1298807);
+    RIVET_DEFAULT_ANALYSIS_CTOR(CMS_2012_I1298807);
 
 
     /// Initialise projections and histograms
@@ -30,9 +30,9 @@ namespace Rivet {
       Cut cut_el = Cuts::abseta < 2.5 && Cuts::pT > 7.0*GeV;
       Cut cut_mu = Cuts::abseta < 2.4 && Cuts::pT > 5.0*GeV;
 
-      ZFinder zeefinder(FinalState(), cut_el, PID::ELECTRON, 60*GeV, 120*GeV, 0.1, ZFinder::CLUSTERNODECAY, ZFinder::TRACK);
+      ZFinder zeefinder(FinalState(), cut_el, PID::ELECTRON, 60*GeV, 120*GeV, 0.1, ZFinder::ClusterPhotons::NODECAY, ZFinder::AddPhotons::YES);
       declare(zeefinder, "ZeeFinder");
-      ZFinder zmmfinder(FinalState(), cut_mu, PID::MUON, 60*GeV, 120*GeV, 0.1, ZFinder::CLUSTERNODECAY, ZFinder::TRACK);
+      ZFinder zmmfinder(FinalState(), cut_mu, PID::MUON, 60*GeV, 120*GeV, 0.1, ZFinder::ClusterPhotons::NODECAY, ZFinder::AddPhotons::YES);
       declare(zmmfinder, "ZmmFinder");
 
       VetoedFinalState fs_woZmm;
@@ -40,18 +40,18 @@ namespace Rivet {
       VetoedFinalState fs_woZee;
       fs_woZee.addVetoOnThisFinalState(zeefinder);
 
-      ZFinder zeefinder_woZee(fs_woZee, cut_el, PID::ELECTRON, 60*GeV, 120*GeV, 0.1, ZFinder::CLUSTERNODECAY);
+      ZFinder zeefinder_woZee(fs_woZee, cut_el, PID::ELECTRON, 60*GeV, 120*GeV, 0.1, ZFinder::ClusterPhotons::NODECAY);
       declare(zeefinder_woZee, "Zeefinder_WoZee");
-      ZFinder zmmfinder_woZmm(fs_woZmm, cut_mu, PID::MUON, 60*GeV, 120*GeV, 0.1, ZFinder::CLUSTERNODECAY);
+      ZFinder zmmfinder_woZmm(fs_woZmm, cut_mu, PID::MUON, 60*GeV, 120*GeV, 0.1, ZFinder::ClusterPhotons::NODECAY);
       declare(zmmfinder_woZmm, "Zmmfinder_WoZmm");
 
       // Book histograms
-      _hist_pt_l1 = bookHisto1D(1, 1, 1);
-      _hist_pt_z1 = bookHisto1D(1, 1, 2);
-      _hist_pt_zz = bookHisto1D(1, 1, 3);
-      _hist_m_zz = bookHisto1D(1, 1, 4);
-      _hist_dphi_zz = bookHisto1D(1, 1, 5);
-      _hist_dR_zz = bookHisto1D(1, 1, 6);
+      book(_hist_pt_l1  , 1, 1, 1);
+      book(_hist_pt_z1  , 1, 1, 2);
+      book(_hist_pt_zz  , 1, 1, 3);
+      book(_hist_m_zz   , 1, 1, 4);
+      book(_hist_dphi_zz, 1, 1, 5);
+      book(_hist_dR_zz  , 1, 1, 6);
 
     }
 
@@ -124,7 +124,7 @@ namespace Rivet {
       }
 
       // Fill histograms
-      const double weight = evt.weight();
+      const double weight = 1.0;
       _hist_pt_zz->fill(pZZ.pT()/GeV, weight);
       _hist_m_zz->fill(pZZ.mass()/GeV, weight);
       _hist_dphi_zz->fill(deltaPhi(pZ_a, pZ_b), weight);
@@ -191,6 +191,6 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CMS_2012_I1298807);
+  RIVET_DECLARE_PLUGIN(CMS_2012_I1298807);
 
 }

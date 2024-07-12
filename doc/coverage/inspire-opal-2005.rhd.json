@@ -1,0 +1,50 @@
+{
+    "656973": [
+        "Flavor independent h0A0 search and two Higgs doublet model interpretation of neutral Higgs boson searches at LEP", 
+        "OPAL", 
+        "10.1140/epjc/s2005-02122-4", 
+        "789341", 
+        "hep-ex/0408097", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2004-039"
+        ]
+    ], 
+    "661780": [
+        "Measurement of R(b) in e+ e- collisions at 182-GeV to 209-GeV", 
+        "OPAL", 
+        "10.1016/j.physletb.2005.01.031", 
+        "798015", 
+        "hep-ex/0410034", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2004-051"
+        ]
+    ], 
+    "661781": [
+        "Search for radions at LEP2", 
+        "OPAL", 
+        "10.1016/j.physletb.2006.04.045", 
+        "798028", 
+        "hep-ex/0410035", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2004-041"
+        ]
+    ], 
+    "669402": [
+        "Measurement of event shape distributions and moments in e+ e- ---> hadrons at 91-GeV - 209-GeV and a determination of alpha(s)", 
+        "OPAL", 
+        "10.1140/epjc/s2005-02120-6", 
+        "802086", 
+        "hep-ex/0503051", 
+        "ins669402", 
+        null, 
+        [
+            "CERN-PH-EP-2004-044"
+        ]
+    ]
+}

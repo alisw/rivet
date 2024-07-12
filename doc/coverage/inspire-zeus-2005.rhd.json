@@ -1,0 +1,122 @@
+{
+    "647488": [
+        "Study of the pion trajectory in the photoproduction of leading neutrons at HERA", 
+        "ZEUS", 
+        "10.1016/j.physletb.2005.01.101", 
+        null, 
+        "hep-ex/0404002", 
+        null, 
+        null, 
+        [
+            "DESY-04-037"
+        ]
+    ], 
+    "675372": [
+        "Study of deep inelastic inclusive and diffractive scattering with the ZEUS forward plug calorimeter", 
+        "ZEUS", 
+        "10.1016/j.nuclphysb.2005.02.001", 
+        null, 
+        "hep-ex/0501060", 
+        "ins675372", 
+        null, 
+        [
+            "DESY-05-011"
+        ]
+    ], 
+    "675755": [
+        "Search for pentaquarks decaying to Xi-pi in deep inelastic scattering at HERA", 
+        "ZEUS", 
+        "10.1016/j.physletb.2005.02.016", 
+        null, 
+        "hep-ex/0501069", 
+        null, 
+        null, 
+        [
+            "DESY-05-018"
+        ]
+    ], 
+    "675756": [
+        "Search for lepton-flavor violation at HERA", 
+        "ZEUS", 
+        "10.1140/epjc/s2005-02399-1", 
+        null, 
+        "hep-ex/0501070", 
+        null, 
+        null, 
+        [
+            "DESY-05-016"
+        ]
+    ], 
+    "676091": [
+        "Multijet production in neutral current deep inelastic scattering at HERA and determination of alpha(s)", 
+        "ZEUS", 
+        "10.1140/epjc/s2005-02347-1", 
+        null, 
+        "hep-ex/0502007", 
+        "ins676091", 
+        null, 
+        [
+            "DESY-05-019"
+        ]
+    ], 
+    "679257": [
+        "An NLO QCD analysis of inclusive cross-section and jet-production data from the zeus experiment", 
+        "ZEUS", 
+        "10.1140/epjc/s2005-02293-x", 
+        null, 
+        "hep-ph/0503274", 
+        null, 
+        null, 
+        [
+            "DESY-05-050"
+        ]
+    ], 
+    "679957": [
+        "Exclusive electroproduction of phi mesons at HERA", 
+        "ZEUS", 
+        "10.1016/j.nuclphysb.2005.04.009", 
+        null, 
+        "hep-ex/0504010", 
+        "ins679957", 
+        null, 
+        [
+            "DESY-05-038"
+        ]
+    ], 
+    "682022": [
+        "Measurement of inelastic $J/\\psi$ production in deep inelastic scattering at HERA", 
+        "ZEUS", 
+        "10.1140/epjc/s2005-02346-2", 
+        null, 
+        "hep-ex/0505008", 
+        "ins682022", 
+        null, 
+        [
+            "DESY-05-071"
+        ]
+    ], 
+    "687943": [
+        "Inclusive jet cross sections and dijet correlations in D*+- photoproduction at HERA", 
+        "ZEUS", 
+        "10.1016/j.nuclphysb.2005.09.021", 
+        null, 
+        "hep-ex/0507089", 
+        "ins687943", 
+        null, 
+        [
+            "DESY-05-132"
+        ]
+    ], 
+    "689412": [
+        "Measurement of charm fragmentation ratios and fractions in photoproduction at HERA", 
+        "ZEUS", 
+        "10.1140/epjc/s2005-02397-3", 
+        null, 
+        "hep-ex/0508019", 
+        null, 
+        null, 
+        [
+            "DESY-05-147"
+        ]
+    ]
+}

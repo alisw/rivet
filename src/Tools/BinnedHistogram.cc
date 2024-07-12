@@ -6,8 +6,7 @@
 namespace Rivet {
 
 
-  template<typename T>
-  const BinnedHistogram<T>& BinnedHistogram<T>::add(const T& binMin, const T& binMax, Histo1DPtr histo) {
+  const BinnedHistogram& BinnedHistogram::add(double binMin, double binMax, Histo1DPtr histo) {
     if (binMin > binMax) throw RangeError("Cannot add a binned histogram where the lower bin edge is above the upper edge");
     _histosByUpperBound[binMax] = histo;
     _histosByLowerBound[binMin] = histo;
@@ -28,8 +27,7 @@ namespace Rivet {
   }
 
 
-  template<typename T>
-  const Histo1DPtr BinnedHistogram<T>::histo(const T& binval) const {
+  const Histo1DPtr BinnedHistogram::histo(double binval) const {
     // Check that the bin is not out of range
     auto histIt1 = _histosByUpperBound.upper_bound(binval);
     if (histIt1 == _histosByUpperBound.end()) throw RangeError("BinnedHistogram: no bin found");
@@ -51,14 +49,12 @@ namespace Rivet {
   }
 
 
-  template<typename T>
-  Histo1DPtr BinnedHistogram<T>::histo(const T& binval) {
+  Histo1DPtr BinnedHistogram::histo(double binval) {
     return static_cast<const BinnedHistogram&>(*this).histo(binval); //< trick to avoid duplication
   }
 
 
-  template<typename T>
-  void BinnedHistogram<T>::fill(const T& binval, double val, double weight) {
+  void BinnedHistogram::fill(double binval, double val, double weight) {
     try {
       Histo1DPtr h = histo(binval);
       h->fill(val, weight);
@@ -67,19 +63,11 @@ namespace Rivet {
   }
 
 
-  template<typename T>
-  void BinnedHistogram<T>::scale(const T& scale, Analysis* ana) {
+  void BinnedHistogram::scale(double scale, Analysis* ana) {
     for (Histo1DPtr hist : histos()) {
       ana->scale(hist, scale/_binWidths[hist]);
     }
   }
-
-
-
-  // Template declarations for the compiler
-  template class BinnedHistogram<double>;
-  template class BinnedHistogram<int>;
-  template class BinnedHistogram<float>;
 
 
 }

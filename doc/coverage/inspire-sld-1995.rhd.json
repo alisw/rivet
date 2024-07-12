@@ -1,0 +1,128 @@
+{
+    "39718": [
+        "Comparison of a new calculation of energy-energy correlations with e+ e- ---> hadrons data at the Z0 resonance", 
+        "SLD", 
+        "10.1103/PhysRevD.52.4240", 
+        null, 
+        null, 
+        "ins39718", 
+        null, 
+        [
+            "SLAC-PUB-6739", 
+            "SLAC-PUB-95-6739"
+        ]
+    ], 
+    "376916": [
+        "Polarized Bhabha scattering a precision measurement of the electron neutral current couplings", 
+        "SLD", 
+        "10.1103/PhysRevLett.74.2880", 
+        null, 
+        "hep-ex/9410009", 
+        "ins376916", 
+        null, 
+        [
+            "SLAC-PUB-6605"
+        ]
+    ], 
+    "378342": [
+        "Measurement of A(b) and A(c) from the left-right forward - backward asymmetry of leptons in hadronic events at the Z0 resonance", 
+        "SLD", 
+        "10.1103/PhysRevLett.74.2895", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-6607"
+        ]
+    ], 
+    "378343": [
+        "A Search for jet handedness in hadronic Z0 decays", 
+        "SLD", 
+        "10.1103/PhysRevLett.74.1512", 
+        null, 
+        "hep-ex/9501006", 
+        "ins378343", 
+        null, 
+        [
+            "SLAC-PUB-6643"
+        ]
+    ], 
+    "378344": [
+        "Measurement of A(b) from the left-right forward - backward asymmetry of b quark production in Z0 decays using a momentum weighted track charge technique", 
+        "SLD", 
+        "10.1103/PhysRevLett.74.2890", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-6644", 
+            "LBL-36200"
+        ]
+    ], 
+    "378545": [
+        "Measurement of alpha-s (M(Z)**2) from hadronic event observables at the Z0 resonance", 
+        "SLD", 
+        "10.1103/PhysRevD.51.962", 
+        null, 
+        "hep-ex/9501003", 
+        "ins378545", 
+        null, 
+        [
+            "SLAC-PUB-6641"
+        ]
+    ], 
+    "395955": [
+        "Measurement of the tau lifetime at SLD", 
+        "SLD", 
+        "10.1103/PhysRevD.52.4828", 
+        null, 
+        "hep-ex/9506004", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-6767", 
+            "SLAC-PUB-95-6767"
+        ]
+    ], 
+    "400920": [
+        "First measurement of the t odd correlation between the Z0 spin and the three jet plane orientation in polarized Z0 decays to three jets", 
+        "SLD", 
+        "10.1103/PhysRevLett.75.4173", 
+        null, 
+        "hep-ex/9510005", 
+        "ins400920", 
+        null, 
+        [
+            "SLAC-PUB-6969", 
+            "SLAC-PUB-95-6969"
+        ]
+    ], 
+    "401106": [
+        "Measurement of the average $B$ hadron lifetime in $Z^0$ decays using reconstructed vertices", 
+        "SLD", 
+        "10.1103/PhysRevLett.75.3624", 
+        null, 
+        "hep-ex/9511005", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-6976", 
+            "SLAC-PUB-95-6976"
+        ]
+    ], 
+    "404272": [
+        "Measurement of the left-right forward - backward asymmetry for charm quarks with D*+ and D+ mesons", 
+        "SLD", 
+        "10.1103/PhysRevLett.75.3609", 
+        null, 
+        null, 
+        "ins404272", 
+        null, 
+        [
+            "SLAC-PUB-6681", 
+            "SLAC-PUB-95-6681"
+        ]
+    ]
+}

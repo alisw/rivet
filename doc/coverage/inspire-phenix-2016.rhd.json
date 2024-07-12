@@ -1,0 +1,142 @@
+{
+    "1332239": [
+        "Measurement of the higher-order anisotropic flow coefficients for identified hadrons in Au$+$Au collisions at $\\sqrt{s_{_{NN}}}$ = 200 GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.93.051902", 
+        null, 
+        "1412.1038", 
+        null, 
+        null, 
+        []
+    ], 
+    "1365091": [
+        "Measurement of parity-violating spin asymmetries in W$^{\\pm}$ production at midrapidity in longitudinally polarized $p+p$ collisions", 
+        "PHENIX", 
+        "10.1103/PhysRevD.93.051103", 
+        null, 
+        "1504.07451", 
+        "ins1365091", 
+        null, 
+        []
+    ], 
+    "1378005": [
+        "Measurement of higher cumulants of net-charge multiplicity distributions in Au$+$Au collisions at $\\sqrt{s_{_{NN}}}=7.7-200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.93.011901", 
+        null, 
+        "1506.07834", 
+        null, 
+        null, 
+        []
+    ], 
+    "1393528": [
+        "Centrality-dependent modification of jet-production rates in deuteron-gold collisions at $\\sqrt{s_{NN}}$=200 GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevLett.116.122301", 
+        null, 
+        "1509.04657", 
+        null, 
+        null, 
+        []
+    ], 
+    "1393529": [
+        "Single electron yields from semileptonic charm and bottom hadron decays in Au$+$Au collisions at $\\sqrt{s_{NN}}=200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.93.034904", 
+        null, 
+        "1509.04662", 
+        "ins1393529", 
+        null, 
+        []
+    ], 
+    "1393530": [
+        "Dielectron production in Au$+$Au collisions at $\\sqrt{s_{NN}}$=200 GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.93.014904", 
+        null, 
+        "1509.04667", 
+        null, 
+        null, 
+        []
+    ], 
+    "1393789": [
+        "Forward $J/\\psi$ production in U$+$U collisions at $\\sqrt{s_{NN}}$=193 GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.93.034903", 
+        null, 
+        "1509.05380", 
+        null, 
+        null, 
+        []
+    ], 
+    "1394228": [
+        "$\\phi$ meson production in the forward/backward rapidity region in Cu$+$Au collisions at $\\sqrt{s_{NN}}=200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.93.024904", 
+        null, 
+        "1509.06337", 
+        null, 
+        null, 
+        []
+    ], 
+    "1394433": [
+        "Transverse energy production and charged-particle multiplicity at midrapidity in various systems from $\\sqrt{s_{NN}}=7.7$ to 200 GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.93.024901", 
+        null, 
+        "1509.06727", 
+        "ins1394433", 
+        null, 
+        []
+    ], 
+    "1394434": [
+        "Scaling properties of fractional momentum loss of high-$p_T$ hadrons in nucleus-nucleus collisions at $\\sqrt{s_{_{NN}}}$ from 62.4 GeV to 2.76 TeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.93.024911", 
+        null, 
+        "1509.06735", 
+        null, 
+        null, 
+        []
+    ], 
+    "1394895": [
+        "Azimuthally anisotropic emission of low-momentum direct photons in Au$+$Au collisions at $\\sqrt{s_{_{NN}}}=200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.94.064901", 
+        null, 
+        "1509.07758", 
+        null, 
+        null, 
+        []
+    ], 
+    "1394897": [
+        "Measurements of directed, elliptic, and triangular flow in Cu$+$Au collisions at $\\sqrt{s_{_{NN}}}=200$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevC.94.054910", 
+        null, 
+        "1509.07784", 
+        null, 
+        null, 
+        []
+    ], 
+    "1396712": [
+        "Inclusive cross section and double-helicity asymmetry for $\\pi^{0}$ production at midrapidity in $p+p$ collisions at $\\sqrt{s}=510$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevD.93.011501", 
+        null, 
+        "1510.02317", 
+        null, 
+        null, 
+        []
+    ], 
+    "1467456": [
+        "Measurements of double-helicity asymmetries in inclusive $J/\\psi$ production in longitudinally polarized $p+p$ collisions at $\\sqrt{s}=510$ GeV", 
+        "PHENIX", 
+        "10.1103/PhysRevD.94.112008", 
+        "2158671", 
+        "1606.01815", 
+        "ins1467456", 
+        null, 
+        []
+    ]
+}

@@ -1,0 +1,37 @@
+Name: BELLE_2014_I1312626
+Year: 2014
+Summary: Mass and angular distributions in $\bar{B}^0\to J/\psi K^-\pi^+$
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1312626
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 90 (2014) 11, 112009
+RunInfo: Any process producing B0, original Upsilon(4S)
+Description:
+  'Measurement of mass and angular distributions in  $\bar{B}^0\to J/\psi K^-\pi^+$. The data were read from the plots in the paper and the backgrounds given subtracted.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle:2014nuw
+BibTeX: '@article{Belle:2014nuw,
+    author = "Chilikin, K. and others",
+    collaboration = "Belle",
+    title = "{Observation of a new charged charmoniumlike state in $\bar{B}^0 → J/ψK^-π^+$ decays}",
+    eprint = "1408.6457",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BELLE-PREPRINT-2014-12, KEK-PREPRINT-2014-19",
+    doi = "10.1103/PhysRevD.90.112009",
+    journal = "Phys. Rev. D",
+    volume = "90",
+    number = "11",
+    pages = "112009",
+    year = "2014"
+}
+'

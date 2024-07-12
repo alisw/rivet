@@ -5,6 +5,7 @@ Experiment: CMS collaboration
 Collider: LHC
 InspireID: 1680318
 Status: VALIDATED
+Reentrant: true
 Authors:
   - cms-pag-conveners-smp@cern.ch
   - Juan Manuel Grados Luyando <juan.grados.luyando@desy.de>
@@ -17,7 +18,6 @@ References:
 RunInfo:
   'Inelastic events at 13~TeV centre of mass energy.
    Tracks in $|\eta|<2.4$ and with $\pT > 0.5~GeV$'
-#NumEvents: 10000000
 NeedCrossSection: no
 Beams: [p+, p+]
 Energies: [13000]
@@ -48,3 +48,5 @@ BibTeX: '@article{Sirunyan:2018zdc,
       reportNumber   = "CMS-FSQ-16-011, CERN-EP-2018-187",
       SLACcitation   = "%%CITATION = ARXIV:1806.11245;%%"
 }'
+ReleaseTests:
+ - $A LHC-13-Minbias

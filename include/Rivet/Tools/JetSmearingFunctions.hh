@@ -10,21 +10,35 @@
 namespace Rivet {
 
 
-  /// @name Jet filtering, efficiency and smearing utils
-  //@{
+  /// @ingroup smearing
+  /// @{
 
-  /// @name Typedef for Jet smearing functions/functors
+  /// @defgroup smearing_particle Generic jet filtering, efficiency and smearing utils
+  /// @{
+
+  /// Typedef for Jet smearing functions/functors
   typedef function<Jet(const Jet&)> JetSmearFn;
 
-  /// @name Typedef for Jet efficiency functions/functors
+  /// Typedef for Jet efficiency functions/functors
   typedef function<double(const Jet&)> JetEffFn;
 
 
 
-  /// Return a constant 0 given a Jet as argument
+  /// Take a jet and return a constant 0
   inline double JET_EFF_ZERO(const Jet& p) { return 0; }
-  /// Return a constant 1 given a Jet as argument
+  /// Alias for JET_EFF_ZERO
+  inline double JET_EFF_0(const Jet& p) { return 0; }
+  /// Alias for JET_EFF_ZERO
+  inline double JET_FN0(const Jet& p) { return 0; }
+
+  /// Take a jet and return a constant 1
   inline double JET_EFF_ONE(const Jet& p) { return 1; }
+  /// Alias for JET_EFF_ONE
+  inline double JET_EFF_1(const Jet& p) { return 1; }
+  /// Alias for JET_EFF_ONE
+  inline double JET_EFF_PERFECT(const Jet& ) { return 1; }
+  /// Alias for JET_EFF_ONE
+  inline double JET_FN1(const Jet& ) { return 1; }
 
   /// Take a Jet and return a constant efficiency
   struct JET_EFF_CONST {
@@ -34,15 +48,22 @@ namespace Rivet {
   };
 
 
-  /// Return 1 if the given Jet contains a b, otherwise 0
+  /// @brief Return 1 if the given Jet contains a b, otherwise 0
+  /// @todo Need to be able to pass a tag pT threshold? -> functor struct
   inline double JET_BTAG_PERFECT(const Jet& j) { return j.bTagged() ? 1 : 0; }
 
-  /// Return 1 if the given Jet contains a c, otherwise 0
+  /// @brief Return 1 if the given Jet contains a c, otherwise 0
+  /// @todo Need to be able to pass a tag pT threshold? -> functor struct
   inline double JET_CTAG_PERFECT(const Jet& j) { return j.cTagged() ? 1 : 0; }
+
+  /// @brief Return 1 if the given Jet contains a c, otherwise 0
+  /// @todo Need to be able to pass a tag pT threshold? -> functor struct
+  inline double JET_TAUTAG_PERFECT(const Jet& j) { return j.tauTagged() ? 1 : 0; }
 
 
   /// @brief b-tagging efficiency functor, for more readable b-tag effs and mistag rates
-  /// Note several constructors, allowing for optional specification of charm, tau, and light jet mistag rates
+  ///
+  /// @note Note the several constructors, allowing for optional specification of charm, tau, and light jet mistag rates.
   struct JET_BTAG_EFFS {
     JET_BTAG_EFFS(double eff_b, double eff_light=0) : _eff_b(eff_b), _eff_c(-1), _eff_t(-1), _eff_l(eff_light) { }
     JET_BTAG_EFFS(double eff_b, double eff_c, double eff_light) : _eff_b(eff_b), _eff_c(eff_c), _eff_t(-1), _eff_l(eff_light) { }
@@ -92,11 +113,11 @@ namespace Rivet {
     }
 
     /// Compare to another, for use in the projection system
-    int cmp(const JetEffSmearFn& other) const {
+    CmpState cmp(const JetEffSmearFn& other) const {
       // cout << "Eff hashes = " << get_address(efn) << "," << get_address(other.efn) << "; "
-      //      << "smear hashes = " << get_address(sfn) << "," << get_address(other.sfn) << endl;
-      if (get_address(sfn) == 0 || get_address(other.sfn) == 0) return UNDEFINED;
-      if (get_address(efn) == 0 || get_address(other.efn) == 0) return UNDEFINED;
+      //      << "smear hashes = " << get_address(sfn) << "," << get_address(other.sfn) << '\n';
+      if (get_address(sfn) == 0 || get_address(other.sfn) == 0) return CmpState::NEQ;
+      if (get_address(efn) == 0 || get_address(other.efn) == 0) return CmpState::NEQ;
       return Rivet::cmp(get_address(sfn), get_address(other.sfn)) || Rivet::cmp(get_address(efn), get_address(other.efn));
     }
 
@@ -129,8 +150,9 @@ namespace Rivet {
   };
   using jetEffFilter = JetEffFilter;
 
-  //@}
+  /// @}
 
+  /// @}
 
 }
 

@@ -1,0 +1,195 @@
+{
+    "1204444": [
+        "Study of the reaction $e^{+}e^{-}\\to \\psi(2S)\\pi^{-}\\pi^{-}$ via initial-state radiation at BaBar", 
+        "BaBar", 
+        "10.1103/PhysRevD.89.111103", 
+        null, 
+        "1211.6271", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-12-007", 
+            "SLAC-PUB-15292"
+        ]
+    ], 
+    "1254862": [
+        "Measurement of Collins asymmetries in inclusive production of charged pion pairs in $e^+e^-$ annihilation at BABAR", 
+        "BaBar", 
+        "10.1103/PhysRevD.90.052003", 
+        null, 
+        "1309.5278", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-13-012", 
+            "SLAC-PUB-15700"
+        ]
+    ], 
+    "1262705": [
+        "Search for lepton-number violating <math display=\"inline\"><mrow><msup><mrow><mi>B</mi></mrow><mrow><mo>+</mo></mrow></msup><mo stretchy=\"false\">\u2192</mo><msup><mrow><mi>X</mi></mrow><mrow><mo>\u2212</mo></mrow></msup><msup><mrow><mo>\u2113</mo></mrow><mrow><mo>+</mo></mrow></msup><msup><mrow><mo>\u2113</mo></mrow><mrow><mo>\u2032</mo><mo>+</mo></mrow></msup></mrow></math> decays", 
+        "BaBar", 
+        "10.1103/PhysRevD.89.011102", 
+        null, 
+        "1310.8238", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-13-016", 
+            "SLAC-PUB-14868"
+        ]
+    ], 
+    "1266952": [
+        "Evidence for the decay $B^0 \\to \\omega \\omega$ and search for $B^0 \\to \\omega \\phi$", 
+        "BaBar", 
+        "10.1103/PhysRevD.89.051101", 
+        null, 
+        "1312.0056", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-13-018", 
+            "SLAC-PUB-15846"
+        ]
+    ], 
+    "1272843": [
+        "Measurement of the $B \\to X_s l^+l^-$ branching fraction and search for direct CP violation from a sum of exclusive final states", 
+        "BaBar", 
+        "10.1103/PhysRevLett.112.211802", 
+        null, 
+        "1312.5364", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-13-01", 
+            "SLAC-PUB-15866"
+        ]
+    ], 
+    "1273667": [
+        "Search for the decay $\\bar{B}^0 \\to \\Lambda_c^+ \\bar{p}p \\bar{p}$", 
+        "BaBar", 
+        "10.1103/PhysRevD.89.071102", 
+        null, 
+        "1312.6800", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-13-014", 
+            "SLAC-PUB-15772"
+        ]
+    ], 
+    "1278588": [
+        "Evidence for the baryonic decay $\\bar{B}^0 \\to D^0\\Lambda\\bar{\\Lambda}$", 
+        "BaBar", 
+        "10.1103/PhysRevD.89.112002", 
+        null, 
+        "1401.5990", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-13-008", 
+            "SLAC-PUB-15835"
+        ]
+    ], 
+    "1286317": [
+        "Antideuteron production in $\\Upsilon(nS)$ decays and in $e^+e^- \\to q\\bar{q}$ at $\\sqrt{s} \\approx 10.58$ GeV", 
+        "BaBar", 
+        "10.1103/PhysRevD.89.111102", 
+        null, 
+        "1403.4409", 
+        "ins1286317", 
+        null, 
+        [
+            "SLAC-PUB-15925"
+        ]
+    ], 
+    "1287632": [
+        "Dalitz plot analysis of $\\eta_c \\to K^+ K^- \\eta$ and $\\eta_c \\to K^+ K^- \\pi^0$ in two-photon interactions", 
+        "BaBar", 
+        "10.1103/PhysRevD.89.112004", 
+        null, 
+        "1403.7051", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-13-021", 
+            "SLAC-PUB-15928"
+        ]
+    ], 
+    "1287920": [
+        "Cross sections for the reactions $e^+ e^-\\to K_S^0 K_L^0$, $K_S^0 K_L^0 \\pi^+\\pi^-$, $K_S^0 K_S^0 \\pi^+\\pi^-$, and $K_S^0 K_S^0 K^+K^-$ from events with initial-state radiation", 
+        "BaBar", 
+        "10.1103/PhysRevD.89.092002", 
+        null, 
+        "1403.7593", 
+        "ins1287920", 
+        null, 
+        [
+            "SLAC-PUB-15934"
+        ]
+    ], 
+    "1298980": [
+        "Measurements of direct CP asymmetries in $B\u2192X_s\u03b3$ decays using sum of exclusive decays", 
+        "BaBar", 
+        "10.1103/PhysRevD.90.092001", 
+        null, 
+        "1406.0534", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-15947"
+        ]
+    ], 
+    "1300153": [
+        "Search for a Dark Photon in $e^+e^-$ Collisions at BaBar", 
+        "BaBar", 
+        "10.1103/PhysRevLett.113.201801", 
+        null, 
+        "1406.2980", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-14-002", 
+            "SLAC-PUB-15979"
+        ]
+    ], 
+    "1302816": [
+        "The Physics of the B Factories", 
+        "BaBar", 
+        "10.1140/epjc/s10052-014-3026-9", 
+        null, 
+        "1406.6311", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-15968", 
+            "KEK-PREPRINT-2014-3", 
+            "FERMILAB-PUB-14-262-T"
+        ]
+    ], 
+    "1322376": [
+        "Bottomonium spectroscopy and radiative transitions involving the $\\chi_bJ(1P,2P)$ states at BABAR", 
+        "BaBar", 
+        "10.1103/PhysRevD.90.112010", 
+        null, 
+        "1410.3902", 
+        null, 
+        null, 
+        [
+            "BABAR-PUB-14-005", 
+            "SLAC-PUB-16123"
+        ]
+    ], 
+    "1326639": [
+        "Search for new $\\pi^0$-like particles produced in association with a $\\tau$-lepton pair", 
+        "BaBar", 
+        "10.1103/PhysRevD.90.112011", 
+        null, 
+        "1411.1806", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-16139", 
+            "BABAR-PUB-14-008"
+        ]
+    ]
+}

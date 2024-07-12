@@ -39,7 +39,7 @@ protected:
   }
   
   /// Compare projections
-  int compare(const Projection& p) const {
+  CmpState compare(const Projection& p) const {
     return mkNamedPCmp(p, "FSSumETFwdCentrality");
   }
 
@@ -75,7 +75,7 @@ protected:
   }
   
   /// Compare projections
-  int compare(const Projection& p) const {
+  CmpState compare(const Projection& p) const {
     return mkNamedPCmp(p, "MBF") || mkNamedPCmp(p, "MBB");
   }
 

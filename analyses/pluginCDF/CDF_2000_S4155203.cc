@@ -6,14 +6,12 @@ namespace Rivet {
 
 
   /// @brief CDF Run I Z \f$ p_\perp \f$ in Drell-Yan events
+  ///
   /// @author Hendrik Hoeth
   class CDF_2000_S4155203 : public Analysis {
   public:
 
-    /// Constructor
-    CDF_2000_S4155203()
-      : Analysis("CDF_2000_S4155203")
-    {    }
+    RIVET_DEFAULT_ANALYSIS_CTOR(CDF_2000_S4155203);
 
 
     /// @name Analysis methods
@@ -22,11 +20,11 @@ namespace Rivet {
     void init() {
       // Set up projections
       ZFinder zfinder(FinalState(), Cuts::open(), PID::ELECTRON,
-                      66*GeV, 116*GeV, 0.0, ZFinder::NOCLUSTER);
+                      66*GeV, 116*GeV, 0.0, ZFinder::ClusterPhotons::NONE);
       declare(zfinder, "ZFinder");
 
       // Book histogram
-      _hist_zpt = bookHisto1D(1, 1, 1);
+      book(_hist_zpt ,1, 1, 1);
     }
 
 
@@ -46,7 +44,7 @@ namespace Rivet {
 
       MSG_DEBUG("Dilepton mass = " << pZ.mass()/GeV << " GeV");
       MSG_DEBUG("Dilepton pT   = " << pZ.pT()/GeV << " GeV");
-      _hist_zpt->fill(pZ.pT()/GeV, e.weight());
+      _hist_zpt->fill(pZ.pT()/GeV);
     }
 
 
@@ -65,7 +63,6 @@ namespace Rivet {
 
 
 
-  // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CDF_2000_S4155203);
+  RIVET_DECLARE_ALIASED_PLUGIN(CDF_2000_S4155203, CDF_2000_I505738);
 
 }

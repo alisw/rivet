@@ -11,7 +11,7 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(ATLAS_2015_I1360290);
+    RIVET_DEFAULT_ANALYSIS_CTOR(ATLAS_2015_I1360290);
 
 
     /// @name Analysis methods
@@ -35,17 +35,17 @@ namespace Rivet {
       
       for (int i = 0, N = centData.size(); i < N; ++i) {
 	// eta hists starts from table 55 ( first 1.7 < pT < 2.0)
-        histEta1[centData[i]] = bookHisto1D(55 + i, 1, 1);
+        book(histEta1[centData[i]], 55 + i, 1, 1);
 	// From table 64, 6.7 < pT < 7.7
-	histEta2[centData[i]] = bookHisto1D(64 + i, 1, 1 );
+	book(histEta2[centData[i]], 64 + i, 1, 1 );
 	// From table 73, 19.9 < pT < 22.8
-	histEta3[centData[i]] =  bookHisto1D(73 + i, 1, 1 );
+	book(histEta3[centData[i]], 73 + i, 1, 1 );
 	// From table 82, 59.8 < pT < 94.8
-	histEta4[centData[i]] =  bookHisto1D(82 + i, 1, 1 );
+	book(histEta4[centData[i]], 82 + i, 1, 1 );
 	// pt hists starts from table 2 on hepmc, |eta| < 2.0
-	histpT[centData[i]] =  bookHisto1D(2 + i, 1, 1);
+	book(histpT[centData[i]], 2 + i, 1, 1);
 	// keep track of sow in centrality bins.
-	sow[centData[i]] = bookCounter("sow_" + toString(i));
+	book(sow[centData[i]], "sow_" + toString(i));
       }
 
     }
@@ -54,7 +54,6 @@ namespace Rivet {
     /// Perform the per-event analysis
     void analyze(const Event& event) {
       if ( !apply<ATLAS::MinBiasTrigger>(event, "Trigger")() ) vetoEvent;
-      const double weight = event.weight();
      const CentralityProjection& cent = apply<CentralityProjection>(event,"sumETFwd");
       double c = cent();
       // Find the correct centrality histograms
@@ -71,16 +70,16 @@ namespace Rivet {
       // Find the correct sow.
       auto sItr = sow.upper_bound(c);
       if (sItr == sow.end()) return;
-      sItr->second->fill(weight);
+      sItr->second->fill();
 
       for (const auto& p : apply<ChargedFinalState>(event,"CFS").particles()) {
         double pT = p.pT();
 	double eta = abs(p.eta());
-	if (pT > 1.7 && pT < 2.0) hItr1->second->fill(eta, weight/2.0);
-	else if (pT > 6.7 && pT < 7.7) hItr2->second->fill(eta, weight/2.0);
-	else if (pT > 19.9 && pT < 22.8) hItr3->second->fill(eta, weight/2.0);
-	else if (pT > 59.8 && pT < 94.8) hItr4->second->fill(eta, weight/2.0);
-	if (eta < 2) hpTItr->second->fill(pT, weight/2./M_PI/pT/4.);
+	if (pT > 1.7 && pT < 2.0) hItr1->second->fill(eta, 0.5);
+	else if (pT > 6.7 && pT < 7.7) hItr2->second->fill(eta, 0.5);
+	else if (pT > 19.9 && pT < 22.8) hItr3->second->fill(eta, 0.5);
+	else if (pT > 59.8 && pT < 94.8) hItr4->second->fill(eta, 0.5);
+	if (eta < 2) hpTItr->second->fill(pT, 1.0/2./M_PI/pT/4.);
       
       }
 
@@ -123,7 +122,7 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2015_I1360290);
+  RIVET_DECLARE_PLUGIN(ATLAS_2015_I1360290);
 
 
 }

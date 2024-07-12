@@ -1,12 +1,12 @@
 #ifndef RIVET_MATH_LORENTZTRANS
 #define RIVET_MATH_LORENTZTRANS
 
-#include "Rivet/Math/MathHeader.hh"
+#include "Rivet/Math/MathConstants.hh"
 #include "Rivet/Math/MathUtils.hh"
 #include "Rivet/Math/MatrixN.hh"
 #include "Rivet/Math/Matrix3.hh"
 #include "Rivet/Math/Vector4.hh"
-#include <iostream>
+#include <ostream>
 
 namespace Rivet {
 
@@ -33,16 +33,6 @@ namespace Rivet {
     static double gamma2beta(double gamma) {
       return sqrt(1 - sqr(1/gamma));
     }
-
-    // /// Calculate the \f$ \gamma \f$ factor from \f$ \bar{\beta}^2 = 1-\beta^2 \f$
-    // static double betabarsq2gamma(double betabarsq) {
-    //   return 1.0 / sqrt(betabarsq);
-    // }
-
-    // /// Calculate \f$ \bar{\beta}^2 = 1-\beta^2 \f$ from the \f$ \gamma \f$ factor
-    // static double gamma2betabarsq(double gamma) {
-    //   return 1.0 / sqr(gamma);
-    // }
 
     //@}
 
@@ -135,7 +125,7 @@ namespace Rivet {
     /// Get the \f$ \vec\beta \f$ vector for an active Lorentz boost
     Vector3 betaVec() const {
       FourMomentum boost(_boostMatrix.getColumn(0)); //< @todo WRONG?!
-      //cout << "!!!" << boost << endl;
+      //cout << "!!!" << boost << '\n';
       if (boost.isZero()) return Vector3();
       assert(boost.E() > 0);
       const double beta = boost.p3().mod() / boost.E();
@@ -296,7 +286,7 @@ namespace Rivet {
     return toString(lt.toMatrix());
   }
 
-  inline ostream& operator<<(std::ostream& out, const LorentzTransform& lt) {
+  inline std::ostream& operator<<(std::ostream& out, const LorentzTransform& lt) {
     out << toString(lt);
     return out;
   }

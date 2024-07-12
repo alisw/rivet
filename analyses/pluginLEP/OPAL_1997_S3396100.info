@@ -34,3 +34,7 @@ BibTeX: '@Article{Alexander:1996qj,
      doi       = "10.1007/s002880050349",
      SLACcitation  = "%%CITATION = ZEPYA,C73,569;%%"
 }'
+
+ReleaseTests:
+ - $A LEP-91
+

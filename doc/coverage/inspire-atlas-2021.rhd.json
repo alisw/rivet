@@ -1,0 +1,588 @@
+{
+    "1744212": [
+        "Measurement of the jet mass in high transverse momentum  $Z(\\rightarrow b\\overline{b})\\gamma$ production at $\\sqrt{s}= 13$ TeV using the ATLAS detector", 
+        "ATLAS", 
+        "10.1016/j.physletb.2020.135991", 
+        "2683022", 
+        "1907.07093", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2019-115"
+        ]
+    ], 
+    "1768644": [
+        "Measurement of the relative $B^{\\pm}_{c}/B^{\\pm}$ production cross section with the ATLAS detector at $\\sqrt{s}=8$ TeV", 
+        "ATLAS", 
+        "10.1103/PhysRevD.104.012010", 
+        "2703541", 
+        "1912.02672", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2019-194"
+        ]
+    ], 
+    "1775251": [
+        "Longitudinal Flow Decorrelations in Xe+Xe Collisions at $\\sqrt{s_{\\mathrm{NN}}}=5.44$  TeV with the ATLAS Detector", 
+        "ATLAS", 
+        "10.1103/PhysRevLett.126.122301", 
+        "2706266", 
+        "2001.04201", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2019-275"
+        ]
+    ], 
+    "1775750": [
+        "Search for the $HH \\rightarrow b \\bar{b} b \\bar{b}$ process via vector-boson fusion production using proton-proton collisions at $\\sqrt{s} = 13$ TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1007/JHEP07(2020)108", 
+        "2706374", 
+        "2001.05178", 
+        "ins1775750", 
+        null, 
+        [
+            "CERN-EP-2019-267"
+        ]
+    ], 
+    "1776624": [
+        "Measurement of the $CP$-violating phase $\\phi_s$ in $B^0_s \\to J/\\psi\\phi$ decays in ATLAS at 13 TeV", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-021-09011-0", 
+        "2706856", 
+        "2001.07115", 
+        "ins1776624", 
+        null, 
+        [
+            "CERN-EP-2019-218"
+        ]
+    ], 
+    "1790250": [
+        "Higgs boson production cross-section measurements and their EFT interpretation in the $4\\ell $ decay channel at $\\sqrt{s}=$13 TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-020-8227-9", 
+        "2714917", 
+        "2004.03447", 
+        "ins1790250", 
+        null, 
+        [
+            "CERN-EP-2020-034"
+        ]
+    ], 
+    "1801434": [
+        "Measurements of top-quark pair single- and double-differential cross-sections in the all-hadronic channel in $pp$ collisions at $\\sqrt{s}=13~\\textrm{TeV}$ using the ATLAS detector", 
+        "ATLAS", 
+        "10.1007/JHEP01(2021)033", 
+        "2721026", 
+        "2006.09274", 
+        "ins1801434", 
+        null, 
+        [
+            "CERN-EP-2020-063"
+        ]
+    ], 
+    "1802523": [
+        "Search for new non-resonant phenomena in high-mass dilepton final states with the ATLAS detector", 
+        "ATLAS", 
+        "10.1007/JHEP11(2020)005", 
+        "2721837", 
+        "2006.12946", 
+        "ins1802523", 
+        null, 
+        [
+            "CERN-EP-2020-066"
+        ]
+    ], 
+    "1803608": [
+        "Differential cross-section measurements for the electroweak production of dijets in association with a $Z$ boson in proton\u2013proton collisions at ATLAS", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-020-08734-w", 
+        "2722304", 
+        "2006.15458", 
+        "ins1803608", 
+        null, 
+        [
+            "CERN-EP-2020-045"
+        ]
+    ], 
+    "1805233": [
+        "Measurement of single top-quark production in association with a W boson in the single-lepton channel at $\\sqrt{s} = 8\\,\\text {TeV}$ with the ATLAS detector", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-021-09371-7", 
+        "2722868", 
+        "2007.01554", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2019-221"
+        ]
+    ], 
+    "1805279": [
+        "Jet energy scale and resolution measured in proton\u2013proton collisions at $\\sqrt{s}=13$\u00a0TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-021-09402-3", 
+        "2722869", 
+        "2007.02645", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2020-083"
+        ]
+    ], 
+    "1805282": [
+        "Measurements of $WH$ and $ZH$ production in the $H \\rightarrow b\\bar{b}$ decay channel in $pp$ collisions at 13 TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-020-08677-2", 
+        "2723187", 
+        "2007.02873", 
+        "ins1805282", 
+        null, 
+        [
+            "CERN-EP-2020-087"
+        ]
+    ], 
+    "1806929": [
+        "A search for the dimuon decay of the Standard Model Higgs boson with the ATLAS detector", 
+        "ATLAS", 
+        "10.1016/j.physletb.2020.135980", 
+        "2724036", 
+        "2007.07830", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2020-117"
+        ]
+    ], 
+    "1808726": [
+        "Measurement of hadronic event shapes in high-p$_{T}$ multijet final states at $ \\sqrt{s} $ = 13 TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1007/JHEP01(2021)188", 
+        "2725153", 
+        "2007.12600", 
+        "ins1808726", 
+        null, 
+        [
+            "CERN-EP-2020-077"
+        ]
+    ], 
+    "1810348": [
+        "Measurement of the associated production of a Higgs boson decaying into $b$-quarks with a vector boson at high transverse momentum in $pp$ collisions at $\\sqrt{s} = 13$ TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1016/j.physletb.2021.136204", 
+        "2727500", 
+        "2008.02508", 
+        "ins1810348", 
+        null, 
+        [
+            "CERN-EP-2020-093"
+        ]
+    ], 
+    "1811464": [
+        "Measurement of light-by-light scattering and search for axion-like particles with 2.2 nb$^{-1}$ of Pb+Pb data with the ATLAS detector", 
+        "ATLAS", 
+        "10.1007/JHEP03(2021)243", 
+        "2727998", 
+        "2008.05355", 
+        "ins1811464", 
+        null, 
+        [
+            "CERN-EP-2020-135"
+        ]
+    ], 
+    "1812090": [
+        "Search for type-III seesaw heavy leptons in dilepton final states in $pp$ collisions at $\\sqrt{s}$ = 13 TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-021-08929-9", 
+        "2728390", 
+        "2008.07949", 
+        "ins1812090", 
+        null, 
+        [
+            "CERN-EP-2020-130"
+        ]
+    ], 
+    "1812957": [
+        "Medium-Induced Modification of $Z$-Tagged Charged Particle Yields in $Pb+Pb$ Collisions at 5.02 TeV with the ATLAS Detector", 
+        "ATLAS", 
+        "10.1103/PhysRevLett.126.072301", 
+        "2728561", 
+        "2008.09811", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2020-148"
+        ]
+    ], 
+    "1816107": [
+        "Optimisation of large-radius jet reconstruction for the ATLAS detector in 13 TeV proton\u2013proton collisions", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-021-09054-3", 
+        "2730141", 
+        "2009.04986", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2020-134"
+        ]
+    ], 
+    "1820316": [
+        "Search for heavy resonances decaying into a pair of Z bosons in the $\\ell ^+\\ell ^-\\ell '^+\\ell '^-$ and $\\ell ^+\\ell ^-\\nu {{\\bar{\\nu }}}$ final states using 139 $\\mathrm {fb}^{-1}$ of proton\u2013proton collisions at $\\sqrt{s} = 13\\,$TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-021-09013-y", 
+        "2737350", 
+        "2009.14791", 
+        "ins1820316", 
+        null, 
+        [
+            "CERN-EP-2020-153"
+        ]
+    ], 
+    "1821239": [
+        "Search for phenomena beyond the Standard Model in events with large $b$-jet multiplicity using the ATLAS detector at the LHC", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-020-08730-0", 
+        "2739342", 
+        "2010.01015", 
+        "ins1821239", 
+        null, 
+        [
+            "CERN-EP-2020-147"
+        ]
+    ], 
+    "1821703": [
+        "Search for pair production of scalar leptoquarks decaying into first- or second-generation leptons and top quarks in proton\u2013proton collisions at $\\sqrt{s}$ = 13 TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-021-09009-8", 
+        "2740507", 
+        "2010.02098", 
+        "ins1821703", 
+        null, 
+        [
+            "CERN-EP-2020-160"
+        ]
+    ], 
+    "1822077": [
+        "Observation of photon-induced $W^+W^-$ production in $pp$ collisions at $\\sqrt{s}=13$ TeV using the ATLAS detector", 
+        "ATLAS", 
+        "10.1016/j.physletb.2021.136190", 
+        "2740726", 
+        "2010.04019", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2020-165"
+        ]
+    ], 
+    "1822529": [
+        "Search for Dark Matter Produced in Association with a Dark Higgs Boson Decaying into $W^\\pm W^\\mp$ or $ZZ$ in Fully Hadronic Final States from $\\sqrt{s}=13$ TeV pp Collisions Recorded with the ATLAS Detector", 
+        "ATLAS", 
+        "10.1103/PhysRevLett.126.121802", 
+        "2741385", 
+        "2010.06548", 
+        "ins1822529", 
+        null, 
+        [
+            "CERN-EP-2020-172"
+        ]
+    ], 
+    "1826521": [
+        "Search for Higgs boson production in association with a high-energy photon via vector-boson fusion with decay into bottom quark pairs at $\\sqrt{s}$=13 TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1007/JHEP03(2021)268", 
+        "2742793", 
+        "2010.13651", 
+        "ins1826521", 
+        null, 
+        [
+            "CERN-EP-2020-179"
+        ]
+    ], 
+    "1827025": [
+        "Search for squarks and gluinos in final states with jets and missing transverse momentum using 139 fb$^{-1}$ of $\\sqrt{s}$ =13 TeV $pp$ collision data with the ATLAS detector", 
+        "ATLAS", 
+        "10.1007/JHEP02(2021)143", 
+        "2742847", 
+        "2010.14293", 
+        "ins1827025", 
+        null, 
+        [
+            "CERN-EP-2020-166"
+        ]
+    ], 
+    "1829872": [
+        "Search for dark matter in association with an energetic photon in $pp$ collisions at $\\sqrt{s}$ = 13 TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1007/JHEP02(2021)226", 
+        "2744036", 
+        "2011.05259", 
+        "ins1829872", 
+        null, 
+        [
+            "CERN-EP-2020-178"
+        ]
+    ], 
+    "1829873": [
+        "Search for a heavy Higgs boson decaying into a Z boson and another heavy Higgs boson in the $\\ell \\ell bb$ and $\\ell \\ell WW$ final states in $pp$ collisions at $\\sqrt{s}=13$ $\\text {TeV}$ with the ATLAS detector", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-021-09117-5", 
+        "2744133", 
+        "2011.05639", 
+        "ins1829873", 
+        null, 
+        [
+            "CERN-EP-2020-191"
+        ]
+    ], 
+    "1831503": [
+        "Measurements of Higgs bosons decaying to bottom quarks from vector boson fusion production with the ATLAS experiment at $\\sqrt{s}=13\\,\\text {TeV}$", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-021-09192-8", 
+        "2744843", 
+        "2011.08280", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2020-195"
+        ]
+    ], 
+    "1831504": [
+        "Search for Displaced Leptons in $\\sqrt{s} = 13$ TeV $pp$ Collisions with the ATLAS Detector", 
+        "ATLAS", 
+        "10.1103/PhysRevLett.127.051802", 
+        "2744332", 
+        "2011.07812", 
+        "ins1831504", 
+        null, 
+        [
+            "CERN-EP-2020-205"
+        ]
+    ], 
+    "1831992": [
+        "Search for trilepton resonances from chargino and neutralino pair production in $\\sqrt{s}$ = 13 TeV $pp$ collisions with the ATLAS detector", 
+        "ATLAS", 
+        "10.1103/PhysRevD.103.112003", 
+        "2745558", 
+        "2011.10543", 
+        "ins1831992", 
+        null, 
+        [
+            "CERN-EP-2020-201"
+        ]
+    ], 
+    "1834360": [
+        "Muon reconstruction and identification efficiency in ATLAS using the full Run 2 $pp$ collision data set at $\\sqrt{s}=13$ TeV", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-021-09233-2", 
+        "2746368", 
+        "2012.00578", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2020-199"
+        ]
+    ], 
+    "1835604": [
+        "Search for new phenomena with top quark pairs in final states with one lepton, jets, and missing transverse momentum in $pp$ collisions at $ \\sqrt{s} $ = 13 TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1007/JHEP04(2021)174", 
+        "2746797", 
+        "2012.03799", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2020-177"
+        ]
+    ], 
+    "1839446": [
+        "Search for squarks and gluinos in final states with one isolated lepton, jets, and missing transverse momentum at $\\sqrt{s}=13$\u00a0 with the ATLAS detector", 
+        "ATLAS", 
+        "10.1140/epjc/s10052-021-09344-w", 
+        "2748580", 
+        "2101.01629", 
+        "ins1839446", 
+        null, 
+        [
+            "CERN-EP-2020-228"
+        ]
+    ], 
+    "1840598": [
+        "The ATLAS Fast TracKer system", 
+        "ATLAS", 
+        "10.1088/1748-0221/16/07/P07006", 
+        "2749130", 
+        "2101.05078", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2020-232"
+        ]
+    ], 
+    "1842843": [
+        "Two-particle azimuthal correlations in photonuclear ultraperipheral Pb+Pb collisions at 5.02 TeV with ATLAS", 
+        "ATLAS", 
+        "10.1103/PhysRevC.104.014903", 
+        "2750359", 
+        "2101.10771", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2020-246"
+        ]
+    ], 
+    "1843001": [
+        "Search for pair production of third-generation scalar leptoquarks decaying into a top quark and a \u03c4-lepton in pp collisions at $ \\sqrt{s} $ = 13 TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1007/JHEP06(2021)179", 
+        "2750498", 
+        "2101.11582", 
+        "ins1843001", 
+        null, 
+        [
+            "CERN-EP-2020-241"
+        ]
+    ], 
+    "1843269": [
+        "Search for doubly and singly charged Higgs bosons decaying into vector bosons in multi-lepton final states with the ATLAS detector using proton-proton collisions at $\\sqrt{s}$ = 13 TeV", 
+        "ATLAS", 
+        "10.1007/JHEP06(2021)146", 
+        "2750530", 
+        "2101.11961", 
+        "ins1843269", 
+        null, 
+        [
+            "CERN-EP-2020-240"
+        ]
+    ], 
+    "1843959": [
+        "Search for new phenomena in final states with $b$-jets and missing transverse momentum in $\\sqrt{s}=13$ TeV $pp$ collisions with the ATLAS detector", 
+        "ATLAS", 
+        "10.1007/JHEP05(2021)093", 
+        "2750578", 
+        "2101.12527", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2021-001"
+        ]
+    ], 
+    "1844425": [
+        "Search for new phenomena in events with two opposite-charge leptons, jets and missing transverse momentum in pp collisions at $ \\sqrt{\\mathrm{s}} $ = 13 TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1007/JHEP04(2021)165", 
+        "2750825", 
+        "2102.01444", 
+        "ins1844425", 
+        null, 
+        [
+            "CERN-EP-2020-243"
+        ]
+    ], 
+    "1847643": [
+        "Search for charged Higgs bosons decaying into a top quark and a bottom quark at $ \\sqrt{\\mathrm{s}} $ = 13 TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1007/JHEP06(2021)145", 
+        "2752605", 
+        "2102.10076", 
+        "ins1847643", 
+        null, 
+        [
+            "CERN-EP-2021-004"
+        ]
+    ], 
+    "1847779": [
+        "Search for new phenomena in events with an energetic jet and missing transverse momentum in $pp$ collisions at $\\sqrt {s}$ =13  TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1103/PhysRevD.103.112006", 
+        "2752675", 
+        "2102.10874", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2020-238"
+        ]
+    ], 
+    "1849519": [
+        "Performance of the ATLAS RPC detector and Level-1 muon barrel trigger at $\\sqrt{s}=13$ TeV", 
+        "ATLAS", 
+        "10.1088/1748-0221/16/07/P07029", 
+        "2753039", 
+        "2103.01029", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2020-245"
+        ]
+    ], 
+    "1849535": [
+        "Measurements of differential cross-sections in four-lepton events in 13 TeV proton-proton collisions with the ATLAS detector", 
+        "ATLAS", 
+        "10.1007/JHEP07(2021)005", 
+        "2753518", 
+        "2103.01918", 
+        "ins1849535", 
+        null, 
+        [
+            "CERN-EP-2021-019"
+        ]
+    ], 
+    "1852325": [
+        "Evidence for Higgs boson decays to a low-mass dilepton system and a photon in $pp$ collisions at $\\sqrt {s}$ = 13 TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1016/j.physletb.2021.136412", 
+        "2757278", 
+        "2103.10322", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2021-035"
+        ]
+    ], 
+    "1852328": [
+        "Measurements of $W^+W^-+\\ge 1~$jet production cross-sections in $pp$ collisions at $\\sqrt{s}=13~$TeV with the ATLAS detector", 
+        "ATLAS", 
+        "10.1007/JHEP06(2021)003", 
+        "2757281", 
+        "2103.10319", 
+        "ins1852328", 
+        null, 
+        [
+            "CERN-EP-2021-030"
+        ]
+    ], 
+    "1865746": [
+        "Search for charged-lepton-flavour violation in Z-boson decays with the ATLAS detector", 
+        "ATLAS", 
+        "10.1038/s41567-021-01225-z", 
+        "2767691", 
+        "2105.12491", 
+        "ins1865746", 
+        null, 
+        [
+            "CERN-EP-2021-067"
+        ]
+    ], 
+    "1869133": [
+        "Measurements of sensor radiation damage in the ATLAS inner detector using leakage currents", 
+        "ATLAS", 
+        "10.1088/1748-0221/16/08/P08025", 
+        "2773132", 
+        "2106.09287", 
+        null, 
+        null, 
+        [
+            "CERN-EP-2021-055"
+        ]
+    ], 
+    "1885958": [
+        "Test of the universality of $\\tau$ and $\\mu$ lepton couplings in $W$-boson decays with the ATLAS detector", 
+        "ATLAS", 
+        "10.1038/s41567-021-01236-w", 
+        "2776600", 
+        null, 
+        null, 
+        null, 
+        []
+    ]
+}

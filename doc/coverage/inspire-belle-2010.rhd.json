@@ -1,0 +1,330 @@
+{
+    "797628": [
+        "Measurement of CP asymmetries in B0 ---> K0 pi0 decays", 
+        "Belle", 
+        "10.1103/PhysRevD.81.011101", 
+        null, 
+        "0809.4366", 
+        null, 
+        null, 
+        [
+            "BELLE-PUB-299", 
+            "BELLE-CONF-0830"
+        ]
+    ], 
+    "798510": [
+        "Evidence for B ---> K eta-prime gamma Decays at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.81.111104", 
+        null, 
+        "0810.0804", 
+        null, 
+        null, 
+        [
+            "BELLE-CONF-0820"
+        ]
+    ], 
+    "824768": [
+        "Measurement Of |V(ub)| From Inclusive Charmless Semileptonic B Decays", 
+        "Belle", 
+        "10.1103/PhysRevLett.104.021801", 
+        null, 
+        "0907.0379", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2009-14", 
+            "KEK-PREPRINT-2009-12"
+        ]
+    ], 
+    "829275": [
+        "Search for Lepton Flavor and Lepton Number Violating tau Decays into a Lepton and Two Charged Mesons", 
+        "Belle", 
+        "10.1016/j.physletb.2009.11.061", 
+        null, 
+        "0908.3156", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2009-20", 
+            "BELLE-PREPRINT-2009-20", 
+            "NTLP-PREPRINT-2009-02"
+        ]
+    ], 
+    "835104": [
+        "First Measurement of Inclusive $B \\to X_s \\eta$ Decays", 
+        "Belle", 
+        "10.1103/PhysRevLett.105.191803", 
+        null, 
+        "0910.4751", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2010-19", 
+            "KEK-PREPRINT-2010-30"
+        ]
+    ], 
+    "839934": [
+        "Evidence for a new resonance and search for the Y(4140) in the gamma gamma ---> phi J/psi process", 
+        "Belle", 
+        "10.1103/PhysRevLett.104.112004", 
+        null, 
+        "0912.2383", 
+        null, 
+        null, 
+        [
+            "BELLE-PRERPINT-2009-24", 
+            "KEK-PREPRINT-2009-30", 
+            "BIHEP-EP-2009-003"
+        ]
+    ], 
+    "840009": [
+        "Measurement of the branching fractions for B-0 --> Ds*+pi- and B-0 --> Ds*-K+ decays", 
+        "Belle", 
+        "10.1103/PhysRevD.81.031101", 
+        null, 
+        "0912.2594", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2009-25", 
+            "KAK-PREPRINT-2009-33"
+        ]
+    ], 
+    "841003": [
+        "Observation of a charmonium-like enhancement in the gamma gamma ---> omega J/psi process", 
+        "Belle", 
+        "10.1103/PhysRevLett.104.092001", 
+        null, 
+        "0912.4451", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2009-29", 
+            "KEK-PREPRINT-2009-38"
+        ]
+    ], 
+    "841618": [
+        "Measurement of the branching fractions and the invariant mass distributions for $\\tau^- \\to h^-h^+h^-\\nu_{\\tau}$ decays", 
+        "Belle", 
+        "10.1103/PhysRevD.81.113007", 
+        null, 
+        "1001.0083", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2009-23", 
+            "KEK-PREPRINT-2009-26"
+        ]
+    ], 
+    "843256": [
+        "Search for CP violation in the decays $D^+_{(s)} \\to K_S^0\\pi^+$ and $D^+_{(s)} \\to K_S^0K^+$", 
+        "Belle", 
+        "10.1103/PhysRevLett.104.181602", 
+        null, 
+        "1001.3202", 
+        null, 
+        null, 
+        []
+    ], 
+    "843520": [
+        "Search for $B^0 \\to K^{*0} \\overline{K}{}^{*0}$, $B^0 \\to K^{*0} K^{*0}$ and $B^0 \\to K^+\\pi^- K^{\\mp}\\pi^{\\pm}$ Decays", 
+        "Belle", 
+        "10.1103/PhysRevD.81.071101", 
+        null, 
+        "1001.4595", 
+        null, 
+        null, 
+        []
+    ], 
+    "847922": [
+        "Search for Lepton Flavor Violating tau- Decays into \\ell-K0s and \\ell-K0sK0s", 
+        "Belle", 
+        "10.1016/j.physletb.2010.07.012", 
+        null, 
+        "1003.1183", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2009-41", 
+            "BELLE-PREPRINT-2010-02", 
+            "NTLP-PREPRINT-2010-01"
+        ]
+    ], 
+    "848650": [
+        "Search for leptonic decays of $D^0$ mesons", 
+        "Belle", 
+        "10.1103/PhysRevD.81.091102", 
+        null, 
+        "1003.2345", 
+        null, 
+        null, 
+        []
+    ], 
+    "849165": [
+        "Evidence for direct CP violation in the decay B->D(*)K, D->KsPi+Pi- and measurement of the CKM phase phi3", 
+        "Belle", 
+        "10.1103/PhysRevD.81.112002", 
+        null, 
+        "1003.3360", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2010-4"
+        ]
+    ], 
+    "850301": [
+        "Observation of $B_s^0 -> D_s^{*-} \\pi^+, B_s^0 - >D_s^{(*)-} \\ rho^+$ Decays and Measurement of $B_s^0 -> D_s^{*-} \\rho^+$ Polarization", 
+        "Belle", 
+        "10.1103/PhysRevLett.104.231801", 
+        null, 
+        "1003.5312", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2010-5", 
+            "BELLE-PREPRINT-2010-7"
+        ]
+    ], 
+    "850435": [
+        "Measurement of $\\Upsilon$ (5S) decays to $B^0$ and $B^+$ mesons", 
+        "Belle", 
+        "10.1103/PhysRevD.81.112003", 
+        null, 
+        "1003.5885", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2010-3", 
+            "KEK-PREPRINT-2009-43"
+        ]
+    ], 
+    "854539": [
+        "Search for a Low Mass Particle Decaying into $\\mu^+ \\mu^-$ in $B^0 \\to K^{*0} X$ and $B^0 \\to \\rho^0 X$ at Belle", 
+        "Belle", 
+        "10.1103/PhysRevLett.105.091801", 
+        null, 
+        "1005.1450", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2010-8", 
+            "KEK-PREPRINT-2010-6"
+        ]
+    ], 
+    "855748": [
+        "Observation of $B^+ \\to \\bar{D}^*0 \\tau^+ \\nu_\\tau$ and Evidence for $B^+ \\to \\bar{D}^0 \\tau^+ \\nu_\\tau$ at Belle", 
+        "Belle", 
+        "10.1103/PhysRevD.82.072005", 
+        null, 
+        "1005.2302", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2010-8", 
+            "KEK-PREPRINT-2010-7"
+        ]
+    ], 
+    "859160": [
+        "Evidence for $B^- -> \\tau^- \\bar{\\nu}$ with a Semileptonic Tagging Method", 
+        "Belle", 
+        "10.1103/PhysRevD.82.071101", 
+        null, 
+        "1006.4201", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2010-12", 
+            "KEK-PREPRINT-2010-18", 
+            "NTLP-PREPRINT-2010-02"
+        ]
+    ], 
+    "859723": [
+        "Search for $B_{s}^{0} -> hh$ Decays at the $\\Upsilon(5S)$ Resonance", 
+        "Belle", 
+        "10.1103/PhysRevD.82.072007", 
+        null, 
+        "1006.5115", 
+        null, 
+        null, 
+        [
+            "KEK-PREPRINT-2010-14", 
+            "BELLE-PREPRINT-2010-11"
+        ]
+    ], 
+    "862241": [
+        "Measurement of CP violating asymmetries in $B^0 -> K^+K^- K^0_S$ decays with a time-dependent Dalitz approach", 
+        "Belle", 
+        "10.1103/PhysRevD.82.073011", 
+        null, 
+        "1007.3848", 
+        null, 
+        null, 
+        []
+    ], 
+    "862260": [
+        "Measurement of eta eta production in two-photon collisions", 
+        "Belle", 
+        "10.1103/PhysRevD.82.114031", 
+        null, 
+        "1007.3779", 
+        "ins862260", 
+        null, 
+        [
+            "BELLE-PREPRINT-2010-13", 
+            "KEK-PREPRINT-2010-20"
+        ]
+    ], 
+    "863111": [
+        "Measurements of Branching Fractions for $B^0 -> D_s^+\\pi^-$ and $\\bar{B}^0 -> D_s^+K^-$", 
+        "Belle", 
+        "10.1103/PhysRevD.82.051103", 
+        null, 
+        "1007.4619", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2010-14", 
+            "KEK-PREPRINT-2010-23", 
+            "BELLE-PREPRINT#-2010-14", 
+            "KEK-PREPRINT#-2010-23"
+        ]
+    ], 
+    "865016": [
+        "Search for charmonium and charmonium-like states in $\\Upsilon(1S)$ radiative decays", 
+        "Belle", 
+        "10.1103/PhysRevD.82.051504", 
+        null, 
+        "1008.1774", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2010-15", 
+            "KEK-PREPRINT-2010-24", 
+            "BIHEP-EP-2010-001"
+        ]
+    ], 
+    "865394": [
+        "Search for $CP$ violating charge asymmetry in $B^pm\\to J/\\psi K^\\pm$ decays", 
+        "Belle", 
+        "10.1103/PhysRevD.82.091104", 
+        null, 
+        "1008.2567", 
+        null, 
+        null, 
+        [
+            "BELLE-PREPRINT-2010-18", 
+            "KEK-PREPRINT-2010-29"
+        ]
+    ], 
+    "874639": [
+        "Measurement of the form factors of the decay B0 -> D*- ell+ nu and determination of the CKM matrix element |Vcb|", 
+        "Belle", 
+        "10.1103/PhysRevD.82.112007", 
+        null, 
+        "1010.5620", 
+        "ins874639", 
+        null, 
+        []
+    ]
+}

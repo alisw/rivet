@@ -14,14 +14,14 @@ namespace Rivet {
   public:
 
     /// Constructor
-    DEFAULT_RIVET_ANALYSIS_CTOR(CMS_2016_I1430892);
+    RIVET_DEFAULT_ANALYSIS_CTOR(CMS_2016_I1430892);
 
 
     /// Book histograms and initialise projections
     void init() {
 
       // Complete final state
-      FinalState fs(-MAXDOUBLE, MAXDOUBLE, 0*GeV);
+      FinalState fs;
 
       // Projection for dressed electrons and muons
       IdentifiedFinalState photons(fs);
@@ -30,19 +30,19 @@ namespace Rivet {
       IdentifiedFinalState el_id(fs);
       el_id.acceptIdPair(PID::ELECTRON);
       PromptFinalState electrons(el_id);
-      addProjection(electrons, "Electrons");
+      declare(electrons, "Electrons");
       DressedLeptons dressed_electrons(photons, electrons, 0.1);
-      addProjection(dressed_electrons, "DressedElectrons");
+      declare(dressed_electrons, "DressedElectrons");
 
       IdentifiedFinalState mu_id(fs);
       mu_id.acceptIdPair(PID::MUON);
       PromptFinalState muons(mu_id);
-      addProjection(muons, "Muons");
+      declare(muons, "Muons");
       DressedLeptons dressed_muons(photons, muons, 0.1);
-      addProjection(dressed_muons, "DressedMuons");
+      declare(dressed_muons, "DressedMuons");
 
       // Parton-level top quarks
-      declare(PartonicTops(PartonicTops::E_MU, false), "LeptonicPartonTops");
+      declare(PartonicTops(PartonicTops::DecayMode::E_MU, false), "LeptonicPartonTops");
 
 
       // Booking of histograms
@@ -50,31 +50,31 @@ namespace Rivet {
       // This histogram is independent of the parton-level information, and is an
       // addition to the original analysis. It is compared to the same data as
       // the parton-level delta_abseta histogram d05-x01-y01.
-      _h_dabsetadressedleptons = bookHisto1D("d00-x01-y01", _bins_dabseta);
+      book(_h_dabsetadressedleptons, "d00-x01-y01", _bins_dabseta);
 
       // The remaining histos use parton-level information
-      _h_dabseta = bookHisto1D("d05-x01-y01", _bins_dabseta);
-      _h_dabsrapidity = bookHisto1D("d02-x01-y01", _bins_dabsrapidity);
+      book(_h_dabseta, "d05-x01-y01", _bins_dabseta);
+      book(_h_dabsrapidity, "d02-x01-y01", _bins_dabsrapidity);
 
       // 2D histos
-      _h_dabsrapidity_var[0] = bookHisto2D("d11-x01-y01", _bins_dabsrapidity, _bins_tt_mass);
-      _h_dabseta_var[0] = bookHisto2D("d17-x01-y01", _bins_dabseta, _bins_tt_mass);
+      book(_h_dabsrapidity_var[0], "d11-x01-y01", _bins_dabsrapidity, _bins_tt_mass);
+      book(_h_dabseta_var[0], "d17-x01-y01", _bins_dabseta, _bins_tt_mass);
 
-      _h_dabsrapidity_var[1] = bookHisto2D("d23-x01-y01", _bins_dabsrapidity, _bins_tt_pT);
-      _h_dabseta_var[1] = bookHisto2D("d29-x01-y01", _bins_dabseta, _bins_tt_pT);
+      book(_h_dabsrapidity_var[1], "d23-x01-y01", _bins_dabsrapidity, _bins_tt_pT);
+      book(_h_dabseta_var[1], "d29-x01-y01", _bins_dabseta, _bins_tt_pT);
 
-      _h_dabsrapidity_var[2] = bookHisto2D("d35-x01-y01", _bins_dabsrapidity, _bins_tt_absrapidity);
-      _h_dabseta_var[2] = bookHisto2D("d41-x01-y01", _bins_dabseta, _bins_tt_absrapidity);
+      book(_h_dabsrapidity_var[2], "d35-x01-y01", _bins_dabsrapidity, _bins_tt_absrapidity);
+      book(_h_dabseta_var[2], "d41-x01-y01", _bins_dabseta, _bins_tt_absrapidity);
 
       // Profile histos for asymmetries
-      _h_dabsrapidity_profile[0] = bookProfile1D("d08-x01-y01", _bins_tt_mass);
-      _h_dabseta_profile[0] = bookProfile1D("d14-x01-y01", _bins_tt_mass);
+      book(_h_dabsrapidity_profile[0], "d08-x01-y01", _bins_tt_mass);
+      book(_h_dabseta_profile[0], "d14-x01-y01", _bins_tt_mass);
 
-      _h_dabsrapidity_profile[1] = bookProfile1D("d20-x01-y01", _bins_tt_pT);
-      _h_dabseta_profile[1] = bookProfile1D("d26-x01-y01", _bins_tt_pT);
+      book(_h_dabsrapidity_profile[1], "d20-x01-y01", _bins_tt_pT);
+      book(_h_dabseta_profile[1], "d26-x01-y01", _bins_tt_pT);
 
-      _h_dabsrapidity_profile[2] = bookProfile1D("d32-x01-y01", _bins_tt_absrapidity);
-      _h_dabseta_profile[2] = bookProfile1D("d38-x01-y01", _bins_tt_absrapidity);
+      book(_h_dabsrapidity_profile[2], "d32-x01-y01", _bins_tt_absrapidity);
+      book(_h_dabseta_profile[2], "d38-x01-y01", _bins_tt_absrapidity);
 
     }
 
@@ -82,7 +82,7 @@ namespace Rivet {
     /// Perform the per-event analysis
     void analyze(const Event& event) {
 
-      const double weight = event.weight();
+      const double weight = 1.0;
 
       // Use particle-level leptons for the first histogram
       const DressedLeptons& dressed_electrons = applyProjection<DressedLeptons>(event, "DressedElectrons");
@@ -134,11 +134,11 @@ namespace Rivet {
           const Particle lepTop = leptonicpartontops[k];
           const auto isPromptChargedLepton = [](const Particle& p){return (isChargedLepton(p) && isPrompt(p, false, false));};
           Particles lepton_candidates = lepTop.allDescendants(firstParticleWith(isPromptChargedLepton), false);
-          if ( lepton_candidates.size() < 1 ) MSG_WARNING("error, PartonicTops::E_MU top quark had no daughter lepton candidate, skipping event.");
+          if ( lepton_candidates.size() < 1 ) MSG_WARNING("error, PartonicTops::DecayMode::E_MU top quark had no daughter lepton candidate, skipping event.");
 
           // In some cases there is no lepton from the W decay but only leptons from the decay of a radiated gamma.
-          // These hadronic PartonicTops are currently being mistakenly selected by PartonicTops::E_MU (as of April 2017), and need to be rejected.
-          // PartonicTops::E_MU is being fixed in Rivet, and when it is the veto below should do nothing.
+          // These hadronic PartonicTops are currently being mistakenly selected by PartonicTops::DecayMode::E_MU (as of April 2017), and need to be rejected.
+          // PartonicTops::DecayMode::E_MU is being fixed in Rivet, and when it is the veto below should do nothing.
           /// @todo Should no longer be necessary -- remove
           bool istrueleptonictop = false;
           for (size_t i = 0; i < lepton_candidates.size(); ++i) {
@@ -171,8 +171,8 @@ namespace Rivet {
         const double dabseta_temp = lepPlus.abseta() - lepMinus.abseta();
 
         // Get the four-momenta of the positively- and negatively-charged tops
-        const FourMomentum topPlus_p4 = leptonicpartontops[0].pdgId() > 0 ? leptonicpartontops[0] : leptonicpartontops[1];
-        const FourMomentum topMinus_p4 = leptonicpartontops[0].pdgId() > 0 ? leptonicpartontops[1] : leptonicpartontops[0];
+        const FourMomentum topPlus_p4 = leptonicpartontops[0].pid() > 0 ? leptonicpartontops[0] : leptonicpartontops[1];
+        const FourMomentum topMinus_p4 = leptonicpartontops[0].pid() > 0 ? leptonicpartontops[1] : leptonicpartontops[0];
 
         const FourMomentum ttbar_p4 = topPlus_p4 + topMinus_p4;
 
@@ -253,7 +253,7 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(CMS_2016_I1430892);
+  RIVET_DECLARE_PLUGIN(CMS_2016_I1430892);
 
 
 }

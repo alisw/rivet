@@ -61,22 +61,19 @@ namespace Rivet {
       jetFS.addVetoOnThisFinalState(electronClusters);
       jetFS.addVetoOnThisFinalState(muonClusters);
       jetFS.addVetoOnThisFinalState(neutrinos);
-      FastJets jetpro(jetFS, FastJets::KT, 0.6);
-      jetpro.useInvisibles(true);
+      FastJets jetpro(jetFS, FastJets::KT, 0.6, JetAlg::Muons::ALL, JetAlg::Invisibles::DECAY);
       declare(jetpro, "jets");
 
       // Book histograms
       for (size_t flav = 0; flav < 2; ++flav) {
-        for (size_t i = 0; i < m_njet; ++i) _h_dI[flav][i] = bookHisto1D(i+1, 1, flav+1);
-        for (size_t i = 0; i < m_njet-1; ++i) _h_dI_ratio[flav][i] = bookHisto1D(4+i+1, 1, flav+1);
+        for (size_t i = 0; i < m_njet; ++i)   book(_h_dI[flav][i],         i+1, 1, flav+1);
+        for (size_t i = 0; i < m_njet-1; ++i) book(_h_dI_ratio[flav][i], 4+i+1, 1, flav+1);
       }
     }
 
 
     /// Perform the per-event analysis
     void analyze(const Event& e) {
-      const double weight = e.weight();
-
       const DressedLeptons& electronClusters = apply<DressedLeptons>(e, "electronClusters");
       const DressedLeptons& muonClusters = apply<DressedLeptons>(e, "muonClusters");
       int ne = electronClusters.dressedLeptons().size();
@@ -109,12 +106,12 @@ namespace Rivet {
       if (seq) {
         for (size_t i = 0; i < min(m_njet,(size_t)seq->n_particles()); ++i) {
           double d_ij = sqrt(seq->exclusive_dmerge_max(i));
-          _h_dI[flav][i]->fill(d_ij, weight);
+          _h_dI[flav][i]->fill(d_ij);
 
           if (i<m_njet-1) {
             if (d_ij>20.0*GeV) {
               double d_ijplus1 = sqrt(seq->exclusive_dmerge_max(i+1));
-              _h_dI_ratio[flav][i]->fill(d_ijplus1/d_ij, weight);
+              _h_dI_ratio[flav][i]->fill(d_ijplus1/d_ij);
             }
           }
         }
@@ -149,7 +146,7 @@ namespace Rivet {
 
 
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(ATLAS_2013_I1217867);
+  RIVET_DECLARE_PLUGIN(ATLAS_2013_I1217867);
 
 
 }

@@ -1,0 +1,134 @@
+{
+    "512430": [
+        "Hard single diffraction in $\\bar{p}p$ collisions at $\\sqrt{s} = 630$ GeV and 1800 GeV", 
+        "D0", 
+        "10.1016/S0370-2693(02)01364-3", 
+        null, 
+        "hep-ex/9912061", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-99-375-E"
+        ]
+    ], 
+    "553306": [
+        "Direct Search for Charged Higgs Bosons in Decays of Top Quarks", 
+        "D0", 
+        "10.1103/PhysRevLett.88.151803", 
+        null, 
+        "hep-ex/0102039", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-01-022-E"
+        ]
+    ], 
+    "561242": [
+        "A Search for the Scalar Top Quark in $p\\bar{p}$ Collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.88.171802", 
+        null, 
+        "hep-ex/0108018", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-01-233-E"
+        ]
+    ], 
+    "562231": [
+        "Subjet Multiplicity of Gluon and Quark Jets Reconstructed with the $k_T$ Algorithm in $p\\bar{p}$ Collisions", 
+        "D0", 
+        "10.1103/PhysRevD.65.052008", 
+        null, 
+        "hep-ex/0108054", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-01-248-E"
+        ]
+    ], 
+    "563493": [
+        "The Inclusive Jet Cross-Section in $p\\bar{p}$ Collisions at $\\sqrt{s} = 1.8$ TeV using the $k_T$ Algorithm", 
+        "D0", 
+        "10.1016/S0370-2693(01)01441-1", 
+        null, 
+        "hep-ex/0109041", 
+        "ins563493", 
+        null, 
+        [
+            "FERMILAB-PUB-01-290-E"
+        ]
+    ], 
+    "566508": [
+        "Search for Leptoquark Pairs Decaying to $\\nu \\nu + {\\rm jets}$ in $p\\bar{p}$ Collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.88.191801", 
+        null, 
+        "hep-ex/0111047", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-01-349-E"
+        ]
+    ], 
+    "566617": [
+        "Search for $R-$Parity Violating Supersymmetry in Dimuon and Four-Jets Channel", 
+        "D0", 
+        "10.1103/PhysRevLett.89.171801", 
+        null, 
+        "hep-ex/0111053", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-01-352-E"
+        ]
+    ], 
+    "585080": [
+        "A Direct Measurement of $W$ Boson Decay Width", 
+        "D0", 
+        "10.1103/PhysRevD.66.032008", 
+        null, 
+        "hep-ex/0204009", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-02-063-E"
+        ]
+    ], 
+    "585184": [
+        "Improved $W$ Boson Mass Measurement with the D0 Detector", 
+        "D0", 
+        "10.1103/PhysRevD.66.012001", 
+        null, 
+        "hep-ex/0204014", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-02-055-E"
+        ]
+    ], 
+    "586179": [
+        "Search for mSUGRA in Single Electron Events with Jets and Large Missing Transverse Energy in $p\\bar{p}$ Collisions at $\\sqrt{s} = 1.8$ TeV", 
+        "D0", 
+        "10.1103/PhysRevD.66.112001", 
+        null, 
+        "hep-ex/0205002", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-02-074-E"
+        ]
+    ], 
+    "591658": [
+        "Search for the Production of Single Sleptons through $R-$Parity Violation in $p\\bar{p}$ Collisions at $\\sqrt{s}$ = 1.8 TeV", 
+        "D0", 
+        "10.1103/PhysRevLett.89.261801", 
+        null, 
+        "hep-ex/0207100", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-02-177-E"
+        ]
+    ]
+}

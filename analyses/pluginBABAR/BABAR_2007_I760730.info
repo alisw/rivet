@@ -1,0 +1,35 @@
+Name: BABAR_2007_I760730
+Year: 2007
+Summary: Cross section for $e^+e^-\to\Lambda\bar{\Lambda}$, $\Sigma^0\bar{\Sigma}^0$ and $\Lambda\bar{\Sigma}^0$  between threshold and 3 GeV
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 760730
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D76 (2007) 092006
+RunInfo: e+e- to hadrons
+NeedCrossSection: yes
+Beams: [e+,e-]
+Description:
+  'Measurement of the cross section for $e^+e^-\to\Lambda\bar{\Lambda}$ between threshold and 3 GeV.'
+Keywords:
+BibKey: Aubert:2007uf
+BibTeX: '@article{Aubert:2007uf,
+      author         = "Aubert, Bernard and others",
+      title          = "{Study of $e^{+} e^{-} \to \Lambda \bar{\Lambda}$,
+                        $\Lambda \bar{\Sigma}^0$, $\Sigma^0 \bar{\Sigma}^0$ using
+                        initial state radiation with BABAR}",
+      collaboration  = "BaBar",
+      journal        = "Phys. Rev.",
+      volume         = "D76",
+      year           = "2007",
+      pages          = "092006",
+      doi            = "10.1103/PhysRevD.76.092006",
+      eprint         = "0709.1988",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "SLAC-PUB-12806, BABAR-PUB-07-054",
+      SLACcitation   = "%%CITATION = ARXIV:0709.1988;%%"
+}'

@@ -5,9 +5,11 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1387176
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Javier Llorente <javier.llorente.merino@cern.ch>
 References:
+ - ATLAS-STDM-2014-03
  - arXiv:1508.01579 [hep-ex]
 RunInfo:
   inclusive jets
@@ -36,3 +38,7 @@ BibTeX: '@article{ATLAS:2015yaa,
       reportNumber   = "CERN-PH-EP-2015-177",
       SLACcitation   = "%%CITATION = ARXIV:1508.01579;%%"
 }'
+
+ReleaseTests:
+ - $A LHC-7-Jets-6
+

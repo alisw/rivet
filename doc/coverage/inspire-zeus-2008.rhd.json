@@ -1,0 +1,86 @@
+{
+    "756660": [
+        "Three- and four-jet final states in photoproduction at HERA", 
+        "ZEUS", 
+        "10.1016/j.nuclphysb.2007.08.021", 
+        null, 
+        "0707.3749", 
+        "ins756660", 
+        null, 
+        [
+            "DESY-07-102"
+        ]
+    ], 
+    "763404": [
+        "Diffractive photoproduction of dijets in ep collisions at HERA", 
+        "ZEUS", 
+        "10.1140/epjc/s10052-008-0598-2", 
+        null, 
+        "0710.1498", 
+        "ins763404", 
+        null, 
+        [
+            "DESY-07-161"
+        ]
+    ], 
+    "779854": [
+        "Deep inelastic inclusive and diffractive scattering at $Q^2$ values from 25 to 320 GeV$^2$ with the ZEUS forward plug calorimeter", 
+        "ZEUS", 
+        "10.1016/j.nuclphysb.2008.04.005", 
+        null, 
+        "0802.3017", 
+        "ins779854", 
+        null, 
+        [
+            "DESY-08-011"
+        ]
+    ], 
+    "780108": [
+        "Multi-jet cross-sections in charged current e+- p scattering at HERA", 
+        "ZEUS", 
+        "10.1103/PhysRevD.78.032004", 
+        null, 
+        "0802.3955", 
+        "ins780108", 
+        null, 
+        [
+            "DESY-08-024"
+        ]
+    ], 
+    "782120": [
+        "Energy dependence of the charged multiplicity in deep inelastic scattering at HERA", 
+        "ZEUS", 
+        "10.1088/1126-6708/2008/06/061", 
+        null, 
+        "0803.3878", 
+        "ins782120", 
+        null, 
+        [
+            "DESY-08-036"
+        ]
+    ], 
+    "786814": [
+        "Beauty photoproduction using decays into electrons at HERA", 
+        "ZEUS", 
+        "10.1103/PhysRevD.78.072001", 
+        null, 
+        "0805.4390", 
+        "ins786814", 
+        null, 
+        [
+            "DESY-08-056"
+        ]
+    ], 
+    "787335": [
+        "Inclusive K0(S)K0(S) resonance production in ep collisions at HERA", 
+        "ZEUS", 
+        "10.1103/PhysRevLett.101.112003", 
+        "1108486", 
+        "0806.0807", 
+        null, 
+        null, 
+        [
+            "DESY-08-068"
+        ]
+    ]
+}

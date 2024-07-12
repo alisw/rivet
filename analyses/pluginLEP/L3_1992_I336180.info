@@ -29,3 +29,7 @@ BibTeX: '@article{Adriani:1992hd,
       reportNumber   = "CERN-PPE-92-083, CERN-PPE-92-83",
       SLACcitation   = "%%CITATION = PHLTA,B286,403;%%"
 }'
+
+ReleaseTests:
+ - $A LEP-91
+

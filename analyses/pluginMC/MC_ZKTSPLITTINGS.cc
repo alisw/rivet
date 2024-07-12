@@ -23,9 +23,14 @@ namespace Rivet {
 
     /// Book histograms
     void init() {
+		  _dR=0.2;
+      if (getOption("SCHEME") == "BARE")  _dR = 0.0;
+		  _lepton=PID::ELECTRON;
+      if (getOption("LMODE") == "MU")  _lepton = PID::MUON;
+
       FinalState fs;
       Cut cut = Cuts::abseta < 3.5 && Cuts::pT > 25*GeV;
-      ZFinder zfinder(fs, cut, PID::ELECTRON, 65*GeV, 115*GeV, 0.2, ZFinder::CLUSTERNODECAY, ZFinder::TRACK);
+      ZFinder zfinder(fs, cut, _lepton, 65*GeV, 115*GeV, _dR, ZFinder::ClusterPhotons::NODECAY, ZFinder::AddPhotons::YES);
       declare(zfinder, "ZFinder");
       FastJets jetpro(zfinder.remainingFinalState(), FastJets::KT, 0.6);
       declare(jetpro, "Jets");
@@ -51,11 +56,16 @@ namespace Rivet {
 
     //@}
 
+  protected:
+
+    /// @name Parameters for specialised e/mu and dressed/bare subclassing
+    //@{
+    double _dR;
+    PdgId _lepton;
+    //@}
+
   };
 
-
-
   // The hook for the plugin system
-  DECLARE_RIVET_PLUGIN(MC_ZKTSPLITTINGS);
-
+  RIVET_DECLARE_PLUGIN(MC_ZKTSPLITTINGS);
 }

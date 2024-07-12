@@ -1,0 +1,74 @@
+{
+    "737605": [
+        "Search for a fourth generation $b^\\prime$-quark at LEP-II at $\\sqrt{s}$ = 196-GeV - 209-GeV", 
+        "DELPHI", 
+        "10.1140/epjc/s10052-007-0273-z", 
+        "1028879", 
+        "0704.0594", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2006-023"
+        ]
+    ], 
+    "737606": [
+        "Investigation of colour reconnection in WW events with the DELPHI detector at LEP-2", 
+        "DELPHI", 
+        "10.1140/epjc/s10052-007-0304-9", 
+        "1028882", 
+        "0704.0597", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2006-037"
+        ]
+    ], 
+    "753391": [
+        "Study of multi-muon bundles in cosmic ray showers detected with the DELPHI detector at LEP", 
+        "DELPHI", 
+        "10.1016/j.astropartphys.2007.06.001", 
+        "1042156", 
+        "0706.2561", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2007-008"
+        ]
+    ], 
+    "753394": [
+        "Z gamma* production in e+e- interactions at s**(1/2) = 183 - 209-GeV", 
+        "DELPHI", 
+        "10.1140/epjc/s10052-007-0339-y", 
+        "1042160", 
+        "0706.2565", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2006-022"
+        ]
+    ], 
+    "753526": [
+        "Study of triple-gauge-boson couplings ZZZ, ZZgamma and Zgamma gamma LEP", 
+        "DELPHI", 
+        "10.1140/epjc/s10052-007-0345-0", 
+        "1042336", 
+        "0706.2741", 
+        null, 
+        null, 
+        [
+            "HEP-PH-EP-2006-008"
+        ]
+    ], 
+    "757421": [
+        "Search for Pentaquarks in the Hadronic Decays of the Z Boson with the DELPHI Detector at LEP", 
+        "DELPHI", 
+        "10.1016/j.physletb.2007.08.005", 
+        "1049975", 
+        "0708.0415", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2007-017"
+        ]
+    ]
+}

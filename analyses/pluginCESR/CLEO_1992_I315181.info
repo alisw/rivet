@@ -1,0 +1,32 @@
+Name: CLEO_1992_I315181
+Year: 1992
+Summary: Baryon spectra in $\Upsilon(4S)$ decays
+Experiment: CLEO
+Collider: CESR
+InspireID: 315181
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev. D45 (1992) 752-770
+RunInfo: Any processs producing Upslion(4S), originally e+e-
+Description:
+  'Measurement of the proton, $\Lambda_c^+$, $\Lambda$ and $\Xi^-$ momentum spectra in B decays at the $\Upsilon(4S)$ by CLEO.'
+ValidationInfo:
+  'Herwig 7 events using EvtGen'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Crawford:1991at
+BibTeX: '@article{Crawford:1991at,
+      author         = "Crawford, Glen D. and others",
+      title          = "{Measurement of baryon production in B meson decay}",
+      collaboration  = "CLEO",
+      journal        = "Phys. Rev.",
+      volume         = "D45",
+      year           = "1992",
+      pages          = "752-770",
+      doi            = "10.1103/PhysRevD.45.752",
+      reportNumber   = "CLNS-91-1066, CLEO-91-3",
+      SLACcitation   = "%%CITATION = PHRVA,D45,752;%%"
+}'

@@ -1,0 +1,32 @@
+Name: BESIII_2022_I2615968
+Year: 2022
+Summary: Dalitz plot analysis of $D^0\to K^0_{S,L}\pi^+\pi^-$
+Experiment: BESIII
+Collider: BEPC
+InspireID: 2615968
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - arXiv:2212.09048 [hep-ex]
+RunInfo: Any process producing D0 mesons
+Description:
+  'Measurement of Kinematic distributions in the decay $D^0\to K^0_S\pi^+\pi^-$ by BESIII. The data were read from the plots in the paper and resolution/acceptance effects may not have been unfolded.'
+ValidationInfo:
+  'Herwig7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BESIII:2022qvy
+BibTeX: '@article{BESIII:2022qvy,
+    author = "Ablikim, Medina and others",
+    collaboration = "BESIII",
+    title = "{Determination of U-spin breaking parameters with an amplitude analysis of the decay $D^0 \to K_{\rm L}^0\pi^+\pi^-$}",
+    eprint = "2212.09048",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    month = "12",
+    year = "2022"
+}
+'

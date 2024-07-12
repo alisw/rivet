@@ -1,0 +1,301 @@
+{
+    "592716": [
+        "Measurement of the branching fraction for inclusive semileptonic $B$ meson decays", 
+        "BaBar", 
+        "10.1103/PhysRevD.67.031101", 
+        null, 
+        "hep-ex/0208018", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9306", 
+            "BABAR-PUB-02-011"
+        ]
+    ], 
+    "593379": [
+        "Study of inclusive production of charmonium mesons in $B$ decay", 
+        "BaBar", 
+        "10.1103/PhysRevD.67.032002", 
+        null, 
+        "hep-ex/0207097", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9327", 
+            "BABAR-PUB-02-04"
+        ]
+    ], 
+    "594586": [
+        "A measurement of the $B^0 \\to J/\\psi \\pi^+ \\pi^-$ branching fraction", 
+        "BaBar", 
+        "10.1103/PhysRevLett.90.091801", 
+        null, 
+        "hep-ex/0209013", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9261", 
+            "BABAR-PUB-02-06"
+        ]
+    ], 
+    "602547": [
+        "A study of the rare decays $B^0 \\to D_s^{(*)+} \\pi^-$ and $B^0 \\to D_s^{(*)-} K+$", 
+        "BaBar", 
+        "10.1103/PhysRevLett.90.181803", 
+        null, 
+        "hep-ex/0211053", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9329", 
+            "BABAR-PUB-02-010"
+        ]
+    ], 
+    "603989": [
+        "Measurement of the $B^0$ meson lifetime with partial reconstruction of $B^0 \\to D^{*-} \\pi^+$ and $B^0 \\to D^{*-} \\rho^+$ decays", 
+        "BaBar", 
+        "10.1103/PhysRevD.67.091101", 
+        null, 
+        "hep-ex/0212012", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9602", 
+            "BABAR-PUB-02-013"
+        ]
+    ], 
+    "604095": [
+        "Simultaneous measurement of the $B^0$ meson lifetime and mixing frequency with $B^0 \\to D^{*-} \\ell^+ \\nu_\\ell$ decays", 
+        "BaBar", 
+        "10.1103/PhysRevD.67.072002", 
+        null, 
+        "hep-ex/0212017", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9579", 
+            "BABAR-PUB-02-012"
+        ]
+    ], 
+    "613283": [
+        "Measurement of $B^0 \\to D_s^{(*)+} D^{*-}$ branching fractions and $B^0 \\to D_s^{(*)+} D^{*-}$ polarization with a partial reconstruction technique", 
+        "BaBar", 
+        "10.1103/PhysRevD.67.092003", 
+        null, 
+        "hep-ex/0302015", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9644", 
+            "BABAR-PUB-03-001"
+        ]
+    ], 
+    "614513": [
+        "Measurement of the branching fraction and CP-violating asymmetries in neutral $B$ decays to $D^{*\\pm} D^\\mp$", 
+        "BaBar", 
+        "10.1103/PhysRevLett.90.221801", 
+        null, 
+        "hep-ex/0303004", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9661", 
+            "BABAR-PUB-03-004"
+        ]
+    ], 
+    "615079": [
+        "Study of time-dependent CP asymmetry in neutral $B$ decays to $J/\\psi \\pi^0$", 
+        "BaBar", 
+        "10.1103/PhysRevLett.91.061802", 
+        null, 
+        "hep-ex/0303018", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9668", 
+            "BABAR-PUB-03-003"
+        ]
+    ], 
+    "615490": [
+        "Observation of the decay $B^\\pm \\to \\pi^\\pm \\pi^0$, study of $B^\\pm \\to K^\\pm \\pi^0$, and search for $B^0 \\to \\pi^0 \\pi^0$", 
+        "BaBar", 
+        "10.1103/PhysRevLett.91.021801", 
+        null, 
+        "hep-ex/0303028", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9683", 
+            "BABAR-PUB-03-002"
+        ]
+    ], 
+    "615638": [
+        "Evidence for $B^+ \\to J/\\psi p \\overline{\\Lambda}$ and search for $B^0 \\to J/\\psi p \\bar{p}$", 
+        "BaBar", 
+        "10.1103/PhysRevLett.90.231801", 
+        null, 
+        "hep-ex/0303036", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9690", 
+            "BABAR-PUB-03-007"
+        ]
+    ], 
+    "616112": [
+        "Measurements of CP-violating asymmetries and branching fractions in $B$ meson decays to $\\eta^\\prime K$", 
+        "BaBar", 
+        "10.1103/PhysRevLett.91.161801", 
+        null, 
+        "hep-ex/0303046", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9698", 
+            "BABAR-PUB-03-006"
+        ]
+    ], 
+    "616391": [
+        "Measurements of the branching fractions and charge asymmetries of charmless three-body charged $B$ decays", 
+        "BaBar", 
+        "10.1103/PhysRevLett.91.051801", 
+        null, 
+        "hep-ex/0304006", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9703", 
+            "BABAR-PUB-03-005"
+        ]
+    ], 
+    "616444": [
+        "Search for $D^0 - \\bar{D}^0$ mixing and a measurement of the doubly Cabibbo-suppressed decay rate in $D^0 \\to K \\pi$ decays", 
+        "BaBar", 
+        "10.1103/PhysRevLett.91.171801", 
+        null, 
+        "hep-ex/0304007", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9685", 
+            "BABAR-PUB-03-009"
+        ]
+    ], 
+    "616619": [
+        "Rare $B$ decays into states containing a $J/\\psi$ meson and a meson with $s \\bar{s}$ quark content", 
+        "BaBar", 
+        "10.1103/PhysRevLett.91.071801", 
+        null, 
+        "hep-ex/0304014", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9262", 
+            "BABAR-PUB-02-07"
+        ]
+    ], 
+    "616919": [
+        "Observation of a narrow meson decaying to $D_s^+ \\pi^0$ at a mass of 2.32-GeV/c$^2$", 
+        "BaBar", 
+        "10.1103/PhysRevLett.90.242001", 
+        null, 
+        "hep-ex/0304021", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9711", 
+            "BABAR-PUB-03-011"
+        ]
+    ], 
+    "618095": [
+        "Measurement of the branching fractions for the exclusive decays of $B^0$ and $B^+$ to $\\bar{D}^{(*)} D^{(*)} K$", 
+        "BaBar", 
+        "10.1103/PhysRevD.68.092001", 
+        null, 
+        "hep-ex/0305003", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9736", 
+            "BABAR-PUB-03-010"
+        ]
+    ], 
+    "620070": [
+        "Limits on $D^0 \\bar{D}^0$ mixing and CP violation from the ratio of lifetimes for decay to $K^- \\pi^+$, $K^- K^+$ and $\\pi^- \\pi^+$", 
+        "BaBar", 
+        "10.1103/PhysRevLett.91.121801", 
+        null, 
+        "hep-ex/0306003", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9888", 
+            "BABAR-PUB-03-014"
+        ]
+    ], 
+    "621182": [
+        "Measurements of branching fractions and CP-violating asymmetries in $B^0 \\to \\rho^\\pm h^\\mp$ decays", 
+        "BaBar", 
+        "10.1103/PhysRevLett.91.201802", 
+        null, 
+        "hep-ex/0306030", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9923", 
+            "BABAR-PUB-03-013"
+        ]
+    ], 
+    "622155": [
+        "Measurement of time-dependent CP asymmetries and the CP-odd fraction in the decay $B^0 \\to D^{*+} D^{*-}$", 
+        "BaBar", 
+        "10.1103/PhysRevLett.91.131801", 
+        null, 
+        "hep-ex/0306052", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-9986", 
+            "BABAR-PUB-03-015"
+        ]
+    ], 
+    "623385": [
+        "Rates, polarizations, and asymmetries in charmless vector-vector $B$ meson decays", 
+        "BaBar", 
+        "10.1103/PhysRevLett.91.171802", 
+        null, 
+        "hep-ex/0307026", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-10016", 
+            "BABAR-PUB-03-018"
+        ]
+    ], 
+    "625094": [
+        "Observation of the decay $B^0 \\to \\pi^0 \\pi^0$", 
+        "BaBar", 
+        "10.1103/PhysRevLett.91.241801", 
+        null, 
+        "hep-ex/0308012", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-10092", 
+            "BABAR-PUB-03-028"
+        ]
+    ], 
+    "626068": [
+        "Evidence for the rare decay $B \\to K^* \\ell^+ \\ell^-$ and measurement of the $B \\to K \\ell^+ \\ell^-$ branching fraction", 
+        "BaBar", 
+        "10.1103/PhysRevLett.91.221802", 
+        null, 
+        "hep-ex/0308042", 
+        null, 
+        null, 
+        [
+            "SLAC-PUB-10132", 
+            "BABAR-PUB-03-021"
+        ]
+    ]
+}

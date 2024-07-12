@@ -1,0 +1,36 @@
+Name: BELLE_2019_I1687566
+Year: 2019
+Summary: Transverse polarization of $\Lambda^0$ baryons in the continuum at 10.58 GeV 
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1687566
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 122 (2019) no.4, 042001
+RunInfo: e+e- > hadrons in the continuum
+NeedCrossSection: no
+Beams: [e-, e+]
+Energies: 10.58
+Description:
+  'Measurement of the transverse polarization of $\Lambda^0$~($\bar\Lambda^0$) in the $e^+e^-$ continuum at centre-of-mass energies near 10.58 GeV. The polarization is measured as a function of the momentum fraction and transverse momentum. The polarization is also measured for events with a $\pi^\pm$ or $K^\pm$ in the opposite hemisphere as a function of the momentum fractions of the $\Lambda^0$ and charged meson.The polarization as a function of the momentum fraction for $\Lambda^0$ baryons produced in $(uds)$ events, and for prompt $\Lambda^0$ and those from the decay of $\Sigma^0$ mesons is also measured.'
+Keywords: []
+BibKey: Guan:2018ckx
+BibTeX: '@article{Guan:2018ckx,
+      author         = "Guan, Y. and others",
+      title          = "{Observation of Transverse $\Lambda/\bar{\Lambda}$
+                        Hyperon Polarization in $e^+e^-$ Annihilation at Belle}",
+      collaboration  = "Belle",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "122",
+      year           = "2019",
+      number         = "4",
+      pages          = "042001",
+      doi            = "10.1103/PhysRevLett.122.042001",
+      eprint         = "1808.05000",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "Belle Preprint 2018-17; KEK Preprint 2018-23",
+      SLACcitation   = "%%CITATION = ARXIV:1808.05000;%%"
+}'

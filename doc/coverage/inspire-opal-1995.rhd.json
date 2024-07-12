@@ -1,0 +1,397 @@
+{
+    "375599": [
+        "Measurement of Gamma (Z0 ---> b anti-b) / Gamma (Z0 ---> hadrons) using a double tagging method", 
+        "OPAL", 
+        "10.1007/BF01571301", 
+        "266297", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-106"
+        ]
+    ], 
+    "375600": [
+        "Determination of an upper limit for the mass of the tau-neutrino at LEP", 
+        "OPAL", 
+        "10.1007/BF01571874", 
+        "266298", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-107"
+        ]
+    ], 
+    "375622": [
+        "Measurement of single photon production in e+ e- collisions near the Z0 resonance", 
+        "OPAL", 
+        "10.1007/BF01571303", 
+        "266294", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-105"
+        ]
+    ], 
+    "376541": [
+        "Measurement of the tau lepton polarization and its forward - backward asymmetry from Z0 decays", 
+        "OPAL", 
+        "10.1007/BF01571300", 
+        "267131", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-120"
+        ]
+    ], 
+    "377274": [
+        "A Measurement of the QCD color factor ratios C(A) / C(F) and T(F) / C(F) from angular correlations in four jet events", 
+        "OPAL", 
+        "10.1007/BF01556127", 
+        "268544", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-135"
+        ]
+    ], 
+    "379212": [
+        "Determination of event shape distributions and alpha-s(b) from Z0 ---> b anti-b events at LEP", 
+        "OPAL", 
+        "10.1007/BF01571302", 
+        "267642", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-123"
+        ]
+    ], 
+    "381167": [
+        "A Test of CP invariance in Z0 ---> tau+ tau- using optimal observables", 
+        "OPAL", 
+        "10.1007/BF01496578", 
+        "272139", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-171"
+        ]
+    ], 
+    "382185": [
+        "Observations of pi - B charge - flavor correlations and resonant B pi and B K production", 
+        "OPAL", 
+        "10.1007/BF01496577", 
+        "273921", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-94-206"
+        ]
+    ], 
+    "382219": [
+        "A Measurement of the production of D*+- mesons on the Z0 resonance", 
+        "OPAL", 
+        "10.1007/BF01564819", 
+        "275063", 
+        null, 
+        "ins382219", 
+        null, 
+        [
+            "CERN-PPE-94-217"
+        ]
+    ], 
+    "392480": [
+        "A Study of charm meson production in semileptonic B decays", 
+        "OPAL", 
+        "10.1007/BF01564821", 
+        "275412", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-95-02", 
+            "CERN-PPE-95-2", 
+            "CERN-PPE-95-002"
+        ]
+    ], 
+    "392538": [
+        "Measurement of the leptonic branching ratios of the tau lepton", 
+        "OPAL", 
+        "10.1007/BF01579629", 
+        "275663", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-95-06", 
+            "CERN-PPE-95-6", 
+            "CERN-PPE-95-006"
+        ]
+    ], 
+    "392864": [
+        "A Study of $B$ meson oscillations using dilepton events", 
+        "OPAL", 
+        "10.1007/BF01579630", 
+        "276649", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-95-12", 
+            "CERN-PPE-95-012"
+        ]
+    ], 
+    "392889": [
+        "Comparisons of the properties of final state photons in hadronic Z0 decays with predictions from matrix element calculations", 
+        "OPAL", 
+        "10.1007/BF01564818", 
+        "276952", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-95-013", 
+            "CERN-PPE-95-13"
+        ]
+    ], 
+    "393292": [
+        "Improved measurements of the $B^0$ and $B^{+}$ meson lifetimes", 
+        "OPAL", 
+        "10.1007/BF01624581", 
+        "278217", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-95-019", 
+            "CERN-PPE-95-19"
+        ]
+    ], 
+    "393293": [
+        "An Improved measurement of the $B_s^0$ lifetime", 
+        "OPAL", 
+        "10.1016/0370-2693(95)00363-P", 
+        "278221", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-95-020", 
+            "CERN-PPE-95-20"
+        ]
+    ], 
+    "393414": [
+        "Measurement of the Hadronic Decay Current in tau- --> pi- pi- pi+ tau-neutrino", 
+        "OPAL", 
+        "10.1007/BF01564820", 
+        "278490", 
+        null, 
+        "ins393414", 
+        null, 
+        [
+            "CERN-PPE-95-022", 
+            "CERN-PPE-95-22"
+        ]
+    ], 
+    "393503": [
+        "The Production of neutral kaons in Z0 decays and their Bose-Einstein correlations", 
+        "OPAL", 
+        "10.1007/BF01624582", 
+        "278657", 
+        null, 
+        "ins393503", 
+        null, 
+        [
+            "CERN-PPE-95-024", 
+            "CERN-PPE-95-24"
+        ]
+    ], 
+    "393504": [
+        "Search for heavy charged particles and for particles with anomalous charge in $e^{+} e^{-}$ collisions at LEP", 
+        "OPAL", 
+        "10.1007/BF01571281", 
+        "278720", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-95-021", 
+            "CERN-PPE-95-21"
+        ]
+    ], 
+    "393953": [
+        "A Measurement of charged particle multiplicity in Z0 --> c anti-c and Z0 --> b anti-b events", 
+        "OPAL", 
+        "10.1016/0370-2693(95)00510-R", 
+        "279635", 
+        null, 
+        "ins393953", 
+        null, 
+        [
+            "CERN-PPE-95-038", 
+            "CERN-PPE-95-38"
+        ]
+    ], 
+    "393954": [
+        "Inclusive strange vector and tensor meson production in hadronic Z0 decays", 
+        "OPAL", 
+        "10.1007/BF01579799", 
+        "279661", 
+        null, 
+        "ins393954", 
+        null, 
+        [
+            "CERN-PPE-95-027", 
+            "CERN-PPE-95-27"
+        ]
+    ], 
+    "394355": [
+        "A Search for lepton flavor violating Z0 decays", 
+        "OPAL", 
+        "10.1007/BF01553981", 
+        "280463", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-95-043", 
+            "CERN-PPE-95-43"
+        ]
+    ], 
+    "394959": [
+        "A Measurement of the forward - backward asymmetry of e+ e- --> b anti-b by applying a jet charge algorithm to lifetime tagged events", 
+        "OPAL", 
+        "10.1007/BF01624580", 
+        "281435", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-95-050", 
+            "CERN-PPE-95-50"
+        ]
+    ], 
+    "394960": [
+        "A Measurement of the Lambda(b)0 lifetime", 
+        "OPAL", 
+        "10.1016/0370-2693(95)00553-W", 
+        "281436", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-95-051", 
+            "CERN-PPE-95-51"
+        ]
+    ], 
+    "395371": [
+        "A Study of QCD structure constants and a measurement of alpha-s (M(Z0)) at LEP using event shape observables", 
+        "OPAL", 
+        "10.1007/BF01565253", 
+        "282127", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-95-069", 
+            "CERN-PPE-95-69"
+        ]
+    ], 
+    "395372": [
+        "Measurement of the tau- ---> h- h+ h- tau-neutrino and tau- ---> h- h+ h- >= 1 pi0 tau-neutrino branching ratios", 
+        "OPAL", 
+        "10.1007/BF01565256", 
+        "282129", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-95-070", 
+            "CERN-PPE-95-70"
+        ]
+    ], 
+    "395450": [
+        "Measurement of the longitudinal, transverse and asymmetry fragmentation functions at LEP", 
+        "OPAL", 
+        "10.1007/BF01566668", 
+        "283140", 
+        null, 
+        "ins395450", 
+        null, 
+        [
+            "CERN-PPE-95-057", 
+            "CERN-PPE-95-57"
+        ]
+    ], 
+    "395451": [
+        "Measurement of the multiplicity of charm quark pairs from gluons in hadronic Z0 decays", 
+        "OPAL", 
+        "10.1016/0370-2693(95)00633-V", 
+        "283141", 
+        null, 
+        "ins395451", 
+        null, 
+        [
+            "CERN-PPE-95-058", 
+            "CERN-PPE-95-58"
+        ]
+    ], 
+    "396179": [
+        "A Model independent measurement of quark and gluon jet properties and differences", 
+        "OPAL", 
+        "10.1007/BF01566667", 
+        "283142", 
+        null, 
+        "ins396179", 
+        null, 
+        [
+            "CERN-PPE-95-075", 
+            "CERN-PPE-95-75"
+        ]
+    ], 
+    "396397": [
+        "Investigation of the string effect using final state photons", 
+        "OPAL", 
+        "10.1007/BF01565254", 
+        "283499", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-95-083", 
+            "CERN-PPE-95-83"
+        ]
+    ], 
+    "398320": [
+        "Delta++ production in hadronic Z0 decays", 
+        "OPAL", 
+        "10.1016/0370-2693(95)00935-E", 
+        "285916", 
+        null, 
+        "ins398320", 
+        null, 
+        [
+            "CERN-PPE-95-099", 
+            "CERN-PPE-95-99"
+        ]
+    ], 
+    "400812": [
+        "A Study of b quark fragmentation into B0 and B+ mesons at LEP", 
+        "OPAL", 
+        "10.1016/0370-2693(95)01293-7", 
+        "291738", 
+        null, 
+        "ins400812", 
+        null, 
+        [
+            "CERN-PPE-95-122"
+        ]
+    ]
+}

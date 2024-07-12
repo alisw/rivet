@@ -2,7 +2,7 @@
 ## -*- sh -*-
 ## @configure_input@
 
-tmp=$(echo $* | egrep -- '--\<help\>|-\<h\>')
+tmp=$(echo $* | grep -E -- '--\<help\>|-\<h\>')
 if test $# -eq 0 || test -n "$tmp"; then
     echo "rivet-config: configuration tool for the Rivet generator validation system"
     echo "              http://projects.hepforge.org/rivet/"
@@ -34,7 +34,7 @@ fi
 ## These variables need to exist
 ## Note no use of $DESTDIR... we ignore it so that destdir can be used
 ## for temp installs later copied to /
-tmp=$( echo "$*" | egrep -- '--\<guess-prefix\>')
+tmp=$( echo "$*" | grep -E -- '--\<guess-prefix\>')
 if [[ -n "$tmp" ]]; then
     bindir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
     prefix=$(dirname $bindir)
@@ -49,30 +49,30 @@ datarootdir=@datarootdir@
 OUT=""
 
 ## "Atomic" build info, for "roll your own build" obsessives
-tmp=$( echo "$*" | egrep -- '--\<prefix\>')
+tmp=$( echo "$*" | grep -E -- '--\<prefix\>')
 test -n "$tmp" && OUT="$OUT @prefix@"
 
-tmp=$( echo "$*" | egrep -- '--\<includedir\>')
+tmp=$( echo "$*" | grep -E -- '--\<includedir\>')
 test -n "$tmp" && OUT="$OUT @includedir@"
 
-tmp=$( echo "$*" | egrep -- '--\<libdir\>')
+tmp=$( echo "$*" | grep -E -- '--\<libdir\>')
 test -n "$tmp" && OUT="$OUT @libdir@"
 
-tmp=$( echo "$*" | egrep -- '--\<datadir\>')
+tmp=$( echo "$*" | grep -E -- '--\<datadir\>')
 test -n "$tmp" && OUT="$OUT @datadir@/@PACKAGE_TARNAME@"
 
-tmp=$( echo "$*" | egrep -- '--\<pythonpath\>')
+tmp=$( echo "$*" | grep -E -- '--\<pythonpath\>')
 test -n "$tmp" && OUT="$OUT @RIVET_PYTHONPATH@"
 
 
 ## "Pre-rolled" build info
-tmp=$( echo "$*" | egrep -- '--\<cxx\>')
+tmp=$( echo "$*" | grep -E -- '--\<cxx\>')
 test -n "$tmp" && OUT="$OUT @RIVETCXX@"
 
-tmp=$( echo "$*" | egrep -- '--\<cflags\>|--\<cxxflags\>')
+tmp=$( echo "$*" | grep -E -- '--\<cflags\>|--\<cxxflags\>')
 test -n "$tmp" && OUT="$OUT @RIVETCXXFLAGS@"
 
-tmp=$( echo "$*" | egrep -- '--\<cppflags\>')
+tmp=$( echo "$*" | grep -E -- '--\<cppflags\>')
 if test -n "$tmp"; then
     irivet="@includedir@"
     test -n "$irivet" && OUT="$OUT -I${irivet}"
@@ -82,32 +82,28 @@ if test -n "$tmp"; then
     test -n "$iyoda" && OUT="$OUT -I${iyoda}"
     ifastjet="@FASTJETINCPATH@"
     test -n "$ifastjet" && OUT="$OUT -I${ifastjet}"
-    # igsl="@GSLINCPATH@"
-    # test -n "$igsl" && OUT="$OUT -I${igsl}"
-    # iboost="@BOOST_CPPFLAGS@"
-    # test -n "$iboost" && OUT="$OUT ${iboost}"
+    ifjcontrib="@FJCONTRIBCPPFLAGS@"
+    test -n "$ifjcontrib" && OUT="$OUT ${ifjcontrib}"
 fi
 
-tmp=$( echo "$*" | egrep -- '--\<ldflags\>|--\<libs\>')
+tmp=$( echo "$*" | grep -E -- '--\<ldflags\>|--\<libs\>')
 if test -n "$tmp"; then
     lrivet="@libdir@"
     test -n "$lrivet" && OUT="$OUT -L${lrivet}"
     lhepmc="@HEPMCLIBPATH@"
-    test -n "$lhepmc" && OUT="$OUT -L${lhepmc} -lHepMC"
+    test -n "$lhepmc" && OUT="$OUT -L${lhepmc} @HEPMCLIBNAME@"
     lyoda="@YODALIBPATH@"
     test -n "$lyoda" && OUT="$OUT -L${lyoda} -lYODA"
-    lfastjet="@FASTJETCONFIGLIBADD@"
+    lfastjet="@FASTJETLIBADD@"
     test -n "$lfastjet" && OUT="$OUT ${lfastjet}"
-    # lgsl="@GSLLIBPATH@"
-    # test -n "$lgsl" && OUT="$OUT -L${lgsl}"
 fi
 
-tmp=$( echo "$*" | egrep -- '--\<libs\>|--\<ldadd\>')
+tmp=$( echo "$*" | grep -E -- '--\<libs\>|--\<ldadd\>')
 test -n "$tmp" && OUT="$OUT -lRivet"
 
 
 ## Version
-tmp=$( echo "$*" | egrep -- '--\<version\>')
+tmp=$( echo "$*" | grep -E -- '--\<version\>')
 test -n "$tmp" && echo @PACKAGE_VERSION@ && exit 0
 
 echo $OUT

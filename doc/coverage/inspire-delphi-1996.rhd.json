@@ -1,0 +1,359 @@
+{
+    "396884": [
+        "A Measurement of the photon structure function F2(gamma) at an average Q**2 of 12-GeV**2/c**4", 
+        "DELPHI", 
+        "10.1007/s002880050022", 
+        "284091", 
+        null, 
+        "ins396884", 
+        null, 
+        [
+            "CERN-PPE-95-087", 
+            "CERN-PPE-95-87"
+        ]
+    ], 
+    "401100": [
+        "Measurement of inclusive pi0 production in hadronic Z0 decays", 
+        "DELPHI", 
+        "10.1007/s002880050060", 
+        "289849", 
+        null, 
+        "ins401100", 
+        null, 
+        [
+            "CERN-PPE-95-144"
+        ]
+    ], 
+    "401612": [
+        "Search for promptly produced heavy quarkonium states in hadronic Z decays", 
+        "DELPHI", 
+        "10.1007/s002880050061", 
+        "290408", 
+        null, 
+        "ins401612", 
+        null, 
+        [
+            "CERN-PPE-95-145"
+        ]
+    ], 
+    "402178": [
+        "A Precise measurement of the tau lepton lifetime", 
+        "DELPHI", 
+        "10.1016/0370-2693(95)01434-9", 
+        "290925", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-95-154"
+        ]
+    ], 
+    "403254": [
+        "Energy dependence of the differences between the quark and gluon jet fragmentation", 
+        "DELPHI", 
+        "10.1007/s002880050095", 
+        "292192", 
+        null, 
+        "ins403254", 
+        null, 
+        [
+            "CERN-PPE-95-164"
+        ]
+    ], 
+    "404811": [
+        "Performance of the DELPHI detector", 
+        "DELPHI", 
+        "10.1016/0168-9002(96)00463-9", 
+        "295267", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-95-194"
+        ]
+    ], 
+    "415744": [
+        "Charged particle multiplicity in e+ e-interactions at s**(1/2) = 130-GeV", 
+        "DELPHI", 
+        "10.1016/0370-2693(96)00134-7", 
+        "295268", 
+        null, 
+        "ins415744", 
+        null, 
+        [
+            "CERN-PPE-96-005", 
+            "CERN-PPE-96-5", 
+            "CERN-PPE-96-05"
+        ]
+    ], 
+    "415900": [
+        "Measurement of the B(d)0 oscillation frequency using kaons, leptons and jet charge", 
+        "DELPHI", 
+        "10.1007/s002880050219", 
+        "295488", 
+        null, 
+        "ins415900", 
+        null, 
+        [
+            "CERN-PPE-96-006", 
+            "CERN-PPE-96-6"
+        ]
+    ], 
+    "416097": [
+        "Updated precision measurement of the average lifetime of B hadrons", 
+        "DELPHI", 
+        "10.1016/0370-2693(96)00452-2", 
+        "296268", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-013", 
+            "CERN-PPE-96-13"
+        ]
+    ], 
+    "416098": [
+        "Production of SIGMA0 and OMEGA- in Z decays", 
+        "DELPHI", 
+        "10.1007/s002880050115", 
+        "296269", 
+        null, 
+        "ins416098", 
+        null, 
+        [
+            "CERN-PPE-96-012", 
+            "CERN-PPE-96-12"
+        ]
+    ], 
+    "416099": [
+        "Determination of |V(cb)| from the semileptonic decay B0 --> D*- lepton - neutrino", 
+        "DELPHI", 
+        "10.1007/s002880050202", 
+        "295910", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-011", 
+            "CERN-PPE-96-11"
+        ]
+    ], 
+    "416141": [
+        "Search for exclusive decays of the LAMBDA(b) baryon and measurement of its mass", 
+        "DELPHI", 
+        "10.1016/0370-2693(96)00306-1", 
+        "296453", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-016", 
+            "CERN-PPE-16"
+        ]
+    ], 
+    "416142": [
+        "Measurement of the partial decay width R(b) sup(0) = GAMMA (b anti-b) / GAMMA(had) of the Z with the DELPHI detector at LEP", 
+        "DELPHI", 
+        "10.1007/s002880050131", 
+        "296454", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-015", 
+            "CERN-PPE-15"
+        ]
+    ], 
+    "416357": [
+        "Determination of the average lifetime of b baryons", 
+        "DELPHI", 
+        "10.1007/s002880050164", 
+        "297052", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-021", 
+            "CERN-PPE-96-21"
+        ]
+    ], 
+    "416741": [
+        "First measurement of f2-prime (1525) production in Z0 hadronic decays", 
+        "DELPHI", 
+        "10.1016/0370-2693(96)00557-6", 
+        "297695", 
+        null, 
+        "ins416741", 
+        null, 
+        [
+            "CERN-PPE-96-026", 
+            "CERN-PPE-96-26"
+        ]
+    ], 
+    "417265": [
+        "Mean lifetime of the B(s)0 meson", 
+        "DELPHI", 
+        "10.1007/s002880050144", 
+        "298928", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-032", 
+            "CERN-PPE-96-32"
+        ]
+    ], 
+    "418329": [
+        "First study of the interference between initial and final state radiation at the Z resonance", 
+        "DELPHI", 
+        "10.1007/s002880050220", 
+        "300080", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-044", 
+            "CERN-PPE-96-44"
+        ]
+    ], 
+    "418418": [
+        "Kaon interference in the hadronic decays of the Z0", 
+        "DELPHI", 
+        "10.1016/0370-2693(96)00572-2", 
+        "302249", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-054", 
+            "CERN-PPE-96-54"
+        ]
+    ], 
+    "418937": [
+        "Search for anomalous production of single photons at $\\sqrt{s}$ = 130-GeV and 136-GeV", 
+        "DELPHI", 
+        "10.1016/0370-2693(96)00671-5", 
+        "304012", 
+        null, 
+        "ins418937", 
+        null, 
+        [
+            "CERN-PPE-96-061", 
+            "CERN-PPE-96-61"
+        ]
+    ], 
+    "418939": [
+        "Study of radiative leptonic events with hard photons and search for excited charged leptons at S**(1/2) = 130-GeV - 136-GeV", 
+        "DELPHI", 
+        "10.1016/0370-2693(96)00672-7", 
+        "303486", 
+        null, 
+        "ins418939", 
+        null, 
+        [
+            "CERN-PPE-96-060", 
+            "CERN-PPE-96-60"
+        ]
+    ], 
+    "419911": [
+        "Search for the lightest chargino at s**(1/2) = 130-GeV and 136-GeV in DELPHI", 
+        "DELPHI", 
+        "10.1016/0370-2693(96)00769-1", 
+        "305167", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-075", 
+            "CERN-PPE-96-75"
+        ]
+    ], 
+    "419912": [
+        "Search for high mass gamma gamma resonances in e+ e ---> lepton+ lepton- gamma gamma, neutrino anti-neutrino gamma gamma and q anti-q gamma gamma at LEP-1", 
+        "DELPHI", 
+        "10.1007/s002880050236", 
+        "305168", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-076", 
+            "CERN-PPE-96-76"
+        ]
+    ], 
+    "420528": [
+        "Measurement of inclusive K*0 (892), Phi (1020) and K(2)*0 (1430) production in hadronic Z decays", 
+        "DELPHI", 
+        "10.1007/s002880050296", 
+        "307647", 
+        null, 
+        "ins420528", 
+        null, 
+        [
+            "CERN-PPE-96-077", 
+            "CERN-PPE-96-77"
+        ]
+    ], 
+    "421545": [
+        "Study of rare b decays with the DELPHI detector at LEP", 
+        "DELPHI", 
+        "10.1007/s002880050238", 
+        "304758", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-067", 
+            "CERN-PPE-96-67"
+        ]
+    ], 
+    "421994": [
+        "Search for neutralinos, scalar leptons and scalar quarks in e+ e- interactions at s**(1/2) = 130-GeV and 136-GeV.", 
+        "DELPHI", 
+        "10.1016/0370-2693(96)01197-5", 
+        "309224", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-110", 
+            "BERGEN-1996-02"
+        ]
+    ], 
+    "424112": [
+        "Tuning and test of fragmentation models based on identified particles and precision event shape data", 
+        "DELPHI", 
+        "10.1007/s002880050295", 
+        "309559", 
+        null, 
+        "ins424112", 
+        null, 
+        [
+            "CERN-PPE-96-120"
+        ]
+    ], 
+    "424630": [
+        "An Upper limit for Br (Z0 ---> g g g) from symmetric three jet Z0 hadronic decays", 
+        "DELPHI", 
+        "10.1016/S0370-2693(96)01450-5", 
+        "312203", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-131"
+        ]
+    ], 
+    "426505": [
+        "Search for pair production of heavy objects in 4 jet events at s**(1/2) = 130-GeV - 136-GeV", 
+        "DELPHI", 
+        "10.1007/s002880050294", 
+        "309558", 
+        null, 
+        null, 
+        null, 
+        [
+            "CERN-PPE-96-119"
+        ]
+    ]
+}

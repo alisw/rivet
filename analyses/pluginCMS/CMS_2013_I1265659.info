@@ -5,6 +5,7 @@ Experiment: CMS
 Collider: LHC
 InspireID: 1265659
 Status: VALIDATED
+Reentrant: true
 Authors:
  - Maxime Gouzevitch <mgouzevi@cern.ch>
  - Chawon Park <parknkim@gmail.com>
@@ -43,3 +44,7 @@ BibTeX: '@article{Chatrchyan:2013fha,
 }'
 ToDo:
  - Update references when accepted by journal
+
+ReleaseTests:
+ - $A LHC-7-Jets-4
+

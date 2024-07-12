@@ -1,0 +1,35 @@
+Name: BABAR_2010_I878120
+Year: 2010
+Summary: Dalitz plot analysis of $D^+_s\to K^+K^-\pi^+$
+Experiment: BABAR
+Collider: PEP-II
+InspireID: 878120
+Status: VALIDATED NOHEPDATA
+Reentrant:  true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 83 (2011) 052001
+RunInfo: Any process producing D_s+->K+K-pi+, original e+e->Upsilon(4S)
+Description:
+  'Measurement of the mass distributions in the decay $D^+_s\to K^+K^-\pi^+$ by BaBar. The data were read from the plots in the paper and therefore for some points the error bars are the size of the point. It is also not clear that any resolution effects have been unfolded.'
+ValidationInfo:
+  'Herwig 7 events using model from paper'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: BaBar:2010wqe
+BibTeX: '@article{BaBar:2010wqe,
+    author = "del Amo Sanchez, P. and others",
+    collaboration = "BaBar",
+    title = "{Dalitz plot analysis of $D_s^+ \to K^+ K^- \pi^+$}",
+    eprint = "1011.4190",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "BABAR-PUB-10-016, SLAC-PUB-14266",
+    doi = "10.1103/PhysRevD.83.052001",
+    journal = "Phys. Rev. D",
+    volume = "83",
+    pages = "052001",
+    year = "2011"
+}'

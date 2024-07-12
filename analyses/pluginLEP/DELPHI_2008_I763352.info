@@ -1,0 +1,36 @@
+Name: DELPHI_2008_I763352
+Year: 2008
+Summary:  $\tau$ polarization at LEP II (197 GeV)
+Experiment: DELPHI
+Collider: LEP
+InspireID: 763352
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett.B 659 (2008) 65-73
+RunInfo:  e+ e- > tau+ tau-
+Beams: [e+, e-]
+Energies: [197.]
+Description:
+  'Measurement of the $\tau$ lepton polarization in $e^+e^-\to\tau^+\tau^-$ at 197 GeV by the DELPHI experiment at LEP2.'
+ValidationInfo:
+  'Herwig7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Abdallah:2007ac
+BibTeX: '@article{Abdallah:2007ac,
+    author = "Abdallah, J. and others",
+    collaboration = "DELPHI",
+    title = "{Measurement of the Tau Lepton Polarisation at LEP2}",
+    eprint = "0710.1368",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CERN-PH-EP-2007-010",
+    doi = "10.1016/j.physletb.2007.10.022",
+    journal = "Phys. Lett. B",
+    volume = "659",
+    pages = "65--73",
+    year = "2008"
+}'

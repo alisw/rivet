@@ -1,0 +1,35 @@
+Name: CLEOII_1997_I424575
+Year: 1997
+Summary:  Spectra for $\Sigma_c^{* ++,0}$ at 10.58 GeV
+Experiment: CLEOII
+Collider: CESR
+InspireID: 424575
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.Lett. 78 (1997) 2304-2308
+RunInfo: e+e- to hadrons 
+Beams: [e+, e-]
+Energies: [10.58]
+Description:
+  'Spectrum for the average of $\Sigma_c^{*0}$ and $\Sigma_c^{*++}$ produced at 10.58 GeV measured by CLEOII.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Brandenburg:1996jc
+BibTeX: '@article{Brandenburg:1996jc,
+      author         = "Brandenburg, G. and others",
+      title          = "{Observation of two excited charmed baryons decaying into
+                        Lambda(c)+ pi+-}",
+      collaboration  = "CLEO",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "78",
+      year           = "1997",
+      pages          = "2304-2308",
+      doi            = "10.1103/PhysRevLett.78.2304",
+      reportNumber   = "CLNS-96-1427, CLEO-96-13, SLAC-PUB-9851",
+      SLACcitation   = "%%CITATION = PRLTA,78,2304;%%"
+}'

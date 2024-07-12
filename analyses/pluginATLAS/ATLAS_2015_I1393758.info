@@ -5,9 +5,11 @@ Experiment: ATLAS
 Collider: LHC
 InspireID: 1393758
 Status: VALIDATED
+Reentrant: false
 Authors:
  - Ben Nachman <ibenjamin.philip.nachman@cern.ch>
 References:
+ - ATLAS-STDM-2014-17
  - Phys.Rev. D93 (2016) no.5, 052003
  - doi:10.1103/PhysRevD.93.052003
  - arXiv:1509.05190 [hep-ex]
@@ -48,3 +50,11 @@ BibTeX: '@article{Aad:2015cua,
       reportNumber   = "CERN-PH-EP-2015-207",
       SLACcitation   = "%%CITATION = ARXIV:1509.05190;%%"
 }'
+
+ReleaseTests:
+ - $A LHC-8-Jets-1
+ - $A-2 LHC-8-Jets-3
+ - $A-3 LHC-8-Jets-7
+ - $A-4 LHC-8-Jets-8
+ - $A-5 LHC-8-Jets-9
+

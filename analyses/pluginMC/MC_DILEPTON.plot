@@ -69,8 +69,8 @@ END PLOT
 
 
 BEGIN PLOT /MC_DILEPTON/lep._ppara
-XLabel=$p^_\parallel$ [GeV]
-YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}p^_\parallel$ [1/GeV]
+XLabel=$p_\parallel$ [GeV]
+YLabel=$1/\sigma \, \mathrm{d}\sigma/\mathrm{d}p_\parallel$ [1/GeV]
 LegendYPos=0.4
 END PLOT
 

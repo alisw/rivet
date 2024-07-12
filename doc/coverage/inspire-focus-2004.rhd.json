@@ -1,0 +1,111 @@
+{
+    "585525": [
+        "The Target Silicon Detector for the FOCUS Spectrometer",
+        "FOCUS",
+        "10.1016/j.nima.2003.08.163",
+        null,
+        "hep-ex/0204023",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-02-069-E"
+        ]
+    ],
+    "631526": [
+        "Study of hadronic five body decays of charmed mesons involving K0(S)",
+        "FOCUS",
+        "10.1016/j.physletb.2003.11.078",
+        null,
+        "hep-ex/0310051",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-03-341-E"
+        ]
+    ],
+    "632741": [
+        "Charm - anti-charm baryon production asymmetries in photon nucleon interactions",
+        "FOCUS",
+        "10.1016/j.physletb.2003.12.011",
+        null,
+        "hep-ex/0311022",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-03-389-E",
+            "FERMILAB-PUB-03-370"
+        ]
+    ],
+    "635446": [
+        "Dalitz plot analysis of D(s)+ and D+ decay to pi+ pi- pi+ using the K matrix formalism",
+        "FOCUS",
+        "10.1016/j.physletb.2004.01.065",
+        null,
+        "hep-ex/0312040",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-03-367-E"
+        ]
+    ],
+    "636428": [
+        "Measurement of masses and widths of excited charm mesons D(2)* and evidence for broad states",
+        "FOCUS",
+        "10.1016/j.physletb.2004.02.017",
+        null,
+        "hep-ex/0312060",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-03-411-E"
+        ]
+    ],
+    "642204": [
+        "New measurements of the D+(s) ---> phi mu+ nu form-factor ratios",
+        "FOCUS",
+        "10.1016/j.physletb.2004.02.015",
+        null,
+        "hep-ex/0401001",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-04-002-E"
+        ]
+    ],
+    "642785": [
+        "Measurements of six body hadronic decays of the D0 charmed meson",
+        "FOCUS",
+        "10.1016/j.physletb.2004.02.038",
+        "706169",
+        "hep-ex/0401019",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-04-006-E"
+        ]
+    ],
+    "652963": [
+        "Measurement of the ratio of the vector to pseudoscalar charm semileptonic decay rate Gamma(D+ ---> anti-K*0 mu+ nu) / Gamma(D+ ---> anti-K0 mu+ nu)",
+        "FOCUS",
+        "10.1016/j.physletb.2004.07.060",
+        null,
+        "hep-ex/0406060",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-04-111-E"
+        ]
+    ],
+    "654030": [
+        "Study of the doubly and singly Cabibbo suppressed decays D+ ---> K+ pi+ pi- and D+(s) ---> K+ pi+ pi-",
+        "FOCUS",
+        "10.1016/j.physletb.2004.09.022",
+        null,
+        "hep-ex/0407014",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-04-115-E"
+        ]
+    ]
+}

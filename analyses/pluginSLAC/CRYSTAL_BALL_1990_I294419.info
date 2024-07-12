@@ -1,0 +1,30 @@
+Name: CRYSTAL_BALL_1990_I294419
+Year: 1990
+Summary: Measurement of $R$ for energies between 5 and 7.4 GeV
+Experiment: CRYSTAL_BALL
+Collider: Spear
+InspireID: 294419
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Lett. B234 (1990) 525-533, 1990 
+RunInfo: e+ e- to hadrons and e+ e- to mu+ mu- (for normalization)
+NeedCrossSection: no
+Beams: [e-, e+]
+Description:
+  'Measurement of $R$ in $e^+e^-$ collisions by the Crystal Ball experiment
+   for energies between 5 and 7.4 GeV.
+   The individual hadronic and muonic cross sections are also outputted to the yoda file
+   so that ratio $R$ can be recalcuated if runs are combined.'
+Keywords: []
+BibKey: Edwards:1990pc
+BibTeX: '@article{Edwards:1990pc,
+      author         = "Edwards, C. and others",
+      title          = "{Hadron Production in $e^+ e^-$ Annihilation From
+                        $\sqrt{s}=5$-{GeV} to 7.4-{GeV}}",
+      journal        = "Submitted to: Phys. Rev. D",
+      year           = "1990",
+      reportNumber   = "SLAC-PUB-5160",
+      SLACcitation   = "%%CITATION = SLAC-PUB-5160;%%"
+}'

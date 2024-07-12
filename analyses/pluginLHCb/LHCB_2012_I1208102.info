@@ -19,6 +19,7 @@ NumEvents: 500000
 NeedCrossSection: yes
 Beams: [p+, p+]
 Energies: [7000]
+Luminosity_fb: 0.94
 PtCuts: [20.]
 Description:
   'Measurement of the $pp \to \mathrm{Z}^0$ cross-section in the $\mathrm{Z}/\gamma \to e^{+}e^{-}$ mode at
@@ -46,3 +47,7 @@ BibTeX: '@article{Aaij:2012mda,
       reportNumber   = "CERN-PH-EP-2012-363, LHCB-PAPER-2012-036",
       SLACcitation   = "%%CITATION = ARXIV:1212.4620;%%",
 }'
+
+ReleaseTests:
+ - $A LHC-Z-MedMass-e
+

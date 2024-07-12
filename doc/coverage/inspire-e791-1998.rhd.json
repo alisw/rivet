@@ -1,0 +1,76 @@
+{
+    "422768": [
+        "A Search for D0 - anti-D0 mixing and doubly Cabibbo suppressed decays of the D0 in hadronic final states",
+        "E791",
+        "10.1103/PhysRevD.57.13",
+        null,
+        "hep-ex/9608018",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-96-214-E"
+        ]
+    ],
+    "448379": [
+        "Search for the pentaquark via the P(anti-c s)0 decay",
+        "E791",
+        "10.1103/PhysRevLett.81.44",
+        null,
+        "hep-ex/9709013",
+        "ins448379",
+        null,
+        [
+            "FERMILAB-PUB-97-118-E"
+        ]
+    ],
+    "450819": [
+        "Measurement of the form-factor ratios for D+ ---> anti-K*0 e+ electron-neutrino",
+        "E791",
+        "10.1103/PhysRevLett.80.1393",
+        null,
+        "hep-ph/9710216",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-97-267"
+        ]
+    ],
+    "450879": [
+        "Branching fractions for D0 ---> K+ K- and D0 ---> pi+ pi-, and a search for CP violation in D0 decays",
+        "E791",
+        "10.1016/S0370-2693(97)01570-0",
+        null,
+        "hep-ex/9711003",
+        null,
+        null,
+        [
+            "FERMILAB-PUB-97-345-E",
+            "FNAL-P-PUB-97-345-E"
+        ]
+    ],
+    "451989": [
+        "Study of the decay D0 ---> K- K+ pi- pi+",
+        "E791",
+        "10.1016/S0370-2693(98)00066-5",
+        null,
+        null,
+        null,
+        null,
+        [
+            "FERMILAB-PUB-97-373-E"
+        ]
+    ],
+    "476799": [
+        "Measurement of the form-factor ratios for D+ ---> anti-K*0 lepton+ lepton-neutrino",
+        "E791",
+        "10.1016/S0370-2693(98)01243-X",
+        null,
+        "hep-ex/9809026",
+        null,
+        null,
+        [
+            "KSU-HEP-98-001",
+            "FERMILAB-PUB-98-289-E"
+        ]
+    ]
+}

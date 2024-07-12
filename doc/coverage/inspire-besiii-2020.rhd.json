@@ -1,0 +1,349 @@
+{
+    "1736235": [
+        "Measurement of proton electromagnetic form factors in $e^+e^- \\to p\\bar{p}$ in the energy region 2.00 - 3.08 GeV", 
+        "BESIII", 
+        "10.1103/PhysRevLett.124.042001", 
+        null, 
+        "1905.09001", 
+        null, 
+        null, 
+        []
+    ], 
+    "1748229": [
+        "Search for the rare decay $\\eta'\\rightarrow\\pi^{0}\\pi^{0}\\pi^{0}\\pi^{0}$ at BESIII", 
+        "BESIII", 
+        "10.1103/PhysRevD.101.032001", 
+        null, 
+        "1908.01988", 
+        null, 
+        null, 
+        []
+    ], 
+    "1756876": [
+        "Study of $e^{+}e^{-} \\to D^{+} D^{-} \\pi^{+} \\pi^{-} $ at center-of-mass energies from 4.36 to 4.60 GeV", 
+        "BESIII", 
+        "10.1016/j.physletb.2020.135395", 
+        null, 
+        "1909.12478", 
+        null, 
+        null, 
+        []
+    ], 
+    "1758883": [
+        "Measurement of the cross section for $e^{+}e^{-}\\rightarrow\\Xi^{-}\\bar\\Xi^{+}$ and observation of an excited $\\Xi$ baryon", 
+        "BESIII", 
+        "10.1103/PhysRevLett.124.032002", 
+        null, 
+        "1910.04921", 
+        null, 
+        null, 
+        []
+    ], 
+    "1762922": [
+        "Cross section measurement of $e^+e^- \\rightarrow \\eta'J/\\psi$ from $\\sqrt{s} = 4.178$ to $4.600$ GeV", 
+        "BESIII", 
+        "10.1103/PhysRevD.101.012008", 
+        null, 
+        "1911.00885", 
+        null, 
+        null, 
+        []
+    ], 
+    "1763897": [
+        "Observation of the decays $\\chi_{cJ} \\to \\phi \\phi \\eta$", 
+        "BESIII", 
+        "10.1103/PhysRevD.101.012012", 
+        null, 
+        "1911.02988", 
+        null, 
+        null, 
+        [
+            "Vol. 101", 
+            "No. 1"
+        ]
+    ], 
+    "1765606": [
+        "Measurement of $J/\\psi\\to\\Xi(1530)^{-}\\bar\\Xi^{+}$ and evidence for the radiative decay $\\Xi(1530)^{-}\\to\\gamma\\Xi^-$", 
+        "BESIII", 
+        "10.1103/PhysRevD.101.012004", 
+        null, 
+        "1911.06669", 
+        null, 
+        null, 
+        []
+    ], 
+    "1767758": [
+        "Search for baryon and lepton number violating decays $D^+\\to\\bar\\Lambda(\\bar\\Sigma^0)e^+$ and $D^+\\to\\Lambda(\\Sigma^0)e^+$", 
+        "BESIII", 
+        "10.1103/PhysRevD.101.031102", 
+        null, 
+        "1911.13116", 
+        null, 
+        null, 
+        []
+    ], 
+    "1770442": [
+        "Future Physics Programme of BESIII", 
+        "BESIII", 
+        "10.1088/1674-1137/44/4/040001", 
+        null, 
+        "1912.05983", 
+        null, 
+        null, 
+        [
+            "HEP-Physics-Report-BESIII-2019-12-13"
+        ]
+    ], 
+    "1771616": [
+        "Partial wave analysis of $\\psi(3686)\\to K^{+}K^{-}\\eta$", 
+        "BESIII", 
+        "10.1103/PhysRevD.101.032008", 
+        null, 
+        "1912.08566", 
+        null, 
+        null, 
+        []
+    ], 
+    "1773080": [
+        "Observation of $X(2370)$ and search for X(2120) in $J/\\psi \\rightarrow \\gamma K{\\bar{K}} \\eta '$", 
+        "BESIII", 
+        "10.1140/epjc/s10052-020-8078-4", 
+        null, 
+        "1912.11253", 
+        null, 
+        null, 
+        []
+    ], 
+    "1773653": [
+        "Observation of $D^+\\to\\eta\\eta\\pi^+$ and improved measurement of $D^{0(+)}\\to\\eta\\pi^+\\pi^{-(0)}$", 
+        "BESIII", 
+        "10.1103/PhysRevD.101.052009", 
+        null, 
+        "1912.12411", 
+        null, 
+        null, 
+        []
+    ], 
+    "1774198": [
+        "Study of Open-Charm Decays and Radiative Transitions of the X (3872)", 
+        "BESIII", 
+        "10.1103/PhysRevLett.124.242001", 
+        null, 
+        "2001.01156", 
+        null, 
+        null, 
+        []
+    ], 
+    "1775344": [
+        "Observation of a Resonant Structure in $e^{+}e^{-} \\to K^{+}K^{-}\\pi^{0}\\pi^{0}$", 
+        "BESIII", 
+        "10.1103/PhysRevLett.124.112001", 
+        null, 
+        "2001.04131", 
+        null, 
+        null, 
+        []
+    ], 
+    "1781291": [
+        "Search for intermediate resonances and dark gauge bosons in $J/\\psi\\rightarrow\\gamma\\pi^0\\eta^{\\prime}$", 
+        "BESIII", 
+        "10.1103/PhysRevD.102.052005", 
+        null, 
+        "2002.07486", 
+        null, 
+        null, 
+        []
+    ], 
+    "1782978": [
+        "Determination of Strong-Phase Parameters in $D\\rightarrow K^0_{S,L}\\pi^+\\pi^-$", 
+        "BESIII", 
+        "10.1103/PhysRevLett.124.241802", 
+        null, 
+        "2002.12791", 
+        null, 
+        null, 
+        []
+    ], 
+    "1783209": [
+        "Model-independent determination of the relative strong-phase difference between $D^0$ and $\\bar{D}^0\\rightarrow K^0_{S,L}\\pi^+\\pi^-$ and its impact on the measurement of the CKM angle $\\gamma/\\phi_3$", 
+        "BESIII", 
+        "10.1103/PhysRevD.101.112002", 
+        null, 
+        "2003.00091", 
+        null, 
+        null, 
+        []
+    ], 
+    "1784442": [
+        "Observation of the $Y(4220)$ and $Y(4360)$ in the process $e^{+}e^{-} \\to \\eta J/\\psi$", 
+        "BESIII", 
+        "10.1103/PhysRevD.102.031101", 
+        null, 
+        "2003.03705", 
+        null, 
+        null, 
+        []
+    ], 
+    "1785504": [
+        "Search for the decay $J/\\psi\\to\\gamma + \\rm {invisible}$", 
+        "BESIII", 
+        "10.1103/PhysRevD.101.112005", 
+        null, 
+        "2003.05594", 
+        null, 
+        null, 
+        []
+    ], 
+    "1788734": [
+        "Observation of a structure in $e^{+}e^{-} \\to \\phi \\eta^{\\prime}$ at $\\sqrt{s}$ from 2.05 to 3.08 GeV", 
+        "BESIII", 
+        "10.1103/PhysRevD.102.012008", 
+        null, 
+        "2003.13064", 
+        null, 
+        null, 
+        []
+    ], 
+    "1789623": [
+        "First Measurements of $\\chi_{cJ}\\rightarrow \\Sigma^{-} \\bar{\\Sigma}^{+} (J = 0, 1, 2)$ Decays", 
+        "BESIII", 
+        "10.1103/PhysRevD.101.092002", 
+        null, 
+        "2004.01394", 
+        null, 
+        null, 
+        []
+    ], 
+    "1791570": [
+        "$\\Sigma^{+}$ and $\\bar{\\Sigma}^-$ polarization in the $J/\\psi$ and $\\psi(3686)$ decays", 
+        "BESIII", 
+        "10.1103/PhysRevLett.125.052004", 
+        null, 
+        "2004.07701", 
+        null, 
+        null, 
+        []
+    ], 
+    "1793369": [
+        "Measurements of Absolute Branching Fractions of Fourteen Exclusive Hadronic D Decays to \u03b7", 
+        "BESIII", 
+        "10.1103/PhysRevLett.124.241803", 
+        null, 
+        "2004.13910", 
+        null, 
+        null, 
+        []
+    ], 
+    "1795144": [
+        "Precise measurements of branching fractions for $ {\\mathrm{D}}_{\\mathrm{s}}^{+} $ meson decays to two pseudoscalar mesons", 
+        "BESIII", 
+        "10.1007/JHEP08(2020)146", 
+        null, 
+        "2005.05072", 
+        null, 
+        null, 
+        []
+    ], 
+    "1795949": [
+        "Measurement of the Born Cross Sections for $e^+e^-\\to D_s^+ D_{s1}(2460)^- +c.c.$ and $e^+e^-\\to D_s^{\\ast +} D_{s1}(2460)^- +c.c.$", 
+        "BESIII", 
+        "10.1103/PhysRevD.101.112008", 
+        null, 
+        "2005.05850", 
+        null, 
+        null, 
+        []
+    ], 
+    "1797511": [
+        "Measurement of the absolute branching fraction of the inclusive decay $\\Lambda_c^+ \\to K_S^0X$", 
+        "BESIII", 
+        "10.1140/epjc/s10052-020-08447-0", 
+        null, 
+        "2005.11211", 
+        null, 
+        null, 
+        []
+    ], 
+    "1800404": [
+        "Inclusive charged and neutral particle multiplicity distributions in $\\chi_{cJ}$ and $J/\\psi$ decays", 
+        "BESIII", 
+        "10.1103/PhysRevD.102.052001", 
+        null, 
+        "2006.05588", 
+        null, 
+        null, 
+        []
+    ], 
+    "1805384": [
+        "Measurement of singly Cabibbo-suppressed decays $D \\to \\omega \\pi \\pi$", 
+        "BESIII", 
+        "10.1103/PhysRevD.102.052003", 
+        null, 
+        "2007.02542", 
+        null, 
+        null, 
+        [
+            "BAM-0371"
+        ]
+    ], 
+    "1806927": [
+        "Observation of the Doubly Cabibbo-Suppressed Decay $D^+\\to K^+\\pi^+\\pi^-\\pi^0$ and Evidence for $D^+\\to K^+\\omega$", 
+        "BESIII", 
+        "10.1103/PhysRevLett.125.141802", 
+        null, 
+        "2007.07674", 
+        null, 
+        null, 
+        []
+    ], 
+    "1807448": [
+        "Improved model-independent determination of the strong-phase difference between $D^{0}$ and $\\bar{D}^{0}\\to K^{0}_{\\mathrm{S,L}}K^{+}K^{-}$ decays", 
+        "BESIII", 
+        "10.1103/PhysRevD.102.052008", 
+        null, 
+        "2007.07959", 
+        null, 
+        null, 
+        []
+    ], 
+    "1808166": [
+        "Measurements of the absolute branching fractions of $D^{0(+)}\\to K\\bar K\\pi\\pi$ decays", 
+        "BESIII", 
+        "10.1103/PhysRevD.102.052006", 
+        null, 
+        "2007.10563", 
+        null, 
+        null, 
+        []
+    ], 
+    "1811675": [
+        "Search for the semileptonic decay $D^{0(+)}\\to b_1(1235)^{-(0)} e^+\\nu_e$", 
+        "BESIII", 
+        "10.1103/PhysRevD.102.112005", 
+        null, 
+        "2008.05754", 
+        null, 
+        null, 
+        []
+    ], 
+    "1818254": [
+        "Observation of the decays $\\chi_{cJ}\\to\\Sigma^{0}\\bar{p}K^{+}+{\\rm c.c.}~(J=0, 1, 2)$", 
+        "BESIII", 
+        "10.1103/PhysRevD.102.092006", 
+        null, 
+        "2009.09265", 
+        null, 
+        null, 
+        []
+    ], 
+    "1825969": [
+        "Search for New Hadronic Decays of $h_c$ and Observation of $h_c\\rightarrow K^{+}K^{-}\\pi^{+}\\pi^{-}\\pi^{0}$", 
+        "BESIII", 
+        "10.1103/PhysRevD.102.112007", 
+        null, 
+        "2010.12092", 
+        null, 
+        null, 
+        []
+    ]
+}

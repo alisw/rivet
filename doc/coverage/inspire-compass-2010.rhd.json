@@ -1,0 +1,62 @@
+{
+    "835613": [
+        "Observation of a J**PC = 1-+ exotic resonance in diffractive dissociation of 190-GeV/c pi- into pi- pi- pi+", 
+        "COMPASS", 
+        "10.1103/PhysRevLett.104.241803", 
+        "1216286", 
+        "0910.5842", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2009-018"
+        ]
+    ], 
+    "843494": [
+        "The Spin-dependent Structure Function of the Proton $g_1^p$ and a Test of the Bjorken Sum Rule", 
+        "COMPASS", 
+        "10.1016/j.physletb.2010.05.069", 
+        "1236008", 
+        "1001.4654", 
+        "ins843494", 
+        null, 
+        [
+            "CERN-PH-EP-2010-001"
+        ]
+    ], 
+    "856645": [
+        "Measurement of the Collins and Sivers asymmetries on transversely polarised protons", 
+        "COMPASS", 
+        "10.1016/j.physletb.2010.08.001", 
+        "1268916", 
+        "1005.5609", 
+        "ins856645", 
+        null, 
+        [
+            "CERN-PH-EP-2010-013"
+        ]
+    ], 
+    "861046": [
+        "Azimuthal asymmetries of charged hadrons produced by high-energy muons scattered off longitudinally polarised deuterons", 
+        "COMPASS", 
+        "10.1140/epjc/s10052-010-1461-9", 
+        "1276776", 
+        "1007.1562", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2010-018"
+        ]
+    ], 
+    "862410": [
+        "Quark helicity distributions from longitudinal spin asymmetries in muon-proton and muon-deuteron scattering", 
+        "COMPASS", 
+        "10.1016/j.physletb.2010.08.034", 
+        "1280458", 
+        "1007.4061", 
+        null, 
+        null, 
+        [
+            "CERN-PH-EP-2010-023"
+        ]
+    ]
+}

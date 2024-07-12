@@ -1,0 +1,36 @@
+Name: CLEOC_2008_I780363
+Year: 2008
+Summary: Kinematic distributions in the decay $D^+\to K^-\pi^+\pi^+$
+Experiment: CLEOC
+Collider: CESR
+InspireID: 780363
+Status: VALIDATED
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys. Rev. D78:052001, 2008
+RunInfo: Any process producing D+/-
+Description:
+  'Kinematic distributions  in the decay $D^+\to K^-\pi^+\pi^+$. The first part of the efficiency function given in the paper is applied, although the second is
+   not as it makes the agreement between the modesl show in the paper much worse.'
+ValidationInfo:
+  'Compared Herwig events using the same model for the deay as in the paper.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Bonvicini:2008jw
+BibTeX: '@article{Bonvicini:2008jw,
+      author         = "Bonvicini, G. and others",
+      title          = "{Dalitz plot analysis of the D+ ---&gt; K- pi+ pi+ decay}",
+      collaboration  = "CLEO",
+      journal        = "Phys. Rev.",
+      volume         = "D78",
+      year           = "2008",
+      pages          = "052001",
+      doi            = "10.1103/PhysRevD.78.052001",
+      eprint         = "0802.4214",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CLNS-08-2018, CLEO-08-02",
+      SLACcitation   = "%%CITATION = ARXIV:0802.4214;%%"
+}'

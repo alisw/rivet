@@ -1,0 +1,36 @@
+Name: CLEO_2003_I633196
+Year: 2003
+Summary: Dalitz plot analysis of $D^0\to K^0_S\pi^+\pi^-$
+Experiment: CLEO
+Collider: CESR
+InspireID: 633196
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 70 (2004) 091101
+RunInfo: Any process producing D0
+Description:
+  'Kinematic distributions  in the decay $D^0\to K^0_S\pi^+\pi^-$'
+ValidationInfo:
+  'Compared Herwig events using the same model for the decay as in the paper. The data were read from the plots in the paper.
+   Resolution/acceptance effects have been not unfolded. Given the agreement with the model in the paper this analysis should only be used for qualitative studies.'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: CLEO:2003sah
+BibTeX: '@article{CLEO:2003sah,
+    author = "Asner, D. M. and others",
+    collaboration = "CLEO",
+    title = "{Search for CP violation in D0 ---\ensuremath{>} K0(S) pi+ pi-}",
+    eprint = "hep-ex/0311033",
+    archivePrefix = "arXiv",
+    reportNumber = "CLNS-03-1848, CLEO-03-13",
+    doi = "10.1103/PhysRevD.70.091101",
+    journal = "Phys. Rev. D",
+    volume = "70",
+    pages = "091101",
+    year = "2004"
+}
+'

@@ -1,0 +1,74 @@
+{
+    "110272": [
+        "The Total Hadronic Cross-Section for e+ e- Annihilation Between 3.1-GeV and 4.8-GeV Center-Of-Mass Energy", 
+        "PLUTO", 
+        "10.1016/0370-2693(77)90023-5", 
+        null, 
+        null, 
+        "ins110272", 
+        null, 
+        [
+            "DESY-76-53"
+        ]
+    ], 
+    "118873": [
+        "Inclusive K0(s) Production in e+ e- Annihilation at Energies of 3.6-GeV to 5.0-GeV", 
+        "PLUTO", 
+        "10.1016/0370-2693(77)90395-1", 
+        null, 
+        null, 
+        "ins118873", 
+        null, 
+        [
+            "DESY-77-14"
+        ]
+    ], 
+    "119149": [
+        "Inclusive J/psi Production in e+ e- Annihilation in the Energy Range from 4.0-GeV to 5.0-GeV", 
+        "PLUTO", 
+        "10.1016/0370-2693(77)90289-1", 
+        null, 
+        null, 
+        "ins119149", 
+        null, 
+        [
+            "DESY-77-17"
+        ]
+    ], 
+    "119637": [
+        "Anomalous Muon Production in e+ e- Annihilation as Evidence for Heavy Leptons", 
+        "PLUTO", 
+        "10.1016/0370-2693(77)90292-1", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-77-24"
+        ]
+    ], 
+    "119638": [
+        "Evidence for Heavy Leptons from Anomalous mu e Production in e+ e- Annihilation", 
+        "PLUTO", 
+        "10.1016/0370-2693(77)90293-3", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-77-25"
+        ]
+    ], 
+    "120540": [
+        "Measurement of the Branching Ratios for the Decays J/psi (3.1) --> f omega and J/psi (3.1) --> B pi", 
+        "PLUTO", 
+        "10.1016/0370-2693(77)90080-6", 
+        null, 
+        null, 
+        null, 
+        null, 
+        [
+            "DESY-77-50"
+        ]
+    ]
+}

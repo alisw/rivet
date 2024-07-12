@@ -1,0 +1,710 @@
+{
+    "757570": [
+        "Measurement of the Ratio of Branching Fractions B($B^+ \\to J/\\psi \\pi^+$) /B($B^+ \\to J/\\psi K^+$)", 
+        "CDF", 
+        "10.1103/PhysRevD.79.112003", 
+        null, 
+        "0905.2146", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-07-170-E"
+        ]
+    ], 
+    "782344": [
+        "Search for Hadronic Decays of $W$ and $Z$ Bosons in Photon Events in $p \\bar{p}$ Collisions at $\\sqrt{s}$ = 1.96-GeV", 
+        "CDF", 
+        "10.1103/PhysRevD.80.052011", 
+        null, 
+        "0803.4264", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-08-071-E"
+        ]
+    ], 
+    "784226": [
+        "Search for the Rare Decays $B^+ \\to \\mu^+ \\mu^- K^+$, $B^0 \\to \\mu^+ \\mu^- K^{*0}(892)$, and $B^0_s \\to \\mu^+ \\mu^- \\phi$ at CDF", 
+        "CDF", 
+        "10.1103/PhysRevD.79.011104", 
+        null, 
+        "0804.3908", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-08-094-E"
+        ]
+    ], 
+    "790693": [
+        "Measurement of the Inclusive Jet Cross Section at the Fermilab Tevatron p anti-p Collider Using a Cone-Based Jet Algorithm", 
+        "CDF", 
+        "10.1103/PhysRevD.78.052006", 
+        null, 
+        "0807.2204", 
+        "ins790693", 
+        null, 
+        [
+            "FERMILAB-PUB-08-243-E"
+        ]
+    ], 
+    "791594": [
+        "Measurement of the fraction of $t \\bar{t}$ production via gluon-gluon fusion in $p \\bar{p}$ collisions at $\\sqrt{s}$ = 1.96-TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.79.031101", 
+        null, 
+        "0807.4262", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-08-258-E"
+        ]
+    ], 
+    "791757": [
+        "Measurement of the top quark mass with dilepton events selected using neuroevolution at CDF", 
+        "CDF", 
+        "10.1103/PhysRevLett.102.152001", 
+        null, 
+        "0807.4652", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-08-369-E"
+        ]
+    ], 
+    "793210": [
+        "First Direct Bound on the Total Width of the Top Quark in $p \\bar{p}$ Collisions at $\\sqrt{s}=$ 1.96-TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.102.042001", 
+        null, 
+        "0808.2167", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-08-302-E"
+        ]
+    ], 
+    "794102": [
+        "First observation of $\\bar{B}^0_s \\to D_s^\\pm K^\\mp$ and measurement of the ratio of branching fractions B$(\\bar{B}^0_s\\to D_s^\\pm K^\\mp$ /B$(\\bar{B}^0_s\\to D_s^+ \\pi^-)$", 
+        "CDF", 
+        "10.1103/PhysRevLett.103.191802", 
+        null, 
+        "0809.0080", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-08-330-E"
+        ]
+    ], 
+    "797238": [
+        "Global Search for New Physics with 2.0 fb$^{-1}$ at CDF", 
+        "CDF", 
+        "10.1103/PhysRevD.79.011101", 
+        null, 
+        "0809.3781", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-08-400-E"
+        ]
+    ], 
+    "797428": [
+        "Search for a Higgs Boson Decaying to Two $W$ Bosons at CDF", 
+        "CDF", 
+        "10.1103/PhysRevLett.102.021802", 
+        null, 
+        "0809.3930", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-08-401-E"
+        ]
+    ], 
+    "797834": [
+        "First simultaneous measurement of the top quark mass in the lepton + jets and dilepton channels at CDF", 
+        "CDF", 
+        "10.1103/PhysRevD.79.092005", 
+        null, 
+        "0809.4808", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-08-415"
+        ]
+    ], 
+    "797870": [
+        "Search for Maximal Flavor Violating Scalars in Same-Charge Lepton Pairs in $p \\bar{p}$ Collisions at $\\sqrt{s}$ = 1.96-TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.102.041801", 
+        null, 
+        "0809.4903", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-08-420-E"
+        ]
+    ], 
+    "797908": [
+        "Measurement of Resonance Parameters of Orbitally Excited Narrow $B^0$ Mesons", 
+        "CDF", 
+        "10.1103/PhysRevLett.102.102003", 
+        null, 
+        "0809.5007", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-08-416-E"
+        ]
+    ], 
+    "799155": [
+        "Search for High-Mass $e^+$ e- Resonances in $p \\bar{p}$ Collisions at $\\sqrt{s}$ = 1.96-TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.102.031801", 
+        null, 
+        "0810.2059", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-08-434-E"
+        ]
+    ], 
+    "799835": [
+        "First Measurement of the Ratio of Branching Fractions $B(\\Lambda^0_b \\to \\Lambda^+_{c} \\mu^{-} \\bar{\\nu}_\\mu / B(Lambda^0_b \\to \\Lambda^+_{c} \\pi^{-})$", 
+        "CDF", 
+        "10.1103/PhysRevD.79.032001", 
+        null, 
+        "0810.3213", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-08-446-E"
+        ]
+    ], 
+    "800000": [
+        "Search for new physics in the $\\mu\\mu+e/\\mu+E_{T}\\!\\!\\!\\!\\!\\!\\!/\\,\\,\\,\\,$ channel with a low-$p_T$ lepton threshold at the Collider Detector at Fermilab", 
+        "CDF", 
+        "10.1103/PhysRevD.79.052004", 
+        null, 
+        "0810.3522", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-08-516-E"
+        ]
+    ], 
+    "801318": [
+        "A Search for high-mass resonances decaying to dimuons at CDF", 
+        "CDF", 
+        "10.1103/PhysRevLett.102.091805", 
+        null, 
+        "0811.0053", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-08-512-E"
+        ]
+    ], 
+    "801414": [
+        "Measurement of W-Boson Helicity Fractions in Top-Quark Decays Using cos theta*", 
+        "CDF", 
+        "10.1016/j.physletb.2009.02.040", 
+        null, 
+        "0811.0344", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-08-511-E"
+        ]
+    ], 
+    "801828": [
+        "Top Quark Mass Measurement in the $t \\bar{t}$ All Hadronic Channel using a Matrix Element Technique in $p\\bar{p}$ Collisions at $\\sqrt{s}$ = 1.96-TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.79.072010", 
+        null, 
+        "0811.1062", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-08-517-E"
+        ]
+    ], 
+    "802691": [
+        "Inclusive Search for Squark and Gluino Production in $p\\bar{p}$ Collisions at $\\sqrt{s}$ = 1.96-TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.102.121801", 
+        null, 
+        "0811.2512", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-08-526-E"
+        ]
+    ], 
+    "802834": [
+        "Measurement of the $k_T$ Distribution of Particles in Jets Produced in $p\\bar{p}$ Collisions at $\\sqrt{s}=1.96$-TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.102.232002", 
+        null, 
+        "0811.2820", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-08-525-E"
+        ]
+    ], 
+    "805621": [
+        "Search for top-quark production via flavor-changing neutral currents in W+1 jet events at CDF", 
+        "CDF", 
+        "10.1103/PhysRevLett.102.151801", 
+        null, 
+        "0812.3400", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-011-E"
+        ]
+    ], 
+    "805902": [
+        "Search for new particles decaying into dijets in proton-antiproton collisions at s**(1/2) = 1.96-TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.79.112002", 
+        null, 
+        "0812.4036", 
+        "ins805902", 
+        null, 
+        [
+            "FERMILAB-PUB-08-572-E"
+        ]
+    ], 
+    "805991": [
+        "Observation of New Charmless Decays of Bottom Hadrons", 
+        "CDF", 
+        "10.1103/PhysRevLett.103.031801", 
+        null, 
+        "0812.4271", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-08-573-E"
+        ]
+    ], 
+    "806082": [
+        "Measurement of Cross Sections for $b$ Jet Production in Events with a $Z$ Boson in $p^-$ anti-p Collisions at $\\sqrt{s}$ = 1.96-TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.79.052008", 
+        null, 
+        "0812.4458", 
+        "ins806082", 
+        null, 
+        [
+            "FERMILAB-PUB-08-576-E"
+        ]
+    ], 
+    "806086": [
+        "Top Quark Mass Measurement in the Lepton plus Jets Channel Using a Modified Matrix Element Method", 
+        "CDF", 
+        "10.1103/PhysRevD.79.072001", 
+        null, 
+        "0812.4469", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-08-574-E"
+        ]
+    ], 
+    "811060": [
+        "Direct Measurement of the $W$ Production Charge Asymmetry in $p\\bar{p}$ Collisions at $\\sqrt{s} = 1.96$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.102.181801", 
+        null, 
+        "0901.2169", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-017-E"
+        ]
+    ], 
+    "811730": [
+        "Measurement of the top quark mass at CDF using the 'neutrino $\\phi$ weighting' template method on a lepton plus isolated track sample", 
+        "CDF", 
+        "10.1103/PhysRevD.79.072005", 
+        null, 
+        "0901.3773", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-022-E"
+        ]
+    ], 
+    "811754": [
+        "Search for the Decays $B^0_s \\to e^+ \\mu^-$ and $B^0_s \\to e^+ e^-$ in CDF Run II", 
+        "CDF", 
+        "10.1103/PhysRevLett.102.201801", 
+        null, 
+        "0901.3803", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-021-E"
+        ]
+    ], 
+    "811890": [
+        "Measurement of the $t\\bar{t}$ Production Cross Section in 2 fb$^{-1}$ of $p\\bar{p}$ Collisions at $\\sqrt{s}=1.96$ TeV Using Lepton Plus Jets Events with Soft Muon b-Tagging", 
+        "CDF", 
+        "10.1103/PhysRevD.79.052007", 
+        null, 
+        "0901.4142", 
+        "ins811890", 
+        null, 
+        [
+            "FERMILAB-PUB-09-028-E"
+        ]
+    ], 
+    "812819": [
+        "Search for Long-Lived Massive Charged Particles in 1.96 TeV $\\bar{p}p$ Collisions", 
+        "CDF", 
+        "10.1103/PhysRevLett.103.021802", 
+        null, 
+        "0902.1266", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-036-E"
+        ]
+    ], 
+    "812821": [
+        "Observation of exclusive charmonium production and $\\gamma+\\gamma$ to $\\mu^+\\mu^-$ in $p\\bar{p}$ collisions at $\\sqrt{s} = 1.96$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.102.242001", 
+        null, 
+        "0902.1271", 
+        "ins812821", 
+        null, 
+        [
+            "FERMILAB-PUB-09-037-E"
+        ]
+    ], 
+    "813499": [
+        "Search for exclusive $Z$ boson production and observation of high mass $p\\bar{p} \\to \\gamma \\gamma \\to p+\\ell\\ell+\\bar{p}$ events in $p\\bar{p}$ collisions at $\\sqrt{s}$ = 1.96 TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.102.222002", 
+        null, 
+        "0902.2816", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-049-E"
+        ]
+    ], 
+    "813693": [
+        "Search for the Production of Narrow t anti-b Resonances in 1.9 fb-1 of p anti-p Collisions at s**(1/2) = 1.96-TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.103.041801", 
+        null, 
+        "0902.3276", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-048-E"
+        ]
+    ], 
+    "814737": [
+        "Search for WW and WZ Production in Lepton Plus Jets Final State at CDF", 
+        "CDF", 
+        "10.1103/PhysRevD.79.112011", 
+        null, 
+        "0903.0814", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-054-E"
+        ]
+    ], 
+    "814772": [
+        "First Observation of Electroweak Single Top Quark Production", 
+        "CDF", 
+        "10.1103/PhysRevLett.103.092002", 
+        null, 
+        "0903.0885", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-059-E"
+        ]
+    ], 
+    "815295": [
+        "Search for narrow resonances lighter than $\\Upsilon$ mesons", 
+        "CDF", 
+        "10.1140/epjc/s10052-009-1057-4", 
+        null, 
+        "0903.2060", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-067-E"
+        ]
+    ], 
+    "815352": [
+        "Evidence for a Narrow Near-Threshold Structure in the $J/\\psi\\phi$ Mass Spectrum in $B^+\\to J/\\psi\\phi K^+$ Decays", 
+        "CDF", 
+        "10.1103/PhysRevLett.102.242002", 
+        null, 
+        "0903.2229", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-064-E"
+        ]
+    ], 
+    "815423": [
+        "Measurement of the b-Hadron Production Cross Section Using Decays to MU- d0 X Final States in p anti-p Collisions at s**(1/2) = 1.96-TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.79.092003", 
+        null, 
+        "0903.2403", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-069-E"
+        ]
+    ], 
+    "815533": [
+        "Search for Gluino-Mediated Sbottom Production in p anti-p Collisions at s**(1/2) = 1.96-TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.102.221801", 
+        null, 
+        "0903.2618", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-077-E"
+        ]
+    ], 
+    "815615": [
+        "First Measurement of the t anti-t Differential Cross Section d sigma/dM(t anti-t) in p anti-p Collisions at s**(1/2)=1.96-TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.102.222003", 
+        null, 
+        "0903.2850", 
+        "ins815615", 
+        null, 
+        [
+            "FERMILAB-PUB-09-079-E"
+        ]
+    ], 
+    "816726": [
+        "A Measurement of the t anti-t Cross Section in p anti-p Collisions at s**(1/2) = 1.96-TeV using Dilepton Events with a Lepton plus Track Selection", 
+        "CDF", 
+        "10.1103/PhysRevD.79.112007", 
+        null, 
+        "0903.5263", 
+        "ins816726", 
+        null, 
+        [
+            "FERMILAB-PUB-09-091-E"
+        ]
+    ], 
+    "817466": [
+        "Measurement of Particle Production and Inclusive Differential Cross Sections in $p \\bar{p}$ Collisions at $\\sqrt{s} = 1.96$-TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.79.112005", 
+        null, 
+        "0904.1098", 
+        "ins817466", 
+        null, 
+        [
+            "FERMILAB-PUB-09-098-E"
+        ]
+    ], 
+    "819316": [
+        "Search for Anomalous Production of Events with a Photon, Jet, b-quark Jet, and Missing Transverse Energy", 
+        "CDF", 
+        "10.1103/PhysRevD.80.052003", 
+        null, 
+        "0905.0231", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-221-E"
+        ]
+    ], 
+    "819332": [
+        "Search for the Neutral Current Top Quark Decay t ---> Zc Using Ratio of Z-Boson + 4 Jets to W-Boson + 4 Jets Production", 
+        "CDF", 
+        "10.1103/PhysRevD.80.052001", 
+        null, 
+        "0905.0277", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-294-E"
+        ]
+    ], 
+    "819375": [
+        "Search for a Fermiophobic Higgs Boson Decaying into Diphotons in p anti-p Collisions at s**(1/2) = 1.96-TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.103.061803", 
+        null, 
+        "0905.0413", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-218-E"
+        ]
+    ], 
+    "820328": [
+        "Production of psi(2S) Mesons in p anti-p Collisions at 1.96-TeV", 
+        "CDF", 
+        "10.1103/PhysRevD.80.031103", 
+        null, 
+        "0905.1982", 
+        "ins820328", 
+        null, 
+        [
+            "FERMILAB-PUB-09-232-E"
+        ]
+    ], 
+    "820851": [
+        "Observation of the $\\Omega_b^-$ and Measurement of the Properties of the $\\Xi_b^-$ and $\\Omega_b^-$", 
+        "CDF", 
+        "10.1103/PhysRevD.80.072003", 
+        null, 
+        "0905.3123", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-256-E"
+        ]
+    ], 
+    "820862": [
+        "Search for Standard Model Higgs Boson Production in Association with a W Boson using a Neural Network Discriminant at CDF", 
+        "CDF", 
+        "10.1103/PhysRevD.80.012002", 
+        null, 
+        "0905.3155", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-248-E"
+        ]
+    ], 
+    "821572": [
+        "First Observation of Vector Boson Pairs in a Hadronic Final State at the Tevatron Collider", 
+        "CDF", 
+        "10.1103/PhysRevLett.103.091803", 
+        null, 
+        "0905.4714", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-277-E"
+        ]
+    ], 
+    "822073": [
+        "Searching the Inclusive Lepton + Photon + Missing E(T) + b-quark Signature for Radiative Top Quark Decay and Non-Standard-Model Processes", 
+        "CDF", 
+        "10.1103/PhysRevD.80.011102", 
+        null, 
+        "0906.0518", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-280-E"
+        ]
+    ], 
+    "822317": [
+        "Search for Higgs bosons predicted in two-Higgs-doublet models via decays to tau lepton pairs in 1.96-TeV p anti-p collisions", 
+        "CDF", 
+        "10.1103/PhysRevLett.103.201801", 
+        null, 
+        "0906.1014", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-303-E-PPD"
+        ]
+    ], 
+    "824294": [
+        "Precision Measurement of the $X(3872)$ Mass in $J/\\psi \\pi^+ \\pi^-$ Decays", 
+        "CDF", 
+        "10.1103/PhysRevLett.103.152001", 
+        null, 
+        "0906.5218", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-330-E"
+        ]
+    ], 
+    "824382": [
+        "Measurement of the Top Quark Mass Using the Invariant Mass of Lepton Pairs in Soft Muon b-tagged Events", 
+        "CDF", 
+        "10.1103/PhysRevD.80.051104", 
+        null, 
+        "0906.5371", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-332-E"
+        ]
+    ], 
+    "824477": [
+        "Search for a Higgs Boson in $W H \\to \\ell \\nu b \\bar{b}$ in $p\\bar{p}$ Collisions at $\\sqrt{s} = 1.96$ TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.103.101802", 
+        null, 
+        "0906.5613", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-336-E"
+        ]
+    ], 
+    "824953": [
+        "A Search for the Associated Production of the Standard-Model Higgs Boson in the All-Hadronic Channel", 
+        "CDF", 
+        "10.1103/PhysRevLett.103.221801", 
+        null, 
+        "0907.0810", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-341-PPD"
+        ]
+    ], 
+    "825146": [
+        "Search for charged Higgs bosons in decays of top quarks in p anti-p collisions at s**(1/2) = 1.96 TeV", 
+        "CDF", 
+        "10.1103/PhysRevLett.103.101803", 
+        null, 
+        "0907.1269", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-343-E"
+        ]
+    ], 
+    "829424": [
+        "A Search for the Higgs Boson Produced in Association with $Z\\to \\ell^+\\ell^-$ Using the Matrix Element Method at CDF II", 
+        "CDF", 
+        "10.1103/PhysRevD.80.071101", 
+        null, 
+        "0908.3534", 
+        null, 
+        null, 
+        [
+            "FERMILAB-PUB-09-400-E"
+        ]
+    ], 
+    "834437": [
+        "Measurement of the Inclusive Isolated Prompt Photon Cross Section in $p\\bar{p}$ Collisions at $\\sqrt{s}=1.96$~TeV using the CDF Detector", 
+        "CDF", 
+        "10.1103/PhysRevD.80.111106", 
+        null, 
+        "0910.3623", 
+        "ins834437", 
+        null, 
+        [
+            "FERMILAB-PUB-09-507-E"
+        ]
+    ]
+}

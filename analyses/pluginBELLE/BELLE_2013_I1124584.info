@@ -1,0 +1,37 @@
+Name: BELLE_2013_I1124584
+Year: 2013
+Summary: Helicity angles in $B_s^0\to D_s^{*+}D_s^{*-}$
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1124584
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 87 (2013) 3, 031101
+RunInfo: Any process producing B_s0, original Upsilon(5S) decay
+Description:
+  'Helicity angle distributions in $B^0\to D^{*+}D^{*-}$ decays'
+ValidationInfo:
+  'Herwig 7 events using EvtGen for decays'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle:2012tsw
+BibTeX: '@article{Belle:2012tsw,
+    author = "Esen, S. and others",
+    collaboration = "Belle",
+    title = "{Precise measurement of the branching fractions for $B_s\to D_s^{(*)+} D_s^{(*)-}$ and first measurement of the $D_s^{*+} D_s^{*-}$ polarization using $e^+e^-$ collisions}",
+    eprint = "1208.0323",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "KEK-PREPRINT-2012-20, UCHEP-12-11, UNIVERSITY-OF-CINCINNATI-PREPRINT-UCHEP-12-11",
+    doi = "10.1103/PhysRevD.87.031101",
+    journal = "Phys. Rev. D",
+    volume = "87",
+    number = "3",
+    pages = "031101",
+    year = "2013"
+}
+'

@@ -1,0 +1,36 @@
+Name: BELLE_2021_I1835729
+Year: 2021
+Summary: Mass distributions in $\Xi^0_c\to\Xi^0K^+K^-$
+Experiment: BELLE
+Collider: KEKB
+InspireID: 1835729
+Status: VALIDATED NOHEPDATA
+Reentrant: true
+Authors:
+ - Peter Richardson <peter.richardson@durham.ac.uk>
+References:
+ - Phys.Rev.D 103 (2021) 11, 112002
+RunInfo: Any process producing Xic0 mesons
+Description:
+  'Measurement of the mass distributions in the decay $\Xi^0_c\to\Xi^0K^+K^-$ by BELLE. The data were read from the plots in the paper, and for many points the error bars are the size of the point. It is also not clear that any resolution effects have been unfolded.'
+ValidationInfo:
+  'Herwig 7 events'
+#ReleaseTests:
+# - $A my-hepmc-prefix :MODE=some_rivet_flag
+Keywords: []
+BibKey: Belle:2020ito
+BibTeX: '@article{Belle:2020ito,
+    author = "McNeil, J. T. and others",
+    collaboration = "Belle",
+    title = "{Measurement of the resonant and nonresonant branching ratios in $\Xi_{c}^{0} \rightarrow \Xi^{0} K^+ K^-$}",
+    eprint = "2012.05607",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    doi = "10.1103/PhysRevD.103.112002",
+    journal = "Phys. Rev. D",
+    volume = "103",
+    number = "11",
+    pages = "112002",
+    year = "2021"
+}
+'
