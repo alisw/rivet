@@ -4,7 +4,12 @@
 #include "Rivet/Math/MathUtils.hh"
 #include "Rivet/Tools/RivetPaths.hh"
 #include "Rivet/Tools/RivetHepMC.hh"
+#include "HepMC3/Version.h"
+#if HEPMC3_VERSION_CODE < 3003000
+#ifdef HAVE_LIBZ
 #include "zstr/zstr.hpp"
+#endif
+#endif
 #include <limits>
 #include <iostream>
 
@@ -79,18 +84,23 @@ namespace Rivet {
 
     #ifdef RIVET_ENABLE_HEPMC_3
     if (evtfile == "-") {
-      // Turn off the buffering to make IO faster and make ungetc work on cin
-      std::basic_ios<char>::sync_with_stdio(false);
-      #ifdef HAVE_LIBZ
-      _istr = make_shared<zstr::istream>(std::cin);
+      #if HEPMC3_VERSION_CODE < 3003000
+        // Turn off the buffering to make IO faster and make ungetc work on cin
+        std::basic_ios<char>::sync_with_stdio(false);
+        #ifdef HAVE_LIBZ
+        _istr = make_shared<zstr::istream>(std::ref(std::cin));
+        #else
+        _istr = std::shared_ptr<std::istream>(&std::cin, [](auto*){ /* no deletion */ });
+        #endif
+        _hepmcReader = RivetHepMC::deduce_reader(*_istr);
       #else
-      _istr = make_shared<std::istream>(std::cin);
+       _hepmcReader = RivetHepMC::deduce_reader(std::cin);
       #endif
       // Use standard HepMC3 deduction on stream. For HepMC3 < 3.2.0 the function is implemented in Rivet
-      _hepmcReader = RivetHepMC::deduce_reader(*_istr);
     } else {
       // Use standard HepMC3 deduction on file
       _hepmcReader = RivetHepMC::deduce_reader(evtfile);
+      #if HEPMC3_VERSION_CODE < 3003000
       // Check if the file is compressed, if the deduction fails
       /// @todo Can we move this into the RivetHepMC.hh header? This is a *lot* of HepMC-specific noise for the Run manager class
       if (!_hepmcReader) {
@@ -135,11 +145,7 @@ namespace Rivet {
       }
       if (!_istr) MSG_INFO("Info in deduce_reader: input stream is too short or invalid.");
       for (size_t i = 0; i < back; ++i) _istr->unget();
-      if (strncmp(head.at(0).c_str(), "HepMC::Version", 14) == 0 &&
-          strncmp(head.at(1).c_str(), "HepMC::CompressedAsciiv3-START_EVENT_LISTING", 44) == 0) {
-        MSG_INFO("Info in deduce_reader: Attempt CompressedAsciiv3");
-        //_hepmcReader= make_shared<Rivet::RivetHepMC::ReaderCompressedAscii>(_istr);
-      }
+      #endif
     }
     #endif
 
